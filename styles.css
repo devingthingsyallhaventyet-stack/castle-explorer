@@ -122,17 +122,17 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 
 /* Map Pins */
 .map-pin {
-  width: 36px; height: 36px; border-radius: 50%; background: var(--white);
+  width: 28px; height: 28px; border-radius: 50%; background: var(--white);
   display: flex; align-items: center; justify-content: center;
-  font-size: 16px; cursor: pointer; transition: transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-size: 12px; cursor: pointer; transition: transform 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
-.map-pin:hover { transform: scale(1.15); }
-.map-pin-castle { border: 3px solid var(--terracotta); }
-.map-pin-palace { border: 3px solid var(--gold); }
-.map-pin-abbey { border: 3px solid var(--sage); }
-.map-pin-tower { border: 3px solid #7B8DB5; }
-.map-pin-fortified { border: 3px solid var(--warm-gray); }
+.map-pin:hover { transform: scale(1.2); }
+.map-pin-castle { border: 2px solid var(--terracotta); }
+.map-pin-palace { border: 2px solid var(--gold); }
+.map-pin-abbey { border: 2px solid var(--sage); }
+.map-pin-tower { border: 2px solid #7B8DB5; }
+.map-pin-fortified { border: 2px solid var(--warm-gray); }
 
 /* Cluster */
 .cluster-icon {

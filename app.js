@@ -38,7 +38,22 @@ function initMap() {
     maxZoom: 19
   }).addTo(map);
 
-  markerGroup = L.featureGroup().addTo(map);
+  markerGroup = L.markerClusterGroup({
+    maxClusterRadius: 40,
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: false,
+    disableClusteringAtZoom: 10,
+    iconCreateFunction: function(cluster) {
+      const count = cluster.getChildCount();
+      const size = count < 10 ? 28 : count < 30 ? 34 : 40;
+      const fontSize = count < 10 ? 12 : count < 30 ? 13 : 14;
+      return L.divIcon({
+        html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:#6B8F71;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;font-size:${fontSize}px;font-weight:600;box-shadow:0 2px 6px rgba(0,0,0,0.15);border:2px solid #fff;">${count}</div>`,
+        className: '',
+        iconSize: [size, size]
+      });
+    }
+  }).addTo(map);
 }
 
 function initGoogle() {
@@ -52,7 +67,7 @@ function initMarkers() {
     const tc = getTypeConfig(c.type);
     const icon = L.divIcon({
       html: `<div class="map-pin map-pin-${tc.class}">${tc.emoji}</div>`,
-      className: '', iconSize: [36, 36], iconAnchor: [18, 18]
+      className: '', iconSize: [28, 28], iconAnchor: [14, 14]
     });
     const m = L.marker([c.lat, c.lng], { icon });
     m.castleIndex = i;
