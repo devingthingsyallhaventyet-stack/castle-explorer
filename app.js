@@ -14,7 +14,7 @@ const CORRIDOR_PROFILES = [
 ];
 
 // ========== STATE ==========
-let map, markerCluster, markers = [], routePolylines = [];
+let map, markerGroup, markers = [], routePolylines = [];
 let activeFilters = { country: new Set(), type: new Set(), condition: new Set() };
 let placesService, geocoder, directionsService;
 const placesCache = {};
@@ -38,16 +38,7 @@ function initMap() {
     maxZoom: 19
   }).addTo(map);
 
-  markerCluster = L.markerClusterGroup({
-    showCoverageOnHover: false,
-    maxClusterRadius: 50,
-    iconCreateFunction: cluster => {
-      const count = cluster.getChildCount();
-      const cls = count > 15 ? 'cluster-icon cluster-icon-lg' : 'cluster-icon';
-      return L.divIcon({ html: `<div class="${cls}">${count}</div>`, className: '', iconSize: [44, 44] });
-    }
-  });
-  map.addLayer(markerCluster);
+  markerGroup = L.featureGroup().addTo(map);
 }
 
 function initGoogle() {
@@ -67,7 +58,7 @@ function initMarkers() {
     m.castleIndex = i;
     m.on('click', () => openSidebar(c));
     markers.push(m);
-    markerCluster.addLayer(m);
+    markerGroup.addLayer(m);
   });
 }
 
@@ -110,14 +101,14 @@ function renderChips(containerId, items, category) {
 }
 
 function applyFilters() {
-  markerCluster.clearLayers();
+  markerGroup.clearLayers();
   let count = 0;
   CASTLES.forEach((c, i) => {
     const show =
       (activeFilters.country.size === 0 || activeFilters.country.has(c.country)) &&
       (activeFilters.type.size === 0 || activeFilters.type.has(c.type)) &&
       (activeFilters.condition.size === 0 || activeFilters.condition.has(c.condition));
-    if (show) { markerCluster.addLayer(markers[i]); count++; }
+    if (show) { markerGroup.addLayer(markers[i]); count++; }
   });
   updateFilterCounter(count);
 }
