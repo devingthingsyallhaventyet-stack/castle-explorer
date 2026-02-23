@@ -1,729 +1,489 @@
-// ===== CASTLE EXPLORER APP =====
-
-const typeColors = {
-  castle: '#c44040',
-  abbey: '#d4a546',
-  ruin: '#8888aa',
-  'tower house': '#5577cc',
-  palace: '#8855bb',
-  'fortified house': '#44aa66'
+// ========== CONFIG ==========
+const TYPE_CONFIG = {
+  castle:          { emoji: '🏰', color: '#C2714F', class: 'castle' },
+  palace:          { emoji: '👑', color: '#D4A843', class: 'palace' },
+  abbey:           { emoji: '⛪', color: '#6B8F71', class: 'abbey' },
+  'tower house':   { emoji: '🗼', color: '#7B8DB5', class: 'tower' },
+  'fortified house': { emoji: '🛡️', color: '#8B8680', class: 'fortified' },
 };
 
-const typeEmoji = {
-  castle: '🏰', abbey: '⛪', ruin: '🪨',
-  'tower house': '🗼', palace: '👑', 'fortified house': '🏠'
-};
+const CORRIDOR_PROFILES = [
+  { name: 'Castle Hunter', emoji: '🏰', width: 30000, maxStops: 8 },
+  { name: 'Balanced Explorer', emoji: '⚖️', width: 15000, maxStops: 5 },
+  { name: 'Quick Tour', emoji: '⚡', width: 8000, maxStops: 3 },
+];
 
-// ===== GOOGLE SERVICES (initialized when API loads) =====
-let directionsService = null;
-let geocoderService = null;
-let placesService = null;
-const placesCache = {}; // cache Google Places results by castle name
+// ========== STATE ==========
+let map, markerCluster, markers = [], routePolylines = [];
+let activeFilters = { country: new Set(), type: new Set(), condition: new Set() };
+let placesService, geocoder, directionsService;
+const placesCache = {};
+let selectedCastle = null;
 
-function initGoogleServices() {
+// ========== INIT ==========
+document.addEventListener('DOMContentLoaded', () => {
+  initMap();
+  initGoogle();
+  initMarkers();
+  initFilters();
+  initSearch();
+  initUI();
+});
+
+function initMap() {
+  map = L.map('map', { zoomControl: false }).setView([54.0, -4.0], 6);
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 19
+  }).addTo(map);
+
+  markerCluster = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 50,
+    iconCreateFunction: cluster => {
+      const count = cluster.getChildCount();
+      const cls = count > 15 ? 'cluster-icon cluster-icon-lg' : 'cluster-icon';
+      return L.divIcon({ html: `<div class="${cls}">${count}</div>`, className: '', iconSize: [44, 44] });
+    }
+  });
+  map.addLayer(markerCluster);
+}
+
+function initGoogle() {
+  placesService = new google.maps.places.PlacesService(document.createElement('div'));
+  geocoder = new google.maps.Geocoder();
   directionsService = new google.maps.DirectionsService();
-  geocoderService = new google.maps.Geocoder();
-  // PlacesService needs a DOM element or map div
-  const dummyDiv = document.createElement('div');
-  placesService = new google.maps.places.PlacesService(dummyDiv);
 }
 
-if (window._googleReady) {
-  initGoogleServices();
-} else {
-  window._onGoogleReady = initGoogleServices;
-}
-
-// ===== MAP INIT =====
-const map = L.map('map', {
-  center: [54.5, -4],
-  zoom: 6,
-  zoomControl: false
-});
-
-L.control.zoom({ position: 'bottomright' }).addTo(map);
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap &copy; CartoDB',
-  maxZoom: 19
-}).addTo(map);
-
-// ===== MARKERS =====
-const markers = L.markerClusterGroup({
-  maxClusterRadius: 50,
-  spiderfyOnMaxZoom: true,
-  showCoverageOnHover: false,
-  iconCreateFunction: function(cluster) {
-    const count = cluster.getChildCount();
-    let size = count < 10 ? 'small' : count < 30 ? 'medium' : 'large';
-    return L.divIcon({
-      html: `<div class="cluster-icon cluster-${size}">${count}</div>`,
-      className: 'custom-cluster',
-      iconSize: [40, 40]
+function initMarkers() {
+  CASTLES.forEach((c, i) => {
+    const tc = getTypeConfig(c.type);
+    const icon = L.divIcon({
+      html: `<div class="map-pin map-pin-${tc.class}">${tc.emoji}</div>`,
+      className: '', iconSize: [36, 36], iconAnchor: [18, 18]
     });
-  }
-});
-
-let allMarkers = [];
-
-function createIcon(type) {
-  const color = typeColors[type] || '#888';
-  return L.divIcon({
-    html: `<div class="map-pin" style="background:${color}">${typeEmoji[type] || '📍'}</div>`,
-    className: 'custom-pin',
-    iconSize: [36, 36],
-    iconAnchor: [18, 36],
-    popupAnchor: [0, -36]
+    const m = L.marker([c.lat, c.lng], { icon });
+    m.castleIndex = i;
+    m.on('click', () => openSidebar(c));
+    markers.push(m);
+    markerCluster.addLayer(m);
   });
 }
 
-function renderStars(rating) {
-  const full = Math.floor(rating);
-  const half = rating % 1 >= 0.3;
-  let s = '';
-  for (let i = 0; i < full; i++) s += '★';
-  if (half) s += '½';
-  return s;
+function getTypeConfig(type) {
+  return TYPE_CONFIG[type] || TYPE_CONFIG.castle;
 }
 
-CASTLES.forEach((c, i) => {
-  const marker = L.marker([c.lat, c.lng], { icon: createIcon(c.type) });
-  marker._castleIndex = i;
-  marker.on('click', () => openSidebar(c));
-  markers.addLayer(marker);
-  allMarkers.push({ marker, data: c });
-});
+// ========== FILTERS ==========
+function initFilters() {
+  const countries = [...new Set(CASTLES.map(c => c.country))].sort();
+  const types = [...new Set(CASTLES.map(c => c.type))].sort();
+  const conditions = [...new Set(CASTLES.map(c => c.condition))].sort();
 
-map.addLayer(markers);
-
-// ===== SIDEBAR =====
-const sidebar = document.getElementById('sidebar');
-const sidebarImg = document.getElementById('sidebar-img');
-const sidebarPlaceholder = document.getElementById('sidebar-img-placeholder');
-const sidebarGallery = document.getElementById('sidebar-gallery');
-const sidebarImgWrap = document.getElementById('sidebar-img-wrap');
-const galleryTrack = document.getElementById('gallery-track');
-const galleryDots = document.getElementById('gallery-dots');
-let galleryIndex = 0;
-let galleryPhotos = [];
-
-function setupGallery(photos) {
-  galleryPhotos = photos;
-  galleryIndex = 0;
-  galleryTrack.innerHTML = '';
-  galleryDots.innerHTML = '';
-
-  if (!photos || photos.length === 0) {
-    sidebarGallery.style.display = 'none';
-    sidebarImgWrap.style.display = 'block';
-    return;
-  }
-
-  sidebarGallery.style.display = 'block';
-  sidebarImgWrap.style.display = 'none';
-
-  photos.forEach((url, i) => {
-    const img = document.createElement('img');
-    img.src = url;
-    img.className = 'gallery-slide';
-    img.alt = 'Castle photo';
-    galleryTrack.appendChild(img);
-
-    const dot = document.createElement('span');
-    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goToSlide(i));
-    galleryDots.appendChild(dot);
-  });
-
-  updateGalleryPosition();
+  renderChips('countryFilters', countries, 'country');
+  renderChips('typeFilters', types, 'type');
+  renderChips('conditionFilters', conditions, 'condition');
+  updateFilterCounter();
 }
 
-function goToSlide(i) {
-  galleryIndex = i;
-  updateGalleryPosition();
-}
-
-function updateGalleryPosition() {
-  galleryTrack.style.transform = `translateX(-${galleryIndex * 100}%)`;
-  galleryDots.querySelectorAll('.gallery-dot').forEach((d, i) => {
-    d.classList.toggle('active', i === galleryIndex);
-  });
-}
-
-document.getElementById('gallery-prev').addEventListener('click', () => {
-  if (galleryPhotos.length === 0) return;
-  galleryIndex = (galleryIndex - 1 + galleryPhotos.length) % galleryPhotos.length;
-  updateGalleryPosition();
-});
-
-document.getElementById('gallery-next').addEventListener('click', () => {
-  if (galleryPhotos.length === 0) return;
-  galleryIndex = (galleryIndex + 1) % galleryPhotos.length;
-  updateGalleryPosition();
-});
-
-function openSidebar(c) {
-  document.getElementById('sidebar-name').textContent = c.name;
-  document.getElementById('sidebar-type').textContent = (typeEmoji[c.type] || '') + ' ' + c.type;
-  document.getElementById('sidebar-era').textContent = c.era;
-  document.getElementById('sidebar-condition').textContent = c.condition;
-  document.getElementById('sidebar-location').textContent = `${c.county}, ${c.country}`;
-  document.getElementById('sidebar-rating').textContent = c.rating.toFixed(1);
-  document.getElementById('sidebar-stars').textContent = renderStars(c.rating);
-  document.getElementById('sidebar-reviews').textContent = `(${c.reviewCount.toLocaleString()} reviews)`;
-  document.getElementById('sidebar-desc').textContent = c.description;
-  document.getElementById('sidebar-directions').href = `https://www.google.com/maps/dir/?api=1&destination=${c.lat},${c.lng}`;
-
-  // Reset Google-enhanced sections
-  document.getElementById('sidebar-google-attr').style.display = 'none';
-  document.getElementById('sidebar-hours').style.display = 'none';
-
-  // Default: show existing image, no gallery
-  setupGallery([]);
-  if (c.image) {
-    sidebarImg.src = c.image;
-    sidebarImg.style.display = 'block';
-    sidebarPlaceholder.style.display = 'none';
-  } else {
-    sidebarImg.style.display = 'none';
-    sidebarPlaceholder.style.display = 'flex';
-  }
-
-  sidebar.classList.add('open');
-
-  // Enhance with Google Places data
-  fetchPlaceDetails(c);
-}
-
-function fetchPlaceDetails(castle) {
-  if (!placesService) return;
-
-  const cacheKey = castle.name + '|' + castle.lat + '|' + castle.lng;
-  if (placesCache[cacheKey]) {
-    applyPlaceDetails(castle, placesCache[cacheKey]);
-    return;
-  }
-
-  const request = {
-    query: castle.name + ' ' + castle.county,
-    location: new google.maps.LatLng(castle.lat, castle.lng),
-    radius: 5000
-  };
-
-  placesService.textSearch(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results.length > 0) {
-      const place = results[0];
-      // Get full details including photos and hours
-      placesService.getDetails({
-        placeId: place.place_id,
-        fields: ['rating', 'user_ratings_total', 'photos', 'opening_hours', 'url', 'name']
-      }, (details, detailStatus) => {
-        if (detailStatus === google.maps.places.PlacesServiceStatus.OK && details) {
-          const data = {
-            rating: details.rating || null,
-            reviewCount: details.user_ratings_total || null,
-            photos: (details.photos || []).slice(0, 3).map(p => p.getUrl({ maxWidth: 400 })),
-            hours: details.opening_hours ? details.opening_hours.weekday_text : null,
-            isOpen: details.opening_hours ? details.opening_hours.isOpen() : null,
-            url: details.url || null
-          };
-          placesCache[cacheKey] = data;
-          applyPlaceDetails(castle, data);
-        }
-      });
-    }
-  });
-}
-
-function applyPlaceDetails(castle, data) {
-  // Only apply if the sidebar is still showing this castle
-  if (document.getElementById('sidebar-name').textContent !== castle.name) return;
-
-  // Photos gallery
-  if (data.photos && data.photos.length > 0) {
-    setupGallery(data.photos);
-  }
-
-  // Rating from Google
-  if (data.rating) {
-    document.getElementById('sidebar-rating').textContent = data.rating.toFixed(1);
-    document.getElementById('sidebar-stars').textContent = renderStars(data.rating);
-    if (data.reviewCount) {
-      document.getElementById('sidebar-reviews').textContent = `(${data.reviewCount.toLocaleString()} reviews)`;
-    }
-    document.getElementById('sidebar-google-attr').style.display = 'flex';
-  }
-
-  // Opening hours
-  if (data.hours && data.hours.length > 0) {
-    const hoursList = document.getElementById('sidebar-hours-list');
-    hoursList.innerHTML = data.hours.map(h => `<li>${h}</li>`).join('');
-    document.getElementById('sidebar-hours').style.display = 'block';
-  }
-
-  // Google Maps URL for directions
-  if (data.url) {
-    document.getElementById('sidebar-directions').href = data.url;
-  }
-}
-
-document.getElementById('sidebar-close').addEventListener('click', () => {
-  sidebar.classList.remove('open');
-});
-
-// ===== FILTERS =====
-let filters = { country: 'all', type: 'all', condition: 'all' };
-
-function setupFilterChips(containerId, filterKey) {
-  const container = document.getElementById(containerId);
-  container.addEventListener('click', (e) => {
-    const chip = e.target.closest('.chip');
+function renderChips(containerId, items, category) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = items.map(item =>
+    `<button class="filter-chip" data-category="${category}" data-value="${item}">${item}</button>`
+  ).join('');
+  el.addEventListener('click', e => {
+    const chip = e.target.closest('.filter-chip');
     if (!chip) return;
-    container.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    filters[filterKey] = chip.dataset.value;
+    const val = chip.dataset.value;
+    const cat = chip.dataset.category;
+    const activeClass = `active-${cat}`;
+    if (activeFilters[cat].has(val)) {
+      activeFilters[cat].delete(val);
+      chip.classList.remove(activeClass);
+    } else {
+      activeFilters[cat].add(val);
+      chip.classList.add(activeClass);
+    }
     applyFilters();
   });
 }
 
-setupFilterChips('filter-country', 'country');
-setupFilterChips('filter-type', 'type');
-setupFilterChips('filter-condition', 'condition');
-
 function applyFilters() {
-  markers.clearLayers();
+  markerCluster.clearLayers();
   let count = 0;
-  allMarkers.forEach(({ marker, data }) => {
-    const matchCountry = filters.country === 'all' || data.country === filters.country;
-    const matchType = filters.type === 'all' || data.type === filters.type;
-    const matchCondition = filters.condition === 'all' || data.condition === filters.condition;
-    if (matchCountry && matchType && matchCondition) {
-      markers.addLayer(marker);
-      count++;
-    }
+  CASTLES.forEach((c, i) => {
+    const show =
+      (activeFilters.country.size === 0 || activeFilters.country.has(c.country)) &&
+      (activeFilters.type.size === 0 || activeFilters.type.has(c.type)) &&
+      (activeFilters.condition.size === 0 || activeFilters.condition.has(c.condition));
+    if (show) { markerCluster.addLayer(markers[i]); count++; }
   });
-  document.getElementById('visible-count').textContent = count;
+  updateFilterCounter(count);
 }
 
-document.getElementById('total-count').textContent = CASTLES.length;
-document.getElementById('visible-count').textContent = CASTLES.length;
+function updateFilterCounter(shown) {
+  const total = CASTLES.length;
+  const s = shown !== undefined ? shown : total;
+  document.getElementById('filterCounter').textContent = `Showing ${s} of ${total} sites`;
+}
 
-// ===== FILTER TOGGLE =====
-document.getElementById('btn-filter-toggle').addEventListener('click', () => {
-  document.getElementById('filter-panel').classList.toggle('open');
-  document.getElementById('route-panel').classList.remove('open');
-});
+// ========== SEARCH ==========
+function initSearch() {
+  const input = document.getElementById('searchInput');
+  const results = document.getElementById('searchResults');
 
-// ===== SEARCH =====
-const searchInput = document.getElementById('search');
-const searchResults = document.getElementById('search-results');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if (q.length < 2) { results.classList.remove('active'); return; }
+    const matches = CASTLES.filter(c =>
+      c.name.toLowerCase().includes(q) || c.county.toLowerCase().includes(q) || c.country.toLowerCase().includes(q)
+    ).slice(0, 8);
+    if (matches.length === 0) { results.classList.remove('active'); return; }
+    results.innerHTML = matches.map(c => {
+      const tc = getTypeConfig(c.type);
+      return `<div class="search-result-item" data-name="${c.name}">
+        <span class="emoji">${tc.emoji}</span>
+        <div class="info"><div class="name">${c.name}</div><div class="loc">${c.county}, ${c.country}</div></div>
+      </div>`;
+    }).join('');
+    results.classList.add('active');
+  });
 
-searchInput.addEventListener('input', () => {
-  const q = searchInput.value.toLowerCase().trim();
-  if (q.length < 2) { searchResults.innerHTML = ''; searchResults.style.display = 'none'; return; }
+  results.addEventListener('click', e => {
+    const item = e.target.closest('.search-result-item');
+    if (!item) return;
+    const castle = CASTLES.find(c => c.name === item.dataset.name);
+    if (castle) {
+      map.setView([castle.lat, castle.lng], 14);
+      openSidebar(castle);
+      results.classList.remove('active');
+      input.value = '';
+    }
+  });
 
-  const matches = CASTLES.filter(c =>
-    c.name.toLowerCase().includes(q) ||
-    c.county.toLowerCase().includes(q) ||
-    c.country.toLowerCase().includes(q)
-  ).slice(0, 8);
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.topbar-search')) results.classList.remove('active');
+  });
+}
 
-  if (matches.length === 0) {
-    searchResults.innerHTML = '<div class="search-item">No results</div>';
+// ========== SIDEBAR ==========
+function openSidebar(castle) {
+  selectedCastle = castle;
+  const sidebar = document.getElementById('sidebar');
+  const tc = getTypeConfig(castle.type);
+
+  // Image
+  const imgEl = document.getElementById('sidebarImage');
+  if (castle.image) {
+    imgEl.innerHTML = `<img src="${castle.image}" alt="${castle.name}" onerror="this.parentElement.innerHTML='🏰'" />`;
   } else {
-    searchResults.innerHTML = matches.map(c =>
-      `<div class="search-item" data-lat="${c.lat}" data-lng="${c.lng}">
-        <span class="search-emoji">${typeEmoji[c.type] || '📍'}</span>
-        <span class="search-name">${c.name}</span>
-        <span class="search-loc">${c.county}, ${c.country}</span>
-      </div>`
-    ).join('');
+    imgEl.innerHTML = '🏰';
   }
-  searchResults.style.display = 'block';
-});
 
-searchResults.addEventListener('click', (e) => {
-  const item = e.target.closest('.search-item');
-  if (!item || !item.dataset.lat) return;
-  const lat = parseFloat(item.dataset.lat);
-  const lng = parseFloat(item.dataset.lng);
-  map.setView([lat, lng], 14);
-  const castle = CASTLES.find(c => c.lat === lat && c.lng === lng);
-  if (castle) openSidebar(castle);
-  searchResults.style.display = 'none';
-  searchInput.value = '';
-});
+  document.getElementById('sidebarName').textContent = castle.name;
+  document.getElementById('sidebarLocation').textContent = `${castle.county}, ${castle.country}`;
+  document.getElementById('sidebarBadges').innerHTML = `
+    <span class="badge badge-type">${tc.emoji} ${castle.type}</span>
+    <span class="badge badge-era">${castle.era}</span>
+    <span class="badge badge-condition">${castle.condition}</span>
+  `;
+  const fullStars = Math.floor(castle.rating);
+  const halfStar = castle.rating % 1 >= 0.3;
+  const starsHtml = '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(5 - fullStars - (halfStar ? 1 : 0));
+  document.getElementById('sidebarRating').innerHTML = `
+    <span class="stars">${starsHtml}</span>
+    <span class="rating-num">${castle.rating}</span>
+    <span class="review-count">(${castle.reviewCount.toLocaleString()} reviews)</span>
+  `;
+  document.getElementById('sidebarDesc').textContent = castle.description;
+  document.getElementById('sidebarDirections').href = `https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}`;
 
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.search-wrap')) searchResults.style.display = 'none';
-});
+  // Reset Google sections
+  document.getElementById('sidebarGoogle').innerHTML = '';
+  document.getElementById('sidebarPhotos').innerHTML = '';
+  document.getElementById('sidebarHours').innerHTML = '';
 
-// ===== ROUTE PLANNER =====
-document.getElementById('btn-route-toggle').addEventListener('click', () => {
-  document.getElementById('route-panel').classList.toggle('open');
-  document.getElementById('filter-panel').classList.remove('open');
-});
+  sidebar.classList.add('active');
+  document.getElementById('overlayBackdrop').classList.add('active');
 
-// ===== GOOGLE POLYLINE DECODER =====
+  // Google Places lookup
+  lookupGooglePlaces(castle);
+}
+
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('active');
+  document.getElementById('overlayBackdrop').classList.remove('active');
+  selectedCastle = null;
+}
+
+function lookupGooglePlaces(castle) {
+  const cacheKey = castle.name;
+  if (placesCache[cacheKey]) {
+    renderGoogleData(placesCache[cacheKey]);
+    return;
+  }
+
+  const request = {
+    query: `${castle.name} ${castle.country}`,
+    fields: ['name', 'rating', 'user_ratings_total', 'photos', 'opening_hours', 'place_id']
+  };
+
+  placesService.findPlaceFromQuery(request, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results && results[0]) {
+      const place = results[0];
+      // Get details for hours
+      if (place.place_id) {
+        placesService.getDetails({
+          placeId: place.place_id,
+          fields: ['opening_hours', 'photos', 'rating', 'user_ratings_total']
+        }, (detail, dStatus) => {
+          if (dStatus === google.maps.places.PlacesServiceStatus.OK && detail) {
+            placesCache[cacheKey] = detail;
+            if (selectedCastle && selectedCastle.name === castle.name) renderGoogleData(detail);
+          }
+        });
+      }
+    }
+  });
+}
+
+function renderGoogleData(place) {
+  // Google rating
+  if (place.rating) {
+    document.getElementById('sidebarGoogle').innerHTML = `
+      <div class="google-rating">
+        <img src="https://www.gstatic.com/images/branding/product/1x/maps_round_48dp.png" alt="Google" />
+        Google rating: <strong>${place.rating}</strong>/5 (${(place.user_ratings_total || 0).toLocaleString()})
+      </div>
+    `;
+  }
+  // Photos
+  if (place.photos && place.photos.length > 0) {
+    const photosHtml = place.photos.slice(0, 3).map(p =>
+      `<img src="${p.getUrl({ maxWidth: 300, maxHeight: 225 })}" alt="Photo" />`
+    ).join('');
+    document.getElementById('sidebarPhotos').innerHTML = photosHtml;
+  }
+  // Hours
+  if (place.opening_hours && place.opening_hours.weekday_text) {
+    document.getElementById('sidebarHours').innerHTML =
+      `<strong>Opening Hours</strong><br/>` + place.opening_hours.weekday_text.join('<br/>');
+  }
+}
+
+// ========== ROUTE PLANNER ==========
+function openRoutePanel() {
+  document.getElementById('routePanel').classList.add('active');
+  document.getElementById('overlayBackdrop').classList.add('active');
+}
+
+function closeRoutePanel() {
+  document.getElementById('routePanel').classList.remove('active');
+  document.getElementById('overlayBackdrop').classList.remove('active');
+}
+
+document.getElementById('btnFindRoutes').addEventListener('click', findRoutes);
+
+async function findRoutes() {
+  const startText = document.getElementById('routeStart').value.trim();
+  const endText = document.getElementById('routeEnd').value.trim();
+  const mustText = document.getElementById('routeMust').value.trim();
+  if (!startText || !endText) return;
+
+  const btn = document.getElementById('btnFindRoutes');
+  btn.disabled = true;
+  btn.textContent = 'Finding routes…';
+  document.getElementById('routeResults').innerHTML = '<div class="loading">Searching for castle routes</div>';
+
+  try {
+    const [startCoords, endCoords] = await Promise.all([geocodeCity(startText), geocodeCity(endText)]);
+
+    // Find must-visit castle
+    let mustCastle = null;
+    if (mustText) {
+      mustCastle = CASTLES.find(c => c.name.toLowerCase().includes(mustText.toLowerCase()));
+    }
+
+    // Get base route
+    const baseRoute = await getDirectionsRoute(startCoords, endCoords, mustCastle);
+    if (!baseRoute) { document.getElementById('routeResults').innerHTML = '<p style="padding:12px;color:var(--text-muted)">Could not find a route.</p>'; return; }
+
+    // Decode polyline
+    const routePath = google.maps.geometry ?
+      google.maps.geometry.encoding.decodePath(baseRoute.overview_polyline) :
+      decodePolyline(baseRoute.overview_polyline);
+
+    // Generate corridor-based route cards
+    const resultsHtml = CORRIDOR_PROFILES.map((profile, pi) => {
+      const nearby = findCastlesAlongRoute(routePath, profile.width, profile.maxStops, mustCastle);
+      const leg = baseRoute.legs[0];
+      return renderRouteCard(profile, nearby, leg, pi);
+    }).join('');
+
+    document.getElementById('routeResults').innerHTML = resultsHtml;
+
+    // Clear old polylines
+    routePolylines.forEach(p => map.removeLayer(p));
+    routePolylines = [];
+
+    // Show base route on map
+    const latLngs = routePath.map(p => [p.lat ? p.lat() : p.lat, p.lng ? p.lng() : p.lng]);
+    const polyline = L.polyline(latLngs, { color: '#6B8F71', weight: 4, opacity: 0.7 }).addTo(map);
+    routePolylines.push(polyline);
+    map.fitBounds(polyline.getBounds(), { padding: [60, 60] });
+
+  } catch (err) {
+    document.getElementById('routeResults').innerHTML = `<p style="padding:12px;color:var(--terracotta)">${err.message || 'Error finding route'}</p>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Find Castle Routes';
+  }
+}
+
+function renderRouteCard(profile, castles, leg, index) {
+  if (castles.length === 0) return '';
+  const castleList = castles.map(c => {
+    const tc = getTypeConfig(c.type);
+    return `<li>${tc.emoji} ${c.name} <span class="castle-rating">★ ${c.rating}</span></li>`;
+  }).join('');
+  return `
+    <div class="route-card" style="animation-delay:${index * 0.1}s">
+      <div class="route-card-header">
+        <span class="emoji">${profile.emoji}</span>
+        <span class="title">${profile.name}</span>
+      </div>
+      <div class="route-card-meta">
+        <strong>${leg.duration.text}</strong> · ${leg.distance.text} · ${castles.length} castle${castles.length > 1 ? 's' : ''}
+      </div>
+      <ul class="route-castle-list">${castleList}</ul>
+      <button class="btn-show-route" onclick="showRouteCastles(${JSON.stringify(castles.map(c => c.name)).replace(/"/g, '&quot;')})">Show on Map</button>
+    </div>
+  `;
+}
+
+function showRouteCastles(names) {
+  const bounds = L.latLngBounds();
+  names.forEach(name => {
+    const c = CASTLES.find(x => x.name === name);
+    if (c) bounds.extend([c.lat, c.lng]);
+  });
+  if (bounds.isValid()) map.fitBounds(bounds, { padding: [60, 60] });
+}
+
+function findCastlesAlongRoute(routePath, corridorWidth, maxStops, mustCastle) {
+  const routePoints = routePath.map(p => ({
+    lat: typeof p.lat === 'function' ? p.lat() : p.lat,
+    lng: typeof p.lng === 'function' ? p.lng() : p.lng
+  }));
+
+  let scored = CASTLES.map(c => {
+    let minDist = Infinity;
+    for (let i = 0; i < routePoints.length; i += Math.max(1, Math.floor(routePoints.length / 100))) {
+      const d = haversine(c.lat, c.lng, routePoints[i].lat, routePoints[i].lng);
+      if (d < minDist) minDist = d;
+    }
+    return { ...c, dist: minDist };
+  }).filter(c => c.dist <= corridorWidth);
+
+  // Sort by rating descending
+  scored.sort((a, b) => b.rating - a.rating);
+
+  // Ensure must-visit is included
+  let result = [];
+  if (mustCastle) {
+    const mc = scored.find(c => c.name === mustCastle.name);
+    if (mc) result.push(mc);
+    else result.push({ ...mustCastle, dist: 0 });
+  }
+  for (const c of scored) {
+    if (result.length >= maxStops) break;
+    if (!result.find(r => r.name === c.name)) result.push(c);
+  }
+  return result;
+}
+
+function haversine(lat1, lng1, lat2, lng2) {
+  const R = 6371000;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function geocodeCity(text) {
+  return new Promise((resolve, reject) => {
+    geocoder.geocode({ address: text }, (results, status) => {
+      if (status === 'OK' && results[0]) {
+        const loc = results[0].geometry.location;
+        resolve({ lat: loc.lat(), lng: loc.lng() });
+      } else {
+        reject(new Error(`Could not find "${text}"`));
+      }
+    });
+  });
+}
+
+function getDirectionsRoute(start, end, mustCastle) {
+  return new Promise((resolve, reject) => {
+    const request = {
+      origin: new google.maps.LatLng(start.lat, start.lng),
+      destination: new google.maps.LatLng(end.lat, end.lng),
+      travelMode: google.maps.TravelMode.DRIVING,
+    };
+    if (mustCastle) {
+      request.waypoints = [{ location: new google.maps.LatLng(mustCastle.lat, mustCastle.lng), stopover: true }];
+    }
+    directionsService.route(request, (result, status) => {
+      if (status === 'OK') resolve(result.routes[0]);
+      else reject(new Error('Directions request failed'));
+    });
+  });
+}
+
+// Decode Google polyline (fallback if geometry library not loaded)
 function decodePolyline(encoded) {
   const points = [];
   let index = 0, lat = 0, lng = 0;
   while (index < encoded.length) {
     let b, shift = 0, result = 0;
-    do {
-      b = encoded.charCodeAt(index++) - 63;
-      result |= (b & 0x1f) << shift;
-      shift += 5;
-    } while (b >= 0x20);
+    do { b = encoded.charCodeAt(index++) - 63; result |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
     lat += (result & 1) ? ~(result >> 1) : (result >> 1);
-
     shift = 0; result = 0;
-    do {
-      b = encoded.charCodeAt(index++) - 63;
-      result |= (b & 0x1f) << shift;
-      shift += 5;
-    } while (b >= 0x20);
+    do { b = encoded.charCodeAt(index++) - 63; result |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
     lng += (result & 1) ? ~(result >> 1) : (result >> 1);
-
-    points.push([lat / 1e5, lng / 1e5]);
+    points.push({ lat: lat / 1e5, lng: lng / 1e5 });
   }
   return points;
 }
 
-// ===== GEOCODE CITY NAME =====
-function geocodeCity(name) {
-  return new Promise((resolve, reject) => {
-    if (!geocoderService) {
-      reject(new Error('Google Maps not loaded yet'));
-      return;
-    }
-    // Bias towards UK/Ireland
-    geocoderService.geocode({
-      address: name,
-      region: 'gb'
-    }, (results, status) => {
-      if (status === 'OK' && results.length > 0) {
-        const loc = results[0].geometry.location;
-        resolve({ lat: loc.lat(), lng: loc.lng(), name: results[0].formatted_address });
-      } else {
-        reject(new Error(`Could not geocode "${name}"`));
-      }
-    });
-  });
-}
-
-// ===== DISTANCE UTILS =====
-function distKm(lat1, lng1, lat2, lng2) {
-  const R = 6371;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLng = (lng2 - lng1) * Math.PI / 180;
-  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-}
-
-// Distance from point to polyline (array of [lat,lng])
-function pointToPolylineDist(plat, plng, polyline) {
-  let minDist = Infinity;
-  for (let i = 0; i < polyline.length - 1; i++) {
-    const d = pointToSegmentDist(plat, plng, polyline[i][0], polyline[i][1], polyline[i+1][0], polyline[i+1][1]);
-    if (d < minDist) minDist = d;
-  }
-  return minDist;
-}
-
-function pointToSegmentDist(px, py, ax, ay, bx, by) {
-  const t = Math.max(0, Math.min(1, ((px-ax)*(bx-ax)+(py-ay)*(by-ay)) / ((bx-ax)**2+(by-ay)**2 || 1)));
-  return distKm(px, py, ax+t*(bx-ax), ay+t*(by-ay));
-}
-
-// Approximate progress along a polyline (0..1)
-function progressAlongPolyline(plat, plng, polyline) {
-  let minDist = Infinity, bestSeg = 0, bestT = 0;
-  let totalLen = 0;
-  const segLens = [];
-  for (let i = 0; i < polyline.length - 1; i++) {
-    const sl = distKm(polyline[i][0], polyline[i][1], polyline[i+1][0], polyline[i+1][1]);
-    segLens.push(sl);
-    totalLen += sl;
-    const ax = polyline[i][0], ay = polyline[i][1], bx = polyline[i+1][0], by = polyline[i+1][1];
-    const t = Math.max(0, Math.min(1, ((plat-ax)*(bx-ax)+(plng-ay)*(by-ay)) / ((bx-ax)**2+(by-ay)**2 || 1)));
-    const d = distKm(plat, plng, ax+t*(bx-ax), ay+t*(by-ay));
-    if (d < minDist) { minDist = d; bestSeg = i; bestT = t; }
-  }
-  let dist = 0;
-  for (let i = 0; i < bestSeg; i++) dist += segLens[i];
-  dist += segLens[bestSeg] * bestT;
-  return totalLen > 0 ? dist / totalLen : 0;
-}
-
-// ===== FIND CASTLES ALONG A POLYLINE =====
-function findCastlesAlongPolyline(polyline, corridorKm) {
-  const results = [];
-  // Sample polyline every ~10 points for speed
-  const step = Math.max(1, Math.floor(polyline.length / 200));
-  const sampled = polyline.filter((_, i) => i % step === 0 || i === polyline.length - 1);
-
-  CASTLES.forEach(c => {
-    const d = pointToPolylineDist(c.lat, c.lng, sampled);
-    if (d <= corridorKm) {
-      const progress = progressAlongPolyline(c.lat, c.lng, sampled);
-      results.push({ ...c, distFromRoute: d, progress });
-    }
-  });
-  return results.sort((a, b) => a.progress - b.progress);
-}
-
-// ===== ROUTE WITH GOOGLE DIRECTIONS =====
-function getGoogleRoute(origin, destination, waypoints) {
-  return new Promise((resolve, reject) => {
-    if (!directionsService) {
-      reject(new Error('Google Maps not loaded'));
-      return;
-    }
-    const request = {
-      origin: new google.maps.LatLng(origin.lat, origin.lng),
-      destination: new google.maps.LatLng(destination.lat, destination.lng),
-      travelMode: google.maps.TravelMode.DRIVING,
-    };
-    if (waypoints && waypoints.length > 0) {
-      request.waypoints = waypoints.map(wp => ({
-        location: new google.maps.LatLng(wp.lat, wp.lng),
-        stopover: true
-      }));
-      request.optimizeWaypoints = true;
-    }
-    directionsService.route(request, (result, status) => {
-      if (status === 'OK') {
-        resolve(result);
-      } else {
-        reject(new Error(`Directions failed: ${status}`));
-      }
-    });
-  });
-}
-
-// Extract polyline, total distance, total duration from DirectionsResult
-function parseDirectionsResult(result) {
-  const route = result.routes[0];
-  let totalDist = 0, totalDur = 0;
-  const allPoints = [];
-  route.legs.forEach(leg => {
-    totalDist += leg.distance.value; // meters
-    totalDur += leg.duration.value; // seconds
-    leg.steps.forEach(step => {
-      const pts = decodePolyline(step.polyline.points);
-      pts.forEach(p => allPoints.push(p));
-    });
-  });
-  return {
-    polyline: allPoints,
-    distanceKm: totalDist / 1000,
-    durationMin: Math.round(totalDur / 60),
-    distanceText: route.legs.map(l => l.distance.text).join(' + '),
-    durationText: formatDuration(totalDur)
-  };
-}
-
-function formatDuration(seconds) {
-  const h = Math.floor(seconds / 3600);
-  const m = Math.round((seconds % 3600) / 60);
-  if (h === 0) return `${m} min`;
-  return `${h}h ${m}m`;
-}
-
-// Store route polylines on map
-let routePolylines = [];
-
-function clearRoutePolylines() {
-  routePolylines.forEach(p => map.removeLayer(p));
-  routePolylines = [];
-  if (window._routeLine) { map.removeLayer(window._routeLine); window._routeLine = null; }
-}
-
-// ===== ROUTE BUTTON HANDLER =====
-document.getElementById('btn-find-route').addEventListener('click', async () => {
-  const fromText = document.getElementById('route-from').value.trim();
-  const toText = document.getElementById('route-to').value.trim();
-  const viaText = document.getElementById('route-via').value.trim();
-  const resultsDiv = document.getElementById('route-results');
-  const loadingDiv = document.getElementById('route-loading');
-
-  if (!fromText || !toText) {
-    resultsDiv.innerHTML = '<p class="route-error">Please enter both a start and end point.</p>';
-    return;
-  }
-
-  if (!directionsService || !geocoderService) {
-    resultsDiv.innerHTML = '<p class="route-error">Google Maps is still loading. Please wait a moment and try again.</p>';
-    return;
-  }
-
-  resultsDiv.innerHTML = '';
-  loadingDiv.style.display = 'flex';
-  clearRoutePolylines();
-
-  try {
-    // Geocode start and end
-    const [fromGeo, toGeo] = await Promise.all([
-      geocodeCity(fromText),
-      geocodeCity(toText)
-    ]);
-
-    // Find "must visit" castle
-    let mustVisit = null;
-    if (viaText) {
-      const vq = viaText.toLowerCase();
-      mustVisit = CASTLES.find(c => c.name.toLowerCase().includes(vq));
-    }
-
-    // Get base route (no waypoints) to establish the corridor
-    const baseResult = await getGoogleRoute(fromGeo, toGeo, mustVisit ? [{ lat: mustVisit.lat, lng: mustVisit.lng }] : []);
-    const baseParsed = parseDirectionsResult(baseResult);
-
-    // Route configs
-    const routeConfigs = [
-      { name: '🏰 Castle Hunter', corridor: 30, maxCastles: 8, minRating: 0, color: '#c44040' },
-      { name: '⚖️ Balanced', corridor: 15, maxCastles: 5, minRating: 0, color: '#d4a546' },
-      { name: '⚡ Quick Detour', corridor: 8, maxCastles: 3, minRating: 4.3, color: '#44aa66' },
-    ];
-
-    const descs = [
-      'Maximum castles, scenic detours',
-      'Great stops without major detours',
-      'Fastest route, nearby highlights only'
-    ];
-
-    let html = '';
-
-    for (let ri = 0; ri < routeConfigs.length; ri++) {
-      const rc = routeConfigs[ri];
-
-      // Find castles along the base route polyline
-      let castles = findCastlesAlongPolyline(baseParsed.polyline, rc.corridor);
-
-      // Filter by rating
-      if (rc.minRating > 0) castles = castles.filter(c => c.rating >= rc.minRating);
-
-      // Sort by rating descending, take top N
-      const topCastles = [...castles].sort((a, b) => b.rating - a.rating).slice(0, rc.maxCastles);
-
-      // Re-sort by progress along route
-      topCastles.sort((a, b) => a.progress - b.progress);
-
-      // Add must-visit if not already included
-      if (mustVisit && !topCastles.find(c => c.name === mustVisit.name)) {
-        const progress = progressAlongPolyline(mustVisit.lat, mustVisit.lng, baseParsed.polyline);
-        topCastles.push({ ...mustVisit, distFromRoute: 0, progress });
-        topCastles.sort((a, b) => a.progress - b.progress);
-      }
-
-      // Build waypoints (limit to 8 for Directions API)
-      const waypoints = topCastles.slice(0, 8).map(c => ({ lat: c.lat, lng: c.lng }));
-
-      let routeResult, routeParsed;
-      try {
-        if (waypoints.length > 0) {
-          routeResult = await getGoogleRoute(fromGeo, toGeo, waypoints);
-          routeParsed = parseDirectionsResult(routeResult);
-        } else {
-          routeResult = baseResult;
-          routeParsed = baseParsed;
-        }
-      } catch (e) {
-        // If waypoint route fails, fall back to base
-        routeResult = baseResult;
-        routeParsed = baseParsed;
-      }
-
-      // Calculate stop time estimate (30 min per castle)
-      const stopTimeSec = topCastles.length * 30 * 60;
-      const totalWithStops = formatDuration(routeParsed.durationMin * 60 + stopTimeSec);
-
-      html += `
-        <div class="route-card" data-route-index="${ri}">
-          <div class="route-header">
-            <span class="route-name">${rc.name}</span>
-            <span class="route-time">${routeParsed.durationText} driving</span>
-          </div>
-          <p class="route-desc">${descs[ri]}</p>
-          <div class="route-stats-row">
-            <span class="route-stat-item">📏 ${routeParsed.distanceKm.toFixed(0)} km</span>
-            <span class="route-stat-item">🏰 ${topCastles.length} stops</span>
-            <span class="route-stat-item">⏱ ~${totalWithStops} total</span>
-          </div>
-          <div class="route-castles">
-            ${topCastles.map(c => `<div class="route-castle-item">${typeEmoji[c.type] || '📍'} ${c.name} <span class="route-castle-rating">★ ${c.rating}</span></div>`).join('')}
-          </div>
-          <button class="btn-show-route" data-route-index="${ri}">Show on map</button>
-        </div>
-      `;
-
-      // Store polyline data for later display
-      if (!window._routeData) window._routeData = [];
-      window._routeData[ri] = { polyline: routeParsed.polyline, color: rc.color, castles: topCastles };
-    }
-
-    resultsDiv.innerHTML = html;
-
-    // Show the first route by default
-    showRouteOnMap(0);
-
-    // Add click handlers for "Show on map" buttons
-    resultsDiv.querySelectorAll('.btn-show-route').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const idx = parseInt(btn.dataset.routeIndex);
-        showRouteOnMap(idx);
-        // Highlight active card
-        resultsDiv.querySelectorAll('.route-card').forEach(card => card.classList.remove('active'));
-        btn.closest('.route-card').classList.add('active');
-      });
-    });
-
-  } catch (err) {
-    resultsDiv.innerHTML = `<p class="route-error">⚠️ ${err.message}</p>`;
-  } finally {
-    loadingDiv.style.display = 'none';
-  }
-});
-
-function showRouteOnMap(index) {
-  clearRoutePolylines();
-  const data = window._routeData && window._routeData[index];
-  if (!data) return;
-
-  const polyline = L.polyline(data.polyline, {
-    color: data.color,
-    weight: 4,
-    opacity: 0.8
-  }).addTo(map);
-  routePolylines.push(polyline);
-
-  // Add castle markers along route
-  data.castles.forEach(c => {
-    const marker = L.circleMarker([c.lat, c.lng], {
-      radius: 8,
-      fillColor: data.color,
-      fillOpacity: 0.9,
-      color: '#fff',
-      weight: 2
-    }).addTo(map);
-    marker.bindTooltip(c.name, { permanent: false });
-    routePolylines.push(marker);
+// ========== UI WIRING ==========
+function initUI() {
+  document.getElementById('sidebarClose').addEventListener('click', closeSidebar);
+  document.getElementById('routeClose').addEventListener('click', closeRoutePanel);
+  document.getElementById('overlayBackdrop').addEventListener('click', () => {
+    closeSidebar();
+    closeRoutePanel();
   });
 
-  map.fitBounds(polyline.getBounds(), { padding: [50, 50] });
-}
+  document.getElementById('btnFilter').addEventListener('click', () => {
+    const panel = document.getElementById('filterPanel');
+    const btn = document.getElementById('btnFilter');
+    panel.classList.toggle('active');
+    btn.classList.toggle('active');
+    // Close route panel if open
+    if (panel.classList.contains('active')) closeRoutePanel();
+  });
 
-// ===== KEYBOARD SHORTCUT =====
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    sidebar.classList.remove('open');
-    document.getElementById('filter-panel').classList.remove('open');
-    document.getElementById('route-panel').classList.remove('open');
-  }
-  if (e.key === '/' && !e.ctrlKey && document.activeElement.tagName !== 'INPUT') {
-    e.preventDefault();
-    searchInput.focus();
-  }
-});
+  document.getElementById('btnRoute').addEventListener('click', () => {
+    openRoutePanel();
+    document.getElementById('filterPanel').classList.remove('active');
+    document.getElementById('btnFilter').classList.remove('active');
+    closeSidebar();
+  });
+
+  // Mobile search toggle
+  document.getElementById('mobileSearchToggle').addEventListener('click', () => {
+    document.querySelector('.topbar-search').classList.toggle('mobile-active');
+  });
+}

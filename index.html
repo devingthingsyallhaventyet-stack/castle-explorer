@@ -1,142 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Castle Explorer — UK &amp; Ireland</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
-<link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castle Explorer — Discover Historic Castles & Abbeys</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-logo">🏰 <span>Castle Explorer</span></div>
+    <div class="topbar-search">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search castles, abbeys, ruins…" autocomplete="off" />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn-pill" id="btnRoute">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+        Plan Route
+      </button>
+      <button class="btn-pill" id="btnFilter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+        Filters
+      </button>
+      <button class="btn-icon mobile-search-toggle" id="mobileSearchToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+    </div>
+  </header>
 
-<!-- Top Bar -->
-<div class="top-bar">
-  <div class="logo">🏰 <span class="logo-text">Castle Explorer</span></div>
-  <div class="search-wrap">
-    <input type="text" id="search" placeholder="Search castles, abbeys, ruins..." autocomplete="off"/>
-    <div id="search-results" class="search-results"></div>
+  <!-- Filter Panel -->
+  <div class="filter-panel" id="filterPanel">
+    <div class="filter-section">
+      <h3>Country</h3>
+      <div class="filter-chips" id="countryFilters"></div>
+    </div>
+    <div class="filter-section">
+      <h3>Type</h3>
+      <div class="filter-chips" id="typeFilters"></div>
+    </div>
+    <div class="filter-section">
+      <h3>Condition</h3>
+      <div class="filter-chips" id="conditionFilters"></div>
+    </div>
+    <div class="filter-counter" id="filterCounter">Showing 100 of 100 sites</div>
   </div>
-  <div class="top-actions">
-    <button class="btn-route" id="btn-route-toggle">📍 Plan Route</button>
-    <button class="btn-filter" id="btn-filter-toggle">⚙ Filters</button>
-  </div>
-</div>
 
-<!-- Filter Panel -->
-<div class="filter-panel" id="filter-panel">
-  <div class="filter-group">
-    <label>Country</label>
-    <div class="filter-chips" id="filter-country">
-      <button class="chip active" data-value="all">All</button>
-      <button class="chip" data-value="England">England</button>
-      <button class="chip" data-value="Wales">Wales</button>
-      <button class="chip" data-value="Scotland">Scotland</button>
-      <button class="chip" data-value="Northern Ireland">N. Ireland</button>
-      <button class="chip" data-value="Ireland">Ireland</button>
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Sidebar Detail Panel -->
+  <div class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+    <div class="sidebar-image" id="sidebarImage"></div>
+    <div class="sidebar-content">
+      <h1 class="sidebar-name" id="sidebarName"></h1>
+      <p class="sidebar-location" id="sidebarLocation"></p>
+      <div class="sidebar-badges" id="sidebarBadges"></div>
+      <div class="sidebar-rating" id="sidebarRating"></div>
+      <div class="sidebar-google" id="sidebarGoogle"></div>
+      <p class="sidebar-desc" id="sidebarDesc"></p>
+      <div class="sidebar-hours" id="sidebarHours"></div>
+      <div class="sidebar-photos" id="sidebarPhotos"></div>
+      <a class="btn-directions" id="sidebarDirections" href="#" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+        Get Directions
+      </a>
+      <div class="sidebar-footer">
+        <small>Data from OpenStreetMap & Google Maps Platform</small>
+      </div>
     </div>
   </div>
-  <div class="filter-group">
-    <label>Type</label>
-    <div class="filter-chips" id="filter-type">
-      <button class="chip active" data-value="all">All</button>
-      <button class="chip" data-value="castle">🏰 Castle</button>
-      <button class="chip" data-value="abbey">⛪ Abbey</button>
-      <button class="chip" data-value="ruin">🪨 Ruin</button>
-      <button class="chip" data-value="tower house">🗼 Tower</button>
-      <button class="chip" data-value="palace">👑 Palace</button>
-      <button class="chip" data-value="fortified house">🏠 Fortified</button>
-    </div>
-  </div>
-  <div class="filter-group">
-    <label>Condition</label>
-    <div class="filter-chips" id="filter-condition">
-      <button class="chip active" data-value="all">All</button>
-      <button class="chip" data-value="intact">Intact</button>
-      <button class="chip" data-value="partial ruin">Partial</button>
-      <button class="chip" data-value="ruin">Ruin</button>
-      <button class="chip" data-value="foundations only">Foundations</button>
-    </div>
-  </div>
-  <div class="filter-stats">Showing <span id="visible-count">0</span> of <span id="total-count">0</span> sites</div>
-</div>
 
-<!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-  <button class="sidebar-close" id="sidebar-close">✕</button>
-  <!-- Photo Gallery -->
-  <div class="sidebar-gallery" id="sidebar-gallery">
-    <div class="gallery-track" id="gallery-track"></div>
-    <button class="gallery-prev" id="gallery-prev">‹</button>
-    <button class="gallery-next" id="gallery-next">›</button>
-    <div class="gallery-dots" id="gallery-dots"></div>
-  </div>
-  <div class="sidebar-img-wrap" id="sidebar-img-wrap">
-    <img id="sidebar-img" src="" alt=""/>
-    <div class="sidebar-img-placeholder" id="sidebar-img-placeholder">🏰</div>
-  </div>
-  <div class="sidebar-body">
-    <div class="sidebar-badges">
-      <span class="badge badge-type" id="sidebar-type"></span>
-      <span class="badge badge-era" id="sidebar-era"></span>
-      <span class="badge badge-condition" id="sidebar-condition"></span>
+  <!-- Route Planner Panel -->
+  <div class="route-panel" id="routePanel">
+    <div class="route-header">
+      <h2>🗺️ Route Planner</h2>
+      <button class="sidebar-close" id="routeClose">✕</button>
     </div>
-    <h2 id="sidebar-name"></h2>
-    <p class="sidebar-location" id="sidebar-location"></p>
-    <div class="sidebar-rating" id="sidebar-rating-wrap">
-      <span class="stars" id="sidebar-stars"></span>
-      <span class="rating-num" id="sidebar-rating"></span>
-      <span class="review-count" id="sidebar-reviews"></span>
+    <div class="route-form">
+      <div class="route-field">
+        <label>Start Location</label>
+        <input type="text" id="routeStart" placeholder="e.g. Dublin, Edinburgh…" />
+      </div>
+      <div class="route-field">
+        <label>End Location</label>
+        <input type="text" id="routeEnd" placeholder="e.g. London, Cardiff…" />
+      </div>
+      <div class="route-field">
+        <label>Must Visit (optional)</label>
+        <input type="text" id="routeMust" placeholder="e.g. Blarney Castle" />
+      </div>
+      <button class="btn-find-routes" id="btnFindRoutes">Find Castle Routes</button>
     </div>
-    <div class="sidebar-google-attr" id="sidebar-google-attr" style="display:none;">
-      <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_42x14dp.png" alt="Google" class="google-logo-small"/>
-      <span>rating</span>
+    <div class="route-results" id="routeResults"></div>
+    <div class="sidebar-footer">
+      <small>Routing by Google Maps Platform</small>
     </div>
-    <div class="sidebar-hours" id="sidebar-hours" style="display:none;">
-      <h4>🕐 Opening Hours</h4>
-      <ul id="sidebar-hours-list"></ul>
-    </div>
-    <p class="sidebar-desc" id="sidebar-desc"></p>
-    <a class="btn-directions" id="sidebar-directions" href="#" target="_blank">🧭 Get Directions</a>
   </div>
-</div>
 
-<!-- Route Planner -->
-<div class="route-panel" id="route-panel">
-  <h3>📍 Plan Your Route</h3>
-  <div class="route-inputs">
-    <input type="text" id="route-from" placeholder="Starting point (e.g. London)"/>
-    <input type="text" id="route-to" placeholder="Destination (e.g. Edinburgh)"/>
-    <input type="text" id="route-via" placeholder="Must visit castle (optional)"/>
-    <button class="btn-find-route" id="btn-find-route">Find Routes</button>
-  </div>
-  <div id="route-loading" class="route-loading" style="display:none;">
-    <div class="spinner"></div>
-    <span>Calculating routes...</span>
-  </div>
-  <div id="route-results"></div>
-</div>
+  <!-- Mobile overlay backdrop -->
+  <div class="overlay-backdrop" id="overlayBackdrop"></div>
 
-<!-- Map -->
-<div id="map"></div>
-
-<!-- Google Attribution Footer -->
-<div class="google-attribution">
-  Powered by <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_42x14dp.png" alt="Google" style="height:12px;vertical-align:middle;margin:0 3px;"/> Maps Platform
-</div>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-<script src="data.js"></script>
-<script>
-  // Initialize Google Maps callback
-  function onGoogleMapsLoaded() {
-    window._googleReady = true;
-    if (window._onGoogleReady) window._onGoogleReady();
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places,routes&callback=onGoogleMapsLoaded" async defer></script>
-<script src="app.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
