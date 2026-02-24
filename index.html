@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
 </head>
 <body>
   <!-- Top Bar -->
@@ -25,7 +25,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
         Plan Route
       </button>
-      <button class="btn-pill" id="btnBookmarks">🔖 Bookmarks</button>
+      <button class="btn-pill" id="btnBookmarks">⭐ Favorites</button>
       <button class="btn-pill" id="btnFilter">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
         Filters
@@ -92,7 +92,7 @@
     <div class="sidebar-content">
       <div class="sidebar-name-row">
         <h1 class="sidebar-name" id="sidebarName"></h1>
-        <button class="bookmark-btn" id="sidebarBookmark" title="Bookmark this castle">🔖</button>
+        <button class="bookmark-btn" id="sidebarBookmark" title="Favorite this castle">☆</button>
       </div>
       <p class="sidebar-location" id="sidebarLocation"></p>
       <div class="sidebar-badges" id="sidebarBadges"></div>
@@ -102,10 +102,16 @@
       <div class="sidebar-hours" id="sidebarHours"></div>
       <div class="sidebar-photos" id="sidebarPhotos"></div>
       <div class="sidebar-reviews" id="sidebarReviews"></div>
-      <a class="btn-directions" id="sidebarDirections" href="#" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
-        Get Directions
-      </a>
+      <div class="sidebar-actions">
+        <button class="btn-add-route" id="sidebarAddRoute" onclick="addToRoute()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 5v14M5 12h14"/></svg>
+          Add to Route
+        </button>
+        <a class="btn-directions" id="sidebarDirections" href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+          Get Directions
+        </a>
+      </div>
       <div class="sidebar-footer">
         <small>Data from OpenStreetMap & Google Maps Platform</small>
       </div>
@@ -142,13 +148,13 @@
   <!-- Bookmarks Panel -->
   <div class="bookmarks-panel" id="bookmarksPanel">
     <div class="route-header">
-      <h2>🔖 Bookmarks</h2>
+      <h2>⭐ Favorites</h2>
       <button class="sidebar-close" id="bookmarksClose">✕</button>
     </div>
     <div class="bookmarks-count" id="bookmarksCount">0 sites bookmarked</div>
     <div class="bookmarks-list" id="bookmarksList"></div>
     <div class="bookmarks-actions" id="bookmarksActions">
-      <button class="btn-find-routes" id="btnRouteFromBookmarks">Plan Route from Bookmarks</button>
+      <button class="btn-find-routes" id="btnRouteFromBookmarks">Plan Route from Favorites</button>
       <button class="btn-clear-bookmarks" id="btnClearBookmarks">Clear All</button>
     </div>
     <div class="bookmarks-route-form" id="bookmarksRouteForm" style="display:none">
@@ -179,7 +185,7 @@
     <div class="quick-view-content">
       <div class="quick-view-header">
         <h3 id="qvName"></h3>
-        <button class="qv-bookmark" id="qvBookmark">🔖</button>
+        <button class="qv-bookmark" id="qvBookmark">☆</button>
       </div>
       <div class="quick-view-badges" id="qvBadges"></div>
       <div class="quick-view-rating" id="qvRating"></div>
@@ -196,7 +202,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
   <script src="data.js?v=13"></script>
-  <script src="app.js?v=13"></script>
+  <script src="app.js?v=14"></script>
 </body>
 </html>
 <!-- v2 -->

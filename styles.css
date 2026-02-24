@@ -223,9 +223,18 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .sidebar-photos img:hover { transform: scale(1.05); }
 .sidebar-hours { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
 .sidebar-hours strong { color: var(--text); }
+.sidebar-actions { display: flex; gap: 10px; margin-bottom: 8px; }
+.btn-add-route {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px; border-radius: var(--radius); border: 2px solid var(--sage);
+  background: var(--white); color: var(--sage); cursor: pointer;
+  font-family: var(--font-sans); font-size: 15px; font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-add-route:hover { background: var(--sage); color: var(--white); }
 .btn-directions {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  width: 100%; padding: 14px; border-radius: var(--radius);
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px; border-radius: var(--radius);
   background: var(--sage); color: var(--white); text-decoration: none;
   font-family: var(--font-sans); font-size: 15px; font-weight: 600;
   transition: background 0.2s;
@@ -379,7 +388,7 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   margin-top: 4px;
 }
 .bookmark-btn:hover { opacity: 0.8; border-color: var(--gold); }
-.bookmark-btn.bookmarked { opacity: 1; background: #FFF8E7; border-color: var(--gold); }
+.bookmark-btn.bookmarked { opacity: 1; background: #FFF8E7; border-color: var(--gold); color: var(--gold); }
 
 .bookmarks-panel {
   position: fixed; top: var(--topbar-h); left: 0; bottom: 0; width: 400px;

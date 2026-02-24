@@ -275,8 +275,11 @@ function openSidebar(castle) {
   document.getElementById('sidebarHours').innerHTML = '';
   document.getElementById('sidebarReviews').innerHTML = '';
 
-  // Set bookmark button state
-  document.getElementById('sidebarBookmark').classList.toggle('bookmarked', isBookmarked(castle.name));
+  // Set favorite button state
+  const faved = isBookmarked(castle.name);
+  const favBtn = document.getElementById('sidebarBookmark');
+  favBtn.classList.toggle('bookmarked', faved);
+  favBtn.textContent = faved ? '★' : '☆';
 
   sidebar.classList.add('active');
   document.getElementById('overlayBackdrop').classList.add('active');
@@ -682,7 +685,26 @@ document.addEventListener('keydown', (e) => {
   });
 })();
 
-// ========== BOOKMARKS ==========
+// ========== ADD TO ROUTE ==========
+function addToRoute() {
+  if (!selectedCastle) return;
+  // Add to favorites first if not already
+  if (!isBookmarked(selectedCastle.name)) {
+    toggleBookmark(selectedCastle.name);
+  }
+  // Open the bookmarks/favorites panel with route form visible
+  openBookmarksPanel();
+  document.getElementById('bookmarksRouteForm').style.display = 'block';
+  // Visual feedback on button
+  const btn = document.getElementById('sidebarAddRoute');
+  const orig = btn.innerHTML;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 6L9 17l-5-5"/></svg> Added!';
+  btn.style.background = 'var(--sage)';
+  btn.style.color = '#fff';
+  setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 1500);
+}
+
+// ========== FAVORITES ==========
 function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('castle-explorer-bookmarks')) || []; }
   catch { return []; }
@@ -700,12 +722,21 @@ function toggleBookmark(name) {
 }
 
 function updateBookmarkUI() {
-  // Update sidebar bookmark button
+  // Update sidebar favorite button
   if (selectedCastle) {
     const btn = document.getElementById('sidebarBookmark');
-    btn.classList.toggle('bookmarked', isBookmarked(selectedCastle.name));
+    const faved = isBookmarked(selectedCastle.name);
+    btn.classList.toggle('bookmarked', faved);
+    btn.textContent = faved ? '★' : '☆';
   }
-  // Update bookmarks panel if open
+  // Update quick view favorite button
+  const qvBtn = document.getElementById('qvBookmark');
+  if (qvBtn && window.quickViewCastle) {
+    const faved = isBookmarked(quickViewCastle.name);
+    qvBtn.classList.toggle('bookmarked', faved);
+    qvBtn.textContent = faved ? '★' : '☆';
+  }
+  // Update favorites panel if open
   renderBookmarksPanel();
 }
 
@@ -714,10 +745,10 @@ function renderBookmarksPanel() {
   const listEl = document.getElementById('bookmarksList');
   const countEl = document.getElementById('bookmarksCount');
   const actionsEl = document.getElementById('bookmarksActions');
-  countEl.textContent = `${bm.length} site${bm.length !== 1 ? 's' : ''} bookmarked`;
+  countEl.textContent = `${bm.length} favorite${bm.length !== 1 ? 's' : ''}`;
 
   if (bm.length === 0) {
-    listEl.innerHTML = '<div class="bookmarks-empty">No bookmarks yet. Tap the 🔖 icon on any castle to save it.</div>';
+    listEl.innerHTML = '<div class="bookmarks-empty">No favorites yet. Tap the ⭐ icon on any castle to save it.</div>';
     actionsEl.style.display = 'none';
     return;
   }
