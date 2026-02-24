@@ -208,6 +208,7 @@ function openSidebar(castle) {
   document.getElementById('sidebarGoogle').innerHTML = '';
   document.getElementById('sidebarPhotos').innerHTML = '';
   document.getElementById('sidebarHours').innerHTML = '';
+  document.getElementById('sidebarReviews').innerHTML = '';
 
   sidebar.classList.add('active');
   document.getElementById('overlayBackdrop').classList.add('active');
@@ -233,7 +234,7 @@ async function lookupGooglePlaces(castle) {
     const { Place } = await google.maps.importLibrary('places');
     const request = {
       textQuery: `${castle.name} ${castle.county} ${castle.country}`,
-      fields: ['displayName', 'rating', 'userRatingCount', 'photos', 'regularOpeningHours', 'googleMapsURI'],
+      fields: ['displayName', 'rating', 'userRatingCount', 'photos', 'regularOpeningHours', 'googleMapsURI', 'reviews'],
       locationBias: { lat: castle.lat, lng: castle.lng },
       maxResultCount: 1
     };
@@ -250,6 +251,15 @@ async function lookupGooglePlaces(castle) {
 }
 
 function renderGoogleData(place) {
+  // Banner image — use first Google photo
+  if (place.photos && place.photos.length > 0) {
+    const bannerUrl = place.photos[0].getURI ? place.photos[0].getURI({ maxWidth: 800, maxHeight: 400 }) : (place.photos[0].getUrl ? place.photos[0].getUrl({ maxWidth: 800, maxHeight: 400 }) : '');
+    if (bannerUrl) {
+      const imgEl = document.getElementById('sidebarImage');
+      imgEl.innerHTML = `<img src="${bannerUrl}" alt="${selectedCastle ? selectedCastle.name : 'Photo'}" />`;
+    }
+  }
+
   // Google rating
   if (place.rating) {
     const count = place.userRatingCount || 0;
@@ -260,20 +270,44 @@ function renderGoogleData(place) {
       </div>
     `;
   }
-  // Photos
-  if (place.photos && place.photos.length > 0) {
-    const photosHtml = place.photos.slice(0, 3).map(p => {
+
+  // Photo gallery — remaining photos
+  if (place.photos && place.photos.length > 1) {
+    const photosHtml = place.photos.slice(1, 6).map(p => {
       const url = p.getURI ? p.getURI({ maxWidth: 300, maxHeight: 225 }) : (p.getUrl ? p.getUrl({ maxWidth: 300, maxHeight: 225 }) : '');
       if (!url) return '';
       return `<img src="${url}" alt="Photo" />`;
     }).join('');
     document.getElementById('sidebarPhotos').innerHTML = photosHtml;
   }
+
   // Hours
   if (place.regularOpeningHours && place.regularOpeningHours.weekdayDescriptions) {
     document.getElementById('sidebarHours').innerHTML =
       `<strong>Opening Hours</strong><br/>` + place.regularOpeningHours.weekdayDescriptions.join('<br/>');
   }
+
+  // Reviews
+  if (place.reviews && place.reviews.length > 0) {
+    const reviewsHtml = place.reviews.slice(0, 5).map(r => {
+      const stars = '★'.repeat(Math.floor(r.rating || 0)) + '☆'.repeat(5 - Math.floor(r.rating || 0));
+      const author = r.authorAttribution ? r.authorAttribution.displayName : 'Anonymous';
+      const timeDesc = r.relativePublishTimeDescription || '';
+      const text = r.text ? (r.text.text || r.text || '') : '';
+      const truncated = text.length > 200 ? text.substring(0, 200) + '…' : text;
+      return `<div class="review-card">
+        <div class="review-header">
+          <strong class="review-author">${author}</strong>
+          <span class="review-time">${timeDesc}</span>
+        </div>
+        <div class="review-stars">${stars}</div>
+        <p class="review-text">${truncated}</p>
+      </div>`;
+    }).join('');
+    document.getElementById('sidebarReviews').innerHTML =
+      `<h3 class="reviews-title">Reviews</h3>` + reviewsHtml;
+  }
+
   // Google Maps link
   if (place.googleMapsURI) {
     document.getElementById('sidebarDirections').href = place.googleMapsURI;
