@@ -1079,6 +1079,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('sidebarBookmark').addEventListener('click', () => {
     if (selectedCastle) toggleBookmark(selectedCastle.name);
   });
+  document.getElementById('sidebarRouteAdd').addEventListener('click', () => {
+    if (selectedCastle) addToRoute();
+  });
   document.getElementById('btnBookmarks').addEventListener('click', () => {
     openBookmarksPanel();
     document.getElementById('filterPanel').classList.remove('active');
@@ -1110,6 +1113,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (quickViewCastle) {
       toggleBookmark(quickViewCastle.name);
       document.getElementById('qvBookmark').classList.toggle('bookmarked', isBookmarked(quickViewCastle.name));
+    }
+  });
+  document.getElementById('qvRouteAdd').addEventListener('click', () => {
+    if (quickViewCastle) {
+      // Temporarily set selectedCastle for addToRoute
+      const prev = selectedCastle;
+      selectedCastle = quickViewCastle;
+      addToRoute();
+      selectedCastle = prev;
     }
   });
 

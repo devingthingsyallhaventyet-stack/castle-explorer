@@ -397,6 +397,9 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 }
 .bookmark-btn:hover { opacity: 0.8; border-color: var(--gold); }
 .bookmark-btn.bookmarked { opacity: 1; background: #FFF8E7; border-color: var(--gold); color: var(--gold); }
+.route-add-btn { opacity: 0.5; font-size: 16px; }
+.route-add-btn:hover { opacity: 0.8; border-color: var(--sage); }
+.qv-route-add { font-size: 16px; }
 
 .bookmarks-panel {
   position: fixed; top: var(--topbar-h); left: 0; bottom: 0; width: 400px;
