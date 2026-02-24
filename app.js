@@ -738,7 +738,7 @@ function openRouteBuilderPanel() {
   panel.classList.add('active');
   panel.classList.remove('minimized');
   document.getElementById('rbToggle').textContent = '−';
-  document.getElementById('mapLegend').style.display = 'none';
+  // Legend stays visible below
 }
 
 function closeRouteBuilderPanel() {
@@ -749,7 +749,7 @@ function closeRouteBuilderPanel() {
   document.getElementById('rbStartLocation').value = '';
   document.getElementById('rbEndLocation').value = '';
   document.getElementById('rbRouteResults').innerHTML = '';
-  document.getElementById('mapLegend').style.display = '';
+  // Legend restored
 }
 
 function toggleRouteBuilderMinimize() {
