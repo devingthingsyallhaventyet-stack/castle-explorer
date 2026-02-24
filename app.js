@@ -732,13 +732,23 @@ function addToRoute() {
   setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 1500);
 }
 
+function positionRouteBuilder() {
+  const legend = document.getElementById('mapLegend');
+  const panel = document.getElementById('routeBuilderPanel');
+  if (!legend || !panel) return;
+  const legendRect = legend.getBoundingClientRect();
+  const mapRect = document.getElementById('map').getBoundingClientRect();
+  const legendBottom = mapRect.bottom - legendRect.top + 8; // 8px gap
+  panel.style.bottom = legendBottom + 'px';
+}
+
 function openRouteBuilderPanel() {
   renderRouteBuilderStops();
   const panel = document.getElementById('routeBuilderPanel');
   panel.classList.add('active');
   panel.classList.remove('minimized');
   document.getElementById('rbToggle').textContent = '−';
-  // Legend stays visible below
+  positionRouteBuilder();
 }
 
 function closeRouteBuilderPanel() {
@@ -1118,6 +1128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (panel.classList.contains('minimized')) toggleRouteBuilderMinimize();
   });
   document.getElementById('btnGenerateRoute').addEventListener('click', generateBuilderRoute);
+  window.addEventListener('resize', positionRouteBuilder);
 
   // Google Places Autocomplete for location inputs
   const acOptions = { types: ['geocode', 'establishment'], fields: ['formatted_address', 'geometry', 'name'] };
