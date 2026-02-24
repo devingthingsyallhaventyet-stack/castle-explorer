@@ -560,13 +560,24 @@ async function findRoutes() {
         }).addTo(map);
         routePolylines.push(polyline);
 
-        // Update card with real stats
+        // Reorder castles by optimized waypoint order
+        const wpOrder = route.waypoint_order || [];
+        const optimizedNames = wpOrder.length ? wpOrder.map(i => nearby[i].name) : nearby.map(c => c.name);
+
+        // Update card with real stats and correct Google Maps link
         let totalDist = 0, totalDur = 0;
         route.legs.forEach(leg => { totalDist += leg.distance.value; totalDur += leg.duration.value; });
         const cards = document.querySelectorAll('.route-card');
         if (cards[index]) {
           const meta = cards[index].querySelector('.route-card-meta');
           if (meta) meta.innerHTML = `<strong>${formatDuration(totalDur)}</strong> · ${formatDualDist(totalDist)} · ${nearby.length} castle${nearby.length > 1 ? 's' : ''}`;
+          // Update Google Maps button with optimized order
+          const gmBtn = cards[index].querySelector('.btn-show-route');
+          if (gmBtn) {
+            const wpStr = optimizedNames.map(n => n + ', UK').join('|');
+            const gmUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(startText)}&destination=${encodeURIComponent(endText)}&waypoints=${encodeURIComponent(wpStr)}&travelmode=driving`;
+            gmBtn.onclick = () => window.open(gmUrl, '_blank');
+          }
         }
 
         routeLatLngs.forEach(ll => allBounds.extend(ll));
