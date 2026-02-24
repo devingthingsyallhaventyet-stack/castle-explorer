@@ -211,10 +211,10 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .sidebar-google { margin-bottom: 16px; }
 .google-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
 .google-rating img { height: 14px; }
-.sidebar-photos { display: flex; gap: 8px; margin-bottom: 20px; overflow-x: auto; }
+.sidebar-photos { display: flex; gap: 8px; margin-bottom: 20px; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
 .sidebar-photos img {
-  width: 120px; height: 90px; object-fit: cover; border-radius: var(--radius-sm);
-  cursor: pointer; transition: transform 0.2s;
+  width: 120px; min-width: 120px; height: 90px; object-fit: cover; border-radius: var(--radius-sm);
+  cursor: pointer; transition: transform 0.2s; flex-shrink: 0;
 }
 .sidebar-photos img:hover { transform: scale(1.05); }
 .sidebar-hours { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
