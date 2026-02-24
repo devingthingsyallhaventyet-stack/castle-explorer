@@ -75,14 +75,23 @@ function createPinHtml(castle, tc, bookmarked) {
   return `<div class="${cls}"><span class="pin-emoji">${tc.emoji}</span></div>`;
 }
 
+function getPinSize() {
+  const zoom = map.getZoom();
+  if (zoom <= 8) return 36;
+  if (zoom >= 16) return 80;
+  // Scale linearly from 36 at zoom 8 to 80 at zoom 16
+  return Math.round(36 + (zoom - 8) * (80 - 36) / (16 - 8));
+}
+
 function initMarkers() {
   const bm = getBookmarks();
   CASTLES.forEach((c, i) => {
     const tc = getTypeConfig(c.type);
     const bookmarked = bm.includes(c.name);
+    const size = getPinSize();
     const icon = L.divIcon({
       html: createPinHtml(c, tc, bookmarked),
-      className: '', iconSize: [36, 36], iconAnchor: [18, 18]
+      className: '', iconSize: [size, size], iconAnchor: [size/2, size/2]
     });
     const m = L.marker([c.lat, c.lng], { icon });
     m.castleIndex = i;
@@ -91,6 +100,21 @@ function initMarkers() {
     markerGroup.addLayer(m);
   });
   initLegendCounts();
+
+  // Resize pins on zoom
+  map.on('zoomend', resizePins);
+}
+
+function resizePins() {
+  const size = getPinSize();
+  markers.forEach(m => {
+    const icon = m.options.icon;
+    const newIcon = L.divIcon({
+      html: icon.options.html,
+      className: '', iconSize: [size, size], iconAnchor: [size/2, size/2]
+    });
+    m.setIcon(newIcon);
+  });
 }
 
 function handlePinClick(castle) {
@@ -108,9 +132,10 @@ function updatePinImage(castleIndex, photoUrl) {
   const bm = getBookmarks();
   const bookmarked = bm.includes(c.name);
   const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
+  const size = getPinSize();
   const icon = L.divIcon({
     html: `<div class="${cls}"><img src="${photoUrl}" alt="" /></div>`,
-    className: '', iconSize: [36, 36], iconAnchor: [18, 18]
+    className: '', iconSize: [size, size], iconAnchor: [size/2, size/2]
   });
   markers[castleIndex].setIcon(icon);
 }
@@ -775,9 +800,10 @@ function updateMapPinBookmarks() {
     const c = CASTLES[i];
     const tc = getTypeConfig(c.type);
     const bookmarked = bm.includes(c.name);
+    const size = getPinSize();
     const icon = L.divIcon({
       html: createPinHtml(c, tc, bookmarked),
-      className: '', iconSize: [36, 36], iconAnchor: [18, 18]
+      className: '', iconSize: [size, size], iconAnchor: [size/2, size/2]
     });
     m.setIcon(icon);
   });
