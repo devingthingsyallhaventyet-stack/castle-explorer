@@ -271,12 +271,13 @@ function renderGoogleData(place) {
     `;
   }
 
-  // Photo gallery — remaining photos
+  // Photo gallery — remaining photos (clickable for lightbox)
   if (place.photos && place.photos.length > 1) {
     const photosHtml = place.photos.slice(1, 6).map(p => {
-      const url = p.getURI ? p.getURI({ maxWidth: 300, maxHeight: 225 }) : (p.getUrl ? p.getUrl({ maxWidth: 300, maxHeight: 225 }) : '');
-      if (!url) return '';
-      return `<img src="${url}" alt="Photo" />`;
+      const thumbUrl = p.getURI ? p.getURI({ maxWidth: 300, maxHeight: 225 }) : (p.getUrl ? p.getUrl({ maxWidth: 300, maxHeight: 225 }) : '');
+      const fullUrl = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : (p.getUrl ? p.getUrl({ maxWidth: 1200, maxHeight: 900 }) : '');
+      if (!thumbUrl) return '';
+      return `<img src="${thumbUrl}" alt="Photo" onclick="openLightbox('${fullUrl}')" />`;
     }).join('');
     document.getElementById('sidebarPhotos').innerHTML = photosHtml;
   }
@@ -287,25 +288,22 @@ function renderGoogleData(place) {
       `<strong>Opening Hours</strong><br/>` + place.regularOpeningHours.weekdayDescriptions.join('<br/>');
   }
 
-  // Reviews
-  if (place.reviews && place.reviews.length > 0) {
-    const reviewsHtml = place.reviews.slice(0, 5).map(r => {
-      const stars = '★'.repeat(Math.floor(r.rating || 0)) + '☆'.repeat(5 - Math.floor(r.rating || 0));
-      const author = r.authorAttribution ? r.authorAttribution.displayName : 'Anonymous';
-      const timeDesc = r.relativePublishTimeDescription || '';
-      const text = r.text ? (r.text.text || r.text || '') : '';
-      const truncated = text.length > 200 ? text.substring(0, 200) + '…' : text;
-      return `<div class="review-card">
-        <div class="review-header">
-          <strong class="review-author">${author}</strong>
-          <span class="review-time">${timeDesc}</span>
-        </div>
-        <div class="review-stars">${stars}</div>
-        <p class="review-text">${truncated}</p>
-      </div>`;
-    }).join('');
-    document.getElementById('sidebarReviews').innerHTML =
-      `<h3 class="reviews-title">Reviews</h3>` + reviewsHtml;
+  // Reviews — consolidated: just stars + count + link to full reviews
+  if (place.rating && place.googleMapsURI) {
+    const count = place.userRatingCount || 0;
+    const fullStars = Math.floor(place.rating);
+    const halfStar = place.rating % 1 >= 0.3;
+    const starsHtml = '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(5 - fullStars - (halfStar ? 1 : 0));
+    const reviewsUrl = place.googleMapsURI;
+    document.getElementById('sidebarReviews').innerHTML = `
+      <h3 class="reviews-title">Reviews</h3>
+      <div class="reviews-summary">
+        <span class="stars">${starsHtml}</span>
+        <span class="rating-num">${place.rating}</span>
+        <span class="review-count">(${count.toLocaleString()} reviews)</span>
+      </div>
+      <a class="reviews-link" href="${reviewsUrl}" target="_blank">Read all reviews on Google Maps →</a>
+    `;
   }
 
   // Google Maps link
@@ -528,4 +526,22 @@ function initUI() {
   document.getElementById('mobileSearchToggle').addEventListener('click', () => {
     document.querySelector('.topbar-search').classList.toggle('mobile-active');
   });
+
+  // Banner image lightbox
+  document.getElementById('sidebarImage').addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG') {
+      openLightbox(e.target.src.replace(/maxWidthPx=\d+/, 'maxWidthPx=1200').replace(/maxHeightPx=\d+/, 'maxHeightPx=900'));
+    }
+  });
+}
+
+// ========== LIGHTBOX ==========
+function openLightbox(url) {
+  document.getElementById('lightboxImg').src = url;
+  document.getElementById('lightbox').classList.add('active');
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.getElementById('lightboxImg').src = '';
 }
