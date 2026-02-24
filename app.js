@@ -618,7 +618,6 @@ function initUI() {
     closeSidebar();
     closeRoutePanel();
     closeBookmarksPanel();
-    closeRouteBuilderPanel();
   });
 
   document.getElementById('btnFilter').addEventListener('click', () => {
@@ -735,13 +734,27 @@ function addToRoute() {
 
 function openRouteBuilderPanel() {
   renderRouteBuilderStops();
-  document.getElementById('routeBuilderPanel').classList.add('active');
-  document.getElementById('overlayBackdrop').classList.add('active');
+  const panel = document.getElementById('routeBuilderPanel');
+  panel.classList.add('active');
+  panel.classList.remove('minimized');
+  document.getElementById('rbToggle').textContent = '−';
 }
 
 function closeRouteBuilderPanel() {
   document.getElementById('routeBuilderPanel').classList.remove('active');
-  document.getElementById('overlayBackdrop').classList.remove('active');
+  routeBuilderStops = [];
+  renderRouteBuilderStops();
+  document.getElementById('rbRouteName').value = '';
+  document.getElementById('rbStartLocation').value = '';
+  document.getElementById('rbEndLocation').value = '';
+  document.getElementById('rbRouteResults').innerHTML = '';
+}
+
+function toggleRouteBuilderMinimize() {
+  const panel = document.getElementById('routeBuilderPanel');
+  const btn = document.getElementById('rbToggle');
+  panel.classList.toggle('minimized');
+  btn.textContent = panel.classList.contains('minimized') ? '+' : '−';
 }
 
 function renderRouteBuilderStops() {
@@ -1097,6 +1110,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   // Route Builder wiring
   document.getElementById('routeBuilderClose').addEventListener('click', closeRouteBuilderPanel);
+  document.getElementById('rbToggle').addEventListener('click', (e) => { e.stopPropagation(); toggleRouteBuilderMinimize(); });
+  document.getElementById('rbFloatHeader').addEventListener('click', () => {
+    const panel = document.getElementById('routeBuilderPanel');
+    if (panel.classList.contains('minimized')) toggleRouteBuilderMinimize();
+  });
   document.getElementById('btnGenerateRoute').addEventListener('click', generateBuilderRoute);
 
   // Update pin indicators on load
