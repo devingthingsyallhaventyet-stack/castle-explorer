@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
   <!-- Top Bar -->
@@ -25,6 +25,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
         Plan Route
       </button>
+      <button class="btn-pill" id="btnBookmarks">🔖 Bookmarks</button>
       <button class="btn-pill" id="btnFilter">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
         Filters
@@ -60,7 +61,10 @@
     <button class="sidebar-close" id="sidebarClose">✕</button>
     <div class="sidebar-image" id="sidebarImage"></div>
     <div class="sidebar-content">
-      <h1 class="sidebar-name" id="sidebarName"></h1>
+      <div class="sidebar-name-row">
+        <h1 class="sidebar-name" id="sidebarName"></h1>
+        <button class="bookmark-btn" id="sidebarBookmark" title="Bookmark this castle">🔖</button>
+      </div>
       <p class="sidebar-location" id="sidebarLocation"></p>
       <div class="sidebar-badges" id="sidebarBadges"></div>
       <div class="sidebar-rating" id="sidebarRating"></div>
@@ -106,6 +110,31 @@
     </div>
   </div>
 
+  <!-- Bookmarks Panel -->
+  <div class="bookmarks-panel" id="bookmarksPanel">
+    <div class="route-header">
+      <h2>🔖 Bookmarks</h2>
+      <button class="sidebar-close" id="bookmarksClose">✕</button>
+    </div>
+    <div class="bookmarks-count" id="bookmarksCount">0 sites bookmarked</div>
+    <div class="bookmarks-list" id="bookmarksList"></div>
+    <div class="bookmarks-actions" id="bookmarksActions">
+      <button class="btn-find-routes" id="btnRouteFromBookmarks">Plan Route from Bookmarks</button>
+      <button class="btn-clear-bookmarks" id="btnClearBookmarks">Clear All</button>
+    </div>
+    <div class="bookmarks-route-form" id="bookmarksRouteForm" style="display:none">
+      <div class="route-field">
+        <label>Starting Location</label>
+        <input type="text" id="bookmarkRouteStart" placeholder="e.g. Dublin, London…" />
+      </div>
+      <button class="btn-find-routes" id="btnOptimizeBookmarkRoute">Optimize Route</button>
+    </div>
+    <div class="route-results" id="bookmarkRouteResults"></div>
+    <div class="sidebar-footer">
+      <small>Data from OpenStreetMap & Google Maps Platform</small>
+    </div>
+  </div>
+
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">✕</button>
@@ -118,8 +147,8 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
-  <script src="data.js?v=4"></script>
-  <script src="app.js?v=4"></script>
+  <script src="data.js?v=5"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>
 <!-- v2 -->

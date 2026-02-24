@@ -210,6 +210,9 @@ function openSidebar(castle) {
   document.getElementById('sidebarHours').innerHTML = '';
   document.getElementById('sidebarReviews').innerHTML = '';
 
+  // Set bookmark button state
+  document.getElementById('sidebarBookmark').classList.toggle('bookmarked', isBookmarked(castle.name));
+
   sidebar.classList.add('active');
   document.getElementById('overlayBackdrop').classList.add('active');
 
@@ -260,16 +263,8 @@ function renderGoogleData(place) {
     }
   }
 
-  // Google rating
-  if (place.rating) {
-    const count = place.userRatingCount || 0;
-    document.getElementById('sidebarGoogle').innerHTML = `
-      <div class="google-rating">
-        <img src="https://www.gstatic.com/images/branding/product/1x/maps_round_48dp.png" alt="Google" width="20" height="20" />
-        Google rating: <strong>${place.rating}</strong>/5 (${count.toLocaleString()} reviews)
-      </div>
-    `;
-  }
+  // Google rating — skip, we show it in the reviews section instead
+  document.getElementById('sidebarGoogle').innerHTML = '';
 
   // Photo gallery — remaining photos (clickable for lightbox)
   if (place.photos && place.photos.length > 1) {
@@ -288,22 +283,28 @@ function renderGoogleData(place) {
       `<strong>Opening Hours</strong><br/>` + place.regularOpeningHours.weekdayDescriptions.join('<br/>');
   }
 
-  // Reviews — consolidated: just stars + count + link to full reviews
-  if (place.rating && place.googleMapsURI) {
-    const count = place.userRatingCount || 0;
-    const fullStars = Math.floor(place.rating);
-    const halfStar = place.rating % 1 >= 0.3;
-    const starsHtml = '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(5 - fullStars - (halfStar ? 1 : 0));
-    const reviewsUrl = place.googleMapsURI;
-    document.getElementById('sidebarReviews').innerHTML = `
-      <h3 class="reviews-title">Reviews</h3>
-      <div class="reviews-summary">
-        <span class="stars">${starsHtml}</span>
-        <span class="rating-num">${place.rating}</span>
-        <span class="review-count">(${count.toLocaleString()} reviews)</span>
-      </div>
-      <a class="reviews-link" href="${reviewsUrl}" target="_blank">Read all reviews on Google Maps →</a>
-    `;
+  // Reviews — show actual review cards + link to all
+  if (place.reviews && place.reviews.length > 0) {
+    const reviewCardsHtml = place.reviews.slice(0, 5).map(r => {
+      const stars = '★'.repeat(Math.floor(r.rating || 0)) + '☆'.repeat(5 - Math.floor(r.rating || 0));
+      const author = r.authorAttribution ? r.authorAttribution.displayName : 'Anonymous';
+      const timeDesc = r.relativePublishTimeDescription || '';
+      const text = r.text ? (typeof r.text === 'string' ? r.text : (r.text.text || '')) : '';
+      const truncated = text.length > 250 ? text.substring(0, 250) + '…' : text;
+      return `<div class="review-card">
+        <div class="review-header">
+          <strong class="review-author">${author}</strong>
+          <span class="review-time">${timeDesc}</span>
+        </div>
+        <div class="review-stars">${stars}</div>
+        <p class="review-text">${truncated}</p>
+      </div>`;
+    }).join('');
+    const reviewsUrl = place.googleMapsURI || '#';
+    document.getElementById('sidebarReviews').innerHTML =
+      `<h3 class="reviews-title">Reviews</h3>` +
+      reviewCardsHtml +
+      `<a class="reviews-link" href="${reviewsUrl}" target="_blank">Read all reviews on Google Maps →</a>`;
   }
 
   // Google Maps link
@@ -504,6 +505,7 @@ function initUI() {
   document.getElementById('overlayBackdrop').addEventListener('click', () => {
     closeSidebar();
     closeRoutePanel();
+    closeBookmarksPanel();
   });
 
   document.getElementById('btnFilter').addEventListener('click', () => {
@@ -545,3 +547,189 @@ function closeLightbox() {
   document.getElementById('lightbox').classList.remove('active');
   document.getElementById('lightboxImg').src = '';
 }
+
+// ========== BOOKMARKS ==========
+function getBookmarks() {
+  try { return JSON.parse(localStorage.getItem('castle-explorer-bookmarks')) || []; }
+  catch { return []; }
+}
+function saveBookmarks(arr) { localStorage.setItem('castle-explorer-bookmarks', JSON.stringify(arr)); }
+function isBookmarked(name) { return getBookmarks().includes(name); }
+
+function toggleBookmark(name) {
+  let bm = getBookmarks();
+  if (bm.includes(name)) bm = bm.filter(n => n !== name);
+  else bm.push(name);
+  saveBookmarks(bm);
+  updateBookmarkUI();
+  updateMapPinBookmarks();
+}
+
+function updateBookmarkUI() {
+  // Update sidebar bookmark button
+  if (selectedCastle) {
+    const btn = document.getElementById('sidebarBookmark');
+    btn.classList.toggle('bookmarked', isBookmarked(selectedCastle.name));
+  }
+  // Update bookmarks panel if open
+  renderBookmarksPanel();
+}
+
+function renderBookmarksPanel() {
+  const bm = getBookmarks();
+  const listEl = document.getElementById('bookmarksList');
+  const countEl = document.getElementById('bookmarksCount');
+  const actionsEl = document.getElementById('bookmarksActions');
+  countEl.textContent = `${bm.length} site${bm.length !== 1 ? 's' : ''} bookmarked`;
+
+  if (bm.length === 0) {
+    listEl.innerHTML = '<div class="bookmarks-empty">No bookmarks yet. Tap the 🔖 icon on any castle to save it.</div>';
+    actionsEl.style.display = 'none';
+    return;
+  }
+  actionsEl.style.display = 'block';
+  listEl.innerHTML = bm.map(name => {
+    const c = CASTLES.find(x => x.name === name);
+    if (!c) return '';
+    const tc = getTypeConfig(c.type);
+    return `<div class="bookmark-card">
+      <span class="emoji">${tc.emoji}</span>
+      <div class="info">
+        <div class="name">${c.name}</div>
+        <div class="loc">${c.county}, ${c.country}</div>
+        <div class="rating">★ ${c.rating}</div>
+      </div>
+      <button class="remove-btn" onclick="toggleBookmark('${c.name.replace(/'/g, "\\'")}')">✕</button>
+    </div>`;
+  }).join('');
+}
+
+function updateMapPinBookmarks() {
+  const bm = getBookmarks();
+  markers.forEach((m, i) => {
+    const c = CASTLES[i];
+    const tc = getTypeConfig(c.type);
+    const bookmarked = bm.includes(c.name);
+    const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
+    const icon = L.divIcon({
+      html: `<div class="${cls}">${tc.emoji}</div>`,
+      className: '', iconSize: [28, 28], iconAnchor: [14, 14]
+    });
+    m.setIcon(icon);
+  });
+}
+
+function openBookmarksPanel() {
+  renderBookmarksPanel();
+  document.getElementById('bookmarksPanel').classList.add('active');
+  document.getElementById('overlayBackdrop').classList.add('active');
+  document.getElementById('bookmarksRouteForm').style.display = 'none';
+  document.getElementById('bookmarkRouteResults').innerHTML = '';
+}
+
+function closeBookmarksPanel() {
+  document.getElementById('bookmarksPanel').classList.remove('active');
+  document.getElementById('overlayBackdrop').classList.remove('active');
+}
+
+async function optimizeBookmarkRoute() {
+  const startText = document.getElementById('bookmarkRouteStart').value.trim();
+  if (!startText) return;
+  const bm = getBookmarks();
+  if (bm.length === 0) return;
+
+  const btn = document.getElementById('btnOptimizeBookmarkRoute');
+  btn.disabled = true; btn.textContent = 'Optimizing…';
+  document.getElementById('bookmarkRouteResults').innerHTML = '<div class="loading">Planning route</div>';
+
+  try {
+    const startCoords = await geocodeCity(startText);
+    const castles = bm.map(n => CASTLES.find(x => x.name === n)).filter(Boolean);
+    if (castles.length === 0) return;
+
+    // Use last castle as destination, rest as waypoints
+    const waypoints = castles.map(c => ({
+      location: new google.maps.LatLng(c.lat, c.lng), stopover: true
+    }));
+
+    const request = {
+      origin: new google.maps.LatLng(startCoords.lat, startCoords.lng),
+      destination: new google.maps.LatLng(startCoords.lat, startCoords.lng),
+      waypoints: waypoints,
+      optimizeWaypoints: true,
+      travelMode: google.maps.TravelMode.DRIVING,
+    };
+
+    const result = await new Promise((resolve, reject) => {
+      directionsService.route(request, (res, status) => {
+        if (status === 'OK') resolve(res); else reject(new Error('Route failed'));
+      });
+    });
+
+    const route = result.routes[0];
+    // Clear old polylines
+    routePolylines.forEach(p => map.removeLayer(p));
+    routePolylines = [];
+
+    // Draw route
+    const path = decodePolyline(route.overview_polyline);
+    const latLngs = path.map(p => [p.lat, p.lng]);
+    const polyline = L.polyline(latLngs, { color: '#C2714F', weight: 4, opacity: 0.7 }).addTo(map);
+    routePolylines.push(polyline);
+    map.fitBounds(polyline.getBounds(), { padding: [60, 60] });
+
+    // Compute totals
+    let totalDist = 0, totalTime = 0;
+    route.legs.forEach(leg => { totalDist += leg.distance.value; totalTime += leg.duration.value; });
+    const distKm = (totalDist / 1000).toFixed(0);
+    const timeH = Math.floor(totalTime / 3600);
+    const timeM = Math.round((totalTime % 3600) / 60);
+
+    // Order castles by waypoint_order
+    const order = route.waypoint_order || castles.map((_, i) => i);
+    const ordered = order.map(i => castles[i]);
+
+    const listHtml = ordered.map((c, i) => {
+      const tc = getTypeConfig(c.type);
+      return `<li><span style="color:var(--text-muted);font-weight:600;margin-right:4px">${i + 1}.</span> ${tc.emoji} ${c.name} <span class="castle-rating">★ ${c.rating}</span></li>`;
+    }).join('');
+
+    document.getElementById('bookmarkRouteResults').innerHTML = `
+      <div class="route-card">
+        <div class="route-card-header"><span class="emoji">🗺️</span><span class="title">Optimized Route</span></div>
+        <div class="route-card-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km · ${ordered.length} stops</div>
+        <ul class="route-castle-list">${listHtml}</ul>
+      </div>`;
+  } catch (err) {
+    document.getElementById('bookmarkRouteResults').innerHTML = `<p style="padding:12px;color:var(--terracotta)">${err.message}</p>`;
+  } finally {
+    btn.disabled = false; btn.textContent = 'Optimize Route';
+  }
+}
+
+// Wire up bookmark UI after DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('sidebarBookmark').addEventListener('click', () => {
+    if (selectedCastle) toggleBookmark(selectedCastle.name);
+  });
+  document.getElementById('btnBookmarks').addEventListener('click', () => {
+    openBookmarksPanel();
+    document.getElementById('filterPanel').classList.remove('active');
+    document.getElementById('btnFilter').classList.remove('active');
+    closeSidebar();
+    closeRoutePanel();
+  });
+  document.getElementById('bookmarksClose').addEventListener('click', closeBookmarksPanel);
+  document.getElementById('btnClearBookmarks').addEventListener('click', () => {
+    saveBookmarks([]);
+    updateBookmarkUI();
+    updateMapPinBookmarks();
+  });
+  document.getElementById('btnRouteFromBookmarks').addEventListener('click', () => {
+    document.getElementById('bookmarksRouteForm').style.display = 'block';
+  });
+  document.getElementById('btnOptimizeBookmarkRoute').addEventListener('click', optimizeBookmarkRoute);
+
+  // Update pin indicators on load
+  updateMapPinBookmarks();
+});
