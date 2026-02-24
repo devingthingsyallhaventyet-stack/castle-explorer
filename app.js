@@ -594,7 +594,7 @@ async function findRoutes() {
     document.getElementById('routeResults').innerHTML = `<p style="padding:12px;color:var(--terracotta)">${err.message || 'Error finding route'}</p>`;
   } finally {
     btn.disabled = false;
-    btn.textContent = 'Find Castle Routes';
+    btn.textContent = 'Find Stops';
   }
 }
 
@@ -750,6 +750,7 @@ function initUI() {
     closeSidebar();
     closeRoutePanel();
     closeBookmarksPanel();
+    closeSavedRoutesPanel();
   });
 
   document.getElementById('btnFilter').addEventListener('click', () => {
@@ -761,12 +762,24 @@ function initUI() {
     if (panel.classList.contains('active')) closeRoutePanel();
   });
 
-  document.getElementById('btnRoute').addEventListener('click', () => {
+  document.getElementById('btnTripPlanner').addEventListener('click', () => {
     openRoutePanel();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
     closeSidebar();
   });
+
+  document.getElementById('btnRouteBuilder').addEventListener('click', () => {
+    openRouteBuilderPanel();
+    document.getElementById('filterPanel').classList.remove('active');
+    document.getElementById('btnFilter').classList.remove('active');
+  });
+
+  document.getElementById('btnSavedRoutes').addEventListener('click', () => {
+    openSavedRoutesPanel();
+  });
+
+  document.getElementById('savedRoutesClose').addEventListener('click', closeSavedRoutesPanel);
 
   // Mobile search toggle
   document.getElementById('mobileSearchToggle').addEventListener('click', () => {
@@ -1127,6 +1140,7 @@ async function generateBuilderRoute() {
           Start Navigation
         </a>
         <button class="rb-edit-btn" onclick="editRoute()">✏️ Edit Route</button>
+        <button class="rb-edit-btn" onclick="saveCurrentRoute()" style="margin-top:6px">💾 Save Route</button>
       </div>`;
 
     // Hide non-route pins, only show route stops
@@ -1246,10 +1260,17 @@ async function fetchPlaceSuggestions(query, dropdown, input) {
 
 // ========== FAVORITES ==========
 function getBookmarks() {
-  try { return JSON.parse(localStorage.getItem('castle-explorer-bookmarks')) || []; }
-  catch { return []; }
+  try {
+    // Migrate old key
+    const old = localStorage.getItem('castle-explorer-bookmarks');
+    if (old && !localStorage.getItem('scenicRoute_favorites')) {
+      localStorage.setItem('scenicRoute_favorites', old);
+      localStorage.removeItem('castle-explorer-bookmarks');
+    }
+    return JSON.parse(localStorage.getItem('scenicRoute_favorites')) || [];
+  } catch { return []; }
 }
-function saveBookmarks(arr) { localStorage.setItem('castle-explorer-bookmarks', JSON.stringify(arr)); }
+function saveBookmarks(arr) { localStorage.setItem('scenicRoute_favorites', JSON.stringify(arr)); }
 function isBookmarked(name) { return getBookmarks().includes(name); }
 
 function toggleBookmark(name) {
@@ -1570,4 +1591,113 @@ async function lookupGooglePlacesForQuickView(castle) {
 function closeQuickView() {
   document.getElementById('quickView').classList.remove('active');
   quickViewCastle = null;
+}
+
+// ========== SAVED ROUTES ==========
+let savedRoutes = [];
+(function loadSavedRoutes() {
+  try { savedRoutes = JSON.parse(localStorage.getItem('scenicRoute_savedRoutes')) || []; } catch { savedRoutes = []; }
+})();
+
+function persistSavedRoutes() {
+  localStorage.setItem('scenicRoute_savedRoutes', JSON.stringify(savedRoutes));
+}
+
+function saveCurrentRoute() {
+  const nameEl = document.getElementById('rbRouteName');
+  const name = (nameEl && nameEl.value.trim()) || 'Unnamed Route';
+  const startEl = document.getElementById('rbStartLocation');
+  const endEl = document.getElementById('rbEndLocation');
+  const stopsListEl = document.getElementById('rbStopsList');
+  const stops = [];
+  if (stopsListEl) {
+    stopsListEl.querySelectorAll('.rb-stop-item').forEach(item => {
+      stops.push(item.querySelector('.rb-stop-name')?.textContent || item.textContent.trim());
+    });
+  }
+  // Try to grab summary stats from the results
+  const metaEl = document.querySelector('.rb-summary-meta');
+  let totalDist = '', totalDur = '';
+  if (metaEl) {
+    const text = metaEl.textContent;
+    const durMatch = text.match(/([\d]+h\s*[\d]+m)/);
+    const distMatch = text.match(/([\d.]+\s*km)/);
+    if (durMatch) totalDur = durMatch[1];
+    if (distMatch) totalDist = distMatch[1];
+  }
+  savedRoutes.push({
+    name, stops,
+    start: startEl ? startEl.value.trim() : '',
+    end: endEl ? endEl.value.trim() : '',
+    totalDist, totalDur,
+    timestamp: Date.now()
+  });
+  persistSavedRoutes();
+  alert('Route saved!');
+}
+
+function openSavedRoutesPanel() {
+  renderSavedRoutes();
+  document.getElementById('savedRoutesPanel').classList.add('active');
+  document.getElementById('overlayBackdrop').classList.add('active');
+}
+
+function closeSavedRoutesPanel() {
+  document.getElementById('savedRoutesPanel').classList.remove('active');
+  document.getElementById('overlayBackdrop').classList.remove('active');
+}
+
+function renderSavedRoutes() {
+  const listEl = document.getElementById('savedRoutesList');
+  const countEl = document.getElementById('savedRoutesCount');
+  countEl.textContent = `${savedRoutes.length} saved route${savedRoutes.length !== 1 ? 's' : ''}`;
+  if (savedRoutes.length === 0) {
+    listEl.innerHTML = '<div class="bookmarks-empty">No saved routes yet. Build a route and tap 💾 Save Route.</div>';
+    return;
+  }
+  listEl.innerHTML = savedRoutes.map((r, i) => {
+    const dateStr = new Date(r.timestamp).toLocaleDateString();
+    const stopsStr = r.stops.length + ' stop' + (r.stops.length !== 1 ? 's' : '');
+    const meta = [r.totalDur, r.totalDist, stopsStr].filter(Boolean).join(' · ');
+    const gmWaypoints = r.stops.map(s => encodeURIComponent(s)).join('|');
+    const gmUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(r.start)}&destination=${encodeURIComponent(r.end)}&waypoints=${gmWaypoints}&travelmode=driving`;
+    return `<div class="bookmark-card" style="padding:12px;margin-bottom:8px">
+      <div style="font-weight:600;margin-bottom:4px">${r.name}</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">${meta} · ${dateStr}</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">${r.start || '?'} → ${r.end || '?'}</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <button class="btn-pill" style="font-size:11px" onclick="loadSavedRoute(${i})">Load</button>
+        <a class="btn-pill" style="font-size:11px;text-decoration:none" href="${gmUrl}" target="_blank">Google Maps</a>
+        <button class="btn-pill" style="font-size:11px;background:#e05a33;color:#fff" onclick="deleteSavedRoute(${i})">Delete</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function loadSavedRoute(index) {
+  const r = savedRoutes[index];
+  if (!r) return;
+  closeSavedRoutesPanel();
+  openRouteBuilderPanel();
+  // Populate fields
+  const nameEl = document.getElementById('rbRouteName');
+  const startEl = document.getElementById('rbStartLocation');
+  const endEl = document.getElementById('rbEndLocation');
+  if (nameEl) nameEl.value = r.name;
+  if (startEl) startEl.value = r.start;
+  if (endEl) endEl.value = r.end;
+  // Add stops
+  if (typeof routeBuilderStops !== 'undefined') {
+    routeBuilderStops.length = 0;
+  }
+  r.stops.forEach(stopName => {
+    const castle = CASTLES.find(c => c.name === stopName);
+    if (castle) addToRouteBuilder(castle);
+  });
+}
+
+function deleteSavedRoute(index) {
+  savedRoutes.splice(index, 1);
+  persistSavedRoutes();
+  renderSavedRoutes();
 }
