@@ -831,12 +831,49 @@ function openQuickView(castle) {
 
   qv.classList.add('active');
 
-  // If Google data cached, update image
+  // If Google data cached, update image; otherwise fetch it
   if (placesCache[castle.name] && placesCache[castle.name].photos && placesCache[castle.name].photos.length > 0) {
     const url = placesCache[castle.name].photos[0].getURI ? placesCache[castle.name].photos[0].getURI({ maxWidth: 800, maxHeight: 300 }) : '';
     if (url) {
       imgEl.style.backgroundImage = `url(${url})`;
     }
+  } else {
+    // Fetch Google Places data for the quick view
+    lookupGooglePlacesForQuickView(castle);
+  }
+}
+
+async function lookupGooglePlacesForQuickView(castle) {
+  const cacheKey = castle.name;
+  if (placesCache[cacheKey]) return;
+  try {
+    const { Place } = await google.maps.importLibrary('places');
+    const request = {
+      textQuery: `${castle.name} ${castle.county} ${castle.country}`,
+      fields: ['displayName', 'rating', 'userRatingCount', 'photos', 'googleMapsURI'],
+      locationBias: { lat: castle.lat, lng: castle.lng },
+      maxResultCount: 1
+    };
+    const { places } = await Place.searchByText(request);
+    if (places && places.length > 0) {
+      const place = places[0];
+      placesCache[cacheKey] = place;
+      // Update quick view banner if still showing this castle
+      if (quickViewCastle && quickViewCastle.name === castle.name && place.photos && place.photos.length > 0) {
+        const url = place.photos[0].getURI ? place.photos[0].getURI({ maxWidth: 800, maxHeight: 300 }) : '';
+        if (url) {
+          document.getElementById('qvImage').style.backgroundImage = `url(${url})`;
+        }
+      }
+      // Update the map pin too
+      const idx = CASTLES.findIndex(c => c.name === castle.name);
+      if (idx >= 0 && place.photos && place.photos.length > 0) {
+        const pinUrl = place.photos[0].getURI ? place.photos[0].getURI({ maxWidth: 64, maxHeight: 64 }) : '';
+        if (pinUrl) updatePinImage(idx, pinUrl);
+      }
+    }
+  } catch (e) {
+    console.warn('Quick view Places lookup failed:', e);
   }
 }
 
