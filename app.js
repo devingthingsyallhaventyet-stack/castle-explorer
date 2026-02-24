@@ -61,12 +61,15 @@ function initGoogle() {
   directionsService = new google.maps.DirectionsService();
 }
 
+function getPinImageUrl(castle) {
+  if (castle.image) return castle.image;
+  return `https://maps.googleapis.com/maps/api/staticmap?center=${castle.lat},${castle.lng}&zoom=17&size=64x64&maptype=satellite&key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8`;
+}
+
 function createPinHtml(castle, tc, bookmarked) {
   const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
-  if (castle.image) {
-    return `<div class="${cls}"><img src="${castle.image}" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" /><span class="pin-emoji" style="display:none">${tc.emoji}</span></div>`;
-  }
-  return `<div class="${cls}"><span class="pin-emoji">${tc.emoji}</span></div>`;
+  const imgUrl = getPinImageUrl(castle);
+  return `<div class="${cls}"><img src="${imgUrl}" alt="" /></div>`;
 }
 
 function initMarkers() {
@@ -76,7 +79,7 @@ function initMarkers() {
     const bookmarked = bm.includes(c.name);
     const icon = L.divIcon({
       html: createPinHtml(c, tc, bookmarked),
-      className: '', iconSize: [32, 32], iconAnchor: [16, 16]
+      className: '', iconSize: [36, 36], iconAnchor: [18, 18]
     });
     const m = L.marker([c.lat, c.lng], { icon });
     m.castleIndex = i;
@@ -84,6 +87,7 @@ function initMarkers() {
     markers.push(m);
     markerGroup.addLayer(m);
   });
+  initLegendCounts();
 }
 
 function handlePinClick(castle) {
@@ -102,8 +106,8 @@ function updatePinImage(castleIndex, photoUrl) {
   const bookmarked = bm.includes(c.name);
   const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
   const icon = L.divIcon({
-    html: `<div class="${cls}"><img src="${photoUrl}" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" /><span class="pin-emoji" style="display:none">${tc.emoji}</span></div>`,
-    className: '', iconSize: [32, 32], iconAnchor: [16, 16]
+    html: `<div class="${cls}"><img src="${photoUrl}" alt="" /></div>`,
+    className: '', iconSize: [36, 36], iconAnchor: [18, 18]
   });
   markers[castleIndex].setIcon(icon);
 }
@@ -146,17 +150,43 @@ function renderChips(containerId, items, category) {
   });
 }
 
+function getActiveLegendTypes() {
+  const items = document.querySelectorAll('.legend-item.active');
+  const types = new Set();
+  items.forEach(item => types.add(item.dataset.type));
+  return types;
+}
+
 function applyFilters() {
   markerGroup.clearLayers();
+  const legendTypes = getActiveLegendTypes();
   let count = 0;
   CASTLES.forEach((c, i) => {
     const show =
       (activeFilters.country.size === 0 || activeFilters.country.has(c.country)) &&
       (activeFilters.type.size === 0 || activeFilters.type.has(c.type)) &&
-      (activeFilters.condition.size === 0 || activeFilters.condition.has(c.condition));
+      (activeFilters.condition.size === 0 || activeFilters.condition.has(c.condition)) &&
+      legendTypes.has(c.type);
     if (show) { markerGroup.addLayer(markers[i]); count++; }
   });
   updateFilterCounter(count);
+}
+
+function toggleLegendType(type) {
+  const item = document.querySelector(`.legend-item[data-type="${type}"]`);
+  if (item) item.classList.toggle('active');
+  applyFilters();
+}
+
+function initLegendCounts() {
+  const counts = {};
+  CASTLES.forEach(c => {
+    counts[c.type] = (counts[c.type] || 0) + 1;
+  });
+  Object.keys(counts).forEach(type => {
+    const el = document.getElementById(`legendCount-${type}`);
+    if (el) el.textContent = counts[type];
+  });
 }
 
 function updateFilterCounter(shown) {
@@ -653,7 +683,7 @@ function updateMapPinBookmarks() {
     const bookmarked = bm.includes(c.name);
     const icon = L.divIcon({
       html: createPinHtml(c, tc, bookmarked),
-      className: '', iconSize: [32, 32], iconAnchor: [16, 16]
+      className: '', iconSize: [36, 36], iconAnchor: [18, 18]
     });
     m.setIcon(icon);
   });
