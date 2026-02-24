@@ -930,6 +930,66 @@ async function generateBuilderRoute() {
   }
 }
 
+// ========== PLACES AUTOCOMPLETE (New API) ==========
+const GAPI_KEY = 'AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+let acDebounce = null;
+
+function initPlacesAutocomplete(input) {
+  // Create dropdown container
+  const dropdown = document.createElement('div');
+  dropdown.className = 'pac-dropdown';
+  input.parentElement.style.position = 'relative';
+  input.parentElement.appendChild(dropdown);
+
+  input.addEventListener('input', () => {
+    clearTimeout(acDebounce);
+    const q = input.value.trim();
+    if (q.length < 2) { dropdown.innerHTML = ''; dropdown.style.display = 'none'; return; }
+    acDebounce = setTimeout(() => fetchPlaceSuggestions(q, dropdown, input), 300);
+  });
+
+  input.addEventListener('blur', () => {
+    setTimeout(() => { dropdown.style.display = 'none'; }, 200);
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') e.preventDefault();
+  });
+}
+
+async function fetchPlaceSuggestions(query, dropdown, input) {
+  try {
+    const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Goog-Api-Key': GAPI_KEY,
+        'X-Goog-FieldMask': 'places.displayName,places.formattedAddress'
+      },
+      body: JSON.stringify({ textQuery: query, maxResultCount: 5 })
+    });
+    const data = await res.json();
+    if (!data.places || data.places.length === 0) { dropdown.style.display = 'none'; return; }
+    dropdown.innerHTML = data.places.map(p => {
+      const name = p.displayName?.text || '';
+      const addr = p.formattedAddress || '';
+      return `<div class="pac-dropdown-item" data-value="${addr}">
+        <strong>${name}</strong><br/><small>${addr}</small>
+      </div>`;
+    }).join('');
+    dropdown.style.display = 'block';
+    dropdown.querySelectorAll('.pac-dropdown-item').forEach(item => {
+      item.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        input.value = item.dataset.value;
+        dropdown.style.display = 'none';
+      });
+    });
+  } catch(e) {
+    dropdown.style.display = 'none';
+  }
+}
+
 // ========== FAVORITES ==========
 function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('castle-explorer-bookmarks')) || []; }
@@ -1130,19 +1190,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btnGenerateRoute').addEventListener('click', generateBuilderRoute);
   window.addEventListener('resize', positionRouteBuilder);
 
-  // Google Places Autocomplete for location inputs
-  const acOptions = { types: ['geocode', 'establishment'], fields: ['formatted_address', 'geometry', 'name'] };
+  // Custom Places Autocomplete (New API)
   ['rbStartLocation', 'rbEndLocation', 'routeStart', 'routeEnd', 'bookmarkRouteStart'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) {
-      const ac = new google.maps.places.Autocomplete(el, acOptions);
-      ac.addListener('place_changed', () => {
-        const place = ac.getPlace();
-        if (place && place.formatted_address) el.value = place.formatted_address;
-      });
-      // Prevent form submission on Enter (autocomplete dropdown)
-      el.addEventListener('keydown', (e) => { if (e.key === 'Enter') e.preventDefault(); });
-    }
+    if (el) initPlacesAutocomplete(el);
   });
 
   // Update pin indicators on load
