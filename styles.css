@@ -554,11 +554,13 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .rb-start-nav-btn {
   display: flex; align-items: center; justify-content: center; gap: 8px;
   width: 100%; padding: 12px; border-radius: var(--radius);
-  background: #4285F4; color: #fff; text-decoration: none;
+  background: #4285F4; color: #fff !important; text-decoration: none;
   font-family: var(--font-sans); font-size: 14px; font-weight: 600;
   margin-top: 10px; transition: background 0.2s;
 }
-.rb-start-nav-btn:hover { background: #3367D6; }
+.rb-start-nav-btn:hover { background: #3367D6; color: #fff !important; }
+.rb-start-nav-btn:visited { color: #fff !important; }
+.rb-start-nav-btn svg { stroke: #fff; }
 /* Route Summary */
 .rb-route-summary { padding: 0; }
 .rb-summary-header {

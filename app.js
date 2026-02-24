@@ -907,12 +907,22 @@ async function generateBuilderRoute() {
     const legColors = ['#E05A33', '#4A7FC1', '#2E8B57', '#E6A817', '#8B5CF6', '#E84393', '#00B894', '#D35400', '#6C5CE7', '#636E72'];
     let allBounds = [];
     route.legs.forEach((leg, i) => {
-      const legPath = decodePolyline(leg.steps.map(s => s.polyline).join(''));
-      // Fallback: use leg start/end if decoding fails
-      const pts = leg.steps.reduce((acc, step) => {
-        const decoded = decodePolyline(step.polyline);
-        return acc.concat(decoded.map(p => [p.lat, p.lng]));
-      }, []);
+      const pts = [];
+      if (leg.steps) {
+        leg.steps.forEach(step => {
+          if (step.polyline && step.polyline.points) {
+            const decoded = decodePolyline(step.polyline.points);
+            decoded.forEach(p => pts.push([p.lat, p.lng]));
+          } else if (step.path) {
+            step.path.forEach(p => pts.push([p.lat(), p.lng()]));
+          }
+        });
+      }
+      // Fallback: use leg start/end lat/lng
+      if (pts.length === 0 && leg.start_location && leg.end_location) {
+        pts.push([leg.start_location.lat(), leg.start_location.lng()]);
+        pts.push([leg.end_location.lat(), leg.end_location.lng()]);
+      }
       if (pts.length > 0) {
         const color = legColors[i % legColors.length];
         const polyline = L.polyline(pts, { color, weight: 5, opacity: 0.8 }).addTo(map);
@@ -983,7 +993,6 @@ async function generateBuilderRoute() {
           Start Navigation
         </a>
         <button class="rb-edit-btn" onclick="editRoute()">✏️ Edit Route</button>
-        <button class="rb-show-all-btn" onclick="showAllPins()">Show All Pins</button>
       </div>`;
 
     // Hide non-route pins, only show route stops
