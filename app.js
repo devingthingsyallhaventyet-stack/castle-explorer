@@ -373,13 +373,23 @@ function renderGoogleData(place) {
   // Google rating — skip, we show it in the reviews section instead
   document.getElementById('sidebarGoogle').innerHTML = '';
 
+  // Build lightbox photos array from ALL photos
+  lightboxPhotos = [];
+  if (place.photos && place.photos.length > 0) {
+    place.photos.slice(0, 10).forEach(p => {
+      const fullUrl = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : (p.getUrl ? p.getUrl({ maxWidth: 1200, maxHeight: 900 }) : '');
+      if (fullUrl) lightboxPhotos.push(fullUrl);
+    });
+  }
+
   // Photo gallery — remaining photos (clickable for lightbox)
   if (place.photos && place.photos.length > 1) {
     const photosHtml = place.photos.slice(1, 6).map(p => {
       const thumbUrl = p.getURI ? p.getURI({ maxWidth: 300, maxHeight: 225 }) : (p.getUrl ? p.getUrl({ maxWidth: 300, maxHeight: 225 }) : '');
       const fullUrl = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : (p.getUrl ? p.getUrl({ maxWidth: 1200, maxHeight: 900 }) : '');
       if (!thumbUrl) return '';
-      return `<img src="${thumbUrl}" alt="Photo" onclick="openLightbox('${fullUrl}')" />`;
+      const idx = lightboxPhotos.indexOf(fullUrl);
+      return `<img src="${thumbUrl}" alt="Photo" onclick="openLightbox(${idx >= 0 ? idx : 0})" />`;
     }).join('');
     document.getElementById('sidebarPhotos').innerHTML = photosHtml;
   }
@@ -639,21 +649,71 @@ function initUI() {
   // Banner image lightbox
   document.getElementById('sidebarImage').addEventListener('click', (e) => {
     if (e.target.tagName === 'IMG') {
-      openLightbox(e.target.src.replace(/maxWidthPx=\d+/, 'maxWidthPx=1200').replace(/maxHeightPx=\d+/, 'maxHeightPx=900'));
+      openLightbox(0);
     }
   });
 }
 
 // ========== LIGHTBOX ==========
-function openLightbox(url) {
-  document.getElementById('lightboxImg').src = url;
+let lightboxPhotos = [];
+let lightboxIndex = 0;
+
+function openLightbox(indexOrUrl) {
+  if (typeof indexOrUrl === 'number') {
+    lightboxIndex = indexOrUrl;
+  } else {
+    // Legacy: called with URL string (e.g. from banner)
+    const idx = lightboxPhotos.indexOf(indexOrUrl);
+    lightboxIndex = idx >= 0 ? idx : 0;
+    if (idx < 0) { lightboxPhotos = [indexOrUrl]; lightboxIndex = 0; }
+  }
+  updateLightboxImage();
   document.getElementById('lightbox').classList.add('active');
+}
+
+function updateLightboxImage() {
+  document.getElementById('lightboxImg').src = lightboxPhotos[lightboxIndex] || '';
+  const counter = document.getElementById('lightboxCounter');
+  if (counter) counter.textContent = lightboxPhotos.length > 1 ? `${lightboxIndex + 1} / ${lightboxPhotos.length}` : '';
+  const prev = document.getElementById('lightboxPrev');
+  const next = document.getElementById('lightboxNext');
+  if (prev) prev.style.display = lightboxPhotos.length > 1 ? 'flex' : 'none';
+  if (next) next.style.display = lightboxPhotos.length > 1 ? 'flex' : 'none';
+}
+
+function lightboxNav(dir) {
+  lightboxIndex = (lightboxIndex + dir + lightboxPhotos.length) % lightboxPhotos.length;
+  updateLightboxImage();
 }
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('active');
   document.getElementById('lightboxImg').src = '';
 }
+
+// Keyboard nav for lightbox
+document.addEventListener('keydown', (e) => {
+  const lb = document.getElementById('lightbox');
+  if (!lb || !lb.classList.contains('active')) return;
+  if (e.key === 'ArrowLeft') lightboxNav(-1);
+  else if (e.key === 'ArrowRight') lightboxNav(1);
+  else if (e.key === 'Escape') closeLightbox();
+});
+
+// Swipe support for lightbox
+(function() {
+  let startX = 0;
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+  lb.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', (e) => {
+    const diff = e.changedTouches[0].clientX - startX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) lightboxNav(-1); else lightboxNav(1);
+      e.preventDefault();
+    }
+  });
+})();
 
 // ========== BOOKMARKS ==========
 function getBookmarks() {
