@@ -14,7 +14,7 @@ const CORRIDOR_PROFILES = [
 ];
 
 // ========== STATE ==========
-let map, markerGroup, markers = [], routePolylines = [];
+let map, markerGroup, markers = [], routePolylines = [], routePlannerMarkers = [];
 let activeFilters = { country: new Set(), type: new Set(), condition: new Set() };
 let placesService, geocoder, directionsService;
 const placesCache = {};
@@ -467,24 +467,60 @@ async function findRoutes() {
       google.maps.geometry.encoding.decodePath(baseRoute.overview_polyline) :
       decodePolyline(baseRoute.overview_polyline);
 
-    // Generate corridor-based route cards
+    const ROUTE_COLORS = ['#E05A33', '#4A7FC1', '#2E8B57'];
+
+    // Generate corridor-based route cards with per-profile stats
+    const leg = baseRoute.legs[0];
+    const baseDistM = leg.distance.value; // meters
+    const baseDurS = leg.duration.value;  // seconds
+
+    const latLngs = routePath.map(p => [typeof p.lat === 'function' ? p.lat() : p.lat, typeof p.lng === 'function' ? p.lng() : p.lng]);
+
+    // Clear old polylines and markers
+    routePolylines.forEach(p => map.removeLayer(p));
+    routePolylines = [];
+    routePlannerMarkers.forEach(m => map.removeLayer(m));
+    routePlannerMarkers = [];
+
+    const allBounds = L.latLngBounds(latLngs);
+
     const resultsHtml = CORRIDOR_PROFILES.map((profile, pi) => {
       const nearby = findCastlesAlongRoute(routePath, profile.width, profile.maxStops, mustCastle);
-      const leg = baseRoute.legs[0];
-      return renderRouteCard(profile, nearby, leg, pi);
+
+      // Estimate per-profile distance & duration
+      let extraDistM = 0;
+      nearby.forEach(c => {
+        if (c.dist) extraDistM += c.dist * 2; // round trip detour from route
+      });
+      const totalDistM = baseDistM + extraDistM;
+      const totalDurS = baseDurS + (extraDistM / 1000) * 180; // +3min per detour km
+
+      const color = ROUTE_COLORS[pi];
+
+      // Draw route polyline
+      const polyline = L.polyline(latLngs, { color: color, weight: 4, opacity: 0.7, dashArray: pi === 0 ? null : (pi === 1 ? '10 6' : '4 8') }).addTo(map);
+      routePolylines.push(polyline);
+
+      // Add castle pins
+      nearby.forEach(c => {
+        const tc = getTypeConfig(c.type);
+        const marker = L.circleMarker([c.lat, c.lng], {
+          radius: 8, fillColor: color, color: '#fff', weight: 2, fillOpacity: 0.9
+        }).addTo(map);
+        marker.bindTooltip(c.name, { direction: 'top', offset: [0, -8] });
+        marker.on('click', () => {
+          const castle = CASTLES.find(x => x.name === c.name);
+          if (castle) openSidebar(castle);
+        });
+        routePlannerMarkers.push(marker);
+        allBounds.extend([c.lat, c.lng]);
+      });
+
+      return renderRouteCard(profile, nearby, totalDistM, totalDurS, pi, color);
     }).join('');
 
     document.getElementById('routeResults').innerHTML = resultsHtml;
-
-    // Clear old polylines
-    routePolylines.forEach(p => map.removeLayer(p));
-    routePolylines = [];
-
-    // Show base route on map
-    const latLngs = routePath.map(p => [p.lat ? p.lat() : p.lat, p.lng ? p.lng() : p.lng]);
-    const polyline = L.polyline(latLngs, { color: '#6B8F71', weight: 4, opacity: 0.7 }).addTo(map);
-    routePolylines.push(polyline);
-    map.fitBounds(polyline.getBounds(), { padding: [60, 60] });
+    map.fitBounds(allBounds, { padding: [60, 60] });
 
   } catch (err) {
     document.getElementById('routeResults').innerHTML = `<p style="padding:12px;color:var(--terracotta)">${err.message || 'Error finding route'}</p>`;
@@ -494,23 +530,39 @@ async function findRoutes() {
   }
 }
 
-function renderRouteCard(profile, castles, leg, index) {
+function formatDualDist(meters) {
+  const km = Math.round(meters / 1000);
+  const mi = Math.round(km * 0.621371);
+  return `${km} km (${mi} mi)`;
+}
+function formatDuration(seconds) {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.round((seconds % 3600) / 60);
+  return h > 0 ? `${h} hr ${m} min` : `${m} min`;
+}
+
+function renderRouteCard(profile, castles, totalDistM, totalDurS, index, color) {
   if (castles.length === 0) return '';
   const castleList = castles.map(c => {
     const tc = getTypeConfig(c.type);
-    return `<li>${tc.emoji} ${c.name} <span class="castle-rating">★ ${c.rating}</span></li>`;
+    const safeName = c.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    return `<li>${tc.emoji} <a href="#" class="route-castle-link" onclick="event.preventDefault(); var cs=CASTLES.find(x=>x.name==='${safeName}'); if(cs) openSidebar(cs);">${c.name}</a> <span class="castle-rating">★ ${c.rating}</span></li>`;
   }).join('');
+  const namesJson = JSON.stringify(castles.map(c => c.name)).replace(/"/g, '&quot;');
   return `
     <div class="route-card" style="animation-delay:${index * 0.1}s">
-      <div class="route-card-header">
+      <div class="route-card-header" style="border-left: 4px solid ${color}; padding-left: 10px;">
         <span class="emoji">${profile.emoji}</span>
         <span class="title">${profile.name}</span>
       </div>
       <div class="route-card-meta">
-        <strong>${leg.duration.text}</strong> · ${leg.distance.text} · ${castles.length} castle${castles.length > 1 ? 's' : ''}
+        <strong>${formatDuration(totalDurS)}</strong> · ${formatDualDist(totalDistM)} · ${castles.length} castle${castles.length > 1 ? 's' : ''}
       </div>
       <ul class="route-castle-list">${castleList}</ul>
-      <button class="btn-show-route" onclick="showRouteCastles(${JSON.stringify(castles.map(c => c.name)).replace(/"/g, '&quot;')})">Show on Map</button>
+      <div class="route-card-actions">
+        <button class="btn-show-route" onclick="showRouteCastles(${namesJson})">Show on Map</button>
+        <button class="btn-save-route" onclick="saveRouteToBuilder(${namesJson})">Save Route</button>
+      </div>
     </div>
   `;
 }
@@ -522,6 +574,17 @@ function showRouteCastles(names) {
     if (c) bounds.extend([c.lat, c.lng]);
   });
   if (bounds.isValid()) map.fitBounds(bounds, { padding: [60, 60] });
+}
+
+function saveRouteToBuilder(names) {
+  names.forEach(name => {
+    const c = CASTLES.find(x => x.name === name);
+    if (c && !routeBuilderStops.find(s => s.name === c.name)) {
+      routeBuilderStops.push({ ...c });
+    }
+  });
+  renderRouteBuilderStops();
+  openRouteBuilderPanel();
 }
 
 function findCastlesAlongRoute(routePath, corridorWidth, maxStops, mustCastle) {

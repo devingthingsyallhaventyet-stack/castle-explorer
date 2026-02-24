@@ -304,6 +304,16 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
 }
 .btn-show-route:hover { background: var(--sage-light); }
+.route-card-actions { display: flex; gap: 8px; }
+.route-card-actions .btn-show-route, .route-card-actions .btn-save-route { flex: 1; width: auto; }
+.btn-save-route {
+  padding: 10px; border: 1.5px solid var(--terracotta); border-radius: var(--radius);
+  background: transparent; color: var(--terracotta); font-family: var(--font-sans);
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.btn-save-route:hover { background: var(--terracotta-light); }
+.route-castle-link { color: var(--text); text-decoration: none; cursor: pointer; }
+.route-castle-link:hover { color: var(--sage); text-decoration: underline; }
 
 /* Overlay backdrop */
 .overlay-backdrop {
