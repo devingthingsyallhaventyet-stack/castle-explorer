@@ -492,31 +492,28 @@ async function findRoutes() {
 
     const allBounds = L.latLngBounds(latLngs);
 
-    const resultsHtml = CORRIDOR_PROFILES.map((profile, pi) => {
+    // Build route data for each profile (find castles along corridor)
+    const profileData = CORRIDOR_PROFILES.map((profile, pi) => {
       const nearby = findCastlesAlongRoute(routePath, profile.width, profile.maxStops, mustCastle);
+      return { profile, nearby, color: ROUTE_COLORS[pi], index: pi };
+    });
 
-      // Estimate per-profile distance & duration
+    // Show initial results with estimated stats while real routes load
+    document.getElementById('routeResults').innerHTML = profileData.map(({ profile, nearby, color, index }) => {
       let extraDistM = 0;
+      nearby.forEach(c => { if (c.dist) extraDistM += c.dist * 2; });
+      return renderRouteCard(profile, nearby, baseDistM + extraDistM, baseDurS + (extraDistM / 1000) * 180, index, color);
+    }).join('');
+
+    // Hide all default pins
+    markerGroup.clearLayers();
+
+    // Now get actual driving routes through each profile's waypoints
+    for (const { profile, nearby, color, index } of profileData) {
+      if (nearby.length === 0) continue;
+
+      // Add castle pins for this profile
       nearby.forEach(c => {
-        if (c.dist) extraDistM += c.dist * 2; // round trip detour from route
-      });
-      const totalDistM = baseDistM + extraDistM;
-      const totalDurS = baseDurS + (extraDistM / 1000) * 180; // +3min per detour km
-
-      const color = ROUTE_COLORS[pi];
-
-      // Draw route polyline
-      // Offset routes slightly so all 3 are visible (they share the same base road)
-      const offsetLatLngs = latLngs.map(([lat, lng]) => {
-        const offset = (pi - 1) * 0.003; // shift left/center/right
-        return [lat + offset * 0.5, lng + offset];
-      });
-      const polyline = L.polyline(offsetLatLngs, { color: color, weight: 5, opacity: 0.8, dashArray: pi === 0 ? null : (pi === 1 ? '12 8' : '6 10') }).addTo(map);
-      routePolylines.push(polyline);
-
-      // Add castle pins
-      nearby.forEach(c => {
-        const tc = getTypeConfig(c.type);
         const marker = L.circleMarker([c.lat, c.lng], {
           radius: 8, fillColor: color, color: '#fff', weight: 2, fillOpacity: 0.9
         }).addTo(map);
@@ -529,13 +526,51 @@ async function findRoutes() {
         allBounds.extend([c.lat, c.lng]);
       });
 
-      return renderRouteCard(profile, nearby, totalDistM, totalDurS, pi, color);
-    }).join('');
+      // Get real driving route through waypoints
+      try {
+        const waypoints = nearby.map(c => ({
+          location: new google.maps.LatLng(c.lat, c.lng),
+          stopover: true
+        }));
+        const request = {
+          origin: new google.maps.LatLng(startCoords.lat, startCoords.lng),
+          destination: new google.maps.LatLng(endCoords.lat, endCoords.lng),
+          waypoints: waypoints,
+          optimizeWaypoints: true,
+          travelMode: google.maps.TravelMode.DRIVING
+        };
+        const result = await new Promise((resolve, reject) => {
+          directionsService.route(request, (res, status) => {
+            if (status === 'OK') resolve(res);
+            else reject(new Error(status));
+          });
+        });
 
-    document.getElementById('routeResults').innerHTML = resultsHtml;
+        // Draw actual route polyline
+        const route = result.routes[0];
+        const routeLatLngs = decodePolyline(route.overview_polyline).map(p => [p.lat, p.lng]);
+        const polyline = L.polyline(routeLatLngs, {
+          color: color, weight: 5, opacity: 0.8,
+          dashArray: index === 0 ? null : (index === 1 ? '12 8' : '6 10')
+        }).addTo(map);
+        routePolylines.push(polyline);
 
-    // Hide all default pins — only show the route planner's circle markers
-    markerGroup.clearLayers();
+        // Update card with real stats
+        let totalDist = 0, totalDur = 0;
+        route.legs.forEach(leg => { totalDist += leg.distance.value; totalDur += leg.duration.value; });
+        const cards = document.querySelectorAll('.route-card');
+        if (cards[index]) {
+          const meta = cards[index].querySelector('.route-card-meta');
+          if (meta) meta.innerHTML = `<strong>${formatDuration(totalDur)}</strong> · ${formatDualDist(totalDist)} · ${nearby.length} castle${nearby.length > 1 ? 's' : ''}`;
+        }
+
+        routeLatLngs.forEach(ll => allBounds.extend(ll));
+      } catch (e) {
+        // Fallback: draw base route if waypoint route fails
+        const polyline = L.polyline(latLngs, { color: color, weight: 5, opacity: 0.5, dashArray: '4 8' }).addTo(map);
+        routePolylines.push(polyline);
+      }
+    }
 
     map.fitBounds(allBounds, { padding: [60, 60] });
 
