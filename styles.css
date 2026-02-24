@@ -133,10 +133,7 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
 .pin-emoji { font-size: 18px; line-height: 1; }
-.map-pin { position: relative; }
-.pin-emoji-placeholder { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0; }
-.map-pin img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; display: block; }
-.map-pin img:not([src]) { display: none; }
+/* pin images handled by .map-pin img rule above */
 .map-pin-castle { border: 3px solid #C2714F; }
 .map-pin-palace { border: 3px solid #D4A843; }
 .map-pin-abbey { border: 3px solid #6B8F71; }
