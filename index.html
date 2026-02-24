@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=15" />
 </head>
 <body>
   <!-- Top Bar -->
@@ -58,27 +58,32 @@
     <div class="map-legend" id="mapLegend">
       <div class="legend-title">Map Key</div>
       <div class="legend-item active" data-type="castle" onclick="toggleLegendType('castle')">
-        <span class="legend-color" style="background:#C2714F"></span>
+        <span class="legend-check">✓</span>
+        <span class="legend-color" style="background:#E05A33"></span>
         <span class="legend-label">Castle</span>
         <span class="legend-count" id="legendCount-castle"></span>
       </div>
       <div class="legend-item active" data-type="palace" onclick="toggleLegendType('palace')">
-        <span class="legend-color" style="background:#D4A843"></span>
+        <span class="legend-check">✓</span>
+        <span class="legend-color" style="background:#E6A817"></span>
         <span class="legend-label">Palace</span>
         <span class="legend-count" id="legendCount-palace"></span>
       </div>
       <div class="legend-item active" data-type="abbey" onclick="toggleLegendType('abbey')">
-        <span class="legend-color" style="background:#6B8F71"></span>
+        <span class="legend-check">✓</span>
+        <span class="legend-color" style="background:#2E8B57"></span>
         <span class="legend-label">Abbey</span>
         <span class="legend-count" id="legendCount-abbey"></span>
       </div>
       <div class="legend-item active" data-type="tower house" onclick="toggleLegendType('tower house')">
-        <span class="legend-color" style="background:#7B8DB5"></span>
+        <span class="legend-check">✓</span>
+        <span class="legend-color" style="background:#4A7FC1"></span>
         <span class="legend-label">Tower House</span>
         <span class="legend-count" id="legendCount-tower house"></span>
       </div>
       <div class="legend-item active" data-type="fortified house" onclick="toggleLegendType('fortified house')">
-        <span class="legend-color" style="background:#8B8680"></span>
+        <span class="legend-check">✓</span>
+        <span class="legend-color" style="background:#8B5CF6"></span>
         <span class="legend-label">Fortified House</span>
         <span class="legend-count" id="legendCount-fortified house"></span>
       </div>
@@ -202,7 +207,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
   <script src="data.js?v=13"></script>
-  <script src="app.js?v=14"></script>
+  <script src="app.js?v=15"></script>
 </body>
 </html>
 <!-- v2 -->

@@ -1,10 +1,10 @@
 // ========== CONFIG ==========
 const TYPE_CONFIG = {
-  castle:          { emoji: '🏰', color: '#C2714F', class: 'castle' },
-  palace:          { emoji: '👑', color: '#D4A843', class: 'palace' },
-  abbey:           { emoji: '⛪', color: '#6B8F71', class: 'abbey' },
-  'tower house':   { emoji: '🗼', color: '#7B8DB5', class: 'tower' },
-  'fortified house': { emoji: '🛡️', color: '#8B8680', class: 'fortified' },
+  castle:          { emoji: '🏰', color: '#E05A33', class: 'castle' },
+  palace:          { emoji: '👑', color: '#E6A817', class: 'palace' },
+  abbey:           { emoji: '⛪', color: '#2E8B57', class: 'abbey' },
+  'tower house':   { emoji: '🗼', color: '#4A7FC1', class: 'tower' },
+  'fortified house': { emoji: '🛡️', color: '#8B5CF6', class: 'fortified' },
 };
 
 const CORRIDOR_PROFILES = [
