@@ -618,6 +618,7 @@ function initUI() {
     closeSidebar();
     closeRoutePanel();
     closeBookmarksPanel();
+    closeRouteBuilderPanel();
   });
 
   document.getElementById('btnFilter').addEventListener('click', () => {
@@ -710,16 +711,19 @@ document.addEventListener('keydown', (e) => {
   });
 })();
 
-// ========== ADD TO ROUTE ==========
+// ========== ROUTE BUILDER ==========
+let routeBuilderStops = [];
+
 function addToRoute() {
   if (!selectedCastle) return;
-  // Add to favorites first if not already
-  if (!isBookmarked(selectedCastle.name)) {
-    toggleBookmark(selectedCastle.name);
+  // Don't add duplicates
+  if (routeBuilderStops.find(s => s.name === selectedCastle.name)) {
+    openRouteBuilderPanel();
+    return;
   }
-  // Open the bookmarks/favorites panel with route form visible
-  openBookmarksPanel();
-  document.getElementById('bookmarksRouteForm').style.display = 'block';
+  routeBuilderStops.push({ ...selectedCastle });
+  renderRouteBuilderStops();
+  openRouteBuilderPanel();
   // Visual feedback on button
   const btn = document.getElementById('sidebarAddRoute');
   const orig = btn.innerHTML;
@@ -727,6 +731,178 @@ function addToRoute() {
   btn.style.background = 'var(--sage)';
   btn.style.color = '#fff';
   setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 1500);
+}
+
+function openRouteBuilderPanel() {
+  renderRouteBuilderStops();
+  document.getElementById('routeBuilderPanel').classList.add('active');
+  document.getElementById('overlayBackdrop').classList.add('active');
+}
+
+function closeRouteBuilderPanel() {
+  document.getElementById('routeBuilderPanel').classList.remove('active');
+  document.getElementById('overlayBackdrop').classList.remove('active');
+}
+
+function renderRouteBuilderStops() {
+  const listEl = document.getElementById('rbStopsList');
+  const countEl = document.getElementById('rbStopCount');
+  const emptyMsg = document.getElementById('rbEmptyMsg');
+  countEl.textContent = `${routeBuilderStops.length} stop${routeBuilderStops.length !== 1 ? 's' : ''}`;
+
+  if (routeBuilderStops.length === 0) {
+    listEl.innerHTML = '<div class="bookmarks-empty" id="rbEmptyMsg">Click "Add to Route" on any castle to add stops.</div>';
+    listEl.classList.remove('has-stops');
+    return;
+  }
+  listEl.classList.add('has-stops');
+  listEl.innerHTML = routeBuilderStops.map((c, i) => {
+    const tc = getTypeConfig(c.type);
+    return `<div class="rb-stop-card" draggable="true" data-index="${i}">
+      <span class="drag-handle">⠿</span>
+      <span class="emoji">${tc.emoji}</span>
+      <div class="info">
+        <div class="name">${c.name}</div>
+        <div class="loc">${c.county}, ${c.country}</div>
+      </div>
+      <button class="remove-btn" onclick="removeRouteBuilderStop(${i})">✕</button>
+    </div>`;
+  }).join('');
+
+  // Drag reorder
+  initStopsDragReorder();
+}
+
+function removeRouteBuilderStop(index) {
+  routeBuilderStops.splice(index, 1);
+  renderRouteBuilderStops();
+}
+
+function initStopsDragReorder() {
+  const list = document.getElementById('rbStopsList');
+  let dragIdx = null;
+  list.querySelectorAll('.rb-stop-card').forEach(card => {
+    card.addEventListener('dragstart', (e) => {
+      dragIdx = parseInt(card.dataset.index);
+      card.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+    });
+    card.addEventListener('dragend', () => {
+      card.classList.remove('dragging');
+      dragIdx = null;
+    });
+    card.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+    });
+    card.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const dropIdx = parseInt(card.dataset.index);
+      if (dragIdx !== null && dragIdx !== dropIdx) {
+        const [moved] = routeBuilderStops.splice(dragIdx, 1);
+        routeBuilderStops.splice(dropIdx, 0, moved);
+        renderRouteBuilderStops();
+      }
+    });
+  });
+}
+
+function sendFavoritesToRouteBuilder() {
+  const checkboxes = document.querySelectorAll('.bm-select-cb:checked');
+  const names = Array.from(checkboxes).map(cb => cb.value);
+  if (names.length === 0) return;
+  names.forEach(name => {
+    if (!routeBuilderStops.find(s => s.name === name)) {
+      const c = CASTLES.find(x => x.name === name);
+      if (c) routeBuilderStops.push({ ...c });
+    }
+  });
+  closeBookmarksPanel();
+  openRouteBuilderPanel();
+}
+
+async function generateBuilderRoute() {
+  if (routeBuilderStops.length === 0) return;
+  const startText = document.getElementById('rbStartLocation').value.trim();
+  const endText = document.getElementById('rbEndLocation').value.trim();
+
+  const btn = document.getElementById('btnGenerateRoute');
+  btn.disabled = true; btn.textContent = 'Generating…';
+  document.getElementById('rbRouteResults').innerHTML = '<div class="loading">Planning route</div>';
+
+  try {
+    const castles = routeBuilderStops;
+    let origin, destination;
+    const waypoints = [];
+
+    if (startText) {
+      origin = await geocodeCity(startText);
+    } else {
+      origin = { lat: castles[0].lat, lng: castles[0].lng };
+    }
+
+    if (endText) {
+      destination = await geocodeCity(endText);
+    } else if (startText) {
+      destination = { lat: origin.lat, lng: origin.lng }; // round trip
+    } else {
+      destination = { lat: castles[castles.length - 1].lat, lng: castles[castles.length - 1].lng };
+    }
+
+    castles.forEach(c => {
+      waypoints.push({ location: new google.maps.LatLng(c.lat, c.lng), stopover: true });
+    });
+
+    const request = {
+      origin: new google.maps.LatLng(origin.lat, origin.lng),
+      destination: new google.maps.LatLng(destination.lat, destination.lng),
+      waypoints,
+      optimizeWaypoints: true,
+      travelMode: google.maps.TravelMode.DRIVING,
+    };
+
+    const result = await new Promise((resolve, reject) => {
+      directionsService.route(request, (res, status) => {
+        if (status === 'OK') resolve(res); else reject(new Error('Route failed'));
+      });
+    });
+
+    const route = result.routes[0];
+    routePolylines.forEach(p => map.removeLayer(p));
+    routePolylines = [];
+
+    const path = decodePolyline(route.overview_polyline);
+    const latLngs = path.map(p => [p.lat, p.lng]);
+    const polyline = L.polyline(latLngs, { color: '#C2714F', weight: 4, opacity: 0.7 }).addTo(map);
+    routePolylines.push(polyline);
+    map.fitBounds(polyline.getBounds(), { padding: [60, 60] });
+
+    let totalDist = 0, totalTime = 0;
+    route.legs.forEach(leg => { totalDist += leg.distance.value; totalTime += leg.duration.value; });
+    const distKm = (totalDist / 1000).toFixed(0);
+    const timeH = Math.floor(totalTime / 3600);
+    const timeM = Math.round((totalTime % 3600) / 60);
+
+    const order = route.waypoint_order || castles.map((_, i) => i);
+    const ordered = order.map(i => castles[i]);
+    const routeName = document.getElementById('rbRouteName').value.trim() || 'Your Route';
+
+    const listHtml = ordered.map((c, i) => {
+      const tc = getTypeConfig(c.type);
+      return `<li><span style="color:var(--text-muted);font-weight:600;margin-right:4px">${i + 1}.</span> ${tc.emoji} ${c.name} <span class="castle-rating">★ ${c.rating}</span></li>`;
+    }).join('');
+
+    document.getElementById('rbRouteResults').innerHTML = `
+      <div class="route-card">
+        <div class="route-card-header"><span class="emoji">🧭</span><span class="title">${routeName}</span></div>
+        <div class="route-card-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km · ${ordered.length} stops</div>
+        <ul class="route-castle-list">${listHtml}</ul>
+      </div>`;
+  } catch (err) {
+    document.getElementById('rbRouteResults').innerHTML = `<p style="padding:12px;color:var(--terracotta)">${err.message}</p>`;
+  } finally {
+    btn.disabled = false; btn.textContent = 'Generate Route';
+  }
 }
 
 // ========== FAVORITES ==========
@@ -782,7 +958,8 @@ function renderBookmarksPanel() {
     const c = CASTLES.find(x => x.name === name);
     if (!c) return '';
     const tc = getTypeConfig(c.type);
-    return `<div class="bookmark-card">
+    return `<div class="bookmark-card-select">
+      <input type="checkbox" class="bm-select-cb" value="${c.name.replace(/"/g, '&quot;')}" />
       <span class="emoji">${tc.emoji}</span>
       <div class="info">
         <div class="name">${c.name}</div>
@@ -915,10 +1092,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateBookmarkUI();
     updateMapPinBookmarks();
   });
-  document.getElementById('btnRouteFromBookmarks').addEventListener('click', () => {
-    document.getElementById('bookmarksRouteForm').style.display = 'block';
-  });
-  document.getElementById('btnOptimizeBookmarkRoute').addEventListener('click', optimizeBookmarkRoute);
+  // Route Builder wiring
+  document.getElementById('routeBuilderClose').addEventListener('click', closeRouteBuilderPanel);
+  document.getElementById('btnGenerateRoute').addEventListener('click', generateBuilderRoute);
 
   // Update pin indicators on load
   updateMapPinBookmarks();
