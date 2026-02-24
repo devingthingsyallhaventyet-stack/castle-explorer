@@ -612,7 +612,7 @@ function renderRouteCard(profile, castles, totalDistM, totalDurS, index, color) 
       </div>
       <ul class="route-castle-list">${castleList}</ul>
       <div class="route-card-actions">
-        <button class="btn-show-route" onclick="showRouteCastles(${namesJson})">Show on Map</button>
+        <button class="btn-show-route" onclick="showRouteCastles(${namesJson})">Open in Google Maps</button>
         <button class="btn-save-route" onclick="saveRouteToBuilder(${namesJson})">Save Route</button>
       </div>
     </div>
@@ -620,12 +620,15 @@ function renderRouteCard(profile, castles, totalDistM, totalDurS, index, color) 
 }
 
 function showRouteCastles(names) {
-  const bounds = L.latLngBounds();
-  names.forEach(name => {
+  // Open in Google Maps with waypoints
+  const startText = document.getElementById('routeStart').value.trim();
+  const endText = document.getElementById('routeEnd').value.trim();
+  const waypoints = names.map(name => {
     const c = CASTLES.find(x => x.name === name);
-    if (c) bounds.extend([c.lat, c.lng]);
-  });
-  if (bounds.isValid()) map.fitBounds(bounds, { padding: [60, 60] });
+    return c ? `${c.lat},${c.lng}` : name;
+  }).join('|');
+  const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(startText)}&destination=${encodeURIComponent(endText)}&waypoints=${encodeURIComponent(waypoints)}&travelmode=driving`;
+  window.open(url, '_blank');
 }
 
 function saveRouteToBuilder(names) {
