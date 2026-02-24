@@ -57,7 +57,6 @@ function initMap() {
 }
 
 function initGoogle() {
-  placesService = new google.maps.places.PlacesService(document.createElement('div'));
   geocoder = new google.maps.Geocoder();
   directionsService = new google.maps.DirectionsService();
 }
@@ -223,58 +222,61 @@ function closeSidebar() {
   selectedCastle = null;
 }
 
-function lookupGooglePlaces(castle) {
+async function lookupGooglePlaces(castle) {
   const cacheKey = castle.name;
   if (placesCache[cacheKey]) {
     renderGoogleData(placesCache[cacheKey]);
     return;
   }
 
-  const request = {
-    query: `${castle.name} ${castle.country}`,
-    fields: ['name', 'rating', 'user_ratings_total', 'photos', 'opening_hours', 'place_id']
-  };
+  try {
+    const { Place } = await google.maps.importLibrary('places');
+    const request = {
+      textQuery: `${castle.name} ${castle.county} ${castle.country}`,
+      fields: ['displayName', 'rating', 'userRatingCount', 'photos', 'regularOpeningHours', 'googleMapsURI'],
+      locationBias: { lat: castle.lat, lng: castle.lng },
+      maxResultCount: 1
+    };
 
-  placesService.findPlaceFromQuery(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results && results[0]) {
-      const place = results[0];
-      // Get details for hours
-      if (place.place_id) {
-        placesService.getDetails({
-          placeId: place.place_id,
-          fields: ['opening_hours', 'photos', 'rating', 'user_ratings_total']
-        }, (detail, dStatus) => {
-          if (dStatus === google.maps.places.PlacesServiceStatus.OK && detail) {
-            placesCache[cacheKey] = detail;
-            if (selectedCastle && selectedCastle.name === castle.name) renderGoogleData(detail);
-          }
-        });
-      }
+    const { places } = await Place.searchByText(request);
+    if (places && places.length > 0) {
+      const place = places[0];
+      placesCache[cacheKey] = place;
+      if (selectedCastle && selectedCastle.name === castle.name) renderGoogleData(place);
     }
-  });
+  } catch (e) {
+    console.warn('Places lookup failed:', e);
+  }
 }
 
 function renderGoogleData(place) {
   // Google rating
   if (place.rating) {
+    const count = place.userRatingCount || 0;
     document.getElementById('sidebarGoogle').innerHTML = `
       <div class="google-rating">
-        <img src="https://www.gstatic.com/images/branding/product/1x/maps_round_48dp.png" alt="Google" />
-        Google rating: <strong>${place.rating}</strong>/5 (${(place.user_ratings_total || 0).toLocaleString()})
+        <img src="https://www.gstatic.com/images/branding/product/1x/maps_round_48dp.png" alt="Google" width="20" height="20" />
+        Google rating: <strong>${place.rating}</strong>/5 (${count.toLocaleString()} reviews)
       </div>
     `;
   }
   // Photos
   if (place.photos && place.photos.length > 0) {
-    const photosHtml = place.photos.slice(0, 3).map(p =>
-      `<img src="${p.getUrl({ maxWidth: 300, maxHeight: 225 })}" alt="Photo" />`
-    ).join('');
+    const photosHtml = place.photos.slice(0, 3).map(p => {
+      const url = p.getURI ? p.getURI({ maxWidth: 300, maxHeight: 225 }) : (p.getUrl ? p.getUrl({ maxWidth: 300, maxHeight: 225 }) : '');
+      if (!url) return '';
+      return `<img src="${url}" alt="Photo" />`;
+    }).join('');
     document.getElementById('sidebarPhotos').innerHTML = photosHtml;
   }
   // Hours
-  if (place.opening_hours && place.opening_hours.weekday_text) {
+  if (place.regularOpeningHours && place.regularOpeningHours.weekdayDescriptions) {
     document.getElementById('sidebarHours').innerHTML =
-      `<strong>Opening Hours</strong><br/>` + place.opening_hours.weekday_text.join('<br/>');
+      `<strong>Opening Hours</strong><br/>` + place.regularOpeningHours.weekdayDescriptions.join('<br/>');
+  }
+  // Google Maps link
+  if (place.googleMapsURI) {
+    document.getElementById('sidebarDirections').href = place.googleMapsURI;
   }
 }
 
