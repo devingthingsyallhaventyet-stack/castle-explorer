@@ -620,13 +620,10 @@ function renderRouteCard(profile, castles, totalDistM, totalDurS, index, color) 
 }
 
 function showRouteCastles(names) {
-  // Open in Google Maps with waypoints
+  // Open in Google Maps with castle names as waypoints
   const startText = document.getElementById('routeStart').value.trim();
   const endText = document.getElementById('routeEnd').value.trim();
-  const waypoints = names.map(name => {
-    const c = CASTLES.find(x => x.name === name);
-    return c ? `${c.lat},${c.lng}` : name;
-  }).join('|');
+  const waypoints = names.map(name => name + ', UK').join('|');
   const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(startText)}&destination=${encodeURIComponent(endText)}&waypoints=${encodeURIComponent(waypoints)}&travelmode=driving`;
   window.open(url, '_blank');
 }
