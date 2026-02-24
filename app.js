@@ -935,6 +935,7 @@ async function generateBuilderRoute() {
     let totalDist = 0, totalTime = 0;
     route.legs.forEach(leg => { totalDist += leg.distance.value; totalTime += leg.duration.value; });
     const distKm = (totalDist / 1000).toFixed(0);
+    const distMi = (totalDist / 1609.344).toFixed(0);
     const timeH = Math.floor(totalTime / 3600);
     const timeM = Math.round((totalTime % 3600) / 60);
 
@@ -945,7 +946,8 @@ async function generateBuilderRoute() {
     // Build leg-by-leg list with colors and distances
     const legListHtml = route.legs.map((leg, i) => {
       const color = legColors[i % legColors.length];
-      const legDist = (leg.distance.value / 1000).toFixed(0);
+      const legDistKm = (leg.distance.value / 1000).toFixed(0);
+      const legDistMi = (leg.distance.value / 1609.344).toFixed(0);
       const legTime = Math.round(leg.duration.value / 60);
       let label;
       if (i === 0) {
@@ -958,7 +960,7 @@ async function generateBuilderRoute() {
         <span class="rb-leg-color" style="background:${color}"></span>
         <div class="rb-leg-info">
           <div class="rb-leg-label">${label} → ${destLabel}</div>
-          <div class="rb-leg-meta">${legTime} min · ${legDist} km</div>
+          <div class="rb-leg-meta">${legTime} min · ${legDistKm} km (${legDistMi} mi)</div>
         </div>
       </div>`;
     }).join('');
@@ -984,7 +986,7 @@ async function generateBuilderRoute() {
           <span class="emoji">🧭</span>
           <div>
             <div class="rb-summary-name">${routeName}</div>
-            <div class="rb-summary-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km · ${ordered.length} stops</div>
+            <div class="rb-summary-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km (${distMi} mi) · ${ordered.length} stops</div>
           </div>
         </div>
         <div class="rb-leg-list">${legListHtml}</div>
@@ -1254,6 +1256,7 @@ async function optimizeBookmarkRoute() {
     let totalDist = 0, totalTime = 0;
     route.legs.forEach(leg => { totalDist += leg.distance.value; totalTime += leg.duration.value; });
     const distKm = (totalDist / 1000).toFixed(0);
+    const distMi = (totalDist / 1609.344).toFixed(0);
     const timeH = Math.floor(totalTime / 3600);
     const timeM = Math.round((totalTime % 3600) / 60);
 
@@ -1269,7 +1272,7 @@ async function optimizeBookmarkRoute() {
     document.getElementById('bookmarkRouteResults').innerHTML = `
       <div class="route-card">
         <div class="route-card-header"><span class="emoji">🗺️</span><span class="title">Optimized Route</span></div>
-        <div class="route-card-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km · ${ordered.length} stops</div>
+        <div class="route-card-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km (${distMi} mi) · ${ordered.length} stops</div>
         <ul class="route-castle-list">${listHtml}</ul>
       </div>`;
   } catch (err) {
