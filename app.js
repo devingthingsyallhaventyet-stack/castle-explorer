@@ -68,8 +68,7 @@ function getPinImageUrl(castle) {
 
 function createPinHtml(castle, tc, bookmarked) {
   const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
-  const imgUrl = getPinImageUrl(castle);
-  return `<div class="${cls}"><img src="${imgUrl}" alt="" /></div>`;
+  return `<div class="${cls}"><span class="pin-emoji">${tc.emoji}</span></div>`;
 }
 
 function initMarkers() {
