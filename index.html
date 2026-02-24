@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 </head>
 <body>
   <!-- Top Bar -->
@@ -86,6 +86,36 @@
         <span class="legend-color" style="background:#8B5CF6"></span>
         <span class="legend-label">Fortified House</span>
         <span class="legend-count" id="legendCount-fortified house"></span>
+      </div>
+    </div>
+    <!-- Route Builder Floating Panel -->
+    <div class="rb-float" id="routeBuilderPanel">
+      <div class="rb-float-header" id="rbFloatHeader">
+        <span class="rb-float-title">🧭 Route Builder</span>
+        <span class="rb-stop-count" id="rbStopCount">0 stops</span>
+        <div class="rb-float-actions">
+          <button class="rb-float-toggle" id="rbToggle" title="Minimize">−</button>
+          <button class="rb-float-close" id="routeBuilderClose" title="Close">✕</button>
+        </div>
+      </div>
+      <div class="rb-float-body" id="rbFloatBody">
+        <div class="route-field">
+          <label>Route Name</label>
+          <input type="text" id="rbRouteName" placeholder="e.g. Ireland Castle Tour" />
+        </div>
+        <div class="route-field">
+          <label>Start <span class="optional-tag">optional</span></label>
+          <input type="text" id="rbStartLocation" placeholder="e.g. Dublin Airport" />
+        </div>
+        <div class="rb-stops-list" id="rbStopsList">
+          <div class="rb-empty-msg" id="rbEmptyMsg">Tap 🚗 on any castle to add it here</div>
+        </div>
+        <div class="route-field">
+          <label>End <span class="optional-tag">optional</span></label>
+          <input type="text" id="rbEndLocation" placeholder="e.g. Shannon Airport" />
+        </div>
+        <button class="rb-generate-btn" id="btnGenerateRoute">Generate Route</button>
+        <div class="rb-route-results" id="rbRouteResults"></div>
       </div>
     </div>
   </div>
@@ -168,36 +198,7 @@
     </div>
   </div>
 
-  <!-- Route Builder Floating Panel -->
-  <div class="rb-float" id="routeBuilderPanel">
-    <div class="rb-float-header" id="rbFloatHeader">
-      <span class="rb-float-title">🧭 Route Builder</span>
-      <span class="rb-stop-count" id="rbStopCount">0 stops</span>
-      <div class="rb-float-actions">
-        <button class="rb-float-toggle" id="rbToggle" title="Minimize">−</button>
-        <button class="rb-float-close" id="routeBuilderClose" title="Close">✕</button>
-      </div>
-    </div>
-    <div class="rb-float-body" id="rbFloatBody">
-      <div class="route-field">
-        <label>Route Name</label>
-        <input type="text" id="rbRouteName" placeholder="e.g. Ireland Castle Tour" />
-      </div>
-      <div class="route-field">
-        <label>Start <span class="optional-tag">optional</span></label>
-        <input type="text" id="rbStartLocation" placeholder="e.g. Dublin Airport" />
-      </div>
-      <div class="rb-stops-list" id="rbStopsList">
-        <div class="rb-empty-msg" id="rbEmptyMsg">Tap 🚗 on any castle to add it here</div>
-      </div>
-      <div class="route-field">
-        <label>End <span class="optional-tag">optional</span></label>
-        <input type="text" id="rbEndLocation" placeholder="e.g. Shannon Airport" />
-      </div>
-      <button class="rb-generate-btn" id="btnGenerateRoute">Generate Route</button>
-      <div class="rb-route-results" id="rbRouteResults"></div>
-    </div>
-  </div>
+  <!-- Route Builder moved inside #map -->
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -232,7 +233,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
   <script src="data.js?v=14"></script>
-  <script src="app.js?v=19"></script>
+  <script src="app.js?v=21"></script>
 </body>
 </html>
 <!-- v2 -->
