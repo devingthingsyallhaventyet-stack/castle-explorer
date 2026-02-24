@@ -712,6 +712,8 @@ document.addEventListener('keydown', (e) => {
 
 // ========== ROUTE BUILDER ==========
 let routeBuilderStops = [];
+let lastRouteFormState = null;
+let rbFormHTML = null;
 
 function addToRoute() {
   if (!selectedCastle) return;
@@ -743,6 +745,8 @@ function positionRouteBuilder() {
 }
 
 function openRouteBuilderPanel() {
+  // Capture form template on first open
+  if (!rbFormHTML) rbFormHTML = document.getElementById('rbFloatBody').innerHTML;
   renderRouteBuilderStops();
   const panel = document.getElementById('routeBuilderPanel');
   panel.classList.add('active');
@@ -899,11 +903,24 @@ async function generateBuilderRoute() {
     routePolylines.forEach(p => map.removeLayer(p));
     routePolylines = [];
 
-    const path = decodePolyline(route.overview_polyline);
-    const latLngs = path.map(p => [p.lat, p.lng]);
-    const polyline = L.polyline(latLngs, { color: '#C2714F', weight: 4, opacity: 0.7 }).addTo(map);
-    routePolylines.push(polyline);
-    map.fitBounds(polyline.getBounds(), { padding: [60, 60] });
+    // Color-coded legs
+    const legColors = ['#E05A33', '#4A7FC1', '#2E8B57', '#E6A817', '#8B5CF6', '#E84393', '#00B894', '#D35400', '#6C5CE7', '#636E72'];
+    let allBounds = [];
+    route.legs.forEach((leg, i) => {
+      const legPath = decodePolyline(leg.steps.map(s => s.polyline).join(''));
+      // Fallback: use leg start/end if decoding fails
+      const pts = leg.steps.reduce((acc, step) => {
+        const decoded = decodePolyline(step.polyline);
+        return acc.concat(decoded.map(p => [p.lat, p.lng]));
+      }, []);
+      if (pts.length > 0) {
+        const color = legColors[i % legColors.length];
+        const polyline = L.polyline(pts, { color, weight: 5, opacity: 0.8 }).addTo(map);
+        routePolylines.push(polyline);
+        allBounds = allBounds.concat(pts);
+      }
+    });
+    if (allBounds.length > 0) map.fitBounds(allBounds, { padding: [60, 60] });
 
     let totalDist = 0, totalTime = 0;
     route.legs.forEach(leg => { totalDist += leg.distance.value; totalTime += leg.duration.value; });
@@ -915,9 +932,25 @@ async function generateBuilderRoute() {
     const ordered = order.map(i => castles[i]);
     const routeName = document.getElementById('rbRouteName').value.trim() || 'Your Route';
 
-    const listHtml = ordered.map((c, i) => {
-      const tc = getTypeConfig(c.type);
-      return `<li><span style="color:var(--text-muted);font-weight:600;margin-right:4px">${i + 1}.</span> ${tc.emoji} ${c.name} <span class="castle-rating">★ ${c.rating}</span></li>`;
+    // Build leg-by-leg list with colors and distances
+    const legListHtml = route.legs.map((leg, i) => {
+      const color = legColors[i % legColors.length];
+      const legDist = (leg.distance.value / 1000).toFixed(0);
+      const legTime = Math.round(leg.duration.value / 60);
+      let label;
+      if (i === 0) {
+        label = startText || 'Start';
+      } else {
+        label = ordered[i - 1].name;
+      }
+      const destLabel = i < ordered.length ? ordered[i].name : (endText || 'End');
+      return `<div class="rb-leg-item">
+        <span class="rb-leg-color" style="background:${color}"></span>
+        <div class="rb-leg-info">
+          <div class="rb-leg-label">${label} → ${destLabel}</div>
+          <div class="rb-leg-meta">${legTime} min · ${legDist} km</div>
+        </div>
+      </div>`;
     }).join('');
 
     // Build Google Maps navigation URL
@@ -926,15 +959,30 @@ async function generateBuilderRoute() {
     const gmWaypoints = ordered.map(c => `${c.lat},${c.lng}`).join('|');
     const gmUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(gmOrigin)}&destination=${encodeURIComponent(gmDest)}&waypoints=${encodeURIComponent(gmWaypoints)}&travelmode=driving`;
 
-    document.getElementById('rbRouteResults').innerHTML = `
-      <div class="route-card">
-        <div class="route-card-header"><span class="emoji">🧭</span><span class="title">${routeName}</span></div>
-        <div class="route-card-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km · ${ordered.length} stops</div>
-        <ul class="route-castle-list">${listHtml}</ul>
+    // Save form state for edit
+    lastRouteFormState = {
+      name: document.getElementById('rbRouteName').value,
+      start: startText,
+      end: endText,
+      stops: [...routeBuilderStops]
+    };
+
+    // Replace entire panel body with route summary
+    document.getElementById('rbFloatBody').innerHTML = `
+      <div class="rb-route-summary">
+        <div class="rb-summary-header">
+          <span class="emoji">🧭</span>
+          <div>
+            <div class="rb-summary-name">${routeName}</div>
+            <div class="rb-summary-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km · ${ordered.length} stops</div>
+          </div>
+        </div>
+        <div class="rb-leg-list">${legListHtml}</div>
         <a href="${gmUrl}" target="_blank" class="rb-start-nav-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
           Start Navigation
         </a>
+        <button class="rb-edit-btn" onclick="editRoute()">✏️ Edit Route</button>
         <button class="rb-show-all-btn" onclick="showAllPins()">Show All Pins</button>
       </div>`;
 
@@ -945,6 +993,31 @@ async function generateBuilderRoute() {
   } finally {
     btn.disabled = false; btn.textContent = 'Generate Route';
   }
+}
+
+function editRoute() {
+  // Restore the form
+  document.getElementById('rbFloatBody').innerHTML = rbFormHTML;
+  // Restore form state
+  if (lastRouteFormState) {
+    document.getElementById('rbRouteName').value = lastRouteFormState.name || '';
+    document.getElementById('rbStartLocation').value = lastRouteFormState.start || '';
+    document.getElementById('rbEndLocation').value = lastRouteFormState.end || '';
+    routeBuilderStops = lastRouteFormState.stops || [];
+  }
+  renderRouteBuilderStops();
+  // Re-init autocomplete on restored inputs
+  ['rbStartLocation', 'rbEndLocation'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) initPlacesAutocomplete(el);
+  });
+  // Re-wire generate button
+  document.getElementById('btnGenerateRoute').addEventListener('click', generateBuilderRoute);
+  // Restore all pins and clear route lines
+  showAllPins();
+  routePolylines.forEach(p => map.removeLayer(p));
+  routePolylines = [];
+  positionRouteBuilder();
 }
 
 // ========== ROUTE PIN FILTERING ==========

@@ -559,6 +559,32 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   margin-top: 10px; transition: background 0.2s;
 }
 .rb-start-nav-btn:hover { background: #3367D6; }
+/* Route Summary */
+.rb-route-summary { padding: 0; }
+.rb-summary-header {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+}
+.rb-summary-header .emoji { font-size: 24px; }
+.rb-summary-name { font-weight: 700; font-size: 16px; color: var(--text); }
+.rb-summary-meta { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+.rb-leg-list { margin-bottom: 12px; }
+.rb-leg-item {
+  display: flex; align-items: center; gap: 10px; padding: 8px 0;
+  border-bottom: 1px solid #f2f0ed;
+}
+.rb-leg-item:last-child { border-bottom: none; }
+.rb-leg-color {
+  width: 4px; height: 36px; border-radius: 2px; flex-shrink: 0;
+}
+.rb-leg-info { flex: 1; min-width: 0; }
+.rb-leg-label { font-size: 13px; font-weight: 500; color: var(--text); }
+.rb-leg-meta { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+.rb-edit-btn {
+  width: 100%; padding: 10px; border: 2px solid var(--sage); border-radius: var(--radius);
+  background: var(--white); color: var(--sage); font-family: var(--font-sans);
+  font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 6px; transition: all 0.2s;
+}
+.rb-edit-btn:hover { background: var(--sage); color: var(--white); }
 .rb-show-all-btn {
   width: 100%; padding: 8px; border: 1.5px solid var(--border); border-radius: var(--radius);
   background: var(--white); color: var(--text-muted); font-family: var(--font-sans);
