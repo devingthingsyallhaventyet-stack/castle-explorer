@@ -434,6 +434,14 @@ function openRoutePanel() {
 function closeRoutePanel() {
   document.getElementById('routePanel').classList.remove('active');
   document.getElementById('overlayBackdrop').classList.remove('active');
+  // Restore all pins and clear route visuals
+  showAllPins();
+  routePolylines.forEach(p => map.removeLayer(p));
+  routePolylines = [];
+  if (typeof routePlannerMarkers !== 'undefined') {
+    routePlannerMarkers.forEach(m => map.removeLayer(m));
+    routePlannerMarkers = [];
+  }
 }
 
 document.getElementById('btnFindRoutes').addEventListener('click', findRoutes);
@@ -498,7 +506,12 @@ async function findRoutes() {
       const color = ROUTE_COLORS[pi];
 
       // Draw route polyline
-      const polyline = L.polyline(latLngs, { color: color, weight: 4, opacity: 0.7, dashArray: pi === 0 ? null : (pi === 1 ? '10 6' : '4 8') }).addTo(map);
+      // Offset routes slightly so all 3 are visible (they share the same base road)
+      const offsetLatLngs = latLngs.map(([lat, lng]) => {
+        const offset = (pi - 1) * 0.003; // shift left/center/right
+        return [lat + offset * 0.5, lng + offset];
+      });
+      const polyline = L.polyline(offsetLatLngs, { color: color, weight: 5, opacity: 0.8, dashArray: pi === 0 ? null : (pi === 1 ? '12 8' : '6 10') }).addTo(map);
       routePolylines.push(polyline);
 
       // Add castle pins
@@ -520,6 +533,10 @@ async function findRoutes() {
     }).join('');
 
     document.getElementById('routeResults').innerHTML = resultsHtml;
+
+    // Hide all default pins — only show the route planner's circle markers
+    markerGroup.clearLayers();
+
     map.fitBounds(allBounds, { padding: [60, 60] });
 
   } catch (err) {
