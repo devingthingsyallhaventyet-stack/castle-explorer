@@ -460,10 +460,15 @@ async function findRoutes() {
   try {
     const [startCoords, endCoords] = await Promise.all([geocodeCity(startText), geocodeCity(endText)]);
 
-    // Find must-visit castle
+    // Find must-visit location (dataset castle or any place)
     let mustCastle = null;
     if (mustText) {
       mustCastle = CASTLES.find(c => c.name.toLowerCase().includes(mustText.toLowerCase()));
+      if (!mustCastle) {
+        // Geocode as arbitrary location
+        const mustCoords = await geocodeCity(mustText);
+        mustCastle = { name: mustText, lat: mustCoords.lat, lng: mustCoords.lng, type: 'Castle', rating: 0, _custom: true };
+      }
     }
 
     // Get base route
@@ -726,48 +731,10 @@ function decodePolyline(encoded) {
 }
 
 // ========== UI WIRING ==========
-function initCastleAutocomplete(inputId, dropdownId) {
-  const input = document.getElementById(inputId);
-  const dropdown = document.getElementById(dropdownId);
-  let selectedIdx = -1;
-
-  input.addEventListener('input', () => {
-    const q = input.value.trim().toLowerCase();
-    if (q.length < 2) { dropdown.style.display = 'none'; return; }
-    const matches = CASTLES.filter(c => c.name.toLowerCase().includes(q)).slice(0, 8);
-    if (matches.length === 0) { dropdown.style.display = 'none'; return; }
-    selectedIdx = -1;
-    dropdown.innerHTML = matches.map((c, i) => {
-      const tc = getTypeConfig(c.type);
-      return `<div class="pac-item" data-idx="${i}">${tc.emoji} ${c.name}</div>`;
-    }).join('');
-    dropdown.style.display = 'block';
-    dropdown.querySelectorAll('.pac-item').forEach(el => {
-      el.addEventListener('mousedown', e => {
-        e.preventDefault();
-        input.value = matches[parseInt(el.dataset.idx)].name;
-        dropdown.style.display = 'none';
-      });
-    });
-  });
-
-  input.addEventListener('keydown', e => {
-    const items = dropdown.querySelectorAll('.pac-item');
-    if (!items.length || dropdown.style.display === 'none') return;
-    if (e.key === 'ArrowDown') { e.preventDefault(); selectedIdx = Math.min(selectedIdx + 1, items.length - 1); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); selectedIdx = Math.max(selectedIdx - 1, 0); }
-    else if (e.key === 'Enter' && selectedIdx >= 0) { e.preventDefault(); items[selectedIdx].dispatchEvent(new Event('mousedown')); return; }
-    else return;
-    items.forEach((el, i) => el.classList.toggle('pac-active', i === selectedIdx));
-  });
-
-  input.addEventListener('blur', () => { setTimeout(() => dropdown.style.display = 'none', 150); });
-}
-
 function initUI() {
   document.getElementById('sidebarClose').addEventListener('click', closeSidebar);
   document.getElementById('routeClose').addEventListener('click', closeRoutePanel);
-  initCastleAutocomplete('routeMust', 'mustVisitDropdown');
+  initPlacesAutocomplete(document.getElementById('routeMust'));
   document.getElementById('overlayBackdrop').addEventListener('click', () => {
     closeSidebar();
     closeRoutePanel();
