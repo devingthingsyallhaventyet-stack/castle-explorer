@@ -1119,6 +1119,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.getElementById('btnGenerateRoute').addEventListener('click', generateBuilderRoute);
 
+  // Google Places Autocomplete for location inputs
+  const acOptions = { types: ['geocode', 'establishment'], fields: ['formatted_address', 'geometry', 'name'] };
+  ['rbStartLocation', 'rbEndLocation', 'routeStart', 'routeEnd', 'bookmarkRouteStart'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      const ac = new google.maps.places.Autocomplete(el, acOptions);
+      ac.addListener('place_changed', () => {
+        const place = ac.getPlace();
+        if (place && place.formatted_address) el.value = place.formatted_address;
+      });
+      // Prevent form submission on Enter (autocomplete dropdown)
+      el.addEventListener('keydown', (e) => { if (e.key === 'Enter') e.preventDefault(); });
+    }
+  });
+
   // Update pin indicators on load
   updateMapPinBookmarks();
 
