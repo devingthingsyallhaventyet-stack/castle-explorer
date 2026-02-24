@@ -759,7 +759,10 @@ function closeRouteBuilderPanel() {
   document.getElementById('rbStartLocation').value = '';
   document.getElementById('rbEndLocation').value = '';
   document.getElementById('rbRouteResults').innerHTML = '';
-  // Legend restored
+  // Restore all pins and clear route line
+  showAllPins();
+  routePolylines.forEach(p => map.removeLayer(p));
+  routePolylines = [];
 }
 
 function toggleRouteBuilderMinimize() {
@@ -917,17 +920,52 @@ async function generateBuilderRoute() {
       return `<li><span style="color:var(--text-muted);font-weight:600;margin-right:4px">${i + 1}.</span> ${tc.emoji} ${c.name} <span class="castle-rating">★ ${c.rating}</span></li>`;
     }).join('');
 
+    // Build Google Maps navigation URL
+    const gmOrigin = startText || `${origin.lat},${origin.lng}`;
+    const gmDest = endText || `${destination.lat},${destination.lng}`;
+    const gmWaypoints = ordered.map(c => `${c.lat},${c.lng}`).join('|');
+    const gmUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(gmOrigin)}&destination=${encodeURIComponent(gmDest)}&waypoints=${encodeURIComponent(gmWaypoints)}&travelmode=driving`;
+
     document.getElementById('rbRouteResults').innerHTML = `
       <div class="route-card">
         <div class="route-card-header"><span class="emoji">🧭</span><span class="title">${routeName}</span></div>
         <div class="route-card-meta"><strong>${timeH}h ${timeM}m</strong> · ${distKm} km · ${ordered.length} stops</div>
         <ul class="route-castle-list">${listHtml}</ul>
+        <a href="${gmUrl}" target="_blank" class="rb-start-nav-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+          Start Navigation
+        </a>
+        <button class="rb-show-all-btn" onclick="showAllPins()">Show All Pins</button>
       </div>`;
+
+    // Hide non-route pins, only show route stops
+    hideNonRoutePins(ordered);
   } catch (err) {
     document.getElementById('rbRouteResults').innerHTML = `<p style="padding:12px;color:var(--terracotta)">${err.message}</p>`;
   } finally {
     btn.disabled = false; btn.textContent = 'Generate Route';
   }
+}
+
+// ========== ROUTE PIN FILTERING ==========
+function hideNonRoutePins(routeCastles) {
+  const routeNames = new Set(routeCastles.map(c => c.name));
+  markerGroup.clearLayers();
+  markers.forEach((m, i) => {
+    if (routeNames.has(CASTLES[i].name)) {
+      markerGroup.addLayer(m);
+    }
+  });
+}
+
+function showAllPins() {
+  markerGroup.clearLayers();
+  const legendTypes = getActiveLegendTypes();
+  markers.forEach((m, i) => {
+    if (legendTypes.has(CASTLES[i].type)) {
+      markerGroup.addLayer(m);
+    }
+  });
 }
 
 // ========== PLACES AUTOCOMPLETE (New API) ==========
