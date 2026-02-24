@@ -70,7 +70,7 @@ function createPinHtml(castle, tc, bookmarked) {
   const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
   const imgUrl = castle.image || '';
   if (imgUrl) {
-    return `<div class="${cls}"><img src="${imgUrl}" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=\\'pin-emoji\\'>${tc.emoji}</span>'" /></div>`;
+    return `<div class="${cls}"><img data-src="${imgUrl}" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=\\'pin-emoji\\'>${tc.emoji}</span>'" /><span class="pin-emoji pin-emoji-placeholder">${tc.emoji}</span></div>`;
   }
   return `<div class="${cls}"><span class="pin-emoji">${tc.emoji}</span></div>`;
 }
@@ -91,6 +91,39 @@ function initMarkers() {
     markerGroup.addLayer(m);
   });
   initLegendCounts();
+  // Lazy-load pin images on map movement
+  map.on('moveend zoomend', lazyLoadPinImages);
+  setTimeout(lazyLoadPinImages, 500);
+}
+
+let lazyLoadQueue = [];
+let lazyLoading = false;
+function lazyLoadPinImages() {
+  const bounds = map.getBounds();
+  const imgs = document.querySelectorAll('.map-pin img[data-src]');
+  const visible = [];
+  imgs.forEach(img => {
+    const pin = img.closest('.leaflet-marker-icon');
+    if (!pin) return;
+    const transform = pin.style.transform;
+    const match = transform && transform.match(/translate3d\((-?\d+)px,\s*(-?\d+)px/);
+    if (match) visible.push(img);
+  });
+  // Load in staggered batches to avoid 429
+  let delay = 0;
+  visible.forEach((img, i) => {
+    setTimeout(() => {
+      const src = img.getAttribute('data-src');
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+        img.onload = function() {
+          const placeholder = this.parentElement.querySelector('.pin-emoji-placeholder');
+          if (placeholder) placeholder.style.display = 'none';
+        };
+      }
+    }, i * 100); // 100ms stagger between each
+  });
 }
 
 function handlePinClick(castle) {
