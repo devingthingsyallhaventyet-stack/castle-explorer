@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <!-- Top Bar -->
@@ -141,14 +141,30 @@
     <img id="lightboxImg" src="" alt="Full size photo" />
   </div>
 
+  <!-- Quick View (mobile only) -->
+  <div class="quick-view" id="quickView">
+    <div class="quick-view-image" id="qvImage"></div>
+    <div class="quick-view-content">
+      <div class="quick-view-header">
+        <h3 id="qvName"></h3>
+        <button class="qv-bookmark" id="qvBookmark">🔖</button>
+      </div>
+      <div class="quick-view-badges" id="qvBadges"></div>
+      <div class="quick-view-rating" id="qvRating"></div>
+      <p class="quick-view-desc" id="qvDesc"></p>
+      <button class="qv-details-btn" id="qvDetailsBtn">View Details →</button>
+    </div>
+    <button class="qv-close" id="qvClose">✕</button>
+  </div>
+
   <!-- Mobile overlay backdrop -->
   <div class="overlay-backdrop" id="overlayBackdrop"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
-  <script src="data.js?v=5"></script>
-  <script src="app.js?v=5"></script>
+  <script src="data.js?v=6"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>
 <!-- v2 -->

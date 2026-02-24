@@ -61,19 +61,51 @@ function initGoogle() {
   directionsService = new google.maps.DirectionsService();
 }
 
+function createPinHtml(castle, tc, bookmarked) {
+  const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
+  if (castle.image) {
+    return `<div class="${cls}"><img src="${castle.image}" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" /><span class="pin-emoji" style="display:none">${tc.emoji}</span></div>`;
+  }
+  return `<div class="${cls}"><span class="pin-emoji">${tc.emoji}</span></div>`;
+}
+
 function initMarkers() {
+  const bm = getBookmarks();
   CASTLES.forEach((c, i) => {
     const tc = getTypeConfig(c.type);
+    const bookmarked = bm.includes(c.name);
     const icon = L.divIcon({
-      html: `<div class="map-pin map-pin-${tc.class}">${tc.emoji}</div>`,
-      className: '', iconSize: [28, 28], iconAnchor: [14, 14]
+      html: createPinHtml(c, tc, bookmarked),
+      className: '', iconSize: [32, 32], iconAnchor: [16, 16]
     });
     const m = L.marker([c.lat, c.lng], { icon });
     m.castleIndex = i;
-    m.on('click', () => openSidebar(c));
+    m.on('click', () => handlePinClick(c));
     markers.push(m);
     markerGroup.addLayer(m);
   });
+}
+
+function handlePinClick(castle) {
+  if (window.innerWidth < 768) {
+    openQuickView(castle);
+  } else {
+    openSidebar(castle);
+  }
+}
+
+function updatePinImage(castleIndex, photoUrl) {
+  const c = CASTLES[castleIndex];
+  if (!c) return;
+  const tc = getTypeConfig(c.type);
+  const bm = getBookmarks();
+  const bookmarked = bm.includes(c.name);
+  const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
+  const icon = L.divIcon({
+    html: `<div class="${cls}"><img src="${photoUrl}" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" /><span class="pin-emoji" style="display:none">${tc.emoji}</span></div>`,
+    className: '', iconSize: [32, 32], iconAnchor: [16, 16]
+  });
+  markers[castleIndex].setIcon(icon);
 }
 
 function getTypeConfig(type) {
@@ -260,6 +292,15 @@ function renderGoogleData(place) {
     if (bannerUrl) {
       const imgEl = document.getElementById('sidebarImage');
       imgEl.innerHTML = `<img src="${bannerUrl}" alt="${selectedCastle ? selectedCastle.name : 'Photo'}" />`;
+    }
+  }
+
+  // Update map pin with Google photo
+  if (place.photos && place.photos.length > 0 && selectedCastle) {
+    const pinPhotoUrl = place.photos[0].getURI ? place.photos[0].getURI({ maxWidth: 64, maxHeight: 64 }) : (place.photos[0].getUrl ? place.photos[0].getUrl({ maxWidth: 64, maxHeight: 64 }) : '');
+    if (pinPhotoUrl) {
+      const idx = CASTLES.findIndex(c => c.name === selectedCastle.name);
+      if (idx >= 0) updatePinImage(idx, pinPhotoUrl);
     }
   }
 
@@ -610,10 +651,9 @@ function updateMapPinBookmarks() {
     const c = CASTLES[i];
     const tc = getTypeConfig(c.type);
     const bookmarked = bm.includes(c.name);
-    const cls = `map-pin map-pin-${tc.class}${bookmarked ? ' map-pin-bookmarked' : ''}`;
     const icon = L.divIcon({
-      html: `<div class="${cls}">${tc.emoji}</div>`,
-      className: '', iconSize: [28, 28], iconAnchor: [14, 14]
+      html: createPinHtml(c, tc, bookmarked),
+      className: '', iconSize: [32, 32], iconAnchor: [16, 16]
     });
     m.setIcon(icon);
   });
@@ -732,4 +772,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Update pin indicators on load
   updateMapPinBookmarks();
+
+  // Quick view wiring
+  document.getElementById('qvClose').addEventListener('click', closeQuickView);
+  document.getElementById('qvDetailsBtn').addEventListener('click', () => {
+    const castle = quickViewCastle;
+    closeQuickView();
+    if (castle) openSidebar(castle);
+  });
+  document.getElementById('qvBookmark').addEventListener('click', () => {
+    if (quickViewCastle) {
+      toggleBookmark(quickViewCastle.name);
+      document.getElementById('qvBookmark').classList.toggle('bookmarked', isBookmarked(quickViewCastle.name));
+    }
+  });
+
+  // Close quick view when tapping map
+  map.on('click', () => closeQuickView());
 });
+
+// ========== QUICK VIEW (MOBILE) ==========
+let quickViewCastle = null;
+
+function openQuickView(castle) {
+  quickViewCastle = castle;
+  const qv = document.getElementById('quickView');
+  const tc = getTypeConfig(castle.type);
+
+  // Image
+  const imgEl = document.getElementById('qvImage');
+  if (castle.image) {
+    imgEl.style.backgroundImage = `url(${castle.image})`;
+    imgEl.style.backgroundSize = 'cover';
+    imgEl.style.backgroundPosition = 'center';
+  } else {
+    imgEl.style.backgroundImage = 'none';
+    imgEl.style.backgroundColor = '#E8DDD3';
+  }
+
+  document.getElementById('qvName').textContent = castle.name;
+  document.getElementById('qvBadges').innerHTML = `
+    <span class="badge badge-type">${tc.emoji} ${castle.type}</span>
+    <span class="badge badge-era">${castle.era}</span>
+    <span class="badge badge-condition">${castle.condition}</span>
+  `;
+  const fullStars = Math.floor(castle.rating);
+  const halfStar = castle.rating % 1 >= 0.3;
+  const starsHtml = '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(5 - fullStars - (halfStar ? 1 : 0));
+  document.getElementById('qvRating').innerHTML = `<span class="stars">${starsHtml}</span> <span class="rating-num">${castle.rating}</span> <span class="review-count">(${castle.reviewCount.toLocaleString()})</span>`;
+
+  // First sentence only
+  const desc = castle.description || '';
+  const firstPeriod = desc.indexOf('.');
+  document.getElementById('qvDesc').textContent = firstPeriod > 0 ? desc.substring(0, firstPeriod + 1) : desc;
+
+  // Bookmark state
+  document.getElementById('qvBookmark').classList.toggle('bookmarked', isBookmarked(castle.name));
+
+  qv.classList.add('active');
+
+  // If Google data cached, update image
+  if (placesCache[castle.name] && placesCache[castle.name].photos && placesCache[castle.name].photos.length > 0) {
+    const url = placesCache[castle.name].photos[0].getURI ? placesCache[castle.name].photos[0].getURI({ maxWidth: 800, maxHeight: 300 }) : '';
+    if (url) {
+      imgEl.style.backgroundImage = `url(${url})`;
+    }
+  }
+}
+
+function closeQuickView() {
+  document.getElementById('quickView').classList.remove('active');
+  quickViewCastle = null;
+}
