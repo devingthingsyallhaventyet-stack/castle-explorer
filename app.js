@@ -1611,31 +1611,27 @@ function persistSavedRoutes() {
 
 function saveCurrentRoute() {
   const nameEl = document.getElementById('rbRouteName');
-  const name = (nameEl && nameEl.value.trim()) || 'Unnamed Route';
+  // Use routeBuilderStops array (the source of truth) for stops
+  const stops = routeBuilderStops.map(s => s.name);
   const startEl = document.getElementById('rbStartLocation');
   const endEl = document.getElementById('rbEndLocation');
-  const stopsListEl = document.getElementById('rbStopsList');
-  const stops = [];
-  if (stopsListEl) {
-    stopsListEl.querySelectorAll('.rb-stop-item').forEach(item => {
-      stops.push(item.querySelector('.rb-stop-name')?.textContent || item.textContent.trim());
-    });
-  }
+  const start = startEl ? startEl.value.trim() : (lastRouteFormState && lastRouteFormState.start || '');
+  const end = endEl ? endEl.value.trim() : (lastRouteFormState && lastRouteFormState.end || '');
+  const name = (nameEl && nameEl.value.trim()) || '';
+
   // Try to grab summary stats from the results
   const metaEl = document.querySelector('.rb-summary-meta');
-  let totalDist = '', totalDur = '';
+  let totalDist = 0, totalDur = 0;
   if (metaEl) {
     const text = metaEl.textContent;
-    const durMatch = text.match(/([\d]+h\s*[\d]+m)/);
-    const distMatch = text.match(/([\d.]+\s*km)/);
-    if (durMatch) totalDur = durMatch[1];
-    if (distMatch) totalDist = distMatch[1];
+    const hMatch = text.match(/(\d+)h/); const mMatch = text.match(/(\d+)m/);
+    if (hMatch) totalDur += parseInt(hMatch[1]) * 3600;
+    if (mMatch) totalDur += parseInt(mMatch[1]) * 60;
+    const kmMatch = text.match(/([\d.]+)\s*km/);
+    if (kmMatch) totalDist = Math.round(parseFloat(kmMatch[1]) * 1000);
   }
   savedRoutes.push({
-    name, stops,
-    start: startEl ? startEl.value.trim() : '',
-    end: endEl ? endEl.value.trim() : '',
-    totalDist, totalDur,
+    name, stops, start, end, totalDist, totalDur,
     timestamp: Date.now()
   });
   persistSavedRoutes();
