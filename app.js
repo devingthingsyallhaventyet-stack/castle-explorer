@@ -629,7 +629,6 @@ function renderRouteCard(profile, castles, totalDistM, totalDurS, index, color) 
       <ul class="route-castle-list">${castleList}</ul>
       <div class="route-card-actions">
         <button class="btn-show-route" onclick="showRouteCastles(${namesJson})">Open in Google Maps</button>
-        <button class="btn-save-route" onclick="saveRouteToBuilder(${namesJson})">Add to Builder</button>
         <button class="btn-save-route" onclick="saveTripPlannerRoute('${profile.name.replace(/'/g,"\\'")}', ${namesJson}, ${Math.round(totalDistM)}, ${Math.round(totalDurS)})">💾 Save</button>
       </div>
     </div>
