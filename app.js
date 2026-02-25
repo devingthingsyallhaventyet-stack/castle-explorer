@@ -763,19 +763,30 @@ function initUI() {
   });
 
   document.getElementById('btnTripPlanner').addEventListener('click', () => {
-    openRoutePanel();
+    closeBookmarksPanel();
+    closeSavedRoutesPanel();
+    closeSidebar();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
-    closeSidebar();
+    openRoutePanel();
   });
 
   document.getElementById('btnRouteBuilder').addEventListener('click', () => {
-    openRouteBuilderPanel();
+    closeRoutePanel();
+    closeBookmarksPanel();
+    closeSavedRoutesPanel();
+    closeSidebar();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
+    openRouteBuilderPanel();
   });
 
   document.getElementById('btnSavedRoutes').addEventListener('click', () => {
+    closeRoutePanel();
+    closeBookmarksPanel();
+    closeSidebar();
+    document.getElementById('filterPanel').classList.remove('active');
+    document.getElementById('btnFilter').classList.remove('active');
     openSavedRoutesPanel();
   });
 
@@ -1444,11 +1455,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selectedCastle) addToRoute();
   });
   document.getElementById('btnBookmarks').addEventListener('click', () => {
-    openBookmarksPanel();
+    closeRoutePanel();
+    closeSavedRoutesPanel();
+    closeSidebar();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
-    closeSidebar();
-    closeRoutePanel();
+    openBookmarksPanel();
   });
   document.getElementById('bookmarksClose').addEventListener('click', closeBookmarksPanel);
   document.getElementById('btnClearBookmarks').addEventListener('click', () => {
