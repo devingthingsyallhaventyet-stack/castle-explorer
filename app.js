@@ -428,12 +428,10 @@ function renderGoogleData(place) {
 // ========== ROUTE PLANNER ==========
 function openRoutePanel() {
   document.getElementById('routePanel').classList.add('active');
-  document.getElementById('overlayBackdrop').classList.add('active');
 }
 
 function closeRoutePanel() {
   document.getElementById('routePanel').classList.remove('active');
-  document.getElementById('overlayBackdrop').classList.remove('active');
   // Restore all pins and clear route visuals
   showAllPins();
   routePolylines.forEach(p => map.removeLayer(p));
