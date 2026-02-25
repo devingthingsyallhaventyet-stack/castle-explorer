@@ -1665,7 +1665,6 @@ function renderSavedRoutes() {
     return;
   }
   listEl.innerHTML = savedRoutes.map((r, i) => {
-    // Default name: first stop/start → last stop/end
     let displayName = r.name;
     if (!displayName || displayName === 'Unnamed Route') {
       const first = r.start || (r.stops.length ? r.stops[0] : '');
@@ -1673,7 +1672,6 @@ function renderSavedRoutes() {
       displayName = first && last ? `${first} → ${last}` : first || last || 'Unnamed Route';
     }
 
-    // Find first castle stop for image
     let thumbUrl = '';
     for (const stopName of r.stops) {
       const castle = CASTLES.find(c => c.name === stopName);
@@ -1682,27 +1680,140 @@ function renderSavedRoutes() {
 
     const dateStr = new Date(r.timestamp).toLocaleDateString();
     const stopsStr = r.stops.length + ' stop' + (r.stops.length !== 1 ? 's' : '');
-    const durStr = typeof r.totalDur === 'number' ? formatDuration(r.totalDur) : r.totalDur;
-    const distStr = typeof r.totalDist === 'number' ? formatDualDist(r.totalDist) : r.totalDist;
-    const meta = [durStr, distStr, stopsStr].filter(Boolean).join(' · ');
+    const durStr = typeof r.totalDur === 'number' && r.totalDur ? formatDuration(r.totalDur) : r.totalDur;
+    const distStr = typeof r.totalDist === 'number' && r.totalDist ? formatDualDist(r.totalDist) : r.totalDist;
+    const meta = [durStr, distStr, stopsStr, dateStr].filter(Boolean).join(' · ');
     const gmWaypoints = r.stops.map(s => encodeURIComponent(s + ', UK')).join('|');
     const gmUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(r.start)}&destination=${encodeURIComponent(r.end)}&waypoints=${gmWaypoints}&travelmode=driving`;
 
     const imgHtml = thumbUrl ? `<div style="width:60px;height:60px;border-radius:8px;overflow:hidden;flex-shrink:0"><img src="${thumbUrl}" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.style.display='none'"/></div>` : '';
 
-    return `<div class="bookmark-card" style="padding:12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start;position:relative">
-      ${imgHtml}
-      <div style="flex:1;min-width:0">
-        <div style="font-weight:600;margin-bottom:2px;padding-right:24px">${displayName}</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">${meta} · ${dateStr}</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">
-          <button class="btn-pill" style="font-size:11px" onclick="loadSavedRoute(${i})">✏️ Edit</button>
+    // Build stop list for expanded view
+    const stopListHtml = r.stops.map((s, si) => {
+      const c = CASTLES.find(x => x.name === s);
+      const tc = c ? getTypeConfig(c.type) : { emoji: '📍' };
+      const sImg = c && c.image ? `<img src="${c.image}" referrerpolicy="no-referrer" style="width:32px;height:32px;border-radius:6px;object-fit:cover" onerror="this.outerHTML='${tc.emoji}'"/>` : tc.emoji;
+      return `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+        <span style="font-size:11px;color:var(--text-muted);width:18px;text-align:center">${si + 1}</span>
+        ${sImg}
+        <span style="font-size:13px;flex:1">${s}</span>
+        <button onclick="event.stopPropagation();removeSavedRouteStop(${i},${si})" style="background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:14px;padding:2px 6px" title="Remove stop">✕</button>
+      </div>`;
+    }).join('');
+
+    return `<div class="saved-route-card" id="savedRouteCard-${i}" style="margin-bottom:8px;border-radius:var(--radius);background:var(--white);border:1px solid var(--border);overflow:hidden">
+      <div onclick="toggleSavedRouteExpand(${i})" style="padding:12px;display:flex;gap:12px;align-items:center;cursor:pointer;position:relative">
+        ${imgHtml}
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:600;margin-bottom:2px;padding-right:24px">${displayName}</div>
+          <div style="font-size:12px;color:var(--text-muted)">${meta}</div>
+        </div>
+        <button onclick="event.stopPropagation();deleteSavedRoute(${i})" style="position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;font-size:16px;color:var(--text-muted);padding:4px" title="Delete route">✕</button>
+      </div>
+      <div class="saved-route-expanded" id="savedRouteExpanded-${i}" style="display:none;padding:0 12px 12px;border-top:1px solid var(--border)">
+        <div style="padding:8px 0;font-size:12px;color:var(--text-muted);font-weight:600">ITINERARY</div>
+        ${r.start ? `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)"><span style="font-size:11px;color:var(--sage);width:18px;text-align:center">📍</span><span style="font-size:13px;color:var(--sage)">${r.start}</span></div>` : ''}
+        ${stopListHtml}
+        ${r.end ? `<div style="display:flex;align-items:center;gap:8px;padding:6px 0"><span style="font-size:11px;color:var(--terracotta);width:18px;text-align:center">🏁</span><span style="font-size:13px;color:var(--terracotta)">${r.end}</span></div>` : ''}
+        <div style="display:flex;gap:6px;margin-top:10px">
+          <button class="btn-pill" style="font-size:11px" onclick="viewSavedRouteOnMap(${i})">🗺️ View Route</button>
           <a class="btn-pill" style="font-size:11px;text-decoration:none" href="${gmUrl}" target="_blank">📍 Google Maps</a>
         </div>
       </div>
-      <button onclick="deleteSavedRoute(${i})" style="position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;font-size:16px;color:var(--text-muted);padding:4px" title="Delete route">✕</button>
     </div>`;
   }).join('');
+}
+
+let expandedSavedRoute = -1;
+
+function toggleSavedRouteExpand(index) {
+  const prev = document.getElementById(`savedRouteExpanded-${expandedSavedRoute}`);
+  if (prev && expandedSavedRoute !== index) prev.style.display = 'none';
+
+  const el = document.getElementById(`savedRouteExpanded-${index}`);
+  if (!el) return;
+  const isOpen = el.style.display !== 'none';
+  el.style.display = isOpen ? 'none' : 'block';
+  expandedSavedRoute = isOpen ? -1 : index;
+
+  // Draw route on map when expanding
+  if (!isOpen) viewSavedRouteOnMap(index);
+  else {
+    // Collapse: clear route visuals, restore pins
+    routePolylines.forEach(p => map.removeLayer(p));
+    routePolylines = [];
+    routePlannerMarkers.forEach(m => map.removeLayer(m));
+    routePlannerMarkers = [];
+    showAllPins();
+  }
+}
+
+function viewSavedRouteOnMap(index) {
+  const r = savedRoutes[index];
+  if (!r || r.stops.length === 0) return;
+
+  // Clear old visuals
+  routePolylines.forEach(p => map.removeLayer(p));
+  routePolylines = [];
+  routePlannerMarkers.forEach(m => map.removeLayer(m));
+  routePlannerMarkers = [];
+  markerGroup.clearLayers();
+
+  const bounds = L.latLngBounds();
+
+  // Add castle markers
+  r.stops.forEach((name, si) => {
+    const c = CASTLES.find(x => x.name === name);
+    if (!c) return;
+    const marker = L.circleMarker([c.lat, c.lng], {
+      radius: 10, fillColor: '#C2714F', color: '#fff', weight: 2, fillOpacity: 0.9
+    }).addTo(map);
+    marker.bindTooltip(`${si + 1}. ${c.name}`, { direction: 'top', offset: [0, -10], permanent: false });
+    marker.on('click', () => openSidebar(c));
+    routePlannerMarkers.push(marker);
+    bounds.extend([c.lat, c.lng]);
+  });
+
+  // Get driving route
+  const waypoints = r.stops.map(name => {
+    const c = CASTLES.find(x => x.name === name);
+    return c ? new google.maps.LatLng(c.lat, c.lng) : null;
+  }).filter(Boolean);
+
+  const origin = r.start ? r.start : waypoints.shift();
+  const destination = r.end ? r.end : waypoints.pop();
+
+  if (origin && destination) {
+    const request = {
+      origin: typeof origin === 'string' ? origin : origin,
+      destination: typeof destination === 'string' ? destination : destination,
+      waypoints: waypoints.map(w => ({ location: w, stopover: true })),
+      optimizeWaypoints: false,
+      travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, (res, status) => {
+      if (status === 'OK') {
+        const route = res.routes[0];
+        const pts = decodePolyline(route.overview_polyline).map(p => [p.lat, p.lng]);
+        const polyline = L.polyline(pts, { color: '#C2714F', weight: 5, opacity: 0.8 }).addTo(map);
+        routePolylines.push(polyline);
+        pts.forEach(p => bounds.extend(p));
+        if (bounds.isValid()) map.fitBounds(bounds, { padding: [60, 60] });
+      }
+    });
+  }
+
+  if (bounds.isValid()) map.fitBounds(bounds, { padding: [60, 60] });
+}
+
+function removeSavedRouteStop(routeIndex, stopIndex) {
+  savedRoutes[routeIndex].stops.splice(stopIndex, 1);
+  persistSavedRoutes();
+  renderSavedRoutes();
+  // Re-expand the same card
+  const el = document.getElementById(`savedRouteExpanded-${routeIndex}`);
+  if (el) { el.style.display = 'block'; expandedSavedRoute = routeIndex; }
+  viewSavedRouteOnMap(routeIndex);
 }
 
 function loadSavedRoute(index) {
@@ -1710,14 +1821,12 @@ function loadSavedRoute(index) {
   if (!r) return;
   closeSavedRoutesPanel();
   openRouteBuilderPanel();
-  // Populate fields
   const nameEl = document.getElementById('rbRouteName');
   const startEl = document.getElementById('rbStartLocation');
   const endEl = document.getElementById('rbEndLocation');
   if (nameEl) nameEl.value = r.name;
   if (startEl) startEl.value = r.start;
   if (endEl) endEl.value = r.end;
-  // Add stops
   if (typeof routeBuilderStops !== 'undefined') {
     routeBuilderStops.length = 0;
   }
