@@ -763,28 +763,25 @@ function initUI() {
   });
 
   document.getElementById('btnTripPlanner').addEventListener('click', () => {
-    closeBookmarksPanel();
-    closeSavedRoutesPanel();
-    closeSidebar();
+    if (document.getElementById('routePanel').classList.contains('active')) { closeRoutePanel(); return; }
+    closeBookmarksPanel(); closeSavedRoutesPanel(); closeSidebar();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
     openRoutePanel();
   });
 
   document.getElementById('btnRouteBuilder').addEventListener('click', () => {
-    closeRoutePanel();
-    closeBookmarksPanel();
-    closeSavedRoutesPanel();
-    closeSidebar();
+    const rb = document.getElementById('routeBuilderPanel');
+    if (rb.classList.contains('rb-open')) { rb.classList.remove('rb-open'); return; }
+    closeRoutePanel(); closeBookmarksPanel(); closeSavedRoutesPanel(); closeSidebar();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
     openRouteBuilderPanel();
   });
 
   document.getElementById('btnSavedRoutes').addEventListener('click', () => {
-    closeRoutePanel();
-    closeBookmarksPanel();
-    closeSidebar();
+    if (document.getElementById('savedRoutesPanel').classList.contains('active')) { closeSavedRoutesPanel(); return; }
+    closeRoutePanel(); closeBookmarksPanel(); closeSidebar();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
     openSavedRoutesPanel();
@@ -1455,9 +1452,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selectedCastle) addToRoute();
   });
   document.getElementById('btnBookmarks').addEventListener('click', () => {
-    closeRoutePanel();
-    closeSavedRoutesPanel();
-    closeSidebar();
+    if (document.getElementById('bookmarksPanel').classList.contains('active')) { closeBookmarksPanel(); return; }
+    closeRoutePanel(); closeSavedRoutesPanel(); closeSidebar();
     document.getElementById('filterPanel').classList.remove('active');
     document.getElementById('btnFilter').classList.remove('active');
     openBookmarksPanel();
