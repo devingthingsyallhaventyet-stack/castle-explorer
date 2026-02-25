@@ -629,7 +629,8 @@ function renderRouteCard(profile, castles, totalDistM, totalDurS, index, color) 
       <ul class="route-castle-list">${castleList}</ul>
       <div class="route-card-actions">
         <button class="btn-show-route" onclick="showRouteCastles(${namesJson})">Open in Google Maps</button>
-        <button class="btn-save-route" onclick="saveRouteToBuilder(${namesJson})">Save Route</button>
+        <button class="btn-save-route" onclick="saveRouteToBuilder(${namesJson})">Add to Builder</button>
+        <button class="btn-save-route" onclick="saveTripPlannerRoute('${profile.name.replace(/'/g,"\\'")}', ${namesJson}, ${Math.round(totalDistM)}, ${Math.round(totalDurS)})">💾 Save</button>
       </div>
     </div>
   `;
@@ -1694,6 +1695,22 @@ function loadSavedRoute(index) {
     const castle = CASTLES.find(c => c.name === stopName);
     if (castle) addToRouteBuilder(castle);
   });
+}
+
+function saveTripPlannerRoute(profileName, names, distM, durS) {
+  const start = document.getElementById('routeStart').value.trim();
+  const end = document.getElementById('routeEnd').value.trim();
+  savedRoutes.push({
+    name: `${profileName}: ${start} → ${end}`,
+    stops: names,
+    start: start,
+    end: end,
+    totalDist: distM,
+    totalDur: durS,
+    timestamp: Date.now()
+  });
+  persistSavedRoutes();
+  alert('Route saved! Find it in Saved Routes.');
 }
 
 function deleteSavedRoute(index) {
