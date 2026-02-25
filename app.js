@@ -1668,20 +1668,42 @@ function renderSavedRoutes() {
     return;
   }
   listEl.innerHTML = savedRoutes.map((r, i) => {
+    // Default name: first stop/start → last stop/end
+    let displayName = r.name;
+    if (!displayName || displayName === 'Unnamed Route') {
+      const first = r.start || (r.stops.length ? r.stops[0] : '');
+      const last = r.end || (r.stops.length ? r.stops[r.stops.length - 1] : '');
+      displayName = first && last ? `${first} → ${last}` : first || last || 'Unnamed Route';
+    }
+
+    // Find first castle stop for image
+    let thumbUrl = '';
+    for (const stopName of r.stops) {
+      const castle = CASTLES.find(c => c.name === stopName);
+      if (castle && castle.image) { thumbUrl = castle.image; break; }
+    }
+
     const dateStr = new Date(r.timestamp).toLocaleDateString();
     const stopsStr = r.stops.length + ' stop' + (r.stops.length !== 1 ? 's' : '');
-    const meta = [r.totalDur, r.totalDist, stopsStr].filter(Boolean).join(' · ');
-    const gmWaypoints = r.stops.map(s => encodeURIComponent(s)).join('|');
+    const durStr = typeof r.totalDur === 'number' ? formatDuration(r.totalDur) : r.totalDur;
+    const distStr = typeof r.totalDist === 'number' ? formatDualDist(r.totalDist) : r.totalDist;
+    const meta = [durStr, distStr, stopsStr].filter(Boolean).join(' · ');
+    const gmWaypoints = r.stops.map(s => encodeURIComponent(s + ', UK')).join('|');
     const gmUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(r.start)}&destination=${encodeURIComponent(r.end)}&waypoints=${gmWaypoints}&travelmode=driving`;
-    return `<div class="bookmark-card" style="padding:12px;margin-bottom:8px">
-      <div style="font-weight:600;margin-bottom:4px">${r.name}</div>
-      <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">${meta} · ${dateStr}</div>
-      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">${r.start || '?'} → ${r.end || '?'}</div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap">
-        <button class="btn-pill" style="font-size:11px" onclick="loadSavedRoute(${i})">Load</button>
-        <a class="btn-pill" style="font-size:11px;text-decoration:none" href="${gmUrl}" target="_blank">Google Maps</a>
-        <button class="btn-pill" style="font-size:11px;background:#e05a33;color:#fff" onclick="deleteSavedRoute(${i})">Delete</button>
+
+    const imgHtml = thumbUrl ? `<div style="width:60px;height:60px;border-radius:8px;overflow:hidden;flex-shrink:0"><img src="${thumbUrl}" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.style.display='none'"/></div>` : '';
+
+    return `<div class="bookmark-card" style="padding:12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start;position:relative">
+      ${imgHtml}
+      <div style="flex:1;min-width:0">
+        <div style="font-weight:600;margin-bottom:2px;padding-right:24px">${displayName}</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">${meta} · ${dateStr}</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <button class="btn-pill" style="font-size:11px" onclick="loadSavedRoute(${i})">✏️ Edit</button>
+          <a class="btn-pill" style="font-size:11px;text-decoration:none" href="${gmUrl}" target="_blank">📍 Google Maps</a>
+        </div>
       </div>
+      <button onclick="deleteSavedRoute(${i})" style="position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;font-size:16px;color:var(--text-muted);padding:4px" title="Delete route">✕</button>
     </div>`;
   }).join('');
 }
