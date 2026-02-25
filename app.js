@@ -1721,13 +1721,6 @@ function saveTripPlannerRoute(profileName, names, distM, durS) {
     timestamp: Date.now()
   });
   persistSavedRoutes();
-  // Reset map to show all sites
-  showAllPins();
-  routePolylines.forEach(p => map.removeLayer(p));
-  routePolylines = [];
-  routePlannerMarkers.forEach(m => map.removeLayer(m));
-  routePlannerMarkers = [];
-  closeRoutePanel();
   alert('Route saved! Find it in "My Routes" at the top of the page.');
 }
 
