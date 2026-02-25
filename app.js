@@ -1641,7 +1641,13 @@ function saveCurrentRoute() {
     timestamp: Date.now()
   });
   persistSavedRoutes();
-  alert('Route saved!');
+  // Reset map to show all sites
+  showAllPins();
+  routePolylines.forEach(p => map.removeLayer(p));
+  routePolylines = [];
+  routePlannerMarkers.forEach(m => map.removeLayer(m));
+  routePlannerMarkers = [];
+  alert('Route saved! Find it in "My Routes" at the top of the page.');
 }
 
 function openSavedRoutesPanel() {
@@ -1717,7 +1723,14 @@ function saveTripPlannerRoute(profileName, names, distM, durS) {
     timestamp: Date.now()
   });
   persistSavedRoutes();
-  alert('Route saved! Find it in Saved Routes.');
+  // Reset map to show all sites
+  showAllPins();
+  routePolylines.forEach(p => map.removeLayer(p));
+  routePolylines = [];
+  routePlannerMarkers.forEach(m => map.removeLayer(m));
+  routePlannerMarkers = [];
+  closeRoutePanel();
+  alert('Route saved! Find it in "My Routes" at the top of the page.');
 }
 
 function deleteSavedRoute(index) {
