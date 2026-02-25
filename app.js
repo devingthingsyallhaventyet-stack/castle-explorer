@@ -1324,9 +1324,10 @@ function renderBookmarksPanel() {
     const c = CASTLES.find(x => x.name === name);
     if (!c) return '';
     const tc = getTypeConfig(c.type);
+    const imgHtml = c.image ? `<div style="width:48px;height:48px;border-radius:8px;overflow:hidden;flex-shrink:0"><img src="${c.image}" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='${tc.emoji}'"/></div>` : `<span class="emoji">${tc.emoji}</span>`;
     return `<div class="bookmark-card-select">
       <input type="checkbox" class="bm-select-cb" value="${c.name.replace(/"/g, '&quot;')}" />
-      <span class="emoji">${tc.emoji}</span>
+      ${imgHtml}
       <div class="info">
         <div class="name">${c.name}</div>
         <div class="loc">${c.county}, ${c.country}</div>
