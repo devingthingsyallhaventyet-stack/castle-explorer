@@ -1,0 +1,378 @@
+Tower of London
+Hampton Court Palace
+Windsor Castle
+Dover Castle
+Leeds Castle
+Bodiam Castle
+Hever Castle
+Arundel Castle
+Rochester Castle
+Pevensey Castle
+Lewes Castle
+Hastings Castle
+Upnor Castle
+Walmer Castle
+Deal Castle
+Eltham Palace
+Eynsford Castle
+Cooling Castle
+Farnham Castle
+Guildford Castle
+Tintagel Castle
+Corfe Castle
+Old Wardour Castle
+Restormel Castle
+Launceston Castle
+St Mawes Castle
+Pendennis Castle
+Okehampton Castle
+Berry Pomeroy Castle
+Totnes Castle
+Dunster Castle
+Farleigh Hungerford Castle
+Nunney Castle
+Portland Castle
+Sherborne Old Castle
+Glastonbury Abbey
+Cleeve Abbey
+Christchurch Castle
+Warwick Castle
+Kenilworth Castle
+Castle Howard
+Bolsover Castle
+Peveril Castle
+Lincoln Castle
+Tattershall Castle
+Rockingham Castle
+Kirby Muxloe Castle
+Ashby de la Zouch Castle
+Norwich Castle
+Castle Acre Priory
+Castle Rising
+Framlingham Castle
+Orford Castle
+Bury St Edmunds Abbey
+Colchester Castle
+Hedingham Castle
+Stokesay Castle
+Ludlow Castle
+Shrewsbury Castle
+Acton Burnell Castle
+Goodrich Castle
+Wigmore Castle
+Bridgnorth Castle
+Berkeley Castle
+Alnwick Castle
+Bamburgh Castle
+Dunstanburgh Castle
+Warkworth Castle
+Prudhoe Castle
+Norham Castle
+Carlisle Castle
+Brougham Castle
+Brough Castle
+Penrith Castle
+Appleby Castle
+Durham Castle
+Barnard Castle
+Raby Castle
+Richmond Castle
+Skipton Castle
+Middleham Castle
+Scarborough Castle
+Helmsley Castle
+Pickering Castle
+Bolton Castle
+Fountains Abbey
+Whitby Abbey
+Rievaulx Abbey
+Kirkstall Abbey
+Conisbrough Castle
+Pontefract Castle
+Knaresborough Castle
+Spofforth Castle
+Lancaster Castle
+Clitheroe Castle
+Beeston Castle
+Chester Castle
+Framlingham Castle
+Blenheim Palace
+Oxford Castle
+Donnington Castle
+Carisbrooke Castle
+Portchester Castle
+Hurst Castle
+Old Sarum
+Castle Drogo
+Lydford Castle
+Castle Acre Castle
+Baconsthorpe Castle
+Byland Abbey
+Jervaulx Abbey
+Tynemouth Priory and Castle
+Lindisfarne Priory
+Furness Abbey
+Lanercost Priory
+Thornton Abbey
+Croxden Abbey
+Tutbury Castle
+Tamworth Castle
+Nottingham Castle
+Edinburgh Castle
+Craigmillar Castle
+Linlithgow Palace
+Blackness Castle
+Tantallon Castle
+Dirleton Castle
+Hailes Castle
+Crichton Castle
+Borthwick Castle
+Stirling Castle
+Doune Castle
+Castle Campbell
+Alloa Tower
+St Andrews Castle
+Glamis Castle
+Claypotts Castle
+Edzell Castle
+Huntingtower Castle
+Elcho Castle
+Loch Leven Castle
+Dunnottar Castle
+Balmoral Castle
+Craigievar Castle
+Castle Fraser
+Crathes Castle
+Drum Castle
+Fyvie Castle
+Tolquhon Castle
+Kildrummy Castle
+Huntly Castle
+Delgatie Castle
+Spynie Palace
+Elgin Cathedral
+Balvenie Castle
+Eilean Donan Castle
+Urquhart Castle
+Dunrobin Castle
+Castle of Mey
+Cawdor Castle
+Fort George
+Ardvreck Castle
+Strome Castle
+Castle Tioram
+Inverlochy Castle
+Kilchurn Castle
+Castle Stalker
+Duart Castle
+Dunstaffnage Castle
+Carnasserie Castle
+Skipness Castle
+Rothesay Castle
+Caerlaverock Castle
+Hermitage Castle
+Melrose Abbey
+Jedburgh Abbey
+Dryburgh Abbey
+Kelso Abbey
+Neidpath Castle
+Smailholm Tower
+Threave Castle
+MacLellan's Castle
+Sweetheart Abbey
+Dunvegan Castle
+Armadale Castle
+Kisimul Castle
+Blair Castle
+Scone Palace
+Dunfermline Abbey
+Ravenscraig Castle
+Aberdour Castle
+Dunblane Cathedral
+Inchmahome Priory
+Craignethan Castle
+Bothwell Castle
+Newark Castle
+Dean Castle
+Culzean Castle
+Lochranza Castle
+Brodick Castle
+Conwy Castle
+Caernarfon Castle
+Harlech Castle
+Beaumaris Castle
+Flint Castle
+Aberystwyth Castle
+Rhuddlan Castle
+Caerphilly Castle
+Cardiff Castle
+Castell Coch
+Raglan Castle
+Pembroke Castle
+Kidwelly Castle
+Carreg Cennen Castle
+Laugharne Castle
+Llansteffan Castle
+Oystermouth Castle
+Neath Abbey
+Ewenny Priory
+Margam Abbey
+Chepstow Castle
+Tintern Abbey
+White Castle
+Skenfrith Castle
+Grosmont Castle
+Denbigh Castle
+Criccieth Castle
+Dolbadarn Castle
+Dolwyddelan Castle
+Castell y Bere
+Ewloe Castle
+Chirk Castle
+Powis Castle
+Montgomery Castle
+Tretower Court & Castle
+Bronllys Castle
+Strata Florida Abbey
+Talley Abbey
+Valle Crucis Abbey
+Basingwerk Abbey
+Cymer Abbey
+Manorbier Castle
+Carew Castle
+Cilgerran Castle
+Llawhaden Castle
+St David's Bishop's Palace
+Dinefwr Castle
+Ogmore Castle
+Coity Castle
+Weobley Castle
+Pennard Castle
+Castell Dinas Bran
+Ruthin Castle
+Blarney Castle
+Rock of Cashel
+Kilkenny Castle
+Cahir Castle
+Ross Castle
+Trim Castle
+Dublin Castle
+Bunratty Castle
+Dunguaire Castle
+Ashford Castle
+Charles Fort
+Desmond Castle
+Jerpoint Abbey
+Clonmacnoise
+Glendalough
+Skellig Michael
+Lismore Castle
+Dunmore East Castle
+Reginald's Tower
+Roscrea Castle
+Nenagh Castle
+Athenry Castle
+Portumna Castle
+Thoor Ballylee
+Lynch's Castle
+Aughnanure Castle
+Dún Aonghasa
+Claregalway Friary
+Kilmacduagh Monastery
+Dysert O'Dea Castle
+Knappogue Castle
+Leamaneh Castle
+Quin Abbey
+Ennis Friary
+King John's Castle
+Adare Castle
+Askeaton Castle
+Kilmallock Abbey
+Carrigogunnell Castle
+Dunloe Castle
+Ardfert Cathedral
+Ballycarbery Castle
+Muckross Abbey
+Barryscourt Castle
+Kilcrea Friary
+Timoleague Abbey
+Kanturk Castle
+Drombeg Stone Circle
+Dunbrody Abbey
+Ferns Castle
+Tintern Abbey
+Slade Castle
+Lea Castle
+Dunamase Castle
+Birr Castle
+Clonony Castle
+Charleville Castle
+Maynooth Castle
+Castletown House
+Malahide Castle
+Drimnagh Castle
+Dalkey Castle
+Swords Castle
+Dunsany Castle
+Slane Castle
+Dunmoe Castle
+Bective Abbey
+Kells Priory
+Granny Castle
+Clara Castle
+Donegal Castle
+Doe Castle
+Glenveagh Castle
+Grianan of Aileach
+Sligo Abbey
+Parke's Castle
+Boyle Abbey
+Roscommon Castle
+Ballintober Castle
+Cloughoughter Castle
+Cavan Castle
+Fore Abbey
+Athlone Castle
+Tullynally Castle
+Monasterboice
+Mellifont Abbey
+Roche Castle
+Dunluce Castle
+Carrickfergus Castle
+Enniskillen Castle
+Dundrum Castle
+Belfast Castle
+Killyleagh Castle
+Narrow Water Castle
+Greencastle Royal Castle
+Audley's Castle
+Inch Abbey
+Nendrum Monastery
+Jordan's Castle
+Hillsborough Fort
+Clough Castle
+Sketrick Castle
+Dunluce Dark Hedges Tower
+Olderfleet Castle
+Shane's Castle
+Glenarm Castle
+Kinbane Castle
+Dunineny Castle
+Red Bay Castle
+Bonamargy Friary
+Dungannon Castle
+Harry Avery's Castle
+Castlederg Castle
+Benburb Castle
+Tully Castle
+Crom Castle
+Monea Castle
+Devenish Monastic Site
+Greencastle
+Dungiven Priory
+Limavady Roe Valley Castle
+Maghera Old Church
+Ballygally Castle
+Antrim Castle Gardens
+Carrick Castle
+Moyry Castle

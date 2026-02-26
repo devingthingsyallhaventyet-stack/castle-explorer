@@ -7,6 +7,21 @@ const TYPE_CONFIG = {
   'fortified house': { emoji: '🛡️', color: '#8B5CF6', class: 'fortified' },
 };
 
+const REGIONS = [
+  { id: 'scottish-highlands', name: 'Scottish Highlands', country: 'Scotland', bounds: [[56.5, -7.5], [58.7, -3.0]], counties: ['Highland', 'Argyll and Bute', 'Moray', 'Ross and Cromarty', 'Inverness-shire', 'Sutherland', 'Caithness'] },
+  { id: 'scottish-lowlands', name: 'Scottish Lowlands', country: 'Scotland', bounds: [[54.8, -5.5], [56.5, -2.0]], counties: ['Edinburgh', 'Glasgow', 'South Lanarkshire', 'East Lothian', 'West Lothian', 'Midlothian', 'Fife', 'Stirling', 'Clackmannanshire', 'Falkirk', 'Perth and Kinross', 'Angus', 'Dundee', 'Aberdeenshire', 'Aberdeen'] },
+  { id: 'scottish-borders', name: 'Scottish Borders', country: 'Scotland', bounds: [[55.0, -3.5], [55.8, -2.0]], counties: ['Scottish Borders', 'Dumfries and Galloway', 'Roxburghshire'] },
+  { id: 'northern-england', name: 'Northern England', country: 'England', bounds: [[54.0, -3.5], [55.8, -1.0]], counties: ['Northumberland', 'County Durham', 'Cumbria', 'Tyne and Wear', 'Durham'] },
+  { id: 'yorkshire', name: 'Yorkshire', country: 'England', bounds: [[53.3, -2.5], [54.5, -0.5]], counties: ['North Yorkshire', 'West Yorkshire', 'South Yorkshire', 'East Riding of Yorkshire', 'York'] },
+  { id: 'midlands', name: 'The Midlands', country: 'England', bounds: [[52.0, -3.0], [53.3, -0.5]], counties: ['Staffordshire', 'Warwickshire', 'Shropshire', 'Derbyshire', 'Nottinghamshire', 'Leicestershire', 'Northamptonshire', 'Worcestershire', 'Herefordshire', 'West Midlands', 'Lincolnshire'] },
+  { id: 'south-east', name: 'South East England', country: 'England', bounds: [[50.5, -2.0], [52.0, 1.5]], counties: ['Kent', 'East Sussex', 'West Sussex', 'Surrey', 'Hampshire', 'Berkshire', 'Buckinghamshire', 'Oxfordshire', 'London', 'Essex', 'Hertfordshire'] },
+  { id: 'south-west', name: 'South West England', country: 'England', bounds: [[50.0, -6.0], [52.0, -2.0]], counties: ['Cornwall', 'Devon', 'Dorset', 'Somerset', 'Wiltshire', 'Gloucestershire', 'Bristol'] },
+  { id: 'east-anglia', name: 'East Anglia', country: 'England', bounds: [[51.8, 0.0], [53.0, 2.0]], counties: ['Norfolk', 'Suffolk', 'Cambridgeshire'] },
+  { id: 'north-wales', name: 'North Wales', country: 'Wales', bounds: [[52.5, -5.5], [53.5, -3.0]], counties: ['Gwynedd', 'Conwy', 'Denbighshire', 'Flintshire', 'Anglesey', 'Wrexham'] },
+  { id: 'south-wales', name: 'South Wales', country: 'Wales', bounds: [[51.3, -5.5], [52.5, -2.5]], counties: ['Carmarthenshire', 'Pembrokeshire', 'Ceredigion', 'Glamorgan', 'Monmouthshire', 'Powys', 'Cardiff', 'Swansea', 'Neath Port Talbot', 'Caerphilly'] },
+  { id: 'ireland', name: 'Ireland', country: 'Ireland', bounds: [[51.4, -10.5], [55.4, -5.5]], counties: [] },
+];
+
 const COLLECTIONS = [
   { id: 'top-rated', name: 'Top Rated', emoji: '🏆', desc: 'Highest rated sites by visitors', filter: c => c.rating >= 4.5 },
   { id: 'hidden-gems', name: 'Hidden Gems', emoji: '💎', desc: 'Lesser-known treasures off the beaten path', filter: c => c.tags && c.tags.includes('hidden-gem') },
@@ -528,7 +543,7 @@ function closeCollectionsPanel() {
 
 function renderCollectionsList() {
   const el = document.getElementById('collectionsContent');
-  el.innerHTML = COLLECTIONS.map(col => {
+  const collectionsHtml = COLLECTIONS.map(col => {
     const count = CASTLES.filter(col.filter).length;
     return `<div class="collection-card" onclick="openCollection('${col.id}')">
       <span class="col-emoji">${col.emoji}</span>
@@ -539,6 +554,26 @@ function renderCollectionsList() {
       <span class="col-count">${count}</span>
     </div>`;
   }).join('');
+
+  const regionsHtml = REGIONS.map(r => {
+    const count = CASTLES.filter(c => {
+      if (r.counties.length > 0) return r.counties.some(county => c.county && c.county.toLowerCase().includes(county.toLowerCase()));
+      return c.country === r.country;
+    }).length;
+    return `<div class="collection-card" onclick="openRegion('${r.id}')">
+      <span class="col-emoji">🗺️</span>
+      <div class="col-info">
+        <div class="col-name">${r.name}</div>
+        <div class="col-desc">${count} sites</div>
+      </div>
+      <span class="col-count">${count}</span>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `<div style="padding:0 16px 6px"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);font-weight:600">Curated Collections</h3></div>` +
+    collectionsHtml +
+    `<div style="padding:12px 16px 6px;border-top:1px solid var(--border);margin-top:8px"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);font-weight:600">Browse by Region</h3></div>` +
+    regionsHtml;
 }
 
 function openCollection(id) {
@@ -563,6 +598,36 @@ function openCollection(id) {
     }).join('');
   // Highlight on map
   highlightCollectionOnMap(sites);
+}
+
+function openRegion(id) {
+  const region = REGIONS.find(r => r.id === id);
+  if (!region) return;
+  const sites = CASTLES.filter(c => {
+    if (region.counties.length > 0) return region.counties.some(county => c.county && c.county.toLowerCase().includes(county.toLowerCase()));
+    return c.country === region.country;
+  }).sort((a, b) => b.rating - a.rating);
+
+  const el = document.getElementById('collectionsContent');
+  el.innerHTML = `<button class="collection-back" onclick="renderCollectionsList(); showAllPins();">← Back</button>
+    <div style="padding:0 24px 8px"><h3 style="font-family:var(--font-serif);font-size:20px">🗺️ ${region.name}</h3>
+    <p style="font-size:13px;color:var(--text-muted);margin:4px 0 12px">${sites.length} sites</p></div>` +
+    sites.map(c => {
+      const tc = getTypeConfig(c.type);
+      const imgHtml = c.image ? `<img src="${c.image}" referrerpolicy="no-referrer" onerror="this.outerHTML='<span style=\\'font-size:24px\\'>${tc.emoji}</span>'" />` : `<span style="font-size:24px">${tc.emoji}</span>`;
+      const safeName = c.name.replace(/'/g, "\\'");
+      return `<div class="collection-site" onclick="var cs=CASTLES.find(x=>x.name==='${safeName}'); if(cs) openSidebar(cs);">
+        ${imgHtml}
+        <div class="cs-info">
+          <div class="cs-name">${c.name}</div>
+          <div class="cs-meta">${tc.emoji} ${c.type} · ★ ${c.rating} · ${c.county}</div>
+        </div>
+      </div>`;
+    }).join('');
+
+  highlightCollectionOnMap(sites);
+  // Zoom to region bounds
+  if (region.bounds) map.fitBounds(region.bounds, { padding: [60, 60] });
 }
 
 function highlightCollectionOnMap(sites) {
