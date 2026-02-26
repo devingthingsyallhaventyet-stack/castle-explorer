@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=48" />
+  <link rel="stylesheet" href="styles.css?v=50" />
 </head>
 <body>
   <!-- Top Bar -->
@@ -21,17 +21,11 @@
       <div id="searchResults" class="search-results"></div>
     </div>
     <div class="topbar-actions">
-      <button class="btn-pill" id="btnTripPlanner" title="Going somewhere? Find scenic stops between two locations">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
-        Trip Planner
-      </button>
-      <button class="btn-pill" id="btnRouteBuilder" title="Build your own route from scratch — pick any stops you like">🧭 Route Builder</button>
-      <button class="btn-pill" id="btnSavedRoutes" title="View routes you've saved for later">🧭 My Routes</button>
-      <button class="btn-pill" id="btnBookmarks" title="Sites you've bookmarked as favorites">⭐ My Favorites</button>
-      <button class="btn-pill" id="btnFilter" title="Filter the map by country, type, or condition">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
-        Filters
-      </button>
+      <button class="btn-pill" id="btnCollections" title="Browse curated collections of sites">📚 Collections</button>
+      <button class="btn-pill" id="btnNearMe" title="Find sites near your location">📍 Near Me</button>
+      <button class="btn-pill" id="btnRouteBuilder" title="Build your own route from scratch">🧭 Route Builder</button>
+      <button class="btn-pill" id="btnMyStuff" title="Your saved favorites and routes">❤️ My Stuff</button>
+      <button class="btn-pill" id="btnFilter" title="Filter the map by country, type, or condition">🔽 Filters</button>
       <button class="btn-icon mobile-search-toggle" id="mobileSearchToggle">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       </button>
@@ -101,6 +95,21 @@
         </div>
       </div>
       <div class="rb-float-body" id="rbFloatBody">
+        <div class="rb-suggest">
+          <button class="rb-suggest-toggle" id="rbSuggestToggle">💡 Suggest stops along a route</button>
+          <div class="rb-suggest-form" id="rbSuggestForm" style="display:none">
+            <div class="route-field">
+              <label>From</label>
+              <input type="text" id="rbSuggestFrom" placeholder="e.g. Edinburgh" />
+            </div>
+            <div class="route-field">
+              <label>To</label>
+              <input type="text" id="rbSuggestTo" placeholder="e.g. London" />
+            </div>
+            <button class="btn-find-routes" id="btnSuggestStops">Find Nearby Stops</button>
+            <div id="rbSuggestResults"></div>
+          </div>
+        </div>
         <div class="route-field">
           <label>Route Name</label>
           <input type="text" id="rbRouteName" placeholder="e.g. Ireland Castle Tour" />
@@ -166,61 +175,62 @@
     </div>
   </div>
 
-  <!-- Route Planner Panel -->
-  <div class="route-panel" id="routePanel">
+  <!-- Collections Panel -->
+  <div class="bookmarks-panel" id="collectionsPanel">
     <div class="route-header">
-      <h2>🗺️ Trip Planner</h2>
-      <p style="margin:0 0 8px 0;font-size:13px;color:var(--text-muted)">Going somewhere? Find scenic stops along the way</p>
-      <button class="sidebar-close" id="routeClose">✕</button>
+      <h2>📚 Collections</h2>
+      <button class="sidebar-close" id="collectionsClose">✕</button>
     </div>
-    <div class="route-form">
-      <div class="route-field">
-        <label>Start Location</label>
-        <input type="text" id="routeStart" placeholder="e.g. Dublin, Edinburgh…" />
-      </div>
-      <div class="route-field">
-        <label>End Location</label>
-        <input type="text" id="routeEnd" placeholder="e.g. London, Cardiff…" />
-      </div>
-      <div class="route-field" style="position:relative">
-        <label>Must Visit (optional)</label>
-        <input type="text" id="routeMust" placeholder="e.g. Blarney Castle" autocomplete="off" />
-      </div>
-      <button class="btn-find-routes" id="btnFindRoutes">Find Stops</button>
+    <div id="collectionsContent"></div>
+  </div>
+
+  <!-- Near Me Panel -->
+  <div class="bookmarks-panel" id="nearMePanel">
+    <div class="route-header">
+      <h2>📍 Near Me</h2>
+      <button class="sidebar-close" id="nearMeClose">✕</button>
     </div>
-    <div class="route-results" id="routeResults"></div>
-    <div class="sidebar-footer">
-      <small>Routing by Google Maps Platform</small>
+    <div id="nearMeContent">
+      <div class="near-me-location" style="padding:16px 24px 0">
+        <button class="btn-find-routes" id="btnUseMyLocation" style="margin-bottom:8px">📍 Use My Location</button>
+        <div class="route-field">
+          <label>Or enter a location</label>
+          <input type="text" id="nearMeInput" placeholder="e.g. Edinburgh, York..." />
+        </div>
+      </div>
+      <div class="near-me-radius" id="nearMeRadius" style="display:none;padding:0 24px">
+        <div style="display:flex;gap:6px;margin:10px 0">
+          <button class="filter-chip active-type" data-radius="10" onclick="setNearMeRadius(10)">10 km</button>
+          <button class="filter-chip" data-radius="25" onclick="setNearMeRadius(25)">25 km</button>
+          <button class="filter-chip" data-radius="50" onclick="setNearMeRadius(50)">50 km</button>
+          <button class="filter-chip" data-radius="100" onclick="setNearMeRadius(100)">100 km</button>
+        </div>
+      </div>
+      <div id="nearMeResults" style="padding:0 24px 24px"></div>
     </div>
   </div>
 
-  <!-- Bookmarks Panel -->
-  <div class="bookmarks-panel" id="bookmarksPanel">
+  <!-- My Stuff Panel (Favorites + Saved Routes) -->
+  <div class="bookmarks-panel" id="myStuffPanel">
     <div class="route-header">
-      <h2>⭐ Favorites</h2>
-      <button class="sidebar-close" id="bookmarksClose">✕</button>
+      <h2>❤️ My Stuff</h2>
+      <button class="sidebar-close" id="myStuffClose">✕</button>
     </div>
-    <div class="bookmarks-count" id="bookmarksCount">0 sites bookmarked</div>
-    <div class="bookmarks-list" id="bookmarksList"></div>
-    <div class="bookmarks-actions" id="bookmarksActions">
-      <button class="btn-send-to-builder" id="btnSendToBuilder" onclick="sendFavoritesToRouteBuilder()">🧭 Plan Route from Selected</button>
-      <button class="btn-clear-bookmarks" id="btnClearBookmarks">Clear All</button>
+    <div class="my-stuff-tabs">
+      <button class="my-stuff-tab active" data-tab="favorites" onclick="switchMyStuffTab('favorites')">⭐ Favorites</button>
+      <button class="my-stuff-tab" data-tab="routes" onclick="switchMyStuffTab('routes')">🧭 Routes</button>
     </div>
-    <div class="sidebar-footer">
-      <small>Data from OpenStreetMap & Google Maps Platform</small>
+    <div id="myStuffFavorites">
+      <div class="bookmarks-count" id="bookmarksCount">0 favorites</div>
+      <div class="bookmarks-list" id="bookmarksList"></div>
+      <div class="bookmarks-actions" id="bookmarksActions">
+        <button class="btn-send-to-builder" id="btnSendToBuilder" onclick="sendFavoritesToRouteBuilder()">🧭 Plan Route from Selected</button>
+        <button class="btn-clear-bookmarks" id="btnClearBookmarks">Clear All</button>
+      </div>
     </div>
-  </div>
-
-  <!-- Saved Routes Panel -->
-  <div class="bookmarks-panel" id="savedRoutesPanel">
-    <div class="route-header">
-      <h2>🧭 Saved Routes</h2>
-      <button class="sidebar-close" id="savedRoutesClose">✕</button>
-    </div>
-    <div class="bookmarks-count" id="savedRoutesCount">0 saved routes</div>
-    <div class="bookmarks-list" id="savedRoutesList"></div>
-    <div class="sidebar-footer">
-      <small>Routes saved from Route Builder</small>
+    <div id="myStuffRoutes" style="display:none">
+      <div class="bookmarks-count" id="savedRoutesCount">0 saved routes</div>
+      <div class="bookmarks-list" id="savedRoutesList"></div>
     </div>
   </div>
 
@@ -259,7 +269,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
   <script src="data.js?v=16"></script>
-  <script src="app.js?v=48"></script>
+  <script src="app.js?v=50"></script>
 </body>
 </html>
 <!-- v2 -->

@@ -751,3 +751,74 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 /* Scrollbar */
 .sidebar::-webkit-scrollbar, .route-panel::-webkit-scrollbar, .search-results::-webkit-scrollbar, .rb-float-body::-webkit-scrollbar, .bookmarks-panel::-webkit-scrollbar { width: 6px; }
 .sidebar::-webkit-scrollbar-thumb, .route-panel::-webkit-scrollbar-thumb, .rb-float-body::-webkit-scrollbar-thumb, .bookmarks-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ========== COLLECTIONS ========== */
+.collection-card {
+  padding: 16px; margin: 8px 24px; border-radius: var(--radius);
+  background: var(--cream); border: 1.5px solid var(--border);
+  cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 12px;
+}
+.collection-card:hover { border-color: var(--sage); background: var(--sage-light); }
+.collection-card .col-emoji { font-size: 28px; flex-shrink: 0; }
+.collection-card .col-info { flex: 1; }
+.collection-card .col-name { font-weight: 600; font-size: 15px; color: var(--text); }
+.collection-card .col-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.collection-card .col-count { font-size: 12px; color: var(--sage); font-weight: 600; background: var(--sage-light); padding: 2px 10px; border-radius: var(--radius-pill); flex-shrink: 0; }
+.collection-back { padding: 12px 24px; font-size: 13px; color: var(--sage); cursor: pointer; font-weight: 600; border: none; background: none; font-family: var(--font-sans); }
+.collection-back:hover { text-decoration: underline; }
+.collection-site {
+  display: flex; align-items: center; gap: 10px; padding: 10px 24px;
+  cursor: pointer; border-bottom: 1px solid var(--border); transition: background 0.15s;
+}
+.collection-site:hover { background: var(--cream); }
+.collection-site img { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+.collection-site .cs-info { flex: 1; min-width: 0; }
+.collection-site .cs-name { font-weight: 500; font-size: 14px; }
+.collection-site .cs-meta { font-size: 12px; color: var(--text-muted); }
+
+/* ========== NEAR ME ========== */
+.near-me-result {
+  display: flex; align-items: center; gap: 10px; padding: 10px 0;
+  cursor: pointer; border-bottom: 1px solid var(--border); transition: background 0.15s;
+}
+.near-me-result:hover { background: var(--cream); margin: 0 -24px; padding: 10px 24px; }
+.near-me-result img { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+.near-me-result .nm-info { flex: 1; min-width: 0; }
+.near-me-result .nm-name { font-weight: 500; font-size: 14px; }
+.near-me-result .nm-meta { font-size: 12px; color: var(--text-muted); }
+
+/* ========== MY STUFF TABS ========== */
+.my-stuff-tabs { display: flex; padding: 0 24px; gap: 4px; border-bottom: 1px solid var(--border); }
+.my-stuff-tab {
+  flex: 1; padding: 10px; border: none; background: none;
+  font-family: var(--font-sans); font-size: 14px; font-weight: 500;
+  color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.my-stuff-tab.active { color: var(--sage); border-bottom-color: var(--sage); }
+.my-stuff-tab:hover { color: var(--text); }
+
+/* ========== RB SUGGEST ========== */
+.rb-suggest { margin-bottom: 12px; }
+.rb-suggest-toggle {
+  width: 100%; padding: 10px 12px; border: 1.5px dashed var(--sage);
+  border-radius: var(--radius); background: var(--sage-light);
+  font-family: var(--font-sans); font-size: 13px; font-weight: 500;
+  color: var(--sage); cursor: pointer; transition: all 0.2s;
+}
+.rb-suggest-toggle:hover { background: var(--sage); color: var(--white); }
+.rb-suggest-form { margin-top: 10px; }
+.rb-suggest-card {
+  display: flex; align-items: center; gap: 8px; padding: 8px;
+  background: var(--cream); border-radius: var(--radius-sm); margin-top: 6px;
+}
+.rb-suggest-card img { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
+.rb-suggest-card .info { flex: 1; min-width: 0; }
+.rb-suggest-card .name { font-size: 13px; font-weight: 500; }
+.rb-suggest-card .meta { font-size: 11px; color: var(--text-muted); }
+.rb-suggest-card .add-btn {
+  padding: 4px 10px; border: 1.5px solid var(--sage); border-radius: var(--radius-pill);
+  background: var(--white); color: var(--sage); font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; flex-shrink: 0;
+}
+.rb-suggest-card .add-btn:hover { background: var(--sage); color: var(--white); }
