@@ -261,7 +261,11 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .nearby-info { flex: 1; min-width: 0; }
 .nearby-name { font-size: 13px; font-weight: 500; }
 .nearby-meta { font-size: 11px; color: var(--text-muted); }
-.sidebar-desc { font-size: 15px; line-height: 1.7; color: #4A4540; margin-bottom: 20px; }
+.sidebar-desc { font-size: 15px; line-height: 1.7; color: #4A4540; margin-bottom: 16px; }
+.sidebar-history { margin-bottom: 20px; }
+.history-title { font-family: var(--font-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 8px; }
+.history-text { font-size: 14px; line-height: 1.7; color: #4A4540; }
+.history-toggle { display: inline; }
 .sidebar-google { margin-bottom: 16px; }
 .google-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
 .google-rating img { height: 14px; }

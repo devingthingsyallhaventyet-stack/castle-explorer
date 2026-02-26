@@ -292,6 +292,19 @@ function openSidebar(castle) {
     <span class="review-count">(${castle.reviewCount.toLocaleString()} reviews)</span>
   `;
   document.getElementById('sidebarDesc').textContent = castle.description;
+
+  // History section
+  const historyEl = document.getElementById('sidebarHistory');
+  if (castle.history) {
+    const historyText = castle.history;
+    const isLong = historyText.length > 400;
+    const truncated = isLong ? historyText.substring(0, 400).replace(/\s+\S*$/, '') + '…' : historyText;
+    historyEl.innerHTML = `<h3 class="history-title">History</h3>
+      <p class="history-text"><span class="history-short">${truncated}</span>${isLong ? `<span class="history-full" style="display:none">${historyText}</span>
+      <button class="review-expand history-toggle" onclick="const s=this.parentElement.querySelector('.history-short');const f=this.parentElement.querySelector('.history-full');if(f.style.display==='none'){f.style.display='inline';s.style.display='none';this.textContent='Show less';}else{f.style.display='none';s.style.display='inline';this.textContent='Read more';}">Read more</button>` : ''}</p>`;
+  } else {
+    historyEl.innerHTML = '';
+  }
   document.getElementById('sidebarDirections').href = `https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}`;
 
   // Tags
