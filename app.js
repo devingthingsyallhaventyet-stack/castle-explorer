@@ -294,6 +294,60 @@ function openSidebar(castle) {
   document.getElementById('sidebarDesc').textContent = castle.description;
   document.getElementById('sidebarDirections').href = `https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}`;
 
+  // Tags
+  const TAG_LABELS = {
+    'photogenic': '📸 Photogenic', 'hidden-gem': '💎 Hidden Gem', 'free': '🆓 Free to Visit',
+    'kid-friendly': '👨‍👩‍👧‍👦 Kid-Friendly', 'haunted': '👻 Haunted', 'dramatic-ruin': '🏚️ Dramatic Ruin',
+    'well-preserved': '🏰 Well Preserved', 'romantic-ruin': '🌿 Romantic Ruin', 'filming-location': '🎬 Filming Location'
+  };
+  const tagsEl = document.getElementById('sidebarTags');
+  if (castle.tags && castle.tags.length) {
+    tagsEl.innerHTML = castle.tags.map(t => `<span class="tag-pill">${TAG_LABELS[t] || t}</span>`).join('');
+  } else {
+    tagsEl.innerHTML = '';
+  }
+
+  // Access badge
+  const accessEl = document.getElementById('sidebarAccess');
+  if (castle.access) {
+    const accessMap = {
+      'free': { label: 'Free to visit', cls: 'access-free' },
+      'paid': { label: 'Paid admission', cls: 'access-paid' },
+      'private': { label: 'Private property', cls: 'access-private' },
+      'exterior-only': { label: 'Exterior viewing only', cls: 'access-exterior' }
+    };
+    const a = accessMap[castle.access] || { label: castle.access, cls: '' };
+    accessEl.innerHTML = `<span class="access-badge ${a.cls}">${a.label}</span>`;
+  } else {
+    accessEl.innerHTML = '';
+  }
+
+  // Nearby sites (within 30km)
+  const nearbyEl = document.getElementById('sidebarNearby');
+  const nearbySites = CASTLES
+    .filter(c => c.name !== castle.name)
+    .map(c => ({ ...c, dist: haversine(castle.lat, castle.lng, c.lat, c.lng) }))
+    .filter(c => c.dist <= 30000)
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, 5);
+  if (nearbySites.length > 0) {
+    nearbyEl.innerHTML = `<h3>Nearby Sites</h3>` + nearbySites.map(c => {
+      const tc2 = getTypeConfig(c.type);
+      const distKm = (c.dist / 1000).toFixed(1);
+      const imgTag = c.image ? `<img class="nearby-img" src="${c.image}" referrerpolicy="no-referrer" onerror="this.outerHTML='<span style=\\'font-size:24px\\'>${tc2.emoji}</span>'" />` : `<span style="font-size:24px">${tc2.emoji}</span>`;
+      const safeName = c.name.replace(/'/g, "\\'");
+      return `<div class="nearby-card" onclick="var cs=CASTLES.find(x=>x.name==='${safeName}'); if(cs) openSidebar(cs);">
+        ${imgTag}
+        <div class="nearby-info">
+          <div class="nearby-name">${c.name}</div>
+          <div class="nearby-meta">${tc2.emoji} ${c.type} · ${distKm} km away · ★ ${c.rating}</div>
+        </div>
+      </div>`;
+    }).join('');
+  } else {
+    nearbyEl.innerHTML = '';
+  }
+
   // Reset Google sections
   document.getElementById('sidebarGoogle').innerHTML = '';
   document.getElementById('sidebarPhotos').innerHTML = '';

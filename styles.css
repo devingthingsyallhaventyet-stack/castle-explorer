@@ -219,6 +219,32 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .stars { color: var(--gold); letter-spacing: 1px; }
 .rating-num { font-weight: 600; }
 .review-count { color: var(--text-muted); }
+.sidebar-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.tag-pill {
+  padding: 4px 10px; border-radius: var(--radius-pill);
+  font-size: 11px; font-weight: 500; background: var(--cream); border: 1px solid var(--border);
+  color: var(--text-muted); display: inline-flex; align-items: center; gap: 4px;
+}
+.sidebar-access { font-size: 13px; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+.access-badge {
+  padding: 4px 10px; border-radius: var(--radius-pill); font-size: 12px; font-weight: 600;
+}
+.access-free { background: #E8F5E9; color: #2E7D32; }
+.access-paid { background: #FFF3E0; color: #E65100; }
+.access-private { background: #F3E5F5; color: #7B1FA2; }
+.access-exterior { background: #E3F2FD; color: #1565C0; }
+.sidebar-nearby { margin-bottom: 20px; }
+.sidebar-nearby h3 { font-family: var(--font-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 10px; }
+.nearby-card {
+  display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: background 0.2s; border-bottom: 1px solid var(--border);
+}
+.nearby-card:hover { background: var(--cream); }
+.nearby-card:last-child { border-bottom: none; }
+.nearby-img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+.nearby-info { flex: 1; min-width: 0; }
+.nearby-name { font-size: 13px; font-weight: 500; }
+.nearby-meta { font-size: 11px; color: var(--text-muted); }
 .sidebar-desc { font-size: 15px; line-height: 1.7; color: #4A4540; margin-bottom: 20px; }
 .sidebar-google { margin-bottom: 16px; }
 .google-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
