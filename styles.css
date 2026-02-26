@@ -198,6 +198,22 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   font-size: 64px; overflow: hidden;
 }
 .sidebar-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.banner-gallery {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; height: 100%; width: 100%;
+  scrollbar-width: none;
+}
+.banner-gallery::-webkit-scrollbar { display: none; }
+.banner-gallery img {
+  flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover;
+  scroll-snap-align: start; cursor: pointer;
+}
+.banner-counter {
+  position: absolute; bottom: 10px; right: 12px;
+  background: rgba(0,0,0,0.55); color: #fff; padding: 3px 10px;
+  border-radius: var(--radius-pill); font-size: 12px; font-weight: 500;
+}
+.sidebar-image { position: relative; }
 .sidebar-content { padding: 24px; }
 .sidebar-name {
   font-family: var(--font-serif); font-size: 28px; color: var(--text);
@@ -406,6 +422,10 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .review-time { font-size: 11px; color: var(--text-muted); }
 .review-stars { font-size: 12px; color: var(--gold); margin-bottom: 6px; }
 .review-text { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+.review-expand {
+  background: none; border: none; color: var(--sage); cursor: pointer;
+  font-size: 12px; font-weight: 600; padding: 0; margin-left: 4px;
+}
 .reviews-link { display: inline-block; margin-top: 8px; margin-bottom: 16px; color: var(--sage); font-weight: 500; font-size: 13px; text-decoration: none; }
 .reviews-link:hover { text-decoration: underline; }
 

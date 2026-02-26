@@ -401,12 +401,35 @@ async function lookupGooglePlaces(castle) {
 }
 
 function renderGoogleData(place) {
-  // Banner image — use first Google photo
+  // Build lightbox photos array from ALL photos
+  lightboxPhotos = [];
   if (place.photos && place.photos.length > 0) {
-    const bannerUrl = place.photos[0].getURI ? place.photos[0].getURI({ maxWidth: 800, maxHeight: 400 }) : (place.photos[0].getUrl ? place.photos[0].getUrl({ maxWidth: 800, maxHeight: 400 }) : '');
-    if (bannerUrl) {
-      const imgEl = document.getElementById('sidebarImage');
-      imgEl.innerHTML = `<img src="${bannerUrl}" alt="${selectedCastle ? selectedCastle.name : 'Photo'}" />`;
+    place.photos.slice(0, 10).forEach(p => {
+      const fullUrl = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : (p.getUrl ? p.getUrl({ maxWidth: 1200, maxHeight: 900 }) : '');
+      if (fullUrl) lightboxPhotos.push(fullUrl);
+    });
+  }
+
+  // Banner gallery — swipeable through all photos
+  if (place.photos && place.photos.length > 0) {
+    const imgEl = document.getElementById('sidebarImage');
+    const galleryHtml = place.photos.slice(0, 10).map((p, idx) => {
+      const url = p.getURI ? p.getURI({ maxWidth: 800, maxHeight: 400 }) : (p.getUrl ? p.getUrl({ maxWidth: 800, maxHeight: 400 }) : '');
+      return url ? `<img src="${url}" alt="Photo ${idx + 1}" onclick="openLightbox(${idx})" />` : '';
+    }).filter(Boolean).join('');
+    const count = Math.min(place.photos.length, 10);
+    imgEl.innerHTML = `<div class="banner-gallery">${galleryHtml}</div>` +
+      (count > 1 ? `<div class="banner-counter">1 / ${count}</div>` : '');
+    // Track scroll for counter
+    const gallery = imgEl.querySelector('.banner-gallery');
+    if (gallery && count > 1) {
+      gallery.addEventListener('scroll', () => {
+        const scrollLeft = gallery.scrollLeft;
+        const width = gallery.clientWidth;
+        const current = Math.round(scrollLeft / width) + 1;
+        const counter = imgEl.querySelector('.banner-counter');
+        if (counter) counter.textContent = `${current} / ${count}`;
+      });
     }
   }
 
@@ -422,26 +445,8 @@ function renderGoogleData(place) {
   // Google rating — skip, we show it in the reviews section instead
   document.getElementById('sidebarGoogle').innerHTML = '';
 
-  // Build lightbox photos array from ALL photos
-  lightboxPhotos = [];
-  if (place.photos && place.photos.length > 0) {
-    place.photos.slice(0, 10).forEach(p => {
-      const fullUrl = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : (p.getUrl ? p.getUrl({ maxWidth: 1200, maxHeight: 900 }) : '');
-      if (fullUrl) lightboxPhotos.push(fullUrl);
-    });
-  }
-
-  // Photo gallery — remaining photos (clickable for lightbox)
-  if (place.photos && place.photos.length > 1) {
-    const photosHtml = place.photos.slice(1, 6).map(p => {
-      const thumbUrl = p.getURI ? p.getURI({ maxWidth: 300, maxHeight: 225 }) : (p.getUrl ? p.getUrl({ maxWidth: 300, maxHeight: 225 }) : '');
-      const fullUrl = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : (p.getUrl ? p.getUrl({ maxWidth: 1200, maxHeight: 900 }) : '');
-      if (!thumbUrl) return '';
-      const idx = lightboxPhotos.indexOf(fullUrl);
-      return `<img src="${thumbUrl}" alt="Photo" onclick="openLightbox(${idx >= 0 ? idx : 0})" />`;
-    }).join('');
-    document.getElementById('sidebarPhotos').innerHTML = photosHtml;
-  }
+  // Photo gallery below description — hide since we now show all in banner
+  document.getElementById('sidebarPhotos').innerHTML = '';
 
   // Hours
   if (place.regularOpeningHours && place.regularOpeningHours.weekdayDescriptions) {
@@ -456,14 +461,16 @@ function renderGoogleData(place) {
       const author = r.authorAttribution ? r.authorAttribution.displayName : 'Anonymous';
       const timeDesc = r.relativePublishTimeDescription || '';
       const text = r.text ? (typeof r.text === 'string' ? r.text : (r.text.text || '')) : '';
-      const truncated = text.length > 250 ? text.substring(0, 250) + '…' : text;
+      const needsTruncate = text.length > 200;
+      const truncated = needsTruncate ? text.substring(0, 200) + '…' : text;
+      const expandHtml = needsTruncate ? `<span class="review-text-full" style="display:none">${text}</span><button class="review-expand" onclick="this.previousElementSibling.style.display='inline';this.previousElementSibling.previousElementSibling.style.display='none';this.textContent=this.textContent==='Read more'?'Show less':'Read more';if(this.textContent==='Read more'){this.previousElementSibling.style.display='none';this.previousElementSibling.previousElementSibling.style.display='inline';}">Read more</button>` : '';
       return `<div class="review-card">
         <div class="review-header">
           <strong class="review-author">${author}</strong>
           <span class="review-time">${timeDesc}</span>
         </div>
         <div class="review-stars">${stars}</div>
-        <p class="review-text">${truncated}</p>
+        <p class="review-text"><span class="review-text-short">${truncated}</span>${expandHtml}</p>
       </div>`;
     }).join('');
     const reviewsUrl = place.googleMapsURI || '#';
