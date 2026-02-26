@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=47" />
+  <link rel="stylesheet" href="styles.css?v=48" />
 </head>
 <body>
   <!-- Top Bar -->
@@ -129,8 +129,14 @@
     <div class="sidebar-content">
       <div class="sidebar-name-row">
         <h1 class="sidebar-name" id="sidebarName"></h1>
-        <button class="bookmark-btn" id="sidebarBookmark" title="Favorite this castle">☆</button>
-        <button class="bookmark-btn route-add-btn" id="sidebarRouteAdd" title="Add to route">🚗</button>
+        <div class="sidebar-quick-actions">
+          <button class="sidebar-action-btn" id="sidebarBookmark" title="Save to favorites">
+            <span class="action-icon">☆</span><span class="action-label">Save</span>
+          </button>
+          <button class="sidebar-action-btn" id="sidebarRouteAdd" title="Add to route builder">
+            <span class="action-icon">+</span><span class="action-label">Add to Route</span>
+          </button>
+        </div>
       </div>
       <p class="sidebar-location" id="sidebarLocation"></p>
       <div class="sidebar-badges" id="sidebarBadges"></div>
@@ -253,7 +259,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
   <script src="data.js?v=16"></script>
-  <script src="app.js?v=47"></script>
+  <script src="app.js?v=48"></script>
 </body>
 </html>
 <!-- v2 -->

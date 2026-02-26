@@ -371,7 +371,7 @@ function openSidebar(castle) {
   const faved = isBookmarked(castle.name);
   const favBtn = document.getElementById('sidebarBookmark');
   favBtn.classList.toggle('bookmarked', faved);
-  favBtn.textContent = faved ? '★' : '☆';
+  favBtn.innerHTML = faved ? '<span class="action-icon">★</span><span class="action-label">Saved</span>' : '<span class="action-icon">☆</span><span class="action-label">Save</span>';
 
   sidebar.classList.add('active');
   document.getElementById('overlayBackdrop').classList.add('active');
@@ -405,6 +405,12 @@ async function lookupGooglePlaces(castle) {
     const { places } = await Place.searchByText(request);
     if (places && places.length > 0) {
       const place = places[0];
+      // Fetch reviews separately if not included
+      if (!place.reviews || place.reviews.length === 0) {
+        try {
+          await place.fetchFields({ fields: ['reviews'] });
+        } catch (e) { console.warn('Review fetch failed:', e); }
+      }
       placesCache[cacheKey] = place;
       if (selectedCastle && selectedCastle.name === castle.name) renderGoogleData(place);
     }
@@ -1368,7 +1374,7 @@ function updateBookmarkUI() {
     const btn = document.getElementById('sidebarBookmark');
     const faved = isBookmarked(selectedCastle.name);
     btn.classList.toggle('bookmarked', faved);
-    btn.textContent = faved ? '★' : '☆';
+    btn.innerHTML = faved ? '<span class="action-icon">★</span><span class="action-label">Saved</span>' : '<span class="action-icon">☆</span><span class="action-label">Save</span>';
   }
   // Update quick view favorite button
   const qvBtn = document.getElementById('qvBookmark');
