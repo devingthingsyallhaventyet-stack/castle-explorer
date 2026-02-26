@@ -1,4 +1,7 @@
 // ========== CONFIG ==========
+const YT_API_KEY = 'AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const ytCache = {};
+
 const TYPE_CONFIG = {
   castle:          { emoji: '🏰', color: '#E05A33', class: 'castle' },
   palace:          { emoji: '👑', color: '#E6A817', class: 'palace' },
@@ -401,6 +404,10 @@ function openSidebar(castle) {
 
   // Google Places lookup
   lookupGooglePlaces(castle);
+
+  // YouTube videos
+  document.getElementById('sidebarVideos').innerHTML = '';
+  lookupYouTube(castle);
 }
 
 function closeSidebar() {
@@ -526,6 +533,50 @@ function renderGoogleData(place) {
   if (place.googleMapsURI) {
     document.getElementById('sidebarDirections').href = place.googleMapsURI;
   }
+}
+
+// ========== YOUTUBE ==========
+async function lookupYouTube(castle) {
+  const cacheKey = castle.name;
+  if (ytCache[cacheKey]) {
+    renderYouTubeData(ytCache[cacheKey], castle);
+    return;
+  }
+  try {
+    const q = encodeURIComponent(`${castle.name} ${castle.country} castle`);
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${q}&type=video&maxResults=3&videoDuration=medium&relevanceLanguage=en&key=${YT_API_KEY}`;
+    const res = await fetch(url);
+    if (!res.ok) { console.warn('YouTube API error:', res.status); return; }
+    const data = await res.json();
+    if (data.items && data.items.length > 0) {
+      ytCache[cacheKey] = data.items;
+      if (selectedCastle && selectedCastle.name === castle.name) renderYouTubeData(data.items, castle);
+    }
+  } catch (e) { console.warn('YouTube lookup failed:', e); }
+}
+
+function renderYouTubeData(items, castle) {
+  const el = document.getElementById('sidebarVideos');
+  if (!items || items.length === 0) { el.innerHTML = ''; return; }
+  const playIcon = `<svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>`;
+  const cardsHtml = items.map(item => {
+    const vid = item.id.videoId;
+    const title = item.snippet.title.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+    const channel = item.snippet.channelTitle;
+    const thumb = item.snippet.thumbnails.medium ? item.snippet.thumbnails.medium.url : item.snippet.thumbnails.default.url;
+    return `<div class="video-card" onclick="this.outerHTML='<div class=\\'video-embed-wrap\\'><iframe src=\\'https://www.youtube.com/embed/${vid}?autoplay=1\\' allow=\\'autoplay; encrypted-media\\' allowfullscreen></iframe></div>'">
+      <div class="video-thumb-wrap">
+        <img src="${thumb}" alt="${title}" loading="lazy" />
+        <div class="play-overlay">${playIcon}</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">${title}</div>
+        <div class="video-channel">${channel}</div>
+      </div>
+    </div>`;
+  }).join('');
+  const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(castle.name + ' castle')}`;
+  el.innerHTML = `<h3 class="videos-title">Videos</h3>${cardsHtml}<a class="videos-more" href="${searchUrl}" target="_blank">More videos on YouTube →</a>`;
 }
 
 // ========== COLLECTIONS ==========

@@ -433,6 +433,23 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .reviews-link { display: inline-block; margin-top: 8px; margin-bottom: 16px; color: var(--sage); font-weight: 500; font-size: 13px; text-decoration: none; }
 .reviews-link:hover { text-decoration: underline; }
 
+/* YouTube Videos */
+.sidebar-videos { margin-top: 16px; }
+.videos-title { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--text); margin-bottom: 10px; }
+.video-card { margin-bottom: 12px; border-radius: var(--radius-sm); overflow: hidden; background: var(--cream); border: 1px solid var(--border); cursor: pointer; transition: box-shadow 0.2s; }
+.video-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.video-thumb-wrap { position: relative; width: 100%; padding-top: 56.25%; background: #000; }
+.video-thumb-wrap img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-thumb-wrap .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.video-thumb-wrap .play-overlay svg { fill: #fff; width: 22px; height: 22px; margin-left: 3px; }
+.video-info { padding: 8px 10px; }
+.video-title { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.video-channel { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.video-embed-wrap { position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 12px; border-radius: var(--radius-sm); overflow: hidden; }
+.video-embed-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.videos-more { display: inline-block; margin-top: 4px; margin-bottom: 16px; color: var(--sage); font-weight: 500; font-size: 13px; text-decoration: none; }
+.videos-more:hover { text-decoration: underline; }
+
 /* Photo gallery clickable */
 .sidebar-photos img { cursor: pointer; transition: opacity 0.2s; }
 .sidebar-photos img:hover { opacity: 0.8; }
