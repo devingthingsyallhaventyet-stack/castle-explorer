@@ -856,7 +856,7 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   transition: opacity 0.3s;
   background: #000;
 }
-.listing-photo-layer-inner { padding-bottom: 0; }
+.listing-photo-layer-inner { padding-bottom: 42vh; }
 
 .listing-gallery-item { width: 100%; position: relative; }
 .listing-gallery-item.listing-photo { background: #111; }
