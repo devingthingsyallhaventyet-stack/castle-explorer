@@ -854,11 +854,13 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   overflow-y: auto; -webkit-overflow-scrolling: touch;
   z-index: 1001; pointer-events: auto;
   transition: opacity 0.3s;
+  background: #000;
 }
-.listing-photo-layer-inner { padding-bottom: 280px; }
+.listing-photo-layer-inner { padding-bottom: 0; }
 
 .listing-gallery-item { width: 100%; position: relative; }
 .listing-gallery-item.listing-photo { background: #111; }
+.listing-gallery-item.listing-photo:first-child img { width: 100%; display: block; height: 58vh; object-fit: cover; }
 .listing-gallery-item.listing-photo img { width: 100%; display: block; min-height: 50vh; max-height: 100vh; object-fit: cover; }
 .listing-gallery-item.listing-photo img[src=""] { display: none; }
 

@@ -993,9 +993,10 @@ function initListingSheet() {
     });
   }
 
-  // Auto-expand when photo layer scroll reaches bottom
+  // Auto-expand when photo layer scroll reaches bottom + dismiss on overscroll top
   if (photoLayer) {
     let lastPhotoScrollTop = 0;
+    let pullDownStart = null;
     const onPhotoScroll = () => {
       const scrollTop = photoLayer.scrollTop;
       const scrollMax = photoLayer.scrollHeight - photoLayer.clientHeight;
@@ -1012,9 +1013,33 @@ function initListingSheet() {
 
       lastPhotoScrollTop = scrollTop;
     };
+
+    // Pull-down-to-dismiss when at top of photo layer
+    let photoTouchStartY = 0;
+    const onPhotoTouchStart = (e) => {
+      if (photoLayer.scrollTop <= 0) {
+        photoTouchStartY = e.touches[0].clientY;
+      } else {
+        photoTouchStartY = 0;
+      }
+    };
+    const onPhotoTouchMove = (e) => {
+      if (photoTouchStartY && photoLayer.scrollTop <= 0) {
+        const dy = e.touches[0].clientY - photoTouchStartY;
+        if (dy > 120) {
+          closeListing();
+          photoTouchStartY = 0;
+        }
+      }
+    };
+
     photoLayer.addEventListener('scroll', onPhotoScroll, { passive: true });
+    photoLayer.addEventListener('touchstart', onPhotoTouchStart, { passive: true });
+    photoLayer.addEventListener('touchmove', onPhotoTouchMove, { passive: true });
     listingPhotoLayerCleanup = () => {
       photoLayer.removeEventListener('scroll', onPhotoScroll);
+      photoLayer.removeEventListener('touchstart', onPhotoTouchStart);
+      photoLayer.removeEventListener('touchmove', onPhotoTouchMove);
     };
   }
 }
