@@ -1017,7 +1017,10 @@ async function listingLoadGoogleData(castle) {
     });
     if (places && places.length > 0) {
       const p = places[0];
-      try { await p.fetchFields({ fields: ['reviews'] }); } catch(e) {}
+      // Always try to fetch reviews - initial searchByText often omits them
+      try {
+        await p.fetchFields({ fields: ['reviews', 'regularOpeningHours', 'websiteURI', 'googleMapsURI'] });
+      } catch(e) { console.warn('fetchFields failed:', e); }
       placesCache[cacheKey] = p;
       if (listingCastle && listingCastle.name === castle.name) listingRenderGoogleData(p, castle);
     }
@@ -1069,7 +1072,8 @@ function listingRenderGoogleData(place, castle) {
         return `<div class="listing-review-card"><div class="listing-review-header"><div class="listing-review-avatar">${author.charAt(0)}</div><div class="listing-review-meta"><div class="listing-review-author">${author}</div><div class="listing-review-date">${time}</div></div></div><div class="listing-review-stars-sm">${stars}</div><div class="listing-review-body">${text.length>250?text.substring(0,250)+'…':text}</div></div>`;
       }).join('') + `<a class="listing-reviews-all-link" href="${place.googleMapsURI||'#'}" target="_blank">Read all ${(place.userRatingCount||castle.reviewCount||0).toLocaleString()} reviews</a>`;
     } else {
-      reviewsEl.innerHTML = '<div style="color:#8a8a8a;font-size:13px;">No reviews available</div>';
+      const gmapsUrl = place.googleMapsURI || `https://www.google.com/maps/search/${encodeURIComponent(castle.name + ' ' + castle.county)}`;
+      reviewsEl.innerHTML = `<a class="listing-reviews-all-link" href="${gmapsUrl}" target="_blank">Read ${castle.reviewCount ? castle.reviewCount.toLocaleString() + ' reviews' : 'reviews'} on Google Maps →</a>`;
     }
   }
 
