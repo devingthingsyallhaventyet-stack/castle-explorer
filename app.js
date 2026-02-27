@@ -713,7 +713,7 @@ function openListing(castle) {
 
     <!-- GALLERY OVERLAY -->
     <div class="listing-gallery-overlay" id="listingGalleryOverlay">
-      <button class="listing-close-btn" onclick="closeListing()">✕</button>
+      <button class="listing-close-btn" onclick="closeListing()">‹</button>
       <div class="listing-overlay-actions">
         <button id="listingFavOverlay" onclick="listingToggleFav()">${favOverlayText}</button>
       </div>

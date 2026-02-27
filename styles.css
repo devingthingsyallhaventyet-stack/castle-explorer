@@ -883,8 +883,9 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .listing-gallery-overlay > * { pointer-events: auto; }
 .listing-close-btn {
   width: 36px; height: 36px; border-radius: 50%; background: rgba(0,0,0,0.5);
-  border: none; color: #fff; font-size: 22px; display: flex; align-items: center;
+  border: none; color: #fff; font-size: 28px; line-height: 1; display: flex; align-items: center;
   justify-content: center; cursor: pointer; backdrop-filter: blur(4px);
+  padding-bottom: 2px;
 }
 .listing-overlay-actions { display: flex; gap: 8px; }
 .listing-overlay-actions button {
