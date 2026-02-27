@@ -645,7 +645,7 @@ function openListing(castle) {
   }).join('');
 
   const faved = isBookmarked(castle.name);
-  const favText = faved ? '★ Saved' : '☆ Save';
+  const favText = faved ? '❤ Saved' : '♡ Save';
   const favOverlayText = faved ? '❤' : '♡';
   const fullStars = Math.floor(castle.rating);
   const starsStr = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
@@ -663,6 +663,7 @@ function openListing(castle) {
         <button class="listing-header-fav" id="listingFavBtn" onclick="listingToggleFav()">${favOverlayText}</button>
       </div>
 
+      <div class="listing-scroll-wrap">
       <div class="listing-slider" id="listingSlider">
         <div class="listing-slider-track" id="listingSliderTrack">
           <div class="listing-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" onclick="openListingLightbox(0)" /></div>
@@ -764,6 +765,7 @@ function openListing(castle) {
         <div class="listing-nearby-scroll">${nearbyHtml || '<div style="color:#8a8a8a;font-size:13px;">No nearby sites within 30 km</div>'}</div>
 
         <div style="height: 60px;"></div>
+      </div>
       </div>
     </div>
 
@@ -1041,7 +1043,7 @@ function listingToggleFav() {
   const headerBtn = document.getElementById('listingFavBtn');
   if (headerBtn) headerBtn.textContent = faved ? '❤' : '♡';
   const contentBtn = document.getElementById('listingFavBtnContent');
-  if (contentBtn) contentBtn.textContent = faved ? '★ Saved' : '☆ Save';
+  if (contentBtn) contentBtn.textContent = faved ? '❤ Saved' : '♡ Save';
 }
 
 function listingAddToRoute() {
