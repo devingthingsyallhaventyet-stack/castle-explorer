@@ -786,6 +786,9 @@ function openListing(castle) {
   // Init slider touch swipe
   requestAnimationFrame(() => initListingSlider());
 
+  // Push history state so browser back button closes the listing
+  history.pushState({ listing: castle.name }, '', '#' + castle.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+
   // Load Google Places data
   listingLoadGoogleData(castle);
   listingLoadYouTube(castle);
@@ -793,10 +796,25 @@ function openListing(castle) {
 
 function closeListing() {
   const overlay = document.getElementById('listingOverlay');
+  if (!overlay.classList.contains('active')) return;
   overlay.classList.remove('active');
   overlay.innerHTML = '';
   listingCastle = null;
+  // Only go back if we pushed a listing state
+  if (history.state && history.state.listing) {
+    history.back();
+  }
 }
+
+// Browser back button closes listing
+window.addEventListener('popstate', function(e) {
+  if (listingCastle) {
+    const overlay = document.getElementById('listingOverlay');
+    overlay.classList.remove('active');
+    overlay.innerHTML = '';
+    listingCastle = null;
+  }
+});
 
 function initListingSlider() {
   const track = document.getElementById('listingSliderTrack');
