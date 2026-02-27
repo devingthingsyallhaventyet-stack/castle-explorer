@@ -147,7 +147,7 @@ function handlePinClick(castle) {
   if (window.innerWidth < 768) {
     openQuickView(castle);
   } else {
-    openSidebar(castle);
+    openListing(castle);
   }
 }
 
@@ -579,6 +579,621 @@ function renderYouTubeData(items, castle) {
   el.innerHTML = `<h3 class="videos-title">Videos</h3>${cardsHtml}<a class="videos-more" href="${searchUrl}" target="_blank">More videos on YouTube →</a>`;
 }
 
+// ========== LISTING OVERLAY (Zillow-style) ==========
+let listingSheetExpanded = false;
+let listingCurrentY = 0;
+let listingSheetPeekY = 0;
+let listingSheetFullY = 0;
+let listingDragging = false;
+let listingDragTarget = null;
+let listingStartTouchY = 0;
+let listingStartSheetY = 0;
+let listingCastle = null;
+
+function openListing(castle) {
+  listingCastle = castle;
+  selectedCastle = castle;
+  const overlay = document.getElementById('listingOverlay');
+  const tc = getTypeConfig(castle.type);
+  const API_KEY = 'AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+
+  // Access info
+  const accessMap = {
+    'free': { emoji: '🏞️', label: 'Free to Visit', sublabel: 'Open access — no admission fee' },
+    'paid': { emoji: '🎟️', label: 'Paid Admission', sublabel: 'Book online for discounted entry' },
+    'private': { emoji: '🔒', label: 'Private Property', sublabel: 'Not open to the public' },
+    'exterior-only': { emoji: '👁️', label: 'Exterior Only', sublabel: 'Viewable from outside only' }
+  };
+  const accessInfo = accessMap[castle.access] || { emoji: '❓', label: castle.access || 'Unknown', sublabel: '' };
+
+  // Extract year from era
+  const eraYear = castle.era ? castle.era.match(/\d{3,4}/) : null;
+  const eraDisplay = eraYear ? eraYear[0] : (castle.era || '—');
+
+  // Key stats access display
+  const accessStatLabel = castle.access === 'free' ? 'Free' : castle.access === 'paid' ? 'Paid' : castle.access === 'private' ? 'Private' : castle.access === 'exterior-only' ? 'Exterior' : '—';
+
+  // Tags
+  const TAG_LABELS = {
+    'photogenic': '📸 Photogenic', 'hidden-gem': '💎 Hidden Gem', 'free': '🆓 Free',
+    'kid-friendly': '👨‍👩‍👧‍👦 Kid-Friendly', 'haunted': '👻 Haunted', 'dramatic-ruin': '🏚️ Dramatic Ruin',
+    'well-preserved': '🏰 Well Preserved', 'romantic-ruin': '🌿 Romantic Ruin', 'filming-location': '🎬 Filming Location'
+  };
+  const tagsHtml = (castle.tags || []).map(t => `<span class="listing-tag">${TAG_LABELS[t] || t}</span>`).join('');
+
+  // Terrain chips
+  const terrainChips = [];
+  const cond = (castle.condition || '').toLowerCase();
+  if (cond === 'intact') {
+    terrainChips.push({ icon: '♿', text: 'Wheelchair Likely', cls: 'green' });
+    terrainChips.push({ icon: '🚶', text: 'Mostly Paved', cls: 'green' });
+  } else if (cond === 'ruin') {
+    terrainChips.push({ icon: '⚠️', text: 'Uneven Ground', cls: 'amber' });
+    terrainChips.push({ icon: '👟', text: 'Sturdy Footwear', cls: 'amber' });
+  } else if (cond === 'partial ruin') {
+    terrainChips.push({ icon: '🚶', text: 'Mostly Walkable', cls: 'green' });
+    terrainChips.push({ icon: '⚠️', text: 'Some Uneven Areas', cls: 'amber' });
+  }
+  if (castle.tags && castle.tags.includes('kid-friendly')) {
+    terrainChips.push({ icon: '👶', text: 'Family Friendly', cls: 'green' });
+  }
+  if (castle.access === 'free') {
+    terrainChips.push({ icon: '🏞️', text: 'Open Access', cls: 'green' });
+  }
+  const terrainChipsHtml = terrainChips.map(c => `<div class="listing-terrain-chip ${c.cls}"><span class="listing-chip-icon">${c.icon}</span> ${c.text}</div>`).join('');
+
+  let terrainNote = '';
+  if (cond === 'intact') terrainNote = 'ℹ️ This site is well-maintained and largely accessible. Paths are generally paved and suitable for most visitors.';
+  else if (cond === 'ruin') terrainNote = 'ℹ️ As a ruin, expect rough terrain, loose stones, and uneven surfaces. Suitable footwear recommended. Not all areas may be accessible.';
+  else if (cond === 'partial ruin') terrainNote = 'ℹ️ Parts of this site are well-maintained while other areas are ruined. Expect a mix of paved paths and rougher terrain.';
+
+  // Nearby sites
+  const nearbySites = CASTLES
+    .filter(c => c.name !== castle.name)
+    .map(c => ({ ...c, dist: haversine(castle.lat, castle.lng, c.lat, c.lng) }))
+    .filter(c => c.dist <= 30000)
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, 5);
+  const nearbyHtml = nearbySites.map(c => {
+    const tc2 = getTypeConfig(c.type);
+    const distKm = (c.dist / 1000).toFixed(1);
+    const safeName = c.name.replace(/'/g, "\\'");
+    return `<div class="listing-nearby-card" onclick="var cs=CASTLES.find(x=>x.name==='${safeName}'); if(cs){closeListing();setTimeout(()=>openListing(cs),100);}">
+      <div class="listing-nearby-card-img">${tc2.emoji}</div>
+      <div class="listing-nearby-card-info">
+        <div class="listing-nearby-card-name">${c.name}</div>
+        <div class="listing-nearby-card-meta">★ ${c.rating} · ${distKm} km</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Bookmark state
+  const faved = isBookmarked(castle.name);
+  const favText = faved ? '★ Saved' : '☆ Save';
+  const favOverlayText = faved ? '❤' : '♡';
+
+  // Rating
+  const fullStars = Math.floor(castle.rating);
+  const starsStr = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
+
+  overlay.innerHTML = `
+    <div class="listing-photo-layer" id="listingPhotoLayer">
+      <div class="listing-photo-layer-inner">
+        <div class="listing-gallery-overlay" id="listingGalleryOverlay">
+          <button class="listing-close-btn" onclick="closeListing()">✕</button>
+          <div class="listing-overlay-actions">
+            <button id="listingFavOverlay" onclick="listingToggleFav()">${favOverlayText}</button>
+            <button onclick="listingShare()">↗</button>
+          </div>
+        </div>
+        <div class="listing-gallery-item listing-photo"><img id="listingImg1" src="" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
+        <div class="listing-gallery-item listing-photo"><img id="listingImg2" src="" /></div>
+        <div class="listing-gallery-item listing-street-view">
+          <div class="listing-sv-panel" onclick="window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${castle.lat},${castle.lng}','_blank')">
+            <img src="https://maps.googleapis.com/maps/api/streetview?size=600x400&location=${castle.lat},${castle.lng}&key=${API_KEY}" />
+            <div class="listing-sv-label">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Look Around
+            </div>
+          </div>
+          <div class="listing-sv-panel">
+            <iframe src="https://www.google.com/maps/embed/v1/view?key=${API_KEY}&center=${castle.lat},${castle.lng}&zoom=15&maptype=satellite" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="listing-gallery-item listing-map-tile">
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
+          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
+        </div>
+        <div class="listing-gallery-item listing-photo" id="listingP3"><img id="listingImg3" src="" /></div>
+        <div class="listing-gallery-item listing-photo" id="listingP4"><img id="listingImg4" src="" /></div>
+        <div class="listing-gallery-item listing-photo" id="listingP5"><img id="listingImg5" src="" /></div>
+        <div class="listing-gallery-item listing-photo" id="listingP6"><img id="listingImg6" src="" /></div>
+      </div>
+    </div>
+
+    <div class="listing-bottom-sheet" id="listingSheet">
+      <div class="listing-sheet-handle-wrap" id="listingSheetPeek">
+        <div class="listing-sheet-handle"></div>
+      </div>
+      <div class="listing-sheet-scroll" id="listingSheetScroll">
+        <div class="listing-sheet-peek">
+          <h1 class="listing-name">${castle.name}</h1>
+          <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
+          <div class="listing-key-stats">
+            <div class="listing-stat-item"><div class="listing-stat-value">${tc.emoji}</div><div class="listing-stat-label">${castle.type}</div></div>
+            <div class="listing-stat-item"><div class="listing-stat-value">${eraDisplay}</div><div class="listing-stat-label">Built</div></div>
+            <div class="listing-stat-item"><div class="listing-stat-value">${castle.condition || '—'}</div><div class="listing-stat-label">Condition</div></div>
+            <div class="listing-stat-item"><div class="listing-stat-value">${accessStatLabel}</div><div class="listing-stat-label">Access</div></div>
+          </div>
+          <div class="listing-peek-buttons">
+            <button class="listing-btn listing-btn-secondary" id="listingFavBtn" onclick="listingToggleFav()">${favText}</button>
+            <button class="listing-btn listing-btn-primary" onclick="listingAddToRoute()">🚗 Add to Route</button>
+          </div>
+        </div>
+        <div class="listing-divider"></div>
+
+        <div class="listing-rating-bar" onclick="listingScrollToReviews()">
+          <div class="listing-rating-big">${castle.rating}</div>
+          <div>
+            <div class="listing-rating-stars">${starsStr}</div>
+            <div class="listing-rating-count">${castle.reviewCount.toLocaleString()} Google reviews</div>
+          </div>
+        </div>
+
+        ${tagsHtml ? `<div class="listing-tags-row">${tagsHtml}</div>` : ''}
+
+        <div class="listing-access-bar">
+          <span class="listing-access-icon">${accessInfo.emoji}</span>
+          <div>
+            <div class="listing-access-label">${accessInfo.label}</div>
+            <div class="listing-access-sublabel">${accessInfo.sublabel}</div>
+          </div>
+        </div>
+
+        <div class="listing-share-bar">
+          <button class="listing-btn listing-btn-share" onclick="listingShare()">📤 Share</button>
+        </div>
+
+        <div class="listing-links-section" id="listingLinksSection" style="display:none"></div>
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title">About</h2>
+        <div class="listing-description">${castle.description || ''}${castle.history ? '<br><br>' + castle.history : ''}</div>
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title">Getting There</h2>
+        <div>
+          <div class="listing-transport-card">
+            <div class="listing-transport-icon">🗺️</div>
+            <div>
+              <div class="listing-transport-name">Directions</div>
+              <div class="listing-transport-detail">Navigate to ${castle.name} via Google Maps.</div>
+              <a class="listing-transport-link" href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title">Terrain & Accessibility</h2>
+        <div class="listing-terrain-grid">${terrainChipsHtml}</div>
+        ${terrainNote ? `<div class="listing-terrain-note">${terrainNote}</div>` : ''}
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title">Opening Hours</h2>
+        <div class="listing-hours-grid" id="listingHoursGrid">Loading...</div>
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title">Videos</h2>
+        <div id="listingVideoCards">Loading...</div>
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title" id="listingReviewsTitle">Reviews</h2>
+        <div id="listingReviewCards">Loading...</div>
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title">Nearby Sites</h2>
+        <div class="listing-nearby-scroll">${nearbyHtml || '<div style="color:#8a8a8a;font-size:13px;">No nearby sites within 30 km</div>'}</div>
+
+        <div style="height: 60px;"></div>
+      </div>
+    </div>
+
+    <div class="listing-share-toast" id="listingShareToast">Link copied!</div>
+  `;
+
+  overlay.classList.add('active');
+  closeQuickView();
+
+  // Init bottom sheet drag
+  requestAnimationFrame(() => initListingSheet());
+
+  // Load Google Places data
+  listingLoadGoogleData(castle);
+  // Load YouTube
+  listingLoadYouTube(castle);
+}
+
+function closeListing() {
+  const overlay = document.getElementById('listingOverlay');
+  overlay.classList.remove('active');
+  overlay.innerHTML = '';
+  listingCastle = null;
+  listingSheetExpanded = false;
+}
+
+function initListingSheet() {
+  const sheet = document.getElementById('listingSheet');
+  const sheetPeek = document.getElementById('listingSheetPeek');
+  const sheetScroll = document.getElementById('listingSheetScroll');
+  const photoLayer = document.getElementById('listingPhotoLayer');
+  if (!sheet) return;
+
+  const peekContent = sheet.querySelector('.listing-sheet-peek');
+  const peekHeight = sheetPeek.offsetHeight + peekContent.offsetHeight + 8;
+  const vh = window.innerHeight;
+  listingSheetPeekY = vh - peekHeight;
+  listingSheetFullY = vh * 0.05;
+  listingCurrentY = listingSheetPeekY;
+  listingSheetExpanded = false;
+  sheet.style.height = `${vh - listingSheetFullY}px`;
+  sheet.style.transform = `translateY(${listingCurrentY}px)`;
+
+  // Desktop: override for centered sheet
+  if (window.innerWidth >= 768) {
+    sheet.style.transform = `translateX(-50%) translateY(${listingCurrentY}px)`;
+  }
+
+  function setSheetTransform(y) {
+    if (window.innerWidth >= 768) {
+      sheet.style.transform = `translateX(-50%) translateY(${y}px)`;
+    } else {
+      sheet.style.transform = `translateY(${y}px)`;
+    }
+  }
+
+  // Drag from handle
+  sheetPeek.addEventListener('touchstart', onDragStart, { passive: true });
+  sheetPeek.addEventListener('mousedown', onDragStart);
+
+  // Drag from scroll area when collapsed
+  sheetScroll.addEventListener('touchstart', (e) => {
+    if (!listingSheetExpanded) onDragStart(e);
+  }, { passive: true });
+
+  function onDragStart(e) {
+    const touch = e.touches ? e.touches[0] : e;
+    listingStartTouchY = touch.clientY;
+    listingStartSheetY = listingCurrentY;
+    listingDragging = true;
+    sheet.classList.add('dragging');
+    document.addEventListener('touchmove', onDragMove, { passive: false });
+    document.addEventListener('mousemove', onDragMove);
+    document.addEventListener('touchend', onDragEnd);
+    document.addEventListener('mouseup', onDragEnd);
+  }
+
+  function onDragMove(e) {
+    if (!listingDragging) return;
+    e.preventDefault();
+    const touch = e.touches ? e.touches[0] : e;
+    const dy = touch.clientY - listingStartTouchY;
+    let newY = listingStartSheetY + dy;
+    newY = Math.max(listingSheetFullY, Math.min(listingSheetPeekY, newY));
+    listingCurrentY = newY;
+    setSheetTransform(listingCurrentY);
+    const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
+    photoLayer.style.opacity = 1 - progress * 0.4;
+  }
+
+  function onDragEnd() {
+    if (!listingDragging) return;
+    listingDragging = false;
+    sheet.classList.remove('dragging');
+    document.removeEventListener('touchmove', onDragMove);
+    document.removeEventListener('mousemove', onDragMove);
+    document.removeEventListener('touchend', onDragEnd);
+    document.removeEventListener('mouseup', onDragEnd);
+
+    const threshold = listingSheetPeekY - (listingSheetPeekY - listingSheetFullY) * 0.15;
+    if (listingCurrentY < threshold) {
+      listingSheetExpanded = true;
+      listingCurrentY = listingSheetFullY;
+      photoLayer.style.opacity = 0.6;
+      sheetScroll.classList.add('scrollable');
+    } else {
+      listingSheetExpanded = false;
+      listingCurrentY = listingSheetPeekY;
+      photoLayer.style.opacity = 1;
+      sheetScroll.scrollTop = 0;
+      sheetScroll.classList.remove('scrollable');
+    }
+    setSheetTransform(listingCurrentY);
+  }
+
+  // Pull-down to collapse when expanded and at scroll top
+  sheetScroll.addEventListener('touchstart', (e) => {
+    if (listingSheetExpanded && sheetScroll.scrollTop <= 0) {
+      listingDragTarget = 'scroll';
+      listingStartTouchY = e.touches[0].clientY;
+      listingStartSheetY = listingCurrentY;
+    }
+  }, { passive: true });
+
+  sheetScroll.addEventListener('touchmove', (e) => {
+    if (listingDragTarget === 'scroll' && sheetScroll.scrollTop <= 0) {
+      const dy = e.touches[0].clientY - listingStartTouchY;
+      if (dy > 0) {
+        e.preventDefault();
+        let newY = listingStartSheetY + dy;
+        newY = Math.max(listingSheetFullY, Math.min(listingSheetPeekY, newY));
+        listingCurrentY = newY;
+        sheet.classList.add('dragging');
+        setSheetTransform(listingCurrentY);
+        const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
+        photoLayer.style.opacity = 1 - progress * 0.4;
+      }
+    }
+  }, { passive: false });
+
+  sheetScroll.addEventListener('touchend', () => {
+    if (listingDragTarget === 'scroll') {
+      listingDragTarget = null;
+      sheet.classList.remove('dragging');
+      const collapseThreshold = listingSheetFullY + (listingSheetPeekY - listingSheetFullY) * 0.15;
+      if (listingCurrentY < collapseThreshold) {
+        listingSheetExpanded = true;
+        listingCurrentY = listingSheetFullY;
+        photoLayer.style.opacity = 0.6;
+        sheetScroll.classList.add('scrollable');
+      } else {
+        listingSheetExpanded = false;
+        listingCurrentY = listingSheetPeekY;
+        photoLayer.style.opacity = 1;
+        sheetScroll.scrollTop = 0;
+        sheetScroll.classList.remove('scrollable');
+      }
+      setSheetTransform(listingCurrentY);
+    }
+  });
+
+  // Tap peek to expand
+  sheetPeek.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) return;
+    if (!listingSheetExpanded) {
+      listingSheetExpanded = true;
+      listingCurrentY = listingSheetFullY;
+      setSheetTransform(listingCurrentY);
+      photoLayer.style.opacity = 0.6;
+      sheetScroll.classList.add('scrollable');
+    }
+  });
+
+  // Auto-expand when photo scroll reaches bottom
+  let lastPhotoScroll = 0;
+  photoLayer.addEventListener('scroll', () => {
+    const el = photoLayer;
+    const scrollingUp = el.scrollTop < lastPhotoScroll;
+    lastPhotoScroll = el.scrollTop;
+
+    if (scrollingUp && listingSheetExpanded && el.scrollTop < el.scrollHeight - el.clientHeight - 100) {
+      listingSheetExpanded = false;
+      listingCurrentY = listingSheetPeekY;
+      setSheetTransform(listingCurrentY);
+      photoLayer.style.opacity = 1;
+      sheetScroll.scrollTop = 0;
+      sheetScroll.classList.remove('scrollable');
+      return;
+    }
+    if (el.scrollHeight - el.scrollTop - el.clientHeight < 50 && !listingSheetExpanded) {
+      listingSheetExpanded = true;
+      listingCurrentY = listingSheetFullY;
+      setSheetTransform(listingCurrentY);
+      photoLayer.style.opacity = 0.6;
+      sheetScroll.classList.add('scrollable');
+    }
+  });
+}
+
+async function listingLoadGoogleData(castle) {
+  const cacheKey = castle.name;
+  if (placesCache[cacheKey]) {
+    listingRenderGoogleData(placesCache[cacheKey], castle);
+    return;
+  }
+  try {
+    const { Place } = await google.maps.importLibrary('places');
+    const { places } = await Place.searchByText({
+      textQuery: `${castle.name} ${castle.county} ${castle.country}`,
+      fields: ['displayName','rating','userRatingCount','photos','regularOpeningHours','googleMapsURI','reviews','websiteURI'],
+      locationBias: { lat: castle.lat, lng: castle.lng },
+      maxResultCount: 1
+    });
+    if (places && places.length > 0) {
+      const p = places[0];
+      try { await p.fetchFields({ fields: ['reviews'] }); } catch(e) {}
+      placesCache[cacheKey] = p;
+      if (listingCastle && listingCastle.name === castle.name) listingRenderGoogleData(p, castle);
+    }
+  } catch(e) { console.warn('Listing Places lookup failed:', e); }
+}
+
+function listingRenderGoogleData(place, castle) {
+  // Photos
+  if (place.photos && place.photos.length > 0) {
+    const photos = place.photos.slice(0, 8);
+    photos.forEach((p, i) => {
+      const el = document.getElementById(`listingImg${i + 1}`);
+      if (el) el.src = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
+    });
+    for (let i = photos.length + 1; i <= 6; i++) {
+      const c = document.getElementById(`listingP${i}`);
+      if (c) c.style.display = 'none';
+    }
+    // Update map pin
+    const idx = CASTLES.findIndex(c => c.name === castle.name);
+    if (idx >= 0) {
+      const pinUrl = photos[0].getURI ? photos[0].getURI({ maxWidth: 64, maxHeight: 64 }) : '';
+      if (pinUrl) updatePinImage(idx, pinUrl);
+    }
+  }
+
+  // Hours
+  const hoursEl = document.getElementById('listingHoursGrid');
+  if (hoursEl) {
+    if (place.regularOpeningHours && place.regularOpeningHours.weekdayDescriptions) {
+      hoursEl.innerHTML = place.regularOpeningHours.weekdayDescriptions.map(d => {
+        const p = d.split(': ');
+        return `<div class="listing-hours-day">${p[0]}</div><div class="listing-hours-time">${p[1]||''}</div>`;
+      }).join('');
+    } else {
+      hoursEl.innerHTML = '<div style="color:#8a8a8a;font-size:13px;">Hours not available</div>';
+    }
+  }
+
+  // Reviews
+  const reviewsEl = document.getElementById('listingReviewCards');
+  if (reviewsEl) {
+    if (place.reviews && place.reviews.length > 0) {
+      reviewsEl.innerHTML = place.reviews.slice(0, 5).map(r => {
+        const stars = '★'.repeat(Math.floor(r.rating||0)) + '☆'.repeat(5-Math.floor(r.rating||0));
+        const author = r.authorAttribution ? r.authorAttribution.displayName : 'Anonymous';
+        const time = r.relativePublishTimeDescription || '';
+        const text = r.text ? (typeof r.text==='string'?r.text:(r.text.text||'')) : '';
+        return `<div class="listing-review-card"><div class="listing-review-header"><div class="listing-review-avatar">${author.charAt(0)}</div><div class="listing-review-meta"><div class="listing-review-author">${author}</div><div class="listing-review-date">${time}</div></div></div><div class="listing-review-stars-sm">${stars}</div><div class="listing-review-body">${text.length>250?text.substring(0,250)+'…':text}</div></div>`;
+      }).join('') + `<a class="listing-reviews-all-link" href="${place.googleMapsURI||'#'}" target="_blank">Read all ${(place.userRatingCount||castle.reviewCount||0).toLocaleString()} reviews</a>`;
+    } else {
+      reviewsEl.innerHTML = '<div style="color:#8a8a8a;font-size:13px;">No reviews available</div>';
+    }
+  }
+
+  // Links
+  const linksEl = document.getElementById('listingLinksSection');
+  if (linksEl) {
+    const links = [];
+    if (place.websiteURI) {
+      const domain = place.websiteURI.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+      links.push({ icon: '🌐', label: 'Official Website', url: place.websiteURI, display: domain });
+    }
+    if (place.googleMapsURI) {
+      links.push({ icon: '📍', label: 'Google Maps', url: place.googleMapsURI, display: 'View on Google Maps' });
+    }
+    if (links.length > 0) {
+      linksEl.style.display = 'block';
+      linksEl.innerHTML = `<h2 class="listing-section-title">Links</h2>` + links.map(l =>
+        `<a class="listing-link-row" href="${l.url}" target="_blank" rel="noopener">
+          <div class="listing-link-icon">${l.icon}</div>
+          <div class="listing-link-info"><div class="listing-link-label">${l.label}</div><div class="listing-link-url">${l.display}</div></div>
+          <div class="listing-link-arrow">›</div>
+        </a>`
+      ).join('');
+    }
+  }
+}
+
+async function listingLoadYouTube(castle) {
+  const cacheKey = castle.name;
+  if (ytCache[cacheKey]) {
+    listingRenderYouTube(ytCache[cacheKey]);
+    return;
+  }
+  try {
+    const q = encodeURIComponent(`${castle.name} ${castle.country} castle`);
+    const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${q}&type=video&maxResults=3&videoDuration=medium&relevanceLanguage=en&key=${YT_API_KEY}`);
+    const data = await res.json();
+    if (data.items && data.items.length > 0) {
+      ytCache[cacheKey] = data.items;
+      if (listingCastle && listingCastle.name === castle.name) listingRenderYouTube(data.items);
+    } else {
+      const el = document.getElementById('listingVideoCards');
+      if (el) el.innerHTML = '<div style="color:#8a8a8a;font-size:13px;">No videos found</div>';
+    }
+  } catch(e) {
+    const el = document.getElementById('listingVideoCards');
+    if (el) el.innerHTML = '';
+  }
+}
+
+function listingRenderYouTube(items) {
+  const el = document.getElementById('listingVideoCards');
+  if (!el) return;
+  const play = '<svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>';
+  el.innerHTML = items.slice(0, 3).map(item => {
+    const vid = item.id.videoId;
+    const title = item.snippet.title.replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"');
+    const ch = item.snippet.channelTitle;
+    const th = item.snippet.thumbnails.medium ? item.snippet.thumbnails.medium.url : item.snippet.thumbnails.default.url;
+    return `<div class="listing-video-card" onclick="this.outerHTML='<div class=\\'listing-video-embed\\'><iframe src=\\'https://www.youtube.com/embed/${vid}?autoplay=1\\' allow=\\'autoplay; encrypted-media\\' allowfullscreen></iframe></div>'"><div class="listing-video-thumb"><img src="${th}" loading="lazy"/><div class="listing-play-btn">${play}</div></div><div class="listing-video-meta"><div class="listing-video-title">${title}</div><div class="listing-video-channel">${ch}</div></div></div>`;
+  }).join('');
+}
+
+function listingToggleFav() {
+  if (!listingCastle) return;
+  toggleBookmark(listingCastle.name);
+  const faved = isBookmarked(listingCastle.name);
+  const btn = document.getElementById('listingFavBtn');
+  if (btn) btn.textContent = faved ? '★ Saved' : '☆ Save';
+  const overlay = document.getElementById('listingFavOverlay');
+  if (overlay) overlay.textContent = faved ? '❤' : '♡';
+}
+
+function listingAddToRoute() {
+  if (!listingCastle) return;
+  if (!routeBuilderStops.find(s => s.name === listingCastle.name)) {
+    routeBuilderStops.push({ ...listingCastle });
+    renderRouteBuilderStops();
+  }
+  // Brief visual feedback
+  const btn = document.querySelector('.listing-btn-primary');
+  if (btn) {
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Added!';
+    setTimeout(() => { btn.innerHTML = orig; }, 1500);
+  }
+}
+
+function listingShare() {
+  if (!listingCastle) return;
+  const url = `${window.location.origin}${window.location.pathname}?castle=${encodeURIComponent(listingCastle.name)}`;
+  const title = `${listingCastle.name} — Scenic Route`;
+  const text = `Check out ${listingCastle.name} on Scenic Route!`;
+  if (navigator.share) {
+    navigator.share({ title, text, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => {
+      const toast = document.getElementById('listingShareToast');
+      if (toast) { toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2000); }
+    }).catch(() => { prompt('Copy this link:', url); });
+  }
+}
+
+function listingScrollToReviews() {
+  const sheetScroll = document.getElementById('listingSheetScroll');
+  const sheet = document.getElementById('listingSheet');
+  const photoLayer = document.getElementById('listingPhotoLayer');
+  if (!listingSheetExpanded) {
+    listingSheetExpanded = true;
+    listingCurrentY = listingSheetFullY;
+    if (window.innerWidth >= 768) {
+      sheet.style.transform = `translateX(-50%) translateY(${listingCurrentY}px)`;
+    } else {
+      sheet.style.transform = `translateY(${listingCurrentY}px)`;
+    }
+    photoLayer.style.opacity = 0.6;
+    sheetScroll.classList.add('scrollable');
+  }
+  setTimeout(() => {
+    const target = document.getElementById('listingReviewsTitle');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, listingSheetExpanded ? 50 : 400);
+}
+
 // ========== COLLECTIONS ==========
 function openCollectionsPanel() {
   renderCollectionsList();
@@ -924,6 +1539,7 @@ function closeAllPanels() {
   closeNearMePanel();
   closeMyStuffPanel();
   closeSidebar();
+  closeListing();
   document.getElementById('filterPanel').classList.remove('active');
   document.getElementById('btnFilter').classList.remove('active');
   const rb = document.getElementById('routeBuilderPanel');
@@ -1708,7 +2324,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('qvDetailsBtn').addEventListener('click', () => {
     const castle = quickViewCastle;
     closeQuickView();
-    if (castle) openSidebar(castle);
+    if (castle) openListing(castle);
   });
   document.getElementById('qvBookmark').addEventListener('click', () => {
     if (quickViewCastle) {
