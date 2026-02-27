@@ -3,32 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scenic Route — Discover Castles, Abbeys & Ruins across the UK & Ireland</title>
+<title>castlecore — Discover Castles, Abbeys & Ruins across the UK & Ireland</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sage:#4a7c59;--cream:#f5f0e8;--gold:#e8a817;--burgundy:#8b2335;--forest:#2d5a3d;--stone:#a8956e;--text:#1a1a1a;--muted:#585858;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#fdfcfa}
+:root{--stone:#d4c5a9;--cream:#f0ebe0;--candlelight:#c9a84c;--burgundy:#8b2335;--forest:#2d5a3d;--ivy:#3d5a3e;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#faf8f4}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
-h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400}
+body{font-family:'Inter',sans-serif;color:var(--shadow);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
 .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px}
 .nav-links{display:flex;gap:24px;align-items:center}
-.nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);transition:color .2s}
-.nav-links a:hover{color:var(--sage)}
-.nav-links .btn-explore{background:var(--sage);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
-.nav-links .btn-explore:hover{background:#3d6a4b}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--twilight);transition:color .2s}
+.nav-links a:hover{color:var(--ivy)}
+.nav-links .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
+.nav-links .btn-explore:hover{background:#6e1a2a}
 .hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:16px;z-index:999}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:1rem;font-weight:500;color:var(--muted);padding:8px 0}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:8px 0}
 
 @media(max-width:768px){
 .nav-links{display:none}
@@ -38,40 +38,40 @@ img{max-width:100%;display:block}
 /* HERO */
 .hero{position:relative;height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:64px}
 .hero-bg{position:absolute;inset:0;background:#2a3a2a url('img/hero-edinburgh.jpg') center/cover no-repeat;transform:translateZ(0);will-change:transform}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.4) 40%,rgba(0,0,0,.2) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(42,37,34,.75) 0%,rgba(42,37,34,.4) 40%,rgba(42,37,34,.2) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:800px;width:100%}
-.hero h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:12px;line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.3)}
-.hero .subtitle{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:32px;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.hero h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:12px;line-height:1.2;text-shadow:0 2px 12px rgba(42,37,34,.3)}
+.hero .subtitle{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:32px;text-shadow:0 1px 8px rgba(42,37,34,.3)}
 .search-wrap{position:relative;max-width:560px;margin:0 auto 20px}
-.search-wrap input{width:100%;padding:16px 20px 16px 48px;border:none;border-radius:var(--pill);font-size:1rem;font-family:'Inter',sans-serif;outline:none;box-shadow:0 4px 24px rgba(0,0,0,.15)}
+.search-wrap input{width:100%;padding:16px 20px 16px 48px;border:none;border-radius:var(--pill);font-size:1rem;font-family:'Inter',sans-serif;outline:none;box-shadow:0 4px 24px rgba(42,37,34,.15)}
 .search-wrap .search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1.2rem;pointer-events:none}
-.search-results{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border-radius:var(--radius);box-shadow:0 8px 32px rgba(0,0,0,.15);max-height:360px;overflow-y:auto;display:none;z-index:10;text-align:left}
+.search-results{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.15);max-height:360px;overflow-y:auto;display:none;z-index:10;text-align:left}
 .search-results.open{display:block}
-.search-results a{display:flex;justify-content:space-between;padding:12px 20px;color:var(--text);font-size:.95rem;border-bottom:1px solid var(--border);transition:background .15s}
+.search-results a{display:flex;justify-content:space-between;padding:12px 20px;color:var(--shadow);font-size:.95rem;border-bottom:1px solid var(--border);transition:background .15s}
 .search-results a:last-child{border-bottom:none}
 .search-results a:hover{background:var(--cream)}
-.search-results .sr-type{color:var(--muted);font-size:.8rem}
+.search-results .sr-type{color:var(--twilight);font-size:.8rem}
 .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.pill{background:rgba(255,255,255,.18);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.3);color:#fff;padding:8px 16px;border-radius:var(--pill);font-size:.85rem;font-weight:500;cursor:pointer;transition:background .2s}
-.pill:hover{background:rgba(255,255,255,.3)}
+.pill{background:rgba(212,197,169,.2);backdrop-filter:blur(4px);border:1px solid rgba(212,197,169,.35);color:#fff;padding:8px 16px;border-radius:var(--pill);font-size:.85rem;font-weight:500;cursor:pointer;transition:background .2s}
+.pill:hover{background:rgba(212,197,169,.35)}
 
 @media(max-width:768px){
 .hero{height:100vh}
-.hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.5) 40%,rgba(0,0,0,.25) 100%)}
+.hero-overlay{background:linear-gradient(to top,rgba(42,37,34,.82) 0%,rgba(42,37,34,.5) 40%,rgba(42,37,34,.25) 100%)}
 }
 
 /* SECTION DIVIDER */
 .section-divider{display:flex;align-items:center;justify-content:center;padding:0 24px;max-width:1280px;margin:0 auto}
 .section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
-.section-divider .divider-ornament{padding:0 16px;color:var(--muted);font-size:.9rem;opacity:.5}
+.section-divider .divider-ornament{padding:0 16px;color:var(--hearth);font-size:.9rem;opacity:.5}
 
 /* SECTIONS */
 section{padding:48px 24px}
 .section-inner{max-width:1280px;margin:0 auto}
 .section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
 .section-header h2{font-size:clamp(1.8rem,3.5vw,2.4rem)}
-.section-header a{color:var(--sage);font-weight:600;font-size:.95rem}
-.section-tagline{color:var(--muted);font-size:.95rem;margin-bottom:28px;font-style:italic}
+.section-header a{color:var(--ivy);font-weight:600;font-size:.95rem}
+.section-tagline{color:var(--twilight);font-size:.95rem;margin-bottom:28px;font-family:'Playfair Display',serif;font-style:italic}
 .bg-cream{background:var(--cream)}
 
 /* SCROLL ROW */
@@ -114,7 +114,7 @@ section{padding:48px 24px}
 .trail-card .trail-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .trail-card:hover .trail-img img{transform:scale(1.05)}
 .trail-card .trail-body{padding:16px 18px 18px;color:#fff}
-.trail-card .trail-body h3{font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:6px}
+.trail-card .trail-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:6px}
 .trail-card .trail-body .trail-meta{font-size:.82rem;opacity:.85;margin-bottom:6px;display:flex;align-items:center;gap:6px}
 .trail-card .trail-body .trail-meta span{background:rgba(255,255,255,.2);padding:2px 8px;border-radius:var(--pill);font-size:.75rem}
 .trail-card .trail-body .trail-desc{font-size:.85rem;opacity:.8;line-height:1.4}
@@ -142,12 +142,12 @@ section{padding:48px 24px}
 .feat-card:hover .feat-img img{transform:scale(1.05)}
 .feat-card .feat-body{padding:18px}
 .feat-card .feat-body h3{font-size:1.15rem;margin-bottom:4px}
-.feat-card .feat-loc{color:var(--muted);font-size:.85rem;margin-bottom:6px}
-.feat-card .feat-rating{color:var(--gold);font-size:.85rem;margin-bottom:6px}
-.feat-card .feat-hook{font-size:.9rem;color:var(--muted);margin-bottom:8px}
-.feat-card .type-pill{display:inline-block;background:var(--cream);color:var(--sage);font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:var(--pill);text-transform:capitalize}
-.feat-card .feat-cta{display:inline-block;margin-top:10px;background:var(--sage);color:#fff;padding:8px 18px;border-radius:var(--pill);font-size:.85rem;font-weight:600;transition:background .2s}
-.feat-card:hover .feat-cta{background:#3d6a4b}
+.feat-card .feat-loc{color:var(--twilight);font-size:.85rem;margin-bottom:6px}
+.feat-card .feat-rating{color:var(--candlelight);font-size:.85rem;margin-bottom:6px}
+.feat-card .feat-hook{font-size:.9rem;color:var(--twilight);margin-bottom:8px}
+.feat-card .type-pill{display:inline-block;background:var(--cream);color:var(--ivy);font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:var(--pill);text-transform:capitalize}
+.feat-card .feat-cta{display:inline-block;margin-top:10px;background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-size:.85rem;font-weight:600;transition:background .2s}
+.feat-card:hover .feat-cta{background:#6e1a2a}
 
 @media(max-width:768px){
 .featured-grid{grid-template-columns:repeat(2,1fr);gap:16px}
@@ -173,7 +173,7 @@ section{padding:48px 24px}
 /* CTA */
 .cta-section{text-align:center;padding:64px 24px}
 .cta-section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
-.cta-section p{color:var(--muted);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
+.cta-section p{color:var(--twilight);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
 .btn-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s}
 .btn-cta:hover{background:#6e1a2a}
 
@@ -181,16 +181,16 @@ section{padding:48px 24px}
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
 .how-step .how-icon{font-size:2.5rem;margin-bottom:12px}
 .how-step h3{font-size:1.15rem;margin-bottom:8px}
-.how-step p{color:var(--muted);font-size:.9rem;max-width:280px;margin:0 auto}
+.how-step p{color:var(--twilight);font-size:.9rem;max-width:280px;margin:0 auto}
 @media(max-width:768px){
 .how-grid{grid-template-columns:1fr;gap:40px}
 }
 
 /* FOOTER */
-footer{background:var(--text);color:#fff;padding:64px 24px 32px}
+footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 .footer-inner{max-width:1280px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
-.footer-brand .footer-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:8px}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px}
 .footer-brand p{color:rgba(255,255,255,.6);font-size:.85rem;max-width:280px}
 .footer-col h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;color:rgba(255,255,255,.5)}
 .footer-col a{display:block;color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:8px;transition:color .2s}
@@ -209,7 +209,7 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 <!-- NAV -->
 <nav class="nav">
 <div class="nav-inner">
-<a href="/" class="nav-logo">🏰 Scenic Route</a>
+<a href="/" class="nav-logo">castlecore</a>
 <div class="nav-links">
 <a href="explore.html" class="btn-explore">Explore Map</a>
 <a href="explore.html">Collections</a>
@@ -388,7 +388,7 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
-<div class="footer-logo">🏰 Scenic Route</div>
+<div class="footer-logo">castlecore</div>
 <p>The most complete heritage guide for the UK &amp; Ireland</p>
 </div>
 <div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="explore.html">Collections</a><a href="explore.html">Regions</a><a href="explore.html">Trails</a></div>
@@ -397,7 +397,7 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 </div>
 <div class="footer-bottom">
 <span>Built with ❤️ for history lovers</span>
-<span>© 2026 Scenic Route</span>
+<span>© 2026 castlecore</span>
 </div>
 </div>
 </footer>
