@@ -247,11 +247,11 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
   <div class="sheet-scroll" id="sheetScroll">
     <div class="divider"></div>
 
-    <div class="rating-bar">
+    <div class="rating-bar" onclick="scrollToReviews()" style="cursor:pointer">
       <div class="rating-big">4.7</div>
       <div>
         <div class="rating-stars">★★★★★</div>
-        <div class="rating-count">9,870 Google reviews</div>
+        <div class="rating-count" style="text-decoration:underline; text-decoration-color:var(--text-muted)">9,870 Google reviews</div>
         <div class="rating-rank">#3 rated palace in England</div>
       </div>
     </div>
@@ -274,7 +274,6 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
     <!-- Share + Links -->
     <div class="share-bar">
       <button class="btn btn-share" onclick="shareListing()">📤 Share</button>
-      <a class="btn btn-gmaps" href="https://www.google.com/maps/dir/?api=1&destination=51.4036,-0.3378" target="_blank">📍 Google Maps</a>
     </div>
 
     <div class="links-section" id="linksSection" style="display:none"></div>
@@ -300,7 +299,7 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
 
     <div class="divider"></div>
 
-    <h2 class="section-title">Reviews</h2>
+    <h2 class="section-title" id="reviewsTitle">Reviews</h2>
     <div id="reviewCards">Loading...</div>
 
     <div class="divider"></div>
@@ -470,9 +469,24 @@ sheetPeek.addEventListener('click', (e) => {
   }
 });
 
-// Auto-expand when photo scroll reaches bottom
+// Collapse sheet when user scrolls photos back up
+let lastPhotoScroll = 0;
 photoLayer.addEventListener('scroll', () => {
   const el = photoLayer;
+  const scrollingUp = el.scrollTop < lastPhotoScroll;
+  lastPhotoScroll = el.scrollTop;
+
+  // Collapse if user is scrolling up through photos while sheet is expanded
+  if (scrollingUp && expanded && el.scrollTop < el.scrollHeight - el.clientHeight - 100) {
+    expanded = false;
+    currentY = sheetPeekY;
+    sheet.style.transform = `translateY(${currentY}px)`;
+    photoLayer.style.opacity = 1;
+    sheetScroll.scrollTop = 0;
+    return;
+  }
+
+  // Auto-expand when photo scroll reaches bottom
   if (el.scrollHeight - el.scrollTop - el.clientHeight < 50 && !expanded) {
     expanded = true;
     currentY = sheetFullY;
@@ -537,6 +551,21 @@ function renderReviews(place) {
     const text = r.text ? (typeof r.text==='string'?r.text:(r.text.text||'')) : '';
     return `<div class="review-card"><div class="review-header"><div class="review-avatar">${author.charAt(0)}</div><div class="review-meta"><div class="review-author">${author}</div><div class="review-date">${time}</div></div></div><div class="review-stars-sm">${stars}</div><div class="review-body">${text.length>250?text.substring(0,250)+'…':text}</div></div>`;
   }).join('') + `<a class="reviews-all-link" href="${place.googleMapsURI||'#'}" target="_blank">Read all ${(place.userRatingCount||9870).toLocaleString()} reviews</a>`;
+}
+
+function scrollToReviews() {
+  // Expand sheet first if not already
+  if (!expanded) {
+    expanded = true;
+    currentY = sheetFullY;
+    sheet.style.transform = `translateY(${currentY}px)`;
+    photoLayer.style.opacity = 0.6;
+  }
+  // Scroll to reviews section within sheet
+  setTimeout(() => {
+    const target = document.getElementById('reviewsTitle');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, expanded ? 50 : 400);
 }
 
 function renderLinks(place) {
