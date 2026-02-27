@@ -9,9 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sage:#4a7c59;--cream:#f5f0e8;--gold:#e8a817;--text:#1a1a1a;--muted:#585858;--border:#e8e8e8;--radius:12px;--pill:20px}
+:root{--sage:#4a7c59;--cream:#f5f0e8;--gold:#e8a817;--text:#1a1a1a;--muted:#585858;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#fdfcfa}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
 h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
@@ -37,11 +37,11 @@ img{max-width:100%;display:block}
 
 /* HERO */
 .hero{position:relative;height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:64px}
-.hero-bg{position:absolute;inset:0;background:#2a3a2a url('img/hero-edinburgh.jpg') center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.15) 100%)}
+.hero-bg{position:absolute;inset:0;background:#2a3a2a url('img/hero-edinburgh.jpg') center/cover no-repeat;transform:translateZ(0);will-change:transform}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.4) 40%,rgba(0,0,0,.2) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:800px;width:100%}
-.hero h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:12px;line-height:1.2}
-.hero .subtitle{color:rgba(255,255,255,.85);font-size:1.1rem;margin-bottom:32px}
+.hero h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:12px;line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.hero .subtitle{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:32px;text-shadow:0 1px 8px rgba(0,0,0,.3)}
 .search-wrap{position:relative;max-width:560px;margin:0 auto 20px}
 .search-wrap input{width:100%;padding:16px 20px 16px 48px;border:none;border-radius:var(--pill);font-size:1rem;font-family:'Inter',sans-serif;outline:none;box-shadow:0 4px 24px rgba(0,0,0,.15)}
 .search-wrap .search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1.2rem;pointer-events:none}
@@ -57,14 +57,21 @@ img{max-width:100%;display:block}
 
 @media(max-width:768px){
 .hero{height:100vh}
+.hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.5) 40%,rgba(0,0,0,.25) 100%)}
 }
 
+/* SECTION DIVIDER */
+.section-divider{display:flex;align-items:center;justify-content:center;padding:0 24px;max-width:1280px;margin:0 auto}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+.section-divider .divider-ornament{padding:0 16px;color:var(--muted);font-size:.9rem;opacity:.5}
+
 /* SECTIONS */
-section{padding:64px 24px}
+section{padding:48px 24px}
 .section-inner{max-width:1280px;margin:0 auto}
-.section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px}
-.section-header h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.section-header h2{font-size:clamp(1.8rem,3.5vw,2.4rem)}
 .section-header a{color:var(--sage);font-weight:600;font-size:.95rem}
+.section-tagline{color:var(--muted);font-size:.95rem;margin-bottom:28px;font-style:italic}
 .bg-cream{background:var(--cream)}
 
 /* SCROLL ROW */
@@ -76,16 +83,53 @@ section{padding:64px 24px}
 .scroll-card .card-overlay h3{font-size:1.1rem;margin-bottom:2px}
 .scroll-card .card-overlay span{font-size:.8rem;opacity:.85}
 
-.trail-card{flex:0 0 320px;height:200px}
+/* COLLECTIONS MAGAZINE GRID */
+.collections-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+.collections-grid .coll-card{border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.collections-grid .coll-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.collections-grid .coll-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.collections-grid .coll-card:hover img{transform:scale(1.05)}
+.collections-grid .coll-card .coll-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff}
+.collections-grid .coll-card .coll-overlay h3{font-size:1.15rem;margin-bottom:3px}
+.collections-grid .coll-card .coll-overlay .coll-tagline{font-size:.82rem;opacity:.85;margin-bottom:2px}
+.collections-grid .coll-card .coll-overlay .coll-count{font-size:.75rem;opacity:.6}
+.collections-grid .coll-featured{grid-column:span 2;grid-row:span 2}
+.collections-grid .coll-featured .coll-overlay h3{font-size:1.5rem}
+.collections-grid .coll-featured .coll-overlay .coll-tagline{font-size:.9rem}
+
+@media(max-width:768px){
+.collections-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+.collections-grid .coll-featured{grid-column:span 2;grid-row:span 1}
+}
+@media(max-width:480px){
+.collections-grid{grid-template-columns:1fr;grid-auto-rows:180px}
+.collections-grid .coll-featured{grid-column:span 1}
+}
+
+/* TRAIL CARDS - bigger and more prominent */
+.trail-row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
+.trail-row::-webkit-scrollbar{display:none}
+.trail-card{flex:0 0 380px;height:260px;border-radius:16px;overflow:hidden;position:relative;scroll-snap-align:start;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.trail-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.15)}
+.trail-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.trail-card:hover img{transform:scale(1.05)}
+.trail-card .trail-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff}
+.trail-card .trail-overlay h3{font-size:1.3rem;margin-bottom:6px}
+.trail-card .trail-overlay .trail-meta{font-size:.85rem;opacity:.85;margin-bottom:4px}
+.trail-card .trail-overlay .trail-desc{font-size:.8rem;opacity:.7}
+
+@media(max-width:480px){
+.trail-card{flex:0 0 85vw;height:240px}
+}
 
 /* FEATURED GRID */
 .featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.feat-card{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
-.feat-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.feat-card{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(120,90,50,.06)}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(120,90,50,.12)}
 .feat-card .feat-img{height:200px;overflow:hidden}
 .feat-card .feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
 .feat-card:hover .feat-img img{transform:scale(1.05)}
-.feat-card .feat-body{padding:16px}
+.feat-card .feat-body{padding:18px}
 .feat-card .feat-body h3{font-size:1.15rem;margin-bottom:4px}
 .feat-card .feat-loc{color:var(--muted);font-size:.85rem;margin-bottom:6px}
 .feat-card .feat-rating{color:var(--gold);font-size:.85rem;margin-bottom:6px}
@@ -99,6 +143,7 @@ section{padding:64px 24px}
 }
 @media(max-width:480px){
 .featured-grid{grid-template-columns:1fr}
+.feat-card{box-shadow:0 4px 20px rgba(120,90,50,.1)}
 }
 
 /* REGION GRID */
@@ -115,7 +160,7 @@ section{padding:64px 24px}
 }
 
 /* CTA */
-.cta-section{text-align:center;padding:80px 24px}
+.cta-section{text-align:center;padding:64px 24px}
 .cta-section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
 .cta-section p{color:var(--muted);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
 .btn-cta{display:inline-block;background:var(--sage);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s}
@@ -195,6 +240,9 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 </div>
 </section>
 
+<!-- DIVIDER -->
+<div class="section-divider"><span class="divider-ornament">✦</span></div>
+
 <!-- COLLECTIONS -->
 <section>
 <div class="section-inner">
@@ -202,18 +250,22 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 <h2>Explore by Collection</h2>
 <a href="explore.html">View all →</a>
 </div>
-<div class="scroll-row">
-<a class="scroll-card" href="explore.html"><img src="img/bodiam.jpg" alt="Top Rated" loading="lazy"><div class="card-overlay"><h3>🏆 Top Rated</h3><span>120 sites</span></div></a>
-<a class="scroll-card" href="explore.html"><img src="img/pembroke.jpg" alt="Hidden Gems" loading="lazy"><div class="card-overlay"><h3>💎 Hidden Gems</h3><span>340 sites</span></div></a>
-<a class="scroll-card" href="explore.html"><img src="img/whitby-abbey.jpg" alt="Haunted" loading="lazy"><div class="card-overlay"><h3>👻 Haunted &amp; Legendary</h3><span>85 sites</span></div></a>
-<a class="scroll-card" href="explore.html"><img src="img/doune.jpg" alt="Filming Locations" loading="lazy"><div class="card-overlay"><h3>🎬 Filming Locations</h3><span>64 sites</span></div></a>
-<a class="scroll-card" href="explore.html"><img src="img/corfe.jpg" alt="Free to Visit" loading="lazy"><div class="card-overlay"><h3>🆓 Free to Visit</h3><span>980 sites</span></div></a>
-<a class="scroll-card" href="explore.html"><img src="img/warwick.jpg" alt="Best Preserved" loading="lazy"><div class="card-overlay"><h3>🏰 Best Preserved</h3><span>150 sites</span></div></a>
-<a class="scroll-card" href="explore.html"><img src="img/bamburgh.jpg" alt="Romantic Ruins" loading="lazy"><div class="card-overlay"><h3>🌿 Romantic Ruins</h3><span>420 sites</span></div></a>
-<a class="scroll-card" href="explore.html"><img src="img/eilean-donan.jpg" alt="Most Photogenic" loading="lazy"><div class="card-overlay"><h3>📸 Most Photogenic</h3><span>200 sites</span></div></a>
+<p class="section-tagline">Curated journeys through Britain and Ireland's heritage</p>
+<div class="collections-grid">
+<a class="coll-card coll-featured" href="explore.html"><img src="img/bodiam.jpg" alt="Top Rated" loading="lazy"><div class="coll-overlay"><h3>🏆 Top Rated</h3><span class="coll-tagline">The ones everyone's talking about</span><span class="coll-count">120 sites</span></div></a>
+<a class="coll-card" href="explore.html"><img src="img/pembroke.jpg" alt="Hidden Gems" loading="lazy"><div class="coll-overlay"><h3>💎 Hidden Gems</h3><span class="coll-tagline">Off the beaten path</span><span class="coll-count">340 sites</span></div></a>
+<a class="coll-card" href="explore.html"><img src="img/whitby-abbey.jpg" alt="Haunted" loading="lazy"><div class="coll-overlay"><h3>👻 Haunted &amp; Legendary</h3><span class="coll-tagline">Where history meets mystery</span><span class="coll-count">85 sites</span></div></a>
+<a class="coll-card" href="explore.html"><img src="img/doune.jpg" alt="Filming Locations" loading="lazy"><div class="coll-overlay"><h3>🎬 Filming Locations</h3><span class="coll-tagline">As seen on screen</span><span class="coll-count">64 sites</span></div></a>
+<a class="coll-card" href="explore.html"><img src="img/corfe.jpg" alt="Free to Visit" loading="lazy"><div class="coll-overlay"><h3>🆓 Free to Visit</h3><span class="coll-tagline">Explore without the entry fee</span><span class="coll-count">980 sites</span></div></a>
+<a class="coll-card" href="explore.html"><img src="img/warwick.jpg" alt="Best Preserved" loading="lazy"><div class="coll-overlay"><h3>🏰 Best Preserved</h3><span class="coll-tagline">Standing strong through the centuries</span><span class="coll-count">150 sites</span></div></a>
+<a class="coll-card" href="explore.html"><img src="img/bamburgh.jpg" alt="Romantic Ruins" loading="lazy"><div class="coll-overlay"><h3>🌿 Romantic Ruins</h3><span class="coll-tagline">Beautifully broken, hauntingly lovely</span><span class="coll-count">420 sites</span></div></a>
+<a class="coll-card" href="explore.html"><img src="img/eilean-donan.jpg" alt="Most Photogenic" loading="lazy"><div class="coll-overlay"><h3>📸 Most Photogenic</h3><span class="coll-tagline">Bring your best lens</span><span class="coll-count">200 sites</span></div></a>
 </div>
 </div>
 </section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><span class="divider-ornament">✦</span></div>
 
 <!-- FEATURED -->
 <section>
@@ -221,6 +273,7 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 <div class="section-header">
 <h2>Worth the Visit</h2>
 </div>
+<p class="section-tagline">Hand-picked favourites that never disappoint</p>
 <div class="featured-grid">
 <a class="feat-card" href="site/edinburgh-castle.html">
 <div class="feat-img"><img src="img/hero-edinburgh.jpg" alt="Edinburgh Castle" loading="lazy"></div>
@@ -250,12 +303,16 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 </div>
 </section>
 
+<!-- DIVIDER -->
+<div class="section-divider"><span class="divider-ornament">✦</span></div>
+
 <!-- REGIONS -->
 <section class="bg-cream">
 <div class="section-inner">
 <div class="section-header">
 <h2>Explore by Region</h2>
 </div>
+<p class="section-tagline">From the Scottish Highlands to the hills of Ireland</p>
 <div class="region-grid">
 <a class="region-card" href="explore.html"><img src="img/tower-of-london.jpg" alt="London &amp; Surrey" loading="lazy"><div class="region-overlay"><h3>London &amp; Surrey</h3><span>~40 sites</span></div></a>
 <a class="region-card" href="explore.html"><img src="img/eilean-donan.jpg" alt="Scottish Highlands" loading="lazy"><div class="region-overlay"><h3>Scottish Highlands</h3><span>~180 sites</span></div></a>
@@ -273,24 +330,26 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 </div>
 </section>
 
+<!-- DIVIDER -->
+<div class="section-divider"><span class="divider-ornament">✦</span></div>
+
 <!-- TRAILS -->
 <section>
 <div class="section-inner">
 <div class="section-header">
 <h2>Follow a Trail</h2>
 </div>
-<div class="scroll-row">
-<a class="scroll-card trail-card" href="explore.html"><img src="img/conwy.jpg" alt="Iron Ring" loading="lazy"><div class="card-overlay"><h3>🏴 Edward I's Iron Ring</h3><span>North Wales · 8 castles · 3 hours</span></div></a>
-<a class="scroll-card trail-card" href="explore.html"><img src="img/bodiam.jpg" alt="Norman Conquest" loading="lazy"><div class="card-overlay"><h3>⚔️ Norman Conquest Trail</h3><span>South England · 12 castles · 5 hours</span></div></a>
-<a class="scroll-card trail-card" href="explore.html"><img src="img/eilean-donan.jpg" alt="Highland Route" loading="lazy"><div class="card-overlay"><h3>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Highland Castle Route</h3><span>Scottish Highlands · 10 castles · 6 hours</span></div></a>
-<a class="scroll-card trail-card" href="explore.html"><img src="img/blarney.jpg" alt="Ireland's Ancient East" loading="lazy"><div class="card-overlay"><h3>🍀 Ireland's Ancient East</h3><span>South East Ireland · 9 castles · 4 hours</span></div></a>
-<a class="scroll-card trail-card" href="explore.html"><img src="img/whitby-abbey.jpg" alt="Haunted Trail" loading="lazy"><div class="card-overlay"><h3>👻 Haunted Castle Trail</h3><span>England · 7 castles · 5 hours</span></div></a>
-<a class="scroll-card trail-card" href="explore.html"><img src="img/bamburgh.jpg" alt="Photographer's Dream" loading="lazy"><div class="card-overlay"><h3>📸 Photographer's Dream</h3><span>UK-wide · 10 castles · 8 hours</span></div></a>
+<p class="section-tagline">Epic road trips through centuries of history</p>
+<div class="trail-row">
+<a class="trail-card" href="explore.html"><img src="img/conwy.jpg" alt="Iron Ring" loading="lazy"><div class="trail-overlay"><h3>🏴 Edward I's Iron Ring</h3><span class="trail-meta">North Wales · 8 castles · 3 hours</span><span class="trail-desc">The mighty chain of fortresses that conquered Wales</span></div></a>
+<a class="trail-card" href="explore.html"><img src="img/bodiam.jpg" alt="Norman Conquest" loading="lazy"><div class="trail-overlay"><h3>⚔️ Norman Conquest Trail</h3><span class="trail-meta">South England · 12 castles · 5 hours</span><span class="trail-desc">Follow in William the Conqueror's footsteps</span></div></a>
+<a class="trail-card" href="explore.html"><img src="img/eilean-donan.jpg" alt="Highland Route" loading="lazy"><div class="trail-overlay"><h3>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Highland Castle Route</h3><span class="trail-meta">Scottish Highlands · 10 castles · 6 hours</span><span class="trail-desc">Lochs, glens, and ancient clan strongholds</span></div></a>
+<a class="trail-card" href="explore.html"><img src="img/blarney.jpg" alt="Ireland's Ancient East" loading="lazy"><div class="trail-overlay"><h3>🍀 Ireland's Ancient East</h3><span class="trail-meta">South East Ireland · 9 castles · 4 hours</span><span class="trail-desc">5,000 years of stories woven through green hills</span></div></a>
+<a class="trail-card" href="explore.html"><img src="img/whitby-abbey.jpg" alt="Haunted Trail" loading="lazy"><div class="trail-overlay"><h3>👻 Haunted Castle Trail</h3><span class="trail-meta">England · 7 castles · 5 hours</span><span class="trail-desc">For the brave — ghosts, legends, and dark histories</span></div></a>
+<a class="trail-card" href="explore.html"><img src="img/bamburgh.jpg" alt="Photographer's Dream" loading="lazy"><div class="trail-overlay"><h3>📸 Photographer's Dream</h3><span class="trail-meta">UK-wide · 10 castles · 8 hours</span><span class="trail-desc">The most stunning shots you'll ever capture</span></div></a>
 </div>
 </div>
 </section>
-
-<!-- stats section removed -->
 
 <!-- NEAR ME CTA -->
 <section class="cta-section">
@@ -303,6 +362,7 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 <section class="bg-cream">
 <div class="section-inner">
 <div class="section-header"><h2>How It Works</h2><span></span></div>
+<p class="section-tagline">Three steps to your next adventure</p>
 <div class="how-grid">
 <div class="how-step"><div class="how-icon">🔍</div><h3>Discover</h3><p>Browse 3,000+ castles by region, type, era, or collection</p></div>
 <div class="how-step"><div class="how-icon">🗺️</div><h3>Plan</h3><p>Build custom routes and save your favorites</p></div>
@@ -354,6 +414,14 @@ timer=setTimeout(()=>search(this.value.trim()),200);
 document.addEventListener('click',function(e){
 if(!e.target.closest('.search-wrap'))results.classList.remove('open');
 });
+/* Subtle parallax on hero */
+var heroBg=document.querySelector('.hero-bg');
+if(heroBg&&window.innerWidth>768){
+window.addEventListener('scroll',function(){
+var s=window.pageYOffset;
+if(s<window.innerHeight){heroBg.style.transform='translateY('+s*0.35+'px)'}
+},{passive:true});
+}
 })();
 </script>
 </body>
