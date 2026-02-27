@@ -1290,5 +1290,834 @@ const RICH_SITE_DATA = {
       note: 'Seat of Clan MacLean on a dramatic clifftop on the Isle of Mull. The castle interior involves stairs. Not fully wheelchair accessible. The views across the Sound of Mull to the mainland are spectacular. Open April-October.'
     },
     events: []
+  },
+
+  // ===== BATCH 2: Additional ~40 entries =====
+
+  "Cahir Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Cahir Station', detail: 'On the Limerick Junction–Waterford line, 5 min walk from the castle' },
+      { icon: '🚌', name: 'Bus Éireann', detail: 'Route 55 Dublin–Cork stops in Cahir town centre' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free parking at the castle entrance on Castle Street' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Multi-Level Keep', cls: 'amber' },
+        { icon: '🌿', text: 'Riverside Setting', cls: 'green' }
+      ],
+      note: 'One of Ireland\'s largest and best-preserved castles, set on a rocky island in the River Suir. Ground floor is accessible but upper levels require stairs. Well-maintained paths throughout the courtyard.'
+    },
+    events: [
+      { month: 'JUN', day: '21', name: 'Heritage Week Tours', desc: 'Free guided tours during National Heritage Week', badge: 'special', badgeText: 'HERITAGE', meta: 'Free · Aug' },
+      { month: 'DEC', day: '08', name: 'Winter Solstice Event', desc: 'Special winter opening with historical demonstrations', badge: 'seasonal', badgeText: 'WINTER', meta: 'Free with admission' }
+    ]
+  },
+
+  "Ross Castle": {
+    gettingThere: [
+      { icon: '🚌', name: 'Killarney Town', detail: 'Bus from Killarney bus station, then 2.5 km walk or taxi' },
+      { icon: '🚂', name: 'Killarney Station', detail: 'Main rail hub, 3 km from castle via Ross Road' },
+      { icon: '🅿️', name: 'Ross Castle Car Park', detail: 'Large car park at the castle, €2 parking fee' },
+      { icon: '🚢', name: 'Lake Boats', detail: 'Boat trips on Lough Leane depart from the castle pier' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Floor Only', cls: 'amber' },
+        { icon: '🏛️', text: 'Tower House', cls: 'amber' },
+        { icon: '🌊', text: 'Lakeside', cls: 'green' }
+      ],
+      note: 'A 15th-century tower house on the shore of Lough Leane in Killarney National Park. Interior accessed by guided tour only with narrow spiral stairs. Stunning lakeside setting with boat trips available.'
+    },
+    events: [
+      { month: 'JUL', day: '15', name: 'Killarney Regatta', desc: 'Traditional rowing races on Lough Leane', badge: 'special', badgeText: 'SPORT', meta: 'Free to watch' }
+    ]
+  },
+
+  "Bunratty Castle": {
+    gettingThere: [
+      { icon: '✈️', name: 'Shannon Airport', detail: 'Just 8 km away, 10 min drive' },
+      { icon: '🚌', name: 'Bus Éireann 343', detail: 'Limerick–Shannon route stops at Bunratty village' },
+      { icon: '🅿️', name: 'Bunratty Car Park', detail: 'Large free car park adjacent to castle and folk park' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Limited Access', cls: 'red' },
+        { icon: '🏛️', text: 'Spiral Stairs', cls: 'amber' },
+        { icon: '👨‍👩‍👧‍👦', text: 'Folk Park', cls: 'green' }
+      ],
+      note: 'Restored 15th-century tower house with adjacent folk park recreating 19th-century Irish life. Castle interior requires climbing steep spiral staircases. Folk park is mostly accessible on flat ground.'
+    },
+    events: [
+      { month: 'APR', day: '01', name: 'Medieval Banquet', desc: 'Nightly medieval banquets with music, storytelling and feasting', badge: 'special', badgeText: 'BANQUET', meta: '€75 pp · Year-round' },
+      { month: 'DEC', day: '01', name: 'Christmas at Bunratty', desc: 'Festive celebrations in the Folk Park with traditional crafts', badge: 'seasonal', badgeText: 'CHRISTMAS', meta: '€18 adult' }
+    ]
+  },
+
+  "Dublin Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Pearse / Tara Street', detail: 'DART stations 10 min walk via Dame Street' },
+      { icon: '🚌', name: 'Dublin Bus', detail: 'Multiple routes to Dame Street / Christ Church, 2 min walk' },
+      { icon: '🚋', name: 'Luas Green Line', detail: 'St Stephen\'s Green stop, 8 min walk' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Mostly Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'State Apartments', cls: 'green' },
+        { icon: '🏙️', text: 'City Centre', cls: 'green' }
+      ],
+      note: 'A major government complex and tourist attraction in the heart of Dublin. State Apartments are accessible by lift. The medieval undercroft and Chapel Royal require some steps. Guided tours available.'
+    },
+    events: [
+      { month: 'SEP', day: '14', name: 'Culture Night', desc: 'Free evening access to State Apartments with special programming', badge: 'special', badgeText: 'FREE', meta: 'Free · September' },
+      { month: 'AUG', day: '20', name: 'Heritage Week', desc: 'Free guided heritage tours of the medieval undercroft', badge: 'special', badgeText: 'HERITAGE', meta: 'Free' }
+    ]
+  },
+
+  "Malahide Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Malahide DART', detail: 'DART station 15 min walk through the parklands' },
+      { icon: '🚌', name: 'Dublin Bus 42', detail: 'From Talbot Street to Malahide village, 5 min walk' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Large pay & display car park in the demesne, €5' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🌳', text: 'Parkland & Gardens', cls: 'green' },
+        { icon: '👨‍👩‍👧‍👦', text: 'Family Friendly', cls: 'green' }
+      ],
+      note: 'Set in 260 acres of parkland, Malahide Castle dates to the 12th century. Ground floor accessible; upper floors via stairs. Beautiful botanical gardens, butterfly house, and playground. Guided tours of the castle interior.'
+    },
+    events: [
+      { month: 'JUN', day: '15', name: 'Malahide Castle Concerts', desc: 'Major outdoor concerts in the castle grounds', badge: 'concert', badgeText: 'CONCERT', meta: '€50-80 · Jun-Jul' },
+      { month: 'DEC', day: '01', name: 'Castle of Light', desc: 'Illuminated winter trail through the castle grounds', badge: 'seasonal', badgeText: 'CHRISTMAS', meta: '€20 adult' }
+    ]
+  },
+
+  "Birr Castle": {
+    gettingThere: [
+      { icon: '🚌', name: 'Bus Éireann', detail: 'Routes from Dublin and Limerick stop in Birr town' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free parking inside the demesne gates' },
+      { icon: '🚗', name: 'By Car', detail: 'On the N52, roughly equidistant from Dublin and Limerick (1.5 hrs)' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Gardens Accessible', cls: 'green' },
+        { icon: '🌳', text: '120 Acres Gardens', cls: 'green' },
+        { icon: '🔭', text: 'Science Centre', cls: 'green' }
+      ],
+      note: 'Home to the Parsons family since 1620. The gardens are renowned for rare plants and the Great Telescope (1845). Castle interior not open but the demesne, Science Centre, and treehouse trail are excellent. Mostly flat paths.'
+    },
+    events: [
+      { month: 'MAY', day: '10', name: 'Birr Vintage Week', desc: 'Heritage festival with castle grounds events and exhibitions', badge: 'special', badgeText: 'FESTIVAL', meta: 'Various prices' }
+    ]
+  },
+
+  "Dunguaire Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: 'On the N67 at Kinvara, 30 km south of Galway city' },
+      { icon: '🚌', name: 'Bus Éireann 350', detail: 'Galway–Ballyvaughan route stops in Kinvara village' },
+      { icon: '🅿️', name: 'Roadside Parking', detail: 'Small car park beside the castle on the shore road' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Not Accessible', cls: 'red' },
+        { icon: '🏛️', text: 'Tower House', cls: 'amber' },
+        { icon: '🌊', text: 'Shoreline Setting', cls: 'green' }
+      ],
+      note: 'A picturesque 16th-century tower house on the shores of Galway Bay. Very narrow spiral staircase to upper floors. One of Ireland\'s most photographed castles. Medieval banquets held in summer.'
+    },
+    events: [
+      { month: 'MAY', day: '01', name: 'Medieval Banquets', desc: 'Nightly medieval banquets with Irish music and poetry', badge: 'special', badgeText: 'BANQUET', meta: '€65 pp · May-Oct' }
+    ]
+  },
+
+  "Beaumaris Castle": {
+    gettingThere: [
+      { icon: '🚌', name: 'Arriva 53/57', detail: 'From Bangor to Beaumaris, 30 min journey' },
+      { icon: '🚂', name: 'Bangor Station', detail: 'Nearest rail, then bus or taxi (9 miles) across the Menai Strait' },
+      { icon: '🅿️', name: 'Town Car Parks', detail: 'Pay & display in Beaumaris town, short walk to castle' },
+      { icon: '⛴️', name: 'Beaumaris Pier', detail: 'Seasonal ferry services from Caernarfon and Puffin Island trips' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Mostly Accessible', cls: 'green' },
+        { icon: '🏰', text: 'Concentric Design', cls: 'green' },
+        { icon: '🌊', text: 'Moated', cls: 'green' }
+      ],
+      note: 'The last and largest of Edward I\'s castles in Wales, and a UNESCO World Heritage Site. Never completed but considered the most technically perfect concentric castle in Britain. Flat inner ward is accessible. Some wall walks have steps.'
+    },
+    events: [
+      { month: 'MAY', day: '25', name: 'Beaumaris Festival', desc: 'Arts festival with events in and around the castle', badge: 'special', badgeText: 'ARTS', meta: 'Various prices' }
+    ]
+  },
+
+  "Kidwelly Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Kidwelly Station', detail: 'On the West Wales line, 10 min walk to the castle' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free car park on Castle Road beside the entrance' },
+      { icon: '🚗', name: 'By Car', detail: 'Just off the A484 between Llanelli and Carmarthen' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Limited Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Multi-Level Ruins', cls: 'amber' },
+        { icon: '🌿', text: 'Grassy Grounds', cls: 'green' }
+      ],
+      note: 'A remarkably well-preserved concentric castle overlooking the River Gwendraeth. Used as a location in Monty Python and the Holy Grail. Outer ward accessible but inner rooms require steps. Managed by Cadw.'
+    },
+    events: []
+  },
+
+  "Craigmillar Castle": {
+    gettingThere: [
+      { icon: '🚌', name: 'Lothian Bus 14/30', detail: 'From Edinburgh city centre to Craigmillar, 5 min walk' },
+      { icon: '🚗', name: 'By Car', detail: '3 miles southeast of Edinburgh centre via the A7' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Small free car park on Craigmillar Castle Road' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Not Accessible', cls: 'red' },
+        { icon: '🏛️', text: 'Tower & Courtyard', cls: 'amber' },
+        { icon: '🌳', text: 'Parkland Setting', cls: 'green' }
+      ],
+      note: 'A well-preserved medieval castle associated with Mary Queen of Scots, who stayed here in 1566. Extensive ruins with tower house, great hall, and courtyard gardens. Steep stairs to upper levels. Fantastic views of Edinburgh and Arthur\'s Seat.'
+    },
+    events: []
+  },
+
+  "Linlithgow Palace": {
+    gettingThere: [
+      { icon: '🚂', name: 'Linlithgow Station', detail: 'On the Edinburgh–Glasgow line, 5 min walk to the palace' },
+      { icon: '🅿️', name: 'Town Car Parks', detail: 'Pay & display parking in Linlithgow High Street area' },
+      { icon: '🚗', name: 'By Car', detail: 'Off the M9 between Edinburgh and Stirling, well signposted' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Floor Only', cls: 'amber' },
+        { icon: '🏛️', text: 'Roofless Palace', cls: 'amber' },
+        { icon: '🌊', text: 'Lochside', cls: 'green' }
+      ],
+      note: 'Birthplace of Mary Queen of Scots, this magnificent roofless ruin stands beside Linlithgow Loch. Ground floor and courtyard accessible. Upper floors require climbing. The great hall and fountain are highlights. Managed by Historic Scotland.'
+    },
+    events: [
+      { month: 'JUN', day: '28', name: 'Linlithgow Palace Concert', desc: 'Summer concerts in the palace courtyard', badge: 'concert', badgeText: 'CONCERT', meta: '£30-50 · Summer' }
+    ]
+  },
+
+  "Scone Palace": {
+    gettingThere: [
+      { icon: '🚂', name: 'Perth Station', detail: '2 miles from the palace, taxi or bus 3/58' },
+      { icon: '🚌', name: 'Stagecoach 3', detail: 'From Perth city centre to Scone, alight at palace gates' },
+      { icon: '🅿️', name: 'Palace Car Park', detail: 'Large free car park within the grounds' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🌳', text: 'Extensive Grounds', cls: 'green' },
+        { icon: '👨‍👩‍👧‍👦', text: 'Family Friendly', cls: 'green' }
+      ],
+      note: 'Ancient crowning place of Scottish kings and home to the Stone of Destiny replica. The current Georgian palace has a ground-floor accessible route. The 100-acre grounds include a pinetum, maze, and adventure playground.'
+    },
+    events: [
+      { month: 'JUL', day: '05', name: 'Scone Palace Garden Fair', desc: 'Scotland\'s finest garden show in the palace grounds', badge: 'special', badgeText: 'GARDEN', meta: '£12 adult · July' },
+      { month: 'AUG', day: '15', name: 'Perth Show', desc: 'Agricultural show held in the palace parkland', badge: 'family', badgeText: 'FAMILY', meta: '£15 adult' }
+    ]
+  },
+
+  "Battle Abbey": {
+    gettingThere: [
+      { icon: '🚂', name: 'Battle Station', detail: 'On the London Charing Cross–Hastings line, 5 min walk' },
+      { icon: '🅿️', name: 'Abbey Car Park', detail: 'Pay & display car park on Upper Lake, 3 min walk' },
+      { icon: '🚗', name: 'By Car', detail: 'On the A2100, well signposted from the A21' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '⚔️', text: 'Battlefield Walk', cls: 'amber' },
+        { icon: '🌿', text: 'Undulating Ground', cls: 'amber' }
+      ],
+      note: 'Built by William the Conqueror on the site of the 1066 Battle of Hastings. The high altar marked the spot where King Harold fell. Battlefield walk is hilly and uneven. Audio tour brings the battle to life. English Heritage.'
+    },
+    events: [
+      { month: 'OCT', day: '14', name: '1066 Anniversary', desc: 'Annual battle re-enactment on the anniversary of the Battle of Hastings', badge: 'special', badgeText: 'RE-ENACT', meta: '£16 adult · October' }
+    ]
+  },
+
+  "Jedburgh Abbey": {
+    gettingThere: [
+      { icon: '🚌', name: 'Borders Buses', detail: 'Regular services from Edinburgh (1.5 hrs) to Jedburgh town centre' },
+      { icon: '🅿️', name: 'Abbey Car Park', detail: 'Free car park on Abbey Bridge End' },
+      { icon: '🚗', name: 'By Car', detail: 'On the A68, 50 miles south of Edinburgh near the English border' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Level Access', cls: 'green' },
+        { icon: '🏛️', text: 'Impressive Nave', cls: 'green' },
+        { icon: '📐', text: 'Some Steps', cls: 'amber' }
+      ],
+      note: 'One of the great Border abbeys, founded in 1138 by David I. The church survives to a remarkable height with beautiful Romanesque and Gothic architecture. Ground level is accessible; upper walkways have stairs. Historic Scotland.'
+    },
+    events: []
+  },
+
+  "Melrose Abbey": {
+    gettingThere: [
+      { icon: '🚌', name: 'Borders Buses', detail: 'Regular services from Edinburgh and Galashiels to Melrose' },
+      { icon: '🚂', name: 'Tweedbank Station', detail: 'Borders Railway terminus, 2 miles from Melrose by bus or bike' },
+      { icon: '🅿️', name: 'Abbey Car Park', detail: 'Free car park on Abbey Street' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Mostly Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Gothic Stonework', cls: 'green' }
+      ],
+      note: 'The finest of the Scottish Border abbeys, famous for its elaborate Gothic stonework and the reputed burial site of Robert the Bruce\'s heart. Mostly flat with good paths. The cloister ruins and museum are accessible. Historic Scotland.'
+    },
+    events: []
+  },
+
+  "Iona Abbey": {
+    gettingThere: [
+      { icon: '⛴️', name: 'CalMac Ferry', detail: 'Fionnphort (Mull) to Iona, 10 min crossing, then 15 min walk' },
+      { icon: '🚌', name: 'West Coast Motors', detail: 'Bus from Craignure ferry terminal across Mull to Fionnphort' },
+      { icon: '⛴️', name: 'From Oban', detail: 'Ferry Oban–Craignure (45 min), then bus across Mull (1 hr)' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Limited Access', cls: 'amber' },
+        { icon: '🏝️', text: 'Island Location', cls: 'amber' },
+        { icon: '🌬️', text: 'Exposed', cls: 'amber' }
+      ],
+      note: 'One of the most sacred sites in Scotland, founded by St Columba in 563 AD. The restored medieval abbey is an active place of worship. The island requires ferry access and has no cars. Paths can be rough. Weather dependent.'
+    },
+    events: [
+      { month: 'JUN', day: '09', name: 'Columba\'s Day', desc: 'Special services commemorating St Columba', badge: 'special', badgeText: 'HOLY', meta: 'Free' }
+    ]
+  },
+
+  "Framlingham Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: 'On the B1116, 20 miles north of Ipswich' },
+      { icon: '🚌', name: 'Galloway 118', detail: 'From Wickham Market (nearest rail) to Framlingham' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Small car park on Castle Street, plus town car parks' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Courtyard Accessible', cls: 'green' },
+        { icon: '📐', text: 'Wall Walk Steps', cls: 'amber' },
+        { icon: '🌿', text: 'Mere & Grounds', cls: 'green' }
+      ],
+      note: 'Famous as the castle where Mary Tudor was proclaimed Queen in 1553. The complete curtain wall with 13 towers offers a spectacular wall walk (steep steps). Inner courtyard is flat. The Mere (lake) provides a scenic setting. English Heritage.'
+    },
+    events: [
+      { month: 'AUG', day: '10', name: 'Medieval Festival', desc: 'Living history with jousting, falconry, and craft demonstrations', badge: 'family', badgeText: 'FAMILY', meta: '£12 adult' }
+    ]
+  },
+
+  "Berkeley Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: 'Off the A38 between Bristol and Gloucester, well signposted' },
+      { icon: '🚂', name: 'Cam & Dursley Station', detail: '5 miles from Berkeley, taxi required' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free parking in the castle grounds' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Limited Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Medieval Interior', cls: 'green' },
+        { icon: '🌳', text: 'Gardens', cls: 'green' }
+      ],
+      note: 'England\'s oldest inhabited castle, continuously lived in by the Berkeley family since the 12th century. Infamous as the site of Edward II\'s murder in 1327. Gardens include Elizabethan terraces and a butterfly house. Some steps throughout.'
+    },
+    events: [
+      { month: 'AUG', day: '26', name: 'Berkeley Castle Joust', desc: 'Medieval jousting tournament in the castle meadow', badge: 'family', badgeText: 'JOUST', meta: '£18 adult · Bank Holiday' }
+    ]
+  },
+
+  "Dunstanburgh Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Alnmouth Station', detail: 'East Coast Main Line, then taxi to Craster (7 miles)' },
+      { icon: '🅿️', name: 'Craster Car Park', detail: 'Pay & display in Craster village, then 1.3 mile coastal walk' },
+      { icon: '🥾', name: 'Coastal Path', detail: 'Also accessible from Embleton (1 mile walk from the north)' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Not Accessible', cls: 'red' },
+        { icon: '🥾', text: 'Walk Required', cls: 'amber' },
+        { icon: '🌬️', text: 'Exposed Headland', cls: 'amber' },
+        { icon: '📸', text: 'Photogenic', cls: 'green' }
+      ],
+      note: 'Dramatic 14th-century ruin on a remote Northumberland headland, accessible only on foot. The 1.3-mile walk from Craster is spectacular but uneven. One of England\'s most atmospheric ruins. Very exposed to weather. English Heritage.'
+    },
+    events: []
+  },
+
+  "Warkworth Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Alnmouth Station', detail: 'East Coast Main Line, then Arriva bus X18 (10 min) to Warkworth' },
+      { icon: '🚌', name: 'Arriva X18', detail: 'Newcastle–Alnwick route stops in Warkworth village' },
+      { icon: '🅿️', name: 'Village Parking', detail: 'Free roadside parking in Warkworth village' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Courtyard Accessible', cls: 'amber' },
+        { icon: '🏛️', text: 'Impressive Keep', cls: 'amber' },
+        { icon: '🌿', text: 'River Setting', cls: 'green' }
+      ],
+      note: 'A magnificent castle dominating a loop in the River Coquet, home to the Percy family. The unique cross-shaped keep is remarkably intact. Lower courtyard is accessible; keep requires stairs. Featured in Shakespeare\'s Henry IV. English Heritage.'
+    },
+    events: []
+  },
+
+  "Canterbury Cathedral": {
+    gettingThere: [
+      { icon: '🚂', name: 'Canterbury East/West', detail: 'High-speed from London St Pancras (56 min) or Victoria' },
+      { icon: '🚌', name: 'National Express', detail: 'Regular coaches from London Victoria to Canterbury bus station' },
+      { icon: '🅿️', name: 'Park & Ride', detail: 'Three park & ride sites around Canterbury, bus to centre' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Mostly Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Cathedral & Precincts', cls: 'green' },
+        { icon: '🏙️', text: 'City Centre', cls: 'green' }
+      ],
+      note: 'The mother church of the Anglican Communion and a UNESCO World Heritage Site. Site of Thomas Becket\'s murder in 1170. The nave and most of the cathedral are wheelchair accessible. Crypt has limited access. Audio guides available.'
+    },
+    events: [
+      { month: 'DEC', day: '24', name: 'Christmas Services', desc: 'Carol services and Christmas Eve celebrations', badge: 'seasonal', badgeText: 'CHRISTMAS', meta: 'Free · December' },
+      { month: 'JUL', day: '07', name: 'Becket Festival', desc: 'Celebrations around the feast of the Translation of St Thomas', badge: 'special', badgeText: 'FESTIVAL', meta: 'Free' }
+    ]
+  },
+
+  "Caerlaverock Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: '8 miles south of Dumfries on the B725' },
+      { icon: '🚌', name: 'Stagecoach 371', detail: 'From Dumfries towards Glencaple, limited service' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free car park at the castle entrance' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Courtyard Accessible', cls: 'green' },
+        { icon: '🏰', text: 'Unique Triangular Plan', cls: 'green' },
+        { icon: '🌿', text: 'Moated', cls: 'green' }
+      ],
+      note: 'Scotland\'s most distinctive castle, with a unique triangular plan and double moat. Famous for the 1300 siege by Edward I. The courtyard includes a fine Renaissance facade. Mostly accessible at ground level. Nearby Caerlaverock nature reserve.'
+    },
+    events: [
+      { month: 'JUL', day: '20', name: 'Siege Re-enactment', desc: 'Living history weekend re-creating the 1300 siege', badge: 'family', badgeText: 'HISTORY', meta: 'Free with admission' }
+    ]
+  },
+
+  "Tantallon Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'North Berwick Station', detail: 'From Edinburgh Waverley (30 min), then 3 miles by taxi' },
+      { icon: '🚌', name: 'East Coast Buses 120', detail: 'Edinburgh–North Berwick route, alight at Tantallon stop' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free car park at the site entrance' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Limited Access', cls: 'amber' },
+        { icon: '🌬️', text: 'Exposed Clifftop', cls: 'amber' },
+        { icon: '📸', text: 'Stunning Views', cls: 'green' }
+      ],
+      note: 'A dramatic 14th-century fortress perched on the cliffs overlooking the Firth of Forth and Bass Rock. The massive curtain wall is one of the most impressive in Scotland. Uneven ground, clifftop location. Spectacular views. Historic Scotland.'
+    },
+    events: []
+  },
+
+  "Blackness Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Linlithgow Station', detail: '4 miles from Blackness, taxi or walk via canal path' },
+      { icon: '🚗', name: 'By Car', detail: 'On the B903, signposted from the M9 junction 3' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Small free car park beside the castle' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Limited Access', cls: 'amber' },
+        { icon: '🌊', text: 'Coastal Fortress', cls: 'amber' },
+        { icon: '🎬', text: 'Filming Location', cls: 'green' }
+      ],
+      note: 'Known as "the ship that never sailed" due to its boat-like shape jutting into the Firth of Forth. Used as Fort William in the Outlander TV series. Narrow passages and stairs throughout. Atmospheric and compact. Historic Scotland.'
+    },
+    events: []
+  },
+
+  "Ashford Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: 'On the R346 at Cong, 45 km north of Galway city' },
+      { icon: '🚌', name: 'Bus Éireann 51', detail: 'Galway–Westport route to Ballinrobe, then local taxi' },
+      { icon: '✈️', name: 'Ireland West Airport', detail: 'Knock Airport 55 km away, 45 min drive' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Accessible', cls: 'green' },
+        { icon: '🌳', text: 'Lakeside Estate', cls: 'green' },
+        { icon: '🏨', text: 'Luxury Hotel', cls: 'green' }
+      ],
+      note: 'A magnificent 800-year-old castle on the shores of Lough Corrib, now a 5-star luxury hotel. Non-guests can visit the grounds and falconry school. The estate has 350 acres of manicured gardens. Fully accessible as a working hotel.'
+    },
+    events: []
+  },
+
+  "Carrickfergus Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Carrickfergus Station', detail: 'Belfast–Larne line, 5 min walk from the castle' },
+      { icon: '🚌', name: 'Metro/Ulsterbus', detail: 'Regular services from Belfast city centre (30 min)' },
+      { icon: '🅿️', name: 'Harbour Car Park', detail: 'Pay parking on the harbour near the castle' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Norman Keep', cls: 'green' },
+        { icon: '🌊', text: 'Harbourside', cls: 'green' }
+      ],
+      note: 'One of the best-preserved Norman castles in Ireland, dominating Belfast Lough since 1177. Ground floor and courtyard accessible. Upper keep and wall walks require stairs. Interactive exhibits inside. Managed by Historic Environment Division NI.'
+    },
+    events: [
+      { month: 'JUL', day: '28', name: 'Lughnasa Festival', desc: 'Medieval re-enactment and living history in the castle grounds', badge: 'family', badgeText: 'MEDIEVAL', meta: 'Free with admission' }
+    ]
+  },
+
+  "Carisbrooke Castle": {
+    gettingThere: [
+      { icon: '⛴️', name: 'Isle of Wight Ferry', detail: 'Red Funnel or Wightlink from mainland, then bus or taxi' },
+      { icon: '🚌', name: 'Southern Vectis', detail: 'Bus routes to Carisbrooke from Newport (1 mile)' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free car park at the castle entrance off Whitcombe Road' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Courtyard Accessible', cls: 'amber' },
+        { icon: '🏛️', text: 'Keep & Walls', cls: 'amber' },
+        { icon: '🐴', text: 'Donkey Centre', cls: 'green' }
+      ],
+      note: 'Famous as the prison of Charles I before his execution. The castle has a well-house where donkeys still operate the treadwheel. Courtyard accessible; keep requires climbing 71 steps. English Heritage.'
+    },
+    events: [
+      { month: 'AUG', day: '12', name: 'Castle Summer Fair', desc: 'Family activities with donkey demonstrations and medieval crafts', badge: 'family', badgeText: 'FAMILY', meta: 'Free with admission' }
+    ]
+  },
+
+  "Colchester Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Colchester Station', detail: 'Greater Anglia from London Liverpool Street (50 min), 15 min walk' },
+      { icon: '🚌', name: 'Town Centre Buses', detail: 'Multiple routes to Colchester High Street' },
+      { icon: '🅿️', name: 'Vineyard Street', detail: 'Multi-storey car park, 5 min walk through Castle Park' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Museum Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Roman Foundations', cls: 'green' },
+        { icon: '🌳', text: 'Castle Park', cls: 'green' }
+      ],
+      note: 'The largest Norman keep ever built in Britain, constructed over the vaults of the Roman Temple of Claudius. Now an excellent interactive museum. Lift access to most floors. The castle sits in attractive public parklands.'
+    },
+    events: [
+      { month: 'OCT', day: '31', name: 'Halloween at the Castle', desc: 'Spooky tours of the castle vaults and Roman foundations', badge: 'seasonal', badgeText: 'HALLOWEEN', meta: '£8 adult' }
+    ]
+  },
+
+  "Dirleton Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'North Berwick Station', detail: 'From Edinburgh (30 min), then 2 miles by bus or taxi' },
+      { icon: '🚌', name: 'East Coast Buses 124', detail: 'Edinburgh–North Berwick route stops in Dirleton village' },
+      { icon: '🅿️', name: 'Village Parking', detail: 'Free roadside parking around Dirleton Green' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🌳', text: 'Beautiful Gardens', cls: 'green' },
+        { icon: '🏛️', text: 'Ruins & Towers', cls: 'amber' }
+      ],
+      note: 'A picturesque 13th-century castle ruin in a charming village setting, with the world\'s longest herbaceous border (according to Guinness). Gardens are mostly accessible. Castle ruins require some scrambling. Historic Scotland.'
+    },
+    events: []
+  },
+
+  "Portchester Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Portchester Station', detail: 'On the Portsmouth–Southampton line, 10 min walk' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free English Heritage car park on Castle Street' },
+      { icon: '🚗', name: 'By Car', detail: 'Off the A27 between Portsmouth and Fareham' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Mostly Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Roman Walls', cls: 'green' },
+        { icon: '🌊', text: 'Harbour Views', cls: 'green' }
+      ],
+      note: 'The most complete Roman fort in northern Europe, with a medieval castle built inside. The Roman walls stand to full height. Inner bailey is flat and accessible. Keep requires stairs. Views across Portsmouth Harbour. English Heritage, free entry.'
+    },
+    events: []
+  },
+
+  "Lancaster Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Lancaster Station', detail: 'West Coast Main Line, 10 min walk uphill to the castle' },
+      { icon: '🚌', name: 'Stagecoach', detail: 'Multiple routes to Lancaster city centre' },
+      { icon: '🅿️', name: 'Dallas Road', detail: 'Pay car parks in Lancaster centre, 5-10 min walk' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Historic Courts', cls: 'green' },
+        { icon: '📐', text: 'Hilltop', cls: 'amber' }
+      ],
+      note: 'A working castle that served as a prison and courthouse for centuries, including the famous Pendle Witch trials. Recently opened to visitors with guided tours. Some areas require stairs. Hilltop location with views over Morecambe Bay.'
+    },
+    events: [
+      { month: 'AUG', day: '18', name: 'Witches Trail Tour', desc: 'Themed tours exploring the Pendle Witch trial history', badge: 'special', badgeText: 'HISTORY', meta: '£10 adult' }
+    ]
+  },
+
+  "Tattershall Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: 'On the A153, 15 miles northeast of Sleaford' },
+      { icon: '🚌', name: 'Stagecoach', detail: 'Limited bus service from Boston or Horncastle' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free National Trust car park' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Floor Only', cls: 'amber' },
+        { icon: '🏛️', text: 'Great Tower', cls: 'amber' },
+        { icon: '🌿', text: 'Moated Grounds', cls: 'green' }
+      ],
+      note: 'A magnificent red-brick tower built in the 1430s, one of the finest pieces of medieval brickwork in England. Six floors connected by spiral staircase. Ground floor accessible. Stunning fireplaces on each level. National Trust.'
+    },
+    events: []
+  },
+
+  "Norwich Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Norwich Station', detail: 'Greater Anglia from London (2 hrs), 15 min walk to castle' },
+      { icon: '🚌', name: 'First Bus', detail: 'Multiple routes to Castle Meadow in city centre' },
+      { icon: '🅿️', name: 'Castle Mall', detail: 'Multi-storey car park beneath the castle mound' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Museum & Gallery', cls: 'green' },
+        { icon: '🏙️', text: 'City Centre', cls: 'green' }
+      ],
+      note: 'A magnificent Norman keep now housing Norwich Castle Museum & Art Gallery. Lift access throughout. Recent Royal Palace Reborn project restored medieval rooms. Interactive galleries on history, art, and natural history. Excellent for all ages.'
+    },
+    events: [
+      { month: 'FEB', day: '15', name: 'Half-Term Activities', desc: 'Family craft workshops and history trails', badge: 'family', badgeText: 'FAMILY', meta: 'Free with admission' }
+    ]
+  },
+
+  "Orford Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: 'On the B1084, 9 miles east of Woodbridge' },
+      { icon: '🚌', name: 'Coastal Liner 164', detail: 'From Woodbridge Station to Orford village' },
+      { icon: '🅿️', name: 'Village Parking', detail: 'Free roadside parking in Orford village square' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Not Accessible', cls: 'red' },
+        { icon: '🏛️', text: 'Unique Keep', cls: 'amber' },
+        { icon: '🌊', text: 'Coastal Setting', cls: 'green' }
+      ],
+      note: 'Built by Henry II in the 1160s with an innovative polygonal keep — unique in England. Interior reached by spiral staircase only. Rooftop offers panoramic views of Orford Ness. Small but architecturally fascinating. English Heritage.'
+    },
+    events: []
+  },
+
+  "Bolsover Castle": {
+    gettingThere: [
+      { icon: '🚗', name: 'By Car', detail: 'Off the M1 junction 29a, signposted through Bolsover town' },
+      { icon: '🚂', name: 'Chesterfield Station', detail: '6 miles from Bolsover, connecting bus or taxi' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free English Heritage car park' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Little Castle Interior', cls: 'green' },
+        { icon: '🌳', text: 'Terrace Gardens', cls: 'green' }
+      ],
+      note: 'A stunning 17th-century fantasy castle with lavishly decorated interiors in the Little Castle and a dramatic hilltop terrace range. Wall paintings and fireplaces are superb. Riding House is one of the earliest in England. English Heritage.'
+    },
+    events: [
+      { month: 'JUL', day: '20', name: 'Cavalier Summer', desc: 'Living history bringing the 17th century to life', badge: 'family', badgeText: 'HISTORY', meta: 'Free with admission' }
+    ]
+  },
+
+  "Peveril Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Hope Station', detail: 'On the Sheffield–Manchester line, then bus to Castleton (10 min)' },
+      { icon: '🚌', name: 'Hulleys 173', detail: 'From Bakewell or Sheffield to Castleton village' },
+      { icon: '🅿️', name: 'Castleton Car Parks', detail: 'Pay car parks in Castleton, steep uphill walk to castle' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Not Accessible', cls: 'red' },
+        { icon: '📐', text: 'Steep Climb', cls: 'red' },
+        { icon: '🌬️', text: 'Exposed Hilltop', cls: 'amber' }
+      ],
+      note: 'A Norman castle perched high above Castleton in the Peak District with spectacular views of the Hope Valley. The steep climb is challenging but rewarding. The keep survives along with curtain walls. One of England\'s earliest Norman castles. English Heritage.'
+    },
+    events: []
+  },
+
+  "Stokesay Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Craven Arms Station', detail: 'On the Shrewsbury–Swansea Heart of Wales line, 1 mile walk' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free English Heritage car park on site' },
+      { icon: '🚗', name: 'By Car', detail: '7 miles northwest of Ludlow off the A49' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Floor Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Medieval Hall', cls: 'green' },
+        { icon: '🌿', text: 'Moated', cls: 'green' }
+      ],
+      note: 'The finest surviving 13th-century fortified manor house in England. The great hall with its original timber roof is exceptional. The Jacobean gatehouse is equally charming. Mostly flat grounds. English Heritage.'
+    },
+    events: []
+  },
+
+  "Donegal Castle": {
+    gettingThere: [
+      { icon: '🚌', name: 'Bus Éireann', detail: 'Regular services from Dublin, Sligo, and Derry to Donegal town' },
+      { icon: '🅿️', name: 'Town Parking', detail: 'Pay parking in the Diamond (town centre), 2 min walk' },
+      { icon: '🚗', name: 'By Car', detail: 'In the centre of Donegal town on the N15' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Floor Only', cls: 'amber' },
+        { icon: '🏛️', text: 'Tower House', cls: 'green' },
+        { icon: '🏙️', text: 'Town Centre', cls: 'green' }
+      ],
+      note: 'A 15th-century tower house built by the O\'Donnell chieftains, with a Jacobean wing added by the Brooke family. Well-restored interior with fine fireplaces and Persian carpet replicas. Ground floor accessible. OPW managed.'
+    },
+    events: []
+  },
+
+  "Chepstow Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Chepstow Station', detail: 'On the Gloucester–Newport line, 10 min walk to castle' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Pay car park on Bridge Street near the castle' },
+      { icon: '🚗', name: 'By Car', detail: 'Just off the M48 at the Welsh border, above the River Wye' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Limited Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Cliffside Layout', cls: 'amber' },
+        { icon: '🌊', text: 'River Wye', cls: 'green' }
+      ],
+      note: 'The oldest surviving post-Roman stone fortification in Britain, begun in 1067. Stretches along a limestone cliff above the River Wye. Multiple wards connected by passages and steps. Cadw managed. Spectacular views from the upper ward.'
+    },
+    events: [
+      { month: 'JUL', day: '12', name: 'Chepstow Castle Festival', desc: 'Music and arts festival in the castle grounds', badge: 'concert', badgeText: 'FESTIVAL', meta: '£20-40' }
+    ]
+  },
+
+  "Caerphilly Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Caerphilly Station', detail: 'Rhymney line from Cardiff (20 min), 5 min walk' },
+      { icon: '🚌', name: 'Stagecoach', detail: 'Regular buses from Cardiff city centre' },
+      { icon: '🅿️', name: 'Town Car Parks', detail: 'Several pay car parks in Caerphilly centre' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Mostly Accessible', cls: 'green' },
+        { icon: '🏰', text: 'Massive Water Defences', cls: 'green' },
+        { icon: '📸', text: 'Leaning Tower', cls: 'green' }
+      ],
+      note: 'The second largest castle in Britain after Windsor, with the most elaborate water defences in all of Europe. Famous for its leaning tower (more than Pisa!). Inner ward is mostly flat and accessible. Cadw managed with excellent interpretation.'
+    },
+    events: [
+      { month: 'AUG', day: '01', name: 'Big Cheese Festival', desc: 'Free festival with medieval re-enactments, music, and food', badge: 'family', badgeText: 'FREE', meta: 'Free · July/August' }
+    ]
+  },
+
+  "Bothwell Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Uddingston Station', detail: 'Glasgow–Edinburgh line, 1 mile walk through Bothwell' },
+      { icon: '🚌', name: 'First Bus', detail: 'Services from Glasgow to Bothwell village' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free car park on Castle Avenue' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🏛️', text: 'Massive Donjon', cls: 'amber' },
+        { icon: '🌊', text: 'River Clyde', cls: 'green' }
+      ],
+      note: 'Scotland\'s largest and finest 13th-century stone castle, overlooking the River Clyde. The enormous half-ruined donjon is among the most impressive castle features in Scotland. Some uneven ground. Historic Scotland.'
+    },
+    events: []
+  },
+
+  "Culzean Castle": {
+    gettingThere: [
+      { icon: '🚂', name: 'Maybole Station', detail: 'On the Glasgow–Stranraer line, then 4 miles by taxi' },
+      { icon: '🚌', name: 'Stagecoach 60', detail: 'Ayr–Girvan route, alight at Culzean gates' },
+      { icon: '🅿️', name: 'Estate Car Parks', detail: 'NTS car park, £3 parking (free for members)' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Partial Access', cls: 'amber' },
+        { icon: '🌳', text: '600 Acre Country Park', cls: 'green' },
+        { icon: '🌊', text: 'Clifftop Setting', cls: 'green' }
+      ],
+      note: 'Robert Adam\'s 18th-century masterpiece perched on an Ayrshire clifftop. The Oval Staircase and Round Drawing Room are architectural highlights. Ground floor accessible; upper floors by stairs. 600-acre country park with gardens, beach, and deer park. National Trust for Scotland.'
+    },
+    events: [
+      { month: 'DEC', day: '01', name: 'Christmas at Culzean', desc: 'Festive trail through the castle and grounds', badge: 'seasonal', badgeText: 'CHRISTMAS', meta: '£15 adult' }
+    ]
+  },
+
+  "Falkland Palace": {
+    gettingThere: [
+      { icon: '🚌', name: 'Stagecoach 36', detail: 'From Glenrothes or Perth to Falkland village' },
+      { icon: '🚗', name: 'By Car', detail: 'On the A912, 11 miles north of Kirkcaldy' },
+      { icon: '🅿️', name: 'Village Parking', detail: 'Free on-street parking in Falkland village' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Garden Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Renaissance Palace', cls: 'green' },
+        { icon: '🎾', text: 'Real Tennis Court', cls: 'green' }
+      ],
+      note: 'The finest Renaissance palace in Scotland, beloved by Mary Queen of Scots. Home to the world\'s oldest real tennis court (1539). Gardens are accessible. Palace interior involves stairs. Charming village setting. National Trust for Scotland.'
+    },
+    events: []
+  },
+
+  "Inveraray Castle": {
+    gettingThere: [
+      { icon: '🚌', name: 'Citylink 926', detail: 'Glasgow–Campbeltown coach stops in Inveraray' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free parking in the castle grounds' },
+      { icon: '🚗', name: 'By Car', detail: 'On the A83 at Inveraray, 60 miles northwest of Glasgow' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Floor Accessible', cls: 'green' },
+        { icon: '🏛️', text: 'Neo-Gothic Interior', cls: 'green' },
+        { icon: '🌳', text: 'Lochside Grounds', cls: 'green' }
+      ],
+      note: 'Ancestral home of the Duke of Argyll and chief of Clan Campbell. The fairy-tale turrets house magnificent interiors including the Armoury Hall with 1,300 weapons. Ground floor accessible. Beautiful grounds on Loch Fyne. Used in Downton Abbey.'
+    },
+    events: [
+      { month: 'SEP', day: '07', name: 'Best of the West Festival', desc: 'Food, music, and culture festival in the castle grounds', badge: 'special', badgeText: 'FESTIVAL', meta: '£15 adult · September' }
+    ]
+  },
+
+  "Floors Castle": {
+    gettingThere: [
+      { icon: '🚌', name: 'Borders Buses', detail: 'From Edinburgh to Kelso, then 10 min walk' },
+      { icon: '🅿️', name: 'Castle Car Park', detail: 'Free parking in the castle estate' },
+      { icon: '🚗', name: 'By Car', detail: 'On the A6089, 1 mile northwest of Kelso' }
+    ],
+    terrain: {
+      chips: [
+        { icon: '♿', text: 'Ground Floor Accessible', cls: 'green' },
+        { icon: '🌳', text: 'Extensive Grounds', cls: 'green' },
+        { icon: '🏛️', text: 'Grand Interiors', cls: 'green' }
+      ],
+      note: 'The largest inhabited castle in Scotland, home to the Duke of Roxburghe. William Playfair\'s magnificent interiors include fine art and tapestries. Walled garden, playground, and riverside walks. Ground floor accessible via ramp.'
+    },
+    events: [
+      { month: 'MAY', day: '25', name: 'Floors Castle Horse Trials', desc: 'Scottish horse trials event in the castle parkland', badge: 'special', badgeText: 'EQUESTRIAN', meta: '£15 adult · May' }
+    ]
   }
 };
