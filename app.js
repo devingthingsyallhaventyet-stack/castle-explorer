@@ -690,18 +690,18 @@ function openListing(castle) {
         <div class="listing-gallery-item listing-photo"><img id="listingImg2" src="" /></div>
         <div class="listing-gallery-item listing-street-view">
           <div class="listing-sv-panel" onclick="window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${castle.lat},${castle.lng}','_blank')">
-            <img src="https://maps.googleapis.com/maps/api/streetview?size=600x400&location=${castle.lat},${castle.lng}&key=${API_KEY}" />
+            <img src="https://maps.googleapis.com/maps/api/streetview?size=600x400&location=${castle.lat},${castle.lng}&key=${API_KEY}" onerror="this.closest('.listing-street-view').style.display='none'" />
             <div class="listing-sv-label">
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
               Look Around
             </div>
           </div>
           <div class="listing-sv-panel">
-            <iframe src="https://www.google.com/maps/embed/v1/view?key=${API_KEY}&center=${castle.lat},${castle.lng}&zoom=15&maptype=satellite" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed/v1/view?key=${API_KEY}&center=${castle.lat},${castle.lng}&zoom=15&maptype=satellite" loading="lazy" onerror="this.parentElement.style.display='none'"></iframe>
           </div>
         </div>
         <div class="listing-gallery-item listing-map-tile">
-          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy" onerror="this.closest('.listing-map-tile').style.display='none'"></iframe>
           <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
         </div>
         <div class="listing-gallery-item listing-photo" id="listingP3"><img id="listingImg3" src="" /></div>
