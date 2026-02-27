@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devingthingsyallhaventyet-stack.github.io/castle-explorer/sitemap.xml
