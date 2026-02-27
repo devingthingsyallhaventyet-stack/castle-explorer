@@ -688,7 +688,8 @@ function openListing(castle) {
         <div class="listing-sheet-handle"></div>
         <button class="listing-peek-close" onclick="closeListing()">✕</button>
       </div>
-      <div class="listing-sheet-peek-content">
+      <div class="listing-sheet-peek-content" id="listingPeekContent">
+        <div class="listing-peek-thumb"><img src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-peek-type">${tc.emoji} ${castle.type}</div></div>
         <h1 class="listing-name">${castle.name}</h1>
         <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
         <div class="listing-key-stats">
@@ -851,6 +852,17 @@ function initListingSheet() {
   // Drag from handle
   sheetPeek.addEventListener('touchstart', onDragStart, { passive: true });
   sheetPeek.addEventListener('mousedown', onDragStart);
+
+  // Drag from peek content area
+  const peekContent = document.getElementById('listingPeekContent');
+  if (peekContent) {
+    peekContent.addEventListener('touchstart', (e) => {
+      if (!listingSheetExpanded) onDragStart(e);
+    }, { passive: true });
+    peekContent.addEventListener('mousedown', (e) => {
+      if (!listingSheetExpanded) onDragStart(e);
+    });
+  }
 
   // Drag from scroll area when collapsed
   sheetScroll.addEventListener('touchstart', (e) => {
