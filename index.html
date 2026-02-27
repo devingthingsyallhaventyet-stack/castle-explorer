@@ -60,10 +60,34 @@ img{max-width:100%;display:block}
 .hero-overlay{background:linear-gradient(to top,rgba(42,37,34,.82) 0%,rgba(42,37,34,.5) 40%,rgba(42,37,34,.25) 100%)}
 }
 
-/* SECTION DIVIDER */
+/* SECTION DIVIDER - medieval flourish */
 .section-divider{display:flex;align-items:center;justify-content:center;padding:0 24px;max-width:1280px;margin:0 auto}
-.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
-.section-divider .divider-ornament{padding:0 16px;color:var(--hearth);font-size:.9rem;opacity:.5}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--hearth),transparent);opacity:.3}
+.section-divider .divider-ornament{padding:0 20px;display:flex;align-items:center}
+.section-divider .divider-ornament svg{width:60px;height:24px;fill:var(--hearth);opacity:.45}
+
+/* MEDIEVAL DECORATIVE ELEMENTS */
+.section-header h2{position:relative;display:inline-block}
+.section-header h2::after{content:'';display:block;width:40px;height:2px;background:var(--burgundy);margin-top:6px;border-radius:1px;opacity:.6}
+.section-header h2 .header-flourish{display:inline-block;margin-left:8px;vertical-align:middle}
+.section-header h2 .header-flourish svg{width:20px;height:20px;fill:var(--candlelight);opacity:.5}
+
+/* Decorative initial caps for section taglines */
+.section-tagline::first-letter{font-family:'Playfair Display',serif;font-size:1.3em;color:var(--burgundy);font-weight:700}
+
+/* Ornate frame for hero */
+.hero::after{content:'';position:absolute;inset:16px;border:1px solid rgba(201,168,76,.2);border-radius:8px;z-index:1;pointer-events:none}
+@media(max-width:768px){.hero::after{inset:8px}}
+
+/* Medieval corner accents on featured cards */
+.feat-card::before,.feat-card::after{content:'';position:absolute;width:24px;height:24px;border-color:var(--candlelight);border-style:solid;opacity:.15;z-index:2;pointer-events:none}
+.feat-card::before{top:8px;left:8px;border-width:2px 0 0 2px;border-radius:4px 0 0 0}
+.feat-card::after{bottom:8px;right:8px;border-width:0 2px 2px 0;border-radius:0 0 4px 0}
+.feat-card{position:relative}
+
+/* Subtle scroll/vine pattern on cream sections */
+.bg-cream{position:relative}
+.bg-cream::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--hearth) 20%,var(--candlelight) 50%,var(--hearth) 80%,transparent 100%);opacity:.15}
 
 /* SECTIONS */
 section{padding:48px 24px}
@@ -252,7 +276,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </section>
 
 <!-- DIVIDER -->
-<div class="section-divider"><span class="divider-ornament">✦</span></div>
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
 
 <!-- COLLECTIONS -->
 <section>
@@ -277,7 +301,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </section>
 
 <!-- DIVIDER -->
-<div class="section-divider"><span class="divider-ornament">✦</span></div>
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
 
 <!-- FEATURED -->
 <section>
@@ -316,7 +340,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </section>
 
 <!-- DIVIDER -->
-<div class="section-divider"><span class="divider-ornament">✦</span></div>
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
 
 <!-- REGIONS -->
 <section class="bg-cream">
@@ -343,7 +367,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </section>
 
 <!-- DIVIDER -->
-<div class="section-divider"><span class="divider-ornament">✦</span></div>
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
 
 <!-- TRAILS -->
 <section>
