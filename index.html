@@ -1,248 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scenic Route — Discover Historic Castles & Abbeys</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=74" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scenic Route — Discover Castles, Abbeys & Ruins across the UK & Ireland</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--sage:#4a7c59;--cream:#f5f0e8;--gold:#e8a817;--text:#1a1a1a;--muted:#585858;--border:#e8e8e8;--radius:12px;--pill:20px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--sage)}
+.nav-links .btn-explore{background:var(--sage);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
+.nav-links .btn-explore:hover{background:#3d6a4b}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:16px;z-index:999}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--muted);padding:8px 0}
+
+@media(max-width:768px){
+.nav-links{display:none}
+.hamburger{display:block}
+}
+
+/* HERO */
+.hero{position:relative;height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:64px}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?w=1920&q=80') center/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.15) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:800px;width:100%}
+.hero h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:12px;line-height:1.2}
+.hero .subtitle{color:rgba(255,255,255,.85);font-size:1.1rem;margin-bottom:32px}
+.search-wrap{position:relative;max-width:560px;margin:0 auto 20px}
+.search-wrap input{width:100%;padding:16px 20px 16px 48px;border:none;border-radius:var(--pill);font-size:1rem;font-family:'Inter',sans-serif;outline:none;box-shadow:0 4px 24px rgba(0,0,0,.15)}
+.search-wrap .search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1.2rem;pointer-events:none}
+.search-results{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border-radius:var(--radius);box-shadow:0 8px 32px rgba(0,0,0,.15);max-height:360px;overflow-y:auto;display:none;z-index:10;text-align:left}
+.search-results.open{display:block}
+.search-results a{display:flex;justify-content:space-between;padding:12px 20px;color:var(--text);font-size:.95rem;border-bottom:1px solid var(--border);transition:background .15s}
+.search-results a:last-child{border-bottom:none}
+.search-results a:hover{background:var(--cream)}
+.search-results .sr-type{color:var(--muted);font-size:.8rem}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pill{background:rgba(255,255,255,.18);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.3);color:#fff;padding:8px 16px;border-radius:var(--pill);font-size:.85rem;font-weight:500;cursor:pointer;transition:background .2s}
+.pill:hover{background:rgba(255,255,255,.3)}
+
+@media(max-width:768px){
+.hero{height:100vh}
+}
+
+/* SECTIONS */
+section{padding:64px 24px}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px}
+.section-header h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.section-header a{color:var(--sage);font-weight:600;font-size:.95rem}
+.bg-cream{background:var(--cream)}
+
+/* SCROLL ROW */
+.scroll-row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
+.scroll-row::-webkit-scrollbar{display:none}
+.scroll-card{flex:0 0 280px;height:200px;border-radius:var(--radius);overflow:hidden;position:relative;scroll-snap-align:start;cursor:pointer}
+.scroll-card img{width:100%;height:100%;object-fit:cover}
+.scroll-card .card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#fff}
+.scroll-card .card-overlay h3{font-size:1.1rem;margin-bottom:2px}
+.scroll-card .card-overlay span{font-size:.8rem;opacity:.85}
+
+.trail-card{flex:0 0 320px;height:200px}
+
+/* FEATURED GRID */
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-card{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.feat-card .feat-img{height:200px;overflow:hidden}
+.feat-card .feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.feat-card:hover .feat-img img{transform:scale(1.05)}
+.feat-card .feat-body{padding:16px}
+.feat-card .feat-body h3{font-size:1.15rem;margin-bottom:4px}
+.feat-card .feat-loc{color:var(--muted);font-size:.85rem;margin-bottom:6px}
+.feat-card .feat-rating{color:var(--gold);font-size:.85rem;margin-bottom:6px}
+.feat-card .feat-hook{font-size:.9rem;color:var(--muted);margin-bottom:8px}
+.feat-card .type-pill{display:inline-block;background:var(--cream);color:var(--sage);font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:var(--pill);text-transform:capitalize}
+
+@media(max-width:768px){
+.featured-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+}
+@media(max-width:480px){
+.featured-grid{grid-template-columns:1fr}
+}
+
+/* REGION GRID */
+.region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.region-card{border-radius:var(--radius);overflow:hidden;position:relative;height:180px;cursor:pointer}
+.region-card img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.region-card:hover img{transform:scale(1.05)}
+.region-card .region-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:#fff}
+.region-card .region-overlay h3{font-size:1rem;margin-bottom:2px}
+.region-card .region-overlay span{font-size:.8rem;opacity:.8}
+
+@media(max-width:768px){
+.region-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* STATS */
+.stats-bar{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat .stat-icon{font-size:2rem;margin-bottom:8px}
+.stat .stat-num{font-family:'DM Serif Display',serif;font-size:1.6rem;margin-bottom:2px}
+.stat .stat-label{color:var(--muted);font-size:.85rem}
+
+/* CTA */
+.cta-section{text-align:center;padding:80px 24px}
+.cta-section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
+.cta-section p{color:var(--muted);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
+.btn-cta{display:inline-block;background:var(--sage);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s}
+.btn-cta:hover{background:#3d6a4b}
+
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+.how-step .how-icon{font-size:2.5rem;margin-bottom:12px}
+.how-step h3{font-size:1.15rem;margin-bottom:8px}
+.how-step p{color:var(--muted);font-size:.9rem;max-width:280px;margin:0 auto}
+@media(max-width:768px){
+.how-grid{grid-template-columns:1fr;gap:40px}
+}
+
+/* FOOTER */
+footer{background:var(--text);color:#fff;padding:64px 24px 32px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
+.footer-brand .footer-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:8px}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:.85rem;max-width:280px}
+.footer-col h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;color:rgba(255,255,255,.5)}
+.footer-col a{display:block;color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){
+.footer-top{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media(max-width:480px){
+.footer-top{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-  <!-- Top Bar -->
-  <header class="topbar">
-    <div class="topbar-logo">🗺️ <span>Scenic Route</span></div>
-    <div class="topbar-search">
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="searchInput" placeholder="Search castles, abbeys, ruins…" autocomplete="off" />
-      <div id="searchResults" class="search-results"></div>
-    </div>
-    <div class="topbar-actions">
-      <button class="btn-pill" id="btnCollections" title="Browse curated collections of sites">📚 Collections</button>
-      <button class="btn-pill" id="btnNearMe" title="Find sites near your location">📍 Near Me</button>
-      <button class="btn-pill" id="btnRouteBuilder" title="Build your own route from scratch">🧭 Route Builder</button>
-      <button class="btn-pill" id="btnMyStuff" title="Your saved favorites and routes">❤️ My Stuff</button>
-      <button class="btn-pill" id="btnFilter" title="Filter the map by country, type, or condition">🔽 Filters</button>
-      <button class="btn-icon mobile-search-toggle" id="mobileSearchToggle">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      </button>
-    </div>
-  </header>
 
-  <!-- Filter Panel -->
-  <div class="filter-panel" id="filterPanel">
-    <div class="filter-section">
-      <h3>Country</h3>
-      <div class="filter-chips" id="countryFilters"></div>
-    </div>
-    <div class="filter-section">
-      <h3>Type</h3>
-      <div class="filter-chips" id="typeFilters"></div>
-    </div>
-    <div class="filter-section">
-      <h3>Condition</h3>
-      <div class="filter-chips" id="conditionFilters"></div>
-    </div>
-    <div class="filter-counter" id="filterCounter">Showing 100 of 100 sites</div>
-  </div>
+<!-- NAV -->
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">🏰 Scenic Route</a>
+<div class="nav-links">
+<a href="explore.html" class="btn-explore">Explore Map</a>
+<a href="explore.html">Collections</a>
+<a href="explore.html">Regions</a>
+<a href="explore.html">Trails</a>
+<a href="explore.html">Near Me</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
+<div class="mobile-menu">
+<a href="explore.html">🗺️ Explore Map</a>
+<a href="explore.html">Collections</a>
+<a href="explore.html">Regions</a>
+<a href="explore.html">Trails</a>
+<a href="explore.html">Near Me</a>
+</div>
 
-  <!-- Map -->
-  <div id="map">
-    <!-- Map legend removed -->
-    <!-- Route Builder Floating Panel -->
-    <div class="rb-float" id="routeBuilderPanel">
-      <div class="rb-float-header" id="rbFloatHeader">
-        <span class="rb-float-title">🧭 Route Builder</span>
-        <span class="rb-stop-count" id="rbStopCount">0 stops</span>
-        <div class="rb-float-actions">
-          <button class="rb-float-toggle" id="rbToggle" title="Minimize">−</button>
-          <button class="rb-float-close" id="routeBuilderClose" title="Close">✕</button>
-        </div>
-      </div>
-      <div class="rb-float-body" id="rbFloatBody">
-        <div class="rb-suggest">
-          <button class="rb-suggest-toggle" id="rbSuggestToggle">💡 Suggest stops along a route</button>
-          <div class="rb-suggest-form" id="rbSuggestForm" style="display:none">
-            <div class="route-field">
-              <label>From</label>
-              <input type="text" id="rbSuggestFrom" placeholder="e.g. Edinburgh" />
-            </div>
-            <div class="route-field">
-              <label>To</label>
-              <input type="text" id="rbSuggestTo" placeholder="e.g. London" />
-            </div>
-            <button class="btn-find-routes" id="btnSuggestStops">Find Nearby Stops</button>
-            <div id="rbSuggestResults"></div>
-          </div>
-        </div>
-        <div class="route-field">
-          <label>Route Name</label>
-          <input type="text" id="rbRouteName" placeholder="e.g. Ireland Castle Tour" />
-        </div>
-        <div class="route-field">
-          <label>Start <span class="optional-tag">optional</span></label>
-          <input type="text" id="rbStartLocation" placeholder="e.g. Dublin Airport" />
-        </div>
-        <div class="rb-stops-list" id="rbStopsList">
-          <div class="rb-empty-msg" id="rbEmptyMsg">Tap 🚗 on any castle to add it here</div>
-        </div>
-        <div class="route-field">
-          <label>End <span class="optional-tag">optional</span></label>
-          <input type="text" id="rbEndLocation" placeholder="e.g. Shannon Airport" />
-        </div>
-        <button class="rb-generate-btn" id="btnGenerateRoute">Generate Route</button>
-        <div class="rb-route-results" id="rbRouteResults"></div>
-      </div>
-    </div>
-  </div>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Discover 3,000 castles, abbeys &amp; ruins across the UK &amp; Ireland</h1>
+<p class="subtitle">The most complete heritage guide ever built</p>
+<div class="search-wrap">
+<span class="search-icon">🔍</span>
+<input type="text" id="heroSearch" placeholder="Search by name, region, or type..." autocomplete="off">
+<div class="search-results" id="searchResults"></div>
+</div>
+<div class="pills">
+<a class="pill" href="explore.html">🏰 Castles</a>
+<a class="pill" href="explore.html">⛪ Abbeys</a>
+<a class="pill" href="explore.html">🗼 Tower Houses</a>
+<a class="pill" href="explore.html">👑 Palaces</a>
+<a class="pill" href="explore.html">🆓 Free to Visit</a>
+<a class="pill" href="explore.html">📸 Photogenic</a>
+</div>
+</div>
+</section>
 
-  <!-- Sidebar Detail Panel -->
-  <div class="sidebar" id="sidebar">
-    <button class="sidebar-close" id="sidebarClose">✕</button>
-    <div class="sidebar-image" id="sidebarImage"></div>
-    <div class="sidebar-content">
-      <div class="sidebar-name-row">
-        <h1 class="sidebar-name" id="sidebarName"></h1>
-        <div class="sidebar-quick-actions">
-          <button class="sidebar-action-btn" id="sidebarBookmark" title="Save to favorites">
-            <span class="action-icon">☆</span><span class="action-label">Save</span>
-          </button>
-          <button class="sidebar-action-btn" id="sidebarRouteAdd" title="Add to route builder">
-            <span class="action-icon">+</span><span class="action-label">Add to Route</span>
-          </button>
-        </div>
-      </div>
-      <p class="sidebar-location" id="sidebarLocation"></p>
-      <div class="sidebar-badges" id="sidebarBadges"></div>
-      <div class="sidebar-tags" id="sidebarTags"></div>
-      <div class="sidebar-rating" id="sidebarRating"></div>
-      <div class="sidebar-access" id="sidebarAccess"></div>
-      <div class="sidebar-google" id="sidebarGoogle"></div>
-      <p class="sidebar-desc" id="sidebarDesc"></p>
-      <div class="sidebar-history" id="sidebarHistory"></div>
-      <div class="sidebar-hours" id="sidebarHours"></div>
-      <div class="sidebar-photos" id="sidebarPhotos"></div>
-      <div class="sidebar-reviews" id="sidebarReviews"></div>
-      <div class="sidebar-videos" id="sidebarVideos"></div>
-      <div class="sidebar-nearby" id="sidebarNearby"></div>
-      <div class="sidebar-actions">
-        <button class="btn-add-route" id="sidebarAddRoute" onclick="addToRoute()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 5v14M5 12h14"/></svg>
-          Add to Route
-        </button>
-        <a class="btn-directions" id="sidebarDirections" href="#" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
-          Get Directions
-        </a>
-      </div>
-      <div class="sidebar-footer">
-        <small>Data from OpenStreetMap & Google Maps Platform</small>
-      </div>
-    </div>
-  </div>
+<!-- COLLECTIONS -->
+<section>
+<div class="section-inner">
+<div class="section-header">
+<h2>Explore by Collection</h2>
+<a href="explore.html">View all →</a>
+</div>
+<div class="scroll-row">
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=600&q=80" alt="Top Rated" loading="lazy"><div class="card-overlay"><h3>🏆 Top Rated</h3><span>120 sites</span></div></a>
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80" alt="Hidden Gems" loading="lazy"><div class="card-overlay"><h3>💎 Hidden Gems</h3><span>340 sites</span></div></a>
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?w=600&q=80" alt="Haunted" loading="lazy"><div class="card-overlay"><h3>👻 Haunted &amp; Legendary</h3><span>85 sites</span></div></a>
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1543968996-ee822b8176ba?w=600&q=80" alt="Filming Locations" loading="lazy"><div class="card-overlay"><h3>🎬 Filming Locations</h3><span>64 sites</span></div></a>
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?w=600&q=80" alt="Free to Visit" loading="lazy"><div class="card-overlay"><h3>🆓 Free to Visit</h3><span>980 sites</span></div></a>
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=600&q=80" alt="Best Preserved" loading="lazy"><div class="card-overlay"><h3>🏰 Best Preserved</h3><span>150 sites</span></div></a>
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=600&q=80" alt="Romantic Ruins" loading="lazy"><div class="card-overlay"><h3>🌿 Romantic Ruins</h3><span>420 sites</span></div></a>
+<a class="scroll-card" href="explore.html"><img src="https://images.unsplash.com/photo-1564604761388-83dce70c5c58?w=600&q=80" alt="Most Photogenic" loading="lazy"><div class="card-overlay"><h3>📸 Most Photogenic</h3><span>200 sites</span></div></a>
+</div>
+</div>
+</section>
 
-  <!-- Collections Panel -->
-  <div class="bookmarks-panel" id="collectionsPanel">
-    <div class="route-header">
-      <h2>📚 Collections</h2>
-      <button class="sidebar-close" id="collectionsClose">✕</button>
-    </div>
-    <div id="collectionsContent"></div>
-  </div>
+<!-- FEATURED -->
+<section>
+<div class="section-inner">
+<div class="section-header">
+<h2>Worth the Visit</h2>
+</div>
+<div class="featured-grid">
+<a class="feat-card" href="/site/edinburgh-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Edinburgh_Castle_-_aerial_-_2025-04-19_03.jpg/800px-Edinburgh_Castle_-_aerial_-_2025-04-19_03.jpg" alt="Edinburgh Castle" loading="lazy"></div>
+<div class="feat-body"><h3>Edinburgh Castle</h3><p class="feat-loc">Edinburgh, Scotland</p><p class="feat-rating">★★★★★ 4.7</p><p class="feat-hook">Scotland's iconic fortress dominating the city skyline for centuries</p><span class="type-pill">Castle</span></div>
+</a>
+<a class="feat-card" href="/site/eilean-donan-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg/800px-Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg" alt="Eilean Donan Castle" loading="lazy"></div>
+<div class="feat-body"><h3>Eilean Donan Castle</h3><p class="feat-loc">Highland, Scotland</p><p class="feat-rating">★★★★★ 4.6</p><p class="feat-hook">The most photographed castle in Scotland, set on a tidal island</p><span class="type-pill">Castle</span></div>
+</a>
+<a class="feat-card" href="/site/tintagel-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg/800px-Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg" alt="Tintagel Castle" loading="lazy"></div>
+<div class="feat-body"><h3>Tintagel Castle</h3><p class="feat-loc">Cornwall, England</p><p class="feat-rating">★★★★☆ 4.4</p><p class="feat-hook">Legendary birthplace of King Arthur on Cornwall's dramatic coast</p><span class="type-pill">Castle</span></div>
+</a>
+<a class="feat-card" href="/site/conwy-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/800px-Conwy_Castle%2C_water_view1.jpg" alt="Conwy Castle" loading="lazy"></div>
+<div class="feat-body"><h3>Conwy Castle</h3><p class="feat-loc">Conwy, Wales</p><p class="feat-rating">★★★★★ 4.7</p><p class="feat-hook">Edward I's masterpiece and UNESCO World Heritage fortress</p><span class="type-pill">Castle</span></div>
+</a>
+<a class="feat-card" href="/site/blarney-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blarney_Castle_Ireland.jpg/800px-Blarney_Castle_Ireland.jpg" alt="Blarney Castle" loading="lazy"></div>
+<div class="feat-body"><h3>Blarney Castle</h3><p class="feat-loc">County Cork, Ireland</p><p class="feat-rating">★★★★☆ 4.4</p><p class="feat-hook">Kiss the famous stone and explore stunning gardens</p><span class="type-pill">Castle</span></div>
+</a>
+<a class="feat-card" href="/site/bamburgh-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/800px-Bamburgh_Castle%2C_beautiful_day.jpg" alt="Bamburgh Castle" loading="lazy"></div>
+<div class="feat-body"><h3>Bamburgh Castle</h3><p class="feat-loc">Northumberland, England</p><p class="feat-rating">★★★★★ 4.7</p><p class="feat-hook">A mighty coastal fortress rising above Northumberland's golden sands</p><span class="type-pill">Castle</span></div>
+</a>
+</div>
+</div>
+</section>
 
-  <!-- Near Me Panel -->
-  <div class="bookmarks-panel" id="nearMePanel">
-    <div class="route-header">
-      <h2>📍 Near Me</h2>
-      <button class="sidebar-close" id="nearMeClose">✕</button>
-    </div>
-    <div id="nearMeContent">
-      <div class="near-me-location" style="padding:16px 24px 0">
-        <button class="btn-find-routes" id="btnUseMyLocation" style="margin-bottom:8px">📍 Use My Location</button>
-        <div class="route-field">
-          <label>Or enter a location</label>
-          <input type="text" id="nearMeInput" placeholder="e.g. Edinburgh, York..." />
-        </div>
-      </div>
-      <div class="near-me-radius" id="nearMeRadius" style="display:none;padding:0 24px">
-        <div style="display:flex;gap:6px;margin:10px 0">
-          <button class="filter-chip active-type" data-radius="10" onclick="setNearMeRadius(10)">10 km</button>
-          <button class="filter-chip" data-radius="25" onclick="setNearMeRadius(25)">25 km</button>
-          <button class="filter-chip" data-radius="50" onclick="setNearMeRadius(50)">50 km</button>
-          <button class="filter-chip" data-radius="100" onclick="setNearMeRadius(100)">100 km</button>
-        </div>
-      </div>
-      <div id="nearMeResults" style="padding:0 24px 24px"></div>
-    </div>
-  </div>
+<!-- REGIONS -->
+<section class="bg-cream">
+<div class="section-inner">
+<div class="section-header">
+<h2>Explore by Region</h2>
+</div>
+<div class="region-grid">
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?w=600&q=80" alt="Scottish Highlands" loading="lazy"><div class="region-overlay"><h3>Scottish Highlands</h3><span>~180 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=600&q=80" alt="Scottish Lowlands" loading="lazy"><div class="region-overlay"><h3>Scottish Lowlands &amp; Borders</h3><span>~200 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&q=80" alt="North Wales" loading="lazy"><div class="region-overlay"><h3>North Wales</h3><span>~120 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=600&q=80" alt="South Wales" loading="lazy"><div class="region-overlay"><h3>South Wales</h3><span>~130 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" alt="Northern England" loading="lazy"><div class="region-overlay"><h3>Northern England</h3><span>~150 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&q=80" alt="Yorkshire" loading="lazy"><div class="region-overlay"><h3>Yorkshire</h3><span>~80 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" alt="The Midlands" loading="lazy"><div class="region-overlay"><h3>The Midlands</h3><span>~90 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=600&q=80" alt="South East England" loading="lazy"><div class="region-overlay"><h3>South East England</h3><span>~100 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&q=80" alt="South West England" loading="lazy"><div class="region-overlay"><h3>South West England</h3><span>~80 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="East Anglia" loading="lazy"><div class="region-overlay"><h3>East Anglia</h3><span>~60 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=600&q=80" alt="Ireland" loading="lazy"><div class="region-overlay"><h3>Ireland</h3><span>~500 sites</span></div></a>
+<a class="region-card" href="explore.html"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" alt="London & Surrey" loading="lazy"><div class="region-overlay"><h3>London &amp; Surrey</h3><span>~40 sites</span></div></a>
+</div>
+</div>
+</section>
 
-  <!-- My Stuff Panel (Favorites + Saved Routes) -->
-  <div class="bookmarks-panel" id="myStuffPanel">
-    <div class="route-header">
-      <h2>❤️ My Stuff</h2>
-      <button class="sidebar-close" id="myStuffClose">✕</button>
-    </div>
-    <div class="my-stuff-tabs">
-      <button class="my-stuff-tab active" data-tab="favorites" onclick="switchMyStuffTab('favorites')">⭐ Favorites</button>
-      <button class="my-stuff-tab" data-tab="routes" onclick="switchMyStuffTab('routes')">🧭 Routes</button>
-    </div>
-    <div id="myStuffFavorites">
-      <div class="bookmarks-count" id="bookmarksCount">0 favorites</div>
-      <div class="bookmarks-list" id="bookmarksList"></div>
-      <div class="bookmarks-actions" id="bookmarksActions">
-        <button class="btn-send-to-builder" id="btnSendToBuilder" onclick="sendFavoritesToRouteBuilder()">🧭 Plan Route from Selected</button>
-        <button class="btn-clear-bookmarks" id="btnClearBookmarks">Clear All</button>
-      </div>
-    </div>
-    <div id="myStuffRoutes" style="display:none">
-      <div class="bookmarks-count" id="savedRoutesCount">0 saved routes</div>
-      <div class="bookmarks-list" id="savedRoutesList"></div>
-    </div>
-  </div>
+<!-- TRAILS -->
+<section>
+<div class="section-inner">
+<div class="section-header">
+<h2>Follow a Trail</h2>
+</div>
+<div class="scroll-row">
+<a class="scroll-card trail-card" href="explore.html"><img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&q=80" alt="Iron Ring" loading="lazy"><div class="card-overlay"><h3>🏴 Edward I's Iron Ring</h3><span>North Wales · 8 castles · 3 hours</span></div></a>
+<a class="scroll-card trail-card" href="explore.html"><img src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=600&q=80" alt="Norman Conquest" loading="lazy"><div class="card-overlay"><h3>⚔️ Norman Conquest Trail</h3><span>South England · 12 castles · 5 hours</span></div></a>
+<a class="scroll-card trail-card" href="explore.html"><img src="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?w=600&q=80" alt="Highland Route" loading="lazy"><div class="card-overlay"><h3>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Highland Castle Route</h3><span>Scottish Highlands · 10 castles · 6 hours</span></div></a>
+<a class="scroll-card trail-card" href="explore.html"><img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=600&q=80" alt="Ireland's Ancient East" loading="lazy"><div class="card-overlay"><h3>🍀 Ireland's Ancient East</h3><span>South East Ireland · 9 castles · 4 hours</span></div></a>
+<a class="scroll-card trail-card" href="explore.html"><img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?w=600&q=80" alt="Haunted Trail" loading="lazy"><div class="card-overlay"><h3>👻 Haunted Castle Trail</h3><span>England · 7 castles · 5 hours</span></div></a>
+<a class="scroll-card trail-card" href="explore.html"><img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=600&q=80" alt="Photographer's Dream" loading="lazy"><div class="card-overlay"><h3>📸 Photographer's Dream</h3><span>UK-wide · 10 castles · 8 hours</span></div></a>
+</div>
+</div>
+</section>
 
-  <!-- Route Builder moved inside #map -->
+<!-- STATS -->
+<section class="bg-cream">
+<div class="section-inner">
+<div class="stats-bar">
+<div class="stat"><div class="stat-icon">🏰</div><div class="stat-num">3,000+</div><div class="stat-label">Sites</div></div>
+<div class="stat"><div class="stat-icon">🌍</div><div class="stat-num">5</div><div class="stat-label">Countries</div></div>
+<div class="stat"><div class="stat-icon">📍</div><div class="stat-num">12</div><div class="stat-label">Regions</div></div>
+<div class="stat"><div class="stat-icon">📖</div><div class="stat-num">150+</div><div class="stat-label">Detailed Guides</div></div>
+</div>
+</div>
+</section>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" onclick="event.stopPropagation(); lightboxNav(-1)">‹</button>
-    <img id="lightboxImg" src="" alt="Full size photo" onclick="event.stopPropagation()" />
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" onclick="event.stopPropagation(); lightboxNav(1)">›</button>
-    <div class="lightbox-counter" id="lightboxCounter"></div>
-  </div>
+<!-- NEAR ME CTA -->
+<section class="cta-section">
+<h2>What's near you?</h2>
+<p>Find castles, abbeys, and ruins close to your current location</p>
+<a href="explore.html" class="btn-cta">📍 Find Castles Nearby</a>
+</section>
 
-  <!-- Quick View (mobile only) -->
-  <div class="quick-view" id="quickView">
-    <div class="quick-view-image" id="qvImage"></div>
-    <div class="quick-view-content">
-      <div class="quick-view-header">
-        <h3 id="qvName"></h3>
-        <button class="qv-bookmark" id="qvBookmark">☆</button>
-        <button class="qv-bookmark qv-route-add" id="qvRouteAdd">🚗</button>
-      </div>
-      <div class="quick-view-badges" id="qvBadges"></div>
-      <div class="quick-view-rating" id="qvRating"></div>
-      <p class="quick-view-desc" id="qvDesc"></p>
-      <button class="qv-details-btn" id="qvDetailsBtn">View Details →</button>
-    </div>
-    <button class="qv-close" id="qvClose">✕</button>
-  </div>
+<!-- HOW IT WORKS -->
+<section class="bg-cream">
+<div class="section-inner">
+<div class="section-header"><h2>How It Works</h2><span></span></div>
+<div class="how-grid">
+<div class="how-step"><div class="how-icon">🔍</div><h3>Discover</h3><p>Browse 3,000+ castles by region, type, era, or collection</p></div>
+<div class="how-step"><div class="how-icon">🗺️</div><h3>Plan</h3><p>Build custom routes and save your favorites</p></div>
+<div class="how-step"><div class="how-icon">🏰</div><h3>Visit</h3><p>Get directions, hours, accessibility, and nearby sites</p></div>
+</div>
+</div>
+</section>
 
-  <!-- Listing Overlay -->
-  <div id="listingOverlay"></div>
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="footer-logo">🏰 Scenic Route</div>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+</div>
+<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="explore.html">Collections</a><a href="explore.html">Regions</a><a href="explore.html">Trails</a></div>
+<div class="footer-col"><h4>Info</h4><a href="#">About</a><a href="#">Contact</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div>
+<div class="footer-bottom">
+<span>Built with ❤️ for history lovers</span>
+<span>© 2026 Scenic Route</span>
+</div>
+</div>
+</footer>
 
-  <!-- Mobile overlay backdrop -->
-  <div class="overlay-backdrop" id="overlayBackdrop"></div>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&libraries=places"></script>
-  <script src="data.js?v=21"></script>
-  <script src="rich-data.js?v=72"></script>
-  <script src="app.js?v=75"></script>
+<!-- SEARCH -->
+<script src="data.js"></script>
+<script>
+(function(){
+const input=document.getElementById('heroSearch');
+const results=document.getElementById('searchResults');
+let timer;
+function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+function search(q){
+if(!q||q.length<2){results.classList.remove('open');return}
+if(typeof CASTLES==='undefined')return;
+const lq=q.toLowerCase();
+const matches=CASTLES.filter(c=>c.name.toLowerCase().includes(lq)).slice(0,8);
+if(!matches.length){results.classList.remove('open');return}
+results.innerHTML=matches.map(c=>`<a href="/site/${slug(c.name)}.html"><span>${c.name}</span><span class="sr-type">${c.county||''}, ${c.country||''}</span></a>`).join('');
+results.classList.add('open');
+}
+input.addEventListener('input',function(){
+clearTimeout(timer);
+timer=setTimeout(()=>search(this.value.trim()),200);
+});
+document.addEventListener('click',function(e){
+if(!e.target.closest('.search-wrap'))results.classList.remove('open');
+});
+})();
+</script>
 </body>
 </html>
-<!-- v2 -->
