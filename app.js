@@ -627,31 +627,77 @@ function openListing(castle) {
   };
   const tagsHtml = (castle.tags || []).map(t => `<span class="listing-tag">${TAG_LABELS[t] || t}</span>`).join('');
 
-  // Terrain chips
-  const terrainChips = [];
-  const cond = (castle.condition || '').toLowerCase();
-  if (cond === 'intact') {
-    terrainChips.push({ icon: '♿', text: 'Wheelchair Likely', cls: 'green' });
-    terrainChips.push({ icon: '🚶', text: 'Mostly Paved', cls: 'green' });
-  } else if (cond === 'ruin') {
-    terrainChips.push({ icon: '⚠️', text: 'Uneven Ground', cls: 'amber' });
-    terrainChips.push({ icon: '👟', text: 'Sturdy Footwear', cls: 'amber' });
-  } else if (cond === 'partial ruin') {
-    terrainChips.push({ icon: '🚶', text: 'Mostly Walkable', cls: 'green' });
-    terrainChips.push({ icon: '⚠️', text: 'Some Uneven Areas', cls: 'amber' });
-  }
-  if (castle.tags && castle.tags.includes('kid-friendly')) {
-    terrainChips.push({ icon: '👶', text: 'Family Friendly', cls: 'green' });
-  }
-  if (castle.access === 'free') {
-    terrainChips.push({ icon: '🏞️', text: 'Open Access', cls: 'green' });
-  }
-  const terrainChipsHtml = terrainChips.map(c => `<div class="listing-terrain-chip ${c.cls}"><span class="listing-chip-icon">${c.icon}</span> ${c.text}</div>`).join('');
+  // Rich data lookup
+  const richData = (typeof RICH_SITE_DATA !== 'undefined') ? RICH_SITE_DATA[castle.name] : null;
 
-  let terrainNote = '';
-  if (cond === 'intact') terrainNote = 'ℹ️ This site is well-maintained and largely accessible. Paths are generally paved and suitable for most visitors.';
-  else if (cond === 'ruin') terrainNote = 'ℹ️ As a ruin, expect rough terrain, loose stones, and uneven surfaces. Suitable footwear recommended. Not all areas may be accessible.';
-  else if (cond === 'partial ruin') terrainNote = 'ℹ️ Parts of this site are well-maintained while other areas are ruined. Expect a mix of paved paths and rougher terrain.';
+  // Terrain chips
+  let terrainChipsHtml, terrainNote;
+  if (richData && richData.terrain) {
+    terrainChipsHtml = richData.terrain.chips.map(c => `<div class="listing-terrain-chip ${c.cls}"><span class="listing-chip-icon">${c.icon}</span> ${c.text}</div>`).join('');
+    terrainNote = richData.terrain.note ? `ℹ️ ${richData.terrain.note}` : '';
+  } else {
+    const terrainChips = [];
+    const cond = (castle.condition || '').toLowerCase();
+    if (cond === 'intact') {
+      terrainChips.push({ icon: '♿', text: 'Wheelchair Likely', cls: 'green' });
+      terrainChips.push({ icon: '🚶', text: 'Mostly Paved', cls: 'green' });
+    } else if (cond === 'ruin') {
+      terrainChips.push({ icon: '⚠️', text: 'Uneven Ground', cls: 'amber' });
+      terrainChips.push({ icon: '👟', text: 'Sturdy Footwear', cls: 'amber' });
+    } else if (cond === 'partial ruin') {
+      terrainChips.push({ icon: '🚶', text: 'Mostly Walkable', cls: 'green' });
+      terrainChips.push({ icon: '⚠️', text: 'Some Uneven Areas', cls: 'amber' });
+    }
+    if (castle.tags && castle.tags.includes('kid-friendly')) {
+      terrainChips.push({ icon: '👶', text: 'Family Friendly', cls: 'green' });
+    }
+    if (castle.access === 'free') {
+      terrainChips.push({ icon: '🏞️', text: 'Open Access', cls: 'green' });
+    }
+    terrainChipsHtml = terrainChips.map(c => `<div class="listing-terrain-chip ${c.cls}"><span class="listing-chip-icon">${c.icon}</span> ${c.text}</div>`).join('');
+    terrainNote = '';
+    const cond2 = (castle.condition || '').toLowerCase();
+    if (cond2 === 'intact') terrainNote = 'ℹ️ This site is well-maintained and largely accessible. Paths are generally paved and suitable for most visitors.';
+    else if (cond2 === 'ruin') terrainNote = 'ℹ️ As a ruin, expect rough terrain, loose stones, and uneven surfaces. Suitable footwear recommended. Not all areas may be accessible.';
+    else if (cond2 === 'partial ruin') terrainNote = 'ℹ️ Parts of this site are well-maintained while other areas are ruined. Expect a mix of paved paths and rougher terrain.';
+  }
+
+  // Getting There HTML
+  const gettingThereHtml = (richData && richData.gettingThere) ? richData.gettingThere.map(t => `
+    <div class="listing-transport-card">
+      <div class="listing-transport-icon">${t.icon}</div>
+      <div>
+        <div class="listing-transport-name">${t.name}</div>
+        <div class="listing-transport-detail">${t.detail}</div>
+        ${t.link ? `<a class="listing-transport-link" href="${t.link}" target="_blank">${t.linkText || 'Get directions →'}</a>` : ''}
+      </div>
+    </div>
+  `).join('') : `<div class="listing-transport-card">
+    <div class="listing-transport-icon">🗺️</div>
+    <div>
+      <div class="listing-transport-name">Directions</div>
+      <div class="listing-transport-detail">Navigate to ${castle.name} via Google Maps.</div>
+      <a class="listing-transport-link" href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions →</a>
+    </div>
+  </div>`;
+
+  // Events HTML
+  const eventsHtml = (richData && richData.events && richData.events.length > 0) ? richData.events.map(e => `
+    <div class="listing-event-card">
+      <div class="listing-event-date-box">
+        <div class="listing-event-month">${e.month}</div>
+        <div class="listing-event-day">${e.day}</div>
+      </div>
+      <div class="listing-event-info">
+        <div class="listing-event-name">${e.name}</div>
+        <div class="listing-event-desc">${e.desc}</div>
+        <div class="listing-event-meta">
+          <span class="listing-event-badge ${e.badge}">${e.badgeText}</span>
+          ${e.meta}
+        </div>
+      </div>
+    </div>
+  `).join('') : '<div style="color:#8a8a8a;font-size:13px;">No upcoming events listed.</div>';
 
   // Nearby sites
   const nearbySites = CASTLES
@@ -775,22 +821,18 @@ function openListing(castle) {
         <div class="listing-divider"></div>
 
         <h2 class="listing-section-title">Getting There</h2>
-        <div>
-          <div class="listing-transport-card">
-            <div class="listing-transport-icon">🗺️</div>
-            <div>
-              <div class="listing-transport-name">Directions</div>
-              <div class="listing-transport-detail">Navigate to ${castle.name} via Google Maps.</div>
-              <a class="listing-transport-link" href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions →</a>
-            </div>
-          </div>
-        </div>
+        <div>${gettingThereHtml}</div>
 
         <div class="listing-divider"></div>
 
         <h2 class="listing-section-title">Terrain & Accessibility</h2>
         <div class="listing-terrain-grid">${terrainChipsHtml}</div>
         ${terrainNote ? `<div class="listing-terrain-note">${terrainNote}</div>` : ''}
+
+        <div class="listing-divider"></div>
+
+        <h2 class="listing-section-title">Upcoming Events</h2>
+        <div>${eventsHtml}</div>
 
         <div class="listing-divider"></div>
 
