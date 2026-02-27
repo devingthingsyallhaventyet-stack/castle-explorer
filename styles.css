@@ -856,11 +856,12 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
   transition: opacity 0.3s;
   background: #000;
 }
-.listing-photo-layer-inner { padding-bottom: 42vh; }
+.listing-photo-layer-inner { }
 
 .listing-gallery-item { width: 100%; position: relative; }
 .listing-gallery-item.listing-photo { background: #111; }
 .listing-gallery-item.listing-photo:first-child img { width: 100%; display: block; height: 58vh; object-fit: cover; }
+.listing-photo-spacer { height: 42vh; }
 .listing-gallery-item.listing-photo img { width: 100%; display: block; min-height: 50vh; max-height: 100vh; object-fit: cover; }
 .listing-gallery-item.listing-photo img[src=""] { display: none; }
 

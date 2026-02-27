@@ -708,6 +708,7 @@ function openListing(castle) {
         <!-- More photos loaded by Google Places -->
         <div class="listing-gallery-item listing-photo" id="listingExtraPhoto5"></div>
         <div class="listing-gallery-item listing-photo" id="listingExtraPhoto6"></div>
+        <div class="listing-photo-spacer"></div>
       </div>
     </div>
 
