@@ -854,12 +854,12 @@ function initListingSheet() {
   sheetPeek.addEventListener('mousedown', onDragStart);
 
   // Drag from peek content area
-  const peekContent = document.getElementById('listingPeekContent');
-  if (peekContent) {
-    peekContent.addEventListener('touchstart', (e) => {
+  const peekContentEl = document.getElementById('listingPeekContent');
+  if (peekContentEl) {
+    peekContentEl.addEventListener('touchstart', (e) => {
       if (!listingSheetExpanded) onDragStart(e);
     }, { passive: true });
-    peekContent.addEventListener('mousedown', (e) => {
+    peekContentEl.addEventListener('mousedown', (e) => {
       if (!listingSheetExpanded) onDragStart(e);
     });
   }
