@@ -71,14 +71,19 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
 }
 .bottom-sheet.dragging { transition: none; }
 
-/* Peek state: show header + stats + buttons */
-.sheet-peek {
+/* Handle — always at top for drag */
+.sheet-handle-wrap {
   flex-shrink: 0;
-  padding: 0 16px 12px;
+  padding: 10px 16px 0;
   cursor: grab;
   touch-action: none;
 }
-.sheet-handle { width: 36px; height: 4px; background: #ccc; border-radius: 2px; margin: 10px auto 12px; }
+.sheet-handle { width: 36px; height: 4px; background: #ccc; border-radius: 2px; margin: 0 auto 8px; }
+
+/* Peek content — scrolls with rest when expanded */
+.sheet-peek {
+  padding: 0 16px 12px;
+}
 
 .listing-name { font-family: var(--font-serif); font-size: 24px; line-height: 1.2; margin-bottom: 4px; }
 .listing-location { font-size: 14px; color: var(--text-secondary); margin-bottom: 12px; }
@@ -226,25 +231,27 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
 
 <!-- BOTTOM SHEET -->
 <div class="bottom-sheet" id="sheet">
-  <!-- Peek header — always visible -->
-  <div class="sheet-peek" id="sheetPeek">
+  <!-- Handle for dragging -->
+  <div class="sheet-handle-wrap" id="sheetPeek">
     <div class="sheet-handle"></div>
-    <h1 class="listing-name">Hampton Court Palace</h1>
-    <div class="listing-location">London, England · <a href="https://www.google.com/maps/dir/?api=1&destination=51.4036,-0.3378" target="_blank">Get directions</a></div>
-    <div class="key-stats">
-      <div class="stat-item"><div class="stat-value">👑</div><div class="stat-label">Palace</div></div>
-      <div class="stat-item"><div class="stat-value">1514</div><div class="stat-label">Built</div></div>
-      <div class="stat-item"><div class="stat-value">Intact</div><div class="stat-label">Condition</div></div>
-      <div class="stat-item"><div class="stat-value">£29</div><div class="stat-label">Admission</div></div>
-    </div>
-    <div class="peek-buttons">
-      <button class="btn btn-secondary">☆ Save</button>
-      <button class="btn btn-primary">🚗 Add to Route</button>
-    </div>
   </div>
 
-  <!-- Scrollable details -->
+  <!-- All content scrolls together -->
   <div class="sheet-scroll" id="sheetScroll">
+    <div class="sheet-peek">
+      <h1 class="listing-name">Hampton Court Palace</h1>
+      <div class="listing-location">London, England · <a href="https://www.google.com/maps/dir/?api=1&destination=51.4036,-0.3378" target="_blank">Get directions</a></div>
+      <div class="key-stats">
+        <div class="stat-item"><div class="stat-value">👑</div><div class="stat-label">Palace</div></div>
+        <div class="stat-item"><div class="stat-value">1514</div><div class="stat-label">Built</div></div>
+        <div class="stat-item"><div class="stat-value">Intact</div><div class="stat-label">Condition</div></div>
+        <div class="stat-item"><div class="stat-value">£29</div><div class="stat-label">Admission</div></div>
+      </div>
+      <div class="peek-buttons">
+        <button class="btn btn-secondary">☆ Save</button>
+        <button class="btn btn-primary">🚗 Add to Route</button>
+      </div>
+    </div>
     <div class="divider"></div>
 
     <div class="rating-bar" onclick="scrollToReviews()" style="cursor:pointer">
@@ -340,7 +347,8 @@ let currentY = 0;
 let expanded = false;
 
 function measureSheet() {
-  peekHeight = sheetPeek.offsetHeight + 16; // +16 for handle area
+  const peekContent = document.querySelector('.sheet-peek');
+  peekHeight = sheetPeek.offsetHeight + peekContent.offsetHeight + 8;
   const vh = window.innerHeight;
   sheetPeekY = vh - peekHeight;
   sheetFullY = vh * 0.05; // 5% from top when fully expanded
