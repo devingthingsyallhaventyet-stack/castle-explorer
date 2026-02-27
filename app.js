@@ -683,43 +683,38 @@ function openListing(castle) {
   const starsStr = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
 
   overlay.innerHTML = `
+    <div class="listing-photo-bg" id="listingPhotoBg">
+      <div class="listing-inline-gallery" id="listingInlineGallery">
+        <div class="listing-gallery-scroll" id="listingGalleryScroll">
+          <div class="listing-gallery-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
+          <div class="listing-gallery-slide"><img id="listingImg2" src="" /></div>
+          <div class="listing-gallery-slide"><img id="listingImg3" src="" /></div>
+          <div class="listing-gallery-slide"><img id="listingImg4" src="" /></div>
+        </div>
+        <div class="listing-gallery-counter" id="listingGalleryCounter">1 / 1</div>
+      </div>
+    </div>
+
     <div class="listing-bottom-sheet" id="listingSheet">
       <div class="listing-sheet-handle-wrap" id="listingSheetPeek">
         <div class="listing-sheet-handle"></div>
         <button class="listing-peek-close" onclick="closeListing()">✕</button>
       </div>
+      <div class="listing-sheet-peek">
+        <h1 class="listing-name">${castle.name}</h1>
+        <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
+        <div class="listing-key-stats">
+          <div class="listing-stat-item"><div class="listing-stat-value">${tc.emoji}</div><div class="listing-stat-label">${castle.type}</div></div>
+          <div class="listing-stat-item"><div class="listing-stat-value">${eraDisplay}</div><div class="listing-stat-label">Built</div></div>
+          <div class="listing-stat-item"><div class="listing-stat-value">${castle.condition || '—'}</div><div class="listing-stat-label">Condition</div></div>
+          <div class="listing-stat-item"><div class="listing-stat-value">${accessStatLabel}</div><div class="listing-stat-label">Access</div></div>
+        </div>
+        <div class="listing-peek-buttons">
+          <button class="listing-btn listing-btn-secondary" id="listingFavBtn" onclick="listingToggleFav()">${favText}</button>
+          <button class="listing-btn listing-btn-primary" onclick="listingAddToRoute()">🚗 Add to Route</button>
+        </div>
+      </div>
       <div class="listing-sheet-scroll" id="listingSheetScroll">
-        <!-- Photo gallery inside scroll -->
-        <div class="listing-inline-gallery" id="listingInlineGallery">
-          <div class="listing-gallery-scroll" id="listingGalleryScroll">
-            <div class="listing-gallery-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
-            <div class="listing-gallery-slide"><img id="listingImg2" src="" /></div>
-            <div class="listing-gallery-slide"><img id="listingImg3" src="" /></div>
-            <div class="listing-gallery-slide"><img id="listingImg4" src="" /></div>
-          </div>
-          <div class="listing-gallery-counter" id="listingGalleryCounter">1 / 1</div>
-        </div>
-
-        <!-- Map embed -->
-        <div class="listing-inline-map">
-          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
-          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
-        </div>
-
-        <div class="listing-sheet-peek">
-          <h1 class="listing-name">${castle.name}</h1>
-          <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
-          <div class="listing-key-stats">
-            <div class="listing-stat-item"><div class="listing-stat-value">${tc.emoji}</div><div class="listing-stat-label">${castle.type}</div></div>
-            <div class="listing-stat-item"><div class="listing-stat-value">${eraDisplay}</div><div class="listing-stat-label">Built</div></div>
-            <div class="listing-stat-item"><div class="listing-stat-value">${castle.condition || '—'}</div><div class="listing-stat-label">Condition</div></div>
-            <div class="listing-stat-item"><div class="listing-stat-value">${accessStatLabel}</div><div class="listing-stat-label">Access</div></div>
-          </div>
-          <div class="listing-peek-buttons">
-            <button class="listing-btn listing-btn-secondary" id="listingFavBtn" onclick="listingToggleFav()">${favText}</button>
-            <button class="listing-btn listing-btn-primary" onclick="listingAddToRoute()">🚗 Add to Route</button>
-          </div>
-        </div>
         <div class="listing-divider"></div>
 
         <div class="listing-rating-bar" onclick="listingScrollToReviews()">
@@ -745,6 +740,13 @@ function openListing(castle) {
         </div>
 
         <div class="listing-links-section" id="listingLinksSection" style="display:none"></div>
+
+        <div class="listing-divider"></div>
+
+        <div class="listing-inline-map">
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
+          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
+        </div>
 
         <div class="listing-divider"></div>
 
@@ -822,13 +824,11 @@ function initListingSheet() {
   const sheet = document.getElementById('listingSheet');
   const sheetPeek = document.getElementById('listingSheetPeek');
   const sheetScroll = document.getElementById('listingSheetScroll');
-  const photoLayer = { style: {}, addEventListener: () => {}, scrollHeight: 0, scrollTop: 0, clientHeight: 0 }; // no-op stub
+  const photoLayer = document.getElementById('listingPhotoBg') || { style: {}, addEventListener: () => {}, scrollHeight: 0, scrollTop: 0, clientHeight: 0 };
   if (!sheet) return;
 
-  const peekContent = sheet.querySelector('.listing-sheet-peek');
-  const peekHeight = sheetPeek.offsetHeight + peekContent.offsetHeight + 8;
   const vh = window.innerHeight;
-  listingSheetPeekY = vh - peekHeight;
+  listingSheetPeekY = Math.round(vh * 0.55);
   listingSheetFullY = vh * 0.05;
   listingCurrentY = listingSheetPeekY;
   listingSetExpanded(false);
