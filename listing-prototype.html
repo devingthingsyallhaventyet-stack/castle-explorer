@@ -371,14 +371,13 @@ function onDragEnd() {
   document.removeEventListener('touchend', onDragEnd);
   document.removeEventListener('mouseup', onDragEnd);
 
-  const mid = (sheetPeekY + sheetFullY) / 2;
-  if (currentY < mid) {
-    // Snap to expanded
+  // Snap threshold: just 15% drag from peek position triggers expand
+  const threshold = sheetPeekY - (sheetPeekY - sheetFullY) * 0.15;
+  if (currentY < threshold) {
     expanded = true;
     currentY = sheetFullY;
     photoLayer.style.opacity = 0.6;
   } else {
-    // Snap to peek
     expanded = false;
     currentY = sheetPeekY;
     photoLayer.style.opacity = 1;
@@ -417,8 +416,8 @@ sheetScroll.addEventListener('touchend', () => {
   if (dragTarget === 'scroll') {
     dragTarget = null;
     sheet.classList.remove('dragging');
-    const mid = (sheetPeekY + sheetFullY) / 2;
-    if (currentY < mid) {
+    const collapseThreshold = sheetFullY + (sheetPeekY - sheetFullY) * 0.15;
+    if (currentY < collapseThreshold) {
       expanded = true;
       currentY = sheetFullY;
       photoLayer.style.opacity = 0.6;
