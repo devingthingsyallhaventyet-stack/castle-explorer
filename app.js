@@ -144,11 +144,7 @@ function resizePins() {
 }
 
 function handlePinClick(castle) {
-  if (window.innerWidth < 768) {
-    openQuickView(castle);
-  } else {
-    openListing(castle);
-  }
+  openListing(castle);
 }
 
 function updatePinImage(castleIndex, photoUrl) {
@@ -580,11 +576,27 @@ function renderYouTubeData(items, castle) {
 }
 
 // ========== LISTING OVERLAY (Zillow-style) ==========
-let listingSheetExpanded = false;
+let listingSetExpanded(false);
 let listingCurrentY = 0;
 let listingSheetPeekY = 0;
 let listingSheetFullY = 0;
 let listingDragging = false;
+
+function listingSetExpanded(val) {
+  listingSheetExpanded = val;
+  const overlay = document.getElementById('listingOverlay');
+  const photoLayer = document.querySelector('.listing-photo-layer');
+  const overlayEl = document.querySelector('.listing-gallery-overlay');
+  if (val) {
+    overlay.classList.add('expanded');
+    if (photoLayer) photoLayer.classList.add('visible');
+    if (overlayEl) overlayEl.style.display = '';
+  } else {
+    overlay.classList.remove('expanded');
+    if (photoLayer) photoLayer.classList.remove('visible');
+    if (overlayEl) overlayEl.style.display = 'none';
+  }
+}
 let listingDragTarget = null;
 let listingStartTouchY = 0;
 let listingStartSheetY = 0;
@@ -702,6 +714,7 @@ function openListing(castle) {
     <div class="listing-bottom-sheet" id="listingSheet">
       <div class="listing-sheet-handle-wrap" id="listingSheetPeek">
         <div class="listing-sheet-handle"></div>
+        <button class="listing-peek-close" onclick="closeListing()">✕</button>
       </div>
       <div class="listing-sheet-scroll" id="listingSheetScroll">
         <div class="listing-sheet-peek">
@@ -813,7 +826,7 @@ function closeListing() {
   overlay.classList.remove('active');
   overlay.innerHTML = '';
   listingCastle = null;
-  listingSheetExpanded = false;
+  listingSetExpanded(false);
 }
 
 function initListingSheet() {
@@ -829,7 +842,7 @@ function initListingSheet() {
   listingSheetPeekY = vh - peekHeight;
   listingSheetFullY = vh * 0.05;
   listingCurrentY = listingSheetPeekY;
-  listingSheetExpanded = false;
+  listingSetExpanded(false);
   sheet.style.height = `${vh - listingSheetFullY}px`;
   sheet.style.transform = `translateY(${listingCurrentY}px)`;
 
@@ -891,12 +904,12 @@ function initListingSheet() {
 
     const threshold = listingSheetPeekY - (listingSheetPeekY - listingSheetFullY) * 0.15;
     if (listingCurrentY < threshold) {
-      listingSheetExpanded = true;
+      listingSetExpanded(true);
       listingCurrentY = listingSheetFullY;
       photoLayer.style.opacity = 0.6;
       sheetScroll.classList.add('scrollable');
     } else {
-      listingSheetExpanded = false;
+      listingSetExpanded(false);
       listingCurrentY = listingSheetPeekY;
       photoLayer.style.opacity = 1;
       sheetScroll.scrollTop = 0;
@@ -936,12 +949,12 @@ function initListingSheet() {
       sheet.classList.remove('dragging');
       const collapseThreshold = listingSheetFullY + (listingSheetPeekY - listingSheetFullY) * 0.15;
       if (listingCurrentY < collapseThreshold) {
-        listingSheetExpanded = true;
+        listingSetExpanded(true);
         listingCurrentY = listingSheetFullY;
         photoLayer.style.opacity = 0.6;
         sheetScroll.classList.add('scrollable');
       } else {
-        listingSheetExpanded = false;
+        listingSetExpanded(false);
         listingCurrentY = listingSheetPeekY;
         photoLayer.style.opacity = 1;
         sheetScroll.scrollTop = 0;
@@ -955,7 +968,7 @@ function initListingSheet() {
   sheetPeek.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) return;
     if (!listingSheetExpanded) {
-      listingSheetExpanded = true;
+      listingSetExpanded(true);
       listingCurrentY = listingSheetFullY;
       setSheetTransform(listingCurrentY);
       photoLayer.style.opacity = 0.6;
@@ -971,7 +984,7 @@ function initListingSheet() {
     lastPhotoScroll = el.scrollTop;
 
     if (scrollingUp && listingSheetExpanded && el.scrollTop < el.scrollHeight - el.clientHeight - 100) {
-      listingSheetExpanded = false;
+      listingSetExpanded(false);
       listingCurrentY = listingSheetPeekY;
       setSheetTransform(listingCurrentY);
       photoLayer.style.opacity = 1;
@@ -980,7 +993,7 @@ function initListingSheet() {
       return;
     }
     if (el.scrollHeight - el.scrollTop - el.clientHeight < 50 && !listingSheetExpanded) {
-      listingSheetExpanded = true;
+      listingSetExpanded(true);
       listingCurrentY = listingSheetFullY;
       setSheetTransform(listingCurrentY);
       photoLayer.style.opacity = 0.6;
@@ -1170,7 +1183,7 @@ function listingScrollToReviews() {
   const sheet = document.getElementById('listingSheet');
   const photoLayer = document.getElementById('listingPhotoLayer');
   if (!listingSheetExpanded) {
-    listingSheetExpanded = true;
+    listingSetExpanded(true);
     listingCurrentY = listingSheetFullY;
     if (window.innerWidth >= 768) {
       sheet.style.transform = `translateX(-50%) translateY(${listingCurrentY}px)`;
@@ -2335,7 +2348,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Close quick view when tapping map
-  map.on('click', () => closeQuickView());
+  map.on('click', () => { closeQuickView(); if (listingCastle && !listingSheetExpanded) closeListing(); });
 });
 
 // ========== QUICK VIEW (MOBILE) ==========

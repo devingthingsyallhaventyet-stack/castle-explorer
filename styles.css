@@ -843,16 +843,26 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 /* ========== LISTING OVERLAY (Zillow-style) ========== */
 #listingOverlay {
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 1000; background: #000; display: none;
+  z-index: 1000; background: transparent; display: none;
   overflow: hidden;
+  pointer-events: none;
+  transition: background 0.35s;
 }
 #listingOverlay.active { display: block; }
+#listingOverlay.active.expanded { background: #000; pointer-events: auto; }
 
 /* Photo layer — scrolls behind the sheet */
 .listing-photo-layer {
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
   overflow-y: auto; -webkit-overflow-scrolling: touch;
   z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+.listing-photo-layer.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 .listing-photo-layer-inner { padding-bottom: 280px; }
 
@@ -892,11 +902,21 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 }
 
 /* Bottom sheet */
+.listing-peek-close {
+  position: absolute; top: 8px; right: 12px;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--cream, #f5f0e8); border: 1px solid var(--border, #e8e8e8);
+  color: var(--text, #1a1a1a); font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 5;
+}
+
 .listing-bottom-sheet {
   position: fixed; left: 0; right: 0; bottom: 0;
   z-index: 1010; background: var(--white, #fff);
   border-radius: 16px 16px 0 0;
   box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+  pointer-events: auto;
   transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
   will-change: transform;
   max-height: 95vh; max-height: 95dvh;
@@ -905,7 +925,7 @@ html, body { height: 100%; font-family: var(--font-sans); color: var(--text); ba
 .listing-bottom-sheet.dragging { transition: none; }
 
 .listing-sheet-handle-wrap {
-  flex-shrink: 0; padding: 10px 16px 0; cursor: grab; touch-action: none;
+  flex-shrink: 0; padding: 10px 16px 0; cursor: grab; touch-action: none; position: relative;
 }
 .listing-sheet-handle {
   width: 36px; height: 4px; background: #ccc; border-radius: 2px; margin: 0 auto 8px;
