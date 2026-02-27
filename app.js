@@ -559,7 +559,7 @@ function renderYouTubeData(items, castle) {
   const el = document.getElementById('sidebarVideos');
   if (!items || items.length === 0) { el.innerHTML = ''; return; }
   const playIcon = `<svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>`;
-  const cardsHtml = items.map(item => {
+  const cardsHtml = items.slice(0, 3).map(item => {
     const vid = item.id.videoId;
     const title = item.snippet.title.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'");
     const channel = item.snippet.channelTitle;

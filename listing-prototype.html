@@ -155,6 +155,24 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
 .nearby-card-name { font-size: 12px; font-weight: 600; line-height: 1.3; margin-bottom: 2px; }
 .nearby-card-meta { font-size: 11px; color: var(--text-muted); }
 
+/* Links section */
+.links-section { margin-bottom: 16px; }
+.link-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); }
+.link-row:last-child { border-bottom: none; }
+.link-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--bg-light); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.link-info { flex: 1; min-width: 0; }
+.link-label { font-size: 13px; font-weight: 600; }
+.link-url { font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.link-arrow { color: var(--text-muted); font-size: 16px; flex-shrink: 0; }
+
+/* Share button */
+.share-bar { display: flex; gap: 10px; margin: 16px 0; }
+.share-bar .btn { flex: 1; padding: 12px; border-radius: var(--radius); font-size: 13px; font-weight: 600; font-family: var(--font-sans); cursor: pointer; text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.btn-share { background: var(--bg); color: var(--text); border: 1.5px solid var(--border); }
+.btn-gmaps { background: var(--bg); color: var(--blue); border: 1.5px solid var(--border); }
+.share-toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; z-index: 200; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+.share-toast.show { opacity: 1; }
+
 @media (min-width: 768px) {
   .listing-name { font-size: 28px; }
   .bottom-sheet { max-width: 680px; left: 50%; right: auto; transform: translateX(-50%); width: 100%; }
@@ -253,6 +271,14 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
       </div>
     </div>
 
+    <!-- Share + Links -->
+    <div class="share-bar">
+      <button class="btn btn-share" onclick="shareListing()">📤 Share</button>
+      <a class="btn btn-gmaps" href="https://www.google.com/maps/dir/?api=1&destination=51.4036,-0.3378" target="_blank">📍 Google Maps</a>
+    </div>
+
+    <div class="links-section" id="linksSection" style="display:none"></div>
+
     <div class="divider"></div>
 
     <h2 class="section-title">About</h2>
@@ -291,6 +317,8 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
     <div style="height: 60px;"></div>
   </div>
 </div>
+
+<div class="share-toast" id="shareToast">Link copied!</div>
 
 <script>
 const API_KEY = 'AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
@@ -463,7 +491,7 @@ async function loadGoogleData() {
       const { Place } = await google.maps.importLibrary('places');
       const { places } = await Place.searchByText({
         textQuery: 'Hampton Court Palace London England',
-        fields: ['displayName','rating','userRatingCount','photos','regularOpeningHours','googleMapsURI','reviews'],
+        fields: ['displayName','rating','userRatingCount','photos','regularOpeningHours','googleMapsURI','reviews','websiteURI'],
         locationBias: { lat: LAT, lng: LNG },
         maxResultCount: 1
       });
@@ -473,6 +501,7 @@ async function loadGoogleData() {
         renderPhotos(p);
         renderHours(p);
         renderReviews(p);
+        renderLinks(p);
       }
     } catch(e) { console.warn(e); }
   };
@@ -510,13 +539,66 @@ function renderReviews(place) {
   }).join('') + `<a class="reviews-all-link" href="${place.googleMapsURI||'#'}" target="_blank">Read all ${(place.userRatingCount||9870).toLocaleString()} reviews</a>`;
 }
 
+function renderLinks(place) {
+  const el = document.getElementById('linksSection');
+  const links = [];
+
+  if (place.websiteURI) {
+    const domain = place.websiteURI.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+    links.push({ icon: '🌐', label: 'Official Website', url: place.websiteURI, display: domain });
+  }
+
+  if (place.googleMapsURI) {
+    links.push({ icon: '📍', label: 'Google Maps', url: place.googleMapsURI, display: 'View on Google Maps' });
+  }
+
+  // Try to detect social media from website (common patterns)
+  if (place.websiteURI) {
+    const site = place.websiteURI.toLowerCase();
+    if (site.includes('facebook.com')) links.push({ icon: '📘', label: 'Facebook', url: place.websiteURI, display: 'Facebook Page' });
+    if (site.includes('instagram.com')) links.push({ icon: '📷', label: 'Instagram', url: place.websiteURI, display: 'Instagram Profile' });
+    if (site.includes('twitter.com') || site.includes('x.com')) links.push({ icon: '🐦', label: 'Twitter / X', url: place.websiteURI, display: 'Twitter Profile' });
+  }
+
+  if (links.length === 0) { el.style.display = 'none'; return; }
+  el.style.display = 'block';
+  el.innerHTML = `<h2 class="section-title">Links</h2>` + links.map(l =>
+    `<a class="link-row" href="${l.url}" target="_blank" rel="noopener">
+      <div class="link-icon">${l.icon}</div>
+      <div class="link-info">
+        <div class="link-label">${l.label}</div>
+        <div class="link-url">${l.display}</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>`
+  ).join('');
+}
+
+function shareListing() {
+  const url = window.location.href;
+  const title = 'Hampton Court Palace — Scenic Route';
+  const text = 'Check out Hampton Court Palace on Scenic Route!';
+
+  if (navigator.share) {
+    navigator.share({ title, text, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => {
+      const toast = document.getElementById('shareToast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }).catch(() => {
+      prompt('Copy this link:', url);
+    });
+  }
+}
+
 async function loadYouTube() {
   try {
     const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Hampton Court Palace')}&type=video&maxResults=3&videoDuration=medium&relevanceLanguage=en&key=${API_KEY}`);
     const data = await res.json();
     if (!data.items || !data.items.length) { document.getElementById('videoCards').innerHTML = ''; return; }
     const play = '<svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>';
-    document.getElementById('videoCards').innerHTML = data.items.map(item => {
+    document.getElementById('videoCards').innerHTML = data.items.slice(0, 3).map(item => {
       const vid = item.id.videoId;
       const title = item.snippet.title.replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"');
       const ch = item.snippet.channelTitle;
