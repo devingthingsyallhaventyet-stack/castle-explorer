@@ -102,9 +102,12 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
 
 /* Scrollable detail area */
 .sheet-scroll {
-  flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  flex: 1; overflow-y: hidden; -webkit-overflow-scrolling: touch;
   padding: 0 16px 40px;
   overscroll-behavior: contain;
+}
+.sheet-scroll.scrollable {
+  overflow-y: auto;
 }
 
 .divider { height: 1px; background: var(--border); margin: 20px 0; }
@@ -524,6 +527,13 @@ let dragTarget = null;
 sheetPeek.addEventListener('touchstart', onDragStart, { passive: true });
 sheetPeek.addEventListener('mousedown', onDragStart);
 
+// When not expanded, touches on scroll area should also drag the sheet up
+sheetScroll.addEventListener('touchstart', (e) => {
+  if (!expanded) {
+    onDragStart(e);
+  }
+}, { passive: true });
+
 function onDragStart(e) {
   const touch = e.touches ? e.touches[0] : e;
   startTouchY = touch.clientY;
@@ -565,11 +575,13 @@ function onDragEnd() {
     expanded = true;
     currentY = sheetFullY;
     photoLayer.style.opacity = 0.6;
+    sheetScroll.classList.add('scrollable');
   } else {
     expanded = false;
     currentY = sheetPeekY;
     photoLayer.style.opacity = 1;
     sheetScroll.scrollTop = 0;
+    sheetScroll.classList.remove('scrollable');
   }
   sheet.style.transform = `translateY(${currentY}px)`;
 }
@@ -609,11 +621,13 @@ sheetScroll.addEventListener('touchend', () => {
       expanded = true;
       currentY = sheetFullY;
       photoLayer.style.opacity = 0.6;
+      sheetScroll.classList.add('scrollable');
     } else {
       expanded = false;
       currentY = sheetPeekY;
       photoLayer.style.opacity = 1;
       sheetScroll.scrollTop = 0;
+      sheetScroll.classList.remove('scrollable');
     }
     sheet.style.transform = `translateY(${currentY}px)`;
   }
@@ -627,6 +641,7 @@ sheetPeek.addEventListener('click', (e) => {
     currentY = sheetFullY;
     sheet.style.transform = `translateY(${currentY}px)`;
     photoLayer.style.opacity = 0.6;
+    sheetScroll.classList.add('scrollable');
   }
 });
 
@@ -644,6 +659,7 @@ photoLayer.addEventListener('scroll', () => {
     sheet.style.transform = `translateY(${currentY}px)`;
     photoLayer.style.opacity = 1;
     sheetScroll.scrollTop = 0;
+    sheetScroll.classList.remove('scrollable');
     return;
   }
 
@@ -653,6 +669,7 @@ photoLayer.addEventListener('scroll', () => {
     currentY = sheetFullY;
     sheet.style.transform = `translateY(${currentY}px)`;
     photoLayer.style.opacity = 0.6;
+    sheetScroll.classList.add('scrollable');
   }
 });
 
@@ -715,12 +732,12 @@ function renderReviews(place) {
 }
 
 function scrollToReviews() {
-  // Expand sheet first if not already
   if (!expanded) {
     expanded = true;
     currentY = sheetFullY;
     sheet.style.transform = `translateY(${currentY}px)`;
     photoLayer.style.opacity = 0.6;
+    sheetScroll.classList.add('scrollable');
   }
   // Scroll to reviews section within sheet
   setTimeout(() => {
