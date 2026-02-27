@@ -585,16 +585,10 @@ let listingDragging = false;
 function listingSetExpanded(val) {
   listingSheetExpanded = val;
   const overlay = document.getElementById('listingOverlay');
-  const photoLayer = document.querySelector('.listing-photo-layer');
-  const overlayEl = document.querySelector('.listing-gallery-overlay');
   if (val) {
     overlay.classList.add('expanded');
-    if (photoLayer) photoLayer.classList.add('visible');
-    if (overlayEl) overlayEl.style.display = '';
   } else {
     overlay.classList.remove('expanded');
-    if (photoLayer) photoLayer.classList.remove('visible');
-    if (overlayEl) overlayEl.style.display = 'none';
   }
 }
 let listingDragTarget = null;
@@ -689,34 +683,29 @@ function openListing(castle) {
   const starsStr = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
 
   overlay.innerHTML = `
-    <div class="listing-photo-layer" id="listingPhotoLayer">
-      <div class="listing-photo-layer-inner">
-        <div class="listing-gallery-overlay" id="listingGalleryOverlay">
-          <button class="listing-close-btn" onclick="closeListing()">✕</button>
-          <div class="listing-overlay-actions">
-            <button id="listingFavOverlay" onclick="listingToggleFav()">${favOverlayText}</button>
-            <button onclick="listingShare()">↗</button>
-          </div>
-        </div>
-        <div class="listing-gallery-item listing-photo"><img id="listingImg1" src="" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
-        <div class="listing-gallery-item listing-photo"><img id="listingImg2" src="" /></div>
-        <div class="listing-gallery-item listing-map-tile">
-          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy" onerror="this.closest('.listing-map-tile').style.display='none'"></iframe>
-          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
-        </div>
-        <div class="listing-gallery-item listing-photo" id="listingP3"><img id="listingImg3" src="" /></div>
-        <div class="listing-gallery-item listing-photo" id="listingP4"><img id="listingImg4" src="" /></div>
-        <div class="listing-gallery-item listing-photo" id="listingP5"><img id="listingImg5" src="" /></div>
-        <div class="listing-gallery-item listing-photo" id="listingP6"><img id="listingImg6" src="" /></div>
-      </div>
-    </div>
-
     <div class="listing-bottom-sheet" id="listingSheet">
       <div class="listing-sheet-handle-wrap" id="listingSheetPeek">
         <div class="listing-sheet-handle"></div>
         <button class="listing-peek-close" onclick="closeListing()">✕</button>
       </div>
       <div class="listing-sheet-scroll" id="listingSheetScroll">
+        <!-- Photo gallery inside scroll -->
+        <div class="listing-inline-gallery" id="listingInlineGallery">
+          <div class="listing-gallery-scroll" id="listingGalleryScroll">
+            <div class="listing-gallery-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
+            <div class="listing-gallery-slide"><img id="listingImg2" src="" /></div>
+            <div class="listing-gallery-slide"><img id="listingImg3" src="" /></div>
+            <div class="listing-gallery-slide"><img id="listingImg4" src="" /></div>
+          </div>
+          <div class="listing-gallery-counter" id="listingGalleryCounter">1 / 1</div>
+        </div>
+
+        <!-- Map embed -->
+        <div class="listing-inline-map">
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
+          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
+        </div>
+
         <div class="listing-sheet-peek">
           <h1 class="listing-name">${castle.name}</h1>
           <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
@@ -833,7 +822,7 @@ function initListingSheet() {
   const sheet = document.getElementById('listingSheet');
   const sheetPeek = document.getElementById('listingSheetPeek');
   const sheetScroll = document.getElementById('listingSheetScroll');
-  const photoLayer = document.getElementById('listingPhotoLayer');
+  const photoLayer = { style: {}, addEventListener: () => {}, scrollHeight: 0, scrollTop: 0, clientHeight: 0 }; // no-op stub
   if (!sheet) return;
 
   const peekContent = sheet.querySelector('.listing-sheet-peek');
@@ -1029,16 +1018,21 @@ async function listingLoadGoogleData(castle) {
 }
 
 function listingRenderGoogleData(place, castle) {
-  // Photos
+  // Photos — populate inline gallery
   if (place.photos && place.photos.length > 0) {
     const photos = place.photos.slice(0, 8);
-    photos.forEach((p, i) => {
-      const el = document.getElementById(`listingImg${i + 1}`);
-      if (el) el.src = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
-    });
-    for (let i = photos.length + 1; i <= 6; i++) {
-      const c = document.getElementById(`listingP${i}`);
-      if (c) c.style.display = 'none';
+    const galleryScroll = document.getElementById('listingGalleryScroll');
+    const counter = document.getElementById('listingGalleryCounter');
+    if (galleryScroll) {
+      galleryScroll.innerHTML = photos.map((p, i) => {
+        const url = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
+        return `<div class="listing-gallery-slide"><img src="${url}" alt="Photo ${i+1}" />${i===0 ? `<div class="listing-type-badge">${getTypeConfig(castle.type).emoji} ${castle.type}</div>` : ''}</div>`;
+      }).join('');
+      if (counter) counter.textContent = `1 / ${photos.length}`;
+      galleryScroll.addEventListener('scroll', () => {
+        const idx = Math.round(galleryScroll.scrollLeft / galleryScroll.clientWidth) + 1;
+        if (counter) counter.textContent = `${idx} / ${photos.length}`;
+      });
     }
     // Update map pin
     const idx = CASTLES.findIndex(c => c.name === castle.name);
