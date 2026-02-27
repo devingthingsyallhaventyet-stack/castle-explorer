@@ -683,24 +683,12 @@ function openListing(castle) {
   const starsStr = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
 
   overlay.innerHTML = `
-    <div class="listing-photo-bg" id="listingPhotoBg">
-      <div class="listing-inline-gallery" id="listingInlineGallery">
-        <div class="listing-gallery-scroll" id="listingGalleryScroll">
-          <div class="listing-gallery-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
-          <div class="listing-gallery-slide"><img id="listingImg2" src="" /></div>
-          <div class="listing-gallery-slide"><img id="listingImg3" src="" /></div>
-          <div class="listing-gallery-slide"><img id="listingImg4" src="" /></div>
-        </div>
-        <div class="listing-gallery-counter" id="listingGalleryCounter">1 / 1</div>
-      </div>
-    </div>
-
     <div class="listing-bottom-sheet" id="listingSheet">
       <div class="listing-sheet-handle-wrap" id="listingSheetPeek">
         <div class="listing-sheet-handle"></div>
         <button class="listing-peek-close" onclick="closeListing()">✕</button>
       </div>
-      <div class="listing-sheet-peek">
+      <div class="listing-sheet-peek-content">
         <h1 class="listing-name">${castle.name}</h1>
         <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
         <div class="listing-key-stats">
@@ -715,6 +703,15 @@ function openListing(castle) {
         </div>
       </div>
       <div class="listing-sheet-scroll" id="listingSheetScroll">
+        <div class="listing-inline-gallery" id="listingInlineGallery">
+          <div class="listing-gallery-scroll" id="listingGalleryScroll">
+            <div class="listing-gallery-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
+            <div class="listing-gallery-slide"><img id="listingImg2" src="" /></div>
+            <div class="listing-gallery-slide"><img id="listingImg3" src="" /></div>
+            <div class="listing-gallery-slide"><img id="listingImg4" src="" /></div>
+          </div>
+          <div class="listing-gallery-counter" id="listingGalleryCounter">1 / 1</div>
+        </div>
         <div class="listing-divider"></div>
 
         <div class="listing-rating-bar" onclick="listingScrollToReviews()">
@@ -824,11 +821,14 @@ function initListingSheet() {
   const sheet = document.getElementById('listingSheet');
   const sheetPeek = document.getElementById('listingSheetPeek');
   const sheetScroll = document.getElementById('listingSheetScroll');
-  const photoLayer = document.getElementById('listingPhotoBg') || { style: {}, addEventListener: () => {}, scrollHeight: 0, scrollTop: 0, clientHeight: 0 };
   if (!sheet) return;
 
   const vh = window.innerHeight;
-  listingSheetPeekY = Math.round(vh * 0.55);
+  const peekContent = sheet.querySelector('.listing-sheet-peek-content');
+  const peekHandleH = sheetPeek.offsetHeight;
+  const peekContentH = peekContent ? peekContent.offsetHeight : 0;
+  const peekTotalH = peekHandleH + peekContentH + 16;
+  listingSheetPeekY = vh - peekTotalH;
   listingSheetFullY = vh * 0.05;
   listingCurrentY = listingSheetPeekY;
   listingSetExpanded(false);
@@ -878,8 +878,6 @@ function initListingSheet() {
     newY = Math.max(listingSheetFullY, Math.min(listingSheetPeekY, newY));
     listingCurrentY = newY;
     setSheetTransform(listingCurrentY);
-    const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
-    photoLayer.style.opacity = 1 - progress * 0.4;
   }
 
   function onDragEnd() {
@@ -895,12 +893,10 @@ function initListingSheet() {
     if (listingCurrentY < threshold) {
       listingSetExpanded(true);
       listingCurrentY = listingSheetFullY;
-      photoLayer.style.opacity = 0.6;
       sheetScroll.classList.add('scrollable');
     } else {
       listingSetExpanded(false);
       listingCurrentY = listingSheetPeekY;
-      photoLayer.style.opacity = 1;
       sheetScroll.scrollTop = 0;
       sheetScroll.classList.remove('scrollable');
     }
@@ -926,8 +922,6 @@ function initListingSheet() {
         listingCurrentY = newY;
         sheet.classList.add('dragging');
         setSheetTransform(listingCurrentY);
-        const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
-        photoLayer.style.opacity = 1 - progress * 0.4;
       }
     }
   }, { passive: false });
@@ -940,12 +934,10 @@ function initListingSheet() {
       if (listingCurrentY < collapseThreshold) {
         listingSetExpanded(true);
         listingCurrentY = listingSheetFullY;
-        photoLayer.style.opacity = 0.6;
         sheetScroll.classList.add('scrollable');
       } else {
         listingSetExpanded(false);
         listingCurrentY = listingSheetPeekY;
-        photoLayer.style.opacity = 1;
         sheetScroll.scrollTop = 0;
         sheetScroll.classList.remove('scrollable');
       }
@@ -953,42 +945,19 @@ function initListingSheet() {
     }
   });
 
-  // Tap peek to expand
-  sheetPeek.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) return;
-    if (!listingSheetExpanded) {
-      listingSetExpanded(true);
-      listingCurrentY = listingSheetFullY;
-      setSheetTransform(listingCurrentY);
-      photoLayer.style.opacity = 0.6;
-      sheetScroll.classList.add('scrollable');
-    }
-  });
-
-  // Auto-expand when photo scroll reaches bottom
-  let lastPhotoScroll = 0;
-  photoLayer.addEventListener('scroll', () => {
-    const el = photoLayer;
-    const scrollingUp = el.scrollTop < lastPhotoScroll;
-    lastPhotoScroll = el.scrollTop;
-
-    if (scrollingUp && listingSheetExpanded && el.scrollTop < el.scrollHeight - el.clientHeight - 100) {
-      listingSetExpanded(false);
-      listingCurrentY = listingSheetPeekY;
-      setSheetTransform(listingCurrentY);
-      photoLayer.style.opacity = 1;
-      sheetScroll.scrollTop = 0;
-      sheetScroll.classList.remove('scrollable');
-      return;
-    }
-    if (el.scrollHeight - el.scrollTop - el.clientHeight < 50 && !listingSheetExpanded) {
-      listingSetExpanded(true);
-      listingCurrentY = listingSheetFullY;
-      setSheetTransform(listingCurrentY);
-      photoLayer.style.opacity = 0.6;
-      sheetScroll.classList.add('scrollable');
-    }
-  });
+  // Tap peek content to expand
+  const peekTapArea = sheet.querySelector('.listing-sheet-peek-content');
+  if (peekTapArea) {
+    peekTapArea.addEventListener('click', (e) => {
+      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) return;
+      if (!listingSheetExpanded) {
+        listingSetExpanded(true);
+        listingCurrentY = listingSheetFullY;
+        setSheetTransform(listingCurrentY);
+        sheetScroll.classList.add('scrollable');
+      }
+    });
+  }
 }
 
 async function listingLoadGoogleData(castle) {
@@ -1175,7 +1144,6 @@ function listingShare() {
 function listingScrollToReviews() {
   const sheetScroll = document.getElementById('listingSheetScroll');
   const sheet = document.getElementById('listingSheet');
-  const photoLayer = document.getElementById('listingPhotoLayer');
   if (!listingSheetExpanded) {
     listingSetExpanded(true);
     listingCurrentY = listingSheetFullY;
@@ -1184,7 +1152,6 @@ function listingScrollToReviews() {
     } else {
       sheet.style.transform = `translateY(${listingCurrentY}px)`;
     }
-    photoLayer.style.opacity = 0.6;
     sheetScroll.classList.add('scrollable');
   }
   setTimeout(() => {
