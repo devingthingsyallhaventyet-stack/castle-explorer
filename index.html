@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sage:#4a7c59;--cream:#f5f0e8;--gold:#e8a817;--text:#1a1a1a;--muted:#585858;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#fdfcfa}
+:root{--sage:#4a7c59;--cream:#f5f0e8;--gold:#e8a817;--burgundy:#8b2335;--forest:#2d5a3d;--stone:#a8956e;--text:#1a1a1a;--muted:#585858;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#fdfcfa}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
 h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400}
@@ -106,20 +106,31 @@ section{padding:48px 24px}
 .collections-grid .coll-featured{grid-column:span 1}
 }
 
-/* TRAIL CARDS - bigger and more prominent */
-.trail-row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
-.trail-row::-webkit-scrollbar{display:none}
-.trail-card{flex:0 0 380px;height:260px;border-radius:16px;overflow:hidden;position:relative;scroll-snap-align:start;cursor:pointer;transition:transform .25s,box-shadow .25s}
+/* TRAIL CARDS - vertical grid, heritage colors */
+.trail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.trail-card{border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s}
 .trail-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.15)}
-.trail-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.trail-card:hover img{transform:scale(1.05)}
-.trail-card .trail-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff}
-.trail-card .trail-overlay h3{font-size:1.3rem;margin-bottom:6px}
-.trail-card .trail-overlay .trail-meta{font-size:.85rem;opacity:.85;margin-bottom:4px}
-.trail-card .trail-overlay .trail-desc{font-size:.8rem;opacity:.7}
+.trail-card .trail-img{height:200px;overflow:hidden}
+.trail-card .trail-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.trail-card:hover .trail-img img{transform:scale(1.05)}
+.trail-card .trail-body{padding:16px 18px 18px;color:#fff}
+.trail-card .trail-body h3{font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:6px}
+.trail-card .trail-body .trail-meta{font-size:.82rem;opacity:.85;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.trail-card .trail-body .trail-meta span{background:rgba(255,255,255,.2);padding:2px 8px;border-radius:var(--pill);font-size:.75rem}
+.trail-card .trail-body .trail-desc{font-size:.85rem;opacity:.8;line-height:1.4}
+/* Heritage color assignments */
+.trail-card.tc-burgundy{background:var(--burgundy)}
+.trail-card.tc-forest{background:var(--forest)}
+.trail-card.tc-stone{background:#6b5d4a}
+.trail-card.tc-navy{background:#2c3e5a}
+.trail-card.tc-plum{background:#5e3a6e}
+.trail-card.tc-rust{background:#8e4a2a}
 
+@media(max-width:768px){
+.trail-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:480px){
-.trail-card{flex:0 0 85vw;height:240px}
+.trail-grid{grid-template-columns:1fr}
 }
 
 /* FEATURED GRID */
@@ -163,8 +174,8 @@ section{padding:48px 24px}
 .cta-section{text-align:center;padding:64px 24px}
 .cta-section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
 .cta-section p{color:var(--muted);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
-.btn-cta{display:inline-block;background:var(--sage);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s}
-.btn-cta:hover{background:#3d6a4b}
+.btn-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s}
+.btn-cta:hover{background:#6e1a2a}
 
 /* HOW IT WORKS */
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
@@ -340,13 +351,13 @@ footer{background:var(--text);color:#fff;padding:64px 24px 32px}
 <h2>Follow a Trail</h2>
 </div>
 <p class="section-tagline">Epic road trips through centuries of history</p>
-<div class="trail-row">
-<a class="trail-card" href="explore.html"><img src="img/conwy.jpg" alt="Iron Ring" loading="lazy"><div class="trail-overlay"><h3>🏴 Edward I's Iron Ring</h3><span class="trail-meta">North Wales · 8 castles · 3 hours</span><span class="trail-desc">The mighty chain of fortresses that conquered Wales</span></div></a>
-<a class="trail-card" href="explore.html"><img src="img/bodiam.jpg" alt="Norman Conquest" loading="lazy"><div class="trail-overlay"><h3>⚔️ Norman Conquest Trail</h3><span class="trail-meta">South England · 12 castles · 5 hours</span><span class="trail-desc">Follow in William the Conqueror's footsteps</span></div></a>
-<a class="trail-card" href="explore.html"><img src="img/eilean-donan.jpg" alt="Highland Route" loading="lazy"><div class="trail-overlay"><h3>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Highland Castle Route</h3><span class="trail-meta">Scottish Highlands · 10 castles · 6 hours</span><span class="trail-desc">Lochs, glens, and ancient clan strongholds</span></div></a>
-<a class="trail-card" href="explore.html"><img src="img/blarney.jpg" alt="Ireland's Ancient East" loading="lazy"><div class="trail-overlay"><h3>🍀 Ireland's Ancient East</h3><span class="trail-meta">South East Ireland · 9 castles · 4 hours</span><span class="trail-desc">5,000 years of stories woven through green hills</span></div></a>
-<a class="trail-card" href="explore.html"><img src="img/whitby-abbey.jpg" alt="Haunted Trail" loading="lazy"><div class="trail-overlay"><h3>👻 Haunted Castle Trail</h3><span class="trail-meta">England · 7 castles · 5 hours</span><span class="trail-desc">For the brave — ghosts, legends, and dark histories</span></div></a>
-<a class="trail-card" href="explore.html"><img src="img/bamburgh.jpg" alt="Photographer's Dream" loading="lazy"><div class="trail-overlay"><h3>📸 Photographer's Dream</h3><span class="trail-meta">UK-wide · 10 castles · 8 hours</span><span class="trail-desc">The most stunning shots you'll ever capture</span></div></a>
+<div class="trail-grid">
+<a class="trail-card tc-burgundy" href="explore.html"><div class="trail-img"><img src="img/conwy.jpg" alt="Iron Ring" loading="lazy"></div><div class="trail-body"><h3>🏴 Edward I's Iron Ring</h3><div class="trail-meta"><span>North Wales</span><span>8 castles</span><span>3 hours</span></div><p class="trail-desc">The mighty chain of fortresses that conquered Wales</p></div></a>
+<a class="trail-card tc-navy" href="explore.html"><div class="trail-img"><img src="img/bodiam.jpg" alt="Norman Conquest" loading="lazy"></div><div class="trail-body"><h3>⚔️ Norman Conquest Trail</h3><div class="trail-meta"><span>South England</span><span>12 castles</span><span>5 hours</span></div><p class="trail-desc">Follow in William the Conqueror's footsteps</p></div></a>
+<a class="trail-card tc-forest" href="explore.html"><div class="trail-img"><img src="img/eilean-donan.jpg" alt="Highland Route" loading="lazy"></div><div class="trail-body"><h3>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Highland Castle Route</h3><div class="trail-meta"><span>Scottish Highlands</span><span>10 castles</span><span>6 hours</span></div><p class="trail-desc">Lochs, glens, and ancient clan strongholds</p></div></a>
+<a class="trail-card tc-stone" href="explore.html"><div class="trail-img"><img src="img/blarney.jpg" alt="Ireland's Ancient East" loading="lazy"></div><div class="trail-body"><h3>🍀 Ireland's Ancient East</h3><div class="trail-meta"><span>South East Ireland</span><span>9 castles</span><span>4 hours</span></div><p class="trail-desc">5,000 years of stories woven through green hills</p></div></a>
+<a class="trail-card tc-plum" href="explore.html"><div class="trail-img"><img src="img/whitby-abbey.jpg" alt="Haunted Trail" loading="lazy"></div><div class="trail-body"><h3>👻 Haunted Castle Trail</h3><div class="trail-meta"><span>England</span><span>7 castles</span><span>5 hours</span></div><p class="trail-desc">For the brave — ghosts, legends, and dark histories</p></div></a>
+<a class="trail-card tc-rust" href="explore.html"><div class="trail-img"><img src="img/bamburgh.jpg" alt="Photographer's Dream" loading="lazy"></div><div class="trail-body"><h3>📸 Photographer's Dream</h3><div class="trail-meta"><span>UK-wide</span><span>10 castles</span><span>8 hours</span></div><p class="trail-desc">The most stunning shots you'll ever capture</p></div></a>
 </div>
 </div>
 </section>
