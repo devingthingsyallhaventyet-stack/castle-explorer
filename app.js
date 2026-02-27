@@ -683,36 +683,63 @@ function openListing(castle) {
   const starsStr = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
 
   overlay.innerHTML = `
+    <!-- PHOTO LAYER -->
+    <div class="listing-photo-layer" id="listingPhotoLayer">
+      <div class="listing-photo-layer-inner">
+        <div class="listing-gallery-item listing-photo"><img id="listingImg1" src="${castle.image || ''}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
+        <div class="listing-gallery-item listing-photo"><img id="listingImg2" src="" /></div>
+        <div class="listing-gallery-item listing-photo"><img id="listingImg3" src="" /></div>
+        <div class="listing-gallery-item listing-photo"><img id="listingImg4" src="" /></div>
+        <!-- Street View + Satellite -->
+        <div class="listing-gallery-item listing-street-view">
+          <div class="listing-sv-panel" onclick="window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${castle.lat},${castle.lng}','_blank')">
+            <img src="https://maps.googleapis.com/maps/api/streetview?size=600x400&location=${castle.lat},${castle.lng}&key=${API_KEY}" />
+            <div class="listing-sv-label">📍 Look Around</div>
+          </div>
+          <div class="listing-sv-panel">
+            <iframe src="https://www.google.com/maps/embed/v1/view?key=${API_KEY}&center=${castle.lat},${castle.lng}&zoom=15&maptype=satellite" loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- Map -->
+        <div class="listing-gallery-item listing-map-tile">
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
+          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
+        </div>
+        <!-- More photos loaded by Google Places -->
+        <div class="listing-gallery-item listing-photo" id="listingExtraPhoto5"></div>
+        <div class="listing-gallery-item listing-photo" id="listingExtraPhoto6"></div>
+      </div>
+    </div>
+
+    <!-- GALLERY OVERLAY -->
+    <div class="listing-gallery-overlay" id="listingGalleryOverlay">
+      <button class="listing-close-btn" onclick="closeListing()">✕</button>
+      <div class="listing-overlay-actions">
+        <button id="listingFavOverlay" onclick="listingToggleFav()">${favOverlayText}</button>
+      </div>
+    </div>
+
+    <!-- BOTTOM SHEET -->
     <div class="listing-bottom-sheet" id="listingSheet">
       <div class="listing-sheet-handle-wrap" id="listingSheetPeek">
         <div class="listing-sheet-handle"></div>
-        <button class="listing-peek-close" onclick="closeListing()">✕</button>
-      </div>
-      <div class="listing-sheet-peek-content" id="listingPeekContent">
-        <div class="listing-peek-thumb"><img src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-peek-type">${tc.emoji} ${castle.type}</div></div>
-        <h1 class="listing-name">${castle.name}</h1>
-        <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
-        <div class="listing-key-stats">
-          <div class="listing-stat-item"><div class="listing-stat-value">${tc.emoji}</div><div class="listing-stat-label">${castle.type}</div></div>
-          <div class="listing-stat-item"><div class="listing-stat-value">${eraDisplay}</div><div class="listing-stat-label">Built</div></div>
-          <div class="listing-stat-item"><div class="listing-stat-value">${castle.condition || '—'}</div><div class="listing-stat-label">Condition</div></div>
-          <div class="listing-stat-item"><div class="listing-stat-value">${accessStatLabel}</div><div class="listing-stat-label">Access</div></div>
-        </div>
-        <div class="listing-peek-buttons">
-          <button class="listing-btn listing-btn-secondary" id="listingFavBtn" onclick="listingToggleFav()">${favText}</button>
-          <button class="listing-btn listing-btn-primary" onclick="listingAddToRoute()">🚗 Add to Route</button>
-        </div>
       </div>
       <div class="listing-sheet-scroll" id="listingSheetScroll">
-        <div class="listing-inline-gallery" id="listingInlineGallery">
-          <div class="listing-gallery-scroll" id="listingGalleryScroll">
-            <div class="listing-gallery-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
-            <div class="listing-gallery-slide"><img id="listingImg2" src="" /></div>
-            <div class="listing-gallery-slide"><img id="listingImg3" src="" /></div>
-            <div class="listing-gallery-slide"><img id="listingImg4" src="" /></div>
+        <div class="listing-sheet-peek">
+          <h1 class="listing-name">${castle.name}</h1>
+          <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
+          <div class="listing-key-stats">
+            <div class="listing-stat-item"><div class="listing-stat-value">${tc.emoji}</div><div class="listing-stat-label">${castle.type}</div></div>
+            <div class="listing-stat-item"><div class="listing-stat-value">${eraDisplay}</div><div class="listing-stat-label">Built</div></div>
+            <div class="listing-stat-item"><div class="listing-stat-value">${castle.condition || '—'}</div><div class="listing-stat-label">Condition</div></div>
+            <div class="listing-stat-item"><div class="listing-stat-value">${accessStatLabel}</div><div class="listing-stat-label">Access</div></div>
           </div>
-          <div class="listing-gallery-counter" id="listingGalleryCounter">1 / 1</div>
+          <div class="listing-peek-buttons">
+            <button class="listing-btn listing-btn-secondary" id="listingFavBtn" onclick="listingToggleFav()">${favText}</button>
+            <button class="listing-btn listing-btn-primary" onclick="listingAddToRoute()">🚗 Add to Route</button>
+          </div>
         </div>
+
         <div class="listing-divider"></div>
 
         <div class="listing-rating-bar" onclick="listingScrollToReviews()">
@@ -738,13 +765,6 @@ function openListing(castle) {
         </div>
 
         <div class="listing-links-section" id="listingLinksSection" style="display:none"></div>
-
-        <div class="listing-divider"></div>
-
-        <div class="listing-inline-map">
-          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
-          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
-        </div>
 
         <div class="listing-divider"></div>
 
@@ -816,20 +836,22 @@ function closeListing() {
   overlay.innerHTML = '';
   listingCastle = null;
   listingSetExpanded(false);
+  // Clean up photo layer scroll listener
+  if (listingPhotoLayerCleanup) { listingPhotoLayerCleanup(); listingPhotoLayerCleanup = null; }
 }
+let listingPhotoLayerCleanup = null;
 
 function initListingSheet() {
   const sheet = document.getElementById('listingSheet');
   const sheetPeek = document.getElementById('listingSheetPeek');
   const sheetScroll = document.getElementById('listingSheetScroll');
+  const photoLayer = document.getElementById('listingPhotoLayer');
   if (!sheet) return;
 
+  const peekContent = sheet.querySelector('.listing-sheet-peek');
+  const peekHeight = sheetPeek.offsetHeight + (peekContent ? peekContent.offsetHeight : 200) + 8;
   const vh = window.innerHeight;
-  const peekContent = sheet.querySelector('.listing-sheet-peek-content');
-  const peekHandleH = sheetPeek.offsetHeight;
-  const peekContentH = peekContent ? peekContent.offsetHeight : 0;
-  const peekTotalH = peekHandleH + peekContentH + 16;
-  listingSheetPeekY = vh - peekTotalH;
+  listingSheetPeekY = vh - peekHeight;
   listingSheetFullY = vh * 0.05;
   listingCurrentY = listingSheetPeekY;
   listingSetExpanded(false);
@@ -849,20 +871,26 @@ function initListingSheet() {
     }
   }
 
+  function expandSheet() {
+    listingSetExpanded(true);
+    listingCurrentY = listingSheetFullY;
+    setSheetTransform(listingCurrentY);
+    sheetScroll.classList.add('scrollable');
+    if (photoLayer) photoLayer.style.opacity = '0.6';
+  }
+
+  function collapseSheet() {
+    listingSetExpanded(false);
+    listingCurrentY = listingSheetPeekY;
+    sheetScroll.scrollTop = 0;
+    sheetScroll.classList.remove('scrollable');
+    setSheetTransform(listingCurrentY);
+    if (photoLayer) photoLayer.style.opacity = '1';
+  }
+
   // Drag from handle
   sheetPeek.addEventListener('touchstart', onDragStart, { passive: true });
   sheetPeek.addEventListener('mousedown', onDragStart);
-
-  // Drag from peek content area
-  const peekContentEl = document.getElementById('listingPeekContent');
-  if (peekContentEl) {
-    peekContentEl.addEventListener('touchstart', (e) => {
-      if (!listingSheetExpanded) onDragStart(e);
-    }, { passive: true });
-    peekContentEl.addEventListener('mousedown', (e) => {
-      if (!listingSheetExpanded) onDragStart(e);
-    });
-  }
 
   // Drag from scroll area when collapsed
   sheetScroll.addEventListener('touchstart', (e) => {
@@ -890,6 +918,11 @@ function initListingSheet() {
     newY = Math.max(listingSheetFullY, Math.min(listingSheetPeekY, newY));
     listingCurrentY = newY;
     setSheetTransform(listingCurrentY);
+    // Fade photo layer based on drag position
+    if (photoLayer) {
+      const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
+      photoLayer.style.opacity = String(1 - progress * 0.4);
+    }
   }
 
   function onDragEnd() {
@@ -903,16 +936,10 @@ function initListingSheet() {
 
     const threshold = listingSheetPeekY - (listingSheetPeekY - listingSheetFullY) * 0.15;
     if (listingCurrentY < threshold) {
-      listingSetExpanded(true);
-      listingCurrentY = listingSheetFullY;
-      sheetScroll.classList.add('scrollable');
+      expandSheet();
     } else {
-      listingSetExpanded(false);
-      listingCurrentY = listingSheetPeekY;
-      sheetScroll.scrollTop = 0;
-      sheetScroll.classList.remove('scrollable');
+      collapseSheet();
     }
-    setSheetTransform(listingCurrentY);
   }
 
   // Pull-down to collapse when expanded and at scroll top
@@ -934,6 +961,10 @@ function initListingSheet() {
         listingCurrentY = newY;
         sheet.classList.add('dragging');
         setSheetTransform(listingCurrentY);
+        if (photoLayer) {
+          const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
+          photoLayer.style.opacity = String(1 - progress * 0.4);
+        }
       }
     }
   }, { passive: false });
@@ -944,31 +975,47 @@ function initListingSheet() {
       sheet.classList.remove('dragging');
       const collapseThreshold = listingSheetFullY + (listingSheetPeekY - listingSheetFullY) * 0.15;
       if (listingCurrentY < collapseThreshold) {
-        listingSetExpanded(true);
-        listingCurrentY = listingSheetFullY;
-        sheetScroll.classList.add('scrollable');
+        expandSheet();
       } else {
-        listingSetExpanded(false);
-        listingCurrentY = listingSheetPeekY;
-        sheetScroll.scrollTop = 0;
-        sheetScroll.classList.remove('scrollable');
+        collapseSheet();
       }
-      setSheetTransform(listingCurrentY);
     }
   });
 
-  // Tap peek content to expand
-  const peekTapArea = sheet.querySelector('.listing-sheet-peek-content');
+  // Tap peek area to expand (not buttons)
+  const peekTapArea = sheet.querySelector('.listing-sheet-peek');
   if (peekTapArea) {
     peekTapArea.addEventListener('click', (e) => {
       if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) return;
       if (!listingSheetExpanded) {
-        listingSetExpanded(true);
-        listingCurrentY = listingSheetFullY;
-        setSheetTransform(listingCurrentY);
-        sheetScroll.classList.add('scrollable');
+        expandSheet();
       }
     });
+  }
+
+  // Auto-expand when photo layer scroll reaches bottom
+  if (photoLayer) {
+    let lastPhotoScrollTop = 0;
+    const onPhotoScroll = () => {
+      const scrollTop = photoLayer.scrollTop;
+      const scrollMax = photoLayer.scrollHeight - photoLayer.clientHeight;
+
+      // Auto-expand when scrolled to bottom
+      if (scrollTop >= scrollMax - 10 && !listingSheetExpanded) {
+        expandSheet();
+      }
+
+      // Auto-collapse when scrolling back up while expanded
+      if (listingSheetExpanded && scrollTop < lastPhotoScrollTop && lastPhotoScrollTop - scrollTop > 80) {
+        collapseSheet();
+      }
+
+      lastPhotoScrollTop = scrollTop;
+    };
+    photoLayer.addEventListener('scroll', onPhotoScroll, { passive: true });
+    listingPhotoLayerCleanup = () => {
+      photoLayer.removeEventListener('scroll', onPhotoScroll);
+    };
   }
 }
 
@@ -999,21 +1046,22 @@ async function listingLoadGoogleData(castle) {
 }
 
 function listingRenderGoogleData(place, castle) {
-  // Photos — populate inline gallery
+  // Photos — populate photo layer images
   if (place.photos && place.photos.length > 0) {
     const photos = place.photos.slice(0, 8);
-    const galleryScroll = document.getElementById('listingGalleryScroll');
-    const counter = document.getElementById('listingGalleryCounter');
-    if (galleryScroll) {
-      galleryScroll.innerHTML = photos.map((p, i) => {
-        const url = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
-        return `<div class="listing-gallery-slide"><img src="${url}" alt="Photo ${i+1}" />${i===0 ? `<div class="listing-type-badge">${getTypeConfig(castle.type).emoji} ${castle.type}</div>` : ''}</div>`;
-      }).join('');
-      if (counter) counter.textContent = `1 / ${photos.length}`;
-      galleryScroll.addEventListener('scroll', () => {
-        const idx = Math.round(galleryScroll.scrollLeft / galleryScroll.clientWidth) + 1;
-        if (counter) counter.textContent = `${idx} / ${photos.length}`;
-      });
+    // Populate listingImg1-4
+    for (let i = 0; i < Math.min(photos.length, 4); i++) {
+      const url = photos[i].getURI ? photos[i].getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
+      const imgEl = document.getElementById(`listingImg${i + 1}`);
+      if (imgEl && url) imgEl.src = url;
+    }
+    // Extra photos in the photo layer
+    for (let i = 4; i < Math.min(photos.length, 6); i++) {
+      const url = photos[i].getURI ? photos[i].getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
+      const container = document.getElementById(`listingExtraPhoto${i + 1}`);
+      if (container && url) {
+        container.innerHTML = `<img src="${url}" alt="Photo ${i + 1}" />`;
+      }
     }
     // Update map pin
     const idx = CASTLES.findIndex(c => c.name === castle.name);
