@@ -261,16 +261,16 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <p class="subtitle">The most complete heritage guide ever built</p>
 <div class="search-wrap">
 <span class="search-icon">🔍</span>
-<input type="text" id="heroSearch" placeholder="Search by name, region, or type..." autocomplete="off">
+<input type="text" id="heroSearch" placeholder="Search by name, postal code, or region..." autocomplete="off">
 <div class="search-results" id="searchResults"></div>
 </div>
 <div class="pills">
-<a class="pill" href="explore.html">🏰 Castles</a>
-<a class="pill" href="explore.html">⛪ Abbeys</a>
-<a class="pill" href="explore.html">🗼 Tower Houses</a>
-<a class="pill" href="explore.html">👑 Palaces</a>
-<a class="pill" href="explore.html">🆓 Free to Visit</a>
-<a class="pill" href="explore.html">📸 Photogenic</a>
+<a class="pill" href="search.html?type=castle">🏰 Castles</a>
+<a class="pill" href="search.html?type=abbey">⛪ Abbeys</a>
+<a class="pill" href="search.html?type=tower+house">🗼 Tower Houses</a>
+<a class="pill" href="search.html?type=palace">👑 Palaces</a>
+<a class="pill" href="search.html?tag=free">🆓 Free to Visit</a>
+<a class="pill" href="search.html?tag=photogenic">📸 Photogenic</a>
 </div>
 </div>
 </section>
@@ -434,18 +434,58 @@ const input=document.getElementById('heroSearch');
 const results=document.getElementById('searchResults');
 let timer;
 function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+
+// Build county/country indexes once
+let countyIndex={}, countryIndex={};
+function buildIndexes(){
+if(typeof CASTLES==='undefined')return;
+CASTLES.forEach(c=>{
+if(c.county){const k=c.county.toLowerCase();countyIndex[k]=(countyIndex[k]||0)+1}
+if(c.country){const k=c.country.toLowerCase();countryIndex[k]=(countryIndex[k]||0)+1}
+});
+}
+buildIndexes();
+
 function search(q){
 if(!q||q.length<2){results.classList.remove('open');return}
 if(typeof CASTLES==='undefined')return;
 const lq=q.toLowerCase();
-const matches=CASTLES.filter(c=>c.name.toLowerCase().includes(lq)).slice(0,8);
-if(!matches.length){results.classList.remove('open');return}
-results.innerHTML=matches.map(c=>`<a href="/site/${slug(c.name)}.html"><span>${c.name}</span><span class="sr-type">${c.county||''}, ${c.country||''}</span></a>`).join('');
+let html='';
+
+// Country matches
+const countries=Object.keys(countryIndex).filter(k=>k.includes(lq));
+countries.slice(0,2).forEach(k=>{
+const display=CASTLES.find(c=>c.country&&c.country.toLowerCase()===k)?.country||k;
+html+=`<a href="search.html?region=${encodeURIComponent(display)}" style="background:rgba(201,168,76,.06)"><span>🌍 ${display}</span><span class="sr-type">${countryIndex[k]} sites</span></a>`;
+});
+
+// County matches
+const counties=Object.keys(countyIndex).filter(k=>k.includes(lq)&&!countries.includes(k));
+counties.slice(0,3).forEach(k=>{
+const display=CASTLES.find(c=>c.county&&c.county.toLowerCase()===k)?.county||k;
+html+=`<a href="search.html?region=${encodeURIComponent(display)}" style="background:rgba(61,90,62,.04)"><span>📍 ${display}</span><span class="sr-type">${countyIndex[k]} sites</span></a>`;
+});
+
+// Castle name matches
+const castles=CASTLES.filter(c=>c.name.toLowerCase().includes(lq)).slice(0,6-(countries.length+counties.length));
+castles.forEach(c=>{
+html+=`<a href="site/${slug(c.name)}.html"><span>${c.name}</span><span class="sr-type">${c.county||''}, ${c.country||''}</span></a>`;
+});
+
+if(!html){results.classList.remove('open');return}
+results.innerHTML=html;
 results.classList.add('open');
 }
+
 input.addEventListener('input',function(){
 clearTimeout(timer);
 timer=setTimeout(()=>search(this.value.trim()),200);
+});
+input.addEventListener('keydown',function(e){
+if(e.key==='Enter'){
+const q=this.value.trim();
+if(q)window.location.href='search.html?q='+encodeURIComponent(q);
+}
 });
 document.addEventListener('click',function(e){
 if(!e.target.closest('.search-wrap'))results.classList.remove('open');
