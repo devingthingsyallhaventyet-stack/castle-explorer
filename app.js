@@ -576,7 +576,7 @@ function renderYouTubeData(items, castle) {
 }
 
 // ========== LISTING OVERLAY (Zillow-style) ==========
-let listingSetExpanded(false);
+let listingSheetExpanded = false;
 let listingCurrentY = 0;
 let listingSheetPeekY = 0;
 let listingSheetFullY = 0;
