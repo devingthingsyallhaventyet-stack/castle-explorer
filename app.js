@@ -575,26 +575,12 @@ function renderYouTubeData(items, castle) {
   el.innerHTML = `<h3 class="videos-title">Videos</h3>${cardsHtml}<a class="videos-more" href="${searchUrl}" target="_blank">More videos on YouTube →</a>`;
 }
 
-// ========== LISTING OVERLAY (Zillow-style) ==========
-let listingSheetExpanded = false;
-let listingCurrentY = 0;
-let listingSheetPeekY = 0;
-let listingSheetFullY = 0;
-let listingDragging = false;
-
-function listingSetExpanded(val) {
-  listingSheetExpanded = val;
-  const overlay = document.getElementById('listingOverlay');
-  if (val) {
-    overlay.classList.add('expanded');
-  } else {
-    overlay.classList.remove('expanded');
-  }
-}
-let listingDragTarget = null;
-let listingStartTouchY = 0;
-let listingStartSheetY = 0;
+// ========== LISTING OVERLAY ==========
 let listingCastle = null;
+let listingSlideIndex = 0;
+let listingSlideCount = 1;
+let listingSlideImages = [];
+let listingLbIndex = 0;
 
 function openListing(castle) {
   listingCastle = castle;
@@ -612,14 +598,10 @@ function openListing(castle) {
   };
   const accessInfo = accessMap[castle.access] || { emoji: '❓', label: castle.access || 'Unknown', sublabel: '' };
 
-  // Extract year from era
   const eraYear = castle.era ? castle.era.match(/\d{3,4}/) : null;
   const eraDisplay = eraYear ? eraYear[0] : (castle.era || '—');
-
-  // Key stats access display
   const accessStatLabel = castle.access === 'free' ? 'Free' : castle.access === 'paid' ? 'Paid' : castle.access === 'private' ? 'Private' : castle.access === 'exterior-only' ? 'Exterior' : '—';
 
-  // Tags
   const TAG_LABELS = {
     'photogenic': '📸 Photogenic', 'hidden-gem': '💎 Hidden Gem', 'free': '🆓 Free',
     'kid-friendly': '👨‍👩‍👧‍👦 Kid-Friendly', 'haunted': '👻 Haunted', 'dramatic-ruin': '🏚️ Dramatic Ruin',
@@ -627,10 +609,8 @@ function openListing(castle) {
   };
   const tagsHtml = (castle.tags || []).map(t => `<span class="listing-tag">${TAG_LABELS[t] || t}</span>`).join('');
 
-  // Rich data lookup
   const richData = (typeof RICH_SITE_DATA !== 'undefined') ? RICH_SITE_DATA[castle.name] : null;
 
-  // Terrain chips
   let terrainChipsHtml, terrainNote;
   if (richData && richData.terrain) {
     terrainChipsHtml = richData.terrain.chips.map(c => `<div class="listing-terrain-chip ${c.cls}"><span class="listing-chip-icon">${c.icon}</span> ${c.text}</div>`).join('');
@@ -638,153 +618,76 @@ function openListing(castle) {
   } else {
     const terrainChips = [];
     const cond = (castle.condition || '').toLowerCase();
-    if (cond === 'intact') {
-      terrainChips.push({ icon: '♿', text: 'Wheelchair Likely', cls: 'green' });
-      terrainChips.push({ icon: '🚶', text: 'Mostly Paved', cls: 'green' });
-    } else if (cond === 'ruin') {
-      terrainChips.push({ icon: '⚠️', text: 'Uneven Ground', cls: 'amber' });
-      terrainChips.push({ icon: '👟', text: 'Sturdy Footwear', cls: 'amber' });
-    } else if (cond === 'partial ruin') {
-      terrainChips.push({ icon: '🚶', text: 'Mostly Walkable', cls: 'green' });
-      terrainChips.push({ icon: '⚠️', text: 'Some Uneven Areas', cls: 'amber' });
-    }
-    if (castle.tags && castle.tags.includes('kid-friendly')) {
-      terrainChips.push({ icon: '👶', text: 'Family Friendly', cls: 'green' });
-    }
-    if (castle.access === 'free') {
-      terrainChips.push({ icon: '🏞️', text: 'Open Access', cls: 'green' });
-    }
+    if (cond === 'intact') { terrainChips.push({ icon: '♿', text: 'Wheelchair Likely', cls: 'green' }); terrainChips.push({ icon: '🚶', text: 'Mostly Paved', cls: 'green' }); }
+    else if (cond === 'ruin') { terrainChips.push({ icon: '⚠️', text: 'Uneven Ground', cls: 'amber' }); terrainChips.push({ icon: '👟', text: 'Sturdy Footwear', cls: 'amber' }); }
+    else if (cond === 'partial ruin') { terrainChips.push({ icon: '🚶', text: 'Mostly Walkable', cls: 'green' }); terrainChips.push({ icon: '⚠️', text: 'Some Uneven Areas', cls: 'amber' }); }
+    if (castle.tags && castle.tags.includes('kid-friendly')) terrainChips.push({ icon: '👶', text: 'Family Friendly', cls: 'green' });
+    if (castle.access === 'free') terrainChips.push({ icon: '🏞️', text: 'Open Access', cls: 'green' });
     terrainChipsHtml = terrainChips.map(c => `<div class="listing-terrain-chip ${c.cls}"><span class="listing-chip-icon">${c.icon}</span> ${c.text}</div>`).join('');
     terrainNote = '';
-    const cond2 = (castle.condition || '').toLowerCase();
-    if (cond2 === 'intact') terrainNote = 'ℹ️ This site is well-maintained and largely accessible. Paths are generally paved and suitable for most visitors.';
-    else if (cond2 === 'ruin') terrainNote = 'ℹ️ As a ruin, expect rough terrain, loose stones, and uneven surfaces. Suitable footwear recommended. Not all areas may be accessible.';
-    else if (cond2 === 'partial ruin') terrainNote = 'ℹ️ Parts of this site are well-maintained while other areas are ruined. Expect a mix of paved paths and rougher terrain.';
+    if (cond === 'intact') terrainNote = 'ℹ️ This site is well-maintained and largely accessible. Paths are generally paved and suitable for most visitors.';
+    else if (cond === 'ruin') terrainNote = 'ℹ️ As a ruin, expect rough terrain, loose stones, and uneven surfaces. Suitable footwear recommended. Not all areas may be accessible.';
+    else if (cond === 'partial ruin') terrainNote = 'ℹ️ Parts of this site are well-maintained while other areas are ruined. Expect a mix of paved paths and rougher terrain.';
   }
 
-  // Getting There HTML
   const gettingThereHtml = (richData && richData.gettingThere) ? richData.gettingThere.map(t => `
-    <div class="listing-transport-card">
-      <div class="listing-transport-icon">${t.icon}</div>
-      <div>
-        <div class="listing-transport-name">${t.name}</div>
-        <div class="listing-transport-detail">${t.detail}</div>
-        ${t.link ? `<a class="listing-transport-link" href="${t.link}" target="_blank">${t.linkText || 'Get directions →'}</a>` : ''}
-      </div>
-    </div>
-  `).join('') : `<div class="listing-transport-card">
-    <div class="listing-transport-icon">🗺️</div>
-    <div>
-      <div class="listing-transport-name">Directions</div>
-      <div class="listing-transport-detail">Navigate to ${castle.name} via Google Maps.</div>
-      <a class="listing-transport-link" href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions →</a>
-    </div>
-  </div>`;
+    <div class="listing-transport-card"><div class="listing-transport-icon">${t.icon}</div><div><div class="listing-transport-name">${t.name}</div><div class="listing-transport-detail">${t.detail}</div>${t.link ? `<a class="listing-transport-link" href="${t.link}" target="_blank">${t.linkText || 'Get directions →'}</a>` : ''}</div></div>
+  `).join('') : `<div class="listing-transport-card"><div class="listing-transport-icon">🗺️</div><div><div class="listing-transport-name">Directions</div><div class="listing-transport-detail">Navigate to ${castle.name} via Google Maps.</div><a class="listing-transport-link" href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions →</a></div></div>`;
 
-  // Events HTML
   const eventsHtml = (richData && richData.events && richData.events.length > 0) ? richData.events.map(e => `
-    <div class="listing-event-card">
-      <div class="listing-event-date-box">
-        <div class="listing-event-month">${e.month}</div>
-        <div class="listing-event-day">${e.day}</div>
-      </div>
-      <div class="listing-event-info">
-        <div class="listing-event-name">${e.name}</div>
-        <div class="listing-event-desc">${e.desc}</div>
-        <div class="listing-event-meta">
-          <span class="listing-event-badge ${e.badge}">${e.badgeText}</span>
-          ${e.meta}
-        </div>
-      </div>
-    </div>
+    <div class="listing-event-card"><div class="listing-event-date-box"><div class="listing-event-month">${e.month}</div><div class="listing-event-day">${e.day}</div></div><div class="listing-event-info"><div class="listing-event-name">${e.name}</div><div class="listing-event-desc">${e.desc}</div><div class="listing-event-meta"><span class="listing-event-badge ${e.badge}">${e.badgeText}</span>${e.meta}</div></div></div>
   `).join('') : '<div style="color:#8a8a8a;font-size:13px;">No upcoming events listed.</div>';
 
-  // Nearby sites
-  const nearbySites = CASTLES
-    .filter(c => c.name !== castle.name)
-    .map(c => ({ ...c, dist: haversine(castle.lat, castle.lng, c.lat, c.lng) }))
-    .filter(c => c.dist <= 30000)
-    .sort((a, b) => a.dist - b.dist)
-    .slice(0, 5);
+  const nearbySites = CASTLES.filter(c => c.name !== castle.name).map(c => ({ ...c, dist: haversine(castle.lat, castle.lng, c.lat, c.lng) })).filter(c => c.dist <= 30000).sort((a, b) => a.dist - b.dist).slice(0, 5);
   const nearbyHtml = nearbySites.map(c => {
-    const tc2 = getTypeConfig(c.type);
-    const distKm = (c.dist / 1000).toFixed(1);
-    const safeName = c.name.replace(/'/g, "\\'");
-    return `<div class="listing-nearby-card" onclick="var cs=CASTLES.find(x=>x.name==='${safeName}'); if(cs){closeListing();setTimeout(()=>openListing(cs),100);}">
-      <div class="listing-nearby-card-img">${tc2.emoji}</div>
-      <div class="listing-nearby-card-info">
-        <div class="listing-nearby-card-name">${c.name}</div>
-        <div class="listing-nearby-card-meta">★ ${c.rating} · ${distKm} km</div>
-      </div>
-    </div>`;
+    const tc2 = getTypeConfig(c.type); const distKm = (c.dist / 1000).toFixed(1); const safeName = c.name.replace(/'/g, "\\'");
+    return `<div class="listing-nearby-card" onclick="var cs=CASTLES.find(x=>x.name==='${safeName}'); if(cs){closeListing();setTimeout(()=>openListing(cs),100);}"><div class="listing-nearby-card-img">${tc2.emoji}</div><div class="listing-nearby-card-info"><div class="listing-nearby-card-name">${c.name}</div><div class="listing-nearby-card-meta">★ ${c.rating} · ${distKm} km</div></div></div>`;
   }).join('');
 
-  // Bookmark state
   const faved = isBookmarked(castle.name);
   const favText = faved ? '★ Saved' : '☆ Save';
   const favOverlayText = faved ? '❤' : '♡';
-
-  // Rating
   const fullStars = Math.floor(castle.rating);
   const starsStr = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
 
+  // Reset slider state
+  listingSlideIndex = 0;
+  listingSlideCount = 1;
+  listingSlideImages = [castle.image || ''];
+
   overlay.innerHTML = `
-    <!-- PHOTO LAYER -->
-    <div class="listing-photo-layer" id="listingPhotoLayer">
-      <div class="listing-photo-layer-inner">
-        <div class="listing-gallery-item listing-photo"><img id="listingImg1" src="${castle.image || ''}" /><div class="listing-type-badge">${tc.emoji} ${castle.type}</div></div>
-        <div class="listing-gallery-item listing-photo"><img id="listingImg2" src="" /></div>
-        <div class="listing-gallery-item listing-photo"><img id="listingImg3" src="" /></div>
-        <div class="listing-gallery-item listing-photo"><img id="listingImg4" src="" /></div>
-        <!-- Street View + Satellite -->
-        <div class="listing-gallery-item listing-street-view">
-          <div class="listing-sv-panel" onclick="window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${castle.lat},${castle.lng}','_blank')">
-            <img src="https://maps.googleapis.com/maps/api/streetview?size=600x400&location=${castle.lat},${castle.lng}&key=${API_KEY}" />
-            <div class="listing-sv-label">📍 Look Around</div>
-          </div>
-          <div class="listing-sv-panel">
-            <iframe src="https://www.google.com/maps/embed/v1/view?key=${API_KEY}&center=${castle.lat},${castle.lng}&zoom=15&maptype=satellite" loading="lazy"></iframe>
-          </div>
-        </div>
-        <!-- Map -->
-        <div class="listing-gallery-item listing-map-tile">
-          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
-          <div class="listing-map-badge">📍 ${castle.county}, ${castle.country}</div>
-        </div>
-        <!-- More photos loaded by Google Places -->
-        <div class="listing-gallery-item listing-photo" id="listingExtraPhoto5"></div>
-        <div class="listing-gallery-item listing-photo" id="listingExtraPhoto6"></div>
-        <div class="listing-photo-spacer"></div>
+    <div class="listing-page" id="listingPage">
+      <div class="listing-header-bar">
+        <button class="listing-back-btn" onclick="closeListing()">‹</button>
+        <div class="listing-header-name">${castle.name}</div>
+        <button class="listing-header-fav" id="listingFavBtn" onclick="listingToggleFav()">${favOverlayText}</button>
       </div>
-    </div>
 
-    <!-- GALLERY OVERLAY -->
-    <div class="listing-gallery-overlay" id="listingGalleryOverlay">
-      <button class="listing-close-btn" onclick="closeListing()">‹</button>
-      <div class="listing-overlay-actions">
-        <button id="listingFavOverlay" onclick="listingToggleFav()">${favOverlayText}</button>
+      <div class="listing-slider" id="listingSlider">
+        <div class="listing-slider-track" id="listingSliderTrack">
+          <div class="listing-slide"><img id="listingImg1" src="${castle.image || ''}" alt="${castle.name}" onclick="openListingLightbox(0)" /></div>
+          <div class="listing-slide"><img id="listingImg2" src="" onclick="openListingLightbox(1)" /></div>
+          <div class="listing-slide"><img id="listingImg3" src="" onclick="openListingLightbox(2)" /></div>
+          <div class="listing-slide"><img id="listingImg4" src="" onclick="openListingLightbox(3)" /></div>
+        </div>
+        <button class="listing-slider-prev" id="listingSliderPrev" onclick="listingSliderNav(-1)" style="display:none">‹</button>
+        <button class="listing-slider-next" id="listingSliderNext" onclick="listingSliderNav(1)">›</button>
+        <div class="listing-slider-counter" id="listingSliderCounter">1 / 1</div>
+        <div class="listing-type-badge">${tc.emoji} ${castle.type}</div>
       </div>
-    </div>
 
-    <!-- BOTTOM SHEET -->
-    <div class="listing-bottom-sheet" id="listingSheet">
-      <div class="listing-sheet-handle-wrap" id="listingSheetPeek">
-        <div class="listing-sheet-handle"></div>
-      </div>
-      <div class="listing-sheet-scroll" id="listingSheetScroll">
-        <div class="listing-sheet-peek">
-          <h1 class="listing-name">${castle.name}</h1>
-          <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
-          <div class="listing-key-stats">
-            <div class="listing-stat-item"><div class="listing-stat-value">${tc.emoji}</div><div class="listing-stat-label">${castle.type}</div></div>
-            <div class="listing-stat-item"><div class="listing-stat-value">${eraDisplay}</div><div class="listing-stat-label">Built</div></div>
-            <div class="listing-stat-item"><div class="listing-stat-value">${castle.condition || '—'}</div><div class="listing-stat-label">Condition</div></div>
-            <div class="listing-stat-item"><div class="listing-stat-value">${accessStatLabel}</div><div class="listing-stat-label">Access</div></div>
-          </div>
-          <div class="listing-peek-buttons">
-            <button class="listing-btn listing-btn-secondary" id="listingFavBtn" onclick="listingToggleFav()">${favText}</button>
-            <button class="listing-btn listing-btn-primary" onclick="listingAddToRoute()">🚗 Add to Route</button>
-          </div>
+      <div class="listing-content">
+        <h1 class="listing-name">${castle.name}</h1>
+        <div class="listing-location">${castle.county}, ${castle.country} · <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank">Get directions</a></div>
+        <div class="listing-key-stats">
+          <div class="listing-stat-item"><div class="listing-stat-value">${tc.emoji}</div><div class="listing-stat-label">${castle.type}</div></div>
+          <div class="listing-stat-item"><div class="listing-stat-value">${eraDisplay}</div><div class="listing-stat-label">Built</div></div>
+          <div class="listing-stat-item"><div class="listing-stat-value">${castle.condition || '—'}</div><div class="listing-stat-label">Condition</div></div>
+          <div class="listing-stat-item"><div class="listing-stat-value">${accessStatLabel}</div><div class="listing-stat-label">Access</div></div>
+        </div>
+        <div class="listing-peek-buttons">
+          <button class="listing-btn listing-btn-secondary" id="listingFavBtnContent" onclick="listingToggleFav()">${favText}</button>
+          <button class="listing-btn listing-btn-primary" onclick="listingAddToRoute()">🚗 Add to Route</button>
         </div>
 
         <div class="listing-divider"></div>
@@ -817,6 +720,12 @@ function openListing(castle) {
 
         <h2 class="listing-section-title">About</h2>
         <div class="listing-description">${castle.description || ''}${castle.history ? '<br><br>' + castle.history : ''}</div>
+
+        <div class="listing-divider"></div>
+
+        <div class="listing-inline-map" id="listingInlineMap">
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(castle.name)}&center=${castle.lat},${castle.lng}&zoom=14" loading="lazy"></iframe>
+        </div>
 
         <div class="listing-divider"></div>
 
@@ -858,18 +767,25 @@ function openListing(castle) {
       </div>
     </div>
 
+    <div class="listing-lightbox" id="listingLightbox">
+      <button class="listing-lb-close" onclick="closeListingLightbox()">✕</button>
+      <button class="listing-lb-prev" onclick="listingLightboxNav(-1)">‹</button>
+      <button class="listing-lb-next" onclick="listingLightboxNav(1)">›</button>
+      <div class="listing-lb-counter" id="listingLbCounter">1 / 1</div>
+      <img class="listing-lb-img" id="listingLbImg" src="" />
+    </div>
+
     <div class="listing-share-toast" id="listingShareToast">Link copied!</div>
   `;
 
   overlay.classList.add('active');
   closeQuickView();
 
-  // Init bottom sheet drag
-  requestAnimationFrame(() => initListingSheet());
+  // Init slider touch swipe
+  requestAnimationFrame(() => initListingSlider());
 
   // Load Google Places data
   listingLoadGoogleData(castle);
-  // Load YouTube
   listingLoadYouTube(castle);
 }
 
@@ -878,214 +794,95 @@ function closeListing() {
   overlay.classList.remove('active');
   overlay.innerHTML = '';
   listingCastle = null;
-  listingSetExpanded(false);
-  // Clean up photo layer scroll listener
-  if (listingPhotoLayerCleanup) { listingPhotoLayerCleanup(); listingPhotoLayerCleanup = null; }
 }
-let listingPhotoLayerCleanup = null;
 
-function initListingSheet() {
-  const sheet = document.getElementById('listingSheet');
-  const sheetPeek = document.getElementById('listingSheetPeek');
-  const sheetScroll = document.getElementById('listingSheetScroll');
-  const photoLayer = document.getElementById('listingPhotoLayer');
-  if (!sheet) return;
-
-  const peekContent = sheet.querySelector('.listing-sheet-peek');
-  const peekHeight = sheetPeek.offsetHeight + (peekContent ? peekContent.offsetHeight : 200) + 8;
-  const vh = window.innerHeight;
-  listingSheetPeekY = vh - peekHeight;
-  listingSheetFullY = vh * 0.05;
-  listingCurrentY = listingSheetPeekY;
-  listingSetExpanded(false);
-  sheet.style.height = `${vh - listingSheetFullY}px`;
-  sheet.style.transform = `translateY(${listingCurrentY}px)`;
-
-  // Desktop: override for centered sheet
-  if (window.innerWidth >= 768) {
-    sheet.style.transform = `translateX(-50%) translateY(${listingCurrentY}px)`;
-  }
-
-  function setSheetTransform(y) {
-    if (window.innerWidth >= 768) {
-      sheet.style.transform = `translateX(-50%) translateY(${y}px)`;
-    } else {
-      sheet.style.transform = `translateY(${y}px)`;
-    }
-  }
-
-  function expandSheet() {
-    listingSetExpanded(true);
-    listingCurrentY = listingSheetFullY;
-    setSheetTransform(listingCurrentY);
-    sheetScroll.classList.add('scrollable');
-    if (photoLayer) photoLayer.style.opacity = '0.6';
-  }
-
-  function collapseSheet() {
-    listingSetExpanded(false);
-    listingCurrentY = listingSheetPeekY;
-    sheetScroll.scrollTop = 0;
-    sheetScroll.classList.remove('scrollable');
-    setSheetTransform(listingCurrentY);
-    if (photoLayer) photoLayer.style.opacity = '1';
-  }
-
-  // Drag from handle
-  sheetPeek.addEventListener('touchstart', onDragStart, { passive: true });
-  sheetPeek.addEventListener('mousedown', onDragStart);
-
-  // Drag from scroll area when collapsed
-  sheetScroll.addEventListener('touchstart', (e) => {
-    if (!listingSheetExpanded) onDragStart(e);
-  }, { passive: true });
-
-  function onDragStart(e) {
-    const touch = e.touches ? e.touches[0] : e;
-    listingStartTouchY = touch.clientY;
-    listingStartSheetY = listingCurrentY;
-    listingDragging = true;
-    sheet.classList.add('dragging');
-    document.addEventListener('touchmove', onDragMove, { passive: false });
-    document.addEventListener('mousemove', onDragMove);
-    document.addEventListener('touchend', onDragEnd);
-    document.addEventListener('mouseup', onDragEnd);
-  }
-
-  function onDragMove(e) {
-    if (!listingDragging) return;
-    e.preventDefault();
-    const touch = e.touches ? e.touches[0] : e;
-    const dy = touch.clientY - listingStartTouchY;
-    let newY = listingStartSheetY + dy;
-    newY = Math.max(listingSheetFullY, Math.min(listingSheetPeekY, newY));
-    listingCurrentY = newY;
-    setSheetTransform(listingCurrentY);
-    // Fade photo layer based on drag position
-    if (photoLayer) {
-      const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
-      photoLayer.style.opacity = String(1 - progress * 0.4);
-    }
-  }
-
-  function onDragEnd() {
-    if (!listingDragging) return;
-    listingDragging = false;
-    sheet.classList.remove('dragging');
-    document.removeEventListener('touchmove', onDragMove);
-    document.removeEventListener('mousemove', onDragMove);
-    document.removeEventListener('touchend', onDragEnd);
-    document.removeEventListener('mouseup', onDragEnd);
-
-    const threshold = listingSheetPeekY - (listingSheetPeekY - listingSheetFullY) * 0.15;
-    if (listingCurrentY < threshold) {
-      expandSheet();
-    } else {
-      collapseSheet();
-    }
-  }
-
-  // Pull-down to collapse when expanded and at scroll top
-  sheetScroll.addEventListener('touchstart', (e) => {
-    if (listingSheetExpanded && sheetScroll.scrollTop <= 0) {
-      listingDragTarget = 'scroll';
-      listingStartTouchY = e.touches[0].clientY;
-      listingStartSheetY = listingCurrentY;
-    }
-  }, { passive: true });
-
-  sheetScroll.addEventListener('touchmove', (e) => {
-    if (listingDragTarget === 'scroll' && sheetScroll.scrollTop <= 0) {
-      const dy = e.touches[0].clientY - listingStartTouchY;
-      if (dy > 0) {
-        e.preventDefault();
-        let newY = listingStartSheetY + dy;
-        newY = Math.max(listingSheetFullY, Math.min(listingSheetPeekY, newY));
-        listingCurrentY = newY;
-        sheet.classList.add('dragging');
-        setSheetTransform(listingCurrentY);
-        if (photoLayer) {
-          const progress = 1 - (listingCurrentY - listingSheetFullY) / (listingSheetPeekY - listingSheetFullY);
-          photoLayer.style.opacity = String(1 - progress * 0.4);
-        }
-      }
-    }
-  }, { passive: false });
-
-  sheetScroll.addEventListener('touchend', () => {
-    if (listingDragTarget === 'scroll') {
-      listingDragTarget = null;
-      sheet.classList.remove('dragging');
-      const collapseThreshold = listingSheetFullY + (listingSheetPeekY - listingSheetFullY) * 0.15;
-      if (listingCurrentY < collapseThreshold) {
-        expandSheet();
-      } else {
-        collapseSheet();
-      }
-    }
+function initListingSlider() {
+  const track = document.getElementById('listingSliderTrack');
+  if (!track) return;
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (dx > 50) listingSliderNav(-1);
+    else if (dx < -50) listingSliderNav(1);
   });
+  updateListingSliderUI();
 
-  // Tap peek area to expand (not buttons)
-  const peekTapArea = sheet.querySelector('.listing-sheet-peek');
-  if (peekTapArea) {
-    peekTapArea.addEventListener('click', (e) => {
-      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) return;
-      if (!listingSheetExpanded) {
-        expandSheet();
-      }
+  // Lightbox touch swipe
+  const lb = document.getElementById('listingLightbox');
+  if (lb) {
+    let lbStartX = 0;
+    lb.addEventListener('touchstart', e => { lbStartX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - lbStartX;
+      if (dx > 50) listingLightboxNav(-1);
+      else if (dx < -50) listingLightboxNav(1);
     });
   }
+}
 
-  // Auto-expand when photo layer scroll reaches bottom + dismiss on overscroll top
-  if (photoLayer) {
-    let lastPhotoScrollTop = 0;
-    let pullDownStart = null;
-    const onPhotoScroll = () => {
-      const scrollTop = photoLayer.scrollTop;
-      const scrollMax = photoLayer.scrollHeight - photoLayer.clientHeight;
+function listingSliderNav(dir) {
+  const newIdx = listingSlideIndex + dir;
+  if (newIdx < 0 || newIdx >= listingSlideCount) return;
+  listingSlideIndex = newIdx;
+  const track = document.getElementById('listingSliderTrack');
+  if (track) track.style.transform = `translateX(-${listingSlideIndex * 100}%)`;
+  updateListingSliderUI();
+}
 
-      // Auto-expand when scrolled to bottom
-      if (scrollTop >= scrollMax - 10 && !listingSheetExpanded) {
-        expandSheet();
-      }
+function updateListingSliderUI() {
+  const counter = document.getElementById('listingSliderCounter');
+  const prev = document.getElementById('listingSliderPrev');
+  const next = document.getElementById('listingSliderNext');
+  if (counter) counter.textContent = `${listingSlideIndex + 1} / ${listingSlideCount}`;
+  if (prev) prev.style.display = listingSlideIndex > 0 ? 'flex' : 'none';
+  if (next) next.style.display = listingSlideIndex < listingSlideCount - 1 ? 'flex' : 'none';
+}
 
-      // Auto-collapse when scrolling back up while expanded
-      if (listingSheetExpanded && scrollTop < lastPhotoScrollTop && lastPhotoScrollTop - scrollTop > 80) {
-        collapseSheet();
-      }
-
-      lastPhotoScrollTop = scrollTop;
-    };
-
-    // Pull-down-to-dismiss when at top of photo layer
-    let photoTouchStartY = 0;
-    const onPhotoTouchStart = (e) => {
-      if (photoLayer.scrollTop <= 0) {
-        photoTouchStartY = e.touches[0].clientY;
-      } else {
-        photoTouchStartY = 0;
-      }
-    };
-    const onPhotoTouchMove = (e) => {
-      if (photoTouchStartY && photoLayer.scrollTop <= 0) {
-        const dy = e.touches[0].clientY - photoTouchStartY;
-        if (dy > 120) {
-          closeListing();
-          photoTouchStartY = 0;
-        }
-      }
-    };
-
-    photoLayer.addEventListener('scroll', onPhotoScroll, { passive: true });
-    photoLayer.addEventListener('touchstart', onPhotoTouchStart, { passive: true });
-    photoLayer.addEventListener('touchmove', onPhotoTouchMove, { passive: true });
-    listingPhotoLayerCleanup = () => {
-      photoLayer.removeEventListener('scroll', onPhotoScroll);
-      photoLayer.removeEventListener('touchstart', onPhotoTouchStart);
-      photoLayer.removeEventListener('touchmove', onPhotoTouchMove);
-    };
+function openListingLightbox(index) {
+  if (index >= listingSlideImages.length || !listingSlideImages[index]) return;
+  listingLbIndex = index;
+  const lb = document.getElementById('listingLightbox');
+  const img = document.getElementById('listingLbImg');
+  if (lb && img) {
+    img.src = listingSlideImages[listingLbIndex];
+    lb.classList.add('active');
+    updateListingLbUI();
   }
 }
+
+function closeListingLightbox() {
+  const lb = document.getElementById('listingLightbox');
+  if (lb) lb.classList.remove('active');
+}
+
+function listingLightboxNav(dir) {
+  const newIdx = listingLbIndex + dir;
+  if (newIdx < 0 || newIdx >= listingSlideImages.length) return;
+  listingLbIndex = newIdx;
+  const img = document.getElementById('listingLbImg');
+  if (img) img.src = listingSlideImages[listingLbIndex];
+  updateListingLbUI();
+}
+
+function updateListingLbUI() {
+  const counter = document.getElementById('listingLbCounter');
+  if (counter) counter.textContent = `${listingLbIndex + 1} / ${listingSlideImages.length}`;
+  const prev = document.querySelector('.listing-lb-prev');
+  const next = document.querySelector('.listing-lb-next');
+  if (prev) prev.style.display = listingSlideImages.length > 1 && listingLbIndex > 0 ? 'flex' : 'none';
+  if (next) next.style.display = listingSlideImages.length > 1 && listingLbIndex < listingSlideImages.length - 1 ? 'flex' : 'none';
+}
+
+// Keyboard nav for listing lightbox
+document.addEventListener('keydown', (e) => {
+  const lb = document.getElementById('listingLightbox');
+  if (!lb || !lb.classList.contains('active')) return;
+  if (e.key === 'ArrowLeft') listingLightboxNav(-1);
+  else if (e.key === 'ArrowRight') listingLightboxNav(1);
+  else if (e.key === 'Escape') closeListingLightbox();
+});
 
 async function listingLoadGoogleData(castle) {
   const cacheKey = castle.name;
@@ -1114,23 +911,31 @@ async function listingLoadGoogleData(castle) {
 }
 
 function listingRenderGoogleData(place, castle) {
-  // Photos — populate photo layer images
+  // Photos — populate slider images
   if (place.photos && place.photos.length > 0) {
     const photos = place.photos.slice(0, 8);
+    listingSlideImages = [];
     // Populate listingImg1-4
     for (let i = 0; i < Math.min(photos.length, 4); i++) {
       const url = photos[i].getURI ? photos[i].getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
       const imgEl = document.getElementById(`listingImg${i + 1}`);
-      if (imgEl && url) imgEl.src = url;
+      if (imgEl && url) { imgEl.src = url; listingSlideImages.push(url); }
     }
-    // Extra photos in the photo layer
-    for (let i = 4; i < Math.min(photos.length, 6); i++) {
+    // Add extra slides dynamically for photos 5+
+    const track = document.getElementById('listingSliderTrack');
+    for (let i = 4; i < photos.length; i++) {
       const url = photos[i].getURI ? photos[i].getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
-      const container = document.getElementById(`listingExtraPhoto${i + 1}`);
-      if (container && url) {
-        container.innerHTML = `<img src="${url}" alt="Photo ${i + 1}" />`;
+      if (url && track) {
+        const slide = document.createElement('div');
+        slide.className = 'listing-slide';
+        slide.innerHTML = `<img src="${url}" alt="Photo ${i + 1}" onclick="openListingLightbox(${i})" />`;
+        track.appendChild(slide);
+        listingSlideImages.push(url);
       }
     }
+    listingSlideCount = listingSlideImages.length;
+    listingSlideIndex = 0;
+    updateListingSliderUI();
     // Update map pin
     const idx = CASTLES.findIndex(c => c.name === castle.name);
     if (idx >= 0) {
@@ -1233,10 +1038,10 @@ function listingToggleFav() {
   if (!listingCastle) return;
   toggleBookmark(listingCastle.name);
   const faved = isBookmarked(listingCastle.name);
-  const btn = document.getElementById('listingFavBtn');
-  if (btn) btn.textContent = faved ? '★ Saved' : '☆ Save';
-  const overlay = document.getElementById('listingFavOverlay');
-  if (overlay) overlay.textContent = faved ? '❤' : '♡';
+  const headerBtn = document.getElementById('listingFavBtn');
+  if (headerBtn) headerBtn.textContent = faved ? '❤' : '♡';
+  const contentBtn = document.getElementById('listingFavBtnContent');
+  if (contentBtn) contentBtn.textContent = faved ? '★ Saved' : '☆ Save';
 }
 
 function listingAddToRoute() {
@@ -1270,22 +1075,8 @@ function listingShare() {
 }
 
 function listingScrollToReviews() {
-  const sheetScroll = document.getElementById('listingSheetScroll');
-  const sheet = document.getElementById('listingSheet');
-  if (!listingSheetExpanded) {
-    listingSetExpanded(true);
-    listingCurrentY = listingSheetFullY;
-    if (window.innerWidth >= 768) {
-      sheet.style.transform = `translateX(-50%) translateY(${listingCurrentY}px)`;
-    } else {
-      sheet.style.transform = `translateY(${listingCurrentY}px)`;
-    }
-    sheetScroll.classList.add('scrollable');
-  }
-  setTimeout(() => {
-    const target = document.getElementById('listingReviewsTitle');
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, listingSheetExpanded ? 50 : 400);
+  const target = document.getElementById('listingReviewsTitle');
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ========== COLLECTIONS ==========
@@ -2437,7 +2228,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Close quick view when tapping map
-  map.on('click', () => { closeQuickView(); if (listingCastle && !listingSheetExpanded) closeListing(); });
+  map.on('click', () => { closeQuickView(); });
 });
 
 // ========== QUICK VIEW (MOBILE) ==========
