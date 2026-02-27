@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Region — castlecore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--stone:#d4c5a9;--cream:#f0ebe0;--candlelight:#c9a84c;--burgundy:#8b2335;--forest:#2d5a3d;--ivy:#3d5a3e;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#faf8f4}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--shadow);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--twilight);transition:color .2s}
+.nav-links a:hover{color:var(--ivy)}
+.nav-links .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
+.nav-links .btn-explore:hover{background:#6e1a2a}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:16px;z-index:999}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:8px 0}
+@media(max-width:768px){
+.nav-links{display:none}
+.hamburger{display:block}
+}
+
+/* HERO BANNER */
+.region-hero{margin-top:64px;padding:48px 24px 40px;text-align:center}
+.region-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:12px;color:#fff}
+.region-hero .hero-desc{color:rgba(255,255,255,.88);font-size:1.05rem;max-width:680px;margin:0 auto 16px;line-height:1.6;font-family:'Playfair Display',serif;font-style:italic}
+.region-hero .hero-count{color:rgba(255,255,255,.65);font-size:.9rem;font-weight:600}
+
+/* REGION HERO GRADIENTS */
+.hero-london-surrey{background:linear-gradient(135deg,#5a1a2a,#8b2335)}
+.hero-scottish-highlands{background:linear-gradient(135deg,#2d4a3d,#4a7c59)}
+.hero-ireland{background:linear-gradient(135deg,#2d5a3d,#3d7a4e)}
+.hero-north-wales{background:linear-gradient(135deg,#6b2a1a,#8e4a2a)}
+.hero-south-east-england{background:linear-gradient(135deg,#2c3e5a,#4a6fa5)}
+.hero-scottish-lowlands{background:linear-gradient(135deg,#3a3a5a,#5a5a8a)}
+.hero-northern-england{background:linear-gradient(135deg,#4a3a2a,#6b5d4a)}
+.hero-south-west-england{background:linear-gradient(135deg,#5e3a6e,#8a5a9e)}
+.hero-yorkshire{background:linear-gradient(135deg,#6b4c3b,#8b6c5b)}
+.hero-south-wales{background:linear-gradient(135deg,#8b2335,#c9a84c)}
+.hero-midlands{background:linear-gradient(135deg,#8b6914,#c9a84c)}
+.hero-east-anglia{background:linear-gradient(135deg,#3d7a3e,#5a9a5c)}
+
+/* MAIN LAYOUT */
+.main-content{max-width:1280px;margin:0 auto;padding:24px;display:flex;gap:24px}
+
+/* FILTER SIDEBAR */
+.filter-sidebar{width:240px;flex-shrink:0}
+.filter-section{margin-bottom:24px}
+.filter-section h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);margin-bottom:10px}
+.filter-search{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius);font-size:.9rem;font-family:'Inter',sans-serif;outline:none;background:#fff;transition:border-color .2s}
+.filter-search:focus{border-color:var(--burgundy)}
+
+/* CUSTOM CHECKBOXES */
+.cb-label{display:flex;align-items:center;gap:8px;padding:6px 0;cursor:pointer;font-size:.9rem;color:var(--shadow)}
+.cb-label input{display:none}
+.cb-box{width:18px;height:18px;border:2px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.cb-label input:checked + .cb-box{background:var(--burgundy);border-color:var(--burgundy)}
+.cb-label input:checked + .cb-box::after{content:'✓';color:#fff;font-size:.7rem;font-weight:700}
+.cb-count{margin-left:auto;font-size:.75rem;color:var(--twilight)}
+
+/* MOBILE FILTER TOGGLE */
+.filter-toggle{display:none;width:100%;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);font-size:.9rem;font-weight:600;cursor:pointer;text-align:left;margin-bottom:16px;font-family:'Inter',sans-serif}
+.filter-toggle::after{content:'▼';float:right;font-size:.7rem;transition:transform .2s}
+.filter-toggle.open::after{transform:rotate(180deg)}
+
+@media(max-width:768px){
+.main-content{flex-direction:column}
+.filter-sidebar{width:100%}
+.filter-toggle{display:block}
+.filter-body{display:none}
+.filter-body.open{display:block}
+}
+
+/* RESULTS */
+.results-area{flex:1;min-width:0}
+.results-count{font-size:.9rem;color:var(--twilight);margin-bottom:16px;font-weight:500}
+
+/* RESULTS GRID */
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:1024px){.results-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.results-grid{grid-template-columns:1fr}}
+
+/* RESULT CARD */
+.result-card{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(120,90,50,.06);display:flex;flex-direction:column}
+.result-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(120,90,50,.12)}
+.result-card .card-img{height:180px;overflow:hidden;background:linear-gradient(135deg,var(--stone),var(--cream))}
+.result-card .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.result-card:hover .card-img img{transform:scale(1.05)}
+.result-card .card-body{padding:16px;flex:1;display:flex;flex-direction:column}
+.result-card .card-body h3{font-size:1.05rem;margin-bottom:4px;line-height:1.3}
+.result-card .card-loc{color:var(--twilight);font-size:.82rem;margin-bottom:8px}
+.result-card .card-meta{display:flex;align-items:center;gap:8px;margin-top:auto}
+.result-card .type-pill{display:inline-block;background:var(--cream);color:var(--ivy);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:var(--pill);text-transform:capitalize}
+.result-card .card-rating{color:var(--candlelight);font-size:.82rem;font-weight:600}
+
+/* BACK LINK */
+.back-link{display:inline-block;margin:24px;font-size:.9rem;color:var(--twilight);font-weight:500}
+.back-link:hover{color:var(--ivy)}
+
+/* FOOTER */
+footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:.85rem;max-width:280px}
+.footer-col h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;color:rgba(255,255,255,.5)}
+.footer-col a{display:block;color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">castlecore</a>
+<div class="nav-links">
+<a href="explore.html" class="btn-explore">Explore Map</a>
+<a href="collection.html">Collections</a>
+<a href="explore.html">Regions</a>
+<a href="explore.html">Trails</a>
+<a href="explore.html">Near Me</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
+<div class="mobile-menu">
+<a href="explore.html">🗺️ Explore Map</a>
+<a href="collection.html">Collections</a>
+<a href="explore.html">Regions</a>
+<a href="explore.html">Trails</a>
+<a href="explore.html">Near Me</a>
+</div>
+
+<!-- DYNAMIC CONTENT -->
+<div id="app"></div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="footer-logo">castlecore</div>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+</div>
+<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="collection.html">Collections</a><a href="explore.html">Regions</a><a href="explore.html">Trails</a></div>
+<div class="footer-col"><h4>Info</h4><a href="#">About</a><a href="#">Contact</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div>
+<div class="footer-bottom">
+<span>Built with ❤️ for history lovers</span>
+<span>© 2026 castlecore</span>
+</div>
+</div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(function(){
+
+const REGIONS = {
+  'london-surrey': {
+    name: 'London & Surrey',
+    desc: 'From the imposing Tower of London to the grandeur of Hampton Court Palace, the capital and its surrounds hold some of England\'s most famous — and most visited — heritage sites. Centuries of royal power, political intrigue, and architectural ambition are written into every stone.',
+    filter: c => ['London','Surrey','Greater London','Middlesex'].some(r => (c.county||'').includes(r)),
+    country: 'England'
+  },
+  'scottish-highlands': {
+    name: 'Scottish Highlands',
+    desc: 'Wild, remote, and breathtakingly beautiful. The Highlands are home to brooding clan fortresses perched on lochs, ruined strongholds lost in misty glens, and some of the most dramatic castle settings anywhere in the world. This is where Outlander dreams come true.',
+    filter: c => c.country === 'Scotland' && ['Highland','Argyll','Inverness','Ross','Sutherland','Caithness','Skye','Lochaber','Moray','Nairn','Badenoch'].some(r => (c.county||'').includes(r)),
+    country: 'Scotland'
+  },
+  'ireland': {
+    name: 'Ireland',
+    desc: 'With nearly a thousand castles, tower houses, and monastic ruins scattered across emerald fields and dramatic coastlines, Ireland is a treasure trove for heritage lovers. From the Rock of Cashel to crumbling Norman keeps hidden down country lanes, every county has stories waiting to be discovered.',
+    filter: c => c.country === 'Ireland',
+    country: 'Ireland'
+  },
+  'north-wales': {
+    name: 'North Wales',
+    desc: 'Home to Edward I\'s legendary "Iron Ring" — a chain of massive fortresses built to subjugate the Welsh. Caernarfon, Conwy, Harlech, and Beaumaris are UNESCO World Heritage Sites and among the finest medieval castles ever built. The Snowdonia backdrop makes them even more spectacular.',
+    filter: c => c.country === 'Wales' && ['Gwynedd','Conwy','Anglesey','Denbighshire','Wrexham','Flintshire','Clwyd'].some(r => (c.county||'').includes(r)),
+    country: 'Wales'
+  },
+  'south-east-england': {
+    name: 'South East England',
+    desc: 'The gateway to England and its most fortified frontier. From the White Cliffs of Dover Castle to the fairy-tale moat of Bodiam and the sprawling grounds of Leeds Castle, the South East blends picture-perfect scenery with centuries of coastal defence.',
+    filter: c => c.country === 'England' && ['Kent','Sussex','East Sussex','West Sussex','Hampshire','Berkshire','Oxfordshire','Buckinghamshire','Surrey'].some(r => (c.county||'').includes(r)),
+    country: 'England'
+  },
+  'scottish-lowlands': {
+    name: 'Scottish Lowlands & Borders',
+    desc: 'Where Scotland meets England, the Borders saw centuries of raid and retaliation — leaving behind a landscape dotted with tower houses, peel towers, and ruined abbeys. Further north, Edinburgh and Stirling castles dominate Scotland\'s most storied cities.',
+    filter: c => c.country === 'Scotland' && !['Highland','Argyll','Inverness','Ross','Sutherland','Caithness','Skye','Lochaber','Moray','Nairn','Badenoch'].some(r => (c.county||'').includes(r)),
+    country: 'Scotland'
+  },
+  'northern-england': {
+    name: 'Northern England',
+    desc: 'Hadrian\'s Wall country. Mighty Bamburgh rising above golden sands, Alnwick of Harry Potter fame, and Durham\'s commanding Norman cathedral-castle. The North of England is rugged, dramatic, and packed with heritage that shaped the nation.',
+    filter: c => c.country === 'England' && ['Northumberland','Durham','Cumbria','Tyne and Wear','Cumberland','Westmorland','Lancashire'].some(r => (c.county||'').includes(r)),
+    country: 'England'
+  },
+  'south-west-england': {
+    name: 'South West England',
+    desc: 'Land of legends. Tintagel — birthplace of King Arthur. Corfe Castle\'s dramatic ruins on the Dorset ridge. The ancient hill forts of Somerset and Devon. The South West is where mythology and history blur into something magical.',
+    filter: c => c.country === 'England' && ['Cornwall','Devon','Dorset','Somerset','Wiltshire','Gloucestershire','Bristol','Avon'].some(r => (c.county||'').includes(r)),
+    country: 'England'
+  },
+  'yorkshire': {
+    name: 'Yorkshire',
+    desc: 'God\'s own country. The haunting ruins of Whitby Abbey overlooking the sea, the mighty keeps of Richmond and Scarborough, Bolton Castle where Mary Queen of Scots was imprisoned. Yorkshire\'s heritage is as vast and varied as its legendary moors.',
+    filter: c => c.country === 'England' && ['Yorkshire','North Yorkshire','South Yorkshire','West Yorkshire','East Yorkshire','East Riding'].some(r => (c.county||'').includes(r)),
+    country: 'England'
+  },
+  'south-wales': {
+    name: 'South Wales',
+    desc: 'More castles per square mile than anywhere in the world. Caerphilly — the largest castle in Wales, Pembroke — birthplace of Henry VII, and Cardiff Castle in the heart of the capital. South Wales is a castle-lover\'s paradise.',
+    filter: c => c.country === 'Wales' && !['Gwynedd','Conwy','Anglesey','Denbighshire','Wrexham','Flintshire','Clwyd'].some(r => (c.county||'').includes(r)),
+    country: 'Wales'
+  },
+  'midlands': {
+    name: 'The Midlands',
+    desc: 'The heart of England. Warwick Castle — one of the finest medieval castles in the country, Kenilworth\'s vast red ruins, and the timber-framed stronghold of Stokesay. The Midlands offer heritage without the crowds.',
+    filter: c => c.country === 'England' && ['Warwickshire','Staffordshire','Shropshire','Herefordshire','Worcestershire','Leicestershire','Nottinghamshire','Derbyshire','West Midlands','Northamptonshire','Rutland'].some(r => (c.county||'').includes(r)),
+    country: 'England'
+  },
+  'east-anglia': {
+    name: 'East Anglia',
+    desc: 'Flat landscapes, big skies, and surprising castles. Framlingham — where Mary Tudor was proclaimed queen, the mighty Norman keep of Norwich, and the atmospheric ruins of Castle Acre Priory. East Anglia rewards the curious explorer.',
+    filter: c => c.country === 'England' && ['Norfolk','Suffolk','Essex','Cambridgeshire','Bedfordshire','Hertfordshire'].some(r => (c.county||'').includes(r)),
+    country: 'England'
+  }
+};
+
+function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'') }
+
+const params = new URLSearchParams(window.location.search);
+const regionId = params.get('id');
+const app = document.getElementById('app');
+
+if (!regionId || !REGIONS[regionId]) {
+  app.innerHTML = '<div style="text-align:center;padding:120px 24px 64px"><h1>Region not found</h1><p><a href="/">← Back to home</a></p></div>';
+  return;
+}
+
+const region = REGIONS[regionId];
+const allSites = (typeof CASTLES !== 'undefined' ? CASTLES : []).filter(region.filter);
+document.title = region.name + ' — castlecore';
+
+// Count types for filter
+const typeCounts = {};
+allSites.forEach(s => {
+  const t = (s.type || 'other').toLowerCase();
+  typeCounts[t] = (typeCounts[t] || 0) + 1;
+});
+const types = Object.keys(typeCounts).sort((a,b) => typeCounts[b] - typeCounts[a]);
+
+// Build hero
+let html = `<div class="region-hero hero-${regionId}"><h1>${region.name}</h1><p class="hero-desc">${region.desc}</p><p class="hero-count">${allSites.length} sites to explore</p></div>`;
+
+// Build layout
+html += '<div class="main-content">';
+
+// Sidebar
+html += '<aside class="filter-sidebar">';
+html += '<button class="filter-toggle" id="filterToggle">Filter & Search</button>';
+html += '<div class="filter-body" id="filterBody">';
+html += '<div class="filter-section"><h4>Search</h4><input type="text" class="filter-search" id="nameSearch" placeholder="Search by name..."></div>';
+
+// Type filter
+if (types.length > 1) {
+  html += '<div class="filter-section"><h4>Type</h4>';
+  types.forEach(t => {
+    html += `<label class="cb-label"><input type="checkbox" value="${t}" class="type-cb" checked><span class="cb-box"></span>${t}<span class="cb-count">${typeCounts[t]}</span></label>`;
+  });
+  html += '</div>';
+}
+
+html += '</div></aside>';
+
+// Results
+html += '<div class="results-area"><p class="results-count" id="resultsCount"></p><div class="results-grid" id="resultsGrid"></div></div>';
+html += '</div>';
+
+app.innerHTML = html;
+
+// Render
+function render() {
+  const search = document.getElementById('nameSearch').value.toLowerCase().trim();
+  const checkedTypes = Array.from(document.querySelectorAll('.type-cb:checked')).map(c => c.value);
+  const filtered = allSites.filter(s => {
+    if (search && !s.name.toLowerCase().includes(search)) return false;
+    if (checkedTypes.length > 0 && !checkedTypes.includes((s.type||'other').toLowerCase())) return false;
+    return true;
+  });
+  document.getElementById('resultsCount').textContent = `Showing ${filtered.length} of ${allSites.length} sites`;
+  const grid = document.getElementById('resultsGrid');
+  grid.innerHTML = filtered.map(s => {
+    const imgHtml = s.image ? `<img src="${s.image}" alt="${s.name}" loading="lazy">` : '';
+    const rating = s.rating ? `<span class="card-rating">★ ${s.rating}</span>` : '';
+    const loc = [s.county, s.country].filter(Boolean).join(', ');
+    return `<a class="result-card" href="site/${slug(s.name)}.html"><div class="card-img">${imgHtml}</div><div class="card-body"><h3>${s.name}</h3><p class="card-loc">${loc}</p><div class="card-meta"><span class="type-pill">${s.type||''}</span>${rating}</div></div></a>`;
+  }).join('');
+}
+
+render();
+document.getElementById('nameSearch').addEventListener('input', render);
+document.querySelectorAll('.type-cb').forEach(cb => cb.addEventListener('change', render));
+
+// Mobile toggle
+const toggle = document.getElementById('filterToggle');
+const body = document.getElementById('filterBody');
+toggle.addEventListener('click', () => { toggle.classList.toggle('open'); body.classList.toggle('open'); });
+if (window.innerWidth > 768) body.classList.add('open');
+
+})();
+</script>
+</body>
+</html>
