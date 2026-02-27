@@ -160,6 +160,44 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
 .nearby-card-name { font-size: 12px; font-weight: 600; line-height: 1.3; margin-bottom: 2px; }
 .nearby-card-meta { font-size: 11px; color: var(--text-muted); }
 
+/* Getting There */
+.getting-there-section { margin-bottom: 8px; }
+.transport-card { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.transport-card:last-child { border-bottom: none; }
+.transport-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--bg-light); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.transport-info { flex: 1; }
+.transport-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.transport-detail { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+.transport-link { color: var(--blue); text-decoration: none; font-size: 12px; font-weight: 500; }
+
+/* Terrain & Accessibility */
+.terrain-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.terrain-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; border: 1px solid var(--border); background: var(--bg); }
+.terrain-chip .chip-icon { font-size: 16px; }
+.terrain-chip.green { background: #e8f5e9; border-color: #c8e6c9; color: #2e7d32; }
+.terrain-chip.amber { background: #fff8e1; border-color: #ffecb3; color: #f57f17; }
+.terrain-chip.red { background: #fce4ec; border-color: #f8bbd0; color: #c62828; }
+
+.terrain-note { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-top: 8px; padding: 10px 14px; background: var(--bg-light); border-radius: var(--radius-sm); }
+
+/* Events Calendar */
+.events-section { margin-bottom: 8px; }
+.event-card { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.event-card:last-child { border-bottom: none; }
+.event-date-box { width: 50px; flex-shrink: 0; text-align: center; background: var(--bg-light); border-radius: var(--radius-sm); padding: 8px 4px; border: 1px solid var(--border); }
+.event-month { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--sage); letter-spacing: 0.5px; }
+.event-day { font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.2; }
+.event-info { flex: 1; }
+.event-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.event-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+.event-meta { font-size: 11px; color: var(--text-muted); margin-top: 4px; display: flex; gap: 8px; }
+.event-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+.event-badge.seasonal { background: #e8f5e9; color: #2e7d32; }
+.event-badge.concert { background: #e3f2fd; color: #1565c0; }
+.event-badge.family { background: #fff3e0; color: #e65100; }
+.event-badge.special { background: #f3e5f5; color: #7b1fa2; }
+.events-link { display: block; text-align: center; padding: 12px; font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius); margin-top: 12px; }
+
 /* Links section */
 .links-section { margin-bottom: 16px; }
 .link-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); }
@@ -293,6 +331,121 @@ body { font-family: var(--font-sans); background: #000; color: var(--text); -web
       <br><br>
       Hampton Court Palace is a Grade I listed royal palace in the London Borough of Richmond upon Thames, 12 miles southwest and upstream of central London on the River Thames. It has been a significant royal palace since the early 16th century and today serves as a major tourist attraction, managed by Historic Royal Palaces.
     </div>
+
+    <div class="divider"></div>
+
+    <!-- Getting There -->
+    <h2 class="section-title">Getting There</h2>
+    <div class="getting-there-section">
+      <div class="transport-card">
+        <div class="transport-icon">🚂</div>
+        <div class="transport-info">
+          <div class="transport-name">Hampton Court Station</div>
+          <div class="transport-detail">2 minute walk from the palace gates. Direct trains from London Waterloo every 30 minutes (35 min journey).</div>
+          <a class="transport-link" href="https://www.google.com/maps/dir/Hampton+Court+Station/Hampton+Court+Palace" target="_blank">Get train directions →</a>
+        </div>
+      </div>
+      <div class="transport-card">
+        <div class="transport-icon">🅿️</div>
+        <div class="transport-info">
+          <div class="transport-name">On-site Car Park</div>
+          <div class="transport-detail">Large car park at the palace. £2.40/hour, max £7.20/day. Can fill up on summer weekends — arrive before 11am.</div>
+        </div>
+      </div>
+      <div class="transport-card">
+        <div class="transport-icon">🚌</div>
+        <div class="transport-info">
+          <div class="transport-name">Bus Routes</div>
+          <div class="transport-detail">Routes 111, 216, 411, and R68 stop at Hampton Court. The 111 connects to Kingston and Heathrow.</div>
+        </div>
+      </div>
+      <div class="transport-card">
+        <div class="transport-icon">🚲</div>
+        <div class="transport-info">
+          <div class="transport-name">Cycling</div>
+          <div class="transport-detail">Bike racks available at the East Front. Part of the Thames Cycle Route (National Cycle Network Route 4).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Terrain & Accessibility -->
+    <h2 class="section-title">Terrain & Accessibility</h2>
+    <div class="terrain-grid">
+      <div class="terrain-chip green"><span class="chip-icon">♿</span> Wheelchair Accessible</div>
+      <div class="terrain-chip green"><span class="chip-icon">🚶</span> Flat & Paved</div>
+      <div class="terrain-chip green"><span class="chip-icon">🪑</span> Seating Available</div>
+      <div class="terrain-chip green"><span class="chip-icon">🚻</span> Accessible Toilets</div>
+      <div class="terrain-chip green"><span class="chip-icon">👶</span> Buggy Friendly</div>
+      <div class="terrain-chip amber"><span class="chip-icon">🏛️</span> Some Stairs Inside</div>
+    </div>
+    <div class="terrain-note">
+      ℹ️ Most of the ground floor, gardens, and maze are fully accessible. Upper floors of the Tudor apartments require stairs. Mobility scooters and wheelchairs available to borrow free of charge. Companion carers admitted free.
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Events Calendar -->
+    <h2 class="section-title">Upcoming Events</h2>
+    <div class="events-section">
+      <div class="event-card">
+        <div class="event-date-box">
+          <div class="event-month">Mar</div>
+          <div class="event-day">15</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">Easter at the Palace</div>
+          <div class="event-desc">Family-friendly Easter trail through the Tudor kitchens and gardens. Chocolate egg hunt for under-12s.</div>
+          <div class="event-meta"><span class="event-badge family">Family</span> <span>Free with admission</span></div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-box">
+          <div class="event-month">Jun</div>
+          <div class="event-day">11</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">Hampton Court Palace Festival</div>
+          <div class="event-desc">Annual summer concert series in Base Court. Past performers include Nile Rodgers, Björk, and Elton John.</div>
+          <div class="event-meta"><span class="event-badge concert">Concert</span> <span>Tickets from £45</span></div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-box">
+          <div class="event-month">Jul</div>
+          <div class="event-day">1</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">Hampton Court Garden Festival</div>
+          <div class="event-desc">RHS flower show featuring show gardens, floral marquees, and plant shopping. One of the UK's premier garden events.</div>
+          <div class="event-meta"><span class="event-badge seasonal">Seasonal</span> <span>Separate tickets required</span></div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-box">
+          <div class="event-month">Oct</div>
+          <div class="event-day">25</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">Halloween at Hampton Court</div>
+          <div class="event-desc">After-dark tours of the Haunted Gallery where Catherine Howard's ghost is said to roam. Not for the faint-hearted.</div>
+          <div class="event-meta"><span class="event-badge special">Special</span> <span>Booking essential</span></div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-box">
+          <div class="event-month">Nov</div>
+          <div class="event-day">22</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">Ice Rink at Hampton Court</div>
+          <div class="event-desc">Outdoor ice skating in front of the West Front of the palace. Open through January. Magical after dark with the palace illuminated.</div>
+          <div class="event-meta"><span class="event-badge seasonal">Seasonal</span> <span>From £16.50</span></div>
+        </div>
+      </div>
+    </div>
+    <a class="events-link" href="https://www.hrp.org.uk/hampton-court-palace/whats-on/" target="_blank">See all events at Hampton Court →</a>
 
     <div class="divider"></div>
 
