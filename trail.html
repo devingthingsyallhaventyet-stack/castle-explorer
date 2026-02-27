@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trail — castlecore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--stone:#d4c5a9;--cream:#f0ebe0;--candlelight:#c9a84c;--burgundy:#8b2335;--forest:#2d5a3d;--ivy:#3d5a3e;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#faf8f4;--accent:#8b2335}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--shadow);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--twilight);transition:color .2s}
+.nav-links a:hover{color:var(--ivy)}
+.nav-links .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
+.nav-links .btn-explore:hover{background:#6e1a2a}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:16px;z-index:999}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:8px 0}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:block}}
+
+/* HERO */
+.trail-hero{position:relative;height:50vh;min-height:360px;display:flex;align-items:flex-end;overflow:hidden;margin-top:64px}
+.trail-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.trail-hero .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.1) 100%)}
+.trail-hero .hero-content{position:relative;z-index:2;padding:40px 24px;max-width:1280px;margin:0 auto;width:100%}
+.trail-hero h1{color:#fff;font-size:clamp(2rem,5vw,3rem);margin-bottom:12px;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.trail-stats{display:flex;flex-wrap:wrap;gap:12px}
+.trail-stats .stat{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(6px);color:#fff;padding:6px 14px;border-radius:var(--pill);font-size:.85rem;font-weight:500}
+.trail-stats .stat-accent{border:1px solid var(--accent);background:var(--accent);color:#fff}
+
+/* INTRO */
+.trail-intro{max-width:720px;margin:48px auto;padding:0 24px;font-size:1.05rem;line-height:1.8;color:var(--shadow)}
+.trail-intro p{margin-bottom:1.2em;font-family:'Playfair Display',serif}
+.trail-intro p::first-letter{font-size:1.6em;color:var(--accent);font-weight:700;float:left;line-height:1;margin-right:4px;margin-top:4px}
+
+/* ACTION BUTTONS */
+.action-bar{max-width:720px;margin:0 auto 48px;padding:0 24px;display:flex;gap:12px;flex-wrap:wrap}
+.btn-maps{display:inline-flex;align-items:center;gap:8px;background:var(--burgundy);color:#fff;padding:14px 28px;border-radius:var(--pill);font-size:1rem;font-weight:600;border:none;cursor:pointer;transition:background .2s;text-decoration:none}
+.btn-maps:hover{background:#6e1a2a}
+.btn-save{display:inline-flex;align-items:center;gap:8px;background:var(--ivy);color:#fff;padding:14px 28px;border-radius:var(--pill);font-size:1rem;font-weight:600;border:none;cursor:pointer;transition:background .2s}
+.btn-save:hover{background:#2d5a3d}
+.btn-save.saved{background:var(--twilight)}
+
+/* STOPS */
+.stops-section{max-width:1000px;margin:0 auto;padding:0 24px 48px}
+.stops-section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:32px;text-align:center}
+.stop-card{display:flex;gap:24px;margin-bottom:32px;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
+.stop-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.stop-num{position:absolute;top:12px;left:12px;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;z-index:2}
+.stop-img-wrap{position:relative;flex:0 0 280px;min-height:200px}
+.stop-img-wrap img{width:100%;height:100%;object-fit:cover}
+.stop-body{padding:24px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.stop-body h3{font-size:1.2rem;margin-bottom:4px}
+.stop-body .stop-meta{color:var(--twilight);font-size:.85rem;margin-bottom:8px}
+.stop-body .stop-rating{color:var(--candlelight);font-size:.85rem;margin-bottom:8px}
+.stop-body .stop-desc{font-size:.92rem;color:var(--twilight);line-height:1.6;margin-bottom:12px}
+.stop-body .stop-link{color:var(--burgundy);font-weight:600;font-size:.9rem}
+.stop-body .stop-link:hover{text-decoration:underline}
+
+@media(max-width:768px){
+.stop-card{flex-direction:column}
+.stop-img-wrap{flex:none;height:200px}
+}
+
+/* PRACTICAL INFO */
+.practical{max-width:720px;margin:0 auto 64px;padding:32px;background:var(--cream);border-radius:16px}
+.practical h2{font-size:1.5rem;margin-bottom:20px;text-align:center}
+.practical-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.practical-item h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);margin-bottom:6px}
+.practical-item p{font-size:.95rem;line-height:1.6}
+.practical .tips-full{grid-column:1/-1;margin-top:8px}
+@media(max-width:480px){.practical-grid{grid-template-columns:1fr}}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--shadow);color:#fff;padding:14px 28px;border-radius:var(--pill);font-size:.95rem;font-weight:500;opacity:0;transition:all .3s ease;z-index:9999;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* FOOTER */
+footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:.85rem;max-width:280px}
+.footer-col h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;color:rgba(255,255,255,.5)}
+.footer-col a{display:block;color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">castlecore</a>
+<div class="nav-links">
+<a href="explore.html" class="btn-explore">Explore Map</a>
+<a href="explore.html">Collections</a>
+<a href="explore.html">Regions</a>
+<a href="explore.html">Trails</a>
+<a href="explore.html">Near Me</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
+<div class="mobile-menu">
+<a href="explore.html">🗺️ Explore Map</a>
+<a href="explore.html">Collections</a>
+<a href="explore.html">Regions</a>
+<a href="explore.html">Trails</a>
+<a href="explore.html">Near Me</a>
+</div>
+
+<!-- HERO (filled by JS) -->
+<section class="trail-hero" id="trailHero">
+<img id="heroImg" src="" alt="">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1 id="heroTitle"></h1>
+<div class="trail-stats" id="heroStats"></div>
+</div>
+</section>
+
+<!-- INTRO -->
+<div class="trail-intro" id="trailIntro"></div>
+
+<!-- ACTION BUTTONS -->
+<div class="action-bar" id="actionBar">
+<a class="btn-maps" id="btnMaps" href="#" target="_blank" rel="noopener">🗺️ Open in Google Maps</a>
+<button class="btn-save" id="btnSave" onclick="toggleSave()">❤️ Save Route</button>
+</div>
+
+<!-- STOPS -->
+<section class="stops-section">
+<h2>The Route</h2>
+<div id="stopsList"></div>
+</section>
+
+<!-- PRACTICAL INFO -->
+<div class="practical" id="practicalInfo"></div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="footer-logo">castlecore</div>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+</div>
+<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="explore.html">Collections</a><a href="explore.html">Regions</a><a href="explore.html">Trails</a></div>
+<div class="footer-col"><h4>Info</h4><a href="#">About</a><a href="#">Contact</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div>
+<div class="footer-bottom">
+<span>Built with ❤️ for history lovers</span>
+<span>© 2026 castlecore</span>
+</div>
+</div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+const TRAILS = {
+  'iron-ring': {
+    name: "Edward I's Iron Ring", emoji: '🏴', region: 'North Wales', color: '#8b2335', hours: 3,
+    heroImg: 'img/conwy.jpg',
+    intro: "In 1282, Edward I of England launched a devastating military campaign to crush the last independent Welsh prince, Llywelyn ap Gruffudd. What followed was one of the most ambitious building projects in medieval history — a ring of massive stone fortresses designed to encircle and subjugate the Welsh heartland of Gwynedd.\n\nThese weren't just castles. They were symbols of total conquest, built by the greatest military architect of the age, Master James of Saint George. Each fortress was strategically placed on the coast so it could be supplied by sea, making them virtually impossible to starve out. Together they formed an \"iron ring\" of English power.\n\nToday, four of these castles are UNESCO World Heritage Sites, and driving the ring is one of the most spectacular heritage road trips in Europe. The mountains of Snowdonia rise behind walls that have stood for over 700 years.",
+    stops: ['Flint Castle','Rhuddlan Castle','Conwy Castle','Beaumaris Castle','Caernarfon Castle','Harlech Castle','Criccieth Castle','Aberystwyth Castle'],
+    tips: 'Start from Chester and work west along the coast. Allow a full day to explore properly. Spring and autumn offer the best light for photography and thinner crowds. Conwy and Caernarfon are the showstoppers — budget extra time there.',
+    bestSeason: 'April–June or September–October'
+  },
+  'norman-conquest': {
+    name: 'Norman Conquest Trail', emoji: '⚔️', region: 'South England', color: '#2c3e5a', hours: 5,
+    heroImg: 'img/bodiam.jpg',
+    intro: "On 14 October 1066, William, Duke of Normandy, defeated King Harold II at the Battle of Hastings and changed the course of English history forever. In the years that followed, the Normans built hundreds of castles across England — motte-and-bailey fortifications that served as bases of control over a conquered population.\n\nThis trail follows the Norman path from the coast of Sussex — where William first landed — through the rolling countryside of Kent and Surrey, tracing the castles that secured Norman rule over southern England. You'll see everything from imposing stone keeps to romantic ruins reclaimed by nature.\n\nIt's a journey through the birth of medieval England, from the chaos of invasion to the establishment of a dynasty that would shape the nation for centuries.",
+    stops: ['Pevensey Castle','Hastings Castle','Bodiam Castle','Lewes Castle','Arundel Castle','Bramber Castle','Dover Castle','Rochester Castle','Canterbury Castle','Tower of London','Windsor Castle','Guildford Castle'],
+    tips: 'Start at Pevensey where William actually landed in 1066. Dover Castle alone deserves half a day — the secret wartime tunnels are incredible. End at the Tower of London for the ultimate Norman finale.',
+    bestSeason: 'May–September'
+  },
+  'highland-route': {
+    name: 'Highland Castle Route', emoji: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', region: 'Scottish Highlands', color: '#3d5a3e', hours: 6,
+    heroImg: 'img/eilean-donan.jpg',
+    intro: "The Scottish Highlands are one of the last truly wild landscapes in Europe — and scattered across their lochs, glens, and sea cliffs are some of the most dramatically sited castles anywhere in the world. These weren't palaces of comfort. They were clan strongholds, built for survival in a landscape where loyalty was everything and betrayal meant death.\n\nThis route takes you through the heart of the Highlands, from the legendary Eilean Donan (as seen in Highlander and James Bond) to the brooding ruins of Urquhart on the shores of Loch Ness. Along the way you'll pass through landscapes that inspired Outlander, Braveheart, and Harry Potter.\n\nBring a camera. Bring a flask of whisky. And be prepared to fall hopelessly in love with Scotland.",
+    stops: ['Eilean Donan Castle','Urquhart Castle','Inverness Castle','Cawdor Castle','Brodie Castle','Dunrobin Castle','Castle Stalker','Kilchurn Castle','Inveraray Castle','Dunvegan Castle'],
+    tips: "This is a multi-day route — don't rush it. The single-track roads are part of the experience. Stop at Eilean Donan at sunset for the most photographed castle view in Scotland. Urquhart Castle at Loch Ness is best in morning light.",
+    bestSeason: 'May–September (long daylight hours)'
+  },
+  'ancient-east': {
+    name: "Ireland's Ancient East", emoji: '🍀', region: 'South East Ireland', color: '#6b4c3b', hours: 4,
+    heroImg: 'img/blarney.jpg',
+    intro: "Ireland's heritage stretches back over 5,000 years — far older than any castle. But when the Normans arrived in the 12th century, they built a network of stone fortifications that blended with the existing landscape of round towers, monastic ruins, and ancient hill forts to create something uniquely Irish.\n\nThis trail winds through Ireland's sunny south-east, where lush farmland meets dramatic coastline and every hilltop seems to hold a ruin. From the majestic Rock of Cashel — seat of the High Kings of Munster — to the atmospheric towers hidden down country lanes, this is Ireland at its most enchanting.\n\nThe pace is slower here. Stop for tea. Chat with locals. Let the stories find you.",
+    stops: ['Rock of Cashel','Cahir Castle','Kilkenny Castle','Dunmore Cave','Jerpoint Abbey','Tintern Abbey','Hook Lighthouse','Dunbrody Abbey','Ferns Castle'],
+    tips: 'The Rock of Cashel is the undisputed highlight — arrive early to beat tour buses. Kilkenny is a perfect lunch stop with a vibrant medieval town centre. The whole route is very family-friendly.',
+    bestSeason: 'April–October'
+  },
+  'haunted-trail': {
+    name: 'Haunted Castle Trail', emoji: '👻', region: 'England', color: '#5e3a6e', hours: 5,
+    heroImg: 'img/whitby-abbey.jpg',
+    intro: "Every old castle has its ghosts — but some have more than others. From the blood-soaked Tower of London, where the tortured spirits of Anne Boleyn and the little princes are said to wander, to the windswept ruins of Whitby Abbey that inspired Bram Stoker's Dracula, England's haunted heritage is the stuff of nightmares.\n\nThis trail is for those who like their history with a chill down the spine. You'll visit castles where phantom drummers beat through the night, where Grey Ladies drift through corridors, and where the walls hold secrets that no historian can fully explain.\n\nBest driven on a misty autumn day. Torches recommended.",
+    stops: ['Tower of London','Berry Pomeroy Castle','Glamis Castle','Whitby Abbey','Warwick Castle','Dudley Castle','Bolsover Castle'],
+    tips: "Several of these sites run special ghost tours and Halloween events — check ahead. Whitby Abbey is most atmospheric at dusk. The Tower of London's Yeoman Warder tours include the best ghost stories.",
+    bestSeason: 'October–November (for maximum atmosphere)'
+  },
+  'photographers-dream': {
+    name: "Photographer's Dream", emoji: '📸', region: 'UK-wide', color: '#8e4a2a', hours: 8,
+    heroImg: 'img/bamburgh.jpg',
+    intro: "Some castles don't just photograph well — they take your breath away. These are the sites that have launched a thousand Instagram posts, that grace the covers of travel magazines, and that make professional photographers weep with joy.\n\nFrom Bamburgh's impossible silhouette against Northumberland's golden sands to Bodiam's perfect moat reflection, this trail hits the most visually stunning heritage sites in Britain. Each stop is chosen for its photographic potential — dramatic settings, beautiful light, and that indefinable \"wow factor.\"\n\nPack your best lens, charge your batteries, and prepare to fill every memory card you own.",
+    stops: ['Bamburgh Castle','Dunstanburgh Castle','Eilean Donan Castle','Bodiam Castle','Corfe Castle','Tintagel Castle','Caernarfon Castle','Stirling Castle','Kilchurn Castle','Dunnottar Castle'],
+    tips: "Golden hour is everything. Bamburgh faces east (sunrise), Eilean Donan faces west (sunset). Bodiam's moat reflection is best on still mornings. Dunstanburgh requires a coastal walk — worth every step.",
+    bestSeason: 'Year-round (each season offers different moods)'
+  }
+};
+
+(function(){
+  const id = new URLSearchParams(window.location.search).get('id');
+  const trail = TRAILS[id];
+  if(!trail){document.body.innerHTML='<div style="padding:120px 24px;text-align:center"><h1>Trail not found</h1><p><a href="/" style="color:var(--burgundy)">← Back to home</a></p></div>';return}
+
+  // Set accent color
+  document.documentElement.style.setProperty('--accent', trail.color);
+  document.title = trail.name + ' — castlecore';
+
+  // Hero
+  document.getElementById('heroImg').src = trail.heroImg;
+  document.getElementById('heroImg').alt = trail.name;
+  document.getElementById('heroTitle').textContent = trail.emoji + ' ' + trail.name;
+  document.getElementById('heroStats').innerHTML =
+    `<span class="stat stat-accent">${trail.region}</span>` +
+    `<span class="stat">🏰 ${trail.stops.length} stops</span>` +
+    `<span class="stat">🚗 ~${trail.hours}h drive</span>`;
+
+  // Intro paragraphs
+  const introEl = document.getElementById('trailIntro');
+  trail.intro.split('\n\n').forEach(p => {
+    const el = document.createElement('p');
+    el.textContent = p;
+    introEl.appendChild(el);
+  });
+
+  // Google Maps URL
+  const mapsUrl = 'https://www.google.com/maps/dir/' + trail.stops.map(s => encodeURIComponent(s)).join('/');
+  document.getElementById('btnMaps').href = mapsUrl;
+
+  // Save button state
+  updateSaveBtn();
+
+  // Find castle data
+  const castleData = (typeof CASTLES !== 'undefined') ? CASTLES : [];
+  function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+  function findCastle(name){
+    const ln = name.toLowerCase();
+    return castleData.find(c => c.name.toLowerCase() === ln);
+  }
+
+  // Stop descriptions keyed by castle name
+  const STOP_STORIES = {
+    'Flint Castle': 'The first castle Edward I built in Wales — where Richard II was captured and forced to surrender his crown. This is where the Iron Ring begins.',
+    'Rhuddlan Castle': 'Built to guard a vital river crossing, Rhuddlan is where Edward I signed the Statute of Rhuddlan in 1284, formally annexing Wales to England.',
+    'Conwy Castle': 'The crown jewel of the ring. Eight massive towers rise above the medieval town walls in what UNESCO calls one of the finest examples of 13th-century military architecture in Europe.',
+    'Beaumaris Castle': 'The last and most technically perfect of Edward\'s castles — a concentric masterpiece that was never actually finished. Its symmetry is breathtaking.',
+    'Caernarfon Castle': 'Edward\'s statement of absolute power. Its banded walls echo Constantinople, and it\'s where the first English Prince of Wales was presented to the Welsh people.',
+    'Harlech Castle': 'Perched on a dramatic cliff, Harlech withstood one of the longest sieges in British history. The views across Snowdonia are worth the climb alone.',
+    'Criccieth Castle': 'Originally a Welsh castle captured by Edward, Criccieth sits on a headland with views in every direction. It\'s the poignant meeting point of Welsh and English power.',
+    'Aberystwyth Castle': 'The southern anchor of the ring, now a romantic ruin above Cardigan Bay. A perfect place to end the trail with a sunset over the sea.',
+    'Pevensey Castle': 'William the Conqueror landed here in 1066 — you\'re standing where the Norman invasion of England literally began. Roman walls surround a Norman keep.',
+    'Hastings Castle': 'William built this castle immediately after landing — one of the first Norman castles in England. The ruins overlook the beach where history changed forever.',
+    'Bodiam Castle': 'The most photogenic castle in England. Its perfect moat reflection has graced a thousand postcards, but it was built as a serious defense against French raids.',
+    'Lewes Castle': 'Unusual for having two mottes, Lewes was built by William de Warenne, one of William the Conqueror\'s most trusted knights. The views over Sussex are magnificent.',
+    'Arundel Castle': 'Still home to the Duke of Norfolk after nearly 1,000 years, Arundel is a living castle — magnificent interiors, stunning gardens, and centuries of unbroken history.',
+    'Bramber Castle': 'A haunting Norman ruin on a hilltop, Bramber controlled a vital gap in the South Downs. Its lonely curtain wall is one of the most atmospheric sights on the trail.',
+    'Dover Castle': 'The "Key to England" — a fortress of staggering scale guarding the shortest Channel crossing. The secret wartime tunnels beneath are an unforgettable experience.',
+    'Rochester Castle': 'Its enormous Norman keep is one of the tallest in England. In 1215, rebel barons held it against King John in one of the most brutal sieges in English history.',
+    'Canterbury Castle': 'One of three royal castles built by William after the Conquest, Canterbury\'s ruined keep stands in the shadow of the famous cathedral — Norman power beside Norman faith.',
+    'Tower of London': 'The ultimate Norman fortress. William built the White Tower to terrify London into submission, and it has been a palace, prison, and place of execution for nearly 1,000 years.',
+    'Windsor Castle': 'The oldest and largest occupied castle in the world. William the Conqueror chose this site, and every monarch since has called it home.',
+    'Guildford Castle': 'A royal castle with a beautifully preserved keep and stunning gardens. Henry III lavished money on its decoration — traces of medieval paint still survive.',
+    'Eilean Donan Castle': 'The most photographed castle in Scotland, set on a tidal island where three lochs meet. Destroyed in 1719 and lovingly rebuilt — it\'s pure Highland romance.',
+    'Urquhart Castle': 'Brooding ruins on the shores of Loch Ness with 1,000 years of dramatic history. Keep your eyes on the water — you never know what might surface.',
+    'Inverness Castle': 'The gateway to the Highlands, Inverness Castle commands views over the River Ness. The current building is Victorian, but the site has been fortified since the 11th century.',
+    'Cawdor Castle': 'Forever linked to Shakespeare\'s Macbeth, Cawdor is a fairy-tale tower house surrounded by magical gardens. The Thane of Cawdor still lives here.',
+    'Brodie Castle': 'A Z-plan tower house with 800 years of family history. The collection inside is extraordinary — and the grounds burst with daffodils in spring.',
+    'Dunrobin Castle': 'Looking more like a French château than a Highland fortress, Dunrobin\'s 189 rooms make it the largest house in the northern Highlands. The falconry display is unmissable.',
+    'Castle Stalker': 'A tiny castle on a tidal island in Loch Laich — you might recognize it as the Castle of Aaaaargh from Monty Python and the Holy Grail.',
+    'Kilchurn Castle': 'A ruined Campbell stronghold at the head of Loch Awe, reflected perfectly in still waters. Arrive at dawn for one of Scotland\'s most magical views.',
+    'Inveraray Castle': 'Seat of the Duke of Argyll and clan chief of the Campbells. The neo-Gothic exterior hides opulent interiors and one of the finest armouries in Europe.',
+    'Dunvegan Castle': 'The oldest continuously inhabited castle in Scotland, home to the chiefs of Clan MacLeod for 800 years. The Fairy Flag inside is said to have magical powers.',
+    'Rock of Cashel': 'A stunning cluster of medieval buildings on a limestone outcrop — once the seat of the High Kings of Munster. The round tower and cathedral silhouette is unforgettable.',
+    'Cahir Castle': 'One of Ireland\'s largest and best-preserved castles, sitting on a rocky island in the River Suir. It survived Cromwell\'s bombardment and looks ready for another siege.',
+    'Kilkenny Castle': 'A magnificent Anglo-Norman castle in the heart of Ireland\'s medieval capital. The restored Long Gallery with its painted roof is breathtaking.',
+    'Dunmore Cave': 'A show cave with spectacular calcite formations and a dark Viking history — archaeological evidence suggests a massacre took place here in 928 AD.',
+    'Jerpoint Abbey': 'A Cistercian abbey with some of the finest Romanesque carvings in Ireland. The cloister arcade figures are hauntingly beautiful — medieval art at its finest.',
+    'Tintern Abbey': 'Founded by monks from the famous Welsh Tintern, this Irish counterpart sits in a peaceful wooded valley. Legend says it was built after a lord survived a storm at sea.',
+    'Hook Lighthouse': 'One of the oldest operational lighthouses in the world — a medieval tower that has guided ships for over 800 years. The views from the top are spectacular.',
+    'Dunbrody Abbey': 'A vast Cistercian abbey ruin in a peaceful riverside setting. The adjoining hedge maze and craft centre make it a perfect family stop.',
+    'Ferns Castle': 'A half-ruined Norman castle with a surprisingly intact chapel. The remains hint at the power of the Anglo-Norman lords who controlled this corner of Ireland.',
+    'Berry Pomeroy Castle': 'One of England\'s most haunted ruins — two ghostly women are said to walk the halls. The romantic Tudor mansion inside the medieval walls adds to the eerie atmosphere.',
+    'Glamis Castle': 'Childhood home of the Queen Mother and setting for Macbeth. The Monster of Glamis — a deformed heir supposedly walled up alive — is one of Scotland\'s darkest legends.',
+    'Whitby Abbey': 'The Gothic ruin that inspired Bram Stoker\'s Dracula. Perched on the clifftop above Whitby harbour, it\'s one of the most atmospheric sites in England.',
+    'Warwick Castle': 'A medieval powerhouse with over 1,000 years of history — treachery, torture, and Tudor intrigue. The ghost tower is said to be haunted by Sir Fulke Greville.',
+    'Dudley Castle': 'The "Castle on the Hill" overlooks the Black Country from within a zoo. The Grey Lady — thought to be Dorothy Beaumont — is one of England\'s most famous ghosts.',
+    'Bolsover Castle': 'A Stuart fantasy built on a medieval site. The Little Castle\'s painted rooms are extraordinary, and the ghostly cavalier who walks the grounds adds a delicious chill.',
+    'Bamburgh Castle': 'Rising from Northumberland\'s golden sands like something from a dream, Bamburgh is the ultimate sunrise shot. The scale against the coastline is simply unreal.',
+    'Dunstanburgh Castle': 'A remote ruin on the Northumberland coast, reached only on foot. The dramatic silhouette against stormy skies has inspired artists for centuries.',
+    'Corfe Castle': 'A dramatic ruin on a natural hilltop, blown apart by Parliamentarians in the Civil War. The tumbled walls against the Purbeck landscape are hauntingly beautiful.',
+    'Tintagel Castle': 'Perched on wild Cornish cliffs with legendary Arthurian connections. The new footbridge spanning the chasm is an engineering marvel with medieval atmosphere.',
+    'Stirling Castle': 'Scotland\'s grandest castle, sitting atop a volcanic crag. The Great Hall and Renaissance palace are stunning — this is where Scottish kings held court.',
+    'Dunnottar Castle': 'A ruined fortress on a dramatic sea stack — where the Scottish Crown Jewels were hidden from Cromwell. One of the most spectacular castle settings anywhere.'
+  };
+
+  // Render stops
+  const stopsList = document.getElementById('stopsList');
+  trail.stops.forEach((name, i) => {
+    const castle = findCastle(name);
+    const imgSrc = castle && castle.wiki_img ? castle.wiki_img : '';
+    const siteSlug = slug(name);
+    const type = castle ? (castle.type || '') : '';
+    const loc = castle ? [castle.county, castle.country].filter(Boolean).join(', ') : '';
+    const rating = castle && castle.rating ? '★'.repeat(Math.round(castle.rating)) + ' ' + castle.rating : '';
+    const desc = STOP_STORIES[name] || (castle && castle.description ? castle.description : 'A key stop on this historic trail.');
+
+    stopsList.innerHTML += `
+      <div class="stop-card">
+        <div class="stop-img-wrap">
+          <div class="stop-num">${i+1}</div>
+          ${imgSrc ? `<img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.style.display='none'">` : '<div style="width:100%;height:100%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:2rem">🏰</div>'}
+        </div>
+        <div class="stop-body">
+          <h3>${name}</h3>
+          <p class="stop-meta">${[type, loc].filter(Boolean).join(' · ')}</p>
+          ${rating ? `<p class="stop-rating">${rating}</p>` : ''}
+          <p class="stop-desc">${desc}</p>
+          <a class="stop-link" href="site/${siteSlug}.html">View Details →</a>
+        </div>
+      </div>`;
+  });
+
+  // Practical info
+  document.getElementById('practicalInfo').innerHTML = `
+    <h2>Planning Your Trip</h2>
+    <div class="practical-grid">
+      <div class="practical-item"><h4>🚗 Total Drive Time</h4><p>Approximately ${trail.hours} hours (not including stops)</p></div>
+      <div class="practical-item"><h4>📅 Best Season</h4><p>${trail.bestSeason}</p></div>
+      <div class="practical-item"><h4>🏰 Number of Stops</h4><p>${trail.stops.length} sites along the route</p></div>
+      <div class="practical-item"><h4>📍 Region</h4><p>${trail.region}</p></div>
+      <div class="practical-item tips-full"><h4>💡 Tips</h4><p>${trail.tips}</p></div>
+    </div>`;
+
+  // Save functionality
+  window.currentTrailId = id;
+})();
+
+function getSaved(){
+  try{return JSON.parse(localStorage.getItem('savedTrails'))||[]}catch(e){return[]}
+}
+function updateSaveBtn(){
+  const btn = document.getElementById('btnSave');
+  const saved = getSaved();
+  if(saved.includes(window.currentTrailId)){
+    btn.textContent = 'Saved ✓';
+    btn.classList.add('saved');
+  } else {
+    btn.textContent = '❤️ Save Route';
+    btn.classList.remove('saved');
+  }
+}
+function toggleSave(){
+  let saved = getSaved();
+  const id = window.currentTrailId;
+  if(saved.includes(id)){
+    saved = saved.filter(s=>s!==id);
+    showToast('Route removed');
+  } else {
+    saved.push(id);
+    showToast('Route saved! ❤️');
+  }
+  localStorage.setItem('savedTrails', JSON.stringify(saved));
+  updateSaveBtn();
+}
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2000);
+}
+</script>
+</body>
+</html>
