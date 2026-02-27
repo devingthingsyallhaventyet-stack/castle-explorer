@@ -22,86 +22,93 @@
   --font-serif: 'DM Serif Display', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font-sans); background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: #000; color: var(--text); -webkit-font-smoothing: antialiased; overscroll-behavior: none; }
 
-/* ===== PHOTO GALLERY (Zillow-style) ===== */
-.gallery { position: relative; width: 100%; background: #000; }
-.gallery-main { width: 100%; aspect-ratio: 4/3; overflow: hidden; }
-.gallery-main img { width: 100%; height: 100%; object-fit: cover; }
-.gallery-scroll { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-.gallery-scroll::-webkit-scrollbar { display: none; }
-.gallery-scroll .slide { min-width: 100%; scroll-snap-align: start; aspect-ratio: 4/3; }
-.gallery-scroll .slide img { width: 100%; height: 100%; object-fit: cover; }
-.gallery-counter { position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.6); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; }
-.gallery-back { position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.15); z-index: 2; }
-.gallery-actions { position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; z-index: 2; }
-.gallery-actions button { background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.15); font-size: 16px; }
+/* ===== FULL-SCREEN GALLERY SCROLL ===== */
+.gallery-stack { width: 100%; }
+.gallery-item { width: 100%; position: relative; }
+.gallery-item img { width: 100%; display: block; }
+.gallery-item.photo { background: #111; min-height: 50vh; }
+.gallery-item.photo img { width: 100%; height: 100%; object-fit: cover; min-height: 50vh; max-height: 100vh; }
 
-/* ===== MAIN CONTENT ===== */
-.content { max-width: 600px; margin: 0 auto; }
+/* Street View tile */
+.gallery-item.street-view { height: 45vh; display: flex; cursor: pointer; gap: 2px; }
+.sv-panel { flex: 1; position: relative; overflow: hidden; }
+.sv-panel img, .sv-panel iframe { width: 100%; height: 100%; object-fit: cover; border: none; }
+.sv-label { position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(4px); }
+.sv-label svg { width: 20px; height: 20px; fill: #fff; }
 
-/* Header — Zillow style big name + key stats */
-.listing-header { padding: 16px 16px 0; }
-.listing-name { font-family: var(--font-serif); font-size: 26px; font-weight: 400; line-height: 1.2; margin-bottom: 4px; }
-.listing-location { font-size: 14px; color: var(--text-secondary); margin-bottom: 12px; }
+/* Map tile */
+.gallery-item.map-tile { height: 40vh; position: relative; }
+.gallery-item.map-tile iframe { width: 100%; height: 100%; border: none; }
+.map-badge { position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.6); color: #fff; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; backdrop-filter: blur(4px); display: flex; align-items: center; gap: 4px; }
+
+/* Overlay controls on first photo */
+.gallery-overlay { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; pointer-events: none; transition: opacity 0.3s; }
+.gallery-overlay.hidden { opacity: 0; }
+.gallery-overlay > * { pointer-events: auto; }
+.close-btn { width: 36px; height: 36px; border-radius: 50%; background: rgba(0,0,0,0.5); border: none; color: #fff; font-size: 22px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px); }
+.overlay-actions { display: flex; gap: 8px; }
+.overlay-actions button { width: 40px; height: 40px; border-radius: 50%; background: rgba(0,0,0,0.5); border: none; color: #fff; font-size: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px); }
+.overlay-actions .fav-active { color: #ff4757; }
+
+/* Type badge on first photo */
+.type-badge { position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; backdrop-filter: blur(4px); }
+
+/* ===== INFO SHEET ===== */
+.info-sheet { background: var(--bg); border-radius: 16px 16px 0 0; margin-top: -16px; position: relative; z-index: 10; min-height: 100vh; }
+.sheet-handle { width: 36px; height: 4px; background: #ccc; border-radius: 2px; margin: 0 auto; position: relative; top: 10px; }
+
+.sheet-content { padding: 24px 16px 100px; max-width: 600px; margin: 0 auto; }
+
+/* Header */
+.listing-name { font-family: var(--font-serif); font-size: 26px; line-height: 1.2; margin-bottom: 4px; margin-top: 8px; }
+.listing-location { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
 .listing-location a { color: var(--blue); text-decoration: none; }
 
-/* Key stats row — like Zillow beds/baths/sqft */
-.key-stats { display: flex; gap: 0; padding: 0 16px; margin-bottom: 4px; }
-.stat-item { flex: 1; text-align: center; padding: 14px 8px; }
+/* Key stats */
+.key-stats { display: flex; gap: 0; margin-bottom: 16px; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.stat-item { flex: 1; text-align: center; padding: 14px 4px; }
 .stat-item:not(:last-child) { border-right: 1px solid var(--border); }
-.stat-value { font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.2; }
-.stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+.stat-value { font-size: 17px; font-weight: 700; color: var(--text); }
+.stat-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
-/* Divider */
-.divider { height: 1px; background: var(--border); margin: 0 16px; }
-.divider-thick { height: 8px; background: var(--bg-light); margin: 0; }
-
-/* Rating bar — like Zillow Zestimate */
-.rating-bar { padding: 16px; display: flex; align-items: center; gap: 12px; }
-.rating-big { font-size: 40px; font-weight: 700; color: var(--text); line-height: 1; }
-.rating-details { flex: 1; }
+/* Rating */
+.rating-bar { display: flex; align-items: center; gap: 14px; padding: 16px 0; }
+.rating-big { font-size: 42px; font-weight: 700; line-height: 1; }
 .rating-stars { color: var(--gold); font-size: 18px; letter-spacing: 1px; }
 .rating-count { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
 .rating-rank { font-size: 12px; color: var(--sage); font-weight: 600; margin-top: 2px; }
 
-/* Tags — like Zillow badges */
-.tags-row { padding: 0 16px 16px; display: flex; flex-wrap: wrap; gap: 6px; }
-.tag { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; background: var(--bg-light); color: var(--text-secondary); border: 1px solid var(--border); }
+/* Tags */
+.tags-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.tag { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; background: var(--bg-light); color: var(--text-secondary); border: 1px solid var(--border); }
 
-/* Access badge */
-.access-bar { padding: 12px 16px; background: var(--sage-light); display: flex; align-items: center; gap: 8px; }
-.access-bar .icon { font-size: 18px; }
+/* Access */
+.access-bar { padding: 12px 16px; background: var(--sage-light); border-radius: var(--radius); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.access-bar .icon { font-size: 20px; }
 .access-bar .label { font-size: 13px; font-weight: 600; color: var(--sage); }
 .access-bar .sublabel { font-size: 12px; color: var(--text-muted); }
 
-/* Section */
-.section { padding: 20px 16px; }
+/* Dividers */
+.divider { height: 1px; background: var(--border); margin: 20px 0; }
+
+/* Sections */
 .section-title { font-family: var(--font-serif); font-size: 20px; margin-bottom: 12px; }
-
-/* Description */
-.description { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
-.description .read-more { color: var(--blue); font-weight: 600; cursor: pointer; border: none; background: none; font-size: 14px; font-family: var(--font-sans); }
-
-/* History */
-.history-text { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+.description { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px; }
 
 /* Hours */
-.hours-grid { display: grid; grid-template-columns: 100px 1fr; gap: 4px 12px; font-size: 13px; }
-.hours-day { font-weight: 600; color: var(--text); }
+.hours-grid { display: grid; grid-template-columns: 110px 1fr; gap: 4px 12px; font-size: 13px; margin-bottom: 20px; }
+.hours-day { font-weight: 600; }
 .hours-time { color: var(--text-secondary); }
-.hours-status { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
-.hours-status .dot { width: 8px; height: 8px; border-radius: 50%; }
-.hours-status .dot.open { background: #22c55e; }
-.hours-status .dot.closed { background: #ef4444; }
 
-/* Review cards */
+/* Reviews */
 .review-card { padding: 14px 0; border-bottom: 1px solid var(--border); }
 .review-card:last-of-type { border-bottom: none; }
 .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-.review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+.review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; color: var(--text-muted); flex-shrink: 0; }
 .review-meta { flex: 1; }
 .review-author { font-size: 13px; font-weight: 600; }
 .review-date { font-size: 11px; color: var(--text-muted); }
@@ -109,181 +116,165 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 .review-body { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
 .reviews-all-link { display: block; text-align: center; padding: 14px; font-size: 14px; font-weight: 600; color: var(--blue); text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius); margin-top: 12px; }
 
-/* Video cards */
+/* Videos */
 .video-card { border-radius: var(--radius); overflow: hidden; margin-bottom: 12px; border: 1px solid var(--border); cursor: pointer; }
-.video-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 .video-thumb { position: relative; aspect-ratio: 16/9; background: #000; }
 .video-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .video-thumb .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 52px; height: 52px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 .video-thumb .play-btn svg { fill: #fff; width: 22px; height: 22px; margin-left: 3px; }
-.video-meta { padding: 10px 12px; }
+.video-meta { padding: 10px 12px; background: var(--bg); }
 .video-title { font-size: 13px; font-weight: 600; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .video-channel { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; margin-bottom: 12px; }
 .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-/* Nearby — horizontal scroll cards */
-.nearby-scroll { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+/* Nearby — horizontal scroll */
+.nearby-scroll { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; -webkit-overflow-scrolling: touch; margin: 0 -16px; padding: 0 16px 8px; }
 .nearby-scroll::-webkit-scrollbar { display: none; }
-.nearby-card { min-width: 160px; max-width: 160px; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; cursor: pointer; flex-shrink: 0; }
-.nearby-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.nearby-card { min-width: 150px; max-width: 150px; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; cursor: pointer; flex-shrink: 0; background: var(--bg); }
 .nearby-card-img { width: 100%; aspect-ratio: 4/3; background: var(--bg-light); display: flex; align-items: center; justify-content: center; font-size: 32px; overflow: hidden; }
 .nearby-card-img img { width: 100%; height: 100%; object-fit: cover; }
 .nearby-card-info { padding: 8px 10px; }
 .nearby-card-name { font-size: 12px; font-weight: 600; line-height: 1.3; margin-bottom: 2px; }
 .nearby-card-meta { font-size: 11px; color: var(--text-muted); }
 
-/* Map preview */
-.map-preview { width: 100%; height: 200px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
-.map-preview iframe { width: 100%; height: 100%; border: none; }
-
 /* Sticky bottom bar */
 .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg); border-top: 1px solid var(--border); padding: 10px 16px; display: flex; gap: 10px; z-index: 100; box-shadow: 0 -2px 10px rgba(0,0,0,0.05); }
-.bottom-bar .btn { flex: 1; padding: 12px 16px; border-radius: var(--radius); font-size: 14px; font-weight: 600; font-family: var(--font-sans); cursor: pointer; text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; }
+.bottom-bar .btn { flex: 1; padding: 14px 16px; border-radius: var(--radius); font-size: 14px; font-weight: 600; font-family: var(--font-sans); cursor: pointer; text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
 .btn-primary { background: var(--sage); color: #fff; border: none; }
-.btn-secondary { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary { background: var(--bg); color: var(--text); border: 1.5px solid var(--border); }
 
-/* Spacing for bottom bar */
-.bottom-spacer { height: 80px; }
-
-/* Desktop tweaks */
 @media (min-width: 768px) {
-  .content { max-width: 680px; padding: 0 20px; }
-  .gallery-scroll .slide { aspect-ratio: 16/9; }
+  .sheet-content { max-width: 680px; }
   .listing-name { font-size: 32px; }
-  .stat-value { font-size: 20px; }
-  .section { padding: 24px 16px; }
-  .bottom-bar { max-width: 680px; left: 50%; transform: translateX(-50%); border-radius: 12px 12px 0 0; }
+  .gallery-item.photo img { max-height: 80vh; }
 }
 </style>
 </head>
 <body>
 
-<!-- PHOTO GALLERY -->
-<div class="gallery">
-  <div class="gallery-scroll" id="galleryScroll">
-    <div class="slide"><img src="https://lh3.googleusercontent.com/places/ANXAkqG0Z0wvqLhJif1234" alt="Hampton Court Palace" id="mainPhoto" /></div>
-  </div>
-  <div class="gallery-counter" id="galleryCounter">1 / 1</div>
-  <button class="gallery-back" onclick="history.back()">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <div class="gallery-actions">
-    <button onclick="toggleFav()" id="favBtn">☆</button>
-    <button onclick="share()">↗</button>
+<!-- OVERLAY CONTROLS -->
+<div class="gallery-overlay" id="galleryOverlay">
+  <button class="close-btn" onclick="history.back()">✕</button>
+  <div class="overlay-actions">
+    <button id="favBtn" onclick="this.classList.toggle('fav-active'); this.textContent=this.classList.contains('fav-active')?'❤':'♡'">♡</button>
+    <button onclick="">↗</button>
+    <button onclick="">⋯</button>
   </div>
 </div>
 
-<div class="content">
+<!-- GALLERY STACK -->
+<div class="gallery-stack" id="galleryStack">
+  <!-- Photo 1 -->
+  <div class="gallery-item photo" id="photo1">
+    <img src="" alt="Hampton Court Palace" id="img1" />
+    <div class="type-badge">👑 Palace</div>
+  </div>
+  <!-- Photo 2 -->
+  <div class="gallery-item photo" id="photo2">
+    <img src="" alt="Hampton Court Palace" id="img2" />
+  </div>
+  <!-- Street View -->
+  <div class="gallery-item street-view" id="streetViewTile">
+    <div class="sv-panel" id="svContainer" onclick="openStreetView()">
+      <img id="svImg" src="" alt="Street View" />
+      <div class="sv-label">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Look Around
+      </div>
+    </div>
+    <div class="sv-panel">
+      <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&center=51.4036,-0.3378&zoom=15&maptype=satellite" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+  <!-- Map -->
+  <div class="gallery-item map-tile">
+    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&q=Hampton+Court+Palace&zoom=14" allowfullscreen loading="lazy"></iframe>
+    <div class="map-badge">📍 London, England</div>
+  </div>
+  <!-- Photos 3-6 -->
+  <div class="gallery-item photo" id="photo3"><img src="" id="img3" /></div>
+  <div class="gallery-item photo" id="photo4"><img src="" id="img4" /></div>
+  <div class="gallery-item photo" id="photo5"><img src="" id="img5" /></div>
+  <div class="gallery-item photo" id="photo6"><img src="" id="img6" /></div>
+</div>
 
-  <!-- HEADER -->
-  <div class="listing-header">
+<!-- INFO SHEET -->
+<div class="info-sheet" id="infoSheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-content">
     <h1 class="listing-name">Hampton Court Palace</h1>
     <div class="listing-location">London, England · <a href="https://www.google.com/maps/dir/?api=1&destination=51.4036,-0.3378" target="_blank">Get directions</a></div>
-  </div>
 
-  <!-- KEY STATS -->
-  <div class="key-stats">
-    <div class="stat-item">
-      <div class="stat-value">👑</div>
-      <div class="stat-label">Palace</div>
+    <div class="key-stats">
+      <div class="stat-item">
+        <div class="stat-value">👑</div>
+        <div class="stat-label">Palace</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">1514</div>
+        <div class="stat-label">Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">Intact</div>
+        <div class="stat-label">Condition</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">£29</div>
+        <div class="stat-label">Admission</div>
+      </div>
     </div>
-    <div class="stat-item">
-      <div class="stat-value">1514</div>
-      <div class="stat-label">Built</div>
+
+    <div class="rating-bar">
+      <div class="rating-big">4.7</div>
+      <div>
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-count">9,870 Google reviews</div>
+        <div class="rating-rank">#3 rated palace in England</div>
+      </div>
     </div>
-    <div class="stat-item">
-      <div class="stat-value">Intact</div>
-      <div class="stat-label">Condition</div>
+
+    <div class="tags-row">
+      <span class="tag">🏰 Well Preserved</span>
+      <span class="tag">👨‍👩‍👧‍👦 Kid-Friendly</span>
+      <span class="tag">👻 Haunted</span>
+      <span class="tag">📸 Photogenic</span>
     </div>
-    <div class="stat-item">
-      <div class="stat-value">£29</div>
-      <div class="stat-label">Admission</div>
+
+    <div class="access-bar">
+      <span class="icon">🎟️</span>
+      <div>
+        <div class="label">Paid Admission</div>
+        <div class="sublabel">Book online for discounted entry</div>
+      </div>
     </div>
-  </div>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <!-- RATING -->
-  <div class="rating-bar">
-    <div class="rating-big">4.7</div>
-    <div class="rating-details">
-      <div class="rating-stars">★★★★★</div>
-      <div class="rating-count">9,870 Google reviews</div>
-      <div class="rating-rank">#3 rated palace in England</div>
-    </div>
-  </div>
-
-  <!-- TAGS -->
-  <div class="tags-row">
-    <span class="tag">🏰 Well Preserved</span>
-    <span class="tag">👨‍👩‍👧‍👦 Kid-Friendly</span>
-    <span class="tag">👻 Haunted</span>
-    <span class="tag">📸 Photogenic</span>
-  </div>
-
-  <!-- ACCESS -->
-  <div class="access-bar">
-    <span class="icon">🎟️</span>
-    <div>
-      <div class="label">Paid Admission</div>
-      <div class="sublabel">Book online for discounted entry</div>
-    </div>
-  </div>
-
-  <div class="divider-thick"></div>
-
-  <!-- ABOUT -->
-  <div class="section">
     <h2 class="section-title">About</h2>
     <div class="description">
       Originally built for Cardinal Wolsey and later seized by Henry VIII, Hampton Court Palace blends Tudor and Baroque architecture. Its famous maze and gardens attract visitors year-round.
       <br><br>
       Hampton Court Palace is a Grade I listed royal palace in the London Borough of Richmond upon Thames, 12 miles southwest and upstream of central London on the River Thames. It has been a significant royal palace since the early 16th century and today serves as a major tourist attraction, managed by Historic Royal Palaces.
     </div>
-  </div>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <!-- OPENING HOURS -->
-  <div class="section">
     <h2 class="section-title">Opening Hours</h2>
-    <div class="hours-status"><span class="dot open"></span> Loading...</div>
-    <div class="hours-grid" id="hoursGrid">
-      <!-- Populated by JS -->
-    </div>
-  </div>
+    <div class="hours-grid" id="hoursGrid"></div>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <!-- MAP -->
-  <div class="section">
-    <h2 class="section-title">Location</h2>
-    <div class="map-preview">
-      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&q=Hampton+Court+Palace&zoom=14" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-
-  <div class="divider-thick"></div>
-
-  <!-- VIDEOS -->
-  <div class="section" id="videosSection">
     <h2 class="section-title">Videos</h2>
     <div id="videoCards">Loading...</div>
-  </div>
 
-  <div class="divider-thick"></div>
+    <div class="divider"></div>
 
-  <!-- REVIEWS -->
-  <div class="section">
     <h2 class="section-title">Reviews</h2>
     <div id="reviewCards">Loading...</div>
-  </div>
 
-  <div class="divider-thick"></div>
+    <div class="divider"></div>
 
-  <!-- NEARBY -->
-  <div class="section">
     <h2 class="section-title">Nearby Sites</h2>
     <div class="nearby-scroll">
       <div class="nearby-card">
@@ -322,34 +313,60 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="bottom-spacer"></div>
+    <div style="height: 80px;"></div>
+  </div>
 </div>
 
 <!-- STICKY BOTTOM BAR -->
 <div class="bottom-bar">
-  <button class="btn btn-secondary" onclick="toggleFav()">☆ Save</button>
-  <button class="btn btn-primary" onclick="addRoute()">🚗 Add to Route</button>
+  <button class="btn btn-secondary">☆ Save</button>
+  <button class="btn btn-primary">🚗 Add to Route</button>
 </div>
 
 <script>
-const YT_KEY = 'AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-const PLACES_KEY = YT_KEY;
-const CASTLE = { name: 'Hampton Court Palace', lat: 51.4036, lng: -0.3378, country: 'England', county: 'London' };
+const API_KEY = 'AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const LAT = 51.4036, LNG = -0.3378;
 
-// Load Google Places photos + reviews
+// Street View static image
+document.getElementById('svImg').src = `https://maps.googleapis.com/maps/api/streetview?size=600x400&location=${LAT},${LNG}&key=${API_KEY}`;
+
+function openStreetView() {
+  window.open(`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${LAT},${LNG}`, '_blank');
+}
+
+// Fade overlay on scroll
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const overlay = document.getElementById('galleryOverlay');
+      const sheet = document.getElementById('infoSheet');
+      const sheetTop = sheet.getBoundingClientRect().top;
+      // Hide overlay when info sheet is near top
+      if (sheetTop < window.innerHeight * 0.5) {
+        overlay.classList.add('hidden');
+      } else {
+        overlay.classList.remove('hidden');
+      }
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+// Load Google Places data
 async function loadGoogleData() {
-  try {
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${PLACES_KEY}&libraries=places&v=weekly`;
-    document.head.appendChild(script);
-    script.onload = async () => {
+  const script = document.createElement('script');
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places&v=weekly`;
+  document.head.appendChild(script);
+  script.onload = async () => {
+    try {
       const { Place } = await google.maps.importLibrary('places');
       const { places } = await Place.searchByText({
         textQuery: 'Hampton Court Palace London England',
         fields: ['displayName','rating','userRatingCount','photos','regularOpeningHours','googleMapsURI','reviews'],
-        locationBias: { lat: CASTLE.lat, lng: CASTLE.lng },
+        locationBias: { lat: LAT, lng: LNG },
         maxResultCount: 1
       });
       if (places && places.length > 0) {
@@ -359,30 +376,32 @@ async function loadGoogleData() {
         renderHours(p);
         renderReviews(p);
       }
-    };
-  } catch(e) { console.warn(e); }
+    } catch(e) { console.warn(e); }
+  };
 }
 
 function renderPhotos(place) {
   if (!place.photos || !place.photos.length) return;
-  const scroll = document.getElementById('galleryScroll');
   const photos = place.photos.slice(0, 8);
-  scroll.innerHTML = photos.map((p, i) => {
-    const url = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
-    return `<div class="slide"><img src="${url}" alt="Photo ${i+1}" /></div>`;
-  }).join('');
-  document.getElementById('galleryCounter').textContent = `1 / ${photos.length}`;
-  scroll.addEventListener('scroll', () => {
-    const idx = Math.round(scroll.scrollLeft / scroll.clientWidth) + 1;
-    document.getElementById('galleryCounter').textContent = `${idx} / ${photos.length}`;
+  // Fill photo slots
+  photos.forEach((p, i) => {
+    const el = document.getElementById(`img${i + 1}`);
+    if (el) {
+      const url = p.getURI ? p.getURI({ maxWidth: 1200, maxHeight: 900 }) : '';
+      if (url) el.src = url;
+    }
   });
+  // Hide unused photo slots
+  for (let i = photos.length + 1; i <= 6; i++) {
+    const container = document.getElementById(`photo${i}`);
+    if (container) container.style.display = 'none';
+  }
 }
 
 function renderHours(place) {
   if (!place.regularOpeningHours) return;
   const days = place.regularOpeningHours.weekdayDescriptions || [];
-  const grid = document.getElementById('hoursGrid');
-  grid.innerHTML = days.map(d => {
+  document.getElementById('hoursGrid').innerHTML = days.map(d => {
     const parts = d.split(': ');
     return `<div class="hours-day">${parts[0]}</div><div class="hours-time">${parts[1] || ''}</div>`;
   }).join('');
@@ -391,32 +410,30 @@ function renderHours(place) {
 function renderReviews(place) {
   if (!place.reviews || !place.reviews.length) { document.getElementById('reviewCards').innerHTML = ''; return; }
   document.getElementById('reviewCards').innerHTML = place.reviews.slice(0, 5).map(r => {
-    const stars = '★'.repeat(Math.floor(r.rating || 0)) + '☆'.repeat(5 - Math.floor(r.rating || 0));
+    const stars = '★'.repeat(Math.floor(r.rating||0)) + '☆'.repeat(5-Math.floor(r.rating||0));
     const author = r.authorAttribution ? r.authorAttribution.displayName : 'Anonymous';
-    const initial = author.charAt(0).toUpperCase();
     const time = r.relativePublishTimeDescription || '';
     const text = r.text ? (typeof r.text === 'string' ? r.text : (r.text.text || '')) : '';
     return `<div class="review-card">
       <div class="review-header">
-        <div class="review-avatar">${initial}</div>
+        <div class="review-avatar">${author.charAt(0)}</div>
         <div class="review-meta">
           <div class="review-author">${author}</div>
           <div class="review-date">${time}</div>
         </div>
       </div>
       <div class="review-stars-sm">${stars}</div>
-      <div class="review-body">${text.length > 250 ? text.substring(0, 250) + '…' : text}</div>
+      <div class="review-body">${text.length > 250 ? text.substring(0,250)+'…' : text}</div>
     </div>`;
-  }).join('') + `<a class="reviews-all-link" href="${place.googleMapsURI || '#'}" target="_blank">Read all ${(place.userRatingCount || 9870).toLocaleString()} reviews</a>`;
+  }).join('') + `<a class="reviews-all-link" href="${place.googleMapsURI||'#'}" target="_blank">Read all ${(place.userRatingCount||9870).toLocaleString()} reviews</a>`;
 }
 
-// Load YouTube videos
+// YouTube
 async function loadYouTube() {
   try {
-    const q = encodeURIComponent('Hampton Court Palace');
-    const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${q}&type=video&maxResults=3&videoDuration=medium&relevanceLanguage=en&key=${YT_KEY}`);
+    const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Hampton Court Palace')}&type=video&maxResults=3&videoDuration=medium&relevanceLanguage=en&key=${API_KEY}`);
     const data = await res.json();
-    if (!data.items || !data.items.length) { document.getElementById('videoCards').innerHTML = 'No videos found'; return; }
+    if (!data.items || !data.items.length) { document.getElementById('videoCards').innerHTML = ''; return; }
     const playIcon = '<svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>';
     document.getElementById('videoCards').innerHTML = data.items.map(item => {
       const vid = item.id.videoId;
