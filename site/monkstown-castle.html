@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monkstown Castle — Scenic Route | Castles &amp; Historic Sites</title>
+<title>Monkstown Castle — castlecore | Castles, Abbeys &amp; Ruins</title>
 <meta name="description" content="Fortified house near Cork Harbour, one of the best preserved in the area.">
-<meta property="og:title" content="Monkstown Castle — Scenic Route">
+<meta property="og:title" content="Monkstown Castle — castlecore">
 <meta property="og:description" content="Fortified house near Cork Harbour, one of the best preserved in the area.">
 <meta property="og:image" content="">
 <meta property="og:url" content="https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/monkstown-castle.html">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Monkstown Castle — Scenic Route">
+<meta name="twitter:title" content="Monkstown Castle — castlecore">
 <meta name="twitter:description" content="Fortified house near Cork Harbour, one of the best preserved in the area.">
 <meta name="twitter:image" content="">
 <script type="application/ld+json">
@@ -41,116 +41,295 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--sage:#4a7c59;--sage-light:#5a9a6e;--cream:#f5f0e8;--cream-dark:#e8e0d0;--text:#1a1a1a;--text-light:#555;--border:#e0d8c8;--radius:12px}
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
-a{color:var(--sage);text-decoration:none}a:hover{text-decoration:underline}
-h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400}
-h1{font-size:2.2rem;margin-bottom:.3rem}
-h2{font-size:1.5rem;margin:2rem 0 1rem;color:var(--text)}
-.site-header{background:#fff;border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.site-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);font-weight:400}
-.site-header nav a{color:var(--sage);font-weight:600;font-size:.95rem}
-.hero-image{position:relative;width:100%;max-height:420px;overflow:hidden;background:#ddd}
-.hero-image img{width:100%;height:420px;object-fit:cover;display:block}
-.hero-overlay{position:absolute;bottom:16px;left:16px}
-.hero-type{background:rgba(0,0,0,.65);color:#fff;padding:6px 14px;border-radius:20px;font-size:.9rem;font-weight:600}
+:root{--burgundy:#8b2335;--ivy:#3d5a3e;--candlelight:#c9a84c;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--stone:#d4c5a9;--warm-white:#faf8f4;--cream:#f0ebe0;--border:#e0d8c8;--radius:12px;--pill:20px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--shadow);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--burgundy);text-decoration:none}a:hover{text-decoration:underline}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
+img{max-width:100%;display:block}
+
+/* NAV */
+.site-header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.site-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--shadow);display:flex;align-items:center;gap:6px}
+.site-header nav{display:flex;gap:16px;align-items:center}
+.site-header nav a{font-size:.85rem;font-weight:500;color:var(--twilight)}
+.site-header nav a:hover{color:var(--burgundy);text-decoration:none}
+.nav-btn{background:var(--burgundy);color:#fff;padding:6px 16px;border-radius:var(--pill);font-weight:600;font-size:.85rem}
+.nav-btn:hover{background:#6e1a2a;color:#fff;text-decoration:none}
+
+/* HERO */
+.hero-image{position:relative;width:100%;height:400px;overflow:hidden;background:var(--cream)}
+.hero-image img{width:100%;height:100%;object-fit:cover}
+.hero-gradient{position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(transparent,rgba(42,37,34,.7))}
+.hero-content{position:absolute;bottom:20px;left:24px;right:24px;color:#fff}
+.hero-content h1{font-size:clamp(1.8rem,4vw,2.6rem);text-shadow:0 2px 8px rgba(0,0,0,.4);margin-bottom:4px}
+.hero-loc{font-size:.95rem;opacity:.9}
+.hero-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.hero-pill{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);padding:4px 12px;border-radius:var(--pill);font-size:.8rem;font-weight:500}
+
+/* CONTENT */
 .page-content{max-width:780px;margin:0 auto;padding:2rem 1.5rem 3rem}
-.location{color:var(--text-light);margin-bottom:1.5rem;font-size:1rem}
-.location a{color:var(--sage);font-weight:600}
+
+/* KEY STATS */
 .key-stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1.5rem;background:#fff}
 .stat{padding:1rem;text-align:center;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
 .stat-value{font-size:1.3rem;margin-bottom:2px}
-.stat-label{font-size:.78rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.5px}
+.stat-label{font-size:.75rem;color:var(--twilight);text-transform:uppercase;letter-spacing:.5px}
+
+/* RATING */
 .rating-section{display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
-.rating-big{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--sage)}
-.rating-stars{color:#e6a817;font-size:1.2rem}
-.rating-count{color:var(--text-light);font-size:.9rem}
+.rating-big{font-family:'Playfair Display',serif;font-size:2rem;color:var(--burgundy)}
+.rating-stars{color:var(--candlelight);font-size:1.2rem}
+.rating-count{color:var(--twilight);font-size:.9rem}
+
+/* TAGS */
 .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
-.tag{background:#fff;border:1px solid var(--border);padding:4px 12px;border-radius:20px;font-size:.82rem;color:var(--text-light)}
-section{margin-bottom:1rem}
-section p{color:var(--text);font-size:1rem;line-height:1.7}
-.transport-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.7rem}
+.tag{background:var(--cream);border:1px solid var(--border);padding:4px 12px;border-radius:var(--pill);font-size:.8rem;color:var(--hearth)}
+
+/* SECTIONS */
+section{margin-bottom:2rem}
+section h2{font-size:1.4rem;margin-bottom:.8rem;color:var(--shadow);position:relative;padding-bottom:.5rem}
+section h2::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:2px;background:var(--candlelight)}
+section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
+
+/* PHOTO GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-bottom:2rem;border-radius:var(--radius);overflow:hidden}
+.gallery img{width:100%;height:140px;object-fit:cover;cursor:pointer;transition:transform .2s}
+.gallery img:hover{transform:scale(1.03)}
+.gallery-placeholder{background:var(--cream);border:2px dashed var(--border);border-radius:var(--radius);padding:2rem;text-align:center;color:var(--twilight);font-size:.9rem;margin-bottom:2rem}
+
+/* TRANSPORT */
+.transport-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.6rem}
 .transport-card .tc-header{display:flex;align-items:center;gap:.5rem;font-weight:600;margin-bottom:.3rem}
-.transport-card .tc-detail{color:var(--text-light);font-size:.9rem}
-.transport-card a{font-weight:600;font-size:.9rem}
+.transport-card .tc-detail{color:var(--twilight);font-size:.9rem}
+.transport-card a{font-weight:600;font-size:.9rem;color:var(--burgundy)}
+
+/* TERRAIN */
 .terrain-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
-.chip{padding:5px 12px;border-radius:20px;font-size:.82rem;font-weight:500;display:inline-flex;align-items:center;gap:4px}
+.chip{padding:5px 12px;border-radius:var(--pill);font-size:.82rem;font-weight:500;display:inline-flex;align-items:center;gap:4px}
 .chip.green{background:#e8f5e9;color:#2e7d32}
 .chip.amber{background:#fff8e1;color:#f57f17}
 .chip.red{background:#fce4ec;color:#c62828}
-.terrain-note{color:var(--text-light);font-size:.9rem;line-height:1.6}
-.event-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.7rem;display:flex;gap:1rem;align-items:flex-start}
-.event-date{background:var(--sage);color:#fff;border-radius:8px;padding:6px 10px;text-align:center;min-width:50px;flex-shrink:0}
+.terrain-note{color:var(--twilight);font-size:.9rem;line-height:1.6}
+
+/* EVENTS */
+.event-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.6rem;display:flex;gap:1rem;align-items:flex-start}
+.event-date{background:var(--burgundy);color:#fff;border-radius:8px;padding:6px 10px;text-align:center;min-width:50px;flex-shrink:0}
 .event-date .ed-month{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;opacity:.85}
 .event-date .ed-day{font-size:1.3rem;font-weight:700;line-height:1.1}
 .event-body .eb-name{font-weight:600;margin-bottom:2px}
-.event-body .eb-desc{color:var(--text-light);font-size:.88rem}
+.event-body .eb-desc{color:var(--twilight);font-size:.88rem}
 .event-badge{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:4px;text-transform:uppercase}
 .event-badge.family{background:#e8f5e9;color:#2e7d32}
 .event-badge.concert{background:#e3f2fd;color:#1565c0}
 .event-badge.seasonal{background:#fff8e1;color:#f57f17}
 .event-badge.special{background:#fce4ec;color:#c62828}
-.event-meta{color:var(--text-light);font-size:.8rem;margin-top:2px}
+.event-meta{color:var(--twilight);font-size:.8rem;margin-top:2px}
+
+/* REVIEWS */
+.reviews-section{margin-bottom:2rem}
+.review-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.6rem}
+.review-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.4rem}
+.review-author{font-weight:600;font-size:.9rem}
+.review-rating{color:var(--candlelight);font-size:.85rem}
+.review-time{color:var(--twilight);font-size:.8rem;margin-left:auto}
+.review-text{font-size:.9rem;color:var(--shadow);line-height:1.6}
+
+/* NEARBY */
 .nearby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.8rem}
-.nearby-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem;display:block;transition:box-shadow .2s}
+.nearby-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:block;transition:box-shadow .2s}
 .nearby-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08);text-decoration:none}
-.nearby-name{font-weight:600;color:var(--text);margin-bottom:4px}
-.nearby-meta{font-size:.82rem;color:var(--text-light)}
+.nearby-thumb{width:100%;height:100px;object-fit:cover;background:var(--cream)}
+.nearby-body{padding:.8rem}
+.nearby-name{font-weight:600;color:var(--shadow);margin-bottom:2px;font-size:.9rem}
+.nearby-meta{font-size:.8rem;color:var(--twilight)}
+
+/* YOUTUBE */
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:.5rem}
+.yt-grid iframe{width:100%;aspect-ratio:16/9;border-radius:var(--radius);border:none}
+
+/* CTA */
 .cta-section{text-align:center;margin:2.5rem 0 1rem;display:flex;flex-direction:column;align-items:center;gap:.8rem}
-.cta-button{background:var(--sage);color:#fff;padding:14px 32px;border-radius:var(--radius);font-weight:700;font-size:1.05rem;display:inline-block;transition:background .2s}
-.cta-button:hover{background:var(--sage-light);text-decoration:none}
-.cta-secondary{color:var(--sage);font-weight:600;font-size:.95rem}
-footer{text-align:center;padding:2rem;color:var(--text-light);font-size:.85rem;border-top:1px solid var(--border);margin-top:1rem}
-footer a{color:var(--sage)}
+.cta-button{background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-weight:700;font-size:1rem;display:inline-block;transition:background .2s}
+.cta-button:hover{background:#6e1a2a;text-decoration:none}
+.cta-secondary{color:var(--burgundy);font-weight:600;font-size:.95rem}
+
+/* FLOURISH */
+.flourish{text-align:center;margin:1.5rem 0;color:var(--hearth)}
+
+/* FOOTER */
+footer{background:var(--shadow);color:var(--stone);padding:2rem 24px;text-align:center;font-size:.85rem;margin-top:2rem}
+footer a{color:var(--candlelight)}
+
+/* LIGHTBOX */
+.lb-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;cursor:pointer}
+.lb-overlay.open{display:flex}
+.lb-overlay img{max-width:90vw;max-height:90vh;border-radius:8px}
+
 @media(max-width:600px){
   .key-stats{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:none}
-  h1{font-size:1.7rem}
+  .hero-image{height:280px}
+  .hero-content h1{font-size:1.6rem}
   .page-content{padding:1.5rem 1rem 2rem}
-  .hero-image img{height:260px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .nearby-grid{grid-template-columns:1fr 1fr}
+  .site-header nav .nav-hide-mobile{display:none}
 }
 </style>
 </head>
 <body>
 <header class="site-header">
-<a href="../index.html" class="site-logo">🏰 Scenic Route</a>
-<nav><a href="../index.html">Explore Map</a></nav>
+<a href="../index.html" class="site-logo">castlecore</a>
+<nav>
+<a href="../index.html" class="nav-hide-mobile">Collections</a>
+<a href="../explore.html" class="nav-hide-mobile">Map</a>
+<a href="../explore.html" class="nav-btn">Explore Map</a>
+</nav>
 </header>
-<main>
+<main data-castle-name="Monkstown Castle" data-lat="51.836" data-lng="-8.355">
 <div class="hero-image">
-<img src="" alt="Monkstown Castle" loading="lazy">
-<div class="hero-overlay"><span class="hero-type">🏰 castle</span></div>
-</div>
-<div class="page-content">
+
+<div class="hero-gradient"></div>
+<div class="hero-content">
 <h1>Monkstown Castle</h1>
-<p class="location">County Cork, Ireland · <a href="https://www.google.com/maps/dir/?api=1&destination=51.836,-8.355">Get directions</a></p>
+<p class="hero-loc">County Cork, Ireland</p>
+<div class="hero-pills">
+<span class="hero-pill" style="border-left:3px solid #E05A33">🏰 castle</span>
+<span class="hero-pill">🕰️ 16th century</span>
+<span class="hero-pill">👁️ Exterior</span>
+</div>
+</div>
+</div>
+
+<div class="page-content">
+
+<!-- KEY STATS -->
 <div class="key-stats">
 <div class="stat"><div class="stat-value">🏰</div><div class="stat-label">castle</div></div>
 <div class="stat"><div class="stat-value">16th century</div><div class="stat-label">Built</div></div>
 <div class="stat"><div class="stat-value">intact</div><div class="stat-label">Condition</div></div>
 <div class="stat"><div class="stat-value">👁️ Exterior</div><div class="stat-label">Access</div></div>
 </div>
+
+<!-- RATING -->
 <div class="rating-section">
 <span class="rating-big">3.5</span>
 <span class="rating-stars">★★★½</span>
 <span class="rating-count">85 Google reviews</span>
 </div>
-<div class="tags"><span class="tag">hidden gem</span></div>
-<section><h2>About</h2><p>Fortified house near Cork Harbour, one of the best preserved in the area.</p></section>
-<section><h2>Getting There</h2><div class="transport-card"><div class="tc-header">📍 Directions</div><div class="tc-detail">Use the link below to get directions to Monkstown Castle.</div><a href="https://www.google.com/maps/dir/?api=1&destination=51.836,-8.355">Get directions via Google Maps →</a></div></section>
-<section><h2>Terrain &amp; Accessibility</h2><p class="terrain-note">Terrain information not yet available for this site. Check before visiting if you have accessibility requirements.</p></section>
 
-<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./dundanion-castle.html" class="nearby-card"><div class="nearby-name">Dundanion Castle</div><div class="nearby-meta">★ 3.2 · 2.6 km · tower house</div></a><a href="./dundanion-castle-main.html" class="nearby-card"><div class="nearby-name">Dundanion Castle (Main)</div><div class="nearby-meta">★ 3.1 · 4.4 km · tower house</div></a><a href="./monkstown-castle-cork.html" class="nearby-card"><div class="nearby-name">Monkstown Castle Cork</div><div class="nearby-meta">★ 3.7 · 5.0 km · castle</div></a><a href="./belvelly-castle.html" class="nearby-card"><div class="nearby-name">Belvelly Castle</div><div class="nearby-meta">★ 3.5 · 6.2 km · tower house</div></a><a href="./aghada-church.html" class="nearby-card"><div class="nearby-name">Aghada Church</div><div class="nearby-meta">★ 3.4 · 10.5 km · abbey</div></a></div></section>
+<div class="tags"><span class="tag">hidden gem</span></div>
+
+<!-- PHOTO GALLERY (loaded via Google Places API) -->
+<div id="photoGallery" class="gallery-placeholder">📷 Loading photos...</div>
+
+<!-- ABOUT -->
+<section><h2>About</h2><p>Fortified house near Cork Harbour, one of the best preserved in the area.</p></section>
+
+<div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
+
+<!-- GETTING THERE -->
+<section><h2>Getting There</h2><div class="transport-card"><div class="tc-header">📍 Directions</div><div class="tc-detail">Use the link below for directions to Monkstown Castle.</div><a href="https://www.google.com/maps/dir/?api=1&destination=51.836,-8.355">Get directions via Google Maps →</a></div></section>
+
+<!-- TERRAIN -->
+<section><h2>Terrain &amp; Accessibility</h2><p class="terrain-note">Terrain details coming soon. Check before visiting if you have accessibility needs.</p></section>
+
+
+
+<div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
+
+<!-- REVIEWS (loaded via Google Places API) -->
+<section class="reviews-section"><h2>Visitor Reviews</h2><div id="reviewsBox"><p class="terrain-note">Loading reviews...</p></div></section>
+
+<div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
+
+<!-- NEARBY -->
+<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./dundanion-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Dundanion Castle</div><div class="nearby-meta">★ 3.2 · 3 km · tower house</div></div></a><a href="./dundanion-castle-main.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Dundanion Castle (Main)</div><div class="nearby-meta">★ 3.1 · 4 km · tower house</div></div></a><a href="./monkstown-castle-cork.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Monkstown Castle Cork</div><div class="nearby-meta">★ 3.7 · 5 km · castle</div></div></a><a href="./belvelly-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Belvelly Castle</div><div class="nearby-meta">★ 3.5 · 6 km · tower house</div></div></a><a href="./aghada-church.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Aghada Church</div><div class="nearby-meta">★ 3.4 · 11 km · abbey</div></div></a></div></section>
+
+<!-- CTA -->
 <div class="cta-section">
-<a href="../index.html" class="cta-button">🗺️ View on Interactive Map</a>
-<a href="../index.html" class="cta-secondary">Explore all 3,078+ sites →</a>
+<a href="../explore.html" class="cta-button">🗺️ Explore the Map</a>
+<a href="../index.html" class="cta-secondary">Discover all 3,078+ sites →</a>
 </div>
 </div>
 </main>
-<footer><p>© 2026 Scenic Route · <a href="../index.html">Explore Map</a></p></footer>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lightbox" onclick="this.classList.remove('open')"><img src="" alt="Photo"></div>
+
+<footer>
+<p style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:4px">castlecore</p>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+<p style="margin-top:8px">© 2026 castlecore · <a href="../index.html">Home</a> · <a href="../explore.html">Map</a></p>
+</footer>
+
+
+<script>
+(function(){
+  var KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+  var name=document.querySelector('[data-castle-name]')?.dataset.castleName;
+  var lat=parseFloat(document.querySelector('[data-lat]')?.dataset.lat);
+  var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
+  if(!name||isNaN(lat))return;
+
+  // Find place
+  var cached=sessionStorage.getItem('gp_'+name);
+  if(cached){renderPlace(JSON.parse(cached));return}
+
+  fetch('https://places.googleapis.com/v1/places:searchText',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','X-Goog-Api-Key':KEY,'X-Goog-FieldMask':'places.id,places.displayName,places.photos,places.reviews,places.rating,places.userRatingCount'},
+    body:JSON.stringify({textQuery:name,locationBias:{circle:{center:{latitude:lat,longitude:lng},radius:1000}},maxResultCount:1})
+  }).then(r=>r.json()).then(d=>{
+    if(d.places&&d.places[0]){
+      sessionStorage.setItem('gp_'+name,JSON.stringify(d.places[0]));
+      renderPlace(d.places[0]);
+    }
+  }).catch(()=>{});
+
+  function renderPlace(place){
+    // Photos
+    var gallery=document.getElementById('photoGallery');
+    if(gallery&&place.photos&&place.photos.length){
+      var html='';
+      place.photos.slice(0,8).forEach(function(p){
+        var url='https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=600&key='+KEY;
+        html+='<img src="'+url+'" alt="Photo" loading="lazy" onclick="openLb(this.src)">';
+      });
+      gallery.innerHTML=html;
+      gallery.classList.remove('gallery-placeholder');
+      gallery.classList.add('gallery');
+    }
+
+    // Reviews
+    var revBox=document.getElementById('reviewsBox');
+    if(revBox&&place.reviews&&place.reviews.length){
+      var html='';
+      place.reviews.slice(0,5).forEach(function(r){
+        var stars='';for(var i=0;i<Math.round(r.rating||0);i++)stars+='★';
+        var txt=(r.text&&r.text.text)?r.text.text:'';
+        var author=(r.authorAttribution&&r.authorAttribution.displayName)?r.authorAttribution.displayName:'Visitor';
+        var time=r.relativePublishTimeDescription||'';
+        html+='<div class="review-card"><div class="review-header"><span class="review-author">'+author+'</span><span class="review-rating">'+stars+'</span><span class="review-time">'+time+'</span></div><p class="review-text">'+txt+'</p></div>';
+      });
+      revBox.innerHTML=html;
+    }
+  }
+})();
+
+function openLb(src){
+  var lb=document.getElementById('lightbox');
+  if(!lb)return;
+  lb.querySelector('img').src=src;
+  lb.classList.add('open');
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('lightbox');if(lb)lb.classList.remove('open')}});
+</script>
 </body>
 </html>
