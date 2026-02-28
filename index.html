@@ -200,6 +200,9 @@ section{padding:48px 24px}
 .cta-section p{color:var(--twilight);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
 .btn-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s}
 .btn-cta:hover{background:#6e1a2a}
+.btn-cta{cursor:pointer;border:none;font-family:Inter,sans-serif}
+#nearMeResults{display:flex;flex-direction:column;gap:8px}
+#useLocationBtn:hover{background:var(--burgundy)!important;color:#fff!important}
 
 /* HOW IT WORKS */
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
@@ -388,10 +391,26 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </section>
 
 <!-- NEAR ME CTA -->
-<section class="cta-section">
+<section class="cta-section" id="nearMeSection">
 <h2>What's near you?</h2>
 <p>Find castles, abbeys, and ruins close to your current location</p>
-<a href="explore.html" class="btn-cta">📍 Find Castles Nearby</a>
+<button class="btn-cta" id="nearMeBtn" onclick="openNearMe()">📍 Find Castles Nearby</button>
+<div id="nearMePanel" style="display:none;max-width:520px;margin:24px auto 0;text-align:left">
+<div style="display:flex;gap:10px;margin-bottom:16px">
+<button id="useLocationBtn" onclick="useMyLocation()" style="flex:1;padding:12px 16px;border-radius:var(--pill);border:2px solid var(--burgundy);background:#fff;color:var(--burgundy);font-weight:600;cursor:pointer;font-size:.95rem;transition:all .2s">📍 Use My Location</button>
+</div>
+<div style="position:relative">
+<input type="text" id="nearMeInput" placeholder="Or type a city, town, or postcode..." style="width:100%;padding:12px 16px;border-radius:var(--pill);border:2px solid var(--border);font-size:1rem;font-family:Inter,sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--burgundy)'" onblur="this.style.borderColor='var(--border)'" onkeydown="if(event.key==='Enter')searchNearMe()">
+</div>
+<div style="display:flex;gap:8px;margin-top:12px;align-items:center;justify-content:center">
+<span style="font-size:.85rem;color:var(--twilight)">Radius:</span>
+<select id="nearMeRadius" style="padding:6px 12px;border-radius:var(--pill);border:1px solid var(--border);font-size:.85rem;font-family:Inter,sans-serif">
+<option value="25">25 km</option><option value="50" selected>50 km</option><option value="100">100 km</option>
+</select>
+</div>
+<div id="nearMeStatus" style="text-align:center;margin-top:16px;font-size:.9rem;color:var(--twilight)"></div>
+<div id="nearMeResults" style="margin-top:16px"></div>
+</div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -499,6 +518,58 @@ if(s<window.innerHeight){heroBg.style.transform='translateY('+s*0.35+'px)'}
 },{passive:true});
 }
 })();
+
+/* NEAR ME */
+function openNearMe(){
+document.getElementById('nearMePanel').style.display='block';
+document.getElementById('nearMeBtn').style.display='none';
+}
+function useMyLocation(){
+var status=document.getElementById('nearMeStatus');
+var btn=document.getElementById('useLocationBtn');
+if(!navigator.geolocation){status.textContent='Geolocation not supported by your browser';return}
+btn.textContent='📍 Locating...';btn.disabled=true;
+navigator.geolocation.getCurrentPosition(function(pos){
+btn.textContent='📍 Location found!';btn.style.background='var(--ivy)';btn.style.color='#fff';btn.style.borderColor='var(--ivy)';
+showNearby(pos.coords.latitude,pos.coords.longitude);
+},function(err){
+btn.textContent='📍 Use My Location';btn.disabled=false;
+status.textContent=err.code===1?'Location access denied. Try typing a location instead.':'Could not get location. Try typing instead.';
+},{enableHighAccuracy:false,timeout:10000});
+}
+function searchNearMe(){
+var q=document.getElementById('nearMeInput').value.trim();
+if(!q)return;
+var status=document.getElementById('nearMeStatus');
+status.textContent='Searching...';
+fetch('https://maps.googleapis.com/maps/api/geocode/json?address='+encodeURIComponent(q)+'&key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8&components=country:GB|country:IE')
+.then(function(r){return r.json()}).then(function(d){
+if(d.results&&d.results.length){
+var loc=d.results[0].geometry.location;
+status.textContent='';
+showNearby(loc.lat,loc.lng);
+}else{status.textContent='Location not found. Try a different search.'}
+}).catch(function(){status.textContent='Search failed. Please try again.'});
+}
+function showNearby(lat,lng){
+if(typeof CASTLES==='undefined')return;
+var radius=parseInt(document.getElementById('nearMeRadius').value)||50;
+var results=[];
+function dist(a,b,c,d){var R=6371,dLat=(c-a)*Math.PI/180,dLon=(d-b)*Math.PI/180,x=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x))}
+CASTLES.forEach(function(c){var d=dist(lat,lng,c.lat,c.lng);if(d<=radius)results.push({c:c,d:d})});
+results.sort(function(a,b){return a.d-b.d});
+var el=document.getElementById('nearMeResults');
+var status=document.getElementById('nearMeStatus');
+if(!results.length){status.textContent='No sites found within '+radius+' km. Try a larger radius.';el.innerHTML='';return}
+status.textContent=results.length+' site'+(results.length>1?'s':'')+' within '+radius+' km';
+function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+var typeColors={castle:'#E05A33',palace:'#E6A817',abbey:'#2E8B57',tower:'#4A7FC1',fortified:'#8B5CF6'};
+function getColor(t){if(!t)return'var(--twilight)';var l=t.toLowerCase();for(var k in typeColors)if(l.includes(k))return typeColors[k];return'var(--twilight)'}
+el.innerHTML=results.slice(0,12).map(function(r){
+var c=r.c;var img=c.img?'<img src="'+c.img.replace('/120px-','/200px-')+'" style="width:64px;height:64px;border-radius:8px;object-fit:cover;flex-shrink:0" onerror="this.style.display=\'none\'">':'';
+return '<a href="site/'+slug(c.name)+'.html" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);text-decoration:none;color:inherit;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">'+img+'<div style="flex:1;min-width:0"><div style="font-weight:600;font-size:.95rem">'+c.name+'</div><div style="font-size:.8rem;color:var(--twilight)">'+Math.round(r.d)+' km · '+(c.county||'')+', '+(c.country||'')+'</div><span style="display:inline-block;margin-top:4px;font-size:.7rem;padding:2px 8px;border-radius:10px;background:'+getColor(c.type)+';color:#fff">'+(c.type||'Site')+'</span></div></a>'
+}).join('')+'<div style="text-align:center;margin-top:16px"><a href="explore.html" style="color:var(--burgundy);font-weight:600;font-size:.9rem">View all on map →</a></div>';
+}
 </script>
 </body>
 </html>
