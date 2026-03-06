@@ -86,8 +86,19 @@ img{max-width:100%;display:block}
 .snav-mob-search .ssi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.95rem;pointer-events:none}
 @media(max-width:600px){.snav-center{display:none}.snav-right .nav-btn{display:none}.snav-right .btn-login{display:none!important}.snav-hamburger{display:block}}
 
-/* LISTING TOP — side-by-side layout */
-.listing-top{max-width:1100px;margin:0 auto;padding:1.5rem 1.5rem 0;display:grid;grid-template-columns:3fr 2fr;gap:2rem;align-items:start}
+/* LISTING TOP — full-width gallery */
+.listing-top{max-width:1100px;margin:0 auto;padding:1.5rem 1.5rem 0}
+
+/* LISTING HEADER — name + rating row */
+.listing-header{max-width:1100px;margin:0 auto;padding:1.2rem 1.5rem .8rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.5rem}
+.listing-header h1{font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;margin:0}
+.listing-header .info-location{color:var(--twilight);font-size:1rem;margin:0;display:flex;align-items:center;gap:4px}
+.listing-header .rating-section{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;width:100%;margin-top:.3rem}
+
+/* LISTING BODY — two-column content + sidebar */
+.listing-body{max-width:1100px;margin:0 auto;padding:1.5rem 1.5rem 3rem;display:grid;grid-template-columns:2fr 1fr;gap:2.5rem;align-items:start}
+.listing-main{min-width:0}
+.listing-sidebar{position:sticky;top:72px;display:flex;flex-direction:column;gap:1.2rem}
 
 /* GALLERY */
 .gallery-main{width:100%;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--cream);margin-bottom:8px}
@@ -100,12 +111,10 @@ img{max-width:100%;display:block}
 .gallery-thumbs img:hover,.gallery-thumbs img.active{opacity:1;border-color:var(--burgundy)}
 .gallery-placeholder{background:var(--cream);border:2px dashed var(--border);border-radius:var(--radius);padding:2rem;text-align:center;color:var(--twilight);font-size:.9rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
 
-/* INFO PANEL (right side) */
-.info-panel h1{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.3rem;line-height:1.2}
-.info-location{color:var(--twilight);font-size:.95rem;margin-bottom:.8rem;display:flex;align-items:center;gap:4px}
-.info-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem}
-.info-tag{background:var(--cream);border:1px solid var(--border);padding:3px 10px;border-radius:var(--pill);font-size:.78rem;color:var(--hearth)}
-.info-tag.type-tag{border-left:3px solid var(--burgundy);font-weight:600}
+/* SIDEBAR COMPONENTS */
+.sidebar-directions{display:block;text-align:center;background:var(--burgundy);color:#fff;padding:12px 20px;border-radius:var(--pill);font-weight:700;font-size:.95rem;transition:background .2s}
+.sidebar-directions:hover{background:#6e1a2a;color:#fff;text-decoration:none}
+.sidebar-map-placeholder{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);height:160px;display:flex;align-items:center;justify-content:center;color:var(--twilight);font-size:.85rem}
 
 /* RATING */
 .rating-section{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
@@ -125,8 +134,8 @@ img{max-width:100%;display:block}
 .info-bottom-tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .info-bottom-tags .tag{background:var(--cream);border:1px solid var(--border);padding:3px 10px;border-radius:var(--pill);font-size:.75rem;color:var(--hearth)}
 
-/* CONTENT (below the fold) */
-.page-content{max-width:1100px;margin:0 auto;padding:2rem 1.5rem 3rem}
+/* FULL-WIDTH SECTIONS (nearby, CTA) */
+.page-fullwidth{max-width:1100px;margin:0 auto;padding:0 1.5rem 3rem}
 
 /* SECTIONS */
 section{margin-bottom:2rem}
@@ -203,11 +212,14 @@ footer a{color:var(--candlelight)}
 .lb-overlay img{max-width:90vw;max-height:90vh;border-radius:8px}
 
 @media(max-width:768px){
-  .listing-top{grid-template-columns:1fr;gap:1rem;padding:1rem 1rem 0}
+  .listing-top{padding:1rem 1rem 0}
+  .listing-header{padding:1rem 1rem .5rem}
+  .listing-header h1{font-size:1.5rem}
+  .listing-body{grid-template-columns:1fr;padding:1rem 1rem 2rem;gap:1.5rem}
+  .listing-sidebar{position:static}
   .gallery-main{aspect-ratio:16/10}
-  .info-panel h1{font-size:1.5rem}
   .quick-facts{grid-template-columns:1fr 1fr}
-  .page-content{padding:1.5rem 1rem 2rem}
+  .page-fullwidth{padding:0 1rem 2rem}
   .nearby-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:480px){
@@ -241,15 +253,16 @@ footer a{color:var(--candlelight)}
 </div>
 <main data-castle-name="Tutbury Priory" data-lat="52.8617" data-lng="-1.6783">
 
-<!-- LISTING TOP: Gallery + Info side by side -->
+<!-- GALLERY — full width -->
 <div class="listing-top">
-<div class="gallery-col">
 <div id="galleryMain" class="gallery-main" data-original-src="">
 <div class="gallery-placeholder">📷 Loading photos...</div>
 </div>
 <div id="galleryThumbs" class="gallery-thumbs" style="display:none"></div>
 </div>
-<div class="info-panel">
+
+<!-- HEADER — name + location + rating -->
+<div class="listing-header">
 <h1>Tutbury Priory</h1>
 <p class="info-location">📍 Staffordshire, England</p>
 <div class="rating-section">
@@ -257,17 +270,11 @@ footer a{color:var(--candlelight)}
 <span class="rating-stars">★★★★</span>
 <a href="https://www.google.com/maps/search/Tutbury%20Priory+Staffordshire/@52.8617,-1.6783,15z" target="_blank" rel="noopener" class="rating-count">500 reviews</a>
 </div>
-<div class="quick-facts">
-<div class="qf-item"><div class="qf-label">Type</div><div class="qf-value">⛪ abbey</div></div>
-<div class="qf-item"><div class="qf-label">Era</div><div class="qf-value">11th century</div></div>
-<div class="qf-item"><div class="qf-label">Condition</div><div class="qf-value">partial</div></div>
-<div class="qf-item"><div class="qf-label">Access</div><div class="qf-value">🆓 Free</div></div>
-</div>
-<div class="info-bottom-tags"><span class="tag">free</span><span class="tag">well preserved</span><span class="tag">hidden gem</span></div>
-</div>
 </div>
 
-<div class="page-content">
+<!-- BODY — two-column: content + sidebar -->
+<div class="listing-body">
+<div class="listing-main">
 
 <!-- ABOUT -->
 <section><h2>About</h2><p>Norman priory church with a spectacular west front, still in use.</p></section>
@@ -286,6 +293,23 @@ footer a{color:var(--candlelight)}
 
 <!-- REVIEWS (loaded via Google Places API) -->
 <section class="reviews-section"><h2>Visitor Reviews</h2><div id="reviewsBox"><p class="terrain-note">Loading reviews...</p></div></section>
+
+</div>
+<aside class="listing-sidebar">
+<div class="quick-facts">
+<div class="qf-item"><div class="qf-label">Type</div><div class="qf-value">⛪ abbey</div></div>
+<div class="qf-item"><div class="qf-label">Era</div><div class="qf-value">11th century</div></div>
+<div class="qf-item"><div class="qf-label">Condition</div><div class="qf-value">partial</div></div>
+<div class="qf-item"><div class="qf-label">Access</div><div class="qf-value">🆓 Free</div></div>
+</div>
+<div class="info-bottom-tags"><span class="tag">free</span><span class="tag">well preserved</span><span class="tag">hidden gem</span></div>
+<a href="https://www.google.com/maps/dir/?api=1&destination=52.8617,-1.6783" target="_blank" rel="noopener" class="sidebar-directions">📍 Get Directions</a>
+<div class="sidebar-map-placeholder">🗺️ Map preview coming soon</div>
+</aside>
+</div>
+
+<!-- FULL-WIDTH: Nearby + CTA -->
+<div class="page-fullwidth">
 
 <div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
 
