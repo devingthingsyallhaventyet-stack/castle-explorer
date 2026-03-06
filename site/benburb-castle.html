@@ -86,47 +86,53 @@ img{max-width:100%;display:block}
 .snav-mob-search .ssi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.95rem;pointer-events:none}
 @media(max-width:600px){.snav-center{display:none}.snav-right .nav-btn{display:none}.snav-right .btn-login{display:none!important}.snav-hamburger{display:block}}
 
-/* HERO */
-.hero-image{position:relative;width:100%;height:400px;overflow:hidden;background:var(--cream)}
-.hero-image img{width:100%;height:100%;object-fit:cover}
-.hero-gradient{position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(transparent,rgba(42,37,34,.7))}
-.hero-content{position:absolute;bottom:20px;left:24px;right:24px;color:#fff}
-.hero-content h1{font-size:clamp(1.8rem,4vw,2.6rem);text-shadow:0 2px 8px rgba(0,0,0,.4);margin-bottom:4px}
-.hero-loc{font-size:.95rem;opacity:.9}
-.hero-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.hero-pill{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);padding:4px 12px;border-radius:var(--pill);font-size:.8rem;font-weight:500}
+/* LISTING TOP — side-by-side layout */
+.listing-top{max-width:1100px;margin:0 auto;padding:1.5rem 1.5rem 0;display:grid;grid-template-columns:3fr 2fr;gap:2rem;align-items:start}
 
-/* CONTENT */
-.page-content{max-width:780px;margin:0 auto;padding:2rem 1.5rem 3rem}
+/* GALLERY */
+.gallery-main{width:100%;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--cream);margin-bottom:8px}
+.gallery-main img{width:100%;height:100%;object-fit:cover;cursor:pointer;transition:transform .2s}
+.gallery-main img:hover{transform:scale(1.02)}
+.gallery-thumbs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.gallery-thumbs::-webkit-scrollbar{height:4px}
+.gallery-thumbs::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.gallery-thumbs img{width:80px;height:60px;object-fit:cover;border-radius:8px;cursor:pointer;flex-shrink:0;opacity:.7;transition:opacity .2s,outline .2s;border:2px solid transparent}
+.gallery-thumbs img:hover,.gallery-thumbs img.active{opacity:1;border-color:var(--burgundy)}
+.gallery-placeholder{background:var(--cream);border:2px dashed var(--border);border-radius:var(--radius);padding:2rem;text-align:center;color:var(--twilight);font-size:.9rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
 
-/* KEY STATS */
-.key-stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1.5rem;background:#fff}
-.stat{padding:1rem;text-align:center;border-right:1px solid var(--border)}
-.stat:last-child{border-right:none}
-.stat-value{font-size:1.3rem;margin-bottom:2px}
-.stat-label{font-size:.75rem;color:var(--twilight);text-transform:uppercase;letter-spacing:.5px}
+/* INFO PANEL (right side) */
+.info-panel h1{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.3rem;line-height:1.2}
+.info-location{color:var(--twilight);font-size:.95rem;margin-bottom:.8rem;display:flex;align-items:center;gap:4px}
+.info-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem}
+.info-tag{background:var(--cream);border:1px solid var(--border);padding:3px 10px;border-radius:var(--pill);font-size:.78rem;color:var(--hearth)}
+.info-tag.type-tag{border-left:3px solid var(--burgundy);font-weight:600}
 
 /* RATING */
-.rating-section{display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
-.rating-big{font-family:'Playfair Display',serif;font-size:2rem;color:var(--burgundy)}
-.rating-stars{color:var(--candlelight);font-size:1.2rem}
-.rating-count{color:var(--twilight);font-size:.9rem}
+.rating-section{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
+.rating-big{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--burgundy)}
+.rating-stars{color:var(--candlelight);font-size:1.1rem}
+.rating-count{color:var(--twilight);font-size:.85rem}
 
-/* TAGS */
-.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
-.tag{background:var(--cream);border:1px solid var(--border);padding:4px 12px;border-radius:var(--pill);font-size:.8rem;color:var(--hearth)}
+/* QUICK FACTS GRID */
+.quick-facts{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1rem;background:#fff}
+.qf-item{padding:.7rem .9rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border)}
+.qf-item:nth-child(even){border-right:none}
+.qf-item:nth-last-child(-n+2){border-bottom:none}
+.qf-label{font-size:.7rem;color:var(--twilight);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1px}
+.qf-value{font-size:.9rem;font-weight:600}
+
+/* TAGS on info panel */
+.info-bottom-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.info-bottom-tags .tag{background:var(--cream);border:1px solid var(--border);padding:3px 10px;border-radius:var(--pill);font-size:.75rem;color:var(--hearth)}
+
+/* CONTENT (below the fold) */
+.page-content{max-width:1100px;margin:0 auto;padding:2rem 1.5rem 3rem}
 
 /* SECTIONS */
 section{margin-bottom:2rem}
 section h2{font-size:1.4rem;margin-bottom:.8rem;color:var(--shadow);position:relative;padding-bottom:.5rem}
 section h2::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:2px;background:var(--candlelight)}
 section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
-
-/* PHOTO GALLERY */
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-bottom:2rem;border-radius:var(--radius);overflow:hidden}
-.gallery img{width:100%;height:140px;object-fit:cover;cursor:pointer;transition:transform .2s}
-.gallery img:hover{transform:scale(1.03)}
-.gallery-placeholder{background:var(--cream);border:2px dashed var(--border);border-radius:var(--radius);padding:2rem;text-align:center;color:var(--twilight);font-size:.9rem;margin-bottom:2rem}
 
 /* TRANSPORT */
 .transport-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.6rem}
@@ -196,15 +202,16 @@ footer a{color:var(--candlelight)}
 .lb-overlay.open{display:flex}
 .lb-overlay img{max-width:90vw;max-height:90vh;border-radius:8px}
 
-@media(max-width:600px){
-  .key-stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(2){border-right:none}
-  .hero-image{height:280px}
-  .hero-content h1{font-size:1.6rem}
+@media(max-width:768px){
+  .listing-top{grid-template-columns:1fr;gap:1rem;padding:1rem 1rem 0}
+  .gallery-main{aspect-ratio:16/10}
+  .info-panel h1{font-size:1.5rem}
+  .quick-facts{grid-template-columns:1fr 1fr}
   .page-content{padding:1.5rem 1rem 2rem}
-  .gallery{grid-template-columns:repeat(2,1fr)}
   .nearby-grid{grid-template-columns:1fr 1fr}
-  .site-header nav .nav-hide-mobile{display:none}
+}
+@media(max-width:480px){
+  .gallery-thumbs img{width:64px;height:48px}
 }
 </style>
 </head>
@@ -233,41 +240,39 @@ footer a{color:var(--candlelight)}
 <a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:8px;font-weight:600;color:var(--twilight)">👤 Login</a>
 </div>
 <main data-castle-name="Benburb Castle" data-lat="54.4" data-lng="-6.8833">
-<div class="hero-image">
 
-<div class="hero-gradient"></div>
-<div class="hero-content">
-<h1>Benburb Castle</h1>
-<p class="hero-loc">County Tyrone, Northern Ireland</p>
-<div class="hero-pills">
-<span class="hero-pill" style="border-left:3px solid #E05A33">🏰 castle</span>
-<span class="hero-pill">🕰️ 17th century</span>
-<span class="hero-pill">🆓 Free</span>
+<!-- LISTING TOP: Gallery + Info side by side -->
+<div class="listing-top">
+<div class="gallery-col">
+<div id="galleryMain" class="gallery-main" data-original-src="">
+<div class="gallery-placeholder">📷 Loading photos...</div>
 </div>
+<div id="galleryThumbs" class="gallery-thumbs" style="display:none"></div>
+</div>
+<div class="info-panel">
+<h1>Benburb Castle</h1>
+<p class="info-location">📍 County Tyrone, Northern Ireland</p>
+<div class="info-tags">
+<span class="info-tag type-tag" style="border-left-color:#E05A33">🏰 castle</span>
+<span class="info-tag">🕰️ 17th century</span>
+<span class="info-tag">🆓 Free</span>
+</div>
+<div class="rating-section">
+<span class="rating-big">4</span>
+<span class="rating-stars">★★★★</span>
+<span class="rating-count">680 reviews</span>
+</div>
+<div class="quick-facts">
+<div class="qf-item"><div class="qf-label">Type</div><div class="qf-value">🏰 castle</div></div>
+<div class="qf-item"><div class="qf-label">Era</div><div class="qf-value">17th century</div></div>
+<div class="qf-item"><div class="qf-label">Condition</div><div class="qf-value">ruin</div></div>
+<div class="qf-item"><div class="qf-label">Access</div><div class="qf-value">🆓 Free</div></div>
+</div>
+<div class="info-bottom-tags"><span class="tag">dramatic ruin</span><span class="tag">hidden gem</span><span class="tag">free</span></div>
 </div>
 </div>
 
 <div class="page-content">
-
-<!-- KEY STATS -->
-<div class="key-stats">
-<div class="stat"><div class="stat-value">🏰</div><div class="stat-label">castle</div></div>
-<div class="stat"><div class="stat-value">17th century</div><div class="stat-label">Built</div></div>
-<div class="stat"><div class="stat-value">ruin</div><div class="stat-label">Condition</div></div>
-<div class="stat"><div class="stat-value">🆓 Free</div><div class="stat-label">Access</div></div>
-</div>
-
-<!-- RATING -->
-<div class="rating-section">
-<span class="rating-big">4</span>
-<span class="rating-stars">★★★★</span>
-<span class="rating-count">680 Google reviews</span>
-</div>
-
-<div class="tags"><span class="tag">dramatic ruin</span><span class="tag">hidden gem</span><span class="tag">free</span></div>
-
-<!-- PHOTO GALLERY (loaded via Google Places API) -->
-<div id="photoGallery" class="gallery-placeholder">📷 Loading photos...</div>
 
 <!-- ABOUT -->
 <section><h2>About</h2><p>A Plantation castle overlooking a dramatic cliff above the River Blackwater, site of Owen Roe O'Neill's famous victory over the Scots in 1646. The castle ruins and servery priory grounds offer spectacular views.<br><br>Benburb Castle is a castle situated in Benburb, County Tyrone, Northern Ireland. It is built on a limestone cliff overlooking the River Blackwater, the border between County Tyrone and County Armagh. A 19th-century tower house occupies the south west area of the bawn. The castle has been restored and stands in the grounds of the imposing Servite Priory, the local base of that religious order.</p></section>
@@ -318,7 +323,6 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
-  // Find place
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -334,17 +338,36 @@ footer a{color:var(--candlelight)}
   }).catch(()=>{});
 
   function renderPlace(place){
-    // Photos
-    var gallery=document.getElementById('photoGallery');
-    if(gallery&&place.photos&&place.photos.length){
-      var html='';
-      place.photos.slice(0,8).forEach(function(p){
-        var url='https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=600&key='+KEY;
-        html+='<img src="'+url+'" alt="Photo" loading="lazy" onclick="openLb(this.src)">';
+    var mainImg=document.getElementById('galleryMain');
+    var thumbs=document.getElementById('galleryThumbs');
+    if(place.photos&&place.photos.length&&mainImg){
+      var photos=place.photos.slice(0,10);
+      var allUrls=[];
+      // Build URLs
+      photos.forEach(function(p){
+        allUrls.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=800&key='+KEY);
       });
-      gallery.innerHTML=html;
-      gallery.classList.remove('gallery-placeholder');
-      gallery.classList.add('gallery');
+      // Set first Google photo as main (replace wiki image)
+      mainImg.querySelector('img').src=allUrls[0];
+      mainImg.querySelector('img').dataset.idx='0';
+      // Remove placeholder class if present
+      mainImg.classList.remove('gallery-placeholder');
+      // Build thumb strip: include existing main image + google photos
+      var existingSrc=mainImg.dataset.originalSrc;
+      var allSrcs=existingSrc?[existingSrc].concat(allUrls):allUrls;
+      // Actually keep wiki as first, google photos after
+      if(existingSrc){mainImg.querySelector('img').src=existingSrc;mainImg.querySelector('img').dataset.idx='0';}
+      else{mainImg.querySelector('img').src=allUrls[0];mainImg.querySelector('img').dataset.idx='0';}
+      if(allSrcs.length>1&&thumbs){
+        var html='';
+        allSrcs.forEach(function(u,i){
+          html+='<img src="'+u+'" alt="Photo '+(i+1)+'" loading="lazy" class="'+(i===0?'active':'')+'" onclick="switchGallery(this,\''+u.replace(/'/g,"\\'")+'\')">';
+        });
+        thumbs.innerHTML=html;
+        thumbs.style.display='flex';
+      }
+      // Store all srcs for lightbox nav
+      window._gallerySrcs=allSrcs;
     }
 
     // Reviews
@@ -352,7 +375,7 @@ footer a{color:var(--candlelight)}
     if(revBox&&place.reviews&&place.reviews.length){
       var html='';
       place.reviews.slice(0,5).forEach(function(r){
-        var stars='';for(var i=0;i<Math.round(r.rating||0);i++)stars+='★';
+        var stars='';for(var i=0;i<Math.round(r.rating||0);i++)stars+='\u2605';
         var txt=(r.text&&r.text.text)?r.text.text:'';
         var author=(r.authorAttribution&&r.authorAttribution.displayName)?r.authorAttribution.displayName:'Visitor';
         var time=r.relativePublishTimeDescription||'';
@@ -363,6 +386,12 @@ footer a{color:var(--candlelight)}
   }
 })();
 
+function switchGallery(thumb,src){
+  var main=document.querySelector('#galleryMain img');
+  if(main)main.src=src;
+  document.querySelectorAll('.gallery-thumbs img').forEach(function(t){t.classList.remove('active')});
+  thumb.classList.add('active');
+}
 function openLb(src){
   var lb=document.getElementById('lightbox');
   if(!lb)return;
