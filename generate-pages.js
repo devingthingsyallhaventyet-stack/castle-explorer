@@ -478,15 +478,10 @@ ${bigImg ? `<img src="${escapeHtml(bigImg)}" alt="${escapeHtml(castle.name)}" lo
 <div class="info-panel">
 <h1>${escapeHtml(castle.name)}</h1>
 <p class="info-location">📍 ${escapeHtml(castle.county || '')}, ${escapeHtml(castle.country || '')}</p>
-<div class="info-tags">
-<span class="info-tag type-tag" style="border-left-color:${typeColor}">${typeEmoji} ${escapeHtml(castle.type)}</span>
-${castle.era ? `<span class="info-tag">🕰️ ${escapeHtml(castle.era)}</span>` : ''}
-${castle.access ? `<span class="info-tag">${accessLabel(castle.access)}</span>` : ''}
-</div>
 ${castle.rating ? `<div class="rating-section">
 <span class="rating-big">${castle.rating}</span>
 <span class="rating-stars">${stars}</span>
-<span class="rating-count">${(castle.reviewCount||0).toLocaleString()} reviews</span>
+<a href="https://www.google.com/maps/search/${encodeURIComponent(castle.name)}+${encodeURIComponent(castle.county || '')}/@${castle.lat},${castle.lng},15z" target="_blank" rel="noopener" class="rating-count">${(castle.reviewCount||0).toLocaleString()} reviews</a>
 </div>` : ''}
 <div class="quick-facts">
 <div class="qf-item"><div class="qf-label">Type</div><div class="qf-value">${typeEmoji} ${escapeHtml(castle.type)}</div></div>
