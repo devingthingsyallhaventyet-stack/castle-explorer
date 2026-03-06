@@ -547,7 +547,7 @@ ${FLOURISH}
 <div class="lb-overlay" id="lightbox" onclick="this.classList.remove('open')"><img src="" alt="Photo"></div>
 
 <footer>
-<p style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:4px">castlecore</p>
+<p style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:4px"><img src="../logo.jpg" alt="castlecore" style="height:48px;width:auto;border-radius:4px;vertical-align:middle;margin-right:8px">castlecore</p>
 <p>The most complete heritage guide for the UK &amp; Ireland</p>
 <p style="margin-top:8px">© 2026 castlecore · <a href="../index.html">Home</a> · <a href="../explore.html">Map</a></p>
 </footer>
