@@ -53,13 +53,37 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 img{max-width:100%;display:block}
 
 /* NAV */
-.site-header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.site-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--shadow);display:flex;align-items:center;gap:6px}
-.site-header nav{display:flex;gap:16px;align-items:center}
-.site-header nav a{font-size:.85rem;font-weight:500;color:var(--twilight)}
-.site-header nav a:hover{color:var(--burgundy);text-decoration:none}
-.nav-btn{background:var(--burgundy);color:#fff;padding:6px 16px;border-radius:var(--pill);font-weight:600;font-size:.85rem}
+.site-nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;padding:0 24px}
+.site-nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.site-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--shadow);display:flex;align-items:center;gap:6px;flex-shrink:0}
+.site-logo:hover{text-decoration:none}
+.snav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.snav-dd{position:relative}
+.snav-dd>.snav-btn{font-size:.85rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:5px 8px;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:3px}
+.snav-dd:hover>.snav-btn{color:var(--burgundy)}
+.snav-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:190px;padding:8px 0;z-index:1001;margin-top:6px}
+.snav-dd:hover .snav-panel{display:block}
+.snav-panel a{display:block;padding:7px 16px;font-size:.85rem;color:var(--shadow);text-decoration:none}
+.snav-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.snav-panel .sh{padding:5px 16px 3px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);pointer-events:none}
+.snav-panel .sd{height:1px;background:var(--border);margin:3px 0}
+.snav-search{position:relative;max-width:180px;flex-shrink:1}
+.snav-search input{width:100%;padding:6px 10px 6px 28px;border:1px solid var(--border);border-radius:var(--pill);font-size:.8rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white)}
+.snav-search input:focus{border-color:var(--candlelight);background:#fff}
+.snav-search .ssi{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.8rem;pointer-events:none}
+.snav-right{display:flex;align-items:center;flex-shrink:0}
+.nav-btn{background:var(--burgundy);color:#fff;padding:6px 16px;border-radius:var(--pill);font-weight:600;font-size:.85rem;display:inline-block}
 .nav-btn:hover{background:#6e1a2a;color:#fff;text-decoration:none}
+.snav-hamburger{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer}
+.snav-mobile{display:none;position:fixed;top:56px;left:0;right:0;bottom:0;background:#fff;padding:12px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.snav-mobile.open{display:flex}
+.snav-mobile a{font-size:.95rem;font-weight:500;color:var(--twilight);padding:9px 0;border-bottom:1px solid var(--border);text-decoration:none}
+.snav-mobile .smh{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:12px 0 3px;border-bottom:none}
+.snav-mobile .sms a{padding-left:14px;font-size:.9rem}
+.snav-mob-search{padding:6px 0 10px;position:relative}
+.snav-mob-search input{width:100%;padding:9px 12px 9px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.9rem;font-family:'Inter',sans-serif;outline:none}
+.snav-mob-search .ssi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.95rem;pointer-events:none}
+@media(max-width:600px){.snav-center{display:none}.snav-right .nav-btn{display:none}.snav-hamburger{display:block}}
 
 /* HERO */
 .hero-image{position:relative;width:100%;height:400px;overflow:hidden;background:var(--cream)}
@@ -184,14 +208,28 @@ footer a{color:var(--candlelight)}
 </style>
 </head>
 <body>
-<header class="site-header">
+<nav class="site-nav">
+<div class="site-nav-inner">
 <a href="../index.html" class="site-logo">castlecore</a>
-<nav>
-<a href="../index.html" class="nav-hide-mobile">Collections</a>
-<a href="../explore.html" class="nav-hide-mobile">Map</a>
-<a href="../explore.html" class="nav-btn">Explore Map</a>
+<div class="snav-center">
+<div class="snav-dd"><button class="snav-btn">Sites <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=tower+house">🗼 Tower Houses</a><a href="../search.html?type=palace">👑 Palaces</a><a href="../search.html?type=fort">🛡️ Forts</a></div></div>
+<div class="snav-dd"><button class="snav-btn">Regions <span style="font-size:.55rem">▼</span></button><div class="snav-panel" style="min-width:220px"><div class="sh">England</div><a href="../region.html?id=london-surrey">London &amp; Surrey</a><a href="../region.html?id=south-east-england">South East</a><a href="../region.html?id=south-west-england">South West</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=midlands">The Midlands</a><a href="../region.html?id=yorkshire">Yorkshire</a><div class="sd"></div><div class="sh">Scotland</div><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=scottish-lowlands">Lowlands</a><div class="sd"></div><div class="sh">Wales</div><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=south-wales">South Wales</a><div class="sd"></div><a href="../region.html?id=ireland">🍀 Ireland</a><a href="../search.html?region=Northern+Ireland">N. Ireland</a></div></div>
+<div class="snav-dd"><button class="snav-btn">Collections <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=hidden-gems">💎 Hidden Gems</a><a href="../collection.html?id=haunted">👻 Haunted</a><a href="../collection.html?id=free">🆓 Free to Visit</a><a href="../collection.html?id=photogenic">📸 Photogenic</a><div class="sd"></div><a href="../collection.html">View all →</a></div></div>
+<a href="../trail.html" class="snav-btn" style="text-decoration:none">Trails</a>
+<div class="snav-search"><span class="ssi">🔍</span><input type="text" id="snavSearch" placeholder="Search..." autocomplete="off"></div>
+</div>
+<div class="snav-right"><a href="../explore.html" class="nav-btn">🗺️ Explore Map</a></div>
+<button class="snav-hamburger" onclick="document.querySelector('.snav-mobile').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
 </nav>
-</header>
+<div class="snav-mobile">
+<div class="snav-mob-search"><span class="ssi">🔍</span><input type="text" id="snavMobSearch" placeholder="Search castles..." autocomplete="off"></div>
+<a href="../explore.html" style="color:var(--burgundy);font-weight:700">🗺️ Explore Map</a>
+<span class="smh">Sites</span><div class="sms"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=palace">👑 Palaces</a></div>
+<span class="smh">Regions</span><div class="sms"><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=ireland">Ireland</a></div>
+<span class="smh">Collections</span><div class="sms"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=free">🆓 Free</a><a href="../collection.html">View all →</a></div>
+<a href="../trail.html">🥾 Trails</a>
+</div>
 <main data-castle-name="Antrim Castle Gardens" data-lat="54.7167" data-lng="-6.2167">
 <div class="hero-image">
 
@@ -330,6 +368,8 @@ function openLb(src){
   lb.classList.add('open');
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('lightbox');if(lb)lb.classList.remove('open')}});
+var snavS=document.getElementById('snavSearch');if(snavS)snavS.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
+var snavM=document.getElementById('snavMobSearch');if(snavM)snavM.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
 </script>
 </body>
 </html>
