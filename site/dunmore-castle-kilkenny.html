@@ -61,7 +61,8 @@ img{max-width:100%;display:block}
 .snav-dd{position:relative}
 .snav-dd>.snav-btn{font-size:.85rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:5px 8px;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:3px}
 .snav-dd:hover>.snav-btn{color:var(--burgundy)}
-.snav-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:190px;padding:8px 0;z-index:1001;margin-top:6px}
+.snav-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:190px;padding:8px 0;z-index:1001;padding-top:16px;margin-top:0}
+.snav-dd::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
 .snav-dd:hover .snav-panel{display:block}
 .snav-panel a{display:block;padding:7px 16px;font-size:.85rem;color:var(--shadow);text-decoration:none}
 .snav-panel a:hover{background:var(--cream);color:var(--burgundy)}
@@ -83,7 +84,7 @@ img{max-width:100%;display:block}
 .snav-mob-search{padding:6px 0 10px;position:relative}
 .snav-mob-search input{width:100%;padding:9px 12px 9px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.9rem;font-family:'Inter',sans-serif;outline:none}
 .snav-mob-search .ssi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.95rem;pointer-events:none}
-@media(max-width:600px){.snav-center{display:none}.snav-right .nav-btn{display:none}.snav-hamburger{display:block}}
+@media(max-width:600px){.snav-center{display:none}.snav-right .nav-btn{display:none}.snav-right .btn-login{display:none!important}.snav-hamburger{display:block}}
 
 /* HERO */
 .hero-image{position:relative;width:100%;height:400px;overflow:hidden;background:var(--cream)}
@@ -212,23 +213,24 @@ footer a{color:var(--candlelight)}
 <div class="site-nav-inner">
 <a href="../index.html" class="site-logo">castlecore</a>
 <div class="snav-center">
-<div class="snav-dd"><button class="snav-btn">Sites <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=tower+house">🗼 Tower Houses</a><a href="../search.html?type=palace">👑 Palaces</a><a href="../search.html?type=fort">🛡️ Forts</a></div></div>
-<div class="snav-dd"><button class="snav-btn">Regions <span style="font-size:.55rem">▼</span></button><div class="snav-panel" style="min-width:220px"><div class="sh">England</div><a href="../region.html?id=london-surrey">London &amp; Surrey</a><a href="../region.html?id=south-east-england">South East</a><a href="../region.html?id=south-west-england">South West</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=midlands">The Midlands</a><a href="../region.html?id=yorkshire">Yorkshire</a><div class="sd"></div><div class="sh">Scotland</div><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=scottish-lowlands">Lowlands</a><div class="sd"></div><div class="sh">Wales</div><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=south-wales">South Wales</a><div class="sd"></div><a href="../region.html?id=ireland">🍀 Ireland</a><a href="../search.html?region=Northern+Ireland">N. Ireland</a></div></div>
-<div class="snav-dd"><button class="snav-btn">Collections <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=hidden-gems">💎 Hidden Gems</a><a href="../collection.html?id=haunted">👻 Haunted</a><a href="../collection.html?id=free">🆓 Free to Visit</a><a href="../collection.html?id=photogenic">📸 Photogenic</a><div class="sd"></div><a href="../collection.html">View all →</a></div></div>
-<a href="../trail.html" class="snav-btn" style="text-decoration:none">Trails</a>
+<div class="snav-dd"><button class="snav-btn">🏰 Sites <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=tower+house">🗼 Tower Houses</a><a href="../search.html?type=palace">👑 Palaces</a><a href="../search.html?type=fort">🛡️ Forts</a></div></div>
+<div class="snav-dd"><button class="snav-btn">🗺️ Regions <span style="font-size:.55rem">▼</span></button><div class="snav-panel" style="min-width:220px"><div class="sh">England</div><a href="../region.html?id=london-surrey">London &amp; Surrey</a><a href="../region.html?id=south-east-england">South East</a><a href="../region.html?id=south-west-england">South West</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=midlands">The Midlands</a><a href="../region.html?id=yorkshire">Yorkshire</a><div class="sd"></div><div class="sh">Scotland</div><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=scottish-lowlands">Lowlands</a><div class="sd"></div><div class="sh">Wales</div><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=south-wales">South Wales</a><div class="sd"></div><a href="../region.html?id=ireland">🍀 Ireland</a><a href="../search.html?region=Northern+Ireland">N. Ireland</a></div></div>
+<div class="snav-dd"><button class="snav-btn">✨ Collections <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=hidden-gems">💎 Hidden Gems</a><a href="../collection.html?id=haunted">👻 Haunted</a><a href="../collection.html?id=free">🆓 Free to Visit</a><a href="../collection.html?id=photogenic">📸 Photogenic</a><div class="sd"></div><a href="../collection.html">View all →</a></div></div>
+<a href="../trail.html" class="snav-btn" style="text-decoration:none">🛤️ Routes</a>
 <div class="snav-search"><span class="ssi">🔍</span><input type="text" id="snavSearch" placeholder="Search..." autocomplete="off"></div>
 </div>
-<div class="snav-right"><a href="../explore.html" class="nav-btn">🗺️ Explore Map</a></div>
+<div class="snav-right"><a href="../explore.html" class="nav-btn">🧭 Explore Map</a><button class="btn-login" onclick="alert('Login coming soon!')" style="background:none;border:2px solid var(--border);color:var(--twilight);padding:5px 12px;border-radius:var(--pill);font-weight:500;font-size:.82rem;cursor:pointer;font-family:'Inter',sans-serif;margin-left:8px;display:inline-flex;align-items:center;gap:3px" onmouseover="this.style.borderColor='var(--burgundy)';this.style.color='var(--burgundy)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--twilight)'">👤 Login</button></div>
 <button class="snav-hamburger" onclick="document.querySelector('.snav-mobile').classList.toggle('open')" aria-label="Menu">☰</button>
 </div>
 </nav>
 <div class="snav-mobile">
 <div class="snav-mob-search"><span class="ssi">🔍</span><input type="text" id="snavMobSearch" placeholder="Search castles..." autocomplete="off"></div>
-<a href="../explore.html" style="color:var(--burgundy);font-weight:700">🗺️ Explore Map</a>
-<span class="smh">Sites</span><div class="sms"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=palace">👑 Palaces</a></div>
-<span class="smh">Regions</span><div class="sms"><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=ireland">Ireland</a></div>
-<span class="smh">Collections</span><div class="sms"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=free">🆓 Free</a><a href="../collection.html">View all →</a></div>
-<a href="../trail.html">🥾 Trails</a>
+<a href="../explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
+<span class="smh">🏰 Sites</span><div class="sms"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=palace">👑 Palaces</a></div>
+<span class="smh">🗺️ Regions</span><div class="sms"><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=ireland">Ireland</a></div>
+<span class="smh">✨ Collections</span><div class="sms"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=free">🆓 Free</a><a href="../collection.html">View all →</a></div>
+<a href="../trail.html">🛤️ Routes</a>
+<a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:8px;font-weight:600;color:var(--twilight)">👤 Login</a>
 </div>
 <main data-castle-name="Dunmore Castle Kilkenny" data-lat="52.736" data-lng="-7.175">
 <div class="hero-image">
@@ -288,12 +290,12 @@ footer a{color:var(--candlelight)}
 <div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
 
 <!-- NEARBY -->
-<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./dunmore-cave-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Dunmore Cave Castle</div><div class="nearby-meta">★ 3.4 · 5 km · castle</div></div></a><a href="./clogh-castle-kilkenny.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Clogh Castle Kilkenny</div><div class="nearby-meta">★ 3.3 · 5 km · tower house</div></div></a><a href="./grennan-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Grennan Castle</div><div class="nearby-meta">★ 3.5 · 6 km · castle</div></div></a><a href="./foulksrath-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Foulksrath Castle</div><div class="nearby-meta">★ 3.7 · 7 km · tower house</div></div></a><a href="./st-canice-s-cathedral.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">St Canice&#39;s Cathedral</div><div class="nearby-meta">★ 4.5 · 10 km · abbey</div></div></a></div></section>
+<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./shankill-castle-kilkenny.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Shankill Castle Kilkenny</div><div class="nearby-meta">★ 3.6 · 4 km · castle</div></div></a><a href="./dunmore-cave-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Dunmore Cave Castle</div><div class="nearby-meta">★ 3.4 · 5 km · castle</div></div></a><a href="./clogh-castle-kilkenny.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Clogh Castle Kilkenny</div><div class="nearby-meta">★ 3.3 · 5 km · tower house</div></div></a><a href="./grennan-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Grennan Castle</div><div class="nearby-meta">★ 3.5 · 6 km · castle</div></div></a><a href="./foulksrath-castle.html" class="nearby-card"><div class="nearby-body"><div class="nearby-name">Foulksrath Castle</div><div class="nearby-meta">★ 3.7 · 7 km · tower house</div></div></a></div></section>
 
 <!-- CTA -->
 <div class="cta-section">
 <a href="../explore.html" class="cta-button">🗺️ Explore the Map</a>
-<a href="../index.html" class="cta-secondary">Discover all 3,078+ sites →</a>
+<a href="../index.html" class="cta-secondary">Discover all 3,164+ sites →</a>
 </div>
 </div>
 </main>
