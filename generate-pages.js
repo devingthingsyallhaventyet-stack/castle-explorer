@@ -67,7 +67,7 @@ function findNearby(castle, count=5, maxKm=30) {
 
 // ===== Bigger hero image =====
 function heroImg(castle) {
-  if (!castle.image) return '';
+  if (!castle.image) return '../placeholder.svg';
   // Upgrade from 120px thumb to 1280px for sharp hero images
   return castle.image.replace(/\/\d+px-/, '/1280px-');
 }
@@ -395,8 +395,8 @@ function generatePage(castle) {
   if (nearby.length) {
     nearbyHtml = `<div class="nearby-grid">${nearby.map(n => {
       const ns = slugMap.get(n.castle.name);
-      const nImg = n.castle.image ? n.castle.image.replace(/\/\d+px-/, '/250px-') : '';
-      return `<a href="./${ns}.html" class="nearby-card">${nImg ? `<img class="nearby-thumb" src="${escapeHtml(nImg)}" alt="${escapeHtml(n.castle.name)}" loading="lazy" onerror="this.style.display='none'">` : ''}<div class="nearby-body"><div class="nearby-name">${escapeHtml(n.castle.name)}</div><div class="nearby-meta">★ ${n.castle.rating} · ${n.dist.toFixed(0)} km · ${escapeHtml(n.castle.type)}</div></div></a>`;
+      const nImg = n.castle.image ? n.castle.image.replace(/\/\d+px-/, '/250px-') : '../placeholder.svg';
+      return `<a href="./${ns}.html" class="nearby-card"><img class="nearby-thumb" src="${escapeHtml(nImg)}" alt="${escapeHtml(n.castle.name)}" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">${escapeHtml(n.castle.name)}</div><div class="nearby-meta">★ ${n.castle.rating} · ${n.dist.toFixed(0)} km · ${escapeHtml(n.castle.type)}</div></div></a>`;
     }).join('')}</div>`;
   } else {
     nearbyHtml = `<p class="terrain-note">No nearby sites within 30 km.</p>`;

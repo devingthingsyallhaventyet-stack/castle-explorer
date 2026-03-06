@@ -2,136 +2,98 @@ const fs = require('fs');
 const path = require('path');
 
 const DATA_FILE = path.join(__dirname, 'data.js');
-const UA = 'castlecore-bot/1.0 (castle explorer project)';
-const THUMB_SIZE = 500;
-const BATCH = 5;
-const TIMEOUT_MS = 8000;
+
+function readCastles() {
+  const raw = fs.readFileSync(DATA_FILE, 'utf8');
+  return JSON.parse(raw.replace(/^const CASTLES\s*=\s*/, '').replace(/;\s*$/, ''));
+}
+
+function saveCastles(castles) {
+  fs.writeFileSync(DATA_FILE, 'const CASTLES = ' + JSON.stringify(castles, null, 2) + ';', 'utf8');
+}
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// Strip common suffixes that won't match Wikipedia
-function cleanName(name) {
-  let clean = name
-    .replace(/\s*\(Main\)\s*/g, '')
-    .replace(/\s*\(Ruin[s]?\)\s*/g, '')
-    .replace(/\s*\(Site\)\s*/g, '')
-    .replace(/\s*\(Interior\)\s*/g, '')
-    .trim();
-  
-  // Remove trailing descriptors
-  const suffixes = ['Keep', 'Interior', 'Ruins', 'Ruin', 'Site', 'Mound', 'Gatehouse', 'Gardens', 'Grounds', 'Tower House'];
-  for (const s of suffixes) {
-    if (clean.endsWith(' ' + s)) {
-      clean = clean.slice(0, -(s.length + 1)).trim();
-      break;
-    }
-  }
-  return clean;
-}
-
 async function queryWiki(title) {
-  const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&format=json&pithumbsize=${THUMB_SIZE}`;
+  const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&format=json&pithumbsize=500`;
   try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
-    const res = await fetch(url, { headers: { 'User-Agent': UA }, signal: controller.signal });
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 5000);
+    const res = await fetch(url, {
+      signal: ctrl.signal,
+      headers: { 'User-Agent': 'castlecore-bot/1.0 (castle explorer project; contact@example.com)', 'Accept': 'application/json' }
+    });
     clearTimeout(timer);
     const data = await res.json();
-    const pages = data.query?.pages;
-    if (!pages) return null;
-    for (const id of Object.keys(pages)) {
-      if (pages[id]?.thumbnail?.source) {
-        return pages[id].thumbnail.source;
-      }
+    for (const p of Object.values(data.query?.pages || {})) {
+      if (p.thumbnail?.source) return p.thumbnail.source;
     }
-  } catch (e) {}
+  } catch(e) { /* skip */ }
   return null;
 }
 
-async function findImage(castle) {
-  const raw = castle.name;
-  const clean = cleanName(raw);
-  
-  // Build query list - try cleaned name first, then with location qualifiers
-  const queries = new Set();
-  queries.add(clean);
-  if (clean !== raw) queries.add(raw); // try original too
-  if (castle.county) queries.add(`${clean} ${castle.county}`);
-  if (castle.country) queries.add(`${clean} ${castle.country}`);
-  // If name doesn't contain castle/palace/abbey etc, try adding "castle"
-  const lc = clean.toLowerCase();
-  if (!lc.includes('castle') && !lc.includes('palace') && !lc.includes('abbey') && !lc.includes('priory') && !lc.includes('cathedral') && !lc.includes('church') && !lc.includes('fort')) {
-    queries.add(`${clean} castle`);
-  }
-  
-  for (const q of queries) {
-    const img = await queryWiki(q);
+async function findImage(c) {
+  let img = await queryWiki(c.name);
+  if (img) return img;
+  await sleep(50);
+  if (c.county) {
+    img = await queryWiki(c.name + ' ' + c.county);
     if (img) return img;
-    await sleep(30);
+    await sleep(50);
+  }
+  if (c.country) {
+    img = await queryWiki(c.name + ' ' + c.country);
+    if (img) return img;
   }
   return null;
-}
-
-function loadCastles() {
-  const raw = fs.readFileSync(DATA_FILE, 'utf-8');
-  const fn = new Function(raw + '\nreturn CASTLES;');
-  return fn();
-}
-
-function writeCastles(castles) {
-  let out = 'const CASTLES = [\n';
-  let first = true;
-  for (let i = 0; i < castles.length; i++) {
-    if (castles[i] == null) continue;
-    if (!first) out += ',\n';
-    out += '  ' + JSON.stringify(castles[i]);
-    first = false;
-  }
-  out += '\n];\n';
-  fs.writeFileSync(DATA_FILE, out, 'utf-8');
 }
 
 async function main() {
-  const castles = loadCastles();
-  console.log(`Total castles: ${castles.length}`);
-  
-  const toProcess = [];
-  for (let i = 0; i < castles.length; i++) {
-    if (castles[i] && !castles[i].image) toProcess.push(i);
+  console.log('Loading data...');
+  const castles = readCastles();
+  let newImages = 0, stillMissing = 0, upgraded = 0;
+
+  // Upgrade 120px thumbnails (deferred to end)
+  // count for reporting
+  for (const c of castles) {
+    if (c.image && c.image.includes('120px-')) upgraded++;
   }
-  console.log(`Missing images: ${toProcess.length}`);
-  
-  let found = 0;
-  let done = 0;
-  
-  for (let b = 0; b < toProcess.length; b += BATCH) {
-    const batch = toProcess.slice(b, b + BATCH);
-    const results = await Promise.all(batch.map(async idx => {
-      try {
-        const img = await findImage(castles[idx]);
-        if (img) {
-          castles[idx].image = img;
-          return true;
-        }
-      } catch(e) {}
-      return false;
-    }));
-    
-    found += results.filter(Boolean).length;
-    done += batch.length;
-    
-    if (done % 100 < BATCH) {
-      console.log(`Progress: ${done}/${toProcess.length}, found: ${found}`);
-    }
-    if (done % 500 < BATCH) {
-      writeCastles(castles);
-      console.log('Checkpoint saved.');
+
+  // Build missing list
+  const missing = [];
+  for (let i = 0; i < castles.length; i++) {
+    if (!castles[i].image) missing.push(i);
+  }
+  console.log(`${missing.length} entries need images out of ${castles.length} total`);
+
+  console.log(`Will upgrade ${upgraded} 120px thumbnails at end`);
+
+  for (let mi = 0; mi < missing.length; mi++) {
+    const idx = missing[mi];
+    const c = castles[idx];
+    try {
+      const img = await findImage(c);
+      if (img) { castles[idx].image = img; newImages++; }
+      else { stillMissing++; }
+    } catch(e) {
+      stillMissing++;
     }
     await sleep(50);
+    if ((mi + 1) % 100 === 0) console.log(`Processed ${mi + 1}/${missing.length} — found ${newImages} so far`);
+    if ((mi + 1) % 500 === 0) { saveCastles(castles); console.log('Saved checkpoint'); }
   }
-  
-  writeCastles(castles);
-  console.log(`\nDone! Found ${found} images out of ${toProcess.length} missing.`);
+
+  // Now do 120px upgrades
+  for (const c of castles) {
+    if (c.image && c.image.includes('120px-')) {
+      c.image = c.image.replace(/\/\d+px-/, '/500px-');
+    }
+  }
+  saveCastles(castles);
+  console.log(`\nDone!`);
+  console.log(`New images found: ${newImages}`);
+  console.log(`Still missing: ${stillMissing}`);
+  console.log(`120px upgraded: ${upgraded}`);
 }
 
-main().catch(console.error);
+main().catch(e => { console.error('ERROR:', e); process.exit(1); });

@@ -296,9 +296,8 @@ return s+' '+r.toFixed(1);
 function renderCard(c){
 const rawImg=c.wiki_img||c.image||'';
 const bigImg=rawImg.replace(/\/\d+px-/,'/500px-');
-const imgHtml=bigImg
-?`<img src="${bigImg}" alt="${c.name}" loading="lazy" onerror="this.style.display='none'">`
-:'';
+const imgSrc=bigImg||'placeholder.svg';
+const imgHtml=`<img src="${imgSrc}" alt="${c.name}" loading="lazy" onerror="this.src='placeholder.svg'">`;
 const ratingHtml=c.rating?`<p class="card-rating">${stars(c.rating)}</p>`:'';
 const accessHtml=c.access?`<span class="access-pill ${c.access==='free'?'access-free':'access-paid'}">${c.access}</span>`:'';
 return `<a class="card" href="site/${slug(c.name)}.html">

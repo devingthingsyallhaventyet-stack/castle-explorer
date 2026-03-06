@@ -759,7 +759,7 @@ function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|
 var typeColors={castle:'#E05A33',palace:'#E6A817',abbey:'#2E8B57',tower:'#4A7FC1',fortified:'#8B5CF6'};
 function getColor(t){if(!t)return'var(--twilight)';var l=t.toLowerCase();for(var k in typeColors)if(l.includes(k))return typeColors[k];return'var(--twilight)'}
 el.innerHTML=results.slice(0,12).map(function(r){
-var c=r.c;var img=c.img?'<img src="'+c.img.replace('/120px-','/250px-')+'" style="width:64px;height:64px;border-radius:8px;object-fit:cover;flex-shrink:0" onerror="this.style.display=\'none\'">':'';
+var c=r.c;var imgSrc=c.img?c.img.replace('/120px-','/250px-'):'placeholder.svg';var img='<img src="'+imgSrc+'" style="width:64px;height:64px;border-radius:8px;object-fit:cover;flex-shrink:0" onerror="this.src=\'placeholder.svg\'">';
 return '<a href="site/'+slug(c.name)+'.html" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);text-decoration:none;color:inherit;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">'+img+'<div style="flex:1;min-width:0"><div style="font-weight:600;font-size:.95rem">'+c.name+'</div><div style="font-size:.8rem;color:var(--twilight)">'+Math.round(r.d)+' km · '+(c.county||'')+', '+(c.country||'')+'</div><span style="display:inline-block;margin-top:4px;font-size:.7rem;padding:2px 8px;border-radius:10px;background:'+getColor(c.type)+';color:#fff">'+(c.type||'Site')+'</span></div></a>'
 }).join('')+'<div style="text-align:center;margin-top:16px"><a href="explore.html" style="color:var(--burgundy);font-weight:600;font-size:.9rem">View all on map →</a></div>';
 }
