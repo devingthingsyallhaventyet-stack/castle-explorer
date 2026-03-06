@@ -31,6 +31,19 @@ img{max-width:100%;display:block}
 .nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
 .nav-drop-panel .drop-heading{padding:6px 18px 4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);pointer-events:none}
 .nav-drop-panel .drop-divider{height:1px;background:var(--border);margin:4px 0}
+/* MEGA MENU */
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:420px;z-index:1001;margin-top:0;padding:0;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:var(--warm-white);border-right:1px solid var(--border);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:var(--burgundy);background:var(--cream)}
+.mega-country.active{color:var(--burgundy);background:#fff;border-left-color:var(--burgundy);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:var(--shadow);transition:background .15s,color .15s;text-decoration:none}
+.mega-panel a:hover{background:var(--cream);color:var(--burgundy)}
 .nav-search-wrap{position:relative;flex-shrink:1;max-width:200px}
 .nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white);transition:border-color .2s,width .2s}
 .nav-search-wrap input:focus{border-color:var(--candlelight);background:#fff;box-shadow:0 0 0 2px rgba(201,168,76,.12)}
@@ -280,9 +293,17 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="search.html?type=fortified+house">🏠 Fortified Houses</a>
 </div>
 </div>
-<div class="nav-dropdown">
-<button class="nav-drop-btn">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England <span style="font-size:.6rem">▼</span></button>
-<div class="nav-drop-panel">
+<div class="nav-dropdown mega-wrap">
+<button class="nav-drop-btn">🗺️ Regions <span style="font-size:.6rem">▼</span></button>
+<div class="mega-menu">
+<div class="mega-countries">
+<button class="mega-country active" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</button>
+<button class="mega-country" data-country="scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</button>
+<button class="mega-country" data-country="wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</button>
+<button class="mega-country" data-country="ireland">🍀 Ireland</button>
+</div>
+<div class="mega-regions">
+<div class="mega-panel active" data-country="england">
 <a href="region.html?id=london-surrey">London &amp; Surrey</a>
 <a href="region.html?id=south-east-england">South East</a>
 <a href="region.html?id=south-west-england">South West</a>
@@ -291,24 +312,15 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="region.html?id=yorkshire">Yorkshire</a>
 <a href="region.html?id=east-anglia">East Anglia</a>
 </div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-drop-btn">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland <span style="font-size:.6rem">▼</span></button>
-<div class="nav-drop-panel">
+<div class="mega-panel" data-country="scotland">
 <a href="region.html?id=scottish-highlands">Highlands</a>
 <a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
 </div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-drop-btn">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales <span style="font-size:.6rem">▼</span></button>
-<div class="nav-drop-panel">
+<div class="mega-panel" data-country="wales">
 <a href="region.html?id=north-wales">North Wales</a>
 <a href="region.html?id=south-wales">South Wales</a>
 </div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-drop-btn">🍀 Ireland <span style="font-size:.6rem">▼</span></button>
-<div class="nav-drop-panel">
+<div class="mega-panel" data-country="ireland">
 <a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
 <a href="region.html?id=south-east-ireland">South East</a>
 <a href="region.html?id=south-west-ireland">South West</a>
@@ -316,6 +328,8 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="region.html?id=midlands-ireland">Midlands</a>
 <a href="region.html?id=north-west-ireland">North West</a>
 <a href="region.html?id=northern-ireland">Northern Ireland</a>
+</div>
+</div>
 </div>
 </div>
 <div class="nav-dropdown">
@@ -607,6 +621,19 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 
 <!-- SEARCH -->
 <script src="data.js"></script>
+<script>
+/* Mega menu hover logic */
+(function(){
+document.querySelectorAll('.mega-country').forEach(btn=>{
+btn.addEventListener('mouseenter',function(){
+const c=this.dataset.country;
+this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+this.classList.add('active');
+this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+});
+});
+})();
+</script>
 <script>
 (function(){
 const input=document.getElementById('heroSearch');
