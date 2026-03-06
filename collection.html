@@ -266,8 +266,9 @@ function render() {
   document.getElementById('resultsCount').textContent = `Showing ${filtered.length} of ${allSites.length} sites`;
   const grid = document.getElementById('resultsGrid');
   grid.innerHTML = filtered.map(s => {
-    const imgHtml = s.image
-      ? `<img src="${s.image}" alt="${s.name}" loading="lazy">`
+    const bigImg = s.image ? s.image.replace(/\/\d+px-/, '/800px-') : '';
+    const imgHtml = bigImg
+      ? `<img src="${bigImg}" alt="${s.name}" loading="lazy">`
       : '';
     const rating = s.rating ? `<span class="card-rating">★ ${s.rating}</span>` : '';
     const loc = [s.county, s.country].filter(Boolean).join(', ');

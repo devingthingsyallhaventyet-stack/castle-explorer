@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search — castlecore</title>
+<title>Search â€” castlecore</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,8 @@ img{max-width:100%;display:block}
 .nav-dropdown{position:relative}
 .nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
 .nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
-.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:1001;margin-top:8px}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:1001;padding-top:16px;margin-top:0}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
 .nav-dropdown:hover .nav-drop-panel{display:block}
 .nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:var(--shadow);transition:background .15s}
 .nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
@@ -114,29 +115,29 @@ footer{background:var(--shadow);color:#fff;padding:40px 24px 24px}
 <div class="nav-inner">
 <a href="index.html" class="nav-logo">castlecore</a>
 <div class="nav-center">
-<div class="nav-dropdown"><button class="nav-drop-btn">Sites <span style="font-size:.6rem">▼</span></button><div class="nav-drop-panel"><a href="search.html?type=castle">🏰 Castles</a><a href="search.html?type=abbey">⛪ Abbeys</a><a href="search.html?type=tower+house">🗼 Tower Houses</a><a href="search.html?type=palace">👑 Palaces</a><a href="search.html?type=fort">🛡️ Forts</a><a href="search.html?type=fortified+house">🏠 Fortified Houses</a></div></div>
-<div class="nav-dropdown"><button class="nav-drop-btn">Regions <span style="font-size:.6rem">▼</span></button><div class="nav-drop-panel" style="min-width:240px"><div class="drop-heading">England</div><a href="region.html?id=london-surrey">London &amp; Surrey</a><a href="region.html?id=south-east-england">South East</a><a href="region.html?id=south-west-england">South West</a><a href="region.html?id=northern-england">Northern England</a><a href="region.html?id=midlands">The Midlands</a><a href="region.html?id=yorkshire">Yorkshire</a><a href="region.html?id=east-anglia">East Anglia</a><div class="drop-divider"></div><div class="drop-heading">Scotland</div><a href="region.html?id=scottish-highlands">Highlands</a><a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a><div class="drop-divider"></div><div class="drop-heading">Wales</div><a href="region.html?id=north-wales">North Wales</a><a href="region.html?id=south-wales">South Wales</a><div class="drop-divider"></div><a href="region.html?id=ireland">🍀 Ireland</a><a href="search.html?region=Northern+Ireland">Northern Ireland</a></div></div>
-<div class="nav-dropdown"><button class="nav-drop-btn">Collections <span style="font-size:.6rem">▼</span></button><div class="nav-drop-panel"><a href="collection.html?id=top-rated">🏆 Top Rated</a><a href="collection.html?id=hidden-gems">💎 Hidden Gems</a><a href="collection.html?id=haunted">👻 Haunted</a><a href="collection.html?id=filming-locations">🎬 Filming Locations</a><a href="collection.html?id=free">🆓 Free to Visit</a><a href="collection.html?id=romantic-ruins">🌿 Romantic Ruins</a><a href="collection.html?id=photogenic">📸 Most Photogenic</a><div class="drop-divider"></div><a href="collection.html">View all collections →</a></div></div>
-<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">Trails</a>
-<div class="nav-search-wrap"><span class="nsi">🔍</span><input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off"></div>
+<div class="nav-dropdown"><button class="nav-drop-btn">Sites <span style="font-size:.6rem">â–¼</span></button><div class="nav-drop-panel"><a href="search.html?type=castle">ðŸ° Castles</a><a href="search.html?type=abbey">â›ª Abbeys</a><a href="search.html?type=tower+house">ðŸ—¼ Tower Houses</a><a href="search.html?type=palace">ðŸ‘‘ Palaces</a><a href="search.html?type=fort">ðŸ›¡ï¸ Forts</a><a href="search.html?type=fortified+house">ðŸ  Fortified Houses</a></div></div>
+<div class="nav-dropdown"><button class="nav-drop-btn">Regions <span style="font-size:.6rem">â–¼</span></button><div class="nav-drop-panel" style="min-width:240px"><div class="drop-heading">England</div><a href="region.html?id=london-surrey">London &amp; Surrey</a><a href="region.html?id=south-east-england">South East</a><a href="region.html?id=south-west-england">South West</a><a href="region.html?id=northern-england">Northern England</a><a href="region.html?id=midlands">The Midlands</a><a href="region.html?id=yorkshire">Yorkshire</a><a href="region.html?id=east-anglia">East Anglia</a><div class="drop-divider"></div><div class="drop-heading">Scotland</div><a href="region.html?id=scottish-highlands">Highlands</a><a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a><div class="drop-divider"></div><div class="drop-heading">Wales</div><a href="region.html?id=north-wales">North Wales</a><a href="region.html?id=south-wales">South Wales</a><div class="drop-divider"></div><a href="region.html?id=ireland">ðŸ€ Ireland</a><a href="search.html?region=Northern+Ireland">Northern Ireland</a></div></div>
+<div class="nav-dropdown"><button class="nav-drop-btn">Collections <span style="font-size:.6rem">â–¼</span></button><div class="nav-drop-panel"><a href="collection.html?id=top-rated">ðŸ† Top Rated</a><a href="collection.html?id=hidden-gems">ðŸ’Ž Hidden Gems</a><a href="collection.html?id=haunted">ðŸ‘» Haunted</a><a href="collection.html?id=filming-locations">ðŸŽ¬ Filming Locations</a><a href="collection.html?id=free">ðŸ†“ Free to Visit</a><a href="collection.html?id=romantic-ruins">ðŸŒ¿ Romantic Ruins</a><a href="collection.html?id=photogenic">ðŸ“¸ Most Photogenic</a><div class="drop-divider"></div><a href="collection.html">View all collections â†’</a></div></div>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">🛤️ Routes</a>
+<div class="nav-search-wrap"><span class="nsi">ðŸ”</span><input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off"></div>
 </div>
-<div class="nav-right"><a href="explore.html" class="btn-explore">🗺️ Explore Map</a></div>
-<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+<div class="nav-right"><a href="explore.html" class="btn-explore">ðŸ—ºï¸ Explore Map</a></div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">â˜°</button>
 </div>
 </nav>
 <div class="mobile-menu">
-<div class="mob-search-wrap"><span class="nsi">🔍</span><input type="text" id="mobNavSearch" placeholder="Search castles, regions..." autocomplete="off"></div>
-<a href="explore.html" style="color:var(--burgundy);font-weight:700">🗺️ Explore Map</a>
-<span class="mob-heading">Sites</span><div class="mob-sub"><a href="search.html?type=castle">🏰 Castles</a><a href="search.html?type=abbey">⛪ Abbeys</a><a href="search.html?type=tower+house">🗼 Tower Houses</a><a href="search.html?type=palace">👑 Palaces</a></div>
+<div class="mob-search-wrap"><span class="nsi">ðŸ”</span><input type="text" id="mobNavSearch" placeholder="Search castles, regions..." autocomplete="off"></div>
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">ðŸ—ºï¸ Explore Map</a>
+<span class="mob-heading">Sites</span><div class="mob-sub"><a href="search.html?type=castle">ðŸ° Castles</a><a href="search.html?type=abbey">â›ª Abbeys</a><a href="search.html?type=tower+house">ðŸ—¼ Tower Houses</a><a href="search.html?type=palace">ðŸ‘‘ Palaces</a></div>
 <span class="mob-heading">Regions</span><div class="mob-sub"><a href="region.html?id=scottish-highlands">Scottish Highlands</a><a href="region.html?id=north-wales">North Wales</a><a href="region.html?id=northern-england">Northern England</a><a href="region.html?id=ireland">Ireland</a></div>
-<span class="mob-heading">Collections</span><div class="mob-sub"><a href="collection.html?id=top-rated">🏆 Top Rated</a><a href="collection.html?id=free">🆓 Free to Visit</a><a href="collection.html">View all →</a></div>
-<a href="trail.html">🥾 Trails</a>
+<span class="mob-heading">Collections</span><div class="mob-sub"><a href="collection.html?id=top-rated">ðŸ† Top Rated</a><a href="collection.html?id=free">ðŸ†“ Free to Visit</a><a href="collection.html">View all â†’</a></div>
+<a href="trail.html">ðŸ¥¾ Trails</a>
 </div>
 
 <div class="search-header">
 <div class="search-header-inner">
 <div class="search-bar-wrap">
-<span class="si">🔍</span>
+<span class="si">ðŸ”</span>
 <input type="text" id="searchInput" placeholder="Search by name, postal code, or region..." autocomplete="off">
 </div>
 <h1 id="resultsTitle">Searching...</h1>
@@ -159,7 +160,7 @@ footer{background:var(--shadow);color:#fff;padding:40px 24px 24px}
 <div class="results-inner">
 <div class="results-grid" id="resultsGrid"></div>
 <div class="empty-state" id="emptyState" style="display:none">
-<div class="empty-icon">🏰</div>
+<div class="empty-icon">ðŸ°</div>
 <h2>No sites found</h2>
 <p>Try a different search term, or browse by region or type from the homepage.</p>
 </div>
@@ -171,8 +172,8 @@ footer{background:var(--shadow);color:#fff;padding:40px 24px 24px}
 
 <footer>
 <div class="footer-inner">
-<span>Built with ❤️ for history lovers</span>
-<span>© 2026 castlecore</span>
+<span>Built with â¤ï¸ for history lovers</span>
+<span>Â© 2026 castlecore</span>
 </div>
 </footer>
 
@@ -287,14 +288,14 @@ if(!r)return '';
 const full=Math.floor(r);
 const half=r-full>=0.3;
 let s='';
-for(let i=0;i<full;i++)s+='★';
-if(half)s+='½';
+for(let i=0;i<full;i++)s+='â˜…';
+if(half)s+='Â½';
 return s+' '+r.toFixed(1);
 }
 
 function renderCard(c){
 const rawImg=c.wiki_img||c.image||'';
-const bigImg=rawImg.replace(/\/\d+px-/,'/400px-');
+const bigImg=rawImg.replace(/\/\d+px-/,'/800px-');
 const imgHtml=bigImg
 ?`<img src="${bigImg}" alt="${c.name}" loading="lazy" onerror="this.style.display='none'">`
 :'';
@@ -403,7 +404,7 @@ filtered=results;
 const titleEl=document.getElementById('resultsTitle');
 if(title)titleEl.textContent='Results for "'+title+'"';
 else titleEl.textContent='Search';
-document.title=title?title+' — castlecore':'Search — castlecore';
+document.title=title?title+' â€” castlecore':'Search â€” castlecore';
 
 const input=document.getElementById('searchInput');
 input.value=params.q||params.region||params.type||params.tag||'';
