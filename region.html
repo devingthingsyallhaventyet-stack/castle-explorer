@@ -130,7 +130,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <!-- NAV -->
 <nav class="nav">
 <div class="nav-inner">
-<a href="/" class="nav-logo">castlecore</a>
+<a href="/" class="nav-logo"><img src="logo.jpg" alt="castlecore" style="height:84px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
 <div class="nav-links">
 <a href="explore.html" class="btn-explore">Explore Map</a>
 <a href="collection.html">Collections</a>
@@ -314,7 +314,8 @@ function render() {
   document.getElementById('resultsCount').textContent = `Showing ${filtered.length} of ${allSites.length} sites`;
   const grid = document.getElementById('resultsGrid');
   grid.innerHTML = filtered.map(s => {
-    const imgHtml = s.image ? `<img src="${s.image}" alt="${s.name}" loading="lazy">` : '';
+    const bigImg = s.image ? s.image.replace(/\/\d+px-/, '/500px-') : '';
+    const imgHtml = bigImg ? `<img src="${bigImg}" alt="${s.name}" loading="lazy">` : '';
     const rating = s.rating ? `<span class="card-rating">★ ${s.rating}</span>` : '';
     const loc = [s.county, s.country].filter(Boolean).join(', ');
     return `<a class="result-card" href="site/${slug(s.name)}.html"><div class="card-img">${imgHtml}</div><div class="card-body"><h3>${s.name}</h3><p class="card-loc">${loc}</p><div class="card-meta"><span class="type-pill">${s.type||''}</span>${rating}</div></div></a>`;
