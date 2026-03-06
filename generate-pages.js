@@ -393,7 +393,7 @@ function generatePage(castle) {
   if (nearby.length) {
     nearbyHtml = `<div class="nearby-grid">${nearby.map(n => {
       const ns = slugMap.get(n.castle.name);
-      const nImg = n.castle.image ? n.castle.image.replace(/\/\d+px-/, '/200px-') : '';
+      const nImg = n.castle.image ? n.castle.image.replace(/\/\d+px-/, '/250px-') : '';
       return `<a href="./${ns}.html" class="nearby-card">${nImg ? `<img class="nearby-thumb" src="${escapeHtml(nImg)}" alt="${escapeHtml(n.castle.name)}" loading="lazy" onerror="this.style.display='none'">` : ''}<div class="nearby-body"><div class="nearby-name">${escapeHtml(n.castle.name)}</div><div class="nearby-meta">★ ${n.castle.rating} · ${n.dist.toFixed(0)} km · ${escapeHtml(n.castle.type)}</div></div></a>`;
     }).join('')}</div>`;
   } else {

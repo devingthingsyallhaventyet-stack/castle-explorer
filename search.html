@@ -295,7 +295,7 @@ return s+' '+r.toFixed(1);
 
 function renderCard(c){
 const rawImg=c.wiki_img||c.image||'';
-const bigImg=rawImg.replace(/\/\d+px-/,'/800px-');
+const bigImg=rawImg.replace(/\/\d+px-/,'/500px-');
 const imgHtml=bigImg
 ?`<img src="${bigImg}" alt="${c.name}" loading="lazy" onerror="this.style.display='none'">`
 :'';
