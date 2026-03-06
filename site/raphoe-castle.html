@@ -55,7 +55,7 @@ img{max-width:100%;display:block}
 /* NAV */
 .site-nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:96px;display:flex;align-items:center;padding:0 24px}
 .site-nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.site-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--shadow);display:flex;align-items:center;gap:6px;flex-shrink:0}
+.site-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--shadow);display:flex;align-items:center;gap:2px;flex-shrink:0}
 .site-logo:hover{text-decoration:none}
 .snav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
 .snav-dd{position:relative}
@@ -68,7 +68,7 @@ img{max-width:100%;display:block}
 .snav-panel a:hover{background:var(--cream);color:var(--burgundy)}
 .snav-panel .sh{padding:5px 16px 3px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);pointer-events:none}
 .snav-panel .sd{height:1px;background:var(--border);margin:3px 0}
-.snav-search{position:relative;max-width:180px;flex-shrink:1}
+.snav-search{position:relative;max-width:180px;flex-shrink:1;margin-left:20px}
 .snav-search input{width:100%;padding:6px 10px 6px 28px;border:1px solid var(--border);border-radius:var(--pill);font-size:.8rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white)}
 .snav-search input:focus{border-color:var(--candlelight);background:#fff}
 .snav-search .ssi{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.8rem;pointer-events:none}
@@ -233,7 +233,7 @@ footer a{color:var(--candlelight)}
 <body>
 <nav class="site-nav">
 <div class="site-nav-inner">
-<a href="../index.html" class="site-logo"><img src="../logo.jpg" alt="castlecore" style="height:84px;width:auto;border-radius:4px;margin-right:6px;vertical-align:middle">castlecore</a>
+<a href="../index.html" class="site-logo"><img src="../logo.jpg" alt="castlecore" style="height:84px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
 <div class="snav-center">
 <div class="snav-dd"><button class="snav-btn">🏰 Sites <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=tower+house">🗼 Tower Houses</a><a href="../search.html?type=palace">👑 Palaces</a><a href="../search.html?type=fort">🛡️ Forts</a></div></div>
 <div class="snav-dd"><button class="snav-btn">🗺️ Regions <span style="font-size:.55rem">▼</span></button><div class="snav-panel" style="min-width:220px"><div class="sh">England</div><a href="../region.html?id=london-surrey">London &amp; Surrey</a><a href="../region.html?id=south-east-england">South East</a><a href="../region.html?id=south-west-england">South West</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=midlands">The Midlands</a><a href="../region.html?id=yorkshire">Yorkshire</a><div class="sd"></div><div class="sh">Scotland</div><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=scottish-lowlands">Lowlands</a><div class="sd"></div><div class="sh">Wales</div><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=south-wales">South Wales</a><div class="sd"></div><a href="../region.html?id=ireland">🍀 Ireland</a><a href="../search.html?region=Northern+Ireland">N. Ireland</a></div></div>
