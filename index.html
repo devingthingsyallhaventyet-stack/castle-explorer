@@ -24,7 +24,8 @@ img{max-width:100%;display:block}
 .nav-dropdown{position:relative}
 .nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
 .nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
-.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:1001;margin-top:8px}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:1001;padding-top:16px;margin-top:0}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
 .nav-dropdown:hover .nav-drop-panel{display:block}
 .nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:var(--shadow);transition:background .15s}
 .nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
@@ -51,6 +52,7 @@ img{max-width:100%;display:block}
 @media(max-width:768px){
 .nav-center{display:none}
 .nav-right .btn-explore{display:none}
+.nav-right .btn-login{display:none!important}
 .hamburger{display:block}
 }
 
@@ -107,6 +109,16 @@ img{max-width:100%;display:block}
 /* Subtle scroll/vine pattern on cream sections */
 .bg-cream{position:relative}
 .bg-cream::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--hearth) 20%,var(--candlelight) 50%,var(--hearth) 80%,transparent 100%);opacity:.15}
+
+/* HOW IT WORKS */
+.how-it-works{padding:40px 24px 32px;background:var(--cream)}
+.hiw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.hiw-step{padding:16px 12px}
+.hiw-icon{font-size:2rem;display:block;margin-bottom:8px}
+.hiw-step h3{font-size:1.05rem;margin-bottom:6px;color:var(--charcoal)}
+.hiw-step p{font-size:.88rem;color:var(--twilight);line-height:1.5;margin:0}
+@media(max-width:768px){.hiw-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+@media(max-width:480px){.hiw-grid{grid-template-columns:1fr}}
 
 /* SECTIONS */
 section{padding:48px 24px}
@@ -258,7 +270,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="/" class="nav-logo">castlecore</a>
 <div class="nav-center">
 <div class="nav-dropdown">
-<button class="nav-drop-btn">Sites <span style="font-size:.6rem">▼</span></button>
+<button class="nav-drop-btn">🏰 Sites <span style="font-size:.6rem">▼</span></button>
 <div class="nav-drop-panel">
 <a href="search.html?type=castle">🏰 Castles</a>
 <a href="search.html?type=abbey">⛪ Abbeys</a>
@@ -269,7 +281,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </div>
 </div>
 <div class="nav-dropdown">
-<button class="nav-drop-btn">Regions <span style="font-size:.6rem">▼</span></button>
+<button class="nav-drop-btn">🗺️ Regions <span style="font-size:.6rem">▼</span></button>
 <div class="nav-drop-panel" style="min-width:240px">
 <div class="drop-heading">England</div>
 <a href="region.html?id=london-surrey">London &amp; Surrey</a>
@@ -293,7 +305,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </div>
 </div>
 <div class="nav-dropdown">
-<button class="nav-drop-btn">Collections <span style="font-size:.6rem">▼</span></button>
+<button class="nav-drop-btn">✨ Collections <span style="font-size:.6rem">▼</span></button>
 <div class="nav-drop-panel">
 <a href="collection.html?id=top-rated">🏆 Top Rated</a>
 <a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
@@ -306,22 +318,23 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="collection.html">View all collections →</a>
 </div>
 </div>
-<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">Trails</a>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">🛤️ Routes</a>
 <div class="nav-search-wrap">
 <span class="nsi">🔍</span>
 <input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off">
 </div>
 </div>
 <div class="nav-right">
-<a href="explore.html" class="btn-explore">🗺️ Explore Map</a>
+<a href="explore.html" class="btn-explore">🧭 Explore Map</a>
+<button class="btn-login" onclick="alert('Login coming soon!')" style="background:none;border:2px solid var(--border);color:var(--twilight);padding:7px 14px;border-radius:var(--pill);font-weight:500;font-size:.85rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:4px" onmouseover="this.style.borderColor='var(--burgundy)';this.style.color='var(--burgundy)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--twilight)'">👤 Login</button>
 </div>
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
 </div>
 </nav>
 <div class="mobile-menu">
 <div class="mob-search-wrap"><span class="nsi">🔍</span><input type="text" id="mobNavSearch" placeholder="Search castles, regions..." autocomplete="off"></div>
-<a href="explore.html" style="color:var(--burgundy);font-weight:700">🗺️ Explore Map</a>
-<span class="mob-heading">Sites</span>
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
+<span class="mob-heading">🏰 Sites</span>
 <div class="mob-sub">
 <a href="search.html?type=castle">🏰 Castles</a>
 <a href="search.html?type=abbey">⛪ Abbeys</a>
@@ -329,7 +342,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="search.html?type=palace">👑 Palaces</a>
 <a href="search.html?type=fort">🛡️ Forts</a>
 </div>
-<span class="mob-heading">Regions</span>
+<span class="mob-heading">🗺️ Regions</span>
 <div class="mob-sub">
 <a href="region.html?id=scottish-highlands">Scottish Highlands</a>
 <a href="region.html?id=scottish-lowlands">Scottish Lowlands</a>
@@ -343,7 +356,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="region.html?id=ireland">Ireland</a>
 <a href="search.html?region=Northern+Ireland">Northern Ireland</a>
 </div>
-<span class="mob-heading">Collections</span>
+<span class="mob-heading">✨ Collections</span>
 <div class="mob-sub">
 <a href="collection.html?id=top-rated">🏆 Top Rated</a>
 <a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
@@ -351,7 +364,8 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="collection.html?id=free">🆓 Free to Visit</a>
 <a href="collection.html">View all →</a>
 </div>
-<a href="trail.html">🥾 Trails</a>
+<a href="trail.html">🛤️ Routes</a>
+<a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:10px;font-weight:600;color:var(--twilight)">👤 Login</a>
 </div>
 
 <!-- HERO -->
@@ -373,6 +387,34 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a class="pill" href="search.html?type=palace">👑 Palaces</a>
 <a class="pill" href="search.html?tag=free">🆓 Free to Visit</a>
 <a class="pill" href="search.html?tag=photogenic">📸 Photogenic</a>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+<div class="section-inner">
+<div class="hiw-grid">
+<div class="hiw-step">
+<span class="hiw-icon">🔍</span>
+<h3>Explore</h3>
+<p>Browse 3,000+ castles, ruins and historic sites across Britain &amp; Ireland</p>
+</div>
+<div class="hiw-step">
+<span class="hiw-icon">🏰</span>
+<h3>Save</h3>
+<p>Bookmark your favourites and build your personal castle wishlist</p>
+</div>
+<div class="hiw-step">
+<span class="hiw-icon">🗺️</span>
+<h3>Plan</h3>
+<p>Create routes that connect the best sites into unforgettable road trips</p>
+</div>
+<div class="hiw-step">
+<span class="hiw-icon">🤝</span>
+<h3>Share</h3>
+<p>Send your routes to friends and maximise every adventure together</p>
+</div>
 </div>
 </div>
 </section>
@@ -475,7 +517,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <section>
 <div class="section-inner">
 <div class="section-header">
-<h2>Follow a Trail</h2>
+<h2>Follow a Route</h2>
 </div>
 <p class="section-tagline">Epic road trips through centuries of history</p>
 <div class="trail-grid">
@@ -522,7 +564,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <div class="footer-logo">castlecore</div>
 <p>The most complete heritage guide for the UK &amp; Ireland</p>
 </div>
-<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="explore.html">Collections</a><a href="explore.html">Regions</a><a href="explore.html">Trails</a></div>
+<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="explore.html">Collections</a><a href="explore.html">Regions</a><a href="explore.html">Routes</a></div>
 <div class="footer-col"><h4>Info</h4><a href="#">About</a><a href="#">Contact</a></div>
 <div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
 </div>
