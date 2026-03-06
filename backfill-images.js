@@ -4,10 +4,30 @@ const path = require('path');
 const DATA_FILE = path.join(__dirname, 'data.js');
 const UA = 'castlecore-bot/1.0 (castle explorer project)';
 const THUMB_SIZE = 500;
-const BATCH = 5; // concurrent requests
+const BATCH = 5;
 const TIMEOUT_MS = 8000;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// Strip common suffixes that won't match Wikipedia
+function cleanName(name) {
+  let clean = name
+    .replace(/\s*\(Main\)\s*/g, '')
+    .replace(/\s*\(Ruin[s]?\)\s*/g, '')
+    .replace(/\s*\(Site\)\s*/g, '')
+    .replace(/\s*\(Interior\)\s*/g, '')
+    .trim();
+  
+  // Remove trailing descriptors
+  const suffixes = ['Keep', 'Interior', 'Ruins', 'Ruin', 'Site', 'Mound', 'Gatehouse', 'Gardens', 'Grounds', 'Tower House'];
+  for (const s of suffixes) {
+    if (clean.endsWith(' ' + s)) {
+      clean = clean.slice(0, -(s.length + 1)).trim();
+      break;
+    }
+  }
+  return clean;
+}
 
 async function queryWiki(title) {
   const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&format=json&pithumbsize=${THUMB_SIZE}`;
@@ -29,12 +49,21 @@ async function queryWiki(title) {
 }
 
 async function findImage(castle) {
-  const queries = [castle.name];
-  if (castle.county) queries.push(`${castle.name} ${castle.county}`);
-  if (castle.country) queries.push(`${castle.name} ${castle.country}`);
-  if (!castle.name.toLowerCase().includes('castle') && !castle.name.toLowerCase().includes('palace')) {
-    queries.push(`${castle.name} castle`);
+  const raw = castle.name;
+  const clean = cleanName(raw);
+  
+  // Build query list - try cleaned name first, then with location qualifiers
+  const queries = new Set();
+  queries.add(clean);
+  if (clean !== raw) queries.add(raw); // try original too
+  if (castle.county) queries.add(`${clean} ${castle.county}`);
+  if (castle.country) queries.add(`${clean} ${castle.country}`);
+  // If name doesn't contain castle/palace/abbey etc, try adding "castle"
+  const lc = clean.toLowerCase();
+  if (!lc.includes('castle') && !lc.includes('palace') && !lc.includes('abbey') && !lc.includes('priory') && !lc.includes('cathedral') && !lc.includes('church') && !lc.includes('fort')) {
+    queries.add(`${clean} castle`);
   }
+  
   for (const q of queries) {
     const img = await queryWiki(q);
     if (img) return img;
@@ -51,13 +80,14 @@ function loadCastles() {
 
 function writeCastles(castles) {
   let out = 'const CASTLES = [\n';
+  let first = true;
   for (let i = 0; i < castles.length; i++) {
-    if (castles[i] == null) continue; // skip undefined/null
+    if (castles[i] == null) continue;
+    if (!first) out += ',\n';
     out += '  ' + JSON.stringify(castles[i]);
-    if (i < castles.length - 1) out += ',';
-    out += '\n';
+    first = false;
   }
-  out += '];\n';
+  out += '\n];\n';
   fs.writeFileSync(DATA_FILE, out, 'utf-8');
 }
 
@@ -65,7 +95,6 @@ async function main() {
   const castles = loadCastles();
   console.log(`Total castles: ${castles.length}`);
   
-  // Build list of indices needing images
   const toProcess = [];
   for (let i = 0; i < castles.length; i++) {
     if (castles[i] && !castles[i].image) toProcess.push(i);

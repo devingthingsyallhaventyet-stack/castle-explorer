@@ -88,7 +88,7 @@ img{max-width:100%;display:block}
 /* NAV */
 .site-nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
 .site-nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.site-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--shadow);display:flex;align-items:center;gap:2px;flex-shrink:0}
+.site-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--shadow);display:flex;align-items:center;gap:8px;flex-shrink:0}
 .site-logo:hover{text-decoration:none}
 .snav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
 .snav-dd{position:relative}
