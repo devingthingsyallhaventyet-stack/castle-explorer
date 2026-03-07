@@ -1,0 +1,777 @@
+[
+  {
+    "name": "Cowes Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Wingfield Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Dunston Pillar",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Somerton Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Tregiffian Vean",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Dyserth Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Salcombe Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Middleton Tower",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Wardour Castle (New)",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Trowbridge Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Featherstone Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Bellister Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Clifford Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ewyas Harold Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Holdgate Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castle Camps",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Methven Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Coolhull Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Burt Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ballinasloe Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ballynahow Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Dromore Castle (Limerick)",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Cockle Park Tower",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Peele Tower Kentmere",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Smithstown Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Dunkerron Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Lixnaw Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Lohort Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castlemore Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Foulksrath Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Sigginstown Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Skryne Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Shanid Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Deel Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castle Saunderson",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Newtownstewart Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Dungiven Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castle Dillon",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Benholm Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Esslemont Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Cairnbulg Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Harthill Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Grandtully Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Megginch Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Calvay Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Inverquharity Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Newport Castle (Pembs)",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Upton Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Wolf's Castle Mound",
+    "slug": "",
+    "type": "motte"
+  },
+  {
+    "name": "Painscastle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Faunarooska Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Tromra Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Derryhivenny Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Monivea Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Ballinderry Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Bunowen Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castlepook Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Grantstown Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Kiltinan Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castle Hewson",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Ballingarry Castle (Lim)",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Kinturk Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castlehill House",
+    "slug": "",
+    "type": "country house"
+  },
+  {
+    "name": "Fuerty Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castlecoote House",
+    "slug": "",
+    "type": "country house"
+  },
+  {
+    "name": "Rossclogher Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castlegal",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Breifne Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Liscartan Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castle Forbes",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Moatfarrell Castle",
+    "slug": "",
+    "type": "motte"
+  },
+  {
+    "name": "Eglish Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Assaroe Abbey",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Roughan Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Tandragee Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Rathmacknee Tower",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Sigginstown Tower",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Inverallochy Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Kinkell Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Finavon Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Barholm Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castell Gwallter",
+    "slug": "",
+    "type": "motte"
+  },
+  {
+    "name": "Knighton Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castle Salem",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Killone Abbey",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Castle Taylor",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castle Ellen",
+    "slug": "",
+    "type": "country house"
+  },
+  {
+    "name": "Finlaystone Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Creagh Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Mountlong Castle",
+    "slug": "",
+    "type": "fortified house"
+  },
+  {
+    "name": "Gowran Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Graiguenamanagh Abbey",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Portlick Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Ballymore Castle (Westmeath)",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Blackcastle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castlemore",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castlegrace",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castle Hyde",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Knighton Castle Mound",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castle of Fiddes",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castle of Esslemont",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Benholm Tower",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Amisfield Tower",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Dounreay Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Dysart Church",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Castle Maud",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Cramond Tower",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Liberton Tower",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Croom Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Donore Castle Meath",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Dromore Castle Down",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ardagh Heritage Centre",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ballyhannon Castle Clare",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Dunmore Castle Galway",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Creggs Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Castletown Castle Laois",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Lostwithiel Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Maxstoke Priory",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Millom Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Bewley Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Eilean Dearg Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Candacraig House",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ballone Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Lee Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Pollok Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Haggs Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Dun Nosebridge",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Pitcur Souterrain",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Claverhouse Bleachfield",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Eyrecourt Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Bruree Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Moorstown Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Duleek Priory",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Frenchpark House",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Aghanloo Church",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Nappa Hall",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Wroxall Abbey",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Sulby Abbey",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Raunds Manor",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Stowe Barton",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ringrone Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Aghada Church",
+    "slug": "",
+    "type": "abbey"
+  },
+  {
+    "name": "Gardenmorris Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Coolhull Castle Wexford",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Ballymore Castle Westmeath",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Castletown Louth",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Monksgrange Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Clenagh Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Rearcross Tower",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Two Mile Borris Castle",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Clara Castle Kilkenny",
+    "slug": "",
+    "type": "tower house"
+  },
+  {
+    "name": "Ardoginna Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Cregg Castle",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Deel Castle Mayo",
+    "slug": "",
+    "type": "castle"
+  },
+  {
+    "name": "Ballyloughan Castle Carlow",
+    "slug": "",
+    "type": "castle"
+  }
+]
