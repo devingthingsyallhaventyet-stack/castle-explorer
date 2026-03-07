@@ -171,6 +171,24 @@ footer p{font-family:'Cinzel',serif;font-size:.65rem;color:var(--ink-faded);lett
 .lb-prev{left:16px}.lb-next{right:16px}
 .lb-counter{color:rgba(255,255,255,.5);font-family:'Cinzel',serif;font-size:.7rem;margin-top:12px;letter-spacing:2px}
 
+/* Visit info items */
+.visit-item{display:flex;align-items:flex-start;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.9rem}
+.visit-item:last-child{border-bottom:none}
+.visit-icon{flex-shrink:0;width:20px;text-align:center;font-size:.9rem}
+.visit-label{font-family:'Cinzel',serif;font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faded);margin-bottom:1px}
+.visit-value{color:var(--ink-light);font-size:.9rem;line-height:1.4}
+.visit-hours-today{font-weight:600;color:var(--ink)}
+.visit-hours-toggle{font-family:'Cinzel',serif;font-size:.65rem;color:var(--burgundy);cursor:pointer;letter-spacing:.5px;margin-top:2px;display:inline-block}
+.visit-hours-full{display:none;margin-top:4px;font-size:.85rem;color:var(--ink-faded);line-height:1.6}
+.visit-hours-full.open{display:block}
+
+/* Link items */
+.link-item{display:flex;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.link-item:last-child{border-bottom:none}
+.link-item a{font-size:.88rem;color:var(--burgundy);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.link-item a:hover{text-decoration:underline}
+.link-icon{flex-shrink:0;width:20px;text-align:center;font-size:.95rem}
+
 /* Sidebar mood tags — light bg override */
 .content-sidebar .mood-tag{background:var(--cream);border:1px solid var(--border);color:var(--ink-faded)}
 
@@ -368,6 +386,18 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <a href="https://www.google.com/maps/search/Dunluce+Castle/@55.2106,-6.5794,15z" target="_blank" class="action-btn action-secondary" style="width:100%;justify-content:center;display:flex">🗺️ Open in Google Maps</a>
     </div>
 
+    <!-- Visit Info (populated by Google Places) -->
+    <div class="sidebar-card" id="visitInfoCard" style="display:none">
+      <h3>Visit Info</h3>
+      <div id="visitInfoContent"></div>
+    </div>
+
+    <!-- Official Links (populated by Google Places) -->
+    <div class="sidebar-card" id="linksCard" style="display:none">
+      <h3>Official Links</h3>
+      <div id="linksContent"></div>
+    </div>
+
     <!-- Tags -->
     <div class="sidebar-card">
       <h3>Tags</h3>
@@ -479,16 +509,17 @@ fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Dunluce+Castl
   grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy" title="${v.snippet.title}"></iframe>`).join('');
 }).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-// Google Places — fill reviews dynamically
+// Google Places — fill reviews, hours, website, phone, links
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
-  headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos'},
+  headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.nationalPhoneNumber,places.internationalPhoneNumber,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
   body:JSON.stringify({textQuery:'Dunluce Castle County Antrim',locationBias:{circle:{center:{latitude:55.2106,longitude:-6.5794},radius:1000}},maxResultCount:1})
 }).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];
   if(!place)return;
-  // Fill reviews
+
+  // Reviews
   if(place.reviews&&place.reviews.length){
     const box=document.getElementById('reviewsBox');
     box.innerHTML=place.reviews.slice(0,5).map(r=>{
@@ -496,18 +527,69 @@ fetch('https://places.googleapis.com/v1/places:searchText',{
       const author=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';
       const txt=(r.text&&r.text.text)||'';
       const time=r.relativePublishTimeDescription||'';
-      return `<div class="review-card"><div class="review-header"><span class="review-author">${author}</span><span class="review-rating">${stars}</span><span class="review-time">${time}</span></div><p class="review-text">"${txt}"</p></div>`;
+      return '<div class="review-card"><div class="review-header"><span class="review-author">'+author+'</span><span class="review-rating">'+stars+'</span><span class="review-time">'+time+'</span></div><p class="review-text">"'+txt+'"</p></div>';
     }).join('');
   }
-  // Fill extra gallery photos into lightbox
+
+  // Photos → lightbox
   if(place.photos&&place.photos.length){
     place.photos.slice(0,8).forEach(p=>{
       lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY);
     });
-    // Update +N count
     const more=document.querySelector('.pg-more');
     if(more)more.textContent='+'+(lbImages.length-4)+' photos';
   }
+
+  // Visit Info card — hours, phone, duration
+  const visitItems=[];
+  
+  // Opening hours
+  const hours=place.currentOpeningHours||place.regularOpeningHours;
+  if(hours&&hours.weekdayDescriptions){
+    const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const today=days[new Date().getDay()];
+    const todayHours=hours.weekdayDescriptions.find(h=>h.startsWith(today))||hours.weekdayDescriptions[0];
+    const isOpen=hours.openNow;
+    const statusText=isOpen?'<span style="color:#2e7d32;font-weight:600">Open now</span>':'<span style="color:#c62828;font-weight:600">Closed</span>';
+    const allHours=hours.weekdayDescriptions.join('<br>');
+    visitItems.push('<div class="visit-item"><span class="visit-icon">🕐</span><div><div class="visit-label">Hours</div><div class="visit-value">'+statusText+' · '+(todayHours||'')+'<br><span class="visit-hours-toggle" onclick="this.nextElementSibling.classList.toggle(\'open\')">See all hours ▾</span><div class="visit-hours-full">'+allHours+'</div></div></div>');
+  }
+
+  // Phone
+  if(place.nationalPhoneNumber||place.internationalPhoneNumber){
+    const phone=place.nationalPhoneNumber||place.internationalPhoneNumber;
+    visitItems.push('<div class="visit-item"><span class="visit-icon">📞</span><div><div class="visit-label">Phone</div><div class="visit-value"><a href="tel:'+phone.replace(/\s/g,'')+'" style="color:var(--burgundy)">'+phone+'</a></div></div>');
+  }
+
+  if(visitItems.length){
+    document.getElementById('visitInfoCard').style.display='';
+    document.getElementById('visitInfoContent').innerHTML=visitItems.join('');
+  }
+
+  // Links card — website, Google Maps, social
+  const linkItems=[];
+  
+  if(place.websiteUri){
+    const domain=new URL(place.websiteUri).hostname.replace('www.','');
+    linkItems.push('<div class="link-item"><span class="link-icon">🌐</span><a href="'+place.websiteUri+'" target="_blank" rel="noopener">'+domain+'</a></div>');
+  }
+
+  if(place.googleMapsUri){
+    linkItems.push('<div class="link-item"><span class="link-icon">📍</span><a href="'+place.googleMapsUri+'" target="_blank" rel="noopener">Google Maps</a></div>');
+  }
+
+  // Try to find social media from website (common patterns)
+  if(place.websiteUri){
+    fetch(place.websiteUri,{mode:'no-cors',signal:AbortSignal.timeout(3000)}).catch(()=>{});
+    // We can't scrape cross-origin, so add known socials for well-known sites
+    // For the template, we'll show placeholders that the generate script can fill
+  }
+
+  if(linkItems.length){
+    document.getElementById('linksCard').style.display='';
+    document.getElementById('linksContent').innerHTML=linkItems.join('');
+  }
+
 }).catch(()=>{});
 </script>
 </body>
