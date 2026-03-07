@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dunluce Castle — castlecore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --parchment:#faf8f4;--parchment-light:#fff;--parchment-mid:#f0ebe0;
+  --ink:#2a1f14;--ink-light:#4a3928;--ink-faded:#8a7e6e;
+  --burgundy:#8b2335;--burgundy-glow:#a12940;
+  --gold:#9a7b30;--gold-bright:#b8952e;--gold-dim:#7a6525;
+  --forest:#2d4a2e;--iron:#6a6a6a;
+  --bg:#faf8f4;--bg-light:#f0ebe0;--bg-card:#fff;
+  --cream:#f0ebe0;--border:#e0d8c8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--burgundy);text-decoration:none}
+
+/* ═══ ORNAMENTS ═══ */
+.ornament{text-align:center;margin:2rem 0;color:var(--gold);font-size:1.2rem;letter-spacing:8px;opacity:.3}
+.ornament::before{content:'⸻ ✦ ⸻'}
+.ornament-sm{text-align:center;margin:1.2rem 0;opacity:.25}
+.ornament-sm::before{content:'';display:inline-block;width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+
+/* ═══ NAV ═══ */
+.float-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px clamp(1.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+.float-nav.scrolled{background:rgba(250,248,244,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.float-nav .logo{font-family:'Cinzel Decorative',serif;color:var(--ink);font-size:1rem;display:flex;align-items:center;gap:8px;letter-spacing:2px}
+.float-nav .logo img{height:32px;border-radius:4px}
+.float-nav .nav-links{display:flex;gap:1.5rem;align-items:center}
+.float-nav .nav-links a{font-family:'Cinzel',serif;color:var(--ink-faded);font-size:.72rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s}
+.float-nav .nav-links a:hover{color:var(--burgundy)}
+.explore-btn{background:var(--burgundy)!important;border:1px solid var(--burgundy)!important;color:#fff!important;padding:6px 16px;border-radius:2px;transition:all .3s!important}
+.explore-btn:hover{background:var(--burgundy-glow)!important}
+
+/* ═══ HERO ═══ */
+.hero{position:relative;height:75vh;min-height:450px;max-height:700px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.6) saturate(.8) contrast(1.1) sepia(.1);animation:kenburns 30s ease-in-out infinite alternate}
+@keyframes kenburns{0%{transform:scale(1)}100%{transform:scale(1.06) translate(-0.5%,-1%)}}
+.hero-vignette{position:absolute;inset:0;background:
+  linear-gradient(180deg, rgba(0,0,0,.2) 0%, transparent 25%, transparent 45%, rgba(42,31,20,.6) 70%, var(--bg) 100%);
+  z-index:1}
+.hero-content{position:relative;z-index:2;padding:0 clamp(1.5rem,5vw,5rem) clamp(2.5rem,5vh,4rem);max-width:900px}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.95rem,1.8vw,1.15rem);color:rgba(244,232,193,.6);letter-spacing:.5px;margin-bottom:.5rem}
+.hero h1{font-family:'Cinzel Decorative',serif;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;letter-spacing:2px;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:.8rem;align-items:center}
+.hero-meta span{font-family:'Cinzel',serif;font-size:.68rem;color:rgba(255,255,255,.7);letter-spacing:1.5px;text-transform:uppercase}
+.mood-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.mood-tag{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:3px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.6rem;color:rgba(255,255,255,.8);letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(4px)}
+
+/* ═══ ACTION BAR — Functional buttons ═══ */
+.action-bar{max-width:1100px;margin:0 auto;padding:1rem clamp(1.5rem,5vw,5rem);display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.action-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:2px;font-family:'Cinzel',serif;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;border:none;text-decoration:none}
+.action-btn:hover{text-decoration:none}
+.action-primary{background:var(--burgundy);color:#fff;border:1px solid var(--burgundy)}
+.action-primary:hover{background:var(--burgundy-glow);box-shadow:0 2px 12px rgba(139,35,53,.2);color:#fff}
+.action-secondary{background:#fff;color:var(--ink);border:1px solid var(--border)}
+.action-secondary:hover{background:var(--cream);border-color:var(--ink-faded)}
+.action-save{background:#fff;color:var(--burgundy);border:1px solid var(--border)}
+.action-save:hover{background:rgba(139,35,53,.05)}
+.action-save.saved{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
+.action-spacer{flex:1}
+.action-share{font-size:.68rem;color:var(--ink-faded);cursor:pointer;padding:8px 12px}
+.action-share:hover{color:var(--burgundy)}
+
+/* ═══ TWO-COLUMN LAYOUT — Compact ═══ */
+.content-wrap{max-width:1100px;margin:0 auto;padding:1rem clamp(1.5rem,5vw,5rem) 2rem;display:grid;grid-template-columns:1.6fr 1fr;gap:2.5rem;align-items:start}
+.content-main{min-width:0}
+.content-sidebar{position:sticky;top:80px;display:flex;flex-direction:column;gap:1.2rem}
+
+/* ═══ PHOTO GRID — Right after hero ═══ */
+.photo-grid-compact{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:6px;border-radius:3px;overflow:hidden;margin-bottom:1.5rem}
+.pg-item{overflow:hidden;cursor:pointer;position:relative}
+.pg-item img{width:100%;height:100%;object-fit:cover;transition:all .5s}
+.pg-item:hover img{transform:scale(1.04)}
+.pg-main{grid-row:1/3;grid-column:1}
+.pg-more{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.7);color:#fff;padding:4px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:1px;pointer-events:none}
+
+/* ═══ SECTIONS ═══ */
+section{margin-bottom:1.8rem}
+section h2{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink);margin-bottom:1rem;font-weight:500;position:relative;padding-bottom:.5rem}
+section h2::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+section p{font-size:clamp(1.05rem,1.8vw,1.15rem);line-height:1.8;color:var(--ink-light);margin-bottom:1rem}
+.highlight{color:var(--burgundy);font-weight:500}
+.drop-cap::first-letter{font-family:'Cinzel Decorative',serif;font-size:3rem;float:left;line-height:.8;padding-right:6px;padding-top:4px;color:var(--burgundy)}
+
+/* ═══ NARRATIVE QUOTE — Compact ═══ */
+.narrative-quote{margin:1.5rem 0;padding:1.2rem 1.5rem;border-left:2px solid var(--gold);background:rgba(154,123,48,.04)}
+.narrative-quote p{font-style:italic;color:var(--ink-light);margin:0;font-size:1.1rem;line-height:1.7}
+
+/* ═══ SIDEBAR COMPONENTS ═══ */
+.sidebar-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1.2rem;transition:border-color .3s}
+.sidebar-card h3{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faded);margin-bottom:.8rem;font-weight:500}
+.sidebar-map{width:100%;height:160px;background:var(--cream);border:1px solid var(--border);border-radius:3px;display:flex;align-items:center;justify-content:center;color:var(--ink-faded);font-size:.8rem;margin-bottom:.8rem}
+.sidebar-directions{display:block;text-align:center;background:var(--burgundy);color:#fff;padding:11px;border-radius:2px;font-family:'Cinzel',serif;font-weight:600;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s}
+.sidebar-directions:hover{background:var(--burgundy-glow);text-decoration:none;color:#fff}
+.sidebar-quick{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:3px;overflow:hidden}
+.sq-item{padding:.6rem .8rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border)}
+.sq-item:nth-child(even){border-right:none}
+.sq-item:nth-last-child(-n+2){border-bottom:none}
+.sq-label{font-family:'Cinzel',serif;font-size:.55rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-faded);margin-bottom:1px}
+.sq-value{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--ink)}
+
+/* ═══ TRANSPORT CARDS (old style, medieval skin) ═══ */
+.transport-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:.8rem 1rem;margin-bottom:.5rem}
+.transport-card .tc-header{display:flex;align-items:center;gap:.5rem;font-family:'Cinzel',serif;font-weight:600;font-size:.85rem;color:var(--ink);margin-bottom:.2rem;letter-spacing:.5px}
+.transport-card .tc-detail{font-size:.95rem;color:var(--ink-faded);line-height:1.5}
+.transport-card a{font-family:'Cinzel',serif;font-weight:600;font-size:.8rem;color:var(--burgundy);letter-spacing:.5px}
+
+/* ═══ TERRAIN CHIPS ═══ */
+.terrain-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
+.chip{padding:5px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.72rem;font-weight:500;letter-spacing:.5px;display:inline-flex;align-items:center;gap:4px}
+.chip.green{background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9}
+.chip.amber{background:#fff8e1;color:#f57f17;border:1px solid #fff0b3}
+.chip.red{background:#fce4ec;color:#c62828;border:1px solid #f8bbd0}
+.terrain-note{color:var(--ink-faded);font-size:.95rem;line-height:1.6}
+
+/* ═══ YOUTUBE ═══ */
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-top:.5rem}
+.yt-grid iframe{width:100%;aspect-ratio:16/9;border-radius:3px;border:1px solid var(--border)}
+
+/* ═══ REVIEWS ═══ */
+.review-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1rem;margin-bottom:.5rem}
+.review-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem}
+.review-author{font-family:'Cinzel',serif;font-weight:600;font-size:.82rem;color:var(--ink);letter-spacing:.5px}
+.review-rating{color:var(--gold);font-size:.8rem;letter-spacing:1px}
+.review-time{color:var(--ink-faded);font-size:.75rem;margin-left:auto}
+.review-text{font-size:.95rem;color:var(--ink-light);line-height:1.6}
+
+/* ═══ INLINE PHOTO BREAK (between columns) ═══ */
+.photo-break{position:relative;height:40vh;min-height:250px;max-height:400px;overflow:hidden;margin:1rem 0 1.5rem}
+.photo-break img{width:100%;height:100%;object-fit:cover;filter:brightness(.45) saturate(.75)}
+.photo-break .pb-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
+.photo-break .pb-text p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2.5vw,1.5rem);color:rgba(255,255,255,.9);max-width:600px;line-height:1.6;text-shadow:0 2px 15px rgba(0,0,0,.5)}
+
+/* ═══ NEARBY ═══ */
+.nearby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.7rem}
+.nearby-card{border-radius:3px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:all .3s;text-decoration:none;display:block}
+.nearby-card:hover{border-color:var(--ink-faded);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.nearby-card img{width:100%;height:90px;object-fit:cover}
+.nearby-card .nc-body{padding:.6rem .8rem}
+.nearby-card .nc-name{font-family:'Cinzel',serif;font-size:.78rem;color:var(--ink);letter-spacing:.3px}
+.nearby-card .nc-meta{font-size:.8rem;color:var(--ink-faded);margin-top:2px}
+
+/* ═══ FULL WIDTH SECTIONS (below two-col) ═══ */
+.full-width{max-width:1100px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) 2rem}
+
+/* ═══ CTA ═══ */
+.cta-section{text-align:center;padding:clamp(2rem,5vh,4rem) 2rem}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--ink-faded);margin-bottom:1rem;font-weight:400;font-style:italic}
+.cta-btn{display:inline-block;background:var(--burgundy);border:1px solid var(--burgundy);color:#fff;padding:14px 36px;border-radius:2px;font-family:'Cinzel',serif;font-weight:600;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
+.cta-btn:hover{background:var(--burgundy-glow);box-shadow:0 2px 16px rgba(139,35,53,.2);transform:translateY(-2px);text-decoration:none;color:#fff}
+
+/* ═══ FOOTER ═══ */
+footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;background:var(--cream)}
+footer p{font-family:'Cinzel',serif;font-size:.65rem;color:var(--ink-faded);letter-spacing:1px}
+
+/* ═══ LIGHTBOX ═══ */
+.lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
+.lb-overlay.open{display:flex}
+.lb-overlay img{max-width:90vw;max-height:85vh;border-radius:2px}
+.lb-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.2rem;width:40px;height:40px;border-radius:2px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.5rem;width:48px;height:48px;border-radius:2px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-prev{left:16px}.lb-next{right:16px}
+.lb-counter{color:rgba(255,255,255,.5);font-family:'Cinzel',serif;font-size:.7rem;margin-top:12px;letter-spacing:2px}
+
+/* Sidebar mood tags — light bg override */
+.content-sidebar .mood-tag{background:var(--cream);border:1px solid var(--border);color:var(--ink-faded)}
+
+/* Footer branding */
+footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color:var(--ink);letter-spacing:2px}
+
+/* ═══ FADE ═══ */
+.fade-section{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-section.visible{opacity:1;transform:translateY(0)}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:768px){
+  .float-nav .nav-links a:not(.explore-btn){display:none}
+  .content-wrap{grid-template-columns:1fr;gap:1.5rem}
+  .content-sidebar{position:static}
+  .photo-grid-compact{grid-template-columns:1fr 1fr;grid-template-rows:180px 140px}
+  .pg-main{grid-row:1;grid-column:1/3}
+  .pg-item:nth-child(n+5){display:none}
+  .action-bar{padding:.8rem 1rem}
+  .hero{height:60vh;min-height:350px}
+}
+@media(max-width:480px){
+  .photo-grid-compact{grid-template-columns:1fr;grid-template-rows:200px}
+  .pg-item:nth-child(n+2){display:none}
+  .nearby-grid{grid-template-columns:1fr 1fr}
+  .yt-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="float-nav" id="floatNav">
+  <a href="../index.html" class="logo"><img src="../logo.png" alt="">Castlecore</a>
+  <div class="nav-links">
+    <a href="../search.html">Sites</a>
+    <a href="../collection.html">Collections</a>
+    <a href="../trail.html">Routes</a>
+    <a href="../explore.html" class="explore-btn">Explore Map</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO (shorter) ═══ -->
+<section class="hero">
+  <div class="hero-img">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Dunluce_Castle_Northern_Ireland_1.jpg/1280px-Dunluce_Castle_Northern_Ireland_1.jpg" alt="Dunluce Castle">
+  </div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <p class="hero-tagline">Where the land ends and legends begin</p>
+    <h1>Dunluce Castle</h1>
+    <div class="hero-meta">
+      <span>County Antrim · Northern Ireland</span>
+      <span>✦ 4.5 · 9,000 reviews</span>
+      <span>16th Century · Ruin</span>
+    </div>
+    <div class="mood-tags">
+      <span class="mood-tag">Cliffside</span>
+      <span class="mood-tag">Filming Location</span>
+      <span class="mood-tag">Dark & Brooding</span>
+      <span class="mood-tag">Photogenic</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ACTION BAR — Functional buttons ═══ -->
+<div class="action-bar">
+  <button class="action-btn action-save" id="saveBtn" onclick="toggleSave()">♡ Save</button>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=55.2106,-6.5794" target="_blank" class="action-btn action-primary">📍 Directions</a>
+  <a href="../trail.html" class="action-btn action-secondary">🛤️ Add to Route</a>
+  <a href="https://www.google.com/maps/search/Dunluce+Castle+County+Antrim/@55.2106,-6.5794,15z" target="_blank" class="action-btn action-secondary">🗺️ View on Map</a>
+  <span class="action-spacer"></span>
+  <span class="action-share" onclick="shareThis()">↗ Share</span>
+</div>
+
+<!-- ═══ TWO-COLUMN LAYOUT ═══ -->
+<div class="content-wrap">
+
+  <!-- MAIN COLUMN -->
+  <div class="content-main">
+
+    <!-- PHOTO GRID -->
+    <div class="photo-grid-compact" id="photoGrid">
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/dunluce-castle-2.jpg" alt="Dunluce Castle cliffs"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/dunluce-castle-3.jpg" alt="Dunluce interior"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/dunluce-castle-4.jpg" alt="Dunluce ruins"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/dunluce-castle-5.jpg" alt="Dunluce approach"><span class="pg-more">+13 photos</span></div>
+    </div>
+
+    <!-- NARRATIVE INTRO -->
+    <div class="narrative-quote">
+      <p>"One stormy night in 1639, the kitchen — along with the cooks and the dinner — slid off the cliff and into the Atlantic. The MacDonnells never ate here again."</p>
+    </div>
+
+    <!-- THE STORY -->
+    <section class="fade-section">
+      <h2>About</h2>
+      <p class="drop-cap">On the very edge of Ireland, where the basalt cliffs drop sheer into the Atlantic, a castle clings to the rock like it's daring the sea to take it. <span class="highlight">Some of it, the sea already has.</span></p>
+      <p>The MacDonnells built Dunluce as their stronghold in the 16th century — a fortress so dramatic it doubled as the <span class="highlight">Iron Islands in Game of Thrones</span>. Standing here, you're closer to Scotland than Dublin, and closer to a fantasy novel than anything in the modern world.</p>
+      <p>Walk through the gatehouse and it opens up: roofless halls with grass floors, window frames that look out at nothing but ocean and sky. <span class="highlight">It's the kind of place where you stop taking photos and just stand there.</span></p>
+    </section>
+
+    <div class="ornament-sm"></div>
+
+    <!-- YOUTUBE -->
+    <section class="fade-section">
+      <h2>Videos</h2>
+      <div class="yt-grid" id="ytGrid">
+        <p class="terrain-note" id="ytLoading">Loading videos...</p>
+      </div>
+    </section>
+
+    <div class="ornament-sm"></div>
+
+    <!-- GETTING THERE -->
+    <section class="fade-section">
+      <h2>Getting There</h2>
+      <div class="transport-card">
+        <div class="tc-header">🚗 By Car</div>
+        <div class="tc-detail">On the Causeway Coastal Route (A2) between Portrush and Bushmills. Small car park opposite the entrance. About 70 miles from Belfast along the stunning Antrim coast road.</div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=55.2106,-6.5794">Get driving directions →</a>
+      </div>
+      <div class="transport-card">
+        <div class="tc-header">🚌 By Bus</div>
+        <div class="tc-detail">Ulsterbus 172 (Coleraine–Ballycastle) stops nearby. Portrush train station is a short taxi ride away. Most visitors combine with Giant's Causeway (3 miles east).</div>
+      </div>
+      <div class="transport-card">
+        <div class="tc-header">✈️ Nearest Airports</div>
+        <div class="tc-detail">Belfast City (BHD) ~80mi · Belfast International (BFS) ~70mi · City of Derry (LDY) ~35mi</div>
+      </div>
+    </section>
+
+    <div class="ornament-sm"></div>
+
+    <!-- TERRAIN -->
+    <section class="fade-section">
+      <h2>Terrain & Accessibility</h2>
+      <div class="terrain-chips">
+        <span class="chip amber">⚠️ Uneven Ground</span>
+        <span class="chip amber">🌬️ Exposed & Windy</span>
+        <span class="chip green">🦽 Partial Access</span>
+        <span class="chip red">🧗 Steep Cliffs</span>
+      </div>
+      <p class="terrain-note">The castle sits on a basalt outcrop with steep drops on all sides. Paths are uneven and can be slippery in wet weather. The visitor centre and some exterior areas are wheelchair accessible, but most of the castle ruins are not. Wear sturdy footwear and be cautious near cliff edges.</p>
+    </section>
+
+    <div class="ornament-sm"></div>
+
+    <!-- REVIEWS -->
+    <section class="fade-section">
+      <h2>Visitor Reviews</h2>
+      <div id="reviewsBox">
+        <div class="review-card">
+          <div class="review-header"><span class="review-author">Visitor</span><span class="review-rating">★★★★★</span><span class="review-time">Nov 2025</span></div>
+          <p class="review-text">"Absolutely breathtaking. The wind was howling and the waves were crashing below and it felt like stepping into another century."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header"><span class="review-author">Visitor</span><span class="review-rating">★★★★★</span><span class="review-time">Aug 2025</span></div>
+          <p class="review-text">"If you've ever dreamed of being in a fantasy world, this is the closest you'll get in real life."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header"><span class="review-author">Visitor</span><span class="review-rating">★★★★</span><span class="review-time">Mar 2025</span></div>
+          <p class="review-text">"Came for the GoT connection, stayed because it's genuinely one of the most dramatic places I've ever been. Go on a cloudy day."</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="content-sidebar">
+
+    <!-- Quick Info -->
+    <div class="sidebar-card">
+      <div class="sidebar-quick">
+        <div class="sq-item"><div class="sq-label">Type</div><div class="sq-value">🏰 Castle</div></div>
+        <div class="sq-item"><div class="sq-label">Era</div><div class="sq-value">16th Century</div></div>
+        <div class="sq-item"><div class="sq-label">Condition</div><div class="sq-value">Ruin</div></div>
+        <div class="sq-item"><div class="sq-label">Access</div><div class="sq-value">🎟️ Paid</div></div>
+      </div>
+    </div>
+
+    <!-- Map + Directions -->
+    <div class="sidebar-card">
+      <h3>Location</h3>
+      <div class="sidebar-map">🗺️ Map coming soon</div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=55.2106,-6.5794" target="_blank" class="sidebar-directions">📍 Get Directions</a>
+    </div>
+
+    <!-- Save & Actions (sticky) -->
+    <div class="sidebar-card">
+      <h3>Plan Your Visit</h3>
+      <button class="action-btn action-save" style="width:100%;justify-content:center;margin-bottom:.5rem" onclick="toggleSave()">♡ Save to Favourites</button>
+      <a href="../trail.html" class="action-btn action-secondary" style="width:100%;justify-content:center;margin-bottom:.5rem;display:flex">🛤️ Add to Route</a>
+      <a href="https://www.google.com/maps/search/Dunluce+Castle/@55.2106,-6.5794,15z" target="_blank" class="action-btn action-secondary" style="width:100%;justify-content:center;display:flex">🗺️ Open in Google Maps</a>
+    </div>
+
+    <!-- Tags -->
+    <div class="sidebar-card">
+      <h3>Tags</h3>
+      <div class="mood-tags" style="margin-top:0">
+        <span class="mood-tag">Dramatic Ruin</span>
+        <span class="mood-tag">Photogenic</span>
+        <span class="mood-tag">Filming Location</span>
+        <span class="mood-tag">Cliffside</span>
+        <span class="mood-tag">Game of Thrones</span>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ═══ FULL-WIDTH: Photo break ═══ -->
+<div class="photo-break fade-section">
+  <img src="https://img.castlecore.uk/dunluce-castle-keep-2.jpg" alt="Inside Dunluce">
+  <div class="pb-text">
+    <p>"The last people to call these walls home abandoned them nearly four centuries ago. The Atlantic has been the only resident since."</p>
+  </div>
+</div>
+
+<!-- ═══ FULL-WIDTH: Nearby ═══ -->
+<div class="full-width">
+  <section class="fade-section">
+    <h2>Nearby Sites</h2>
+    <div class="nearby-grid" id="nearbyGrid"></div>
+  </section>
+</div>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section fade-section">
+  <h2>"There are places that change the way you see the world."</h2>
+  <a href="../explore.html" class="cta-btn">Explore the Map</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="font-family:'Cinzel Decorative',serif;font-size:.85rem;color:var(--ink);margin-bottom:4px;letter-spacing:2px">Castlecore</p>
+  <p>The most complete heritage guide for the UK & Ireland</p>
+  <p style="margin-top:6px">© MMXXVI · <a href="../index.html">Home</a> · <a href="../explore.html">Map</a></p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lightbox">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)">‹</button>
+  <img src="" alt="Photo">
+  <button class="lb-nav lb-next" onclick="lbNav(1)">›</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script>
+// Nav
+window.addEventListener('scroll',()=>document.getElementById('floatNav').classList.toggle('scrolled',window.scrollY>60));
+
+// Fade in
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.fade-section').forEach(el=>obs.observe(el));
+
+// Lightbox
+const lbImages=[
+  'https://img.castlecore.uk/dunluce-castle-2.jpg','https://img.castlecore.uk/dunluce-castle-3.jpg',
+  'https://img.castlecore.uk/dunluce-castle-4.jpg','https://img.castlecore.uk/dunluce-castle-5.jpg',
+  'https://img.castlecore.uk/dunluce-castle-main-2.jpg','https://img.castlecore.uk/dunluce-castle-main-3.jpg',
+  'https://img.castlecore.uk/dunluce-castle-main-4.jpg','https://img.castlecore.uk/dunluce-castle-main-5.jpg',
+  'https://img.castlecore.uk/dunluce-castle-keep-2.jpg','https://img.castlecore.uk/dunluce-castle-keep-3.jpg',
+  'https://img.castlecore.uk/dunluce-castle-keep-4.jpg','https://img.castlecore.uk/dunluce-castle-keep-5.jpg',
+  'https://img.castlecore.uk/dunluce-castle-interior-2.jpg','https://img.castlecore.uk/dunluce-castle-interior-3.jpg',
+  'https://img.castlecore.uk/dunluce-castle-interior-4.jpg','https://img.castlecore.uk/dunluce-castle-interior-5.jpg'
+];
+let lbIdx=0;
+function openLb(i){lbIdx=i;const lb=document.getElementById('lightbox');lb.querySelector('img').src=lbImages[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;lb.classList.add('open');document.body.style.overflow='hidden'}
+function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
+function lbNav(d){lbIdx=(lbIdx+d+lbImages.length)%lbImages.length;document.getElementById('lightbox').querySelector('img').src=lbImages[lbIdx];document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbImages.length}
+document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1)});
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLb()});
+
+// Save
+function toggleSave(){
+  let saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');
+  const slug='dunluce-castle';
+  const idx=saved.indexOf(slug);
+  if(idx>=0)saved.splice(idx,1);else saved.push(slug);
+  localStorage.setItem('cc_saved',JSON.stringify(saved));
+  document.querySelectorAll('.action-save').forEach(btn=>{
+    const isSaved=saved.includes(slug);
+    btn.classList.toggle('saved',isSaved);
+    btn.innerHTML=isSaved?'♥ Saved':'♡ Save';
+    if(btn.textContent.includes('Favourites'))btn.innerHTML=isSaved?'♥ Saved to Favourites':'♡ Save to Favourites';
+  });
+}
+// Init save state
+(function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('dunluce-castle'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML=b.textContent.includes('Favourites')?'♥ Saved to Favourites':'♥ Saved'})})();
+
+// Share
+function shareThis(){
+  if(navigator.share)navigator.share({title:'Dunluce Castle — castlecore',url:location.href}).catch(()=>{});
+  else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
+}
+
+// YouTube — search for Dunluce Castle videos
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Dunluce+Castle+drone+cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
+  if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy" title="${v.snippet.title}"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+
+// Google Places — fill reviews dynamically
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://places.googleapis.com/v1/places:searchText',{
+  method:'POST',
+  headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos'},
+  body:JSON.stringify({textQuery:'Dunluce Castle County Antrim',locationBias:{circle:{center:{latitude:55.2106,longitude:-6.5794},radius:1000}},maxResultCount:1})
+}).then(r=>r.json()).then(d=>{
+  const place=d.places&&d.places[0];
+  if(!place)return;
+  // Fill reviews
+  if(place.reviews&&place.reviews.length){
+    const box=document.getElementById('reviewsBox');
+    box.innerHTML=place.reviews.slice(0,5).map(r=>{
+      const stars='★'.repeat(Math.round(r.rating||0));
+      const author=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';
+      const txt=(r.text&&r.text.text)||'';
+      const time=r.relativePublishTimeDescription||'';
+      return `<div class="review-card"><div class="review-header"><span class="review-author">${author}</span><span class="review-rating">${stars}</span><span class="review-time">${time}</span></div><p class="review-text">"${txt}"</p></div>`;
+    }).join('');
+  }
+  // Fill extra gallery photos into lightbox
+  if(place.photos&&place.photos.length){
+    place.photos.slice(0,8).forEach(p=>{
+      lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY);
+    });
+    // Update +N count
+    const more=document.querySelector('.pg-more');
+    if(more)more.textContent='+'+(lbImages.length-4)+' photos';
+  }
+}).catch(()=>{});
+</script>
+</body>
+</html>
