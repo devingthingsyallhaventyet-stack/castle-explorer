@@ -23575,7 +23575,7 @@ const CASTLES = [
       "free"
     ],
     "access": "exterior-only",
-    "_index": 813,
+    "_index": 812,
     "gallery": [
       "https://img.castlecore.uk/doonagore-castle-2.jpg",
       "https://img.castlecore.uk/doonagore-castle-3.jpg",
@@ -23602,7 +23602,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 814,
+    "_index": 813,
     "gallery": [
       "https://img.castlecore.uk/ballinalacken-castle-2.jpg",
       "https://img.castlecore.uk/ballinalacken-castle-3.jpg",
@@ -23627,7 +23627,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "paid",
-    "_index": 815,
+    "_index": 814,
     "gallery": [
       "https://img.castlecore.uk/dromoland-castle-2.jpg",
       "https://img.castlecore.uk/dromoland-castle-3.jpg",
@@ -23653,7 +23653,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 816,
+    "_index": 815,
     "gallery": [
       "https://img.castlecore.uk/danganbrack-castle-2.jpg"
     ]
@@ -23677,7 +23677,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 817,
+    "_index": 816,
     "gallery": [
       "https://img.castlecore.uk/gleninagh-castle-2.jpg",
       "https://img.castlecore.uk/gleninagh-castle-3.jpg",
@@ -23703,7 +23703,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 818,
+    "_index": 817,
     "gallery": [
       "https://img.castlecore.uk/mooghaun-fort-2.jpg",
       "https://img.castlecore.uk/mooghaun-fort-3.jpg",
@@ -23728,7 +23728,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "paid",
-    "_index": 819,
+    "_index": 818,
     "gallery": [
       "https://img.castlecore.uk/ballynahinch-castle-2.jpg",
       "https://img.castlecore.uk/ballynahinch-castle-3.jpg",
@@ -23754,7 +23754,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 820,
+    "_index": 819,
     "gallery": [
       "https://img.castlecore.uk/clifden-castle-2.jpg",
       "https://img.castlecore.uk/clifden-castle-3.jpg",
@@ -23780,7 +23780,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 821,
+    "_index": 820,
     "gallery": [
       "https://img.castlecore.uk/fiddaun-castle-2.jpg",
       "https://img.castlecore.uk/fiddaun-castle-3.jpg",
@@ -23806,7 +23806,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 822,
+    "_index": 821,
     "gallery": [
       "https://img.castlecore.uk/annaghdown-castle-2.jpg",
       "https://img.castlecore.uk/annaghdown-castle-3.jpg",
@@ -23832,7 +23832,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 823,
+    "_index": 822,
     "gallery": [
       "https://img.castlecore.uk/menlo-castle-2.jpg",
       "https://img.castlecore.uk/menlo-castle-3.jpg",
@@ -23858,7 +23858,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 824,
+    "_index": 823,
     "gallery": [
       "https://img.castlecore.uk/clonbur-castle-2.jpg",
       "https://img.castlecore.uk/clonbur-castle-3.jpg",
@@ -23884,7 +23884,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 825,
+    "_index": 824,
     "gallery": [
       "https://img.castlecore.uk/moyode-castle-2.jpg",
       "https://img.castlecore.uk/moyode-castle-3.jpg",
@@ -23910,7 +23910,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 826,
+    "_index": 825,
     "gallery": [
       "https://img.castlecore.uk/killarone-castle-2.jpg",
       "https://img.castlecore.uk/killarone-castle-3.jpg",
@@ -23936,7 +23936,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 827,
+    "_index": 826,
     "gallery": [
       "https://img.castlecore.uk/lydacan-castle-2.jpg",
       "https://img.castlecore.uk/lydacan-castle-3.jpg"
@@ -23960,7 +23960,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 828,
+    "_index": 827,
     "gallery": [
       "https://img.castlecore.uk/merlin-park-castle-2.jpg",
       "https://img.castlecore.uk/merlin-park-castle-3.jpg",
@@ -23986,7 +23986,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 829,
+    "_index": 828,
     "gallery": [
       "https://img.castlecore.uk/ballycarberry-tower-2.jpg",
       "https://img.castlecore.uk/ballycarberry-tower-3.jpg",
@@ -24012,7 +24012,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 830,
+    "_index": 829,
     "gallery": [
       "https://img.castlecore.uk/gallarus-castle-2.jpg",
       "https://img.castlecore.uk/gallarus-castle-3.jpg",
@@ -24039,7 +24039,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 831,
+    "_index": 830,
     "gallery": [
       "https://img.castlecore.uk/rahinnane-castle-2.jpg",
       "https://img.castlecore.uk/rahinnane-castle-3.jpg",
@@ -24065,7 +24065,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 832,
+    "_index": 831,
     "gallery": [
       "https://img.castlecore.uk/ballingarry-castle-2.jpg",
       "https://img.castlecore.uk/ballingarry-castle-3.jpg",
@@ -24091,7 +24091,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 833,
+    "_index": 832,
     "gallery": [
       "https://img.castlecore.uk/killaha-castle-2.jpg",
       "https://img.castlecore.uk/killaha-castle-3.jpg",
@@ -24117,7 +24117,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 834,
+    "_index": 833,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Castles_of_Munster-_Dunkerron%2C_Kerry_%282%29_%28geograph_3037291%29.jpg/500px-Castles_of_Munster-_Dunkerron%2C_Kerry_%282%29_%28geograph_3037291%29.jpg"
     ]
@@ -24140,7 +24140,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 835
+    "_index": 834
   },
   {
     "name": "Kilcrea Castle",
@@ -24160,7 +24160,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 836,
+    "_index": 835,
     "gallery": [
       "https://img.castlecore.uk/kilcrea-castle-2.jpg",
       "https://img.castlecore.uk/kilcrea-castle-3.jpg",
@@ -24185,7 +24185,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 837,
+    "_index": 836,
     "gallery": [
       "https://img.castlecore.uk/belvelly-castle-2.jpg",
       "https://img.castlecore.uk/belvelly-castle-3.jpg",
@@ -24211,7 +24211,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 838,
+    "_index": 837,
     "gallery": [
       "https://img.castlecore.uk/ballinacarriga-castle-2.jpg",
       "https://img.castlecore.uk/ballinacarriga-castle-3.jpg",
@@ -24237,7 +24237,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 839,
+    "_index": 838,
     "gallery": [
       "https://img.castlecore.uk/castletownshend-castle-2.jpg",
       "https://img.castlecore.uk/castletownshend-castle-3.jpg",
@@ -24263,7 +24263,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 840,
+    "_index": 839,
     "gallery": [
       "https://img.castlecore.uk/carriganass-castle-2.jpg",
       "https://img.castlecore.uk/carriganass-castle-3.jpg",
@@ -24289,7 +24289,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 841
+    "_index": 840
   },
   {
     "name": "Monkstown Castle",
@@ -24308,7 +24308,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 842,
+    "_index": 841,
     "gallery": [
       "https://img.castlecore.uk/monkstown-castle-2.jpg",
       "https://img.castlecore.uk/monkstown-castle-3.jpg",
@@ -24334,7 +24334,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 843,
+    "_index": 842,
     "gallery": [
       "https://img.castlecore.uk/carrigaphooca-castle-2.jpg",
       "https://img.castlecore.uk/carrigaphooca-castle-3.jpg",
@@ -24360,7 +24360,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 844,
+    "_index": 843,
     "gallery": [
       "https://img.castlecore.uk/ballincollig-castle-2.jpg",
       "https://img.castlecore.uk/ballincollig-castle-3.jpg",
@@ -24386,7 +24386,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 846,
+    "_index": 844,
     "gallery": [
       "https://img.castlecore.uk/dundanion-castle-main-2.jpg",
       "https://img.castlecore.uk/dundanion-castle-main-3.jpg",
@@ -24412,7 +24412,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 847,
+    "_index": 845,
     "gallery": [
       "https://img.castlecore.uk/ballindoney-castle-2.jpg",
       "https://img.castlecore.uk/ballindoney-castle-3.jpg",
@@ -24438,7 +24438,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 848,
+    "_index": 846,
     "gallery": [
       "https://img.castlecore.uk/ardfinnan-castle-2.jpg",
       "https://img.castlecore.uk/ardfinnan-castle-3.jpg",
@@ -24464,7 +24464,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 849,
+    "_index": 847,
     "gallery": [
       "https://img.castlecore.uk/ballynahow-round-castle-2.jpg",
       "https://img.castlecore.uk/ballynahow-round-castle-3.jpg",
@@ -24490,7 +24490,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 850,
+    "_index": 848,
     "gallery": [
       "https://img.castlecore.uk/burntcourt-castle-2.jpg",
       "https://img.castlecore.uk/burntcourt-castle-3.jpg",
@@ -24515,7 +24515,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 851,
+    "_index": 849,
     "gallery": [
       "https://img.castlecore.uk/ormond-castle-2.jpg",
       "https://img.castlecore.uk/ormond-castle-3.jpg",
@@ -24541,7 +24541,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 852,
+    "_index": 850,
     "gallery": [
       "https://img.castlecore.uk/knockelly-castle-2.jpg",
       "https://img.castlecore.uk/knockelly-castle-3.jpg",
@@ -24567,7 +24567,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 853,
+    "_index": 851,
     "gallery": [
       "https://img.castlecore.uk/terryglass-castle-2.jpg",
       "https://img.castlecore.uk/terryglass-castle-3.jpg",
@@ -24597,7 +24597,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 854,
+    "_index": 852,
     "gallery": [
       "https://img.castlecore.uk/lackeen-castle-2.jpg",
       "https://img.castlecore.uk/lackeen-castle-3.jpg",
@@ -24622,7 +24622,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 855,
+    "_index": 853,
     "gallery": [
       "https://img.castlecore.uk/redwood-castle-2.jpg",
       "https://img.castlecore.uk/redwood-castle-3.jpg",
@@ -24648,7 +24648,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 856,
+    "_index": 854,
     "gallery": [
       "https://img.castlecore.uk/grannagh-castle-2.jpg",
       "https://img.castlecore.uk/grannagh-castle-3.jpg",
@@ -24674,7 +24674,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 857,
+    "_index": 855,
     "gallery": [
       "https://img.castlecore.uk/clomantagh-castle-2.jpg",
       "https://img.castlecore.uk/clomantagh-castle-3.jpg",
@@ -24700,7 +24700,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 858,
+    "_index": 856,
     "gallery": [
       "https://img.castlecore.uk/ballyragget-castle-2.jpg",
       "https://img.castlecore.uk/ballyragget-castle-3.jpg",
@@ -24726,7 +24726,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 859,
+    "_index": 857,
     "gallery": [
       "https://img.castlecore.uk/dunmore-cave-castle-2.jpg",
       "https://img.castlecore.uk/dunmore-cave-castle-3.jpg",
@@ -24752,7 +24752,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 860,
+    "_index": 858,
     "gallery": [
       "https://img.castlecore.uk/callan-castle-2.jpg",
       "https://img.castlecore.uk/callan-castle-3.jpg",
@@ -24777,7 +24777,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 861,
+    "_index": 859,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Foulksrath_Castle.jpg/500px-Foulksrath_Castle.jpg"
     ]
@@ -24799,7 +24799,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 862,
+    "_index": 860,
     "gallery": [
       "https://img.castlecore.uk/shankill-castle-2.jpg",
       "https://img.castlecore.uk/shankill-castle-3.jpg",
@@ -24824,7 +24824,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 863,
+    "_index": 861,
     "gallery": [
       "https://img.castlecore.uk/johnstown-castle-2.jpg",
       "https://img.castlecore.uk/johnstown-castle-3.jpg",
@@ -24850,7 +24850,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 864,
+    "_index": 862,
     "gallery": [
       "https://img.castlecore.uk/coolhull-tower-2.jpg",
       "https://img.castlecore.uk/coolhull-tower-3.jpg",
@@ -24875,7 +24875,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 865,
+    "_index": 863,
     "gallery": [
       "https://img.castlecore.uk/bargy-castle-main-2.jpg"
     ]
@@ -24898,7 +24898,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 866
+    "_index": 864
   },
   {
     "name": "Clonmines",
@@ -24919,7 +24919,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 867,
+    "_index": 865,
     "gallery": [
       "https://img.castlecore.uk/clonmines-2.jpg",
       "https://img.castlecore.uk/clonmines-main-2.jpg",
@@ -24946,7 +24946,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 868,
+    "_index": 866,
     "gallery": [
       "https://img.castlecore.uk/dunhill-castle-2.jpg",
       "https://img.castlecore.uk/dunhill-castle-3.jpg",
@@ -24976,7 +24976,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 869,
+    "_index": 867,
     "gallery": [
       "https://img.castlecore.uk/stradbally-castle-2.jpg",
       "https://img.castlecore.uk/stradbally-castle-3.jpg",
@@ -25002,7 +25002,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 870,
+    "_index": 868,
     "gallery": [
       "https://img.castlecore.uk/grannagh-castle-waterford-2.jpg",
       "https://img.castlecore.uk/grannagh-castle-waterford-3.jpg",
@@ -25028,7 +25028,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 871,
+    "_index": 869,
     "gallery": [
       "https://img.castlecore.uk/molana-abbey-2.jpg",
       "https://img.castlecore.uk/molana-abbey-3.jpg",
@@ -25054,7 +25054,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 872,
+    "_index": 870,
     "gallery": [
       "https://img.castlecore.uk/donore-castle-2.jpg",
       "https://img.castlecore.uk/donore-castle-3.jpg",
@@ -25081,7 +25081,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 873,
+    "_index": 871,
     "gallery": [
       "https://img.castlecore.uk/dunmoe-castle-keep-meath-2.jpg",
       "https://img.castlecore.uk/dunmoe-castle-keep-meath-3.jpg",
@@ -25107,7 +25107,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 874,
+    "_index": 872,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Screen_Castle%2C_Co_Meath_-_geograph.org.uk_-_1760551.jpg/500px-Screen_Castle%2C_Co_Meath_-_geograph.org.uk_-_1760551.jpg"
     ]
@@ -25130,7 +25130,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 875,
+    "_index": 873,
     "gallery": [
       "https://img.castlecore.uk/rathmiles-castle-2.jpg",
       "https://img.castlecore.uk/rathmiles-castle-3.jpg",
@@ -25156,7 +25156,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 876,
+    "_index": 874,
     "gallery": [
       "https://img.castlecore.uk/castlepollard-castle-2.jpg",
       "https://img.castlecore.uk/castlepollard-castle-3.jpg",
@@ -25182,7 +25182,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 877,
+    "_index": 875,
     "gallery": [
       "https://img.castlecore.uk/delvin-castle-2.jpg",
       "https://img.castlecore.uk/delvin-castle-3.jpg",
@@ -25212,7 +25212,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 878,
+    "_index": 876,
     "gallery": [
       "https://img.castlecore.uk/fore-castle-2.jpg",
       "https://img.castlecore.uk/fore-castle-3.jpg",
@@ -25238,7 +25238,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 879,
+    "_index": 877,
     "gallery": [
       "https://img.castlecore.uk/rathconnell-tower-2.jpg",
       "https://img.castlecore.uk/rathconnell-tower-3.jpg",
@@ -25264,7 +25264,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 880,
+    "_index": 878,
     "gallery": [
       "https://img.castlecore.uk/leap-castle-2.jpg",
       "https://img.castlecore.uk/leap-castle-3.jpg",
@@ -25289,7 +25289,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 881,
+    "_index": 879,
     "gallery": [
       "https://img.castlecore.uk/cloghan-castle-2.jpg",
       "https://img.castlecore.uk/cloghan-castle-3.jpg",
@@ -25319,7 +25319,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 882,
+    "_index": 880,
     "gallery": [
       "https://img.castlecore.uk/ballycowan-castle-2.jpg",
       "https://img.castlecore.uk/ballycowan-castle-3.jpg",
@@ -25349,7 +25349,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 883,
+    "_index": 881,
     "gallery": [
       "https://img.castlecore.uk/aghaboe-abbey-2.jpg",
       "https://img.castlecore.uk/aghaboe-abbey-3.jpg",
@@ -25378,7 +25378,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 884,
+    "_index": 882,
     "gallery": [
       "https://img.castlecore.uk/ballaghmore-castle-2.jpg",
       "https://img.castlecore.uk/ballaghmore-castle-3.jpg",
@@ -25408,7 +25408,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 885,
+    "_index": 883,
     "gallery": [
       "https://img.castlecore.uk/morett-castle-2.jpg",
       "https://img.castlecore.uk/morett-castle-3.jpg",
@@ -25438,7 +25438,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 886,
+    "_index": 884,
     "gallery": [
       "https://img.castlecore.uk/mongavlin-castle-2.jpg",
       "https://img.castlecore.uk/mongavlin-castle-3.jpg",
@@ -25469,7 +25469,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 887,
+    "_index": 885,
     "gallery": [
       "https://img.castlecore.uk/kilbarron-castle-2.jpg",
       "https://img.castlecore.uk/kilbarron-castle-3.jpg",
@@ -25499,7 +25499,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 888,
+    "_index": 886,
     "gallery": [
       "https://img.castlecore.uk/castle-murray-2.jpg",
       "https://img.castlecore.uk/castle-murray-3.jpg",
@@ -25525,7 +25525,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 889,
+    "_index": 887,
     "gallery": [
       "https://img.castlecore.uk/donegal-friary-2.jpg",
       "https://img.castlecore.uk/donegal-friary-3.jpg",
@@ -25551,7 +25551,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 890,
+    "_index": 888,
     "gallery": [
       "https://img.castlecore.uk/malin-castle-2.jpg",
       "https://img.castlecore.uk/malin-castle-3.jpg",
@@ -25578,7 +25578,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 891,
+    "_index": 889,
     "gallery": [
       "https://img.castlecore.uk/carrickabraghy-castle-2.jpg",
       "https://img.castlecore.uk/carrickabraghy-castle-3.jpg",
@@ -25604,7 +25604,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 892,
+    "_index": 890,
     "gallery": [
       "https://img.castlecore.uk/rathmullan-priory-2.jpg",
       "https://img.castlecore.uk/rathmullan-priory-3.jpg",
@@ -25630,7 +25630,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 893,
+    "_index": 891,
     "gallery": [
       "https://img.castlecore.uk/castleroche-2.jpg",
       "https://img.castlecore.uk/castleroche-3.jpg",
@@ -25656,7 +25656,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 894,
+    "_index": 892,
     "gallery": [
       "https://img.castlecore.uk/dunmahon-castle-2.jpg",
       "https://img.castlecore.uk/dunmahon-castle-3.jpg",
@@ -25682,7 +25682,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 895,
+    "_index": 893,
     "gallery": [
       "https://img.castlecore.uk/carlingford-mint-2.jpg",
       "https://img.castlecore.uk/carlingford-mint-3.jpg",
@@ -25707,7 +25707,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 896,
+    "_index": 894,
     "gallery": [
       "https://img.castlecore.uk/glin-castle-2.jpg",
       "https://img.castlecore.uk/glin-castle-3.jpg",
@@ -25732,7 +25732,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 897,
+    "_index": 895,
     "gallery": [
       "https://img.castlecore.uk/castle-oliver-2.jpg",
       "https://img.castlecore.uk/castle-oliver-3.jpg",
@@ -25758,7 +25758,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 898,
+    "_index": 896,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-shanid-castle.jpg"
     ]
@@ -25781,7 +25781,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 899,
+    "_index": 897,
     "gallery": [
       "https://img.castlecore.uk/ballingarry-castle-limerick-2.jpg",
       "https://img.castlecore.uk/ballingarry-castle-limerick-3.jpg",
@@ -25807,7 +25807,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 900,
+    "_index": 898,
     "gallery": [
       "https://img.castlecore.uk/castlerea-castle-2.jpg",
       "https://img.castlecore.uk/castlerea-castle-3.jpg",
@@ -25832,7 +25832,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 901,
+    "_index": 899,
     "gallery": [
       "https://img.castlecore.uk/donamon-castle-2.jpg",
       "https://img.castlecore.uk/donamon-castle-3.jpg",
@@ -25858,7 +25858,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 902,
+    "_index": 900,
     "gallery": [
       "https://img.castlecore.uk/easkey-tower-house-2.jpg",
       "https://img.castlecore.uk/easkey-tower-house-3.jpg",
@@ -25884,7 +25884,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 903,
+    "_index": 901,
     "gallery": [
       "https://img.castlecore.uk/rockfleet-castle-2.jpg",
       "https://img.castlecore.uk/rockfleet-castle-3.jpg",
@@ -25910,7 +25910,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 904,
+    "_index": 902,
     "gallery": [
       "https://img.castlecore.uk/burrishoole-abbey-2.jpg",
       "https://img.castlecore.uk/burrishoole-abbey-3.jpg",
@@ -25936,7 +25936,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 905,
+    "_index": 903,
     "gallery": [
       "https://img.castlecore.uk/clare-island-castle-2.jpg",
       "https://img.castlecore.uk/clare-island-castle-3.jpg",
@@ -25962,7 +25962,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 906,
+    "_index": 904,
     "gallery": [
       "https://img.castlecore.uk/kilconly-tower-2.jpg",
       "https://img.castlecore.uk/kilconly-tower-3.jpg",
@@ -25987,7 +25987,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 907,
+    "_index": 905,
     "gallery": [
       "https://img.castlecore.uk/castlebar-castle-2.jpg",
       "https://img.castlecore.uk/castlebar-castle-3.jpg",
@@ -26013,7 +26013,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 908,
+    "_index": 906,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Castles_of_Connacht-_Deel%2C_Mayo_%281%29_%28geograph_1954385%29.jpg/500px-Castles_of_Connacht-_Deel%2C_Mayo_%281%29_%28geograph_1954385%29.jpg"
     ]
@@ -26036,7 +26036,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 909,
+    "_index": 907,
     "gallery": [
       "https://img.castlecore.uk/kinlough-castle-2.jpg",
       "https://img.castlecore.uk/kinlough-castle-3.jpg",
@@ -26061,7 +26061,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 910,
+    "_index": 908,
     "gallery": [
       "https://img.castlecore.uk/strade-friary-2.jpg",
       "https://img.castlecore.uk/strade-friary-3.jpg",
@@ -26087,7 +26087,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 911,
+    "_index": 909,
     "gallery": [
       "https://img.castlecore.uk/moyne-abbey-2.jpg",
       "https://img.castlecore.uk/moyne-abbey-3.jpg",
@@ -26113,7 +26113,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 912,
+    "_index": 910,
     "gallery": [
       "https://img.castlecore.uk/rosserk-friary-2.jpg",
       "https://img.castlecore.uk/rosserk-friary-3.jpg",
@@ -26138,7 +26138,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 913,
+    "_index": 911,
     "gallery": [
       "https://img.castlecore.uk/parke-s-castle-leitrim-2.jpg",
       "https://img.castlecore.uk/parke-s-castle-leitrim-3.jpg",
@@ -26164,7 +26164,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 914,
+    "_index": 912,
     "gallery": [
       "https://img.castlecore.uk/manorhamilton-castle-2.jpg",
       "https://img.castlecore.uk/manorhamilton-castle-3.jpg",
@@ -26189,7 +26189,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "paid",
-    "_index": 915,
+    "_index": 913,
     "gallery": [
       "https://img.castlecore.uk/cabra-castle-2.jpg",
       "https://img.castlecore.uk/cabra-castle-3.jpg",
@@ -26215,7 +26215,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 916,
+    "_index": 914,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castle-saunderson.jpg"
     ]
@@ -26238,7 +26238,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 917,
+    "_index": 915,
     "gallery": [
       "https://img.castlecore.uk/granard-motte-2.jpg",
       "https://img.castlecore.uk/granard-motte-3.jpg",
@@ -26268,7 +26268,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 918,
+    "_index": 916,
     "gallery": [
       "https://img.castlecore.uk/rathcline-castle-2.jpg",
       "https://img.castlecore.uk/rathcline-castle-3.jpg",
@@ -26297,7 +26297,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "paid",
-    "_index": 919,
+    "_index": 917,
     "gallery": [
       "https://img.castlecore.uk/castle-leslie-2.jpg",
       "https://img.castlecore.uk/castle-leslie-3.jpg",
@@ -26323,7 +26323,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 920,
+    "_index": 918,
     "gallery": [
       "https://img.castlecore.uk/mannan-castle-2.jpg",
       "https://img.castlecore.uk/mannan-castle-3.jpg",
@@ -26349,7 +26349,7 @@ const CASTLES = [
       "free"
     ],
     "access": "paid",
-    "_index": 921,
+    "_index": 919,
     "gallery": [
       "https://img.castlecore.uk/crom-old-castle-2.jpg",
       "https://img.castlecore.uk/crom-old-castle-3.jpg",
@@ -26375,7 +26375,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 922,
+    "_index": 920,
     "gallery": [
       "https://img.castlecore.uk/castle-balfour-2.jpg",
       "https://img.castlecore.uk/castle-balfour-3.jpg"
@@ -26399,7 +26399,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 923,
+    "_index": 921,
     "gallery": [
       "https://img.castlecore.uk/castle-archdale-2.jpg",
       "https://img.castlecore.uk/castle-archdale-3.jpg",
@@ -26425,7 +26425,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 924,
+    "_index": 922,
     "gallery": [
       "https://img.castlecore.uk/mountjoy-castle-2.jpg",
       "https://img.castlecore.uk/mountjoy-castle-3.jpg",
@@ -26451,7 +26451,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 925,
+    "_index": 923,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newtownstewart-castle.jpg"
     ]
@@ -26474,7 +26474,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 926,
+    "_index": 924,
     "gallery": [
       "https://img.castlecore.uk/castlecaulfield-2.jpg",
       "https://img.castlecore.uk/castlecaulfield-3.jpg",
@@ -26500,7 +26500,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 927,
+    "_index": 925,
     "gallery": [
       "https://img.castlecore.uk/brackfield-bawn-2.jpg",
       "https://img.castlecore.uk/brackfield-bawn-3.jpg",
@@ -26525,7 +26525,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 928,
+    "_index": 926,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Dungiven_Castle_-_Centre.jpg/500px-Dungiven_Castle_-_Centre.jpg"
     ]
@@ -26548,7 +26548,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 929,
+    "_index": 927,
     "gallery": [
       "https://img.castlecore.uk/navan-fort-2.jpg",
       "https://img.castlecore.uk/navan-fort-3.jpg",
@@ -26578,7 +26578,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 930,
+    "_index": 928,
     "gallery": [
       "https://img.castlecore.uk/strangford-castle-2.jpg",
       "https://img.castlecore.uk/strangford-castle-3.jpg",
@@ -26604,7 +26604,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 931,
+    "_index": 929,
     "gallery": [
       "https://img.castlecore.uk/ardglass-castles-2.jpg",
       "https://img.castlecore.uk/ardglass-castles-3.jpg",
@@ -26630,7 +26630,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 932,
+    "_index": 930,
     "gallery": [
       "https://img.castlecore.uk/dromore-castle-down-2.jpg",
       "https://img.castlecore.uk/dromore-castle-down-3.jpg",
@@ -26656,7 +26656,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 933,
+    "_index": 931,
     "gallery": [
       "https://img.castlecore.uk/portaferry-castle-2.jpg",
       "https://img.castlecore.uk/portaferry-castle-3.jpg",
@@ -26682,7 +26682,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 934,
+    "_index": 932,
     "gallery": [
       "https://img.castlecore.uk/mahee-island-nendrum-2.jpg",
       "https://img.castlecore.uk/mahee-island-nendrum-3.jpg",
@@ -26708,7 +26708,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 935,
+    "_index": 933,
     "gallery": [
       "https://img.castlecore.uk/olderfleet-tower-2.jpg",
       "https://img.castlecore.uk/olderfleet-tower-3.jpg",
@@ -26733,7 +26733,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 936,
+    "_index": 934,
     "gallery": [
       "https://img.castlecore.uk/dunluce-castle-souterrain-2.jpg",
       "https://img.castlecore.uk/dunluce-castle-souterrain-3.jpg",
@@ -26759,7 +26759,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 937,
+    "_index": 935,
     "gallery": [
       "https://img.castlecore.uk/claregalway-castle-2.jpg",
       "https://img.castlecore.uk/claregalway-castle-3.jpg",
@@ -26785,7 +26785,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 938,
+    "_index": 936,
     "gallery": [
       "https://img.castlecore.uk/ballintubber-abbey-2.jpg",
       "https://img.castlecore.uk/ballintubber-abbey-3.jpg",
@@ -26815,7 +26815,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 939,
+    "_index": 937,
     "gallery": [
       "https://img.castlecore.uk/cong-abbey-2.jpg",
       "https://img.castlecore.uk/cong-abbey-3.jpg",
@@ -26845,7 +26845,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 940,
+    "_index": 938,
     "gallery": [
       "https://img.castlecore.uk/creevelea-friary-2.jpg",
       "https://img.castlecore.uk/creevelea-friary-3.jpg",
@@ -26871,7 +26871,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 941,
+    "_index": 939,
     "gallery": [
       "https://img.castlecore.uk/clontuskert-abbey-2.jpg",
       "https://img.castlecore.uk/clontuskert-abbey-3.jpg",
@@ -26901,7 +26901,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 942,
+    "_index": 940,
     "gallery": [
       "https://img.castlecore.uk/kilconnell-friary-2.jpg",
       "https://img.castlecore.uk/kilconnell-friary-3.jpg",
@@ -26931,7 +26931,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 943,
+    "_index": 941,
     "gallery": [
       "https://img.castlecore.uk/askeaton-friary-2.jpg",
       "https://img.castlecore.uk/askeaton-friary-3.jpg",
@@ -26961,7 +26961,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 944,
+    "_index": 942,
     "gallery": [
       "https://img.castlecore.uk/muckross-friary-2.jpg",
       "https://img.castlecore.uk/muckross-friary-3.jpg",
@@ -26987,7 +26987,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 945,
+    "_index": 943,
     "gallery": [
       "https://img.castlecore.uk/timoleague-friary-2.jpg",
       "https://img.castlecore.uk/timoleague-friary-3.jpg",
@@ -27013,7 +27013,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 946,
+    "_index": 944,
     "gallery": [
       "https://img.castlecore.uk/buttevant-friary-2.jpg",
       "https://img.castlecore.uk/buttevant-friary-3.jpg",
@@ -27040,7 +27040,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 947,
+    "_index": 945,
     "gallery": [
       "https://img.castlecore.uk/athassel-priory-2.jpg",
       "https://img.castlecore.uk/athassel-priory-3.jpg",
@@ -27070,7 +27070,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 948,
+    "_index": 946,
     "gallery": [
       "https://img.castlecore.uk/holy-cross-abbey-2.jpg",
       "https://img.castlecore.uk/holy-cross-abbey-3.jpg",
@@ -27096,7 +27096,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 949,
+    "_index": 947,
     "gallery": [
       "https://img.castlecore.uk/hore-abbey-2.jpg",
       "https://img.castlecore.uk/hore-abbey-3.jpg",
@@ -27125,7 +27125,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "paid",
-    "_index": 950,
+    "_index": 948,
     "gallery": [
       "https://img.castlecore.uk/dunbrody-country-house-2.jpg",
       "https://img.castlecore.uk/dunbrody-country-house-3.jpg",
@@ -27150,7 +27150,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 951,
+    "_index": 949,
     "gallery": [
       "https://img.castlecore.uk/tintern-abbey-ireland-2.jpg",
       "https://img.castlecore.uk/tintern-abbey-ireland-3.jpg",
@@ -27176,7 +27176,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 952,
+    "_index": 950,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-duiske-abbey.jpg"
     ]
@@ -27199,7 +27199,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 953,
+    "_index": 951,
     "gallery": [
       "https://img.castlecore.uk/black-castle-wicklow-2.jpg",
       "https://img.castlecore.uk/black-castle-wicklow-3.jpg",
@@ -27225,7 +27225,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 954,
+    "_index": 952,
     "gallery": [
       "https://img.castlecore.uk/kindlestown-castle-2.jpg",
       "https://img.castlecore.uk/kindlestown-castle-3.jpg",
@@ -27255,7 +27255,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 955,
+    "_index": 953,
     "gallery": [
       "https://img.castlecore.uk/ballyloughan-castle-carlow-2.jpg",
       "https://img.castlecore.uk/ballyloughan-castle-carlow-3.jpg",
@@ -27281,7 +27281,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 956,
+    "_index": 954,
     "gallery": [
       "https://img.castlecore.uk/coolbanagher-castle-2.jpg",
       "https://img.castlecore.uk/coolbanagher-castle-3.jpg",
@@ -27307,7 +27307,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 957,
+    "_index": 955,
     "gallery": [
       "https://img.castlecore.uk/barra-castle-2.jpg",
       "https://img.castlecore.uk/barra-castle-3.jpg",
@@ -27332,7 +27332,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 958,
+    "_index": 956,
     "gallery": [
       "https://img.castlecore.uk/pitfichie-castle-2.jpg",
       "https://img.castlecore.uk/pitfichie-castle-3.jpg",
@@ -27357,7 +27357,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 959,
+    "_index": 957,
     "gallery": [
       "https://img.castlecore.uk/cluny-castle-2.jpg",
       "https://img.castlecore.uk/cluny-castle-3.jpg"
@@ -27380,7 +27380,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 960,
+    "_index": 958,
     "gallery": [
       "https://img.castlecore.uk/leslie-castle-2.jpg",
       "https://img.castlecore.uk/leslie-castle-3.jpg",
@@ -27405,7 +27405,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 961,
+    "_index": 959,
     "gallery": [
       "https://img.castlecore.uk/fetteresso-castle-2.jpg",
       "https://img.castlecore.uk/fetteresso-castle-3.jpg",
@@ -27431,7 +27431,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 962,
+    "_index": 960,
     "gallery": [
       "https://img.castlecore.uk/inverugie-castle-2.jpg",
       "https://img.castlecore.uk/inverugie-castle-3.jpg",
@@ -27457,7 +27457,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 963,
+    "_index": 961,
     "gallery": [
       "https://img.castlecore.uk/pitsligo-castle-2.jpg",
       "https://img.castlecore.uk/pitsligo-castle-3.jpg",
@@ -27483,7 +27483,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 964,
+    "_index": 962,
     "gallery": [
       "https://img.castlecore.uk/auchindoir-castle-2.jpg",
       "https://img.castlecore.uk/auchindoir-castle-3.jpg",
@@ -27509,7 +27509,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 965,
+    "_index": 963,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg/500px-Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg"
     ]
@@ -27531,7 +27531,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 966,
+    "_index": 964,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-cairnbulg-castle.jpg"
     ]
@@ -27554,7 +27554,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 967,
+    "_index": 965,
     "gallery": [
       "https://img.castlecore.uk/ravenscraig-castle-aberdeenshire-2.jpg",
       "https://img.castlecore.uk/ravenscraig-castle-aberdeenshire-3.jpg",
@@ -27579,7 +27579,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 968,
+    "_index": 966,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-harthill-castle.jpg"
     ]
@@ -27601,7 +27601,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 969,
+    "_index": 967,
     "gallery": [
       "https://img.castlecore.uk/craig-castle-2.jpg",
       "https://img.castlecore.uk/craig-castle-3.jpg",
@@ -27626,7 +27626,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 970,
+    "_index": 968,
     "gallery": [
       "https://img.castlecore.uk/midmar-castle-2.jpg",
       "https://img.castlecore.uk/midmar-castle-3.jpg",
@@ -27651,7 +27651,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 971,
+    "_index": 969,
     "gallery": [
       "https://img.castlecore.uk/towie-barclay-castle-2.jpg"
     ]
@@ -27674,7 +27674,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 972,
+    "_index": 970,
     "gallery": [
       "https://img.castlecore.uk/gight-castle-2.jpg",
       "https://img.castlecore.uk/gight-castle-3.jpg",
@@ -27699,7 +27699,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 973,
+    "_index": 971,
     "gallery": [
       "https://img.castlecore.uk/castle-menzies-2.jpg",
       "https://img.castlecore.uk/castle-menzies-3.jpg",
@@ -27724,7 +27724,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 974,
+    "_index": 972,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-grandtully-castle.jpg"
     ]
@@ -27746,7 +27746,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 975,
+    "_index": 973,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-megginch-castle.jpg"
     ]
@@ -27768,7 +27768,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 976,
+    "_index": 974,
     "gallery": [
       "https://img.castlecore.uk/kinnaird-castle-perthshire-2.jpg",
       "https://img.castlecore.uk/kinnaird-castle-perthshire-3.jpg",
@@ -27793,7 +27793,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 977,
+    "_index": 975,
     "gallery": [
       "https://img.castlecore.uk/balhousie-castle-2.jpg",
       "https://img.castlecore.uk/balhousie-castle-3.jpg",
@@ -27818,7 +27818,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 978,
+    "_index": 976,
     "gallery": [
       "https://img.castlecore.uk/kellie-castle-2.jpg",
       "https://img.castlecore.uk/kellie-castle-3.jpg",
@@ -27847,7 +27847,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 979,
+    "_index": 977,
     "gallery": [
       "https://img.castlecore.uk/scotstarvit-tower-2.jpg",
       "https://img.castlecore.uk/scotstarvit-tower-3.jpg",
@@ -27877,7 +27877,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 980,
+    "_index": 978,
     "gallery": [
       "https://img.castlecore.uk/macduff-s-castle-2.jpg",
       "https://img.castlecore.uk/macduff-s-castle-3.jpg",
@@ -27907,7 +27907,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 981,
+    "_index": 979,
     "gallery": [
       "https://img.castlecore.uk/balwearie-castle-2.jpg",
       "https://img.castlecore.uk/balwearie-castle-3.jpg",
@@ -27938,7 +27938,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 982,
+    "_index": 980,
     "gallery": [
       "https://img.castlecore.uk/newark-castle-fife-2.jpg",
       "https://img.castlecore.uk/newark-castle-fife-3.jpg",
@@ -27963,7 +27963,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 983,
+    "_index": 981,
     "gallery": [
       "https://img.castlecore.uk/earl-s-palace-kirkwall-2.jpg",
       "https://img.castlecore.uk/earl-s-palace-kirkwall-3.jpg",
@@ -27988,7 +27988,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 984,
+    "_index": 982,
     "gallery": [
       "https://img.castlecore.uk/bishop-s-palace-kirkwall-2.jpg",
       "https://img.castlecore.uk/bishop-s-palace-kirkwall-3.jpg",
@@ -28014,7 +28014,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 985,
+    "_index": 983,
     "gallery": [
       "https://img.castlecore.uk/earl-s-palace-birsay-2.jpg",
       "https://img.castlecore.uk/earl-s-palace-birsay-3.jpg",
@@ -28039,7 +28039,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 986,
+    "_index": 984,
     "gallery": [
       "https://img.castlecore.uk/noltland-castle-2.jpg",
       "https://img.castlecore.uk/noltland-castle-3.jpg",
@@ -28069,7 +28069,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 987,
+    "_index": 985,
     "gallery": [
       "https://img.castlecore.uk/cubbie-roo-s-castle-2.jpg",
       "https://img.castlecore.uk/cubbie-roo-s-castle-3.jpg",
@@ -28098,7 +28098,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 988,
+    "_index": 986,
     "gallery": [
       "https://img.castlecore.uk/scalloway-castle-2.jpg",
       "https://img.castlecore.uk/scalloway-castle-3.jpg",
@@ -28128,7 +28128,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 989,
+    "_index": 987,
     "gallery": [
       "https://img.castlecore.uk/muness-castle-2.jpg",
       "https://img.castlecore.uk/muness-castle-3.jpg",
@@ -28157,7 +28157,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 990,
+    "_index": 988,
     "gallery": [
       "https://img.castlecore.uk/lews-castle-stornoway-2.jpg",
       "https://img.castlecore.uk/lews-castle-stornoway-3.jpg",
@@ -28183,7 +28183,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 991,
+    "_index": 989,
     "gallery": [
       "https://img.castlecore.uk/borve-castle-benbecula-2.jpg"
     ]
@@ -28206,7 +28206,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 992,
+    "_index": 990,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg/500px-Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg"
     ]
@@ -28230,7 +28230,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 993,
+    "_index": 991,
     "gallery": [
       "https://img.castlecore.uk/caisteal-maol-2.jpg",
       "https://img.castlecore.uk/caisteal-maol-3.jpg",
@@ -28256,7 +28256,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 994,
+    "_index": 992,
     "gallery": [
       "https://img.castlecore.uk/dryhope-tower-2.jpg",
       "https://img.castlecore.uk/dryhope-tower-3.jpg",
@@ -28285,7 +28285,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 995,
+    "_index": 993,
     "gallery": [
       "https://img.castlecore.uk/aikwood-tower-2.jpg",
       "https://img.castlecore.uk/aikwood-tower-3.jpg",
@@ -28314,7 +28314,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 996,
+    "_index": 994,
     "gallery": [
       "https://img.castlecore.uk/duns-castle-2.jpg",
       "https://img.castlecore.uk/duns-castle-3.jpg",
@@ -28339,7 +28339,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 997,
+    "_index": 995,
     "gallery": [
       "https://img.castlecore.uk/cranshaws-castle-2.jpg",
       "https://img.castlecore.uk/cranshaws-castle-3.jpg",
@@ -28368,7 +28368,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "paid",
-    "_index": 998,
+    "_index": 996,
     "gallery": [
       "https://img.castlecore.uk/castle-stuart-2.jpg",
       "https://img.castlecore.uk/castle-stuart-3.jpg",
@@ -28397,7 +28397,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 999,
+    "_index": 997,
     "gallery": [
       "https://img.castlecore.uk/beaufort-castle-2.jpg",
       "https://img.castlecore.uk/beaufort-castle-3.jpg",
@@ -28427,7 +28427,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1000,
+    "_index": 998,
     "gallery": [
       "https://img.castlecore.uk/tioram-castle-2.jpg",
       "https://img.castlecore.uk/tioram-castle-3.jpg",
@@ -28457,7 +28457,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1001,
+    "_index": 999,
     "gallery": [
       "https://img.castlecore.uk/kinlochaline-castle-2.jpg",
       "https://img.castlecore.uk/kinlochaline-castle-3.jpg",
@@ -28487,7 +28487,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1002,
+    "_index": 1000,
     "gallery": [
       "https://img.castlecore.uk/inverlochy-castle-fort-william-2.jpg",
       "https://img.castlecore.uk/inverlochy-castle-fort-william-3.jpg",
@@ -28513,7 +28513,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1003,
+    "_index": 1001,
     "gallery": [
       "https://img.castlecore.uk/torthorwald-castle-2.jpg",
       "https://img.castlecore.uk/torthorwald-castle-3.jpg",
@@ -28542,7 +28542,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1004,
+    "_index": 1002,
     "gallery": [
       "https://img.castlecore.uk/duntrune-castle-2.jpg",
       "https://img.castlecore.uk/duntrune-castle-3.jpg",
@@ -28567,7 +28567,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1005,
+    "_index": 1003,
     "gallery": [
       "https://img.castlecore.uk/castle-lachlan-new-2.jpg",
       "https://img.castlecore.uk/castle-lachlan-new-3.jpg",
@@ -28593,7 +28593,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1006,
+    "_index": 1004,
     "gallery": [
       "https://img.castlecore.uk/dunaverty-castle-2.jpg",
       "https://img.castlecore.uk/dunaverty-castle-3.jpg",
@@ -28623,7 +28623,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1007,
+    "_index": 1005,
     "gallery": [
       "https://img.castlecore.uk/fraoch-eilean-castle-2.jpg",
       "https://img.castlecore.uk/fraoch-eilean-castle-3.jpg",
@@ -28649,7 +28649,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1008,
+    "_index": 1006,
     "gallery": [
       "https://img.castlecore.uk/moy-castle-mull-2.jpg",
       "https://img.castlecore.uk/moy-castle-mull-3.jpg",
@@ -28675,7 +28675,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1009,
+    "_index": 1007,
     "gallery": [
       "https://img.castlecore.uk/aros-castle-mull-2.jpg",
       "https://img.castlecore.uk/aros-castle-mull-3.jpg",
@@ -28701,7 +28701,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1010,
+    "_index": 1008,
     "gallery": [
       "https://img.castlecore.uk/clackmannan-tower-2.jpg",
       "https://img.castlecore.uk/clackmannan-tower-3.jpg",
@@ -28731,7 +28731,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1011,
+    "_index": 1009,
     "gallery": [
       "https://img.castlecore.uk/menstrie-castle-2.jpg",
       "https://img.castlecore.uk/menstrie-castle-3.jpg",
@@ -28760,7 +28760,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1012,
+    "_index": 1010,
     "gallery": [
       "https://img.castlecore.uk/luffness-castle-2.jpg",
       "https://img.castlecore.uk/luffness-castle-3.jpg",
@@ -28785,7 +28785,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1013,
+    "_index": 1011,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Inverquharity_Castle.jpg/500px-Inverquharity_Castle.jpg"
     ]
@@ -28808,7 +28808,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1014,
+    "_index": 1012,
     "gallery": [
       "https://img.castlecore.uk/red-castle-lunan-bay-2.jpg",
       "https://img.castlecore.uk/red-castle-lunan-bay-3.jpg",
@@ -28833,7 +28833,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1015,
+    "_index": 1013,
     "gallery": [
       "https://img.castlecore.uk/dundonald-castle-2.jpg",
       "https://img.castlecore.uk/dundonald-castle-3.jpg",
@@ -28863,7 +28863,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1016,
+    "_index": 1014,
     "gallery": [
       "https://img.castlecore.uk/greenan-castle-2.jpg",
       "https://img.castlecore.uk/greenan-castle-3.jpg",
@@ -28893,7 +28893,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1017,
+    "_index": 1015,
     "gallery": [
       "https://img.castlecore.uk/dalquharran-castle-2.jpg",
       "https://img.castlecore.uk/dalquharran-castle-3.jpg",
@@ -28922,7 +28922,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1018,
+    "_index": 1016,
     "gallery": [
       "https://img.castlecore.uk/maybole-castle-2.jpg",
       "https://img.castlecore.uk/maybole-castle-3.jpg",
@@ -28951,7 +28951,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 1019,
+    "_index": 1017,
     "gallery": [
       "https://img.castlecore.uk/clifford-s-tower-york-2.jpg",
       "https://img.castlecore.uk/clifford-s-tower-york-3.jpg",
@@ -28977,7 +28977,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1020,
+    "_index": 1018,
     "gallery": [
       "https://img.castlecore.uk/mulgrave-castle-old-2.jpg",
       "https://img.castlecore.uk/mulgrave-castle-old-3.jpg",
@@ -29002,7 +29002,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 1021,
+    "_index": 1019,
     "gallery": [
       "https://img.castlecore.uk/brampton-castle-birdoswald-2.jpg",
       "https://img.castlecore.uk/brampton-castle-birdoswald-3.jpg",
@@ -29027,7 +29027,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1022,
+    "_index": 1020,
     "gallery": [
       "https://img.castlecore.uk/lympne-castle-2.jpg",
       "https://img.castlecore.uk/lympne-castle-3.jpg",
@@ -29057,7 +29057,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1023,
+    "_index": 1021,
     "gallery": [
       "https://img.castlecore.uk/newark-castle-nottinghamshire-2.jpg",
       "https://img.castlecore.uk/newark-castle-nottinghamshire-3.jpg",
@@ -29083,7 +29083,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1024,
+    "_index": 1022,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newport-castle.jpg",
       "https://img.castlecore.uk/wiki-newport-castle-pembs.jpg"
@@ -29106,7 +29106,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1025,
+    "_index": 1023,
     "gallery": [
       "https://img.castlecore.uk/roch-castle-2.jpg",
       "https://img.castlecore.uk/roch-castle-3.jpg",
@@ -29131,7 +29131,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1026,
+    "_index": 1024,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-upton-castle.jpg"
     ]
@@ -29153,33 +29153,13 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1027,
+    "_index": 1025,
     "gallery": [
       "https://img.castlecore.uk/benton-castle-2.jpg",
       "https://img.castlecore.uk/benton-castle-3.jpg",
       "https://img.castlecore.uk/benton-castle-4.jpg",
       "https://img.castlecore.uk/benton-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Wolf's Castle Mound",
-    "lat": 51.932,
-    "lng": -4.993,
-    "country": "Wales",
-    "type": "motte",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Norman motte in the village of Wolf's Castle in north Pembrokeshire.",
-    "image": "https://img.castlecore.uk/wolf-s-castle-mound.jpg",
-    "rating": 3.1,
-    "reviewCount": 20,
-    "county": "Pembrokeshire",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1028
   },
   {
     "name": "Llandovery Castle",
@@ -29199,7 +29179,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1029,
+    "_index": 1026,
     "gallery": [
       "https://img.castlecore.uk/llandovery-castle-2.jpg",
       "https://img.castlecore.uk/llandovery-castle-3.jpg",
@@ -29228,7 +29208,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 1030,
+    "_index": 1027,
     "gallery": [
       "https://img.castlecore.uk/aberglasney-house-2.jpg",
       "https://img.castlecore.uk/aberglasney-house-3.jpg",
@@ -29258,7 +29238,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1031,
+    "_index": 1028,
     "gallery": [
       "https://img.castlecore.uk/tregaron-castle-mound-2.jpg",
       "https://img.castlecore.uk/tregaron-castle-mound-3.jpg",
@@ -29288,7 +29268,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1032,
+    "_index": 1029,
     "gallery": [
       "https://img.castlecore.uk/tomen-y-mur-2.jpg",
       "https://img.castlecore.uk/tomen-y-mur-3.jpg",
@@ -29318,7 +29298,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1033,
+    "_index": 1030,
     "gallery": [
       "https://img.castlecore.uk/castell-collen-2.jpg",
       "https://img.castlecore.uk/castell-collen-3.jpg",
@@ -29348,7 +29328,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1034,
+    "_index": 1031,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Painscastle_-_geograph.org.uk_-_403187.jpg/500px-Painscastle_-_geograph.org.uk_-_403187.jpg"
     ]
@@ -29371,7 +29351,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1035,
+    "_index": 1032,
     "gallery": [
       "https://img.castlecore.uk/castell-aberlleiniog-2.jpg",
       "https://img.castlecore.uk/castell-aberlleiniog-3.jpg",
@@ -29405,7 +29385,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1036,
+    "_index": 1033,
     "gallery": [
       "https://img.castlecore.uk/hawarden-castle-old-2.jpg",
       "https://img.castlecore.uk/hawarden-castle-old-3.jpg",
@@ -29430,7 +29410,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1037,
+    "_index": 1034,
     "gallery": [
       "https://img.castlecore.uk/roslin-castle-2.jpg",
       "https://img.castlecore.uk/roslin-castle-3.jpg",
@@ -29459,7 +29439,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1038,
+    "_index": 1035,
     "gallery": [
       "https://img.castlecore.uk/dornoch-castle-hotel-2.jpg",
       "https://img.castlecore.uk/dornoch-castle-hotel-3.jpg",
@@ -29485,7 +29465,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1039,
+    "_index": 1036,
     "gallery": [
       "https://img.castlecore.uk/dundrum-castle-down-2.jpg",
       "https://img.castlecore.uk/dundrum-castle-down-3.jpg",
@@ -29511,7 +29491,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1040,
+    "_index": 1037,
     "gallery": [
       "https://img.castlecore.uk/castle-combe-village-2.jpg",
       "https://img.castlecore.uk/castle-combe-village-3.jpg",
@@ -29536,7 +29516,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 1041,
+    "_index": 1038,
     "gallery": [
       "https://img.castlecore.uk/ross-castle-killarney-2.jpg",
       "https://img.castlecore.uk/ross-castle-killarney-3.jpg",
@@ -29562,7 +29542,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1042,
+    "_index": 1039,
     "gallery": [
       "https://img.castlecore.uk/desmond-castle-adare-2.jpg",
       "https://img.castlecore.uk/desmond-castle-adare-3.jpg",
@@ -29588,7 +29568,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1045,
+    "_index": 1040,
     "gallery": [
       "https://img.castlecore.uk/muckinish-castle-2.jpg",
       "https://img.castlecore.uk/muckinish-castle-3.jpg",
@@ -29615,7 +29595,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1046,
+    "_index": 1041,
     "gallery": [
       "https://img.castlecore.uk/finavarra-castle-2.jpg",
       "https://img.castlecore.uk/finavarra-castle-3.jpg",
@@ -29641,7 +29621,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1047,
+    "_index": 1042,
     "gallery": [
       "https://img.castlecore.uk/rossroe-castle-2.jpg",
       "https://img.castlecore.uk/rossroe-castle-3.jpg",
@@ -29667,7 +29647,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1048,
+    "_index": 1043,
     "gallery": [
       "https://img.castlecore.uk/ballymulcashel-castle-2.jpg",
       "https://img.castlecore.uk/ballymulcashel-castle-3.jpg",
@@ -29693,7 +29673,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1049,
+    "_index": 1044,
     "gallery": [
       "https://img.castlecore.uk/caherkinmonwee-castle-2.jpg",
       "https://img.castlecore.uk/caherkinmonwee-castle-3.jpg",
@@ -29719,7 +29699,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1050,
+    "_index": 1045,
     "gallery": [
       "https://img.castlecore.uk/lemeneagh-castle-2.jpg",
       "https://img.castlecore.uk/lemeneagh-castle-3.jpg",
@@ -29745,7 +29725,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1051,
+    "_index": 1046,
     "gallery": [
       "https://img.castlecore.uk/mountcashel-castle-2.jpg",
       "https://img.castlecore.uk/mountcashel-castle-3.jpg",
@@ -29771,7 +29751,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1052,
+    "_index": 1047,
     "gallery": [
       "https://img.castlecore.uk/kilkishen-castle-2.jpg"
     ]
@@ -29794,7 +29774,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1053,
+    "_index": 1048,
     "gallery": [
       "https://img.castlecore.uk/moghane-castle-2.jpg",
       "https://img.castlecore.uk/moghane-castle-3.jpg",
@@ -29820,7 +29800,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1054,
+    "_index": 1049,
     "gallery": [
       "https://img.castlecore.uk/ballyallia-castle-2.jpg",
       "https://img.castlecore.uk/ballyallia-castle-3.jpg"
@@ -29844,7 +29824,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1055,
+    "_index": 1050,
     "gallery": [
       "https://img.castlecore.uk/clarecastle-tower-2.jpg",
       "https://img.castlecore.uk/clarecastle-tower-3.jpg",
@@ -29870,7 +29850,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1056,
+    "_index": 1051,
     "gallery": [
       "https://img.castlecore.uk/rosslevan-castle-2.jpg",
       "https://img.castlecore.uk/rosslevan-castle-3.jpg",
@@ -29896,7 +29876,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1057,
+    "_index": 1052,
     "gallery": [
       "https://img.castlecore.uk/cahermurphy-castle-2.jpg",
       "https://img.castlecore.uk/cahermurphy-castle-3.jpg",
@@ -29923,7 +29903,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1058,
+    "_index": 1053,
     "gallery": [
       "https://img.castlecore.uk/clonderalaw-castle-2.jpg",
       "https://img.castlecore.uk/clonderalaw-castle-3.jpg",
@@ -29950,7 +29930,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1059,
+    "_index": 1054,
     "gallery": [
       "https://img.castlecore.uk/carrigaholt-castle-2.jpg",
       "https://img.castlecore.uk/carrigaholt-castle-3.jpg",
@@ -29976,7 +29956,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1060,
+    "_index": 1055,
     "gallery": [
       "https://img.castlecore.uk/doonbeg-castle-2.jpg",
       "https://img.castlecore.uk/doonbeg-castle-3.jpg",
@@ -30002,7 +29982,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1061,
+    "_index": 1056,
     "gallery": [
       "https://img.castlecore.uk/kilrush-tower-house-2.jpg",
       "https://img.castlecore.uk/kilrush-tower-house-3.jpg",
@@ -30028,7 +30008,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1062,
+    "_index": 1057,
     "gallery": [
       "https://img.castlecore.uk/knockfin-castle-2.jpg"
     ]
@@ -30051,7 +30031,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1063
+    "_index": 1058
   },
   {
     "name": "Kilcornan Castle",
@@ -30071,7 +30051,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1064,
+    "_index": 1059,
     "gallery": [
       "https://img.castlecore.uk/kilcornan-castle-2.jpg",
       "https://img.castlecore.uk/kilcornan-castle-3.jpg",
@@ -30097,7 +30077,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1065,
+    "_index": 1060,
     "gallery": [
       "https://img.castlecore.uk/caherlistrane-castle-2.jpg",
       "https://img.castlecore.uk/caherlistrane-castle-3.jpg",
@@ -30123,7 +30103,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1066,
+    "_index": 1061,
     "gallery": [
       "https://img.castlecore.uk/moylough-castle-2.jpg"
     ]
@@ -30146,7 +30126,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1067,
+    "_index": 1062,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-monivea-castle.jpg"
     ]
@@ -30169,7 +30149,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1068
+    "_index": 1063
   },
   {
     "name": "Loughrea Castle",
@@ -30189,7 +30169,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1069,
+    "_index": 1064,
     "gallery": [
       "https://img.castlecore.uk/loughrea-castle-2.jpg",
       "https://img.castlecore.uk/loughrea-castle-3.jpg",
@@ -30215,7 +30195,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1070,
+    "_index": 1065,
     "gallery": [
       "https://img.castlecore.uk/garbally-castle-2.jpg",
       "https://img.castlecore.uk/garbally-castle-3.jpg",
@@ -30241,7 +30221,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1071,
+    "_index": 1066,
     "gallery": [
       "https://img.castlecore.uk/clonbrock-castle-2.jpg",
       "https://img.castlecore.uk/clonbrock-castle-3.jpg",
@@ -30267,7 +30247,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1072,
+    "_index": 1067,
     "gallery": [
       "https://img.castlecore.uk/cloghanower-castle-2.jpg",
       "https://img.castlecore.uk/cloghanower-castle-3.jpg",
@@ -30294,7 +30274,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1074,
+    "_index": 1068,
     "gallery": [
       "https://img.castlecore.uk/renvyle-castle-2.jpg",
       "https://img.castlecore.uk/renvyle-castle-3.jpg",
@@ -30320,7 +30300,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1075,
+    "_index": 1069,
     "gallery": [
       "https://img.castlecore.uk/hen-s-castle-2.jpg",
       "https://img.castlecore.uk/hen-s-castle-3.jpg",
@@ -30346,7 +30326,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1076,
+    "_index": 1070,
     "gallery": [
       "https://img.castlecore.uk/carna-castle-2.jpg",
       "https://img.castlecore.uk/carna-castle-3.jpg",
@@ -30372,7 +30352,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1077,
+    "_index": 1071,
     "gallery": [
       "https://img.castlecore.uk/ardamullivan-castle-2.jpg",
       "https://img.castlecore.uk/ardamullivan-castle-3.jpg",
@@ -30398,7 +30378,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1078,
+    "_index": 1072,
     "gallery": [
       "https://img.castlecore.uk/pallas-castle-2.jpg",
       "https://img.castlecore.uk/pallas-castle-3.jpg",
@@ -30424,7 +30404,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1079,
+    "_index": 1073,
     "gallery": [
       "https://img.castlecore.uk/ballybrit-castle-2.jpg",
       "https://img.castlecore.uk/ballybrit-castle-3.jpg",
@@ -30450,7 +30430,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1080,
+    "_index": 1074,
     "gallery": [
       "https://img.castlecore.uk/killarone-tower-2.jpg",
       "https://img.castlecore.uk/killarone-tower-3.jpg",
@@ -30476,7 +30456,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1081,
+    "_index": 1075,
     "gallery": [
       "https://img.castlecore.uk/rahasane-castle-2.jpg",
       "https://img.castlecore.uk/rahasane-castle-3.jpg",
@@ -30502,7 +30482,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1082,
+    "_index": 1076,
     "gallery": [
       "https://img.castlecore.uk/carrigadrohid-castle-2.jpg",
       "https://img.castlecore.uk/carrigadrohid-castle-3.jpg",
@@ -30529,7 +30509,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1083,
+    "_index": 1077,
     "gallery": [
       "https://img.castlecore.uk/castledonovan-2.jpg",
       "https://img.castlecore.uk/castledonovan-3.jpg",
@@ -30556,7 +30536,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1084,
+    "_index": 1078,
     "gallery": [
       "https://img.castlecore.uk/dunmanus-castle-2.jpg",
       "https://img.castlecore.uk/dunmanus-castle-3.jpg",
@@ -30583,7 +30563,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1085,
+    "_index": 1079,
     "gallery": [
       "https://img.castlecore.uk/rossbrin-castle-2.jpg",
       "https://img.castlecore.uk/rossbrin-castle-3.jpg",
@@ -30609,7 +30589,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1086,
+    "_index": 1080,
     "gallery": [
       "https://img.castlecore.uk/castletownshend-tower-2.jpg",
       "https://img.castlecore.uk/castletownshend-tower-3.jpg",
@@ -30635,7 +30615,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1087,
+    "_index": 1081,
     "gallery": [
       "https://img.castlecore.uk/cloghane-castle-2.jpg",
       "https://img.castlecore.uk/cloghane-castle-3.jpg",
@@ -30661,7 +30641,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1088,
+    "_index": 1082,
     "gallery": [
       "https://img.castlecore.uk/togher-castle-2.jpg",
       "https://img.castlecore.uk/togher-castle-3.jpg",
@@ -30687,7 +30667,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1089,
+    "_index": 1083,
     "gallery": [
       "https://img.castlecore.uk/castlemagner-castle-2.jpg",
       "https://img.castlecore.uk/castlemagner-castle-3.jpg",
@@ -30713,7 +30693,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1090,
+    "_index": 1084,
     "gallery": [
       "https://img.castlecore.uk/liscarroll-castle-2.jpg",
       "https://img.castlecore.uk/liscarroll-castle-3.jpg",
@@ -30739,7 +30719,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1091,
+    "_index": 1085,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castlepook-castle.jpg"
     ]
@@ -30762,7 +30742,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1092,
+    "_index": 1086,
     "gallery": [
       "https://img.castlecore.uk/buttevant-castle-2.jpg",
       "https://img.castlecore.uk/buttevant-castle-3.jpg",
@@ -30787,7 +30767,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1093,
+    "_index": 1087,
     "gallery": [
       "https://img.castlecore.uk/drishane-castle-2.jpg",
       "https://img.castlecore.uk/drishane-castle-3.jpg",
@@ -30813,7 +30793,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1094,
+    "_index": 1088,
     "gallery": [
       "https://img.castlecore.uk/dromaneen-castle-2.jpg",
       "https://img.castlecore.uk/dromaneen-castle-3.jpg",
@@ -30839,7 +30819,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1095,
+    "_index": 1089,
     "gallery": [
       "https://img.castlecore.uk/castlelyons-castle-2.jpg",
       "https://img.castlecore.uk/castlelyons-castle-3.jpg",
@@ -30865,7 +30845,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1096,
+    "_index": 1090,
     "gallery": [
       "https://img.castlecore.uk/conna-castle-2.jpg",
       "https://img.castlecore.uk/conna-castle-3.jpg",
@@ -30891,7 +30871,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1097,
+    "_index": 1091,
     "gallery": [
       "https://img.castlecore.uk/ballymalis-castle-2.jpg",
       "https://img.castlecore.uk/ballymalis-castle-3.jpg",
@@ -30917,7 +30897,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1098,
+    "_index": 1092,
     "gallery": [
       "https://img.castlecore.uk/castleisland-castle-2.jpg",
       "https://img.castlecore.uk/castleisland-castle-3.jpg",
@@ -30944,7 +30924,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1099,
+    "_index": 1093,
     "gallery": [
       "https://img.castlecore.uk/ballyheigue-castle-2.jpg",
       "https://img.castlecore.uk/ballyheigue-castle-3.jpg",
@@ -30971,7 +30951,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1100,
+    "_index": 1094,
     "gallery": [
       "https://img.castlecore.uk/fenit-castle-2.jpg",
       "https://img.castlecore.uk/fenit-castle-3.jpg",
@@ -30997,7 +30977,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1101,
+    "_index": 1095,
     "gallery": [
       "https://img.castlecore.uk/killaha-castle-kerry-2.jpg",
       "https://img.castlecore.uk/killaha-castle-kerry-3.jpg",
@@ -31023,7 +31003,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1102,
+    "_index": 1096,
     "gallery": [
       "https://img.castlecore.uk/parkavonear-castle-2.jpg",
       "https://img.castlecore.uk/parkavonear-castle-3.jpg",
@@ -31049,7 +31029,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1103,
+    "_index": 1097,
     "gallery": [
       "https://img.castlecore.uk/castlegregory-tower-2.jpg",
       "https://img.castlecore.uk/castlegregory-tower-3.jpg",
@@ -31075,7 +31055,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1104,
+    "_index": 1098,
     "gallery": [
       "https://img.castlecore.uk/castlemaine-castle-2.jpg",
       "https://img.castlecore.uk/castlemaine-castle-3.jpg",
@@ -31101,7 +31081,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1105,
+    "_index": 1099,
     "gallery": [
       "https://img.castlecore.uk/duagh-castle-2.jpg",
       "https://img.castlecore.uk/duagh-castle-3.jpg",
@@ -31127,7 +31107,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1106
+    "_index": 1100
   },
   {
     "name": "Killahara Tower",
@@ -31147,7 +31127,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1107,
+    "_index": 1101,
     "gallery": [
       "https://img.castlecore.uk/killahara-tower-2.jpg",
       "https://img.castlecore.uk/killahara-tower-3.jpg",
@@ -31173,7 +31153,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1108,
+    "_index": 1102,
     "gallery": [
       "https://img.castlecore.uk/knockgraffon-castle-2.jpg",
       "https://img.castlecore.uk/knockgraffon-castle-3.jpg",
@@ -31199,7 +31179,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1109,
+    "_index": 1103,
     "gallery": [
       "https://img.castlecore.uk/two-mile-borris-castle-2.jpg",
       "https://img.castlecore.uk/two-mile-borris-castle-3.jpg",
@@ -31225,7 +31205,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1110,
+    "_index": 1104,
     "gallery": [
       "https://img.castlecore.uk/moycarkey-castle-2.jpg",
       "https://img.castlecore.uk/moycarkey-castle-3.jpg",
@@ -31252,7 +31232,7 @@ const CASTLES = [
       "lakeside"
     ],
     "access": "free",
-    "_index": 1111,
+    "_index": 1105,
     "gallery": [
       "https://img.castlecore.uk/dromineer-castle-2.jpg",
       "https://img.castlecore.uk/dromineer-castle-3.jpg",
@@ -31278,7 +31258,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1112,
+    "_index": 1106,
     "gallery": [
       "https://img.castlecore.uk/pottlerath-castle-2.jpg",
       "https://img.castlecore.uk/pottlerath-castle-3.jpg",
@@ -31305,7 +31285,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1113
+    "_index": 1107
   },
   {
     "name": "Ballycahill Castle",
@@ -31325,7 +31305,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1114,
+    "_index": 1108,
     "gallery": [
       "https://img.castlecore.uk/ballycahill-castle-2.jpg",
       "https://img.castlecore.uk/ballycahill-castle-3.jpg",
@@ -31351,7 +31331,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1115,
+    "_index": 1109,
     "gallery": [
       "https://img.castlecore.uk/sopwell-castle-2.jpg",
       "https://img.castlecore.uk/sopwell-castle-3.jpg",
@@ -31376,7 +31356,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1116,
+    "_index": 1110,
     "gallery": [
       "https://img.castlecore.uk/castle-matrix-2.jpg",
       "https://img.castlecore.uk/castle-matrix-3.jpg",
@@ -31402,7 +31382,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1117,
+    "_index": 1111,
     "gallery": [
       "https://img.castlecore.uk/ballygrennan-castle-2.jpg",
       "https://img.castlecore.uk/ballygrennan-castle-3.jpg",
@@ -31428,7 +31408,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1119,
+    "_index": 1112,
     "gallery": [
       "https://img.castlecore.uk/shanpallas-castle-2.jpg",
       "https://img.castlecore.uk/shanpallas-castle-3.jpg",
@@ -31454,7 +31434,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1120,
+    "_index": 1113,
     "gallery": [
       "https://img.castlecore.uk/bourchier-s-castle-2.jpg",
       "https://img.castlecore.uk/bourchier-s-castle-3.jpg",
@@ -31479,7 +31459,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1121,
+    "_index": 1114,
     "gallery": [
       "https://img.castlecore.uk/fanningstown-castle-2.jpg",
       "https://img.castlecore.uk/fanningstown-castle-3.jpg",
@@ -31505,7 +31485,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1122
+    "_index": 1115
   },
   {
     "name": "Killmallock Castle",
@@ -31525,7 +31505,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1123,
+    "_index": 1116,
     "gallery": [
       "https://img.castlecore.uk/killmallock-castle-2.jpg",
       "https://img.castlecore.uk/killmallock-castle-3.jpg",
@@ -31551,7 +31531,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1124,
+    "_index": 1117,
     "gallery": [
       "https://img.castlecore.uk/dromore-castle-kerry-lim-2.jpg",
       "https://img.castlecore.uk/dromore-castle-kerry-lim-3.jpg",
@@ -31577,7 +31557,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1125,
+    "_index": 1118,
     "gallery": [
       "https://img.castlecore.uk/newcastle-west-castle-2.jpg",
       "https://img.castlecore.uk/newcastle-west-castle-3.jpg",
@@ -31603,7 +31583,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1126,
+    "_index": 1119,
     "gallery": [
       "https://img.castlecore.uk/kinlough-castle-mayo-2.jpg",
       "https://img.castlecore.uk/kinlough-castle-mayo-3.jpg",
@@ -31629,7 +31609,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1127,
+    "_index": 1120,
     "gallery": [
       "https://img.castlecore.uk/kildavnet-castle-2.jpg",
       "https://img.castlecore.uk/kildavnet-castle-3.jpg",
@@ -31656,7 +31636,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1128,
+    "_index": 1121,
     "gallery": [
       "https://img.castlecore.uk/carrickkildavnet-castle-2.jpg",
       "https://img.castlecore.uk/carrickkildavnet-castle-3.jpg",
@@ -31682,7 +31662,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1129,
+    "_index": 1122,
     "gallery": [
       "https://img.castlecore.uk/ballylahan-castle-2.jpg",
       "https://img.castlecore.uk/ballylahan-castle-3.jpg",
@@ -31708,7 +31688,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1130,
+    "_index": 1123,
     "gallery": [
       "https://img.castlecore.uk/turlough-round-tower-2.jpg",
       "https://img.castlecore.uk/turlough-round-tower-3.jpg",
@@ -31734,7 +31714,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1131
+    "_index": 1124
   },
   {
     "name": "Castlecarra",
@@ -31755,7 +31735,7 @@ const CASTLES = [
       "lakeside"
     ],
     "access": "free",
-    "_index": 1132,
+    "_index": 1125,
     "gallery": [
       "https://img.castlecore.uk/castlecarra-2.jpg",
       "https://img.castlecore.uk/castlecarra-3.jpg",
@@ -31781,7 +31761,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1133,
+    "_index": 1126,
     "gallery": [
       "https://img.castlecore.uk/ballinrobe-castle-2.jpg",
       "https://img.castlecore.uk/ballinrobe-castle-3.jpg",
@@ -31807,7 +31787,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1134,
+    "_index": 1127,
     "gallery": [
       "https://img.castlecore.uk/shrule-castle-2.jpg",
       "https://img.castlecore.uk/shrule-castle-3.jpg",
@@ -31833,7 +31813,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1135,
+    "_index": 1128,
     "gallery": [
       "https://img.castlecore.uk/castleaffy-2.jpg",
       "https://img.castlecore.uk/castleaffy-3.jpg",
@@ -31859,7 +31839,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1136,
+    "_index": 1129,
     "gallery": [
       "https://img.castlecore.uk/belcarra-castle-2.jpg",
       "https://img.castlecore.uk/belcarra-castle-3.jpg"
@@ -31883,7 +31863,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1137,
+    "_index": 1130,
     "gallery": [
       "https://img.castlecore.uk/aille-castle-2.jpg",
       "https://img.castlecore.uk/aille-castle-3.jpg",
@@ -31909,7 +31889,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1138,
+    "_index": 1131,
     "gallery": [
       "https://img.castlecore.uk/owenduff-castle-2.jpg",
       "https://img.castlecore.uk/owenduff-castle-3.jpg",
@@ -31935,7 +31915,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1139
+    "_index": 1132
   },
   {
     "name": "Errew Abbey",
@@ -31955,7 +31935,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1140,
+    "_index": 1133,
     "gallery": [
       "https://img.castlecore.uk/errew-abbey-2.jpg",
       "https://img.castlecore.uk/errew-abbey-3.jpg",
@@ -31980,7 +31960,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1141,
+    "_index": 1134,
     "gallery": [
       "https://img.castlecore.uk/castlerea-castle-clonalis-2.jpg",
       "https://img.castlecore.uk/castlerea-castle-clonalis-3.jpg",
@@ -32005,7 +31985,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1142,
+    "_index": 1135,
     "gallery": [
       "https://img.castlecore.uk/donamon-castle-ros-2.jpg",
       "https://img.castlecore.uk/donamon-castle-ros-3.jpg",
@@ -32031,7 +32011,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1143,
+    "_index": 1136,
     "gallery": [
       "https://img.castlecore.uk/castlestrange-stone-2.jpg",
       "https://img.castlecore.uk/castlestrange-stone-3.jpg",
@@ -32056,7 +32036,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1144,
+    "_index": 1137,
     "gallery": [
       "https://img.castlecore.uk/strokestown-castle-2.jpg",
       "https://img.castlecore.uk/strokestown-castle-3.jpg",
@@ -32082,7 +32062,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1145,
+    "_index": 1138,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-fuerty-castle.jpg"
     ]
@@ -32105,7 +32085,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1146,
+    "_index": 1139,
     "gallery": [
       "https://img.castlecore.uk/tulsk-castle-2.jpg"
     ]
@@ -32128,33 +32108,13 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1147,
+    "_index": 1140,
     "gallery": [
       "https://img.castlecore.uk/dunamon-tower-2.jpg",
       "https://img.castlecore.uk/dunamon-tower-3.jpg",
       "https://img.castlecore.uk/dunamon-tower-4.jpg",
       "https://img.castlecore.uk/dunamon-tower-5.jpg"
     ]
-  },
-  {
-    "name": "Castlecoote House",
-    "lat": 53.65,
-    "lng": -8.172,
-    "country": "Ireland",
-    "type": "country house",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "Cromwellian-era fortified house ruin.",
-    "image": "",
-    "rating": 3.3,
-    "reviewCount": 18,
-    "county": "County Roscommon",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1148
   },
   {
     "name": "Elphin Castle",
@@ -32174,7 +32134,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1149,
+    "_index": 1141,
     "gallery": [
       "https://img.castlecore.uk/elphin-castle-2.jpg",
       "https://img.castlecore.uk/elphin-castle-3.jpg",
@@ -32200,7 +32160,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1150,
+    "_index": 1142,
     "gallery": [
       "https://img.castlecore.uk/ballyfarnon-castle-2.jpg",
       "https://img.castlecore.uk/ballyfarnon-castle-3.jpg",
@@ -32226,7 +32186,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1151,
+    "_index": 1143,
     "gallery": [
       "https://img.castlecore.uk/ballynakill-castle-2.jpg",
       "https://img.castlecore.uk/ballynakill-castle-3.jpg"
@@ -32250,7 +32210,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1152,
+    "_index": 1144,
     "gallery": [
       "https://img.castlecore.uk/castleplunket-tower-2.jpg"
     ]
@@ -32272,7 +32232,7 @@ const CASTLES = [
       "luxury-hotel"
     ],
     "access": "paid",
-    "_index": 1153,
+    "_index": 1145,
     "gallery": [
       "https://img.castlecore.uk/kilronan-castle-2.jpg",
       "https://img.castlecore.uk/kilronan-castle-3.jpg",
@@ -32298,7 +32258,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1154,
+    "_index": 1146,
     "gallery": [
       "https://img.castlecore.uk/glinsk-castle-2.jpg",
       "https://img.castlecore.uk/glinsk-castle-3.jpg",
@@ -32324,7 +32284,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1155,
+    "_index": 1147,
     "gallery": [
       "https://img.castlecore.uk/templehouse-castle-2.jpg",
       "https://img.castlecore.uk/templehouse-castle-3.jpg",
@@ -32349,7 +32309,7 @@ const CASTLES = [
       "luxury-hotel"
     ],
     "access": "paid",
-    "_index": 1156,
+    "_index": 1148,
     "gallery": [
       "https://img.castlecore.uk/markree-castle-2.jpg",
       "https://img.castlecore.uk/markree-castle-3.jpg",
@@ -32374,7 +32334,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1157,
+    "_index": 1149,
     "gallery": [
       "https://img.castlecore.uk/ardtermon-castle-2.jpg",
       "https://img.castlecore.uk/ardtermon-castle-3.jpg",
@@ -32399,7 +32359,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1158,
+    "_index": 1150,
     "gallery": [
       "https://img.castlecore.uk/lissadell-house-2.jpg",
       "https://img.castlecore.uk/lissadell-house-3.jpg",
@@ -32425,7 +32385,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1159,
+    "_index": 1151,
     "gallery": [
       "https://img.castlecore.uk/kilglass-castle-2.jpg",
       "https://img.castlecore.uk/kilglass-castle-3.jpg",
@@ -32451,7 +32411,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1160,
+    "_index": 1152,
     "gallery": [
       "https://img.castlecore.uk/banada-abbey-2.jpg",
       "https://img.castlecore.uk/banada-abbey-3.jpg"
@@ -32475,7 +32435,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1161,
+    "_index": 1153,
     "gallery": [
       "https://img.castlecore.uk/castlebaldwin-2.jpg"
     ]
@@ -32498,7 +32458,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1162,
+    "_index": 1154,
     "gallery": [
       "https://img.castlecore.uk/collooney-castle-2.jpg",
       "https://img.castlecore.uk/collooney-castle-3.jpg",
@@ -32524,7 +32484,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1163,
+    "_index": 1155,
     "gallery": [
       "https://img.castlecore.uk/skreen-castle-2.jpg",
       "https://img.castlecore.uk/skreen-castle-3.jpg",
@@ -32551,7 +32511,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1164,
+    "_index": 1156,
     "gallery": [
       "https://img.castlecore.uk/enniscrone-castle-2.jpg",
       "https://img.castlecore.uk/enniscrone-castle-3.jpg",
@@ -32577,7 +32537,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1165,
+    "_index": 1157,
     "gallery": [
       "https://img.castlecore.uk/carrowmore-megalithic-cemetery-2.jpg",
       "https://img.castlecore.uk/carrowmore-megalithic-cemetery-3.jpg",
@@ -32603,7 +32563,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1166,
+    "_index": 1158,
     "gallery": [
       "https://img.castlecore.uk/drumcliff-tower-2.jpg",
       "https://img.castlecore.uk/drumcliff-tower-3.jpg",
@@ -32629,7 +32589,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1167,
+    "_index": 1159,
     "gallery": [
       "https://img.castlecore.uk/aclare-castle-2.jpg",
       "https://img.castlecore.uk/aclare-castle-3.jpg",
@@ -32655,7 +32615,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1168,
+    "_index": 1160,
     "gallery": [
       "https://img.castlecore.uk/dromahair-castle-2.jpg",
       "https://img.castlecore.uk/dromahair-castle-3.jpg"
@@ -32679,7 +32639,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1169,
+    "_index": 1161,
     "gallery": [
       "https://img.castlecore.uk/creevelea-friary-leitrim-2.jpg",
       "https://img.castlecore.uk/creevelea-friary-leitrim-3.jpg",
@@ -32705,7 +32665,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1170,
+    "_index": 1162,
     "gallery": [
       "https://img.castlecore.uk/drumshanbo-castle-2.jpg",
       "https://img.castlecore.uk/drumshanbo-castle-3.jpg",
@@ -32731,7 +32691,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1171,
+    "_index": 1163,
     "gallery": [
       "https://img.castlecore.uk/carrick-on-shannon-castle-2.jpg",
       "https://img.castlecore.uk/carrick-on-shannon-castle-3.jpg",
@@ -32757,7 +32717,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1172,
+    "_index": 1164,
     "gallery": [
       "https://img.castlecore.uk/leitrim-castle-2.jpg",
       "https://img.castlecore.uk/leitrim-castle-3.jpg",
@@ -32783,7 +32743,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1173,
+    "_index": 1165,
     "gallery": [
       "https://img.castlecore.uk/fenagh-abbey-2.jpg",
       "https://img.castlecore.uk/fenagh-abbey-3.jpg",
@@ -32809,7 +32769,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1174,
+    "_index": 1166,
     "gallery": [
       "https://img.castlecore.uk/ballinagleragh-castle-2.jpg",
       "https://img.castlecore.uk/ballinagleragh-castle-3.jpg",
@@ -32835,7 +32795,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1175,
+    "_index": 1167,
     "gallery": [
       "https://img.castlecore.uk/jamestown-castle-2.jpg",
       "https://img.castlecore.uk/jamestown-castle-3.jpg",
@@ -32861,7 +32821,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1176,
+    "_index": 1168,
     "gallery": [
       "https://img.castlecore.uk/newtown-gore-castle-2.jpg",
       "https://img.castlecore.uk/newtown-gore-castle-3.jpg",
@@ -32887,7 +32847,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1177,
+    "_index": 1169,
     "gallery": [
       "https://img.castlecore.uk/mohill-castle-2.jpg",
       "https://img.castlecore.uk/mohill-castle-3.jpg",
@@ -32913,7 +32873,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1180,
+    "_index": 1170,
     "gallery": [
       "https://img.castlecore.uk/drumlease-castle-2.jpg",
       "https://img.castlecore.uk/drumlease-castle-3.jpg",
@@ -32939,7 +32899,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1182,
+    "_index": 1171,
     "gallery": [
       "https://img.castlecore.uk/kiltyclogher-castle-2.jpg",
       "https://img.castlecore.uk/kiltyclogher-castle-3.jpg",
@@ -32964,7 +32924,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1183,
+    "_index": 1172,
     "gallery": [
       "https://img.castlecore.uk/killeen-castle-2.jpg",
       "https://img.castlecore.uk/killeen-castle-3.jpg",
@@ -32990,7 +32950,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1184,
+    "_index": 1173,
     "gallery": [
       "https://img.castlecore.uk/summerhill-castle-2.jpg",
       "https://img.castlecore.uk/summerhill-castle-3.jpg",
@@ -33016,7 +32976,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1185,
+    "_index": 1174,
     "gallery": [
       "https://img.castlecore.uk/balrath-castle-2.jpg",
       "https://img.castlecore.uk/balrath-castle-3.jpg",
@@ -33042,7 +33002,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1186,
+    "_index": 1175,
     "gallery": [
       "https://img.castlecore.uk/rathmore-castle-2.jpg",
       "https://img.castlecore.uk/rathmore-castle-3.jpg",
@@ -33068,7 +33028,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1187,
+    "_index": 1176,
     "gallery": [
       "https://img.castlecore.uk/rataine-castle-2.jpg",
       "https://img.castlecore.uk/rataine-castle-3.jpg",
@@ -33094,7 +33054,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1188,
+    "_index": 1177,
     "gallery": [
       "https://img.castlecore.uk/donore-castle-meath-2.jpg",
       "https://img.castlecore.uk/donore-castle-meath-3.jpg",
@@ -33120,7 +33080,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1189,
+    "_index": 1178,
     "gallery": [
       "https://img.castlecore.uk/ardmulchan-castle-2.jpg",
       "https://img.castlecore.uk/ardmulchan-castle-3.jpg",
@@ -33146,7 +33106,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1190
+    "_index": 1179
   },
   {
     "name": "Kilbeggan Castle",
@@ -33166,7 +33126,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1191,
+    "_index": 1180,
     "gallery": [
       "https://img.castlecore.uk/kilbeggan-castle-2.jpg",
       "https://img.castlecore.uk/kilbeggan-castle-3.jpg",
@@ -33192,7 +33152,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1192,
+    "_index": 1181,
     "gallery": [
       "https://img.castlecore.uk/castletown-geoghegan-2.jpg",
       "https://img.castlecore.uk/castletown-geoghegan-3.jpg",
@@ -33217,7 +33177,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1193,
+    "_index": 1182,
     "gallery": [
       "https://img.castlecore.uk/clonyn-castle-2.jpg",
       "https://img.castlecore.uk/clonyn-castle-3.jpg",
@@ -33243,7 +33203,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1194,
+    "_index": 1183,
     "gallery": [
       "https://img.castlecore.uk/multyfarnham-friary-2.jpg",
       "https://img.castlecore.uk/multyfarnham-friary-3.jpg",
@@ -33269,7 +33229,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1195,
+    "_index": 1184,
     "gallery": [
       "https://img.castlecore.uk/caulfield-castle-2.jpg",
       "https://img.castlecore.uk/caulfield-castle-3.jpg",
@@ -33294,7 +33254,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1196,
+    "_index": 1185,
     "gallery": [
       "https://img.castlecore.uk/tyrellspass-castle-2.jpg",
       "https://img.castlecore.uk/tyrellspass-castle-3.jpg",
@@ -33320,7 +33280,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1197,
+    "_index": 1186,
     "gallery": [
       "https://img.castlecore.uk/rattin-castle-2.jpg",
       "https://img.castlecore.uk/rattin-castle-3.jpg",
@@ -33346,7 +33306,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1198,
+    "_index": 1187,
     "gallery": [
       "https://img.castlecore.uk/moydrum-castle-2.jpg",
       "https://img.castlecore.uk/moydrum-castle-3.jpg",
@@ -33371,7 +33331,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1199,
+    "_index": 1188,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Castle_Forbes.jpg/500px-Castle_Forbes.jpg"
     ]
@@ -33394,7 +33354,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1200,
+    "_index": 1189,
     "gallery": [
       "https://img.castlecore.uk/abbeyshrule-abbey-2.jpg",
       "https://img.castlecore.uk/abbeyshrule-abbey-3.jpg",
@@ -33420,7 +33380,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1201,
+    "_index": 1190,
     "gallery": [
       "https://img.castlecore.uk/castlecor-house-2.jpg",
       "https://img.castlecore.uk/castlecor-house-3.jpg",
@@ -33446,33 +33406,13 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1202,
+    "_index": 1191,
     "gallery": [
       "https://img.castlecore.uk/ballymahon-castle-2.jpg",
       "https://img.castlecore.uk/ballymahon-castle-3.jpg",
       "https://img.castlecore.uk/ballymahon-castle-4.jpg",
       "https://img.castlecore.uk/ballymahon-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Moatfarrell Castle",
-    "lat": 53.745,
-    "lng": -7.578,
-    "country": "Ireland",
-    "type": "motte",
-    "era": "12th century",
-    "condition": "intact",
-    "description": "Motte and bailey earthworks.",
-    "image": "",
-    "rating": 3.1,
-    "reviewCount": 9,
-    "county": "County Longford",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1203
   },
   {
     "name": "Ardagh Castle",
@@ -33492,7 +33432,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1204,
+    "_index": 1192,
     "gallery": [
       "https://img.castlecore.uk/ardagh-castle-2.jpg",
       "https://img.castlecore.uk/ardagh-castle-3.jpg",
@@ -33518,7 +33458,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1205,
+    "_index": 1193,
     "gallery": [
       "https://img.castlecore.uk/clondra-castle-2.jpg",
       "https://img.castlecore.uk/clondra-castle-3.jpg",
@@ -33544,7 +33484,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1206,
+    "_index": 1194,
     "gallery": [
       "https://img.castlecore.uk/edgeworthstown-castle-2.jpg",
       "https://img.castlecore.uk/edgeworthstown-castle-3.jpg",
@@ -33570,7 +33510,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1207,
+    "_index": 1195,
     "gallery": [
       "https://img.castlecore.uk/shinrone-castle-2.jpg",
       "https://img.castlecore.uk/shinrone-castle-3.jpg",
@@ -33596,7 +33536,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1209,
+    "_index": 1196,
     "gallery": [
       "https://img.castlecore.uk/frankford-castle-2.jpg",
       "https://img.castlecore.uk/frankford-castle-3.jpg",
@@ -33622,7 +33562,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1210,
+    "_index": 1197,
     "gallery": [
       "https://img.castlecore.uk/ballyboy-castle-2.jpg",
       "https://img.castlecore.uk/ballyboy-castle-3.jpg",
@@ -33648,7 +33588,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1211,
+    "_index": 1198,
     "gallery": [
       "https://img.castlecore.uk/seir-kieran-monastery-2.jpg",
       "https://img.castlecore.uk/seir-kieran-monastery-3.jpg",
@@ -33674,7 +33614,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1212,
+    "_index": 1199,
     "gallery": [
       "https://img.castlecore.uk/durrow-abbey-2.jpg"
     ]
@@ -33697,7 +33637,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1213,
+    "_index": 1200,
     "gallery": [
       "https://img.castlecore.uk/kilcoursey-castle-2.jpg",
       "https://img.castlecore.uk/kilcoursey-castle-3.jpg",
@@ -33723,7 +33663,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1214,
+    "_index": 1201,
     "gallery": [
       "https://img.castlecore.uk/lemenaghan-castle-2.jpg",
       "https://img.castlecore.uk/lemenaghan-castle-3.jpg",
@@ -33749,7 +33689,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1215,
+    "_index": 1202,
     "gallery": [
       "https://img.castlecore.uk/castletown-castle-laois-2.jpg",
       "https://img.castlecore.uk/castletown-castle-laois-3.jpg",
@@ -33775,7 +33715,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1216,
+    "_index": 1203,
     "gallery": [
       "https://img.castlecore.uk/emo-court-2.jpg",
       "https://img.castlecore.uk/emo-court-3.jpg",
@@ -33801,7 +33741,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1217,
+    "_index": 1204,
     "gallery": [
       "https://img.castlecore.uk/timahoe-round-tower-2.jpg",
       "https://img.castlecore.uk/timahoe-round-tower-3.jpg",
@@ -33827,7 +33767,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1218,
+    "_index": 1205,
     "gallery": [
       "https://img.castlecore.uk/killeshin-church-2.jpg",
       "https://img.castlecore.uk/killeshin-church-3.jpg",
@@ -33853,7 +33793,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1219,
+    "_index": 1206,
     "gallery": [
       "https://img.castlecore.uk/coolbanagher-castle-laois-2.jpg",
       "https://img.castlecore.uk/coolbanagher-castle-laois-3.jpg",
@@ -33879,7 +33819,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1220,
+    "_index": 1207,
     "gallery": [
       "https://img.castlecore.uk/shaen-castle-2.jpg",
       "https://img.castlecore.uk/shaen-castle-3.jpg",
@@ -33905,7 +33845,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1221,
+    "_index": 1208,
     "gallery": [
       "https://img.castlecore.uk/heywood-gardens-2.jpg",
       "https://img.castlecore.uk/heywood-gardens-3.jpg",
@@ -33931,7 +33871,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1222,
+    "_index": 1209,
     "gallery": [
       "https://img.castlecore.uk/inch-castle-2.jpg",
       "https://img.castlecore.uk/inch-castle-3.jpg",
@@ -33957,7 +33897,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1223,
+    "_index": 1210,
     "gallery": [
       "https://img.castlecore.uk/buncrana-castle-2.jpg",
       "https://img.castlecore.uk/buncrana-castle-3.jpg",
@@ -33983,7 +33923,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1224,
+    "_index": 1211,
     "gallery": [
       "https://img.castlecore.uk/moross-castle-2.jpg",
       "https://img.castlecore.uk/moross-castle-3.jpg",
@@ -34009,7 +33949,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1225,
+    "_index": 1212,
     "gallery": [
       "https://img.castlecore.uk/rathmullan-fort-2.jpg",
       "https://img.castlecore.uk/rathmullan-fort-3.jpg",
@@ -34035,7 +33975,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1226,
+    "_index": 1213,
     "gallery": [
       "https://img.castlecore.uk/drumboe-castle-2.jpg",
       "https://img.castlecore.uk/drumboe-castle-3.jpg",
@@ -34062,7 +34002,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1227,
+    "_index": 1214,
     "gallery": [
       "https://img.castlecore.uk/castle-murray-donegal-2.jpg",
       "https://img.castlecore.uk/castle-murray-donegal-3.jpg",
@@ -34088,7 +34028,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1228,
+    "_index": 1215,
     "gallery": [
       "https://img.castlecore.uk/na-d-naibh-castle-2.jpg",
       "https://img.castlecore.uk/na-d-naibh-castle-3.jpg",
@@ -34114,7 +34054,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1229
+    "_index": 1216
   },
   {
     "name": "Ballygally Tower",
@@ -34134,7 +34074,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "paid",
-    "_index": 1230,
+    "_index": 1217,
     "gallery": [
       "https://img.castlecore.uk/ballygally-tower-2.jpg",
       "https://img.castlecore.uk/ballygally-tower-3.jpg",
@@ -34160,7 +34100,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1231,
+    "_index": 1218,
     "gallery": [
       "https://img.castlecore.uk/cranfield-church-2.jpg",
       "https://img.castlecore.uk/cranfield-church-3.jpg",
@@ -34186,7 +34126,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1232,
+    "_index": 1219,
     "gallery": [
       "https://img.castlecore.uk/donegore-motte-2.jpg",
       "https://img.castlecore.uk/donegore-motte-3.jpg",
@@ -34212,7 +34152,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1233,
+    "_index": 1220,
     "gallery": [
       "https://img.castlecore.uk/dunadry-castle-2.jpg",
       "https://img.castlecore.uk/dunadry-castle-3.jpg",
@@ -34238,7 +34178,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1234,
+    "_index": 1221,
     "gallery": [
       "https://img.castlecore.uk/crumlin-castle-2.jpg",
       "https://img.castlecore.uk/crumlin-castle-3.jpg",
@@ -34264,7 +34204,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1235,
+    "_index": 1222,
     "gallery": [
       "https://img.castlecore.uk/drumena-cashel-2.jpg",
       "https://img.castlecore.uk/drumena-cashel-3.jpg",
@@ -34290,7 +34230,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1236,
+    "_index": 1223,
     "gallery": [
       "https://img.castlecore.uk/dunnaman-castle-2.jpg",
       "https://img.castlecore.uk/dunnaman-castle-3.jpg"
@@ -34314,7 +34254,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1237,
+    "_index": 1224,
     "gallery": [
       "https://img.castlecore.uk/kilclief-castle-2.jpg",
       "https://img.castlecore.uk/kilclief-castle-3.jpg",
@@ -34340,7 +34280,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1238,
+    "_index": 1225,
     "gallery": [
       "https://img.castlecore.uk/walshestown-castle-2.jpg",
       "https://img.castlecore.uk/walshestown-castle-3.jpg",
@@ -34366,7 +34306,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1239,
+    "_index": 1226,
     "gallery": [
       "https://img.castlecore.uk/ballynafoy-castle-2.jpg",
       "https://img.castlecore.uk/ballynafoy-castle-3.jpg",
@@ -34392,7 +34332,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1240,
+    "_index": 1227,
     "gallery": [
       "https://img.castlecore.uk/castle-caldwell-2.jpg",
       "https://img.castlecore.uk/castle-caldwell-3.jpg",
@@ -34418,7 +34358,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1241,
+    "_index": 1228,
     "gallery": [
       "https://img.castlecore.uk/portora-castle-2.jpg",
       "https://img.castlecore.uk/portora-castle-3.jpg",
@@ -34444,7 +34384,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1242,
+    "_index": 1229,
     "gallery": [
       "https://img.castlecore.uk/aghinver-castle-2.jpg",
       "https://img.castlecore.uk/aghinver-castle-3.jpg",
@@ -34469,7 +34409,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1243,
+    "_index": 1230,
     "gallery": [
       "https://img.castlecore.uk/belle-isle-castle-2.jpg",
       "https://img.castlecore.uk/belle-isle-castle-3.jpg",
@@ -34495,7 +34435,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1244,
+    "_index": 1231,
     "gallery": [
       "https://img.castlecore.uk/crevenish-castle-2.jpg",
       "https://img.castlecore.uk/crevenish-castle-3.jpg",
@@ -34521,7 +34461,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1245,
+    "_index": 1232,
     "gallery": [
       "https://img.castlecore.uk/augher-castle-2.jpg",
       "https://img.castlecore.uk/augher-castle-3.jpg",
@@ -34546,7 +34486,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1246,
+    "_index": 1233,
     "gallery": [
       "https://img.castlecore.uk/caulfield-castle-tyrone-2.jpg",
       "https://img.castlecore.uk/caulfield-castle-tyrone-3.jpg",
@@ -34572,7 +34512,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1247,
+    "_index": 1234,
     "gallery": [
       "https://img.castlecore.uk/favour-royal-castle-2.jpg",
       "https://img.castlecore.uk/favour-royal-castle-3.jpg",
@@ -34598,7 +34538,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1248
+    "_index": 1235
   },
   {
     "name": "Brackagh Castle",
@@ -34618,7 +34558,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1249,
+    "_index": 1236,
     "gallery": [
       "https://img.castlecore.uk/brackagh-castle-2.jpg",
       "https://img.castlecore.uk/brackagh-castle-3.jpg",
@@ -34643,7 +34583,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1250,
+    "_index": 1237,
     "gallery": [
       "https://img.castlecore.uk/bellaghy-bawn-2.jpg",
       "https://img.castlecore.uk/bellaghy-bawn-3.jpg",
@@ -34669,7 +34609,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1251,
+    "_index": 1238,
     "gallery": [
       "https://img.castlecore.uk/moneymore-castle-2.jpg",
       "https://img.castlecore.uk/moneymore-castle-3.jpg",
@@ -34695,7 +34635,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1252,
+    "_index": 1239,
     "gallery": [
       "https://img.castlecore.uk/salterstown-castle-2.jpg"
     ]
@@ -34718,7 +34658,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1253,
+    "_index": 1240,
     "gallery": [
       "https://img.castlecore.uk/ballycastle-bawn-2.jpg",
       "https://img.castlecore.uk/ballycastle-bawn-3.jpg",
@@ -34744,7 +34684,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1254,
+    "_index": 1241,
     "gallery": [
       "https://img.castlecore.uk/maghera-old-castle-2.jpg",
       "https://img.castlecore.uk/maghera-old-castle-3.jpg",
@@ -34769,7 +34709,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1255,
+    "_index": 1242,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-tandragee-castle.jpg"
     ]
@@ -34792,7 +34732,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1256,
+    "_index": 1243,
     "gallery": [
       "https://img.castlecore.uk/charlemont-fort-2.jpg",
       "https://img.castlecore.uk/charlemont-fort-3.jpg",
@@ -34817,7 +34757,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1257,
+    "_index": 1244,
     "gallery": [
       "https://img.castlecore.uk/tynan-castle-2.jpg",
       "https://img.castlecore.uk/tynan-castle-3.jpg",
@@ -34843,7 +34783,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1258,
+    "_index": 1245,
     "gallery": [
       "https://img.castlecore.uk/coney-island-castle-2.jpg",
       "https://img.castlecore.uk/coney-island-castle-3.jpg",
@@ -34869,7 +34809,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1259
+    "_index": 1246
   },
   {
     "name": "Ballyhack Tower",
@@ -34889,7 +34829,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1261,
+    "_index": 1247,
     "gallery": [
       "https://img.castlecore.uk/ballyhack-tower-2.jpg",
       "https://img.castlecore.uk/ballyhack-tower-3.jpg",
@@ -34916,7 +34856,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1262,
+    "_index": 1248,
     "gallery": [
       "https://img.castlecore.uk/stradbally-tower-2.jpg",
       "https://img.castlecore.uk/stradbally-tower-3.jpg",
@@ -34942,7 +34882,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1263,
+    "_index": 1249,
     "gallery": [
       "https://img.castlecore.uk/ardmore-round-tower-2.jpg",
       "https://img.castlecore.uk/ardmore-round-tower-3.jpg",
@@ -34968,7 +34908,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1264,
+    "_index": 1250,
     "gallery": [
       "https://img.castlecore.uk/knockmealdown-abbey-2.jpg",
       "https://img.castlecore.uk/knockmealdown-abbey-3.jpg",
@@ -34994,7 +34934,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1265,
+    "_index": 1251,
     "gallery": [
       "https://img.castlecore.uk/ballyquin-castle-2.jpg",
       "https://img.castlecore.uk/ballyquin-castle-3.jpg",
@@ -35020,7 +34960,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1266,
+    "_index": 1252,
     "gallery": [
       "https://img.castlecore.uk/burnchurch-tower-2.jpg",
       "https://img.castlecore.uk/burnchurch-tower-3.jpg",
@@ -35046,7 +34986,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1267,
+    "_index": 1253,
     "gallery": [
       "https://img.castlecore.uk/clomantagh-tower-2.jpg",
       "https://img.castlecore.uk/clomantagh-tower-3.jpg",
@@ -35072,7 +35012,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1268,
+    "_index": 1254,
     "gallery": [
       "https://img.castlecore.uk/knocktopher-abbey-2.jpg",
       "https://img.castlecore.uk/knocktopher-abbey-3.jpg",
@@ -35098,7 +35038,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1269,
+    "_index": 1255,
     "gallery": [
       "https://img.castlecore.uk/inistioge-castle-2.jpg",
       "https://img.castlecore.uk/inistioge-castle-3.jpg",
@@ -35124,7 +35064,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1270,
+    "_index": 1256,
     "gallery": [
       "https://img.castlecore.uk/grennan-castle-2.jpg",
       "https://img.castlecore.uk/grennan-castle-3.jpg",
@@ -35150,7 +35090,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1271,
+    "_index": 1257,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg/500px-Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg"
     ]
@@ -35172,7 +35112,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1272,
+    "_index": 1258,
     "gallery": [
       "https://img.castlecore.uk/kinnaird-head-castle-2.jpg",
       "https://img.castlecore.uk/kinnaird-head-castle-3.jpg",
@@ -35197,7 +35137,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1273,
+    "_index": 1259,
     "gallery": [
       "https://img.castlecore.uk/udny-castle-2.jpg",
       "https://img.castlecore.uk/udny-castle-3.jpg",
@@ -35223,7 +35163,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1274,
+    "_index": 1260,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kinkell_Castle_%28geograph_3324064%29.jpg/500px-Kinkell_Castle_%28geograph_3324064%29.jpg"
     ]
@@ -35246,7 +35186,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1275,
+    "_index": 1261,
     "gallery": [
       "https://img.castlecore.uk/balquhain-castle-2.jpg",
       "https://img.castlecore.uk/balquhain-castle-3.jpg",
@@ -35272,7 +35212,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1276,
+    "_index": 1262,
     "gallery": [
       "https://img.castlecore.uk/fedderate-castle-2.jpg",
       "https://img.castlecore.uk/fedderate-castle-3.jpg",
@@ -35297,7 +35237,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1277,
+    "_index": 1263,
     "gallery": [
       "https://img.castlecore.uk/ardiffery-castle-2.jpg",
       "https://img.castlecore.uk/ardiffery-castle-3.jpg",
@@ -35323,7 +35263,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1278,
+    "_index": 1264,
     "gallery": [
       "https://img.castlecore.uk/corse-castle-2.jpg",
       "https://img.castlecore.uk/corse-castle-3.jpg",
@@ -35349,7 +35289,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1279,
+    "_index": 1265,
     "gallery": [
       "https://img.castlecore.uk/hallforest-castle-2.jpg"
     ]
@@ -35372,7 +35312,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1280,
+    "_index": 1266,
     "gallery": [
       "https://img.castlecore.uk/knock-castle-aberdeenshire-2.jpg",
       "https://img.castlecore.uk/knock-castle-aberdeenshire-3.jpg",
@@ -35399,7 +35339,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1281,
+    "_index": 1267,
     "gallery": [
       "https://img.castlecore.uk/broughty-castle-2.jpg",
       "https://img.castlecore.uk/broughty-castle-3.jpg",
@@ -35425,7 +35365,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1282,
+    "_index": 1268,
     "gallery": [
       "https://img.castlecore.uk/glamis-village-tower-2.jpg",
       "https://img.castlecore.uk/glamis-village-tower-3.jpg",
@@ -35451,7 +35391,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1283,
+    "_index": 1269,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Finavon_Castle.jpg/500px-Finavon_Castle.jpg"
     ]
@@ -35474,7 +35414,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1284,
+    "_index": 1270,
     "gallery": [
       "https://img.castlecore.uk/melgund-castle-2.jpg",
       "https://img.castlecore.uk/melgund-castle-3.jpg"
@@ -35498,7 +35438,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1285,
+    "_index": 1271,
     "gallery": [
       "https://img.castlecore.uk/baikie-castle-2.jpg",
       "https://img.castlecore.uk/baikie-castle-3.jpg",
@@ -35524,7 +35464,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1286,
+    "_index": 1272,
     "gallery": [
       "https://img.castlecore.uk/kinclaven-castle-2.jpg"
     ]
@@ -35546,7 +35486,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1287,
+    "_index": 1273,
     "gallery": [
       "https://img.castlecore.uk/garth-castle-2.jpg",
       "https://img.castlecore.uk/garth-castle-3.jpg",
@@ -35571,7 +35511,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1288,
+    "_index": 1274,
     "gallery": [
       "https://img.castlecore.uk/newton-castle-perth-2.jpg",
       "https://img.castlecore.uk/newton-castle-perth-3.jpg",
@@ -35597,7 +35537,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1289,
+    "_index": 1275,
     "gallery": [
       "https://img.castlecore.uk/clunie-castle-2.jpg",
       "https://img.castlecore.uk/clunie-castle-3.jpg"
@@ -35620,7 +35560,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1290,
+    "_index": 1276,
     "gallery": [
       "https://img.castlecore.uk/stobhall-castle-2.jpg",
       "https://img.castlecore.uk/stobhall-castle-3.jpg",
@@ -35646,7 +35586,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1291,
+    "_index": 1277,
     "gallery": [
       "https://img.castlecore.uk/finlarig-castle-2.jpg",
       "https://img.castlecore.uk/finlarig-castle-3.jpg",
@@ -35672,7 +35612,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1292,
+    "_index": 1278,
     "gallery": [
       "https://img.castlecore.uk/fatlips-castle-2.jpg",
       "https://img.castlecore.uk/fatlips-castle-3.jpg",
@@ -35698,7 +35638,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1293,
+    "_index": 1279,
     "gallery": [
       "https://img.castlecore.uk/littledean-tower-2.jpg",
       "https://img.castlecore.uk/littledean-tower-3.jpg",
@@ -35724,7 +35664,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1294,
+    "_index": 1280,
     "gallery": [
       "https://img.castlecore.uk/hume-castle-2.jpg",
       "https://img.castlecore.uk/hume-castle-3.jpg",
@@ -35750,7 +35690,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1295,
+    "_index": 1281,
     "gallery": [
       "https://img.castlecore.uk/roxburgh-castle-2.jpg",
       "https://img.castlecore.uk/roxburgh-castle-3.jpg",
@@ -35776,7 +35716,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1296,
+    "_index": 1282,
     "gallery": [
       "https://img.castlecore.uk/edrom-castle-2.jpg",
       "https://img.castlecore.uk/edrom-castle-3.jpg",
@@ -35802,7 +35742,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1297,
+    "_index": 1283,
     "gallery": [
       "https://img.castlecore.uk/elibank-castle-2.jpg",
       "https://img.castlecore.uk/elibank-castle-3.jpg",
@@ -35827,7 +35767,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1298,
+    "_index": 1284,
     "gallery": [
       "https://img.castlecore.uk/caerlaverock-castle-new-2.jpg",
       "https://img.castlecore.uk/caerlaverock-castle-new-3.jpg",
@@ -35852,7 +35792,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1299,
+    "_index": 1285,
     "gallery": [
       "https://img.castlecore.uk/drumlanrig-castle-2.jpg",
       "https://img.castlecore.uk/drumlanrig-castle-3.jpg",
@@ -35877,7 +35817,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1300,
+    "_index": 1286,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/2/2c/Barholm_Castle.jpg"
     ]
@@ -35899,7 +35839,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1301,
+    "_index": 1287,
     "gallery": [
       "https://img.castlecore.uk/kirkcudbright-castle-2.jpg",
       "https://img.castlecore.uk/kirkcudbright-castle-3.jpg",
@@ -35925,7 +35865,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1302,
+    "_index": 1288,
     "gallery": [
       "https://img.castlecore.uk/sanquhar-castle-2.jpg",
       "https://img.castlecore.uk/sanquhar-castle-3.jpg",
@@ -35950,7 +35890,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1303,
+    "_index": 1289,
     "gallery": [
       "https://img.castlecore.uk/new-abbey-corn-mill-2.jpg",
       "https://img.castlecore.uk/new-abbey-corn-mill-3.jpg",
@@ -35975,7 +35915,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1304,
+    "_index": 1290,
     "gallery": [
       "https://img.castlecore.uk/jarlshof-2.jpg",
       "https://img.castlecore.uk/jarlshof-3.jpg",
@@ -36001,7 +35941,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1305,
+    "_index": 1291,
     "gallery": [
       "https://img.castlecore.uk/clickimin-broch-2.jpg",
       "https://img.castlecore.uk/clickimin-broch-3.jpg",
@@ -36026,7 +35966,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1306,
+    "_index": 1292,
     "gallery": [
       "https://img.castlecore.uk/mousa-broch-2.jpg",
       "https://img.castlecore.uk/mousa-broch-3.jpg",
@@ -36052,7 +35992,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1307,
+    "_index": 1293,
     "gallery": [
       "https://img.castlecore.uk/coeffin-castle-main-2.jpg",
       "https://img.castlecore.uk/coeffin-castle-main-3.jpg",
@@ -36078,7 +36018,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1308,
+    "_index": 1294,
     "gallery": [
       "https://img.castlecore.uk/borve-castle-harris-2.jpg",
       "https://img.castlecore.uk/borve-castle-harris-3.jpg",
@@ -36104,7 +36044,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1309,
+    "_index": 1295,
     "gallery": [
       "https://img.castlecore.uk/dun-carloway-broch-2.jpg",
       "https://img.castlecore.uk/dun-carloway-broch-3.jpg",
@@ -36129,7 +36069,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1310,
+    "_index": 1296,
     "gallery": [
       "https://img.castlecore.uk/amhuinnsuidhe-castle-2.jpg",
       "https://img.castlecore.uk/amhuinnsuidhe-castle-3.jpg",
@@ -36156,7 +36096,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1311,
+    "_index": 1297,
     "gallery": [
       "https://img.castlecore.uk/girnigoe-castle-ruins-2.jpg",
       "https://img.castlecore.uk/girnigoe-castle-ruins-3.jpg",
@@ -36182,7 +36122,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1312,
+    "_index": 1298,
     "gallery": [
       "https://img.castlecore.uk/lochore-castle-2.jpg",
       "https://img.castlecore.uk/lochore-castle-3.jpg",
@@ -36208,7 +36148,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1313,
+    "_index": 1299,
     "gallery": [
       "https://img.castlecore.uk/loch-doon-castle-2.jpg",
       "https://img.castlecore.uk/loch-doon-castle-3.jpg",
@@ -36234,7 +36174,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1314,
+    "_index": 1300,
     "gallery": [
       "https://img.castlecore.uk/rowallan-castle-2.jpg",
       "https://img.castlecore.uk/rowallan-castle-3.jpg",
@@ -36260,7 +36200,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1315,
+    "_index": 1301,
     "gallery": [
       "https://img.castlecore.uk/nevern-castle-2.jpg",
       "https://img.castlecore.uk/nevern-castle-3.jpg",
@@ -36289,7 +36229,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1316,
+    "_index": 1302,
     "gallery": [
       "https://img.castlecore.uk/castell-henllys-2.jpg",
       "https://img.castlecore.uk/castell-henllys-3.jpg",
@@ -36315,7 +36255,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1317,
+    "_index": 1303,
     "gallery": [
       "https://img.castlecore.uk/newport-castle-pembs-main-2.jpg",
       "https://img.castlecore.uk/newport-castle-pembs-main-3.jpg",
@@ -36341,7 +36281,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1318,
+    "_index": 1304,
     "gallery": [
       "https://img.castlecore.uk/castell-abereinion-2.jpg",
       "https://img.castlecore.uk/castell-abereinion-3.jpg",
@@ -36367,7 +36307,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1319,
+    "_index": 1305,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castell-gwallter.jpg"
     ]
@@ -36390,7 +36330,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1320,
+    "_index": 1306,
     "gallery": [
       "https://img.castlecore.uk/aberedw-castle-2.jpg",
       "https://img.castlecore.uk/aberedw-castle-3.jpg",
@@ -36417,7 +36357,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1321,
+    "_index": 1307,
     "gallery": [
       "https://img.castlecore.uk/cefnllys-castle-2.jpg",
       "https://img.castlecore.uk/cefnllys-castle-3.jpg",
@@ -36443,7 +36383,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1322,
+    "_index": 1308,
     "gallery": [
       "https://img.castlecore.uk/bleddfa-castle-2.jpg",
       "https://img.castlecore.uk/bleddfa-castle-3.jpg",
@@ -36469,7 +36409,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1324,
+    "_index": 1309,
     "gallery": [
       "https://img.castlecore.uk/mathrafal-castle-2.jpg",
       "https://img.castlecore.uk/mathrafal-castle-3.jpg",
@@ -36493,7 +36433,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1325,
+    "_index": 1310,
     "gallery": [
       "https://img.castlecore.uk/penhow-castle-2.jpg",
       "https://img.castlecore.uk/penhow-castle-3.jpg",
@@ -36523,7 +36463,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1326,
+    "_index": 1311,
     "gallery": [
       "https://img.castlecore.uk/hawarden-castle-old-ruins-2.jpg",
       "https://img.castlecore.uk/hawarden-castle-old-ruins-3.jpg",
@@ -36550,7 +36490,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1327,
+    "_index": 1312,
     "gallery": [
       "https://img.castlecore.uk/dinas-emrys-2.jpg",
       "https://img.castlecore.uk/dinas-emrys-3.jpg",
@@ -36576,7 +36516,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1328,
+    "_index": 1313,
     "gallery": [
       "https://img.castlecore.uk/castell-prysor-2.jpg",
       "https://img.castlecore.uk/castell-prysor-3.jpg",
@@ -36606,7 +36546,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1329,
+    "_index": 1314,
     "gallery": [
       "https://img.castlecore.uk/castell-carndochan-2.jpg",
       "https://img.castlecore.uk/castell-carndochan-3.jpg",
@@ -36636,7 +36576,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1330,
+    "_index": 1315,
     "gallery": [
       "https://img.castlecore.uk/newcastle-bridgend-main-2.jpg",
       "https://img.castlecore.uk/newcastle-bridgend-main-3.jpg",
@@ -36662,7 +36602,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1331,
+    "_index": 1316,
     "gallery": [
       "https://img.castlecore.uk/mulgrave-castle-old-main-2.jpg",
       "https://img.castlecore.uk/mulgrave-castle-old-main-3.jpg",
@@ -36687,7 +36627,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1332,
+    "_index": 1317,
     "gallery": [
       "https://img.castlecore.uk/peel-castle-main-2.jpg",
       "https://img.castlecore.uk/peel-castle-main-3.jpg",
@@ -36714,7 +36654,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1333,
+    "_index": 1318,
     "gallery": [
       "https://img.castlecore.uk/black-castle-wicklow-main-2.jpg",
       "https://img.castlecore.uk/black-castle-wicklow-main-3.jpg",
@@ -36739,7 +36679,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1334,
+    "_index": 1319,
     "gallery": [
       "https://img.castlecore.uk/powerscourt-castle-2.jpg",
       "https://img.castlecore.uk/powerscourt-castle-3.jpg",
@@ -36764,7 +36704,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1335,
+    "_index": 1320,
     "gallery": [
       "https://img.castlecore.uk/russborough-house-2.jpg",
       "https://img.castlecore.uk/russborough-house-3.jpg",
@@ -36790,7 +36730,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1336,
+    "_index": 1321,
     "gallery": [
       "https://img.castlecore.uk/cloyne-round-tower-2.jpg",
       "https://img.castlecore.uk/cloyne-round-tower-3.jpg",
@@ -36816,7 +36756,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1337,
+    "_index": 1322,
     "gallery": [
       "https://img.castlecore.uk/kilcolman-castle-2.jpg",
       "https://img.castlecore.uk/kilcolman-castle-3.jpg",
@@ -36842,7 +36782,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1338,
+    "_index": 1323,
     "gallery": [
       "https://img.castlecore.uk/castletownroche-castle-2.jpg",
       "https://img.castlecore.uk/castletownroche-castle-3.jpg",
@@ -36868,7 +36808,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1339,
+    "_index": 1324,
     "gallery": [
       "https://img.castlecore.uk/ightermurragh-castle-2.jpg",
       "https://img.castlecore.uk/ightermurragh-castle-3.jpg",
@@ -36894,7 +36834,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1340,
+    "_index": 1325,
     "gallery": [
       "https://img.castlecore.uk/castlemore-castle-cork-2.jpg",
       "https://img.castlecore.uk/castlemore-castle-cork-3.jpg",
@@ -36919,7 +36859,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1341,
+    "_index": 1326,
     "gallery": [
       "https://img.castlecore.uk/kilbrittain-castle-2.jpg",
       "https://img.castlecore.uk/kilbrittain-castle-3.jpg",
@@ -36945,7 +36885,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1342,
+    "_index": 1327,
     "gallery": [
       "https://img.castlecore.uk/rostellan-castle-2.jpg",
       "https://img.castlecore.uk/rostellan-castle-3.jpg",
@@ -36970,7 +36910,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1343
+    "_index": 1328
   },
   {
     "name": "Castlemartyr Castle",
@@ -36989,7 +36929,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1344,
+    "_index": 1329,
     "gallery": [
       "https://img.castlecore.uk/castlemartyr-castle-2.jpg",
       "https://img.castlecore.uk/castlemartyr-castle-3.jpg",
@@ -37015,7 +36955,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1345,
+    "_index": 1330,
     "gallery": [
       "https://img.castlecore.uk/doon-castle-clare-2.jpg",
       "https://img.castlecore.uk/doon-castle-clare-3.jpg",
@@ -37041,7 +36981,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1346
+    "_index": 1331
   },
   {
     "name": "Termon Castle",
@@ -37061,7 +37001,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1347,
+    "_index": 1332,
     "gallery": [
       "https://img.castlecore.uk/termon-castle-2.jpg",
       "https://img.castlecore.uk/termon-castle-3.jpg",
@@ -37087,7 +37027,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1348
+    "_index": 1333
   },
   {
     "name": "Kilcogan Castle",
@@ -37107,7 +37047,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1349,
+    "_index": 1334,
     "gallery": [
       "https://img.castlecore.uk/kilcogan-castle-2.jpg",
       "https://img.castlecore.uk/kilcogan-castle-3.jpg",
@@ -37133,7 +37073,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1350,
+    "_index": 1335,
     "gallery": [
       "https://img.castlecore.uk/ardfry-castle-2.jpg",
       "https://img.castlecore.uk/ardfry-castle-3.jpg",
@@ -37159,33 +37099,13 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1351,
+    "_index": 1336,
     "gallery": [
       "https://img.castlecore.uk/castle-hackett-2.jpg",
       "https://img.castlecore.uk/castle-hackett-3.jpg",
       "https://img.castlecore.uk/castle-hackett-4.jpg",
       "https://img.castlecore.uk/castle-hackett-5.jpg"
     ]
-  },
-  {
-    "name": "Castle Ellen",
-    "lat": 53.432,
-    "lng": -8.428,
-    "country": "Ireland",
-    "type": "country house",
-    "era": "18th century",
-    "condition": "ruin",
-    "description": "Ruined Georgian house near Athenry.",
-    "image": "",
-    "rating": 3.2,
-    "reviewCount": 12,
-    "county": "County Galway",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1352
   },
   {
     "name": "Ballylee Castle",
@@ -37204,7 +37124,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1353,
+    "_index": 1337,
     "gallery": [
       "https://img.castlecore.uk/ballylee-castle-2.jpg",
       "https://img.castlecore.uk/ballylee-castle-3.jpg",
@@ -37230,7 +37150,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1354,
+    "_index": 1338,
     "gallery": [
       "https://img.castlecore.uk/donnaghdee-castle-2.jpg",
       "https://img.castlecore.uk/donnaghdee-castle-3.jpg",
@@ -37256,7 +37176,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1355,
+    "_index": 1339,
     "gallery": [
       "https://img.castlecore.uk/ravenscraig-castle-fife-2.jpg",
       "https://img.castlecore.uk/ravenscraig-castle-fife-3.jpg",
@@ -37281,7 +37201,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1356,
+    "_index": 1340,
     "gallery": [
       "https://img.castlecore.uk/dunfermline-palace-2.jpg",
       "https://img.castlecore.uk/dunfermline-palace-3.jpg",
@@ -37306,7 +37226,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1357,
+    "_index": 1341,
     "gallery": [
       "https://img.castlecore.uk/newark-castle-port-glasgow-2.jpg",
       "https://img.castlecore.uk/newark-castle-port-glasgow-3.jpg",
@@ -37331,7 +37251,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1358
+    "_index": 1342
   },
   {
     "name": "Alloway Auld Kirk",
@@ -37351,7 +37271,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1359,
+    "_index": 1343,
     "gallery": [
       "https://img.castlecore.uk/alloway-auld-kirk-2.jpg",
       "https://img.castlecore.uk/alloway-auld-kirk-3.jpg",
@@ -37378,7 +37298,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1360,
+    "_index": 1344,
     "gallery": [
       "https://img.castlecore.uk/turnberry-castle-2.jpg",
       "https://img.castlecore.uk/turnberry-castle-3.jpg",
@@ -37404,7 +37324,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1361,
+    "_index": 1345,
     "gallery": [
       "https://img.castlecore.uk/stanton-drew-stone-circles-2.jpg",
       "https://img.castlecore.uk/stanton-drew-stone-circles-3.jpg",
@@ -37430,7 +37350,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1362,
+    "_index": 1346,
     "gallery": [
       "https://img.castlecore.uk/castle-an-dinas-2.jpg",
       "https://img.castlecore.uk/castle-an-dinas-3.jpg",
@@ -37456,7 +37376,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1363,
+    "_index": 1347,
     "gallery": [
       "https://img.castlecore.uk/hertford-castle-2.jpg",
       "https://img.castlecore.uk/hertford-castle-3.jpg",
@@ -37482,7 +37402,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1364,
+    "_index": 1348,
     "gallery": [
       "https://img.castlecore.uk/bedford-castle-main-2.jpg",
       "https://img.castlecore.uk/bedford-castle-main-3.jpg",
@@ -37508,7 +37428,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1365,
+    "_index": 1349,
     "gallery": [
       "https://img.castlecore.uk/margam-castle-2.jpg",
       "https://img.castlecore.uk/margam-castle-3.jpg",
@@ -37534,7 +37454,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1366,
+    "_index": 1350,
     "gallery": [
       "https://img.castlecore.uk/carew-cross-2.jpg",
       "https://img.castlecore.uk/carew-cross-3.jpg",
@@ -37559,7 +37479,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1367,
+    "_index": 1351,
     "gallery": [
       "https://img.castlecore.uk/lamphey-bishop-s-palace-2.jpg",
       "https://img.castlecore.uk/lamphey-bishop-s-palace-3.jpg",
@@ -37589,7 +37509,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1368,
+    "_index": 1352,
     "gallery": [
       "https://img.castlecore.uk/dornoch-cathedral-main-2.jpg",
       "https://img.castlecore.uk/dornoch-cathedral-main-3.jpg",
@@ -37615,7 +37535,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1369,
+    "_index": 1353,
     "gallery": [
       "https://img.castlecore.uk/castle-sween-main-2.jpg",
       "https://img.castlecore.uk/castle-sween-main-3.jpg",
@@ -37640,7 +37560,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1370,
+    "_index": 1354,
     "gallery": [
       "https://img.castlecore.uk/tynemouth-priory-main-2.jpg",
       "https://img.castlecore.uk/tynemouth-priory-main-3.jpg",
@@ -37666,7 +37586,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1371,
+    "_index": 1355,
     "gallery": [
       "https://img.castlecore.uk/aghadoe-castle-2.jpg",
       "https://img.castlecore.uk/aghadoe-castle-3.jpg",
@@ -37692,7 +37612,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1372,
+    "_index": 1356,
     "gallery": [
       "https://img.castlecore.uk/rattoo-round-tower-2.jpg",
       "https://img.castlecore.uk/rattoo-round-tower-3.jpg",
@@ -37717,7 +37637,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1373,
+    "_index": 1357,
     "gallery": [
       "https://img.castlecore.uk/dysert-o-dea-tower-2.jpg",
       "https://img.castlecore.uk/dysert-o-dea-tower-3.jpg",
@@ -37743,7 +37663,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1374,
+    "_index": 1358,
     "gallery": [
       "https://img.castlecore.uk/ballynacarriga-castle-2.jpg",
       "https://img.castlecore.uk/ballynacarriga-castle-3.jpg",
@@ -37770,7 +37690,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1375,
+    "_index": 1359,
     "gallery": [
       "https://img.castlecore.uk/doonbeg-white-strand-tower-2.jpg",
       "https://img.castlecore.uk/doonbeg-white-strand-tower-3.jpg",
@@ -37796,7 +37716,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1376,
+    "_index": 1360,
     "gallery": [
       "https://img.castlecore.uk/kilcash-castle-2.jpg",
       "https://img.castlecore.uk/kilcash-castle-3.jpg",
@@ -37821,7 +37741,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1377,
+    "_index": 1361,
     "gallery": [
       "https://img.castlecore.uk/farney-castle-2.jpg",
       "https://img.castlecore.uk/farney-castle-3.jpg",
@@ -37846,7 +37766,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1378,
+    "_index": 1362,
     "gallery": [
       "https://img.castlecore.uk/castletown-cox-2.jpg",
       "https://img.castlecore.uk/castletown-cox-3.jpg",
@@ -37872,7 +37792,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1379,
+    "_index": 1363,
     "gallery": [
       "https://img.castlecore.uk/ballysaggartmore-towers-2.jpg",
       "https://img.castlecore.uk/ballysaggartmore-towers-3.jpg",
@@ -37898,7 +37818,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1380,
+    "_index": 1364,
     "gallery": [
       "https://img.castlecore.uk/tacumshane-windmill-2.jpg",
       "https://img.castlecore.uk/tacumshane-windmill-3.jpg",
@@ -37923,7 +37843,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1381,
+    "_index": 1365,
     "gallery": [
       "https://img.castlecore.uk/hook-lighthouse-2.jpg",
       "https://img.castlecore.uk/hook-lighthouse-3.jpg",
@@ -37949,7 +37869,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1382,
+    "_index": 1366,
     "gallery": [
       "https://img.castlecore.uk/loughcrew-cairns-2.jpg",
       "https://img.castlecore.uk/loughcrew-cairns-3.jpg",
@@ -37975,7 +37895,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1383,
+    "_index": 1367,
     "gallery": [
       "https://img.castlecore.uk/hill-of-slane-2.jpg",
       "https://img.castlecore.uk/hill-of-slane-3.jpg",
@@ -38001,7 +37921,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1384,
+    "_index": 1368,
     "gallery": [
       "https://img.castlecore.uk/kells-round-tower-2.jpg",
       "https://img.castlecore.uk/kells-round-tower-3.jpg",
@@ -38027,7 +37947,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1385,
+    "_index": 1369,
     "gallery": [
       "https://img.castlecore.uk/clonard-castle-2.jpg",
       "https://img.castlecore.uk/clonard-castle-3.jpg",
@@ -38053,7 +37973,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1386,
+    "_index": 1370,
     "gallery": [
       "https://img.castlecore.uk/rathnageeragh-castle-2.jpg",
       "https://img.castlecore.uk/rathnageeragh-castle-3.jpg",
@@ -38078,7 +37998,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1387,
+    "_index": 1371,
     "gallery": [
       "https://img.castlecore.uk/huntington-castle-2.jpg",
       "https://img.castlecore.uk/huntington-castle-3.jpg",
@@ -38104,7 +38024,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1388,
+    "_index": 1372,
     "gallery": [
       "https://img.castlecore.uk/altamont-gardens-2.jpg",
       "https://img.castlecore.uk/altamont-gardens-3.jpg",
@@ -38130,7 +38050,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1389,
+    "_index": 1373,
     "gallery": [
       "https://img.castlecore.uk/aughrim-castle-2.jpg",
       "https://img.castlecore.uk/aughrim-castle-3.jpg",
@@ -38156,7 +38076,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1390,
+    "_index": 1374,
     "gallery": [
       "https://img.castlecore.uk/clonfert-cathedral-2.jpg",
       "https://img.castlecore.uk/clonfert-cathedral-3.jpg",
@@ -38182,7 +38102,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1391,
+    "_index": 1375,
     "gallery": [
       "https://img.castlecore.uk/tuam-cathedral-2.jpg",
       "https://img.castlecore.uk/tuam-cathedral-3.jpg",
@@ -38208,7 +38128,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1392,
+    "_index": 1376,
     "gallery": [
       "https://img.castlecore.uk/corcomroe-abbey-2.jpg",
       "https://img.castlecore.uk/corcomroe-abbey-3.jpg",
@@ -38234,7 +38154,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1393,
+    "_index": 1377,
     "gallery": [
       "https://img.castlecore.uk/kilfenora-cathedral-2.jpg",
       "https://img.castlecore.uk/kilfenora-cathedral-3.jpg",
@@ -38260,7 +38180,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1394,
+    "_index": 1378,
     "gallery": [
       "https://img.castlecore.uk/scattery-island-2.jpg",
       "https://img.castlecore.uk/scattery-island-3.jpg",
@@ -38290,7 +38210,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1395,
+    "_index": 1379,
     "gallery": [
       "https://img.castlecore.uk/innisfallen-island-2.jpg",
       "https://img.castlecore.uk/innisfallen-island-3.jpg",
@@ -38315,7 +38235,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1396,
+    "_index": 1380,
     "gallery": [
       "https://img.castlecore.uk/muckross-house-2.jpg",
       "https://img.castlecore.uk/muckross-house-3.jpg",
@@ -38340,7 +38260,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1397,
+    "_index": 1381,
     "gallery": [
       "https://img.castlecore.uk/derrynane-house-2.jpg",
       "https://img.castlecore.uk/derrynane-house-3.jpg",
@@ -38366,7 +38286,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1398,
+    "_index": 1382,
     "gallery": [
       "https://img.castlecore.uk/cahergall-stone-fort-2.jpg",
       "https://img.castlecore.uk/cahergall-stone-fort-3.jpg",
@@ -38392,7 +38312,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1399,
+    "_index": 1383,
     "gallery": [
       "https://img.castlecore.uk/leacanabuaile-fort-2.jpg",
       "https://img.castlecore.uk/leacanabuaile-fort-3.jpg",
@@ -38418,7 +38338,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1401,
+    "_index": 1384,
     "gallery": [
       "https://img.castlecore.uk/ballinvard-castle-2.jpg",
       "https://img.castlecore.uk/ballinvard-castle-3.jpg",
@@ -38444,7 +38364,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1402
+    "_index": 1385
   },
   {
     "name": "Ballybeg Priory",
@@ -38464,7 +38384,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1403,
+    "_index": 1386,
     "gallery": [
       "https://img.castlecore.uk/ballybeg-priory-2.jpg",
       "https://img.castlecore.uk/ballybeg-priory-3.jpg",
@@ -38490,7 +38410,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1404,
+    "_index": 1387,
     "gallery": [
       "https://img.castlecore.uk/bridgetown-priory-2.jpg",
       "https://img.castlecore.uk/bridgetown-priory-3.jpg",
@@ -38507,7 +38427,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "Medieval cathedral with Romanesque sculptures.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/01_St._Declan%27s_Monastery%2C_Ardmore.png/500px-01_St._Declan%27s_Monastery%2C_Ardmore.png",
     "rating": 3.8,
     "reviewCount": 72,
     "county": "County Waterford",
@@ -38516,7 +38436,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1405
+    "_index": 1388
   },
   {
     "name": "Mahon Falls Tower",
@@ -38536,7 +38456,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1406,
+    "_index": 1389,
     "gallery": [
       "https://img.castlecore.uk/mahon-falls-tower-2.jpg",
       "https://img.castlecore.uk/mahon-falls-tower-3.jpg",
@@ -38562,7 +38482,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1407,
+    "_index": 1390,
     "gallery": [
       "https://img.castlecore.uk/strangely-castle-2.jpg",
       "https://img.castlecore.uk/strangely-castle-3.jpg",
@@ -38587,7 +38507,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1408,
+    "_index": 1391,
     "gallery": [
       "https://img.castlecore.uk/curraghmore-house-2.jpg",
       "https://img.castlecore.uk/curraghmore-house-3.jpg",
@@ -38613,7 +38533,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1409,
+    "_index": 1392,
     "gallery": [
       "https://img.castlecore.uk/cappoquin-castle-2.jpg",
       "https://img.castlecore.uk/cappoquin-castle-3.jpg",
@@ -38639,7 +38559,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1410,
+    "_index": 1393,
     "gallery": [
       "https://img.castlecore.uk/woodstown-castle-2.jpg",
       "https://img.castlecore.uk/woodstown-castle-3.jpg",
@@ -38666,7 +38586,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1411,
+    "_index": 1394,
     "gallery": [
       "https://img.castlecore.uk/dunmore-east-tower-2.jpg",
       "https://img.castlecore.uk/dunmore-east-tower-3.jpg",
@@ -38692,7 +38612,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1412,
+    "_index": 1395,
     "gallery": [
       "https://img.castlecore.uk/callan-friary-2.jpg",
       "https://img.castlecore.uk/callan-friary-3.jpg",
@@ -38718,7 +38638,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1413,
+    "_index": 1396,
     "gallery": [
       "https://img.castlecore.uk/thomastown-castle-2.jpg",
       "https://img.castlecore.uk/thomastown-castle-3.jpg",
@@ -38744,7 +38664,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1414,
+    "_index": 1397,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-gowran-castle.jpg"
     ]
@@ -38767,7 +38687,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1415,
+    "_index": 1398,
     "gallery": [
       "https://img.castlecore.uk/tullaherin-round-tower-2.jpg",
       "https://img.castlecore.uk/tullaherin-round-tower-3.jpg",
@@ -38793,7 +38713,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1416,
+    "_index": 1399,
     "gallery": [
       "https://img.castlecore.uk/kilfane-church-2.jpg",
       "https://img.castlecore.uk/kilfane-church-3.jpg",
@@ -38819,7 +38739,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1417
+    "_index": 1400
   },
   {
     "name": "Tintern Abbey Ireland (Main)",
@@ -38839,7 +38759,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1418,
+    "_index": 1401,
     "gallery": [
       "https://img.castlecore.uk/tintern-abbey-ireland-main-2.jpg",
       "https://img.castlecore.uk/tintern-abbey-ireland-main-3.jpg",
@@ -38865,7 +38785,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1419,
+    "_index": 1402,
     "gallery": [
       "https://img.castlecore.uk/conwy-town-walls-2.jpg",
       "https://img.castlecore.uk/conwy-town-walls-3.jpg",
@@ -38891,7 +38811,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1420,
+    "_index": 1403,
     "gallery": [
       "https://img.castlecore.uk/caernarfon-town-walls-2.jpg",
       "https://img.castlecore.uk/caernarfon-town-walls-3.jpg",
@@ -38917,7 +38837,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1421,
+    "_index": 1404,
     "gallery": [
       "https://img.castlecore.uk/dinas-bran-keep-2.jpg",
       "https://img.castlecore.uk/dinas-bran-keep-3.jpg",
@@ -38943,7 +38863,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1422,
+    "_index": 1405,
     "gallery": [
       "https://img.castlecore.uk/turoe-stone-2.jpg",
       "https://img.castlecore.uk/turoe-stone-3.jpg",
@@ -38969,7 +38889,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1423,
+    "_index": 1406,
     "gallery": [
       "https://img.castlecore.uk/abbeyknockmoy-abbey-2.jpg",
       "https://img.castlecore.uk/abbeyknockmoy-abbey-3.jpg",
@@ -38995,7 +38915,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1424,
+    "_index": 1407,
     "gallery": [
       "https://img.castlecore.uk/moore-hall-2.jpg",
       "https://img.castlecore.uk/moore-hall-3.jpg",
@@ -39020,7 +38940,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1425,
+    "_index": 1408,
     "gallery": [
       "https://img.castlecore.uk/westport-house-2.jpg",
       "https://img.castlecore.uk/westport-house-3.jpg",
@@ -39046,7 +38966,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1426,
+    "_index": 1409,
     "gallery": [
       "https://img.castlecore.uk/national-museum-collins-barracks-2.jpg",
       "https://img.castlecore.uk/national-museum-collins-barracks-3.jpg",
@@ -39072,7 +38992,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1427,
+    "_index": 1410,
     "gallery": [
       "https://img.castlecore.uk/rathfarnham-castle-2.jpg",
       "https://img.castlecore.uk/rathfarnham-castle-3.jpg",
@@ -39098,7 +39018,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1428,
+    "_index": 1411,
     "gallery": [
       "https://img.castlecore.uk/st-audoen-s-church-2.jpg",
       "https://img.castlecore.uk/st-audoen-s-church-3.jpg",
@@ -39123,7 +39043,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1429,
+    "_index": 1412,
     "gallery": [
       "https://img.castlecore.uk/dunsink-observatory-2.jpg",
       "https://img.castlecore.uk/dunsink-observatory-3.jpg",
@@ -39149,7 +39069,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1430,
+    "_index": 1413,
     "gallery": [
       "https://img.castlecore.uk/st-mary-s-abbey-dublin-2.jpg",
       "https://img.castlecore.uk/st-mary-s-abbey-dublin-3.jpg",
@@ -39175,7 +39095,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1431
+    "_index": 1414
   },
   {
     "name": "Killua Castle",
@@ -39195,7 +39115,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1432,
+    "_index": 1415,
     "gallery": [
       "https://img.castlecore.uk/killua-castle-2.jpg",
       "https://img.castlecore.uk/killua-castle-3.jpg",
@@ -39221,7 +39141,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1433,
+    "_index": 1416,
     "gallery": [
       "https://img.castlecore.uk/greville-arms-tower-2.jpg",
       "https://img.castlecore.uk/greville-arms-tower-3.jpg",
@@ -39246,7 +39166,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1434,
+    "_index": 1417,
     "gallery": [
       "https://img.castlecore.uk/dun-na-si-heritage-park-2.jpg",
       "https://img.castlecore.uk/dun-na-si-heritage-park-3.jpg",
@@ -39272,7 +39192,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1435
+    "_index": 1418
   },
   {
     "name": "Corlea Trackway",
@@ -39292,7 +39212,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1436,
+    "_index": 1419,
     "gallery": [
       "https://img.castlecore.uk/corlea-trackway-2.jpg",
       "https://img.castlecore.uk/corlea-trackway-3.jpg",
@@ -39318,7 +39238,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1437,
+    "_index": 1420,
     "gallery": [
       "https://img.castlecore.uk/clonmacnoise-castle-2.jpg",
       "https://img.castlecore.uk/clonmacnoise-castle-3.jpg",
@@ -39343,7 +39263,7 @@ const CASTLES = [
       "must-see"
     ],
     "access": "paid",
-    "_index": 1438,
+    "_index": 1421,
     "gallery": [
       "https://img.castlecore.uk/birr-castle-gardens-2.jpg",
       "https://img.castlecore.uk/birr-castle-gardens-3.jpg",
@@ -39369,7 +39289,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1439,
+    "_index": 1422,
     "gallery": [
       "https://img.castlecore.uk/dungar-castle-2.jpg",
       "https://img.castlecore.uk/dungar-castle-3.jpg",
@@ -39394,7 +39314,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1440,
+    "_index": 1423,
     "gallery": [
       "https://img.castlecore.uk/roscrea-heritage-site-2.jpg",
       "https://img.castlecore.uk/roscrea-heritage-site-3.jpg",
@@ -39420,7 +39340,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1441,
+    "_index": 1424,
     "gallery": [
       "https://img.castlecore.uk/bolton-abbey-tipperary-2.jpg",
       "https://img.castlecore.uk/bolton-abbey-tipperary-3.jpg",
@@ -39446,7 +39366,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1442,
+    "_index": 1425,
     "gallery": [
       "https://img.castlecore.uk/glenstal-abbey-main-2.jpg",
       "https://img.castlecore.uk/glenstal-abbey-main-3.jpg",
@@ -39473,7 +39393,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1443,
+    "_index": 1426,
     "gallery": [
       "https://img.castlecore.uk/castle-roche-2.jpg",
       "https://img.castlecore.uk/castle-roche-3.jpg",
@@ -39500,7 +39420,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1444,
+    "_index": 1427,
     "gallery": [
       "https://img.castlecore.uk/granagh-castle-2.jpg",
       "https://img.castlecore.uk/granagh-castle-3.jpg",
@@ -39527,7 +39447,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1445,
+    "_index": 1428,
     "gallery": [
       "https://img.castlecore.uk/puck-castle-2.jpg",
       "https://img.castlecore.uk/puck-castle-3.jpg",
@@ -39555,7 +39475,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1446
+    "_index": 1429
   },
   {
     "name": "Castle Kevin",
@@ -39576,7 +39496,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1447,
+    "_index": 1430,
     "gallery": [
       "https://img.castlecore.uk/castle-kevin-2.jpg",
       "https://img.castlecore.uk/castle-kevin-3.jpg"
@@ -39601,7 +39521,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1448
+    "_index": 1431
   },
   {
     "name": "Cloondooan Castle",
@@ -39622,7 +39542,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1449,
+    "_index": 1432,
     "gallery": [
       "https://img.castlecore.uk/cloondooan-castle-2.jpg",
       "https://img.castlecore.uk/cloondooan-castle-3.jpg"
@@ -39647,7 +39567,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 1450,
+    "_index": 1433,
     "gallery": [
       "https://img.castlecore.uk/ballyclogh-castle-2.jpg",
       "https://img.castlecore.uk/ballyclogh-castle-3.jpg",
@@ -39674,7 +39594,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1451,
+    "_index": 1434,
     "gallery": [
       "https://img.castlecore.uk/ardtully-castle-2.jpg",
       "https://img.castlecore.uk/ardtully-castle-3.jpg",
@@ -39701,7 +39621,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1452,
+    "_index": 1435,
     "gallery": [
       "https://img.castlecore.uk/killagha-abbey-2.jpg",
       "https://img.castlecore.uk/killagha-abbey-3.jpg",
@@ -39728,7 +39648,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1453,
+    "_index": 1436,
     "gallery": [
       "https://img.castlecore.uk/lislaughtin-abbey-2.jpg",
       "https://img.castlecore.uk/lislaughtin-abbey-3.jpg",
@@ -39755,7 +39675,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1454,
+    "_index": 1437,
     "gallery": [
       "https://img.castlecore.uk/adare-desmond-castle-2.jpg",
       "https://img.castlecore.uk/adare-desmond-castle-3.jpg",
@@ -39782,7 +39702,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1455,
+    "_index": 1438,
     "gallery": [
       "https://img.castlecore.uk/murrisk-abbey-2.jpg",
       "https://img.castlecore.uk/murrisk-abbey-3.jpg",
@@ -39809,7 +39729,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1456,
+    "_index": 1439,
     "gallery": [
       "https://img.castlecore.uk/strade-abbey-2.jpg",
       "https://img.castlecore.uk/strade-abbey-3.jpg",
@@ -39835,7 +39755,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1457,
+    "_index": 1440,
     "gallery": [
       "https://img.castlecore.uk/parkes-castle-2.jpg",
       "https://img.castlecore.uk/parkes-castle-3.jpg",
@@ -39862,7 +39782,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1458,
+    "_index": 1441,
     "gallery": [
       "https://img.castlecore.uk/creevelea-abbey-2.jpg",
       "https://img.castlecore.uk/creevelea-abbey-3.jpg",
@@ -39889,7 +39809,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1459,
+    "_index": 1442,
     "gallery": [
       "https://img.castlecore.uk/audleys-castle-2.jpg",
       "https://img.castlecore.uk/audleys-castle-3.jpg",
@@ -39915,7 +39835,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1460,
+    "_index": 1443,
     "gallery": [
       "https://img.castlecore.uk/drimnagh-castle-louth-2.jpg",
       "https://img.castlecore.uk/drimnagh-castle-louth-3.jpg",
@@ -39941,7 +39861,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1461,
+    "_index": 1444,
     "gallery": [
       "https://img.castlecore.uk/roodstown-castle-2.jpg",
       "https://img.castlecore.uk/roodstown-castle-3.jpg",
@@ -39968,7 +39888,7 @@ const CASTLES = [
       "haunted"
     ],
     "access": "free",
-    "_index": 1462,
+    "_index": 1445,
     "gallery": [
       "https://img.castlecore.uk/athlumney-castle-2.jpg",
       "https://img.castlecore.uk/athlumney-castle-3.jpg",
@@ -39994,7 +39914,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1463,
+    "_index": 1446,
     "gallery": [
       "https://img.castlecore.uk/kilbeggan-distillery-2.jpg",
       "https://img.castlecore.uk/kilbeggan-distillery-3.jpg",
@@ -40023,7 +39943,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 1464,
+    "_index": 1447,
     "gallery": [
       "https://img.castlecore.uk/kinnitty-castle-2.jpg",
       "https://img.castlecore.uk/kinnitty-castle-3.jpg",
@@ -40050,7 +39970,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "exterior-only",
-    "_index": 1465,
+    "_index": 1448,
     "gallery": [
       "https://img.castlecore.uk/castle-bernard-2.jpg"
     ]
@@ -40074,7 +39994,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1466,
+    "_index": 1449,
     "gallery": [
       "https://img.castlecore.uk/sherkin-island-abbey-2.jpg",
       "https://img.castlecore.uk/sherkin-island-abbey-3.jpg",
@@ -40100,7 +40020,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1467,
+    "_index": 1450,
     "gallery": [
       "https://img.castlecore.uk/bantry-house-2.jpg",
       "https://img.castlecore.uk/bantry-house-3.jpg",
@@ -40126,7 +40046,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1468,
+    "_index": 1451,
     "gallery": [
       "https://img.castlecore.uk/movilla-abbey-2.jpg",
       "https://img.castlecore.uk/movilla-abbey-3.jpg",
@@ -40152,7 +40072,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1469,
+    "_index": 1452,
     "gallery": [
       "https://img.castlecore.uk/shane-castle-2.jpg",
       "https://img.castlecore.uk/shane-castle-3.jpg",
@@ -40179,7 +40099,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1470
+    "_index": 1453
   },
   {
     "name": "Castle Coole",
@@ -40200,7 +40120,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1471,
+    "_index": 1454,
     "gallery": [
       "https://img.castlecore.uk/castle-coole-2.jpg",
       "https://img.castlecore.uk/castle-coole-3.jpg",
@@ -40227,7 +40147,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1472,
+    "_index": 1455,
     "gallery": [
       "https://img.castlecore.uk/florence-court-2.jpg",
       "https://img.castlecore.uk/florence-court-3.jpg",
@@ -40253,7 +40173,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1473,
+    "_index": 1456,
     "gallery": [
       "https://img.castlecore.uk/taaffe-castle-2.jpg",
       "https://img.castlecore.uk/taaffe-castle-3.jpg",
@@ -40278,7 +40198,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 1475,
+    "_index": 1457,
     "gallery": [
       "https://img.castlecore.uk/old-mellifont-abbey-2.jpg",
       "https://img.castlecore.uk/old-mellifont-abbey-3.jpg",
@@ -40303,7 +40223,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 1476,
+    "_index": 1458,
     "gallery": [
       "https://img.castlecore.uk/reginald-tower-2.jpg",
       "https://img.castlecore.uk/reginald-tower-3.jpg",
@@ -40329,7 +40249,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1477
+    "_index": 1459
   },
   {
     "name": "Portumna Priory",
@@ -40349,7 +40269,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1478,
+    "_index": 1460,
     "gallery": [
       "https://img.castlecore.uk/portumna-priory-2.jpg",
       "https://img.castlecore.uk/portumna-priory-3.jpg",
@@ -40375,7 +40295,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1479,
+    "_index": 1461,
     "gallery": [
       "https://img.castlecore.uk/rathcroghan-2.jpg",
       "https://img.castlecore.uk/rathcroghan-3.jpg",
@@ -40402,7 +40322,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1480,
+    "_index": 1462,
     "gallery": [
       "https://img.castlecore.uk/wiki-aghadoe.jpg"
     ]
@@ -40426,7 +40346,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1481,
+    "_index": 1463,
     "gallery": [
       "https://img.castlecore.uk/ballinskelligs-priory-2.jpg",
       "https://img.castlecore.uk/ballinskelligs-priory-3.jpg",
@@ -40453,7 +40373,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1482,
+    "_index": 1464,
     "gallery": [
       "https://img.castlecore.uk/ballinskelligs-castle-2.jpg",
       "https://img.castlecore.uk/ballinskelligs-castle-3.jpg",
@@ -40481,7 +40401,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1483,
+    "_index": 1465,
     "gallery": [
       "https://img.castlecore.uk/staigue-fort-2.jpg",
       "https://img.castlecore.uk/staigue-fort-3.jpg",
@@ -40508,7 +40428,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1484,
+    "_index": 1466,
     "gallery": [
       "https://img.castlecore.uk/granuaile-tower-2.jpg",
       "https://img.castlecore.uk/granuaile-tower-3.jpg",
@@ -40535,7 +40455,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 1485,
+    "_index": 1467,
     "gallery": [
       "https://img.castlecore.uk/coppingers-court-2.jpg",
       "https://img.castlecore.uk/coppingers-court-3.jpg",
@@ -40560,7 +40480,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1486,
+    "_index": 1468,
     "gallery": [
       "https://img.castlecore.uk/wiki-castle-hyde.jpg"
     ]
@@ -40584,7 +40504,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1487,
+    "_index": 1469,
     "gallery": [
       "https://img.castlecore.uk/glanworth-castle-2.jpg",
       "https://img.castlecore.uk/glanworth-castle-3.jpg",
@@ -40611,7 +40531,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1488,
+    "_index": 1470,
     "gallery": [
       "https://img.castlecore.uk/ballycarberry-castle-2.jpg",
       "https://img.castlecore.uk/ballycarberry-castle-3.jpg",
@@ -40636,7 +40556,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 1489,
+    "_index": 1471,
     "gallery": [
       "https://img.castlecore.uk/castlemartyr-resort-2.jpg",
       "https://img.castlecore.uk/castlemartyr-resort-3.jpg",
@@ -40663,7 +40583,7 @@ const CASTLES = [
       "haunted"
     ],
     "access": "free",
-    "_index": 1490,
+    "_index": 1472,
     "gallery": [
       "https://img.castlecore.uk/castle-hacket-2.jpg",
       "https://img.castlecore.uk/castle-hacket-3.jpg",
@@ -40689,7 +40609,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1491,
+    "_index": 1473,
     "gallery": [
       "https://img.castlecore.uk/lydican-castle-2.jpg",
       "https://img.castlecore.uk/lydican-castle-3.jpg",
@@ -40716,7 +40636,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1492,
+    "_index": 1474,
     "gallery": [
       "https://img.castlecore.uk/llanthony-priory-2.jpg",
       "https://img.castlecore.uk/llanthony-priory-3.jpg",
@@ -40743,7 +40663,7 @@ const CASTLES = [
       "peaceful"
     ],
     "access": "free",
-    "_index": 1493,
+    "_index": 1475,
     "gallery": [
       "https://img.castlecore.uk/cwmhir-abbey-2.jpg",
       "https://img.castlecore.uk/cwmhir-abbey-ruins-2.jpg",
@@ -40770,7 +40690,7 @@ const CASTLES = [
       "lesser-known"
     ],
     "access": "free",
-    "_index": 1494,
+    "_index": 1476,
     "gallery": [
       "https://img.castlecore.uk/llanblethian-castle-2.jpg",
       "https://img.castlecore.uk/llanblethian-castle-3.jpg",
@@ -40797,7 +40717,7 @@ const CASTLES = [
       "walk-required"
     ],
     "access": "free",
-    "_index": 1495,
+    "_index": 1477,
     "gallery": [
       "https://img.castlecore.uk/candleston-castle-2.jpg",
       "https://img.castlecore.uk/candleston-castle-3.jpg",
@@ -40824,7 +40744,7 @@ const CASTLES = [
       "art"
     ],
     "access": "free",
-    "_index": 1496,
+    "_index": 1478,
     "gallery": [
       "https://img.castlecore.uk/llandaff-cathedral-2.jpg",
       "https://img.castlecore.uk/llandaff-cathedral-3.jpg",
@@ -40851,7 +40771,7 @@ const CASTLES = [
       "mansion"
     ],
     "access": "paid",
-    "_index": 1497,
+    "_index": 1479,
     "gallery": [
       "https://img.castlecore.uk/nanteos-mansion-2.jpg",
       "https://img.castlecore.uk/nanteos-mansion-3.jpg",
@@ -40878,7 +40798,7 @@ const CASTLES = [
       "walk-required"
     ],
     "access": "free",
-    "_index": 1498,
+    "_index": 1480,
     "gallery": [
       "https://img.castlecore.uk/castell-dinas-2.jpg",
       "https://img.castlecore.uk/castell-dinas-3.jpg",
@@ -40905,7 +40825,7 @@ const CASTLES = [
       "panoramic"
     ],
     "access": "free",
-    "_index": 1499,
+    "_index": 1481,
     "gallery": [
       "https://img.castlecore.uk/wiki-garn-goch.jpg"
     ]
@@ -40929,7 +40849,7 @@ const CASTLES = [
       "heritage-coast"
     ],
     "access": "free",
-    "_index": 1500,
+    "_index": 1482,
     "gallery": [
       "https://img.castlecore.uk/dunraven-castle-2.jpg",
       "https://img.castlecore.uk/dunraven-castle-3.jpg",
@@ -40956,7 +40876,7 @@ const CASTLES = [
       "views"
     ],
     "access": "free",
-    "_index": 1501,
+    "_index": 1483,
     "gallery": [
       "https://img.castlecore.uk/caerau-hillfort-2.jpg",
       "https://img.castlecore.uk/caerau-hillfort-3.jpg",
@@ -40983,7 +40903,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1502,
+    "_index": 1484,
     "gallery": [
       "https://img.castlecore.uk/old-beaupre-castle-2.jpg",
       "https://img.castlecore.uk/old-beaupre-castle-3.jpg",
@@ -41010,7 +40930,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "limited",
-    "_index": 1503,
+    "_index": 1485,
     "gallery": [
       "https://img.castlecore.uk/st-donat-s-castle-2.jpg",
       "https://img.castlecore.uk/st-donat-s-castle-3.jpg",
@@ -41037,7 +40957,7 @@ const CASTLES = [
       "iron-age"
     ],
     "access": "free",
-    "_index": 1504,
+    "_index": 1486,
     "gallery": [
       "https://img.castlecore.uk/sully-island-fort-2.jpg",
       "https://img.castlecore.uk/sully-island-fort-3.jpg",
@@ -41064,7 +40984,7 @@ const CASTLES = [
       "atmospheric"
     ],
     "access": "free",
-    "_index": 1505,
+    "_index": 1487,
     "gallery": [
       "https://img.castlecore.uk/ruperra-castle-2.jpg",
       "https://img.castlecore.uk/ruperra-castle-3.jpg",
@@ -41091,7 +41011,7 @@ const CASTLES = [
       "panoramic"
     ],
     "access": "free",
-    "_index": 1506,
+    "_index": 1488,
     "gallery": [
       "https://img.castlecore.uk/morlais-castle-2.jpg",
       "https://img.castlecore.uk/morlais-castle-3.jpg",
@@ -41118,7 +41038,7 @@ const CASTLES = [
       "welsh-built"
     ],
     "access": "free",
-    "_index": 1507,
+    "_index": 1489,
     "gallery": [
       "https://img.castlecore.uk/castell-morgraig-2.jpg",
       "https://img.castlecore.uk/castell-morgraig-3.jpg",
@@ -41145,7 +41065,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "free",
-    "_index": 1508,
+    "_index": 1490,
     "gallery": [
       "https://img.castlecore.uk/st-fagans-castle-2.jpg",
       "https://img.castlecore.uk/st-fagans-castle-3.jpg",
@@ -41171,7 +41091,7 @@ const CASTLES = [
       "norman"
     ],
     "access": "free",
-    "_index": 1509,
+    "_index": 1491,
     "gallery": [
       "https://img.castlecore.uk/caerau-ringwork-2.jpg",
       "https://img.castlecore.uk/caerau-ringwork-3.jpg",
@@ -41198,7 +41118,7 @@ const CASTLES = [
       "curtain-wall"
     ],
     "access": "limited",
-    "_index": 1510,
+    "_index": 1492,
     "gallery": [
       "https://img.castlecore.uk/penrice-castle-2.jpg",
       "https://img.castlecore.uk/penrice-castle-3.jpg",
@@ -41226,7 +41146,7 @@ const CASTLES = [
       "panoramic"
     ],
     "access": "free",
-    "_index": 1511,
+    "_index": 1493,
     "gallery": [
       "https://img.castlecore.uk/cefn-bryn-arthur-s-stone-2.jpg",
       "https://img.castlecore.uk/cefn-bryn-arthur-s-stone-3.jpg",
@@ -41253,7 +41173,7 @@ const CASTLES = [
       "ramparts"
     ],
     "access": "free",
-    "_index": 1512,
+    "_index": 1494,
     "gallery": [
       "https://img.castlecore.uk/llanmelin-wood-hillfort-2.jpg",
       "https://img.castlecore.uk/llanmelin-wood-hillfort-3.jpg",
@@ -41280,7 +41200,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "free",
-    "_index": 1513,
+    "_index": 1495,
     "gallery": [
       "https://img.castlecore.uk/caerwent-roman-town-2.jpg",
       "https://img.castlecore.uk/caerwent-roman-town-3.jpg",
@@ -41307,7 +41227,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "free",
-    "_index": 1514,
+    "_index": 1496,
     "gallery": [
       "https://img.castlecore.uk/caerleon-roman-fortress-2.jpg",
       "https://img.castlecore.uk/caerleon-roman-fortress-3.jpg",
@@ -41334,7 +41254,7 @@ const CASTLES = [
       "amphitheatre"
     ],
     "access": "free",
-    "_index": 1515,
+    "_index": 1497,
     "gallery": [
       "https://img.castlecore.uk/caerleon-amphitheatre-2.jpg",
       "https://img.castlecore.uk/caerleon-amphitheatre-3.jpg",
@@ -41361,7 +41281,7 @@ const CASTLES = [
       "gardens"
     ],
     "access": "paid",
-    "_index": 1516,
+    "_index": 1498,
     "gallery": [
       "https://img.castlecore.uk/tredegar-house-2.jpg",
       "https://img.castlecore.uk/tredegar-house-3.jpg",
@@ -41388,7 +41308,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "free",
-    "_index": 1517,
+    "_index": 1499,
     "gallery": [
       "https://img.castlecore.uk/blaenavon-ironworks-2.jpg",
       "https://img.castlecore.uk/blaenavon-ironworks-3.jpg",
@@ -41415,7 +41335,7 @@ const CASTLES = [
       "walking"
     ],
     "access": "free",
-    "_index": 1518
+    "_index": 1500
   },
   {
     "name": "Tretower Court",
@@ -41436,7 +41356,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1519,
+    "_index": 1501,
     "gallery": [
       "https://img.castlecore.uk/tretower-court-2.jpg",
       "https://img.castlecore.uk/tretower-court-3.jpg",
@@ -41463,7 +41383,7 @@ const CASTLES = [
       "venue"
     ],
     "access": "paid",
-    "_index": 1520,
+    "_index": 1502,
     "gallery": [
       "https://img.castlecore.uk/craig-y-nos-castle-2.jpg",
       "https://img.castlecore.uk/craig-y-nos-castle-3.jpg",
@@ -41490,7 +41410,7 @@ const CASTLES = [
       "cliff-top"
     ],
     "access": "paid",
-    "_index": 1521,
+    "_index": 1503,
     "gallery": [
       "https://img.castlecore.uk/carreg-cennen-castle-caves-2.jpg",
       "https://img.castlecore.uk/carreg-cennen-castle-caves-3.jpg",
@@ -41517,7 +41437,7 @@ const CASTLES = [
       "deer-park"
     ],
     "access": "paid",
-    "_index": 1522,
+    "_index": 1504,
     "gallery": [
       "https://img.castlecore.uk/dinefwr-park-2.jpg",
       "https://img.castlecore.uk/dinefwr-park-3.jpg",
@@ -41544,7 +41464,7 @@ const CASTLES = [
       "panoramic"
     ],
     "access": "free",
-    "_index": 1523,
+    "_index": 1505,
     "gallery": [
       "https://img.castlecore.uk/paxton-s-tower-2.jpg",
       "https://img.castlecore.uk/paxton-s-tower-3.jpg",
@@ -41571,7 +41491,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "paid",
-    "_index": 1524,
+    "_index": 1506,
     "gallery": [
       "https://img.castlecore.uk/aberglasney-gardens-ruins-2.jpg",
       "https://img.castlecore.uk/aberglasney-gardens-ruins-3.jpg",
@@ -41598,7 +41518,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "free",
-    "_index": 1525,
+    "_index": 1507,
     "gallery": [
       "https://img.castlecore.uk/dryslwyn-castle-viewpoint-2.jpg",
       "https://img.castlecore.uk/dryslwyn-castle-viewpoint-3.jpg",
@@ -41625,7 +41545,7 @@ const CASTLES = [
       "fragmentary"
     ],
     "access": "free",
-    "_index": 1526,
+    "_index": 1508,
     "gallery": [
       "https://img.castlecore.uk/whitland-abbey-2.jpg",
       "https://img.castlecore.uk/whitland-abbey-3.jpg",
@@ -41652,7 +41572,7 @@ const CASTLES = [
       "hidden-valley"
     ],
     "access": "free",
-    "_index": 1527,
+    "_index": 1509,
     "gallery": [
       "https://img.castlecore.uk/st-david-s-cathedral-2.jpg",
       "https://img.castlecore.uk/st-david-s-cathedral-3.jpg",
@@ -41679,7 +41599,7 @@ const CASTLES = [
       "hotel"
     ],
     "access": "limited",
-    "_index": 1528,
+    "_index": 1510,
     "gallery": [
       "https://img.castlecore.uk/roch-castle-exterior-2.jpg",
       "https://img.castlecore.uk/roch-castle-exterior-3.jpg",
@@ -41706,7 +41626,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "limited",
-    "_index": 1529,
+    "_index": 1511,
     "gallery": [
       "https://img.castlecore.uk/benton-castle-exterior-2.jpg",
       "https://img.castlecore.uk/benton-castle-exterior-3.jpg",
@@ -41733,7 +41653,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "paid",
-    "_index": 1530,
+    "_index": 1512,
     "gallery": [
       "https://img.castlecore.uk/castell-henllys-iron-age-fort-2.jpg",
       "https://img.castlecore.uk/castell-henllys-iron-age-fort-3.jpg",
@@ -41761,7 +41681,7 @@ const CASTLES = [
       "iconic"
     ],
     "access": "free",
-    "_index": 1531,
+    "_index": 1513,
     "gallery": [
       "https://img.castlecore.uk/pentre-ifan-2.jpg",
       "https://img.castlecore.uk/pentre-ifan-3.jpg",
@@ -41787,7 +41707,7 @@ const CASTLES = [
       "burial-chamber"
     ],
     "access": "free",
-    "_index": 1532,
+    "_index": 1514,
     "gallery": [
       "https://img.castlecore.uk/carreg-coetan-arthur-2.jpg",
       "https://img.castlecore.uk/carreg-coetan-arthur-3.jpg",
@@ -41814,7 +41734,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 1533,
+    "_index": 1515,
     "gallery": [
       "https://img.castlecore.uk/gateholm-island-2.jpg",
       "https://img.castlecore.uk/gateholm-island-3.jpg",
@@ -41841,7 +41761,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1534,
+    "_index": 1516,
     "gallery": [
       "https://img.castlecore.uk/st-non-s-chapel-2.jpg",
       "https://img.castlecore.uk/st-non-s-chapel-3.jpg",
@@ -41867,7 +41787,7 @@ const CASTLES = [
       "coastal-path"
     ],
     "access": "limited",
-    "_index": 1535,
+    "_index": 1517,
     "gallery": [
       "https://img.castlecore.uk/amroth-castle-2.jpg",
       "https://img.castlecore.uk/amroth-castle-3.jpg",
@@ -41894,7 +41814,7 @@ const CASTLES = [
       "picturesque"
     ],
     "access": "free",
-    "_index": 1536,
+    "_index": 1518,
     "gallery": [
       "https://img.castlecore.uk/hafod-estate-2.jpg",
       "https://img.castlecore.uk/hafod-estate-3.jpg",
@@ -41920,7 +41840,7 @@ const CASTLES = [
       "fragmentary"
     ],
     "access": "free",
-    "_index": 1537,
+    "_index": 1519,
     "gallery": [
       "https://img.castlecore.uk/new-quay-honey-farm-castle-2.jpg",
       "https://img.castlecore.uk/new-quay-honey-farm-castle-3.jpg",
@@ -41948,7 +41868,7 @@ const CASTLES = [
       "underground"
     ],
     "access": "paid",
-    "_index": 1538,
+    "_index": 1520,
     "gallery": [
       "https://img.castlecore.uk/dolaucothi-gold-mines-2.jpg",
       "https://img.castlecore.uk/dolaucothi-gold-mines-3.jpg",
@@ -41975,7 +41895,7 @@ const CASTLES = [
       "hilltop"
     ],
     "access": "free",
-    "_index": 1539,
+    "_index": 1521,
     "gallery": [
       "https://img.castlecore.uk/dynevor-castle-2.jpg",
       "https://img.castlecore.uk/dynevor-castle-3.jpg",
@@ -42002,7 +41922,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 1540,
+    "_index": 1522,
     "gallery": [
       "https://img.castlecore.uk/conwy-town-walls-walk-2.jpg",
       "https://img.castlecore.uk/conwy-town-walls-walk-3.jpg",
@@ -42029,7 +41949,7 @@ const CASTLES = [
       "town-house"
     ],
     "access": "paid",
-    "_index": 1541,
+    "_index": 1523,
     "gallery": [
       "https://img.castlecore.uk/plas-mawr-2.jpg",
       "https://img.castlecore.uk/plas-mawr-3.jpg",
@@ -42056,7 +41976,7 @@ const CASTLES = [
       "gardens"
     ],
     "access": "paid",
-    "_index": 1542,
+    "_index": 1524,
     "gallery": [
       "https://img.castlecore.uk/gwydir-castle-2.jpg",
       "https://img.castlecore.uk/gwydir-castle-3.jpg",
@@ -42083,7 +42003,7 @@ const CASTLES = [
       "hotel"
     ],
     "access": "paid",
-    "_index": 1543,
+    "_index": 1525,
     "gallery": [
       "https://img.castlecore.uk/bodysgallen-hall-2.jpg",
       "https://img.castlecore.uk/bodysgallen-hall-3.jpg",
@@ -42110,7 +42030,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "free",
-    "_index": 1544,
+    "_index": 1526,
     "gallery": [
       "https://img.castlecore.uk/segontium-roman-fort-2.jpg",
       "https://img.castlecore.uk/segontium-roman-fort-3.jpg",
@@ -42137,7 +42057,7 @@ const CASTLES = [
       "slate"
     ],
     "access": "paid",
-    "_index": 1545,
+    "_index": 1527,
     "gallery": [
       "https://img.castlecore.uk/penrhyn-castle-2.jpg",
       "https://img.castlecore.uk/penrhyn-castle-3.jpg",
@@ -42164,7 +42084,7 @@ const CASTLES = [
       "walking"
     ],
     "access": "free",
-    "_index": 1546,
+    "_index": 1528,
     "gallery": [
       "https://img.castlecore.uk/aber-falls-fort-2.jpg",
       "https://img.castlecore.uk/aber-falls-fort-3.jpg",
@@ -42191,7 +42111,7 @@ const CASTLES = [
       "solstice"
     ],
     "access": "free",
-    "_index": 1547,
+    "_index": 1529,
     "gallery": [
       "https://img.castlecore.uk/bryn-celli-ddu-2.jpg",
       "https://img.castlecore.uk/bryn-celli-ddu-3.jpg",
@@ -42218,7 +42138,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1548,
+    "_index": 1530,
     "gallery": [
       "https://img.castlecore.uk/barclodiad-y-gawres-2.jpg",
       "https://img.castlecore.uk/barclodiad-y-gawres-3.jpg",
@@ -42245,7 +42165,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 1549,
+    "_index": 1531,
     "gallery": [
       "https://img.castlecore.uk/beaumaris-gaol-2.jpg",
       "https://img.castlecore.uk/beaumaris-gaol-3.jpg",
@@ -42272,7 +42192,7 @@ const CASTLES = [
       "stone-huts"
     ],
     "access": "free",
-    "_index": 1550,
+    "_index": 1532,
     "gallery": [
       "https://img.castlecore.uk/din-lligwy-2.jpg",
       "https://img.castlecore.uk/din-lligwy-3.jpg",
@@ -42299,7 +42219,7 @@ const CASTLES = [
       "capstone"
     ],
     "access": "free",
-    "_index": 1551,
+    "_index": 1533,
     "gallery": [
       "https://img.castlecore.uk/lligwy-burial-chamber-2.jpg",
       "https://img.castlecore.uk/lligwy-burial-chamber-3.jpg",
@@ -42326,7 +42246,7 @@ const CASTLES = [
       "coastal-views"
     ],
     "access": "free",
-    "_index": 1552,
+    "_index": 1534,
     "gallery": [
       "https://img.castlecore.uk/holyhead-mountain-hut-group-2.jpg",
       "https://img.castlecore.uk/holyhead-mountain-hut-group-3.jpg",
@@ -42353,7 +42273,7 @@ const CASTLES = [
       "sea-views"
     ],
     "access": "free",
-    "_index": 1553,
+    "_index": 1535,
     "gallery": [
       "https://img.castlecore.uk/caer-y-twr-2.jpg",
       "https://img.castlecore.uk/caer-y-twr-3.jpg",
@@ -42380,7 +42300,7 @@ const CASTLES = [
       "dramatic-cliffs"
     ],
     "access": "paid",
-    "_index": 1554,
+    "_index": 1536,
     "gallery": [
       "https://img.castlecore.uk/south-stack-lighthouse-2.jpg",
       "https://img.castlecore.uk/south-stack-lighthouse-3.jpg",
@@ -42407,7 +42327,7 @@ const CASTLES = [
       "art"
     ],
     "access": "paid",
-    "_index": 1555,
+    "_index": 1537,
     "gallery": [
       "https://img.castlecore.uk/plas-newydd-2.jpg",
       "https://img.castlecore.uk/plas-newydd-3.jpg",
@@ -42434,7 +42354,7 @@ const CASTLES = [
       "walkable"
     ],
     "access": "free",
-    "_index": 1556,
+    "_index": 1538,
     "gallery": [
       "https://img.castlecore.uk/caernarfon-town-walls-walk-2.jpg",
       "https://img.castlecore.uk/caernarfon-town-walls-walk-3.jpg",
@@ -42461,7 +42381,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 1557,
+    "_index": 1539,
     "gallery": [
       "https://img.castlecore.uk/tomen-y-mur-fort-2.jpg",
       "https://img.castlecore.uk/tomen-y-mur-fort-3.jpg",
@@ -42489,7 +42409,7 @@ const CASTLES = [
       "the-prisoner"
     ],
     "access": "paid",
-    "_index": 1558,
+    "_index": 1540,
     "gallery": [
       "https://img.castlecore.uk/portmeirion-2.jpg",
       "https://img.castlecore.uk/portmeirion-3.jpg",
@@ -42517,7 +42437,7 @@ const CASTLES = [
       "walk-required"
     ],
     "access": "free",
-    "_index": 1559,
+    "_index": 1541,
     "gallery": [
       "https://img.castlecore.uk/beddgelert-dinas-emrys-walk-2.jpg",
       "https://img.castlecore.uk/beddgelert-dinas-emrys-walk-3.jpg",
@@ -42544,7 +42464,7 @@ const CASTLES = [
       "early-medieval"
     ],
     "access": "free",
-    "_index": 1560,
+    "_index": 1542,
     "gallery": [
       "https://img.castlecore.uk/eliseg-s-pillar-2.jpg",
       "https://img.castlecore.uk/eliseg-s-pillar-3.jpg",
@@ -42571,7 +42491,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1561,
+    "_index": 1543,
     "gallery": [
       "https://img.castlecore.uk/denbigh-castle-walls-2.jpg",
       "https://img.castlecore.uk/denbigh-castle-walls-3.jpg",
@@ -42598,7 +42518,7 @@ const CASTLES = [
       "canal"
     ],
     "access": "paid",
-    "_index": 1562,
+    "_index": 1544,
     "gallery": [
       "https://img.castlecore.uk/rhuddlan-castle-towers-2.jpg",
       "https://img.castlecore.uk/rhuddlan-castle-towers-3.jpg",
@@ -42625,7 +42545,7 @@ const CASTLES = [
       "views"
     ],
     "access": "free",
-    "_index": 1563,
+    "_index": 1545,
     "gallery": [
       "https://img.castlecore.uk/mold-bailey-hill-2.jpg",
       "https://img.castlecore.uk/mold-bailey-hill-3.jpg",
@@ -42652,7 +42572,7 @@ const CASTLES = [
       "gardens"
     ],
     "access": "paid",
-    "_index": 1564,
+    "_index": 1546,
     "gallery": [
       "https://img.castlecore.uk/erddig-hall-2.jpg",
       "https://img.castlecore.uk/erddig-hall-3.jpg",
@@ -42679,7 +42599,7 @@ const CASTLES = [
       "river-dee"
     ],
     "access": "free",
-    "_index": 1565,
+    "_index": 1547,
     "gallery": [
       "https://img.castlecore.uk/holt-castle-2.jpg",
       "https://img.castlecore.uk/holt-castle-3.jpg",
@@ -42706,7 +42626,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 1566,
+    "_index": 1548,
     "gallery": [
       "https://img.castlecore.uk/valle-crucis-fishpond-2.jpg",
       "https://img.castlecore.uk/valle-crucis-fishpond-3.jpg",
@@ -42733,7 +42653,7 @@ const CASTLES = [
       "motte"
     ],
     "access": "free",
-    "_index": 1567,
+    "_index": 1549,
     "gallery": [
       "https://img.castlecore.uk/mathrafal-castle-mound-2.jpg",
       "https://img.castlecore.uk/mathrafal-castle-mound-3.jpg",
@@ -42759,7 +42679,7 @@ const CASTLES = [
       "earthworks"
     ],
     "access": "free",
-    "_index": 1568,
+    "_index": 1550,
     "gallery": [
       "https://img.castlecore.uk/cefnllys-castle-mound-2.jpg",
       "https://img.castlecore.uk/cefnllys-castle-mound-3.jpg",
@@ -42786,7 +42706,7 @@ const CASTLES = [
       "rocks"
     ],
     "access": "free",
-    "_index": 1569,
+    "_index": 1551,
     "gallery": [
       "https://img.castlecore.uk/aberedw-castle-rocks-2.jpg",
       "https://img.castlecore.uk/aberedw-castle-rocks-3.jpg",
@@ -42813,7 +42733,7 @@ const CASTLES = [
       "llywelyn"
     ],
     "access": "free",
-    "_index": 1570,
+    "_index": 1552,
     "gallery": [
       "https://img.castlecore.uk/builth-castle-mound-site-2.jpg",
       "https://img.castlecore.uk/builth-castle-mound-site-3.jpg",
@@ -42840,7 +42760,7 @@ const CASTLES = [
       "arts-venue"
     ],
     "access": "free",
-    "_index": 1571
+    "_index": 1553
   },
   {
     "name": "Brecon Cathedral",
@@ -42861,7 +42781,7 @@ const CASTLES = [
       "norman"
     ],
     "access": "free",
-    "_index": 1572,
+    "_index": 1554,
     "gallery": [
       "https://img.castlecore.uk/brecon-cathedral-2.jpg",
       "https://img.castlecore.uk/brecon-cathedral-3.jpg",
@@ -42888,7 +42808,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1573,
+    "_index": 1555,
     "gallery": [
       "https://img.castlecore.uk/tretower-castle-round-tower-2.jpg",
       "https://img.castlecore.uk/tretower-castle-round-tower-3.jpg",
@@ -42915,7 +42835,7 @@ const CASTLES = [
       "quiet"
     ],
     "access": "free",
-    "_index": 1574,
+    "_index": 1556,
     "gallery": [
       "https://img.castlecore.uk/bleddfa-castle-mound-2.jpg",
       "https://img.castlecore.uk/bleddfa-castle-mound-3.jpg",
@@ -42943,7 +42863,7 @@ const CASTLES = [
       "palace"
     ],
     "access": "paid",
-    "_index": 1575,
+    "_index": 1557,
     "gallery": [
       "https://img.castlecore.uk/raglan-castle-great-tower-2.jpg",
       "https://img.castlecore.uk/raglan-castle-great-tower-3.jpg",
@@ -42970,7 +42890,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1576,
+    "_index": 1558,
     "gallery": [
       "https://img.castlecore.uk/chepstow-castle-great-tower-2.jpg",
       "https://img.castlecore.uk/chepstow-castle-great-tower-3.jpg",
@@ -42997,7 +42917,7 @@ const CASTLES = [
       "town-centre"
     ],
     "access": "free",
-    "_index": 1577,
+    "_index": 1559,
     "gallery": [
       "https://img.castlecore.uk/monmouth-castle-2.jpg",
       "https://img.castlecore.uk/monmouth-castle-3.jpg",
@@ -43024,7 +42944,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 1578,
+    "_index": 1560,
     "gallery": [
       "https://img.castlecore.uk/monnow-bridge-gate-2.jpg",
       "https://img.castlecore.uk/monnow-bridge-gate-3.jpg",
@@ -43051,7 +42971,7 @@ const CASTLES = [
       "massacre"
     ],
     "access": "free",
-    "_index": 1579,
+    "_index": 1561,
     "gallery": [
       "https://img.castlecore.uk/abergavenny-castle-museum-2.jpg",
       "https://img.castlecore.uk/abergavenny-castle-museum-3.jpg",
@@ -43078,7 +42998,7 @@ const CASTLES = [
       "seasonal"
     ],
     "access": "paid",
-    "_index": 1580,
+    "_index": 1562,
     "gallery": [
       "https://img.castlecore.uk/usk-castle-gardens-2.jpg",
       "https://img.castlecore.uk/usk-castle-gardens-3.jpg",
@@ -43105,7 +43025,7 @@ const CASTLES = [
       "wye-valley"
     ],
     "access": "free",
-    "_index": 1581,
+    "_index": 1563,
     "gallery": [
       "https://img.castlecore.uk/piercefield-walks-2.jpg",
       "https://img.castlecore.uk/piercefield-walks-3.jpg",
@@ -43132,7 +43052,7 @@ const CASTLES = [
       "orangery"
     ],
     "access": "paid",
-    "_index": 1582,
+    "_index": 1564,
     "gallery": [
       "https://img.castlecore.uk/margam-castle-victorian-2.jpg",
       "https://img.castlecore.uk/margam-castle-victorian-3.jpg",
@@ -43160,7 +43080,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1583,
+    "_index": 1565,
     "gallery": [
       "https://img.castlecore.uk/pennard-castle-gower-2.jpg",
       "https://img.castlecore.uk/pennard-castle-gower-3.jpg",
@@ -43187,7 +43107,7 @@ const CASTLES = [
       "estuary"
     ],
     "access": "free",
-    "_index": 1584,
+    "_index": 1566,
     "gallery": [
       "https://img.castlecore.uk/loughor-castle-ruin-2.jpg",
       "https://img.castlecore.uk/loughor-castle-ruin-3.jpg",
@@ -43214,7 +43134,7 @@ const CASTLES = [
       "town-centre"
     ],
     "access": "free",
-    "_index": 1585,
+    "_index": 1567,
     "gallery": [
       "https://img.castlecore.uk/newcastle-bridgend-castle-2.jpg",
       "https://img.castlecore.uk/newcastle-bridgend-castle-3.jpg",
@@ -43241,7 +43161,7 @@ const CASTLES = [
       "estuary-views"
     ],
     "access": "paid",
-    "_index": 1586,
+    "_index": 1568,
     "gallery": [
       "https://img.castlecore.uk/dylan-thomas-boathouse-2.jpg",
       "https://img.castlecore.uk/dylan-thomas-boathouse-3.jpg",
@@ -43268,7 +43188,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "free",
-    "_index": 1587,
+    "_index": 1569,
     "gallery": [
       "https://img.castlecore.uk/llansteffan-castle-viewpoint-2.jpg",
       "https://img.castlecore.uk/llansteffan-castle-viewpoint-3.jpg",
@@ -43295,7 +43215,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "free",
-    "_index": 1588,
+    "_index": 1570,
     "gallery": [
       "https://img.castlecore.uk/tenby-castle-hill-2.jpg"
     ]
@@ -43319,7 +43239,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 1589,
+    "_index": 1571,
     "gallery": [
       "https://img.castlecore.uk/tenby-town-walls-2.jpg",
       "https://img.castlecore.uk/tenby-town-walls-3.jpg",
@@ -43346,7 +43266,7 @@ const CASTLES = [
       "riverside"
     ],
     "access": "free",
-    "_index": 1590,
+    "_index": 1572,
     "gallery": [
       "https://img.castlecore.uk/haverfordwest-castle-museum-2.jpg",
       "https://img.castlecore.uk/haverfordwest-castle-museum-3.jpg",
@@ -43373,7 +43293,7 @@ const CASTLES = [
       "lived-in"
     ],
     "access": "paid",
-    "_index": 1591,
+    "_index": 1573,
     "gallery": [
       "https://img.castlecore.uk/picton-castle-gardens-2.jpg",
       "https://img.castlecore.uk/picton-castle-gardens-3.jpg",
@@ -43400,7 +43320,7 @@ const CASTLES = [
       "norman"
     ],
     "access": "free",
-    "_index": 1592,
+    "_index": 1574,
     "gallery": [
       "https://img.castlecore.uk/wiston-castle-mound-2.jpg",
       "https://img.castlecore.uk/wiston-castle-mound-3.jpg",
@@ -43428,7 +43348,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1593,
+    "_index": 1575,
     "gallery": [
       "https://img.castlecore.uk/castell-coch-fairytale-2.jpg",
       "https://img.castlecore.uk/castell-coch-fairytale-3.jpg",
@@ -43456,7 +43376,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1594,
+    "_index": 1576,
     "gallery": [
       "https://img.castlecore.uk/conwy-castle-interior-tours-2.jpg",
       "https://img.castlecore.uk/conwy-castle-interior-tours-3.jpg",
@@ -43484,7 +43404,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1595,
+    "_index": 1577,
     "gallery": [
       "https://img.castlecore.uk/caernarfon-castle-interior-tours-2.jpg",
       "https://img.castlecore.uk/caernarfon-castle-interior-tours-3.jpg",
@@ -43512,7 +43432,7 @@ const CASTLES = [
       "cadw"
     ],
     "access": "paid",
-    "_index": 1596,
+    "_index": 1578,
     "gallery": [
       "https://img.castlecore.uk/beaumaris-castle-interior-tours-2.jpg",
       "https://img.castlecore.uk/beaumaris-castle-interior-tours-3.jpg",
@@ -43539,7 +43459,7 @@ const CASTLES = [
       "national-trust"
     ],
     "access": "paid",
-    "_index": 1597,
+    "_index": 1579,
     "gallery": [
       "https://img.castlecore.uk/aberconwy-house-2.jpg",
       "https://img.castlecore.uk/aberconwy-house-3.jpg",
@@ -43566,7 +43486,7 @@ const CASTLES = [
       "laburnum-arch"
     ],
     "access": "paid",
-    "_index": 1598,
+    "_index": 1580,
     "gallery": [
       "https://img.castlecore.uk/bodnant-garden-2.jpg",
       "https://img.castlecore.uk/bodnant-garden-3.jpg",
@@ -43593,7 +43513,7 @@ const CASTLES = [
       "puffin-island"
     ],
     "access": "free",
-    "_index": 1599,
+    "_index": 1581,
     "gallery": [
       "https://img.castlecore.uk/penmon-priory-anglesey-2.jpg",
       "https://img.castlecore.uk/penmon-priory-anglesey-3.jpg",
@@ -43620,7 +43540,7 @@ const CASTLES = [
       "recreated"
     ],
     "access": "paid",
-    "_index": 1600,
+    "_index": 1582,
     "gallery": [
       "https://img.castlecore.uk/tretower-court-medieval-garden-2.jpg",
       "https://img.castlecore.uk/tretower-court-medieval-garden-3.jpg",
@@ -43646,7 +43566,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "private",
-    "_index": 1601,
+    "_index": 1583,
     "gallery": [
       "https://img.castlecore.uk/barcaldine-castle-2.jpg",
       "https://img.castlecore.uk/barcaldine-castle-3.jpg",
@@ -43673,7 +43593,7 @@ const CASTLES = [
       "island"
     ],
     "access": "paid",
-    "_index": 1602,
+    "_index": 1584,
     "gallery": [
       "https://img.castlecore.uk/iona-abbey-2.jpg",
       "https://img.castlecore.uk/iona-abbey-3.jpg",
@@ -43700,7 +43620,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1603,
+    "_index": 1585,
     "gallery": [
       "https://img.castlecore.uk/inchcolm-abbey-2.jpg",
       "https://img.castlecore.uk/inchcolm-abbey-3.jpg",
@@ -43726,7 +43646,7 @@ const CASTLES = [
       "peaceful"
     ],
     "access": "free",
-    "_index": 1604,
+    "_index": 1586,
     "gallery": [
       "https://img.castlecore.uk/balmerino-abbey-2.jpg",
       "https://img.castlecore.uk/balmerino-abbey-3.jpg",
@@ -43756,7 +43676,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1605,
+    "_index": 1587,
     "gallery": [
       "https://img.castlecore.uk/drummond-castle-gardens-2.jpg",
       "https://img.castlecore.uk/drummond-castle-gardens-3.jpg",
@@ -43782,7 +43702,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "free",
-    "_index": 1606,
+    "_index": 1588,
     "gallery": [
       "https://img.castlecore.uk/kirkwall-castle-2.jpg",
       "https://img.castlecore.uk/kirkwall-castle-3.jpg",
@@ -43808,7 +43728,7 @@ const CASTLES = [
       "renaissance"
     ],
     "access": "free",
-    "_index": 1607,
+    "_index": 1589,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-earl-s-palace-birsay.jpg"
     ]
@@ -43831,7 +43751,7 @@ const CASTLES = [
       "private"
     ],
     "access": "private",
-    "_index": 1608,
+    "_index": 1590,
     "gallery": [
       "https://img.castlecore.uk/aboyne-castle-2.jpg",
       "https://img.castlecore.uk/aboyne-castle-3.jpg"
@@ -43855,7 +43775,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "private",
-    "_index": 1609,
+    "_index": 1591,
     "gallery": [
       "https://img.castlecore.uk/tillycairn-castle-2.jpg",
       "https://img.castlecore.uk/tillycairn-castle-3.jpg",
@@ -43882,7 +43802,7 @@ const CASTLES = [
       "skye"
     ],
     "access": "free",
-    "_index": 1610,
+    "_index": 1592,
     "gallery": [
       "https://img.castlecore.uk/knock-castle-2.jpg",
       "https://img.castlecore.uk/knock-castle-3.jpg",
@@ -43908,7 +43828,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "private",
-    "_index": 1611,
+    "_index": 1593,
     "gallery": [
       "https://img.castlecore.uk/balfluig-castle-2.jpg",
       "https://img.castlecore.uk/balfluig-castle-3.jpg",
@@ -43934,7 +43854,7 @@ const CASTLES = [
       "keep"
     ],
     "access": "paid",
-    "_index": 1612,
+    "_index": 1594,
     "gallery": [
       "https://img.castlecore.uk/wiki-lochleven-castle-keep.jpg"
     ]
@@ -43958,7 +43878,7 @@ const CASTLES = [
       "whisky-trail"
     ],
     "access": "paid",
-    "_index": 1613,
+    "_index": 1595,
     "gallery": [
       "https://img.castlecore.uk/ballindalloch-castle-2.jpg",
       "https://img.castlecore.uk/ballindalloch-castle-3.jpg",
@@ -43984,7 +43904,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "private",
-    "_index": 1614
+    "_index": 1596
   },
   {
     "name": "Muchalls Castle",
@@ -44004,7 +43924,7 @@ const CASTLES = [
       "plaster-ceilings"
     ],
     "access": "private",
-    "_index": 1615
+    "_index": 1597
   },
   {
     "name": "Craigston Castle",
@@ -44024,7 +43944,7 @@ const CASTLES = [
       "tower-house"
     ],
     "access": "private",
-    "_index": 1616,
+    "_index": 1598,
     "gallery": [
       "https://img.castlecore.uk/craigston-castle-2.jpg",
       "https://img.castlecore.uk/craigston-castle-3.jpg",
@@ -44050,7 +43970,7 @@ const CASTLES = [
       "holiday-let"
     ],
     "access": "paid",
-    "_index": 1618,
+    "_index": 1599,
     "gallery": [
       "https://img.castlecore.uk/sadell-castle-2.jpg",
       "https://img.castlecore.uk/sadell-castle-3.jpg",
@@ -44077,7 +43997,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "paid",
-    "_index": 1619,
+    "_index": 1600,
     "gallery": [
       "https://img.castlecore.uk/mingary-castle-restored-2.jpg",
       "https://img.castlecore.uk/mingary-castle-restored-3.jpg",
@@ -44104,7 +44024,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1620,
+    "_index": 1601,
     "gallery": [
       "https://img.castlecore.uk/tioram-castle-viewpoint-2.jpg",
       "https://img.castlecore.uk/tioram-castle-viewpoint-3.jpg",
@@ -44130,7 +44050,7 @@ const CASTLES = [
       "spite-castle"
     ],
     "access": "private",
-    "_index": 1621,
+    "_index": 1602,
     "gallery": [
       "https://img.castlecore.uk/carbisdale-castle-2.jpg",
       "https://img.castlecore.uk/carbisdale-castle-3.jpg",
@@ -44157,7 +44077,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "private",
-    "_index": 1622,
+    "_index": 1603,
     "gallery": [
       "https://img.castlecore.uk/skibo-castle-2.jpg",
       "https://img.castlecore.uk/skibo-castle-3.jpg",
@@ -44183,7 +44103,7 @@ const CASTLES = [
       "outlander"
     ],
     "access": "paid",
-    "_index": 1623,
+    "_index": 1604,
     "gallery": [
       "https://img.castlecore.uk/castle-leod-2.jpg",
       "https://img.castlecore.uk/castle-leod-3.jpg",
@@ -44209,7 +44129,7 @@ const CASTLES = [
       "dramatic-history"
     ],
     "access": "free",
-    "_index": 1624,
+    "_index": 1605,
     "gallery": [
       "https://img.castlecore.uk/dunure-castle-2.jpg",
       "https://img.castlecore.uk/dunure-castle-3.jpg",
@@ -44236,7 +44156,7 @@ const CASTLES = [
       "loch-lomond"
     ],
     "access": "free",
-    "_index": 1625,
+    "_index": 1606,
     "gallery": [
       "https://img.castlecore.uk/balloch-castle-2.jpg",
       "https://img.castlecore.uk/balloch-castle-3.jpg",
@@ -44264,7 +44184,7 @@ const CASTLES = [
       "game-of-thrones"
     ],
     "access": "paid",
-    "_index": 1626,
+    "_index": 1607,
     "gallery": [
       "https://img.castlecore.uk/doune-castle-great-hall-2.jpg",
       "https://img.castlecore.uk/doune-castle-great-hall-3.jpg",
@@ -44291,7 +44211,7 @@ const CASTLES = [
       "royal-burial"
     ],
     "access": "free",
-    "_index": 1627,
+    "_index": 1608,
     "gallery": [
       "https://img.castlecore.uk/cambuskenneth-abbey-2.jpg",
       "https://img.castlecore.uk/cambuskenneth-abbey-3.jpg",
@@ -44317,7 +44237,7 @@ const CASTLES = [
       "events-venue"
     ],
     "access": "paid",
-    "_index": 1628
+    "_index": 1609
   },
   {
     "name": "St Bridget's Kirk, Dalgety",
@@ -44337,7 +44257,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1629,
+    "_index": 1610,
     "gallery": [
       "https://img.castlecore.uk/st-bridget-s-kirk-dalgety-2.jpg",
       "https://img.castlecore.uk/st-bridget-s-kirk-dalgety-3.jpg",
@@ -44364,7 +44284,7 @@ const CASTLES = [
       "irish-style"
     ],
     "access": "free",
-    "_index": 1630,
+    "_index": 1611,
     "gallery": [
       "https://img.castlecore.uk/brechin-cathedral-round-tower-2.jpg",
       "https://img.castlecore.uk/brechin-cathedral-round-tower-3.jpg",
@@ -44391,7 +44311,7 @@ const CASTLES = [
       "royal-hunting"
     ],
     "access": "free",
-    "_index": 1631,
+    "_index": 1612,
     "gallery": [
       "https://img.castlecore.uk/red-castle-2.jpg",
       "https://img.castlecore.uk/red-castle-3.jpg",
@@ -44418,7 +44338,7 @@ const CASTLES = [
       "tower"
     ],
     "access": "free",
-    "_index": 1632,
+    "_index": 1613,
     "gallery": [
       "https://img.castlecore.uk/restenneth-priory-2.jpg",
       "https://img.castlecore.uk/restenneth-priory-3.jpg",
@@ -44445,7 +44365,7 @@ const CASTLES = [
       "fragments"
     ],
     "access": "free",
-    "_index": 1633,
+    "_index": 1614,
     "gallery": [
       "https://img.castlecore.uk/kinloss-abbey-2.jpg",
       "https://img.castlecore.uk/kinloss-abbey-3.jpg",
@@ -44472,7 +44392,7 @@ const CASTLES = [
       "ancient"
     ],
     "access": "free",
-    "_index": 1634,
+    "_index": 1615,
     "gallery": [
       "https://img.castlecore.uk/birnie-kirk-2.jpg",
       "https://img.castlecore.uk/birnie-kirk-3.jpg",
@@ -44499,7 +44419,7 @@ const CASTLES = [
       "grand"
     ],
     "access": "private",
-    "_index": 1635
+    "_index": 1616
   },
   {
     "name": "Ruthven Barracks",
@@ -44520,7 +44440,7 @@ const CASTLES = [
       "atmospheric"
     ],
     "access": "free",
-    "_index": 1636,
+    "_index": 1617,
     "gallery": [
       "https://img.castlecore.uk/ruthven-barracks-2.jpg",
       "https://img.castlecore.uk/ruthven-barracks-3.jpg",
@@ -44546,7 +44466,7 @@ const CASTLES = [
       "wildlife-nearby"
     ],
     "access": "free",
-    "_index": 1637,
+    "_index": 1618,
     "gallery": [
       "https://img.castlecore.uk/troup-head-castle-2.jpg",
       "https://img.castlecore.uk/troup-head-castle-3.jpg",
@@ -44573,7 +44493,7 @@ const CASTLES = [
       "views"
     ],
     "access": "free",
-    "_index": 1638,
+    "_index": 1619,
     "gallery": [
       "https://img.castlecore.uk/dunnideer-castle-2.jpg",
       "https://img.castlecore.uk/dunnideer-castle-3.jpg",
@@ -44599,7 +44519,7 @@ const CASTLES = [
       "walled-garden"
     ],
     "access": "free",
-    "_index": 1639,
+    "_index": 1620,
     "gallery": [
       "https://img.castlecore.uk/kincardine-castle-2.jpg",
       "https://img.castlecore.uk/kincardine-castle-3.jpg",
@@ -44626,7 +44546,7 @@ const CASTLES = [
       "private"
     ],
     "access": "private",
-    "_index": 1640,
+    "_index": 1621,
     "gallery": [
       "https://img.castlecore.uk/dunecht-house-chapel-2.jpg",
       "https://img.castlecore.uk/dunecht-house-chapel-3.jpg",
@@ -44653,7 +44573,7 @@ const CASTLES = [
       "simple"
     ],
     "access": "free",
-    "_index": 1641,
+    "_index": 1622,
     "gallery": [
       "https://img.castlecore.uk/castle-roy-2.jpg",
       "https://img.castlecore.uk/castle-roy-3.jpg",
@@ -44681,7 +44601,7 @@ const CASTLES = [
       "must-visit"
     ],
     "access": "paid",
-    "_index": 1642,
+    "_index": 1623,
     "gallery": [
       "https://img.castlecore.uk/rosslyn-chapel-2.jpg",
       "https://img.castlecore.uk/rosslyn-chapel-3.jpg",
@@ -44708,7 +44628,7 @@ const CASTLES = [
       "vaulted"
     ],
     "access": "paid",
-    "_index": 1643,
+    "_index": 1624,
     "gallery": [
       "https://img.castlecore.uk/seton-collegiate-church-2.jpg",
       "https://img.castlecore.uk/seton-collegiate-church-3.jpg",
@@ -44734,7 +44654,7 @@ const CASTLES = [
       "impressive"
     ],
     "access": "free",
-    "_index": 1644,
+    "_index": 1625,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-amisfield-tower.jpg"
     ]
@@ -44758,7 +44678,7 @@ const CASTLES = [
       "pilgrimage"
     ],
     "access": "paid",
-    "_index": 1645,
+    "_index": 1626,
     "gallery": [
       "https://img.castlecore.uk/whithorn-priory-2.jpg",
       "https://img.castlecore.uk/whithorn-priory-3.jpg",
@@ -44784,7 +44704,7 @@ const CASTLES = [
       "views"
     ],
     "access": "free",
-    "_index": 1646,
+    "_index": 1627,
     "gallery": [
       "https://img.castlecore.uk/cruggleton-castle-2.jpg",
       "https://img.castlecore.uk/cruggleton-castle-3.jpg",
@@ -44811,7 +44731,7 @@ const CASTLES = [
       "picturesque"
     ],
     "access": "paid",
-    "_index": 1647,
+    "_index": 1628,
     "gallery": [
       "https://img.castlecore.uk/castle-kennedy-gardens-2.jpg",
       "https://img.castlecore.uk/castle-kennedy-gardens-3.jpg",
@@ -44838,7 +44758,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "paid",
-    "_index": 1648,
+    "_index": 1629,
     "gallery": [
       "https://img.castlecore.uk/corsewall-lighthouse-2.jpg",
       "https://img.castlecore.uk/corsewall-lighthouse-3.jpg",
@@ -44864,7 +44784,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "free",
-    "_index": 1649,
+    "_index": 1630,
     "gallery": [
       "https://img.castlecore.uk/drumcoltran-tower-2.jpg",
       "https://img.castlecore.uk/drumcoltran-tower-3.jpg",
@@ -44890,7 +44810,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "paid",
-    "_index": 1650,
+    "_index": 1631,
     "gallery": [
       "https://img.castlecore.uk/rushen-castle-2.jpg",
       "https://img.castlecore.uk/rushen-castle-3.jpg",
@@ -44917,7 +44837,7 @@ const CASTLES = [
       "palatial"
     ],
     "access": "paid",
-    "_index": 1651,
+    "_index": 1632,
     "gallery": [
       "https://img.castlecore.uk/earl-patrick-s-palace-2.jpg",
       "https://img.castlecore.uk/earl-patrick-s-palace-3.jpg",
@@ -44944,7 +44864,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "paid",
-    "_index": 1652
+    "_index": 1633
   },
   {
     "name": "Old Scatness",
@@ -44965,7 +44885,7 @@ const CASTLES = [
       "iron-age"
     ],
     "access": "free",
-    "_index": 1653
+    "_index": 1634
   },
   {
     "name": "Windhouse",
@@ -44986,7 +44906,7 @@ const CASTLES = [
       "island"
     ],
     "access": "free",
-    "_index": 1654,
+    "_index": 1635,
     "gallery": [
       "https://img.castlecore.uk/windhouse-2.jpg"
     ]
@@ -45009,7 +44929,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "free",
-    "_index": 1655,
+    "_index": 1636,
     "gallery": [
       "https://img.castlecore.uk/scalloway-castle-restored-2.jpg",
       "https://img.castlecore.uk/scalloway-castle-restored-3.jpg",
@@ -45035,7 +44955,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 1656,
+    "_index": 1637,
     "gallery": [
       "https://img.castlecore.uk/borve-castle-2.jpg",
       "https://img.castlecore.uk/borve-castle-3.jpg",
@@ -45062,7 +44982,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 1657,
+    "_index": 1638,
     "gallery": [
       "https://img.castlecore.uk/varrich-castle-2.jpg",
       "https://img.castlecore.uk/varrich-castle-3.jpg",
@@ -45089,7 +45009,7 @@ const CASTLES = [
       "atmospheric"
     ],
     "access": "free",
-    "_index": 1658,
+    "_index": 1639,
     "gallery": [
       "https://img.castlecore.uk/ardtornish-castle-2.jpg",
       "https://img.castlecore.uk/ardtornish-castle-3.jpg",
@@ -45115,7 +45035,7 @@ const CASTLES = [
       "clanranald"
     ],
     "access": "free",
-    "_index": 1659,
+    "_index": 1640,
     "gallery": [
       "https://img.castlecore.uk/castle-tioram-access-2.jpg",
       "https://img.castlecore.uk/castle-tioram-access-3.jpg",
@@ -45141,7 +45061,7 @@ const CASTLES = [
       "battle-site"
     ],
     "access": "free",
-    "_index": 1660,
+    "_index": 1641,
     "gallery": [
       "https://img.castlecore.uk/old-inverlochy-castle-2.jpg",
       "https://img.castlecore.uk/old-inverlochy-castle-3.jpg",
@@ -45168,7 +45088,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 1661,
+    "_index": 1642,
     "gallery": [
       "https://img.castlecore.uk/tor-castle-2.jpg",
       "https://img.castlecore.uk/tor-castle-3.jpg",
@@ -45195,7 +45115,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 1662,
+    "_index": 1643,
     "gallery": [
       "https://img.castlecore.uk/achanduin-castle-2.jpg",
       "https://img.castlecore.uk/achanduin-castle-3.jpg",
@@ -45222,7 +45142,7 @@ const CASTLES = [
       "gaelic"
     ],
     "access": "paid",
-    "_index": 1663,
+    "_index": 1644,
     "gallery": [
       "https://img.castlecore.uk/ardchattan-priory-2.jpg",
       "https://img.castlecore.uk/ardchattan-priory-3.jpg",
@@ -45249,7 +45169,7 @@ const CASTLES = [
       "kilmartin-glen"
     ],
     "access": "free",
-    "_index": 1664,
+    "_index": 1645,
     "gallery": [
       "https://img.castlecore.uk/kilmartin-church-2.jpg",
       "https://img.castlecore.uk/kilmartin-church-3.jpg",
@@ -45276,7 +45196,7 @@ const CASTLES = [
       "kintyre"
     ],
     "access": "free",
-    "_index": 1665,
+    "_index": 1646,
     "gallery": [
       "https://img.castlecore.uk/saddell-abbey-2.jpg",
       "https://img.castlecore.uk/saddell-abbey-3.jpg",
@@ -45303,7 +45223,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "free",
-    "_index": 1666,
+    "_index": 1647,
     "gallery": [
       "https://img.castlecore.uk/kilwinning-abbey-2.jpg",
       "https://img.castlecore.uk/kilwinning-abbey-3.jpg",
@@ -45330,7 +45250,7 @@ const CASTLES = [
       "royal-burial"
     ],
     "access": "free",
-    "_index": 1667,
+    "_index": 1648,
     "gallery": [
       "https://img.castlecore.uk/paisley-abbey-2.jpg",
       "https://img.castlecore.uk/paisley-abbey-3.jpg",
@@ -45357,7 +45277,7 @@ const CASTLES = [
       "argyll"
     ],
     "access": "free",
-    "_index": 1668,
+    "_index": 1649,
     "gallery": [
       "https://img.castlecore.uk/kilmun-church-2.jpg",
       "https://img.castlecore.uk/kilmun-church-3.jpg",
@@ -45384,7 +45304,7 @@ const CASTLES = [
       "magnificent"
     ],
     "access": "paid",
-    "_index": 1669,
+    "_index": 1650,
     "gallery": [
       "https://img.castlecore.uk/holyrood-abbey-2.jpg",
       "https://img.castlecore.uk/holyrood-abbey-3.jpg",
@@ -45411,7 +45331,7 @@ const CASTLES = [
       "crown-steeple"
     ],
     "access": "free",
-    "_index": 1670,
+    "_index": 1651,
     "gallery": [
       "https://img.castlecore.uk/st-giles-cathedral-2.jpg",
       "https://img.castlecore.uk/st-giles-cathedral-3.jpg",
@@ -45438,7 +45358,7 @@ const CASTLES = [
       "grand"
     ],
     "access": "paid",
-    "_index": 1671,
+    "_index": 1652,
     "gallery": [
       "https://img.castlecore.uk/palace-of-holyroodhouse-2.jpg",
       "https://img.castlecore.uk/palace-of-holyroodhouse-3.jpg",
@@ -45465,7 +45385,7 @@ const CASTLES = [
       "maidens-leap"
     ],
     "access": "paid",
-    "_index": 1672,
+    "_index": 1653,
     "gallery": [
       "https://img.castlecore.uk/huntingtower-castle-painted-ceiling-2.jpg",
       "https://img.castlecore.uk/huntingtower-castle-painted-ceiling-3.jpg",
@@ -45492,7 +45412,7 @@ const CASTLES = [
       "clan-seat"
     ],
     "access": "paid",
-    "_index": 1673,
+    "_index": 1654,
     "gallery": [
       "https://img.castlecore.uk/castle-menzies-great-hall-2.jpg",
       "https://img.castlecore.uk/castle-menzies-great-hall-3.jpg",
@@ -45519,7 +45439,7 @@ const CASTLES = [
       "beautiful"
     ],
     "access": "free",
-    "_index": 1674,
+    "_index": 1655,
     "gallery": [
       "https://img.castlecore.uk/dunkeld-cathedral-2.jpg",
       "https://img.castlecore.uk/dunkeld-cathedral-3.jpg",
@@ -45546,7 +45466,7 @@ const CASTLES = [
       "unique"
     ],
     "access": "paid",
-    "_index": 1675,
+    "_index": 1656,
     "gallery": [
       "https://img.castlecore.uk/innerpeffray-chapel-2.jpg",
       "https://img.castlecore.uk/innerpeffray-chapel-3.jpg",
@@ -45573,7 +45493,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "free",
-    "_index": 1676,
+    "_index": 1657,
     "gallery": [
       "https://img.castlecore.uk/buittle-castle-2.jpg",
       "https://img.castlecore.uk/buittle-castle-3.jpg",
@@ -45599,7 +45519,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 1677,
+    "_index": 1658,
     "gallery": [
       "https://img.castlecore.uk/tibbers-castle-2.jpg",
       "https://img.castlecore.uk/tibbers-castle-3.jpg",
@@ -45627,7 +45547,7 @@ const CASTLES = [
       "iconic"
     ],
     "access": "paid",
-    "_index": 1678,
+    "_index": 1659,
     "gallery": [
       "https://img.castlecore.uk/caerlaverockite-2.jpg",
       "https://img.castlecore.uk/caerlaverockite-3.jpg"
@@ -45652,7 +45572,7 @@ const CASTLES = [
       "inhabited"
     ],
     "access": "private",
-    "_index": 1679,
+    "_index": 1660,
     "gallery": [
       "https://img.castlecore.uk/closeburn-castle-2.jpg",
       "https://img.castlecore.uk/closeburn-castle-3.jpg",
@@ -45678,7 +45598,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 1680,
+    "_index": 1661,
     "gallery": [
       "https://img.castlecore.uk/nithsdale-castle-2.jpg",
       "https://img.castlecore.uk/nithsdale-castle-3.jpg",
@@ -45705,7 +45625,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 1681,
+    "_index": 1662,
     "gallery": [
       "https://img.castlecore.uk/bishop-s-castle-glasgow-2.jpg",
       "https://img.castlecore.uk/bishop-s-castle-glasgow-3.jpg",
@@ -45733,7 +45653,7 @@ const CASTLES = [
       "must-visit"
     ],
     "access": "free",
-    "_index": 1682,
+    "_index": 1663,
     "gallery": [
       "https://img.castlecore.uk/glasgow-cathedral-2.jpg",
       "https://img.castlecore.uk/glasgow-cathedral-3.jpg",
@@ -45760,7 +45680,7 @@ const CASTLES = [
       "st-rules-tower"
     ],
     "access": "paid",
-    "_index": 1683,
+    "_index": 1664,
     "gallery": [
       "https://img.castlecore.uk/st-andrews-cathedral-2.jpg",
       "https://img.castlecore.uk/st-andrews-cathedral-3.jpg",
@@ -45787,7 +45707,7 @@ const CASTLES = [
       "unique"
     ],
     "access": "free",
-    "_index": 1684,
+    "_index": 1665,
     "gallery": [
       "https://img.castlecore.uk/fortingall-church-2.jpg",
       "https://img.castlecore.uk/fortingall-church-3.jpg",
@@ -45814,7 +45734,7 @@ const CASTLES = [
       "boswell"
     ],
     "access": "paid",
-    "_index": 1685,
+    "_index": 1666,
     "gallery": [
       "https://img.castlecore.uk/wiki-auchinleck-house.jpg"
     ]
@@ -45838,7 +45758,7 @@ const CASTLES = [
       "ancient"
     ],
     "access": "paid",
-    "_index": 1686,
+    "_index": 1667,
     "gallery": [
       "https://img.castlecore.uk/kelburn-castle-2.jpg",
       "https://img.castlecore.uk/kelburn-castle-3.jpg",
@@ -45865,7 +45785,7 @@ const CASTLES = [
       "royal"
     ],
     "access": "free",
-    "_index": 1687,
+    "_index": 1668,
     "gallery": [
       "https://img.castlecore.uk/portencross-castle-2.jpg",
       "https://img.castlecore.uk/portencross-castle-3.jpg",
@@ -45892,7 +45812,7 @@ const CASTLES = [
       "restoration"
     ],
     "access": "paid",
-    "_index": 1688,
+    "_index": 1669,
     "gallery": [
       "https://img.castlecore.uk/kinross-house-2.jpg",
       "https://img.castlecore.uk/kinross-house-3.jpg",
@@ -45919,7 +45839,7 @@ const CASTLES = [
       "active-church"
     ],
     "access": "free",
-    "_index": 1689,
+    "_index": 1670,
     "gallery": [
       "https://img.castlecore.uk/leuchars-norman-church-2.jpg",
       "https://img.castlecore.uk/leuchars-norman-church-3.jpg",
@@ -45946,7 +45866,7 @@ const CASTLES = [
       "culross"
     ],
     "access": "free",
-    "_index": 1690,
+    "_index": 1671,
     "gallery": [
       "https://img.castlecore.uk/culross-abbey-2.jpg",
       "https://img.castlecore.uk/culross-abbey-3.jpg",
@@ -45974,7 +45894,7 @@ const CASTLES = [
       "village"
     ],
     "access": "paid",
-    "_index": 1691,
+    "_index": 1672,
     "gallery": [
       "https://img.castlecore.uk/culross-palace-2.jpg",
       "https://img.castlecore.uk/culross-palace-3.jpg",
@@ -46001,7 +45921,7 @@ const CASTLES = [
       "ancient"
     ],
     "access": "paid",
-    "_index": 1692,
+    "_index": 1673,
     "gallery": [
       "https://img.castlecore.uk/aberdour-castle-great-hall-2.jpg",
       "https://img.castlecore.uk/aberdour-castle-great-hall-3.jpg",
@@ -46027,7 +45947,7 @@ const CASTLES = [
       "tower-church"
     ],
     "access": "free",
-    "_index": 1693
+    "_index": 1674
   },
   {
     "name": "Dunimarle Castle",
@@ -46047,7 +45967,7 @@ const CASTLES = [
       "gardens"
     ],
     "access": "private",
-    "_index": 1694,
+    "_index": 1675,
     "gallery": [
       "https://img.castlecore.uk/dunimarle-castle-2.jpg",
       "https://img.castlecore.uk/dunimarle-castle-3.jpg",
@@ -46074,7 +45994,7 @@ const CASTLES = [
       "active-church"
     ],
     "access": "free",
-    "_index": 1695,
+    "_index": 1676,
     "gallery": [
       "https://img.castlecore.uk/kinneff-church-2.jpg",
       "https://img.castlecore.uk/kinneff-church-3.jpg",
@@ -46101,7 +46021,7 @@ const CASTLES = [
       "gaelic"
     ],
     "access": "free",
-    "_index": 1696,
+    "_index": 1677,
     "gallery": [
       "https://img.castlecore.uk/deer-abbey-2.jpg",
       "https://img.castlecore.uk/deer-abbey-3.jpg",
@@ -46128,7 +46048,7 @@ const CASTLES = [
       "active-church"
     ],
     "access": "free",
-    "_index": 1697,
+    "_index": 1678,
     "gallery": [
       "https://img.castlecore.uk/monymusk-priory-church-2.jpg",
       "https://img.castlecore.uk/monymusk-priory-church-3.jpg",
@@ -46154,7 +46074,7 @@ const CASTLES = [
       "medieval-sculpture"
     ],
     "access": "free",
-    "_index": 1698,
+    "_index": 1679,
     "gallery": [
       "https://img.castlecore.uk/kinkell-church-2.jpg",
       "https://img.castlecore.uk/kinkell-church-3.jpg",
@@ -46181,7 +46101,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 1699,
+    "_index": 1680,
     "gallery": [
       "https://img.castlecore.uk/tillyangus-castle-2.jpg",
       "https://img.castlecore.uk/tillyangus-castle-3.jpg",
@@ -46208,7 +46128,7 @@ const CASTLES = [
       "military-collection"
     ],
     "access": "paid",
-    "_index": 1700,
+    "_index": 1681,
     "gallery": [
       "https://img.castlecore.uk/leith-hall-2.jpg",
       "https://img.castlecore.uk/leith-hall-3.jpg"
@@ -46234,7 +46154,7 @@ const CASTLES = [
       "gardens"
     ],
     "access": "paid",
-    "_index": 1701,
+    "_index": 1682,
     "gallery": [
       "https://img.castlecore.uk/haddo-house-2.jpg",
       "https://img.castlecore.uk/haddo-house-3.jpg",
@@ -46261,7 +46181,7 @@ const CASTLES = [
       "formal-garden"
     ],
     "access": "paid",
-    "_index": 1702,
+    "_index": 1683,
     "gallery": [
       "https://img.castlecore.uk/pitmedden-garden-2.jpg",
       "https://img.castlecore.uk/pitmedden-garden-3.jpg",
@@ -46289,7 +46209,7 @@ const CASTLES = [
       "nts"
     ],
     "access": "paid",
-    "_index": 1703,
+    "_index": 1684,
     "gallery": [
       "https://img.castlecore.uk/craigievar-castle-interior-views-2.jpg",
       "https://img.castlecore.uk/craigievar-castle-interior-views-3.jpg",
@@ -46316,7 +46236,7 @@ const CASTLES = [
       "active-church"
     ],
     "access": "free",
-    "_index": 1704,
+    "_index": 1685,
     "gallery": [
       "https://img.castlecore.uk/dalmeny-church-2.jpg",
       "https://img.castlecore.uk/dalmeny-church-3.jpg",
@@ -46343,7 +46263,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "private",
-    "_index": 1705
+    "_index": 1686
   },
   {
     "name": "Merchiston Castle",
@@ -46364,7 +46284,7 @@ const CASTLES = [
       "university"
     ],
     "access": "free",
-    "_index": 1706,
+    "_index": 1687,
     "gallery": [
       "https://img.castlecore.uk/merchiston-castle-2.jpg",
       "https://img.castlecore.uk/merchiston-castle-3.jpg",
@@ -46391,7 +46311,7 @@ const CASTLES = [
       "community"
     ],
     "access": "free",
-    "_index": 1707
+    "_index": 1688
   },
   {
     "name": "Castle Craig",
@@ -46412,7 +46332,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 1708,
+    "_index": 1689,
     "gallery": [
       "https://img.castlecore.uk/castle-craig-2.jpg",
       "https://img.castlecore.uk/castle-craig-3.jpg",
@@ -46439,7 +46359,7 @@ const CASTLES = [
       "atmospheric"
     ],
     "access": "free",
-    "_index": 1709,
+    "_index": 1690,
     "gallery": [
       "https://img.castlecore.uk/newark-castle-borders-2.jpg",
       "https://img.castlecore.uk/newark-castle-borders-3.jpg",
@@ -46467,7 +46387,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 1710,
+    "_index": 1691,
     "gallery": [
       "https://img.castlecore.uk/abbotsford-house-2.jpg",
       "https://img.castlecore.uk/abbotsford-house-3.jpg",
@@ -46494,7 +46414,7 @@ const CASTLES = [
       "maze"
     ],
     "access": "paid",
-    "_index": 1711
+    "_index": 1692
   },
   {
     "name": "Jedburgh Castle Jail",
@@ -46515,7 +46435,7 @@ const CASTLES = [
       "georgian"
     ],
     "access": "free",
-    "_index": 1712,
+    "_index": 1693,
     "gallery": [
       "https://img.castlecore.uk/jedburgh-castle-jail-2.jpg",
       "https://img.castlecore.uk/jedburgh-castle-jail-3.jpg",
@@ -46542,7 +46462,7 @@ const CASTLES = [
       "arts-and-crafts"
     ],
     "access": "paid",
-    "_index": 1713,
+    "_index": 1694,
     "gallery": [
       "https://img.castlecore.uk/kellie-castle-gardens-2.jpg",
       "https://img.castlecore.uk/kellie-castle-gardens-3.jpg",
@@ -46569,7 +46489,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 1714,
+    "_index": 1695,
     "gallery": [
       "https://img.castlecore.uk/scotstarvit-tower-view-2.jpg",
       "https://img.castlecore.uk/scotstarvit-tower-view-3.jpg",
@@ -46597,7 +46517,7 @@ const CASTLES = [
       "formidable"
     ],
     "access": "free",
-    "_index": 1715,
+    "_index": 1696,
     "gallery": [
       "https://img.castlecore.uk/noltland-castle-westray-2.jpg",
       "https://img.castlecore.uk/noltland-castle-westray-3.jpg",
@@ -46624,7 +46544,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 1716,
+    "_index": 1697,
     "gallery": [
       "https://img.castlecore.uk/muness-castle-unst-2.jpg",
       "https://img.castlecore.uk/muness-castle-unst-3.jpg",
@@ -46651,7 +46571,7 @@ const CASTLES = [
       "gardens"
     ],
     "access": "paid",
-    "_index": 1717,
+    "_index": 1698,
     "gallery": [
       "https://img.castlecore.uk/balfour-castle-2.jpg",
       "https://img.castlecore.uk/balfour-castle-3.jpg",
@@ -46677,7 +46597,7 @@ const CASTLES = [
       "well-preserved-interior"
     ],
     "access": "free",
-    "_index": 1718,
+    "_index": 1699,
     "gallery": [
       "https://img.castlecore.uk/notland-castle-interior-2.jpg",
       "https://img.castlecore.uk/notland-castle-interior-3.jpg",
@@ -46704,7 +46624,7 @@ const CASTLES = [
       "island"
     ],
     "access": "free",
-    "_index": 1719,
+    "_index": 1700,
     "gallery": [
       "https://img.castlecore.uk/wyre-heritage-centre-2.jpg",
       "https://img.castlecore.uk/wyre-heritage-centre-3.jpg",
@@ -46730,7 +46650,7 @@ const CASTLES = [
       "farmstead"
     ],
     "access": "free",
-    "_index": 1720,
+    "_index": 1701,
     "gallery": [
       "https://img.castlecore.uk/quoyberstane-stone-2.jpg",
       "https://img.castlecore.uk/quoyberstane-stone-3.jpg",
@@ -46757,7 +46677,7 @@ const CASTLES = [
       "nts"
     ],
     "access": "free",
-    "_index": 1721,
+    "_index": 1702,
     "gallery": [
       "https://img.castlecore.uk/strome-castle-ruin-2.jpg",
       "https://img.castlecore.uk/strome-castle-ruin-3.jpg",
@@ -46784,7 +46704,7 @@ const CASTLES = [
       "loch-moidart"
     ],
     "access": "free",
-    "_index": 1722,
+    "_index": 1703,
     "gallery": [
       "https://img.castlecore.uk/tioram-castle-walk-2.jpg",
       "https://img.castlecore.uk/tioram-castle-walk-3.jpg",
@@ -46811,7 +46731,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 1723,
+    "_index": 1704,
     "gallery": [
       "https://img.castlecore.uk/brahan-castle-site-2.jpg",
       "https://img.castlecore.uk/brahan-castle-site-3.jpg",
@@ -46837,7 +46757,7 @@ const CASTLES = [
       "lochside"
     ],
     "access": "free",
-    "_index": 1724,
+    "_index": 1705,
     "gallery": [
       "https://img.castlecore.uk/strome-ferry-castle-2.jpg",
       "https://img.castlecore.uk/strome-ferry-castle-3.jpg",
@@ -46864,7 +46784,7 @@ const CASTLES = [
       "ancient"
     ],
     "access": "paid",
-    "_index": 1725,
+    "_index": 1706,
     "gallery": [
       "https://img.castlecore.uk/kilravock-castle-2.jpg",
       "https://img.castlecore.uk/kilravock-castle-3.jpg",
@@ -46891,7 +46811,7 @@ const CASTLES = [
       "woodland"
     ],
     "access": "paid",
-    "_index": 1726,
+    "_index": 1707,
     "gallery": [
       "https://img.castlecore.uk/craigevar-castle-grounds-2.jpg",
       "https://img.castlecore.uk/craigevar-castle-grounds-3.jpg",
@@ -46918,7 +46838,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 1727
+    "_index": 1708
   },
   {
     "name": "Inchcolm Abbey Island",
@@ -46939,7 +46859,7 @@ const CASTLES = [
       "monastic"
     ],
     "access": "paid",
-    "_index": 1728,
+    "_index": 1709,
     "gallery": [
       "https://img.castlecore.uk/inchcolm-abbey-island-2.jpg",
       "https://img.castlecore.uk/inchcolm-abbey-island-3.jpg",
@@ -46966,7 +46886,7 @@ const CASTLES = [
       "pilgrimage"
     ],
     "access": "paid",
-    "_index": 1729,
+    "_index": 1710,
     "gallery": [
       "https://img.castlecore.uk/iona-abbey-grounds-2.jpg",
       "https://img.castlecore.uk/iona-abbey-grounds-3.jpg",
@@ -46993,7 +46913,7 @@ const CASTLES = [
       "kintyre"
     ],
     "access": "free",
-    "_index": 1730,
+    "_index": 1711,
     "gallery": [
       "https://img.castlecore.uk/skipness-castle-chapel-2.jpg",
       "https://img.castlecore.uk/skipness-castle-chapel-3.jpg",
@@ -47019,7 +46939,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1731,
+    "_index": 1712,
     "gallery": [
       "https://img.castlecore.uk/ballykinavarga-castle-2.jpg",
       "https://img.castlecore.uk/ballykinavarga-castle-3.jpg",
@@ -47045,7 +46965,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1732,
+    "_index": 1713,
     "gallery": [
       "https://img.castlecore.uk/dromore-castle-clare-2.jpg",
       "https://img.castlecore.uk/dromore-castle-clare-3.jpg",
@@ -47071,7 +46991,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "paid",
-    "_index": 1733,
+    "_index": 1714,
     "gallery": [
       "https://img.castlecore.uk/craggaunowen-castle-2.jpg",
       "https://img.castlecore.uk/craggaunowen-castle-3.jpg",
@@ -47097,7 +47017,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1734,
+    "_index": 1715,
     "gallery": [
       "https://img.castlecore.uk/killaloe-cathedral-2.jpg",
       "https://img.castlecore.uk/killaloe-cathedral-3.jpg",
@@ -47124,7 +47044,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1735,
+    "_index": 1716,
     "gallery": [
       "https://img.castlecore.uk/kilmacduagh-round-tower-2.jpg",
       "https://img.castlecore.uk/kilmacduagh-round-tower-3.jpg",
@@ -47150,7 +47070,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1736,
+    "_index": 1717,
     "gallery": [
       "https://img.castlecore.uk/roscam-round-tower-2.jpg",
       "https://img.castlecore.uk/roscam-round-tower-3.jpg",
@@ -47176,7 +47096,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 1737
+    "_index": 1718
   },
   {
     "name": "James Fort",
@@ -47196,7 +47116,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1738,
+    "_index": 1719,
     "gallery": [
       "https://img.castlecore.uk/james-fort-2.jpg",
       "https://img.castlecore.uk/james-fort-3.jpg",
@@ -47222,7 +47142,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1739,
+    "_index": 1720,
     "gallery": [
       "https://img.castlecore.uk/puxley-mansion-2.jpg"
     ]
@@ -47244,7 +47164,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1740,
+    "_index": 1721,
     "gallery": [
       "https://img.castlecore.uk/dunloe-castle-ogham-stones-2.jpg",
       "https://img.castlecore.uk/dunloe-castle-ogham-stones-3.jpg",
@@ -47270,7 +47190,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1741,
+    "_index": 1722,
     "gallery": [
       "https://img.castlecore.uk/aghadoe-church-and-round-tower-2.jpg",
       "https://img.castlecore.uk/aghadoe-church-and-round-tower-3.jpg",
@@ -47296,7 +47216,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1742,
+    "_index": 1723,
     "gallery": [
       "https://img.castlecore.uk/holycross-abbey-2.jpg",
       "https://img.castlecore.uk/holycross-abbey-3.jpg",
@@ -47326,7 +47246,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1743,
+    "_index": 1724,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-kilcooly-abbey.jpg"
     ]
@@ -47349,7 +47269,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1744,
+    "_index": 1725,
     "gallery": [
       "https://img.castlecore.uk/ballynahinch-castle-tipperary-2.jpg",
       "https://img.castlecore.uk/ballynahinch-castle-tipperary-3.jpg",
@@ -47374,7 +47294,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 1745,
+    "_index": 1726,
     "gallery": [
       "https://img.castlecore.uk/ormond-castle-carrick-2.jpg",
       "https://img.castlecore.uk/ormond-castle-carrick-3.jpg",
@@ -47399,7 +47319,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 1746
+    "_index": 1727
   },
   {
     "name": "Croom Castle",
@@ -47419,7 +47339,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1747
+    "_index": 1728
   },
   {
     "name": "Lough Gur Visitor Centre",
@@ -47439,7 +47359,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "paid",
-    "_index": 1748,
+    "_index": 1729,
     "gallery": [
       "https://img.castlecore.uk/lough-gur-visitor-centre-2.jpg",
       "https://img.castlecore.uk/lough-gur-visitor-centre-3.jpg",
@@ -47465,7 +47385,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1749,
+    "_index": 1730,
     "gallery": [
       "https://img.castlecore.uk/ballintober-castle-mayo-2.jpg",
       "https://img.castlecore.uk/ballintober-castle-mayo-3.jpg",
@@ -47490,7 +47410,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1750,
+    "_index": 1731,
     "gallery": [
       "https://img.castlecore.uk/ballina-friary-2.jpg",
       "https://img.castlecore.uk/ballina-friary-3.jpg",
@@ -47516,7 +47436,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1751,
+    "_index": 1732,
     "gallery": [
       "https://img.castlecore.uk/kells-priory-meath-2.jpg",
       "https://img.castlecore.uk/kells-priory-meath-3.jpg",
@@ -47542,7 +47462,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1752
+    "_index": 1733
   },
   {
     "name": "Skryne Church",
@@ -47562,7 +47482,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1753,
+    "_index": 1734,
     "gallery": [
       "https://img.castlecore.uk/skryne-church-2.jpg",
       "https://img.castlecore.uk/skryne-church-3.jpg",
@@ -47589,7 +47509,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1754,
+    "_index": 1735,
     "gallery": [
       "https://img.castlecore.uk/hill-of-tara-2.jpg",
       "https://img.castlecore.uk/hill-of-tara-3.jpg",
@@ -47615,7 +47535,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1756,
+    "_index": 1736,
     "gallery": [
       "https://img.castlecore.uk/kells-priory-kilkenny-2.jpg",
       "https://img.castlecore.uk/kells-priory-kilkenny-3.jpg",
@@ -47641,7 +47561,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1757,
+    "_index": 1737,
     "gallery": [
       "https://img.castlecore.uk/black-abbey-kilkenny-2.jpg",
       "https://img.castlecore.uk/black-abbey-kilkenny-3.jpg",
@@ -47667,7 +47587,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1758,
+    "_index": 1738,
     "gallery": [
       "https://img.castlecore.uk/st-canice-s-cathedral-2.jpg",
       "https://img.castlecore.uk/st-canice-s-cathedral-3.jpg",
@@ -47693,7 +47613,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1759,
+    "_index": 1739,
     "gallery": [
       "https://img.castlecore.uk/dunmore-castle-kilkenny-2.jpg",
       "https://img.castlecore.uk/dunmore-castle-kilkenny-3.jpg",
@@ -47719,7 +47639,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1760,
+    "_index": 1740,
     "gallery": [
       "https://img.castlecore.uk/tintern-abbey-wexford-2.jpg",
       "https://img.castlecore.uk/tintern-abbey-wexford-3.jpg",
@@ -47746,7 +47666,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "paid",
-    "_index": 1761,
+    "_index": 1741,
     "gallery": [
       "https://img.castlecore.uk/castle-ward-2.jpg",
       "https://img.castlecore.uk/castle-ward-3.jpg",
@@ -47773,7 +47693,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1762
+    "_index": 1742
   },
   {
     "name": "Jordan's Castle Ardglass",
@@ -47792,7 +47712,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1763,
+    "_index": 1743,
     "gallery": [
       "https://img.castlecore.uk/jordan-s-castle-ardglass-2.jpg",
       "https://img.castlecore.uk/jordan-s-castle-ardglass-3.jpg",
@@ -47818,7 +47738,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1764,
+    "_index": 1744,
     "gallery": [
       "https://img.castlecore.uk/devenish-island-monastic-site-2.jpg",
       "https://img.castlecore.uk/devenish-island-monastic-site-3.jpg",
@@ -47844,7 +47764,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1765,
+    "_index": 1745,
     "gallery": [
       "https://img.castlecore.uk/donegal-abbey-2.jpg",
       "https://img.castlecore.uk/donegal-abbey-3.jpg",
@@ -47870,7 +47790,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1766
+    "_index": 1746
   },
   {
     "name": "Rathmullan Friary",
@@ -47889,7 +47809,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1767,
+    "_index": 1747,
     "gallery": [
       "https://img.castlecore.uk/rathmullan-friary-2.jpg",
       "https://img.castlecore.uk/rathmullan-friary-3.jpg",
@@ -47914,7 +47834,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "private",
-    "_index": 1768,
+    "_index": 1748,
     "gallery": [
       "https://img.castlecore.uk/classiebawn-castle-2.jpg",
       "https://img.castlecore.uk/classiebawn-castle-3.jpg",
@@ -47940,7 +47860,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1769,
+    "_index": 1749,
     "gallery": [
       "https://img.castlecore.uk/ballintober-castle-roscommon-2.jpg",
       "https://img.castlecore.uk/ballintober-castle-roscommon-3.jpg",
@@ -47966,7 +47886,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 1770,
+    "_index": 1750,
     "gallery": [
       "https://img.castlecore.uk/strokestown-house-2.jpg",
       "https://img.castlecore.uk/strokestown-house-3.jpg",
@@ -47992,7 +47912,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1771,
+    "_index": 1751,
     "gallery": [
       "https://img.castlecore.uk/dungarvan-castle-2.jpg",
       "https://img.castlecore.uk/dungarvan-castle-3.jpg",
@@ -48018,7 +47938,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1772,
+    "_index": 1752,
     "gallery": [
       "https://img.castlecore.uk/tybroughney-castle-2.jpg",
       "https://img.castlecore.uk/tybroughney-castle-3.jpg",
@@ -48044,7 +47964,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1773,
+    "_index": 1753,
     "gallery": [
       "https://img.castlecore.uk/duncannon-fort-2.jpg",
       "https://img.castlecore.uk/duncannon-fort-3.jpg",
@@ -48069,7 +47989,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1774,
+    "_index": 1754,
     "gallery": [
       "https://img.castlecore.uk/leighlinbridge-castle-2.jpg",
       "https://img.castlecore.uk/leighlinbridge-castle-3.jpg",
@@ -48095,7 +48015,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1775,
+    "_index": 1755,
     "gallery": [
       "https://img.castlecore.uk/clonegal-castle-2.jpg",
       "https://img.castlecore.uk/clonegal-castle-3.jpg",
@@ -48121,7 +48041,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 1776,
+    "_index": 1756,
     "gallery": [
       "https://img.castlecore.uk/wicklow-gaol-2.jpg",
       "https://img.castlecore.uk/wicklow-gaol-3.jpg",
@@ -48148,7 +48068,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1777,
+    "_index": 1757,
     "gallery": [
       "https://img.castlecore.uk/glendalough-monastic-site-2.jpg",
       "https://img.castlecore.uk/glendalough-monastic-site-3.jpg",
@@ -48174,7 +48094,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1778,
+    "_index": 1758,
     "gallery": [
       "https://img.castlecore.uk/baltinglass-abbey-2.jpg",
       "https://img.castlecore.uk/baltinglass-abbey-3.jpg",
@@ -48200,7 +48120,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1779,
+    "_index": 1759,
     "gallery": [
       "https://img.castlecore.uk/powerscourt-estate-2.jpg",
       "https://img.castlecore.uk/powerscourt-estate-3.jpg",
@@ -48226,7 +48146,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1780,
+    "_index": 1760,
     "gallery": [
       "https://img.castlecore.uk/oughterard-round-tower-2.jpg",
       "https://img.castlecore.uk/oughterard-round-tower-3.jpg",
@@ -48251,7 +48171,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1781,
+    "_index": 1761,
     "gallery": [
       "https://img.castlecore.uk/athy-castle-2.jpg",
       "https://img.castlecore.uk/athy-castle-3.jpg",
@@ -48277,7 +48197,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1782,
+    "_index": 1762,
     "gallery": [
       "https://img.castlecore.uk/clane-friary-2.jpg",
       "https://img.castlecore.uk/clane-friary-3.jpg",
@@ -48302,7 +48222,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1783,
+    "_index": 1763,
     "gallery": [
       "https://img.castlecore.uk/abbeyleix-heritage-house-2.jpg",
       "https://img.castlecore.uk/abbeyleix-heritage-house-3.jpg",
@@ -48328,7 +48248,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1784,
+    "_index": 1764,
     "gallery": [
       "https://img.castlecore.uk/kilbeggan-abbey-2.jpg",
       "https://img.castlecore.uk/kilbeggan-abbey-3.jpg",
@@ -48353,7 +48273,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1785,
+    "_index": 1765,
     "gallery": [
       "https://img.castlecore.uk/longford-castle-2.jpg",
       "https://img.castlecore.uk/longford-castle-3.jpg",
@@ -48378,7 +48298,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1786
+    "_index": 1766
   },
   {
     "name": "Drumlane Abbey",
@@ -48398,7 +48318,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1787,
+    "_index": 1767,
     "gallery": [
       "https://img.castlecore.uk/drumlane-abbey-2.jpg",
       "https://img.castlecore.uk/drumlane-abbey-3.jpg",
@@ -48423,7 +48343,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1788,
+    "_index": 1768,
     "gallery": [
       "https://img.castlecore.uk/kilmore-cathedral-2.jpg",
       "https://img.castlecore.uk/kilmore-cathedral-3.jpg",
@@ -48448,7 +48368,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1789,
+    "_index": 1769,
     "gallery": [
       "https://img.castlecore.uk/monaghan-castle-2.jpg",
       "https://img.castlecore.uk/monaghan-castle-3.jpg",
@@ -48473,7 +48393,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1790,
+    "_index": 1770,
     "gallery": [
       "https://img.castlecore.uk/clones-round-tower-2.jpg",
       "https://img.castlecore.uk/clones-round-tower-3.jpg",
@@ -48499,7 +48419,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1791,
+    "_index": 1771,
     "gallery": [
       "https://img.castlecore.uk/dunsoghly-castle-2.jpg",
       "https://img.castlecore.uk/dunsoghly-castle-3.jpg",
@@ -48524,7 +48444,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "hotel",
-    "_index": 1792,
+    "_index": 1772,
     "gallery": [
       "https://img.castlecore.uk/clontarf-castle-2.jpg",
       "https://img.castlecore.uk/clontarf-castle-3.jpg",
@@ -48550,7 +48470,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1793,
+    "_index": 1773,
     "gallery": [
       "https://img.castlecore.uk/mussenden-temple-2.jpg",
       "https://img.castlecore.uk/mussenden-temple-3.jpg",
@@ -48577,7 +48497,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1794,
+    "_index": 1774,
     "gallery": [
       "https://img.castlecore.uk/downhill-house-2.jpg",
       "https://img.castlecore.uk/downhill-house-3.jpg",
@@ -48602,7 +48522,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1795,
+    "_index": 1775,
     "gallery": [
       "https://img.castlecore.uk/sampson-s-tower-derry-2.jpg",
       "https://img.castlecore.uk/sampson-s-tower-derry-3.jpg",
@@ -48626,7 +48546,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1796,
+    "_index": 1776,
     "gallery": [
       "https://img.castlecore.uk/armagh-friary-2.jpg",
       "https://img.castlecore.uk/armagh-friary-3.jpg",
@@ -48652,7 +48572,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1797,
+    "_index": 1777,
     "gallery": [
       "https://img.castlecore.uk/kilnasaggart-pillar-stone-2.jpg",
       "https://img.castlecore.uk/kilnasaggart-pillar-stone-3.jpg",
@@ -48678,7 +48598,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1798,
+    "_index": 1778,
     "gallery": [
       "https://img.castlecore.uk/rathdrum-castle-2.jpg",
       "https://img.castlecore.uk/rathdrum-castle-3.jpg",
@@ -48704,7 +48624,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1799,
+    "_index": 1779,
     "gallery": [
       "https://img.castlecore.uk/taghmon-castle-2.jpg",
       "https://img.castlecore.uk/taghmon-castle-3.jpg"
@@ -48728,7 +48648,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1800,
+    "_index": 1780,
     "gallery": [
       "https://img.castlecore.uk/fethard-castle-2.jpg",
       "https://img.castlecore.uk/fethard-castle-3.jpg",
@@ -48754,7 +48674,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1801,
+    "_index": 1781,
     "gallery": [
       "https://img.castlecore.uk/oola-castle-2.jpg",
       "https://img.castlecore.uk/oola-castle-3.jpg",
@@ -48780,7 +48700,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1802,
+    "_index": 1782,
     "gallery": [
       "https://img.castlecore.uk/hospital-church-2.jpg",
       "https://img.castlecore.uk/hospital-church-3.jpg"
@@ -48804,7 +48724,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1803,
+    "_index": 1783,
     "gallery": [
       "https://img.castlecore.uk/killaloe-bridge-castle-2.jpg",
       "https://img.castlecore.uk/killaloe-bridge-castle-3.jpg",
@@ -48830,7 +48750,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1804
+    "_index": 1784
   },
   {
     "name": "Kilnaboy Church",
@@ -48850,7 +48770,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1805,
+    "_index": 1785,
     "gallery": [
       "https://img.castlecore.uk/kilnaboy-church-2.jpg",
       "https://img.castlecore.uk/kilnaboy-church-3.jpg",
@@ -48867,7 +48787,7 @@ const CASTLES = [
     "era": "prehistoric",
     "condition": "ruin",
     "description": "Iron Age stone fort with chevaux-de-frise in the Burren.",
-    "image": "https://img.castlecore.uk/ballykinvarga-stone-fort.jpg",
+    "image": "https://img.castlecore.uk/ballykinvarga-fort.jpg",
     "rating": 3.9,
     "reviewCount": 50,
     "county": "County Clare",
@@ -48876,7 +48796,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1806
+    "_index": 1786
   },
   {
     "name": "Seir Kieran Monastic Site",
@@ -48896,7 +48816,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1807,
+    "_index": 1787,
     "gallery": [
       "https://img.castlecore.uk/seir-kieran-monastic-site-2.jpg",
       "https://img.castlecore.uk/seir-kieran-monastic-site-3.jpg",
@@ -48922,7 +48842,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1808,
+    "_index": 1788,
     "gallery": [
       "https://img.castlecore.uk/clare-island-abbey-2.jpg",
       "https://img.castlecore.uk/clare-island-abbey-3.jpg",
@@ -48948,7 +48868,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1809,
+    "_index": 1789,
     "gallery": [
       "https://img.castlecore.uk/meelick-friary-2.jpg",
       "https://img.castlecore.uk/meelick-friary-3.jpg",
@@ -48974,7 +48894,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1810
+    "_index": 1790
   },
   {
     "name": "Abbey Knockmoy",
@@ -48994,7 +48914,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1811,
+    "_index": 1791,
     "gallery": [
       "https://img.castlecore.uk/abbey-knockmoy-2.jpg",
       "https://img.castlecore.uk/abbey-knockmoy-3.jpg",
@@ -49020,7 +48940,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1812,
+    "_index": 1792,
     "gallery": [
       "https://img.castlecore.uk/annaghkeen-castle-2.jpg",
       "https://img.castlecore.uk/annaghkeen-castle-3.jpg",
@@ -49046,7 +48966,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1813,
+    "_index": 1793,
     "gallery": [
       "https://img.castlecore.uk/ballycurrin-castle-2.jpg",
       "https://img.castlecore.uk/ballycurrin-castle-3.jpg",
@@ -49072,7 +48992,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1814,
+    "_index": 1794,
     "gallery": [
       "https://img.castlecore.uk/loughrea-priory-2.jpg",
       "https://img.castlecore.uk/loughrea-priory-3.jpg",
@@ -49098,7 +49018,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1815,
+    "_index": 1795,
     "gallery": [
       "https://img.castlecore.uk/scattery-island-monastic-site-2.jpg",
       "https://img.castlecore.uk/scattery-island-monastic-site-3.jpg",
@@ -49124,7 +49044,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1816,
+    "_index": 1796,
     "gallery": [
       "https://img.castlecore.uk/cahermore-stone-fort-2.jpg",
       "https://img.castlecore.uk/cahermore-stone-fort-3.jpg",
@@ -49149,7 +49069,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1817,
+    "_index": 1797,
     "gallery": [
       "https://img.castlecore.uk/lemaneagh-castle-2.jpg",
       "https://img.castlecore.uk/lemaneagh-castle-3.jpg",
@@ -49175,7 +49095,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1818,
+    "_index": 1798,
     "gallery": [
       "https://img.castlecore.uk/clonmel-west-gate-2.jpg",
       "https://img.castlecore.uk/clonmel-west-gate-3.jpg",
@@ -49200,7 +49120,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 1819,
+    "_index": 1799,
     "gallery": [
       "https://img.castlecore.uk/swiss-cottage-cahir-2.jpg",
       "https://img.castlecore.uk/swiss-cottage-cahir-3.jpg",
@@ -49226,7 +49146,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1820,
+    "_index": 1800,
     "gallery": [
       "https://img.castlecore.uk/monaincha-abbey-2.jpg",
       "https://img.castlecore.uk/monaincha-abbey-3.jpg",
@@ -49252,7 +49172,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1821,
+    "_index": 1801,
     "gallery": [
       "https://img.castlecore.uk/stradbally-castle-waterford-2.jpg",
       "https://img.castlecore.uk/stradbally-castle-waterford-3.jpg",
@@ -49278,7 +49198,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1822,
+    "_index": 1802,
     "gallery": [
       "https://img.castlecore.uk/kilrossanty-church-2.jpg",
       "https://img.castlecore.uk/kilrossanty-church-3.jpg",
@@ -49304,7 +49224,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1823,
+    "_index": 1803,
     "gallery": [
       "https://img.castlecore.uk/annaduff-church-2.jpg",
       "https://img.castlecore.uk/annaduff-church-3.jpg",
@@ -49329,7 +49249,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 1824,
+    "_index": 1804,
     "gallery": [
       "https://img.castlecore.uk/clonalis-house-2.jpg",
       "https://img.castlecore.uk/clonalis-house-3.jpg",
@@ -49355,7 +49275,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1825,
+    "_index": 1805,
     "gallery": [
       "https://img.castlecore.uk/fuerty-church-2.jpg",
       "https://img.castlecore.uk/fuerty-church-3.jpg",
@@ -49380,7 +49300,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 1826,
+    "_index": 1806,
     "gallery": [
       "https://img.castlecore.uk/rathcroghan-visitor-centre-2.jpg",
       "https://img.castlecore.uk/rathcroghan-visitor-centre-3.jpg",
@@ -49406,7 +49326,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1828,
+    "_index": 1807,
     "gallery": [
       "https://img.castlecore.uk/aghalurcher-church-2.jpg",
       "https://img.castlecore.uk/aghalurcher-church-3.jpg",
@@ -49432,7 +49352,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1829,
+    "_index": 1808,
     "gallery": [
       "https://img.castlecore.uk/lough-navar-castle-2.jpg",
       "https://img.castlecore.uk/lough-navar-castle-3.jpg",
@@ -49457,7 +49377,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1830,
+    "_index": 1809,
     "gallery": [
       "https://img.castlecore.uk/lisnaskea-castle-2.jpg",
       "https://img.castlecore.uk/lisnaskea-castle-3.jpg",
@@ -49482,7 +49402,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1831,
+    "_index": 1810,
     "gallery": [
       "https://img.castlecore.uk/killala-round-tower-2.jpg",
       "https://img.castlecore.uk/killala-round-tower-3.jpg",
@@ -49508,7 +49428,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1832,
+    "_index": 1811,
     "gallery": [
       "https://img.castlecore.uk/gortmore-castle-2.jpg",
       "https://img.castlecore.uk/gortmore-castle-3.jpg",
@@ -49534,7 +49454,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1833,
+    "_index": 1812,
     "gallery": [
       "https://img.castlecore.uk/drumcliff-church-2.jpg",
       "https://img.castlecore.uk/drumcliff-church-3.jpg",
@@ -49559,7 +49479,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1834,
+    "_index": 1813,
     "gallery": [
       "https://img.castlecore.uk/innisfree-island-2.jpg",
       "https://img.castlecore.uk/innisfree-island-3.jpg",
@@ -49584,7 +49504,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1835,
+    "_index": 1814,
     "gallery": [
       "https://img.castlecore.uk/oldcastle-meath-2.jpg",
       "https://img.castlecore.uk/oldcastle-meath-3.jpg",
@@ -49609,7 +49529,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1836,
+    "_index": 1815,
     "gallery": [
       "https://img.castlecore.uk/navan-castle-2.jpg",
       "https://img.castlecore.uk/navan-castle-3.jpg",
@@ -49635,7 +49555,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1837,
+    "_index": 1816,
     "gallery": [
       "https://img.castlecore.uk/rathmoylan-church-2.jpg",
       "https://img.castlecore.uk/rathmoylan-church-3.jpg",
@@ -49661,7 +49581,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1838
+    "_index": 1817
   },
   {
     "name": "Coolbanagher Church",
@@ -49680,7 +49600,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1839,
+    "_index": 1818,
     "gallery": [
       "https://img.castlecore.uk/coolbanagher-church-2.jpg",
       "https://img.castlecore.uk/coolbanagher-church-3.jpg",
@@ -49705,7 +49625,7 @@ const CASTLES = [
       "luxury"
     ],
     "access": "hotel",
-    "_index": 1840,
+    "_index": 1819,
     "gallery": [
       "https://img.castlecore.uk/castle-durrow-2.jpg",
       "https://img.castlecore.uk/castle-durrow-3.jpg",
@@ -49731,7 +49651,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1841,
+    "_index": 1820,
     "gallery": [
       "https://img.castlecore.uk/inishmore-dun-aengus-2.jpg",
       "https://img.castlecore.uk/inishmore-dun-aengus-3.jpg",
@@ -49756,7 +49676,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1842,
+    "_index": 1821,
     "gallery": [
       "https://img.castlecore.uk/aran-islands-arkin-castle-2.jpg",
       "https://img.castlecore.uk/aran-islands-arkin-castle-3.jpg",
@@ -49783,7 +49703,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1843,
+    "_index": 1822,
     "gallery": [
       "https://img.castlecore.uk/inishmaan-castle-2.jpg",
       "https://img.castlecore.uk/inishmaan-castle-3.jpg",
@@ -49810,7 +49730,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1844,
+    "_index": 1823,
     "gallery": [
       "https://img.castlecore.uk/dun-eochla-2.jpg",
       "https://img.castlecore.uk/dun-eochla-3.jpg",
@@ -49837,7 +49757,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1845,
+    "_index": 1824,
     "gallery": [
       "https://img.castlecore.uk/rinvyle-castle-2.jpg",
       "https://img.castlecore.uk/rinvyle-castle-3.jpg",
@@ -49863,7 +49783,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1846,
+    "_index": 1825,
     "gallery": [
       "https://img.castlecore.uk/derrymacloughna-castle-2.jpg",
       "https://img.castlecore.uk/derrymacloughna-castle-3.jpg",
@@ -49889,7 +49809,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1847,
+    "_index": 1826,
     "gallery": [
       "https://img.castlecore.uk/mountshannon-castle-2.jpg",
       "https://img.castlecore.uk/mountshannon-castle-3.jpg",
@@ -49915,7 +49835,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 1848,
+    "_index": 1827,
     "gallery": [
       "https://img.castlecore.uk/holy-island-inis-cealtra-2.jpg",
       "https://img.castlecore.uk/holy-island-inis-cealtra-3.jpg",
@@ -49941,7 +49861,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1849,
+    "_index": 1828,
     "gallery": [
       "https://img.castlecore.uk/ballycullen-castle-2.jpg",
       "https://img.castlecore.uk/ballycullen-castle-3.jpg",
@@ -49967,7 +49887,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1850,
+    "_index": 1829,
     "gallery": [
       "https://img.castlecore.uk/killaleigh-church-2.jpg",
       "https://img.castlecore.uk/killaleigh-church-3.jpg",
@@ -49994,7 +49914,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1851,
+    "_index": 1830,
     "gallery": [
       "https://img.castlecore.uk/dunlicky-castle-2.jpg",
       "https://img.castlecore.uk/dunlicky-castle-3.jpg",
@@ -50019,7 +49939,7 @@ const CASTLES = [
       "limited"
     ],
     "access": "limited",
-    "_index": 1852,
+    "_index": 1831,
     "gallery": [
       "https://img.castlecore.uk/ballinlough-castle-roscommon-2.jpg",
       "https://img.castlecore.uk/ballinlough-castle-roscommon-3.jpg",
@@ -50044,7 +49964,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1853,
+    "_index": 1832,
     "gallery": [
       "https://img.castlecore.uk/shannonbridge-fortification-2.jpg",
       "https://img.castlecore.uk/shannonbridge-fortification-3.jpg",
@@ -50070,7 +49990,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1854,
+    "_index": 1833,
     "gallery": [
       "https://img.castlecore.uk/dunbrody-castle-2.jpg",
       "https://img.castlecore.uk/dunbrody-castle-3.jpg",
@@ -50096,7 +50016,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1855,
+    "_index": 1834,
     "gallery": [
       "https://img.castlecore.uk/nendrum-monastic-site-2.jpg",
       "https://img.castlecore.uk/nendrum-monastic-site-3.jpg",
@@ -50122,7 +50042,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 1856,
+    "_index": 1835,
     "gallery": [
       "https://img.castlecore.uk/lindisfarne-castle-2.jpg",
       "https://img.castlecore.uk/lindisfarne-castle-3.jpg",
@@ -50150,7 +50070,7 @@ const CASTLES = [
       "filming-location"
     ],
     "access": "paid",
-    "_index": 1857,
+    "_index": 1836,
     "gallery": [
       "https://img.castlecore.uk/chatsworth-house-2.jpg",
       "https://img.castlecore.uk/chatsworth-house-3.jpg",
@@ -50176,7 +50096,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1858,
+    "_index": 1837,
     "gallery": [
       "https://img.castlecore.uk/warwick-castle-caesar-s-tower-2.jpg",
       "https://img.castlecore.uk/warwick-castle-caesar-s-tower-3.jpg",
@@ -50202,7 +50122,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1859,
+    "_index": 1838,
     "gallery": [
       "https://img.castlecore.uk/castle-bytham-castle-2.jpg",
       "https://img.castlecore.uk/castle-bytham-castle-3.jpg",
@@ -50227,7 +50147,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1860,
+    "_index": 1839,
     "gallery": [
       "https://img.castlecore.uk/gainsborough-old-hall-2.jpg",
       "https://img.castlecore.uk/gainsborough-old-hall-3.jpg",
@@ -50253,7 +50173,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1861,
+    "_index": 1840,
     "gallery": [
       "https://img.castlecore.uk/ely-cathedral-2.jpg",
       "https://img.castlecore.uk/ely-cathedral-3.jpg",
@@ -50278,7 +50198,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1862,
+    "_index": 1841,
     "gallery": [
       "https://img.castlecore.uk/denny-abbey-2.jpg",
       "https://img.castlecore.uk/denny-abbey-3.jpg",
@@ -50305,7 +50225,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1863,
+    "_index": 1842,
     "gallery": [
       "https://img.castlecore.uk/st-albans-abbey-2.jpg",
       "https://img.castlecore.uk/st-albans-abbey-3.jpg",
@@ -50331,7 +50251,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1864,
+    "_index": 1843,
     "gallery": [
       "https://img.castlecore.uk/wallingford-castle-2.jpg",
       "https://img.castlecore.uk/wallingford-castle-3.jpg",
@@ -50358,7 +50278,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 1865,
+    "_index": 1844,
     "gallery": [
       "https://img.castlecore.uk/sissinghurst-castle-garden-2.jpg",
       "https://img.castlecore.uk/sissinghurst-castle-garden-3.jpg",
@@ -50384,7 +50304,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 1866,
+    "_index": 1845,
     "gallery": [
       "https://img.castlecore.uk/richborough-castle-2.jpg",
       "https://img.castlecore.uk/richborough-castle-3.jpg",
@@ -50411,7 +50331,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 1867,
+    "_index": 1846,
     "gallery": [
       "https://img.castlecore.uk/reculver-towers-2.jpg",
       "https://img.castlecore.uk/reculver-towers-3.jpg",
@@ -50437,7 +50357,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1868,
+    "_index": 1847,
     "gallery": [
       "https://img.castlecore.uk/pevensey-castle-roman-fort-2.jpg",
       "https://img.castlecore.uk/pevensey-castle-roman-fort-3.jpg",
@@ -50462,7 +50382,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1869,
+    "_index": 1848,
     "gallery": [
       "https://img.castlecore.uk/nunwell-house-2.jpg",
       "https://img.castlecore.uk/nunwell-house-3.jpg",
@@ -50487,7 +50407,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1870,
+    "_index": 1849,
     "gallery": [
       "https://img.castlecore.uk/ravensworth-castle-yorkshire-2.jpg",
       "https://img.castlecore.uk/ravensworth-castle-yorkshire-3.jpg",
@@ -50513,7 +50433,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1871,
+    "_index": 1850,
     "gallery": [
       "https://img.castlecore.uk/tickhill-castle-2.jpg",
       "https://img.castlecore.uk/tickhill-castle-3.jpg",
@@ -50539,7 +50459,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1872,
+    "_index": 1851,
     "gallery": [
       "https://img.castlecore.uk/wentworth-castle-2.jpg",
       "https://img.castlecore.uk/wentworth-castle-3.jpg",
@@ -50565,7 +50485,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1873,
+    "_index": 1852,
     "gallery": [
       "https://img.castlecore.uk/roche-abbey-2.jpg",
       "https://img.castlecore.uk/roche-abbey-3.jpg",
@@ -50596,7 +50516,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1874,
+    "_index": 1853,
     "gallery": [
       "https://img.castlecore.uk/selby-abbey-2.jpg",
       "https://img.castlecore.uk/selby-abbey-3.jpg",
@@ -50622,7 +50542,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1875,
+    "_index": 1854,
     "gallery": [
       "https://img.castlecore.uk/monk-bretton-priory-2.jpg",
       "https://img.castlecore.uk/monk-bretton-priory-3.jpg",
@@ -50652,7 +50572,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1876,
+    "_index": 1855,
     "gallery": [
       "https://img.castlecore.uk/crowland-abbey-2.jpg",
       "https://img.castlecore.uk/crowland-abbey-3.jpg",
@@ -50680,7 +50600,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1877,
+    "_index": 1856,
     "gallery": [
       "https://img.castlecore.uk/gloucester-cathedral-2.jpg",
       "https://img.castlecore.uk/gloucester-cathedral-3.jpg",
@@ -50707,7 +50627,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1878,
+    "_index": 1857,
     "gallery": [
       "https://img.castlecore.uk/sudeley-castle-2.jpg",
       "https://img.castlecore.uk/sudeley-castle-3.jpg",
@@ -50732,7 +50652,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1879,
+    "_index": 1858,
     "gallery": [
       "https://img.castlecore.uk/hereford-castle-2.jpg",
       "https://img.castlecore.uk/hereford-castle-3.jpg",
@@ -50759,7 +50679,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1880,
+    "_index": 1859,
     "gallery": [
       "https://img.castlecore.uk/worcester-cathedral-2.jpg",
       "https://img.castlecore.uk/worcester-cathedral-3.jpg",
@@ -50786,7 +50706,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1881,
+    "_index": 1860,
     "gallery": [
       "https://img.castlecore.uk/great-malvern-priory-2.jpg",
       "https://img.castlecore.uk/great-malvern-priory-3.jpg",
@@ -50813,7 +50733,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "free",
-    "_index": 1882,
+    "_index": 1861,
     "gallery": [
       "https://img.castlecore.uk/pershore-abbey-2.jpg",
       "https://img.castlecore.uk/pershore-abbey-3.jpg",
@@ -50840,7 +50760,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1883,
+    "_index": 1862,
     "gallery": [
       "https://img.castlecore.uk/evesham-abbey-bell-tower-2.jpg",
       "https://img.castlecore.uk/evesham-abbey-bell-tower-3.jpg",
@@ -50868,7 +50788,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1884,
+    "_index": 1863,
     "gallery": [
       "https://img.castlecore.uk/witley-court-2.jpg",
       "https://img.castlecore.uk/witley-court-3.jpg",
@@ -50894,7 +50814,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1885,
+    "_index": 1864,
     "gallery": [
       "https://img.castlecore.uk/lyveden-new-bield-2.jpg",
       "https://img.castlecore.uk/lyveden-new-bield-3.jpg",
@@ -50920,7 +50840,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1886,
+    "_index": 1865,
     "gallery": [
       "https://img.castlecore.uk/rushton-triangular-lodge-2.jpg",
       "https://img.castlecore.uk/rushton-triangular-lodge-3.jpg",
@@ -50947,7 +50867,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1887,
+    "_index": 1866,
     "gallery": [
       "https://img.castlecore.uk/belsay-hall-and-castle-2.jpg",
       "https://img.castlecore.uk/belsay-hall-and-castle-3.jpg",
@@ -50974,7 +50894,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1888,
+    "_index": 1867,
     "gallery": [
       "https://img.castlecore.uk/finchale-priory-2.jpg",
       "https://img.castlecore.uk/finchale-priory-3.jpg",
@@ -51001,7 +50921,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1889,
+    "_index": 1868,
     "gallery": [
       "https://img.castlecore.uk/egglestone-abbey-2.jpg",
       "https://img.castlecore.uk/egglestone-abbey-3.jpg",
@@ -51026,7 +50946,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1890,
+    "_index": 1869,
     "gallery": [
       "https://img.castlecore.uk/calder-abbey-2.jpg",
       "https://img.castlecore.uk/calder-abbey-3.jpg"
@@ -51051,7 +50971,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1891,
+    "_index": 1870,
     "gallery": [
       "https://img.castlecore.uk/cartmel-priory-2.jpg",
       "https://img.castlecore.uk/cartmel-priory-3.jpg",
@@ -51078,7 +50998,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1892,
+    "_index": 1871,
     "gallery": [
       "https://img.castlecore.uk/bolton-abbey-2.jpg",
       "https://img.castlecore.uk/bolton-abbey-3.jpg",
@@ -51103,7 +51023,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1893,
+    "_index": 1872,
     "gallery": [
       "https://img.castlecore.uk/coverham-abbey-2.jpg"
     ]
@@ -51127,7 +51047,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1894,
+    "_index": 1873,
     "gallery": [
       "https://img.castlecore.uk/guisborough-priory-2.jpg",
       "https://img.castlecore.uk/guisborough-priory-3.jpg",
@@ -51154,7 +51074,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1895,
+    "_index": 1874,
     "gallery": [
       "https://img.castlecore.uk/tutbury-priory-2.jpg",
       "https://img.castlecore.uk/tutbury-priory-3.jpg",
@@ -51180,7 +51100,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1896,
+    "_index": 1875,
     "gallery": [
       "https://img.castlecore.uk/dale-abbey-2.jpg",
       "https://img.castlecore.uk/dale-abbey-3.jpg",
@@ -51205,7 +51125,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1898,
+    "_index": 1876,
     "gallery": [
       "https://img.castlecore.uk/muchelney-abbey-2.jpg",
       "https://img.castlecore.uk/muchelney-abbey-3.jpg",
@@ -51232,7 +51152,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1899,
+    "_index": 1877,
     "gallery": [
       "https://img.castlecore.uk/lacock-abbey-2.jpg",
       "https://img.castlecore.uk/lacock-abbey-3.jpg",
@@ -51259,7 +51179,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1900,
+    "_index": 1878,
     "gallery": [
       "https://img.castlecore.uk/malmesbury-abbey-2.jpg",
       "https://img.castlecore.uk/malmesbury-abbey-3.jpg",
@@ -51285,7 +51205,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 1901,
+    "_index": 1879,
     "gallery": [
       "https://img.castlecore.uk/castle-acre-priory-cluniac-2.jpg",
       "https://img.castlecore.uk/castle-acre-priory-cluniac-3.jpg",
@@ -51311,7 +51231,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1902,
+    "_index": 1880,
     "gallery": [
       "https://img.castlecore.uk/st-botolph-s-priory-2.jpg",
       "https://img.castlecore.uk/st-botolph-s-priory-3.jpg",
@@ -51336,7 +51256,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1903,
+    "_index": 1881,
     "gallery": [
       "https://img.castlecore.uk/st-augustine-s-abbey-2.jpg",
       "https://img.castlecore.uk/st-augustine-s-abbey-3.jpg",
@@ -51362,7 +51282,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1904,
+    "_index": 1882,
     "gallery": [
       "https://img.castlecore.uk/canterbury-cathedral-2.jpg",
       "https://img.castlecore.uk/canterbury-cathedral-3.jpg",
@@ -51389,7 +51309,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "free",
-    "_index": 1905,
+    "_index": 1883,
     "gallery": [
       "https://img.castlecore.uk/boxgrove-priory-2.jpg",
       "https://img.castlecore.uk/boxgrove-priory-3.jpg",
@@ -51415,7 +51335,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 1906,
+    "_index": 1884,
     "gallery": [
       "https://img.castlecore.uk/beaulieu-abbey-2.jpg",
       "https://img.castlecore.uk/beaulieu-abbey-3.jpg",
@@ -51441,7 +51361,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1907,
+    "_index": 1885,
     "gallery": [
       "https://img.castlecore.uk/reading-abbey-2.jpg",
       "https://img.castlecore.uk/reading-abbey-3.jpg",
@@ -51468,7 +51388,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "free",
-    "_index": 1908,
+    "_index": 1886,
     "gallery": [
       "https://img.castlecore.uk/dorchester-abbey-2.jpg",
       "https://img.castlecore.uk/dorchester-abbey-3.jpg",
@@ -51494,7 +51414,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1909,
+    "_index": 1887,
     "gallery": [
       "https://img.castlecore.uk/abingdon-abbey-2.jpg",
       "https://img.castlecore.uk/abingdon-abbey-3.jpg",
@@ -51520,7 +51440,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1910,
+    "_index": 1888,
     "gallery": [
       "https://img.castlecore.uk/wiki-hulne-priory.jpg"
     ]
@@ -51543,7 +51463,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1911,
+    "_index": 1889,
     "gallery": [
       "https://img.castlecore.uk/birdoswald-roman-fort-2.jpg",
       "https://img.castlecore.uk/birdoswald-roman-fort-3.jpg",
@@ -51569,7 +51489,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1912,
+    "_index": 1890,
     "gallery": [
       "https://img.castlecore.uk/housesteads-roman-fort-2.jpg",
       "https://img.castlecore.uk/housesteads-roman-fort-3.jpg",
@@ -51595,7 +51515,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1913,
+    "_index": 1891,
     "gallery": [
       "https://img.castlecore.uk/chesters-roman-fort-2.jpg",
       "https://img.castlecore.uk/chesters-roman-fort-3.jpg",
@@ -51621,7 +51541,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1914,
+    "_index": 1892,
     "gallery": [
       "https://img.castlecore.uk/vindolanda-roman-fort-2.jpg",
       "https://img.castlecore.uk/vindolanda-roman-fort-3.jpg",
@@ -51647,7 +51567,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1915,
+    "_index": 1893,
     "gallery": [
       "https://img.castlecore.uk/corbridge-roman-town-2.jpg",
       "https://img.castlecore.uk/corbridge-roman-town-3.jpg",
@@ -51673,7 +51593,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1916,
+    "_index": 1894,
     "gallery": [
       "https://img.castlecore.uk/whitley-castle-roman-fort-2.jpg",
       "https://img.castlecore.uk/whitley-castle-roman-fort-3.jpg",
@@ -51699,7 +51619,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1917,
+    "_index": 1895,
     "gallery": [
       "https://img.castlecore.uk/wroxeter-roman-city-2.jpg",
       "https://img.castlecore.uk/wroxeter-roman-city-3.jpg",
@@ -51725,7 +51645,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1918,
+    "_index": 1896,
     "gallery": [
       "https://img.castlecore.uk/pevensey-roman-fort-2.jpg",
       "https://img.castlecore.uk/pevensey-roman-fort-3.jpg",
@@ -51751,7 +51671,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1919,
+    "_index": 1897,
     "gallery": [
       "https://img.castlecore.uk/portchester-roman-fort-2.jpg",
       "https://img.castlecore.uk/portchester-roman-fort-3.jpg",
@@ -51777,7 +51697,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "private",
-    "_index": 1920,
+    "_index": 1898,
     "gallery": [
       "https://img.castlecore.uk/clifton-hall-tower-2.jpg",
       "https://img.castlecore.uk/clifton-hall-tower-3.jpg",
@@ -51804,7 +51724,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1921,
+    "_index": 1899,
     "gallery": [
       "https://img.castlecore.uk/wiki-framlingham-castle-walls.jpg"
     ]
@@ -51827,7 +51747,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1922,
+    "_index": 1900,
     "gallery": [
       "https://img.castlecore.uk/ickworth-house-2.jpg",
       "https://img.castlecore.uk/ickworth-house-3.jpg",
@@ -51854,7 +51774,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1923,
+    "_index": 1901,
     "gallery": [
       "https://img.castlecore.uk/layer-marney-tower-2.jpg",
       "https://img.castlecore.uk/layer-marney-tower-3.jpg",
@@ -51881,7 +51801,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1924,
+    "_index": 1902,
     "gallery": [
       "https://img.castlecore.uk/longleat-house-2.jpg",
       "https://img.castlecore.uk/longleat-house-3.jpg",
@@ -51906,7 +51826,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1925
+    "_index": 1903
   },
   {
     "name": "Groby Old Hall",
@@ -51926,7 +51846,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1926,
+    "_index": 1904,
     "gallery": [
       "https://img.castlecore.uk/groby-old-hall-2.jpg",
       "https://img.castlecore.uk/groby-old-hall-3.jpg",
@@ -51952,7 +51872,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1927,
+    "_index": 1905,
     "gallery": [
       "https://img.castlecore.uk/caistor-roman-site-2.jpg",
       "https://img.castlecore.uk/caistor-roman-site-3.jpg",
@@ -51979,7 +51899,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1928,
+    "_index": 1906,
     "gallery": [
       "https://img.castlecore.uk/castle-hedingham-2.jpg",
       "https://img.castlecore.uk/castle-hedingham-3.jpg",
@@ -52005,7 +51925,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 1929,
+    "_index": 1907,
     "gallery": [
       "https://img.castlecore.uk/farleigh-castle-2.jpg",
       "https://img.castlecore.uk/farleigh-castle-3.jpg",
@@ -52030,7 +51950,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1930,
+    "_index": 1908,
     "gallery": [
       "https://img.castlecore.uk/barnwell-castle-2.jpg",
       "https://img.castlecore.uk/barnwell-castle-3.jpg",
@@ -52055,7 +51975,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1931,
+    "_index": 1909,
     "gallery": [
       "https://img.castlecore.uk/buckden-palace-2.jpg",
       "https://img.castlecore.uk/buckden-palace-3.jpg",
@@ -52080,7 +52000,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1932,
+    "_index": 1910,
     "gallery": [
       "https://img.castlecore.uk/middleton-hall-2.jpg",
       "https://img.castlecore.uk/middleton-hall-3.jpg",
@@ -52105,7 +52025,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1933
+    "_index": 1911
   },
   {
     "name": "St Mary's Abbey York",
@@ -52126,7 +52046,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1934,
+    "_index": 1912,
     "gallery": [
       "https://img.castlecore.uk/st-mary-s-abbey-york-2.jpg",
       "https://img.castlecore.uk/st-mary-s-abbey-york-3.jpg",
@@ -52152,7 +52072,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1935,
+    "_index": 1913,
     "gallery": [
       "https://img.castlecore.uk/middleham-castle-wensleydale-2.jpg",
       "https://img.castlecore.uk/middleham-castle-wensleydale-3.jpg",
@@ -52177,7 +52097,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1936,
+    "_index": 1914,
     "gallery": [
       "https://img.castlecore.uk/snape-castle-bedale-2.jpg",
       "https://img.castlecore.uk/snape-castle-bedale-3.jpg",
@@ -52204,7 +52124,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 1937,
+    "_index": 1915,
     "gallery": [
       "https://img.castlecore.uk/barden-tower-2.jpg",
       "https://img.castlecore.uk/barden-tower-3.jpg",
@@ -52230,7 +52150,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1938,
+    "_index": 1916,
     "gallery": [
       "https://img.castlecore.uk/haworth-parsonage-2.jpg",
       "https://img.castlecore.uk/haworth-parsonage-3.jpg",
@@ -52255,7 +52175,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1939,
+    "_index": 1917,
     "gallery": [
       "https://img.castlecore.uk/pembridge-castle-2.jpg",
       "https://img.castlecore.uk/pembridge-castle-3.jpg",
@@ -52282,7 +52202,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1940,
+    "_index": 1918,
     "gallery": [
       "https://img.castlecore.uk/brampton-bryan-castle-2.jpg",
       "https://img.castlecore.uk/brampton-bryan-castle-3.jpg",
@@ -52308,7 +52228,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1941,
+    "_index": 1919,
     "gallery": [
       "https://img.castlecore.uk/croft-castle-2.jpg",
       "https://img.castlecore.uk/croft-castle-3.jpg",
@@ -52335,7 +52255,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1942,
+    "_index": 1920,
     "gallery": [
       "https://img.castlecore.uk/highclere-castle-2.jpg",
       "https://img.castlecore.uk/highclere-castle-3.jpg",
@@ -52362,7 +52282,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1943,
+    "_index": 1921,
     "gallery": [
       "https://img.castlecore.uk/southsea-castle-2.jpg",
       "https://img.castlecore.uk/southsea-castle-3.jpg",
@@ -52388,7 +52308,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1944,
+    "_index": 1922,
     "gallery": [
       "https://img.castlecore.uk/wolvesey-castle-palace-2.jpg",
       "https://img.castlecore.uk/wolvesey-castle-palace-3.jpg",
@@ -52414,7 +52334,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1945,
+    "_index": 1923,
     "gallery": [
       "https://img.castlecore.uk/farringdon-folly-tower-2.jpg",
       "https://img.castlecore.uk/farringdon-folly-tower-3.jpg",
@@ -52441,7 +52361,7 @@ const CASTLES = [
       "filming-location"
     ],
     "access": "paid",
-    "_index": 1946
+    "_index": 1924
   },
   {
     "name": "Mapledurham House",
@@ -52461,7 +52381,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1947,
+    "_index": 1925,
     "gallery": [
       "https://img.castlecore.uk/mapledurham-house-2.jpg",
       "https://img.castlecore.uk/mapledurham-house-3.jpg",
@@ -52488,7 +52408,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1948,
+    "_index": 1926,
     "gallery": [
       "https://img.castlecore.uk/burghley-house-2.jpg",
       "https://img.castlecore.uk/burghley-house-3.jpg",
@@ -52514,7 +52434,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1949,
+    "_index": 1927,
     "gallery": [
       "https://img.castlecore.uk/ashby-castle-2.jpg",
       "https://img.castlecore.uk/ashby-castle-3.jpg",
@@ -52540,7 +52460,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1950,
+    "_index": 1928,
     "gallery": [
       "https://img.castlecore.uk/leicester-castle-2.jpg",
       "https://img.castlecore.uk/leicester-castle-3.jpg",
@@ -52566,7 +52486,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 1951,
+    "_index": 1929,
     "gallery": [
       "https://img.castlecore.uk/kirby-muxloe-main-castle-2.jpg",
       "https://img.castlecore.uk/kirby-muxloe-main-castle-3.jpg",
@@ -52592,7 +52512,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1952,
+    "_index": 1930,
     "gallery": [
       "https://img.castlecore.uk/pickering-castle-north-yorkshire-2.jpg",
       "https://img.castlecore.uk/pickering-castle-north-yorkshire-3.jpg",
@@ -52617,7 +52537,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1953
+    "_index": 1931
   },
   {
     "name": "Norham Castle (Border)",
@@ -52638,7 +52558,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1954,
+    "_index": 1932,
     "gallery": [
       "https://img.castlecore.uk/norham-castle-border-2.jpg",
       "https://img.castlecore.uk/norham-castle-border-3.jpg",
@@ -52664,7 +52584,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1955,
+    "_index": 1933,
     "gallery": [
       "https://img.castlecore.uk/framlingham-mere-2.jpg",
       "https://img.castlecore.uk/framlingham-mere-3.jpg",
@@ -52691,7 +52611,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1956,
+    "_index": 1934,
     "gallery": [
       "https://img.castlecore.uk/orford-ness-2.jpg",
       "https://img.castlecore.uk/orford-ness-3.jpg",
@@ -52718,7 +52638,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1957,
+    "_index": 1935,
     "gallery": [
       "https://img.castlecore.uk/landguard-fort-2.jpg",
       "https://img.castlecore.uk/landguard-fort-3.jpg",
@@ -52745,7 +52665,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1958,
+    "_index": 1936,
     "gallery": [
       "https://img.castlecore.uk/helmingham-hall-2.jpg",
       "https://img.castlecore.uk/helmingham-hall-3.jpg",
@@ -52771,7 +52691,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1959,
+    "_index": 1937,
     "gallery": [
       "https://img.castlecore.uk/caistor-st-edmund-2.jpg",
       "https://img.castlecore.uk/caistor-st-edmund-3.jpg",
@@ -52796,7 +52716,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1960,
+    "_index": 1938,
     "gallery": [
       "https://img.castlecore.uk/wolterton-hall-2.jpg",
       "https://img.castlecore.uk/wolterton-hall-3.jpg",
@@ -52823,7 +52743,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1961,
+    "_index": 1939,
     "gallery": [
       "https://img.castlecore.uk/mannington-hall-2.jpg",
       "https://img.castlecore.uk/mannington-hall-3.jpg",
@@ -52850,7 +52770,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1962,
+    "_index": 1940,
     "gallery": [
       "https://img.castlecore.uk/felbrigg-hall-2.jpg",
       "https://img.castlecore.uk/felbrigg-hall-3.jpg",
@@ -52878,7 +52798,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1963,
+    "_index": 1941,
     "gallery": [
       "https://img.castlecore.uk/blickling-hall-2.jpg",
       "https://img.castlecore.uk/blickling-hall-3.jpg",
@@ -52903,7 +52823,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1964,
+    "_index": 1942,
     "gallery": [
       "https://img.castlecore.uk/wolterton-park-2.jpg",
       "https://img.castlecore.uk/wolterton-park-3.jpg",
@@ -52929,7 +52849,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1965,
+    "_index": 1943,
     "gallery": [
       "https://img.castlecore.uk/barnard-castle-town-2.jpg",
       "https://img.castlecore.uk/barnard-castle-town-3.jpg",
@@ -52955,7 +52875,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1966,
+    "_index": 1944,
     "gallery": [
       "https://img.castlecore.uk/prudhoe-castle-tyne-2.jpg",
       "https://img.castlecore.uk/prudhoe-castle-tyne-3.jpg",
@@ -52981,7 +52901,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1967,
+    "_index": 1945,
     "gallery": [
       "https://img.castlecore.uk/wylam-railway-museum-2.jpg",
       "https://img.castlecore.uk/wylam-railway-museum-3.jpg",
@@ -53006,7 +52926,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "private",
-    "_index": 1968,
+    "_index": 1946,
     "gallery": [
       "https://img.castlecore.uk/corby-castle-2.jpg",
       "https://img.castlecore.uk/corby-castle-3.jpg",
@@ -53030,7 +52950,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "private",
-    "_index": 1969,
+    "_index": 1947,
     "gallery": [
       "https://img.castlecore.uk/askerton-castle-2.jpg",
       "https://img.castlecore.uk/askerton-castle-3.jpg",
@@ -53055,7 +52975,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "private",
-    "_index": 1970,
+    "_index": 1948,
     "gallery": [
       "https://img.castlecore.uk/scaleby-castle-2.jpg",
       "https://img.castlecore.uk/scaleby-castle-3.jpg",
@@ -53080,7 +53000,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1971,
+    "_index": 1949,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-millom-castle.jpg"
     ]
@@ -53103,7 +53023,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1972,
+    "_index": 1950,
     "gallery": [
       "https://img.castlecore.uk/brancaster-roman-fort-2.jpg",
       "https://img.castlecore.uk/brancaster-roman-fort-3.jpg",
@@ -53129,7 +53049,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1973,
+    "_index": 1951,
     "gallery": [
       "https://img.castlecore.uk/burgh-by-sands-castle-2.jpg",
       "https://img.castlecore.uk/burgh-by-sands-castle-3.jpg",
@@ -53156,7 +53076,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1974,
+    "_index": 1952,
     "gallery": [
       "https://img.castlecore.uk/skipton-castle-craven-2.jpg",
       "https://img.castlecore.uk/skipton-castle-craven-3.jpg",
@@ -53184,7 +53104,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1975,
+    "_index": 1953,
     "gallery": [
       "https://img.castlecore.uk/alnwick-castle-northumberland-2.jpg",
       "https://img.castlecore.uk/alnwick-castle-northumberland-3.jpg",
@@ -53210,7 +53130,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1976,
+    "_index": 1954,
     "gallery": [
       "https://img.castlecore.uk/warkworth-castle-coquet-2.jpg",
       "https://img.castlecore.uk/warkworth-castle-coquet-3.jpg",
@@ -53236,7 +53156,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1977,
+    "_index": 1955,
     "gallery": [
       "https://img.castlecore.uk/helmsley-castle-north-yorkshire-2.jpg",
       "https://img.castlecore.uk/helmsley-castle-north-yorkshire-3.jpg",
@@ -53262,7 +53182,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1978,
+    "_index": 1956,
     "gallery": [
       "https://img.castlecore.uk/knaresborough-castle-nidd-2.jpg",
       "https://img.castlecore.uk/knaresborough-castle-nidd-3.jpg",
@@ -53289,7 +53209,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1979,
+    "_index": 1957,
     "gallery": [
       "https://img.castlecore.uk/scarborough-castle-headland-2.jpg",
       "https://img.castlecore.uk/scarborough-castle-headland-3.jpg",
@@ -53316,7 +53236,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "paid",
-    "_index": 1980,
+    "_index": 1958,
     "gallery": [
       "https://img.castlecore.uk/bolton-castle-wensleydale-2.jpg",
       "https://img.castlecore.uk/bolton-castle-wensleydale-3.jpg",
@@ -53342,7 +53262,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1981,
+    "_index": 1959,
     "gallery": [
       "https://img.castlecore.uk/brougham-castle-eden-2.jpg",
       "https://img.castlecore.uk/brougham-castle-eden-3.jpg",
@@ -53369,7 +53289,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 1982,
+    "_index": 1960,
     "gallery": [
       "https://img.castlecore.uk/brough-castle-westmorland-2.jpg",
       "https://img.castlecore.uk/brough-castle-westmorland-3.jpg",
@@ -53394,7 +53314,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1983,
+    "_index": 1961,
     "gallery": [
       "https://img.castlecore.uk/cockermouth-castle-cumbria-2.jpg",
       "https://img.castlecore.uk/cockermouth-castle-cumbria-3.jpg",
@@ -53422,7 +53342,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1984,
+    "_index": 1962,
     "gallery": [
       "https://img.castlecore.uk/muncaster-castle-eskdale-2.jpg",
       "https://img.castlecore.uk/muncaster-castle-eskdale-3.jpg",
@@ -53449,7 +53369,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1985,
+    "_index": 1963,
     "gallery": [
       "https://img.castlecore.uk/sizergh-castle-kendal-2.jpg",
       "https://img.castlecore.uk/sizergh-castle-kendal-3.jpg",
@@ -53475,7 +53395,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1986,
+    "_index": 1964,
     "gallery": [
       "https://img.castlecore.uk/launceston-castle-cornwall-2.jpg",
       "https://img.castlecore.uk/launceston-castle-cornwall-3.jpg",
@@ -53502,7 +53422,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1987,
+    "_index": 1965,
     "gallery": [
       "https://img.castlecore.uk/okehampton-castle-devon-2.jpg",
       "https://img.castlecore.uk/okehampton-castle-devon-3.jpg",
@@ -53529,7 +53449,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1988,
+    "_index": 1966,
     "gallery": [
       "https://img.castlecore.uk/berry-pomeroy-castle-devon-2.jpg",
       "https://img.castlecore.uk/berry-pomeroy-castle-devon-3.jpg",
@@ -53555,7 +53475,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1989,
+    "_index": 1967,
     "gallery": [
       "https://img.castlecore.uk/dartmouth-castle-devon-2.jpg",
       "https://img.castlecore.uk/dartmouth-castle-devon-3.jpg",
@@ -53580,7 +53500,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1990,
+    "_index": 1968,
     "gallery": [
       "https://img.castlecore.uk/totnes-castle-devon-2.jpg",
       "https://img.castlecore.uk/totnes-castle-devon-3.jpg",
@@ -53606,7 +53526,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1991,
+    "_index": 1969,
     "gallery": [
       "https://img.castlecore.uk/castle-drogo-dartmoor-2.jpg",
       "https://img.castlecore.uk/castle-drogo-dartmoor-3.jpg",
@@ -53633,7 +53553,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1992,
+    "_index": 1970,
     "gallery": [
       "https://img.castlecore.uk/corfe-castle-purbeck-2.jpg",
       "https://img.castlecore.uk/corfe-castle-purbeck-3.jpg",
@@ -53660,7 +53580,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1993,
+    "_index": 1971,
     "gallery": [
       "https://img.castlecore.uk/portchester-castle-roman-2.jpg",
       "https://img.castlecore.uk/portchester-castle-roman-3.jpg",
@@ -53686,7 +53606,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1994
+    "_index": 1972
   },
   {
     "name": "Hever Castle (Kent)",
@@ -53708,7 +53628,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 1995,
+    "_index": 1973,
     "gallery": [
       "https://img.castlecore.uk/hever-castle-kent-2.jpg",
       "https://img.castlecore.uk/hever-castle-kent-3.jpg",
@@ -53735,7 +53655,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1996,
+    "_index": 1974,
     "gallery": [
       "https://img.castlecore.uk/leeds-castle-kent-2.jpg",
       "https://img.castlecore.uk/leeds-castle-kent-3.jpg",
@@ -53762,7 +53682,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 1997,
+    "_index": 1975,
     "gallery": [
       "https://img.castlecore.uk/scotney-castle-kent-2.jpg",
       "https://img.castlecore.uk/scotney-castle-kent-3.jpg",
@@ -53789,7 +53709,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1998,
+    "_index": 1976,
     "gallery": [
       "https://img.castlecore.uk/framlingham-castle-suffolk-2.jpg",
       "https://img.castlecore.uk/framlingham-castle-suffolk-3.jpg",
@@ -53815,7 +53735,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1999,
+    "_index": 1977,
     "gallery": [
       "https://img.castlecore.uk/orford-castle-suffolk-2.jpg",
       "https://img.castlecore.uk/orford-castle-suffolk-3.jpg",
@@ -53842,7 +53762,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2000,
+    "_index": 1978,
     "gallery": [
       "https://img.castlecore.uk/castle-rising-norfolk-2.jpg",
       "https://img.castlecore.uk/castle-rising-norfolk-3.jpg",
@@ -53868,7 +53788,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2001,
+    "_index": 1979,
     "gallery": [
       "https://img.castlecore.uk/castle-acre-castle-norfolk-2.jpg",
       "https://img.castlecore.uk/castle-acre-castle-norfolk-3.jpg",
@@ -53895,7 +53815,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2002,
+    "_index": 1980,
     "gallery": [
       "https://img.castlecore.uk/kenilworth-castle-warwickshire-2.jpg",
       "https://img.castlecore.uk/kenilworth-castle-warwickshire-3.jpg",
@@ -53921,7 +53841,7 @@ const CASTLES = [
       "haunted"
     ],
     "access": "paid",
-    "_index": 2003,
+    "_index": 1981,
     "gallery": [
       "https://img.castlecore.uk/tutbury-castle-staffordshire-2.jpg",
       "https://img.castlecore.uk/tutbury-castle-staffordshire-3.jpg",
@@ -53947,7 +53867,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2004,
+    "_index": 1982,
     "gallery": [
       "https://img.castlecore.uk/ashby-de-la-zouch-castle-leics-2.jpg",
       "https://img.castlecore.uk/ashby-de-la-zouch-castle-leics-3.jpg",
@@ -53974,7 +53894,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2005,
+    "_index": 1983,
     "gallery": [
       "https://img.castlecore.uk/fountains-abbey-yorkshire-2.jpg",
       "https://img.castlecore.uk/fountains-abbey-yorkshire-3.jpg",
@@ -54001,7 +53921,7 @@ const CASTLES = [
       "haunted"
     ],
     "access": "paid",
-    "_index": 2006,
+    "_index": 1984,
     "gallery": [
       "https://img.castlecore.uk/whitby-abbey-yorkshire-2.jpg",
       "https://img.castlecore.uk/whitby-abbey-yorkshire-3.jpg",
@@ -54028,7 +53948,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 2007,
+    "_index": 1985,
     "gallery": [
       "https://img.castlecore.uk/rievaulx-abbey-yorkshire-2.jpg",
       "https://img.castlecore.uk/rievaulx-abbey-yorkshire-3.jpg",
@@ -54054,7 +53974,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 2008,
+    "_index": 1986,
     "gallery": [
       "https://img.castlecore.uk/bolton-priory-wharfedale-2.jpg",
       "https://img.castlecore.uk/bolton-priory-wharfedale-3.jpg",
@@ -54081,7 +54001,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 2009,
+    "_index": 1987,
     "gallery": [
       "https://img.castlecore.uk/kirkstall-abbey-leeds-2.jpg",
       "https://img.castlecore.uk/kirkstall-abbey-leeds-3.jpg",
@@ -54108,7 +54028,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2010,
+    "_index": 1988,
     "gallery": [
       "https://img.castlecore.uk/jervaulx-abbey-wensleydale-2.jpg",
       "https://img.castlecore.uk/jervaulx-abbey-wensleydale-3.jpg",
@@ -54135,7 +54055,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 2011,
+    "_index": 1989,
     "gallery": [
       "https://img.castlecore.uk/byland-abbey-yorkshire-2.jpg",
       "https://img.castlecore.uk/byland-abbey-yorkshire-3.jpg",
@@ -54162,7 +54082,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 2012,
+    "_index": 1990,
     "gallery": [
       "https://img.castlecore.uk/furness-abbey-cumbria-2.jpg",
       "https://img.castlecore.uk/furness-abbey-cumbria-3.jpg",
@@ -54188,7 +54108,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 2013,
+    "_index": 1991,
     "gallery": [
       "https://img.castlecore.uk/glastonbury-abbey-somerset-2.jpg",
       "https://img.castlecore.uk/glastonbury-abbey-somerset-3.jpg",
@@ -54214,7 +54134,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2014,
+    "_index": 1992,
     "gallery": [
       "https://img.castlecore.uk/battle-abbey-sussex-2.jpg",
       "https://img.castlecore.uk/battle-abbey-sussex-3.jpg",
@@ -54241,7 +54161,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2015,
+    "_index": 1993,
     "gallery": [
       "https://img.castlecore.uk/stokesay-castle-shropshire-2.jpg",
       "https://img.castlecore.uk/stokesay-castle-shropshire-3.jpg",
@@ -54267,7 +54187,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2016,
+    "_index": 1994,
     "gallery": [
       "https://img.castlecore.uk/goodrich-castle-herefordshire-2.jpg",
       "https://img.castlecore.uk/goodrich-castle-herefordshire-3.jpg",
@@ -54294,7 +54214,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2017,
+    "_index": 1995,
     "gallery": [
       "https://img.castlecore.uk/ludlow-castle-shropshire-2.jpg",
       "https://img.castlecore.uk/ludlow-castle-shropshire-3.jpg",
@@ -54320,7 +54240,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 2018,
+    "_index": 1996,
     "gallery": [
       "https://img.castlecore.uk/wigmore-castle-herefordshire-2.jpg",
       "https://img.castlecore.uk/wigmore-castle-herefordshire-3.jpg",
@@ -54347,7 +54267,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2019,
+    "_index": 1997,
     "gallery": [
       "https://img.castlecore.uk/acton-burnell-castle-shropshire-2.jpg",
       "https://img.castlecore.uk/acton-burnell-castle-shropshire-3.jpg",
@@ -54374,7 +54294,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "free",
-    "_index": 2020,
+    "_index": 1998,
     "gallery": [
       "https://img.castlecore.uk/whittington-castle-shropshire-2.jpg",
       "https://img.castlecore.uk/whittington-castle-shropshire-3.jpg",
@@ -54401,7 +54321,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2021,
+    "_index": 1999,
     "gallery": [
       "https://img.castlecore.uk/chillingham-castle-northumberland-2.jpg",
       "https://img.castlecore.uk/chillingham-castle-northumberland-3.jpg",
@@ -54428,7 +54348,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 2022,
+    "_index": 2000,
     "gallery": [
       "https://img.castlecore.uk/gylen-castle-kerrera-2.jpg",
       "https://img.castlecore.uk/gylen-castle-kerrera-3.jpg",
@@ -54454,7 +54374,7 @@ const CASTLES = [
       "lochside"
     ],
     "access": "free",
-    "_index": 2023,
+    "_index": 2001,
     "gallery": [
       "https://img.castlecore.uk/ardencaple-castle-2.jpg",
       "https://img.castlecore.uk/ardencaple-castle-3.jpg",
@@ -54481,7 +54401,7 @@ const CASTLES = [
       "campbell"
     ],
     "access": "free",
-    "_index": 2024,
+    "_index": 2002,
     "gallery": [
       "https://img.castlecore.uk/ardchonnel-castle-2.jpg",
       "https://img.castlecore.uk/ardchonnel-castle-3.jpg",
@@ -54508,7 +54428,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 2025,
+    "_index": 2003,
     "gallery": [
       "https://img.castlecore.uk/castle-loch-heylipol-2.jpg",
       "https://img.castlecore.uk/castle-loch-heylipol-3.jpg",
@@ -54535,7 +54455,7 @@ const CASTLES = [
       "gorge"
     ],
     "access": "paid",
-    "_index": 2026,
+    "_index": 2004,
     "gallery": [
       "https://img.castlecore.uk/crarae-garden-castle-2.jpg",
       "https://img.castlecore.uk/crarae-garden-castle-3.jpg",
@@ -54562,7 +54482,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "private",
-    "_index": 2027
+    "_index": 2005
   },
   {
     "name": "Ellangowan Castle",
@@ -54582,7 +54502,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 2028,
+    "_index": 2006,
     "gallery": [
       "https://img.castlecore.uk/ellangowan-castle-2.jpg",
       "https://img.castlecore.uk/ellangowan-castle-3.jpg",
@@ -54608,7 +54528,7 @@ const CASTLES = [
       "galloway-hills"
     ],
     "access": "free",
-    "_index": 2029,
+    "_index": 2007,
     "gallery": [
       "https://img.castlecore.uk/carsphairn-castle-2.jpg",
       "https://img.castlecore.uk/carsphairn-castle-3.jpg",
@@ -54635,7 +54555,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 2030,
+    "_index": 2008,
     "gallery": [
       "https://img.castlecore.uk/lag-tower-2.jpg",
       "https://img.castlecore.uk/lag-tower-3.jpg",
@@ -54661,7 +54581,7 @@ const CASTLES = [
       "community-managed"
     ],
     "access": "paid",
-    "_index": 2031,
+    "_index": 2009,
     "gallery": [
       "https://img.castlecore.uk/braemar-castle-tour-2.jpg",
       "https://img.castlecore.uk/braemar-castle-tour-3.jpg",
@@ -54687,7 +54607,7 @@ const CASTLES = [
       "royal-connection"
     ],
     "access": "private",
-    "_index": 2032,
+    "_index": 2010,
     "gallery": [
       "https://img.castlecore.uk/abergeldie-castle-2.jpg",
       "https://img.castlecore.uk/abergeldie-castle-3.jpg",
@@ -54714,7 +54634,7 @@ const CASTLES = [
       "clifftop"
     ],
     "access": "free",
-    "_index": 2034,
+    "_index": 2011,
     "gallery": [
       "https://img.castlecore.uk/crovie-village-2.jpg",
       "https://img.castlecore.uk/crovie-village-3.jpg",
@@ -54741,7 +54661,7 @@ const CASTLES = [
       "coastal"
     ],
     "access": "free",
-    "_index": 2035,
+    "_index": 2012,
     "gallery": [
       "https://img.castlecore.uk/pennan-village-2.jpg",
       "https://img.castlecore.uk/pennan-village-3.jpg",
@@ -54768,7 +54688,7 @@ const CASTLES = [
       "private"
     ],
     "access": "private",
-    "_index": 2036,
+    "_index": 2013,
     "gallery": [
       "https://img.castlecore.uk/castle-grant-2.jpg",
       "https://img.castlecore.uk/castle-grant-3.jpg",
@@ -54795,7 +54715,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "free",
-    "_index": 2037,
+    "_index": 2014,
     "gallery": [
       "https://img.castlecore.uk/cluny-castle-laggan-2.jpg",
       "https://img.castlecore.uk/cluny-castle-laggan-3.jpg",
@@ -54821,7 +54741,7 @@ const CASTLES = [
       "restored"
     ],
     "access": "private",
-    "_index": 2038,
+    "_index": 2015,
     "gallery": [
       "https://img.castlecore.uk/dalcross-castle-2.jpg",
       "https://img.castlecore.uk/dalcross-castle-3.jpg",
@@ -54847,7 +54767,7 @@ const CASTLES = [
       "shakespeare"
     ],
     "access": "paid",
-    "_index": 2039,
+    "_index": 2016,
     "gallery": [
       "https://img.castlecore.uk/cawdor-castle-gardens-2.jpg",
       "https://img.castlecore.uk/cawdor-castle-gardens-3.jpg",
@@ -54874,7 +54794,7 @@ const CASTLES = [
       "battlefield"
     ],
     "access": "free",
-    "_index": 2040,
+    "_index": 2017,
     "gallery": [
       "https://img.castlecore.uk/boath-doocot-2.jpg",
       "https://img.castlecore.uk/boath-doocot-3.jpg",
@@ -54901,7 +54821,7 @@ const CASTLES = [
       "courthouse"
     ],
     "access": "paid",
-    "_index": 2041,
+    "_index": 2018,
     "gallery": [
       "https://img.castlecore.uk/cromarty-courthouse-2.jpg",
       "https://img.castlecore.uk/cromarty-courthouse-3.jpg",
@@ -54928,7 +54848,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 2042,
+    "_index": 2019,
     "gallery": [
       "https://img.castlecore.uk/tarbat-discovery-centre-2.jpg",
       "https://img.castlecore.uk/tarbat-discovery-centre-3.jpg",
@@ -54955,7 +54875,7 @@ const CASTLES = [
       "cross-slabs"
     ],
     "access": "free",
-    "_index": 2043,
+    "_index": 2020,
     "gallery": [
       "https://img.castlecore.uk/rosemarkie-pictish-stone-2.jpg",
       "https://img.castlecore.uk/rosemarkie-pictish-stone-3.jpg",
@@ -54982,7 +54902,7 @@ const CASTLES = [
       "atmospheric"
     ],
     "access": "free",
-    "_index": 2044,
+    "_index": 2021,
     "gallery": [
       "https://img.castlecore.uk/clava-cairns-2.jpg",
       "https://img.castlecore.uk/clava-cairns-3.jpg",
@@ -55010,7 +54930,7 @@ const CASTLES = [
       "nts"
     ],
     "access": "paid",
-    "_index": 2045,
+    "_index": 2022,
     "gallery": [
       "https://img.castlecore.uk/culloden-battlefield-2.jpg",
       "https://img.castlecore.uk/culloden-battlefield-3.jpg",
@@ -55037,7 +54957,7 @@ const CASTLES = [
       "riverside"
     ],
     "access": "paid",
-    "_index": 2046,
+    "_index": 2023,
     "gallery": [
       "https://img.castlecore.uk/inverness-castle-viewpoint-2.jpg",
       "https://img.castlecore.uk/inverness-castle-viewpoint-3.jpg",
@@ -55064,7 +54984,7 @@ const CASTLES = [
       "urban"
     ],
     "access": "free",
-    "_index": 2047,
+    "_index": 2024,
     "gallery": [
       "https://img.castlecore.uk/dingwall-castle-2.jpg",
       "https://img.castlecore.uk/dingwall-castle-3.jpg",
@@ -55090,7 +55010,7 @@ const CASTLES = [
       "tall"
     ],
     "access": "free",
-    "_index": 2048,
+    "_index": 2025,
     "gallery": [
       "https://img.castlecore.uk/fairburn-tower-2.jpg",
       "https://img.castlecore.uk/fairburn-tower-3.jpg",
@@ -55117,7 +55037,7 @@ const CASTLES = [
       "royal"
     ],
     "access": "free",
-    "_index": 2049,
+    "_index": 2026,
     "gallery": [
       "https://img.castlecore.uk/redcastle-2.jpg",
       "https://img.castlecore.uk/redcastle-3.jpg",
@@ -55144,7 +55064,7 @@ const CASTLES = [
       "impressive"
     ],
     "access": "free",
-    "_index": 2050,
+    "_index": 2027,
     "gallery": [
       "https://img.castlecore.uk/dun-telve-broch-2.jpg",
       "https://img.castlecore.uk/dun-telve-broch-3.jpg",
@@ -55171,7 +55091,7 @@ const CASTLES = [
       "glenelg"
     ],
     "access": "free",
-    "_index": 2051,
+    "_index": 2028,
     "gallery": [
       "https://img.castlecore.uk/dun-troddan-broch-2.jpg",
       "https://img.castlecore.uk/dun-troddan-broch-3.jpg",
@@ -55198,7 +55118,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 2052,
+    "_index": 2029,
     "gallery": [
       "https://img.castlecore.uk/bernera-barracks-2.jpg",
       "https://img.castlecore.uk/bernera-barracks-3.jpg",
@@ -55224,7 +55144,7 @@ const CASTLES = [
       "small-ruin"
     ],
     "access": "free",
-    "_index": 2053,
+    "_index": 2030,
     "gallery": [
       "https://img.castlecore.uk/creich-castle-2.jpg",
       "https://img.castlecore.uk/creich-castle-3.jpg",
@@ -55250,7 +55170,7 @@ const CASTLES = [
       "naval-yard"
     ],
     "access": "free",
-    "_index": 2054,
+    "_index": 2031,
     "gallery": [
       "https://img.castlecore.uk/rosyth-castle-2.jpg",
       "https://img.castlecore.uk/rosyth-castle-3.jpg",
@@ -55277,7 +55197,7 @@ const CASTLES = [
       "tower-house"
     ],
     "access": "paid",
-    "_index": 2055,
+    "_index": 2032,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-mauchline-castle.jpg"
     ]
@@ -55301,7 +55221,7 @@ const CASTLES = [
       "burns"
     ],
     "access": "free",
-    "_index": 2056,
+    "_index": 2033,
     "gallery": [
       "https://img.castlecore.uk/ayr-castle-2.jpg",
       "https://img.castlecore.uk/ayr-castle-3.jpg",
@@ -55327,7 +55247,7 @@ const CASTLES = [
       "woodland"
     ],
     "access": "free",
-    "_index": 2057,
+    "_index": 2034,
     "gallery": [
       "https://img.castlecore.uk/sundrum-castle-2.jpg",
       "https://img.castlecore.uk/sundrum-castle-3.jpg",
@@ -55354,7 +55274,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 2058,
+    "_index": 2035,
     "gallery": [
       "https://img.castlecore.uk/peel-ring-of-lumphanan-2.jpg",
       "https://img.castlecore.uk/peel-ring-of-lumphanan-3.jpg",
@@ -55380,7 +55300,7 @@ const CASTLES = [
       "church-ruin"
     ],
     "access": "free",
-    "_index": 2059,
+    "_index": 2036,
     "gallery": [
       "https://img.castlecore.uk/migvie-church-2.jpg",
       "https://img.castlecore.uk/migvie-church-3.jpg",
@@ -55408,7 +55328,7 @@ const CASTLES = [
       "unique"
     ],
     "access": "free",
-    "_index": 2060,
+    "_index": 2037,
     "gallery": [
       "https://img.castlecore.uk/sueno-s-stone-2.jpg",
       "https://img.castlecore.uk/sueno-s-stone-3.jpg",
@@ -55435,7 +55355,7 @@ const CASTLES = [
       "mysterious"
     ],
     "access": "free",
-    "_index": 2061,
+    "_index": 2038,
     "gallery": [
       "https://img.castlecore.uk/burghead-well-2.jpg",
       "https://img.castlecore.uk/burghead-well-3.jpg",
@@ -55462,7 +55382,7 @@ const CASTLES = [
       "victorian"
     ],
     "access": "paid",
-    "_index": 2062,
+    "_index": 2039,
     "gallery": [
       "https://img.castlecore.uk/dallas-dhu-distillery-2.jpg",
       "https://img.castlecore.uk/dallas-dhu-distillery-3.jpg",
@@ -55490,7 +55410,7 @@ const CASTLES = [
       "peaceful"
     ],
     "access": "free",
-    "_index": 2063,
+    "_index": 2040,
     "gallery": [
       "https://img.castlecore.uk/pluscarden-abbey-active-2.jpg",
       "https://img.castlecore.uk/pluscarden-abbey-active-3.jpg",
@@ -55516,7 +55436,7 @@ const CASTLES = [
       "private"
     ],
     "access": "private",
-    "_index": 2064,
+    "_index": 2041,
     "gallery": [
       "https://img.castlecore.uk/rothiemay-castle-2.jpg",
       "https://img.castlecore.uk/rothiemay-castle-3.jpg",
@@ -55543,7 +55463,7 @@ const CASTLES = [
       "whisky-country"
     ],
     "access": "free",
-    "_index": 2065,
+    "_index": 2042,
     "gallery": [
       "https://img.castlecore.uk/blairfindy-castle-2.jpg",
       "https://img.castlecore.uk/blairfindy-castle-3.jpg",
@@ -55569,7 +55489,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 2066,
+    "_index": 2043,
     "gallery": [
       "https://img.castlecore.uk/inchdrewer-castle-2.jpg",
       "https://img.castlecore.uk/inchdrewer-castle-3.jpg",
@@ -55595,7 +55515,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 2067,
+    "_index": 2044,
     "gallery": [
       "https://img.castlecore.uk/boyne-castle-2.jpg",
       "https://img.castlecore.uk/boyne-castle-3.jpg",
@@ -55622,7 +55542,7 @@ const CASTLES = [
       "charming"
     ],
     "access": "private",
-    "_index": 2068,
+    "_index": 2045,
     "gallery": [
       "https://img.castlecore.uk/fordyce-castle-2.jpg",
       "https://img.castlecore.uk/fordyce-castle-3.jpg",
@@ -55648,7 +55568,7 @@ const CASTLES = [
       "church-ruin"
     ],
     "access": "free",
-    "_index": 2069,
+    "_index": 2046,
     "gallery": [
       "https://img.castlecore.uk/deskford-church-2.jpg",
       "https://img.castlecore.uk/deskford-church-3.jpg",
@@ -55674,7 +55594,7 @@ const CASTLES = [
       "gravestones"
     ],
     "access": "free",
-    "_index": 2070,
+    "_index": 2047,
     "gallery": [
       "https://img.castlecore.uk/edinkillie-church-2.jpg",
       "https://img.castlecore.uk/edinkillie-church-3.jpg",
@@ -55700,7 +55620,7 @@ const CASTLES = [
       "castle-grounds"
     ],
     "access": "paid",
-    "_index": 2071,
+    "_index": 2048,
     "gallery": [
       "https://img.castlecore.uk/aberdour-castle-doocot-2.jpg",
       "https://img.castlecore.uk/aberdour-castle-doocot-3.jpg",
@@ -55727,7 +55647,7 @@ const CASTLES = [
       "holiday-let"
     ],
     "access": "paid",
-    "_index": 2072,
+    "_index": 2049,
     "gallery": [
       "https://img.castlecore.uk/tower-of-hallbar-2.jpg",
       "https://img.castlecore.uk/tower-of-hallbar-3.jpg",
@@ -55754,7 +55674,7 @@ const CASTLES = [
       "beautiful"
     ],
     "access": "free",
-    "_index": 2073,
+    "_index": 2050,
     "gallery": [
       "https://img.castlecore.uk/lincluden-collegiate-church-2.jpg",
       "https://img.castlecore.uk/lincluden-collegiate-church-3.jpg",
@@ -55782,7 +55702,7 @@ const CASTLES = [
       "natural"
     ],
     "access": "free",
-    "_index": 2074,
+    "_index": 2051,
     "gallery": [
       "https://img.castlecore.uk/grey-mare-s-tail-2.jpg",
       "https://img.castlecore.uk/grey-mare-s-tail-3.jpg",
@@ -55808,7 +55728,7 @@ const CASTLES = [
       "fragment"
     ],
     "access": "free",
-    "_index": 2075,
+    "_index": 2052,
     "gallery": [
       "https://img.castlecore.uk/capenoch-tower-2.jpg",
       "https://img.castlecore.uk/capenoch-tower-3.jpg",
@@ -55834,7 +55754,7 @@ const CASTLES = [
       "substantial"
     ],
     "access": "free",
-    "_index": 2076,
+    "_index": 2053,
     "gallery": [
       "https://img.castlecore.uk/hoddom-castle-2.jpg",
       "https://img.castlecore.uk/hoddom-castle-3.jpg",
@@ -55861,7 +55781,7 @@ const CASTLES = [
       "hilltop"
     ],
     "access": "free",
-    "_index": 2077,
+    "_index": 2054,
     "gallery": [
       "https://img.castlecore.uk/repentance-tower-2.jpg",
       "https://img.castlecore.uk/repentance-tower-3.jpg",
@@ -55888,7 +55808,7 @@ const CASTLES = [
       "urban"
     ],
     "access": "free",
-    "_index": 2078,
+    "_index": 2055,
     "gallery": [
       "https://img.castlecore.uk/lockerbie-tower-2.jpg",
       "https://img.castlecore.uk/lockerbie-tower-3.jpg",
@@ -55915,7 +55835,7 @@ const CASTLES = [
       "rare"
     ],
     "access": "free",
-    "_index": 2079,
+    "_index": 2056,
     "gallery": [
       "https://img.castlecore.uk/peebles-cross-kirk-2.jpg",
       "https://img.castlecore.uk/peebles-cross-kirk-3.jpg",
@@ -55943,7 +55863,7 @@ const CASTLES = [
       "magnificent"
     ],
     "access": "paid",
-    "_index": 2080,
+    "_index": 2057,
     "gallery": [
       "https://img.castlecore.uk/jedburgh-abbey-nave-2.jpg",
       "https://img.castlecore.uk/jedburgh-abbey-nave-3.jpg",
@@ -55970,7 +55890,7 @@ const CASTLES = [
       "romanesque"
     ],
     "access": "free",
-    "_index": 2081,
+    "_index": 2058,
     "gallery": [
       "https://img.castlecore.uk/edrom-church-2.jpg",
       "https://img.castlecore.uk/edrom-church-3.jpg",
@@ -55997,7 +55917,7 @@ const CASTLES = [
       "restored-choir"
     ],
     "access": "free",
-    "_index": 2082,
+    "_index": 2059,
     "gallery": [
       "https://img.castlecore.uk/coldingham-priory-2.jpg",
       "https://img.castlecore.uk/coldingham-priory-3.jpg",
@@ -56024,7 +55944,7 @@ const CASTLES = [
       "grand"
     ],
     "access": "paid",
-    "_index": 2083,
+    "_index": 2060,
     "gallery": [
       "https://img.castlecore.uk/lennoxlove-house-2.jpg",
       "https://img.castlecore.uk/lennoxlove-house-3.jpg",
@@ -56051,7 +55971,7 @@ const CASTLES = [
       "battlefield-nearby"
     ],
     "access": "free",
-    "_index": 2084,
+    "_index": 2061,
     "gallery": [
       "https://img.castlecore.uk/preston-tower-2.jpg",
       "https://img.castlecore.uk/preston-tower-3.jpg",
@@ -56078,7 +55998,7 @@ const CASTLES = [
       "harbour"
     ],
     "access": "free",
-    "_index": 2085,
+    "_index": 2062,
     "gallery": [
       "https://img.castlecore.uk/dunbar-battery-2.jpg",
       "https://img.castlecore.uk/dunbar-battery-3.jpg",
@@ -56105,7 +56025,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 2086,
+    "_index": 2063,
     "gallery": [
       "https://img.castlecore.uk/castle-levan-2.jpg",
       "https://img.castlecore.uk/castle-levan-3.jpg",
@@ -56132,7 +56052,7 @@ const CASTLES = [
       "eerie"
     ],
     "access": "free",
-    "_index": 2087,
+    "_index": 2064,
     "gallery": [
       "https://img.castlecore.uk/lennox-castle-2.jpg",
       "https://img.castlecore.uk/lennox-castle-3.jpg",
@@ -56158,7 +56078,7 @@ const CASTLES = [
       "village"
     ],
     "access": "free",
-    "_index": 2088,
+    "_index": 2065,
     "gallery": [
       "https://img.castlecore.uk/kilmacolm-castle-2.jpg",
       "https://img.castlecore.uk/kilmacolm-castle-3.jpg",
@@ -56185,7 +56105,7 @@ const CASTLES = [
       "hilltop"
     ],
     "access": "free",
-    "_index": 2089,
+    "_index": 2066,
     "gallery": [
       "https://img.castlecore.uk/cathcart-castle-2.jpg",
       "https://img.castlecore.uk/cathcart-castle-3.jpg",
@@ -56212,7 +56132,7 @@ const CASTLES = [
       "barrel-vault"
     ],
     "access": "free",
-    "_index": 2090,
+    "_index": 2067,
     "gallery": [
       "https://img.castlecore.uk/mearns-castle-2.jpg",
       "https://img.castlecore.uk/mearns-castle-3.jpg",
@@ -56239,7 +56159,7 @@ const CASTLES = [
       "knox"
     ],
     "access": "paid",
-    "_index": 2091
+    "_index": 2068
   },
   {
     "name": "Cardross Manor",
@@ -56260,7 +56180,7 @@ const CASTLES = [
       "fragments"
     ],
     "access": "free",
-    "_index": 2092,
+    "_index": 2069,
     "gallery": [
       "https://img.castlecore.uk/cardross-manor-2.jpg",
       "https://img.castlecore.uk/cardross-manor-3.jpg",
@@ -56286,7 +56206,7 @@ const CASTLES = [
       "legend"
     ],
     "access": "free",
-    "_index": 2093,
+    "_index": 2070,
     "gallery": [
       "https://img.castlecore.uk/arnprior-tower-2.jpg",
       "https://img.castlecore.uk/arnprior-tower-3.jpg",
@@ -56313,7 +56233,7 @@ const CASTLES = [
       "visible"
     ],
     "access": "free",
-    "_index": 2094,
+    "_index": 2071,
     "gallery": [
       "https://img.castlecore.uk/sauchie-tower-2.jpg",
       "https://img.castlecore.uk/sauchie-tower-3.jpg",
@@ -56340,7 +56260,7 @@ const CASTLES = [
       "school"
     ],
     "access": "free",
-    "_index": 2095,
+    "_index": 2072,
     "gallery": [
       "https://img.castlecore.uk/dollar-academy-clock-tower-2.jpg",
       "https://img.castlecore.uk/dollar-academy-clock-tower-3.jpg",
@@ -56366,7 +56286,7 @@ const CASTLES = [
       "kintyre"
     ],
     "access": "free",
-    "_index": 2096,
+    "_index": 2073,
     "gallery": [
       "https://img.castlecore.uk/dunaverty-rock-2.jpg",
       "https://img.castlecore.uk/dunaverty-rock-3.jpg",
@@ -56393,7 +56313,7 @@ const CASTLES = [
       "ancient"
     ],
     "access": "free",
-    "_index": 2097,
+    "_index": 2074,
     "gallery": [
       "https://img.castlecore.uk/castle-sween-knapdale-2.jpg",
       "https://img.castlecore.uk/castle-sween-knapdale-3.jpg",
@@ -56419,7 +56339,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 2098,
+    "_index": 2075,
     "gallery": [
       "https://img.castlecore.uk/kilberry-sculptured-stones-2.jpg",
       "https://img.castlecore.uk/kilberry-sculptured-stones-3.jpg",
@@ -56446,7 +56366,7 @@ const CASTLES = [
       "views"
     ],
     "access": "free",
-    "_index": 2099,
+    "_index": 2076,
     "gallery": [
       "https://img.castlecore.uk/carnasserie-castle-views-2.jpg",
       "https://img.castlecore.uk/carnasserie-castle-views-3.jpg",
@@ -56474,7 +56394,7 @@ const CASTLES = [
       "ancient"
     ],
     "access": "free",
-    "_index": 2100,
+    "_index": 2077,
     "gallery": [
       "https://img.castlecore.uk/dunadd-fort-2.jpg",
       "https://img.castlecore.uk/dunadd-fort-3.jpg",
@@ -56501,7 +56421,7 @@ const CASTLES = [
       "bronze-age"
     ],
     "access": "free",
-    "_index": 2101,
+    "_index": 2078,
     "gallery": [
       "https://img.castlecore.uk/ballinaby-standing-stones-2.jpg",
       "https://img.castlecore.uk/ballinaby-standing-stones-3.jpg",
@@ -56528,7 +56448,7 @@ const CASTLES = [
       "remote"
     ],
     "access": "free",
-    "_index": 2102,
+    "_index": 2079,
     "gallery": [
       "https://img.castlecore.uk/keills-chapel-2.jpg",
       "https://img.castlecore.uk/keills-chapel-3.jpg",
@@ -56556,7 +56476,7 @@ const CASTLES = [
       "8th-century"
     ],
     "access": "free",
-    "_index": 2103,
+    "_index": 2080,
     "gallery": [
       "https://img.castlecore.uk/kildalton-cross-2.jpg",
       "https://img.castlecore.uk/kildalton-cross-3.jpg",
@@ -56582,7 +56502,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 2104,
+    "_index": 2081,
     "gallery": [
       "https://img.castlecore.uk/campbeltown-cross-2.jpg",
       "https://img.castlecore.uk/campbeltown-cross-3.jpg",
@@ -56609,7 +56529,7 @@ const CASTLES = [
       "beautiful"
     ],
     "access": "free",
-    "_index": 2105,
+    "_index": 2082,
     "gallery": [
       "https://img.castlecore.uk/st-blane-s-church-2.jpg",
       "https://img.castlecore.uk/st-blane-s-church-3.jpg",
@@ -56636,7 +56556,7 @@ const CASTLES = [
       "loch-awe"
     ],
     "access": "free",
-    "_index": 2106,
+    "_index": 2083,
     "gallery": [
       "https://img.castlecore.uk/innischonain-priory-2.jpg",
       "https://img.castlecore.uk/innischonain-priory-3.jpg",
@@ -56662,7 +56582,7 @@ const CASTLES = [
       "barrel-vault"
     ],
     "access": "free",
-    "_index": 2107,
+    "_index": 2084,
     "gallery": [
       "https://img.castlecore.uk/crichton-collegiate-church-2.jpg",
       "https://img.castlecore.uk/crichton-collegiate-church-3.jpg",
@@ -56689,7 +56609,7 @@ const CASTLES = [
       "church-ruin"
     ],
     "access": "free",
-    "_index": 2108,
+    "_index": 2085,
     "gallery": [
       "https://img.castlecore.uk/temple-church-2.jpg",
       "https://img.castlecore.uk/temple-church-3.jpg",
@@ -56716,7 +56636,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "paid",
-    "_index": 2109,
+    "_index": 2086,
     "gallery": [
       "https://img.castlecore.uk/dalhousie-castle-2.jpg",
       "https://img.castlecore.uk/dalhousie-castle-3.jpg",
@@ -56743,7 +56663,7 @@ const CASTLES = [
       "mansion"
     ],
     "access": "paid",
-    "_index": 2110,
+    "_index": 2087,
     "gallery": [
       "https://img.castlecore.uk/arniston-house-2.jpg",
       "https://img.castlecore.uk/arniston-house-3.jpg",
@@ -56770,7 +56690,7 @@ const CASTLES = [
       "viewpoint"
     ],
     "access": "free",
-    "_index": 2111,
+    "_index": 2088,
     "gallery": [
       "https://img.castlecore.uk/lochnagar-bothie-2.jpg",
       "https://img.castlecore.uk/lochnagar-bothie-3.jpg",
@@ -56796,7 +56716,7 @@ const CASTLES = [
       "fraser"
     ],
     "access": "private",
-    "_index": 2112,
+    "_index": 2089,
     "gallery": [
       "https://img.castlecore.uk/durris-castle-2.jpg",
       "https://img.castlecore.uk/durris-castle-3.jpg",
@@ -56822,7 +56742,7 @@ const CASTLES = [
       "country-house"
     ],
     "access": "paid",
-    "_index": 2113
+    "_index": 2090
   },
   {
     "name": "Druminnor Castle",
@@ -56842,7 +56762,7 @@ const CASTLES = [
       "partially-inhabited"
     ],
     "access": "private",
-    "_index": 2114,
+    "_index": 2091,
     "gallery": [
       "https://img.castlecore.uk/druminnor-castle-2.jpg",
       "https://img.castlecore.uk/druminnor-castle-3.jpg",
@@ -56870,7 +56790,7 @@ const CASTLES = [
       "pineapple"
     ],
     "access": "paid",
-    "_index": 2115,
+    "_index": 2092,
     "gallery": [
       "https://img.castlecore.uk/dunmore-pineapple-2.jpg",
       "https://img.castlecore.uk/dunmore-pineapple-3.jpg",
@@ -56897,7 +56817,7 @@ const CASTLES = [
       "firth-of-forth"
     ],
     "access": "paid",
-    "_index": 2116,
+    "_index": 2093,
     "gallery": [
       "https://img.castlecore.uk/blackness-castle-ship-2.jpg",
       "https://img.castlecore.uk/blackness-castle-ship-3.jpg",
@@ -56925,7 +56845,7 @@ const CASTLES = [
       "medieval"
     ],
     "access": "free",
-    "_index": 2117,
+    "_index": 2094,
     "gallery": [
       "https://img.castlecore.uk/torphichen-preceptory-2.jpg",
       "https://img.castlecore.uk/torphichen-preceptory-3.jpg",
@@ -56953,7 +56873,7 @@ const CASTLES = [
       "panoramic"
     ],
     "access": "paid",
-    "_index": 2118,
+    "_index": 2095,
     "gallery": [
       "https://img.castlecore.uk/cairnpapple-hill-2.jpg",
       "https://img.castlecore.uk/cairnpapple-hill-3.jpg",
@@ -56980,7 +56900,7 @@ const CASTLES = [
       "renaissance"
     ],
     "access": "free",
-    "_index": 2119,
+    "_index": 2096,
     "gallery": [
       "https://img.castlecore.uk/kinneil-house-2.jpg",
       "https://img.castlecore.uk/kinneil-house-3.jpg",
@@ -57007,7 +56927,7 @@ const CASTLES = [
       "georgian-kitchen"
     ],
     "access": "free",
-    "_index": 2120,
+    "_index": 2097,
     "gallery": [
       "https://img.castlecore.uk/callendar-house-2.jpg",
       "https://img.castlecore.uk/callendar-house-3.jpg",
@@ -57034,7 +56954,7 @@ const CASTLES = [
       "riverside"
     ],
     "access": "private",
-    "_index": 2121,
+    "_index": 2098,
     "gallery": [
       "https://img.castlecore.uk/kinfauns-castle-2.jpg",
       "https://img.castlecore.uk/kinfauns-castle-3.jpg",
@@ -57061,7 +56981,7 @@ const CASTLES = [
       "village"
     ],
     "access": "free",
-    "_index": 2122
+    "_index": 2099
   },
   {
     "name": "Aberlemno Sculptured Stones",
@@ -57082,7 +57002,7 @@ const CASTLES = [
       "outstanding"
     ],
     "access": "free",
-    "_index": 2123,
+    "_index": 2100,
     "gallery": [
       "https://img.castlecore.uk/aberlemno-sculptured-stones-2.jpg",
       "https://img.castlecore.uk/aberlemno-sculptured-stones-3.jpg",
@@ -57108,7 +57028,7 @@ const CASTLES = [
       "souterrain-nearby"
     ],
     "access": "free",
-    "_index": 2124,
+    "_index": 2101,
     "gallery": [
       "https://img.castlecore.uk/tealing-doocot-2.jpg",
       "https://img.castlecore.uk/tealing-doocot-3.jpg",
@@ -57135,7 +57055,7 @@ const CASTLES = [
       "estuary"
     ],
     "access": "free",
-    "_index": 2125,
+    "_index": 2102,
     "gallery": [
       "https://img.castlecore.uk/broughty-ferry-beach-castle-2.jpg",
       "https://img.castlecore.uk/broughty-ferry-beach-castle-3.jpg",
@@ -57162,7 +57082,7 @@ const CASTLES = [
       "historic"
     ],
     "access": "private",
-    "_index": 2126,
+    "_index": 2103,
     "gallery": [
       "https://img.castlecore.uk/ethie-castle-2.jpg",
       "https://img.castlecore.uk/ethie-castle-3.jpg",
@@ -57189,7 +57109,7 @@ const CASTLES = [
       "glen"
     ],
     "access": "private",
-    "_index": 2127,
+    "_index": 2104,
     "gallery": [
       "https://img.castlecore.uk/cortachy-castle-2.jpg",
       "https://img.castlecore.uk/cortachy-castle-3.jpg",
@@ -57216,7 +57136,7 @@ const CASTLES = [
       "ogilvie"
     ],
     "access": "free",
-    "_index": 2128,
+    "_index": 2105,
     "gallery": [
       "https://img.castlecore.uk/airlie-castle-2.jpg",
       "https://img.castlecore.uk/airlie-castle-3.jpg",
@@ -57243,7 +57163,7 @@ const CASTLES = [
       "private"
     ],
     "access": "private",
-    "_index": 2129,
+    "_index": 2106,
     "gallery": [
       "https://img.castlecore.uk/kinnaird-castle-2.jpg",
       "https://img.castlecore.uk/kinnaird-castle-3.jpg",
@@ -57270,7 +57190,7 @@ const CASTLES = [
       "plasterwork"
     ],
     "access": "paid",
-    "_index": 2130,
+    "_index": 2107,
     "gallery": [
       "https://img.castlecore.uk/house-of-dun-2.jpg",
       "https://img.castlecore.uk/house-of-dun-3.jpg",
@@ -57297,7 +57217,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "free",
-    "_index": 2131,
+    "_index": 2108,
     "gallery": [
       "https://img.castlecore.uk/st-vigeans-museum-2.jpg",
       "https://img.castlecore.uk/st-vigeans-museum-3.jpg",
@@ -57324,7 +57244,7 @@ const CASTLES = [
       "dramatic"
     ],
     "access": "free",
-    "_index": 2132,
+    "_index": 2109,
     "gallery": [
       "https://img.castlecore.uk/balintore-castle-2.jpg",
       "https://img.castlecore.uk/balintore-castle-3.jpg",
@@ -57351,7 +57271,7 @@ const CASTLES = [
       "underground"
     ],
     "access": "free",
-    "_index": 2133,
+    "_index": 2110,
     "gallery": [
       "https://img.castlecore.uk/wiki-pitcur-souterrain.jpg"
     ]
@@ -57375,7 +57295,7 @@ const CASTLES = [
       "curved"
     ],
     "access": "free",
-    "_index": 2134,
+    "_index": 2111,
     "gallery": [
       "https://img.castlecore.uk/ardestie-souterrain-2.jpg",
       "https://img.castlecore.uk/ardestie-souterrain-3.jpg",
@@ -57403,7 +57323,7 @@ const CASTLES = [
       "twin-forts"
     ],
     "access": "free",
-    "_index": 2135,
+    "_index": 2112,
     "gallery": [
       "https://img.castlecore.uk/caterthun-hill-forts-2.jpg",
       "https://img.castlecore.uk/caterthun-hill-forts-3.jpg",
@@ -57430,7 +57350,7 @@ const CASTLES = [
       "woodland"
     ],
     "access": "paid",
-    "_index": 2136,
+    "_index": 2113,
     "gallery": [
       "https://img.castlecore.uk/piperdam-resort-2.jpg",
       "https://img.castlecore.uk/piperdam-resort-3.jpg",
@@ -57457,7 +57377,7 @@ const CASTLES = [
       "rare"
     ],
     "access": "free",
-    "_index": 2137,
+    "_index": 2114,
     "gallery": [
       "https://img.castlecore.uk/fowlis-easter-church-2.jpg",
       "https://img.castlecore.uk/fowlis-easter-church-3.jpg",
@@ -57484,7 +57404,7 @@ const CASTLES = [
       "venue"
     ],
     "access": "paid",
-    "_index": 2138,
+    "_index": 2115,
     "gallery": [
       "https://img.castlecore.uk/mains-castle-dundee-2.jpg",
       "https://img.castlecore.uk/mains-castle-dundee-3.jpg",
@@ -57511,7 +57431,7 @@ const CASTLES = [
       "ruin"
     ],
     "access": "free",
-    "_index": 2139,
+    "_index": 2116,
     "gallery": [
       "https://img.castlecore.uk/powrie-castle-2.jpg"
     ]
@@ -57534,7 +57454,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2140,
+    "_index": 2117,
     "gallery": [
       "https://img.castlecore.uk/tynagh-castle-2.jpg",
       "https://img.castlecore.uk/tynagh-castle-3.jpg",
@@ -57560,7 +57480,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2141,
+    "_index": 2118,
     "gallery": [
       "https://img.castlecore.uk/pallas-castle-galway-2.jpg",
       "https://img.castlecore.uk/pallas-castle-galway-3.jpg",
@@ -57586,7 +57506,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2142,
+    "_index": 2119,
     "gallery": [
       "https://img.castlecore.uk/ardrahan-castle-2.jpg",
       "https://img.castlecore.uk/ardrahan-castle-3.jpg",
@@ -57612,7 +57532,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2143,
+    "_index": 2120,
     "gallery": [
       "https://img.castlecore.uk/lawrencetown-castle-2.jpg",
       "https://img.castlecore.uk/lawrencetown-castle-3.jpg",
@@ -57638,7 +57558,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2144,
+    "_index": 2121,
     "gallery": [
       "https://img.castlecore.uk/islandmore-castle-killarney-2.jpg",
       "https://img.castlecore.uk/islandmore-castle-killarney-3.jpg",
@@ -57664,7 +57584,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2145,
+    "_index": 2122,
     "gallery": [
       "https://img.castlecore.uk/kilmalkedar-church-2.jpg",
       "https://img.castlecore.uk/kilmalkedar-church-3.jpg",
@@ -57690,7 +57610,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2146,
+    "_index": 2123,
     "gallery": [
       "https://img.castlecore.uk/reask-monastic-site-2.jpg",
       "https://img.castlecore.uk/reask-monastic-site-3.jpg",
@@ -57716,7 +57636,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2147,
+    "_index": 2124,
     "gallery": [
       "https://img.castlecore.uk/banna-strand-tower-2.jpg",
       "https://img.castlecore.uk/banna-strand-tower-3.jpg",
@@ -57742,7 +57662,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2149,
+    "_index": 2125,
     "gallery": [
       "https://img.castlecore.uk/ballyteague-castle-2.jpg",
       "https://img.castlecore.uk/ballyteague-castle-3.jpg",
@@ -57768,7 +57688,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2150,
+    "_index": 2126,
     "gallery": [
       "https://img.castlecore.uk/morristown-latin-castle-2.jpg",
       "https://img.castlecore.uk/morristown-latin-castle-3.jpg",
@@ -57794,7 +57714,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2151,
+    "_index": 2127,
     "gallery": [
       "https://img.castlecore.uk/jigginstown-castle-2.jpg",
       "https://img.castlecore.uk/jigginstown-castle-3.jpg",
@@ -57820,7 +57740,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2152,
+    "_index": 2128,
     "gallery": [
       "https://img.castlecore.uk/woodstock-castle-kilkenny-2.jpg",
       "https://img.castlecore.uk/woodstock-castle-kilkenny-3.jpg",
@@ -57845,7 +57765,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2153,
+    "_index": 2129,
     "gallery": [
       "https://img.castlecore.uk/shee-alms-house-2.jpg",
       "https://img.castlecore.uk/shee-alms-house-3.jpg",
@@ -57871,7 +57791,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 2154,
+    "_index": 2130,
     "gallery": [
       "https://img.castlecore.uk/rothe-house-2.jpg",
       "https://img.castlecore.uk/rothe-house-3.jpg",
@@ -57897,7 +57817,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2155,
+    "_index": 2131,
     "gallery": [
       "https://img.castlecore.uk/coolhill-castle-2.jpg",
       "https://img.castlecore.uk/coolhill-castle-3.jpg",
@@ -57922,7 +57842,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2156,
+    "_index": 2132,
     "gallery": [
       "https://img.castlecore.uk/inistioge-church-2.jpg",
       "https://img.castlecore.uk/inistioge-church-3.jpg",
@@ -57948,7 +57868,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2157,
+    "_index": 2133,
     "gallery": [
       "https://img.castlecore.uk/castlemorris-house-2.jpg",
       "https://img.castlecore.uk/castlemorris-house-3.jpg",
@@ -57974,7 +57894,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2158,
+    "_index": 2134,
     "gallery": [
       "https://img.castlecore.uk/ballybur-castle-2.jpg",
       "https://img.castlecore.uk/ballybur-castle-3.jpg",
@@ -58000,7 +57920,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2159,
+    "_index": 2135,
     "gallery": [
       "https://img.castlecore.uk/grennan-castle-thomastown-2.jpg",
       "https://img.castlecore.uk/grennan-castle-thomastown-3.jpg",
@@ -58026,7 +57946,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2160,
+    "_index": 2136,
     "gallery": [
       "https://img.castlecore.uk/ballyclogh-castle-cork-2.jpg",
       "https://img.castlecore.uk/ballyclogh-castle-cork-3.jpg",
@@ -58051,7 +57971,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2161,
+    "_index": 2137,
     "gallery": [
       "https://img.castlecore.uk/monkstown-castle-cork-2.jpg",
       "https://img.castlecore.uk/monkstown-castle-cork-3.jpg",
@@ -58076,7 +57996,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 2162,
+    "_index": 2138,
     "gallery": [
       "https://img.castlecore.uk/blackwater-castle-2.jpg",
       "https://img.castlecore.uk/blackwater-castle-3.jpg",
@@ -58102,7 +58022,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2163,
+    "_index": 2139,
     "gallery": [
       "https://img.castlecore.uk/castlepook-cave-castle-2.jpg",
       "https://img.castlecore.uk/castlepook-cave-castle-3.jpg",
@@ -58129,7 +58049,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "free",
-    "_index": 2164,
+    "_index": 2140,
     "gallery": [
       "https://img.castlecore.uk/doneraile-court-2.jpg",
       "https://img.castlecore.uk/doneraile-court-3.jpg",
@@ -58156,7 +58076,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2165,
+    "_index": 2141,
     "gallery": [
       "https://img.castlecore.uk/ardmore-castle-2.jpg",
       "https://img.castlecore.uk/ardmore-castle-3.jpg",
@@ -58182,7 +58102,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2166,
+    "_index": 2142,
     "gallery": [
       "https://img.castlecore.uk/kilmeaden-castle-2.jpg",
       "https://img.castlecore.uk/kilmeaden-castle-3.jpg",
@@ -58208,7 +58128,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2167,
+    "_index": 2143,
     "gallery": [
       "https://img.castlecore.uk/annestown-castle-2.jpg",
       "https://img.castlecore.uk/annestown-castle-3.jpg",
@@ -58235,7 +58155,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2168,
+    "_index": 2144,
     "gallery": [
       "https://img.castlecore.uk/bourchier-castle-lough-gur-2.jpg",
       "https://img.castlecore.uk/bourchier-castle-lough-gur-3.jpg",
@@ -58261,7 +58181,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2169,
+    "_index": 2145,
     "gallery": [
       "https://img.castlecore.uk/cappagh-castle-limerick-2.jpg",
       "https://img.castlecore.uk/cappagh-castle-limerick-3.jpg",
@@ -58286,7 +58206,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2170,
+    "_index": 2146,
     "gallery": [
       "https://img.castlecore.uk/kilmallock-friary-2.jpg",
       "https://img.castlecore.uk/kilmallock-friary-3.jpg",
@@ -58311,7 +58231,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2171,
+    "_index": 2147,
     "gallery": [
       "https://img.castlecore.uk/kilmallock-castle-2.jpg",
       "https://img.castlecore.uk/kilmallock-castle-3.jpg",
@@ -58336,7 +58256,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2172,
+    "_index": 2148,
     "gallery": [
       "https://img.castlecore.uk/collegiate-church-kilmallock-2.jpg",
       "https://img.castlecore.uk/collegiate-church-kilmallock-3.jpg",
@@ -58362,7 +58282,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2173
+    "_index": 2149
   },
   {
     "name": "Mungret Abbey",
@@ -58382,7 +58302,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2174,
+    "_index": 2150,
     "gallery": [
       "https://img.castlecore.uk/mungret-abbey-2.jpg",
       "https://img.castlecore.uk/mungret-abbey-3.jpg",
@@ -58407,7 +58327,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2175,
+    "_index": 2151,
     "gallery": [
       "https://img.castlecore.uk/castleconnell-castle-2.jpg",
       "https://img.castlecore.uk/castleconnell-castle-3.jpg",
@@ -58432,7 +58352,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2176,
+    "_index": 2152,
     "gallery": [
       "https://img.castlecore.uk/roscrea-friary-2.jpg",
       "https://img.castlecore.uk/roscrea-friary-3.jpg",
@@ -58457,7 +58377,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2177,
+    "_index": 2153,
     "gallery": [
       "https://img.castlecore.uk/thurles-castle-2.jpg",
       "https://img.castlecore.uk/thurles-castle-3.jpg",
@@ -58483,7 +58403,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2178,
+    "_index": 2154,
     "gallery": [
       "https://img.castlecore.uk/burncourt-castle-2.jpg",
       "https://img.castlecore.uk/burncourt-castle-3.jpg",
@@ -58509,7 +58429,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2179
+    "_index": 2155
   },
   {
     "name": "Carrick-on-Suir Castle",
@@ -58528,7 +58448,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 2180,
+    "_index": 2156,
     "gallery": [
       "https://img.castlecore.uk/carrick-on-suir-castle-2.jpg",
       "https://img.castlecore.uk/carrick-on-suir-castle-3.jpg",
@@ -58555,7 +58475,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2181,
+    "_index": 2157,
     "gallery": [
       "https://img.castlecore.uk/knockgraffon-motte-2.jpg",
       "https://img.castlecore.uk/knockgraffon-motte-3.jpg",
@@ -58581,7 +58501,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2182,
+    "_index": 2158,
     "gallery": [
       "https://img.castlecore.uk/creagh-castle-skibbereen-2.jpg",
       "https://img.castlecore.uk/creagh-castle-skibbereen-3.jpg",
@@ -58607,7 +58527,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2183,
+    "_index": 2159,
     "gallery": [
       "https://img.castlecore.uk/lough-hyne-tower-2.jpg",
       "https://img.castlecore.uk/lough-hyne-tower-3.jpg",
@@ -58633,7 +58553,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2184,
+    "_index": 2160,
     "gallery": [
       "https://img.castlecore.uk/o-brien-s-castle-inis-oirr-2.jpg",
       "https://img.castlecore.uk/o-brien-s-castle-inis-oirr-3.jpg",
@@ -58659,7 +58579,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2185,
+    "_index": 2161,
     "gallery": [
       "https://img.castlecore.uk/magheraghanrush-court-tomb-2.jpg",
       "https://img.castlecore.uk/magheraghanrush-court-tomb-3.jpg",
@@ -58685,7 +58605,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2187,
+    "_index": 2162,
     "gallery": [
       "https://img.castlecore.uk/aghmore-castle-leitrim-2.jpg",
       "https://img.castlecore.uk/aghmore-castle-leitrim-3.jpg",
@@ -58711,7 +58631,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2188,
+    "_index": 2163,
     "gallery": [
       "https://img.castlecore.uk/castlecaldwell-castle-2.jpg",
       "https://img.castlecore.uk/castlecaldwell-castle-3.jpg",
@@ -58737,7 +58657,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2189,
+    "_index": 2164,
     "gallery": [
       "https://img.castlecore.uk/errigal-keerogue-cross-2.jpg",
       "https://img.castlecore.uk/errigal-keerogue-cross-3.jpg",
@@ -58764,7 +58684,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2190,
+    "_index": 2165,
     "gallery": [
       "https://img.castlecore.uk/tullaghoge-fort-2.jpg",
       "https://img.castlecore.uk/tullaghoge-fort-3.jpg",
@@ -58789,7 +58709,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "private",
-    "_index": 2191,
+    "_index": 2166,
     "gallery": [
       "https://img.castlecore.uk/caledon-castle-2.jpg",
       "https://img.castlecore.uk/caledon-castle-3.jpg"
@@ -58812,7 +58732,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2192,
+    "_index": 2167,
     "gallery": [
       "https://img.castlecore.uk/donaghmore-high-cross-2.jpg",
       "https://img.castlecore.uk/donaghmore-high-cross-3.jpg",
@@ -58839,7 +58759,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2193,
+    "_index": 2168,
     "gallery": [
       "https://img.castlecore.uk/ardboe-high-cross-2.jpg",
       "https://img.castlecore.uk/ardboe-high-cross-3.jpg",
@@ -58864,7 +58784,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "limited",
-    "_index": 2194,
+    "_index": 2169,
     "gallery": [
       "https://img.castlecore.uk/gosford-castle-2.jpg"
     ]
@@ -58887,7 +58807,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2195,
+    "_index": 2170,
     "gallery": [
       "https://img.castlecore.uk/tynan-high-crosses-2.jpg",
       "https://img.castlecore.uk/tynan-high-crosses-3.jpg",
@@ -58913,7 +58833,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2196,
+    "_index": 2171,
     "gallery": [
       "https://img.castlecore.uk/ballymoyer-church-2.jpg",
       "https://img.castlecore.uk/ballymoyer-church-3.jpg",
@@ -58939,7 +58859,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2197,
+    "_index": 2172,
     "gallery": [
       "https://img.castlecore.uk/slane-friary-2.jpg",
       "https://img.castlecore.uk/slane-friary-3.jpg",
@@ -58964,7 +58884,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2198
+    "_index": 2173
   },
   {
     "name": "Newgrange Cursus",
@@ -58984,7 +58904,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 2199,
+    "_index": 2174,
     "gallery": [
       "https://img.castlecore.uk/newgrange-cursus-2.jpg",
       "https://img.castlecore.uk/newgrange-cursus-3.jpg",
@@ -59009,7 +58929,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 2200,
+    "_index": 2175,
     "gallery": [
       "https://img.castlecore.uk/knowth-passage-tomb-2.jpg",
       "https://img.castlecore.uk/knowth-passage-tomb-3.jpg",
@@ -59035,7 +58955,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2201
+    "_index": 2176
   },
   {
     "name": "Castletown House Kildare",
@@ -59055,7 +58975,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "paid",
-    "_index": 2202,
+    "_index": 2177,
     "gallery": [
       "https://img.castlecore.uk/castletown-house-kildare-2.jpg",
       "https://img.castlecore.uk/castletown-house-kildare-3.jpg",
@@ -59081,7 +59001,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2203,
+    "_index": 2178,
     "gallery": [
       "https://img.castlecore.uk/moone-high-cross-2.jpg",
       "https://img.castlecore.uk/moone-high-cross-3.jpg",
@@ -59107,7 +59027,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2204,
+    "_index": 2179,
     "gallery": [
       "https://img.castlecore.uk/old-kilcullen-round-tower-2.jpg",
       "https://img.castlecore.uk/old-kilcullen-round-tower-3.jpg",
@@ -59132,7 +59052,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "paid",
-    "_index": 2205,
+    "_index": 2180,
     "gallery": [
       "https://img.castlecore.uk/seaforde-butterfly-house-2.jpg",
       "https://img.castlecore.uk/seaforde-butterfly-house-3.jpg",
@@ -59157,7 +59077,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "free",
-    "_index": 2206
+    "_index": 2181
   },
   {
     "name": "Donegal Bay Friary",
@@ -59177,7 +59097,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2207,
+    "_index": 2182,
     "gallery": [
       "https://img.castlecore.uk/donegal-bay-friary-2.jpg",
       "https://img.castlecore.uk/donegal-bay-friary-3.jpg",
@@ -59202,7 +59122,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2208,
+    "_index": 2183,
     "gallery": [
       "https://img.castlecore.uk/tory-island-round-tower-2.jpg"
     ]
@@ -59225,7 +59145,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2209,
+    "_index": 2184,
     "gallery": [
       "https://img.castlecore.uk/carrigart-castle-2.jpg",
       "https://img.castlecore.uk/carrigart-castle-3.jpg",
@@ -59251,7 +59171,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2210,
+    "_index": 2185,
     "gallery": [
       "https://img.castlecore.uk/malin-head-tower-2.jpg",
       "https://img.castlecore.uk/malin-head-tower-3.jpg",
@@ -59277,7 +59197,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2211,
+    "_index": 2186,
     "gallery": [
       "https://img.castlecore.uk/tullydonnell-castle-2.jpg",
       "https://img.castlecore.uk/tullydonnell-castle-3.jpg",
@@ -59303,7 +59223,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2212
+    "_index": 2187
   },
   {
     "name": "Drumcliff Round Tower Sligo",
@@ -59323,7 +59243,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2213,
+    "_index": 2188,
     "gallery": [
       "https://img.castlecore.uk/drumcliff-round-tower-sligo-2.jpg",
       "https://img.castlecore.uk/drumcliff-round-tower-sligo-3.jpg",
@@ -59349,7 +59269,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2214,
+    "_index": 2189,
     "gallery": [
       "https://img.castlecore.uk/dunmoran-castle-2.jpg",
       "https://img.castlecore.uk/dunmoran-castle-3.jpg",
@@ -59374,7 +59294,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "private",
-    "_index": 2215,
+    "_index": 2190,
     "gallery": [
       "https://img.castlecore.uk/mullaghmore-castle-2.jpg",
       "https://img.castlecore.uk/mullaghmore-castle-3.jpg",
@@ -59399,7 +59319,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2216,
+    "_index": 2191,
     "gallery": [
       "https://img.castlecore.uk/elphin-windmill-2.jpg",
       "https://img.castlecore.uk/elphin-windmill-3.jpg",
@@ -59424,7 +59344,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 2217,
+    "_index": 2192,
     "gallery": [
       "https://img.castlecore.uk/cruachan-ai-visitor-centre-2.jpg",
       "https://img.castlecore.uk/cruachan-ai-visitor-centre-3.jpg",
@@ -59450,7 +59370,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2218,
+    "_index": 2193,
     "gallery": [
       "https://img.castlecore.uk/cloonfree-castle-2.jpg",
       "https://img.castlecore.uk/cloonfree-castle-3.jpg",
@@ -59476,7 +59396,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2219,
+    "_index": 2194,
     "gallery": [
       "https://img.castlecore.uk/abbeyknockmoy-2.jpg",
       "https://img.castlecore.uk/abbeyknockmoy-3.jpg",
@@ -59502,7 +59422,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2220,
+    "_index": 2195,
     "gallery": [
       "https://img.castlecore.uk/shanagolden-friary-2.jpg",
       "https://img.castlecore.uk/shanagolden-friary-3.jpg",
@@ -59528,7 +59448,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "hotel",
-    "_index": 2221,
+    "_index": 2196,
     "gallery": [
       "https://img.castlecore.uk/lough-rynn-castle-2.jpg",
       "https://img.castlecore.uk/lough-rynn-castle-3.jpg",
@@ -59554,7 +59474,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2222,
+    "_index": 2197,
     "gallery": [
       "https://img.castlecore.uk/cloone-round-tower-2.jpg",
       "https://img.castlecore.uk/cloone-round-tower-3.jpg",
@@ -59581,7 +59501,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "free",
-    "_index": 2223,
+    "_index": 2198,
     "gallery": [
       "https://img.castlecore.uk/cavan-burren-park-2.jpg",
       "https://img.castlecore.uk/cavan-burren-park-3.jpg",
@@ -59607,7 +59527,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2224,
+    "_index": 2199,
     "gallery": [
       "https://img.castlecore.uk/ballyjamesduff-castle-2.jpg",
       "https://img.castlecore.uk/ballyjamesduff-castle-3.jpg",
@@ -59632,7 +59552,7 @@ const CASTLES = [
       "limited"
     ],
     "access": "limited",
-    "_index": 2225,
+    "_index": 2200,
     "gallery": [
       "https://img.castlecore.uk/ballyhaise-house-2.jpg",
       "https://img.castlecore.uk/ballyhaise-house-3.jpg",
@@ -59658,7 +59578,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2226,
+    "_index": 2201,
     "gallery": [
       "https://img.castlecore.uk/hope-castle-castleblayney-2.jpg",
       "https://img.castlecore.uk/hope-castle-castleblayney-3.jpg",
@@ -59684,7 +59604,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2227,
+    "_index": 2202,
     "gallery": [
       "https://img.castlecore.uk/dartrey-estate-2.jpg",
       "https://img.castlecore.uk/dartrey-estate-3.jpg",
@@ -59709,7 +59629,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2228,
+    "_index": 2203,
     "gallery": [
       "https://img.castlecore.uk/inniskeen-round-tower-2.jpg",
       "https://img.castlecore.uk/inniskeen-round-tower-3.jpg",
@@ -59734,7 +59654,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2229,
+    "_index": 2204,
     "gallery": [
       "https://img.castlecore.uk/lough-oughter-castle-island-2.jpg",
       "https://img.castlecore.uk/lough-oughter-castle-island-3.jpg",
@@ -59760,7 +59680,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2231,
+    "_index": 2205,
     "gallery": [
       "https://img.castlecore.uk/banagher-old-church-derry-2.jpg",
       "https://img.castlecore.uk/banagher-old-church-derry-3.jpg",
@@ -59787,7 +59707,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "free",
-    "_index": 2232,
+    "_index": 2206,
     "gallery": [
       "https://img.castlecore.uk/limavady-roe-valley-park-2.jpg",
       "https://img.castlecore.uk/limavady-roe-valley-park-3.jpg",
@@ -59813,7 +59733,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2233,
+    "_index": 2207,
     "gallery": [
       "https://img.castlecore.uk/bovevagh-church-2.jpg",
       "https://img.castlecore.uk/bovevagh-church-3.jpg",
@@ -59838,7 +59758,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2234,
+    "_index": 2208,
     "gallery": [
       "https://img.castlecore.uk/maghera-round-tower-2.jpg",
       "https://img.castlecore.uk/maghera-round-tower-3.jpg",
@@ -59863,7 +59783,7 @@ const CASTLES = [
       "landmark"
     ],
     "access": "paid",
-    "_index": 2235,
+    "_index": 2209,
     "gallery": [
       "https://img.castlecore.uk/springhill-house-2.jpg",
       "https://img.castlecore.uk/springhill-house-3.jpg",
@@ -59889,7 +59809,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2236,
+    "_index": 2210,
     "gallery": [
       "https://img.castlecore.uk/killough-towers-2.jpg",
       "https://img.castlecore.uk/killough-towers-3.jpg",
@@ -59915,7 +59835,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2237,
+    "_index": 2211,
     "gallery": [
       "https://img.castlecore.uk/struell-wells-2.jpg",
       "https://img.castlecore.uk/struell-wells-3.jpg",
@@ -59941,7 +59861,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2238,
+    "_index": 2212,
     "gallery": [
       "https://img.castlecore.uk/saul-church-2.jpg",
       "https://img.castlecore.uk/saul-church-3.jpg",
@@ -59967,7 +59887,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2239,
+    "_index": 2213,
     "gallery": [
       "https://img.castlecore.uk/downpatrick-cathedral-2.jpg",
       "https://img.castlecore.uk/downpatrick-cathedral-3.jpg",
@@ -59992,7 +59912,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2240,
+    "_index": 2214,
     "gallery": [
       "https://img.castlecore.uk/dromore-mound-2.jpg",
       "https://img.castlecore.uk/dromore-mound-3.jpg",
@@ -60017,7 +59937,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2241,
+    "_index": 2215,
     "gallery": [
       "https://img.castlecore.uk/rathlin-island-ruins-2.jpg",
       "https://img.castlecore.uk/rathlin-island-ruins-3.jpg",
@@ -60043,7 +59963,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2242,
+    "_index": 2216,
     "gallery": [
       "https://img.castlecore.uk/cushendun-caves-castle-2.jpg",
       "https://img.castlecore.uk/cushendun-caves-castle-3.jpg",
@@ -60069,7 +59989,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2243,
+    "_index": 2217,
     "gallery": [
       "https://img.castlecore.uk/dunserverick-castle-2.jpg",
       "https://img.castlecore.uk/dunserverick-castle-3.jpg",
@@ -60094,7 +60014,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2244,
+    "_index": 2218,
     "gallery": [
       "https://img.castlecore.uk/randalstown-castle-2.jpg",
       "https://img.castlecore.uk/randalstown-castle-3.jpg",
@@ -60119,7 +60039,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2245,
+    "_index": 2219,
     "gallery": [
       "https://img.castlecore.uk/massereene-castle-2.jpg",
       "https://img.castlecore.uk/massereene-castle-3.jpg",
@@ -60145,7 +60065,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2246,
+    "_index": 2220,
     "gallery": [
       "https://img.castlecore.uk/ballintoy-church-2.jpg",
       "https://img.castlecore.uk/ballintoy-church-3.jpg",
@@ -60172,7 +60092,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2247,
+    "_index": 2221,
     "gallery": [
       "https://img.castlecore.uk/layde-church-2.jpg",
       "https://img.castlecore.uk/layde-church-3.jpg",
@@ -60197,7 +60117,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2248,
+    "_index": 2222,
     "gallery": [
       "https://img.castlecore.uk/clough-castle-down-2.jpg",
       "https://img.castlecore.uk/clough-castle-down-3.jpg",
@@ -60223,7 +60143,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2249,
+    "_index": 2223,
     "gallery": [
       "https://img.castlecore.uk/greyabbey-house-2.jpg",
       "https://img.castlecore.uk/greyabbey-house-3.jpg",
@@ -60249,7 +60169,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2250,
+    "_index": 2224,
     "gallery": [
       "https://img.castlecore.uk/drogheda-magdalene-tower-2.jpg",
       "https://img.castlecore.uk/drogheda-magdalene-tower-3.jpg",
@@ -60275,7 +60195,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2251,
+    "_index": 2225,
     "gallery": [
       "https://img.castlecore.uk/drogheda-st-laurence-gate-2.jpg",
       "https://img.castlecore.uk/drogheda-st-laurence-gate-3.jpg",
@@ -60301,7 +60221,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 2252,
+    "_index": 2226,
     "gallery": [
       "https://img.castlecore.uk/millmount-fort-drogheda-2.jpg",
       "https://img.castlecore.uk/millmount-fort-drogheda-3.jpg",
@@ -60327,7 +60247,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2253,
+    "_index": 2227,
     "gallery": [
       "https://img.castlecore.uk/ballymacpeake-castle-2.jpg",
       "https://img.castlecore.uk/ballymacpeake-castle-3.jpg",
@@ -60353,7 +60273,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2254,
+    "_index": 2228,
     "gallery": [
       "https://img.castlecore.uk/inishowen-head-tower-2.jpg",
       "https://img.castlecore.uk/inishowen-head-tower-3.jpg",
@@ -60379,7 +60299,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2255,
+    "_index": 2229,
     "gallery": [
       "https://img.castlecore.uk/stott-park-bobbin-mill-2.jpg",
       "https://img.castlecore.uk/stott-park-bobbin-mill-3.jpg",
@@ -60406,7 +60326,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 2256,
+    "_index": 2230,
     "gallery": [
       "https://img.castlecore.uk/castlerigg-stone-circle-2.jpg",
       "https://img.castlecore.uk/castlerigg-stone-circle-3.jpg",
@@ -60432,7 +60352,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2257,
+    "_index": 2231,
     "gallery": [
       "https://img.castlecore.uk/wetheral-priory-gatehouse-2.jpg",
       "https://img.castlecore.uk/wetheral-priory-gatehouse-3.jpg",
@@ -60458,7 +60378,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2258,
+    "_index": 2232,
     "gallery": [
       "https://img.castlecore.uk/ravenglass-roman-bath-house-2.jpg",
       "https://img.castlecore.uk/ravenglass-roman-bath-house-3.jpg",
@@ -60485,7 +60405,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2259,
+    "_index": 2233,
     "gallery": [
       "https://img.castlecore.uk/hardknott-roman-fort-2.jpg",
       "https://img.castlecore.uk/hardknott-roman-fort-3.jpg",
@@ -60510,7 +60430,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2260,
+    "_index": 2234,
     "gallery": [
       "https://img.castlecore.uk/conishead-priory-2.jpg",
       "https://img.castlecore.uk/conishead-priory-3.jpg",
@@ -60536,7 +60456,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2261,
+    "_index": 2235,
     "gallery": [
       "https://img.castlecore.uk/fountains-hall-2.jpg",
       "https://img.castlecore.uk/fountains-hall-3.jpg",
@@ -60563,7 +60483,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2262,
+    "_index": 2236,
     "gallery": [
       "https://img.castlecore.uk/markenfield-hall-2.jpg",
       "https://img.castlecore.uk/markenfield-hall-3.jpg",
@@ -60588,7 +60508,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 2263,
+    "_index": 2237,
     "gallery": [
       "https://img.castlecore.uk/wiki-nappa-hall.jpg"
     ]
@@ -60610,7 +60530,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 2264,
+    "_index": 2238,
     "gallery": [
       "https://img.castlecore.uk/gilling-castle-2.jpg",
       "https://img.castlecore.uk/gilling-castle-3.jpg",
@@ -60637,7 +60557,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2265,
+    "_index": 2239,
     "gallery": [
       "https://img.castlecore.uk/nunnington-hall-2.jpg",
       "https://img.castlecore.uk/nunnington-hall-3.jpg",
@@ -60663,7 +60583,7 @@ const CASTLES = [
       "haunted"
     ],
     "access": "paid",
-    "_index": 2266,
+    "_index": 2240,
     "gallery": [
       "https://img.castlecore.uk/newburgh-priory-2.jpg",
       "https://img.castlecore.uk/newburgh-priory-3.jpg",
@@ -60689,7 +60609,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2267,
+    "_index": 2241,
     "gallery": [
       "https://img.castlecore.uk/kirkham-priory-gateway-2.jpg",
       "https://img.castlecore.uk/kirkham-priory-gateway-3.jpg",
@@ -60715,7 +60635,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2268,
+    "_index": 2242,
     "gallery": [
       "https://img.castlecore.uk/whitby-abbey-headland-2.jpg",
       "https://img.castlecore.uk/whitby-abbey-headland-3.jpg",
@@ -60741,7 +60661,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2269,
+    "_index": 2243,
     "gallery": [
       "https://img.castlecore.uk/old-malton-priory-2.jpg",
       "https://img.castlecore.uk/old-malton-priory-3.jpg",
@@ -60767,7 +60687,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2270,
+    "_index": 2244,
     "gallery": [
       "https://img.castlecore.uk/st-mary-s-abbey-ruins-2.jpg",
       "https://img.castlecore.uk/st-mary-s-abbey-ruins-3.jpg",
@@ -60793,7 +60713,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2271,
+    "_index": 2245,
     "gallery": [
       "https://img.castlecore.uk/rippon-cathedral-2.jpg",
       "https://img.castlecore.uk/rippon-cathedral-3.jpg",
@@ -60820,7 +60740,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2272,
+    "_index": 2246,
     "gallery": [
       "https://img.castlecore.uk/beverley-minster-2.jpg",
       "https://img.castlecore.uk/beverley-minster-3.jpg",
@@ -60847,7 +60767,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2273,
+    "_index": 2247,
     "gallery": [
       "https://img.castlecore.uk/howden-minster-2.jpg",
       "https://img.castlecore.uk/howden-minster-3.jpg",
@@ -60872,7 +60792,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 2274,
+    "_index": 2248,
     "gallery": [
       "https://img.castlecore.uk/meaux-abbey-2.jpg"
     ]
@@ -60894,7 +60814,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 2275,
+    "_index": 2249,
     "gallery": [
       "https://img.castlecore.uk/craysthorpe-tower-2.jpg",
       "https://img.castlecore.uk/craysthorpe-tower-3.jpg",
@@ -60920,7 +60840,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2276,
+    "_index": 2250,
     "gallery": [
       "https://img.castlecore.uk/towton-battlefield-2.jpg",
       "https://img.castlecore.uk/towton-battlefield-3.jpg",
@@ -60946,7 +60866,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 2277,
+    "_index": 2251,
     "gallery": [
       "https://img.castlecore.uk/spurn-point-fort-2.jpg",
       "https://img.castlecore.uk/spurn-point-fort-3.jpg",
@@ -60971,7 +60891,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2278,
+    "_index": 2252,
     "gallery": [
       "https://img.castlecore.uk/aldborough-roman-town-2.jpg",
       "https://img.castlecore.uk/aldborough-roman-town-3.jpg",
@@ -60996,7 +60916,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2279,
+    "_index": 2253,
     "gallery": [
       "https://img.castlecore.uk/clifton-tower-york-2.jpg",
       "https://img.castlecore.uk/clifton-tower-york-3.jpg",
@@ -61023,7 +60943,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2280,
+    "_index": 2254,
     "gallery": [
       "https://img.castlecore.uk/barnard-castle-bowes-museum-2.jpg",
       "https://img.castlecore.uk/barnard-castle-bowes-museum-3.jpg",
@@ -61050,7 +60970,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2281,
+    "_index": 2255,
     "gallery": [
       "https://img.castlecore.uk/raby-castle-deer-park-2.jpg",
       "https://img.castlecore.uk/raby-castle-deer-park-3.jpg",
@@ -61077,7 +60997,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2282,
+    "_index": 2256,
     "gallery": [
       "https://img.castlecore.uk/durham-cathedral-2.jpg",
       "https://img.castlecore.uk/durham-cathedral-3.jpg",
@@ -61102,7 +61022,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2283,
+    "_index": 2257,
     "gallery": [
       "https://img.castlecore.uk/binchester-roman-fort-2.jpg",
       "https://img.castlecore.uk/binchester-roman-fort-3.jpg",
@@ -61128,7 +61048,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "free",
-    "_index": 2284,
+    "_index": 2258,
     "gallery": [
       "https://img.castlecore.uk/arbeia-roman-fort-2.jpg",
       "https://img.castlecore.uk/arbeia-roman-fort-3.jpg",
@@ -61153,7 +61073,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2285,
+    "_index": 2259,
     "gallery": [
       "https://img.castlecore.uk/segedunum-roman-fort-2.jpg",
       "https://img.castlecore.uk/segedunum-roman-fort-3.jpg",
@@ -61179,7 +61099,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2286,
+    "_index": 2260,
     "gallery": [
       "https://img.castlecore.uk/newcastle-castle-keep-2.jpg",
       "https://img.castlecore.uk/newcastle-castle-keep-3.jpg",
@@ -61206,7 +61126,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2287,
+    "_index": 2261,
     "gallery": [
       "https://img.castlecore.uk/cragside-house-2.jpg",
       "https://img.castlecore.uk/cragside-house-3.jpg",
@@ -61232,7 +61152,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2288,
+    "_index": 2262,
     "gallery": [
       "https://img.castlecore.uk/wallington-hall-2.jpg",
       "https://img.castlecore.uk/wallington-hall-3.jpg",
@@ -61259,7 +61179,7 @@ const CASTLES = [
       "dramatic-ruin"
     ],
     "access": "free",
-    "_index": 2289,
+    "_index": 2263,
     "gallery": [
       "https://img.castlecore.uk/cawfields-roman-wall-2.jpg",
       "https://img.castlecore.uk/cawfields-roman-wall-3.jpg",
@@ -61285,7 +61205,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2290,
+    "_index": 2264,
     "gallery": [
       "https://img.castlecore.uk/sycamore-gap-2.jpg",
       "https://img.castlecore.uk/sycamore-gap-3.jpg",
@@ -61312,7 +61232,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2291,
+    "_index": 2265,
     "gallery": [
       "https://img.castlecore.uk/dunham-massey-2.jpg",
       "https://img.castlecore.uk/dunham-massey-3.jpg",
@@ -61338,7 +61258,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2292,
+    "_index": 2266,
     "gallery": [
       "https://img.castlecore.uk/tatton-park-2.jpg",
       "https://img.castlecore.uk/tatton-park-3.jpg",
@@ -61364,7 +61284,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2293,
+    "_index": 2267,
     "gallery": [
       "https://img.castlecore.uk/rufford-old-hall-2.jpg",
       "https://img.castlecore.uk/rufford-old-hall-3.jpg",
@@ -61390,7 +61310,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 2294,
+    "_index": 2268,
     "gallery": [
       "https://img.castlecore.uk/turton-tower-2.jpg",
       "https://img.castlecore.uk/turton-tower-3.jpg",
@@ -61417,7 +61337,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2295,
+    "_index": 2269,
     "gallery": [
       "https://img.castlecore.uk/samlesbury-hall-2.jpg",
       "https://img.castlecore.uk/samlesbury-hall-3.jpg",
@@ -61443,7 +61363,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2296,
+    "_index": 2270,
     "gallery": [
       "https://img.castlecore.uk/halton-castle-lancashire-2.jpg",
       "https://img.castlecore.uk/halton-castle-lancashire-3.jpg",
@@ -61470,7 +61390,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2297,
+    "_index": 2271,
     "gallery": [
       "https://img.castlecore.uk/york-city-walls-2.jpg",
       "https://img.castlecore.uk/york-city-walls-3.jpg",
@@ -61496,7 +61416,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2298,
+    "_index": 2272,
     "gallery": [
       "https://img.castlecore.uk/york-minster-2.jpg",
       "https://img.castlecore.uk/york-minster-3.jpg",
@@ -61522,7 +61442,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2299,
+    "_index": 2273,
     "gallery": [
       "https://img.castlecore.uk/wentworth-woodhouse-2.jpg",
       "https://img.castlecore.uk/wentworth-woodhouse-3.jpg",
@@ -61549,7 +61469,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2300,
+    "_index": 2274,
     "gallery": [
       "https://img.castlecore.uk/brodsworth-hall-2.jpg",
       "https://img.castlecore.uk/brodsworth-hall-3.jpg",
@@ -61575,7 +61495,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2301,
+    "_index": 2275,
     "gallery": [
       "https://img.castlecore.uk/nostell-priory-2.jpg",
       "https://img.castlecore.uk/nostell-priory-3.jpg",
@@ -61602,7 +61522,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2302,
+    "_index": 2276,
     "gallery": [
       "https://img.castlecore.uk/temple-newsam-2.jpg",
       "https://img.castlecore.uk/temple-newsam-3.jpg",
@@ -61629,7 +61549,7 @@ const CASTLES = [
       "haunted"
     ],
     "access": "paid",
-    "_index": 2303,
+    "_index": 2277,
     "gallery": [
       "https://img.castlecore.uk/east-riddlesden-hall-2.jpg",
       "https://img.castlecore.uk/east-riddlesden-hall-3.jpg",
@@ -61656,7 +61576,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2304,
+    "_index": 2278,
     "gallery": [
       "https://img.castlecore.uk/treasurer-s-house-york-2.jpg",
       "https://img.castlecore.uk/treasurer-s-house-york-3.jpg",
@@ -61681,7 +61601,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2305,
+    "_index": 2279,
     "gallery": [
       "https://img.castlecore.uk/sandal-castle-park-2.jpg",
       "https://img.castlecore.uk/sandal-castle-park-3.jpg",
@@ -61708,7 +61628,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "free",
-    "_index": 2306,
+    "_index": 2280,
     "gallery": [
       "https://img.castlecore.uk/pickering-church-wall-paintings-2.jpg",
       "https://img.castlecore.uk/pickering-church-wall-paintings-3.jpg",
@@ -61734,7 +61654,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 2307,
+    "_index": 2281,
     "gallery": [
       "https://img.castlecore.uk/sheriff-hutton-castle-ruin-2.jpg",
       "https://img.castlecore.uk/sheriff-hutton-castle-ruin-3.jpg",
@@ -61760,7 +61680,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2308,
+    "_index": 2282,
     "gallery": [
       "https://img.castlecore.uk/ravenscar-alum-works-2.jpg",
       "https://img.castlecore.uk/ravenscar-alum-works-3.jpg",
@@ -61786,7 +61706,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2309,
+    "_index": 2283,
     "gallery": [
       "https://img.castlecore.uk/stanwick-iron-age-fortifications-2.jpg",
       "https://img.castlecore.uk/stanwick-iron-age-fortifications-3.jpg",
@@ -61812,7 +61732,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2310,
+    "_index": 2284,
     "gallery": [
       "https://img.castlecore.uk/wiki-thornton-curtis-abbey-gatehouse.jpg"
     ]
@@ -61835,7 +61755,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2311,
+    "_index": 2285,
     "gallery": [
       "https://img.castlecore.uk/tupholme-abbey-2.jpg",
       "https://img.castlecore.uk/tupholme-abbey-3.jpg",
@@ -61860,7 +61780,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 2312,
+    "_index": 2286,
     "gallery": [
       "https://img.castlecore.uk/barlings-abbey-2.jpg",
       "https://img.castlecore.uk/barlings-abbey-3.jpg",
@@ -61886,7 +61806,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2313,
+    "_index": 2287,
     "gallery": [
       "https://img.castlecore.uk/sempringham-abbey-2.jpg",
       "https://img.castlecore.uk/sempringham-abbey-3.jpg",
@@ -61912,7 +61832,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2314,
+    "_index": 2288,
     "gallery": [
       "https://img.castlecore.uk/south-witham-preceptory-2.jpg",
       "https://img.castlecore.uk/south-witham-preceptory-3.jpg",
@@ -61938,7 +61858,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2315,
+    "_index": 2289,
     "gallery": [
       "https://img.castlecore.uk/stainsby-mill-2.jpg",
       "https://img.castlecore.uk/stainsby-mill-3.jpg",
@@ -61965,7 +61885,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2316,
+    "_index": 2290,
     "gallery": [
       "https://img.castlecore.uk/arbor-low-stone-circle-2.jpg",
       "https://img.castlecore.uk/arbor-low-stone-circle-3.jpg",
@@ -61992,7 +61912,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2317,
+    "_index": 2291,
     "gallery": [
       "https://img.castlecore.uk/sutton-scarsdale-hall-2.jpg",
       "https://img.castlecore.uk/sutton-scarsdale-hall-3.jpg",
@@ -62019,7 +61939,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2318,
+    "_index": 2292,
     "gallery": [
       "https://img.castlecore.uk/calke-abbey-2.jpg",
       "https://img.castlecore.uk/calke-abbey-3.jpg",
@@ -62045,7 +61965,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2319,
+    "_index": 2293,
     "gallery": [
       "https://img.castlecore.uk/croxden-abbey-remains-2.jpg",
       "https://img.castlecore.uk/croxden-abbey-remains-3.jpg",
@@ -62072,7 +61992,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2320,
+    "_index": 2294,
     "gallery": [
       "https://img.castlecore.uk/lichfield-cathedral-2.jpg",
       "https://img.castlecore.uk/lichfield-cathedral-3.jpg",
@@ -62098,7 +62018,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2321,
+    "_index": 2295,
     "gallery": [
       "https://img.castlecore.uk/wall-roman-site-2.jpg",
       "https://img.castlecore.uk/wall-roman-site-3.jpg",
@@ -62124,7 +62044,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2322,
+    "_index": 2296,
     "gallery": [
       "https://img.castlecore.uk/polesworth-abbey-2.jpg",
       "https://img.castlecore.uk/polesworth-abbey-3.jpg",
@@ -62149,7 +62069,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2323
+    "_index": 2297
   },
   {
     "name": "Stoneleigh Abbey",
@@ -62169,7 +62089,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 2324,
+    "_index": 2298,
     "gallery": [
       "https://img.castlecore.uk/stoneleigh-abbey-2.jpg",
       "https://img.castlecore.uk/stoneleigh-abbey-3.jpg",
@@ -62196,7 +62116,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2325,
+    "_index": 2299,
     "gallery": [
       "https://img.castlecore.uk/baddesley-clinton-2.jpg",
       "https://img.castlecore.uk/baddesley-clinton-3.jpg",
@@ -62223,7 +62143,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2326,
+    "_index": 2300,
     "gallery": [
       "https://img.castlecore.uk/packwood-house-2.jpg",
       "https://img.castlecore.uk/packwood-house-3.jpg",
@@ -62249,7 +62169,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2327,
+    "_index": 2301,
     "gallery": [
       "https://img.castlecore.uk/compton-verney-2.jpg",
       "https://img.castlecore.uk/compton-verney-3.jpg",
@@ -62275,7 +62195,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2328,
+    "_index": 2302,
     "gallery": [
       "https://img.castlecore.uk/upton-house-2.jpg",
       "https://img.castlecore.uk/upton-house-3.jpg",
@@ -62301,7 +62221,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "paid",
-    "_index": 2329
+    "_index": 2303
   },
   {
     "name": "Canons Ashby",
@@ -62322,7 +62242,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2330,
+    "_index": 2304,
     "gallery": [
       "https://img.castlecore.uk/canons-ashby-2.jpg",
       "https://img.castlecore.uk/canons-ashby-3.jpg",
@@ -62348,7 +62268,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2331,
+    "_index": 2305,
     "gallery": [
       "https://img.castlecore.uk/delapre-abbey-2.jpg",
       "https://img.castlecore.uk/delapre-abbey-3.jpg",
@@ -62374,7 +62294,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2334,
+    "_index": 2306,
     "gallery": [
       "https://img.castlecore.uk/irthlingborough-castle-2.jpg",
       "https://img.castlecore.uk/irthlingborough-castle-3.jpg",
@@ -62400,7 +62320,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2335,
+    "_index": 2307,
     "gallery": [
       "https://img.castlecore.uk/lilbourne-castle-2.jpg",
       "https://img.castlecore.uk/lilbourne-castle-3.jpg",
@@ -62427,7 +62347,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2336,
+    "_index": 2308,
     "gallery": [
       "https://img.castlecore.uk/coughton-court-2.jpg",
       "https://img.castlecore.uk/coughton-court-3.jpg",
@@ -62454,7 +62374,7 @@ const CASTLES = [
       "haunted"
     ],
     "access": "paid",
-    "_index": 2337,
+    "_index": 2309,
     "gallery": [
       "https://img.castlecore.uk/harvington-hall-2.jpg",
       "https://img.castlecore.uk/harvington-hall-3.jpg",
@@ -62480,7 +62400,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2338,
+    "_index": 2310,
     "gallery": [
       "https://img.castlecore.uk/hanbury-hall-2.jpg",
       "https://img.castlecore.uk/hanbury-hall-3.jpg",
@@ -62507,7 +62427,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2339,
+    "_index": 2311,
     "gallery": [
       "https://img.castlecore.uk/croome-court-2.jpg",
       "https://img.castlecore.uk/croome-court-3.jpg",
@@ -62533,7 +62453,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2340,
+    "_index": 2312,
     "gallery": [
       "https://img.castlecore.uk/bewdley-museum-2.jpg",
       "https://img.castlecore.uk/bewdley-museum-3.jpg",
@@ -62559,7 +62479,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2341,
+    "_index": 2313,
     "gallery": [
       "https://img.castlecore.uk/ribchester-roman-fort-2.jpg",
       "https://img.castlecore.uk/ribchester-roman-fort-3.jpg",
@@ -62586,7 +62506,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2342,
+    "_index": 2314,
     "gallery": [
       "https://img.castlecore.uk/brockhampton-estate-2.jpg",
       "https://img.castlecore.uk/brockhampton-estate-3.jpg",
@@ -62612,7 +62532,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2343,
+    "_index": 2315,
     "gallery": [
       "https://img.castlecore.uk/berrington-hall-2.jpg",
       "https://img.castlecore.uk/berrington-hall-3.jpg",
@@ -62637,7 +62557,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2344,
+    "_index": 2316,
     "gallery": [
       "https://img.castlecore.uk/hellens-manor-2.jpg",
       "https://img.castlecore.uk/hellens-manor-3.jpg",
@@ -62663,7 +62583,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2345,
+    "_index": 2317,
     "gallery": [
       "https://img.castlecore.uk/hampton-court-herefordshire-2.jpg",
       "https://img.castlecore.uk/hampton-court-herefordshire-3.jpg",
@@ -62691,7 +62611,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2346,
+    "_index": 2318,
     "gallery": [
       "https://img.castlecore.uk/kilpeck-church-2.jpg",
       "https://img.castlecore.uk/kilpeck-church-3.jpg",
@@ -62718,7 +62638,7 @@ const CASTLES = [
       "well-preserved"
     ],
     "access": "free",
-    "_index": 2347,
+    "_index": 2319,
     "gallery": [
       "https://img.castlecore.uk/abbey-dore-2.jpg",
       "https://img.castlecore.uk/abbey-dore-3.jpg",
@@ -62744,7 +62664,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2348,
+    "_index": 2320,
     "gallery": [
       "https://img.castlecore.uk/llanthony-secunda-priory-2.jpg",
       "https://img.castlecore.uk/llanthony-secunda-priory-3.jpg",
@@ -62770,7 +62690,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2349,
+    "_index": 2321,
     "gallery": [
       "https://img.castlecore.uk/kingswood-abbey-gatehouse-2.jpg",
       "https://img.castlecore.uk/kingswood-abbey-gatehouse-3.jpg",
@@ -62795,7 +62715,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2350,
+    "_index": 2322,
     "gallery": [
       "https://img.castlecore.uk/gloucester-blackfriars-2.jpg",
       "https://img.castlecore.uk/gloucester-blackfriars-3.jpg",
@@ -62820,7 +62740,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2351,
+    "_index": 2323,
     "gallery": [
       "https://img.castlecore.uk/prinknash-abbey-2.jpg",
       "https://img.castlecore.uk/prinknash-abbey-3.jpg",
@@ -62846,7 +62766,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2352,
+    "_index": 2324,
     "gallery": [
       "https://img.castlecore.uk/stanley-pontlarge-tithe-barn-2.jpg",
       "https://img.castlecore.uk/stanley-pontlarge-tithe-barn-3.jpg",
@@ -62873,7 +62793,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 2353,
+    "_index": 2325,
     "gallery": [
       "https://img.castlecore.uk/white-castle-monmouthshire-2.jpg",
       "https://img.castlecore.uk/white-castle-monmouthshire-3.jpg",
@@ -62900,7 +62820,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2354,
+    "_index": 2326,
     "gallery": [
       "https://img.castlecore.uk/bramall-hall-2.jpg",
       "https://img.castlecore.uk/bramall-hall-3.jpg",
@@ -62927,7 +62847,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2355,
+    "_index": 2327,
     "gallery": [
       "https://img.castlecore.uk/chetham-s-library-2.jpg",
       "https://img.castlecore.uk/chetham-s-library-3.jpg",
@@ -62953,7 +62873,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2356,
+    "_index": 2328,
     "gallery": [
       "https://img.castlecore.uk/sandbach-crosses-2.jpg",
       "https://img.castlecore.uk/sandbach-crosses-3.jpg",
@@ -62978,7 +62898,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2357,
+    "_index": 2329,
     "gallery": [
       "https://img.castlecore.uk/birkenhead-priory-2.jpg",
       "https://img.castlecore.uk/birkenhead-priory-3.jpg",
@@ -63005,7 +62925,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2358,
+    "_index": 2330,
     "gallery": [
       "https://img.castlecore.uk/speke-hall-2.jpg",
       "https://img.castlecore.uk/speke-hall-3.jpg",
@@ -63031,7 +62951,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "free",
-    "_index": 2359,
+    "_index": 2331,
     "gallery": [
       "https://img.castlecore.uk/croxteth-hall-2.jpg",
       "https://img.castlecore.uk/croxteth-hall-3.jpg",
@@ -63057,7 +62977,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2360,
+    "_index": 2332,
     "gallery": [
       "https://img.castlecore.uk/boscobel-house-2.jpg",
       "https://img.castlecore.uk/boscobel-house-3.jpg",
@@ -63083,7 +63003,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2361,
+    "_index": 2333,
     "gallery": [
       "https://img.castlecore.uk/stokesay-court-2.jpg",
       "https://img.castlecore.uk/stokesay-court-3.jpg",
@@ -63109,7 +63029,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2362,
+    "_index": 2334,
     "gallery": [
       "https://img.castlecore.uk/benthall-hall-2.jpg",
       "https://img.castlecore.uk/benthall-hall-3.jpg",
@@ -63136,7 +63056,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2363,
+    "_index": 2335,
     "gallery": [
       "https://img.castlecore.uk/attingham-park-2.jpg",
       "https://img.castlecore.uk/attingham-park-3.jpg",
@@ -63161,7 +63081,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2364,
+    "_index": 2336,
     "gallery": [
       "https://img.castlecore.uk/wroxter-roman-city-baths-2.jpg",
       "https://img.castlecore.uk/wroxter-roman-city-baths-3.jpg",
@@ -63188,7 +63108,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2365,
+    "_index": 2337,
     "gallery": [
       "https://img.castlecore.uk/iron-bridge-2.jpg",
       "https://img.castlecore.uk/iron-bridge-3.jpg",
@@ -63215,7 +63135,7 @@ const CASTLES = [
       "filming-location"
     ],
     "access": "paid",
-    "_index": 2366,
+    "_index": 2338,
     "gallery": [
       "https://img.castlecore.uk/wilton-house-2.jpg",
       "https://img.castlecore.uk/wilton-house-3.jpg",
@@ -63241,7 +63161,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2367,
+    "_index": 2339,
     "gallery": [
       "https://img.castlecore.uk/avebury-manor-2.jpg",
       "https://img.castlecore.uk/avebury-manor-3.jpg",
@@ -63268,7 +63188,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2368,
+    "_index": 2340,
     "gallery": [
       "https://img.castlecore.uk/bradford-on-avon-tithe-barn-2.jpg",
       "https://img.castlecore.uk/bradford-on-avon-tithe-barn-3.jpg",
@@ -63295,7 +63215,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2369,
+    "_index": 2341,
     "gallery": [
       "https://img.castlecore.uk/great-chalfield-manor-2.jpg",
       "https://img.castlecore.uk/great-chalfield-manor-3.jpg",
@@ -63322,7 +63242,7 @@ const CASTLES = [
       "filming-location"
     ],
     "access": "paid",
-    "_index": 2370,
+    "_index": 2342,
     "gallery": [
       "https://img.castlecore.uk/wardour-old-castle-2.jpg",
       "https://img.castlecore.uk/wardour-old-castle-3.jpg",
@@ -63349,7 +63269,7 @@ const CASTLES = [
       "filming-location"
     ],
     "access": "paid",
-    "_index": 2371,
+    "_index": 2343,
     "gallery": [
       "https://img.castlecore.uk/montacute-house-2.jpg",
       "https://img.castlecore.uk/montacute-house-3.jpg",
@@ -63376,7 +63296,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2372,
+    "_index": 2344,
     "gallery": [
       "https://img.castlecore.uk/barrington-court-2.jpg",
       "https://img.castlecore.uk/barrington-court-3.jpg",
@@ -63402,7 +63322,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2373,
+    "_index": 2345,
     "gallery": [
       "https://img.castlecore.uk/tintinhull-garden-2.jpg",
       "https://img.castlecore.uk/tintinhull-garden-3.jpg",
@@ -63428,7 +63348,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2374,
+    "_index": 2346,
     "gallery": [
       "https://img.castlecore.uk/lytes-cary-manor-2.jpg",
       "https://img.castlecore.uk/lytes-cary-manor-3.jpg",
@@ -63454,7 +63374,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2375,
+    "_index": 2347,
     "gallery": [
       "https://img.castlecore.uk/nether-stowey-castle-2.jpg",
       "https://img.castlecore.uk/nether-stowey-castle-3.jpg",
@@ -63481,7 +63401,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2376,
+    "_index": 2348,
     "gallery": [
       "https://img.castlecore.uk/wells-cathedral-2.jpg",
       "https://img.castlecore.uk/wells-cathedral-3.jpg",
@@ -63506,7 +63426,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2377,
+    "_index": 2349,
     "gallery": [
       "https://img.castlecore.uk/farleigh-house-2.jpg",
       "https://img.castlecore.uk/farleigh-house-3.jpg",
@@ -63532,7 +63452,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2378,
+    "_index": 2350,
     "gallery": [
       "https://img.castlecore.uk/clevedon-court-2.jpg",
       "https://img.castlecore.uk/clevedon-court-3.jpg",
@@ -63558,7 +63478,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "free",
-    "_index": 2379,
+    "_index": 2351,
     "gallery": [
       "https://img.castlecore.uk/kelston-round-hill-2.jpg",
       "https://img.castlecore.uk/kelston-round-hill-3.jpg",
@@ -63585,7 +63505,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2380,
+    "_index": 2352,
     "gallery": [
       "https://img.castlecore.uk/a-la-ronde-2.jpg",
       "https://img.castlecore.uk/a-la-ronde-3.jpg",
@@ -63611,7 +63531,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2381,
+    "_index": 2353,
     "gallery": [
       "https://img.castlecore.uk/buckland-abbey-2.jpg",
       "https://img.castlecore.uk/buckland-abbey-3.jpg",
@@ -63637,7 +63557,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2382,
+    "_index": 2354,
     "gallery": [
       "https://img.castlecore.uk/torre-abbey-2.jpg",
       "https://img.castlecore.uk/torre-abbey-3.jpg",
@@ -63663,7 +63583,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2383
+    "_index": 2355
   },
   {
     "name": "Kingswear Castle",
@@ -63683,7 +63603,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2384,
+    "_index": 2356,
     "gallery": [
       "https://img.castlecore.uk/kingswear-castle-2.jpg",
       "https://img.castlecore.uk/kingswear-castle-3.jpg",
@@ -63709,7 +63629,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2385,
+    "_index": 2357,
     "gallery": [
       "https://img.castlecore.uk/rougemont-castle-exeter-2.jpg",
       "https://img.castlecore.uk/rougemont-castle-exeter-3.jpg",
@@ -63736,7 +63656,7 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 2386,
+    "_index": 2358,
     "gallery": [
       "https://img.castlecore.uk/pendennis-castle-falmouth-2.jpg",
       "https://img.castlecore.uk/pendennis-castle-falmouth-3.jpg",
@@ -63763,7 +63683,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 2387,
+    "_index": 2359,
     "gallery": [
       "https://img.castlecore.uk/st-catherine-s-castle-2.jpg",
       "https://img.castlecore.uk/st-catherine-s-castle-3.jpg",
@@ -63788,7 +63708,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2388,
+    "_index": 2360,
     "gallery": [
       "https://img.castlecore.uk/ince-castle-2.jpg",
       "https://img.castlecore.uk/ince-castle-3.jpg",
@@ -63815,7 +63735,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2389,
+    "_index": 2361,
     "gallery": [
       "https://img.castlecore.uk/cotehele-house-2.jpg",
       "https://img.castlecore.uk/cotehele-house-3.jpg",
@@ -63842,7 +63762,7 @@ const CASTLES = [
       "kid-friendly"
     ],
     "access": "paid",
-    "_index": 2390,
+    "_index": 2362,
     "gallery": [
       "https://img.castlecore.uk/lanhydrock-house-2.jpg",
       "https://img.castlecore.uk/lanhydrock-house-3.jpg",
@@ -63869,7 +63789,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2391,
+    "_index": 2363,
     "gallery": [
       "https://img.castlecore.uk/prideaux-place-2.jpg",
       "https://img.castlecore.uk/prideaux-place-3.jpg",
@@ -63895,7 +63815,7 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "paid",
-    "_index": 2392,
+    "_index": 2364,
     "gallery": [
       "https://img.castlecore.uk/godolphin-house-2.jpg",
       "https://img.castlecore.uk/godolphin-house-3.jpg",
@@ -63920,7 +63840,7 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2393
+    "_index": 2365
   },
   {
     "name": "Ballintotis Castle",
@@ -63940,7 +63860,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2395,
+    "_index": 2366,
     "gallery": [
       "https://img.castlecore.uk/ballintotis-castle-2.jpg",
       "https://img.castlecore.uk/ballintotis-castle-3.jpg",
@@ -63966,7 +63886,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2397,
+    "_index": 2367,
     "gallery": [
       "https://img.castlecore.uk/kilgobbin-castle-cork-2.jpg",
       "https://img.castlecore.uk/kilgobbin-castle-cork-3.jpg",
@@ -63992,7 +63912,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2398,
+    "_index": 2368,
     "gallery": [
       "https://img.castlecore.uk/ballynacorra-castle-2.jpg",
       "https://img.castlecore.uk/ballynacorra-castle-3.jpg",
@@ -64018,7 +63938,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2399
+    "_index": 2369
   },
   {
     "name": "Kilcolman Castle Spenser",
@@ -64038,7 +63958,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2400
+    "_index": 2370
   },
   {
     "name": "Dromana Gate",
@@ -64058,7 +63978,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2401,
+    "_index": 2371,
     "gallery": [
       "https://img.castlecore.uk/dromana-gate-2.jpg",
       "https://img.castlecore.uk/dromana-gate-3.jpg",
@@ -64084,7 +64004,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2402,
+    "_index": 2372,
     "gallery": [
       "https://img.castlecore.uk/kilbarry-castle-waterford-2.jpg",
       "https://img.castlecore.uk/kilbarry-castle-waterford-3.jpg",
@@ -64110,7 +64030,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2403
+    "_index": 2373
   },
   {
     "name": "Coolhull Castle Wexford",
@@ -64130,7 +64050,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2404
+    "_index": 2374
   },
   {
     "name": "Mayglass Tower",
@@ -64150,7 +64070,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2405,
+    "_index": 2375,
     "gallery": [
       "https://img.castlecore.uk/mayglass-tower-2.jpg",
       "https://img.castlecore.uk/mayglass-tower-3.jpg",
@@ -64176,7 +64096,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2406,
+    "_index": 2376,
     "gallery": [
       "https://img.castlecore.uk/kilcloggan-castle-2.jpg",
       "https://img.castlecore.uk/kilcloggan-castle-3.jpg",
@@ -64202,7 +64122,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2407,
+    "_index": 2377,
     "gallery": [
       "https://img.castlecore.uk/lady-s-island-castle-2.jpg",
       "https://img.castlecore.uk/lady-s-island-castle-3.jpg",
@@ -64228,7 +64148,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2408,
+    "_index": 2378,
     "gallery": [
       "https://img.castlecore.uk/selskar-abbey-2.jpg",
       "https://img.castlecore.uk/selskar-abbey-3.jpg",
@@ -64254,7 +64174,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2409,
+    "_index": 2379,
     "gallery": [
       "https://img.castlecore.uk/ferrycarrig-castle-2.jpg",
       "https://img.castlecore.uk/ferrycarrig-castle-3.jpg",
@@ -64280,7 +64200,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2410,
+    "_index": 2380,
     "gallery": [
       "https://img.castlecore.uk/moyglare-castle-2.jpg",
       "https://img.castlecore.uk/moyglare-castle-3.jpg",
@@ -64306,7 +64226,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2411,
+    "_index": 2381,
     "gallery": [
       "https://img.castlecore.uk/lackan-castle-2.jpg",
       "https://img.castlecore.uk/lackan-castle-3.jpg",
@@ -64332,7 +64252,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2412,
+    "_index": 2382,
     "gallery": [
       "https://img.castlecore.uk/tristernagh-abbey-2.jpg"
     ]
@@ -64355,7 +64275,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2413,
+    "_index": 2383,
     "gallery": [
       "https://img.castlecore.uk/dowdstown-castle-meath-2.jpg",
       "https://img.castlecore.uk/dowdstown-castle-meath-3.jpg",
@@ -64381,7 +64301,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2414,
+    "_index": 2384,
     "gallery": [
       "https://img.castlecore.uk/killeen-castle-meath-2.jpg",
       "https://img.castlecore.uk/killeen-castle-meath-3.jpg",
@@ -64407,7 +64327,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2415,
+    "_index": 2385,
     "gallery": [
       "https://img.castlecore.uk/rathmullan-castle-meath-2.jpg",
       "https://img.castlecore.uk/rathmullan-castle-meath-3.jpg",
@@ -64433,7 +64353,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2416,
+    "_index": 2386,
     "gallery": [
       "https://img.castlecore.uk/drumconrath-castle-2.jpg",
       "https://img.castlecore.uk/drumconrath-castle-3.jpg",
@@ -64459,7 +64379,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2417,
+    "_index": 2387,
     "gallery": [
       "https://img.castlecore.uk/proleek-dolmen-2.jpg",
       "https://img.castlecore.uk/proleek-dolmen-3.jpg",
@@ -64485,7 +64405,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2418,
+    "_index": 2388,
     "gallery": [
       "https://img.castlecore.uk/annagassan-viking-fort-2.jpg",
       "https://img.castlecore.uk/annagassan-viking-fort-3.jpg",
@@ -64511,7 +64431,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2419,
+    "_index": 2389,
     "gallery": [
       "https://img.castlecore.uk/kildemock-church-jumping-2.jpg",
       "https://img.castlecore.uk/kildemock-church-jumping-3.jpg",
@@ -64537,7 +64457,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "hotel",
-    "_index": 2420,
+    "_index": 2390,
     "gallery": [
       "https://img.castlecore.uk/ballyfin-demesne-2.jpg",
       "https://img.castlecore.uk/ballyfin-demesne-3.jpg",
@@ -64563,7 +64483,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2421,
+    "_index": 2391,
     "gallery": [
       "https://img.castlecore.uk/sharavogue-castle-2.jpg",
       "https://img.castlecore.uk/sharavogue-castle-3.jpg",
@@ -64589,7 +64509,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2422,
+    "_index": 2392,
     "gallery": [
       "https://img.castlecore.uk/fancroft-mill-castle-2.jpg",
       "https://img.castlecore.uk/fancroft-mill-castle-3.jpg",
@@ -64615,7 +64535,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2423,
+    "_index": 2393,
     "gallery": [
       "https://img.castlecore.uk/gormanston-castle-2.jpg",
       "https://img.castlecore.uk/gormanston-castle-3.jpg",
@@ -64641,7 +64561,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2424,
+    "_index": 2394,
     "gallery": [
       "https://img.castlecore.uk/painestown-church-2.jpg",
       "https://img.castlecore.uk/painestown-church-3.jpg",
@@ -64667,7 +64587,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2425,
+    "_index": 2395,
     "gallery": [
       "https://img.castlecore.uk/piercetown-castle-2.jpg",
       "https://img.castlecore.uk/piercetown-castle-3.jpg",
@@ -64693,7 +64613,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2427,
+    "_index": 2396,
     "gallery": [
       "https://img.castlecore.uk/ballylaneen-castle-2.jpg",
       "https://img.castlecore.uk/ballylaneen-castle-3.jpg"
@@ -64716,7 +64636,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2428,
+    "_index": 2397,
     "gallery": [
       "https://img.castlecore.uk/clonea-castle-waterford-2.jpg",
       "https://img.castlecore.uk/clonea-castle-waterford-3.jpg",
@@ -64742,7 +64662,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2429,
+    "_index": 2398,
     "gallery": [
       "https://img.castlecore.uk/knockmealdown-castle-2.jpg",
       "https://img.castlecore.uk/knockmealdown-castle-3.jpg",
@@ -64769,7 +64689,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2430,
+    "_index": 2399,
     "gallery": [
       "https://img.castlecore.uk/dunamase-rock-summit-2.jpg",
       "https://img.castlecore.uk/dunamase-rock-summit-3.jpg",
@@ -64795,7 +64715,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2431,
+    "_index": 2400,
     "gallery": [
       "https://img.castlecore.uk/granagh-castle-kilkenny-2.jpg",
       "https://img.castlecore.uk/granagh-castle-kilkenny-3.jpg",
@@ -64821,7 +64741,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2432,
+    "_index": 2401,
     "gallery": [
       "https://img.castlecore.uk/tullaroan-round-tower-2.jpg",
       "https://img.castlecore.uk/tullaroan-round-tower-3.jpg",
@@ -64846,7 +64766,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2433,
+    "_index": 2402,
     "gallery": [
       "https://img.castlecore.uk/freshford-church-2.jpg",
       "https://img.castlecore.uk/freshford-church-3.jpg",
@@ -64872,7 +64792,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2434,
+    "_index": 2403,
     "gallery": [
       "https://img.castlecore.uk/clogh-castle-kilkenny-2.jpg",
       "https://img.castlecore.uk/clogh-castle-kilkenny-3.jpg",
@@ -64897,7 +64817,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2435,
+    "_index": 2404,
     "gallery": [
       "https://img.castlecore.uk/ballyshannon-castle-2.jpg",
       "https://img.castlecore.uk/ballyshannon-castle-3.jpg",
@@ -64923,7 +64843,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2436,
+    "_index": 2405,
     "gallery": [
       "https://img.castlecore.uk/horn-head-tower-2.jpg",
       "https://img.castlecore.uk/horn-head-tower-3.jpg",
@@ -64949,7 +64869,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2437,
+    "_index": 2406,
     "gallery": [
       "https://img.castlecore.uk/killydonnell-friary-2.jpg",
       "https://img.castlecore.uk/killydonnell-friary-3.jpg",
@@ -64975,7 +64895,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2438,
+    "_index": 2407,
     "gallery": [
       "https://img.castlecore.uk/magh-adair-2.jpg",
       "https://img.castlecore.uk/magh-adair-3.jpg",
@@ -65001,7 +64921,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2439,
+    "_index": 2408,
     "gallery": [
       "https://img.castlecore.uk/inchicronan-church-2.jpg",
       "https://img.castlecore.uk/inchicronan-church-3.jpg"
@@ -65025,7 +64945,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2440,
+    "_index": 2409,
     "gallery": [
       "https://img.castlecore.uk/aillwee-cave-tower-2.jpg",
       "https://img.castlecore.uk/aillwee-cave-tower-3.jpg",
@@ -65051,7 +64971,7 @@ const CASTLES = [
       "family-friendly"
     ],
     "access": "paid",
-    "_index": 2441,
+    "_index": 2410,
     "gallery": [
       "https://img.castlecore.uk/bunratty-castle-village-2.jpg",
       "https://img.castlecore.uk/bunratty-castle-village-3.jpg",
@@ -65077,7 +64997,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2442,
+    "_index": 2411,
     "gallery": [
       "https://img.castlecore.uk/cahercommaun-fort-2.jpg",
       "https://img.castlecore.uk/cahercommaun-fort-3.jpg",
@@ -65103,7 +65023,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2444,
+    "_index": 2412,
     "gallery": [
       "https://img.castlecore.uk/ballycorick-castle-2.jpg",
       "https://img.castlecore.uk/ballycorick-castle-3.jpg",
@@ -65128,7 +65048,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2445,
+    "_index": 2413,
     "gallery": [
       "https://img.castlecore.uk/kilrush-church-2.jpg",
       "https://img.castlecore.uk/kilrush-church-3.jpg",
@@ -65153,7 +65073,7 @@ const CASTLES = [
       "museum"
     ],
     "access": "paid",
-    "_index": 2446
+    "_index": 2414
   },
   {
     "name": "Spanish Point Tower",
@@ -65173,7 +65093,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2447,
+    "_index": 2415,
     "gallery": [
       "https://img.castlecore.uk/spanish-point-tower-2.jpg",
       "https://img.castlecore.uk/spanish-point-tower-3.jpg",
@@ -65199,7 +65119,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2448,
+    "_index": 2416,
     "gallery": [
       "https://img.castlecore.uk/abbeydorney-abbey-2.jpg",
       "https://img.castlecore.uk/abbeydorney-abbey-3.jpg",
@@ -65225,7 +65145,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2449,
+    "_index": 2417,
     "gallery": [
       "https://img.castlecore.uk/ballingskelligs-castle-2.jpg",
       "https://img.castlecore.uk/ballingskelligs-castle-3.jpg",
@@ -65251,7 +65171,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2450,
+    "_index": 2418,
     "gallery": [
       "https://img.castlecore.uk/castlecove-castle-2.jpg",
       "https://img.castlecore.uk/castlecove-castle-3.jpg",
@@ -65277,7 +65197,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2451,
+    "_index": 2419,
     "gallery": [
       "https://img.castlecore.uk/castlegregory-castle-2.jpg",
       "https://img.castlecore.uk/castlegregory-castle-3.jpg",
@@ -65303,7 +65223,7 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 2452,
+    "_index": 2420,
     "gallery": [
       "https://img.castlecore.uk/ballybunnion-castle-2.jpg",
       "https://img.castlecore.uk/ballybunnion-castle-3.jpg",
@@ -65329,7 +65249,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2453,
+    "_index": 2421,
     "gallery": [
       "https://img.castlecore.uk/loughmore-castle-2.jpg",
       "https://img.castlecore.uk/loughmore-castle-3.jpg",
@@ -65355,7 +65275,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2454,
+    "_index": 2422,
     "gallery": [
       "https://img.castlecore.uk/killenaule-castle-2.jpg",
       "https://img.castlecore.uk/killenaule-castle-3.jpg",
@@ -65381,7 +65301,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2456,
+    "_index": 2423,
     "gallery": [
       "https://img.castlecore.uk/castle-otway-2.jpg",
       "https://img.castlecore.uk/castle-otway-3.jpg",
@@ -65407,7 +65327,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2457,
+    "_index": 2424,
     "gallery": [
       "https://img.castlecore.uk/newcastle-tipperary-castle-2.jpg",
       "https://img.castlecore.uk/newcastle-tipperary-castle-3.jpg",
@@ -65432,7 +65352,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castle-bernard-bandon.jpg",
     "description": "Grand house burned during the Irish Civil War, now a haunting ruin.",
-    "_index": 2459,
+    "_index": 2425,
     "gallery": [
       "https://img.castlecore.uk/castle-bernard-bandon-2.jpg"
     ]
@@ -65454,7 +65374,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballynaclogh-castle.jpg",
     "description": "Small tower house ruin near Nenagh.",
-    "_index": 2460,
+    "_index": 2426,
     "gallery": [
       "https://img.castlecore.uk/ballynaclogh-castle-2.jpg",
       "https://img.castlecore.uk/ballynaclogh-castle-3.jpg",
@@ -65479,7 +65399,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballylooby-castle.jpg",
     "description": "Tower house ruin in the Suir Valley.",
-    "_index": 2461,
+    "_index": 2427,
     "gallery": [
       "https://img.castlecore.uk/ballylooby-castle-2.jpg",
       "https://img.castlecore.uk/ballylooby-castle-3.jpg",
@@ -65505,7 +65425,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/hore-abbey-cashel.jpg",
     "description": "Cistercian abbey near the Rock of Cashel with stunning views.",
-    "_index": 2462,
+    "_index": 2428,
     "gallery": [
       "https://img.castlecore.uk/hore-abbey-cashel-2.jpg",
       "https://img.castlecore.uk/hore-abbey-cashel-3.jpg",
@@ -65530,7 +65450,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/carriggundel-castle.jpg",
     "description": "Riverside castle ruin on the Shannon.",
-    "_index": 2463,
+    "_index": 2429,
     "gallery": [
       "https://img.castlecore.uk/carriggundel-castle-2.jpg",
       "https://img.castlecore.uk/carriggundel-castle-3.jpg",
@@ -65555,7 +65475,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kildare-castle.jpg",
     "description": "Norman castle ruin in the heart of Kildare town.",
-    "_index": 2464,
+    "_index": 2430,
     "gallery": [
       "https://img.castlecore.uk/kildare-castle-2.jpg",
       "https://img.castlecore.uk/kildare-castle-3.jpg",
@@ -65580,7 +65500,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballymore-eustace-castle.jpg",
     "description": "Anglo-Norman castle fragment in the village.",
-    "_index": 2465,
+    "_index": 2431,
     "gallery": [
       "https://img.castlecore.uk/ballymore-eustace-castle-2.jpg",
       "https://img.castlecore.uk/ballymore-eustace-castle-3.jpg",
@@ -65603,7 +65523,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/leixlip-castle.jpg",
     "description": "One of the oldest inhabited castles in Ireland.",
-    "_index": 2466,
+    "_index": 2432,
     "gallery": [
       "https://img.castlecore.uk/leixlip-castle-2.jpg",
       "https://img.castlecore.uk/leixlip-castle-3.jpg",
@@ -65628,7 +65548,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/tully-castle-kildare.jpg",
     "description": "Tower house ruin in the Curragh area.",
-    "_index": 2467,
+    "_index": 2433,
     "gallery": [
       "https://img.castlecore.uk/tully-castle-kildare-2.jpg",
       "https://img.castlecore.uk/tully-castle-kildare-3.jpg",
@@ -65653,7 +65573,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "",
     "description": "Five-storey tower house with bawn wall near Kilkenny.",
-    "_index": 2468
+    "_index": 2434
   },
   {
     "name": "Tullaroan Castle",
@@ -65672,7 +65592,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/tullaroan-castle.jpg",
     "description": "Tower house ruin in the village of Tullaroan.",
-    "_index": 2469,
+    "_index": 2435,
     "gallery": [
       "https://img.castlecore.uk/tullaroan-castle-2.jpg",
       "https://img.castlecore.uk/tullaroan-castle-3.jpg",
@@ -65695,7 +65615,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/shankill-castle-kilkenny.jpg",
     "description": "Castle with extensive gardens near Paulstown.",
-    "_index": 2470,
+    "_index": 2436,
     "gallery": [
       "https://img.castlecore.uk/shankill-castle-kilkenny-2.jpg",
       "https://img.castlecore.uk/shankill-castle-kilkenny-3.jpg",
@@ -65721,7 +65641,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/clonmines-church.jpg",
     "description": "Deserted medieval town ruins with multiple churches and castle.",
-    "_index": 2471,
+    "_index": 2437,
     "gallery": [
       "https://img.castlecore.uk/clonmines-church-2.jpg",
       "https://img.castlecore.uk/clonmines-church-3.jpg"
@@ -65744,7 +65664,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/aghaboe-abbey-laois.jpg",
     "description": "Ancient monastic site founded by St Canice.",
-    "_index": 2472,
+    "_index": 2438,
     "gallery": [
       "https://img.castlecore.uk/aghaboe-abbey-laois-2.jpg",
       "https://img.castlecore.uk/aghaboe-abbey-laois-3.jpg",
@@ -65769,7 +65689,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/donore-castle-westmeath.jpg",
     "description": "Tower house ruin overlooking Lough Ennell.",
-    "_index": 2473,
+    "_index": 2439,
     "gallery": [
       "https://img.castlecore.uk/donore-castle-westmeath-2.jpg",
       "https://img.castlecore.uk/donore-castle-westmeath-3.jpg",
@@ -65794,7 +65714,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/annaghkeen-castle-galway.jpg",
     "description": "Lakeside tower house on Lough Corrib.",
-    "_index": 2474,
+    "_index": 2440,
     "gallery": [
       "https://img.castlecore.uk/annaghkeen-castle-galway-2.jpg",
       "https://img.castlecore.uk/annaghkeen-castle-galway-3.jpg",
@@ -65819,7 +65739,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/knockmoy-abbey.jpg",
     "description": "Cistercian abbey with rare medieval wall paintings.",
-    "_index": 2475,
+    "_index": 2441,
     "gallery": [
       "https://img.castlecore.uk/knockmoy-abbey-2.jpg",
       "https://img.castlecore.uk/knockmoy-abbey-3.jpg",
@@ -65845,7 +65765,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/burrishoole-friary.jpg",
     "description": "Dominican friary ruins on a tidal inlet near Newport.",
-    "_index": 2476,
+    "_index": 2442,
     "gallery": [
       "https://img.castlecore.uk/burrishoole-friary-2.jpg",
       "https://img.castlecore.uk/burrishoole-friary-3.jpg",
@@ -65870,7 +65790,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castle-gore-mayo.jpg",
     "description": "Georgian country house ruin near Ballinrobe.",
-    "_index": 2477,
+    "_index": 2443,
     "gallery": [
       "https://img.castlecore.uk/castle-gore-mayo-2.jpg",
       "https://img.castlecore.uk/castle-gore-mayo-3.jpg",
@@ -65895,7 +65815,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/ballinafad-castle.jpg",
     "description": "Plantation castle at the entrance to the Curlew Mountains.",
-    "_index": 2478,
+    "_index": 2444,
     "gallery": [
       "https://img.castlecore.uk/ballinafad-castle-2.jpg",
       "https://img.castlecore.uk/ballinafad-castle-3.jpg",
@@ -65921,7 +65841,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/creevlea-abbey.jpg",
     "description": "Last Franciscan friary founded before the Dissolution.",
-    "_index": 2479,
+    "_index": 2445,
     "gallery": [
       "https://img.castlecore.uk/creevlea-abbey-2.jpg",
       "https://img.castlecore.uk/creevlea-abbey-3.jpg",
@@ -65946,7 +65866,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/kells-tower.jpg",
     "description": "Round tower and high crosses at the famous Columban monastery.",
-    "_index": 2481,
+    "_index": 2446,
     "gallery": [
       "https://img.castlecore.uk/kells-tower-2.jpg",
       "https://img.castlecore.uk/kells-tower-3.jpg",
@@ -65971,7 +65891,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rathmoylan-castle.jpg",
     "description": "Tower house ruin on the Waterford coast.",
-    "_index": 2482,
+    "_index": 2447,
     "gallery": [
       "https://img.castlecore.uk/rathmoylan-castle-2.jpg",
       "https://img.castlecore.uk/rathmoylan-castle-3.jpg"
@@ -65994,7 +65914,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/clonroad-castle.jpg",
     "description": "O'Brien castle ruin in Ennis.",
-    "_index": 2483,
+    "_index": 2448,
     "gallery": [
       "https://img.castlecore.uk/clonroad-castle-2.jpg",
       "https://img.castlecore.uk/clonroad-castle-3.jpg",
@@ -66017,7 +65937,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/newtown-castle-burren.jpg",
     "description": "Unique round tower house on a square base in the Burren.",
-    "_index": 2484,
+    "_index": 2449,
     "gallery": [
       "https://img.castlecore.uk/newtown-castle-burren-2.jpg",
       "https://img.castlecore.uk/newtown-castle-burren-3.jpg",
@@ -66043,7 +65963,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg/500px-Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg",
     "description": "Cistercian abbey with remarkable late medieval sculptures.",
-    "_index": 2485,
+    "_index": 2450,
     "gallery": [
       "https://img.castlecore.uk/kilcooley-abbey-tipperary.jpg",
       "https://img.castlecore.uk/wiki-kilcooley-abbey.jpg"
@@ -66066,7 +65986,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/lorrha-priory.jpg",
     "description": "Augustinian and Dominican priory ruins in the ancient village.",
-    "_index": 2486,
+    "_index": 2451,
     "gallery": [
       "https://img.castlecore.uk/lorrha-priory-2.jpg",
       "https://img.castlecore.uk/lorrha-priory-3.jpg",
@@ -66091,7 +66011,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/fennor-castle.jpg",
     "description": "Tower house in the Golden Vale.",
-    "_index": 2487,
+    "_index": 2452,
     "gallery": [
       "https://img.castlecore.uk/fennor-castle-2.jpg",
       "https://img.castlecore.uk/fennor-castle-3.jpg",
@@ -66116,7 +66036,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/thomastown-castle-tipperary.jpg",
     "description": "Grand house ruin with earlier medieval elements.",
-    "_index": 2488,
+    "_index": 2453,
     "gallery": [
       "https://img.castlecore.uk/thomastown-castle-tipperary-2.jpg",
       "https://img.castlecore.uk/thomastown-castle-tipperary-3.jpg",
@@ -66141,7 +66061,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/abington-castle.jpg",
     "description": "Tower house ruin near Murroe.",
-    "_index": 2489,
+    "_index": 2454,
     "gallery": [
       "https://img.castlecore.uk/abington-castle-2.jpg",
       "https://img.castlecore.uk/abington-castle-3.jpg",
@@ -66166,7 +66086,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/adare-augustinian-friary.jpg",
     "description": "Augustinian friary ruins in the prettiest village in Ireland.",
-    "_index": 2490,
+    "_index": 2455,
     "gallery": [
       "https://img.castlecore.uk/adare-augustinian-friary-2.jpg",
       "https://img.castlecore.uk/adare-augustinian-friary-3.jpg",
@@ -66191,7 +66111,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/hospital-priory.jpg",
     "description": "Knights Hospitaller priory ruins.",
-    "_index": 2491,
+    "_index": 2456,
     "gallery": [
       "https://img.castlecore.uk/hospital-priory-2.jpg",
       "https://img.castlecore.uk/hospital-priory-3.jpg",
@@ -66216,7 +66136,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/any-castle.jpg",
     "description": "Small castle ruin at Knockaney.",
-    "_index": 2492,
+    "_index": 2457,
     "gallery": [
       "https://img.castlecore.uk/any-castle-2.jpg",
       "https://img.castlecore.uk/any-castle-3.jpg",
@@ -66241,7 +66161,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/ardoginna-castle.jpg",
     "description": "Castellated house on a headland near Ardmore.",
-    "_index": 2493
+    "_index": 2458
   },
   {
     "name": "Mothel Abbey",
@@ -66260,7 +66180,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/mothel-abbey.jpg",
     "description": "Priory ruins near Carrick-on-Suir.",
-    "_index": 2494,
+    "_index": 2459,
     "gallery": [
       "https://img.castlecore.uk/mothel-abbey-2.jpg",
       "https://img.castlecore.uk/mothel-abbey-3.jpg",
@@ -66286,7 +66206,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kilkieran-high-crosses.jpg",
     "description": "Three early medieval high crosses in a rural setting.",
-    "_index": 2495,
+    "_index": 2460,
     "gallery": [
       "https://img.castlecore.uk/kilkieran-high-crosses-2.jpg",
       "https://img.castlecore.uk/kilkieran-high-crosses-3.jpg",
@@ -66311,7 +66231,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/knocktopher-castle.jpg",
     "description": "Norman castle motte and church ruins.",
-    "_index": 2496,
+    "_index": 2461,
     "gallery": [
       "https://img.castlecore.uk/knocktopher-castle-2.jpg",
       "https://img.castlecore.uk/knocktopher-castle-3.jpg",
@@ -66336,7 +66256,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castlecomer-castle.jpg",
     "description": "Former Wandesforde estate with castle grounds.",
-    "_index": 2497,
+    "_index": 2462,
     "gallery": [
       "https://img.castlecore.uk/castlecomer-castle-2.jpg",
       "https://img.castlecore.uk/castlecomer-castle-3.jpg",
@@ -66361,7 +66281,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/fertagh-round-tower.jpg",
     "description": "Well-preserved round tower and church ruins.",
-    "_index": 2498,
+    "_index": 2463,
     "gallery": [
       "https://img.castlecore.uk/fertagh-round-tower-2.jpg",
       "https://img.castlecore.uk/fertagh-round-tower-3.jpg",
@@ -66386,7 +66306,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/cregg-castle.jpg",
     "description": "Well-preserved fortified house near Corrandulla.",
-    "_index": 2499
+    "_index": 2464
   },
   {
     "name": "Ballylee Castle (Thoor Ballylee)",
@@ -66405,7 +66325,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/ballylee-castle-thoor-ballylee.jpg",
     "description": "Norman tower house, the summer home of W.B. Yeats.",
-    "_index": 2500,
+    "_index": 2465,
     "gallery": [
       "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-2.jpg",
       "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-3.jpg",
@@ -66430,7 +66350,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kilconnell-castle.jpg",
     "description": "Castle remains near the friary.",
-    "_index": 2501,
+    "_index": 2466,
     "gallery": [
       "https://img.castlecore.uk/kilconnell-castle-2.jpg",
       "https://img.castlecore.uk/kilconnell-castle-3.jpg",
@@ -66455,7 +66375,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/abbey-knockmoy-galway.jpg",
     "description": "Cistercian abbey with rare fresco fragments.",
-    "_index": 2502,
+    "_index": 2467,
     "gallery": [
       "https://img.castlecore.uk/abbey-knockmoy-galway-2.jpg",
       "https://img.castlecore.uk/abbey-knockmoy-galway-3.jpg",
@@ -66481,7 +66401,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballindoon-priory.jpg",
     "description": "Dominican friary on the shores of Lough Arrow.",
-    "_index": 2503,
+    "_index": 2468,
     "gallery": [
       "https://img.castlecore.uk/ballindoon-priory-2.jpg",
       "https://img.castlecore.uk/ballindoon-priory-3.jpg",
@@ -66506,7 +66426,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/easky-castle.jpg",
     "description": "O'Dowd castle ruin on the Wild Atlantic Way.",
-    "_index": 2504,
+    "_index": 2469,
     "gallery": [
       "https://img.castlecore.uk/easky-castle-2.jpg",
       "https://img.castlecore.uk/easky-castle-3.jpg",
@@ -66531,7 +66451,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/inniscrone-castle.jpg",
     "description": "Castle ruin in the seaside town.",
-    "_index": 2505,
+    "_index": 2470,
     "gallery": [
       "https://img.castlecore.uk/inniscrone-castle-2.jpg",
       "https://img.castlecore.uk/inniscrone-castle-3.jpg",
@@ -66554,7 +66474,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/temple-house-sligo.jpg",
     "description": "Georgian mansion with medieval ruins on the estate.",
-    "_index": 2506,
+    "_index": 2471,
     "gallery": [
       "https://img.castlecore.uk/temple-house-sligo-2.jpg",
       "https://img.castlecore.uk/temple-house-sligo-3.jpg",
@@ -66580,7 +66500,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rathcroghan-mound.jpg",
     "description": "Ancient royal site of Connacht, seat of Queen Medb.",
-    "_index": 2507,
+    "_index": 2472,
     "gallery": [
       "https://img.castlecore.uk/rathcroghan-mound-2.jpg",
       "https://img.castlecore.uk/rathcroghan-mound-3.jpg",
@@ -66605,7 +66525,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/frenchpark-castle.jpg",
     "description": "Georgian house ruin, birthplace of Douglas Hyde.",
-    "_index": 2508,
+    "_index": 2473,
     "gallery": [
       "https://img.castlecore.uk/frenchpark-castle-2.jpg",
       "https://img.castlecore.uk/frenchpark-castle-3.jpg",
@@ -66631,7 +66551,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/mcdermott-s-castle-island.jpg",
     "description": "Romantic castle ruin on an island in Lough Key.",
-    "_index": 2509,
+    "_index": 2474,
     "gallery": [
       "https://img.castlecore.uk/mcdermott-s-castle-island-2.jpg",
       "https://img.castlecore.uk/mcdermott-s-castle-island-3.jpg",
@@ -66657,7 +66577,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/aghadoe-cathedral-kerry.jpg",
     "description": "Cathedral and round tower with stunning views over the Killarney Lakes.",
-    "_index": 2510,
+    "_index": 2475,
     "gallery": [
       "https://img.castlecore.uk/aghadoe-cathedral-kerry-2.jpg",
       "https://img.castlecore.uk/aghadoe-cathedral-kerry-3.jpg",
@@ -66680,7 +66600,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/ballyseedy-castle-kerry.jpg",
     "description": "Castellated house set in woodland near Tralee.",
-    "_index": 2511,
+    "_index": 2476,
     "gallery": [
       "https://img.castlecore.uk/ballyseedy-castle-kerry-2.jpg",
       "https://img.castlecore.uk/ballyseedy-castle-kerry-3.jpg",
@@ -66705,7 +66625,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/tralee-castle.jpg",
     "description": "Desmond castle fragment in Tralee town park.",
-    "_index": 2512,
+    "_index": 2477,
     "gallery": [
       "https://img.castlecore.uk/tralee-castle-2.jpg",
       "https://img.castlecore.uk/tralee-castle-3.jpg",
@@ -66731,7 +66651,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/mucross-abbey.jpg",
     "description": "Iconic Franciscan friary with ancient yew tree in the cloister.",
-    "_index": 2513,
+    "_index": 2478,
     "gallery": [
       "https://img.castlecore.uk/mucross-abbey-2.jpg",
       "https://img.castlecore.uk/mucross-abbey-3.jpg",
@@ -66756,7 +66676,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/innisfallen-abbey.jpg",
     "description": "Monastic ruins on an island in Lough Leane, Killarney.",
-    "_index": 2514,
+    "_index": 2479,
     "gallery": [
       "https://img.castlecore.uk/innisfallen-abbey-2.jpg",
       "https://img.castlecore.uk/innisfallen-abbey-3.jpg",
@@ -66782,7 +66702,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castle-lough-currane.jpg",
     "description": "Small castle on an island in Lough Currane near Waterville.",
-    "_index": 2515,
+    "_index": 2480,
     "gallery": [
       "https://img.castlecore.uk/castle-lough-currane-2.jpg",
       "https://img.castlecore.uk/castle-lough-currane-3.jpg",
@@ -66807,7 +66727,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballycarberry-castle-ruin.jpg",
     "description": "McCarthy Mór castle ruin near Cahersiveen.",
-    "_index": 2516,
+    "_index": 2481,
     "gallery": [
       "https://img.castlecore.uk/ballycarberry-castle-ruin-2.jpg",
       "https://img.castlecore.uk/ballycarberry-castle-ruin-3.jpg",
@@ -66832,7 +66752,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ardfert-friary.jpg",
     "description": "Franciscan friary ruins near the cathedral.",
-    "_index": 2517,
+    "_index": 2482,
     "gallery": [
       "https://img.castlecore.uk/ardfert-friary-2.jpg",
       "https://img.castlecore.uk/ardfert-friary-3.jpg",
@@ -66857,7 +66777,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/abbeydorney-cistercian-ruins.jpg",
     "description": "Kyrie Eleison abbey ruins near Tralee.",
-    "_index": 2518,
+    "_index": 2483,
     "gallery": [
       "https://img.castlecore.uk/abbeydorney-cistercian-ruins-2.jpg",
       "https://img.castlecore.uk/abbeydorney-cistercian-ruins-3.jpg",
@@ -66882,7 +66802,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/lough-gur-castle.jpg",
     "description": "Tower house on the shores of Lough Gur.",
-    "_index": 2519,
+    "_index": 2484,
     "gallery": [
       "https://img.castlecore.uk/lough-gur-castle-2.jpg",
       "https://img.castlecore.uk/lough-gur-castle-3.jpg",
@@ -66907,7 +66827,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rockbarton-castle.jpg",
     "description": "Tower house ruin near Bruff.",
-    "_index": 2520,
+    "_index": 2485,
     "gallery": [
       "https://img.castlecore.uk/rockbarton-castle-2.jpg",
       "https://img.castlecore.uk/rockbarton-castle-3.jpg",
@@ -66932,7 +66852,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/caherconlish-castle.jpg",
     "description": "Castle ruin in the village.",
-    "_index": 2521,
+    "_index": 2486,
     "gallery": [
       "https://img.castlecore.uk/caherconlish-castle-2.jpg",
       "https://img.castlecore.uk/caherconlish-castle-3.jpg",
@@ -66957,7 +66877,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/shanagolden-abbey.jpg",
     "description": "Augustinian nunnery ruins.",
-    "_index": 2522,
+    "_index": 2487,
     "gallery": [
       "https://img.castlecore.uk/shanagolden-abbey-2.jpg",
       "https://img.castlecore.uk/shanagolden-abbey-3.jpg",
@@ -66982,7 +66902,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/athenry-priory.jpg",
     "description": "Dominican priory with fine medieval windows in the walled town.",
-    "_index": 2523,
+    "_index": 2488,
     "gallery": [
       "https://img.castlecore.uk/athenry-priory-2.jpg",
       "https://img.castlecore.uk/athenry-priory-3.jpg",
@@ -67007,7 +66927,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/dunsandle-castle.jpg",
     "description": "Georgian house ruin south of Galway.",
-    "_index": 2524,
+    "_index": 2489,
     "gallery": [
       "https://img.castlecore.uk/dunsandle-castle-2.jpg",
       "https://img.castlecore.uk/dunsandle-castle-3.jpg",
@@ -67032,7 +66952,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/deel-castle-mayo.jpg",
     "description": "Tower house ruin near Crossmolina.",
-    "_index": 2525,
+    "_index": 2490,
     "gallery": [
       "https://img.castlecore.uk/wiki-deel-castle-mayo.jpg"
     ]
@@ -67054,7 +66974,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/lough-ree-castle.jpg",
     "description": "Castle remains on the shores of Lough Ree.",
-    "_index": 2526,
+    "_index": 2491,
     "gallery": [
       "https://img.castlecore.uk/lough-ree-castle-2.jpg",
       "https://img.castlecore.uk/lough-ree-castle-3.jpg",
@@ -67079,7 +66999,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballyloughloe-castle.jpg",
     "description": "Tower house ruin in rural Westmeath.",
-    "_index": 2527,
+    "_index": 2492,
     "gallery": [
       "https://img.castlecore.uk/ballyloughloe-castle-2.jpg",
       "https://img.castlecore.uk/ballyloughloe-castle-3.jpg",
@@ -67104,7 +67024,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kilcormac-castle.jpg",
     "description": "Tower house ruin in the village.",
-    "_index": 2528,
+    "_index": 2493,
     "gallery": [
       "https://img.castlecore.uk/kilcormac-castle-2.jpg",
       "https://img.castlecore.uk/kilcormac-castle-3.jpg",
@@ -67129,7 +67049,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/banagher-castle.jpg",
     "description": "Fortification near the historic bridge over the Shannon.",
-    "_index": 2529,
+    "_index": 2494,
     "gallery": [
       "https://img.castlecore.uk/banagher-castle-2.jpg"
     ]
@@ -67151,7 +67071,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/aghancon-castle.jpg",
     "description": "Tower house in the south of the county.",
-    "_index": 2530,
+    "_index": 2495,
     "gallery": [
       "https://img.castlecore.uk/aghancon-castle-2.jpg",
       "https://img.castlecore.uk/aghancon-castle-3.jpg",
@@ -67176,7 +67096,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/old-leighlin-cathedral.jpg",
     "description": "Medieval cathedral on an early monastic site.",
-    "_index": 2531,
+    "_index": 2496,
     "gallery": [
       "https://img.castlecore.uk/old-leighlin-cathedral-2.jpg",
       "https://img.castlecore.uk/old-leighlin-cathedral-3.jpg",
@@ -67202,7 +67122,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballyloughan-castle-carlow.jpg",
     "description": "Anglo-Norman castle ruin with twin-towered gatehouse.",
-    "_index": 2532
+    "_index": 2497
   },
   {
     "name": "Clonmore Castle Carlow",
@@ -67221,7 +67141,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/clonmore-castle-carlow.jpg",
     "description": "Motte and castle ruins in a rural setting.",
-    "_index": 2533,
+    "_index": 2498,
     "gallery": [
       "https://img.castlecore.uk/clonmore-castle-carlow-2.jpg",
       "https://img.castlecore.uk/clonmore-castle-carlow-3.jpg",
@@ -67246,7 +67166,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/glendalough-round-tower.jpg",
     "description": "Iconic round tower at Ireland's most famous monastic site.",
-    "_index": 2534,
+    "_index": 2499,
     "gallery": [
       "https://img.castlecore.uk/glendalough-round-tower-2.jpg",
       "https://img.castlecore.uk/glendalough-round-tower-3.jpg",
@@ -67271,7 +67191,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/dunlavin-castle.jpg",
     "description": "Courthouse and castle remains in the market square.",
-    "_index": 2535,
+    "_index": 2500,
     "gallery": [
       "https://img.castlecore.uk/dunlavin-castle-2.jpg",
       "https://img.castlecore.uk/dunlavin-castle-3.jpg",
@@ -67296,7 +67216,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/powerscourt-house.jpg",
     "description": "Grand Palladian house with some of the finest gardens in the world.",
-    "_index": 2536,
+    "_index": 2501,
     "gallery": [
       "https://img.castlecore.uk/powerscourt-house-2.jpg",
       "https://img.castlecore.uk/powerscourt-house-3.jpg",
@@ -67322,7 +67242,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rathgall-fort.jpg",
     "description": "Massive stone hillfort with multiple ramparts.",
-    "_index": 2537,
+    "_index": 2502,
     "gallery": [
       "https://img.castlecore.uk/rathgall-fort-2.jpg",
       "https://img.castlecore.uk/rathgall-fort-3.jpg",
@@ -67347,7 +67267,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/newcastle-mckynegan.jpg",
     "description": "Small Anglo-Norman castle fragment.",
-    "_index": 2538,
+    "_index": 2503,
     "gallery": [
       "https://img.castlecore.uk/newcastle-mckynegan-2.jpg",
       "https://img.castlecore.uk/newcastle-mckynegan-3.jpg",
@@ -67372,7 +67292,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/clondalkin-round-tower.jpg",
     "description": "One of the best preserved round towers in Ireland.",
-    "_index": 2539,
+    "_index": 2504,
     "gallery": [
       "https://img.castlecore.uk/clondalkin-round-tower-2.jpg",
       "https://img.castlecore.uk/clondalkin-round-tower-3.jpg",
@@ -67397,7 +67317,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/bremore-castle.jpg",
     "description": "Tower house and farm complex near Balbriggan.",
-    "_index": 2540,
+    "_index": 2505,
     "gallery": [
       "https://img.castlecore.uk/bremore-castle-2.jpg",
       "https://img.castlecore.uk/bremore-castle-3.jpg",
