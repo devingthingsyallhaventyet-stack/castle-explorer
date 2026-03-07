@@ -32435,7 +32435,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Knights Templar castle ruins by Templehouse Lake.",
+    "description": "Knights Templar castle ruins by Templehouse Lake. Part of a historic demesne with a Georgian house on the estate grounds.",
     "image": "https://img.castlecore.uk/templehouse-castle.jpg",
     "rating": 3.4,
     "reviewCount": 25,
@@ -36673,26 +36673,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Knighton Castle",
-    "lat": 52.348,
-    "lng": -3.048,
-    "country": "Wales",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Mortimer castle mound in Knighton.",
-    "image": "",
-    "rating": 3.1,
-    "reviewCount": 10,
-    "county": "Powys",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1323
-  },
-  {
     "name": "Mathrafal Castle",
     "lat": 52.668,
     "lng": -3.408,
@@ -40523,33 +40503,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "King Johns Castle (Carlingford)",
-    "lat": 53.722,
-    "lng": -6.187,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "D-shaped Anglo-Norman castle overlooking Carlingford Lough and the Cooley Mountains.",
-    "image": "https://img.castlecore.uk/king-johns-castle-carlingford.jpg",
-    "rating": 4,
-    "reviewCount": 350,
-    "county": "County Louth",
-    "tags": [
-      "dramatic-ruin",
-      "photogenic",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1474,
-    "gallery": [
-      "https://img.castlecore.uk/king-johns-castle-carlingford-2.jpg",
-      "https://img.castlecore.uk/king-johns-castle-carlingford-3.jpg",
-      "https://img.castlecore.uk/king-johns-castle-carlingford-4.jpg",
-      "https://img.castlecore.uk/king-johns-castle-carlingford-5.jpg"
-    ]
-  },
-  {
     "name": "Old Mellifont Abbey",
     "lat": 53.735,
     "lng": -6.466,
@@ -44321,29 +44274,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Castle of Esslemont",
-    "lat": 57.3833,
-    "lng": -2.0667,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Ruined castle in woodland near Ellon with a round tower and courtyard remains.",
-    "image": "https://img.castlecore.uk/castle-of-esslemont.jpg",
-    "rating": 3.5,
-    "reviewCount": 120,
-    "county": "Aberdeenshire",
-    "tags": [
-      "woodland-ruin",
-      "atmospheric"
-    ],
-    "access": "free",
-    "_index": 1617,
-    "gallery": [
-      "https://img.castlecore.uk/wiki-castle-of-esslemont.jpg"
-    ]
-  },
-  {
     "name": "Sadell Castle",
     "lat": 55.5833,
     "lng": -5.5667,
@@ -47909,30 +47839,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "King John's Castle Carlingford",
-    "lat": 54.042,
-    "lng": -6.189,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Norman castle overlooking Carlingford Lough.",
-    "image": "https://img.castlecore.uk/king-john-s-castle-carlingford.jpg",
-    "rating": 4,
-    "reviewCount": 200,
-    "county": "County Louth",
-    "tags": [
-      "landmark",
-      "free",
-      "scenic"
-    ],
-    "access": "free",
-    "_index": 1755,
-    "gallery": [
-      "https://img.castlecore.uk/king-johns-castle-carlingford.jpg"
-    ]
-  },
-  {
     "name": "Kells Priory Kilkenny",
     "lat": 52.52,
     "lng": -7.268,
@@ -49722,26 +49628,6 @@ const CASTLES = [
       "https://img.castlecore.uk/rathcroghan-visitor-centre-4.jpg",
       "https://img.castlecore.uk/rathcroghan-visitor-centre-5.jpg"
     ]
-  },
-  {
-    "name": "Creggs Castle",
-    "lat": 53.562,
-    "lng": -8.419,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house ruin in east Galway/Roscommon borderlands.",
-    "image": "https://img.castlecore.uk/creggs-castle.jpg",
-    "rating": 3.2,
-    "reviewCount": 10,
-    "county": "County Roscommon",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1827
   },
   {
     "name": "Aghalurcher Church",
@@ -55071,27 +54957,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Candacraig House",
-    "lat": 57.1,
-    "lng": -3.1833,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "19th century",
-    "condition": "restored",
-    "description": "Victorian Scots Baronial house near Strathdon, now available for hire.",
-    "image": "",
-    "rating": 3.6,
-    "reviewCount": 80,
-    "county": "Aberdeenshire",
-    "tags": [
-      "baronial",
-      "victorian",
-      "holiday-let"
-    ],
-    "access": "paid",
-    "_index": 2033
-  },
-  {
     "name": "Crovie Village",
     "lat": 57.6833,
     "lng": -2.3333,
@@ -59083,25 +58948,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Templehouse Demesne",
-    "lat": 54.03,
-    "lng": -8.56,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "intact",
-    "description": "Georgian house with Knights Templar preceptory ruins on estate.",
-    "image": "https://img.castlecore.uk/templehouse-demesne.jpg",
-    "rating": 3.8,
-    "reviewCount": 40,
-    "county": "County Sligo",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "limited",
-    "_index": 2186
-  },
-  {
     "name": "Aghmore Castle Leitrim",
     "lat": 54.08,
     "lng": -8,
@@ -62830,25 +62676,6 @@ const CASTLES = [
     "_index": 2332
   },
   {
-    "name": "Raunds Manor",
-    "lat": 52.3483,
-    "lng": -0.5383,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Excavated medieval manor and settlement site.",
-    "image": "",
-    "rating": 3.3,
-    "reviewCount": 50,
-    "county": "Northamptonshire",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "free",
-    "_index": 2333
-  },
-  {
     "name": "Irthlingborough Castle",
     "lat": 52.3283,
     "lng": -0.6017,
@@ -64415,25 +64242,6 @@ const CASTLES = [
     "_index": 2393
   },
   {
-    "name": "Stowe Barton",
-    "lat": 50.6917,
-    "lng": -4.5233,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "partial",
-    "description": "Medieval farmhouse in National Trust care near the North Cornwall coast.",
-    "image": "",
-    "rating": 3.7,
-    "reviewCount": 200,
-    "county": "Cornwall",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 2394
-  },
-  {
     "name": "Ballintotis Castle",
     "lat": 51.845,
     "lng": -8.072,
@@ -64458,26 +64266,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ballintotis-castle-4.jpg",
       "https://img.castlecore.uk/ballintotis-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Ringrone Castle",
-    "lat": 51.693,
-    "lng": -8.565,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "De Courcey castle ruin near Kinsale.",
-    "image": "https://img.castlecore.uk/ringrone-castle.jpg",
-    "rating": 3.5,
-    "reviewCount": 20,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2396
   },
   {
     "name": "Kilgobbin Castle Cork",
@@ -66541,31 +66329,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Carlingford Castle",
-    "lat": 54.042,
-    "lng": -6.189,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Louth",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 4,
-    "reviewCount": 65,
-    "era": "12th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/carlingford-castle.jpg",
-    "description": "Norman castle overlooking Carlingford Lough and the Cooley Mountains.",
-    "_index": 2480,
-    "gallery": [
-      "https://img.castlecore.uk/carlingford-castle-2.jpg",
-      "https://img.castlecore.uk/carlingford-castle-3.jpg",
-      "https://img.castlecore.uk/carlingford-castle-4.jpg",
-      "https://img.castlecore.uk/carlingford-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Kells Tower",
     "lat": 53.727,
     "lng": -6.879,
@@ -66861,7 +66624,7 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ardoginna Castle",
+    "name": "McKenna's Castle",
     "lat": 51.969,
     "lng": -7.622,
     "country": "Ireland",
@@ -68042,5 +67805,3 @@ const CASTLES = [
     ]
   }
 ];
-
-if (typeof module !== 'undefined') module.exports = CASTLES;
