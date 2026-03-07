@@ -63921,26 +63921,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Aghada Church",
-    "lat": 51.826,
-    "lng": -8.203,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Medieval church ruin overlooking Cork harbour.",
-    "image": "https://img.castlecore.uk/aghada-church.jpg",
-    "rating": 3.4,
-    "reviewCount": 15,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2369
-  },
-  {
     "name": "Kilcolman Castle Spenser",
     "lat": 52.267,
     "lng": -8.707,
