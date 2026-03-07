@@ -34105,7 +34105,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "Cistercian abbey ruins near Ballyshannon.",
-    "image": "",
+    "image": "https://img.castlecore.uk/assaroe-abbey.jpg",
     "rating": 3.3,
     "reviewCount": 18,
     "county": "County Donegal",
@@ -38810,7 +38810,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "partial ruin",
     "description": "Cistercian Duiske Abbey, partially in use.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/500px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg",
     "rating": 3.6,
     "reviewCount": 42,
     "county": "County Kilkenny",
@@ -51189,26 +51189,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Repton Priory",
-    "lat": 52.8417,
-    "lng": -1.5517,
-    "country": "England",
-    "type": "abbey",
-    "era": "7th century",
-    "condition": "partial",
-    "description": "Anglo-Saxon crypt beneath St Wystan's church, one of the oldest intact structures in England.",
-    "image": "",
-    "rating": 4.3,
-    "reviewCount": 600,
-    "county": "Derbyshire",
-    "tags": [
-      "hidden-gem",
-      "well-preserved"
-    ],
-    "access": "free",
-    "_index": 1897
-  },
-  {
     "name": "Muchelney Abbey",
     "lat": 50.9883,
     "lng": -2.8133,
@@ -59314,7 +59294,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "Medieval church with fine carved cross and tombstone.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/CloncaChurch%26Cross.jpg/500px-CloncaChurch%26Cross.jpg",
     "rating": 3.8,
     "reviewCount": 40,
     "county": "County Donegal",
@@ -59761,26 +59741,6 @@ const CASTLES = [
       "https://img.castlecore.uk/lough-oughter-castle-island-4.jpg",
       "https://img.castlecore.uk/lough-oughter-castle-island-5.jpg"
     ]
-  },
-  {
-    "name": "Aghanloo Church",
-    "lat": 55.083,
-    "lng": -6.92,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Medieval church ruin with bullaun stone.",
-    "image": "https://img.castlecore.uk/aghanloo-church.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Derry",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2230
   },
   {
     "name": "Banagher Old Church Derry",
@@ -62395,25 +62355,6 @@ const CASTLES = [
       "https://img.castlecore.uk/delapre-abbey-4.jpg",
       "https://img.castlecore.uk/delapre-abbey-5.jpg"
     ]
-  },
-  {
-    "name": "Sulby Abbey",
-    "lat": 52.4017,
-    "lng": -1.07,
-    "country": "England",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Premonstratensian abbey site with earthworks in rural Northamptonshire.",
-    "image": "https://img.castlecore.uk/sulby-abbey.jpg",
-    "rating": 3.2,
-    "reviewCount": 50,
-    "county": "Northamptonshire",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 2332
   },
   {
     "name": "Irthlingborough Castle",
@@ -66100,7 +66041,7 @@ const CASTLES = [
     "reviewCount": 60,
     "era": "12th century",
     "condition": "ruin",
-    "image": "https://img.castlecore.uk/kilcooley-abbey.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg/500px-Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg",
     "description": "Cistercian abbey with remarkable late medieval sculptures.",
     "_index": 2485,
     "gallery": [
