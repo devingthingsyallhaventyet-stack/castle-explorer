@@ -1,0 +1,664 @@
+{
+  "found": [
+    {
+      "name": "Kilcooley Abbey",
+      "type": "abbey",
+      "rating": 4.3,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg",
+      "matchedAs": "Kilcooly Abbey"
+    },
+    {
+      "name": "Bishop's Palace, Kirkwall",
+      "type": "castle",
+      "rating": 4.2,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Bishop%27s_Palace_-_Kirkwall.jpg",
+      "matchedAs": "Bishop's Palace, Kirkwall"
+    },
+    {
+      "name": "Chysauster Ancient Village",
+      "type": "castle",
+      "rating": 4.2,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Chysauster.jpg",
+      "matchedAs": "Chysauster Ancient Village"
+    },
+    {
+      "name": "Ravenscraig Castle Fife",
+      "type": "castle",
+      "rating": 4.1,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Ravenscraig_Castle_-_geograph.org.uk_-_31491.jpg",
+      "matchedAs": "Ravenscraig Castle"
+    },
+    {
+      "name": "Desmond Castle Kinsale",
+      "type": "tower house",
+      "rating": 4.1,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Kinsale_-_Desmond_Castle_-_20080318152648.jpg/1280px-Kinsale_-_Desmond_Castle_-_20080318152648.jpg",
+      "matchedAs": "Desmond Castle (Kinsale)"
+    },
+    {
+      "name": "Desmond Castle Newcastle West",
+      "type": "castle",
+      "rating": 4.1,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Newcastle_West%2C_The_Square.jpg",
+      "matchedAs": "Newcastle West"
+    },
+    {
+      "name": "Old Scatness",
+      "type": "castle",
+      "rating": 4,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg",
+      "matchedAs": "Old Scatness"
+    },
+    {
+      "name": "Stanton Harcourt Tower",
+      "type": "castle",
+      "rating": 4,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/7/77/StantonHarcourt_StMichael_SE.jpg",
+      "matchedAs": "Stanton Harcourt"
+    },
+    {
+      "name": "Balgonie Castle",
+      "type": "castle",
+      "rating": 3.9,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BalgonieCastle04.jpg/1280px-BalgonieCastle04.jpg",
+      "matchedAs": "Balgonie Castle"
+    },
+    {
+      "name": "Fowlis Wester Sculptured Stone",
+      "type": "abbey",
+      "rating": 3.9,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/b/b7/St_Beans_Church_-_geograph.org.uk_-_9270.jpg",
+      "matchedAs": "Fowlis Wester"
+    },
+    {
+      "name": "Harry Avery Castle",
+      "type": "castle",
+      "rating": 3.8,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/4/48/Harry_Avery%27s_Castle.jpg",
+      "matchedAs": "Harry Avery's Castle"
+    },
+    {
+      "name": "Greencastle Donegal",
+      "type": "castle",
+      "rating": 3.8,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Greencastle_Castle_View_of_Greencastle_Town_and_Lough_Foyle_2016_09_05.jpg/1280px-Greencastle_Castle_View_of_Greencastle_Town_and_Lough_Foyle_2016_09_05.jpg",
+      "matchedAs": "Greencastle, County Donegal"
+    },
+    {
+      "name": "Kilcolman Castle Spenser",
+      "type": "tower house",
+      "rating": 3.8,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Picturesque_Ireland_-_a_literary_and_artistic_delineation_of_the_natural_scenery%2C_remarkable_places%2C_historical_antiquities%2C_public_buildings%2C_ancient_abbeys%2C_towers%2C_castles%2C_and_other_romantic_and_%2814757013626%29.jpg/1280px-thumbnail.jpg",
+      "matchedAs": "Kilcolman Castle"
+    },
+    {
+      "name": "Clara Castle Kilkenny",
+      "type": "tower house",
+      "rating": 3.7,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/0/07/Clara_Castle_-_geograph.org.uk_-_494292.jpg",
+      "matchedAs": "Clara Castle"
+    },
+    {
+      "name": "Cramond Tower",
+      "type": "castle",
+      "rating": 3.6,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/e/ec/A_Cramond-torony_mag%C3%A1nrezidencia%2C_egy_%C3%A1llatkit%C3%B6m%C5%91_tulajdon%C3%A1ban_van_%28The_Cramond_Tower_is_a_private_residence%2C_property_of_a_taxidermist%29_-_panoramio.jpg",
+      "matchedAs": "Cramond Tower"
+    },
+    {
+      "name": "Donore Castle Meath",
+      "type": "tower house",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Donore_Castle%2C_County_Meath.jpg/1280px-Donore_Castle%2C_County_Meath.jpg",
+      "matchedAs": "Donore Castle"
+    },
+    {
+      "name": "Coolhull Castle Wexford",
+      "type": "tower house",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/7/74/Coolhull_Castle_-_geograph.org.uk_-_14545.jpg",
+      "matchedAs": "Coolhull Castle"
+    },
+    {
+      "name": "Croom Castle",
+      "type": "castle",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Croom_Castle%2C_County_Limerick_-_geograph-3037502.jpg",
+      "matchedAs": "Croom Castle"
+    },
+    {
+      "name": "Deel Castle Mayo",
+      "type": "castle",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/1/14/Castles_of_Connacht-_Deel%2C_Mayo_%281%29_%28geograph_1954385%29.jpg",
+      "matchedAs": "Deel Castle"
+    },
+    {
+      "name": "Ballyhannon Castle Clare",
+      "type": "tower house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 0,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/8/80/Castlefergus_Castle.jpg",
+      "matchedAs": "Ballyhannon Castle"
+    },
+    {
+      "name": "Ballymore Castle (Westmeath)",
+      "type": "tower house",
+      "rating": 3,
+      "reviews": 0,
+      "currentImgs": 1,
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Castles_of_Connacht-_Ballymore%2C_Galway_%281%29_%28geograph_4071679%29.jpg",
+      "matchedAs": "Ballymore Castle"
+    }
+  ],
+  "stillNotFound": [
+    {
+      "name": "Repton Priory",
+      "type": "abbey",
+      "rating": 4.3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Kilcooley Abbey Tipperary",
+      "type": "abbey",
+      "rating": 4.3,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Lochinch Castle",
+      "type": "castle",
+      "rating": 4,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "King John's Castle Carlingford",
+      "type": "castle",
+      "rating": 4,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Ballykinvarga Stone Fort",
+      "type": "fort",
+      "rating": 3.9,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "King Johns Castle Carlingford",
+      "type": "castle",
+      "rating": 3.9,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Ardmore Cathedral",
+      "type": "cathedral",
+      "rating": 3.8,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Kilmokea Castle",
+      "type": "tower house",
+      "rating": 3.8,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Templehouse Demesne",
+      "type": "castle",
+      "rating": 3.8,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Clonca Church",
+      "type": "abbey",
+      "rating": 3.8,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Derryhivenny Castle",
+      "type": "tower house",
+      "rating": 3.7,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Stowe Barton",
+      "type": "castle",
+      "rating": 3.7,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Dromore Castle (Limerick)",
+      "type": "castle",
+      "rating": 3.6,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Graiguenamanagh Abbey",
+      "type": "abbey",
+      "rating": 3.6,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Candacraig House",
+      "type": "castle",
+      "rating": 3.6,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Pitcur Souterrain",
+      "type": "castle",
+      "rating": 3.6,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Smithstown Castle",
+      "type": "tower house",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Bunowen Castle",
+      "type": "tower house",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Kiltinan Castle",
+      "type": "castle",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castle Hyde",
+      "type": "castle",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Castle of Fiddes",
+      "type": "castle",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Castle of Esslemont",
+      "type": "castle",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Ringrone Castle",
+      "type": "castle",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Ardoginna Castle",
+      "type": "castle",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Cregg Castle",
+      "type": "castle",
+      "rating": 3.5,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Lohort Castle",
+      "type": "castle",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Faunarooska Castle",
+      "type": "tower house",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Rossclogher Castle",
+      "type": "tower house",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Castle Salem",
+      "type": "tower house",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Finlaystone Castle",
+      "type": "castle",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Blackcastle",
+      "type": "castle",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castlemore",
+      "type": "castle",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Aghada Church",
+      "type": "abbey",
+      "rating": 3.4,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Castlemore Castle",
+      "type": "tower house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Grantstown Castle",
+      "type": "tower house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castlecoote House",
+      "type": "country house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Assaroe Abbey",
+      "type": "abbey",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castlegrace",
+      "type": "tower house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Aghanloo Church",
+      "type": "abbey",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Raunds Manor",
+      "type": "castle",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Gardenmorris Castle",
+      "type": "tower house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Clenagh Castle",
+      "type": "tower house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Two Mile Borris Castle",
+      "type": "tower house",
+      "rating": 3.3,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Sigginstown Castle",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Tromra Castle",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castle Hewson",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Ballingarry Castle (Lim)",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Kinturk Castle",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Breifne Castle",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Roughan Castle",
+      "type": "castle",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castle Ellen",
+      "type": "country house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Mountlong Castle",
+      "type": "fortified house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Portlick Castle",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Creggs Castle",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Sulby Abbey",
+      "type": "abbey",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Monksgrange Castle",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Rearcross Tower",
+      "type": "tower house",
+      "rating": 3.2,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Wolf's Castle Mound",
+      "type": "motte",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 1
+    },
+    {
+      "name": "Ballinderry Castle",
+      "type": "tower house",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Liscartan Castle",
+      "type": "tower house",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Moatfarrell Castle",
+      "type": "motte",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Sigginstown Tower",
+      "type": "tower house",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Knighton Castle",
+      "type": "castle",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castle Taylor",
+      "type": "tower house",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Creagh Castle",
+      "type": "tower house",
+      "rating": 3.1,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Castlegal",
+      "type": "tower house",
+      "rating": 3,
+      "reviews": 0,
+      "currentImgs": 0
+    },
+    {
+      "name": "Eglish Castle",
+      "type": "tower house",
+      "rating": 3,
+      "reviews": 0,
+      "currentImgs": 0
+    }
+  ]
+}

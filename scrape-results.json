@@ -1,0 +1,54 @@
+{
+  "success": [
+    {
+      "name": "Deel Castle Mayo",
+      "url": "https://img.castlecore.uk/wiki-deel-castle-mayo.jpg"
+    },
+    {
+      "name": "Newtownstewart",
+      "url": "https://img.castlecore.uk/wiki-newtownstewart.jpg"
+    },
+    {
+      "name": "Wardour",
+      "url": "https://img.castlecore.uk/scraped-wardour.jpg"
+    },
+    {
+      "name": "Peele Tower Kentmere",
+      "url": "https://img.castlecore.uk/scraped-peele-tower-kentmere.jpg"
+    },
+    {
+      "name": "Lohort",
+      "url": "https://img.castlecore.uk/scraped-lohort.jpg"
+    },
+    {
+      "name": "Blackcastle",
+      "url": "https://img.castlecore.uk/scraped-blackcastle.jpg"
+    },
+    {
+      "name": "Dromore (Limerick)",
+      "url": "https://img.castlecore.uk/scraped-dromore-limerick.jpg"
+    }
+  ],
+  "failed": [
+    {
+      "name": "Kiltinan",
+      "error": "Invalid URL"
+    },
+    {
+      "name": "Castlemore",
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Bruree",
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Roughan",
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Pitcur Souterrain",
+      "error": "No image found in page HTML"
+    }
+  ]
+}

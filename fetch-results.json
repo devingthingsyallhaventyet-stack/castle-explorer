@@ -1,0 +1,34 @@
+{
+  "success": [
+    {
+      "name": "Newport Castle (Pembs)",
+      "url": "https://img.castlecore.uk/wiki-newport-castle-pembs.jpg"
+    },
+    {
+      "name": "Castle Hyde",
+      "url": "https://img.castlecore.uk/wiki-castle-hyde.jpg"
+    },
+    {
+      "name": "Finlaystone",
+      "url": "https://img.castlecore.uk/wiki-finlaystone.jpg"
+    },
+    {
+      "name": "Castle of Esslemont",
+      "url": "https://img.castlecore.uk/wiki-castle-of-esslemont.jpg"
+    },
+    {
+      "name": "Millom",
+      "url": "https://img.castlecore.uk/wiki-millom.jpg"
+    }
+  ],
+  "failed": [
+    {
+      "name": "Deel Castle Mayo",
+      "error": "HTTP 429"
+    },
+    {
+      "name": "Newtownstewart",
+      "error": "HTTP 429"
+    }
+  ]
+}

@@ -21522,7 +21522,10 @@ const CASTLES = [
     "county": "County Waterford",
     "tags": [],
     "access": "paid",
-    "_index": 732
+    "_index": 732,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-lismore-castle-gardens.jpg"
+    ]
   },
   {
     "name": "Burnchurch Castle",
@@ -23394,7 +23397,11 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 805
+    "_index": 805,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-peele-tower-kentmere.jpg",
+      "https://img.castlecore.uk/scraped-peele-tower-kentmere.jpg"
+    ]
   },
   {
     "name": "Nottingham Castle Museum",
@@ -29118,7 +29125,8 @@ const CASTLES = [
     "access": "free",
     "_index": 1024,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newport-castle.jpg"
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newport-castle.jpg",
+      "https://img.castlecore.uk/wiki-newport-castle-pembs.jpg"
     ]
   },
   {
@@ -39797,7 +39805,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "Ruined castle on a cliff edge near Bray Head with stunning coastal views.",
-    "image": "",
+    "image": "https://img.castlecore.uk/scraped-blackcastle.jpg",
     "rating": 3.4,
     "reviewCount": 35,
     "county": "County Wicklow",
@@ -39844,7 +39852,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "Anglo-Norman castle ruin near Ballaghaderreen in County Roscommon.",
-    "image": "",
+    "image": "https://img.castlecore.uk/scraped-castlemore.jpg",
     "rating": 3.4,
     "reviewCount": 30,
     "county": "County Roscommon",
@@ -40682,7 +40690,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "free",
-    "_index": 1480
+    "_index": 1480,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-aghadoe.jpg"
+    ]
   },
   {
     "name": "Ballinskelligs Priory",
@@ -40837,7 +40848,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1486
+    "_index": 1486,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-castle-hyde.jpg"
+    ]
   },
   {
     "name": "Glanworth Castle",
@@ -41179,7 +41193,10 @@ const CASTLES = [
       "panoramic"
     ],
     "access": "free",
-    "_index": 1499
+    "_index": 1499,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-garn-goch.jpg"
+    ]
   },
   {
     "name": "Dunraven Castle",
@@ -44205,7 +44222,10 @@ const CASTLES = [
       "keep"
     ],
     "access": "paid",
-    "_index": 1612
+    "_index": 1612,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-lochleven-castle-keep.jpg"
+    ]
   },
   {
     "name": "Ballindalloch Castle",
@@ -44318,7 +44338,10 @@ const CASTLES = [
       "atmospheric"
     ],
     "access": "free",
-    "_index": 1617
+    "_index": 1617,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-castle-of-esslemont.jpg"
+    ]
   },
   {
     "name": "Sadell Castle",
@@ -49133,7 +49156,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "ruin",
     "description": "Tower house ruin near Quin.",
-    "image": "",
+    "image": "https://img.castlecore.uk/wiki-ballyhannon-castle-clare.jpg",
     "rating": 3.3,
     "reviewCount": 15,
     "county": "County Clare",
@@ -51872,7 +51895,10 @@ const CASTLES = [
       "romantic-ruin"
     ],
     "access": "free",
-    "_index": 1910
+    "_index": 1910,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-hulne-priory.jpg"
+    ]
   },
   {
     "name": "Birdoswald Roman Fort",
@@ -52153,7 +52179,10 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 1921
+    "_index": 1921,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-framlingham-castle-walls.jpg"
+    ]
   },
   {
     "name": "Ickworth House",
@@ -57718,7 +57747,10 @@ const CASTLES = [
       "underground"
     ],
     "access": "free",
-    "_index": 2133
+    "_index": 2133,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-pitcur-souterrain.jpg"
+    ]
   },
   {
     "name": "Ardestie Souterrain",
@@ -61010,7 +61042,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 2263
+    "_index": 2263,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-nappa-hall.jpg"
+    ]
   },
   {
     "name": "Gilling Castle",
@@ -62231,7 +62266,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 2310
+    "_index": 2310,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-thornton-curtis-abbey-gatehouse.jpg"
+    ]
   },
   {
     "name": "Tupholme Abbey",
@@ -66643,7 +66681,8 @@ const CASTLES = [
     "description": "Cistercian abbey with remarkable late medieval sculptures.",
     "_index": 2485,
     "gallery": [
-      "https://img.castlecore.uk/kilcooley-abbey-tipperary.jpg"
+      "https://img.castlecore.uk/kilcooley-abbey-tipperary.jpg",
+      "https://img.castlecore.uk/wiki-kilcooley-abbey.jpg"
     ]
   },
   {
@@ -67629,7 +67668,10 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/deel-castle-mayo.jpg",
     "description": "Tower house ruin near Crossmolina.",
-    "_index": 2525
+    "_index": 2525,
+    "gallery": [
+      "https://img.castlecore.uk/wiki-deel-castle-mayo.jpg"
+    ]
   },
   {
     "name": "Lough Ree Castle",
@@ -68001,4 +68043,4 @@ const CASTLES = [
   }
 ];
 
-if (typeof module !== "undefined") module.exports = CASTLES;
+if (typeof module !== 'undefined') module.exports = CASTLES;
