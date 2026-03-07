@@ -424,6 +424,7 @@ function generatePage(castle) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
 <title>${escapeHtml(castle.name)} — castlecore | Castles, Abbeys &amp; Ruins</title>
 <meta name="description" content="${escapeHtml(metaDesc)}">
 <meta property="og:title" content="${escapeHtml(castle.name)} — castlecore">
