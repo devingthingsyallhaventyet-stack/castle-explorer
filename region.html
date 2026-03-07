@@ -457,7 +457,7 @@ function render() {
   document.getElementById('resultsCount').textContent = `Showing ${filtered.length} of ${allSites.length} sites`;
   const grid = document.getElementById('resultsGrid');
   grid.innerHTML = filtered.map(s => {
-    const bigImg = s.image ? s.image.replace(/\/\d+px-/, '/500px-') : 'placeholder.svg';
+    const bigImg = s.image ? (s.image.includes('img.castlecore.uk') ? s.image : s.image.replace(/\/\d+px-/, '/500px-')) : 'placeholder.svg';
     const imgHtml = `<img src="${bigImg}" alt="${s.name}" loading="lazy" onerror="this.src='placeholder.svg'">`;
     const rating = s.rating ? `<span class="card-rating">★ ${s.rating}</span>` : '';
     const loc = [s.county, s.country].filter(Boolean).join(', ');

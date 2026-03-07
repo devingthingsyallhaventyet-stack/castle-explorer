@@ -198,6 +198,13 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:.5rem}
 .yt-grid iframe{width:100%;aspect-ratio:16/9;border-radius:var(--radius);border:none}
 
+/* SAVE BUTTON */
+.save-btn{background:none;border:2px solid var(--border);color:var(--twilight);padding:6px 14px;border-radius:var(--pill);font-size:.85rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:all .2s;font-family:'Inter',sans-serif}
+.save-btn:hover{border-color:var(--burgundy);color:var(--burgundy)}
+.save-btn.saved{border-color:var(--burgundy);background:var(--burgundy);color:#fff}
+.save-btn .heart{font-size:1rem;transition:transform .2s}
+.save-btn.saved .heart{transform:scale(1.2)}
+
 /* CTA */
 .cta-section{text-align:center;margin:2.5rem 0 1rem;display:flex;flex-direction:column;align-items:center;gap:.8rem}
 .cta-button{background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-weight:700;font-size:1rem;display:inline-block;transition:background .2s}
@@ -212,9 +219,17 @@ footer{background:var(--shadow);color:var(--stone);padding:2rem 24px;text-align:
 footer a{color:var(--candlelight)}
 
 /* LIGHTBOX */
-.lb-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;cursor:pointer}
+.lb-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
 .lb-overlay.open{display:flex}
-.lb-overlay img{max-width:90vw;max-height:90vh;border-radius:8px}
+.lb-overlay img{max-width:85vw;max-height:80vh;border-radius:8px;user-select:none}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;font-size:2rem;width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px);z-index:10000}
+.lb-nav:hover{background:rgba(255,255,255,.3)}
+.lb-prev{left:16px}
+.lb-next{right:16px}
+.lb-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.5rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);z-index:10000}
+.lb-close:hover{background:rgba(255,255,255,.3)}
+.lb-counter{color:rgba(255,255,255,.7);font-size:.85rem;margin-top:12px;font-family:'Inter',sans-serif}
+@media(max-width:768px){.lb-nav{width:36px;height:36px;font-size:1.4rem}.lb-prev{left:8px}.lb-next{right:8px}}
 
 @media(max-width:768px){
   .listing-top{padding:.5rem .5rem 0}
@@ -283,6 +298,7 @@ footer a{color:var(--candlelight)}
 <span class="rating-big">3.7</span>
 <span class="rating-stars">★★★½</span>
 <a href="https://www.google.com/maps/search/Odiham%20Castle+Hampshire/@51.2517,-0.9467,15z" target="_blank" rel="noopener" class="rating-count">420 reviews</a>
+<button class="save-btn" onclick="toggleSave('odiham-castle')" id="saveBtn"><span class="heart">♡</span> Save</button>
 </div>
 </div>
 
@@ -339,7 +355,13 @@ footer a{color:var(--candlelight)}
 </main>
 
 <!-- LIGHTBOX -->
-<div class="lb-overlay" id="lightbox" onclick="this.classList.remove('open')"><img src="" alt="Photo"></div>
+<div class="lb-overlay" id="lightbox">
+<button class="lb-close" onclick="closeLb()" aria-label="Close">✕</button>
+<button class="lb-nav lb-prev" onclick="lbNav(-1)" aria-label="Previous">‹</button>
+<img src="" alt="Photo">
+<button class="lb-nav lb-next" onclick="lbNav(1)" aria-label="Next">›</button>
+<div class="lb-counter" id="lbCounter"></div>
+</div>
 
 <footer>
 <p style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:4px"><img src="../logo.png" alt="castlecore" style="height:32px;width:auto;border-radius:4px;vertical-align:middle;margin-right:8px">castlecore</p>
@@ -412,13 +434,65 @@ footer a{color:var(--candlelight)}
     }
   }
 })();
+var lbImages=[],lbIdx=0;
+function collectLbImages(){
+  if(window._gallerySrcs&&window._gallerySrcs.length){lbImages=window._gallerySrcs.slice();return;}
+  lbImages=[];
+  var imgs=document.querySelectorAll('.gallery-grid img');
+  imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))lbImages.push(img.src);});
+}
 function openLb(src){
+  collectLbImages();
   var lb=document.getElementById('lightbox');
   if(!lb)return;
+  lbIdx=lbImages.indexOf(src);
+  if(lbIdx<0){lbImages=[src];lbIdx=0;}
   lb.querySelector('img').src=src;
+  updateLbCounter();
   lb.classList.add('open');
+  document.body.style.overflow='hidden';
 }
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('lightbox');if(lb)lb.classList.remove('open')}});
+function closeLb(){
+  var lb=document.getElementById('lightbox');
+  if(lb)lb.classList.remove('open');
+  document.body.style.overflow='';
+}
+function lbNav(dir){
+  if(!lbImages.length)return;
+  lbIdx=(lbIdx+dir+lbImages.length)%lbImages.length;
+  var lb=document.getElementById('lightbox');
+  if(lb)lb.querySelector('img').src=lbImages[lbIdx];
+  updateLbCounter();
+}
+function updateLbCounter(){
+  var c=document.getElementById('lbCounter');
+  if(c&&lbImages.length>1)c.textContent=(lbIdx+1)+' / '+lbImages.length;
+  else if(c)c.textContent='';
+}
+document.addEventListener('keydown',function(e){
+  var lb=document.getElementById('lightbox');
+  if(!lb||!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  else if(e.key==='ArrowLeft')lbNav(-1);
+  else if(e.key==='ArrowRight')lbNav(1);
+});
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLb();});
+function getSaved(){try{return JSON.parse(localStorage.getItem('cc_saved')||'[]')}catch(e){return[]}}
+function toggleSave(slug){
+  var saved=getSaved();
+  var idx=saved.indexOf(slug);
+  if(idx>=0)saved.splice(idx,1);else saved.push(slug);
+  localStorage.setItem('cc_saved',JSON.stringify(saved));
+  updateSaveBtn(slug);
+}
+function updateSaveBtn(slug){
+  var btn=document.getElementById('saveBtn');
+  if(!btn)return;
+  var isSaved=getSaved().indexOf(slug)>=0;
+  btn.classList.toggle('saved',isSaved);
+  btn.innerHTML=isSaved?'<span class="heart">♥</span> Saved':'<span class="heart">♡</span> Save';
+}
+(function(){var m=document.querySelector('[data-castle-name]');if(!m)return;var slug=location.pathname.split('/').pop().replace('.html','');updateSaveBtn(slug);})();
 var snavS=document.getElementById('snavSearch');if(snavS)snavS.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
 var snavM=document.getElementById('snavMobSearch');if(snavM)snavM.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
 </script>
