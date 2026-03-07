@@ -555,7 +555,9 @@ const CASTLES = [
     ],
     "access": "free",
     "_index": 17,
-    "gallery": []
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-guildford-castle.jpg"
+    ]
   },
   {
     "name": "Tintagel Castle",
@@ -647,7 +649,8 @@ const CASTLES = [
       "https://img.castlecore.uk/old-wardour-castle-keep-2.jpg",
       "https://img.castlecore.uk/old-wardour-castle-keep-3.jpg",
       "https://img.castlecore.uk/old-wardour-castle-keep-4.jpg",
-      "https://img.castlecore.uk/old-wardour-castle-keep-5.jpg"
+      "https://img.castlecore.uk/old-wardour-castle-keep-5.jpg",
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-old-wardour-castle.jpg"
     ]
   },
   {
@@ -3221,7 +3224,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 100
+    "_index": 100,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-hurst-castle.jpg"
+    ]
   },
   {
     "name": "Old Sarum",
@@ -3587,7 +3593,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 112
+    "_index": 112,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-thornton-abbey.jpg"
+    ]
   },
   {
     "name": "Croxden Abbey",
@@ -4206,7 +4215,10 @@ const CASTLES = [
       "photogenic"
     ],
     "access": "paid",
-    "_index": 132
+    "_index": 132,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-edzell-castle.jpg"
+    ]
   },
   {
     "name": "Huntingtower Castle",
@@ -4625,7 +4637,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 146
+    "_index": 146,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-delgatie-castle.jpg"
+    ]
   },
   {
     "name": "Spynie Palace",
@@ -8619,7 +8634,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 271
+    "_index": 271,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-thoor-ballylee.jpg"
+    ]
   },
   {
     "name": "Lynch's Castle",
@@ -10273,7 +10291,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 329
+    "_index": 329,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-athlone-castle.jpg"
+    ]
   },
   {
     "name": "Tullynally Castle",
@@ -11111,7 +11132,9 @@ const CASTLES = [
     ],
     "access": "free",
     "_index": 358,
-    "gallery": []
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-harry-avery-s-castle.jpg"
+    ]
   },
   {
     "name": "Castlederg Castle",
@@ -16449,7 +16472,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 544
+    "_index": 544,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-dunston-pillar.jpg"
+    ]
   },
   {
     "name": "Bolingbroke Castle",
@@ -18899,7 +18925,9 @@ const CASTLES = [
     "tags": [],
     "access": "paid",
     "_index": 635,
-    "gallery": []
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-broughton-castle.jpg"
+    ]
   },
   {
     "name": "Boarstall Tower",
@@ -20290,7 +20318,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 687
+    "_index": 687,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-methven-castle.jpg"
+    ]
   },
   {
     "name": "Affleck Castle",
@@ -20784,7 +20815,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 706
+    "_index": 706,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castle-of-park.jpg"
+    ]
   },
   {
     "name": "Comlongon Castle",
@@ -22004,7 +22038,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 752
+    "_index": 752,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-burt-castle.jpg"
+    ]
   },
   {
     "name": "Raphoe Castle",
@@ -22100,7 +22137,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 756
+    "_index": 756,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-ballinasloe-castle.jpg"
+    ]
   },
   {
     "name": "Oranmore Castle",
@@ -24104,7 +24144,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "Fitzmaurice lords of Kerry castle, now a ruin beside Lixnaw village.",
-    "image": "",
+    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-lixnaw-castle.jpg",
     "rating": 3.2,
     "reviewCount": 40,
     "county": "County Kerry",
@@ -25751,7 +25791,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 898
+    "_index": 898,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-shanid-castle.jpg"
+    ]
   },
   {
     "name": "Ballingarry Castle (Limerick)",
@@ -26205,7 +26248,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 916
+    "_index": 916,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castle-saunderson.jpg"
+    ]
   },
   {
     "name": "Granard Motte",
@@ -26438,7 +26484,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 925
+    "_index": 925,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newtownstewart-castle.jpg"
+    ]
   },
   {
     "name": "Castlecaulfield",
@@ -27160,7 +27209,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 952
+    "_index": 952,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-duiske-abbey.jpg"
+    ]
   },
   {
     "name": "Black Castle (Wicklow)",
@@ -27512,7 +27564,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 966
+    "_index": 966,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-cairnbulg-castle.jpg"
+    ]
   },
   {
     "name": "Ravenscraig Castle (Aberdeenshire)",
@@ -27557,7 +27612,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 968
+    "_index": 968,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-harthill-castle.jpg"
+    ]
   },
   {
     "name": "Craig Castle",
@@ -27699,7 +27757,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 974
+    "_index": 974,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-grandtully-castle.jpg"
+    ]
   },
   {
     "name": "Megginch Castle",
@@ -27719,7 +27780,9 @@ const CASTLES = [
     ],
     "access": "paid",
     "_index": 975,
-    "gallery": []
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-megginch-castle.jpg"
+    ]
   },
   {
     "name": "Kinnaird Castle (Perthshire)",
@@ -29053,7 +29116,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1024
+    "_index": 1024,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newport-castle.jpg"
+    ]
   },
   {
     "name": "Roch Castle",
@@ -29097,7 +29163,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "paid",
-    "_index": 1026
+    "_index": 1026,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-upton-castle.jpg"
+    ]
   },
   {
     "name": "Benton Castle",
@@ -30149,7 +30218,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1067
+    "_index": 1067,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-monivea-castle.jpg"
+    ]
   },
   {
     "name": "Ballinderry Castle",
@@ -30760,7 +30832,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1091
+    "_index": 1091,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castlepook-castle.jpg"
+    ]
   },
   {
     "name": "Buttevant Castle",
@@ -32120,7 +32195,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1145
+    "_index": 1145,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-fuerty-castle.jpg"
+    ]
   },
   {
     "name": "Tulsk Castle",
@@ -34884,7 +34962,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "restricted",
-    "_index": 1255
+    "_index": 1255,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-tandragee-castle.jpg"
+    ]
   },
   {
     "name": "Charlemont Fort",
@@ -36499,7 +36580,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1319
+    "_index": 1319,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castell-gwallter.jpg"
+    ]
   },
   {
     "name": "Aberedw Castle",
@@ -38913,7 +38997,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1414
+    "_index": 1414,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-gowran-castle.jpg"
+    ]
   },
   {
     "name": "Tullaherin Round Tower",
@@ -43992,7 +44079,10 @@ const CASTLES = [
       "renaissance"
     ],
     "access": "free",
-    "_index": 1607
+    "_index": 1607,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-earl-s-palace-birsay.jpg"
+    ]
   },
   {
     "name": "Aboyne Castle",
@@ -44932,7 +45022,10 @@ const CASTLES = [
       "impressive"
     ],
     "access": "free",
-    "_index": 1644
+    "_index": 1644,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-amisfield-tower.jpg"
+    ]
   },
   {
     "name": "Whithorn Priory",
@@ -46676,7 +46769,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "The oldest continuously inhabited house in Scotland with a working brewery and maze.",
-    "image": "",
+    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-traquair-house.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
     "county": "Scottish Borders",
@@ -47518,7 +47611,10 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 1743
+    "_index": 1743,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-kilcooly-abbey.jpg"
+    ]
   },
   {
     "name": "Ballynahinch Castle Tipperary",
@@ -47805,7 +47901,10 @@ const CASTLES = [
       "scenic"
     ],
     "access": "free",
-    "_index": 1755
+    "_index": 1755,
+    "gallery": [
+      "https://img.castlecore.uk/king-johns-castle-carlingford.jpg"
+    ]
   },
   {
     "name": "Kells Priory Kilkenny",
@@ -52341,7 +52440,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial",
     "description": "Augustinian priory remains incorporated into a farmhouse near Coleshill.",
-    "image": "",
+    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-maxstoke-priory.jpg",
     "rating": 3.3,
     "reviewCount": 50,
     "county": "Warwickshire",
@@ -53324,7 +53423,10 @@ const CASTLES = [
       "hidden-gem"
     ],
     "access": "exterior-only",
-    "_index": 1971
+    "_index": 1971,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-millom-castle.jpg"
+    ]
   },
   {
     "name": "Brancaster Roman Fort",
@@ -55539,7 +55641,10 @@ const CASTLES = [
       "tower-house"
     ],
     "access": "paid",
-    "_index": 2055
+    "_index": 2055,
+    "gallery": [
+      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-mauchline-castle.jpg"
+    ]
   },
   {
     "name": "Ayr Castle",
@@ -62449,7 +62554,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial",
     "description": "Benedictine priory remains incorporated into a hotel near Warwick.",
-    "image": "",
+    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-wroxall-abbey.jpg",
     "rating": 3.7,
     "reviewCount": 200,
     "county": "Warwickshire",
@@ -64000,7 +64105,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "Former Augustinian monastery converted to a family home in a dramatic coastal valley.",
-    "image": "",
+    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-hartland-abbey.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
     "county": "Devon",
@@ -65789,26 +65894,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Kilcooley Abbey Tipperary",
-    "lat": 52.688,
-    "lng": -7.69,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Cistercian abbey with extraordinary carved sacristy screen.",
-    "image": "https://img.castlecore.uk/kilcooley-abbey-tipperary.jpg",
-    "rating": 4.3,
-    "reviewCount": 140,
-    "county": "County Tipperary",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2455
-  },
-  {
     "name": "Rearcross Tower",
     "lat": 52.69,
     "lng": -8.155,
@@ -65826,7 +65911,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2456
+    "_index": 2455
   },
   {
     "name": "Castle Otway",
@@ -65846,7 +65931,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2457,
+    "_index": 2456,
     "gallery": [
       "https://img.castlecore.uk/castle-otway-2.jpg",
       "https://img.castlecore.uk/castle-otway-3.jpg",
@@ -65872,7 +65957,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2458,
+    "_index": 2457,
     "gallery": [
       "https://img.castlecore.uk/newcastle-tipperary-castle-2.jpg",
       "https://img.castlecore.uk/newcastle-tipperary-castle-3.jpg",
@@ -65898,7 +65983,7 @@ const CASTLES = [
       "free"
     ],
     "access": "free",
-    "_index": 2459
+    "_index": 2458
   },
   {
     "name": "Castle Bernard Bandon",
@@ -65917,7 +66002,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castle-bernard-bandon.jpg",
     "description": "Grand house burned during the Irish Civil War, now a haunting ruin.",
-    "_index": 2460,
+    "_index": 2459,
     "gallery": [
       "https://img.castlecore.uk/castle-bernard-bandon-2.jpg"
     ]
@@ -65939,7 +66024,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballynaclogh-castle.jpg",
     "description": "Small tower house ruin near Nenagh.",
-    "_index": 2461,
+    "_index": 2460,
     "gallery": [
       "https://img.castlecore.uk/ballynaclogh-castle-2.jpg",
       "https://img.castlecore.uk/ballynaclogh-castle-3.jpg",
@@ -65964,7 +66049,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballylooby-castle.jpg",
     "description": "Tower house ruin in the Suir Valley.",
-    "_index": 2462,
+    "_index": 2461,
     "gallery": [
       "https://img.castlecore.uk/ballylooby-castle-2.jpg",
       "https://img.castlecore.uk/ballylooby-castle-3.jpg",
@@ -65990,7 +66075,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/hore-abbey-cashel.jpg",
     "description": "Cistercian abbey near the Rock of Cashel with stunning views.",
-    "_index": 2463,
+    "_index": 2462,
     "gallery": [
       "https://img.castlecore.uk/hore-abbey-cashel-2.jpg",
       "https://img.castlecore.uk/hore-abbey-cashel-3.jpg",
@@ -66015,7 +66100,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/carriggundel-castle.jpg",
     "description": "Riverside castle ruin on the Shannon.",
-    "_index": 2464,
+    "_index": 2463,
     "gallery": [
       "https://img.castlecore.uk/carriggundel-castle-2.jpg",
       "https://img.castlecore.uk/carriggundel-castle-3.jpg",
@@ -66040,7 +66125,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kildare-castle.jpg",
     "description": "Norman castle ruin in the heart of Kildare town.",
-    "_index": 2465,
+    "_index": 2464,
     "gallery": [
       "https://img.castlecore.uk/kildare-castle-2.jpg",
       "https://img.castlecore.uk/kildare-castle-3.jpg",
@@ -66065,7 +66150,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballymore-eustace-castle.jpg",
     "description": "Anglo-Norman castle fragment in the village.",
-    "_index": 2466,
+    "_index": 2465,
     "gallery": [
       "https://img.castlecore.uk/ballymore-eustace-castle-2.jpg",
       "https://img.castlecore.uk/ballymore-eustace-castle-3.jpg",
@@ -66088,7 +66173,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/leixlip-castle.jpg",
     "description": "One of the oldest inhabited castles in Ireland.",
-    "_index": 2467,
+    "_index": 2466,
     "gallery": [
       "https://img.castlecore.uk/leixlip-castle-2.jpg",
       "https://img.castlecore.uk/leixlip-castle-3.jpg",
@@ -66113,7 +66198,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/tully-castle-kildare.jpg",
     "description": "Tower house ruin in the Curragh area.",
-    "_index": 2468,
+    "_index": 2467,
     "gallery": [
       "https://img.castlecore.uk/tully-castle-kildare-2.jpg",
       "https://img.castlecore.uk/tully-castle-kildare-3.jpg",
@@ -66138,7 +66223,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "",
     "description": "Five-storey tower house with bawn wall near Kilkenny.",
-    "_index": 2469
+    "_index": 2468
   },
   {
     "name": "Tullaroan Castle",
@@ -66157,7 +66242,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/tullaroan-castle.jpg",
     "description": "Tower house ruin in the village of Tullaroan.",
-    "_index": 2470,
+    "_index": 2469,
     "gallery": [
       "https://img.castlecore.uk/tullaroan-castle-2.jpg",
       "https://img.castlecore.uk/tullaroan-castle-3.jpg",
@@ -66180,7 +66265,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/shankill-castle-kilkenny.jpg",
     "description": "Castle with extensive gardens near Paulstown.",
-    "_index": 2471,
+    "_index": 2470,
     "gallery": [
       "https://img.castlecore.uk/shankill-castle-kilkenny-2.jpg",
       "https://img.castlecore.uk/shankill-castle-kilkenny-3.jpg",
@@ -66206,7 +66291,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/clonmines-church.jpg",
     "description": "Deserted medieval town ruins with multiple churches and castle.",
-    "_index": 2472,
+    "_index": 2471,
     "gallery": [
       "https://img.castlecore.uk/clonmines-church-2.jpg",
       "https://img.castlecore.uk/clonmines-church-3.jpg"
@@ -66229,7 +66314,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/aghaboe-abbey-laois.jpg",
     "description": "Ancient monastic site founded by St Canice.",
-    "_index": 2473,
+    "_index": 2472,
     "gallery": [
       "https://img.castlecore.uk/aghaboe-abbey-laois-2.jpg",
       "https://img.castlecore.uk/aghaboe-abbey-laois-3.jpg",
@@ -66254,7 +66339,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/donore-castle-westmeath.jpg",
     "description": "Tower house ruin overlooking Lough Ennell.",
-    "_index": 2474,
+    "_index": 2473,
     "gallery": [
       "https://img.castlecore.uk/donore-castle-westmeath-2.jpg",
       "https://img.castlecore.uk/donore-castle-westmeath-3.jpg",
@@ -66279,7 +66364,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/annaghkeen-castle-galway.jpg",
     "description": "Lakeside tower house on Lough Corrib.",
-    "_index": 2475,
+    "_index": 2474,
     "gallery": [
       "https://img.castlecore.uk/annaghkeen-castle-galway-2.jpg",
       "https://img.castlecore.uk/annaghkeen-castle-galway-3.jpg",
@@ -66304,7 +66389,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/knockmoy-abbey.jpg",
     "description": "Cistercian abbey with rare medieval wall paintings.",
-    "_index": 2476,
+    "_index": 2475,
     "gallery": [
       "https://img.castlecore.uk/knockmoy-abbey-2.jpg",
       "https://img.castlecore.uk/knockmoy-abbey-3.jpg",
@@ -66330,7 +66415,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/burrishoole-friary.jpg",
     "description": "Dominican friary ruins on a tidal inlet near Newport.",
-    "_index": 2477,
+    "_index": 2476,
     "gallery": [
       "https://img.castlecore.uk/burrishoole-friary-2.jpg",
       "https://img.castlecore.uk/burrishoole-friary-3.jpg",
@@ -66355,7 +66440,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castle-gore-mayo.jpg",
     "description": "Georgian country house ruin near Ballinrobe.",
-    "_index": 2478,
+    "_index": 2477,
     "gallery": [
       "https://img.castlecore.uk/castle-gore-mayo-2.jpg",
       "https://img.castlecore.uk/castle-gore-mayo-3.jpg",
@@ -66380,7 +66465,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/ballinafad-castle.jpg",
     "description": "Plantation castle at the entrance to the Curlew Mountains.",
-    "_index": 2479,
+    "_index": 2478,
     "gallery": [
       "https://img.castlecore.uk/ballinafad-castle-2.jpg",
       "https://img.castlecore.uk/ballinafad-castle-3.jpg",
@@ -66406,7 +66491,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/creevlea-abbey.jpg",
     "description": "Last Franciscan friary founded before the Dissolution.",
-    "_index": 2480,
+    "_index": 2479,
     "gallery": [
       "https://img.castlecore.uk/creevlea-abbey-2.jpg",
       "https://img.castlecore.uk/creevlea-abbey-3.jpg",
@@ -66431,32 +66516,13 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/carlingford-castle.jpg",
     "description": "Norman castle overlooking Carlingford Lough and the Cooley Mountains.",
-    "_index": 2481,
+    "_index": 2480,
     "gallery": [
       "https://img.castlecore.uk/carlingford-castle-2.jpg",
       "https://img.castlecore.uk/carlingford-castle-3.jpg",
       "https://img.castlecore.uk/carlingford-castle-4.jpg",
       "https://img.castlecore.uk/carlingford-castle-5.jpg"
     ]
-  },
-  {
-    "name": "King Johns Castle Carlingford",
-    "lat": 54.043,
-    "lng": -6.188,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Louth",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.9,
-    "reviewCount": 50,
-    "era": "13th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/king-johns-castle-carlingford.jpg",
-    "description": "Medieval castle ruin in the heritage town.",
-    "_index": 2482
   },
   {
     "name": "Kells Tower",
@@ -66475,7 +66541,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/kells-tower.jpg",
     "description": "Round tower and high crosses at the famous Columban monastery.",
-    "_index": 2483,
+    "_index": 2481,
     "gallery": [
       "https://img.castlecore.uk/kells-tower-2.jpg",
       "https://img.castlecore.uk/kells-tower-3.jpg",
@@ -66500,7 +66566,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rathmoylan-castle.jpg",
     "description": "Tower house ruin on the Waterford coast.",
-    "_index": 2484,
+    "_index": 2482,
     "gallery": [
       "https://img.castlecore.uk/rathmoylan-castle-2.jpg",
       "https://img.castlecore.uk/rathmoylan-castle-3.jpg"
@@ -66523,7 +66589,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/clonroad-castle.jpg",
     "description": "O'Brien castle ruin in Ennis.",
-    "_index": 2485,
+    "_index": 2483,
     "gallery": [
       "https://img.castlecore.uk/clonroad-castle-2.jpg",
       "https://img.castlecore.uk/clonroad-castle-3.jpg",
@@ -66546,7 +66612,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/newtown-castle-burren.jpg",
     "description": "Unique round tower house on a square base in the Burren.",
-    "_index": 2486,
+    "_index": 2484,
     "gallery": [
       "https://img.castlecore.uk/newtown-castle-burren-2.jpg",
       "https://img.castlecore.uk/newtown-castle-burren-3.jpg",
@@ -66572,7 +66638,10 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kilcooley-abbey.jpg",
     "description": "Cistercian abbey with remarkable late medieval sculptures.",
-    "_index": 2487
+    "_index": 2485,
+    "gallery": [
+      "https://img.castlecore.uk/kilcooley-abbey-tipperary.jpg"
+    ]
   },
   {
     "name": "Lorrha Priory",
@@ -66591,7 +66660,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/lorrha-priory.jpg",
     "description": "Augustinian and Dominican priory ruins in the ancient village.",
-    "_index": 2488,
+    "_index": 2486,
     "gallery": [
       "https://img.castlecore.uk/lorrha-priory-2.jpg",
       "https://img.castlecore.uk/lorrha-priory-3.jpg",
@@ -66616,7 +66685,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/fennor-castle.jpg",
     "description": "Tower house in the Golden Vale.",
-    "_index": 2489,
+    "_index": 2487,
     "gallery": [
       "https://img.castlecore.uk/fennor-castle-2.jpg",
       "https://img.castlecore.uk/fennor-castle-3.jpg",
@@ -66641,7 +66710,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/thomastown-castle-tipperary.jpg",
     "description": "Grand house ruin with earlier medieval elements.",
-    "_index": 2490,
+    "_index": 2488,
     "gallery": [
       "https://img.castlecore.uk/thomastown-castle-tipperary-2.jpg",
       "https://img.castlecore.uk/thomastown-castle-tipperary-3.jpg",
@@ -66666,7 +66735,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/abington-castle.jpg",
     "description": "Tower house ruin near Murroe.",
-    "_index": 2491,
+    "_index": 2489,
     "gallery": [
       "https://img.castlecore.uk/abington-castle-2.jpg",
       "https://img.castlecore.uk/abington-castle-3.jpg",
@@ -66691,7 +66760,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/adare-augustinian-friary.jpg",
     "description": "Augustinian friary ruins in the prettiest village in Ireland.",
-    "_index": 2492,
+    "_index": 2490,
     "gallery": [
       "https://img.castlecore.uk/adare-augustinian-friary-2.jpg",
       "https://img.castlecore.uk/adare-augustinian-friary-3.jpg",
@@ -66716,7 +66785,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/hospital-priory.jpg",
     "description": "Knights Hospitaller priory ruins.",
-    "_index": 2493,
+    "_index": 2491,
     "gallery": [
       "https://img.castlecore.uk/hospital-priory-2.jpg",
       "https://img.castlecore.uk/hospital-priory-3.jpg",
@@ -66741,7 +66810,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/any-castle.jpg",
     "description": "Small castle ruin at Knockaney.",
-    "_index": 2494,
+    "_index": 2492,
     "gallery": [
       "https://img.castlecore.uk/any-castle-2.jpg",
       "https://img.castlecore.uk/any-castle-3.jpg",
@@ -66766,7 +66835,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/ardoginna-castle.jpg",
     "description": "Castellated house on a headland near Ardmore.",
-    "_index": 2495
+    "_index": 2493
   },
   {
     "name": "Mothel Abbey",
@@ -66785,7 +66854,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/mothel-abbey.jpg",
     "description": "Priory ruins near Carrick-on-Suir.",
-    "_index": 2496,
+    "_index": 2494,
     "gallery": [
       "https://img.castlecore.uk/mothel-abbey-2.jpg",
       "https://img.castlecore.uk/mothel-abbey-3.jpg",
@@ -66811,7 +66880,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kilkieran-high-crosses.jpg",
     "description": "Three early medieval high crosses in a rural setting.",
-    "_index": 2497,
+    "_index": 2495,
     "gallery": [
       "https://img.castlecore.uk/kilkieran-high-crosses-2.jpg",
       "https://img.castlecore.uk/kilkieran-high-crosses-3.jpg",
@@ -66836,7 +66905,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/knocktopher-castle.jpg",
     "description": "Norman castle motte and church ruins.",
-    "_index": 2498,
+    "_index": 2496,
     "gallery": [
       "https://img.castlecore.uk/knocktopher-castle-2.jpg",
       "https://img.castlecore.uk/knocktopher-castle-3.jpg",
@@ -66861,7 +66930,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castlecomer-castle.jpg",
     "description": "Former Wandesforde estate with castle grounds.",
-    "_index": 2499,
+    "_index": 2497,
     "gallery": [
       "https://img.castlecore.uk/castlecomer-castle-2.jpg",
       "https://img.castlecore.uk/castlecomer-castle-3.jpg",
@@ -66886,7 +66955,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/fertagh-round-tower.jpg",
     "description": "Well-preserved round tower and church ruins.",
-    "_index": 2500,
+    "_index": 2498,
     "gallery": [
       "https://img.castlecore.uk/fertagh-round-tower-2.jpg",
       "https://img.castlecore.uk/fertagh-round-tower-3.jpg",
@@ -66911,7 +66980,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/cregg-castle.jpg",
     "description": "Well-preserved fortified house near Corrandulla.",
-    "_index": 2501
+    "_index": 2499
   },
   {
     "name": "Ballylee Castle (Thoor Ballylee)",
@@ -66930,7 +66999,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/ballylee-castle-thoor-ballylee.jpg",
     "description": "Norman tower house, the summer home of W.B. Yeats.",
-    "_index": 2502,
+    "_index": 2500,
     "gallery": [
       "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-2.jpg",
       "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-3.jpg",
@@ -66955,7 +67024,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kilconnell-castle.jpg",
     "description": "Castle remains near the friary.",
-    "_index": 2503,
+    "_index": 2501,
     "gallery": [
       "https://img.castlecore.uk/kilconnell-castle-2.jpg",
       "https://img.castlecore.uk/kilconnell-castle-3.jpg",
@@ -66980,7 +67049,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/abbey-knockmoy-galway.jpg",
     "description": "Cistercian abbey with rare fresco fragments.",
-    "_index": 2504,
+    "_index": 2502,
     "gallery": [
       "https://img.castlecore.uk/abbey-knockmoy-galway-2.jpg",
       "https://img.castlecore.uk/abbey-knockmoy-galway-3.jpg",
@@ -67006,7 +67075,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballindoon-priory.jpg",
     "description": "Dominican friary on the shores of Lough Arrow.",
-    "_index": 2505,
+    "_index": 2503,
     "gallery": [
       "https://img.castlecore.uk/ballindoon-priory-2.jpg",
       "https://img.castlecore.uk/ballindoon-priory-3.jpg",
@@ -67031,7 +67100,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/easky-castle.jpg",
     "description": "O'Dowd castle ruin on the Wild Atlantic Way.",
-    "_index": 2506,
+    "_index": 2504,
     "gallery": [
       "https://img.castlecore.uk/easky-castle-2.jpg",
       "https://img.castlecore.uk/easky-castle-3.jpg",
@@ -67056,7 +67125,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/inniscrone-castle.jpg",
     "description": "Castle ruin in the seaside town.",
-    "_index": 2507,
+    "_index": 2505,
     "gallery": [
       "https://img.castlecore.uk/inniscrone-castle-2.jpg",
       "https://img.castlecore.uk/inniscrone-castle-3.jpg",
@@ -67079,7 +67148,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/temple-house-sligo.jpg",
     "description": "Georgian mansion with medieval ruins on the estate.",
-    "_index": 2508,
+    "_index": 2506,
     "gallery": [
       "https://img.castlecore.uk/temple-house-sligo-2.jpg",
       "https://img.castlecore.uk/temple-house-sligo-3.jpg",
@@ -67105,7 +67174,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rathcroghan-mound.jpg",
     "description": "Ancient royal site of Connacht, seat of Queen Medb.",
-    "_index": 2509,
+    "_index": 2507,
     "gallery": [
       "https://img.castlecore.uk/rathcroghan-mound-2.jpg",
       "https://img.castlecore.uk/rathcroghan-mound-3.jpg",
@@ -67130,7 +67199,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/frenchpark-castle.jpg",
     "description": "Georgian house ruin, birthplace of Douglas Hyde.",
-    "_index": 2510,
+    "_index": 2508,
     "gallery": [
       "https://img.castlecore.uk/frenchpark-castle-2.jpg",
       "https://img.castlecore.uk/frenchpark-castle-3.jpg",
@@ -67156,7 +67225,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/mcdermott-s-castle-island.jpg",
     "description": "Romantic castle ruin on an island in Lough Key.",
-    "_index": 2511,
+    "_index": 2509,
     "gallery": [
       "https://img.castlecore.uk/mcdermott-s-castle-island-2.jpg",
       "https://img.castlecore.uk/mcdermott-s-castle-island-3.jpg",
@@ -67182,7 +67251,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/aghadoe-cathedral-kerry.jpg",
     "description": "Cathedral and round tower with stunning views over the Killarney Lakes.",
-    "_index": 2512,
+    "_index": 2510,
     "gallery": [
       "https://img.castlecore.uk/aghadoe-cathedral-kerry-2.jpg",
       "https://img.castlecore.uk/aghadoe-cathedral-kerry-3.jpg",
@@ -67205,7 +67274,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/ballyseedy-castle-kerry.jpg",
     "description": "Castellated house set in woodland near Tralee.",
-    "_index": 2513,
+    "_index": 2511,
     "gallery": [
       "https://img.castlecore.uk/ballyseedy-castle-kerry-2.jpg",
       "https://img.castlecore.uk/ballyseedy-castle-kerry-3.jpg",
@@ -67230,7 +67299,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/tralee-castle.jpg",
     "description": "Desmond castle fragment in Tralee town park.",
-    "_index": 2514,
+    "_index": 2512,
     "gallery": [
       "https://img.castlecore.uk/tralee-castle-2.jpg",
       "https://img.castlecore.uk/tralee-castle-3.jpg",
@@ -67256,7 +67325,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/mucross-abbey.jpg",
     "description": "Iconic Franciscan friary with ancient yew tree in the cloister.",
-    "_index": 2515,
+    "_index": 2513,
     "gallery": [
       "https://img.castlecore.uk/mucross-abbey-2.jpg",
       "https://img.castlecore.uk/mucross-abbey-3.jpg",
@@ -67281,7 +67350,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/innisfallen-abbey.jpg",
     "description": "Monastic ruins on an island in Lough Leane, Killarney.",
-    "_index": 2516,
+    "_index": 2514,
     "gallery": [
       "https://img.castlecore.uk/innisfallen-abbey-2.jpg",
       "https://img.castlecore.uk/innisfallen-abbey-3.jpg",
@@ -67307,7 +67376,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/castle-lough-currane.jpg",
     "description": "Small castle on an island in Lough Currane near Waterville.",
-    "_index": 2517,
+    "_index": 2515,
     "gallery": [
       "https://img.castlecore.uk/castle-lough-currane-2.jpg",
       "https://img.castlecore.uk/castle-lough-currane-3.jpg",
@@ -67332,7 +67401,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballycarberry-castle-ruin.jpg",
     "description": "McCarthy Mór castle ruin near Cahersiveen.",
-    "_index": 2518,
+    "_index": 2516,
     "gallery": [
       "https://img.castlecore.uk/ballycarberry-castle-ruin-2.jpg",
       "https://img.castlecore.uk/ballycarberry-castle-ruin-3.jpg",
@@ -67357,7 +67426,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ardfert-friary.jpg",
     "description": "Franciscan friary ruins near the cathedral.",
-    "_index": 2519,
+    "_index": 2517,
     "gallery": [
       "https://img.castlecore.uk/ardfert-friary-2.jpg",
       "https://img.castlecore.uk/ardfert-friary-3.jpg",
@@ -67382,7 +67451,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/abbeydorney-cistercian-ruins.jpg",
     "description": "Kyrie Eleison abbey ruins near Tralee.",
-    "_index": 2520,
+    "_index": 2518,
     "gallery": [
       "https://img.castlecore.uk/abbeydorney-cistercian-ruins-2.jpg",
       "https://img.castlecore.uk/abbeydorney-cistercian-ruins-3.jpg",
@@ -67407,7 +67476,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/lough-gur-castle.jpg",
     "description": "Tower house on the shores of Lough Gur.",
-    "_index": 2521,
+    "_index": 2519,
     "gallery": [
       "https://img.castlecore.uk/lough-gur-castle-2.jpg",
       "https://img.castlecore.uk/lough-gur-castle-3.jpg",
@@ -67432,7 +67501,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rockbarton-castle.jpg",
     "description": "Tower house ruin near Bruff.",
-    "_index": 2522,
+    "_index": 2520,
     "gallery": [
       "https://img.castlecore.uk/rockbarton-castle-2.jpg",
       "https://img.castlecore.uk/rockbarton-castle-3.jpg",
@@ -67457,7 +67526,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/caherconlish-castle.jpg",
     "description": "Castle ruin in the village.",
-    "_index": 2523,
+    "_index": 2521,
     "gallery": [
       "https://img.castlecore.uk/caherconlish-castle-2.jpg",
       "https://img.castlecore.uk/caherconlish-castle-3.jpg",
@@ -67482,7 +67551,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/shanagolden-abbey.jpg",
     "description": "Augustinian nunnery ruins.",
-    "_index": 2524,
+    "_index": 2522,
     "gallery": [
       "https://img.castlecore.uk/shanagolden-abbey-2.jpg",
       "https://img.castlecore.uk/shanagolden-abbey-3.jpg",
@@ -67507,7 +67576,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/athenry-priory.jpg",
     "description": "Dominican priory with fine medieval windows in the walled town.",
-    "_index": 2525,
+    "_index": 2523,
     "gallery": [
       "https://img.castlecore.uk/athenry-priory-2.jpg",
       "https://img.castlecore.uk/athenry-priory-3.jpg",
@@ -67532,7 +67601,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/dunsandle-castle.jpg",
     "description": "Georgian house ruin south of Galway.",
-    "_index": 2526,
+    "_index": 2524,
     "gallery": [
       "https://img.castlecore.uk/dunsandle-castle-2.jpg",
       "https://img.castlecore.uk/dunsandle-castle-3.jpg",
@@ -67557,7 +67626,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/deel-castle-mayo.jpg",
     "description": "Tower house ruin near Crossmolina.",
-    "_index": 2527
+    "_index": 2525
   },
   {
     "name": "Lough Ree Castle",
@@ -67576,7 +67645,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/lough-ree-castle.jpg",
     "description": "Castle remains on the shores of Lough Ree.",
-    "_index": 2528,
+    "_index": 2526,
     "gallery": [
       "https://img.castlecore.uk/lough-ree-castle-2.jpg",
       "https://img.castlecore.uk/lough-ree-castle-3.jpg",
@@ -67601,7 +67670,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballyloughloe-castle.jpg",
     "description": "Tower house ruin in rural Westmeath.",
-    "_index": 2529,
+    "_index": 2527,
     "gallery": [
       "https://img.castlecore.uk/ballyloughloe-castle-2.jpg",
       "https://img.castlecore.uk/ballyloughloe-castle-3.jpg",
@@ -67626,7 +67695,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/kilcormac-castle.jpg",
     "description": "Tower house ruin in the village.",
-    "_index": 2530,
+    "_index": 2528,
     "gallery": [
       "https://img.castlecore.uk/kilcormac-castle-2.jpg",
       "https://img.castlecore.uk/kilcormac-castle-3.jpg",
@@ -67651,7 +67720,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/banagher-castle.jpg",
     "description": "Fortification near the historic bridge over the Shannon.",
-    "_index": 2531,
+    "_index": 2529,
     "gallery": [
       "https://img.castlecore.uk/banagher-castle-2.jpg"
     ]
@@ -67673,7 +67742,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/aghancon-castle.jpg",
     "description": "Tower house in the south of the county.",
-    "_index": 2532,
+    "_index": 2530,
     "gallery": [
       "https://img.castlecore.uk/aghancon-castle-2.jpg",
       "https://img.castlecore.uk/aghancon-castle-3.jpg",
@@ -67698,7 +67767,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/old-leighlin-cathedral.jpg",
     "description": "Medieval cathedral on an early monastic site.",
-    "_index": 2533,
+    "_index": 2531,
     "gallery": [
       "https://img.castlecore.uk/old-leighlin-cathedral-2.jpg",
       "https://img.castlecore.uk/old-leighlin-cathedral-3.jpg",
@@ -67724,7 +67793,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/ballyloughan-castle-carlow.jpg",
     "description": "Anglo-Norman castle ruin with twin-towered gatehouse.",
-    "_index": 2534
+    "_index": 2532
   },
   {
     "name": "Clonmore Castle Carlow",
@@ -67743,7 +67812,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/clonmore-castle-carlow.jpg",
     "description": "Motte and castle ruins in a rural setting.",
-    "_index": 2535,
+    "_index": 2533,
     "gallery": [
       "https://img.castlecore.uk/clonmore-castle-carlow-2.jpg",
       "https://img.castlecore.uk/clonmore-castle-carlow-3.jpg",
@@ -67768,7 +67837,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/glendalough-round-tower.jpg",
     "description": "Iconic round tower at Ireland's most famous monastic site.",
-    "_index": 2536,
+    "_index": 2534,
     "gallery": [
       "https://img.castlecore.uk/glendalough-round-tower-2.jpg",
       "https://img.castlecore.uk/glendalough-round-tower-3.jpg",
@@ -67793,7 +67862,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/dunlavin-castle.jpg",
     "description": "Courthouse and castle remains in the market square.",
-    "_index": 2537,
+    "_index": 2535,
     "gallery": [
       "https://img.castlecore.uk/dunlavin-castle-2.jpg",
       "https://img.castlecore.uk/dunlavin-castle-3.jpg",
@@ -67818,7 +67887,7 @@ const CASTLES = [
     "condition": "intact",
     "image": "https://img.castlecore.uk/powerscourt-house.jpg",
     "description": "Grand Palladian house with some of the finest gardens in the world.",
-    "_index": 2538,
+    "_index": 2536,
     "gallery": [
       "https://img.castlecore.uk/powerscourt-house-2.jpg",
       "https://img.castlecore.uk/powerscourt-house-3.jpg",
@@ -67844,7 +67913,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/rathgall-fort.jpg",
     "description": "Massive stone hillfort with multiple ramparts.",
-    "_index": 2539,
+    "_index": 2537,
     "gallery": [
       "https://img.castlecore.uk/rathgall-fort-2.jpg",
       "https://img.castlecore.uk/rathgall-fort-3.jpg",
@@ -67869,7 +67938,7 @@ const CASTLES = [
     "condition": "ruin",
     "image": "https://img.castlecore.uk/newcastle-mckynegan.jpg",
     "description": "Small Anglo-Norman castle fragment.",
-    "_index": 2540,
+    "_index": 2538,
     "gallery": [
       "https://img.castlecore.uk/newcastle-mckynegan-2.jpg",
       "https://img.castlecore.uk/newcastle-mckynegan-3.jpg",
@@ -67894,7 +67963,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/clondalkin-round-tower.jpg",
     "description": "One of the best preserved round towers in Ireland.",
-    "_index": 2541,
+    "_index": 2539,
     "gallery": [
       "https://img.castlecore.uk/clondalkin-round-tower-2.jpg",
       "https://img.castlecore.uk/clondalkin-round-tower-3.jpg",
@@ -67919,7 +67988,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/bremore-castle.jpg",
     "description": "Tower house and farm complex near Balbriggan.",
-    "_index": 2542,
+    "_index": 2540,
     "gallery": [
       "https://img.castlecore.uk/bremore-castle-2.jpg",
       "https://img.castlecore.uk/bremore-castle-3.jpg",
