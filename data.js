@@ -10189,15 +10189,15 @@ const CASTLES = [
   },
   {
     "name": "Cloughoughter Castle",
-    "lat": 54,
-    "lng": -7.3833,
+    "lat": 54.0187,
+    "lng": -7.4548,
     "country": "Ireland",
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
     "description": "A circular Norman tower on a small island in Lough Oughter, accessible only by boat. Built by the Anglo-Normans on a crannog site, it was the last castle to surrender in the Cromwellian wars.",
     "history": "Cloughoughter Castle is a ruined circular castle on a small island in Lough Oughter, 4 kilometres (2.5 mi) east of the town of Killeshandra in County Cavan, Ireland.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Glenarm_Castle.jpg/500px-Glenarm_Castle.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/500px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg",
     "rating": 4,
     "reviewCount": 560,
     "county": "County Cavan",
@@ -23558,26 +23558,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Smithstown Castle",
-    "lat": 52.795,
-    "lng": -8.887,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "restored",
-    "description": "Six-storey tower house near Shannon, restored by private owners.",
-    "image": "",
-    "rating": 3.5,
-    "reviewCount": 85,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "exterior-only",
-    "_index": 812
-  },
-  {
     "name": "Doonagore Castle",
     "lat": 52.949,
     "lng": -9.403,
@@ -24387,26 +24367,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ballincollig-castle-4.jpg",
       "https://img.castlecore.uk/ballincollig-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Castlemore Castle",
-    "lat": 51.605,
-    "lng": -9.363,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "O'Donovan tower house ruin near Schull on the Mizen Peninsula.",
-    "image": "",
-    "rating": 3.3,
-    "reviewCount": 45,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 845
   },
   {
     "name": "Dundanion Castle",
@@ -29611,46 +29571,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Faunarooska Castle",
-    "lat": 53.095,
-    "lng": -9.068,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Small tower house in the Burren landscape, partially overgrown.",
-    "image": "https://img.castlecore.uk/faunarooska-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 28,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1043
-  },
-  {
-    "name": "Tromra Castle",
-    "lat": 52.775,
-    "lng": -9.425,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Ruined tower house near the Shannon Estuary in west Clare.",
-    "image": "",
-    "rating": 3.2,
-    "reviewCount": 15,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1044
-  },
-  {
     "name": "Muckinish Castle",
     "lat": 53.128,
     "lng": -9.12,
@@ -30354,27 +30274,6 @@ const CASTLES = [
       "https://img.castlecore.uk/cloghanower-castle-4.jpg",
       "https://img.castlecore.uk/cloghanower-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Bunowen Castle",
-    "lat": 53.442,
-    "lng": -10.105,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Coastal tower house ruin near Ballyconneely in Connemara.",
-    "image": "",
-    "rating": 3.5,
-    "reviewCount": 35,
-    "county": "County Galway",
-    "tags": [
-      "dramatic-ruin",
-      "free",
-      "coastal"
-    ],
-    "access": "free",
-    "_index": 1073
   },
   {
     "name": "Renvyle Castle",
@@ -31510,26 +31409,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ballygrennan-castle-4.jpg",
       "https://img.castlecore.uk/ballygrennan-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Castle Hewson",
-    "lat": 52.592,
-    "lng": -8.898,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house ruin near Askeaton.",
-    "image": "",
-    "rating": 3.2,
-    "reviewCount": 14,
-    "county": "County Limerick",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1118
   },
   {
     "name": "Shanpallas Castle",
@@ -33017,46 +32896,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Rossclogher Castle",
-    "lat": 54.392,
-    "lng": -8.108,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "MacClancy tower house on an island in Lough Melvin.",
-    "image": "https://img.castlecore.uk/rossclogher-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 22,
-    "county": "County Leitrim",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1178
-  },
-  {
-    "name": "Castlegal",
-    "lat": 54.298,
-    "lng": -8.378,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house in north Leitrim near Sligo border.",
-    "image": "",
-    "rating": 3,
-    "reviewCount": 7,
-    "county": "County Leitrim",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1179
-  },
-  {
     "name": "Drumlease Castle",
     "lat": 54.172,
     "lng": -8.282,
@@ -33081,26 +32920,6 @@ const CASTLES = [
       "https://img.castlecore.uk/drumlease-castle-4.jpg",
       "https://img.castlecore.uk/drumlease-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Breifne Castle",
-    "lat": 54.088,
-    "lng": -7.928,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "O'Rourke stronghold in the Breifne territory.",
-    "image": "",
-    "rating": 3.2,
-    "reviewCount": 12,
-    "county": "County Leitrim",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1181
   },
   {
     "name": "Kiltyclogher Castle",
@@ -33758,26 +33577,6 @@ const CASTLES = [
       "https://img.castlecore.uk/shinrone-castle-4.jpg",
       "https://img.castlecore.uk/shinrone-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Eglish Castle",
-    "lat": 53.268,
-    "lng": -7.748,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house near Birr.",
-    "image": "",
-    "rating": 3,
-    "reviewCount": 8,
-    "county": "County Offaly",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1208
   },
   {
     "name": "Frankford Castle",
@@ -35071,26 +34870,6 @@ const CASTLES = [
     ],
     "access": "free",
     "_index": 1259
-  },
-  {
-    "name": "Sigginstown Tower",
-    "lat": 52.298,
-    "lng": -6.758,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Small tower house near Taghmon.",
-    "image": "",
-    "rating": 3.1,
-    "reviewCount": 10,
-    "county": "County Wexford",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1260
   },
   {
     "name": "Ballyhack Tower",
@@ -38620,26 +38399,6 @@ const CASTLES = [
       "https://img.castlecore.uk/leacanabuaile-fort-4.jpg",
       "https://img.castlecore.uk/leacanabuaile-fort-5.jpg"
     ]
-  },
-  {
-    "name": "Creagh Castle",
-    "lat": 51.668,
-    "lng": -9.298,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house near Skibbereen.",
-    "image": "",
-    "rating": 3.1,
-    "reviewCount": 10,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1400
   },
   {
     "name": "Ballinvard Castle",
@@ -57986,25 +57745,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Kilmokea Castle",
-    "lat": 52.305,
-    "lng": -6.92,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "restored",
-    "description": "Restored tower house in peaceful gardens.",
-    "image": "",
-    "rating": 3.8,
-    "reviewCount": 50,
-    "county": "County Wexford",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 2148
-  },
-  {
     "name": "Ballyteague Castle",
     "lat": 53.175,
     "lng": -6.975,
@@ -64995,26 +64735,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Monksgrange Castle",
-    "lat": 52.36,
-    "lng": -6.74,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house ruin in central Wexford.",
-    "image": "",
-    "rating": 3.2,
-    "reviewCount": 10,
-    "county": "County Wexford",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2426
-  },
-  {
     "name": "Ballylaneen Castle",
     "lat": 52.17,
     "lng": -7.385,
@@ -65425,26 +65145,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Clenagh Castle",
-    "lat": 52.74,
-    "lng": -8.82,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house ruin visible from the N18.",
-    "image": "https://img.castlecore.uk/clenagh-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2443
-  },
-  {
     "name": "Ballycorick Castle",
     "lat": 52.785,
     "lng": -8.95,
@@ -65723,26 +65423,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Rearcross Tower",
-    "lat": 52.69,
-    "lng": -8.155,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house ruin in the Silvermine Mountains.",
-    "image": "https://img.castlecore.uk/rearcross-tower.jpg",
-    "rating": 3.2,
-    "reviewCount": 10,
-    "county": "County Tipperary",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2455
-  },
-  {
     "name": "Castle Otway",
     "lat": 52.76,
     "lng": -8,
@@ -65793,26 +65473,6 @@ const CASTLES = [
       "https://img.castlecore.uk/newcastle-tipperary-castle-4.jpg",
       "https://img.castlecore.uk/newcastle-tipperary-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Two Mile Borris Castle",
-    "lat": 52.675,
-    "lng": -7.745,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house ruin near Thurles.",
-    "image": "https://img.castlecore.uk/two-mile-borris-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Tipperary",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2458
   },
   {
     "name": "Castle Bernard Bandon",
