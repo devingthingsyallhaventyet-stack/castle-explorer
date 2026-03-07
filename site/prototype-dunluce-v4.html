@@ -289,6 +289,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <p class="drop-cap">On the very edge of Ireland, where the basalt cliffs drop sheer into the Atlantic, a castle clings to the rock like it's daring the sea to take it. <span class="highlight">Some of it, the sea already has.</span></p>
       <p>The MacDonnells built Dunluce as their stronghold in the 16th century — a fortress so dramatic it doubled as the <span class="highlight">Iron Islands in Game of Thrones</span>. Standing here, you're closer to Scotland than Dublin, and closer to a fantasy novel than anything in the modern world.</p>
       <p>Walk through the gatehouse and it opens up: roofless halls with grass floors, window frames that look out at nothing but ocean and sky. <span class="highlight">It's the kind of place where you stop taking photos and just stand there.</span></p>
+      <div id="hoursInline" style="display:none"></div>
     </section>
 
     <div class="ornament-sm"></div>
@@ -361,29 +362,11 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <!-- SIDEBAR -->
   <aside class="content-sidebar">
 
-    <!-- Quick Info -->
-    <div class="sidebar-card">
-      <div class="sidebar-quick">
-        <div class="sq-item"><div class="sq-label">Type</div><div class="sq-value">🏰 Castle</div></div>
-        <div class="sq-item"><div class="sq-label">Era</div><div class="sq-value">16th Century</div></div>
-        <div class="sq-item"><div class="sq-label">Condition</div><div class="sq-value">Ruin</div></div>
-        <div class="sq-item"><div class="sq-label">Access</div><div class="sq-value">🎟️ Paid</div></div>
-      </div>
-    </div>
-
     <!-- Map + Directions -->
     <div class="sidebar-card">
       <h3>Location</h3>
       <div class="sidebar-map">🗺️ Map coming soon</div>
       <a href="https://www.google.com/maps/dir/?api=1&destination=55.2106,-6.5794" target="_blank" class="sidebar-directions">📍 Get Directions</a>
-    </div>
-
-    <!-- Save & Actions (sticky) -->
-    <div class="sidebar-card">
-      <h3>Plan Your Visit</h3>
-      <button class="action-btn action-save" style="width:100%;justify-content:center;margin-bottom:.5rem" onclick="toggleSave()">♡ Save to Favourites</button>
-      <a href="../trail.html" class="action-btn action-secondary" style="width:100%;justify-content:center;margin-bottom:.5rem;display:flex">🛤️ Add to Route</a>
-      <a href="https://www.google.com/maps/search/Dunluce+Castle/@55.2106,-6.5794,15z" target="_blank" class="action-btn action-secondary" style="width:100%;justify-content:center;display:flex">🗺️ Open in Google Maps</a>
     </div>
 
     <!-- Visit Info (populated by Google Places) -->
@@ -396,18 +379,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     <div class="sidebar-card" id="linksCard" style="display:none">
       <h3>Official Links</h3>
       <div id="linksContent"></div>
-    </div>
-
-    <!-- Tags -->
-    <div class="sidebar-card">
-      <h3>Tags</h3>
-      <div class="mood-tags" style="margin-top:0">
-        <span class="mood-tag">Dramatic Ruin</span>
-        <span class="mood-tag">Photogenic</span>
-        <span class="mood-tag">Filming Location</span>
-        <span class="mood-tag">Cliffside</span>
-        <span class="mood-tag">Game of Thrones</span>
-      </div>
     </div>
 
   </aside>
@@ -513,7 +484,7 @@ fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Dunluce+Castl
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
-  headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.nationalPhoneNumber,places.internationalPhoneNumber,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
+  headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
   body:JSON.stringify({textQuery:'Dunluce Castle County Antrim',locationBias:{circle:{center:{latitude:55.2106,longitude:-6.5794},radius:1000}},maxResultCount:1})
 }).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];
@@ -540,10 +511,7 @@ fetch('https://places.googleapis.com/v1/places:searchText',{
     if(more)more.textContent='+'+(lbImages.length-4)+' photos';
   }
 
-  // Visit Info card — hours, phone, duration
-  const visitItems=[];
-  
-  // Opening hours
+  // Opening hours — inline under About section
   const hours=place.currentOpeningHours||place.regularOpeningHours;
   if(hours&&hours.weekdayDescriptions){
     const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -552,18 +520,9 @@ fetch('https://places.googleapis.com/v1/places:searchText',{
     const isOpen=hours.openNow;
     const statusText=isOpen?'<span style="color:#2e7d32;font-weight:600">Open now</span>':'<span style="color:#c62828;font-weight:600">Closed</span>';
     const allHours=hours.weekdayDescriptions.join('<br>');
-    visitItems.push('<div class="visit-item"><span class="visit-icon">🕐</span><div><div class="visit-label">Hours</div><div class="visit-value">'+statusText+' · '+(todayHours||'')+'<br><span class="visit-hours-toggle" onclick="this.nextElementSibling.classList.toggle(\'open\')">See all hours ▾</span><div class="visit-hours-full">'+allHours+'</div></div></div>');
-  }
-
-  // Phone
-  if(place.nationalPhoneNumber||place.internationalPhoneNumber){
-    const phone=place.nationalPhoneNumber||place.internationalPhoneNumber;
-    visitItems.push('<div class="visit-item"><span class="visit-icon">📞</span><div><div class="visit-label">Phone</div><div class="visit-value"><a href="tel:'+phone.replace(/\s/g,'')+'" style="color:var(--burgundy)">'+phone+'</a></div></div>');
-  }
-
-  if(visitItems.length){
-    document.getElementById('visitInfoCard').style.display='';
-    document.getElementById('visitInfoContent').innerHTML=visitItems.join('');
+    const hoursEl=document.getElementById('hoursInline');
+    hoursEl.style.display='';
+    hoursEl.innerHTML='<div style="margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:3px"><div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem"><span>🕐</span><span style="font-family:Cinzel,serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faded)">Opening Hours</span></div><div style="font-size:.95rem;color:var(--ink)">'+statusText+' · '+todayHours+'</div><span class="visit-hours-toggle" onclick="this.nextElementSibling.classList.toggle(\'open\')">See all hours ▾</span><div class="visit-hours-full">'+allHours+'</div></div>';
   }
 
   // Links card — website, Google Maps, social
