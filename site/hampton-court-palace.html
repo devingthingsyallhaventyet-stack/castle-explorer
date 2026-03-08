@@ -181,7 +181,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
 <section class="hero">
   <div class="hero-img">
-    <img src="https://img.castlecore.uk/hampton-court-palace.jpg" alt="Hampton Court Palace">
+    <img src="https://img.castlecore.uk/hampton-court-palace-interior.jpg" alt="Hampton Court Palace">
   </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
@@ -211,10 +211,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="content-main">
 
     <div class="photo-grid-compact" id="photoGrid">
-      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/hampton-court-palace-2.jpg" alt="Hampton Court Palace"></div>
-      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/hampton-court-palace-3.jpg" alt="Hampton Court Palace"></div>
-      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/hampton-court-palace-4.jpg" alt="Hampton Court Palace"></div>
-      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/hampton-court-palace-5.jpg" alt="Hampton Court Palace"><span class="pg-more">+4 photos</span></div>
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-2.jpg" alt="Hampton Court Palace"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-3.jpg" alt="Hampton Court Palace"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-4.jpg" alt="Hampton Court Palace"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-5.jpg" alt="Hampton Court Palace"><span class="pg-more">+4 photos</span></div>
     </div>
 
     <div class="narrative-quote">
@@ -305,7 +305,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 </div>
 
 <div class="photo-break fade-section">
-  <img src="https://img.castlecore.uk/hampton-court-palace-2.jpg" alt="Hampton Court Palace">
+  <img src="https://img.castlecore.uk/hampton-court-palace-interior-2.jpg" alt="Hampton Court Palace">
   <div class="pb-text">
     <p>"Henry's astronomical clock has been ticking for almost five hundred years. It still tells you the tide at London Bridge — though no one sails by it anymore."</p>
   </div>
@@ -378,7 +378,7 @@ window.addEventListener('scroll',()=>document.getElementById('floatNav').classLi
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.fade-section').forEach(el=>obs.observe(el));
 
-const lbImages=["https://img.castlecore.uk/hampton-court-palace-2.jpg","https://img.castlecore.uk/hampton-court-palace-3.jpg","https://img.castlecore.uk/hampton-court-palace-4.jpg","https://img.castlecore.uk/hampton-court-palace-5.jpg","https://img.castlecore.uk/hampton-court-palace-2.jpg","https://img.castlecore.uk/hampton-court-palace-3.jpg","https://img.castlecore.uk/hampton-court-palace-4.jpg","https://img.castlecore.uk/hampton-court-palace-5.jpg"];
+const lbImages=["https://img.castlecore.uk/hampton-court-palace-interior-2.jpg","https://img.castlecore.uk/hampton-court-palace-interior-3.jpg","https://img.castlecore.uk/hampton-court-palace-interior-4.jpg","https://img.castlecore.uk/hampton-court-palace-interior-5.jpg","https://img.castlecore.uk/hampton-court-palace-interior-2.jpg","https://img.castlecore.uk/hampton-court-palace-interior-3.jpg","https://img.castlecore.uk/hampton-court-palace-interior-4.jpg","https://img.castlecore.uk/hampton-court-palace-interior-5.jpg"];
 let lbIdx=0;
 function openLb(i){lbIdx=i;const lb=document.getElementById('lightbox');lb.querySelector('img').src=lbImages[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;lb.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}

@@ -181,7 +181,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
 <section class="hero">
   <div class="hero-img">
-    <img src="https://img.castlecore.uk/edinburgh-castle.jpg" alt="Edinburgh Castle">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior.jpg" alt="Edinburgh Castle">
   </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
@@ -202,7 +202,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <button class="action-btn action-save" id="saveBtn" onclick="toggleSave()">♡ Save</button>
   <a href="https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999" target="_blank" class="action-btn action-primary">📍 Directions</a>
   <a href="../trail.html" class="action-btn action-secondary">🛤️ Add to Route</a>
-  <a href="https://www.google.com/maps/search/Edinburgh%20Castle%20Interior/@55.9486,-3.1999,15z" target="_blank" class="action-btn action-secondary">🗺️ View on Map</a>
+  <a href="https://www.google.com/maps/search/Edinburgh%20Castle/@55.9486,-3.1999,15z" target="_blank" class="action-btn action-secondary">🗺️ View on Map</a>
   <span class="action-spacer"></span>
   <span class="action-share" onclick="shareThis()">↗ Share</span>
 </div>
@@ -211,10 +211,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="content-main">
 
     <div class="photo-grid-compact" id="photoGrid">
-      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle"></div>
-      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/edinburgh-castle-3.jpg" alt="Edinburgh Castle"></div>
-      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/edinburgh-castle-4.jpg" alt="Edinburgh Castle"></div>
-      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/edinburgh-castle-5.jpg" alt="Edinburgh Castle"><span class="pg-more">+4 photos</span></div>
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Edinburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-3.jpg" alt="Edinburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Edinburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-5.jpg" alt="Edinburgh Castle"><span class="pg-more">+4 photos</span></div>
     </div>
 
     <div class="narrative-quote">
@@ -301,7 +301,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 </div>
 
 <div class="photo-break fade-section">
-  <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle">
+  <img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Edinburgh Castle">
   <div class="pb-text">
     <p>"At one o'clock, the gun fires and every tourist jumps. The locals don't even flinch — they've been hearing it since 1861."</p>
   </div>
@@ -374,7 +374,7 @@ window.addEventListener('scroll',()=>document.getElementById('floatNav').classLi
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.fade-section').forEach(el=>obs.observe(el));
 
-const lbImages=["https://img.castlecore.uk/edinburgh-castle-2.jpg","https://img.castlecore.uk/edinburgh-castle-3.jpg","https://img.castlecore.uk/edinburgh-castle-4.jpg","https://img.castlecore.uk/edinburgh-castle-5.jpg","https://img.castlecore.uk/edinburgh-castle-2.jpg","https://img.castlecore.uk/edinburgh-castle-3.jpg","https://img.castlecore.uk/edinburgh-castle-4.jpg","https://img.castlecore.uk/edinburgh-castle-5.jpg"];
+const lbImages=["https://img.castlecore.uk/edinburgh-castle-interior-2.jpg","https://img.castlecore.uk/edinburgh-castle-interior-3.jpg","https://img.castlecore.uk/edinburgh-castle-interior-4.jpg","https://img.castlecore.uk/edinburgh-castle-interior-5.jpg","https://img.castlecore.uk/edinburgh-castle-interior-2.jpg","https://img.castlecore.uk/edinburgh-castle-interior-3.jpg","https://img.castlecore.uk/edinburgh-castle-interior-4.jpg","https://img.castlecore.uk/edinburgh-castle-interior-5.jpg"];
 let lbIdx=0;
 function openLb(i){lbIdx=i;const lb=document.getElementById('lightbox');lb.querySelector('img').src=lbImages[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;lb.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
@@ -402,11 +402,11 @@ function shareThis(){
 }
 
 const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Edinburgh%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Edinburgh%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=`)
 .then(r=>r.json()).then(d=>{
   const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/" allowfullscreen loading="lazy"></iframe>`).join('');
 }).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
