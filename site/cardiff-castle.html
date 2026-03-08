@@ -181,7 +181,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
 <section class="hero">
   <div class="hero-img">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Aerial_view_of_Cardiff_Castle.jpg/1280px-Aerial_view_of_Cardiff_Castle.jpg" alt="Cardiff Castle">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Castell_Coch_2018.jpg/1280px-Castell_Coch_2018.jpg" alt="Cardiff Castle">
   </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
@@ -220,14 +220,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In the 1860s, the 3rd Marquess of Bute — at twenty-one the richest man in the world — hired the eccentric architect William Burges to transform a crumbling Norman castle into a Victorian Gothic fantasy. Burges filled every surface with gold leaf, carved animals, painted ceilings, and stained glass. He died before finishing. The Marquess completed the work as a memorial to his genius."</p>
+      <p>"The 3rd Marquess of Bute was eighteen, the richest man in the world, and obsessed with the Middle Ages. He hired William Burges, a genius architect who dressed like a medieval monk and kept a parrot. Together they turned Cardiff Castle into a Victorian fever dream that makes Hogwarts look restrained."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Cardiff Castle is three buildings pretending to be one. At its heart, <span class="highlight">a Norman keep sits atop a Roman fort</span>, the ancient motte surrounded by 2,000-year-old walls. But look up from the courtyard and something entirely different emerges — a riot of Victorian Gothic fantasy, all spires and clock towers, that looks like it belongs in a fairy tale.</p>
-      <p>The Romans built a fort here around 55 AD, and sections of their wall — rebuilt in the 3rd century — still stand within the castle grounds. The Normans added the motte and keep in the 1080s. But it was the extraordinary partnership between the <span class="highlight">3rd Marquess of Bute and the architect William Burges that created the castle's most remarkable rooms</span>. The Arab Room, with its muqarnas ceiling entirely covered in gold leaf, is one of the most extraordinary Victorian interiors in Britain. The Banqueting Hall, the Library, and the Nursery are each a complete artistic universe — every surface encrusted with symbolic carvings, painted scenes, and jewel-like stained glass.</p>
-      <p>The castle sits in the heart of Cardiff, its grounds forming Bute Park — a green corridor stretching along the River Taff. <span class="highlight">The wartime tunnels beneath the castle walls sheltered thousands of Cardiff residents during the Blitz.</span> The Norman Keep offers panoramic views over the city, and the castle hosts regular events including outdoor cinema and the Cardiff Castle Christmas Market.</p>
+      <p class="drop-cap">Cardiff Castle is three buildings in one and two thousand years of history stacked on top of itself. <span class="highlight">Roman walls, a Norman motte, and a Victorian fantasy</span> coexist within the same grounds, in the middle of a capital city, as though someone shuffled a deck of centuries and dealt them all at once. The Roman fort walls — still visible at the base of the outer defences — date to the 3rd century AD. The Norman keep sits on its mound overlooking Bute Park. But the real spectacle is inside.</p>
+      <p>The 3rd Marquess of Bute and architect William Burges transformed the medieval lodgings into <span class="highlight">the most extraordinary Victorian Gothic interiors in Britain</span>. The Arab Room is a jewel box of gilded muqarnas, lapis lazuli, and geometric tiles — Islamic geometry interpreted through a Victorian imagination. The Banqueting Hall blazes with medieval murals. The roof garden, the clock tower apartments, and the nursery (with painted fairy tales on every surface) are each more extravagant than the last. Burges died in 1881 with the work unfinished; the Marquess completed it to his plans.</p>
+      <p>The castle sits on Castle Street in the centre of Cardiff, <span class="highlight">its grounds doubling as the city's favourite park</span>. The Norman keep offers panoramic views of the Millennium Stadium, Cardiff Bay, and the hills beyond. The wartime tunnels beneath the castle walls — used as air-raid shelters during the Blitz — can be visited on guided tours. Come for the Roman walls, stay for the Burges interiors — <span class="highlight">there is nothing else like them in the world</span>.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -304,7 +304,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/cardiff-castle-interior-2.jpg" alt="Cardiff Castle">
   <div class="pb-text">
-    <p>"Roman walls, a Norman keep, and a Victorian madman's golden dream — all in the heart of Cardiff."</p>
+    <p>"The richest man in the world hired a genius who dressed like a monk and kept a parrot. They built the Arab Room together. Nothing in Wales — nothing in Britain — looks anything like it."</p>
   </div>
 </div>
 
@@ -340,10 +340,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
             <div class="nc-meta">4.0 mi · castle</div>
           </div>
         </a>
-        <a href="castell-coch.html" class="nearby-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Raglan_Castle%27s_main_entrance.jpg/500px-Raglan_Castle%27s_main_entrance.jpg" alt="Castell Coch" loading="lazy">
+        <a href="castell-coch-fairytale.html" class="nearby-card">
+          <img src="https://img.castlecore.uk/castell-coch-fairytale.jpg" alt="Castell Coch Fairytale" loading="lazy">
           <div class="nc-body">
-            <div class="nc-name">Castell Coch</div>
+            <div class="nc-name">Castell Coch Fairytale</div>
             <div class="nc-meta">4.7 mi · castle</div>
           </div>
         </a>
@@ -402,15 +402,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Cardiff%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(function(r){return r.json()}).then(function(d){
-  var grid=document.getElementById('ytGrid');
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Cardiff Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
-}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

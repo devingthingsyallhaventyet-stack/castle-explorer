@@ -220,14 +220,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"Edward I built Conwy Castle in just four years and five months — an almost superhuman feat of medieval engineering. At its peak, 1,500 men worked the site simultaneously, and the cost of £15,000 would have funded a small war. Master James of St George, the architect, called it his finest work."</p>
+      <p>"Edward I spent £15,000 building Conwy Castle in just four years — the equivalent of roughly £40 million today. He employed 1,500 labourers and craftsmen. When Madog ap Llywelyn besieged it the winter after completion, Edward himself was trapped inside with dwindling supplies. He refused to surrender. The river froze. The Welsh withdrew."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Conwy Castle is a bruiser. Where some medieval fortresses charm, Conwy intimidates — <span class="highlight">eight massive drum towers connected by curtain walls of such thickness they seem carved from the rock itself</span>. It sits at the mouth of the River Conwy, perfectly positioned to control the coastal route into North Wales.</p>
-      <p>Edward I commissioned the castle in 1283 as part of his 'Iron Ring' — a chain of fortresses designed to subjugate Wales permanently. <span class="highlight">The castle withstood a siege by the Welsh prince Madog ap Llywelyn in the bitter winter of 1294-95</span>, when Edward himself was trapped inside with dwindling supplies. Richard II sheltered here in 1399 before being tricked into surrendering to Henry Bolingbroke, ending the Plantagenet line. In 1401, Welsh rebels under the brothers Rhys and Gwilym ap Tudur captured the castle on Good Friday, when the garrison of just fifteen men were at church.</p>
-      <p>The castle and town walls together form a UNESCO World Heritage Site. <span class="highlight">Conwy's town walls are the most complete medieval town defences in Britain</span>, stretching over three-quarters of a mile with 21 towers and three original gateways. The views from the castle's battlements take in Snowdonia, the Conwy estuary, and Thomas Telford's elegant suspension bridge. The Smallest House in Great Britain sits on the quay below.</p>
+      <p class="drop-cap">Conwy Castle stands on a rocky outcrop above the estuary where the River Conwy meets the sea, <span class="highlight">eight massive towers rising like stone fists from the waterfront</span>. Edward I's master mason, James of St George, designed it in 1283 as the linchpin of his "iron ring" of Welsh castles, and he created something that UNESCO now calls one of the finest examples of late 13th-century military architecture in Europe.</p>
+      <p>The castle is built to a figure-of-eight plan — an outer ward and an inner ward, each with four drum towers. The <span class="highlight">King's apartments in the inner ward still retain their original window seats and fireplaces</span>, and the Great Hall was large enough to feast the entire garrison. Edward spent a small fortune on it — £15,000 in medieval money — and the town walls he built alongside it, three-quarters of a mile long with 21 towers, are <span class="highlight">the most complete circuit of medieval town walls in Britain</span>. You can walk the entire length.</p>
+      <p>Climb any of the eight towers and the views are extraordinary: the Conwy estuary, the mountains of Snowdonia, Thomas Telford's suspension bridge, and Robert Stephenson's tubular railway bridge — <span class="highlight">eight centuries of engineering framed in a single glance</span>. The castle is roofless now, open to the wind and rain, and all the more beautiful for it. Turner painted it. Wordsworth wrote about it. On an autumn evening, with the sun setting behind Snowdonia and the estuary turning gold, Conwy is perhaps the most photogenic castle in Wales.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -302,7 +302,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/conwy-castle-interior-2.jpg" alt="Conwy Castle">
   <div class="pb-text">
-    <p>"Eight towers, four years, fifteen hundred men — Edward I's iron will made stone."</p>
+    <p>"Eight towers. Eight centuries. The estuary below still catches the same light that Turner painted, and the mountains behind haven't moved an inch."</p>
   </div>
 </div>
 
@@ -310,7 +310,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <section class="fade-section">
     <h2>Nearby Sites</h2>
     <div class="nearby-grid" id="nearbyGrid">
-      <a href="aberconwy-house.html" class="nearby-card">
+      <a href="conwy-castle-interior-tours.html" class="nearby-card">
+          <img src="https://img.castlecore.uk/conwy-castle-interior-tours.jpg" alt="Conwy Castle Interior Tours" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">Conwy Castle Interior Tours</div>
+            <div class="nc-meta">95 ft · castle</div>
+          </div>
+        </a>
+        <a href="aberconwy-house.html" class="nearby-card">
           <img src="https://img.castlecore.uk/aberconwy-house.jpg" alt="Aberconwy House" loading="lazy">
           <div class="nc-body">
             <div class="nc-name">Aberconwy House</div>
@@ -336,13 +343,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
           <div class="nc-body">
             <div class="nc-name">Conwy Town Walls</div>
             <div class="nc-meta">1444 ft · town wall</div>
-          </div>
-        </a>
-        <a href="bodysgallen-hall.html" class="nearby-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bodysgallenhallcmichaelhoganlowres.jpg/500px-Bodysgallenhallcmichaelhoganlowres.jpg" alt="Bodysgallen Hall" loading="lazy">
-          <div class="nc-body">
-            <div class="nc-name">Bodysgallen Hall</div>
-            <div class="nc-meta">2858 ft · historic-house</div>
           </div>
         </a>
     </div>
@@ -400,15 +400,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Conwy%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(function(r){return r.json()}).then(function(d){
-  var grid=document.getElementById('ytGrid');
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Conwy Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
-}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

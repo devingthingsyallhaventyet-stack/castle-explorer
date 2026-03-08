@@ -219,14 +219,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"According to legend, the Rock of Cashel was formed when St Patrick banished Satan from a cave in the Devil's Bit Mountain twenty miles to the north. The devil took a bite out of the mountain as he fled — that gap is still visible today — and spat the rock onto the plain at Cashel. The geology, admittedly, tells a different story."</p>
+      <p>"Legend says St Patrick banished Satan from a cave in the nearby Devil's Bit mountain. The devil bit a chunk out of the mountain as he flew away, and the rock he spat out landed in the Golden Vale. It became the Rock of Cashel — the seat of the Kings of Munster for seven hundred years."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">The Rock rises from the Tipperary plain like a hallucination — <span class="highlight">a cluster of medieval towers, cathedral walls, and round towers perched on a limestone outcrop</span> that seems deliberately placed by a higher power. On a misty morning, with sheep grazing the fields below and the silhouettes of ruined arches against the sky, it is one of the most hauntingly beautiful sites in Ireland.</p>
-      <p>This was the seat of the Kings of Munster for over 400 years before being granted to the Church in 1101. <span class="highlight">Cormac's Chapel, consecrated in 1134, is the jewel of Irish Romanesque architecture</span> — a tiny, exquisite building with carved tympana, a stone-roofed nave, and fragments of the oldest surviving frescoes in Ireland. The Gothic cathedral, roofless since the burning of 1495, rises beside it. The round tower, dating from around 1100, is the oldest structure on the Rock. The Hall of the Vicars Choral, with its medieval fireplace, is the only fully roofed building remaining.</p>
-      <p>The Rock is managed by the Office of Public Works and is one of Ireland's most-visited heritage sites. <span class="highlight">The high crosses and carved tombstones in the graveyard span a thousand years of Irish history.</span> The town of Cashel below — sometimes called the 'Golden Vale' — is a pleasant market town with good pubs and the Bru Boru cultural centre, which hosts traditional Irish music and dance.</p>
+      <p class="drop-cap">The Rock of Cashel erupts from the Tipperary plain like a stone island in a green sea. <span class="highlight">There is nothing gradual about it</span> — a sudden limestone outcrop, two hundred feet high, crowned with a cluster of medieval buildings so dense and so perfectly silhouetted against the Irish sky that it looks like a film set. It is not. It is older than anything in the screenplay.</p>
+      <p>The Kings of Munster ruled from this rock for over seven centuries before Brian Boru was crowned High King of Ireland here in 978. In 1101, the Munster king donated the rock to the Church, and what followed was <span class="highlight">one of the finest concentrations of medieval ecclesiastical architecture in Europe</span>: Cormac's Chapel (1127-1134), with its Romanesque carvings and rare medieval frescoes still visible on the chancel ceiling; the 28-metre Round Tower, possibly pre-Viking; a Gothic cathedral built in the 1230s; the Hall of the Vicars Choral; and a 15th-century tower house. All of it stands within a walled enclosure on the summit.</p>
+      <p>Cormac's Chapel alone is worth the trip — <span class="highlight">its twin-towered façade and carved tympanum are the finest Romanesque work in Ireland</span>. The cathedral, roofless since the 18th century, frames the sky through pointed Gothic arches. The graveyard is dense with Celtic crosses. And the view from the ramparts — <span class="highlight">the Golden Vale stretching to the Galtee Mountains</span> — explains why every king and every bishop who ever stood here refused to leave. Visit at dusk when the tour buses have gone and the rock is lit from below; it looks like something rising from the earth rather than sitting on it.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -302,7 +302,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/rock-of-cashel-interior-2.jpg" alt="Rock of Cashel">
   <div class="pb-text">
-    <p>"The Devil spat this rock from his mouth. St Patrick claimed it for God. A thousand years of prayers soaked into the stone."</p>
+    <p>"The devil bit a chunk from the mountain and spat it out here. Kings built on it. Saints preached from it. And the Golden Vale stretches away in every direction, as if the land itself is kneeling."</p>
   </div>
 </div>
 
@@ -315,6 +315,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
           <div class="nc-body">
             <div class="nc-name">Hore Abbey</div>
             <div class="nc-meta">368 ft · abbey</div>
+          </div>
+        </a>
+        <a href="hore-abbey-cashel.html" class="nearby-card">
+          <img src="https://img.castlecore.uk/hore-abbey-cashel.jpg" alt="Hore Abbey Cashel" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">Hore Abbey Cashel</div>
+            <div class="nc-meta">1259 ft · abbey</div>
           </div>
         </a>
         <a href="ballindoney-castle.html" class="nearby-card">
@@ -336,13 +343,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
           <div class="nc-body">
             <div class="nc-name">Fennor Castle</div>
             <div class="nc-meta">5.6 mi · tower house</div>
-          </div>
-        </a>
-        <a href="kiltinan-castle.html" class="nearby-card">
-          <img src="https://img.castlecore.uk/scraped-kiltinan.jpg" alt="Kiltinan Castle" loading="lazy">
-          <div class="nc-body">
-            <div class="nc-name">Kiltinan Castle</div>
-            <div class="nc-meta">6.0 mi · castle</div>
           </div>
         </a>
     </div>
@@ -400,15 +400,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Rock%20of%20Cashel%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(function(r){return r.json()}).then(function(d){
-  var grid=document.getElementById('ytGrid');
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Rock of Cashel drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
-}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

@@ -221,14 +221,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In 1671, Colonel Thomas Blood disguised himself as a clergyman, befriended the elderly Keeper of the Jewels, and attempted to steal the Crown Jewels. He flattened the crown with a mallet to fit it in his coat and filed the sceptre in half — but was caught at the gates. Charles II was so amused he pardoned Blood and gave him a pension."</p>
+      <p>"The night before her execution in 1536, Anne Boleyn told her jailer that the executioner was 'very good, and I have a little neck.' She put her hands around it and laughed. The next morning, a French swordsman — specially imported — took her head with a single stroke on Tower Green."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">The Tower squats at the edge of the Thames like something that has always been there, <span class="highlight">more a fact of London than a building in it</span>. William the Conqueror began the White Tower in 1066 to terrify the conquered Saxons, and nearly a millennium later, it still carries that energy — ancient, imposing, and faintly menacing.</p>
-      <p>This single fortress has served as royal palace, prison, armoury, treasury, menagerie, and mint. <span class="highlight">The Princes in the Tower — Edward V and his brother Richard — were last seen playing in the gardens in 1483</span> before vanishing forever, almost certainly murdered on the orders of Richard III. Anne Boleyn, Catherine Howard, Lady Jane Grey, and Sir Walter Raleigh all met their ends here. The Crown Jewels have been stored in the Tower since 1303, when they were nearly stolen from Westminster Abbey.</p>
-      <p>The Tower's ravens are its most famous residents — legend holds that if the ravens ever leave, <span class="highlight">the kingdom will fall</span>. The Ravenmaster, a Yeoman Warder, clips one wing of each bird to ensure they stay. The Yeoman Warders themselves — 'Beefeaters' — are all retired senior non-commissioned officers from the armed forces. The Ceremony of the Keys, the nightly locking-up ritual, has been performed without interruption for over 700 years.</p>
+      <p class="drop-cap">The Tower of London is not one tower but twenty-one, and it has been <span class="highlight">a palace, a prison, a zoo, a mint, an armoury, and a place of execution</span> — sometimes several of these on the same afternoon. William the Conqueror built the White Tower in 1078 to terrify London into submission, and nearly a thousand years later, it still works. The building is so massive, so blunt in its Norman geometry, that it makes the glass towers of the City behind it look fragile.</p>
+      <p>The Crown Jewels sit in the basement vault, moving past you on a conveyor belt — <span class="highlight">the Imperial State Crown with its 2,868 diamonds</span>, the Sovereign's Orb, the Koh-i-Noor. Upstairs in the White Tower, the Line of Kings displays royal armour dating to Henry VIII. But the Tower's real power is in its ghosts: Anne Boleyn and Catherine Howard were beheaded on Tower Green. The Princes in the Tower — Edward V and his brother Richard — <span class="highlight">vanished within these walls in 1483 and were never seen again</span>. Sir Walter Raleigh spent thirteen years imprisoned here, writing his History of the World.</p>
+      <p>The Yeoman Warders — Beefeaters — have guarded the Tower since 1485, and their tours are <span class="highlight">the best free theatre in London</span>: dark humour, impeccable timing, and stories that make you forget you're standing where people were tortured. The ravens still patrol the Green; legend says that if they ever leave, the kingdom will fall. The Ravenmaster clips their flight feathers, just in case. Visit in the late afternoon when the tour groups thin — <span class="highlight">the Tower at dusk, with the Thames turning gold behind it, is medieval London at its most real</span>.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -309,7 +309,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/tower-of-london-5.jpg" alt="Tower of London">
   <div class="pb-text">
-    <p>"Prison, palace, and treasure house — where the crown is kept and kings were unmade."</p>
+    <p>"The ravens never leave. The Ravenmaster clips their wings. If they go, the legend says, the kingdom falls — and no one is willing to test it."</p>
   </div>
 </div>
 
@@ -331,10 +331,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
             <div class="nc-meta">12.8 mi · abbey</div>
           </div>
         </a>
-        <a href="hampton-court-palace.html" class="nearby-card">
-          <img src="https://img.castlecore.uk/hampton-court-palace-interior.jpg" alt="Hampton Court Palace" loading="lazy">
+        <a href="hampton-court-palace-interior.html" class="nearby-card">
+          <img src="https://img.castlecore.uk/hampton-court-palace-interior.jpg" alt="Hampton Court Palace Interior" loading="lazy">
           <div class="nc-body">
-            <div class="nc-name">Hampton Court Palace</div>
+            <div class="nc-name">Hampton Court Palace Interior</div>
             <div class="nc-meta">13.4 mi · castle</div>
           </div>
         </a>
@@ -407,15 +407,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Tower%20of%20London%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(function(r){return r.json()}).then(function(d){
-  var grid=document.getElementById('ytGrid');
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Tower of London drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
-}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

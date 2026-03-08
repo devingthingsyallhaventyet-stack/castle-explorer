@@ -221,14 +221,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In 1464, Bamburgh became the first castle in England to be damaged by gunpowder artillery, when the Yorkist Earl of Warwick turned his cannons on its walls during the Wars of the Roses. The bombardment was so savage it punched holes through masonry that had stood since the Normans."</p>
+      <p>"Grace Darling was twenty-two when she rowed out from the lighthouse in a storm to rescue survivors of the SS Forfarshire in 1838. She could see the wreck from Bamburgh Castle's beach. She became the most famous woman in Victorian England — and she never left Northumberland."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">There are castles, and then there is Bamburgh — <span class="highlight">a fortress so vast it seems to grow from the volcanic rock itself</span>, its walls dropping sheer to the beach on one side and commanding views to Holy Island and the Farne Islands on the other. This is the ancient seat of the kings of Northumbria, and it looks every inch the part.</p>
-      <p>The Anglo-Saxon kings made Bamburgh their capital in the 6th century, and the site has been fortified for over 1,400 years. <span class="highlight">It was here that the legendary King Ida founded the kingdom of Bernicia in 547 AD.</span> The Normans built the great keep that still dominates the skyline, and Henry II rebuilt much of the castle in the 12th century. After centuries of decay, the Victorian industrialist Lord Armstrong purchased and restored it in the 1890s, installing what was then cutting-edge hydraulic technology — including a hydraulic lift and one of the earliest domestic hydroelectric power systems.</p>
-      <p>Today, Bamburgh is still home to the Armstrong family and feels more like a stately home than a ruin. <span class="highlight">The King's Hall houses one of the finest collections of arms and armour in the North of England.</span> The beach below — regularly voted one of Britain's best — stretches for miles in both directions. On a clear day, you can see the outline of Lindisfarne rising from the sea.</p>
+      <p class="drop-cap">Bamburgh hits you from miles away. Driving north along the Northumberland coast road, <span class="highlight">the castle appears on its basalt crag like a dark crown above the sand</span>, nine acres of fortress overlooking a beach so vast and beautiful it belongs in another country. The Farne Islands scatter across the horizon. Holy Island shimmers to the north. This is where England's story began.</p>
+      <p>The Anglo-Saxon kings of Northumbria made this their royal seat — <span class="highlight">the castle's name comes from Queen Bebba, wife of King Æthelfrith, in the 6th century</span>. The Normans built the great keep that still dominates the skyline. By the 15th century, Bamburgh became the first castle in England to fall to gunpowder during the Wars of the Roses, its walls shattered by Edward IV's cannons. The Victorian industrialist Lord Armstrong bought the ruins in 1894 and restored them with a perfectionist's obsession, filling the King's Hall with Pre-Raphaelite art and Tyneside engineering.</p>
+      <p>Today the Armstrong family still live here, and the castle has that rare quality of feeling <span class="highlight">inhabited rather than curated</span>. The State Rooms are warm with polished wood and firelight. The Archaeology Museum in the basement reveals Bronze Age gold and Anglo-Saxon swords found on the site. But the real draw is stepping out onto the ramparts and <span class="highlight">looking down at that impossible beach</span> — miles of sand, castle shadow stretching toward the sea, and not another soul in sight.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -307,7 +307,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/bamburgh-castle-interior-2.jpg" alt="Bamburgh Castle">
   <div class="pb-text">
-    <p>"The Anglo-Saxon kings chose this rock for a reason. Fourteen centuries later, you can still feel why."</p>
+    <p>"From the ramparts, the beach stretches so far north it dissolves into mist. On clear days, you can see Holy Island. On grey ones, you can only feel it."</p>
   </div>
 </div>
 
@@ -405,15 +405,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Bamburgh%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(function(r){return r.json()}).then(function(d){
-  var grid=document.getElementById('ytGrid');
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Bamburgh Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
-}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

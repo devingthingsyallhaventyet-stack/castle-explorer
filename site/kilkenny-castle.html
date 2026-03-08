@@ -220,14 +220,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In 1967, the 6th Marquess of Ormonde sold Kilkenny Castle to the people of the city for £50. The Butler family had owned it for 581 years. When asked why he sold it so cheaply, he reportedly said he could no longer afford the roof repairs."</p>
+      <p>"In 1967, Arthur Butler, 6th Marquess of Ormonde, sold Kilkenny Castle to the people of Ireland for £50. His family had held it for 559 years. The roof was leaking, the grounds were overgrown, and the Butler fortune was gone — but the gesture saved the finest Anglo-Norman castle in the country."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Kilkenny Castle presides over its medieval city with the quiet authority of a family patriarch — <span class="highlight">its pale limestone towers reflected in the River Nore</span>, its parkland rolling down to the water's edge. It is a castle that has been lived in, fought over, neglected, and lovingly restored, and each chapter shows.</p>
-      <p>Strongbow's son-in-law William Marshal built the first stone castle here around 1204, establishing the classic four-towered layout. <span class="highlight">The Butler family — Earls, Marquesses, and Dukes of Ormonde — made it their seat from 1391 until 1967</span>, a span of nearly six centuries. The castle endured multiple sieges during the Confederate and Cromwellian wars of the 1640s. In the 1840s, the Butlers undertook a major Victorian Gothic revival restoration, creating the spectacular Long Gallery — a double-height hall with a painted ceiling, Pre-Raphaelite-style portraits, and a hammer-beam roof.</p>
-      <p>After the £50 sale, the Irish state spent decades restoring the castle to its Victorian splendour. <span class="highlight">The Long Gallery, with its painted ceiling and collection of Butler family portraits, is the undisputed highlight.</span> The parkland — free to enter — is the green heart of Kilkenny, popular with locals for walks along the Nore. The Butler Gallery, housed in the castle basement, shows contemporary Irish art in medieval surroundings. The castle hosts regular craft fairs and the annual Kilkenny Arts Festival.</p>
+      <p class="drop-cap">Kilkenny Castle commands the high ground above the River Nore with the quiet authority of a building that has been <span class="highlight">the centre of power in Ireland's most beautiful medieval city for eight centuries</span>. Three drum towers survive from the original Norman fortress, and between them stretches a Victorian mansion that the Butler family — Earls, Marquesses, and Dukes of Ormonde — rebuilt, extended, and filled with art over 559 years of continuous occupation.</p>
+      <p>The Long Gallery is the masterpiece — <span class="highlight">a barrel-vaulted ceiling painted with Pre-Raphaelite-inspired panels</span>, portraits of Butler ancestors lining the walls, and light flooding in from tall windows overlooking the parkland. The library, the drawing room, and the Chinese Bedroom have been restored to their 1830s appearance, when the castle was the social centre of Anglo-Irish life. The Butlers hosted hunts, balls, and political intrigues here; <span class="highlight">Cromwell besieged the castle in 1650</span>, and the scars of his cannon are still visible on the east wall.</p>
+      <p>Today the castle is managed by the OPW and <span class="highlight">admission is free</span> — one of Ireland's great cultural bargains. The 50 acres of parkland, designed in the 18th century, include a formal rose garden, a fountain, and sweeping lawns that are Kilkenny's favourite picnic spot. The castle sits at one end of the Medieval Mile, a walking route through the city's best-preserved medieval streetscape. <span class="highlight">Come during Kilkenny Arts Festival in August</span> and the castle grounds become an open-air stage, the towers lit up and the city alive with music.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -303,7 +303,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/kilkenny-castle-interior-2.jpg" alt="Kilkenny Castle">
   <div class="pb-text">
-    <p>"Five hundred and eighty-one years of one family, sold for fifty pounds — and reborn as a city's treasure."</p>
+    <p>"The Butlers held it for 559 years. When the money ran out, the last Marquess sold it to Ireland for fifty pounds. Some families know when to let go with grace."</p>
   </div>
 </div>
 
@@ -340,7 +340,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
           </div>
         </a>
         <a href="foulksrath-castle.html" class="nearby-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Foulksrath_Castle.jpg/500px-Foulksrath_Castle.jpg" alt="Foulksrath Castle" loading="lazy">
+          <img src="https://img.castlecore.uk/foulksrath-castle.jpg" alt="Foulksrath Castle" loading="lazy">
           <div class="nc-body">
             <div class="nc-name">Foulksrath Castle</div>
             <div class="nc-meta">2.7 mi · tower house</div>
@@ -401,15 +401,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Kilkenny%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(function(r){return r.json()}).then(function(d){
-  var grid=document.getElementById('ytGrid');
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Kilkenny Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
-}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

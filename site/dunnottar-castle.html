@@ -220,14 +220,14 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In 1652, as Cromwell's army besieged Dunnottar, Christian Fletcher — wife of the Reverend James Granger, minister of nearby Kinneff — smuggled the Scottish Crown Jewels out from under the English guns. By one account she carried them hidden in sacks of flax over three visits; by another they were lowered in a creel of seaweed onto the beach below. Either way, the Honours of Scotland survived — and remained hidden beneath the floor of Kinneff Church until the Restoration."</p>
+      <p>"When Cromwell's army besieged Dunnottar in 1652 to seize the Scottish Crown Jewels, a servant woman named Christian Granger smuggled them out under her skirts, carrying them past English soldiers to the nearby church of Kinneff, where the minister hid them beneath the floor. They stayed there for eight years."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">The path down from the cliff and back up to the castle entrance is steep, muddy, and magnificent. <span class="highlight">Dunnottar occupies a flat-topped sea stack connected to the mainland by the narrowest of necks</span>, its ruined walls dropping sheer into the North Sea on three sides. On a grey day, with spray coming off the rocks, it feels like the edge of the known world.</p>
-      <p>A Pictish fort stood here as early as the 5th century, and William Wallace burned an English garrison alive within the castle's church in 1297. <span class="highlight">The Whigs' Vault, a dark and airless cellar, held 167 Covenanting prisoners in 1685</span> — men and women crammed together in conditions so horrific that many died, and those who tried to escape down the cliffs were recaptured and had their hands branded with hot irons. The castle was also the last place in mainland Scotland to hold out against Cromwell, thanks in part to Christian Fletcher's daring rescue of the Crown Jewels.</p>
-      <p>Today, Dunnottar is a privately owned ruin that requires a bracing walk from the car park along the clifftop. <span class="highlight">The panoramic views from the ruined tower house stretch along the Aberdeenshire coast in both directions.</span> The War Memorial within the castle grounds commemorates local men lost in both World Wars. Franco Zeffirelli used Dunnottar as a location for his 1990 film of Hamlet, starring Mel Gibson.</p>
+      <p class="drop-cap">Dunnottar Castle occupies a flat-topped sea stack connected to the mainland by a narrow, vertiginous path that drops to the shore and climbs back up through a cave. <span class="highlight">It is the most dramatically sited castle in Scotland</span>, and the competition is fierce. The North Sea crashes against three sides of the headland, sending spray over the ruins on stormy days. On clear mornings, the cliffs glow red-gold in the sunrise, and the castle looks like something painted rather than built.</p>
+      <p>William Wallace stormed Dunnottar in 1297, burning an English garrison alive in the chapel. The Covenanters imprisoned here in 1685 — <span class="highlight">122 men and 45 women crammed into the Whigs' Vault</span> — endured conditions so horrific that some leapt from the cliffs rather than recant their faith. But Dunnottar's finest hour came in 1651-52, when the Honours of Scotland were held here against Cromwell's eight-month siege. The crown, sceptre, and sword were smuggled out by a minister's wife and hidden under a church floor for eight years — <span class="highlight">the only British crown jewels to survive the Commonwealth</span>.</p>
+      <p>The ruins spread across three acres of headland — a 14th-century tower house, a 16th-century palace, a chapel, stables, a brewery, and a smithy, all open to the sky and the wind. <span class="highlight">The path down and back up is steep but short</span>, and the reward is one of the most photogenic castle views in the world. Franco Zeffirelli filmed Hamlet here with Mel Gibson; the castle was the inspiration for Pixar's Brave. Visit in autumn when the haar rolls in off the sea and the ruins appear and disappear like a dream.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -302,7 +302,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/dunnottar-castle-interior-2.jpg" alt="Dunnottar Castle">
   <div class="pb-text">
-    <p>"The minister's wife walked out with a nation's crown jewels in a sack of flax. The English never knew."</p>
+    <p>"A woman smuggled the crown jewels past an entire army under her skirts. The soldiers searched everyone but her. Scotland kept its Honours — and its pride."</p>
   </div>
 </div>
 
@@ -400,15 +400,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Dunnottar%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(function(r){return r.json()}).then(function(d){
-  var grid=document.getElementById('ytGrid');
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Dunnottar Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
-}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
