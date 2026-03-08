@@ -1,296 +1,403 @@
 const fs = require('fs');
 const path = require('path');
-
-// Load data
 const vm = require('vm');
-const dataJs = fs.readFileSync(path.join(__dirname, 'data.js'), 'utf8').replace(/\bconst\b/g, 'var');
+
+// Load data files using vm
+const dataCode = fs.readFileSync(path.join(__dirname, 'data.js'), 'utf8');
+const richCode = fs.readFileSync(path.join(__dirname, 'rich-data.js'), 'utf8');
+
 const dataCtx = {};
-vm.runInNewContext(dataJs, dataCtx);
+vm.runInNewContext(dataCode.replace('const CASTLES', 'this.CASTLES'), dataCtx);
 const CASTLES = dataCtx.CASTLES;
 
-const GAPI_KEY = 'AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+const richCtx = {};
+vm.runInNewContext(richCode.replace('const RICH_SITE_DATA', 'this.RICH_SITE_DATA'), richCtx);
+const RICH_SITE_DATA = richCtx.RICH_SITE_DATA;
 
 function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
-function escapeHtml(str) {
-  if (!str) return '';
-  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
-function heroImg(castle) {
-  if (!castle.image) return '../placeholder.svg';
-  return castle.image.replace(/\/\d+px-/, '/1280px-');
-}
+
 function haversine(lat1, lng1, lat2, lng2) {
-  const R = 6371, dLat = (lat2-lat1)*Math.PI/180, dLng = (lng2-lng1)*Math.PI/180;
+  const R = 3959;
+  const dLat = (lat2-lat1)*Math.PI/180;
+  const dLng = (lng2-lng1)*Math.PI/180;
   const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 }
-function findNearby(castle, count=5, maxKm=30) {
-  const results = [];
-  for (const c of CASTLES) {
-    if (!c || c.name === castle.name) continue;
-    const d = haversine(castle.lat, castle.lng, c.lat, c.lng);
-    if (d <= maxKm) results.push({ castle: c, dist: d });
-  }
-  results.sort((a,b) => a.dist - b.dist);
-  return results.slice(0, count);
+
+function upgradeImage(url) {
+  if (!url) return '';
+  return url.replace(/\/\d+px-/, '/1280px-');
 }
 
-// Custom narrative data for each cinematic castle
-const NARRATIVES = {
-  'Tower of London': {
-    displayName: 'Tower of London',
-    tagline: 'Nine centuries of power, treason, and the Crown Jewels',
-    hookQuote: 'More people were executed within these walls than in any other building in England. The ravens still keep watch — because legend says if they ever leave, the kingdom falls.',
-    story: [
-      { text: 'William the Conqueror built the White Tower in 1066 to terrify London into submission. It worked. For nearly a thousand years, this fortress on the Thames has been the backdrop to England\'s bloodiest chapters — <span class="highlight">beheadings, betrayals, and the disappearance of two young princes</span> whose fate remains one of history\'s great unsolved mysteries.', dropCap: true },
-      { text: 'Today, the Crown Jewels glitter in their vault beneath the Waterloo Block — <span class="highlight">£3 billion worth of gold, diamonds, and rubies</span> that have been worn at every coronation since Charles II. The Beefeaters who guard them have been doing so since Tudor times.' },
-      { text: 'Walk the ramparts and you\'re walking where Anne Boleyn took her last steps. Stand in the chapel and you\'re standing above the remains of three queens. <span class="highlight">The Tower doesn\'t just contain history — it contains ghosts.</span>' }
-    ],
-    photoBreakQuote: 'Every stone in this place has witnessed something that would change the course of a nation.',
-    terrain: { chips: ['🦽 Mostly Accessible', '🪨 Cobblestones', '📶 Step-Free Routes Available'], chipsClass: ['green','amber','green'], note: 'The Tower has step-free access to most areas including the Crown Jewels. Cobblestone surfaces throughout — wheelchair users should use the smooth paths. Accessible toilets available. Some towers have narrow spiral staircases with no lift access. Free access guides for visitors with disabilities.' },
-    gettingThere: [
-      { icon: '🚇', name: 'By Underground', detail: 'Tower Hill station (District & Circle lines) is a 5-minute walk. The castle is clearly signposted from the station exit.' },
-      { icon: '🚌', name: 'By Bus', detail: 'Routes 15, 42, 78, 100, and RV1 stop nearby. The closest stop is Tower of London on Tower Hill.' },
-      { icon: '🚗', name: 'By Car', detail: 'Limited parking in the area. The nearest NCP car park is on Lower Thames Street. Congestion charge zone applies on weekdays.' },
-      { icon: '🚢', name: 'By River', detail: 'Thames Clippers river bus stops at Tower Pier, directly outside the castle entrance.' }
-    ]
-  },
-  'Edinburgh Castle Interior': {
-    displayName: 'Edinburgh Castle',
-    tagline: 'The rock that holds the soul of Scotland',
-    hookQuote: 'Perched on an ancient volcanic plug 250 feet above the city, Edinburgh Castle has been besieged more times than any other place in Great Britain. It has never truly fallen.',
-    story: [
-      { text: 'There has been a fortress on Castle Rock for over three thousand years — since the Iron Age, when the Votadini people first recognised that this volcanic crag, with its sheer cliffs on three sides, was <span class="highlight">the most defensible position in Scotland</span>.', dropCap: true },
-      { text: 'Mary Queen of Scots gave birth to the future King James within these walls. The Stone of Destiny — <span class="highlight">the ancient coronation stone of Scottish kings</span> — sits in the Crown Room alongside the Honours of Scotland, the oldest crown jewels in the British Isles.' },
-      { text: 'Every day at 1pm, the One O\'Clock Gun fires from the Half Moon Battery — a tradition since 1861. <span class="highlight">You hear it before you expect it, and the whole city flinches.</span>' }
-    ],
-    photoBreakQuote: 'From these walls, you can see the Highlands beginning. Scotland starts here.',
-    terrain: { chips: ['🦽 Partial Access', '📐 Steep Approach', '🪨 Cobblestones'], chipsClass: ['amber','amber','amber'], note: 'The castle sits atop a volcanic rock with a steep cobbled approach. A courtesy vehicle can take visitors with mobility issues to the top. Wheelchair access is available to most areas via ramps and a lift, though some sections including the Crown Room involve steps. Accessible toilets on site.' },
-    gettingThere: [
-      { icon: '🚶', name: 'On Foot', detail: 'At the top of the Royal Mile in Edinburgh\'s Old Town. A 15-minute walk uphill from Waverley Station via the Mound or Cockburn Street.' },
-      { icon: '🚌', name: 'By Bus', detail: 'Lothian Buses routes 2, 23, 27, 41, 42 stop on George IV Bridge or The Mound, a short walk from the castle esplanade.' },
-      { icon: '🚂', name: 'By Train', detail: 'Edinburgh Waverley station is the nearest, about 15 minutes on foot. Edinburgh Haymarket is a 25-minute walk.' },
-      { icon: '✈️', name: 'By Air', detail: 'Edinburgh Airport (EDI) is 8 miles west. The Airlink 100 express bus runs to Waverley Bridge every 10 minutes.' }
-    ]
-  },
-  'Bamburgh Castle': {
-    displayName: 'Bamburgh Castle',
-    tagline: 'Where the North Sea meets a thousand years of defiance',
-    hookQuote: 'Rising from a basalt outcrop on the Northumberland coast, Bamburgh has stood against Viking raids, Scottish invasions, and the full fury of the North Sea for over 1,400 years.',
-    story: [
-      { text: 'The first thing you see is the scale of it — a colossus of dark stone rising from the beach like a cliff face that someone carved into a fortress. <span class="highlight">Bamburgh doesn\'t sit on the landscape. It dominates it.</span>', dropCap: true },
-      { text: 'This was the seat of the ancient Kings of Northumbria, the most powerful Anglo-Saxon kingdom. The Vikings besieged it. The Normans rebuilt it. During the Wars of the Roses, it became the <span class="highlight">first castle in England to be defeated by gunpowder</span> — the beginning of the end for medieval warfare.' },
-      { text: 'Walk along the beach at low tide and look back. The castle fills the entire horizon. <span class="highlight">No photograph does it justice — and you\'ll take fifty trying.</span>' }
-    ],
-    photoBreakQuote: 'The beach below is empty for miles. The castle above has been occupied for fourteen centuries. Time moves differently here.',
-    terrain: { chips: ['🦽 Partial Access', '📐 Steep in Places', '🌬️ Exposed & Windy'], chipsClass: ['amber','amber','amber'], note: 'The castle grounds have uneven grass and gravel paths. The State Rooms are accessible via a lift. Some areas including the keep involve steep steps. The approach from the village car park is relatively flat. Wheelchair-accessible toilets available. The beach below is sandy and not wheelchair-friendly.' },
-    gettingThere: [
-      { icon: '🚗', name: 'By Car', detail: 'On the B1342 off the A1, about 16 miles north of Alnwick. Free car park in Bamburgh village, a short walk to the castle entrance.' },
-      { icon: '🚌', name: 'By Bus', detail: 'Arriva X18 runs from Newcastle to Berwick-upon-Tweed via Bamburgh. The Bamburgh village stop is a 5-minute walk from the castle.' },
-      { icon: '🚂', name: 'By Train', detail: 'Nearest station is Chathill (4 miles) on the East Coast Main Line. Limited services — Alnmouth station (15 miles) has more frequent trains from London and Edinburgh.' },
-      { icon: '✈️', name: 'By Air', detail: 'Newcastle Airport (NCL) ~55 miles · Edinburgh Airport (EDI) ~80 miles' }
-    ]
-  },
-  'Warwick Castle': {
-    displayName: 'Warwick Castle',
-    tagline: 'A thousand years of spectacle, from medieval jousting to modern-day trebuchets',
-    hookQuote: 'William the Conqueror built the first fortification here in 1068. A thousand years later, Warwick Castle still draws crowds — and still fires its trebuchet every afternoon.',
-    story: [
-      { text: 'Warwick is the castle that refuses to become a museum. Yes, it\'s over a thousand years old. Yes, it has dungeons and a ghost tower and suits of armour lining the halls. But it also has <span class="highlight">the world\'s largest working trebuchet</span>, which launches flaming projectiles across the river every day at 5pm.', dropCap: true },
-      { text: 'The castle was the seat of the Earls of Warwick — the most powerful family in medieval England. Richard Neville, the "Kingmaker," literally decided who sat on the English throne. <span class="highlight">When you had Warwick on your side, you were king. When you didn\'t, you were dead.</span>' },
-      { text: 'It\'s one of the most visited castles in England, and the experience matches the history — <span class="highlight">tower climbs with panoramic views, candlelit dungeon tours, live falconry, and jousting displays on the riverbank.</span>' }
-    ],
-    photoBreakQuote: 'The Kingmaker chose who ruled England from these halls. The trebuchet he would have recognised still works.',
-    terrain: { chips: ['🦽 Mostly Accessible', '🪨 Uneven in Places', '👶 Pushchair Friendly'], chipsClass: ['green','amber','green'], note: 'Warwick Castle has good accessibility throughout the main grounds and many indoor exhibits. Wheelchair-accessible routes to the Great Hall, State Rooms, and most outdoor areas. The castle towers and dungeons involve narrow stairs without lift access. Complimentary wheelchair loan available. Accessible toilets and baby-changing facilities on site.' },
-    gettingThere: [
-      { icon: '🚗', name: 'By Car', detail: 'Just off the M40 (junction 15), well signposted from the motorway. Paid car park on-site with overflow parking available on busy days.' },
-      { icon: '🚂', name: 'By Train', detail: 'Warwick station is a 10-minute walk. Direct trains from Birmingham Moor Street (25 min) and London Marylebone (90 min via Chiltern Railways).' },
-      { icon: '🚌', name: 'By Bus', detail: 'Stagecoach X17 from Coventry and Leamington Spa stops in Warwick town centre, a 5-minute walk to the castle.' }
-    ]
-  },
-  'Fountains Abbey': {
-    displayName: 'Fountains Abbey',
-    tagline: 'The most beautiful ruin in England, hidden in a Yorkshire valley',
-    hookQuote: 'In 1132, thirteen Benedictine monks were expelled from their monastery for being too strict. They walked into the wilderness of Skeldale and built what would become the richest abbey in Britain.',
-    story: [
-      { text: 'Fountains Abbey is what happens when you give monks three centuries and unlimited ambition. The Cistercians who built it believed that beauty was a form of prayer — and <span class="highlight">they prayed harder than anyone</span>.', dropCap: true },
-      { text: 'By the 15th century, Fountains was the wealthiest monastery in England, owning vast estates, lead mines, and some of the finest wool in Europe. Then Henry VIII dissolved the monasteries, and <span class="highlight">one of the greatest buildings in the country was left to the rain and the ivy</span>.' },
-      { text: 'What remains is staggering. The nave stretches 300 feet, open to the sky. The tower still stands. Light falls through empty windows onto grass floors where monks once chanted at midnight. <span class="highlight">Five centuries of silence have only made it more beautiful.</span>' }
-    ],
-    photoBreakQuote: 'The roof is gone. The monks are gone. But the walls still hold the shape of their prayers.',
-    terrain: { chips: ['🦽 Partial Access', '🌿 Grass & Gravel Paths', '📐 Some Slopes'], chipsClass: ['amber','green','amber'], note: 'The visitor centre and tea room are fully accessible. Paths to the abbey ruins are mostly gravel and grass, with some slopes. Powered mobility vehicles are available to borrow (book in advance). The abbey ruins themselves have uneven ground. Accessible toilets at the visitor centre.' },
-    gettingThere: [
-      { icon: '🚗', name: 'By Car', detail: '4 miles west of Ripon off the B6265. Signed from the A1(M) junction 50. Large National Trust car park on site (free for members).' },
-      { icon: '🚌', name: 'By Bus', detail: 'The 139 bus from Ripon runs to Fountains Abbey on Sundays and bank holidays in summer. Ripon is served by buses from Harrogate and Leeds.' },
-      { icon: '🚂', name: 'By Train', detail: 'Nearest station is Harrogate (12 miles). From there, take the 36 bus to Ripon, then taxi or the seasonal 139 to the abbey.' },
-      { icon: '✈️', name: 'By Air', detail: 'Leeds Bradford Airport (LBA) ~25 miles · Manchester Airport (MAN) ~75 miles' }
-    ]
-  },
-  'Corfe Castle': {
-    displayName: 'Corfe Castle',
-    tagline: 'The shattered crown of Purbeck, broken but unbowed',
-    hookQuote: 'Parliament blew Corfe Castle apart in 1646 to stop the Royalists from using it again. They succeeded — but the ruins they left behind became more famous than the castle ever was.',
-    story: [
-      { text: 'Corfe Castle looks like a broken tooth on the Purbeck skyline — shattered towers leaning at impossible angles, walls split clean in half by gunpowder charges. <span class="highlight">It\'s the most photogenic destruction in England.</span>', dropCap: true },
-      { text: 'For six hundred years before Parliament got to it, Corfe was a royal castle. King John used it as a treasury and a prison — <span class="highlight">twenty-two French knights were starved to death in its dungeons</span>. Lady Bankes defended it for three years during the Civil War before being betrayed by one of her own officers.' },
-      { text: 'Now it belongs to the village cats and the National Trust. Climb to the keep and look out across the Isle of Purbeck — <span class="highlight">the view hasn\'t changed since William the Conqueror stood here in 1066.</span>' }
-    ],
-    photoBreakQuote: 'They tried to erase it. Instead they created the most dramatic silhouette in southern England.',
-    terrain: { chips: ['⚠️ Steep & Uneven', '🧗 Rugged Terrain', '🌬️ Exposed'], chipsClass: ['red','red','amber'], note: 'The castle ruins sit on a steep hill with rough, uneven ground throughout. The climb to the keep is strenuous with no step-free alternative. Not suitable for wheelchairs or pushchairs beyond the outer bailey. Sturdy footwear essential. The village and National Trust tea room at the base are fully accessible.' },
-    gettingThere: [
-      { icon: '🚗', name: 'By Car', detail: 'On the A351 between Wareham and Swanage. National Trust car park in Corfe Castle village (free for members, pay & display for others).' },
-      { icon: '🚂', name: 'By Train', detail: 'Corfe Castle station on the Swanage Heritage Railway is a 5-minute walk. Connect from the main line at Wareham (South Western Railway from London Waterloo).' },
-      { icon: '🚌', name: 'By Bus', detail: 'Purbeck Breezer 40 runs from Wareham to Swanage via Corfe Castle every 30 minutes in summer.' },
-      { icon: '✈️', name: 'By Air', detail: 'Bournemouth Airport (BOH) ~18 miles · Southampton Airport (SOU) ~40 miles' }
-    ]
-  },
-  'Caernarfon Castle': {
-    displayName: 'Caernarfon Castle',
-    tagline: 'Edward I\'s masterpiece of intimidation, built to crush a nation',
-    hookQuote: 'Edward I didn\'t just want to conquer Wales. He wanted the Welsh to look at Caernarfon and know — beyond any doubt — that resistance was finished.',
-    story: [
-      { text: 'Caernarfon is not a castle built for defence. It\'s a castle built for <span class="highlight">psychological warfare</span>. Edward I modelled its banded walls and polygonal towers on the walls of Constantinople — the greatest city in the world — to send a message: this is imperial power, and it is permanent.', dropCap: true },
-      { text: 'It worked. Caernarfon became the seat of English power in North Wales, and in 1284, Edward made sure his son — the first English Prince of Wales — was born here. <span class="highlight">Seven centuries later, Prince Charles\'s investiture took place in the same courtyard.</span>' },
-      { text: 'The Eagle Tower still stands over 100 feet tall, and the walls are up to 15 feet thick in places. Walk the wall-walk circuit and you\'ll understand — <span class="highlight">this was never just a castle. It was a statement.</span>' }
-    ],
-    photoBreakQuote: 'The walls of Constantinople inspired these walls. Edward I wanted the Welsh to see Rome in Snowdonia.',
-    terrain: { chips: ['🦽 Partial Access', '📐 Steep Stairs in Towers', '🪨 Uneven Surfaces'], chipsClass: ['amber','amber','amber'], note: 'The ground floor and courtyard areas are mostly accessible for wheelchair users. The wall-walk and tower interiors involve steep spiral staircases without lift access. Uneven stone surfaces throughout. An accessible virtual tour of the towers is available in the exhibition space. Accessible toilets on site.' },
-    gettingThere: [
-      { icon: '🚗', name: 'By Car', detail: 'In the centre of Caernarfon, well signed from the A487 and A4086. Pay & display car parks within walking distance, including the Castle Ditch car park adjacent to the walls.' },
-      { icon: '🚌', name: 'By Bus', detail: 'Regular services from Bangor (5/5X, ~25 min) and Porthmadog. The bus station is a 3-minute walk from the castle entrance.' },
-      { icon: '🚂', name: 'By Train', detail: 'Nearest mainline station is Bangor (9 miles), with direct trains from London Euston, Chester, and Crewe. The Welsh Highland Railway heritage line also stops in Caernarfon.' },
-      { icon: '✈️', name: 'By Air', detail: 'Liverpool John Lennon Airport (LPL) ~85 miles · Manchester Airport (MAN) ~95 miles' }
-    ]
-  },
-  'Stirling Castle': {
-    displayName: 'Stirling Castle',
-    tagline: 'Whoever holds Stirling, holds Scotland',
-    hookQuote: 'Stirling Castle sits at the narrowest crossing point of the River Forth — the gateway between the Highlands and the Lowlands. Every army that ever wanted Scotland had to take this rock first.',
-    story: [
-      { text: 'There\'s a reason the two most important battles in Scottish history — Stirling Bridge and Bannockburn — were fought within sight of this castle. <span class="highlight">Control Stirling and you control the only route north.</span> William Wallace knew it. Robert the Bruce knew it. Every Scottish king knew it.', dropCap: true },
-      { text: 'The Great Hall, built by James IV in 1503, is the largest medieval banqueting hall in Scotland. Mary Queen of Scots was crowned here at nine months old. <span class="highlight">The Renaissance palace that James V added is the finest in Britain</span> — carved with grotesque figures, classical columns, and planetary symbols that scholars still argue about.' },
-      { text: 'Stand on the castle esplanade and you can see seven battlefields stretching to the horizon. The Wallace Monument rises from the trees to the northeast. <span class="highlight">No other castle in Britain wears its history so visibly on the landscape around it.</span>' }
-    ],
-    photoBreakQuote: 'Seven battlefields are visible from these walls. Every one of them was fought over this view.',
-    terrain: { chips: ['🦽 Partial Access', '📐 Steep Approach', '🪨 Cobblestones'], chipsClass: ['amber','amber','amber'], note: 'The approach to the castle is up a steep cobbled road. A courtesy vehicle runs from the lower car park for visitors with mobility needs. Once inside, the Great Hall, Chapel Royal, and most courtyard areas are accessible. The palace has a virtual tour for areas with stairs. Accessible toilets available.' },
-    gettingThere: [
-      { icon: '🚗', name: 'By Car', detail: 'Signed from the M9 and M80 motorways. Castle car park at the top of the hill (limited spaces) or larger car parks in Stirling town centre.' },
-      { icon: '🚂', name: 'By Train', detail: 'Stirling station is a 20-minute uphill walk, or a short taxi. Direct trains from Edinburgh (50 min), Glasgow (30 min), and Perth (30 min).' },
-      { icon: '🚌', name: 'By Bus', detail: 'Stirling bus station is a 15-minute walk. First Bus and Citylink services run from Edinburgh, Glasgow, and Perth. Local buses 51 and 52 go closer to the castle.' },
-      { icon: '✈️', name: 'By Air', detail: 'Edinburgh Airport (EDI) ~35 miles · Glasgow Airport (GLA) ~30 miles' }
-    ]
-  },
-  'Blenheim Palace': {
-    displayName: 'Blenheim Palace',
-    tagline: 'A nation\'s thank-you gift that became England\'s grandest home',
-    hookQuote: 'Parliament gave the Duke of Marlborough a palace for winning the Battle of Blenheim in 1704. He got 2,000 acres, 187 rooms, and the building that would one day produce Winston Churchill.',
-    story: [
-      { text: 'Blenheim isn\'t really a house. It\'s a <span class="highlight">victory monument disguised as a home</span>. John Vanbrugh designed it to rival Versailles, and the Duke\'s wife Sarah hated it — too big, too cold, too much like living inside a political statement. She wasn\'t wrong.', dropCap: true },
-      { text: 'But what a statement. The Great Hall is 67 feet high. The Long Library stretches 180 feet. The grounds — landscaped by Capability Brown — include a lake he created by damming a river, <span class="highlight">casually reshaping the geography of Oxfordshire</span> because the view needed improving.' },
-      { text: 'Winston Churchill was born here in 1874, in a small room off the main hall. He proposed to Clementine in the Temple of Diana by the lake, and he\'s buried in the churchyard at Bladon, half a mile away. <span class="highlight">His life began and ended within sight of these walls.</span>' }
-    ],
-    photoBreakQuote: 'Too grand for a home, too beautiful for a monument. Blenheim is England showing off.',
-    terrain: { chips: ['🦽 Mostly Accessible', '🌿 Gardens on Grass', '👶 Pushchair Friendly'], chipsClass: ['green','green','green'], note: 'The Palace State Rooms are fully wheelchair accessible via ramps and a lift. The formal gardens have gravel paths suitable for wheelchairs. The wider parkland has grass paths that may be difficult in wet weather. Powered mobility scooters available to hire. Accessible toilets throughout. Assistance dogs welcome everywhere.' },
-    gettingThere: [
-      { icon: '🚗', name: 'By Car', detail: 'In Woodstock, 8 miles north of Oxford on the A44. Large car park on site. Well signed from the M40 (junction 9) and A34.' },
-      { icon: '🚌', name: 'By Bus', detail: 'Stagecoach S3 runs every 30 minutes from Oxford city centre to Woodstock (30 min). The bus stop is at the palace gates.' },
-      { icon: '🚂', name: 'By Train', detail: 'Oxford station is the nearest (8 miles), with direct trains from London Paddington (60 min). Take the S3 bus from the station to Woodstock.' },
-      { icon: '✈️', name: 'By Air', detail: 'London Heathrow (LHR) ~60 miles · Birmingham Airport (BHX) ~55 miles' }
-    ]
-  }
+function thumbImage(url) {
+  if (!url) return '';
+  return url.replace(/\/\d+px-/, '/500px-');
+}
+
+// Taglines
+const taglines = {
+  castle: [
+    "Where stone remembers what time forgets",
+    "Centuries of power, carved in stone",
+    "A fortress shaped by war and wonder"
+  ],
+  palace: [
+    "Where power wore velvet and gold",
+    "Grandeur that echoes through the ages",
+    "Where kings dreamed and dynasties rose"
+  ],
+  abbey: [
+    "Where silence holds centuries of prayer",
+    "Sacred stones, hallowed ground",
+    "A sanctuary suspended in time"
+  ],
+  'tower house': [
+    "Standing watch over the centuries",
+    "A sentinel against the sky"
+  ],
+  'fortified house': [
+    "Behind these walls, history sleeps",
+    "Where comfort met caution"
+  ],
+  ruin: [
+    "Beautiful in its undoing",
+    "Time's most elegant surrender"
+  ]
 };
 
-// Mood tag mappings
-function getMoodTags(castle) {
-  const tags = castle.tags || [];
-  const mood = [];
-  if (tags.includes('dramatic-ruin') || castle.condition === 'ruin') mood.push('Dramatic Ruin');
-  if (tags.includes('romantic-ruin')) mood.push('Romantic Ruin');
-  if (tags.includes('photogenic')) mood.push('Photogenic');
-  if (tags.includes('filming-location')) mood.push('Filming Location');
-  if (tags.includes('haunted')) mood.push('Haunted');
-  if (tags.includes('kid-friendly')) mood.push('Family Friendly');
-  if (tags.includes('well-preserved')) mood.push('Well Preserved');
-  if (tags.includes('free')) mood.push('Free Entry');
-  if (castle.condition === 'intact') mood.push('Intact');
-  // Add geographic vibes
-  if (castle.description && castle.description.match(/cliff|coast|sea|ocean|atlantic/i)) mood.push('Cliffside');
-  if (castle.description && castle.description.match(/forest|wood|valley/i)) mood.push('Hidden Valley');
-  return mood.slice(0, 5);
+const defaultTaglines = [
+  "Where history whispers from every stone",
+  "A place that time chose to remember",
+  "Standing testament to centuries past"
+];
+
+function getTagline(castle) {
+  const type = (castle.type || '').toLowerCase();
+  const pool = taglines[type] || defaultTaglines;
+  // Use name length as a simple hash for deterministic selection
+  return pool[castle.name.length % pool.length];
 }
 
-function generateCinematicPage(castle) {
+const photoBreakQuotes = [
+  "Some places don't just hold history — they breathe it.",
+  "The stones remember what we've long forgotten.",
+  "Stand here long enough and you'll hear the centuries whispering.",
+  "Not every ruin is a tragedy. Some are love letters to the sky.",
+  "These walls have seen more sunsets than any living soul.",
+  "Time doesn't destroy places like this. It perfects them."
+];
+
+function getPhotoBreakQuote(castle) {
+  return photoBreakQuotes[castle.name.length % photoBreakQuotes.length];
+}
+
+// Filter, dedup, sort
+const seen = new Map();
+const filtered = [];
+for (const c of CASTLES) {
+  if (!c.gallery || c.gallery.length < 4) continue;
+  if (!c.reviewCount || c.reviewCount < 5000) continue;
+  // Dedup by lat/lng proximity
+  const key = `${Math.round(c.lat*100)},${Math.round(c.lng*100)}`;
+  if (seen.has(key)) continue;
+  seen.set(key, true);
+  filtered.push(c);
+}
+filtered.sort((a, b) => b.reviewCount - a.reviewCount);
+const top25 = filtered.slice(0, 25);
+
+console.log(`Filtered ${filtered.length} castles, generating top 25...`);
+
+// Find nearby for each castle from ALL castles
+function findNearby(castle, count) {
+  return CASTLES
+    .filter(c => c.name !== castle.name && c.image)
+    .map(c => ({ ...c, dist: haversine(castle.lat, castle.lng, c.lat, c.lng) }))
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, count);
+}
+
+function formatNumber(n) {
+  if (!n) return '0';
+  return n.toLocaleString('en-GB');
+}
+
+function capTag(t) {
+  if (!t) return '';
+  return t.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function generatePage(castle) {
   const slug = slugify(castle.name);
-  const narr = NARRATIVES[castle.name];
-  if (!narr) { console.log('  SKIP (no narrative):', castle.name); return null; }
-  
-  const bigImg = heroImg(castle);
+  const name = escHtml(castle.name);
+  const heroImg = upgradeImage(castle.image);
+  const county = escHtml(castle.county || '');
+  const country = escHtml(castle.country || '');
+  const era = escHtml(castle.era || '');
+  const type = escHtml(castle.type || '');
+  const rating = castle.rating || 0;
+  const reviewCount = castle.reviewCount || 0;
+  const desc = escHtml(castle.description || '');
+  const history = escHtml(castle.history || '');
+  const tags = (castle.tags || []);
   const gallery = castle.gallery || [];
-  const moodTags = getMoodTags(castle);
-  const nearby = findNearby(castle);
-  const metaDesc = escapeHtml((castle.description || '').substring(0, 160));
+  const lat = castle.lat;
+  const lng = castle.lng;
+  const access = escHtml(castle.access || '');
+  const condition = escHtml(castle.condition || '');
+  const tagline = escHtml(getTagline(castle));
 
-  const displayName = narr.displayName || castle.name;
-  // Photo grid images (hero + first 6 gallery)
-  const gridImgs = [bigImg, ...gallery.slice(0, 6)];
-  // All images for lightbox (no separate scroll strip)
-  const scrollImgs = []; // removed "More Photos" section
+  const rich = RICH_SITE_DATA[castle.name] || null;
 
-  const nearbyHtml = nearby.length ? nearby.map(n => {
-    const ns = slugify(n.castle.name);
-    const nImg = n.castle.image ? n.castle.image.replace(/\/\d+px-/, '/250px-') : '../placeholder.svg';
-    return `<a href="./${ns}.html" class="nearby-card"><img src="${escapeHtml(nImg)}" alt="${escapeHtml(n.castle.name)}" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nc-body"><div class="nc-name">${escapeHtml(n.castle.name)}</div><div class="nc-meta">★ ${n.castle.rating} · ${n.dist.toFixed(0)} km</div></div></a>`;
-  }).join('') : '<p style="color:var(--ink-faded)">No nearby sites within 30 km.</p>';
+  // Mood tags HTML
+  const moodTagsHtml = tags.map(t => `<span class="mood-tag">${escHtml(capTag(t))}</span>`).join('\n      ');
 
-  const storyHtml = narr.story.map((s, i) => 
-    `<p${i === 0 ? ' class="drop-cap"' : ''}>${s.text}</p>`
-  ).join('\n      ');
+  // Photo grid (first 4 gallery images)
+  const extraPhotos = gallery.length - 4;
+  const pgMoreHtml = extraPhotos > 0 ? `<span class="pg-more">+${extraPhotos} photos</span>` : '';
 
-  const photoGridHtml = gridImgs.slice(0, 4).map((img, i) => {
-    const cls = i === 0 ? 'pg-item pg-main' : 'pg-item';
-    const more = i === 3 && gallery.length > 3 ? `<span class="pg-more">+${gallery.length} photos</span>` : '';
-    return `<div class="${cls}" onclick="openLb(${i})"><img src="${escapeHtml(img)}" alt="${escapeHtml(displayName)}" loading="${i < 2 ? 'eager' : 'lazy'}">${more}</div>`;
-  }).join('\n      ');
+  // Lightbox images array for JS
+  const lbImagesJs = JSON.stringify(gallery);
 
-  const scrollHtml = scrollImgs.length ? scrollImgs.map((img, i) => 
-    `<div class="g-item"><img src="${escapeHtml(img)}" alt="" onclick="openLb(${gridImgs.length + i})" loading="lazy"></div>`
-  ).join('\n        ') : '';
+  // Narrative quote - first sentence or two of description
+  const narrativeQuote = escHtml((castle.description || '').split('. ').slice(0, 2).join('. ') + '.');
 
-  const allLbImages = [...gridImgs, ...gallery.slice(6)]; // all images in lightbox
+  // About text
+  const aboutFirst = desc;
+  const aboutRest = history;
 
-  // Getting There HTML
-  const gettingThereHtml = narr.gettingThere ? narr.gettingThere.map(g =>
-    `<div class="transport-card"><div class="tc-header">${g.icon} ${escapeHtml(g.name)}</div><div class="tc-detail">${escapeHtml(g.detail)}</div></div>`
-  ).join('\n      ') : `<div class="transport-card"><div class="tc-header">📍 Directions</div><div class="tc-detail">Use the link below for directions to ${escapeHtml(displayName)}.</div><a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}">Get directions via Google Maps →</a></div>`;
+  // Getting there
+  let gettingThereHtml = '';
+  if (rich && rich.gettingThere && rich.gettingThere.length) {
+    gettingThereHtml = rich.gettingThere.map(t => {
+      const linkHtml = t.link ? `\n        <a href="${escHtml(t.link)}">${escHtml(t.linkText || 'Get directions →')}</a>` : '';
+      return `<div class="transport-card">
+        <div class="tc-header">${escHtml(t.icon)} ${escHtml(t.name)}</div>
+        <div class="tc-detail">${escHtml(t.detail)}</div>${linkHtml}
+      </div>`;
+    }).join('\n      ');
+  } else {
+    gettingThereHtml = `<div class="transport-card">
+        <div class="tc-header">🚗 By Car</div>
+        <div class="tc-detail">Navigate to ${name}, ${county}, ${country}. Check Google Maps for the best route from your location.</div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}">Get driving directions →</a>
+      </div>`;
+  }
 
-  // Terrain HTML
-  const terrainHtml = narr.terrain ? `<div class="terrain-chips">${narr.terrain.chips.map((c, i) => `<span class="chip ${narr.terrain.chipsClass[i]}">${c}</span>`).join('')}</div><p class="terrain-note">${escapeHtml(narr.terrain.note)}</p>` : `<p class="terrain-note">Terrain details for ${escapeHtml(displayName)}. Check before visiting if you have accessibility needs.</p>`;
+  // Terrain
+  let terrainHtml = '';
+  if (rich && rich.terrain) {
+    const chips = (rich.terrain.chips || []).map(c =>
+      `<span class="chip ${escHtml(c.cls)}">${escHtml(c.icon)} ${escHtml(c.text)}</span>`
+    ).join('\n        ');
+    const note = escHtml(rich.terrain.note || '');
+    terrainHtml = `<div class="ornament-sm"></div>
+    <section class="fade-section">
+      <h2>Terrain &amp; Accessibility</h2>
+      <div class="terrain-chips">
+        ${chips}
+      </div>
+      <p class="terrain-note">${note}</p>
+    </section>`;
+  }
 
-  // Read the v4 template CSS from the prototype
-  const templateCss = fs.readFileSync(path.join(__dirname, 'site', 'prototype-dunluce-v4.html'), 'utf8');
-  const cssMatch = templateCss.match(/<style>([\s\S]*?)<\/style>/);
-  const css = cssMatch ? cssMatch[1] : '';
+  // Photo break
+  const pbImage = gallery[4] || gallery[3] || gallery[0] || '';
+  const pbQuote = escHtml(getPhotoBreakQuote(castle));
+
+  // Nearby
+  const nearby = findNearby(castle, 5);
+  const nearbyCardsHtml = nearby.map(n => {
+    const nSlug = slugify(n.name);
+    const nImg = thumbImage(n.image);
+    const nDist = n.dist < 1 ? `${(n.dist * 5280).toFixed(0)} ft` : `${n.dist.toFixed(1)} mi`;
+    return `<a href="${nSlug}.html" class="nearby-card">
+          <img src="${escHtml(nImg)}" alt="${escHtml(n.name)}" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">${escHtml(n.name)}</div>
+            <div class="nc-meta">${nDist} · ${escHtml(n.type || '')}</div>
+          </div>
+        </a>`;
+  }).join('\n        ');
+
+  const searchName = encodeURIComponent(castle.name);
+  const searchQuery = encodeURIComponent(castle.name + ' ' + (castle.county || ''));
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="../favicon.ico" type="image/x-icon">
-<title>${escapeHtml(displayName)} — castlecore | Castles, Abbeys &amp; Ruins</title>
-<meta name="description" content="${metaDesc}">
-<meta property="og:title" content="${escapeHtml(displayName)} — castlecore">
-<meta property="og:description" content="${metaDesc}">
-<meta property="og:image" content="${escapeHtml(bigImg)}">
-<meta property="og:url" content="https://castlecore.uk/site/${slug}.html">
-<meta property="og:type" content="article">
-<meta name="twitter:card" content="summary_large_image">
+<title>${name} — castlecore</title>
+<meta name="description" content="${desc.slice(0, 155)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>${css}</style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --parchment:#faf8f4;--parchment-light:#fff;--parchment-mid:#f0ebe0;
+  --ink:#2a1f14;--ink-light:#4a3928;--ink-faded:#8a7e6e;
+  --burgundy:#8b2335;--burgundy-glow:#a12940;
+  --gold:#9a7b30;--gold-bright:#b8952e;--gold-dim:#7a6525;
+  --forest:#2d4a2e;--iron:#6a6a6a;
+  --bg:#faf8f4;--bg-light:#f0ebe0;--bg-card:#fff;
+  --cream:#f0ebe0;--border:#e0d8c8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--burgundy);text-decoration:none}
+.ornament{text-align:center;margin:2rem 0;color:var(--gold);font-size:1.2rem;letter-spacing:8px;opacity:.3}
+.ornament::before{content:'⸻ ✦ ⸻'}
+.ornament-sm{text-align:center;margin:1.2rem 0;opacity:.25}
+.ornament-sm::before{content:'';display:inline-block;width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.float-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px clamp(1.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+.float-nav.scrolled{background:rgba(250,248,244,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.float-nav .logo{font-family:'Cinzel Decorative',serif;color:var(--ink);font-size:1rem;display:flex;align-items:center;gap:8px;letter-spacing:2px}
+.float-nav .logo img{height:32px;border-radius:4px}
+.float-nav .nav-links{display:flex;gap:1.5rem;align-items:center}
+.float-nav .nav-links a{font-family:'Cinzel',serif;color:var(--ink-faded);font-size:.72rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s}
+.float-nav .nav-links a:hover{color:var(--burgundy)}
+.explore-btn{background:var(--burgundy)!important;border:1px solid var(--burgundy)!important;color:#fff!important;padding:6px 16px;border-radius:2px;transition:all .3s!important}
+.explore-btn:hover{background:var(--burgundy-glow)!important}
+.hero{position:relative;height:75vh;min-height:450px;max-height:700px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.75) saturate(.85) contrast(1.05);animation:kenburns 30s ease-in-out infinite alternate}
+@keyframes kenburns{0%{transform:scale(1)}100%{transform:scale(1.06) translate(-0.5%,-1%)}}
+.hero-vignette{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.08) 0%, transparent 40%, transparent 100%);z-index:1}
+.hero-content{position:relative;z-index:2;padding:0 clamp(1.5rem,5vw,5rem) clamp(2.5rem,5vh,4rem);max-width:900px}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.95rem,1.8vw,1.15rem);color:rgba(244,232,193,.6);letter-spacing:.5px;margin-bottom:.5rem}
+.hero h1{font-family:'Cinzel Decorative',serif;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;letter-spacing:2px;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:.8rem;align-items:center}
+.hero-meta span{font-family:'Cinzel',serif;font-size:.68rem;color:var(--parchment-mid);letter-spacing:1.5px;text-transform:uppercase}
+.mood-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.mood-tag{background:rgba(244,232,193,.15);border:1px solid rgba(244,232,193,.3);padding:3px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.6rem;color:var(--parchment-mid);letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(4px)}
+.action-bar{max-width:1100px;margin:0 auto;padding:.5rem clamp(1.5rem,5vw,5rem);display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.action-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:2px;font-family:'Cinzel',serif;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;border:none;text-decoration:none}
+.action-btn:hover{text-decoration:none}
+.action-primary{background:var(--burgundy);color:#fff;border:1px solid var(--burgundy)}
+.action-primary:hover{background:var(--burgundy-glow);box-shadow:0 2px 12px rgba(139,35,53,.2);color:#fff}
+.action-secondary{background:#fff;color:var(--ink);border:1px solid var(--border)}
+.action-secondary:hover{background:var(--cream);border-color:var(--ink-faded)}
+.action-save{background:#fff;color:var(--burgundy);border:1px solid var(--border)}
+.action-save:hover{background:rgba(139,35,53,.05)}
+.action-save.saved{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
+.action-spacer{flex:1}
+.action-share{font-size:.68rem;color:var(--ink-faded);cursor:pointer;padding:8px 12px}
+.action-share:hover{color:var(--burgundy)}
+.content-wrap{max-width:1100px;margin:0 auto;padding:1rem clamp(1.5rem,5vw,5rem) 2rem;display:grid;grid-template-columns:1.6fr 1fr;gap:2.5rem;align-items:start}
+.content-main{min-width:0}
+.content-sidebar{position:sticky;top:80px;display:flex;flex-direction:column;gap:1.2rem}
+.photo-grid-compact{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:6px;border-radius:3px;overflow:hidden;margin-bottom:1.5rem}
+.pg-item{overflow:hidden;cursor:pointer;position:relative}
+.pg-item img{width:100%;height:100%;object-fit:cover;transition:all .5s}
+.pg-item:hover img{transform:scale(1.04)}
+.pg-main{grid-row:1/3;grid-column:1}
+.pg-more{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.7);color:#fff;padding:4px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:1px;pointer-events:none}
+section{margin-bottom:1.8rem}
+section h2{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink);margin-bottom:1rem;font-weight:500;position:relative;padding-bottom:.5rem}
+section h2::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+section p{font-size:clamp(1.05rem,1.8vw,1.15rem);line-height:1.8;color:var(--ink-light);margin-bottom:1rem}
+.highlight{color:var(--burgundy);font-weight:500}
+.drop-cap::first-letter{font-family:'Cinzel Decorative',serif;font-size:3rem;float:left;line-height:.8;padding-right:6px;padding-top:4px;color:var(--burgundy)}
+.narrative-quote{margin:1.5rem 0;padding:1.2rem 1.5rem;border-left:2px solid var(--gold);background:rgba(154,123,48,.04)}
+.narrative-quote p{font-style:italic;color:var(--ink-light);margin:0;font-size:1.1rem;line-height:1.7}
+.sidebar-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1.2rem;transition:border-color .3s}
+.sidebar-card h3{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faded);margin-bottom:.8rem;font-weight:500}
+.sidebar-map{width:100%;height:160px;background:var(--cream);border:1px solid var(--border);border-radius:3px;display:flex;align-items:center;justify-content:center;color:var(--ink-faded);font-size:.8rem;margin-bottom:.8rem}
+.sidebar-directions{display:block;text-align:center;background:var(--burgundy);color:#fff;padding:11px;border-radius:2px;font-family:'Cinzel',serif;font-weight:600;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s}
+.sidebar-directions:hover{background:var(--burgundy-glow);text-decoration:none;color:#fff}
+.sidebar-quick{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:3px;overflow:hidden}
+.sq-item{padding:.6rem .8rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border)}
+.sq-item:nth-child(even){border-right:none}
+.sq-item:nth-last-child(-n+2){border-bottom:none}
+.sq-label{font-family:'Cinzel',serif;font-size:.55rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-faded);margin-bottom:1px}
+.sq-value{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--ink)}
+.transport-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:.8rem 1rem;margin-bottom:.5rem}
+.transport-card .tc-header{display:flex;align-items:center;gap:.5rem;font-family:'Cinzel',serif;font-weight:600;font-size:.85rem;color:var(--ink);margin-bottom:.2rem;letter-spacing:.5px}
+.transport-card .tc-detail{font-size:.95rem;color:var(--ink-faded);line-height:1.5}
+.transport-card a{font-family:'Cinzel',serif;font-weight:600;font-size:.8rem;color:var(--burgundy);letter-spacing:.5px}
+.terrain-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
+.chip{padding:5px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.72rem;font-weight:500;letter-spacing:.5px;display:inline-flex;align-items:center;gap:4px}
+.chip.green{background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9}
+.chip.amber{background:#fff8e1;color:#f57f17;border:1px solid #fff0b3}
+.chip.red{background:#fce4ec;color:#c62828;border:1px solid #f8bbd0}
+.terrain-note{color:var(--ink-faded);font-size:.95rem;line-height:1.6}
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-top:.5rem}
+.yt-grid iframe{width:100%;aspect-ratio:16/9;border-radius:3px;border:1px solid var(--border)}
+.review-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1rem;margin-bottom:.5rem}
+.review-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem}
+.review-author{font-family:'Cinzel',serif;font-weight:600;font-size:.82rem;color:var(--ink);letter-spacing:.5px}
+.review-rating{color:var(--gold);font-size:.8rem;letter-spacing:1px}
+.review-time{color:var(--ink-faded);font-size:.75rem;margin-left:auto}
+.review-text{font-size:.95rem;color:var(--ink-light);line-height:1.6}
+.photo-break{position:relative;height:40vh;min-height:250px;max-height:400px;overflow:hidden;margin:1rem 0 1.5rem}
+.photo-break img{width:100%;height:100%;object-fit:cover;filter:brightness(.45) saturate(.75)}
+.photo-break .pb-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
+.photo-break .pb-text p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2.5vw,1.5rem);color:rgba(255,255,255,.9);max-width:600px;line-height:1.6;text-shadow:0 2px 15px rgba(0,0,0,.5)}
+.nearby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.7rem}
+.nearby-card{border-radius:3px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:all .3s;text-decoration:none;display:block}
+.nearby-card:hover{border-color:var(--ink-faded);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.nearby-card img{width:100%;height:90px;object-fit:cover}
+.nearby-card .nc-body{padding:.6rem .8rem}
+.nearby-card .nc-name{font-family:'Cinzel',serif;font-size:.78rem;color:var(--ink);letter-spacing:.3px}
+.nearby-card .nc-meta{font-size:.8rem;color:var(--ink-faded);margin-top:2px}
+.full-width{max-width:1100px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) 2rem}
+.cta-section{text-align:center;padding:clamp(2rem,5vh,4rem) 2rem}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--ink-faded);margin-bottom:1rem;font-weight:400;font-style:italic}
+.cta-btn{display:inline-block;background:var(--burgundy);border:1px solid var(--burgundy);color:#fff;padding:14px 36px;border-radius:2px;font-family:'Cinzel',serif;font-weight:600;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
+.cta-btn:hover{background:var(--burgundy-glow);box-shadow:0 2px 16px rgba(139,35,53,.2);transform:translateY(-2px);text-decoration:none;color:#fff}
+footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;background:var(--cream)}
+footer p{font-family:'Cinzel',serif;font-size:.65rem;color:var(--ink-faded);letter-spacing:1px}
+.lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
+.lb-overlay.open{display:flex}
+.lb-overlay img{max-width:90vw;max-height:85vh;border-radius:2px}
+.lb-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.2rem;width:40px;height:40px;border-radius:2px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.5rem;width:48px;height:48px;border-radius:2px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-prev{left:16px}.lb-next{right:16px}
+.lb-counter{color:rgba(255,255,255,.5);font-family:'Cinzel',serif;font-size:.7rem;margin-top:12px;letter-spacing:2px}
+.visit-item{display:flex;align-items:flex-start;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.9rem}
+.visit-item:last-child{border-bottom:none}
+.visit-icon{flex-shrink:0;width:20px;text-align:center;font-size:.9rem}
+.visit-label{font-family:'Cinzel',serif;font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faded);margin-bottom:1px}
+.visit-value{color:var(--ink-light);font-size:.9rem;line-height:1.4}
+.visit-hours-today{font-weight:600;color:var(--ink)}
+.visit-hours-toggle{font-family:'Cinzel',serif;font-size:.65rem;color:var(--burgundy);cursor:pointer;letter-spacing:.5px;margin-top:2px;display:inline-block}
+.visit-hours-full{display:none;margin-top:4px;font-size:.85rem;color:var(--ink-faded);line-height:1.6}
+.visit-hours-full.open{display:block}
+.link-item{display:flex;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.link-item:last-child{border-bottom:none}
+.link-item a{font-size:.88rem;color:var(--burgundy);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.link-item a:hover{text-decoration:underline}
+.link-icon{flex-shrink:0;width:20px;text-align:center;font-size:.95rem}
+.content-sidebar .mood-tag{background:var(--cream);border:1px solid var(--border);color:var(--ink-faded)}
+footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color:var(--ink);letter-spacing:2px}
+.fade-section{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-section.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){
+  .float-nav .nav-links a:not(.explore-btn){display:none}
+  .content-wrap{grid-template-columns:1fr;gap:1.5rem}
+  .content-sidebar{position:static}
+  .photo-grid-compact{grid-template-columns:1fr 1fr;grid-template-rows:180px 140px}
+  .pg-main{grid-row:1;grid-column:1/3}
+  .pg-item:nth-child(n+5){display:none}
+  .action-bar{padding:.8rem 1rem}
+  .hero{height:60vh;min-height:350px}
+}
+@media(max-width:480px){
+  .photo-grid-compact{grid-template-columns:1fr;grid-template-rows:200px}
+  .pg-item:nth-child(n+2){display:none}
+  .nearby-grid{grid-template-columns:1fr 1fr}
+  .yt-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
@@ -305,27 +412,29 @@ function generateCinematicPage(castle) {
 </nav>
 
 <section class="hero">
-  <div class="hero-img"><img src="${escapeHtml(bigImg)}" alt="${escapeHtml(displayName)}"></div>
+  <div class="hero-img">
+    <img src="${escHtml(heroImg)}" alt="${name}">
+  </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
-    <p class="hero-tagline">${escapeHtml(narr.tagline)}</p>
-    <h1>${escapeHtml(displayName)}</h1>
+    <p class="hero-tagline">${tagline}</p>
+    <h1>${name}</h1>
     <div class="hero-meta">
-      <span>${escapeHtml(castle.county || '')} · ${escapeHtml(castle.country)}</span>
-      <span>✦ ${castle.rating} · ${(castle.reviewCount||0).toLocaleString()} reviews</span>
-      <span>${escapeHtml(castle.era || '')} · ${escapeHtml(castle.condition || '')}</span>
+      <span>${county} · ${country}</span>
+      <span>✦ ${rating} · ${formatNumber(reviewCount)} reviews</span>
+      <span>${era} · ${type}</span>
     </div>
     <div class="mood-tags">
-      ${moodTags.map(t => `<span class="mood-tag">${escapeHtml(t)}</span>`).join('\n      ')}
+      ${moodTagsHtml}
     </div>
   </div>
 </section>
 
 <div class="action-bar">
   <button class="action-btn action-save" id="saveBtn" onclick="toggleSave()">♡ Save</button>
-  <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank" class="action-btn action-primary">📍 Directions</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank" class="action-btn action-primary">📍 Directions</a>
   <a href="../trail.html" class="action-btn action-secondary">🛤️ Add to Route</a>
-  <a href="https://www.google.com/maps/search/${encodeURIComponent(castle.name)}/@${castle.lat},${castle.lng},15z" target="_blank" class="action-btn action-secondary">🗺️ View on Map</a>
+  <a href="https://www.google.com/maps/search/${searchName}/@${lat},${lng},15z" target="_blank" class="action-btn action-secondary">🗺️ View on Map</a>
   <span class="action-spacer"></span>
   <span class="action-share" onclick="shareThis()">↗ Share</span>
 </div>
@@ -334,16 +443,20 @@ function generateCinematicPage(castle) {
   <div class="content-main">
 
     <div class="photo-grid-compact" id="photoGrid">
-      ${photoGridHtml}
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="${escHtml(gallery[0] || '')}" alt="${name}"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="${escHtml(gallery[1] || '')}" alt="${name}"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="${escHtml(gallery[2] || '')}" alt="${name}"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="${escHtml(gallery[3] || '')}" alt="${name}">${pgMoreHtml}</div>
     </div>
 
     <div class="narrative-quote">
-      <p>"${escapeHtml(narr.hookQuote)}"</p>
+      <p>"${narrativeQuote}"</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      ${storyHtml}
+      <p class="drop-cap">${aboutFirst}</p>
+      ${aboutRest ? `<p>${aboutRest}</p>` : ''}
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -363,18 +476,15 @@ function generateCinematicPage(castle) {
       ${gettingThereHtml}
     </section>
 
-    <div class="ornament-sm"></div>
-
-    <section class="fade-section">
-      <h2>Terrain &amp; Accessibility</h2>
-      ${terrainHtml}
-    </section>
+    ${terrainHtml}
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Visitor Reviews</h2>
-      <div id="reviewsBox"><p class="terrain-note">Loading reviews...</p></div>
+      <div id="reviewsBox">
+        <p class="terrain-note">Loading reviews...</p>
+      </div>
     </section>
 
   </div>
@@ -383,14 +493,12 @@ function generateCinematicPage(castle) {
     <div class="sidebar-card">
       <h3>Location</h3>
       <div class="sidebar-map">🗺️ Map coming soon</div>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=${castle.lat},${castle.lng}" target="_blank" class="sidebar-directions">📍 Get Directions</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank" class="sidebar-directions">📍 Get Directions</a>
     </div>
-
     <div class="sidebar-card" id="visitInfoCard" style="display:none">
       <h3>Visit Info</h3>
       <div id="visitInfoContent"></div>
     </div>
-
     <div class="sidebar-card" id="linksCard" style="display:none">
       <h3>Official Links</h3>
       <div id="linksContent"></div>
@@ -398,17 +506,19 @@ function generateCinematicPage(castle) {
   </aside>
 </div>
 
-${gallery.length > 0 ? `
 <div class="photo-break fade-section">
-  <img src="${escapeHtml(gallery[Math.min(2, gallery.length-1)])}" alt="${escapeHtml(displayName)}">
-  <div class="pb-text"><p>"${escapeHtml(narr.photoBreakQuote)}"</p></div>
-</div>` : ''}
-
+  <img src="${escHtml(pbImage)}" alt="${name}">
+  <div class="pb-text">
+    <p>"${pbQuote}"</p>
+  </div>
+</div>
 
 <div class="full-width">
   <section class="fade-section">
     <h2>Nearby Sites</h2>
-    <div class="nearby-grid">${nearbyHtml}</div>
+    <div class="nearby-grid" id="nearbyGrid">
+      ${nearbyCardsHtml}
+    </div>
   </section>
 </div>
 
@@ -436,7 +546,7 @@ window.addEventListener('scroll',()=>document.getElementById('floatNav').classLi
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.fade-section').forEach(el=>obs.observe(el));
 
-const lbImages=${JSON.stringify(allLbImages)};
+const lbImages=${lbImagesJs};
 let lbIdx=0;
 function openLb(i){lbIdx=i;const lb=document.getElementById('lightbox');lb.querySelector('img').src=lbImages[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;lb.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
@@ -444,63 +554,106 @@ function lbNav(d){lbIdx=(lbIdx+d+lbImages.length)%lbImages.length;document.getEl
 document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1)});
 document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLb()});
 
-const SLUG='${slug}';
-function toggleSave(){let s=JSON.parse(localStorage.getItem('cc_saved')||'[]');const i=s.indexOf(SLUG);if(i>=0)s.splice(i,1);else s.push(SLUG);localStorage.setItem('cc_saved',JSON.stringify(s));document.querySelectorAll('.action-save').forEach(b=>{const v=s.includes(SLUG);b.classList.toggle('saved',v);b.innerHTML=v?'♥ Saved':'♡ Save'})}
-(function(){const s=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(s.includes(SLUG))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
-function shareThis(){if(navigator.share)navigator.share({title:'${escapeHtml(displayName)} — castlecore',url:location.href}).catch(()=>{});else{navigator.clipboard.writeText(location.href);alert('Link copied!')}}
+function toggleSave(){
+  let saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');
+  const slug='${slug}';
+  const idx=saved.indexOf(slug);
+  if(idx>=0)saved.splice(idx,1);else saved.push(slug);
+  localStorage.setItem('cc_saved',JSON.stringify(saved));
+  document.querySelectorAll('.action-save').forEach(btn=>{
+    const isSaved=saved.includes(slug);
+    btn.classList.toggle('saved',isSaved);
+    btn.innerHTML=isSaved?'♥ Saved':'♡ Save';
+  });
+}
+(function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('${slug}'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
 
-const YT_KEY='${GAPI_KEY}';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(displayName)}+drone+cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+function shareThis(){
+  if(navigator.share)navigator.share({title:'${name} — castlecore',url:location.href}).catch(()=>{});
+  else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
+}
 
-const GP_KEY='${GAPI_KEY}';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'${escapeHtml(displayName)} ${escapeHtml(castle.county||'')} ${escapeHtml(castle.country||'')}',locationBias:{circle:{center:{latitude:${castle.lat},longitude:${castle.lng}},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
-  const place=d.places&&d.places[0];if(!place)return;
-  if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
-  if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}
+const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch(\`https://www.googleapis.com/youtube/v3/search?part=snippet&q=\${encodeURIComponent('${castle.name.replace(/'/g,"\\'")} drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=\${YT_KEY}\`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
+  if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
+  grid.innerHTML=d.items.map(v=>\`<iframe src="https://www.youtube.com/embed/\${v.id.videoId}" allowfullscreen loading="lazy"></iframe>\`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+
+const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://places.googleapis.com/v1/places:searchText',{
+  method:'POST',
+  headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
+  body:JSON.stringify({textQuery:'${castle.name.replace(/'/g,"\\'")} ${(castle.county||'').replace(/'/g,"\\'")}',locationBias:{circle:{center:{latitude:${lat},longitude:${lng}},radius:1000}},maxResultCount:1})
+}).then(r=>r.json()).then(d=>{
+  const place=d.places&&d.places[0];
+  if(!place)return;
+  if(place.reviews&&place.reviews.length){
+    const box=document.getElementById('reviewsBox');
+    box.innerHTML=place.reviews.slice(0,5).map(r=>{
+      const stars='★'.repeat(Math.round(r.rating||0));
+      const author=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';
+      const txt=(r.text&&r.text.text)||'';
+      const time=r.relativePublishTimeDescription||'';
+      return '<div class="review-card"><div class="review-header"><span class="review-author">'+author+'</span><span class="review-rating">'+stars+'</span><span class="review-time">'+time+'</span></div><p class="review-text">"'+txt+'"</p></div>';
+    }).join('');
+  }
+  if(place.photos&&place.photos.length){
+    place.photos.slice(0,8).forEach(p=>{
+      lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY);
+    });
+    const more=document.querySelector('.pg-more');
+    if(more)more.textContent='+'+(lbImages.length-4)+' photos';
+  }
   const hours=place.currentOpeningHours||place.regularOpeningHours;
-  if(hours&&hours.weekdayDescriptions){const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const today=days[new Date().getDay()];const todayH=hours.weekdayDescriptions.find(h=>h.startsWith(today))||hours.weekdayDescriptions[0];const isOpen=hours.openNow;const st=isOpen?'<span style="color:#2e7d32;font-weight:600">Open now</span>':'<span style="color:#c62828;font-weight:600">Closed</span>';const all=hours.weekdayDescriptions.join('<br>');const el=document.getElementById('hoursInline');el.style.display='';el.innerHTML='<div style="margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:3px"><div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem"><span>🕐</span><span style="font-family:Cinzel,serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faded)">Opening Hours</span></div><div style="font-size:.95rem;color:var(--ink)">'+st+' · '+todayH+'</div><span class="visit-hours-toggle" onclick="this.nextElementSibling.classList.toggle(\\\'open\\\')" >See all hours ▾</span><div class="visit-hours-full">'+all+'</div></div>'}
-  const li=[];if(place.websiteUri){const dm=new URL(place.websiteUri).hostname.replace('www.','');li.push('<div class="link-item"><span class="link-icon">🌐</span><a href="'+place.websiteUri+'" target="_blank" rel="noopener">'+dm+'</a></div>')}if(place.googleMapsUri){li.push('<div class="link-item"><span class="link-icon">📍</span><a href="'+place.googleMapsUri+'" target="_blank" rel="noopener">Google Maps</a></div>')}if(li.length){document.getElementById('linksCard').style.display='';document.getElementById('linksContent').innerHTML=li.join('')}
+  if(hours&&hours.weekdayDescriptions){
+    const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const today=days[new Date().getDay()];
+    const todayHours=hours.weekdayDescriptions.find(h=>h.startsWith(today))||hours.weekdayDescriptions[0];
+    const isOpen=hours.openNow;
+    const statusText=isOpen?'<span style="color:#2e7d32;font-weight:600">Open now</span>':'<span style="color:#c62828;font-weight:600">Closed</span>';
+    const allHours=hours.weekdayDescriptions.join('<br>');
+    const hoursEl=document.getElementById('hoursInline');
+    hoursEl.style.display='';
+    hoursEl.innerHTML='<div style="margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:3px"><div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem"><span>🕐</span><span style="font-family:Cinzel,serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faded)">Opening Hours</span></div><div style="font-size:.95rem;color:var(--ink)">'+statusText+' · '+todayHours+'</div><span class="visit-hours-toggle" onclick="this.nextElementSibling.classList.toggle(\\\'open\\\')">See all hours ▾</span><div class="visit-hours-full">'+allHours+'</div></div>';
+  }
+  const linkItems=[];
+  if(place.websiteUri){
+    const domain=new URL(place.websiteUri).hostname.replace('www.','');
+    linkItems.push('<div class="link-item"><span class="link-icon">🌐</span><a href="'+place.websiteUri+'" target="_blank" rel="noopener">'+domain+'</a></div>');
+  }
+  if(place.googleMapsUri){
+    linkItems.push('<div class="link-item"><span class="link-icon">📍</span><a href="'+place.googleMapsUri+'" target="_blank" rel="noopener">Google Maps</a></div>');
+  }
+  if(linkItems.length){
+    document.getElementById('linksCard').style.display='';
+    document.getElementById('linksContent').innerHTML=linkItems.join('');
+  }
 }).catch(()=>{});
 </script>
 </body>
 </html>`;
 }
 
-// Generate pages for the 9 castles (Dunluce already has its prototype)
-const targetNames = [
-  'Tower of London',
-  'Edinburgh Castle Interior',
-  'Bamburgh Castle',
-  'Warwick Castle',
-  'Fountains Abbey',
-  'Corfe Castle',
-  'Caernarfon Castle',
-  'Stirling Castle',
-  'Blenheim Palace'
-];
+// Generate pages
+const outDir = path.join(__dirname, 'site');
+const generated = [];
+const errors = [];
 
-const siteDir = path.join(__dirname, 'site');
-let count = 0;
-
-for (const name of targetNames) {
-  const castle = CASTLES.find(c => c.name === name);
-  if (!castle) { console.log('NOT FOUND:', name); continue; }
-  
-  const html = generateCinematicPage(castle);
-  if (!html) continue;
-  
+for (const castle of top25) {
   const slug = slugify(castle.name);
-  const outPath = path.join(siteDir, `${slug}.html`);
-  
-  // Back up old version
-  if (fs.existsSync(outPath)) {
-    fs.copyFileSync(outPath, outPath.replace('.html', '-old.html'));
+  const filename = `${slug}.html`;
+  try {
+    const html = generatePage(castle);
+    fs.writeFileSync(path.join(outDir, filename), html, 'utf8');
+    generated.push(filename);
+    console.log(`✓ ${filename}`);
+  } catch (e) {
+    errors.push({ name: castle.name, error: e.message });
+    console.error(`✗ ${castle.name}: ${e.message}`);
   }
-  
-  fs.writeFileSync(outPath, html, 'utf8');
-  count++;
-  console.log(`✅ ${castle.name} → ${slug}.html`);
 }
 
-console.log(`\nGenerated ${count} cinematic pages`);
+console.log(`\nGenerated ${generated.length} pages.`);
+if (errors.length) console.log(`Errors: ${errors.length}`, errors);
