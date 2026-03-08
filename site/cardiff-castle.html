@@ -181,7 +181,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
 <section class="hero">
   <div class="hero-img">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Castell_Coch_2018.jpg/1280px-Castell_Coch_2018.jpg" alt="Cardiff Castle">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Aerial_view_of_Cardiff_Castle.jpg/1280px-Aerial_view_of_Cardiff_Castle.jpg" alt="Cardiff Castle">
   </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
@@ -403,7 +403,7 @@ function shareThis(){
 }
 
 const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Cardiff Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Cardiff%20Castle%20history%20tour'Cardiff Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
 .then(r=>r.json()).then(d=>{
   const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}

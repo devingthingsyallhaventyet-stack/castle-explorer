@@ -220,7 +220,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"When Cromwell's army besieged Dunnottar in 1652 to seize the Scottish Crown Jewels, a servant woman named Christian Granger smuggled them out under her skirts, carrying them past English soldiers to the nearby church of Kinneff, where the minister hid them beneath the floor. They stayed there for eight years."</p>
+      <p>"When Cromwell's army besieged Dunnottar in 1652 to seize the Scottish Crown Jewels, the minister's wife, Christian Grainger, smuggled them out hidden among bundles of flax, carrying them past English soldiers to the nearby church of Kinneff, where her husband hid them beneath the floor. They stayed there for eight years."</p>
     </div>
 
     <section class="fade-section">
@@ -401,7 +401,7 @@ function shareThis(){
 }
 
 const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Dunnottar Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Dunnottar%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
 .then(r=>r.json()).then(d=>{
   const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}

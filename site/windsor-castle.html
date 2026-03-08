@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Windsor Castle Interior — castlecore</title>
+<title>Windsor Castle — castlecore</title>
 <meta name="description" content="The oldest and largest occupied castle in the world. State Apartments and St George&#39;s Chapel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -181,12 +181,12 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
 <section class="hero">
   <div class="hero-img">
-    <img src="https://img.castlecore.uk/windsor-castle-interior.jpg" alt="Windsor Castle Interior">
+    <img src="https://img.castlecore.uk/windsor-castle-interior.jpg" alt="Windsor Castle">
   </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
     <p class="hero-tagline">A fortress shaped by war and wonder</p>
-    <h1>Windsor Castle Interior</h1>
+    <h1>Windsor Castle</h1>
     <div class="hero-meta">
       <span>Berkshire · England</span>
       <span>✦ 4.7 · 35,000 reviews</span>
@@ -211,10 +211,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="content-main">
 
     <div class="photo-grid-compact" id="photoGrid">
-      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/windsor-castle-interior-2.jpg" alt="Windsor Castle Interior"></div>
-      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/windsor-castle-interior-3.jpg" alt="Windsor Castle Interior"></div>
-      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/windsor-castle-interior-4.jpg" alt="Windsor Castle Interior"></div>
-      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/windsor-castle-interior-5.jpg" alt="Windsor Castle Interior"><span class="pg-more">+4 photos</span></div>
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/windsor-castle-interior-2.jpg" alt="Windsor Castle"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/windsor-castle-interior-3.jpg" alt="Windsor Castle"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/windsor-castle-interior-4.jpg" alt="Windsor Castle"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/windsor-castle-interior-5.jpg" alt="Windsor Castle"><span class="pg-more">+4 photos</span></div>
     </div>
 
     <div class="narrative-quote">
@@ -301,7 +301,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 </div>
 
 <div class="photo-break fade-section">
-  <img src="https://img.castlecore.uk/windsor-castle-2.jpg" alt="Windsor Castle Interior">
+  <img src="https://img.castlecore.uk/windsor-castle-2.jpg" alt="Windsor Castle">
   <div class="pb-text">
     <p>"Somewhere behind these walls, a king is having tea. Somewhere in these corridors, a Rembrandt hangs where only the corgis notice it."</p>
   </div>
@@ -397,12 +397,12 @@ function toggleSave(){
 (function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('windsor-castle-interior'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
 
 function shareThis(){
-  if(navigator.share)navigator.share({title:'Windsor Castle Interior — castlecore',url:location.href}).catch(()=>{});
+  if(navigator.share)navigator.share({title:'Windsor Castle — castlecore',url:location.href}).catch(()=>{});
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
 const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Windsor Castle Interior drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Windsor%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
 .then(r=>r.json()).then(d=>{
   const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
@@ -413,7 +413,7 @@ const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
-  body:JSON.stringify({textQuery:'Windsor Castle Interior Berkshire',locationBias:{circle:{center:{latitude:51.4839,longitude:-0.6044},radius:1000}},maxResultCount:1})
+  body:JSON.stringify({textQuery:'Windsor Castle Berkshire',locationBias:{circle:{center:{latitude:51.4839,longitude:-0.6044},radius:1000}},maxResultCount:1})
 }).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];
   if(!place)return;

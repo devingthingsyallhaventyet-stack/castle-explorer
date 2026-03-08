@@ -1037,7 +1037,6 @@ const CASTLES = [
       "https://img.castlecore.uk/sherborne-old-castle-main-5.jpg"
     ]
   },
-  null,
   {
     "name": "Cleeve Abbey",
     "lat": 51.1272,
@@ -1258,7 +1257,6 @@ const CASTLES = [
       "https://img.castlecore.uk/peveril-castle-keep-5.jpg"
     ]
   },
-  null,
   {
     "name": "Tattershall Castle",
     "lat": 53.1084,
@@ -6821,7 +6819,14 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1200,
     "county": "Monmouthshire",
-    "tags": ["romantic-ruin","hidden-gem","photogenic","free-entry","medieval","norman"],
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "photogenic",
+      "free-entry",
+      "medieval",
+      "norman"
+    ],
     "access": "paid",
     "_index": 217,
     "gallery": [
@@ -7765,7 +7770,12 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 780,
     "county": "Swansea",
-    "tags": ["romantic-ruin","hidden-gem","coastal","medieval"],
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "coastal",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 244,
     "gallery": [
@@ -9727,7 +9737,13 @@ const CASTLES = [
     "rating": 3.5,
     "reviewCount": 320,
     "county": "County Meath",
-    "tags": ["romantic-ruin","hidden-gem","free-entry","riverside","medieval"],
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "free-entry",
+      "riverside",
+      "medieval"
+    ],
     "access": "free",
     "_index": 312,
     "gallery": [
@@ -11489,7 +11505,13 @@ const CASTLES = [
     "rating": 4.5,
     "reviewCount": 3200,
     "county": "Kent",
-    "tags": ["romantic-ruin","photogenic","gardens","medieval","woodland"],
+    "tags": [
+      "romantic-ruin",
+      "photogenic",
+      "gardens",
+      "medieval",
+      "woodland"
+    ],
     "access": "paid",
     "_index": 373,
     "gallery": [
@@ -11517,7 +11539,13 @@ const CASTLES = [
     "rating": 4.6,
     "reviewCount": 4500,
     "county": "Kent",
-    "tags": ["photogenic","well-preserved","gardens","tudor","romantic"],
+    "tags": [
+      "photogenic",
+      "well-preserved",
+      "gardens",
+      "tudor",
+      "romantic"
+    ],
     "access": "paid",
     "_index": 374,
     "gallery": [
@@ -11933,7 +11961,14 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 2100,
     "county": "Devon",
-    "tags": ["well-preserved","kid-friendly","gardens","medieval","riverside","events-venue"],
+    "tags": [
+      "well-preserved",
+      "kid-friendly",
+      "gardens",
+      "medieval",
+      "riverside",
+      "events-venue"
+    ],
     "access": "paid",
     "_index": 389,
     "gallery": [
@@ -11961,7 +11996,13 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1900,
     "county": "Devon",
-    "tags": ["well-preserved","photogenic","coastal","medieval","kid-friendly"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "coastal",
+      "medieval",
+      "kid-friendly"
+    ],
     "access": "paid",
     "_index": 390,
     "gallery": [
@@ -12158,7 +12199,12 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 2800,
     "county": "West Midlands",
-    "tags": ["dramatic-ruin","kid-friendly","norman","medieval"],
+    "tags": [
+      "dramatic-ruin",
+      "kid-friendly",
+      "norman",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 397,
     "gallery": [
@@ -12220,7 +12266,14 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 520,
     "county": "Shropshire",
-    "tags": ["dramatic-ruin","hidden-gem","free-entry","riverside","norman","medieval"],
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free-entry",
+      "riverside",
+      "norman",
+      "medieval"
+    ],
     "access": "free",
     "_index": 399,
     "gallery": [
@@ -12436,7 +12489,12 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1200,
     "county": "Shropshire",
-    "tags": ["romantic-ruin","photogenic","medieval","gardens"],
+    "tags": [
+      "romantic-ruin",
+      "photogenic",
+      "medieval",
+      "gardens"
+    ],
     "access": "paid",
     "_index": 406,
     "gallery": [
@@ -12630,7 +12688,12 @@ const CASTLES = [
     "rating": 4.4,
     "reviewCount": 2400,
     "county": "Norfolk",
-    "tags": ["well-preserved","photogenic","tudor","gardens"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "tudor",
+      "gardens"
+    ],
     "access": "paid",
     "_index": 413,
     "gallery": [
@@ -12749,7 +12812,14 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 1200,
     "county": "Essex",
-    "tags": ["dramatic-ruin","photogenic","free-entry","hilltop","coastal","medieval"],
+    "tags": [
+      "dramatic-ruin",
+      "photogenic",
+      "free-entry",
+      "hilltop",
+      "coastal",
+      "medieval"
+    ],
     "access": "free",
     "_index": 417,
     "gallery": [
@@ -13087,7 +13157,12 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1600,
     "county": "Northumberland",
-    "tags": ["dramatic-ruin","photogenic","gardens","medieval"],
+    "tags": [
+      "dramatic-ruin",
+      "photogenic",
+      "gardens",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 429,
     "gallery": [
@@ -13239,7 +13314,13 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "Cumbria",
-    "tags": ["well-preserved","kid-friendly","gardens","tudor","medieval"],
+    "tags": [
+      "well-preserved",
+      "kid-friendly",
+      "gardens",
+      "tudor",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 434,
     "gallery": [
@@ -13271,7 +13352,13 @@ const CASTLES = [
     "rating": 4.2,
     "reviewCount": 2200,
     "county": "Cumbria",
-    "tags": ["haunted","photogenic","kid-friendly","gardens","medieval"],
+    "tags": [
+      "haunted",
+      "photogenic",
+      "kid-friendly",
+      "gardens",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 435,
     "gallery": [
@@ -13410,7 +13497,6 @@ const CASTLES = [
       "https://img.castlecore.uk/piel-castle-main-5.jpg"
     ]
   },
-  null,
   {
     "name": "Sheriff Hutton Castle",
     "lat": 54.0833,
@@ -13456,7 +13542,14 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1600,
     "county": "North Yorkshire",
-    "tags": ["well-preserved","hidden-gem","gardens","medieval","tudor","guided-tours"],
+    "tags": [
+      "well-preserved",
+      "hidden-gem",
+      "gardens",
+      "medieval",
+      "tudor",
+      "guided-tours"
+    ],
     "access": "paid",
     "_index": 442,
     "gallery": [
@@ -13540,7 +13633,13 @@ const CASTLES = [
     "rating": 4.4,
     "reviewCount": 1400,
     "county": "North Yorkshire",
-    "tags": ["well-preserved","hidden-gem","gardens","medieval","atmospheric"],
+    "tags": [
+      "well-preserved",
+      "hidden-gem",
+      "gardens",
+      "medieval",
+      "atmospheric"
+    ],
     "access": "paid",
     "_index": 445,
     "gallery": [
@@ -13629,7 +13728,14 @@ const CASTLES = [
     "rating": 4.5,
     "reviewCount": 3500,
     "county": "North Yorkshire",
-    "tags": ["romantic-ruin","photogenic","gothic","medieval","riverside","woodland"],
+    "tags": [
+      "romantic-ruin",
+      "photogenic",
+      "gothic",
+      "medieval",
+      "riverside",
+      "woodland"
+    ],
     "access": "free",
     "_index": 448,
     "gallery": [
@@ -13717,7 +13823,15 @@ const CASTLES = [
     "rating": 3.9,
     "reviewCount": 300,
     "county": "North Yorkshire",
-    "tags": ["romantic-ruin","hidden-gem","free-entry","hilltop","norman","medieval","remote"],
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "free-entry",
+      "hilltop",
+      "norman",
+      "medieval",
+      "remote"
+    ],
     "access": "free",
     "_index": 451,
     "gallery": [
@@ -13749,7 +13863,13 @@ const CASTLES = [
     "rating": 3.7,
     "reviewCount": 520,
     "county": "West Yorkshire",
-    "tags": ["dramatic-ruin","hidden-gem","free-entry","hilltop","medieval"],
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free-entry",
+      "hilltop",
+      "medieval"
+    ],
     "access": "free",
     "_index": 452,
     "gallery": [
@@ -14029,7 +14149,14 @@ const CASTLES = [
     "rating": 4.6,
     "reviewCount": 3200,
     "county": "Derbyshire",
-    "tags": ["well-preserved","photogenic","filming-location","gardens","medieval","tudor"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "filming-location",
+      "gardens",
+      "medieval",
+      "tudor"
+    ],
     "access": "paid",
     "_index": 462,
     "gallery": [
@@ -14061,7 +14188,13 @@ const CASTLES = [
     "rating": 4.5,
     "reviewCount": 4200,
     "county": "Derbyshire",
-    "tags": ["well-preserved","photogenic","tudor","gardens","museum"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "tudor",
+      "gardens",
+      "museum"
+    ],
     "access": "paid",
     "_index": 463,
     "gallery": [
@@ -14302,7 +14435,6 @@ const CASTLES = [
       "https://img.castlecore.uk/tewkesbury-abbey-5.jpg"
     ]
   },
-  null,
   {
     "name": "Braemar Castle",
     "lat": 57.0069,
@@ -14545,7 +14677,13 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "Moray",
-    "tags": ["well-preserved","photogenic","gardens","museum","medieval"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "gardens",
+      "museum",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 481,
     "gallery": [
@@ -14635,7 +14773,15 @@ const CASTLES = [
     "rating": 4.5,
     "reviewCount": 4200,
     "county": "Argyll and Bute",
-    "tags": ["well-preserved","photogenic","kid-friendly","gardens","gothic","filming-location","gift-shop"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "kid-friendly",
+      "gardens",
+      "gothic",
+      "filming-location",
+      "gift-shop"
+    ],
     "access": "paid",
     "_index": 484,
     "gallery": [
@@ -14877,7 +15023,13 @@ const CASTLES = [
     "rating": 3.7,
     "reviewCount": 180,
     "county": "Perth and Kinross",
-    "tags": ["hidden-gem","free-entry","hilltop","medieval","remote"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "hilltop",
+      "medieval",
+      "remote"
+    ],
     "access": "free",
     "_index": 493,
     "gallery": [
@@ -15157,7 +15309,13 @@ const CASTLES = [
     "rating": 4.2,
     "reviewCount": 1500,
     "county": "Monmouthshire",
-    "tags": ["well-preserved","kid-friendly","medieval","norman","gardens"],
+    "tags": [
+      "well-preserved",
+      "kid-friendly",
+      "medieval",
+      "norman",
+      "gardens"
+    ],
     "access": "paid",
     "_index": 503,
     "gallery": [
@@ -15193,7 +15351,12 @@ const CASTLES = [
     "rating": 3.9,
     "reviewCount": 380,
     "county": "Monmouthshire",
-    "tags": ["romantic-ruin","hidden-gem","gardens","medieval"],
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "gardens",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 504,
     "gallery": [
@@ -15281,7 +15444,13 @@ const CASTLES = [
     "rating": 4.2,
     "reviewCount": 1400,
     "county": "Pembrokeshire",
-    "tags": ["well-preserved","photogenic","kid-friendly","gardens","medieval"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "kid-friendly",
+      "gardens",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 507,
     "gallery": [
@@ -15361,7 +15530,14 @@ const CASTLES = [
     "rating": 3.8,
     "reviewCount": 420,
     "county": "County Durham",
-    "tags": ["dramatic-ruin","hidden-gem","free-entry","medieval","norman","remote"],
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free-entry",
+      "medieval",
+      "norman",
+      "remote"
+    ],
     "access": "free",
     "_index": 510,
     "gallery": [
@@ -15422,7 +15598,12 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "County Durham",
-    "tags": ["well-preserved","haunted","medieval","wedding-venue"],
+    "tags": [
+      "well-preserved",
+      "haunted",
+      "medieval",
+      "wedding-venue"
+    ],
     "access": "paid",
     "_index": 512,
     "gallery": [
@@ -15450,7 +15631,11 @@ const CASTLES = [
     "rating": 3.6,
     "reviewCount": 450,
     "county": "County Durham",
-    "tags": ["hidden-gem","kid-friendly","woodland"],
+    "tags": [
+      "hidden-gem",
+      "kid-friendly",
+      "woodland"
+    ],
     "access": "paid",
     "_index": 513,
     "gallery": [
@@ -15537,7 +15722,11 @@ const CASTLES = [
     "rating": 3.5,
     "reviewCount": 150,
     "county": "North Yorkshire",
-    "tags": ["hidden-gem","tudor","medieval"],
+    "tags": [
+      "hidden-gem",
+      "tudor",
+      "medieval"
+    ],
     "access": "exterior-only",
     "_index": 516,
     "gallery": [
@@ -15676,7 +15865,16 @@ const CASTLES = [
     "rating": 4.5,
     "reviewCount": 3800,
     "county": "Leicestershire",
-    "tags": ["well-preserved","photogenic","kid-friendly","gothic","gardens","events-venue","gift-shop","tearoom-cafe"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "kid-friendly",
+      "gothic",
+      "gardens",
+      "events-venue",
+      "gift-shop",
+      "tearoom-cafe"
+    ],
     "access": "paid",
     "_index": 521,
     "gallery": [
@@ -15781,7 +15979,13 @@ const CASTLES = [
     "rating": 4.4,
     "reviewCount": 2800,
     "county": "East Sussex",
-    "tags": ["well-preserved","photogenic","tudor","gardens","kid-friendly"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "tudor",
+      "gardens",
+      "kid-friendly"
+    ],
     "access": "paid",
     "_index": 525,
     "gallery": [
@@ -15809,7 +16013,15 @@ const CASTLES = [
     "rating": 4.4,
     "reviewCount": 3800,
     "county": "East Sussex",
-    "tags": ["dramatic-ruin","kid-friendly","medieval","norman","museum","guided-tours","gift-shop"],
+    "tags": [
+      "dramatic-ruin",
+      "kid-friendly",
+      "medieval",
+      "norman",
+      "museum",
+      "guided-tours",
+      "gift-shop"
+    ],
     "access": "paid",
     "_index": 526,
     "gallery": [
@@ -16310,7 +16522,12 @@ const CASTLES = [
     "rating": 3.9,
     "reviewCount": 520,
     "county": "Lincolnshire",
-    "tags": ["dramatic-ruin","hidden-gem","free-entry","medieval"],
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free-entry",
+      "medieval"
+    ],
     "access": "free",
     "_index": 545,
     "gallery": [
@@ -16410,7 +16627,6 @@ const CASTLES = [
       "https://img.castlecore.uk/south-kyme-tower-main-5.jpg"
     ]
   },
-  null,
   {
     "name": "Baginton Castle",
     "lat": 52.35,
@@ -16638,7 +16854,13 @@ const CASTLES = [
     "rating": 4.4,
     "reviewCount": 2800,
     "county": "Cumbria",
-    "tags": ["romantic-ruin","photogenic","kid-friendly","gardens","gothic"],
+    "tags": [
+      "romantic-ruin",
+      "photogenic",
+      "kid-friendly",
+      "gardens",
+      "gothic"
+    ],
     "access": "paid",
     "_index": 558,
     "gallery": [
@@ -16847,7 +17069,14 @@ const CASTLES = [
     "rating": 4.2,
     "reviewCount": 1400,
     "county": "West Dunbartonshire",
-    "tags": ["dramatic-ruin","photogenic","hilltop","coastal","medieval","prehistoric"],
+    "tags": [
+      "dramatic-ruin",
+      "photogenic",
+      "hilltop",
+      "coastal",
+      "medieval",
+      "prehistoric"
+    ],
     "access": "paid",
     "_index": 566,
     "gallery": [
@@ -16875,7 +17104,12 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 650,
     "county": "Powys",
-    "tags": ["hidden-gem","well-preserved","medieval","events-venue"],
+    "tags": [
+      "hidden-gem",
+      "well-preserved",
+      "medieval",
+      "events-venue"
+    ],
     "access": "paid",
     "_index": 567,
     "gallery": [
@@ -16959,7 +17193,14 @@ const CASTLES = [
     "rating": 4.1,
     "reviewCount": 500,
     "county": "Powys",
-    "tags": ["dramatic-ruin","hidden-gem","free-entry","hilltop","medieval","remote"],
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free-entry",
+      "hilltop",
+      "medieval",
+      "remote"
+    ],
     "access": "free",
     "_index": 570,
     "gallery": [
@@ -17022,7 +17263,13 @@ const CASTLES = [
     "rating": 3.8,
     "reviewCount": 450,
     "county": "Carmarthenshire",
-    "tags": ["hidden-gem","free-entry","riverside","ruins-romantic","medieval"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "riverside",
+      "ruins-romantic",
+      "medieval"
+    ],
     "access": "free",
     "_index": 572,
     "gallery": [
@@ -17058,7 +17305,12 @@ const CASTLES = [
     "rating": 3.9,
     "reviewCount": 500,
     "county": "Pembrokeshire",
-    "tags": ["hidden-gem","free-entry","medieval","norman"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "medieval",
+      "norman"
+    ],
     "access": "free",
     "_index": 573,
     "gallery": [
@@ -17150,7 +17402,13 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 1600,
     "county": "Ceredigion",
-    "tags": ["hidden-gem","well-preserved","riverside","medieval","events-venue"],
+    "tags": [
+      "hidden-gem",
+      "well-preserved",
+      "riverside",
+      "medieval",
+      "events-venue"
+    ],
     "access": "paid",
     "_index": 576,
     "gallery": [
@@ -17444,7 +17702,14 @@ const CASTLES = [
     "rating": 4.3,
     "reviewCount": 2100,
     "county": "Cheshire",
-    "tags": ["well-preserved","photogenic","gothic","woodland","hilltop","wedding-venue"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "gothic",
+      "woodland",
+      "hilltop",
+      "wedding-venue"
+    ],
     "access": "paid",
     "_index": 587,
     "gallery": [
@@ -17830,7 +18095,6 @@ const CASTLES = [
       "https://img.castlecore.uk/rufus-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Ludgershall Castle",
     "lat": 51.254,
@@ -18646,7 +18910,14 @@ const CASTLES = [
     "rating": 4.2,
     "reviewCount": 1200,
     "county": "Oxfordshire",
-    "tags": ["romantic-ruin","free-entry","riverside","medieval","haunted","atmospheric"],
+    "tags": [
+      "romantic-ruin",
+      "free-entry",
+      "riverside",
+      "medieval",
+      "haunted",
+      "atmospheric"
+    ],
     "access": "free",
     "_index": 634,
     "gallery": [
@@ -18861,7 +19132,6 @@ const CASTLES = [
       "https://img.castlecore.uk/bishop-s-castle-main-5.jpg"
     ]
   },
-  null,
   {
     "name": "Knepp Castle",
     "lat": 50.933,
@@ -19010,7 +19280,12 @@ const CASTLES = [
     "rating": 3.6,
     "reviewCount": 300,
     "county": "Neath Port Talbot",
-    "tags": ["hidden-gem","free-entry","norman","medieval"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "norman",
+      "medieval"
+    ],
     "access": "free",
     "_index": 649,
     "gallery": [
@@ -19042,7 +19317,12 @@ const CASTLES = [
     "rating": 3.5,
     "reviewCount": 600,
     "county": "Swansea",
-    "tags": ["hidden-gem","free-entry","medieval","norman"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "medieval",
+      "norman"
+    ],
     "access": "free",
     "_index": 650,
     "gallery": [
@@ -19060,7 +19340,6 @@ const CASTLES = [
       "https://img.castlecore.uk/swansea-castle-main-5.jpg"
     ]
   },
-  null,
   {
     "name": "Castle Kennedy",
     "lat": 54.931,
@@ -20579,7 +20858,12 @@ const CASTLES = [
     "rating": 3.7,
     "reviewCount": 280,
     "county": "Flintshire",
-    "tags": ["hidden-gem","free-entry","hilltop","medieval"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "hilltop",
+      "medieval"
+    ],
     "access": "free",
     "_index": 709,
     "gallery": [
@@ -20622,7 +20906,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ruthin-castle-grounds-5.jpg"
     ]
   },
-  null,
   {
     "name": "Deganwy Castle",
     "lat": 53.294,
@@ -20735,7 +21018,6 @@ const CASTLES = [
       "https://img.castlecore.uk/crickhowell-castle-ruins-5.jpg"
     ]
   },
-  null,
   {
     "name": "Oxwich Castle",
     "lat": 51.554,
@@ -20750,7 +21032,12 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 500,
     "county": "Swansea",
-    "tags": ["hidden-gem","coastal","tudor","photogenic"],
+    "tags": [
+      "hidden-gem",
+      "coastal",
+      "tudor",
+      "photogenic"
+    ],
     "access": "paid",
     "_index": 717,
     "gallery": [
@@ -20864,7 +21151,13 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 400,
     "county": "Vale of Glamorgan",
-    "tags": ["hidden-gem","well-preserved","gardens","medieval","wedding-venue"],
+    "tags": [
+      "hidden-gem",
+      "well-preserved",
+      "gardens",
+      "medieval",
+      "wedding-venue"
+    ],
     "access": "paid",
     "_index": 721,
     "gallery": [
@@ -21988,7 +22281,14 @@ const CASTLES = [
     "rating": 4.5,
     "reviewCount": 3200,
     "county": "County Limerick",
-    "tags": ["well-preserved","photogenic","gardens","gothic","wedding-venue","riverside"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "gardens",
+      "gothic",
+      "wedding-venue",
+      "riverside"
+    ],
     "access": "paid",
     "_index": 764,
     "gallery": [
@@ -22002,7 +22302,6 @@ const CASTLES = [
       "https://img.castlecore.uk/adare-manor-main-5.jpg"
     ]
   },
-  null,
   {
     "name": "Carrigogunnel Castle",
     "lat": 52.634,
@@ -22078,7 +22377,6 @@ const CASTLES = [
       "https://img.castlecore.uk/glenstal-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Coppinger's Court",
     "lat": 51.534,
@@ -22945,7 +23243,16 @@ const CASTLES = [
     "rating": 4.6,
     "reviewCount": 25000,
     "county": "Edinburgh",
-    "tags": ["well-preserved","photogenic","medieval","hilltop","museum","guided-tours","gift-shop","events-venue"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "medieval",
+      "hilltop",
+      "museum",
+      "guided-tours",
+      "gift-shop",
+      "events-venue"
+    ],
     "access": "paid",
     "_index": 803,
     "gallery": [
@@ -22959,7 +23266,6 @@ const CASTLES = [
       "https://img.castlecore.uk/edinburgh-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Peele Tower Kentmere",
     "lat": 54.429,
@@ -22984,7 +23290,6 @@ const CASTLES = [
       "https://img.castlecore.uk/scraped-peele-tower-kentmere.jpg"
     ]
   },
-  null,
   {
     "name": "Windsor Castle",
     "lat": 51.4839,
@@ -22999,7 +23304,16 @@ const CASTLES = [
     "rating": 4.7,
     "reviewCount": 35000,
     "county": "Berkshire",
-    "tags": ["well-preserved","photogenic","norman","medieval","gothic","gardens","guided-tours","gift-shop"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "norman",
+      "medieval",
+      "gothic",
+      "gardens",
+      "guided-tours",
+      "gift-shop"
+    ],
     "access": "paid",
     "_index": 807,
     "gallery": [
@@ -23027,7 +23341,17 @@ const CASTLES = [
     "rating": 4.6,
     "reviewCount": 25000,
     "county": "Surrey",
-    "tags": ["well-preserved","photogenic","tudor","gardens","haunted","kid-friendly","guided-tours","gift-shop","tearoom-cafe"],
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "tudor",
+      "gardens",
+      "haunted",
+      "kid-friendly",
+      "guided-tours",
+      "gift-shop",
+      "tearoom-cafe"
+    ],
     "access": "paid",
     "_index": 808,
     "gallery": [
@@ -26277,7 +26601,6 @@ const CASTLES = [
       "https://img.castlecore.uk/olderfleet-tower-5.jpg"
     ]
   },
-  null,
   {
     "name": "Claregalway Castle",
     "lat": 53.343,
@@ -26348,7 +26671,14 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 1200,
     "county": "County Mayo",
-    "tags": ["hidden-gem","free-entry","medieval","gothic","riverside","atmospheric"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "medieval",
+      "gothic",
+      "riverside",
+      "atmospheric"
+    ],
     "access": "free",
     "_index": 937,
     "gallery": [
@@ -26627,7 +26957,13 @@ const CASTLES = [
     "rating": 4,
     "reviewCount": 1200,
     "county": "County Tipperary",
-    "tags": ["dramatic-ruin","free-entry","photogenic","medieval","atmospheric"],
+    "tags": [
+      "dramatic-ruin",
+      "free-entry",
+      "photogenic",
+      "medieval",
+      "atmospheric"
+    ],
     "access": "free",
     "_index": 947,
     "gallery": [
@@ -27504,7 +27840,6 @@ const CASTLES = [
       "https://img.castlecore.uk/earl-s-palace-kirkwall-5.jpg"
     ]
   },
-  null,
   {
     "name": "Earl's Palace Birsay",
     "lat": 59.123,
@@ -27932,7 +28267,14 @@ const CASTLES = [
     "rating": 4.2,
     "reviewCount": 1800,
     "county": "Highland",
-    "tags": ["dramatic-ruin","free-entry","island","coastal","remote","photogenic"],
+    "tags": [
+      "dramatic-ruin",
+      "free-entry",
+      "island",
+      "coastal",
+      "remote",
+      "photogenic"
+    ],
     "access": "free",
     "_index": 998,
     "gallery": [
@@ -28712,7 +29054,12 @@ const CASTLES = [
     "rating": 4.2,
     "reviewCount": 2800,
     "county": "Carmarthenshire",
-    "tags": ["romantic-ruin","gardens","photogenic","medieval"],
+    "tags": [
+      "romantic-ruin",
+      "gardens",
+      "photogenic",
+      "medieval"
+    ],
     "access": "paid",
     "_index": 1027,
     "gallery": [
@@ -28853,7 +29200,13 @@ const CASTLES = [
     "rating": 3.6,
     "reviewCount": 250,
     "county": "Isle of Anglesey",
-    "tags": ["hidden-gem","free-entry","woodland","norman","medieval"],
+    "tags": [
+      "hidden-gem",
+      "free-entry",
+      "woodland",
+      "norman",
+      "medieval"
+    ],
     "access": "free",
     "_index": 1032,
     "gallery": [
@@ -29028,7 +29381,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ross-castle-killarney-5.jpg"
     ]
   },
-  null,
   {
     "name": "Muckinish Castle",
     "lat": 53.128,
@@ -36037,7 +36389,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castell-carndochan-ruins-5.jpg"
     ]
   },
-  null,
   {
     "name": "Mulgrave Castle (Old Main)",
     "lat": 54.478,
@@ -36838,7 +37189,6 @@ const CASTLES = [
       "https://img.castlecore.uk/hertford-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Margam Castle",
     "lat": 51.558,
@@ -36972,7 +37322,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-sween-main-5.jpg"
     ]
   },
-  null,
   {
     "name": "Aghadoe Castle",
     "lat": 52.078,
@@ -39315,7 +39664,12 @@ const CASTLES = [
     "rating": 4.5,
     "reviewCount": 3200,
     "county": "County Westmeath",
-    "tags": ["well-preserved","kid-friendly","guided-tours","gift-shop"],
+    "tags": [
+      "well-preserved",
+      "kid-friendly",
+      "guided-tours",
+      "gift-shop"
+    ],
     "access": "paid",
     "_index": 1446,
     "gallery": [
@@ -39609,7 +39963,6 @@ const CASTLES = [
       "https://img.castlecore.uk/old-mellifont-abbey-5.jpg"
     ]
   },
-  null,
   {
     "name": "Castlegrace",
     "lat": 52.397,
@@ -41714,7 +42067,6 @@ const CASTLES = [
       "https://img.castlecore.uk/plas-newydd-5.jpg"
     ]
   },
-  null,
   {
     "name": "Tomen y Mur Fort",
     "lat": 52.875,
@@ -41825,7 +42177,6 @@ const CASTLES = [
       "https://img.castlecore.uk/eliseg-s-pillar-5.jpg"
     ]
   },
-  null,
   {
     "name": "Rhuddlan Castle Towers",
     "lat": 53.2889,
@@ -42041,8 +42392,6 @@ const CASTLES = [
       "https://img.castlecore.uk/aberedw-castle-rocks-5.jpg"
     ]
   },
-  null,
-  null,
   {
     "name": "Brecon Cathedral",
     "lat": 51.9472,
@@ -42369,7 +42718,6 @@ const CASTLES = [
       "https://img.castlecore.uk/pennard-castle-gower-5.jpg"
     ]
   },
-  null,
   {
     "name": "Newcastle Bridgend Castle",
     "lat": 51.5083,
@@ -42451,7 +42799,6 @@ const CASTLES = [
       "https://img.castlecore.uk/llansteffan-castle-viewpoint-5.jpg"
     ]
   },
-  null,
   {
     "name": "Tenby Town Walls",
     "lat": 51.6722,
@@ -42560,10 +42907,6 @@ const CASTLES = [
       "https://img.castlecore.uk/wiston-castle-mound-5.jpg"
     ]
   },
-  null,
-  null,
-  null,
-  null,
   {
     "name": "Aberconwy House",
     "lat": 53.2806,
@@ -42645,7 +42988,6 @@ const CASTLES = [
       "https://img.castlecore.uk/penmon-priory-anglesey-5.jpg"
     ]
   },
-  null,
   {
     "name": "Barcaldine Castle",
     "lat": 56.5489,
@@ -42782,7 +43124,6 @@ const CASTLES = [
       "https://img.castlecore.uk/drummond-castle-gardens-5.jpg"
     ]
   },
-  null,
   {
     "name": "Earl's Palace, Birsay",
     "lat": 59.0833,
@@ -43237,7 +43578,6 @@ const CASTLES = [
       "https://img.castlecore.uk/balloch-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Cambuskenneth Abbey",
     "lat": 56.1167,
@@ -43891,7 +44231,6 @@ const CASTLES = [
       "https://img.castlecore.uk/earl-patrick-s-palace-5.jpg"
     ]
   },
-  null,
   {
     "name": "Old Scatness",
     "lat": 59.8833,
@@ -44043,7 +44382,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ardtornish-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Old Inverlochy Castle",
     "lat": 56.8333,
@@ -45190,7 +45528,6 @@ const CASTLES = [
       "https://img.castlecore.uk/pitmedden-garden-5.jpg"
     ]
   },
-  null,
   {
     "name": "Dalmeny Church",
     "lat": 55.9833,
@@ -45471,7 +45808,6 @@ const CASTLES = [
       "https://img.castlecore.uk/scotstarvit-tower-view-5.jpg"
     ]
   },
-  null,
   {
     "name": "Muness Castle Unst",
     "lat": 60.7167,
@@ -45606,34 +45942,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Strome Castle Ruin",
-    "lat": 57.35,
-    "lng": -5.55,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "MacDonell castle ruin overlooking Loch Carron, blown up by the Mackenzies in 1602.",
-    "image": "https://img.castlecore.uk/strome-castle-ruin.jpg",
-    "rating": 3.9,
-    "reviewCount": 280,
-    "county": "Highland",
-    "tags": [
-      "lochside",
-      "dramatic-history",
-      "nts"
-    ],
-    "access": "free",
-    "_index": 1702,
-    "gallery": [
-      "https://img.castlecore.uk/strome-castle-ruin-2.jpg",
-      "https://img.castlecore.uk/strome-castle-ruin-3.jpg",
-      "https://img.castlecore.uk/strome-castle-ruin-4.jpg",
-      "https://img.castlecore.uk/strome-castle-ruin-5.jpg"
-    ]
-  },
-  null,
-  {
     "name": "Brahan Castle Site",
     "lat": 57.5667,
     "lng": -4.5833,
@@ -45660,7 +45968,6 @@ const CASTLES = [
       "https://img.castlecore.uk/brahan-castle-site-5.jpg"
     ]
   },
-  null,
   {
     "name": "Kilravock Castle",
     "lat": 57.5167,
@@ -45736,8 +46043,6 @@ const CASTLES = [
     "access": "free",
     "_index": 1708
   },
-  null,
-  null,
   {
     "name": "Skipness Castle Chapel",
     "lat": 55.7667,
@@ -46636,7 +46941,6 @@ const CASTLES = [
     "access": "free",
     "_index": 1746
   },
-  null,
   {
     "name": "Classiebawn Castle",
     "lat": 54.466,
@@ -48453,7 +48757,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-durrow-5.jpg"
     ]
   },
-  null,
   {
     "name": "Aran Islands Arkin Castle",
     "lat": 53.108,
@@ -48873,7 +49176,6 @@ const CASTLES = [
       "https://img.castlecore.uk/chatsworth-house-5.jpg"
     ]
   },
-  null,
   {
     "name": "Castle Bytham Castle",
     "lat": 52.7533,
@@ -49029,7 +49331,6 @@ const CASTLES = [
       "https://img.castlecore.uk/wallingford-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Richborough Castle",
     "lat": 51.295,
@@ -49083,7 +49384,6 @@ const CASTLES = [
       "https://img.castlecore.uk/reculver-towers-5.jpg"
     ]
   },
-  null,
   {
     "name": "Nunwell House",
     "lat": 50.685,
@@ -50346,8 +50646,6 @@ const CASTLES = [
       "https://img.castlecore.uk/wroxeter-roman-city-5.jpg"
     ]
   },
-  null,
-  null,
   {
     "name": "Clifton Hall",
     "lat": 52.9433,
@@ -50374,7 +50672,6 @@ const CASTLES = [
       "https://img.castlecore.uk/clifton-hall-tower-5.jpg"
     ]
   },
-  null,
   {
     "name": "Ickworth House",
     "lat": 52.2367,
@@ -50553,7 +50850,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-hedingham-5.jpg"
     ]
   },
-  null,
   {
     "name": "Barnwell Castle",
     "lat": 52.4517,
@@ -50675,7 +50971,6 @@ const CASTLES = [
       "https://img.castlecore.uk/st-mary-s-abbey-york-5.jpg"
     ]
   },
-  null,
   {
     "name": "Snape Castle (Bedale)",
     "lat": 54.285,
@@ -51012,7 +51307,6 @@ const CASTLES = [
       "https://img.castlecore.uk/burghley-house-5.jpg"
     ]
   },
-  null,
   {
     "name": "Leicester Castle",
     "lat": 52.6319,
@@ -51137,7 +51431,6 @@ const CASTLES = [
       "https://img.castlecore.uk/norham-castle-border-5.jpg"
     ]
   },
-  null,
   {
     "name": "Orford Ness",
     "lat": 52.0833,
@@ -51219,7 +51512,6 @@ const CASTLES = [
       "https://img.castlecore.uk/helmingham-hall-5.jpg"
     ]
   },
-  null,
   {
     "name": "Wolterton Hall",
     "lat": 52.8283,
@@ -51378,7 +51670,6 @@ const CASTLES = [
       "https://img.castlecore.uk/barnard-castle-town-5.jpg"
     ]
   },
-  null,
   {
     "name": "Wylam Railway Museum",
     "lat": 54.975,
@@ -51553,10 +51844,6 @@ const CASTLES = [
       "https://img.castlecore.uk/burgh-by-sands-castle-5.jpg"
     ]
   },
-  null,
-  null,
-  null,
-  null,
   {
     "name": "Knaresborough Castle (Nidd)",
     "lat": 54.0086,
@@ -51583,7 +51870,6 @@ const CASTLES = [
       "https://img.castlecore.uk/knaresborough-castle-nidd-5.jpg"
     ]
   },
-  null,
   {
     "name": "Bolton Castle (Wensleydale)",
     "lat": 54.3064,
@@ -51744,7 +52030,6 @@ const CASTLES = [
       "https://img.castlecore.uk/sizergh-castle-kendal-5.jpg"
     ]
   },
-  null,
   {
     "name": "Okehampton Castle (Devon)",
     "lat": 50.7383,
@@ -51825,7 +52110,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dartmouth-castle-devon-5.jpg"
     ]
   },
-  null,
   {
     "name": "Castle Drogo (Dartmoor)",
     "lat": 50.6928,
@@ -51852,7 +52136,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-drogo-dartmoor-5.jpg"
     ]
   },
-  null,
   {
     "name": "Portchester Castle (Roman)",
     "lat": 50.8372,
@@ -51880,7 +52163,6 @@ const CASTLES = [
       "https://img.castlecore.uk/portchester-castle-roman-5.jpg"
     ]
   },
-  null,
   {
     "name": "Hever Castle (Kent)",
     "lat": 51.185,
@@ -51909,7 +52191,6 @@ const CASTLES = [
       "https://img.castlecore.uk/hever-castle-kent-5.jpg"
     ]
   },
-  null,
   {
     "name": "Scotney Castle (Kent)",
     "lat": 51.0917,
@@ -51964,7 +52245,6 @@ const CASTLES = [
       "https://img.castlecore.uk/framlingham-castle-suffolk-5.jpg"
     ]
   },
-  null,
   {
     "name": "Castle Rising (Norfolk)",
     "lat": 52.7753,
@@ -52018,7 +52298,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-acre-castle-norfolk-5.jpg"
     ]
   },
-  null,
   {
     "name": "Tutbury Castle (Staffordshire)",
     "lat": 52.8622,
@@ -52045,9 +52324,6 @@ const CASTLES = [
       "https://img.castlecore.uk/tutbury-castle-staffordshire-5.jpg"
     ]
   },
-  null,
-  null,
-  null,
   {
     "name": "Rievaulx Abbey (Yorkshire)",
     "lat": 54.2581,
@@ -52075,7 +52351,6 @@ const CASTLES = [
       "https://img.castlecore.uk/rievaulx-abbey-yorkshire-5.jpg"
     ]
   },
-  null,
   {
     "name": "Kirkstall Abbey (Leeds)",
     "lat": 53.8189,
@@ -52657,7 +52932,6 @@ const CASTLES = [
       "https://img.castlecore.uk/lag-tower-5.jpg"
     ]
   },
-  null,
   {
     "name": "Abergeldie Castle",
     "lat": 57.05,
@@ -53671,7 +53945,6 @@ const CASTLES = [
       "https://img.castlecore.uk/edinkillie-church-5.jpg"
     ]
   },
-  null,
   {
     "name": "Tower of Hallbar",
     "lat": 55.7333,
@@ -53887,7 +54160,6 @@ const CASTLES = [
       "https://img.castlecore.uk/peebles-cross-kirk-5.jpg"
     ]
   },
-  null,
   {
     "name": "Edrom Church",
     "lat": 55.7833,
@@ -54311,7 +54583,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dunaverty-rock-5.jpg"
     ]
   },
-  null,
   {
     "name": "Kilberry Sculptured Stones",
     "lat": 55.8833,
@@ -54789,7 +55060,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dunmore-pineapple-5.jpg"
     ]
   },
-  null,
   {
     "name": "Torphichen Preceptory",
     "lat": 55.9333,
@@ -58557,33 +58827,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Kirkham Priory Gateway",
-    "lat": 54.0678,
-    "lng": -0.8678,
-    "country": "England",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Decorative gatehouse with heraldic carvings, beside the River Derwent.",
-    "image": "https://img.castlecore.uk/kirkham-priory-gateway.jpg",
-    "rating": 4.2,
-    "reviewCount": 700,
-    "county": "Yorkshire",
-    "tags": [
-      "photogenic",
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 2241,
-    "gallery": [
-      "https://img.castlecore.uk/kirkham-priory-gateway-2.jpg",
-      "https://img.castlecore.uk/kirkham-priory-gateway-3.jpg",
-      "https://img.castlecore.uk/kirkham-priory-gateway-4.jpg",
-      "https://img.castlecore.uk/kirkham-priory-gateway-5.jpg"
-    ]
-  },
-  null,
-  {
     "name": "Old Malton Priory",
     "lat": 54.135,
     "lng": -0.7967,
@@ -58609,7 +58852,6 @@ const CASTLES = [
       "https://img.castlecore.uk/old-malton-priory-5.jpg"
     ]
   },
-  null,
   {
     "name": "Rippon Cathedral",
     "lat": 54.1381,
@@ -59549,32 +59791,6 @@ const CASTLES = [
       "https://img.castlecore.uk/pickering-church-wall-paintings-3.jpg",
       "https://img.castlecore.uk/pickering-church-wall-paintings-4.jpg",
       "https://img.castlecore.uk/pickering-church-wall-paintings-5.jpg"
-    ]
-  },
-  {
-    "name": "Sheriff Hutton Castle Ruin",
-    "lat": 54.0911,
-    "lng": -0.9994,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "Richard III's northern headquarters with four impressive corner towers.",
-    "image": "https://img.castlecore.uk/sheriff-hutton-castle-ruin.jpg",
-    "rating": 3.8,
-    "reviewCount": 350,
-    "county": "Yorkshire",
-    "tags": [
-      "free",
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 2281,
-    "gallery": [
-      "https://img.castlecore.uk/sheriff-hutton-castle-ruin-2.jpg",
-      "https://img.castlecore.uk/sheriff-hutton-castle-ruin-3.jpg",
-      "https://img.castlecore.uk/sheriff-hutton-castle-ruin-4.jpg",
-      "https://img.castlecore.uk/sheriff-hutton-castle-ruin-5.jpg"
     ]
   },
   {
@@ -60900,7 +61116,6 @@ const CASTLES = [
       "https://img.castlecore.uk/boscobel-house-5.jpg"
     ]
   },
-  null,
   {
     "name": "Benthall Hall",
     "lat": 52.6267,
@@ -60954,7 +61169,6 @@ const CASTLES = [
       "https://img.castlecore.uk/attingham-park-5.jpg"
     ]
   },
-  null,
   {
     "name": "Iron Bridge",
     "lat": 52.6267,
@@ -61503,7 +61717,6 @@ const CASTLES = [
       "https://img.castlecore.uk/rougemont-castle-exeter-5.jpg"
     ]
   },
-  null,
   {
     "name": "St Catherine's Castle",
     "lat": 50.3317,
@@ -62753,7 +62966,6 @@ const CASTLES = [
       "https://img.castlecore.uk/aillwee-cave-tower-5.jpg"
     ]
   },
-  null,
   {
     "name": "Cahercommaun Fort",
     "lat": 52.99,
@@ -63182,7 +63394,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ballylooby-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Carriggundel Castle",
     "lat": 52.616,
@@ -64899,7 +65110,6 @@ const CASTLES = [
       "https://img.castlecore.uk/clonmore-castle-carlow-5.jpg"
     ]
   },
-  null,
   {
     "name": "Dunlavin Castle",
     "lat": 53.057,
@@ -64925,7 +65135,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dunlavin-castle-5.jpg"
     ]
   },
-  null,
   {
     "name": "Rathgall Fort",
     "lat": 52.807,

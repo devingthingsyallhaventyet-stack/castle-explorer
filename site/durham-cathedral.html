@@ -220,7 +220,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"When monks fleeing the Vikings carried St Cuthbert's body across Northumbria for 200 years, seeking a resting place, a miraculous fog stopped their cart on a wooded peninsula above the River Wear. They took it as a sign. They built a cathedral. It has stood for nearly a thousand years."</p>
+      <p>"When monks fleeing the Vikings carried St Cuthbert's body across Northumbria for over a century, seeking a resting place, a miraculous fog stopped their cart on a wooded peninsula above the River Wear. They took it as a sign. They built a cathedral. It has stood for nearly a thousand years."</p>
     </div>
 
     <section class="fade-section">
@@ -404,7 +404,7 @@ function shareThis(){
 }
 
 const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Durham Cathedral drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Durham%20Cathedral%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
 .then(r=>r.json()).then(d=>{
   const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}

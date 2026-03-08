@@ -398,7 +398,7 @@ function shareThis(){
 }
 
 const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Canterbury Cathedral drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=Canterbury%20Cathedral%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
 .then(r=>r.json()).then(d=>{
   const grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
