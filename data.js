@@ -21697,29 +21697,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Duleek Tower House",
-    "lat": 53.656,
-    "lng": -6.421,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Small tower house in a village with important early Christian sites.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/R150%2C_Main_St%2C_Duleek_-_geograph.org.uk_-_5929029.jpg/500px-R150%2C_Main_St%2C_Duleek_-_geograph.org.uk_-_5929029.jpg",
-    "rating": 3.3,
-    "reviewCount": 40,
-    "county": "County Meath",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 742,
-    "gallery": [
-      "https://img.castlecore.uk/duleek-tower-house-2.jpg"
-    ]
-  },
-  {
     "name": "Ardee Castle",
     "lat": 53.852,
     "lng": -6.54,
