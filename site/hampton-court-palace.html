@@ -181,7 +181,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
 <section class="hero">
   <div class="hero-img">
-    <img src="https://img.castlecore.uk/hampton-court-palace-interior.jpg" alt="Hampton Court Palace">
+    <img src="https://img.castlecore.uk/hampton-court-palace.jpg" alt="Hampton Court Palace">
   </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
@@ -211,10 +211,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="content-main">
 
     <div class="photo-grid-compact" id="photoGrid">
-      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-2.jpg" alt="Hampton Court Palace"></div>
-      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-3.jpg" alt="Hampton Court Palace"></div>
-      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-4.jpg" alt="Hampton Court Palace"></div>
-      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/hampton-court-palace-interior-5.jpg" alt="Hampton Court Palace"><span class="pg-more">+4 photos</span></div>
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/hampton-court-palace-2.jpg" alt="Hampton Court Palace"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/hampton-court-palace-3.jpg" alt="Hampton Court Palace"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/hampton-court-palace-4.jpg" alt="Hampton Court Palace"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/hampton-court-palace-5.jpg" alt="Hampton Court Palace"><span class="pg-more">+4 photos</span></div>
     </div>
 
     <div class="narrative-quote">
@@ -315,10 +315,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <section class="fade-section">
     <h2>Nearby Sites</h2>
     <div class="nearby-grid" id="nearbyGrid">
-      <a href="windsor-castle-interior.html" class="nearby-card">
-          <img src="https://img.castlecore.uk/windsor-castle-interior.jpg" alt="Windsor Castle Interior" loading="lazy">
+      <a href="windsor-castle.html" class="nearby-card">
+          <img src="https://img.castlecore.uk/windsor-castle.jpg" alt="Windsor Castle" loading="lazy">
           <div class="nc-body">
-            <div class="nc-name">Windsor Castle Interior</div>
+            <div class="nc-name">Windsor Castle</div>
             <div class="nc-meta">12.8 mi · castle</div>
           </div>
         </a>
@@ -378,7 +378,7 @@ window.addEventListener('scroll',()=>document.getElementById('floatNav').classLi
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.fade-section').forEach(el=>obs.observe(el));
 
-const lbImages=["https://img.castlecore.uk/hampton-court-palace-interior-2.jpg","https://img.castlecore.uk/hampton-court-palace-interior-3.jpg","https://img.castlecore.uk/hampton-court-palace-interior-4.jpg","https://img.castlecore.uk/hampton-court-palace-interior-5.jpg","https://img.castlecore.uk/hampton-court-palace-2.jpg","https://img.castlecore.uk/hampton-court-palace-3.jpg","https://img.castlecore.uk/hampton-court-palace-4.jpg","https://img.castlecore.uk/hampton-court-palace-5.jpg"];
+const lbImages=["https://img.castlecore.uk/hampton-court-palace-2.jpg","https://img.castlecore.uk/hampton-court-palace-3.jpg","https://img.castlecore.uk/hampton-court-palace-4.jpg","https://img.castlecore.uk/hampton-court-palace-5.jpg","https://img.castlecore.uk/hampton-court-palace-2.jpg","https://img.castlecore.uk/hampton-court-palace-3.jpg","https://img.castlecore.uk/hampton-court-palace-4.jpg","https://img.castlecore.uk/hampton-court-palace-5.jpg"];
 let lbIdx=0;
 function openLb(i){lbIdx=i;const lb=document.getElementById('lightbox');lb.querySelector('img').src=lbImages[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;lb.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
@@ -388,7 +388,7 @@ document.getElementById('lightbox').addEventListener('click',function(e){if(e.ta
 
 function toggleSave(){
   let saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');
-  const slug='hampton-court-palace-interior';
+  const slug='hampton-court-palace';
   const idx=saved.indexOf(slug);
   if(idx>=0)saved.splice(idx,1);else saved.push(slug);
   localStorage.setItem('cc_saved',JSON.stringify(saved));
@@ -398,7 +398,7 @@ function toggleSave(){
     btn.innerHTML=isSaved?'♥ Saved':'♡ Save';
   });
 }
-(function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('hampton-court-palace-interior'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
+(function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('hampton-court-palace'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
 
 function shareThis(){
   if(navigator.share)navigator.share({title:'Hampton Court Palace — castlecore',url:location.href}).catch(()=>{});

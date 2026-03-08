@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edinburgh Castle Interior — castlecore</title>
+<title>Edinburgh Castle — castlecore</title>
 <meta name="description" content="Scotland&#39;s most iconic landmark. Crown jewels, Stone of Destiny, and Mons Meg.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -181,12 +181,12 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
 <section class="hero">
   <div class="hero-img">
-    <img src="https://img.castlecore.uk/edinburgh-castle-interior.jpg" alt="Edinburgh Castle Interior">
+    <img src="https://img.castlecore.uk/edinburgh-castle.jpg" alt="Edinburgh Castle">
   </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
     <p class="hero-tagline">Centuries of power, carved in stone</p>
-    <h1>Edinburgh Castle Interior</h1>
+    <h1>Edinburgh Castle</h1>
     <div class="hero-meta">
       <span>Edinburgh · Scotland</span>
       <span>✦ 4.6 · 25,000 reviews</span>
@@ -211,10 +211,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="content-main">
 
     <div class="photo-grid-compact" id="photoGrid">
-      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Edinburgh Castle Interior"></div>
-      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-3.jpg" alt="Edinburgh Castle Interior"></div>
-      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Edinburgh Castle Interior"></div>
-      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/edinburgh-castle-interior-5.jpg" alt="Edinburgh Castle Interior"><span class="pg-more">+4 photos</span></div>
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/edinburgh-castle-3.jpg" alt="Edinburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/edinburgh-castle-4.jpg" alt="Edinburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/edinburgh-castle-5.jpg" alt="Edinburgh Castle"><span class="pg-more">+4 photos</span></div>
     </div>
 
     <div class="narrative-quote">
@@ -301,7 +301,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 </div>
 
 <div class="photo-break fade-section">
-  <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle Interior">
+  <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle">
   <div class="pb-text">
     <p>"At one o'clock, the gun fires and every tourist jumps. The locals don't even flinch — they've been hearing it since 1861."</p>
   </div>
@@ -374,7 +374,7 @@ window.addEventListener('scroll',()=>document.getElementById('floatNav').classLi
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.fade-section').forEach(el=>obs.observe(el));
 
-const lbImages=["https://img.castlecore.uk/edinburgh-castle-interior-2.jpg","https://img.castlecore.uk/edinburgh-castle-interior-3.jpg","https://img.castlecore.uk/edinburgh-castle-interior-4.jpg","https://img.castlecore.uk/edinburgh-castle-interior-5.jpg","https://img.castlecore.uk/edinburgh-castle-2.jpg","https://img.castlecore.uk/edinburgh-castle-3.jpg","https://img.castlecore.uk/edinburgh-castle-4.jpg","https://img.castlecore.uk/edinburgh-castle-5.jpg"];
+const lbImages=["https://img.castlecore.uk/edinburgh-castle-2.jpg","https://img.castlecore.uk/edinburgh-castle-3.jpg","https://img.castlecore.uk/edinburgh-castle-4.jpg","https://img.castlecore.uk/edinburgh-castle-5.jpg","https://img.castlecore.uk/edinburgh-castle-2.jpg","https://img.castlecore.uk/edinburgh-castle-3.jpg","https://img.castlecore.uk/edinburgh-castle-4.jpg","https://img.castlecore.uk/edinburgh-castle-5.jpg"];
 let lbIdx=0;
 function openLb(i){lbIdx=i;const lb=document.getElementById('lightbox');lb.querySelector('img').src=lbImages[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;lb.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
@@ -384,7 +384,7 @@ document.getElementById('lightbox').addEventListener('click',function(e){if(e.ta
 
 function toggleSave(){
   let saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');
-  const slug='edinburgh-castle-interior';
+  const slug='edinburgh-castle';
   const idx=saved.indexOf(slug);
   if(idx>=0)saved.splice(idx,1);else saved.push(slug);
   localStorage.setItem('cc_saved',JSON.stringify(saved));
@@ -394,10 +394,10 @@ function toggleSave(){
     btn.innerHTML=isSaved?'♥ Saved':'♡ Save';
   });
 }
-(function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('edinburgh-castle-interior'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
+(function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('edinburgh-castle'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
 
 function shareThis(){
-  if(navigator.share)navigator.share({title:'Edinburgh Castle Interior — castlecore',url:location.href}).catch(()=>{});
+  if(navigator.share)navigator.share({title:'Edinburgh Castle — castlecore',url:location.href}).catch(()=>{});
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
@@ -413,7 +413,7 @@ const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
-  body:JSON.stringify({textQuery:'Edinburgh Castle Interior Edinburgh',locationBias:{circle:{center:{latitude:55.9486,longitude:-3.1999},radius:1000}},maxResultCount:1})
+  body:JSON.stringify({textQuery:'Edinburgh Castle Edinburgh',locationBias:{circle:{center:{latitude:55.9486,longitude:-3.1999},radius:1000}},maxResultCount:1})
 }).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];
   if(!place)return;
