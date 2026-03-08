@@ -1,0 +1,714 @@
+[
+  {
+    "name": "Caldicot Castle",
+    "county": "Monmouthshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Dolforwyn Castle",
+    "county": "Powys",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Newcastle Emlyn Castle",
+    "county": "Carmarthenshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Bolton Priory",
+    "county": "North Yorkshire",
+    "slug": "",
+    "type": "abbey",
+    "tags": [
+      "romantic-ruin",
+      "photogenic"
+    ],
+    "access": "free",
+    "era": "12th century"
+  },
+  {
+    "name": "Haddon Hall",
+    "county": "Derbyshire",
+    "slug": "",
+    "type": "fortified house",
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "filming-location"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Dudley Castle",
+    "county": "West Midlands",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "11th century"
+  },
+  {
+    "name": "Muncaster Castle",
+    "county": "Cumbria",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "haunted",
+      "photogenic",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "13th century"
+  },
+  {
+    "name": "Sizergh Castle",
+    "county": "Cumbria",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Cardigan Castle",
+    "county": "Ceredigion",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "White Castle",
+    "county": "Monmouthshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Weobley Castle",
+    "county": "Swansea",
+    "slug": "",
+    "type": "fortified house",
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Hay Castle",
+    "county": "Powys",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Swansea Castle",
+    "county": "Swansea",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Clun Castle",
+    "county": "Shropshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "11th century"
+  },
+  {
+    "name": "Sandal Castle",
+    "county": "West Yorkshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "12th century"
+  },
+  {
+    "name": "Bolingbroke Castle",
+    "county": "Lincolnshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Narberth Castle",
+    "county": "Pembrokeshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Oxwich Castle",
+    "county": "Swansea",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "16th century"
+  },
+  {
+    "name": "Witton Castle",
+    "county": "County Durham",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "15th century"
+  },
+  {
+    "name": "Bowes Castle",
+    "county": "County Durham",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "12th century"
+  },
+  {
+    "name": "Fonmon Castle",
+    "county": "Vale of Glamorgan",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Usk Castle",
+    "county": "Monmouthshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Dunmoe Castle",
+    "county": "County Meath",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "15th century"
+  },
+  {
+    "name": "Whorlton Castle",
+    "county": "North Yorkshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin",
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "12th century"
+  },
+  {
+    "name": "Neath Castle",
+    "county": "Neath Port Talbot",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Caergwrle Castle",
+    "county": "Flintshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Castell Aberlleiniog",
+    "county": "Isle of Anglesey",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "11th century"
+  },
+  {
+    "name": "Balvaird Castle",
+    "county": "Perth and Kinross",
+    "slug": "",
+    "type": "tower house",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "15th century"
+  },
+  {
+    "name": "Snape Castle",
+    "county": "North Yorkshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "hidden-gem"
+    ],
+    "access": "exterior-only",
+    "era": "15th century"
+  },
+  {
+    "name": "Windsor Castle",
+    "county": "Berkshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [],
+    "access": "paid",
+    "era": "11th century"
+  },
+  {
+    "name": "Edinburgh Castle",
+    "county": "Edinburgh",
+    "slug": "",
+    "type": "castle",
+    "tags": [],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Hampton Court Palace",
+    "county": "Surrey",
+    "slug": "",
+    "type": "castle",
+    "tags": [],
+    "access": "paid",
+    "era": "16th century"
+  },
+  {
+    "name": "Sissinghurst Castle",
+    "county": "Kent",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "photogenic",
+      "well-preserved"
+    ],
+    "access": "paid",
+    "era": "16th century"
+  },
+  {
+    "name": "Hardwick Hall",
+    "county": "Derbyshire",
+    "slug": "",
+    "type": "palace",
+    "tags": [
+      "well-preserved",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "16th century"
+  },
+  {
+    "name": "Inveraray Castle",
+    "county": "Argyll and Bute",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "18th century"
+  },
+  {
+    "name": "Belvoir Castle",
+    "county": "Leicestershire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "19th century"
+  },
+  {
+    "name": "Battle Abbey",
+    "county": "East Sussex",
+    "slug": "",
+    "type": "abbey",
+    "tags": [
+      "dramatic-ruin",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "11th century"
+  },
+  {
+    "name": "Scotney Castle",
+    "county": "Kent",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Adare Manor",
+    "county": "County Limerick",
+    "slug": "",
+    "type": "castle",
+    "tags": [],
+    "access": "paid",
+    "era": "19th century"
+  },
+  {
+    "name": "Kilbeggan Distillery",
+    "county": "County Westmeath",
+    "slug": "",
+    "type": "fortified house",
+    "tags": [
+      "well-preserved",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "18th century"
+  },
+  {
+    "name": "Herstmonceux Castle",
+    "county": "East Sussex",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "15th century"
+  },
+  {
+    "name": "Lowther Castle",
+    "county": "Cumbria",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin",
+      "photogenic",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "19th century"
+  },
+  {
+    "name": "Aberglasney House",
+    "county": "Carmarthenshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin"
+    ],
+    "access": "paid",
+    "era": "16th century"
+  },
+  {
+    "name": "Oxburgh Hall",
+    "county": "Norfolk",
+    "slug": "",
+    "type": "fortified house",
+    "tags": [
+      "well-preserved",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "15th century"
+  },
+  {
+    "name": "Powderham Castle",
+    "county": "Devon",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Peckforton Castle",
+    "county": "Cheshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [],
+    "access": "paid",
+    "era": "19th century"
+  },
+  {
+    "name": "Dartmouth Castle",
+    "county": "Devon",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Brodie Castle",
+    "county": "Moray",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "16th century"
+  },
+  {
+    "name": "Lumley Castle",
+    "county": "County Durham",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Tioram Castle",
+    "county": "Highland",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "free"
+    ],
+    "access": "free",
+    "era": "14th century"
+  },
+  {
+    "name": "Belsay Castle",
+    "county": "Northumberland",
+    "slug": "",
+    "type": "tower house",
+    "tags": [
+      "dramatic-ruin",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Ripley Castle",
+    "county": "North Yorkshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Mount Grace Priory",
+    "county": "North Yorkshire",
+    "slug": "",
+    "type": "abbey",
+    "tags": [
+      "well-preserved",
+      "hidden-gem"
+    ],
+    "access": "paid",
+    "era": "14th century"
+  },
+  {
+    "name": "Picton Castle",
+    "county": "Pembrokeshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "kid-friendly"
+    ],
+    "access": "paid",
+    "era": "13th century"
+  },
+  {
+    "name": "Dumbarton Castle",
+    "county": "West Dunbartonshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "13th century"
+  },
+  {
+    "name": "Wenlock Priory",
+    "county": "Shropshire",
+    "slug": "",
+    "type": "abbey",
+    "tags": [
+      "romantic-ruin",
+      "photogenic"
+    ],
+    "access": "paid",
+    "era": "12th century"
+  },
+  {
+    "name": "Hadleigh Castle",
+    "county": "Essex",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "dramatic-ruin",
+      "photogenic",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  },
+  {
+    "name": "Minster Lovell Hall",
+    "county": "Oxfordshire",
+    "slug": "",
+    "type": "castle",
+    "tags": [
+      "romantic-ruin",
+      "free"
+    ],
+    "access": "free",
+    "era": "15th century"
+  },
+  {
+    "name": "Cong Abbey",
+    "county": "County Mayo",
+    "slug": "",
+    "type": "abbey",
+    "tags": [
+      "hidden-gem",
+      "free"
+    ],
+    "access": "free",
+    "era": "12th century"
+  },
+  {
+    "name": "Hore Abbey",
+    "county": "County Tipperary",
+    "slug": "",
+    "type": "abbey",
+    "tags": [
+      "dramatic-ruin",
+      "free"
+    ],
+    "access": "free",
+    "era": "13th century"
+  }
+]
