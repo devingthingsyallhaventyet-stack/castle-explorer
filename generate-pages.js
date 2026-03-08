@@ -210,6 +210,14 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 
 /* REVIEWS */
 .reviews-section{margin-bottom:2rem}
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
+.yt-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--radius)}
+.yt-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:var(--radius)}
+.sources-list{list-style:none;padding:0}
+.sources-list li{padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.9rem}
+.sources-list li:last-child{border-bottom:none}
+.sources-list a{color:var(--burgundy);text-decoration:none;word-break:break-all}
+.sources-list a:hover{text-decoration:underline}
 .review-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.6rem}
 .review-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.4rem}
 .review-author{font-weight:600;font-size:.9rem}
@@ -588,6 +596,14 @@ ${FLOURISH}
 
 <!-- REVIEWS (loaded via Google Places API) -->
 <section class="reviews-section"><h2>Visitor Reviews</h2><div id="reviewsBox"><p class="terrain-note">Loading reviews...</p></div></section>
+
+${castle.youtube ? `${FLOURISH}
+<!-- YOUTUBE -->
+<section><h2>Videos</h2><div class="yt-grid">${(Array.isArray(castle.youtube) ? castle.youtube : [castle.youtube]).slice(0,3).map(id => `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${escapeHtml(id)}" title="Video about ${escapeHtml(castle.name)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`).join('')}</div></section>` : ''}
+
+${(castle.sources && castle.sources.length) ? `${FLOURISH}
+<!-- SOURCES -->
+<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list">${castle.sources.map(s => typeof s === 'string' ? `<li><a href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(s)}</a></li>` : `<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name || s.url)}</a></li>`).join('')}</ul></section>` : ''}
 
 </div>
 <aside class="listing-sidebar">

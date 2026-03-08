@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/</loc><priority>1.0</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tower-of-london.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dover-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/leeds-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tower-of-london.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dover-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/leeds-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bodiam-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hever-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/arundel-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -20,7 +20,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/farnham-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/guildford-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tintagel-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/corfe-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/corfe-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/old-wardour-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/restormel-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/launceston-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -36,9 +36,9 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/sherborne-old-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cleeve-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/christchurch-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/warwick-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/warwick-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kenilworth-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-howard.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-howard.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bolsover-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/peveril-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tattershall-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -61,8 +61,8 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/wigmore-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bridgnorth-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/berkeley-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/alnwick-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bamburgh-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/alnwick-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bamburgh-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunstanburgh-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/warkworth-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/prudhoe-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -72,7 +72,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brough-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/penrith-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/appleby-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/durham-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/barnard-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/raby-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/richmond-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -82,7 +81,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/helmsley-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/pickering-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bolton-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/fountains-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/fountains-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/whitby-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rievaulx-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kirkstall-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -94,7 +93,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/clitheroe-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/beeston-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/chester-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/blenheim-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/blenheim-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/oxford-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/donnington-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/carisbrooke-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -124,7 +123,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hailes-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/crichton-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/borthwick-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/stirling-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/stirling-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/doune-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-campbell.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/alloa-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -135,7 +134,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/huntingtower-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/elcho-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/loch-leven-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunnottar-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunnottar-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/balmoral-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/craigievar-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-fraser.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -149,7 +148,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/spynie-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/elgin-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/balvenie-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/eilean-donan-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/eilean-donan-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/urquhart-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunrobin-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-of-mey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -194,15 +193,15 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/culzean-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lochranza-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brodick-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/conwy-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/caernarfon-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/conwy-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/caernarfon-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/harlech-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/beaumaris-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/flint-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/aberystwyth-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rhuddlan-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/caerphilly-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cardiff-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cardiff-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castell-coch.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/raglan-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/pembroke-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -239,7 +238,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/carew-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cilgerran-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/llawhaden-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-david-s-bishop-s-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dinefwr-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ogmore-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/coity-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -247,9 +245,9 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/pennard-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castell-dinas-bran.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ruthin-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/blarney-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rock-of-cashel.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilkenny-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/blarney-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rock-of-cashel.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilkenny-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cahir-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ross-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/trim-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -261,7 +259,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/desmond-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/jerpoint-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/clonmacnoise.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/glendalough.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/skellig-michael.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lismore-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunmore-east-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -284,7 +281,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/king-john-s-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/adare-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/askeaton-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilmallock-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/carrigogunnell-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunloe-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ardfert-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -641,7 +637,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/knepp-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bedford-castle-mound.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cambridge-castle-mound.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/beaumaris-castle-town-wall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/newport-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/neath-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/swansea-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -675,7 +670,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/knock-castle-skye.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/duntulm-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tioram-castle-loch.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/old-castle-lachlan.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/loch-an-eilein-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lochinch-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tullibardine-chapel.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -733,7 +727,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ardgillan-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/trim-castle-barbican.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/athcarne-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/duleek-tower-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ardee-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/king-john-s-castle-carlingford.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/taafe-s-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -742,7 +735,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ballymote-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/easkey-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/moygara-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/greencastle-donegal.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/burt-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/raphoe-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/clogh-oughter-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -789,13 +781,11 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/auckland-castle-chapel.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/elsdon-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/penshaw-monument.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hardwick-old-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lincoln-castle-walls.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/framlingham-castle-walls.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/edinburgh-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/edinburgh-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/peele-tower-kentmere.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/windsor-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hampton-court-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/windsor-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hampton-court-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/penmon-priory-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ballyportry-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/newtown-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -933,7 +923,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/buttevant-friary.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/athassel-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/holy-cross-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hore-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunbrody-country-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tintern-abbey-ireland.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/duiske-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1019,7 +1008,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/painscastle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castell-aberlleiniog.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hawarden-castle-old.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/roslin-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dornoch-castle-hotel.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dundrum-castle-down.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-combe-village.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1233,7 +1221,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rathmacknee-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ballyhack-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/stradbally-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ardmore-round-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/knockmealdown-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ballyquin-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/burnchurch-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1324,7 +1311,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/donnaghdee-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ravenscraig-castle-fife.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunfermline-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/newark-castle-port-glasgow.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/finlaystone-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/alloway-auld-kirk.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/turnberry-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1334,7 +1320,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/margam-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/carew-cross.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lamphey-bishop-s-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dornoch-cathedral-main.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-sween-main.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/aghadoe-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rattoo-round-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1393,7 +1378,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/national-museum-collins-barracks.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rathfarnham-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-audoen-s-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunsink-observatory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-mary-s-abbey-dublin.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/portlick-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/killua-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1483,7 +1467,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/llangattock-escarpment.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tretower-court.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/craig-y-nos-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/carreg-cennen-castle-caves.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dinefwr-park.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/paxton-s-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/aberglasney-gardens-ruins.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1511,7 +1494,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/aber-falls-fort.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bryn-celli-ddu.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/barclodiad-y-gawres.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/beaumaris-gaol.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/din-lligwy.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lligwy-burial-chamber.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/holyhead-mountain-hut-group.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1531,7 +1513,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cefnllys-castle-mound.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/aberedw-castle-rocks.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brecon-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tretower-castle-round-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bleddfa-castle-mound.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/raglan-castle-great-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/chepstow-castle-great-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1546,7 +1527,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dylan-thomas-boathouse.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/llansteffan-castle-viewpoint.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tenby-town-walls.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/haverfordwest-castle-museum.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/picton-castle-gardens.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/wiston-castle-mound.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/aberconwy-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1578,7 +1558,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cambuskenneth-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/balgonie-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-bridget-s-kirk-dalgety.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brechin-cathedral-round-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/red-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/restenneth-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kinloss-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1611,11 +1590,9 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/achanduin-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ardchattan-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilmartin-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/saddell-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilwinning-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/paisley-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilmun-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/holyrood-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-giles-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/palace-of-holyroodhouse.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/huntingtower-castle-painted-ceiling.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1627,16 +1604,13 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/caerlaverockite.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/closeburn-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/nithsdale-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bishop-s-castle-glasgow.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/glasgow-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-andrews-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/fortingall-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/auchinleck-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kelburn-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/portencross-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kinross-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/leuchars-norman-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/culross-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/culross-palace.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/aberdour-castle-great-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dysart-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1657,7 +1631,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/newark-castle-borders.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/abbotsford-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/traquair-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/jedburgh-castle-jail.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kellie-castle-gardens.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/scotstarvit-tower-view.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/muness-castle-unst.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1665,7 +1638,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/notland-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/wyre-heritage-centre.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/quoyberstane-stone.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/strome-castle-ruin.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brahan-castle-site.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilravock-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/craigevar-castle-grounds.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1770,7 +1742,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lisnaskea-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/killala-round-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/gortmore-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/drumcliff-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/innisfree-island.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/oldcastle-meath.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/navan-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1793,7 +1764,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunbrody-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/nendrum-monastic-site.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lindisfarne-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/chatsworth-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/chatsworth-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-bytham-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/gainsborough-old-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ely-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1828,7 +1799,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bolton-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/coverham-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/guisborough-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tutbury-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dale-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/muchelney-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lacock-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1836,7 +1806,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-acre-priory-cluniac.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-botolph-s-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/st-augustine-s-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/canterbury-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/canterbury-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/boxgrove-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/beaulieu-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/reading-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1880,7 +1850,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kirby-muxloe-main-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/pickering-castle-north-yorkshire.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/stanton-harcourt-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/norham-castle-border.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/orford-ness.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/landguard-fort.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/helmingham-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1888,8 +1857,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/mannington-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/felbrigg-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/blickling-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/wolterton-park.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/barnard-castle-town.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/wylam-railway-museum.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/corby-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/askerton-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1897,11 +1864,9 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/millom-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brancaster-roman-fort.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/burgh-by-sands-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/knaresborough-castle-nidd.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bolton-castle-wensleydale.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brougham-castle-eden.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/brough-castle-westmorland.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/cockermouth-castle-cumbria.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/muncaster-castle-eskdale.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/sizergh-castle-kendal.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/okehampton-castle-devon.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -1909,13 +1874,11 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dartmouth-castle-devon.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-drogo-dartmoor.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/portchester-castle-roman.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hever-castle-kent.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/scotney-castle-kent.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/framlingham-castle-suffolk.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-rising-norfolk.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-acre-castle-norfolk.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tutbury-castle-staffordshire.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rievaulx-abbey-yorkshire.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kirkstall-abbey-leeds.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/jervaulx-abbey-wensleydale.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/byland-abbey-yorkshire.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2065,7 +2028,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/blackwater-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castlepook-cave-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/doneraile-court.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ardmore-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kilmeaden-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/annestown-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bourchier-castle-lough-gur.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2096,7 +2058,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/gosford-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tynan-high-crosses.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ballymoyer-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/slane-friary.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/duleek-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/newgrange-cursus.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/knowth-passage-tomb.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2112,7 +2073,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/malin-head-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/tullydonnell-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/clonca-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/drumcliff-round-tower-sligo.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunmoran-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/mullaghmore-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/elphin-windmill.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2132,7 +2092,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/banagher-old-church-derry.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/limavady-roe-valley-park.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/bovevagh-church.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/maghera-round-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/springhill-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/killough-towers.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/struell-wells.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2159,13 +2118,11 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ravenglass-roman-bath-house.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/hardknott-roman-fort.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/conishead-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/fountains-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/markenfield-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/nappa-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/gilling-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/nunnington-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/newburgh-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kirkham-priory-gateway.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/old-malton-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rippon-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/beverley-minster.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2178,7 +2135,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/clifton-tower-york.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/barnard-castle-bowes-museum.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/raby-castle-deer-park.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/durham-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/durham-cathedral.html</loc><lastmod>2026-03-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/binchester-roman-fort.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/arbeia-roman-fort.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/segedunum-roman-fort.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2200,10 +2157,7 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/nostell-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/temple-newsam.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/east-riddlesden-hall.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/treasurer-s-house-york.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/sandal-castle-park.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/pickering-church-wall-paintings.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/sheriff-hutton-castle-ruin.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ravenscar-alum-works.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/stanwick-iron-age-fortifications.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/thornton-curtis-abbey-gatehouse.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2361,7 +2315,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/castle-gore-mayo.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/ballinafad-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/creevlea-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/kells-tower.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rathmoylan-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/clonroad-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/newtown-castle-burren.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
@@ -2403,7 +2356,6 @@
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/rockbarton-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/caherconlish-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/shanagolden-abbey.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/athenry-priory.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/dunsandle-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/deel-castle-mayo.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/lough-ree-castle.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>

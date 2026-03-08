@@ -28,6 +28,8 @@ For each site:
    - `tags` — Array of mood/feature tags. Use existing tag vocabulary: well-preserved, photogenic, filming-location, kid-friendly, cliffside, dark-brooding, romantic, atmospheric, haunted, dog-friendly, free-entry, woodland, coastal, hilltop, riverside, island, remote, wheelchair-accessible, guided-tours, events-venue, wedding-venue, tearoom-cafe, gift-shop, museum, gardens, ruins-romantic, gothic, norman, medieval, tudor, victorian, celtic, prehistoric
    - `access` — Verify: free, paid, exterior-only
    - `era` — Verify or fill in (e.g., "13th century", "12th-16th century")
+   - `youtube` — Array of up to 3 YouTube video IDs. Search YouTube for "[site name] history" or "[site name] tour" via web_fetch("https://www.youtube.com/results?search_query=QUERY"). Extract video IDs from watch?v= links in the HTML. Pick the most relevant 1-3 videos (history docs, walking tours, drone footage preferred). Store as e.g. `["dQw4w9WgXcQ", "abc123"]`
+   - `sources` — Array of source objects: `[{name: "English Heritage", url: "https://..."}, ...]`. Include 2-4 of the actual URLs you researched from. Prefer authoritative sources: Wikipedia, English Heritage, Cadw, Historic Environment Scotland, National Trust, heritage council sites. Format: `{name: "Display Name", url: "full URL"}`
 
 ### 4. Write Updates
 After every ~10 sites, write the updates to `data.js`:

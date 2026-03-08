@@ -6816,6 +6816,9 @@ const CASTLES = [
       "https://img.castlecore.uk/white-castle-keep-4.jpg",
       "https://img.castlecore.uk/white-castle-keep-5.jpg"
     ]
+  ,
+    "youtube": ["G-UjT8jGLoA","_F8kSwh8xQI","J-0d-ttEsgY"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/White_Castle_(castle)"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/white-castle"},{"name":"Three Castles Walk","url":"https://www.threecastleswalk.co.uk/"}]
   },
   {
     "name": "Skenfrith Castle",
@@ -7733,6 +7736,9 @@ const CASTLES = [
       "https://img.castlecore.uk/weobley-castle-main-4.jpg",
       "https://img.castlecore.uk/weobley-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["b8TqZkDjkVw","vrpu1ghAIT4","5gGXtDEk0wU"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Weobley_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/weobley-castle"}]
   },
   {
     "name": "Pennard Castle",
@@ -9645,6 +9651,9 @@ const CASTLES = [
       "https://img.castlecore.uk/dunmoe-castle-main-4.jpg",
       "https://img.castlecore.uk/dunmoe-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["dGdJ3b1ExPU","hxwEOyNOzqg","H0ViJlyJ2y4"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dunmoe_Castle"},{"name":"Megalithic Ireland","url":"https://www.megalithicireland.com/dunmoe-castle.html"}]
   },
   {
     "name": "Bective Abbey",
@@ -11409,6 +11418,9 @@ const CASTLES = [
       "https://img.castlecore.uk/scotney-castle-main-4.jpg",
       "https://img.castlecore.uk/scotney-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["7lo8A716TiI","GIODK13M-ec","7GQM1KjMIPM"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Scotney_Castle"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/kent/scotney-castle"}]
   },
   {
     "name": "Sissinghurst Castle",
@@ -11443,6 +11455,9 @@ const CASTLES = [
       "https://img.castlecore.uk/sissinghurst-castle-main-4.jpg",
       "https://img.castlecore.uk/sissinghurst-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["4AdB8b7o2Mg","9Se2Y2TDm1U","vdcj75EbR7E"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/kent/sissinghurst-castle-garden"}]
   },
   {
     "name": "Lullingstone Castle",
@@ -11866,6 +11881,9 @@ const CASTLES = [
       "https://img.castlecore.uk/powderham-castle-interior-4.jpg",
       "https://img.castlecore.uk/powderham-castle-interior-5.jpg"
     ]
+  ,
+    "youtube": ["v3gDXfwl6X4","V9TCmvKu54Y","df-iAwDrU-Q"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Powderham_Castle"},{"name":"Powderham Castle Official","url":"https://www.powderham.co.uk/"}]
   },
   {
     "name": "Dartmouth Castle",
@@ -11900,6 +11918,9 @@ const CASTLES = [
       "https://img.castlecore.uk/dartmouth-castle-interior-4.jpg",
       "https://img.castlecore.uk/dartmouth-castle-interior-5.jpg"
     ]
+  ,
+    "youtube": ["Br5Qq8tehe0","msQLiyIpwRk","JWpwObOwfs8"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dartmouth_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/dartmouth-castle/"}]
   },
   {
     "name": "Compton Castle",
@@ -12106,6 +12127,9 @@ const CASTLES = [
       "https://img.castlecore.uk/dudley-castle-main-4.jpg",
       "https://img.castlecore.uk/dudley-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["kiL94BxBvtc","jp1umWe9ndo","Lx9on3HDzpc"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dudley_Castle"},{"name":"Dudley Zoo & Castle","url":"https://www.dudleyzoo.org.uk/"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1015843"}]
   },
   {
     "name": "Stafford Castle",
@@ -12175,6 +12199,9 @@ const CASTLES = [
       "https://img.castlecore.uk/clun-castle-main-4.jpg",
       "https://img.castlecore.uk/clun-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["a1Qpqct7Dwc","dvOjMj-_vMw","cPQ5wyRrw_0"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Clun_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/clun-castle/"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1013600"}]
   },
   {
     "name": "Hopton Castle",
@@ -12392,6 +12419,9 @@ const CASTLES = [
       "https://img.castlecore.uk/wenlock-priory-main-4.jpg",
       "https://img.castlecore.uk/wenlock-priory-main-5.jpg"
     ]
+  ,
+    "youtube": ["Cc1tfgNV3Dk","hCxyHMQ2wQI","H4KIjUQmHKg"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Wenlock_Priory"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/wenlock-priory/"}]
   },
   {
     "name": "Maxstoke Castle",
@@ -12591,6 +12621,9 @@ const CASTLES = [
       "https://img.castlecore.uk/oxburgh-hall-main-4.jpg",
       "https://img.castlecore.uk/oxburgh-hall-main-5.jpg"
     ]
+  ,
+    "youtube": ["Grvew3CGTMk","vIBAV0Vrv0E","Z63XRSfJQ1s"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Oxburgh_Hall"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/norfolk/oxburgh-hall"}]
   },
   {
     "name": "Clare Castle",
@@ -12717,6 +12750,9 @@ const CASTLES = [
       "https://img.castlecore.uk/hadleigh-castle-main-4.jpg",
       "https://img.castlecore.uk/hadleigh-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["oigaWUkjFOE","pwFaAB3OcYE","rTtOaS5xQVI"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Hadleigh_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/hadleigh-castle/"}]
   },
   {
     "name": "Tilbury Fort",
@@ -13060,6 +13096,9 @@ const CASTLES = [
       "https://img.castlecore.uk/belsay-castle-main-4.jpg",
       "https://img.castlecore.uk/belsay-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["qH0xyK1HdsY","m4Y3LtDSFZE","ZhsBm5yoUww"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Belsay"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/"}]
   },
   {
     "name": "Thirlwall Castle",
@@ -13222,6 +13261,9 @@ const CASTLES = [
       "https://img.castlecore.uk/sizergh-castle-main-4.jpg",
       "https://img.castlecore.uk/sizergh-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["Ah_cWqZNlRE","d__sZcnIC0Y","GN2Y69RSPe8"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Sizergh_Castle"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/lake-district/sizergh"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1086839"}]
   },
   {
     "name": "Muncaster Castle",
@@ -13260,6 +13302,9 @@ const CASTLES = [
       "https://img.castlecore.uk/muncaster-castle-main-4.jpg",
       "https://img.castlecore.uk/muncaster-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["pAwcUrZ9aC8","gsS6nkvkfuU","NoVTp22PKRI"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Muncaster_Castle"},{"name":"Muncaster Castle Official","url":"https://www.muncaster.co.uk/"},{"name":"Historic Houses","url":"https://www.historichouses.org/houses/house-listing/muncaster-castle.html"}]
   },
   {
     "name": "Dacre Castle",
@@ -13447,6 +13492,9 @@ const CASTLES = [
       "https://img.castlecore.uk/ripley-castle-interior-4.jpg",
       "https://img.castlecore.uk/ripley-castle-interior-5.jpg"
     ]
+  ,
+    "youtube": ["J_Wh0Q_SdoU","WSjRTVTO1r8","fHOyQ1akZFo"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Ripley_Castle"},{"name":"Ripley Castle Official","url":"https://www.ripleycastle.co.uk/"}]
   },
   {
     "name": "Castle Bolton",
@@ -13537,6 +13585,9 @@ const CASTLES = [
       "https://img.castlecore.uk/mount-grace-priory-main-4.jpg",
       "https://img.castlecore.uk/mount-grace-priory-main-5.jpg"
     ]
+  ,
+    "youtube": ["DnTng0EwoSs","YsSrIX61if4","t_57oRtHHKI"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Mount_Grace_Priory"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/mount-grace-priory/"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/yorkshire/mount-grace-priory"}]
   },
   {
     "name": "Easby Abbey",
@@ -13637,6 +13688,9 @@ const CASTLES = [
       "https://img.castlecore.uk/bolton-priory-main-4.jpg",
       "https://img.castlecore.uk/bolton-priory-main-5.jpg"
     ]
+  ,
+    "youtube": ["sh5X2xSNCvo","n9NjaG91Zs4","hU2BYwkpLxg"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Bolton_Priory"},{"name":"Bolton Abbey Estate","url":"https://www.boltonabbey.com/"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/bolton-priory/"}]
   },
   {
     "name": "Wharram Percy",
@@ -13733,6 +13787,9 @@ const CASTLES = [
       "https://img.castlecore.uk/whorlton-castle-main-4.jpg",
       "https://img.castlecore.uk/whorlton-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["IMh0NokFf_c","I7PEFXMefd0","JnmdzkZDtqk"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Whorlton_Castle"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1002428"}]
   },
   {
     "name": "Sandal Castle",
@@ -13771,6 +13828,9 @@ const CASTLES = [
       "https://img.castlecore.uk/sandal-castle-main-4.jpg",
       "https://img.castlecore.uk/sandal-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["MqLNpojsFO8","i3DX3XY9gY8","ySx60MfqgWo"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Sandal_Castle"},{"name":"Wakefield Council","url":"https://www.wakefield.gov.uk/events-and-culture/sandal-castle/"}]
   },
   {
     "name": "Harewood Castle",
@@ -14058,6 +14118,9 @@ const CASTLES = [
       "https://img.castlecore.uk/haddon-hall-main-4.jpg",
       "https://img.castlecore.uk/haddon-hall-main-5.jpg"
     ]
+  ,
+    "youtube": ["ibm-25zJQi0","MUKkR3m6aw0","xk1judtDNOo"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Haddon_Hall"},{"name":"Haddon Hall Official","url":"https://www.haddonhall.co.uk/"},{"name":"Historic Houses","url":"https://www.historichouses.org/houses/house-listing/haddon-hall.html"}]
   },
   {
     "name": "Hardwick Hall",
@@ -14092,6 +14155,9 @@ const CASTLES = [
       "https://img.castlecore.uk/hardwick-hall-interior-4.jpg",
       "https://img.castlecore.uk/hardwick-hall-interior-5.jpg"
     ]
+  ,
+    "youtube": ["vlRTKkjpz8I","GTWMspNjglM","NQYI17o_T0E"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Hardwick_Hall"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/east-midlands/hardwick"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1000076"}]
   },
   {
     "name": "Rufford Abbey",
@@ -14581,6 +14647,9 @@ const CASTLES = [
       "https://img.castlecore.uk/brodie-castle-main-4.jpg",
       "https://img.castlecore.uk/brodie-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["JWAduEIvN3U","X4z5vLAS0tY","YOPGyTMTbq4"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Brodie_Castle"},{"name":"National Trust for Scotland","url":"https://www.nts.org.uk/visit/places/brodie-castle"}]
   },
   {
     "name": "Auchindoun Castle",
@@ -14679,6 +14748,9 @@ const CASTLES = [
       "https://img.castlecore.uk/inveraray-castle-interior-4.jpg",
       "https://img.castlecore.uk/inveraray-castle-interior-5.jpg"
     ]
+  ,
+    "youtube": ["dyDaCAbY9Cs","voKk42G-Vpw","tjgrGYG7dTs"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Inveraray_Castle"},{"name":"Inveraray Castle Official","url":"https://www.inveraray-castle.com/"}]
   },
   {
     "name": "Sween Castle",
@@ -14931,6 +15003,9 @@ const CASTLES = [
       "https://img.castlecore.uk/balvaird-castle-main-4.jpg",
       "https://img.castlecore.uk/balvaird-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["KajrCr_Dzlo","UJ-PKlbCfNo","5PVJoPlV3f0"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Balvaird_Castle"},{"name":"Historic Environment Scotland","url":"https://www.historicenvironment.scot/visit-a-place/places/balvaird-castle/"}]
   },
   {
     "name": "Lauriston Castle",
@@ -15221,6 +15296,9 @@ const CASTLES = [
       "https://img.castlecore.uk/caldicot-castle-main-4.jpg",
       "https://img.castlecore.uk/caldicot-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["5y9On-ebFZA","PhPubudZ4SA","w6vz9riclHk"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Caldicot_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/caldicot-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95259/"}]
   },
   {
     "name": "Usk Castle",
@@ -15258,6 +15336,9 @@ const CASTLES = [
       "https://img.castlecore.uk/usk-castle-main-4.jpg",
       "https://img.castlecore.uk/usk-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["SJDv0NpGzYo","4vxbE-owyc0","KTBx-M64Ekc"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Usk_Castle"},{"name":"Usk Castle Official","url":"https://www.uskcastle.com/"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/usk-castle"}]
   },
   {
     "name": "Abergavenny Castle",
@@ -15348,6 +15429,9 @@ const CASTLES = [
       "https://img.castlecore.uk/picton-castle-interior-4.jpg",
       "https://img.castlecore.uk/picton-castle-interior-5.jpg"
     ]
+  ,
+    "youtube": ["-D3ZLFLeIP8","Owd4EfIZciY","IGBl_UctKy4"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Picton_Castle"},{"name":"Picton Castle Official","url":"https://www.pictoncastle.co.uk/"}]
   },
   {
     "name": "Kylemore Abbey",
@@ -15439,6 +15523,9 @@ const CASTLES = [
       "https://img.castlecore.uk/bowes-castle-main-4.jpg",
       "https://img.castlecore.uk/bowes-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["SQUp0EIhOow","uvchiMwNcU0","9FOt6NkE9Nk"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Bowes_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/bowes-castle/"}]
   },
   {
     "name": "Brancepeth Castle",
@@ -15501,6 +15588,9 @@ const CASTLES = [
       "https://img.castlecore.uk/lumley-castle-keep-4.jpg",
       "https://img.castlecore.uk/lumley-castle-keep-5.jpg"
     ]
+  ,
+    "youtube": ["mHtYW6uQ1ag","nv4FwP9V6dA","3sm4hg62dQE"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Lumley_Castle"},{"name":"Lumley Castle Hotel","url":"https://www.lumleycastle.com/"}]
   },
   {
     "name": "Witton Castle",
@@ -15537,6 +15627,9 @@ const CASTLES = [
       "https://img.castlecore.uk/witton-castle-main-4.jpg",
       "https://img.castlecore.uk/witton-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["u6QRG6BFhhE","BMRnenXZo84","FkR6c7Sw400"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Witton_Castle"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1120956"}]
   },
   {
     "name": "Hylton Castle",
@@ -15628,6 +15721,9 @@ const CASTLES = [
       "https://img.castlecore.uk/snape-castle-main-4.jpg",
       "https://img.castlecore.uk/snape-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["olQhmWbVQeU","dVg4aMLyPnQ","XlM25bxzXT4"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Snape_Castle"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1150787"}]
   },
   {
     "name": "Danby Castle",
@@ -15772,6 +15868,9 @@ const CASTLES = [
       "https://img.castlecore.uk/belvoir-castle-interior-4.jpg",
       "https://img.castlecore.uk/belvoir-castle-interior-5.jpg"
     ]
+  ,
+    "youtube": ["YfGAKz_H0HQ","R_pg0Y9JGE4","RpC13qv4YbA"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Belvoir_Castle"},{"name":"Belvoir Castle Official","url":"https://www.belvoircastle.com/"}]
   },
   {
     "name": "Oakham Castle",
@@ -15883,6 +15982,9 @@ const CASTLES = [
       "https://img.castlecore.uk/herstmonceux-castle-main-4.jpg",
       "https://img.castlecore.uk/herstmonceux-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["XCtHHxN7Xjc","tP9A1mIadXY","gXwxoMRMUyM"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Herstmonceux_Castle"},{"name":"Herstmonceux Castle Official","url":"https://www.herstmonceux-castle.com/"}]
   },
   {
     "name": "Battle Abbey",
@@ -15919,6 +16021,9 @@ const CASTLES = [
       "https://img.castlecore.uk/battle-abbey-main-4.jpg",
       "https://img.castlecore.uk/battle-abbey-main-5.jpg"
     ]
+  ,
+    "youtube": ["SQyEP4Dowgc","iSJVoqwpzMo","lsfBA4HG1GA"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Battle_Abbey"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/"}]
   },
   {
     "name": "Michelham Priory",
@@ -16429,6 +16534,9 @@ const CASTLES = [
       "https://img.castlecore.uk/bolingbroke-castle-main-4.jpg",
       "https://img.castlecore.uk/bolingbroke-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["tX9XPAIce5s","bvdu-9xiGCw","bIXszf0tx24"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Bolingbroke_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/bolingbroke-castle-and-old-bolingbroke/"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1012668"}]
   },
   {
     "name": "Somerton Castle",
@@ -16758,6 +16866,9 @@ const CASTLES = [
       "https://img.castlecore.uk/lowther-castle-interior-4.jpg",
       "https://img.castlecore.uk/lowther-castle-interior-5.jpg"
     ]
+  ,
+    "youtube": ["XsEAsMwTEq4","Q3d6gfhjb98","IvB3_BAyEek"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Lowther_Castle"},{"name":"Lowther Castle Official","url":"https://www.lowthercastle.org/"}]
   },
   {
     "name": "Naworth Castle",
@@ -16974,6 +17085,9 @@ const CASTLES = [
       "https://img.castlecore.uk/dumbarton-castle-main-4.jpg",
       "https://img.castlecore.uk/dumbarton-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["HEw53Heh6qc","Zsgqox7tlJE","d2YA2r-SfjE"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dumbarton_Castle"},{"name":"Historic Environment Scotland","url":"https://www.historicenvironment.scot/visit-a-place/places/dumbarton-castle/"}]
   },
   {
     "name": "Hay Castle",
@@ -17011,6 +17125,9 @@ const CASTLES = [
       "https://img.castlecore.uk/hay-castle-main-4.jpg",
       "https://img.castlecore.uk/hay-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["7Hwkhih5MO8","zpU_kx5dSpc","o5oLDPb9r8I"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Hay_Castle"},{"name":"Hay Castle Official","url":"https://www.haycastle.org/"}]
   },
   {
     "name": "Builth Castle",
@@ -17106,6 +17223,9 @@ const CASTLES = [
       "https://img.castlecore.uk/dolforwyn-castle-main-4.jpg",
       "https://img.castlecore.uk/dolforwyn-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["46b991jpThU","ry30dJ-y4PU","-btYVvDJD78"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dolforwyn_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/dolforwyn-castle"},{"name":"Castles of Wales","url":"https://www.castlesofwales.com/dolforwyn-castle/"}]
   },
   {
     "name": "Drysllwyn Castle",
@@ -17175,6 +17295,9 @@ const CASTLES = [
       "https://img.castlecore.uk/newcastle-emlyn-castle-main-4.jpg",
       "https://img.castlecore.uk/newcastle-emlyn-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["vVQxsZdJoao","dWpniPCW37Y","nrWuzvblKR0"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Newcastle_Emlyn_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/newcastle-emlyn-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95070/"}]
   },
   {
     "name": "Narberth Castle",
@@ -17212,6 +17335,9 @@ const CASTLES = [
       "https://img.castlecore.uk/narberth-castle-keep-4.jpg",
       "https://img.castlecore.uk/narberth-castle-keep-5.jpg"
     ]
+  ,
+    "youtube": ["RiNe0lD30pk","M74OS4j_chE","H4tWKfywW_o"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Narberth_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/narberth-castle"}]
   },
   {
     "name": "Haverfordwest Castle",
@@ -17310,6 +17436,9 @@ const CASTLES = [
       "https://img.castlecore.uk/cardigan-castle-main-4.jpg",
       "https://img.castlecore.uk/cardigan-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["kfPkfrJiAqw","KdfHz7vSmok","G7ez3OgFo6o"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Cardigan_Castle"},{"name":"Cardigan Castle Official","url":"https://www.cardigancastle.com/"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/cardigan-castle"}]
   },
   {
     "name": "Grey Abbey",
@@ -17607,6 +17736,9 @@ const CASTLES = [
       "https://img.castlecore.uk/peckforton-castle-main-4.jpg",
       "https://img.castlecore.uk/peckforton-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["dbhvHRvuG7w","-AJo9yNx_yU","uHZDaelC1ag"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Peckforton_Castle"},{"name":"Peckforton Castle Official","url":"https://www.peckfortoncastle.co.uk/"}]
   },
   {
     "name": "Halton Castle (Cheshire)",
@@ -18815,6 +18947,9 @@ const CASTLES = [
       "https://img.castlecore.uk/minster-lovell-hall-main-4.jpg",
       "https://img.castlecore.uk/minster-lovell-hall-main-5.jpg"
     ]
+  ,
+    "youtube": ["OwUlDjOYxtU","DRBvEOHQyXQ","K_Vd32JskHk"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Minster_Lovell_Hall"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/minster-lovell-hall-and-dovecote/"}]
   },
   {
     "name": "Broughton Castle",
@@ -19161,6 +19296,9 @@ const CASTLES = [
       "https://img.castlecore.uk/neath-castle-keep-4.jpg",
       "https://img.castlecore.uk/neath-castle-keep-5.jpg"
     ]
+  ,
+    "youtube": ["tLKbwrnwZ1o","y7S9evEdMLg","igocsPjJ5Ac"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Neath_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/neath-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95296/"}]
   },
   {
     "name": "Swansea Castle",
@@ -19198,6 +19336,9 @@ const CASTLES = [
       "https://img.castlecore.uk/swansea-castle-main-4.jpg",
       "https://img.castlecore.uk/swansea-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["lvqD0hJ1i1Q","qGmr0VdCOE8","jq4a1dyECIs"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Swansea_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/swansea-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95389/"}]
   },
   {
     "name": "Castle Kennedy",
@@ -20713,6 +20854,9 @@ const CASTLES = [
       "https://img.castlecore.uk/caergwrle-castle-main-4.jpg",
       "https://img.castlecore.uk/caergwrle-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["QrD3UlpUqQ8","ZxGu3oWQD9A","VhQ7nHVRDj8"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Caergwrle_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/caergwrle-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95121/"}]
   },
   {
     "name": "Ruthin Castle Grounds",
@@ -20887,6 +21031,9 @@ const CASTLES = [
       "https://img.castlecore.uk/oxwich-castle-main-4.jpg",
       "https://img.castlecore.uk/oxwich-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["GAbaJPTNdhk","7aYnGDUWRN8","omNwrvf09G4"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Oxwich_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/oxwich-castle"}]
   },
   {
     "name": "Loughor Castle",
@@ -21007,6 +21154,9 @@ const CASTLES = [
       "https://img.castlecore.uk/fonmon-castle-main-4.jpg",
       "https://img.castlecore.uk/fonmon-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["reC_aM5Y0gI","sVsrzHQYQ1A","He6YCacyb4A"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Fonmon_Castle"},{"name":"Fonmon Castle Official","url":"https://www.fonmoncastle.com/"}]
   },
   {
     "name": "Llantrithyd Place",
@@ -22084,6 +22234,9 @@ const CASTLES = [
       "https://img.castlecore.uk/adare-manor-main-4.jpg",
       "https://img.castlecore.uk/adare-manor-main-5.jpg"
     ]
+  ,
+    "youtube": ["c3TWZqAH4hg","DlOLqHbXUYk","mNjVDCyfCZk"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Adare_Manor"},{"name":"Adare Manor Official","url":"https://www.adaremanor.com/"}]
   },
   {
     "name": "Carrigogunnel Castle",
@@ -26424,6 +26577,9 @@ const CASTLES = [
       "https://img.castlecore.uk/cong-abbey-main-4.jpg",
       "https://img.castlecore.uk/cong-abbey-main-5.jpg"
     ]
+  ,
+    "youtube": ["2z0yY2yE6WM","pvtQTxToi_Y","sGcD_G_jrZw"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Cong_Abbey"},{"name":"Heritage Ireland","url":"https://heritageireland.ie/places-to-visit/cong-abbey/"}]
   },
   {
     "name": "Creevelea Friary",
@@ -27986,6 +28142,9 @@ const CASTLES = [
       "https://img.castlecore.uk/tioram-castle-main-4.jpg",
       "https://img.castlecore.uk/tioram-castle-main-5.jpg"
     ]
+  ,
+    "youtube": ["nbjFpqOxkWM","_MWzszYIg5c","uSkQ3Bpm438"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Castle_Tioram"},{"name":"Historic Environment Scotland","url":"https://www.historicenvironment.scot/visit-a-place/places/castle-tioram/"},{"name":"Undiscovered Scotland","url":"https://www.undiscoveredscotland.co.uk/acharacle/castletioram/"}]
   },
   {
     "name": "Kinlochaline Castle",
@@ -28771,6 +28930,9 @@ const CASTLES = [
       "https://img.castlecore.uk/aberglasney-house-main-4.jpg",
       "https://img.castlecore.uk/aberglasney-house-main-5.jpg"
     ]
+  ,
+    "youtube": ["0vZlws_cP2U","POYuYdksI5w","ga9h_ycXm_0"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Aberglasney_House"},{"name":"Aberglasney Official","url":"https://aberglasney.org/"}]
   },
   {
     "name": "Tregaron Castle Mound",
@@ -28922,6 +29084,9 @@ const CASTLES = [
       "https://img.castlecore.uk/castell-aberlleiniog-main-4.jpg",
       "https://img.castlecore.uk/castell-aberlleiniog-main-5.jpg"
     ]
+  ,
+    "youtube": ["kcx23o6GGDg","V03JnRCNeu8","Z-0mbT3qy6U"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Castell_Aberlleiniog"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/castell-aberlleiniog"},{"name":"Visit Anglesey","url":"https://www.visitanglesey.co.uk/en/things-to-do/castell-aberlleiniog/"}]
   },
   {
     "name": "Hawarden Castle (Old)",
@@ -39250,6 +39415,9 @@ const CASTLES = [
       "https://img.castlecore.uk/kilbeggan-distillery-tower-4.jpg",
       "https://img.castlecore.uk/kilbeggan-distillery-tower-5.jpg"
     ]
+  ,
+    "youtube": ["XRQiVyjxzFE","z3EPpoAjsFA","pq55m_j0rcs"],
+    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Kilbeggan_Distillery"},{"name":"Kilbeggan Distillery Official","url":"https://www.kilbegganwhiskey.com/distillery/"}]
   },
   {
     "name": "Kinnitty Castle",
