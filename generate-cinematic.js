@@ -102,6 +102,7 @@ function getPhotoBreakQuote(castle) {
 const seen = new Map();
 const filtered = [];
 for (const c of CASTLES) {
+  if (!c) continue;
   if (!c.gallery || c.gallery.length < 4) continue;
   if (!c.reviewCount || c.reviewCount < 5000) continue;
   // Dedup by lat/lng proximity
@@ -118,7 +119,7 @@ console.log(`Filtered ${filtered.length} castles, generating top 25...`);
 // Find nearby for each castle from ALL castles
 function findNearby(castle, count) {
   return CASTLES
-    .filter(c => c.name !== castle.name && c.image)
+    .filter(c => c && c.name !== castle.name && c.image)
     .map(c => ({ ...c, dist: haversine(castle.lat, castle.lng, c.lat, c.lng) }))
     .sort((a, b) => a.dist - b.dist)
     .slice(0, count);
