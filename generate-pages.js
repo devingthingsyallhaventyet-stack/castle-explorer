@@ -643,14 +643,35 @@ ${CLIENT_JS}
 const siteDir = path.join(__dirname, 'site');
 if (!fs.existsSync(siteDir)) fs.mkdirSync(siteDir);
 
+// ===== CINEMATIC PAGES — DO NOT OVERWRITE =====
+// These 25 pages are hand-crafted with a unique template (Cinzel/Cormorant fonts, medieval immersion).
+// They were individually reviewed by E. Regenerating them destroys that work.
+const CINEMATIC_SLUGS = new Set([
+  'alnwick-castle', 'bamburgh-castle', 'blarney-castle', 'blenheim-palace',
+  'caernarfon-castle', 'canterbury-cathedral', 'cardiff-castle', 'castle-howard',
+  'chatsworth-house', 'conwy-castle', 'corfe-castle', 'dover-castle',
+  'dunnottar-castle', 'durham-cathedral', 'edinburgh-castle', 'eilean-donan-castle',
+  'fountains-abbey', 'hampton-court-palace', 'kilkenny-castle', 'leeds-castle',
+  'rock-of-cashel', 'stirling-castle', 'tower-of-london', 'warwick-castle',
+  'windsor-castle'
+]);
+
 console.log('Generating pages...');
+console.log(`Skipping ${CINEMATIC_SLUGS.size} cinematic pages (protected).`);
 let count = 0;
+let skipped = 0;
 const today = new Date().toISOString().split('T')[0];
 const sitemapEntries = [`  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/</loc><priority>1.0</priority></url>`];
 
 for (const castle of CASTLES) {
   if (!castle || !castle.name) continue;
   const slug = slugMap.get(castle.name);
+  if (CINEMATIC_SLUGS.has(slug)) {
+    skipped++;
+    // Still include in sitemap
+    sitemapEntries.push(`  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/${slug}.html</loc><lastmod>${today}</lastmod><priority>0.9</priority></url>`);
+    continue;
+  }
   const html = generatePage(castle);
   fs.writeFileSync(path.join(siteDir, `${slug}.html`), html, 'utf8');
   sitemapEntries.push(`  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/${slug}.html</loc><lastmod>${today}</lastmod><priority>0.8</priority></url>`);
@@ -665,4 +686,4 @@ fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemap, 'utf8');
 // Robots
 fs.writeFileSync(path.join(__dirname, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://devingthingsyallhaventyet-stack.github.io/castle-explorer/sitemap.xml\n`, 'utf8');
 
-console.log(`\nDone! Generated ${count} pages, sitemap.xml, and robots.txt`);
+console.log(`\nDone! Generated ${count} pages (skipped ${skipped} cinematic), sitemap.xml, and robots.txt`);
