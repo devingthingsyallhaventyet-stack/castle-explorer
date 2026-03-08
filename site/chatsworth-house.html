@@ -221,14 +221,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"When Georgiana, Duchess of Devonshire, hosted her legendary parties at Chatsworth in the 1780s, she gambled away fortunes at the card table and kept a ménage à trois under this very roof. The servants' bells still hang in rows — one for every scandal, it sometimes seems."</p>
+      <p>"The &#39;Palace of the Peak&#39;, magnificent stately home of the Devonshire family.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Chatsworth doesn't arrive all at once. You drive through miles of Peak District parkland — <span class="highlight">sheep grazing among ancient oaks, the River Derwent winding through the valley</span> — before the house appears, golden and implausibly grand, like a Baroque mirage dropped into the Derbyshire hills. There's a reason they call it the Palace of the Peak.</p>
-      <p>The Cavendish family have lived here since the 1550s, and each generation has added something extraordinary. <span class="highlight">Bess of Hardwick built the first great house</span>; the 1st Duke remade it in the 1690s with painted ceilings by Verrio and Laguerre that rival any in Europe. The 6th Duke — the "Bachelor Duke" — filled it with sculptures, including Canova's exquisite figures that still catch visitors mid-breath. The current collection mixes Old Masters with contemporary art; you might find a Lucian Freud hanging beside a Rembrandt.</p>
-      <p>The <span class="highlight">Emperor Fountain launches water 200 feet into the air</span> — built in a single year to impress Tsar Nicholas I, who never actually came. The garden cascades, designed in 1696, tumble down the hillside in a series of baroque waterfalls. Chatsworth was Pemberley in the 2005 Pride & Prejudice film, and walking through the Sculpture Gallery in late afternoon light, <span class="highlight">you'll understand exactly why Lizzy Bennet changed her mind about Darcy</span>.</p>
+      <p class="drop-cap">The &#39;Palace of the Peak&#39;, magnificent stately home of the Devonshire family.</p>
+      
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -307,7 +306,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/chatsworth-house-5.jpg" alt="Chatsworth House">
   <div class="pb-text">
-    <p>"The Emperor Fountain was built to impress a Tsar who never came. It still fires 200 feet into the Derbyshire sky, every single day, impressing everyone else."</p>
+    <p>"These walls have seen more sunsets than any living soul."</p>
   </div>
 </div>
 
@@ -405,15 +404,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Chatsworth House drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Chatsworth%20House%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

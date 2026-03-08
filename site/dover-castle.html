@@ -220,14 +220,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In May 1940, Vice Admiral Bertram Ramsay stood in a tunnel carved into the chalk beneath Dover Castle and orchestrated Operation Dynamo — the evacuation of 338,000 soldiers from Dunkirk. The tunnels that saved an army had been dug during the Napoleonic Wars, forgotten, and repurposed just in time."</p>
+      <p>"Known as the &#39;Key to England&#39;, Dover Castle has guarded the shortest sea crossing to continental Europe for nine centuries. Its medieval tunnels were used as a command center in WWII.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Dover Castle stands on the white cliffs like a sentinel turned to stone. <span class="highlight">On a clear day, you can see France from the battlements</span> — twenty-one miles of grey Channel water, the same crossing that every invader and every defender has watched since the Romans built a lighthouse here two thousand years ago. That lighthouse, the Pharos, still stands within the castle walls. It is the tallest surviving Roman structure in Britain.</p>
-      <p>Henry II built the Great Tower in the 1180s, a <span class="highlight">palace-fortress of unmatched sophistication</span> — three floors of royal apartments with piped water, fireplaces, and a chapel. The castle withstood a French siege in 1216-17 that nearly toppled the crown; you can still see the emergency tunnel dug to outflank the miners. But Dover's finest hour came in the 20th century, when the <span class="highlight">wartime tunnels beneath the castle became the nerve centre of Operation Dynamo</span>, the miracle of Dunkirk. The underground hospital, telephone exchange, and command rooms have been preserved exactly as they were in 1940.</p>
-      <p>Walking through those tunnels today — <span class="highlight">cramped, cold, with the sound of projected voices and wireless static</span> — is one of the most powerful heritage experiences in England. Above ground, the medieval castle sprawls across the hilltop with concentric walls, a Saxon church, and views that explain, in a single glance, why they called it the Key to England. Every army that ever wanted Britain had to pass this castle first. None of them found it easy.</p>
+      <p class="drop-cap">Known as the &#39;Key to England&#39;, Dover Castle has guarded the shortest sea crossing to continental Europe for nine centuries. Its medieval tunnels were used as a command center in WWII.</p>
+      <p>Dover Castle is a medieval castle in Dover, Kent, England and is Grade I listed. It was founded in the 11th century and has been described as the &quot;Key to England&quot; due to its defensive significance throughout history. Some writers say it is the largest castle in England, a title also claimed by Windsor Castle.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -304,7 +303,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/dover-castle-keep-2.jpg" alt="Dover Castle">
   <div class="pb-text">
-    <p>"Twenty-one miles of sea. That's all that separates England from the continent. Every invader who ever looked at this coast saw this castle first — and most of them turned back."</p>
+    <p>"Some places don&#39;t just hold history — they breathe it."</p>
   </div>
 </div>
 
@@ -402,15 +401,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Dover Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Dover%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

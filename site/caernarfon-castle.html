@@ -220,14 +220,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"Edward I deliberately built Caernarfon to look like the walls of Constantinople — polygonal towers, banded stonework, eagle statues — because a legend claimed the Roman Emperor Magnus Maximus had dreamed of a great fortress here. Edward was telling Wales: I am your emperor now."</p>
+      <p>"Edward I&#39;s most ambitious castle, Caernarfon was designed to echo the walls of Constantinople. It was the site of the investiture of the Prince of Wales in 1969.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Caernarfon Castle is not subtle. It was never meant to be. <span class="highlight">It is a statement of conquest built in stone</span>, its massive polygonal towers and colour-banded walls deliberately echoing the imperial walls of Constantinople. Edward I began construction in 1283, the year after he crushed Llywelyn ap Gruffudd's rebellion, and he poured more money into Caernarfon than any of his other Welsh castles. It was a seat of government, a royal palace, and — above all — a symbol.</p>
-      <p>The Eagle Tower, the grandest of the castle's towers, rises 124 feet above the Menai Strait. Edward's son — the first English Prince of Wales — <span class="highlight">was born here in 1284</span>, a calculated political gesture that still resonates. The castle was besieged by Owain Glyndŵr in 1403-4 but never fell. In 1969, Prince Charles was invested as Prince of Wales in a televised ceremony within the castle walls, an event that <span class="highlight">remains deeply controversial in Welsh memory</span>.</p>
-      <p>Today Caernarfon is a <span class="highlight">UNESCO World Heritage Site</span>, and the wall-walk connecting its towers gives you one of the finest castle experiences in Europe — continuous rampart access with views over the Menai Strait, Anglesey, and the mountains of Snowdonia. The Regimental Museum of the Royal Welsh Fusiliers occupies the Queen's Tower. Stand in the King's Gate — the most elaborate medieval gatehouse ever built, with six portcullises and multiple murder holes — and you'll understand that this was a castle built not just to defend, but to intimidate.</p>
+      <p class="drop-cap">Edward I&#39;s most ambitious castle, Caernarfon was designed to echo the walls of Constantinople. It was the site of the investiture of the Prince of Wales in 1969.</p>
+      <p>Caernarfon Castle is a medieval fortress in Gwynedd, north-west Wales. The first fortification on the site was a motte-and-bailey castle built in the late 11th century, which King Edward I of England began to replace with the current stone structure in 1283. The castle and town established by Edward acted as the administrative centre of north Wales, and as a result the defences were built on a grand scale. There was a deliberate link with Caernarfon&#39;s Roman past—nearby is the Roman fort of Segontium—and the castle&#39;s walls are reminiscent of the Walls of Constantinople.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -302,7 +301,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/caernarfon-castle-interior-2.jpg" alt="Caernarfon Castle">
   <div class="pb-text">
-    <p>"Edward built his castle to look like Constantinople. Wales looked at it and saw a prison. Seven centuries later, the argument continues."</p>
+    <p>"Time doesn&#39;t destroy places like this. It perfects them."</p>
   </div>
 </div>
 
@@ -400,15 +399,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Caernarfon Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Caernarfon%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

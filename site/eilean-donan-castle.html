@@ -220,14 +220,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In 1719, three Royal Navy frigates sailed into Loch Duich and bombarded Eilean Donan until it was rubble. The castle lay in ruins for two hundred years until Lieutenant Colonel John MacRae-Gilstrap rebuilt it from scratch — using a vision his clan kinsman claimed to have seen in a dream."</p>
+      <p>"Perhaps Scotland&#39;s most photographed castle, Eilean Donan sits at the meeting point of three sea lochs. Destroyed in 1719, it was lovingly rebuilt in the early 20th century.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Three sea lochs meet at Eilean Donan. Loch Duich, Loch Long, and Loch Alsh converge around a small tidal island, and <span class="highlight">the castle sits at their centre like a stone dropped into water</span>. The bridge — arched, mossy, impossibly picturesque — leads you across to what may be the most photographed castle in Scotland. On still days, the reflection is perfect. On wild days, the wind comes off the Atlantic and the lochs churn grey and the castle looks like it's holding on for dear life.</p>
-      <p>The original 13th-century fortress was a Mackenzie stronghold, guarding the sea route to Skye. <span class="highlight">It was blown apart by the Royal Navy in 1719</span> after a failed Jacobite rising supported by Spanish troops — 343 barrels of gunpowder were found in the castle when the government forces arrived. For two centuries, only a broken shell remained. Then, in 1911, Lieutenant Colonel John MacRae-Gilstrap began a twenty-year restoration, rebuilding the castle stone by stone using old plans and, allegedly, a dream. The Banqueting Hall, with its Gaelic mottoes and clan regalia, is the emotional heart of the MacRae story.</p>
-      <p>Today Eilean Donan is <span class="highlight">one of the most visited attractions in the Scottish Highlands</span>. You've seen it in Highlander, The World Is Not Enough, and a thousand shortbread tins. But no photograph prepares you for the setting — the way the mountains of Kintail rise behind the castle, the way the light changes every hour on the water, the way the bridge feels like a crossing between the modern world and something older. <span class="highlight">Arrive at sunset and you'll understand why the MacRaes spent twenty years rebuilding it.</span></p>
+      <p class="drop-cap">Perhaps Scotland&#39;s most photographed castle, Eilean Donan sits at the meeting point of three sea lochs. Destroyed in 1719, it was lovingly rebuilt in the early 20th century.</p>
+      <p>Eilean Donan is a small tidal island situated at the confluence of three sea lochs in the western Highlands of Scotland, about one kilometre from the village of Dornie. It is connected to the mainland by a footbridge that was installed early in the 20th century and is dominated by a picturesque castle that frequently appears in photographs, film and television. The island&#39;s original castle was built in the thirteenth century; it became a stronghold of the Clan Mackenzie and their allies, the Clan MacRae. In response to the Mackenzies&#39; involvement in the Jacobite rebellions against the newly United Kingdom, Royal Naval ships destroyed the castle in 1719.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -301,7 +300,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/eilean-donan-castle-interior-2.jpg" alt="Eilean Donan Castle">
   <div class="pb-text">
-    <p>"Three lochs meet here. Three centuries of ruin ended here. And one man's twenty-year obsession rebuilt it stone by stone, because some things are too beautiful to let go."</p>
+    <p>"The stones remember what we&#39;ve long forgotten."</p>
   </div>
 </div>
 
@@ -399,15 +398,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Eilean Donan Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Eilean%20Donan%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

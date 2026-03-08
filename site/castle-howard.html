@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Castle Howard - castlecore</title>
+<title>Castle Howard — castlecore</title>
 <meta name="description" content="A magnificent Baroque stately home designed by Sir John Vanbrugh, Castle Howard is best known as the setting for Brideshead Revisited. Its dome and grounds">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -221,14 +221,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In 1940, a fire gutted the south front of Castle Howard. The dome collapsed. The Great Hall was destroyed. The family simply moved into the remaining wing and carried on living there — as they still do today, amid the smoke damage and the restoration."</p>
+      <p>"A magnificent Baroque stately home designed by Sir John Vanbrugh, Castle Howard is best known as the setting for Brideshead Revisited. Its dome and grounds are spectacular.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">You see the dome first, rising above the Howardian Hills like a displaced piece of Rome. <span class="highlight">Castle Howard is not a castle at all</span> — it is a Baroque palace so theatrical, so extravagantly conceived, that when Vanbrugh designed it in 1699, he had never built anything before. He was a playwright. The 3rd Earl of Carlisle hired him anyway, and the result is a house that looks like it was designed for a stage — because, in a sense, it was.</p>
-      <p>The Great Hall, restored after the devastating 1940 fire, soars to a painted dome by Pellegrini — <span class="highlight">one of the first domed spaces in an English private house</span>. The Long Gallery stretches the length of the south front, hung with portraits that trace three centuries of Howards. Holbein, Reynolds, and Rubens share wall space. But it's the grounds — Vanbrugh's Temple of the Four Winds, Hawksmoor's Mausoleum, the Atlas Fountain throwing water against the Yorkshire sky — that elevate Castle Howard from grand house to <span class="highlight">landscape as art</span>.</p>
-      <p>The 1981 television adaptation of <span class="highlight">Brideshead Revisited</span> made Castle Howard famous worldwide — Sebastian Flyte's golden summer, the teddy bear, the sense of beauty sliding toward loss. The house still carries that melancholy glamour, especially in autumn when the lime avenue turns gold and the mist sits in the valleys. The Howard family still live here, and the house still bears the scars of the fire — <span class="highlight">some rooms remain unrestored, which only makes the restored ones more magnificent</span>.</p>
+      <p class="drop-cap">A magnificent Baroque stately home designed by Sir John Vanbrugh, Castle Howard is best known as the setting for Brideshead Revisited. Its dome and grounds are spectacular.</p>
+      <p>Castle Howard is an English country house in Henderskelfe, North Yorkshire, 15 miles (24 km) north of York. A private residence, it has been the home of the Carlisle branch of the Howard family for more than 300 years. Castle Howard has been used as a filming location in several films and television shows, including in Granada Television&#39;s 1981 television adaptation of Evelyn Waugh&#39;s Brideshead Revisited and in a 2008 film adaptation.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -247,7 +246,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <h2>Getting There</h2>
       <div class="transport-card">
         <div class="tc-header">🚂 Malton Station</div>
-        <div class="tc-detail">TransPennine Express from York (20 min). Castle Howard is 6 miles - taxi needed.</div>
+        <div class="tc-detail">TransPennine Express from York (20 min). Castle Howard is 6 miles — taxi needed.</div>
       </div>
       <div class="transport-card">
         <div class="tc-header">🅿️ Estate Car Park</div>
@@ -269,7 +268,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
         <span class="chip green">🚻 Accessible Toilets</span>
         <span class="chip green">👶 Buggy Friendly</span>
       </div>
-      <p class="terrain-note">The house and gardens are well maintained and largely accessible. Wheelchair access to ground floor rooms. The gardens are extensive - a full tour is several miles. Buggies and wheelchairs welcome. Famous as Brideshead Revisited filming location.</p>
+      <p class="terrain-note">The house and gardens are well maintained and largely accessible. Wheelchair access to ground floor rooms. The gardens are extensive — a full tour is several miles. Buggies and wheelchairs welcome. Famous as Brideshead Revisited filming location.</p>
     </section>
 
     <div class="ornament-sm"></div>
@@ -303,7 +302,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/castle-howard-interior-2.jpg" alt="Castle Howard">
   <div class="pb-text">
-    <p>"Vanbrugh was a playwright who had never designed a building. The Earl hired him anyway. The result is a house that feels like a stage set — because it was always meant to be one."</p>
+    <p>"The stones remember what we&#39;ve long forgotten."</p>
   </div>
 </div>
 
@@ -397,19 +396,19 @@ function toggleSave(){
 (function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('castle-howard'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
 
 function shareThis(){
-  if(navigator.share)navigator.share({title:'Castle Howard - castlecore',url:location.href}).catch(()=>{});
+  if(navigator.share)navigator.share({title:'Castle Howard — castlecore',url:location.href}).catch(()=>{});
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Castle Howard drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Castle%20Howard%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

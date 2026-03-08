@@ -220,14 +220,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"Mary, Queen of Scots was crowned here at nine months old, in 1543. The ceremony took place in the Chapel Royal while English armies burned their way north, trying to force a marriage alliance. The Scots crowned her anyway — and then hid her in a priory."</p>
+      <p>"One of Scotland&#39;s most historically important castles, Stirling was the childhood home of Mary, Queen of Scots. Its Renaissance palace is the finest of its kind in Britain.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Stirling Castle sits on a volcanic crag so steep on three sides that nature did most of the fortifying. <span class="highlight">Whoever held Stirling held Scotland</span> — the old saying is not hyperbole. Below the castle rock, the River Forth snakes through a floodplain where William Wallace won his famous victory at Stirling Bridge in 1297, and Robert the Bruce triumphed at Bannockburn in 1314. You can see both battlefields from the ramparts.</p>
-      <p>The Royal Palace, built by James V in the 1540s, is <span class="highlight">the finest Renaissance building in Scotland</span> — its exterior carved with planetary deities, grotesques, and the mysterious "Stirling Heads," a series of oak medallions depicting kings, queens, and classical figures. The Great Hall, completed in 1503, was the largest banqueting hall in Scotland, its hammerbeam roof recently restored to its original saffron yellow. Mary was crowned in the Chapel Royal; her son James VI was baptised here with a three-day festival that included a mock siege.</p>
-      <p>Today the castle is managed by Historic Environment Scotland, and the <span class="highlight">restored palace interiors are extraordinary</span> — tapestries woven from scratch using medieval techniques, ceiling roundels replaced, walls painted in the vivid colours the Stuarts would have known. The Regimental Museum of the Argyll and Sutherland Highlanders fills the King's Old Building with three centuries of military history. Stand on the Queen Anne Garden terrace at sunset and watch the Ochil Hills turn gold — <span class="highlight">it's the finest view in central Scotland</span>.</p>
+      <p class="drop-cap">One of Scotland&#39;s most historically important castles, Stirling was the childhood home of Mary, Queen of Scots. Its Renaissance palace is the finest of its kind in Britain.</p>
+      <p>Stirling Castle, located in Stirling, is one of the largest and most historically and architecturally important castles in Scotland. The castle sits atop an intrusive crag, which forms part of the Stirling Sill geological formation. It is surrounded on three sides by steep cliffs, giving it a strong defensive position. Its strategic location, guarding what was, until the 1890s, the farthest downstream crossing of the River Forth, has made it an important fortification in the region from the earliest times.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -304,7 +303,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/stirling-castle-interior-2.jpg" alt="Stirling Castle">
   <div class="pb-text">
-    <p>"Below these walls, Wallace won. Bruce triumphed. And a baby queen was crowned while armies burned the countryside. Stirling has always been where Scotland decided its own fate."</p>
+    <p>"Not every ruin is a tragedy. Some are love letters to the sky."</p>
   </div>
 </div>
 
@@ -402,15 +401,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Stirling Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Stirling%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

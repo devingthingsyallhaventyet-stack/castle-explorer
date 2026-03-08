@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leeds Castle - castlecore</title>
+<title>Leeds Castle — castlecore</title>
 <meta name="description" content="Often called &#39;the loveliest castle in the world&#39;, Leeds Castle sits on two islands in a lake. It was a royal residence for six medieval queens of E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -220,14 +220,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"Henry VIII loved Leeds Castle so much he spent a fortune converting it for Catherine of Aragon. She visited exactly once. The swans on the moat, some say, are descendants of the ones she fed that afternoon."</p>
+      <p>"Often called &#39;the loveliest castle in the world&#39;, Leeds Castle sits on two islands in a lake. It was a royal residence for six medieval queens of England.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Leeds Castle floats. There is no other word for it. Built on two islands in a lake formed by the River Len, <span class="highlight">it seems to hover above its own reflection</span>, more fairy tale than fortress, especially in the morning mist that gathers over the Kentish Weald. Lord Conway called it "the loveliest castle in the world" in 1926, and no one has seriously argued since.</p>
-      <p>It has been a Norman stronghold, a royal palace for <span class="highlight">six medieval queens of England</span>, a Jacobean country house, a Tudor playground for Henry VIII, and — in the 20th century — the private retreat of the Anglo-American heiress Lady Baillie, who restored it with jazz-age glamour and hosted weekend parties for everyone from Errol Flynn to the future Edward VIII. The castle's medieval bones — the Gloriette, the barbican, the gatehouse — are softened by Lady Baillie's interiors: art deco bathrooms, Thorvaldsen sculptures, and a bedroom suite fit for a very stylish ghost.</p>
-      <p>Today the 500-acre estate includes a <span class="highlight">yew maze, a grotto, an aviary of rare birds</span>, and gardens that blaze with colour in every season. Black swans glide across the moat. The Dog Collar Museum — yes, really — displays five centuries of canine accessories in the gatehouse. But the best moment is <span class="highlight">the first one</span>: crossing the bridge and seeing the castle rise from the water, golden in the late Kent light, looking exactly like it has for nine hundred years.</p>
+      <p class="drop-cap">Often called &#39;the loveliest castle in the world&#39;, Leeds Castle sits on two islands in a lake. It was a royal residence for six medieval queens of England.</p>
+      <p>Leeds Castle is a castle in Kent, England, 7 miles (11 km) southeast of Maidstone. It is built on islands in a lake formed by the River Len to the east of the village of Leeds and is a historic Grade I listed estate.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -304,7 +303,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/leeds-castle-interior-2.jpg" alt="Leeds Castle">
   <div class="pb-text">
-    <p>"Six queens called this home. The castle floats on its lake like a memory of each of them, golden and unreachable."</p>
+    <p>"Some places don&#39;t just hold history — they breathe it."</p>
   </div>
 </div>
 
@@ -398,19 +397,19 @@ function toggleSave(){
 (function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('leeds-castle'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
 
 function shareThis(){
-  if(navigator.share)navigator.share({title:'Leeds Castle - castlecore',url:location.href}).catch(()=>{});
+  if(navigator.share)navigator.share({title:'Leeds Castle — castlecore',url:location.href}).catch(()=>{});
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Leeds Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Leeds%20Castle%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

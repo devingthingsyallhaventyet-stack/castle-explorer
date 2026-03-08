@@ -220,14 +220,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"When monks fleeing the Vikings carried St Cuthbert's body across Northumbria for 200 years, seeking a resting place, a miraculous fog stopped their cart on a wooded peninsula above the River Wear. They took it as a sign. They built a cathedral. It has stood for nearly a thousand years."</p>
+      <p>"UNESCO masterpiece of Romanesque architecture with the shrine of St Cuthbert.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">Durham Cathedral appears above the River Wear like a fortress of God — <span class="highlight">massive, uncompromising, and older than almost anything in England</span>. The Romanesque nave, with its enormous incised pillars carved with chevrons and spirals, was revolutionary when it was built in 1093: the first building in Europe to use pointed ribbed vaults on this scale, a structural innovation that would eventually lead to Gothic architecture.</p>
-      <p>St Cuthbert's shrine sits behind the high altar, marked by a simple grey stone slab. In the medieval period, <span class="highlight">this was one of the most important pilgrimage sites in Christendom</span> — Cuthbert's incorrupt body drew thousands. The Venerable Bede, the father of English history, is also buried here, in the Galilee Chapel at the western end. The Sanctuary Knocker on the north door offered 37 days of asylum to anyone who grasped it — murderers, debtors, and the desperate, watched over by monks who recorded each name in a still-surviving register.</p>
-      <p>Bill Bryson called it <span class="highlight">"the best cathedral on planet Earth,"</span> and standing beneath the central tower, looking up 218 feet through Norman stone into grey Durham sky, it's hard to argue. The Monks' Dormitory, the largest medieval undivided space in England, now houses the cathedral's collection of Anglo-Saxon carved stones. The cloisters were used as Hogwarts in the Harry Potter films — you'll recognise them immediately. But the real magic is the building itself, ancient and immovable, holding its ground above the river as it has since the Normans.</p>
+      <p class="drop-cap">UNESCO masterpiece of Romanesque architecture with the shrine of St Cuthbert.</p>
+      
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -246,30 +245,9 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <h2>Getting There</h2>
       <div class="transport-card">
         <div class="tc-header">🚗 By Car</div>
-        <div class="tc-detail">From the A1(M), exit at Junction 62 and follow the A690 into Durham city centre. The cathedral is in a pedestrian zone — park at Prince Bishops car park (multi-storey, 5-min walk) or the Sands riverside pay & display. On Saturdays, use the Park & Ride from Belmont or Howlands.</div>
+        <div class="tc-detail">Navigate to Durham Cathedral, County Durham, England. Check Google Maps for the best route from your location.</div>
         <a href="https://www.google.com/maps/dir/?api=1&destination=54.7739,-1.5761">Get driving directions →</a>
       </div>
-      <div class="transport-card">
-        <div class="tc-header">🚂 By Train</div>
-        <div class="tc-detail">Durham station is on the East Coast Main Line — LNER services from London King's Cross (~2h 50min), Edinburgh (~1h 45min), and York (~45min). The cathedral is a 10-minute walk from the station, downhill through the market square and across Framwellgate Bridge.</div>
-      </div>
-      <div class="transport-card">
-        <div class="tc-header">✈️ Nearest Airports</div>
-        <div class="tc-detail">Newcastle Airport (NCL) ~20mi — Metro to Newcastle Central, then train to Durham (12 min). Teesside International (MME) ~25mi.</div>
-      </div>
-    </section>
-
-    <div class="ornament-sm"></div>
-
-    <section class="fade-section">
-      <h2>Terrain & Accessibility</h2>
-      <div class="terrain-chips">
-        <span class="chip green">♿ Level Access</span>
-        <span class="chip amber">📐 Some Steps</span>
-        <span class="chip green">🦽 Wheelchair Welcome</span>
-        <span class="chip amber">🏔️ Steep Approach</span>
-      </div>
-      <p class="terrain-note">The cathedral itself is on one level with ramped access at the north door. However, reaching it involves steep cobbled streets from any direction. The Palace Green approach from the Bailey is the gentlest route. Blue badge parking is available on Palace Green by prior arrangement. Wheelchairs available to borrow. The tower climb (325 steps) is not accessible.</p>
     </section>
 
     
@@ -305,7 +283,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/durham-cathedral-5.jpg" alt="Durham Cathedral">
   <div class="pb-text">
-    <p>"The monks carried Cuthbert's body for two hundred years before they found this hill. When they finally set him down, they built something that would never need to move again."</p>
+    <p>"These walls have seen more sunsets than any living soul."</p>
   </div>
 </div>
 
@@ -403,15 +381,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Durham Cathedral drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Durham%20Cathedral%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

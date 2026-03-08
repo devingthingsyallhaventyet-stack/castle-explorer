@@ -219,14 +219,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"On 29 December 1170, four knights burst into the cathedral and murdered Archbishop Thomas Becket at the altar. His blood stained the flagstones. Within three years, he was a saint — and Canterbury became the most visited pilgrimage site in Europe."</p>
+      <p>"Mother church of worldwide Anglicanism and UNESCO World Heritage Site.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">You enter through the Christ Church Gate and there it is — a <span class="highlight">great wave of Perpendicular Gothic surging upward</span>, the Bell Harry Tower catching whatever light Kent offers that day. Canterbury Cathedral has been the spiritual heart of the Church of England for over 1,400 years, and it carries that weight without effort, the way old things do when they've stopped trying to impress.</p>
-      <p>The crypt is the oldest part, Norman pillars carved with dragons and beasts that predate the Gothic nave by centuries. <span class="highlight">The spot where Becket fell is marked by a single candle</span> and a modern altar — the medieval shrine, once encrusted with jewels and visited by millions, was demolished on Henry VIII's orders. The stained glass, some of it dating to the 12th century, tells stories in colours that modern glassmakers cannot replicate. The Corona, at the far eastern end, held Becket's skull in a golden reliquary — pilgrims would crawl the final stretch on their knees.</p>
-      <p>Chaucer's pilgrims walked here. T.S. Eliot wrote <i>Murder in the Cathedral</i> for this nave. Today, evensong still echoes through the quire at 5:30 each afternoon, and if you time your visit right, <span class="highlight">you'll hear one of the finest cathedral choirs in England</span> singing in a space that has held prayer for longer than the English language has existed.</p>
+      <p class="drop-cap">Mother church of worldwide Anglicanism and UNESCO World Heritage Site.</p>
+      
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -299,7 +298,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/canterbury-cathedral-5.jpg" alt="Canterbury Cathedral">
   <div class="pb-text">
-    <p>"The pilgrims walked sixty miles from London to kneel where Becket bled. Some still do. The flagstones are worn smooth by their knees."</p>
+    <p>"Stand here long enough and you&#39;ll hear the centuries whispering."</p>
   </div>
 </div>
 
@@ -397,15 +396,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Canterbury Cathedral drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Canterbury%20Cathedral%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},

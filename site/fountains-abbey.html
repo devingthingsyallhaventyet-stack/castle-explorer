@@ -220,14 +220,13 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
     </div>
 
     <div class="narrative-quote">
-      <p>"In 1132, thirteen Benedictine monks were expelled from York for being too devout. They walked into the Skell Valley with nothing — no money, no shelter, not even a roof. They slept under an elm tree. Four centuries later, the abbey they built was one of the richest in England."</p>
+      <p>"The largest monastic ruin in England, Fountains Abbey was a Cistercian monastery dissolved by Henry VIII. Its soaring nave and tower remain breathtakingly beautiful.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">The first thing you see is the tower, rising above the treeline of the Skell Valley like a finger pointing at heaven. Then the nave opens up — <span class="highlight">roofless, enormous, impossibly beautiful</span> — its Romanesque arches marching into the Yorkshire sky. Fountains Abbey is the largest monastic ruin in England, and standing in the cellarium, with its three hundred feet of vaulted ceiling still intact, you feel the scale of what was lost.</p>
-      <p>The Cistercians who built this place believed in austerity, but they had <span class="highlight">an eye for real estate that would make a developer weep</span>. They ran sheep farms across half of Yorkshire, operated lead mines, traded wool with Flanders, and grew so wealthy that Henry VIII's commissioners found a fortune when they dissolved the monastery in 1539. The lay brothers' quarters alone are larger than most parish churches. Huby's Tower, added just thirty years before the Dissolution, still bears Abbot Marmaduke Huby's defiant inscription: <i>"Soli Deo Honor et Gloria"</i> — to God alone, honour and glory.</p>
-      <p>The 18th-century Studley Royal Water Garden wraps around the abbey like a frame around a masterpiece — <span class="highlight">crescent-shaped ponds, classical temples, and the finest surviving Georgian water garden in England</span>. Walk the Surprise View path through the deer park and the abbey appears suddenly between the trees, framed by the valley. It's a UNESCO World Heritage Site, and on autumn mornings when mist fills the Skell Valley and the ruins glow amber in the early light, it earns that title several times over.</p>
+      <p class="drop-cap">The largest monastic ruin in England, Fountains Abbey was a Cistercian monastery dissolved by Henry VIII. Its soaring nave and tower remain breathtakingly beautiful.</p>
+      <p>Fountains Abbey is a ruined Cistercian monastery near Ripon in North Yorkshire, England. It was founded in 1132 under the direction of Thurstan, archbishop of York, and over the next four centuries became one of the wealthiest monasteries in England thanks to its large and diverse landholdings. The monastery was dissolved in 1539 as part of the English Reformation and its estates sold. Fountains Abbey is now within Studley Royal Park, a landscaped garden created in the eighteenth century.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -302,7 +301,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 <div class="photo-break fade-section">
   <img src="https://img.castlecore.uk/fountains-abbey-interior-2.jpg" alt="Fountains Abbey">
   <div class="pb-text">
-    <p>"Thirteen monks slept under an elm tree in winter with nothing but faith. Four centuries later, the abbey they built was richer than most towns. Then a king erased it all."</p>
+    <p>"Not every ruin is a tragedy. Some are love letters to the sky."</p>
   </div>
 </div>
 
@@ -400,15 +399,15 @@ function shareThis(){
   else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
 }
 
-const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Fountains Abbey drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
-.then(r=>r.json()).then(d=>{
-  const grid=document.getElementById('ytGrid');
+var YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Fountains%20Abbey%20drone%20cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
+.then(function(r){return r.json()}).then(function(d){
+  var grid=document.getElementById('ytGrid');
   if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
-  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
-}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+  grid.innerHTML=d.items.map(function(v){return '<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>'}).join('');
+}).catch(function(){document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
-const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
+var GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
 fetch('https://places.googleapis.com/v1/places:searchText',{
   method:'POST',
   headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
