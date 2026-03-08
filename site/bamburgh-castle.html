@@ -3,15 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="../favicon.ico" type="image/x-icon">
-<title>Bamburgh Castle — castlecore | Castles, Abbeys &amp; Ruins</title>
-<meta name="description" content="Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle was once the seat of the ancient kings of Northumbria. Its dramatic setting has made ">
-<meta property="og:title" content="Bamburgh Castle — castlecore">
-<meta property="og:description" content="Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle was once the seat of the ancient kings of Northumbria. Its dramatic setting has made ">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/1280px-Bamburgh_Castle%2C_beautiful_day.jpg">
-<meta property="og:url" content="https://castlecore.uk/site/bamburgh-castle.html">
-<meta property="og:type" content="article">
-<meta name="twitter:card" content="summary_large_image">
+<title>Bamburgh Castle — castlecore</title>
+<meta name="description" content="Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle was once the seat of the ancient kings of Northumbria. Its dramatic setting has ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -29,14 +22,10 @@
 html{scroll-behavior:smooth}
 body{font-family:'Cormorant Garamond',serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--burgundy);text-decoration:none}
-
-/* ═══ ORNAMENTS ═══ */
 .ornament{text-align:center;margin:2rem 0;color:var(--gold);font-size:1.2rem;letter-spacing:8px;opacity:.3}
 .ornament::before{content:'⸻ ✦ ⸻'}
 .ornament-sm{text-align:center;margin:1.2rem 0;opacity:.25}
 .ornament-sm::before{content:'';display:inline-block;width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-
-/* ═══ NAV ═══ */
 .float-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px clamp(1.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;transition:all .4s}
 .float-nav.scrolled{background:rgba(250,248,244,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .float-nav .logo{font-family:'Cinzel Decorative',serif;color:var(--ink);font-size:1rem;display:flex;align-items:center;gap:8px;letter-spacing:2px}
@@ -46,15 +35,11 @@ a{color:var(--burgundy);text-decoration:none}
 .float-nav .nav-links a:hover{color:var(--burgundy)}
 .explore-btn{background:var(--burgundy)!important;border:1px solid var(--burgundy)!important;color:#fff!important;padding:6px 16px;border-radius:2px;transition:all .3s!important}
 .explore-btn:hover{background:var(--burgundy-glow)!important}
-
-/* ═══ HERO ═══ */
 .hero{position:relative;height:75vh;min-height:450px;max-height:700px;overflow:hidden;display:flex;align-items:flex-end}
 .hero-img{position:absolute;inset:0}
 .hero-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.75) saturate(.85) contrast(1.05);animation:kenburns 30s ease-in-out infinite alternate}
 @keyframes kenburns{0%{transform:scale(1)}100%{transform:scale(1.06) translate(-0.5%,-1%)}}
-.hero-vignette{position:absolute;inset:0;background:
-  linear-gradient(180deg, rgba(0,0,0,.08) 0%, transparent 40%, transparent 100%);
-  z-index:1}
+.hero-vignette{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.08) 0%, transparent 40%, transparent 100%);z-index:1}
 .hero-content{position:relative;z-index:2;padding:0 clamp(1.5rem,5vw,5rem) clamp(2.5rem,5vh,4rem);max-width:900px}
 .hero-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.95rem,1.8vw,1.15rem);color:rgba(244,232,193,.6);letter-spacing:.5px;margin-bottom:.5rem}
 .hero h1{font-family:'Cinzel Decorative',serif;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;letter-spacing:2px;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.5)}
@@ -62,8 +47,6 @@ a{color:var(--burgundy);text-decoration:none}
 .hero-meta span{font-family:'Cinzel',serif;font-size:.68rem;color:var(--parchment-mid);letter-spacing:1.5px;text-transform:uppercase}
 .mood-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
 .mood-tag{background:rgba(244,232,193,.15);border:1px solid rgba(244,232,193,.3);padding:3px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.6rem;color:var(--parchment-mid);letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(4px)}
-
-/* ═══ ACTION BAR — Functional buttons ═══ */
 .action-bar{max-width:1100px;margin:0 auto;padding:.5rem clamp(1.5rem,5vw,5rem);display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
 .action-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:2px;font-family:'Cinzel',serif;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;border:none;text-decoration:none}
 .action-btn:hover{text-decoration:none}
@@ -77,33 +60,23 @@ a{color:var(--burgundy);text-decoration:none}
 .action-spacer{flex:1}
 .action-share{font-size:.68rem;color:var(--ink-faded);cursor:pointer;padding:8px 12px}
 .action-share:hover{color:var(--burgundy)}
-
-/* ═══ TWO-COLUMN LAYOUT — Compact ═══ */
 .content-wrap{max-width:1100px;margin:0 auto;padding:1rem clamp(1.5rem,5vw,5rem) 2rem;display:grid;grid-template-columns:1.6fr 1fr;gap:2.5rem;align-items:start}
 .content-main{min-width:0}
 .content-sidebar{position:sticky;top:80px;display:flex;flex-direction:column;gap:1.2rem}
-
-/* ═══ PHOTO GRID — Right after hero ═══ */
 .photo-grid-compact{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:6px;border-radius:3px;overflow:hidden;margin-bottom:1.5rem}
 .pg-item{overflow:hidden;cursor:pointer;position:relative}
 .pg-item img{width:100%;height:100%;object-fit:cover;transition:all .5s}
 .pg-item:hover img{transform:scale(1.04)}
 .pg-main{grid-row:1/3;grid-column:1}
 .pg-more{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.7);color:#fff;padding:4px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:1px;pointer-events:none}
-
-/* ═══ SECTIONS ═══ */
 section{margin-bottom:1.8rem}
 section h2{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink);margin-bottom:1rem;font-weight:500;position:relative;padding-bottom:.5rem}
 section h2::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
 section p{font-size:clamp(1.05rem,1.8vw,1.15rem);line-height:1.8;color:var(--ink-light);margin-bottom:1rem}
 .highlight{color:var(--burgundy);font-weight:500}
 .drop-cap::first-letter{font-family:'Cinzel Decorative',serif;font-size:3rem;float:left;line-height:.8;padding-right:6px;padding-top:4px;color:var(--burgundy)}
-
-/* ═══ NARRATIVE QUOTE — Compact ═══ */
 .narrative-quote{margin:1.5rem 0;padding:1.2rem 1.5rem;border-left:2px solid var(--gold);background:rgba(154,123,48,.04)}
 .narrative-quote p{font-style:italic;color:var(--ink-light);margin:0;font-size:1.1rem;line-height:1.7}
-
-/* ═══ SIDEBAR COMPONENTS ═══ */
 .sidebar-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1.2rem;transition:border-color .3s}
 .sidebar-card h3{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faded);margin-bottom:.8rem;font-weight:500}
 .sidebar-map{width:100%;height:160px;background:var(--cream);border:1px solid var(--border);border-radius:3px;display:flex;align-items:center;justify-content:center;color:var(--ink-faded);font-size:.8rem;margin-bottom:.8rem}
@@ -115,40 +88,28 @@ section p{font-size:clamp(1.05rem,1.8vw,1.15rem);line-height:1.8;color:var(--ink
 .sq-item:nth-last-child(-n+2){border-bottom:none}
 .sq-label{font-family:'Cinzel',serif;font-size:.55rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-faded);margin-bottom:1px}
 .sq-value{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--ink)}
-
-/* ═══ TRANSPORT CARDS (old style, medieval skin) ═══ */
 .transport-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:.8rem 1rem;margin-bottom:.5rem}
 .transport-card .tc-header{display:flex;align-items:center;gap:.5rem;font-family:'Cinzel',serif;font-weight:600;font-size:.85rem;color:var(--ink);margin-bottom:.2rem;letter-spacing:.5px}
 .transport-card .tc-detail{font-size:.95rem;color:var(--ink-faded);line-height:1.5}
 .transport-card a{font-family:'Cinzel',serif;font-weight:600;font-size:.8rem;color:var(--burgundy);letter-spacing:.5px}
-
-/* ═══ TERRAIN CHIPS ═══ */
 .terrain-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
 .chip{padding:5px 12px;border-radius:2px;font-family:'Cinzel',serif;font-size:.72rem;font-weight:500;letter-spacing:.5px;display:inline-flex;align-items:center;gap:4px}
 .chip.green{background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9}
 .chip.amber{background:#fff8e1;color:#f57f17;border:1px solid #fff0b3}
 .chip.red{background:#fce4ec;color:#c62828;border:1px solid #f8bbd0}
 .terrain-note{color:var(--ink-faded);font-size:.95rem;line-height:1.6}
-
-/* ═══ YOUTUBE ═══ */
 .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-top:.5rem}
 .yt-grid iframe{width:100%;aspect-ratio:16/9;border-radius:3px;border:1px solid var(--border)}
-
-/* ═══ REVIEWS ═══ */
 .review-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1rem;margin-bottom:.5rem}
 .review-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem}
 .review-author{font-family:'Cinzel',serif;font-weight:600;font-size:.82rem;color:var(--ink);letter-spacing:.5px}
 .review-rating{color:var(--gold);font-size:.8rem;letter-spacing:1px}
 .review-time{color:var(--ink-faded);font-size:.75rem;margin-left:auto}
 .review-text{font-size:.95rem;color:var(--ink-light);line-height:1.6}
-
-/* ═══ INLINE PHOTO BREAK (between columns) ═══ */
 .photo-break{position:relative;height:40vh;min-height:250px;max-height:400px;overflow:hidden;margin:1rem 0 1.5rem}
 .photo-break img{width:100%;height:100%;object-fit:cover;filter:brightness(.45) saturate(.75)}
 .photo-break .pb-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
 .photo-break .pb-text p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2.5vw,1.5rem);color:rgba(255,255,255,.9);max-width:600px;line-height:1.6;text-shadow:0 2px 15px rgba(0,0,0,.5)}
-
-/* ═══ NEARBY ═══ */
 .nearby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.7rem}
 .nearby-card{border-radius:3px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:all .3s;text-decoration:none;display:block}
 .nearby-card:hover{border-color:var(--ink-faded);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
@@ -156,21 +117,13 @@ section p{font-size:clamp(1.05rem,1.8vw,1.15rem);line-height:1.8;color:var(--ink
 .nearby-card .nc-body{padding:.6rem .8rem}
 .nearby-card .nc-name{font-family:'Cinzel',serif;font-size:.78rem;color:var(--ink);letter-spacing:.3px}
 .nearby-card .nc-meta{font-size:.8rem;color:var(--ink-faded);margin-top:2px}
-
-/* ═══ FULL WIDTH SECTIONS (below two-col) ═══ */
 .full-width{max-width:1100px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) 2rem}
-
-/* ═══ CTA ═══ */
 .cta-section{text-align:center;padding:clamp(2rem,5vh,4rem) 2rem}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--ink-faded);margin-bottom:1rem;font-weight:400;font-style:italic}
 .cta-btn{display:inline-block;background:var(--burgundy);border:1px solid var(--burgundy);color:#fff;padding:14px 36px;border-radius:2px;font-family:'Cinzel',serif;font-weight:600;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
 .cta-btn:hover{background:var(--burgundy-glow);box-shadow:0 2px 16px rgba(139,35,53,.2);transform:translateY(-2px);text-decoration:none;color:#fff}
-
-/* ═══ FOOTER ═══ */
 footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;background:var(--cream)}
 footer p{font-family:'Cinzel',serif;font-size:.65rem;color:var(--ink-faded);letter-spacing:1px}
-
-/* ═══ LIGHTBOX ═══ */
 .lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
 .lb-overlay.open{display:flex}
 .lb-overlay img{max-width:90vw;max-height:85vh;border-radius:2px}
@@ -178,8 +131,6 @@ footer p{font-family:'Cinzel',serif;font-size:.65rem;color:var(--ink-faded);lett
 .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.5rem;width:48px;height:48px;border-radius:2px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .lb-prev{left:16px}.lb-next{right:16px}
 .lb-counter{color:rgba(255,255,255,.5);font-family:'Cinzel',serif;font-size:.7rem;margin-top:12px;letter-spacing:2px}
-
-/* Visit info items */
 .visit-item{display:flex;align-items:flex-start;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.9rem}
 .visit-item:last-child{border-bottom:none}
 .visit-icon{flex-shrink:0;width:20px;text-align:center;font-size:.9rem}
@@ -189,25 +140,15 @@ footer p{font-family:'Cinzel',serif;font-size:.65rem;color:var(--ink-faded);lett
 .visit-hours-toggle{font-family:'Cinzel',serif;font-size:.65rem;color:var(--burgundy);cursor:pointer;letter-spacing:.5px;margin-top:2px;display:inline-block}
 .visit-hours-full{display:none;margin-top:4px;font-size:.85rem;color:var(--ink-faded);line-height:1.6}
 .visit-hours-full.open{display:block}
-
-/* Link items */
 .link-item{display:flex;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border)}
 .link-item:last-child{border-bottom:none}
 .link-item a{font-size:.88rem;color:var(--burgundy);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .link-item a:hover{text-decoration:underline}
 .link-icon{flex-shrink:0;width:20px;text-align:center;font-size:.95rem}
-
-/* Sidebar mood tags — light bg override */
 .content-sidebar .mood-tag{background:var(--cream);border:1px solid var(--border);color:var(--ink-faded)}
-
-/* Footer branding */
 footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color:var(--ink);letter-spacing:2px}
-
-/* ═══ FADE ═══ */
 .fade-section{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .fade-section.visible{opacity:1;transform:translateY(0)}
-
-/* ═══ RESPONSIVE ═══ */
 @media(max-width:768px){
   .float-nav .nav-links a:not(.explore-btn){display:none}
   .content-wrap{grid-template-columns:1fr;gap:1.5rem}
@@ -239,22 +180,23 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 </nav>
 
 <section class="hero">
-  <div class="hero-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/1280px-Bamburgh_Castle%2C_beautiful_day.jpg" alt="Bamburgh Castle"></div>
+  <div class="hero-img">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/1280px-Bamburgh_Castle%2C_beautiful_day.jpg" alt="Bamburgh Castle">
+  </div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
-    <p class="hero-tagline">Where the North Sea meets a thousand years of defiance</p>
+    <p class="hero-tagline">Where stone remembers what time forgets</p>
     <h1>Bamburgh Castle</h1>
     <div class="hero-meta">
       <span>Northumberland · England</span>
       <span>✦ 4.7 · 15,000 reviews</span>
-      <span>11th century · intact</span>
+      <span>11th century · castle</span>
     </div>
     <div class="mood-tags">
+      <span class="mood-tag">Well Preserved</span>
       <span class="mood-tag">Photogenic</span>
       <span class="mood-tag">Filming Location</span>
-      <span class="mood-tag">Family Friendly</span>
-      <span class="mood-tag">Well Preserved</span>
-      <span class="mood-tag">Intact</span>
+      <span class="mood-tag">Kid Friendly</span>
     </div>
   </div>
 </section>
@@ -272,21 +214,20 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="content-main">
 
     <div class="photo-grid-compact" id="photoGrid">
-      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/1280px-Bamburgh_Castle%2C_beautiful_day.jpg" alt="Bamburgh Castle" loading="eager"></div>
-      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/bamburgh-castle-2.jpg" alt="Bamburgh Castle" loading="eager"></div>
-      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/bamburgh-castle-3.jpg" alt="Bamburgh Castle" loading="lazy"></div>
-      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/bamburgh-castle-4.jpg" alt="Bamburgh Castle" loading="lazy"><span class="pg-more">+12 photos</span></div>
+      <div class="pg-item pg-main" onclick="openLb(0)"><img src="https://img.castlecore.uk/bamburgh-castle-2.jpg" alt="Bamburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(1)"><img src="https://img.castlecore.uk/bamburgh-castle-3.jpg" alt="Bamburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(2)"><img src="https://img.castlecore.uk/bamburgh-castle-4.jpg" alt="Bamburgh Castle"></div>
+      <div class="pg-item" onclick="openLb(3)"><img src="https://img.castlecore.uk/bamburgh-castle-5.jpg" alt="Bamburgh Castle"><span class="pg-more">+8 photos</span></div>
     </div>
 
     <div class="narrative-quote">
-      <p>"Rising from a basalt outcrop on the Northumberland coast, Bamburgh has stood against Viking raids, Scottish invasions, and the full fury of the North Sea for over 1,400 years."</p>
+      <p>"Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle was once the seat of the ancient kings of Northumbria. Its dramatic setting has made it a film location favourite.."</p>
     </div>
 
     <section class="fade-section">
       <h2>About</h2>
-      <p class="drop-cap">The first thing you see is the scale of it — a colossus of dark stone rising from the beach like a cliff face that someone carved into a fortress. <span class="highlight">Bamburgh doesn't sit on the landscape. It dominates it.</span></p>
-      <p>This was the seat of the ancient Kings of Northumbria, the most powerful Anglo-Saxon kingdom. The Vikings besieged it. The Normans rebuilt it. During the Wars of the Roses, it became the <span class="highlight">first castle in England to be defeated by gunpowder</span> — the beginning of the end for medieval warfare.</p>
-      <p>Walk along the beach at low tide and look back. The castle fills the entire horizon. <span class="highlight">No photograph does it justice — and you'll take fifty trying.</span></p>
+      <p class="drop-cap">Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle was once the seat of the ancient kings of Northumbria. Its dramatic setting has made it a film location favourite.</p>
+      <p>Bamburgh Castle, on the northeast coast of England, by the village of Bamburgh in Northumberland, is a Grade I listed building.</p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -303,24 +244,44 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
     <section class="fade-section">
       <h2>Getting There</h2>
-      <div class="transport-card"><div class="tc-header">🚗 By Car</div><div class="tc-detail">On the B1342 off the A1, about 16 miles north of Alnwick. Free car park in Bamburgh village, a short walk to the castle entrance.</div></div>
-      <div class="transport-card"><div class="tc-header">🚌 By Bus</div><div class="tc-detail">Arriva X18 runs from Newcastle to Berwick-upon-Tweed via Bamburgh. The Bamburgh village stop is a 5-minute walk from the castle.</div></div>
-      <div class="transport-card"><div class="tc-header">🚂 By Train</div><div class="tc-detail">Nearest station is Chathill (4 miles) on the East Coast Main Line. Limited services — Alnmouth station (15 miles) has more frequent trains from London and Edinburgh.</div></div>
-      <div class="transport-card"><div class="tc-header">✈️ By Air</div><div class="tc-detail">Newcastle Airport (NCL) ~55 miles · Edinburgh Airport (EDI) ~80 miles</div></div>
+      <div class="transport-card">
+        <div class="tc-header">🚂 Chathill Station</div>
+        <div class="tc-detail">LNER East Coast Main Line request stop (5 miles from castle). Very limited service — check timetable.</div>
+      </div>
+      <div class="transport-card">
+        <div class="tc-header">🅿️ Castle Car Park</div>
+        <div class="tc-detail">Free car park at the castle. Additional parking on the village green.</div>
+      </div>
+      <div class="transport-card">
+        <div class="tc-header">🚌 Arriva Bus X18</div>
+        <div class="tc-detail">From Alnwick and Berwick-upon-Tweed. Stops in Bamburgh village, 5 min walk to castle.</div>
+      </div>
+      <div class="transport-card">
+        <div class="tc-header">🚗 By Car</div>
+        <div class="tc-detail">Off the B1342, signed from the A1. About 50 miles north of Newcastle.</div>
+      </div>
     </section>
 
     <div class="ornament-sm"></div>
-
     <section class="fade-section">
       <h2>Terrain &amp; Accessibility</h2>
-      <div class="terrain-chips"><span class="chip amber">🦽 Partial Access</span><span class="chip amber">📐 Steep in Places</span><span class="chip amber">🌬️ Exposed & Windy</span></div><p class="terrain-note">The castle grounds have uneven grass and gravel paths. The State Rooms are accessible via a lift. Some areas including the keep involve steep steps. The approach from the village car park is relatively flat. Wheelchair-accessible toilets available. The beach below is sandy and not wheelchair-friendly.</p>
+      <div class="terrain-chips">
+        <span class="chip green">♿ Ground Floor Accessible</span>
+        <span class="chip amber">📐 Hilltop Position</span>
+        <span class="chip green">🚶 Paved Paths Inside</span>
+        <span class="chip green">💺 Seating Available</span>
+        <span class="chip amber">🏛️ Stairs to Upper Floors</span>
+      </div>
+      <p class="terrain-note">The castle is on a basalt outcrop with a steep approach. Once inside, the ground floor rooms including the Armstrong Museum are accessible. Upper floors require stairs. The beach below is accessible from the village. Assistance dogs welcome.</p>
     </section>
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Visitor Reviews</h2>
-      <div id="reviewsBox"><p class="terrain-note">Loading reviews...</p></div>
+      <div id="reviewsBox">
+        <p class="terrain-note">Loading reviews...</p>
+      </div>
     </section>
 
   </div>
@@ -331,12 +292,10 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <div class="sidebar-map">🗺️ Map coming soon</div>
       <a href="https://www.google.com/maps/dir/?api=1&destination=55.6089,-1.7098" target="_blank" class="sidebar-directions">📍 Get Directions</a>
     </div>
-
     <div class="sidebar-card" id="visitInfoCard" style="display:none">
       <h3>Visit Info</h3>
       <div id="visitInfoContent"></div>
     </div>
-
     <div class="sidebar-card" id="linksCard" style="display:none">
       <h3>Official Links</h3>
       <div id="linksContent"></div>
@@ -344,17 +303,53 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   </aside>
 </div>
 
-
 <div class="photo-break fade-section">
-  <img src="https://img.castlecore.uk/bamburgh-castle-4.jpg" alt="Bamburgh Castle">
-  <div class="pb-text"><p>"The beach below is empty for miles. The castle above has been occupied for fourteen centuries. Time moves differently here."</p></div>
+  <img src="https://img.castlecore.uk/bamburgh-castle-interior-2.jpg" alt="Bamburgh Castle">
+  <div class="pb-text">
+    <p>"Not every ruin is a tragedy. Some are love letters to the sky."</p>
+  </div>
 </div>
-
 
 <div class="full-width">
   <section class="fade-section">
     <h2>Nearby Sites</h2>
-    <div class="nearby-grid"><a href="./lindisfarne-castle.html" class="nearby-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/LindisfarneCastleHolyIsland.jpg/250px-LindisfarneCastleHolyIsland.jpg" alt="Lindisfarne Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nc-body"><div class="nc-name">Lindisfarne Castle</div><div class="nc-meta">★ 4.5 · 8 km</div></div></a><a href="./lindisfarne-priory.html" class="nearby-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg/250px-Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg" alt="Lindisfarne Priory" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nc-body"><div class="nc-name">Lindisfarne Priory</div><div class="nc-meta">★ 4.5 · 9 km</div></div></a><a href="./dunstanburgh-castle.html" class="nearby-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg/250px-Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg" alt="Dunstanburgh Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nc-body"><div class="nc-name">Dunstanburgh Castle</div><div class="nc-meta">★ 4.6 · 15 km</div></div></a><a href="./chillingham-castle-northumberland.html" class="nearby-card"><img src="https://img.castlecore.uk/chillingham-castle-northumberland.jpg" alt="Chillingham Castle (Northumberland)" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nc-body"><div class="nc-name">Chillingham Castle (Northumberland)</div><div class="nc-meta">★ 4.4 · 16 km</div></div></a><a href="./chillingham-castle.html" class="nearby-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Chillingham_Castle_north_front.jpg/250px-Chillingham_Castle_north_front.jpg" alt="Chillingham Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nc-body"><div class="nc-name">Chillingham Castle</div><div class="nc-meta">★ 4.2 · 16 km</div></div></a></div>
+    <div class="nearby-grid" id="nearbyGrid">
+      <a href="lindisfarne-castle.html" class="nearby-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/LindisfarneCastleHolyIsland.jpg/500px-LindisfarneCastleHolyIsland.jpg" alt="Lindisfarne Castle" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">Lindisfarne Castle</div>
+            <div class="nc-meta">5.1 mi · castle</div>
+          </div>
+        </a>
+        <a href="lindisfarne-priory.html" class="nearby-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg/500px-Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg" alt="Lindisfarne Priory" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">Lindisfarne Priory</div>
+            <div class="nc-meta">5.5 mi · abbey</div>
+          </div>
+        </a>
+        <a href="dunstanburgh-castle.html" class="nearby-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg/500px-Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg" alt="Dunstanburgh Castle" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">Dunstanburgh Castle</div>
+            <div class="nc-meta">9.3 mi · castle</div>
+          </div>
+        </a>
+        <a href="chillingham-castle-northumberland.html" class="nearby-card">
+          <img src="https://img.castlecore.uk/chillingham-castle-northumberland.jpg" alt="Chillingham Castle (Northumberland)" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">Chillingham Castle (Northumberland)</div>
+            <div class="nc-meta">9.7 mi · castle</div>
+          </div>
+        </a>
+        <a href="chillingham-castle.html" class="nearby-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Chillingham_Castle_north_front.jpg/500px-Chillingham_Castle_north_front.jpg" alt="Chillingham Castle" loading="lazy">
+          <div class="nc-body">
+            <div class="nc-name">Chillingham Castle</div>
+            <div class="nc-meta">9.8 mi · castle</div>
+          </div>
+        </a>
+    </div>
   </section>
 </div>
 
@@ -382,7 +377,7 @@ window.addEventListener('scroll',()=>document.getElementById('floatNav').classLi
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.fade-section').forEach(el=>obs.observe(el));
 
-const lbImages=["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/1280px-Bamburgh_Castle%2C_beautiful_day.jpg","https://img.castlecore.uk/bamburgh-castle-2.jpg","https://img.castlecore.uk/bamburgh-castle-3.jpg","https://img.castlecore.uk/bamburgh-castle-4.jpg","https://img.castlecore.uk/bamburgh-castle-5.jpg","https://img.castlecore.uk/bamburgh-castle-interior-2.jpg","https://img.castlecore.uk/bamburgh-castle-interior-3.jpg","https://img.castlecore.uk/bamburgh-castle-interior-4.jpg","https://img.castlecore.uk/bamburgh-castle-interior-5.jpg","https://img.castlecore.uk/bamburgh-castle-coast-2.jpg","https://img.castlecore.uk/bamburgh-castle-coast-3.jpg","https://img.castlecore.uk/bamburgh-castle-coast-4.jpg","https://img.castlecore.uk/bamburgh-castle-coast-5.jpg"];
+const lbImages=["https://img.castlecore.uk/bamburgh-castle-2.jpg","https://img.castlecore.uk/bamburgh-castle-3.jpg","https://img.castlecore.uk/bamburgh-castle-4.jpg","https://img.castlecore.uk/bamburgh-castle-5.jpg","https://img.castlecore.uk/bamburgh-castle-interior-2.jpg","https://img.castlecore.uk/bamburgh-castle-interior-3.jpg","https://img.castlecore.uk/bamburgh-castle-interior-4.jpg","https://img.castlecore.uk/bamburgh-castle-interior-5.jpg","https://img.castlecore.uk/bamburgh-castle-coast-2.jpg","https://img.castlecore.uk/bamburgh-castle-coast-3.jpg","https://img.castlecore.uk/bamburgh-castle-coast-4.jpg","https://img.castlecore.uk/bamburgh-castle-coast-5.jpg"];
 let lbIdx=0;
 function openLb(i){lbIdx=i;const lb=document.getElementById('lightbox');lb.querySelector('img').src=lbImages[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;lb.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
@@ -390,23 +385,82 @@ function lbNav(d){lbIdx=(lbIdx+d+lbImages.length)%lbImages.length;document.getEl
 document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1)});
 document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLb()});
 
-const SLUG='bamburgh-castle';
-function toggleSave(){let s=JSON.parse(localStorage.getItem('cc_saved')||'[]');const i=s.indexOf(SLUG);if(i>=0)s.splice(i,1);else s.push(SLUG);localStorage.setItem('cc_saved',JSON.stringify(s));document.querySelectorAll('.action-save').forEach(b=>{const v=s.includes(SLUG);b.classList.toggle('saved',v);b.innerHTML=v?'♥ Saved':'♡ Save'})}
-(function(){const s=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(s.includes(SLUG))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
-function shareThis(){if(navigator.share)navigator.share({title:'Bamburgh Castle — castlecore',url:location.href}).catch(()=>{});else{navigator.clipboard.writeText(location.href);alert('Link copied!')}}
+function toggleSave(){
+  let saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');
+  const slug='bamburgh-castle';
+  const idx=saved.indexOf(slug);
+  if(idx>=0)saved.splice(idx,1);else saved.push(slug);
+  localStorage.setItem('cc_saved',JSON.stringify(saved));
+  document.querySelectorAll('.action-save').forEach(btn=>{
+    const isSaved=saved.includes(slug);
+    btn.classList.toggle('saved',isSaved);
+    btn.innerHTML=isSaved?'♥ Saved':'♡ Save';
+  });
+}
+(function(){const saved=JSON.parse(localStorage.getItem('cc_saved')||'[]');if(saved.includes('bamburgh-castle'))document.querySelectorAll('.action-save').forEach(b=>{b.classList.add('saved');b.innerHTML='♥ Saved'})})();
+
+function shareThis(){
+  if(navigator.share)navigator.share({title:'Bamburgh Castle — castlecore',url:location.href}).catch(()=>{});
+  else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
+}
 
 const YT_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Bamburgh%20Castle+drone+cinematic&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key='+YT_KEY)
-.then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
+fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent('Bamburgh Castle drone cinematic')}&type=video&videoDuration=medium&relevanceLanguage=en&maxResults=3&key=${YT_KEY}`)
+.then(r=>r.json()).then(d=>{
+  const grid=document.getElementById('ytGrid');
+  if(!d.items||!d.items.length){grid.innerHTML='<p class="terrain-note">No videos available.</p>';return}
+  grid.innerHTML=d.items.map(v=>`<iframe src="https://www.youtube.com/embed/${v.id.videoId}" allowfullscreen loading="lazy"></iframe>`).join('');
+}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Bamburgh Castle Northumberland England',locationBias:{circle:{center:{latitude:55.6089,longitude:-1.7098},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
-  const place=d.places&&d.places[0];if(!place)return;
-  if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
-  if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}
+fetch('https://places.googleapis.com/v1/places:searchText',{
+  method:'POST',
+  headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},
+  body:JSON.stringify({textQuery:'Bamburgh Castle Northumberland',locationBias:{circle:{center:{latitude:55.6089,longitude:-1.7098},radius:1000}},maxResultCount:1})
+}).then(r=>r.json()).then(d=>{
+  const place=d.places&&d.places[0];
+  if(!place)return;
+  if(place.reviews&&place.reviews.length){
+    const box=document.getElementById('reviewsBox');
+    box.innerHTML=place.reviews.slice(0,5).map(r=>{
+      const stars='★'.repeat(Math.round(r.rating||0));
+      const author=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';
+      const txt=(r.text&&r.text.text)||'';
+      const time=r.relativePublishTimeDescription||'';
+      return '<div class="review-card"><div class="review-header"><span class="review-author">'+author+'</span><span class="review-rating">'+stars+'</span><span class="review-time">'+time+'</span></div><p class="review-text">"'+txt+'"</p></div>';
+    }).join('');
+  }
+  if(place.photos&&place.photos.length){
+    place.photos.slice(0,8).forEach(p=>{
+      lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY);
+    });
+    const more=document.querySelector('.pg-more');
+    if(more)more.textContent='+'+(lbImages.length-4)+' photos';
+  }
   const hours=place.currentOpeningHours||place.regularOpeningHours;
-  if(hours&&hours.weekdayDescriptions){const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const today=days[new Date().getDay()];const todayH=hours.weekdayDescriptions.find(h=>h.startsWith(today))||hours.weekdayDescriptions[0];const isOpen=hours.openNow;const st=isOpen?'<span style="color:#2e7d32;font-weight:600">Open now</span>':'<span style="color:#c62828;font-weight:600">Closed</span>';const all=hours.weekdayDescriptions.join('<br>');const el=document.getElementById('hoursInline');el.style.display='';el.innerHTML='<div style="margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:3px"><div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem"><span>🕐</span><span style="font-family:Cinzel,serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faded)">Opening Hours</span></div><div style="font-size:.95rem;color:var(--ink)">'+st+' · '+todayH+'</div><span class="visit-hours-toggle" onclick="this.nextElementSibling.classList.toggle(\'open\')" >See all hours ▾</span><div class="visit-hours-full">'+all+'</div></div>'}
-  const li=[];if(place.websiteUri){const dm=new URL(place.websiteUri).hostname.replace('www.','');li.push('<div class="link-item"><span class="link-icon">🌐</span><a href="'+place.websiteUri+'" target="_blank" rel="noopener">'+dm+'</a></div>')}if(place.googleMapsUri){li.push('<div class="link-item"><span class="link-icon">📍</span><a href="'+place.googleMapsUri+'" target="_blank" rel="noopener">Google Maps</a></div>')}if(li.length){document.getElementById('linksCard').style.display='';document.getElementById('linksContent').innerHTML=li.join('')}
+  if(hours&&hours.weekdayDescriptions){
+    const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const today=days[new Date().getDay()];
+    const todayHours=hours.weekdayDescriptions.find(h=>h.startsWith(today))||hours.weekdayDescriptions[0];
+    const isOpen=hours.openNow;
+    const statusText=isOpen?'<span style="color:#2e7d32;font-weight:600">Open now</span>':'<span style="color:#c62828;font-weight:600">Closed</span>';
+    const allHours=hours.weekdayDescriptions.join('<br>');
+    const hoursEl=document.getElementById('hoursInline');
+    hoursEl.style.display='';
+    hoursEl.innerHTML='<div style="margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:3px"><div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem"><span>🕐</span><span style="font-family:Cinzel,serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faded)">Opening Hours</span></div><div style="font-size:.95rem;color:var(--ink)">'+statusText+' · '+todayHours+'</div><span class="visit-hours-toggle" onclick="this.nextElementSibling.classList.toggle(\'open\')">See all hours ▾</span><div class="visit-hours-full">'+allHours+'</div></div>';
+  }
+  const linkItems=[];
+  if(place.websiteUri){
+    const domain=new URL(place.websiteUri).hostname.replace('www.','');
+    linkItems.push('<div class="link-item"><span class="link-icon">🌐</span><a href="'+place.websiteUri+'" target="_blank" rel="noopener">'+domain+'</a></div>');
+  }
+  if(place.googleMapsUri){
+    linkItems.push('<div class="link-item"><span class="link-icon">📍</span><a href="'+place.googleMapsUri+'" target="_blank" rel="noopener">Google Maps</a></div>');
+  }
+  if(linkItems.length){
+    document.getElementById('linksCard').style.display='';
+    document.getElementById('linksContent').innerHTML=linkItems.join('');
+  }
 }).catch(()=>{});
 </script>
 </body>
