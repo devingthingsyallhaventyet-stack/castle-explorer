@@ -285,7 +285,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <h2>About</h2>
       <p class="drop-cap">There's a reason the two most important battles in Scottish history — Stirling Bridge and Bannockburn — were fought within sight of this castle. <span class="highlight">Control Stirling and you control the only route north.</span> William Wallace knew it. Robert the Bruce knew it. Every Scottish king knew it.</p>
       <p>The Great Hall, built by James IV in 1503, is the largest medieval banqueting hall in Scotland. Mary Queen of Scots was crowned here at nine months old. <span class="highlight">The Renaissance palace that James V added is the finest in Britain</span> — carved with grotesque figures, classical columns, and planetary symbols that scholars still argue about.</p>
-      <p>Stand on the castle esplanade and you can see seven battlefields. The Wallace Monument rises from the trees to the northeast. <span class="highlight">This is where Scottish history happened, and it knows it.</span></p>
+      <p>Stand on the castle esplanade and you can see seven battlefields stretching to the horizon. The Wallace Monument rises from the trees to the northeast. <span class="highlight">No other castle in Britain wears its history so visibly on the landscape around it.</span></p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -302,18 +302,17 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
     <section class="fade-section">
       <h2>Getting There</h2>
-      <div class="transport-card">
-        <div class="tc-header">📍 Directions</div>
-        <div class="tc-detail">Use the link below for directions to Stirling Castle.</div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=56.1239,-3.9469">Get directions via Google Maps →</a>
-      </div>
+      <div class="transport-card"><div class="tc-header">🚗 By Car</div><div class="tc-detail">Signed from the M9 and M80 motorways. Castle car park at the top of the hill (limited spaces) or larger car parks in Stirling town centre.</div></div>
+      <div class="transport-card"><div class="tc-header">🚂 By Train</div><div class="tc-detail">Stirling station is a 20-minute uphill walk, or a short taxi. Direct trains from Edinburgh (50 min), Glasgow (30 min), and Perth (30 min).</div></div>
+      <div class="transport-card"><div class="tc-header">🚌 By Bus</div><div class="tc-detail">Stirling bus station is a 15-minute walk. First Bus and Citylink services run from Edinburgh, Glasgow, and Perth. Local buses 51 and 52 go closer to the castle.</div></div>
+      <div class="transport-card"><div class="tc-header">✈️ By Air</div><div class="tc-detail">Edinburgh Airport (EDI) ~35 miles · Glasgow Airport (GLA) ~30 miles</div></div>
     </section>
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Terrain &amp; Accessibility</h2>
-      <p class="terrain-note">Terrain details for Stirling Castle. Check before visiting if you have accessibility needs.</p>
+      <div class="terrain-chips"><span class="chip amber">🦽 Partial Access</span><span class="chip amber">📐 Steep Approach</span><span class="chip amber">🪨 Cobblestones</span></div><p class="terrain-note">The approach to the castle is up a steep cobbled road. A courtesy vehicle runs from the lower car park for visitors with mobility needs. Once inside, the Great Hall, Chapel Royal, and most courtyard areas are accessible. The palace has a virtual tour for areas with stairs. Accessible toilets available.</p>
     </section>
 
     <div class="ornament-sm"></div>
@@ -350,16 +349,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="pb-text"><p>"Seven battlefields are visible from these walls. Every one of them was fought over this view."</p></div>
 </div>
 
-
-<div class="full-width">
-  <section class="fade-section" style="padding-top:1.5rem">
-    <h2>More Photos</h2>
-    <div class="gallery-scroll">
-      <div class="g-item"><img src="https://img.castlecore.uk/stirling-castle-interior-4.jpg" alt="" onclick="openLb(7)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/stirling-castle-interior-5.jpg" alt="" onclick="openLb(8)" loading="lazy"></div>
-    </div>
-  </section>
-</div>
 
 <div class="full-width">
   <section class="fade-section">
@@ -410,7 +399,7 @@ fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Stirling%20Ca
 .then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Stirling Castle Stirling',locationBias:{circle:{center:{latitude:56.1239,longitude:-3.9469},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
+fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Stirling Castle Stirling Scotland',locationBias:{circle:{center:{latitude:56.1239,longitude:-3.9469},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];if(!place)return;
   if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
   if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}

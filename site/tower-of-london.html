@@ -303,18 +303,17 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
     <section class="fade-section">
       <h2>Getting There</h2>
-      <div class="transport-card">
-        <div class="tc-header">📍 Directions</div>
-        <div class="tc-detail">Use the link below for directions to Tower of London.</div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=51.5081,-0.0759">Get directions via Google Maps →</a>
-      </div>
+      <div class="transport-card"><div class="tc-header">🚇 By Underground</div><div class="tc-detail">Tower Hill station (District &amp; Circle lines) is a 5-minute walk. The castle is clearly signposted from the station exit.</div></div>
+      <div class="transport-card"><div class="tc-header">🚌 By Bus</div><div class="tc-detail">Routes 15, 42, 78, 100, and RV1 stop nearby. The closest stop is Tower of London on Tower Hill.</div></div>
+      <div class="transport-card"><div class="tc-header">🚗 By Car</div><div class="tc-detail">Limited parking in the area. The nearest NCP car park is on Lower Thames Street. Congestion charge zone applies on weekdays.</div></div>
+      <div class="transport-card"><div class="tc-header">🚢 By River</div><div class="tc-detail">Thames Clippers river bus stops at Tower Pier, directly outside the castle entrance.</div></div>
     </section>
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Terrain &amp; Accessibility</h2>
-      <p class="terrain-note">Terrain details for Tower of London. Check before visiting if you have accessibility needs.</p>
+      <div class="terrain-chips"><span class="chip green">🦽 Mostly Accessible</span><span class="chip amber">🪨 Cobblestones</span><span class="chip green">📶 Step-Free Routes Available</span></div><p class="terrain-note">The Tower has step-free access to most areas including the Crown Jewels. Cobblestone surfaces throughout — wheelchair users should use the smooth paths. Accessible toilets available. Some towers have narrow spiral staircases with no lift access. Free access guides for visitors with disabilities.</p>
     </section>
 
     <div class="ornament-sm"></div>
@@ -350,7 +349,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <img src="https://img.castlecore.uk/tower-of-london-4.jpg" alt="Tower of London">
   <div class="pb-text"><p>"Every stone in this place has witnessed something that would change the course of a nation."</p></div>
 </div>
-
 
 
 <div class="full-width">
@@ -402,7 +400,7 @@ fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Tower%20of%20
 .then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Tower of London London',locationBias:{circle:{center:{latitude:51.5081,longitude:-0.0759},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
+fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Tower of London London England',locationBias:{circle:{center:{latitude:51.5081,longitude:-0.0759},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];if(!place)return;
   if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
   if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}

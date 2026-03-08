@@ -1,0 +1,10 @@
+const fs = require('fs');
+let d = fs.readFileSync('data.js', 'utf8');
+let castles = JSON.parse(d.slice(d.indexOf('['), d.lastIndexOf(']') + 1));
+const before = castles.length;
+castles = castles.filter(c => c.name !== 'Gardenmorris Castle');
+console.log('Removed:', before - castles.length, '| Total:', castles.length);
+const noImg = castles.filter(c => !c.image).length;
+console.log('Sites without image:', noImg);
+const output = 'const CASTLES = ' + JSON.stringify(castles, null, 2) + ';\n\nif (typeof module !== "undefined") module.exports = CASTLES;\n';
+fs.writeFileSync('data.js', output);

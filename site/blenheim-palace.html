@@ -286,7 +286,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <h2>About</h2>
       <p class="drop-cap">Blenheim isn't really a house. It's a <span class="highlight">victory monument disguised as a home</span>. John Vanbrugh designed it to rival Versailles, and the Duke's wife Sarah hated it — too big, too cold, too much like living inside a political statement. She wasn't wrong.</p>
       <p>But what a statement. The Great Hall is 67 feet high. The Long Library stretches 180 feet. The grounds — landscaped by Capability Brown — include a lake he created by damming a river, <span class="highlight">casually reshaping the geography of Oxfordshire</span> because the view needed improving.</p>
-      <p>Winston Churchill was born here in 1874, in a small room off the main hall. He proposed to Clementine in the Temple of Diana by the lake. He's buried in the churchyard half a mile away. <span class="highlight">The greatest Englishman of the 20th century bookended his life within sight of these walls.</span></p>
+      <p>Winston Churchill was born here in 1874, in a small room off the main hall. He proposed to Clementine in the Temple of Diana by the lake, and he's buried in the churchyard at Bladon, half a mile away. <span class="highlight">His life began and ended within sight of these walls.</span></p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -303,18 +303,17 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
     <section class="fade-section">
       <h2>Getting There</h2>
-      <div class="transport-card">
-        <div class="tc-header">📍 Directions</div>
-        <div class="tc-detail">Use the link below for directions to Blenheim Palace.</div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=51.8414,-1.3607">Get directions via Google Maps →</a>
-      </div>
+      <div class="transport-card"><div class="tc-header">🚗 By Car</div><div class="tc-detail">In Woodstock, 8 miles north of Oxford on the A44. Large car park on site. Well signed from the M40 (junction 9) and A34.</div></div>
+      <div class="transport-card"><div class="tc-header">🚌 By Bus</div><div class="tc-detail">Stagecoach S3 runs every 30 minutes from Oxford city centre to Woodstock (30 min). The bus stop is at the palace gates.</div></div>
+      <div class="transport-card"><div class="tc-header">🚂 By Train</div><div class="tc-detail">Oxford station is the nearest (8 miles), with direct trains from London Paddington (60 min). Take the S3 bus from the station to Woodstock.</div></div>
+      <div class="transport-card"><div class="tc-header">✈️ By Air</div><div class="tc-detail">London Heathrow (LHR) ~60 miles · Birmingham Airport (BHX) ~55 miles</div></div>
     </section>
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Terrain &amp; Accessibility</h2>
-      <p class="terrain-note">Terrain details for Blenheim Palace. Check before visiting if you have accessibility needs.</p>
+      <div class="terrain-chips"><span class="chip green">🦽 Mostly Accessible</span><span class="chip green">🌿 Gardens on Grass</span><span class="chip green">👶 Pushchair Friendly</span></div><p class="terrain-note">The Palace State Rooms are fully wheelchair accessible via ramps and a lift. The formal gardens have gravel paths suitable for wheelchairs. The wider parkland has grass paths that may be difficult in wet weather. Powered mobility scooters available to hire. Accessible toilets throughout. Assistance dogs welcome everywhere.</p>
     </section>
 
     <div class="ornament-sm"></div>
@@ -351,16 +350,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="pb-text"><p>"Too grand for a home, too beautiful for a monument. Blenheim is England showing off."</p></div>
 </div>
 
-
-<div class="full-width">
-  <section class="fade-section" style="padding-top:1.5rem">
-    <h2>More Photos</h2>
-    <div class="gallery-scroll">
-      <div class="g-item"><img src="https://img.castlecore.uk/blenheim-palace-interior-4.jpg" alt="" onclick="openLb(7)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/blenheim-palace-interior-5.jpg" alt="" onclick="openLb(8)" loading="lazy"></div>
-    </div>
-  </section>
-</div>
 
 <div class="full-width">
   <section class="fade-section">
@@ -411,7 +400,7 @@ fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Blenheim%20Pa
 .then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Blenheim Palace Oxfordshire',locationBias:{circle:{center:{latitude:51.8414,longitude:-1.3607},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
+fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Blenheim Palace Oxfordshire England',locationBias:{circle:{center:{latitude:51.8414,longitude:-1.3607},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];if(!place)return;
   if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
   if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}

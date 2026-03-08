@@ -303,18 +303,17 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
     <section class="fade-section">
       <h2>Getting There</h2>
-      <div class="transport-card">
-        <div class="tc-header">📍 Directions</div>
-        <div class="tc-detail">Use the link below for directions to Bamburgh Castle.</div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=55.6089,-1.7098">Get directions via Google Maps →</a>
-      </div>
+      <div class="transport-card"><div class="tc-header">🚗 By Car</div><div class="tc-detail">On the B1342 off the A1, about 16 miles north of Alnwick. Free car park in Bamburgh village, a short walk to the castle entrance.</div></div>
+      <div class="transport-card"><div class="tc-header">🚌 By Bus</div><div class="tc-detail">Arriva X18 runs from Newcastle to Berwick-upon-Tweed via Bamburgh. The Bamburgh village stop is a 5-minute walk from the castle.</div></div>
+      <div class="transport-card"><div class="tc-header">🚂 By Train</div><div class="tc-detail">Nearest station is Chathill (4 miles) on the East Coast Main Line. Limited services — Alnmouth station (15 miles) has more frequent trains from London and Edinburgh.</div></div>
+      <div class="transport-card"><div class="tc-header">✈️ By Air</div><div class="tc-detail">Newcastle Airport (NCL) ~55 miles · Edinburgh Airport (EDI) ~80 miles</div></div>
     </section>
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Terrain &amp; Accessibility</h2>
-      <p class="terrain-note">Terrain details for Bamburgh Castle. Check before visiting if you have accessibility needs.</p>
+      <div class="terrain-chips"><span class="chip amber">🦽 Partial Access</span><span class="chip amber">📐 Steep in Places</span><span class="chip amber">🌬️ Exposed & Windy</span></div><p class="terrain-note">The castle grounds have uneven grass and gravel paths. The State Rooms are accessible via a lift. Some areas including the keep involve steep steps. The approach from the village car park is relatively flat. Wheelchair-accessible toilets available. The beach below is sandy and not wheelchair-friendly.</p>
     </section>
 
     <div class="ornament-sm"></div>
@@ -351,20 +350,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="pb-text"><p>"The beach below is empty for miles. The castle above has been occupied for fourteen centuries. Time moves differently here."</p></div>
 </div>
 
-
-<div class="full-width">
-  <section class="fade-section" style="padding-top:1.5rem">
-    <h2>More Photos</h2>
-    <div class="gallery-scroll">
-      <div class="g-item"><img src="https://img.castlecore.uk/bamburgh-castle-interior-4.jpg" alt="" onclick="openLb(7)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/bamburgh-castle-interior-5.jpg" alt="" onclick="openLb(8)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/bamburgh-castle-coast-2.jpg" alt="" onclick="openLb(9)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/bamburgh-castle-coast-3.jpg" alt="" onclick="openLb(10)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/bamburgh-castle-coast-4.jpg" alt="" onclick="openLb(11)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/bamburgh-castle-coast-5.jpg" alt="" onclick="openLb(12)" loading="lazy"></div>
-    </div>
-  </section>
-</div>
 
 <div class="full-width">
   <section class="fade-section">
@@ -415,7 +400,7 @@ fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Bamburgh%20Ca
 .then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Bamburgh Castle Northumberland',locationBias:{circle:{center:{latitude:55.6089,longitude:-1.7098},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
+fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Bamburgh Castle Northumberland England',locationBias:{circle:{center:{latitude:55.6089,longitude:-1.7098},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];if(!place)return;
   if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
   if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}

@@ -286,7 +286,7 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
       <h2>About</h2>
       <p class="drop-cap">Warwick is the castle that refuses to become a museum. Yes, it's over a thousand years old. Yes, it has dungeons and a ghost tower and suits of armour lining the halls. But it also has <span class="highlight">the world's largest working trebuchet</span>, which launches flaming projectiles across the river every day at 5pm.</p>
       <p>The castle was the seat of the Earls of Warwick — the most powerful family in medieval England. Richard Neville, the "Kingmaker," literally decided who sat on the English throne. <span class="highlight">When you had Warwick on your side, you were king. When you didn't, you were dead.</span></p>
-      <p>Today it's one of the most visited castles in England, and for good reason — it has everything. <span class="highlight">Tower climbs, dungeon tours, falconry displays, and enough history to fill a semester.</span></p>
+      <p>It's one of the most visited castles in England, and the experience matches the history — <span class="highlight">tower climbs with panoramic views, candlelit dungeon tours, live falconry, and jousting displays on the riverbank.</span></p>
       <div id="hoursInline" style="display:none"></div>
     </section>
 
@@ -303,18 +303,16 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
     <section class="fade-section">
       <h2>Getting There</h2>
-      <div class="transport-card">
-        <div class="tc-header">📍 Directions</div>
-        <div class="tc-detail">Use the link below for directions to Warwick Castle.</div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=52.2793,-1.5849">Get directions via Google Maps →</a>
-      </div>
+      <div class="transport-card"><div class="tc-header">🚗 By Car</div><div class="tc-detail">Just off the M40 (junction 15), well signposted from the motorway. Paid car park on-site with overflow parking available on busy days.</div></div>
+      <div class="transport-card"><div class="tc-header">🚂 By Train</div><div class="tc-detail">Warwick station is a 10-minute walk. Direct trains from Birmingham Moor Street (25 min) and London Marylebone (90 min via Chiltern Railways).</div></div>
+      <div class="transport-card"><div class="tc-header">🚌 By Bus</div><div class="tc-detail">Stagecoach X17 from Coventry and Leamington Spa stops in Warwick town centre, a 5-minute walk to the castle.</div></div>
     </section>
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Terrain &amp; Accessibility</h2>
-      <p class="terrain-note">Terrain details for Warwick Castle. Check before visiting if you have accessibility needs.</p>
+      <div class="terrain-chips"><span class="chip green">🦽 Mostly Accessible</span><span class="chip amber">🪨 Uneven in Places</span><span class="chip green">👶 Pushchair Friendly</span></div><p class="terrain-note">Warwick Castle has good accessibility throughout the main grounds and many indoor exhibits. Wheelchair-accessible routes to the Great Hall, State Rooms, and most outdoor areas. The castle towers and dungeons involve narrow stairs without lift access. Complimentary wheelchair loan available. Accessible toilets and baby-changing facilities on site.</p>
     </section>
 
     <div class="ornament-sm"></div>
@@ -351,16 +349,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="pb-text"><p>"The Kingmaker chose who ruled England from these halls. The trebuchet he would have recognised still works."</p></div>
 </div>
 
-
-<div class="full-width">
-  <section class="fade-section" style="padding-top:1.5rem">
-    <h2>More Photos</h2>
-    <div class="gallery-scroll">
-      <div class="g-item"><img src="https://img.castlecore.uk/warwick-castle-interior-4.jpg" alt="" onclick="openLb(7)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/warwick-castle-interior-5.jpg" alt="" onclick="openLb(8)" loading="lazy"></div>
-    </div>
-  </section>
-</div>
 
 <div class="full-width">
   <section class="fade-section">
@@ -411,7 +399,7 @@ fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Warwick%20Cas
 .then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Warwick Castle Warwickshire',locationBias:{circle:{center:{latitude:52.2793,longitude:-1.5849},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
+fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Warwick Castle Warwickshire England',locationBias:{circle:{center:{latitude:52.2793,longitude:-1.5849},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];if(!place)return;
   if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
   if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}

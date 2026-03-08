@@ -301,18 +301,17 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
 
     <section class="fade-section">
       <h2>Getting There</h2>
-      <div class="transport-card">
-        <div class="tc-header">📍 Directions</div>
-        <div class="tc-detail">Use the link below for directions to Caernarfon Castle.</div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=53.1393,-4.2769">Get directions via Google Maps →</a>
-      </div>
+      <div class="transport-card"><div class="tc-header">🚗 By Car</div><div class="tc-detail">In the centre of Caernarfon, well signed from the A487 and A4086. Pay &amp; display car parks within walking distance, including the Castle Ditch car park adjacent to the walls.</div></div>
+      <div class="transport-card"><div class="tc-header">🚌 By Bus</div><div class="tc-detail">Regular services from Bangor (5/5X, ~25 min) and Porthmadog. The bus station is a 3-minute walk from the castle entrance.</div></div>
+      <div class="transport-card"><div class="tc-header">🚂 By Train</div><div class="tc-detail">Nearest mainline station is Bangor (9 miles), with direct trains from London Euston, Chester, and Crewe. The Welsh Highland Railway heritage line also stops in Caernarfon.</div></div>
+      <div class="transport-card"><div class="tc-header">✈️ By Air</div><div class="tc-detail">Liverpool John Lennon Airport (LPL) ~85 miles · Manchester Airport (MAN) ~95 miles</div></div>
     </section>
 
     <div class="ornament-sm"></div>
 
     <section class="fade-section">
       <h2>Terrain &amp; Accessibility</h2>
-      <p class="terrain-note">Terrain details for Caernarfon Castle. Check before visiting if you have accessibility needs.</p>
+      <div class="terrain-chips"><span class="chip amber">🦽 Partial Access</span><span class="chip amber">📐 Steep Stairs in Towers</span><span class="chip amber">🪨 Uneven Surfaces</span></div><p class="terrain-note">The ground floor and courtyard areas are mostly accessible for wheelchair users. The wall-walk and tower interiors involve steep spiral staircases without lift access. Uneven stone surfaces throughout. An accessible virtual tour of the towers is available in the exhibition space. Accessible toilets on site.</p>
     </section>
 
     <div class="ornament-sm"></div>
@@ -349,16 +348,6 @@ footer .logo-footer{font-family:'Cinzel Decorative',serif;font-size:.85rem;color
   <div class="pb-text"><p>"The walls of Constantinople inspired these walls. Edward I wanted the Welsh to see Rome in Snowdonia."</p></div>
 </div>
 
-
-<div class="full-width">
-  <section class="fade-section" style="padding-top:1.5rem">
-    <h2>More Photos</h2>
-    <div class="gallery-scroll">
-      <div class="g-item"><img src="https://img.castlecore.uk/caernarfon-castle-interior-4.jpg" alt="" onclick="openLb(7)" loading="lazy"></div>
-        <div class="g-item"><img src="https://img.castlecore.uk/caernarfon-castle-interior-5.jpg" alt="" onclick="openLb(8)" loading="lazy"></div>
-    </div>
-  </section>
-</div>
 
 <div class="full-width">
   <section class="fade-section">
@@ -409,7 +398,7 @@ fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Caernarfon%20
 .then(r=>r.json()).then(d=>{const g=document.getElementById('ytGrid');if(!d.items||!d.items.length){g.innerHTML='<p class="terrain-note">No videos available.</p>';return}g.innerHTML=d.items.map(v=>'<iframe src="https://www.youtube.com/embed/'+v.id.videoId+'" allowfullscreen loading="lazy"></iframe>').join('')}).catch(()=>{document.getElementById('ytGrid').innerHTML='<p class="terrain-note">Videos unavailable.</p>'});
 
 const GP_KEY='AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8';
-fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Caernarfon Castle Gwynedd',locationBias:{circle:{center:{latitude:53.1393,longitude:-4.2769},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
+fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'Content-Type':'application/json','X-Goog-Api-Key':GP_KEY,'X-Goog-FieldMask':'places.reviews,places.photos,places.websiteUri,places.currentOpeningHours,places.regularOpeningHours,places.googleMapsUri'},body:JSON.stringify({textQuery:'Caernarfon Castle Gwynedd Wales',locationBias:{circle:{center:{latitude:53.1393,longitude:-4.2769},radius:1000}},maxResultCount:1})}).then(r=>r.json()).then(d=>{
   const place=d.places&&d.places[0];if(!place)return;
   if(place.reviews&&place.reviews.length){document.getElementById('reviewsBox').innerHTML=place.reviews.slice(0,5).map(r=>{const s='★'.repeat(Math.round(r.rating||0));const a=(r.authorAttribution&&r.authorAttribution.displayName)||'Visitor';const t=(r.text&&r.text.text)||'';const tm=r.relativePublishTimeDescription||'';return '<div class="review-card"><div class="review-header"><span class="review-author">'+a+'</span><span class="review-rating">'+s+'</span><span class="review-time">'+tm+'</span></div><p class="review-text">"'+t+'"</p></div>'}).join('')}
   if(place.photos&&place.photos.length){place.photos.slice(0,8).forEach(p=>{lbImages.push('https://places.googleapis.com/v1/'+p.name+'/media?maxWidthPx=1200&key='+GP_KEY)});const m=document.querySelector('.pg-more');if(m)m.textContent='+'+(lbImages.length-4)+' photos'}
