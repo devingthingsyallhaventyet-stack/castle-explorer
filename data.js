@@ -63586,32 +63586,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Mucross Abbey",
-    "lat": 52.025,
-    "lng": -9.512,
-    "country": "Ireland",
-    "type": "abbey",
-    "county": "County Kerry",
-    "tags": [
-      "free",
-      "photogenic"
-    ],
-    "access": "free",
-    "rating": 4.5,
-    "reviewCount": 200,
-    "era": "15th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/mucross-abbey.jpg",
-    "description": "Iconic Franciscan friary with ancient yew tree in the cloister.",
-    "_index": 2478,
-    "gallery": [
-      "https://img.castlecore.uk/mucross-abbey-2.jpg",
-      "https://img.castlecore.uk/mucross-abbey-3.jpg",
-      "https://img.castlecore.uk/mucross-abbey-4.jpg",
-      "https://img.castlecore.uk/mucross-abbey-5.jpg"
-    ]
-  },
-  {
     "name": "Innisfallen Abbey",
     "lat": 52.033,
     "lng": -9.569,
