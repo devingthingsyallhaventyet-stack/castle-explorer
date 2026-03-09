@@ -1,0 +1,664 @@
+﻿Found 191 duplicate groups (280 entries to remove)
+
+1. KEEP: Abbey Knockmoy (abbey, 120 reviews)
+   DEL: Abbey Knockmoy Galway (abbey, 25 reviews)
+
+2. KEEP: Abbeyknockmoy (abbey, 100 reviews)
+   DEL: Abbeyknockmoy Abbey (abbey, 52 reviews)
+   DEL: Knockmoy Abbey (abbey, 40 reviews)
+
+3. KEEP: Aberdour Castle (castle, 1340 reviews)
+   DEL: Aberdour Castle Great Hall (castle, 780 reviews)
+
+4. KEEP: Aberedw Castle Rocks (castle, 80 reviews)
+   DEL: Aberedw Castle (castle, 16 reviews)
+
+5. KEEP: Abergavenny Castle Museum (castle, 800 reviews)
+   DEL: Abergavenny Castle (castle, 680 reviews)
+
+6. KEEP: Aboyne Castle (castle, 190 reviews)
+   DEL: Boyne Castle (castle, 100 reviews)
+
+7. KEEP: Acton Burnell Castle (Shropshire) (castle, 800 reviews)
+   DEL: Acton Burnell Castle (fortified house, 670 reviews)
+
+8. KEEP: Aghaboe Abbey (abbey, 65 reviews)
+   DEL: Aghaboe Abbey Laois (abbey, 20 reviews)
+
+9. KEEP: Annaghkeen Castle (tower house, 25 reviews)
+   DEL: Annaghkeen Castle Galway (tower house, 18 reviews)
+
+10. KEEP: Ardtermon Castle (tower house, 18 reviews)
+   DEL: Termon Castle (tower house, 12 reviews)
+
+11. KEEP: Aros Castle (castle, 80 reviews)
+   DEL: Aros Castle (Mull) (castle, 70 reviews)
+
+12. KEEP: Ashford Castle (castle, 8500 reviews)
+   DEL: Oxford Castle (castle, 2340 reviews)
+   DEL: Orford Castle (castle, 1800 reviews)
+   DEL: Guildford Castle (castle, 1450 reviews)
+   DEL: Farleigh Hungerford Castle (castle, 1120 reviews)
+   DEL: Stafford Castle (castle, 1100 reviews)
+   DEL: Wallingford Castle (castle, 800 reviews)
+   DEL: Eynsford Castle (castle, 780 reviews)
+   DEL: Lydford Castle (castle, 560 reviews)
+   DEL: Eynsford Castle Curtain Wall (castle, 350 reviews)
+   DEL: Thetford Castle (castle, 320 reviews)
+   DEL: Hereford Castle (castle, 300 reviews)
+   DEL: Ford Castle (castle, 280 reviews)
+   DEL: Strangford Castle (tower house, 130 reviews)
+   DEL: Mitford Castle (castle, 120 reviews)
+   DEL: Gosford Castle (castle, 120 reviews)
+   DEL: Cessford Castle (castle, 95 reviews)
+   DEL: Bedford Castle Mound (castle, 90 reviews)
+   DEL: Woodsford Castle (castle, 85 reviews)
+   DEL: Clifford Castle (castle, 80 reviews)
+   DEL: Bishop's Stortford Castle (castle, 80 reviews)
+   DEL: Longford Castle (castle, 20 reviews)
+   DEL: Hertford Castle (castle, 18 reviews)
+   DEL: Frankford Castle (tower house, 7 reviews)
+
+13. KEEP: Auckland Castle (palace, 1800 reviews)
+   DEL: Auckland Castle Chapel (castle, 1800 reviews)
+
+14. KEEP: Ballingarry Castle (tower house, 35 reviews)
+   DEL: Ballingarry Castle (Limerick) (tower house, 30 reviews)
+   DEL: Ballingarry Castle (Lim) (tower house, 15 reviews)
+
+15. KEEP: Ballintober Castle (castle, 340 reviews)
+   DEL: Ballintober Castle Mayo (castle, 70 reviews)
+   DEL: Ballintober Castle Roscommon (castle, 70 reviews)
+
+16. KEEP: Ballycarberry Castle (castle, 550 reviews)
+   DEL: Ballycarberry Castle Ruin (castle, 25 reviews)
+
+17. KEEP: Ballyclogh Castle (tower house, 65 reviews)
+   DEL: Ballyclogh Castle Cork (tower house, 15 reviews)
+
+18. KEEP: Ballyloughan Castle (Carlow) (castle, 85 reviews)
+   DEL: Ballyloughan Castle (castle, 65 reviews)
+   DEL: Ballyloughan Castle Carlow (castle, 15 reviews)
+
+19. KEEP: Ballynahinch Castle (castle, 3800 reviews)
+   DEL: Lochinch Castle (castle, 580 reviews)
+   DEL: Megginch Castle (castle, 80 reviews)
+   DEL: Inch Castle (castle, 25 reviews)
+   DEL: Ballynahinch Castle Tipperary (tower house, 20 reviews)
+
+20. KEEP: Barnard Castle Bowes Museum (castle, 5000 reviews)
+   DEL: Barnard Castle (castle, 1670 reviews)
+
+21. KEEP: Battle Abbey (Sussex) (abbey, 6000 reviews)
+   DEL: Battle Abbey (abbey, 3800 reviews)
+
+22. KEEP: Beddgelert Dinas Emrys Walk (hillfort, 700 reviews)
+   DEL: Dinas Emrys (hillfort, 68 reviews)
+
+23. KEEP: Belfast Castle (castle, 4200 reviews)
+   DEL: Fast Castle (castle, 450 reviews)
+
+24. KEEP: Benton Castle Exterior (castle, 120 reviews)
+   DEL: Benton Castle (castle, 40 reviews)
+
+25. KEEP: Berry Pomeroy Castle (Devon) (castle, 2500 reviews)
+   DEL: Berry Pomeroy Castle (castle, 1890 reviews)
+
+26. KEEP: Birr Castle (castle, 3200 reviews)
+   DEL: Birr Castle Gardens (castle, 165 reviews)
+
+27. KEEP: Black Castle (Wicklow) (castle, 250 reviews)
+   DEL: Black Castle (Wicklow Main) (castle, 30 reviews)
+
+28. KEEP: Bleddfa Castle Mound (castle, 40 reviews)
+   DEL: Bleddfa Castle (motte, 7 reviews)
+
+29. KEEP: Bolton Abbey (abbey, 7000 reviews)
+   DEL: Bolton Abbey (Tipperary) (abbey, 12 reviews)
+
+30. KEEP: Bolton Castle (Wensleydale) (castle, 3000 reviews)
+   DEL: Bolton Castle (castle, 2120 reviews)
+   DEL: Kimbolton Castle (castle, 680 reviews)
+
+31. KEEP: Borve Castle (castle, 80 reviews)
+   DEL: Borve Castle (Benbecula) (tower house, 40 reviews)
+   DEL: Borve Castle (Harris) (tower house, 22 reviews)
+
+32. KEEP: Brinklow Castle (castle, 150 reviews)
+   DEL: Brinklow Castle Motte (castle, 90 reviews)
+
+33. KEEP: Brougham Castle (Eden) (castle, 1800 reviews)
+   DEL: Brougham Castle (castle, 1560 reviews)
+
+34. KEEP: Broughton Castle (Banbury) (castle, 1200 reviews)
+   DEL: Broughton Castle (castle, 1100 reviews)
+
+35. KEEP: Builth Castle (castle, 100 reviews)
+   DEL: Builth Castle Mound (castle, 90 reviews)
+
+36. KEEP: Byland Abbey (Yorkshire) (abbey, 1800 reviews)
+   DEL: Byland Abbey (abbey, 1670 reviews)
+
+37. KEEP: Caerlaverock Castle (castle, 3200 reviews)
+   DEL: Caerlaverock Castle (New) (castle, 320 reviews)
+
+38. KEEP: Carnasserie Castle (tower house, 670 reviews)
+   DEL: Carnasserie Castle Views (castle, 520 reviews)
+
+39. KEEP: Castell Dinas Bran (castle, 2800 reviews)
+   DEL: Castell Dinas (castle, 380 reviews)
+
+40. KEEP: Castell Henllys Iron Age Fort (hillfort, 1800 reviews)
+   DEL: Castell Henllys (hillfort, 125 reviews)
+
+41. KEEP: Castle Acre Castle (Norfolk) (castle, 1200 reviews)
+   DEL: Castle Acre Castle (castle, 890 reviews)
+
+42. KEEP: Castle Acre Priory (Cluniac) (abbey, 2200 reviews)
+   DEL: Castle Acre Priory (abbey, 1890 reviews)
+
+43. KEEP: Castle Bernard (castle, 95 reviews)
+   DEL: Castle Bernard Bandon (castle, 15 reviews)
+
+44. KEEP: Castle Combe (castle, 280 reviews)
+   DEL: Castle Combe Village (castle, 150 reviews)
+
+45. KEEP: Castle Drogo (Dartmoor) (castle, 3500 reviews)
+   DEL: Castle Drogo (castle, 2800 reviews)
+
+46. KEEP: Castle Hacket (tower house, 20 reviews)
+   DEL: Castle Hackett (tower house, 10 reviews)
+
+47. KEEP: Castle Kennedy Gardens (castle, 1200 reviews)
+   DEL: Castle Kennedy (castle, 890 reviews)
+
+48. KEEP: Castle Lachlan (castle, 100 reviews)
+   DEL: Castle Lachlan (New) (castle, 55 reviews)
+
+49. KEEP: Castle Menzies Great Hall (castle, 780 reviews)
+   DEL: Castle Menzies (castle, 580 reviews)
+
+50. KEEP: Castle Murray (tower house, 55 reviews)
+   DEL: Castle Murray (Donegal) (castle, 18 reviews)
+
+51. KEEP: Castle Rising (Norfolk) (castle, 1800 reviews)
+   DEL: Castle Rising (castle, 1670 reviews)
+
+52. KEEP: Castlemore (castle, 30 reviews)
+   DEL: Castlemore Castle (Cork) (tower house, 8 reviews)
+
+53. KEEP: Castlerea Castle (Clonalis) (country house, 42 reviews)
+   DEL: Castlerea Castle (castle, 35 reviews)
+
+54. KEEP: Castletown Castle (Laois) (tower house, 10 reviews)
+   DEL: Castletown Castle Laois (tower house, 10 reviews)
+
+55. KEEP: Castletown House (palace, 2800 reviews)
+   DEL: Castletown House Kildare (castle, 800 reviews)
+
+56. KEEP: Caulfield Castle (tower house, 8 reviews)
+   DEL: Caulfield Castle (Tyrone) (castle, 8 reviews)
+
+57. KEEP: Cawdor Castle Gardens (castle, 4100 reviews)
+   DEL: Cawdor Castle (castle, 2670 reviews)
+
+58. KEEP: Cefnllys Castle Mound (castle, 150 reviews)
+   DEL: Cefnllys Castle (castle, 28 reviews)
+
+59. KEEP: Chepstow Castle Great Tower (castle, 5800 reviews)
+   DEL: Chepstow Castle (castle, 5200 reviews)
+
+60. KEEP: Chillingham Castle (Northumberland) (castle, 3000 reviews)
+   DEL: Chillingham Castle (castle, 2200 reviews)
+
+61. KEEP: Clara Castle (tower house, 560 reviews)
+   DEL: Clara Castle Kilkenny (tower house, 30 reviews)
+
+62. KEEP: Clare Castle (castle, 280 reviews)
+   DEL: Aclare Castle (tower house, 7 reviews)
+
+63. KEEP: Clonmacnoise (abbey, 4200 reviews)
+   DEL: Clonmacnoise Castle (castle, 22 reviews)
+
+64. KEEP: Clonmines (monastery, 150 reviews)
+   DEL: Clonmines Church (abbey, 20 reviews)
+
+65. KEEP: Clough Castle (castle, 320 reviews)
+   DEL: Clough Castle Down (castle, 30 reviews)
+
+66. KEEP: Cluny Castle Laggan (castle, 60 reviews)
+   DEL: Cluny Castle (castle, 40 reviews)
+
+67. KEEP: Colchester Castle (castle, 4800 reviews)
+   DEL: Rochester Castle (castle, 3200 reviews)
+   DEL: Portchester Castle (Roman) (castle, 3000 reviews)
+   DEL: Portchester Castle (castle, 2800 reviews)
+   DEL: Chester Castle (castle, 1560 reviews)
+
+68. KEEP: Conisbrough Castle (castle, 1890 reviews)
+   DEL: Brough Castle (castle, 890 reviews)
+   DEL: Brough Castle (Westmorland) (castle, 800 reviews)
+   DEL: Brough Castle Clifford Tower (castle, 280 reviews)
+
+69. KEEP: Conwy Town Walls Walk (castle, 3800 reviews)
+   DEL: Conwy Town Walls (town wall, 140 reviews)
+
+70. KEEP: Coolbanagher Castle (tower house, 25 reviews)
+   DEL: Banagher Castle (castle, 12 reviews)
+   DEL: Coolbanagher Castle (Laois) (tower house, 7 reviews)
+
+71. KEEP: Coolhull Castle (castle, 35 reviews)
+   DEL: Coolhull Castle Wexford (tower house, 25 reviews)
+
+72. KEEP: Creevelea Friary (friary, 180 reviews)
+   DEL: Creevelea Friary (Leitrim) (friary, 55 reviews)
+
+73. KEEP: Croxden Abbey (abbey, 560 reviews)
+   DEL: Croxden Abbey Remains (abbey, 300 reviews)
+
+74. KEEP: Dartmouth Castle (Devon) (castle, 2500 reviews)
+   DEL: Dartmouth Castle (castle, 1900 reviews)
+
+75. KEEP: Deel Castle Mayo (castle, 10 reviews)
+   DEL: Deel Castle (tower house, 0 reviews)
+
+76. KEEP: Desmond Castle (tower house, 1800 reviews)
+   DEL: Desmond Castle (Newcastle West) (castle, 380 reviews)
+   DEL: Adare Desmond Castle (castle, 340 reviews)
+   DEL: Desmond Castle Kinsale (tower house, 300 reviews)
+   DEL: Desmond Castle Newcastle West (castle, 180 reviews)
+
+77. KEEP: Doe Castle (castle, 1400 reviews)
+   DEL: Aghadoe (abbey, 420 reviews)
+   DEL: Aghadoe Church and Round Tower (abbey, 120 reviews)
+   DEL: Aghadoe Cathedral Kerry (abbey, 40 reviews)
+   DEL: Aghadoe Castle (castle, 28 reviews)
+
+78. KEEP: Donamon Castle (castle, 60 reviews)
+   DEL: Donamon Castle (Ros) (castle, 25 reviews)
+
+79. KEEP: Donore Castle (tower house, 120 reviews)
+   DEL: Donore Castle Meath (tower house, 30 reviews)
+   DEL: Donore Castle (Meath) (tower house, 20 reviews)
+   DEL: Donore Castle Westmeath (castle, 10 reviews)
+
+80. KEEP: Dornoch Castle (castle, 680 reviews)
+   DEL: Dornoch Castle Hotel (castle, 450 reviews)
+
+81. KEEP: Drimnagh Castle (castle, 680 reviews)
+   DEL: Drimnagh Castle (Louth) (tower house, 20 reviews)
+
+82. KEEP: Dryslwyn Castle Viewpoint (castle, 500 reviews)
+   DEL: Dryslwyn Castle (castle, 280 reviews)
+
+83. KEEP: Dundrum Castle (castle, 2800 reviews)
+   DEL: Drum Castle (tower house, 1670 reviews)
+   DEL: Dundrum Castle (Down) (castle, 1200 reviews)
+   DEL: Dundrum Castle Down (castle, 450 reviews)
+   DEL: Sundrum Castle (castle, 120 reviews)
+   DEL: Moydrum Castle (castle, 22 reviews)
+   DEL: Rathdrum Castle (tower house, 15 reviews)
+
+84. KEEP: Dunloe Castle (castle, 420 reviews)
+   DEL: Dunloe Castle Ogham Stones (castle, 55 reviews)
+
+85. KEEP: Dunluce Castle (castle, 9000 reviews)
+   DEL: Dunluce Castle Dark Hedges Tower (tower house, 250 reviews)
+
+86. KEEP: Dunmoe Castle (castle, 320 reviews)
+   DEL: Dunmoe Castle Keep (Meath) (castle, 130 reviews)
+
+87. KEEP: Dunmore Castle (castle, 250 reviews)
+   DEL: Dunmore Castle (Galway) (castle, 85 reviews)
+   DEL: Dunmore Castle Galway (castle, 30 reviews)
+   DEL: Dunmore Castle Kilkenny (castle, 25 reviews)
+
+88. KEEP: Dunsany Castle (castle, 560 reviews)
+   DEL: Any Castle (castle, 8 reviews)
+
+89. KEEP: Earl's Palace, Birsay (castle, 520 reviews)
+   DEL: Earl's Palace Birsay (palace, 280 reviews)
+
+90. KEEP: Edinburgh Castle (castle, 25000 reviews)
+   DEL: Bamburgh Castle (castle, 15000 reviews)
+   DEL: Dunstanburgh Castle (castle, 4500 reviews)
+   DEL: Burgh Castle (castle, 780 reviews)
+   DEL: Roxburgh Castle (castle, 30 reviews)
+
+91. KEEP: Ewenny Priory (abbey, 670 reviews)
+   DEL: Ewenny Priory Church (abbey, 280 reviews)
+
+92. KEEP: Farnham Castle (castle, 1780 reviews)
+   DEL: Rathfarnham Castle (castle, 42 reviews)
+
+93. KEEP: Framlingham Castle (Suffolk) (castle, 3800 reviews)
+   DEL: Framlingham Castle (castle, 2670 reviews)
+
+94. KEEP: Furness Abbey (Cumbria) (abbey, 3000 reviews)
+   DEL: Furness Abbey (abbey, 2120 reviews)
+
+95. KEEP: Goodrich Castle (Herefordshire) (castle, 3000 reviews)
+   DEL: Goodrich Castle (castle, 2800 reviews)
+
+96. KEEP: Granagh Castle (castle, 65 reviews)
+   DEL: Granagh Castle Kilkenny (tower house, 10 reviews)
+
+97. KEEP: Grannagh Castle (castle, 70 reviews)
+   DEL: Grannagh Castle (Waterford) (tower house, 35 reviews)
+
+98. KEEP: Greencastle Royal Castle (castle, 680 reviews)
+   DEL: Greencastle (castle, 480 reviews)
+   DEL: Greencastle (Down) (castle, 350 reviews)
+   DEL: Castle Roy (castle, 180 reviews)
+   DEL: Greencastle Donegal (castle, 80 reviews)
+
+99. KEEP: Grennan Castle (castle, 30 reviews)
+   DEL: Grennan Castle Thomastown (castle, 30 reviews)
+   DEL: Ballygrennan Castle (tower house, 10 reviews)
+
+100. KEEP: Gylen Castle Kerrera (castle, 680 reviews)
+   DEL: Gylen Castle (castle, 450 reviews)
+
+101. KEEP: Halton Castle (castle, 520 reviews)
+   DEL: Halton Castle (Cheshire) (castle, 340 reviews)
+   DEL: Alton Castle (castle, 240 reviews)
+   DEL: Dalton Castle (castle, 180 reviews)
+   DEL: Halton Castle Lancashire (castle, 150 reviews)
+
+102. KEEP: Hawarden Castle Old (castle, 400 reviews)
+   DEL: Hawarden Castle (castle, 320 reviews)
+   DEL: Hawarden Castle (Old) (castle, 95 reviews)
+
+103. KEEP: Hay Castle (castle, 650 reviews)
+   DEL: Fotheringhay Castle (castle, 380 reviews)
+
+104. KEEP: Holt Castle (castle, 180 reviews)
+   DEL: Carrigaholt Castle (tower house, 85 reviews)
+
+105. KEEP: Huntingtower Castle (castle, 1120 reviews)
+   DEL: Huntingtower Castle Painted Ceiling (castle, 780 reviews)
+
+106. KEEP: Hussey Tower (tower house, 120 reviews)
+   DEL: Hussey Tower (Boston) (castle, 110 reviews)
+
+107. KEEP: Inverlochy Castle (castle, 1120 reviews)
+   DEL: Old Inverlochy Castle (castle, 680 reviews)
+   DEL: Inverlochy Castle (Fort William) (castle, 550 reviews)
+
+108. KEEP: Jervaulx Abbey (Wensleydale) (abbey, 2000 reviews)
+   DEL: Jervaulx Abbey (abbey, 1230 reviews)
+
+109. KEEP: Jordan's Castle (tower house, 420 reviews)
+   DEL: Jordan's Castle Ardglass (tower house, 50 reviews)
+
+110. KEEP: Kellie Castle (castle, 1200 reviews)
+   DEL: Kellie Castle Gardens (castle, 1200 reviews)
+
+111. KEEP: Kells Priory (abbey, 1800 reviews)
+   DEL: Kells Priory Kilkenny (abbey, 500 reviews)
+   DEL: Kells Priory Meath (abbey, 300 reviews)
+
+112. KEEP: Kilcolman Castle Spenser (tower house, 50 reviews)
+   DEL: Kilcolman Castle (tower house, 32 reviews)
+
+113. KEEP: Kildavnet Castle (tower house, 58 reviews)
+   DEL: Carrickkildavnet Castle (tower house, 35 reviews)
+
+114. KEEP: Killaha Castle (tower house, 50 reviews)
+   DEL: Killaha Castle (Kerry) (tower house, 18 reviews)
+
+115. KEEP: Killeen Castle (castle, 42 reviews)
+   DEL: Killeen Castle Meath (castle, 30 reviews)
+
+116. KEEP: King John's Castle (castle, 5200 reviews)
+   DEL: King John's Castle (Carlingford) (castle, 580 reviews)
+
+117. KEEP: Kinlough Castle (tower house, 25 reviews)
+   DEL: Kinlough Castle (Mayo) (tower house, 14 reviews)
+
+118. KEEP: Kinnaird Castle (castle, 40 reviews)
+   DEL: Kinnaird Castle (Perthshire) (castle, 35 reviews)
+
+119. KEEP: Kirkstall Abbey (Leeds) (abbey, 4000 reviews)
+   DEL: Kirkstall Abbey (abbey, 2340 reviews)
+
+120. KEEP: Knock Castle (castle, 220 reviews)
+   DEL: Knock Castle (Skye) (castle, 55 reviews)
+   DEL: Knock Castle (Aberdeenshire) (tower house, 8 reviews)
+
+121. KEEP: Lews Castle (Stornoway) (castle, 1500 reviews)
+   DEL: Lews Castle (castle, 1400 reviews)
+
+122. KEEP: Lismore Castle (castle, 2800 reviews)
+   DEL: Lismore Castle Gardens (castle, 1800 reviews)
+
+123. KEEP: Llansteffan Castle (castle, 1120 reviews)
+   DEL: Llansteffan Castle Viewpoint (castle, 1000 reviews)
+
+124. KEEP: Ludlow Castle (Shropshire) (castle, 5000 reviews)
+   DEL: Ludlow Castle (castle, 4200 reviews)
+
+125. KEEP: Macroom Castle (castle, 95 reviews)
+   DEL: Croom Castle (castle, 25 reviews)
+
+126. KEEP: Margam Castle Victorian (castle, 2200 reviews)
+   DEL: Margam Castle (castle, 30 reviews)
+
+127. KEEP: Mathrafal Castle Mound (castle, 120 reviews)
+   DEL: Mathrafal Castle (castle, 20 reviews)
+
+128. KEEP: Mellifont Abbey (abbey, 2200 reviews)
+   DEL: Old Mellifont Abbey (abbey, 1200 reviews)
+
+129. KEEP: Mingary Castle Restored (castle, 680 reviews)
+   DEL: Mingary Castle (castle, 320 reviews)
+
+130. KEEP: Monkstown Castle (castle, 85 reviews)
+   DEL: Monkstown Castle Cork (castle, 45 reviews)
+
+131. KEEP: Moy Castle (castle, 110 reviews)
+   DEL: Moy Castle (Mull) (tower house, 85 reviews)
+
+132. KEEP: Mulgrave Castle (castle, 80 reviews)
+   DEL: Mulgrave Castle (Old) (castle, 80 reviews)
+   DEL: Mulgrave Castle (Old Main) (castle, 30 reviews)
+
+133. KEEP: Muncaster Castle (Eskdale) (castle, 3000 reviews)
+   DEL: Muncaster Castle (castle, 2200 reviews)
+
+134. KEEP: Muness Castle Unst (castle, 280 reviews)
+   DEL: Muness Castle (castle, 180 reviews)
+
+135. KEEP: New Slains Castle (castle, 1600 reviews)
+   DEL: Slains Castle (castle, 1200 reviews)
+
+136. KEEP: Newark Castle (Nottinghamshire) (castle, 1400 reviews)
+   DEL: Newark Castle (castle, 1120 reviews)
+   DEL: Newark Castle (Borders) (castle, 180 reviews)
+   DEL: Newark Castle (Fife) (castle, 95 reviews)
+
+137. KEEP: Newcastle Bridgend Castle (castle, 400 reviews)
+   DEL: Newcastle (Bridgend) (castle, 180 reviews)
+
+138. KEEP: Newport Castle (castle, 400 reviews)
+   DEL: Newport Castle (Pembs) (castle, 80 reviews)
+   DEL: Newport Castle (Pembs Main) (castle, 18 reviews)
+
+139. KEEP: Newtown Castle (tower house, 280 reviews)
+   DEL: Newtown Castle Burren (tower house, 30 reviews)
+
+140. KEEP: Okehampton Castle (Devon) (castle, 1800 reviews)
+   DEL: Okehampton Castle (castle, 1230 reviews)
+
+141. KEEP: Ormond Castle (castle, 650 reviews)
+   DEL: Ormond Castle Carrick (castle, 250 reviews)
+
+142. KEEP: Pallas Castle (tower house, 20 reviews)
+   DEL: Pallas Castle Galway (tower house, 20 reviews)
+   DEL: Shanpallas Castle (tower house, 8 reviews)
+
+143. KEEP: Parke's Castle (fortified house, 1200 reviews)
+   DEL: Parke's Castle (Leitrim) (castle, 780 reviews)
+
+144. KEEP: Penmon Priory Anglesey (abbey, 900 reviews)
+   DEL: Penmon Priory (abbey, 780 reviews)
+   DEL: Penmon Priory Church (abbey, 580 reviews)
+
+145. KEEP: Pennard Castle Gower (castle, 2000 reviews)
+   DEL: Pennard Castle (castle, 1230 reviews)
+
+146. KEEP: Pickering Castle (North Yorkshire) (castle, 2200 reviews)
+   DEL: Pickering Castle (castle, 1560 reviews)
+
+147. KEEP: Picton Castle Gardens (castle, 1600 reviews)
+   DEL: Picton Castle (castle, 1400 reviews)
+
+148. KEEP: Pluscarden Abbey Active (abbey, 1600 reviews)
+   DEL: Pluscarden Abbey (abbey, 1400 reviews)
+
+149. KEEP: Raby Castle (castle, 2890 reviews)
+   DEL: Raby Castle Deer Park (castle, 2500 reviews)
+
+150. KEEP: Raglan Castle Great Tower (castle, 5000 reviews)
+   DEL: Raglan Castle (castle, 3800 reviews)
+
+151. KEEP: Rathcroghan (castle, 320 reviews)
+   DEL: Rathcroghan Visitor Centre (castle, 180 reviews)
+   DEL: Rathcroghan Mound (fort, 40 reviews)
+
+152. KEEP: Ravenscraig Castle (castle, 780 reviews)
+   DEL: Ravenscraig Castle Fife (castle, 520 reviews)
+   DEL: Ravenscraig Castle (Fife) (castle, 40 reviews)
+   DEL: Craig Castle (tower house, 35 reviews)
+   DEL: Ravenscraig Castle (Aberdeenshire) (tower house, 20 reviews)
+
+153. KEEP: Ravensworth Castle (castle, 150 reviews)
+   DEL: Ravensworth Castle (Yorkshire) (castle, 150 reviews)
+
+154. KEEP: Red Castle (castle, 220 reviews)
+   DEL: Red Castle (Angus) (castle, 210 reviews)
+   DEL: Red Castle (Lunan Bay) (castle, 110 reviews)
+
+155. KEEP: Rhuddlan Castle (castle, 1670 reviews)
+   DEL: Rhuddlan Castle Towers (castle, 1200 reviews)
+
+156. KEEP: Roch Castle Exterior (castle, 600 reviews)
+   DEL: Roch Castle (castle, 350 reviews)
+
+157. KEEP: Roche Castle (castle, 780 reviews)
+   DEL: Castletownroche Castle (castle, 14 reviews)
+
+158. KEEP: Ross Castle (tower house, 6200 reviews)
+   DEL: Ross Castle (Killarney) (castle, 5000 reviews)
+   DEL: Portencross Castle (castle, 380 reviews)
+   DEL: Dalcross Castle (castle, 40 reviews)
+   DEL: Moross Castle (tower house, 10 reviews)
+
+159. KEEP: Rougemont Castle Exeter (castle, 800 reviews)
+   DEL: Rougemont Castle (castle, 280 reviews)
+
+160. KEEP: Ruthin Castle (castle, 1340 reviews)
+   DEL: Ruthin Castle Grounds (castle, 450 reviews)
+
+161. KEEP: Sandal Castle (castle, 520 reviews)
+   DEL: Sandal Castle Park (castle, 400 reviews)
+
+162. KEEP: Scalloway Castle Restored (castle, 620 reviews)
+   DEL: Scalloway Castle (castle, 450 reviews)
+
+163. KEEP: Scattery Island Monastic Site (abbey, 200 reviews)
+   DEL: Scattery Island (monastic site, 68 reviews)
+
+164. KEEP: Scotney Castle (Kent) (castle, 6000 reviews)
+   DEL: Scotney Castle (castle, 3200 reviews)
+
+165. KEEP: Scotstarvit Tower View (castle, 280 reviews)
+   DEL: Scotstarvit Tower (tower house, 120 reviews)
+
+166. KEEP: Shane Castle (castle, 95 reviews)
+   DEL: Drishane Castle (tower house, 30 reviews)
+
+167. KEEP: Shankill Castle (tower house, 120 reviews)
+   DEL: Shankill Castle Kilkenny (castle, 20 reviews)
+
+168. KEEP: Sissinghurst Castle (castle, 4500 reviews)
+   DEL: Hurst Castle (castle, 1560 reviews)
+
+169. KEEP: Sizergh Castle (Kendal) (castle, 2500 reviews)
+   DEL: Sizergh Castle (castle, 1800 reviews)
+
+170. KEEP: Skipness Castle (castle, 560 reviews)
+   DEL: Skipness Castle Chapel (castle, 420 reviews)
+
+171. KEEP: Snape Castle (castle, 150 reviews)
+   DEL: Snape Castle (Bedale) (castle, 100 reviews)
+
+172. KEEP: South Wingfield Manor (castle, 580 reviews)
+   DEL: Wingfield Manor (fortified house, 520 reviews)
+
+173. KEEP: Stokesay Castle (Shropshire) (castle, 3500 reviews)
+   DEL: Stokesay Castle (fortified house, 3200 reviews)
+
+174. KEEP: Stradbally Castle (tower house, 45 reviews)
+   DEL: Stradbally Castle Waterford (tower house, 20 reviews)
+
+175. KEEP: Swiss Cottage (castle, 780 reviews)
+   DEL: Swiss Cottage Cahir (castle, 350 reviews)
+
+176. KEEP: Thomastown Castle (castle, 14 reviews)
+   DEL: Thomastown Castle Tipperary (castle, 10 reviews)
+
+177. KEEP: Thoor Ballylee (tower house, 1600 reviews)
+   DEL: Ballylee Castle (tower house, 88 reviews)
+   DEL: Ballylee Castle (Thoor Ballylee) (tower house, 70 reviews)
+
+178. KEEP: Tintern Abbey (abbey, 7500 reviews)
+   DEL: Tintern Abbey (Ireland) (abbey, 980 reviews)
+   DEL: Tintern Abbey Wexford (abbey, 350 reviews)
+   DEL: Tintern Abbey Ireland (Main) (abbey, 52 reviews)
+
+179. KEEP: Tioram Castle Viewpoint (castle, 2800 reviews)
+   DEL: Tioram Castle (castle, 1800 reviews)
+   DEL: Tioram Castle Loch (castle, 1200 reviews)
+
+180. KEEP: Tomen y Mur Fort (fort, 280 reviews)
+   DEL: Tomen y Mur (fort, 75 reviews)
+
+181. KEEP: Tretower Court & Castle (castle, 1560 reviews)
+   DEL: Tretower Court (historic-house, 1200 reviews)
+   DEL: Tretower Court and Castle (castle, 680 reviews)
+
+182. KEEP: Trim Castle (castle, 5200 reviews)
+   DEL: Trim Castle Barbican (castle, 4200 reviews)
+   DEL: Antrim Castle Gardens (castle, 2200 reviews)
+   DEL: Leitrim Castle (castle, 15 reviews)
+
+183. KEEP: Tully Castle (fortified house, 780 reviews)
+   DEL: Grandtully Castle (tower house, 55 reviews)
+   DEL: Ardtully Castle (tower house, 30 reviews)
+   DEL: Tully Castle Kildare (castle, 15 reviews)
+
+184. KEEP: Tutbury Castle (Staffordshire) (castle, 2000 reviews)
+   DEL: Tutbury Castle (castle, 1560 reviews)
+
+185. KEEP: Usk Castle Gardens (castle, 550 reviews)
+   DEL: Usk Castle (castle, 380 reviews)
+
+186. KEEP: White Castle (castle, 1200 reviews)
+   DEL: White Castle Monmouthshire (castle, 600 reviews)
+
+187. KEEP: Whittington Castle (Shropshire) (castle, 800 reviews)
+   DEL: Whittington Castle (castle, 720 reviews)
+
+188. KEEP: Wigmore Castle (Herefordshire) (castle, 600 reviews)
+   DEL: Wigmore Castle (castle, 560 reviews)
+
+189. KEEP: Wilton Castle (castle, 200 reviews)
+   DEL: Wilton Castle (Herefordshire) (castle, 100 reviews)
+
+190. KEEP: Wiston Castle Mound (castle, 180 reviews)
+   DEL: Wiston Castle (castle, 150 reviews)
+
+191. KEEP: Wolvesey Castle (Palace) (castle, 800 reviews)
+   DEL: Wolvesey Castle (palace, 780 reviews)
+

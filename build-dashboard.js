@@ -34,20 +34,14 @@ const countries = [...new Set(sites.map(s => s.country))].sort();
 const countryOptions = countries.map(c => `<option value="${c}">${c}</option>`).join('');
 
 const rows = sites.map((s, i) => {
-  let badge;
-  let statusData;
-  if (s.cinematic) {
-    badge = '<span class="badge cinematic">✨ Cinematic</span>';
-    statusData = 'cinematic';
-  } else if (s.enriched) {
-    badge = '<span class="badge enriched">✅ Enriched</span>';
-    statusData = 'enriched';
-  } else {
-    badge = '<span class="badge not-enriched">❌ Not Yet</span>';
-    statusData = 'not';
-  }
-  return `<tr data-name="${s.name.toLowerCase()}" data-status="${statusData}" data-country="${s.country}">
-    <td>${i + 1}</td>
+  let badge, statusData;
+  if (s.cinematic) { badge = '<span class="badge cinematic">✨ Cinematic</span>'; statusData = 'cinematic'; }
+  else if (s.enriched) { badge = '<span class="badge enriched">✅ Enriched</span>'; statusData = 'enriched'; }
+  else { badge = '<span class="badge not-enriched">❌ Not Yet</span>'; statusData = 'not'; }
+  const eName = s.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+  return `<tr data-name="${s.name.toLowerCase()}" data-realname="${eName}" data-status="${statusData}" data-country="${s.country}">
+    <td class="num">${i + 1}</td>
+    <td class="del-cell"><button class="del-btn" onclick="markDelete(this)" title="Mark for deletion">✕</button></td>
     <td><a href="site/${s.slug}.html" target="_blank">${s.name}</a></td>
     <td>${s.type}</td>
     <td>${s.country}</td>
@@ -68,11 +62,11 @@ h1 { font-size: 1.5rem; margin-bottom: 4px; }
 .stats { color: #666; margin-bottom: 16px; font-size: .9rem; }
 .bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
 .bar-fill { height: 100%; background: #2e8b57; border-radius: 4px; transition: width .3s; }
-.filters { margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+.filters { margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .filters input { padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: .85rem; width: 260px; }
 .filters select { padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: .85rem; }
 table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
-th { text-align: left; padding: 10px 12px; background: #8b2335; color: #fff; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; position: sticky; top: 0; }
+th { text-align: left; padding: 10px 12px; background: #8b2335; color: #fff; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; position: sticky; top: 0; z-index: 10; }
 td { padding: 8px 12px; border-bottom: 1px solid #eee; font-size: .85rem; }
 tr:hover td { background: #fafafa; }
 a { color: #8b2335; text-decoration: none; }
@@ -82,6 +76,23 @@ a:hover { text-decoration: underline; }
 .not-enriched { background: #f8d7da; color: #721c24; }
 .cinematic { background: #d4e6f1; color: #1a5276; }
 .visible-count { font-size: .8rem; color: #999; margin-bottom: 8px; }
+
+/* Delete button */
+.del-cell { width: 36px; text-align: center; }
+.del-btn { background: none; border: 1px solid #ddd; color: #999; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: .8rem; line-height: 1; transition: all .15s; }
+.del-btn:hover { background: #f8d7da; border-color: #c0392b; color: #c0392b; }
+tr.marked-delete td { background: #fce4e4; text-decoration: line-through; color: #999; }
+tr.marked-delete .del-btn { background: #c0392b; color: #fff; border-color: #c0392b; }
+tr.marked-delete a { color: #999; }
+
+/* Delete queue banner */
+.delete-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #8b2335; color: #fff; padding: 12px 20px; z-index: 100; font-size: .9rem; box-shadow: 0 -2px 8px rgba(0,0,0,.2); }
+.delete-banner.active { display: flex; align-items: center; justify-content: space-between; }
+.delete-banner button { background: #fff; color: #8b2335; border: none; padding: 8px 16px; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: .85rem; margin-left: 8px; }
+.delete-banner button:hover { background: #f0ebe0; }
+.delete-banner .undo-btn { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.5); }
+.delete-banner .undo-btn:hover { background: rgba(255,255,255,.15); }
+.copy-toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 8px 20px; border-radius: 6px; font-size: .85rem; display: none; z-index: 200; }
 </style>
 </head>
 <body>
@@ -100,6 +111,7 @@ a:hover { text-decoration: underline; }
     <option value="enriched">Enriched</option>
     <option value="cinematic">Cinematic</option>
     <option value="not">Not Enriched</option>
+    <option value="marked">Marked for Deletion</option>
   </select>
   <select id="countryFilter" onchange="filterRows()">
     <option value="all">All Countries</option>
@@ -110,13 +122,77 @@ a:hover { text-decoration: underline; }
 <div class="visible-count" id="visibleCount">Showing ${total} of ${total}</div>
 
 <table>
-<thead><tr><th>#</th><th>Name</th><th>Type</th><th>Country</th><th>Status</th></tr></thead>
+<thead><tr><th>#</th><th></th><th>Name</th><th>Type</th><th>Country</th><th>Status</th></tr></thead>
 <tbody>
 ${rows}
 </tbody>
 </table>
 
+<div class="delete-banner" id="deleteBanner">
+  <span id="deleteCount">0 marked for deletion</span>
+  <div>
+    <button class="undo-btn" onclick="undoAll()">Undo All</button>
+    <button onclick="copyList()">📋 Copy List</button>
+  </div>
+</div>
+
+<div class="copy-toast" id="toast">Copied to clipboard!</div>
+
 <script>
+var deleteSet = JSON.parse(localStorage.getItem('cc_delete') || '[]');
+
+// Restore saved state
+(function() {
+  if (!deleteSet.length) return;
+  var rows = document.querySelectorAll('tbody tr');
+  rows.forEach(function(r) {
+    var name = r.dataset.realname;
+    if (deleteSet.indexOf(name) >= 0) r.classList.add('marked-delete');
+  });
+  updateBanner();
+})();
+
+function markDelete(btn) {
+  var row = btn.closest('tr');
+  var name = row.dataset.realname;
+  if (row.classList.contains('marked-delete')) {
+    row.classList.remove('marked-delete');
+    deleteSet = deleteSet.filter(function(n) { return n !== name; });
+  } else {
+    row.classList.add('marked-delete');
+    if (deleteSet.indexOf(name) < 0) deleteSet.push(name);
+  }
+  localStorage.setItem('cc_delete', JSON.stringify(deleteSet));
+  updateBanner();
+}
+
+function updateBanner() {
+  var banner = document.getElementById('deleteBanner');
+  var count = document.getElementById('deleteCount');
+  if (deleteSet.length > 0) {
+    banner.classList.add('active');
+    count.textContent = deleteSet.length + ' marked for deletion';
+  } else {
+    banner.classList.remove('active');
+  }
+}
+
+function undoAll() {
+  deleteSet = [];
+  localStorage.setItem('cc_delete', '[]');
+  document.querySelectorAll('tr.marked-delete').forEach(function(r) { r.classList.remove('marked-delete'); });
+  updateBanner();
+}
+
+function copyList() {
+  var text = deleteSet.join('\\n');
+  navigator.clipboard.writeText(text).then(function() {
+    var toast = document.getElementById('toast');
+    toast.style.display = 'block';
+    setTimeout(function() { toast.style.display = 'none'; }, 2000);
+  });
+}
+
 function filterRows() {
   var q = document.getElementById('search').value.toLowerCase();
   var st = document.getElementById('statusFilter').value;
@@ -130,10 +206,11 @@ function filterRows() {
       if (st === 'enriched' && r.dataset.status !== 'enriched' && r.dataset.status !== 'cinematic') show = false;
       if (st === 'cinematic' && r.dataset.status !== 'cinematic') show = false;
       if (st === 'not' && r.dataset.status !== 'not') show = false;
+      if (st === 'marked' && !r.classList.contains('marked-delete')) show = false;
     }
     if (co !== 'all' && r.dataset.country !== co) show = false;
     r.style.display = show ? '' : 'none';
-    if (show) { n++; r.cells[0].textContent = n; }
+    if (show) { n++; r.querySelector('.num').textContent = n; }
   });
   document.getElementById('visibleCount').textContent = 'Showing ' + n + ' of ' + ${total};
 }

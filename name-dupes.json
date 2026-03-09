@@ -1,0 +1,1237 @@
+[
+  {
+    "keep": "Abbey Knockmoy",
+    "remove": [
+      "Abbey Knockmoy Galway"
+    ]
+  },
+  {
+    "keep": "Abbeyknockmoy",
+    "remove": [
+      "Abbeyknockmoy Abbey",
+      "Knockmoy Abbey"
+    ]
+  },
+  {
+    "keep": "Aberdour Castle",
+    "remove": [
+      "Aberdour Castle Great Hall"
+    ]
+  },
+  {
+    "keep": "Aberedw Castle Rocks",
+    "remove": [
+      "Aberedw Castle"
+    ]
+  },
+  {
+    "keep": "Abergavenny Castle Museum",
+    "remove": [
+      "Abergavenny Castle"
+    ]
+  },
+  {
+    "keep": "Aboyne Castle",
+    "remove": [
+      "Boyne Castle"
+    ]
+  },
+  {
+    "keep": "Acton Burnell Castle (Shropshire)",
+    "remove": [
+      "Acton Burnell Castle"
+    ]
+  },
+  {
+    "keep": "Aghaboe Abbey",
+    "remove": [
+      "Aghaboe Abbey Laois"
+    ]
+  },
+  {
+    "keep": "Annaghkeen Castle",
+    "remove": [
+      "Annaghkeen Castle Galway"
+    ]
+  },
+  {
+    "keep": "Ardtermon Castle",
+    "remove": [
+      "Termon Castle"
+    ]
+  },
+  {
+    "keep": "Aros Castle",
+    "remove": [
+      "Aros Castle (Mull)"
+    ]
+  },
+  {
+    "keep": "Ashford Castle",
+    "remove": [
+      "Oxford Castle",
+      "Orford Castle",
+      "Guildford Castle",
+      "Farleigh Hungerford Castle",
+      "Stafford Castle",
+      "Wallingford Castle",
+      "Eynsford Castle",
+      "Lydford Castle",
+      "Eynsford Castle Curtain Wall",
+      "Thetford Castle",
+      "Hereford Castle",
+      "Ford Castle",
+      "Strangford Castle",
+      "Mitford Castle",
+      "Gosford Castle",
+      "Cessford Castle",
+      "Bedford Castle Mound",
+      "Woodsford Castle",
+      "Clifford Castle",
+      "Bishop's Stortford Castle",
+      "Longford Castle",
+      "Hertford Castle",
+      "Frankford Castle"
+    ]
+  },
+  {
+    "keep": "Auckland Castle",
+    "remove": [
+      "Auckland Castle Chapel"
+    ]
+  },
+  {
+    "keep": "Ballingarry Castle",
+    "remove": [
+      "Ballingarry Castle (Limerick)",
+      "Ballingarry Castle (Lim)"
+    ]
+  },
+  {
+    "keep": "Ballintober Castle",
+    "remove": [
+      "Ballintober Castle Mayo",
+      "Ballintober Castle Roscommon"
+    ]
+  },
+  {
+    "keep": "Ballycarberry Castle",
+    "remove": [
+      "Ballycarberry Castle Ruin"
+    ]
+  },
+  {
+    "keep": "Ballyclogh Castle",
+    "remove": [
+      "Ballyclogh Castle Cork"
+    ]
+  },
+  {
+    "keep": "Ballyloughan Castle (Carlow)",
+    "remove": [
+      "Ballyloughan Castle",
+      "Ballyloughan Castle Carlow"
+    ]
+  },
+  {
+    "keep": "Ballynahinch Castle",
+    "remove": [
+      "Lochinch Castle",
+      "Megginch Castle",
+      "Inch Castle",
+      "Ballynahinch Castle Tipperary"
+    ]
+  },
+  {
+    "keep": "Barnard Castle Bowes Museum",
+    "remove": [
+      "Barnard Castle"
+    ]
+  },
+  {
+    "keep": "Battle Abbey (Sussex)",
+    "remove": [
+      "Battle Abbey"
+    ]
+  },
+  {
+    "keep": "Beddgelert Dinas Emrys Walk",
+    "remove": [
+      "Dinas Emrys"
+    ]
+  },
+  {
+    "keep": "Belfast Castle",
+    "remove": [
+      "Fast Castle"
+    ]
+  },
+  {
+    "keep": "Benton Castle Exterior",
+    "remove": [
+      "Benton Castle"
+    ]
+  },
+  {
+    "keep": "Berry Pomeroy Castle (Devon)",
+    "remove": [
+      "Berry Pomeroy Castle"
+    ]
+  },
+  {
+    "keep": "Birr Castle",
+    "remove": [
+      "Birr Castle Gardens"
+    ]
+  },
+  {
+    "keep": "Black Castle (Wicklow)",
+    "remove": [
+      "Black Castle (Wicklow Main)"
+    ]
+  },
+  {
+    "keep": "Bleddfa Castle Mound",
+    "remove": [
+      "Bleddfa Castle"
+    ]
+  },
+  {
+    "keep": "Bolton Abbey",
+    "remove": [
+      "Bolton Abbey (Tipperary)"
+    ]
+  },
+  {
+    "keep": "Bolton Castle (Wensleydale)",
+    "remove": [
+      "Bolton Castle",
+      "Kimbolton Castle"
+    ]
+  },
+  {
+    "keep": "Borve Castle",
+    "remove": [
+      "Borve Castle (Benbecula)",
+      "Borve Castle (Harris)"
+    ]
+  },
+  {
+    "keep": "Brinklow Castle",
+    "remove": [
+      "Brinklow Castle Motte"
+    ]
+  },
+  {
+    "keep": "Brougham Castle (Eden)",
+    "remove": [
+      "Brougham Castle"
+    ]
+  },
+  {
+    "keep": "Broughton Castle (Banbury)",
+    "remove": [
+      "Broughton Castle"
+    ]
+  },
+  {
+    "keep": "Builth Castle",
+    "remove": [
+      "Builth Castle Mound"
+    ]
+  },
+  {
+    "keep": "Byland Abbey (Yorkshire)",
+    "remove": [
+      "Byland Abbey"
+    ]
+  },
+  {
+    "keep": "Caerlaverock Castle",
+    "remove": [
+      "Caerlaverock Castle (New)"
+    ]
+  },
+  {
+    "keep": "Carnasserie Castle",
+    "remove": [
+      "Carnasserie Castle Views"
+    ]
+  },
+  {
+    "keep": "Castell Dinas Bran",
+    "remove": [
+      "Castell Dinas"
+    ]
+  },
+  {
+    "keep": "Castell Henllys Iron Age Fort",
+    "remove": [
+      "Castell Henllys"
+    ]
+  },
+  {
+    "keep": "Castle Acre Castle (Norfolk)",
+    "remove": [
+      "Castle Acre Castle"
+    ]
+  },
+  {
+    "keep": "Castle Acre Priory (Cluniac)",
+    "remove": [
+      "Castle Acre Priory"
+    ]
+  },
+  {
+    "keep": "Castle Bernard",
+    "remove": [
+      "Castle Bernard Bandon"
+    ]
+  },
+  {
+    "keep": "Castle Combe",
+    "remove": [
+      "Castle Combe Village"
+    ]
+  },
+  {
+    "keep": "Castle Drogo (Dartmoor)",
+    "remove": [
+      "Castle Drogo"
+    ]
+  },
+  {
+    "keep": "Castle Hacket",
+    "remove": [
+      "Castle Hackett"
+    ]
+  },
+  {
+    "keep": "Castle Kennedy Gardens",
+    "remove": [
+      "Castle Kennedy"
+    ]
+  },
+  {
+    "keep": "Castle Lachlan",
+    "remove": [
+      "Castle Lachlan (New)"
+    ]
+  },
+  {
+    "keep": "Castle Menzies Great Hall",
+    "remove": [
+      "Castle Menzies"
+    ]
+  },
+  {
+    "keep": "Castle Murray",
+    "remove": [
+      "Castle Murray (Donegal)"
+    ]
+  },
+  {
+    "keep": "Castle Rising (Norfolk)",
+    "remove": [
+      "Castle Rising"
+    ]
+  },
+  {
+    "keep": "Castlemore",
+    "remove": [
+      "Castlemore Castle (Cork)"
+    ]
+  },
+  {
+    "keep": "Castlerea Castle (Clonalis)",
+    "remove": [
+      "Castlerea Castle"
+    ]
+  },
+  {
+    "keep": "Castletown Castle (Laois)",
+    "remove": [
+      "Castletown Castle Laois"
+    ]
+  },
+  {
+    "keep": "Castletown House",
+    "remove": [
+      "Castletown House Kildare"
+    ]
+  },
+  {
+    "keep": "Caulfield Castle",
+    "remove": [
+      "Caulfield Castle (Tyrone)"
+    ]
+  },
+  {
+    "keep": "Cawdor Castle Gardens",
+    "remove": [
+      "Cawdor Castle"
+    ]
+  },
+  {
+    "keep": "Cefnllys Castle Mound",
+    "remove": [
+      "Cefnllys Castle"
+    ]
+  },
+  {
+    "keep": "Chepstow Castle Great Tower",
+    "remove": [
+      "Chepstow Castle"
+    ]
+  },
+  {
+    "keep": "Chillingham Castle (Northumberland)",
+    "remove": [
+      "Chillingham Castle"
+    ]
+  },
+  {
+    "keep": "Clara Castle",
+    "remove": [
+      "Clara Castle Kilkenny"
+    ]
+  },
+  {
+    "keep": "Clare Castle",
+    "remove": [
+      "Aclare Castle"
+    ]
+  },
+  {
+    "keep": "Clonmacnoise",
+    "remove": [
+      "Clonmacnoise Castle"
+    ]
+  },
+  {
+    "keep": "Clonmines",
+    "remove": [
+      "Clonmines Church"
+    ]
+  },
+  {
+    "keep": "Clough Castle",
+    "remove": [
+      "Clough Castle Down"
+    ]
+  },
+  {
+    "keep": "Cluny Castle Laggan",
+    "remove": [
+      "Cluny Castle"
+    ]
+  },
+  {
+    "keep": "Colchester Castle",
+    "remove": [
+      "Rochester Castle",
+      "Portchester Castle (Roman)",
+      "Portchester Castle",
+      "Chester Castle"
+    ]
+  },
+  {
+    "keep": "Conisbrough Castle",
+    "remove": [
+      "Brough Castle",
+      "Brough Castle (Westmorland)",
+      "Brough Castle Clifford Tower"
+    ]
+  },
+  {
+    "keep": "Conwy Town Walls Walk",
+    "remove": [
+      "Conwy Town Walls"
+    ]
+  },
+  {
+    "keep": "Coolbanagher Castle",
+    "remove": [
+      "Banagher Castle",
+      "Coolbanagher Castle (Laois)"
+    ]
+  },
+  {
+    "keep": "Coolhull Castle",
+    "remove": [
+      "Coolhull Castle Wexford"
+    ]
+  },
+  {
+    "keep": "Creevelea Friary",
+    "remove": [
+      "Creevelea Friary (Leitrim)"
+    ]
+  },
+  {
+    "keep": "Croxden Abbey",
+    "remove": [
+      "Croxden Abbey Remains"
+    ]
+  },
+  {
+    "keep": "Dartmouth Castle (Devon)",
+    "remove": [
+      "Dartmouth Castle"
+    ]
+  },
+  {
+    "keep": "Deel Castle Mayo",
+    "remove": [
+      "Deel Castle"
+    ]
+  },
+  {
+    "keep": "Desmond Castle",
+    "remove": [
+      "Desmond Castle (Newcastle West)",
+      "Adare Desmond Castle",
+      "Desmond Castle Kinsale",
+      "Desmond Castle Newcastle West"
+    ]
+  },
+  {
+    "keep": "Doe Castle",
+    "remove": [
+      "Aghadoe",
+      "Aghadoe Church and Round Tower",
+      "Aghadoe Cathedral Kerry",
+      "Aghadoe Castle"
+    ]
+  },
+  {
+    "keep": "Donamon Castle",
+    "remove": [
+      "Donamon Castle (Ros)"
+    ]
+  },
+  {
+    "keep": "Donore Castle",
+    "remove": [
+      "Donore Castle Meath",
+      "Donore Castle (Meath)",
+      "Donore Castle Westmeath"
+    ]
+  },
+  {
+    "keep": "Dornoch Castle",
+    "remove": [
+      "Dornoch Castle Hotel"
+    ]
+  },
+  {
+    "keep": "Drimnagh Castle",
+    "remove": [
+      "Drimnagh Castle (Louth)"
+    ]
+  },
+  {
+    "keep": "Dryslwyn Castle Viewpoint",
+    "remove": [
+      "Dryslwyn Castle"
+    ]
+  },
+  {
+    "keep": "Dundrum Castle",
+    "remove": [
+      "Drum Castle",
+      "Dundrum Castle (Down)",
+      "Dundrum Castle Down",
+      "Sundrum Castle",
+      "Moydrum Castle",
+      "Rathdrum Castle"
+    ]
+  },
+  {
+    "keep": "Dunloe Castle",
+    "remove": [
+      "Dunloe Castle Ogham Stones"
+    ]
+  },
+  {
+    "keep": "Dunluce Castle",
+    "remove": [
+      "Dunluce Castle Dark Hedges Tower"
+    ]
+  },
+  {
+    "keep": "Dunmoe Castle",
+    "remove": [
+      "Dunmoe Castle Keep (Meath)"
+    ]
+  },
+  {
+    "keep": "Dunmore Castle",
+    "remove": [
+      "Dunmore Castle (Galway)",
+      "Dunmore Castle Galway",
+      "Dunmore Castle Kilkenny"
+    ]
+  },
+  {
+    "keep": "Dunsany Castle",
+    "remove": [
+      "Any Castle"
+    ]
+  },
+  {
+    "keep": "Earl's Palace, Birsay",
+    "remove": [
+      "Earl's Palace Birsay"
+    ]
+  },
+  {
+    "keep": "Edinburgh Castle",
+    "remove": [
+      "Bamburgh Castle",
+      "Dunstanburgh Castle",
+      "Burgh Castle",
+      "Roxburgh Castle"
+    ]
+  },
+  {
+    "keep": "Ewenny Priory",
+    "remove": [
+      "Ewenny Priory Church"
+    ]
+  },
+  {
+    "keep": "Farnham Castle",
+    "remove": [
+      "Rathfarnham Castle"
+    ]
+  },
+  {
+    "keep": "Framlingham Castle (Suffolk)",
+    "remove": [
+      "Framlingham Castle"
+    ]
+  },
+  {
+    "keep": "Furness Abbey (Cumbria)",
+    "remove": [
+      "Furness Abbey"
+    ]
+  },
+  {
+    "keep": "Goodrich Castle (Herefordshire)",
+    "remove": [
+      "Goodrich Castle"
+    ]
+  },
+  {
+    "keep": "Granagh Castle",
+    "remove": [
+      "Granagh Castle Kilkenny"
+    ]
+  },
+  {
+    "keep": "Grannagh Castle",
+    "remove": [
+      "Grannagh Castle (Waterford)"
+    ]
+  },
+  {
+    "keep": "Greencastle Royal Castle",
+    "remove": [
+      "Greencastle",
+      "Greencastle (Down)",
+      "Castle Roy",
+      "Greencastle Donegal"
+    ]
+  },
+  {
+    "keep": "Grennan Castle",
+    "remove": [
+      "Grennan Castle Thomastown",
+      "Ballygrennan Castle"
+    ]
+  },
+  {
+    "keep": "Gylen Castle Kerrera",
+    "remove": [
+      "Gylen Castle"
+    ]
+  },
+  {
+    "keep": "Halton Castle",
+    "remove": [
+      "Halton Castle (Cheshire)",
+      "Alton Castle",
+      "Dalton Castle",
+      "Halton Castle Lancashire"
+    ]
+  },
+  {
+    "keep": "Hawarden Castle Old",
+    "remove": [
+      "Hawarden Castle",
+      "Hawarden Castle (Old)"
+    ]
+  },
+  {
+    "keep": "Hay Castle",
+    "remove": [
+      "Fotheringhay Castle"
+    ]
+  },
+  {
+    "keep": "Holt Castle",
+    "remove": [
+      "Carrigaholt Castle"
+    ]
+  },
+  {
+    "keep": "Huntingtower Castle",
+    "remove": [
+      "Huntingtower Castle Painted Ceiling"
+    ]
+  },
+  {
+    "keep": "Hussey Tower",
+    "remove": [
+      "Hussey Tower (Boston)"
+    ]
+  },
+  {
+    "keep": "Inverlochy Castle",
+    "remove": [
+      "Old Inverlochy Castle",
+      "Inverlochy Castle (Fort William)"
+    ]
+  },
+  {
+    "keep": "Jervaulx Abbey (Wensleydale)",
+    "remove": [
+      "Jervaulx Abbey"
+    ]
+  },
+  {
+    "keep": "Jordan's Castle",
+    "remove": [
+      "Jordan's Castle Ardglass"
+    ]
+  },
+  {
+    "keep": "Kellie Castle",
+    "remove": [
+      "Kellie Castle Gardens"
+    ]
+  },
+  {
+    "keep": "Kells Priory",
+    "remove": [
+      "Kells Priory Kilkenny",
+      "Kells Priory Meath"
+    ]
+  },
+  {
+    "keep": "Kilcolman Castle Spenser",
+    "remove": [
+      "Kilcolman Castle"
+    ]
+  },
+  {
+    "keep": "Kildavnet Castle",
+    "remove": [
+      "Carrickkildavnet Castle"
+    ]
+  },
+  {
+    "keep": "Killaha Castle",
+    "remove": [
+      "Killaha Castle (Kerry)"
+    ]
+  },
+  {
+    "keep": "Killeen Castle",
+    "remove": [
+      "Killeen Castle Meath"
+    ]
+  },
+  {
+    "keep": "King John's Castle",
+    "remove": [
+      "King John's Castle (Carlingford)"
+    ]
+  },
+  {
+    "keep": "Kinlough Castle",
+    "remove": [
+      "Kinlough Castle (Mayo)"
+    ]
+  },
+  {
+    "keep": "Kinnaird Castle",
+    "remove": [
+      "Kinnaird Castle (Perthshire)"
+    ]
+  },
+  {
+    "keep": "Kirkstall Abbey (Leeds)",
+    "remove": [
+      "Kirkstall Abbey"
+    ]
+  },
+  {
+    "keep": "Knock Castle",
+    "remove": [
+      "Knock Castle (Skye)",
+      "Knock Castle (Aberdeenshire)"
+    ]
+  },
+  {
+    "keep": "Lews Castle (Stornoway)",
+    "remove": [
+      "Lews Castle"
+    ]
+  },
+  {
+    "keep": "Lismore Castle",
+    "remove": [
+      "Lismore Castle Gardens"
+    ]
+  },
+  {
+    "keep": "Llansteffan Castle",
+    "remove": [
+      "Llansteffan Castle Viewpoint"
+    ]
+  },
+  {
+    "keep": "Ludlow Castle (Shropshire)",
+    "remove": [
+      "Ludlow Castle"
+    ]
+  },
+  {
+    "keep": "Macroom Castle",
+    "remove": [
+      "Croom Castle"
+    ]
+  },
+  {
+    "keep": "Margam Castle Victorian",
+    "remove": [
+      "Margam Castle"
+    ]
+  },
+  {
+    "keep": "Mathrafal Castle Mound",
+    "remove": [
+      "Mathrafal Castle"
+    ]
+  },
+  {
+    "keep": "Mellifont Abbey",
+    "remove": [
+      "Old Mellifont Abbey"
+    ]
+  },
+  {
+    "keep": "Mingary Castle Restored",
+    "remove": [
+      "Mingary Castle"
+    ]
+  },
+  {
+    "keep": "Monkstown Castle",
+    "remove": [
+      "Monkstown Castle Cork"
+    ]
+  },
+  {
+    "keep": "Moy Castle",
+    "remove": [
+      "Moy Castle (Mull)"
+    ]
+  },
+  {
+    "keep": "Mulgrave Castle",
+    "remove": [
+      "Mulgrave Castle (Old)",
+      "Mulgrave Castle (Old Main)"
+    ]
+  },
+  {
+    "keep": "Muncaster Castle (Eskdale)",
+    "remove": [
+      "Muncaster Castle"
+    ]
+  },
+  {
+    "keep": "Muness Castle Unst",
+    "remove": [
+      "Muness Castle"
+    ]
+  },
+  {
+    "keep": "New Slains Castle",
+    "remove": [
+      "Slains Castle"
+    ]
+  },
+  {
+    "keep": "Newark Castle (Nottinghamshire)",
+    "remove": [
+      "Newark Castle",
+      "Newark Castle (Borders)",
+      "Newark Castle (Fife)"
+    ]
+  },
+  {
+    "keep": "Newcastle Bridgend Castle",
+    "remove": [
+      "Newcastle (Bridgend)"
+    ]
+  },
+  {
+    "keep": "Newport Castle",
+    "remove": [
+      "Newport Castle (Pembs)",
+      "Newport Castle (Pembs Main)"
+    ]
+  },
+  {
+    "keep": "Newtown Castle",
+    "remove": [
+      "Newtown Castle Burren"
+    ]
+  },
+  {
+    "keep": "Okehampton Castle (Devon)",
+    "remove": [
+      "Okehampton Castle"
+    ]
+  },
+  {
+    "keep": "Ormond Castle",
+    "remove": [
+      "Ormond Castle Carrick"
+    ]
+  },
+  {
+    "keep": "Pallas Castle",
+    "remove": [
+      "Pallas Castle Galway",
+      "Shanpallas Castle"
+    ]
+  },
+  {
+    "keep": "Parke's Castle",
+    "remove": [
+      "Parke's Castle (Leitrim)"
+    ]
+  },
+  {
+    "keep": "Penmon Priory Anglesey",
+    "remove": [
+      "Penmon Priory",
+      "Penmon Priory Church"
+    ]
+  },
+  {
+    "keep": "Pennard Castle Gower",
+    "remove": [
+      "Pennard Castle"
+    ]
+  },
+  {
+    "keep": "Pickering Castle (North Yorkshire)",
+    "remove": [
+      "Pickering Castle"
+    ]
+  },
+  {
+    "keep": "Picton Castle Gardens",
+    "remove": [
+      "Picton Castle"
+    ]
+  },
+  {
+    "keep": "Pluscarden Abbey Active",
+    "remove": [
+      "Pluscarden Abbey"
+    ]
+  },
+  {
+    "keep": "Raby Castle",
+    "remove": [
+      "Raby Castle Deer Park"
+    ]
+  },
+  {
+    "keep": "Raglan Castle Great Tower",
+    "remove": [
+      "Raglan Castle"
+    ]
+  },
+  {
+    "keep": "Rathcroghan",
+    "remove": [
+      "Rathcroghan Visitor Centre",
+      "Rathcroghan Mound"
+    ]
+  },
+  {
+    "keep": "Ravenscraig Castle",
+    "remove": [
+      "Ravenscraig Castle Fife",
+      "Ravenscraig Castle (Fife)",
+      "Craig Castle",
+      "Ravenscraig Castle (Aberdeenshire)"
+    ]
+  },
+  {
+    "keep": "Ravensworth Castle",
+    "remove": [
+      "Ravensworth Castle (Yorkshire)"
+    ]
+  },
+  {
+    "keep": "Red Castle",
+    "remove": [
+      "Red Castle (Angus)",
+      "Red Castle (Lunan Bay)"
+    ]
+  },
+  {
+    "keep": "Rhuddlan Castle",
+    "remove": [
+      "Rhuddlan Castle Towers"
+    ]
+  },
+  {
+    "keep": "Roch Castle Exterior",
+    "remove": [
+      "Roch Castle"
+    ]
+  },
+  {
+    "keep": "Roche Castle",
+    "remove": [
+      "Castletownroche Castle"
+    ]
+  },
+  {
+    "keep": "Ross Castle",
+    "remove": [
+      "Ross Castle (Killarney)",
+      "Portencross Castle",
+      "Dalcross Castle",
+      "Moross Castle"
+    ]
+  },
+  {
+    "keep": "Rougemont Castle Exeter",
+    "remove": [
+      "Rougemont Castle"
+    ]
+  },
+  {
+    "keep": "Ruthin Castle",
+    "remove": [
+      "Ruthin Castle Grounds"
+    ]
+  },
+  {
+    "keep": "Sandal Castle",
+    "remove": [
+      "Sandal Castle Park"
+    ]
+  },
+  {
+    "keep": "Scalloway Castle Restored",
+    "remove": [
+      "Scalloway Castle"
+    ]
+  },
+  {
+    "keep": "Scattery Island Monastic Site",
+    "remove": [
+      "Scattery Island"
+    ]
+  },
+  {
+    "keep": "Scotney Castle (Kent)",
+    "remove": [
+      "Scotney Castle"
+    ]
+  },
+  {
+    "keep": "Scotstarvit Tower View",
+    "remove": [
+      "Scotstarvit Tower"
+    ]
+  },
+  {
+    "keep": "Shane Castle",
+    "remove": [
+      "Drishane Castle"
+    ]
+  },
+  {
+    "keep": "Shankill Castle",
+    "remove": [
+      "Shankill Castle Kilkenny"
+    ]
+  },
+  {
+    "keep": "Sissinghurst Castle",
+    "remove": [
+      "Hurst Castle"
+    ]
+  },
+  {
+    "keep": "Sizergh Castle (Kendal)",
+    "remove": [
+      "Sizergh Castle"
+    ]
+  },
+  {
+    "keep": "Skipness Castle",
+    "remove": [
+      "Skipness Castle Chapel"
+    ]
+  },
+  {
+    "keep": "Snape Castle",
+    "remove": [
+      "Snape Castle (Bedale)"
+    ]
+  },
+  {
+    "keep": "South Wingfield Manor",
+    "remove": [
+      "Wingfield Manor"
+    ]
+  },
+  {
+    "keep": "Stokesay Castle (Shropshire)",
+    "remove": [
+      "Stokesay Castle"
+    ]
+  },
+  {
+    "keep": "Stradbally Castle",
+    "remove": [
+      "Stradbally Castle Waterford"
+    ]
+  },
+  {
+    "keep": "Swiss Cottage",
+    "remove": [
+      "Swiss Cottage Cahir"
+    ]
+  },
+  {
+    "keep": "Thomastown Castle",
+    "remove": [
+      "Thomastown Castle Tipperary"
+    ]
+  },
+  {
+    "keep": "Thoor Ballylee",
+    "remove": [
+      "Ballylee Castle",
+      "Ballylee Castle (Thoor Ballylee)"
+    ]
+  },
+  {
+    "keep": "Tintern Abbey",
+    "remove": [
+      "Tintern Abbey (Ireland)",
+      "Tintern Abbey Wexford",
+      "Tintern Abbey Ireland (Main)"
+    ]
+  },
+  {
+    "keep": "Tioram Castle Viewpoint",
+    "remove": [
+      "Tioram Castle",
+      "Tioram Castle Loch"
+    ]
+  },
+  {
+    "keep": "Tomen y Mur Fort",
+    "remove": [
+      "Tomen y Mur"
+    ]
+  },
+  {
+    "keep": "Tretower Court & Castle",
+    "remove": [
+      "Tretower Court",
+      "Tretower Court and Castle"
+    ]
+  },
+  {
+    "keep": "Trim Castle",
+    "remove": [
+      "Trim Castle Barbican",
+      "Antrim Castle Gardens",
+      "Leitrim Castle"
+    ]
+  },
+  {
+    "keep": "Tully Castle",
+    "remove": [
+      "Grandtully Castle",
+      "Ardtully Castle",
+      "Tully Castle Kildare"
+    ]
+  },
+  {
+    "keep": "Tutbury Castle (Staffordshire)",
+    "remove": [
+      "Tutbury Castle"
+    ]
+  },
+  {
+    "keep": "Usk Castle Gardens",
+    "remove": [
+      "Usk Castle"
+    ]
+  },
+  {
+    "keep": "White Castle",
+    "remove": [
+      "White Castle Monmouthshire"
+    ]
+  },
+  {
+    "keep": "Whittington Castle (Shropshire)",
+    "remove": [
+      "Whittington Castle"
+    ]
+  },
+  {
+    "keep": "Wigmore Castle (Herefordshire)",
+    "remove": [
+      "Wigmore Castle"
+    ]
+  },
+  {
+    "keep": "Wilton Castle",
+    "remove": [
+      "Wilton Castle (Herefordshire)"
+    ]
+  },
+  {
+    "keep": "Wiston Castle Mound",
+    "remove": [
+      "Wiston Castle"
+    ]
+  },
+  {
+    "keep": "Wolvesey Castle (Palace)",
+    "remove": [
+      "Wolvesey Castle"
+    ]
+  }
+]
