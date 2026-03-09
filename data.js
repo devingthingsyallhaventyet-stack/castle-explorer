@@ -1325,45 +1325,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Kirby Muxloe Castle",
-    "lat": 52.6407,
-    "lng": -1.2463,
-    "country": "England",
-    "type": "fortified house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "An unfinished brick-built fortified manor house begun by Lord Hastings in 1480. Work stopped abruptly when Hastings was executed by Richard III — the half-built walls still stand.",
-    "history": "Kirby Muxloe Castle, also known historically as Kirby Castle, is a ruined, fortified manor house in Kirby Muxloe, Leicestershire, England. William, Lord Hastings, began work on the castle in 1480, founding it on the site of a pre-existing manor house. William was a favourite of King Edward IV and had prospered considerably during the Wars of the Roses. Work continued quickly until 1483, when William was executed during Richard, Duke of Gloucester's, seizure of the throne. His widow briefly continued the project after his death but efforts then ceased, with the castle remaining largely incomplete.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Kirby_Muxloe_Castle.tif/lossy-page1-120px-Kirby_Muxloe_Castle.tif.jpg",
-    "rating": 4,
-    "reviewCount": 980,
-    "county": "Leicestershire",
-    "tags": [
-      "romantic-ruin",
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 44,
-    "gallery": [
-      "https://img.castlecore.uk/kirby-muxloe-castle-2.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-3.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-4.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-5.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-moated-2.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-moated-3.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-moated-4.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-moated-5.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-gatehouse-2.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-gatehouse-3.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-gatehouse-4.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-gatehouse-5.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-main-2.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-main-3.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-main-4.jpg",
-      "https://img.castlecore.uk/kirby-muxloe-castle-main-5.jpg"
-    ]
-  },
-  {
     "name": "Ashby de la Zouch Castle",
     "lat": 52.746,
     "lng": -1.4722,
@@ -8736,33 +8697,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Leamaneh Castle",
-    "lat": 52.9333,
-    "lng": -9.0167,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A dramatic ruin combining a 15th-century tower house with a 17th-century fortified house on the edge of the Burren. Its owner Máire Rua was one of Clare's most legendary figures.",
-    "history": "Leamaneh Castle is a ruined castle located in the townland of Leamaneh North, parish of Kilnaboy, between the villages of Corofin and Kilfenora at the border of the region known as the Burren in County Clare, Ireland. It consists of a 15th-century tower house and a 17th-century mansion.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Barryscourt_Castle%2C_Co._Cork.jpg/500px-Barryscourt_Castle%2C_Co._Cork.jpg",
-    "rating": 3.8,
-    "reviewCount": 560,
-    "county": "County Clare",
-    "tags": [
-      "dramatic-ruin",
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 279,
-    "gallery": [
-      "https://img.castlecore.uk/leamaneh-castle-2.jpg",
-      "https://img.castlecore.uk/leamaneh-castle-3.jpg",
-      "https://img.castlecore.uk/leamaneh-castle-4.jpg",
-      "https://img.castlecore.uk/leamaneh-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Quin Abbey",
     "lat": 52.8172,
     "lng": -8.8614,
@@ -14689,34 +14623,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Slains Castle",
-    "lat": 57.4167,
-    "lng": -1.8333,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "A clifftop ruin that inspired Bram Stoker's Dracula. The roofless rooms perch dizzyingly above the North Sea.",
-    "image": "https://img.castlecore.uk/slains-castle.jpg",
-    "rating": 4.2,
-    "reviewCount": 1200,
-    "county": "Aberdeenshire",
-    "tags": [
-      "dramatic-ruin",
-      "haunted",
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 475,
-    "gallery": [
-      "https://img.castlecore.uk/slains-castle-2.jpg",
-      "https://img.castlecore.uk/slains-castle-3.jpg",
-      "https://img.castlecore.uk/slains-castle-4.jpg",
-      "https://img.castlecore.uk/slains-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Mingary Castle",
     "lat": 56.6667,
     "lng": -6.1,
@@ -18359,32 +18265,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Hussey Tower (Boston)",
-    "lat": 52.978,
-    "lng": -0.024,
-    "country": "England",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Brick-built tower house survivor in Boston. One of the few medieval brick buildings in the area.",
-    "image": "https://img.castlecore.uk/hussey-tower-boston.jpg",
-    "rating": 3.5,
-    "reviewCount": 110,
-    "county": "Lincolnshire",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 593,
-    "gallery": [
-      "https://img.castlecore.uk/hussey-tower-boston-2.jpg",
-      "https://img.castlecore.uk/hussey-tower-boston-3.jpg",
-      "https://img.castlecore.uk/hussey-tower-boston-4.jpg",
-      "https://img.castlecore.uk/hussey-tower-boston-5.jpg"
-    ]
-  },
-  {
     "name": "Grimsthorpe Castle",
     "lat": 52.767,
     "lng": -0.446,
@@ -18955,32 +18835,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Eynsford Castle Curtain Wall",
-    "lat": 51.366,
-    "lng": 0.212,
-    "country": "England",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "One of the earliest Norman stone castles with an unusually complete curtain wall enclosure.",
-    "image": "https://img.castlecore.uk/eynsford-castle-curtain-wall.jpg",
-    "rating": 3.8,
-    "reviewCount": 350,
-    "county": "Kent",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 617,
-    "gallery": [
-      "https://img.castlecore.uk/eynsford-castle-curtain-wall-2.jpg",
-      "https://img.castlecore.uk/eynsford-castle-curtain-wall-3.jpg",
-      "https://img.castlecore.uk/eynsford-castle-curtain-wall-4.jpg",
-      "https://img.castlecore.uk/eynsford-castle-curtain-wall-5.jpg"
-    ]
-  },
-  {
     "name": "Allington Castle",
     "lat": 51.278,
     "lng": 0.494,
@@ -19512,31 +19366,6 @@ const CASTLES = [
       "https://img.castlecore.uk/bishop-s-stortford-castle-3.jpg",
       "https://img.castlecore.uk/bishop-s-stortford-castle-4.jpg",
       "https://img.castlecore.uk/bishop-s-stortford-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Farleigh Hungerford Keep",
-    "lat": 51.317,
-    "lng": -2.306,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "The chapel contains rare medieval wall paintings and the Hungerford family tombs.",
-    "image": "https://img.castlecore.uk/farleigh-hungerford-keep.jpg",
-    "rating": 4,
-    "reviewCount": 650,
-    "county": "Somerset",
-    "tags": [
-      "romantic-ruin"
-    ],
-    "access": "paid",
-    "_index": 639,
-    "gallery": [
-      "https://img.castlecore.uk/farleigh-hungerford-keep-2.jpg",
-      "https://img.castlecore.uk/farleigh-hungerford-keep-3.jpg",
-      "https://img.castlecore.uk/farleigh-hungerford-keep-4.jpg",
-      "https://img.castlecore.uk/farleigh-hungerford-keep-5.jpg"
     ]
   },
   {
@@ -21376,31 +21205,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ruthin Castle Grounds",
-    "lat": 53.116,
-    "lng": -3.31,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "partial ruin",
-    "description": "Medieval castle ruins incorporated into a Victorian hotel. Peacocks roam the grounds.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG/500px-Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG",
-    "rating": 3.8,
-    "reviewCount": 450,
-    "county": "Denbighshire",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 710,
-    "gallery": [
-      "https://img.castlecore.uk/ruthin-castle-grounds-2.jpg",
-      "https://img.castlecore.uk/ruthin-castle-grounds-3.jpg",
-      "https://img.castlecore.uk/ruthin-castle-grounds-4.jpg",
-      "https://img.castlecore.uk/ruthin-castle-grounds-5.jpg"
-    ]
-  },
-  {
     "name": "Deganwy Castle",
     "lat": 53.294,
     "lng": -3.819,
@@ -21540,32 +21344,6 @@ const CASTLES = [
       "https://img.castlecore.uk/loughor-castle-main-3.jpg",
       "https://img.castlecore.uk/loughor-castle-main-4.jpg",
       "https://img.castlecore.uk/loughor-castle-main-5.jpg"
-    ]
-  },
-  {
-    "name": "Newcastle (Bridgend)",
-    "lat": 51.505,
-    "lng": -3.577,
-    "country": "Wales",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Norman castle with a fine Romanesque gateway, the finest of its type in Wales.",
-    "image": "https://img.castlecore.uk/newcastle-bridgend.jpg",
-    "rating": 3.7,
-    "reviewCount": 180,
-    "county": "Bridgend",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 719,
-    "gallery": [
-      "https://img.castlecore.uk/newcastle-bridgend-2.jpg",
-      "https://img.castlecore.uk/newcastle-bridgend-3.jpg",
-      "https://img.castlecore.uk/newcastle-bridgend-4.jpg",
-      "https://img.castlecore.uk/newcastle-bridgend-5.jpg"
     ]
   },
   {
@@ -23292,32 +23070,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Brough Castle Clifford Tower",
-    "lat": 54.521,
-    "lng": -2.327,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Lady Anne Clifford's restored round tower. The castle has both Norman and medieval phases.",
-    "image": "https://img.castlecore.uk/brough-castle-clifford-tower.jpg",
-    "rating": 3.8,
-    "reviewCount": 280,
-    "county": "Cumbria",
-    "tags": [
-      "dramatic-ruin",
-      "free"
-    ],
-    "access": "free",
-    "_index": 790,
-    "gallery": [
-      "https://img.castlecore.uk/brough-castle-clifford-tower-2.jpg",
-      "https://img.castlecore.uk/brough-castle-clifford-tower-3.jpg",
-      "https://img.castlecore.uk/brough-castle-clifford-tower-4.jpg",
-      "https://img.castlecore.uk/brough-castle-clifford-tower-5.jpg"
-    ]
-  },
-  {
     "name": "Barnstaple Castle Mound",
     "lat": 51.08,
     "lng": -4.059,
@@ -23678,32 +23430,6 @@ const CASTLES = [
       "https://img.castlecore.uk/hampton-court-palace-3.jpg",
       "https://img.castlecore.uk/hampton-court-palace-4.jpg",
       "https://img.castlecore.uk/hampton-court-palace-5.jpg"
-    ]
-  },
-  {
-    "name": "Penmon Priory Church",
-    "lat": 53.307,
-    "lng": -4.049,
-    "country": "Wales",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "partial ruin",
-    "description": "Priory with a Norman church and dovecote on the tip of Anglesey.",
-    "image": "https://img.castlecore.uk/penmon-priory-church.jpg",
-    "rating": 4,
-    "reviewCount": 580,
-    "county": "Anglesey",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 809,
-    "gallery": [
-      "https://img.castlecore.uk/penmon-priory-church-2.jpg",
-      "https://img.castlecore.uk/penmon-priory-church-3.jpg",
-      "https://img.castlecore.uk/penmon-priory-church-4.jpg",
-      "https://img.castlecore.uk/penmon-priory-church-5.jpg"
     ]
   },
   {
@@ -24166,32 +23892,6 @@ const CASTLES = [
       "https://img.castlecore.uk/merlin-park-castle-3.jpg",
       "https://img.castlecore.uk/merlin-park-castle-4.jpg",
       "https://img.castlecore.uk/merlin-park-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Ballycarberry Tower",
-    "lat": 51.945,
-    "lng": -10.233,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Small tower ruin near Cahersiveen with Ring of Kerry views.",
-    "image": "https://img.castlecore.uk/ballycarberry-tower.jpg",
-    "rating": 3.4,
-    "reviewCount": 90,
-    "county": "County Kerry",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 828,
-    "gallery": [
-      "https://img.castlecore.uk/ballycarberry-tower-2.jpg",
-      "https://img.castlecore.uk/ballycarberry-tower-3.jpg",
-      "https://img.castlecore.uk/ballycarberry-tower-4.jpg",
-      "https://img.castlecore.uk/ballycarberry-tower-5.jpg"
     ]
   },
   {
@@ -26839,32 +26539,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Olderfleet Tower",
-    "lat": 54.854,
-    "lng": -5.804,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Small tower ruin in Larne harbour, a key landing point from Scotland.",
-    "image": "https://img.castlecore.uk/olderfleet-tower.jpg",
-    "rating": 3.2,
-    "reviewCount": 55,
-    "county": "County Antrim",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 933,
-    "gallery": [
-      "https://img.castlecore.uk/olderfleet-tower-2.jpg",
-      "https://img.castlecore.uk/olderfleet-tower-3.jpg",
-      "https://img.castlecore.uk/olderfleet-tower-4.jpg",
-      "https://img.castlecore.uk/olderfleet-tower-5.jpg"
-    ]
-  },
-  {
     "name": "Claregalway Castle",
     "lat": 53.343,
     "lng": -8.94,
@@ -27080,32 +26754,6 @@ const CASTLES = [
       "https://img.castlecore.uk/muckross-friary-3.jpg",
       "https://img.castlecore.uk/muckross-friary-4.jpg",
       "https://img.castlecore.uk/muckross-friary-5.jpg"
-    ]
-  },
-  {
-    "name": "Timoleague Friary",
-    "lat": 51.645,
-    "lng": -8.77,
-    "country": "Ireland",
-    "type": "friary",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "Extensive Franciscan friary on the shore of Courtmacsherry Bay.",
-    "image": "https://img.castlecore.uk/timoleague-friary.jpg",
-    "rating": 3.8,
-    "reviewCount": 380,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 943,
-    "gallery": [
-      "https://img.castlecore.uk/timoleague-friary-2.jpg",
-      "https://img.castlecore.uk/timoleague-friary-3.jpg",
-      "https://img.castlecore.uk/timoleague-friary-4.jpg",
-      "https://img.castlecore.uk/timoleague-friary-5.jpg"
     ]
   },
   {
@@ -28001,31 +27649,6 @@ const CASTLES = [
       "https://img.castlecore.uk/newark-castle-fife-3.jpg",
       "https://img.castlecore.uk/newark-castle-fife-4.jpg",
       "https://img.castlecore.uk/newark-castle-fife-5.jpg"
-    ]
-  },
-  {
-    "name": "Earl's Palace Kirkwall",
-    "lat": 58.981,
-    "lng": -2.96,
-    "country": "Scotland",
-    "type": "palace",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "One of Scotland's finest Renaissance buildings, built by the tyrannical Earl Patrick Stewart.",
-    "image": "https://img.castlecore.uk/earl-s-palace-kirkwall.jpg",
-    "rating": 4.1,
-    "reviewCount": 1400,
-    "county": "Orkney",
-    "tags": [
-      "dramatic-ruin"
-    ],
-    "access": "paid",
-    "_index": 981,
-    "gallery": [
-      "https://img.castlecore.uk/earl-s-palace-kirkwall-2.jpg",
-      "https://img.castlecore.uk/earl-s-palace-kirkwall-3.jpg",
-      "https://img.castlecore.uk/earl-s-palace-kirkwall-4.jpg",
-      "https://img.castlecore.uk/earl-s-palace-kirkwall-5.jpg"
     ]
   },
   {
@@ -29096,30 +28719,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Newport Castle (Pembs)",
-    "lat": 52.02,
-    "lng": -4.84,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Norman castle ruin in Newport, Pembrokeshire, with views over the estuary.",
-    "image": "https://img.castlecore.uk/newport-castle-pembs.jpg",
-    "rating": 3.4,
-    "reviewCount": 80,
-    "county": "Pembrokeshire",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1022,
-    "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newport-castle.jpg",
-      "https://img.castlecore.uk/wiki-newport-castle-pembs.jpg"
-    ]
-  },
-  {
     "name": "Roch Castle",
     "lat": 51.833,
     "lng": -5.073,
@@ -29415,109 +29014,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Hawarden Castle (Old)",
-    "lat": 53.183,
-    "lng": -3.023,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Medieval castle ruin in the grounds of Gladstone's home at Hawarden.",
-    "image": "https://img.castlecore.uk/hawarden-castle-old.jpg",
-    "rating": 3.4,
-    "reviewCount": 95,
-    "county": "Flintshire",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1033,
-    "gallery": [
-      "https://img.castlecore.uk/hawarden-castle-old-2.jpg",
-      "https://img.castlecore.uk/hawarden-castle-old-3.jpg",
-      "https://img.castlecore.uk/hawarden-castle-old-4.jpg",
-      "https://img.castlecore.uk/hawarden-castle-old-5.jpg"
-    ]
-  },
-  {
-    "name": "Dornoch Castle Hotel",
-    "lat": 57.882,
-    "lng": -4.025,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "16th century",
-    "condition": "intact",
-    "description": "Former bishop's palace in Dornoch, now a hotel opposite the medieval cathedral.",
-    "image": "https://img.castlecore.uk/dornoch-castle-hotel.jpg",
-    "rating": 3.7,
-    "reviewCount": 450,
-    "county": "Highland",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 1035,
-    "gallery": [
-      "https://img.castlecore.uk/dornoch-castle-hotel-2.jpg",
-      "https://img.castlecore.uk/dornoch-castle-hotel-3.jpg",
-      "https://img.castlecore.uk/dornoch-castle-hotel-4.jpg",
-      "https://img.castlecore.uk/dornoch-castle-hotel-5.jpg"
-    ]
-  },
-  {
-    "name": "Dundrum Castle (Down)",
-    "lat": 54.252,
-    "lng": -5.846,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "De Courcy's circular keep on a hilltop above Dundrum Bay with Mourne views.",
-    "image": "https://img.castlecore.uk/dundrum-castle-down.jpg",
-    "rating": 4,
-    "reviewCount": 1200,
-    "county": "County Down",
-    "tags": [
-      "dramatic-ruin",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1036,
-    "gallery": [
-      "https://img.castlecore.uk/dundrum-castle-down-2.jpg",
-      "https://img.castlecore.uk/dundrum-castle-down-3.jpg",
-      "https://img.castlecore.uk/dundrum-castle-down-4.jpg",
-      "https://img.castlecore.uk/dundrum-castle-down-5.jpg"
-    ]
-  },
-  {
-    "name": "Castle Combe Village",
-    "lat": 51.493,
-    "lng": -2.222,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Scant castle remains above what's often called the prettiest village in England.",
-    "image": "https://img.castlecore.uk/castle-combe-village.jpg",
-    "rating": 3.3,
-    "reviewCount": 150,
-    "county": "Wiltshire",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1037,
-    "gallery": [
-      "https://img.castlecore.uk/castle-combe-village-2.jpg",
-      "https://img.castlecore.uk/castle-combe-village-3.jpg",
-      "https://img.castlecore.uk/castle-combe-village-4.jpg",
-      "https://img.castlecore.uk/castle-combe-village-5.jpg"
-    ]
-  },
-  {
     "name": "Ross Castle (Killarney)",
     "lat": 52.032,
     "lng": -9.54,
@@ -29671,32 +29167,6 @@ const CASTLES = [
       "https://img.castlecore.uk/caherkinmonwee-castle-3.jpg",
       "https://img.castlecore.uk/caherkinmonwee-castle-4.jpg",
       "https://img.castlecore.uk/caherkinmonwee-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Lemeneagh Castle",
-    "lat": 52.972,
-    "lng": -8.972,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house with later fortified house addition on the Burren edge.",
-    "image": "https://img.castlecore.uk/lemeneagh-castle.jpg",
-    "rating": 3.7,
-    "reviewCount": 65,
-    "county": "County Clare",
-    "tags": [
-      "dramatic-ruin",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1045,
-    "gallery": [
-      "https://img.castlecore.uk/lemeneagh-castle-2.jpg",
-      "https://img.castlecore.uk/lemeneagh-castle-3.jpg",
-      "https://img.castlecore.uk/lemeneagh-castle-4.jpg",
-      "https://img.castlecore.uk/lemeneagh-castle-5.jpg"
     ]
   },
   {
@@ -31408,32 +30878,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Killmallock Castle",
-    "lat": 52.398,
-    "lng": -8.578,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Town castle remains in Kilmallock's walled town.",
-    "image": "https://img.castlecore.uk/killmallock-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 28,
-    "county": "County Limerick",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1116,
-    "gallery": [
-      "https://img.castlecore.uk/killmallock-castle-2.jpg",
-      "https://img.castlecore.uk/killmallock-castle-3.jpg",
-      "https://img.castlecore.uk/killmallock-castle-4.jpg",
-      "https://img.castlecore.uk/killmallock-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Dromore Castle (Kerry/Lim)",
     "lat": 52.535,
     "lng": -9.028,
@@ -31508,33 +30952,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kinlough-castle-mayo-2.jpg",
       "https://img.castlecore.uk/kinlough-castle-mayo-3.jpg",
       "https://img.castlecore.uk/kinlough-castle-mayo-4.jpg"
-    ]
-  },
-  {
-    "name": "Kildavnet Castle",
-    "lat": 53.895,
-    "lng": -10.035,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Grace O'Malley tower house on Achill Island.",
-    "image": "https://img.castlecore.uk/kildavnet-castle.jpg",
-    "rating": 3.7,
-    "reviewCount": 58,
-    "county": "County Mayo",
-    "tags": [
-      "dramatic-ruin",
-      "free",
-      "coastal"
-    ],
-    "access": "free",
-    "_index": 1120,
-    "gallery": [
-      "https://img.castlecore.uk/kildavnet-castle-2.jpg",
-      "https://img.castlecore.uk/kildavnet-castle-3.jpg",
-      "https://img.castlecore.uk/kildavnet-castle-4.jpg",
-      "https://img.castlecore.uk/kildavnet-castle-5.jpg"
     ]
   },
   {
@@ -31861,31 +31278,6 @@ const CASTLES = [
       "https://img.castlecore.uk/errew-abbey-3.jpg",
       "https://img.castlecore.uk/errew-abbey-4.jpg",
       "https://img.castlecore.uk/errew-abbey-5.jpg"
-    ]
-  },
-  {
-    "name": "Castlerea Castle (Clonalis)",
-    "lat": 53.768,
-    "lng": -8.485,
-    "country": "Ireland",
-    "type": "country house",
-    "era": "19th century",
-    "condition": "intact",
-    "description": "Victorian mansion of the O'Conor Don family.",
-    "image": "https://img.castlecore.uk/castlerea-castle-clonalis.jpg",
-    "rating": 3.6,
-    "reviewCount": 42,
-    "county": "County Roscommon",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 1134,
-    "gallery": [
-      "https://img.castlecore.uk/castlerea-castle-clonalis-2.jpg",
-      "https://img.castlecore.uk/castlerea-castle-clonalis-3.jpg",
-      "https://img.castlecore.uk/castlerea-castle-clonalis-4.jpg",
-      "https://img.castlecore.uk/castlerea-castle-clonalis-5.jpg"
     ]
   },
   {
@@ -36322,31 +35714,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Peel Castle (Main)",
-    "lat": 54.228,
-    "lng": -4.698,
-    "country": "Isle of Man",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Viking and medieval castle on St Patrick's Isle.",
-    "image": "https://img.castlecore.uk/peel-castle-main.jpg",
-    "rating": 4,
-    "reviewCount": 130,
-    "county": "Isle of Man",
-    "tags": [
-      "must-see"
-    ],
-    "access": "paid",
-    "_index": 1317,
-    "gallery": [
-      "https://img.castlecore.uk/peel-castle-main-2.jpg",
-      "https://img.castlecore.uk/peel-castle-main-3.jpg",
-      "https://img.castlecore.uk/peel-castle-main-4.jpg",
-      "https://img.castlecore.uk/peel-castle-main-5.jpg"
-    ]
-  },
-  {
     "name": "Powerscourt Castle",
     "lat": 53.188,
     "lng": -6.188,
@@ -36840,32 +36207,6 @@ const CASTLES = [
       "https://img.castlecore.uk/donnaghdee-castle-3.jpg",
       "https://img.castlecore.uk/donnaghdee-castle-4.jpg",
       "https://img.castlecore.uk/donnaghdee-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Ravenscraig Castle (Fife)",
-    "lat": 56.118,
-    "lng": -3.148,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "First castle designed for defence against cannon.",
-    "image": "https://img.castlecore.uk/ravenscraig-castle-fife.jpg",
-    "rating": 3.6,
-    "reviewCount": 40,
-    "county": "Fife",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1339,
-    "gallery": [
-      "https://img.castlecore.uk/ravenscraig-castle-fife-2.jpg",
-      "https://img.castlecore.uk/ravenscraig-castle-fife-3.jpg",
-      "https://img.castlecore.uk/ravenscraig-castle-fife-4.jpg",
-      "https://img.castlecore.uk/ravenscraig-castle-fife-5.jpg"
     ]
   },
   {
@@ -38804,31 +38145,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Roscrea Heritage Site",
-    "lat": 52.952,
-    "lng": -7.802,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "restored",
-    "description": "Norman castle with Damer House inside the curtain walls.",
-    "image": "https://img.castlecore.uk/roscrea-heritage-site.jpg",
-    "rating": 3.7,
-    "reviewCount": 52,
-    "county": "County Tipperary",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 1423,
-    "gallery": [
-      "https://img.castlecore.uk/roscrea-heritage-site-2.jpg",
-      "https://img.castlecore.uk/roscrea-heritage-site-3.jpg",
-      "https://img.castlecore.uk/roscrea-heritage-site-4.jpg",
-      "https://img.castlecore.uk/roscrea-heritage-site-5.jpg"
-    ]
-  },
-  {
     "name": "Glenstal Abbey (Main)",
     "lat": 52.668,
     "lng": -8.428,
@@ -39193,32 +38509,6 @@ const CASTLES = [
       "https://img.castlecore.uk/strade-abbey-3.jpg",
       "https://img.castlecore.uk/strade-abbey-4.jpg",
       "https://img.castlecore.uk/strade-abbey-5.jpg"
-    ]
-  },
-  {
-    "name": "Parkes Castle",
-    "lat": 54.258,
-    "lng": -8.283,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "intact",
-    "description": "Beautifully restored Plantation castle on the shore of Lough Gill in County Leitrim.",
-    "image": "https://img.castlecore.uk/parkes-castle.jpg",
-    "rating": 4.2,
-    "reviewCount": 620,
-    "county": "County Leitrim",
-    "tags": [
-      "well-preserved",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1440,
-    "gallery": [
-      "https://img.castlecore.uk/parkes-castle-2.jpg",
-      "https://img.castlecore.uk/parkes-castle-3.jpg",
-      "https://img.castlecore.uk/parkes-castle-4.jpg",
-      "https://img.castlecore.uk/parkes-castle-5.jpg"
     ]
   },
   {
@@ -39834,33 +39124,6 @@ const CASTLES = [
       "https://img.castlecore.uk/granuaile-tower-3.jpg",
       "https://img.castlecore.uk/granuaile-tower-4.jpg",
       "https://img.castlecore.uk/granuaile-tower-5.jpg"
-    ]
-  },
-  {
-    "name": "Coppingers Court",
-    "lat": 51.559,
-    "lng": -9.099,
-    "country": "Ireland",
-    "type": "fortified house",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "Unique fortified house ruin near Rosscarbery in West Cork with distinctive chimneys.",
-    "image": "https://img.castlecore.uk/coppingers-court.jpg",
-    "rating": 3.8,
-    "reviewCount": 95,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free",
-      "dramatic-ruin"
-    ],
-    "access": "free",
-    "_index": 1467,
-    "gallery": [
-      "https://img.castlecore.uk/coppingers-court-2.jpg",
-      "https://img.castlecore.uk/coppingers-court-3.jpg",
-      "https://img.castlecore.uk/coppingers-court-4.jpg",
-      "https://img.castlecore.uk/coppingers-court-5.jpg"
     ]
   },
   {
@@ -41223,33 +40486,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Conwy Town Walls Walk",
-    "lat": 53.2811,
-    "lng": -3.8306,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "intact",
-    "description": "Complete circuit of medieval town walls, among the finest in Europe.",
-    "image": "https://img.castlecore.uk/conwy-town-walls-walk.jpg",
-    "rating": 4.6,
-    "reviewCount": 3800,
-    "county": "Conwy",
-    "tags": [
-      "town-walls",
-      "walkable",
-      "medieval"
-    ],
-    "access": "free",
-    "_index": 1522,
-    "gallery": [
-      "https://img.castlecore.uk/conwy-town-walls-walk-2.jpg",
-      "https://img.castlecore.uk/conwy-town-walls-walk-3.jpg",
-      "https://img.castlecore.uk/conwy-town-walls-walk-4.jpg",
-      "https://img.castlecore.uk/conwy-town-walls-walk-5.jpg"
-    ]
-  },
-  {
     "name": "Plas Mawr",
     "lat": 53.2819,
     "lng": -3.8283,
@@ -41738,33 +40974,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Rhuddlan Castle Towers",
-    "lat": 53.2889,
-    "lng": -3.4611,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Diamond-plan Edwardian castle with unique canalised river approach.",
-    "image": "https://img.castlecore.uk/rhuddlan-castle-towers.jpg",
-    "rating": 4.1,
-    "reviewCount": 1200,
-    "county": "Denbighshire",
-    "tags": [
-      "diamond-plan",
-      "edwardian",
-      "canal"
-    ],
-    "access": "paid",
-    "_index": 1544,
-    "gallery": [
-      "https://img.castlecore.uk/rhuddlan-castle-towers-2.jpg",
-      "https://img.castlecore.uk/rhuddlan-castle-towers-3.jpg",
-      "https://img.castlecore.uk/rhuddlan-castle-towers-4.jpg",
-      "https://img.castlecore.uk/rhuddlan-castle-towers-5.jpg"
-    ]
-  },
-  {
     "name": "Mold Bailey Hill",
     "lat": 53.1667,
     "lng": -3.1417,
@@ -42007,61 +41216,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Raglan Castle Great Tower",
-    "lat": 51.7639,
-    "lng": -2.85,
-    "country": "Wales",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Magnificent hexagonal great tower and late medieval palace fortress.",
-    "image": "https://img.castlecore.uk/raglan-castle-great-tower.jpg",
-    "rating": 4.7,
-    "reviewCount": 5000,
-    "county": "Monmouthshire",
-    "tags": [
-      "great-tower",
-      "hexagonal",
-      "cadw",
-      "palace"
-    ],
-    "access": "paid",
-    "_index": 1557,
-    "gallery": [
-      "https://img.castlecore.uk/raglan-castle-great-tower-2.jpg",
-      "https://img.castlecore.uk/raglan-castle-great-tower-3.jpg",
-      "https://img.castlecore.uk/raglan-castle-great-tower-4.jpg",
-      "https://img.castlecore.uk/raglan-castle-great-tower-5.jpg"
-    ]
-  },
-  {
-    "name": "Chepstow Castle Great Tower",
-    "lat": 51.6417,
-    "lng": -2.675,
-    "country": "Wales",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Oldest surviving post-Roman stone fortification in Britain on Wye cliffs.",
-    "image": "https://img.castlecore.uk/chepstow-castle-great-tower.jpg",
-    "rating": 4.7,
-    "reviewCount": 5800,
-    "county": "Monmouthshire",
-    "tags": [
-      "oldest-stone",
-      "wye-cliffs",
-      "cadw"
-    ],
-    "access": "paid",
-    "_index": 1558,
-    "gallery": [
-      "https://img.castlecore.uk/chepstow-castle-great-tower-2.jpg",
-      "https://img.castlecore.uk/chepstow-castle-great-tower-3.jpg",
-      "https://img.castlecore.uk/chepstow-castle-great-tower-4.jpg",
-      "https://img.castlecore.uk/chepstow-castle-great-tower-5.jpg"
-    ]
-  },
-  {
     "name": "Monmouth Castle",
     "lat": 51.8111,
     "lng": -2.7139,
@@ -42116,33 +41270,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Usk Castle Gardens",
-    "lat": 51.7028,
-    "lng": -2.9028,
-    "country": "Wales",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Privately owned castle ruins with beautiful gardens open seasonally.",
-    "image": "https://img.castlecore.uk/usk-castle-gardens.jpg",
-    "rating": 4.1,
-    "reviewCount": 550,
-    "county": "Monmouthshire",
-    "tags": [
-      "gardens",
-      "private",
-      "seasonal"
-    ],
-    "access": "paid",
-    "_index": 1562,
-    "gallery": [
-      "https://img.castlecore.uk/usk-castle-gardens-2.jpg",
-      "https://img.castlecore.uk/usk-castle-gardens-3.jpg",
-      "https://img.castlecore.uk/usk-castle-gardens-4.jpg",
-      "https://img.castlecore.uk/usk-castle-gardens-5.jpg"
-    ]
-  },
-  {
     "name": "Piercefield Walks",
     "lat": 51.65,
     "lng": -2.6833,
@@ -42167,61 +41294,6 @@ const CASTLES = [
       "https://img.castlecore.uk/piercefield-walks-3.jpg",
       "https://img.castlecore.uk/piercefield-walks-4.jpg",
       "https://img.castlecore.uk/piercefield-walks-5.jpg"
-    ]
-  },
-  {
-    "name": "Margam Castle Victorian",
-    "lat": 51.5639,
-    "lng": -3.7278,
-    "country": "Wales",
-    "type": "castle",
-    "era": "19th century",
-    "condition": "restored",
-    "description": "Tudor Gothic mansion in Margam Country Park with orangery and chapter house.",
-    "image": "https://img.castlecore.uk/margam-castle-victorian.jpg",
-    "rating": 4.2,
-    "reviewCount": 2200,
-    "county": "Neath Port Talbot",
-    "tags": [
-      "tudor-gothic",
-      "country-park",
-      "orangery"
-    ],
-    "access": "paid",
-    "_index": 1564,
-    "gallery": [
-      "https://img.castlecore.uk/margam-castle-victorian-2.jpg",
-      "https://img.castlecore.uk/margam-castle-victorian-3.jpg",
-      "https://img.castlecore.uk/margam-castle-victorian-4.jpg",
-      "https://img.castlecore.uk/margam-castle-victorian-5.jpg"
-    ]
-  },
-  {
-    "name": "Pennard Castle Gower",
-    "lat": 51.5667,
-    "lng": -4.075,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Romantic castle ruin above Three Cliffs Bay, half-buried in sand dunes.",
-    "image": "https://img.castlecore.uk/pennard-castle-gower.jpg",
-    "rating": 4.5,
-    "reviewCount": 2000,
-    "county": "Swansea",
-    "tags": [
-      "romantic",
-      "sand-dunes",
-      "three-cliffs",
-      "photogenic"
-    ],
-    "access": "free",
-    "_index": 1565,
-    "gallery": [
-      "https://img.castlecore.uk/pennard-castle-gower-2.jpg",
-      "https://img.castlecore.uk/pennard-castle-gower-3.jpg",
-      "https://img.castlecore.uk/pennard-castle-gower-4.jpg",
-      "https://img.castlecore.uk/pennard-castle-gower-5.jpg"
     ]
   },
   {
@@ -42276,33 +41348,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dylan-thomas-boathouse-3.jpg",
       "https://img.castlecore.uk/dylan-thomas-boathouse-4.jpg",
       "https://img.castlecore.uk/dylan-thomas-boathouse-5.jpg"
-    ]
-  },
-  {
-    "name": "Llansteffan Castle Viewpoint",
-    "lat": 51.7694,
-    "lng": -4.3917,
-    "country": "Wales",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Castle on a headland commanding views over three river estuaries.",
-    "image": "https://img.castlecore.uk/llansteffan-castle-viewpoint.jpg",
-    "rating": 4.3,
-    "reviewCount": 1000,
-    "county": "Carmarthenshire",
-    "tags": [
-      "headland",
-      "three-estuaries",
-      "cadw"
-    ],
-    "access": "free",
-    "_index": 1569,
-    "gallery": [
-      "https://img.castlecore.uk/llansteffan-castle-viewpoint-2.jpg",
-      "https://img.castlecore.uk/llansteffan-castle-viewpoint-3.jpg",
-      "https://img.castlecore.uk/llansteffan-castle-viewpoint-4.jpg",
-      "https://img.castlecore.uk/llansteffan-castle-viewpoint-5.jpg"
     ]
   },
   {
@@ -42438,33 +41483,6 @@ const CASTLES = [
       "https://img.castlecore.uk/bodnant-garden-3.jpg",
       "https://img.castlecore.uk/bodnant-garden-4.jpg",
       "https://img.castlecore.uk/bodnant-garden-5.jpg"
-    ]
-  },
-  {
-    "name": "Penmon Priory Anglesey",
-    "lat": 53.3111,
-    "lng": -4.05,
-    "country": "Wales",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Augustinian priory with dovecote and Celtic crosses near Puffin Island.",
-    "image": "https://img.castlecore.uk/penmon-priory-anglesey.jpg",
-    "rating": 4.2,
-    "reviewCount": 900,
-    "county": "Anglesey",
-    "tags": [
-      "augustinian",
-      "dovecote",
-      "puffin-island"
-    ],
-    "access": "free",
-    "_index": 1581,
-    "gallery": [
-      "https://img.castlecore.uk/penmon-priory-anglesey-2.jpg",
-      "https://img.castlecore.uk/penmon-priory-anglesey-3.jpg",
-      "https://img.castlecore.uk/penmon-priory-anglesey-4.jpg",
-      "https://img.castlecore.uk/penmon-priory-anglesey-5.jpg"
     ]
   },
   {
@@ -42730,29 +41748,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Lochleven Castle Keep",
-    "lat": 56.1986,
-    "lng": -3.3878,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "The imposing tower keep on Castle Island where Mary Queen of Scots was imprisoned in 1567.",
-    "image": "https://img.castlecore.uk/wiki-lochleven-castle-keep.jpg",
-    "rating": 4.5,
-    "reviewCount": 2800,
-    "county": "Perth and Kinross",
-    "tags": [
-      "island",
-      "keep"
-    ],
-    "access": "paid",
-    "_index": 1594,
-    "gallery": [
-      "https://img.castlecore.uk/wiki-lochleven-castle-keep.jpg"
-    ]
-  },
-  {
     "name": "Ballindalloch Castle",
     "lat": 57.3419,
     "lng": -3.3625,
@@ -42896,33 +41891,6 @@ const CASTLES = [
       "https://img.castlecore.uk/mingary-castle-restored-3.jpg",
       "https://img.castlecore.uk/mingary-castle-restored-4.jpg",
       "https://img.castlecore.uk/mingary-castle-restored-5.jpg"
-    ]
-  },
-  {
-    "name": "Tioram Castle Viewpoint",
-    "lat": 56.7786,
-    "lng": -5.8289,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "Romantic tidal island ruin at the head of Loch Moidart, one of Scotland's most photographed castles.",
-    "image": "https://img.castlecore.uk/tioram-castle-viewpoint.jpg",
-    "rating": 4.6,
-    "reviewCount": 2800,
-    "county": "Highland",
-    "tags": [
-      "tidal-island",
-      "romantic",
-      "photogenic"
-    ],
-    "access": "free",
-    "_index": 1601,
-    "gallery": [
-      "https://img.castlecore.uk/tioram-castle-viewpoint-2.jpg",
-      "https://img.castlecore.uk/tioram-castle-viewpoint-3.jpg",
-      "https://img.castlecore.uk/tioram-castle-viewpoint-4.jpg",
-      "https://img.castlecore.uk/tioram-castle-viewpoint-5.jpg"
     ]
   },
   {
@@ -43729,32 +42697,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Scalloway Castle Restored",
-    "lat": 60.1333,
-    "lng": -1.2833,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "Earl Patrick Stewart's castle, built with forced labour, now a key Shetland landmark.",
-    "image": "https://img.castlecore.uk/scalloway-castle-restored.jpg",
-    "rating": 4.1,
-    "reviewCount": 620,
-    "county": "Shetland",
-    "tags": [
-      "stewart",
-      "landmark"
-    ],
-    "access": "free",
-    "_index": 1636,
-    "gallery": [
-      "https://img.castlecore.uk/scalloway-castle-restored-2.jpg",
-      "https://img.castlecore.uk/scalloway-castle-restored-3.jpg",
-      "https://img.castlecore.uk/scalloway-castle-restored-4.jpg",
-      "https://img.castlecore.uk/scalloway-castle-restored-5.jpg"
-    ]
-  },
-  {
     "name": "Borve Castle",
     "lat": 58.1167,
     "lng": -5,
@@ -44104,33 +43046,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Huntingtower Castle Painted Ceiling",
-    "lat": 56.4,
-    "lng": -3.5167,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "intact",
-    "description": "Two complete tower houses linked by a range, famous for the Maiden's Leap and painted ceilings.",
-    "image": "https://img.castlecore.uk/huntingtower-castle-painted-ceiling.jpg",
-    "rating": 4.3,
-    "reviewCount": 780,
-    "county": "Perth and Kinross",
-    "tags": [
-      "painted-ceilings",
-      "tower-house",
-      "maidens-leap"
-    ],
-    "access": "paid",
-    "_index": 1653,
-    "gallery": [
-      "https://img.castlecore.uk/huntingtower-castle-painted-ceiling-2.jpg",
-      "https://img.castlecore.uk/huntingtower-castle-painted-ceiling-3.jpg",
-      "https://img.castlecore.uk/huntingtower-castle-painted-ceiling-4.jpg",
-      "https://img.castlecore.uk/huntingtower-castle-painted-ceiling-5.jpg"
-    ]
-  },
-  {
     "name": "Castle Menzies Great Hall",
     "lat": 56.6167,
     "lng": -3.8833,
@@ -44262,32 +43177,6 @@ const CASTLES = [
       "https://img.castlecore.uk/tibbers-castle-3.jpg",
       "https://img.castlecore.uk/tibbers-castle-4.jpg",
       "https://img.castlecore.uk/tibbers-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Caerlaverockite",
-    "lat": 54.9722,
-    "lng": -3.5222,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Unique triangular moated castle with twin-towered gatehouse on the Solway coast.",
-    "image": "https://img.castlecore.uk/caerlaverockite.jpg",
-    "rating": 4.7,
-    "reviewCount": 5200,
-    "county": "Dumfries and Galloway",
-    "tags": [
-      "triangular",
-      "moated",
-      "unique",
-      "iconic"
-    ],
-    "access": "paid",
-    "_index": 1659,
-    "gallery": [
-      "https://img.castlecore.uk/caerlaverockite-2.jpg",
-      "https://img.castlecore.uk/caerlaverockite-3.jpg"
     ]
   },
   {
@@ -45286,27 +44175,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ravenscraig Castle Fife",
-    "lat": 56.1167,
-    "lng": -3.15,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "One of the first castles in Scotland designed to withstand artillery, built for James II's queen.",
-    "image": "https://img.castlecore.uk/ravenscraig-castle-fife.jpg",
-    "rating": 4.1,
-    "reviewCount": 520,
-    "county": "Fife",
-    "tags": [
-      "artillery",
-      "innovative",
-      "coastal"
-    ],
-    "access": "free",
-    "_index": 1708
-  },
-  {
     "name": "Skipness Castle Chapel",
     "lat": 55.7667,
     "lng": -5.3833,
@@ -45491,26 +44359,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Desmond Castle Kinsale",
-    "lat": 51.705,
-    "lng": -8.524,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "restored",
-    "description": "Also called the French Prison; now an international museum of wine.",
-    "image": "https://img.castlecore.uk/desmond-castle-kinsale.jpg",
-    "rating": 4.1,
-    "reviewCount": 300,
-    "county": "County Cork",
-    "tags": [
-      "landmark",
-      "museum"
-    ],
-    "access": "paid",
-    "_index": 1718
-  },
-  {
     "name": "James Fort",
     "lat": 51.695,
     "lng": -8.515,
@@ -45585,36 +44433,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Holycross Abbey",
-    "lat": 52.64,
-    "lng": -7.866,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "restored",
-    "description": "Beautifully restored Cistercian abbey, still an active parish church.",
-    "image": "https://img.castlecore.uk/holycross-abbey.jpg",
-    "rating": 4.6,
-    "reviewCount": 600,
-    "county": "County Tipperary",
-    "tags": [
-      "landmark",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1723,
-    "gallery": [
-      "https://img.castlecore.uk/holycross-abbey-2.jpg",
-      "https://img.castlecore.uk/holycross-abbey-3.jpg",
-      "https://img.castlecore.uk/holycross-abbey-4.jpg",
-      "https://img.castlecore.uk/holycross-abbey-5.jpg",
-      "https://img.castlecore.uk/holycross-abbey-main-2.jpg",
-      "https://img.castlecore.uk/holycross-abbey-main-3.jpg",
-      "https://img.castlecore.uk/holycross-abbey-main-4.jpg",
-      "https://img.castlecore.uk/holycross-abbey-main-5.jpg"
-    ]
-  },
-  {
     "name": "Kilcooly Abbey",
     "lat": 52.687,
     "lng": -7.691,
@@ -45661,25 +44479,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ormond-castle-carrick-4.jpg",
       "https://img.castlecore.uk/ormond-castle-carrick-5.jpg"
     ]
-  },
-  {
-    "name": "Desmond Castle Newcastle West",
-    "lat": 52.449,
-    "lng": -9.062,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Two great halls of the Earls of Desmond, including Desmond Banqueting Hall.",
-    "image": "https://img.castlecore.uk/desmond-castle-newcastle-west.jpg",
-    "rating": 4.1,
-    "reviewCount": 180,
-    "county": "County Limerick",
-    "tags": [
-      "landmark"
-    ],
-    "access": "paid",
-    "_index": 1727
   },
   {
     "name": "Croom Castle",
@@ -45777,26 +44576,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kells-priory-meath-4.jpg",
       "https://img.castlecore.uk/kells-priory-meath-5.jpg"
     ]
-  },
-  {
-    "name": "Donore Castle Meath",
-    "lat": 53.68,
-    "lng": -6.419,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house near the Battle of the Boyne site.",
-    "image": "https://img.castlecore.uk/donore-castle-meath.jpg",
-    "rating": 3.5,
-    "reviewCount": 30,
-    "county": "County Meath",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1733
   },
   {
     "name": "Skryne Church",
@@ -46009,27 +44788,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Dundrum Castle Down",
-    "lat": 54.258,
-    "lng": -5.849,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "John de Courcy's hilltop castle with circular keep and sea views.",
-    "image": "https://img.castlecore.uk/dundrum-castle-down.jpg",
-    "rating": 4.4,
-    "reviewCount": 450,
-    "county": "County Down",
-    "tags": [
-      "landmark",
-      "free",
-      "scenic"
-    ],
-    "access": "free",
-    "_index": 1742
-  },
-  {
     "name": "Jordan's Castle Ardglass",
     "lat": 54.262,
     "lng": -5.61,
@@ -46105,26 +44863,6 @@ const CASTLES = [
       "https://img.castlecore.uk/donegal-abbey-4.jpg",
       "https://img.castlecore.uk/donegal-abbey-5.jpg"
     ]
-  },
-  {
-    "name": "Greencastle Donegal",
-    "lat": 55.196,
-    "lng": -6.991,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "Anglo-Norman castle overlooking Lough Foyle.",
-    "image": "https://img.castlecore.uk/greencastle-donegal.jpg",
-    "rating": 3.8,
-    "reviewCount": 80,
-    "county": "County Donegal",
-    "tags": [
-      "free",
-      "scenic"
-    ],
-    "access": "free",
-    "_index": 1746
   },
   {
     "name": "Classiebawn Castle",
@@ -48504,31 +47242,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ravensworth Castle (Yorkshire)",
-    "lat": 54.4617,
-    "lng": -1.705,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "Gothic castle ruins in parkland near Richmond.",
-    "image": "https://img.castlecore.uk/ravensworth-castle-yorkshire.jpg",
-    "rating": 3.5,
-    "reviewCount": 150,
-    "county": "Yorkshire",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 1849,
-    "gallery": [
-      "https://img.castlecore.uk/ravensworth-castle-yorkshire-2.jpg",
-      "https://img.castlecore.uk/ravensworth-castle-yorkshire-3.jpg",
-      "https://img.castlecore.uk/ravensworth-castle-yorkshire-4.jpg",
-      "https://img.castlecore.uk/ravensworth-castle-yorkshire-5.jpg"
-    ]
-  },
-  {
     "name": "Tickhill Castle",
     "lat": 53.4317,
     "lng": -1.11,
@@ -49247,32 +47960,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Castle Acre Priory (Cluniac)",
-    "lat": 52.7117,
-    "lng": 0.6883,
-    "country": "England",
-    "type": "abbey",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Impressive Cluniac priory ruins with an elaborately decorated west front.",
-    "image": "https://img.castlecore.uk/castle-acre-priory-cluniac.jpg",
-    "rating": 4.5,
-    "reviewCount": 2200,
-    "county": "Norfolk",
-    "tags": [
-      "photogenic",
-      "romantic-ruin"
-    ],
-    "access": "paid",
-    "_index": 1879,
-    "gallery": [
-      "https://img.castlecore.uk/castle-acre-priory-cluniac-2.jpg",
-      "https://img.castlecore.uk/castle-acre-priory-cluniac-3.jpg",
-      "https://img.castlecore.uk/castle-acre-priory-cluniac-4.jpg",
-      "https://img.castlecore.uk/castle-acre-priory-cluniac-5.jpg"
-    ]
-  },
-  {
     "name": "St Botolph's Priory",
     "lat": 51.8839,
     "lng": 0.9044,
@@ -49864,33 +48551,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Castle Hedingham",
-    "lat": 51.9956,
-    "lng": 0.5953,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "partial",
-    "description": "One of the finest Norman keeps in England with a magnificent banqueting hall.",
-    "image": "https://img.castlecore.uk/castle-hedingham.jpg",
-    "rating": 4.5,
-    "reviewCount": 1800,
-    "county": "Essex",
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 1906,
-    "gallery": [
-      "https://img.castlecore.uk/castle-hedingham-2.jpg",
-      "https://img.castlecore.uk/castle-hedingham-3.jpg",
-      "https://img.castlecore.uk/castle-hedingham-4.jpg",
-      "https://img.castlecore.uk/castle-hedingham-5.jpg"
-    ]
-  },
-  {
     "name": "Barnwell Castle",
     "lat": 52.4517,
     "lng": -0.45,
@@ -50222,32 +48882,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Wolvesey Castle (Palace)",
-    "lat": 51.0578,
-    "lng": -1.3194,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "The great hall and other ruins of Henry de Blois's magnificent palace.",
-    "image": "https://img.castlecore.uk/wolvesey-castle-palace.jpg",
-    "rating": 4,
-    "reviewCount": 800,
-    "county": "Hampshire",
-    "tags": [
-      "free",
-      "hidden-gem"
-    ],
-    "access": "free",
-    "_index": 1922,
-    "gallery": [
-      "https://img.castlecore.uk/wolvesey-castle-palace-2.jpg",
-      "https://img.castlecore.uk/wolvesey-castle-palace-3.jpg",
-      "https://img.castlecore.uk/wolvesey-castle-palace-4.jpg",
-      "https://img.castlecore.uk/wolvesey-castle-palace-5.jpg"
-    ]
-  },
-  {
     "name": "Farringdon Folly Tower",
     "lat": 51.6517,
     "lng": -1.585,
@@ -50376,32 +49010,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kirby-muxloe-main-castle-3.jpg",
       "https://img.castlecore.uk/kirby-muxloe-main-castle-4.jpg",
       "https://img.castlecore.uk/kirby-muxloe-main-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Pickering Castle (North Yorkshire)",
-    "lat": 54.2467,
-    "lng": -0.7783,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Motte and bailey castle used as a royal hunting lodge for the North York Moors.",
-    "image": "https://img.castlecore.uk/pickering-castle-north-yorkshire.jpg",
-    "rating": 4.3,
-    "reviewCount": 2200,
-    "county": "Yorkshire",
-    "tags": [
-      "well-preserved",
-      "kid-friendly"
-    ],
-    "access": "paid",
-    "_index": 1930,
-    "gallery": [
-      "https://img.castlecore.uk/pickering-castle-north-yorkshire-2.jpg",
-      "https://img.castlecore.uk/pickering-castle-north-yorkshire-3.jpg",
-      "https://img.castlecore.uk/pickering-castle-north-yorkshire-4.jpg",
-      "https://img.castlecore.uk/pickering-castle-north-yorkshire-5.jpg"
     ]
   },
   {
@@ -50786,114 +49394,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Muncaster Castle (Eskdale)",
-    "lat": 54.3567,
-    "lng": -3.3264,
-    "country": "England",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "intact",
-    "description": "Haunted castle with owl centre and stunning mountain views, home of the Pennington family.",
-    "image": "https://img.castlecore.uk/muncaster-castle-eskdale.jpg",
-    "rating": 4.4,
-    "reviewCount": 3000,
-    "county": "Cumbria",
-    "tags": [
-      "well-preserved",
-      "haunted",
-      "kid-friendly",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1962,
-    "gallery": [
-      "https://img.castlecore.uk/muncaster-castle-eskdale-2.jpg",
-      "https://img.castlecore.uk/muncaster-castle-eskdale-3.jpg",
-      "https://img.castlecore.uk/muncaster-castle-eskdale-4.jpg",
-      "https://img.castlecore.uk/muncaster-castle-eskdale-5.jpg"
-    ]
-  },
-  {
-    "name": "Sizergh Castle (Kendal)",
-    "lat": 54.2869,
-    "lng": -2.7728,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "intact",
-    "description": "Strickland family home for 760 years with a magnificent Elizabethan carved overmantle.",
-    "image": "https://img.castlecore.uk/sizergh-castle-kendal.jpg",
-    "rating": 4.4,
-    "reviewCount": 2500,
-    "county": "Cumbria",
-    "tags": [
-      "well-preserved",
-      "kid-friendly",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1963,
-    "gallery": [
-      "https://img.castlecore.uk/sizergh-castle-kendal-2.jpg",
-      "https://img.castlecore.uk/sizergh-castle-kendal-3.jpg",
-      "https://img.castlecore.uk/sizergh-castle-kendal-4.jpg",
-      "https://img.castlecore.uk/sizergh-castle-kendal-5.jpg"
-    ]
-  },
-  {
-    "name": "Okehampton Castle (Devon)",
-    "lat": 50.7383,
-    "lng": -3.9892,
-    "country": "England",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Largest castle in Devon with keep and bailey ruins in a wooded valley.",
-    "image": "https://img.castlecore.uk/okehampton-castle-devon.jpg",
-    "rating": 4.3,
-    "reviewCount": 1800,
-    "county": "Devon",
-    "tags": [
-      "dramatic-ruin",
-      "photogenic",
-      "kid-friendly"
-    ],
-    "access": "paid",
-    "_index": 1965,
-    "gallery": [
-      "https://img.castlecore.uk/okehampton-castle-devon-2.jpg",
-      "https://img.castlecore.uk/okehampton-castle-devon-3.jpg",
-      "https://img.castlecore.uk/okehampton-castle-devon-4.jpg",
-      "https://img.castlecore.uk/okehampton-castle-devon-5.jpg"
-    ]
-  },
-  {
-    "name": "Dartmouth Castle (Devon)",
-    "lat": 50.3397,
-    "lng": -3.5728,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "partial",
-    "description": "Coastal fortress guarding the Dart estuary, one of the first designed for gunpowder.",
-    "image": "https://img.castlecore.uk/dartmouth-castle-devon.jpg",
-    "rating": 4.4,
-    "reviewCount": 2500,
-    "county": "Devon",
-    "tags": [
-      "well-preserved",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1967,
-    "gallery": [
-      "https://img.castlecore.uk/dartmouth-castle-devon-2.jpg",
-      "https://img.castlecore.uk/dartmouth-castle-devon-3.jpg",
-      "https://img.castlecore.uk/dartmouth-castle-devon-4.jpg",
-      "https://img.castlecore.uk/dartmouth-castle-devon-5.jpg"
-    ]
-  },
-  {
     "name": "Castle Drogo (Dartmoor)",
     "lat": 50.6928,
     "lng": -3.7717,
@@ -50917,33 +49417,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-drogo-dartmoor-3.jpg",
       "https://img.castlecore.uk/castle-drogo-dartmoor-4.jpg",
       "https://img.castlecore.uk/castle-drogo-dartmoor-5.jpg"
-    ]
-  },
-  {
-    "name": "Portchester Castle (Roman)",
-    "lat": 50.8372,
-    "lng": -1.1153,
-    "country": "England",
-    "type": "castle",
-    "era": "3rd century",
-    "condition": "partial",
-    "description": "Norman castle within the finest Roman walls in northern Europe.",
-    "image": "https://img.castlecore.uk/portchester-castle-roman.jpg",
-    "rating": 4.5,
-    "reviewCount": 3000,
-    "county": "Hampshire",
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "kid-friendly"
-    ],
-    "access": "paid",
-    "_index": 1971,
-    "gallery": [
-      "https://img.castlecore.uk/portchester-castle-roman-2.jpg",
-      "https://img.castlecore.uk/portchester-castle-roman-3.jpg",
-      "https://img.castlecore.uk/portchester-castle-roman-4.jpg",
-      "https://img.castlecore.uk/portchester-castle-roman-5.jpg"
     ]
   },
   {
@@ -50974,33 +49447,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Framlingham Castle (Suffolk)",
-    "lat": 52.2217,
-    "lng": 1.3414,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "partial",
-    "description": "Where Mary Tudor was proclaimed queen, with 13 towers to walk around.",
-    "image": "https://img.castlecore.uk/framlingham-castle-suffolk.jpg",
-    "rating": 4.5,
-    "reviewCount": 3800,
-    "county": "Suffolk",
-    "tags": [
-      "well-preserved",
-      "kid-friendly",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1976,
-    "gallery": [
-      "https://img.castlecore.uk/framlingham-castle-suffolk-2.jpg",
-      "https://img.castlecore.uk/framlingham-castle-suffolk-3.jpg",
-      "https://img.castlecore.uk/framlingham-castle-suffolk-4.jpg",
-      "https://img.castlecore.uk/framlingham-castle-suffolk-5.jpg"
-    ]
-  },
-  {
     "name": "Castle Rising (Norfolk)",
     "lat": 52.7753,
     "lng": 0.445,
@@ -51025,85 +49471,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-rising-norfolk-3.jpg",
       "https://img.castlecore.uk/castle-rising-norfolk-4.jpg",
       "https://img.castlecore.uk/castle-rising-norfolk-5.jpg"
-    ]
-  },
-  {
-    "name": "Castle Acre Castle (Norfolk)",
-    "lat": 52.715,
-    "lng": 0.6867,
-    "country": "England",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Impressive earthworks and flint walls of a fortified Norman town.",
-    "image": "https://img.castlecore.uk/castle-acre-castle-norfolk.jpg",
-    "rating": 4.2,
-    "reviewCount": 1200,
-    "county": "Norfolk",
-    "tags": [
-      "free",
-      "hidden-gem"
-    ],
-    "access": "free",
-    "_index": 1979,
-    "gallery": [
-      "https://img.castlecore.uk/castle-acre-castle-norfolk-2.jpg",
-      "https://img.castlecore.uk/castle-acre-castle-norfolk-3.jpg",
-      "https://img.castlecore.uk/castle-acre-castle-norfolk-4.jpg",
-      "https://img.castlecore.uk/castle-acre-castle-norfolk-5.jpg"
-    ]
-  },
-  {
-    "name": "Tutbury Castle (Staffordshire)",
-    "lat": 52.8622,
-    "lng": -1.6803,
-    "country": "England",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Where Mary Queen of Scots was imprisoned, with a John of Gaunt gateway.",
-    "image": "https://img.castlecore.uk/tutbury-castle-staffordshire.jpg",
-    "rating": 4.2,
-    "reviewCount": 2000,
-    "county": "Staffordshire",
-    "tags": [
-      "dramatic-ruin",
-      "haunted"
-    ],
-    "access": "paid",
-    "_index": 1981,
-    "gallery": [
-      "https://img.castlecore.uk/tutbury-castle-staffordshire-2.jpg",
-      "https://img.castlecore.uk/tutbury-castle-staffordshire-3.jpg",
-      "https://img.castlecore.uk/tutbury-castle-staffordshire-4.jpg",
-      "https://img.castlecore.uk/tutbury-castle-staffordshire-5.jpg"
-    ]
-  },
-  {
-    "name": "Kirkstall Abbey (Leeds)",
-    "lat": 53.8189,
-    "lng": -1.6106,
-    "country": "England",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "One of the most complete Cistercian abbeys in Britain, set in parkland.",
-    "image": "https://img.castlecore.uk/kirkstall-abbey-leeds.jpg",
-    "rating": 4.4,
-    "reviewCount": 4000,
-    "county": "Yorkshire",
-    "tags": [
-      "free",
-      "photogenic",
-      "dramatic-ruin"
-    ],
-    "access": "free",
-    "_index": 1987,
-    "gallery": [
-      "https://img.castlecore.uk/kirkstall-abbey-leeds-2.jpg",
-      "https://img.castlecore.uk/kirkstall-abbey-leeds-3.jpg",
-      "https://img.castlecore.uk/kirkstall-abbey-leeds-4.jpg",
-      "https://img.castlecore.uk/kirkstall-abbey-leeds-5.jpg"
     ]
   },
   {
@@ -51134,33 +49501,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Furness Abbey (Cumbria)",
-    "lat": 54.1331,
-    "lng": -3.1908,
-    "country": "England",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Once the second richest Cistercian monastery in England, with red sandstone ruins.",
-    "image": "https://img.castlecore.uk/furness-abbey-cumbria.jpg",
-    "rating": 4.5,
-    "reviewCount": 3000,
-    "county": "Cumbria",
-    "tags": [
-      "dramatic-ruin",
-      "photogenic",
-      "romantic-ruin"
-    ],
-    "access": "paid",
-    "_index": 1990,
-    "gallery": [
-      "https://img.castlecore.uk/furness-abbey-cumbria-2.jpg",
-      "https://img.castlecore.uk/furness-abbey-cumbria-3.jpg",
-      "https://img.castlecore.uk/furness-abbey-cumbria-4.jpg",
-      "https://img.castlecore.uk/furness-abbey-cumbria-5.jpg"
-    ]
-  },
-  {
     "name": "Glastonbury Abbey (Somerset)",
     "lat": 51.1472,
     "lng": -2.7142,
@@ -51184,59 +49524,6 @@ const CASTLES = [
       "https://img.castlecore.uk/glastonbury-abbey-somerset-3.jpg",
       "https://img.castlecore.uk/glastonbury-abbey-somerset-4.jpg",
       "https://img.castlecore.uk/glastonbury-abbey-somerset-5.jpg"
-    ]
-  },
-  {
-    "name": "Stokesay Castle (Shropshire)",
-    "lat": 52.4342,
-    "lng": -2.8244,
-    "country": "England",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "intact",
-    "description": "Best-preserved medieval fortified manor house in England with a timber-framed gatehouse.",
-    "image": "https://img.castlecore.uk/stokesay-castle-shropshire.jpg",
-    "rating": 4.6,
-    "reviewCount": 3500,
-    "county": "Shropshire",
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 1993,
-    "gallery": [
-      "https://img.castlecore.uk/stokesay-castle-shropshire-2.jpg",
-      "https://img.castlecore.uk/stokesay-castle-shropshire-3.jpg",
-      "https://img.castlecore.uk/stokesay-castle-shropshire-4.jpg",
-      "https://img.castlecore.uk/stokesay-castle-shropshire-5.jpg"
-    ]
-  },
-  {
-    "name": "Goodrich Castle (Herefordshire)",
-    "lat": 51.8392,
-    "lng": -2.6156,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Red sandstone castle above the Wye with remarkably complete medieval defences.",
-    "image": "https://img.castlecore.uk/goodrich-castle-herefordshire.jpg",
-    "rating": 4.5,
-    "reviewCount": 3000,
-    "county": "Herefordshire",
-    "tags": [
-      "dramatic-ruin",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1994,
-    "gallery": [
-      "https://img.castlecore.uk/goodrich-castle-herefordshire-2.jpg",
-      "https://img.castlecore.uk/goodrich-castle-herefordshire-3.jpg",
-      "https://img.castlecore.uk/goodrich-castle-herefordshire-4.jpg",
-      "https://img.castlecore.uk/goodrich-castle-herefordshire-5.jpg"
     ]
   },
   {
@@ -51317,33 +49604,6 @@ const CASTLES = [
       "https://img.castlecore.uk/whittington-castle-shropshire-3.jpg",
       "https://img.castlecore.uk/whittington-castle-shropshire-4.jpg",
       "https://img.castlecore.uk/whittington-castle-shropshire-5.jpg"
-    ]
-  },
-  {
-    "name": "Chillingham Castle (Northumberland)",
-    "lat": 55.525,
-    "lng": -1.9083,
-    "country": "England",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "intact",
-    "description": "Britain's most haunted castle with torture chamber and famous wild white cattle.",
-    "image": "https://img.castlecore.uk/chillingham-castle-northumberland.jpg",
-    "rating": 4.4,
-    "reviewCount": 3000,
-    "county": "Northumberland",
-    "tags": [
-      "haunted",
-      "well-preserved",
-      "kid-friendly"
-    ],
-    "access": "paid",
-    "_index": 1999,
-    "gallery": [
-      "https://img.castlecore.uk/chillingham-castle-northumberland-2.jpg",
-      "https://img.castlecore.uk/chillingham-castle-northumberland-3.jpg",
-      "https://img.castlecore.uk/chillingham-castle-northumberland-4.jpg",
-      "https://img.castlecore.uk/chillingham-castle-northumberland-5.jpg"
     ]
   },
   {
@@ -51738,32 +49998,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dalcross-castle-3.jpg",
       "https://img.castlecore.uk/dalcross-castle-4.jpg",
       "https://img.castlecore.uk/dalcross-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Cawdor Castle Gardens",
-    "lat": 57.5225,
-    "lng": -3.9256,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "intact",
-    "description": "Three distinct gardens surrounding the famous Macbeth castle.",
-    "image": "https://img.castlecore.uk/cawdor-castle-gardens.jpg",
-    "rating": 4.5,
-    "reviewCount": 4100,
-    "county": "Highland",
-    "tags": [
-      "gardens",
-      "shakespeare"
-    ],
-    "access": "paid",
-    "_index": 2016,
-    "gallery": [
-      "https://img.castlecore.uk/cawdor-castle-gardens-2.jpg",
-      "https://img.castlecore.uk/cawdor-castle-gardens-3.jpg",
-      "https://img.castlecore.uk/cawdor-castle-gardens-4.jpg",
-      "https://img.castlecore.uk/cawdor-castle-gardens-5.jpg"
     ]
   },
   {
@@ -56182,32 +54416,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Abbeyknockmoy",
-    "lat": 53.47,
-    "lng": -8.625,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Cistercian abbey with rare medieval fresco paintings.",
-    "image": "https://img.castlecore.uk/abbeyknockmoy.jpg",
-    "rating": 4.1,
-    "reviewCount": 100,
-    "county": "County Galway",
-    "tags": [
-      "landmark",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2194,
-    "gallery": [
-      "https://img.castlecore.uk/abbeyknockmoy-2.jpg",
-      "https://img.castlecore.uk/abbeyknockmoy-3.jpg",
-      "https://img.castlecore.uk/abbeyknockmoy-4.jpg",
-      "https://img.castlecore.uk/abbeyknockmoy-5.jpg"
-    ]
-  },
-  {
     "name": "Shanagolden Friary",
     "lat": 52.558,
     "lng": -9.075,
@@ -60151,32 +58359,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kingswear-castle-3.jpg",
       "https://img.castlecore.uk/kingswear-castle-4.jpg",
       "https://img.castlecore.uk/kingswear-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Rougemont Castle Exeter",
-    "lat": 50.7233,
-    "lng": -3.5317,
-    "country": "England",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Norman castle gatehouse and walls in Exeter, scene of the last witchcraft trial.",
-    "image": "https://img.castlecore.uk/rougemont-castle-exeter.jpg",
-    "rating": 3.8,
-    "reviewCount": 800,
-    "county": "Devon",
-    "tags": [
-      "free",
-      "hidden-gem"
-    ],
-    "access": "free",
-    "_index": 2357,
-    "gallery": [
-      "https://img.castlecore.uk/rougemont-castle-exeter-2.jpg",
-      "https://img.castlecore.uk/rougemont-castle-exeter-3.jpg",
-      "https://img.castlecore.uk/rougemont-castle-exeter-4.jpg",
-      "https://img.castlecore.uk/rougemont-castle-exeter-5.jpg"
     ]
   },
   {
