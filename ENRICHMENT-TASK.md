@@ -6,17 +6,21 @@ You're Clawz, running a nightly data enrichment job for castlecore.uk. This is a
 ## Goal
 Research and enrich castle/heritage sites in `data.js` that have thin or missing content. Update the data file with quality descriptions, history, tags, and access info.
 
+## ⚠️ CRITICAL RULE: NEVER RE-ENRICH A COMPLETED SITE
+Once a site is in the `completed` array of `enrichment-progress.json`, it is LOCKED. Do not modify its data in data.js under any circumstances. These pages have been reviewed by E. Overwriting them destroys reviewed work.
+
 ## Steps
 
 ### 1. Load Progress
-Read `castles/enrichment-progress.json` to see which sites are already done.
+Read `enrichment-progress.json` (in the repo root) to see which sites are already done.
 
 ### 2. Find Sites That Need Work
-Load `castles/data.js` (use `vm.runInNewContext` after replacing `const` with `var`).
+Load `data.js` (use `vm.runInNewContext` after replacing `const` with `var`).
 Filter for sites needing enrichment:
 - `(history || '').length < 30` — no real history
 - Prioritize by: sites with gallery images first, then by reviewCount descending
-- Skip any site whose `name` appears in the `completed` array from progress.json
+- **MUST skip any site whose `name` appears in the `completed` array from enrichment-progress.json**
+- **MUST skip these 25 cinematic slugs** (they have hand-crafted pages): alnwick-castle, bamburgh-castle, blarney-castle, blenheim-palace, caernarfon-castle, canterbury-cathedral, cardiff-castle, castle-howard, chatsworth-house, conwy-castle, corfe-castle, dover-castle, dunnottar-castle, durham-cathedral, edinburgh-castle, eilean-donan-castle, fountains-abbey, hampton-court-palace, kilkenny-castle, leeds-castle, rock-of-cashel, stirling-castle, tower-of-london, warwick-castle, windsor-castle
 
 ### 3. Research Each Site (target: 50-80 sites per session)
 For each site:
@@ -53,12 +57,12 @@ After each batch of writes, update `enrichment-progress.json`:
 ### 6. Regenerate Pages
 After all enrichment is done, run `generate-pages.js` to rebuild the affected pages:
 ```
-cd castles; node generate-pages.js
+cd C:\Users\Clawzisabot\.openclaw\workspace\castle-explorer; node generate-pages.js
 ```
 
 ### 7. Push to GitHub
 ```
-cd castles; git add -A; git commit -m "Enrich [N] sites - night [X]"; git push
+cd C:\Users\Clawzisabot\.openclaw\workspace\castle-explorer; git add -A; git commit -m "Enrich [N] sites - night [X]"; git push
 ```
 
 ### 8. Report to E
@@ -82,7 +86,7 @@ Send a message to E via the `message` tool with:
 - Process fewer sites if needed — quality > quantity
 
 ## Important Paths
-- Data: `C:\Users\Clawzisabot\.openclaw\workspace\castles\data.js`
-- Progress: `C:\Users\Clawzisabot\.openclaw\workspace\castles\enrichment-progress.json`
-- Page generator: `C:\Users\Clawzisabot\.openclaw\workspace\castles\generate-pages.js`
-- Site output: `C:\Users\Clawzisabot\.openclaw\workspace\castles\site\`
+- Data: `C:\Users\Clawzisabot\.openclaw\workspace\castle-explorer\data.js`
+- Progress: `C:\Users\Clawzisabot\.openclaw\workspace\castle-explorer\enrichment-progress.json`
+- Page generator: `C:\Users\Clawzisabot\.openclaw\workspace\castle-explorer\generate-pages.js`
+- Site output: `C:\Users\Clawzisabot\.openclaw\workspace\castle-explorer\site\`
