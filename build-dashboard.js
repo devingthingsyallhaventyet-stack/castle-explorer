@@ -22,7 +22,7 @@ function slug(name) {
 
 const sites = C.map(c => {
   const isCinematic = CINEMATIC.has(c.name);
-  const isEnriched = completed.has(c.name) || isCinematic || (c.history && c.history.length > 30);
+  const isEnriched = completed.has(c.name) || isCinematic;
   return { name: c.name, slug: slug(c.name), type: c.type, country: c.country, enriched: isEnriched, cinematic: isCinematic };
 }).sort((a, b) => a.name.localeCompare(b.name));
 
