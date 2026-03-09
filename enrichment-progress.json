@@ -14,9 +14,24 @@
     "Peckforton Castle", "Dartmouth Castle", "Brodie Castle", "Lumley Castle",
     "Tioram Castle", "Belsay Castle", "Ripley Castle", "Mount Grace Priory",
     "Picton Castle", "Dumbarton Castle", "Wenlock Priory", "Hadleigh Castle",
-    "Minster Lovell Hall", "Cong Abbey", "Hore Abbey", "Kilbeggan Distillery"
+    "Minster Lovell Hall", "Cong Abbey", "Hore Abbey", "Kilbeggan Distillery",
+    "Kellie Castle", "Castle Stuart", "Stafford Castle", "Tilbury Fort",
+    "Easby Abbey", "Hoghton Tower", "Kirby Hall", "Kilkea Castle",
+    "Navan Fort", "Amberley Castle", "Thornbury Castle", "Langley Castle",
+    "Waltham Abbey", "Crossraguel Abbey", "Castle Kennedy", "Ballintubber Abbey",
+    "Lamphey Bishop's Palace", "Roche Abbey", "Wolvesey Castle", "Compton Castle",
+    "Berkhamsted Castle", "Brinkburn Priory", "Piel Castle", "Rufford Abbey",
+    "Whittington Castle", "Buildwas Abbey", "Aydon Castle", "Kirkham Priory",
+    "Dundrennan Abbey", "Abergavenny Castle", "Basing House", "Caister Castle",
+    "Glenluce Abbey", "Haughmond Abbey", "Bishop's Waltham Palace", "Lilleshall Abbey",
+    "Etal Castle", "Wingfield Manor", "St Briavels Castle", "Corgarff Castle",
+    "Duffus Castle", "Tiverton Castle", "Bungay Castle", "Warkworth Hermitage",
+    "Haverfordwest Castle", "Tenby Castle", "Dunollie Castle", "Moreton Corbet Castle",
+    "Cockermouth Castle", "Gylen Castle", "Scalloway Castle", "Odiham Castle",
+    "Pendragon Castle", "Crookston Castle", "Fortrose Cathedral", "Athassel Priory",
+    "Newport Castle", "Monk Bretton Priory", "Longtown Castle", "Leiston Abbey"
   ],
-  "lastRun": "2026-03-08T03:00:00-05:00",
-  "totalEnriched": 60,
-  "nightsRun": 1
+  "lastRun": "2026-03-09T03:00:00-05:00",
+  "totalEnriched": 120,
+  "nightsRun": 2
 }

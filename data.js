@@ -11543,18 +11543,22 @@ const CASTLES = [
     "lng": -0.5417,
     "country": "England",
     "type": "castle",
-    "era": "14th century",
+    "era": "12th-14th century",
     "condition": "intact",
-    "description": "A fortified manor house built by the Bishops of Chichester, now a luxury hotel. Its curtain wall and portcullis gateway are well preserved.",
+    "description": "A bishop's medieval summer palace turned luxury hotel, with towering 14th-century curtain walls built against French invasion — nestled in the South Downs where wildflower meadows meet ancient stone.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Amberley_Castle_%28geograph_3694978%29.jpg/500px-Amberley_Castle_%28geograph_3694978%29.jpg",
     "rating": 4.2,
     "reviewCount": 950,
     "county": "West Sussex",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "romantic",
+      "medieval",
+      "gardens",
+      "atmospheric",
+      "wedding-venue"
     ],
-    "access": "exterior-only",
+    "access": "paid",
     "_index": 380,
     "gallery": [
       "https://img.castlecore.uk/amberley-castle-2.jpg",
@@ -11565,6 +11569,13 @@ const CASTLES = [
       "https://img.castlecore.uk/amberley-castle-main-3.jpg",
       "https://img.castlecore.uk/amberley-castle-main-4.jpg",
       "https://img.castlecore.uk/amberley-castle-main-5.jpg"
+    ],
+    "history": "The site was endowed to the See of Selsey by King Caedwalla of Wessex in AD 683. Bishop Ralph de Luffa built a timber lodge here in 1103, replaced by stone in 1140. Known as the Bishop of Chichester's Summer Palace from 1305. Fortified in 1377 during the Hundred Years War with high curtain walls and corner towers. Now a Grade I listed luxury hotel.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Amberley_Castle"
+      }
     ]
   },
   {
@@ -11575,15 +11586,18 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Also known as King John's Castle, this octagonal keep ruin sits beside the Basingstoke Canal. It was a royal castle from which John rode to sign Magna Carta.",
+    "description": "King John's octagonal keep — one of only three castles he built, halfway between Windsor and Winchester, where the Magna Carta king left for Runnymede and Scottish kings were imprisoned.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Odiham_Castle.jpg/500px-Odiham_Castle.jpg",
     "rating": 3.7,
     "reviewCount": 420,
     "county": "Hampshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "medieval",
+      "riverside",
+      "free-entry",
+      "atmospheric",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 381,
@@ -11596,6 +11610,13 @@ const CASTLES = [
       "https://img.castlecore.uk/odiham-castle-main-3.jpg",
       "https://img.castlecore.uk/odiham-castle-main-4.jpg",
       "https://img.castlecore.uk/odiham-castle-main-5.jpg"
+    ],
+    "history": "Built 1207-1214 by King John, one of only three fortresses he constructed. Possibly chosen because it lay halfway between Windsor and Winchester. Features a unique octagonal keep, double moats, and two baileys. King John departed from here on his way to sign the Magna Carta at Runnymede. Later used as a prison for Scottish King David II. Owned by Hampshire County Council.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Odiham_Castle"
+      }
     ]
   },
   {
@@ -11604,17 +11625,19 @@ const CASTLES = [
     "lng": -1.2108,
     "country": "England",
     "type": "palace",
-    "era": "12th century",
+    "era": "12th-15th century",
     "condition": "ruin",
-    "description": "Once a grand residence of the Bishops of Winchester, the ruins include a great hall and tower. Henry V dined here before Agincourt.",
+    "description": "A moated medieval palace where the Bishops of Winchester — once the richest men in England — entertained kings and held court amid fishponds and formal gardens in the Hampshire countryside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Bishop%27s_Waltham_Palace_and_moat.jpg/500px-Bishop%27s_Waltham_Palace_and_moat.jpg",
     "rating": 3.9,
     "reviewCount": 560,
     "county": "Hampshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "medieval",
+      "gardens",
+      "atmospheric",
+      "free-entry"
     ],
     "access": "free",
     "_index": 382,
@@ -11627,6 +11650,13 @@ const CASTLES = [
       "https://img.castlecore.uk/bishop-s-waltham-palace-main-3.jpg",
       "https://img.castlecore.uk/bishop-s-waltham-palace-main-4.jpg",
       "https://img.castlecore.uk/bishop-s-waltham-palace-main-5.jpg"
+    ],
+    "history": "The bishops of Winchester held lands here from Saxon times, acquiring the estate from King Edward the Elder. The palace was built and expanded over centuries as a residence for one of the wealthiest bishoprics in England. A moated complex with fishponds, it hosted royal visits and ecclesiastical courts. Grade II* listed, managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bishop%27s_Waltham_Palace"
+      }
     ]
   },
   {
@@ -11637,15 +11667,18 @@ const CASTLES = [
     "type": "palace",
     "era": "12th century",
     "condition": "ruin",
-    "description": "The medieval palace of the Bishops of Winchester, once one of the grandest in England. Henry de Blois built a palatial complex rivalling royal residences.",
+    "description": "The magnificent medieval palace of one of England's richest bishops, built during the chaos of the Anarchy — its ruins nestled beside Winchester Cathedral in the shadow of ancient power.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg/500px-Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg",
     "rating": 4,
     "reviewCount": 780,
     "county": "Hampshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "norman",
+      "free-entry",
+      "photogenic"
     ],
     "access": "free",
     "_index": 383,
@@ -11658,6 +11691,17 @@ const CASTLES = [
       "https://img.castlecore.uk/wolvesey-castle-main-3.jpg",
       "https://img.castlecore.uk/wolvesey-castle-main-4.jpg",
       "https://img.castlecore.uk/wolvesey-castle-main-5.jpg"
+    ],
+    "history": "Main residence of the Bishop of Winchester in the Middle Ages. Mostly built by Henry of Blois in the 12th century, who fortified it during the Anarchy. The site dates back to around 970 when Bishop Aethelwold built his official residence on Wulf's island in the River Itchen. Grade I listed ruin managed by English Heritage, with the 15th-century chapel incorporated into the current bishop's residence.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wolvesey_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/wolvesey-castle-old-bishops-palace/"
+      }
     ]
   },
   {
@@ -11896,16 +11940,20 @@ const CASTLES = [
     "lng": -3.5833,
     "country": "England",
     "type": "fortified house",
-    "era": "14th century",
+    "era": "14th-16th century",
     "condition": "intact",
-    "description": "A fortified manor house that was home to the Gilbert family, including the explorer Sir Humphrey Gilbert. Its towers and curtain wall survive intact.",
+    "description": "A fortified Devon manor with a fairy-tale battlemented front, home to Sir Humphrey Gilbert who colonized Newfoundland — and where Sir Walter Raleigh allegedly smoked his first pipe of tobacco.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Compton_Castle_in_Devon_enh.jpg/500px-Compton_Castle_in_Devon_enh.jpg",
     "rating": 4.1,
     "reviewCount": 780,
     "county": "Devon",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "medieval",
+      "tudor",
+      "gardens",
+      "photogenic",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 391,
@@ -11918,6 +11966,17 @@ const CASTLES = [
       "https://img.castlecore.uk/compton-castle-interior-3.jpg",
       "https://img.castlecore.uk/compton-castle-interior-4.jpg",
       "https://img.castlecore.uk/compton-castle-interior-5.jpg"
+    ],
+    "history": "Seat of Sir Maurice de la Pole in the reign of Henry II (1154-1189). The original manor was built in the mid-14th century. The fortress-like front was added around 1520 by John Gilbert. Most famous inhabitant was Sir Humphrey Gilbert (1539-1583), coloniser of Newfoundland and half-brother of Sir Walter Raleigh. The central hall fell to ruins by the 18th century but was faithfully reconstructed in the 1950s. National Trust since 1951.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Compton_Castle"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/devon/compton-castle"
+      }
     ]
   },
   {
@@ -12034,17 +12093,21 @@ const CASTLES = [
     "lng": -2.9872,
     "country": "England",
     "type": "castle",
-    "era": "12th century",
+    "era": "11th-13th century",
     "condition": "ruin",
-    "description": "A remote castle ruin in the Golden Valley with a rare circular keep. Fine views towards the Black Mountains of Wales.",
+    "description": "A Norman fortress built on Roman earthworks in the Welsh border hills — with a rare cylindrical keep rising from its motte, offering wild views across the Black Mountains of Herefordshire.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Longtown_Castle_-_geograph.org.uk_-_392612.jpg/500px-Longtown_Castle_-_geograph.org.uk_-_392612.jpg",
     "rating": 4,
     "reviewCount": 380,
     "county": "Herefordshire",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "norman",
+      "hilltop",
+      "free-entry",
+      "atmospheric",
+      "remote",
+      "photogenic"
     ],
     "access": "free",
     "_index": 396,
@@ -12057,6 +12120,13 @@ const CASTLES = [
       "https://img.castlecore.uk/longtown-castle-main-3.jpg",
       "https://img.castlecore.uk/longtown-castle-main-4.jpg",
       "https://img.castlecore.uk/longtown-castle-main-5.jpg"
+    ],
+    "history": "Established in the 11th century by Walter de Lacy, reusing former Roman earthworks. Rebuilt in stone by Gilbert de Lacy after 1148, who established the adjacent town to fund construction. Features a rare cylindrical keep. Declined by the 14th century but pressed into service during the Owain Glyndwr rising in 1403. Managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Longtown_Castle"
+      }
     ]
   },
   {
@@ -12121,16 +12191,21 @@ const CASTLES = [
     "lng": -2.1375,
     "country": "England",
     "type": "castle",
-    "era": "11th century",
+    "era": "11th-19th century",
     "condition": "ruin",
-    "description": "A Norman motte-and-bailey castle rebuilt in Gothic Revival style in the 19th century. The Victorian keep now stands in ruin on the ancient mound.",
+    "description": "A hilltop sentinel visible from the M6, this Norman stronghold-turned-Gothic Revival ruin charts 900 years of English power — from the Domesday Book to Civil War destruction to romantic Victorian reimagining.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Stafford_Castle_%28September_2020%29.jpg/500px-Stafford_Castle_%28September_2020%29.jpg",
     "rating": 3.8,
     "reviewCount": 1100,
     "county": "Staffordshire",
     "tags": [
-      "dramatic-ruin",
-      "free"
+      "hilltop",
+      "ruins-romantic",
+      "norman",
+      "gothic",
+      "free-entry",
+      "atmospheric",
+      "photogenic"
     ],
     "access": "free",
     "_index": 398,
@@ -12143,6 +12218,13 @@ const CASTLES = [
       "https://img.castlecore.uk/stafford-castle-keep-3.jpg",
       "https://img.castlecore.uk/stafford-castle-keep-4.jpg",
       "https://img.castlecore.uk/stafford-castle-keep-5.jpg"
+    ],
+    "history": "Seat of the powerful Stafford family since the Norman Conquest, recorded in the 1086 Domesday Book. The dynasty rose to become Earls of Stafford and Dukes of Buckingham. The 14th-century stone keep was demolished in 1643 during the Civil War after being held for the Royalists by Lady Isabel Stafford. Remodelled in Gothic Revival style in the early 19th century by the Jerningham family on medieval foundations.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Stafford_Castle"
+      }
     ]
   },
   {
@@ -12240,17 +12322,20 @@ const CASTLES = [
     "lng": -2.9953,
     "country": "England",
     "type": "castle",
-    "era": "12th century",
+    "era": "13th century",
     "condition": "ruin",
-    "description": "A picturesque moated castle ruin near Oswestry, linked to legends of the Holy Grail. The twin-towered gatehouse reflects in the moat.",
+    "description": "A Welsh Marches castle with a moated gatehouse reflected in still waters — community-owned and fiercely loved, standing guard on the ancient borderland between England and Wales.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Whittington_Castle%2C_Shropshire%2C_UK.jpg/500px-Whittington_Castle%2C_Shropshire%2C_UK.jpg",
     "rating": 4,
     "reviewCount": 720,
     "county": "Shropshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "medieval",
+      "free-entry",
+      "atmospheric",
+      "dog-friendly",
+      "kid-friendly"
     ],
     "access": "free",
     "_index": 401,
@@ -12263,6 +12348,13 @@ const CASTLES = [
       "https://img.castlecore.uk/whittington-castle-main-3.jpg",
       "https://img.castlecore.uk/whittington-castle-main-4.jpg",
       "https://img.castlecore.uk/whittington-castle-main-5.jpg"
+    ],
+    "history": "Originally a motte-and-bailey castle, rebuilt in the 13th century with buildings around a courtyard and curtain wall. Built on the Welsh-English border near the historic fort of Old Oswestry. Now one of the few community-owned castles in England, managed by the Whittington Castle Preservation Trust. Set on a 12-acre property in the village of Whittington, Shropshire.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Whittington_Castle"
+      }
     ]
   },
   {
@@ -12271,17 +12363,20 @@ const CASTLES = [
     "lng": -2.7025,
     "country": "England",
     "type": "castle",
-    "era": "13th century",
+    "era": "13th-16th century",
     "condition": "ruin",
-    "description": "A medieval castle ruin combined with a remarkable unfinished Elizabethan mansion. The Renaissance facade stands roofless and haunting.",
+    "description": "Medieval castle meets unfinished Elizabethan mansion in the most romantic ruin in Shropshire — where the Corbet family's Renaissance dreams were shattered by Civil War cannon.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Moreton_Corbet_Castle_from_west_01.JPG/500px-Moreton_Corbet_Castle_from_west_01.JPG",
     "rating": 4,
     "reviewCount": 450,
     "county": "Shropshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "medieval",
+      "tudor",
+      "atmospheric",
+      "photogenic",
+      "free-entry"
     ],
     "access": "free",
     "_index": 402,
@@ -12294,6 +12389,13 @@ const CASTLES = [
       "https://img.castlecore.uk/moreton-corbet-castle-main-3.jpg",
       "https://img.castlecore.uk/moreton-corbet-castle-main-4.jpg",
       "https://img.castlecore.uk/moreton-corbet-castle-main-5.jpg"
+    ],
+    "history": "The site was occupied by Anglo-Saxon thegns in 1086. By the early 13th century the Corbet family had built their stronghold. In the Elizabethan era, an ambitious Renaissance-style manor wing was added but never completed. Damaged during the English Civil War. Out of use since the 18th century but still Corbet family property. Free to visit, managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Moreton_Corbet_Castle"
+      }
     ]
   },
   {
@@ -12304,15 +12406,17 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Impressive Augustinian abbey ruins with a fine Norman west doorway and soaring church walls. Peaceful and little-visited.",
+    "description": "Austere Augustinian ruins following the strict Arrouaisian rule — one of only a handful in England, rising from the Shropshire fields with its dramatic west doorway still framing the sky.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Remains_of_Lilleshall_Abbey_a_private_residence_after_the_Reformation_severely_damanged_during_the_English_Civil_War.jpg/500px-Remains_of_Lilleshall_Abbey_a_private_residence_after_the_Reformation_severely_damanged_during_the_English_Civil_War.jpg",
     "rating": 4.1,
     "reviewCount": 520,
     "county": "Shropshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "free-entry",
+      "photogenic"
     ],
     "access": "free",
     "_index": 403,
@@ -12325,6 +12429,13 @@ const CASTLES = [
       "https://img.castlecore.uk/lilleshall-abbey-main-3.jpg",
       "https://img.castlecore.uk/lilleshall-abbey-main-4.jpg",
       "https://img.castlecore.uk/lilleshall-abbey-main-5.jpg"
+    ],
+    "history": "Founded between 1145 and 1148 as an Augustinian house following the austere Arrouaisian customs from northern France. Suffered chronic financial difficulties throughout its existence. Narrowly escaped the Dissolution of the Lesser Monasteries in 1536 before going into voluntary dissolution in 1538. Impressive ruins survive including a dramatic west front. Managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lilleshall_Abbey"
+      }
     ]
   },
   {
@@ -12335,14 +12446,18 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Cistercian abbey with an almost complete Norman church arcade. The massive columns of the nave create a striking rhythm.",
+    "description": "Massive Cistercian ruins on the banks of the Severn, with nave columns still marching through roofless aisles — a mother house whose daughter abbeys stretched from Dublin to Wales.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/BuildwasAbbey.jpg/500px-BuildwasAbbey.jpg",
     "rating": 4.2,
     "reviewCount": 680,
     "county": "Shropshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "riverside",
+      "atmospheric",
+      "medieval",
+      "photogenic",
+      "free-entry"
     ],
     "access": "paid",
     "_index": 404,
@@ -12355,6 +12470,13 @@ const CASTLES = [
       "https://img.castlecore.uk/buildwas-abbey-main-3.jpg",
       "https://img.castlecore.uk/buildwas-abbey-main-4.jpg",
       "https://img.castlecore.uk/buildwas-abbey-main-5.jpg"
+    ],
+    "history": "Founded in 1135 by Roger de Clinton, Bishop of Coventry and Lichfield, originally as a Savigniac house before joining the Cistercians. Mother house of St Mary's Abbey Dublin and Basingwerk Abbey in Wales. Dissolved in 1536. The impressive nave arcade and chapter house survive. Managed by English Heritage in Shropshire near the Ironbridge Gorge.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Buildwas_Abbey"
+      }
     ]
   },
   {
@@ -12365,16 +12487,20 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Extensive Augustinian abbey ruins with a fine chapter house and infirmary. Set on a hillside with views across the Shropshire plain.",
+    "description": "An Augustinian abbey that prospered for four centuries under the patronage of the FitzAlan earls — its impressive domestic ruins rising from the Shropshire countryside with views to the Wrekin.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/HaughmondAbbey.jpg/500px-HaughmondAbbey.jpg",
     "rating": 4.1,
     "reviewCount": 580,
     "county": "Shropshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "free-entry",
+      "photogenic",
+      "woodland"
     ],
-    "access": "paid",
+    "access": "free",
     "_index": 405,
     "gallery": [
       "https://img.castlecore.uk/haughmond-abbey-2.jpg",
@@ -12385,6 +12511,13 @@ const CASTLES = [
       "https://img.castlecore.uk/haughmond-abbey-main-3.jpg",
       "https://img.castlecore.uk/haughmond-abbey-main-4.jpg",
       "https://img.castlecore.uk/haughmond-abbey-main-5.jpg"
+    ],
+    "history": "Probably founded in the early 12th century during the civil wars of King Stephen's reign. Closely associated with the FitzAlan family, who became Earls of Arundel. A substantial, wealthy house for most of its four centuries. Dissolved in 1539; the church was largely destroyed but impressive domestic buildings survive. Free entry, managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Haughmond_Abbey"
+      }
     ]
   },
   {
@@ -12579,14 +12712,17 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A moated brick castle built by Sir John Fastolf, model for Shakespeare's Falstaff. The tall round tower is a striking local landmark.",
+    "description": "A 15th-century moated castle with a 100-foot tower you can still climb — built by the real-life inspiration for Shakespeare's Falstaff, besieged by a duke, and haunted by Norfolk's medieval past.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Caister_Castle.jpg",
     "rating": 3.9,
     "reviewCount": 650,
     "county": "Norfolk",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "medieval",
+      "atmospheric",
+      "photogenic",
+      "museum"
     ],
     "access": "paid",
     "_index": 412,
@@ -12599,6 +12735,13 @@ const CASTLES = [
       "https://img.castlecore.uk/caister-castle-main-3.jpg",
       "https://img.castlecore.uk/caister-castle-main-4.jpg",
       "https://img.castlecore.uk/caister-castle-main-5.jpg"
+    ],
+    "history": "Built between 1432 and 1446 by Sir John Fastolf, one of the inspirations for Shakespeare's Falstaff. Features a 100ft tower that visitors can still climb. Besieged and captured by the Duke of Norfolk in 1469. The castle fell into ruin after 1600 when a new house was built nearby, but the tower remains intact.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Caister_Castle"
+      }
     ]
   },
   {
@@ -12685,17 +12828,19 @@ const CASTLES = [
     "lng": 1.5756,
     "country": "England",
     "type": "abbey",
-    "era": "14th century",
+    "era": "12th-14th century",
     "condition": "ruin",
-    "description": "Premonstratensian abbey ruins in a peaceful Suffolk setting. The church and refectory walls stand amid farmland.",
+    "description": "A Premonstratensian abbey twice rebuilt — first fleeing the sea, then a fire — its cloister garth catches the Suffolk dawn light through Gothic arches with a haunting, holy stillness.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Leiston_Abbey_cloister_garth_at_dawn.jpg/500px-Leiston_Abbey_cloister_garth_at_dawn.jpg",
     "rating": 3.9,
     "reviewCount": 380,
     "county": "Suffolk",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "photogenic",
+      "events-venue"
     ],
     "access": "free",
     "_index": 415,
@@ -12708,6 +12853,13 @@ const CASTLES = [
       "https://img.castlecore.uk/leiston-abbey-main-3.jpg",
       "https://img.castlecore.uk/leiston-abbey-main-4.jpg",
       "https://img.castlecore.uk/leiston-abbey-main-5.jpg"
+    ],
+    "history": "Founded c.1183 by Ranulf de Glanville, Chief Justiciar to Henry II, as a Premonstratensian house originally on a marshland isle near the sea called 'St Mary de Insula.' Rebuilt inland around 1363 due to flooding, then damaged by a great fire in 1379. Suppressed in 1537. The impressive ruins stand in Suffolk fields. Used as a music and arts retreat. The abbey's court of wreck rolls (1378-1481) are an important historical resource.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Leiston_Abbey"
+      }
     ]
   },
   {
@@ -12796,16 +12948,20 @@ const CASTLES = [
     "lng": 0.3764,
     "country": "England",
     "type": "castle",
-    "era": "16th century",
+    "era": "16th-19th century",
     "condition": "intact",
-    "description": "A star-shaped artillery fort where Elizabeth I rallied her troops against the Spanish Armada. The Baroque water gate is magnificent.",
+    "description": "Where Elizabeth I rallied her troops against the Spanish Armada — a star-shaped fortress guarding the Thames with moats, bastions, and centuries of military defiance etched into its riverside walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tilbury_Fort.jpg/500px-Tilbury_Fort.jpg",
     "rating": 4.1,
     "reviewCount": 1100,
     "county": "Essex",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "riverside",
+      "guided-tours",
+      "museum",
+      "atmospheric",
+      "tudor"
     ],
     "access": "paid",
     "_index": 418,
@@ -12818,6 +12974,17 @@ const CASTLES = [
       "https://img.castlecore.uk/tilbury-fort-main-3.jpg",
       "https://img.castlecore.uk/tilbury-fort-main-4.jpg",
       "https://img.castlecore.uk/tilbury-fort-main-5.jpg"
+    ],
+    "history": "Built by Henry VIII as a blockhouse to protect London from French attack. Reinforced during the 1588 Spanish Armada crisis, where Elizabeth I delivered her famous speech. Parliamentary forces used it during the Civil War. Massively expanded from 1670 by Bernard de Gomme into a star-shaped fort with angular bastions and water-filled moats. Managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tilbury_Fort"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/tilbury-fort/"
+      }
     ]
   },
   {
@@ -12826,17 +12993,20 @@ const CASTLES = [
     "lng": -0.0036,
     "country": "England",
     "type": "abbey",
-    "era": "12th century",
+    "era": "11th-12th century",
     "condition": "partial ruin",
-    "description": "Reputedly the burial place of King Harold II. The Norman nave survives as a parish church; the east end lies in romantic ruin.",
+    "description": "A place of worship since the 7th century and the last resting place of King Harold — with soaring Norman columns that rival Durham Cathedral and the ghosts of a thousand years of English history.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/2022-02-12_-_Waltham_Abbey_Church_%283%29.jpg/500px-2022-02-12_-_Waltham_Abbey_Church_%283%29.jpg",
     "rating": 4.1,
     "reviewCount": 920,
     "county": "Essex",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "well-preserved",
+      "norman",
+      "atmospheric",
+      "photogenic",
+      "medieval",
+      "free-entry"
     ],
     "access": "free",
     "_index": 419,
@@ -12849,6 +13019,13 @@ const CASTLES = [
       "https://img.castlecore.uk/waltham-abbey-main-3.jpg",
       "https://img.castlecore.uk/waltham-abbey-main-4.jpg",
       "https://img.castlecore.uk/waltham-abbey-main-5.jpg"
+    ],
+    "history": "Founded in 1030, the present building dates mainly from the early 12th century and is a masterpiece of Norman architecture. Traditionally the burial place of King Harold Godwinson after the Battle of Hastings in 1066. Thomas Tallis served as organist. It was the last abbey to be dissolved by Henry VIII in 1540. The nave survives as the parish church; ruins of the enormous medieval extension lie to the east.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Waltham_Abbey_(abbey)"
+      }
     ]
   },
   {
@@ -12859,15 +13036,17 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A Norman motte-and-bailey castle with impressive double moats. William the Conqueror received the submission of England here in 1066.",
+    "description": "A vast Norman motte-and-bailey that once controlled the road to London — where William the Conqueror received England's surrender and the Black Prince held court amid earthworks and double moats.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Berkhamsted_Castle_Jan_2007.jpg/500px-Berkhamsted_Castle_Jan_2007.jpg",
     "rating": 3.9,
     "reviewCount": 780,
     "county": "Hertfordshire",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "norman",
+      "ruins-romantic",
+      "free-entry",
+      "atmospheric",
+      "hilltop"
     ],
     "access": "free",
     "_index": 420,
@@ -12880,6 +13059,17 @@ const CASTLES = [
       "https://img.castlecore.uk/berkhamsted-castle-main-3.jpg",
       "https://img.castlecore.uk/berkhamsted-castle-main-4.jpg",
       "https://img.castlecore.uk/berkhamsted-castle-main-5.jpg"
+    ],
+    "history": "Built in 1066 by Robert, Count of Mortain, to control the key route between London and the Midlands. William the Conqueror received the submission of the English here. Besieged during the First Barons' War in 1216. Later held by Edward the Black Prince. Owned by the Duchy of Cornwall, managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Berkhamsted_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/berkhamsted-castle/"
+      }
     ]
   },
   {
@@ -12968,14 +13158,17 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A border castle ruin near the site of the Battle of Flodden. The gatehouse and corner tower survive amid attractive grounds.",
+    "description": "A border fortress in one of England's prettiest villages — captured by King James IV of Scotland days before Flodden, now a peaceful ruin where medieval stone meets a thatched-roof pub.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Etal_castle.jpg",
     "rating": 3.9,
     "reviewCount": 520,
     "county": "Northumberland",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "medieval",
+      "atmospheric",
+      "photogenic",
+      "free-entry"
     ],
     "access": "paid",
     "_index": 424,
@@ -12988,6 +13181,13 @@ const CASTLES = [
       "https://img.castlecore.uk/etal-castle-keep-3.jpg",
       "https://img.castlecore.uk/etal-castle-keep-4.jpg",
       "https://img.castlecore.uk/etal-castle-keep-5.jpg"
+    ],
+    "history": "Built around 1341 by Robert Manners as a residential tower with gatehouse, corner tower, and curtain wall. Scene of a battle between the Manners and Heron families in 1428. Briefly captured by King James IV of Scotland during his 1513 invasion before the Battle of Flodden. Garrisoned as a border defence until 1603, then fell into disrepair. Managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Etal_Castle"
+      }
     ]
   },
   {
@@ -13023,14 +13223,17 @@ const CASTLES = [
     "type": "fortified house",
     "era": "13th century",
     "condition": "intact",
-    "description": "One of the finest surviving examples of a 13th-century English manor house. Its original features are remarkably complete.",
+    "description": "One of the finest surviving fortified manor houses in England — a 13th-century merchant's dream home hastily battlemented when the Scottish wars came knocking at his Northumberland door.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Aydon_Castle_2.jpg/500px-Aydon_Castle_2.jpg",
     "rating": 4.2,
     "reviewCount": 680,
     "county": "Northumberland",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "medieval",
+      "atmospheric",
+      "guided-tours",
+      "photogenic"
     ],
     "access": "paid",
     "_index": 426,
@@ -13043,6 +13246,17 @@ const CASTLES = [
       "https://img.castlecore.uk/aydon-castle-main-3.jpg",
       "https://img.castlecore.uk/aydon-castle-main-4.jpg",
       "https://img.castlecore.uk/aydon-castle-main-5.jpg"
+    ],
+    "history": "Purchased by Hugh de Raymes, a Suffolk merchant, between 1293 and 1295. Originally built as an undefended manor house, it was hastily fortified during the Scottish Wars of Independence. One of the best-preserved examples of a 13th-century English manor house. Grade I listed, managed by English Heritage near Corbridge.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Aydon_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/aydon-castle/"
+      }
     ]
   },
   {
@@ -13053,14 +13267,19 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "A beautifully restored Augustinian priory in a secluded loop of the River Coquet. The church has remarkable acoustics.",
+    "description": "A perfectly restored Augustinian church hidden in a wooded bend of the River Coquet — its Norman arches rising from the Northumberland wilderness like a secret cathedral lost in time.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BrinkburnPriory.jpg/500px-BrinkburnPriory.jpg",
     "rating": 4.3,
     "reviewCount": 780,
     "county": "Northumberland",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "riverside",
+      "woodland",
+      "atmospheric",
+      "norman",
+      "photogenic",
+      "remote"
     ],
     "access": "paid",
     "_index": 427,
@@ -13073,6 +13292,17 @@ const CASTLES = [
       "https://img.castlecore.uk/brinkburn-priory-main-3.jpg",
       "https://img.castlecore.uk/brinkburn-priory-main-4.jpg",
       "https://img.castlecore.uk/brinkburn-priory-main-5.jpg"
+    ],
+    "history": "Founded by William Bertram, Baron of Mitford, during the reign of Henry I (before 1135) as an Augustinian priory. The church survived the dissolution because it also served as a parish church. After centuries of decline, it was beautifully restored in the 19th century. Grade I listed, managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Brinkburn_Priory"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/brinkburn-priory/"
+      }
     ]
   },
   {
@@ -13453,15 +13683,19 @@ const CASTLES = [
     "lng": -3.3667,
     "country": "England",
     "type": "castle",
-    "era": "13th century",
+    "era": "12th-14th century",
     "condition": "partial ruin",
-    "description": "A large medieval castle above the River Derwent, still partly occupied. The outer gatehouse and curtain wall survive impressively.",
+    "description": "A brooding riverside fortress at the junction of two Lake District rivers — privately owned by the same family since the 18th century, with roots stretching back to Norman stone from a Roman fort.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Outer_Gatehouse.jpg/500px-Outer_Gatehouse.jpg",
     "rating": 3.7,
     "reviewCount": 450,
     "county": "Cumbria",
     "tags": [
-      "dramatic-ruin"
+      "well-preserved",
+      "norman",
+      "riverside",
+      "medieval",
+      "atmospheric"
     ],
     "access": "exterior-only",
     "_index": 438,
@@ -13474,6 +13708,13 @@ const CASTLES = [
       "https://img.castlecore.uk/cockermouth-castle-main-3.jpg",
       "https://img.castlecore.uk/cockermouth-castle-main-4.jpg",
       "https://img.castlecore.uk/cockermouth-castle-main-5.jpg"
+    ],
+    "history": "First built by the Normans in 1134, some stone sourced from the Roman site of Derventio at Papcastle. Significant additions in the 13th and 14th centuries. Played a role in the Wars of the Roses. Badly damaged during the Civil War. Held by the Percy Earls of Northumberland from the 15th to 17th centuries, then passed to the Wyndham family who still own it. Grade I listed.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cockermouth_Castle"
+      }
     ]
   },
   {
@@ -13484,15 +13725,19 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "Dramatic castle ruins on a small island accessible by ferry from Barrow. Built by the monks of Furness Abbey to protect their harbour.",
+    "description": "A remote island fortress built by monks to guard their harbour — where a Yorkist pretender landed to claim the English throne, accessible only by boat across the wild Cumbrian coast.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Piel_Castle_2023.JPG/500px-Piel_Castle_2023.JPG",
     "rating": 4.1,
     "reviewCount": 780,
     "county": "Cumbria",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "island",
+      "ruins-romantic",
+      "coastal",
+      "remote",
+      "atmospheric",
+      "medieval",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 439,
@@ -13505,6 +13750,13 @@ const CASTLES = [
       "https://img.castlecore.uk/piel-castle-main-3.jpg",
       "https://img.castlecore.uk/piel-castle-main-4.jpg",
       "https://img.castlecore.uk/piel-castle-main-5.jpg"
+    ],
+    "history": "Built in the early 14th century by John Cockerham, Abbot of Furness Abbey, to oversee harbour trade and protect against Scottish raids. Constructed from beach stones and red sandstone with a large keep and inner and outer baileys. Used as a base by Lambert Simnel's Yorkist invasion force in 1487. Managed by English Heritage on Piel Island.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Piel_Castle"
+      }
     ]
   },
   {
@@ -13705,15 +13957,19 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Picturesque Premonstratensian abbey ruins beside the River Swale near Richmond. The refectory and dormitory ranges are remarkably complete.",
+    "description": "Hauntingly beautiful Premonstratensian ruins on the banks of the River Swale, reached by a riverside walk from Richmond — with rare 13th-century wall paintings still glowing in the parish church beside it.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/EasbyAbbey_Refectory.jpg/500px-EasbyAbbey_Refectory.jpg",
     "rating": 4.3,
     "reviewCount": 1100,
     "county": "North Yorkshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "riverside",
+      "atmospheric",
+      "free-entry",
+      "medieval",
+      "photogenic",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 446,
@@ -13726,6 +13982,17 @@ const CASTLES = [
       "https://img.castlecore.uk/easby-abbey-main-3.jpg",
       "https://img.castlecore.uk/easby-abbey-main-4.jpg",
       "https://img.castlecore.uk/easby-abbey-main-5.jpg"
+    ],
+    "history": "Founded in 1152 by Roald, Constable of Richmond Castle, for the Premonstratensian White Canons who followed strict austerity codes. It was the third Premonstratensian house in England. The canons undertook preaching, pastoral work, and sheep farming. The adjacent parish church still contains remarkable 13th-century wall paintings. Managed by English Heritage, free to visit.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Easby_Abbey"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/easby-abbey/"
+      }
     ]
   },
   {
@@ -13736,14 +14003,18 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Augustinian priory ruins in a beautiful setting beside the River Derwent. The ornate 13th-century gatehouse is a highlight.",
+    "description": "Romantic Augustinian ruins on the banks of the River Derwent, founded in grief for a lord's dead son — later a secret testing ground for D-Day landing vehicles visited by Churchill himself.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/KirkhamPriory.JPG/500px-KirkhamPriory.JPG",
     "rating": 4.1,
     "reviewCount": 680,
     "county": "North Yorkshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "riverside",
+      "atmospheric",
+      "medieval",
+      "photogenic",
+      "free-entry"
     ],
     "access": "paid",
     "_index": 447,
@@ -13756,6 +14027,13 @@ const CASTLES = [
       "https://img.castlecore.uk/kirkham-priory-main-3.jpg",
       "https://img.castlecore.uk/kirkham-priory-main-4.jpg",
       "https://img.castlecore.uk/kirkham-priory-main-5.jpg"
+    ],
+    "history": "Founded in the 1120s by Walter l'Espec, lord of Helmsley, who also built Rievaulx Abbey. Legend says it was founded in remembrance of l'Espec's son who died when his horse was startled by a boar. Surrendered in 1539 during the Dissolution. The area was later used to test D-Day landing vehicles, visited by Winston Churchill. Grade I listed, managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kirkham_Priory"
+      }
     ]
   },
   {
@@ -14151,14 +14429,20 @@ const CASTLES = [
     "type": "fortified house",
     "era": "16th century",
     "condition": "intact",
-    "description": "A hilltop fortified manor where James I is said to have knighted a loin of beef, creating the word 'sirloin'. Atmospheric banqueting hall.",
+    "description": "A Grade I fortified manor perched on Lancashire's highest hilltop, where King James I allegedly knighted a loin of beef — surviving Civil War siege, centuries of neglect, and a Victorian resurrection.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hoghton_Tower%2C_Lancashire_6704115249.jpg/500px-Hoghton_Tower%2C_Lancashire_6704115249.jpg",
     "rating": 4.2,
     "reviewCount": 1100,
     "county": "Lancashire",
     "tags": [
+      "hilltop",
       "well-preserved",
-      "hidden-gem"
+      "guided-tours",
+      "gardens",
+      "events-venue",
+      "wedding-venue",
+      "tudor",
+      "atmospheric"
     ],
     "access": "paid",
     "_index": 459,
@@ -14171,6 +14455,13 @@ const CASTLES = [
       "https://img.castlecore.uk/hoghton-tower-main-3.jpg",
       "https://img.castlecore.uk/hoghton-tower-main-4.jpg",
       "https://img.castlecore.uk/hoghton-tower-main-5.jpg"
+    ],
+    "history": "Built c.1560-65 for Thomas de Hoghton, whose family has owned the estate since at least the 12th century. King James I visited in 1617 and allegedly knighted a loin of beef here, creating sirloin. Damaged during the Civil War and fell derelict before being rebuilt 1862-1901. The Great Barn dates to 1692. Now run by the Hoghton Tower Preservation Trust and open to the public.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hoghton_Tower"
+      }
     ]
   },
   {
@@ -14181,16 +14472,19 @@ const CASTLES = [
     "type": "fortified house",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A great ruined manor house where Mary Queen of Scots was held prisoner. The soaring walls of the great tower dominate the Derbyshire countryside.",
+    "description": "A vast hilltop manor where Mary Queen of Scots was imprisoned — now a haunting Grade I ruin on the Heritage at Risk register, its Great Hall still defying the Derbyshire skyline.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Wingfield_Manor_-_geograph.org.uk_-_6280.jpg/500px-Wingfield_Manor_-_geograph.org.uk_-_6280.jpg",
     "rating": 4.1,
     "reviewCount": 520,
     "county": "Derbyshire",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "hilltop",
+      "atmospheric",
+      "dark-brooding",
+      "medieval"
     ],
-    "access": "paid",
+    "access": "exterior-only",
     "_index": 460,
     "gallery": [
       "https://img.castlecore.uk/wingfield-manor-2.jpg",
@@ -14201,6 +14495,13 @@ const CASTLES = [
       "https://img.castlecore.uk/wingfield-manor-main-3.jpg",
       "https://img.castlecore.uk/wingfield-manor-main-4.jpg",
       "https://img.castlecore.uk/wingfield-manor-main-5.jpg"
+    ],
+    "history": "Construction began in 1439 for Sir Ralph Cromwell, Treasurer to Henry VI. Known for being a prison of Mary Queen of Scots during her captivity in England. Partially demolished after the English Civil War. Deserted since the 1770s. Grade I listed and on Historic England's Heritage at Risk Register. In the care of English Heritage but currently not open to the public.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wingfield_Manor"
+      }
     ]
   },
   {
@@ -14347,15 +14648,18 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Cistercian abbey ruins in attractive parkland near Sherwood Forest. The country house built over the abbey is itself now partly ruined.",
+    "description": "A Cistercian abbey turned country estate set in 150 acres of parkland and woodland — where medieval stone meets Victorian grandeur in the heart of Sherwood Forest country.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Rufford_Abbey.jpg/500px-Rufford_Abbey.jpg",
     "rating": 3.9,
     "reviewCount": 780,
     "county": "Nottinghamshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "gardens",
+      "woodland",
+      "free-entry",
+      "medieval",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 464,
@@ -14368,6 +14672,13 @@ const CASTLES = [
       "https://img.castlecore.uk/rufford-abbey-main-3.jpg",
       "https://img.castlecore.uk/rufford-abbey-main-4.jpg",
       "https://img.castlecore.uk/rufford-abbey-main-5.jpg"
+    ],
+    "history": "Founded in 1147 as a Cistercian abbey. Converted to a country house in the 16th century after Henry VIII's dissolution of the monasteries. Part of the house was demolished in the 20th century. The remains stand in 150 acres of park and woodland, open to the public as Rufford Country Park. Grade I listed, owned by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rufford_Abbey"
+      }
     ]
   },
   {
@@ -14401,16 +14712,20 @@ const CASTLES = [
     "lng": -0.6833,
     "country": "England",
     "type": "palace",
-    "era": "16th century",
+    "era": "16th-17th century",
     "condition": "ruin",
-    "description": "A great Elizabethan and 17th-century country house, now a roofless shell. The restored parterre garden is being brought back to its original design.",
+    "description": "One of England's great Elizabethan prodigy houses, now a romantic semi-ruin with restored cutwork gardens — built for a Lord Chancellor to Elizabeth I and steeped in recusant Catholic intrigue.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg/500px-Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg",
     "rating": 4.2,
     "reviewCount": 1100,
     "county": "Northamptonshire",
     "tags": [
-      "romantic-ruin",
-      "photogenic"
+      "ruins-romantic",
+      "gardens",
+      "photogenic",
+      "atmospheric",
+      "tudor",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 466,
@@ -14423,6 +14738,17 @@ const CASTLES = [
       "https://img.castlecore.uk/kirby-hall-main-3.jpg",
       "https://img.castlecore.uk/kirby-hall-main-4.jpg",
       "https://img.castlecore.uk/kirby-hall-main-5.jpg"
+    ],
+    "history": "Built in 1570 for Sir Humphrey Stafford, then purchased by Sir Christopher Hatton, Lord Chancellor to Elizabeth I. One of the earliest and finest Elizabethan prodigy houses, designed from French architectural pattern books. Now semi-ruined with roofless sections, though the Great Hall survives. Gardens restored with elaborate cutwork design. Managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kirby_Hall"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/kirby-hall/"
+      }
     ]
   },
   {
@@ -14463,16 +14789,21 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "The last fortified manor house built in England, begun by the Duke of Buckingham before his execution. Now a luxury hotel.",
+    "description": "The last castle built by an English nobleman — a Tudor fantasy of turrets and oriel windows where Henry VIII stayed with Anne Boleyn, now a luxury hotel dripping with royal scandal and ambition.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/500px-Thornbury.castle.west.front.arp.750pix.jpg",
     "rating": 4.2,
     "reviewCount": 950,
     "county": "Gloucestershire",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "romantic",
+      "tudor",
+      "gardens",
+      "atmospheric",
+      "wedding-venue",
+      "photogenic"
     ],
-    "access": "exterior-only",
+    "access": "paid",
     "_index": 468,
     "gallery": [
       "https://img.castlecore.uk/thornbury-castle-2.jpg",
@@ -14483,6 +14814,13 @@ const CASTLES = [
       "https://img.castlecore.uk/thornbury-castle-main-3.jpg",
       "https://img.castlecore.uk/thornbury-castle-main-4.jpg",
       "https://img.castlecore.uk/thornbury-castle-main-5.jpg"
+    ],
+    "history": "Built from 1511 by Edward Stafford, 3rd Duke of Buckingham, as an opulent Tudor country house with minimal defences. Stafford was beheaded for treason in 1521 by Henry VIII, who confiscated the castle and stayed there with Anne Boleyn in 1535. Queen Mary returned it to the Stafford family in 1554. Grade I listed, now operated as a luxury hotel.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Thornbury_Castle"
+      }
     ]
   },
   {
@@ -14491,17 +14829,22 @@ const CASTLES = [
     "lng": -2.6333,
     "country": "England",
     "type": "castle",
-    "era": "12th century",
+    "era": "11th-13th century",
     "condition": "partial ruin",
-    "description": "A Norman castle in the Forest of Dean that served as a hunting lodge and royal armoury. Now a youth hostel.",
+    "description": "A medieval castle where you can actually sleep — a Norman fortress turned royal hunting lodge turned crossbow bolt factory, now a YHA hostel perched above the Forest of Dean.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg/500px-St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg",
     "rating": 3.9,
     "reviewCount": 520,
     "county": "Gloucestershire",
     "tags": [
-      "hidden-gem"
+      "well-preserved",
+      "norman",
+      "medieval",
+      "atmospheric",
+      "woodland",
+      "kid-friendly"
     ],
-    "access": "exterior-only",
+    "access": "paid",
     "_index": 469,
     "gallery": [
       "https://img.castlecore.uk/st-briavels-castle-2.jpg",
@@ -14512,6 +14855,13 @@ const CASTLES = [
       "https://img.castlecore.uk/st-briavels-castle-main-3.jpg",
       "https://img.castlecore.uk/st-briavels-castle-main-4.jpg",
       "https://img.castlecore.uk/st-briavels-castle-main-5.jpg"
+    ],
+    "history": "Built between 1075 and 1129 as a royal administrative centre for the Forest of Dean. Became a favourite hunting lodge of King John in the 13th century, then the primary centre in England for crossbow bolt manufacture. Features a huge Edwardian gatehouse. Built from Old Red Sandstone and limestone. Now operated as a YHA youth hostel, owned by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/St_Briavels_Castle"
+      }
     ]
   },
   {
@@ -14598,16 +14948,21 @@ const CASTLES = [
     "lng": -3.2667,
     "country": "Scotland",
     "type": "tower house",
-    "era": "16th century",
+    "era": "16th-18th century",
     "condition": "intact",
-    "description": "A tower house enclosed by a star-shaped defensive wall. Used to suppress illicit whisky distilling in the 18th century.",
+    "description": "A remote Highland tower house with a star-shaped defensive wall, scarred by clan massacre and Jacobite rebellion — standing sentinel on the wild mountain pass between Strathdon and Tomintoul.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Corgarff_Castle_-_geograph.org.uk_-_7273852.jpg/500px-Corgarff_Castle_-_geograph.org.uk_-_7273852.jpg",
     "rating": 4,
     "reviewCount": 520,
     "county": "Aberdeenshire",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "remote",
+      "hilltop",
+      "dark-brooding",
+      "atmospheric",
+      "haunted",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 474,
@@ -14620,6 +14975,17 @@ const CASTLES = [
       "https://img.castlecore.uk/corgarff-castle-main-3.jpg",
       "https://img.castlecore.uk/corgarff-castle-main-4.jpg",
       "https://img.castlecore.uk/corgarff-castle-main-5.jpg"
+    ],
+    "history": "Built around 1530 by the Elphinstone family and leased to the Forbes of Towie. Infamously burned in 1571 by Adam Gordon of Auchindoun, killing Margaret Campbell, Lady Forbes, her children, and others. Involved in the Jacobite risings. Rebuilt in the mid-18th century as a military barracks with a distinctive star-shaped curtain wall. Used until 1831. Managed by Historic Environment Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Corgarff_Castle"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/corgarff-castle/"
+      }
     ]
   },
   {
@@ -14741,17 +15107,20 @@ const CASTLES = [
     "lng": -3.3833,
     "country": "Scotland",
     "type": "castle",
-    "era": "12th century",
+    "era": "12th-18th century",
     "condition": "ruin",
-    "description": "A classic motte-and-bailey castle whose stone tower has dramatically subsided down the mound. A striking visual of medieval decay.",
+    "description": "A classic motte-and-bailey ruin where the stone keep literally slid down the mound — one of Scotland's most secure medieval fortifications, now a dramatic free-entry ruin in the Moray flatlands.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Duffuscastle4.jpg/500px-Duffuscastle4.jpg",
     "rating": 4,
     "reviewCount": 520,
     "county": "Moray",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "norman",
+      "free-entry",
+      "atmospheric",
+      "hilltop",
+      "photogenic"
     ],
     "access": "free",
     "_index": 480,
@@ -14764,6 +15133,17 @@ const CASTLES = [
       "https://img.castlecore.uk/duffus-castle-main-3.jpg",
       "https://img.castlecore.uk/duffus-castle-main-4.jpg",
       "https://img.castlecore.uk/duffus-castle-main-5.jpg"
+    ],
+    "history": "A motte-and-bailey castle in use from c.1140 to 1705. Built by Freskin of Straloch and Duffus, one of the most secure fortifications in medieval Scotland. The original wooden structure was replaced with stone, but the keep famously subsided on the mound. Abandoned in 1705 when it became unsuitable as a dwelling. Free to visit, managed by Historic Environment Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Duffus_Castle"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/duffus-castle/"
+      }
     ]
   },
   {
@@ -14854,15 +15234,19 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A clifftop tower house ruin on the southern tip of Kerrera island, opposite Oban. The Brooch of Lorne was hidden here.",
+    "description": "A windswept MacDougall tower house on the southern tip of Kerrera island — burned by Covenanters in 1647, restored with clan donations from around the world, overlooking the wild Firth of Lorne.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Gylen_Castle%2C_Kerrera_-_geograph.org.uk_-_7637715.jpg/500px-Gylen_Castle%2C_Kerrera_-_geograph.org.uk_-_7637715.jpg",
     "rating": 4.1,
     "reviewCount": 450,
     "county": "Argyll and Bute",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "island",
+      "coastal",
+      "remote",
+      "atmospheric",
+      "cliffside",
+      "photogenic"
     ],
     "access": "free",
     "_index": 483,
@@ -14875,6 +15259,13 @@ const CASTLES = [
       "https://img.castlecore.uk/gylen-castle-main-3.jpg",
       "https://img.castlecore.uk/gylen-castle-main-4.jpg",
       "https://img.castlecore.uk/gylen-castle-main-5.jpg"
+    ],
+    "history": "Built in 1582 by Clan MacDougall on a promontory overlooking the Firth of Lorne. Only occupied for a short time before being besieged and burned by Covenanters under General Leslie in 1647 during the Wars of the Three Kingdoms. Extensive conservation completed in 2006 with a £300,000 Historic Scotland grant and £200,000 raised by worldwide MacDougall clan members.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gylen_Castle"
+      }
     ]
   },
   {
@@ -15255,14 +15646,17 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Cistercian abbey ruins where Mary Queen of Scots spent her last night on Scottish soil before fleeing to England.",
+    "description": "Where Mary Queen of Scots spent her last night in Scotland before crossing the Solway Firth into captivity — austere Cistercian beauty in grey sandstone that has weathered 900 years.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Dundrennan_Abbey_2012_%281%29.jpg/500px-Dundrennan_Abbey_2012_%281%29.jpg",
     "rating": 4.2,
     "reviewCount": 680,
     "county": "Dumfries and Galloway",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "remote",
+      "photogenic"
     ],
     "access": "paid",
     "_index": 496,
@@ -15275,6 +15669,17 @@ const CASTLES = [
       "https://img.castlecore.uk/dundrennan-abbey-ruins-3.jpg",
       "https://img.castlecore.uk/dundrennan-abbey-ruins-4.jpg",
       "https://img.castlecore.uk/dundrennan-abbey-ruins-5.jpg"
+    ],
+    "history": "Founded in 1142 by Fergus of Galloway and King David I with monks from Rievaulx Abbey. Built in austere Romanesque style from hard-weathering grey sandstone. Mary Queen of Scots spent her final night in Scotland here in 1568 after the Battle of Langside, before crossing the Solway Firth to imprisonment in England. Disestablished in 1606.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dundrennan_Abbey"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place-of-interest/places/dundrennan-abbey/"
+      }
     ]
   },
   {
@@ -15285,14 +15690,17 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Cistercian abbey ruins with a remarkably intact chapter house featuring its original tiled floor and vaulting.",
+    "description": "A Cistercian house in the Valley of Light, founded by a Lord of Galloway — its chapter house still intact with original medieval tile floor, tucked away in the quiet Scottish lowlands.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Glenluce_Abbey.jpg/500px-Glenluce_Abbey.jpg",
     "rating": 4.1,
     "reviewCount": 620,
     "county": "Dumfries and Galloway",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "remote",
+      "photogenic"
     ],
     "access": "paid",
     "_index": 497,
@@ -15305,6 +15713,17 @@ const CASTLES = [
       "https://img.castlecore.uk/glenluce-abbey-ruins-3.jpg",
       "https://img.castlecore.uk/glenluce-abbey-ruins-4.jpg",
       "https://img.castlecore.uk/glenluce-abbey-ruins-5.jpg"
+    ],
+    "history": "Founded around 1190 by Lochlann, Lord of Galloway and Constable of Scotland, as a Cistercian monastery known as Vallis Lucis (Valley of Light). Daughter house of Dundrennan Abbey. Fell into disuse after the Scottish Reformation in 1560. The chapter house is particularly well preserved with its original tiled floor. Managed by Historic Environment Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Glenluce_Abbey"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place-of-interest/places/glenluce-abbey/"
+      }
     ]
   },
   {
@@ -15315,14 +15734,18 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Extensive Cluniac abbey ruins near Maybole. The abbot was once roasted alive to make him sign over abbey lands.",
+    "description": "A hauntingly complete Cluniac abbey where Black Monks once prayed in the Ayrshire countryside — with church, cloister, dovecote, and a gate tower still standing against the Scottish sky.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Crossraguel01.jpg",
     "rating": 4.3,
     "reviewCount": 920,
     "county": "South Ayrshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "photogenic",
+      "free-entry",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 498,
@@ -15335,6 +15758,17 @@ const CASTLES = [
       "https://img.castlecore.uk/crossraguel-abbey-ruins-3.jpg",
       "https://img.castlecore.uk/crossraguel-abbey-ruins-4.jpg",
       "https://img.castlecore.uk/crossraguel-abbey-ruins-5.jpg"
+    ],
+    "history": "Founded in 1244 by Duncan, 1st Earl of Carrick, with monks from Paisley Abbey after a legal dispute over funding. The Cluniac Black Monks built an extensive complex including church, cloister, and dovecote. Disestablished in 1617. Unusually well-preserved for a Scottish abbey, with substantial structures still standing. Managed by Historic Environment Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Crossraguel_Abbey"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place-of-interest/places/crossraguel-abbey/"
+      }
     ]
   },
   {
@@ -15568,15 +16002,18 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "Site of a notorious massacre of Welsh lords by the Normans in 1175. The museum in the hunting lodge tells the story.",
+    "description": "A castle stained with more treachery than any other in Wales — where Norman lords massacred Welsh noblemen at a feast, and Owain Glyndwr's rebels burned the walls in righteous fury.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ruins_of_Abergavenny_Castle.jpg/500px-Ruins_of_Abergavenny_Castle.jpg",
     "rating": 3.7,
     "reviewCount": 680,
     "county": "Monmouthshire",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "norman",
+      "atmospheric",
+      "museum",
+      "riverside",
+      "free-entry"
     ],
     "access": "free",
     "_index": 505,
@@ -15589,6 +16026,13 @@ const CASTLES = [
       "https://img.castlecore.uk/abergavenny-castle-main-3.jpg",
       "https://img.castlecore.uk/abergavenny-castle-main-4.jpg",
       "https://img.castlecore.uk/abergavenny-castle-main-5.jpg"
+    ],
+    "history": "Established c.1087 by Norman lord Hamelin de Balun to overlook the River Usk. Site of an infamous massacre of Welsh noblemen in 1175. Attacked during the Glyndwr Rising in 1404. The antiquary William Camden called it the castle 'oftner stain'd with the infamy of treachery than any other in Wales.' Grade I listed since 1952. Houses a local museum.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Abergavenny_Castle"
+      }
     ]
   },
   {
@@ -16421,15 +16865,20 @@ const CASTLES = [
     "lng": -3.4833,
     "country": "England",
     "type": "castle",
-    "era": "12th century",
+    "era": "12th-17th century",
     "condition": "partial ruin",
-    "description": "A substantial medieval castle with a fine round tower and Civil War-era gallery. Still partly inhabited.",
+    "description": "A Norman castle above the River Exe that survived Civil War siege — part romantic ruin, part lived-in country house, with towers from every century between the 12th and the 17th.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/TivertonCastle_AerialPanorama.png/500px-TivertonCastle_AerialPanorama.png",
     "rating": 4,
     "reviewCount": 520,
     "county": "Devon",
     "tags": [
-      "hidden-gem"
+      "ruins-romantic",
+      "medieval",
+      "norman",
+      "riverside",
+      "guided-tours",
+      "atmospheric"
     ],
     "access": "paid",
     "_index": 530,
@@ -16442,6 +16891,13 @@ const CASTLES = [
       "https://img.castlecore.uk/tiverton-castle-main-3.jpg",
       "https://img.castlecore.uk/tiverton-castle-main-4.jpg",
       "https://img.castlecore.uk/tiverton-castle-main-5.jpg"
+    ],
+    "history": "A Norman motte was built in 1106 on a defensive position above the River Exe. Expanded with towers and walls over centuries by the Courtenay Earls of Devon. During the Civil War it was a Royalist stronghold besieged by Fairfax's Parliamentarian troops. Dismantled after the war and partially converted into a 17th-century country house. Still privately inhabited with guided tours.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tiverton_Castle"
+      }
     ]
   },
   {
@@ -16585,15 +17041,17 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Hugh Bigod stronghold with impressive mining tunnels visible in the earthworks. Twin towers of the gatehouse survive.",
+    "description": "A Grade I Norman stronghold on a curve of the River Waveney — where Hugh Bigod defied Henry II with a keep that cost the equivalent of millions, and a Suffolk town grew up in its shadow.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bungay_Castle%2C_2012.jpg/500px-Bungay_Castle%2C_2012.jpg",
     "rating": 3.8,
     "reviewCount": 520,
     "county": "Suffolk",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "norman",
+      "riverside",
+      "free-entry",
+      "atmospheric"
     ],
     "access": "free",
     "_index": 536,
@@ -16606,6 +17064,13 @@ const CASTLES = [
       "https://img.castlecore.uk/bungay-castle-main-3.jpg",
       "https://img.castlecore.uk/bungay-castle-main-4.jpg",
       "https://img.castlecore.uk/bungay-castle-main-5.jpg"
+    ],
+    "history": "Built by Roger Bigod in about 1100, taking advantage of the River Waveney's natural protection. His son Hugh Bigod built a massive stone keep in 1165 at enormous cost. Hugh was a prominent figure during the Anarchy. Henry II confiscated the castle but later returned it. Grade I listed, now managed by the Bungay Castle Trust.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bungay_Castle"
+      }
     ]
   },
   {
@@ -16746,13 +17211,18 @@ const CASTLES = [
     "type": "abbey",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "A rare rock-cut chapel and hermitage accessed by boat on the River Coquet. Tiny but exquisite.",
+    "description": "A chapel and priest's house carved directly into a sandstone cliff above the River Coquet — reached only by boat, this hidden medieval hermitage feels like stepping into a monastic fever dream.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/The_Hermitage%2C_Warkworth_-_geograph.org.uk_-_735173.jpg/500px-The_Hermitage%2C_Warkworth_-_geograph.org.uk_-_735173.jpg",
     "rating": 4.3,
     "reviewCount": 520,
     "county": "Northumberland",
     "tags": [
-      "hidden-gem"
+      "remote",
+      "riverside",
+      "atmospheric",
+      "medieval",
+      "photogenic",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 543,
@@ -16765,6 +17235,17 @@ const CASTLES = [
       "https://img.castlecore.uk/warkworth-hermitage-chapel-3.jpg",
       "https://img.castlecore.uk/warkworth-hermitage-chapel-4.jpg",
       "https://img.castlecore.uk/warkworth-hermitage-chapel-5.jpg"
+    ],
+    "history": "A chapel and priest's house built onto and within a cliff-face on the north bank of the River Coquet, near Warkworth Castle. Consists of an outer stone portion and inner chambers hewn from the sandstone cliff. Contains an altar-tomb with a female effigy. Only accessible by boat. Grade I listed, managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Warkworth_Hermitage"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/warkworth-hermitage/"
+      }
     ]
   },
   {
@@ -17117,15 +17598,18 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Legendary castle of Uther Pendragon in the remote Mallerstang valley. Norman keep ruins stand beside the Eden.",
+    "description": "A ruined castle above the River Eden named for King Arthur's father — where legend says Uther Pendragon tried to divert the river for his moat, and Lady Anne Clifford later rebuilt the walls.",
     "image": "https://img.castlecore.uk/pendragon-castle.jpg",
     "rating": 3.9,
     "reviewCount": 420,
     "county": "Cumbria",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "riverside",
+      "remote",
+      "atmospheric",
+      "medieval",
+      "dark-brooding"
     ],
     "access": "free",
     "_index": 557,
@@ -17138,6 +17622,13 @@ const CASTLES = [
       "https://img.castlecore.uk/pendragon-castle-keep-3.jpg",
       "https://img.castlecore.uk/pendragon-castle-keep-4.jpg",
       "https://img.castlecore.uk/pendragon-castle-keep-5.jpg"
+    ],
+    "history": "According to legend, built by Uther Pendragon, father of King Arthur, who unsuccessfully tried to divert the River Eden for its moat. In reality, likely built in the 12th century by Ranulph de Meschines. Stands in remote Mallerstang Dale near Kirkby Stephen, overlooked by Wild Boar Fell. Grade I listed. Restored by Lady Anne Clifford in the 17th century before falling into ruin again.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pendragon_Castle"
+      }
     ]
   },
   {
@@ -17732,16 +18223,20 @@ const CASTLES = [
     "lng": -4.9683,
     "country": "Wales",
     "type": "castle",
-    "era": "12th century",
+    "era": "12th-13th century",
     "condition": "partial ruin",
-    "description": "A castle on a hilltop above the Western Cleddau. Houses a local museum and art gallery.",
+    "description": "A Norman stronghold on a commanding ridge above Pembrokeshire's county town — an English power base through centuries of Welsh resistance, now home to a museum and stunning town views.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg/500px-HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg",
     "rating": 3.8,
     "reviewCount": 520,
     "county": "Pembrokeshire",
     "tags": [
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "norman",
+      "hilltop",
+      "museum",
+      "atmospheric",
+      "free-entry"
     ],
     "access": "free",
     "_index": 574,
@@ -17754,6 +18249,13 @@ const CASTLES = [
       "https://img.castlecore.uk/haverfordwest-castle-keep-3.jpg",
       "https://img.castlecore.uk/haverfordwest-castle-keep-4.jpg",
       "https://img.castlecore.uk/haverfordwest-castle-keep-5.jpg"
+    ],
+    "history": "Established in 1120 by Gilbert de Clare, Earl of Pembroke, in a naturally defensive position on an isolated ridge. Much of the remaining architecture dates from 1290 under Queen Eleanor of Castile. For centuries it served as an English stronghold. Now partially restored and controlled by the Pembrokeshire Coast National Park Authority, housing a museum.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Haverfordwest_Castle"
+      }
     ]
   },
   {
@@ -18587,12 +19089,18 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "Restored medieval tower house now operating as a luxury hotel near Haydon Bridge.",
+    "description": "A 14th-century tower house that slept for 500 years after being torched — its H-shaped walls rising from the South Tyne valley like a medieval ghost resurrected into a boutique Northumberland hotel.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Langley_Castle.jpg/500px-Langley_Castle.jpg",
     "rating": 4.1,
     "reviewCount": 950,
     "county": "Northumberland",
-    "tags": [],
+    "tags": [
+      "well-preserved",
+      "romantic",
+      "medieval",
+      "atmospheric",
+      "wedding-venue"
+    ],
     "access": "paid",
     "_index": 607,
     "gallery": [
@@ -18604,6 +19112,13 @@ const CASTLES = [
       "https://img.castlecore.uk/langley-castle-main-3.jpg",
       "https://img.castlecore.uk/langley-castle-main-4.jpg",
       "https://img.castlecore.uk/langley-castle-main-5.jpg"
+    ],
+    "history": "Built in 1364 after centuries of ownership changes from the de Tindal family onward. The H-shaped tower house has four floors and corner towers. Severely damaged by fire in 1405 during conflict, it lay in ruins for 500 years until restoration in 1914. Grade I listed, now operates as a hotel in the valley of the River South Tyne.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Langley_Castle"
+      }
     ]
   },
   {
@@ -18892,14 +19407,17 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "Once the largest private house in England, destroyed in the Civil War. Substantial earthworks and ruins remain.",
+    "description": "Once rivalling Hampton Court in size and opulence, this Tudor palace endured the longest siege of the English Civil War — until Cromwell himself came to storm its 360 rooms into oblivion.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Basing-House-entrance.jpg/500px-Basing-House-entrance.jpg",
     "rating": 4,
     "reviewCount": 680,
     "county": "Hampshire",
     "tags": [
-      "dramatic-ruin",
-      "free"
+      "ruins-romantic",
+      "tudor",
+      "atmospheric",
+      "gardens",
+      "free-entry"
     ],
     "access": "free",
     "_index": 620,
@@ -18912,6 +19430,13 @@ const CASTLES = [
       "https://img.castlecore.uk/basing-house-main-3.jpg",
       "https://img.castlecore.uk/basing-house-main-4.jpg",
       "https://img.castlecore.uk/basing-house-main-5.jpg"
+    ],
+    "history": "Built from 1531 as a palace for William Paulet, 1st Marquess of Winchester, treasurer to three Tudor monarchs. Henry VIII and Anne Boleyn visited in 1534. Comprised two linked houses with approximately 360 rooms. Endured the longest siege of the Civil War before being stormed by Cromwell's forces. Now only foundations, earthworks, and basement ruins remain. Grade II listed.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Basing_House"
+      }
     ]
   },
   {
@@ -19536,14 +20061,16 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "Riverside castle ruin in central Newport. The elaborate river-facing front is the main survival.",
+    "description": "A 14th-century castle on the River Usk, built to control the crossing and collect tolls — sacked by Glyndwr, taken by Cromwell, and now a quiet Grade II* ruin in the heart of the city.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Newport_Castle_-_geograph.org.uk_-_781279.jpg/500px-Newport_Castle_-_geograph.org.uk_-_781279.jpg",
     "rating": 3.5,
     "reviewCount": 400,
     "county": "Newport",
     "tags": [
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "medieval",
+      "riverside",
+      "free-entry"
     ],
     "access": "free",
     "_index": 648,
@@ -19556,6 +20083,13 @@ const CASTLES = [
       "https://img.castlecore.uk/newport-castle-ruins-3.jpg",
       "https://img.castlecore.uk/newport-castle-ruins-4.jpg",
       "https://img.castlecore.uk/newport-castle-ruins-5.jpg"
+    ],
+    "history": "Built in the 14th century, probably by Hugh de Audley, 1st Earl of Gloucester, to manage the crossing of the River Usk. Served as administrative offices, residence, and garrison. Sacked by Owain Glyndwr in 1402. In disrepair by 1522. Taken by Cromwell's forces during the Civil War. Grade II* listed.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Newport_Castle"
+      }
     ]
   },
   {
@@ -19678,13 +20212,18 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "Ruined castle in stunning 75-acre gardens between two lochs in Wigtownshire.",
+    "description": "A dramatic ruin set between two lochs in spectacular landscaped gardens — where the old castle's burned shell presides over 75 acres of 18th-century planted grounds in Scotland's far southwest.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Castle_Kennedy_by_Francis_Grose%2C_pub._Sep.15_1789_in_Antiquities_of_Scotland_vol.2_pp.191-192.jpg/500px-Castle_Kennedy_by_Francis_Grose%2C_pub._Sep.15_1789_in_Antiquities_of_Scotland_vol.2_pp.191-192.jpg",
     "rating": 4.1,
     "reviewCount": 890,
     "county": "Dumfries and Galloway",
     "tags": [
-      "romantic-ruin"
+      "ruins-romantic",
+      "gardens",
+      "atmospheric",
+      "photogenic",
+      "remote",
+      "woodland"
     ],
     "access": "paid",
     "_index": 652,
@@ -19697,6 +20236,13 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-kennedy-main-3.jpg",
       "https://img.castlecore.uk/castle-kennedy-main-4.jpg",
       "https://img.castlecore.uk/castle-kennedy-main-5.jpg"
+    ],
+    "history": "The castle ruins sit within the renowned Castle Kennedy Gardens, set on an isthmus between the White and Black Lochs. The original castle was destroyed by fire in 1716. The 75-acre gardens were laid out in the 18th century by the 2nd Earl of Stair, who used soldiers from the Royal Scots Greys and Inniskilling Fusiliers as labourers. Listed on the Inventory of Gardens and Designed Landscapes in Scotland since 1987.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Castle_Kennedy"
+      }
     ]
   },
   {
@@ -20007,16 +20553,19 @@ const CASTLES = [
     "lng": -4.361,
     "country": "Scotland",
     "type": "castle",
-    "era": "12th century",
+    "era": "12th-15th century",
     "condition": "ruin",
-    "description": "Where Mary Queen of Scots and Darnley courted. Unusual cross-shaped tower on a Glasgow hilltop.",
+    "description": "Glasgow's only surviving medieval castle — built by the Stewarts of Darnley on a hilltop with 12th-century earthworks, where Mary Queen of Scots may have spent her honeymoon.",
     "image": "https://img.castlecore.uk/crookston-castle.jpg",
     "rating": 3.9,
     "reviewCount": 420,
     "county": "Glasgow",
     "tags": [
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "hilltop",
+      "medieval",
+      "atmospheric",
+      "free-entry"
     ],
     "access": "free",
     "_index": 664,
@@ -20029,6 +20578,17 @@ const CASTLES = [
       "https://img.castlecore.uk/crookston-castle-main-3.jpg",
       "https://img.castlecore.uk/crookston-castle-main-4.jpg",
       "https://img.castlecore.uk/crookston-castle-main-5.jpg"
+    ],
+    "history": "Built by the Stewarts of Darnley around 1400, set within earthworks dating to the 12th century when Sir Robert de Croc first fortified the site. Property of the earls and dukes of Lennox. Extensively repaired after a siege in 1544. The only surviving medieval castle in Glasgow. Located on a hill overlooking the Levern Water. Managed by Historic Environment Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Crookston_Castle"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/crookston-castle/"
+      }
     ]
   },
   {
@@ -20330,15 +20890,21 @@ const CASTLES = [
     "lng": -5.478,
     "country": "Scotland",
     "type": "castle",
-    "era": "15th century",
+    "era": "7th century onwards",
     "condition": "ruin",
-    "description": "MacDougall keep overlooking Oban Bay. Small museum in the adjacent 1745 House.",
+    "description": "A Dark Age royal seat overlooking Oban harbour and the Isle of Kerrera — burned and rebuilt three times in the 7th century, home to the MacDougall chiefs for over a thousand years.",
     "image": "https://img.castlecore.uk/dunollie-castle.jpg",
     "rating": 3.9,
     "reviewCount": 480,
     "county": "Argyll and Bute",
     "tags": [
-      "dramatic-ruin"
+      "ruins-romantic",
+      "coastal",
+      "celtic",
+      "atmospheric",
+      "museum",
+      "photogenic",
+      "hilltop"
     ],
     "access": "paid",
     "_index": 676,
@@ -20351,6 +20917,13 @@ const CASTLES = [
       "https://img.castlecore.uk/dunollie-castle-main-3.jpg",
       "https://img.castlecore.uk/dunollie-castle-main-4.jpg",
       "https://img.castlecore.uk/dunollie-castle-main-5.jpg"
+    ],
+    "history": "Fortification on this promontory since the early Middle Ages, when it was the royal centre of the Cenel Loairn within the kingdom of Dal Riata. Irish annals record it being attacked or burned in 686, 698, and 701, then rebuilt by King Selbach mac Ferchair in 714. The MacDougall clan seat for centuries. Now open to the public as Dunollie Museum, Castle and Grounds.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dunollie_Castle"
+      }
     ]
   },
   {
@@ -20930,14 +21503,19 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Red sandstone cathedral ruins on the Black Isle. Scene of the Brahan Seer's prophecy.",
+    "description": "The red sandstone remains of a Highland cathedral on the Black Isle — where medieval bishops held power and the Brahan Seer was reportedly burned alive for his too-accurate prophecies.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Fortrose_Cathedral_north_2013.jpg/500px-Fortrose_Cathedral_north_2013.jpg",
     "rating": 3.9,
     "reviewCount": 420,
     "county": "Highland",
     "tags": [
-      "romantic-ruin",
-      "free"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "gothic",
+      "coastal",
+      "free-entry",
+      "photogenic"
     ],
     "access": "free",
     "_index": 700,
@@ -20950,6 +21528,13 @@ const CASTLES = [
       "https://img.castlecore.uk/fortrose-cathedral-main-3.jpg",
       "https://img.castlecore.uk/fortrose-cathedral-main-4.jpg",
       "https://img.castlecore.uk/fortrose-cathedral-main-5.jpg"
+    ],
+    "history": "Episcopal seat of the medieval diocese of Ross, founded around 1200. Originally sited at Rosemarkie before the canons relocated to Fortrose. Built in Late Gothic style from distinctive red sandstone. Much of the stone was reputedly taken by Cromwell's troops to build a fort in Inverness. The surviving aisle and chapter house are atmospheric ruins. Managed by Historic Environment Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fortrose_Cathedral"
+      }
     ]
   },
   {
@@ -21485,16 +22070,20 @@ const CASTLES = [
     "lng": -4.7,
     "country": "Wales",
     "type": "castle",
-    "era": "13th century",
+    "era": "12th-13th century",
     "condition": "ruin",
-    "description": "Hilltop castle ruin overlooking Tenby harbour and Castle Beach. Museum on the headland.",
+    "description": "Dramatic Norman ruins perched on a windswept headland above Tenby's pastel-painted harbour — where Welsh princes fought to reclaim their land from the sea-facing fortress walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tenby_Castle_-_geograph.org.uk_-_3694238.jpg/500px-Tenby_Castle_-_geograph.org.uk_-_3694238.jpg",
     "rating": 3.9,
     "reviewCount": 520,
     "county": "Pembrokeshire",
     "tags": [
-      "dramatic-ruin",
-      "free"
+      "ruins-romantic",
+      "coastal",
+      "cliffside",
+      "photogenic",
+      "atmospheric",
+      "free-entry"
     ],
     "access": "free",
     "_index": 724,
@@ -21507,6 +22096,13 @@ const CASTLES = [
       "https://img.castlecore.uk/tenby-castle-main-3.jpg",
       "https://img.castlecore.uk/tenby-castle-main-4.jpg",
       "https://img.castlecore.uk/tenby-castle-main-5.jpg"
+    ],
+    "history": "Founded by the Normans during their invasion of West Wales in the 12th century. A stone tower was built on the headland's highest point with curtain wall protection. Captured and destroyed in 1153 by Maredudd and Rhys ap Gruffydd, Welsh princes of Deheubarth. The remaining stone structure dates from the 13th century. Grade II* listed.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tenby_Castle"
+      }
     ]
   },
   {
@@ -21751,12 +22347,19 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "intact",
-    "description": "One of the oldest inhabited castles in Ireland, now a luxury hotel. FitzGerald family seat.",
+    "description": "Ireland's oldest inhabited castle, a 12th-century Fitzgerald stronghold wrapped in 700 years of dynasty, rebellion, and legend — now a luxury hotel in the gentle Kildare countryside.",
     "image": "https://img.castlecore.uk/kilkea-castle.jpg",
     "rating": 4.2,
     "reviewCount": 980,
     "county": "County Kildare",
-    "tags": [],
+    "tags": [
+      "well-preserved",
+      "romantic",
+      "medieval",
+      "atmospheric",
+      "wedding-venue",
+      "gardens"
+    ],
     "access": "paid",
     "_index": 734,
     "gallery": [
@@ -21768,6 +22371,13 @@ const CASTLES = [
       "https://img.castlecore.uk/kilkea-castle-main-3.jpg",
       "https://img.castlecore.uk/kilkea-castle-main-4.jpg",
       "https://img.castlecore.uk/kilkea-castle-main-5.jpg"
+    ],
+    "history": "A motte and bailey was built here in 1180 by Sir Walter de Riddlesford. The manor passed to the Fitzgerald dynasty through marriage and remained in the family for over 700 years. Served as a military base for the Justiciar of Ireland in the 1350s. Substantially rebuilt by the 6th Earl of Kildare in 1426. Now operating as a luxury hotel.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kilkea_Castle"
+      }
     ]
   },
   {
@@ -26384,16 +26994,21 @@ const CASTLES = [
     "lng": -6.698,
     "country": "Ireland",
     "type": "fort",
-    "era": "Iron Age",
+    "era": "Iron Age (c. 95 BC)",
     "condition": "ruin",
-    "description": "Emain Macha, legendary capital of the Ulaid and seat of the Red Branch Knights.",
+    "description": "The legendary seat of Ulster's ancient kings — a mystical hilltop where a massive timber temple was ritually burned and buried 2,000 years ago, pulsing with the mythology of Cu Chulainn and the Red Branch Knights.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg/500px-Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg",
     "rating": 4,
     "reviewCount": 980,
     "county": "County Armagh",
     "tags": [
-      "dramatic-ruin",
-      "free"
+      "hilltop",
+      "atmospheric",
+      "celtic",
+      "prehistoric",
+      "free-entry",
+      "remote",
+      "museum"
     ],
     "access": "free",
     "_index": 927,
@@ -26406,6 +27021,13 @@ const CASTLES = [
       "https://img.castlecore.uk/navan-fort-main-3.jpg",
       "https://img.castlecore.uk/navan-fort-main-4.jpg",
       "https://img.castlecore.uk/navan-fort-main-5.jpg"
+    ],
+    "history": "One of Ireland's great royal sites, traditionally the capital of the Ulaidh. Archaeological excavation revealed a huge timber structure that was filled with stones, deliberately burned, and covered with earth in a ritual act around 95 BC. Features prominently in the Ulster Cycle of Irish mythology. Part of the larger Navan complex including Haughey's Fort and the King's Stables ritual pool.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Navan_Fort"
+      }
     ]
   },
   {
@@ -26572,14 +27194,17 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "intact",
-    "description": "Royal abbey founded in 1216, the only church in Ireland with an unbroken 800-year history of worship.",
+    "description": "The abbey that refused to die — founded by an Irish king in 1216, suppressed, burned, roofless for centuries, yet never once stopped holding Mass through 800 years of defiance.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ballintubber_Abbey_eastern_elevation.JPG/500px-Ballintubber_Abbey_eastern_elevation.JPG",
     "rating": 4.1,
     "reviewCount": 850,
     "county": "County Mayo",
     "tags": [
-      "hidden-gem",
-      "free"
+      "well-preserved",
+      "atmospheric",
+      "medieval",
+      "celtic",
+      "free-entry"
     ],
     "access": "free",
     "_index": 936,
@@ -26592,6 +27217,13 @@ const CASTLES = [
       "https://img.castlecore.uk/ballintubber-abbey-main-3.jpg",
       "https://img.castlecore.uk/ballintubber-abbey-main-4.jpg",
       "https://img.castlecore.uk/ballintubber-abbey-main-5.jpg"
+    ],
+    "history": "Founded in 1216 by King Cathal Crobdearg Ua Conchobair for the Augustinians. Suppressed and damaged during the Protestant Reformation, but the roofless abbey continued to be used by Catholics throughout the Penal times. The nave was restored and re-roofed in 1966 for the 750th anniversary. The Chapter House was restored in 1997. Features modern outdoor Stations of the Cross and a permanent Crib.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ballintubber_Abbey"
+      }
     ]
   },
   {
@@ -26790,15 +27422,19 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Largest medieval priory in Ireland, spread over four acres beside the River Suir.",
+    "description": "Ireland's largest medieval priory, sprawling across four acres of Tipperary farmland — burned twice in its turbulent history, its Gothic arches still frame the sky above the River Suir.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aerial_photograph_of_Athassel_Priory%2C_May_2019.jpg/500px-Aerial_photograph_of_Athassel_Priory%2C_May_2019.jpg",
     "rating": 3.9,
     "reviewCount": 420,
     "county": "County Tipperary",
     "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "gothic",
+      "riverside",
+      "free-entry",
+      "photogenic"
     ],
     "access": "free",
     "_index": 945,
@@ -26811,6 +27447,13 @@ const CASTLES = [
       "https://img.castlecore.uk/athassel-priory-main-3.jpg",
       "https://img.castlecore.uk/athassel-priory-main-4.jpg",
       "https://img.castlecore.uk/athassel-priory-main-5.jpg"
+    ],
+    "history": "The largest medieval priory in Ireland, stretching over 4 acres. Founded in the late 12th century by William de Burgh (founder of the Burke dynasty) for the Augustinians. Burned in 1329 by Brian, King of Thomond, and again in 1581 by John Fitzgerald of Desmond. A large town that grew around the priory was destroyed in both raids. Dissolved in 1537 and given to the 10th Earl of Ormond.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Athassel_Priory"
+      }
     ]
   },
   {
@@ -27512,15 +28155,21 @@ const CASTLES = [
     "lng": -2.767,
     "country": "Scotland",
     "type": "castle",
-    "era": "14th century",
+    "era": "12th-17th century",
     "condition": "intact",
-    "description": "NTS castle near Pittenweem with Lorimer arts and crafts interiors and a fine garden.",
+    "description": "A romantic Scottish castle with roots reaching back to 1150, wrapped in walled gardens and steeped in centuries of aristocratic intrigue — from medieval earls to Victorian artists who saved it from ruin.",
     "image": "https://img.castlecore.uk/kellie-castle.jpg",
     "rating": 4.1,
     "reviewCount": 1200,
     "county": "Fife",
     "tags": [
-      "romantic-ruin"
+      "well-preserved",
+      "gardens",
+      "romantic",
+      "photogenic",
+      "atmospheric",
+      "medieval",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 976,
@@ -27533,6 +28182,17 @@ const CASTLES = [
       "https://img.castlecore.uk/kellie-castle-main-3.jpg",
       "https://img.castlecore.uk/kellie-castle-main-4.jpg",
       "https://img.castlecore.uk/kellie-castle-main-5.jpg"
+    ],
+    "history": "First recorded in a 1150 charter of King David I, Kellie passed through the Siward and Oliphant families before being purchased in 1613 by Sir Thomas Erskine, who saved King James VI during the Gowrie Conspiracy. The Erskine Earls of Kellie held it until the late 19th century when Professor James Lorimer leased the neglected castle and began restoration. Now managed by the National Trust for Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kellie_Castle"
+      },
+      {
+        "name": "National Trust for Scotland",
+        "url": "https://www.nts.org.uk/visit/places/kellie-castle-garden"
+      }
     ]
   },
   {
@@ -27744,13 +28404,18 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "Earl Patrick Stewart's castle in Scalloway, Shetland's former capital.",
+    "description": "A Shetland tower house built by a tyrannical earl who forced islanders into slave labour — legend says their blood mixed with the mortar, and his execution followed shortly after.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Scalloway_Castle_%28August_2013%29.jpg/500px-Scalloway_Castle_%28August_2013%29.jpg",
     "rating": 3.8,
     "reviewCount": 450,
     "county": "Shetland",
     "tags": [
-      "hidden-gem"
+      "ruins-romantic",
+      "dark-brooding",
+      "coastal",
+      "remote",
+      "atmospheric",
+      "free-entry"
     ],
     "access": "free",
     "_index": 986,
@@ -27763,6 +28428,13 @@ const CASTLES = [
       "https://img.castlecore.uk/scalloway-castle-main-3.jpg",
       "https://img.castlecore.uk/scalloway-castle-main-4.jpg",
       "https://img.castlecore.uk/scalloway-castle-main-5.jpg"
+    ],
+    "history": "Built in 1600 by Patrick Stewart, 2nd Earl of Orkney, during his brief tyrannical rule over Shetland. Local tradition holds that forced labour was used and eggs and blood mixed into the mortar. Patrick was executed in 1615 for treason. The castle fell into disuse shortly after. Free to visit, managed by Historic Environment Scotland.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Scalloway_Castle"
+      }
     ]
   },
   {
@@ -28014,13 +28686,18 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "restored",
-    "description": "Stuart of Moray tower house restored as a luxury hotel near Inverness.",
+    "description": "A brooding tower house on the shores of the Moray Firth, granted by Mary Queen of Scots herself — abandoned for 300 years before rising again as a luxury hotel wrapped in Highland mist and murder.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Castle_Stuart.jpg/500px-Castle_Stuart.jpg",
     "rating": 4,
     "reviewCount": 1200,
     "county": "Highland",
     "tags": [
-      "luxury"
+      "atmospheric",
+      "dark-brooding",
+      "coastal",
+      "haunted",
+      "romantic",
+      "well-preserved"
     ],
     "access": "paid",
     "_index": 996,
@@ -28033,6 +28710,13 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-stuart-main-3.jpg",
       "https://img.castlecore.uk/castle-stuart-main-4.jpg",
       "https://img.castlecore.uk/castle-stuart-main-5.jpg"
+    ],
+    "history": "The land was granted to the 1st Earl of Moray by his half-sister Mary Queen of Scots in 1561. After the successive murders of the 1st and 2nd Earls, the castle was finally completed by the 3rd Earl in 1625. It fell into disuse during the English Civil War and lay derelict for 300 years before restoration. Now operates as a luxury hotel near a championship golf course.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Castle_Stuart"
+      }
     ]
   },
   {
@@ -36442,15 +37126,20 @@ const CASTLES = [
     "lng": -4.858,
     "country": "Wales",
     "type": "palace",
-    "era": "13th century",
+    "era": "13th-14th century",
     "condition": "ruin",
-    "description": "Bishop of St David's country retreat.",
+    "description": "A medieval bishops' retreat with fishponds, orchards, and deer parks — where the powerful Bishops of St David's lived in luxury behind arcaded parapets in the green heart of Pembrokeshire.",
     "image": "https://img.castlecore.uk/lamphey-bishop-s-palace.jpg",
     "rating": 4.2,
     "reviewCount": 800,
     "county": "Pembrokeshire",
     "tags": [
-      "hidden-gem"
+      "ruins-romantic",
+      "gardens",
+      "atmospheric",
+      "medieval",
+      "free-entry",
+      "photogenic"
     ],
     "access": "paid",
     "_index": 1351,
@@ -36463,6 +37152,17 @@ const CASTLES = [
       "https://img.castlecore.uk/lamphey-bishop-s-palace-ruins-3.jpg",
       "https://img.castlecore.uk/lamphey-bishop-s-palace-ruins-4.jpg",
       "https://img.castlecore.uk/lamphey-bishop-s-palace-ruins-5.jpg"
+    ],
+    "history": "Largely constructed under Bishop Henry de Gower (1328-1347) as a lavish retreat for the Bishops of St David's. Originally had over 20 rooms with fishponds, orchards, herb gardens, and parkland with grazing deer. Surrendered to the crown in 1546 during Henry VIII's reign. Now a Grade I listed ruin managed by Cadw.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lamphey_Bishop%27s_Palace"
+      },
+      {
+        "name": "Cadw",
+        "url": "http://cadw.gov.wales/daysout/lampheybishopspalace/"
+      }
     ]
   },
   {
@@ -47301,14 +48001,19 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Cistercian abbey ruins in a valley landscaped by Capability Brown.",
+    "description": "Cistercian ruins cradled in a limestone valley landscaped by Capability Brown — where Gothic transept walls still soar above the beck and the ghosts of white-robed monks linger in Yorkshire stone.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Roche_Abbey_%28211961681%29.jpeg/500px-Roche_Abbey_%28211961681%29.jpeg",
     "rating": 4.1,
     "reviewCount": 800,
     "county": "Yorkshire",
     "tags": [
-      "romantic-ruin",
-      "hidden-gem"
+      "ruins-romantic",
+      "atmospheric",
+      "medieval",
+      "gardens",
+      "woodland",
+      "photogenic",
+      "free-entry"
     ],
     "access": "paid",
     "_index": 1852,
@@ -47321,6 +48026,17 @@ const CASTLES = [
       "https://img.castlecore.uk/roche-abbey-ruins-3.jpg",
       "https://img.castlecore.uk/roche-abbey-ruins-4.jpg",
       "https://img.castlecore.uk/roche-abbey-ruins-5.jpg"
+    ],
+    "history": "Founded in 1147 by Richard de Busli and Richard FitzTurgis for the Cistercians, built on both sides of Maltby Beck. The co-founders agreed whichever side proved most stable would host the abbey. Set within the Grade II* Sandbeck Park landscape designed by Capability Brown. The Gothic transept walls survive to considerable height. Managed by English Heritage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Roche_Abbey"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/roche-abbey/"
+      }
     ]
   },
   {
@@ -47358,14 +48074,16 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Cluniac priory ruins with well-preserved administrative buildings.",
+    "description": "A Cluniac-turned-Benedictine priory with remarkably complete domestic buildings — its gatehouse and administrative wing surviving in the South Yorkshire suburbs like a medieval time capsule.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/MonkBrettonPriory.jpg/500px-MonkBrettonPriory.jpg",
     "rating": 3.8,
     "reviewCount": 400,
     "county": "Yorkshire",
     "tags": [
-      "free",
-      "hidden-gem"
+      "ruins-romantic",
+      "medieval",
+      "free-entry",
+      "atmospheric"
     ],
     "access": "free",
     "_index": 1854,
@@ -47378,6 +48096,13 @@ const CASTLES = [
       "https://img.castlecore.uk/monk-bretton-priory-ruins-3.jpg",
       "https://img.castlecore.uk/monk-bretton-priory-ruins-4.jpg",
       "https://img.castlecore.uk/monk-bretton-priory-ruins-5.jpg"
+    ],
+    "history": "Originally founded as a Cluniac monastery, later becoming Benedictine. Features remarkably well-preserved domestic buildings including the gatehouse and administrative wing. Complete with two medieval fishponds within the monastic precinct. Grade I listed, managed by English Heritage in the village of Lundwood near Barnsley.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Monk_Bretton_Priory"
+      }
     ]
   },
   {
