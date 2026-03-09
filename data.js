@@ -6815,10 +6815,26 @@ const CASTLES = [
       "https://img.castlecore.uk/white-castle-keep-3.jpg",
       "https://img.castlecore.uk/white-castle-keep-4.jpg",
       "https://img.castlecore.uk/white-castle-keep-5.jpg"
+    ],
+    "youtube": [
+      "G-UjT8jGLoA",
+      "_F8kSwh8xQI",
+      "J-0d-ttEsgY"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/White_Castle_(castle)"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/white-castle"
+      },
+      {
+        "name": "Three Castles Walk",
+        "url": "https://www.threecastleswalk.co.uk/"
+      }
     ]
-  ,
-    "youtube": ["G-UjT8jGLoA","_F8kSwh8xQI","J-0d-ttEsgY"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/White_Castle_(castle)"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/white-castle"},{"name":"Three Castles Walk","url":"https://www.threecastleswalk.co.uk/"}]
   },
   {
     "name": "Skenfrith Castle",
@@ -7735,10 +7751,22 @@ const CASTLES = [
       "https://img.castlecore.uk/weobley-castle-main-3.jpg",
       "https://img.castlecore.uk/weobley-castle-main-4.jpg",
       "https://img.castlecore.uk/weobley-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "b8TqZkDjkVw",
+      "vrpu1ghAIT4",
+      "5gGXtDEk0wU"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Weobley_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/weobley-castle"
+      }
     ]
-  ,
-    "youtube": ["b8TqZkDjkVw","vrpu1ghAIT4","5gGXtDEk0wU"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Weobley_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/weobley-castle"}]
   },
   {
     "name": "Pennard Castle",
@@ -8819,32 +8847,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Adare Castle",
-    "lat": 52.5633,
-    "lng": -8.7894,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "A large Norman castle on the banks of the River Maigue in Ireland's prettiest village. Built by the Earls of Kildare, its extensive curtain walls and great hall overlook the river.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg/500px-Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg",
-    "rating": 4,
-    "reviewCount": 1300,
-    "county": "County Limerick",
-    "tags": [
-      "dramatic-ruin",
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 283,
-    "gallery": [
-      "https://img.castlecore.uk/adare-castle-2.jpg",
-      "https://img.castlecore.uk/adare-castle-3.jpg",
-      "https://img.castlecore.uk/adare-castle-4.jpg",
-      "https://img.castlecore.uk/adare-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Askeaton Castle",
     "lat": 52.5992,
     "lng": -8.9756,
@@ -9650,10 +9652,22 @@ const CASTLES = [
       "https://img.castlecore.uk/dunmoe-castle-main-3.jpg",
       "https://img.castlecore.uk/dunmoe-castle-main-4.jpg",
       "https://img.castlecore.uk/dunmoe-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "dGdJ3b1ExPU",
+      "hxwEOyNOzqg",
+      "H0ViJlyJ2y4"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dunmoe_Castle"
+      },
+      {
+        "name": "Megalithic Ireland",
+        "url": "https://www.megalithicireland.com/dunmoe-castle.html"
+      }
     ]
-  ,
-    "youtube": ["dGdJ3b1ExPU","hxwEOyNOzqg","H0ViJlyJ2y4"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dunmoe_Castle"},{"name":"Megalithic Ireland","url":"https://www.megalithicireland.com/dunmoe-castle.html"}]
   },
   {
     "name": "Bective Abbey",
@@ -11273,34 +11287,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ballygally Castle",
-    "lat": 54.8667,
-    "lng": -5.85,
-    "country": "Northern Ireland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "intact",
-    "description": "A Scottish Plantation castle built by James Shaw in 1625, now operating as a hotel. It is reputedly haunted by the ghost of Lady Isobel Shaw, who fell from the tower window.",
-    "history": "Ballygally Castle is in the village of Ballygally, County Antrim, Northern Ireland, located approximately 3 miles north of Larne. The castle overlooks the sea at the head of Ballygally Bay. It is now run as a hotel and is reputed to be one of the most haunted places in Ulster.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ballygally_Castle.jpg/500px-Ballygally_Castle.jpg",
-    "rating": 4,
-    "reviewCount": 980,
-    "county": "County Antrim",
-    "tags": [
-      "well-preserved",
-      "haunted",
-      "hidden-gem"
-    ],
-    "access": "free",
-    "_index": 369,
-    "gallery": [
-      "https://img.castlecore.uk/ballygally-castle-2.jpg",
-      "https://img.castlecore.uk/ballygally-castle-3.jpg",
-      "https://img.castlecore.uk/ballygally-castle-4.jpg",
-      "https://img.castlecore.uk/ballygally-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Antrim Castle Gardens",
     "lat": 54.7167,
     "lng": -6.2167,
@@ -11417,10 +11403,22 @@ const CASTLES = [
       "https://img.castlecore.uk/scotney-castle-main-3.jpg",
       "https://img.castlecore.uk/scotney-castle-main-4.jpg",
       "https://img.castlecore.uk/scotney-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "7lo8A716TiI",
+      "GIODK13M-ec",
+      "7GQM1KjMIPM"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Scotney_Castle"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/kent/scotney-castle"
+      }
     ]
-  ,
-    "youtube": ["7lo8A716TiI","GIODK13M-ec","7GQM1KjMIPM"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Scotney_Castle"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/kent/scotney-castle"}]
   },
   {
     "name": "Sissinghurst Castle",
@@ -11454,10 +11452,22 @@ const CASTLES = [
       "https://img.castlecore.uk/sissinghurst-castle-main-3.jpg",
       "https://img.castlecore.uk/sissinghurst-castle-main-4.jpg",
       "https://img.castlecore.uk/sissinghurst-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "4AdB8b7o2Mg",
+      "9Se2Y2TDm1U",
+      "vdcj75EbR7E"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/kent/sissinghurst-castle-garden"
+      }
     ]
-  ,
-    "youtube": ["4AdB8b7o2Mg","9Se2Y2TDm1U","vdcj75EbR7E"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/kent/sissinghurst-castle-garden"}]
   },
   {
     "name": "Lullingstone Castle",
@@ -11880,10 +11890,22 @@ const CASTLES = [
       "https://img.castlecore.uk/powderham-castle-interior-3.jpg",
       "https://img.castlecore.uk/powderham-castle-interior-4.jpg",
       "https://img.castlecore.uk/powderham-castle-interior-5.jpg"
+    ],
+    "youtube": [
+      "v3gDXfwl6X4",
+      "V9TCmvKu54Y",
+      "df-iAwDrU-Q"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Powderham_Castle"
+      },
+      {
+        "name": "Powderham Castle Official",
+        "url": "https://www.powderham.co.uk/"
+      }
     ]
-  ,
-    "youtube": ["v3gDXfwl6X4","V9TCmvKu54Y","df-iAwDrU-Q"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Powderham_Castle"},{"name":"Powderham Castle Official","url":"https://www.powderham.co.uk/"}]
   },
   {
     "name": "Dartmouth Castle",
@@ -11917,10 +11939,22 @@ const CASTLES = [
       "https://img.castlecore.uk/dartmouth-castle-interior-3.jpg",
       "https://img.castlecore.uk/dartmouth-castle-interior-4.jpg",
       "https://img.castlecore.uk/dartmouth-castle-interior-5.jpg"
+    ],
+    "youtube": [
+      "Br5Qq8tehe0",
+      "msQLiyIpwRk",
+      "JWpwObOwfs8"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dartmouth_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/dartmouth-castle/"
+      }
     ]
-  ,
-    "youtube": ["Br5Qq8tehe0","msQLiyIpwRk","JWpwObOwfs8"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dartmouth_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/dartmouth-castle/"}]
   },
   {
     "name": "Compton Castle",
@@ -12126,10 +12160,26 @@ const CASTLES = [
       "https://img.castlecore.uk/dudley-castle-main-3.jpg",
       "https://img.castlecore.uk/dudley-castle-main-4.jpg",
       "https://img.castlecore.uk/dudley-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "kiL94BxBvtc",
+      "jp1umWe9ndo",
+      "Lx9on3HDzpc"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dudley_Castle"
+      },
+      {
+        "name": "Dudley Zoo & Castle",
+        "url": "https://www.dudleyzoo.org.uk/"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1015843"
+      }
     ]
-  ,
-    "youtube": ["kiL94BxBvtc","jp1umWe9ndo","Lx9on3HDzpc"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dudley_Castle"},{"name":"Dudley Zoo & Castle","url":"https://www.dudleyzoo.org.uk/"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1015843"}]
   },
   {
     "name": "Stafford Castle",
@@ -12198,10 +12248,26 @@ const CASTLES = [
       "https://img.castlecore.uk/clun-castle-main-3.jpg",
       "https://img.castlecore.uk/clun-castle-main-4.jpg",
       "https://img.castlecore.uk/clun-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "a1Qpqct7Dwc",
+      "dvOjMj-_vMw",
+      "cPQ5wyRrw_0"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Clun_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/clun-castle/"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1013600"
+      }
     ]
-  ,
-    "youtube": ["a1Qpqct7Dwc","dvOjMj-_vMw","cPQ5wyRrw_0"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Clun_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/clun-castle/"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1013600"}]
   },
   {
     "name": "Hopton Castle",
@@ -12418,10 +12484,22 @@ const CASTLES = [
       "https://img.castlecore.uk/wenlock-priory-main-3.jpg",
       "https://img.castlecore.uk/wenlock-priory-main-4.jpg",
       "https://img.castlecore.uk/wenlock-priory-main-5.jpg"
+    ],
+    "youtube": [
+      "Cc1tfgNV3Dk",
+      "hCxyHMQ2wQI",
+      "H4KIjUQmHKg"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wenlock_Priory"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/wenlock-priory/"
+      }
     ]
-  ,
-    "youtube": ["Cc1tfgNV3Dk","hCxyHMQ2wQI","H4KIjUQmHKg"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Wenlock_Priory"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/wenlock-priory/"}]
   },
   {
     "name": "Maxstoke Castle",
@@ -12620,10 +12698,22 @@ const CASTLES = [
       "https://img.castlecore.uk/oxburgh-hall-main-3.jpg",
       "https://img.castlecore.uk/oxburgh-hall-main-4.jpg",
       "https://img.castlecore.uk/oxburgh-hall-main-5.jpg"
+    ],
+    "youtube": [
+      "Grvew3CGTMk",
+      "vIBAV0Vrv0E",
+      "Z63XRSfJQ1s"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Oxburgh_Hall"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/norfolk/oxburgh-hall"
+      }
     ]
-  ,
-    "youtube": ["Grvew3CGTMk","vIBAV0Vrv0E","Z63XRSfJQ1s"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Oxburgh_Hall"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/norfolk/oxburgh-hall"}]
   },
   {
     "name": "Clare Castle",
@@ -12749,10 +12839,22 @@ const CASTLES = [
       "https://img.castlecore.uk/hadleigh-castle-main-3.jpg",
       "https://img.castlecore.uk/hadleigh-castle-main-4.jpg",
       "https://img.castlecore.uk/hadleigh-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "oigaWUkjFOE",
+      "pwFaAB3OcYE",
+      "rTtOaS5xQVI"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hadleigh_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/hadleigh-castle/"
+      }
     ]
-  ,
-    "youtube": ["oigaWUkjFOE","pwFaAB3OcYE","rTtOaS5xQVI"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Hadleigh_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/hadleigh-castle/"}]
   },
   {
     "name": "Tilbury Fort",
@@ -13095,10 +13197,22 @@ const CASTLES = [
       "https://img.castlecore.uk/belsay-castle-main-3.jpg",
       "https://img.castlecore.uk/belsay-castle-main-4.jpg",
       "https://img.castlecore.uk/belsay-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "qH0xyK1HdsY",
+      "m4Y3LtDSFZE",
+      "ZhsBm5yoUww"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Belsay"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/"
+      }
     ]
-  ,
-    "youtube": ["qH0xyK1HdsY","m4Y3LtDSFZE","ZhsBm5yoUww"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Belsay"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/"}]
   },
   {
     "name": "Thirlwall Castle",
@@ -13260,10 +13374,26 @@ const CASTLES = [
       "https://img.castlecore.uk/sizergh-castle-main-3.jpg",
       "https://img.castlecore.uk/sizergh-castle-main-4.jpg",
       "https://img.castlecore.uk/sizergh-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "Ah_cWqZNlRE",
+      "d__sZcnIC0Y",
+      "GN2Y69RSPe8"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sizergh_Castle"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/lake-district/sizergh"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1086839"
+      }
     ]
-  ,
-    "youtube": ["Ah_cWqZNlRE","d__sZcnIC0Y","GN2Y69RSPe8"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Sizergh_Castle"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/lake-district/sizergh"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1086839"}]
   },
   {
     "name": "Muncaster Castle",
@@ -13301,10 +13431,26 @@ const CASTLES = [
       "https://img.castlecore.uk/muncaster-castle-main-3.jpg",
       "https://img.castlecore.uk/muncaster-castle-main-4.jpg",
       "https://img.castlecore.uk/muncaster-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "pAwcUrZ9aC8",
+      "gsS6nkvkfuU",
+      "NoVTp22PKRI"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Muncaster_Castle"
+      },
+      {
+        "name": "Muncaster Castle Official",
+        "url": "https://www.muncaster.co.uk/"
+      },
+      {
+        "name": "Historic Houses",
+        "url": "https://www.historichouses.org/houses/house-listing/muncaster-castle.html"
+      }
     ]
-  ,
-    "youtube": ["pAwcUrZ9aC8","gsS6nkvkfuU","NoVTp22PKRI"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Muncaster_Castle"},{"name":"Muncaster Castle Official","url":"https://www.muncaster.co.uk/"},{"name":"Historic Houses","url":"https://www.historichouses.org/houses/house-listing/muncaster-castle.html"}]
   },
   {
     "name": "Dacre Castle",
@@ -13491,10 +13637,22 @@ const CASTLES = [
       "https://img.castlecore.uk/ripley-castle-interior-3.jpg",
       "https://img.castlecore.uk/ripley-castle-interior-4.jpg",
       "https://img.castlecore.uk/ripley-castle-interior-5.jpg"
+    ],
+    "youtube": [
+      "J_Wh0Q_SdoU",
+      "WSjRTVTO1r8",
+      "fHOyQ1akZFo"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ripley_Castle"
+      },
+      {
+        "name": "Ripley Castle Official",
+        "url": "https://www.ripleycastle.co.uk/"
+      }
     ]
-  ,
-    "youtube": ["J_Wh0Q_SdoU","WSjRTVTO1r8","fHOyQ1akZFo"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Ripley_Castle"},{"name":"Ripley Castle Official","url":"https://www.ripleycastle.co.uk/"}]
   },
   {
     "name": "Castle Bolton",
@@ -13584,10 +13742,26 @@ const CASTLES = [
       "https://img.castlecore.uk/mount-grace-priory-main-3.jpg",
       "https://img.castlecore.uk/mount-grace-priory-main-4.jpg",
       "https://img.castlecore.uk/mount-grace-priory-main-5.jpg"
+    ],
+    "youtube": [
+      "DnTng0EwoSs",
+      "YsSrIX61if4",
+      "t_57oRtHHKI"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mount_Grace_Priory"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/mount-grace-priory/"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/yorkshire/mount-grace-priory"
+      }
     ]
-  ,
-    "youtube": ["DnTng0EwoSs","YsSrIX61if4","t_57oRtHHKI"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Mount_Grace_Priory"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/mount-grace-priory/"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/yorkshire/mount-grace-priory"}]
   },
   {
     "name": "Easby Abbey",
@@ -13687,10 +13861,26 @@ const CASTLES = [
       "https://img.castlecore.uk/bolton-priory-main-3.jpg",
       "https://img.castlecore.uk/bolton-priory-main-4.jpg",
       "https://img.castlecore.uk/bolton-priory-main-5.jpg"
+    ],
+    "youtube": [
+      "sh5X2xSNCvo",
+      "n9NjaG91Zs4",
+      "hU2BYwkpLxg"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bolton_Priory"
+      },
+      {
+        "name": "Bolton Abbey Estate",
+        "url": "https://www.boltonabbey.com/"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/bolton-priory/"
+      }
     ]
-  ,
-    "youtube": ["sh5X2xSNCvo","n9NjaG91Zs4","hU2BYwkpLxg"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Bolton_Priory"},{"name":"Bolton Abbey Estate","url":"https://www.boltonabbey.com/"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/bolton-priory/"}]
   },
   {
     "name": "Wharram Percy",
@@ -13786,10 +13976,22 @@ const CASTLES = [
       "https://img.castlecore.uk/whorlton-castle-main-3.jpg",
       "https://img.castlecore.uk/whorlton-castle-main-4.jpg",
       "https://img.castlecore.uk/whorlton-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "IMh0NokFf_c",
+      "I7PEFXMefd0",
+      "JnmdzkZDtqk"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Whorlton_Castle"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1002428"
+      }
     ]
-  ,
-    "youtube": ["IMh0NokFf_c","I7PEFXMefd0","JnmdzkZDtqk"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Whorlton_Castle"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1002428"}]
   },
   {
     "name": "Sandal Castle",
@@ -13827,10 +14029,22 @@ const CASTLES = [
       "https://img.castlecore.uk/sandal-castle-main-3.jpg",
       "https://img.castlecore.uk/sandal-castle-main-4.jpg",
       "https://img.castlecore.uk/sandal-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "MqLNpojsFO8",
+      "i3DX3XY9gY8",
+      "ySx60MfqgWo"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sandal_Castle"
+      },
+      {
+        "name": "Wakefield Council",
+        "url": "https://www.wakefield.gov.uk/events-and-culture/sandal-castle/"
+      }
     ]
-  ,
-    "youtube": ["MqLNpojsFO8","i3DX3XY9gY8","ySx60MfqgWo"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Sandal_Castle"},{"name":"Wakefield Council","url":"https://www.wakefield.gov.uk/events-and-culture/sandal-castle/"}]
   },
   {
     "name": "Harewood Castle",
@@ -14117,10 +14331,26 @@ const CASTLES = [
       "https://img.castlecore.uk/haddon-hall-main-3.jpg",
       "https://img.castlecore.uk/haddon-hall-main-4.jpg",
       "https://img.castlecore.uk/haddon-hall-main-5.jpg"
+    ],
+    "youtube": [
+      "ibm-25zJQi0",
+      "MUKkR3m6aw0",
+      "xk1judtDNOo"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Haddon_Hall"
+      },
+      {
+        "name": "Haddon Hall Official",
+        "url": "https://www.haddonhall.co.uk/"
+      },
+      {
+        "name": "Historic Houses",
+        "url": "https://www.historichouses.org/houses/house-listing/haddon-hall.html"
+      }
     ]
-  ,
-    "youtube": ["ibm-25zJQi0","MUKkR3m6aw0","xk1judtDNOo"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Haddon_Hall"},{"name":"Haddon Hall Official","url":"https://www.haddonhall.co.uk/"},{"name":"Historic Houses","url":"https://www.historichouses.org/houses/house-listing/haddon-hall.html"}]
   },
   {
     "name": "Hardwick Hall",
@@ -14154,10 +14384,26 @@ const CASTLES = [
       "https://img.castlecore.uk/hardwick-hall-interior-3.jpg",
       "https://img.castlecore.uk/hardwick-hall-interior-4.jpg",
       "https://img.castlecore.uk/hardwick-hall-interior-5.jpg"
+    ],
+    "youtube": [
+      "vlRTKkjpz8I",
+      "GTWMspNjglM",
+      "NQYI17o_T0E"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hardwick_Hall"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/east-midlands/hardwick"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1000076"
+      }
     ]
-  ,
-    "youtube": ["vlRTKkjpz8I","GTWMspNjglM","NQYI17o_T0E"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Hardwick_Hall"},{"name":"National Trust","url":"https://www.nationaltrust.org.uk/visit/east-midlands/hardwick"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1000076"}]
   },
   {
     "name": "Rufford Abbey",
@@ -14646,10 +14892,22 @@ const CASTLES = [
       "https://img.castlecore.uk/brodie-castle-main-3.jpg",
       "https://img.castlecore.uk/brodie-castle-main-4.jpg",
       "https://img.castlecore.uk/brodie-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "JWAduEIvN3U",
+      "X4z5vLAS0tY",
+      "YOPGyTMTbq4"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Brodie_Castle"
+      },
+      {
+        "name": "National Trust for Scotland",
+        "url": "https://www.nts.org.uk/visit/places/brodie-castle"
+      }
     ]
-  ,
-    "youtube": ["JWAduEIvN3U","X4z5vLAS0tY","YOPGyTMTbq4"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Brodie_Castle"},{"name":"National Trust for Scotland","url":"https://www.nts.org.uk/visit/places/brodie-castle"}]
   },
   {
     "name": "Auchindoun Castle",
@@ -14747,10 +15005,22 @@ const CASTLES = [
       "https://img.castlecore.uk/inveraray-castle-interior-3.jpg",
       "https://img.castlecore.uk/inveraray-castle-interior-4.jpg",
       "https://img.castlecore.uk/inveraray-castle-interior-5.jpg"
+    ],
+    "youtube": [
+      "dyDaCAbY9Cs",
+      "voKk42G-Vpw",
+      "tjgrGYG7dTs"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Inveraray_Castle"
+      },
+      {
+        "name": "Inveraray Castle Official",
+        "url": "https://www.inveraray-castle.com/"
+      }
     ]
-  ,
-    "youtube": ["dyDaCAbY9Cs","voKk42G-Vpw","tjgrGYG7dTs"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Inveraray_Castle"},{"name":"Inveraray Castle Official","url":"https://www.inveraray-castle.com/"}]
   },
   {
     "name": "Sween Castle",
@@ -15002,10 +15272,22 @@ const CASTLES = [
       "https://img.castlecore.uk/balvaird-castle-main-3.jpg",
       "https://img.castlecore.uk/balvaird-castle-main-4.jpg",
       "https://img.castlecore.uk/balvaird-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "KajrCr_Dzlo",
+      "UJ-PKlbCfNo",
+      "5PVJoPlV3f0"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Balvaird_Castle"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/balvaird-castle/"
+      }
     ]
-  ,
-    "youtube": ["KajrCr_Dzlo","UJ-PKlbCfNo","5PVJoPlV3f0"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Balvaird_Castle"},{"name":"Historic Environment Scotland","url":"https://www.historicenvironment.scot/visit-a-place/places/balvaird-castle/"}]
   },
   {
     "name": "Lauriston Castle",
@@ -15295,10 +15577,26 @@ const CASTLES = [
       "https://img.castlecore.uk/caldicot-castle-main-3.jpg",
       "https://img.castlecore.uk/caldicot-castle-main-4.jpg",
       "https://img.castlecore.uk/caldicot-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "5y9On-ebFZA",
+      "PhPubudZ4SA",
+      "w6vz9riclHk"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Caldicot_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/caldicot-castle"
+      },
+      {
+        "name": "Coflein",
+        "url": "https://coflein.gov.uk/en/site/95259/"
+      }
     ]
-  ,
-    "youtube": ["5y9On-ebFZA","PhPubudZ4SA","w6vz9riclHk"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Caldicot_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/caldicot-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95259/"}]
   },
   {
     "name": "Usk Castle",
@@ -15335,10 +15633,26 @@ const CASTLES = [
       "https://img.castlecore.uk/usk-castle-main-3.jpg",
       "https://img.castlecore.uk/usk-castle-main-4.jpg",
       "https://img.castlecore.uk/usk-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "SJDv0NpGzYo",
+      "4vxbE-owyc0",
+      "KTBx-M64Ekc"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Usk_Castle"
+      },
+      {
+        "name": "Usk Castle Official",
+        "url": "https://www.uskcastle.com/"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/usk-castle"
+      }
     ]
-  ,
-    "youtube": ["SJDv0NpGzYo","4vxbE-owyc0","KTBx-M64Ekc"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Usk_Castle"},{"name":"Usk Castle Official","url":"https://www.uskcastle.com/"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/usk-castle"}]
   },
   {
     "name": "Abergavenny Castle",
@@ -15428,10 +15742,22 @@ const CASTLES = [
       "https://img.castlecore.uk/picton-castle-interior-3.jpg",
       "https://img.castlecore.uk/picton-castle-interior-4.jpg",
       "https://img.castlecore.uk/picton-castle-interior-5.jpg"
+    ],
+    "youtube": [
+      "-D3ZLFLeIP8",
+      "Owd4EfIZciY",
+      "IGBl_UctKy4"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Picton_Castle"
+      },
+      {
+        "name": "Picton Castle Official",
+        "url": "https://www.pictoncastle.co.uk/"
+      }
     ]
-  ,
-    "youtube": ["-D3ZLFLeIP8","Owd4EfIZciY","IGBl_UctKy4"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Picton_Castle"},{"name":"Picton Castle Official","url":"https://www.pictoncastle.co.uk/"}]
   },
   {
     "name": "Kylemore Abbey",
@@ -15522,10 +15848,22 @@ const CASTLES = [
       "https://img.castlecore.uk/bowes-castle-main-3.jpg",
       "https://img.castlecore.uk/bowes-castle-main-4.jpg",
       "https://img.castlecore.uk/bowes-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "SQUp0EIhOow",
+      "uvchiMwNcU0",
+      "9FOt6NkE9Nk"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bowes_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/bowes-castle/"
+      }
     ]
-  ,
-    "youtube": ["SQUp0EIhOow","uvchiMwNcU0","9FOt6NkE9Nk"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Bowes_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/bowes-castle/"}]
   },
   {
     "name": "Brancepeth Castle",
@@ -15587,10 +15925,22 @@ const CASTLES = [
       "https://img.castlecore.uk/lumley-castle-keep-3.jpg",
       "https://img.castlecore.uk/lumley-castle-keep-4.jpg",
       "https://img.castlecore.uk/lumley-castle-keep-5.jpg"
+    ],
+    "youtube": [
+      "mHtYW6uQ1ag",
+      "nv4FwP9V6dA",
+      "3sm4hg62dQE"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lumley_Castle"
+      },
+      {
+        "name": "Lumley Castle Hotel",
+        "url": "https://www.lumleycastle.com/"
+      }
     ]
-  ,
-    "youtube": ["mHtYW6uQ1ag","nv4FwP9V6dA","3sm4hg62dQE"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Lumley_Castle"},{"name":"Lumley Castle Hotel","url":"https://www.lumleycastle.com/"}]
   },
   {
     "name": "Witton Castle",
@@ -15626,10 +15976,22 @@ const CASTLES = [
       "https://img.castlecore.uk/witton-castle-main-3.jpg",
       "https://img.castlecore.uk/witton-castle-main-4.jpg",
       "https://img.castlecore.uk/witton-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "u6QRG6BFhhE",
+      "BMRnenXZo84",
+      "FkR6c7Sw400"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Witton_Castle"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1120956"
+      }
     ]
-  ,
-    "youtube": ["u6QRG6BFhhE","BMRnenXZo84","FkR6c7Sw400"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Witton_Castle"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1120956"}]
   },
   {
     "name": "Hylton Castle",
@@ -15720,10 +16082,22 @@ const CASTLES = [
       "https://img.castlecore.uk/snape-castle-main-3.jpg",
       "https://img.castlecore.uk/snape-castle-main-4.jpg",
       "https://img.castlecore.uk/snape-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "olQhmWbVQeU",
+      "dVg4aMLyPnQ",
+      "XlM25bxzXT4"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Snape_Castle"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1150787"
+      }
     ]
-  ,
-    "youtube": ["olQhmWbVQeU","dVg4aMLyPnQ","XlM25bxzXT4"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Snape_Castle"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1150787"}]
   },
   {
     "name": "Danby Castle",
@@ -15867,10 +16241,22 @@ const CASTLES = [
       "https://img.castlecore.uk/belvoir-castle-interior-3.jpg",
       "https://img.castlecore.uk/belvoir-castle-interior-4.jpg",
       "https://img.castlecore.uk/belvoir-castle-interior-5.jpg"
+    ],
+    "youtube": [
+      "YfGAKz_H0HQ",
+      "R_pg0Y9JGE4",
+      "RpC13qv4YbA"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Belvoir_Castle"
+      },
+      {
+        "name": "Belvoir Castle Official",
+        "url": "https://www.belvoircastle.com/"
+      }
     ]
-  ,
-    "youtube": ["YfGAKz_H0HQ","R_pg0Y9JGE4","RpC13qv4YbA"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Belvoir_Castle"},{"name":"Belvoir Castle Official","url":"https://www.belvoircastle.com/"}]
   },
   {
     "name": "Oakham Castle",
@@ -15981,10 +16367,22 @@ const CASTLES = [
       "https://img.castlecore.uk/herstmonceux-castle-main-3.jpg",
       "https://img.castlecore.uk/herstmonceux-castle-main-4.jpg",
       "https://img.castlecore.uk/herstmonceux-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "XCtHHxN7Xjc",
+      "tP9A1mIadXY",
+      "gXwxoMRMUyM"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Herstmonceux_Castle"
+      },
+      {
+        "name": "Herstmonceux Castle Official",
+        "url": "https://www.herstmonceux-castle.com/"
+      }
     ]
-  ,
-    "youtube": ["XCtHHxN7Xjc","tP9A1mIadXY","gXwxoMRMUyM"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Herstmonceux_Castle"},{"name":"Herstmonceux Castle Official","url":"https://www.herstmonceux-castle.com/"}]
   },
   {
     "name": "Battle Abbey",
@@ -16020,10 +16418,22 @@ const CASTLES = [
       "https://img.castlecore.uk/battle-abbey-main-3.jpg",
       "https://img.castlecore.uk/battle-abbey-main-4.jpg",
       "https://img.castlecore.uk/battle-abbey-main-5.jpg"
+    ],
+    "youtube": [
+      "SQyEP4Dowgc",
+      "iSJVoqwpzMo",
+      "lsfBA4HG1GA"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Battle_Abbey"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/"
+      }
     ]
-  ,
-    "youtube": ["SQyEP4Dowgc","iSJVoqwpzMo","lsfBA4HG1GA"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Battle_Abbey"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/"}]
   },
   {
     "name": "Michelham Priory",
@@ -16397,31 +16807,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Buckden Towers",
-    "lat": 52.2833,
-    "lng": -0.2667,
-    "country": "England",
-    "type": "palace",
-    "era": "15th century",
-    "condition": "partial ruin",
-    "description": "A medieval palace of the Bishops of Lincoln where Catherine of Aragon was imprisoned. The brick tower is striking.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Great_Tower_and_St_Hugh%27s_Church.jpg/500px-Great_Tower_and_St_Hugh%27s_Church.jpg",
-    "rating": 3.7,
-    "reviewCount": 250,
-    "county": "Cambridgeshire",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 541,
-    "gallery": [
-      "https://img.castlecore.uk/buckden-towers-2.jpg",
-      "https://img.castlecore.uk/buckden-towers-3.jpg",
-      "https://img.castlecore.uk/buckden-towers-4.jpg",
-      "https://img.castlecore.uk/buckden-towers-5.jpg"
-    ]
-  },
-  {
     "name": "Longthorpe Tower",
     "lat": 52.5833,
     "lng": -0.2833,
@@ -16533,10 +16918,26 @@ const CASTLES = [
       "https://img.castlecore.uk/bolingbroke-castle-main-3.jpg",
       "https://img.castlecore.uk/bolingbroke-castle-main-4.jpg",
       "https://img.castlecore.uk/bolingbroke-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "tX9XPAIce5s",
+      "bvdu-9xiGCw",
+      "bIXszf0tx24"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bolingbroke_Castle"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/bolingbroke-castle-and-old-bolingbroke/"
+      },
+      {
+        "name": "Historic England",
+        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1012668"
+      }
     ]
-  ,
-    "youtube": ["tX9XPAIce5s","bvdu-9xiGCw","bIXszf0tx24"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Bolingbroke_Castle"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/bolingbroke-castle-and-old-bolingbroke/"},{"name":"Historic England","url":"https://historicengland.org.uk/listing/the-list/list-entry/1012668"}]
   },
   {
     "name": "Somerton Castle",
@@ -16865,10 +17266,22 @@ const CASTLES = [
       "https://img.castlecore.uk/lowther-castle-interior-3.jpg",
       "https://img.castlecore.uk/lowther-castle-interior-4.jpg",
       "https://img.castlecore.uk/lowther-castle-interior-5.jpg"
+    ],
+    "youtube": [
+      "XsEAsMwTEq4",
+      "Q3d6gfhjb98",
+      "IvB3_BAyEek"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lowther_Castle"
+      },
+      {
+        "name": "Lowther Castle Official",
+        "url": "https://www.lowthercastle.org/"
+      }
     ]
-  ,
-    "youtube": ["XsEAsMwTEq4","Q3d6gfhjb98","IvB3_BAyEek"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Lowther_Castle"},{"name":"Lowther Castle Official","url":"https://www.lowthercastle.org/"}]
   },
   {
     "name": "Naworth Castle",
@@ -17084,10 +17497,22 @@ const CASTLES = [
       "https://img.castlecore.uk/dumbarton-castle-main-3.jpg",
       "https://img.castlecore.uk/dumbarton-castle-main-4.jpg",
       "https://img.castlecore.uk/dumbarton-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "HEw53Heh6qc",
+      "Zsgqox7tlJE",
+      "d2YA2r-SfjE"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dumbarton_Castle"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dumbarton-castle/"
+      }
     ]
-  ,
-    "youtube": ["HEw53Heh6qc","Zsgqox7tlJE","d2YA2r-SfjE"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dumbarton_Castle"},{"name":"Historic Environment Scotland","url":"https://www.historicenvironment.scot/visit-a-place/places/dumbarton-castle/"}]
   },
   {
     "name": "Hay Castle",
@@ -17124,10 +17549,22 @@ const CASTLES = [
       "https://img.castlecore.uk/hay-castle-main-3.jpg",
       "https://img.castlecore.uk/hay-castle-main-4.jpg",
       "https://img.castlecore.uk/hay-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "7Hwkhih5MO8",
+      "zpU_kx5dSpc",
+      "o5oLDPb9r8I"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hay_Castle"
+      },
+      {
+        "name": "Hay Castle Official",
+        "url": "https://www.haycastle.org/"
+      }
     ]
-  ,
-    "youtube": ["7Hwkhih5MO8","zpU_kx5dSpc","o5oLDPb9r8I"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Hay_Castle"},{"name":"Hay Castle Official","url":"https://www.haycastle.org/"}]
   },
   {
     "name": "Builth Castle",
@@ -17222,10 +17659,26 @@ const CASTLES = [
       "https://img.castlecore.uk/dolforwyn-castle-main-3.jpg",
       "https://img.castlecore.uk/dolforwyn-castle-main-4.jpg",
       "https://img.castlecore.uk/dolforwyn-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "46b991jpThU",
+      "ry30dJ-y4PU",
+      "-btYVvDJD78"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dolforwyn_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/dolforwyn-castle"
+      },
+      {
+        "name": "Castles of Wales",
+        "url": "https://www.castlesofwales.com/dolforwyn-castle/"
+      }
     ]
-  ,
-    "youtube": ["46b991jpThU","ry30dJ-y4PU","-btYVvDJD78"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Dolforwyn_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/dolforwyn-castle"},{"name":"Castles of Wales","url":"https://www.castlesofwales.com/dolforwyn-castle/"}]
   },
   {
     "name": "Drysllwyn Castle",
@@ -17294,10 +17747,26 @@ const CASTLES = [
       "https://img.castlecore.uk/newcastle-emlyn-castle-main-3.jpg",
       "https://img.castlecore.uk/newcastle-emlyn-castle-main-4.jpg",
       "https://img.castlecore.uk/newcastle-emlyn-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "vVQxsZdJoao",
+      "dWpniPCW37Y",
+      "nrWuzvblKR0"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Newcastle_Emlyn_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/newcastle-emlyn-castle"
+      },
+      {
+        "name": "Coflein",
+        "url": "https://coflein.gov.uk/en/site/95070/"
+      }
     ]
-  ,
-    "youtube": ["vVQxsZdJoao","dWpniPCW37Y","nrWuzvblKR0"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Newcastle_Emlyn_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/newcastle-emlyn-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95070/"}]
   },
   {
     "name": "Narberth Castle",
@@ -17334,10 +17803,22 @@ const CASTLES = [
       "https://img.castlecore.uk/narberth-castle-keep-3.jpg",
       "https://img.castlecore.uk/narberth-castle-keep-4.jpg",
       "https://img.castlecore.uk/narberth-castle-keep-5.jpg"
+    ],
+    "youtube": [
+      "RiNe0lD30pk",
+      "M74OS4j_chE",
+      "H4tWKfywW_o"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Narberth_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/narberth-castle"
+      }
     ]
-  ,
-    "youtube": ["RiNe0lD30pk","M74OS4j_chE","H4tWKfywW_o"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Narberth_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/narberth-castle"}]
   },
   {
     "name": "Haverfordwest Castle",
@@ -17435,10 +17916,26 @@ const CASTLES = [
       "https://img.castlecore.uk/cardigan-castle-main-3.jpg",
       "https://img.castlecore.uk/cardigan-castle-main-4.jpg",
       "https://img.castlecore.uk/cardigan-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "kfPkfrJiAqw",
+      "KdfHz7vSmok",
+      "G7ez3OgFo6o"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cardigan_Castle"
+      },
+      {
+        "name": "Cardigan Castle Official",
+        "url": "https://www.cardigancastle.com/"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/cardigan-castle"
+      }
     ]
-  ,
-    "youtube": ["kfPkfrJiAqw","KdfHz7vSmok","G7ez3OgFo6o"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Cardigan_Castle"},{"name":"Cardigan Castle Official","url":"https://www.cardigancastle.com/"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/cardigan-castle"}]
   },
   {
     "name": "Grey Abbey",
@@ -17491,32 +17988,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dunluce-castle-dark-hedges-tower-3.jpg",
       "https://img.castlecore.uk/dunluce-castle-dark-hedges-tower-4.jpg",
       "https://img.castlecore.uk/dunluce-castle-dark-hedges-tower-5.jpg"
-    ]
-  },
-  {
-    "name": "Antrim Round Tower",
-    "lat": 54.7167,
-    "lng": -6.2083,
-    "country": "Northern Ireland",
-    "type": "abbey",
-    "era": "10th century",
-    "condition": "partial ruin",
-    "description": "One of the best-preserved round towers in Ireland, standing over 28 metres tall in Antrim's Steeple Park.",
-    "image": "https://img.castlecore.uk/antrim-round-tower.jpg",
-    "rating": 4,
-    "reviewCount": 520,
-    "county": "County Antrim",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 579,
-    "gallery": [
-      "https://img.castlecore.uk/antrim-round-tower-2.jpg",
-      "https://img.castlecore.uk/antrim-round-tower-3.jpg",
-      "https://img.castlecore.uk/antrim-round-tower-4.jpg",
-      "https://img.castlecore.uk/antrim-round-tower-5.jpg"
     ]
   },
   {
@@ -17735,10 +18206,22 @@ const CASTLES = [
       "https://img.castlecore.uk/peckforton-castle-main-3.jpg",
       "https://img.castlecore.uk/peckforton-castle-main-4.jpg",
       "https://img.castlecore.uk/peckforton-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "dbhvHRvuG7w",
+      "-AJo9yNx_yU",
+      "uHZDaelC1ag"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Peckforton_Castle"
+      },
+      {
+        "name": "Peckforton Castle Official",
+        "url": "https://www.peckfortoncastle.co.uk/"
+      }
     ]
-  ,
-    "youtube": ["dbhvHRvuG7w","-AJo9yNx_yU","uHZDaelC1ag"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Peckforton_Castle"},{"name":"Peckforton Castle Official","url":"https://www.peckfortoncastle.co.uk/"}]
   },
   {
     "name": "Halton Castle (Cheshire)",
@@ -18703,32 +19186,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Brinklow Castle Motte",
-    "lat": 52.398,
-    "lng": -1.361,
-    "country": "England",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Impressively tall motte and extensive bailey earthworks beside the Fosse Way.",
-    "image": "https://img.castlecore.uk/brinklow-castle-motte.jpg",
-    "rating": 3.5,
-    "reviewCount": 90,
-    "county": "Warwickshire",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 626,
-    "gallery": [
-      "https://img.castlecore.uk/brinklow-castle-motte-2.jpg",
-      "https://img.castlecore.uk/brinklow-castle-motte-3.jpg",
-      "https://img.castlecore.uk/brinklow-castle-motte-4.jpg",
-      "https://img.castlecore.uk/brinklow-castle-motte-5.jpg"
-    ]
-  },
-  {
     "name": "Bagington Castle",
     "lat": 52.36,
     "lng": -1.488,
@@ -18946,10 +19403,22 @@ const CASTLES = [
       "https://img.castlecore.uk/minster-lovell-hall-main-3.jpg",
       "https://img.castlecore.uk/minster-lovell-hall-main-4.jpg",
       "https://img.castlecore.uk/minster-lovell-hall-main-5.jpg"
+    ],
+    "youtube": [
+      "OwUlDjOYxtU",
+      "DRBvEOHQyXQ",
+      "K_Vd32JskHk"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Minster_Lovell_Hall"
+      },
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/minster-lovell-hall-and-dovecote/"
+      }
     ]
-  ,
-    "youtube": ["OwUlDjOYxtU","DRBvEOHQyXQ","K_Vd32JskHk"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Minster_Lovell_Hall"},{"name":"English Heritage","url":"https://www.english-heritage.org.uk/visit/places/minster-lovell-hall-and-dovecote/"}]
   },
   {
     "name": "Broughton Castle",
@@ -19295,10 +19764,26 @@ const CASTLES = [
       "https://img.castlecore.uk/neath-castle-keep-3.jpg",
       "https://img.castlecore.uk/neath-castle-keep-4.jpg",
       "https://img.castlecore.uk/neath-castle-keep-5.jpg"
+    ],
+    "youtube": [
+      "tLKbwrnwZ1o",
+      "y7S9evEdMLg",
+      "igocsPjJ5Ac"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Neath_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/neath-castle"
+      },
+      {
+        "name": "Coflein",
+        "url": "https://coflein.gov.uk/en/site/95296/"
+      }
     ]
-  ,
-    "youtube": ["tLKbwrnwZ1o","y7S9evEdMLg","igocsPjJ5Ac"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Neath_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/neath-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95296/"}]
   },
   {
     "name": "Swansea Castle",
@@ -19335,10 +19820,26 @@ const CASTLES = [
       "https://img.castlecore.uk/swansea-castle-main-3.jpg",
       "https://img.castlecore.uk/swansea-castle-main-4.jpg",
       "https://img.castlecore.uk/swansea-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "lvqD0hJ1i1Q",
+      "qGmr0VdCOE8",
+      "jq4a1dyECIs"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Swansea_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/swansea-castle"
+      },
+      {
+        "name": "Coflein",
+        "url": "https://coflein.gov.uk/en/site/95389/"
+      }
     ]
-  ,
-    "youtube": ["lvqD0hJ1i1Q","qGmr0VdCOE8","jq4a1dyECIs"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Swansea_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/swansea-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95389/"}]
   },
   {
     "name": "Castle Kennedy",
@@ -20853,10 +21354,26 @@ const CASTLES = [
       "https://img.castlecore.uk/caergwrle-castle-main-3.jpg",
       "https://img.castlecore.uk/caergwrle-castle-main-4.jpg",
       "https://img.castlecore.uk/caergwrle-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "QrD3UlpUqQ8",
+      "ZxGu3oWQD9A",
+      "VhQ7nHVRDj8"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Caergwrle_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/caergwrle-castle"
+      },
+      {
+        "name": "Coflein",
+        "url": "https://coflein.gov.uk/en/site/95121/"
+      }
     ]
-  ,
-    "youtube": ["QrD3UlpUqQ8","ZxGu3oWQD9A","VhQ7nHVRDj8"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Caergwrle_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/caergwrle-castle"},{"name":"Coflein","url":"https://coflein.gov.uk/en/site/95121/"}]
   },
   {
     "name": "Ruthin Castle Grounds",
@@ -20911,58 +21428,6 @@ const CASTLES = [
       "https://img.castlecore.uk/deganwy-castle-main-3.jpg",
       "https://img.castlecore.uk/deganwy-castle-main-4.jpg",
       "https://img.castlecore.uk/deganwy-castle-main-5.jpg"
-    ]
-  },
-  {
-    "name": "Builth Castle Mound",
-    "lat": 52.149,
-    "lng": -3.411,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Earthwork remains of the Edwardian castle. Near where Llywelyn the Last was killed.",
-    "image": "https://img.castlecore.uk/builth-castle-mound.jpg",
-    "rating": 3.4,
-    "reviewCount": 90,
-    "county": "Powys",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 713,
-    "gallery": [
-      "https://img.castlecore.uk/builth-castle-mound-2.jpg",
-      "https://img.castlecore.uk/builth-castle-mound-3.jpg",
-      "https://img.castlecore.uk/builth-castle-mound-4.jpg",
-      "https://img.castlecore.uk/builth-castle-mound-5.jpg"
-    ]
-  },
-  {
-    "name": "Brecon Castle",
-    "lat": 51.947,
-    "lng": -3.389,
-    "country": "Wales",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Norman castle ruin incorporated into the Castle Hotel. The Ely Tower is the main survival.",
-    "image": "https://img.castlecore.uk/brecon-castle.jpg",
-    "rating": 3.5,
-    "reviewCount": 180,
-    "county": "Powys",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 714,
-    "gallery": [
-      "https://img.castlecore.uk/brecon-castle-2.jpg",
-      "https://img.castlecore.uk/brecon-castle-3.jpg",
-      "https://img.castlecore.uk/brecon-castle-4.jpg",
-      "https://img.castlecore.uk/brecon-castle-5.jpg"
     ]
   },
   {
@@ -21030,10 +21495,22 @@ const CASTLES = [
       "https://img.castlecore.uk/oxwich-castle-main-3.jpg",
       "https://img.castlecore.uk/oxwich-castle-main-4.jpg",
       "https://img.castlecore.uk/oxwich-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "GAbaJPTNdhk",
+      "7aYnGDUWRN8",
+      "omNwrvf09G4"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Oxwich_Castle"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/oxwich-castle"
+      }
     ]
-  ,
-    "youtube": ["GAbaJPTNdhk","7aYnGDUWRN8","omNwrvf09G4"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Oxwich_Castle"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/oxwich-castle"}]
   },
   {
     "name": "Loughor Castle",
@@ -21153,10 +21630,22 @@ const CASTLES = [
       "https://img.castlecore.uk/fonmon-castle-main-3.jpg",
       "https://img.castlecore.uk/fonmon-castle-main-4.jpg",
       "https://img.castlecore.uk/fonmon-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "reC_aM5Y0gI",
+      "sVsrzHQYQ1A",
+      "He6YCacyb4A"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fonmon_Castle"
+      },
+      {
+        "name": "Fonmon Castle Official",
+        "url": "https://www.fonmoncastle.com/"
+      }
     ]
-  ,
-    "youtube": ["reC_aM5Y0gI","sVsrzHQYQ1A","He6YCacyb4A"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Fonmon_Castle"},{"name":"Fonmon Castle Official","url":"https://www.fonmoncastle.com/"}]
   },
   {
     "name": "Llantrithyd Place",
@@ -22101,29 +22590,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ballynahow Castle",
-    "lat": 52.859,
-    "lng": -7.825,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Unusual circular tower house near Thurles. One of the few round tower houses in Ireland.",
-    "image": "https://img.castlecore.uk/ballynahow-castle.jpg",
-    "rating": 3.6,
-    "reviewCount": 75,
-    "county": "County Tipperary",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 760,
-    "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ballynahow_Castle_-_geograph.org.uk_-_1478099.jpg"
-    ]
-  },
-  {
     "name": "Killahara Castle",
     "lat": 52.708,
     "lng": -7.796,
@@ -22233,10 +22699,22 @@ const CASTLES = [
       "https://img.castlecore.uk/adare-manor-main-3.jpg",
       "https://img.castlecore.uk/adare-manor-main-4.jpg",
       "https://img.castlecore.uk/adare-manor-main-5.jpg"
+    ],
+    "youtube": [
+      "c3TWZqAH4hg",
+      "DlOLqHbXUYk",
+      "mNjVDCyfCZk"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Adare_Manor"
+      },
+      {
+        "name": "Adare Manor Official",
+        "url": "https://www.adaremanor.com/"
+      }
     ]
-  ,
-    "youtube": ["c3TWZqAH4hg","DlOLqHbXUYk","mNjVDCyfCZk"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Adare_Manor"},{"name":"Adare Manor Official","url":"https://www.adaremanor.com/"}]
   },
   {
     "name": "Carrigogunnel Castle",
@@ -22731,32 +23209,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Brampton Castle (Bryan de Jay)",
-    "lat": 54.941,
-    "lng": -2.727,
-    "country": "England",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Earthwork remains of a medieval castle near Brampton. The motte is accessible.",
-    "image": "https://img.castlecore.uk/brampton-castle-bryan-de-jay.jpg",
-    "rating": 3.2,
-    "reviewCount": 35,
-    "county": "Cumbria",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 786,
-    "gallery": [
-      "https://img.castlecore.uk/brampton-castle-bryan-de-jay-2.jpg",
-      "https://img.castlecore.uk/brampton-castle-bryan-de-jay-3.jpg",
-      "https://img.castlecore.uk/brampton-castle-bryan-de-jay-4.jpg",
-      "https://img.castlecore.uk/brampton-castle-bryan-de-jay-5.jpg"
-    ]
-  },
-  {
     "name": "Wray Castle",
     "lat": 54.381,
     "lng": -2.953,
@@ -23014,29 +23466,6 @@ const CASTLES = [
     "_index": 796,
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cockle_Park_Tower_from_SW.jpg/500px-Cockle_Park_Tower_from_SW.jpg"
-    ]
-  },
-  {
-    "name": "Auckland Castle Chapel",
-    "lat": 54.667,
-    "lng": -1.67,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "intact",
-    "description": "Bishop of Durham's palace with Zurbarán paintings. Major heritage attraction.",
-    "image": "https://img.castlecore.uk/auckland-castle-chapel.jpg",
-    "rating": 4.3,
-    "reviewCount": 1800,
-    "county": "County Durham",
-    "tags": [],
-    "access": "paid",
-    "_index": 797,
-    "gallery": [
-      "https://img.castlecore.uk/auckland-castle-chapel-2.jpg",
-      "https://img.castlecore.uk/auckland-castle-chapel-3.jpg",
-      "https://img.castlecore.uk/auckland-castle-chapel-4.jpg",
-      "https://img.castlecore.uk/auckland-castle-chapel-5.jpg"
     ]
   },
   {
@@ -23819,32 +24248,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ballingarry Castle",
-    "lat": 52.472,
-    "lng": -9.62,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house ruin in north Kerry near the Shannon estuary.",
-    "image": "https://img.castlecore.uk/ballingarry-castle.jpg",
-    "rating": 3.2,
-    "reviewCount": 35,
-    "county": "County Kerry",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 831,
-    "gallery": [
-      "https://img.castlecore.uk/ballingarry-castle-2.jpg",
-      "https://img.castlecore.uk/ballingarry-castle-3.jpg",
-      "https://img.castlecore.uk/ballingarry-castle-4.jpg",
-      "https://img.castlecore.uk/ballingarry-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Killaha Castle",
     "lat": 51.87,
     "lng": -9.75,
@@ -24241,32 +24644,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ballynahow-round-castle-3.jpg",
       "https://img.castlecore.uk/ballynahow-round-castle-4.jpg",
       "https://img.castlecore.uk/ballynahow-round-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Burntcourt Castle",
-    "lat": 52.373,
-    "lng": -8.057,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "Large Everard manor house ruin, burned in 1650 to prevent Cromwellian use.",
-    "image": "https://img.castlecore.uk/burntcourt-castle.jpg",
-    "rating": 3.5,
-    "reviewCount": 95,
-    "county": "County Tipperary",
-    "tags": [
-      "dramatic-ruin",
-      "free"
-    ],
-    "access": "free",
-    "_index": 848,
-    "gallery": [
-      "https://img.castlecore.uk/burntcourt-castle-2.jpg",
-      "https://img.castlecore.uk/burntcourt-castle-3.jpg",
-      "https://img.castlecore.uk/burntcourt-castle-4.jpg",
-      "https://img.castlecore.uk/burntcourt-castle-5.jpg"
     ]
   },
   {
@@ -26576,10 +26953,22 @@ const CASTLES = [
       "https://img.castlecore.uk/cong-abbey-main-3.jpg",
       "https://img.castlecore.uk/cong-abbey-main-4.jpg",
       "https://img.castlecore.uk/cong-abbey-main-5.jpg"
+    ],
+    "youtube": [
+      "2z0yY2yE6WM",
+      "pvtQTxToi_Y",
+      "sGcD_G_jrZw"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cong_Abbey"
+      },
+      {
+        "name": "Heritage Ireland",
+        "url": "https://heritageireland.ie/places-to-visit/cong-abbey/"
+      }
     ]
-  ,
-    "youtube": ["2z0yY2yE6WM","pvtQTxToi_Y","sGcD_G_jrZw"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Cong_Abbey"},{"name":"Heritage Ireland","url":"https://heritageireland.ie/places-to-visit/cong-abbey/"}]
   },
   {
     "name": "Creevelea Friary",
@@ -26665,36 +27054,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kilconnell-friary-main-3.jpg",
       "https://img.castlecore.uk/kilconnell-friary-main-4.jpg",
       "https://img.castlecore.uk/kilconnell-friary-main-5.jpg"
-    ]
-  },
-  {
-    "name": "Askeaton Friary",
-    "lat": 52.601,
-    "lng": -8.975,
-    "country": "Ireland",
-    "type": "friary",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "Franciscan friary with a remarkably well-preserved cloister in Askeaton.",
-    "image": "https://img.castlecore.uk/askeaton-friary.jpg",
-    "rating": 3.7,
-    "reviewCount": 160,
-    "county": "County Limerick",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 941,
-    "gallery": [
-      "https://img.castlecore.uk/askeaton-friary-2.jpg",
-      "https://img.castlecore.uk/askeaton-friary-3.jpg",
-      "https://img.castlecore.uk/askeaton-friary-4.jpg",
-      "https://img.castlecore.uk/askeaton-friary-5.jpg",
-      "https://img.castlecore.uk/askeaton-friary-main-2.jpg",
-      "https://img.castlecore.uk/askeaton-friary-main-3.jpg",
-      "https://img.castlecore.uk/askeaton-friary-main-4.jpg",
-      "https://img.castlecore.uk/askeaton-friary-main-5.jpg"
     ]
   },
   {
@@ -26959,32 +27318,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kindlestown-castle-main-3.jpg",
       "https://img.castlecore.uk/kindlestown-castle-main-4.jpg",
       "https://img.castlecore.uk/kindlestown-castle-main-5.jpg"
-    ]
-  },
-  {
-    "name": "Ballyloughan Castle (Carlow)",
-    "lat": 52.736,
-    "lng": -6.899,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Anglo-Norman castle with a twin-towered gatehouse near Bagenalstown.",
-    "image": "https://img.castlecore.uk/ballyloughan-castle-carlow.jpg",
-    "rating": 3.5,
-    "reviewCount": 85,
-    "county": "County Carlow",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 953,
-    "gallery": [
-      "https://img.castlecore.uk/ballyloughan-castle-carlow-2.jpg",
-      "https://img.castlecore.uk/ballyloughan-castle-carlow-3.jpg",
-      "https://img.castlecore.uk/ballyloughan-castle-carlow-4.jpg",
-      "https://img.castlecore.uk/ballyloughan-castle-carlow-5.jpg"
     ]
   },
   {
@@ -28141,10 +28474,26 @@ const CASTLES = [
       "https://img.castlecore.uk/tioram-castle-main-3.jpg",
       "https://img.castlecore.uk/tioram-castle-main-4.jpg",
       "https://img.castlecore.uk/tioram-castle-main-5.jpg"
+    ],
+    "youtube": [
+      "nbjFpqOxkWM",
+      "_MWzszYIg5c",
+      "uSkQ3Bpm438"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Castle_Tioram"
+      },
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/castle-tioram/"
+      },
+      {
+        "name": "Undiscovered Scotland",
+        "url": "https://www.undiscoveredscotland.co.uk/acharacle/castletioram/"
+      }
     ]
-  ,
-    "youtube": ["nbjFpqOxkWM","_MWzszYIg5c","uSkQ3Bpm438"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Castle_Tioram"},{"name":"Historic Environment Scotland","url":"https://www.historicenvironment.scot/visit-a-place/places/castle-tioram/"},{"name":"Undiscovered Scotland","url":"https://www.undiscoveredscotland.co.uk/acharacle/castletioram/"}]
   },
   {
     "name": "Kinlochaline Castle",
@@ -28362,32 +28711,6 @@ const CASTLES = [
       "https://img.castlecore.uk/moy-castle-mull-3.jpg",
       "https://img.castlecore.uk/moy-castle-mull-4.jpg",
       "https://img.castlecore.uk/moy-castle-mull-5.jpg"
-    ]
-  },
-  {
-    "name": "Aros Castle (Mull)",
-    "lat": 56.555,
-    "lng": -5.955,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "MacDougall then MacDonald castle ruin overlooking the Sound of Mull.",
-    "image": "https://img.castlecore.uk/aros-castle-mull.jpg",
-    "rating": 3.4,
-    "reviewCount": 70,
-    "county": "Argyll and Bute",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1007,
-    "gallery": [
-      "https://img.castlecore.uk/aros-castle-mull-2.jpg",
-      "https://img.castlecore.uk/aros-castle-mull-3.jpg",
-      "https://img.castlecore.uk/aros-castle-mull-4.jpg",
-      "https://img.castlecore.uk/aros-castle-mull-5.jpg"
     ]
   },
   {
@@ -28844,31 +29167,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Benton Castle",
-    "lat": 51.733,
-    "lng": -4.909,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "intact",
-    "description": "Small castle on a cliff above the Daugleddau estuary, privately owned.",
-    "image": "https://img.castlecore.uk/benton-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 40,
-    "county": "Pembrokeshire",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 1025,
-    "gallery": [
-      "https://img.castlecore.uk/benton-castle-2.jpg",
-      "https://img.castlecore.uk/benton-castle-3.jpg",
-      "https://img.castlecore.uk/benton-castle-4.jpg",
-      "https://img.castlecore.uk/benton-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Llandovery Castle",
     "lat": 51.995,
     "lng": -3.802,
@@ -28929,10 +29227,22 @@ const CASTLES = [
       "https://img.castlecore.uk/aberglasney-house-main-3.jpg",
       "https://img.castlecore.uk/aberglasney-house-main-4.jpg",
       "https://img.castlecore.uk/aberglasney-house-main-5.jpg"
+    ],
+    "youtube": [
+      "0vZlws_cP2U",
+      "POYuYdksI5w",
+      "ga9h_ycXm_0"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Aberglasney_House"
+      },
+      {
+        "name": "Aberglasney Official",
+        "url": "https://aberglasney.org/"
+      }
     ]
-  ,
-    "youtube": ["0vZlws_cP2U","POYuYdksI5w","ga9h_ycXm_0"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Aberglasney_House"},{"name":"Aberglasney Official","url":"https://aberglasney.org/"}]
   },
   {
     "name": "Tregaron Castle Mound",
@@ -29083,10 +29393,26 @@ const CASTLES = [
       "https://img.castlecore.uk/castell-aberlleiniog-main-3.jpg",
       "https://img.castlecore.uk/castell-aberlleiniog-main-4.jpg",
       "https://img.castlecore.uk/castell-aberlleiniog-main-5.jpg"
+    ],
+    "youtube": [
+      "kcx23o6GGDg",
+      "V03JnRCNeu8",
+      "Z-0mbT3qy6U"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Castell_Aberlleiniog"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/castell-aberlleiniog"
+      },
+      {
+        "name": "Visit Anglesey",
+        "url": "https://www.visitanglesey.co.uk/en/things-to-do/castell-aberlleiniog/"
+      }
     ]
-  ,
-    "youtube": ["kcx23o6GGDg","V03JnRCNeu8","Z-0mbT3qy6U"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Castell_Aberlleiniog"},{"name":"Cadw","url":"https://cadw.gov.wales/visit/places-to-visit/castell-aberlleiniog"},{"name":"Visit Anglesey","url":"https://www.visitanglesey.co.uk/en/things-to-do/castell-aberlleiniog/"}]
   },
   {
     "name": "Hawarden Castle (Old)",
@@ -30391,32 +30717,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Buttevant Castle",
-    "lat": 52.233,
-    "lng": -8.672,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Barry castle ruins in Buttevant town.",
-    "image": "https://img.castlecore.uk/buttevant-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 25,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1086,
-    "gallery": [
-      "https://img.castlecore.uk/buttevant-castle-2.jpg",
-      "https://img.castlecore.uk/buttevant-castle-3.jpg",
-      "https://img.castlecore.uk/buttevant-castle-4.jpg",
-      "https://img.castlecore.uk/buttevant-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Drishane Castle",
     "lat": 52.16,
     "lng": -9.078,
@@ -31083,32 +31383,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Bourchier's Castle",
-    "lat": 52.6,
-    "lng": -8.515,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house in Lough Gur area.",
-    "image": "https://img.castlecore.uk/bourchier-s-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 20,
-    "county": "County Limerick",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1113,
-    "gallery": [
-      "https://img.castlecore.uk/bourchier-s-castle-2.jpg",
-      "https://img.castlecore.uk/bourchier-s-castle-3.jpg",
-      "https://img.castlecore.uk/bourchier-s-castle-4.jpg",
-      "https://img.castlecore.uk/bourchier-s-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Fanningstown Castle",
     "lat": 52.488,
     "lng": -8.602,
@@ -31132,26 +31406,6 @@ const CASTLES = [
       "https://img.castlecore.uk/fanningstown-castle-4.jpg",
       "https://img.castlecore.uk/fanningstown-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Ballingarry Castle (Lim)",
-    "lat": 52.502,
-    "lng": -8.858,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Desmond tower house in Ballingarry village.",
-    "image": "https://img.castlecore.uk/ballingarry-castle.jpg",
-    "rating": 3.2,
-    "reviewCount": 15,
-    "county": "County Limerick",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1115
   },
   {
     "name": "Killmallock Castle",
@@ -33723,32 +33977,6 @@ const CASTLES = [
     "_index": 1216
   },
   {
-    "name": "Ballygally Tower",
-    "lat": 54.865,
-    "lng": -5.862,
-    "country": "Northern Ireland",
-    "type": "tower house",
-    "era": "17th century",
-    "condition": "restored",
-    "description": "Scottish-style tower house, now part of a hotel.",
-    "image": "https://img.castlecore.uk/ballygally-tower.jpg",
-    "rating": 3.5,
-    "reviewCount": 32,
-    "county": "County Antrim",
-    "tags": [
-      "hidden-gem",
-      "coastal"
-    ],
-    "access": "paid",
-    "_index": 1217,
-    "gallery": [
-      "https://img.castlecore.uk/ballygally-tower-2.jpg",
-      "https://img.castlecore.uk/ballygally-tower-3.jpg",
-      "https://img.castlecore.uk/ballygally-tower-4.jpg",
-      "https://img.castlecore.uk/ballygally-tower-5.jpg"
-    ]
-  },
-  {
     "name": "Cranfield Church",
     "lat": 54.668,
     "lng": -6.515,
@@ -34478,32 +34706,6 @@ const CASTLES = [
     "_index": 1246
   },
   {
-    "name": "Ballyhack Tower",
-    "lat": 52.242,
-    "lng": -6.978,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "restored",
-    "description": "Restored tower house overlooking Waterford Harbour.",
-    "image": "https://img.castlecore.uk/ballyhack-tower.jpg",
-    "rating": 3.6,
-    "reviewCount": 42,
-    "county": "County Wexford",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1247,
-    "gallery": [
-      "https://img.castlecore.uk/ballyhack-tower-2.jpg",
-      "https://img.castlecore.uk/ballyhack-tower-3.jpg",
-      "https://img.castlecore.uk/ballyhack-tower-4.jpg",
-      "https://img.castlecore.uk/ballyhack-tower-5.jpg"
-    ]
-  },
-  {
     "name": "Stradbally Tower",
     "lat": 52.128,
     "lng": -7.458,
@@ -34580,32 +34782,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ballyquin-castle-3.jpg",
       "https://img.castlecore.uk/ballyquin-castle-4.jpg",
       "https://img.castlecore.uk/ballyquin-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Burnchurch Tower",
-    "lat": 52.588,
-    "lng": -7.388,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "FitzGerald tower house with attached church.",
-    "image": "https://img.castlecore.uk/burnchurch-tower.jpg",
-    "rating": 3.4,
-    "reviewCount": 22,
-    "county": "County Kilkenny",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1252,
-    "gallery": [
-      "https://img.castlecore.uk/burnchurch-tower-2.jpg",
-      "https://img.castlecore.uk/burnchurch-tower-3.jpg",
-      "https://img.castlecore.uk/burnchurch-tower-4.jpg",
-      "https://img.castlecore.uk/burnchurch-tower-5.jpg"
     ]
   },
   {
@@ -34958,33 +35134,6 @@ const CASTLES = [
       "https://img.castlecore.uk/knock-castle-aberdeenshire-3.jpg",
       "https://img.castlecore.uk/knock-castle-aberdeenshire-4.jpg",
       "https://img.castlecore.uk/knock-castle-aberdeenshire-5.jpg"
-    ]
-  },
-  {
-    "name": "Broughty Castle",
-    "lat": 56.465,
-    "lng": -2.868,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "restored",
-    "description": "Castle on the Tay estuary, now a museum.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Broughty_Castle_-_geograph.org.uk_-_6000068.jpg/500px-Broughty_Castle_-_geograph.org.uk_-_6000068.jpg",
-    "rating": 3.8,
-    "reviewCount": 85,
-    "county": "Angus",
-    "tags": [
-      "must-see",
-      "free",
-      "coastal"
-    ],
-    "access": "free",
-    "_index": 1267,
-    "gallery": [
-      "https://img.castlecore.uk/broughty-castle-2.jpg",
-      "https://img.castlecore.uk/broughty-castle-3.jpg",
-      "https://img.castlecore.uk/broughty-castle-4.jpg",
-      "https://img.castlecore.uk/broughty-castle-5.jpg"
     ]
   },
   {
@@ -35953,32 +36102,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Aberedw Castle",
-    "lat": 52.128,
-    "lng": -3.348,
-    "country": "Wales",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Castle where Llywelyn ap Gruffudd may have spent his last night.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Still_standing_-_geograph.org.uk_-_1328127.jpg/500px-Still_standing_-_geograph.org.uk_-_1328127.jpg",
-    "rating": 3.3,
-    "reviewCount": 16,
-    "county": "Powys",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1306,
-    "gallery": [
-      "https://img.castlecore.uk/aberedw-castle-2.jpg",
-      "https://img.castlecore.uk/aberedw-castle-3.jpg",
-      "https://img.castlecore.uk/aberedw-castle-4.jpg",
-      "https://img.castlecore.uk/aberedw-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Cefnllys Castle",
     "lat": 52.268,
     "lng": -3.348,
@@ -36003,32 +36126,6 @@ const CASTLES = [
       "https://img.castlecore.uk/cefnllys-castle-3.jpg",
       "https://img.castlecore.uk/cefnllys-castle-4.jpg",
       "https://img.castlecore.uk/cefnllys-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Bleddfa Castle",
-    "lat": 52.318,
-    "lng": -3.148,
-    "country": "Wales",
-    "type": "motte",
-    "era": "12th century",
-    "condition": "intact",
-    "description": "Norman motte on the Marches.",
-    "image": "https://img.castlecore.uk/bleddfa-castle.jpg",
-    "rating": 3,
-    "reviewCount": 7,
-    "county": "Powys",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1308,
-    "gallery": [
-      "https://img.castlecore.uk/bleddfa-castle-2.jpg",
-      "https://img.castlecore.uk/bleddfa-castle-3.jpg",
-      "https://img.castlecore.uk/bleddfa-castle-4.jpg",
-      "https://img.castlecore.uk/bleddfa-castle-5.jpg"
     ]
   },
   {
@@ -36247,33 +36344,6 @@ const CASTLES = [
       "https://img.castlecore.uk/peel-castle-main-3.jpg",
       "https://img.castlecore.uk/peel-castle-main-4.jpg",
       "https://img.castlecore.uk/peel-castle-main-5.jpg"
-    ]
-  },
-  {
-    "name": "Black Castle (Wicklow Main)",
-    "lat": 52.978,
-    "lng": -6.048,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "FitzWilliam castle on the coast at Wicklow town.",
-    "image": "https://img.castlecore.uk/black-castle-wicklow-main.jpg",
-    "rating": 3.5,
-    "reviewCount": 30,
-    "county": "County Wicklow",
-    "tags": [
-      "hidden-gem",
-      "free",
-      "coastal"
-    ],
-    "access": "free",
-    "_index": 1318,
-    "gallery": [
-      "https://img.castlecore.uk/black-castle-wicklow-main-2.jpg",
-      "https://img.castlecore.uk/black-castle-wicklow-main-3.jpg",
-      "https://img.castlecore.uk/black-castle-wicklow-main-4.jpg",
-      "https://img.castlecore.uk/black-castle-wicklow-main-5.jpg"
     ]
   },
   {
@@ -38384,32 +38454,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Abbeyknockmoy Abbey",
-    "lat": 53.498,
-    "lng": -8.648,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Cistercian abbey with rare medieval frescoes.",
-    "image": "https://img.castlecore.uk/abbeyknockmoy-abbey.jpg",
-    "rating": 3.7,
-    "reviewCount": 52,
-    "county": "County Galway",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1406,
-    "gallery": [
-      "https://img.castlecore.uk/abbeyknockmoy-abbey-2.jpg",
-      "https://img.castlecore.uk/abbeyknockmoy-abbey-3.jpg",
-      "https://img.castlecore.uk/abbeyknockmoy-abbey-4.jpg",
-      "https://img.castlecore.uk/abbeyknockmoy-abbey-5.jpg"
-    ]
-  },
-  {
     "name": "Moore Hall",
     "lat": 53.698,
     "lng": -9.448,
@@ -38734,31 +38778,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Birr Castle Gardens",
-    "lat": 53.098,
-    "lng": -7.912,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "intact",
-    "description": "Parsons family castle with historic telescope and gardens.",
-    "image": "https://img.castlecore.uk/birr-castle-gardens.jpg",
-    "rating": 4.1,
-    "reviewCount": 165,
-    "county": "County Offaly",
-    "tags": [
-      "must-see"
-    ],
-    "access": "paid",
-    "_index": 1421,
-    "gallery": [
-      "https://img.castlecore.uk/birr-castle-gardens-2.jpg",
-      "https://img.castlecore.uk/birr-castle-gardens-3.jpg",
-      "https://img.castlecore.uk/birr-castle-gardens-4.jpg",
-      "https://img.castlecore.uk/birr-castle-gardens-5.jpg"
-    ]
-  },
-  {
     "name": "Dungar Castle",
     "lat": 52.918,
     "lng": -7.748,
@@ -38807,32 +38826,6 @@ const CASTLES = [
       "https://img.castlecore.uk/roscrea-heritage-site-3.jpg",
       "https://img.castlecore.uk/roscrea-heritage-site-4.jpg",
       "https://img.castlecore.uk/roscrea-heritage-site-5.jpg"
-    ]
-  },
-  {
-    "name": "Bolton Abbey (Tipperary)",
-    "lat": 52.698,
-    "lng": -7.978,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Augustinian priory near Cashel.",
-    "image": "https://img.castlecore.uk/bolton-abbey-tipperary.jpg",
-    "rating": 3.2,
-    "reviewCount": 12,
-    "county": "County Tipperary",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1424,
-    "gallery": [
-      "https://img.castlecore.uk/bolton-abbey-tipperary-2.jpg",
-      "https://img.castlecore.uk/bolton-abbey-tipperary-3.jpg",
-      "https://img.castlecore.uk/bolton-abbey-tipperary-4.jpg",
-      "https://img.castlecore.uk/bolton-abbey-tipperary-5.jpg"
     ]
   },
   {
@@ -38941,28 +38934,6 @@ const CASTLES = [
       "https://img.castlecore.uk/puck-castle-4.jpg",
       "https://img.castlecore.uk/puck-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Blackcastle",
-    "lat": 53.224,
-    "lng": -6.131,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Ruined castle on a cliff edge near Bray Head with stunning coastal views.",
-    "image": "https://img.castlecore.uk/scraped-blackcastle.jpg",
-    "rating": 3.4,
-    "reviewCount": 35,
-    "county": "County Wicklow",
-    "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free",
-      "photogenic"
-    ],
-    "access": "free",
-    "_index": 1429
   },
   {
     "name": "Castle Kevin",
@@ -39278,33 +39249,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Audleys Castle",
-    "lat": 54.422,
-    "lng": -5.598,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house ruin overlooking Strangford Lough, used as a Game of Thrones filming location.",
-    "image": "https://img.castlecore.uk/audleys-castle.jpg",
-    "rating": 4.1,
-    "reviewCount": 450,
-    "county": "County Down",
-    "tags": [
-      "dramatic-ruin",
-      "filming-location",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1442,
-    "gallery": [
-      "https://img.castlecore.uk/audleys-castle-2.jpg",
-      "https://img.castlecore.uk/audleys-castle-3.jpg",
-      "https://img.castlecore.uk/audleys-castle-4.jpg",
-      "https://img.castlecore.uk/audleys-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Drimnagh Castle (Louth)",
     "lat": 53.948,
     "lng": -6.418,
@@ -39414,10 +39358,22 @@ const CASTLES = [
       "https://img.castlecore.uk/kilbeggan-distillery-tower-3.jpg",
       "https://img.castlecore.uk/kilbeggan-distillery-tower-4.jpg",
       "https://img.castlecore.uk/kilbeggan-distillery-tower-5.jpg"
+    ],
+    "youtube": [
+      "XRQiVyjxzFE",
+      "z3EPpoAjsFA",
+      "pq55m_j0rcs"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kilbeggan_Distillery"
+      },
+      {
+        "name": "Kilbeggan Distillery Official",
+        "url": "https://www.kilbegganwhiskey.com/distillery/"
+      }
     ]
-  ,
-    "youtube": ["XRQiVyjxzFE","z3EPpoAjsFA","pq55m_j0rcs"],
-    "sources": [{"name":"Wikipedia","url":"https://en.wikipedia.org/wiki/Kilbeggan_Distillery"},{"name":"Kilbeggan Distillery Official","url":"https://www.kilbegganwhiskey.com/distillery/"}]
   },
   {
     "name": "Kinnitty Castle",
@@ -39772,30 +39728,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Aghadoe",
-    "lat": 52.076,
-    "lng": -9.554,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "7th century",
-    "condition": "ruin",
-    "description": "Ancient church and round tower ruins with panoramic views of the Lakes of Killarney.",
-    "image": "https://img.castlecore.uk/aghadoe.jpg",
-    "rating": 4.2,
-    "reviewCount": 420,
-    "county": "County Kerry",
-    "tags": [
-      "photogenic",
-      "free",
-      "hidden-gem"
-    ],
-    "access": "free",
-    "_index": 1462,
-    "gallery": [
-      "https://img.castlecore.uk/wiki-aghadoe.jpg"
-    ]
-  },
-  {
     "name": "Ballinskelligs Priory",
     "lat": 51.801,
     "lng": -10.288,
@@ -39978,33 +39910,6 @@ const CASTLES = [
       "https://img.castlecore.uk/glanworth-castle-3.jpg",
       "https://img.castlecore.uk/glanworth-castle-4.jpg",
       "https://img.castlecore.uk/glanworth-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Ballycarberry Castle",
-    "lat": 51.938,
-    "lng": -10.036,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Ivy-clad McCarthy castle ruin near Cahersiveen with mountain and sea views.",
-    "image": "https://img.castlecore.uk/ballycarberry-castle.jpg",
-    "rating": 4.2,
-    "reviewCount": 550,
-    "county": "County Kerry",
-    "tags": [
-      "romantic-ruin",
-      "photogenic",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1470,
-    "gallery": [
-      "https://img.castlecore.uk/ballycarberry-castle-2.jpg",
-      "https://img.castlecore.uk/ballycarberry-castle-3.jpg",
-      "https://img.castlecore.uk/ballycarberry-castle-4.jpg",
-      "https://img.castlecore.uk/ballycarberry-castle-5.jpg"
     ]
   },
   {
@@ -40911,33 +40816,6 @@ const CASTLES = [
       "https://img.castlecore.uk/paxton-s-tower-3.jpg",
       "https://img.castlecore.uk/paxton-s-tower-4.jpg",
       "https://img.castlecore.uk/paxton-s-tower-5.jpg"
-    ]
-  },
-  {
-    "name": "Aberglasney Gardens Ruins",
-    "lat": 51.8472,
-    "lng": -4.0694,
-    "country": "Wales",
-    "type": "historic-house",
-    "era": "16th century",
-    "condition": "restored",
-    "description": "Restored Elizabethan and Victorian gardens with unique cloister garden.",
-    "image": "https://img.castlecore.uk/aberglasney-gardens-ruins.jpg",
-    "rating": 4.6,
-    "reviewCount": 2600,
-    "county": "Carmarthenshire",
-    "tags": [
-      "gardens",
-      "cloister",
-      "restored"
-    ],
-    "access": "paid",
-    "_index": 1506,
-    "gallery": [
-      "https://img.castlecore.uk/aberglasney-gardens-ruins-2.jpg",
-      "https://img.castlecore.uk/aberglasney-gardens-ruins-3.jpg",
-      "https://img.castlecore.uk/aberglasney-gardens-ruins-4.jpg",
-      "https://img.castlecore.uk/aberglasney-gardens-ruins-5.jpg"
     ]
   },
   {
@@ -42235,33 +42113,6 @@ const CASTLES = [
       "https://img.castlecore.uk/monnow-bridge-gate-3.jpg",
       "https://img.castlecore.uk/monnow-bridge-gate-4.jpg",
       "https://img.castlecore.uk/monnow-bridge-gate-5.jpg"
-    ]
-  },
-  {
-    "name": "Abergavenny Castle Museum",
-    "lat": 51.8236,
-    "lng": -3.0139,
-    "country": "Wales",
-    "type": "castle",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Norman castle ruins housing a local museum, scene of a notorious massacre.",
-    "image": "https://img.castlecore.uk/abergavenny-castle-museum.jpg",
-    "rating": 3.9,
-    "reviewCount": 800,
-    "county": "Monmouthshire",
-    "tags": [
-      "norman",
-      "museum",
-      "massacre"
-    ],
-    "access": "free",
-    "_index": 1561,
-    "gallery": [
-      "https://img.castlecore.uk/abergavenny-castle-museum-2.jpg",
-      "https://img.castlecore.uk/abergavenny-castle-museum-3.jpg",
-      "https://img.castlecore.uk/abergavenny-castle-museum-4.jpg",
-      "https://img.castlecore.uk/abergavenny-castle-museum-5.jpg"
     ]
   },
   {
@@ -44708,33 +44559,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Aberdour Castle Great Hall",
-    "lat": 56.05,
-    "lng": -3.3,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "partial",
-    "description": "One of the oldest standing castles in Scotland with a fine doocot and terraced gardens.",
-    "image": "https://img.castlecore.uk/aberdour-castle-great-hall.jpg",
-    "rating": 4.2,
-    "reviewCount": 780,
-    "county": "Fife",
-    "tags": [
-      "doocot",
-      "gardens",
-      "ancient"
-    ],
-    "access": "paid",
-    "_index": 1673,
-    "gallery": [
-      "https://img.castlecore.uk/aberdour-castle-great-hall-2.jpg",
-      "https://img.castlecore.uk/aberdour-castle-great-hall-3.jpg",
-      "https://img.castlecore.uk/aberdour-castle-great-hall-4.jpg",
-      "https://img.castlecore.uk/aberdour-castle-great-hall-5.jpg"
-    ]
-  },
-  {
     "name": "Dysart Church",
     "lat": 56.1333,
     "lng": -3.1167,
@@ -45761,32 +45585,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Aghadoe Church and Round Tower",
-    "lat": 52.075,
-    "lng": -9.567,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Hilltop church ruin with views over Killarney's lakes.",
-    "image": "https://img.castlecore.uk/aghadoe-church-and-round-tower.jpg",
-    "rating": 4,
-    "reviewCount": 120,
-    "county": "County Kerry",
-    "tags": [
-      "free",
-      "scenic"
-    ],
-    "access": "free",
-    "_index": 1722,
-    "gallery": [
-      "https://img.castlecore.uk/aghadoe-church-and-round-tower-2.jpg",
-      "https://img.castlecore.uk/aghadoe-church-and-round-tower-3.jpg",
-      "https://img.castlecore.uk/aghadoe-church-and-round-tower-4.jpg",
-      "https://img.castlecore.uk/aghadoe-church-and-round-tower-5.jpg"
-    ]
-  },
-  {
     "name": "Holycross Abbey",
     "lat": 52.64,
     "lng": -7.866,
@@ -45837,32 +45635,6 @@ const CASTLES = [
     "_index": 1724,
     "gallery": [
       "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-kilcooly-abbey.jpg"
-    ]
-  },
-  {
-    "name": "Ballynahinch Castle Tipperary",
-    "lat": 52.59,
-    "lng": -7.75,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Butler tower house ruin in the Golden Vale.",
-    "image": "https://img.castlecore.uk/ballynahinch-castle-tipperary.jpg",
-    "rating": 3.4,
-    "reviewCount": 20,
-    "county": "County Tipperary",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1725,
-    "gallery": [
-      "https://img.castlecore.uk/ballynahinch-castle-tipperary-2.jpg",
-      "https://img.castlecore.uk/ballynahinch-castle-tipperary-3.jpg",
-      "https://img.castlecore.uk/ballynahinch-castle-tipperary-4.jpg",
-      "https://img.castlecore.uk/ballynahinch-castle-tipperary-5.jpg"
     ]
   },
   {
@@ -45953,32 +45725,6 @@ const CASTLES = [
       "https://img.castlecore.uk/lough-gur-visitor-centre-3.jpg",
       "https://img.castlecore.uk/lough-gur-visitor-centre-4.jpg",
       "https://img.castlecore.uk/lough-gur-visitor-centre-5.jpg"
-    ]
-  },
-  {
-    "name": "Ballintober Castle Mayo",
-    "lat": 53.717,
-    "lng": -9.344,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "De Burgh castle with four corner towers; partially restored.",
-    "image": "https://img.castlecore.uk/ballintober-castle-mayo.jpg",
-    "rating": 3.9,
-    "reviewCount": 70,
-    "county": "County Mayo",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1730,
-    "gallery": [
-      "https://img.castlecore.uk/ballintober-castle-mayo-2.jpg",
-      "https://img.castlecore.uk/ballintober-castle-mayo-3.jpg",
-      "https://img.castlecore.uk/ballintober-castle-mayo-4.jpg",
-      "https://img.castlecore.uk/ballintober-castle-mayo-5.jpg"
     ]
   },
   {
@@ -46406,32 +46152,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ballintober Castle Roscommon",
-    "lat": 53.749,
-    "lng": -8.451,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "O'Conor castle with polygonal towers, partially restored.",
-    "image": "https://img.castlecore.uk/ballintober-castle-roscommon.jpg",
-    "rating": 3.9,
-    "reviewCount": 70,
-    "county": "County Roscommon",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1749,
-    "gallery": [
-      "https://img.castlecore.uk/ballintober-castle-roscommon-2.jpg",
-      "https://img.castlecore.uk/ballintober-castle-roscommon-3.jpg",
-      "https://img.castlecore.uk/ballintober-castle-roscommon-4.jpg",
-      "https://img.castlecore.uk/ballintober-castle-roscommon-5.jpg"
-    ]
-  },
-  {
     "name": "Strokestown House",
     "lat": 53.803,
     "lng": -8.101,
@@ -46843,25 +46563,6 @@ const CASTLES = [
       "https://img.castlecore.uk/longford-castle-4.jpg",
       "https://img.castlecore.uk/longford-castle-5.jpg"
     ]
-  },
-  {
-    "name": "Ardagh Heritage Centre",
-    "lat": 53.643,
-    "lng": -7.718,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "19th century",
-    "condition": "restored",
-    "description": "Village heritage site where the Ardagh Chalice was found.",
-    "image": "https://img.castlecore.uk/ardagh-heritage-centre.jpg",
-    "rating": 3.5,
-    "reviewCount": 30,
-    "county": "County Longford",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "_index": 1766
   },
   {
     "name": "Drumlane Abbey",
@@ -47340,26 +47041,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kilnaboy-church-4.jpg",
       "https://img.castlecore.uk/kilnaboy-church-5.jpg"
     ]
-  },
-  {
-    "name": "Ballykinvarga Stone Fort",
-    "lat": 53.011,
-    "lng": -9.093,
-    "country": "Ireland",
-    "type": "fort",
-    "era": "prehistoric",
-    "condition": "ruin",
-    "description": "Iron Age stone fort with chevaux-de-frise in the Burren.",
-    "image": "https://img.castlecore.uk/ballykinvarga-fort.jpg",
-    "rating": 3.9,
-    "reviewCount": 50,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1786
   },
   {
     "name": "Seir Kieran Monastic Site",
@@ -49281,33 +48962,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Belsay Hall and Castle",
-    "lat": 55.11,
-    "lng": -1.8567,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "partial",
-    "description": "Medieval tower, Jacobean manor and Greek Revival hall with stunning quarry gardens.",
-    "image": "https://img.castlecore.uk/belsay-hall-and-castle.jpg",
-    "rating": 4.5,
-    "reviewCount": 3200,
-    "county": "Northumberland",
-    "tags": [
-      "photogenic",
-      "romantic-ruin",
-      "kid-friendly"
-    ],
-    "access": "paid",
-    "_index": 1866,
-    "gallery": [
-      "https://img.castlecore.uk/belsay-hall-and-castle-2.jpg",
-      "https://img.castlecore.uk/belsay-hall-and-castle-3.jpg",
-      "https://img.castlecore.uk/belsay-hall-and-castle-4.jpg",
-      "https://img.castlecore.uk/belsay-hall-and-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Finchale Priory",
     "lat": 54.8133,
     "lng": -1.55,
@@ -50620,27 +50274,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Broughton Castle (Banbury)",
-    "lat": 52.0278,
-    "lng": -1.3994,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "intact",
-    "description": "Moated medieval castle with Elizabethan additions, popular filming location.",
-    "image": "https://img.castlecore.uk/wiki-broughton-castle.jpg",
-    "rating": 4.5,
-    "reviewCount": 1200,
-    "county": "Oxfordshire",
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "filming-location"
-    ],
-    "access": "paid",
-    "_index": 1924
-  },
-  {
     "name": "Mapledurham House",
     "lat": 51.4783,
     "lng": -1.0317,
@@ -51153,86 +50786,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Bolton Castle (Wensleydale)",
-    "lat": 54.3064,
-    "lng": -1.8869,
-    "country": "England",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "partial",
-    "description": "Magnificent fortress where Mary Queen of Scots was imprisoned, still imposing today.",
-    "image": "https://img.castlecore.uk/bolton-castle-wensleydale.jpg",
-    "rating": 4.4,
-    "reviewCount": 3000,
-    "county": "Yorkshire",
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "dramatic-ruin"
-    ],
-    "access": "paid",
-    "_index": 1958,
-    "gallery": [
-      "https://img.castlecore.uk/bolton-castle-wensleydale-2.jpg",
-      "https://img.castlecore.uk/bolton-castle-wensleydale-3.jpg",
-      "https://img.castlecore.uk/bolton-castle-wensleydale-4.jpg",
-      "https://img.castlecore.uk/bolton-castle-wensleydale-5.jpg"
-    ]
-  },
-  {
-    "name": "Brougham Castle (Eden)",
-    "lat": 54.6492,
-    "lng": -2.7258,
-    "country": "England",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Imposing keep beside the River Eamont, restored by Lady Anne Clifford.",
-    "image": "https://img.castlecore.uk/brougham-castle-eden.jpg",
-    "rating": 4.3,
-    "reviewCount": 1800,
-    "county": "Cumbria",
-    "tags": [
-      "dramatic-ruin",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1959,
-    "gallery": [
-      "https://img.castlecore.uk/brougham-castle-eden-2.jpg",
-      "https://img.castlecore.uk/brougham-castle-eden-3.jpg",
-      "https://img.castlecore.uk/brougham-castle-eden-4.jpg",
-      "https://img.castlecore.uk/brougham-castle-eden-5.jpg"
-    ]
-  },
-  {
-    "name": "Brough Castle (Westmorland)",
-    "lat": 54.5247,
-    "lng": -2.3269,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Castle within a Roman fort on the Stainmore Pass, another Clifford stronghold.",
-    "image": "https://img.castlecore.uk/brough-castle-westmorland.jpg",
-    "rating": 4,
-    "reviewCount": 800,
-    "county": "Cumbria",
-    "tags": [
-      "free",
-      "hidden-gem",
-      "dramatic-ruin"
-    ],
-    "access": "free",
-    "_index": 1960,
-    "gallery": [
-      "https://img.castlecore.uk/brough-castle-westmorland-2.jpg",
-      "https://img.castlecore.uk/brough-castle-westmorland-3.jpg",
-      "https://img.castlecore.uk/brough-castle-westmorland-4.jpg",
-      "https://img.castlecore.uk/brough-castle-westmorland-5.jpg"
-    ]
-  },
-  {
     "name": "Muncaster Castle (Eskdale)",
     "lat": 54.3567,
     "lng": -3.3264,
@@ -51312,33 +50865,6 @@ const CASTLES = [
       "https://img.castlecore.uk/okehampton-castle-devon-3.jpg",
       "https://img.castlecore.uk/okehampton-castle-devon-4.jpg",
       "https://img.castlecore.uk/okehampton-castle-devon-5.jpg"
-    ]
-  },
-  {
-    "name": "Berry Pomeroy Castle (Devon)",
-    "lat": 50.4494,
-    "lng": -3.6328,
-    "country": "England",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Reputedly England's most haunted castle, a Tudor mansion within medieval walls.",
-    "image": "https://img.castlecore.uk/berry-pomeroy-castle-devon.jpg",
-    "rating": 4.3,
-    "reviewCount": 2500,
-    "county": "Devon",
-    "tags": [
-      "haunted",
-      "dramatic-ruin",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1966,
-    "gallery": [
-      "https://img.castlecore.uk/berry-pomeroy-castle-devon-2.jpg",
-      "https://img.castlecore.uk/berry-pomeroy-castle-devon-3.jpg",
-      "https://img.castlecore.uk/berry-pomeroy-castle-devon-4.jpg",
-      "https://img.castlecore.uk/berry-pomeroy-castle-devon-5.jpg"
     ]
   },
   {
@@ -51608,33 +51134,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Byland Abbey (Yorkshire)",
-    "lat": 54.2183,
-    "lng": -1.15,
-    "country": "England",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Cistercian abbey with a striking rose window and medieval floor tiles.",
-    "image": "https://img.castlecore.uk/byland-abbey-yorkshire.jpg",
-    "rating": 4.4,
-    "reviewCount": 1800,
-    "county": "Yorkshire",
-    "tags": [
-      "photogenic",
-      "hidden-gem",
-      "romantic-ruin"
-    ],
-    "access": "paid",
-    "_index": 1989,
-    "gallery": [
-      "https://img.castlecore.uk/byland-abbey-yorkshire-2.jpg",
-      "https://img.castlecore.uk/byland-abbey-yorkshire-3.jpg",
-      "https://img.castlecore.uk/byland-abbey-yorkshire-4.jpg",
-      "https://img.castlecore.uk/byland-abbey-yorkshire-5.jpg"
-    ]
-  },
-  {
     "name": "Furness Abbey (Cumbria)",
     "lat": 54.1331,
     "lng": -3.1908,
@@ -51685,32 +51184,6 @@ const CASTLES = [
       "https://img.castlecore.uk/glastonbury-abbey-somerset-3.jpg",
       "https://img.castlecore.uk/glastonbury-abbey-somerset-4.jpg",
       "https://img.castlecore.uk/glastonbury-abbey-somerset-5.jpg"
-    ]
-  },
-  {
-    "name": "Battle Abbey (Sussex)",
-    "lat": 50.915,
-    "lng": 0.4867,
-    "country": "England",
-    "type": "abbey",
-    "era": "11th century",
-    "condition": "ruin",
-    "description": "Built on the site of the Battle of Hastings in 1066, with the high altar marking where Harold fell.",
-    "image": "https://img.castlecore.uk/battle-abbey-sussex.jpg",
-    "rating": 4.5,
-    "reviewCount": 6000,
-    "county": "East Sussex",
-    "tags": [
-      "photogenic",
-      "kid-friendly"
-    ],
-    "access": "paid",
-    "_index": 1992,
-    "gallery": [
-      "https://img.castlecore.uk/battle-abbey-sussex-2.jpg",
-      "https://img.castlecore.uk/battle-abbey-sussex-3.jpg",
-      "https://img.castlecore.uk/battle-abbey-sussex-4.jpg",
-      "https://img.castlecore.uk/battle-abbey-sussex-5.jpg"
     ]
   },
   {
@@ -51817,33 +51290,6 @@ const CASTLES = [
       "https://img.castlecore.uk/wigmore-castle-herefordshire-3.jpg",
       "https://img.castlecore.uk/wigmore-castle-herefordshire-4.jpg",
       "https://img.castlecore.uk/wigmore-castle-herefordshire-5.jpg"
-    ]
-  },
-  {
-    "name": "Acton Burnell Castle (Shropshire)",
-    "lat": 52.6022,
-    "lng": -2.6894,
-    "country": "England",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Red sandstone fortified manor where Parliament met in a barn in 1283.",
-    "image": "https://img.castlecore.uk/acton-burnell-castle-shropshire.jpg",
-    "rating": 4.1,
-    "reviewCount": 800,
-    "county": "Shropshire",
-    "tags": [
-      "free",
-      "hidden-gem",
-      "photogenic"
-    ],
-    "access": "free",
-    "_index": 1997,
-    "gallery": [
-      "https://img.castlecore.uk/acton-burnell-castle-shropshire-2.jpg",
-      "https://img.castlecore.uk/acton-burnell-castle-shropshire-3.jpg",
-      "https://img.castlecore.uk/acton-burnell-castle-shropshire-4.jpg",
-      "https://img.castlecore.uk/acton-burnell-castle-shropshire-5.jpg"
     ]
   },
   {
@@ -62625,31 +62071,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Aghaboe Abbey Laois",
-    "lat": 52.903,
-    "lng": -7.672,
-    "country": "Ireland",
-    "type": "abbey",
-    "county": "County Laois",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.6,
-    "reviewCount": 20,
-    "era": "12th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/aghaboe-abbey-laois.jpg",
-    "description": "Ancient monastic site founded by St Canice.",
-    "_index": 2438,
-    "gallery": [
-      "https://img.castlecore.uk/aghaboe-abbey-laois-2.jpg",
-      "https://img.castlecore.uk/aghaboe-abbey-laois-3.jpg",
-      "https://img.castlecore.uk/aghaboe-abbey-laois-4.jpg",
-      "https://img.castlecore.uk/aghaboe-abbey-laois-5.jpg"
-    ]
-  },
-  {
     "name": "Donore Castle Westmeath",
     "lat": 53.549,
     "lng": -7.333,
@@ -62672,82 +62093,6 @@ const CASTLES = [
       "https://img.castlecore.uk/donore-castle-westmeath-3.jpg",
       "https://img.castlecore.uk/donore-castle-westmeath-4.jpg",
       "https://img.castlecore.uk/donore-castle-westmeath-5.jpg"
-    ]
-  },
-  {
-    "name": "Annaghkeen Castle Galway",
-    "lat": 53.432,
-    "lng": -8.927,
-    "country": "Ireland",
-    "type": "tower house",
-    "county": "County Galway",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.6,
-    "reviewCount": 18,
-    "era": "16th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/annaghkeen-castle-galway.jpg",
-    "description": "Lakeside tower house on Lough Corrib.",
-    "_index": 2440,
-    "gallery": [
-      "https://img.castlecore.uk/annaghkeen-castle-galway-2.jpg",
-      "https://img.castlecore.uk/annaghkeen-castle-galway-3.jpg",
-      "https://img.castlecore.uk/annaghkeen-castle-galway-4.jpg",
-      "https://img.castlecore.uk/annaghkeen-castle-galway-5.jpg"
-    ]
-  },
-  {
-    "name": "Knockmoy Abbey",
-    "lat": 53.46,
-    "lng": -8.508,
-    "country": "Ireland",
-    "type": "abbey",
-    "county": "County Galway",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 4,
-    "reviewCount": 40,
-    "era": "12th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/knockmoy-abbey.jpg",
-    "description": "Cistercian abbey with rare medieval wall paintings.",
-    "_index": 2441,
-    "gallery": [
-      "https://img.castlecore.uk/knockmoy-abbey-2.jpg",
-      "https://img.castlecore.uk/knockmoy-abbey-3.jpg",
-      "https://img.castlecore.uk/knockmoy-abbey-4.jpg",
-      "https://img.castlecore.uk/knockmoy-abbey-5.jpg"
-    ]
-  },
-  {
-    "name": "Burrishoole Friary",
-    "lat": 53.828,
-    "lng": -9.769,
-    "country": "Ireland",
-    "type": "abbey",
-    "county": "County Mayo",
-    "tags": [
-      "free",
-      "hidden-gem"
-    ],
-    "access": "free",
-    "rating": 4,
-    "reviewCount": 40,
-    "era": "15th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/burrishoole-friary.jpg",
-    "description": "Dominican friary ruins on a tidal inlet near Newport.",
-    "_index": 2442,
-    "gallery": [
-      "https://img.castlecore.uk/burrishoole-friary-2.jpg",
-      "https://img.castlecore.uk/burrishoole-friary-3.jpg",
-      "https://img.castlecore.uk/burrishoole-friary-4.jpg",
-      "https://img.castlecore.uk/burrishoole-friary-5.jpg"
     ]
   },
   {
@@ -63261,31 +62606,6 @@ const CASTLES = [
     "_index": 2464
   },
   {
-    "name": "Ballylee Castle (Thoor Ballylee)",
-    "lat": 53.092,
-    "lng": -8.612,
-    "country": "Ireland",
-    "type": "tower house",
-    "county": "County Galway",
-    "tags": [
-      "photogenic"
-    ],
-    "access": "paid",
-    "rating": 4.2,
-    "reviewCount": 70,
-    "era": "16th century",
-    "condition": "intact",
-    "image": "https://img.castlecore.uk/ballylee-castle-thoor-ballylee.jpg",
-    "description": "Norman tower house, the summer home of W.B. Yeats.",
-    "_index": 2465,
-    "gallery": [
-      "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-2.jpg",
-      "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-3.jpg",
-      "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-4.jpg",
-      "https://img.castlecore.uk/ballylee-castle-thoor-ballylee-5.jpg"
-    ]
-  },
-  {
     "name": "Kilconnell Castle",
     "lat": 53.329,
     "lng": -8.373,
@@ -63308,31 +62628,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kilconnell-castle-3.jpg",
       "https://img.castlecore.uk/kilconnell-castle-4.jpg",
       "https://img.castlecore.uk/kilconnell-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Abbey Knockmoy Galway",
-    "lat": 53.457,
-    "lng": -8.504,
-    "country": "Ireland",
-    "type": "abbey",
-    "county": "County Galway",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.8,
-    "reviewCount": 25,
-    "era": "12th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/abbey-knockmoy-galway.jpg",
-    "description": "Cistercian abbey with rare fresco fragments.",
-    "_index": 2467,
-    "gallery": [
-      "https://img.castlecore.uk/abbey-knockmoy-galway-2.jpg",
-      "https://img.castlecore.uk/abbey-knockmoy-galway-3.jpg",
-      "https://img.castlecore.uk/abbey-knockmoy-galway-4.jpg",
-      "https://img.castlecore.uk/abbey-knockmoy-galway-5.jpg"
     ]
   },
   {
@@ -63637,31 +62932,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Ballycarberry Castle Ruin",
-    "lat": 51.944,
-    "lng": -10.028,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Kerry",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.7,
-    "reviewCount": 25,
-    "era": "16th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/ballycarberry-castle-ruin.jpg",
-    "description": "McCarthy Mór castle ruin near Cahersiveen.",
-    "_index": 2481,
-    "gallery": [
-      "https://img.castlecore.uk/ballycarberry-castle-ruin-2.jpg",
-      "https://img.castlecore.uk/ballycarberry-castle-ruin-3.jpg",
-      "https://img.castlecore.uk/ballycarberry-castle-ruin-4.jpg",
-      "https://img.castlecore.uk/ballycarberry-castle-ruin-5.jpg"
-    ]
-  },
-  {
     "name": "Ardfert Friary",
     "lat": 52.326,
     "lng": -9.781,
@@ -63684,31 +62954,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ardfert-friary-3.jpg",
       "https://img.castlecore.uk/ardfert-friary-4.jpg",
       "https://img.castlecore.uk/ardfert-friary-5.jpg"
-    ]
-  },
-  {
-    "name": "Abbeydorney Cistercian Ruins",
-    "lat": 52.387,
-    "lng": -9.687,
-    "country": "Ireland",
-    "type": "abbey",
-    "county": "County Kerry",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.6,
-    "reviewCount": 15,
-    "era": "12th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/abbeydorney-cistercian-ruins.jpg",
-    "description": "Kyrie Eleison abbey ruins near Tralee.",
-    "_index": 2483,
-    "gallery": [
-      "https://img.castlecore.uk/abbeydorney-cistercian-ruins-2.jpg",
-      "https://img.castlecore.uk/abbeydorney-cistercian-ruins-3.jpg",
-      "https://img.castlecore.uk/abbeydorney-cistercian-ruins-4.jpg",
-      "https://img.castlecore.uk/abbeydorney-cistercian-ruins-5.jpg"
     ]
   },
   {
@@ -64004,26 +63249,6 @@ const CASTLES = [
       "https://img.castlecore.uk/old-leighlin-cathedral-4.jpg",
       "https://img.castlecore.uk/old-leighlin-cathedral-5.jpg"
     ]
-  },
-  {
-    "name": "Ballyloughan Castle Carlow",
-    "lat": 52.752,
-    "lng": -6.899,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Carlow",
-    "tags": [
-      "free",
-      "hidden-gem"
-    ],
-    "access": "free",
-    "rating": 3.7,
-    "reviewCount": 15,
-    "era": "13th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/ballyloughan-castle-carlow.jpg",
-    "description": "Anglo-Norman castle ruin with twin-towered gatehouse.",
-    "_index": 2497
   },
   {
     "name": "Clonmore Castle Carlow",

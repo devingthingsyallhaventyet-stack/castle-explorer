@@ -39,8 +39,10 @@ const rows = sites.map((s, i) => {
   else if (s.enriched) { badge = '<span class="badge enriched">✅ Enriched</span>'; statusData = 'enriched'; }
   else { badge = '<span class="badge not-enriched">❌ Not Yet</span>'; statusData = 'not'; }
   const eName = s.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-  return `<tr data-name="${s.name.toLowerCase()}" data-realname="${eName}" data-status="${statusData}" data-country="${s.country}">
+  const id = 'ID-' + String(i + 1).padStart(4, '0');
+  return `<tr data-name="${s.name.toLowerCase()}" data-realname="${eName}" data-id="${id}" data-status="${statusData}" data-country="${s.country}">
     <td class="num">${i + 1}</td>
+    <td class="id-cell">${id}</td>
     <td class="del-cell"><button class="del-btn" onclick="markDelete(this)" title="Mark for deletion">✕</button></td>
     <td><a href="site/${s.slug}.html" target="_blank">${s.name}</a></td>
     <td>${s.type}</td>
@@ -78,6 +80,7 @@ a:hover { text-decoration: underline; }
 .visible-count { font-size: .8rem; color: #999; margin-bottom: 8px; }
 
 /* Delete button */
+.id-cell { font-family: monospace; font-size: .7rem; color: #999; width: 60px; }
 .del-cell { width: 36px; text-align: center; }
 .del-btn { background: none; border: 1px solid #ddd; color: #999; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: .8rem; line-height: 1; transition: all .15s; }
 .del-btn:hover { background: #f8d7da; border-color: #c0392b; color: #c0392b; }
@@ -122,7 +125,7 @@ tr.marked-delete a { color: #999; }
 <div class="visible-count" id="visibleCount">Showing ${total} of ${total}</div>
 
 <table>
-<thead><tr><th>#</th><th></th><th>Name</th><th>Type</th><th>Country</th><th>Status</th></tr></thead>
+<thead><tr><th>#</th><th>ID</th><th></th><th>Name</th><th>Type</th><th>Country</th><th>Status</th></tr></thead>
 <tbody>
 ${rows}
 </tbody>
@@ -185,7 +188,11 @@ function undoAll() {
 }
 
 function copyList() {
-  var text = deleteSet.join('\\n');
+  var lines = [];
+  document.querySelectorAll('tr.marked-delete').forEach(function(r) {
+    lines.push(r.dataset.id + ' ' + r.dataset.realname);
+  });
+  var text = lines.join('\\n');
   navigator.clipboard.writeText(text).then(function() {
     var toast = document.getElementById('toast');
     toast.style.display = 'block';
