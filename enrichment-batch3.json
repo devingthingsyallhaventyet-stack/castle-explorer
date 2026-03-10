@@ -1,0 +1,515 @@
+[
+  {
+    "name": "York Minster",
+    "description": "A soaring Gothic masterpiece rising above medieval York — the largest cathedral of its kind in Northern Europe, where stained glass tells stories spanning 800 years.",
+    "history": "Founded in 627 AD when a wooden church was built for the baptism of King Edwin of Northumbria. The current Gothic structure was built between 1230 and 1472, taking over 250 years to complete. Survived the English Reformation, a devastating 1984 fire that destroyed the south transept roof, and meticulous restoration. Houses the Great East Window, the largest expanse of medieval stained glass in Britain.",
+    "tags": ["well-preserved", "photogenic", "gothic", "medieval", "guided-tours", "gift-shop", "museum", "atmospheric"],
+    "access": "paid",
+    "era": "13th-15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/York_Minster"}, {"name": "York Minster Official", "url": "https://yorkminster.org/"}]
+  },
+  {
+    "name": "Palace of Holyroodhouse",
+    "description": "The monarch's official Scottish residence, anchoring the Royal Mile in Edinburgh's shadow — where Mary Queen of Scots witnessed murder and monarchs still hold court.",
+    "history": "Originally an Augustinian monastery founded in 1128 by David I of Scotland. Became a royal residence in the 15th century. The current palace was largely rebuilt 1671-1678 for Charles II in a classical style by architect Sir William Bruce. Mary Queen of Scots lived here 1561-1567, and it was here that her secretary David Rizzio was murdered. Still used for state ceremonies and royal events.",
+    "tags": ["well-preserved", "photogenic", "guided-tours", "museum", "gardens", "gift-shop", "atmospheric", "medieval"],
+    "access": "paid",
+    "era": "12th-17th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Palace_of_Holyroodhouse"}, {"name": "Royal Collection Trust", "url": "https://www.rct.uk/visit/palace-of-holyroodhouse"}]
+  },
+  {
+    "name": "Longleat House",
+    "description": "England's first great Elizabethan prodigy house set in 900 acres of Capability Brown parkland — where Renaissance grandeur meets a safari park in gloriously eccentric fashion.",
+    "history": "Built between 1568 and 1580 by Sir John Thynne, designed by Robert Smythson. One of the finest examples of Elizabethan architecture in England. The grounds were landscaped by Capability Brown in the 1760s. In 1966, the 6th Marquess of Bath opened the UK's first drive-through safari park in the grounds. Still home to the Marquess of Bath family. Grade I listed.",
+    "tags": ["well-preserved", "photogenic", "kid-friendly", "gardens", "guided-tours", "gift-shop", "museum", "tearoom-cafe", "events-venue"],
+    "access": "paid",
+    "era": "16th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Longleat"}, {"name": "Longleat Official", "url": "https://www.longleat.co.uk/"}]
+  },
+  {
+    "name": "York City Walls",
+    "description": "Nearly two miles of medieval ramparts encircling York's old town — walk the battlements for rooftop views of the Minster and centuries of layered history beneath your feet.",
+    "history": "The most complete circuit of medieval city walls remaining in England, stretching 2.1 miles. Built mainly in the 13th-14th centuries on foundations dating back to Roman Eboracum (71 AD). Feature four main medieval gatehouses (bars): Bootham Bar, Monk Bar, Walmgate Bar, and Micklegate Bar. Restored extensively in the 19th century. Free to walk and open year-round.",
+    "tags": ["well-preserved", "photogenic", "free-entry", "medieval", "atmospheric"],
+    "access": "free",
+    "era": "13th-14th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/York_city_walls"}, {"name": "City of York Council", "url": "https://www.york.gov.uk/CityWalls"}]
+  },
+  {
+    "name": "Rosslyn Chapel",
+    "description": "A 15th-century chapel dripping with enigmatic stone carvings — every surface tells a story, from Green Men to the legendary Apprentice Pillar, immortalised in The Da Vinci Code.",
+    "history": "Founded on 20 September 1456 by William Sinclair, 1st Earl of Caithness, as the Collegiate Chapel of St Matthew. Only the choir was completed of the original grand collegiate church plan. Famous for its extraordinarily ornate stonework featuring hundreds of carved figures. Gained worldwide fame after Dan Brown's 2003 novel The Da Vinci Code. Underwent a 15-year conservation project completed in 2013.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "gothic", "medieval", "filming-location", "guided-tours", "gift-shop", "tearoom-cafe"],
+    "access": "paid",
+    "era": "15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Rosslyn_Chapel"}, {"name": "Rosslyn Chapel Official", "url": "https://www.rosslynchapel.com/"}]
+  },
+  {
+    "name": "St Giles' Cathedral",
+    "description": "Edinburgh's dark crown jewel on the Royal Mile — a medieval cathedral whose distinctive crown steeple pierces the Scottish sky, steeped in the drama of reformers and kings.",
+    "history": "Dedicated to the patron saint of Edinburgh, with origins dating to 1124 though the present church is largely from the 14th-15th centuries. The distinctive crown steeple was added around 1500. John Knox preached here during the Scottish Reformation in the 1560s. Contains the Thistle Chapel (1911), designed by Robert Lorimer for the Order of the Thistle. Not technically a cathedral today but retains the honorary title.",
+    "tags": ["well-preserved", "photogenic", "gothic", "medieval", "atmospheric", "free-entry", "gift-shop"],
+    "access": "free",
+    "era": "14th-15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/St_Giles%27_Cathedral"}, {"name": "St Giles' Official", "url": "https://stgilescathedral.org.uk/"}]
+  },
+  {
+    "name": "St Michael's Mount",
+    "description": "A fairy-tale island castle rising from Mount's Bay — accessible by ancient cobbled causeway at low tide, with subtropical gardens clinging to granite cliffs above the sea.",
+    "history": "A tidal island with a recorded history stretching back to at least the 5th century. A Benedictine priory was established here in the 12th century, mirroring its French twin Mont-Saint-Michel. After the Dissolution, it became a fortress and then the St Aubyn family home from 1659. Given to the National Trust in 1954, though the family still lives in the castle. The cobbled causeway is submerged at high tide.",
+    "tags": ["well-preserved", "photogenic", "island", "coastal", "gardens", "atmospheric", "medieval", "guided-tours", "gift-shop", "tearoom-cafe", "romantic"],
+    "access": "paid",
+    "era": "12th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/St_Michael%27s_Mount"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/cornwall/st-michaels-mount"}]
+  },
+  {
+    "name": "Portmeirion",
+    "description": "A fantastical Italianate village on the Welsh coast — pastel colonnades, secret gardens, and whimsical follies that feel like stepping into a Mediterranean dream on Snowdonia's doorstep.",
+    "history": "Built by architect Sir Clough Williams-Ellis between 1925 and 1975 to demonstrate how a naturally beautiful site could be developed without spoiling it. Inspired by Portofino and other Mediterranean villages. Famous as the filming location for the 1960s TV series The Prisoner. Features rescued architectural elements from demolished buildings across Britain. Now a conservation village with hotel and self-catering cottages.",
+    "tags": ["well-preserved", "photogenic", "filming-location", "gardens", "coastal", "romantic", "atmospheric", "tearoom-cafe", "gift-shop", "dog-friendly"],
+    "access": "paid",
+    "era": "20th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portmeirion"}, {"name": "Portmeirion Official", "url": "https://portmeirion.wales/"}]
+  },
+  {
+    "name": "Glasgow Cathedral",
+    "description": "Scotland's finest medieval cathedral — miraculously unscathed by the Reformation, its atmospheric lower church and forest of stone pillars guard the tomb of St Mungo.",
+    "history": "Built on the site where St Mungo (Kentigern), Glasgow's patron saint, established his church in the 6th century. The current cathedral dates mainly from the 13th-15th centuries. Remarkably, it is the only medieval Scottish mainland cathedral to have survived the Reformation virtually intact. The lower church houses the shrine of St Mungo. The adjacent Necropolis, modelled on Père Lachaise in Paris, was built in 1832.",
+    "tags": ["well-preserved", "photogenic", "gothic", "medieval", "atmospheric", "dark-brooding", "free-entry"],
+    "access": "free",
+    "era": "13th-15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Glasgow_Cathedral"}, {"name": "Historic Environment Scotland", "url": "https://www.historicenvironment.scot/visit-a-place/places/glasgow-cathedral/"}]
+  },
+  {
+    "name": "Ely Cathedral",
+    "description": "The 'Ship of the Fens' — a breathtaking cathedral whose unique octagonal lantern tower seems to float above the flat Cambridgeshire landscape like a medieval lighthouse.",
+    "history": "Founded as a monastery by St Etheldreda in 673 AD. The current Norman cathedral was begun in 1083. Its most extraordinary feature is the unique Octagon, built 1322-1334 after the original Norman tower collapsed, engineered by Alan of Walsingham — a marvel of medieval ingenuity with an 8-post wooden lantern weighing 400 tonnes. The Lady Chapel is the largest in England. Featured in films including The King's Speech.",
+    "tags": ["well-preserved", "photogenic", "gothic", "norman", "medieval", "atmospheric", "guided-tours", "gift-shop", "tearoom-cafe", "filming-location"],
+    "access": "paid",
+    "era": "11th-14th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ely_Cathedral"}, {"name": "Ely Cathedral Official", "url": "https://www.elycathedral.org/"}]
+  },
+  {
+    "name": "Gloucester Cathedral",
+    "description": "A Norman masterpiece reborn in Perpendicular splendour — its honey-gold cloisters doubled as Hogwarts corridors, and the Great East Window is a wall of medieval glass the size of a tennis court.",
+    "history": "Founded as a Benedictine abbey in 678 AD. The present building began in 1089 in Romanesque style. After Edward II's murder at nearby Berkeley Castle in 1327, his tomb here attracted pilgrims and funded a spectacular Perpendicular Gothic remodelling. The fan-vaulted cloisters (c.1370) are the earliest surviving example in England. Used extensively as a Harry Potter filming location for Hogwarts interiors.",
+    "tags": ["well-preserved", "photogenic", "gothic", "norman", "medieval", "atmospheric", "filming-location", "guided-tours", "gift-shop", "tearoom-cafe"],
+    "access": "free",
+    "era": "11th-14th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Gloucester_Cathedral"}, {"name": "Gloucester Cathedral Official", "url": "https://www.gloucestercathedral.org.uk/"}]
+  },
+  {
+    "name": "Highclere Castle",
+    "description": "The real Downton Abbey — a palatial Victorian country house set in 1,000 acres of Capability Brown parkland, where Edwardian grandeur and television fame collide in spectacular fashion.",
+    "history": "The seat of the Carnarvon family since 1679. The current Jacobethan mansion was designed by Sir Charles Barry (architect of the Houses of Parliament) in the 1840s, transforming an earlier Georgian house. The 5th Earl of Carnarvon famously co-discovered Tutankhamun's tomb with Howard Carter in 1922 — an Egyptian exhibition is housed in the cellars. Became world-famous as the filming location for Downton Abbey (2010-2015).",
+    "tags": ["well-preserved", "photogenic", "filming-location", "victorian", "gardens", "guided-tours", "gift-shop", "tearoom-cafe", "events-venue", "museum"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Highclere_Castle"}, {"name": "Highclere Castle Official", "url": "https://www.highclerecastle.co.uk/"}]
+  },
+  {
+    "name": "Glastonbury Abbey (Somerset)",
+    "description": "The legendary resting place of King Arthur — haunting abbey ruins steeped in Arthurian myth and early Christian mysticism, where England's spiritual story arguably began.",
+    "history": "Traditionally the oldest Christian site in Britain, said to have been founded by Joseph of Arimathea in the 1st century. A major Benedictine monastery from the 7th century. In 1191, monks claimed to discover the graves of King Arthur and Guinevere. Became the richest abbey in England before Henry VIII dissolved it in 1539 and hanged the last abbot. The romantic ruins have drawn pilgrims and seekers ever since.",
+    "tags": ["ruins-romantic", "photogenic", "atmospheric", "medieval", "haunted", "gardens", "museum", "gift-shop", "guided-tours"],
+    "access": "paid",
+    "era": "7th-16th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Glastonbury_Abbey"}, {"name": "Glastonbury Abbey Official", "url": "https://www.glastonburyabbey.com/"}]
+  },
+  {
+    "name": "Iron Bridge",
+    "description": "The bridge that launched the Industrial Revolution — a single elegant iron arch spanning the Severn Gorge, a UNESCO World Heritage Site and symbol of the age that changed the world.",
+    "history": "Built in 1779 by Abraham Darby III, this was the first major bridge in the world to be made of cast iron. Spanning 30 metres across the River Severn in Shropshire, it became a powerful symbol of the Industrial Revolution. The surrounding Ironbridge Gorge was designated a UNESCO World Heritage Site in 1986. The bridge was closed to vehicle traffic in 1934 and is now a pedestrian crossing and monument.",
+    "tags": ["well-preserved", "photogenic", "free-entry", "riverside", "museum"],
+    "access": "free",
+    "era": "18th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Iron_Bridge"}, {"name": "English Heritage", "url": "https://www.english-heritage.org.uk/visit/places/iron-bridge/"}]
+  },
+  {
+    "name": "Wells Cathedral",
+    "description": "A Gothic jewel in England's smallest city — its scissor arches defy gravity and convention, while 300 medieval figures watch from the most elaborate west front in the country.",
+    "history": "Built between 1175 and 1490, Wells is considered the first English cathedral built entirely in the Gothic style. The west front (c.1230-1250) displays over 300 medieval carved figures, the largest surviving collection of medieval sculpture in England. The famous scissor arches were added in 1338 to prevent the central tower from collapsing. Features a remarkable 14th-century astronomical clock — one of the oldest working clock mechanisms in the world.",
+    "tags": ["well-preserved", "photogenic", "gothic", "medieval", "atmospheric", "guided-tours", "gift-shop", "tearoom-cafe"],
+    "access": "free",
+    "era": "12th-15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Wells_Cathedral"}, {"name": "Wells Cathedral Official", "url": "https://www.wellscathedral.org.uk/"}]
+  },
+  {
+    "name": "Bolton Abbey",
+    "description": "A ruined Augustinian priory set in a sweeping bend of the River Wharfe — where Romantic painters found their muse and walkers still lose themselves in wild Yorkshire beauty.",
+    "history": "Founded in 1154 by Augustinian canons who relocated from Embsay. The priory flourished until the Dissolution in 1539. The nave survived as the local parish church and remains in use today. The ruins of the choir and transepts stand as romantic shells. Set in 30,000 acres of moorland owned by the Duke of Devonshire. Turner and Landseer painted the ruins. The nearby Strid is one of England's most dangerous stretches of water.",
+    "tags": ["ruins-romantic", "photogenic", "atmospheric", "riverside", "woodland", "medieval", "dog-friendly", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "12th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bolton_Priory"}, {"name": "Bolton Abbey Estate", "url": "https://www.boltonabbey.com/"}]
+  },
+  {
+    "name": "Lincoln Castle Walls",
+    "description": "One of only two castles William the Conqueror built on a Roman site — home to one of four surviving copies of the Magna Carta and a Victorian prison with chilling separate system cells.",
+    "history": "Built in 1068 by William the Conqueror on the site of a pre-existing Roman fortress. Unique in England for having two mottes (Lucy Tower and the Observatory Tower). The castle walls offer a complete wall walk with panoramic views of Lincoln Cathedral and the city. Houses one of only four surviving original copies of the 1215 Magna Carta and the 1217 Charter of the Forest. The Victorian prison features a haunting separate system chapel.",
+    "tags": ["well-preserved", "photogenic", "medieval", "norman", "museum", "guided-tours", "gift-shop", "atmospheric"],
+    "access": "paid",
+    "era": "11th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lincoln_Castle"}, {"name": "Lincoln Castle Official", "url": "https://www.lincolncastle.com/"}]
+  },
+  {
+    "name": "Culloden Battlefield",
+    "description": "The windswept moor where Jacobite dreams died in under an hour — Scotland's most haunting battlefield, where clan markers still stand among the heather in solemn remembrance.",
+    "history": "On 16 April 1746, the last pitched battle fought on British soil took place here. The Jacobite army of Bonnie Prince Charlie was decisively defeated by government forces under the Duke of Cumberland in barely 60 minutes. Around 1,500-2,000 Jacobites were killed. The battle ended the Stuart claim to the throne and led to the destruction of the Highland clan system. The NTS visitor centre opened in 2007 with immersive battlefield experience.",
+    "tags": ["photogenic", "atmospheric", "dark-brooding", "haunted", "remote", "museum", "gift-shop", "guided-tours"],
+    "access": "free",
+    "era": "18th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Culloden"}, {"name": "National Trust for Scotland", "url": "https://www.nts.org.uk/visit/places/culloden"}]
+  },
+  {
+    "name": "Bodnant Garden",
+    "description": "One of the finest gardens in the UK — 80 acres of Italianate terraces, wild glens, and the famous Laburnum Arch that transforms into a golden tunnel every May.",
+    "history": "Created from 1874 by Henry Pochin, a Victorian industrialist, and developed over five generations of the McLaren/Aberconwy family. The formal Italianate terraces descend toward the River Hiraethlyn. The famous Laburnum Arch, planted in 1880, is 55 metres long and draws thousands of visitors each May-June. Given to the National Trust in 1949 by the 2nd Lord Aberconwy. Contains a remarkable collection of rhododendrons, magnolias, and rare trees.",
+    "tags": ["well-preserved", "photogenic", "gardens", "romantic", "woodland", "riverside", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bodnant_Garden"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/wales/bodnant-garden"}]
+  },
+  {
+    "name": "Housesteads Roman Fort",
+    "description": "The best-preserved Roman fort on Hadrian's Wall — perched on a dramatic Northumberland ridge with the wall snaking away to the horizon, a gateway to Rome's northernmost frontier.",
+    "history": "Known as Vercovicium in Roman times, built c.124 AD as part of Hadrian's Wall. Garrisoned by up to 800 auxiliary soldiers for nearly 300 years. The fort covers 5 acres and includes remarkably preserved communal latrines, granaries, barracks, and a hospital. Excavated from the 18th century onward. Part of the Hadrian's Wall UNESCO World Heritage Site. Managed jointly by English Heritage and the National Trust.",
+    "tags": ["well-preserved", "photogenic", "hilltop", "remote", "atmospheric", "prehistoric", "museum", "guided-tours"],
+    "access": "paid",
+    "era": "2nd century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Housesteads_Roman_Fort"}, {"name": "English Heritage", "url": "https://www.english-heritage.org.uk/visit/places/housesteads-roman-fort-hadrians-wall/"}]
+  },
+  {
+    "name": "Burghley House",
+    "description": "A towering Elizabethan palace bristling with chimneys and cupolas — the grandest house of the Elizabethan age, where heaven rooms painted by Verrio will make you dizzy looking up.",
+    "history": "Built between 1555 and 1587 by William Cecil, Lord Burghley, Lord High Treasurer to Elizabeth I. One of the largest and grandest houses of the Elizabethan era. The interiors were lavishly redecorated in the late 17th century with spectacular ceiling paintings by Antonio Verrio. Still home to the Cecil family. Hosts the annual Burghley Horse Trials, one of the world's premier three-day eventing competitions. Grade I listed.",
+    "tags": ["well-preserved", "photogenic", "gardens", "guided-tours", "gift-shop", "tearoom-cafe", "events-venue", "museum"],
+    "access": "paid",
+    "era": "16th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Burghley_House"}, {"name": "Burghley House Official", "url": "https://www.burghley.co.uk/"}]
+  },
+  {
+    "name": "Castlerigg Stone Circle",
+    "description": "One of Britain's most atmospheric stone circles — 38 ancient stones set in a natural amphitheatre of Lakeland fells, with mist-wreathed mountains in every direction.",
+    "history": "One of the earliest stone circles in Britain, erected around 3000 BC during the Neolithic period. Consists of 38 stones (with 10 more forming an inner rectangle) set in a dramatic natural amphitheatre near Keswick. Its purpose remains debated — possibly astronomical, ceremonial, or a meeting place for axe trading. Managed by English Heritage but freely accessible at all times. John Keats visited in 1818 and described its power.",
+    "tags": ["photogenic", "atmospheric", "prehistoric", "remote", "hilltop", "free-entry", "dog-friendly"],
+    "access": "free",
+    "era": "Neolithic",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Castlerigg_stone_circle"}, {"name": "English Heritage", "url": "https://www.english-heritage.org.uk/visit/places/castlerigg-stone-circle/"}]
+  },
+  {
+    "name": "Dunham Massey",
+    "description": "A Georgian mansion wrapped in ancient deer park — where fallow deer roam beneath 300-year-old trees and the winter garden blooms when everything else sleeps.",
+    "history": "Home to the Booth and Grey families for over 300 years. The current house is largely early Georgian (1730s), built around the bones of an Elizabethan manor. Contains one of Britain's finest collections of Huguenot silver. During WWI, the house served as a military hospital — the Stamford Military Hospital for 282 patients. The 250-acre deer park dates back to medieval times. Given to the National Trust in 1976 by the 10th and last Earl of Stamford.",
+    "tags": ["well-preserved", "photogenic", "gardens", "woodland", "dog-friendly", "tearoom-cafe", "gift-shop", "guided-tours"],
+    "access": "paid",
+    "era": "18th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Dunham_Massey"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/north-west/dunham-massey"}]
+  },
+  {
+    "name": "Calke Abbey",
+    "description": "The house that time forgot — a baroque mansion preserved in a state of arrested decay, crammed with eccentric natural history collections and untouched rooms sealed for generations.",
+    "history": "Built 1701-1704 for Sir John Harpur on the site of an Augustinian priory. Never actually an abbey. The Harpur-Crewe family lived here for nearly 300 years, becoming increasingly reclusive. When the National Trust acquired it in 1985, many rooms hadn't been touched in over a century. Rather than restoring it, the Trust preserved its state of gentle decay — peeling wallpaper, abandoned collections, dusty taxidermy — as a deliberately unstately home.",
+    "tags": ["photogenic", "atmospheric", "gardens", "museum", "guided-tours", "tearoom-cafe", "gift-shop", "woodland", "dog-friendly"],
+    "access": "paid",
+    "era": "18th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Calke_Abbey"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/east-midlands/calke-abbey"}]
+  },
+  {
+    "name": "Lanhydrock House",
+    "description": "Cornwall's grandest Victorian country house — a sprawling estate of 50 rooms frozen in time, from the ornate Long Gallery to the below-stairs kitchen, all wrapped in parkland and bluebells.",
+    "history": "Originally a 17th-century house built by the Robartes family. Devastated by fire in 1881, it was rebuilt in high Victorian style with all modern conveniences of the era. The Long Gallery with its extraordinary plaster barrel-vaulted ceiling (depicting Old Testament scenes) survived the fire. The 50 rooms open to visitors include a remarkably intact Victorian kitchen, nursery, and servants' quarters. Set in 900 acres of parkland with gardens and woodland walks.",
+    "tags": ["well-preserved", "photogenic", "victorian", "gardens", "woodland", "guided-tours", "tearoom-cafe", "gift-shop", "kid-friendly"],
+    "access": "paid",
+    "era": "17th-19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lanhydrock"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/cornwall/lanhydrock"}]
+  },
+  {
+    "name": "Clifford's Tower York",
+    "description": "A quatrefoil keep crowning a Norman motte in York's heart — hauntingly beautiful in spring when daffodils carpet the mound, but shadowed by one of medieval England's darkest moments.",
+    "history": "Built by William the Conqueror in 1068 as one of two motte-and-bailey castles in York. The original wooden tower was the site of a horrific massacre of the Jewish community in 1190, when around 150 people died. The current stone tower was built by Henry III between 1245-1270 in an unusual quatrefoil (four-lobed) design. One of only two such designs in England. English Heritage installed a new roof deck in 2021 offering panoramic city views.",
+    "tags": ["photogenic", "atmospheric", "medieval", "norman", "hilltop", "dark-brooding", "museum"],
+    "access": "paid",
+    "era": "13th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Clifford%27s_Tower,_York"}, {"name": "English Heritage", "url": "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/"}]
+  },
+  {
+    "name": "Lindisfarne Castle",
+    "description": "A tiny Tudor fort perched on a volcanic crag above Holy Island — reimagined by Lutyens into an Arts & Crafts fantasy, accessible only when the tides allow.",
+    "history": "Built around 1550 using stone from the dissolved Lindisfarne Priory to protect the harbour. Saw action during the English Civil War and the 1715 Jacobite rising. Fell into ruin before being purchased by Edward Hudson, founder of Country Life magazine, in 1901. Architect Edwin Lutyens transformed it into an Edwardian country house. Gertrude Jekyll designed the charming walled garden. Given to the National Trust in 1944. Only accessible via a tidal causeway.",
+    "tags": ["photogenic", "atmospheric", "coastal", "island", "romantic", "gardens", "remote", "guided-tours"],
+    "access": "paid",
+    "era": "16th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lindisfarne_Castle"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/north-east/lindisfarne-castle"}]
+  },
+  {
+    "name": "Sudeley Castle",
+    "description": "The only private castle in England with a queen buried in its grounds — Katherine Parr's final home, where Tudor history meets Cotswolds romance in award-winning gardens.",
+    "history": "Built in the 15th century and once home to King Edward IV. Katherine Parr, the sixth and surviving wife of Henry VIII, lived here with her new husband Thomas Seymour after Henry's death and died here in 1548 after childbirth. Badly damaged during the Civil War and left ruined for 200 years before the Dent-Brocklehurst family restored it from the 1830s. Katherine Parr's tomb lies in the chapel. The gardens include a famous Queens' Garden.",
+    "tags": ["well-preserved", "photogenic", "tudor", "gardens", "romantic", "guided-tours", "tearoom-cafe", "gift-shop", "events-venue", "museum"],
+    "access": "paid",
+    "era": "15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sudeley_Castle"}, {"name": "Sudeley Castle Official", "url": "https://www.sudeleycastle.co.uk/"}]
+  },
+  {
+    "name": "Worcester Cathedral",
+    "description": "A Norman cathedral on the Severn's banks — where King John chose to be buried and the chapter house crypt descends into England's oldest surviving cathedral structure.",
+    "history": "Founded as a priory in 680 AD by Bishop Bosel. The present building dates from the 12th-14th centuries. King John was buried here in 1216 — his tomb effigy is the oldest royal effigy in England. Prince Arthur, Henry VIII's elder brother, is also entombed here. The circular chapter house (c.1150) is one of the earliest in England. The crypt dates from 1084 and is the largest Norman crypt in England. Hosted the Three Choirs Festival since 1719.",
+    "tags": ["well-preserved", "photogenic", "gothic", "norman", "medieval", "riverside", "atmospheric", "guided-tours", "gift-shop", "tearoom-cafe"],
+    "access": "free",
+    "era": "12th-14th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Worcester_Cathedral"}, {"name": "Worcester Cathedral Official", "url": "https://www.worcestercathedral.org.uk/"}]
+  },
+  {
+    "name": "Vindolanda Roman Fort",
+    "description": "Hadrian's Wall's most excavated fort — where writing tablets preserved in waterlogged soil reveal the intimate daily lives of Roman soldiers on the empire's wild frontier.",
+    "history": "A Roman auxiliary fort established c.85 AD, predating Hadrian's Wall by 40 years. Nine successive forts were built on the site. Famous for the Vindolanda tablets, discovered from 1973 — the oldest surviving handwritten documents in Britain, including personal letters, military reports, and a birthday party invitation. Active excavations continue annually, regularly yielding new discoveries. The on-site museum houses thousands of Roman artefacts.",
+    "tags": ["photogenic", "atmospheric", "remote", "prehistoric", "museum", "guided-tours", "gift-shop", "tearoom-cafe"],
+    "access": "paid",
+    "era": "1st-5th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Vindolanda"}, {"name": "Vindolanda Trust", "url": "https://www.vindolanda.com/"}]
+  },
+  {
+    "name": "Cragside House",
+    "description": "The first house in the world lit by hydroelectric power — a Victorian inventor's dream home clinging to a Northumberland hillside, surrounded by one of Europe's largest rock gardens.",
+    "history": "Built between 1863 and 1895 by arms magnate and inventor William Armstrong, 1st Baron Armstrong. Designed by architect Norman Shaw in the Old English style. In 1878, it became the first house in the world to be lit by hydroelectric power using the estate's lakes and streams. The 1,000-acre estate contains over 7 million trees planted by Armstrong, one of the largest rock gardens in Europe, and a network of carriage drives.",
+    "tags": ["well-preserved", "photogenic", "victorian", "woodland", "gardens", "hilltop", "atmospheric", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Cragside"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/north-east/cragside"}]
+  },
+  {
+    "name": "Kylemore Abbey",
+    "description": "A neo-Gothic fairytale on a Connemara lakeshore — built by a heartbroken husband for his beloved wife, now home to Benedictine nuns in one of Ireland's most photographed settings.",
+    "history": "Built 1867-1871 by Mitchell Henry, a wealthy London doctor and politician, as a gift for his wife Margaret. After Margaret died of dysentery in Egypt in 1874, Henry built a miniature Gothic cathedral on the grounds in her memory. The estate was purchased by Benedictine nuns fleeing Belgium during WWI in 1920. The nuns ran a prestigious boarding school until 2010. The Victorian Walled Garden, restored from 2000, is the largest in Ireland.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "romantic", "gardens", "coastal", "woodland", "gothic", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kylemore_Abbey"}, {"name": "Kylemore Abbey Official", "url": "https://www.kylemoreabbey.com/"}]
+  },
+  {
+    "name": "Dromoland Castle",
+    "description": "A baronial castle turned five-star hotel on the shores of Lough Dromoland — ancestral seat of Irish high kings, where ancient lineage meets luxurious escape in County Clare.",
+    "history": "The ancestral home of the O'Brien family, direct descendants of Brian Boru, High King of Ireland who defeated the Vikings at the Battle of Clontarf in 1014. The current neo-Gothic castle was built in the 1820s-1830s, replacing an earlier tower house. Converted into a luxury hotel in 1963. The 450-acre estate features an 18-hole golf course, lake, and walled garden. One of Ireland's most prestigious castle hotels.",
+    "tags": ["well-preserved", "photogenic", "romantic", "gardens", "events-venue", "wedding-venue", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Dromoland_Castle"}, {"name": "Dromoland Castle Official", "url": "https://www.dromoland.ie/"}]
+  },
+  {
+    "name": "St David's Cathedral",
+    "description": "Hidden in a hollow in Britain's smallest city — a purple-stoned medieval cathedral dedicated to Wales's patron saint, where two pilgrimages equalled one to Rome.",
+    "history": "Founded on the site of St David's 6th-century monastery. The current cathedral dates mainly from 1181, built by Bishop Peter de Leia in a distinctive local purple sandstone. Pope Calixtus II declared in 1120 that two pilgrimages to St David's equalled one to Rome. The nave floor slopes noticeably upward. Treasures include an ornate 14th-century Bishop's throne, fan-vaulted Holy Trinity Chapel ceiling, and the shrine of St David. Extensively restored by George Gilbert Scott in the 1860s.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "medieval", "celtic", "coastal", "guided-tours", "gift-shop"],
+    "access": "free",
+    "era": "12th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/St_Davids_Cathedral"}, {"name": "St David's Cathedral Official", "url": "https://www.stdavidscathedral.org.uk/"}]
+  },
+  {
+    "name": "Erddig Hall",
+    "description": "A remarkably preserved country house that tells the story from both sides of the green baize door — where servant portraits hang alongside masters in a touching record of household life.",
+    "history": "Built 1684-1687 for Joshua Edisbury, then acquired by the Yorke family in 1733 who held it for over 240 years. Unique for its extraordinary collection of servant portraits spanning 200 years, reflecting the close relationship between the Yorke family and their staff. The house became increasingly dilapidated as the family's fortunes declined. The National Trust rescued it in 1973 in a near-derelict state. Features an 18th-century Chinese wallpaper room and restored formal garden.",
+    "tags": ["well-preserved", "photogenic", "gardens", "guided-tours", "tearoom-cafe", "gift-shop", "museum", "kid-friendly"],
+    "access": "paid",
+    "era": "17th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Erddig"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/wales/erddig"}]
+  },
+  {
+    "name": "Ross Castle (Killarney)",
+    "description": "A 15th-century tower house on the shores of Lough Leane — the last stronghold in Munster to fall to Cromwell, framed by the wild beauty of Killarney National Park.",
+    "history": "Built in the late 15th century by the O'Donoghue Ross chieftains on a peninsula jutting into Lough Leane. An Irish legend prophesied the castle could only be taken from the water, so when Cromwellian forces arrived by boat in 1652, the garrison surrendered — the last stronghold in Munster to fall. Restored by the OPW and open for guided tours. A departure point for boat trips to Innisfallen Island and the medieval monastery ruins there.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "coastal", "medieval", "guided-tours", "romantic"],
+    "access": "paid",
+    "era": "15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ross_Castle"}, {"name": "Heritage Ireland", "url": "https://heritageireland.ie/places-to-visit/ross-castle/"}]
+  },
+  {
+    "name": "St Albans Abbey",
+    "description": "England's longest cathedral nave — built from Roman brick scavenged from the ancient city of Verulamium, where the story of Britain's first Christian martyr has been told for 1,700 years.",
+    "history": "Built on the site where St Alban, Britain's first Christian martyr, was executed around 250 AD. The present church was founded in 793 as a Benedictine abbey. The Norman tower and nave (1077-1115) were built largely from Roman bricks taken from nearby Verulamium. At 85 metres, the nave is the longest of any cathedral in England. Contains remarkable 13th-14th century wall paintings rediscovered under whitewash in the Victorian era. Became a cathedral in 1877.",
+    "tags": ["well-preserved", "photogenic", "norman", "medieval", "atmospheric", "guided-tours", "gift-shop", "tearoom-cafe", "free-entry"],
+    "access": "free",
+    "era": "11th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/St_Albans_Cathedral"}, {"name": "St Albans Cathedral Official", "url": "https://www.stalbanscathedral.org/"}]
+  },
+  {
+    "name": "Lacock Abbey",
+    "description": "A medieval nunnery turned country house where photography was born — William Henry Fox Talbot took the world's oldest surviving photographic negative from its oriel window.",
+    "history": "Founded in 1232 as an Augustinian nunnery by Ela, Countess of Salisbury. After the Dissolution in 1539, it was converted into a country house by Sir William Sharington. In 1835, William Henry Fox Talbot made the earliest known surviving photographic negative here — a tiny image of the oriel window. The village and abbey have been used as filming locations for Harry Potter, Downton Abbey, and Pride and Prejudice. National Trust since 1944.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "medieval", "filming-location", "gardens", "museum", "guided-tours", "gift-shop", "tearoom-cafe"],
+    "access": "paid",
+    "era": "13th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lacock_Abbey"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/wiltshire/lacock-abbey-fox-talbot-museum-and-village"}]
+  },
+  {
+    "name": "Beaulieu Abbey",
+    "description": "A Cistercian abbey in the New Forest where kings sought sanctuary — now home to the National Motor Museum, blending medieval monastic calm with the roar of classic engines.",
+    "history": "Founded in 1204 by King John as a Cistercian monastery after he reportedly had a nightmare about being flogged by monks. The abbey had right of sanctuary and sheltered many fugitives. After the Dissolution in 1538, the gatehouse became Palace House, home of the Montagu family. The refectory was converted into the parish church. The 2nd Baron Montagu opened the National Motor Museum in 1952, now housing over 250 vehicles. Set in 7,000 acres of the New Forest.",
+    "tags": ["well-preserved", "photogenic", "medieval", "gardens", "museum", "kid-friendly", "guided-tours", "tearoom-cafe", "gift-shop", "woodland"],
+    "access": "paid",
+    "era": "13th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Beaulieu_Abbey"}, {"name": "Beaulieu Official", "url": "https://www.beaulieu.co.uk/"}]
+  },
+  {
+    "name": "Blickling Hall",
+    "description": "A Jacobean jewel in Norfolk — one of England's finest red-brick mansions, where the ghost of Anne Boleyn is said to arrive each year on the anniversary of her execution.",
+    "history": "Built 1616-1625 for Sir Henry Hobart on the site of an earlier house where Anne Boleyn is traditionally believed to have been born (though historians debate this). Designed by architect Robert Lyminge, who also designed Hatfield House. The Long Gallery contains one of the most extraordinary Jacobean plaster ceilings in England. The library houses a remarkable collection of 12,000 rare books. Given to the National Trust in 1940 — one of the first houses acquired through the Country Houses Scheme.",
+    "tags": ["well-preserved", "photogenic", "gardens", "atmospheric", "haunted", "guided-tours", "tearoom-cafe", "gift-shop", "woodland"],
+    "access": "paid",
+    "era": "17th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Blickling_Hall"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/norfolk/blickling-estate"}]
+  },
+  {
+    "name": "Ludlow Castle (Shropshire)",
+    "description": "A mighty Marcher fortress above the River Teme — where Prince Arthur honeymooned, Milton's Comus premiered, and centuries of border warfare shaped the castle's massive curtain walls.",
+    "history": "Built from 1075 by Walter de Lacy as one of the first stone castles in England. The circular Norman chapel in the inner bailey is one of only five surviving round naves in England. Prince Arthur and Catherine of Aragon honeymooned here in 1501; Arthur died here shortly after. Served as the administrative centre of the Council of Wales and the Marches. Milton's masque Comus was first performed in the Great Hall in 1634. Now hosts an annual food festival.",
+    "tags": ["well-preserved", "photogenic", "medieval", "norman", "atmospheric", "hilltop", "riverside", "events-venue", "guided-tours", "gift-shop"],
+    "access": "paid",
+    "era": "11th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ludlow_Castle"}, {"name": "Ludlow Castle Official", "url": "https://www.ludlowcastle.com/"}]
+  },
+  {
+    "name": "Barnard Castle Bowes Museum",
+    "description": "A French château dropped into County Durham — a magnificent purpose-built art gallery rising improbably from a small market town, housing an extraordinary collection crowned by a mechanical silver swan.",
+    "history": "Built 1869-1892 by John and Joséphine Bowes as a purpose-built public art gallery, designed by Jules Pellechet in the style of a French château. Neither founder lived to see its completion. The collection includes fine art, ceramics, textiles, and the famous Silver Swan automaton (c.1773), which performs daily. The museum houses over 15,000 objects including works by El Greco, Goya, and Canaletto. Set in 20 acres of parkland above the River Tees.",
+    "tags": ["well-preserved", "photogenic", "museum", "gardens", "tearoom-cafe", "gift-shop", "guided-tours"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bowes_Museum"}, {"name": "Bowes Museum Official", "url": "https://thebowesmuseum.org.uk/"}]
+  },
+  {
+    "name": "Tatton Park",
+    "description": "A Georgian mansion in a vast Cheshire deer park — from opulent state rooms to a rare Japanese garden, all set against a backdrop of a thousand acres where deer have roamed for centuries.",
+    "history": "Home to the Egerton family for nearly 400 years until 1958. The current neoclassical mansion was designed by Samuel and Lewis Wyatt in the early 19th century. The 50-acre gardens include one of the finest Japanese gardens in Europe, created by Japanese craftsmen in 1910. The 1,000-acre deer park supports herds of fallow and red deer. Also features a working 1930s farm, medieval old hall, and adventure playground. Now managed by the National Trust and Cheshire East Council.",
+    "tags": ["well-preserved", "photogenic", "gardens", "kid-friendly", "dog-friendly", "guided-tours", "tearoom-cafe", "gift-shop", "events-venue"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tatton_Park"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/north-west/tatton-park"}]
+  },
+  {
+    "name": "Lichfield Cathedral",
+    "description": "The only medieval English cathedral with three spires — the 'Ladies of the Vale' rise gracefully above Staffordshire, guarding the Lichfield Angel and the Chad Gospels within.",
+    "history": "Built between 1195 and 1340 on a site of Christian worship dating to 700 AD, when a cathedral was established to house the relics of St Chad. The only medieval English cathedral with three spires (the 'Ladies of the Vale'). Badly damaged during a three-day siege in the English Civil War — the central spire was destroyed and later rebuilt. The Lichfield Angel, a remarkable 8th-century carved stone panel, was discovered during excavations in 2003. Also houses the 8th-century Chad Gospels illuminated manuscript.",
+    "tags": ["well-preserved", "photogenic", "gothic", "medieval", "atmospheric", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "free",
+    "era": "13th-14th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lichfield_Cathedral"}, {"name": "Lichfield Cathedral Official", "url": "https://www.lichfield-cathedral.org/"}]
+  },
+  {
+    "name": "Attingham Park",
+    "description": "An elegant neoclassical mansion in Shropshire parkland — where Regency excess meets a revolutionary iron-and-glass picture gallery, all set along the meandering River Tern.",
+    "history": "Built in 1785 for Noel Hill, 1st Baron Berwick, designed by George Steuart. The picture gallery, added by John Nash in 1807, features a pioneering cast-iron and glass roof — one of the earliest of its kind. The 2nd Baron Berwick nearly bankrupted the estate through lavish spending and art collecting. The 3,800-acre Humphry Repton-landscaped park includes a deer park, walled garden, and woodland walks along the River Tern. National Trust since 1947.",
+    "tags": ["well-preserved", "photogenic", "gardens", "woodland", "riverside", "dog-friendly", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "18th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Attingham_Park"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/attingham-park"}]
+  },
+  {
+    "name": "Penrhyn Castle",
+    "description": "A colossal Norman Revival fantasy built on slate money — an extravagant Victorian folly bristling with turrets, hiding the largest bed in Britain and a railway museum in its stables.",
+    "history": "Built 1820-1833 for George Hay Dawkins-Pennant using profits from the massive Penrhyn slate quarry and Jamaican sugar plantations worked by enslaved people. Designed by Thomas Hopper in an extraordinary Norman Revival style. Contains a one-ton slate bed made for Queen Victoria (she refused to sleep in it). The stable block houses a railway museum with industrial locomotives. The castle was the scene of a bitter 3-year quarry workers' strike (1900-1903). National Trust since 1951.",
+    "tags": ["well-preserved", "photogenic", "norman", "victorian", "museum", "gardens", "guided-tours", "tearoom-cafe", "gift-shop", "kid-friendly"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Penrhyn_Castle"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/wales/penrhyn-castle-and-garden"}]
+  },
+  {
+    "name": "Haworth Parsonage",
+    "description": "The small Georgian parsonage where the Brontë sisters conjured entire worlds — walk the rooms where Wuthering Heights and Jane Eyre were written, then lose yourself on the moors that inspired them.",
+    "history": "The Brontë family moved to this modest Georgian parsonage in 1820. Charlotte, Emily, and Anne grew up here, and it was in this house that they wrote their masterworks: Jane Eyre, Wuthering Heights, and The Tenant of Wildfell Hall. Their father Patrick was the incumbent of the adjacent church for 41 years. Now a museum run by the Brontë Society since 1928, housing the largest collection of Brontë manuscripts, letters, and personal items in the world.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "museum", "guided-tours", "gift-shop"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bront%C3%AB_Parsonage_Museum"}, {"name": "Brontë Parsonage Museum", "url": "https://www.bronte.org.uk/"}]
+  },
+  {
+    "name": "Lyme Park",
+    "description": "An Italianate palace in the Peak District — where Darcy's Pemberley came to life on screen, fallow deer drift through ancient parkland, and Palladian grandeur meets rugged moorland.",
+    "history": "Home to the Legh family for over 600 years from 1346. The current Italianate exterior was created by Giacomo Leoni in the 1720s, wrapped around an Elizabethan core. Famous as the filming location for Pemberley in the 1995 BBC Pride and Prejudice (the lake where Colin Firth's Darcy emerged). The 1,400-acre park includes a medieval deer park with red and fallow deer. Contains Grinling Gibbons carvings and an Elizabethan Long Gallery. National Trust since 1946.",
+    "tags": ["well-preserved", "photogenic", "filming-location", "gardens", "woodland", "dog-friendly", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "18th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lyme_Park"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/peak-district-derbyshire/lyme"}]
+  },
+  {
+    "name": "Tewkesbury Abbey",
+    "description": "A Norman abbey church of cathedral proportions — where the largest Romanesque tower in Europe rises above the Gloucestershire floodplain and medieval stained glass glows with haunting intensity.",
+    "history": "Founded as a Benedictine monastery in the 8th century. The present Norman church was consecrated in 1121. Boasts the largest Norman tower in Europe at 46 metres and one of the finest medieval vaulted ceilings in England. The Battle of Tewkesbury in 1471 — a decisive Wars of the Roses engagement — was fought nearby, and Lancastrian fugitives were dragged from the church. Saved from destruction at the Dissolution when the townspeople purchased it for £453.",
+    "tags": ["well-preserved", "photogenic", "norman", "medieval", "gothic", "atmospheric", "free-entry", "guided-tours"],
+    "access": "free",
+    "era": "12th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey"}, {"name": "Tewkesbury Abbey Official", "url": "https://www.tewkesburyabbey.org.uk/"}]
+  },
+  {
+    "name": "Trim Castle Barbican",
+    "description": "Ireland's largest Anglo-Norman castle — a massive stone fortress looming over the River Boyne, where Braveheart was filmed and 800 years of conquest are written in every wall.",
+    "history": "Built by Hugh de Lacy beginning in 1176, Trim Castle is the largest Anglo-Norman castle in Ireland, covering an area of 30,000 square metres. The massive three-storey keep is cruciform in plan, unique in Ireland and Britain. Used as a filming location for Mel Gibson's Braveheart (1995), doubling for the city of York. Richard II imprisoned the future Henry V here briefly. Fell into ruin from the 17th century. Extensively conserved and opened to the public by the OPW.",
+    "tags": ["well-preserved", "photogenic", "medieval", "norman", "atmospheric", "filming-location", "riverside", "guided-tours"],
+    "access": "paid",
+    "era": "12th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Trim_Castle"}, {"name": "Heritage Ireland", "url": "https://heritageireland.ie/places-to-visit/trim-castle/"}]
+  },
+  {
+    "name": "South Stack Lighthouse",
+    "description": "A white lighthouse clinging to a sea-battered islet off Anglesey — descend 400 steps down the cliff face to reach it, with puffins wheeling overhead and the Irish Sea crashing below.",
+    "history": "Built in 1809 by Trinity House to warn ships navigating the treacherous waters around Holy Island, Anglesey. The original oil lamp was replaced by electric light in 1938 and the lighthouse was automated in 1984. Accessed via a dramatic descent of approximately 400 steps down the cliff and across a bridge to the tiny island. The surrounding RSPB reserve is a major seabird colony, home to puffins, guillemots, razorbills, and choughs. An Ellin's Tower visitor centre overlooks the colony.",
+    "tags": ["photogenic", "coastal", "cliffside", "remote", "atmospheric", "kid-friendly"],
+    "access": "paid",
+    "era": "19th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/South_Stack_Lighthouse"}, {"name": "RSPB South Stack", "url": "https://www.rspb.org.uk/reserves-and-events/reserves-a-z/south-stack-cliffs/"}]
+  },
+  {
+    "name": "Baddesley Clinton",
+    "description": "A moated medieval manor hiding Catholic secrets — where priest holes concealed forbidden faith, and the reflections of a timber-framed house shimmer in centuries-old water.",
+    "history": "A moated manor house dating from the 15th century, home to the Ferrers family for over 500 years. Famous for its priest holes — hidden chambers where Catholic priests hid during the Elizabethan persecution. On one occasion, four priests evaded discovery for four hours in a sewage drain. The house retains a remarkable atmosphere of recusant Catholic devotion. Features a 15th-century great hall, Elizabethan parlour, and a garden room with 17th-century heraldic glass. National Trust since 1980.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "medieval", "tudor", "romantic", "gardens", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "15th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Baddesley_Clinton"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/warwickshire/baddesley-clinton"}]
+  },
+  {
+    "name": "Speke Hall",
+    "description": "One of England's finest Tudor timber-framed mansions — a black-and-white marvel hidden behind ancient yew trees on the banks of the Mersey, where eavesdrops aren't just architectural features.",
+    "history": "Built between 1530 and 1598 by the Norris family, one of the best-preserved Tudor half-timbered houses in England. The exterior's bold black-and-white patterns are quintessentially Tudor. Like Baddesley Clinton, it contains priest holes from the era of Catholic persecution — the Norris family were staunch recusants. The Great Hall dates from the 1530s, and the plasterwork and panelling are largely original. Two ancient yew trees in the courtyard are over 500 years old. National Trust since 1943.",
+    "tags": ["well-preserved", "photogenic", "tudor", "atmospheric", "gardens", "woodland", "riverside", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "16th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Speke_Hall"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/liverpool-lancashire/speke-hall-garden-and-estate"}]
+  },
+  {
+    "name": "Montacute House",
+    "description": "An Elizabethan masterpiece in golden Ham stone — soaring windows, a Long Gallery longer than a cricket pitch, and gardens where twisted topiary stands guard like sentinels from another age.",
+    "history": "Built in the 1590s for Sir Edward Phelips, the lawyer who led the prosecution of Guy Fawkes. One of the finest Elizabethan houses in England, built in warm golden Ham Hill stone. The Long Gallery, at 52 metres, is the longest surviving Elizabethan gallery and houses Tudor and Jacobean portraits from the National Portrait Gallery. Featured as a filming location in the 2011 film The Other Boleyn Girl and Sense & Sensibility (1995). National Trust since 1931.",
+    "tags": ["well-preserved", "photogenic", "gardens", "atmospheric", "filming-location", "guided-tours", "tearoom-cafe", "gift-shop", "museum"],
+    "access": "paid",
+    "era": "16th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Montacute_House"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house"}]
+  },
+  {
+    "name": "Ballynahinch Castle",
+    "description": "A lakeside castle hotel deep in the wilds of Connemara — where salmon leap in the river, ancient woodland whispers, and the ghosts of pirate queen Grace O'Malley still linger.",
+    "history": "Set on a 700-acre estate in the heart of Connemara, with origins as a stronghold of the O'Flaherty clan. Connected to the legendary pirate queen Grace O'Malley (Granuaile) through her marriage to Donal O'Flaherty. Later owned by Richard Martin, known as 'Humanity Dick' for founding the RSPCA. Indian maharajah Ranjitsinhji, the famous cricketer, purchased the estate in 1924. Now a luxury castle hotel renowned for its salmon and sea trout fishing on the Ballynahinch River.",
+    "tags": ["photogenic", "romantic", "riverside", "woodland", "remote", "atmospheric", "wedding-venue", "tearoom-cafe"],
+    "access": "paid",
+    "era": "16th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ballynahinch_Castle"}, {"name": "Ballynahinch Castle Official", "url": "https://www.ballynahinch-castle.com/"}]
+  },
+  {
+    "name": "Iona Abbey",
+    "description": "The cradle of Christianity in Scotland — a sacred island where St Columba landed in 563 AD and where Scottish kings were buried, wrapped in Atlantic light and ancient peace.",
+    "history": "Founded in 563 AD by St Columba, an Irish prince-turned-monk who brought Christianity to Scotland from this tiny Hebridean island. The abbey became one of the most important religious centres in western Europe. The Book of Kells is believed to have been at least partly created here. 48 Scottish kings, including Macbeth, are said to be buried in the Rèilig Odhràin cemetery. The abbey fell into ruin after the Reformation but was restored by the Iona Community from 1938. A place of pilgrimage for 1,400 years.",
+    "tags": ["well-preserved", "photogenic", "atmospheric", "island", "remote", "celtic", "medieval", "coastal", "guided-tours"],
+    "access": "free",
+    "era": "6th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Iona_Abbey"}, {"name": "Historic Environment Scotland", "url": "https://www.historicenvironment.scot/visit-a-place/places/iona-abbey-and-nunnery/"}]
+  },
+  {
+    "name": "Scotney Castle (Kent)",
+    "description": "A moated medieval ruin framed by rhododendrons — deliberately left as a picturesque eye-catcher when the Hussey family built their new house on the hill above, creating the perfect Romantic landscape.",
+    "history": "The Old Castle dates from the 1370s, built by Roger Ashburnham. A round tower from the original castle and Tudor additions survive as romantic ruins. In the 1830s-1840s, Edward Hussey III deliberately quarried stone from the old castle to build a new house on the hill, leaving the ruins as a picturesque feature in a landscaped quarry garden designed by William Sawrey Gilpin. The result is one of England's most photogenic properties — the epitome of the Picturesque movement. National Trust since 1970.",
+    "tags": ["photogenic", "ruins-romantic", "gardens", "romantic", "atmospheric", "medieval", "woodland", "guided-tours", "tearoom-cafe", "gift-shop"],
+    "access": "paid",
+    "era": "14th century",
+    "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Scotney_Castle"}, {"name": "National Trust", "url": "https://www.nationaltrust.org.uk/visit/kent/scotney-castle"}]
+  }
+]
