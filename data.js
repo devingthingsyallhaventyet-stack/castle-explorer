@@ -50576,33 +50576,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Edrom Church",
-    "lat": 55.7833,
-    "lng": -2.3333,
-    "country": "Scotland",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "partial",
-    "description": "Norman doorway surviving from the original Romanesque church.",
-    "image": "https://img.castlecore.uk/edrom-church.jpg",
-    "rating": 3.4,
-    "reviewCount": 40,
-    "county": "Scottish Borders",
-    "tags": [
-      "norman",
-      "doorway",
-      "romanesque"
-    ],
-    "access": "free",
-    "_index": 2058,
-    "gallery": [
-      "https://img.castlecore.uk/edrom-church-2.jpg",
-      "https://img.castlecore.uk/edrom-church-3.jpg",
-      "https://img.castlecore.uk/edrom-church-4.jpg",
-      "https://img.castlecore.uk/edrom-church-5.jpg"
-    ]
-  },
-  {
     "name": "Coldingham Priory",
     "lat": 55.9,
     "lng": -2.2,
