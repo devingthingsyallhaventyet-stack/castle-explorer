@@ -44,11 +44,14 @@ h1 { font-size:1.5rem; margin-bottom:4px; color:#8b2335; }
 .btn-keep:hover { background:#b8d4e8; }
 .btn-skip { background:#f0f0f0; color:#666; }
 .btn-skip:hover { background:#e0e0e0; }
+.btn-nuke { background:#f8d7da; color:#721c24; }
+.btn-nuke:hover { background:#f1b0b7; }
 .btn-undo { background:#fff3cd; color:#856404; font-size:.75rem; padding:4px 10px; }
 
 .decision-badge { font-size:.75rem; font-weight:600; padding:3px 10px; border-radius:10px; }
 .decision-merge { background:#d4edda; color:#155724; }
 .decision-keep { background:#d4e6f1; color:#1a5276; }
+.decision-nuke { background:#f8d7da; color:#721c24; }
 
 .export-bar { position:sticky; bottom:0; background:#fff; padding:14px 18px; border-radius:10px 10px 0 0; box-shadow:0 -2px 8px rgba(0,0,0,.1); display:flex; justify-content:space-between; align-items:center; margin-top:20px; z-index:100; }
 .btn-export { background:#8b2335; color:#fff; padding:10px 24px; border:none; border-radius:8px; font-size:.9rem; font-weight:600; cursor:pointer; }
@@ -80,6 +83,7 @@ h1 { font-size:1.5rem; margin-bottom:4px; color:#8b2335; }
     <option value="pending">Pending</option>
     <option value="merge">Marked Merge</option>
     <option value="keep">Marked Keep</option>
+    <option value="delete-both">Marked Delete Both</option>
   </select>
   <select id="filterCountry">
     <option value="all">All Countries</option>
@@ -210,11 +214,13 @@ function renderPairs() {
     if(statusFilter === 'pending' && decision) return;
     if(statusFilter === 'merge' && decision !== 'merge') return;
     if(statusFilter === 'keep' && decision !== 'keep') return;
+    if(statusFilter === 'delete-both' && decision !== 'delete-both') return;
     if(countryFilter !== 'all' && pair.primary.country !== countryFilter && pair.secondary.country !== countryFilter) return;
     
     const decidedClass = decision ? 'decided' : '';
     const badge = decision === 'merge' ? '<span class="decision-badge decision-merge">MERGE</span>' :
-                  decision === 'keep' ? '<span class="decision-badge decision-keep">KEEP BOTH</span>' : '';
+                  decision === 'keep' ? '<span class="decision-badge decision-keep">KEEP BOTH</span>' :
+                  decision === 'delete-both' ? '<span class="decision-badge decision-nuke">DELETE BOTH</span>' : '';
     
     html += `
       <div class="pair ${decidedClass}" id="pair-${idx}">
@@ -238,6 +244,7 @@ function renderPairs() {
           <div class="actions">
             <button class="btn btn-merge" onclick="decide(${idx},'merge')">🔀 Merge (delete secondary)</button>
             <button class="btn btn-keep" onclick="decide(${idx},'keep')">✅ Keep Both (different sites)</button>
+            <button class="btn btn-nuke" onclick="decide(${idx},'delete-both')">🗑 Delete Both</button>
             ${decision ? `<button class="btn btn-undo" onclick="undecide(${idx})">↩ Undo</button>` : ''}
           </div>
         </div>
@@ -270,34 +277,47 @@ function undecide(idx) {
 function updateStats() {
   const total = PAIRS.length;
   let merges = 0, keeps = 0;
+  let nukes = 0;
   PAIRS.forEach(p => {
     const d = decisions[decisionKey(p)];
     if(d === 'merge') merges++;
     if(d === 'keep') keeps++;
+    if(d === 'delete-both') nukes++;
   });
   document.getElementById('total').textContent = total;
-  document.getElementById('reviewed').textContent = merges + keeps;
+  document.getElementById('reviewed').textContent = merges + keeps + nukes;
   document.getElementById('mergeCount').textContent = merges;
   document.getElementById('keepCount').textContent = keeps;
-  document.getElementById('remaining').textContent = total - merges - keeps;
-  document.getElementById('exportInfo').textContent = `${merges} to merge, ${keeps} to keep. ${total - merges - keeps} remaining.`;
+  document.getElementById('remaining').textContent = total - merges - keeps - nukes;
+  document.getElementById('exportInfo').textContent = `${merges} merge, ${nukes} delete both, ${keeps} keep. ${total - merges - keeps - nukes} remaining.`;
 }
 
 function exportDecisions() {
   const toMerge = [];
+  const toDeleteBoth = [];
   PAIRS.forEach(p => {
     const key = decisionKey(p);
     if(decisions[key] === 'merge') {
       toMerge.push({
+        action: 'merge',
         keep: p.primary.name,
         keepIndex: p.primary._index,
         delete: p.secondary.name,
         deleteIndex: p.secondary._index
       });
+    } else if(decisions[key] === 'delete-both') {
+      toDeleteBoth.push({
+        action: 'delete-both',
+        deleteA: p.primary.name,
+        deleteAIndex: p.primary._index,
+        deleteB: p.secondary.name,
+        deleteBIndex: p.secondary._index
+      });
     }
   });
   
-  const blob = new Blob([JSON.stringify(toMerge, null, 2)], {type:'application/json'});
+  const exported = { merge: toMerge, deleteBoth: toDeleteBoth };
+  const blob = new Blob([JSON.stringify(exported, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
