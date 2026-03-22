@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merge Review — castlecore</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#f5f5f5; color:#333; padding:20px; max-width:1100px; margin:0 auto; }
+h1 { font-size:1.5rem; margin-bottom:4px; color:#8b2335; }
+.subtitle { color:#666; margin-bottom:20px; font-size:.9rem; }
+.stats-bar { display:flex; gap:16px; margin-bottom:20px; font-size:.85rem; }
+.stat { padding:8px 14px; background:#fff; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.1); }
+.stat b { color:#8b2335; }
+
+.pair { background:#fff; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,.08); margin-bottom:12px; overflow:hidden; transition:opacity .3s; }
+.pair.decided { opacity:.45; }
+.pair-header { display:flex; justify-content:space-between; align-items:center; padding:14px 18px; cursor:pointer; }
+.pair-header:hover { background:#fafafa; }
+.pair-num { font-size:.75rem; color:#999; width:30px; }
+.pair-names { flex:1; }
+.pair-names .primary { font-weight:600; color:#333; }
+.pair-names .secondary { color:#8b2335; margin-left:4px; }
+.pair-names .arrow { color:#999; margin:0 8px; }
+.pair-country { font-size:.8rem; color:#666; background:#f0f0f0; padding:2px 8px; border-radius:10px; margin-right:12px; }
+.pair-extra { font-size:.75rem; color:#999; background:#f8f8f8; padding:2px 8px; border-radius:10px; margin-right:12px; }
+
+.pair-detail { display:none; padding:0 18px 16px; border-top:1px solid #eee; }
+.pair-detail.open { display:block; }
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:12px 0; }
+.site-card { padding:12px; background:#fafafa; border-radius:8px; font-size:.82rem; }
+.site-card h3 { font-size:.9rem; margin-bottom:6px; }
+.site-card .field { margin-bottom:4px; }
+.site-card .label { font-weight:600; color:#555; }
+.site-card .val { color:#333; }
+.site-card .missing { color:#ccc; font-style:italic; }
+.site-card img { width:100%; max-height:180px; object-fit:cover; border-radius:6px; margin-bottom:8px; }
+
+.actions { display:flex; gap:8px; margin-top:10px; }
+.btn { padding:8px 16px; border:none; border-radius:6px; font-size:.82rem; font-weight:600; cursor:pointer; transition:all .15s; }
+.btn-merge { background:#d4edda; color:#155724; }
+.btn-merge:hover { background:#b8dfc6; }
+.btn-keep { background:#d4e6f1; color:#1a5276; }
+.btn-keep:hover { background:#b8d4e8; }
+.btn-skip { background:#f0f0f0; color:#666; }
+.btn-skip:hover { background:#e0e0e0; }
+.btn-undo { background:#fff3cd; color:#856404; font-size:.75rem; padding:4px 10px; }
+
+.decision-badge { font-size:.75rem; font-weight:600; padding:3px 10px; border-radius:10px; }
+.decision-merge { background:#d4edda; color:#155724; }
+.decision-keep { background:#d4e6f1; color:#1a5276; }
+
+.export-bar { position:sticky; bottom:0; background:#fff; padding:14px 18px; border-radius:10px 10px 0 0; box-shadow:0 -2px 8px rgba(0,0,0,.1); display:flex; justify-content:space-between; align-items:center; margin-top:20px; z-index:100; }
+.btn-export { background:#8b2335; color:#fff; padding:10px 24px; border:none; border-radius:8px; font-size:.9rem; font-weight:600; cursor:pointer; }
+.btn-export:hover { background:#6d1a2a; }
+.btn-export:disabled { background:#ccc; cursor:not-allowed; }
+
+.filter-bar { display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; }
+.filter-bar select, .filter-bar input { padding:6px 10px; border:1px solid #ccc; border-radius:6px; font-size:.82rem; }
+.filter-bar input { width:220px; }
+</style>
+</head>
+<body>
+
+<h1>🦞 Merge Review</h1>
+<p class="subtitle">Review potential duplicate pairs. Merge = delete the secondary, keep the primary. Keep Both = they're different sites.</p>
+
+<div class="stats-bar">
+  <div class="stat">Total pairs: <b id="total">0</b></div>
+  <div class="stat">Reviewed: <b id="reviewed">0</b></div>
+  <div class="stat">Merge: <b id="mergeCount">0</b></div>
+  <div class="stat">Keep Both: <b id="keepCount">0</b></div>
+  <div class="stat">Remaining: <b id="remaining">0</b></div>
+</div>
+
+<div class="filter-bar">
+  <input type="text" id="search" placeholder="Search names...">
+  <select id="filterStatus">
+    <option value="all">All</option>
+    <option value="pending">Pending</option>
+    <option value="merge">Marked Merge</option>
+    <option value="keep">Marked Keep</option>
+  </select>
+  <select id="filterCountry">
+    <option value="all">All Countries</option>
+  </select>
+</div>
+
+<div id="pairs"></div>
+
+<div class="export-bar">
+  <div id="exportInfo" style="font-size:.85rem;color:#666;">Make your decisions, then export.</div>
+  <button class="btn-export" id="exportBtn" onclick="exportDecisions()">Export Merge List (JSON)</button>
+</div>
+
+<script src="data.js"></script>
+<script>
+// Build lookup
+const byId = {};
+CASTLES.forEach((s,i) => { s._idx = i; byId[s._index !== undefined ? s._index : i] = s; });
+
+function slug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+}
+
+function dist(a,b) {
+  return Math.sqrt(Math.pow(a.lat-b.lat,2)+Math.pow(a.lng-b.lng,2));
+}
+
+// Pairs data (generated by scan)
+const PAIRS = [];
+
+// Reproduce the scan logic client-side
+const suffixes = ['gardens','garden','park','grounds','estate','lodge','gatehouse','walls','town walls','battery','priory','abbey','friary','chapel','church','mint','distillery','amphitheatre','cathedral','burial chamber','great hall','deer park','views','restored','active','visitor centre','monastic site','barbican','ogham stones','keep','remains'];
+
+const found = new Set();
+for(let i=0;i<CASTLES.length;i++){
+  const a = CASTLES[i].name.toLowerCase().trim();
+  for(let j=i+1;j<CASTLES.length;j++){
+    const b = CASTLES[j].name.toLowerCase().trim();
+    const key = [CASTLES[i].name,CASTLES[j].name].sort().join('|');
+    
+    if(b.startsWith(a+' ') || a.startsWith(b+' ')){
+      if(!found.has(key)){
+        found.add(key);
+        const shorter = a.length<=b.length ? CASTLES[i] : CASTLES[j];
+        const longer = a.length>b.length ? CASTLES[i] : CASTLES[j];
+        const extra = longer.name.toLowerCase().replace(shorter.name.toLowerCase(),'').trim();
+        PAIRS.push({ primary:shorter, secondary:longer, extra, d:dist(shorter,longer) });
+      }
+    }
+    
+    // Shared 2-word prefix + nearby
+    const wa = a.split(/\s+/), wb = b.split(/\s+/);
+    if(wa.length>=2 && wb.length>=2 && wa[0]===wb[0] && wa[1]===wb[1] && a!==b){
+      if(Math.abs(CASTLES[i].lat-CASTLES[j].lat)<0.01 && Math.abs(CASTLES[i].lng-CASTLES[j].lng)<0.01){
+        if(!found.has(key)){
+          found.add(key);
+          PAIRS.push({ primary:CASTLES[i], secondary:CASTLES[j], extra:'nearby, shared prefix', d:dist(CASTLES[i],CASTLES[j]) });
+        }
+      }
+    }
+  }
+}
+
+PAIRS.sort((a,b) => a.primary.name.localeCompare(b.primary.name));
+
+// Decisions stored in localStorage
+const STORAGE_KEY = 'castlecore-merge-decisions';
+let decisions = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+
+function saveDecisions() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(decisions));
+  updateStats();
+}
+
+function decisionKey(pair) {
+  return [pair.primary.name, pair.secondary.name].sort().join('|');
+}
+
+// Countries for filter
+const countries = [...new Set(PAIRS.map(p=>p.primary.country))].sort();
+const countrySelect = document.getElementById('filterCountry');
+countries.forEach(c => {
+  const o = document.createElement('option');
+  o.value = c; o.textContent = c;
+  countrySelect.appendChild(o);
+});
+
+function renderField(label, val) {
+  if(!val) return `<div class="field"><span class="label">${label}:</span> <span class="missing">—</span></div>`;
+  const v = typeof val === 'object' ? JSON.stringify(val) : String(val);
+  return `<div class="field"><span class="label">${label}:</span> <span class="val">${v.length > 200 ? v.slice(0,200)+'…' : v}</span></div>`;
+}
+
+function renderSiteCard(site) {
+  const s = slug(site.name);
+  const imgSrc = site.image || site.gallery?.[0] || '';
+  return `
+    <div class="site-card">
+      ${imgSrc ? `<img src="${imgSrc}" onerror="this.style.display='none'" alt="">` : ''}
+      <h3><a href="site/${s}.html" target="_blank">${site.name}</a></h3>
+      ${renderField('Country', site.country)}
+      ${renderField('County', site.county)}
+      ${renderField('Type', site.type)}
+      ${renderField('Era', site.era)}
+      ${renderField('Condition', site.condition)}
+      ${renderField('Rating', site.rating ? site.rating + ' (' + (site.reviewCount||0) + ' reviews)' : null)}
+      ${renderField('Description', site.description)}
+      ${renderField('Tags', site.tags?.join?.(', '))}
+      ${renderField('Coords', site.lat.toFixed(4) + ', ' + site.lng.toFixed(4))}
+      ${renderField('Distance', '')}
+    </div>
+  `;
+}
+
+function renderPairs() {
+  const container = document.getElementById('pairs');
+  const searchVal = document.getElementById('search').value.toLowerCase();
+  const statusFilter = document.getElementById('filterStatus').value;
+  const countryFilter = document.getElementById('filterCountry').value;
+  
+  let html = '';
+  PAIRS.forEach((pair, idx) => {
+    const key = decisionKey(pair);
+    const decision = decisions[key];
+    
+    // Filters
+    if(searchVal && !pair.primary.name.toLowerCase().includes(searchVal) && !pair.secondary.name.toLowerCase().includes(searchVal)) return;
+    if(statusFilter === 'pending' && decision) return;
+    if(statusFilter === 'merge' && decision !== 'merge') return;
+    if(statusFilter === 'keep' && decision !== 'keep') return;
+    if(countryFilter !== 'all' && pair.primary.country !== countryFilter && pair.secondary.country !== countryFilter) return;
+    
+    const decidedClass = decision ? 'decided' : '';
+    const badge = decision === 'merge' ? '<span class="decision-badge decision-merge">MERGE</span>' :
+                  decision === 'keep' ? '<span class="decision-badge decision-keep">KEEP BOTH</span>' : '';
+    
+    html += `
+      <div class="pair ${decidedClass}" id="pair-${idx}">
+        <div class="pair-header" onclick="toggle(${idx})">
+          <span class="pair-num">${idx+1}</span>
+          <div class="pair-names">
+            <span class="primary">${pair.primary.name}</span>
+            <span class="arrow">↔</span>
+            <span class="secondary">${pair.secondary.name}</span>
+          </div>
+          <span class="pair-extra">${pair.extra}</span>
+          <span class="pair-country">${pair.primary.country}</span>
+          ${badge}
+        </div>
+        <div class="pair-detail" id="detail-${idx}">
+          <div style="font-size:.8rem;color:#666;margin-bottom:8px;">Distance: ${(pair.d * 111).toFixed(1)} km apart</div>
+          <div class="compare">
+            ${renderSiteCard(pair.primary)}
+            ${renderSiteCard(pair.secondary)}
+          </div>
+          <div class="actions">
+            <button class="btn btn-merge" onclick="decide(${idx},'merge')">🔀 Merge (delete secondary)</button>
+            <button class="btn btn-keep" onclick="decide(${idx},'keep')">✅ Keep Both (different sites)</button>
+            ${decision ? `<button class="btn btn-undo" onclick="undecide(${idx})">↩ Undo</button>` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  
+  container.innerHTML = html || '<p style="text-align:center;color:#999;padding:40px;">No pairs match your filters.</p>';
+  updateStats();
+}
+
+function toggle(idx) {
+  document.getElementById('detail-'+idx).classList.toggle('open');
+}
+
+function decide(idx, type) {
+  const key = decisionKey(PAIRS[idx]);
+  decisions[key] = type;
+  saveDecisions();
+  renderPairs();
+}
+
+function undecide(idx) {
+  const key = decisionKey(PAIRS[idx]);
+  delete decisions[key];
+  saveDecisions();
+  renderPairs();
+}
+
+function updateStats() {
+  const total = PAIRS.length;
+  let merges = 0, keeps = 0;
+  PAIRS.forEach(p => {
+    const d = decisions[decisionKey(p)];
+    if(d === 'merge') merges++;
+    if(d === 'keep') keeps++;
+  });
+  document.getElementById('total').textContent = total;
+  document.getElementById('reviewed').textContent = merges + keeps;
+  document.getElementById('mergeCount').textContent = merges;
+  document.getElementById('keepCount').textContent = keeps;
+  document.getElementById('remaining').textContent = total - merges - keeps;
+  document.getElementById('exportInfo').textContent = `${merges} to merge, ${keeps} to keep. ${total - merges - keeps} remaining.`;
+}
+
+function exportDecisions() {
+  const toMerge = [];
+  PAIRS.forEach(p => {
+    const key = decisionKey(p);
+    if(decisions[key] === 'merge') {
+      toMerge.push({
+        keep: p.primary.name,
+        keepIndex: p.primary._index,
+        delete: p.secondary.name,
+        deleteIndex: p.secondary._index
+      });
+    }
+  });
+  
+  const blob = new Blob([JSON.stringify(toMerge, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'merge-decisions.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Event listeners
+document.getElementById('search').addEventListener('input', renderPairs);
+document.getElementById('filterStatus').addEventListener('change', renderPairs);
+document.getElementById('filterCountry').addEventListener('change', renderPairs);
+
+renderPairs();
+</script>
+</body>
+</html>
