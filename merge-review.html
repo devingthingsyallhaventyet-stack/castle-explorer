@@ -46,6 +46,8 @@ h1 { font-size:1.5rem; margin-bottom:4px; color:#8b2335; }
 .btn-skip:hover { background:#e0e0e0; }
 .btn-nuke { background:#f8d7da; color:#721c24; }
 .btn-nuke:hover { background:#f1b0b7; }
+.btn-del-single { background:#fff; border:1px solid #dc3545; color:#dc3545; margin-top:8px; font-size:.75rem; padding:4px 10px; border-radius:5px; cursor:pointer; }
+.btn-del-single:hover { background:#dc3545; color:#fff; }
 .btn-undo { background:#fff3cd; color:#856404; font-size:.75rem; padding:4px 10px; }
 
 .decision-badge { font-size:.75rem; font-weight:600; padding:3px 10px; border-radius:10px; }
@@ -177,7 +179,7 @@ function renderField(label, val) {
   return `<div class="field"><span class="label">${label}:</span> <span class="val">${v.length > 200 ? v.slice(0,200)+'…' : v}</span></div>`;
 }
 
-function renderSiteCard(site) {
+function renderSiteCard(site, pairIdx, role) {
   const s = slug(site.name);
   const imgSrc = site.image || site.gallery?.[0] || '';
   return `
@@ -193,7 +195,7 @@ function renderSiteCard(site) {
       ${renderField('Description', site.description)}
       ${renderField('Tags', site.tags?.join?.(', '))}
       ${renderField('Coords', site.lat.toFixed(4) + ', ' + site.lng.toFixed(4))}
-      ${renderField('Distance', '')}
+      <button class="btn btn-del-single" onclick="decide(${pairIdx},'delete-${role}')">🗑 Delete this one</button>
     </div>
   `;
 }
@@ -212,7 +214,7 @@ function renderPairs() {
     // Filters
     if(searchVal && !pair.primary.name.toLowerCase().includes(searchVal) && !pair.secondary.name.toLowerCase().includes(searchVal)) return;
     if(statusFilter === 'pending' && decision) return;
-    if(statusFilter === 'merge' && decision !== 'merge') return;
+    if(statusFilter === 'merge' && decision !== 'merge' && decision !== 'delete-primary' && decision !== 'delete-secondary') return;
     if(statusFilter === 'keep' && decision !== 'keep') return;
     if(statusFilter === 'delete-both' && decision !== 'delete-both') return;
     if(countryFilter !== 'all' && pair.primary.country !== countryFilter && pair.secondary.country !== countryFilter) return;
@@ -220,7 +222,9 @@ function renderPairs() {
     const decidedClass = decision ? 'decided' : '';
     const badge = decision === 'merge' ? '<span class="decision-badge decision-merge">MERGE</span>' :
                   decision === 'keep' ? '<span class="decision-badge decision-keep">KEEP BOTH</span>' :
-                  decision === 'delete-both' ? '<span class="decision-badge decision-nuke">DELETE BOTH</span>' : '';
+                  decision === 'delete-both' ? '<span class="decision-badge decision-nuke">DELETE BOTH</span>' :
+                  decision === 'delete-primary' ? '<span class="decision-badge decision-nuke">DELETE PRIMARY</span>' :
+                  decision === 'delete-secondary' ? '<span class="decision-badge decision-merge">DELETE SECONDARY</span>' : '';
     
     html += `
       <div class="pair ${decidedClass}" id="pair-${idx}">
@@ -238,8 +242,8 @@ function renderPairs() {
         <div class="pair-detail" id="detail-${idx}">
           <div style="font-size:.8rem;color:#666;margin-bottom:8px;">Distance: ${(pair.d * 111).toFixed(1)} km apart</div>
           <div class="compare">
-            ${renderSiteCard(pair.primary)}
-            ${renderSiteCard(pair.secondary)}
+            ${renderSiteCard(pair.primary, idx, 'primary')}
+            ${renderSiteCard(pair.secondary, idx, 'secondary')}
           </div>
           <div class="actions">
             <button class="btn btn-merge" onclick="decide(${idx},'merge')">🔀 Merge (delete secondary)</button>
@@ -283,6 +287,7 @@ function updateStats() {
     if(d === 'merge') merges++;
     if(d === 'keep') keeps++;
     if(d === 'delete-both') nukes++;
+    if(d === 'delete-primary' || d === 'delete-secondary') merges++;
   });
   document.getElementById('total').textContent = total;
   document.getElementById('reviewed').textContent = merges + keeps + nukes;
@@ -312,6 +317,22 @@ function exportDecisions() {
         deleteAIndex: p.primary._index,
         deleteB: p.secondary.name,
         deleteBIndex: p.secondary._index
+      });
+    } else if(decisions[key] === 'delete-primary') {
+      toMerge.push({
+        action: 'delete-one',
+        keep: p.secondary.name,
+        keepIndex: p.secondary._index,
+        delete: p.primary.name,
+        deleteIndex: p.primary._index
+      });
+    } else if(decisions[key] === 'delete-secondary') {
+      toMerge.push({
+        action: 'delete-one',
+        keep: p.primary.name,
+        keepIndex: p.primary._index,
+        delete: p.secondary.name,
+        deleteIndex: p.secondary._index
       });
     }
   });
