@@ -7,364 +7,252 @@ const originalCode = code;
 
 const enrichments = [
   {
-    name: "Dalton Castle",
-    description: "A brooding 14th-century peel tower rising from a quiet Cumbrian market town — once a monastic prison where abbots dispensed justice in the shadow of Furness Abbey.",
-    history: "Built in the 14th century by monks of Furness Abbey to protect nearby Dalton-in-Furness. Served as a prison from at least 1257 until 1774. After Henry VIII dissolved the abbey, the castle fell to ruin before being repaired with abbey stone. Now owned by the National Trust and hosts a local history exhibition.",
-    tags: ["well-preserved", "museum", "medieval", "norman"],
-    era: "14th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dalton_Castle,_Cumbria"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/dalton-castle"}]
-  },
-  {
-    name: "Ravensworth Castle",
-    description: "A hauntingly beautiful Grade I ruin wrapped in a dry moat, where 14th-century sandstone towers crumble beneath centuries of ivy — pure dark academia energy.",
-    history: "First recorded when King John visited in 1201. The surviving ruins date from the late 14th century, built by Henry, 1st Baron FitzHugh, who enclosed 200 acres of parkland around it in 1391. Gradually dismantled from the 16th century, its stone reused for local buildings. Grade I listed and a scheduled monument.",
-    tags: ["ruins-romantic", "medieval", "atmospheric", "dark-brooding", "free-entry"],
-    era: "14th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ravensworth_Castle_(North_Yorkshire)"}, {name: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1150657"}]
-  },
-  {
-    name: "Wiston Castle",
-    description: "One of Wales's finest motte-and-bailey castles, founded by a Flemish settler on land seized from Norman rebels — fifty stone steps climb to its dramatic hilltop perch.",
-    history: "Founded after 1100 by Wizo, a Flemish settler granted land by Henry I. Captured by the Welsh several times but always retaken. Abandoned in the 13th century when its owners moved to nearby Picton Castle. Grade I listed building and scheduled monument in the care of Cadw.",
-    tags: ["hilltop", "ruins-romantic", "norman", "free-entry", "photogenic"],
-    era: "12th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wiston_Castle"}, {name: "Cadw", url: "https://cadw.gov.wales/visit/places-to-visit/wiston-castle"}]
-  },
-  {
-    name: "Cloghan Castle",
-    description: "A sturdy Offaly tower house rising from ancient monastic foundations — where a 6th-century saint's monastery became a Norman stronghold on the banks of the Shannon.",
-    history: "Originally a monastery founded by St Crónán around 600 AD. The Normans fortified the site, and the current tower house dates from the medieval period. Located in the parish of Lusmagh, County Offaly, near Banagher on the River Shannon.",
-    tags: ["medieval", "riverside", "atmospheric", "remote"],
-    era: "Medieval",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lusmagh#Cloghan_Castle"}]
-  },
-  {
-    name: "Cubbie Roo's Castle",
-    description: "The oldest stone castle in Orkney, built by a Norse chieftain on a tiny windswept island — a raw, elemental ruin where Viking sagas come alive.",
-    history: "Built around 1145 by Kolbeinn Hrúga, a powerful Norse chieftain mentioned in the Orkneyinga Saga. Located on the island of Wyre, one of Orkney's smallest inhabited islands. One of Scotland's oldest stone castles. Maintained by Historic Scotland alongside the nearby ruins of St Mary's Chapel.",
-    tags: ["island", "remote", "coastal", "prehistoric", "free-entry", "atmospheric"],
-    era: "12th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wyre,_Orkney"}, {name: "Historic Environment Scotland", url: "https://www.historicenvironment.scot/visit-a-place/places/cubbie-roos-castle/"}]
-  },
-  {
-    name: "Castle Coeffin",
-    description: "A haunted MacDougall ruin on the wild shores of Lismore, where a Norse princess's ghost is said to wander until her bones return to Norway.",
-    history: "Built in the 13th century by the MacDougalls of Lorn on the site of a Viking fortress. Named after Caifen, a Danish prince whose sister allegedly haunts the castle. First documented in 1469 when granted to Sir Colin Campbell of Glenorchy. Stands on a promontory on Lismore's northwest coast, across Loch Linnhe.",
-    tags: ["island", "coastal", "haunted", "ruins-romantic", "remote", "atmospheric", "medieval"],
-    era: "13th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Castle_Coeffin"}, {name: "Historic Environment Scotland", url: "https://www.trove.scot/designation/SM2433"}]
-  },
-  {
-    name: "Mettingham Castle",
-    description: "A moated medieval manor turned monastic college in deepest Suffolk — where knights gave way to canons and 13 boys learned their Latin behind stone walls.",
-    history: "Founded in 1342 when Sir John de Norwich received a licence to crenellate his manor house. An Edwardian-style gatehouse guarded its stone walls. In 1394, it was given to secular canons from nearby Norton, who established Mettingham College and taught up to 13 boys. Features three moated courts and surviving gatehouse.",
-    tags: ["medieval", "ruins-romantic", "atmospheric", "gardens"],
-    era: "14th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mettingham_Castle"}, {name: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/mettingham-castle/"}]
-  },
-  {
-    name: "Weeting Castle",
-    description: "Not a castle at all but a grand 12th-century manor house built of Norfolk flint — a moated enigma designed to impress, now a romantic ruin in English Heritage care.",
-    history: "Built around 1180 by Hugh de Plais as a high-status domestic dwelling mimicking castle architecture. Comprised a three-storey tower, great hall, and service block. A moat was added in the 13th century. Ceased use in the late 14th century. Became an ornamental feature of Weeting Hall from 1770. Managed by English Heritage since 1926.",
-    tags: ["ruins-romantic", "medieval", "free-entry", "photogenic"],
-    era: "12th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Weeting_Castle"}, {name: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/weeting-castle/"}]
-  },
-  {
-    name: "Scotstarvit Tower",
-    description: "A perfectly preserved six-storey tower house rising from the Fife hills — home to a satirist who skewered Scottish statesmen from his lofty perch.",
-    history: "Built in the third quarter of the 16th century by the Inglis family. Bought in 1611 by Sir John Scot, author of 'The Staggering State of the Scots' Statesmen', who rebuilt it in the 1620s. Later passed to the Wemyss family. Placed in National Trust for Scotland care in 1948, now managed by Historic Environment Scotland.",
-    tags: ["well-preserved", "hilltop", "photogenic", "medieval", "guided-tours"],
-    era: "16th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Scotstarvit_Tower"}, {name: "Historic Environment Scotland", url: "https://www.historicenvironment.scot/visit-a-place/places/scotstarvit-tower/"}]
-  },
-  {
-    name: "Lympne Castle",
-    description: "A medieval fortress above Romney Marsh where archdeacons once held court — and Paul McCartney's Wings once recorded an album among its ancient stones.",
-    history: "Built in the 1080s for the Archdeacons of Canterbury near the Roman Saxon Shore fort of Portus Lemanis. Rebuilt in the 1360s and expanded. Served as the archdeacon's residence until 1860. Restored by Robert Lorimer in 1907-12. Wings recorded sessions here for 'Back to the Egg' in 1978. Grade I listed.",
-    tags: ["well-preserved", "medieval", "norman", "wedding-venue", "gardens", "photogenic"],
-    era: "11th-14th century",
+    name: "Castle Leslie",
+    description: "A Scottish baronial fantasy set on a thousand wild acres in County Monaghan — where Jonathan Swift once stayed and the Leslies have held court since 1665.",
+    history: "Built in 1870-71 in Scottish baronial style by architect W.H. Lynn for Sir John Leslie, 1st Baronet, on the site of a 17th-century mansion. The Leslie family, descended from Clan Leslie, acquired the estate in 1665 when 'fighting bishop' John Leslie bought it with funds from Charles II. Features a Renaissance cloister inspired by Michelangelo's design in Rome. Now operates as a luxury hotel.",
+    tags: ["well-preserved", "romantic", "atmospheric", "gardens", "woodland", "wedding-venue", "events-venue"],
     access: "paid",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lympne_Castle"}]
+    era: "19th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Castle_Leslie"}, {name: "Irish Heritage Houses", url: "https://www.ihh.ie/index.cfm/houses/house/name/Castle%20Leslie"}]
   },
   {
-    name: "Loughor Castle",
-    description: "A ruined Norman ringwork perched above the River Loughor, built atop a Roman fort — where Welsh princes and English lords battled for control of the Gower.",
-    history: "Built around 1106 by Anglo-Norman lord Henry de Beaumont on the site of the Roman fort Leucarum. Attacked and burnt in 1151, captured by Llywelyn the Great in 1215. John de Braose rebuilt it with stone walls after 1220. A stone tower added in the late 13th century. Now in the care of Cadw.",
-    tags: ["ruins-romantic", "norman", "hilltop", "free-entry", "riverside"],
-    era: "12th century",
+    name: "St Fagans Castle",
+    description: "An Elizabethan mansion risen from Norman ruins, now the jewel of Wales's open-air museum — where centuries of Welsh life unfold across the grounds.",
+    history: "Built c.1580 on the ruins of a Norman motte and bailey castle, this Grade I listed Elizabethan mansion was constructed in an E-shape, fashionable in the period. The grounds now house St Fagans National Museum of History, with over 40 re-erected historic buildings chronicling Welsh culture and architecture. Free entry, managed by Amgueddfa Cymru.",
+    tags: ["well-preserved", "museum", "gardens", "free-entry", "kid-friendly", "photogenic"],
     access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Loughor_Castle"}, {name: "Cadw", url: "https://cadw.gov.wales/visit/places-to-visit/loughor-castle"}]
-  },
-  {
-    name: "Arnside Tower",
-    description: "A crumbling five-storey pele tower hidden in Cumbrian woodland — built against Border Reivers, scarred by fire, and slowly surrendering to time.",
-    history: "Built in the second half of the 15th century as defence against Border Reivers. Constructed of limestone rubble, originally five storeys with an adjacent wing in a Scottish style rare for English towers. Suffered a serious fire in 1602 but was repaired. The northwestern side collapsed in the early 1900s. Privately owned.",
-    tags: ["ruins-romantic", "woodland", "atmospheric", "dark-brooding", "medieval"],
-    era: "15th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arnside_Tower"}]
-  },
-  {
-    name: "Crayke Castle",
-    description: "A restored 15th-century tower house crowning the highest point in its parish — where bishops of Durham ruled, Parliamentarians laid siege, and centuries of history settled into stone.",
-    history: "A castle has stood here since the Norman Conquest, attributed to Bishop Hugh Pudsey. The present building was constructed around 1450 for Robert Neville, Bishop of Durham, on land held by the See since Saxon times. Slighted during the Civil War siege of York. Sold in 1648 and restored. Grade I listed.",
-    tags: ["well-preserved", "hilltop", "medieval", "atmospheric", "photogenic"],
-    era: "15th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Crayke_Castle"}]
-  },
-  {
-    name: "Clackmannan Tower",
-    description: "A brooding five-storey tower house where King David II once lived and an eccentric Jacobite widow knighted Robert Burns with a sword she claimed was Robert the Bruce's.",
-    history: "Dates to at least the 14th century, inhabited by King David II of Scotland. Sold to his cousin Robert Bruce, 2nd Baron of Clackmannan in 1359. Extended in the 1400s. Catherine Bruce of Clackmannan (1696-1791), a fierce Jacobite supporter, was its most famous resident. Scheduled monument managed by Historic Environment Scotland.",
-    tags: ["hilltop", "medieval", "atmospheric", "haunted", "well-preserved"],
-    era: "14th-15th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Clackmannan_Tower"}, {name: "Historic Environment Scotland", url: "https://www.historicenvironment.scot/visit-a-place/places/clackmannan-tower/"}]
-  },
-  {
-    name: "Cessford Castle",
-    description: "A massive Border Reiver stronghold with walls thirteen feet thick — where the notorious Kerr clan defied English siege engines and the Earl of Surrey himself.",
-    history: "Built around 1450 by Andrew Ker, ancestor of the Earls of Roxburghe. An L-plan castle with up to six storeys, two barrel-vaulted, and walls up to 13 feet thick. Besieged in 1523 by the Earl of Surrey, who admitted it could never have been taken had defence continued. Abandoned in 1650. Scheduled monument.",
-    tags: ["ruins-romantic", "dark-brooding", "medieval", "atmospheric", "remote"],
-    era: "15th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cessford_Castle"}]
-  },
-  {
-    name: "Morton Castle",
-    description: "A lonely ruin above an artificial loch in the Nith Valley — where earls of March watched over deer parks and the ghost of a murdered regent lingers in the mist.",
-    history: "Part of a chain of castles along the strategically important Nith Valley. A castle existed here by 1307, held by Thomas Randolph, Earl of Moray. Destroyed per the Treaty of Berwick in 1357. Rebuilt by the earls of March in the early 15th century. Later passed to the Earls of Morton. The 4th Earl was executed in 1580 for Lord Darnley's murder.",
-    tags: ["ruins-romantic", "remote", "atmospheric", "dark-brooding", "hilltop", "medieval"],
-    era: "13th-15th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Morton_Castle"}, {name: "Historic Environment Scotland", url: "https://www.historicenvironment.scot/visit-a-place/places/morton-castle/"}]
-  },
-  {
-    name: "Dunbeath Castle",
-    description: "A dramatic clifftop fortress on the wild Caithness coast where a brave wife held off Montrose's Royalist army while her husband rode to warn Edinburgh.",
-    history: "First recorded in 1428, originally held by the Earl of Caithness. The Sinclairs built a four-storey tower house in 1620. In 1650, Catherine Fraser defended the castle against the Marquess of Montrose's forces while her husband Sir John Sinclair rode to Edinburgh. Mainly 17th-century with 19th-century extensions. Category A listed.",
-    tags: ["cliffside", "coastal", "atmospheric", "dark-brooding", "medieval", "gardens"],
-    era: "15th-17th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dunbeath_Castle"}]
-  },
-  {
-    name: "Hussey Tower",
-    description: "A solitary medieval tower in the heart of Boston, Lincolnshire — a rare survivor from the age of tax collectors and justices of the peace.",
-    history: "Built around 1450, commissioned by Richard Benyngton, a collector of taxes and Justice of the Peace for Boston. One of the few surviving medieval structures in the town. Grade II* listed building.",
-    tags: ["medieval", "well-preserved", "free-entry"],
-    era: "15th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hussey_Tower"}, {name: "Heritage Lincolnshire", url: "https://www.heritagelincolnshire.org/explore-with-us/historic-sites/hussey-tower"}]
-  },
-  {
-    name: "Greenhalgh Castle",
-    description: "Lancashire's last Royalist holdout — a ruined Tudor castle gifted by Henry VII to the man who helped him seize the crown at Bosworth Field.",
-    history: "Built in 1490 by Thomas Stanley, 1st Earl of Derby, on land reportedly gifted by his stepson Henry Tudor for helping defeat Richard III at Bosworth. John Leland called it 'a pretty castle of the lords of Derby'. During the Civil War, it was one of the last two Royalist strongholds in Lancashire, enduring a bitter siege before surrendering in May 1645.",
-    tags: ["ruins-romantic", "medieval", "tudor", "atmospheric", "dark-brooding"],
-    era: "15th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Greenhalgh_Castle"}]
-  },
-  {
-    name: "Breachacha Castle",
-    description: "A 15th-century Maclean stronghold on the shores of a Hebridean loch — where Samuel Johnson once stayed and the winds of Coll have battered stone for six centuries.",
-    history: "A 15th-century tower house on the island of Coll, stronghold of the Macleans of Coll since 1431. Superseded by a new dwelling in 1750 but remained partially occupied. Samuel Johnson and James Boswell stayed at the newer castle during their Hebrides tour. Restored to livable condition in the 1960s. Category A listed.",
-    tags: ["island", "coastal", "remote", "medieval", "atmospheric", "photogenic"],
-    era: "15th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Breachacha_Castle"}]
-  },
-  {
-    name: "Scattery Island",
-    description: "A haunting uninhabited island in the Shannon Estuary where an ancient round tower and ruined monastery stand sentinel — abandoned by its last residents in 1969.",
-    history: "Saint Senan founded a monastery here between 535 and 540 AD, which became the seat of a bishopric. Features one of Ireland's finest round towers and several ruined churches. Raided by Vikings multiple times. The last permanent residents left in 1969. Now managed by the Office of Public Works with a visitor centre.",
-    tags: ["island", "remote", "celtic", "atmospheric", "ruins-romantic", "free-entry"],
-    era: "6th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Inis_Cathaigh"}]
-  },
-  {
-    name: "Macduff's Castle",
-    description: "A Shakespearean ruin above the Wemyss Caves — where the legendary Thane of Fife's descendants held court and Edward I once slept before betraying his host.",
-    history: "Associated with the MacDuff Earls of Fife, possibly dating to the 11th century in the age of King Macbeth. The Wemyss family owned it from the 14th century. Edward I stayed here in 1304 before ordering its destruction after the host joined Robert the Bruce. Later expanded by the Colvilles in the 1530s. Partially demolished in 1967.",
-    tags: ["ruins-romantic", "coastal", "dark-brooding", "medieval", "atmospheric"],
-    era: "14th-16th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Macduff%27s_Castle"}]
-  },
-  {
-    name: "Menstrie Castle",
-    description: "Birthplace of the man who founded Nova Scotia — a restored 16th-century manor where poetry, politics, and colonial ambition all began under one Scottish roof.",
-    history: "Built around 1560 by the Alexander family. Birthplace of Sir William Alexander (c.1577), poet, Privy Councillor, Secretary of State, and 1st Earl of Stirling, who was instrumental in founding Nova Scotia. Later owned by the Holburn family. Restored in the 20th century. Now contains holiday flats and a museum run by the community.",
-    tags: ["well-preserved", "museum", "medieval", "tudor"],
     era: "16th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/St_Fagans_Castle"}, {name: "Museum Wales", url: "https://museum.wales/stfagans/buildings/castle/"}]
+  },
+  {
+    name: "Witley Court",
+    description: "A breathtaking Italianate ruin frozen in time — once one of England's grandest palaces, now a hauntingly beautiful shell with spectacular fountains still dancing.",
+    history: "Built for the Foley family in the 17th century, massively expanded by John Nash in the early 1800s, then rebuilt again by Samuel Daukes for the Earls of Dudley into one of the great Victorian palaces. A devastating fire in 1937 gutted the mansion. After 40 years of decay, English Heritage took over in 1972. The restored Perseus and Andromeda fountain is one of Europe's largest.",
+    tags: ["ruins-romantic", "atmospheric", "photogenic", "gardens", "dark-brooding", "guided-tours"],
+    access: "paid",
+    era: "17th-19th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Witley_Court"}, {name: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/"}]
+  },
+  {
+    name: "Ickworth House",
+    description: "A neoclassical rotunda rising from Suffolk parkland like a fever dream — conceived by an Earl-Bishop who wanted a gallery worthy of his European art collection.",
+    history: "Built 1795-1829 for Frederick Hervey, 4th Earl of Bristol and Bishop of Derry, who commissioned Italian architect Antonio Asprucci. Originally planned as an art gallery, but Napoleon seized the Earl's collection. He died in 1803 leaving completion to his successor, who made the East Wing the family home. The Hervey family owned the estate from 1467. Given to the National Trust in 1956 in lieu of death duties.",
+    tags: ["well-preserved", "photogenic", "gardens", "museum", "kid-friendly", "gift-shop", "tearoom-cafe"],
+    access: "paid",
+    era: "18th-19th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ickworth_House"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/suffolk/ickworth-estate/history-of-ickworth"}]
+  },
+  {
+    name: "Felbrigg Hall",
+    description: "A perfectly preserved Jacobean country house wrapped in ancient woodland — where centuries stand still and the walled garden blooms in quiet splendour.",
+    history: "Built 1621-24 by Robert Lyminge for Thomas Windham, with a Georgian west wing added c.1680. Home to the Windham/Wyndham family for centuries. Grade I listed, noted for its unaltered Jacobean architecture and fine Georgian interiors. Bequeathed to the National Trust in 1969 by Robert Ketton-Cremer, the last of the line. Grounds include a walled garden, orangery, and Felbrigg Woods SSSI.",
+    tags: ["well-preserved", "atmospheric", "gardens", "woodland", "museum", "gift-shop", "tearoom-cafe"],
+    access: "paid",
+    era: "17th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Felbrigg_Hall"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate/history-of-felbrigg"}]
+  },
+  {
+    name: "Beverley Minster",
+    description: "One of England's finest Gothic churches, rising from the Yorkshire market town where a 7th-century saint's bones still rest beneath the nave.",
+    history: "Founded c.700 AD by Saint John of Beverley, Bishop of York, as a monastery. His tomb made it a major pilgrimage centre, transforming a remote settlement into a thriving town. The current Gothic structure dates primarily from the 13th-14th centuries. Features exceptional medieval carvings, a stunning Percy tomb, and 68 misericords. Often called England's finest non-cathedral church.",
+    tags: ["well-preserved", "photogenic", "atmospheric", "gothic", "medieval", "free-entry"],
     access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Menstrie_Castle"}, {name: "National Trust for Scotland", url: "https://www.nts.org.uk/"}]
+    era: "13th-14th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Beverley_Minster"}, {name: "Beverley Minster", url: "https://beverleyminster.org.uk/visit-us-2/a-brief-history/"}]
   },
   {
-    name: "Dunaverty Castle",
-    description: "A wind-scoured headland at the tip of Kintyre where a MacDonald fortress once commanded three seas — and one of Scotland's bloodiest massacres unfolded.",
-    history: "A natural stronghold on a rocky headland at the southern tip of Kintyre, accessible only by drawbridge. Mentioned in records from 1248. Garrisoned by Alexander III against Norwegian invasion in 1263. Later a Clan Donald stronghold. Scene of the 1647 Dunaverty massacre when Covenanter forces killed up to 300 Royalists. Now only earthworks remain.",
-    tags: ["cliffside", "coastal", "remote", "dark-brooding", "atmospheric", "medieval"],
-    era: "13th century",
+    name: "Temple Newsam",
+    description: "A Tudor-Jacobean time capsule set in Capability Brown parkland — birthplace of the doomed Lord Darnley, husband of Mary Queen of Scots.",
+    history: "Recorded in the Domesday Book of 1086, originally held by the Knights Templar. The current Tudor-Jacobean house was built in the early 16th century. Birthplace of Henry Stuart, Lord Darnley (1545), the ill-fated husband of Mary Queen of Scots. Grounds landscaped by Capability Brown. Now a museum housing one of Britain's finest collections of decorative arts. Often called 'the Hampton Court of the North'.",
+    tags: ["well-preserved", "photogenic", "gardens", "museum", "tudor", "kid-friendly", "gift-shop"],
+    access: "paid",
+    era: "16th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Temple_Newsam"}, {name: "Leeds Museums", url: "https://museumsandgalleries.leeds.gov.uk/temple-newsam-jg6y"}]
+  },
+  {
+    name: "Wilton House",
+    description: "The seat of the Earls of Pembroke for four centuries — where Inigo Jones designed the Double Cube Room and Hollywood comes to film period dramas.",
+    history: "Built on the site of medieval Wilton Abbey, granted to the 1st Earl of Pembroke by Henry VIII after the Dissolution. Rebuilt in Palladian style in 1647 by Inigo Jones and John Webb after a fire, with further alterations by James Wyatt in 1801. The Double Cube Room is considered one of the finest rooms in England. Used as a filming location for Bridgerton, The Crown, and Pride and Prejudice.",
+    tags: ["well-preserved", "photogenic", "gardens", "filming-location", "museum", "guided-tours", "gift-shop"],
+    access: "paid",
+    era: "17th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wilton_House"}, {name: "Historic Houses", url: "https://www.historichouses.org/house/wilton-house/visit/"}]
+  },
+  {
+    name: "Cotehele House",
+    description: "A medieval granite manor on the banks of the Tamar, barely touched in five centuries — where tapestries hang in half-light and time moves differently.",
+    history: "A medieval house with Tudor additions in the parish of Calstock, Cornwall. Built by the Edgcumbe family from the 14th century onwards, with major work in the late 15th-early 16th century. Remarkably unchanged over 500 years as the family preserved it as a historic curiosity rather than modernising. Features original tapestries, armour, and furnishings. Given to the National Trust after WWII.",
+    tags: ["well-preserved", "atmospheric", "medieval", "tudor", "gardens", "riverside", "gift-shop", "tearoom-cafe"],
+    access: "paid",
+    era: "14th-16th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cotehele"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/cornwall/cotehele/history-of-cotehele"}]
+  },
+  {
+    name: "Tredegar House",
+    description: "One of Britain's most important 17th-century mansions — where the powerful Morgan dynasty ruled South Wales for over 500 years.",
+    history: "A Charles II-era country house on the edge of Newport, Wales, home to the Morgan family (later Lords Tredegar) for over 500 years. The current house was built in the late 17th century, considered one of the finest Restoration houses in Britain. The Morgans even commissioned a ship, the Tredegar of Newport, which traded with Barbados in 1676. Now managed by the National Trust.",
+    tags: ["well-preserved", "photogenic", "gardens", "museum", "guided-tours", "kid-friendly", "tearoom-cafe"],
+    access: "paid",
+    era: "17th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tredegar_House"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/wales/tredegar-house/history-of-tredegar-house"}]
+  },
+  {
+    name: "Plas Newydd",
+    description: "An elegant estate on the Menai Strait with Snowdonia as its backdrop — home to the Marquess who lost his leg at Waterloo and the one who lost his fortune to extravagance.",
+    history: "Set on the shores of the Menai Strait on Anglesey, continuously inhabited since 1470. Refaced in Gothic and neo-Classical style by James Wyatt in the late 18th century. The 1st Marquess of Anglesey famously lost his leg at the Battle of Waterloo (1815). The 5th Marquess nearly bankrupted the estate through lavish spending. Features a famous Rex Whistler mural. Now National Trust.",
+    tags: ["well-preserved", "photogenic", "coastal", "gardens", "museum", "guided-tours", "gift-shop"],
+    access: "paid",
+    era: "18th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Plas_Newydd_(Anglesey)"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/wales/plas-newydd-house-and-garden/history-of-plas-newydd"}]
+  },
+  {
+    name: "Chesters Roman Fort",
+    description: "The best-preserved Roman cavalry fort in Britain — where soldiers once bathed in the riverside spa and guarded Hadrian's Wall against the northern wilds.",
+    history: "Known as Cilurnum to the Romans, this cavalry fort on Hadrian's Wall was built in the 2nd century AD to guard a bridge over the North Tyne. Home to the Second Cavalry Regiment of Asturians from northern Spain. Features Britain's best-preserved Roman bathhouse with hot, cold, and steam rooms. The Clayton Museum houses a remarkable collection of Roman sculpture and inscriptions. English Heritage site.",
+    tags: ["well-preserved", "photogenic", "riverside", "museum", "prehistoric", "guided-tours"],
+    access: "paid",
+    era: "2nd century AD",
+    sources: [{name: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/chesters-roman-fort-and-museum-hadrians-wall/"}, {name: "Visit Northumberland", url: "https://www.visitnorthumberland.com/explore/things-to-do/attractions/historic-sites/chesters-roman-fort"}]
+  },
+  {
+    name: "Newgrange Cursus",
+    description: "Part of the Brú na Bóinne UNESCO World Heritage Site — where 5,000-year-old passage tombs predate the pyramids and the winter solstice still illuminates the dead.",
+    history: "Part of the Brú na Bóinne complex in the Boyne Valley, a UNESCO World Heritage Site. Newgrange, the centrepiece, was built c.3100 BC — older than Stonehenge and the Egyptian pyramids. A passage tomb with a famous roof box that channels sunlight into the chamber at winter solstice. The cursus and surrounding monuments include henges, passage graves, and ringforts spanning millennia.",
+    tags: ["atmospheric", "photogenic", "prehistoric", "remote", "guided-tours", "museum"],
+    access: "paid",
+    era: "c. 3100 BC",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Newgrange"}, {name: "UNESCO", url: "https://whc.unesco.org/en/list/659/"}]
+  },
+  {
+    name: "Newcastle Castle Keep",
+    description: "The Norman keep that gave Newcastle its name — a brooding stone fortress in the heart of the city where Henry II's power still echoes through the walls.",
+    history: "Built 1172-1177 by Henry II on the site of a Roman fort (Pons Aelius) and an earlier Norman motte-and-bailey castle built by Robert Curthose in 1080 — the 'new castle' that gave the city its name. The Black Gate gatehouse was added by Henry III in 1247-1250. Served as a key northern fortress against Scottish invasions throughout the medieval period. Now a museum open to the public.",
+    tags: ["well-preserved", "atmospheric", "norman", "medieval", "museum", "guided-tours"],
+    access: "paid",
+    era: "12th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/History_of_Newcastle_upon_Tyne"}, {name: "Historic UK", url: "https://www.historic-uk.com/HistoryMagazine/DestinationsUK/NewcastleuponTyne/"}]
+  },
+  {
+    name: "Wallington Hall",
+    description: "A gracious country house in 13,500 acres of Northumbrian wilderness — where Pre-Raphaelite murals tell the story of the north and the walled garden enchants.",
+    history: "Built in 1688 on the site of a medieval castle, transformed in the mid-18th century by Sir Walter Blackett. The central hall, designed by John Dobson in 1853-54 for Sir Walter Calverley Trevelyan, features murals by William Bell Scott depicting Northumberland's history. At 13,500 acres, it's the National Trust's largest intact estate. Given to the Trust in 1941 by Sir Charles Trevelyan.",
+    tags: ["well-preserved", "photogenic", "gardens", "woodland", "museum", "kid-friendly", "tearoom-cafe", "gift-shop"],
+    access: "paid",
+    era: "17th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wallington_Hall"}, {name: "National Trust Collections", url: "https://www.nationaltrustcollections.org.uk/place/wallington"}]
+  },
+  {
+    name: "Sycamore Gap",
+    description: "A windswept dip in Hadrian's Wall where England's most iconic tree once stood — felled by vandals in 2023 but already sprouting new life from the stump.",
+    history: "A dramatic dip in Hadrian's Wall near Crag Lough in Northumberland, made famous by the lone sycamore tree that stood in its hollow. The tree, estimated at 120 years old, became one of England's most photographed landmarks and appeared in the 1991 film Robin Hood: Prince of Thieves. Illegally felled in September 2023 by two men. The stump has since shown new growth, offering hope of regeneration.",
+    tags: ["atmospheric", "photogenic", "remote", "hilltop", "free-entry", "filming-location"],
     access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dunaverty_Castle"}]
+    era: "2nd century AD (wall), 19th century (tree)",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sycamore_Gap_tree"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/north-east/hadrians-wall-and-housesteads-fort/next-steps-for-the-sycamore-gap-tree"}]
   },
   {
-    name: "Skelbo Castle",
-    description: "A crumbling 14th-century keep overlooking Loch Fleet where commissioners once waited for a child queen who would never arrive — the Maid of Norway, dead at seven.",
-    history: "Granted to the Moravia family in the early 13th century. In 1290, Edward I's commissioners awaited the arrival of Margaret, Maid of Norway at Skelbo, only to learn of her death aged 7 during her voyage from Norway. Captured by Robert the Bruce in 1308. Subject of ownership disputes in the 1490s. Scheduled monument.",
-    tags: ["ruins-romantic", "coastal", "atmospheric", "dark-brooding", "medieval", "remote"],
-    era: "14th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Skelbo_Castle"}]
+    name: "Nostell Priory",
+    description: "A Palladian masterpiece by a teenage James Paine, built on the bones of a medieval monastery — with Chippendale furniture still in the rooms it was made for.",
+    history: "Built on the site of a medieval Augustinian priory that closed in 1540 during the Dissolution. The current Palladian house was designed by James Paine (reportedly only 19 at the time) for Sir Rowland Winn, 4th Baronet, who had returned from the Grand Tour in 1729. Robert Adam later contributed interiors. Contains one of the finest collections of Chippendale furniture, made specifically for the house. Given to the National Trust in 1953.",
+    tags: ["well-preserved", "photogenic", "gardens", "museum", "guided-tours", "kid-friendly", "tearoom-cafe"],
+    access: "paid",
+    era: "18th century",
+    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nostell_Priory"}, {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/yorkshire/nostell/the-history-of-nostell"}]
   },
   {
-    name: "Dalquharran Castle",
-    description: "A Robert Adam masterpiece slowly crumbling in the Ayrshire countryside — where neoclassical elegance meets centuries of Kennedy family ambition and an older castle's ghost.",
-    history: "The estate includes two castles: the old ruined medieval castle (scheduled monument since 1935) and the Robert Adam-designed mansion completed around 1790 for Thomas Kennedy. The Kennedy family held the property from at least 1474. The mansion was habitable until the 1960s but is now deteriorating. Category A listed.",
-    tags: ["ruins-romantic", "atmospheric", "victorian", "gardens", "photogenic"],
-    era: "15th century / 1790",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dalquharran_Castle"}]
-  },
-  {
-    name: "Kinlochaline Castle",
-    description: "The 'Castle of Butter' — a brooding tower house at the head of Loch Aline, paid for in dairy and burned in civil war, now restored as a private Highland home.",
-    history: "A 15th-century tower house in Morvern, also known as Caisteal an Ime (Castle of Butter) after the legend that a MacInnes lady paid its builder in butter. Four storeys with 10-foot-thick sandstone walls. Burned in 1644 during Alasdair Mac Colla's campaign, attacked again in 1679. Abandoned about 1690. Restored in the late 1990s.",
-    tags: ["coastal", "well-preserved", "remote", "medieval", "atmospheric"],
-    era: "15th century",
-    access: "exterior-only",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kinlochaline_Castle"}]
-  },
-  {
-    name: "Torthorwald Castle",
-    description: "A massive ruined tower standing guard over a Dumfriesshire village — where feuding Border families, Kirkpatricks and Carlyles, fought over stone and power for centuries.",
-    history: "Originally a 12th-century motte-and-bailey. The stone castle dates from the 14th century, built by the Kirkpatrick family after Robert the Bruce confiscated the lands in 1306. Passed to the Carlyle family through marriage in 1425. Attacked and sacked in 1544 by Lord Carlyle. The ruins comprise four phases of building up to 60 feet high.",
-    tags: ["ruins-romantic", "medieval", "dark-brooding", "atmospheric"],
-    era: "14th century",
-    access: "free",
-    sources: [{name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Torthorwald_Castle"}]
+    name: "Bramall Hall",
+    description: "A magnificent black-and-white Tudor manor rising from 70 acres of parkland — one of England's greatest timber-framed houses, with a thousand years of stories in its bones.",
+    history: "A stunning timber-framed Tudor manor house in Stockport, with origins dating to the medieval period. The estate appears in the Domesday Book (1086), granted by William the Conqueror to Hamon de Masci. The striking black-and-white exterior dates primarily from the 14th-16th centuries. One of the finest examples of timber-framed architecture in England. Now owned by Stockport Council and open to the public.",
+    tags: ["well-preserved", "photogenic", "atmospheric", "tudor", "medieval", "gardens", "museum", "guided-tours", "kid-friendly"],
+    access: "paid",
+    era: "14th-16th century",
+    sources: [{name: "Stockport Council", url: "https://www.stockport.gov.uk/landing/bramall-hall"}, {name: "Historic Houses", url: "https://www.historichouses.org/house/bramall-hall/visit/"}]
   }
 ];
 
 // Apply enrichments
 let updated = 0;
 for (const e of enrichments) {
-  // Find the castle entry by name - use regex to locate it
+  // Find the castle in data.js by name - use regex to find and update
   const nameEscaped = e.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const nameRegex = new RegExp(`(name:\\s*["'])${nameEscaped}(["'])`);
-  const idx = code.search(nameRegex);
-  if (idx === -1) {
-    console.log(`SKIP: Could not find "${e.name}" in data.js`);
+  const regex = new RegExp(`(name:\\s*"${nameEscaped}")`);
+  const match = code.match(regex);
+  if (!match) {
+    console.log(`NOT FOUND: ${e.name}`);
     continue;
   }
   
-  // Find the closing of this castle object (next },\n or similar)
-  // We need to find the object boundaries
-  let braceCount = 0;
-  let objStart = idx;
-  // Walk backward to find the opening {
-  while (objStart > 0 && code[objStart] !== '{') objStart--;
-  let objEnd = objStart;
-  braceCount = 0;
-  for (let i = objStart; i < code.length; i++) {
-    if (code[i] === '{') braceCount++;
-    if (code[i] === '}') braceCount--;
-    if (braceCount === 0) { objEnd = i; break; }
+  // Find the object boundaries - locate the opening { before name
+  const nameIdx = code.indexOf(match[0]);
+  let braceStart = nameIdx;
+  while (braceStart > 0 && code[braceStart] !== '{') braceStart--;
+  
+  // Find closing brace
+  let depth = 1;
+  let braceEnd = braceStart + 1;
+  while (depth > 0 && braceEnd < code.length) {
+    if (code[braceEnd] === '{') depth++;
+    if (code[braceEnd] === '}') depth--;
+    braceEnd++;
   }
   
-  let objStr = code.substring(objStart, objEnd + 1);
+  let obj = code.substring(braceStart, braceEnd);
   
   // Update/add fields
-  function updateField(obj, field, value) {
-    const fieldRegex = new RegExp(`(${field}:\\s*)([\\s\\S]*?)(?=,\\s*\\w+:|\\s*})`);
-    const match = obj.match(fieldRegex);
-    if (match) {
-      return obj.replace(fieldRegex, `$1${value},`);
-    }
-    // Add before closing brace
-    return obj.replace(/\s*}$/, `,\n    ${field}: ${value}\n  }`);
+  // description
+  if (obj.match(/description:\s*"/)) {
+    obj = obj.replace(/description:\s*"[^"]*"/, `description: "${e.description}"`);
+  } else {
+    obj = obj.replace(/(name:\s*"[^"]*")/, `$1, description: "${e.description}"`);
   }
   
-  let newObj = objStr;
-  
-  // Set description
-  if (e.description) {
-    const descVal = JSON.stringify(e.description);
-    if (newObj.match(/description:\s*/)) {
-      newObj = newObj.replace(/description:\s*["'][^"']*["']/, `description: ${descVal}`);
-    } else {
-      newObj = newObj.replace(/\s*}$/, `,\n    description: ${descVal}\n  }`);
-    }
+  // history
+  if (obj.match(/history:\s*"/)) {
+    obj = obj.replace(/history:\s*"[^"]*"/, `history: "${e.history}"`);
+  } else {
+    obj = obj.replace(/(description:\s*"[^"]*")/, `$1, history: "${e.history}"`);
   }
   
-  // Set history
-  if (e.history) {
-    const histVal = JSON.stringify(e.history);
-    if (newObj.match(/history:\s*/)) {
-      newObj = newObj.replace(/history:\s*["'][^"']*["']/, `history: ${histVal}`);
-    } else {
-      newObj = newObj.replace(/\s*}$/, `,\n    history: ${histVal}\n  }`);
-    }
+  // tags
+  const tagsStr = JSON.stringify(e.tags);
+  if (obj.match(/tags:\s*\[/)) {
+    obj = obj.replace(/tags:\s*\[[^\]]*\]/, `tags: ${tagsStr}`);
+  } else {
+    obj = obj.replace(/(history:\s*"[^"]*")/, `$1, tags: ${tagsStr}`);
   }
   
-  // Set tags
-  if (e.tags) {
-    const tagsVal = JSON.stringify(e.tags);
-    if (newObj.match(/tags:\s*\[/)) {
-      newObj = newObj.replace(/tags:\s*\[[^\]]*\]/, `tags: ${tagsVal}`);
-    } else {
-      newObj = newObj.replace(/\s*}$/, `,\n    tags: ${tagsVal}\n  }`);
-    }
-  }
-  
-  // Set era
-  if (e.era) {
-    const eraVal = JSON.stringify(e.era);
-    if (newObj.match(/era:\s*/)) {
-      newObj = newObj.replace(/era:\s*["'][^"']*["']/, `era: ${eraVal}`);
-    } else {
-      newObj = newObj.replace(/\s*}$/, `,\n    era: ${eraVal}\n  }`);
-    }
-  }
-  
-  // Set access
+  // access
   if (e.access) {
-    const accVal = JSON.stringify(e.access);
-    if (newObj.match(/access:\s*/)) {
-      newObj = newObj.replace(/access:\s*["'][^"']*["']/, `access: ${accVal}`);
+    if (obj.match(/access:\s*"/)) {
+      obj = obj.replace(/access:\s*"[^"]*"/, `access: "${e.access}"`);
     } else {
-      newObj = newObj.replace(/\s*}$/, `,\n    access: ${accVal}\n  }`);
+      obj = obj.replace(/(tags:\s*\[[^\]]*\])/, `$1, access: "${e.access}"`);
     }
   }
   
-  // Set sources
+  // era
+  if (e.era) {
+    if (obj.match(/era:\s*"/)) {
+      obj = obj.replace(/era:\s*"[^"]*"/, `era: "${e.era}"`);
+    } else {
+      obj = obj.replace(/(access:\s*"[^"]*")/, `$1, era: "${e.era}"`);
+    }
+  }
+  
+  // sources
   if (e.sources) {
-    const srcVal = JSON.stringify(e.sources);
-    if (newObj.match(/sources:\s*\[/)) {
-      newObj = newObj.replace(/sources:\s*\[[^\]]*\]/, `sources: ${srcVal}`);
+    const sourcesStr = JSON.stringify(e.sources);
+    if (obj.match(/sources:\s*\[/)) {
+      obj = obj.replace(/sources:\s*\[[^\]]*\]/, `sources: ${sourcesStr}`);
     } else {
-      newObj = newObj.replace(/\s*}$/, `,\n    sources: ${srcVal}\n  }`);
+      obj = obj.replace(/(era:\s*"[^"]*")/, `$1, sources: ${sourcesStr}`);
     }
   }
   
-  code = code.replace(objStr, newObj);
+  code = code.substring(0, braceStart) + obj + code.substring(braceEnd);
   updated++;
-  console.log(`OK: ${e.name}`);
+  console.log(`Updated: ${e.name}`);
 }
 
 fs.writeFileSync('data.js', code, 'utf8');
-console.log(`\nDone. Updated ${updated} of ${enrichments.length} sites.`);
+console.log(`\nTotal updated: ${updated}`);
