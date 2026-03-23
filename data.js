@@ -8492,18 +8492,21 @@ const CASTLES = [
     "lng": -8.8456,
     "country": "Ireland",
     "type": "abbey",
-    "era": "7th century",
+    "era": "7th-12th century",
     "condition": "ruin",
-    "description": "An early monastic site famous for its leaning round tower, one of the tallest in Ireland at 34 metres. Founded by St Colman MacDuagh in the 7th century in the Burren foothills.",
+    "description": "Ireland's tallest round tower leans dramatically over a cluster of ruined churches at the edge of the Burren — a hauntingly beautiful 7th-century monastery lost in fields of limestone and wildflowers.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/ArdfertCathedral.jpg/500px-ArdfertCathedral.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
     "county": "County Galway",
     "tags": [
-      "dramatic-ruin",
+      "atmospheric",
+      "celtic",
+      "ruins-romantic",
       "photogenic",
-      "hidden-gem",
-      "free"
+      "free-entry",
+      "remote",
+      "medieval"
     ],
     "access": "free",
     "_index": 276,
@@ -8512,6 +8515,22 @@ const CASTLES = [
       "https://img.castlecore.uk/kilmacduagh-monastery-3.jpg",
       "https://img.castlecore.uk/kilmacduagh-monastery-4.jpg",
       "https://img.castlecore.uk/kilmacduagh-monastery-5.jpg"
+    ],
+    "history": "Founded in the 7th century by St Colman MacDuagh, who legend says built it where his belt fell to the ground in the Burren woods. The striking 34m round tower, Ireland's tallest, dates from the 10th-12th century and has a noticeable lean. The monastery became the seat of the Diocese of Kilmacduagh. Several churches spanning different centuries survive. Free and always open.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kilmacduagh_monastery"
+      },
+      {
+        "name": "Galway Tourism",
+        "url": "https://www.galwaytourism.ie/kilmacduagh-monastery-round-tower/"
+      },
+      {
+        "name": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/kilmacduagh-round-tower"
+      }
     ]
   },
   {
@@ -8920,17 +8939,20 @@ const CASTLES = [
     "lng": -9.0869,
     "country": "Ireland",
     "type": "castle",
-    "era": "1st millennium BC",
+    "era": "Bronze Age",
     "condition": "ruin",
-    "description": "A recumbent stone circle of 17 stones near Glandore, aligned with the winter solstice sunset. Adjacent fulacht fiadh cooking sites show Bronze Age domestic life.",
+    "description": "A perfectly preserved Bronze Age stone circle perched above the wild West Cork coast — where 17 ancient stones still mark the winter solstice sunset with eerie precision.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg/500px-Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "County Cork",
     "tags": [
+      "prehistoric",
+      "atmospheric",
+      "coastal",
       "photogenic",
-      "hidden-gem",
-      "free"
+      "free-entry",
+      "remote"
     ],
     "access": "free",
     "_index": 295,
@@ -8939,6 +8961,22 @@ const CASTLES = [
       "https://img.castlecore.uk/drombeg-stone-circle-3.jpg",
       "https://img.castlecore.uk/drombeg-stone-circle-4.jpg",
       "https://img.castlecore.uk/drombeg-stone-circle-5.jpg"
+    ],
+    "history": "Dating from c.1100-800 BC, this recumbent stone circle of 17 closely-spaced sandstone pillars (13 surviving) is aligned with the winter solstice sunset. Excavated in 1958, revealing cremated remains of an adolescent in a pot at the centre. Nearby are the remains of a fulacht fiadh (ancient cooking pit) and two roundhouses. Sometimes called 'The Druid's Altar'. Free access.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Drombeg_stone_circle"
+      },
+      {
+        "name": "Discover Ireland",
+        "url": "https://www.discoverireland.ie/cork/drombeg-stone-circle"
+      },
+      {
+        "name": "The Irish Place",
+        "url": "https://www.theirishplace.com/heritage/county-corks-ancient-past-drombeg-stone-circle/"
+      }
     ]
   },
   {
@@ -11228,14 +11266,20 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "partial ruin",
-    "description": "A Norman motte-and-bailey castle with an impressive 13th-century gatehouse. The curtain wall encloses pleasant riverside gardens.",
+    "description": "A formidable Norman motte-and-bailey guarding the River Medway crossing — where you can climb the great gatehouse and sit at a medieval guard's table in the heart of a Kent market town.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TonbridgeCastle0021.JPG/500px-TonbridgeCastle0021.JPG",
     "rating": 4,
     "reviewCount": 1800,
     "county": "Kent",
     "tags": [
-      "dramatic-ruin",
-      "kid-friendly"
+      "norman",
+      "medieval",
+      "well-preserved",
+      "riverside",
+      "museum",
+      "kid-friendly",
+      "guided-tours",
+      "events-venue"
     ],
     "access": "paid",
     "_index": 376,
@@ -11244,6 +11288,22 @@ const CASTLES = [
       "https://img.castlecore.uk/tonbridge-castle-3.jpg",
       "https://img.castlecore.uk/tonbridge-castle-4.jpg",
       "https://img.castlecore.uk/tonbridge-castle-5.jpg"
+    ],
+    "history": "Built after the Norman Conquest when Richard Fitz Gilbert was granted land to guard the Medway crossing on the road from Hastings to London. First mentioned in 1088. The impressive stone gatehouse was added in the 13th century. Besieged during the First Barons' War in 1215. Fell into ruin but the gatehouse survives with exhibitions recreating medieval life. 950 years of continuous history.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Tonbridge Castle",
+        "url": "https://www.tonbridgecastle.org/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tonbridge_Castle"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/attractions.htm?attraction=1805"
+      }
     ]
   },
   {
@@ -11544,15 +11604,20 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A beautifully preserved Cistercian abbey ruin near Southampton. The church walls and transepts survive to impressive height amid peaceful grounds.",
+    "description": "The most complete Cistercian abbey in southern England, wrapped in ivy and woodland shade — a haunt of Romantic poets who fell for its crumbling Gothic arches and wild beauty.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Netley_abbey_drone.JPG/500px-Netley_abbey_drone.JPG",
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "Hampshire",
     "tags": [
-      "romantic-ruin",
+      "ruins-romantic",
+      "atmospheric",
+      "gothic",
+      "medieval",
+      "woodland",
       "photogenic",
-      "free"
+      "free-entry",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 385,
@@ -11561,6 +11626,22 @@ const CASTLES = [
       "https://img.castlecore.uk/netley-abbey-3.jpg",
       "https://img.castlecore.uk/netley-abbey-4.jpg",
       "https://img.castlecore.uk/netley-abbey-5.jpg"
+    ],
+    "history": "Founded in 1239 by Cistercian monks under the patronage of Henry III. After dissolution in 1536, it was converted into a Tudor mansion. A demolition worker's death halted destruction, and the ruins became overgrown — celebrated by Romantic writers including Jane Austen and painter John Constable. The superb Abbot's Lodging with its vaulted undercroft survives. Free to visit, managed by English Heritage.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/netley-abbey/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Netley_Abbey"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/attractions.htm?attraction=1517"
+      }
     ]
   },
   {
@@ -11875,14 +11956,20 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "partial ruin",
-    "description": "A striking hunting lodge built as a mock castle in 1608. Gutted by fire in 1929 but restored externally by English Heritage.",
+    "description": "A striking Jacobean hunting lodge disguised as a fairy-tale castle, gutted by fire and hauntingly restored — set in sweeping Dorset parkland near the iconic cove.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lulworth_Castle_%281937%29.jpg/500px-Lulworth_Castle_%281937%29.jpg",
     "rating": 4.1,
     "reviewCount": 1600,
     "county": "Dorset",
     "tags": [
       "photogenic",
-      "hidden-gem"
+      "atmospheric",
+      "gardens",
+      "events-venue",
+      "wedding-venue",
+      "tearoom-cafe",
+      "kid-friendly",
+      "coastal"
     ],
     "access": "paid",
     "_index": 394,
@@ -11891,6 +11978,22 @@ const CASTLES = [
       "https://img.castlecore.uk/lulworth-castle-3.jpg",
       "https://img.castlecore.uk/lulworth-castle-4.jpg",
       "https://img.castlecore.uk/lulworth-castle-5.jpg"
+    ],
+    "history": "Built c.1608 by Thomas Howard, 3rd Viscount Bindon, as a fashionable hunting lodge in the retro castle style. Home of the Weld family for centuries. King James I visited, and it later housed one of England's first Catholic chapels built after the Reformation. Devastated by fire in 1929, the shell was stabilised and partly restored through an English Heritage partnership in the 1990s.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/lulworth-castle/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lulworth_Castle"
+      },
+      {
+        "name": "Lulworth Estate",
+        "url": "https://lulworth.com/visit/places-to-visit/castle-and-park/"
+      }
     ]
   },
   {
@@ -11899,17 +12002,20 @@ const CASTLES = [
     "lng": -2.47,
     "country": "England",
     "type": "castle",
-    "era": "1st century BC",
+    "era": "Iron Age",
     "condition": "ruin",
-    "description": "One of the largest and most complex Iron Age hillforts in Europe. Its massive ramparts enclose 47 acres near Dorchester.",
+    "description": "Europe's largest and most complex Iron Age hillfort — vast concentric ramparts ripple across the Dorset hilltop like ancient waves frozen in chalk and green.",
     "image": "https://img.castlecore.uk/maiden-castle.jpg",
     "rating": 4.2,
     "reviewCount": 2100,
     "county": "Dorset",
     "tags": [
-      "dramatic-ruin",
-      "free",
-      "hidden-gem"
+      "prehistoric",
+      "hilltop",
+      "free-entry",
+      "photogenic",
+      "atmospheric",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 395,
@@ -11918,6 +12024,22 @@ const CASTLES = [
       "https://img.castlecore.uk/maiden-castle-3.jpg",
       "https://img.castlecore.uk/maiden-castle-4.jpg",
       "https://img.castlecore.uk/maiden-castle-5.jpg"
+    ],
+    "history": "First occupied c.4000 BC as a Neolithic enclosure. The hillfort was built c.600 BC and massively expanded c.450 BC to 47 acres with elaborate defensive earthworks. Home to the Durotriges tribe. Stormed by the Roman legions under Vespasian c.43 AD. Excavated by Mortimer Wheeler in the 1930s.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/maiden-castle/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Maiden_Castle,_Dorset"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/counties/dorset/ancient/maiden-castle.htm"
+      }
     ]
   },
   {
@@ -12953,13 +13075,19 @@ const CASTLES = [
     "type": "palace",
     "era": "12th century",
     "condition": "intact",
-    "description": "The principal residence of the Prince Bishops of Durham for over 900 years. Now a museum housing Zurbarán's Jacob and His Twelve Sons.",
+    "description": "The 900-year seat of the Prince Bishops of Durham, where medieval ecclesiastical power and a world-class art collection meet in the rolling hills of County Durham.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Auckland_Castle_-_geograph.org.uk_-_1896444.jpg/500px-Auckland_Castle_-_geograph.org.uk_-_1896444.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "County Durham",
     "tags": [
-      "well-preserved"
+      "well-preserved",
+      "medieval",
+      "gardens",
+      "museum",
+      "guided-tours",
+      "tearoom-cafe",
+      "gift-shop"
     ],
     "access": "paid",
     "_index": 421,
@@ -12968,6 +13096,22 @@ const CASTLES = [
       "https://img.castlecore.uk/auckland-castle-3.jpg",
       "https://img.castlecore.uk/auckland-castle-4.jpg",
       "https://img.castlecore.uk/auckland-castle-5.jpg"
+    ],
+    "history": "Principal residence of the Prince Bishops of Durham since the 12th century, when Bishop Hugh de Puiset established it as a hunting lodge. The Prince Bishops wielded near-royal power over northern England. When Durham Castle was given to found the university in 1832, Auckland became the sole episcopal seat. Reopened in 2019 after major conservation. Houses Zurbarán's Jacob and His Twelve Sons paintings.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "The Auckland Project",
+        "url": "https://aucklandproject.org/attraction/auckland-palace/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Auckland_Castle"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/counties/durham/castles/auckland.htm"
+      }
     ]
   },
   {
@@ -18928,13 +19072,19 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "Norse and medieval castle on St Patrick's Isle. Contains cathedral ruins and the legendary Moddey Dhoo black dog.",
+    "description": "A red sandstone Viking fortress rising from St Patrick's Isle — where Norse kings once ruled, a mysterious Pagan Lady was buried with her treasures, and sunset paints the ruins gold.",
     "image": "https://img.castlecore.uk/peel-castle-isle-of-man.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "Isle of Man",
     "tags": [
-      "dramatic-ruin"
+      "atmospheric",
+      "coastal",
+      "ruins-romantic",
+      "medieval",
+      "photogenic",
+      "island",
+      "dark-brooding"
     ],
     "access": "paid",
     "_index": 592,
@@ -18943,6 +19093,22 @@ const CASTLES = [
       "https://img.castlecore.uk/peel-castle-isle-of-man-3.jpg",
       "https://img.castlecore.uk/peel-castle-isle-of-man-4.jpg",
       "https://img.castlecore.uk/peel-castle-isle-of-man-5.jpg"
+    ],
+    "history": "Originally a Celtic Christian site before Norse settlers fortified it in the 11th century under Magnus Barelegs, Viking King of Mann. Excavations revealed the spectacular 10th-century 'Pagan Lady' burial with Viking necklace and silver coins from c.1030. Contains ruins of St German's Cathedral and a 13th-century round tower. Connected to Peel town by causeway. Managed by Manx National Heritage.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Manx National Heritage",
+        "url": "https://manxnationalheritage.im/our-sites/peel-castle/"
+      },
+      {
+        "name": "Visit Isle of Man",
+        "url": "https://www.visitisleofman.com/experience/peel-castle-p1291861"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Peel_Castle"
+      }
     ]
   },
   {
@@ -20033,14 +20199,21 @@ const CASTLES = [
     "lng": 0.159,
     "country": "England",
     "type": "castle",
-    "era": "11th century",
+    "era": "11th century (reconstruction)",
     "condition": "partial ruin",
-    "description": "Reconstructed Norman motte-and-bailey castle with living history displays.",
+    "description": "The world's only reconstructed motte-and-bailey castle on its original site — a living Norman village where animals roam free and history comes chaotically, joyfully alive.",
     "image": "https://img.castlecore.uk/mountfitchet-castle.jpg",
     "rating": 4,
     "reviewCount": 1600,
     "county": "Essex",
-    "tags": [],
+    "tags": [
+      "norman",
+      "kid-friendly",
+      "museum",
+      "photogenic",
+      "guided-tours",
+      "gift-shop"
+    ],
     "access": "paid",
     "_index": 637,
     "gallery": [
@@ -20048,6 +20221,22 @@ const CASTLES = [
       "https://img.castlecore.uk/mountfitchet-castle-3.jpg",
       "https://img.castlecore.uk/mountfitchet-castle-4.jpg",
       "https://img.castlecore.uk/mountfitchet-castle-5.jpg"
+    ],
+    "history": "The original castle was built by the Montfitchet family after the Norman Conquest to control the area. Destroyed in 1215 during the First Barons' War. The site was painstakingly reconstructed and opened in 1985 as a living history museum, recreating the 1066 Norman village complete with thatched buildings, a brewery, church, and free-roaming animals across 10 acres.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Mountfitchet Castle",
+        "url": "https://mountfitchetcastle.com/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Stansted_Mountfitchet_Castle"
+      },
+      {
+        "name": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/mountfitchet-castle"
+      }
     ]
   },
   {
@@ -21319,16 +21508,22 @@ const CASTLES = [
     "lng": -3.813,
     "country": "Scotland",
     "type": "castle",
-    "era": "15th century",
+    "era": "13th century",
     "condition": "ruin",
-    "description": "Island castle ruin in a loch within Rothiemurchus Forest. One of the Cairngorms' most scenic spots.",
+    "description": "A ruined castle marooned on a tiny island in an ancient Caledonian pine forest — reflected perfectly in dark Highland waters where ospreys once nested on the tower walls.",
     "image": "https://img.castlecore.uk/loch-an-eilein-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "Highland",
     "tags": [
-      "romantic-ruin",
-      "free"
+      "atmospheric",
+      "ruins-romantic",
+      "island",
+      "remote",
+      "woodland",
+      "photogenic",
+      "dog-friendly",
+      "free-entry"
     ],
     "access": "free",
     "_index": 683,
@@ -21337,6 +21532,22 @@ const CASTLES = [
       "https://img.castlecore.uk/loch-an-eilein-castle-3.jpg",
       "https://img.castlecore.uk/loch-an-eilein-castle-4.jpg",
       "https://img.castlecore.uk/loch-an-eilein-castle-5.jpg"
+    ],
+    "history": "Built in the 13th century, probably by the Bishop of Moray, on an island in Loch an Eilein deep within Rothiemurchus Forest. Later held by the Mackintoshes, Gordons, and Grants (from 1567). Successfully defended against Jacobite attack after Cromdale in 1690. Ospreys famously nested on the castle ruins until egg collectors drove them away. Reached only by eye from the beautiful loch-side walking trail.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Rothiemurchus",
+        "url": "https://rothiemurchus.net/blog/loch-an-eilein-castle/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Loch_an_Eilein"
+      },
+      {
+        "name": "Castles of Scotland",
+        "url": "https://www.thecastlesofscotland.co.uk/the-best-castles/scenic-castles/loch-an-eilein-castle/"
+      }
     ]
   },
   {
@@ -21516,14 +21727,20 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "Clifftop ruin that inspired Bram Stoker's Dracula. Spectacular but increasingly fragile.",
+    "description": "A dramatic clifftop ruin where the wild North Sea crashes below roofless halls — said to have inspired Bram Stoker's vision of Dracula's castle during his visits to Cruden Bay.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg/500px-New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg",
     "rating": 4.2,
     "reviewCount": 1600,
     "county": "Aberdeenshire",
     "tags": [
-      "dramatic-ruin",
-      "free"
+      "ruins-romantic",
+      "dark-brooding",
+      "atmospheric",
+      "cliffside",
+      "coastal",
+      "photogenic",
+      "free-entry",
+      "haunted"
     ],
     "access": "free",
     "_index": 692,
@@ -21532,6 +21749,22 @@ const CASTLES = [
       "https://img.castlecore.uk/new-slains-castle-3.jpg",
       "https://img.castlecore.uk/new-slains-castle-4.jpg",
       "https://img.castlecore.uk/new-slains-castle-5.jpg"
+    ],
+    "history": "Built in 1597 by the 9th Earl of Erroll after the original Slains Castle was destroyed by James VI. Extended significantly in the 19th century into a grand baronial mansion. Bram Stoker was a regular visitor to nearby Cruden Bay from 1892-1910 and is believed to have drawn inspiration for Dracula from the castle's dramatic clifftop setting. The roof was removed in 1925 for tax purposes and it has been a ruin since.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/New_Slains_Castle"
+      },
+      {
+        "name": "Visit Aberdeenshire",
+        "url": "https://www.visitabdn.com/listing/slains-castle"
+      },
+      {
+        "name": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/new-slains-castle-ruins"
+      }
     ]
   },
   {
@@ -23655,12 +23888,19 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "Victorian Gothic castle on Windermere. National Trust property where Beatrix Potter holidayed.",
+    "description": "A Victorian Gothic fantasy perched on the shores of Windermere — the Lake District castle where a young Beatrix Potter first fell in love with the countryside that would shape her world.",
     "image": "https://img.castlecore.uk/wray-castle.jpg",
     "rating": 4.1,
     "reviewCount": 1800,
     "county": "Cumbria",
-    "tags": [],
+    "tags": [
+      "victorian",
+      "gothic",
+      "photogenic",
+      "gardens",
+      "kid-friendly",
+      "dog-friendly"
+    ],
     "access": "paid",
     "_index": 787,
     "gallery": [
@@ -23668,6 +23908,22 @@ const CASTLES = [
       "https://img.castlecore.uk/wray-castle-3.jpg",
       "https://img.castlecore.uk/wray-castle-4.jpg",
       "https://img.castlecore.uk/wray-castle-5.jpg"
+    ],
+    "history": "Built 1840-47 by retired surgeon James Dawson as a neo-Gothic folly, funded by his wife's gin fortune (she reportedly hated it). In 1882, 16-year-old Beatrix Potter stayed here on her first Lake District holiday, sparking a lifelong love of the region. National Trust property since 1929. Currently undergoing major restoration. Set in grounds overlooking Lake Windermere.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/lake-district/wray"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wray_Castle"
+      },
+      {
+        "name": "Visit Cumbria",
+        "url": "https://www.visitcumbria.com/amb/wray-castle/"
+      }
     ]
   },
   {
@@ -27548,14 +27804,19 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "restored",
-    "description": "Restored Cistercian abbey still used as a parish church, housing a relic of the True Cross.",
+    "description": "A magnificently restored Cistercian abbey on the banks of the River Suir — still a living parish church after 800 years, with medieval stonework and a relic of the True Cross.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IMGHolyCross_4780w.jpg/500px-IMGHolyCross_4780w.jpg",
     "rating": 4.2,
     "reviewCount": 1800,
     "county": "County Tipperary",
     "tags": [
-      "romantic-ruin",
-      "free"
+      "well-preserved",
+      "medieval",
+      "riverside",
+      "atmospheric",
+      "celtic",
+      "photogenic",
+      "free-entry"
     ],
     "access": "free",
     "_index": 946,
@@ -27564,6 +27825,22 @@ const CASTLES = [
       "https://img.castlecore.uk/holy-cross-abbey-3.jpg",
       "https://img.castlecore.uk/holy-cross-abbey-4.jpg",
       "https://img.castlecore.uk/holy-cross-abbey-5.jpg"
+    ],
+    "history": "Founded in 1182 by Domnall Mór Ua Briain, King of Thomond, as a Cistercian monastery. Named for a relic of the True Cross brought to Ireland by Plantagenet ancestors. Became a major medieval pilgrimage site. Extensively renovated in the 15th century with exquisite stonework. Fell into ruin after dissolution but was remarkably restored in the 1970s and returned to use as a parish church.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Holy_Cross_Abbey"
+      },
+      {
+        "name": "Holy Cross Abbey",
+        "url": "https://holycrossabbey.ie/"
+      },
+      {
+        "name": "Tuatha",
+        "url": "https://www.tuatha.ie/holy-cross-abbey/"
+      }
     ]
   },
   {
@@ -38612,14 +38889,19 @@ const CASTLES = [
     "type": "palace",
     "era": "18th century",
     "condition": "intact",
-    "description": "Georgian stately home overlooking Bantry Bay with extensive grounds and Italianate gardens.",
+    "description": "A Georgian jewel overlooking Bantry Bay, filled with treasures collected on Grand Tours — where revolution, aristocratic elegance, and wild West Cork beauty converge.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bantry_Bay_JBU01.jpg/500px-Bantry_Bay_JBU01.jpg",
     "rating": 4.4,
     "reviewCount": 2100,
     "county": "County Cork",
     "tags": [
       "well-preserved",
-      "photogenic"
+      "photogenic",
+      "gardens",
+      "coastal",
+      "romantic",
+      "tearoom-cafe",
+      "wedding-venue"
     ],
     "access": "paid",
     "_index": 1450,
@@ -38628,6 +38910,22 @@ const CASTLES = [
       "https://img.castlecore.uk/bantry-house-3.jpg",
       "https://img.castlecore.uk/bantry-house-4.jpg",
       "https://img.castlecore.uk/bantry-house-5.jpg"
+    ],
+    "history": "Built in the early 1700s, purchased by Richard White in 1739 and owned by the White family (Earls of Bantry) ever since. Richard White was elevated to the peerage after warning of the failed 1796 French invasion fleet in Bantry Bay. The 2nd Earl filled the house with art and tapestries from European travels. Still privately occupied and open to visitors.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bantry_House"
+      },
+      {
+        "name": "Irish Historic Houses",
+        "url": "https://www.ihh.ie/index.cfm/houses/house/name/Bantry%20House"
+      },
+      {
+        "name": "History Hit",
+        "url": "https://www.historyhit.com/locations/bantry-house/"
+      }
     ]
   },
   {
@@ -38751,15 +39049,19 @@ const CASTLES = [
     "type": "palace",
     "era": "18th century",
     "condition": "intact",
-    "description": "Georgian mansion set against the Cuilcagh Mountains in County Fermanagh.",
+    "description": "An elegant Georgian mansion set against the wild foothills of Cuilcagh Mountain — home of the Cole family for 250 years and parent of every Irish yew tree in the world.",
     "image": "https://img.castlecore.uk/florence-court.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
     "county": "County Fermanagh",
     "tags": [
       "well-preserved",
+      "gardens",
       "photogenic",
-      "kid-friendly"
+      "guided-tours",
+      "tearoom-cafe",
+      "kid-friendly",
+      "woodland"
     ],
     "access": "paid",
     "_index": 1455,
@@ -38768,6 +39070,22 @@ const CASTLES = [
       "https://img.castlecore.uk/florence-court-3.jpg",
       "https://img.castlecore.uk/florence-court-4.jpg",
       "https://img.castlecore.uk/florence-court-5.jpg"
+    ],
+    "history": "Built c.1720 by Sir John Cole, named after his wife Florence Bourchier Wrey. The grand Palladian wings were added by the 1st Earl of Enniskillen in the 1770s. The Cole family (Earls of Enniskillen) lived here for over 250 years. Badly damaged by fire in 1955, just one year after transfer to the National Trust, but restored using comprehensive records. The famous Florence Court Yew in the gardens is reputedly the ancestor of all Irish yew trees.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/northern-ireland/florence-court"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Florence_Court"
+      },
+      {
+        "name": "Fermanagh Lakelands",
+        "url": "https://www.fermanaghlakelands.com/things-to-see-and-do/florence-court-p675531"
+      }
     ]
   },
   {
@@ -39048,15 +39366,21 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Atmospheric Augustinian priory ruins in the secluded Vale of Ewyas, Black Mountains.",
+    "description": "Ethereal Augustinian ruins rising from the floor of the Vale of Ewyas — pointed arches frame misty Black Mountains, and a tiny pub hides in the vaulted undercroft.",
     "image": "https://img.castlecore.uk/llanthony-priory.jpg",
     "rating": 4.6,
     "reviewCount": 2100,
     "county": "Monmouthshire",
     "tags": [
+      "ruins-romantic",
       "atmospheric",
-      "valley-setting",
-      "photogenic"
+      "photogenic",
+      "norman",
+      "medieval",
+      "remote",
+      "tearoom-cafe",
+      "dog-friendly",
+      "free-entry"
     ],
     "access": "free",
     "_index": 1474,
@@ -39065,6 +39389,22 @@ const CASTLES = [
       "https://img.castlecore.uk/llanthony-priory-3.jpg",
       "https://img.castlecore.uk/llanthony-priory-4.jpg",
       "https://img.castlecore.uk/llanthony-priory-5.jpg"
+    ],
+    "history": "Founded c.1100 when Norman knight William de Lacy was inspired by an existing chapel to devote himself to prayer. By 1118, about 40 Augustinian canons established the first priory of its kind in Wales. Welsh attacks in 1135 forced retreat to Gloucester. Rebuilt and flourished before dissolution in 1538. Now managed by Cadw; remarkably, a hotel and pub occupy part of the ruins.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/llanthony-priory"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Llanthony_Priory"
+      },
+      {
+        "name": "Visit Monmouthshire",
+        "url": "https://www.visitmonmouthshire.com/things-to-do/llanthony-priory-cadw-p1503171"
+      }
     ]
   },
   {
@@ -39704,17 +40044,20 @@ const CASTLES = [
     "lng": -2.9528,
     "country": "Wales",
     "type": "fort",
-    "era": "Roman",
+    "era": "1st century Roman",
     "condition": "ruin",
-    "description": "One of the best-preserved Roman amphitheatres in Britain, Cadw site.",
+    "description": "The best-preserved Roman amphitheatre in Britain — once thundering with the roar of 6,000 legionaries, now a grassy bowl of silence where you can almost hear the echoes of gladiators.",
     "image": "https://img.castlecore.uk/caerleon-amphitheatre.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
     "county": "Newport",
     "tags": [
-      "roman",
-      "cadw",
-      "amphitheatre"
+      "prehistoric",
+      "atmospheric",
+      "free-entry",
+      "photogenic",
+      "kid-friendly",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 1497,
@@ -39723,6 +40066,18 @@ const CASTLES = [
       "https://img.castlecore.uk/caerleon-amphitheatre-3.jpg",
       "https://img.castlecore.uk/caerleon-amphitheatre-4.jpg",
       "https://img.castlecore.uk/caerleon-amphitheatre-5.jpg"
+    ],
+    "history": "Built c.90 AD as the amphitheatre for the Roman fortress of Isca Augusta, home of the Second Augustan Legion. Could hold 6,000 spectators watching military training, gladiatorial combat, and public events. The oval arena measures 56m x 41m. Part of the only complete set of Roman legionary buildings visible anywhere in Europe. Geoffrey of Monmouth later identified Caerleon as King Arthur's court. Managed by Cadw, free to visit.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/caerleon-amphitheatre"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Caerleon"
+      }
     ]
   },
   {
@@ -39775,15 +40130,17 @@ const CASTLES = [
     "type": "industrial",
     "era": "18th century",
     "condition": "ruin",
-    "description": "UNESCO World Heritage Site, pioneering ironworks from the Industrial Revolution.",
+    "description": "A UNESCO World Heritage Site where the fires of the Industrial Revolution still feel close — massive stone furnaces and workers' cottages tell the story of the iron that built the modern world.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blaenafon_Ironworks-24May2008.jpg/500px-Blaenafon_Ironworks-24May2008.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
     "county": "Torfaen",
     "tags": [
-      "unesco",
-      "industrial",
-      "cadw"
+      "atmospheric",
+      "museum",
+      "free-entry",
+      "kid-friendly",
+      "guided-tours"
     ],
     "access": "free",
     "_index": 1499,
@@ -39792,6 +40149,22 @@ const CASTLES = [
       "https://img.castlecore.uk/blaenavon-ironworks-3.jpg",
       "https://img.castlecore.uk/blaenavon-ironworks-4.jpg",
       "https://img.castlecore.uk/blaenavon-ironworks-5.jpg"
+    ],
+    "history": "Built 1788-99 by Thomas Hill, Thomas Hopkins, and Benjamin Pratt as the first purpose-built multi-furnace ironworks in Wales. By 1796, it was Wales's second-largest ironworks. Site of the revolutionary Gilchrist-Thomas process (1878) which allowed cheap, high-sulphur iron ores to be used worldwide, transforming global steel production. Closed 1904. Part of the Blaenavon Industrial Landscape UNESCO World Heritage Site inscribed in 2000. Managed by Cadw.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "UNESCO",
+        "url": "https://whc.unesco.org/en/list/984/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Blaenavon_Ironworks"
+      },
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/blaenavon-ironworks"
+      }
     ]
   },
   {
@@ -40268,18 +40641,20 @@ const CASTLES = [
     "lng": -3.9333,
     "country": "Wales",
     "type": "industrial",
-    "era": "Roman",
+    "era": "1st century Roman",
     "condition": "ruin",
-    "description": "Only known Roman gold mine in Britain, National Trust managed.",
+    "description": "The UK's only known Roman gold mines, hidden in a green Welsh valley — where legionaries once dug for treasure and you can still venture underground on guided tours by candlelight.",
     "image": "https://img.castlecore.uk/dolaucothi-gold-mines.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "Carmarthenshire",
     "tags": [
-      "roman",
-      "gold-mine",
-      "national-trust",
-      "underground"
+      "atmospheric",
+      "guided-tours",
+      "kid-friendly",
+      "woodland",
+      "remote",
+      "tearoom-cafe"
     ],
     "access": "paid",
     "_index": 1520,
@@ -40288,6 +40663,22 @@ const CASTLES = [
       "https://img.castlecore.uk/dolaucothi-gold-mines-3.jpg",
       "https://img.castlecore.uk/dolaucothi-gold-mines-4.jpg",
       "https://img.castlecore.uk/dolaucothi-gold-mines-5.jpg"
+    ],
+    "history": "Mined by the Romans from the 1st century AD, possibly a motivation for their invasion of Britain. A Roman military fort guarded the site until c.125 AD when it became civilian-operated. Evidence of sophisticated Roman engineering including aqueducts and hushing techniques survives. Mining continued intermittently through the 19th-20th centuries. Now a National Trust property with guided underground tours.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/dolaucothi-gold-mines"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dolaucothi_Gold_Mines"
+      },
+      {
+        "name": "History Hit",
+        "url": "https://www.historyhit.com/locations/dolaucothi-gold-mines/"
+      }
     ]
   },
   {
@@ -40390,17 +40781,21 @@ const CASTLES = [
     "lng": -3.8167,
     "country": "Wales",
     "type": "historic-house",
-    "era": "17th century",
+    "era": "13th-17th century",
     "condition": "restored",
-    "description": "Grade I listed house with walled garden and views to Conwy Castle and Snowdonia.",
+    "description": "A Grade I listed Welsh manor with a medieval watchtower commanding views to Conwy Castle and Snowdonia — now a luxurious National Trust hotel wrapped in walled gardens and ancient woodland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bodysgallenhallcmichaelhoganlowres.jpg/500px-Bodysgallenhallcmichaelhoganlowres.jpg",
     "rating": 4.5,
     "reviewCount": 1800,
     "county": "Conwy",
     "tags": [
-      "grade-i",
+      "well-preserved",
+      "medieval",
       "gardens",
-      "hotel"
+      "photogenic",
+      "romantic",
+      "tearoom-cafe",
+      "wedding-venue"
     ],
     "access": "paid",
     "_index": 1525,
@@ -40409,6 +40804,22 @@ const CASTLES = [
       "https://img.castlecore.uk/bodysgallen-hall-3.jpg",
       "https://img.castlecore.uk/bodysgallen-hall-4.jpg",
       "https://img.castlecore.uk/bodysgallen-hall-5.jpg"
+    ],
+    "history": "The core is a late 13th-century watchtower, probably built to support the defence of nearby Conwy Castle. First recorded in mid-14th century. The hall grew through the 16th-17th centuries around this tower, built from on-site quarried pink sandstone. Used as a recruiting ground for the Royal Welsh Fusiliers in WWI. Now a luxury hotel owned by the National Trust with rare 17th-century parterre gardens and a 200-year-old stone pine.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Bodysgallen Hall",
+        "url": "https://www.bodysgallen.com/hotel-gardens/history/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bodysgallen_Hall"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/attractions.htm?attraction=695"
+      }
     ]
   },
   {
@@ -40518,15 +40929,17 @@ const CASTLES = [
     "type": "monument",
     "era": "Neolithic",
     "condition": "intact",
-    "description": "Prehistoric passage tomb on Anglesey aligned with the summer solstice.",
+    "description": "Step inside a 5,000-year-old passage tomb on Anglesey — 'The Mound in the Dark Grove' aligns with the summer solstice sunrise, flooding its ancient chamber with golden light.",
     "image": "https://img.castlecore.uk/bryn-celli-ddu.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
     "county": "Anglesey",
     "tags": [
-      "neolithic",
-      "passage-tomb",
-      "solstice"
+      "prehistoric",
+      "atmospheric",
+      "free-entry",
+      "photogenic",
+      "remote"
     ],
     "access": "free",
     "_index": 1529,
@@ -40535,6 +40948,22 @@ const CASTLES = [
       "https://img.castlecore.uk/bryn-celli-ddu-3.jpg",
       "https://img.castlecore.uk/bryn-celli-ddu-4.jpg",
       "https://img.castlecore.uk/bryn-celli-ddu-5.jpg"
+    ],
+    "history": "Originally a Neolithic henge with a stone circle, later converted into a passage tomb c.3000 BC. The mound measures 26m in diameter with a stone-lined passage leading to a central burial chamber. Aligned with the summer solstice sunrise when light penetrates the passage. Excavated 1928-29; a mysterious carved 'Pattern Stone' was found behind the chamber (replica on site, original in National Museum Wales). Managed by Cadw, free to visit.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/bryn-celli-ddu-chambered-tomb"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bryn_Celli_Ddu"
+      },
+      {
+        "name": "Anglesey History",
+        "url": "https://www.anglesey-history.co.uk/places/prehistoric-monuments/bryn-celli-ddu/"
+      }
     ]
   },
   {
@@ -41200,15 +41629,18 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "intact",
-    "description": "Best-preserved medieval town walls in South Wales with Five Arches gate.",
+    "description": "Some of Britain's finest medieval town walls, embracing a pastel-painted harbour town perched above golden beaches — where ancient stone meets seaside charm.",
     "image": "https://img.castlecore.uk/tenby-town-walls.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
     "county": "Pembrokeshire",
     "tags": [
-      "town-walls",
-      "five-arches",
-      "medieval"
+      "well-preserved",
+      "medieval",
+      "photogenic",
+      "coastal",
+      "free-entry",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 1571,
@@ -41217,6 +41649,22 @@ const CASTLES = [
       "https://img.castlecore.uk/tenby-town-walls-3.jpg",
       "https://img.castlecore.uk/tenby-town-walls-4.jpg",
       "https://img.castlecore.uk/tenby-town-walls-5.jpg"
+    ],
+    "history": "Built in the 13th century by the Earls of Pembroke (the Marshal family) to defend the prosperous trading port. Strengthened in the 1450s with the impressive Five Arches barbican gatehouse, which still serves as the main entrance. Grade I listed and among the most complete medieval town defences in Wales. The walls helped Tenby withstand sieges during the Civil War.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tenby_town_walls"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/wales/pembrokeshire/properties/tenby-town-walls.htm"
+      },
+      {
+        "name": "Medieval Heritage",
+        "url": "https://medievalheritage.eu/en/main-page/heritage/wales/tenby-city-defensive-walls/"
+      }
     ]
   },
   {
@@ -41367,15 +41815,19 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "The best-preserved group of monastic buildings in Scotland, on an island in the Firth of Forth.",
+    "description": "Scotland's best-preserved medieval abbey perched on a tiny island in the Firth of Forth — reached by boat through waters where seals bask and puffins nest.",
     "image": "https://img.castlecore.uk/inchcolm-abbey.jpg",
     "rating": 4.6,
     "reviewCount": 2100,
     "county": "Fife",
     "tags": [
-      "religious",
       "island",
-      "photogenic"
+      "atmospheric",
+      "photogenic",
+      "medieval",
+      "ruins-romantic",
+      "coastal",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 1585,
@@ -41384,6 +41836,22 @@ const CASTLES = [
       "https://img.castlecore.uk/inchcolm-abbey-3.jpg",
       "https://img.castlecore.uk/inchcolm-abbey-4.jpg",
       "https://img.castlecore.uk/inchcolm-abbey-5.jpg"
+    ],
+    "history": "Founded c.1123 after King Alexander I was shipwrecked on the island and sheltered by a hermit. Became an Augustinian priory under David I. The 15th-century abbot Walter Bower wrote the great Scotichronicon history here. Suffered repeated English naval raids from the 1300s-1500s. Dissolved at the Reformation in 1560. Managed by Historic Environment Scotland.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/inchcolm-abbey/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Inchcolm_Abbey"
+      },
+      {
+        "name": "History Hit",
+        "url": "https://www.historyhit.com/locations/inchcolm-abbey/"
+      }
     ]
   },
   {
@@ -41433,16 +41901,19 @@ const CASTLES = [
     "lng": -3.8358,
     "country": "Scotland",
     "type": "castle",
-    "era": "15th century",
+    "era": "15th century castle / 17th century gardens",
     "condition": "intact",
-    "description": "Famous for its spectacular formal gardens, one of the finest in Europe, with a 17th-century parterre.",
+    "description": "Scotland's most spectacular formal gardens unfold below you in a breathtaking Italian parterre — geometric perfection carved into the Perthshire landscape with a 17th-century sundial at its heart.",
     "image": "https://img.castlecore.uk/drummond-castle-gardens.jpg",
     "rating": 4.5,
     "reviewCount": 1800,
     "county": "Perth and Kinross",
     "tags": [
       "gardens",
-      "photogenic"
+      "photogenic",
+      "well-preserved",
+      "filming-location",
+      "romantic"
     ],
     "access": "paid",
     "_index": 1587,
@@ -41451,6 +41922,22 @@ const CASTLES = [
       "https://img.castlecore.uk/drummond-castle-gardens-3.jpg",
       "https://img.castlecore.uk/drummond-castle-gardens-4.jpg",
       "https://img.castlecore.uk/drummond-castle-gardens-5.jpg"
+    ],
+    "history": "The castle was built c.1490 by John Drummond, 1st Lord Drummond. The 4th Lord was created Earl of Perth in 1605. The Italian-style parterre gardens were first laid out in the 1630s, with a remarkable multi-faceted sundial by John Mylne as centrepiece. Abandoned after the Jacobite Risings, the gardens were restored in the early 19th century and again in the 20th. Queen Victoria visited in 1842, planting a copper beech. Featured in the Outlander TV series.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Drummond Castle Gardens",
+        "url": "https://drummondcastlegardens.co.uk/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Drummond_Castle"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/attractions.htm?attraction=1152"
+      }
     ]
   },
   {
@@ -44568,17 +45055,23 @@ const CASTLES = [
     "lng": -6.328,
     "country": "Ireland",
     "type": "abbey",
-    "era": "6th century",
+    "era": "6th-12th century",
     "condition": "ruin",
-    "description": "Famous early Christian monastic settlement with round tower in glacial valley.",
+    "description": "A mystical early Christian monastery nestled in the 'Valley of Two Lakes' — round tower piercing the Wicklow sky, Celtic crosses standing sentinel among ancient graves.",
     "image": "https://img.castlecore.uk/glendalough-monastic-site.jpg",
     "rating": 4.7,
     "reviewCount": 2000,
     "county": "County Wicklow",
     "tags": [
-      "landmark",
-      "free",
-      "scenic"
+      "atmospheric",
+      "celtic",
+      "medieval",
+      "photogenic",
+      "ruins-romantic",
+      "woodland",
+      "riverside",
+      "guided-tours",
+      "museum"
     ],
     "access": "free",
     "_index": 1757,
@@ -44587,6 +45080,22 @@ const CASTLES = [
       "https://img.castlecore.uk/glendalough-monastic-site-3.jpg",
       "https://img.castlecore.uk/glendalough-monastic-site-4.jpg",
       "https://img.castlecore.uk/glendalough-monastic-site-5.jpg"
+    ],
+    "history": "Founded in the 6th century by St Kevin, who sought solitude in this remote glacial valley. Grew into one of Ireland's great centres of learning, producing manuscripts in Irish and Latin. Surviving buildings date from the 10th-12th centuries, including the iconic 30m round tower. Repeatedly raided by Vikings and finally destroyed by English forces in 1398. The pilgrimage site never fully died.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Heritage Ireland",
+        "url": "https://heritageireland.ie/places-to-visit/glendalough-monastic-site-and-visitor-centre/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Glendalough"
+      },
+      {
+        "name": "Monastic Ireland",
+        "url": "http://monastic.ie/history/glendalough/"
+      }
     ]
   },
   {
@@ -44621,16 +45130,21 @@ const CASTLES = [
     "lng": -6.186,
     "country": "Ireland",
     "type": "castle",
-    "era": "18th century",
+    "era": "13th century / 18th century",
     "condition": "restored",
-    "description": "Palladian mansion with Ireland's greatest gardens and waterfall.",
+    "description": "Ireland's most magnificent gardens cascade down terraces toward the misty Sugar Loaf Mountain — 47 acres of Italianate splendour surrounding a Palladian mansion reborn from fire.",
     "image": "https://img.castlecore.uk/powerscourt-estate.jpg",
     "rating": 4.6,
     "reviewCount": 1500,
     "county": "County Wicklow",
     "tags": [
-      "landmark",
-      "scenic"
+      "photogenic",
+      "gardens",
+      "romantic",
+      "tearoom-cafe",
+      "gift-shop",
+      "wedding-venue",
+      "kid-friendly"
     ],
     "access": "paid",
     "_index": 1759,
@@ -44639,6 +45153,22 @@ const CASTLES = [
       "https://img.castlecore.uk/powerscourt-estate-3.jpg",
       "https://img.castlecore.uk/powerscourt-estate-4.jpg",
       "https://img.castlecore.uk/powerscourt-estate-5.jpg"
+    ],
+    "history": "Originally a 13th-century Anglo-Norman castle, transformed in the 1730s by architect Richard Cassels into a grand Palladian mansion for the Wingfield family (Viscounts Powerscourt). The spectacular 47-acre gardens were created by the 7th Viscount from 1858, collecting statuary and ironwork across Europe. The house was devastated by an accidental fire in 1974, just one day before a grand reopening. Partially restored and reopened in 1996.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Powerscourt_Estate"
+      },
+      {
+        "name": "Visit Wicklow",
+        "url": "https://visitwicklow.ie/listing/powerscourt-house-gardens-2/"
+      },
+      {
+        "name": "Irish Tourism",
+        "url": "https://www.irishtourism.com/powerscourt-house-and-gardens1/"
+      }
     ]
   },
   {
@@ -46591,16 +47121,20 @@ const CASTLES = [
     "lng": 1.3267,
     "country": "England",
     "type": "castle",
-    "era": "3rd century",
+    "era": "1st-4th century Roman",
     "condition": "ruin",
-    "description": "Roman Saxon Shore fort where the Roman invasion of AD 43 began, massive walls survive.",
+    "description": "Where Roman Britain began — the very beach where Claudius's legions first came ashore in AD 43, now ringed by massive stone walls that guarded the empire's gateway for nearly four centuries.",
     "image": "https://img.castlecore.uk/richborough-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
     "county": "Kent",
     "tags": [
-      "hidden-gem",
-      "dramatic-ruin"
+      "prehistoric",
+      "atmospheric",
+      "museum",
+      "photogenic",
+      "kid-friendly",
+      "dog-friendly"
     ],
     "access": "paid",
     "_index": 1845,
@@ -46609,6 +47143,22 @@ const CASTLES = [
       "https://img.castlecore.uk/richborough-castle-3.jpg",
       "https://img.castlecore.uk/richborough-castle-4.jpg",
       "https://img.castlecore.uk/richborough-castle-5.jpg"
+    ],
+    "history": "The Roman army landed here in AD 43, making Richborough (Rutupiae) the symbolic gateway to Britannia. It developed from a military beachhead into a thriving port town and main entry point for imports. Massive 3rd-century 'Saxon Shore' fort walls survive, along with foundations of a great triumphal arch. Occupied continuously from AD 43 to the Roman departure in 410. A reconstructed timber gateway stands on its original spot. Managed by English Heritage.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/richborough-roman-fort-and-amphitheatre/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Richborough_Castle"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/attractions.htm?attraction=1797"
+      }
     ]
   },
   {
@@ -46617,17 +47167,21 @@ const CASTLES = [
     "lng": 1.195,
     "country": "England",
     "type": "abbey",
-    "era": "7th century",
+    "era": "3rd century Roman / 12th century towers",
     "condition": "ruin",
-    "description": "Twin towers of a medieval church within a Roman fort, a striking coastal landmark.",
+    "description": "Twin 12th-century towers of a vanished church stand dramatically against the Kent sky, perched on eroding cliffs above a Roman fort — haunting sentinels between land and sea.",
     "image": "https://img.castlecore.uk/reculver-towers.jpg",
     "rating": 4.2,
     "reviewCount": 2000,
     "county": "Kent",
     "tags": [
-      "free",
+      "atmospheric",
+      "coastal",
+      "ruins-romantic",
       "photogenic",
-      "dramatic-ruin"
+      "free-entry",
+      "dog-friendly",
+      "dark-brooding"
     ],
     "access": "free",
     "_index": 1846,
@@ -46636,6 +47190,18 @@ const CASTLES = [
       "https://img.castlecore.uk/reculver-towers-3.jpg",
       "https://img.castlecore.uk/reculver-towers-4.jpg",
       "https://img.castlecore.uk/reculver-towers-5.jpg"
+    ],
+    "history": "Site of Regulbium, one of the earliest Roman 'Saxon Shore' forts built in the 3rd century to defend against raids. An Anglo-Saxon monastery was founded here in 669 AD. The church was remodelled with its distinctive twin towers in the 12th century. Most of the church was demolished in 1809 but the towers were preserved as a navigation landmark. Managed by English Heritage.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/reculver-towers-and-roman-fort/"
+      },
+      {
+        "name": "See Kent",
+        "url": "https://seekent.co.uk/listing/the-reculver-towers/"
+      }
     ]
   },
   {
@@ -46697,14 +47263,19 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "partial",
-    "description": "Baroque mansion with stunning gardens and Stainborough Castle folly.",
+    "description": "A baroque mansion born from an aristocratic family feud — built to outshine a cousin's nearby estate, set within magnificent gardens hiding a theatrical mock medieval castle on the hilltop.",
     "image": "https://img.castlecore.uk/wentworth-castle.jpg",
     "rating": 4.2,
     "reviewCount": 1500,
     "county": "Yorkshire",
     "tags": [
+      "gardens",
       "photogenic",
-      "kid-friendly"
+      "atmospheric",
+      "guided-tours",
+      "tearoom-cafe",
+      "dog-friendly",
+      "woodland"
     ],
     "access": "paid",
     "_index": 1851,
@@ -46713,6 +47284,22 @@ const CASTLES = [
       "https://img.castlecore.uk/wentworth-castle-3.jpg",
       "https://img.castlecore.uk/wentworth-castle-4.jpg",
       "https://img.castlecore.uk/wentworth-castle-5.jpg"
+    ],
+    "history": "Purchased in 1708 by Thomas Wentworth, Baron Raby, who was disinherited from nearby Wentworth Woodhouse and determined to build a rival estate. A grand Baroque wing was added 1709-15. In 1727, he built a spectacular sham medieval castle ('Stainborough Castle') on the highest point of the estate as a theatrical folly. Gardens include a conservatory, Victorian flower garden, and 60 acres of parkland. Now cared for by the National Trust and undergoing restoration.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/yorkshire/wentworth-castle-gardens/the-history-of-wentworth-castle-gardens"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wentworth_Castle"
+      },
+      {
+        "name": "Wentworth Castle",
+        "url": "https://www.wentworthcastle.org/history-restoration/"
+      }
     ]
   },
   {
@@ -47197,14 +47784,16 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "Unique triangular building obsessed with the number three, built as a Catholic symbol.",
+    "description": "A bizarre and beautiful Elizabethan folly where every single feature comes in threes — a defiant Catholic nobleman's architectural love letter to the Holy Trinity, hidden in Northamptonshire fields.",
     "image": "https://img.castlecore.uk/rushton-triangular-lodge.jpg",
     "rating": 4.4,
     "reviewCount": 1500,
     "county": "Northamptonshire",
     "tags": [
-      "well-preserved",
-      "hidden-gem"
+      "photogenic",
+      "atmospheric",
+      "tudor",
+      "free-entry"
     ],
     "access": "paid",
     "_index": 1865,
@@ -47213,6 +47802,22 @@ const CASTLES = [
       "https://img.castlecore.uk/rushton-triangular-lodge-3.jpg",
       "https://img.castlecore.uk/rushton-triangular-lodge-4.jpg",
       "https://img.castlecore.uk/rushton-triangular-lodge-5.jpg"
+    ],
+    "history": "Built 1593-97 by Sir Thomas Tresham after spending 15 years imprisoned for his Catholic faith. Every element is designed around the number three: three sides, three floors, three windows on each face, trefoil decorations — all symbolising the Holy Trinity. Tresham's son Francis was later involved in the Gunpowder Plot. Managed by English Heritage.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/rushton-triangular-lodge/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rushton_Triangular_Lodge"
+      },
+      {
+        "name": "Rushton Hall",
+        "url": "https://www.rushtonhall.com/rushton-triangular-lodge/"
+      }
     ]
   },
   {
@@ -47835,14 +48440,19 @@ const CASTLES = [
     "type": "castle",
     "era": "2nd century",
     "condition": "ruin",
-    "description": "Hadrian's Wall fort with the longest visible stretch of wall and turret remains.",
+    "description": "One of Hadrian's Wall's best-preserved forts, perched on a dramatic ridge above the River Irthing gorge with the longest surviving stretch of the Wall stretching into the distance.",
     "image": "https://img.castlecore.uk/birdoswald-roman-fort.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
     "county": "Cumbria",
     "tags": [
+      "well-preserved",
       "photogenic",
-      "kid-friendly"
+      "kid-friendly",
+      "hilltop",
+      "guided-tours",
+      "museum",
+      "tearoom-cafe"
     ],
     "access": "paid",
     "_index": 1889,
@@ -47851,6 +48461,26 @@ const CASTLES = [
       "https://img.castlecore.uk/birdoswald-roman-fort-3.jpg",
       "https://img.castlecore.uk/birdoswald-roman-fort-4.jpg",
       "https://img.castlecore.uk/birdoswald-roman-fort-5.jpg"
+    ],
+    "history": "Known as Banna in Roman times, built c.122 AD as part of Hadrian's Wall defences. Garrisoned by Cohors I Aelia Dacorum from c.126-400 AD. One of 16 forts along the Wall, remarkably occupied into the post-Roman 5th century. Managed by English Heritage since 2004.",
+    "youtube": [
+      "IUzJuZU1vXA",
+      "MQjKSW4ldP4",
+      "MyFnDGdwPnM"
+    ],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/birdoswald-roman-fort-hadrians-wall/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Banna_(Birdoswald)"
+      },
+      {
+        "name": "Hadrian's Wall Country",
+        "url": "https://hadrianswallcountry.co.uk/attraction/birdoswald-roman-fort/"
+      }
     ]
   },
   {
@@ -47986,16 +48616,19 @@ const CASTLES = [
     "lng": -2.0233,
     "country": "England",
     "type": "castle",
-    "era": "1st century",
+    "era": "1st-4th century Roman",
     "condition": "ruin",
-    "description": "Remains of a Roman garrison town behind Hadrian's Wall with an excellent museum.",
+    "description": "Walk the actual streets of a Roman frontier town — where legionaries shopped, drank, and stored their treasures in a buried chest unearthed 1,800 years later.",
     "image": "https://img.castlecore.uk/corbridge-roman-town.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
     "county": "Northumberland",
     "tags": [
-      "hidden-gem",
-      "kid-friendly"
+      "museum",
+      "photogenic",
+      "kid-friendly",
+      "guided-tours",
+      "gift-shop"
     ],
     "access": "paid",
     "_index": 1893,
@@ -48004,6 +48637,22 @@ const CASTLES = [
       "https://img.castlecore.uk/corbridge-roman-town-3.jpg",
       "https://img.castlecore.uk/corbridge-roman-town-4.jpg",
       "https://img.castlecore.uk/corbridge-roman-town-5.jpg"
+    ],
+    "history": "Originally a series of military forts at the junction of Dere Street and Stanegate, south of Hadrian's Wall. After the Wall was built, Corbridge (Coria, meaning 'hosting place' in Celtic) developed into a prosperous supply town and leave centre for off-duty garrisons. In 1964, archaeologists discovered the famous 'Corbridge Hoard' — a buried chest containing armour and weapons hidden by a Roman soldier. Managed by English Heritage with a museum.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/corbridge-roman-town-hadrians-wall/"
+      },
+      {
+        "name": "Visit Northumberland",
+        "url": "https://www.visitnorthumberland.com/explore/things-to-do/attractions/historic-sites/corbridge-roman-town-hadrian-s-wall"
+      },
+      {
+        "name": "Historic UK",
+        "url": "https://www.historic-uk.com/HistoryMagazine/DestinationsUK/Corbridge-Roman-Site-Northumberland/"
+      }
     ]
   },
   {
@@ -48499,16 +49148,22 @@ const CASTLES = [
     "lng": -2.805,
     "country": "England",
     "type": "castle",
-    "era": "14th century",
+    "era": "17th century",
     "condition": "intact",
-    "description": "Castle and parkland on the Welsh border, home to the Croft family for nearly 1,000 years.",
+    "description": "A thousand years of one family's story told through a pink-stone castle set among ancient oaks and sweet chestnuts in the rolling Herefordshire borderlands.",
     "image": "https://img.castlecore.uk/croft-castle.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
     "county": "Herefordshire",
     "tags": [
       "well-preserved",
-      "kid-friendly"
+      "gardens",
+      "woodland",
+      "photogenic",
+      "kid-friendly",
+      "tearoom-cafe",
+      "gift-shop",
+      "guided-tours"
     ],
     "access": "paid",
     "_index": 1919,
@@ -48517,6 +49172,22 @@ const CASTLES = [
       "https://img.castlecore.uk/croft-castle-3.jpg",
       "https://img.castlecore.uk/croft-castle-4.jpg",
       "https://img.castlecore.uk/croft-castle-5.jpg"
+    ],
+    "history": "The Croft family held this land since before the Domesday Book of 1086, making it one of England's longest family associations with a single estate. The present quadrangular building dates from the 1660s when Herbert Croft was Bishop of Hereford. Lost by the family in the 18th century and dramatically bought back in 1923. Given to the National Trust in 1957. Set within 1,500 acres of parkland.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/croft-castle-and-parkland"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Croft_Castle"
+      },
+      {
+        "name": "Visit Herefordshire",
+        "url": "https://www.visitherefordshire.co.uk/discover/national-trust-croft-castle"
+      }
     ]
   },
   {
@@ -48572,15 +49243,18 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "Henry VIII's coastal fort from where he watched the Mary Rose sink.",
+    "description": "Henry VIII's squat coastal fortress where the king himself watched his flagship Mary Rose sink — now a free museum overlooking the Solent and the Isle of Wight.",
     "image": "https://img.castlecore.uk/southsea-castle.jpg",
     "rating": 4.1,
     "reviewCount": 2000,
     "county": "Hampshire",
     "tags": [
-      "well-preserved",
-      "kid-friendly",
-      "free"
+      "tudor",
+      "coastal",
+      "free-entry",
+      "museum",
+      "photogenic",
+      "kid-friendly"
     ],
     "access": "free",
     "_index": 1921,
@@ -48589,6 +49263,22 @@ const CASTLES = [
       "https://img.castlecore.uk/southsea-castle-3.jpg",
       "https://img.castlecore.uk/southsea-castle-4.jpg",
       "https://img.castlecore.uk/southsea-castle-5.jpg"
+    ],
+    "history": "Built in 1544 by Henry VIII as part of his 'Device' programme of coastal forts against French invasion. Henry stood here in 1545 watching the Battle of the Solent, witnessing his beloved Mary Rose capsize and sink. Used in the Civil War, Napoleonic era, and both World Wars. Now a free museum run by Portsmouth City Council.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Southsea_Castle"
+      },
+      {
+        "name": "Southsea Castle",
+        "url": "https://southseacastle.co.uk/"
+      },
+      {
+        "name": "Mary Rose Museum",
+        "url": "https://maryrose.org/discover/history/southsea-castle/"
+      }
     ]
   },
   {
@@ -48765,14 +49455,16 @@ const CASTLES = [
     "type": "castle",
     "era": "20th century",
     "condition": "ruin",
-    "description": "Secret military testing site with eerie Cold War pagodas on a coastal spit.",
+    "description": "Britain's most secretive landscape — a windswept shingle spit scattered with Cold War pagodas where atomic weapons were tested, now reclaimed by nature and silence.",
     "image": "https://img.castlecore.uk/orford-ness.jpg",
     "rating": 4.4,
     "reviewCount": 2000,
     "county": "Suffolk",
     "tags": [
-      "hidden-gem",
-      "dramatic-ruin",
+      "atmospheric",
+      "coastal",
+      "remote",
+      "dark-brooding",
       "photogenic"
     ],
     "access": "paid",
@@ -48782,6 +49474,18 @@ const CASTLES = [
       "https://img.castlecore.uk/orford-ness-3.jpg",
       "https://img.castlecore.uk/orford-ness-4.jpg",
       "https://img.castlecore.uk/orford-ness-5.jpg"
+    ],
+    "history": "Used from 1913 as a military testing site for experimental radar and weaponry. During the Cold War, the Atomic Weapons Research Establishment tested nuclear bomb components in distinctive concrete 'pagoda' buildings. Decommissioned in the early 1980s and acquired by the National Trust in 1993. Now a National Nature Reserve and SSSI, accessible only by boat from Orford.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/suffolk/orford-ness-national-nature-reserve"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Orford_Ness"
+      }
     ]
   },
   {
@@ -48817,17 +49521,21 @@ const CASTLES = [
     "lng": 1.155,
     "country": "England",
     "type": "castle",
-    "era": "16th century",
+    "era": "15th century",
     "condition": "intact",
-    "description": "Moated Tudor hall with drawbridges still raised nightly, spectacular gardens.",
+    "description": "A fairy-tale moated Tudor hall where the drawbridge is still raised every single night — surrounded by Grade I gardens, a deer park, and 500 years of the same family's careful stewardship.",
     "image": "https://img.castlecore.uk/helmingham-hall.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
     "county": "Suffolk",
     "tags": [
       "well-preserved",
+      "tudor",
+      "gardens",
       "photogenic",
-      "hidden-gem"
+      "romantic",
+      "tearoom-cafe",
+      "dog-friendly"
     ],
     "access": "paid",
     "_index": 1936,
@@ -48836,6 +49544,22 @@ const CASTLES = [
       "https://img.castlecore.uk/helmingham-hall-3.jpg",
       "https://img.castlecore.uk/helmingham-hall-4.jpg",
       "https://img.castlecore.uk/helmingham-hall-5.jpg"
+    ],
+    "history": "Begun by John Tollemache in 1480, owned by the Tollemache family ever since — over 500 years. Built around a courtyard in typical late medieval/Tudor style with a working moat and drawbridge. Tudor gables were removed c.1760 and half-timbered walls concealed behind brick. The Grade I listed gardens were redesigned by Lady Tollemache (Chelsea Gold Medallist) and include herbaceous borders, herb gardens, and a 400-acre deer park with red and fallow deer.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Helmingham_Hall"
+      },
+      {
+        "name": "Helmingham Hall",
+        "url": "https://www.helmingham.com/history/the-hall/"
+      },
+      {
+        "name": "Country Life",
+        "url": "https://www.countrylife.co.uk/gardens/country-gardens-and-gardening-tips/helmingham-hall-the-ancient-garden-at-medieval-hall-where-the-drawbridge-is-still-pulled-up-every-night"
+      }
     ]
   },
   {
@@ -49650,15 +50374,18 @@ const CASTLES = [
     "type": "castle",
     "era": "Bronze Age",
     "condition": "ruin",
-    "description": "Atmospheric Bronze Age burial cairns with standing stones near Culloden.",
+    "description": "A hauntingly atmospheric Bronze Age cemetery where 4,000-year-old burial cairns stand in a woodland clearing above the River Nairn — the kind of place that inspired Outlander's standing stones.",
     "image": "https://img.castlecore.uk/clava-cairns.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
     "county": "Highland",
     "tags": [
-      "bronze-age",
-      "standing-stones",
-      "atmospheric"
+      "atmospheric",
+      "prehistoric",
+      "free-entry",
+      "woodland",
+      "photogenic",
+      "remote"
     ],
     "access": "free",
     "_index": 2021,
@@ -49667,6 +50394,22 @@ const CASTLES = [
       "https://img.castlecore.uk/clava-cairns-3.jpg",
       "https://img.castlecore.uk/clava-cairns-4.jpg",
       "https://img.castlecore.uk/clava-cairns-5.jpg"
+    ],
+    "history": "Built c.2000 BC as passage graves and ring cairns surrounded by standing stones. Part of a distinct Highland burial tradition stretching from Moray to the Black Isle. The stones are astronomically aligned — the passage graves point toward the midwinter sunset. Free to visit year-round.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/clava-cairns/history/"
+      },
+      {
+        "name": "World History Encyclopedia",
+        "url": "https://www.worldhistory.org/Clava_Cairns/"
+      },
+      {
+        "name": "Visit Scotland",
+        "url": "https://www.visitscotland.com/info/see-do/clava-cairns-p245611"
+      }
     ]
   },
   {
@@ -50982,18 +51725,21 @@ const CASTLES = [
     "lng": -5.4833,
     "country": "Scotland",
     "type": "castle",
-    "era": "Iron Age",
+    "era": "Iron Age / Early Medieval",
     "condition": "ruin",
-    "description": "Inaugurating place of the kings of Dal Riata with a famous footprint carved in rock.",
+    "description": "The ancient capital of Dál Riata — climb this rocky outcrop in Kilmartin Glen and place your foot in the same carved footprint where Dark Age kings were crowned in the birthplace of Scotland.",
     "image": "https://img.castlecore.uk/dunadd-fort.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
     "county": "Argyll and Bute",
     "tags": [
-      "dal-riata",
-      "footprint",
-      "hillfort",
-      "ancient"
+      "atmospheric",
+      "prehistoric",
+      "hilltop",
+      "free-entry",
+      "remote",
+      "photogenic",
+      "celtic"
     ],
     "access": "free",
     "_index": 2077,
@@ -51002,6 +51748,22 @@ const CASTLES = [
       "https://img.castlecore.uk/dunadd-fort-3.jpg",
       "https://img.castlecore.uk/dunadd-fort-4.jpg",
       "https://img.castlecore.uk/dunadd-fort-5.jpg"
+    ],
+    "history": "An Iron Age hillfort that became the chief stronghold of the Gaelic kingdom of Dál Riata, which spanned northern Ireland and western Scotland. First mentioned in AD 683, already a major power centre. Famous for its summit carvings: a footprint, a boar, and an ogham inscription, likely used in king-making ceremonies. From here, the seeds of what became the Kingdom of Scotland were sown. Free to visit, managed by Historic Environment Scotland.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/kilmartin-glen-dunadd-fort/history/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dunadd"
+      },
+      {
+        "name": "Britannica",
+        "url": "https://www.britannica.com/place/Dalriada"
+      }
     ]
   },
   {
@@ -51619,15 +52381,18 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "restored",
-    "description": "Castle museum at the mouth of the Tay with exhibits on whaling and local history.",
+    "description": "A sturdy 15th-century fortress standing guard at the mouth of the Tay — where castle walls meet sandy beach and panoramic views stretch across the Firth to Fife.",
     "image": "https://img.castlecore.uk/broughty-ferry-beach-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1600,
     "county": "Dundee",
     "tags": [
+      "coastal",
       "museum",
-      "beach",
-      "estuary"
+      "photogenic",
+      "kid-friendly",
+      "free-entry",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 2102,
@@ -51636,6 +52401,18 @@ const CASTLES = [
       "https://img.castlecore.uk/broughty-ferry-beach-castle-3.jpg",
       "https://img.castlecore.uk/broughty-ferry-beach-castle-4.jpg",
       "https://img.castlecore.uk/broughty-ferry-beach-castle-5.jpg"
+    ],
+    "history": "Built c.1490 by the 4th Lord Gray to control the strategically important mouth of the River Tay near Dundee. Captured by English troops in 1547 during the 'Rough Wooing'. Fell into ruin but was rebuilt in the 1860s as a coastal defence fort. Now houses a museum covering local history, wildlife, and the environment of the Tay estuary. Managed by Dundee City Council.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Broughty_Castle"
+      },
+      {
+        "name": "Dundee City Council",
+        "url": "https://www.dundeecity.gov.uk/service-area/leisure-and-culture-dundee/leisure-and-culture-dundee-art-galleries-and-museums/broughty-castle-museum"
+      }
     ]
   },
   {
@@ -54809,17 +55586,22 @@ const CASTLES = [
     "lng": -0.9917,
     "country": "England",
     "type": "castle",
-    "era": "17th century",
+    "era": "13th-17th century",
     "condition": "intact",
-    "description": "Charming manor house with panelled rooms and the Carlisle Collection of miniature rooms.",
+    "description": "A mellow Yorkshire manor nestled beside the River Rye in the Howardian Hills — where Tudor bones hide beneath 17th-century elegance and a celebrated miniature room collection delights visitors.",
     "image": "https://img.castlecore.uk/nunnington-hall.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
     "county": "Yorkshire",
     "tags": [
       "well-preserved",
+      "tudor",
+      "gardens",
+      "riverside",
+      "tearoom-cafe",
       "kid-friendly",
-      "hidden-gem"
+      "gift-shop",
+      "dog-friendly"
     ],
     "access": "paid",
     "_index": 2239,
@@ -54828,6 +55610,22 @@ const CASTLES = [
       "https://img.castlecore.uk/nunnington-hall-3.jpg",
       "https://img.castlecore.uk/nunnington-hall-4.jpg",
       "https://img.castlecore.uk/nunnington-hall-5.jpg"
+    ],
+    "history": "A dwelling has stood here since at least 1249, with the current house growing from a Tudor hall. Purchased by London cloth merchant Ranald Graham in 1655 for £9,500 (c.£2.5M today), whose family made many changes. The house evolved through the centuries and was last renovated in 1921 by the Fife family, who gave it to the National Trust in 1952. Houses the Carlisle Collection of miniature rooms in the attic.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/nunnington-hall"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nunnington_Hall"
+      },
+      {
+        "name": "Visit York",
+        "url": "https://visityork.org/business-directory/nunnington-hall"
+      }
     ]
   },
   {
@@ -54888,16 +55686,20 @@ const CASTLES = [
     "lng": -1.5217,
     "country": "England",
     "type": "abbey",
-    "era": "7th century",
+    "era": "7th century / 12th-16th century",
     "condition": "intact",
-    "description": "Cathedral with Saxon crypt, one of the oldest in England.",
+    "description": "One of England's oldest places of worship, hiding a 7th-century Anglo-Saxon crypt beneath soaring Gothic arches — its carvings are said to have inspired Lewis Carroll.",
     "image": "https://img.castlecore.uk/rippon-cathedral.jpg",
     "rating": 4.4,
     "reviewCount": 2000,
     "county": "Yorkshire",
     "tags": [
       "well-preserved",
-      "free"
+      "gothic",
+      "medieval",
+      "photogenic",
+      "free-entry",
+      "guided-tours"
     ],
     "access": "free",
     "_index": 2245,
@@ -54906,6 +55708,22 @@ const CASTLES = [
       "https://img.castlecore.uk/rippon-cathedral-3.jpg",
       "https://img.castlecore.uk/rippon-cathedral-4.jpg",
       "https://img.castlecore.uk/rippon-cathedral-5.jpg"
+    ],
+    "history": "A stone church has stood here since 672 AD when St Wilfrid replaced the original timber monastery. The Anglo-Saxon crypt beneath is the oldest intact structure in any English cathedral still in use. The present building dates primarily from the 12th-16th centuries. Its intricate misericord carvings allegedly inspired Lewis Carroll, who visited as a young man. Grade I listed.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Ripon Cathedral",
+        "url": "https://riponcathedral.org.uk/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ripon_Cathedral"
+      },
+      {
+        "name": "Visit North Yorkshire",
+        "url": "https://visitnorthyorkshire.com/index/ripon-cathedral"
+      }
     ]
   },
   {
@@ -55518,16 +56336,22 @@ const CASTLES = [
     "lng": -2.79,
     "country": "England",
     "type": "castle",
-    "era": "15th century",
+    "era": "16th century",
     "condition": "intact",
-    "description": "Tudor timber-framed hall where young Shakespeare supposedly performed.",
+    "description": "One of Lancashire's finest Tudor timber-framed halls — where a young William Shakespeare may once have performed in the spectacular Great Hall with its unique moveable screen.",
     "image": "https://img.castlecore.uk/rufford-old-hall.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
     "county": "Lancashire",
     "tags": [
       "well-preserved",
-      "hidden-gem"
+      "tudor",
+      "atmospheric",
+      "gardens",
+      "guided-tours",
+      "tearoom-cafe",
+      "gift-shop",
+      "kid-friendly"
     ],
     "access": "paid",
     "_index": 2267,
@@ -55536,6 +56360,22 @@ const CASTLES = [
       "https://img.castlecore.uk/rufford-old-hall-3.jpg",
       "https://img.castlecore.uk/rufford-old-hall-4.jpg",
       "https://img.castlecore.uk/rufford-old-hall-5.jpg"
+    ],
+    "history": "Built c.1530 by Sir Robert Hesketh, home to the Hesketh family for over 600 years. The magnificent timber-framed Great Hall survives with a rare hammerbeam roof and an extraordinary moveable carved oak screen — unique among Lancashire houses. Local tradition claims a young Shakespeare performed here as 'William Shakeshafte' in the 1580s. Abandoned c.1798, later restored. National Trust since 1936.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/liverpool-lancashire/rufford-old-hall"
+      },
+      {
+        "name": "National Trust Collections",
+        "url": "https://www.nationaltrustcollections.org.uk/place/rufford-old-hall"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rufford_Old_Hall"
+      }
     ]
   },
   {
@@ -55572,15 +56412,19 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "Black and white timber-framed hall linked to the Samlesbury witches.",
+    "description": "A black-and-white medieval hall draped in ghost stories and Lancashire legend — one of Britain's most haunted houses, where the White Lady still drifts through timber-framed rooms.",
     "image": "https://img.castlecore.uk/samlesbury-hall.jpg",
     "rating": 4.2,
     "reviewCount": 1500,
     "county": "Lancashire",
     "tags": [
-      "well-preserved",
+      "medieval",
+      "atmospheric",
       "haunted",
-      "hidden-gem"
+      "tearoom-cafe",
+      "events-venue",
+      "gift-shop",
+      "guided-tours"
     ],
     "access": "free",
     "_index": 2269,
@@ -55589,6 +56433,22 @@ const CASTLES = [
       "https://img.castlecore.uk/samlesbury-hall-3.jpg",
       "https://img.castlecore.uk/samlesbury-hall-4.jpg",
       "https://img.castlecore.uk/samlesbury-hall-5.jpg"
+    ],
+    "history": "Built in 1325 by Gilbert de Southworth as the family's primary residence. The Southworths were Catholic recusants who suffered under Elizabethan persecution. The hall's ghost, the 'White Lady' (Dorothy Southworth), is said to haunt the corridors after a tragic love affair. First published ghost account dates to 1873. The hall fell into disrepair but was rescued and is now a heritage venue with antiques centre, café, and regular events.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Samlesbury Hall",
+        "url": "https://samlesburyhall.co.uk/ghosts-hauntings/"
+      },
+      {
+        "name": "Visit Preston",
+        "url": "https://www.visitpreston.com/article/3057/Haunted-Preston-Samlesbury-Hall-s-Spooky-History"
+      },
+      {
+        "name": "Haunted Rooms",
+        "url": "https://www.hauntedrooms.co.uk/samlesbury-hall-preston-lancashire"
+      }
     ]
   },
   {
@@ -55682,14 +56542,18 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "partial",
-    "description": "Longest country house facade in Europe, undergoing major restoration.",
+    "description": "The longest country house façade in England stretches impossibly across the South Yorkshire landscape — a monument to aristocratic ambition now being gloriously restored.",
     "image": "https://img.castlecore.uk/wentworth-woodhouse.jpg",
     "rating": 4.2,
     "reviewCount": 2000,
     "county": "Yorkshire",
     "tags": [
+      "well-preserved",
       "photogenic",
-      "hidden-gem"
+      "gardens",
+      "guided-tours",
+      "tearoom-cafe",
+      "events-venue"
     ],
     "access": "paid",
     "_index": 2273,
@@ -55698,6 +56562,22 @@ const CASTLES = [
       "https://img.castlecore.uk/wentworth-woodhouse-3.jpg",
       "https://img.castlecore.uk/wentworth-woodhouse-4.jpg",
       "https://img.castlecore.uk/wentworth-woodhouse-5.jpg"
+    ],
+    "history": "The estate dates from the 1200s when forest was cleared for the 'Woodhouse' settlement. The current Baroque west front was built c.1725, followed by the immense 606ft Palladian east front in the 1730s-50s by the Marquess of Rockingham. Home to two Prime Ministers. Deliberately damaged by post-war open-cast coal mining ordered by a politically hostile government. Rescued by a preservation trust in 2017.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Historic Houses",
+        "url": "https://www.historichouses.org/house/wentworth-woodhouse/history/"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/yorkshire/houses-buildings/visit-wentworth-woodhouse"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wentworth_Woodhouse"
+      }
     ]
   },
   {
@@ -56429,13 +57309,17 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "National Trust house with outstanding art collection and terraced gardens.",
+    "description": "An art lover's country retreat hiding an extraordinary collection of Old Masters and 20th-century paintings behind its unassuming Warwickshire façade, with gardens that tumble into a hidden valley.",
     "image": "https://img.castlecore.uk/upton-house.jpg",
     "rating": 4.4,
     "reviewCount": 2000,
     "county": "Warwickshire",
     "tags": [
       "well-preserved",
+      "gardens",
+      "photogenic",
+      "tearoom-cafe",
+      "gift-shop",
       "kid-friendly"
     ],
     "access": "paid",
@@ -56445,6 +57329,18 @@ const CASTLES = [
       "https://img.castlecore.uk/upton-house-3.jpg",
       "https://img.castlecore.uk/upton-house-4.jpg",
       "https://img.castlecore.uk/upton-house-5.jpg"
+    ],
+    "history": "Originally built in 1695, the house was acquired in 1927 by Walter Samuel, 2nd Viscount Bearsted, son of the founder of Shell Oil. He amassed one of the finest private art collections in England, including works by El Greco, Stubbs, and Hogarth. Donated to the National Trust in 1948. The terraced gardens descend dramatically to a mirror pool in the valley below.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/warwickshire/upton-house-and-gardens"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Upton_House,_Warwickshire"
+      }
     ]
   },
   {
@@ -56475,15 +57371,20 @@ const CASTLES = [
     "type": "abbey",
     "era": "16th century",
     "condition": "intact",
-    "description": "Elizabethan manor house built from a medieval priory, charmingly modest.",
+    "description": "A time-capsule Elizabethan manor built from a dissolved priory's bones, where 400 years of the Dryden family left layers of Jacobean plasterwork and faded grandeur untouched.",
     "image": "https://img.castlecore.uk/canons-ashby.jpg",
     "rating": 4.4,
     "reviewCount": 2000,
     "county": "Northamptonshire",
     "tags": [
       "well-preserved",
-      "hidden-gem",
-      "photogenic"
+      "atmospheric",
+      "gardens",
+      "medieval",
+      "tudor",
+      "photogenic",
+      "tearoom-cafe",
+      "gift-shop"
     ],
     "access": "paid",
     "_index": 2304,
@@ -56492,6 +57393,22 @@ const CASTLES = [
       "https://img.castlecore.uk/canons-ashby-3.jpg",
       "https://img.castlecore.uk/canons-ashby-4.jpg",
       "https://img.castlecore.uk/canons-ashby-5.jpg"
+    ],
+    "history": "Built in the 1550s by John Dryden using the remains of a medieval Augustinian priory — great-grandfather of poet laureate John Dryden. Extended in the 1590s by Sir Erasmus Dryden with lavish plasterwork ceilings. The house remained largely unaltered after the 1710s, creating a rare survival of Elizabethan and Jacobean interiors. Given to the National Trust in 1981.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/leicestershire-northamptonshire/canons-ashby"
+      },
+      {
+        "name": "National Trust Collections",
+        "url": "https://www.nationaltrustcollections.org.uk/place/canons-ashby"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Canons_Ashby_House"
+      }
     ]
   },
   {
@@ -56767,15 +57684,19 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial",
-    "description": "Medieval moated manor house with a detached timber-framed gatehouse.",
+    "description": "A fairy-tale moated medieval manor house reached only by a tilting half-timbered gatehouse — hidden in a wooded Herefordshire valley that time forgot.",
     "image": "https://img.castlecore.uk/brockhampton-estate.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
     "county": "Herefordshire",
     "tags": [
-      "well-preserved",
-      "hidden-gem",
-      "photogenic"
+      "atmospheric",
+      "medieval",
+      "woodland",
+      "photogenic",
+      "ruins-romantic",
+      "tearoom-cafe",
+      "dog-friendly"
     ],
     "access": "paid",
     "_index": 2314,
@@ -56784,6 +57705,22 @@ const CASTLES = [
       "https://img.castlecore.uk/brockhampton-estate-3.jpg",
       "https://img.castlecore.uk/brockhampton-estate-4.jpg",
       "https://img.castlecore.uk/brockhampton-estate-5.jpg"
+    ],
+    "history": "The Brockhampton family held this land since at least the 12th century. The surviving timber-framed manor dates from the late 14th century, surrounded by a moat and approached through a remarkable detached half-timbered gatehouse. A ruined Norman chapel stands nearby. Owned by the same family for over 20 generations before Colonel John Lutley bequeathed it to the National Trust in 1946.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/brockhampton"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Brockhampton_Estate"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/attractions.htm?attraction=338"
+      }
     ]
   },
   {
@@ -57098,15 +58035,17 @@ const CASTLES = [
     "type": "abbey",
     "era": "15th century",
     "condition": "intact",
-    "description": "The oldest public library in the English-speaking world, in a medieval college.",
+    "description": "The oldest free public library in the English-speaking world, tucked inside a medieval sandstone building where Marx and Engels once sat plotting revolution together.",
     "image": "https://img.castlecore.uk/chetham-s-library.jpg",
     "rating": 4.5,
     "reviewCount": 2000,
     "county": "Greater Manchester",
     "tags": [
       "well-preserved",
-      "free",
-      "hidden-gem"
+      "medieval",
+      "atmospheric",
+      "free-entry",
+      "guided-tours"
     ],
     "access": "free",
     "_index": 2327,
@@ -57115,6 +58054,22 @@ const CASTLES = [
       "https://img.castlecore.uk/chetham-s-library-3.jpg",
       "https://img.castlecore.uk/chetham-s-library-4.jpg",
       "https://img.castlecore.uk/chetham-s-library-5.jpg"
+    ],
+    "history": "Housed in a 1421 building originally built for Manchester's Collegiate Church priests. Established in 1653 under the will of merchant Humphrey Chetham for education and public scholarship. Karl Marx and Friedrich Engels studied here in 1845 — their reading desk still stands. Over 350 years of continuous use as a free public library, with over 100,000 printed volumes.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Chetham's Library",
+        "url": "https://library.chethams.com/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Chetham%27s_Library"
+      },
+      {
+        "name": "History of Information",
+        "url": "https://www.historyofinformation.com/detail.php?id=36"
+      }
     ]
   },
   {
@@ -57219,16 +58174,21 @@ const CASTLES = [
     "lng": -2.8833,
     "country": "England",
     "type": "castle",
-    "era": "16th century",
+    "era": "16th-20th century",
     "condition": "intact",
-    "description": "Former home of the Earls of Sefton with a country park and Victorian walled garden.",
+    "description": "An Edwardian time capsule set within 500 acres of parkland on Liverpool's edge — the ancestral home of the Earls of Sefton, frozen in its Downton Abbey-era splendour.",
     "image": "https://img.castlecore.uk/croxteth-hall.jpg",
     "rating": 4.1,
     "reviewCount": 2000,
     "county": "Merseyside",
     "tags": [
-      "free",
-      "kid-friendly"
+      "well-preserved",
+      "victorian",
+      "gardens",
+      "kid-friendly",
+      "museum",
+      "free-entry",
+      "dog-friendly"
     ],
     "access": "free",
     "_index": 2331,
@@ -57237,6 +58197,18 @@ const CASTLES = [
       "https://img.castlecore.uk/croxteth-hall-3.jpg",
       "https://img.castlecore.uk/croxteth-hall-4.jpg",
       "https://img.castlecore.uk/croxteth-hall-5.jpg"
+    ],
+    "history": "Ancestral home of the Molyneux family, Earls of Sefton, with roots on this site stretching back centuries. The present hall evolved through Tudor, Queen Anne, and Edwardian periods. After the 7th and last Earl died in 1972, the estate passed to Liverpool City Council. Now a museum preserving the Edwardian house with period rooms, a working Victorian kitchen, and a home farm.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Croxteth_Hall"
+      },
+      {
+        "name": "Visit Liverpool",
+        "url": "https://www.visitliverpool.com/listing/croxteth-hall/68324101/"
+      }
     ]
   },
   {
@@ -57425,14 +58397,20 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "Tudor manor house within the Avebury World Heritage stone circle site.",
+    "description": "A Grade I Tudor manor where every room is dressed in a different century's style — set on the edge of the world's largest stone circle in a UNESCO landscape of ancient mystery.",
     "image": "https://img.castlecore.uk/avebury-manor.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
     "county": "Wiltshire",
     "tags": [
       "well-preserved",
-      "kid-friendly"
+      "tudor",
+      "gardens",
+      "prehistoric",
+      "photogenic",
+      "tearoom-cafe",
+      "museum",
+      "gift-shop"
     ],
     "access": "paid",
     "_index": 2339,
@@ -57441,6 +58419,22 @@ const CASTLES = [
       "https://img.castlecore.uk/avebury-manor-3.jpg",
       "https://img.castlecore.uk/avebury-manor-4.jpg",
       "https://img.castlecore.uk/avebury-manor-5.jpg"
+    ],
+    "history": "Built in the early 16th century on the site of a Benedictine priory within the Avebury UNESCO World Heritage Site. Remodelled c.1601 by Sir James Marvyn. The house passed through many hands before the National Trust acquired it in 1943. Reimagined by the BBC's 'The Manor Reborn' in 2011, with rooms now dressed to represent Tudor, Georgian, and 20th-century periods. Set among formal gardens.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/wiltshire/avebury"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Avebury_Manor_and_Garden"
+      },
+      {
+        "name": "Visit Wiltshire",
+        "url": "https://www.visitwiltshire.co.uk/things-to-do/avebury-stone-circle-and-avebury-manor-and-garden-p134483"
+      }
     ]
   },
   {
@@ -57774,14 +58768,17 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "Unique 16-sided house decorated with shells and feathers by two cousins.",
+    "description": "A wonderfully eccentric 16-sided house built by two Georgian cousins after their Grand Tour — stuffed with feather friezes, shell mosaics, and curios from their travels.",
     "image": "https://img.castlecore.uk/a-la-ronde.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
     "county": "Devon",
     "tags": [
-      "well-preserved",
-      "hidden-gem",
+      "photogenic",
+      "atmospheric",
+      "gardens",
+      "tearoom-cafe",
+      "gift-shop",
       "kid-friendly"
     ],
     "access": "paid",
@@ -57791,6 +58788,22 @@ const CASTLES = [
       "https://img.castlecore.uk/a-la-ronde-3.jpg",
       "https://img.castlecore.uk/a-la-ronde-4.jpg",
       "https://img.castlecore.uk/a-la-ronde-5.jpg"
+    ],
+    "history": "Built in the 1790s by cousins Jane and Mary Parminter after a 10-year Grand Tour of Europe. Inspired by the octagonal basilica of San Vitale in Ravenna. The interior features extraordinary handmade decorations including a shell gallery encrusted with 25,000 shells and a feather frieze. The cousins stipulated it should only pass to unmarried kinswomen. National Trust property since 1991.",
+    "youtube": [],
+    "sources": [
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/A_la_Ronde"
+      },
+      {
+        "name": "National Trust Collections",
+        "url": "https://www.nationaltrustcollections.org.uk/place/a-la-ronde"
+      }
     ]
   },
   {
@@ -60628,3 +61641,5 @@ const CASTLES = [
     ]
   }
 ];
+
+if (typeof module !== "undefined") module.exports = { CASTLES };
