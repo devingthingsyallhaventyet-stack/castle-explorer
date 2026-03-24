@@ -343,13 +343,10 @@ function exportDecisions() {
   });
   
   const exported = { merge: toMerge, deleteBoth: toDeleteBoth };
-  const blob = new Blob([JSON.stringify(exported, null, 2)], {type:'application/json'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'merge-decisions.json';
-  a.click();
-  URL.revokeObjectURL(url);
+  const json = JSON.stringify(exported, null, 2);
+  const win = window.open('', '_blank');
+  win.document.write('<pre style="word-wrap:break-word;white-space:pre-wrap;">' + json.replace(/</g,'&lt;') + '</pre>');
+  win.document.title = 'merge-decisions.json';
 }
 
 // Event listeners
