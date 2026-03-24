@@ -1,0 +1,5354 @@
+{
+  "Dunmore East Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.1509,
+    "lng": -6.9946,
+    "condition": "intact"
+  },
+  "Askeaton Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.5992,
+    "lng": -8.9756,
+    "condition": "ruin"
+  },
+  "Dunloe Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.0167,
+    "lng": -9.65,
+    "condition": "ruin"
+  },
+  "Ferns Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.59,
+    "lng": -6.5006,
+    "condition": "ruin"
+  },
+  "Granny Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.34,
+    "lng": -7.16,
+    "condition": "ruin"
+  },
+  "Clara Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.6083,
+    "lng": -7.3083,
+    "condition": "intact"
+  },
+  "Cavan Castle": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.9908,
+    "lng": -7.3608,
+    "condition": "ruin"
+  },
+  "Roche Castle": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.0278,
+    "lng": -6.4306,
+    "condition": "ruin"
+  },
+  "Dunmore Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.5667,
+    "lng": -7.3667,
+    "condition": "ruin"
+  },
+  "Enniscorthy Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.501,
+    "lng": -6.567,
+    "condition": "intact"
+  },
+  "Ballyhack Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.214,
+    "lng": -6.972,
+    "condition": "intact"
+  },
+  "Rathmacknee Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.276,
+    "lng": -6.519,
+    "condition": "ruin"
+  },
+  "Burnchurch Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.624,
+    "lng": -7.449,
+    "condition": "ruin"
+  },
+  "Castledermot Round Tower": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.909,
+    "lng": -6.864,
+    "condition": "partial ruin"
+  },
+  "Dunsink Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.387,
+    "lng": -6.338,
+    "condition": "ruin"
+  },
+  "Howth Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.386,
+    "lng": -6.068,
+    "condition": "intact"
+  },
+  "Bullock Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.284,
+    "lng": -6.118,
+    "condition": "partial ruin"
+  },
+  "Athcarne Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.682,
+    "lng": -6.598,
+    "condition": "ruin"
+  },
+  "Ardee Castle": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.852,
+    "lng": -6.54,
+    "condition": "intact"
+  },
+  "King John's Castle (Carlingford)": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.041,
+    "lng": -6.188,
+    "condition": "ruin"
+  },
+  "Taafe's Castle": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.042,
+    "lng": -6.186,
+    "condition": "ruin"
+  },
+  "Termonfeckin Castle": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.755,
+    "lng": -6.268,
+    "condition": "ruin"
+  },
+  "Ballymoon Castle": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.753,
+    "lng": -6.873,
+    "condition": "ruin"
+  },
+  "Easkey Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.292,
+    "lng": -8.957,
+    "condition": "ruin"
+  },
+  "Burt Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.071,
+    "lng": -7.426,
+    "condition": "ruin"
+  },
+  "Raphoe Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.872,
+    "lng": -7.597,
+    "condition": "ruin"
+  },
+  "Clogh Oughter Castle": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.974,
+    "lng": -7.393,
+    "condition": "ruin"
+  },
+  "Ross Errilly Friary": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.507,
+    "lng": -8.863,
+    "condition": "ruin"
+  },
+  "Ballinasloe Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.331,
+    "lng": -8.228,
+    "condition": "ruin"
+  },
+  "Tyrone House": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.21,
+    "lng": -8.823,
+    "condition": "ruin"
+  },
+  "Killahara Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.708,
+    "lng": -7.796,
+    "condition": "ruin"
+  },
+  "Loughmoe Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.794,
+    "lng": -7.807,
+    "condition": "ruin"
+  },
+  "Glenstal Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.656,
+    "lng": -8.42,
+    "condition": "intact"
+  },
+  "Kilcoe Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.558,
+    "lng": -9.492,
+    "condition": "intact"
+  },
+  "Dunboy Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.647,
+    "lng": -9.878,
+    "condition": "ruin"
+  },
+  "Mallow Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.136,
+    "lng": -8.64,
+    "condition": "ruin"
+  },
+  "Macroom Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.904,
+    "lng": -8.958,
+    "condition": "ruin"
+  },
+  "Minard Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.121,
+    "lng": -10.072,
+    "condition": "ruin"
+  },
+  "Listowel Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.443,
+    "lng": -9.485,
+    "condition": "ruin"
+  },
+  "Carrigafoyle Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.54,
+    "lng": -9.583,
+    "condition": "ruin"
+  },
+  "Dromore Castle (Limerick)": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.589,
+    "lng": -8.891,
+    "condition": "ruin"
+  },
+  "Kilbolane Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.229,
+    "lng": -8.829,
+    "condition": "ruin"
+  },
+  "Lough Key Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.986,
+    "lng": -8.066,
+    "condition": "ruin"
+  },
+  "Rindoon Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.529,
+    "lng": -7.983,
+    "condition": "ruin"
+  },
+  "Ballyportry Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.005,
+    "lng": -9.053,
+    "condition": "restored"
+  },
+  "Newtown Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.087,
+    "lng": -9.052,
+    "condition": "restored"
+  },
+  "Doonagore Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.949,
+    "lng": -9.403,
+    "condition": "restored"
+  },
+  "Ballinalacken Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.019,
+    "lng": -9.399,
+    "condition": "ruin"
+  },
+  "Danganbrack Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.78,
+    "lng": -8.75,
+    "condition": "ruin"
+  },
+  "Gleninagh Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.098,
+    "lng": -9.18,
+    "condition": "ruin"
+  },
+  "Mooghaun Fort": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 52.733,
+    "lng": -8.844,
+    "condition": "ruin"
+  },
+  "Clifden Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.48,
+    "lng": -10.047,
+    "condition": "ruin"
+  },
+  "Fiddaun Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.06,
+    "lng": -8.82,
+    "condition": "ruin"
+  },
+  "Annaghdown Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.389,
+    "lng": -8.936,
+    "condition": "ruin"
+  },
+  "Menlo Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.29,
+    "lng": -9.085,
+    "condition": "ruin"
+  },
+  "Clonbur Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.539,
+    "lng": -9.509,
+    "condition": "ruin"
+  },
+  "Moyode Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.207,
+    "lng": -8.636,
+    "condition": "ruin"
+  },
+  "Killarone Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.33,
+    "lng": -8.6,
+    "condition": "ruin"
+  },
+  "Lydacan Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.176,
+    "lng": -8.747,
+    "condition": "ruin"
+  },
+  "Merlin Park Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.271,
+    "lng": -8.985,
+    "condition": "ruin"
+  },
+  "Gallarus Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.17,
+    "lng": -10.351,
+    "condition": "ruin"
+  },
+  "Rahinnane Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.143,
+    "lng": -10.306,
+    "condition": "ruin"
+  },
+  "Killaha Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.87,
+    "lng": -9.75,
+    "condition": "ruin"
+  },
+  "Dunkerron Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.855,
+    "lng": -9.888,
+    "condition": "ruin"
+  },
+  "Lixnaw Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.453,
+    "lng": -9.703,
+    "condition": "ruin"
+  },
+  "Belvelly Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.862,
+    "lng": -8.275,
+    "condition": "restored"
+  },
+  "Ballinacarriga Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.721,
+    "lng": -9.098,
+    "condition": "ruin"
+  },
+  "Castletownshend Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.521,
+    "lng": -9.176,
+    "condition": "ruin"
+  },
+  "Carriganass Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.715,
+    "lng": -9.542,
+    "condition": "ruin"
+  },
+  "Lohort Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.137,
+    "lng": -8.745,
+    "condition": "ruin"
+  },
+  "Monkstown Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.836,
+    "lng": -8.355,
+    "condition": "intact"
+  },
+  "Carrigaphooca Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.897,
+    "lng": -9,
+    "condition": "ruin"
+  },
+  "Ballincollig Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.888,
+    "lng": -8.585,
+    "condition": "ruin"
+  },
+  "Dundanion Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.851,
+    "lng": -8.384,
+    "condition": "ruin"
+  },
+  "Ballindoney Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.52,
+    "lng": -7.83,
+    "condition": "ruin"
+  },
+  "Ardfinnan Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.316,
+    "lng": -7.932,
+    "condition": "ruin"
+  },
+  "Ballynahow Round Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.699,
+    "lng": -7.909,
+    "condition": "ruin"
+  },
+  "Ormond Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.353,
+    "lng": -7.629,
+    "condition": "restored"
+  },
+  "Knockelly Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.46,
+    "lng": -7.704,
+    "condition": "ruin"
+  },
+  "Lackeen Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.909,
+    "lng": -8.068,
+    "condition": "ruin"
+  },
+  "Redwood Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.907,
+    "lng": -8.03,
+    "condition": "restored"
+  },
+  "Grannagh Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.325,
+    "lng": -7.159,
+    "condition": "ruin"
+  },
+  "Clomantagh Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.718,
+    "lng": -7.485,
+    "condition": "ruin"
+  },
+  "Ballyragget Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.788,
+    "lng": -7.393,
+    "condition": "ruin"
+  },
+  "Foulksrath Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.688,
+    "lng": -7.236,
+    "condition": "restored"
+  },
+  "Shankill Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.599,
+    "lng": -7.201,
+    "condition": "intact"
+  },
+  "Bargy Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.222,
+    "lng": -6.561,
+    "condition": "restored"
+  },
+  "Clonmines": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "monastery",
+    "lat": 52.268,
+    "lng": -6.838,
+    "condition": "ruin"
+  },
+  "Stradbally Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.131,
+    "lng": -7.46,
+    "condition": "ruin"
+  },
+  "Molana Abbey": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.05,
+    "lng": -7.855,
+    "condition": "ruin"
+  },
+  "Donore Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.683,
+    "lng": -6.41,
+    "condition": "restored"
+  },
+  "Rathmiles Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.55,
+    "lng": -6.7,
+    "condition": "ruin"
+  },
+  "Castlepollard Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.678,
+    "lng": -7.296,
+    "condition": "ruin"
+  },
+  "Fore Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.69,
+    "lng": -7.186,
+    "condition": "ruin"
+  },
+  "Rathconnell Tower": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.527,
+    "lng": -7.354,
+    "condition": "ruin"
+  },
+  "Morett Castle": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.08,
+    "lng": -7.42,
+    "condition": "ruin"
+  },
+  "Mongavlin Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.872,
+    "lng": -7.458,
+    "condition": "ruin"
+  },
+  "Kilbarron Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.581,
+    "lng": -8.347,
+    "condition": "ruin"
+  },
+  "Castle Murray": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.648,
+    "lng": -8.598,
+    "condition": "ruin"
+  },
+  "Malin Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.385,
+    "lng": -7.345,
+    "condition": "ruin"
+  },
+  "Carrickabraghy Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 55.295,
+    "lng": -7.455,
+    "condition": "ruin"
+  },
+  "Rathmullan Priory": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "friary",
+    "lat": 55.096,
+    "lng": -7.532,
+    "condition": "ruin"
+  },
+  "Castleroche": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.04,
+    "lng": -6.483,
+    "condition": "ruin"
+  },
+  "Dunmahon Castle": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.03,
+    "lng": -6.21,
+    "condition": "ruin"
+  },
+  "Carlingford Mint": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.042,
+    "lng": -6.189,
+    "condition": "ruin"
+  },
+  "Glin Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.567,
+    "lng": -9.29,
+    "condition": "intact"
+  },
+  "Castle Oliver": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.378,
+    "lng": -8.53,
+    "condition": "restored"
+  },
+  "Shanid Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.54,
+    "lng": -9.2,
+    "condition": "ruin"
+  },
+  "Ballingarry Castle (Limerick)": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.49,
+    "lng": -8.94,
+    "condition": "ruin"
+  },
+  "Castlerea Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.767,
+    "lng": -8.494,
+    "condition": "ruin"
+  },
+  "Donamon Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.671,
+    "lng": -8.282,
+    "condition": "intact"
+  },
+  "Rockfleet Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.838,
+    "lng": -9.819,
+    "condition": "restored"
+  },
+  "Burrishoole Abbey": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.843,
+    "lng": -9.812,
+    "condition": "ruin"
+  },
+  "Clare Island Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.808,
+    "lng": -10.003,
+    "condition": "ruin"
+  },
+  "Kilconly Tower": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.7,
+    "lng": -9.26,
+    "condition": "ruin"
+  },
+  "Castlebar Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.86,
+    "lng": -9.3,
+    "condition": "ruin"
+  },
+  "Kinlough Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.79,
+    "lng": -9.69,
+    "condition": "ruin"
+  },
+  "Moyne Abbey": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.17,
+    "lng": -9.26,
+    "condition": "ruin"
+  },
+  "Rosserk Friary": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "friary",
+    "lat": 54.193,
+    "lng": -9.225,
+    "condition": "ruin"
+  },
+  "Manorhamilton Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.305,
+    "lng": -8.178,
+    "condition": "ruin"
+  },
+  "Castle Saunderson": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.137,
+    "lng": -7.347,
+    "condition": "ruin"
+  },
+  "Rathcline Castle": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.682,
+    "lng": -7.862,
+    "condition": "ruin"
+  },
+  "Mannan Castle": {
+    "county": "County Monaghan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.05,
+    "lng": -6.685,
+    "condition": "ruin"
+  },
+  "Castle Balfour": {
+    "county": "County Fermanagh",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.327,
+    "lng": -7.462,
+    "condition": "ruin"
+  },
+  "Castle Archdale": {
+    "county": "County Fermanagh",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.454,
+    "lng": -7.725,
+    "condition": "ruin"
+  },
+  "Mountjoy Castle": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.522,
+    "lng": -6.819,
+    "condition": "ruin"
+  },
+  "Newtownstewart Castle": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.72,
+    "lng": -7.363,
+    "condition": "ruin"
+  },
+  "Castlecaulfield": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.505,
+    "lng": -6.918,
+    "condition": "ruin"
+  },
+  "Brackfield Bawn": {
+    "county": "County Derry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.972,
+    "lng": -7.041,
+    "condition": "ruin"
+  },
+  "Strangford Castle": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.369,
+    "lng": -5.655,
+    "condition": "restored"
+  },
+  "Ardglass Castles": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.264,
+    "lng": -5.604,
+    "condition": "partial ruin"
+  },
+  "Portaferry Castle": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.381,
+    "lng": -5.542,
+    "condition": "restored"
+  },
+  "Mahee Island Nendrum": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "monastery",
+    "lat": 54.503,
+    "lng": -5.672,
+    "condition": "ruin"
+  },
+  "Buttevant Friary": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "friary",
+    "lat": 52.23,
+    "lng": -8.672,
+    "condition": "ruin"
+  },
+  "Duiske Abbey": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.593,
+    "lng": -6.937,
+    "condition": "restored"
+  },
+  "Black Castle (Wicklow)": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.978,
+    "lng": -6.032,
+    "condition": "ruin"
+  },
+  "Coolbanagher Castle": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.13,
+    "lng": -7.34,
+    "condition": "ruin"
+  },
+  "Muckinish Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.128,
+    "lng": -9.12,
+    "condition": "ruin"
+  },
+  "Finavarra Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.148,
+    "lng": -9.095,
+    "condition": "ruin"
+  },
+  "Rossroe Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.126,
+    "lng": -9.06,
+    "condition": "ruin"
+  },
+  "Ballymulcashel Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.828,
+    "lng": -8.868,
+    "condition": "ruin"
+  },
+  "Caherkinmonwee Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.008,
+    "lng": -9.015,
+    "condition": "ruin"
+  },
+  "Mountcashel Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.839,
+    "lng": -8.785,
+    "condition": "ruin"
+  },
+  "Kilkishen Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.8,
+    "lng": -8.74,
+    "condition": "ruin"
+  },
+  "Moghane Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.748,
+    "lng": -8.895,
+    "condition": "ruin"
+  },
+  "Ballyallia Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.859,
+    "lng": -8.99,
+    "condition": "ruin"
+  },
+  "Clarecastle Tower": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.822,
+    "lng": -8.961,
+    "condition": "ruin"
+  },
+  "Rosslevan Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.852,
+    "lng": -9.012,
+    "condition": "ruin"
+  },
+  "Cahermurphy Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.751,
+    "lng": -9.352,
+    "condition": "ruin"
+  },
+  "Clonderalaw Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.68,
+    "lng": -9.425,
+    "condition": "ruin"
+  },
+  "Carrigaholt Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.61,
+    "lng": -9.71,
+    "condition": "ruin"
+  },
+  "Doonbeg Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.726,
+    "lng": -9.532,
+    "condition": "ruin"
+  },
+  "Kilrush Tower House": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.64,
+    "lng": -9.487,
+    "condition": "ruin"
+  },
+  "Knockfin Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.913,
+    "lng": -8.74,
+    "condition": "ruin"
+  },
+  "Derryhivenny Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.258,
+    "lng": -8.23,
+    "condition": "ruin"
+  },
+  "Kilcornan Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.203,
+    "lng": -8.808,
+    "condition": "ruin"
+  },
+  "Caherlistrane Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.485,
+    "lng": -8.795,
+    "condition": "ruin"
+  },
+  "Moylough Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.587,
+    "lng": -8.568,
+    "condition": "ruin"
+  },
+  "Monivea Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.403,
+    "lng": -8.54,
+    "condition": "ruin"
+  },
+  "Ballinderry Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.295,
+    "lng": -8.478,
+    "condition": "ruin"
+  },
+  "Loughrea Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.194,
+    "lng": -8.57,
+    "condition": "ruin"
+  },
+  "Garbally Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.333,
+    "lng": -8.225,
+    "condition": "ruin"
+  },
+  "Clonbrock Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.453,
+    "lng": -8.295,
+    "condition": "ruin"
+  },
+  "Cloghanower Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.455,
+    "lng": -9.88,
+    "condition": "ruin"
+  },
+  "Renvyle Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.555,
+    "lng": -10.025,
+    "condition": "ruin"
+  },
+  "Hen's Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.51,
+    "lng": -9.75,
+    "condition": "ruin"
+  },
+  "Carna Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.32,
+    "lng": -9.87,
+    "condition": "ruin"
+  },
+  "Ardamullivan Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.078,
+    "lng": -8.85,
+    "condition": "ruin"
+  },
+  "Pallas Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.115,
+    "lng": -8.748,
+    "condition": "ruin"
+  },
+  "Ballybrit Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.285,
+    "lng": -8.978,
+    "condition": "ruin"
+  },
+  "Rahasane Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.225,
+    "lng": -8.755,
+    "condition": "ruin"
+  },
+  "Carrigadrohid Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.865,
+    "lng": -8.87,
+    "condition": "ruin"
+  },
+  "Castledonovan": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.725,
+    "lng": -9.35,
+    "condition": "ruin"
+  },
+  "Dunmanus Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.558,
+    "lng": -9.645,
+    "condition": "ruin"
+  },
+  "Rossbrin Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.535,
+    "lng": -9.575,
+    "condition": "ruin"
+  },
+  "Cloghane Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.748,
+    "lng": -8.615,
+    "condition": "ruin"
+  },
+  "Togher Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.812,
+    "lng": -8.65,
+    "condition": "ruin"
+  },
+  "Castlemagner Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.168,
+    "lng": -8.862,
+    "condition": "ruin"
+  },
+  "Liscarroll Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.268,
+    "lng": -8.815,
+    "condition": "ruin"
+  },
+  "Castlepook Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.218,
+    "lng": -8.728,
+    "condition": "ruin"
+  },
+  "Drishane Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.16,
+    "lng": -9.078,
+    "condition": "restored"
+  },
+  "Dromaneen Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.125,
+    "lng": -8.575,
+    "condition": "ruin"
+  },
+  "Castlelyons Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.082,
+    "lng": -8.228,
+    "condition": "ruin"
+  },
+  "Conna Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.068,
+    "lng": -8.082,
+    "condition": "ruin"
+  },
+  "Ballymalis Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.058,
+    "lng": -9.775,
+    "condition": "ruin"
+  },
+  "Castleisland Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.232,
+    "lng": -9.467,
+    "condition": "ruin"
+  },
+  "Ballyheigue Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.39,
+    "lng": -9.842,
+    "condition": "ruin"
+  },
+  "Fenit Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.278,
+    "lng": -9.862,
+    "condition": "ruin"
+  },
+  "Parkavonear Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.995,
+    "lng": -9.718,
+    "condition": "ruin"
+  },
+  "Castlegregory Tower": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.26,
+    "lng": -9.998,
+    "condition": "ruin"
+  },
+  "Castlemaine Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.145,
+    "lng": -9.765,
+    "condition": "ruin"
+  },
+  "Duagh Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.378,
+    "lng": -9.558,
+    "condition": "ruin"
+  },
+  "Grantstown Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.548,
+    "lng": -7.582,
+    "condition": "ruin"
+  },
+  "Knockgraffon Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "motte",
+    "lat": 52.415,
+    "lng": -7.935,
+    "condition": "ruin"
+  },
+  "Two-Mile-Borris Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.715,
+    "lng": -7.822,
+    "condition": "ruin"
+  },
+  "Moycarkey Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.685,
+    "lng": -7.848,
+    "condition": "ruin"
+  },
+  "Dromineer Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.855,
+    "lng": -8.262,
+    "condition": "ruin"
+  },
+  "Pottlerath Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.598,
+    "lng": -7.565,
+    "condition": "ruin"
+  },
+  "Kiltinan Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.468,
+    "lng": -7.778,
+    "condition": "ruin"
+  },
+  "Ballycahill Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.738,
+    "lng": -7.948,
+    "condition": "ruin"
+  },
+  "Sopwell Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.79,
+    "lng": -8.088,
+    "condition": "ruin"
+  },
+  "Castle Matrix": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.45,
+    "lng": -8.928,
+    "condition": "restored"
+  },
+  "Ballygrennan Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.685,
+    "lng": -8.642,
+    "condition": "ruin"
+  },
+  "Shanpallas Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.542,
+    "lng": -8.725,
+    "condition": "ruin"
+  },
+  "Fanningstown Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.488,
+    "lng": -8.602,
+    "condition": "restored"
+  },
+  "Newcastle West Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.448,
+    "lng": -9.058,
+    "condition": "ruin"
+  },
+  "Carrickkildavnet Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.892,
+    "lng": -10.028,
+    "condition": "ruin"
+  },
+  "Ballylahan Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.83,
+    "lng": -9.208,
+    "condition": "ruin"
+  },
+  "Turlough Round Tower": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "round tower",
+    "lat": 53.84,
+    "lng": -9.295,
+    "condition": "ruin"
+  },
+  "Castlecarra": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.68,
+    "lng": -9.332,
+    "condition": "ruin"
+  },
+  "Ballinrobe Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.622,
+    "lng": -9.228,
+    "condition": "ruin"
+  },
+  "Shrule Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.528,
+    "lng": -9.082,
+    "condition": "ruin"
+  },
+  "Castleaffy": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.71,
+    "lng": -9.68,
+    "condition": "ruin"
+  },
+  "Belcarra Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.745,
+    "lng": -9.392,
+    "condition": "ruin"
+  },
+  "Aille Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.855,
+    "lng": -9.612,
+    "condition": "ruin"
+  },
+  "Owenduff Castle": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.928,
+    "lng": -9.858,
+    "condition": "ruin"
+  },
+  "Castlehill House": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 54.055,
+    "lng": -9.395,
+    "condition": "ruin"
+  },
+  "Errew Abbey": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.945,
+    "lng": -9.355,
+    "condition": "ruin"
+  },
+  "Castlestrange Stone": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "stone",
+    "lat": 53.615,
+    "lng": -8.258,
+    "condition": "intact"
+  },
+  "Fuerty Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.72,
+    "lng": -8.412,
+    "condition": "ruin"
+  },
+  "Tulsk Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.788,
+    "lng": -8.242,
+    "condition": "ruin"
+  },
+  "Dunamon Tower": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.655,
+    "lng": -8.365,
+    "condition": "ruin"
+  },
+  "Ballyfarnon Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.952,
+    "lng": -8.148,
+    "condition": "ruin"
+  },
+  "Ballynakill Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.7,
+    "lng": -8.298,
+    "condition": "ruin"
+  },
+  "Castleplunket Tower": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.812,
+    "lng": -8.352,
+    "condition": "ruin"
+  },
+  "Kilronan Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.975,
+    "lng": -8.118,
+    "condition": "restored"
+  },
+  "Glinsk Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "fortified house",
+    "lat": 53.628,
+    "lng": -8.518,
+    "condition": "ruin"
+  },
+  "Templehouse Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.028,
+    "lng": -8.508,
+    "condition": "ruin"
+  },
+  "Markree Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.158,
+    "lng": -8.468,
+    "condition": "restored"
+  },
+  "Ardtermon Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.348,
+    "lng": -8.572,
+    "condition": "intact"
+  },
+  "Lissadell House": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 54.338,
+    "lng": -8.59,
+    "condition": "restored"
+  },
+  "Kilglass Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.198,
+    "lng": -8.398,
+    "condition": "ruin"
+  },
+  "Banada Abbey": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.998,
+    "lng": -8.668,
+    "condition": "ruin"
+  },
+  "Castlebaldwin": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.058,
+    "lng": -8.308,
+    "condition": "ruin"
+  },
+  "Collooney Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.178,
+    "lng": -8.488,
+    "condition": "ruin"
+  },
+  "Skreen Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.228,
+    "lng": -8.618,
+    "condition": "ruin"
+  },
+  "Enniscrone Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.212,
+    "lng": -9.098,
+    "condition": "ruin"
+  },
+  "Carrowmore Megalithic Cemetery": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "megalithic site",
+    "lat": 54.248,
+    "lng": -8.518,
+    "condition": "intact"
+  },
+  "Drumcliff Tower": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "round tower",
+    "lat": 54.328,
+    "lng": -8.498,
+    "condition": "ruin"
+  },
+  "Aclare Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.978,
+    "lng": -8.758,
+    "condition": "ruin"
+  },
+  "Dromahair Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.158,
+    "lng": -8.298,
+    "condition": "ruin"
+  },
+  "Drumshanbo Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.048,
+    "lng": -8.038,
+    "condition": "ruin"
+  },
+  "Carrick-on-Shannon Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.948,
+    "lng": -8.092,
+    "condition": "ruin"
+  },
+  "Leitrim Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.115,
+    "lng": -8.068,
+    "condition": "ruin"
+  },
+  "Fenagh Abbey": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.985,
+    "lng": -7.888,
+    "condition": "ruin"
+  },
+  "Ballinagleragh Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.068,
+    "lng": -8.158,
+    "condition": "ruin"
+  },
+  "Jamestown Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "fortification",
+    "lat": 53.925,
+    "lng": -8.068,
+    "condition": "ruin"
+  },
+  "Newtown Gore Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.022,
+    "lng": -7.758,
+    "condition": "ruin"
+  },
+  "Mohill Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.928,
+    "lng": -7.868,
+    "condition": "ruin"
+  },
+  "Drumlease Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.172,
+    "lng": -8.282,
+    "condition": "ruin"
+  },
+  "Kiltyclogher Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.358,
+    "lng": -8.022,
+    "condition": "ruin"
+  },
+  "Killeen Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.498,
+    "lng": -6.658,
+    "condition": "restored"
+  },
+  "Summerhill Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.482,
+    "lng": -6.742,
+    "condition": "ruin"
+  },
+  "Balrath Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.612,
+    "lng": -6.575,
+    "condition": "ruin"
+  },
+  "Rathmore Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.578,
+    "lng": -6.512,
+    "condition": "ruin"
+  },
+  "Rataine Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.542,
+    "lng": -6.468,
+    "condition": "ruin"
+  },
+  "Ardmulchan Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.595,
+    "lng": -6.598,
+    "condition": "ruin"
+  },
+  "Liscartan Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.648,
+    "lng": -6.698,
+    "condition": "ruin"
+  },
+  "Kilbeggan Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.368,
+    "lng": -7.502,
+    "condition": "ruin"
+  },
+  "Castletown Geoghegan": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.428,
+    "lng": -7.478,
+    "condition": "ruin"
+  },
+  "Clonyn Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.572,
+    "lng": -7.118,
+    "condition": "ruin"
+  },
+  "Multyfarnham Friary": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "friary",
+    "lat": 53.648,
+    "lng": -7.348,
+    "condition": "partial ruin"
+  },
+  "Caulfield Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.402,
+    "lng": -7.388,
+    "condition": "ruin"
+  },
+  "Tyrellspass Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.388,
+    "lng": -7.348,
+    "condition": "restored"
+  },
+  "Rattin Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.482,
+    "lng": -7.368,
+    "condition": "ruin"
+  },
+  "Moydrum Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.438,
+    "lng": -7.882,
+    "condition": "ruin"
+  },
+  "Castle Forbes": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.725,
+    "lng": -7.818,
+    "condition": "intact"
+  },
+  "Abbeyshrule Abbey": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.592,
+    "lng": -7.648,
+    "condition": "ruin"
+  },
+  "Castlecor House": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.688,
+    "lng": -7.598,
+    "condition": "ruin"
+  },
+  "Ballymahon Castle": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.568,
+    "lng": -7.768,
+    "condition": "ruin"
+  },
+  "Ardagh Castle": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.628,
+    "lng": -7.698,
+    "condition": "ruin"
+  },
+  "Clondra Castle": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.698,
+    "lng": -7.948,
+    "condition": "ruin"
+  },
+  "Edgeworthstown Castle": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.698,
+    "lng": -7.618,
+    "condition": "ruin"
+  },
+  "Shinrone Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.938,
+    "lng": -7.908,
+    "condition": "ruin"
+  },
+  "Frankford Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.208,
+    "lng": -7.798,
+    "condition": "ruin"
+  },
+  "Ballyboy Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.348,
+    "lng": -7.498,
+    "condition": "ruin"
+  },
+  "Seir Kieran Monastery": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "monastery",
+    "lat": 52.978,
+    "lng": -7.762,
+    "condition": "ruin"
+  },
+  "Durrow Abbey": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.348,
+    "lng": -7.538,
+    "condition": "ruin"
+  },
+  "Kilcoursey Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.428,
+    "lng": -7.558,
+    "condition": "ruin"
+  },
+  "Lemenaghan Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.308,
+    "lng": -7.778,
+    "condition": "ruin"
+  },
+  "Emo Court": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.098,
+    "lng": -7.238,
+    "condition": "restored"
+  },
+  "Timahoe Round Tower": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "round tower",
+    "lat": 52.968,
+    "lng": -7.318,
+    "condition": "intact"
+  },
+  "Killeshin Church": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "church",
+    "lat": 52.832,
+    "lng": -7.048,
+    "condition": "ruin"
+  },
+  "Shaen Castle": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.028,
+    "lng": -7.428,
+    "condition": "ruin"
+  },
+  "Heywood Gardens": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 52.858,
+    "lng": -7.528,
+    "condition": "ruin"
+  },
+  "Inch Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.068,
+    "lng": -7.558,
+    "condition": "ruin"
+  },
+  "Buncrana Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.135,
+    "lng": -7.462,
+    "condition": "ruin"
+  },
+  "Moross Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.958,
+    "lng": -7.742,
+    "condition": "ruin"
+  },
+  "Drumboe Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.815,
+    "lng": -7.868,
+    "condition": "ruin"
+  },
+  "Na Dúnaibh Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.882,
+    "lng": -8.388,
+    "condition": "ruin"
+  },
+  "Assaroe Abbey": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.502,
+    "lng": -8.165,
+    "condition": "ruin"
+  },
+  "Knockmealdown Abbey": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.148,
+    "lng": -7.898,
+    "condition": "ruin"
+  },
+  "Ballyquin Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.162,
+    "lng": -7.578,
+    "condition": "ruin"
+  },
+  "Knocktopher Abbey": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.458,
+    "lng": -7.228,
+    "condition": "ruin"
+  },
+  "Inistioge Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.438,
+    "lng": -7.068,
+    "condition": "ruin"
+  },
+  "Grennan Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.728,
+    "lng": -7.258,
+    "condition": "ruin"
+  },
+  "Powerscourt Castle": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.188,
+    "lng": -6.188,
+    "condition": "restored"
+  },
+  "Russborough House": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.118,
+    "lng": -6.538,
+    "condition": "intact"
+  },
+  "Cloyne Round Tower": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "round tower",
+    "lat": 51.862,
+    "lng": -8.128,
+    "condition": "intact"
+  },
+  "Kilcolman Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.252,
+    "lng": -8.828,
+    "condition": "ruin"
+  },
+  "Castletownroche Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.168,
+    "lng": -8.458,
+    "condition": "ruin"
+  },
+  "Ightermurragh Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.888,
+    "lng": -8.012,
+    "condition": "ruin"
+  },
+  "Kilbrittain Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.658,
+    "lng": -8.678,
+    "condition": "intact"
+  },
+  "Rostellan Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.848,
+    "lng": -8.168,
+    "condition": "ruin"
+  },
+  "Castle Salem": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.715,
+    "lng": -9.098,
+    "condition": "intact"
+  },
+  "Castlemartyr Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.915,
+    "lng": -8.042,
+    "condition": "ruin"
+  },
+  "Doon Castle (Clare)": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.685,
+    "lng": -9.578,
+    "condition": "ruin"
+  },
+  "Killone Abbey": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.828,
+    "lng": -9.028,
+    "condition": "ruin"
+  },
+  "Termon Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.092,
+    "lng": -9.075,
+    "condition": "ruin"
+  },
+  "Castle Taylor": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.175,
+    "lng": -8.648,
+    "condition": "ruin"
+  },
+  "Kilcogan Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.218,
+    "lng": -8.788,
+    "condition": "ruin"
+  },
+  "Ardfry Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.238,
+    "lng": -8.988,
+    "condition": "ruin"
+  },
+  "Castle Hackett": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.468,
+    "lng": -8.698,
+    "condition": "ruin"
+  },
+  "Ballylee Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.068,
+    "lng": -8.658,
+    "condition": "restored"
+  },
+  "Aghadoe Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.078,
+    "lng": -9.548,
+    "condition": "ruin"
+  },
+  "Rattoo Round Tower": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "round tower",
+    "lat": 52.418,
+    "lng": -9.648,
+    "condition": "intact"
+  },
+  "Kilcash Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.388,
+    "lng": -7.708,
+    "condition": "ruin"
+  },
+  "Farney Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.578,
+    "lng": -7.778,
+    "condition": "restored"
+  },
+  "Castletown Cox": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 52.518,
+    "lng": -7.498,
+    "condition": "intact"
+  },
+  "Ballysaggartmore Towers": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "gate lodge",
+    "lat": 52.068,
+    "lng": -7.878,
+    "condition": "intact"
+  },
+  "Tacumshane Windmill": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "windmill",
+    "lat": 52.188,
+    "lng": -6.558,
+    "condition": "ruin"
+  },
+  "Hook Lighthouse": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "lighthouse",
+    "lat": 52.125,
+    "lng": -6.928,
+    "condition": "intact"
+  },
+  "Loughcrew Cairns": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "megalithic site",
+    "lat": 53.748,
+    "lng": -7.118,
+    "condition": "intact"
+  },
+  "Hill of Slane": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "ecclesiastical site",
+    "lat": 53.708,
+    "lng": -6.558,
+    "condition": "ruin"
+  },
+  "Kells Round Tower": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "round tower",
+    "lat": 53.728,
+    "lng": -6.878,
+    "condition": "intact"
+  },
+  "Clonard Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.518,
+    "lng": -6.978,
+    "condition": "ruin"
+  },
+  "Rathnageeragh Castle": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.698,
+    "lng": -6.928,
+    "condition": "ruin"
+  },
+  "Huntington Castle": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.638,
+    "lng": -6.718,
+    "condition": "intact"
+  },
+  "Altamont Gardens": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "garden",
+    "lat": 52.718,
+    "lng": -6.798,
+    "condition": "intact"
+  },
+  "Aughrim Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.298,
+    "lng": -8.308,
+    "condition": "ruin"
+  },
+  "Clonfert Cathedral": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "cathedral",
+    "lat": 53.228,
+    "lng": -8.068,
+    "condition": "intact"
+  },
+  "Tuam Cathedral": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "cathedral",
+    "lat": 53.518,
+    "lng": -8.858,
+    "condition": "intact"
+  },
+  "Corcomroe Abbey": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.118,
+    "lng": -9.058,
+    "condition": "ruin"
+  },
+  "Kilfenora Cathedral": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "cathedral",
+    "lat": 52.988,
+    "lng": -9.218,
+    "condition": "partial ruin"
+  },
+  "Muckross House": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 52.018,
+    "lng": -9.508,
+    "condition": "intact"
+  },
+  "Derrynane House": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 51.768,
+    "lng": -10.128,
+    "condition": "intact"
+  },
+  "Cahergall Stone Fort": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "stone fort",
+    "lat": 51.962,
+    "lng": -10.028,
+    "condition": "intact"
+  },
+  "Leacanabuaile Fort": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "stone fort",
+    "lat": 51.958,
+    "lng": -10.025,
+    "condition": "intact"
+  },
+  "Ballinvard Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.728,
+    "lng": -9.338,
+    "condition": "ruin"
+  },
+  "Mountlong Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "fortified house",
+    "lat": 51.618,
+    "lng": -8.548,
+    "condition": "ruin"
+  },
+  "Ballybeg Priory": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "priory",
+    "lat": 52.288,
+    "lng": -8.118,
+    "condition": "ruin"
+  },
+  "Bridgetown Priory": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "priory",
+    "lat": 52.028,
+    "lng": -8.115,
+    "condition": "ruin"
+  },
+  "Ardmore Cathedral": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "cathedral",
+    "lat": 51.948,
+    "lng": -7.728,
+    "condition": "ruin"
+  },
+  "Mahon Falls Tower": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.198,
+    "lng": -7.548,
+    "condition": "ruin"
+  },
+  "Strangely Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.148,
+    "lng": -7.318,
+    "condition": "ruin"
+  },
+  "Curraghmore House": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 52.268,
+    "lng": -7.328,
+    "condition": "intact"
+  },
+  "Cappoquin Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.148,
+    "lng": -7.848,
+    "condition": "ruin"
+  },
+  "Woodstown Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.228,
+    "lng": -6.998,
+    "condition": "ruin"
+  },
+  "Callan Friary": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "friary",
+    "lat": 52.548,
+    "lng": -7.392,
+    "condition": "ruin"
+  },
+  "Thomastown Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.528,
+    "lng": -7.138,
+    "condition": "ruin"
+  },
+  "Gowran Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.638,
+    "lng": -7.068,
+    "condition": "ruin"
+  },
+  "Tullaherin Round Tower": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "round tower",
+    "lat": 52.508,
+    "lng": -7.168,
+    "condition": "intact"
+  },
+  "Kilfane Church": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "church",
+    "lat": 52.478,
+    "lng": -7.088,
+    "condition": "ruin"
+  },
+  "Graiguenamanagh Abbey": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.538,
+    "lng": -6.958,
+    "condition": "partial ruin"
+  },
+  "Turoe Stone": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "stone",
+    "lat": 53.228,
+    "lng": -8.528,
+    "condition": "intact"
+  },
+  "Moore Hall": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.698,
+    "lng": -9.448,
+    "condition": "ruin"
+  },
+  "Westport House": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "country house",
+    "lat": 53.798,
+    "lng": -9.538,
+    "condition": "intact"
+  },
+  "National Museum Collins Barracks": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "barracks",
+    "lat": 53.348,
+    "lng": -6.298,
+    "condition": "restored"
+  },
+  "Rathfarnham Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.298,
+    "lng": -6.278,
+    "condition": "restored"
+  },
+  "St Audoen's Church": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "church",
+    "lat": 53.342,
+    "lng": -6.278,
+    "condition": "partial ruin"
+  },
+  "St Mary's Abbey Dublin": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.348,
+    "lng": -6.268,
+    "condition": "ruin"
+  },
+  "Portlick Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.508,
+    "lng": -7.968,
+    "condition": "ruin"
+  },
+  "Killua Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.588,
+    "lng": -7.208,
+    "condition": "ruin"
+  },
+  "Greville Arms Tower": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.528,
+    "lng": -7.342,
+    "condition": "ruin"
+  },
+  "Dun na Si Heritage Park": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "heritage site",
+    "lat": 53.398,
+    "lng": -7.668,
+    "condition": "reconstructed"
+  },
+  "Ballymore Castle (Westmeath)": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.558,
+    "lng": -7.658,
+    "condition": "ruin"
+  },
+  "Corlea Trackway": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "archaeological site",
+    "lat": 53.688,
+    "lng": -7.818,
+    "condition": "intact"
+  },
+  "Dungar Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.918,
+    "lng": -7.748,
+    "condition": "ruin"
+  },
+  "Granagh Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.328,
+    "lng": -7.532,
+    "condition": "ruin"
+  },
+  "Puck Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.252,
+    "lng": -6.117,
+    "condition": "ruin"
+  },
+  "Castle Kevin": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.041,
+    "lng": -6.285,
+    "condition": "ruin"
+  },
+  "Castlemore": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.862,
+    "lng": -8.193,
+    "condition": "ruin"
+  },
+  "Cloondooan Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.779,
+    "lng": -9.298,
+    "condition": "ruin"
+  },
+  "Ballyclogh Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.208,
+    "lng": -8.55,
+    "condition": "partial ruin"
+  },
+  "Ardtully Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.793,
+    "lng": -9.731,
+    "condition": "ruin"
+  },
+  "Killagha Abbey": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.068,
+    "lng": -9.79,
+    "condition": "ruin"
+  },
+  "Lislaughtin Abbey": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.567,
+    "lng": -9.646,
+    "condition": "ruin"
+  },
+  "Adare Desmond Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.563,
+    "lng": -8.787,
+    "condition": "ruin"
+  },
+  "Murrisk Abbey": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.778,
+    "lng": -9.654,
+    "condition": "ruin"
+  },
+  "Strade Abbey": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.84,
+    "lng": -9.16,
+    "condition": "ruin"
+  },
+  "Creevelea Abbey": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.176,
+    "lng": -8.086,
+    "condition": "ruin"
+  },
+  "Roodstown Castle": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.843,
+    "lng": -6.577,
+    "condition": "ruin"
+  },
+  "Athlumney Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.644,
+    "lng": -6.694,
+    "condition": "ruin"
+  },
+  "Castle Bernard": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.971,
+    "lng": -8.971,
+    "condition": "ruin"
+  },
+  "Sherkin Island Abbey": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 51.478,
+    "lng": -9.424,
+    "condition": "ruin"
+  },
+  "Movilla Abbey": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.582,
+    "lng": -5.657,
+    "condition": "ruin"
+  },
+  "Shane Castle": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.707,
+    "lng": -6.31,
+    "condition": "ruin"
+  },
+  "Harry Avery Castle": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.64,
+    "lng": -7.383,
+    "condition": "ruin"
+  },
+  "Castlegrace": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.397,
+    "lng": -7.733,
+    "condition": "ruin"
+  },
+  "Portumna Priory": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.087,
+    "lng": -8.218,
+    "condition": "ruin"
+  },
+  "Rathcroghan": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.8,
+    "lng": -8.303,
+    "condition": "ruin"
+  },
+  "Ballinskelligs Priory": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 51.801,
+    "lng": -10.288,
+    "condition": "ruin"
+  },
+  "Staigue Fort": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "fortified house",
+    "lat": 51.775,
+    "lng": -10.028,
+    "condition": "partial ruin"
+  },
+  "Granuaile Tower": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.805,
+    "lng": -9.755,
+    "condition": "ruin"
+  },
+  "Castle Hyde": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.125,
+    "lng": -8.198,
+    "condition": "intact"
+  },
+  "Glanworth Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.187,
+    "lng": -8.371,
+    "condition": "ruin"
+  },
+  "Ballykinavarga Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.01,
+    "lng": -9.08,
+    "condition": "ruin"
+  },
+  "Craggaunowen Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.791,
+    "lng": -8.745,
+    "condition": "restored"
+  },
+  "Killaloe Cathedral": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.806,
+    "lng": -8.443,
+    "condition": "intact"
+  },
+  "Kilmacduagh Round Tower": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.059,
+    "lng": -8.862,
+    "condition": "ruin"
+  },
+  "Roscam Round Tower": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.254,
+    "lng": -8.942,
+    "condition": "ruin"
+  },
+  "James Fort": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 51.695,
+    "lng": -8.515,
+    "condition": "ruin"
+  },
+  "Puxley Mansion": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.646,
+    "lng": -9.845,
+    "condition": "ruin"
+  },
+  "Kilcooly Abbey": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.687,
+    "lng": -7.691,
+    "condition": "ruin"
+  },
+  "Croom Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.519,
+    "lng": -8.718,
+    "condition": "ruin"
+  },
+  "Lough Gur Visitor Centre": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.521,
+    "lng": -8.527,
+    "condition": "restored"
+  },
+  "Ballina Friary": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.115,
+    "lng": -9.157,
+    "condition": "ruin"
+  },
+  "Skryne Church": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.577,
+    "lng": -6.55,
+    "condition": "ruin"
+  },
+  "Hill of Tara": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.578,
+    "lng": -6.612,
+    "condition": "ruin"
+  },
+  "Black Abbey Kilkenny": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.653,
+    "lng": -7.258,
+    "condition": "restored"
+  },
+  "St Canice's Cathedral": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.657,
+    "lng": -7.257,
+    "condition": "intact"
+  },
+  "Castle Ward": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.384,
+    "lng": -5.583,
+    "condition": "intact"
+  },
+  "Donegal Abbey": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.651,
+    "lng": -8.118,
+    "condition": "ruin"
+  },
+  "Classiebawn Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.466,
+    "lng": -8.633,
+    "condition": "intact"
+  },
+  "Strokestown House": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.803,
+    "lng": -8.101,
+    "condition": "restored"
+  },
+  "Dungarvan Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.089,
+    "lng": -7.619,
+    "condition": "restored"
+  },
+  "Tybroughney Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.365,
+    "lng": -7.261,
+    "condition": "ruin"
+  },
+  "Duncannon Fort": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 52.22,
+    "lng": -6.934,
+    "condition": "restored"
+  },
+  "Leighlinbridge Castle": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.741,
+    "lng": -6.974,
+    "condition": "ruin"
+  },
+  "Clonegal Castle": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.676,
+    "lng": -6.658,
+    "condition": "ruin"
+  },
+  "Wicklow Gaol": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.981,
+    "lng": -6.046,
+    "condition": "restored"
+  },
+  "Baltinglass Abbey": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.94,
+    "lng": -6.715,
+    "condition": "ruin"
+  },
+  "Oughterard Round Tower": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.341,
+    "lng": -6.712,
+    "condition": "ruin"
+  },
+  "Athy Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.991,
+    "lng": -6.977,
+    "condition": "restored"
+  },
+  "Clane Friary": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.29,
+    "lng": -6.688,
+    "condition": "ruin"
+  },
+  "Abbeyleix Heritage House": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.858,
+    "lng": -7.344,
+    "condition": "ruin"
+  },
+  "Kilbeggan Abbey": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.369,
+    "lng": -7.505,
+    "condition": "ruin"
+  },
+  "Longford Castle": {
+    "county": "County Longford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.726,
+    "lng": -7.798,
+    "condition": "ruin"
+  },
+  "Drumlane Abbey": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.071,
+    "lng": -7.523,
+    "condition": "ruin"
+  },
+  "Kilmore Cathedral": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.973,
+    "lng": -7.303,
+    "condition": "intact"
+  },
+  "Monaghan Castle": {
+    "county": "County Monaghan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.249,
+    "lng": -6.968,
+    "condition": "ruin"
+  },
+  "Clones Round Tower": {
+    "county": "County Monaghan",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.18,
+    "lng": -7.229,
+    "condition": "ruin"
+  },
+  "Dunsoghly Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.433,
+    "lng": -6.283,
+    "condition": "ruin"
+  },
+  "Clontarf Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.365,
+    "lng": -6.203,
+    "condition": "restored"
+  },
+  "Downhill House": {
+    "county": "County Derry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.164,
+    "lng": -6.813,
+    "condition": "ruin"
+  },
+  "Sampson's Tower Derry": {
+    "county": "County Derry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 55.137,
+    "lng": -6.796,
+    "condition": "ruin"
+  },
+  "Armagh Friary": {
+    "county": "County Armagh",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.349,
+    "lng": -6.653,
+    "condition": "ruin"
+  },
+  "Kilnasaggart Pillar Stone": {
+    "county": "County Armagh",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.096,
+    "lng": -6.352,
+    "condition": "ruin"
+  },
+  "Rathdrum Castle": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.93,
+    "lng": -6.23,
+    "condition": "ruin"
+  },
+  "Taghmon Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.447,
+    "lng": -6.671,
+    "condition": "ruin"
+  },
+  "Fethard Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.464,
+    "lng": -7.692,
+    "condition": "ruin"
+  },
+  "Oola Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.489,
+    "lng": -8.293,
+    "condition": "ruin"
+  },
+  "Hospital Church": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.46,
+    "lng": -8.433,
+    "condition": "ruin"
+  },
+  "Ballyhannon Castle Clare": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.77,
+    "lng": -8.91,
+    "condition": "ruin"
+  },
+  "Kilnaboy Church": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.938,
+    "lng": -9.014,
+    "condition": "ruin"
+  },
+  "Clare Island Abbey": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.801,
+    "lng": -9.976,
+    "condition": "ruin"
+  },
+  "Meelick Friary": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.816,
+    "lng": -9.338,
+    "condition": "ruin"
+  },
+  "Abbey Knockmoy": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.47,
+    "lng": -8.62,
+    "condition": "ruin"
+  },
+  "Annaghkeen Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.439,
+    "lng": -8.928,
+    "condition": "ruin"
+  },
+  "Ballycurrin Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.458,
+    "lng": -9.155,
+    "condition": "ruin"
+  },
+  "Loughrea Priory": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.192,
+    "lng": -8.57,
+    "condition": "ruin"
+  },
+  "Scattery Island Monastic Site": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.611,
+    "lng": -9.52,
+    "condition": "ruin"
+  },
+  "Cahermore Stone Fort": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.045,
+    "lng": -9.157,
+    "condition": "ruin"
+  },
+  "Lemaneagh Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.977,
+    "lng": -9.018,
+    "condition": "ruin"
+  },
+  "Clonmel West Gate": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.352,
+    "lng": -7.71,
+    "condition": "restored"
+  },
+  "Monaincha Abbey": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.895,
+    "lng": -7.73,
+    "condition": "ruin"
+  },
+  "Kilrossanty Church": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.193,
+    "lng": -7.509,
+    "condition": "ruin"
+  },
+  "Annaduff Church": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.94,
+    "lng": -7.9,
+    "condition": "ruin"
+  },
+  "Clonalis House": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.77,
+    "lng": -8.496,
+    "condition": "intact"
+  },
+  "Fuerty Church": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.64,
+    "lng": -8.28,
+    "condition": "ruin"
+  },
+  "Aghalurcher Church": {
+    "county": "County Fermanagh",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.25,
+    "lng": -7.55,
+    "condition": "ruin"
+  },
+  "Lough Navar Castle": {
+    "county": "County Fermanagh",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.35,
+    "lng": -7.88,
+    "condition": "ruin"
+  },
+  "Lisnaskea Castle": {
+    "county": "County Fermanagh",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.248,
+    "lng": -7.441,
+    "condition": "ruin"
+  },
+  "Killala Round Tower": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.213,
+    "lng": -9.217,
+    "condition": "ruin"
+  },
+  "Gortmore Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.39,
+    "lng": -8.64,
+    "condition": "ruin"
+  },
+  "Innisfree Island": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.233,
+    "lng": -8.382,
+    "condition": "ruin"
+  },
+  "Oldcastle Meath": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.773,
+    "lng": -7.157,
+    "condition": "ruin"
+  },
+  "Navan Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.653,
+    "lng": -6.682,
+    "condition": "ruin"
+  },
+  "Rathmoylan Church": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.16,
+    "lng": -7.142,
+    "condition": "ruin"
+  },
+  "Castletown Castle Laois": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.04,
+    "lng": -7.412,
+    "condition": "ruin"
+  },
+  "Coolbanagher Church": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.115,
+    "lng": -7.327,
+    "condition": "intact"
+  },
+  "Castle Durrow": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.835,
+    "lng": -7.393,
+    "condition": "restored"
+  },
+  "Aran Islands Arkin Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.108,
+    "lng": -9.667,
+    "condition": "ruin"
+  },
+  "Inishmaan Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.082,
+    "lng": -9.6,
+    "condition": "ruin"
+  },
+  "Dun Eochla": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.128,
+    "lng": -9.72,
+    "condition": "ruin"
+  },
+  "Derrymacloughna Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.979,
+    "lng": -8.45,
+    "condition": "ruin"
+  },
+  "Mountshannon Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.92,
+    "lng": -8.432,
+    "condition": "ruin"
+  },
+  "Holy Island Inis Cealtra": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.888,
+    "lng": -8.44,
+    "condition": "ruin"
+  },
+  "Ballycullen Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.567,
+    "lng": -8.28,
+    "condition": "ruin"
+  },
+  "Killaleigh Church": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.945,
+    "lng": -7.88,
+    "condition": "ruin"
+  },
+  "Dunlicky Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.569,
+    "lng": -9.731,
+    "condition": "ruin"
+  },
+  "Ballinlough Castle Roscommon": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.68,
+    "lng": -8.02,
+    "condition": "intact"
+  },
+  "Shannonbridge Fortification": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.352,
+    "lng": -7.938,
+    "condition": "ruin"
+  },
+  "Nendrum Monastic Site": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.473,
+    "lng": -5.65,
+    "condition": "ruin"
+  },
+  "Tynagh Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.128,
+    "lng": -8.414,
+    "condition": "ruin"
+  },
+  "Ardrahan Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.147,
+    "lng": -8.809,
+    "condition": "ruin"
+  },
+  "Lawrencetown Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.37,
+    "lng": -8.343,
+    "condition": "ruin"
+  },
+  "Islandmore Castle Killarney": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.015,
+    "lng": -9.53,
+    "condition": "ruin"
+  },
+  "Kilmalkedar Church": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.178,
+    "lng": -10.349,
+    "condition": "ruin"
+  },
+  "Reask Monastic Site": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.148,
+    "lng": -10.31,
+    "condition": "ruin"
+  },
+  "Banna Strand Tower": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.348,
+    "lng": -9.814,
+    "condition": "ruin"
+  },
+  "Ballyteague Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.175,
+    "lng": -6.975,
+    "condition": "ruin"
+  },
+  "Morristown Latin Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.05,
+    "lng": -6.81,
+    "condition": "ruin"
+  },
+  "Jigginstown Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.16,
+    "lng": -6.781,
+    "condition": "ruin"
+  },
+  "Woodstock Castle Kilkenny": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.53,
+    "lng": -6.95,
+    "condition": "ruin"
+  },
+  "Shee Alms House": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.65,
+    "lng": -7.253,
+    "condition": "restored"
+  },
+  "Rothe House": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.653,
+    "lng": -7.252,
+    "condition": "restored"
+  },
+  "Coolhill Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.544,
+    "lng": -7.06,
+    "condition": "ruin"
+  },
+  "Inistioge Church": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.474,
+    "lng": -7.067,
+    "condition": "ruin"
+  },
+  "Castlemorris House": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.596,
+    "lng": -7.32,
+    "condition": "ruin"
+  },
+  "Ballybur Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.676,
+    "lng": -7.35,
+    "condition": "ruin"
+  },
+  "Ballyclogh Castle Cork": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.183,
+    "lng": -8.543,
+    "condition": "ruin"
+  },
+  "Blackwater Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.025,
+    "lng": -8.265,
+    "condition": "restored"
+  },
+  "Castlepook Cave Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.207,
+    "lng": -8.843,
+    "condition": "ruin"
+  },
+  "Doneraile Court": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.216,
+    "lng": -8.573,
+    "condition": "restored"
+  },
+  "Kilmeaden Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.238,
+    "lng": -7.212,
+    "condition": "ruin"
+  },
+  "Annestown Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.142,
+    "lng": -7.202,
+    "condition": "ruin"
+  },
+  "Bourchier Castle Lough Gur": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.521,
+    "lng": -8.521,
+    "condition": "ruin"
+  },
+  "Cappagh Castle Limerick": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.59,
+    "lng": -8.656,
+    "condition": "ruin"
+  },
+  "Kilmallock Friary": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.4,
+    "lng": -8.578,
+    "condition": "ruin"
+  },
+  "Kilmallock Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.399,
+    "lng": -8.575,
+    "condition": "ruin"
+  },
+  "Collegiate Church Kilmallock": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.401,
+    "lng": -8.573,
+    "condition": "ruin"
+  },
+  "Bruree Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.424,
+    "lng": -8.656,
+    "condition": "ruin"
+  },
+  "Mungret Abbey": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.635,
+    "lng": -8.705,
+    "condition": "ruin"
+  },
+  "Castleconnell Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.712,
+    "lng": -8.508,
+    "condition": "ruin"
+  },
+  "Thurles Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.682,
+    "lng": -7.805,
+    "condition": "ruin"
+  },
+  "Burncourt Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.31,
+    "lng": -8.103,
+    "condition": "ruin"
+  },
+  "Moorstown Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.38,
+    "lng": -7.625,
+    "condition": "ruin"
+  },
+  "Carrick-on-Suir Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.349,
+    "lng": -7.413,
+    "condition": "restored"
+  },
+  "Creagh Castle Skibbereen": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.553,
+    "lng": -9.268,
+    "condition": "ruin"
+  },
+  "Lough Hyne Tower": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.501,
+    "lng": -9.301,
+    "condition": "ruin"
+  },
+  "O'Brien's Castle Inis Oirr": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.058,
+    "lng": -9.526,
+    "condition": "ruin"
+  },
+  "Magheraghanrush Court Tomb": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 54.339,
+    "lng": -8.537,
+    "condition": "ruin"
+  },
+  "Aghmore Castle Leitrim": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.08,
+    "lng": -8,
+    "condition": "ruin"
+  },
+  "Castlecaldwell Castle": {
+    "county": "County Fermanagh",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.49,
+    "lng": -7.875,
+    "condition": "ruin"
+  },
+  "Errigal Keerogue Cross": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.46,
+    "lng": -7.15,
+    "condition": "ruin"
+  },
+  "Tullaghoge Fort": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 54.608,
+    "lng": -6.783,
+    "condition": "ruin"
+  },
+  "Caledon Castle": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.333,
+    "lng": -7.03,
+    "condition": "intact"
+  },
+  "Donaghmore High Cross": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.535,
+    "lng": -6.843,
+    "condition": "ruin"
+  },
+  "Ardboe High Cross": {
+    "county": "County Tyrone",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.602,
+    "lng": -6.721,
+    "condition": "ruin"
+  },
+  "Gosford Castle": {
+    "county": "County Armagh",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.288,
+    "lng": -6.595,
+    "condition": "ruin"
+  },
+  "Ballymoyer Church": {
+    "county": "County Armagh",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.218,
+    "lng": -6.611,
+    "condition": "ruin"
+  },
+  "Duleek Priory": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.655,
+    "lng": -6.42,
+    "condition": "ruin"
+  },
+  "Dowth Hall": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.69,
+    "lng": -6.451,
+    "condition": "ruin"
+  },
+  "Moone High Cross": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.969,
+    "lng": -6.816,
+    "condition": "ruin"
+  },
+  "Old Kilcullen Round Tower": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.087,
+    "lng": -6.756,
+    "condition": "ruin"
+  },
+  "Seaforde Butterfly House": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.35,
+    "lng": -5.69,
+    "condition": "restored"
+  },
+  "Ballycopeland Windmill": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.584,
+    "lng": -5.561,
+    "condition": "restored"
+  },
+  "Tory Island Round Tower": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 55.267,
+    "lng": -8.225,
+    "condition": "ruin"
+  },
+  "Carrigart Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 55.155,
+    "lng": -7.725,
+    "condition": "ruin"
+  },
+  "Tullydonnell Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.78,
+    "lng": -7.565,
+    "condition": "ruin"
+  },
+  "Clonca Church": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 55.283,
+    "lng": -7.254,
+    "condition": "ruin"
+  },
+  "Dunmoran Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.235,
+    "lng": -8.62,
+    "condition": "ruin"
+  },
+  "Mullaghmore Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.466,
+    "lng": -8.453,
+    "condition": "intact"
+  },
+  "Cruachan Ai Visitor Centre": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.795,
+    "lng": -8.31,
+    "condition": "ruin"
+  },
+  "Cloonfree Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.65,
+    "lng": -8.1,
+    "condition": "ruin"
+  },
+  "Shanagolden Friary": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.558,
+    "lng": -9.075,
+    "condition": "ruin"
+  },
+  "Lough Rynn Castle": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.966,
+    "lng": -7.87,
+    "condition": "restored"
+  },
+  "Cloone Round Tower": {
+    "county": "County Leitrim",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.9,
+    "lng": -7.85,
+    "condition": "ruin"
+  },
+  "Cavan Burren Park": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 54.114,
+    "lng": -7.811,
+    "condition": "ruin"
+  },
+  "Ballyjamesduff Castle": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.865,
+    "lng": -7.201,
+    "condition": "ruin"
+  },
+  "Ballyhaise House": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.033,
+    "lng": -7.316,
+    "condition": "restored"
+  },
+  "Hope Castle Castleblayney": {
+    "county": "County Monaghan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.117,
+    "lng": -6.738,
+    "condition": "ruin"
+  },
+  "Dartrey Estate": {
+    "county": "County Monaghan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.196,
+    "lng": -7.133,
+    "condition": "ruin"
+  },
+  "Inniskeen Round Tower": {
+    "county": "County Monaghan",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.002,
+    "lng": -6.616,
+    "condition": "ruin"
+  },
+  "Lough Oughter Castle Island": {
+    "county": "County Cavan",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54,
+    "lng": -7.39,
+    "condition": "ruin"
+  },
+  "Banagher Old Church Derry": {
+    "county": "County Derry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.88,
+    "lng": -7,
+    "condition": "ruin"
+  },
+  "Bovevagh Church": {
+    "county": "County Derry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.94,
+    "lng": -6.875,
+    "condition": "ruin"
+  },
+  "Springhill House": {
+    "county": "County Derry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.747,
+    "lng": -6.718,
+    "condition": "restored"
+  },
+  "Killough Towers": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.246,
+    "lng": -5.649,
+    "condition": "ruin"
+  },
+  "Struell Wells": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.317,
+    "lng": -5.713,
+    "condition": "ruin"
+  },
+  "Saul Church": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.363,
+    "lng": -5.69,
+    "condition": "ruin"
+  },
+  "Downpatrick Cathedral": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.328,
+    "lng": -5.718,
+    "condition": "intact"
+  },
+  "Dromore Mound": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.42,
+    "lng": -6.145,
+    "condition": "ruin"
+  },
+  "Rathlin Island Ruins": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.296,
+    "lng": -6.195,
+    "condition": "ruin"
+  },
+  "Cushendun Caves Castle": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.139,
+    "lng": -6.038,
+    "condition": "ruin"
+  },
+  "Dunserverick Castle": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 55.237,
+    "lng": -6.122,
+    "condition": "ruin"
+  },
+  "Randalstown Castle": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.752,
+    "lng": -6.312,
+    "condition": "ruin"
+  },
+  "Massereene Castle": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.663,
+    "lng": -6.23,
+    "condition": "ruin"
+  },
+  "Ballintoy Church": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 55.24,
+    "lng": -6.17,
+    "condition": "ruin"
+  },
+  "Layde Church": {
+    "county": "County Antrim",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 55.205,
+    "lng": -6.035,
+    "condition": "ruin"
+  },
+  "Greyabbey House": {
+    "county": "County Down",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.53,
+    "lng": -5.555,
+    "condition": "ruin"
+  },
+  "Drogheda Magdalene Tower": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.719,
+    "lng": -6.347,
+    "condition": "ruin"
+  },
+  "Millmount Fort Drogheda": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.713,
+    "lng": -6.35,
+    "condition": "restored"
+  },
+  "Ballymacpeake Castle": {
+    "county": "County Derry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 54.82,
+    "lng": -6.57,
+    "condition": "ruin"
+  },
+  "Inishowen Head Tower": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 55.245,
+    "lng": -6.925,
+    "condition": "ruin"
+  },
+  "Ballintotis Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.845,
+    "lng": -8.072,
+    "condition": "ruin"
+  },
+  "Kilgobbin Castle Cork": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.563,
+    "lng": -9.068,
+    "condition": "ruin"
+  },
+  "Ballynacorra Castle": {
+    "county": "County Cork",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.87,
+    "lng": -8.183,
+    "condition": "ruin"
+  },
+  "Dromana Gate": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.1,
+    "lng": -7.878,
+    "condition": "restored"
+  },
+  "Kilbarry Castle Waterford": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.245,
+    "lng": -7.14,
+    "condition": "ruin"
+  },
+  "Coolhull Castle Wexford": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.353,
+    "lng": -6.61,
+    "condition": "ruin"
+  },
+  "Mayglass Tower": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.272,
+    "lng": -6.52,
+    "condition": "ruin"
+  },
+  "Kilcloggan Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.31,
+    "lng": -6.86,
+    "condition": "ruin"
+  },
+  "Lady's Island Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.19,
+    "lng": -6.418,
+    "condition": "ruin"
+  },
+  "Selskar Abbey": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.335,
+    "lng": -6.461,
+    "condition": "ruin"
+  },
+  "Ferrycarrig Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.338,
+    "lng": -6.505,
+    "condition": "ruin"
+  },
+  "Moyglare Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.41,
+    "lng": -6.573,
+    "condition": "ruin"
+  },
+  "Lackan Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.5,
+    "lng": -7.6,
+    "condition": "ruin"
+  },
+  "Tristernagh Abbey": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.565,
+    "lng": -7.485,
+    "condition": "ruin"
+  },
+  "Dowdstown Castle Meath": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.62,
+    "lng": -6.62,
+    "condition": "ruin"
+  },
+  "Rathmullan Castle Meath": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.56,
+    "lng": -6.7,
+    "condition": "ruin"
+  },
+  "Drumconrath Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.78,
+    "lng": -6.83,
+    "condition": "ruin"
+  },
+  "Proleek Dolmen": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 54.023,
+    "lng": -6.298,
+    "condition": "ruin"
+  },
+  "Annagassan Viking Fort": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 53.875,
+    "lng": -6.342,
+    "condition": "ruin"
+  },
+  "Kildemock Church Jumping": {
+    "county": "County Louth",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.862,
+    "lng": -6.457,
+    "condition": "ruin"
+  },
+  "Ballyfin Demesne": {
+    "county": "County Laois",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.063,
+    "lng": -7.56,
+    "condition": "restored"
+  },
+  "Sharavogue Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.93,
+    "lng": -7.67,
+    "condition": "ruin"
+  },
+  "Fancroft Mill Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.985,
+    "lng": -7.83,
+    "condition": "ruin"
+  },
+  "Gormanston Castle": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.62,
+    "lng": -6.233,
+    "condition": "ruin"
+  },
+  "Painestown Church": {
+    "county": "County Meath",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.605,
+    "lng": -6.6,
+    "condition": "ruin"
+  },
+  "Piercetown Castle": {
+    "county": "County Wexford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.34,
+    "lng": -6.53,
+    "condition": "ruin"
+  },
+  "Ballylaneen Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.17,
+    "lng": -7.385,
+    "condition": "ruin"
+  },
+  "Clonea Castle Waterford": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.093,
+    "lng": -7.56,
+    "condition": "ruin"
+  },
+  "Knockmealdown Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.232,
+    "lng": -7.86,
+    "condition": "ruin"
+  },
+  "Freshford Church": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.639,
+    "lng": -7.402,
+    "condition": "ruin"
+  },
+  "Clogh Castle Kilkenny": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.748,
+    "lng": -7.1,
+    "condition": "ruin"
+  },
+  "Ballyshannon Castle": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.502,
+    "lng": -8.19,
+    "condition": "ruin"
+  },
+  "Horn Head Tower": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 55.23,
+    "lng": -7.955,
+    "condition": "ruin"
+  },
+  "Killydonnell Friary": {
+    "county": "County Donegal",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.958,
+    "lng": -7.595,
+    "condition": "ruin"
+  },
+  "Magh Adair": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 52.825,
+    "lng": -8.9,
+    "condition": "ruin"
+  },
+  "Inchicronan Church": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.84,
+    "lng": -8.88,
+    "condition": "ruin"
+  },
+  "Aillwee Cave Tower": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 53.085,
+    "lng": -9.097,
+    "condition": "ruin"
+  },
+  "Cahercommaun Fort": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 52.99,
+    "lng": -9.05,
+    "condition": "ruin"
+  },
+  "Ballycorick Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.785,
+    "lng": -8.95,
+    "condition": "ruin"
+  },
+  "O'Dea Castle Museum": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.877,
+    "lng": -8.88,
+    "condition": "restored"
+  },
+  "Spanish Point Tower": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.847,
+    "lng": -9.441,
+    "condition": "ruin"
+  },
+  "Abbeydorney Abbey": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.362,
+    "lng": -9.703,
+    "condition": "ruin"
+  },
+  "Castlecove Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 51.767,
+    "lng": -10.022,
+    "condition": "ruin"
+  },
+  "Ballybunnion Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.51,
+    "lng": -9.681,
+    "condition": "ruin"
+  },
+  "Killenaule Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.567,
+    "lng": -7.673,
+    "condition": "ruin"
+  },
+  "Castle Otway": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.76,
+    "lng": -8,
+    "condition": "ruin"
+  },
+  "Newcastle Tipperary Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.69,
+    "lng": -7.93,
+    "condition": "ruin"
+  },
+  "Ballynaclogh Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.735,
+    "lng": -8.183,
+    "condition": "ruin"
+  },
+  "Ballylooby Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.275,
+    "lng": -7.938,
+    "condition": "ruin"
+  },
+  "Carriggundel Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.616,
+    "lng": -8.65,
+    "condition": "ruin"
+  },
+  "Kildare Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.157,
+    "lng": -6.91,
+    "condition": "ruin"
+  },
+  "Ballymore Eustace Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.145,
+    "lng": -6.622,
+    "condition": "ruin"
+  },
+  "Leixlip Castle": {
+    "county": "County Kildare",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.365,
+    "lng": -6.497,
+    "condition": "intact"
+  },
+  "Tullaroan Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.621,
+    "lng": -7.465,
+    "condition": "ruin"
+  },
+  "Castle Gore Mayo": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.708,
+    "lng": -9.476,
+    "condition": "ruin"
+  },
+  "Ballinafad Castle": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.024,
+    "lng": -8.309,
+    "condition": "partial ruin"
+  },
+  "Clonroad Castle": {
+    "county": "County Clare",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.847,
+    "lng": -8.98,
+    "condition": "ruin"
+  },
+  "Lorrha Priory": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.957,
+    "lng": -8.086,
+    "condition": "ruin"
+  },
+  "Fennor Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "tower house",
+    "lat": 52.584,
+    "lng": -7.973,
+    "condition": "ruin"
+  },
+  "Abington Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.607,
+    "lng": -8.379,
+    "condition": "ruin"
+  },
+  "Any Castle": {
+    "county": "County Tipperary",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.365,
+    "lng": -8.258,
+    "condition": "ruin"
+  },
+  "McKenna's Castle": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.969,
+    "lng": -7.622,
+    "condition": "intact"
+  },
+  "Mothel Abbey": {
+    "county": "County Waterford",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.381,
+    "lng": -7.381,
+    "condition": "ruin"
+  },
+  "Kilkieran High Crosses": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.577,
+    "lng": -7.588,
+    "condition": "ruin"
+  },
+  "Castlecomer Castle": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.806,
+    "lng": -7.211,
+    "condition": "ruin"
+  },
+  "Fertagh Round Tower": {
+    "county": "County Kilkenny",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.715,
+    "lng": -7.523,
+    "condition": "partial ruin"
+  },
+  "Cregg Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.367,
+    "lng": -8.85,
+    "condition": "intact"
+  },
+  "Ballindoon Priory": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 54.099,
+    "lng": -8.407,
+    "condition": "ruin"
+  },
+  "Temple House Sligo": {
+    "county": "County Sligo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.024,
+    "lng": -8.568,
+    "condition": "intact"
+  },
+  "Frenchpark Castle": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.873,
+    "lng": -8.42,
+    "condition": "ruin"
+  },
+  "McDermott's Castle Island": {
+    "county": "County Roscommon",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.946,
+    "lng": -8.278,
+    "condition": "ruin"
+  },
+  "Ballyseedy Castle Kerry": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.268,
+    "lng": -9.73,
+    "condition": "intact"
+  },
+  "Tralee Castle": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.27,
+    "lng": -9.702,
+    "condition": "ruin"
+  },
+  "Innisfallen Abbey": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.033,
+    "lng": -9.569,
+    "condition": "ruin"
+  },
+  "Castle Lough Currane": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 51.779,
+    "lng": -10.065,
+    "condition": "ruin"
+  },
+  "Ardfert Friary": {
+    "county": "County Kerry",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.326,
+    "lng": -9.781,
+    "condition": "ruin"
+  },
+  "Rockbarton Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.594,
+    "lng": -8.7,
+    "condition": "ruin"
+  },
+  "Caherconlish Castle": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.583,
+    "lng": -8.499,
+    "condition": "ruin"
+  },
+  "Shanagolden Abbey": {
+    "county": "County Limerick",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.557,
+    "lng": -9.069,
+    "condition": "ruin"
+  },
+  "Dunsandle Castle": {
+    "county": "County Galway",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.259,
+    "lng": -8.598,
+    "condition": "ruin"
+  },
+  "Deel Castle Mayo": {
+    "county": "County Mayo",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 54.012,
+    "lng": -9.439,
+    "condition": "ruin"
+  },
+  "Lough Ree Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.539,
+    "lng": -7.959,
+    "condition": "ruin"
+  },
+  "Ballyloughloe Castle": {
+    "county": "County Westmeath",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.438,
+    "lng": -7.569,
+    "condition": "ruin"
+  },
+  "Kilcormac Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.187,
+    "lng": -7.717,
+    "condition": "ruin"
+  },
+  "Banagher Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.189,
+    "lng": -7.987,
+    "condition": "ruin"
+  },
+  "Aghancon Castle": {
+    "county": "County Offaly",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.984,
+    "lng": -7.861,
+    "condition": "ruin"
+  },
+  "Old Leighlin Cathedral": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 52.781,
+    "lng": -6.969,
+    "condition": "intact"
+  },
+  "Clonmore Castle Carlow": {
+    "county": "County Carlow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 52.794,
+    "lng": -6.728,
+    "condition": "ruin"
+  },
+  "Dunlavin Castle": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.057,
+    "lng": -6.701,
+    "condition": "ruin"
+  },
+  "Rathgall Fort": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "fort",
+    "lat": 52.807,
+    "lng": -6.637,
+    "condition": "ruin"
+  },
+  "Newcastle McKynegan": {
+    "county": "County Wicklow",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.077,
+    "lng": -6.068,
+    "condition": "ruin"
+  },
+  "Clondalkin Round Tower": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "abbey",
+    "lat": 53.319,
+    "lng": -6.396,
+    "condition": "partial ruin"
+  },
+  "Bremore Castle": {
+    "county": "County Dublin",
+    "country": "Ireland",
+    "type": "castle",
+    "lat": 53.588,
+    "lng": -6.181,
+    "condition": "partial ruin"
+  }
+}

@@ -1,0 +1,22 @@
+England Enrichment Batch - COMPLETE
+=====================================
+Date: 2026-03-24
+Total sites enriched: 197
+Output file: enrichment-output-england.json
+
+All 197 English heritage sites have been enriched with:
+- Atmospheric descriptions (150-300 chars)
+- Historical summaries with real dates, names, events
+- Tags from the approved vocabulary
+- Access information (free/paid/exterior-only)
+- Era information
+- Source URLs (2-4 per site)
+
+Notes:
+- "Rippon Castle" appears to be a data error or misspelling; enriched with best available info about Ripon's heritage.
+- "Craysthorpe Tower" had very limited information available; provided generic medieval tower description.
+- "Brampton Castle (Birdoswald)" had limited specific info; noted as separate from Birdoswald Roman Fort.
+- YouTube video IDs were not searched due to rate limiting; left as empty arrays.
+- All searches were done via web_search with Brave API (rate limited to 1/sec on free plan).
+
+No other issues encountered.

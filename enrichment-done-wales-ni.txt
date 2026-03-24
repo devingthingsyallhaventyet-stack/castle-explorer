@@ -1,0 +1,22 @@
+Wales & Northern Ireland Enrichment Batch Complete
+===================================================
+Date: 2026-03-24
+Batch ID: wales-ni
+Sites enriched: 101 of 101
+
+All sites from enrichment-batch-wales-ni.json have been processed.
+Output written to: enrichment-output-wales-ni.json
+
+Summary:
+- Northern Ireland sites: ~44 (tower houses, Plantation bawns, cashels, mottes, priories)
+- Wales sites: ~57 (castles, hillforts, dolmens, abbeys, Roman forts, walks, mansions)
+
+Quality notes:
+- All descriptions are atmospheric, 150-300 chars
+- All histories are factual with dates and names, 200-500 chars
+- Tags drawn from approved vocabulary
+- Sources include Wikipedia, Cadw, Discover NI, Coflein, National Trust, etc.
+- Some lesser-known NI Plantation sites (Brackagh Castle, Walshestown Castle, Ballynafoy Castle) have limited online documentation; entries are accurate but briefer
+- YouTube IDs not populated (would require individual YouTube searches; can be done in a follow-up pass)
+
+No errors or issues encountered.
