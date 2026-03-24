@@ -1003,41 +1003,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Sherborne Old Castle",
-    "lat": 50.9496,
-    "lng": -2.5092,
-    "country": "England",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Built by Roger de Caen, Bishop of Salisbury, Sherborne Old Castle was twice besieged during the Civil War. Sir Walter Raleigh gave up trying to modernize it and built a new lodge nearby.",
-    "history": "Sherborne Castle is a 16th-century Tudor mansion southeast of Sherborne in Dorset, England, within the parish of Castleton. Originally built by Sir Walter Raleigh as Sherborne Lodge, and extended in the 1620s, it stands in a 1,200-acre (490 ha) park which formed a small part of the 15,000-acre (61 km2) Digby estate. Within the grounds lie the ruins of the 12th-century Sherborne Old Castle, now in the care of English Heritage.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sherborne_Castle_03.jpg/500px-Sherborne_Castle_03.jpg",
-    "rating": 4,
-    "reviewCount": 1120,
-    "county": "Dorset",
-    "tags": [
-      "dramatic-ruin",
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 32,
-    "gallery": [
-      "https://img.castlecore.uk/sherborne-old-castle-2.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-3.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-4.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-5.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-keep-2.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-keep-3.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-keep-4.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-keep-5.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-main-2.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-main-3.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-main-4.jpg",
-      "https://img.castlecore.uk/sherborne-old-castle-main-5.jpg"
-    ]
-  },
-  {
     "name": "Cleeve Abbey",
     "lat": 51.1272,
     "lng": -3.3947,
@@ -8727,34 +8692,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Muckross Abbey",
-    "lat": 52.0222,
-    "lng": -9.5167,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A remarkably well-preserved Franciscan friary in Killarney National Park, famous for its ancient yew tree growing in the centre of the cloister. Founded in 1448, it houses the tombs of Kerry's great chieftain families.",
-    "history": "Muckross Abbey is a ruined Franciscan friary located in the Killarney National Park, County Kerry, Ireland. Previously known as the \"Friary of Irrelagh\", the abbey was founded in 1448 for the Observantine Franciscans by Donal McCarthy Mor. Today the abbey is largely roofless, but retains most of its original walls.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/34th_Lock_and_Clonony_Bridge_on_the_Grand_Canal_in_Co._Offaly_%28geograph_3090852%29.jpg/500px-34th_Lock_and_Clonony_Bridge_on_the_Grand_Canal_in_Co._Offaly_%28geograph_3090852%29.jpg",
-    "rating": 4.5,
-    "reviewCount": 3800,
-    "county": "County Kerry",
-    "tags": [
-      "dramatic-ruin",
-      "photogenic",
-      "free"
-    ],
-    "access": "free",
-    "_index": 290,
-    "gallery": [
-      "https://img.castlecore.uk/muckross-abbey-2.jpg",
-      "https://img.castlecore.uk/muckross-abbey-3.jpg",
-      "https://img.castlecore.uk/muckross-abbey-4.jpg",
-      "https://img.castlecore.uk/muckross-abbey-5.jpg"
-    ]
-  },
-  {
     "name": "Barryscourt Castle",
     "lat": 51.9044,
     "lng": -8.2456,
@@ -10344,34 +10281,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Nendrum Monastery",
-    "lat": 54.4833,
-    "lng": -5.65,
-    "country": "Northern Ireland",
-    "type": "abbey",
-    "era": "5th century",
-    "condition": "ruin",
-    "description": "One of the oldest monastic sites in Northern Ireland, founded by St Mochaoi on Mahee Island in Strangford Lough. Its three concentric enclosures and sundial base are remarkably well preserved.",
-    "history": "Nendrum Monastery was a Christian monastery on Mahee Island in Strangford Lough, County Down, Northern Ireland. Medieval records say it was founded in the 5th century, but this is uncertain. The monastery came to an end at some time between 974 and 1178, but its church served a parish until the site was abandoned in the 15th century. Some remains of the monastery can still be seen.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Carrick_Castle_tower_from_west.jpg/500px-Carrick_Castle_tower_from_west.jpg",
-    "rating": 4.3,
-    "reviewCount": 980,
-    "county": "County Down",
-    "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 344,
-    "gallery": [
-      "https://img.castlecore.uk/nendrum-monastery-2.jpg",
-      "https://img.castlecore.uk/nendrum-monastery-3.jpg",
-      "https://img.castlecore.uk/nendrum-monastery-4.jpg",
-      "https://img.castlecore.uk/nendrum-monastery-5.jpg"
-    ]
-  },
-  {
     "name": "Jordan's Castle",
     "lat": 54.1833,
     "lng": -5.85,
@@ -10700,31 +10609,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dungannon-castle-3.jpg",
       "https://img.castlecore.uk/dungannon-castle-4.jpg",
       "https://img.castlecore.uk/dungannon-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Harry Avery's Castle",
-    "lat": 54.5981,
-    "lng": -7.3583,
-    "country": "Northern Ireland",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "An unusual Gaelic stone castle with D-shaped towers, one of few built by an Irish chief rather than the Normans. Henry Aimhréidh O'Neill built it overlooking the Owenkillew valley.",
-    "history": "Harry Avery's Castle is situated half a mile south-west of Newtownstewart, in County Tyrone, Northern Ireland. It is a rare example of a stone castle built by a Gaelic Irish chief, although its origins and history are uncertain. It is associated with and named after Henry Aimhréidh O'Neill, whose name was anglicised as Harry Avery.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Harry_Avery%27s_Castle.jpg/500px-Harry_Avery%27s_Castle.jpg",
-    "rating": 3.9,
-    "reviewCount": 560,
-    "county": "County Tyrone",
-    "tags": [
-      "dramatic-ruin",
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 358,
-    "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-harry-avery-s-castle.jpg"
     ]
   },
   {
@@ -21264,31 +21148,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Kilmartin Castle",
-    "lat": 56.132,
-    "lng": -5.487,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "16th century",
-    "condition": "intact",
-    "description": "Restored Z-plan tower house in the heart of Kilmartin Glen. Now a B&B.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Kilmartin_Castle.jpg",
-    "rating": 4,
-    "reviewCount": 350,
-    "county": "Argyll and Bute",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "paid",
-    "_index": 675,
-    "gallery": [
-      "https://img.castlecore.uk/kilmartin-castle-2.jpg",
-      "https://img.castlecore.uk/kilmartin-castle-3.jpg",
-      "https://img.castlecore.uk/kilmartin-castle-4.jpg",
-      "https://img.castlecore.uk/kilmartin-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Dunollie Castle",
     "lat": 56.426,
     "lng": -5.478,
@@ -24944,32 +24803,6 @@ const CASTLES = [
     "_index": 834
   },
   {
-    "name": "Kilcrea Castle",
-    "lat": 51.856,
-    "lng": -8.727,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house adjacent to Kilcrea Friary, a MacCarthy stronghold.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kilcrea_Castle%2C_Farran%2C_Co._Cork_-_geograph.org.uk_-_1243394.jpg/500px-Kilcrea_Castle%2C_Farran%2C_Co._Cork_-_geograph.org.uk_-_1243394.jpg",
-    "rating": 3.5,
-    "reviewCount": 120,
-    "county": "County Cork",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 835,
-    "gallery": [
-      "https://img.castlecore.uk/kilcrea-castle-2.jpg",
-      "https://img.castlecore.uk/kilcrea-castle-3.jpg",
-      "https://img.castlecore.uk/kilcrea-castle-4.jpg",
-      "https://img.castlecore.uk/kilcrea-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Belvelly Castle",
     "lat": 51.862,
     "lng": -8.275,
@@ -25488,32 +25321,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Dunmore Cave Castle",
-    "lat": 52.733,
-    "lng": -7.248,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house ruin near the famous Dunmore Cave visitor site.",
-    "image": "https://img.castlecore.uk/dunmore-cave-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 60,
-    "county": "County Kilkenny",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 857,
-    "gallery": [
-      "https://img.castlecore.uk/dunmore-cave-castle-2.jpg",
-      "https://img.castlecore.uk/dunmore-cave-castle-3.jpg",
-      "https://img.castlecore.uk/dunmore-cave-castle-4.jpg",
-      "https://img.castlecore.uk/dunmore-cave-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Foulksrath Castle",
     "lat": 52.688,
     "lng": -7.236,
@@ -25762,29 +25569,6 @@ const CASTLES = [
       "https://img.castlecore.uk/donore-castle-3.jpg",
       "https://img.castlecore.uk/donore-castle-4.jpg",
       "https://img.castlecore.uk/donore-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Skryne Castle",
-    "lat": 53.571,
-    "lng": -6.578,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house beside the Hill of Skryne with views over the Boyne Valley.",
-    "image": "https://img.castlecore.uk/skryne-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 60,
-    "county": "County Meath",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 872,
-    "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Screen_Castle%2C_Co_Meath_-_geograph.org.uk_-_1760551.jpg/500px-Screen_Castle%2C_Co_Meath_-_geograph.org.uk_-_1760551.jpg"
     ]
   },
   {
@@ -26237,32 +26021,6 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-murray-3.jpg",
       "https://img.castlecore.uk/castle-murray-4.jpg",
       "https://img.castlecore.uk/castle-murray-5.jpg"
-    ]
-  },
-  {
-    "name": "Donegal Friary",
-    "lat": 54.653,
-    "lng": -8.112,
-    "country": "Ireland",
-    "type": "friary",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Franciscan friary ruin where the Annals of the Four Masters were partly compiled.",
-    "image": "https://img.castlecore.uk/donegal-friary.jpg",
-    "rating": 3.8,
-    "reviewCount": 350,
-    "county": "County Donegal",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 887,
-    "gallery": [
-      "https://img.castlecore.uk/donegal-friary-2.jpg",
-      "https://img.castlecore.uk/donegal-friary-3.jpg",
-      "https://img.castlecore.uk/donegal-friary-4.jpg",
-      "https://img.castlecore.uk/donegal-friary-5.jpg"
     ]
   },
   {
@@ -26727,32 +26485,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Strade Friary",
-    "lat": 53.87,
-    "lng": -9.175,
-    "country": "Ireland",
-    "type": "friary",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Dominican friary with remarkable sculptured tomb of the Jordan family.",
-    "image": "https://img.castlecore.uk/strade-friary.jpg",
-    "rating": 3.6,
-    "reviewCount": 130,
-    "county": "County Mayo",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 908,
-    "gallery": [
-      "https://img.castlecore.uk/strade-friary-2.jpg",
-      "https://img.castlecore.uk/strade-friary-3.jpg",
-      "https://img.castlecore.uk/strade-friary-4.jpg",
-      "https://img.castlecore.uk/strade-friary-5.jpg"
-    ]
-  },
-  {
     "name": "Moyne Abbey",
     "lat": 54.17,
     "lng": -9.26,
@@ -27183,28 +26915,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Dungiven Castle",
-    "lat": 54.93,
-    "lng": -6.902,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "19th century",
-    "condition": "restored",
-    "description": "Gothic house built near O'Cahan's medieval castle and priory.",
-    "image": "https://img.castlecore.uk/dungiven-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 65,
-    "county": "County Derry",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 926,
-    "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Dungiven_Castle_-_Centre.jpg/500px-Dungiven_Castle_-_Centre.jpg"
-    ]
-  },
-  {
     "name": "Navan Fort",
     "lat": 54.348,
     "lng": -6.698,
@@ -27296,32 +27006,6 @@ const CASTLES = [
       "https://img.castlecore.uk/ardglass-castles-3.jpg",
       "https://img.castlecore.uk/ardglass-castles-4.jpg",
       "https://img.castlecore.uk/ardglass-castles-5.jpg"
-    ]
-  },
-  {
-    "name": "Dromore Castle (Down)",
-    "lat": 54.428,
-    "lng": -6.15,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "Mound and bailey with later tower in the town of Dromore.",
-    "image": "https://img.castlecore.uk/dromore-castle-down.jpg",
-    "rating": 3.2,
-    "reviewCount": 35,
-    "county": "County Down",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 930,
-    "gallery": [
-      "https://img.castlecore.uk/dromore-castle-down-2.jpg",
-      "https://img.castlecore.uk/dromore-castle-down-3.jpg",
-      "https://img.castlecore.uk/dromore-castle-down-4.jpg",
-      "https://img.castlecore.uk/dromore-castle-down-5.jpg"
     ]
   },
   {
@@ -27690,50 +27374,6 @@ const CASTLES = [
       {
         "name": "Tuatha",
         "url": "https://www.tuatha.ie/holy-cross-abbey/"
-      }
-    ]
-  },
-  {
-    "name": "Dunbrody Country House",
-    "lat": 52.258,
-    "lng": -6.93,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "Georgian (18th century)",
-    "condition": "intact",
-    "description": "A Georgian manor on the Hook Peninsula where Norman history seeps through ancient stone — once home to Cistercian monks who shaped medieval Wexford.",
-    "image": "https://img.castlecore.uk/dunbrody-country-house.jpg",
-    "rating": 4.1,
-    "reviewCount": 1500,
-    "county": "County Wexford",
-    "tags": [
-      "romantic",
-      "atmospheric",
-      "gardens",
-      "tearoom-cafe",
-      "wedding-venue"
-    ],
-    "access": "paid",
-    "_index": 948,
-    "gallery": [
-      "https://img.castlecore.uk/dunbrody-country-house-2.jpg",
-      "https://img.castlecore.uk/dunbrody-country-house-3.jpg",
-      "https://img.castlecore.uk/dunbrody-country-house-4.jpg",
-      "https://img.castlecore.uk/dunbrody-country-house-5.jpg"
-    ],
-    "history": "The nearby Dunbrody Abbey was founded in 1170 by Hervé de Montmorency on instructions from Strongbow after the Norman invasion of Ireland. The Cistercian abbey, formally established c.1210, became one of Ireland's finest monasteries. The country house was later built on the estate grounds and now operates as a luxury hotel.",
-    "sources": [
-      {
-        "name": "Visit Wexford",
-        "url": "https://www.visitwexford.ie/directory/dunbrody-abbey/"
-      },
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Dunbrody_Abbey"
-      },
-      {
-        "name": "Discover Ireland",
-        "url": "https://www.discoverireland.ie/wexford/dunbrody-abbey-and-visitor-centre"
       }
     ]
   },
@@ -32001,31 +31641,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Strokestown Castle",
-    "lat": 53.78,
-    "lng": -8.098,
-    "country": "Ireland",
-    "type": "country house",
-    "era": "18th century",
-    "condition": "restored",
-    "description": "Palladian mansion with famine museum.",
-    "image": "https://img.castlecore.uk/strokestown-castle.jpg",
-    "rating": 4.2,
-    "reviewCount": 180,
-    "county": "County Roscommon",
-    "tags": [
-      "must-see"
-    ],
-    "access": "paid",
-    "_index": 1137,
-    "gallery": [
-      "https://img.castlecore.uk/strokestown-castle-2.jpg",
-      "https://img.castlecore.uk/strokestown-castle-3.jpg",
-      "https://img.castlecore.uk/strokestown-castle-4.jpg",
-      "https://img.castlecore.uk/strokestown-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Fuerty Castle",
     "lat": 53.72,
     "lng": -8.412,
@@ -32095,32 +31710,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dunamon-tower-3.jpg",
       "https://img.castlecore.uk/dunamon-tower-4.jpg",
       "https://img.castlecore.uk/dunamon-tower-5.jpg"
-    ]
-  },
-  {
-    "name": "Elphin Castle",
-    "lat": 53.845,
-    "lng": -8.188,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Remnants of a castle in the historic town of Elphin.",
-    "image": "https://img.castlecore.uk/elphin-castle.jpg",
-    "rating": 3,
-    "reviewCount": 8,
-    "county": "County Roscommon",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1141,
-    "gallery": [
-      "https://img.castlecore.uk/elphin-castle-2.jpg",
-      "https://img.castlecore.uk/elphin-castle-3.jpg",
-      "https://img.castlecore.uk/elphin-castle-4.jpg",
-      "https://img.castlecore.uk/elphin-castle-5.jpg"
     ]
   },
   {
@@ -33809,32 +33398,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Rathmullan Fort",
-    "lat": 55.098,
-    "lng": -7.532,
-    "country": "Ireland",
-    "type": "fortification",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "Star fort overlooking Lough Swilly.",
-    "image": "https://img.castlecore.uk/rathmullan-fort.jpg",
-    "rating": 3.4,
-    "reviewCount": 25,
-    "county": "County Donegal",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1212,
-    "gallery": [
-      "https://img.castlecore.uk/rathmullan-fort-2.jpg",
-      "https://img.castlecore.uk/rathmullan-fort-3.jpg",
-      "https://img.castlecore.uk/rathmullan-fort-4.jpg",
-      "https://img.castlecore.uk/rathmullan-fort-5.jpg"
-    ]
-  },
-  {
     "name": "Drumboe Castle",
     "lat": 54.815,
     "lng": -7.868,
@@ -34767,29 +34330,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Kinkell Castle",
-    "lat": 57.298,
-    "lng": -2.428,
-    "country": "Scotland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house ruin near Inverurie.",
-    "image": "https://img.castlecore.uk/kinkell-castle.jpg",
-    "rating": 3.1,
-    "reviewCount": 10,
-    "county": "Aberdeenshire",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1260,
-    "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kinkell_Castle_%28geograph_3324064%29.jpg/500px-Kinkell_Castle_%28geograph_3324064%29.jpg"
-    ]
-  },
-  {
     "name": "Balquhain Castle",
     "lat": 57.328,
     "lng": -2.508,
@@ -34913,32 +34453,6 @@ const CASTLES = [
     "_index": 1265,
     "gallery": [
       "https://img.castlecore.uk/hallforest-castle-2.jpg"
-    ]
-  },
-  {
-    "name": "Glamis Village Tower",
-    "lat": 56.622,
-    "lng": -3.001,
-    "country": "Scotland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Small tower house ruin in Glamis village.",
-    "image": "https://img.castlecore.uk/glamis-village-tower.jpg",
-    "rating": 3.1,
-    "reviewCount": 10,
-    "county": "Angus",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1268,
-    "gallery": [
-      "https://img.castlecore.uk/glamis-village-tower-2.jpg",
-      "https://img.castlecore.uk/glamis-village-tower-3.jpg",
-      "https://img.castlecore.uk/glamis-village-tower-4.jpg",
-      "https://img.castlecore.uk/glamis-village-tower-5.jpg"
     ]
   },
   {
@@ -36734,33 +36248,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Doonbeg White Strand Tower",
-    "lat": 52.73,
-    "lng": -9.54,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "16th century",
-    "condition": "ruin",
-    "description": "Tower house ruin near the beach at Doonbeg.",
-    "image": "https://img.castlecore.uk/doonbeg-white-strand-tower.jpg",
-    "rating": 3.2,
-    "reviewCount": 14,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free",
-      "coastal"
-    ],
-    "access": "free",
-    "_index": 1359,
-    "gallery": [
-      "https://img.castlecore.uk/doonbeg-white-strand-tower-2.jpg",
-      "https://img.castlecore.uk/doonbeg-white-strand-tower-3.jpg",
-      "https://img.castlecore.uk/doonbeg-white-strand-tower-4.jpg",
-      "https://img.castlecore.uk/doonbeg-white-strand-tower-5.jpg"
-    ]
-  },
-  {
     "name": "Kilcash Castle",
     "lat": 52.388,
     "lng": -7.708,
@@ -37222,32 +36709,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kilfenora-cathedral-3.jpg",
       "https://img.castlecore.uk/kilfenora-cathedral-4.jpg",
       "https://img.castlecore.uk/kilfenora-cathedral-5.jpg"
-    ]
-  },
-  {
-    "name": "Innisfallen Island",
-    "lat": 52.028,
-    "lng": -9.578,
-    "country": "Ireland",
-    "type": "monastic site",
-    "era": "7th century",
-    "condition": "ruin",
-    "description": "Monastic island on Lough Leane where the Annals of Innisfallen were written.",
-    "image": "https://img.castlecore.uk/innisfallen-island.jpg",
-    "rating": 3.7,
-    "reviewCount": 52,
-    "county": "County Kerry",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1379,
-    "gallery": [
-      "https://img.castlecore.uk/innisfallen-island-2.jpg",
-      "https://img.castlecore.uk/innisfallen-island-3.jpg",
-      "https://img.castlecore.uk/innisfallen-island-4.jpg",
-      "https://img.castlecore.uk/innisfallen-island-5.jpg"
     ]
   },
   {
@@ -38123,32 +37584,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Glenstal Abbey (Main)",
-    "lat": 52.668,
-    "lng": -8.428,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "19th century",
-    "condition": "intact",
-    "description": "Neo-Romanesque Benedictine monastery.",
-    "image": "https://img.castlecore.uk/glenstal-abbey-main.jpg",
-    "rating": 3.7,
-    "reviewCount": 52,
-    "county": "County Limerick",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1425,
-    "gallery": [
-      "https://img.castlecore.uk/glenstal-abbey-main-2.jpg",
-      "https://img.castlecore.uk/glenstal-abbey-main-3.jpg",
-      "https://img.castlecore.uk/glenstal-abbey-main-4.jpg",
-      "https://img.castlecore.uk/glenstal-abbey-main-5.jpg"
-    ]
-  },
-  {
     "name": "Granagh Castle",
     "lat": 52.328,
     "lng": -7.532,
@@ -38540,54 +37975,6 @@ const CASTLES = [
       "https://img.castlecore.uk/athlumney-castle-3.jpg",
       "https://img.castlecore.uk/athlumney-castle-4.jpg",
       "https://img.castlecore.uk/athlumney-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Kilbeggan Distillery",
-    "lat": 53.37,
-    "lng": -7.5,
-    "country": "Ireland",
-    "type": "fortified house",
-    "era": "18th century",
-    "condition": "intact",
-    "description": "Not a castle but a piece of living history — the world's oldest licensed distillery, where whiskey has flowed since 1757.",
-    "history": "Established in 1757, it is the oldest licensed distillery in Ireland and one of the oldest in the world. Located in Kilbeggan, County Westmeath. The original pot still and waterwheel are still in place. Reopened for production in 2007 after decades of closure. Now a working distillery and museum.",
-    "image": "https://img.castlecore.uk/kilbeggan-distillery.jpg",
-    "rating": 4.5,
-    "reviewCount": 3200,
-    "county": "County Westmeath",
-    "tags": [
-      "well-preserved",
-      "kid-friendly",
-      "guided-tours",
-      "gift-shop"
-    ],
-    "access": "paid",
-    "_index": 1446,
-    "gallery": [
-      "https://img.castlecore.uk/kilbeggan-distillery-2.jpg",
-      "https://img.castlecore.uk/kilbeggan-distillery-3.jpg",
-      "https://img.castlecore.uk/kilbeggan-distillery-4.jpg",
-      "https://img.castlecore.uk/kilbeggan-distillery-5.jpg",
-      "https://img.castlecore.uk/kilbeggan-distillery-tower-2.jpg",
-      "https://img.castlecore.uk/kilbeggan-distillery-tower-3.jpg",
-      "https://img.castlecore.uk/kilbeggan-distillery-tower-4.jpg",
-      "https://img.castlecore.uk/kilbeggan-distillery-tower-5.jpg"
-    ],
-    "youtube": [
-      "XRQiVyjxzFE",
-      "z3EPpoAjsFA",
-      "pq55m_j0rcs"
-    ],
-    "sources": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Kilbeggan_Distillery"
-      },
-      {
-        "name": "Kilbeggan Distillery Official",
-        "url": "https://www.kilbegganwhiskey.com/distillery/"
-      }
     ]
   },
   {
@@ -41326,52 +40713,6 @@ const CASTLES = [
       {
         "name": "Visit Wales",
         "url": "https://www.visitwales.com/attraction/visitor-centre/dylan-thomas-boat-house-829119"
-      }
-    ]
-  },
-  {
-    "name": "Tenby Town Walls",
-    "lat": 51.6722,
-    "lng": -4.7028,
-    "country": "Wales",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "intact",
-    "description": "Some of Britain's finest medieval town walls, embracing a pastel-painted harbour town perched above golden beaches — where ancient stone meets seaside charm.",
-    "image": "https://img.castlecore.uk/tenby-town-walls.jpg",
-    "rating": 4.3,
-    "reviewCount": 2000,
-    "county": "Pembrokeshire",
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "photogenic",
-      "coastal",
-      "free-entry",
-      "dog-friendly"
-    ],
-    "access": "free",
-    "_index": 1571,
-    "gallery": [
-      "https://img.castlecore.uk/tenby-town-walls-2.jpg",
-      "https://img.castlecore.uk/tenby-town-walls-3.jpg",
-      "https://img.castlecore.uk/tenby-town-walls-4.jpg",
-      "https://img.castlecore.uk/tenby-town-walls-5.jpg"
-    ],
-    "history": "Built in the 13th century by the Earls of Pembroke (the Marshal family) to defend the prosperous trading port. Strengthened in the 1450s with the impressive Five Arches barbican gatehouse, which still serves as the main entrance. Grade I listed and among the most complete medieval town defences in Wales. The walls helped Tenby withstand sieges during the Civil War.",
-    "youtube": [],
-    "sources": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Tenby_town_walls"
-      },
-      {
-        "name": "Britain Express",
-        "url": "https://www.britainexpress.com/wales/pembrokeshire/properties/tenby-town-walls.htm"
-      },
-      {
-        "name": "Medieval Heritage",
-        "url": "https://medievalheritage.eu/en/main-page/heritage/wales/tenby-city-defensive-walls/"
       }
     ]
   },
@@ -44176,32 +43517,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Dromore Castle Clare",
-    "lat": 52.697,
-    "lng": -8.893,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "19th century",
-    "condition": "ruin",
-    "description": "Victorian Gothic revival castle, now a dramatic ruin.",
-    "image": "https://img.castlecore.uk/dromore-castle-clare.jpg",
-    "rating": 3.8,
-    "reviewCount": 65,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1713,
-    "gallery": [
-      "https://img.castlecore.uk/dromore-castle-clare-2.jpg",
-      "https://img.castlecore.uk/dromore-castle-clare-3.jpg",
-      "https://img.castlecore.uk/dromore-castle-clare-4.jpg",
-      "https://img.castlecore.uk/dromore-castle-clare-5.jpg"
-    ]
-  },
-  {
     "name": "Craggaunowen Castle",
     "lat": 52.791,
     "lng": -8.745,
@@ -44889,53 +44204,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Powerscourt Estate",
-    "lat": 53.185,
-    "lng": -6.186,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century / 18th century",
-    "condition": "restored",
-    "description": "Ireland's most magnificent gardens cascade down terraces toward the misty Sugar Loaf Mountain — 47 acres of Italianate splendour surrounding a Palladian mansion reborn from fire.",
-    "image": "https://img.castlecore.uk/powerscourt-estate.jpg",
-    "rating": 4.6,
-    "reviewCount": 1500,
-    "county": "County Wicklow",
-    "tags": [
-      "photogenic",
-      "gardens",
-      "romantic",
-      "tearoom-cafe",
-      "gift-shop",
-      "wedding-venue",
-      "kid-friendly"
-    ],
-    "access": "paid",
-    "_index": 1759,
-    "gallery": [
-      "https://img.castlecore.uk/powerscourt-estate-2.jpg",
-      "https://img.castlecore.uk/powerscourt-estate-3.jpg",
-      "https://img.castlecore.uk/powerscourt-estate-4.jpg",
-      "https://img.castlecore.uk/powerscourt-estate-5.jpg"
-    ],
-    "history": "Originally a 13th-century Anglo-Norman castle, transformed in the 1730s by architect Richard Cassels into a grand Palladian mansion for the Wingfield family (Viscounts Powerscourt). The spectacular 47-acre gardens were created by the 7th Viscount from 1858, collecting statuary and ironwork across Europe. The house was devastated by an accidental fire in 1974, just one day before a grand reopening. Partially restored and reopened in 1996.",
-    "youtube": [],
-    "sources": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Powerscourt_Estate"
-      },
-      {
-        "name": "Visit Wicklow",
-        "url": "https://visitwicklow.ie/listing/powerscourt-house-gardens-2/"
-      },
-      {
-        "name": "Irish Tourism",
-        "url": "https://www.irishtourism.com/powerscourt-house-and-gardens1/"
-      }
-    ]
-  },
-  {
     "name": "Oughterard Round Tower",
     "lat": 53.341,
     "lng": -6.712,
@@ -45510,32 +44778,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Killaloe Bridge Castle",
-    "lat": 52.807,
-    "lng": -8.439,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Small tower house by the Shannon bridge.",
-    "image": "https://img.castlecore.uk/killaloe-bridge-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 15,
-    "county": "County Clare",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1783,
-    "gallery": [
-      "https://img.castlecore.uk/killaloe-bridge-castle-2.jpg",
-      "https://img.castlecore.uk/killaloe-bridge-castle-3.jpg",
-      "https://img.castlecore.uk/killaloe-bridge-castle-4.jpg",
-      "https://img.castlecore.uk/killaloe-bridge-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Ballyhannon Castle Clare",
     "lat": 52.77,
     "lng": -8.91,
@@ -45579,32 +44821,6 @@ const CASTLES = [
       "https://img.castlecore.uk/kilnaboy-church-3.jpg",
       "https://img.castlecore.uk/kilnaboy-church-4.jpg",
       "https://img.castlecore.uk/kilnaboy-church-5.jpg"
-    ]
-  },
-  {
-    "name": "Seir Kieran Monastic Site",
-    "lat": 52.94,
-    "lng": -7.62,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "5th century",
-    "condition": "ruin",
-    "description": "One of Ireland's oldest monastic sites with high cross.",
-    "image": "https://img.castlecore.uk/seir-kieran-monastic-site.jpg",
-    "rating": 3.7,
-    "reviewCount": 35,
-    "county": "County Offaly",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1787,
-    "gallery": [
-      "https://img.castlecore.uk/seir-kieran-monastic-site-2.jpg",
-      "https://img.castlecore.uk/seir-kieran-monastic-site-3.jpg",
-      "https://img.castlecore.uk/seir-kieran-monastic-site-4.jpg",
-      "https://img.castlecore.uk/seir-kieran-monastic-site-5.jpg"
     ]
   },
   {
@@ -46578,32 +45794,6 @@ const CASTLES = [
       "https://img.castlecore.uk/shannonbridge-fortification-3.jpg",
       "https://img.castlecore.uk/shannonbridge-fortification-4.jpg",
       "https://img.castlecore.uk/shannonbridge-fortification-5.jpg"
-    ]
-  },
-  {
-    "name": "Dunbrody Castle",
-    "lat": 52.265,
-    "lng": -6.88,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Tower house near the famous abbey.",
-    "image": "https://img.castlecore.uk/dunbrody-castle.jpg",
-    "rating": 3.5,
-    "reviewCount": 25,
-    "county": "County Wexford",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 1833,
-    "gallery": [
-      "https://img.castlecore.uk/dunbrody-castle-2.jpg",
-      "https://img.castlecore.uk/dunbrody-castle-3.jpg",
-      "https://img.castlecore.uk/dunbrody-castle-4.jpg",
-      "https://img.castlecore.uk/dunbrody-castle-5.jpg"
     ]
   },
   {
@@ -48836,25 +48026,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Maxstoke Priory",
-    "lat": 52.52,
-    "lng": -1.6583,
-    "country": "England",
-    "type": "abbey",
-    "era": "12th century",
-    "condition": "partial",
-    "description": "Augustinian priory remains incorporated into a farmhouse near Coleshill.",
-    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-maxstoke-priory.jpg",
-    "rating": 3.3,
-    "reviewCount": 50,
-    "county": "Warwickshire",
-    "tags": [
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 1911
-  },
-  {
     "name": "St Mary's Abbey York",
     "lat": 53.9622,
     "lng": -1.0872,
@@ -49315,47 +48486,6 @@ const CASTLES = [
     ],
     "access": "paid",
     "_index": 1931
-  },
-  {
-    "name": "Orford Ness",
-    "lat": 52.0833,
-    "lng": 1.55,
-    "country": "England",
-    "type": "castle",
-    "era": "20th century",
-    "condition": "ruin",
-    "description": "Britain's most secretive landscape — a windswept shingle spit scattered with Cold War pagodas where atomic weapons were tested, now reclaimed by nature and silence.",
-    "image": "https://img.castlecore.uk/orford-ness.jpg",
-    "rating": 4.4,
-    "reviewCount": 2000,
-    "county": "Suffolk",
-    "tags": [
-      "atmospheric",
-      "coastal",
-      "remote",
-      "dark-brooding",
-      "photogenic"
-    ],
-    "access": "paid",
-    "_index": 1934,
-    "gallery": [
-      "https://img.castlecore.uk/orford-ness-2.jpg",
-      "https://img.castlecore.uk/orford-ness-3.jpg",
-      "https://img.castlecore.uk/orford-ness-4.jpg",
-      "https://img.castlecore.uk/orford-ness-5.jpg"
-    ],
-    "history": "Used from 1913 as a military testing site for experimental radar and weaponry. During the Cold War, the Atomic Weapons Research Establishment tested nuclear bomb components in distinctive concrete 'pagoda' buildings. Decommissioned in the early 1980s and acquired by the National Trust in 1993. Now a National Nature Reserve and SSSI, accessible only by boat from Orford.",
-    "youtube": [],
-    "sources": [
-      {
-        "name": "National Trust",
-        "url": "https://www.nationaltrust.org.uk/visit/suffolk/orford-ness-national-nature-reserve"
-      },
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Orford_Ness"
-      }
-    ]
   },
   {
     "name": "Landguard Fort",
@@ -51303,33 +50433,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Dunbar Battery",
-    "lat": 56.0028,
-    "lng": -2.5167,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "18th century",
-    "condition": "ruin",
-    "description": "Coastal battery beside the old castle ruins at Dunbar harbour.",
-    "image": "https://img.castlecore.uk/dunbar-battery.jpg",
-    "rating": 3.4,
-    "reviewCount": 80,
-    "county": "East Lothian",
-    "tags": [
-      "battery",
-      "coastal",
-      "harbour"
-    ],
-    "access": "free",
-    "_index": 2062,
-    "gallery": [
-      "https://img.castlecore.uk/dunbar-battery-2.jpg",
-      "https://img.castlecore.uk/dunbar-battery-3.jpg",
-      "https://img.castlecore.uk/dunbar-battery-4.jpg",
-      "https://img.castlecore.uk/dunbar-battery-5.jpg"
-    ]
-  },
-  {
     "name": "Castle Levan",
     "lat": 55.9333,
     "lng": -4.8,
@@ -51568,32 +50671,6 @@ const CASTLES = [
       "https://img.castlecore.uk/dollar-academy-clock-tower-3.jpg",
       "https://img.castlecore.uk/dollar-academy-clock-tower-4.jpg",
       "https://img.castlecore.uk/dollar-academy-clock-tower-5.jpg"
-    ]
-  },
-  {
-    "name": "Dunaverty Rock",
-    "lat": 55.3,
-    "lng": -5.7333,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "medieval",
-    "condition": "ruin",
-    "description": "Rocky headland at the Mull of Kintyre with traces of a MacDonald castle.",
-    "image": "https://img.castlecore.uk/dunaverty-rock.jpg",
-    "rating": 3.5,
-    "reviewCount": 100,
-    "county": "Argyll and Bute",
-    "tags": [
-      "headland",
-      "kintyre"
-    ],
-    "access": "free",
-    "_index": 2073,
-    "gallery": [
-      "https://img.castlecore.uk/dunaverty-rock-2.jpg",
-      "https://img.castlecore.uk/dunaverty-rock-3.jpg",
-      "https://img.castlecore.uk/dunaverty-rock-4.jpg",
-      "https://img.castlecore.uk/dunaverty-rock-5.jpg"
     ]
   },
   {
@@ -53505,31 +52582,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Roscrea Friary",
-    "lat": 52.95,
-    "lng": -7.8,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Franciscan friary in Roscrea town.",
-    "image": "https://img.castlecore.uk/roscrea-friary.jpg",
-    "rating": 3.5,
-    "reviewCount": 25,
-    "county": "County Tipperary",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "_index": 2152,
-    "gallery": [
-      "https://img.castlecore.uk/roscrea-friary-2.jpg",
-      "https://img.castlecore.uk/roscrea-friary-3.jpg",
-      "https://img.castlecore.uk/roscrea-friary-4.jpg",
-      "https://img.castlecore.uk/roscrea-friary-5.jpg"
-    ]
-  },
-  {
     "name": "Thurles Castle",
     "lat": 52.682,
     "lng": -7.805,
@@ -54177,32 +53229,6 @@ const CASTLES = [
     "_index": 2181
   },
   {
-    "name": "Donegal Bay Friary",
-    "lat": 54.53,
-    "lng": -8.28,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "Franciscan friary remains near Bundoran.",
-    "image": "https://img.castlecore.uk/donegal-bay-friary.jpg",
-    "rating": 3.4,
-    "reviewCount": 15,
-    "county": "County Donegal",
-    "tags": [
-      "hidden-gem",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2182,
-    "gallery": [
-      "https://img.castlecore.uk/donegal-bay-friary-2.jpg",
-      "https://img.castlecore.uk/donegal-bay-friary-3.jpg",
-      "https://img.castlecore.uk/donegal-bay-friary-4.jpg",
-      "https://img.castlecore.uk/donegal-bay-friary-5.jpg"
-    ]
-  },
-  {
     "name": "Tory Island Round Tower",
     "lat": 55.267,
     "lng": -8.225,
@@ -54248,32 +53274,6 @@ const CASTLES = [
       "https://img.castlecore.uk/carrigart-castle-3.jpg",
       "https://img.castlecore.uk/carrigart-castle-4.jpg",
       "https://img.castlecore.uk/carrigart-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Malin Head Tower",
-    "lat": 55.38,
-    "lng": -7.374,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "19th century",
-    "condition": "ruin",
-    "description": "Signal tower at Ireland's northernmost point.",
-    "image": "https://img.castlecore.uk/malin-head-tower.jpg",
-    "rating": 4,
-    "reviewCount": 150,
-    "county": "County Donegal",
-    "tags": [
-      "scenic",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2185,
-    "gallery": [
-      "https://img.castlecore.uk/malin-head-tower-2.jpg",
-      "https://img.castlecore.uk/malin-head-tower-3.jpg",
-      "https://img.castlecore.uk/malin-head-tower-4.jpg",
-      "https://img.castlecore.uk/malin-head-tower-5.jpg"
     ]
   },
   {
@@ -54371,31 +53371,6 @@ const CASTLES = [
       "https://img.castlecore.uk/mullaghmore-castle-3.jpg",
       "https://img.castlecore.uk/mullaghmore-castle-4.jpg",
       "https://img.castlecore.uk/mullaghmore-castle-5.jpg"
-    ]
-  },
-  {
-    "name": "Elphin Windmill",
-    "lat": 53.858,
-    "lng": -8.189,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "18th century",
-    "condition": "restored",
-    "description": "Restored windmill in the heritage town.",
-    "image": "https://img.castlecore.uk/elphin-windmill.jpg",
-    "rating": 3.5,
-    "reviewCount": 20,
-    "county": "County Roscommon",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "_index": 2191,
-    "gallery": [
-      "https://img.castlecore.uk/elphin-windmill-2.jpg",
-      "https://img.castlecore.uk/elphin-windmill-3.jpg",
-      "https://img.castlecore.uk/elphin-windmill-4.jpg",
-      "https://img.castlecore.uk/elphin-windmill-5.jpg"
     ]
   },
   {
@@ -55142,32 +54117,6 @@ const CASTLES = [
       "https://img.castlecore.uk/drogheda-magdalene-tower-3.jpg",
       "https://img.castlecore.uk/drogheda-magdalene-tower-4.jpg",
       "https://img.castlecore.uk/drogheda-magdalene-tower-5.jpg"
-    ]
-  },
-  {
-    "name": "Drogheda St Laurence Gate",
-    "lat": 53.717,
-    "lng": -6.344,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "13th century",
-    "condition": "ruin",
-    "description": "Finest surviving medieval town gate in Ireland.",
-    "image": "https://img.castlecore.uk/drogheda-st-laurence-gate.jpg",
-    "rating": 4.2,
-    "reviewCount": 300,
-    "county": "County Louth",
-    "tags": [
-      "landmark",
-      "free"
-    ],
-    "access": "free",
-    "_index": 2225,
-    "gallery": [
-      "https://img.castlecore.uk/drogheda-st-laurence-gate-2.jpg",
-      "https://img.castlecore.uk/drogheda-st-laurence-gate-3.jpg",
-      "https://img.castlecore.uk/drogheda-st-laurence-gate-4.jpg",
-      "https://img.castlecore.uk/drogheda-st-laurence-gate-5.jpg"
     ]
   },
   {
@@ -59987,33 +58936,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Dunamase Rock Summit",
-    "lat": 53.032,
-    "lng": -7.415,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "12th century",
-    "condition": "ruin",
-    "description": "Summit fortification with panoramic Laois views.",
-    "image": "https://img.castlecore.uk/dunamase-rock-summit.jpg",
-    "rating": 4.3,
-    "reviewCount": 350,
-    "county": "County Laois",
-    "tags": [
-      "landmark",
-      "free",
-      "scenic"
-    ],
-    "access": "free",
-    "_index": 2399,
-    "gallery": [
-      "https://img.castlecore.uk/dunamase-rock-summit-2.jpg",
-      "https://img.castlecore.uk/dunamase-rock-summit-3.jpg",
-      "https://img.castlecore.uk/dunamase-rock-summit-4.jpg",
-      "https://img.castlecore.uk/dunamase-rock-summit-5.jpg"
-    ]
-  },
-  {
     "name": "Freshford Church",
     "lat": 52.639,
     "lng": -7.402,
@@ -60794,31 +59716,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Hospital Priory",
-    "lat": 52.465,
-    "lng": -8.431,
-    "country": "Ireland",
-    "type": "abbey",
-    "county": "County Limerick",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.6,
-    "reviewCount": 18,
-    "era": "12th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/hospital-priory.jpg",
-    "description": "Knights Hospitaller priory ruins.",
-    "_index": 2456,
-    "gallery": [
-      "https://img.castlecore.uk/hospital-priory-2.jpg",
-      "https://img.castlecore.uk/hospital-priory-3.jpg",
-      "https://img.castlecore.uk/hospital-priory-4.jpg",
-      "https://img.castlecore.uk/hospital-priory-5.jpg"
-    ]
-  },
-  {
     "name": "Any Castle",
     "lat": 52.365,
     "lng": -8.258,
@@ -60914,31 +59811,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Knocktopher Castle",
-    "lat": 52.458,
-    "lng": -7.288,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Kilkenny",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.4,
-    "reviewCount": 12,
-    "era": "13th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/knocktopher-castle.jpg",
-    "description": "Norman castle motte and church ruins.",
-    "_index": 2461,
-    "gallery": [
-      "https://img.castlecore.uk/knocktopher-castle-2.jpg",
-      "https://img.castlecore.uk/knocktopher-castle-3.jpg",
-      "https://img.castlecore.uk/knocktopher-castle-4.jpg",
-      "https://img.castlecore.uk/knocktopher-castle-5.jpg"
-    ]
-  },
-  {
     "name": "Castlecomer Castle",
     "lat": 52.806,
     "lng": -7.211,
@@ -61006,31 +59878,6 @@ const CASTLES = [
     "image": "https://img.castlecore.uk/cregg-castle.jpg",
     "description": "Well-preserved fortified house near Corrandulla.",
     "_index": 2464
-  },
-  {
-    "name": "Kilconnell Castle",
-    "lat": 53.329,
-    "lng": -8.373,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Galway",
-    "tags": [
-      "free"
-    ],
-    "access": "free",
-    "rating": 3.4,
-    "reviewCount": 10,
-    "era": "15th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/kilconnell-castle.jpg",
-    "description": "Castle remains near the friary.",
-    "_index": 2466,
-    "gallery": [
-      "https://img.castlecore.uk/kilconnell-castle-2.jpg",
-      "https://img.castlecore.uk/kilconnell-castle-3.jpg",
-      "https://img.castlecore.uk/kilconnell-castle-4.jpg",
-      "https://img.castlecore.uk/kilconnell-castle-5.jpg"
-    ]
   },
   {
     "name": "Ballindoon Priory",
