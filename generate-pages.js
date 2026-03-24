@@ -481,8 +481,19 @@ function generatePage(castle) {
     nearbyHtml = `<p class="terrain-note">No nearby sites within 30 km.</p>`;
   }
 
-  // About
-  const aboutText = (castle.description || '') + (castle.history ? '<br><br>' + escapeHtml(castle.history) : '');
+  // About — skip history if it's too similar to description (dedup)
+  let aboutText = castle.description || '';
+  if (castle.history) {
+    const descWords = new Set((castle.description || '').toLowerCase().split(/\s+/));
+    const histWords = castle.history.toLowerCase().split(/\s+/);
+    const overlap = histWords.filter(w => descWords.has(w)).length / (histWords.length || 1);
+    if (overlap < 0.5) {
+      aboutText += '<br><br>' + escapeHtml(castle.history);
+    } else if (castle.history.length > (castle.description || '').length) {
+      // History is more detailed but similar — use history instead
+      aboutText = escapeHtml(castle.history);
+    }
+  }
 
   // Schema.org
   const schema = JSON.stringify({
