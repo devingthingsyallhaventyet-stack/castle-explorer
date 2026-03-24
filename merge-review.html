@@ -86,6 +86,7 @@ h1 { font-size:1.5rem; margin-bottom:4px; color:#8b2335; }
     <option value="merge">Marked Merge</option>
     <option value="keep">Marked Keep</option>
     <option value="delete-both">Marked Delete Both</option>
+    <option value="auto-resolved">Auto-Resolved</option>
   </select>
   <select id="filterCountry">
     <option value="all">All Countries</option>
@@ -216,16 +217,22 @@ function renderPairs() {
     const key = decisionKey(pair);
     const decision = decisions[key];
     
+    // Skip auto-resolved pairs (site already deleted in another pair)
+    const autoResolved = isAutoResolved(pair);
+    if(autoResolved && statusFilter !== 'auto-resolved') return;
+
     // Filters
     if(searchVal && !pair.primary.name.toLowerCase().includes(searchVal) && !pair.secondary.name.toLowerCase().includes(searchVal)) return;
-    if(statusFilter === 'pending' && decision) return;
+    if(statusFilter === 'pending' && (decision || autoResolved)) return;
     if(statusFilter === 'merge' && decision !== 'merge' && decision !== 'delete-primary' && decision !== 'delete-secondary') return;
     if(statusFilter === 'keep' && decision !== 'keep') return;
     if(statusFilter === 'delete-both' && decision !== 'delete-both') return;
+    if(statusFilter === 'auto-resolved' && !autoResolved) return;
     if(countryFilter !== 'all' && pair.primary.country !== countryFilter && pair.secondary.country !== countryFilter) return;
     
-    const decidedClass = decision ? 'decided' : '';
-    const badge = decision === 'merge' ? '<span class="decision-badge decision-merge">MERGE</span>' :
+    const decidedClass = (decision || autoResolved) ? 'decided' : '';
+    const badge = autoResolved ? '<span class="decision-badge" style="background:#999;">AUTO-RESOLVED</span>' :
+                  decision === 'merge' ? '<span class="decision-badge decision-merge">MERGE</span>' :
                   decision === 'keep' ? '<span class="decision-badge decision-keep">KEEP BOTH</span>' :
                   decision === 'delete-both' ? '<span class="decision-badge decision-nuke">DELETE BOTH</span>' :
                   decision === 'delete-primary' ? '<span class="decision-badge decision-nuke">DELETE PRIMARY</span>' :
@@ -269,6 +276,35 @@ function toggle(idx) {
   document.getElementById('detail-'+idx).classList.toggle('open');
 }
 
+// Get all site names marked for deletion across all decisions
+function getDeletedNames() {
+  const deleted = new Set();
+  PAIRS.forEach(p => {
+    const key = decisionKey(p);
+    const d = decisions[key];
+    if(d === 'merge' || d === 'delete-secondary') deleted.add(p.secondary.name);
+    if(d === 'delete-primary') deleted.add(p.primary.name);
+    if(d === 'delete-both') { deleted.add(p.primary.name); deleted.add(p.secondary.name); }
+  });
+  return deleted;
+}
+
+// Check if a pair is auto-resolved because one/both sites are already deleted elsewhere
+function isAutoResolved(pair) {
+  const key = decisionKey(pair);
+  if(decisions[key]) return false; // already has its own decision
+  const deleted = getDeletedNames();
+  return deleted.has(pair.primary.name) || deleted.has(pair.secondary.name);
+}
+
+function getAutoResolvedReason(pair) {
+  const deleted = getDeletedNames();
+  const parts = [];
+  if(deleted.has(pair.primary.name)) parts.push(pair.primary.name);
+  if(deleted.has(pair.secondary.name)) parts.push(pair.secondary.name);
+  return parts.join(' & ') + ' already marked for deletion in another pair';
+}
+
 function decide(idx, type) {
   const key = decisionKey(PAIRS[idx]);
   decisions[key] = type;
@@ -285,21 +321,22 @@ function undecide(idx) {
 
 function updateStats() {
   const total = PAIRS.length;
-  let merges = 0, keeps = 0;
-  let nukes = 0;
+  let merges = 0, keeps = 0, nukes = 0, auto = 0;
   PAIRS.forEach(p => {
     const d = decisions[decisionKey(p)];
     if(d === 'merge') merges++;
-    if(d === 'keep') keeps++;
-    if(d === 'delete-both') nukes++;
-    if(d === 'delete-primary' || d === 'delete-secondary') merges++;
+    else if(d === 'keep') keeps++;
+    else if(d === 'delete-both') nukes++;
+    else if(d === 'delete-primary' || d === 'delete-secondary') merges++;
+    else if(isAutoResolved(p)) auto++;
   });
+  const reviewed = merges + keeps + nukes + auto;
   document.getElementById('total').textContent = total;
-  document.getElementById('reviewed').textContent = merges + keeps + nukes;
+  document.getElementById('reviewed').textContent = reviewed;
   document.getElementById('mergeCount').textContent = merges;
   document.getElementById('keepCount').textContent = keeps;
-  document.getElementById('remaining').textContent = total - merges - keeps - nukes;
-  document.getElementById('exportInfo').textContent = `${merges} merge, ${nukes} delete both, ${keeps} keep. ${total - merges - keeps - nukes} remaining.`;
+  document.getElementById('remaining').textContent = total - reviewed;
+  document.getElementById('exportInfo').textContent = `${merges} merge, ${nukes} delete both, ${keeps} keep, ${auto} auto-resolved. ${total - reviewed} remaining.`;
 }
 
 function exportDecisions() {
