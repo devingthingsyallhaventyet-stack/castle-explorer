@@ -1,163 +1,204 @@
 const fs = require('fs');
-const vm = require('vm');
-let src = fs.readFileSync('data.js', 'utf8');
-let modSrc = src.replace(/^const /gm, 'var ');
-const ctx = {};
-vm.runInNewContext(modSrc, ctx);
 
-const enrichments = [
+let src = fs.readFileSync('data.js', 'utf8');
+
+const updates = [
   {
-    name: "Dolaucothi Gold Mines",
-    description: "The UK's only known Roman gold mines, hidden in a green Welsh valley — where legionaries once dug for treasure and you can still venture underground on guided tours by candlelight.",
-    history: "Mined by the Romans from the 1st century AD, possibly a motivation for their invasion of Britain. A Roman military fort guarded the site until c.125 AD when it became civilian-operated. Evidence of sophisticated Roman engineering including aqueducts and hushing techniques survives. Mining continued intermittently through the 19th-20th centuries. Now a National Trust property with guided underground tours.",
-    tags: ["atmospheric", "guided-tours", "kid-friendly", "woodland", "remote", "tearoom-cafe"],
+    name: "Craigevar Castle Grounds",
+    description: "A pink-harled fairytale tower rising from Aberdeenshire woodland — said to have inspired Disney's Cinderella Castle. Seven storeys of Scottish Baronial perfection.",
+    history: "Completed in 1626 by merchant William Forbes ('Danzig Willy'), who purchased the unfinished castle from the Mortimer family in 1610. The Forbes family resided here for 350 years. Donated to the National Trust for Scotland in 1963 by the 19th Lord Sempill. One of the finest examples of Scottish Baronial architecture.",
+    tags: ["well-preserved", "photogenic", "woodland", "romantic", "atmospheric", "gardens", "guided-tours", "gift-shop"],
     access: "paid",
-    era: "1st century Roman",
-    youtube: [],
+    era: "17th century",
     sources: [
-      {name: "National Trust", url: "https://www.nationaltrust.org.uk/dolaucothi-gold-mines"},
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dolaucothi_Gold_Mines"},
-      {name: "History Hit", url: "https://www.historyhit.com/locations/dolaucothi-gold-mines/"}
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Craigievar_Castle"},
+      {name: "National Trust for Scotland", url: "https://www.nts.org.uk/visit/places/craigievar"},
+      {name: "Visit Aberdeenshire", url: "https://www.visitabdn.com/abdnwillwait/history-and-heritage/craigievar-castle/"}
     ]
   },
   {
-    name: "Corbridge Roman Town",
-    description: "Walk the actual streets of a Roman frontier town — where legionaries shopped, drank, and stored their treasures in a buried chest unearthed 1,800 years later.",
-    history: "Originally a series of military forts at the junction of Dere Street and Stanegate, south of Hadrian's Wall. After the Wall was built, Corbridge (Coria, meaning 'hosting place' in Celtic) developed into a prosperous supply town and leave centre for off-duty garrisons. In 1964, archaeologists discovered the famous 'Corbridge Hoard' — a buried chest containing armour and weapons hidden by a Roman soldier. Managed by English Heritage with a museum.",
-    tags: ["museum", "photogenic", "kid-friendly", "guided-tours", "gift-shop"],
-    access: "paid",
-    era: "1st-4th century Roman",
-    youtube: [],
-    sources: [
-      {name: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/corbridge-roman-town-hadrians-wall/"},
-      {name: "Visit Northumberland", url: "https://www.visitnorthumberland.com/explore/things-to-do/attractions/historic-sites/corbridge-roman-town-hadrian-s-wall"},
-      {name: "Historic UK", url: "https://www.historic-uk.com/HistoryMagazine/DestinationsUK/Corbridge-Roman-Site-Northumberland/"}
-    ]
-  },
-  {
-    name: "Helmingham Hall",
-    description: "A fairy-tale moated Tudor hall where the drawbridge is still raised every single night — surrounded by Grade I gardens, a deer park, and 500 years of the same family's careful stewardship.",
-    history: "Begun by John Tollemache in 1480, owned by the Tollemache family ever since — over 500 years. Built around a courtyard in typical late medieval/Tudor style with a working moat and drawbridge. Tudor gables were removed c.1760 and half-timbered walls concealed behind brick. The Grade I listed gardens were redesigned by Lady Tollemache (Chelsea Gold Medallist) and include herbaceous borders, herb gardens, and a 400-acre deer park with red and fallow deer.",
-    tags: ["well-preserved", "tudor", "gardens", "photogenic", "romantic", "tearoom-cafe", "dog-friendly"],
-    access: "paid",
-    era: "15th century",
-    youtube: [],
-    sources: [
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Helmingham_Hall"},
-      {name: "Helmingham Hall", url: "https://www.helmingham.com/history/the-hall/"},
-      {name: "Country Life", url: "https://www.countrylife.co.uk/gardens/country-gardens-and-gardening-tips/helmingham-hall-the-ancient-garden-at-medieval-hall-where-the-drawbridge-is-still-pulled-up-every-night"}
-    ]
-  },
-  {
-    name: "Dunadd Fort",
-    description: "The ancient capital of Dál Riata — climb this rocky outcrop in Kilmartin Glen and place your foot in the same carved footprint where Dark Age kings were crowned in the birthplace of Scotland.",
-    history: "An Iron Age hillfort that became the chief stronghold of the Gaelic kingdom of Dál Riata, which spanned northern Ireland and western Scotland. First mentioned in AD 683, already a major power centre. Famous for its summit carvings: a footprint, a boar, and an ogham inscription, likely used in king-making ceremonies. From here, the seeds of what became the Kingdom of Scotland were sown. Free to visit, managed by Historic Environment Scotland.",
-    tags: ["atmospheric", "prehistoric", "hilltop", "free-entry", "remote", "photogenic", "celtic"],
+    name: "Grey Mare's Tail",
+    description: "Scotland's fifth-highest waterfall plunges 60m into the Moffat Water Valley — a glacial landscape of raw, dramatic beauty where Covenanters once hid from persecution.",
+    history: "This dramatic hanging valley was carved by glacial erosion over millions of years. Evidence of Iron Age settlers has been found in the area. In the 17th century, Covenanters sought sanctuary in these remote hills during religious persecution. Now a National Trust for Scotland nature reserve with rare upland plants and peregrine falcons.",
+    tags: ["remote", "atmospheric", "free-entry", "dog-friendly", "hilltop", "woodland"],
     access: "free",
-    era: "Iron Age / Early Medieval",
-    youtube: [],
+    era: "Natural/prehistoric",
     sources: [
-      {name: "Historic Environment Scotland", url: "https://www.historicenvironment.scot/visit-a-place/places/kilmartin-glen-dunadd-fort/history/"},
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dunadd"},
-      {name: "Britannica", url: "https://www.britannica.com/place/Dalriada"}
+      {name: "National Trust for Scotland", url: "https://www.nts.org.uk/visit/places/grey-mares-tail"},
+      {name: "Visit Moffat", url: "https://visitmoffat.scot/grey-mares-tail"},
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Grey_Mare%27s_Tail,_Moffat_Hills"}
     ]
   },
   {
-    name: "Blaenavon Ironworks",
-    description: "A UNESCO World Heritage Site where the fires of the Industrial Revolution still feel close — massive stone furnaces and workers' cottages tell the story of the iron that built the modern world.",
-    history: "Built 1788-99 by Thomas Hill, Thomas Hopkins, and Benjamin Pratt as the first purpose-built multi-furnace ironworks in Wales. By 1796, it was Wales's second-largest ironworks. Site of the revolutionary Gilchrist-Thomas process (1878) which allowed cheap, high-sulphur iron ores to be used worldwide, transforming global steel production. Closed 1904. Part of the Blaenavon Industrial Landscape UNESCO World Heritage Site inscribed in 2000. Managed by Cadw.",
-    tags: ["atmospheric", "museum", "free-entry", "kid-friendly", "guided-tours"],
+    name: "Dunbrody Country House",
+    description: "A Georgian manor on the Hook Peninsula where Norman history seeps through ancient stone — once home to Cistercian monks who shaped medieval Wexford.",
+    history: "The nearby Dunbrody Abbey was founded in 1170 by Hervé de Montmorency on instructions from Strongbow after the Norman invasion of Ireland. The Cistercian abbey, formally established c.1210, became one of Ireland's finest monasteries. The country house was later built on the estate grounds and now operates as a luxury hotel.",
+    tags: ["romantic", "atmospheric", "gardens", "tearoom-cafe", "wedding-venue"],
+    access: "paid",
+    era: "Georgian (18th century)",
+    sources: [
+      {name: "Visit Wexford", url: "https://www.visitwexford.ie/directory/dunbrody-abbey/"},
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dunbrody_Abbey"},
+      {name: "Discover Ireland", url: "https://www.discoverireland.ie/wexford/dunbrody-abbey-and-visitor-centre"}
+    ]
+  },
+  {
+    name: "Wroxeter Roman City",
+    description: "The buried bones of Viroconium — once the fourth-largest Roman city in Britain, now a hauntingly quiet field where an enormous bathhouse wall still stands sentinel.",
+    history: "Established c. AD 55 as a frontier military post near the River Severn. Grew into Viroconium Cornoviorum, the fourth-largest Roman city in Britain and capital of the Cornovii tribe. The massive 'Old Work' bathhouse wall is the largest freestanding Roman ruin in England. Managed by English Heritage with an on-site museum.",
+    tags: ["well-preserved", "atmospheric", "museum", "guided-tours", "prehistoric"],
+    access: "paid",
+    era: "Roman (1st-5th century)",
+    sources: [
+      {name: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/wroxeter-roman-city/"},
+      {name: "English Heritage History", url: "https://www.english-heritage.org.uk/visit/places/wroxeter-roman-city/history/"},
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wroxeter"}
+    ]
+  },
+  {
+    name: "Arbeia Roman Fort",
+    description: "A reconstructed Roman gateway rises above the Tyne estuary — where Arab boatmen from the Tigris once guarded Hadrian's Wall's vital supply line.",
+    history: "Built c. AD 160 at the mouth of the River Tyne to guard the main sea route supplying Hadrian's Wall. Served as a major military granary and supply base. The name 'Arbeia' may mean 'fort of the Arab troops', referring to its garrison of Mesopotamian boatmen. Features reconstructed gateway, barracks, and commander's house. UNESCO World Heritage site.",
+    tags: ["well-preserved", "museum", "kid-friendly", "free-entry", "coastal"],
     access: "free",
+    era: "Roman (2nd-5th century)",
+    sources: [
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arbeia"},
+      {name: "North East Museums", url: "https://www.northeastmuseums.org.uk/arbeia"}
+    ]
+  },
+  {
+    name: "Cawfields Roman Wall",
+    description: "Hadrian's Wall at its most dramatic — a steep ridge of ancient stone marching over the Northumbrian crags, with a beautifully preserved milecastle perched on the edge.",
+    history: "Part of Hadrian's Wall, begun AD 122 to mark the northern frontier of the Roman Empire. This section features Milecastle 42, probably built by the Second Legion, with an impressive gateway and well-preserved walls. The steep terrain here made the Wall particularly dramatic and defensible. Adjacent to a picturesque quarry lake.",
+    tags: ["well-preserved", "atmospheric", "hilltop", "free-entry", "remote", "dog-friendly", "photogenic"],
+    access: "free",
+    era: "Roman (2nd century)",
+    sources: [
+      {name: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/cawfields-roman-wall-hadrians-wall/"},
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hadrian%27s_Wall"}
+    ]
+  },
+  {
+    name: "Delapre Abbey",
+    description: "A 900-year-old abbey-turned-mansion where Cluniac nuns once prayed and the Battle of Northampton raged — now beautifully restored with Wars of the Roses battlefield views.",
+    history: "Founded c. 1145 as a Cluniac nunnery by Simon de Senlis, 4th Earl of Huntingdon. Its grounds were the site of the Battle of Northampton in 1460 during the Wars of the Roses. Dissolved in 1538, converted to a private residence. Served in WWII, then housed the Northamptonshire Record Office. Restored and reopened to the public in 2017.",
+    tags: ["well-preserved", "atmospheric", "gardens", "museum", "tearoom-cafe", "gift-shop", "wedding-venue", "events-venue"],
+    access: "paid",
+    era: "12th-18th century",
+    sources: [
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Delapr%C3%A9_Abbey"},
+      {name: "Delapré Abbey", url: "https://delapreabbey.org/"}
+    ]
+  },
+  {
+    name: "Hanbury Hall",
+    description: "A Queen Anne jewel box in Worcestershire — red brick elegance hiding Thornhill ceiling paintings and 400 acres of orchards, gardens, and Georgian parkland.",
+    history: "Built c. 1706 for wealthy chancery lawyer Thomas Vernon in the Queen Anne style. Features remarkable wall and ceiling paintings by Sir James Thornhill (who also painted St Paul's Cathedral). The Vernon family accumulated nearly 8,000 acres. Grade I listed, now managed by the National Trust with recreated formal gardens and 400 acres of parkland.",
+    tags: ["well-preserved", "photogenic", "gardens", "tearoom-cafe", "gift-shop", "guided-tours", "kid-friendly"],
+    access: "paid",
     era: "18th century",
-    youtube: [],
     sources: [
-      {name: "UNESCO", url: "https://whc.unesco.org/en/list/984/"},
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Blaenavon_Ironworks"},
-      {name: "Cadw", url: "https://cadw.gov.wales/visit/places-to-visit/blaenavon-ironworks"}
+      {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/hanbury-hall"},
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hanbury_Hall"}
     ]
   },
   {
-    name: "Wentworth Castle",
-    description: "A baroque mansion born from an aristocratic family feud — built to outshine a cousin's nearby estate, set within magnificent gardens hiding a theatrical mock medieval castle on the hilltop.",
-    history: "Purchased in 1708 by Thomas Wentworth, Baron Raby, who was disinherited from nearby Wentworth Woodhouse and determined to build a rival estate. A grand Baroque wing was added 1709-15. In 1727, he built a spectacular sham medieval castle ('Stainborough Castle') on the highest point of the estate as a theatrical folly. Gardens include a conservatory, Victorian flower garden, and 60 acres of parkland. Now cared for by the National Trust and undergoing restoration.",
-    tags: ["gardens", "photogenic", "atmospheric", "guided-tours", "tearoom-cafe", "dog-friendly", "woodland"],
+    name: "Berrington Hall",
+    description: "Henry Holland's neoclassical masterpiece set in Capability Brown's final landscape — austere Georgian grandeur outside, delicate beauty within.",
+    history: "Designed 1778-81 by architect Henry Holland for Thomas Harley, former Lord Mayor of London. Set in grounds by Lancelot 'Capability' Brown — his last commission before death. The 7th Lord Rodney gambled away much of the original contents including Gainsborough paintings. Features costume collection, Victorian laundry, and Georgian dairy. National Trust since 1957.",
+    tags: ["well-preserved", "photogenic", "gardens", "tearoom-cafe", "gift-shop", "guided-tours", "kid-friendly"],
     access: "paid",
     era: "18th century",
-    youtube: [],
     sources: [
-      {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/yorkshire/wentworth-castle-gardens/the-history-of-wentworth-castle-gardens"},
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wentworth_Castle"},
-      {name: "Wentworth Castle", url: "https://www.wentworthcastle.org/history-restoration/"}
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Berrington_Hall"},
+      {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/berrington-hall"}
     ]
   },
   {
-    name: "Nunnington Hall",
-    description: "A mellow Yorkshire manor nestled beside the River Rye in the Howardian Hills — where Tudor bones hide beneath 17th-century elegance and a celebrated miniature room collection delights visitors.",
-    history: "A dwelling has stood here since at least 1249, with the current house growing from a Tudor hall. Purchased by London cloth merchant Ranald Graham in 1655 for £9,500 (c.£2.5M today), whose family made many changes. The house evolved through the centuries and was last renovated in 1921 by the Fife family, who gave it to the National Trust in 1952. Houses the Carlisle Collection of miniature rooms in the attic.",
-    tags: ["well-preserved", "tudor", "gardens", "riverside", "tearoom-cafe", "kid-friendly", "gift-shop", "dog-friendly"],
-    access: "paid",
-    era: "13th-17th century",
-    youtube: [],
-    sources: [
-      {name: "National Trust", url: "https://www.nationaltrust.org.uk/nunnington-hall"},
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nunnington_Hall"},
-      {name: "Visit York", url: "https://visityork.org/business-directory/nunnington-hall"}
-    ]
-  },
-  {
-    name: "Rufford Old Hall",
-    description: "One of Lancashire's finest Tudor timber-framed halls — where a young William Shakespeare may once have performed in the spectacular Great Hall with its unique moveable screen.",
-    history: "Built c.1530 by Sir Robert Hesketh, home to the Hesketh family for over 600 years. The magnificent timber-framed Great Hall survives with a rare hammerbeam roof and an extraordinary moveable carved oak screen — unique among Lancashire houses. Local tradition claims a young Shakespeare performed here as 'William Shakeshafte' in the 1580s. Abandoned c.1798, later restored. National Trust since 1936.",
-    tags: ["well-preserved", "tudor", "atmospheric", "gardens", "guided-tours", "tearoom-cafe", "gift-shop", "kid-friendly"],
-    access: "paid",
-    era: "16th century",
-    youtube: [],
-    sources: [
-      {name: "National Trust", url: "https://www.nationaltrust.org.uk/visit/liverpool-lancashire/rufford-old-hall"},
-      {name: "National Trust Collections", url: "https://www.nationaltrustcollections.org.uk/place/rufford-old-hall"},
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rufford_Old_Hall"}
-    ]
-  },
-  {
-    name: "Samlesbury Hall",
-    description: "A black-and-white medieval hall draped in ghost stories and Lancashire legend — one of Britain's most haunted houses, where the White Lady still drifts through timber-framed rooms.",
-    history: "Built in 1325 by Gilbert de Southworth as the family's primary residence. The Southworths were Catholic recusants who suffered under Elizabethan persecution. The hall's ghost, the 'White Lady' (Dorothy Southworth), is said to haunt the corridors after a tragic love affair. First published ghost account dates to 1873. The hall fell into disrepair but was rescued and is now a heritage venue with antiques centre, café, and regular events.",
-    tags: ["medieval", "atmospheric", "haunted", "tearoom-cafe", "events-venue", "gift-shop", "guided-tours"],
+    name: "Kilpeck Church",
+    description: "A tiny Norman church with the most extraordinary Romanesque carvings in Britain — dragons, warriors, and the famous Sheela na gig peek from every corner of ancient red stone.",
+    history: "Built c. 1140 by Hugh de Kilpeck, a relative of the powerful Mortimer family. The Church of St Mary and St David is celebrated worldwide for its exceptional Romanesque carvings, drawing on Celtic, Scandinavian, Spanish, French, and Italian influences. Over 85 original corbels survive. Virtually unaltered since the 12th century.",
+    tags: ["well-preserved", "photogenic", "atmospheric", "norman", "medieval", "free-entry"],
     access: "free",
-    era: "14th century",
-    youtube: [],
+    era: "12th century",
     sources: [
-      {name: "Samlesbury Hall", url: "https://samlesburyhall.co.uk/ghosts-hauntings/"},
-      {name: "Visit Preston", url: "https://www.visitpreston.com/article/3057/Haunted-Preston-Samlesbury-Hall-s-Spooky-History"},
-      {name: "Haunted Rooms", url: "https://www.hauntedrooms.co.uk/samlesbury-hall-preston-lancashire"}
-    ]
-  },
-  {
-    name: "Broughty Ferry Beach Castle",
-    description: "A sturdy 15th-century fortress standing guard at the mouth of the Tay — where castle walls meet sandy beach and panoramic views stretch across the Firth to Fife.",
-    history: "Built c.1490 by the 4th Lord Gray to control the strategically important mouth of the River Tay near Dundee. Captured by English troops in 1547 during the 'Rough Wooing'. Fell into ruin but was rebuilt in the 1860s as a coastal defence fort. Now houses a museum covering local history, wildlife, and the environment of the Tay estuary. Managed by Dundee City Council.",
-    tags: ["coastal", "museum", "photogenic", "kid-friendly", "free-entry", "dog-friendly"],
-    access: "free",
-    era: "15th century",
-    youtube: [],
-    sources: [
-      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Broughty_Castle"},
-      {name: "Dundee City Council", url: "https://www.dundeecity.gov.uk/service-area/leisure-and-culture-dundee/leisure-and-culture-dundee-art-galleries-and-museums/broughty-castle-museum"}
+      {name: "Wikipedia", url: "https://en.wikipedia.org/wiki/Church_of_St_Mary_and_St_David,_Kilpeck"},
+      {name: "Britain Express", url: "https://www.britainexpress.com/counties/hereford/Kilpeck.htm"}
     ]
   }
 ];
 
-let updated = 0;
-for (const e of enrichments) {
-  const idx = ctx.CASTLES.findIndex(c => c.name === e.name);
-  if (idx === -1) { console.log('NOT FOUND: ' + e.name); continue; }
-  Object.assign(ctx.CASTLES[idx], {
-    description: e.description, history: e.history, tags: e.tags,
-    access: e.access, era: e.era, youtube: e.youtube, sources: e.sources
-  });
-  updated++;
+function findCastleBlock(source, name) {
+  const nameStr = `"name": "${name}"`;
+  const pos = source.indexOf(nameStr);
+  if (pos === -1) return null;
+  
+  let depth = 0;
+  let start = pos;
+  for (let i = pos; i >= 0; i--) {
+    if (source[i] === '}') depth++;
+    if (source[i] === '{') {
+      if (depth === 0) { start = i; break; }
+      depth--;
+    }
+  }
+  
+  depth = 0;
+  let end = pos;
+  for (let i = start; i < source.length; i++) {
+    if (source[i] === '{') depth++;
+    if (source[i] === '}') {
+      depth--;
+      if (depth === 0) { end = i + 1; break; }
+    }
+  }
+  
+  return { start, end, text: source.substring(start, end) };
 }
 
-const output = 'const CASTLES = ' + JSON.stringify(ctx.CASTLES, null, 2) + ';\n\nif (typeof module !== "undefined") module.exports = { CASTLES };\n';
-fs.writeFileSync('data.js', output, 'utf8');
-console.log('Updated ' + updated + ' sites. File size: ' + output.length);
+function updateField(objText, field, value) {
+  const serialized = JSON.stringify(value);
+  // Try to find existing field with quoted key
+  const patterns = [
+    new RegExp(`("${field}":\\s*)("(?:[^"\\\\]|\\\\.)*")`, 's'),
+    new RegExp(`("${field}":\\s*)(\\[(?:[^\\[\\]]*|\\[(?:[^\\[\\]]*|\\[[^\\[\\]]*\\])*\\])*\\])`, 's'),
+  ];
+  
+  for (const p of patterns) {
+    const m = objText.match(p);
+    if (m) {
+      return objText.replace(p, `$1${serialized}`);
+    }
+  }
+  
+  // Field doesn't exist - add before closing }
+  const lastBrace = objText.lastIndexOf('}');
+  const before = objText.substring(0, lastBrace).trimEnd();
+  const needsComma = !before.endsWith(',') && !before.endsWith('{');
+  return before + (needsComma ? ',' : '') + `\n    "${field}": ${serialized}` + '\n  }';
+}
+
+let count = 0;
+for (const u of updates) {
+  const block = findCastleBlock(src, u.name);
+  if (!block) {
+    console.log(`NOT FOUND: ${u.name}`);
+    continue;
+  }
+  
+  let newBlock = block.text;
+  if (u.description) newBlock = updateField(newBlock, 'description', u.description);
+  if (u.history) newBlock = updateField(newBlock, 'history', u.history);
+  if (u.tags) newBlock = updateField(newBlock, 'tags', u.tags);
+  if (u.access) newBlock = updateField(newBlock, 'access', u.access);
+  if (u.era) newBlock = updateField(newBlock, 'era', u.era);
+  if (u.sources) newBlock = updateField(newBlock, 'sources', u.sources);
+  
+  src = src.substring(0, block.start) + newBlock + src.substring(block.end);
+  console.log(`Updated: ${u.name}`);
+  count++;
+}
+
+fs.writeFileSync('data.js', src, 'utf8');
+console.log(`\nWrote ${count} updates to data.js`);
