@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>Castles in Scotland — castlecore</title>
+<meta name="description" content="Explore 448 castles, tower houses, abbeys and ruins across Scotland. From Edinburgh Castle to the Highlands, the most complete guide to Scottish heritage.">
+<link rel="canonical" href="https://castlecore.uk/scotland.html">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--stone:#d4c5a9;--cream:#f0ebe0;--candlelight:#c9a84c;--burgundy:#8b2335;--forest:#2d5a3d;--ivy:#3d5a3e;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#faf8f4}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--shadow);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px;margin-top:0}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:var(--shadow);transition:background .15s}
+.nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-drop-panel .drop-divider{height:1px;background:var(--border);margin:4px 0}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:420px;z-index:9999;margin-top:0;padding:0;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:var(--warm-white);border-right:1px solid var(--border);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:var(--burgundy);background:var(--cream)}
+.mega-country.active{color:var(--burgundy);background:#fff;border-left-color:var(--burgundy);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:var(--shadow);transition:background .15s,color .15s}
+.mega-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-search-wrap{position:relative;flex-shrink:1;max-width:200px}
+.nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white);transition:border-color .2s}
+.nav-search-wrap input:focus{border-color:var(--candlelight);background:#fff;box-shadow:0 0 0 2px rgba(201,168,76,.12)}
+.nav-search-wrap .nsi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.85rem;pointer-events:none}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:background .2s;display:inline-block}
+.nav-right .btn-explore:hover{background:#6e1a2a}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:10px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+@media(max-width:768px){
+.nav-center{display:none}
+.nav-right .btn-explore{display:none}
+.hamburger{display:block}
+}
+
+/* HERO */
+.country-hero{margin-top:64px;padding:80px 24px 64px;text-align:center;position:relative;overflow:hidden;background-blend-mode:overlay}
+.country-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.3),transparent 60%);pointer-events:none}
+.country-hero *{position:relative;z-index:1}
+.country-hero h1{font-size:clamp(2.2rem,5vw,3.4rem);color:#fff;margin-bottom:12px;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.country-hero .hero-desc{color:rgba(255,255,255,.9);font-size:1.05rem;max-width:720px;margin:0 auto 20px;line-height:1.7;font-family:'Playfair Display',serif;font-style:italic;text-shadow:0 1px 6px rgba(0,0,0,.2)}
+.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.hero-stat{text-align:center;color:#fff}
+.hero-stat .stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;display:block;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-stat .stat-label{font-size:.8rem;opacity:.8;text-transform:uppercase;letter-spacing:.5px}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1280px;margin:0 auto;padding:16px 24px;font-size:.85rem;color:var(--twilight)}
+.breadcrumb a{color:var(--twilight);transition:color .2s}
+.breadcrumb a:hover{color:var(--burgundy)}
+
+/* SECTIONS */
+section{padding:48px 24px}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.section-header h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.section-header h2::after{content:'';display:block;width:40px;height:2px;background:var(--burgundy);margin-top:6px;border-radius:1px;opacity:.6}
+.section-header a{color:var(--ivy);font-weight:600;font-size:.95rem}
+.section-tagline{color:var(--twilight);font-size:.95rem;margin-bottom:28px;font-family:'Playfair Display',serif;font-style:italic}
+.bg-cream{background:var(--cream)}
+
+/* REGION LINK CARDS */
+.region-link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.region-link-card{display:flex;flex-direction:column;align-items:center;gap:6px;padding:24px 16px;background:#fff;border:1px solid var(--border);border-radius:16px;transition:transform .2s,box-shadow .2s}
+.region-link-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(120,90,50,.1)}
+.rlc-icon{font-size:1.8rem}
+.rlc-name{font-weight:600;font-size:.95rem}
+.rlc-count{font-size:.8rem;color:var(--twilight)}
+
+/* COUNTY GRID */
+.county-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.county-card{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);transition:all .2s}
+.county-card:hover{border-color:var(--burgundy);transform:translateY(-2px);box-shadow:0 4px 16px rgba(120,90,50,.08)}
+.county-name{font-weight:500;font-size:.9rem}
+.county-count{font-size:.78rem;color:var(--twilight);white-space:nowrap}
+
+/* STAT BARS */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:768px){.stats-grid{grid-template-columns:1fr}}
+.stat-bar{margin-bottom:12px}
+.stat-bar-label{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:4px;text-transform:capitalize}
+.stat-bar-count{color:var(--twilight);font-size:.82rem}
+.stat-bar-track{height:8px;background:var(--cream);border-radius:4px;overflow:hidden}
+.stat-bar-fill{height:100%;background:var(--burgundy);border-radius:4px;transition:width .6s ease}
+
+/* FEATURED GRID */
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-card{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(120,90,50,.06)}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(120,90,50,.12)}
+.feat-img{height:200px;overflow:hidden}
+.feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.feat-card:hover .feat-img img{transform:scale(1.05)}
+.feat-body{padding:18px}
+.feat-body h3{font-size:1.1rem;margin-bottom:4px}
+.feat-loc{color:var(--twilight);font-size:.85rem;margin-bottom:8px}
+.feat-meta{display:flex;align-items:center;gap:8px}
+.type-pill{display:inline-block;background:var(--cream);color:var(--ivy);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:var(--pill);text-transform:capitalize}
+.card-rating{color:var(--candlelight);font-size:.85rem;font-weight:600}
+@media(max-width:768px){.featured-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.featured-grid{grid-template-columns:1fr}}
+
+/* MEDIEVAL CORNERS */
+.feat-card{position:relative}
+.feat-card::before,.feat-card::after{content:'';position:absolute;width:24px;height:24px;border-color:var(--candlelight);border-style:solid;opacity:.15;z-index:2;pointer-events:none}
+.feat-card::before{top:8px;left:8px;border-width:2px 0 0 2px;border-radius:4px 0 0 0}
+.feat-card::after{bottom:8px;right:8px;border-width:0 2px 2px 0;border-radius:0 0 4px 0}
+
+/* DIVIDER */
+.section-divider{display:flex;align-items:center;justify-content:center;padding:0 24px;max-width:1280px;margin:0 auto}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--hearth),transparent);opacity:.3}
+.divider-ornament{padding:0 20px;display:flex;align-items:center}
+.divider-ornament svg{width:60px;height:24px;fill:var(--hearth);opacity:.45}
+
+/* CTA */
+.country-cta{text-align:center;padding:64px 24px;background:var(--cream)}
+.country-cta h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px}
+.country-cta p{color:var(--twilight);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+.btn-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s;border:none;cursor:pointer;font-family:'Inter',sans-serif}
+.btn-cta:hover{background:#6e1a2a}
+
+/* FOOTER */
+footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:.85rem;max-width:280px}
+.footer-col h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;color:rgba(255,255,255,.5)}
+.footer-col a{display:block;color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+
+/* HERO PILLS */
+.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);color:#fff;padding:8px 18px;border-radius:var(--pill);font-size:.88rem;font-weight:500;transition:background .2s,transform .2s;border:1px solid rgba(255,255,255,.2)}
+.hero-pill:hover{background:rgba(255,255,255,.28);transform:translateY(-2px)}
+.hp-count{font-size:.75rem;opacity:.7}
+
+/* ERA CARDS */
+.era-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.era-card{display:flex;flex-direction:column;justify-content:flex-end;padding:28px 24px;border-radius:16px;color:#fff;min-height:180px;transition:transform .25s,box-shadow .25s;text-decoration:none;position:relative;overflow:hidden}
+.era-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
+.era-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 60%);pointer-events:none}
+.era-card>*{position:relative;z-index:1}
+.era-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:4px}
+.era-count{font-size:.85rem;opacity:.8;margin-bottom:6px}
+.era-tagline{font-size:.82rem;opacity:.7;font-style:italic;font-family:'Playfair Display',serif}
+
+/* FEAT HOOK */
+.feat-hook{font-style:italic;color:var(--twilight);font-size:.82rem;margin-top:4px;opacity:.75;line-height:1.4}
+
+/* MINI MAP */
+.mini-map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+#countryMap{height:400px;width:100%;z-index:1}
+.map-link{display:block;text-align:center;padding:12px;font-weight:600;color:var(--ivy);font-size:.95rem;background:#fff;border-top:1px solid var(--border)}
+.map-link:hover{color:var(--burgundy)}
+
+/* PRACTICAL INFO */
+.practical-box{background:#fdf8ef;border:1px solid #e8dcc8;border-radius:16px;padding:32px;margin-bottom:24px}
+.practical-box h3{font-size:1.3rem;margin-bottom:20px;text-align:center}
+.practical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+@media(max-width:600px){.practical-grid{grid-template-columns:repeat(2,1fr)}}
+.prac-item .prac-icon{font-size:1.8rem;display:block;margin-bottom:6px}
+.prac-item .prac-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--burgundy);display:block}
+.prac-item .prac-label{font-size:.82rem;color:var(--twilight)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
+<div class="nav-center">
+<div class="nav-dropdown">
+<button class="nav-drop-btn">🏰 Sites <span style="font-size:.6rem">▼</span></button>
+<div class="nav-drop-panel">
+<a href="search.html?type=castle">🏰 Castles</a>
+<a href="search.html?type=abbey">⛪ Abbeys</a>
+<a href="search.html?type=tower+house">🗼 Tower Houses</a>
+<a href="search.html?type=palace">👑 Palaces</a>
+<a href="search.html?type=fort">🛡️ Forts</a>
+<a href="search.html?type=fortified+house">🏠 Fortified Houses</a>
+</div>
+</div>
+<div class="nav-dropdown mega-wrap">
+<button class="nav-drop-btn">🗺️ Regions <span style="font-size:.6rem">▼</span></button>
+<div class="mega-menu">
+<div class="mega-countries">
+<button class="mega-country active" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</button>
+<button class="mega-country" data-country="scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</button>
+<button class="mega-country" data-country="wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</button>
+<button class="mega-country" data-country="ireland">🍀 Ireland</button>
+</div>
+<div class="mega-regions">
+<div class="mega-panel active" data-country="england">
+<a href="region.html?id=london-surrey">London &amp; Surrey</a>
+<a href="region.html?id=south-east-england">South East</a>
+<a href="region.html?id=south-west-england">South West</a>
+<a href="region.html?id=northern-england">Northern England</a>
+<a href="region.html?id=midlands">The Midlands</a>
+<a href="region.html?id=yorkshire">Yorkshire</a>
+<a href="region.html?id=east-anglia">East Anglia</a>
+</div>
+<div class="mega-panel" data-country="scotland">
+<a href="region.html?id=scottish-highlands">Highlands</a>
+<a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
+</div>
+<div class="mega-panel" data-country="wales">
+<a href="region.html?id=north-wales">North Wales</a>
+<a href="region.html?id=south-wales">South Wales</a>
+</div>
+<div class="mega-panel" data-country="ireland">
+<a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
+<a href="region.html?id=south-east-ireland">South East</a>
+<a href="region.html?id=south-west-ireland">South West</a>
+<a href="region.html?id=west-ireland">West</a>
+<a href="region.html?id=midlands-ireland">Midlands</a>
+<a href="region.html?id=north-west-ireland">North West</a>
+<a href="region.html?id=northern-ireland">Northern Ireland</a>
+</div>
+</div>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-drop-btn">✨ Collections <span style="font-size:.6rem">▼</span></button>
+<div class="nav-drop-panel">
+<a href="collection.html?id=top-rated">🏆 Top Rated</a>
+<a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
+<a href="collection.html?id=haunted">👻 Haunted</a>
+<a href="collection.html?id=filming-locations">🎬 Filming Locations</a>
+<a href="collection.html?id=free">🆓 Free to Visit</a>
+<a href="collection.html?id=romantic-ruins">🌿 Romantic Ruins</a>
+<a href="collection.html?id=photogenic">📸 Most Photogenic</a>
+<div class="drop-divider"></div>
+<a href="collection.html">View all collections →</a>
+</div>
+</div>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">🛤️ Routes</a>
+<div class="nav-search-wrap">
+<span class="nsi">🔍</span>
+<input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off">
+</div>
+</div>
+<div class="nav-right">
+<a href="explore.html" class="btn-explore">🧭 Explore Map</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
+
+<!-- MOBILE MENU (simplified) -->
+<div class="mobile-menu">
+<a href="/" style="color:var(--burgundy);font-weight:700">🏠 Home</a>
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
+<span class="mob-heading">Countries</span>
+<div class="mob-sub">
+<a href="england.html">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</a>
+<a href="scotland.html">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</a>
+<a href="wales.html">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a>
+<a href="ireland.html">🍀 Ireland</a>
+<a href="northern-ireland.html">🛡️ Northern Ireland</a>
+</div>
+<span class="mob-heading">✨ Collections</span>
+<div class="mob-sub">
+<a href="collection.html?id=top-rated">🏆 Top Rated</a>
+<a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
+<a href="collection.html?id=haunted">👻 Haunted</a>
+<a href="collection.html?id=free">🆓 Free to Visit</a>
+<a href="collection.html">View all →</a>
+</div>
+<a href="trail.html">🛤️ Routes</a>
+</div>
+
+<!-- HERO -->
+<div class="country-hero" style="background-image:linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 40%, #1a4a2e 100%), url('img/eilean-donan.jpg');background-size:cover;background-position:center">
+<h1>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Castles in Scotland</h1>
+<p class="hero-desc">Brooding fortresses on misty lochs, clan strongholds clinging to Highland crags, and haunted tower houses in the Borders. Scotland's castles are among the most dramatic and atmospheric in the world — and there are hundreds more than most people realise.</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="stat-num">448</span><span class="stat-label">Sites</span></div>
+<div class="hero-stat"><span class="stat-num">8</span><span class="stat-label">Types</span></div>
+<div class="hero-stat"><span class="stat-num">36</span><span class="stat-label">Counties</span></div>
+</div>
+<div class="hero-pills">
+<a class="hero-pill" href="search.html?tag=dog-friendly&region=Scotland">🐕 Dog Friendly <span class="hp-count">13</span></a>
+<a class="hero-pill" href="search.html?tag=free-entry&region=Scotland">🆓 Free Entry <span class="hp-count">200</span></a>
+<a class="hero-pill" href="search.html?tag=kid-friendly&region=Scotland">👨‍👩‍👧 Family Friendly <span class="hp-count">31</span></a>
+<a class="hero-pill" href="search.html?condition=ruin&region=Scotland">🏚️ Ruins <span class="hp-count">228</span></a>
+<a class="hero-pill" href="search.html?condition=intact&region=Scotland">🏰 Intact <span class="hp-count">152</span></a>
+<a class="hero-pill" href="search.html?tag=photogenic&region=Scotland">📸 Photogenic <span class="hp-count">102</span></a>
+<a class="hero-pill" href="search.html?tag=haunted&region=Scotland">👻 Haunted <span class="hp-count">28</span></a>
+</div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+<a href="/">Home</a> › <strong>Scotland</strong>
+</div>
+
+
+<!-- REGIONS -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>Explore by Region</h2></div>
+<p class="section-tagline">Dive deeper into Scotland's regions</p>
+<div class="region-link-grid">
+<a class="region-link-card" href="region.html?id=scottish-highlands"><span class="rlc-icon">⛰️</span><span class="rlc-name">Highlands</span><span class="rlc-count">128 sites</span></a><a class="region-link-card" href="region.html?id=scottish-lowlands"><span class="rlc-icon">🏰</span><span class="rlc-name">Lowlands &amp; Borders</span><span class="rlc-count">320 sites</span></a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+
+
+<!-- ERAS -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>Sites Through the Centuries</h2></div>
+<p class="section-tagline">From ancient hillforts to Victorian follies — explore by era</p>
+<div class="era-grid">
+<a class="era-card" href="search.html?era=13th%20century,14th%20century,15th%20century&region=Scotland" style="background:linear-gradient(135deg,#2d5a3d 0%,#2d5a3ddd 100%)">
+<span class="era-name">Medieval</span>
+<span class="era-count">158 sites</span>
+<span class="era-tagline">The golden age of chivalry and towering curtain walls</span>
+</a>
+<a class="era-card" href="search.html?era=16th%20century&region=Scotland" style="background:linear-gradient(135deg,#1a2a4a 0%,#1a2a4add 100%)">
+<span class="era-name">Tudor</span>
+<span class="era-count">71 sites</span>
+<span class="era-tagline">Palaces of power in an age of reformation</span>
+</a>
+<a class="era-card" href="search.html?era=18th%20century,19th%20century&region=Scotland" style="background:linear-gradient(135deg,#b8860b 0%,#b8860bdd 100%)">
+<span class="era-name">Georgian &amp; Victorian</span>
+<span class="era-count">36 sites</span>
+<span class="era-tagline">Romantic revival and the age of the country house</span>
+</a>
+<a class="era-card" href="search.html?era=11th%20century,12th%20century&region=Scotland" style="background:linear-gradient(135deg,#8b2335 0%,#8b2335dd 100%)">
+<span class="era-name">Norman</span>
+<span class="era-count">32 sites</span>
+<span class="era-tagline">Conquest, keeps, and the clash of iron on stone</span>
+</a>
+<a class="era-card" href="search.html?era=17th%20century&region=Scotland" style="background:linear-gradient(135deg,#6b3a6b 0%,#6b3a6bdd 100%)">
+<span class="era-name">Stuart</span>
+<span class="era-count">23 sites</span>
+<span class="era-tagline">Civil war strongholds and baroque grandeur</span>
+</a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+
+<!-- FEATURED -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>Must-Visit Sites</h2></div>
+<p class="section-tagline">The best of Scotland's heritage</p>
+<div class="featured-grid">
+<a class="feat-card" href="site/edinburgh-castle.html">
+<div class="feat-img"><img src="https://img.castlecore.uk/edinburgh-castle-interior.jpg" alt="Edinburgh Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Edinburgh Castle</h3><p class="feat-loc">Edinburgh, Scotland</p><p class="feat-hook">Scotland's most iconic fortress — a volcanic citadel dominating the skyline, …</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.6</span></div></div>
+</a>
+<a class="feat-card" href="site/eilean-donan-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg/500px-Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg" alt="Eilean Donan Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Eilean Donan Castle</h3><p class="feat-loc">Highland, Scotland</p><p class="feat-hook">Perhaps Scotland's most photographed castle, Eilean Donan sits at the meeting…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
+</a>
+<a class="feat-card" href="site/stirling-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Scotland-2016-Aerial-Stirling-Stirling_Castle.jpg/500px-Scotland-2016-Aerial-Stirling-Stirling_Castle.jpg" alt="Stirling Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Stirling Castle</h3><p class="feat-loc">Stirling, Scotland</p><p class="feat-hook">One of Scotland's most historically important castles, Stirling was the child…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.6</span></div></div>
+</a>
+<a class="feat-card" href="site/dunnottar-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Dunnottar_Castle_-_geograph.org.uk_-_8057610.jpg/500px-Dunnottar_Castle_-_geograph.org.uk_-_8057610.jpg" alt="Dunnottar Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Dunnottar Castle</h3><p class="feat-loc">Aberdeenshire, Scotland</p><p class="feat-hook">A dramatic cliff-top fortress where the Scottish Crown Jewels were hidden fro…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.6</span></div></div>
+</a>
+<a class="feat-card" href="site/urquhart-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Urquhart_Castle_2017-05-22.jpg/500px-Urquhart_Castle_2017-05-22.jpg" alt="Urquhart Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Urquhart Castle</h3><p class="feat-loc">Highland, Scotland</p><p class="feat-hook">Overlooking Loch Ness, Urquhart Castle offers one of the best vantage points …</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.4</span></div></div>
+</a>
+<a class="feat-card" href="site/glamis-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Glamis_Castle_-_geograph.org.uk_-_7848853.jpg/500px-Glamis_Castle_-_geograph.org.uk_-_7848853.jpg" alt="Glamis Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Glamis Castle</h3><p class="feat-loc">Angus, Scotland</p><p class="feat-hook">The legendary setting for Shakespeare's Macbeth and childhood home of the Que…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.4</span></div></div>
+</a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+<!-- BROWSE BY COUNTY -->
+<section class="bg-cream">
+<div class="section-inner">
+<div class="section-header"><h2>Browse by County</h2><a href="search.html?region=Scotland">View all →</a></div>
+<p class="section-tagline">Find sites in every corner of Scotland</p>
+<div class="county-grid">
+<a class="county-card" href="search.html?region=Aberdeenshire"><span class="county-name">Aberdeenshire</span><span class="county-count">71 sites</span></a><a class="county-card" href="search.html?region=Highland"><span class="county-name">Highland</span><span class="county-count">60 sites</span></a><a class="county-card" href="search.html?region=Argyll%20and%20Bute"><span class="county-name">Argyll and Bute</span><span class="county-count">47 sites</span></a><a class="county-card" href="search.html?region=Dumfries%20and%20Galloway"><span class="county-name">Dumfries and Galloway</span><span class="county-count">39 sites</span></a><a class="county-card" href="search.html?region=Scottish%20Borders"><span class="county-name">Scottish Borders</span><span class="county-count">31 sites</span></a><a class="county-card" href="search.html?region=Angus"><span class="county-name">Angus</span><span class="county-count">23 sites</span></a><a class="county-card" href="search.html?region=Fife"><span class="county-name">Fife</span><span class="county-count">22 sites</span></a><a class="county-card" href="search.html?region=Perth%20and%20Kinross"><span class="county-name">Perth and Kinross</span><span class="county-count">22 sites</span></a><a class="county-card" href="search.html?region=Moray"><span class="county-name">Moray</span><span class="county-count">19 sites</span></a><a class="county-card" href="search.html?region=South%20Ayrshire"><span class="county-name">South Ayrshire</span><span class="county-count">9 sites</span></a><a class="county-card" href="search.html?region=East%20Lothian"><span class="county-name">East Lothian</span><span class="county-count">8 sites</span></a><a class="county-card" href="search.html?region=Orkney"><span class="county-name">Orkney</span><span class="county-count">7 sites</span></a>
+</div>
+</div>
+</section>
+
+<!-- MINI MAP -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>All Sites on the Map</h2></div>
+<p class="section-tagline">Every heritage site in Scotland at a glance</p>
+<div class="mini-map-wrap">
+<div id="countryMap"></div>
+<a class="map-link" href="explore.html">View full map →</a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+<!-- STATS -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>At a Glance</h2></div>
+<p class="section-tagline">448 heritage sites across 36 counties</p>
+<div class="stats-grid">
+<div>
+<h3 style="font-size:1.1rem;margin-bottom:16px;color:var(--twilight)">By Type</h3>
+<div class="stat-bar"><div class="stat-bar-label"><span>🏰 castle</span><span class="stat-bar-count">317</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:71%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>⛪ abbey</span><span class="stat-bar-count">67</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:15%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>🗼 tower house</span><span class="stat-bar-count">51</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:11%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>👑 palace</span><span class="stat-bar-count">7</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:2%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>🏛️ broch</span><span class="stat-bar-count">3</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:1%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>🏛️ mill</span><span class="stat-bar-count">1</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:0%"></div></div></div>
+</div>
+<div>
+<h3 style="font-size:1.1rem;margin-bottom:16px;color:var(--twilight)">Top Rated</h3>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">1</span><div style="flex:1"><a href="site/melrose-abbey.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Melrose Abbey</a><div style="font-size:.78rem;color:var(--twilight)">Scottish Borders · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">2</span><div style="flex:1"><a href="site/iona-abbey.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Iona Abbey</a><div style="font-size:.78rem;color:var(--twilight)">Argyll and Bute · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">3</span><div style="flex:1"><a href="site/glasgow-cathedral.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Glasgow Cathedral</a><div style="font-size:.78rem;color:var(--twilight)">Glasgow · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">4</span><div style="flex:1"><a href="site/stirling-castle.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Stirling Castle</a><div style="font-size:.78rem;color:var(--twilight)">Stirling · ★ 4.6</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">5</span><div style="flex:1"><a href="site/dunnottar-castle.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Dunnottar Castle</a><div style="font-size:.78rem;color:var(--twilight)">Aberdeenshire · ★ 4.6</div></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PRACTICAL INFO -->
+<section>
+<div class="section-inner">
+<div class="practical-box">
+<h3>📋 Planning Your Visit</h3>
+<div class="practical-grid">
+<div class="prac-item"><span class="prac-icon">🆓</span><span class="prac-num">200</span><span class="prac-label">Free Entry</span></div>
+<div class="prac-item"><span class="prac-icon">☕</span><span class="prac-num">15</span><span class="prac-label">Tearoom / Café</span></div>
+<div class="prac-item"><span class="prac-icon">🐕</span><span class="prac-num">13</span><span class="prac-label">Dog Friendly</span></div>
+<div class="prac-item"><span class="prac-icon">👨‍👩‍👧</span><span class="prac-num">31</span><span class="prac-label">Family Friendly</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="country-cta">
+<h2>Explore Scotland on the Map</h2>
+<p>See every castle, abbey, and ruin plotted across Scotland — filter by type, era, and more</p>
+<a href="explore.html" class="btn-cta">🧭 Open the Map</a>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="footer-logo"><img src="logo.png" alt="castlecore" style="height:32px;width:auto;border-radius:4px;vertical-align:middle;margin-right:8px">castlecore</div>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+</div>
+<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="collection.html">Collections</a><a href="trail.html">Routes</a></div>
+<div class="footer-col"><h4>Countries</h4><a href="england.html">England</a><a href="scotland.html">Scotland</a><a href="wales.html">Wales</a><a href="ireland.html">Ireland</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div>
+<div class="footer-bottom">
+<span>Built with ❤️ for history lovers</span>
+<span>© 2026 castlecore</span>
+</div>
+</div>
+</footer>
+
+<script>
+/* Mega menu hover */
+document.querySelectorAll('.mega-country').forEach(btn=>{
+btn.addEventListener('mouseenter',function(){
+const c=this.dataset.country;
+this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+this.classList.add('active');
+this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+});
+});
+/* Nav search */
+document.getElementById('navSearch').addEventListener('keydown',function(e){
+if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
+});
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+var sites=[{"name":"Craigmillar Castle","lat":55.9231,"lng":-3.1559,"type":"castle","slug":"craigmillar-castle"},{"name":"Linlithgow Palace","lat":55.9765,"lng":-3.5956,"type":"palace","slug":"linlithgow-palace"},{"name":"Blackness Castle","lat":56.0065,"lng":-3.5173,"type":"castle","slug":"blackness-castle"},{"name":"Tantallon Castle","lat":56.0554,"lng":-2.6464,"type":"castle","slug":"tantallon-castle"},{"name":"Dirleton Castle","lat":56.0458,"lng":-2.7808,"type":"castle","slug":"dirleton-castle"},{"name":"Hailes Castle","lat":55.9499,"lng":-2.5875,"type":"castle","slug":"hailes-castle"},{"name":"Crichton Castle","lat":55.8397,"lng":-2.9706,"type":"castle","slug":"crichton-castle"},{"name":"Borthwick Castle","lat":55.8376,"lng":-3.0635,"type":"castle","slug":"borthwick-castle"},{"name":"Stirling Castle","lat":56.1239,"lng":-3.9469,"type":"castle","slug":"stirling-castle"},{"name":"Doune Castle","lat":56.1842,"lng":-4.0513,"type":"castle","slug":"doune-castle"},{"name":"Castle Campbell","lat":56.156,"lng":-3.6654,"type":"castle","slug":"castle-campbell"},{"name":"Alloa Tower","lat":56.1162,"lng":-3.7899,"type":"tower house","slug":"alloa-tower"},{"name":"St Andrews Castle","lat":56.3406,"lng":-2.7893,"type":"castle","slug":"st-andrews-castle"},{"name":"Glamis Castle","lat":56.6124,"lng":-3.0057,"type":"castle","slug":"glamis-castle"},{"name":"Claypotts Castle","lat":56.4699,"lng":-2.9141,"type":"tower house","slug":"claypotts-castle"},{"name":"Edzell Castle","lat":56.8132,"lng":-2.7779,"type":"castle","slug":"edzell-castle"},{"name":"Huntingtower Castle","lat":56.4088,"lng":-3.5179,"type":"castle","slug":"huntingtower-castle"},{"name":"Elcho Castle","lat":56.3681,"lng":-3.3413,"type":"tower house","slug":"elcho-castle"},{"name":"Loch Leven Castle","lat":56.2,"lng":-3.3807,"type":"castle","slug":"loch-leven-castle"},{"name":"Dunnottar Castle","lat":56.946,"lng":-2.1968,"type":"castle","slug":"dunnottar-castle"},{"name":"Balmoral Castle","lat":57.0394,"lng":-3.2286,"type":"castle","slug":"balmoral-castle"},{"name":"Craigievar Castle","lat":57.1444,"lng":-2.636,"type":"tower house","slug":"craigievar-castle"},{"name":"Castle Fraser","lat":57.1899,"lng":-2.4733,"type":"castle","slug":"castle-fraser"},{"name":"Crathes Castle","lat":57.044,"lng":-2.4325,"type":"tower house","slug":"crathes-castle"},{"name":"Drum Castle","lat":57.078,"lng":-2.4206,"type":"tower house","slug":"drum-castle"},{"name":"Fyvie Castle","lat":57.4575,"lng":-2.3888,"type":"castle","slug":"fyvie-castle"},{"name":"Tolquhon Castle","lat":57.34,"lng":-2.2261,"type":"castle","slug":"tolquhon-castle"},{"name":"Kildrummy Castle","lat":57.2221,"lng":-2.9134,"type":"castle","slug":"kildrummy-castle"},{"name":"Huntly Castle","lat":57.4472,"lng":-2.7831,"type":"castle","slug":"huntly-castle"},{"name":"Delgatie Castle","lat":57.5658,"lng":-2.4367,"type":"tower house","slug":"delgatie-castle"},{"name":"Spynie Palace","lat":57.6591,"lng":-3.3408,"type":"castle","slug":"spynie-palace"},{"name":"Elgin Cathedral","lat":57.6525,"lng":-3.3173,"type":"abbey","slug":"elgin-cathedral"},{"name":"Balvenie Castle","lat":57.4498,"lng":-3.1343,"type":"castle","slug":"balvenie-castle"},{"name":"Eilean Donan Castle","lat":57.274,"lng":-5.516,"type":"castle","slug":"eilean-donan-castle"},{"name":"Urquhart Castle","lat":57.3246,"lng":-4.4421,"type":"castle","slug":"urquhart-castle"},{"name":"Dunrobin Castle","lat":57.9891,"lng":-3.9457,"type":"palace","slug":"dunrobin-castle"},{"name":"Castle of Mey","lat":58.637,"lng":-3.2225,"type":"castle","slug":"castle-of-mey"},{"name":"Cawdor Castle","lat":57.5218,"lng":-3.9227,"type":"castle","slug":"cawdor-castle"},{"name":"Fort George","lat":57.5832,"lng":-4.0677,"type":"castle","slug":"fort-george"},{"name":"Ardvreck Castle","lat":58.1524,"lng":-4.9879,"type":"castle","slug":"ardvreck-castle"},{"name":"Strome Castle","lat":57.3518,"lng":-5.558,"type":"castle","slug":"strome-castle"},{"name":"Castle Tioram","lat":56.778,"lng":-5.8334,"type":"castle","slug":"castle-tioram"},{"name":"Inverlochy Castle","lat":56.8281,"lng":-5.0942,"type":"castle","slug":"inverlochy-castle"},{"name":"Kilchurn Castle","lat":56.4028,"lng":-5.0283,"type":"castle","slug":"kilchurn-castle"},{"name":"Castle Stalker","lat":56.5942,"lng":-5.3785,"type":"tower house","slug":"castle-stalker"},{"name":"Duart Castle","lat":56.4556,"lng":-5.6537,"type":"castle","slug":"duart-castle"},{"name":"Dunstaffnage Castle","lat":56.4532,"lng":-5.4364,"type":"castle","slug":"dunstaffnage-castle"},{"name":"Carnasserie Castle","lat":56.1419,"lng":-5.4903,"type":"tower house","slug":"carnasserie-castle"},{"name":"Skipness Castle","lat":55.7589,"lng":-5.3474,"type":"castle","slug":"skipness-castle"},{"name":"Rothesay Castle","lat":55.8376,"lng":-5.0539,"type":"castle","slug":"rothesay-castle"},{"name":"Caerlaverock Castle","lat":54.9717,"lng":-3.5255,"type":"castle","slug":"caerlaverock-castle"},{"name":"Hermitage Castle","lat":55.3992,"lng":-2.7944,"type":"castle","slug":"hermitage-castle"},{"name":"Melrose Abbey","lat":55.5989,"lng":-2.7173,"type":"abbey","slug":"melrose-abbey"},{"name":"Jedburgh Abbey","lat":55.4787,"lng":-2.554,"type":"abbey","slug":"jedburgh-abbey"},{"name":"Dryburgh Abbey","lat":55.5735,"lng":-2.6496,"type":"abbey","slug":"dryburgh-abbey"},{"name":"Kelso Abbey","lat":55.5992,"lng":-2.4329,"type":"abbey","slug":"kelso-abbey"},{"name":"Neidpath Castle","lat":55.6506,"lng":-3.4066,"type":"castle","slug":"neidpath-castle"},{"name":"Smailholm Tower","lat":55.5917,"lng":-2.58,"type":"tower house","slug":"smailholm-tower"},{"name":"Threave Castle","lat":54.9489,"lng":-3.9693,"type":"tower house","slug":"threave-castle"},{"name":"MacLellan's Castle","lat":54.9364,"lng":-4.0486,"type":"tower house","slug":"maclellan-s-castle"},{"name":"Sweetheart Abbey","lat":54.9814,"lng":-3.6275,"type":"abbey","slug":"sweetheart-abbey"},{"name":"Dunvegan Castle","lat":57.4483,"lng":-6.5867,"type":"castle","slug":"dunvegan-castle"},{"name":"Armadale Castle","lat":57.0634,"lng":-5.903,"type":"castle","slug":"armadale-castle"},{"name":"Kisimul Castle","lat":56.9533,"lng":-7.3994,"type":"castle","slug":"kisimul-castle"},{"name":"Blair Castle","lat":56.7662,"lng":-3.8429,"type":"castle","slug":"blair-castle"},{"name":"Scone Palace","lat":56.4223,"lng":-3.4321,"type":"palace","slug":"scone-palace"},{"name":"Dunfermline Abbey","lat":56.0717,"lng":-3.4594,"type":"abbey","slug":"dunfermline-abbey"},{"name":"Ravenscraig Castle","lat":56.1184,"lng":-3.1382,"type":"castle","slug":"ravenscraig-castle"},{"name":"Aberdour Castle","lat":56.0546,"lng":-3.3004,"type":"castle","slug":"aberdour-castle"},{"name":"Dunblane Cathedral","lat":56.188,"lng":-3.9658,"type":"abbey","slug":"dunblane-cathedral"},{"name":"Inchmahome Priory","lat":56.1715,"lng":-4.2888,"type":"abbey","slug":"inchmahome-priory"},{"name":"Craignethan Castle","lat":55.7643,"lng":-3.7622,"type":"castle","slug":"craignethan-castle"},{"name":"Bothwell Castle","lat":55.8106,"lng":-4.0778,"type":"castle","slug":"bothwell-castle"},{"name":"Newark Castle","lat":55.9384,"lng":-4.6898,"type":"castle","slug":"newark-castle"},{"name":"Dean Castle","lat":55.6265,"lng":-4.5055,"type":"castle","slug":"dean-castle"},{"name":"Culzean Castle","lat":55.3541,"lng":-4.7878,"type":"castle","slug":"culzean-castle"},{"name":"Lochranza Castle","lat":55.7067,"lng":-5.2908,"type":"castle","slug":"lochranza-castle"},{"name":"Brodick Castle","lat":55.5819,"lng":-5.149,"type":"castle","slug":"brodick-castle"},{"name":"Braemar Castle","lat":57.0069,"lng":-3.3986,"type":"castle","slug":"braemar-castle"},{"name":"Corgarff Castle","lat":57.1167,"lng":-3.2667,"type":"tower house","slug":"corgarff-castle"},{"name":"Mingary Castle","lat":56.6667,"lng":-6.1,"type":"castle","slug":"mingary-castle"},{"name":"Old Wick Castle","lat":58.4167,"lng":-3.05,"type":"castle","slug":"old-wick-castle"},{"name":"Castle Girnigoe","lat":58.4667,"lng":-3.0667,"type":"castle","slug":"castle-girnigoe"},{"name":"Dunbeath Castle","lat":58.25,"lng":-3.4333,"type":"castle","slug":"dunbeath-castle"},{"name":"Duffus Castle","lat":57.6833,"lng":-3.3833,"type":"castle","slug":"duffus-castle"},{"name":"Brodie Castle","lat":57.5833,"lng":-3.7333,"type":"castle","slug":"brodie-castle"},{"name":"Auchindoun Castle","lat":57.3833,"lng":-3.2167,"type":"castle","slug":"auchindoun-castle"},{"name":"Gylen Castle","lat":56.3833,"lng":-5.6667,"type":"castle","slug":"gylen-castle"},{"name":"Inveraray Castle","lat":56.2333,"lng":-5.0833,"type":"castle","slug":"inveraray-castle"},{"name":"Sween Castle","lat":55.9833,"lng":-5.6333,"type":"castle","slug":"sween-castle"},{"name":"Tarbert Castle","lat":55.8667,"lng":-5.4,"type":"castle","slug":"tarbert-castle"},{"name":"Dunyvaig Castle","lat":55.6333,"lng":-6.2167,"type":"castle","slug":"dunyvaig-castle"},{"name":"Finlaggan Castle","lat":55.8167,"lng":-6.2167,"type":"castle","slug":"finlaggan-castle"},{"name":"Dudhope Castle","lat":56.4667,"lng":-2.9667,"type":"castle","slug":"dudhope-castle"},{"name":"Arbroath Abbey","lat":56.5583,"lng":-2.5833,"type":"abbey","slug":"arbroath-abbey"},{"name":"Brechin Castle","lat":56.7333,"lng":-2.6667,"type":"castle","slug":"brechin-castle"},{"name":"Balvaird Castle","lat":56.2833,"lng":-3.3167,"type":"tower house","slug":"balvaird-castle"},{"name":"Lauriston Castle","lat":55.9667,"lng":-3.2833,"type":"castle","slug":"lauriston-castle"},{"name":"Dunbar Castle","lat":56,"lng":-2.5167,"type":"castle","slug":"dunbar-castle"},{"name":"Dundrennan Abbey","lat":54.8,"lng":-3.8833,"type":"abbey","slug":"dundrennan-abbey"},{"name":"Glenluce Abbey","lat":54.8667,"lng":-4.8667,"type":"abbey","slug":"glenluce-abbey"},{"name":"Crossraguel Abbey","lat":55.35,"lng":-4.7833,"type":"abbey","slug":"crossraguel-abbey"},{"name":"Floors Castle","lat":55.6,"lng":-2.4,"type":"palace","slug":"floors-castle"},{"name":"Thirlestane Castle","lat":55.7167,"lng":-2.7333,"type":"castle","slug":"thirlestane-castle"},{"name":"Fast Castle","lat":55.9167,"lng":-2.35,"type":"castle","slug":"fast-castle"},{"name":"Falkland Palace","lat":56.25,"lng":-3.2,"type":"palace","slug":"falkland-palace"},{"name":"Castle of Old Wick","lat":58.4128,"lng":-3.0439,"type":"castle","slug":"castle-of-old-wick"},{"name":"Pluscarden Abbey","lat":57.6167,"lng":-3.5,"type":"abbey","slug":"pluscarden-abbey"},{"name":"Lews Castle","lat":58.2167,"lng":-6.3833,"type":"castle","slug":"lews-castle"},{"name":"Dumbarton Castle","lat":55.9356,"lng":-4.5611,"type":"castle","slug":"dumbarton-castle"},{"name":"Castle Kennedy","lat":54.931,"lng":-5.018,"type":"castle","slug":"castle-kennedy"},{"name":"Cardoness Castle","lat":54.857,"lng":-4.322,"type":"castle","slug":"cardoness-castle"},{"name":"Orchardton Tower","lat":54.828,"lng":-3.929,"type":"castle","slug":"orchardton-tower"},{"name":"Carsluith Castle","lat":54.843,"lng":-4.386,"type":"castle","slug":"carsluith-castle"},{"name":"Lochmaben Castle","lat":55.129,"lng":-3.438,"type":"castle","slug":"lochmaben-castle"},{"name":"Morton Castle","lat":55.272,"lng":-3.692,"type":"castle","slug":"morton-castle"},{"name":"Hawick Motte","lat":55.422,"lng":-2.788,"type":"castle","slug":"hawick-motte"},{"name":"Cessford Castle","lat":55.527,"lng":-2.489,"type":"castle","slug":"cessford-castle"},{"name":"Ferniehirst Castle","lat":55.458,"lng":-2.537,"type":"castle","slug":"ferniehirst-castle"},{"name":"Greenknowe Tower","lat":55.622,"lng":-2.626,"type":"castle","slug":"greenknowe-tower"},{"name":"Drochil Castle","lat":55.666,"lng":-3.328,"type":"castle","slug":"drochil-castle"},{"name":"Cadzow Castle","lat":55.747,"lng":-4.036,"type":"castle","slug":"cadzow-castle"},{"name":"Crookston Castle","lat":55.835,"lng":-4.361,"type":"castle","slug":"crookston-castle"},{"name":"Mugdock Castle","lat":55.967,"lng":-4.317,"type":"castle","slug":"mugdock-castle"},{"name":"Dunoon Castle","lat":55.947,"lng":-4.926,"type":"castle","slug":"dunoon-castle"},{"name":"Castle Lachlan","lat":55.97,"lng":-5.209,"type":"castle","slug":"castle-lachlan"},{"name":"Castle Coeffin","lat":56.496,"lng":-5.654,"type":"castle","slug":"castle-coeffin"},{"name":"Innis Chonnel Castle","lat":56.268,"lng":-5.238,"type":"castle","slug":"innis-chonnel-castle"},{"name":"Aros Castle","lat":56.553,"lng":-5.997,"type":"castle","slug":"aros-castle"},{"name":"Moy Castle","lat":56.322,"lng":-5.957,"type":"castle","slug":"moy-castle"},{"name":"Breachacha Castle","lat":56.614,"lng":-6.547,"type":"castle","slug":"breachacha-castle"},{"name":"Claig Castle","lat":55.869,"lng":-5.77,"type":"castle","slug":"claig-castle"},{"name":"Toward Castle","lat":55.859,"lng":-4.985,"type":"castle","slug":"toward-castle"},{"name":"Dunollie Castle","lat":56.426,"lng":-5.478,"type":"castle","slug":"dunollie-castle"},{"name":"Invergarry Castle","lat":57.045,"lng":-5.023,"type":"castle","slug":"invergarry-castle"},{"name":"Castle Moil","lat":57.265,"lng":-5.728,"type":"castle","slug":"castle-moil"},{"name":"Duntulm Castle","lat":57.67,"lng":-6.365,"type":"castle","slug":"duntulm-castle"},{"name":"Tioram Castle Loch","lat":56.789,"lng":-5.793,"type":"castle","slug":"tioram-castle-loch"},{"name":"Loch-an-Eilein Castle","lat":57.159,"lng":-3.813,"type":"castle","slug":"loch-an-eilein-castle"},{"name":"Lochinch Castle","lat":54.929,"lng":-5.02,"type":"castle","slug":"lochinch-castle"},{"name":"Tullibardine Chapel","lat":56.312,"lng":-3.765,"type":"abbey","slug":"tullibardine-chapel"},{"name":"Burleigh Castle","lat":56.214,"lng":-3.362,"type":"castle","slug":"burleigh-castle"},{"name":"Methven Castle","lat":56.387,"lng":-3.587,"type":"castle","slug":"methven-castle"},{"name":"Affleck Castle","lat":56.644,"lng":-2.752,"type":"castle","slug":"affleck-castle"},{"name":"Findlater Castle","lat":57.682,"lng":-2.638,"type":"castle","slug":"findlater-castle"},{"name":"New Slains Castle","lat":57.413,"lng":-1.837,"type":"castle","slug":"new-slains-castle"},{"name":"Dunideer Castle","lat":57.316,"lng":-2.637,"type":"castle","slug":"dunideer-castle"},{"name":"Lickleyhead Castle","lat":57.275,"lng":-2.716,"type":"castle","slug":"lickleyhead-castle"},{"name":"Glenbuchat Castle","lat":57.228,"lng":-3.081,"type":"castle","slug":"glenbuchat-castle"},{"name":"Dufftown Clock Tower","lat":57.444,"lng":-3.128,"type":"castle","slug":"dufftown-clock-tower"},{"name":"Lochindorb Castle","lat":57.389,"lng":-3.676,"type":"castle","slug":"lochindorb-castle"},{"name":"Rait Castle","lat":57.506,"lng":-3.907,"type":"castle","slug":"rait-castle"},{"name":"Beauly Priory","lat":57.477,"lng":-4.472,"type":"abbey","slug":"beauly-priory"},{"name":"Fortrose Cathedral","lat":57.581,"lng":-4.129,"type":"abbey","slug":"fortrose-cathedral"},{"name":"Dornoch Castle","lat":57.879,"lng":-4.028,"type":"castle","slug":"dornoch-castle"},{"name":"Skelbo Castle","lat":57.911,"lng":-4.012,"type":"castle","slug":"skelbo-castle"},{"name":"Castle Sinclair Girnigoe","lat":58.477,"lng":-3.089,"type":"castle","slug":"castle-sinclair-girnigoe"},{"name":"Bucholie Castle","lat":58.495,"lng":-3.035,"type":"castle","slug":"bucholie-castle"},{"name":"Ackergill Tower","lat":58.451,"lng":-3.068,"type":"castle","slug":"ackergill-tower"},{"name":"Castle of Park","lat":54.809,"lng":-4.27,"type":"castle","slug":"castle-of-park"},{"name":"Comlongon Castle","lat":55.004,"lng":-3.393,"type":"castle","slug":"comlongon-castle"},{"name":"Edinburgh Castle","lat":55.9486,"lng":-3.1999,"type":"castle","slug":"edinburgh-castle"},{"name":"Barra Castle","lat":57.185,"lng":-2.367,"type":"tower house","slug":"barra-castle"},{"name":"Pitfichie Castle","lat":57.19,"lng":-2.605,"type":"tower house","slug":"pitfichie-castle"},{"name":"Cluny Castle","lat":57.147,"lng":-2.536,"type":"castle","slug":"cluny-castle"},{"name":"Leslie Castle","lat":57.304,"lng":-2.775,"type":"tower house","slug":"leslie-castle"},{"name":"Fetteresso Castle","lat":56.96,"lng":-2.22,"type":"castle","slug":"fetteresso-castle"},{"name":"Inverugie Castle","lat":57.493,"lng":-1.812,"type":"castle","slug":"inverugie-castle"},{"name":"Pitsligo Castle","lat":57.669,"lng":-2.143,"type":"castle","slug":"pitsligo-castle"},{"name":"Auchindoir Castle","lat":57.329,"lng":-2.838,"type":"castle","slug":"auchindoir-castle"},{"name":"Esslemont Castle","lat":57.352,"lng":-2.026,"type":"tower house","slug":"esslemont-castle"},{"name":"Cairnbulg Castle","lat":57.663,"lng":-1.946,"type":"castle","slug":"cairnbulg-castle"},{"name":"Harthill Castle","lat":57.246,"lng":-2.497,"type":"tower house","slug":"harthill-castle"},{"name":"Craig Castle","lat":57.36,"lng":-2.708,"type":"tower house","slug":"craig-castle"},{"name":"Midmar Castle","lat":57.147,"lng":-2.486,"type":"castle","slug":"midmar-castle"},{"name":"Towie Barclay Castle","lat":57.545,"lng":-2.574,"type":"tower house","slug":"towie-barclay-castle"},{"name":"Gight Castle","lat":57.428,"lng":-2.346,"type":"castle","slug":"gight-castle"},{"name":"Castle Menzies","lat":56.61,"lng":-3.98,"type":"castle","slug":"castle-menzies"},{"name":"Grandtully Castle","lat":56.625,"lng":-3.86,"type":"tower house","slug":"grandtully-castle"},{"name":"Megginch Castle","lat":56.427,"lng":-3.278,"type":"castle","slug":"megginch-castle"},{"name":"Balhousie Castle","lat":56.405,"lng":-3.444,"type":"castle","slug":"balhousie-castle"},{"name":"Kellie Castle","lat":56.301,"lng":-2.767,"type":"castle","slug":"kellie-castle"},{"name":"Scotstarvit Tower","lat":56.287,"lng":-2.97,"type":"tower house","slug":"scotstarvit-tower"},{"name":"Macduff's Castle","lat":56.198,"lng":-3.017,"type":"castle","slug":"macduff-s-castle"},{"name":"Balwearie Castle","lat":56.166,"lng":-3.296,"type":"tower house","slug":"balwearie-castle"},{"name":"Newark Castle (Fife)","lat":56.306,"lng":-2.718,"type":"castle","slug":"newark-castle-fife"},{"name":"Earl's Palace Birsay","lat":59.123,"lng":-3.322,"type":"palace","slug":"earl-s-palace-birsay"},{"name":"Noltland Castle","lat":59.306,"lng":-2.956,"type":"castle","slug":"noltland-castle"},{"name":"Cubbie Roo's Castle","lat":59.107,"lng":-2.958,"type":"castle","slug":"cubbie-roo-s-castle"},{"name":"Scalloway Castle","lat":60.135,"lng":-1.279,"type":"castle","slug":"scalloway-castle"},{"name":"Muness Castle","lat":60.671,"lng":-0.867,"type":"castle","slug":"muness-castle"},{"name":"Borve Castle (Benbecula)","lat":57.44,"lng":-7.372,"type":"tower house","slug":"borve-castle-benbecula"},{"name":"Calvay Castle","lat":57.148,"lng":-7.24,"type":"castle","slug":"calvay-castle"},{"name":"Caisteal Maol","lat":57.27,"lng":-5.715,"type":"castle","slug":"caisteal-maol"},{"name":"Dryhope Tower","lat":55.54,"lng":-3.12,"type":"tower house","slug":"dryhope-tower"},{"name":"Aikwood Tower","lat":55.49,"lng":-2.96,"type":"tower house","slug":"aikwood-tower"},{"name":"Duns Castle","lat":55.78,"lng":-2.341,"type":"castle","slug":"duns-castle"},{"name":"Cranshaws Castle","lat":55.847,"lng":-2.577,"type":"tower house","slug":"cranshaws-castle"},{"name":"Castle Stuart","lat":57.519,"lng":-4.098,"type":"castle","slug":"castle-stuart"},{"name":"Beaufort Castle","lat":57.434,"lng":-4.476,"type":"castle","slug":"beaufort-castle"},{"name":"Kinlochaline Castle","lat":56.602,"lng":-5.775,"type":"tower house","slug":"kinlochaline-castle"},{"name":"Torthorwald Castle","lat":55.076,"lng":-3.529,"type":"castle","slug":"torthorwald-castle"},{"name":"Duntrune Castle","lat":56.088,"lng":-5.583,"type":"castle","slug":"duntrune-castle"},{"name":"Dunaverty Castle","lat":55.307,"lng":-5.688,"type":"castle","slug":"dunaverty-castle"},{"name":"Fraoch Eilean Castle","lat":56.36,"lng":-5.06,"type":"castle","slug":"fraoch-eilean-castle"},{"name":"Clackmannan Tower","lat":56.109,"lng":-3.752,"type":"tower house","slug":"clackmannan-tower"},{"name":"Menstrie Castle","lat":56.147,"lng":-3.853,"type":"castle","slug":"menstrie-castle"},{"name":"Luffness Castle","lat":56.013,"lng":-2.843,"type":"castle","slug":"luffness-castle"},{"name":"Inverquharity Castle","lat":56.746,"lng":-3.006,"type":"tower house","slug":"inverquharity-castle"},{"name":"Dundonald Castle","lat":55.595,"lng":-4.601,"type":"castle","slug":"dundonald-castle"},{"name":"Greenan Castle","lat":55.419,"lng":-4.662,"type":"tower house","slug":"greenan-castle"},{"name":"Dalquharran Castle","lat":55.307,"lng":-4.799,"type":"castle","slug":"dalquharran-castle"},{"name":"Maybole Castle","lat":55.355,"lng":-4.688,"type":"tower house","slug":"maybole-castle"},{"name":"Inverallochy Castle","lat":57.688,"lng":-2.008,"type":"tower house","slug":"inverallochy-castle"},{"name":"Kinnaird Head Castle","lat":57.692,"lng":-2.002,"type":"tower house","slug":"kinnaird-head-castle"},{"name":"Udny Castle","lat":57.335,"lng":-2.228,"type":"tower house","slug":"udny-castle"},{"name":"Balquhain Castle","lat":57.328,"lng":-2.508,"type":"tower house","slug":"balquhain-castle"},{"name":"Fedderate Castle","lat":57.542,"lng":-2.322,"type":"tower house","slug":"fedderate-castle"},{"name":"Ardiffery Castle","lat":57.458,"lng":-1.888,"type":"tower house","slug":"ardiffery-castle"},{"name":"Corse Castle","lat":57.178,"lng":-2.628,"type":"tower house","slug":"corse-castle"},{"name":"Hallforest Castle","lat":57.258,"lng":-2.298,"type":"tower house","slug":"hallforest-castle"},{"name":"Finavon Castle","lat":56.728,"lng":-2.862,"type":"tower house","slug":"finavon-castle"},{"name":"Melgund Castle","lat":56.742,"lng":-2.768,"type":"castle","slug":"melgund-castle"},{"name":"Baikie Castle","lat":56.618,"lng":-2.948,"type":"tower house","slug":"baikie-castle"},{"name":"Kinclaven Castle","lat":56.488,"lng":-3.468,"type":"castle","slug":"kinclaven-castle"},{"name":"Garth Castle","lat":56.668,"lng":-3.978,"type":"tower house","slug":"garth-castle"},{"name":"Newton Castle (Perth)","lat":56.578,"lng":-3.628,"type":"tower house","slug":"newton-castle-perth"},{"name":"Clunie Castle","lat":56.618,"lng":-3.428,"type":"castle","slug":"clunie-castle"},{"name":"Stobhall Castle","lat":56.498,"lng":-3.368,"type":"castle","slug":"stobhall-castle"},{"name":"Finlarig Castle","lat":56.508,"lng":-4.318,"type":"tower house","slug":"finlarig-castle"},{"name":"Fatlips Castle","lat":55.518,"lng":-2.628,"type":"tower house","slug":"fatlips-castle"},{"name":"Littledean Tower","lat":55.598,"lng":-2.688,"type":"tower house","slug":"littledean-tower"},{"name":"Hume Castle","lat":55.738,"lng":-2.478,"type":"castle","slug":"hume-castle"},{"name":"Roxburgh Castle","lat":55.588,"lng":-2.508,"type":"castle","slug":"roxburgh-castle"},{"name":"Edrom Castle","lat":55.798,"lng":-2.308,"type":"tower house","slug":"edrom-castle"},{"name":"Elibank Castle","lat":55.578,"lng":-2.878,"type":"tower house","slug":"elibank-castle"},{"name":"Drumlanrig Castle","lat":55.258,"lng":-3.778,"type":"castle","slug":"drumlanrig-castle"},{"name":"Barholm Castle","lat":54.858,"lng":-4.428,"type":"tower house","slug":"barholm-castle"},{"name":"Kirkcudbright Castle","lat":54.835,"lng":-4.052,"type":"castle","slug":"kirkcudbright-castle"},{"name":"Sanquhar Castle","lat":55.368,"lng":-3.928,"type":"castle","slug":"sanquhar-castle"},{"name":"New Abbey Corn Mill","lat":55.008,"lng":-3.612,"type":"mill","slug":"new-abbey-corn-mill"},{"name":"Jarlshof","lat":59.878,"lng":-1.288,"type":"settlement","slug":"jarlshof"},{"name":"Clickimin Broch","lat":60.148,"lng":-1.168,"type":"broch","slug":"clickimin-broch"},{"name":"Mousa Broch","lat":60.002,"lng":-1.178,"type":"broch","slug":"mousa-broch"},{"name":"Dun Carloway Broch","lat":58.278,"lng":-6.788,"type":"broch","slug":"dun-carloway-broch"},{"name":"Amhuinnsuidhe Castle","lat":57.888,"lng":-6.968,"type":"castle","slug":"amhuinnsuidhe-castle"},{"name":"Lochore Castle","lat":56.148,"lng":-3.358,"type":"castle","slug":"lochore-castle"},{"name":"Loch Doon Castle","lat":55.298,"lng":-4.378,"type":"castle","slug":"loch-doon-castle"},{"name":"Rowallan Castle","lat":55.612,"lng":-4.508,"type":"castle","slug":"rowallan-castle"},{"name":"Dunfermline Palace","lat":56.072,"lng":-3.468,"type":"palace","slug":"dunfermline-palace"},{"name":"Finlaystone Castle","lat":55.918,"lng":-4.618,"type":"castle","slug":"finlaystone-castle"},{"name":"Alloway Auld Kirk","lat":55.428,"lng":-4.628,"type":"church","slug":"alloway-auld-kirk"},{"name":"Turnberry Castle","lat":55.328,"lng":-4.838,"type":"castle","slug":"turnberry-castle"},{"name":"Barcaldine Castle","lat":56.5489,"lng":-5.3611,"type":"castle","slug":"barcaldine-castle"},{"name":"Iona Abbey","lat":56.3369,"lng":-6.3867,"type":"abbey","slug":"iona-abbey"},{"name":"Inchcolm Abbey","lat":56.0289,"lng":-3.3017,"type":"abbey","slug":"inchcolm-abbey"},{"name":"Balmerino Abbey","lat":56.3631,"lng":-3.1178,"type":"abbey","slug":"balmerino-abbey"},{"name":"Drummond Castle Gardens","lat":56.3353,"lng":-3.8358,"type":"castle","slug":"drummond-castle-gardens"},{"name":"Aboyne Castle","lat":57.0764,"lng":-2.7836,"type":"castle","slug":"aboyne-castle"},{"name":"Tillycairn Castle","lat":57.1489,"lng":-2.6167,"type":"castle","slug":"tillycairn-castle"},{"name":"Knock Castle","lat":57.2472,"lng":-5.9333,"type":"castle","slug":"knock-castle"},{"name":"Balfluig Castle","lat":57.2,"lng":-2.7333,"type":"castle","slug":"balfluig-castle"},{"name":"Ballindalloch Castle","lat":57.3419,"lng":-3.3625,"type":"castle","slug":"ballindalloch-castle"},{"name":"Castle of Fiddes","lat":56.95,"lng":-2.2,"type":"castle","slug":"castle-of-fiddes"},{"name":"Muchalls Castle","lat":56.9833,"lng":-2.15,"type":"castle","slug":"muchalls-castle"},{"name":"Craigston Castle","lat":57.5833,"lng":-2.3167,"type":"castle","slug":"craigston-castle"},{"name":"Sadell Castle","lat":55.5833,"lng":-5.5667,"type":"castle","slug":"sadell-castle"},{"name":"Carbisdale Castle","lat":57.9,"lng":-4.3833,"type":"castle","slug":"carbisdale-castle"},{"name":"Skibo Castle","lat":57.8833,"lng":-4.15,"type":"castle","slug":"skibo-castle"},{"name":"Castle Leod","lat":57.6833,"lng":-4.5667,"type":"castle","slug":"castle-leod"},{"name":"Dunure Castle","lat":55.4,"lng":-4.75,"type":"castle","slug":"dunure-castle"},{"name":"Balloch Castle","lat":56,"lng":-4.5833,"type":"castle","slug":"balloch-castle"},{"name":"Cambuskenneth Abbey","lat":56.1167,"lng":-3.9167,"type":"abbey","slug":"cambuskenneth-abbey"},{"name":"Balgonie Castle","lat":56.2,"lng":-3.1333,"type":"castle","slug":"balgonie-castle"},{"name":"St Bridget's Kirk, Dalgety","lat":56.05,"lng":-3.35,"type":"abbey","slug":"st-bridget-s-kirk-dalgety"},{"name":"Red Castle","lat":56.7,"lng":-2.5833,"type":"castle","slug":"red-castle"},{"name":"Restenneth Priory","lat":56.65,"lng":-2.7833,"type":"abbey","slug":"restenneth-priory"},{"name":"Kinloss Abbey","lat":57.6333,"lng":-3.5667,"type":"abbey","slug":"kinloss-abbey"},{"name":"Birnie Kirk","lat":57.6,"lng":-3.3833,"type":"abbey","slug":"birnie-kirk"},{"name":"Darnaway Castle","lat":57.5667,"lng":-3.65,"type":"castle","slug":"darnaway-castle"},{"name":"Ruthven Barracks","lat":57.0833,"lng":-4.05,"type":"castle","slug":"ruthven-barracks"},{"name":"Troup Head Castle","lat":57.6833,"lng":-2.3,"type":"castle","slug":"troup-head-castle"},{"name":"Kincardine Castle","lat":57.1333,"lng":-2.3833,"type":"castle","slug":"kincardine-castle"},{"name":"Dunecht House Chapel","lat":57.1333,"lng":-2.4833,"type":"abbey","slug":"dunecht-house-chapel"},{"name":"Castle Roy","lat":57.2667,"lng":-3.6,"type":"castle","slug":"castle-roy"},{"name":"Rosslyn Chapel","lat":55.8553,"lng":-3.1603,"type":"abbey","slug":"rosslyn-chapel"},{"name":"Seton Collegiate Church","lat":55.9667,"lng":-2.95,"type":"abbey","slug":"seton-collegiate-church"},{"name":"Amisfield Tower","lat":55.1667,"lng":-3.5833,"type":"castle","slug":"amisfield-tower"},{"name":"Whithorn Priory","lat":54.7333,"lng":-4.4167,"type":"abbey","slug":"whithorn-priory"},{"name":"Cruggleton Castle","lat":54.7333,"lng":-4.3667,"type":"castle","slug":"cruggleton-castle"},{"name":"Corsewall Lighthouse","lat":55.0167,"lng":-5.1667,"type":"castle","slug":"corsewall-lighthouse"},{"name":"Drumcoltran Tower","lat":54.9667,"lng":-3.8333,"type":"castle","slug":"drumcoltran-tower"},{"name":"Rushen Castle","lat":54.0736,"lng":-4.6472,"type":"castle","slug":"rushen-castle"},{"name":"Earl Patrick's Palace","lat":58.9833,"lng":-2.9611,"type":"castle","slug":"earl-patrick-s-palace"},{"name":"Old Scatness","lat":59.8833,"lng":-1.2833,"type":"castle","slug":"old-scatness"},{"name":"Windhouse","lat":60.4833,"lng":-1.0833,"type":"castle","slug":"windhouse"},{"name":"Borve Castle","lat":58.1167,"lng":-5,"type":"castle","slug":"borve-castle"},{"name":"Varrich Castle","lat":58.5167,"lng":-4.4167,"type":"castle","slug":"varrich-castle"},{"name":"Ardtornish Castle","lat":56.5833,"lng":-5.75,"type":"castle","slug":"ardtornish-castle"},{"name":"Tor Castle","lat":56.8667,"lng":-5.0833,"type":"castle","slug":"tor-castle"},{"name":"Achanduin Castle","lat":56.5167,"lng":-5.5667,"type":"castle","slug":"achanduin-castle"},{"name":"Ardchattan Priory","lat":56.4667,"lng":-5.3167,"type":"abbey","slug":"ardchattan-priory"},{"name":"Kilmartin Church","lat":56.1333,"lng":-5.4833,"type":"abbey","slug":"kilmartin-church"},{"name":"Kilwinning Abbey","lat":55.6556,"lng":-4.7069,"type":"abbey","slug":"kilwinning-abbey"},{"name":"Paisley Abbey","lat":55.8461,"lng":-4.4236,"type":"abbey","slug":"paisley-abbey"},{"name":"Kilmun Church","lat":56.0167,"lng":-4.9667,"type":"abbey","slug":"kilmun-church"},{"name":"St Giles' Cathedral","lat":55.9497,"lng":-3.1903,"type":"abbey","slug":"st-giles-cathedral"},{"name":"Palace of Holyroodhouse","lat":55.9528,"lng":-3.1719,"type":"castle","slug":"palace-of-holyroodhouse"},{"name":"Dunkeld Cathedral","lat":56.5667,"lng":-3.5833,"type":"abbey","slug":"dunkeld-cathedral"},{"name":"Innerpeffray Chapel","lat":56.35,"lng":-3.7,"type":"abbey","slug":"innerpeffray-chapel"},{"name":"Buittle Castle","lat":54.9333,"lng":-3.8833,"type":"castle","slug":"buittle-castle"},{"name":"Tibbers Castle","lat":55.3,"lng":-3.75,"type":"castle","slug":"tibbers-castle"},{"name":"Closeburn Castle","lat":55.2333,"lng":-3.65,"type":"castle","slug":"closeburn-castle"},{"name":"Nithsdale Castle","lat":55.0667,"lng":-3.6167,"type":"castle","slug":"nithsdale-castle"},{"name":"Glasgow Cathedral","lat":55.8622,"lng":-4.2336,"type":"abbey","slug":"glasgow-cathedral"},{"name":"Fortingall Church","lat":56.5983,"lng":-4.0539,"type":"abbey","slug":"fortingall-church"},{"name":"Auchinleck House","lat":55.4833,"lng":-4.3,"type":"castle","slug":"auchinleck-house"},{"name":"Kelburn Castle","lat":55.7833,"lng":-4.8667,"type":"castle","slug":"kelburn-castle"},{"name":"Portencross Castle","lat":55.7333,"lng":-4.8833,"type":"castle","slug":"portencross-castle"},{"name":"Kinross House","lat":56.2028,"lng":-3.4264,"type":"castle","slug":"kinross-house"},{"name":"Leuchars Norman Church","lat":56.3833,"lng":-2.8833,"type":"abbey","slug":"leuchars-norman-church"},{"name":"Culross Palace","lat":56.0556,"lng":-3.6267,"type":"castle","slug":"culross-palace"},{"name":"Dysart Church","lat":56.1333,"lng":-3.1167,"type":"abbey","slug":"dysart-church"},{"name":"Dunimarle Castle","lat":56.0667,"lng":-3.5833,"type":"castle","slug":"dunimarle-castle"},{"name":"Kinneff Church","lat":56.8833,"lng":-2.25,"type":"abbey","slug":"kinneff-church"},{"name":"Deer Abbey","lat":57.5167,"lng":-2.1667,"type":"abbey","slug":"deer-abbey"},{"name":"Monymusk Priory Church","lat":57.2,"lng":-2.55,"type":"abbey","slug":"monymusk-priory-church"},{"name":"Kinkell Church","lat":57.3333,"lng":-2.45,"type":"abbey","slug":"kinkell-church"},{"name":"Tillyangus Castle","lat":57.2833,"lng":-2.7,"type":"castle","slug":"tillyangus-castle"},{"name":"Leith Hall","lat":57.35,"lng":-2.7833,"type":"castle","slug":"leith-hall"},{"name":"Haddo House","lat":57.3667,"lng":-2.1833,"type":"castle","slug":"haddo-house"},{"name":"Pitmedden Garden","lat":57.35,"lng":-2.1833,"type":"castle","slug":"pitmedden-garden"},{"name":"Dalmeny Church","lat":55.9833,"lng":-3.35,"type":"abbey","slug":"dalmeny-church"},{"name":"Cramond Tower","lat":55.9794,"lng":-3.2978,"type":"castle","slug":"cramond-tower"},{"name":"Merchiston Castle","lat":55.9333,"lng":-3.2167,"type":"castle","slug":"merchiston-castle"},{"name":"Liberton Tower","lat":55.9167,"lng":-3.1667,"type":"castle","slug":"liberton-tower"},{"name":"Castle Craig","lat":55.7,"lng":-3.2667,"type":"castle","slug":"castle-craig"},{"name":"Newark Castle (Borders)","lat":55.5333,"lng":-2.9833,"type":"castle","slug":"newark-castle-borders"},{"name":"Abbotsford House","lat":55.5986,"lng":-2.7806,"type":"castle","slug":"abbotsford-house"},{"name":"Traquair House","lat":55.6167,"lng":-3.0667,"type":"castle","slug":"traquair-house"},{"name":"Balfour Castle","lat":59.0833,"lng":-2.8333,"type":"castle","slug":"balfour-castle"},{"name":"Wyre Heritage Centre","lat":59.1278,"lng":-2.9833,"type":"castle","slug":"wyre-heritage-centre"},{"name":"Quoyberstane Stone","lat":59,"lng":-3.1,"type":"castle","slug":"quoyberstane-stone"},{"name":"Brahan Castle Site","lat":57.5667,"lng":-4.5833,"type":"castle","slug":"brahan-castle-site"},{"name":"Kilravock Castle","lat":57.5167,"lng":-4.0667,"type":"castle","slug":"kilravock-castle"},{"name":"Craigevar Castle Grounds","lat":57.0764,"lng":-2.7264,"type":"castle","slug":"craigevar-castle-grounds"},{"name":"Ardencaple Castle","lat":56.0167,"lng":-4.75,"type":"castle","slug":"ardencaple-castle"},{"name":"Ardchonnel Castle","lat":56.2667,"lng":-5.1833,"type":"castle","slug":"ardchonnel-castle"},{"name":"Castle Loch Heylipol","lat":56.5,"lng":-6.8667,"type":"castle","slug":"castle-loch-heylipol"},{"name":"Crarae Garden Castle","lat":56.1333,"lng":-5.1167,"type":"castle","slug":"crarae-garden-castle"},{"name":"Dunderave Castle","lat":56.2167,"lng":-5.0167,"type":"castle","slug":"dunderave-castle"},{"name":"Ellangowan Castle","lat":54.85,"lng":-4.15,"type":"castle","slug":"ellangowan-castle"},{"name":"Carsphairn Castle","lat":55.2667,"lng":-4.2167,"type":"castle","slug":"carsphairn-castle"},{"name":"Lag Tower","lat":55.2,"lng":-3.7833,"type":"castle","slug":"lag-tower"},{"name":"Abergeldie Castle","lat":57.05,"lng":-3.2667,"type":"castle","slug":"abergeldie-castle"},{"name":"Crovie Village","lat":57.6833,"lng":-2.3333,"type":"castle","slug":"crovie-village"},{"name":"Pennan Village","lat":57.7,"lng":-2.25,"type":"castle","slug":"pennan-village"},{"name":"Castle Grant","lat":57.35,"lng":-3.6167,"type":"castle","slug":"castle-grant"},{"name":"Dalcross Castle","lat":57.5167,"lng":-4.1,"type":"castle","slug":"dalcross-castle"},{"name":"Boath Doocot","lat":57.6,"lng":-3.9,"type":"castle","slug":"boath-doocot"},{"name":"Cromarty Courthouse","lat":57.6833,"lng":-4.0333,"type":"castle","slug":"cromarty-courthouse"},{"name":"Tarbat Discovery Centre","lat":57.7667,"lng":-3.9,"type":"abbey","slug":"tarbat-discovery-centre"},{"name":"Rosemarkie Pictish Stone","lat":57.5833,"lng":-4.1167,"type":"abbey","slug":"rosemarkie-pictish-stone"},{"name":"Clava Cairns","lat":57.4667,"lng":-4.0833,"type":"castle","slug":"clava-cairns"},{"name":"Culloden Battlefield","lat":57.475,"lng":-4.0917,"type":"castle","slug":"culloden-battlefield"},{"name":"Inverness Castle Viewpoint","lat":57.4778,"lng":-4.2244,"type":"castle","slug":"inverness-castle-viewpoint"},{"name":"Dingwall Castle","lat":57.5833,"lng":-4.4167,"type":"castle","slug":"dingwall-castle"},{"name":"Fairburn Tower","lat":57.5167,"lng":-4.7,"type":"castle","slug":"fairburn-tower"},{"name":"Redcastle","lat":57.5833,"lng":-4.35,"type":"castle","slug":"redcastle"},{"name":"Dun Telve Broch","lat":57.1833,"lng":-5.5167,"type":"castle","slug":"dun-telve-broch"},{"name":"Dun Troddan Broch","lat":57.1833,"lng":-5.5,"type":"castle","slug":"dun-troddan-broch"},{"name":"Bernera Barracks","lat":57.2333,"lng":-5.6333,"type":"castle","slug":"bernera-barracks"},{"name":"Creich Castle","lat":56.2333,"lng":-3.0333,"type":"castle","slug":"creich-castle"},{"name":"Rosyth Castle","lat":56.0333,"lng":-3.4333,"type":"castle","slug":"rosyth-castle"},{"name":"Mauchline Castle","lat":55.5167,"lng":-4.3833,"type":"castle","slug":"mauchline-castle"},{"name":"Ayr Castle","lat":55.4667,"lng":-4.6333,"type":"castle","slug":"ayr-castle"},{"name":"Sundrum Castle","lat":55.4833,"lng":-4.5833,"type":"castle","slug":"sundrum-castle"},{"name":"Peel Ring of Lumphanan","lat":57.1333,"lng":-2.6333,"type":"castle","slug":"peel-ring-of-lumphanan"},{"name":"Migvie Church","lat":57.1333,"lng":-2.8667,"type":"abbey","slug":"migvie-church"},{"name":"Sueno's Stone","lat":57.6333,"lng":-3.6,"type":"abbey","slug":"sueno-s-stone"},{"name":"Burghead Well","lat":57.7,"lng":-3.4833,"type":"castle","slug":"burghead-well"},{"name":"Dallas Dhu Distillery","lat":57.5833,"lng":-3.5833,"type":"castle","slug":"dallas-dhu-distillery"},{"name":"Rothiemay Castle","lat":57.4833,"lng":-2.7667,"type":"castle","slug":"rothiemay-castle"},{"name":"Blairfindy Castle","lat":57.3833,"lng":-3.3167,"type":"castle","slug":"blairfindy-castle"},{"name":"Inchdrewer Castle","lat":57.6667,"lng":-2.65,"type":"castle","slug":"inchdrewer-castle"},{"name":"Boyne Castle","lat":57.6833,"lng":-2.7333,"type":"castle","slug":"boyne-castle"},{"name":"Fordyce Castle","lat":57.65,"lng":-2.7833,"type":"castle","slug":"fordyce-castle"},{"name":"Deskford Church","lat":57.6333,"lng":-2.8167,"type":"abbey","slug":"deskford-church"},{"name":"Edinkillie Church","lat":57.5167,"lng":-3.6333,"type":"abbey","slug":"edinkillie-church"},{"name":"Tower of Hallbar","lat":55.7333,"lng":-3.7833,"type":"castle","slug":"tower-of-hallbar"},{"name":"Lincluden Collegiate Church","lat":55.0667,"lng":-3.6333,"type":"abbey","slug":"lincluden-collegiate-church"},{"name":"Grey Mare's Tail","lat":55.4,"lng":-3.2833,"type":"castle","slug":"grey-mare-s-tail"},{"name":"Capenoch Tower","lat":55.2,"lng":-3.7333,"type":"castle","slug":"capenoch-tower"},{"name":"Hoddom Castle","lat":55.0667,"lng":-3.3,"type":"castle","slug":"hoddom-castle"},{"name":"Repentance Tower","lat":55.0667,"lng":-3.3167,"type":"castle","slug":"repentance-tower"},{"name":"Lockerbie Tower","lat":55.1167,"lng":-3.35,"type":"castle","slug":"lockerbie-tower"},{"name":"Peebles Cross Kirk","lat":55.65,"lng":-3.1833,"type":"abbey","slug":"peebles-cross-kirk"},{"name":"Coldingham Priory","lat":55.9,"lng":-2.2,"type":"abbey","slug":"coldingham-priory"},{"name":"Lennoxlove House","lat":55.95,"lng":-2.7167,"type":"castle","slug":"lennoxlove-house"},{"name":"Preston Tower","lat":55.95,"lng":-2.8833,"type":"castle","slug":"preston-tower"},{"name":"Castle Levan","lat":55.9333,"lng":-4.8,"type":"castle","slug":"castle-levan"},{"name":"Lennox Castle","lat":55.9833,"lng":-4.2333,"type":"castle","slug":"lennox-castle"},{"name":"Kilmacolm Castle","lat":55.9,"lng":-4.6333,"type":"castle","slug":"kilmacolm-castle"},{"name":"Cathcart Castle","lat":55.8167,"lng":-4.2833,"type":"castle","slug":"cathcart-castle"},{"name":"Mearns Castle","lat":55.7833,"lng":-4.3333,"type":"castle","slug":"mearns-castle"},{"name":"Cardross Manor","lat":55.95,"lng":-4.6667,"type":"castle","slug":"cardross-manor"},{"name":"Arnprior Tower","lat":56.15,"lng":-4.2167,"type":"castle","slug":"arnprior-tower"},{"name":"Sauchie Tower","lat":56.1167,"lng":-3.8167,"type":"castle","slug":"sauchie-tower"},{"name":"Dollar Academy Clock Tower","lat":56.1667,"lng":-3.6833,"type":"castle","slug":"dollar-academy-clock-tower"},{"name":"Kilberry Sculptured Stones","lat":55.8833,"lng":-5.6,"type":"abbey","slug":"kilberry-sculptured-stones"},{"name":"Dunadd Fort","lat":56.0833,"lng":-5.4833,"type":"castle","slug":"dunadd-fort"},{"name":"Ballinaby Standing Stones","lat":55.8167,"lng":-6.4333,"type":"castle","slug":"ballinaby-standing-stones"},{"name":"Keills Chapel","lat":55.9167,"lng":-5.7167,"type":"abbey","slug":"keills-chapel"},{"name":"Kildalton Cross","lat":55.6167,"lng":-6.0833,"type":"abbey","slug":"kildalton-cross"},{"name":"Campbeltown Cross","lat":55.4256,"lng":-5.6025,"type":"abbey","slug":"campbeltown-cross"},{"name":"St Blane's Church","lat":55.7667,"lng":-5.05,"type":"abbey","slug":"st-blane-s-church"},{"name":"Innischonain Priory","lat":56.2833,"lng":-5.2,"type":"abbey","slug":"innischonain-priory"},{"name":"Temple Church","lat":55.8167,"lng":-3.0833,"type":"abbey","slug":"temple-church"},{"name":"Dalhousie Castle","lat":55.8667,"lng":-3.0833,"type":"castle","slug":"dalhousie-castle"},{"name":"Arniston House","lat":55.85,"lng":-3.0667,"type":"castle","slug":"arniston-house"},{"name":"Lochnagar Bothie","lat":56.9583,"lng":-3.2417,"type":"castle","slug":"lochnagar-bothie"},{"name":"Durris Castle","lat":57.0167,"lng":-2.45,"type":"castle","slug":"durris-castle"},{"name":"Raemoir House","lat":57.0833,"lng":-2.5167,"type":"castle","slug":"raemoir-house"},{"name":"Druminnor Castle","lat":57.3333,"lng":-2.8333,"type":"castle","slug":"druminnor-castle"},{"name":"Dunmore Pineapple","lat":56.05,"lng":-3.7833,"type":"castle","slug":"dunmore-pineapple"},{"name":"Torphichen Preceptory","lat":55.9333,"lng":-3.5833,"type":"abbey","slug":"torphichen-preceptory"},{"name":"Cairnpapple Hill","lat":55.95,"lng":-3.5833,"type":"castle","slug":"cairnpapple-hill"},{"name":"Kinneil House","lat":56,"lng":-3.5667,"type":"castle","slug":"kinneil-house"},{"name":"Callendar House","lat":56,"lng":-3.7833,"type":"castle","slug":"callendar-house"},{"name":"Kinfauns Castle","lat":56.3833,"lng":-3.3167,"type":"castle","slug":"kinfauns-castle"},{"name":"Fowlis Wester Sculptured Stone","lat":56.4,"lng":-3.7,"type":"abbey","slug":"fowlis-wester-sculptured-stone"},{"name":"Aberlemno Sculptured Stones","lat":56.7,"lng":-2.7833,"type":"abbey","slug":"aberlemno-sculptured-stones"},{"name":"Tealing Doocot","lat":56.5167,"lng":-2.9667,"type":"castle","slug":"tealing-doocot"},{"name":"Broughty Ferry Beach Castle","lat":56.4631,"lng":-2.8703,"type":"castle","slug":"broughty-ferry-beach-castle"},{"name":"Ethie Castle","lat":56.6333,"lng":-2.6167,"type":"castle","slug":"ethie-castle"},{"name":"Cortachy Castle","lat":56.7833,"lng":-3.05,"type":"castle","slug":"cortachy-castle"},{"name":"Airlie Castle","lat":56.75,"lng":-3.1,"type":"castle","slug":"airlie-castle"},{"name":"Kinnaird Castle","lat":56.7333,"lng":-2.55,"type":"castle","slug":"kinnaird-castle"},{"name":"House of Dun","lat":56.7167,"lng":-2.5833,"type":"castle","slug":"house-of-dun"},{"name":"St Vigeans Museum","lat":56.5667,"lng":-2.5833,"type":"abbey","slug":"st-vigeans-museum"},{"name":"Balintore Castle","lat":56.7167,"lng":-3.1333,"type":"castle","slug":"balintore-castle"},{"name":"Pitcur Souterrain","lat":56.55,"lng":-3.0833,"type":"castle","slug":"pitcur-souterrain"},{"name":"Ardestie Souterrain","lat":56.4833,"lng":-2.8833,"type":"castle","slug":"ardestie-souterrain"},{"name":"Caterthun Hill Forts","lat":56.8167,"lng":-2.75,"type":"castle","slug":"caterthun-hill-forts"},{"name":"Piperdam Resort","lat":56.55,"lng":-3.05,"type":"castle","slug":"piperdam-resort"},{"name":"Fowlis Easter Church","lat":56.4667,"lng":-3.2167,"type":"abbey","slug":"fowlis-easter-church"},{"name":"Mains Castle Dundee","lat":56.4833,"lng":-2.9333,"type":"castle","slug":"mains-castle-dundee"},{"name":"Powrie Castle","lat":56.5,"lng":-2.95,"type":"castle","slug":"powrie-castle"}];
+var colors={"castle":"#8b2335","palace":"#b8860b","abbey":"#2d5a3d","tower house":"#6b3a6b","fort":"#4a6fa5","fortified house":"#8b7355","monastery":"#2d5a3d","monument":"#666"};
+if(!sites.length)return;
+var map=L.map('countryMap',{scrollWheelZoom:false});
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
+var bounds=[];
+sites.forEach(function(s){
+var c=colors[s.type]||'#666';
+var m=L.circleMarker([s.lat,s.lng],{radius:5,fillColor:c,color:'#fff',weight:1,fillOpacity:.8}).addTo(map);
+m.bindPopup('<b>'+s.name+'</b><br><a href="site/'+s.slug+'.html">View site →</a>');
+bounds.push([s.lat,s.lng]);
+});
+if(bounds.length)map.fitBounds(bounds,{padding:[30,30]});
+})();
+</script>
+</body>
+</html>

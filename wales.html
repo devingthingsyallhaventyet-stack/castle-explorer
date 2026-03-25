@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>Castles in Wales — castlecore</title>
+<meta name="description" content="Explore 169 castles, abbeys and ruins across Wales. From Conwy to Caerphilly, discover the country with more castles per square mile than anywhere on Earth.">
+<link rel="canonical" href="https://castlecore.uk/wales.html">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--stone:#d4c5a9;--cream:#f0ebe0;--candlelight:#c9a84c;--burgundy:#8b2335;--forest:#2d5a3d;--ivy:#3d5a3e;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--border:#e8e8e8;--radius:12px;--pill:20px;--warm-white:#faf8f4}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--shadow);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white)}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px;margin-top:0}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:var(--shadow);transition:background .15s}
+.nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-drop-panel .drop-divider{height:1px;background:var(--border);margin:4px 0}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:420px;z-index:9999;margin-top:0;padding:0;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:var(--warm-white);border-right:1px solid var(--border);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:var(--burgundy);background:var(--cream)}
+.mega-country.active{color:var(--burgundy);background:#fff;border-left-color:var(--burgundy);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:var(--shadow);transition:background .15s,color .15s}
+.mega-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-search-wrap{position:relative;flex-shrink:1;max-width:200px}
+.nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white);transition:border-color .2s}
+.nav-search-wrap input:focus{border-color:var(--candlelight);background:#fff;box-shadow:0 0 0 2px rgba(201,168,76,.12)}
+.nav-search-wrap .nsi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.85rem;pointer-events:none}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:background .2s;display:inline-block}
+.nav-right .btn-explore:hover{background:#6e1a2a}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:10px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+@media(max-width:768px){
+.nav-center{display:none}
+.nav-right .btn-explore{display:none}
+.hamburger{display:block}
+}
+
+/* HERO */
+.country-hero{margin-top:64px;padding:80px 24px 64px;text-align:center;position:relative;overflow:hidden;background-blend-mode:overlay}
+.country-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.3),transparent 60%);pointer-events:none}
+.country-hero *{position:relative;z-index:1}
+.country-hero h1{font-size:clamp(2.2rem,5vw,3.4rem);color:#fff;margin-bottom:12px;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.country-hero .hero-desc{color:rgba(255,255,255,.9);font-size:1.05rem;max-width:720px;margin:0 auto 20px;line-height:1.7;font-family:'Playfair Display',serif;font-style:italic;text-shadow:0 1px 6px rgba(0,0,0,.2)}
+.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.hero-stat{text-align:center;color:#fff}
+.hero-stat .stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;display:block;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-stat .stat-label{font-size:.8rem;opacity:.8;text-transform:uppercase;letter-spacing:.5px}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1280px;margin:0 auto;padding:16px 24px;font-size:.85rem;color:var(--twilight)}
+.breadcrumb a{color:var(--twilight);transition:color .2s}
+.breadcrumb a:hover{color:var(--burgundy)}
+
+/* SECTIONS */
+section{padding:48px 24px}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.section-header h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.section-header h2::after{content:'';display:block;width:40px;height:2px;background:var(--burgundy);margin-top:6px;border-radius:1px;opacity:.6}
+.section-header a{color:var(--ivy);font-weight:600;font-size:.95rem}
+.section-tagline{color:var(--twilight);font-size:.95rem;margin-bottom:28px;font-family:'Playfair Display',serif;font-style:italic}
+.bg-cream{background:var(--cream)}
+
+/* REGION LINK CARDS */
+.region-link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.region-link-card{display:flex;flex-direction:column;align-items:center;gap:6px;padding:24px 16px;background:#fff;border:1px solid var(--border);border-radius:16px;transition:transform .2s,box-shadow .2s}
+.region-link-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(120,90,50,.1)}
+.rlc-icon{font-size:1.8rem}
+.rlc-name{font-weight:600;font-size:.95rem}
+.rlc-count{font-size:.8rem;color:var(--twilight)}
+
+/* COUNTY GRID */
+.county-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.county-card{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);transition:all .2s}
+.county-card:hover{border-color:var(--burgundy);transform:translateY(-2px);box-shadow:0 4px 16px rgba(120,90,50,.08)}
+.county-name{font-weight:500;font-size:.9rem}
+.county-count{font-size:.78rem;color:var(--twilight);white-space:nowrap}
+
+/* STAT BARS */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:768px){.stats-grid{grid-template-columns:1fr}}
+.stat-bar{margin-bottom:12px}
+.stat-bar-label{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:4px;text-transform:capitalize}
+.stat-bar-count{color:var(--twilight);font-size:.82rem}
+.stat-bar-track{height:8px;background:var(--cream);border-radius:4px;overflow:hidden}
+.stat-bar-fill{height:100%;background:var(--burgundy);border-radius:4px;transition:width .6s ease}
+
+/* FEATURED GRID */
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-card{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(120,90,50,.06)}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(120,90,50,.12)}
+.feat-img{height:200px;overflow:hidden}
+.feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.feat-card:hover .feat-img img{transform:scale(1.05)}
+.feat-body{padding:18px}
+.feat-body h3{font-size:1.1rem;margin-bottom:4px}
+.feat-loc{color:var(--twilight);font-size:.85rem;margin-bottom:8px}
+.feat-meta{display:flex;align-items:center;gap:8px}
+.type-pill{display:inline-block;background:var(--cream);color:var(--ivy);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:var(--pill);text-transform:capitalize}
+.card-rating{color:var(--candlelight);font-size:.85rem;font-weight:600}
+@media(max-width:768px){.featured-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.featured-grid{grid-template-columns:1fr}}
+
+/* MEDIEVAL CORNERS */
+.feat-card{position:relative}
+.feat-card::before,.feat-card::after{content:'';position:absolute;width:24px;height:24px;border-color:var(--candlelight);border-style:solid;opacity:.15;z-index:2;pointer-events:none}
+.feat-card::before{top:8px;left:8px;border-width:2px 0 0 2px;border-radius:4px 0 0 0}
+.feat-card::after{bottom:8px;right:8px;border-width:0 2px 2px 0;border-radius:0 0 4px 0}
+
+/* DIVIDER */
+.section-divider{display:flex;align-items:center;justify-content:center;padding:0 24px;max-width:1280px;margin:0 auto}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--hearth),transparent);opacity:.3}
+.divider-ornament{padding:0 20px;display:flex;align-items:center}
+.divider-ornament svg{width:60px;height:24px;fill:var(--hearth);opacity:.45}
+
+/* CTA */
+.country-cta{text-align:center;padding:64px 24px;background:var(--cream)}
+.country-cta h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px}
+.country-cta p{color:var(--twilight);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+.btn-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s;border:none;cursor:pointer;font-family:'Inter',sans-serif}
+.btn-cta:hover{background:#6e1a2a}
+
+/* FOOTER */
+footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:.85rem;max-width:280px}
+.footer-col h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;color:rgba(255,255,255,.5)}
+.footer-col a{display:block;color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+
+/* HERO PILLS */
+.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);color:#fff;padding:8px 18px;border-radius:var(--pill);font-size:.88rem;font-weight:500;transition:background .2s,transform .2s;border:1px solid rgba(255,255,255,.2)}
+.hero-pill:hover{background:rgba(255,255,255,.28);transform:translateY(-2px)}
+.hp-count{font-size:.75rem;opacity:.7}
+
+/* ERA CARDS */
+.era-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.era-card{display:flex;flex-direction:column;justify-content:flex-end;padding:28px 24px;border-radius:16px;color:#fff;min-height:180px;transition:transform .25s,box-shadow .25s;text-decoration:none;position:relative;overflow:hidden}
+.era-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
+.era-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 60%);pointer-events:none}
+.era-card>*{position:relative;z-index:1}
+.era-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:4px}
+.era-count{font-size:.85rem;opacity:.8;margin-bottom:6px}
+.era-tagline{font-size:.82rem;opacity:.7;font-style:italic;font-family:'Playfair Display',serif}
+
+/* FEAT HOOK */
+.feat-hook{font-style:italic;color:var(--twilight);font-size:.82rem;margin-top:4px;opacity:.75;line-height:1.4}
+
+/* MINI MAP */
+.mini-map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+#countryMap{height:400px;width:100%;z-index:1}
+.map-link{display:block;text-align:center;padding:12px;font-weight:600;color:var(--ivy);font-size:.95rem;background:#fff;border-top:1px solid var(--border)}
+.map-link:hover{color:var(--burgundy)}
+
+/* PRACTICAL INFO */
+.practical-box{background:#fdf8ef;border:1px solid #e8dcc8;border-radius:16px;padding:32px;margin-bottom:24px}
+.practical-box h3{font-size:1.3rem;margin-bottom:20px;text-align:center}
+.practical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+@media(max-width:600px){.practical-grid{grid-template-columns:repeat(2,1fr)}}
+.prac-item .prac-icon{font-size:1.8rem;display:block;margin-bottom:6px}
+.prac-item .prac-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--burgundy);display:block}
+.prac-item .prac-label{font-size:.82rem;color:var(--twilight)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
+<div class="nav-center">
+<div class="nav-dropdown">
+<button class="nav-drop-btn">🏰 Sites <span style="font-size:.6rem">▼</span></button>
+<div class="nav-drop-panel">
+<a href="search.html?type=castle">🏰 Castles</a>
+<a href="search.html?type=abbey">⛪ Abbeys</a>
+<a href="search.html?type=tower+house">🗼 Tower Houses</a>
+<a href="search.html?type=palace">👑 Palaces</a>
+<a href="search.html?type=fort">🛡️ Forts</a>
+<a href="search.html?type=fortified+house">🏠 Fortified Houses</a>
+</div>
+</div>
+<div class="nav-dropdown mega-wrap">
+<button class="nav-drop-btn">🗺️ Regions <span style="font-size:.6rem">▼</span></button>
+<div class="mega-menu">
+<div class="mega-countries">
+<button class="mega-country active" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</button>
+<button class="mega-country" data-country="scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</button>
+<button class="mega-country" data-country="wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</button>
+<button class="mega-country" data-country="ireland">🍀 Ireland</button>
+</div>
+<div class="mega-regions">
+<div class="mega-panel active" data-country="england">
+<a href="region.html?id=london-surrey">London &amp; Surrey</a>
+<a href="region.html?id=south-east-england">South East</a>
+<a href="region.html?id=south-west-england">South West</a>
+<a href="region.html?id=northern-england">Northern England</a>
+<a href="region.html?id=midlands">The Midlands</a>
+<a href="region.html?id=yorkshire">Yorkshire</a>
+<a href="region.html?id=east-anglia">East Anglia</a>
+</div>
+<div class="mega-panel" data-country="scotland">
+<a href="region.html?id=scottish-highlands">Highlands</a>
+<a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
+</div>
+<div class="mega-panel" data-country="wales">
+<a href="region.html?id=north-wales">North Wales</a>
+<a href="region.html?id=south-wales">South Wales</a>
+</div>
+<div class="mega-panel" data-country="ireland">
+<a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
+<a href="region.html?id=south-east-ireland">South East</a>
+<a href="region.html?id=south-west-ireland">South West</a>
+<a href="region.html?id=west-ireland">West</a>
+<a href="region.html?id=midlands-ireland">Midlands</a>
+<a href="region.html?id=north-west-ireland">North West</a>
+<a href="region.html?id=northern-ireland">Northern Ireland</a>
+</div>
+</div>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-drop-btn">✨ Collections <span style="font-size:.6rem">▼</span></button>
+<div class="nav-drop-panel">
+<a href="collection.html?id=top-rated">🏆 Top Rated</a>
+<a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
+<a href="collection.html?id=haunted">👻 Haunted</a>
+<a href="collection.html?id=filming-locations">🎬 Filming Locations</a>
+<a href="collection.html?id=free">🆓 Free to Visit</a>
+<a href="collection.html?id=romantic-ruins">🌿 Romantic Ruins</a>
+<a href="collection.html?id=photogenic">📸 Most Photogenic</a>
+<div class="drop-divider"></div>
+<a href="collection.html">View all collections →</a>
+</div>
+</div>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">🛤️ Routes</a>
+<div class="nav-search-wrap">
+<span class="nsi">🔍</span>
+<input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off">
+</div>
+</div>
+<div class="nav-right">
+<a href="explore.html" class="btn-explore">🧭 Explore Map</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
+
+<!-- MOBILE MENU (simplified) -->
+<div class="mobile-menu">
+<a href="/" style="color:var(--burgundy);font-weight:700">🏠 Home</a>
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
+<span class="mob-heading">Countries</span>
+<div class="mob-sub">
+<a href="england.html">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</a>
+<a href="scotland.html">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</a>
+<a href="wales.html">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a>
+<a href="ireland.html">🍀 Ireland</a>
+<a href="northern-ireland.html">🛡️ Northern Ireland</a>
+</div>
+<span class="mob-heading">✨ Collections</span>
+<div class="mob-sub">
+<a href="collection.html?id=top-rated">🏆 Top Rated</a>
+<a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
+<a href="collection.html?id=haunted">👻 Haunted</a>
+<a href="collection.html?id=free">🆓 Free to Visit</a>
+<a href="collection.html">View all →</a>
+</div>
+<a href="trail.html">🛤️ Routes</a>
+</div>
+
+<!-- HERO -->
+<div class="country-hero" style="background-image:linear-gradient(135deg, #6b2a1a 0%, #8e4a2a 40%, #5a2010 100%), url('img/conwy.jpg');background-size:cover;background-position:center">
+<h1>🏴󠁧󠁢󠁷󠁬󠁳󠁿 Castles in Wales</h1>
+<p class="hero-desc">More castles per square mile than anywhere in the world. Edward I's legendary Iron Ring fortresses, native Welsh strongholds built into mountain passes, and crumbling towers guarding river valleys — Wales is a castle-lover's paradise wrapped in myth and wild beauty.</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="stat-num">169</span><span class="stat-label">Sites</span></div>
+<div class="hero-stat"><span class="stat-num">11</span><span class="stat-label">Types</span></div>
+<div class="hero-stat"><span class="stat-num">21</span><span class="stat-label">Counties</span></div>
+</div>
+<div class="hero-pills">
+<a class="hero-pill" href="search.html?tag=free-entry&region=Wales">🆓 Free Entry <span class="hp-count">79</span></a>
+<a class="hero-pill" href="search.html?tag=kid-friendly&region=Wales">👨‍👩‍👧 Family Friendly <span class="hp-count">24</span></a>
+<a class="hero-pill" href="search.html?condition=ruin&region=Wales">🏚️ Ruins <span class="hp-count">101</span></a>
+<a class="hero-pill" href="search.html?condition=intact&region=Wales">🏰 Intact <span class="hp-count">27</span></a>
+<a class="hero-pill" href="search.html?tag=photogenic&region=Wales">📸 Photogenic <span class="hp-count">67</span></a>
+</div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+<a href="/">Home</a> › <strong>Wales</strong>
+</div>
+
+
+<!-- REGIONS -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>Explore by Region</h2></div>
+<p class="section-tagline">Dive deeper into Wales's regions</p>
+<div class="region-link-grid">
+<a class="region-link-card" href="region.html?id=north-wales"><span class="rlc-icon">🏔️</span><span class="rlc-name">North Wales</span><span class="rlc-count">49 sites</span></a><a class="region-link-card" href="region.html?id=south-wales"><span class="rlc-icon">🏰</span><span class="rlc-name">South Wales</span><span class="rlc-count">120 sites</span></a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+
+
+<!-- ERAS -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>Sites Through the Centuries</h2></div>
+<p class="section-tagline">From ancient hillforts to Victorian follies — explore by era</p>
+<div class="era-grid">
+<a class="era-card" href="search.html?era=13th%20century,14th%20century,15th%20century&region=Wales" style="background:linear-gradient(135deg,#2d5a3d 0%,#2d5a3ddd 100%)">
+<span class="era-name">Medieval</span>
+<span class="era-count">45 sites</span>
+<span class="era-tagline">The golden age of chivalry and towering curtain walls</span>
+</a>
+<a class="era-card" href="search.html?era=11th%20century,12th%20century&region=Wales" style="background:linear-gradient(135deg,#8b2335 0%,#8b2335dd 100%)">
+<span class="era-name">Norman</span>
+<span class="era-count">40 sites</span>
+<span class="era-tagline">Conquest, keeps, and the clash of iron on stone</span>
+</a>
+<a class="era-card" href="search.html?era=18th%20century,19th%20century&region=Wales" style="background:linear-gradient(135deg,#b8860b 0%,#b8860bdd 100%)">
+<span class="era-name">Georgian &amp; Victorian</span>
+<span class="era-count">11 sites</span>
+<span class="era-tagline">Romantic revival and the age of the country house</span>
+</a>
+<a class="era-card" href="search.html?era=16th%20century&region=Wales" style="background:linear-gradient(135deg,#1a2a4a 0%,#1a2a4add 100%)">
+<span class="era-name">Tudor</span>
+<span class="era-count">5 sites</span>
+<span class="era-tagline">Palaces of power in an age of reformation</span>
+</a>
+<a class="era-card" href="search.html?era=17th%20century&region=Wales" style="background:linear-gradient(135deg,#6b3a6b 0%,#6b3a6bdd 100%)">
+<span class="era-name">Stuart</span>
+<span class="era-count">3 sites</span>
+<span class="era-tagline">Civil war strongholds and baroque grandeur</span>
+</a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+
+<!-- FEATURED -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>Must-Visit Sites</h2></div>
+<p class="section-tagline">The best of Wales's heritage</p>
+<div class="featured-grid">
+<a class="feat-card" href="site/conwy-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/500px-Conwy_Castle%2C_water_view1.jpg" alt="Conwy Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Conwy Castle</h3><p class="feat-loc">Conwy, Wales</p><p class="feat-hook">Built by Edward I between 1283-1287, Conwy Castle is one of the finest surviv…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.6</span></div></div>
+</a>
+<a class="feat-card" href="site/caernarfon-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Caernarfon_Castle_1994.jpg/500px-Caernarfon_Castle_1994.jpg" alt="Caernarfon Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Caernarfon Castle</h3><p class="feat-loc">Gwynedd, Wales</p><p class="feat-hook">Edward I's most ambitious castle, Caernarfon was designed to echo the walls o…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.6</span></div></div>
+</a>
+<a class="feat-card" href="site/harlech-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/500px-Harlech_Castle_-_Cadw_photograph.jpg" alt="Harlech Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Harlech Castle</h3><p class="feat-loc">Gwynedd, Wales</p><p class="feat-hook">Perched on a rocky crag with views across Snowdonia and Cardigan Bay, Harlech…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
+</a>
+<a class="feat-card" href="site/caerphilly-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Caerphilly_aerial.jpg/500px-Caerphilly_aerial.jpg" alt="Caerphilly Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Caerphilly Castle</h3><p class="feat-loc">Caerphilly, Wales</p><p class="feat-hook">The largest castle in Wales and second largest in Britain, Caerphilly introdu…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
+</a>
+<a class="feat-card" href="site/pembroke-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Kidwelly_castle_whole.JPG/500px-Kidwelly_castle_whole.JPG" alt="Pembroke Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Pembroke Castle</h3><p class="feat-loc">Pembrokeshire, Wales</p><p class="feat-hook">Birthplace of Henry VII, founder of the Tudor dynasty, Pembroke Castle featur…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.6</span></div></div>
+</a>
+<a class="feat-card" href="site/raglan-castle.html">
+<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pembroke_Castle_-_June_2011.jpg/500px-Pembroke_Castle_-_June_2011.jpg" alt="Raglan Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="feat-body"><h3>Raglan Castle</h3><p class="feat-loc">Monmouthshire, Wales</p><p class="feat-hook">A late medieval castle with grand hexagonal keep known as the Great Tower, Ra…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
+</a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+<!-- BROWSE BY COUNTY -->
+<section class="bg-cream">
+<div class="section-inner">
+<div class="section-header"><h2>Browse by County</h2><a href="search.html?region=Wales">View all →</a></div>
+<p class="section-tagline">Find sites in every corner of Wales</p>
+<div class="county-grid">
+<a class="county-card" href="search.html?region=Pembrokeshire"><span class="county-name">Pembrokeshire</span><span class="county-count">24 sites</span></a><a class="county-card" href="search.html?region=Powys"><span class="county-name">Powys</span><span class="county-count">19 sites</span></a><a class="county-card" href="search.html?region=Carmarthenshire"><span class="county-name">Carmarthenshire</span><span class="county-count">17 sites</span></a><a class="county-card" href="search.html?region=Monmouthshire"><span class="county-name">Monmouthshire</span><span class="county-count">16 sites</span></a><a class="county-card" href="search.html?region=Gwynedd"><span class="county-name">Gwynedd</span><span class="county-count">15 sites</span></a><a class="county-card" href="search.html?region=Anglesey"><span class="county-name">Anglesey</span><span class="county-count">10 sites</span></a><a class="county-card" href="search.html?region=Ceredigion"><span class="county-name">Ceredigion</span><span class="county-count">9 sites</span></a><a class="county-card" href="search.html?region=Vale%20of%20Glamorgan"><span class="county-name">Vale of Glamorgan</span><span class="county-count">9 sites</span></a><a class="county-card" href="search.html?region=Conwy"><span class="county-name">Conwy</span><span class="county-count">8 sites</span></a><a class="county-card" href="search.html?region=Swansea"><span class="county-name">Swansea</span><span class="county-count">8 sites</span></a><a class="county-card" href="search.html?region=Flintshire"><span class="county-name">Flintshire</span><span class="county-count">6 sites</span></a><a class="county-card" href="search.html?region=Denbighshire"><span class="county-name">Denbighshire</span><span class="county-count">6 sites</span></a>
+</div>
+</div>
+</section>
+
+<!-- MINI MAP -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>All Sites on the Map</h2></div>
+<p class="section-tagline">Every heritage site in Wales at a glance</p>
+<div class="mini-map-wrap">
+<div id="countryMap"></div>
+<a class="map-link" href="explore.html">View full map →</a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+<!-- STATS -->
+<section>
+<div class="section-inner">
+<div class="section-header"><h2>At a Glance</h2></div>
+<p class="section-tagline">169 heritage sites across 21 counties</p>
+<div class="stats-grid">
+<div>
+<h3 style="font-size:1.1rem;margin-bottom:16px;color:var(--twilight)">By Type</h3>
+<div class="stat-bar"><div class="stat-bar-label"><span>🏰 castle</span><span class="stat-bar-count">104</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:62%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>⛪ abbey</span><span class="stat-bar-count">17</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:10%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>🏛️ historic-house</span><span class="stat-bar-count">14</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:8%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>🛡️ fort</span><span class="stat-bar-count">10</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:6%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>🗿 monument</span><span class="stat-bar-count">10</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:6%"></div></div></div><div class="stat-bar"><div class="stat-bar-label"><span>🏛️ hillfort</span><span class="stat-bar-count">7</span></div><div class="stat-bar-track"><div class="stat-bar-fill" style="width:4%"></div></div></div>
+</div>
+<div>
+<h3 style="font-size:1.1rem;margin-bottom:16px;color:var(--twilight)">Top Rated</h3>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">1</span><div style="flex:1"><a href="site/tintern-abbey.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Tintern Abbey</a><div style="font-size:.78rem;color:var(--twilight)">Monmouthshire · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">2</span><div style="flex:1"><a href="site/st-david-s-cathedral.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">St David's Cathedral</a><div style="font-size:.78rem;color:var(--twilight)">Pembrokeshire · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">3</span><div style="flex:1"><a href="site/bodnant-garden.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Bodnant Garden</a><div style="font-size:.78rem;color:var(--twilight)">Conwy · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">4</span><div style="flex:1"><a href="site/conwy-castle.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Conwy Castle</a><div style="font-size:.78rem;color:var(--twilight)">Conwy · ★ 4.6</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">5</span><div style="flex:1"><a href="site/caernarfon-castle.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Caernarfon Castle</a><div style="font-size:.78rem;color:var(--twilight)">Gwynedd · ★ 4.6</div></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PRACTICAL INFO -->
+<section>
+<div class="section-inner">
+<div class="practical-box">
+<h3>📋 Planning Your Visit</h3>
+<div class="practical-grid">
+<div class="prac-item"><span class="prac-icon">🆓</span><span class="prac-num">79</span><span class="prac-label">Free Entry</span></div>
+<div class="prac-item"><span class="prac-icon">☕</span><span class="prac-num">8</span><span class="prac-label">Tearoom / Café</span></div>
+<div class="prac-item"><span class="prac-icon">🐕</span><span class="prac-num">4</span><span class="prac-label">Dog Friendly</span></div>
+<div class="prac-item"><span class="prac-icon">👨‍👩‍👧</span><span class="prac-num">24</span><span class="prac-label">Family Friendly</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="country-cta">
+<h2>Explore Wales on the Map</h2>
+<p>See every castle, abbey, and ruin plotted across Wales — filter by type, era, and more</p>
+<a href="explore.html" class="btn-cta">🧭 Open the Map</a>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="footer-logo"><img src="logo.png" alt="castlecore" style="height:32px;width:auto;border-radius:4px;vertical-align:middle;margin-right:8px">castlecore</div>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+</div>
+<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="collection.html">Collections</a><a href="trail.html">Routes</a></div>
+<div class="footer-col"><h4>Countries</h4><a href="england.html">England</a><a href="scotland.html">Scotland</a><a href="wales.html">Wales</a><a href="ireland.html">Ireland</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div>
+<div class="footer-bottom">
+<span>Built with ❤️ for history lovers</span>
+<span>© 2026 castlecore</span>
+</div>
+</div>
+</footer>
+
+<script>
+/* Mega menu hover */
+document.querySelectorAll('.mega-country').forEach(btn=>{
+btn.addEventListener('mouseenter',function(){
+const c=this.dataset.country;
+this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+this.classList.add('active');
+this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+});
+});
+/* Nav search */
+document.getElementById('navSearch').addEventListener('keydown',function(e){
+if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
+});
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+var sites=[{"name":"Conwy Castle","lat":53.2802,"lng":-3.8265,"type":"castle","slug":"conwy-castle"},{"name":"Caernarfon Castle","lat":53.1393,"lng":-4.2769,"type":"castle","slug":"caernarfon-castle"},{"name":"Harlech Castle","lat":52.8602,"lng":-4.1094,"type":"castle","slug":"harlech-castle"},{"name":"Beaumaris Castle","lat":53.2628,"lng":-4.0906,"type":"castle","slug":"beaumaris-castle"},{"name":"Flint Castle","lat":53.2479,"lng":-3.134,"type":"castle","slug":"flint-castle"},{"name":"Aberystwyth Castle","lat":52.4154,"lng":-4.0876,"type":"castle","slug":"aberystwyth-castle"},{"name":"Rhuddlan Castle","lat":53.2893,"lng":-3.4636,"type":"castle","slug":"rhuddlan-castle"},{"name":"Caerphilly Castle","lat":51.576,"lng":-3.22,"type":"castle","slug":"caerphilly-castle"},{"name":"Cardiff Castle","lat":51.4822,"lng":-3.181,"type":"castle","slug":"cardiff-castle"},{"name":"Castell Coch","lat":51.5321,"lng":-3.2548,"type":"castle","slug":"castell-coch"},{"name":"Raglan Castle","lat":51.7673,"lng":-2.8514,"type":"castle","slug":"raglan-castle"},{"name":"Pembroke Castle","lat":51.6746,"lng":-4.9838,"type":"castle","slug":"pembroke-castle"},{"name":"Kidwelly Castle","lat":51.7383,"lng":-4.3108,"type":"castle","slug":"kidwelly-castle"},{"name":"Carreg Cennen Castle","lat":51.8556,"lng":-3.9379,"type":"castle","slug":"carreg-cennen-castle"},{"name":"Laugharne Castle","lat":51.7712,"lng":-4.4625,"type":"castle","slug":"laugharne-castle"},{"name":"Llansteffan Castle","lat":51.7674,"lng":-4.3863,"type":"castle","slug":"llansteffan-castle"},{"name":"Oystermouth Castle","lat":51.5718,"lng":-3.9918,"type":"castle","slug":"oystermouth-castle"},{"name":"Neath Abbey","lat":51.6544,"lng":-3.8004,"type":"abbey","slug":"neath-abbey"},{"name":"Ewenny Priory","lat":51.4771,"lng":-3.5251,"type":"abbey","slug":"ewenny-priory"},{"name":"Margam Abbey","lat":51.5549,"lng":-3.7299,"type":"abbey","slug":"margam-abbey"},{"name":"Chepstow Castle","lat":51.6442,"lng":-2.6747,"type":"castle","slug":"chepstow-castle"},{"name":"Tintern Abbey","lat":51.6966,"lng":-2.6783,"type":"abbey","slug":"tintern-abbey"},{"name":"White Castle","lat":51.8095,"lng":-2.8817,"type":"castle","slug":"white-castle"},{"name":"Skenfrith Castle","lat":51.8545,"lng":-2.7834,"type":"castle","slug":"skenfrith-castle"},{"name":"Grosmont Castle","lat":51.8872,"lng":-2.8636,"type":"castle","slug":"grosmont-castle"},{"name":"Denbigh Castle","lat":53.1841,"lng":-3.4172,"type":"castle","slug":"denbigh-castle"},{"name":"Criccieth Castle","lat":52.917,"lng":-4.2325,"type":"castle","slug":"criccieth-castle"},{"name":"Dolbadarn Castle","lat":53.118,"lng":-4.1166,"type":"tower house","slug":"dolbadarn-castle"},{"name":"Dolwyddelan Castle","lat":52.9997,"lng":-3.8866,"type":"castle","slug":"dolwyddelan-castle"},{"name":"Castell y Bere","lat":52.692,"lng":-3.952,"type":"castle","slug":"castell-y-bere"},{"name":"Ewloe Castle","lat":53.1817,"lng":-3.0742,"type":"castle","slug":"ewloe-castle"},{"name":"Chirk Castle","lat":52.9369,"lng":-3.1007,"type":"castle","slug":"chirk-castle"},{"name":"Powis Castle","lat":52.661,"lng":-3.1669,"type":"castle","slug":"powis-castle"},{"name":"Montgomery Castle","lat":52.5621,"lng":-3.1504,"type":"castle","slug":"montgomery-castle"},{"name":"Bronllys Castle","lat":51.9565,"lng":-3.2447,"type":"castle","slug":"bronllys-castle"},{"name":"Strata Florida Abbey","lat":52.2891,"lng":-3.828,"type":"abbey","slug":"strata-florida-abbey"},{"name":"Talley Abbey","lat":51.9581,"lng":-3.9189,"type":"abbey","slug":"talley-abbey"},{"name":"Valle Crucis Abbey","lat":52.9838,"lng":-3.1767,"type":"abbey","slug":"valle-crucis-abbey"},{"name":"Basingwerk Abbey","lat":53.2723,"lng":-3.2209,"type":"abbey","slug":"basingwerk-abbey"},{"name":"Cymer Abbey","lat":52.7766,"lng":-3.9265,"type":"abbey","slug":"cymer-abbey"},{"name":"Manorbier Castle","lat":51.644,"lng":-4.7967,"type":"castle","slug":"manorbier-castle"},{"name":"Carew Castle","lat":51.6899,"lng":-4.8434,"type":"castle","slug":"carew-castle"},{"name":"Cilgerran Castle","lat":52.0838,"lng":-4.6846,"type":"castle","slug":"cilgerran-castle"},{"name":"Llawhaden Castle","lat":51.8355,"lng":-4.7995,"type":"castle","slug":"llawhaden-castle"},{"name":"Ogmore Castle","lat":51.4732,"lng":-3.5933,"type":"castle","slug":"ogmore-castle"},{"name":"Coity Castle","lat":51.5259,"lng":-3.5491,"type":"castle","slug":"coity-castle"},{"name":"Weobley Castle","lat":51.5926,"lng":-4.166,"type":"fortified house","slug":"weobley-castle"},{"name":"Pennard Castle","lat":51.566,"lng":-4.0784,"type":"castle","slug":"pennard-castle"},{"name":"Ruthin Castle","lat":53.1147,"lng":-3.3124,"type":"castle","slug":"ruthin-castle"},{"name":"Caldicot Castle","lat":51.5833,"lng":-2.7167,"type":"castle","slug":"caldicot-castle"},{"name":"Usk Castle","lat":51.7,"lng":-2.9,"type":"castle","slug":"usk-castle"},{"name":"Abergavenny Castle","lat":51.8167,"lng":-3.0167,"type":"castle","slug":"abergavenny-castle"},{"name":"Picton Castle","lat":51.7833,"lng":-4.8667,"type":"castle","slug":"picton-castle"},{"name":"Hay Castle","lat":52.075,"lng":-3.125,"type":"castle","slug":"hay-castle"},{"name":"Builth Castle","lat":52.15,"lng":-3.4,"type":"castle","slug":"builth-castle"},{"name":"Penmon Priory","lat":53.3167,"lng":-4.05,"type":"abbey","slug":"penmon-priory"},{"name":"Dolforwyn Castle","lat":52.5333,"lng":-3.3,"type":"castle","slug":"dolforwyn-castle"},{"name":"Drysllwyn Castle","lat":51.8667,"lng":-4.05,"type":"castle","slug":"drysllwyn-castle"},{"name":"Newcastle Emlyn Castle","lat":52.0333,"lng":-4.4667,"type":"castle","slug":"newcastle-emlyn-castle"},{"name":"Narberth Castle","lat":51.7967,"lng":-4.7417,"type":"castle","slug":"narberth-castle"},{"name":"Haverfordwest Castle","lat":51.8017,"lng":-4.9683,"type":"castle","slug":"haverfordwest-castle"},{"name":"Wiston Castle","lat":51.8333,"lng":-4.8833,"type":"castle","slug":"wiston-castle"},{"name":"Cardigan Castle","lat":52.0833,"lng":-4.6583,"type":"castle","slug":"cardigan-castle"},{"name":"Newport Castle","lat":51.584,"lng":-2.993,"type":"castle","slug":"newport-castle"},{"name":"Swansea Castle","lat":51.622,"lng":-3.941,"type":"castle","slug":"swansea-castle"},{"name":"Hawarden Castle","lat":53.187,"lng":-3.031,"type":"castle","slug":"hawarden-castle"},{"name":"Caergwrle Castle","lat":53.114,"lng":-3.057,"type":"castle","slug":"caergwrle-castle"},{"name":"Deganwy Castle","lat":53.294,"lng":-3.819,"type":"castle","slug":"deganwy-castle"},{"name":"Crickhowell Castle","lat":51.86,"lng":-3.139,"type":"castle","slug":"crickhowell-castle"},{"name":"Oxwich Castle","lat":51.554,"lng":-4.148,"type":"castle","slug":"oxwich-castle"},{"name":"Loughor Castle","lat":51.662,"lng":-4.062,"type":"castle","slug":"loughor-castle"},{"name":"Fonmon Castle","lat":51.396,"lng":-3.448,"type":"castle","slug":"fonmon-castle"},{"name":"Llantrithyd Place","lat":51.439,"lng":-3.415,"type":"castle","slug":"llantrithyd-place"},{"name":"Tenby Castle","lat":51.672,"lng":-4.7,"type":"castle","slug":"tenby-castle"},{"name":"Angle Tower","lat":51.68,"lng":-5.089,"type":"castle","slug":"angle-tower"},{"name":"Roch Castle","lat":51.833,"lng":-5.073,"type":"castle","slug":"roch-castle"},{"name":"Upton Castle","lat":51.714,"lng":-4.901,"type":"castle","slug":"upton-castle"},{"name":"Llandovery Castle","lat":51.995,"lng":-3.802,"type":"castle","slug":"llandovery-castle"},{"name":"Aberglasney House","lat":51.856,"lng":-4.028,"type":"castle","slug":"aberglasney-house"},{"name":"Tregaron Castle Mound","lat":52.218,"lng":-3.931,"type":"motte","slug":"tregaron-castle-mound"},{"name":"Tomen y Mur","lat":52.894,"lng":-3.894,"type":"fort","slug":"tomen-y-mur"},{"name":"Castell Collen","lat":52.251,"lng":-3.551,"type":"fort","slug":"castell-collen"},{"name":"Painscastle","lat":52.125,"lng":-3.242,"type":"castle","slug":"painscastle"},{"name":"Castell Aberlleiniog","lat":53.273,"lng":-4.121,"type":"castle","slug":"castell-aberlleiniog"},{"name":"Nevern Castle","lat":51.998,"lng":-4.768,"type":"castle","slug":"nevern-castle"},{"name":"Castell Henllys","lat":52.015,"lng":-4.728,"type":"hillfort","slug":"castell-henllys"},{"name":"Newport Castle (Pembs Main)","lat":52.018,"lng":-4.838,"type":"castle","slug":"newport-castle-pembs-main"},{"name":"Castell Abereinion","lat":52.358,"lng":-3.718,"type":"castle","slug":"castell-abereinion"},{"name":"Castell Gwallter","lat":52.258,"lng":-4.058,"type":"motte","slug":"castell-gwallter"},{"name":"Cefnllys Castle","lat":52.268,"lng":-3.348,"type":"castle","slug":"cefnllys-castle"},{"name":"Mathrafal Castle","lat":52.668,"lng":-3.408,"type":"castle","slug":"mathrafal-castle"},{"name":"Penhow Castle","lat":51.598,"lng":-2.878,"type":"castle","slug":"penhow-castle"},{"name":"Dinas Emrys","lat":53.028,"lng":-4.058,"type":"hillfort","slug":"dinas-emrys"},{"name":"Castell Prysor","lat":52.848,"lng":-3.848,"type":"castle","slug":"castell-prysor"},{"name":"Castell Carndochan","lat":52.828,"lng":-3.748,"type":"castle","slug":"castell-carndochan"},{"name":"Margam Castle","lat":51.558,"lng":-3.728,"type":"castle","slug":"margam-castle"},{"name":"Lamphey Bishop's Palace","lat":51.668,"lng":-4.858,"type":"palace","slug":"lamphey-bishop-s-palace"},{"name":"Dinas Bran Keep","lat":52.978,"lng":-3.168,"type":"castle","slug":"dinas-bran-keep"},{"name":"Llanthony Priory","lat":51.9472,"lng":-3.0358,"type":"abbey","slug":"llanthony-priory"},{"name":"Cwmhir Abbey","lat":52.3197,"lng":-3.3911,"type":"abbey","slug":"cwmhir-abbey"},{"name":"Llanblethian Castle","lat":51.4597,"lng":-3.4347,"type":"castle","slug":"llanblethian-castle"},{"name":"Candleston Castle","lat":51.4889,"lng":-3.7264,"type":"castle","slug":"candleston-castle"},{"name":"Llandaff Cathedral","lat":51.4958,"lng":-3.2181,"type":"abbey","slug":"llandaff-cathedral"},{"name":"Nanteos Mansion","lat":52.3667,"lng":-3.8833,"type":"historic-house","slug":"nanteos-mansion"},{"name":"Castell Dinas","lat":51.9522,"lng":-3.1578,"type":"castle","slug":"castell-dinas"},{"name":"Garn Goch","lat":51.8833,"lng":-3.7833,"type":"hillfort","slug":"garn-goch"},{"name":"Dunraven Castle","lat":51.4486,"lng":-3.6081,"type":"castle","slug":"dunraven-castle"},{"name":"Caerau Hillfort","lat":51.4667,"lng":-3.2417,"type":"hillfort","slug":"caerau-hillfort"},{"name":"Old Beaupre Castle","lat":51.4497,"lng":-3.4508,"type":"castle","slug":"old-beaupre-castle"},{"name":"St Donat's Castle","lat":51.4028,"lng":-3.5611,"type":"castle","slug":"st-donat-s-castle"},{"name":"Sully Island Fort","lat":51.395,"lng":-3.195,"type":"fort","slug":"sully-island-fort"},{"name":"Ruperra Castle","lat":51.5611,"lng":-3.1306,"type":"castle","slug":"ruperra-castle"},{"name":"Morlais Castle","lat":51.7828,"lng":-3.3778,"type":"castle","slug":"morlais-castle"},{"name":"Castell Morgraig","lat":51.5194,"lng":-3.2083,"type":"castle","slug":"castell-morgraig"},{"name":"St Fagans Castle","lat":51.4872,"lng":-3.2742,"type":"castle","slug":"st-fagans-castle"},{"name":"Penrice Castle","lat":51.5778,"lng":-4.1361,"type":"castle","slug":"penrice-castle"},{"name":"Cefn Bryn Arthur's Stone","lat":51.5917,"lng":-4.1778,"type":"monument","slug":"cefn-bryn-arthur-s-stone"},{"name":"Llanmelin Wood Hillfort","lat":51.62,"lng":-2.75,"type":"hillfort","slug":"llanmelin-wood-hillfort"},{"name":"Caerwent Roman Town","lat":51.6111,"lng":-2.7694,"type":"fort","slug":"caerwent-roman-town"},{"name":"Caerleon Amphitheatre","lat":51.6131,"lng":-2.9528,"type":"fort","slug":"caerleon-amphitheatre"},{"name":"Tredegar House","lat":51.5597,"lng":-3.0167,"type":"historic-house","slug":"tredegar-house"},{"name":"Blaenavon Ironworks","lat":51.7739,"lng":-3.0872,"type":"industrial","slug":"blaenavon-ironworks"},{"name":"Llangattock Escarpment","lat":51.825,"lng":-3.15,"type":"monument","slug":"llangattock-escarpment"},{"name":"Tretower Court","lat":51.8558,"lng":-3.2119,"type":"historic-house","slug":"tretower-court"},{"name":"Craig y Nos Castle","lat":51.8361,"lng":-3.6861,"type":"castle","slug":"craig-y-nos-castle"},{"name":"Dinefwr Park","lat":51.8667,"lng":-3.9917,"type":"historic-house","slug":"dinefwr-park"},{"name":"Paxton's Tower","lat":51.8528,"lng":-4.0361,"type":"monument","slug":"paxton-s-tower"},{"name":"Dryslwyn Castle Viewpoint","lat":51.8611,"lng":-4.0361,"type":"castle","slug":"dryslwyn-castle-viewpoint"},{"name":"Whitland Abbey","lat":51.8167,"lng":-4.6139,"type":"abbey","slug":"whitland-abbey"},{"name":"St David's Cathedral","lat":51.8819,"lng":-5.2694,"type":"abbey","slug":"st-david-s-cathedral"},{"name":"Benton Castle Exterior","lat":51.7417,"lng":-4.9417,"type":"castle","slug":"benton-castle-exterior"},{"name":"Pentre Ifan","lat":51.9986,"lng":-4.7697,"type":"monument","slug":"pentre-ifan"},{"name":"Carreg Coetan Arthur","lat":52.0167,"lng":-4.8333,"type":"monument","slug":"carreg-coetan-arthur"},{"name":"Gateholm Island","lat":51.7333,"lng":-5.2333,"type":"fort","slug":"gateholm-island"},{"name":"St Non's Chapel","lat":51.8761,"lng":-5.275,"type":"abbey","slug":"st-non-s-chapel"},{"name":"Amroth Castle","lat":51.7333,"lng":-4.65,"type":"castle","slug":"amroth-castle"},{"name":"Hafod Estate","lat":52.3333,"lng":-3.8167,"type":"historic-house","slug":"hafod-estate"},{"name":"New Quay Honey Farm & Castle","lat":52.2153,"lng":-4.3569,"type":"castle","slug":"new-quay-honey-farm-castle"},{"name":"Dolaucothi Gold Mines","lat":52.0417,"lng":-3.9333,"type":"industrial","slug":"dolaucothi-gold-mines"},{"name":"Dynevor Castle","lat":51.875,"lng":-4,"type":"castle","slug":"dynevor-castle"},{"name":"Plas Mawr","lat":53.2819,"lng":-3.8283,"type":"historic-house","slug":"plas-mawr"},{"name":"Gwydir Castle","lat":53.1506,"lng":-3.7978,"type":"castle","slug":"gwydir-castle"},{"name":"Bodysgallen Hall","lat":53.275,"lng":-3.8167,"type":"historic-house","slug":"bodysgallen-hall"},{"name":"Segontium Roman Fort","lat":53.1361,"lng":-4.2806,"type":"fort","slug":"segontium-roman-fort"},{"name":"Penrhyn Castle","lat":53.2278,"lng":-4.0917,"type":"castle","slug":"penrhyn-castle"},{"name":"Aber Falls Fort","lat":53.2167,"lng":-3.9833,"type":"fort","slug":"aber-falls-fort"},{"name":"Bryn Celli Ddu","lat":53.2072,"lng":-4.2361,"type":"monument","slug":"bryn-celli-ddu"},{"name":"Barclodiad y Gawres","lat":53.225,"lng":-4.5083,"type":"monument","slug":"barclodiad-y-gawres"},{"name":"Din Lligwy","lat":53.35,"lng":-4.2667,"type":"fort","slug":"din-lligwy"},{"name":"Lligwy Burial Chamber","lat":53.3528,"lng":-4.2667,"type":"monument","slug":"lligwy-burial-chamber"},{"name":"Holyhead Mountain Hut Group","lat":53.3194,"lng":-4.6861,"type":"fort","slug":"holyhead-mountain-hut-group"},{"name":"Caer y Twr","lat":53.3194,"lng":-4.6889,"type":"hillfort","slug":"caer-y-twr"},{"name":"South Stack Lighthouse","lat":53.3069,"lng":-4.6989,"type":"monument","slug":"south-stack-lighthouse"},{"name":"Plas Newydd","lat":53.175,"lng":-4.2167,"type":"historic-house","slug":"plas-newydd"},{"name":"Portmeirion","lat":52.8028,"lng":-4.0833,"type":"historic-house","slug":"portmeirion"},{"name":"Beddgelert Dinas Emrys Walk","lat":53.0139,"lng":-4.1083,"type":"hillfort","slug":"beddgelert-dinas-emrys-walk"},{"name":"Eliseg's Pillar","lat":52.9889,"lng":-3.1861,"type":"monument","slug":"eliseg-s-pillar"},{"name":"Mold Bailey Hill","lat":53.1667,"lng":-3.1417,"type":"castle","slug":"mold-bailey-hill"},{"name":"Erddig Hall","lat":53.0361,"lng":-3.0083,"type":"historic-house","slug":"erddig-hall"},{"name":"Holt Castle","lat":53.0667,"lng":-2.8667,"type":"castle","slug":"holt-castle"},{"name":"Aberedw Castle Rocks","lat":52.1417,"lng":-3.375,"type":"castle","slug":"aberedw-castle-rocks"},{"name":"Brecon Cathedral","lat":51.9472,"lng":-3.3944,"type":"abbey","slug":"brecon-cathedral"},{"name":"Bleddfa Castle Mound","lat":52.3,"lng":-3.1333,"type":"castle","slug":"bleddfa-castle-mound"},{"name":"Monmouth Castle","lat":51.8111,"lng":-2.7139,"type":"castle","slug":"monmouth-castle"},{"name":"Monnow Bridge Gate","lat":51.8083,"lng":-2.7167,"type":"castle","slug":"monnow-bridge-gate"},{"name":"Piercefield Walks","lat":51.65,"lng":-2.6833,"type":"historic-house","slug":"piercefield-walks"},{"name":"Dylan Thomas Boathouse","lat":51.7667,"lng":-4.4583,"type":"historic-house","slug":"dylan-thomas-boathouse"},{"name":"Aberconwy House","lat":53.2806,"lng":-3.8278,"type":"historic-house","slug":"aberconwy-house"},{"name":"Bodnant Garden","lat":53.225,"lng":-3.8,"type":"historic-house","slug":"bodnant-garden"}];
+var colors={"castle":"#8b2335","palace":"#b8860b","abbey":"#2d5a3d","tower house":"#6b3a6b","fort":"#4a6fa5","fortified house":"#8b7355","monastery":"#2d5a3d","monument":"#666"};
+if(!sites.length)return;
+var map=L.map('countryMap',{scrollWheelZoom:false});
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
+var bounds=[];
+sites.forEach(function(s){
+var c=colors[s.type]||'#666';
+var m=L.circleMarker([s.lat,s.lng],{radius:5,fillColor:c,color:'#fff',weight:1,fillOpacity:.8}).addTo(map);
+m.bindPopup('<b>'+s.name+'</b><br><a href="site/'+s.slug+'.html">View site →</a>');
+bounds.push([s.lat,s.lng]);
+});
+if(bounds.length)map.fitBounds(bounds,{padding:[30,30]});
+})();
+</script>
+</body>
+</html>
