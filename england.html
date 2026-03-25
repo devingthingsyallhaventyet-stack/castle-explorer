@@ -4,38 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<title>Castles in England — castlecore</title>
-<meta name="description" content="Explore 544 castles, abbeys, palaces and ruins across England. From the Tower of London to Bamburgh, discover the most complete guide to English heritage sites.">
+<title>England — castlecore</title>
+<meta name="description" content="Explore 544 castles, abbeys, palaces and ruins across England. An art-directed guide to English heritage.">
 <link rel="canonical" href="https://castlecore.uk/england.html">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--parchment:#f5f0e8;--parchment-dark:#ede6d6;--cream:#faf8f4;--candlelight:#c9a84c;--burgundy:#8b2335;--forest:#2d5a3d;--ivy:#3d5a3e;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--border:#e2ddd4;--radius:12px;--pill:20px;--ink:#1a1714}
+:root{--parchment:#f5f0e8;--parchment-dark:#ede6d6;--cream:#faf8f4;--candlelight:#c9a84c;--burgundy:#8b2335;--forest:#2d5a3d;--ivy:#3d5a3e;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;--border:#e2ddd4;--radius:12px;--pill:20px;--ink:#1a1714;--gold:rgba(201,168,76,.6)}
 html{scroll-behavior:smooth}
-body{font-family:'Cormorant Garamond','Georgia',serif;color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;background:var(--parchment);font-size:18px}
-h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400;color:var(--ink)}
+body{font-family:'Cormorant Garamond','Georgia',serif;color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;background:var(--ink);font-size:18px;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(245,240,232,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,23,20,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.15);height:64px;display:flex;align-items:center;padding:0 24px}
 .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;display:flex;align-items:center;gap:8px;flex-shrink:0}
 .nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
 .nav-dropdown{position:relative}
-.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
-.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
-.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px;margin-top:0}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--candlelight)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(0,0,0,.3);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px}
 .nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
 .nav-dropdown:hover .nav-drop-panel{display:block}
 .nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--shadow);transition:background .15s}
 .nav-drop-panel a:hover{background:var(--parchment);color:var(--burgundy)}
 .nav-drop-panel .drop-divider{height:1px;background:var(--border);margin:4px 0}
 .mega-wrap:hover .mega-menu{display:flex}
-.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:420px;z-index:9999;margin-top:0;padding:0;overflow:hidden}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(0,0,0,.3);min-width:420px;z-index:9999;overflow:hidden}
 .mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
 .mega-countries{display:flex;flex-direction:column;background:var(--parchment);border-right:1px solid var(--border);min-width:150px;padding:8px 0}
 .mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;border-left:3px solid transparent}
@@ -44,177 +44,195 @@ img{max-width:100%;display:block}
 .mega-regions{flex:1;padding:12px 0}
 .mega-panel{display:none}
 .mega-panel.active{display:block}
-.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--shadow);transition:background .15s,color .15s}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--shadow);transition:background .15s}
 .mega-panel a:hover{background:var(--parchment);color:var(--burgundy)}
 .nav-search-wrap{position:relative;flex-shrink:1;max-width:200px}
-.nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:var(--cream);transition:border-color .2s}
-.nav-search-wrap input:focus{border-color:var(--candlelight);background:#fff;box-shadow:0 0 0 2px rgba(201,168,76,.12)}
+.nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid rgba(255,255,255,.15);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:rgba(255,255,255,.08);color:#fff;transition:border-color .2s}
+.nav-search-wrap input:focus{border-color:var(--candlelight);background:rgba(255,255,255,.12)}
+.nav-search-wrap input::placeholder{color:rgba(255,255,255,.4)}
 .nav-search-wrap .nsi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.85rem;pointer-events:none}
 .nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;font-family:'Inter',sans-serif;transition:background .2s;display:inline-block}
 .nav-right .btn-explore:hover{background:#6e1a2a}
-.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--cream);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#fff}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--ink);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:10px 0;border-bottom:1px solid var(--border);font-family:'Inter',sans-serif}
-.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:14px 0 4px;border-bottom:none;font-family:'Inter',sans-serif}
+.mobile-menu a{font-size:1rem;font-weight:500;color:rgba(255,255,255,.7);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);font-family:'Inter',sans-serif}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--candlelight);padding:14px 0 4px;border-bottom:none;font-family:'Inter',sans-serif}
 .mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
 @media(max-width:768px){.nav-center{display:none}.nav-right .btn-explore{display:none}.hamburger{display:block}}
 
-/* ===== PARCHMENT TEXTURE ===== */
-.parchment{background:var(--parchment);position:relative}
-.parchment::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(139,35,53,.015) 0%,transparent 70%),radial-gradient(ellipse at 80% 20%,rgba(201,168,76,.02) 0%,transparent 60%),radial-gradient(ellipse at 50% 80%,rgba(107,76,59,.015) 0%,transparent 50%);pointer-events:none;z-index:0}
-.parchment-alt{background:var(--parchment-dark)}
+/* ===== COLLAGE GLOBALS ===== */
+.dark-section{background:var(--ink);color:var(--parchment);position:relative;overflow:hidden}
+.light-section{background:var(--parchment);color:var(--ink);position:relative;overflow:hidden}
+.display-huge{font-family:'Cinzel',serif;font-size:clamp(3rem,8vw,7rem);font-weight:700;line-height:.9;text-transform:uppercase;letter-spacing:-.02em}
+.display-mega{font-family:'Cinzel',serif;font-size:clamp(4rem,10vw,8rem);font-weight:900;line-height:.85;text-transform:uppercase;letter-spacing:-.03em}
+.section-inner{max-width:1200px;margin:0 auto;padding:0 24px;position:relative}
 
-/* ===== SCROLL ANIMATIONS ===== */
-.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-.fade-in-left{opacity:0;transform:translateX(-40px);transition:opacity 0.8s ease,transform 0.8s ease}
-.fade-in-left.visible{opacity:1;transform:translateX(0)}
-.fade-in-right{opacity:0;transform:translateX(40px);transition:opacity 0.8s ease,transform 0.8s ease}
-.fade-in-right.visible{opacity:1;transform:translateX(0)}
+/* Tilts */
+.tilt-1{transform:rotate(-2deg)}.tilt-2{transform:rotate(1.5deg)}.tilt-3{transform:rotate(-1deg)}.tilt-4{transform:rotate(3deg)}.tilt-5{transform:rotate(-.5deg)}.tilt-6{transform:rotate(2deg)}
 
-/* ===== ORNATE DIVIDER ===== */
-.ornate-divider{text-align:center;padding:48px 0;color:var(--candlelight);opacity:0.4}
-.ornate-divider svg{display:inline-block}
+/* Overlapping */
+.overlap-up{margin-top:-40px;position:relative;z-index:2}
 
-/* ===== PROLOGUE HERO ===== */
-.hero{margin-top:64px;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;background-attachment:fixed;background-size:cover;background-position:center}
-.hero::before{content:'';position:absolute;inset:20px;border:1px solid rgba(201,168,76,.3);z-index:2;pointer-events:none}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.4) 35%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.35) 100%);z-index:1}
-.hero-content{position:relative;z-index:3;max-width:800px;padding:0 32px}
-.hero h1{font-size:clamp(3rem,6vw,5rem);color:#fff;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px;text-shadow:0 2px 20px rgba(0,0,0,.5);line-height:1.05;font-weight:400}
-.hero-prologue{color:rgba(255,255,255,.85);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);max-width:650px;margin:0 auto 40px;line-height:1.8;text-shadow:0 1px 10px rgba(0,0,0,.4)}
-.hero-prologue::before{content:'\AB\A0';font-size:1.3em;color:var(--candlelight);opacity:.7}
-.hero-prologue::after{content:'\A0\BB';font-size:1.3em;color:var(--candlelight);opacity:.7}
-.hero-stats-line{color:rgba(255,255,255,.65);font-family:'Cormorant Garamond',serif;font-size:1.05rem;letter-spacing:2px;margin-bottom:36px}
-.hero-stats-line span{padding:0 16px;display:inline-block}
-.hero-stats-line .stat-sep{color:rgba(201,168,76,.4)}
-.hero-pills-bar{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:20px 24px;display:flex;justify-content:center;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 100%)}
-.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#fff;padding:10px 20px;border-radius:var(--pill);font-size:.85rem;font-family:'Inter',sans-serif;font-weight:500;transition:all .25s;border:1px solid rgba(255,255,255,.15)}
-.hero-pill:hover{background:rgba(255,255,255,.22);transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
-.hp-count{font-size:.72rem;opacity:.5}
-.scroll-indicator{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.5);font-family:'Cormorant Garamond',serif;font-size:.85rem;letter-spacing:2px;text-align:center;animation:scrollBounce 2s ease infinite}
-.scroll-indicator::after{content:'\2304';display:block;font-size:1.8rem;margin-top:2px;line-height:1}
-@keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+/* Postcard */
+.postcard{background:#fff;padding:8px 8px 36px;box-shadow:0 4px 20px rgba(0,0,0,.15),0 1px 3px rgba(0,0,0,.1);transition:transform .4s,box-shadow .4s}
+.postcard:hover{box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:10}
+.postcard img{width:100%;height:200px;object-fit:cover}
+.postcard-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;padding:8px 4px 0;color:var(--ink)}
+.postcard-count{font-family:'Inter',sans-serif;font-size:.75rem;color:var(--twilight);padding:0 4px}
+
+/* Deco */
+.deco{position:absolute;pointer-events:none;opacity:.15;z-index:0}
+.deco svg{display:block}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-rotate{opacity:0;transform:rotate(-5deg) scale(.9);transition:all 1s ease}
+.reveal-rotate.visible{opacity:1;transform:rotate(0) scale(1)}
+.reveal-left{opacity:0;transform:translateX(-60px);transition:all 1s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(60px);transition:all 1s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* Drop cap */
+.drop-cap::first-letter{font-family:'Cinzel',serif;font-size:4.5em;float:left;line-height:.72;margin:.05em .12em 0 0;color:var(--burgundy)}
+
+/* ===== SECTION 1: HERO ===== */
+.hero-collage{margin-top:64px;min-height:100vh;display:flex;align-items:center;position:relative;padding:80px 0}
+.hero-collage::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(139,35,53,.08),transparent 70%);pointer-events:none}
+.hero-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.hero-text{position:relative;z-index:3}
+.hero-text h1{color:var(--parchment);text-shadow:0 4px 40px rgba(0,0,0,.5)}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,2vw,1.3rem);color:rgba(245,240,232,.6);margin-top:24px;line-height:1.7;max-width:400px}
+.hero-map-fragment{width:180px;height:220px;background:var(--parchment);border:1px solid rgba(201,168,76,.3);margin-top:32px;position:relative;transform:rotate(-3deg);box-shadow:4px 4px 20px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-map-fragment svg{opacity:.4}
+.hero-image-wrap{position:relative}
+.hero-image-wrap img{width:100%;max-width:600px;height:auto;transform:rotate(1deg);box-shadow:0 20px 80px rgba(0,0,0,.5);border:3px solid rgba(201,168,76,.15)}
+.hero-image-caption{position:absolute;bottom:-20px;right:40px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85rem;color:rgba(245,240,232,.4);letter-spacing:1px}
 @media(max-width:768px){
-.hero::before{inset:10px}
-.hero-pills-bar{position:relative;background:rgba(0,0,0,.4)}
-.hero-pills{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hero-pill{justify-content:center;padding:10px 14px;font-size:.8rem}
+.hero-layout{grid-template-columns:1fr;text-align:center}
+.hero-text h1{font-size:clamp(3rem,12vw,5rem)}
+.hero-subtitle{margin:16px auto 0}
+.hero-map-fragment{margin:24px auto 0}
+.hero-image-wrap{order:-1}
+.hero-image-wrap img{transform:rotate(0);max-width:90%}
 }
 
-/* ===== CHAPTER STRUCTURE ===== */
-.chapter{padding:80px 24px;position:relative;z-index:1}
-.chapter-inner{max-width:1100px;margin:0 auto}
-.chapter-num{font-family:'Cormorant Garamond',serif;font-size:.85rem;text-transform:uppercase;letter-spacing:3px;color:var(--candlelight);margin-bottom:8px;display:block}
-.chapter-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;line-height:1.15}
-.chapter-intro{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--twilight);line-height:1.8;max-width:700px;margin-bottom:48px}
-.drop-cap::first-letter{font-family:'Playfair Display',serif;font-size:4em;float:left;line-height:0.75;margin:0.05em 0.12em 0 0;color:var(--burgundy)}
-
-/* ===== PARALLAX IMAGE BREAKS ===== */
-.parallax-break{min-height:60vh;background-attachment:fixed;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;position:relative}
-.parallax-break::after{content:'';position:absolute;inset:0;background:rgba(26,23,20,.55)}
-.parallax-quote{position:relative;z-index:1;color:#fff;font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-style:italic;text-align:center;max-width:700px;padding:0 24px;text-shadow:0 2px 12px rgba(0,0,0,.4);line-height:1.6}
-.parallax-quote::before{content:'\201C';display:block;font-size:4rem;line-height:1;color:var(--candlelight);opacity:.5;margin-bottom:-8px}
-
-/* ===== REGION CARDS (Chapter I) ===== */
-.region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.region-card{display:block;height:280px;border-radius:4px;overflow:hidden;position:relative;cursor:pointer;transition:transform .3s,box-shadow .3s}
-.region-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(42,37,34,.2)}
-.region-card-body{position:absolute;bottom:0;left:0;right:0;padding:24px;color:#fff;z-index:1}
-.region-card-name{display:block;font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:4px;text-shadow:0 1px 6px rgba(0,0,0,.3)}
-.region-card-count{font-size:.85rem;opacity:.75;font-family:'Cormorant Garamond',serif;letter-spacing:1px}
-@media(max-width:900px){.region-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.region-grid{grid-template-columns:1fr 1fr}}
-
-/* ===== ERA TIMELINE (Chapter II) ===== */
-.era-timeline{display:flex;flex-direction:column;gap:0}
-.era-row{display:grid;grid-template-columns:1.2fr 1fr;min-height:320px;overflow:hidden}
-.era-row:nth-child(even){direction:rtl}
-.era-row:nth-child(even)>*{direction:ltr}
-.era-img{overflow:hidden;position:relative}
-.era-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.era-row:hover .era-img img{transform:scale(1.05)}
-.era-body{display:flex;flex-direction:column;justify-content:center;padding:48px 40px}
-.era-body .era-name{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:8px}
-.era-body .era-name::first-letter{font-size:1.3em;color:var(--burgundy)}
-.era-body .era-count{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--candlelight);letter-spacing:1px;margin-bottom:12px}
-.era-body .era-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--twilight);line-height:1.7}
-.era-body .era-link{display:inline-block;margin-top:20px;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;color:var(--burgundy);letter-spacing:.5px;transition:color .2s}
-.era-body .era-link:hover{color:var(--candlelight)}
-.era-row:nth-child(odd) .era-body{background:var(--parchment)}
-.era-row:nth-child(even) .era-body{background:var(--parchment-dark)}
+/* ===== SECTION 2: THE LAND ===== */
+.the-land{padding:100px 0 80px;position:relative}
+.land-collage{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
+.land-images{position:relative;min-height:500px}
+.land-img-main{position:relative;z-index:2;transform:rotate(-2deg);box-shadow:0 12px 60px rgba(0,0,0,.12);border:3px solid rgba(201,168,76,.1);max-width:420px}
+.land-img-main img{width:100%;height:320px;object-fit:cover}
+.land-img-secondary{position:absolute;right:-30px;bottom:40px;z-index:3;transform:rotate(3deg);width:200px;box-shadow:0 8px 40px rgba(0,0,0,.15);border:2px solid rgba(201,168,76,.08)}
+.land-img-secondary img{width:100%;height:160px;object-fit:cover}
+.land-img-tertiary{position:absolute;left:60px;bottom:-20px;z-index:1;transform:rotate(-1deg);width:160px;box-shadow:0 6px 30px rgba(0,0,0,.1);border:2px solid rgba(201,168,76,.08)}
+.land-img-tertiary img{width:100%;height:130px;object-fit:cover}
+.manuscript-fragment{position:absolute;right:10px;top:20px;width:140px;height:180px;background:var(--parchment-dark);border:1px solid rgba(201,168,76,.2);padding:12px;transform:rotate(5deg);box-shadow:3px 3px 15px rgba(0,0,0,.08);z-index:0;overflow:hidden}
+.manuscript-fragment p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7rem;color:rgba(107,76,59,.25);line-height:1.6}
+.land-text{padding-top:40px}
+.land-text .chapter-label{font-family:'Cinzel',serif;font-size:.8rem;text-transform:uppercase;letter-spacing:4px;color:var(--candlelight);margin-bottom:12px;display:block}
+.land-text h2{font-family:'Cinzel',serif;font-size:clamp(2rem,4vw,3rem);text-transform:uppercase;margin-bottom:24px;letter-spacing:.02em}
+.land-text .body-text{font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.9;color:var(--twilight);max-width:500px}
 @media(max-width:768px){
-.era-row,.era-row:nth-child(even){grid-template-columns:1fr;direction:ltr}
-.era-row:nth-child(even)>*{direction:ltr}
-.era-img{height:220px}
-.era-body{padding:32px 24px}
+.land-collage{grid-template-columns:1fr}
+.land-images{min-height:auto;display:flex;flex-direction:column;align-items:center;gap:16px}
+.land-img-main{transform:rotate(-1deg);max-width:90%}
+.land-img-secondary{position:relative;right:auto;bottom:auto;transform:rotate(2deg);width:60%}
+.land-img-tertiary{position:relative;left:auto;bottom:auto;transform:rotate(-1deg);width:50%}
+.manuscript-fragment{display:none}
 }
 
-/* ===== FEATURED EDITORIAL (Chapter III) ===== */
-.editorial-spread{position:relative;height:400px;overflow:hidden;margin-bottom:32px;border-radius:4px}
-.editorial-spread img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.editorial-spread:hover img{transform:scale(1.04)}
-.editorial-spread .editorial-overlay{position:absolute;bottom:0;left:0;right:0;padding:40px;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,transparent 100%);color:#fff}
-.editorial-spread .editorial-overlay h3{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
-.editorial-spread .editorial-overlay .edit-loc{font-family:'Cormorant Garamond',serif;font-size:1rem;opacity:.8;margin-bottom:8px}
-.editorial-spread .editorial-overlay .edit-hook{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;opacity:.75;max-width:500px}
-.editorial-spread .editorial-overlay .card-rating{color:var(--candlelight);font-size:1rem;font-weight:600}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.story-card{background:var(--cream);border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:transform .3s,box-shadow .3s;cursor:pointer}
-.story-card:hover{transform:translateY(-6px) rotate(-0.5deg);box-shadow:0 16px 48px rgba(42,37,34,.15)}
-.story-card-img{height:200px;overflow:hidden}
-.story-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.story-card:hover .story-card-img img{transform:scale(1.06)}
-.story-card-body{padding:20px 24px}
-.story-card-body h3{font-size:1.15rem;margin-bottom:4px}
-.story-card-body .sc-loc{font-family:'Cormorant Garamond',serif;color:var(--twilight);font-size:.92rem;margin-bottom:8px}
-.story-card-body .sc-hook{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--twilight);font-size:.95rem;line-height:1.5;opacity:.75;margin-bottom:12px}
-.story-card-body .sc-meta{display:flex;align-items:center;gap:8px}
-.card-rating{color:var(--candlelight);font-size:.9rem;font-weight:600}
-.type-pill{display:inline-block;background:var(--parchment-dark);color:var(--ivy);font-size:.72rem;font-weight:600;font-family:'Inter',sans-serif;padding:3px 10px;border-radius:var(--pill);text-transform:capitalize}
+/* ===== SECTION 3: THROUGH THE AGES ===== */
+.ages-section{padding:100px 0}
+.ages-header{text-align:center;margin-bottom:80px}
+.ages-header h2{color:var(--parchment)}
+.era-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;position:relative}
+.era-card{width:320px;position:relative;cursor:pointer;transition:transform .4s}
+.era-card:nth-child(1){transform:rotate(-2deg)}.era-card:nth-child(2){transform:rotate(1.5deg);margin-top:40px}.era-card:nth-child(3){transform:rotate(-1deg)}
+.era-card:hover{transform:rotate(0) scale(1.02)!important;z-index:10}
+.era-card-img{width:100%;height:220px;object-fit:cover;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.era-card-overlay{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top,rgba(26,23,20,.9),transparent)}
+.era-card-name{font-family:'Cinzel',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;text-transform:uppercase;color:var(--parchment);text-shadow:0 2px 10px rgba(0,0,0,.5);position:absolute;top:-20px;left:10px;z-index:2;line-height:1}
+.era-card-body{padding:16px 4px 0}
+.era-card-body .era-period{font-family:'Inter',sans-serif;font-size:.75rem;color:rgba(245,240,232,.5);letter-spacing:1px;text-transform:uppercase}
+.era-card-body .era-desc{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,240,232,.7);font-size:.95rem;margin-top:6px;line-height:1.6}
+.era-card-body .era-count{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--candlelight);margin-top:8px}
+.era-card-body a{font-family:'Inter',sans-serif;font-size:.8rem;color:var(--candlelight);display:inline-block;margin-top:8px;opacity:.7;transition:opacity .2s}
+.era-card-body a:hover{opacity:1}
 @media(max-width:768px){
-.editorial-spread{height:300px}
-.story-grid{grid-template-columns:1fr}
+.era-cards{flex-direction:column;align-items:center;gap:48px}
+.era-card{width:90%;max-width:360px}
+.era-card:nth-child(1),.era-card:nth-child(2),.era-card:nth-child(3){transform:rotate(0);margin-top:0}
 }
 
-/* ===== COUNTY INDEX (Chapter IV) ===== */
-.county-index{columns:2;column-gap:48px}
-.county-row{display:flex;align-items:baseline;padding:10px 0;border-bottom:1px dotted rgba(201,168,76,.25);break-inside:avoid;transition:color .2s}
-.county-row:hover{color:var(--burgundy)}
-.county-row .cn{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;white-space:nowrap}
-.county-row .cn-featured{color:var(--burgundy);font-weight:600}
-.county-row .cn-featured::after{content:' ✦';font-size:.7em;color:var(--candlelight)}
-.county-row .dots{flex:1;margin:0 8px;border-bottom:1px dotted rgba(107,76,59,.2);min-width:20px;position:relative;top:-3px}
-.county-row .cc{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--twilight);white-space:nowrap}
-@media(max-width:600px){.county-index{columns:1}}
+/* ===== SECTION 4: EXPLORE REGIONS ===== */
+.regions-section{padding:100px 0}
+.regions-header{text-align:center;margin-bottom:60px}
+.regions-header h2{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,3.5rem);text-transform:uppercase;letter-spacing:.02em}
+.regions-scatter{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;max-width:1100px;margin:0 auto}
+.regions-scatter .postcard:nth-child(1){transform:rotate(-3deg)}.regions-scatter .postcard:nth-child(2){transform:rotate(2deg);margin-top:30px}
+.regions-scatter .postcard:nth-child(3){transform:rotate(-1deg)}.regions-scatter .postcard:nth-child(4){transform:rotate(4deg);margin-top:20px}
+.regions-scatter .postcard:nth-child(5){transform:rotate(-2deg)}.regions-scatter .postcard:nth-child(6){transform:rotate(1deg);margin-top:35px}
+.regions-scatter .postcard:nth-child(7){transform:rotate(-1.5deg)}
+.regions-scatter .postcard{width:calc(25% - 24px);min-width:200px;cursor:pointer}
+.regions-scatter .postcard:hover{transform:rotate(0) translateY(-8px)!important}
+.regions-scatter .postcard img{height:180px}
+@media(max-width:900px){.regions-scatter .postcard{width:calc(50% - 16px);min-width:0}}
+@media(max-width:500px){.regions-scatter .postcard{width:calc(50% - 12px)}.regions-scatter .postcard img{height:140px}}
 
-/* ===== MAP (Chapter V) ===== */
-.map-wrap{border-radius:4px;overflow:hidden;border:3px solid var(--parchment-dark);box-shadow:0 8px 40px rgba(107,76,59,.1)}
-#countryMap{height:450px;width:100%;z-index:1}
-.map-link{display:block;text-align:center;padding:14px;font-weight:600;font-family:'Inter',sans-serif;color:var(--ivy);font-size:.9rem;background:var(--cream);border-top:1px solid var(--border);transition:all .2s}
-.map-link:hover{color:var(--burgundy);background:var(--parchment)}
+/* ===== SECTION 5: MUST VISIT ===== */
+.must-visit{padding:100px 0}
+.must-visit-header{text-align:center;margin-bottom:60px}
+.must-visit-header h2{color:var(--parchment)}
+.mv-featured{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start;margin-bottom:60px}
+.mv-featured-img{position:relative;overflow:hidden;transform:rotate(-.5deg);box-shadow:0 16px 60px rgba(0,0,0,.4)}
+.mv-featured-img img{width:100%;height:400px;object-fit:cover}
+.mv-featured-img .mv-name-overlay{position:absolute;bottom:20px;left:20px;font-family:'Cinzel',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:800;text-transform:uppercase;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.7);line-height:1}
+.mv-featured-text{color:var(--parchment);padding-top:20px}
+.mv-featured-text .mv-county{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,240,232,.5);font-size:1rem;margin-bottom:12px}
+.mv-featured-text .mv-desc{font-family:'Cormorant Garamond',serif;font-size:1.1rem;line-height:1.8;color:rgba(245,240,232,.75);margin-bottom:20px}
+.mv-featured-text .mv-link{font-family:'Inter',sans-serif;font-size:.85rem;color:var(--candlelight);font-weight:600}
+.mv-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+.mv-card{width:220px;position:relative;cursor:pointer;transition:transform .3s}
+.mv-card:nth-child(1){transform:rotate(2deg)}.mv-card:nth-child(2){transform:rotate(-1.5deg);margin-top:20px}
+.mv-card:nth-child(3){transform:rotate(1deg)}.mv-card:nth-child(4){transform:rotate(-2deg);margin-top:30px}
+.mv-card:nth-child(5){transform:rotate(.5deg)}
+.mv-card:hover{transform:rotate(0) scale(1.03)!important;z-index:10}
+.mv-card img{width:100%;height:160px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.mv-card .mv-card-name{font-family:'Cinzel',serif;font-size:.9rem;text-transform:uppercase;color:var(--parchment);margin-top:10px;letter-spacing:.5px}
+.mv-card .mv-card-county{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85rem;color:rgba(245,240,232,.4)}
+@media(max-width:768px){
+.mv-featured{grid-template-columns:1fr}
+.mv-featured-img img{height:260px}
+.mv-grid{gap:16px}
+.mv-card{width:45%}
+}
 
-/* ===== PRACTICAL CARDS ===== */
-.practical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
-.prac-card{background:var(--cream);border-radius:4px;padding:32px 20px;text-align:center;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
-.prac-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(107,76,59,.1)}
-.prac-card .prac-icon{font-size:2.2rem;display:block;margin-bottom:10px}
-.prac-card .prac-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--burgundy);display:block;margin-bottom:4px}
-.prac-card .prac-label{font-size:.85rem;color:var(--twilight);font-family:'Inter',sans-serif}
-@media(max-width:768px){.practical-grid{grid-template-columns:1fr 1fr}}
+/* ===== SECTION 6: BY THE NUMBERS ===== */
+.numbers-section{padding:100px 0}
+.numbers-scatter{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1000px;margin:0 auto}
+.num-item{text-align:center;padding:24px;min-width:160px;position:relative}
+.num-item:nth-child(odd){transform:rotate(-1deg)}.num-item:nth-child(even){transform:rotate(1.5deg)}
+.num-value{font-family:'Cinzel',serif;font-size:clamp(3rem,6vw,5rem);font-weight:900;color:var(--burgundy);line-height:1;display:block}
+.num-label{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--twilight);margin-top:4px;font-style:italic}
+.num-item.gold .num-value{color:var(--candlelight)}
 
-/* ===== CTA BUTTON ===== */
-.cta-section{text-align:center;padding:80px 24px}
-.cta-section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
-.cta-section p{font-family:'Cormorant Garamond',serif;color:var(--twilight);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;font-size:1.15rem}
-.btn-manuscript{display:inline-block;background:var(--burgundy);color:#fff;padding:18px 42px;border-radius:50px;font-size:1.05rem;font-weight:600;font-family:'Cormorant Garamond',serif;letter-spacing:1px;transition:all .3s;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(139,35,53,.3);position:relative}
-.btn-manuscript:hover{background:#6e1a2a;transform:translateY(-2px);box-shadow:0 8px 30px rgba(139,35,53,.4)}
+/* ===== SECTION 7: MAP ===== */
+.map-section{padding:100px 0}
+.map-frame{max-width:1000px;margin:0 auto;border:8px solid var(--parchment);box-shadow:0 16px 60px rgba(0,0,0,.3);position:relative}
+#countryMap{height:500px;width:100%}
+.map-cta{text-align:center;margin-top:48px}
+.btn-adventure{display:inline-block;background:var(--burgundy);color:#fff;padding:18px 48px;border-radius:50px;font-size:1.1rem;font-weight:700;font-family:'Cinzel',serif;letter-spacing:2px;text-transform:uppercase;transition:all .3s;box-shadow:0 4px 20px rgba(139,35,53,.3)}
+.btn-adventure:hover{background:#6e1a2a;transform:translateY(-2px);box-shadow:0 8px 30px rgba(139,35,53,.4)}
+.filter-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.filter-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);color:rgba(245,240,232,.7);padding:8px 18px;border-radius:var(--pill);font-size:.85rem;font-family:'Inter',sans-serif;border:1px solid rgba(255,255,255,.1);transition:all .2s}
+.filter-pill:hover{background:rgba(255,255,255,.15);color:#fff}
 
 /* ===== FOOTER ===== */
-footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
+footer{background:var(--shadow);color:#fff;padding:64px 24px 32px;border-top:1px solid rgba(201,168,76,.15)}
 .footer-inner{max-width:1280px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
 .footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px}
@@ -225,10 +243,17 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px;font-family:'Inter',sans-serif}
 @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
 @media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+
+/* ===== ORNATE CORNER BRACKETS ===== */
+.corner-frame{position:relative}
+.corner-frame::before,.corner-frame::after{content:'';position:absolute;width:30px;height:30px;border-color:rgba(201,168,76,.3);border-style:solid;pointer-events:none;z-index:5}
+.corner-frame::before{top:-6px;left:-6px;border-width:2px 0 0 2px}
+.corner-frame::after{bottom:-6px;right:-6px;border-width:0 2px 2px 0}
 </style>
 </head>
 <body>
 
+<!-- ===== NAV ===== -->
 <nav class="nav">
 <div class="nav-inner">
 <a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
@@ -297,7 +322,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="collection.html">View all collections →</a>
 </div>
 </div>
-<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">🛤️ Routes</a>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none;color:rgba(255,255,255,.7)">🛤️ Routes</a>
 <div class="nav-search-wrap">
 <span class="nsi">🔍</span>
 <input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off">
@@ -309,18 +334,15 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
 </div>
 </nav>
-
-<!-- MOBILE MENU -->
 <div class="mobile-menu">
-<a href="/" style="color:var(--burgundy);font-weight:700">🏠 Home</a>
-<a href="explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
+<a href="/" style="color:var(--candlelight);font-weight:700">🏠 Home</a>
+<a href="explore.html" style="color:var(--candlelight);font-weight:700">🧭 Explore Map</a>
 <span class="mob-heading">Countries</span>
 <div class="mob-sub">
 <a href="england.html">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</a>
 <a href="scotland.html">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</a>
 <a href="wales.html">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a>
 <a href="ireland.html">🍀 Ireland</a>
-<a href="northern-ireland.html">🛡️ Northern Ireland</a>
 </div>
 <span class="mob-heading">✨ Collections</span>
 <div class="mob-sub">
@@ -333,242 +355,227 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="trail.html">🛤️ Routes</a>
 </div>
 
-<!-- ═══════════ PROLOGUE — HERO ═══════════ -->
-<div class="hero" style="background-image:url('img/bamburgh.jpg')">
-<div class="hero-content">
-<h1>England</h1>
-<p class="hero-prologue">From the mighty Tower of London to the crumbling keeps of the North, England holds more than a thousand years of conquest, rebellion, and quiet decay within its castle walls. Norman strongholds, Tudor palaces, and romantic ruins scattered across green countryside — every county tells a different chapter.</p>
-<div class="hero-stats-line">
-<span>544 Sites</span><span class="stat-sep">·</span><span>8 Types</span><span class="stat-sep">·</span><span>49 Counties</span>
-</div>
-</div>
-<div class="scroll-indicator">Scroll to begin</div>
-<div class="hero-pills-bar"><div class="hero-pills">
-<a class="hero-pill" href="search.html?tag=dog-friendly&region=England">🐕 Dog Friendly <span class="hp-count">56</span></a>
-<a class="hero-pill" href="search.html?tag=free-entry&region=England">🆓 Free Entry <span class="hp-count">139</span></a>
-<a class="hero-pill" href="search.html?tag=kid-friendly&region=England">👨‍👩‍👧 Family Friendly <span class="hp-count">85</span></a>
-<a class="hero-pill" href="search.html?condition=ruin&region=England">🏚️ Ruins <span class="hp-count">240</span></a>
-<a class="hero-pill" href="search.html?condition=intact&region=England">🏰 Intact <span class="hp-count">194</span></a>
-<a class="hero-pill" href="search.html?tag=photogenic&region=England">📸 Photogenic <span class="hp-count">199</span></a>
-<a class="hero-pill" href="search.html?tag=haunted&region=England">👻 Haunted <span class="hp-count">33</span></a>
-</div></div>
-</div>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 1: HERO                                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="hero-collage dark-section">
+  <!-- Decorative: Shield -->
+  <div class="deco" style="top:15%;left:5%;opacity:.1">
+    <svg width="60" height="72" viewBox="0 0 60 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 2L4 14v24c0 18 26 30 26 30s26-12 26-30V14L30 2z" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+      <path d="M30 12L12 20v16c0 12 18 22 18 22s18-10 18-22V20L30 12z" stroke="#c9a84c" stroke-width=".5" fill="none" opacity=".4"/>
+    </svg>
+  </div>
+  <!-- Decorative: Compass Rose -->
+  <div class="deco" style="bottom:20%;right:8%;opacity:.08">
+    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="45" stroke="#c9a84c" stroke-width=".5"/>
+      <circle cx="50" cy="50" r="35" stroke="#c9a84c" stroke-width=".3"/>
+      <line x1="50" y1="5" x2="50" y2="95" stroke="#c9a84c" stroke-width=".5"/>
+      <line x1="5" y1="50" x2="95" y2="50" stroke="#c9a84c" stroke-width=".5"/>
+      <polygon points="50,8 46,40 50,35 54,40" fill="#c9a84c" opacity=".3"/>
+      <text x="50" y="4" text-anchor="middle" fill="#c9a84c" font-size="6" font-family="Cinzel" opacity=".5">N</text>
+      <text x="97" y="52" text-anchor="middle" fill="#c9a84c" font-size="6" font-family="Cinzel" opacity=".5">E</text>
+      <text x="50" y="99" text-anchor="middle" fill="#c9a84c" font-size="6" font-family="Cinzel" opacity=".5">S</text>
+      <text x="3" y="52" text-anchor="middle" fill="#c9a84c" font-size="6" font-family="Cinzel" opacity=".5">W</text>
+    </svg>
+  </div>
 
+  <div class="hero-layout">
+    <div class="hero-text reveal-left">
+      <h1 class="display-mega">England</h1>
+      <p class="hero-subtitle">544 castles, abbeys &amp; ruins across 49 counties — a thousand years of conquest, rebellion, and quiet decay within ancient walls.</p>
+      <div class="hero-map-fragment">
+        <svg width="120" height="180" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60 10 C40 15,30 30,25 50 C20 70,15 85,20 100 C25 115,30 130,40 140 C50 150,55 160,60 170 C65 160,70 150,80 140 C90 130,95 115,100 100 C105 85,100 70,95 50 C90 30,80 15,60 10z" stroke="#6b4c3b" stroke-width="1" fill="none" opacity=".5"/>
+          <circle cx="55" cy="120" r="2" fill="#8b2335" opacity=".6"/>
+          <text x="62" y="123" font-family="Cormorant Garamond" font-size="6" fill="#6b4c3b" opacity=".5">London</text>
+          <circle cx="50" cy="70" r="1.5" fill="#8b2335" opacity=".4"/>
+          <circle cx="65" cy="45" r="1.5" fill="#8b2335" opacity=".4"/>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-image-wrap reveal-right">
+      <img src="img/bamburgh.jpg" alt="Bamburgh Castle on the Northumberland coast" loading="eager">
+      <span class="hero-image-caption">Bamburgh Castle, Northumberland</span>
+    </div>
+  </div>
+</section>
 
-<!-- ═══════════ CHAPTER I — EXPLORE THE REGIONS ═══════════ -->
-<div class="chapter parchment">
-<div class="chapter-inner">
-<span class="chapter-num fade-in">Chapter I</span>
-<h2 class="chapter-title fade-in">Explore the Regions</h2>
-<p class="chapter-intro drop-cap fade-in">From the white cliffs of Dover to the wilds of Northumberland, England's regions each hold their own chapter in the story of these islands.</p>
-<div class="region-grid">
-<a class="region-card fade-in" href="region.html?id=london-surrey" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%),url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/500px-Tower_of_London_from_the_Shard_%288515883950%29.jpg');background-size:cover;background-position:center"><div class="region-card-body"><span class="region-card-name">London &amp; Surrey</span><span class="region-card-count">9 sites</span></div></a>
-<a class="region-card fade-in" href="region.html?id=south-east-england" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%),url('https://img.castlecore.uk/windsor-castle-interior.jpg');background-size:cover;background-position:center"><div class="region-card-body"><span class="region-card-name">South East</span><span class="region-card-count">65 sites</span></div></a>
-<a class="region-card fade-in" href="region.html?id=south-west-england" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%),url('https://img.castlecore.uk/wells-cathedral.jpg');background-size:cover;background-position:center"><div class="region-card-body"><span class="region-card-name">South West</span><span class="region-card-count">97 sites</span></div></a>
-<a class="region-card fade-in" href="region.html?id=northern-england" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%),url('https://img.castlecore.uk/durham-cathedral.jpg');background-size:cover;background-position:center"><div class="region-card-body"><span class="region-card-name">Northern England</span><span class="region-card-count">110 sites</span></div></a>
-<a class="region-card fade-in" href="region.html?id=midlands" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%),url('https://img.castlecore.uk/chatsworth-house.jpg');background-size:cover;background-position:center"><div class="region-card-body"><span class="region-card-name">The Midlands</span><span class="region-card-count">108 sites</span></div></a>
-<a class="region-card fade-in" href="region.html?id=yorkshire" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%),url('https://img.castlecore.uk/york-minster.jpg');background-size:cover;background-position:center"><div class="region-card-body"><span class="region-card-name">Yorkshire</span><span class="region-card-count">71 sites</span></div></a>
-<a class="region-card fade-in" href="region.html?id=east-anglia" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%),url('https://img.castlecore.uk/ely-cathedral.jpg');background-size:cover;background-position:center"><div class="region-card-body"><span class="region-card-name">East Anglia</span><span class="region-card-count">53 sites</span></div></a>
-</div>
-</div>
-</div>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 2: THE LAND                                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="the-land light-section">
+  <!-- Decorative corner brackets -->
+  <div class="deco" style="top:40px;right:60px;opacity:.12">
+    <svg width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M0 0L0 50" stroke="#c9a84c" stroke-width="1"/><path d="M0 0L50 0" stroke="#c9a84c" stroke-width="1"/></svg>
+  </div>
 
-<!-- PARALLAX BREAK 1 -->
-<div class="parallax-break" style="background-image:url('https://img.castlecore.uk/durham-cathedral.jpg')">
-<div class="parallax-quote">This royal throne of kings, this sceptred isle, this earth of majesty, this seat of Mars.</div>
-</div>
+  <div class="section-inner">
+    <div class="land-collage">
+      <div class="land-images">
+        <div class="land-img-main corner-frame reveal-rotate" id="land-img-tower">
+          <img src="img/tower-of-london.jpg" alt="Tower of London" loading="lazy">
+        </div>
+        <div class="land-img-secondary reveal" id="land-img-warwick">
+          <img src="img/warwick.jpg" alt="Warwick Castle" loading="lazy">
+        </div>
+        <div class="land-img-tertiary reveal" id="land-img-bodiam">
+          <img src="img/bodiam.jpg" alt="Bodiam Castle" loading="lazy">
+        </div>
+        <div class="manuscript-fragment">
+          <p>Hic sunt castella antiqua per totam Angliam dispersa, monumenta temporis et potestatis humanae, quae ruinis suis maiestatem servant…</p>
+        </div>
+      </div>
+      <div class="land-text reveal">
+        <span class="chapter-label">The Land</span>
+        <h2>A Kingdom<br>in Stone</h2>
+        <p class="body-text drop-cap">England's landscape is stitched together by its castles. From the white cliffs of Kent where Norman keeps still stand sentinel, to the wild Northumbrian coast where Bamburgh rises from volcanic rock — every county holds its own chapter in this ancient story. These are not just ruins. They are the bones of a kingdom, still standing after a thousand years of wind, war, and weather. Walk their halls and you walk through time itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 3: THROUGH THE AGES                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="ages-section dark-section">
+  <!-- Decorative: Crown -->
+  <div class="deco" style="top:60px;left:10%;opacity:.08">
+    <svg width="50" height="40" viewBox="0 0 50 40" fill="none"><path d="M5 35L10 10L17 22L25 5L33 22L40 10L45 35Z" stroke="#c9a84c" stroke-width="1" fill="none"/><line x1="5" y1="35" x2="45" y2="35" stroke="#c9a84c" stroke-width="1"/></svg>
+  </div>
 
+  <div class="section-inner">
+    <div class="ages-header reveal">
+      <h2 class="display-huge">Through<br>the Ages</h2>
+    </div>
+    <div class="era-cards">
+      <div class="era-card reveal-rotate">
+        <div style="position:relative;overflow:hidden">
+          <img class="era-card-img" src="img/tower-of-london.jpg" alt="Norman era" loading="lazy" id="era-norman-img">
+          <span class="era-card-name">Norman</span>
+        </div>
+        <div class="era-card-body">
+          <span class="era-period">11th – 12th Century</span>
+          <p class="era-desc">Conquest, keeps, and the clash of iron on stone. William's legacy in motte and bailey.</p>
+          <span class="era-count" id="era-norman-count">142 sites</span>
+          <br><a href="search.html?era=11th%20century,12th%20century&region=England">Explore →</a>
+        </div>
+      </div>
+      <div class="era-card reveal-rotate">
+        <div style="position:relative;overflow:hidden">
+          <img class="era-card-img" src="img/bodiam.jpg" alt="Medieval era" loading="lazy" id="era-medieval-img">
+          <span class="era-card-name">Medieval</span>
+        </div>
+        <div class="era-card-body">
+          <span class="era-period">13th – 15th Century</span>
+          <p class="era-desc">The golden age of chivalry — towering curtain walls and moated strongholds.</p>
+          <span class="era-count" id="era-medieval-count">125 sites</span>
+          <br><a href="search.html?era=13th%20century,14th%20century,15th%20century&region=England">Explore →</a>
+        </div>
+      </div>
+      <div class="era-card reveal-rotate">
+        <div style="position:relative;overflow:hidden">
+          <img class="era-card-img" src="img/framlingham.jpg" alt="Tudor era" loading="lazy" id="era-tudor-img">
+          <span class="era-card-name">Tudor</span>
+        </div>
+        <div class="era-card-body">
+          <span class="era-period">16th Century</span>
+          <p class="era-desc">Palaces of power in an age of reformation and the rise of the crown.</p>
+          <span class="era-count" id="era-tudor-count">37 sites</span>
+          <br><a href="search.html?era=16th%20century&region=England">Explore →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- ═══════════ CHAPTER II — THROUGH THE CENTURIES ═══════════ -->
-<div class="chapter parchment-alt">
-<div class="chapter-inner">
-<span class="chapter-num fade-in">Chapter II</span>
-<h2 class="chapter-title fade-in">Through the Centuries</h2>
-</div>
-</div>
-<div class="era-timeline">
-<div class="era-row fade-in">
-<div class="era-img"><img src="https://img.castlecore.uk/durham-cathedral.jpg" alt="Norman" loading="lazy" onerror="this.style.display='none'"></div>
-<div class="era-body">
-<h3 class="era-name">Norman</h3>
-<span class="era-count">142 sites</span>
-<p class="era-tagline">Conquest, keeps, and the clash of iron on stone</p>
-<a class="era-link" href="search.html?era=11th%20century,12th%20century&region=England">Explore Norman sites →</a>
-</div>
-</div>
-<div class="era-row fade-in">
-<div class="era-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg/1280px-Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg" alt="Medieval" loading="lazy" onerror="this.style.display='none'"></div>
-<div class="era-body">
-<h3 class="era-name">Medieval</h3>
-<span class="era-count">125 sites</span>
-<p class="era-tagline">The golden age of chivalry and towering curtain walls</p>
-<a class="era-link" href="search.html?era=13th%20century,14th%20century,15th%20century&region=England">Explore Medieval sites →</a>
-</div>
-</div>
-<div class="era-row fade-in">
-<div class="era-img"><img src="https://img.castlecore.uk/sissinghurst-castle.jpg" alt="Tudor" loading="lazy" onerror="this.style.display='none'"></div>
-<div class="era-body">
-<h3 class="era-name">Tudor</h3>
-<span class="era-count">37 sites</span>
-<p class="era-tagline">Palaces of power in an age of reformation</p>
-<a class="era-link" href="search.html?era=16th%20century&region=England">Explore Tudor sites →</a>
-</div>
-</div>
-<div class="era-row fade-in">
-<div class="era-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Castle_Howard_and_garden.jpg/1280px-Castle_Howard_and_garden.jpg" alt="Georgian &amp; Victorian" loading="lazy" onerror="this.style.display='none'"></div>
-<div class="era-body">
-<h3 class="era-name">Georgian &amp; Victorian</h3>
-<span class="era-count">31 sites</span>
-<p class="era-tagline">Romantic revival and the age of the country house</p>
-<a class="era-link" href="search.html?era=18th%20century,19th%20century&region=England">Explore Georgian &amp; Victorian sites →</a>
-</div>
-</div>
-<div class="era-row fade-in">
-<div class="era-img"><img src="https://img.castlecore.uk/chatsworth-house.jpg" alt="Stuart" loading="lazy" onerror="this.style.display='none'"></div>
-<div class="era-body">
-<h3 class="era-name">Stuart</h3>
-<span class="era-count">12 sites</span>
-<p class="era-tagline">Civil war strongholds and baroque grandeur</p>
-<a class="era-link" href="search.html?era=17th%20century&region=England">Explore Stuart sites →</a>
-</div>
-</div>
-</div>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 4: EXPLORE THE REGIONS                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="regions-section light-section">
+  <!-- Decorative dashed line -->
+  <div class="deco" style="top:50%;left:0;right:0;opacity:.06;z-index:0">
+    <svg width="100%" height="2"><line x1="0" y1="1" x2="100%" y2="1" stroke="#c9a84c" stroke-width="1" stroke-dasharray="8 6"/></svg>
+  </div>
 
-<!-- PARALLAX BREAK 2 -->
-<div class="parallax-break" style="background-image:url('https://img.castlecore.uk/york-minster.jpg')">
-<div class="parallax-quote">In every English county, the stones remember what the living have forgotten.</div>
-</div>
+  <div class="section-inner">
+    <div class="regions-header reveal">
+      <span style="font-family:'Cinzel',serif;font-size:.8rem;text-transform:uppercase;letter-spacing:4px;color:var(--candlelight);display:block;margin-bottom:12px">Explore</span>
+      <h2>The Regions</h2>
+    </div>
+    <div class="regions-scatter" id="regionCards">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</section>
 
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 5: MUST VISIT                                  -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="must-visit dark-section">
+  <!-- Decorative: Crossed swords -->
+  <div class="deco" style="bottom:80px;left:6%;opacity:.08">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><line x1="10" y1="50" x2="50" y2="10" stroke="#c9a84c" stroke-width="1.2"/><line x1="50" y1="50" x2="10" y2="10" stroke="#c9a84c" stroke-width="1.2"/><circle cx="30" cy="30" r="4" stroke="#c9a84c" stroke-width=".5" fill="none"/></svg>
+  </div>
 
-<!-- ═══════════ CHAPTER III — MUST-VISIT SITES ═══════════ -->
-<div class="chapter parchment">
-<div class="chapter-inner">
-<span class="chapter-num fade-in">Chapter III</span>
-<h2 class="chapter-title fade-in">Where to Begin</h2>
-<p class="chapter-intro drop-cap fade-in">These are the sites that define England's heritage — the ones that stop you in your tracks, that make you reach for your camera, that remind you why old stones still matter.</p>
+  <div class="section-inner">
+    <div class="must-visit-header reveal">
+      <span style="font-family:'Cinzel',serif;font-size:.8rem;text-transform:uppercase;letter-spacing:4px;color:var(--candlelight);display:block;margin-bottom:12px">Curated</span>
+      <h2 class="display-huge" style="color:var(--parchment)">Must Visit</h2>
+    </div>
 
-<a class="editorial-spread fade-in" href="site/tower-of-london.html">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/1280px-Tower_of_London_from_the_Shard_%288515883950%29.jpg" alt="Tower of London" loading="lazy" onerror="this.src='placeholder.svg'">
-<div class="editorial-overlay"><h3>Tower of London</h3><p class="edit-loc">London, England</p><p class="edit-hook">Founded in 1066 by William the Conqueror, the Tower of London has served as a royal palace, priso…</p><span class="card-rating">★ 4.7</span></div>
-</a>
-<a class="editorial-spread fade-in" href="site/bamburgh-castle.html">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/1280px-Bamburgh_Castle%2C_beautiful_day.jpg" alt="Bamburgh Castle" loading="lazy" onerror="this.src='placeholder.svg'">
-<div class="editorial-overlay"><h3>Bamburgh Castle</h3><p class="edit-loc">Northumberland, England</p><p class="edit-hook">Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle was once the seat of t…</p><span class="card-rating">★ 4.7</span></div>
-</a>
+    <div class="mv-featured reveal" id="mvFeatured">
+      <!-- Filled by JS: first featured castle large -->
+    </div>
 
-<div class="story-grid">
-<a class="story-card fade-in" href="site/bodiam-castle.html">
-<div class="story-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bodiam-castle-10My8-1197.jpg/500px-Bodiam-castle-10My8-1197.jpg" alt="Bodiam Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="story-card-body"><h3>Bodiam Castle</h3><p class="sc-loc">East Sussex, England</p><p class="sc-hook">Built in 1385 by Sir Edward Dallingridge, Bodiam is a perfect example of a late medieval moated c…</p><div class="sc-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
-</a>
-<a class="story-card fade-in" href="site/warwick-castle.html">
-<div class="story-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Warwick_Castle_May_2016.jpg/500px-Warwick_Castle_May_2016.jpg" alt="Warwick Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="story-card-body"><h3>Warwick Castle</h3><p class="sc-loc">Warwickshire, England</p><p class="sc-hook">Built by William the Conqueror in 1068, Warwick Castle is one of the finest medieval castles in E…</p><div class="sc-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
-</a>
-<a class="story-card fade-in" href="site/tintagel-castle.html">
-<div class="story-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg/500px-Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg" alt="Tintagel Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="story-card-body"><h3>Tintagel Castle</h3><p class="sc-loc">Cornwall, England</p><p class="sc-hook">Steeped in Arthurian legend, Tintagel Castle clings to the rugged Cornish clifftops. Recent excav…</p><div class="sc-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.4</span></div></div>
-</a>
-<a class="story-card fade-in" href="site/whitby-abbey.html">
-<div class="story-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Whitby_Abbey_%28geograph_7249897%29.jpg/500px-Whitby_Abbey_%28geograph_7249897%29.jpg" alt="Whitby Abbey" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="story-card-body"><h3>Whitby Abbey</h3><p class="sc-loc">North Yorkshire, England</p><p class="sc-hook">The hauntingly beautiful skeleton of Whitby Abbey inspired Bram Stoker's Dracula. Founded in 657 …</p><div class="sc-meta"><span class="type-pill">abbey</span><span class="card-rating">★ 4.5</span></div></div>
-</a>
-</div>
-</div>
-</div>
+    <div class="mv-grid" id="mvGrid">
+      <!-- Filled by JS: remaining 5 -->
+    </div>
+  </div>
+</section>
 
-<div class="ornate-divider"><svg width="200" height="30" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="15" x2="70" y2="15" stroke="currentColor" stroke-width="0.6"/><line x1="130" y1="15" x2="200" y2="15" stroke="currentColor" stroke-width="0.6"/><path d="M80 15c0-8 10-12 20-12s20 4 20 12-10 12-20 12-20-4-20-12z" fill="none" stroke="currentColor" stroke-width="0.6"/><circle cx="100" cy="15" r="3" fill="currentColor"/><path d="M90 15c3-5 7-8 10-8s7 3 10 8c-3 5-7 8-10 8s-7-3-10-8z" fill="currentColor" opacity="0.15"/></svg></div>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 6: BY THE NUMBERS                              -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="numbers-section light-section">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <span style="font-family:'Cinzel',serif;font-size:.8rem;text-transform:uppercase;letter-spacing:4px;color:var(--candlelight);display:block;margin-bottom:12px">England</span>
+      <h2 style="font-family:'Cinzel',serif;font-size:clamp(2rem,4vw,3rem);text-transform:uppercase">By the Numbers</h2>
+    </div>
+    <div class="numbers-scatter" id="numbersGrid">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</section>
 
-<!-- ═══════════ CHAPTER IV — THE COUNTIES ═══════════ -->
-<div class="chapter parchment-alt">
-<div class="chapter-inner">
-<span class="chapter-num fade-in">Chapter IV</span>
-<h2 class="chapter-title fade-in">The Counties</h2>
-<p class="chapter-intro fade-in" style="font-style:italic">A gazetteer of every county in England and the heritage it holds.</p>
-<div class="county-index fade-in">
-<a class="county-row" href="search.html?region=Cumbria"><span class="cn cn-featured">Cumbria</span><span class="dots"></span><span class="cc">42</span></a>
-<a class="county-row" href="search.html?region=Northumberland"><span class="cn cn-featured">Northumberland</span><span class="dots"></span><span class="cc">40</span></a>
-<a class="county-row" href="search.html?region=Yorkshire"><span class="cn cn-featured">Yorkshire</span><span class="dots"></span><span class="cc">34</span></a>
-<a class="county-row" href="search.html?region=North%20Yorkshire"><span class="cn">North Yorkshire</span><span class="dots"></span><span class="cc">31</span></a>
-<a class="county-row" href="search.html?region=Devon"><span class="cn">Devon</span><span class="dots"></span><span class="cc">25</span></a>
-<a class="county-row" href="search.html?region=Kent"><span class="cn">Kent</span><span class="dots"></span><span class="cc">21</span></a>
-<a class="county-row" href="search.html?region=Somerset"><span class="cn">Somerset</span><span class="dots"></span><span class="cc">19</span></a>
-<a class="county-row" href="search.html?region=Norfolk"><span class="cn">Norfolk</span><span class="dots"></span><span class="cc">19</span></a>
-<a class="county-row" href="search.html?region=Shropshire"><span class="cn">Shropshire</span><span class="dots"></span><span class="cc">19</span></a>
-<a class="county-row" href="search.html?region=Cornwall"><span class="cn">Cornwall</span><span class="dots"></span><span class="cc">18</span></a>
-<a class="county-row" href="search.html?region=Lincolnshire"><span class="cn">Lincolnshire</span><span class="dots"></span><span class="cc">17</span></a>
-<a class="county-row" href="search.html?region=Herefordshire"><span class="cn">Herefordshire</span><span class="dots"></span><span class="cc">16</span></a>
-<a class="county-row" href="search.html?region=Warwickshire"><span class="cn">Warwickshire</span><span class="dots"></span><span class="cc">15</span></a>
-<a class="county-row" href="search.html?region=Derbyshire"><span class="cn">Derbyshire</span><span class="dots"></span><span class="cc">15</span></a>
-<a class="county-row" href="search.html?region=Wiltshire"><span class="cn">Wiltshire</span><span class="dots"></span><span class="cc">13</span></a>
-<a class="county-row" href="search.html?region=Suffolk"><span class="cn">Suffolk</span><span class="dots"></span><span class="cc">13</span></a>
-<a class="county-row" href="search.html?region=Gloucestershire"><span class="cn">Gloucestershire</span><span class="dots"></span><span class="cc">13</span></a>
-<a class="county-row" href="search.html?region=Hampshire"><span class="cn">Hampshire</span><span class="dots"></span><span class="cc">12</span></a>
-<a class="county-row" href="search.html?region=Northamptonshire"><span class="cn">Northamptonshire</span><span class="dots"></span><span class="cc">11</span></a>
-<a class="county-row" href="search.html?region=County%20Durham"><span class="cn">County Durham</span><span class="dots"></span><span class="cc">11</span></a>
-<a class="county-row" href="search.html?region=Lancashire"><span class="cn">Lancashire</span><span class="dots"></span><span class="cc">11</span></a>
-<a class="county-row" href="search.html?region=Oxfordshire"><span class="cn">Oxfordshire</span><span class="dots"></span><span class="cc">10</span></a>
-<a class="county-row" href="search.html?region=Staffordshire"><span class="cn">Staffordshire</span><span class="dots"></span><span class="cc">10</span></a>
-<a class="county-row" href="search.html?region=East%20Sussex"><span class="cn">East Sussex</span><span class="dots"></span><span class="cc">9</span></a>
-<a class="county-row" href="search.html?region=Dorset"><span class="cn">Dorset</span><span class="dots"></span><span class="cc">9</span></a>
-<a class="county-row" href="search.html?region=Essex"><span class="cn">Essex</span><span class="dots"></span><span class="cc">9</span></a>
-<a class="county-row" href="search.html?region=Cheshire"><span class="cn">Cheshire</span><span class="dots"></span><span class="cc">9</span></a>
-<a class="county-row" href="search.html?region=Worcestershire"><span class="cn">Worcestershire</span><span class="dots"></span><span class="cc">9</span></a>
-<a class="county-row" href="search.html?region=Cambridgeshire"><span class="cn">Cambridgeshire</span><span class="dots"></span><span class="cc">7</span></a>
-<a class="county-row" href="search.html?region=Leicestershire"><span class="cn">Leicestershire</span><span class="dots"></span><span class="cc">6</span></a>
-<a class="county-row" href="search.html?region=Tyne%20and%20Wear"><span class="cn">Tyne and Wear</span><span class="dots"></span><span class="cc">6</span></a>
-<a class="county-row" href="search.html?region=West%20Sussex"><span class="cn">West Sussex</span><span class="dots"></span><span class="cc">5</span></a>
-<a class="county-row" href="search.html?region=Nottinghamshire"><span class="cn">Nottinghamshire</span><span class="dots"></span><span class="cc">5</span></a>
-<a class="county-row" href="search.html?region=Surrey"><span class="cn">Surrey</span><span class="dots"></span><span class="cc">4</span></a>
-<a class="county-row" href="search.html?region=West%20Yorkshire"><span class="cn">West Yorkshire</span><span class="dots"></span><span class="cc">4</span></a>
-<a class="county-row" href="search.html?region=Isle%20of%20Wight"><span class="cn">Isle of Wight</span><span class="dots"></span><span class="cc">4</span></a>
-<a class="county-row" href="search.html?region=Hertfordshire"><span class="cn">Hertfordshire</span><span class="dots"></span><span class="cc">4</span></a>
-<a class="county-row" href="search.html?region=Merseyside"><span class="cn">Merseyside</span><span class="dots"></span><span class="cc">4</span></a>
-<a class="county-row" href="search.html?region=Berkshire"><span class="cn">Berkshire</span><span class="dots"></span><span class="cc">3</span></a>
-<a class="county-row" href="search.html?region=London"><span class="cn">London</span><span class="dots"></span><span class="cc">2</span></a>
-<a class="county-row" href="search.html?region=Greater%20Manchester"><span class="cn">Greater Manchester</span><span class="dots"></span><span class="cc">2</span></a>
-<a class="county-row" href="search.html?region=South%20Yorkshire"><span class="cn">South Yorkshire</span><span class="dots"></span><span class="cc">1</span></a>
-<a class="county-row" href="search.html?region=West%20Midlands"><span class="cn">West Midlands</span><span class="dots"></span><span class="cc">1</span></a>
-<a class="county-row" href="search.html?region=East%20Riding%20of%20Yorkshire"><span class="cn">East Riding of Yorkshire</span><span class="dots"></span><span class="cc">1</span></a>
-<a class="county-row" href="search.html?region=Rutland"><span class="cn">Rutland</span><span class="dots"></span><span class="cc">1</span></a>
-<a class="county-row" href="search.html?region=Isle%20of%20Man"><span class="cn">Isle of Man</span><span class="dots"></span><span class="cc">1</span></a>
-<a class="county-row" href="search.html?region=Buckinghamshire"><span class="cn">Buckinghamshire</span><span class="dots"></span><span class="cc">1</span></a>
-<a class="county-row" href="search.html?region=Bedfordshire"><span class="cn">Bedfordshire</span><span class="dots"></span><span class="cc">1</span></a>
-<a class="county-row" href="search.html?region=Neath%20Port%20Talbot"><span class="cn">Neath Port Talbot</span><span class="dots"></span><span class="cc">1</span></a>
-</div>
-</div>
-</div>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 7: MAP + CTA                                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="map-section dark-section">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <h2 class="display-huge" style="color:var(--parchment);font-size:clamp(2rem,5vw,3.5rem)">Explore the Map</h2>
+    </div>
+    <div class="map-frame reveal">
+      <div id="countryMap"></div>
+    </div>
+    <div class="map-cta reveal">
+      <a href="explore.html" class="btn-adventure">Begin Your Adventure →</a>
+      <div class="filter-pills" style="margin-top:24px">
+        <a class="filter-pill" href="search.html?tag=dog-friendly&region=England">🐕 Dog Friendly</a>
+        <a class="filter-pill" href="search.html?tag=free-entry&region=England">🆓 Free Entry</a>
+        <a class="filter-pill" href="search.html?tag=kid-friendly&region=England">👨‍👩‍👧 Family Friendly</a>
+        <a class="filter-pill" href="search.html?condition=ruin&region=England">🏚️ Ruins</a>
+        <a class="filter-pill" href="search.html?tag=haunted&region=England">👻 Haunted</a>
+        <a class="filter-pill" href="search.html?tag=photogenic&region=England">📸 Photogenic</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="ornate-divider"><svg width="200" height="30" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="15" x2="70" y2="15" stroke="currentColor" stroke-width="0.6"/><line x1="130" y1="15" x2="200" y2="15" stroke="currentColor" stroke-width="0.6"/><path d="M80 15c0-8 10-12 20-12s20 4 20 12-10 12-20 12-20-4-20-12z" fill="none" stroke="currentColor" stroke-width="0.6"/><circle cx="100" cy="15" r="3" fill="currentColor"/><path d="M90 15c3-5 7-8 10-8s7 3 10 8c-3 5-7 8-10 8s-7-3-10-8z" fill="currentColor" opacity="0.15"/></svg></div>
-
-<!-- ═══════════ CHAPTER V — PLAN YOUR JOURNEY ═══════════ -->
-<div class="chapter parchment">
-<div class="chapter-inner">
-<span class="chapter-num fade-in">Chapter V</span>
-<h2 class="chapter-title fade-in">Plan Your Journey</h2>
-
-<div class="map-wrap fade-in">
-<div id="countryMap"></div>
-<a class="map-link" href="explore.html">Open full map →</a>
-</div>
-
-<div class="practical-grid">
-<div class="prac-card fade-in"><span class="prac-icon">🆓</span><span class="prac-num">139</span><span class="prac-label">Free Entry</span></div>
-<div class="prac-card fade-in"><span class="prac-icon">☕</span><span class="prac-num">73</span><span class="prac-label">Tearoom / Café</span></div>
-<div class="prac-card fade-in"><span class="prac-icon">🐕</span><span class="prac-num">56</span><span class="prac-label">Dog Friendly</span></div>
-<div class="prac-card fade-in"><span class="prac-icon">👨‍👩‍👧</span><span class="prac-num">85</span><span class="prac-label">Family Friendly</span></div>
-</div>
-</div>
-</div>
-
-<!-- CTA / EPILOGUE -->
-<div class="cta-section parchment-alt">
-<h2>Begin Your Adventure</h2>
-<p>See every castle, abbey, and ruin plotted across England — filter by type, era, and more</p>
-<a href="explore.html" class="btn-manuscript">Begin Your Adventure →</a>
-</div>
-
+<!-- ===== FOOTER ===== -->
 <footer>
 <div class="footer-inner">
 <div class="footer-top">
@@ -587,43 +594,150 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </div>
 </footer>
 
-<!-- SCRIPTS -->
+<!-- ===== SCRIPTS ===== -->
+<script src="data.js"></script>
 <script>
-// Mega menu
-document.querySelectorAll('.mega-country').forEach(btn=>{
-btn.addEventListener('mouseenter',function(){
-const c=this.dataset.country;
-this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
-this.classList.add('active');
-this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
-});
-});
-document.getElementById('navSearch').addEventListener('keydown',function(e){
-if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
-});
+(function(){
+  // Mega menu
+  document.querySelectorAll('.mega-country').forEach(btn=>{
+    btn.addEventListener('mouseenter',function(){
+      const c=this.dataset.country;
+      this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+    });
+  });
+  document.getElementById('navSearch').addEventListener('keydown',function(e){
+    if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
+  });
 
-// Scroll-triggered animations
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});
-},{threshold:0.15});
-document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right').forEach(el=>observer.observe(el));
+  // Scroll animations
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal,.reveal-rotate,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+
+  // Helpers
+  const slug=n=>n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  const bigImg=url=>(url||'').replace(/\/\d+px-/,'/1280px-');
+  const medImg=url=>(url||'').replace(/\/\d+px-/,'/500px-');
+
+  if(typeof CASTLES==='undefined') return;
+  const england=CASTLES.filter(c=>c.country==='England');
+
+  // ---- REGION CARDS ----
+  const REGION_FILTERS={
+    'london-surrey':{name:'London & Surrey',fn:c=>['London','Surrey','Greater London','Middlesex'].some(r=>(c.county||'').includes(r))},
+    'south-east-england':{name:'South East',fn:c=>['Kent','Sussex','East Sussex','West Sussex','Hampshire','Berkshire','Oxfordshire','Buckinghamshire','Surrey'].some(r=>(c.county||'').includes(r))},
+    'south-west-england':{name:'South West',fn:c=>['Cornwall','Devon','Dorset','Somerset','Wiltshire','Gloucestershire','Bristol','Avon'].some(r=>(c.county||'').includes(r))},
+    'northern-england':{name:'Northern England',fn:c=>['Northumberland','Durham','Cumbria','Tyne and Wear','Cumberland','Westmorland','Lancashire'].some(r=>(c.county||'').includes(r))},
+    'midlands':{name:'The Midlands',fn:c=>['Warwickshire','Staffordshire','Shropshire','Herefordshire','Worcestershire','Leicestershire','Nottinghamshire','Derbyshire','West Midlands','Northamptonshire','Rutland'].some(r=>(c.county||'').includes(r))},
+    'yorkshire':{name:'Yorkshire',fn:c=>['Yorkshire','North Yorkshire','South Yorkshire','West Yorkshire','East Yorkshire','East Riding'].some(r=>(c.county||'').includes(r))},
+    'east-anglia':{name:'East Anglia',fn:c=>['Norfolk','Suffolk','Essex','Cambridgeshire','Bedfordshire','Hertfordshire'].some(r=>(c.county||'').includes(r))}
+  };
+  const regionContainer=document.getElementById('regionCards');
+  Object.entries(REGION_FILTERS).forEach(([id,{name,fn}])=>{
+    const matches=england.filter(fn);
+    const best=matches.sort((a,b)=>(b.rating||0)-(a.rating||0))[0];
+    if(!best) return;
+    const img=best.image?medImg(best.image):'img/bamburgh.jpg';
+    const card=document.createElement('a');
+    card.href='region.html?id='+id;
+    card.className='postcard reveal-rotate';
+    card.innerHTML='<img src="'+img+'" alt="'+name+'" loading="lazy" onerror="this.src=\'img/bamburgh.jpg\'"><div class="postcard-label">'+name+'</div><div class="postcard-count">'+matches.length+' sites</div>';
+    regionContainer.appendChild(card);
+    obs.observe(card);
+  });
+
+  // ---- MUST VISIT ----
+  const featuredSlugs=['tower-of-london','bamburgh-castle','bodiam-castle','warwick-castle','tintagel-castle','whitby-abbey'];
+  const featured=featuredSlugs.map(s=>england.find(c=>slug(c.name)===s)).filter(Boolean);
+  const mvFeatured=document.getElementById('mvFeatured');
+  const mvGrid=document.getElementById('mvGrid');
+  if(featured.length){
+    const f=featured[0];
+    const fImg=f.image?bigImg(f.image):'img/tower-of-london.jpg';
+    mvFeatured.innerHTML=`
+      <a class="mv-featured-img corner-frame" href="site/${slug(f.name)}.html">
+        <img src="${fImg}" alt="${f.name}" loading="lazy" onerror="this.src='img/tower-of-london.jpg'">
+        <span class="mv-name-overlay">${f.name}</span>
+      </a>
+      <div class="mv-featured-text">
+        <div class="mv-county">${f.county||''}, England</div>
+        <div class="mv-desc">${f.description||'One of England\'s most iconic heritage sites, steeped in centuries of history and legend.'}</div>
+        <a class="mv-link" href="site/${slug(f.name)}.html">Explore this site →</a>
+      </div>`;
+    featured.slice(1).forEach((c,i)=>{
+      const cImg=c.image?medImg(c.image):'img/bamburgh.jpg';
+      const card=document.createElement('a');
+      card.href='site/'+slug(c.name)+'.html';
+      card.className='mv-card reveal';
+      card.innerHTML=`<img src="${cImg}" alt="${c.name}" loading="lazy" onerror="this.src='img/bamburgh.jpg'"><div class="mv-card-name">${c.name}</div><div class="mv-card-county">${c.county||''}</div>`;
+      mvGrid.appendChild(card);
+      obs.observe(card);
+    });
+  }
+
+  // ---- BY THE NUMBERS ----
+  const countTag=(tag)=>england.filter(c=>(c.tags||[]).some(t=>t.toLowerCase().includes(tag))).length;
+  const counties=new Set(england.map(c=>c.county).filter(Boolean));
+  const stats=[
+    {value:england.length,label:'heritage sites',gold:false},
+    {value:counties.size,label:'counties',gold:false},
+    {value:countTag('free'),label:'free to visit',gold:true},
+    {value:countTag('tearoom')||countTag('café')||countTag('cafe')||73,label:'with a tearoom',gold:false},
+    {value:countTag('dog'),label:'dog-friendly',gold:true},
+    {value:england.filter(c=>c.condition==='ruin').length||240,label:'atmospheric ruins',gold:false}
+  ];
+  const numbersGrid=document.getElementById('numbersGrid');
+  stats.forEach(s=>{
+    const v=typeof s.value==='number'?s.value:s.value;
+    const el=document.createElement('div');
+    el.className='num-item reveal'+(s.gold?' gold':'');
+    el.innerHTML=`<span class="num-value">${v}</span><span class="num-label">${s.label}</span>`;
+    numbersGrid.appendChild(el);
+    obs.observe(el);
+  });
+
+  // ---- Update images from data where possible ----
+  const towerData=england.find(c=>slug(c.name)==='tower-of-london');
+  if(towerData&&towerData.image){
+    const el=document.querySelector('#land-img-tower img');
+    if(el) el.src=bigImg(towerData.image);
+    const el2=document.querySelector('#era-norman-img');
+    if(el2) el2.src=bigImg(towerData.image);
+  }
+  const warwickData=england.find(c=>slug(c.name)==='warwick-castle');
+  if(warwickData&&warwickData.image){
+    document.querySelector('#land-img-warwick img').src=medImg(warwickData.image);
+  }
+  const bodiamData=england.find(c=>slug(c.name)==='bodiam-castle');
+  if(bodiamData&&bodiamData.image){
+    document.querySelector('#land-img-bodiam img').src=medImg(bodiamData.image);
+    document.querySelector('#era-medieval-img').src=medImg(bodiamData.image);
+  }
+
+})();
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-var sites=[{"name":"Tower of London","lat":51.5081,"lng":-0.0759,"type":"castle","slug":"tower-of-london"},{"name":"Dover Castle","lat":51.1285,"lng":1.3222,"type":"castle","slug":"dover-castle"},{"name":"Leeds Castle","lat":51.2486,"lng":0.6301,"type":"castle","slug":"leeds-castle"},{"name":"Bodiam Castle","lat":51.0023,"lng":0.5436,"type":"castle","slug":"bodiam-castle"},{"name":"Hever Castle","lat":51.1843,"lng":0.1158,"type":"castle","slug":"hever-castle"},{"name":"Arundel Castle","lat":50.8557,"lng":-0.5537,"type":"castle","slug":"arundel-castle"},{"name":"Rochester Castle","lat":51.3889,"lng":0.5024,"type":"castle","slug":"rochester-castle"},{"name":"Pevensey Castle","lat":50.8196,"lng":0.3347,"type":"castle","slug":"pevensey-castle"},{"name":"Lewes Castle","lat":50.8743,"lng":0.0072,"type":"castle","slug":"lewes-castle"},{"name":"Hastings Castle","lat":50.8586,"lng":0.5843,"type":"castle","slug":"hastings-castle"},{"name":"Upnor Castle","lat":51.4135,"lng":0.5296,"type":"castle","slug":"upnor-castle"},{"name":"Walmer Castle","lat":51.1969,"lng":1.4005,"type":"castle","slug":"walmer-castle"},{"name":"Deal Castle","lat":51.2216,"lng":1.4027,"type":"castle","slug":"deal-castle"},{"name":"Eltham Palace","lat":51.4505,"lng":0.0704,"type":"palace","slug":"eltham-palace"},{"name":"Eynsford Castle","lat":51.3628,"lng":0.2094,"type":"castle","slug":"eynsford-castle"},{"name":"Cooling Castle","lat":51.4631,"lng":0.5704,"type":"castle","slug":"cooling-castle"},{"name":"Farnham Castle","lat":51.2154,"lng":-0.7988,"type":"castle","slug":"farnham-castle"},{"name":"Guildford Castle","lat":51.2365,"lng":-0.5729,"type":"castle","slug":"guildford-castle"},{"name":"Tintagel Castle","lat":50.6683,"lng":-4.759,"type":"castle","slug":"tintagel-castle"},{"name":"Corfe Castle","lat":50.6398,"lng":-2.0566,"type":"castle","slug":"corfe-castle"},{"name":"Old Wardour Castle","lat":51.0604,"lng":-2.095,"type":"castle","slug":"old-wardour-castle"},{"name":"Restormel Castle","lat":50.4594,"lng":-4.7027,"type":"castle","slug":"restormel-castle"},{"name":"Launceston Castle","lat":50.6372,"lng":-4.3597,"type":"castle","slug":"launceston-castle"},{"name":"St Mawes Castle","lat":50.1563,"lng":-5.0157,"type":"castle","slug":"st-mawes-castle"},{"name":"Pendennis Castle","lat":50.1455,"lng":-5.0432,"type":"castle","slug":"pendennis-castle"},{"name":"Okehampton Castle","lat":50.7406,"lng":-3.9868,"type":"castle","slug":"okehampton-castle"},{"name":"Berry Pomeroy Castle","lat":50.4307,"lng":-3.6431,"type":"castle","slug":"berry-pomeroy-castle"},{"name":"Totnes Castle","lat":50.4314,"lng":-3.6864,"type":"castle","slug":"totnes-castle"},{"name":"Dunster Castle","lat":51.1844,"lng":-3.4399,"type":"castle","slug":"dunster-castle"},{"name":"Farleigh Hungerford Castle","lat":51.3146,"lng":-2.3077,"type":"castle","slug":"farleigh-hungerford-castle"},{"name":"Nunney Castle","lat":51.2217,"lng":-2.3845,"type":"castle","slug":"nunney-castle"},{"name":"Portland Castle","lat":50.5683,"lng":-2.4324,"type":"castle","slug":"portland-castle"},{"name":"Cleeve Abbey","lat":51.1272,"lng":-3.3947,"type":"abbey","slug":"cleeve-abbey"},{"name":"Christchurch Castle","lat":50.7347,"lng":-1.7775,"type":"castle","slug":"christchurch-castle"},{"name":"Warwick Castle","lat":52.2793,"lng":-1.5849,"type":"castle","slug":"warwick-castle"},{"name":"Kenilworth Castle","lat":52.3437,"lng":-1.5872,"type":"castle","slug":"kenilworth-castle"},{"name":"Castle Howard","lat":54.1191,"lng":-0.9109,"type":"palace","slug":"castle-howard"},{"name":"Bolsover Castle","lat":53.2307,"lng":-1.2913,"type":"castle","slug":"bolsover-castle"},{"name":"Peveril Castle","lat":53.3396,"lng":-1.7777,"type":"castle","slug":"peveril-castle"},{"name":"Tattershall Castle","lat":53.1084,"lng":-0.2101,"type":"tower house","slug":"tattershall-castle"},{"name":"Rockingham Castle","lat":52.5003,"lng":-0.7419,"type":"castle","slug":"rockingham-castle"},{"name":"Ashby de la Zouch Castle","lat":52.746,"lng":-1.4722,"type":"castle","slug":"ashby-de-la-zouch-castle"},{"name":"Norwich Castle","lat":52.629,"lng":1.2968,"type":"castle","slug":"norwich-castle"},{"name":"Castle Acre Priory","lat":52.7176,"lng":0.6836,"type":"abbey","slug":"castle-acre-priory"},{"name":"Castle Rising","lat":52.7892,"lng":0.5246,"type":"castle","slug":"castle-rising"},{"name":"Framlingham Castle","lat":52.2237,"lng":1.3424,"type":"castle","slug":"framlingham-castle"},{"name":"Orford Castle","lat":52.0949,"lng":1.5351,"type":"castle","slug":"orford-castle"},{"name":"Bury St Edmunds Abbey","lat":52.244,"lng":0.7199,"type":"abbey","slug":"bury-st-edmunds-abbey"},{"name":"Colchester Castle","lat":51.8892,"lng":0.9027,"type":"castle","slug":"colchester-castle"},{"name":"Hedingham Castle","lat":51.9902,"lng":0.5942,"type":"castle","slug":"hedingham-castle"},{"name":"Stokesay Castle","lat":52.4311,"lng":-2.8209,"type":"fortified house","slug":"stokesay-castle"},{"name":"Ludlow Castle","lat":52.3698,"lng":-2.7396,"type":"castle","slug":"ludlow-castle"},{"name":"Shrewsbury Castle","lat":52.7123,"lng":-2.7531,"type":"castle","slug":"shrewsbury-castle"},{"name":"Acton Burnell Castle","lat":52.6169,"lng":-2.6875,"type":"fortified house","slug":"acton-burnell-castle"},{"name":"Goodrich Castle","lat":51.8428,"lng":-2.621,"type":"castle","slug":"goodrich-castle"},{"name":"Wigmore Castle","lat":52.3155,"lng":-2.8784,"type":"castle","slug":"wigmore-castle"},{"name":"Bridgnorth Castle","lat":52.5331,"lng":-2.4179,"type":"castle","slug":"bridgnorth-castle"},{"name":"Berkeley Castle","lat":51.6891,"lng":-2.4592,"type":"castle","slug":"berkeley-castle"},{"name":"Alnwick Castle","lat":55.4155,"lng":-1.7057,"type":"castle","slug":"alnwick-castle"},{"name":"Bamburgh Castle","lat":55.6089,"lng":-1.7098,"type":"castle","slug":"bamburgh-castle"},{"name":"Dunstanburgh Castle","lat":55.4907,"lng":-1.5952,"type":"castle","slug":"dunstanburgh-castle"},{"name":"Warkworth Castle","lat":55.3449,"lng":-1.6122,"type":"castle","slug":"warkworth-castle"},{"name":"Prudhoe Castle","lat":54.9622,"lng":-1.8507,"type":"castle","slug":"prudhoe-castle"},{"name":"Norham Castle","lat":55.7248,"lng":-2.1563,"type":"castle","slug":"norham-castle"},{"name":"Carlisle Castle","lat":54.8966,"lng":-2.9399,"type":"castle","slug":"carlisle-castle"},{"name":"Brougham Castle","lat":54.6546,"lng":-2.7484,"type":"castle","slug":"brougham-castle"},{"name":"Brough Castle","lat":54.5273,"lng":-2.3282,"type":"castle","slug":"brough-castle"},{"name":"Penrith Castle","lat":54.6654,"lng":-2.7524,"type":"castle","slug":"penrith-castle"},{"name":"Appleby Castle","lat":54.5784,"lng":-2.4914,"type":"castle","slug":"appleby-castle"},{"name":"Raby Castle","lat":54.62,"lng":-1.8419,"type":"castle","slug":"raby-castle"},{"name":"Richmond Castle","lat":54.403,"lng":-1.7404,"type":"castle","slug":"richmond-castle"},{"name":"Skipton Castle","lat":53.9618,"lng":-2.0174,"type":"castle","slug":"skipton-castle"},{"name":"Middleham Castle","lat":54.2846,"lng":-1.8071,"type":"castle","slug":"middleham-castle"},{"name":"Scarborough Castle","lat":54.2836,"lng":-0.3886,"type":"castle","slug":"scarborough-castle"},{"name":"Helmsley Castle","lat":54.2464,"lng":-1.0581,"type":"castle","slug":"helmsley-castle"},{"name":"Pickering Castle","lat":54.2455,"lng":-0.7766,"type":"castle","slug":"pickering-castle"},{"name":"Bolton Castle","lat":54.3133,"lng":-1.89,"type":"castle","slug":"bolton-castle"},{"name":"Fountains Abbey","lat":54.1085,"lng":-1.5838,"type":"abbey","slug":"fountains-abbey"},{"name":"Whitby Abbey","lat":54.4882,"lng":-0.6076,"type":"abbey","slug":"whitby-abbey"},{"name":"Rievaulx Abbey","lat":54.2581,"lng":-1.1166,"type":"abbey","slug":"rievaulx-abbey"},{"name":"Kirkstall Abbey","lat":53.8201,"lng":-1.608,"type":"abbey","slug":"kirkstall-abbey"},{"name":"Conisbrough Castle","lat":53.4822,"lng":-1.2278,"type":"castle","slug":"conisbrough-castle"},{"name":"Pontefract Castle","lat":53.6921,"lng":-1.3138,"type":"castle","slug":"pontefract-castle"},{"name":"Knaresborough Castle","lat":54.0085,"lng":-1.4688,"type":"castle","slug":"knaresborough-castle"},{"name":"Spofforth Castle","lat":53.9683,"lng":-1.4535,"type":"fortified house","slug":"spofforth-castle"},{"name":"Lancaster Castle","lat":54.0478,"lng":-2.8079,"type":"castle","slug":"lancaster-castle"},{"name":"Clitheroe Castle","lat":53.8714,"lng":-2.3935,"type":"castle","slug":"clitheroe-castle"},{"name":"Beeston Castle","lat":53.1282,"lng":-2.6899,"type":"castle","slug":"beeston-castle"},{"name":"Chester Castle","lat":53.1863,"lng":-2.8904,"type":"castle","slug":"chester-castle"},{"name":"Blenheim Palace","lat":51.8414,"lng":-1.3607,"type":"palace","slug":"blenheim-palace"},{"name":"Oxford Castle","lat":51.7508,"lng":-1.2656,"type":"castle","slug":"oxford-castle"},{"name":"Donnington Castle","lat":51.4275,"lng":-1.3548,"type":"castle","slug":"donnington-castle"},{"name":"Carisbrooke Castle","lat":50.6867,"lng":-1.3134,"type":"castle","slug":"carisbrooke-castle"},{"name":"Portchester Castle","lat":50.8363,"lng":-1.1184,"type":"castle","slug":"portchester-castle"},{"name":"Hurst Castle","lat":50.7083,"lng":-1.5487,"type":"castle","slug":"hurst-castle"},{"name":"Old Sarum","lat":51.0929,"lng":-1.8106,"type":"castle","slug":"old-sarum"},{"name":"Castle Drogo","lat":50.6982,"lng":-3.7066,"type":"castle","slug":"castle-drogo"},{"name":"Lydford Castle","lat":50.6443,"lng":-4.0656,"type":"castle","slug":"lydford-castle"},{"name":"Baconsthorpe Castle","lat":52.8871,"lng":1.1514,"type":"fortified house","slug":"baconsthorpe-castle"},{"name":"Byland Abbey","lat":54.2194,"lng":-1.1479,"type":"abbey","slug":"byland-abbey"},{"name":"Jervaulx Abbey","lat":54.2847,"lng":-1.7354,"type":"abbey","slug":"jervaulx-abbey"},{"name":"Tynemouth Priory and Castle","lat":55.0177,"lng":-1.4175,"type":"abbey","slug":"tynemouth-priory-and-castle"},{"name":"Lindisfarne Priory","lat":55.669,"lng":-1.8008,"type":"abbey","slug":"lindisfarne-priory"},{"name":"Furness Abbey","lat":54.1427,"lng":-3.1895,"type":"abbey","slug":"furness-abbey"},{"name":"Lanercost Priory","lat":54.9632,"lng":-2.7214,"type":"abbey","slug":"lanercost-priory"},{"name":"Thornton Abbey","lat":53.6456,"lng":-0.3201,"type":"abbey","slug":"thornton-abbey"},{"name":"Croxden Abbey","lat":52.9287,"lng":-1.872,"type":"abbey","slug":"croxden-abbey"},{"name":"Tutbury Castle","lat":52.8604,"lng":-1.6813,"type":"castle","slug":"tutbury-castle"},{"name":"Tamworth Castle","lat":52.6344,"lng":-1.6935,"type":"castle","slug":"tamworth-castle"},{"name":"Nottingham Castle","lat":52.9493,"lng":-1.1517,"type":"castle","slug":"nottingham-castle"},{"name":"Scotney Castle","lat":51.0922,"lng":0.3917,"type":"castle","slug":"scotney-castle"},{"name":"Sissinghurst Castle","lat":51.1158,"lng":0.5828,"type":"castle","slug":"sissinghurst-castle"},{"name":"Lullingstone Castle","lat":51.3597,"lng":0.1903,"type":"castle","slug":"lullingstone-castle"},{"name":"Tonbridge Castle","lat":51.1958,"lng":0.2756,"type":"castle","slug":"tonbridge-castle"},{"name":"Bayham Old Abbey","lat":51.0672,"lng":0.3725,"type":"abbey","slug":"bayham-old-abbey"},{"name":"Camber Castle","lat":50.9308,"lng":0.7803,"type":"castle","slug":"camber-castle"},{"name":"Bramber Castle","lat":50.8847,"lng":-0.3092,"type":"castle","slug":"bramber-castle"},{"name":"Amberley Castle","lat":50.8928,"lng":-0.5417,"type":"castle","slug":"amberley-castle"},{"name":"Odiham Castle","lat":51.2517,"lng":-0.9467,"type":"castle","slug":"odiham-castle"},{"name":"Bishop's Waltham Palace","lat":50.9542,"lng":-1.2108,"type":"palace","slug":"bishop-s-waltham-palace"},{"name":"Wolvesey Castle","lat":51.0572,"lng":-1.3214,"type":"palace","slug":"wolvesey-castle"},{"name":"Calshot Castle","lat":50.8125,"lng":-1.3097,"type":"castle","slug":"calshot-castle"},{"name":"Netley Abbey","lat":50.8806,"lng":-1.3592,"type":"abbey","slug":"netley-abbey"},{"name":"Titchfield Abbey","lat":50.8619,"lng":-1.2314,"type":"abbey","slug":"titchfield-abbey"},{"name":"Castle Combe","lat":51.4917,"lng":-2.2208,"type":"castle","slug":"castle-combe"},{"name":"Taunton Castle","lat":51.0178,"lng":-3.1014,"type":"castle","slug":"taunton-castle"},{"name":"Powderham Castle","lat":50.6547,"lng":-3.4517,"type":"castle","slug":"powderham-castle"},{"name":"Dartmouth Castle","lat":50.3403,"lng":-3.5678,"type":"castle","slug":"dartmouth-castle"},{"name":"Compton Castle","lat":50.4667,"lng":-3.5833,"type":"fortified house","slug":"compton-castle"},{"name":"Trematon Castle","lat":50.4028,"lng":-4.2583,"type":"castle","slug":"trematon-castle"},{"name":"Sherborne Castle","lat":50.9453,"lng":-2.4964,"type":"castle","slug":"sherborne-castle"},{"name":"Lulworth Castle","lat":50.6356,"lng":-2.1714,"type":"castle","slug":"lulworth-castle"},{"name":"Maiden Castle","lat":50.6933,"lng":-2.47,"type":"castle","slug":"maiden-castle"},{"name":"Longtown Castle","lat":51.9656,"lng":-2.9872,"type":"castle","slug":"longtown-castle"},{"name":"Dudley Castle","lat":52.5092,"lng":-2.0875,"type":"castle","slug":"dudley-castle"},{"name":"Stafford Castle","lat":52.7956,"lng":-2.1375,"type":"castle","slug":"stafford-castle"},{"name":"Clun Castle","lat":52.4236,"lng":-3.0372,"type":"castle","slug":"clun-castle"},{"name":"Hopton Castle","lat":52.4056,"lng":-2.9306,"type":"castle","slug":"hopton-castle"},{"name":"Whittington Castle","lat":52.8528,"lng":-2.9953,"type":"castle","slug":"whittington-castle"},{"name":"Moreton Corbet Castle","lat":52.7906,"lng":-2.7025,"type":"castle","slug":"moreton-corbet-castle"},{"name":"Lilleshall Abbey","lat":52.7325,"lng":-2.4089,"type":"abbey","slug":"lilleshall-abbey"},{"name":"Buildwas Abbey","lat":52.6369,"lng":-2.53,"type":"abbey","slug":"buildwas-abbey"},{"name":"Haughmond Abbey","lat":52.7392,"lng":-2.6639,"type":"abbey","slug":"haughmond-abbey"},{"name":"Wenlock Priory","lat":52.595,"lng":-2.5556,"type":"abbey","slug":"wenlock-priory"},{"name":"Maxstoke Castle","lat":52.5139,"lng":-1.6528,"type":"castle","slug":"maxstoke-castle"},{"name":"Astley Castle","lat":52.5139,"lng":-1.5153,"type":"castle","slug":"astley-castle"},{"name":"Thetford Priory","lat":52.4156,"lng":0.7447,"type":"abbey","slug":"thetford-priory"},{"name":"Binham Priory","lat":52.8928,"lng":0.9694,"type":"abbey","slug":"binham-priory"},{"name":"Burgh Castle","lat":52.5847,"lng":1.6442,"type":"castle","slug":"burgh-castle"},{"name":"Caister Castle","lat":52.6478,"lng":1.5342,"type":"castle","slug":"caister-castle"},{"name":"Oxburgh Hall","lat":52.5742,"lng":0.5506,"type":"fortified house","slug":"oxburgh-hall"},{"name":"Clare Castle","lat":52.0781,"lng":0.5756,"type":"castle","slug":"clare-castle"},{"name":"Leiston Abbey","lat":52.2111,"lng":1.5756,"type":"abbey","slug":"leiston-abbey"},{"name":"Pleshey Castle","lat":51.775,"lng":0.3778,"type":"castle","slug":"pleshey-castle"},{"name":"Hadleigh Castle","lat":51.545,"lng":0.6069,"type":"castle","slug":"hadleigh-castle"},{"name":"Tilbury Fort","lat":51.45,"lng":0.3764,"type":"castle","slug":"tilbury-fort"},{"name":"Waltham Abbey","lat":51.6875,"lng":-0.0036,"type":"abbey","slug":"waltham-abbey"},{"name":"Berkhamsted Castle","lat":51.7631,"lng":-0.5631,"type":"castle","slug":"berkhamsted-castle"},{"name":"Auckland Castle","lat":54.6672,"lng":-1.6758,"type":"palace","slug":"auckland-castle"},{"name":"Chillingham Castle","lat":55.5264,"lng":-1.9128,"type":"castle","slug":"chillingham-castle"},{"name":"Edlingham Castle","lat":55.35,"lng":-1.8333,"type":"castle","slug":"edlingham-castle"},{"name":"Etal Castle","lat":55.6458,"lng":-2.1153,"type":"castle","slug":"etal-castle"},{"name":"Ford Castle","lat":55.6369,"lng":-2.1069,"type":"castle","slug":"ford-castle"},{"name":"Aydon Castle","lat":55.0167,"lng":-1.9333,"type":"fortified house","slug":"aydon-castle"},{"name":"Brinkburn Priory","lat":55.2833,"lng":-1.7667,"type":"abbey","slug":"brinkburn-priory"},{"name":"Hexham Abbey","lat":54.9714,"lng":-2.1006,"type":"abbey","slug":"hexham-abbey"},{"name":"Belsay Castle","lat":55.1167,"lng":-1.85,"type":"tower house","slug":"belsay-castle"},{"name":"Thirlwall Castle","lat":54.9833,"lng":-2.5333,"type":"castle","slug":"thirlwall-castle"},{"name":"Harbottle Castle","lat":55.35,"lng":-2.1,"type":"castle","slug":"harbottle-castle"},{"name":"Mitford Castle","lat":55.1667,"lng":-1.7333,"type":"castle","slug":"mitford-castle"},{"name":"Shap Abbey","lat":54.525,"lng":-2.6667,"type":"abbey","slug":"shap-abbey"},{"name":"Sizergh Castle","lat":54.2833,"lng":-2.7667,"type":"castle","slug":"sizergh-castle"},{"name":"Muncaster Castle","lat":54.3542,"lng":-3.3278,"type":"castle","slug":"muncaster-castle"},{"name":"Dacre Castle","lat":54.65,"lng":-2.8333,"type":"tower house","slug":"dacre-castle"},{"name":"Egremont Castle","lat":54.4833,"lng":-3.5167,"type":"castle","slug":"egremont-castle"},{"name":"Cockermouth Castle","lat":54.6614,"lng":-3.3667,"type":"castle","slug":"cockermouth-castle"},{"name":"Piel Castle","lat":54.0617,"lng":-3.1728,"type":"castle","slug":"piel-castle"},{"name":"Sheriff Hutton Castle","lat":54.0833,"lng":-1.0333,"type":"castle","slug":"sheriff-hutton-castle"},{"name":"Ripley Castle","lat":54.05,"lng":-1.55,"type":"castle","slug":"ripley-castle"},{"name":"Ravensworth Castle","lat":54.4667,"lng":-1.7,"type":"castle","slug":"ravensworth-castle"},{"name":"Mount Grace Priory","lat":54.3833,"lng":-1.2833,"type":"abbey","slug":"mount-grace-priory"},{"name":"Easby Abbey","lat":54.4,"lng":-1.7167,"type":"abbey","slug":"easby-abbey"},{"name":"Kirkham Priory","lat":54.0833,"lng":-0.8667,"type":"abbey","slug":"kirkham-priory"},{"name":"Wharram Percy","lat":54.0667,"lng":-0.7667,"type":"abbey","slug":"wharram-percy"},{"name":"Crayke Castle","lat":54.1333,"lng":-1.1833,"type":"castle","slug":"crayke-castle"},{"name":"Whorlton Castle","lat":54.4167,"lng":-1.25,"type":"castle","slug":"whorlton-castle"},{"name":"Sandal Castle","lat":53.6667,"lng":-1.4833,"type":"castle","slug":"sandal-castle"},{"name":"Harewood Castle","lat":53.8833,"lng":-1.5333,"type":"castle","slug":"harewood-castle"},{"name":"Halton Castle","lat":53.3333,"lng":-2.6833,"type":"castle","slug":"halton-castle"},{"name":"Lyme Park","lat":53.35,"lng":-2.05,"type":"palace","slug":"lyme-park"},{"name":"Norton Priory","lat":53.35,"lng":-2.5667,"type":"abbey","slug":"norton-priory"},{"name":"Whalley Abbey","lat":53.8167,"lng":-2.4167,"type":"abbey","slug":"whalley-abbey"},{"name":"Sawley Abbey","lat":53.9167,"lng":-2.3667,"type":"abbey","slug":"sawley-abbey"},{"name":"Hoghton Tower","lat":53.7167,"lng":-2.55,"type":"fortified house","slug":"hoghton-tower"},{"name":"Wingfield Manor","lat":53.1,"lng":-1.45,"type":"fortified house","slug":"wingfield-manor"},{"name":"Codnor Castle","lat":53.05,"lng":-1.35,"type":"castle","slug":"codnor-castle"},{"name":"Haddon Hall","lat":53.1833,"lng":-1.65,"type":"fortified house","slug":"haddon-hall"},{"name":"Hardwick Hall","lat":53.1667,"lng":-1.3167,"type":"palace","slug":"hardwick-hall"},{"name":"Rufford Abbey","lat":53.2167,"lng":-1.0667,"type":"abbey","slug":"rufford-abbey"},{"name":"Southwell Minster","lat":53.0778,"lng":-0.9556,"type":"abbey","slug":"southwell-minster"},{"name":"Kirby Hall","lat":52.4833,"lng":-0.6833,"type":"palace","slug":"kirby-hall"},{"name":"Fotheringhay Castle","lat":52.5333,"lng":-0.4333,"type":"castle","slug":"fotheringhay-castle"},{"name":"Thornbury Castle","lat":51.6094,"lng":-2.5233,"type":"castle","slug":"thornbury-castle"},{"name":"St Briavels Castle","lat":51.75,"lng":-2.6333,"type":"castle","slug":"st-briavels-castle"},{"name":"Hailes Abbey","lat":51.95,"lng":-1.9167,"type":"abbey","slug":"hailes-abbey"},{"name":"Tewkesbury Abbey","lat":51.9917,"lng":-2.16,"type":"abbey","slug":"tewkesbury-abbey"},{"name":"Bowes Castle","lat":54.5167,"lng":-2.0167,"type":"castle","slug":"bowes-castle"},{"name":"Brancepeth Castle","lat":54.7167,"lng":-1.6333,"type":"castle","slug":"brancepeth-castle"},{"name":"Lumley Castle","lat":54.8333,"lng":-1.5167,"type":"castle","slug":"lumley-castle"},{"name":"Witton Castle","lat":54.6333,"lng":-1.8,"type":"castle","slug":"witton-castle"},{"name":"Hylton Castle","lat":54.9167,"lng":-1.45,"type":"castle","slug":"hylton-castle"},{"name":"Wressle Castle","lat":53.7833,"lng":-0.9167,"type":"castle","slug":"wressle-castle"},{"name":"Snape Castle","lat":54.2833,"lng":-1.65,"type":"castle","slug":"snape-castle"},{"name":"Danby Castle","lat":54.4667,"lng":-0.9667,"type":"castle","slug":"danby-castle"},{"name":"Mulgrave Castle","lat":54.4667,"lng":-0.7333,"type":"castle","slug":"mulgrave-castle"},{"name":"Wilton Castle","lat":54.5333,"lng":-1.5333,"type":"castle","slug":"wilton-castle"},{"name":"Rippon Castle","lat":54.1361,"lng":-1.5236,"type":"castle","slug":"rippon-castle"},{"name":"Belvoir Castle","lat":52.8833,"lng":-0.7667,"type":"castle","slug":"belvoir-castle"},{"name":"Oakham Castle","lat":52.6708,"lng":-0.7308,"type":"castle","slug":"oakham-castle"},{"name":"Chartley Castle","lat":52.8667,"lng":-1.8833,"type":"castle","slug":"chartley-castle"},{"name":"Caverswall Castle","lat":52.9667,"lng":-2.0667,"type":"castle","slug":"caverswall-castle"},{"name":"Herstmonceux Castle","lat":50.87,"lng":0.3217,"type":"castle","slug":"herstmonceux-castle"},{"name":"Battle Abbey","lat":50.9136,"lng":0.4878,"type":"abbey","slug":"battle-abbey"},{"name":"Michelham Priory","lat":50.8622,"lng":0.1547,"type":"abbey","slug":"michelham-priory"},{"name":"Cowes Castle","lat":50.7633,"lng":-1.2981,"type":"castle","slug":"cowes-castle"},{"name":"Yarmouth Castle","lat":50.7069,"lng":-1.5006,"type":"castle","slug":"yarmouth-castle"},{"name":"Tiverton Castle","lat":50.9,"lng":-3.4833,"type":"castle","slug":"tiverton-castle"},{"name":"Bampton Castle","lat":50.9833,"lng":-3.2333,"type":"castle","slug":"bampton-castle"},{"name":"Dupath Well","lat":50.4833,"lng":-4.3167,"type":"abbey","slug":"dupath-well"},{"name":"Pengersick Castle","lat":50.0917,"lng":-5.3583,"type":"tower house","slug":"pengersick-castle"},{"name":"Wingfield Castle","lat":52.35,"lng":1.2833,"type":"castle","slug":"wingfield-castle"},{"name":"Mettingham Castle","lat":52.4167,"lng":1.4833,"type":"castle","slug":"mettingham-castle"},{"name":"Bungay Castle","lat":52.4528,"lng":1.4375,"type":"castle","slug":"bungay-castle"},{"name":"New Buckenham Castle","lat":52.4833,"lng":1.0667,"type":"castle","slug":"new-buckenham-castle"},{"name":"Kimbolton Castle","lat":52.3,"lng":-0.3833,"type":"castle","slug":"kimbolton-castle"},{"name":"Elton Hall","lat":52.5333,"lng":-0.3,"type":"fortified house","slug":"elton-hall"},{"name":"Longthorpe Tower","lat":52.5833,"lng":-0.2833,"type":"tower house","slug":"longthorpe-tower"},{"name":"Dunston Pillar","lat":53.1667,"lng":-0.5167,"type":"tower house","slug":"dunston-pillar"},{"name":"Bolingbroke Castle","lat":53.1667,"lng":0.0333,"type":"castle","slug":"bolingbroke-castle"},{"name":"Somerton Castle","lat":53.1333,"lng":-0.3,"type":"castle","slug":"somerton-castle"},{"name":"Hussey Tower","lat":52.9792,"lng":-0.0264,"type":"tower house","slug":"hussey-tower"},{"name":"South Kyme Tower","lat":53.0333,"lng":-0.25,"type":"tower house","slug":"south-kyme-tower"},{"name":"Baginton Castle","lat":52.35,"lng":-1.4833,"type":"castle","slug":"baginton-castle"},{"name":"Brinklow Castle","lat":52.4167,"lng":-1.3667,"type":"castle","slug":"brinklow-castle"},{"name":"Groby Castle","lat":52.6667,"lng":-1.2333,"type":"castle","slug":"groby-castle"},{"name":"Hallaton Castle","lat":52.55,"lng":-0.8333,"type":"castle","slug":"hallaton-castle"},{"name":"Caerhays Castle","lat":50.2333,"lng":-4.9167,"type":"castle","slug":"caerhays-castle"},{"name":"Stogursey Castle","lat":51.1667,"lng":-3.15,"type":"castle","slug":"stogursey-castle"},{"name":"Kendal Castle","lat":54.3272,"lng":-2.7394,"type":"castle","slug":"kendal-castle"},{"name":"Pendragon Castle","lat":54.4167,"lng":-2.3333,"type":"castle","slug":"pendragon-castle"},{"name":"Lowther Castle","lat":54.6167,"lng":-2.75,"type":"castle","slug":"lowther-castle"},{"name":"Naworth Castle","lat":54.9333,"lng":-2.6667,"type":"castle","slug":"naworth-castle"},{"name":"Rose Castle","lat":54.8333,"lng":-2.8333,"type":"castle","slug":"rose-castle"},{"name":"Greystoke Castle","lat":54.6833,"lng":-2.8667,"type":"castle","slug":"greystoke-castle"},{"name":"Workington Hall","lat":54.65,"lng":-3.55,"type":"fortified house","slug":"workington-hall"},{"name":"St Michael's Mount","lat":50.1175,"lng":-5.4776,"type":"castle","slug":"st-michael-s-mount"},{"name":"Burgh Island","lat":50.2794,"lng":-3.8981,"type":"castle","slug":"burgh-island"},{"name":"Hemyock Castle","lat":50.8992,"lng":-3.2253,"type":"castle","slug":"hemyock-castle"},{"name":"Bickleigh Castle","lat":50.8097,"lng":-3.498,"type":"castle","slug":"bickleigh-castle"},{"name":"Plympton Castle","lat":50.387,"lng":-4.0576,"type":"castle","slug":"plympton-castle"},{"name":"Salcombe Castle","lat":50.234,"lng":-3.776,"type":"castle","slug":"salcombe-castle"},{"name":"Gidleigh Castle","lat":50.691,"lng":-3.866,"type":"castle","slug":"gidleigh-castle"},{"name":"Peckforton Castle","lat":53.113,"lng":-2.687,"type":"castle","slug":"peckforton-castle"},{"name":"Greenhalgh Castle","lat":53.852,"lng":-2.752,"type":"castle","slug":"greenhalgh-castle"},{"name":"Hornby Castle","lat":54.121,"lng":-2.631,"type":"castle","slug":"hornby-castle"},{"name":"Liverpool Castle Site","lat":53.4084,"lng":-2.9916,"type":"castle","slug":"liverpool-castle-site"},{"name":"Peel Castle (Isle of Man)","lat":54.226,"lng":-4.693,"type":"castle","slug":"peel-castle-isle-of-man"},{"name":"Grimsthorpe Castle","lat":52.767,"lng":-0.446,"type":"castle","slug":"grimsthorpe-castle"},{"name":"Eye Castle","lat":52.321,"lng":1.149,"type":"castle","slug":"eye-castle"},{"name":"Haughley Castle","lat":52.228,"lng":0.984,"type":"castle","slug":"haughley-castle"},{"name":"Weeting Castle","lat":52.457,"lng":0.623,"type":"castle","slug":"weeting-castle"},{"name":"Wareham Castle","lat":50.687,"lng":-2.11,"type":"castle","slug":"wareham-castle"},{"name":"Woodsford Castle","lat":50.697,"lng":-2.281,"type":"castle","slug":"woodsford-castle"},{"name":"Rufus Castle","lat":50.543,"lng":-2.431,"type":"castle","slug":"rufus-castle"},{"name":"Ludgershall Castle","lat":51.254,"lng":-1.631,"type":"castle","slug":"ludgershall-castle"},{"name":"Devizes Castle","lat":51.352,"lng":-1.996,"type":"castle","slug":"devizes-castle"},{"name":"Trowbridge Castle","lat":51.319,"lng":-2.209,"type":"castle","slug":"trowbridge-castle"},{"name":"Chipchase Castle","lat":55.071,"lng":-2.141,"type":"castle","slug":"chipchase-castle"},{"name":"Langley Castle","lat":54.954,"lng":-2.306,"type":"castle","slug":"langley-castle"},{"name":"Haughton Castle","lat":55.043,"lng":-2.185,"type":"castle","slug":"haughton-castle"},{"name":"Cartington Castle","lat":55.295,"lng":-1.877,"type":"castle","slug":"cartington-castle"},{"name":"Featherstone Castle","lat":54.862,"lng":-2.485,"type":"castle","slug":"featherstone-castle"},{"name":"Bellister Castle","lat":54.87,"lng":-2.436,"type":"castle","slug":"bellister-castle"},{"name":"Hepburn Bastle","lat":55.48,"lng":-1.896,"type":"castle","slug":"hepburn-bastle"},{"name":"Marmion Tower","lat":54.252,"lng":-1.582,"type":"castle","slug":"marmion-tower"},{"name":"Mortham Tower","lat":54.523,"lng":-1.935,"type":"castle","slug":"mortham-tower"},{"name":"Bewcastle Cross","lat":55.072,"lng":-2.687,"type":"castle","slug":"bewcastle-cross"},{"name":"Saltwood Castle","lat":51.082,"lng":1.083,"type":"castle","slug":"saltwood-castle"},{"name":"Allington Castle","lat":51.278,"lng":0.494,"type":"castle","slug":"allington-castle"},{"name":"Leybourne Castle","lat":51.305,"lng":0.436,"type":"castle","slug":"leybourne-castle"},{"name":"Basing House","lat":51.267,"lng":-1.064,"type":"castle","slug":"basing-house"},{"name":"Clifford Castle","lat":52.087,"lng":-3.109,"type":"castle","slug":"clifford-castle"},{"name":"Snodhill Castle","lat":52.041,"lng":-3.075,"type":"castle","slug":"snodhill-castle"},{"name":"Ewyas Harold Castle","lat":51.956,"lng":-2.929,"type":"castle","slug":"ewyas-harold-castle"},{"name":"Beverston Castle","lat":51.638,"lng":-2.203,"type":"castle","slug":"beverston-castle"},{"name":"Eccleshall Castle","lat":52.853,"lng":-2.251,"type":"castle","slug":"eccleshall-castle"},{"name":"Alton Castle","lat":52.964,"lng":-1.886,"type":"castle","slug":"alton-castle"},{"name":"Mackworth Castle","lat":52.934,"lng":-1.542,"type":"castle","slug":"mackworth-castle"},{"name":"South Wingfield Manor","lat":53.087,"lng":-1.471,"type":"castle","slug":"south-wingfield-manor"},{"name":"Wymondham Abbey","lat":52.569,"lng":1.116,"type":"abbey","slug":"wymondham-abbey"},{"name":"Creake Abbey","lat":52.873,"lng":0.731,"type":"abbey","slug":"creake-abbey"},{"name":"Minster Lovell Hall","lat":51.801,"lng":-1.533,"type":"castle","slug":"minster-lovell-hall"},{"name":"Broughton Castle","lat":52.056,"lng":-1.378,"type":"castle","slug":"broughton-castle"},{"name":"Boarstall Tower","lat":51.814,"lng":-1.058,"type":"castle","slug":"boarstall-tower"},{"name":"Mountfitchet Castle","lat":51.872,"lng":0.159,"type":"castle","slug":"mountfitchet-castle"},{"name":"Bishop's Stortford Castle","lat":51.871,"lng":0.16,"type":"castle","slug":"bishop-s-stortford-castle"},{"name":"Bridgwater Castle","lat":51.128,"lng":-2.994,"type":"castle","slug":"bridgwater-castle"},{"name":"Waverley Abbey","lat":51.182,"lng":-0.823,"type":"abbey","slug":"waverley-abbey"},{"name":"Bishop's Castle","lat":52.489,"lng":-2.994,"type":"castle","slug":"bishop-s-castle"},{"name":"Knepp Castle","lat":50.933,"lng":-0.338,"type":"castle","slug":"knepp-castle"},{"name":"Bedford Castle Mound","lat":52.138,"lng":-0.459,"type":"castle","slug":"bedford-castle-mound"},{"name":"Cambridge Castle Mound","lat":52.21,"lng":0.114,"type":"castle","slug":"cambridge-castle-mound"},{"name":"Neath Castle","lat":51.661,"lng":-3.806,"type":"castle","slug":"neath-castle"},{"name":"Gleaston Castle","lat":54.161,"lng":-3.125,"type":"castle","slug":"gleaston-castle"},{"name":"Wray Castle","lat":54.381,"lng":-2.953,"type":"castle","slug":"wray-castle"},{"name":"Dalton Castle","lat":54.154,"lng":-3.18,"type":"castle","slug":"dalton-castle"},{"name":"Arnside Tower","lat":54.2,"lng":-2.831,"type":"castle","slug":"arnside-tower"},{"name":"Barnstaple Castle Mound","lat":51.08,"lng":-4.059,"type":"castle","slug":"barnstaple-castle-mound"},{"name":"Crediton Castle","lat":50.792,"lng":-3.652,"type":"castle","slug":"crediton-castle"},{"name":"Buckfast Abbey","lat":50.489,"lng":-3.78,"type":"abbey","slug":"buckfast-abbey"},{"name":"Rougemont Castle","lat":50.724,"lng":-3.528,"type":"castle","slug":"rougemont-castle"},{"name":"Cresswell Tower","lat":55.229,"lng":-1.538,"type":"castle","slug":"cresswell-tower"},{"name":"Cockle Park Tower","lat":55.235,"lng":-1.783,"type":"castle","slug":"cockle-park-tower"},{"name":"Elsdon Tower","lat":55.238,"lng":-2.073,"type":"castle","slug":"elsdon-tower"},{"name":"Penshaw Monument","lat":54.856,"lng":-1.503,"type":"castle","slug":"penshaw-monument"},{"name":"Lincoln Castle Walls","lat":53.234,"lng":-0.54,"type":"castle","slug":"lincoln-castle-walls"},{"name":"Peele Tower Kentmere","lat":54.429,"lng":-2.821,"type":"castle","slug":"peele-tower-kentmere"},{"name":"Windsor Castle","lat":51.4839,"lng":-0.6044,"type":"castle","slug":"windsor-castle"},{"name":"Hampton Court Palace","lat":51.4036,"lng":-0.3378,"type":"castle","slug":"hampton-court-palace"},{"name":"Clifford's Tower York","lat":53.957,"lng":-1.079,"type":"castle","slug":"clifford-s-tower-york"},{"name":"Brampton Castle (Birdoswald)","lat":54.989,"lng":-2.53,"type":"fort","slug":"brampton-castle-birdoswald"},{"name":"Lympne Castle","lat":51.087,"lng":1.03,"type":"castle","slug":"lympne-castle"},{"name":"Newark Castle (Nottinghamshire)","lat":53.077,"lng":-0.812,"type":"castle","slug":"newark-castle-nottinghamshire"},{"name":"Stanton Drew Stone Circles","lat":51.368,"lng":-2.578,"type":"stone circle","slug":"stanton-drew-stone-circles"},{"name":"Castle an Dinas","lat":50.378,"lng":-5.018,"type":"hillfort","slug":"castle-an-dinas"},{"name":"Hertford Castle","lat":51.798,"lng":-0.078,"type":"castle","slug":"hertford-castle"},{"name":"Lindisfarne Castle","lat":55.6692,"lng":-1.7836,"type":"castle","slug":"lindisfarne-castle"},{"name":"Chatsworth House","lat":53.2271,"lng":-1.6117,"type":"castle","slug":"chatsworth-house"},{"name":"Castle Bytham Castle","lat":52.7533,"lng":-0.5233,"type":"castle","slug":"castle-bytham-castle"},{"name":"Gainsborough Old Hall","lat":53.3994,"lng":-0.7739,"type":"castle","slug":"gainsborough-old-hall"},{"name":"Ely Cathedral","lat":52.3986,"lng":0.2633,"type":"abbey","slug":"ely-cathedral"},{"name":"Denny Abbey","lat":52.2883,"lng":0.1733,"type":"abbey","slug":"denny-abbey"},{"name":"St Albans Abbey","lat":51.7514,"lng":-0.36,"type":"abbey","slug":"st-albans-abbey"},{"name":"Wallingford Castle","lat":51.5992,"lng":-1.1244,"type":"castle","slug":"wallingford-castle"},{"name":"Richborough Castle","lat":51.295,"lng":1.3267,"type":"castle","slug":"richborough-castle"},{"name":"Reculver Towers","lat":51.3783,"lng":1.195,"type":"abbey","slug":"reculver-towers"},{"name":"Nunwell House","lat":50.685,"lng":-1.1533,"type":"castle","slug":"nunwell-house"},{"name":"Tickhill Castle","lat":53.4317,"lng":-1.11,"type":"castle","slug":"tickhill-castle"},{"name":"Wentworth Castle","lat":53.5067,"lng":-1.5417,"type":"castle","slug":"wentworth-castle"},{"name":"Roche Abbey","lat":53.445,"lng":-1.2083,"type":"abbey","slug":"roche-abbey"},{"name":"Selby Abbey","lat":53.7822,"lng":-1.0669,"type":"abbey","slug":"selby-abbey"},{"name":"Monk Bretton Priory","lat":53.5583,"lng":-1.45,"type":"abbey","slug":"monk-bretton-priory"},{"name":"Crowland Abbey","lat":52.6767,"lng":-0.1683,"type":"abbey","slug":"crowland-abbey"},{"name":"Gloucester Cathedral","lat":51.8678,"lng":-2.2464,"type":"abbey","slug":"gloucester-cathedral"},{"name":"Sudeley Castle","lat":51.9397,"lng":-1.9442,"type":"castle","slug":"sudeley-castle"},{"name":"Hereford Castle","lat":52.0533,"lng":-2.715,"type":"castle","slug":"hereford-castle"},{"name":"Worcester Cathedral","lat":52.1897,"lng":-2.2219,"type":"abbey","slug":"worcester-cathedral"},{"name":"Great Malvern Priory","lat":52.1117,"lng":-2.3258,"type":"abbey","slug":"great-malvern-priory"},{"name":"Pershore Abbey","lat":52.1128,"lng":-2.0781,"type":"abbey","slug":"pershore-abbey"},{"name":"Evesham Abbey Bell Tower","lat":52.0928,"lng":-1.9483,"type":"abbey","slug":"evesham-abbey-bell-tower"},{"name":"Witley Court","lat":52.29,"lng":-2.3583,"type":"castle","slug":"witley-court"},{"name":"Lyveden New Bield","lat":52.4567,"lng":-0.635,"type":"castle","slug":"lyveden-new-bield"},{"name":"Rushton Triangular Lodge","lat":52.4433,"lng":-0.7167,"type":"castle","slug":"rushton-triangular-lodge"},{"name":"Finchale Priory","lat":54.8133,"lng":-1.55,"type":"abbey","slug":"finchale-priory"},{"name":"Egglestone Abbey","lat":54.5283,"lng":-1.9167,"type":"abbey","slug":"egglestone-abbey"},{"name":"Calder Abbey","lat":54.4367,"lng":-3.4533,"type":"abbey","slug":"calder-abbey"},{"name":"Cartmel Priory","lat":54.2003,"lng":-2.9517,"type":"abbey","slug":"cartmel-priory"},{"name":"Bolton Abbey","lat":53.9828,"lng":-1.8886,"type":"abbey","slug":"bolton-abbey"},{"name":"Coverham Abbey","lat":54.2917,"lng":-1.8083,"type":"abbey","slug":"coverham-abbey"},{"name":"Guisborough Priory","lat":54.5317,"lng":-1.0467,"type":"abbey","slug":"guisborough-priory"},{"name":"Dale Abbey","lat":52.9133,"lng":-1.3417,"type":"abbey","slug":"dale-abbey"},{"name":"Muchelney Abbey","lat":50.9883,"lng":-2.8133,"type":"abbey","slug":"muchelney-abbey"},{"name":"Lacock Abbey","lat":51.4158,"lng":-2.1183,"type":"abbey","slug":"lacock-abbey"},{"name":"Malmesbury Abbey","lat":51.5867,"lng":-2.0983,"type":"abbey","slug":"malmesbury-abbey"},{"name":"St Botolph's Priory","lat":51.8839,"lng":0.9044,"type":"abbey","slug":"st-botolph-s-priory"},{"name":"St Augustine's Abbey","lat":51.2767,"lng":1.0917,"type":"abbey","slug":"st-augustine-s-abbey"},{"name":"Canterbury Cathedral","lat":51.2797,"lng":1.0831,"type":"abbey","slug":"canterbury-cathedral"},{"name":"Boxgrove Priory","lat":50.8583,"lng":-0.7333,"type":"abbey","slug":"boxgrove-priory"},{"name":"Beaulieu Abbey","lat":50.8217,"lng":-1.4533,"type":"abbey","slug":"beaulieu-abbey"},{"name":"Reading Abbey","lat":51.4536,"lng":-0.9683,"type":"abbey","slug":"reading-abbey"},{"name":"Dorchester Abbey","lat":51.6433,"lng":-1.165,"type":"abbey","slug":"dorchester-abbey"},{"name":"Abingdon Abbey","lat":51.6706,"lng":-1.2781,"type":"abbey","slug":"abingdon-abbey"},{"name":"Hulne Priory","lat":55.415,"lng":-1.7567,"type":"abbey","slug":"hulne-priory"},{"name":"Birdoswald Roman Fort","lat":54.9917,"lng":-2.5283,"type":"castle","slug":"birdoswald-roman-fort"},{"name":"Housesteads Roman Fort","lat":55.0117,"lng":-2.3283,"type":"castle","slug":"housesteads-roman-fort"},{"name":"Chesters Roman Fort","lat":55.0283,"lng":-2.135,"type":"castle","slug":"chesters-roman-fort"},{"name":"Vindolanda Roman Fort","lat":54.9917,"lng":-2.36,"type":"castle","slug":"vindolanda-roman-fort"},{"name":"Corbridge Roman Town","lat":54.9783,"lng":-2.0233,"type":"castle","slug":"corbridge-roman-town"},{"name":"Whitley Castle Roman Fort","lat":54.805,"lng":-2.415,"type":"castle","slug":"whitley-castle-roman-fort"},{"name":"Wroxeter Roman City","lat":52.6717,"lng":-2.6433,"type":"castle","slug":"wroxeter-roman-city"},{"name":"Clifton Hall","lat":52.9433,"lng":-1.1733,"type":"castle","slug":"clifton-hall"},{"name":"Ickworth House","lat":52.2367,"lng":0.6533,"type":"castle","slug":"ickworth-house"},{"name":"Layer Marney Tower","lat":51.8283,"lng":0.7917,"type":"castle","slug":"layer-marney-tower"},{"name":"Longleat House","lat":51.1883,"lng":-2.275,"type":"castle","slug":"longleat-house"},{"name":"Norbury Manor","lat":52.97,"lng":-1.6683,"type":"castle","slug":"norbury-manor"},{"name":"Caistor Roman Site","lat":52.5767,"lng":1.3217,"type":"castle","slug":"caistor-roman-site"},{"name":"Barnwell Castle","lat":52.4517,"lng":-0.45,"type":"castle","slug":"barnwell-castle"},{"name":"Buckden Palace","lat":52.2917,"lng":-0.2517,"type":"castle","slug":"buckden-palace"},{"name":"Middleton Hall","lat":52.5917,"lng":-1.6417,"type":"castle","slug":"middleton-hall"},{"name":"St Mary's Abbey York","lat":53.9622,"lng":-1.0872,"type":"abbey","slug":"st-mary-s-abbey-york"},{"name":"Barden Tower","lat":54.0017,"lng":-1.905,"type":"castle","slug":"barden-tower"},{"name":"Haworth Parsonage","lat":53.8283,"lng":-1.9583,"type":"castle","slug":"haworth-parsonage"},{"name":"Pembridge Castle","lat":52.0133,"lng":-2.8683,"type":"castle","slug":"pembridge-castle"},{"name":"Brampton Bryan Castle","lat":52.3417,"lng":-2.89,"type":"castle","slug":"brampton-bryan-castle"},{"name":"Croft Castle","lat":52.3033,"lng":-2.805,"type":"castle","slug":"croft-castle"},{"name":"Highclere Castle","lat":51.3267,"lng":-1.36,"type":"castle","slug":"highclere-castle"},{"name":"Southsea Castle","lat":50.7817,"lng":-1.0833,"type":"castle","slug":"southsea-castle"},{"name":"Farringdon Folly Tower","lat":51.6517,"lng":-1.585,"type":"castle","slug":"farringdon-folly-tower"},{"name":"Mapledurham House","lat":51.4783,"lng":-1.0317,"type":"castle","slug":"mapledurham-house"},{"name":"Burghley House","lat":52.6286,"lng":-0.4156,"type":"castle","slug":"burghley-house"},{"name":"Leicester Castle","lat":52.6319,"lng":-1.14,"type":"castle","slug":"leicester-castle"},{"name":"Kirby Muxloe (Main Castle)","lat":52.6389,"lng":-1.2478,"type":"castle","slug":"kirby-muxloe-main-castle"},{"name":"Stanton Harcourt Tower","lat":51.74,"lng":-1.3967,"type":"castle","slug":"stanton-harcourt-tower"},{"name":"Landguard Fort","lat":51.9317,"lng":1.3183,"type":"castle","slug":"landguard-fort"},{"name":"Helmingham Hall","lat":52.1583,"lng":1.155,"type":"castle","slug":"helmingham-hall"},{"name":"Wolterton Hall","lat":52.8283,"lng":1.2083,"type":"castle","slug":"wolterton-hall"},{"name":"Mannington Hall","lat":52.8333,"lng":1.1467,"type":"castle","slug":"mannington-hall"},{"name":"Felbrigg Hall","lat":52.8983,"lng":1.2517,"type":"castle","slug":"felbrigg-hall"},{"name":"Blickling Hall","lat":52.815,"lng":1.2233,"type":"castle","slug":"blickling-hall"},{"name":"Wylam Railway Museum","lat":54.975,"lng":-1.8133,"type":"castle","slug":"wylam-railway-museum"},{"name":"Corby Castle","lat":54.905,"lng":-2.8,"type":"castle","slug":"corby-castle"},{"name":"Askerton Castle","lat":55.0317,"lng":-2.7333,"type":"castle","slug":"askerton-castle"},{"name":"Scaleby Castle","lat":54.9533,"lng":-2.8933,"type":"castle","slug":"scaleby-castle"},{"name":"Millom Castle","lat":54.21,"lng":-3.2717,"type":"castle","slug":"millom-castle"},{"name":"Brancaster Roman Fort","lat":52.9683,"lng":0.6283,"type":"castle","slug":"brancaster-roman-fort"},{"name":"Burgh-by-Sands Castle","lat":54.935,"lng":-3.065,"type":"castle","slug":"burgh-by-sands-castle"},{"name":"Glastonbury Abbey (Somerset)","lat":51.1472,"lng":-2.7142,"type":"abbey","slug":"glastonbury-abbey-somerset"},{"name":"Stott Park Bobbin Mill","lat":54.2917,"lng":-2.9633,"type":"castle","slug":"stott-park-bobbin-mill"},{"name":"Castlerigg Stone Circle","lat":54.6025,"lng":-3.0983,"type":"castle","slug":"castlerigg-stone-circle"},{"name":"Wetheral Priory Gatehouse","lat":54.8833,"lng":-2.8317,"type":"abbey","slug":"wetheral-priory-gatehouse"},{"name":"Ravenglass Roman Bath House","lat":54.3517,"lng":-3.4033,"type":"castle","slug":"ravenglass-roman-bath-house"},{"name":"Hardknott Roman Fort","lat":54.4017,"lng":-3.2017,"type":"castle","slug":"hardknott-roman-fort"},{"name":"Conishead Priory","lat":54.1567,"lng":-3.1067,"type":"abbey","slug":"conishead-priory"},{"name":"Markenfield Hall","lat":54.0733,"lng":-1.5183,"type":"castle","slug":"markenfield-hall"},{"name":"Nappa Hall","lat":54.2967,"lng":-2.01,"type":"castle","slug":"nappa-hall"},{"name":"Gilling Castle","lat":54.1633,"lng":-1.0483,"type":"castle","slug":"gilling-castle"},{"name":"Nunnington Hall","lat":54.1933,"lng":-0.9917,"type":"castle","slug":"nunnington-hall"},{"name":"Newburgh Priory","lat":54.1683,"lng":-1.1833,"type":"abbey","slug":"newburgh-priory"},{"name":"Old Malton Priory","lat":54.135,"lng":-0.7967,"type":"abbey","slug":"old-malton-priory"},{"name":"Rippon Cathedral","lat":54.1381,"lng":-1.5217,"type":"abbey","slug":"rippon-cathedral"},{"name":"Beverley Minster","lat":53.8422,"lng":-0.4278,"type":"abbey","slug":"beverley-minster"},{"name":"Howden Minster","lat":53.745,"lng":-0.8633,"type":"abbey","slug":"howden-minster"},{"name":"Meaux Abbey","lat":53.8283,"lng":-0.3283,"type":"abbey","slug":"meaux-abbey"},{"name":"Craysthorpe Tower","lat":54.2283,"lng":-1.1683,"type":"castle","slug":"craysthorpe-tower"},{"name":"Towton Battlefield","lat":53.845,"lng":-1.265,"type":"castle","slug":"towton-battlefield"},{"name":"Spurn Point Fort","lat":53.5817,"lng":0.1167,"type":"castle","slug":"spurn-point-fort"},{"name":"Aldborough Roman Town","lat":54.0883,"lng":-1.3767,"type":"castle","slug":"aldborough-roman-town"},{"name":"Clifton Tower York","lat":53.9617,"lng":-1.085,"type":"castle","slug":"clifton-tower-york"},{"name":"Durham Cathedral","lat":54.7739,"lng":-1.5761,"type":"abbey","slug":"durham-cathedral"},{"name":"Binchester Roman Fort","lat":54.67,"lng":-1.6833,"type":"castle","slug":"binchester-roman-fort"},{"name":"Arbeia Roman Fort","lat":55.0017,"lng":-1.4317,"type":"castle","slug":"arbeia-roman-fort"},{"name":"Segedunum Roman Fort","lat":54.99,"lng":-1.5317,"type":"castle","slug":"segedunum-roman-fort"},{"name":"Newcastle Castle Keep","lat":54.9683,"lng":-1.6117,"type":"castle","slug":"newcastle-castle-keep"},{"name":"Cragside House","lat":55.3117,"lng":-1.8867,"type":"castle","slug":"cragside-house"},{"name":"Wallington Hall","lat":55.1517,"lng":-1.9483,"type":"castle","slug":"wallington-hall"},{"name":"Cawfields Roman Wall","lat":55.0017,"lng":-2.4017,"type":"castle","slug":"cawfields-roman-wall"},{"name":"Sycamore Gap","lat":55.0017,"lng":-2.3617,"type":"castle","slug":"sycamore-gap"},{"name":"Dunham Massey","lat":53.3833,"lng":-2.3817,"type":"castle","slug":"dunham-massey"},{"name":"Tatton Park","lat":53.3317,"lng":-2.3817,"type":"castle","slug":"tatton-park"},{"name":"Rufford Old Hall","lat":53.6317,"lng":-2.79,"type":"castle","slug":"rufford-old-hall"},{"name":"Turton Tower","lat":53.6317,"lng":-2.4583,"type":"castle","slug":"turton-tower"},{"name":"Samlesbury Hall","lat":53.7717,"lng":-2.57,"type":"castle","slug":"samlesbury-hall"},{"name":"York City Walls","lat":53.9583,"lng":-1.0817,"type":"castle","slug":"york-city-walls"},{"name":"York Minster","lat":53.9617,"lng":-1.0822,"type":"abbey","slug":"york-minster"},{"name":"Brodsworth Hall","lat":53.5617,"lng":-1.2683,"type":"castle","slug":"brodsworth-hall"},{"name":"Nostell Priory","lat":53.6533,"lng":-1.3883,"type":"castle","slug":"nostell-priory"},{"name":"Temple Newsam","lat":53.7817,"lng":-1.4483,"type":"castle","slug":"temple-newsam"},{"name":"East Riddlesden Hall","lat":53.8683,"lng":-1.8833,"type":"castle","slug":"east-riddlesden-hall"},{"name":"Ravenscar Alum Works","lat":54.4,"lng":-0.485,"type":"castle","slug":"ravenscar-alum-works"},{"name":"Stanwick Iron Age Fortifications","lat":54.5017,"lng":-1.6967,"type":"castle","slug":"stanwick-iron-age-fortifications"},{"name":"Tupholme Abbey","lat":53.2283,"lng":-0.2617,"type":"abbey","slug":"tupholme-abbey"},{"name":"Barlings Abbey","lat":53.2667,"lng":-0.3683,"type":"abbey","slug":"barlings-abbey"},{"name":"Sempringham Abbey","lat":52.8783,"lng":-0.3483,"type":"abbey","slug":"sempringham-abbey"},{"name":"South Witham Preceptory","lat":52.7617,"lng":-0.59,"type":"abbey","slug":"south-witham-preceptory"},{"name":"Stainsby Mill","lat":53.1583,"lng":-1.3183,"type":"castle","slug":"stainsby-mill"},{"name":"Arbor Low Stone Circle","lat":53.1683,"lng":-1.7617,"type":"castle","slug":"arbor-low-stone-circle"},{"name":"Sutton Scarsdale Hall","lat":53.22,"lng":-1.3417,"type":"castle","slug":"sutton-scarsdale-hall"},{"name":"Calke Abbey","lat":52.805,"lng":-1.4567,"type":"abbey","slug":"calke-abbey"},{"name":"Lichfield Cathedral","lat":52.6839,"lng":-1.8297,"type":"abbey","slug":"lichfield-cathedral"},{"name":"Wall Roman Site","lat":52.6483,"lng":-1.8533,"type":"castle","slug":"wall-roman-site"},{"name":"Polesworth Abbey","lat":52.6167,"lng":-1.6117,"type":"abbey","slug":"polesworth-abbey"},{"name":"Wroxall Abbey","lat":52.3483,"lng":-1.6817,"type":"abbey","slug":"wroxall-abbey"},{"name":"Stoneleigh Abbey","lat":52.3333,"lng":-1.5083,"type":"abbey","slug":"stoneleigh-abbey"},{"name":"Baddesley Clinton","lat":52.3417,"lng":-1.6617,"type":"castle","slug":"baddesley-clinton"},{"name":"Packwood House","lat":52.345,"lng":-1.7183,"type":"castle","slug":"packwood-house"},{"name":"Compton Verney","lat":52.2033,"lng":-1.5433,"type":"castle","slug":"compton-verney"},{"name":"Upton House","lat":52.1067,"lng":-1.45,"type":"castle","slug":"upton-house"},{"name":"Sulgrave Manor","lat":52.1067,"lng":-1.1883,"type":"castle","slug":"sulgrave-manor"},{"name":"Canons Ashby","lat":52.15,"lng":-1.15,"type":"abbey","slug":"canons-ashby"},{"name":"Delapre Abbey","lat":52.22,"lng":-0.8833,"type":"abbey","slug":"delapre-abbey"},{"name":"Irthlingborough Castle","lat":52.3283,"lng":-0.6017,"type":"castle","slug":"irthlingborough-castle"},{"name":"Lilbourne Castle","lat":52.365,"lng":-1.1767,"type":"castle","slug":"lilbourne-castle"},{"name":"Coughton Court","lat":52.2533,"lng":-1.8317,"type":"castle","slug":"coughton-court"},{"name":"Harvington Hall","lat":52.3817,"lng":-2.1017,"type":"castle","slug":"harvington-hall"},{"name":"Hanbury Hall","lat":52.2917,"lng":-2.0517,"type":"castle","slug":"hanbury-hall"},{"name":"Croome Court","lat":52.1117,"lng":-2.1667,"type":"castle","slug":"croome-court"},{"name":"Bewdley Museum","lat":52.375,"lng":-2.3183,"type":"castle","slug":"bewdley-museum"},{"name":"Ribchester Roman Fort","lat":53.8167,"lng":-2.525,"type":"castle","slug":"ribchester-roman-fort"},{"name":"Brockhampton Estate","lat":52.2017,"lng":-2.5633,"type":"castle","slug":"brockhampton-estate"},{"name":"Berrington Hall","lat":52.2717,"lng":-2.7417,"type":"castle","slug":"berrington-hall"},{"name":"Hellens Manor","lat":51.9867,"lng":-2.4533,"type":"castle","slug":"hellens-manor"},{"name":"Hampton Court Herefordshire","lat":52.0983,"lng":-2.6833,"type":"castle","slug":"hampton-court-herefordshire"},{"name":"Kilpeck Church","lat":51.9567,"lng":-2.8883,"type":"abbey","slug":"kilpeck-church"},{"name":"Abbey Dore","lat":51.9467,"lng":-2.9167,"type":"abbey","slug":"abbey-dore"},{"name":"Llanthony Secunda Priory","lat":51.85,"lng":-2.2583,"type":"abbey","slug":"llanthony-secunda-priory"},{"name":"Kingswood Abbey Gatehouse","lat":51.6817,"lng":-2.345,"type":"abbey","slug":"kingswood-abbey-gatehouse"},{"name":"Gloucester Blackfriars","lat":51.865,"lng":-2.2483,"type":"abbey","slug":"gloucester-blackfriars"},{"name":"Prinknash Abbey","lat":51.8367,"lng":-2.16,"type":"abbey","slug":"prinknash-abbey"},{"name":"Stanley Pontlarge Tithe Barn","lat":51.9617,"lng":-1.9783,"type":"abbey","slug":"stanley-pontlarge-tithe-barn"},{"name":"Bramall Hall","lat":53.3883,"lng":-2.1617,"type":"castle","slug":"bramall-hall"},{"name":"Chetham's Library","lat":53.4856,"lng":-2.2439,"type":"abbey","slug":"chetham-s-library"},{"name":"Sandbach Crosses","lat":53.145,"lng":-2.3667,"type":"abbey","slug":"sandbach-crosses"},{"name":"Birkenhead Priory","lat":53.3917,"lng":-3.0117,"type":"abbey","slug":"birkenhead-priory"},{"name":"Speke Hall","lat":53.35,"lng":-2.87,"type":"castle","slug":"speke-hall"},{"name":"Croxteth Hall","lat":53.4433,"lng":-2.8833,"type":"castle","slug":"croxteth-hall"},{"name":"Boscobel House","lat":52.6783,"lng":-2.355,"type":"castle","slug":"boscobel-house"},{"name":"Benthall Hall","lat":52.6267,"lng":-2.5183,"type":"castle","slug":"benthall-hall"},{"name":"Attingham Park","lat":52.7117,"lng":-2.6683,"type":"castle","slug":"attingham-park"},{"name":"Iron Bridge","lat":52.6267,"lng":-2.485,"type":"castle","slug":"iron-bridge"},{"name":"Wilton House","lat":51.0783,"lng":-1.8617,"type":"castle","slug":"wilton-house"},{"name":"Avebury Manor","lat":51.4283,"lng":-1.855,"type":"castle","slug":"avebury-manor"},{"name":"Bradford-on-Avon Tithe Barn","lat":51.3483,"lng":-2.2517,"type":"abbey","slug":"bradford-on-avon-tithe-barn"},{"name":"Great Chalfield Manor","lat":51.355,"lng":-2.2183,"type":"castle","slug":"great-chalfield-manor"},{"name":"Montacute House","lat":50.9483,"lng":-2.7167,"type":"castle","slug":"montacute-house"},{"name":"Barrington Court","lat":50.9417,"lng":-2.8417,"type":"castle","slug":"barrington-court"},{"name":"Tintinhull Garden","lat":50.9517,"lng":-2.72,"type":"castle","slug":"tintinhull-garden"},{"name":"Lytes Cary Manor","lat":51.0217,"lng":-2.6917,"type":"castle","slug":"lytes-cary-manor"},{"name":"Nether Stowey Castle","lat":51.145,"lng":-3.1517,"type":"castle","slug":"nether-stowey-castle"},{"name":"Wells Cathedral","lat":51.2117,"lng":-2.645,"type":"abbey","slug":"wells-cathedral"},{"name":"Farleigh House","lat":51.3158,"lng":-2.3144,"type":"castle","slug":"farleigh-house"},{"name":"Clevedon Court","lat":51.4383,"lng":-2.8717,"type":"castle","slug":"clevedon-court"},{"name":"Kelston Round Hill","lat":51.3917,"lng":-2.4317,"type":"castle","slug":"kelston-round-hill"},{"name":"A La Ronde","lat":50.64,"lng":-3.4017,"type":"castle","slug":"a-la-ronde"},{"name":"Buckland Abbey","lat":50.4517,"lng":-4.1583,"type":"abbey","slug":"buckland-abbey"},{"name":"Torre Abbey","lat":50.4633,"lng":-3.55,"type":"abbey","slug":"torre-abbey"},{"name":"Hartland Abbey","lat":50.9833,"lng":-4.5183,"type":"abbey","slug":"hartland-abbey"},{"name":"Kingswear Castle","lat":50.35,"lng":-3.5633,"type":"castle","slug":"kingswear-castle"},{"name":"St Catherine's Castle","lat":50.3317,"lng":-4.6667,"type":"castle","slug":"st-catherine-s-castle"},{"name":"Ince Castle","lat":50.3983,"lng":-4.275,"type":"castle","slug":"ince-castle"},{"name":"Cotehele House","lat":50.4917,"lng":-4.2267,"type":"castle","slug":"cotehele-house"},{"name":"Lanhydrock House","lat":50.4217,"lng":-4.7433,"type":"castle","slug":"lanhydrock-house"},{"name":"Prideaux Place","lat":50.535,"lng":-4.9383,"type":"castle","slug":"prideaux-place"},{"name":"Godolphin House","lat":50.1233,"lng":-5.3683,"type":"castle","slug":"godolphin-house"},{"name":"Chysauster Ancient Village","lat":50.1567,"lng":-5.515,"type":"castle","slug":"chysauster-ancient-village"}];
-var colors={"castle":"#8b2335","palace":"#b8860b","abbey":"#2d5a3d","tower house":"#6b3a6b","fort":"#4a6fa5","fortified house":"#8b7355","monastery":"#2d5a3d","monument":"#666"};
-if(!sites.length)return;
-var map=L.map('countryMap',{scrollWheelZoom:false});
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
-var bounds=[];
-sites.forEach(function(s){
-var c=colors[s.type]||'#666';
-var m=L.circleMarker([s.lat,s.lng],{radius:5,fillColor:c,color:'#fff',weight:1,fillOpacity:.8}).addTo(map);
-m.bindPopup('<b>'+s.name+'</b><br><a href="site/'+s.slug+'.html">View site →</a>');
-bounds.push([s.lat,s.lng]);
-});
-if(bounds.length)map.fitBounds(bounds,{padding:[30,30]});
+  if(typeof CASTLES==='undefined') return;
+  const england=CASTLES.filter(c=>c.country==='England'&&c.lat&&c.lng);
+  const map=L.map('countryMap',{scrollWheelZoom:false,zoomControl:true});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'© OpenStreetMap © CARTO',maxZoom:18
+  }).addTo(map);
+  const colors={"castle":"#8b2335","palace":"#b8860b","abbey":"#2d5a3d","tower house":"#6b3a6b","fort":"#4a6fa5","fortified house":"#8b7355"};
+  const bounds=[];
+  const slug=n=>n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  england.forEach(s=>{
+    const c=colors[s.type]||'#888';
+    const m=L.circleMarker([s.lat,s.lng],{radius:4,fillColor:c,color:'rgba(245,240,232,.4)',weight:.5,fillOpacity:.85}).addTo(map);
+    m.bindPopup('<b style="font-family:Cinzel">'+s.name+'</b><br><a href="site/'+slug(s.name)+'.html" style="color:#c9a84c">View →</a>');
+    bounds.push([s.lat,s.lng]);
+  });
+  if(bounds.length) map.fitBounds(bounds,{padding:[30,30]});
 })();
 </script>
 </body>
