@@ -65,92 +65,176 @@ img{max-width:100%;display:block}
 .hamburger{display:block}
 }
 
-/* HERO */
-.country-hero{margin-top:64px;padding:80px 24px 64px;text-align:center;position:relative;overflow:hidden;background-blend-mode:overlay}
-.country-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.3),transparent 60%);pointer-events:none}
-.country-hero *{position:relative;z-index:1}
-.country-hero h1{font-size:clamp(2.2rem,5vw,3.4rem);color:#fff;margin-bottom:12px;text-shadow:0 2px 12px rgba(0,0,0,.3)}
-.country-hero .hero-desc{color:rgba(255,255,255,.9);font-size:1.05rem;max-width:720px;margin:0 auto 20px;line-height:1.7;font-family:'Playfair Display',serif;font-style:italic;text-shadow:0 1px 6px rgba(0,0,0,.2)}
-.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+/* ===== CINEMATIC HERO ===== */
+.country-hero{margin-top:64px;min-height:80vh;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;position:relative;overflow:hidden;padding:0 24px 0}
+.country-hero .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;transition:transform 8s ease}
+.country-hero:hover .hero-bg{transform:scale(1.03)}
+.country-hero .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.35) 40%,rgba(0,0,0,.15) 100%);z-index:1}
+.country-hero::after{content:'';position:absolute;inset:16px;border:1px solid rgba(201,168,76,.15);border-radius:8px;z-index:2;pointer-events:none}
+.hero-content{position:relative;z-index:3;max-width:800px;width:100%;padding-bottom:32px}
+.country-hero h1{font-size:clamp(2.8rem,6vw,4.2rem);color:#fff;margin-bottom:16px;text-shadow:0 2px 16px rgba(0,0,0,.4);letter-spacing:-0.5px;line-height:1.1}
+.country-hero .hero-desc{color:rgba(255,255,255,.88);font-size:1.1rem;max-width:680px;margin:0 auto 28px;line-height:1.7;font-family:'Playfair Display',serif;font-style:italic;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-bottom:28px}
 .hero-stat{text-align:center;color:#fff}
-.hero-stat .stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;display:block;text-shadow:0 2px 8px rgba(0,0,0,.3)}
-.hero-stat .stat-label{font-size:.8rem;opacity:.8;text-transform:uppercase;letter-spacing:.5px}
+.hero-stat .stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;display:block;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-stat .stat-label{font-size:.78rem;opacity:.7;text-transform:uppercase;letter-spacing:1px}
+.hero-pills-wrap{position:relative;z-index:3;width:100%;max-width:900px;margin:0 auto;padding:20px 24px 28px;display:flex;justify-content:center}
+.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#fff;padding:10px 20px;border-radius:var(--pill);font-size:.88rem;font-weight:500;transition:all .25s;border:1px solid rgba(255,255,255,.18)}
+.hero-pill:hover{background:rgba(255,255,255,.25);transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.hp-count{font-size:.72rem;opacity:.6}
 
-/* BREADCRUMB */
-.breadcrumb{max-width:1280px;margin:0 auto;padding:16px 24px;font-size:.85rem;color:var(--twilight)}
+@media(max-width:768px){
+.country-hero{min-height:100vh}
+.country-hero::after{inset:8px}
+.hero-pills{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hero-pill{justify-content:center;padding:10px 14px;font-size:.82rem}
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{max-width:1280px;margin:0 auto;padding:20px 24px;font-size:.85rem;color:var(--twilight)}
 .breadcrumb a{color:var(--twilight);transition:color .2s}
 .breadcrumb a:hover{color:var(--burgundy)}
 
-/* SECTIONS */
-section{padding:48px 24px}
+/* ===== SECTIONS ===== */
+section{padding:72px 24px}
 .section-inner{max-width:1280px;margin:0 auto}
 .section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
-.section-header h2{font-size:clamp(1.6rem,3vw,2.2rem)}
-.section-header h2::after{content:'';display:block;width:40px;height:2px;background:var(--burgundy);margin-top:6px;border-radius:1px;opacity:.6}
-.section-header a{color:var(--ivy);font-weight:600;font-size:.95rem}
-.section-tagline{color:var(--twilight);font-size:.95rem;margin-bottom:28px;font-family:'Playfair Display',serif;font-style:italic}
-.bg-cream{background:var(--cream)}
+.section-header h2{font-size:clamp(1.8rem,3.5vw,2.6rem)}
+.section-header h2::after{content:'';display:block;width:40px;height:2px;background:var(--burgundy);margin-top:8px;border-radius:1px;opacity:.6}
+.section-header a{color:var(--ivy);font-weight:600;font-size:.95rem;transition:color .2s}
+.section-header a:hover{color:var(--burgundy)}
+.section-tagline{color:var(--twilight);font-size:1rem;margin-bottom:36px;font-family:'Playfair Display',serif;font-style:italic}
+.bg-cream{background:var(--cream);position:relative}
+.bg-cream::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--hearth) 20%,var(--candlelight) 50%,var(--hearth) 80%,transparent 100%);opacity:.15}
 
-/* REGION LINK CARDS */
-.region-link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
-.region-link-card{display:flex;flex-direction:column;align-items:center;gap:6px;padding:24px 16px;background:#fff;border:1px solid var(--border);border-radius:16px;transition:transform .2s,box-shadow .2s}
-.region-link-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(120,90,50,.1)}
-.rlc-icon{font-size:1.8rem}
-.rlc-name{font-weight:600;font-size:.95rem}
-.rlc-count{font-size:.8rem;color:var(--twilight)}
+/* ===== REGION IMAGE CARDS ===== */
+.region-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.region-card{display:block;height:220px;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:transform .3s,box-shadow .3s}
+.region-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.region-card-body{position:absolute;bottom:0;left:0;right:0;padding:20px;color:#fff;z-index:1}
+.region-card-name{display:block;font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:2px}
+.region-card-count{font-size:.82rem;opacity:.8}
+@media(max-width:600px){.region-grid{grid-template-columns:1fr 1fr}}
 
-/* COUNTY GRID */
-.county-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
-.county-card{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);transition:all .2s}
-.county-card:hover{border-color:var(--burgundy);transform:translateY(-2px);box-shadow:0 4px 16px rgba(120,90,50,.08)}
-.county-name{font-weight:500;font-size:.9rem}
+/* ===== ERA CINEMATIC PANELS ===== */
+.era-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:200px;gap:16px}
+.era-card{display:flex;flex-direction:column;justify-content:flex-end;padding:28px 24px;border-radius:16px;color:#fff;transition:transform .3s,box-shadow .3s;text-decoration:none;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.era-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.era-card>*{position:relative;z-index:1}
+.era-featured{grid-column:span 2;grid-row:span 2}
+.era-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:4px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.era-featured .era-name{font-size:2.2rem}
+.era-count{font-size:.85rem;opacity:.8;margin-bottom:6px}
+.era-tagline{font-size:.82rem;opacity:.7;font-style:italic;font-family:'Playfair Display',serif}
+@media(max-width:768px){
+.era-grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+.era-featured{grid-column:span 2;grid-row:span 1}
+}
+@media(max-width:480px){
+.era-grid{grid-template-columns:1fr;grid-auto-rows:180px}
+.era-featured{grid-column:span 1}
+}
+
+/* ===== EDITORIAL FEATURED CARDS ===== */
+.editorial-card{display:grid;grid-template-columns:1.2fr 1fr;border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;box-shadow:0 2px 16px rgba(120,90,50,.06);margin-bottom:28px;position:relative}
+.editorial-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(120,90,50,.14)}
+.editorial-card::before,.editorial-card::after{content:'';position:absolute;width:28px;height:28px;border-color:var(--candlelight);border-style:solid;opacity:.12;z-index:2;pointer-events:none}
+.editorial-card::before{top:10px;left:10px;border-width:2px 0 0 2px;border-radius:4px 0 0 0}
+.editorial-card::after{bottom:10px;right:10px;border-width:0 2px 2px 0;border-radius:0 0 4px 0}
+.editorial-reverse{grid-template-columns:1fr 1.2fr}
+.editorial-reverse .editorial-img{order:2}
+.editorial-reverse .editorial-body{order:1}
+.editorial-img{overflow:hidden;min-height:280px}
+.editorial-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.editorial-card:hover .editorial-img img{transform:scale(1.05)}
+.editorial-body{padding:36px 32px;display:flex;flex-direction:column;justify-content:center}
+.editorial-body .type-pill{display:inline-block;background:var(--cream);color:var(--ivy);font-size:.72rem;font-weight:600;padding:4px 12px;border-radius:var(--pill);text-transform:capitalize;margin-bottom:12px;width:fit-content}
+.editorial-body h3{font-size:1.6rem;margin-bottom:8px;line-height:1.2}
+.editorial-loc{color:var(--twilight);font-size:.88rem;margin-bottom:12px}
+.editorial-hook{font-style:italic;color:var(--twilight);font-size:.92rem;line-height:1.5;margin-bottom:16px;opacity:.8}
+.editorial-meta{display:flex;align-items:center;gap:12px}
+.editorial-cta{color:var(--burgundy);font-weight:600;font-size:.9rem}
+.card-rating{color:var(--candlelight);font-size:.9rem;font-weight:600}
+
+@media(max-width:768px){
+.editorial-card,.editorial-reverse{grid-template-columns:1fr}
+.editorial-reverse .editorial-img{order:0}
+.editorial-reverse .editorial-body{order:0}
+.editorial-img{min-height:220px}
+.editorial-body{padding:24px 20px}
+}
+
+/* ===== STANDARD FEAT GRID ===== */
+.featured-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feat-card{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;box-shadow:0 2px 12px rgba(120,90,50,.06);position:relative}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(120,90,50,.14)}
+.feat-card::before,.feat-card::after{content:'';position:absolute;width:20px;height:20px;border-color:var(--candlelight);border-style:solid;opacity:.12;z-index:2;pointer-events:none}
+.feat-card::before{top:6px;left:6px;border-width:2px 0 0 2px;border-radius:3px 0 0 0}
+.feat-card::after{bottom:6px;right:6px;border-width:0 2px 2px 0;border-radius:0 0 3px 0}
+.feat-img{height:180px;overflow:hidden}
+.feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.feat-card:hover .feat-img img{transform:scale(1.06)}
+.feat-body{padding:16px}
+.feat-body h3{font-size:1.05rem;margin-bottom:4px}
+.feat-loc{color:var(--twilight);font-size:.82rem;margin-bottom:6px}
+.feat-meta{display:flex;align-items:center;gap:8px}
+.type-pill{display:inline-block;background:var(--cream);color:var(--ivy);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:var(--pill);text-transform:capitalize}
+.feat-hook{font-style:italic;color:var(--twilight);font-size:.78rem;margin-top:4px;opacity:.75;line-height:1.4}
+@media(max-width:900px){.featured-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.featured-grid{grid-template-columns:1fr}}
+
+/* ===== COUNTY HEAT MAP GRID ===== */
+.county-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.county-card{display:flex;flex-direction:column;gap:6px;padding:16px 18px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);transition:all .25s}
+.county-card:hover{border-color:var(--burgundy);transform:translateY(-2px);box-shadow:0 6px 20px rgba(120,90,50,.1)}
+.county-hot{border-color:var(--candlelight);border-width:2px}
+.county-hot .county-name{font-size:1rem;color:var(--burgundy)}
+.county-info{display:flex;justify-content:space-between;align-items:center}
+.county-name{font-weight:600;font-size:.9rem}
 .county-count{font-size:.78rem;color:var(--twilight);white-space:nowrap}
+.county-bar-track{height:4px;background:var(--cream);border-radius:2px;overflow:hidden}
+.county-bar-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--candlelight));border-radius:2px;transition:width .6s ease}
 
-/* STAT BARS */
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+/* ===== STAT BARS ===== */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 @media(max-width:768px){.stats-grid{grid-template-columns:1fr}}
-.stat-bar{margin-bottom:12px}
+.stat-bar{margin-bottom:14px}
 .stat-bar-label{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:4px;text-transform:capitalize}
 .stat-bar-count{color:var(--twilight);font-size:.82rem}
 .stat-bar-track{height:8px;background:var(--cream);border-radius:4px;overflow:hidden}
 .stat-bar-fill{height:100%;background:var(--burgundy);border-radius:4px;transition:width .6s ease}
 
-/* FEATURED GRID */
-.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.feat-card{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(120,90,50,.06)}
-.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(120,90,50,.12)}
-.feat-img{height:200px;overflow:hidden}
-.feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
-.feat-card:hover .feat-img img{transform:scale(1.05)}
-.feat-body{padding:18px}
-.feat-body h3{font-size:1.1rem;margin-bottom:4px}
-.feat-loc{color:var(--twilight);font-size:.85rem;margin-bottom:8px}
-.feat-meta{display:flex;align-items:center;gap:8px}
-.type-pill{display:inline-block;background:var(--cream);color:var(--ivy);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:var(--pill);text-transform:capitalize}
-.card-rating{color:var(--candlelight);font-size:.85rem;font-weight:600}
-@media(max-width:768px){.featured-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.featured-grid{grid-template-columns:1fr}}
+/* ===== MAP ===== */
+.mini-map-wrap{border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(120,90,50,.08)}
+#countryMap{height:450px;width:100%;z-index:1}
+.map-link{display:block;text-align:center;padding:14px;font-weight:600;color:var(--ivy);font-size:.95rem;background:#fff;border-top:1px solid var(--border);transition:all .2s}
+.map-link:hover{color:var(--burgundy);background:var(--cream)}
 
-/* MEDIEVAL CORNERS */
-.feat-card{position:relative}
-.feat-card::before,.feat-card::after{content:'';position:absolute;width:24px;height:24px;border-color:var(--candlelight);border-style:solid;opacity:.15;z-index:2;pointer-events:none}
-.feat-card::before{top:8px;left:8px;border-width:2px 0 0 2px;border-radius:4px 0 0 0}
-.feat-card::after{bottom:8px;right:8px;border-width:0 2px 2px 0;border-radius:0 0 4px 0}
+/* ===== PLANNING VISIT CARDS ===== */
+.practical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.prac-card{background:#fff;border-radius:16px;padding:28px 20px;text-align:center;box-shadow:0 2px 16px rgba(120,90,50,.06);border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
+.prac-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(120,90,50,.1)}
+.prac-card .prac-icon{font-size:2.4rem;display:block;margin-bottom:10px}
+.prac-card .prac-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--burgundy);display:block;margin-bottom:4px}
+.prac-card .prac-label{font-size:.85rem;color:var(--twilight)}
+@media(max-width:768px){.practical-grid{grid-template-columns:1fr 1fr}}
 
-/* DIVIDER */
+/* ===== DIVIDER ===== */
 .section-divider{display:flex;align-items:center;justify-content:center;padding:0 24px;max-width:1280px;margin:0 auto}
 .section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--hearth),transparent);opacity:.3}
 .divider-ornament{padding:0 20px;display:flex;align-items:center}
 .divider-ornament svg{width:60px;height:24px;fill:var(--hearth);opacity:.45}
 
-/* CTA */
-.country-cta{text-align:center;padding:64px 24px;background:var(--cream)}
-.country-cta h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px}
-.country-cta p{color:var(--twilight);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
-.btn-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-size:1rem;font-weight:600;transition:background .2s;border:none;cursor:pointer;font-family:'Inter',sans-serif}
-.btn-cta:hover{background:#6e1a2a}
+/* ===== CTA ===== */
+.country-cta{text-align:center;padding:80px 24px;background:var(--cream);position:relative}
+.country-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--hearth) 20%,var(--candlelight) 50%,var(--hearth) 80%,transparent 100%);opacity:.15}
+.country-cta h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
+.country-cta p{color:var(--twilight);margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;font-size:1.05rem}
+.btn-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:16px 36px;border-radius:var(--pill);font-size:1.05rem;font-weight:600;transition:all .25s;border:none;cursor:pointer;font-family:'Inter',sans-serif;box-shadow:0 4px 16px rgba(139,35,53,.25)}
+.btn-cta:hover{background:#6e1a2a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(139,35,53,.35)}
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 .footer-inner{max-width:1280px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
@@ -162,40 +246,6 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
 @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
 @media(max-width:480px){.footer-top{grid-template-columns:1fr}}
-
-/* HERO PILLS */
-.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
-.hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);color:#fff;padding:8px 18px;border-radius:var(--pill);font-size:.88rem;font-weight:500;transition:background .2s,transform .2s;border:1px solid rgba(255,255,255,.2)}
-.hero-pill:hover{background:rgba(255,255,255,.28);transform:translateY(-2px)}
-.hp-count{font-size:.75rem;opacity:.7}
-
-/* ERA CARDS */
-.era-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
-.era-card{display:flex;flex-direction:column;justify-content:flex-end;padding:28px 24px;border-radius:16px;color:#fff;min-height:180px;transition:transform .25s,box-shadow .25s;text-decoration:none;position:relative;overflow:hidden}
-.era-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
-.era-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 60%);pointer-events:none}
-.era-card>*{position:relative;z-index:1}
-.era-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:4px}
-.era-count{font-size:.85rem;opacity:.8;margin-bottom:6px}
-.era-tagline{font-size:.82rem;opacity:.7;font-style:italic;font-family:'Playfair Display',serif}
-
-/* FEAT HOOK */
-.feat-hook{font-style:italic;color:var(--twilight);font-size:.82rem;margin-top:4px;opacity:.75;line-height:1.4}
-
-/* MINI MAP */
-.mini-map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
-#countryMap{height:400px;width:100%;z-index:1}
-.map-link{display:block;text-align:center;padding:12px;font-weight:600;color:var(--ivy);font-size:.95rem;background:#fff;border-top:1px solid var(--border)}
-.map-link:hover{color:var(--burgundy)}
-
-/* PRACTICAL INFO */
-.practical-box{background:#fdf8ef;border:1px solid #e8dcc8;border-radius:16px;padding:32px;margin-bottom:24px}
-.practical-box h3{font-size:1.3rem;margin-bottom:20px;text-align:center}
-.practical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-@media(max-width:600px){.practical-grid{grid-template-columns:repeat(2,1fr)}}
-.prac-item .prac-icon{font-size:1.8rem;display:block;margin-bottom:6px}
-.prac-item .prac-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--burgundy);display:block}
-.prac-item .prac-label{font-size:.82rem;color:var(--twilight)}
 </style>
 </head>
 <body>
@@ -281,7 +331,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </div>
 </nav>
 
-<!-- MOBILE MENU (simplified) -->
+<!-- MOBILE MENU -->
 <div class="mobile-menu">
 <a href="/" style="color:var(--burgundy);font-weight:700">🏠 Home</a>
 <a href="explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
@@ -304,8 +354,11 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="trail.html">🛤️ Routes</a>
 </div>
 
-<!-- HERO -->
-<div class="country-hero" style="background-image:linear-gradient(135deg, #5a1a2a 0%, #8b2335 40%, #6e1a2a 100%), url('img/bamburgh.jpg');background-size:cover;background-position:center">
+<!-- CINEMATIC HERO -->
+<div class="country-hero">
+<div class="hero-bg" style="background-image:url('img/bamburgh.jpg');background-size:cover;background-position:center"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
 <h1>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Castles in England</h1>
 <p class="hero-desc">From the mighty Tower of London to the crumbling keeps of the North, England holds more than a thousand years of conquest, rebellion, and quiet decay within its castle walls. Norman strongholds, Tudor palaces, and romantic ruins scattered across green countryside — every county tells a different chapter.</p>
 <div class="hero-stats">
@@ -313,7 +366,8 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <div class="hero-stat"><span class="stat-num">8</span><span class="stat-label">Types</span></div>
 <div class="hero-stat"><span class="stat-num">49</span><span class="stat-label">Counties</span></div>
 </div>
-<div class="hero-pills">
+</div>
+<div class="hero-pills-wrap"><div class="hero-pills">
 <a class="hero-pill" href="search.html?tag=dog-friendly&region=England">🐕 Dog Friendly <span class="hp-count">56</span></a>
 <a class="hero-pill" href="search.html?tag=free-entry&region=England">🆓 Free Entry <span class="hp-count">139</span></a>
 <a class="hero-pill" href="search.html?tag=kid-friendly&region=England">👨‍👩‍👧 Family Friendly <span class="hp-count">85</span></a>
@@ -321,7 +375,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a class="hero-pill" href="search.html?condition=intact&region=England">🏰 Intact <span class="hp-count">194</span></a>
 <a class="hero-pill" href="search.html?tag=photogenic&region=England">📸 Photogenic <span class="hp-count">199</span></a>
 <a class="hero-pill" href="search.html?tag=haunted&region=England">👻 Haunted <span class="hp-count">33</span></a>
-</div>
+</div></div>
 </div>
 
 <!-- BREADCRUMB -->
@@ -335,8 +389,28 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <div class="section-inner">
 <div class="section-header"><h2>Explore by Region</h2></div>
 <p class="section-tagline">Dive deeper into England's regions</p>
-<div class="region-link-grid">
-<a class="region-link-card" href="region.html?id=london-surrey"><span class="rlc-icon">🏙️</span><span class="rlc-name">London &amp; Surrey</span><span class="rlc-count">9 sites</span></a><a class="region-link-card" href="region.html?id=south-east-england"><span class="rlc-icon">🏰</span><span class="rlc-name">South East</span><span class="rlc-count">65 sites</span></a><a class="region-link-card" href="region.html?id=south-west-england"><span class="rlc-icon">⚔️</span><span class="rlc-name">South West</span><span class="rlc-count">97 sites</span></a><a class="region-link-card" href="region.html?id=northern-england"><span class="rlc-icon">🛡️</span><span class="rlc-name">Northern England</span><span class="rlc-count">110 sites</span></a><a class="region-link-card" href="region.html?id=midlands"><span class="rlc-icon">🏛️</span><span class="rlc-name">The Midlands</span><span class="rlc-count">108 sites</span></a><a class="region-link-card" href="region.html?id=yorkshire"><span class="rlc-icon">⛪</span><span class="rlc-name">Yorkshire</span><span class="rlc-count">71 sites</span></a><a class="region-link-card" href="region.html?id=east-anglia"><span class="rlc-icon">🗝️</span><span class="rlc-name">East Anglia</span><span class="rlc-count">53 sites</span></a>
+<div class="region-grid">
+<a class="region-card" href="region.html?id=london-surrey" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.15) 60%),url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/500px-Tower_of_London_from_the_Shard_%288515883950%29.jpg');background-size:cover;background-position:center">
+<div class="region-card-body"><span class="region-card-name">London &amp; Surrey</span><span class="region-card-count">9 sites</span></div>
+</a>
+<a class="region-card" href="region.html?id=south-east-england" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.15) 60%),url('https://img.castlecore.uk/windsor-castle-interior.jpg');background-size:cover;background-position:center">
+<div class="region-card-body"><span class="region-card-name">South East</span><span class="region-card-count">65 sites</span></div>
+</a>
+<a class="region-card" href="region.html?id=south-west-england" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.15) 60%),url('https://img.castlecore.uk/wells-cathedral.jpg');background-size:cover;background-position:center">
+<div class="region-card-body"><span class="region-card-name">South West</span><span class="region-card-count">97 sites</span></div>
+</a>
+<a class="region-card" href="region.html?id=northern-england" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.15) 60%),url('https://img.castlecore.uk/durham-cathedral.jpg');background-size:cover;background-position:center">
+<div class="region-card-body"><span class="region-card-name">Northern England</span><span class="region-card-count">110 sites</span></div>
+</a>
+<a class="region-card" href="region.html?id=midlands" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.15) 60%),url('https://img.castlecore.uk/chatsworth-house.jpg');background-size:cover;background-position:center">
+<div class="region-card-body"><span class="region-card-name">The Midlands</span><span class="region-card-count">108 sites</span></div>
+</a>
+<a class="region-card" href="region.html?id=yorkshire" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.15) 60%),url('https://img.castlecore.uk/york-minster.jpg');background-size:cover;background-position:center">
+<div class="region-card-body"><span class="region-card-name">Yorkshire</span><span class="region-card-count">71 sites</span></div>
+</a>
+<a class="region-card" href="region.html?id=east-anglia" style="background-image:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.15) 60%),url('https://img.castlecore.uk/ely-cathedral.jpg');background-size:cover;background-position:center">
+<div class="region-card-body"><span class="region-card-name">East Anglia</span><span class="region-card-count">53 sites</span></div>
+</a>
 </div>
 </div>
 </section>
@@ -346,32 +420,32 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 
 
 <!-- ERAS -->
-<section>
+<section class="bg-cream">
 <div class="section-inner">
-<div class="section-header"><h2>Sites Through the Centuries</h2></div>
+<div class="section-header"><h2>Through the Centuries</h2></div>
 <p class="section-tagline">From ancient hillforts to Victorian follies — explore by era</p>
 <div class="era-grid">
-<a class="era-card" href="search.html?era=11th%20century,12th%20century&region=England" style="background:linear-gradient(135deg,#8b2335 0%,#8b2335dd 100%)">
+<a class="era-card era-featured" href="search.html?era=11th%20century,12th%20century&region=England" style="background-image:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%),url('https://img.castlecore.uk/durham-cathedral.jpg');background-size:cover;background-position:center">
 <span class="era-name">Norman</span>
 <span class="era-count">142 sites</span>
 <span class="era-tagline">Conquest, keeps, and the clash of iron on stone</span>
 </a>
-<a class="era-card" href="search.html?era=13th%20century,14th%20century,15th%20century&region=England" style="background:linear-gradient(135deg,#2d5a3d 0%,#2d5a3ddd 100%)">
+<a class="era-card" href="search.html?era=13th%20century,14th%20century,15th%20century&region=England" style="background-image:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%),url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg/1280px-Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg');background-size:cover;background-position:center">
 <span class="era-name">Medieval</span>
 <span class="era-count">125 sites</span>
 <span class="era-tagline">The golden age of chivalry and towering curtain walls</span>
 </a>
-<a class="era-card" href="search.html?era=16th%20century&region=England" style="background:linear-gradient(135deg,#1a2a4a 0%,#1a2a4add 100%)">
+<a class="era-card" href="search.html?era=16th%20century&region=England" style="background-image:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%),url('https://img.castlecore.uk/sissinghurst-castle.jpg');background-size:cover;background-position:center">
 <span class="era-name">Tudor</span>
 <span class="era-count">37 sites</span>
 <span class="era-tagline">Palaces of power in an age of reformation</span>
 </a>
-<a class="era-card" href="search.html?era=18th%20century,19th%20century&region=England" style="background:linear-gradient(135deg,#b8860b 0%,#b8860bdd 100%)">
+<a class="era-card" href="search.html?era=18th%20century,19th%20century&region=England" style="background-image:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%),url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Castle_Howard_and_garden.jpg/1280px-Castle_Howard_and_garden.jpg');background-size:cover;background-position:center">
 <span class="era-name">Georgian &amp; Victorian</span>
 <span class="era-count">31 sites</span>
 <span class="era-tagline">Romantic revival and the age of the country house</span>
 </a>
-<a class="era-card" href="search.html?era=17th%20century&region=England" style="background:linear-gradient(135deg,#6b3a6b 0%,#6b3a6bdd 100%)">
+<a class="era-card" href="search.html?era=17th%20century&region=England" style="background-image:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%),url('https://img.castlecore.uk/chatsworth-house.jpg');background-size:cover;background-position:center">
 <span class="era-name">Stuart</span>
 <span class="era-count">12 sites</span>
 <span class="era-tagline">Civil war strongholds and baroque grandeur</span>
@@ -383,35 +457,47 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
 
 
-<!-- FEATURED -->
+<!-- FEATURED SITES -->
 <section>
 <div class="section-inner">
 <div class="section-header"><h2>Must-Visit Sites</h2></div>
 <p class="section-tagline">The best of England's heritage</p>
+<a class="editorial-card" href="site/tower-of-london.html">
+<div class="editorial-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/1280px-Tower_of_London_from_the_Shard_%288515883950%29.jpg" alt="Tower of London" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="editorial-body">
+<span class="type-pill">castle</span>
+<h3>Tower of London</h3>
+<p class="editorial-loc">London, England</p>
+<p class="editorial-hook">Founded in 1066 by William the Conqueror, the Tower of London has served as a royal pal…</p>
+<div class="editorial-meta"><span class="card-rating">★ 4.7</span><span class="editorial-cta">Explore →</span></div>
+</div>
+</a>
+<a class="editorial-card editorial-reverse" href="site/bamburgh-castle.html">
+<div class="editorial-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/1280px-Bamburgh_Castle%2C_beautiful_day.jpg" alt="Bamburgh Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
+<div class="editorial-body">
+<span class="type-pill">castle</span>
+<h3>Bamburgh Castle</h3>
+<p class="editorial-loc">Northumberland, England</p>
+<p class="editorial-hook">Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle was once the…</p>
+<div class="editorial-meta"><span class="card-rating">★ 4.7</span><span class="editorial-cta">Explore →</span></div>
+</div>
+</a>
 <div class="featured-grid">
-<a class="feat-card" href="site/tower-of-london.html">
-<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/500px-Tower_of_London_from_the_Shard_%288515883950%29.jpg" alt="Tower of London" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="feat-body"><h3>Tower of London</h3><p class="feat-loc">London, England</p><p class="feat-hook">Founded in 1066 by William the Conqueror, the Tower of London has served as a…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.7</span></div></div>
-</a>
-<a class="feat-card" href="site/bamburgh-castle.html">
-<div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/500px-Bamburgh_Castle%2C_beautiful_day.jpg" alt="Bamburgh Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="feat-body"><h3>Bamburgh Castle</h3><p class="feat-loc">Northumberland, England</p><p class="feat-hook">Perched on a volcanic outcrop on the Northumberland coast, Bamburgh Castle wa…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.7</span></div></div>
-</a>
 <a class="feat-card" href="site/bodiam-castle.html">
 <div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bodiam-castle-10My8-1197.jpg/500px-Bodiam-castle-10My8-1197.jpg" alt="Bodiam Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="feat-body"><h3>Bodiam Castle</h3><p class="feat-loc">East Sussex, England</p><p class="feat-hook">Built in 1385 by Sir Edward Dallingridge, Bodiam is a perfect example of a la…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
+<div class="feat-body"><h3>Bodiam Castle</h3><p class="feat-loc">East Sussex, England</p><p class="feat-hook">Built in 1385 by Sir Edward Dallingridge, Bodiam is a perfect example of a late medieva…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
 </a>
 <a class="feat-card" href="site/warwick-castle.html">
 <div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Warwick_Castle_May_2016.jpg/500px-Warwick_Castle_May_2016.jpg" alt="Warwick Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="feat-body"><h3>Warwick Castle</h3><p class="feat-loc">Warwickshire, England</p><p class="feat-hook">Built by William the Conqueror in 1068, Warwick Castle is one of the finest m…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
+<div class="feat-body"><h3>Warwick Castle</h3><p class="feat-loc">Warwickshire, England</p><p class="feat-hook">Built by William the Conqueror in 1068, Warwick Castle is one of the finest medieval ca…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.5</span></div></div>
 </a>
 <a class="feat-card" href="site/tintagel-castle.html">
 <div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg/500px-Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg" alt="Tintagel Castle" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="feat-body"><h3>Tintagel Castle</h3><p class="feat-loc">Cornwall, England</p><p class="feat-hook">Steeped in Arthurian legend, Tintagel Castle clings to the rugged Cornish cli…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.4</span></div></div>
+<div class="feat-body"><h3>Tintagel Castle</h3><p class="feat-loc">Cornwall, England</p><p class="feat-hook">Steeped in Arthurian legend, Tintagel Castle clings to the rugged Cornish clifftops. Re…</p><div class="feat-meta"><span class="type-pill">castle</span><span class="card-rating">★ 4.4</span></div></div>
 </a>
 <a class="feat-card" href="site/whitby-abbey.html">
 <div class="feat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Whitby_Abbey_%28geograph_7249897%29.jpg/500px-Whitby_Abbey_%28geograph_7249897%29.jpg" alt="Whitby Abbey" loading="lazy" onerror="this.src='placeholder.svg'"></div>
-<div class="feat-body"><h3>Whitby Abbey</h3><p class="feat-loc">North Yorkshire, England</p><p class="feat-hook">The hauntingly beautiful skeleton of Whitby Abbey inspired Bram Stoker's Drac…</p><div class="feat-meta"><span class="type-pill">abbey</span><span class="card-rating">★ 4.5</span></div></div>
+<div class="feat-body"><h3>Whitby Abbey</h3><p class="feat-loc">North Yorkshire, England</p><p class="feat-hook">The hauntingly beautiful skeleton of Whitby Abbey inspired Bram Stoker's Dracula. Found…</p><div class="feat-meta"><span class="type-pill">abbey</span><span class="card-rating">★ 4.5</span></div></div>
 </a>
 </div>
 </div>
@@ -425,12 +511,77 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <div class="section-header"><h2>Browse by County</h2><a href="search.html?region=England">View all →</a></div>
 <p class="section-tagline">Find sites in every corner of England</p>
 <div class="county-grid">
-<a class="county-card" href="search.html?region=Cumbria"><span class="county-name">Cumbria</span><span class="county-count">42 sites</span></a><a class="county-card" href="search.html?region=Northumberland"><span class="county-name">Northumberland</span><span class="county-count">40 sites</span></a><a class="county-card" href="search.html?region=Yorkshire"><span class="county-name">Yorkshire</span><span class="county-count">34 sites</span></a><a class="county-card" href="search.html?region=North%20Yorkshire"><span class="county-name">North Yorkshire</span><span class="county-count">31 sites</span></a><a class="county-card" href="search.html?region=Devon"><span class="county-name">Devon</span><span class="county-count">25 sites</span></a><a class="county-card" href="search.html?region=Kent"><span class="county-name">Kent</span><span class="county-count">21 sites</span></a><a class="county-card" href="search.html?region=Somerset"><span class="county-name">Somerset</span><span class="county-count">19 sites</span></a><a class="county-card" href="search.html?region=Norfolk"><span class="county-name">Norfolk</span><span class="county-count">19 sites</span></a><a class="county-card" href="search.html?region=Shropshire"><span class="county-name">Shropshire</span><span class="county-count">19 sites</span></a><a class="county-card" href="search.html?region=Cornwall"><span class="county-name">Cornwall</span><span class="county-count">18 sites</span></a><a class="county-card" href="search.html?region=Lincolnshire"><span class="county-name">Lincolnshire</span><span class="county-count">17 sites</span></a><a class="county-card" href="search.html?region=Herefordshire"><span class="county-name">Herefordshire</span><span class="county-count">16 sites</span></a>
+<a class="county-card county-hot" href="search.html?region=Cumbria">
+<div class="county-info"><span class="county-name">Cumbria</span><span class="county-count">42 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:100%"></div></div>
+</a>
+<a class="county-card county-hot" href="search.html?region=Northumberland">
+<div class="county-info"><span class="county-name">Northumberland</span><span class="county-count">40 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:95%"></div></div>
+</a>
+<a class="county-card county-hot" href="search.html?region=Yorkshire">
+<div class="county-info"><span class="county-name">Yorkshire</span><span class="county-count">34 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:81%"></div></div>
+</a>
+<a class="county-card county-hot" href="search.html?region=North%20Yorkshire">
+<div class="county-info"><span class="county-name">North Yorkshire</span><span class="county-count">31 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:74%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Devon">
+<div class="county-info"><span class="county-name">Devon</span><span class="county-count">25 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:60%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Kent">
+<div class="county-info"><span class="county-name">Kent</span><span class="county-count">21 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:50%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Somerset">
+<div class="county-info"><span class="county-name">Somerset</span><span class="county-count">19 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:45%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Norfolk">
+<div class="county-info"><span class="county-name">Norfolk</span><span class="county-count">19 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:45%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Shropshire">
+<div class="county-info"><span class="county-name">Shropshire</span><span class="county-count">19 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:45%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Cornwall">
+<div class="county-info"><span class="county-name">Cornwall</span><span class="county-count">18 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:43%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Lincolnshire">
+<div class="county-info"><span class="county-name">Lincolnshire</span><span class="county-count">17 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:40%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Herefordshire">
+<div class="county-info"><span class="county-name">Herefordshire</span><span class="county-count">16 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:38%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Warwickshire">
+<div class="county-info"><span class="county-name">Warwickshire</span><span class="county-count">15 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:36%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Derbyshire">
+<div class="county-info"><span class="county-name">Derbyshire</span><span class="county-count">15 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:36%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Wiltshire">
+<div class="county-info"><span class="county-name">Wiltshire</span><span class="county-count">13 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:31%"></div></div>
+</a>
+<a class="county-card" href="search.html?region=Suffolk">
+<div class="county-info"><span class="county-name">Suffolk</span><span class="county-count">13 sites</span></div>
+<div class="county-bar-track"><div class="county-bar-fill" style="width:31%"></div></div>
+</a>
 </div>
 </div>
 </section>
 
-<!-- MINI MAP -->
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+<!-- MAP -->
 <section>
 <div class="section-inner">
 <div class="section-header"><h2>All Sites on the Map</h2></div>
@@ -444,8 +595,8 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 
 <div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
 
-<!-- STATS -->
-<section>
+<!-- AT A GLANCE -->
+<section class="bg-cream">
 <div class="section-inner">
 <div class="section-header"><h2>At a Glance</h2></div>
 <p class="section-tagline">544 heritage sites across 49 counties</p>
@@ -456,27 +607,28 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </div>
 <div>
 <h3 style="font-size:1.1rem;margin-bottom:16px;color:var(--twilight)">Top Rated</h3>
-<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">1</span><div style="flex:1"><a href="site/durham-cathedral.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Durham Cathedral</a><div style="font-size:.78rem;color:var(--twilight)">County Durham · ★ 4.8</div></div></div>
-<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">2</span><div style="flex:1"><a href="site/york-minster.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">York Minster</a><div style="font-size:.78rem;color:var(--twilight)">Yorkshire · ★ 4.8</div></div></div>
-<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">3</span><div style="flex:1"><a href="site/wells-cathedral.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Wells Cathedral</a><div style="font-size:.78rem;color:var(--twilight)">Somerset · ★ 4.8</div></div></div>
-<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">4</span><div style="flex:1"><a href="site/tower-of-london.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Tower of London</a><div style="font-size:.78rem;color:var(--twilight)">London · ★ 4.7</div></div></div>
-<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--candlelight);width:28px">5</span><div style="flex:1"><a href="site/bamburgh-castle.html" style="font-weight:500;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Bamburgh Castle</a><div style="font-size:.78rem;color:var(--twilight)">Northumberland · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--candlelight);width:28px">1</span><div style="flex:1"><a href="site/durham-cathedral.html" style="font-weight:600;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Durham Cathedral</a><div style="font-size:.78rem;color:var(--twilight)">County Durham · ★ 4.8</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--candlelight);width:28px">2</span><div style="flex:1"><a href="site/york-minster.html" style="font-weight:600;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">York Minster</a><div style="font-size:.78rem;color:var(--twilight)">Yorkshire · ★ 4.8</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--candlelight);width:28px">3</span><div style="flex:1"><a href="site/wells-cathedral.html" style="font-weight:600;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Wells Cathedral</a><div style="font-size:.78rem;color:var(--twilight)">Somerset · ★ 4.8</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--candlelight);width:28px">4</span><div style="flex:1"><a href="site/tower-of-london.html" style="font-weight:600;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Tower of London</a><div style="font-size:.78rem;color:var(--twilight)">London · ★ 4.7</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--candlelight);width:28px">5</span><div style="flex:1"><a href="site/bamburgh-castle.html" style="font-weight:600;font-size:.92rem;transition:color .2s" onmouseover="this.style.color='var(--burgundy)'" onmouseout="this.style.color='inherit'">Bamburgh Castle</a><div style="font-size:.78rem;color:var(--twilight)">Northumberland · ★ 4.7</div></div></div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- PRACTICAL INFO -->
+<div class="section-divider"><span class="divider-ornament"><svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M55 10h25" stroke="currentColor" stroke-width="0.8" fill="none"/><path d="M33 3c2 0 3.5 1.5 3.5 3.5S35 10 33 10s-3.5-1.5-3.5-3.5S31 3 33 3z" opacity=".7"/><path d="M47 3c-2 0-3.5 1.5-3.5 3.5S45 10 47 10s3.5-1.5 3.5-3.5S49 3 47 3z" opacity=".7"/><path d="M36 10c1.5-3 3-4.5 4-4.5s2.5 1.5 4 4.5c-1.5 3-3 4.5-4 4.5s-2.5-1.5-4-4.5z" opacity=".5"/><circle cx="40" cy="10" r="1.5"/></svg></span></div>
+
+<!-- PLANNING YOUR VISIT -->
 <section>
 <div class="section-inner">
-<div class="practical-box">
-<h3>📋 Planning Your Visit</h3>
+<div class="section-header"><h2>📋 Planning Your Visit</h2></div>
+<p class="section-tagline">Practical info for exploring England's heritage</p>
 <div class="practical-grid">
-<div class="prac-item"><span class="prac-icon">🆓</span><span class="prac-num">139</span><span class="prac-label">Free Entry</span></div>
-<div class="prac-item"><span class="prac-icon">☕</span><span class="prac-num">73</span><span class="prac-label">Tearoom / Café</span></div>
-<div class="prac-item"><span class="prac-icon">🐕</span><span class="prac-num">56</span><span class="prac-label">Dog Friendly</span></div>
-<div class="prac-item"><span class="prac-icon">👨‍👩‍👧</span><span class="prac-num">85</span><span class="prac-label">Family Friendly</span></div>
-</div>
+<div class="prac-card"><span class="prac-icon">🆓</span><span class="prac-num">139</span><span class="prac-label">Free Entry</span></div>
+<div class="prac-card"><span class="prac-icon">☕</span><span class="prac-num">73</span><span class="prac-label">Tearoom / Café</span></div>
+<div class="prac-card"><span class="prac-icon">🐕</span><span class="prac-num">56</span><span class="prac-label">Dog Friendly</span></div>
+<div class="prac-card"><span class="prac-icon">👨‍👩‍👧</span><span class="prac-num">85</span><span class="prac-label">Family Friendly</span></div>
 </div>
 </div>
 </section>
@@ -507,7 +659,6 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </footer>
 
 <script>
-/* Mega menu hover */
 document.querySelectorAll('.mega-country').forEach(btn=>{
 btn.addEventListener('mouseenter',function(){
 const c=this.dataset.country;
@@ -516,7 +667,6 @@ this.classList.add('active');
 this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
 });
 });
-/* Nav search */
 document.getElementById('navSearch').addEventListener('keydown',function(e){
 if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
 });
