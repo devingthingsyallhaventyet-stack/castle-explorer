@@ -256,47 +256,329 @@ img{max-width:100%;display:block}
   <div class="hero-scroll">Scroll</div>
 </section>
 
-<!-- ===== 2. THE LAND ===== -->
+<!-- ===== 2. THE LAND — Illustrated Story Map ===== -->
 <section class="land" id="land">
   <div class="land-bg" data-parallax="0.15"></div>
   <div class="container">
     <div class="land-header reveal">
       <div class="section-label">The Geography</div>
       <h2 class="section-title" style="color:#fff">The Land</h2>
-      <p class="section-subtitle" style="margin:0 auto">Before the castles came the land that demanded them — wild, vast, and unconquerable.</p>
+      <p class="section-subtitle" style="margin:0 auto">Before the castles came the land that demanded them — wild, vast, and unconquerable. Trace the journey through seven castle regions.</p>
     </div>
-    <div class="land-collage">
-      <div class="land-img li-1 reveal-left">
-        <img src="assets/scotland/glencoe.jpg" alt="Glencoe valley panorama with moody clouds" loading="lazy">
-        <div class="caption"><strong>Glencoe</strong>The Highlands — dramatic glens, Munros, and the Great Glen fault line</div>
-      </div>
-      <div class="land-img li-2 reveal-right">
-        <img src="assets/scotland/skye.jpg" alt="Isle of Skye dramatic landscape" loading="lazy">
-        <div class="caption"><strong>Isle of Skye</strong>The Islands — each with distinct castle heritage</div>
-      </div>
-      <div class="land-img li-3 reveal">
-        <img src="assets/scotland/loch.jpg" alt="Scottish loch reflecting mountains" loading="lazy">
-        <div class="caption"><strong>The Lochs</strong>Over 30,000 freshwater lochs</div>
-      </div>
-      <div class="land-img li-4 reveal-right" style="transition-delay:.2s">
-        <img src="https://img.castlecore.uk/scotland/Ben_Nevis_from_Banavie.jpg" alt="Ben Nevis from Banavie" loading="lazy">
-        <div class="caption"><strong>Ben Nevis</strong>Britain's highest peak</div>
-      </div>
-      <div class="land-img li-5 reveal-left" style="transition-delay:.3s">
-        <img src="https://img.castlecore.uk/scotland/Old_Man_of_Storr__Isle_of_Skye__Scotland_-_Diliff.jpg" alt="Old Man of Storr, Isle of Skye" loading="lazy">
-        <div class="caption"><strong>The Coastline</strong>6,160 miles of coast — more than France</div>
-      </div>
-      <div class="land-img li-6 reveal" style="transition-delay:.4s">
-        <img src="https://img.castlecore.uk/scotland/Eildon_hills.jpg" alt="Scottish Borders rolling hills" loading="lazy">
-        <div class="caption"><strong>The Borders</strong>Rolling farmland and the densest tower houses in Europe</div>
-      </div>
-      <div class="land-img li-7 reveal-right" style="transition-delay:.5s">
-        <img src="https://img.castlecore.uk/scotland/Luskentyre_Beach__An_Ob_.jpg" alt="Outer Hebrides white sand beach" loading="lazy">
-        <div class="caption"><strong>Outer Hebrides</strong>White sand beaches at the edge of the world</div>
+
+    <div class="story-map-wrapper reveal" id="story-map">
+      <svg class="scotland-map" viewBox="0 0 600 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated story map of Scotland's castle regions">
+        <defs>
+          <!-- Parchment fill -->
+          <filter id="paperTexture">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDiffuseLighting in="noise" lighting-color="#d4c5a9" surfaceScale="1.5" result="lit">
+              <feDistantLight azimuth="45" elevation="55"/>
+            </feDiffuseLighting>
+            <feComposite in="lit" in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="pinGlow">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- Hand-drawn stroke filter -->
+          <filter id="roughen">
+            <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="3" result="warp"/>
+            <feDisplacementMap in="SourceGraphic" in2="warp" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+          <!-- Castle icon symbol -->
+          <symbol id="castle-icon" viewBox="0 0 24 20">
+            <path d="M2 20V8h3V5h2v3h3V5h2v3h3V5h2v3h3V8h2v12H2z" fill="currentColor" opacity="0.9"/>
+            <rect x="4" y="10" width="3" height="4" rx=".5" fill="var(--navy)" opacity=".5"/>
+            <rect x="10" y="12" width="4" height="8" rx="2 2 0 0" fill="var(--navy)" opacity=".5"/>
+            <rect x="17" y="10" width="3" height="4" rx=".5" fill="var(--navy)" opacity=".5"/>
+          </symbol>
+          <!-- Pin marker symbol -->
+          <symbol id="pin-marker" viewBox="0 0 24 34">
+            <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 22 12 22s12-13 12-22C24 5.4 18.6 0 12 0z" fill="var(--candlelight)"/>
+            <circle cx="12" cy="11" r="5" fill="var(--navy)" opacity=".7"/>
+            <use href="#castle-icon" x="4" y="4" width="16" height="13" style="color:var(--pale-gold)"/>
+          </symbol>
+          <!-- Compass rose symbol -->
+          <symbol id="compass" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="38" fill="none" stroke="var(--parchment)" stroke-width=".6" opacity=".4"/>
+            <circle cx="40" cy="40" r="28" fill="none" stroke="var(--parchment)" stroke-width=".4" opacity=".3"/>
+            <path d="M40 4l3 18h-6L40 4z" fill="var(--candlelight)" opacity=".8"/>
+            <path d="M40 76l-3-18h6L40 76z" fill="var(--parchment)" opacity=".5"/>
+            <path d="M4 40l18-3v6L4 40z" fill="var(--parchment)" opacity=".5"/>
+            <path d="M76 40l-18 3v-6L76 40z" fill="var(--parchment)" opacity=".5"/>
+            <text x="40" y="14" text-anchor="middle" font-family="var(--serif)" font-size="8" fill="var(--candlelight)" font-weight="700">N</text>
+            <text x="40" y="74" text-anchor="middle" font-family="var(--serif)" font-size="7" fill="var(--parchment)" opacity=".5">S</text>
+            <text x="10" y="43" text-anchor="middle" font-family="var(--serif)" font-size="7" fill="var(--parchment)" opacity=".5">W</text>
+            <text x="70" y="43" text-anchor="middle" font-family="var(--serif)" font-size="7" fill="var(--parchment)" opacity=".5">E</text>
+          </symbol>
+        </defs>
+
+        <!-- Sea background texture lines -->
+        <g class="sea-lines" opacity=".06">
+          <path d="M0 100Q150 110 300 95T600 105" fill="none" stroke="var(--pale-gold)" stroke-width=".8"/>
+          <path d="M0 200Q150 190 300 210T600 195" fill="none" stroke="var(--pale-gold)" stroke-width=".8"/>
+          <path d="M0 350Q200 340 400 360T600 345" fill="none" stroke="var(--pale-gold)" stroke-width=".8"/>
+          <path d="M0 500Q100 510 300 490T600 505" fill="none" stroke="var(--pale-gold)" stroke-width=".8"/>
+          <path d="M0 650Q200 640 400 660T600 645" fill="none" stroke="var(--pale-gold)" stroke-width=".8"/>
+        </g>
+
+        <!-- ====== SCOTLAND MAINLAND ====== -->
+        <g class="scotland-outline" filter="url(#roughen)">
+          <!-- Mainland -->
+          <path class="land-mass" d="
+            M310 780 L280 770 260 755 235 740 220 720 210 700
+            195 685 180 670 175 650 185 635 195 620 200 600
+            210 585 225 575 240 565 255 555 245 540 230 530
+            225 515 230 500 240 490 260 480 275 470 290 460
+            300 445 310 430 325 415 330 400 320 385 305 375
+            290 365 275 355 270 340 280 325 295 310 300 295
+            290 280 275 270 260 260 250 245 245 230 255 215
+            270 205 285 195 280 180 265 170 255 155 260 140
+            275 125 295 115 310 110 320 100 330 90 345 80
+            360 72 380 68 395 70 410 78 420 90 415 105
+            405 120 395 130 400 145 410 155 425 160 440 165
+            445 180 440 195 430 210 420 225 425 240 435 250
+            440 265 435 280 425 295 415 310 405 325 395 340
+            385 355 380 370 375 385 365 400 355 415 350 430
+            355 445 365 460 370 475 365 490 355 505 345 520
+            340 535 345 550 355 565 365 580 370 595 365 610
+            355 625 340 640 335 655 345 665 355 675 360 690
+            355 705 345 720 330 740 320 755 310 780Z
+          " fill="var(--parchment)" fill-opacity=".15" stroke="var(--pale-gold)" stroke-width="1.8" stroke-linejoin="round"/>
+
+          <!-- Highland line (decorative) -->
+          <path class="highland-line" d="M195 620 Q250 580 280 555 Q310 530 340 535 Q370 540 370 595"
+            fill="none" stroke="var(--candlelight)" stroke-width=".6" stroke-dasharray="4 6" opacity=".3"/>
+
+          <!-- Firth of Forth indent -->
+          <path d="M355 670 Q340 660 330 665 Q320 670 310 665" fill="none" stroke="var(--pale-gold)" stroke-width="1" opacity=".4"/>
+          <!-- Firth of Clyde indent -->
+          <path d="M235 680 Q245 670 255 672 Q265 675 270 665" fill="none" stroke="var(--pale-gold)" stroke-width="1" opacity=".4"/>
+
+          <!-- Isle of Skye -->
+          <path class="land-mass skye" d="
+            M170 310 L160 295 155 280 165 265 180 255 195 260
+            205 270 210 285 200 300 185 310 170 310Z
+          " fill="var(--parchment)" fill-opacity=".12" stroke="var(--pale-gold)" stroke-width="1.4"/>
+
+          <!-- Outer Hebrides (simplified) -->
+          <path class="land-mass hebrides" d="
+            M95 200 L90 220 85 250 90 280 95 310 100 340 105 360
+            100 370 90 365 80 340 75 310 70 280 72 250 78 220 85 195 95 200Z
+          " fill="var(--parchment)" fill-opacity=".08" stroke="var(--pale-gold)" stroke-width="1.2"/>
+
+          <!-- Orkney Islands -->
+          <g class="land-mass orkney">
+            <path d="M340 45 L330 40 325 30 335 22 350 20 360 28 358 40 345 48 340 45Z"
+              fill="var(--parchment)" fill-opacity=".1" stroke="var(--pale-gold)" stroke-width="1.2"/>
+            <path d="M360 35 L370 28 380 32 375 42 365 40Z"
+              fill="var(--parchment)" fill-opacity=".08" stroke="var(--pale-gold)" stroke-width="1"/>
+          </g>
+
+          <!-- Shetland Islands (inset, upper right) -->
+          <g class="land-mass shetland" transform="translate(480, 15)">
+            <rect x="-5" y="-5" width="85" height="110" rx="3" fill="none" stroke="var(--pale-gold)" stroke-width=".5" stroke-dasharray="3 3" opacity=".3"/>
+            <text x="38" y="8" text-anchor="middle" font-family="var(--serif)" font-size="8" fill="var(--pale-gold)" font-style="italic" opacity=".6">Shetland</text>
+            <path d="M40 20 L35 30 30 45 35 60 40 75 50 85 55 78 52 60 48 45 50 30 45 22 40 20Z"
+              fill="var(--parchment)" fill-opacity=".1" stroke="var(--pale-gold)" stroke-width="1.2"/>
+          </g>
+        </g>
+
+        <!-- ====== TRAVEL ROUTE (dotted journey path) ====== -->
+        <path class="journey-route" d="
+          M340 700 Q335 680 345 665
+          L355 640 Q365 610 355 590
+          L340 560 Q320 540 310 520
+          L305 495 Q310 470 325 450
+          L340 430 Q355 410 345 390
+          L330 370 Q310 350 300 340
+          L290 325 Q285 305 290 285
+          L295 260 Q290 240 280 225
+          L275 205 Q280 185 285 170
+          L290 155 Q300 135 315 120
+          L335 100 Q355 85 375 75
+        " fill="none" stroke="var(--candlelight)" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round" opacity=".7"/>
+
+        <!-- ====== REGION MARKERS ====== -->
+
+        <!-- 1. Edinburgh & Lothian -->
+        <g class="region-pin" data-region="edinburgh" style="cursor:pointer">
+          <circle cx="345" cy="665" r="28" fill="var(--candlelight)" fill-opacity="0" class="pin-hover-zone"/>
+          <use href="#pin-marker" x="333" y="648" width="24" height="34" class="pin-icon"/>
+          <text x="345" y="698" text-anchor="middle" class="pin-label">Edinburgh</text>
+          <text x="345" y="710" text-anchor="middle" class="pin-sublabel">&amp; Lothian</text>
+        </g>
+
+        <!-- 2. The Highlands -->
+        <g class="region-pin" data-region="highlands" style="cursor:pointer">
+          <circle cx="310" cy="280" r="28" fill="var(--candlelight)" fill-opacity="0" class="pin-hover-zone"/>
+          <use href="#pin-marker" x="298" y="263" width="24" height="34" class="pin-icon"/>
+          <text x="310" y="313" text-anchor="middle" class="pin-label">The Highlands</text>
+        </g>
+
+        <!-- 3. Aberdeenshire -->
+        <g class="region-pin" data-region="aberdeenshire" style="cursor:pointer">
+          <circle cx="420" cy="365" r="28" fill="var(--candlelight)" fill-opacity="0" class="pin-hover-zone"/>
+          <use href="#pin-marker" x="408" y="348" width="24" height="34" class="pin-icon"/>
+          <text x="420" y="398" text-anchor="middle" class="pin-label">Aberdeenshire</text>
+        </g>
+
+        <!-- 4. The Borders -->
+        <g class="region-pin" data-region="borders" style="cursor:pointer">
+          <circle cx="320" cy="740" r="28" fill="var(--candlelight)" fill-opacity="0" class="pin-hover-zone"/>
+          <use href="#pin-marker" x="308" y="723" width="24" height="34" class="pin-icon"/>
+          <text x="320" y="773" text-anchor="middle" class="pin-label">The Borders</text>
+        </g>
+
+        <!-- 5. Argyll & the Islands -->
+        <g class="region-pin" data-region="argyll" style="cursor:pointer">
+          <circle cx="195" cy="490" r="28" fill="var(--candlelight)" fill-opacity="0" class="pin-hover-zone"/>
+          <use href="#pin-marker" x="183" y="473" width="24" height="34" class="pin-icon"/>
+          <text x="195" y="523" text-anchor="middle" class="pin-label">Argyll &amp;</text>
+          <text x="195" y="535" text-anchor="middle" class="pin-sublabel">the Islands</text>
+        </g>
+
+        <!-- 6. Fife & Perthshire -->
+        <g class="region-pin" data-region="fife" style="cursor:pointer">
+          <circle cx="355" cy="560" r="28" fill="var(--candlelight)" fill-opacity="0" class="pin-hover-zone"/>
+          <use href="#pin-marker" x="343" y="543" width="24" height="34" class="pin-icon"/>
+          <text x="355" y="593" text-anchor="middle" class="pin-label">Fife &amp;</text>
+          <text x="355" y="605" text-anchor="middle" class="pin-sublabel">Perthshire</text>
+        </g>
+
+        <!-- 7. Dumfries & Galloway -->
+        <g class="region-pin" data-region="dumfries" style="cursor:pointer">
+          <circle cx="240" cy="720" r="28" fill="var(--candlelight)" fill-opacity="0" class="pin-hover-zone"/>
+          <use href="#pin-marker" x="228" y="703" width="24" height="34" class="pin-icon"/>
+          <text x="240" y="753" text-anchor="middle" class="pin-label">Dumfries &amp;</text>
+          <text x="240" y="765" text-anchor="middle" class="pin-sublabel">Galloway</text>
+        </g>
+
+        <!-- ====== COMPASS ROSE ====== -->
+        <use href="#compass" x="490" y="680" width="80" height="80"/>
+
+        <!-- ====== SCALE BAR ====== -->
+        <g transform="translate(460, 780)" opacity=".4">
+          <line x1="0" y1="0" x2="80" y2="0" stroke="var(--pale-gold)" stroke-width="1"/>
+          <line x1="0" y1="-4" x2="0" y2="4" stroke="var(--pale-gold)" stroke-width="1"/>
+          <line x1="80" y1="-4" x2="80" y2="4" stroke="var(--pale-gold)" stroke-width="1"/>
+          <text x="40" y="14" text-anchor="middle" font-family="var(--serif)" font-size="7" fill="var(--pale-gold)" font-style="italic">~50 miles</text>
+        </g>
+
+        <!-- ====== MAP TITLE CARTOUCHE ====== -->
+        <g transform="translate(30, 720)">
+          <rect x="0" y="0" width="140" height="60" rx="4" fill="var(--navy)" fill-opacity=".6" stroke="var(--candlelight)" stroke-width=".8" opacity=".5"/>
+          <text x="70" y="22" text-anchor="middle" font-family="var(--display)" font-size="13" fill="var(--candlelight)" font-weight="700">SCOTLAND</text>
+          <text x="70" y="38" text-anchor="middle" font-family="var(--serif)" font-size="8" fill="var(--pale-gold)" font-style="italic" opacity=".7">A Castle Journey</text>
+          <text x="70" y="52" text-anchor="middle" font-family="var(--serif)" font-size="7" fill="var(--pale-gold)" opacity=".45">500+ castles · 7 regions</text>
+        </g>
+
+        <!-- Sea labels -->
+        <text x="50" y="440" font-family="var(--serif)" font-size="11" fill="var(--pale-gold)" font-style="italic" opacity=".15" transform="rotate(-80,50,440)">Atlantic Ocean</text>
+        <text x="480" y="500" font-family="var(--serif)" font-size="11" fill="var(--pale-gold)" font-style="italic" opacity=".15" transform="rotate(80,480,500)">North Sea</text>
+
+      </svg>
+
+      <!-- ====== TOOLTIP (HTML overlay) ====== -->
+      <div class="map-tooltip" id="map-tooltip">
+        <div class="map-tooltip-name"></div>
+        <div class="map-tooltip-count"></div>
+        <div class="map-tooltip-desc"></div>
+        <div class="map-tooltip-link">Explore region →</div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+/* ====== Story Map Styles ====== */
+.story-map-wrapper{position:relative;max-width:800px;margin:0 auto}
+.scotland-map{width:100%;height:auto;display:block}
+
+/* Land mass styling */
+.land-mass{transition:fill-opacity .4s ease,stroke .4s ease}
+
+/* Pin labels */
+.pin-label{font-family:var(--serif);font-size:10px;fill:var(--pale-gold);font-style:italic;pointer-events:none;opacity:.85}
+.pin-sublabel{font-family:var(--serif);font-size:8px;fill:var(--pale-gold);font-style:italic;pointer-events:none;opacity:.6}
+
+/* Pin hover effects */
+.region-pin .pin-icon{transition:transform .3s ease,filter .3s ease;transform-origin:center center}
+.region-pin:hover .pin-icon{filter:url(#pinGlow);transform:scale(1.2) translateY(-3px)}
+.region-pin:hover .pin-label,.region-pin:hover .pin-sublabel{fill:var(--candlelight);opacity:1}
+
+/* Journey route animation */
+.journey-route{stroke-dasharray:1600;stroke-dashoffset:1600;transition:stroke-dashoffset 3s ease}
+.story-map-wrapper.visible .journey-route,.reveal.visible .journey-route{stroke-dashoffset:0}
+
+/* Tooltip */
+.map-tooltip{position:absolute;background:rgba(15,22,40,.92);border:1px solid var(--candlelight);border-radius:8px;padding:16px 20px;pointer-events:none;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease;z-index:20;min-width:200px;backdrop-filter:blur(10px)}
+.map-tooltip.active{opacity:1;transform:translateY(0);pointer-events:auto}
+.map-tooltip-name{font-family:var(--display);font-size:1.2rem;color:var(--candlelight);margin-bottom:4px}
+.map-tooltip-count{font-family:var(--sans);font-size:.75rem;color:var(--pale-gold);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase;font-weight:700}
+.map-tooltip-desc{font-family:var(--serif);font-size:.9rem;color:rgba(255,255,255,.75);font-style:italic;line-height:1.5;margin-bottom:10px}
+.map-tooltip-link{font-family:var(--serif);font-size:.85rem;color:var(--candlelight);font-style:italic;cursor:pointer}
+.map-tooltip-link:hover{text-decoration:underline}
+
+@media(max-width:768px){
+  .story-map-wrapper{max-width:100%}
+  .map-tooltip{font-size:.85rem;padding:12px 14px;min-width:160px}
+}
+</style>
+
+<script>
+(function(){
+  const regionData = {
+    edinburgh: { name:'Edinburgh & Lothian', castles:'65+ castles', desc:'The volcanic fortress of Edinburgh Castle crowns Scotland\'s capital — gateway to the kingdom.', link:'/scotland/edinburgh' },
+    highlands: { name:'The Highlands', castles:'80+ castles', desc:'Lonely ruins and clan strongholds among the most dramatic landscape in Europe.', link:'/scotland/highlands' },
+    aberdeenshire: { name:'Aberdeenshire', castles:'75+ castles', desc:'More castles per acre than anywhere in Britain — the castle country of Scotland\'s northeast.', link:'/scotland/aberdeenshire' },
+    borders: { name:'The Borders', castles:'50+ castles', desc:'Tower houses and peel towers built to survive centuries of English raiding.', link:'/scotland/borders' },
+    argyll: { name:'Argyll & the Islands', castles:'45+ castles', desc:'Sea-girt fortresses of the Lords of the Isles and Campbell clan chiefs.', link:'/scotland/argyll' },
+    fife: { name:'Fife & Perthshire', castles:'60+ castles', desc:'Royal palaces and ancient seats of power in Scotland\'s historic heartland.', link:'/scotland/fife' },
+    dumfries: { name:'Dumfries & Galloway', castles:'55+ castles', desc:'Romantic ruins in rolling green hills — Scotland\'s forgotten southwest.', link:'/scotland/dumfries' }
+  };
+
+  const tooltip = document.getElementById('map-tooltip');
+  const wrapper = document.querySelector('.story-map-wrapper');
+
+  document.querySelectorAll('.region-pin').forEach(pin => {
+    const key = pin.dataset.region;
+    const data = regionData[key];
+    if (!data) return;
+
+    pin.addEventListener('mouseenter', e => {
+      tooltip.querySelector('.map-tooltip-name').textContent = data.name;
+      tooltip.querySelector('.map-tooltip-count').textContent = data.castles;
+      tooltip.querySelector('.map-tooltip-desc').textContent = data.desc;
+      tooltip.querySelector('.map-tooltip-link').onclick = () => { window.location = data.link; };
+
+      const rect = wrapper.getBoundingClientRect();
+      const pinRect = pin.getBoundingClientRect();
+      let left = pinRect.left - rect.left + pinRect.width / 2;
+      let top = pinRect.top - rect.top - 10;
+
+      // Keep tooltip inside wrapper
+      const tw = 220;
+      if (left + tw / 2 > rect.width) left = rect.width - tw / 2 - 10;
+      if (left - tw / 2 < 0) left = tw / 2 + 10;
+
+      tooltip.style.left = left + 'px';
+      tooltip.style.top = top + 'px';
+      tooltip.style.transform = 'translate(-50%, -100%)';
+      tooltip.classList.add('active');
+    });
+
+    pin.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('active');
+    });
+  });
+})();
+</script>
 
 
 
