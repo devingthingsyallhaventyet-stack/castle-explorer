@@ -219,6 +219,30 @@ img{max-width:100%;display:block}
 .footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:60px 24px 32px;text-align:center}
 .footer p{color:rgba(255,255,255,.35);font-size:.82rem}
 .footer a{color:var(--candlelight)}
+
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none"><path d="M16 2L4 10v12l12 8 12-8V10L16 2z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 14v8M16 11v11M22 14v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 14l3-3 3 3 3-3 3 3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      castlecore
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/scotland" class="active">Scotland</a>
+      <a href="/england">England</a>
+      <a href="/wales">Wales</a>
+      <a href="/ireland">Ireland</a>
+    </div>
+    <div class="nav-right">
+      <a href="/explore" class="btn-explore">Explore Map</a>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">☰</button>
+  </div>
 </nav>
 
 <!-- ===== 1. HERO ===== -->
