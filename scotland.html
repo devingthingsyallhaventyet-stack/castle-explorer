@@ -79,6 +79,17 @@ img{max-width:100%;display:block}
 .reveal-scale{opacity:0;transform:scale(.9);transition:opacity .8s ease,transform .8s ease}
 .reveal-scale.visible{opacity:1;transform:scale(1)}
 
+/* ========== STORY SECTIONS ========== */
+.story-section{position:relative;width:100%;overflow:hidden;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-direction:column}
+.story-image{width:100%;display:flex;justify-content:center;align-items:center;padding:0}
+.story-image img{width:100%;height:auto;display:block}
+.story-text{position:absolute;z-index:2;max-width:550px;text-align:right;right:8%;top:50%;transform:translateY(-50%)}
+.story-headline{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:16px}
+.story-desc{font-family:var(--serif);font-size:clamp(1rem,1.5vw,1.2rem);font-style:italic;color:rgba(255,255,255,.8);line-height:1.7}
+@media(max-width:768px){
+  .story-text{position:relative;right:auto;top:auto;transform:none;max-width:100%;text-align:center;padding:40px 24px}
+}
+
 /* ========== SECTION TITLE ========== */
 .section-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--candlelight);margin-bottom:12px}
 .section-title{font-family:var(--display);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:20px}
@@ -272,7 +283,18 @@ img{max-width:100%;display:block}
   <div class="hero-scroll">Scroll</div>
 </section>
 
-<!-- ===== 2. THE LAND — Interactive Region Explorer ===== -->
+<!-- ===== STORY 2: CULTURE & FOLKLORE ===== -->
+<section class="story-section story-folklore" id="story-folklore">
+  <div class="story-image">
+    <img src="https://img.castlecore.uk/scotland/lochness%20whiskey.png" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy">
+  </div>
+  <div class="story-text reveal">
+    <h2 class="story-headline">A Land That Breathes Myth</h2>
+    <p class="story-desc">Here, whisky isn't a drink — it's a 500-year-old ritual poured from copper and oak. Monsters stir beneath black lochs. Pipers play songs written for battles no one survived. Scotland didn't just create folklore. It never stopped living in it.</p>
+  </div>
+</section>
+
+<!-- ===== 3. THE LAND — Interactive Region Explorer ===== -->
 <section class="land" id="land">
   <div class="land-bg" data-parallax="0.15"></div>
   <div class="container">
