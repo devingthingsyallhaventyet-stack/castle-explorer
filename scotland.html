@@ -294,6 +294,9 @@ img{max-width:100%;display:block}
 .story-charlie .story-text-left{left:8%;right:auto;text-align:left;top:12%;z-index:10}
 .story-charlie .charlie-portrait{z-index:10}
 .story-charlie-fade{position:absolute;top:0;left:0;right:0;height:25%;background:linear-gradient(180deg,#000 0%,transparent 100%);z-index:3;pointer-events:none}
+.story-edinburgh{position:relative;z-index:8;margin-top:-2px}
+.story-edinburgh .story-image{position:relative}
+.story-edinburgh .story-image::before{content:'';position:absolute;top:0;left:0;right:0;height:20%;background:linear-gradient(180deg,#000 0%,transparent 100%);z-index:1;pointer-events:none}
 .stars{position:absolute;top:0;left:0;right:0;height:50%;z-index:2;pointer-events:none;overflow:hidden}
 .star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;animation:twinkle var(--dur,3s) ease-in-out infinite var(--delay,0s);box-shadow:0 0 4px rgba(255,255,255,.6)}
 @keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}
@@ -376,7 +379,18 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- ===== 4. THE LAND — Interactive Region Explorer ===== -->
+<!-- ===== STORY 5: EVERY STONE REMEMBERS ===== -->
+<section class="story-section story-edinburgh" id="story-edinburgh">
+  <div class="story-image">
+    <img src="https://img.castlecore.uk/scotland/jing--k4G3c38Ers-unsplash.jpg" alt="Edinburgh Castle" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover">
+  </div>
+  <div class="story-text-bottom" style="position:absolute;z-index:99;right:8%;top:50%;text-align:right;max-width:500px">
+    <h2 class="story-headline">Every Stone Remembers</h2>
+    <p class="story-desc">Twenty-six sieges. A thousand years of crownings, betrayals, and last stands. Edinburgh Castle doesn't just sit on a rock — it is the rock. And below it, a city built on layers of the dead, the defiant, and the dangerously ambitious. In Scotland, history isn't something you read. It's something you walk through.</p>
+  </div>
+</section>
+
+<!-- ===== THE LAND — Interactive Region Explorer ===== -->
 <section class="land" id="land">
   <div class="land-bg" data-parallax="0.15"></div>
   <div class="container">
