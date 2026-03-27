@@ -90,7 +90,16 @@ img{max-width:100%;display:block}
 .story-headline{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,.8)}
 .story-desc{font-family:var(--serif);font-size:clamp(1rem,1.5vw,1.2rem);font-style:italic;color:#fff;line-height:1.7;text-shadow:0 2px 16px rgba(0,0,0,.8)}
 @media(max-width:768px){
-  .story-text{position:relative;right:auto;top:auto;transform:none;max-width:100%;text-align:center;padding:40px 24px}
+  .story-text,.story-text-left,.story-text-bottom{position:absolute !important;max-width:85% !important;padding:0 16px}
+  .story-folklore .story-text{top:45% !important;right:auto !important;left:50% !important;transform:translateX(-50%);text-align:center !important}
+  .story-charlie .story-text-left{top:8% !important;left:5% !important;right:auto !important;text-align:left !important;max-width:55% !important}
+  .charlie-portrait{width:200px !important;right:5% !important;top:5% !important}
+  .story-charlie .story-text-bottom{top:auto !important;bottom:8% !important;right:5% !important;left:auto !important;text-align:right !important;max-width:70% !important}
+  .story-folklore{margin-top:-40% !important}
+  .story-charlie{margin-top:-35% !important}
+  .story-headline{font-size:clamp(1.5rem,6vw,2.2rem) !important}
+  .story-desc{font-size:clamp(.85rem,3vw,1rem) !important}
+  .story-banner{width:100% !important;bottom:-3% !important}
 }
 
 /* ========== SECTION TITLE ========== */
