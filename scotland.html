@@ -287,6 +287,11 @@ img{max-width:100%;display:block}
 </section>
 
 <!-- ===== STORY 2: CULTURE & FOLKLORE ===== -->
+<style>
+.story-charlie{position:relative;z-index:9;margin-top:-2px}
+.story-charlie .story-image{position:relative}
+.story-charlie .story-image::before{content:'';position:absolute;top:0;left:0;right:0;height:25%;background:linear-gradient(180deg,#000 0%,transparent 100%);z-index:1;pointer-events:none}
+</style>
 <section class="story-section story-folklore" id="story-folklore">
   <div class="story-image">
     <img src="https://img.castlecore.uk/scotland/monster%20whiskey%20final%20.png" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy">
@@ -297,7 +302,18 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- ===== 3. THE LAND — Interactive Region Explorer ===== -->
+<!-- ===== STORY 3: THE FIGHT FOR FREEDOM ===== -->
+<section class="story-section story-charlie" id="story-charlie">
+  <div class="story-image">
+    <img src="https://img.castlecore.uk/scotland/massimiliano-morosinotto--6hvB84fyYA-unsplash.jpg" alt="Scottish Highland landscape" loading="lazy">
+  </div>
+  <div class="story-text reveal">
+    <h2 class="story-headline">They Never Knelt</h2>
+    <p class="story-desc">For five hundred years, every generation of Scots bled for the same thing — the right to be their own. Wallace fought barefoot. Bruce fought excommunicated. Charlie fought doomed. They lost battles, lost crowns, lost everything — and still the next generation picked up the sword. That stubbornness isn't history. It's the national DNA.</p>
+  </div>
+</section>
+
+<!-- ===== 4. THE LAND — Interactive Region Explorer ===== -->
 <section class="land" id="land">
   <div class="land-bg" data-parallax="0.15"></div>
   <div class="container">
