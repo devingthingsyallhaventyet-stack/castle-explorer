@@ -84,7 +84,8 @@ img{max-width:100%;display:block}
 .story-image{width:100%;display:flex;justify-content:center;align-items:center;padding:0}
 .story-image img{width:100%;height:auto;display:block}
 .story-folklore{position:relative;z-index:10;margin-top:-55%}
-.story-folklore .story-image{width:100%;overflow:hidden;background:transparent}
+.story-folklore .story-image{width:100%;overflow:hidden;background:transparent;position:relative}
+.story-folklore .story-image::after{content:'';position:absolute;bottom:0;left:0;right:0;height:20%;background:linear-gradient(0deg,#000 0%,transparent 100%);z-index:1;pointer-events:none}
 .story-folklore .story-image img{width:100%;min-width:100vw;max-width:none;object-fit:cover}
 .story-text{position:absolute;z-index:2;max-width:450px;text-align:right;right:8%;top:37%}
 .story-headline{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:16px}
@@ -290,7 +291,7 @@ img{max-width:100%;display:block}
 <style>
 .story-charlie{position:relative;z-index:9;margin-top:-50%}
 .story-charlie .story-image{position:relative}
-.story-charlie .story-image::before{content:'';position:absolute;top:0;left:0;right:0;height:25%;background:linear-gradient(180deg,#000 0%,transparent 100%);z-index:1;pointer-events:none}
+.story-charlie .story-image::before{content:'';position:absolute;top:0;left:0;right:0;height:35%;background:linear-gradient(180deg,#000 0%,#000 30%,transparent 100%);z-index:1;pointer-events:none}
 </style>
 <section class="story-section story-folklore" id="story-folklore">
   <div class="story-image">
