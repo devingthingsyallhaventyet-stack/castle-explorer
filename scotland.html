@@ -12,11 +12,20 @@
 <meta property="og:description" content="Explore Scotland's castles, history, wildlife, and heritage in one immersive digital museum exhibit.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://castlecore.uk/scotland">
-<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland-mobile.webp" media="(max-width: 800px)">
-<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland.webp" media="(min-width: 801px)">
+<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland-mobile.webp" media="(max-width: 768px)">
+<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland-desktop.webp" media="(min-width: 769px)">
+<!-- Self-hosted fonts (instant, no cross-origin chain — critical for mobile) -->
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(fonts/cormorant-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-latin.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;font-display:swap;src:url(fonts/playfair-variable-latin.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url(fonts/playfair-italic-latin.woff2) format('woff2')}
+</style>
+<!-- Google Fonts enhancement for desktop (non-blocking, overrides self-hosted with full charset) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" media="(min-width:769px)">
 
 <script type="application/ld+json">
 {
@@ -309,7 +318,7 @@ img{max-width:100%;display:block}
 
 <!-- ===== 1. HERO ===== -->
 <section class="hero" id="hero">
-  <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" srcset="img/scotland/hero-scotland-mobile.webp 600w, img/scotland/hero-scotland-desktop.webp 1800w, img/scotland/hero-scotland.webp 2560w" sizes="100vw" alt="Scotland hero landscape" width="2560" height="1707" fetchpriority="high"></div>
+  <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" srcset="img/scotland/hero-scotland-mobile.webp 1200w, img/scotland/hero-scotland-desktop.webp 1800w, img/scotland/hero-scotland.webp 2560w" sizes="100vw" alt="Scotland hero landscape" width="2560" height="1707" fetchpriority="high"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="reveal">SCOTLAND<span>400+ Castles · 2,000 Years of History<br>One Untamed Land</span></h1>
