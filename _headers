@@ -1,6 +1,9 @@
 /img/*
   Cache-Control: public, max-age=31536000, immutable
 
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /data-scotland.js
   Cache-Control: public, max-age=86400
 
