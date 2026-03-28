@@ -64,7 +64,8 @@ img{max-width:100%;display:block}
 .nav-right .btn-explore:hover{background:#fff;color:var(--burgundy)}
 .hamburger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
 @media(max-width:768px){
-  .nav-links{display:none}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:rgba(139,35,53,.97);backdrop-filter:blur(12px);flex-direction:column;padding:16px 24px;gap:16px;border-bottom:1px solid rgba(201,168,76,.2)}
+  .nav-links.show{display:flex}
   .hamburger{display:block}
   .nav{height:60px}
 }
@@ -316,7 +317,7 @@ img{max-width:100%;display:block}
 .charlie-portrait img{width:100%;height:auto;display:block}
 .story-charlie .story-text-left{left:8%;right:auto;text-align:left;top:12%;z-index:10}
 .story-charlie .charlie-portrait{z-index:10}
-.story-charlie-fade{position:absolute;top:0;left:0;right:0;height:25%;background:linear-gradient(180deg,#000 0%,transparent 100%);z-index:3;pointer-events:none}
+/* removed: .story-charlie-fade (unused) */
 .story-edinburgh{position:relative;z-index:8;margin-top:-2px}
 .story-edinburgh .story-image{position:relative}
 .story-edinburgh .story-image::before{content:'';position:absolute;top:0;left:0;right:0;height:20%;background:linear-gradient(180deg,#000 0%,transparent 100%);z-index:1;pointer-events:none}
@@ -767,7 +768,9 @@ img{max-width:100%;display:block}
       const card = document.createElement('div');
       card.className='castle-card';
       const stars = c.rating ? '★'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
       card.innerHTML=`
+        <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
         <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
         <div class="castle-card-body">
           <h3>${c.name}</h3>
@@ -778,7 +781,8 @@ img{max-width:100%;display:block}
           </div>
           <p>${c.description||''}</p>
           ${stars?`<div class="castle-card-rating">${stars}</div>`:''}
-        </div>`;
+        </div>
+        </a>`;
       grid.appendChild(card);
     });
     shown += batch.length;
