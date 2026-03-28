@@ -142,10 +142,10 @@ img{max-width:100%;display:block}
 @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
 /* ========== 2. THE LAND - Region Explorer ========== */
-.land{position:relative;padding:120px 0;background:var(--charcoal);overflow:hidden}
-.land-bg{position:absolute;inset:0;opacity:.08;background:url('https://img.castlecore.uk/scotland/Blaeu_-_Atlas_of_Scotland_1654_-_SCOTIA_REGNUM_-_Kingdom_of_Scotland.jpg') center/cover;pointer-events:none}
+.land{position:relative;padding:60px 0 80px;background:var(--charcoal);overflow:hidden}
+.land-bg{position:absolute;inset:0;opacity:.25;background:url('https://img.castlecore.uk/scotland/Blaeu_-_Atlas_of_Scotland_1654_-_SCOTIA_REGNUM_-_Kingdom_of_Scotland.jpg') center/cover;pointer-events:none;filter:sepia(.4) brightness(.6)}
 .land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-.land-header{text-align:center;margin-bottom:60px}
+.land-header{text-align:center;margin-bottom:40px}
 
 /* Region Cards Grid */
 .region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -241,7 +241,7 @@ img{max-width:100%;display:block}
 }
 
 /* ========== CASTLES ========== */
-.castles{position:relative;padding:120px 0 80px;background:var(--charcoal);overflow:hidden}
+.castles{position:relative;padding:80px 0 40px;background:var(--charcoal);overflow:hidden}
 .castles .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .castles-header{text-align:center;margin-bottom:48px}
 .castle-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:48px}
@@ -458,9 +458,7 @@ img{max-width:100%;display:block}
   <div class="land-bg" data-parallax="0.15"></div>
   <div class="container">
     <div class="land-header reveal">
-      <div class="section-label">The Geography</div>
-      <h2 class="section-title" style="color:#fff">Explore by Region</h2>
-      <p class="section-subtitle" style="margin:0 auto">Eight regions, 448 castles, one untamed land.</p>
+      <h2 class="section-title" style="color:#fff">Explore Scotland's Castles by Region</h2>
     </div>
 
     <div class="region-grid reveal" id="region-grid">
