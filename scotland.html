@@ -144,41 +144,34 @@ img{max-width:100%;display:block}
 /* ========== 2. THE LAND - Region Explorer ========== */
 .land{position:relative;padding:120px 0;background:var(--charcoal);overflow:hidden}
 .land-bg{position:absolute;inset:0;opacity:.08;background:url('https://img.castlecore.uk/scotland/Blaeu_-_Atlas_of_Scotland_1654_-_SCOTIA_REGNUM_-_Kingdom_of_Scotland.jpg') center/cover;pointer-events:none}
-.land .container{max-width:1300px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-.land-header{text-align:center;margin-bottom:80px}
+.land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.land-header{text-align:center;margin-bottom:60px}
 
-/* Explorer layout */
-.land-explorer{display:grid;grid-template-columns:45% 55%;gap:48px;align-items:start}
-.land-explorer-info{padding:20px 0}
-.land-explorer-region-name{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);color:var(--pale-gold);line-height:1.1;margin-bottom:12px;transition:opacity .4s}
-.land-explorer-badge{display:inline-block;font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);border-radius:var(--pill);padding:5px 16px;margin-bottom:20px}
-.land-explorer-desc{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:24px;min-height:120px;transition:opacity .4s}
-.land-explorer-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--candlelight);transition:gap .3s}
-.land-explorer-link:hover{gap:14px;text-decoration:underline}
+/* Region Cards Grid */
+.region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.region-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;transition:transform .4s,box-shadow .4s}
+.region-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.region-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.region-card:hover img{transform:scale(1.08)}
+.region-card-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 40%,transparent 70%);transition:background .4s}
+.region-card:hover .region-card-overlay{background:linear-gradient(0deg,rgba(139,35,53,.9) 0%,rgba(139,35,53,.3) 40%,transparent 70%)}
+.region-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:2}
+.region-card-castles{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight);margin-bottom:8px}
+.region-card-name{font-family:var(--display);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:6px}
+.region-card-desc{font-family:var(--serif);font-size:.85rem;font-style:italic;color:rgba(255,255,255,.7);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;opacity:0;max-height:0;transition:opacity .4s,max-height .4s}
+.region-card:hover .region-card-desc{opacity:1;max-height:60px}
+.region-card-arrow{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;color:var(--candlelight);font-size:1rem;opacity:0;transform:translateX(-8px);transition:opacity .3s,transform .3s}
+.region-card:hover .region-card-arrow{opacity:1;transform:translateX(0)}
 
-/* Region tabs */
-.land-explorer-tabs{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
-.land-explorer-tab{background:none;border:none;font-family:var(--serif);font-size:.95rem;font-style:italic;color:rgba(255,255,255,.3);cursor:pointer;padding:6px 0;transition:color .3s;white-space:nowrap}
-.land-explorer-tab:hover{color:rgba(255,255,255,.6)}
-.land-explorer-tab.active{color:var(--candlelight);text-shadow:0 0 12px rgba(201,168,76,.3)}
-
-/* Map panel */
-.land-explorer-map{position:relative;border:6px solid rgba(201,168,76,.18);border-radius:6px;box-shadow:0 12px 60px rgba(0,0,0,.6),0 0 0 1px rgba(201,168,76,.1),inset 0 0 40px rgba(0,0,0,.3);overflow:hidden;background:var(--navy)}
-.land-explorer-map img{width:100%;height:auto;display:block;filter:sepia(.15) contrast(1.05) brightness(.95)}
-.land-explorer-map .map-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 50%,rgba(15,22,40,.55) 100%);pointer-events:none}
-
-/* Map region labels */
-.land-map-label{position:absolute;transform:translate(-50%,-50%);font-family:var(--serif);font-style:italic;font-size:clamp(.7rem,1.2vw,.95rem);color:rgba(255,255,255,.3);cursor:pointer;transition:color .4s,text-shadow .4s,transform .4s;white-space:nowrap;z-index:3;user-select:none}
-.land-map-label:hover{color:rgba(255,255,255,.6);transform:translate(-50%,-50%) scale(1.05)}
-.land-map-label.active{color:var(--candlelight);text-shadow:0 0 16px rgba(201,168,76,.5),0 0 40px rgba(201,168,76,.2);transform:translate(-50%,-50%) scale(1.1)}
-
-@media(max-width:900px){
-  .land-explorer{grid-template-columns:1fr;gap:32px}
-  .land-explorer-map{max-width:500px;margin:0 auto}
+@media(max-width:1024px){
+  .region-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:560px){
-  .land-explorer-map{display:none}
-  .land-explorer-tabs{justify-content:center}
+  .region-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .region-card{aspect-ratio:2/3}
+  .region-card-content{padding:16px}
+  .region-card-name{font-size:1rem}
+  .region-card-desc{display:none}
 }
 
 /* ========== FLOATING DECORATIVE ELEMENTS ========== */
@@ -460,32 +453,97 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- ===== THE LAND - Interactive Region Explorer ===== -->
+<!-- ===== THE LAND - Region Cards ===== -->
 <section class="land" id="land">
   <div class="land-bg" data-parallax="0.15"></div>
   <div class="container">
     <div class="land-header reveal">
       <div class="section-label">The Geography</div>
-      <h2 class="section-title" style="color:#fff">The Land</h2>
-      <p class="section-subtitle" style="margin:0 auto">Seven regions, 430+ castles, one untamed land. Select a region to explore.</p>
+      <h2 class="section-title" style="color:#fff">Explore by Region</h2>
+      <p class="section-subtitle" style="margin:0 auto">Eight regions, 448 castles, one untamed land.</p>
     </div>
 
-    <div class="land-explorer reveal" id="land-explorer">
-      <!-- Left: Info panel -->
-      <div class="land-explorer-info">
-        <h3 class="land-explorer-region-name" id="le-name">The Highlands</h3>
-        <span class="land-explorer-badge" id="le-badge">80+ castles</span>
-        <p class="land-explorer-desc" id="le-desc">Storm-battered keeps and clan strongholds scattered across Britain's last great wilderness. From Eilean Donan rising from its island loch to the lonely ruins of Ardvreck, every glen holds a fortress and every fortress holds a story of clan warfare, Jacobite rebellion, and Highland resilience.</p>
-        <a class="land-explorer-link" id="le-link" href="/search?region=Highland">Explore Region →</a>
-
-        <div class="land-explorer-tabs" id="le-tabs"></div>
-      </div>
-
-      <!-- Right: Map -->
-      <div class="land-explorer-map" id="le-map">
-        <img src="https://img.castlecore.uk/scotland/Blaeu_-_Atlas_of_Scotland_1654_-_SCOTIA_REGNUM_-_Kingdom_of_Scotland.jpg" alt="Blaeu Atlas of Scotland, 1654" loading="lazy">
-        <div class="map-vignette"></div>
-      </div>
+    <div class="region-grid reveal" id="region-grid">
+      <a class="region-card" href="/scotland/highlands">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="The Highlands" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">80+ castles</div>
+          <h3 class="region-card-name">The Highlands</h3>
+          <p class="region-card-desc">Storm-battered keeps and clan strongholds across Britain's last great wilderness.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/scotland/edinburgh-lothians">
+        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" alt="Edinburgh & the Lothians" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">65+ castles</div>
+          <h3 class="region-card-name">Edinburgh & the Lothians</h3>
+          <p class="region-card-desc">A volcanic fortress, a thousand years of royal drama, and castles woven into every cobblestone.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/scotland/aberdeen-northeast">
+        <img src="https://images.unsplash.com/photo-1565098772267-60af42b81ef2?w=600&q=80" alt="Aberdeen & the Northeast" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">90+ castles</div>
+          <h3 class="region-card-name">Aberdeen & the Northeast</h3>
+          <p class="region-card-desc">More castles per acre than anywhere in Britain. Granite towers rising from farmland and wild coast.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/scotland/argyll-islands">
+        <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80" alt="Argyll & the Islands" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">68+ castles</div>
+          <h3 class="region-card-name">Argyll & the Islands</h3>
+          <p class="region-card-desc">Sea-girt fortresses where Atlantic storms crash against castle walls.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/scotland/fife-perthshire">
+        <img src="https://images.unsplash.com/photo-1548266652-99cf27701be1?w=600&q=80" alt="Fife & Perthshire" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">93+ castles</div>
+          <h3 class="region-card-name">Fife & Perthshire</h3>
+          <p class="region-card-desc">The heartland of Scottish kings, from Scone's coronation stone to St Andrews.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/scotland/borders">
+        <img src="https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80" alt="The Borders" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">31+ castles</div>
+          <h3 class="region-card-name">The Borders</h3>
+          <p class="region-card-desc">Tower houses and peel towers forged by centuries of English raids.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/scotland/dumfries-galloway">
+        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=80" alt="Dumfries & Galloway" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">60+ castles</div>
+          <h3 class="region-card-name">Dumfries & Galloway</h3>
+          <p class="region-card-desc">Robert the Bruce's homeland and the cradle of Scottish independence.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/scotland/glasgow-stirling">
+        <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80" alt="Glasgow & Stirling" loading="lazy">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">50+ castles</div>
+          <h3 class="region-card-name">Glasgow & Stirling</h3>
+          <p class="region-card-desc">Where Bannockburn was fought and Scotland's industrial heart meets medieval might.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
     </div>
   </div>
 </section>
@@ -769,69 +827,7 @@ img{max-width:100%;display:block}
   loadBtn.addEventListener('click',()=>renderCastles(false));
   renderCastles(true);
 
-  // ---- Land Explorer: Interactive Region Switcher ----
-  (function(){
-    const regions = [
-      {id:'highlands',name:'The Highlands',castles:'80+',description:'Storm-battered keeps and clan strongholds scattered across Britain\u2019s last great wilderness. From Eilean Donan rising from its island loch to the lonely ruins of Ardvreck, every glen holds a fortress and every fortress holds a story of clan warfare, Jacobite rebellion, and Highland resilience.',link:'/search?region=Highland',mapPos:{top:'28%',left:'42%'}},
-      {id:'edinburgh',name:'Edinburgh & Lothian',castles:'65+',description:'The volcanic fortress that dominates Scotland\u2019s capital has watched over a thousand years of royal drama, religious upheaval, and political intrigue. From the medieval Old Town to the elegant Georgian New Town, Edinburgh\u2019s castles and palaces are woven into every cobblestone.',link:'/search?region=Edinburgh',mapPos:{top:'72%',left:'62%'}},
-      {id:'aberdeenshire',name:'Aberdeenshire',castles:'75+',description:'More castles per acre than anywhere else in the United Kingdom. The northeast\u2019s granite towers rise from rolling farmland and wild coastline \u2014 from the fairy-tale turrets of Craigievar to the clifftop drama of Dunnottar, this is Scotland\u2019s castle country.',link:'/search?region=Aberdeenshire',mapPos:{top:'35%',left:'65%'}},
-      {id:'borders',name:'The Borders',castles:'50+',description:'Centuries of English raids forged a landscape of tower houses and peel towers built for survival. The rolling green hills hide some of Scotland\u2019s most atmospheric ruins \u2014 places where reivers rode, monks prayed, and the border between two kingdoms was written in blood and stone.',link:'/search?region=Scottish+Borders',mapPos:{top:'82%',left:'55%'}},
-      {id:'argyll',name:'Argyll & the Islands',castles:'45+',description:'Sea-girt fortresses of the Lords of the Isles, where Atlantic storms crash against castle walls and the history of Scotland\u2019s western seaboard unfolds across dozens of inhabited and abandoned islands. Duart, Dunvegan, Kilchurn \u2014 names that echo with salt spray and saga.',link:'/search?region=Argyll+and+Bute',mapPos:{top:'52%',left:'22%'}},
-      {id:'fife',name:'Fife & Perthshire',castles:'60+',description:'The heartland of Scottish kings, from the ancient coronation stone at Scone to the ecclesiastical power of St Andrews. This is where Scotland\u2019s monarchy was born, where its faith was forged, and where some of its most perfectly preserved castles still stand.',link:'/search?region=Fife',mapPos:{top:'58%',left:'55%'}},
-      {id:'dumfries',name:'Dumfries & Galloway',castles:'55+',description:'Robert the Bruce\u2019s homeland and the cradle of Scottish independence. The southwest\u2019s gentle hills and rugged coast conceal a fierce history \u2014 from Caerlaverock\u2019s unique triangular fortress to Threave\u2019s island stronghold, these are the castles that built a nation.',link:'/search?region=Dumfries+and+Galloway',mapPos:{top:'84%',left:'35%'}}
-    ];
-
-    const nameEl=document.getElementById('le-name');
-    const badgeEl=document.getElementById('le-badge');
-    const descEl=document.getElementById('le-desc');
-    const linkEl=document.getElementById('le-link');
-    const tabsEl=document.getElementById('le-tabs');
-    const mapEl=document.getElementById('le-map');
-    let activeIdx=0, autoTimer=null, userInteracted=false;
-
-    // Build tabs
-    regions.forEach((r,i)=>{
-      const btn=document.createElement('button');
-      btn.className='land-explorer-tab'+(i===0?' active':'');
-      btn.textContent=r.name;
-      btn.dataset.idx=i;
-      btn.addEventListener('click',()=>{userInteracted=true;clearInterval(autoTimer);setActive(i)});
-      tabsEl.appendChild(btn);
-    });
-
-    // Build map labels
-    regions.forEach((r,i)=>{
-      const lbl=document.createElement('span');
-      lbl.className='land-map-label'+(i===0?' active':'');
-      lbl.textContent=r.name;
-      lbl.style.top=r.mapPos.top;
-      lbl.style.left=r.mapPos.left;
-      lbl.dataset.idx=i;
-      lbl.addEventListener('click',()=>{userInteracted=true;clearInterval(autoTimer);setActive(i)});
-      mapEl.appendChild(lbl);
-    });
-
-    function setActive(idx){
-      activeIdx=idx;
-      const r=regions[idx];
-      // Fade out then in
-      nameEl.style.opacity=0;descEl.style.opacity=0;
-      setTimeout(()=>{
-        nameEl.textContent=r.name;
-        badgeEl.textContent=r.castles+' castles';
-        descEl.textContent=r.description;
-        linkEl.href=r.link;
-        nameEl.style.opacity=1;descEl.style.opacity=1;
-      },200);
-      // Tabs
-      tabsEl.querySelectorAll('.land-explorer-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
-      // Map labels
-      mapEl.querySelectorAll('.land-map-label').forEach((l,i)=>l.classList.toggle('active',i===idx));
-    }
-
-    // Auto-rotate
-    autoTimer=setInterval(()=>{if(!userInteracted)setActive((activeIdx+1)%regions.length)},5000);
-  })();
+  // ---- Region cards are static HTML now ----
 })();
 </script>
 </body>
