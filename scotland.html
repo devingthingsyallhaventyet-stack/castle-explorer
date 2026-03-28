@@ -142,8 +142,9 @@ img{max-width:100%;display:block}
 @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
 /* ========== 2. THE LAND - Region Explorer ========== */
-.land{position:relative;padding:60px 0 80px;background:var(--charcoal);overflow:hidden}
-.land-bg{position:absolute;inset:0;opacity:.2;background:url('https://img.castlecore.uk/scotland/Blaeu_-_Atlas_of_Scotland_1654_-_SCOTIA_REGNUM_-_Kingdom_of_Scotland.jpg') center/cover;pointer-events:none}
+.land{position:relative;padding:60px 0 80px;background:var(--navy);overflow:hidden}
+.land-bg{position:absolute;inset:0;opacity:1;background:url('https://img.castlecore.uk/scotland/Blaeu_-_Atlas_of_Scotland_1654_-_SCOTIA_REGNUM_-_Kingdom_of_Scotland.jpg') center/cover;pointer-events:none;z-index:1}
+.land-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.7);pointer-events:none}
 .land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .land-header{text-align:center;margin-bottom:40px}
 
