@@ -12,7 +12,8 @@
 <meta property="og:description" content="Explore Scotland's castles, history, wildlife, and heritage in one immersive digital museum exhibit.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://castlecore.uk/scotland">
-<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland.webp">
+<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland-mobile.webp" media="(max-width: 800px)">
+<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland.webp" media="(min-width: 801px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap">
@@ -48,6 +49,7 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:#e8e0d0;line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--navy);overflow-x:hidden}
 h1,h2,h3,h4,h5{font-family:var(--display);font-weight:400}
+
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 ::selection{background:var(--candlelight);color:var(--navy)}
@@ -308,7 +310,7 @@ img{max-width:100%;display:block}
 
 <!-- ===== 1. HERO ===== -->
 <section class="hero" id="hero">
-  <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" alt="Scotland hero landscape" width="2560" height="1707" fetchpriority="high"></div>
+  <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" srcset="img/scotland/hero-scotland-mobile.webp 800w, img/scotland/hero-scotland.webp 2560w" sizes="100vw" alt="Scotland hero landscape" width="2560" height="1707" fetchpriority="high"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="reveal">SCOTLAND<span>400+ Castles · 2,000 Years of History<br>One Untamed Land</span></h1>
@@ -335,7 +337,7 @@ img{max-width:100%;display:block}
 </style>
 <section class="story-section story-folklore" id="story-folklore">
   <div class="story-image">
-    <img src="img/scotland/monster-whiskey.webp" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy" width="1920" height="3713">
+    <img src="img/scotland/monster-whiskey.webp" srcset="img/scotland/monster-whiskey-mobile.webp 800w, img/scotland/monster-whiskey.webp 1920w" sizes="100vw" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy" width="1920" height="3713">
   </div>
   <div class="story-text reveal">
     <h2 class="story-headline">A Land That Breathes Myth</h2>
@@ -392,7 +394,7 @@ img{max-width:100%;display:block}
     <div class="star" style="top:29%;left:92%;--dur:2.6s;--delay:1.8s"></div>
   </div>
   <div class="story-image" style="position:relative;z-index:1">
-    <img src="img/scotland/highland-landscape.webp" alt="Scottish Highland landscape" loading="lazy" width="2560" height="3840">
+    <img src="img/scotland/highland-landscape.webp" srcset="img/scotland/highland-landscape-mobile.webp 800w, img/scotland/highland-landscape.webp 2560w" sizes="100vw" alt="Scottish Highland landscape" loading="lazy" width="2560" height="3840">
   </div>
   <div style="position:absolute;top:0;left:0;right:0;height:12%;background:linear-gradient(to bottom,#000,transparent);z-index:1;pointer-events:none"></div>
   <div class="charlie-portrait" style="position:absolute;z-index:99;right:15%;top:14%;width:380px">
@@ -409,14 +411,14 @@ img{max-width:100%;display:block}
     <a href="/scotland/highlands" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of the Highlands →</a>
   </div>
   <div class="story-banner" style="position:absolute;z-index:99;bottom:-8%;left:0;right:0;width:100%;pointer-events:none">
-    <img src="img/scotland/banner-musket.webp" alt="Ornate Scottish musket" style="width:100%;height:auto" width="1920" height="346">
+    <img src="img/scotland/banner-musket.webp" srcset="img/scotland/banner-musket-mobile.webp 800w, img/scotland/banner-musket.webp 1920w" sizes="100vw" alt="Ornate Scottish musket" style="width:100%;height:auto" width="1920" height="346">
   </div>
 </section>
 
 <!-- ===== STORY 5: EVERY STONE REMEMBERS ===== -->
 <section class="story-section story-edinburgh" id="story-edinburgh">
   <div class="story-image">
-    <img src="img/scotland/edinburgh-castle.webp" alt="Edinburgh Castle" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover" width="2560" height="2114">
+    <img src="img/scotland/edinburgh-castle.webp" srcset="img/scotland/edinburgh-castle-mobile.webp 800w, img/scotland/edinburgh-castle.webp 2560w" sizes="100vw" alt="Edinburgh Castle" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover" width="2560" height="2114">
   </div>
   <div class="edinburgh-stamp" style="position:absolute;z-index:99;right:5%;top:12%;width:250px;pointer-events:none">
     <img src="img/scotland/edinburgh-stamp.webp" alt="Edinburgh Castle stamp" style="width:100%;height:auto" width="400" height="313">
@@ -431,14 +433,14 @@ img{max-width:100%;display:block}
     <a href="/scotland/mary-queen-of-scots" style="position:absolute;bottom:18%;right:105%;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s;text-shadow:0 2px 8px rgba(0,0,0,.8);white-space:nowrap">The Castles of Mary Queen of Scots →</a>
   </div>
   <div style="position:absolute;z-index:100;bottom:-5%;left:0;right:0;width:100%;pointer-events:none">
-    <img src="img/scotland/purple-thistle.webp" alt="Purple thistle border" style="width:100%;height:auto" width="1920" height="197">
+    <img src="img/scotland/purple-thistle.webp" srcset="img/scotland/purple-thistle-mobile.webp 800w, img/scotland/purple-thistle.webp 1920w" sizes="100vw" alt="Purple thistle border" style="width:100%;height:auto" width="1920" height="197">
   </div>
 </section>
 
 <!-- ===== STORY 6: 400+ CASTLES ===== -->
 <section class="story-section story-dunnottar" id="story-dunnottar" style="margin-bottom:-120px;overflow:hidden">
   <div class="story-image">
-    <img src="img/scotland/dunnottar.webp" alt="Dunnottar Castle on sea cliffs" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover" width="2560" height="1914">
+    <img src="img/scotland/dunnottar.webp" srcset="img/scotland/dunnottar-mobile.webp 800w, img/scotland/dunnottar.webp 2560w" sizes="100vw" alt="Dunnottar Castle on sea cliffs" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover" width="2560" height="1914">
   </div>
   <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:10%;text-align:left;max-width:500px">
     <h2 class="story-headline">400+ Castles. Every One a Story.</h2>
