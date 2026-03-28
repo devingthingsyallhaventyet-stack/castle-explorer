@@ -138,7 +138,7 @@ img{max-width:100%;display:block}
 
 /* ========== 1. HERO ========== */
 .hero{position:relative;display:flex;align-items:flex-start;justify-content:center;overflow:hidden;width:100%;aspect-ratio:2560/2300;min-height:100vh;padding-top:40vh}
-.hero-bg{position:absolute;inset:0;will-change:transform}
+.hero-bg{position:absolute;inset:0;will-change:transform;background:url('data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASogABUAPzmAu1OvJ6YisBgMAeAnCUAXqwHkqgXpLMKAo8lqoAD3JrOsmvEy6SXCz4FQYpgo+eMf1/plM1pqFfu4U4qVhYTP690F96R2DDcc8n4A') center/cover no-repeat}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;aspect-ratio:2560/1707}
 .hero-overlay{position:absolute;inset:0;z-index:2;background:
   linear-gradient(180deg,rgba(15,22,40,.3) 0%,rgba(15,22,40,.1) 30%,rgba(15,22,40,.2) 60%,rgba(15,22,40,.3) 100%),
@@ -735,25 +735,22 @@ img{max-width:100%;display:block}
   },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.floater').forEach(el=>obs.observe(el));
 
-  // ---- Parallax ----
+  // ---- Parallax + Nav (batched to avoid forced reflow) ----
   const pxEls = document.querySelectorAll('[data-parallax]');
+  const nav = document.getElementById('nav');
   let ticking = false;
   window.addEventListener('scroll',()=>{
     if(!ticking){requestAnimationFrame(()=>{
       const sy = window.scrollY;
+      // Batch all reads first, then writes
+      nav.classList.toggle('scrolled', sy > 50);
       pxEls.forEach(el=>{
         const r = parseFloat(el.dataset.parallax)||0.3;
-        el.style.transform = el.style.transform.replace(/translateY\([^)]*\)/,'') + ` translateY(${sy * r * 0.5}px)`;
+        el.style.transform = `translateY(${sy * r * 0.5}px)`;
       });
       ticking=false;
     });ticking=true}
-  });
-
-  // ---- Nav scroll effect ----
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll',()=>{
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  },{passive:true});
 
   // ---- Castle Grid ----
   const scotCastles = typeof CASTLES!=='undefined' ? CASTLES : [];
