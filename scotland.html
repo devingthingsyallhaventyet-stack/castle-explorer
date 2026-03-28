@@ -12,6 +12,7 @@
 <meta property="og:description" content="Explore Scotland's castles, history, wildlife, and heritage in one immersive digital museum exhibit.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://castlecore.uk/scotland">
+<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -147,7 +148,7 @@ img{max-width:100%;display:block}
 
 /* ========== 2. THE LAND - Region Explorer ========== */
 .land{position:relative;padding:60px 0 80px;background:var(--navy);overflow:hidden}
-.land-bg{position:absolute;inset:0;opacity:1;background:url('https://img.castlecore.uk/scotland/Blaeu_-_Atlas_of_Scotland_1654_-_SCOTIA_REGNUM_-_Kingdom_of_Scotland.jpg') center/cover;pointer-events:none;z-index:1}
+.land-bg{position:absolute;inset:0;opacity:1;background:url('img/scotland/antique-map.webp') center/cover;pointer-events:none;z-index:1}
 .land-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
 .land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .land-header{text-align:center;margin-bottom:40px}
@@ -220,7 +221,7 @@ img{max-width:100%;display:block}
 
 /* ========== HISTORY ========== */
 .history{position:relative;padding:120px 0;background:var(--navy);overflow:visible}
-.history-bg{position:absolute;inset:0;opacity:1;background:url('https://img.castlecore.uk/scotland/tartan.jpg') center/cover;pointer-events:none;z-index:1}
+.history-bg{position:absolute;inset:0;opacity:1;background:url('img/scotland/tartan.webp') center/cover;pointer-events:none;z-index:1}
 .history-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
 .history .container{max-width:1300px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .history-header{text-align:center;margin-bottom:80px}
@@ -300,7 +301,7 @@ img{max-width:100%;display:block}
 
 <!-- ===== 1. HERO ===== -->
 <section class="hero" id="hero">
-  <div class="hero-bg" data-parallax="0.3"><img src="https://img.castlecore.uk/scotland/bjorn-snelders-Cd3Ek7rNXSk-unsplash%20(3).jpg" alt="Scotland hero landscape"></div>
+  <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" alt="Scotland hero landscape"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="reveal">SCOTLAND<span>400+ Castles · 2,000 Years of History<br>One Untamed Land</span></h1>
@@ -327,7 +328,7 @@ img{max-width:100%;display:block}
 </style>
 <section class="story-section story-folklore" id="story-folklore">
   <div class="story-image">
-    <img src="https://img.castlecore.uk/scotland/monster%20whiskey%20final%20.png" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy">
+    <img src="img/scotland/monster-whiskey.webp" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy">
   </div>
   <div class="story-text reveal">
     <h2 class="story-headline">A Land That Breathes Myth</h2>
@@ -384,11 +385,11 @@ img{max-width:100%;display:block}
     <div class="star" style="top:29%;left:92%;--dur:2.6s;--delay:1.8s"></div>
   </div>
   <div class="story-image" style="position:relative;z-index:1">
-    <img src="https://img.castlecore.uk/scotland/massimiliano-morosinotto--6hvB84fyYA-unsplash.jpg" alt="Scottish Highland landscape" loading="lazy">
+    <img src="img/scotland/highland-landscape.webp" alt="Scottish Highland landscape" loading="lazy">
   </div>
   <div style="position:absolute;top:0;left:0;right:0;height:12%;background:linear-gradient(to bottom,#000,transparent);z-index:1;pointer-events:none"></div>
   <div class="charlie-portrait" style="position:absolute;z-index:99;right:15%;top:14%;width:380px">
-    <img src="https://img.castlecore.uk/scotland/ok%20to%20edit%20(2560%20x%208000%20px).png" alt="Portrait of Bonnie Prince Charlie in gold frame">
+    <img src="img/scotland/charlie-portrait.webp" alt="Portrait of Bonnie Prince Charlie in gold frame">
   </div>
   <div class="story-text story-text-left" style="position:absolute;z-index:99;left:8%;top:18%">
     <h2 class="story-headline">They Never Knelt</h2>
@@ -401,17 +402,17 @@ img{max-width:100%;display:block}
     <a href="/scotland/highlands" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of the Highlands →</a>
   </div>
   <div class="story-banner" style="position:absolute;z-index:99;bottom:-8%;left:0;right:0;width:100%;pointer-events:none">
-    <img src="https://img.castlecore.uk/scotland/banner%20.png" alt="Ornate Scottish musket" style="width:100%;height:auto">
+    <img src="img/scotland/banner-musket.webp" alt="Ornate Scottish musket" style="width:100%;height:auto">
   </div>
 </section>
 
 <!-- ===== STORY 5: EVERY STONE REMEMBERS ===== -->
 <section class="story-section story-edinburgh" id="story-edinburgh">
   <div class="story-image">
-    <img src="https://img.castlecore.uk/scotland/jing--k4G3c38Ers-unsplash.jpg" alt="Edinburgh Castle" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover">
+    <img src="img/scotland/edinburgh-castle.webp" alt="Edinburgh Castle" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover">
   </div>
   <div class="edinburgh-stamp" style="position:absolute;z-index:99;right:5%;top:12%;width:250px;pointer-events:none">
-    <img src="https://img.castlecore.uk/scotland/edin%20castle%20stamp.png" alt="Edinburgh Castle stamp" style="width:100%;height:auto">
+    <img src="img/scotland/edinburgh-stamp.webp" alt="Edinburgh Castle stamp" style="width:100%;height:auto">
   </div>
   <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:13%;text-align:left;max-width:500px">
     <h2 class="story-headline">Every Stone Remembers</h2>
@@ -419,18 +420,18 @@ img{max-width:100%;display:block}
     <a href="site/edinburgh-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Edinburgh Castle →</a>
   </div>
   <div class="mary-portrait" style="position:absolute;z-index:98;right:3%;bottom:0;width:525px">
-    <img src="https://img.castlecore.uk/scotland/mary%20of%20scots.png" alt="Mary Queen of Scots" style="width:100%;height:auto">
+    <img src="img/scotland/mary-queen-scots.webp" alt="Mary Queen of Scots" style="width:100%;height:auto">
     <a href="/scotland/mary-queen-of-scots" style="position:absolute;bottom:18%;right:105%;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s;text-shadow:0 2px 8px rgba(0,0,0,.8);white-space:nowrap">The Castles of Mary Queen of Scots →</a>
   </div>
   <div style="position:absolute;z-index:100;bottom:-5%;left:0;right:0;width:100%;pointer-events:none">
-    <img src="https://img.castlecore.uk/scotland/purple%20thistle.png" alt="Purple thistle border" style="width:100%;height:auto">
+    <img src="img/scotland/purple-thistle.webp" alt="Purple thistle border" style="width:100%;height:auto">
   </div>
 </section>
 
 <!-- ===== STORY 6: 400+ CASTLES ===== -->
 <section class="story-section story-dunnottar" id="story-dunnottar" style="margin-bottom:-120px;overflow:hidden">
   <div class="story-image">
-    <img src="https://img.castlecore.uk/scotland/john-roberts-W6wJvZz3f1U-unsplash%20(1).jpg" alt="Dunnottar Castle on sea cliffs" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover">
+    <img src="img/scotland/dunnottar.webp" alt="Dunnottar Castle on sea cliffs" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover">
   </div>
   <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:10%;text-align:left;max-width:500px">
     <h2 class="story-headline">400+ Castles. Every One a Story.</h2>
@@ -475,7 +476,7 @@ img{max-width:100%;display:block}
 
     <div class="region-grid reveal" id="region-grid">
       <a class="region-card" href="/scotland/highlands">
-        <img src="https://images.unsplash.com/photo-1694085636357-e724c4a51b4c?w=800&q=80" alt="Eilean Donan Castle, Highlands" loading="lazy">
+        <img src="img/scotland/highlands.webp" alt="Eilean Donan Castle, Highlands" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">87 castles</div>
@@ -485,7 +486,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/edinburgh-lothians">
-        <img src="https://images.unsplash.com/photo-1566037194426-1944346fc8d9?w=800&q=80" alt="Edinburgh Castle" loading="lazy">
+        <img src="img/scotland/edinburgh-region.webp" alt="Edinburgh Castle" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">27 castles</div>
@@ -495,7 +496,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/aberdeen-northeast">
-        <img src="https://images.unsplash.com/photo-1509010008-a77006ce0b63?w=800&q=80" alt="Dunnottar Castle, Aberdeen" loading="lazy">
+        <img src="img/scotland/aberdeen.webp" alt="Dunnottar Castle, Aberdeen" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">71 castles</div>
@@ -505,7 +506,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/argyll-islands">
-        <img src="https://img.castlecore.uk/scotland/tim-alex-n0D79Voibaw-unsplash.jpg" alt="Argyll & the Islands" loading="lazy">
+        <img src="img/scotland/argyll.webp" alt="Argyll & the Islands" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">61 castles</div>
@@ -515,7 +516,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/fife-perthshire">
-        <img src="https://images.unsplash.com/photo-1578240748485-ad93c9c30aea?w=800&q=80" alt="Blair Castle, Perthshire" loading="lazy">
+        <img src="img/scotland/fife-perthshire.webp" alt="Blair Castle, Perthshire" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">84 castles</div>
@@ -525,7 +526,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/borders">
-        <img src="https://img.castlecore.uk/scotland/2020-10-14.jpg" alt="The Borders" loading="lazy">
+        <img src="img/scotland/borders.webp" alt="The Borders" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">31 castles</div>
@@ -535,7 +536,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/dumfries-galloway">
-        <img src="https://img.castlecore.uk/scotland/2540bd_7301a0baf4a544aaa05a8ed4ae23efd6~mv2_d_3628_3022_s_4_2.jpg" alt="Dumfries & Galloway" loading="lazy">
+        <img src="img/scotland/dumfries.webp" alt="Dumfries & Galloway" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">60 castles</div>
@@ -545,7 +546,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/glasgow-stirling">
-        <img src="https://images.unsplash.com/photo-1561538433-a31b98fabcee?w=800&q=80" alt="Stirling Castle" loading="lazy">
+        <img src="img/scotland/glasgow-stirling.webp" alt="Stirling Castle" loading="lazy">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">26 castles</div>
@@ -587,7 +588,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/wars-of-independence" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/Battle_of_Bannockburn_-_Bruce_addresses_troops.jpg" alt="Wars of Scottish Independence painting" loading="lazy">
+          <img src="img/scotland/bannockburn.webp" alt="Wars of Scottish Independence painting" loading="lazy">
           <span class="hc-date">1296-1357</span>
         </div>
         <div class="hc-body">
@@ -600,7 +601,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/mary-queen-of-scots" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/Mary__Queen_of_Scots_after_Nicholas_Hilliard.jpg" alt="Portrait of Mary Queen of Scots" loading="lazy" style="object-position:top">
+          <img src="img/scotland/mary-hilliard.webp" alt="Portrait of Mary Queen of Scots" loading="lazy" style="object-position:top">
           <span class="hc-date">1542-1587</span>
         </div>
         <div class="hc-body">
@@ -613,7 +614,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/macbeth-early-kings" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/Johann_Heinrich_F_ssli_030.jpg" alt="Macbeth and the Witches by Fuseli" loading="lazy" style="object-position:center 20%">
+          <img src="img/scotland/macbeth-fuseli.webp" alt="Macbeth and the Witches by Fuseli" loading="lazy" style="object-position:center 20%">
           <span class="hc-date">1005-1057</span>
         </div>
         <div class="hc-body">
@@ -626,7 +627,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/jacobite-risings" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/Glenfinnan_Monument_-_geograph.org.uk_-_1803162.jpg" alt="Glenfinnan Monument" loading="lazy">
+          <img src="img/scotland/glenfinnan.webp" alt="Glenfinnan Monument" loading="lazy">
           <span class="hc-date">1689-1746</span>
         </div>
         <div class="hc-body">
@@ -639,7 +640,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/culloden" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/The_Battle_of_Culloden.jpg" alt="The Battle of Culloden by David Morier" loading="lazy">
+          <img src="img/scotland/culloden.webp" alt="The Battle of Culloden by David Morier" loading="lazy">
           <span class="hc-date">1746</span>
         </div>
         <div class="hc-body">
@@ -652,7 +653,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/bonnie-prince-charlie" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/Charles_Edward_Stuart_by_William_Mosman.jpg" alt="Portrait of Bonnie Prince Charlie" loading="lazy" style="object-position:center 20%">
+          <img src="img/scotland/charlie-mosman.webp" alt="Portrait of Bonnie Prince Charlie" loading="lazy" style="object-position:center 20%">
           <span class="hc-date">The '45</span>
         </div>
         <div class="hc-body">
@@ -665,7 +666,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/robert-the-bruce" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/Robert_the_Bruce_at_Bannockburn.jpg" alt="Robert the Bruce statue" loading="lazy" style="object-position:top">
+          <img src="img/scotland/robert-bruce.webp" alt="Robert the Bruce statue" loading="lazy" style="object-position:top">
           <span class="hc-date">1274-1329</span>
         </div>
         <div class="hc-body">
@@ -678,7 +679,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/reformation" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/John_Knox_preaching.JPG" alt="John Knox preaching - stained glass, St Giles Edinburgh" loading="lazy">
+          <img src="img/scotland/knox-preaching.webp" alt="John Knox preaching - stained glass, St Giles Edinburgh" loading="lazy">
           <span class="hc-date">1560</span>
         </div>
         <div class="hc-body">
@@ -691,7 +692,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/covenanters" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/The_Signing_of_the_National_Covenant_in_Greyfriars_Kirkyard%2C_Edinburgh.jpg" alt="The Signing of the National Covenant in Greyfriars Kirkyard by William Allan" loading="lazy">
+          <img src="img/scotland/covenanters-signing.webp" alt="The Signing of the National Covenant in Greyfriars Kirkyard by William Allan" loading="lazy">
           <span class="hc-date">1638-1689</span>
         </div>
         <div class="hc-body">
@@ -714,7 +715,7 @@ img{max-width:100%;display:block}
 </footer>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="data.js"></script>
+<script src="data-scotland.js"></script>
 <script>
 (function(){
   // ---- Intersection Observer for reveal animations ----
@@ -746,12 +747,12 @@ img{max-width:100%;display:block}
   });
 
   // ---- Castle Grid ----
-  const scotCastles = typeof CASTLES!=='undefined' ? CASTLES.filter(c=>c.country==='Scotland') : [];
+  const scotCastles = typeof CASTLES!=='undefined' ? CASTLES : [];
   const grid = document.getElementById('castle-grid');
   const loadBtn = document.getElementById('load-more');
   let currentFilter = 'all';
   let shown = 0;
-  const PER_PAGE = 12;
+  const PER_PAGE = window.innerWidth <= 768 ? 10 : 12;
 
   function getFiltered(){
     if(currentFilter==='all') return scotCastles;
@@ -759,6 +760,21 @@ img{max-width:100%;display:block}
     if(currentFilter==='ruin') return scotCastles.filter(c=>c.condition==='ruin');
     return scotCastles.filter(c=>c.county===currentFilter);
   }
+
+  // Map filters to region page URLs
+  const regionLinks = {
+    'all': '/scotland/all-castles',
+    'Highland': '/scotland/highlands',
+    'Aberdeenshire': '/scotland/aberdeen-northeast',
+    'Argyll and Bute': '/scotland/argyll-islands',
+    'Fife': '/scotland/fife-perthshire',
+    'Scottish Borders': '/scotland/borders',
+    'Dumfries and Galloway': '/scotland/dumfries-galloway',
+    'Perth and Kinross': '/scotland/fife-perthshire',
+    'Angus': '/scotland/aberdeen-northeast',
+    'intact': '/scotland/all-castles?filter=intact',
+    'ruin': '/scotland/all-castles?filter=ruin'
+  };
 
   function renderCastles(reset){
     if(reset){grid.innerHTML='';shown=0}
@@ -786,7 +802,15 @@ img{max-width:100%;display:block}
       grid.appendChild(card);
     });
     shown += batch.length;
-    loadBtn.style.display = shown >= filtered.length ? 'none' : 'block';
+    const remaining = filtered.length - shown;
+    if(remaining > 0){
+      loadBtn.style.display = 'block';
+      const link = regionLinks[currentFilter] || '/scotland/all-castles';
+      loadBtn.textContent = `View All ${filtered.length} Castles →`;
+      loadBtn.onclick = function(){ window.location.href = link; };
+    } else {
+      loadBtn.style.display = 'none';
+    }
   }
 
   document.getElementById('castle-filters').addEventListener('click',e=>{
@@ -797,7 +821,6 @@ img{max-width:100%;display:block}
     renderCastles(true);
   });
 
-  loadBtn.addEventListener('click',()=>renderCastles(false));
   renderCastles(true);
 
   // ---- Region cards are static HTML now ----
