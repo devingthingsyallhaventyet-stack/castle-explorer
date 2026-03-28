@@ -15,7 +15,9 @@
 <link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"></noscript>
 
 <script type="application/ld+json">
 {
@@ -85,6 +87,11 @@ img{max-width:100%;display:block}
 .story-section{position:relative;width:100%;overflow:visible;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column}
 .story-image{width:100%;display:flex;justify-content:center;align-items:center;padding:0}
 .story-image img{width:100%;height:auto;display:block}
+/* Reserve space for story images to prevent CLS */
+.story-folklore .story-image img{aspect-ratio:1920/3713}
+.story-charlie .story-image img{aspect-ratio:2560/3840}
+.story-edinburgh .story-image img{aspect-ratio:2560/2114}
+.story-dunnottar .story-image img{aspect-ratio:2560/1914}
 .story-folklore{position:relative;z-index:10;margin-top:-55%}
 .story-folklore .story-image{width:100%;overflow:hidden;background:transparent}
 .story-folklore .story-image img{width:100%;min-width:100vw;max-width:none;object-fit:cover}
@@ -130,7 +137,7 @@ img{max-width:100%;display:block}
 /* ========== 1. HERO ========== */
 .hero{position:relative;display:flex;align-items:flex-start;justify-content:center;overflow:hidden;width:100%;aspect-ratio:2560/2300;min-height:100vh;padding-top:40vh}
 .hero-bg{position:absolute;inset:0;will-change:transform}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;aspect-ratio:2560/1707}
 .hero-overlay{position:absolute;inset:0;z-index:2;background:
   linear-gradient(180deg,rgba(15,22,40,.3) 0%,rgba(15,22,40,.1) 30%,rgba(15,22,40,.2) 60%,rgba(15,22,40,.3) 100%),
   linear-gradient(90deg,rgba(15,22,40,.4) 0%,transparent 40%,transparent 60%,rgba(15,22,40,.4) 100%)}
@@ -301,7 +308,7 @@ img{max-width:100%;display:block}
 
 <!-- ===== 1. HERO ===== -->
 <section class="hero" id="hero">
-  <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" alt="Scotland hero landscape"></div>
+  <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" alt="Scotland hero landscape" width="2560" height="1707" fetchpriority="high"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="reveal">SCOTLAND<span>400+ Castles · 2,000 Years of History<br>One Untamed Land</span></h1>
@@ -328,7 +335,7 @@ img{max-width:100%;display:block}
 </style>
 <section class="story-section story-folklore" id="story-folklore">
   <div class="story-image">
-    <img src="img/scotland/monster-whiskey.webp" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy">
+    <img src="img/scotland/monster-whiskey.webp" alt="Whisky poured into the shape of the Loch Ness Monster" loading="lazy" width="1920" height="3713">
   </div>
   <div class="story-text reveal">
     <h2 class="story-headline">A Land That Breathes Myth</h2>
@@ -385,11 +392,11 @@ img{max-width:100%;display:block}
     <div class="star" style="top:29%;left:92%;--dur:2.6s;--delay:1.8s"></div>
   </div>
   <div class="story-image" style="position:relative;z-index:1">
-    <img src="img/scotland/highland-landscape.webp" alt="Scottish Highland landscape" loading="lazy">
+    <img src="img/scotland/highland-landscape.webp" alt="Scottish Highland landscape" loading="lazy" width="2560" height="3840">
   </div>
   <div style="position:absolute;top:0;left:0;right:0;height:12%;background:linear-gradient(to bottom,#000,transparent);z-index:1;pointer-events:none"></div>
   <div class="charlie-portrait" style="position:absolute;z-index:99;right:15%;top:14%;width:380px">
-    <img src="img/scotland/charlie-portrait.webp" alt="Portrait of Bonnie Prince Charlie in gold frame">
+    <img src="img/scotland/charlie-portrait.webp" alt="Portrait of Bonnie Prince Charlie in gold frame" width="600" height="753">
   </div>
   <div class="story-text story-text-left" style="position:absolute;z-index:99;left:8%;top:18%">
     <h2 class="story-headline">They Never Knelt</h2>
@@ -402,17 +409,17 @@ img{max-width:100%;display:block}
     <a href="/scotland/highlands" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of the Highlands →</a>
   </div>
   <div class="story-banner" style="position:absolute;z-index:99;bottom:-8%;left:0;right:0;width:100%;pointer-events:none">
-    <img src="img/scotland/banner-musket.webp" alt="Ornate Scottish musket" style="width:100%;height:auto">
+    <img src="img/scotland/banner-musket.webp" alt="Ornate Scottish musket" style="width:100%;height:auto" width="1920" height="346">
   </div>
 </section>
 
 <!-- ===== STORY 5: EVERY STONE REMEMBERS ===== -->
 <section class="story-section story-edinburgh" id="story-edinburgh">
   <div class="story-image">
-    <img src="img/scotland/edinburgh-castle.webp" alt="Edinburgh Castle" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover">
+    <img src="img/scotland/edinburgh-castle.webp" alt="Edinburgh Castle" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover" width="2560" height="2114">
   </div>
   <div class="edinburgh-stamp" style="position:absolute;z-index:99;right:5%;top:12%;width:250px;pointer-events:none">
-    <img src="img/scotland/edinburgh-stamp.webp" alt="Edinburgh Castle stamp" style="width:100%;height:auto">
+    <img src="img/scotland/edinburgh-stamp.webp" alt="Edinburgh Castle stamp" style="width:100%;height:auto" width="400" height="313">
   </div>
   <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:13%;text-align:left;max-width:500px">
     <h2 class="story-headline">Every Stone Remembers</h2>
@@ -420,18 +427,18 @@ img{max-width:100%;display:block}
     <a href="site/edinburgh-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Edinburgh Castle →</a>
   </div>
   <div class="mary-portrait" style="position:absolute;z-index:98;right:3%;bottom:0;width:525px">
-    <img src="img/scotland/mary-queen-scots.webp" alt="Mary Queen of Scots" style="width:100%;height:auto">
+    <img src="img/scotland/mary-queen-scots.webp" alt="Mary Queen of Scots" style="width:100%;height:auto" width="800" height="840">
     <a href="/scotland/mary-queen-of-scots" style="position:absolute;bottom:18%;right:105%;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s;text-shadow:0 2px 8px rgba(0,0,0,.8);white-space:nowrap">The Castles of Mary Queen of Scots →</a>
   </div>
   <div style="position:absolute;z-index:100;bottom:-5%;left:0;right:0;width:100%;pointer-events:none">
-    <img src="img/scotland/purple-thistle.webp" alt="Purple thistle border" style="width:100%;height:auto">
+    <img src="img/scotland/purple-thistle.webp" alt="Purple thistle border" style="width:100%;height:auto" width="1920" height="197">
   </div>
 </section>
 
 <!-- ===== STORY 6: 400+ CASTLES ===== -->
 <section class="story-section story-dunnottar" id="story-dunnottar" style="margin-bottom:-120px;overflow:hidden">
   <div class="story-image">
-    <img src="img/scotland/dunnottar.webp" alt="Dunnottar Castle on sea cliffs" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover">
+    <img src="img/scotland/dunnottar.webp" alt="Dunnottar Castle on sea cliffs" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover" width="2560" height="1914">
   </div>
   <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:10%;text-align:left;max-width:500px">
     <h2 class="story-headline">400+ Castles. Every One a Story.</h2>
@@ -476,7 +483,7 @@ img{max-width:100%;display:block}
 
     <div class="region-grid reveal" id="region-grid">
       <a class="region-card" href="/scotland/highlands">
-        <img src="img/scotland/highlands.webp" alt="Eilean Donan Castle, Highlands" loading="lazy">
+        <img src="img/scotland/highlands.webp" alt="Eilean Donan Castle, Highlands" loading="lazy" width="800" height="600">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">87 castles</div>
@@ -486,7 +493,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/edinburgh-lothians">
-        <img src="img/scotland/edinburgh-region.webp" alt="Edinburgh Castle" loading="lazy">
+        <img src="img/scotland/edinburgh-region.webp" alt="Edinburgh Castle" loading="lazy" width="800" height="600">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">27 castles</div>
@@ -496,7 +503,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/aberdeen-northeast">
-        <img src="img/scotland/aberdeen.webp" alt="Dunnottar Castle, Aberdeen" loading="lazy">
+        <img src="img/scotland/aberdeen.webp" alt="Dunnottar Castle, Aberdeen" loading="lazy" width="800" height="598">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">71 castles</div>
@@ -506,7 +513,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/argyll-islands">
-        <img src="img/scotland/argyll.webp" alt="Argyll & the Islands" loading="lazy">
+        <img src="img/scotland/argyll.webp" alt="Argyll & the Islands" loading="lazy" width="800" height="545">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">61 castles</div>
@@ -516,7 +523,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/fife-perthshire">
-        <img src="img/scotland/fife-perthshire.webp" alt="Blair Castle, Perthshire" loading="lazy">
+        <img src="img/scotland/fife-perthshire.webp" alt="Blair Castle, Perthshire" loading="lazy" width="800" height="601">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">84 castles</div>
@@ -526,7 +533,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/borders">
-        <img src="img/scotland/borders.webp" alt="The Borders" loading="lazy">
+        <img src="img/scotland/borders.webp" alt="The Borders" loading="lazy" width="800" height="908">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">31 castles</div>
@@ -536,7 +543,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/dumfries-galloway">
-        <img src="img/scotland/dumfries.webp" alt="Dumfries & Galloway" loading="lazy">
+        <img src="img/scotland/dumfries.webp" alt="Dumfries & Galloway" loading="lazy" width="800" height="666">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">60 castles</div>
@@ -546,7 +553,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/glasgow-stirling">
-        <img src="img/scotland/glasgow-stirling.webp" alt="Stirling Castle" loading="lazy">
+        <img src="img/scotland/glasgow-stirling.webp" alt="Stirling Castle" loading="lazy" width="800" height="534">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">26 castles</div>
@@ -588,7 +595,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/wars-of-independence" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/scotland/bannockburn.webp" alt="Wars of Scottish Independence painting" loading="lazy">
+          <img src="img/scotland/bannockburn.webp" alt="Wars of Scottish Independence painting" loading="lazy" width="800" height="585">
           <span class="hc-date">1296-1357</span>
         </div>
         <div class="hc-body">
@@ -601,7 +608,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/mary-queen-of-scots" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="img/scotland/mary-hilliard.webp" alt="Portrait of Mary Queen of Scots" loading="lazy" style="object-position:top">
+          <img src="img/scotland/mary-hilliard.webp" alt="Portrait of Mary Queen of Scots" loading="lazy" width="800" height="841" style="object-position:top">
           <span class="hc-date">1542-1587</span>
         </div>
         <div class="hc-body">
@@ -614,7 +621,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/macbeth-early-kings" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
-          <img src="img/scotland/macbeth-fuseli.webp" alt="Macbeth and the Witches by Fuseli" loading="lazy" style="object-position:center 20%">
+          <img src="img/scotland/macbeth-fuseli.webp" alt="Macbeth and the Witches by Fuseli" loading="lazy" width="506" height="710" style="object-position:center 20%">
           <span class="hc-date">1005-1057</span>
         </div>
         <div class="hc-body">
@@ -627,7 +634,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/jacobite-risings" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="img/scotland/glenfinnan.webp" alt="Glenfinnan Monument" loading="lazy">
+          <img src="img/scotland/glenfinnan.webp" alt="Glenfinnan Monument" loading="lazy" width="800" height="150">
           <span class="hc-date">1689-1746</span>
         </div>
         <div class="hc-body">
@@ -640,7 +647,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/culloden" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/scotland/culloden.webp" alt="The Battle of Culloden by David Morier" loading="lazy">
+          <img src="img/scotland/culloden.webp" alt="The Battle of Culloden by David Morier" loading="lazy" width="800" height="483">
           <span class="hc-date">1746</span>
         </div>
         <div class="hc-body">
@@ -653,7 +660,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/bonnie-prince-charlie" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
-          <img src="img/scotland/charlie-mosman.webp" alt="Portrait of Bonnie Prince Charlie" loading="lazy" style="object-position:center 20%">
+          <img src="img/scotland/charlie-mosman.webp" alt="Portrait of Bonnie Prince Charlie" loading="lazy" width="800" height="1024" style="object-position:center 20%">
           <span class="hc-date">The '45</span>
         </div>
         <div class="hc-body">
@@ -666,7 +673,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/robert-the-bruce" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/scotland/robert-bruce.webp" alt="Robert the Bruce statue" loading="lazy" style="object-position:top">
+          <img src="img/scotland/robert-bruce.webp" alt="Robert the Bruce statue" loading="lazy" width="800" height="600" style="object-position:top">
           <span class="hc-date">1274-1329</span>
         </div>
         <div class="hc-body">
@@ -679,7 +686,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/reformation" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="img/scotland/knox-preaching.webp" alt="John Knox preaching - stained glass, St Giles Edinburgh" loading="lazy">
+          <img src="img/scotland/knox-preaching.webp" alt="John Knox preaching - stained glass, St Giles Edinburgh" loading="lazy" width="800" height="775">
           <span class="hc-date">1560</span>
         </div>
         <div class="hc-body">
@@ -692,7 +699,7 @@ img{max-width:100%;display:block}
 
       <a href="/scotland/covenanters" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/scotland/covenanters-signing.webp" alt="The Signing of the National Covenant in Greyfriars Kirkyard by William Allan" loading="lazy">
+          <img src="img/scotland/covenanters-signing.webp" alt="The Signing of the National Covenant in Greyfriars Kirkyard by William Allan" loading="lazy" width="800" height="498">
           <span class="hc-date">1638-1689</span>
         </div>
         <div class="hc-body">
