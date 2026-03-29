@@ -66,6 +66,7 @@ img{max-width:100%;display:block}
 
 
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px;color:var(--ink)}
+ .nav, .mobile-menu{font-family:'Inter',sans-serif;}
 .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-logo{font-family:"Playfair Display",serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0;color:var(--ink)}
 .logo-mark{font-size:1.2rem;line-height:1}.nav-logo span{display:inline-flex;align-items:center}
@@ -242,24 +243,24 @@ img{max-width:100%;display:block}
 <a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
 <div class="nav-center">
 <div class="nav-dropdown">
-<button class="nav-drop-btn">&#x1F3F0; Sites <span style="font-size:.6rem">&#9660;</span></button>
+<button class="nav-drop-btn">Sites <span style="font-size:.6rem">&#9660;</span></button>
 <div class="nav-drop-panel">
-<a href="search.html?type=castle">&#x1F3F0; Castles</a>
-<a href="search.html?type=abbey">&#x26EA; Abbeys</a>
-<a href="search.html?type=tower+house">&#128748; Tower Houses</a>
-<a href="search.html?type=palace">&#128081; Palaces</a>
-<a href="search.html?type=fort">&#x1F6E1;&#xFE0F; Forts</a>
-<a href="search.html?type=fortified+house">&#127968; Fortified Houses</a>
+<a href="search.html?type=castle">Castles</a>
+<a href="search.html?type=abbey">Abbeys</a>
+<a href="search.html?type=tower+house">Tower Houses</a>
+<a href="search.html?type=palace">Palaces</a>
+<a href="search.html?type=fort">Forts</a>
+<a href="search.html?type=fortified+house">Fortified Houses</a>
 </div>
 </div>
 <div class="nav-dropdown mega-wrap">
-<button class="nav-drop-btn">&#x1F5FA;&#xFE0F; Regions <span style="font-size:.6rem">&#9660;</span></button>
+<button class="nav-drop-btn">Regions <span style="font-size:.6rem">&#9660;</span></button>
 <div class="mega-menu">
 <div class="mega-countries">
-<button class="mega-country active" data-country="england">&#x1F3F4; England</button>
-<button class="mega-country" data-country="scotland">&#x1F3F4; Scotland</button>
-<button class="mega-country" data-country="wales">&#x1F3F4; Wales</button>
-<button class="mega-country" data-country="ireland">&#x1F340; Ireland</button>
+<button class="mega-country active" data-country="england">England</button>
+<button class="mega-country" data-country="scotland">Scotland</button>
+<button class="mega-country" data-country="wales">Wales</button>
+<button class="mega-country" data-country="ireland">Ireland</button>
 </div>
 <div class="mega-regions">
 <div class="mega-panel active" data-country="england">
@@ -292,44 +293,44 @@ img{max-width:100%;display:block}
 </div>
 </div>
 <div class="nav-dropdown">
-<button class="nav-drop-btn">&#x2728; Collections <span style="font-size:.6rem">&#9660;</span></button>
+<button class="nav-drop-btn">Collections <span style="font-size:.6rem">&#9660;</span></button>
 <div class="nav-drop-panel">
-<a href="collection.html?id=top-rated">&#x1F3C6; Top Rated</a>
-<a href="collection.html?id=hidden-gems">&#x1F48E; Hidden Gems</a>
-<a href="collection.html?id=haunted">&#x1F47B; Haunted</a>
-<a href="collection.html?id=filming-locations">&#x1F3AC; Filming Locations</a>
-<a href="collection.html?id=free">&#x1F195; Free to Visit</a>
-<a href="collection.html?id=romantic-ruins">&#x1F33F; Romantic Ruins</a>
-<a href="collection.html?id=photogenic">&#x1F4F8; Most Photogenic</a>
+<a href="collection.html?id=top-rated">Top Rated</a>
+<a href="collection.html?id=hidden-gems">Hidden Gems</a>
+<a href="collection.html?id=haunted">Haunted</a>
+<a href="collection.html?id=filming-locations">Filming Locations</a>
+<a href="collection.html?id=free">Free to Visit</a>
+<a href="collection.html?id=romantic-ruins">Romantic Ruins</a>
+<a href="collection.html?id=photogenic">Most Photogenic</a>
 <div class="drop-divider"></div>
-<a href="collection.html">View all collections &#8594;</a>
+<a href="collection.html">View all collections</a>
 </div>
 </div>
-<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">&#x1F6E4;&#xFE0F; Routes</a>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">Routes</a>
 <div class="nav-search-wrap">
 <span class="nsi">&#128269;</span>
 <input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off">
 </div>
 </div>
 <div class="nav-right">
-<a href="explore.html" class="btn-explore">&#x1FAAD; Explore Map</a>
-<button class="btn-login" onclick="alert('Login coming soon!')">&#x1F464; Login</button>
+<a href="explore.html" class="btn-explore">Explore Map</a>
+<button class="btn-login" onclick="alert('Login coming soon!')">Login</button>
 </div>
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
 </div>
 </nav>
 <div class="mobile-menu">
 <div class="mob-search-wrap"><span class="nsi">&#128269;</span><input type="text" id="mobNavSearch" placeholder="Search castles, regions..." autocomplete="off"></div>
-<a href="explore.html" style="color:var(--burgundy);font-weight:700">&#x1FAAD; Explore Map</a>
-<span class="mob-heading">&#x1F3F0; Sites</span>
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">Explore Map</a>
+<span class="mob-heading">Sites</span>
 <div class="mob-sub">
-<a href="search.html?type=castle">&#x1F3F0; Castles</a>
-<a href="search.html?type=abbey">&#x26EA; Abbeys</a>
-<a href="search.html?type=tower+house">&#128748; Tower Houses</a>
-<a href="search.html?type=palace">&#128081; Palaces</a>
-<a href="search.html?type=fort">&#x1F6E1;&#xFE0F; Forts</a>
+<a href="search.html?type=castle">Castles</a>
+<a href="search.html?type=abbey">Abbeys</a>
+<a href="search.html?type=tower+house">Tower Houses</a>
+<a href="search.html?type=palace">Palaces</a>
+<a href="search.html?type=fort">Forts</a>
 </div>
-<span class="mob-heading">&#x1F3F4; England</span>
+<span class="mob-heading">England</span>
 <div class="mob-sub">
 <a href="region.html?id=london-surrey">London &amp; Surrey</a>
 <a href="region.html?id=south-east-england">South East</a>
@@ -339,17 +340,17 @@ img{max-width:100%;display:block}
 <a href="region.html?id=yorkshire">Yorkshire</a>
 <a href="region.html?id=east-anglia">East Anglia</a>
 </div>
-<span class="mob-heading">&#x1F3F4; Scotland</span>
+<span class="mob-heading">Scotland</span>
 <div class="mob-sub">
 <a href="region.html?id=scottish-highlands">Highlands</a>
 <a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
 </div>
-<span class="mob-heading">&#x1F3F4; Wales</span>
+<span class="mob-heading">Wales</span>
 <div class="mob-sub">
 <a href="region.html?id=north-wales">North Wales</a>
 <a href="region.html?id=south-wales">South Wales</a>
 </div>
-<span class="mob-heading">&#x1F340; Ireland</span>
+<span class="mob-heading">Ireland</span>
 <div class="mob-sub">
 <a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
 <a href="region.html?id=south-east-ireland">South East</a>
@@ -359,16 +360,16 @@ img{max-width:100%;display:block}
 <a href="region.html?id=north-west-ireland">North West</a>
 <a href="region.html?id=northern-ireland">Northern Ireland</a>
 </div>
-<span class="mob-heading">&#x2728; Collections</span>
+<span class="mob-heading">Collections</span>
 <div class="mob-sub">
-<a href="collection.html?id=top-rated">&#x1F3C6; Top Rated</a>
-<a href="collection.html?id=hidden-gems">&#x1F48E; Hidden Gems</a>
-<a href="collection.html?id=haunted">&#x1F47B; Haunted</a>
-<a href="collection.html?id=free">&#x1F195; Free to Visit</a>
-<a href="collection.html">View all &#8594;</a>
+<a href="collection.html?id=top-rated">Top Rated</a>
+<a href="collection.html?id=hidden-gems">Hidden Gems</a>
+<a href="collection.html?id=haunted">Haunted</a>
+<a href="collection.html?id=free">Free to Visit</a>
+<a href="collection.html">View all</a>
 </div>
-<a href="trail.html">&#x1F6E4;&#xFE0F; Routes</a>
-<a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:10px;font-weight:600;color:var(--twilight)">&#x1F464; Login</a>
+<a href="trail.html">Routes</a>
+<a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:10px;font-weight:600;color:var(--twilight)">Login</a>
 </div>
 <section class="hero" id="hero">
 
@@ -835,6 +836,10 @@ img{max-width:100%;display:block}
 </body>
 
 </html>
+
+
+
+
 
 
 
