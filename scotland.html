@@ -61,6 +61,7 @@ img{max-width:100%;display:block}
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
 .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.logo-mark{font-size:1.2rem;line-height:1}.nav-logo span{display:inline-flex;align-items:center}
 .nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
 .nav-dropdown{position:relative}
 .nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
@@ -91,6 +92,7 @@ img{max-width:100%;display:block}
 .nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:background .2s;display:inline-block}
 .nav-right .btn-explore:hover{background:#6e1a2a}
+.btn-login{background:none;border:2px solid var(--border);color:var(--twilight);padding:7px 14px;border-radius:var(--pill);font-weight:500;font-size:.85rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:4px}.btn-login:hover{border-color:var(--burgundy);color:var(--burgundy)}
 .hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
 .mobile-menu.open{display:flex}
@@ -323,10 +325,10 @@ img{max-width:100%;display:block}
 <!-- NAV -->
 <nav class="nav">
 <div class="nav-inner">
-<a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
+<a href="/" class="nav-logo"><span class="logo-mark">&#127761;</span><span>castlecore</span></a>
 <div class="nav-center">
 <div class="nav-dropdown">
-<button class="nav-drop-btn">Sites <span style="font-size:.6rem">v</span></button>
+<button class="nav-drop-btn">Sites <span style="font-size:.6rem">&#9660;</span></button>
 <div class="nav-drop-panel">
 <a href="search.html?type=castle">Castles</a>
 <a href="search.html?type=abbey">Abbeys</a>
@@ -337,7 +339,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 <div class="nav-dropdown mega-wrap">
-<button class="nav-drop-btn">Regions <span style="font-size:.6rem">v</span></button>
+<button class="nav-drop-btn">Regions <span style="font-size:.6rem">&#9660;</span></button>
 <div class="mega-menu">
 <div class="mega-countries">
 <button class="mega-country" data-country="england">England</button>
@@ -375,7 +377,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 <div class="nav-dropdown">
-<button class="nav-drop-btn">Collections <span style="font-size:.6rem">v</span></button>
+<button class="nav-drop-btn">Collections <span style="font-size:.6rem">&#9660;</span></button>
 <div class="nav-drop-panel">
 <a href="collection.html?id=top-rated">Top Rated</a>
 <a href="collection.html?id=hidden-gems">Hidden Gems</a>
@@ -396,6 +398,7 @@ img{max-width:100%;display:block}
 </div>
 <div class="nav-right">
 <a href="explore.html" class="btn-explore">Explore Map</a>
+<button class="btn-login" onclick="alert('Login coming soon!')">Login</button>
 </div>
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
 </div>
@@ -980,4 +983,6 @@ img{max-width:100%;display:block}
 </script>
 </body>
 </html>
+
+
 
