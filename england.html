@@ -39,6 +39,7 @@
   --pale-gold:#e8d5a3;--parchment:#f5f0e8;--ink:#1a1714;
 
   --warm-white:#faf8f4;--border:#e8e8e8;
+  --shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;
 
   --serif:'Cormorant Garamond','Playfair Display',serif;
 
@@ -64,9 +65,9 @@ img{max-width:100%;display:block}
 
 
 
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px;color:var(--ink)}
 .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-logo{font-family:"Playfair Display",serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0;color:var(--ink)}
 .logo-mark{font-size:1.2rem;line-height:1}.nav-logo span{display:inline-flex;align-items:center}
 .nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
 .nav-dropdown{position:relative}
@@ -238,7 +239,7 @@ img{max-width:100%;display:block}
 
 <nav class="nav">
 <div class="nav-inner">
-<a href="/" class="nav-logo"><span class="logo-mark">&#x1F6E1;&#xFE0F;</span><span>castlecore</span></a>
+<a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
 <div class="nav-center">
 <div class="nav-dropdown">
 <button class="nav-drop-btn">&#x1F3F0; Sites <span style="font-size:.6rem">&#9660;</span></button>
@@ -834,6 +835,9 @@ img{max-width:100%;display:block}
 </body>
 
 </html>
+
+
+
 
 
 
