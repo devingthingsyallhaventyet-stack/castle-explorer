@@ -230,6 +230,90 @@ img{max-width:100%;display:block}
 
 
 
+
+/* ========== LAND/REGION CARDS (Scotland style) ========== */
+.land{position:relative;padding:60px 0 80px;background:var(--navy);overflow:hidden}
+.land-bg{position:absolute;inset:0;opacity:1;background:url('img/england/antique-map.webp') center/cover;pointer-events:none;z-index:1}
+.land-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
+.land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.land-header{text-align:center;margin-bottom:40px}
+.region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.region-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;transition:transform .4s,box-shadow .4s}
+.region-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.region-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.region-card:hover img{transform:scale(1.08)}
+.region-card-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 40%,transparent 70%);transition:background .4s}
+.region-card:hover .region-card-overlay{background:linear-gradient(0deg,rgba(139,35,53,.9) 0%,rgba(139,35,53,.3) 40%,transparent 70%)}
+.region-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:2}
+.region-card-castles{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight);margin-bottom:8px}
+.region-card-name{font-family:var(--display);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:6px}
+.region-card-desc{font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(255,255,255,.85);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;opacity:0;max-height:0;transition:opacity .4s,max-height .4s}
+.region-card:hover .region-card-desc{opacity:1;max-height:80px}
+.region-card-arrow{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;color:var(--candlelight);font-size:1rem;opacity:0;transform:translateX(-8px);transition:opacity .3s,transform .3s}
+.region-card:hover .region-card-arrow{opacity:1;transform:translateX(0)}
+
+/* ========== HISTORY CARDS (Scotland style) ========== */
+.history{position:relative;padding:120px 0;background:var(--navy);overflow:visible}
+.history-bg{position:absolute;inset:0;opacity:1;background:url('img/england/tartan.webp') center/cover;pointer-events:none;z-index:1}
+.history-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
+.history .container{max-width:1300px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.history-header{text-align:center;margin-bottom:80px}
+.history-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:32px;position:relative}
+.history-card{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.12);border-radius:8px;overflow:hidden;transition:all .4s ease;cursor:pointer}
+.history-card:hover{transform:translateY(-6px) rotate(0deg)!important;border-color:var(--candlelight);box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 0 1px var(--candlelight);z-index:20}
+.history-card:nth-child(odd){transform:rotate(-.5deg)}
+.history-card:nth-child(even){transform:rotate(.5deg)}
+.hc-image{position:relative;height:240px;overflow:hidden}
+.hc-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.history-card:hover .hc-image img{transform:scale(1.05)}
+.hc-image::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(15,22,40,.9))}
+.hc-date{position:absolute;top:16px;left:16px;background:rgba(15,22,40,.8);color:var(--candlelight);font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:4px;border:1px solid rgba(201,168,76,.2);z-index:2}
+.hc-body{padding:24px;position:relative;margin-top:-40px;z-index:2}
+.hc-body h3{font-family:var(--display);font-size:1.5rem;color:var(--pale-gold);margin-bottom:10px;line-height:1.2}
+.hc-body p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.hc-castles{font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:16px;font-family:var(--sans)}
+.hc-castles strong{color:var(--candlelight)}
+.hc-link{display:inline-flex;align-items:center;gap:6px;color:var(--candlelight);font-family:var(--serif);font-size:.95rem;font-style:italic;transition:gap .3s}
+.history-card:hover .hc-link{gap:12px}
+
+/* ========== CASTLES (Updated to match Scotland style) ========== */
+.castles{position:relative;padding:80px 0 40px;background:var(--charcoal);overflow:hidden}
+.castles .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.castles-header{text-align:center;margin-bottom:48px}
+.castle-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:48px}
+.castle-filters button{padding:8px 20px;border-radius:var(--pill);border:1px solid rgba(201,168,76,.25);background:transparent;color:var(--pale-gold);font-family:var(--sans);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s}
+.castle-filters button:hover,.castle-filters button.active{background:var(--candlelight);color:var(--navy);border-color:var(--candlelight)}
+.castle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.castle-card{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;transition:all .3s;cursor:pointer}
+.castle-card:hover{transform:translateY(-4px);border-color:var(--candlelight);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.castle-card-img{height:200px;overflow:hidden;background:var(--navy)}
+.castle-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.castle-card:hover .castle-card-img img{transform:scale(1.06)}
+.castle-card-body{padding:16px 20px}
+.castle-card-body h3{font-family:var(--display);font-size:1.15rem;color:var(--pale-gold);margin-bottom:4px}
+.castle-card-meta{display:flex;gap:12px;font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:8px}
+.castle-card-meta span{display:flex;align-items:center;gap:4px}
+.castle-card-body p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.castle-card-rating{color:var(--candlelight);font-size:.8rem;margin-top:8px}
+.load-more{display:block;margin:48px auto 0;padding:14px 40px;background:transparent;border:2px solid var(--candlelight);border-radius:var(--pill);color:var(--candlelight);font-family:var(--sans);font-weight:700;font-size:.9rem;cursor:pointer;transition:all .3s}
+.load-more:hover{background:var(--candlelight);color:var(--navy)}
+
+@media(max-width:1024px){
+  .region-grid{grid-template-columns:repeat(2,1fr)}
+  .land-bg{background-image:url('img/england/antique-map-mobile.webp')}
+}
+@media(max-width:768px){
+  .history-grid{grid-template-columns:1fr}
+  .history-card:nth-child(odd),.history-card:nth-child(even){transform:none}
+}
+@media(max-width:560px){
+  .region-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .region-card{aspect-ratio:2/3}
+  .region-card-content{padding:16px}
+  .region-card-name{font-size:1rem}
+  .region-card-desc{display:none}
+}
+
 </style>
 
 </head>
@@ -391,422 +475,348 @@ img{max-width:100%;display:block}
 
 
 
-<section class="section castles" id="castles">
-
-  <div style="text-align:center">
-
-    <div class="section-label">The Collection</div>
-
-    <h2 class="section-title">The Castles of England</h2>
-
-    <p class="section-subtitle">A living index of 544 sites across every era - from Norman keeps to palatial estates and abbey towns.</p>
-
-  </div>
-
-  <div class="castle-filters" id="castle-filters">
-
-    <button class="active" data-filter="all">All</button>
-
-    <button data-filter="castle">Castles</button>
-
-    <button data-filter="intact">Intact</button>
-
-    <button data-filter="ruin">Ruins</button>
-
-    <button data-filter="abbey">Abbeys</button>
-
-    <button data-filter="palace">Palaces</button>
-
-  </div>
-
-  <div class="castle-grid" id="castle-grid"></div>
-
-  <button class="load-more" id="load-more">Show more</button>
-
-</section>
-
-
-
-<section class="section regions" id="regions">
-
-  <div style="text-align:center">
-
-    <div class="section-label">Explore by Region</div>
-
-    <h2 class="section-title">The Regions of England</h2>
-
-    <p class="section-subtitle">Each region carries a distinct language of stone, from the coasts of Kent to the granite of the north.</p>
-
-  </div>
-
-  <div class="region-grid" id="region-grid"></div>
-
-</section>
-
-
-
-<section class="section history" id="history">
-
+<!-- ===== 4. THE CASTLES ===== -->
+<section class="castles" id="castles">
   <div class="container">
+    <div class="castles-header reveal">
+      <div class="section-label">The Collection</div>
+      <h2 class="section-title" style="color:#fff">The Castles of England</h2>
+      <p class="section-subtitle" style="margin:0 auto">544 castle sites mapped and documented across England. Filter by region, era, or condition - then explore each one.</p>
+    </div>
+    <div class="castle-filters reveal" id="castle-filters">
+      <button class="active" data-filter="all">All (544)</button>
+      <button data-filter="Yorkshire">Yorkshire</button>
+      <button data-filter="Northumberland">Northumberland</button>
+      <button data-filter="Cumbria">Cumbria</button>
+      <button data-filter="Kent">Kent</button>
+      <button data-filter="Devon">Devon</button>
+      <button data-filter="Cornwall">Cornwall</button>
+      <button data-filter="Somerset">Somerset</button>
+      <button data-filter="Norfolk">Norfolk</button>
+      <button data-filter="intact">Intact</button>
+      <button data-filter="ruin">Ruins</button>
+    </div>
+    <div class="castle-grid" id="castle-grid"></div>
+    <button class="load-more" id="load-more">Show More Castles</button>
+  </div>
+</section>
 
-    <div style="text-align:center">
-
-      <div class="section-label">Explore the Past</div>
-
-      <h2 class="section-title">History of England</h2>
-
-      <p class="section-subtitle">Key events and figures that shaped the land. Each link points to castles and abbeys connected to that era.</p>
-
+<!-- ===== THE LAND - Region Cards ===== -->
+<section class="land" id="land">
+  <div class="land-bg"></div>
+  <div class="container">
+    <div class="land-header reveal">
+      <h2 class="section-title" style="color:#fff">Explore England's Castles by Region</h2>
     </div>
 
+    <div class="region-grid reveal" id="region-grid">
+      <a class="region-card" href="/england/northern-england">
+        <img src="img/england/northern-england.webp" srcset="img/england/northern-england-mobile.webp 400w, img/england/northern-england.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Northern England" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">110 castles</div>
+          <h3 class="region-card-name">Northern England</h3>
+          <p class="region-card-desc">Border fortresses and peel towers guarding England's wild frontier with Scotland.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/england/yorkshire">
+        <img src="img/england/yorkshire.webp" srcset="img/england/yorkshire-mobile.webp 400w, img/england/yorkshire.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Yorkshire" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">71 castles</div>
+          <h3 class="region-card-name">Yorkshire</h3>
+          <p class="region-card-desc">From the ruins of Helmsley to the might of Richmond, a county shaped by Viking, Norman, and medieval power.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/england/midlands">
+        <img src="img/england/midlands.webp" srcset="img/england/midlands-mobile.webp 400w, img/england/midlands.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="The Midlands" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">108 castles</div>
+          <h3 class="region-card-name">The Midlands</h3>
+          <p class="region-card-desc">England's contested heart, where Plantagenet kings built and battled from Kenilworth to Ludlow.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/england/south-east">
+        <img src="img/england/south-east.webp" srcset="img/england/south-east-mobile.webp 400w, img/england/south-east.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="South East" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">65 castles</div>
+          <h3 class="region-card-name">South East</h3>
+          <p class="region-card-desc">The gateway to England. Every invader from Caesar to William landed here — and castles rose to stop them.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/england/south-west">
+        <img src="img/england/south-west.webp" srcset="img/england/south-west-mobile.webp 400w, img/england/south-west.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="South West" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">97 castles</div>
+          <h3 class="region-card-name">South West</h3>
+          <p class="region-card-desc">Celtic hill forts, Norman strongholds, and Tudor coastal defences along England's Atlantic edge.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/england/east-anglia">
+        <img src="img/england/east-anglia.webp" srcset="img/england/east-anglia-mobile.webp 400w, img/england/east-anglia.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="East Anglia" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">53 castles</div>
+          <h3 class="region-card-name">East Anglia</h3>
+          <p class="region-card-desc">Flat lands, vast skies, and some of England's most powerful medieval fortresses.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/england/london-thames">
+        <img src="img/england/london-thames.webp" srcset="img/england/london-thames-mobile.webp 400w, img/england/london-thames.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="London & the Thames" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">2 castles</div>
+          <h3 class="region-card-name">London & the Thames</h3>
+          <p class="region-card-desc">The Tower, Windsor, and the royal fortifications that anchored the seat of English power.</p>
+        </div>
+        <div class="region-card-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. HISTORY ===== -->
+<section class="history" id="history" style="position:relative;overflow:visible">
+  <div class="history-bg"></div>
+  <div class="container">
+    <div class="history-header reveal">
+      <h2 class="section-title" style="color:#fff">Explore England's History</h2>
+      <p class="section-subtitle" style="margin:0 auto">Every siege, conquest, and rebellion left its mark in stone. These are the events that forged a kingdom — and the castles that stood witness.</p>
+    </div>
     <div class="history-grid">
 
-      <a class="history-card reveal" href="search.html?era=11th%20century&era=12th%20century&country=England">
-
-        <div class="hc-image"><img src="img/tower-of-london.jpg" alt="Tower of London" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'"></div>
-
+      <a href="/england/norman-conquest" class="history-card reveal" style="transition-delay:0s">
+        <div class="hc-image">
+          <img src="img/england/norman-conquest.webp" alt="Norman Conquest" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1066-1100</span>
+        </div>
         <div class="hc-body">
-
-          <div class="date">1066-1154</div>
-
           <h3>The Norman Conquest</h3>
-
-          <p>William I and the Norman lords converted strategic ports and roads into fortified authority. Tower of London, Pevensey, and Colchester became anchors of royal control.</p>
-
-          <div class="hc-castles"><strong>Connected castles:</strong> Tower of London, Dover Castle, Colchester Castle, Rochester Castle</div>
-
-          <span class="hc-link">Explore Collection ></span>
-
+          <p>William conquered England in a day at Hastings — then spent 20 years building the castles to keep it. 500 motte-and-bailey strongholds rose across the realm, each one a Norman fist gripping English soil.</p>
+          <div class="hc-castles"><strong>78 castles</strong> — Tower of London, Dover, Windsor, Warwick…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
-
       </a>
 
-      <a class="history-card reveal" href="search.html?query=Plantagenet&country=England">
-
-        <div class="hc-image"><img src="img/warwick-castle.jpg" alt="Warwick Castle" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'"></div>
-
-        <div class="hc-body">
-
-          <div class="date">1154-1485</div>
-
-          <h3>Plantagenet Statecraft</h3>
-
-          <p>Plantagenet kings and nobles used castles as military and judicial infrastructure while rivalry built a network of regional strongholds across England.</p>
-
-          <div class="hc-castles"><strong>Connected castles:</strong> Warwick Castle, Nottingham Castle, Corfe Castle, Lancaster Castle</div>
-
-          <span class="hc-link">Explore Collection ></span>
-
+      <a href="/england/plantagenet-kings" class="history-card reveal" style="transition-delay:.2s">
+        <div class="hc-image">
+          <img src="img/england/plantagenet-kings.webp" alt="Plantagenet Kings" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1154-1485</span>
         </div>
-
+        <div class="hc-body">
+          <h3>The Plantagenet Kings</h3>
+          <p>Three centuries of warrior kings, civil wars, and the greatest castle-building programme in English history. From Henry II's continental empire to Richard III's final charge at Bosworth.</p>
+          <div class="hc-castles"><strong>156 castles</strong> — Kenilworth, Warwick, Ludlow, Caerphilly…</div>
+          <span class="hc-link">Explore Collection →</span>
+        </div>
       </a>
 
-      <a class="history-card reveal" href="search.html?query=Henry%20VIII&country=England">
-
-        <div class="hc-image"><img src="img/hever-castle.jpg" alt="Hever Castle" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'"></div>
-
-        <div class="hc-body">
-
-          <div class="date">1509-1547</div>
-
-          <h3>Henry VIII and Tudor Transformation</h3>
-
-          <p>Royal patronage and break with Rome reshaped estates, monasteries, and ceremonial architecture across the south and east of England.</p>
-
-          <div class="hc-castles"><strong>Connected castles:</strong> Hever Castle, Tutbury Castle, Warwick Castle, Castle Rising, Kenilworth Castle</div>
-
-          <span class="hc-link">Explore Collection ></span>
-
+      <a href="/england/henry-viii-dissolution" class="history-card reveal" style="transition-delay:.1s">
+        <div class="hc-image">
+          <img src="img/england/henry-viii-dissolution.webp" alt="Henry VIII & the Dissolution" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1509-1547</span>
         </div>
-
+        <div class="hc-body">
+          <h3>Henry VIII &amp; the Dissolution</h3>
+          <p>The king who broke with Rome, dissolved 800 monasteries, and transformed England's landscape forever. Medieval abbeys became Tudor palaces — or romantic ruins.</p>
+          <div class="hc-castles"><strong>67 castles</strong> — Hampton Court, Leeds, Hever, Titchfield…</div>
+          <span class="hc-link">Explore Collection →</span>
+        </div>
       </a>
 
-      <a class="history-card reveal" href="search.html?query=English%20Civil%20War&country=England">
-
-        <div class="hc-image"><img src="img/warwick-castle.jpg" alt="Warwick Castle" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'"></div>
-
-        <div class="hc-body">
-
-          <div class="date">1642-1651</div>
-
-          <h3>English Civil War</h3>
-
-          <p>Castles and fortified manor houses became contested nodes for garrisons, sieges, and political symbolism during England's constitutional rupture.</p>
-
-          <div class="hc-castles"><strong>Connected castles:</strong> Goodrich Castle, Pontefract Castle, Bolsover Castle, Kenilworth Castle</div>
-
-          <span class="hc-link">Explore Collection ></span>
-
+      <a href="/england/wars-of-roses" class="history-card reveal" style="transition-delay:.2s">
+        <div class="hc-image">
+          <img src="img/england/wars-of-roses.webp" alt="Wars of the Roses" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1455-1487</span>
         </div>
-
+        <div class="hc-body">
+          <h3>The Wars of the Roses</h3>
+          <p>York versus Lancaster. Thirty years of dynastic civil war fought across England's greatest castles. The crown changed hands six times before Henry Tudor ended it all at Bosworth.</p>
+          <div class="hc-castles"><strong>89 castles</strong> — Middleham, Sheriff Hutton, Raglan, Pembroke…</div>
+          <span class="hc-link">Explore Collection →</span>
+        </div>
       </a>
 
-      <a class="history-card reveal" href="search.html?query=William%20the%20Conqueror&country=England">
-
-        <div class="hc-image"><img src="img/tower-of-london.jpg" alt="Tower of London" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'"></div>
-
-        <div class="hc-body">
-
-          <div class="date">1066</div>
-
-          <h3>People: William the Conqueror</h3>
-
-          <p>As an organizer of fortification strategy, William's network of strongholds became a template for royal power and regional command.</p>
-
-          <div class="hc-castles"><strong>Connected castles:</strong> Tower of London, Pevensey Castle, Dover Castle, Windsor area holdings</div>
-
-          <span class="hc-link">Explore Collection ></span>
-
+      <a href="/england/english-civil-war" class="history-card reveal" style="transition-delay:0s">
+        <div class="hc-image">
+          <img src="img/england/english-civil-war.webp" alt="English Civil War" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1642-1651</span>
         </div>
-
+        <div class="hc-body">
+          <h3>The English Civil War</h3>
+          <p>Parliament versus Crown. More castles were besieged, slighted, and destroyed in nine years than in any other period. The medieval fortress met gunpowder — and lost.</p>
+          <div class="hc-castles"><strong>134 castles</strong> — Corfe, Kenilworth, Pontefract, Raglan…</div>
+          <span class="hc-link">Explore Collection →</span>
+        </div>
       </a>
 
-      <a class="history-card reveal" href="search.html?query=Elizabeth%20I&country=England">
-
-        <div class="hc-image"><img src="img/warwick-castle.jpg" alt="Warwick Castle" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'"></div>
-
-        <div class="hc-body">
-
-          <div class="date">1558-1603</div>
-
-          <h3>People: Elizabeth I</h3>
-
-          <p>Elizabethan defense and naval preparation kept coastal and border fortresses central to identity and security as England emerged as a maritime power.</p>
-
-          <div class="hc-castles"><strong>Connected castles:</strong> Pendennis Castle, Deal Castle, Walmer Castle, Dover Castle</div>
-
-          <span class="hc-link">Explore Collection ></span>
-
+      <a href="/england/william-the-conqueror" class="history-card reveal" style="transition-delay:.1s">
+        <div class="hc-image">
+          <img src="img/england/william-the-conqueror.webp" alt="William the Conqueror" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1028-1087</span>
         </div>
+        <div class="hc-body">
+          <h3>William the Conqueror</h3>
+          <p>The Norman duke who defeated Harold at Hastings and built the Tower of London to ensure no one would forget who ruled. England's destiny changed in a single October day.</p>
+          <div class="hc-castles"><strong>45 castles</strong> — Tower of London, Windsor, Battle Abbey…</div>
+          <span class="hc-link">Explore Collection →</span>
+        </div>
+      </a>
 
+      <a href="/england/eleanor-of-aquitaine" class="history-card reveal" style="transition-delay:.2s">
+        <div class="hc-image">
+          <img src="img/england/eleanor-of-aquitaine.webp" alt="Eleanor of Aquitaine" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1122-1204</span>
+        </div>
+        <div class="hc-body">
+          <h3>Eleanor of Aquitaine</h3>
+          <p>Queen of France, then Queen of England. The most powerful woman in medieval Europe, imprisoned for 16 years by her own husband. Mother of two kings who changed the world.</p>
+          <div class="hc-castles"><strong>23 castles</strong> — Winchester, Old Sarum, Poitiers, Chinon…</div>
+          <span class="hc-link">Explore Collection →</span>
+        </div>
+      </a>
+
+      <a href="/england/edward-i-welsh-wars" class="history-card reveal" style="transition-delay:0s">
+        <div class="hc-image">
+          <img src="img/england/edward-i-welsh-wars.webp" alt="Edward I & the Welsh Wars" loading="lazy" width="800" height="600" onerror="this.parentElement.style.background='linear-gradient(135deg,#1d2a47,#2d1f1f)'">
+          <span class="hc-date">1272-1307</span>
+        </div>
+        <div class="hc-body">
+          <h3>Edward I &amp; the Welsh Wars</h3>
+          <p>The Hammer of the Scots first hammered the Welsh — and built the most expensive castles in medieval history. £80,000 spent on stone fortresses that still dominate the Welsh landscape.</p>
+          <div class="hc-castles"><strong>18 castles</strong> — Caernarfon, Harlech, Conwy, Beaumaris…</div>
+          <span class="hc-link">Explore Collection →</span>
+        </div>
       </a>
 
     </div>
-
   </div>
-
 </section>
 
-
-
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
-
-  <p>Copyright 2026 <a href="/">CastleCore</a> - Mapping every major and hidden castle site across England.</p>
-
-  <p style="margin-top:8px;font-size:.75rem;color:rgba(255,255,255,.24)">Photography and references curated in this project. Data driven from live castle index.</p>
-
+  <div class="divider" style="margin-bottom:24px"></div>
+  <p>&copy; 2026 <a href="/">CastleCore</a> - Mapping every castle in Britain &amp; Ireland.</p>
+  <p style="margin-top:8px;font-size:.75rem;color:rgba(255,255,255,.25)">Images: Unsplash License, Wikimedia Commons (CC-BY-SA / Public Domain)</p>
 </footer>
 
-
-
-<script src="data.js"></script>
-
+<!-- ===== SCRIPTS ===== -->
+<script src="data-england.js"></script>
 <script>
-
 (function(){
-
+  // ---- Intersection Observer for reveal animations ----
   const obs = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-      if(entry.isIntersecting){
-
-        entry.target.classList.add('visible');
-
-        obs.unobserve(entry.target);
-
-      }
-
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
     })
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.floater').forEach(el=>obs.observe(el));
 
-  },{threshold:0.08, rootMargin:'0px 0px -30px 0px'});
-
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-
-
+  // ---- Parallax + Nav (batched to avoid forced reflow) ----
+  const pxEls = document.querySelectorAll('[data-parallax]');
   const nav = document.getElementById('nav');
-
+  let ticking = false;
   window.addEventListener('scroll',()=>{
-
-    nav.style.background = window.scrollY > 56 ? 'rgba(15,22,40,.98)' : 'rgba(15,22,40,.94)';
-
+    if(!ticking){requestAnimationFrame(()=>{
+      const sy = window.scrollY;
+      // Batch all reads first, then writes
+      nav.classList.toggle('scrolled', sy > 50);
+      pxEls.forEach(el=>{
+        const r = parseFloat(el.dataset.parallax)||0.3;
+        el.style.transform = `translateY(${sy * r * 0.5}px)`;
+      });
+      ticking=false;
+    });ticking=true}
   },{passive:true});
 
-
-
-  const england = (typeof CASTLES !== 'undefined' ? CASTLES : []).filter(c=>c.country==='England');
-
-  const slug = s => (s || '').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-
-  const castleGrid = document.getElementById('castle-grid');
-
+  // ---- Castle Grid ----
+  const englandCastles = typeof CASTLES!=='undefined' ? CASTLES : [];
+  const grid = document.getElementById('castle-grid');
   const loadBtn = document.getElementById('load-more');
-
-  const regionGrid = document.getElementById('region-grid');
-
-
-
   let currentFilter = 'all';
-
   let shown = 0;
-
-  const PAGE = window.innerWidth <= 768 ? 9 : 12;
-
-
+  const PER_PAGE = window.innerWidth <= 768 ? 10 : 12;
 
   function getFiltered(){
-
-    if(currentFilter === 'all') return england;
-
-    if(currentFilter === 'intact') return england.filter(c=>c.condition==='intact');
-
-    if(currentFilter === 'ruin') return england.filter(c=>c.condition==='ruin');
-
-    if(currentFilter === 'abbey') return england.filter(c=>/abbey/i.test((c.type||'')) || /abbey/i.test((c.name||'')));
-
-    if(currentFilter === 'palace') return england.filter(c=>/palace|hall/i.test((c.type||'')) || /palace/i.test((c.name||'')));
-
-    return england.filter(c=>c.type===currentFilter);
-
+    if(currentFilter==='all') return englandCastles;
+    if(currentFilter==='intact') return englandCastles.filter(c=>c.condition==='intact');
+    if(currentFilter==='ruin') return englandCastles.filter(c=>c.condition==='ruin');
+    return englandCastles.filter(c=>(c.county||'').includes(currentFilter));
   }
 
+  // Map filters to region page URLs
+  const regionLinks = {
+    'all': '/england/all-castles',
+    'Yorkshire': '/england/yorkshire',
+    'North Yorkshire': '/england/yorkshire',
+    'Northumberland': '/england/northern-england',
+    'Cumbria': '/england/northern-england',
+    'Kent': '/england/south-east',
+    'Devon': '/england/south-west',
+    'Cornwall': '/england/south-west',
+    'Somerset': '/england/south-west',
+    'Norfolk': '/england/east-anglia',
+    'intact': '/england/all-castles?filter=intact',
+    'ruin': '/england/all-castles?filter=ruin'
+  };
 
-
-  function buildCastles(reset){
-
-    if(reset){
-
-      castleGrid.innerHTML='';
-
-      shown = 0;
-
-    }
-
-    const list = getFiltered();
-
-    const next = list.slice(shown, shown + PAGE);
-
-    next.forEach(c=>{
-
-      const a = document.createElement('a');
-
-      a.className = 'castle-card';
-
-      a.style.textDecoration = 'none';
-
-      const img = c.image || 'img/hero-castle-new.jpg';
-
-      const s = slug(c.name);
-
-      a.href = 'site/' + s + '.html';
-
-      a.innerHTML = `
-
-        <div class="castle-card-img"><img src="${img}" alt="${c.name}" loading="lazy" onerror="this.style.opacity='0.2';"></div>
-
+  function renderCastles(reset){
+    if(reset){grid.innerHTML='';shown=0}
+    const filtered = getFiltered();
+    const batch = filtered.slice(shown, shown+PER_PAGE);
+    batch.forEach(c=>{
+      const card = document.createElement('div');
+      card.className='castle-card';
+      const stars = c.rating ? '★'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+      card.innerHTML=`
+        <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
+        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
         <div class="castle-card-body">
-
           <h3>${c.name}</h3>
-
-          <div class="castle-meta"><span>${c.era || ''}</span><span>${c.condition || ''}</span><span>${c.county || ''}</span></div>
-
-          <p>${c.description || ''}</p>
-
+          <div class="castle-card-meta">
+            <span>${c.era||''}</span>
+            <span>${c.condition||''}</span>
+            <span>${c.county||''}</span>
+          </div>
+          <p>${c.description||''}</p>
+          ${stars?`<div class="castle-card-rating">${stars}</div>`:''}
         </div>
-
-      `;
-
-      castleGrid.appendChild(a);
-
+        </a>`;
+      grid.appendChild(card);
     });
-
-    shown += next.length;
-
-    const remaining = getFiltered().length - shown;
-
+    shown += batch.length;
+    const remaining = filtered.length - shown;
     if(remaining > 0){
-
-      loadBtn.style.display = 'inline-block';
-
-      loadBtn.textContent = `View all ${getFiltered().length} castles >`;
-
-      loadBtn.onclick = () => { window.location.href = 'search.html?country=England'; };
-
+      loadBtn.style.display = 'block';
+      const link = regionLinks[currentFilter] || '/england/all-castles';
+      loadBtn.textContent = `View All ${filtered.length} Castles →`;
+      loadBtn.onclick = function(){ window.location.href = link; };
     } else {
-
       loadBtn.style.display = 'none';
-
     }
-
   }
 
-
-
-  const regions = [
-
-    {id:'london-surrey', name:'London & Surrey', fn:c=>['London','Surrey','Greater London','Middlesex'].some(r=>(c.county||'').includes(r))},
-
-    {id:'south-east-england', name:'South East', fn:c=>['Kent','Sussex','East Sussex','West Sussex','Hampshire','Berkshire','Oxfordshire','Buckinghamshire','Surrey'].some(r=>(c.county||'').includes(r))},
-
-    {id:'south-west-england', name:'South West', fn:c=>['Cornwall','Devon','Dorset','Somerset','Wiltshire','Gloucestershire','Bristol','Avon'].some(r=>(c.county||'').includes(r))},
-
-    {id:'northern-england', name:'Northern England', fn:c=>['Northumberland','Durham','Cumbria','Tyne and Wear','Cumberland','Westmorland','Lancashire'].some(r=>(c.county||'').includes(r))},
-
-    {id:'midlands', name:'The Midlands', fn:c=>['Warwickshire','Staffordshire','Shropshire','Herefordshire','Worcestershire','Leicestershire','Nottinghamshire','Derbyshire','West Midlands','Northamptonshire','Rutland'].some(r=>(c.county||'').includes(r))},
-
-    {id:'yorkshire', name:'Yorkshire', fn:c=>['Yorkshire','North Yorkshire','South Yorkshire','West Yorkshire','East Yorkshire','East Riding'].some(r=>(c.county||'').includes(r))},
-
-    {id:'east-anglia', name:'East Anglia', fn:c=>['Norfolk','Suffolk','Essex','Cambridgeshire','Bedfordshire','Hertfordshire'].some(r=>(c.county||'').includes(r))}
-
-  ];
-
-
-
-  regions.forEach(r=>{
-
-    const matches = england.filter(r.fn);
-
-    const card = document.createElement('a');
-
-    card.className = 'region-card reveal';
-
-    card.href = 'region.html?id=' + r.id;
-
-    card.innerHTML = `<h3>${r.name}</h3><div class="num">${matches.length} sites</div><p>Explore the strongest survivals, ruins, and frontier sites in ${r.name.toLowerCase()}.</p><span class="cta">Explore region ></span>`;
-
-    regionGrid.appendChild(card);
-
-    obs.observe(card);
-
-  });
-
-
-
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-
-
-  document.getElementById('castle-filters').addEventListener('click', (e)=>{
-
-    if(e.target.tagName !== 'BUTTON') return;
-
-    document.querySelectorAll('.castle-filters button').forEach(btn=>btn.classList.remove('active'));
-
+  document.getElementById('castle-filters').addEventListener('click',e=>{
+    if(e.target.tagName!=='BUTTON') return;
+    document.querySelectorAll('.castle-filters button').forEach(b=>b.classList.remove('active'));
     e.target.classList.add('active');
-
-    currentFilter = e.target.dataset.filter || 'all';
-
-    buildCastles(true);
-
+    currentFilter = e.target.dataset.filter;
+    renderCastles(true);
   });
 
-
-
-  buildCastles(true);
+  renderCastles(true);
 
 })();
-
 </script>
 <script>(function(){
   document.querySelectorAll('.mega-country').forEach(btn => {
@@ -820,42 +830,18 @@ img{max-width:100%;display:block}
 
   const runNavSearch = (id) => {
     const input = document.getElementById(id);
-    if (!input) return;
+    if(!input) return;
     input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
+      if(e.key === 'Enter'){
         e.preventDefault();
         const q = input.value.trim();
-        if (q) window.location.href = `search.html?query=${encodeURIComponent(q)}`;
+        if(q) window.location.href = `search.html?query=${encodeURIComponent(q)}`;
       }
     });
   };
   runNavSearch('navSearch');
   runNavSearch('mobNavSearch');
-})();</script>
-
+})();
+</script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
