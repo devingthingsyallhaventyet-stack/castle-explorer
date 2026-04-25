@@ -15648,7 +15648,7 @@ const CASTLES = [
     "condition": "intact",
     "description": "A Z-plan tower house in the Scottish Highlands with a world-class art collection — and a story of burning, rebuilding, and resilience.",
     "history": "A well-preserved Z-plan tower house west of Forres in Moray, Scotland. Built in 1567, burned by Montrose's forces in 1645, then rebuilt. Features fine 17th-century plasterwork and an important collection of paintings. National Trust for Scotland. Category A listed.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Brodie_Castle_01.jpg/500px-Brodie_Castle_01.jpg",
+    "image": "",
     "rating": 4.3,
     "reviewCount": 1800,
     "county": "Moray",
