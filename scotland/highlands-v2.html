@@ -53,7 +53,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
 --burgundy:#8b2335;--cream:#f0ebe0;--candlelight:#c9a84c;
---navy:#0f1628;--charcoal:#1a1d2e;
+--navy:#1e2640;--charcoal:#2a3048;
 --gold:#d4a84b;--pale-gold:#e8d5a3;
 --warm-white:#faf8f4;--border:#e8e8e8;
 --ink:#1a1714;--shadow:#2a2522;--twilight:#4a5568;
@@ -173,8 +173,8 @@ img{max-width:100%;display:block}
 .sites-view{position:relative;display:flex;gap:20px;transition:all .4s ease}
 .grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;flex:1}
 .map-view{display:none;height:70vh;min-height:500px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
-.sites-view.split .map-view{display:block;flex:0 0 60%;position:sticky;top:140px}
-.sites-view.split .grid-view{flex:1;grid-template-columns:1fr}
+.sites-view.split .grid-view{flex:0 0 60%;grid-template-columns:repeat(2,1fr)}
+.sites-view.split .map-view{display:block;flex:0 0 calc(40% - 20px);position:sticky;top:140px}
 .grid-view.hidden{display:none}
 
 #siteMap{width:100%;height:100%}
@@ -269,18 +269,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 .leaflet-popup-tip{background:var(--charcoal)}
 
 /* Hover Preview */
-.hover-preview{position:absolute;z-index:9999;background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:16px;width:280px;opacity:0;pointer-events:none;transition:opacity .2s ease;font-family:var(--sans)}
+.hover-preview{position:absolute;z-index:9999;background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:0;width:380px;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:var(--sans)}
 .hover-preview.show{opacity:1}
-.hover-preview h4{font-family:var(--display);font-size:1.1rem;color:#fff;margin-bottom:8px;line-height:1.2}
-.hover-preview .hp-gallery{display:flex;gap:6px;margin-bottom:12px}
-.hover-preview .hp-gallery img{width:60px;height:45px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,.06)}
-.hover-preview .hp-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:12px;font-size:.8rem}
-.hover-preview .hp-fact{display:flex;justify-content:space-between}
-.hover-preview .hp-fact-label{color:rgba(255,255,255,.5)}
-.hover-preview .hp-fact-value{color:rgba(255,255,255,.8);font-weight:500}
-.hover-preview .hp-actions{display:flex;justify-content:center}
-.hover-preview .hp-heart{background:none;border:1px solid rgba(255,255,255,.2);border-radius:var(--pill);padding:6px 16px;color:rgba(255,255,255,.6);font-size:.8rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px}
+.hover-preview h4{font-family:var(--display);font-size:1.2rem;color:#fff;margin-bottom:12px;line-height:1.2;padding:16px 16px 0}
+.hover-preview .hp-gallery{display:flex;gap:8px;margin-bottom:12px;padding:0 16px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.hover-preview .hp-gallery::-webkit-scrollbar{display:none}
+.hover-preview .hp-gallery img{width:320px;height:200px;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.hover-preview .hp-summary{padding:0 16px;margin-bottom:16px;font-size:.9rem;line-height:1.4;color:rgba(255,255,255,.65)}
+.hover-preview .hp-actions{display:flex;justify-content:space-between;align-items:center;padding:0 16px 16px;gap:12px}
+.hover-preview .hp-heart{background:none;border:1px solid rgba(255,255,255,.2);border-radius:var(--pill);padding:8px 16px;color:rgba(255,255,255,.6);font-size:.85rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;flex-shrink:0}
 .hover-preview .hp-heart:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.hover-preview .hp-explore{background:var(--burgundy);border:1px solid var(--burgundy);border-radius:var(--pill);padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;flex:1;text-align:center}
+.hover-preview .hp-explore:hover{background:#a62940;border-color:#a62940;transform:translateY(-1px)}
 </style>
 </head>
 <body>
@@ -612,16 +612,22 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
   window.setView=function(v){
     currentView=v;
     const sitesView=document.querySelector('.sites-view');
+    const gridView=document.getElementById('gridView');
+    const mapView=document.getElementById('mapView');
     document.querySelectorAll('.view-btn').forEach(b=>b.classList.toggle('active',b.dataset.view===v));
     
     if(v==='map'){
       sitesView.classList.add('split');
-      document.getElementById('gridView').classList.remove('hidden');
+      gridView.classList.remove('hidden');
+      // Ensure grid comes before map (left to right)
+      if(mapView.nextSibling!==gridView){
+        sitesView.insertBefore(gridView,mapView);
+      }
       if(!siteMap)initMap();
       if(siteMap)setTimeout(()=>siteMap.invalidateSize(),200);
     } else {
       sitesView.classList.remove('split');
-      document.getElementById('gridView').classList.remove('hidden');
+      gridView.classList.remove('hidden');
     }
     
     // Load more button should be hidden only in split view, not grid view
@@ -697,28 +703,27 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 
   function showHoverPreview(card,castle){
     const preview=createHoverPreview();
-    const gallery=(castle.gallery||[]).slice(1,4); // Skip main image, take next 2-3
+    const gallery=(castle.gallery||[]).slice(0,4); // Take first 4 gallery images
     const galleryHtml=gallery.length?'<div class="hp-gallery">'+gallery.map(img=>'<img src="'+img+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">').join('')+'</div>':'';
     
+    // Create 1-sentence summary (truncate description to ~120 chars)
+    const summary=(castle.description||'').substring(0,120).replace(/\s+\S*$/,'')+(castle.description&&castle.description.length>120?'...':'');
+    
     preview.innerHTML='<h4>'+castle.name+'</h4>'+galleryHtml+
-      '<div class="hp-facts">'+
-      '<div class="hp-fact"><span class="hp-fact-label">Type:</span><span class="hp-fact-value">'+(castle.type||'Castle')+'</span></div>'+
-      '<div class="hp-fact"><span class="hp-fact-label">Era:</span><span class="hp-fact-value">'+(castle.era||'Medieval')+'</span></div>'+
-      '<div class="hp-fact"><span class="hp-fact-label">Condition:</span><span class="hp-fact-value">'+(castle.condition||'Unknown')+'</span></div>'+
-      '<div class="hp-fact"><span class="hp-fact-label">Access:</span><span class="hp-fact-value">'+(castle.access==='free'?'Free':'Paid')+'</span></div>'+
-      (castle.rating?'<div class="hp-fact"><span class="hp-fact-label">Rating:</span><span class="hp-fact-value">★ '+castle.rating+'</span></div>':'')+
-      '</div>'+
-      '<div class="hp-actions"><button class="hp-heart" onclick="alert(\'Saved!\')">♡ Save</button></div>';
+      '<div class="hp-summary">'+summary+'</div>'+
+      '<div class="hp-actions">'+
+      '<button class="hp-heart" onclick="alert(\'Saved!\')">♡ Save</button>'+
+      '<a class="hp-explore" href="/site/'+slug(castle.name)+'.html" target="_blank">Explore</a>'+
+      '</div>';
 
-    // Position the preview
+    // Position the preview (updated for larger size)
     const rect=card.getBoundingClientRect();
-    const previewRect=preview.getBoundingClientRect();
     let left=rect.right+10;
     let top=rect.top;
     
-    // Boundary detection
-    if(left+280>window.innerWidth){left=rect.left-290;} // Show on left if no space on right
-    if(top+200>window.innerHeight){top=window.innerHeight-220;} // Adjust if too low
+    // Boundary detection for 380px width
+    if(left+390>window.innerWidth){left=rect.left-400;} // Show on left if no space on right
+    if(top+300>window.innerHeight){top=window.innerHeight-320;} // Adjust if too low
     if(left<0){left=10;} // Minimum left margin
     if(top<0){top=10;} // Minimum top margin
     
