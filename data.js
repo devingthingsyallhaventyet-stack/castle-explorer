@@ -7955,7 +7955,7 @@ const CASTLES = [
     "condition": "partial ruin",
     "description": "A massive star-shaped fort guarding Kinsale harbour, Charles Fort was built after the Williamite War. One of the largest military forts in Ireland, it saw action during the 1690 Siege of Kinsale.",
     "history": "Charles Hoy Fort was an American writer and researcher who specialized in anomalous phenomena. The terms \"Fortean\" and \"Forteana\" are sometimes used to characterize various such phenomena. Fort's books sold well and are still in print. His work continues to inspire admirers, who refer to themselves as \"Forteans\", and has influenced some aspects of science fiction.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Fort_charles_1920.jpg/500px-Fort_charles_1920.jpg",
+    "image": "https://img.castlecore.uk/charles-fort-2.jpg",
     "rating": 4.5,
     "reviewCount": 3200,
     "county": "County Cork",
