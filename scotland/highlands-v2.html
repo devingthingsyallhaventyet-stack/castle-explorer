@@ -21,7 +21,7 @@
 @font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url(/fonts/playfair-italic-latin.woff2) format('woff2')}
 </style>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<!-- Leaflet CSS removed -->
 
 <script type="application/ld+json">
 {
@@ -155,10 +155,7 @@ img{max-width:100%;display:block}
 .sites-search::placeholder{color:#999}
 .results-count{font-size:.78rem;color:#888}
 
-.view-toggle{display:flex;border:1px solid #ddd;border-radius:var(--pill);overflow:hidden}
-.view-btn{padding:8px 16px;font-size:.8rem;font-weight:600;font-family:var(--sans);background:transparent;color:#666;border:none;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px}
-.view-btn.active{background:var(--burgundy);color:#fff}
-.view-btn:not(.active):hover{color:#1a1714}
+/* View toggle CSS removed */
 
 .filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
 .filter-chip{padding:6px 14px;border-radius:var(--pill);border:1px solid #ddd;background:transparent;color:#666;font-family:var(--sans);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .2s}
@@ -170,14 +167,8 @@ img{max-width:100%;display:block}
 .sort-btn:hover,.sort-btn.active{color:var(--candlelight);border-color:rgba(201,168,76,.3)}
 
 /* Grid view */
-.sites-view{position:relative;display:flex;gap:20px;transition:all .4s ease}
-.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;flex:1}
-.map-view{display:none;height:70vh;min-height:500px;border-radius:var(--radius);overflow:hidden;border:1px solid #e8e8e8}
-.sites-view.split .grid-view{flex:0 0 60%;grid-template-columns:repeat(2,1fr)}
-.sites-view.split .map-view{display:block;flex:0 0 calc(40% - 20px);position:sticky;top:140px}
-.grid-view.hidden{display:none}
-
-#siteMap{width:100%;height:100%}
+.sites-view{position:relative}
+.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
 
 .site-card{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid #e8e8e8;transition:all .3s;display:flex;flex-direction:column}
 .site-card:hover{border-color:var(--candlelight);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
@@ -260,13 +251,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
 @media(max-width:480px){.footer-top{grid-template-columns:1fr}.sites-search{width:100%}.sites-toolbar{flex-direction:column;align-items:stretch}}
 
-/* Leaflet overrides */
-.leaflet-popup-content-wrapper{border-radius:10px;font-family:var(--sans);background:#fff;color:#1a1714;border:1px solid #e8e8e8;box-shadow:0 12px 40px rgba(0,0,0,.15)}
-.leaflet-popup-content{margin:12px 16px;font-size:.85rem;line-height:1.5}
-.leaflet-popup-content h4{font-family:var(--display);font-size:1rem;color:#1a1714;margin-bottom:2px}
-.leaflet-popup-content a{color:var(--candlelight);font-weight:600}
-.leaflet-popup-content img{border-radius:6px;margin-bottom:8px}
-.leaflet-popup-tip{background:#fff}
+/* Leaflet CSS removed */
 
 /* Hover Preview */
 .hover-preview{position:absolute;z-index:9999;background:#fff;border:1px solid #e8e8e8;border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.15);padding:0;width:380px;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:var(--sans)}
@@ -361,10 +346,6 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 <input type="text" class="sites-search" id="siteSearch" placeholder="Search sites..." autocomplete="off">
 <span class="results-count" id="resultsCount"></span>
 </div>
-<div class="view-toggle">
-<button class="view-btn active" data-view="grid" onclick="setView('grid')">☷ Grid</button>
-<button class="view-btn" data-view="map" onclick="setView('map')">🗺 Map</button>
-</div>
 </div>
 
 <div class="filter-row" id="filterRow"></div>
@@ -377,7 +358,6 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 
 <div class="sites-view">
 <div class="grid-view" id="gridView"></div>
-<div class="map-view" id="mapView"><div id="siteMap"></div></div>
 </div>
 <button class="load-more" id="loadMore" onclick="showMore()">Show More Sites</button>
 </section>
@@ -513,7 +493,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Leaflet JS removed -->
 <script src="/data.js"></script>
 <script>
 (function(){
@@ -564,8 +544,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
     filterRow.appendChild(b);
   });
 
-  let activeFilters=new Set([0]),curSort='rating',searchQ='',shown=24,currentView='grid'; // Start with "All" active
-  let siteMap=null,mapMarkers=null;
+  let activeFilters=new Set([0]),curSort='rating',searchQ='',shown=24; // Start with "All" active
 
   filterRow.addEventListener('click',e=>{
     if(!e.target.classList.contains('filter-chip'))return;
@@ -608,48 +587,8 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
   document.getElementById('siteSearch').addEventListener('input',function(){searchQ=this.value.toLowerCase().trim();shown=24;render()});
   window.showMore=function(){shown+=24;render()};
 
-  // ===== VIEW TOGGLE =====
-  window.setView=function(v){
-    currentView=v;
-    const sitesView=document.querySelector('.sites-view');
-    const gridView=document.getElementById('gridView');
-    const mapView=document.getElementById('mapView');
-    document.querySelectorAll('.view-btn').forEach(b=>b.classList.toggle('active',b.dataset.view===v));
-    
-    if(v==='map'){
-      sitesView.classList.add('split');
-      gridView.classList.remove('hidden');
-      // Ensure grid comes before map (left to right)
-      if(mapView.nextSibling!==gridView){
-        sitesView.insertBefore(gridView,mapView);
-      }
-      if(!siteMap)initMap();
-      if(siteMap)setTimeout(()=>siteMap.invalidateSize(),200);
-    } else {
-      sitesView.classList.remove('split');
-      gridView.classList.remove('hidden');
-    }
-    
-    // Load more button should be hidden only in split view, not grid view
-    document.getElementById('loadMore').classList.toggle('hidden',v==='map');
-  };
-
-  function initMap(){
-    siteMap=L.map('siteMap',{scrollWheelZoom:true}).setView([57.3,-5.0],7);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
-      attribution:'© <a href="https://www.openstreetmap.org/copyright">OSM</a> © <a href="https://carto.com/">CARTO</a>',maxZoom:18
-    }).addTo(siteMap);
-    const icon=L.divIcon({className:'',html:'<div style="width:10px;height:10px;background:#c9a84c;border:2px solid rgba(255,255,255,.8);border-radius:50%;box-shadow:0 0 10px rgba(201,168,76,.5)"></div>',iconSize:[14,14],iconAnchor:[7,7]});
-    mapMarkers=L.featureGroup();
-    all.forEach(c=>{
-      if(!c.lat||!c.lng)return;
-      const img=getImg(c);
-      const imgH=img?'<img src="'+img+'" alt="'+c.name+'" style="width:200px;height:120px;object-fit:cover;border-radius:6px;margin-bottom:8px" onerror="this.style.display=\'none\'">':'';
-      L.marker([c.lat,c.lng],{icon}).bindPopup('<div>'+imgH+'<h4><a href="/site/'+slug(c.name)+'.html">'+c.name+'</a></h4><p style="margin:4px 0 0;font-size:.78rem;color:rgba(255,255,255,.45)">'+(c.county||'')+' · '+(c.type||'Castle')+(c.rating?' · ★'+c.rating:'')+'</p></div>',{maxWidth:240}).addTo(mapMarkers);
-    });
-    mapMarkers.addTo(siteMap);
-    if(all.filter(c=>c.lat&&c.lng).length)siteMap.fitBounds(mapMarkers.getBounds().pad(0.08));
-  }
+  // ===== MAP REMOVED =====
+  // All map-related functionality removed for grid-only view
 
   // ===== RENDER GRID =====
   function render(){
@@ -684,7 +623,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
         '</div></a>';
     }).join('');
     const btn=document.getElementById('loadMore');
-    if(currentView==='grid')btn.classList.toggle('hidden',shown>=list.length);
+    btn.classList.toggle('hidden',shown>=list.length);
     
     // Re-add hover listeners after render
     setTimeout(addHoverListeners,10);
@@ -693,17 +632,29 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 
   // ===== HOVER PREVIEW =====
   let hoverPreview=null;
+  let hideTimer=null;
   function createHoverPreview(){
     if(hoverPreview)return hoverPreview;
     hoverPreview=document.createElement('div');
     hoverPreview.className='hover-preview';
     document.body.appendChild(hoverPreview);
+    
+    // Add hover listeners to preview itself
+    hoverPreview.addEventListener('mouseenter',function(){
+      if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
+    });
+    hoverPreview.addEventListener('mouseleave',function(){
+      hoverPreview.classList.remove('show');
+    });
+    
     return hoverPreview;
   }
 
   function showHoverPreview(card,castle){
+    if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
+    
     const preview=createHoverPreview();
-    const gallery=(castle.gallery||[]).slice(0,4); // Take first 4 gallery images
+    const gallery=(castle.gallery||[]).slice(1,5); // Skip first image (index 0), take next 4
     const galleryHtml=gallery.length?'<div class="hp-gallery">'+gallery.map(img=>'<img src="'+img+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">').join('')+'</div>':'';
     
     // Create 1-sentence summary (truncate description to ~120 chars)
@@ -733,7 +684,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
   }
 
   function hideHoverPreview(){
-    if(hoverPreview){hoverPreview.classList.remove('show');}
+    if(hideTimer){clearTimeout(hideTimer);}
+    hideTimer=setTimeout(()=>{
+      if(hoverPreview){hoverPreview.classList.remove('show');}
+      hideTimer=null;
+    },200);
   }
 
   function addHoverListeners(){
