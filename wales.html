@@ -98,276 +98,353 @@ img{max-width:100%;display:block}
 .btn-login{background:none;border:2px solid var(--border);color:var(--twilight);padding:7px 14px;border-radius:var(--pill);font-weight:500;font-size:.85rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:4px}.btn-login:hover{border-color:var(--burgundy);color:var(--burgundy)}
 .hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
-
-/* ========== MOBILE NAV ========== */
-@media (max-width: 768px) {
-.nav-center, .nav-search-wrap, .btn-login{display:none}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:10px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+.mob-search-wrap{padding:8px 0 12px}
+.mob-search-wrap input{width:100%;padding:10px 14px 10px 36px;border:1px solid var(--border);border-radius:var(--pill);font-size:.95rem;font-family:'Inter',sans-serif;outline:none}
+.mob-search-wrap{position:relative}
+.mob-search-wrap .nsi{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none}
+@media(max-width:768px){
+.nav-center{display:none}
+ .nav-right .btn-login{display:none!important}
+.nav-right .btn-explore{display:none}
 .hamburger{display:block}
-.mobile-menu.show{display:flex}
-.mobile-menu a{padding:16px 0;border-bottom:1px solid var(--border);color:var(--shadow);font-weight:500}
-.mobile-menu a:hover{color:var(--burgundy)}
 }
 
-/* ========== HERO ========== */
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#0f1628 0%,#1a1d2e 100%)}
-.hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.hero-content{position:relative;z-index:10;text-align:center;max-width:900px;padding:0 24px;margin-top:-64px}
-.hero h1{font-size:clamp(2.5rem,8vw,5.5rem);font-weight:400;margin-bottom:16px;line-height:1.1;letter-spacing:-2px}
-.hero-subtitle{font-size:clamp(1.1rem,3vw,1.4rem);color:#c5b8a5;margin-bottom:32px;font-family:var(--serif);font-style:italic;letter-spacing:0.5px}
-.hero-cta{display:inline-block;background:var(--burgundy);color:#fff;padding:14px 32px;border-radius:var(--pill);font-weight:600;font-size:1rem;transition:all .3s;text-decoration:none;letter-spacing:0.5px}
-.hero-cta:hover{background:#6e1a2a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(139,35,53,.3)}
-.hero-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to bottom,rgba(15,22,40,.7) 0%,rgba(15,22,40,.4) 50%,rgba(15,22,40,.8) 100%);z-index:5;pointer-events:none}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-60px);transition:opacity .8s ease,transform .8s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(60px);transition:opacity .8s ease,transform .8s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.reveal-scale{opacity:0;transform:scale(.9);transition:opacity .8s ease,transform .8s ease}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
 
 /* ========== STORY SECTIONS ========== */
-.story-section{position:relative;height:100vh;min-height:700px;overflow:hidden;display:flex;align-items:center}
-.story-image{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
-.story-image img{width:100%;height:100%;object-fit:cover}
-.story-text, .story-text-left, .story-text-bottom{position:absolute;z-index:10;max-width:500px;padding:24px;background:rgba(15,22,40,.9);border-radius:var(--radius);backdrop-filter:blur(12px)}
-.story-text{right:8%;top:50%;transform:translateY(-50%);text-align:right}
-.story-text-left{left:8%;top:50%;transform:translateY(-50%)}
-.story-text-bottom{left:50%;bottom:10%;transform:translateX(-50%);text-align:center}
-.story-headline{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px;line-height:1.2}
-.story-desc{font-size:1.1rem;line-height:1.6;color:#c5b8a5;margin-bottom:20px}
+.story-section{position:relative;width:100%;overflow:visible;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.story-image{width:100%;display:flex;justify-content:center;align-items:center;padding:0}
+.story-image img{width:100%;height:auto;display:block}
+/* Reserve space for story images to prevent CLS */
+.story-folklore .story-image img{aspect-ratio:1920/3713}
+.story-charlie .story-image img{aspect-ratio:2560/3840}
+.story-edinburgh .story-image img{aspect-ratio:2560/2114}
+.story-dunnottar .story-image img{aspect-ratio:2560/1914}
+.story-folklore{position:relative;z-index:10;margin-top:-55%}
+.story-folklore .story-image{width:100%;overflow:hidden;background:transparent}
+.story-folklore .story-image img{width:100%;min-width:100vw;max-width:none;object-fit:cover}
+.story-text{position:absolute;max-width:450px;text-align:right;right:8%;top:37%;z-index:2}
+.story-headline{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,.8)}
+.story-desc{font-family:var(--serif);font-size:clamp(1rem,1.5vw,1.2rem);font-style:italic;color:#fff;line-height:1.7;text-shadow:0 2px 16px rgba(0,0,0,.8)}
+@media(max-width:768px){
+  body{font-size:.9rem}
+  .hero h1{font-size:clamp(2.8rem,10vw,5rem) !important}
+  .hero h1 span{font-size:.45em !important}
+  .hero-quote{font-size:clamp(.95rem,3.5vw,1.1rem) !important}
+  .section-title{font-size:clamp(1.6rem,4vw,2.5rem) !important}
+  .section-subtitle{font-size:1rem !important}
+  .story-text,.story-text-left,.story-text-bottom{position:absolute !important;max-width:85% !important;padding:0 16px}
+  .story-folklore .story-text{top:45% !important;right:auto !important;left:50% !important;transform:translateX(-50%);text-align:center !important}
+  .story-charlie .story-text-left{top:8% !important;left:5% !important;right:auto !important;text-align:left !important;max-width:55% !important}
+  .charlie-portrait{width:150px !important;right:5% !important;top:8% !important}
+  .story-charlie .story-text-bottom{top:auto !important;bottom:8% !important;right:5% !important;left:auto !important;text-align:right !important;max-width:90% !important}
+  .story-charlie .story-text-bottom .story-headline{white-space:nowrap;font-size:clamp(1rem,4.5vw,1.6rem) !important}
+  .story-folklore{margin-top:-60% !important}
+  .story-charlie{margin-top:-55% !important}
+  .story-headline{font-size:clamp(1.2rem,5vw,1.8rem) !important;text-shadow:0 2px 20px rgba(0,0,0,.9),0 4px 40px rgba(0,0,0,.6) !important}
+  .story-desc{font-size:clamp(.9rem,3vw,1rem) !important;text-shadow:0 2px 16px rgba(0,0,0,.9),0 4px 30px rgba(0,0,0,.5) !important}
+  .story-banner{width:100% !important;bottom:-3% !important}
+  .story-edinburgh .story-text-bottom{top:auto !important;bottom:8% !important;left:5% !important;right:auto !important;text-align:left !important;max-width:80% !important}
+  .story-edinburgh .story-text-bottom .story-desc{font-size:.9rem !important}
+  .edinburgh-stamp{display:none !important}
+  .mary-portrait{display:none !important}
+  .story-banner{bottom:-6% !important}
+  .story-charlie .story-text-bottom .story-desc{font-size:.9rem !important}
+  .story-dunnottar .story-text-bottom{top:auto !important;bottom:8% !important;left:auto !important;right:5% !important;max-width:90% !important;text-align:right !important}
+  .story-dunnottar .story-headline{white-space:nowrap !important;font-size:clamp(1rem,4.5vw,1.6rem) !important}
+  .mobile-hide{display:none}
+  .story-dunnottar .story-text-bottom .story-desc{font-size:.85rem !important}
+  .story-dunnottar{margin-bottom:0 !important}
+}
 
-/* ========== STARS ANIMATION ========== */
-.stars{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
-.star{position:absolute;width:2px;height:2px;background:#c9a84c;border-radius:50%;animation:twinkle calc(var(--dur, 3s)) infinite;opacity:0}
-@keyframes twinkle{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
-.star:nth-child(odd){animation-delay:calc(var(--delay, 0s))}
+/* ========== SECTION TITLE ========== */
+.section-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--candlelight);margin-bottom:12px}
+.section-title{font-family:var(--display);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:20px}
+.section-subtitle{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,.7);max-width:600px;line-height:1.6}
 
-/* ========== CASTLE LISTINGS ========== */
-.castle-listings{background:var(--charcoal);padding:80px 24px;position:relative;z-index:100}
-.listings-inner{max-width:1280px;margin:0 auto}
-.listings-header{text-align:center;margin-bottom:60px}
-.listings-header h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
-.listings-subtitle{font-size:1.2rem;color:#a5998a;font-style:italic}
-.filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:40px}
-.filter-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#c5b8a5;padding:8px 16px;border-radius:var(--pill);font-size:.9rem;cursor:pointer;transition:all .2s}
-.filter-btn:hover, .filter-btn.active{background:var(--burgundy);border-color:var(--burgundy);color:#fff}
-.castle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
-.castle-card{background:rgba(255,255,255,.05);border-radius:var(--radius);overflow:hidden;transition:all .3s;border:1px solid rgba(255,255,255,.1)}
-.castle-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.08);border-color:rgba(201,168,76,.3)}
-.castle-image{width:100%;height:200px;object-fit:cover}
-.castle-info{padding:20px}
-.castle-name{font-size:1.3rem;margin-bottom:8px;color:#fff}
-.castle-county{font-size:.9rem;color:var(--candlelight);margin-bottom:8px}
-.castle-description{font-size:.95rem;color:#c5b8a5;line-height:1.5;margin-bottom:12px}
-.castle-tags{display:flex;flex-wrap:wrap;gap:6px}
-.castle-tag{background:rgba(201,168,76,.2);color:var(--candlelight);padding:4px 8px;border-radius:12px;font-size:.75rem}
+/* ========== 1. HERO ========== */
+.hero{position:relative;display:flex;align-items:flex-start;justify-content:center;overflow:hidden;width:100%;aspect-ratio:2560/2300;min-height:100vh;padding-top:40vh}
+.hero-bg{position:absolute;inset:0;will-change:transform;background:url('data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASogABUAPzmAu1OvJ6YisBgMAeAnCUAXqwHkqgXpLMKAo8lqoAD3JrOsmvEy6SXCz4FQYpgo+eMf1/plM1pqFfu4U4qVhYTP690F96R2DDcc8n4A') center/cover no-repeat}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;aspect-ratio:2560/1707}
+.hero-overlay{position:absolute;inset:0;z-index:2;background:
+  linear-gradient(180deg,rgba(15,22,40,.3) 0%,rgba(15,22,40,.1) 30%,rgba(15,22,40,.2) 60%,rgba(15,22,40,.3) 100%),
+  linear-gradient(90deg,rgba(15,22,40,.4) 0%,transparent 40%,transparent 60%,rgba(15,22,40,.4) 100%)}
+.hero-content{position:relative;z-index:3;text-align:center;padding:0 24px;max-width:900px}
+.hero-pre{font-family:var(--sans);font-size:.75rem;letter-spacing:6px;text-transform:uppercase;color:var(--candlelight);margin-bottom:20px;opacity:.9}
+.hero h1{font-family:var(--display);font-size:clamp(4rem,12vw,9rem);font-weight:900;color:#fff;line-height:.9;letter-spacing:-.02em;margin-bottom:20px;
+  text-shadow:0 4px 40px rgba(0,0,0,.5),0 0 120px rgba(201,168,76,.15)}
+.hero h1 span{display:block;font-size:.35em;font-weight:400;font-family:var(--serif);font-style:italic;letter-spacing:.05em;color:var(--pale-gold);margin-top:8px;line-height:1.4}
+.hero-quote{font-family:var(--serif);font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(255,255,255,.95);max-width:680px;margin:0 auto 40px;line-height:1.7;font-style:italic;text-shadow:0 2px 12px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.4)}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--candlelight);color:var(--navy);padding:14px 36px;border-radius:var(--pill);font-weight:700;font-size:.95rem;transition:all .3s;border:2px solid var(--candlelight)}
+.hero-cta:hover{background:transparent;color:var(--candlelight)}
+.hero-scroll{position:absolute;bottom:140px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.5);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;animation:float 3s ease-in-out infinite}
+.hero-scroll::after{content:'';width:1px;height:40px;background:linear-gradient(180deg,rgba(255,255,255,.5),transparent)}
+@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
-/* ========== REGIONS ========== */
-.regions{background:var(--navy);padding:80px 24px}
-.regions-inner{max-width:1280px;margin:0 auto}
-.regions-header{text-align:center;margin-bottom:60px}
-.regions-header h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
-.regions-subtitle{font-size:1.2rem;color:#a5998a;font-style:italic}
-.regions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.region-card{position:relative;height:300px;border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform .3s}
-.region-card:hover{transform:scale(1.02)}
-.region-image{width:100%;height:100%;object-fit:cover}
-.region-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to bottom,rgba(0,0,0,.3) 0%,rgba(0,0,0,.8) 100%)}
-.region-content{position:absolute;bottom:0;left:0;right:0;padding:24px;color:#fff}
-.region-name{font-size:1.8rem;margin-bottom:8px;font-weight:400}
-.region-desc{font-size:1rem;color:#c5b8a5;margin-bottom:12px}
-.region-count{font-size:.9rem;color:var(--candlelight)}
+/* ========== 2. THE LAND - Region Explorer ========== */
+.land{position:relative;padding:60px 0 80px;background:var(--navy);overflow:hidden}
+.land-bg{position:absolute;inset:0;opacity:1;background:url('img/wales/antique-map.webp') center/cover;pointer-events:none;z-index:1}
+.land-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
+.land .container{max-width:1045px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.land-header{text-align:center;margin-bottom:40px}
 
-/* ========== HISTORY CARDS ========== */
-.history-section{background:var(--charcoal);padding:80px 24px}
-.history-inner{max-width:1280px;margin:0 auto}
-.history-header{text-align:center;margin-bottom:60px}
-.history-header h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
-.history-subtitle{font-size:1.2rem;color:#a5998a;font-style:italic}
-.history-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:32px}
-.history-card{background:rgba(255,255,255,.05);border-radius:var(--radius);overflow:hidden;transition:all .3s;border:1px solid rgba(255,255,255,.1);text-decoration:none;color:inherit}
-.history-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.08);border-color:rgba(201,168,76,.3)}
+/* Region Cards Grid */
+.region-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.region-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;transition:transform .4s,box-shadow .4s}
+.region-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.region-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.region-card:hover img{transform:scale(1.08)}
+.region-card-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 40%,transparent 70%);transition:background .4s}
+.region-card:hover .region-card-overlay{background:linear-gradient(0deg,rgba(139,35,53,.9) 0%,rgba(139,35,53,.3) 40%,transparent 70%)}
+.region-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:2}
+.region-card-castles{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight);margin-bottom:8px}
+.region-card-name{font-family:var(--display);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:6px}
+.region-card-desc{font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(255,255,255,.85);line-height:1.5;overflow:hidden;opacity:0;max-height:0;transition:opacity .4s,max-height .4s}
+.region-card:hover .region-card-desc{opacity:1;max-height:200px}
+.region-card-arrow{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;color:var(--candlelight);font-size:1rem;opacity:0;transform:translateX(-8px);transition:opacity .3s,transform .3s}
+.region-card:hover .region-card-arrow{opacity:1;transform:translateX(0)}
+
+@media(max-width:1024px){
+  .region-grid{grid-template-columns:repeat(2,1fr)}
+  .land-bg{background-image:url('img/wales/antique-map-mobile.webp')}
+}
+@media(max-width:560px){
+  .region-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .region-card{aspect-ratio:2/3}
+  .region-card-content{padding:16px}
+  .region-card-name{font-size:1rem}
+  .region-card-desc{display:none}
+}
+
+/* ========== HISTORY ========== */
+.history{position:relative;padding:120px 0;background:var(--navy);overflow:visible}
+.history-bg{position:absolute;inset:0;opacity:1;background:url('img/wales/welsh-bg.webp') center/cover;pointer-events:none;z-index:1}
+.history-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
+.history .container{max-width:1300px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.history-header{text-align:center;margin-bottom:80px}
+.history-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:32px;position:relative}
+.history-card{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.12);border-radius:8px;overflow:hidden;transition:all .4s ease;cursor:pointer}
+.history-card:hover{transform:translateY(-6px) rotate(0deg)!important;border-color:var(--candlelight);box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 0 1px var(--candlelight);z-index:20}
+.history-card:nth-child(odd){transform:rotate(-.5deg)}
+.history-card:nth-child(even){transform:rotate(.5deg)}
 .hc-image{position:relative;height:240px;overflow:hidden}
-.hc-image img{width:100%;height:100%;object-fit:cover}
-.hc-date{position:absolute;top:16px;right:16px;background:var(--burgundy);color:#fff;padding:6px 12px;border-radius:var(--pill);font-size:.8rem;font-weight:600}
-.hc-body{padding:24px}
-.hc-body h3{font-size:1.4rem;margin-bottom:12px;color:#fff}
-.hc-body p{font-size:1rem;color:#c5b8a5;line-height:1.6;margin-bottom:16px}
-.hc-castles{font-size:.9rem;color:var(--candlelight);margin-bottom:16px}
-.hc-link{color:var(--candlelight);font-size:.9rem;font-weight:600;letter-spacing:0.5px}
+.hc-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.history-card:hover .hc-image img{transform:scale(1.05)}
+.hc-image::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(15,22,40,.9))}
+.hc-date{position:absolute;top:16px;left:16px;background:rgba(15,22,40,.8);color:var(--candlelight);font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:4px;border:1px solid rgba(201,168,76,.2);z-index:2}
+.hc-body{padding:24px;position:relative;margin-top:-40px;z-index:2}
+.hc-body h3{font-family:var(--display);font-size:1.5rem;color:var(--pale-gold);margin-bottom:10px;line-height:1.2}
+.hc-body p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.hc-castles{font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:16px;font-family:var(--sans)}
+.hc-castles strong{color:var(--candlelight)}
+.hc-link{display:inline-flex;align-items:center;gap:6px;color:var(--candlelight);font-family:var(--serif);font-size:.95rem;font-style:italic;transition:gap .3s}
+.history-card:hover .hc-link{gap:12px}
+@media(max-width:768px){
+  .history-grid{grid-template-columns:1fr}
+  .history-card:nth-child(odd),.history-card:nth-child(even){transform:none}
+}
+
+/* ========== CASTLES ========== */
+.castles{position:relative;padding:80px 0 40px;background:var(--charcoal);overflow:hidden}
+.castles .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.castles-header{text-align:center;margin-bottom:48px}
+.castle-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:48px}
+.castle-filters button{padding:8px 20px;border-radius:var(--pill);border:1px solid rgba(201,168,76,.25);background:transparent;color:var(--pale-gold);font-family:var(--sans);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s}
+.castle-filters button:hover,.castle-filters button.active{background:var(--candlelight);color:var(--navy);border-color:var(--candlelight)}
+.castle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.castle-card{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;transition:all .3s;cursor:pointer}
+.castle-card:hover{transform:translateY(-4px);border-color:var(--candlelight);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.castle-card-img{height:200px;overflow:hidden;background:var(--navy)}
+.castle-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.castle-card:hover .castle-card-img img{transform:scale(1.06)}
+.castle-card-body{padding:16px 20px}
+.castle-card-body h3{font-family:var(--display);font-size:1.15rem;color:var(--pale-gold);margin-bottom:4px}
+.castle-card-meta{display:flex;gap:12px;font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:8px}
+.castle-card-meta span{display:flex;align-items:center;gap:4px}
+.castle-card-body p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.castle-card-rating{color:var(--candlelight);font-size:.8rem;margin-top:8px}
+.load-more{display:block;margin:48px auto 0;padding:14px 40px;background:transparent;border:2px solid var(--candlelight);border-radius:var(--pill);color:var(--candlelight);font-family:var(--sans);font-weight:700;font-size:.9rem;cursor:pointer;transition:all .3s}
+.load-more:hover{background:var(--candlelight);color:var(--navy)}
 
 /* ========== FOOTER ========== */
-.footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,.1);padding:40px 24px;text-align:center;color:#a5998a}
-.divider{height:1px;background:linear-gradient(to right,transparent,rgba(255,255,255,.2),transparent);margin:0 auto 24px;width:200px}
+.footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:60px 24px 32px;text-align:center}
+.footer p{color:rgba(255,255,255,.35);font-size:.82rem}
+.footer a{color:var(--candlelight)}
 
-/* ========== REVEAL ANIMATIONS ========== */
-.reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.4,0,0.2,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-left{opacity:0;transform:translateX(-30px);transition:all 0.8s cubic-bezier(0.4,0,0.2,1)}
-.reveal-left.visible{opacity:1;transform:translateX(0)}
-.reveal-right{opacity:0;transform:translateX(30px);transition:all 0.8s cubic-bezier(0.4,0,0.2,1)}
-.reveal-right.visible{opacity:1;transform:translateX(0)}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
-.regions-grid{grid-template-columns:1fr}
-.region-card{height:250px}
-.mega-menu{min-width:320px}
-}
-
-@media (max-width: 768px) {
-.hero-content{margin-top:-32px;padding:0 16px}
-.story-text, .story-text-left, .story-text-bottom{position:relative;top:auto;left:auto;right:auto;bottom:auto;transform:none;margin:16px;max-width:none}
-.story-section{height:auto;min-height:500px;flex-direction:column;justify-content:flex-end;padding-bottom:40px}
-.filter-bar{flex-direction:column;align-items:center}
-.castle-grid{grid-template-columns:1fr}
-.history-grid{grid-template-columns:1fr}
-.nav-inner{padding:0 16px}
-.regions{padding:60px 16px}
-.castle-listings{padding:60px 16px}
-.history-section{padding:60px 16px}
-.mobile-hide{display:none}
-}
-
-@media (max-width: 560px) {
-.hero{min-height:500px}
-.hero h1{font-size:2.2rem}
-.hero-subtitle{font-size:1rem}
-.story-headline{font-size:1.6rem}
-.story-desc{font-size:1rem}
-.region-name{font-size:1.4rem}
-.castle-grid{grid-template-columns:1fr}
-}
 </style>
 </head>
-
 <body>
+
 <!-- ===== NAV ===== -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">
-      <span class="logo-mark">🏰</span>
-      <span>CastleCore</span>
-    </a>
-    
-    <div class="nav-center">
-      <div class="nav-dropdown mega-wrap">
-        <button class="nav-drop-btn">
-          Explore ↓
-        </button>
-        <div class="mega-menu">
-          <div class="mega-countries">
-            <button class="mega-country active" data-country="wales">Wales</button>
-            <button class="mega-country" data-country="england">England</button>
-            <button class="mega-country" data-country="scotland">Scotland</button>
-            <button class="mega-country" data-country="ireland">Ireland</button>
-            <button class="mega-country" data-country="northern-ireland">N. Ireland</button>
-          </div>
-          <div class="mega-regions">
-            <div class="mega-panel active" id="wales-panel">
-              <a href="/wales/north-wales">North Wales (49 sites)</a>
-              <a href="/wales/mid-wales">Mid Wales (28 sites)</a>
-              <a href="/wales/south-west-wales">South West Wales (52 sites)</a>
-              <a href="/wales/south-wales">South Wales (40 sites)</a>
-            </div>
-            <div class="mega-panel" id="england-panel">
-              <a href="/england/north">North England</a>
-              <a href="/england/midlands">Midlands</a>
-              <a href="/england/south">South England</a>
-              <a href="/england/west">West England</a>
-            </div>
-            <div class="mega-panel" id="scotland-panel">
-              <a href="/scotland/highlands">Highlands</a>
-              <a href="/scotland/lowlands">Lowlands</a>
-              <a href="/scotland/islands">Islands</a>
-              <a href="/scotland/borders">Borders</a>
-            </div>
-            <div class="mega-panel" id="ireland-panel">
-              <a href="/ireland/leinster">Leinster</a>
-              <a href="/ireland/munster">Munster</a>
-              <a href="/ireland/connacht">Connacht</a>
-              <a href="/ireland/ulster">Ulster</a>
-            </div>
-            <div class="mega-panel" id="northern-ireland-panel">
-              <a href="/northern-ireland/antrim">Antrim</a>
-              <a href="/northern-ireland/down">Down</a>
-              <a href="/northern-ireland/tyrone">Tyrone</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="nav-dropdown">
-        <button class="nav-drop-btn">
-          Discover ↓
-        </button>
-        <div class="nav-drop-panel">
-          <div class="drop-heading">Collections</div>
-          <a href="/collections/unesco-sites">UNESCO Sites</a>
-          <a href="/collections/film-locations">Film Locations</a>
-          <a href="/collections/royal-palaces">Royal Palaces</a>
-          <div class="drop-divider"></div>
-          <a href="/history">History Timeline</a>
-          <a href="/interactive-map">Interactive Map</a>
-        </div>
-      </div>
-      
-      <div class="nav-dropdown">
-        <button class="nav-drop-btn">
-          About ↓
-        </button>
-        <div class="nav-drop-panel">
-          <a href="/about">About CastleCore</a>
-          <a href="/methodology">Our Methodology</a>
-          <a href="/contact">Contact Us</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav-search-wrap">
-      <span class="nsi">🔍</span>
-      <input type="text" placeholder="Search castles..." id="nav-search">
-    </div>
-
-    <div class="nav-right">
-      <a href="/explore" class="btn-explore">Explore All</a>
-      <button class="btn-login">
-        <span>👤</span>
-        Login
-      </button>
-    </div>
-
-    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('show')">
-      ☰
-    </button>
-  </div>
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
+<div class="nav-center">
+<div class="nav-dropdown">
+<button class="nav-drop-btn">Sites <span style="font-size:.6rem">&#9660;</span></button>
+<div class="nav-drop-panel">
+<a href="search.html?type=castle">Castles</a>
+<a href="search.html?type=abbey">Abbeys</a>
+<a href="search.html?type=tower+house">Tower Houses</a>
+<a href="search.html?type=palace">Palaces</a>
+<a href="search.html?type=fort">Forts</a>
+<a href="search.html?type=fortified+house">Fortified Houses</a>
+</div>
+</div>
+<div class="nav-dropdown mega-wrap">
+<button class="nav-drop-btn">Regions <span style="font-size:.6rem">&#9660;</span></button>
+<div class="mega-menu">
+<div class="mega-countries">
+<button class="mega-country" data-country="england">England</button>
+<button class="mega-country" data-country="scotland">Scotland</button>
+<button class="mega-country active" data-country="wales">Wales</button>
+<button class="mega-country" data-country="ireland">Ireland</button>
+</div>
+<div class="mega-regions">
+<div class="mega-panel" data-country="england">
+<a href="region.html?id=london-surrey">London &amp; Surrey</a>
+<a href="region.html?id=south-east-england">South East</a>
+<a href="region.html?id=south-west-england">South West</a>
+<a href="region.html?id=northern-england">Northern England</a>
+<a href="region.html?id=midlands">The Midlands</a>
+<a href="region.html?id=yorkshire">Yorkshire</a>
+<a href="region.html?id=east-anglia">East Anglia</a>
+</div>
+<div class="mega-panel" data-country="scotland">
+<a href="region.html?id=scottish-highlands">Highlands</a>
+<a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
+</div>
+<div class="mega-panel active" data-country="wales">
+<a href="region.html?id=north-wales">North Wales</a>
+<a href="region.html?id=mid-wales">Mid Wales</a>
+<a href="region.html?id=south-west-wales">South West Wales</a>
+<a href="region.html?id=south-wales">South Wales</a>
+</div>
+<div class="mega-panel" data-country="ireland">
+<a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
+<a href="region.html?id=south-east-ireland">South East</a>
+<a href="region.html?id=south-west-ireland">South West</a>
+<a href="region.html?id=west-ireland">West</a>
+<a href="region.html?id=midlands-ireland">Midlands</a>
+<a href="region.html?id=north-west-ireland">North West</a>
+<a href="region.html?id=northern-ireland">Northern Ireland</a>
+</div>
+</div>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-drop-btn">Collections <span style="font-size:.6rem">&#9660;</span></button>
+<div class="nav-drop-panel">
+<a href="collection.html?id=top-rated">Top Rated</a>
+<a href="collection.html?id=hidden-gems">Hidden Gems</a>
+<a href="collection.html?id=haunted">Haunted</a>
+<a href="collection.html?id=filming-locations">Filming Locations</a>
+<a href="collection.html?id=free">Free to Visit</a>
+<a href="collection.html?id=romantic-ruins">Romantic Ruins</a>
+<a href="collection.html?id=photogenic">Most Photogenic</a>
+<div class="drop-divider"></div>
+<a href="collection.html">View all collections</a>
+</div>
+</div>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">Routes</a>
+<div class="nav-search-wrap">
+<span class="nsi">&#128269;</span>
+<input type="text" id="navSearch" placeholder="Search sites..." autocomplete="off">
+</div>
+</div>
+<div class="nav-right">
+<a href="explore.html" class="btn-explore">Explore Map</a>
+<button class="btn-login" onclick="alert('Login coming soon!')">Login</button>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+</div>
 </nav>
-
 <div class="mobile-menu">
-  <a href="/wales">Wales (169 castles)</a>
-  <a href="/england">England (544 castles)</a>
-  <a href="/scotland">Scotland (400 castles)</a>
-  <a href="/ireland">Ireland (800+ sites)</a>
-  <a href="/northern-ireland">Northern Ireland (100+ sites)</a>
-  <a href="/interactive-map">Interactive Map</a>
-  <a href="/history">History Timeline</a>
-  <a href="/about">About</a>
+<div class="mob-search-wrap"><span class="nsi">&#128269;</span><input type="text" id="mobNavSearch" placeholder="Search castles, regions..." autocomplete="off"></div>
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">Explore Map</a>
+<span class="mob-heading">Sites</span>
+<div class="mob-sub">
+<a href="search.html?type=castle">Castles</a>
+<a href="search.html?type=abbey">Abbeys</a>
+<a href="search.html?type=tower+house">Tower Houses</a>
+<a href="search.html?type=palace">Palaces</a>
+<a href="search.html?type=fort">Forts</a>
+</div>
+<span class="mob-heading">Wales</span>
+<div class="mob-sub">
+<a href="region.html?id=north-wales">North Wales</a>
+<a href="region.html?id=mid-wales">Mid Wales</a>
+<a href="region.html?id=south-west-wales">South West Wales</a>
+<a href="region.html?id=south-wales">South Wales</a>
+</div>
+<span class="mob-heading">Other Countries</span>
+<div class="mob-sub">
+<a href="england.html">England</a>
+<a href="scotland.html">Scotland</a>
+<a href="ireland.html">Ireland</a>
+</div>
+<span class="mob-heading">Collections</span>
+<div class="mob-sub">
+<a href="collection.html?id=top-rated">Top Rated</a>
+<a href="collection.html?id=hidden-gems">Hidden Gems</a>
+<a href="collection.html?id=haunted">Haunted</a>
+<a href="collection.html?id=free">Free to Visit</a>
+<a href="collection.html">View all</a>
+</div>
+<a href="trail.html">Routes</a>
+<a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:10px;font-weight:600;color:var(--twilight)">Login</a>
 </div>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <img src="img/wales/hero-wales.webp" 
-       srcset="img/wales/hero-wales-mobile.webp 800w, img/wales/hero-wales-desktop.webp 1400w, img/wales/hero-wales.webp 2560w" 
-       sizes="100vw" 
-       alt="Welsh castle landscape with mountains" 
-       class="hero-bg" 
-       fetchpriority="high"
-       width="2560" 
-       height="1440"
-       onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'">
+<section class="hero" id="hero">
+  <div class="hero-bg" data-parallax="0.3"><img src="img/wales/hero-wales.webp" srcset="img/wales/hero-wales-mobile.webp 1200w, img/wales/hero-wales-desktop.webp 1800w, img/wales/hero-wales.webp 2560w" sizes="100vw" alt="Wales hero landscape" width="2560" height="1707" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>Cymru - Land of Dragons</h1>
-    <p class="hero-subtitle">Wales has more castles per square mile than any country on Earth. Every valley tells a story of conquest, resistance, and the unbreakable Welsh spirit.</p>
-    <a href="#castle-listings" class="hero-cta">Explore 169 Castles</a>
+    <h1 class="reveal">WALES<span>169 Castles · Land of Dragons and Kings<br>More Per Square Mile Than Anywhere on Earth</span></h1>
+    <p class="hero-quote reveal">Wales didn't just build castles - it weaponized them. Every valley holds a fortress, every hilltop a ruin, every stone a story of conquest and defiance. This is the land where dragons were real and the castles were built to cage them.</p>
+    <a href="#castles" class="reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore →</a>
   </div>
+  <div class="hero-scroll">Scroll</div>
 </section>
 
 <!-- ===== STORY 1: THE RED DRAGON ===== -->
+<style>
+.story-dragon{position:relative;z-index:10;margin-top:-50%}
+.dragon-portrait{position:absolute;z-index:10;right:15%;top:8%;width:280px}
+.dragon-portrait img{width:100%;height:auto;display:block}
+.story-dragon .story-text-left{left:8%;right:auto;text-align:left;top:12%;z-index:10}
+.story-dragon .dragon-portrait{z-index:10}
+.story-edward{position:relative;z-index:9;margin-top:-2px}
+.story-edward .story-image{position:relative}
+.story-edward .story-image::before{content:'';position:absolute;top:0;left:0;right:0;height:20%;background:linear-gradient(180deg,#000 0%,transparent 100%);z-index:1;pointer-events:none}
+.stars{position:absolute;top:0;left:0;right:0;height:50%;z-index:2;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;animation:twinkle var(--dur,3s) ease-in-out infinite var(--delay,0s);box-shadow:0 0 4px rgba(255,255,255,.6)}
+@keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}
+</style>
 <section class="story-section story-dragon" id="story-dragon">
+  <div class="story-image">
+    <img src="img/wales/mabinogion-landscape.webp" srcset="img/wales/mabinogion-landscape-mobile.webp 800w, img/wales/mabinogion-landscape-desktop.webp 1400w, img/wales/mabinogion-landscape.webp 1920w" sizes="100vw" alt="Welsh mythological landscape from the Mabinogion" loading="lazy" width="1920" height="3713" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80'">
+  </div>
+  <div class="story-text reveal">
+    <h2 class="story-headline">Born with Music in Your Blood</h2>
+    <p class="story-desc">To be born Welsh is to inherit dragons in your dreams and bards in your bones. <span class="mobile-hide">This is the land of the Mabinogion, where Arthur pulled Excalibur from stone and Merlin wove magic into mountains. </span>Every Welsh child grows up knowing they descend from kings and storytellers, rebels and dreamers.<span class="mobile-hide"> That's not mythology. That's Thursday afternoon.</span></p>
+  </div>
+</section>
+
+<div style="height:80px;background:#000;position:relative;z-index:9"></div>
+
+<!-- ===== STORY 2: EDWARD I'S IRON RING ===== -->
+<section class="story-section story-edward" id="story-edward">
   <div class="stars">
     <div class="star" style="top:8%;left:5%;--dur:2.5s;--delay:0s"></div>
     <div class="star" style="top:15%;left:12%;--dur:3.2s;--delay:0.8s"></div>
@@ -382,221 +459,154 @@ img{max-width:100%;display:block}
     <div class="star" style="top:6%;left:82%;--dur:2.3s;--delay:1.0s"></div>
     <div class="star" style="top:16%;left:90%;--dur:3.6s;--delay:0.2s"></div>
   </div>
-  <div class="story-image">
-    <img src="img/wales/mabinogion-landscape.webp" 
-         srcset="img/wales/mabinogion-landscape-mobile.webp 800w, img/wales/mabinogion-landscape-desktop.webp 1400w, img/wales/mabinogion-landscape.webp 2560w" 
-         sizes="100vw" 
-         alt="Welsh mythological landscape from the Mabinogion" 
-         loading="lazy" 
-         width="2560" 
-         height="3840"
-         onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2560&q=80'">
+  <div class="story-image" style="position:relative;z-index:1">
+    <img src="img/wales/caernarfon-castle.webp" srcset="img/wales/caernarfon-castle-mobile.webp 800w, img/wales/caernarfon-castle-desktop.webp 1400w, img/wales/caernarfon-castle.webp 2560w" sizes="100vw" alt="Caernarfon Castle - Edward I's masterpiece" loading="lazy" width="2560" height="3840" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'">
   </div>
-  <div class="story-text-left">
-    <h2 class="story-headline">Born with Music in Your Blood</h2>
-    <p class="story-desc">To be born Welsh is to inherit dragons in your dreams and bards in your bones. <span class="mobile-hide">This is the land of the Mabinogion, where Arthur pulled Excalibur from stone and Merlin wove magic into mountains. </span>Every Welsh child grows up knowing they descend from kings and storytellers, rebels and dreamers.<span class="mobile-hide"> That's not mythology. That's Thursday afternoon.</span></p>
-    <a href="/wales/mabinogion-castles" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of the Mabinogion →</a>
+  <div style="position:absolute;top:0;left:0;right:0;height:12%;background:linear-gradient(to bottom,#000,transparent);z-index:1;pointer-events:none"></div>
+  <div class="edward-portrait" style="position:absolute;z-index:99;right:15%;top:14%;width:380px">
+    <img src="img/wales/edward-longshanks.webp" srcset="img/wales/edward-longshanks-mobile.webp 300w, img/wales/edward-longshanks.webp 600w" sizes="(max-width:768px) 150px, 380px" alt="Portrait of Edward I Longshanks in gold frame" width="600" height="753" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80'">
   </div>
-</section>
-
-<!-- ===== STORY 2: EDWARD I'S IRON RING ===== -->
-<section class="story-section story-edward" id="story-edward">
-  <div class="story-image">
-    <img src="img/wales/caernarfon-castle.webp" 
-         srcset="img/wales/caernarfon-castle-mobile.webp 800w, img/wales/caernarfon-castle-desktop.webp 1400w, img/wales/caernarfon-castle.webp 2560w" 
-         sizes="100vw" 
-         alt="Caernarfon Castle - Edward I's masterpiece" 
-         loading="lazy" 
-         width="2560" 
-         height="1914"
-         onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'">
-  </div>
-  <div class="story-text">
+  <div class="story-text story-text-left" style="position:absolute;z-index:99;left:8%;top:18%">
     <h2 class="story-headline">The Iron Ring of Conquest</h2>
     <p class="story-desc">After crushing the last Welsh prince in 1283, Edward I built the most sophisticated castle network in Europe to hold Wales forever. <span class="mobile-hide">Caernarfon, Conwy, Harlech, Beaumaris - each one a masterpiece of military engineering, a stone declaration that England had won and Wales would submit. </span>But the Welsh had other ideas.<span class="mobile-hide"> They always do.</span></p>
     <a href="/wales/edward-i-iron-ring" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Edward I's Iron Ring →</a>
+  </div>
+  <div class="story-text-bottom" style="position:absolute;z-index:99;right:8%;top:76%;text-align:right;max-width:500px">
+    <h2 class="story-headline">169 Castles. Every One a Battleground.</h2>
+    <p class="story-desc">More castles per square mile than anywhere on Earth - and every single one fought over, besieged, slighted, and rebuilt. Wales didn't just collect castles like trophies. It forged them in fire and blood, then used them to write the most defiant chapter in European history.</p>
+    <a href="site/caerphilly-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Caerphilly Castle →</a>
+  </div>
+  <div class="story-banner" style="position:absolute;z-index:99;bottom:-8%;left:0;right:0;width:100%;pointer-events:none">
+    <img src="img/wales/welsh-banner.webp" srcset="img/wales/welsh-banner-mobile.webp 800w, img/wales/welsh-banner-desktop.webp 1400w, img/wales/welsh-banner.webp 1920w" sizes="100vw" alt="Welsh dragon banner" style="width:100%;height:auto" width="1920" height="346" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&q=80'">
   </div>
 </section>
 
 <!-- ===== STORY 3: OWAIN GLYNDŴR'S REVOLT ===== -->
 <section class="story-section story-glyndwr" id="story-glyndwr">
-  <div class="stars">
-    <div class="star" style="top:8%;left:15%;--dur:2.5s;--delay:0.5s"></div>
-    <div class="star" style="top:25%;left:25%;--dur:3.2s;--delay:1.2s"></div>
-    <div class="star" style="top:5%;left:45%;--dur:2.8s;--delay:0.8s"></div>
-    <div class="star" style="top:35%;left:55%;--dur:3.5s;--delay:0.3s"></div>
-    <div class="star" style="top:15%;left:75%;--dur:2.2s;--delay:2.1s"></div>
-    <div class="star" style="top:40%;left:85%;--dur:3.8s;--delay:0.6s"></div>
-  </div>
   <div class="story-image">
-    <img src="img/wales/glyndwr-landscape.webp" 
-         srcset="img/wales/glyndwr-landscape-mobile.webp 800w, img/wales/glyndwr-landscape-desktop.webp 1400w, img/wales/glyndwr-landscape.webp 2560w" 
-         sizes="100vw" 
-         alt="Welsh landscape during Glyndŵr's revolt" 
-         loading="lazy" 
-         width="2560" 
-         height="1600"
-         onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2560&q=80'">
+    <img src="img/wales/glyndwr-landscape.webp" srcset="img/wales/glyndwr-landscape-mobile.webp 800w, img/wales/glyndwr-landscape-desktop.webp 1400w, img/wales/glyndwr-landscape.webp 2560w" sizes="100vw" alt="Welsh landscape during Glyndŵr's revolt" loading="lazy" style="width:100%;min-width:100vw;object-fit:cover" width="2560" height="2114" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2560&q=80'">
   </div>
-  <div class="story-text-left">
+  <div class="glyndwr-stamp" style="position:absolute;z-index:99;right:5%;top:12%;width:250px;pointer-events:none">
+    <img src="img/wales/glyndwr-stamp.webp" alt="Owain Glyndŵr commemorative stamp" style="width:100%;height:auto" width="400" height="313" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80'">
+  </div>
+  <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:13%;text-align:left;max-width:500px">
     <h2 class="story-headline">The Last True Prince</h2>
-    <p class="story-desc">In 1400, Owain Glyndŵr lit a fire that burned across Wales for fifteen years. The scholar turned warrior nearly drove the English from Wales entirely. <span class="mobile-hide">He captured Edward's mighty castles, proclaimed himself Prince of Wales, and established the first Welsh parliament. </span>Though he vanished into legend, his dream of a free Wales never died.<span class="mobile-hide"> It just waited.</span></p>
+    <p class="story-desc">In 1400, Owain Glyndŵr lit a fire that burned across Wales for fifteen years. The scholar turned warrior nearly drove the English from Wales entirely.<span class="mobile-hide"> He captured Edward's mighty castles, proclaimed himself Prince of Wales, and established the first Welsh parliament. Though he vanished into legend, his dream of a free Wales never died. It just waited.</span></p>
     <a href="/wales/owain-glyndwr" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Glyndŵr's Castles →</a>
   </div>
-  <div class="glyndwr-portrait" style="position:absolute;z-index:99;right:8%;bottom:15%;width:300px">
-    <img src="img/wales/owain-glyndwr-portrait.webp" 
-         alt="Portrait of Owain Glyndŵr" 
-         style="width:100%;height:auto"
-         width="400" 
-         height="500"
-         onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80'">
+  <div class="mary-portrait" style="position:absolute;z-index:98;right:3%;bottom:0;width:525px">
+    <img src="img/wales/owain-glyndwr-portrait.webp" alt="Owain Glyndŵr portrait" style="width:100%;height:auto" width="800" height="840" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+  </div>
+  <div style="position:absolute;z-index:100;bottom:-5%;left:0;right:0;width:100%;pointer-events:none">
+    <img src="img/wales/red-dragon-border.webp" srcset="img/wales/red-dragon-border-mobile.webp 800w, img/wales/red-dragon-border.webp 1920w" sizes="100vw" alt="Red dragon border" style="width:100%;height:auto" width="1920" height="197" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&q=80'">
   </div>
 </section>
 
-<!-- ===== STORY 4: CAERPHILLY - GIANT OF THE SOUTH ===== -->
-<section class="story-section story-caerphilly" id="story-caerphilly">
-  <div class="story-image">
-    <img src="img/wales/caerphilly-castle.webp" 
-         srcset="img/wales/caerphilly-castle-mobile.webp 800w, img/wales/caerphilly-castle-desktop.webp 1400w, img/wales/caerphilly-castle.webp 2560w" 
-         sizes="100vw" 
-         alt="Caerphilly Castle - second largest in Europe" 
-         loading="lazy" 
-         width="2560" 
-         height="1440"
-         onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'">
-  </div>
-  <div class="story-text-bottom">
-    <h2 class="story-headline">Stone Leviathan of the Valleys</h2>
-    <p class="story-desc">Caerphilly Castle is the second largest fortress in Europe - bigger than Windsor, older than Edward's "perfect" castles. <span class="mobile-hide">Built by the Norman lord Gilbert de Clare to crush Llywelyn the Last, it's a testament to the scale of ambition and paranoia that Wales inspired in its would-be conquerors. </span>The fact that it still stands says everything about Welsh stone.<span class="mobile-hide"> And Welsh stubbornness.</span></p>
-    <a href="site/caerphilly-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Caerphilly Castle →</a>
-  </div>
-</section>
-
-<!-- ===== CASTLE LISTINGS ===== -->
-<section class="castle-listings" id="castle-listings">
-  <div class="listings-inner">
-    <div class="listings-header reveal">
-      <h2>169 Castle Sites in Wales</h2>
-      <p class="listings-subtitle">More castles per square mile than anywhere on Earth</p>
+<!-- ===== 4. THE CASTLES ===== -->
+<section class="castles" id="castles">
+  <div class="container">
+    <div class="castles-header reveal">
+      <div class="section-label">The Collection</div>
+      <h2 class="section-title" style="color:#fff">The Castles of Wales</h2>
+      <p class="section-subtitle" style="margin:0 auto">169 castle sites mapped and documented. More per square mile than any country on Earth.</p>
     </div>
-    
-    <div class="filter-bar reveal" style="transition-delay:.1s">
-      <button class="filter-btn active" data-filter="all">All (169 sites)</button>
-      <button class="filter-btn" data-filter="intact">Intact</button>
-      <button class="filter-btn" data-filter="ruin">Ruins</button>
-      <button class="filter-btn" data-filter="Gwynedd">Gwynedd</button>
-      <button class="filter-btn" data-filter="Pembrokeshire">Pembrokeshire</button>
-      <button class="filter-btn" data-filter="Powys">Powys</button>
-      <button class="filter-btn" data-filter="Carmarthenshire">Carmarthenshire</button>
-      <button class="filter-btn" data-filter="Monmouthshire">Monmouthshire</button>
-      <button class="filter-btn" data-filter="Anglesey">Anglesey</button>
+    <div class="castle-filters reveal" id="castle-filters">
+      <button class="active" data-filter="all">All (169)</button>
+      <button data-filter="Gwynedd">Gwynedd</button>
+      <button data-filter="Powys">Powys</button>
+      <button data-filter="Pembrokeshire">Pembrokeshire</button>
+      <button data-filter="Carmarthenshire">Carmarthenshire</button>
+      <button data-filter="Monmouthshire">Monmouthshire</button>
+      <button data-filter="Anglesey">Anglesey</button>
+      <button data-filter="Conwy">Conwy</button>
+      <button data-filter="intact">Intact</button>
+      <button data-filter="ruin">Ruins</button>
     </div>
-    
-    <div class="castle-grid" id="castle-grid">
-      <!-- Castles will be populated by JavaScript -->
-    </div>
+    <div class="castle-grid" id="castle-grid"></div>
+    <button class="load-more" id="load-more">Show More Castles</button>
   </div>
 </section>
 
-<!-- ===== REGIONS ===== -->
-<section class="regions">
-  <div class="regions-inner">
-    <div class="regions-header reveal">
-      <h2>Explore Wales by Region</h2>
-      <p class="regions-subtitle">Four distinct landscapes, four different stories</p>
+<!-- ===== THE LAND - Region Cards ===== -->
+<section class="land" id="land">
+  <div class="land-bg"></div>
+  <div class="container">
+    <div class="land-header reveal">
+      <h2 class="section-title" style="color:#fff">Explore Wales's Castles by Region</h2>
     </div>
-    
-    <div class="regions-grid">
-      <div class="region-card reveal" style="transition-delay:0s">
-        <img src="img/wales/north-wales-region.webp" 
-             alt="North Wales - Snowdonia and Edward I's iron ring" 
-             class="region-image"
-             width="640" 
-             height="400"
-             onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=640&q=80'">
-        <div class="region-overlay"></div>
-        <div class="region-content">
-          <h3 class="region-name">North Wales</h3>
-          <p class="region-desc">Edward I's iron ring around Snowdonia - Caernarfon, Conwy, Harlech, and Beaumaris. The conquest castles.</p>
-          <p class="region-count">49 sites</p>
+
+    <div class="region-grid reveal" id="region-grid">
+      <a class="region-card" href="/wales/north-wales">
+        <img src="img/wales/north-wales.webp" srcset="img/wales/north-wales-mobile.webp 400w, img/wales/north-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="North Wales" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">49 sites</div>
+          <h3 class="region-card-name">North Wales</h3>
+          <p class="region-card-desc">Edward I's iron ring around Snowdonia - Caernarfon, Conwy, Harlech, and Beaumaris. The conquest castles that defined medieval warfare.</p>
         </div>
-      </div>
-      
-      <div class="region-card reveal" style="transition-delay:.1s">
-        <img src="img/wales/mid-wales-region.webp" 
-             alt="Mid Wales - Marcher lords and rural heartland" 
-             class="region-image"
-             width="640" 
-             height="400"
-             onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=640&q=80'">
-        <div class="region-overlay"></div>
-        <div class="region-content">
-          <h3 class="region-name">Mid Wales</h3>
-          <p class="region-desc">The wild heart of Wales where Norman Marcher lords carved out kingdoms and Welsh princes made their last stands.</p>
-          <p class="region-count">28 sites</p>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/wales/mid-wales">
+        <img src="img/wales/mid-wales.webp" srcset="img/wales/mid-wales-mobile.webp 400w, img/wales/mid-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Mid Wales" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">28 sites</div>
+          <h3 class="region-card-name">Mid Wales</h3>
+          <p class="region-card-desc">The wild heart of Wales where Norman Marcher lords carved out kingdoms and Welsh princes made their last stands in mountain fastnesses.</p>
         </div>
-      </div>
-      
-      <div class="region-card reveal" style="transition-delay:.2s">
-        <img src="img/wales/south-west-wales-region.webp" 
-             alt="South West Wales - Pembroke and coastal fortresses" 
-             class="region-image"
-             width="640" 
-             height="400"
-             onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=640&q=80'">
-        <div class="region-overlay"></div>
-        <div class="region-content">
-          <h3 class="region-name">South West Wales</h3>
-          <p class="region-desc">Pembroke's Norman stronghold, Carreg Cennen's mountain eyrie, and the castles that guarded the Irish Sea.</p>
-          <p class="region-count">52 sites</p>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/wales/south-west-wales">
+        <img src="img/wales/south-west-wales.webp" srcset="img/wales/south-west-wales-mobile.webp 400w, img/wales/south-west-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="South West Wales" loading="lazy" width="800" height="598" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">52 sites</div>
+          <h3 class="region-card-name">South West Wales</h3>
+          <p class="region-card-desc">Pembroke's Norman stronghold, Carreg Cennen's mountain eyrie, and the castles that guarded the Irish Sea from Viking and Norman alike.</p>
         </div>
-      </div>
-      
-      <div class="region-card reveal" style="transition-delay:.3s">
-        <img src="img/wales/south-wales-region.webp" 
-             alt="South Wales - Caerphilly, Cardiff, and the valleys" 
-             class="region-image"
-             width="640" 
-             height="400"
-             onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=640&q=80'">
-        <div class="region-overlay"></div>
-        <div class="region-content">
-          <h3 class="region-name">South Wales</h3>
-          <p class="region-desc">Caerphilly's massive walls, Cardiff's Victorian fantasy, and the industrial valleys' forgotten fortresses.</p>
-          <p class="region-count">40 sites</p>
+        <div class="region-card-arrow">→</div>
+      </a>
+      <a class="region-card" href="/wales/south-wales">
+        <img src="img/wales/south-wales.webp" srcset="img/wales/south-wales-mobile.webp 400w, img/wales/south-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="South Wales" loading="lazy" width="800" height="545" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <div class="region-card-overlay"></div>
+        <div class="region-card-content">
+          <div class="region-card-castles">40 sites</div>
+          <h3 class="region-card-name">South Wales</h3>
+          <p class="region-card-desc">Caerphilly's massive walls, Cardiff's Victorian fantasy, and the industrial valleys' forgotten fortresses that controlled Wales's coal heartland.</p>
         </div>
-      </div>
+        <div class="region-card-arrow">→</div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===== HISTORY CARDS ===== -->
-<section class="history-section">
-  <div class="history-inner">
+<!-- ===== 3. HISTORY ===== -->
+<section class="history" id="history" style="position:relative;overflow:visible">
+  <div class="history-bg"></div>
+
+  <div class="container">
     <div class="history-header reveal">
-      <h2>2,000 Years of Welsh History</h2>
-      <p class="history-subtitle">From Roman forts to Acts of Union</p>
+      <h2 class="section-title" style="color:#fff">Explore Wales's History</h2>
+      <p class="section-subtitle" style="margin:0 auto">Every siege, conquest, and rebellion left its mark in Welsh stone. These are the events that shaped a nation — and the castles that survived to tell the tale.</p>
     </div>
-    
     <div class="history-grid">
+
       <a href="/wales/roman-wales" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/wales/roman-segontium.webp" alt="Roman fort of Segontium" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/roman-segontium.webp" alt="Roman fort of Segontium" loading="lazy" width="800" height="585" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">78-410 AD</span>
         </div>
         <div class="hc-body">
           <h3>Roman Wales</h3>
           <p>For three centuries, Rome held Wales with iron discipline. Legions marched from Segontium to Caerleon, building roads, forts, and amphitheatres. When they left, the Welsh princes who emerged would claim descent from both Roman generals and Celtic gods.</p>
-          <div class="hc-castles"><strong>12 sites</strong> — Segontium, Caerleon, Dolaucothi…</div>
+          <div class="hc-castles"><strong>12 sites</strong> — Segontium, Caerleon, Dolaucothi, Y Gaer…</div>
           <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
-      <a href="/wales/norman-marcher-lords" class="history-card reveal" style="transition-delay:.1s">
+      <a href="/wales/norman-marcher-lords" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="img/wales/chepstow-castle.webp" alt="Chepstow Castle - first stone castle in Wales" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+          <img src="img/wales/chepstow-castle.webp" alt="Chepstow Castle - first stone castle in Wales" loading="lazy" width="800" height="841" style="object-position:top" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
           <span class="hc-date">1067-1283</span>
         </div>
         <div class="hc-body">
@@ -607,10 +617,9 @@ img{max-width:100%;display:block}
         </div>
       </a>
 
-      <a href="/wales/llywelyn-ap-gruffudd" class="history-card reveal" style="transition-delay:0s">
+      <a href="/wales/llywelyn-ap-gruffudd" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
-          <img src="img/wales/llywelyn-the-last.webp" alt="Llywelyn ap Gruffudd - the Last Prince" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/llywelyn-the-last.webp" alt="Llywelyn ap Gruffudd - the Last Prince" loading="lazy" width="506" height="710" style="object-position:center 20%" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">1246-1282</span>
         </div>
         <div class="hc-body">
@@ -623,8 +632,7 @@ img{max-width:100%;display:block}
 
       <a href="/wales/edward-i-conquest" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="img/wales/edward-longshanks.webp" alt="Edward I Longshanks" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/edward-longshanks.webp" alt="Edward I Longshanks" loading="lazy" width="800" height="150" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">1277-1295</span>
         </div>
         <div class="hc-body">
@@ -637,8 +645,7 @@ img{max-width:100%;display:block}
 
       <a href="/wales/owain-glyndwr-revolt" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/wales/glyndwr-banner.webp" alt="Owain Glyndŵr's banner" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/glyndwr-banner.webp" alt="Owain Glyndŵr's banner" loading="lazy" width="800" height="483" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">1400-1415</span>
         </div>
         <div class="hc-body">
@@ -651,8 +658,7 @@ img{max-width:100%;display:block}
 
       <a href="/wales/wars-of-the-roses" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
-          <img src="img/wales/henry-tudor.webp" alt="Henry Tudor - future Henry VII" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/henry-tudor.webp" alt="Henry Tudor - future Henry VII" loading="lazy" width="800" height="1024" style="object-position:center 20%" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">1455-1487</span>
         </div>
         <div class="hc-body">
@@ -663,10 +669,9 @@ img{max-width:100%;display:block}
         </div>
       </a>
 
-      <a href="/wales/acts-of-union" class="history-card reveal" style="transition-delay:.2s">
+      <a href="/wales/acts-of-union" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/wales/henry-viii.webp" alt="Henry VIII and the Acts of Union" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/henry-viii.webp" alt="Henry VIII and the Acts of Union" loading="lazy" width="800" height="600" style="object-position:top" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">1536-1542</span>
         </div>
         <div class="hc-body">
@@ -677,10 +682,9 @@ img{max-width:100%;display:block}
         </div>
       </a>
 
-      <a href="/wales/welsh-revival" class="history-card reveal" style="transition-delay:.3s">
+      <a href="/wales/welsh-revival" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="img/wales/modern-wales.webp" alt="Modern Welsh nationalism and castle restoration" loading="lazy" width="800" height="600"
-               onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+          <img src="img/wales/modern-wales.webp" alt="Modern Welsh nationalism and castle restoration" loading="lazy" width="800" height="775" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
           <span class="hc-date">1920s-Present</span>
         </div>
         <div class="hc-body">
@@ -690,6 +694,7 @@ img{max-width:100%;display:block}
           <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
+
     </div>
   </div>
 </section>
@@ -714,148 +719,124 @@ img{max-width:100%;display:block}
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.floater').forEach(el=>obs.observe(el));
 
   // ---- Parallax + Nav (batched to avoid forced reflow) ----
+  const pxEls = document.querySelectorAll('[data-parallax]');
   const nav = document.getElementById('nav');
   let ticking = false;
   window.addEventListener('scroll',()=>{
     if(!ticking){requestAnimationFrame(()=>{
       const sy = window.scrollY;
+      // Batch all reads first, then writes
       nav.classList.toggle('scrolled', sy > 50);
-      ticking = false;
-    })}
-    ticking = true;
-  });
+      pxEls.forEach(el=>{
+        const r = parseFloat(el.dataset.parallax)||0.3;
+        el.style.transform = `translateY(${sy * r * 0.5}px)`;
+      });
+      ticking=false;
+    });ticking=true}
+  },{passive:true});
 
-  // ---- Mega menu country switching ----
-  const countryBtns = document.querySelectorAll('.mega-country');
-  const panels = document.querySelectorAll('.mega-panel');
-  countryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      countryBtns.forEach(b => b.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(btn.dataset.country + '-panel').classList.add('active');
-    });
-  });
-
-  // ---- Castle filtering and rendering ----
-  const castleGrid = document.getElementById('castle-grid');
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  // ---- Castle Grid ----
+  const walesCastles = typeof CASTLES!=='undefined' ? CASTLES : [];
+  const grid = document.getElementById('castle-grid');
+  const loadBtn = document.getElementById('load-more');
   let currentFilter = 'all';
+  let shown = 0;
+  const PER_PAGE = window.innerWidth <= 768 ? 10 : 12;
 
-  function renderCastles(filter = 'all') {
-    if (!window.walesCastles) {
-      console.log('Wales castle data not loaded yet');
-      return;
-    }
-
-    let filtered = window.walesCastles;
-    
-    if (filter !== 'all') {
-      if (filter === 'intact') {
-        filtered = window.walesCastles.filter(c => c.condition === 'intact');
-      } else if (filter === 'ruin') {
-        filtered = window.walesCastles.filter(c => c.condition === 'ruin');
-      } else {
-        // County filter
-        filtered = window.walesCastles.filter(c => c.county === filter);
-      }
-    }
-
-    // Update filter button counts
-    filterBtns.forEach(btn => {
-      const btnFilter = btn.dataset.filter;
-      if (btnFilter === 'all') {
-        btn.textContent = 'All (' + window.walesCastles.length + ' sites)';
-      } else if (btnFilter === 'intact') {
-        const count = window.walesCastles.filter(c => c.condition === 'intact').length;
-        btn.textContent = 'Intact (' + count + ')';
-      } else if (btnFilter === 'ruin') {
-        const count = window.walesCastles.filter(c => c.condition === 'ruin').length;
-        btn.textContent = 'Ruins (' + count + ')';
-      } else {
-        // County
-        const count = window.walesCastles.filter(c => c.county === btnFilter).length;
-        if (count > 0) {
-          btn.textContent = btnFilter + ' (' + count + ')';
-        }
-      }
-    });
-
-    // Render castle cards
-    castleGrid.innerHTML = filtered.map(castle => {
-      const tags = castle.tags ? castle.tags.slice(0, 3).map(tag => 
-        '<span class="castle-tag">' + tag + '</span>'
-      ).join('') : '';
-
-      return '<div class="castle-card">' +
-        '<img src="' + (castle.image || 'https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=400&q=80') + '" ' +
-        'alt="' + castle.name + '" ' +
-        'class="castle-image" ' +
-        'width="400" height="200" ' +
-        'loading="lazy" ' +
-        'onerror="this.src=\'https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=400&q=80\'">' +
-        '<div class="castle-info">' +
-          '<h3 class="castle-name">' + castle.name + '</h3>' +
-          '<p class="castle-county">' + castle.county + ', Wales</p>' +
-          '<p class="castle-description">' + (castle.description || '').substring(0, 120) + '...</p>' +
-          '<div class="castle-tags">' + tags + '</div>' +
-        '</div>' +
-      '</div>';
-    }).join('');
+  function getFiltered(){
+    if(currentFilter==='all') return walesCastles;
+    if(currentFilter==='intact') return walesCastles.filter(c=>c.condition==='intact');
+    if(currentFilter==='ruin') return walesCastles.filter(c=>c.condition==='ruin');
+    return walesCastles.filter(c=>c.county===currentFilter);
   }
 
-  // Filter button event listeners
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentFilter = btn.dataset.filter;
-      renderCastles(currentFilter);
+  // Map filters to region page URLs
+  const regionLinks = {
+    'all': '/wales/all-castles',
+    'Gwynedd': '/wales/north-wales',
+    'Powys': '/wales/mid-wales',
+    'Pembrokeshire': '/wales/south-west-wales',
+    'Carmarthenshire': '/wales/south-west-wales',
+    'Monmouthshire': '/wales/south-wales',
+    'Anglesey': '/wales/north-wales',
+    'Conwy': '/wales/north-wales',
+    'intact': '/wales/all-castles?filter=intact',
+    'ruin': '/wales/all-castles?filter=ruin'
+  };
+
+  function renderCastles(reset){
+    if(reset){grid.innerHTML='';shown=0}
+    const filtered = getFiltered();
+    const batch = filtered.slice(shown, shown+PER_PAGE);
+    batch.forEach(c=>{
+      const card = document.createElement('div');
+      card.className='castle-card';
+      const stars = c.rating ? '★'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+      card.innerHTML=`
+        <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
+        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
+        <div class="castle-card-body">
+          <h3>${c.name}</h3>
+          <div class="castle-card-meta">
+            <span>${c.era||''}</span>
+            <span>${c.condition||''}</span>
+            <span>${c.county||''}</span>
+          </div>
+          <p>${c.description||''}</p>
+          ${stars?`<div class="castle-card-rating">${stars}</div>`:''}
+        </div>
+        </a>`;
+      grid.appendChild(card);
+    });
+    shown += batch.length;
+    const remaining = filtered.length - shown;
+    if(remaining > 0){
+      loadBtn.style.display = 'block';
+      const link = regionLinks[currentFilter] || '/wales/all-castles';
+      loadBtn.textContent = `View All ${filtered.length} Castles →`;
+      loadBtn.onclick = function(){ window.location.href = link; };
+    } else {
+      loadBtn.style.display = 'none';
+    }
+  }
+
+  document.getElementById('castle-filters').addEventListener('click',e=>{
+    if(e.target.tagName!=='BUTTON') return;
+    document.querySelectorAll('.castle-filters button').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    currentFilter = e.target.dataset.filter;
+    renderCastles(true);
+  });
+
+  renderCastles(true);
+
+  // ---- Region cards are static HTML now ----
+})();
+</script>
+<script>(function(){
+  document.querySelectorAll('.mega-country').forEach(btn => {
+    btn.addEventListener('mouseenter', function(){
+      const c = this.dataset.country;
+      this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p => p.classList.toggle('active', p.dataset.country === c));
     });
   });
 
-  // Initial render
-  renderCastles();
-
-  // Search functionality
-  const searchInput = document.getElementById('nav-search');
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      if (!query) {
-        renderCastles(currentFilter);
-        return;
+  const runNavSearch = (id) => {
+    const input = document.getElementById(id);
+    if(!input) return;
+    input.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        const q = input.value.trim();
+        if(q) window.location.href = `search.html?query=${encodeURIComponent(q)}`;
       }
-
-      const searchResults = window.walesCastles.filter(castle => 
-        castle.name.toLowerCase().includes(query) ||
-        castle.county.toLowerCase().includes(query) ||
-        (castle.description && castle.description.toLowerCase().includes(query))
-      );
-
-      // Render search results
-      castleGrid.innerHTML = searchResults.map(castle => {
-        const tags = castle.tags ? castle.tags.slice(0, 3).map(tag => 
-          '<span class="castle-tag">' + tag + '</span>'
-        ).join('') : '';
-
-        return '<div class="castle-card">' +
-          '<img src="' + (castle.image || 'https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=400&q=80') + '" ' +
-          'alt="' + castle.name + '" ' +
-          'class="castle-image" ' +
-          'width="400" height="200" ' +
-          'loading="lazy" ' +
-          'onerror="this.src=\'https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=400&q=80\'">' +
-          '<div class="castle-info">' +
-            '<h3 class="castle-name">' + castle.name + '</h3>' +
-            '<p class="castle-county">' + castle.county + ', Wales</p>' +
-            '<p class="castle-description">' + (castle.description || '').substring(0, 120) + '...</p>' +
-            '<div class="castle-tags">' + tags + '</div>' +
-          '</div>' +
-        '</div>';
-      }).join('');
     });
-  }
+  };
+  runNavSearch('navSearch');
+  runNavSearch('mobNavSearch');
 })();
 </script>
 </body>
