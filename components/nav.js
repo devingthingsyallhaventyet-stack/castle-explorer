@@ -18,7 +18,7 @@
       align-items: center !important;
       padding: 0 24px !important;
       ${isDark ? 
-        'background: rgba(15,22,40,.92) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; border-bottom: 1px solid rgba(255,255,255,.06) !important;' :
+        'background: #0f1628 !important; border-bottom: 1px solid rgba(255,255,255,.06) !important;' :
         'background: #fff !important; border-bottom: 1px solid #e8e8e8 !important;'
       }
     }
