@@ -47,7 +47,8 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      margin-left: auto;
+      flex: 1;
+      justify-content: center;
     }
     
     .nav-dropdown {
