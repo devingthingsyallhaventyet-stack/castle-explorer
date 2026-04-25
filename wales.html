@@ -608,7 +608,7 @@ img{max-width:100%;display:block}
   },{passive:true});
 
   // ---- Castle Grid ----
-  const walesCastles = typeof CASTLES!=='undefined' ? CASTLES : [];
+  const castleData = window.walesCastles || (typeof CASTLES!=='undefined' ? CASTLES : []);
   const grid = document.getElementById('castle-grid');
   const loadBtn = document.getElementById('load-more');
   let currentFilter = 'all';
@@ -616,10 +616,10 @@ img{max-width:100%;display:block}
   const PER_PAGE = window.innerWidth <= 768 ? 10 : 12;
 
   function getFiltered(){
-    if(currentFilter==='all') return walesCastles;
-    if(currentFilter==='intact') return walesCastles.filter(c=>c.condition==='intact');
-    if(currentFilter==='ruin') return walesCastles.filter(c=>c.condition==='ruin');
-    return walesCastles.filter(c=>c.county===currentFilter);
+    if(currentFilter==='all') return castleData;
+    if(currentFilter==='intact') return castleData.filter(c=>c.condition==='intact');
+    if(currentFilter==='ruin') return castleData.filter(c=>c.condition==='ruin');
+    return castleData.filter(c=>c.county===currentFilter);
   }
 
   // Map filters to region page URLs
