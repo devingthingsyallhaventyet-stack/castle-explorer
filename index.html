@@ -21,9 +21,9 @@ img{max-width:100%;display:block}
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
 .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0}
-.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-center{display:flex;align-items:center;gap:6px;margin-left:auto}
 .nav-dropdown{position:relative}
-.nav-dropdown>.nav-drop-btn,.nav-center>.nav-drop-btn{font-size:1rem;font-weight:600;color:var(--shadow);background:none;border:none;cursor:pointer;padding:8px 16px;font-family:'Playfair Display',serif;letter-spacing:.2px;transition:color .2s;display:flex;align-items:center}
+.nav-dropdown>.nav-drop-btn,.nav-center>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
 .nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
 .nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px;margin-top:0}
 .nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
@@ -285,7 +285,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
 <div class="nav-center">
 <div class="nav-dropdown">
-<button class="nav-drop-btn">Sites</button>
+<button class="nav-drop-btn">🏰 Sites</button>
 <div class="nav-drop-panel">
 <a href="search.html?type=castle">🏰 Castles</a>
 <a href="search.html?type=abbey">⛪ Abbeys</a>
@@ -296,7 +296,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </div>
 </div>
 <div class="nav-dropdown mega-wrap">
-<button class="nav-drop-btn">Regions</button>
+<button class="nav-drop-btn">🗺️ Regions</button>
 <div class="mega-menu">
 <div class="mega-countries">
 <button class="mega-country active" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</button>
@@ -334,7 +334,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 </div>
 </div>
 <div class="nav-dropdown">
-<button class="nav-drop-btn">Collections</button>
+<button class="nav-drop-btn">✨ Collections</button>
 <div class="nav-drop-panel">
 <a href="collection.html?id=top-rated">🏆 Top Rated</a>
 <a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
@@ -347,10 +347,7 @@ footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
 <a href="collection.html">View all collections →</a>
 </div>
 </div>
-<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">Routes</a>
-</div>
-<div class="nav-right">
-<a href="explore.html" class="btn-explore">Explore Map</a>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">🛤️ Routes</a>
 </div>
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
 </div>
