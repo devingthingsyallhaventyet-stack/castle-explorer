@@ -376,6 +376,31 @@ img{max-width:100%;display:block}
   <div class="hero-scroll">Scroll</div>
 </section>
 
+<!-- ===== THE CASTLES ===== -->
+<section class="castles" id="castles">
+  <div class="container">
+    <div class="castles-header reveal">
+      <div class="section-label">The Collection</div>
+      <h2 class="section-title" style="color:#fff">The Castles of Ireland</h2>
+      <p class="section-subtitle" style="margin:0 auto">779 castle sites mapped and documented. From prehistoric ring forts to Norman keeps to Gaelic tower houses — the most complete collection of Irish fortifications.</p>
+    </div>
+    <div class="castle-filters reveal" id="castle-filters">
+      <button class="active" data-filter="all">All (779)</button>
+      <button data-filter="The Wild Atlantic Way">Wild Atlantic Way</button>
+      <button data-filter="The Kingdom of Munster">Kingdom of Munster</button>
+      <button data-filter="Ireland's Ancient East">Ireland's Ancient East</button>
+      <button data-filter="The Heartlands">The Heartlands</button>
+      <button data-filter="Dublin & The Pale">Dublin & The Pale</button>
+      <button data-filter="The Northwest & Ulster">The Northwest & Ulster</button>
+      <button data-filter="intact">Intact</button>
+      <button data-filter="partial ruin">Partial Ruin</button>
+      <button data-filter="ruin">Ruin</button>
+    </div>
+    <div class="castle-grid" id="castle-grid"></div>
+    <button class="load-more" id="load-more">Show More Castles</button>
+  </div>
+</section>
+
 <!-- ===== THE LAND - Region Cards ===== -->
 <section class="land" id="land">
   <div class="land-bg"></div>
@@ -383,10 +408,9 @@ img{max-width:100%;display:block}
     <div class="land-header reveal">
       <h2 class="section-title" style="color:#fff">Explore Ireland's Castles by Region</h2>
     </div>
-
     <div class="region-grid reveal" id="region-grid">
       <a class="region-card" href="/ireland/wild-atlantic-way">
-        <img src="img/ireland/region-wild-atlantic.webp" srcset="img/ireland/region-wild-atlantic-mobile.webp 400w, img/ireland/region-wild-atlantic.webp 800w" sizes="(max-width:560px) 45vw, 33vw" alt="The Wild Atlantic Way" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1515849645823-9bdbf3ae1b26?w=800&q=80'">
+        <img src="img/ireland/region-wild-atlantic.webp" alt="The Wild Atlantic Way" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1515849645823-9bdbf3ae1b26?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">203 sites</div>
@@ -396,7 +420,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/kingdom-of-munster">
-        <img src="img/ireland/region-munster.webp" srcset="img/ireland/region-munster-mobile.webp 400w, img/ireland/region-munster.webp 800w" sizes="(max-width:560px) 45vw, 33vw" alt="The Kingdom of Munster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
+        <img src="img/ireland/region-munster.webp" alt="The Kingdom of Munster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">140 sites</div>
@@ -406,7 +430,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/irelands-ancient-east">
-        <img src="img/ireland/region-ancient-east.webp" srcset="img/ireland/region-ancient-east-mobile.webp 400w, img/ireland/region-ancient-east.webp 800w" sizes="(max-width:560px) 45vw, 33vw" alt="Ireland's Ancient East" loading="lazy" width="800" height="598" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-ancient-east.webp" alt="Ireland's Ancient East" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">142 sites</div>
@@ -416,7 +440,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/the-heartlands">
-        <img src="img/ireland/region-heartlands.webp" srcset="img/ireland/region-heartlands-mobile.webp 400w, img/ireland/region-heartlands.webp 800w" sizes="(max-width:560px) 45vw, 33vw" alt="The Heartlands" loading="lazy" width="800" height="545" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-heartlands.webp" alt="The Heartlands" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">146 sites</div>
@@ -426,7 +450,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/dublin-and-the-pale">
-        <img src="img/ireland/region-dublin-pale.webp" srcset="img/ireland/region-dublin-pale-mobile.webp 400w, img/ireland/region-dublin-pale.webp 800w" sizes="(max-width:560px) 45vw, 33vw" alt="Dublin & The Pale" loading="lazy" width="800" height="545" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-dublin-pale.webp" alt="Dublin & The Pale" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">50 sites</div>
@@ -436,7 +460,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/northwest-and-ulster">
-        <img src="img/ireland/region-northwest-ulster.webp" srcset="img/ireland/region-northwest-ulster-mobile.webp 400w, img/ireland/region-northwest-ulster.webp 800w" sizes="(max-width:560px) 45vw, 33vw" alt="The Northwest & Ulster" loading="lazy" width="800" height="545" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-northwest-ulster.webp" alt="The Northwest & Ulster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">98 sites</div>
@@ -449,7 +473,7 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- ===== 3. HISTORY ===== -->
+<!-- ===== HISTORY ===== -->
 <section class="history" id="history" style="position:relative;overflow:visible">
   <div class="history-bg"></div>
 
@@ -539,31 +563,6 @@ img{max-width:100%;display:block}
       </a>
 
     </div>
-  </div>
-</section>
-
-<!-- ===== 4. THE CASTLES ===== -->
-<section class="castles" id="castles">
-  <div class="container">
-    <div class="castles-header reveal">
-      <div class="section-label">The Collection</div>
-      <h2 class="section-title" style="color:#fff">The Castles of Ireland</h2>
-      <p class="section-subtitle" style="margin:0 auto">779 castle sites mapped and documented. From prehistoric ring forts to Norman keeps to Gaelic tower houses — the most complete collection of Irish fortifications.</p>
-    </div>
-    <div class="castle-filters reveal" id="castle-filters">
-      <button class="active" data-filter="all">All (779)</button>
-      <button data-filter="The Wild Atlantic Way">Wild Atlantic Way</button>
-      <button data-filter="The Kingdom of Munster">Kingdom of Munster</button>
-      <button data-filter="Ireland's Ancient East">Ireland's Ancient East</button>
-      <button data-filter="The Heartlands">The Heartlands</button>
-      <button data-filter="Dublin & The Pale">Dublin & The Pale</button>
-      <button data-filter="The Northwest & Ulster">The Northwest & Ulster</button>
-      <button data-filter="intact">Intact</button>
-      <button data-filter="partial ruin">Partial Ruin</button>
-      <button data-filter="ruin">Ruin</button>
-    </div>
-    <div class="castle-grid" id="castle-grid"></div>
-    <button class="load-more" id="load-more">Show More Castles</button>
   </div>
 </section>
 
