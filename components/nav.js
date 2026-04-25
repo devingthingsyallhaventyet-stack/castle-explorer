@@ -1,7 +1,7 @@
 (function() {
   // Get theme from script tag data attribute
   const currentScript = document.currentScript || document.querySelector('script[src*="nav.js"]');
-  const theme = currentScript?.getAttribute('data-theme') || 'light';
+  const theme = currentScript?.getAttribute('data-theme') || 'dark';
   const isDark = theme === 'dark';
 
   // CSS styles for both themes
