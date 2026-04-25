@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ireland — 779 Castles, Tower Houses & Ancient Ruins | CastleCore</title>
+<title>Ireland â€” 779 Castles, Tower Houses & Ancient Ruins | CastleCore</title>
 <meta name="description" content="Explore Ireland's 779 castles, tower houses, abbeys and ancient ruins. From Norman strongholds to Gaelic tower houses, discover 5,000 years of Irish heritage.">
 <meta name="keywords" content="castles in Ireland, Irish castles, tower houses Ireland, Rock of Cashel, Trim Castle, Blarney Castle, Bunratty, Norman castles Ireland">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://castlecore.uk/ireland">
-<meta property="og:title" content="Ireland — 779 Castles | CastleCore">
+<meta property="og:title" content="Ireland â€” 779 Castles | CastleCore">
 <meta property="og:description" content="Explore Ireland's 779 castles, tower houses, abbeys and ancient ruins. From Norman strongholds to Gaelic tower houses, discover 5,000 years of Irish heritage.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://castlecore.uk/ireland">
@@ -60,17 +60,57 @@ img{max-width:100%;display:block}
 ::selection{background:var(--candlelight);color:var(--navy)}
 
 /* ========== NAV ========== */
-
- .nav, 
-
-
-.logo-mark{font-size:1.2rem;line-height:1}
-
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px;color:var(--ink)}
+ .nav, .mobile-menu{font-family:'Inter',sans-serif;}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:"Playfair Display",serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0;color:var(--ink)}
+.logo-mark{font-size:1.2rem;line-height:1}.nav-logo span{display:inline-flex;align-items:center}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px;margin-top:0}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:var(--shadow);transition:background .15s}
+.nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-drop-panel .drop-heading{padding:6px 18px 4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);pointer-events:none}
+.nav-drop-panel .drop-divider{height:1px;background:var(--border);margin:4px 0}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:420px;z-index:9999;margin-top:0;padding:0;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:var(--warm-white);border-right:1px solid var(--border);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:var(--burgundy);background:var(--cream)}
+.mega-country.active{color:var(--burgundy);background:#fff;border-left-color:var(--burgundy);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:var(--shadow);transition:background .15s,color .15s;text-decoration:none}
+.mega-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-search-wrap{position:relative;flex-shrink:1;max-width:200px}
+.nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white);transition:border-color .2s}
+.nav-search-wrap input:focus{border-color:var(--candlelight);background:#fff;box-shadow:0 0 0 2px rgba(201,168,76,.12)}
+.nav-search-wrap .nsi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.85rem;pointer-events:none}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:background .2s;display:inline-block}
+.nav-right .btn-explore:hover{background:#6e1a2a}
+.btn-login{background:none;border:2px solid var(--border);color:var(--twilight);padding:7px 14px;border-radius:var(--pill);font-weight:500;font-size:.85rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:4px}.btn-login:hover{border-color:var(--burgundy);color:var(--burgundy)}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:10px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+.mob-search-wrap{padding:8px 0 12px}
+.mob-search-wrap input{width:100%;padding:10px 14px 10px 36px;border:1px solid var(--border);border-radius:var(--pill);font-size:.95rem;font-family:'Inter',sans-serif;outline:none}
+.mob-search-wrap{position:relative}
+.mob-search-wrap .nsi{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none}
 @media(max-width:768px){
-
- 
-
-
+.nav-center{display:none}
+ .nav-right .btn-login{display:none!important}
+.nav-right .btn-explore{display:none}
+.hamburger{display:block}
 }
 
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
@@ -194,24 +234,24 @@ img{max-width:100%;display:block}
 .load-more{display:block;margin:48px auto 0;padding:14px 40px;background:transparent;border:2px solid var(--candlelight);border-radius:var(--pill);color:var(--candlelight);font-family:var(--sans);font-weight:700;font-size:.9rem;cursor:pointer;transition:all .3s}
 .load-more:hover{background:var(--candlelight);color:var(--navy)}
 
-/* ========== 
-.
-.
+/* ========== FOOTER ========== */
+.footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:60px 24px 32px;text-align:center}
+.footer p{color:rgba(255,255,255,.35);font-size:.82rem}
+.footer a{color:var(--candlelight)}
 
 </style>
 </head>
 <body>
-<div id="site-nav"></div><script src="/components/nav.js" data-theme="dark"></script>
 
 <!-- ===== NAV ===== -->
-
+<div id="site-nav"></div><script src="/components/nav.js"></script>
 <section class="hero" id="hero">
   <div class="hero-bg" data-parallax="0.3"><img src="img/ireland/hero-ireland.webp" srcset="img/ireland/hero-ireland-mobile.webp 1200w, img/ireland/hero-ireland-desktop.webp 1800w, img/ireland/hero-ireland.webp 2560w" sizes="100vw" alt="Ireland hero landscape" width="2560" height="1707" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-pre">CASTLECORE · IRELAND</div>
+    <div class="hero-pre">CASTLECORE Â· IRELAND</div>
     <h1 class="reveal">IRELAND<span>779 castles, tower houses & ancient ruins</span></h1>
-    <p class="hero-quote reveal">They say every stone in Ireland has a story. They're wrong — every stone has a thousand.</p>
+    <p class="hero-quote reveal">They say every stone in Ireland has a story. They're wrong â€” every stone has a thousand.</p>
     <a href="#castles" class="hero-cta reveal">Explore the Collection</a>
   </div>
   <div class="hero-scroll">Scroll</div>
@@ -223,7 +263,7 @@ img{max-width:100%;display:block}
     <div class="castles-header reveal">
       <div class="section-label">The Collection</div>
       <h2 class="section-title" style="color:#fff">The Castles of Ireland</h2>
-      <p class="section-subtitle" style="margin:0 auto">779 castle sites mapped and documented. From prehistoric ring forts to Norman keeps to Gaelic tower houses — the most complete collection of Irish fortifications.</p>
+      <p class="section-subtitle" style="margin:0 auto">779 castle sites mapped and documented. From prehistoric ring forts to Norman keeps to Gaelic tower houses â€” the most complete collection of Irish fortifications.</p>
     </div>
     <div class="castle-filters reveal" id="castle-filters">
       <button class="active" data-filter="all">All (779)</button>
@@ -256,9 +296,9 @@ img{max-width:100%;display:block}
         <div class="region-card-content">
           <div class="region-card-castles">203 sites</div>
           <h3 class="region-card-name">The Wild Atlantic Way</h3>
-          <p class="region-card-desc">Where crumbling tower houses cling to sea cliffs and castle ruins dissolve into bog and bracken. The west coast is Ireland's most dramatic — and most haunted — castle landscape.</p>
+          <p class="region-card-desc">Where crumbling tower houses cling to sea cliffs and castle ruins dissolve into bog and bracken. The west coast is Ireland's most dramatic â€” and most haunted â€” castle landscape.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">â†’</div>
       </a>
       <a class="region-card" href="/ireland/kingdom-of-munster">
         <img src="img/ireland/region-munster.webp?v=2" alt="The Kingdom of Munster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
@@ -268,7 +308,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">The Kingdom of Munster</h3>
           <p class="region-card-desc">From the Blarney Stone to the great Desmond strongholds, Munster's castles tell of feuding earls, pirate queens, and the last stand of Gaelic Ireland.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">â†’</div>
       </a>
       <a class="region-card" href="/ireland/irelands-ancient-east">
         <img src="img/ireland/region-ancient-east.webp?v=2" alt="Ireland's Ancient East" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
@@ -276,9 +316,9 @@ img{max-width:100%;display:block}
         <div class="region-card-content">
           <div class="region-card-castles">142 sites</div>
           <h3 class="region-card-name">Ireland's Ancient East</h3>
-          <p class="region-card-desc">The Norman heartland — where the first invaders raised mottes and built the great stone keeps that still dominate the Boyne Valley and the southeast.</p>
+          <p class="region-card-desc">The Norman heartland â€” where the first invaders raised mottes and built the great stone keeps that still dominate the Boyne Valley and the southeast.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">â†’</div>
       </a>
       <a class="region-card" href="/ireland/the-heartlands">
         <img src="img/ireland/region-heartlands.webp?v=2" alt="The Heartlands" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
@@ -288,7 +328,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">The Heartlands</h3>
           <p class="region-card-desc">Ireland's hidden interior, where tower houses rise from flat midlands pastures and ruined abbeys mark the footprint of medieval monastic power.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">â†’</div>
       </a>
       <a class="region-card" href="/ireland/dublin-and-the-pale">
         <img src="img/ireland/region-dublin-pale.webp?v=2" alt="Dublin & The Pale" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
@@ -296,9 +336,9 @@ img{max-width:100%;display:block}
         <div class="region-card-content">
           <div class="region-card-castles">50 sites</div>
           <h3 class="region-card-name">Dublin & The Pale</h3>
-          <p class="region-card-desc">The English stronghold — where Dublin Castle anchored colonial power and the great Anglo-Norman families built their marcher fortresses.</p>
+          <p class="region-card-desc">The English stronghold â€” where Dublin Castle anchored colonial power and the great Anglo-Norman families built their marcher fortresses.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">â†’</div>
       </a>
       <a class="region-card" href="/ireland/northwest-and-ulster">
         <img src="img/ireland/region-northwest-ulster.webp?v=2" alt="The Northwest & Ulster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
@@ -306,9 +346,9 @@ img{max-width:100%;display:block}
         <div class="region-card-content">
           <div class="region-card-castles">98 sites</div>
           <h3 class="region-card-name">The Northwest & Ulster</h3>
-          <p class="region-card-desc">The last Gaelic frontier — where O'Donnell and O'Neill chiefs defied the Crown from lake islands and clifftop strongholds until the Flight of the Earls.</p>
+          <p class="region-card-desc">The last Gaelic frontier â€” where O'Donnell and O'Neill chiefs defied the Crown from lake islands and clifftop strongholds until the Flight of the Earls.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">â†’</div>
       </a>
     </div>
   </div>
@@ -321,85 +361,85 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="history-header reveal">
       <h2 class="section-title" style="color:#fff">Explore Ireland's History</h2>
-      <p class="section-subtitle" style="margin:0 auto">From prehistoric ring forts to Norman castles, every invasion and rebellion left its mark in Irish stone. These are the epochs that shaped a nation — and the monuments that survived to tell the tale.</p>
+      <p class="section-subtitle" style="margin:0 auto">From prehistoric ring forts to Norman castles, every invasion and rebellion left its mark in Irish stone. These are the epochs that shaped a nation â€” and the monuments that survived to tell the tale.</p>
     </div>
     <div class="history-grid">
 
       <a href="/ireland/ring-forts" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
           <img src="img/ireland/ring-forts.webp?v=1" alt="Grianan of Aileach ring fort at sunset, Donegal" loading="lazy" width="800" height="534" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
-          <span class="hc-date">500 BC – 400 AD</span>
+          <span class="hc-date">500 BC â€“ 400 AD</span>
         </div>
         <div class="hc-body">
           <h3>Celtic Ireland & the Ring Forts</h3>
-          <p>Before castles, Ireland was a land of 40,000 ring forts — circular earthen enclosures called ráths and cashels. These weren't mere farms — they were the seats of Gaelic chieftains, defended homesteads in a landscape of cattle raids and tribal warfare.</p>
-          <div class="hc-castles"><strong>12 sites</strong> — Grianán of Aileach, Staigue Fort, Cahercommaun…</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <p>Before castles, Ireland was a land of 40,000 ring forts â€” circular earthen enclosures called rÃ¡ths and cashels. These weren't mere farms â€” they were the seats of Gaelic chieftains, defended homesteads in a landscape of cattle raids and tribal warfare.</p>
+          <div class="hc-castles"><strong>12 sites</strong> â€” GrianÃ¡n of Aileach, Staigue Fort, Cahercommaunâ€¦</div>
+          <span class="hc-link">Explore Collection â†’</span>
         </div>
       </a>
 
       <a href="/ireland/viking-age" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
           <img src="img/ireland/viking-age.webp?v=4" alt="Battle of Clontarf by Hugh Frazer, 1826" loading="lazy" width="800" height="451" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
-          <span class="hc-date">795 – 1014</span>
+          <span class="hc-date">795 â€“ 1014</span>
         </div>
         <div class="hc-body">
           <h3>The Viking Age</h3>
-          <p>The longships came first to plunder monasteries, then to stay. Norse raiders founded Dublin, Waterford, Wexford, Cork and Limerick as fortified trading towns — Ireland's first true urban settlements — before Brian Boru broke their power at Clontarf.</p>
-          <div class="hc-castles"><strong>6 sites</strong> — Dublin Castle (Norse foundations), Reginald's Tower…</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <p>The longships came first to plunder monasteries, then to stay. Norse raiders founded Dublin, Waterford, Wexford, Cork and Limerick as fortified trading towns â€” Ireland's first true urban settlements â€” before Brian Boru broke their power at Clontarf.</p>
+          <div class="hc-castles"><strong>6 sites</strong> â€” Dublin Castle (Norse foundations), Reginald's Towerâ€¦</div>
+          <span class="hc-link">Explore Collection â†’</span>
         </div>
       </a>
 
       <a href="/ireland/norman-invasion" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
           <img src="img/ireland/norman-invasion.webp?v=3" alt="Marriage of Strongbow and Aoife by Daniel Maclise" loading="lazy" width="800" height="488" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
-          <span class="hc-date">1169 – 1300</span>
+          <span class="hc-date">1169 â€“ 1300</span>
         </div>
         <div class="hc-body">
           <h3>The Norman Invasion</h3>
-          <p>When Strongbow landed at Waterford in 1170, he brought motte-and-bailey castles, stone keeps, and feudal ambition. Within a generation, Norman lords had raised Trim, Kilkenny, Carrickfergus and dozens more — the most concentrated castle-building campaign in Irish history.</p>
-          <div class="hc-castles"><strong>45 sites</strong> — Trim Castle, Kilkenny Castle, King John's Castle…</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <p>When Strongbow landed at Waterford in 1170, he brought motte-and-bailey castles, stone keeps, and feudal ambition. Within a generation, Norman lords had raised Trim, Kilkenny, Carrickfergus and dozens more â€” the most concentrated castle-building campaign in Irish history.</p>
+          <div class="hc-castles"><strong>45 sites</strong> â€” Trim Castle, Kilkenny Castle, King John's Castleâ€¦</div>
+          <span class="hc-link">Explore Collection â†’</span>
         </div>
       </a>
 
       <a href="/ireland/tower-houses" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
           <img src="img/ireland/tower-houses.webp?v=3" alt="Aughnanure Castle tower house, County Galway" loading="lazy" width="800" height="533" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
-          <span class="hc-date">1400 – 1600</span>
+          <span class="hc-date">1400 â€“ 1600</span>
         </div>
         <div class="hc-body">
           <h3>The Gaelic Tower Houses</h3>
           <p>Ireland's most distinctive contribution to castle architecture: thousands of small, fierce tower houses built by both Gaelic and Norman-Irish lords. There are more surviving tower houses in Ireland than anywhere else in Europe.</p>
-          <div class="hc-castles"><strong>180+ sites</strong> — Thoor Ballylee, Aughnanure, Dunguaire…</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>180+ sites</strong> â€” Thoor Ballylee, Aughnanure, Dunguaireâ€¦</div>
+          <span class="hc-link">Explore Collection â†’</span>
         </div>
       </a>
 
       <a href="/ireland/cromwell" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
           <img src="img/ireland/cromwell.webp?v=3" alt="Oliver Cromwell portrait by Robert Walker" loading="lazy" width="800" height="546" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
-          <span class="hc-date">1649 – 1653</span>
+          <span class="hc-date">1649 â€“ 1653</span>
         </div>
         <div class="hc-body">
           <h3>Cromwell's Conquest</h3>
           <p>Oliver Cromwell's campaign was the most devastating in Irish history. Castle after castle fell to his artillery and his policy of 'to Hell or to Connacht.' The sieges of Drogheda and Wexford became bywords for brutality, and Ireland's Gaelic order was broken forever.</p>
-          <div class="hc-castles"><strong>30+ sites</strong> — Drogheda, Wexford, Clonmel, Kilkenny…</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>30+ sites</strong> â€” Drogheda, Wexford, Clonmel, Kilkennyâ€¦</div>
+          <span class="hc-link">Explore Collection â†’</span>
         </div>
       </a>
 
       <a href="/ireland/great-houses" class="history-card reveal" style="transition-delay:.1s">
         <div class="hc-image">
-          <img src="img/ireland/great-houses.webp?v=4" alt="Castletown House, Celbridge — Ireland's grandest Palladian mansion" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
-          <span class="hc-date">1700 – 1920</span>
+          <img src="img/ireland/great-houses.webp?v=4" alt="Castletown House, Celbridge â€” Ireland's grandest Palladian mansion" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <span class="hc-date">1700 â€“ 1920</span>
         </div>
         <div class="hc-body">
           <h3>The Great Houses & Decline</h3>
-          <p>As castles became obsolete, the Anglo-Irish Ascendancy built grand country houses — Powerscourt, Castletown, Russborough. Many were burned during the War of Independence. Today they stand as monuments to a vanished ruling class.</p>
-          <div class="hc-castles"><strong>25+ sites</strong> — Powerscourt, Castletown, Kilkenny Castle…</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <p>As castles became obsolete, the Anglo-Irish Ascendancy built grand country houses â€” Powerscourt, Castletown, Russborough. Many were burned during the War of Independence. Today they stand as monuments to a vanished ruling class.</p>
+          <div class="hc-castles"><strong>25+ sites</strong> â€” Powerscourt, Castletown, Kilkenny Castleâ€¦</div>
+          <span class="hc-link">Explore Collection â†’</span>
         </div>
       </a>
 
@@ -407,7 +447,17 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- ===== 
+<!-- ===== FOOTER ===== -->
+<div id="site-footer"></div><script src="/components/footer.js"></script>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="data-ireland.js"></script>
+<script>
+(function(){
+  // ---- Intersection Observer for reveal animations ----
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
     })
   },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.floater').forEach(el=>obs.observe(el));
@@ -503,7 +553,7 @@ img{max-width:100%;display:block}
     batch.forEach(c=>{
       const card = document.createElement('div');
       card.className='castle-card';
-      const stars = c.rating ? '?'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const stars = c.rating ? 'â˜…'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
@@ -526,7 +576,7 @@ img{max-width:100%;display:block}
     if(remaining > 0){
       loadBtn.style.display = 'block';
       const link = regionLinks[currentFilter] || '/ireland/all-castles';
-      loadBtn.textContent = `View All ${filtered.length} Castles ?`;
+      loadBtn.textContent = `View All ${filtered.length} Castles â†’`;
       loadBtn.onclick = function(){ window.location.href = link; };
     } else {
       loadBtn.style.display = 'none';
@@ -547,7 +597,13 @@ img{max-width:100%;display:block}
 })();
 </script>
 <script>(function(){
-  document.querySelectorAll(');
+  document.querySelectorAll('.mega-country').forEach(btn => {
+    btn.addEventListener('mouseenter', function(){
+      const c = this.dataset.country;
+      this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p => p.classList.toggle('active', p.dataset.country === c));
+    });
   });
 
   const runNavSearch = (id) => {
@@ -565,6 +621,5 @@ img{max-width:100%;display:block}
   runNavSearch('mobNavSearch');
 })();
 </script>
-<div id="site-footer"></div><script src="/components/footer.js"></script>
 </body>
 </html>

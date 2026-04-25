@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -60,17 +60,57 @@ img{max-width:100%;display:block}
 ::selection{background:var(--candlelight);color:var(--navy)}
 
 /* ========== NAV ========== */
-
- .nav, 
-
-
-.logo-mark{font-size:1.2rem;line-height:1}
-
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px;color:var(--ink)}
+ .nav, .mobile-menu{font-family:'Inter',sans-serif;}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:"Playfair Display",serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0;color:var(--ink)}
+.logo-mark{font-size:1.2rem;line-height:1}.nav-logo span{display:inline-flex;align-items:center}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px;margin-top:0}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:var(--shadow);transition:background .15s}
+.nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-drop-panel .drop-heading{padding:6px 18px 4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);pointer-events:none}
+.nav-drop-panel .drop-divider{height:1px;background:var(--border);margin:4px 0}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:420px;z-index:9999;margin-top:0;padding:0;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:var(--warm-white);border-right:1px solid var(--border);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:var(--burgundy);background:var(--cream)}
+.mega-country.active{color:var(--burgundy);background:#fff;border-left-color:var(--burgundy);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:var(--shadow);transition:background .15s,color .15s;text-decoration:none}
+.mega-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-search-wrap{position:relative;flex-shrink:1;max-width:200px}
+.nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white);transition:border-color .2s}
+.nav-search-wrap input:focus{border-color:var(--candlelight);background:#fff;box-shadow:0 0 0 2px rgba(201,168,76,.12)}
+.nav-search-wrap .nsi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.85rem;pointer-events:none}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:background .2s;display:inline-block}
+.nav-right .btn-explore:hover{background:#6e1a2a}
+.btn-login{background:none;border:2px solid var(--border);color:var(--twilight);padding:7px 14px;border-radius:var(--pill);font-weight:500;font-size:.85rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:4px}.btn-login:hover{border-color:var(--burgundy);color:var(--burgundy)}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:10px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+.mob-search-wrap{padding:8px 0 12px}
+.mob-search-wrap input{width:100%;padding:10px 14px 10px 36px;border:1px solid var(--border);border-radius:var(--pill);font-size:.95rem;font-family:'Inter',sans-serif;outline:none}
+.mob-search-wrap{position:relative}
+.mob-search-wrap .nsi{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none}
 @media(max-width:768px){
-
- 
-
-
+.nav-center{display:none}
+ .nav-right .btn-login{display:none!important}
+.nav-right .btn-explore{display:none}
+.hamburger{display:block}
 }
 
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
@@ -276,25 +316,25 @@ img{max-width:100%;display:block}
 .load-more{display:block;margin:48px auto 0;padding:14px 40px;background:transparent;border:2px solid var(--candlelight);border-radius:var(--pill);color:var(--candlelight);font-family:var(--sans);font-weight:700;font-size:.9rem;cursor:pointer;transition:all .3s}
 .load-more:hover{background:var(--candlelight);color:var(--navy)}
 
-/* ========== 
-.
-.
+/* ========== FOOTER ========== */
+.footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:60px 24px 32px;text-align:center}
+.footer p{color:rgba(255,255,255,.35);font-size:.82rem}
+.footer a{color:var(--candlelight)}
 
 </style>
 </head>
 <body>
-<div id="site-nav"></div><script src="/components/nav.js" data-theme="dark"></script>
 
 <!-- ===== NAV ===== -->
 <!-- NAV -->
-
+<div id="site-nav"></div><script src="/components/nav.js"></script>
 <section class="hero" id="hero">
   <div class="hero-bg" data-parallax="0.3"><img src="img/scotland/hero-scotland.webp" srcset="img/scotland/hero-scotland-mobile.webp 1200w, img/scotland/hero-scotland-desktop.webp 1800w, img/scotland/hero-scotland.webp 2560w" sizes="100vw" alt="Scotland hero landscape" width="2560" height="1707" fetchpriority="high"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="reveal">SCOTLAND<span>400+ Castles � 2,000 Years of History<br>One Untamed Land</span></h1>
+    <h1 class="reveal">SCOTLAND<span>400+ Castles · 2,000 Years of History<br>One Untamed Land</span></h1>
     <p class="hero-quote reveal">Some places you visit. Scotland haunts you. It seeps into your bones like rain into ancient stone - a land where every ruin whispers and every horizon dares you to keep going.</p>
-    <a href="#castles" class="reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore ?</a>
+    <a href="#castles" class="reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore →</a>
   </div>
   <div class="hero-scroll">Scroll</div>
 </section>
@@ -382,12 +422,12 @@ img{max-width:100%;display:block}
   <div class="story-text story-text-left" style="position:absolute;z-index:99;left:8%;top:18%">
     <h2 class="story-headline">They Never Knelt</h2>
     <p class="story-desc">For five hundred years, every generation of Scots bled for the same thing - the right to be their own. <span class="mobile-hide">Wallace fought barefoot. Bruce fought excommunicated. Charlie fought doomed. </span>They lost battles, lost crowns, lost everything - and still the next generation picked up the sword.<span class="mobile-hide"> That stubbornness isn't history. It's the national DNA.</span></p>
-    <a href="/scotland/bonnie-prince-charlie" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of Bonnie Prince Charlie ?</a>
+    <a href="/scotland/bonnie-prince-charlie" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of Bonnie Prince Charlie →</a>
   </div>
   <div class="story-text-bottom" style="position:absolute;z-index:99;right:8%;top:76%;text-align:right;max-width:500px">
     <h2 class="story-headline">Built by Fire. Carved by Ice.</h2>
     <p class="story-desc">Volcanic spires that predate every empire. Coastlines the Atlantic has been trying to tear apart for ten thousand years. Glens so quiet you can hear the century turn. Scotland's landscape doesn't sit in the background - it's the main character.</p>
-    <a href="/scotland/highlands" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of the Highlands ?</a>
+    <a href="/scotland/highlands" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore the Castles of the Highlands →</a>
   </div>
   <div class="story-banner" style="position:absolute;z-index:99;bottom:-8%;left:0;right:0;width:100%;pointer-events:none">
     <img src="img/scotland/banner-musket.webp" srcset="img/scotland/banner-musket-mobile.webp 800w, img/scotland/banner-musket-desktop.webp 1400w, img/scotland/banner-musket.webp 1920w" sizes="100vw" alt="Ornate Scottish musket" style="width:100%;height:auto" width="1920" height="346">
@@ -405,11 +445,11 @@ img{max-width:100%;display:block}
   <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:13%;text-align:left;max-width:500px">
     <h2 class="story-headline">Every Stone Remembers</h2>
     <p class="story-desc">Twenty-six sieges. A thousand years of crownings, betrayals, and last stands. Edinburgh Castle doesn't just sit on a rock - it is the rock.<span class="mobile-hide"> And below it, a city built on layers of the dead, the defiant, and the dangerously ambitious. In Scotland, history isn't something you read. It's something you walk through.</span></p>
-    <a href="site/edinburgh-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Edinburgh Castle ?</a>
+    <a href="site/edinburgh-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Edinburgh Castle →</a>
   </div>
   <div class="mary-portrait" style="position:absolute;z-index:98;right:3%;bottom:0;width:525px">
     <img src="img/scotland/mary-queen-scots.webp" alt="Mary Queen of Scots" style="width:100%;height:auto" width="800" height="840">
-    <a href="/scotland/mary-queen-of-scots" style="position:absolute;bottom:18%;right:105%;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s;text-shadow:0 2px 8px rgba(0,0,0,.8);white-space:nowrap">The Castles of Mary Queen of Scots ?</a>
+    <a href="/scotland/mary-queen-of-scots" style="position:absolute;bottom:18%;right:105%;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s;text-shadow:0 2px 8px rgba(0,0,0,.8);white-space:nowrap">The Castles of Mary Queen of Scots →</a>
   </div>
   <div style="position:absolute;z-index:100;bottom:-5%;left:0;right:0;width:100%;pointer-events:none">
     <img src="img/scotland/purple-thistle.webp" srcset="img/scotland/purple-thistle-mobile.webp 800w, img/scotland/purple-thistle.webp 1920w" sizes="100vw" alt="Purple thistle border" style="width:100%;height:auto" width="1920" height="197">
@@ -424,7 +464,7 @@ img{max-width:100%;display:block}
   <div class="story-text-bottom" style="position:absolute;z-index:99;left:8%;top:10%;text-align:left;max-width:500px">
     <h2 class="story-headline">400+ Castles. Every One a Story.</h2>
     <p class="story-desc"><span class="mobile-hide">Clifftop ruins where queens fled in the night. Tower houses built by families who refused to kneel. Island fortresses the Atlantic has tried to swallow for centuries. </span>Scotland has more castles per square mile than almost anywhere on Earth - and we've mapped every single one. Pick a region. Start exploring. <span style="white-space:nowrap">The stones are waiting.</span></p>
-    <a href="site/dunnottar-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Dunnottar Castle ?</a>
+    <a href="site/dunnottar-castle.html" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore Dunnottar Castle →</a>
   </div>
 </section>
 
@@ -471,7 +511,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">The Highlands</h3>
           <p class="region-card-desc">Storm-battered keeps and clan strongholds across Britain's last great wilderness.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/edinburgh-lothians">
         <img src="img/scotland/edinburgh-region.webp" srcset="img/scotland/edinburgh-region-mobile.webp 400w, img/scotland/edinburgh-region.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Edinburgh Castle" loading="lazy" width="800" height="600">
@@ -481,7 +521,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Edinburgh & the Lothians</h3>
           <p class="region-card-desc">A volcanic fortress, a thousand years of royal drama, and castles woven into every cobblestone.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/aberdeen-northeast">
         <img src="img/scotland/aberdeen.webp" srcset="img/scotland/aberdeen-mobile.webp 400w, img/scotland/aberdeen.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Dunnottar Castle, Aberdeen" loading="lazy" width="800" height="598">
@@ -491,7 +531,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Aberdeen & the Northeast</h3>
           <p class="region-card-desc">More castles per acre than anywhere in Britain. Granite towers rising from farmland and wild coast.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/argyll-islands">
         <img src="img/scotland/argyll.webp" srcset="img/scotland/argyll-mobile.webp 400w, img/scotland/argyll.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Argyll & the Islands" loading="lazy" width="800" height="545">
@@ -501,7 +541,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Argyll & the Islands</h3>
           <p class="region-card-desc">Sea-girt fortresses where Atlantic storms crash against castle walls.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/fife-perthshire">
         <img src="img/scotland/fife-perthshire.webp" srcset="img/scotland/fife-perthshire-mobile.webp 400w, img/scotland/fife-perthshire.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Blair Castle, Perthshire" loading="lazy" width="800" height="601">
@@ -511,7 +551,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Fife & Perthshire</h3>
           <p class="region-card-desc">The heartland of Scottish kings, from Scone's coronation stone to St Andrews.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/borders">
         <img src="img/scotland/borders.webp" srcset="img/scotland/borders-mobile.webp 400w, img/scotland/borders.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="The Borders" loading="lazy" width="800" height="908">
@@ -521,7 +561,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">The Borders</h3>
           <p class="region-card-desc">Tower houses and peel towers forged by centuries of English raids.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/dumfries-galloway">
         <img src="img/scotland/dumfries.webp" srcset="img/scotland/dumfries-mobile.webp 400w, img/scotland/dumfries.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Dumfries & Galloway" loading="lazy" width="800" height="666">
@@ -531,7 +571,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Dumfries & Galloway</h3>
           <p class="region-card-desc">Robert the Bruce's homeland and the cradle of Scottish independence.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/scotland/glasgow-stirling">
         <img src="img/scotland/glasgow-stirling.webp" srcset="img/scotland/glasgow-stirling-mobile.webp 400w, img/scotland/glasgow-stirling.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Stirling Castle" loading="lazy" width="800" height="534">
@@ -541,7 +581,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Glasgow & Stirling</h3>
           <p class="region-card-desc">Where Bannockburn was fought and Scotland's industrial heart meets medieval might.</p>
         </div>
-        <div class="region-card-arrow">?</div>
+        <div class="region-card-arrow">→</div>
       </a>
     </div>
   </div>
@@ -551,12 +591,26 @@ img{max-width:100%;display:block}
 <section class="history" id="history" style="position:relative;overflow:visible">
   <div class="history-bg"></div>
 
-  <!-- -- Floating decorative elements scattered alongside history -- -->
+  <!-- ── Floating decorative elements scattered alongside history ── -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="container">
     <div class="history-header reveal">
       <h2 class="section-title" style="color:#fff">Explore Scotland's History</h2>
-      <p class="section-subtitle" style="margin:0 auto">Every siege, coronation, and betrayal left its mark in stone. These are the events that shaped a nation � and the castles that survived to tell the tale.</p>
+      <p class="section-subtitle" style="margin:0 auto">Every siege, coronation, and betrayal left its mark in stone. These are the events that shaped a nation — and the castles that survived to tell the tale.</p>
     </div>
     <div class="history-grid">
 
@@ -568,8 +622,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Wars of Scottish Independence</h3>
           <p>William Wallace's rebellion and Robert the Bruce's coronation forged a nation from the fires of English occupation. From Stirling Bridge to Bannockburn, Scotland's greatest castles were the prizes and battlefields of a 60-year struggle for sovereignty.</p>
-          <div class="hc-castles"><strong>45 sites</strong> � Caerlaverock, Bothwell, Kildrummy, Dunfermline Abbey�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>45 sites</strong> — Caerlaverock, Bothwell, Kildrummy, Dunfermline Abbey…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -581,8 +635,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>Mary Queen of Scots</h3>
           <p>Crowned at nine months old, imprisoned by her cousin Elizabeth, and beheaded at 44 - Mary Stuart's life reads like a Shakespearean tragedy played out across the castles of Scotland. Her story touches more Scottish sites than any other single figure.</p>
-          <div class="hc-castles"><strong>27 sites</strong> � Craigmillar, Linlithgow Palace, Borthwick, Stirling�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>27 sites</strong> — Craigmillar, Linlithgow Palace, Borthwick, Stirling…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -594,8 +648,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>Macbeth &amp; the Early Kings</h3>
           <p>The real Macbeth was no Shakespearean villain - he was a successful king who ruled Scotland for 17 years. But his story, and the brutal politics of early medieval Scotland, gave us some of the oldest castle sites in the country.</p>
-          <div class="hc-castles"><strong>24 sites</strong> � Glamis, Cawdor, Iona Abbey, Jarlshof�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>24 sites</strong> — Glamis, Cawdor, Iona Abbey, Jarlshof…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -607,8 +661,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Jacobite Risings</h3>
           <p>For nearly 60 years, the Stuart loyalists fought to reclaim the British throne. Their campaigns swept through the Highlands, leaving a trail of siege, betrayal, and romantic myth that still echoes through Scotland's glens.</p>
-          <div class="hc-castles"><strong>27 sites</strong> � Eilean Donan, Kildrummy, Urquhart, Fort George�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>27 sites</strong> — Eilean Donan, Kildrummy, Urquhart, Fort George…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -620,8 +674,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Battle of Culloden</h3>
           <p>The last pitched battle on British soil lasted barely an hour. Bonnie Prince Charlie's exhausted Highlanders were cut down by government artillery on Drumossie Moor - ending the Jacobite cause and the old Highland way of life forever.</p>
-          <div class="hc-castles"><strong>6 sites</strong> � Fort George, Castle Lachlan, Ruthven Barracks�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>6 sites</strong> — Fort George, Castle Lachlan, Ruthven Barracks…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -633,8 +687,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>Bonnie Prince Charlie</h3>
           <p>Charles Edward Stuart landed on Eriskay with seven men and raised an army that marched to within 125 miles of London. His dramatic flight through the Highlands after Culloden - aided by Flora MacDonald - became one of Scotland's great romantic legends.</p>
-          <div class="hc-castles"><strong>8 sites</strong> � Castle Menzies, Culloden Battlefield, Ruthven Barracks, Calvay Castle�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>8 sites</strong> — Castle Menzies, Culloden Battlefield, Ruthven Barracks, Calvay Castle…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -646,8 +700,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>Robert the Bruce</h3>
           <p>Excommunicated, hunted, and nearly broken, Bruce clawed back a kingdom one castle at a time. His guerrilla campaign of castle-slighting and surprise attacks is a masterclass in medieval warfare and the foundation myth of Scottish nationhood.</p>
-          <div class="hc-castles"><strong>22 sites</strong> � Drum Castle, Melrose Abbey, Dunfermline Abbey, Lochranza�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>22 sites</strong> — Drum Castle, Melrose Abbey, Dunfermline Abbey, Lochranza…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -659,8 +713,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Scottish Reformation</h3>
           <p>John Knox's fiery preaching and the Protestant lords' rebellion transformed Scotland from a Catholic kingdom into a Calvinist one in barely a decade. Monasteries were stripped, churches remodelled, and the political landscape shifted forever.</p>
-          <div class="hc-castles"><strong>29 sites</strong> � St Andrews Castle, Melrose Abbey, Sweetheart Abbey, Dunfermline Abbey�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>29 sites</strong> — St Andrews Castle, Melrose Abbey, Sweetheart Abbey, Dunfermline Abbey…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -672,8 +726,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Covenanters &amp; Civil Wars</h3>
           <p>Scotland's radical Presbyterians signed their National Covenant in blood and fought both Charles I and Cromwell to defend their faith. The Killing Times saw executions, imprisonments, and guerrilla warfare across the Lowlands.</p>
-          <div class="hc-castles"><strong>21 sites</strong> � Dunnottar, Edzell, Castle Girnigoe, Gylen Castle�</div>
-          <span class="hc-link">Explore Collection ?</span>
+          <div class="hc-castles"><strong>21 sites</strong> — Dunnottar, Edzell, Castle Girnigoe, Gylen Castle…</div>
+          <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
@@ -681,7 +735,17 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- ===== 
+<!-- ===== FOOTER ===== -->
+<div id="site-footer"></div><script src="/components/footer.js"></script>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="data-scotland.js"></script>
+<script>
+(function(){
+  // ---- Intersection Observer for reveal animations ----
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
     })
   },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.floater').forEach(el=>obs.observe(el));
@@ -740,7 +804,7 @@ img{max-width:100%;display:block}
     batch.forEach(c=>{
       const card = document.createElement('div');
       card.className='castle-card';
-      const stars = c.rating ? '?'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const stars = c.rating ? '★'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
@@ -763,7 +827,7 @@ img{max-width:100%;display:block}
     if(remaining > 0){
       loadBtn.style.display = 'block';
       const link = regionLinks[currentFilter] || '/scotland/all-castles';
-      loadBtn.textContent = `View All ${filtered.length} Castles ?`;
+      loadBtn.textContent = `View All ${filtered.length} Castles →`;
       loadBtn.onclick = function(){ window.location.href = link; };
     } else {
       loadBtn.style.display = 'none';
@@ -784,7 +848,13 @@ img{max-width:100%;display:block}
 })();
 </script>
 <script>(function(){
-  document.querySelectorAll(');
+  document.querySelectorAll('.mega-country').forEach(btn => {
+    btn.addEventListener('mouseenter', function(){
+      const c = this.dataset.country;
+      this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p => p.classList.toggle('active', p.dataset.country === c));
+    });
   });
 
   const runNavSearch = (id) => {
@@ -802,7 +872,28 @@ img{max-width:100%;display:block}
   runNavSearch('mobNavSearch');
 })();
 </script>
-<div id="site-footer"></div><script src="/components/footer.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

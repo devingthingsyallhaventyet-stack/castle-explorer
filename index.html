@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<title>castlecore � Discover Castles, Abbeys & Ruins across the UK & Ireland</title>
+<title>castlecore — Discover Castles, Abbeys & Ruins across the UK & Ireland</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,11 +18,56 @@ a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
 /* NAV */
-
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-center{display:flex;align-items:center;gap:6px;margin-left:auto}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn,.nav-center>.nav-drop-btn{font-size:.88rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:'Inter',sans-serif;transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--burgundy)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:200px;padding:8px 0;z-index:9999;padding-top:16px;margin-top:0}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:var(--shadow);transition:background .15s}
+.nav-drop-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-drop-panel .drop-heading{padding:6px 18px 4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--twilight);pointer-events:none}
+.nav-drop-panel .drop-divider{height:1px;background:var(--border);margin:4px 0}
 /* MEGA MENU */
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 8px 32px rgba(42,37,34,.12);min-width:420px;z-index:9999;margin-top:0;padding:0;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:var(--warm-white);border-right:1px solid var(--border);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:var(--twilight);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:var(--burgundy);background:var(--cream)}
+.mega-country.active{color:var(--burgundy);background:#fff;border-left-color:var(--burgundy);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:var(--shadow);transition:background .15s,color .15s;text-decoration:none}
+.mega-panel a:hover{background:var(--cream);color:var(--burgundy)}
+.nav-search-wrap{position:relative;flex-shrink:1;max-width:200px}
+.nav-search-wrap input{width:100%;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.82rem;font-family:'Inter',sans-serif;outline:none;background:var(--warm-white);transition:border-color .2s,width .2s}
+.nav-search-wrap input:focus{border-color:var(--candlelight);background:#fff;box-shadow:0 0 0 2px rgba(201,168,76,.12)}
+.nav-search-wrap .nsi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.85rem;pointer-events:none}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:9px 22px;border-radius:var(--pill);font-weight:600;font-size:.85rem;letter-spacing:.3px;transition:all .2s;display:inline-block}
+.nav-right .btn-explore:hover{background:#6e1a2a}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--twilight);padding:10px 0;border-bottom:1px solid var(--border)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--hearth);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+.mob-search-wrap{padding:8px 0 12px}
+.mob-search-wrap input{width:100%;padding:10px 14px 10px 36px;border:1px solid var(--border);border-radius:var(--pill);font-size:.95rem;font-family:'Inter',sans-serif;outline:none}
+.mob-search-wrap{position:relative}
+.mob-search-wrap .nsi{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none}
 
 @media(max-width:768px){
-
+.nav-center{display:none}
+.nav-right .btn-explore{display:none}
+.nav-right .btn-login{display:none!important}
+.hamburger{display:block}
 }
 
 /* HERO */
@@ -214,29 +259,147 @@ section{padding:48px 24px}
 .how-grid{grid-template-columns:1fr;gap:40px}
 }
 
-/* 
-.
-.
-.
-.
-.
-.
-.
-.
+/* FOOTER */
+footer{background:var(--shadow);color:#fff;padding:64px 24px 32px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:.85rem;max-width:280px}
+.footer-col h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;color:rgba(255,255,255,.5)}
+.footer-col a{display:block;color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
 @media(max-width:768px){
-.
+.footer-top{grid-template-columns:1fr 1fr;gap:24px}
 }
 @media(max-width:480px){
-.
+.footer-top{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
-<div id="site-nav"></div><script src="/components/nav.js"></script>
 
 <!-- NAV -->
-
-<a href="trail.html">??? Routes</a>
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo"><img src="logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
+<div class="nav-center">
+<div class="nav-dropdown">
+<button class="nav-drop-btn">🏰 Sites</button>
+<div class="nav-drop-panel">
+<a href="search.html?type=castle">🏰 Castles</a>
+<a href="search.html?type=abbey">⛪ Abbeys</a>
+<a href="search.html?type=tower+house">🗼 Tower Houses</a>
+<a href="search.html?type=palace">👑 Palaces</a>
+<a href="search.html?type=fort">🛡️ Forts</a>
+<a href="search.html?type=fortified+house">🏠 Fortified Houses</a>
+</div>
+</div>
+<div class="nav-dropdown mega-wrap">
+<button class="nav-drop-btn">🗺️ Regions</button>
+<div class="mega-menu">
+<div class="mega-countries">
+<button class="mega-country active" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</button>
+<button class="mega-country" data-country="scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</button>
+<button class="mega-country" data-country="wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</button>
+<button class="mega-country" data-country="ireland">🍀 Ireland</button>
+</div>
+<div class="mega-regions">
+<div class="mega-panel active" data-country="england">
+<a href="region.html?id=london-surrey">London &amp; Surrey</a>
+<a href="region.html?id=south-east-england">South East</a>
+<a href="region.html?id=south-west-england">South West</a>
+<a href="region.html?id=northern-england">Northern England</a>
+<a href="region.html?id=midlands">The Midlands</a>
+<a href="region.html?id=yorkshire">Yorkshire</a>
+<a href="region.html?id=east-anglia">East Anglia</a>
+</div>
+<div class="mega-panel" data-country="scotland">
+<a href="region.html?id=scottish-highlands">Highlands</a>
+<a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
+</div>
+<div class="mega-panel" data-country="wales">
+<a href="region.html?id=north-wales">North Wales</a>
+<a href="region.html?id=south-wales">South Wales</a>
+</div>
+<div class="mega-panel" data-country="ireland">
+<a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
+<a href="region.html?id=south-east-ireland">South East</a>
+<a href="region.html?id=south-west-ireland">South West</a>
+<a href="region.html?id=west-ireland">West</a>
+<a href="region.html?id=midlands-ireland">Midlands</a>
+<a href="region.html?id=north-west-ireland">North West</a>
+</div>
+</div>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-drop-btn">✨ Collections</button>
+<div class="nav-drop-panel">
+<a href="collection.html?id=top-rated">🏆 Top Rated</a>
+<a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
+<a href="collection.html?id=haunted">👻 Haunted</a>
+<a href="collection.html?id=filming-locations">🎬 Filming Locations</a>
+<a href="collection.html?id=free">🆓 Free to Visit</a>
+<a href="collection.html?id=romantic-ruins">🌿 Romantic Ruins</a>
+<a href="collection.html?id=photogenic">📸 Most Photogenic</a>
+<div class="drop-divider"></div>
+<a href="collection.html">View all collections →</a>
+</div>
+</div>
+<a href="trail.html" class="nav-drop-btn" style="text-decoration:none">🛤️ Routes</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
+<div class="mobile-menu">
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">Explore Map</a>
+<span class="mob-heading">🏰 Sites</span>
+<div class="mob-sub">
+<a href="search.html?type=castle">🏰 Castles</a>
+<a href="search.html?type=abbey">⛪ Abbeys</a>
+<a href="search.html?type=tower+house">🗼 Tower Houses</a>
+<a href="search.html?type=palace">👑 Palaces</a>
+<a href="search.html?type=fort">🛡️ Forts</a>
+</div>
+<span class="mob-heading">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
+<div class="mob-sub">
+<a href="region.html?id=london-surrey">London &amp; Surrey</a>
+<a href="region.html?id=south-east-england">South East</a>
+<a href="region.html?id=south-west-england">South West</a>
+<a href="region.html?id=northern-england">Northern England</a>
+<a href="region.html?id=midlands">The Midlands</a>
+<a href="region.html?id=yorkshire">Yorkshire</a>
+<a href="region.html?id=east-anglia">East Anglia</a>
+</div>
+<span class="mob-heading">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span>
+<div class="mob-sub">
+<a href="region.html?id=scottish-highlands">Highlands</a>
+<a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
+</div>
+<span class="mob-heading">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span>
+<div class="mob-sub">
+<a href="region.html?id=north-wales">North Wales</a>
+<a href="region.html?id=south-wales">South Wales</a>
+</div>
+<span class="mob-heading">🍀 Ireland</span>
+<div class="mob-sub">
+<a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
+<a href="region.html?id=south-east-ireland">South East</a>
+<a href="region.html?id=south-west-ireland">South West</a>
+<a href="region.html?id=west-ireland">West</a>
+<a href="region.html?id=midlands-ireland">Midlands</a>
+<a href="region.html?id=north-west-ireland">North West</a>
+</div>
+<span class="mob-heading">✨ Collections</span>
+<div class="mob-sub">
+<a href="collection.html?id=top-rated">🏆 Top Rated</a>
+<a href="collection.html?id=hidden-gems">💎 Hidden Gems</a>
+<a href="collection.html?id=haunted">👻 Haunted</a>
+<a href="collection.html?id=free">🆓 Free to Visit</a>
+<a href="collection.html">View all →</a>
+</div>
+<a href="trail.html">🛤️ Routes</a>
 </div>
 
 <!-- HERO -->
@@ -247,17 +410,17 @@ section{padding:48px 24px}
 <h1>Discover 3,000 castles, abbeys &amp; ruins across the UK &amp; Ireland</h1>
 <p class="subtitle">The most complete heritage guide ever built</p>
 <div class="search-wrap">
-<span class="search-icon">??</span>
+<span class="search-icon">🔍</span>
 <input type="text" id="heroSearch" placeholder="Search by name, postal code, or region..." autocomplete="off">
 <div class="search-results" id="searchResults"></div>
 </div>
 <div class="pills">
-<a class="pill" href="search.html?type=castle">?? Castles</a>
-<a class="pill" href="search.html?type=abbey">? Abbeys</a>
-<a class="pill" href="search.html?type=tower+house">?? Tower Houses</a>
-<a class="pill" href="search.html?type=palace">?? Palaces</a>
-<a class="pill" href="search.html?tag=free">?? Free to Visit</a>
-<a class="pill" href="search.html?tag=photogenic">?? Photogenic</a>
+<a class="pill" href="search.html?type=castle">🏰 Castles</a>
+<a class="pill" href="search.html?type=abbey">⛪ Abbeys</a>
+<a class="pill" href="search.html?type=tower+house">🗼 Tower Houses</a>
+<a class="pill" href="search.html?type=palace">👑 Palaces</a>
+<a class="pill" href="search.html?tag=free">🆓 Free to Visit</a>
+<a class="pill" href="search.html?tag=photogenic">📸 Photogenic</a>
 </div>
 </div>
 </section>
@@ -267,22 +430,22 @@ section{padding:48px 24px}
 <div class="section-inner">
 <div class="hiw-grid">
 <div class="hiw-step">
-<span class="hiw-icon">??</span>
+<span class="hiw-icon">🔍</span>
 <h3>Explore</h3>
 <p>Browse 3,000+ castles, ruins and historic sites across Britain &amp; Ireland</p>
 </div>
 <div class="hiw-step">
-<span class="hiw-icon">??</span>
+<span class="hiw-icon">🏰</span>
 <h3>Save</h3>
 <p>Bookmark your favourites and build your personal castle wishlist</p>
 </div>
 <div class="hiw-step">
-<span class="hiw-icon">???</span>
+<span class="hiw-icon">🗺️</span>
 <h3>Plan</h3>
 <p>Create routes that connect the best sites into unforgettable road trips</p>
 </div>
 <div class="hiw-step">
-<span class="hiw-icon">??</span>
+<span class="hiw-icon">🤝</span>
 <h3>Share</h3>
 <p>Send your routes to friends and maximise every adventure together</p>
 </div>
@@ -295,19 +458,19 @@ section{padding:48px 24px}
 <div class="section-inner">
 <div class="section-header">
 <h2>Explore by Collection</h2>
-<a href="collection.html">View all ?</a>
+<a href="collection.html">View all →</a>
 </div>
 <p class="section-tagline">Curated journeys through Britain and Ireland's heritage</p>
 <div class="collections-grid">
-<a class="coll-card coll-featured" href="collection.html?id=top-rated"><img src="img/bodiam.jpg" alt="Top Rated" loading="lazy"><div class="coll-overlay"><h3>?? Top Rated</h3><span class="coll-tagline">The ones everyone's talking about</span><span class="coll-count">120 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=hidden-gems"><img src="img/pembroke.jpg" alt="Hidden Gems" loading="lazy"><div class="coll-overlay"><h3>?? Hidden Gems</h3><span class="coll-tagline">Off the beaten path</span><span class="coll-count">340 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=haunted"><img src="img/whitby-abbey.jpg" alt="Haunted" loading="lazy"><div class="coll-overlay"><h3>?? Haunted &amp; Legendary</h3><span class="coll-tagline">Where history meets mystery</span><span class="coll-count">85 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=filming-locations"><img src="img/doune.jpg" alt="Filming Locations" loading="lazy"><div class="coll-overlay"><h3>?? Filming Locations</h3><span class="coll-tagline">As seen on screen</span><span class="coll-count">64 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=free"><img src="img/corfe.jpg" alt="Free to Visit" loading="lazy"><div class="coll-overlay"><h3>?? Free to Visit</h3><span class="coll-tagline">Explore without the entry fee</span><span class="coll-count">980 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=well-preserved"><img src="img/warwick.jpg" alt="Best Preserved" loading="lazy"><div class="coll-overlay"><h3>?? Best Preserved</h3><span class="coll-tagline">Standing strong through the centuries</span><span class="coll-count">150 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=romantic-ruins"><img src="img/bamburgh.jpg" alt="Romantic Ruins" loading="lazy"><div class="coll-overlay"><h3>?? Romantic Ruins</h3><span class="coll-tagline">Beautifully broken, hauntingly lovely</span><span class="coll-count">420 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=photogenic"><img src="img/eilean-donan.jpg" alt="Most Photogenic" loading="lazy"><div class="coll-overlay"><h3>?? Most Photogenic</h3><span class="coll-tagline">Bring your best lens</span><span class="coll-count">200 sites</span></div></a>
-<a class="coll-card" href="collection.html?id=kid-friendly"><img src="img/stirling.jpg" alt="Kid-Friendly" loading="lazy"><div class="coll-overlay"><h3>??????????? Kid-Friendly</h3><span class="coll-tagline">Adventures the whole family will love</span><span class="coll-count">160 sites</span></div></a>
+<a class="coll-card coll-featured" href="collection.html?id=top-rated"><img src="img/bodiam.jpg" alt="Top Rated" loading="lazy"><div class="coll-overlay"><h3>🏆 Top Rated</h3><span class="coll-tagline">The ones everyone's talking about</span><span class="coll-count">120 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=hidden-gems"><img src="img/pembroke.jpg" alt="Hidden Gems" loading="lazy"><div class="coll-overlay"><h3>💎 Hidden Gems</h3><span class="coll-tagline">Off the beaten path</span><span class="coll-count">340 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=haunted"><img src="img/whitby-abbey.jpg" alt="Haunted" loading="lazy"><div class="coll-overlay"><h3>👻 Haunted &amp; Legendary</h3><span class="coll-tagline">Where history meets mystery</span><span class="coll-count">85 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=filming-locations"><img src="img/doune.jpg" alt="Filming Locations" loading="lazy"><div class="coll-overlay"><h3>🎬 Filming Locations</h3><span class="coll-tagline">As seen on screen</span><span class="coll-count">64 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=free"><img src="img/corfe.jpg" alt="Free to Visit" loading="lazy"><div class="coll-overlay"><h3>🆓 Free to Visit</h3><span class="coll-tagline">Explore without the entry fee</span><span class="coll-count">980 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=well-preserved"><img src="img/warwick.jpg" alt="Best Preserved" loading="lazy"><div class="coll-overlay"><h3>🏰 Best Preserved</h3><span class="coll-tagline">Standing strong through the centuries</span><span class="coll-count">150 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=romantic-ruins"><img src="img/bamburgh.jpg" alt="Romantic Ruins" loading="lazy"><div class="coll-overlay"><h3>🌿 Romantic Ruins</h3><span class="coll-tagline">Beautifully broken, hauntingly lovely</span><span class="coll-count">420 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=photogenic"><img src="img/eilean-donan.jpg" alt="Most Photogenic" loading="lazy"><div class="coll-overlay"><h3>📸 Most Photogenic</h3><span class="coll-tagline">Bring your best lens</span><span class="coll-count">200 sites</span></div></a>
+<a class="coll-card" href="collection.html?id=kid-friendly"><img src="img/stirling.jpg" alt="Kid-Friendly" loading="lazy"><div class="coll-overlay"><h3>👨‍👩‍👧‍👦 Kid-Friendly</h3><span class="coll-tagline">Adventures the whole family will love</span><span class="coll-count">160 sites</span></div></a>
 </div>
 </div>
 </section>
@@ -325,51 +488,51 @@ section{padding:48px 24px}
 <div class="featured-grid">
 <a class="feat-card" href="site/edinburgh-castle.html">
 <div class="feat-img"><img src="img/hero-edinburgh.jpg" alt="Edinburgh Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Edinburgh Castle</h3><p class="feat-loc">Edinburgh, Scotland</p><p class="feat-rating">????? 4.7</p><p class="feat-hook">Scotland's iconic fortress dominating the city skyline for centuries</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Edinburgh Castle</h3><p class="feat-loc">Edinburgh, Scotland</p><p class="feat-rating">★★★★★ 4.7</p><p class="feat-hook">Scotland's iconic fortress dominating the city skyline for centuries</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/eilean-donan-castle.html">
 <div class="feat-img"><img src="img/eilean-donan.jpg" alt="Eilean Donan Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Eilean Donan Castle</h3><p class="feat-loc">Highland, Scotland</p><p class="feat-rating">????? 4.6</p><p class="feat-hook">The most photographed castle in Scotland, set on a tidal island</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Eilean Donan Castle</h3><p class="feat-loc">Highland, Scotland</p><p class="feat-rating">★★★★★ 4.6</p><p class="feat-hook">The most photographed castle in Scotland, set on a tidal island</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/bodiam-castle.html">
 <div class="feat-img"><img src="img/bodiam.jpg" alt="Bodiam Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Bodiam Castle</h3><p class="feat-loc">East Sussex, England</p><p class="feat-rating">????? 4.6</p><p class="feat-hook">A picture-perfect moated castle straight from a fairy tale</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Bodiam Castle</h3><p class="feat-loc">East Sussex, England</p><p class="feat-rating">★★★★★ 4.6</p><p class="feat-hook">A picture-perfect moated castle straight from a fairy tale</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/conwy-castle.html">
 <div class="feat-img"><img src="img/conwy.jpg" alt="Conwy Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Conwy Castle</h3><p class="feat-loc">Conwy, Wales</p><p class="feat-rating">????? 4.7</p><p class="feat-hook">Edward I's masterpiece and UNESCO World Heritage fortress</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Conwy Castle</h3><p class="feat-loc">Conwy, Wales</p><p class="feat-rating">★★★★★ 4.7</p><p class="feat-hook">Edward I's masterpiece and UNESCO World Heritage fortress</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/blarney-castle.html">
 <div class="feat-img"><img src="img/blarney.jpg" alt="Blarney Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Blarney Castle</h3><p class="feat-loc">County Cork, Ireland</p><p class="feat-rating">????? 4.4</p><p class="feat-hook">Kiss the famous stone and explore stunning gardens</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Blarney Castle</h3><p class="feat-loc">County Cork, Ireland</p><p class="feat-rating">★★★★☆ 4.4</p><p class="feat-hook">Kiss the famous stone and explore stunning gardens</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/bamburgh-castle.html">
 <div class="feat-img"><img src="img/bamburgh.jpg" alt="Bamburgh Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Bamburgh Castle</h3><p class="feat-loc">Northumberland, England</p><p class="feat-rating">????? 4.7</p><p class="feat-hook">A mighty coastal fortress rising above Northumberland's golden sands</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Bamburgh Castle</h3><p class="feat-loc">Northumberland, England</p><p class="feat-rating">★★★★★ 4.7</p><p class="feat-hook">A mighty coastal fortress rising above Northumberland's golden sands</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/warwick-castle.html">
 <div class="feat-img"><img src="img/warwick.jpg" alt="Warwick Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Warwick Castle</h3><p class="feat-loc">Warwickshire, England</p><p class="feat-rating">????? 4.5</p><p class="feat-hook">Over 1,000 years of jaw-dropping history and dramatic battlements</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Warwick Castle</h3><p class="feat-loc">Warwickshire, England</p><p class="feat-rating">★★★★★ 4.5</p><p class="feat-hook">Over 1,000 years of jaw-dropping history and dramatic battlements</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/stirling-castle.html">
 <div class="feat-img"><img src="img/stirling.jpg" alt="Stirling Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Stirling Castle</h3><p class="feat-loc">Stirling, Scotland</p><p class="feat-rating">????? 4.7</p><p class="feat-hook">The grandest of Scottish castles, steeped in royal history</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Stirling Castle</h3><p class="feat-loc">Stirling, Scotland</p><p class="feat-rating">★★★★★ 4.7</p><p class="feat-hook">The grandest of Scottish castles, steeped in royal history</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/tower-of-london.html">
 <div class="feat-img"><img src="img/tower-of-london.jpg" alt="Tower of London" loading="lazy"></div>
-<div class="feat-body"><h3>Tower of London</h3><p class="feat-loc">London, England</p><p class="feat-rating">????? 4.6</p><p class="feat-hook">Nearly 1,000 years of royal power, prison, and Crown Jewels</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Tower of London</h3><p class="feat-loc">London, England</p><p class="feat-rating">★★★★★ 4.6</p><p class="feat-hook">Nearly 1,000 years of royal power, prison, and Crown Jewels</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/corfe-castle.html">
 <div class="feat-img"><img src="img/corfe.jpg" alt="Corfe Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Corfe Castle</h3><p class="feat-loc">Dorset, England</p><p class="feat-rating">????? 4.6</p><p class="feat-hook">Dramatic hilltop ruins rising above a storybook village</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Corfe Castle</h3><p class="feat-loc">Dorset, England</p><p class="feat-rating">★★★★★ 4.6</p><p class="feat-hook">Dramatic hilltop ruins rising above a storybook village</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/tintagel-castle.html">
 <div class="feat-img"><img src="img/tintagel.jpg" alt="Tintagel Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Tintagel Castle</h3><p class="feat-loc">Cornwall, England</p><p class="feat-rating">????? 4.5</p><p class="feat-hook">Legendary birthplace of King Arthur on Cornwall's wild coast</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Tintagel Castle</h3><p class="feat-loc">Cornwall, England</p><p class="feat-rating">★★★★★ 4.5</p><p class="feat-hook">Legendary birthplace of King Arthur on Cornwall's wild coast</p><span class="feat-cta">View Details →</span></div>
 </a>
 <a class="feat-card" href="site/doune-castle.html">
 <div class="feat-img"><img src="img/doune.jpg" alt="Doune Castle" loading="lazy"></div>
-<div class="feat-body"><h3>Doune Castle</h3><p class="feat-loc">Stirling, Scotland</p><p class="feat-rating">????? 4.5</p><p class="feat-hook">Medieval gem famous from Monty Python and Outlander</p><span class="feat-cta">View Details ?</span></div>
+<div class="feat-body"><h3>Doune Castle</h3><p class="feat-loc">Stirling, Scotland</p><p class="feat-rating">★★★★★ 4.5</p><p class="feat-hook">Medieval gem famous from Monty Python and Outlander</p><span class="feat-cta">View Details →</span></div>
 </a>
 </div>
 </div>
@@ -413,12 +576,12 @@ section{padding:48px 24px}
 </div>
 <p class="section-tagline">Epic road trips through centuries of history</p>
 <div class="trail-grid">
-<a class="trail-card tc-burgundy" href="trail.html?id=iron-ring"><div class="trail-img"><img src="img/conwy.jpg" alt="Iron Ring" loading="lazy"></div><div class="trail-body"><h3>?? Edward I's Iron Ring</h3><div class="trail-meta"><span>North Wales</span><span>8 castles</span><span>3 hours</span></div><p class="trail-desc">The mighty chain of fortresses that conquered Wales</p></div></a>
-<a class="trail-card tc-navy" href="trail.html?id=norman-conquest"><div class="trail-img"><img src="img/bodiam.jpg" alt="Norman Conquest" loading="lazy"></div><div class="trail-body"><h3>?? Norman Conquest Trail</h3><div class="trail-meta"><span>South England</span><span>12 castles</span><span>5 hours</span></div><p class="trail-desc">Follow in William the Conqueror's footsteps</p></div></a>
-<a class="trail-card tc-forest" href="trail.html?id=highland-route"><div class="trail-img"><img src="img/eilean-donan.jpg" alt="Highland Route" loading="lazy"></div><div class="trail-body"><h3>?????????????? Highland Castle Route</h3><div class="trail-meta"><span>Scottish Highlands</span><span>10 castles</span><span>6 hours</span></div><p class="trail-desc">Lochs, glens, and ancient clan strongholds</p></div></a>
-<a class="trail-card tc-stone" href="trail.html?id=ancient-east"><div class="trail-img"><img src="img/blarney.jpg" alt="Ireland's Ancient East" loading="lazy"></div><div class="trail-body"><h3>?? Ireland's Ancient East</h3><div class="trail-meta"><span>South East Ireland</span><span>9 castles</span><span>4 hours</span></div><p class="trail-desc">5,000 years of stories woven through green hills</p></div></a>
-<a class="trail-card tc-plum" href="trail.html?id=haunted-trail"><div class="trail-img"><img src="img/whitby-abbey.jpg" alt="Haunted Trail" loading="lazy"></div><div class="trail-body"><h3>?? Haunted Castle Trail</h3><div class="trail-meta"><span>England</span><span>7 castles</span><span>5 hours</span></div><p class="trail-desc">For the brave � ghosts, legends, and dark histories</p></div></a>
-<a class="trail-card tc-rust" href="trail.html?id=photographers-dream"><div class="trail-img"><img src="img/bamburgh.jpg" alt="Photographer's Dream" loading="lazy"></div><div class="trail-body"><h3>?? Photographer's Dream</h3><div class="trail-meta"><span>UK-wide</span><span>10 castles</span><span>8 hours</span></div><p class="trail-desc">The most stunning shots you'll ever capture</p></div></a>
+<a class="trail-card tc-burgundy" href="trail.html?id=iron-ring"><div class="trail-img"><img src="img/conwy.jpg" alt="Iron Ring" loading="lazy"></div><div class="trail-body"><h3>🏴 Edward I's Iron Ring</h3><div class="trail-meta"><span>North Wales</span><span>8 castles</span><span>3 hours</span></div><p class="trail-desc">The mighty chain of fortresses that conquered Wales</p></div></a>
+<a class="trail-card tc-navy" href="trail.html?id=norman-conquest"><div class="trail-img"><img src="img/bodiam.jpg" alt="Norman Conquest" loading="lazy"></div><div class="trail-body"><h3>⚔️ Norman Conquest Trail</h3><div class="trail-meta"><span>South England</span><span>12 castles</span><span>5 hours</span></div><p class="trail-desc">Follow in William the Conqueror's footsteps</p></div></a>
+<a class="trail-card tc-forest" href="trail.html?id=highland-route"><div class="trail-img"><img src="img/eilean-donan.jpg" alt="Highland Route" loading="lazy"></div><div class="trail-body"><h3>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Highland Castle Route</h3><div class="trail-meta"><span>Scottish Highlands</span><span>10 castles</span><span>6 hours</span></div><p class="trail-desc">Lochs, glens, and ancient clan strongholds</p></div></a>
+<a class="trail-card tc-stone" href="trail.html?id=ancient-east"><div class="trail-img"><img src="img/blarney.jpg" alt="Ireland's Ancient East" loading="lazy"></div><div class="trail-body"><h3>🍀 Ireland's Ancient East</h3><div class="trail-meta"><span>South East Ireland</span><span>9 castles</span><span>4 hours</span></div><p class="trail-desc">5,000 years of stories woven through green hills</p></div></a>
+<a class="trail-card tc-plum" href="trail.html?id=haunted-trail"><div class="trail-img"><img src="img/whitby-abbey.jpg" alt="Haunted Trail" loading="lazy"></div><div class="trail-body"><h3>👻 Haunted Castle Trail</h3><div class="trail-meta"><span>England</span><span>7 castles</span><span>5 hours</span></div><p class="trail-desc">For the brave — ghosts, legends, and dark histories</p></div></a>
+<a class="trail-card tc-rust" href="trail.html?id=photographers-dream"><div class="trail-img"><img src="img/bamburgh.jpg" alt="Photographer's Dream" loading="lazy"></div><div class="trail-body"><h3>📸 Photographer's Dream</h3><div class="trail-meta"><span>UK-wide</span><span>10 castles</span><span>8 hours</span></div><p class="trail-desc">The most stunning shots you'll ever capture</p></div></a>
 </div>
 </div>
 </section>
@@ -427,10 +590,10 @@ section{padding:48px 24px}
 <section class="cta-section" id="nearMeSection">
 <h2>What's near you?</h2>
 <p>Find castles, abbeys, and ruins close to your current location</p>
-<button class="btn-cta" id="nearMeBtn" onclick="openNearMe()">?? Find Castles Nearby</button>
+<button class="btn-cta" id="nearMeBtn" onclick="openNearMe()">📍 Find Castles Nearby</button>
 <div id="nearMePanel" style="display:none;max-width:520px;margin:24px auto 0;text-align:left">
 <div style="display:flex;gap:10px;margin-bottom:16px">
-<button id="useLocationBtn" onclick="useMyLocation()" style="flex:1;padding:12px 16px;border-radius:var(--pill);border:2px solid var(--burgundy);background:#fff;color:var(--burgundy);font-weight:600;cursor:pointer;font-size:.95rem;transition:all .2s">?? Use My Location</button>
+<button id="useLocationBtn" onclick="useMyLocation()" style="flex:1;padding:12px 16px;border-radius:var(--pill);border:2px solid var(--burgundy);background:#fff;color:var(--burgundy);font-weight:600;cursor:pointer;font-size:.95rem;transition:all .2s">📍 Use My Location</button>
 </div>
 <div style="position:relative">
 <input type="text" id="nearMeInput" placeholder="Or type a city, town, or postcode..." style="width:100%;padding:12px 16px;border-radius:var(--pill);border:2px solid var(--border);font-size:1rem;font-family:Inter,sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--burgundy)'" onblur="this.style.borderColor='var(--border)'" onkeydown="if(event.key==='Enter')searchNearMe()">
@@ -448,7 +611,38 @@ section{padding:48px 24px}
 
 <!-- (How It Works section removed) -->
 
-<!-- );
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="footer-logo"><img src="logo.png" alt="castlecore" style="height:32px;width:auto;border-radius:4px;vertical-align:middle;margin-right:8px">castlecore</div>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+</div>
+<div class="footer-col"><h4>Explore</h4><a href="explore.html">Map</a><a href="explore.html">Collections</a><a href="explore.html">Regions</a><a href="explore.html">Routes</a></div>
+<div class="footer-col"><h4>Info</h4><a href="#">About</a><a href="#">Contact</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div>
+<div class="footer-bottom">
+<span>Built with ❤️ for history lovers</span>
+<span>© 2026 castlecore</span>
+</div>
+</div>
+</footer>
+
+<!-- SEARCH -->
+<script src="data.js"></script>
+<script>
+/* Mega menu hover logic */
+(function(){
+document.querySelectorAll('.mega-country').forEach(btn=>{
+btn.addEventListener('mouseenter',function(){
+const c=this.dataset.country;
+this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+this.classList.add('active');
+this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+});
+});
 })();
 </script>
 <script>
@@ -479,14 +673,14 @@ let html='';
 const countries=Object.keys(countryIndex).filter(k=>k.includes(lq));
 countries.slice(0,2).forEach(k=>{
 const display=CASTLES.find(c=>c.country&&c.country.toLowerCase()===k)?.country||k;
-html+=`<a href="search.html?region=${encodeURIComponent(display)}" style="background:rgba(201,168,76,.06)"><span>?? ${display}</span><span class="sr-type">${countryIndex[k]} sites</span></a>`;
+html+=`<a href="search.html?region=${encodeURIComponent(display)}" style="background:rgba(201,168,76,.06)"><span>🌍 ${display}</span><span class="sr-type">${countryIndex[k]} sites</span></a>`;
 });
 
 // County matches
 const counties=Object.keys(countyIndex).filter(k=>k.includes(lq)&&!countries.includes(k));
 counties.slice(0,3).forEach(k=>{
 const display=CASTLES.find(c=>c.county&&c.county.toLowerCase()===k)?.county||k;
-html+=`<a href="search.html?region=${encodeURIComponent(display)}" style="background:rgba(61,90,62,.04)"><span>?? ${display}</span><span class="sr-type">${countyIndex[k]} sites</span></a>`;
+html+=`<a href="search.html?region=${encodeURIComponent(display)}" style="background:rgba(61,90,62,.04)"><span>📍 ${display}</span><span class="sr-type">${countyIndex[k]} sites</span></a>`;
 });
 
 // Castle name matches
@@ -534,12 +728,12 @@ function useMyLocation(){
 var status=document.getElementById('nearMeStatus');
 var btn=document.getElementById('useLocationBtn');
 if(!navigator.geolocation){status.textContent='Geolocation not supported by your browser';return}
-btn.textContent='?? Locating...';btn.disabled=true;
+btn.textContent='📍 Locating...';btn.disabled=true;
 navigator.geolocation.getCurrentPosition(function(pos){
-btn.textContent='?? Location found!';btn.style.background='var(--ivy)';btn.style.color='#fff';btn.style.borderColor='var(--ivy)';
+btn.textContent='📍 Location found!';btn.style.background='var(--ivy)';btn.style.color='#fff';btn.style.borderColor='var(--ivy)';
 showNearby(pos.coords.latitude,pos.coords.longitude);
 },function(err){
-btn.textContent='?? Use My Location';btn.disabled=false;
+btn.textContent='📍 Use My Location';btn.disabled=false;
 status.textContent=err.code===1?'Location access denied. Try typing a location instead.':'Could not get location. Try typing instead.';
 },{enableHighAccuracy:false,timeout:10000});
 }
@@ -573,10 +767,9 @@ var typeColors={castle:'#E05A33',palace:'#E6A817',abbey:'#2E8B57',tower:'#4A7FC1
 function getColor(t){if(!t)return'var(--twilight)';var l=t.toLowerCase();for(var k in typeColors)if(l.includes(k))return typeColors[k];return'var(--twilight)'}
 el.innerHTML=results.slice(0,12).map(function(r){
 var c=r.c;var imgSrc=c.img?c.img.replace('/120px-','/250px-'):'placeholder.svg';var img='<img src="'+imgSrc+'" style="width:64px;height:64px;border-radius:8px;object-fit:cover;flex-shrink:0" onerror="this.src=\'placeholder.svg\'">';
-return '<a href="site/'+slug(c.name)+'.html" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);text-decoration:none;color:inherit;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">'+img+'<div style="flex:1;min-width:0"><div style="font-weight:600;font-size:.95rem">'+c.name+'</div><div style="font-size:.8rem;color:var(--twilight)">'+Math.round(r.d)+' km � '+(c.county||'')+', '+(c.country||'')+'</div><span style="display:inline-block;margin-top:4px;font-size:.7rem;padding:2px 8px;border-radius:10px;background:'+getColor(c.type)+';color:#fff">'+(c.type||'Site')+'</span></div></a>'
-}).join('')+'<div style="text-align:center;margin-top:16px"><a href="explore.html" style="color:var(--burgundy);font-weight:600;font-size:.9rem">View all on map ?</a></div>';
+return '<a href="site/'+slug(c.name)+'.html" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);text-decoration:none;color:inherit;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">'+img+'<div style="flex:1;min-width:0"><div style="font-weight:600;font-size:.95rem">'+c.name+'</div><div style="font-size:.8rem;color:var(--twilight)">'+Math.round(r.d)+' km · '+(c.county||'')+', '+(c.country||'')+'</div><span style="display:inline-block;margin-top:4px;font-size:.7rem;padding:2px 8px;border-radius:10px;background:'+getColor(c.type)+';color:#fff">'+(c.type||'Site')+'</span></div></a>'
+}).join('')+'<div style="text-align:center;margin-top:16px"><a href="explore.html" style="color:var(--burgundy);font-weight:600;font-size:.9rem">View all on map →</a></div>';
 }
 </script>
-<div id="site-footer"></div><script src="/components/footer.js"></script>
 </body>
 </html>
