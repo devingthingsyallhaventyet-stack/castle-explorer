@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Scottish Highlands — 81 Castles & Ancient Sites | CastleCore</title>
+<meta name="description" content="Explore 81 castles, ruins, and historic sites across the Scottish Highlands. From Eilean Donan to Culloden, discover storm-battered keeps and clan strongholds in Britain's last great wilderness.">
+<meta name="keywords" content="castles in the Scottish Highlands, Highland castles, best castles Scotland, things to do in the Highlands, Scottish castle tours, Eilean Donan, Urquhart Castle">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="canonical" href="https://castlecore.uk/scotland/highlands">
+<meta property="og:title" content="The Scottish Highlands — Castles & Ancient Sites | CastleCore">
+<meta property="og:description" content="81 castles, ruins, and historic sites across the Scottish Highlands.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://castlecore.uk/scotland/highlands">
+
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-latin.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;font-display:swap;src:url(/fonts/playfair-variable-latin.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url(/fonts/playfair-italic-latin.woff2) format('woff2')}
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--burgundy:#8b2335;--cream:#f0ebe0;--candlelight:#c9a84c;
+--navy:#0f1628;--charcoal:#1a1d2e;
+--gold:#d4a84b;--pale-gold:#e8d5a3;
+--warm-white:#faf8f4;--border:#e8e8e8;
+--ink:#1a1714;--shadow:#2a2522;--twilight:#4a5568;
+--serif:'Cormorant Garamond',serif;
+--display:'Playfair Display',serif;
+--sans:'Inter',sans-serif;
+--radius:12px;--pill:20px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:#e8e0d0;line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--navy);overflow-x:hidden;margin:0}
+h1,h2,h3,h4,h5{font-family:var(--display);font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--candlelight);color:var(--navy)}
+
+/* ========== NAV ========== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,22,40,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.05);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav,.mobile-menu{font-family:var(--sans)}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:var(--display);font-size:1.3rem;display:flex;align-items:center;gap:8px;color:#fff}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.65);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:var(--sans);transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--candlelight)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:200px;padding:8px 0;z-index:9999;margin-top:8px}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:rgba(255,255,255,.65);transition:all .15s}
+.nav-drop-panel a:hover{background:rgba(201,168,76,.08);color:var(--candlelight)}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:480px;z-index:9999;margin-top:8px;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:rgba(0,0,0,.2);border-right:1px solid rgba(255,255,255,.05);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.55);background:none;border:none;cursor:pointer;font-family:var(--sans);transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:#fff;background:rgba(255,255,255,.04)}
+.mega-country.active{color:var(--candlelight);background:rgba(201,168,76,.06);border-left-color:var(--candlelight);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:rgba(255,255,255,.65);transition:all .15s}
+.mega-panel a:hover{background:rgba(201,168,76,.08);color:var(--candlelight)}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:all .25s}
+.nav-right .btn-explore:hover{background:#a62940;transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#fff}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--navy);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:rgba(255,255,255,.65);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--candlelight);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+@media(max-width:768px){
+.nav-center{display:none}
+.nav-right .btn-explore{display:none}
+.hamburger{display:block}
+}
+
+/* ========== HERO — GALLERY MOSAIC ========== */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 80px;margin-top:64px;overflow:hidden}
+.hero-mosaic{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
+.hero-mosaic img{width:100%;height:100%;object-fit:cover}
+.hero-mosaic .hm-wide{grid-column:span 2}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--navy) 0%,rgba(15,22,40,.7) 35%,rgba(15,22,40,.3) 60%,rgba(15,22,40,.5) 100%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:800px;padding:0 40px}
+.hero-breadcrumb{font-size:.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight);margin-bottom:16px}
+.hero-breadcrumb a{color:rgba(255,255,255,.5);transition:color .2s}
+.hero-breadcrumb a:hover{color:var(--candlelight)}
+.hero h1{font-family:var(--display);font-size:clamp(3rem,8vw,6.5rem);font-weight:900;color:#fff;line-height:.88;letter-spacing:-.03em;margin-bottom:20px}
+.hero h1 em{font-style:italic;font-weight:400;font-family:var(--serif);font-size:.65em;display:block;color:var(--candlelight);letter-spacing:0;line-height:1.4;margin-top:8px}
+.hero-stats{display:flex;gap:32px;margin-top:32px;flex-wrap:wrap}
+.hero-stat{display:flex;flex-direction:column}
+.hero-stat strong{font-family:var(--display);font-size:1.8rem;font-weight:700;color:#fff;line-height:1}
+.hero-stat span{font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:2px}
+
+@media(max-width:768px){
+.hero{min-height:85vh;padding-bottom:48px}
+.hero-content{padding:0 24px}
+.hero-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1fr}
+.hero-mosaic .hm-wide{grid-column:span 2}
+.hero-stats{gap:20px}
+}
+
+/* ========== FEATURED SCROLL ========== */
+.featured{padding:80px 0 60px}
+.featured-header{padding:0 40px;margin-bottom:32px}
+.section-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--candlelight);margin-bottom:12px}
+.section-title{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.1;color:#fff}
+.featured-scroll{display:flex;gap:24px;overflow-x:auto;padding:0 40px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(201,168,76,.3) transparent}
+.featured-scroll::-webkit-scrollbar{height:6px}
+.featured-scroll::-webkit-scrollbar-track{background:transparent}
+.featured-scroll::-webkit-scrollbar-thumb{background:rgba(201,168,76,.3);border-radius:3px}
+.feat-card{flex:0 0 380px;scroll-snap-align:start;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:3/4;cursor:pointer;transition:transform .4s}
+.feat-card:hover{transform:scale(1.02)}
+.feat-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.feat-card:hover img{transform:scale(1.08)}
+.feat-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,22,40,.95) 0%,rgba(15,22,40,.4) 40%,transparent 70%)}
+.feat-card-content{position:absolute;bottom:0;left:0;right:0;padding:28px;z-index:2}
+.feat-card-rating{font-size:.72rem;font-weight:700;color:var(--candlelight);letter-spacing:1px;margin-bottom:6px}
+.feat-card-content h3{font-family:var(--display);font-size:1.5rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:8px}
+.feat-card-content p{font-family:var(--serif);font-size:.95rem;font-style:italic;color:rgba(255,255,255,.7);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.feat-card-tag{display:inline-block;margin-top:12px;font-size:.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--candlelight);padding:4px 12px;border:1px solid rgba(201,168,76,.3);border-radius:var(--pill)}
+
+@media(max-width:768px){
+.featured-header{padding:0 24px}
+.featured-scroll{padding:0 24px 24px;gap:16px}
+.feat-card{flex:0 0 300px}
+}
+
+/* ========== MAP ========== */
+.map-section{padding:80px 0 0}
+.map-header{text-align:center;padding:0 24px 40px}
+.map-header .section-title{margin-bottom:12px}
+.map-sub{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.55);max-width:500px;margin:0 auto}
+.map-container{height:65vh;min-height:450px;max-height:750px;border-top:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1)}
+#map{width:100%;height:100%}
+.leaflet-popup-content-wrapper{border-radius:10px;font-family:var(--sans);background:var(--charcoal);color:#e8e0d0;box-shadow:0 12px 40px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
+.leaflet-popup-content{margin:14px 18px;font-size:.88rem;line-height:1.5}
+.leaflet-popup-content h4{font-family:var(--display);font-size:1.05rem;color:#fff;margin-bottom:2px}
+.leaflet-popup-content a{color:var(--candlelight);font-weight:600}
+.leaflet-popup-content img{border-radius:8px;margin-bottom:8px}
+.leaflet-popup-tip{background:var(--charcoal)}
+
+/* ========== DISCOVER SECTION ========== */
+.discover{padding:100px 40px;max-width:1280px;margin:0 auto}
+.discover-header{margin-bottom:48px}
+.discover-header .section-title{margin-bottom:12px}
+.discover-sub{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.55);max-width:500px}
+
+/* Filter chips */
+.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.chip{padding:8px 18px;border-radius:var(--pill);border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(255,255,255,.55);font-family:var(--sans);font-size:.8rem;font-weight:500;cursor:pointer;transition:all .25s;white-space:nowrap}
+.chip:hover{border-color:rgba(201,168,76,.4);color:var(--candlelight)}
+.chip.active{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
+
+/* Controls row */
+.controls-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.search-box{padding:10px 16px 10px 38px;border:1px solid rgba(255,255,255,.1);border-radius:var(--pill);font-size:.88rem;font-family:var(--sans);outline:none;background:rgba(255,255,255,.04) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23777' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 12px center no-repeat;color:#e8e0d0;width:260px;transition:border-color .2s}
+.search-box:focus{border-color:var(--candlelight);box-shadow:0 0 0 3px rgba(201,168,76,.1)}
+.search-box::placeholder{color:rgba(255,255,255,.25)}
+.results-info{font-size:.8rem;color:rgba(255,255,255,.35)}
+.sort-btns{display:flex;gap:4px}
+.sort-btn{padding:6px 14px;border-radius:var(--pill);border:1px solid rgba(255,255,255,.06);background:transparent;color:rgba(255,255,255,.35);font-family:var(--sans);font-size:.75rem;font-weight:500;cursor:pointer;transition:all .2s}
+.sort-btn:hover,.sort-btn.active{color:var(--candlelight);border-color:rgba(201,168,76,.25)}
+
+/* Castle grid */
+.castle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.c-card{border-radius:14px;overflow:hidden;background:var(--charcoal);border:1px solid rgba(255,255,255,.04);transition:all .35s;display:flex;flex-direction:column;position:relative}
+.c-card:hover{border-color:rgba(201,168,76,.15);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.c-card-img{height:210px;overflow:hidden;position:relative;background:rgba(0,0,0,.2)}
+.c-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.c-card:hover .c-card-img img{transform:scale(1.05)}
+.c-card-img .c-badge{position:absolute;top:12px;right:12px;font-size:.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:var(--pill);background:rgba(15,22,40,.8);backdrop-filter:blur(8px);color:var(--candlelight);border:1px solid rgba(201,168,76,.2)}
+.c-card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.c-card-body h3{font-family:var(--display);font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:4px;line-height:1.2}
+.c-card-era{font-size:.75rem;color:rgba(255,255,255,.35);margin-bottom:10px}
+.c-card-desc{font-family:var(--serif);font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
+.c-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.04)}
+.c-card-tags{display:flex;gap:6px}
+.c-tag{font-size:.65rem;font-weight:600;padding:3px 8px;border-radius:var(--pill);background:rgba(255,255,255,.04);color:rgba(255,255,255,.4);text-transform:capitalize}
+.c-tag.free{background:rgba(76,175,80,.1);color:#81c784}
+.c-card-rating{font-size:.85rem;color:var(--candlelight);font-weight:600}
+
+.show-more-btn{display:block;margin:48px auto 0;padding:14px 48px;border-radius:var(--pill);border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.6);font-family:var(--sans);font-size:.88rem;font-weight:500;cursor:pointer;transition:all .3s}
+.show-more-btn:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.show-more-btn.hidden{display:none}
+
+@media(max-width:768px){
+.discover{padding:60px 24px}
+.castle-grid{grid-template-columns:1fr}
+.search-box{width:100%}
+.controls-row{flex-direction:column;align-items:stretch}
+}
+
+/* ========== FOOTER ========== */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;border-top:1px solid rgba(255,255,255,.05)}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:var(--display);font-size:1.3rem;color:#fff;margin-bottom:12px}
+.footer-brand p{color:rgba(255,255,255,.35);font-size:.85rem;max-width:280px;margin-top:8px}
+.footer-col h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;color:rgba(255,255,255,.25)}
+.footer-col a{display:block;color:rgba(255,255,255,.45);font-size:.88rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:var(--candlelight)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:24px;display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.2);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+
+/* ========== ANIMATIONS ========== */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo"><img src="/logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle"> castlecore</a>
+<div class="nav-center">
+<div class="nav-dropdown">
+<button class="nav-drop-btn">🏰 Sites <span style="font-size:.6rem">▾</span></button>
+<div class="nav-drop-panel">
+<a href="/search.html?type=castle">🏰 Castles</a>
+<a href="/search.html?type=abbey">⛪ Abbeys</a>
+<a href="/search.html?type=tower+house">🗼 Tower Houses</a>
+<a href="/search.html?type=palace">👑 Palaces</a>
+<a href="/search.html?type=fort">🛡️ Forts</a>
+</div>
+</div>
+<div class="nav-dropdown mega-wrap">
+<button class="nav-drop-btn">🗺️ Regions <span style="font-size:.6rem">▾</span></button>
+<div class="mega-menu">
+<div class="mega-countries">
+<button class="mega-country" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</button>
+<button class="mega-country active" data-country="scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</button>
+<button class="mega-country" data-country="wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</button>
+<button class="mega-country" data-country="ireland">☘️ Ireland</button>
+</div>
+<div class="mega-regions">
+<div class="mega-panel" data-country="england"><a href="/england/northern-england">Northern England</a><a href="/england/yorkshire">Yorkshire</a><a href="/england/midlands">The Midlands</a><a href="/england/south-east">South East</a><a href="/england/south-west">South West</a><a href="/england/east-anglia">East Anglia</a></div>
+<div class="mega-panel active" data-country="scotland"><a href="/scotland/highlands">The Highlands</a><a href="/scotland/edinburgh-lothians">Edinburgh &amp; Lothians</a><a href="/scotland/aberdeen-northeast">Aberdeen &amp; Northeast</a><a href="/scotland/argyll-islands">Argyll &amp; Islands</a><a href="/scotland/fife-perthshire">Fife &amp; Perthshire</a><a href="/scotland/borders">The Borders</a><a href="/scotland/dumfries-galloway">Dumfries &amp; Galloway</a><a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a></div>
+<div class="mega-panel" data-country="wales"><a href="/wales/north-wales">Snowdonia &amp; the North</a><a href="/wales/mid-wales">The Marches &amp; Borders</a><a href="/wales/south-west-wales">Pembrokeshire &amp; the West</a><a href="/wales/south-wales">South Wales</a></div>
+<div class="mega-panel" data-country="ireland"><a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a><a href="/ireland/kingdom-of-munster">Kingdom of Munster</a><a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a><a href="/ireland/the-heartlands">The Heartlands</a><a href="/ireland/dublin-and-the-pale">Dublin &amp; The Pale</a><a href="/ireland/northwest-and-ulster">Northwest &amp; Ulster</a></div>
+</div>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-drop-btn">📚 Collections <span style="font-size:.6rem">▾</span></button>
+<div class="nav-drop-panel">
+<a href="/collection.html?id=top-rated">⭐ Top Rated</a><a href="/collection.html?id=hidden-gems">💎 Hidden Gems</a><a href="/collection.html?id=haunted">👻 Haunted</a><a href="/collection.html?id=filming-locations">🎬 Filming Locations</a><a href="/collection.html?id=free">🎟️ Free to Visit</a></div>
+</div>
+<a href="/trail.html" class="nav-drop-btn" style="text-decoration:none">🥾 Routes</a>
+</div>
+<div class="nav-right">
+<a href="/explore.html" class="btn-explore">🗺 Explore Map</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+<a href="/explore.html" style="color:var(--candlelight);font-weight:700">🗺 Explore Map</a>
+<span class="mob-heading">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span>
+<div class="mob-sub"><a href="/scotland/highlands">The Highlands</a><a href="/scotland/edinburgh-lothians">Edinburgh &amp; Lothians</a><a href="/scotland/aberdeen-northeast">Aberdeen &amp; Northeast</a><a href="/scotland/argyll-islands">Argyll &amp; Islands</a><a href="/scotland/fife-perthshire">Fife &amp; Perthshire</a><a href="/scotland/borders">The Borders</a><a href="/scotland/dumfries-galloway">Dumfries &amp; Galloway</a><a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a></div>
+<span class="mob-heading">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
+<div class="mob-sub"><a href="/england/northern-england">Northern England</a><a href="/england/yorkshire">Yorkshire</a><a href="/england/midlands">The Midlands</a><a href="/england/south-east">South East</a><a href="/england/south-west">South West</a><a href="/england/east-anglia">East Anglia</a></div>
+<span class="mob-heading">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span>
+<div class="mob-sub"><a href="/wales/north-wales">Snowdonia &amp; the North</a><a href="/wales/mid-wales">The Marches &amp; Borders</a><a href="/wales/south-west-wales">Pembrokeshire &amp; the West</a><a href="/wales/south-wales">South Wales</a></div>
+<span class="mob-heading">☘️ Ireland</span>
+<div class="mob-sub"><a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a><a href="/ireland/kingdom-of-munster">Kingdom of Munster</a><a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a><a href="/ireland/the-heartlands">The Heartlands</a><a href="/ireland/dublin-and-the-pale">Dublin &amp; The Pale</a><a href="/ireland/northwest-and-ulster">Northwest &amp; Ulster</a></div>
+</div>
+
+<!-- ======================== HERO ======================== -->
+<section class="hero">
+<div class="hero-mosaic">
+<img class="hm-wide" src="https://img.castlecore.uk/eilean-donan-castle-2.jpg" alt="Eilean Donan Castle" loading="eager">
+<img src="https://img.castlecore.uk/culloden-battlefield.jpg" alt="Culloden Battlefield" loading="eager">
+<img src="https://img.castlecore.uk/urquhart-castle-2.jpg" alt="Urquhart Castle" loading="eager">
+<img class="hm-wide" src="https://img.castlecore.uk/dunrobin-castle-2.jpg" alt="Dunrobin Castle" loading="eager">
+</div>
+<div class="hero-content">
+<p class="hero-breadcrumb"><a href="/">Home</a> / <a href="/scotland">Scotland</a> / Highlands</p>
+<h1>The Highlands<em>Castles, ruins &amp; ancient sites across Britain's wildest landscape</em></h1>
+<div class="hero-stats">
+<div class="hero-stat"><strong id="siteCount">81</strong><span>Sites</span></div>
+<div class="hero-stat"><strong>47</strong><span>Free Entry</span></div>
+<div class="hero-stat"><strong>4.6★</strong><span>Highest Rated</span></div>
+<div class="hero-stat"><strong>1000+</strong><span>Years of History</span></div>
+</div>
+</div>
+</section>
+
+<!-- ======================== FEATURED HORIZONTAL SCROLL ======================== -->
+<section class="featured">
+<div class="featured-header fade-in">
+<p class="section-label">Don't Miss</p>
+<h2 class="section-title">Iconic Highland Sites</h2>
+</div>
+<div class="featured-scroll" id="featuredScroll">
+<!-- Populated by JS from top-rated data -->
+</div>
+</section>
+
+<!-- ======================== MAP ======================== -->
+<section class="map-section">
+<div class="map-header fade-in">
+<p class="section-label">Explore</p>
+<h2 class="section-title">Find Your Next Ruin</h2>
+<p class="map-sub">Every pin is a place worth visiting. Click to preview, then go.</p>
+</div>
+<div class="map-container">
+<div id="map"></div>
+</div>
+</section>
+
+<!-- ======================== DISCOVER / GRID ======================== -->
+<section class="discover" id="discover">
+<div class="discover-header fade-in">
+<p class="section-label">Discover</p>
+<h2 class="section-title">All Highland Sites</h2>
+<p class="discover-sub">Filter by what draws you. Every ruin tells a different story.</p>
+</div>
+
+<div class="chip-row" id="chipRow"></div>
+
+<div class="controls-row">
+<input type="text" class="search-box" id="searchBox" placeholder="Search by name..." autocomplete="off">
+<span class="results-info" id="resultsInfo"></span>
+<div class="sort-btns" id="sortBtns">
+<button class="sort-btn active" data-sort="rating">Top Rated</button>
+<button class="sort-btn" data-sort="name">A–Z</button>
+<button class="sort-btn" data-sort="reviews">Popular</button>
+</div>
+</div>
+
+<div class="castle-grid" id="castleGrid"></div>
+<button class="show-more-btn" id="showMore">Show More</button>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div><div class="footer-brand">castlecore</div><p>The most complete heritage guide for the UK &amp; Ireland. Over 2,000 castles, abbeys, and historic sites.</p></div>
+<div class="footer-col"><h4>Countries</h4><a href="/england">England</a><a href="/scotland">Scotland</a><a href="/wales">Wales</a><a href="/ireland">Ireland</a></div>
+<div class="footer-col"><h4>Explore</h4><a href="/explore.html">Map</a><a href="/collection.html">Collections</a><a href="/trail.html">Routes</a><a href="/search.html">Search</a></div>
+<div class="footer-col"><h4>Popular</h4><a href="/site/edinburgh-castle.html">Edinburgh Castle</a><a href="/site/eilean-donan-castle.html">Eilean Donan</a><a href="/site/urquhart-castle.html">Urquhart Castle</a></div>
+</div>
+<div class="footer-bottom">
+<span>&copy; 2026 CastleCore. All rights reserved.</span>
+<span>Built with 🏰 by castle nerds</span>
+</div>
+</div>
+</footer>
+
+<!-- ======================== SCRIPTS ======================== -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/data.js"></script>
+<script>
+(function(){
+  const HIGHLAND_COUNTIES=['Highland','Inverness','Ross','Sutherland','Caithness','Skye','Lochaber','Moray','Nairn','Badenoch'];
+  function isHighland(c){return c.country==='Scotland'&&HIGHLAND_COUNTIES.some(r=>(c.county||'').includes(r))}
+  const all=(typeof CASTLES!=='undefined'?CASTLES:[]).filter(isHighland);
+  document.getElementById('siteCount').textContent=all.length;
+
+  function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+  function getImg(c){return c.image&&c.image.includes('img.castlecore.uk')?c.image:(c.gallery&&c.gallery[0])||c.image||''}
+
+  // ===== FEATURED SCROLL =====
+  const topSites=all.filter(c=>c.rating>=4.0).sort((a,b)=>(b.rating-a.rating)||(b.reviewCount-a.reviewCount)).slice(0,10);
+  const scrollEl=document.getElementById('featuredScroll');
+  scrollEl.innerHTML=topSites.map(c=>{
+    const img=getImg(c);
+    const tag=c.access==='free'?'Free Entry':c.type||'Castle';
+    return '<a class="feat-card" href="/site/'+slug(c.name)+'.html">'+
+      '<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'">'+
+      '<div class="feat-card-content">'+
+      '<p class="feat-card-rating">★ '+c.rating+' · '+(c.reviewCount||0).toLocaleString()+' reviews</p>'+
+      '<h3>'+c.name+'</h3>'+
+      '<p>'+(c.description||'')+'</p>'+
+      '<span class="feat-card-tag">'+tag+'</span>'+
+      '</div></a>';
+  }).join('');
+
+  // ===== MAP =====
+  const map=L.map('map',{scrollWheelZoom:false}).setView([57.3,-5.0],7);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',maxZoom:18
+  }).addTo(map);
+
+  const icon=L.divIcon({className:'',html:'<div style="width:10px;height:10px;background:#c9a84c;border:2px solid rgba(255,255,255,.85);border-radius:50%;box-shadow:0 0 10px rgba(201,168,76,.5)"></div>',iconSize:[14,14],iconAnchor:[7,7]});
+  const fg=L.featureGroup();
+  all.forEach(c=>{
+    if(!c.lat||!c.lng)return;
+    const img=getImg(c);
+    const imgH=img?'<img src="'+img+'" alt="'+c.name+'" style="width:200px;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px" onerror="this.style.display=\'none\'">':'';
+    L.marker([c.lat,c.lng],{icon}).bindPopup('<div>'+imgH+'<h4><a href="/site/'+slug(c.name)+'.html">'+c.name+'</a></h4><p style="margin:4px 0 0;font-size:.78rem;color:rgba(255,255,255,.45)">'+(c.county||'')+' · '+(c.type||'Castle')+(c.rating?' · ★'+c.rating:'')+'</p></div>',{maxWidth:240}).addTo(fg);
+  });
+  fg.addTo(map);
+  if(all.filter(c=>c.lat&&c.lng).length)map.fitBounds(fg.getBounds().pad(0.08));
+
+  // ===== CHIPS =====
+  const chipDefs=[
+    {label:'All',filter:null},
+    {label:'Free Entry',filter:c=>c.access==='free'},
+    {label:'Ruins',filter:c=>(c.condition||'').includes('ruin')},
+    {label:'Intact',filter:c=>c.condition==='intact'||c.condition==='restored'},
+    {label:'Atmospheric',filter:c=>(c.tags||[]).includes('atmospheric')},
+    {label:'Haunted',filter:c=>(c.tags||[]).includes('haunted')},
+    {label:'Remote',filter:c=>(c.tags||[]).includes('remote')},
+    {label:'Castles',filter:c=>(c.type||'').toLowerCase()==='castle'},
+    {label:'Abbeys',filter:c=>(c.type||'').toLowerCase()==='abbey'},
+    {label:'Photogenic',filter:c=>(c.tags||[]).includes('photogenic')},
+  ];
+  const chipRow=document.getElementById('chipRow');
+  chipDefs.forEach((d,i)=>{
+    const btn=document.createElement('button');
+    btn.className='chip'+(i===0?' active':'');
+    btn.textContent=d.label;
+    btn.dataset.idx=i;
+    chipRow.appendChild(btn);
+  });
+
+  let activeChip=0,activeSort='rating',searchQ='',shown=24;
+
+  chipRow.addEventListener('click',e=>{
+    if(!e.target.classList.contains('chip'))return;
+    chipRow.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+    e.target.classList.add('active');
+    activeChip=+e.target.dataset.idx;
+    shown=24;render();
+  });
+
+  document.getElementById('sortBtns').addEventListener('click',e=>{
+    if(!e.target.classList.contains('sort-btn'))return;
+    document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    activeSort=e.target.dataset.sort;
+    render();
+  });
+
+  document.getElementById('searchBox').addEventListener('input',function(){searchQ=this.value.toLowerCase().trim();shown=24;render()});
+  document.getElementById('showMore').addEventListener('click',function(){shown+=24;render()});
+
+  function render(){
+    let list=[...all];
+    const def=chipDefs[activeChip];
+    if(def.filter)list=list.filter(def.filter);
+    if(searchQ)list=list.filter(c=>c.name.toLowerCase().includes(searchQ));
+    if(activeSort==='rating')list.sort((a,b)=>(b.rating||0)-(a.rating||0)||(b.reviewCount||0)-(a.reviewCount||0));
+    else if(activeSort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+    else if(activeSort==='reviews')list.sort((a,b)=>(b.reviewCount||0)-(a.reviewCount||0));
+
+    document.getElementById('resultsInfo').textContent=Math.min(shown,list.length)+' of '+list.length+' sites';
+    const vis=list.slice(0,shown);
+    document.getElementById('castleGrid').innerHTML=vis.map(c=>{
+      const img=getImg(c);
+      return '<a class="c-card" href="/site/'+slug(c.name)+'.html">'+
+        '<div class="c-card-img">'+
+        (img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+
+        (c.access==='free'?'<span class="c-badge">Free</span>':'')+
+        '</div>'+
+        '<div class="c-card-body">'+
+        '<h3>'+c.name+'</h3>'+
+        '<p class="c-card-era">'+(c.era||'')+(c.county?' · '+c.county:'')+'</p>'+
+        '<p class="c-card-desc">'+(c.description||'')+'</p>'+
+        '<div class="c-card-foot">'+
+        '<div class="c-card-tags">'+
+        '<span class="c-tag">'+(c.type||'Castle')+'</span>'+
+        '<span class="c-tag">'+(c.condition||'')+'</span>'+
+        '</div>'+
+        (c.rating?'<span class="c-card-rating">★ '+c.rating+'</span>':'')+
+        '</div></div></a>';
+    }).join('');
+
+    document.getElementById('showMore').classList.toggle('hidden',shown>=list.length);
+  }
+  render();
+
+  // ===== MEGA MENU =====
+  document.querySelectorAll('.mega-country').forEach(btn=>{
+    btn.addEventListener('mouseenter',function(){
+      const c=this.dataset.country;
+      this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+    });
+  });
+
+  // ===== SCROLL ANIMATIONS =====
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+  },{threshold:.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+})();
+</script>
+</body>
+</html>
