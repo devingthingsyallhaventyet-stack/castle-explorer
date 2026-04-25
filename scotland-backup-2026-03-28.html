@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -50,23 +50,23 @@ img{max-width:100%;display:block}
 ::selection{background:var(--candlelight);color:var(--navy)}
 
 /* ========== NAV ========== */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--burgundy);height:72px;display:flex;align-items:center;padding:0 24px;transition:background .3s}
+
 .nav.scrolled{background:rgba(139,35,53,.97);backdrop-filter:blur(12px)}
-.nav-inner{max-width:1400px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--display);font-size:1.4rem;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.5px}
-.nav-logo svg{width:32px;height:32px}
-.nav-links{display:flex;align-items:center;gap:24px}
-.nav-links a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;transition:color .2s}
-.nav-links a:hover{color:var(--candlelight)}
-.nav-links a.active{color:var(--candlelight);border-bottom:2px solid var(--candlelight);padding-bottom:2px}
-.nav-right{display:flex;align-items:center;gap:16px}
-.nav-right .btn-explore{background:var(--candlelight);color:var(--navy);padding:8px 20px;border-radius:var(--pill);font-weight:700;font-size:.85rem;transition:all .2s}
-.nav-right .btn-explore:hover{background:#fff;color:var(--burgundy)}
-.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:768px){
-  .nav-links{display:none}
-  .hamburger{display:block}
-  .nav{height:60px}
+  
+  
+  
 }
 
 /* ========== ANIMATIONS ========== */
@@ -267,35 +267,17 @@ img{max-width:100%;display:block}
 .load-more{display:block;margin:48px auto 0;padding:14px 40px;background:transparent;border:2px solid var(--candlelight);border-radius:var(--pill);color:var(--candlelight);font-family:var(--sans);font-weight:700;font-size:.9rem;cursor:pointer;transition:all .3s}
 .load-more:hover{background:var(--candlelight);color:var(--navy)}
 
-/* ========== FOOTER ========== */
-.footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:60px 24px 32px;text-align:center}
-.footer p{color:rgba(255,255,255,.35);font-size:.82rem}
-.footer a{color:var(--candlelight)}
+/* ========== 
+.
+.
 
 </style>
 </head>
 <body>
+<div id="site-nav"></div><script src="/components/nav.js" data-theme="dark"></script>
 
 <!-- ===== NAV ===== -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">
-      <svg viewBox="0 0 32 32" fill="none"><path d="M16 2L4 10v12l12 8 12-8V10L16 2z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 14v8M16 11v11M22 14v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 14l3-3 3 3 3-3 3 3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
-      castlecore
-    </a>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/scotland" class="active">Scotland</a>
-      <a href="/england">England</a>
-      <a href="/wales">Wales</a>
-      <a href="/ireland">Ireland</a>
-    </div>
-    <div class="nav-right">
-      <a href="/explore" class="btn-explore">Explore Map</a>
-    </div>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">☰</button>
-  </div>
-</nav>
+
 
 <!-- ===== 1. HERO ===== -->
 <section class="hero" id="hero">
@@ -705,21 +687,7 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="divider" style="margin-bottom:24px"></div>
-  <p>&copy; 2026 <a href="/">CastleCore</a> - Mapping every castle in Britain &amp; Ireland.</p>
-  <p style="margin-top:8px;font-size:.75rem;color:rgba(255,255,255,.25)">Images: Unsplash License, Wikimedia Commons (CC-BY-SA / Public Domain), NLS (CC-BY)</p>
-</footer>
-
-<!-- ===== SCRIPTS ===== -->
-<script src="data.js"></script>
-<script>
-(function(){
-  // ---- Intersection Observer for reveal animations ----
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+<!-- ===== 
     })
   },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.floater').forEach(el=>obs.observe(el));
@@ -799,5 +767,6 @@ img{max-width:100%;display:block}
   // ---- Region cards are static HTML now ----
 })();
 </script>
+<div id="site-footer"></div><script src="/components/footer.js"></script>
 </body>
 </html>
