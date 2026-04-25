@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Castles in the Scottish Highlands ó 81 Sites to Explore | CastleCore</title>
+<title>Castles in the Scottish Highlands ‚Äî 81 Sites to Explore | CastleCore</title>
 <meta name="description" content="Explore 81 castles, ruins, and historic sites in the Scottish Highlands. From Eilean Donan to Urquhart Castle on Loch Ness, plan your Highland adventure with maps, routes, and travel tips.">
 <meta name="keywords" content="castles in the Scottish Highlands, Highland castles, best castles Scotland, things to do in the Highlands, Scottish castle tours, Eilean Donan, Urquhart Castle, Inverness castles, Loch Ness castles, NC500 castles">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -71,10 +71,41 @@ img{max-width:100%;display:block}
 ::selection{background:var(--candlelight);color:var(--navy)}
 
 /* ========== NAV ========== */
-
-.nav,
-
-@media(max-width:768px){}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,22,40,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav,.mobile-menu{font-family:var(--sans)}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:var(--display);font-size:1.3rem;display:flex;align-items:center;gap:8px;color:#fff}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:var(--sans);transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--candlelight)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:200px;padding:8px 0;z-index:9999;margin-top:8px}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:rgba(255,255,255,.7);transition:all .15s}
+.nav-drop-panel a:hover{background:rgba(201,168,76,.1);color:var(--candlelight)}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:480px;z-index:9999;margin-top:8px;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:rgba(0,0,0,.2);border-right:1px solid rgba(255,255,255,.06);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.6);background:none;border:none;cursor:pointer;font-family:var(--sans);transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:#fff;background:rgba(255,255,255,.05)}
+.mega-country.active{color:var(--candlelight);background:rgba(201,168,76,.08);border-left-color:var(--candlelight);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:rgba(255,255,255,.7);transition:all .15s}
+.mega-panel a:hover{background:rgba(201,168,76,.1);color:var(--candlelight)}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:all .2s}
+.nav-right .btn-explore:hover{background:#a62940;transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#fff}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--navy);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:rgba(255,255,255,.7);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--candlelight);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+@media(max-width:768px){.nav-center{display:none}.nav-right .btn-explore{display:none}.hamburger{display:block}}
 
 /* ========== COMPACT HERO ========== */
 .hero{position:relative;height:40vh;min-height:280px;max-height:420px;display:flex;align-items:flex-end;justify-content:center;margin-top:64px;overflow:hidden}
@@ -207,17 +238,18 @@ img{max-width:100%;display:block}
 .nearby-card h3{font-family:var(--display);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px}
 .nearby-card span{font-size:.75rem;color:var(--candlelight);font-weight:500}
 
-/* ========== 
-.
-.
-.
-.
-.
-.
-.
-.
-@media(max-width:768px){.}
-@media(max-width:480px){..sites-search{width:100%}.sites-toolbar{flex-direction:column;align-items:stretch}}
+/* ========== FOOTER ========== */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:var(--display);font-size:1.3rem;color:#fff;margin-bottom:12px}
+.footer-brand p{color:rgba(255,255,255,.4);font-size:.85rem;max-width:280px;margin-top:8px}
+.footer-col h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;color:rgba(255,255,255,.3)}
+.footer-col a{display:block;color:rgba(255,255,255,.5);font-size:.88rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:var(--candlelight)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.25);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}.sites-search{width:100%}.sites-toolbar{flex-direction:column;align-items:stretch}}
 
 /* Leaflet CSS removed */
 
@@ -244,11 +276,9 @@ img{max-width:100%;display:block}
 </style>
 </head>
 <body>
-<div id="site-nav"></div><script src="/components/nav.js" data-theme="dark"></script>
 
-<!-- NAV -->
-
-</div>
+<div id="site-nav"></div><script src="/components/nav.js"></script>
+<!-- mobile menu removed -->
 
 <!-- ================================ -->
 <!-- 1. COMPACT HERO -->
@@ -266,17 +296,17 @@ img{max-width:100%;display:block}
 <!-- 2. INTRO + STICKY SUBMENU -->
 <!-- ================================ -->
 <section class="intro-section">
-<p class="intro-text">The <strong>Scottish Highlands</strong> stretch from <strong>Inverness</strong> and the shores of <strong>Loch Ness</strong> to the wild northern coast of <strong>Sutherland</strong> and <strong>Caithness</strong>. This vast region is home to <strong id="introCount">81</strong> castles, abbeys, and ancient sites ó from world-famous landmarks like <strong>Eilean Donan Castle</strong> and <strong>Urquhart Castle</strong> to hidden ruins in <strong>Glen Coe</strong>, <strong>Moray</strong>, and the remote <strong>Kyle of Lochalsh</strong>. Whether you're driving the <strong>North Coast 500</strong> or exploring <strong>Culloden Battlefield</strong>, every mile of the Highlands reveals a new piece of Scotland's story.</p>
+<p class="intro-text">The <strong>Scottish Highlands</strong> stretch from <strong>Inverness</strong> and the shores of <strong>Loch Ness</strong> to the wild northern coast of <strong>Sutherland</strong> and <strong>Caithness</strong>. This vast region is home to <strong id="introCount">81</strong> castles, abbeys, and ancient sites ‚Äî from world-famous landmarks like <strong>Eilean Donan Castle</strong> and <strong>Urquhart Castle</strong> to hidden ruins in <strong>Glen Coe</strong>, <strong>Moray</strong>, and the remote <strong>Kyle of Lochalsh</strong>. Whether you're driving the <strong>North Coast 500</strong> or exploring <strong>Culloden Battlefield</strong>, every mile of the Highlands reveals a new piece of Scotland's story.</p>
 </section>
 
 <nav class="submenu" id="submenu">
 <div class="submenu-inner">
-<a href="#sites-anchor" class="active">?? Sites</a>
-<a href="#routes-anchor">?? Routes</a>
-<a href="#travel-anchor">?? Getting There</a>
-<a href="#stay-anchor">?? Where to Stay</a>
-<a href="#when-anchor">?? Best Time</a>
-<a href="#faq-anchor">? FAQ</a>
+<a href="#sites-anchor" class="active">üè∞ Sites</a>
+<a href="#routes-anchor">ü•æ Routes</a>
+<a href="#travel-anchor">‚úàÔ∏è Getting There</a>
+<a href="#stay-anchor">üè® Where to Stay</a>
+<a href="#when-anchor">üìÖ Best Time</a>
+<a href="#faq-anchor">‚ùì FAQ</a>
 </div>
 </nav>
 
@@ -302,7 +332,7 @@ img{max-width:100%;display:block}
 <div class="filter-row" id="filterRow"></div>
 <div class="sort-row" id="sortRow">
 <button class="sort-btn active" data-sort="rating">Top Rated</button>
-<button class="sort-btn" data-sort="name">AñZ</button>
+<button class="sort-btn" data-sort="name">A‚ÄìZ</button>
 <button class="sort-btn" data-sort="reviews">Most Reviewed</button>
 <button class="sort-btn" data-sort="free">Free First</button>
 </div>
@@ -323,15 +353,15 @@ img{max-width:100%;display:block}
 <div class="routes-grid">
 <a class="route-card rc-burgundy" href="/trail.html?id=highland-route">
 <div class="route-img"><img src="https://img.castlecore.uk/eilean-donan-castle-3.jpg" alt="Loch & Glen Route" loading="lazy"></div>
-<div class="route-body"><h3>??? Loch &amp; Glen Trail</h3><div class="route-meta"><span>Great Glen</span><span>8 sites</span><span>4 hours</span></div><p class="route-desc">Follow the Great Glen from Inverness to Fort William, passing Urquhart Castle, Culloden, and the brooding shores of Loch Ness.</p></div>
+<div class="route-body"><h3>üèîÔ∏è Loch &amp; Glen Trail</h3><div class="route-meta"><span>Great Glen</span><span>8 sites</span><span>4 hours</span></div><p class="route-desc">Follow the Great Glen from Inverness to Fort William, passing Urquhart Castle, Culloden, and the brooding shores of Loch Ness.</p></div>
 </a>
 <a class="route-card rc-forest" href="/trail.html?id=nc500-castles">
 <div class="route-img"><img src="https://img.castlecore.uk/dunrobin-castle-2.jpg" alt="NC500 Castle Route" loading="lazy"></div>
-<div class="route-body"><h3>??? NC500 Castle Loop</h3><div class="route-meta"><span>North Coast</span><span>12 sites</span><span>Full day</span></div><p class="route-desc">The castle-lover's North Coast 500 ó from Dunrobin in the east to remote Sutherland ruins and the wild north coast.</p></div>
+<div class="route-body"><h3>üõ£Ô∏è NC500 Castle Loop</h3><div class="route-meta"><span>North Coast</span><span>12 sites</span><span>Full day</span></div><p class="route-desc">The castle-lover's North Coast 500 ‚Äî from Dunrobin in the east to remote Sutherland ruins and the wild north coast.</p></div>
 </a>
 <a class="route-card rc-charcoal" href="/trail.html?id=ancient-highlands">
 <div class="route-img"><img src="https://img.castlecore.uk/clava-cairns.jpg" alt="Ancient Highlands Route" loading="lazy"></div>
-<div class="route-body"><h3>?? Ancient Highlands</h3><div class="route-meta"><span>Inverness area</span><span>6 sites</span><span>3 hours</span></div><p class="route-desc">Bronze Age cairns, Iron Age brochs, and Pictish stones. The Highlands before the castles ó 4,000 years of human story.</p></div>
+<div class="route-body"><h3>ü™® Ancient Highlands</h3><div class="route-meta"><span>Inverness area</span><span>6 sites</span><span>3 hours</span></div><p class="route-desc">Bronze Age cairns, Iron Age brochs, and Pictish stones. The Highlands before the castles ‚Äî 4,000 years of human story.</p></div>
 </a>
 </div>
 </section>
@@ -344,8 +374,8 @@ img{max-width:100%;display:block}
 <p class="cs-label">Getting There</p>
 <h2 class="cs-title">Travelling to the Scottish Highlands</h2>
 <div class="cs-body">
-<p>The Scottish Highlands are more accessible than you might think. <strong>Inverness</strong>, the Highland capital, has its own airport with direct flights from London, Manchester, Bristol, Dublin, and Amsterdam. From Edinburgh or Glasgow, the A9 takes around 3ñ3.5 hours by car ó one of Britain's most scenic drives.</p>
-<p>By train, the <strong>ScotRail Highland Main Line</strong> from Edinburgh/Glasgow to Inverness runs through the Cairngorms and is regularly voted one of the world's most beautiful rail journeys. The <strong>Caledonian Sleeper</strong> runs overnight from London to Inverness, Fort William, and beyond ó arrive with the sunrise over the mountains.</p>
+<p>The Scottish Highlands are more accessible than you might think. <strong>Inverness</strong>, the Highland capital, has its own airport with direct flights from London, Manchester, Bristol, Dublin, and Amsterdam. From Edinburgh or Glasgow, the A9 takes around 3‚Äì3.5 hours by car ‚Äî one of Britain's most scenic drives.</p>
+<p>By train, the <strong>ScotRail Highland Main Line</strong> from Edinburgh/Glasgow to Inverness runs through the Cairngorms and is regularly voted one of the world's most beautiful rail journeys. The <strong>Caledonian Sleeper</strong> runs overnight from London to Inverness, Fort William, and beyond ‚Äî arrive with the sunrise over the mountains.</p>
 <p>Once in the Highlands, a car is essential. Distances are long, public transport is limited outside Inverness, and many of the best castle sites are down single-track roads. The <strong>North Coast 500</strong> route is the most popular driving loop, covering the entire northern coastline. Car hire is available at Inverness Airport and city centre.</p>
 </div>
 </section>
@@ -358,9 +388,9 @@ img{max-width:100%;display:block}
 <p class="cs-label">Accommodation</p>
 <h2 class="cs-title">Where to Stay in the Highlands</h2>
 <div class="cs-body">
-<p><strong>Inverness</strong> is the natural base ó the largest city in the Highlands with the widest range of hotels, B&Bs, and hostels. It's well-positioned for Culloden, Cawdor Castle, Fort George, and the eastern Highlands.</p>
+<p><strong>Inverness</strong> is the natural base ‚Äî the largest city in the Highlands with the widest range of hotels, B&Bs, and hostels. It's well-positioned for Culloden, Cawdor Castle, Fort George, and the eastern Highlands.</p>
 <p>For something special, several Highland castles operate as luxury hotels. <strong>Inverlochy Castle Hotel</strong> near Fort William, <strong>Tulloch Castle</strong> in Dingwall, and <strong>Aldourie Castle</strong> on the shores of Loch Ness offer the chance to sleep where Highland chiefs once feasted.</p>
-<p>Along the <strong>NC500</strong>, small towns like <strong>Ullapool</strong>, <strong>Durness</strong>, <strong>Tongue</strong>, and <strong>Dornoch</strong> have excellent B&Bs and inns. Book ahead in summer ó capacity is limited and the route is increasingly popular. Scotland's right to roam also makes <strong>wild camping</strong> legal throughout the Highlands, provided you follow the Scottish Outdoor Access Code.</p>
+<p>Along the <strong>NC500</strong>, small towns like <strong>Ullapool</strong>, <strong>Durness</strong>, <strong>Tongue</strong>, and <strong>Dornoch</strong> have excellent B&Bs and inns. Book ahead in summer ‚Äî capacity is limited and the route is increasingly popular. Scotland's right to roam also makes <strong>wild camping</strong> legal throughout the Highlands, provided you follow the Scottish Outdoor Access Code.</p>
 </div>
 </section>
 
@@ -372,9 +402,9 @@ img{max-width:100%;display:block}
 <p class="cs-label">Planning</p>
 <h2 class="cs-title">Best Time to Visit Highland Castles</h2>
 <div class="cs-body">
-<p><strong>May to September</strong> is peak season ó the longest daylight hours (up to 18 hours in midsummer), warmest temperatures, and most castle interiors open. The trade-off is midges: tiny biting insects that swarm near water from June to August. Bring repellent.</p>
+<p><strong>May to September</strong> is peak season ‚Äî the longest daylight hours (up to 18 hours in midsummer), warmest temperatures, and most castle interiors open. The trade-off is midges: tiny biting insects that swarm near water from June to August. Bring repellent.</p>
 <p><strong>April and October</strong> are excellent shoulder months. Fewer crowds, autumn colours (October is spectacular), and most major sites remain open. Spring brings wildflowers and nesting seabirds along the coast.</p>
-<p><strong>Winter (NovemberñMarch)</strong> is magical but challenging. Daylight is short (6ñ7 hours), many castle interiors close, and Highland roads can be treacherous in snow. However, ruins don't have opening hours ó and a snow-dusted castle at dawn with the mountains behind it is an experience you won't forget. The Northern Lights are occasionally visible from the north coast.</p>
+<p><strong>Winter (November‚ÄìMarch)</strong> is magical but challenging. Daylight is short (6‚Äì7 hours), many castle interiors close, and Highland roads can be treacherous in snow. However, ruins don't have opening hours ‚Äî and a snow-dusted castle at dawn with the mountains behind it is an experience you won't forget. The Northern Lights are occasionally visible from the north coast.</p>
 </div>
 </section>
 
@@ -396,11 +426,11 @@ img{max-width:100%;display:block}
 </div>
 <div class="faq-item">
 <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are Highland castles free to visit?</div>
-<div class="faq-a">Nearly half of Highland castle sites (47 out of 81) are completely free to visit. Many ruins sit in open countryside with no admission charge. Paid sites typically cost £8ñ£15 for adults. Historic Scotland Explorer Passes offer good value if you're visiting multiple sites.</div>
+<div class="faq-a">Nearly half of Highland castle sites (47 out of 81) are completely free to visit. Many ruins sit in open countryside with no admission charge. Paid sites typically cost ¬£8‚Äì¬£15 for adults. Historic Scotland Explorer Passes offer good value if you're visiting multiple sites.</div>
 </div>
 <div class="faq-item">
 <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the best time to visit Highland castles?</div>
-<div class="faq-a">May to September offers the best weather and longest daylight hours. Most castle interiors are open April through October. Ruins can be visited year-round. Avoid JuneñAugust if midges bother you ó or bring repellent.</div>
+<div class="faq-a">May to September offers the best weather and longest daylight hours. Most castle interiors are open April through October. Ruins can be visited year-round. Avoid June‚ÄìAugust if midges bother you ‚Äî or bring repellent.</div>
 </div>
 <div class="faq-item">
 <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need a car to visit Highland castles?</div>
@@ -430,7 +460,15 @@ img{max-width:100%;display:block}
 </div>
 </section>
 
-<!-- 
+<div id="site-footer"></div><script src="/components/footer.js"></script>
+
+<!-- SCRIPTS -->
+<!-- Leaflet JS removed -->
+<script src="/data.js"></script>
+<script>
+(function(){
+  const HC=['Highland','Inverness','Ross','Sutherland','Caithness','Skye','Lochaber','Moray','Nairn','Badenoch'];
+  function isH(c){return c.country==='Scotland'&&HC.some(r=>(c.county||'').includes(r))}
   const all=(typeof CASTLES!=='undefined'?CASTLES:[]).filter(isH);
   const freeCount=all.filter(c=>c.access==='free').length;
 
@@ -451,7 +489,7 @@ img{max-width:100%;display:block}
   document.getElementById('picksRow').innerHTML=top5.map(c=>{
     const img=getImg(c);
     const globalIdx=all.indexOf(c);
-    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'"><img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>? '+c.rating+'</span></div></a>';
+    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'"><img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>‚òÖ '+c.rating+'</span></div></a>';
   }).join('');
 
   // ===== FILTERS =====
@@ -549,9 +587,9 @@ img{max-width:100%;display:block}
         '<div class="site-card-img">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
         '<div class="site-card-body">'+
         '<h3>'+c.name+'</h3>'+
-        '<p class="sc-meta">'+(c.era||'')+(c.county?' ∑ '+c.county:'')+'</p>'+
+        '<p class="sc-meta">'+(c.era||'')+(c.county?' ¬∑ '+c.county:'')+'</p>'+
         '<p class="sc-desc">'+(c.description||'')+'</p>'+
-        '<div class="site-card-foot"><span class="sc-type">'+(c.type||'Castle')+'</span>'+(c.rating?'<span class="sc-rating">? '+c.rating+'</span>':'')+'</div>'+
+        '<div class="site-card-foot"><span class="sc-type">'+(c.type||'Castle')+'</span>'+(c.rating?'<span class="sc-rating">‚òÖ '+c.rating+'</span>':'')+'</div>'+
         '</div></a>';
     }).join('');
     const btn=document.getElementById('loadMore');
@@ -591,7 +629,7 @@ img{max-width:100%;display:block}
     if(gallery.length){
       galleryHtml='<div class="hp-gallery">'+
         gallery.map((img,i)=>'<img src="'+img+'" alt="" loading="lazy" class="'+(i===0?'active':'')+'" onerror="this.remove()">').join('')+
-        (gallery.length>1?'<button class="hp-gallery-btn prev" onclick="hpNav(this,-1)">ã</button><button class="hp-gallery-btn next" onclick="hpNav(this,1)">õ</button>':'')+
+        (gallery.length>1?'<button class="hp-gallery-btn prev" onclick="hpNav(this,-1)">‚Äπ</button><button class="hp-gallery-btn next" onclick="hpNav(this,1)">‚Ä∫</button>':'')+
         '</div>'+(gallery.length>1?'<div class="hp-dots">'+gallery.map((_,i)=>'<button class="hp-dot'+(i===0?' active':'')+'" onclick="hpGo(this,'+i+')"></button>').join('')+'</div>':'');
     }
     
@@ -601,7 +639,7 @@ img{max-width:100%;display:block}
     preview.innerHTML='<h4>'+castle.name+'</h4>'+galleryHtml+
       '<div class="hp-summary">'+summary+'</div>'+
       '<div class="hp-actions">'+
-      '<button class="hp-heart" onclick="alert(\'Saved!\')">? Save</button>'+
+      '<button class="hp-heart" onclick="alert(\'Saved!\')">‚ô° Save</button>'+
       '<a class="hp-explore" href="/site/'+slug(castle.name)+'.html" target="_blank">Explore</a>'+
       '</div>';
 
@@ -679,10 +717,15 @@ img{max-width:100%;display:block}
   window.addEventListener('scroll',updateSubmenu,{passive:true});
 
   // ===== MEGA MENU =====
-  document.querySelectorAll(');
+  document.querySelectorAll('.mega-country').forEach(btn=>{
+    btn.addEventListener('mouseenter',function(){
+      const c=this.dataset.country;
+      this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+    });
   });
 })();
 </script>
-<div id="site-footer"></div><script src="/components/footer.js"></script>
 </body>
 </html>
