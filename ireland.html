@@ -151,7 +151,7 @@ img{max-width:100%;display:block}
 
 /* ========== 2. THE LAND - Region Explorer ========== */
 .land{position:relative;padding:60px 0 80px;background:var(--navy);overflow:hidden}
-.land-bg{position:absolute;inset:-15%;opacity:1;background:url('img/ireland/antique-map.webp?v=2') center/cover;pointer-events:none;z-index:1}
+.land-bg{position:absolute;inset:-15%;opacity:1;background:url('img/ireland/antique-map.webp?v=3') center/cover;pointer-events:none;z-index:1}
 .land-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
 .land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .land-header{text-align:center;margin-bottom:40px}
@@ -174,7 +174,7 @@ img{max-width:100%;display:block}
 
 @media(max-width:1024px){
   .region-grid{grid-template-columns:repeat(2,1fr)}
-  .land-bg{background-image:url('img/ireland/antique-map-mobile.webp?v=2')}
+  .land-bg{background-image:url('img/ireland/antique-map.webp?v=3')}
 }
 @media(max-width:560px){
   .region-grid{grid-template-columns:1fr 1fr;gap:12px}
@@ -186,7 +186,7 @@ img{max-width:100%;display:block}
 
 /* ========== HISTORY ========== */
 .history{position:relative;padding:120px 0;background:var(--navy);overflow:visible}
-.history-bg{position:absolute;inset:0;opacity:1;background:url('img/ireland/irish-bg.webp?v=4') center/cover;pointer-events:none;z-index:1}
+.history-bg{position:absolute;inset:0;opacity:1;background:url('img/ireland/irish-bg.webp?v=5') center/cover;pointer-events:none;z-index:1}
 .history-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.75);pointer-events:none}
 .history .container{max-width:1300px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .history-header{text-align:center;margin-bottom:80px}
@@ -410,7 +410,7 @@ img{max-width:100%;display:block}
     </div>
     <div class="region-grid reveal" id="region-grid">
       <a class="region-card" href="/ireland/wild-atlantic-way">
-        <img src="img/ireland/region-wild-atlantic.webp" alt="The Wild Atlantic Way" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1515849645823-9bdbf3ae1b26?w=800&q=80'">
+        <img src="img/ireland/region-wild-atlantic.webp?v=2" alt="The Wild Atlantic Way" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1515849645823-9bdbf3ae1b26?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">203 sites</div>
@@ -420,7 +420,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/kingdom-of-munster">
-        <img src="img/ireland/region-munster.webp" alt="The Kingdom of Munster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
+        <img src="img/ireland/region-munster.webp?v=2" alt="The Kingdom of Munster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">140 sites</div>
@@ -430,7 +430,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/irelands-ancient-east">
-        <img src="img/ireland/region-ancient-east.webp" alt="Ireland's Ancient East" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-ancient-east.webp?v=2" alt="Ireland's Ancient East" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">142 sites</div>
@@ -440,7 +440,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/the-heartlands">
-        <img src="img/ireland/region-heartlands.webp" alt="The Heartlands" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-heartlands.webp?v=2" alt="The Heartlands" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">146 sites</div>
@@ -450,7 +450,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/dublin-and-the-pale">
-        <img src="img/ireland/region-dublin-pale.webp" alt="Dublin & The Pale" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-dublin-pale.webp?v=2" alt="Dublin & The Pale" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">50 sites</div>
@@ -460,7 +460,7 @@ img{max-width:100%;display:block}
         <div class="region-card-arrow">→</div>
       </a>
       <a class="region-card" href="/ireland/northwest-and-ulster">
-        <img src="img/ireland/region-northwest-ulster.webp" alt="The Northwest & Ulster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+        <img src="img/ireland/region-northwest-ulster.webp?v=2" alt="The Northwest & Ulster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">98 sites</div>
