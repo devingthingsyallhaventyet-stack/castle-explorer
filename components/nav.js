@@ -34,8 +34,9 @@
     }
     
     .nav-logo {
-      font-family: 'Playfair Display', serif !important;
-      font-size: 1.3rem !important;
+      font-family: 'Cormorant Garamond', serif !important;
+      font-style: italic !important;
+      font-size: 1.4rem !important;
       display: flex !important;
       align-items: center !important;
       gap: 8px !important;
