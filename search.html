@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<title>Search — castlecore</title>
+<title>Search � castlecore</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,35 +18,6 @@ a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
 /* NAV */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media(max-width:768px){}
 
@@ -112,19 +83,15 @@ select.filter-select{background:#fff;border:1px solid var(--border);padding:6px 
 <body>
 <div id="site-nav"></div><script src="/components/nav.js"></script>
 
+<a href="explore.html" style="color:var(--burgundy);font-weight:700">??? Explore Map</a>
 
-
-<a href="explore.html" style="color:var(--burgundy);font-weight:700">🗺️ Explore Map</a>
-<span class="mob-heading">Sites</span><div class="mob-sub"><a href="search.html?type=castle">🏰 Castles</a><a href="search.html?type=abbey">⛪ Abbeys</a><a href="search.html?type=tower+house">🗼 Tower Houses</a><a href="search.html?type=palace">👑 Palaces</a></div>
-<span class="mob-heading">Regions</span><div class="mob-sub"><a href="region.html?id=scottish-highlands">Scottish Highlands</a><a href="region.html?id=north-wales">North Wales</a><a href="region.html?id=northern-england">Northern England</a><a href="region.html?id=ireland">Ireland</a></div>
-<span class="mob-heading">Collections</span><div class="mob-sub"><a href="collection.html?id=top-rated">🏆 Top Rated</a><a href="collection.html?id=free">🆓 Free to Visit</a><a href="collection.html">View all →</a></div>
-<a href="trail.html">🥾 Trails</a>
+<a href="trail.html">?? Trails</a>
 </div>
 
 <div class="search-header">
 <div class="search-header-inner">
 <div class="search-bar-wrap">
-<span class="si">🔍</span>
+<span class="si">??</span>
 <input type="text" id="searchInput" placeholder="Search by name, postal code, or region..." autocomplete="off">
 </div>
 <h1 id="resultsTitle">Searching...</h1>
@@ -147,7 +114,7 @@ select.filter-select{background:#fff;border:1px solid var(--border);padding:6px 
 <div class="results-inner">
 <div class="results-grid" id="resultsGrid"></div>
 <div class="empty-state" id="emptyState" style="display:none">
-<div class="empty-icon">🏰</div>
+<div class="empty-icon">??</div>
 <h2>No sites found</h2>
 <p>Try a different search term, or browse by region or type from the homepage.</p>
 </div>
@@ -156,8 +123,6 @@ select.filter-select{background:#fff;border:1px solid var(--border);padding:6px 
 </div>
 </div>
 </div>
-
-
 
 <script src="data.js"></script>
 <script>
@@ -200,7 +165,7 @@ const POSTAL_MAP={
 'WV':'West Midlands','YO':'North Yorkshire','ZE':'Shetland'
 };
 
-// Region name → region page mapping
+// Region name ? region page mapping
 const REGION_MAP={
 'london':'london-surrey','surrey':'london-surrey','london & surrey':'london-surrey',
 'scottish highlands':'scottish-highlands','highlands':'scottish-highlands',
@@ -295,8 +260,8 @@ if(!r)return '';
 const full=Math.floor(r);
 const half=r-full>=0.3;
 let s='';
-for(let i=0;i<full;i++)s+='★';
-if(half)s+='½';
+for(let i=0;i<full;i++)s+='?';
+if(half)s+='�';
 return s+' '+r.toFixed(1);
 }
 
@@ -410,7 +375,7 @@ filtered=results;
 const titleEl=document.getElementById('resultsTitle');
 if(title)titleEl.textContent='Results for "'+title+'"';
 else titleEl.textContent='Search';
-document.title=title?title+' — castlecore':'Search — castlecore';
+document.title=title?title+' � castlecore':'Search � castlecore';
 
 const input=document.getElementById('searchInput');
 input.value=params.q||params.region||params.type||params.tag||'';

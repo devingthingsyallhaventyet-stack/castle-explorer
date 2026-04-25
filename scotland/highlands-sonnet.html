@@ -1,14 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Scottish Highlands — 81 Castles & Ancient Sites | CastleCore</title>
+<title>The Scottish Highlands � 81 Castles & Ancient Sites | CastleCore</title>
 <meta name="description" content="Explore 81 castles, ruins, and historic sites across the Scottish Highlands. From Eilean Donan to Culloden, discover storm-battered keeps and clan strongholds in Britain's last great wilderness.">
 <meta name="keywords" content="castles in the Scottish Highlands, Highland castles, best castles Scotland, things to do in the Highlands, Scottish castle tours, Eilean Donan, Urquhart Castle">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://castlecore.uk/scotland/highlands">
-<meta property="og:title" content="The Scottish Highlands — Castles & Ancient Sites | CastleCore">
+<meta property="og:title" content="The Scottish Highlands � Castles & Ancient Sites | CastleCore">
 <meta property="og:description" content="81 castles, ruins, and historic sites across the Scottish Highlands.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://castlecore.uk/scotland/highlands">
@@ -47,44 +47,11 @@ img{max-width:100%;display:block}
 
 .nav,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:768px){
-
-
 
 }
 
-/* ========== HERO — GALLERY MOSAIC ========== */
+/* ========== HERO � GALLERY MOSAIC ========== */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 80px;margin-top:64px;overflow:hidden}
 .hero-mosaic{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
 .hero-mosaic img{width:100%;height:100%;object-fit:cover}
@@ -225,12 +192,6 @@ img{max-width:100%;display:block}
 
 <!-- Mobile Menu -->
 
-<span class="mob-heading">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
-<div class="mob-sub"><a href="/england/northern-england">Northern England</a><a href="/england/yorkshire">Yorkshire</a><a href="/england/midlands">The Midlands</a><a href="/england/south-east">South East</a><a href="/england/south-west">South West</a><a href="/england/east-anglia">East Anglia</a></div>
-<span class="mob-heading">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span>
-<div class="mob-sub"><a href="/wales/north-wales">Snowdonia &amp; the North</a><a href="/wales/mid-wales">The Marches &amp; Borders</a><a href="/wales/south-west-wales">Pembrokeshire &amp; the West</a><a href="/wales/south-wales">South Wales</a></div>
-<span class="mob-heading">☘️ Ireland</span>
-<div class="mob-sub"><a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a><a href="/ireland/kingdom-of-munster">Kingdom of Munster</a><a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a><a href="/ireland/the-heartlands">The Heartlands</a><a href="/ireland/dublin-and-the-pale">Dublin &amp; The Pale</a><a href="/ireland/northwest-and-ulster">Northwest &amp; Ulster</a></div>
 </div>
 
 <!-- ======================== HERO ======================== -->
@@ -247,7 +208,7 @@ img{max-width:100%;display:block}
 <div class="hero-stats">
 <div class="hero-stat"><strong id="siteCount">81</strong><span>Sites</span></div>
 <div class="hero-stat"><strong>47</strong><span>Free Entry</span></div>
-<div class="hero-stat"><strong>4.6★</strong><span>Highest Rated</span></div>
+<div class="hero-stat"><strong>4.6?</strong><span>Highest Rated</span></div>
 <div class="hero-stat"><strong>1000+</strong><span>Years of History</span></div>
 </div>
 </div>
@@ -291,7 +252,7 @@ img{max-width:100%;display:block}
 <span class="results-info" id="resultsInfo"></span>
 <div class="sort-btns" id="sortBtns">
 <button class="sort-btn active" data-sort="rating">Top Rated</button>
-<button class="sort-btn" data-sort="name">A–Z</button>
+<button class="sort-btn" data-sort="name">A�Z</button>
 <button class="sort-btn" data-sort="reviews">Popular</button>
 </div>
 </div>
@@ -316,7 +277,7 @@ img{max-width:100%;display:block}
     return '<a class="feat-card" href="/site/'+slug(c.name)+'.html">'+
       '<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'">'+
       '<div class="feat-card-content">'+
-      '<p class="feat-card-rating">★ '+c.rating+' · '+(c.reviewCount||0).toLocaleString()+' reviews</p>'+
+      '<p class="feat-card-rating">? '+c.rating+' � '+(c.reviewCount||0).toLocaleString()+' reviews</p>'+
       '<h3>'+c.name+'</h3>'+
       '<p>'+(c.description||'')+'</p>'+
       '<span class="feat-card-tag">'+tag+'</span>'+
@@ -335,7 +296,7 @@ img{max-width:100%;display:block}
     if(!c.lat||!c.lng)return;
     const img=getImg(c);
     const imgH=img?'<img src="'+img+'" alt="'+c.name+'" style="width:200px;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px" onerror="this.style.display=\'none\'">':'';
-    L.marker([c.lat,c.lng],{icon}).bindPopup('<div>'+imgH+'<h4><a href="/site/'+slug(c.name)+'.html">'+c.name+'</a></h4><p style="margin:4px 0 0;font-size:.78rem;color:rgba(255,255,255,.45)">'+(c.county||'')+' · '+(c.type||'Castle')+(c.rating?' · ★'+c.rating:'')+'</p></div>',{maxWidth:240}).addTo(fg);
+    L.marker([c.lat,c.lng],{icon}).bindPopup('<div>'+imgH+'<h4><a href="/site/'+slug(c.name)+'.html">'+c.name+'</a></h4><p style="margin:4px 0 0;font-size:.78rem;color:rgba(255,255,255,.45)">'+(c.county||'')+' � '+(c.type||'Castle')+(c.rating?' � ?'+c.rating:'')+'</p></div>',{maxWidth:240}).addTo(fg);
   });
   fg.addTo(map);
   if(all.filter(c=>c.lat&&c.lng).length)map.fitBounds(fg.getBounds().pad(0.08));
@@ -403,14 +364,14 @@ img{max-width:100%;display:block}
         '</div>'+
         '<div class="c-card-body">'+
         '<h3>'+c.name+'</h3>'+
-        '<p class="c-card-era">'+(c.era||'')+(c.county?' · '+c.county:'')+'</p>'+
+        '<p class="c-card-era">'+(c.era||'')+(c.county?' � '+c.county:'')+'</p>'+
         '<p class="c-card-desc">'+(c.description||'')+'</p>'+
         '<div class="c-card-foot">'+
         '<div class="c-card-tags">'+
         '<span class="c-tag">'+(c.type||'Castle')+'</span>'+
         '<span class="c-tag">'+(c.condition||'')+'</span>'+
         '</div>'+
-        (c.rating?'<span class="c-card-rating">★ '+c.rating+'</span>':'')+
+        (c.rating?'<span class="c-card-rating">? '+c.rating+'</span>':'')+
         '</div></div></a>';
     }).join('');
 

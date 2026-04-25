@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -25,8 +25,6 @@
 <meta property="og:type" content="website">
 
 <meta property="og:url" content="https://castlecore.uk/england">
-
-
 
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2')}
@@ -67,53 +65,10 @@ img{max-width:100%;display:block}
 
 ::selection{background:var(--candlelight);color:var(--navy)}
 
-
-
-
  .nav, 
 
 
 .logo-mark{font-size:1.2rem;line-height:1}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.btn-login{background:none;border:2px solid var(--border);color:var(--twilight);padding:7px 14px;border-radius:var(--pill);font-weight:500;font-size:.85rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:4px}.btn-login:hover{border-color:var(--burgundy);color:var(--burgundy)}
-
-
-
-
-
-
-
-
-
 
 @media(max-width:768px){
 
@@ -146,26 +101,17 @@ img{max-width:100%;display:block}
 .section-title{font-family:var(--display);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:20px}
 .section-subtitle{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,.7);max-width:600px;line-height:1.6}
 
+/* old castle/filter styles removed — Scotland-matching styles below */
 
-
-/* old castle/filter styles removed â€” Scotland-matching styles below */
-
-/* old region/history styles removed â€” Scotland-matching styles below */
-
-
+/* old region/history styles removed — Scotland-matching styles below */
 
 .
 
 .
-
-
 
 .reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s ease}
 
 .reveal.visible{opacity:1;transform:translateY(0)}
-
-
-
 
 /* ========== LAND/REGION CARDS (Scotland style) ========== */
 .land{position:relative;padding:60px 0 80px;background:var(--navy);overflow:hidden}
@@ -257,59 +203,6 @@ img{max-width:100%;display:block}
 <body>
 <div id="site-nav"></div><script src="/components/nav.js" data-theme="dark"></script>
 
-
-
-
-
-<a href="explore.html" style="color:var(--burgundy);font-weight:700">Explore Map</a>
-<span class="mob-heading">Sites</span>
-<div class="mob-sub">
-<a href="search.html?type=castle">Castles</a>
-<a href="search.html?type=abbey">Abbeys</a>
-<a href="search.html?type=tower+house">Tower Houses</a>
-<a href="search.html?type=palace">Palaces</a>
-<a href="search.html?type=fort">Forts</a>
-</div>
-<span class="mob-heading">England</span>
-<div class="mob-sub">
-<a href="region.html?id=london-surrey">London &amp; Surrey</a>
-<a href="region.html?id=south-east-england">South East</a>
-<a href="region.html?id=south-west-england">South West</a>
-<a href="region.html?id=northern-england">Northern England</a>
-<a href="region.html?id=midlands">The Midlands</a>
-<a href="region.html?id=yorkshire">Yorkshire</a>
-<a href="region.html?id=east-anglia">East Anglia</a>
-</div>
-<span class="mob-heading">Scotland</span>
-<div class="mob-sub">
-<a href="region.html?id=scottish-highlands">Highlands</a>
-<a href="region.html?id=scottish-lowlands">Lowlands &amp; Borders</a>
-</div>
-<span class="mob-heading">Wales</span>
-<div class="mob-sub">
-<a href="region.html?id=north-wales">North Wales</a>
-<a href="region.html?id=south-wales">South Wales</a>
-</div>
-<span class="mob-heading">Ireland</span>
-<div class="mob-sub">
-<a href="region.html?id=dublin-east-coast">Dublin &amp; East Coast</a>
-<a href="region.html?id=south-east-ireland">South East</a>
-<a href="region.html?id=south-west-ireland">South West</a>
-<a href="region.html?id=west-ireland">West</a>
-<a href="region.html?id=midlands-ireland">Midlands</a>
-<a href="region.html?id=north-west-ireland">North West</a>
-</div>
-<span class="mob-heading">Collections</span>
-<div class="mob-sub">
-<a href="collection.html?id=top-rated">Top Rated</a>
-<a href="collection.html?id=hidden-gems">Hidden Gems</a>
-<a href="collection.html?id=haunted">Haunted</a>
-<a href="collection.html?id=free">Free to Visit</a>
-<a href="collection.html">View all</a>
-</div>
-<a href="trail.html">Routes</a>
-<a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:10px;font-weight:600;color:var(--twilight)">Login</a>
-</div>
 <section class="hero" id="hero">
 
   <div class="hero-bg"></div>
@@ -327,8 +220,6 @@ img{max-width:100%;display:block}
   </div>
 
 </section>
-
-
 
 <!-- ===== 4. THE CASTLES ===== -->
 <section class="castles" id="castles">
@@ -373,7 +264,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Northern England</h3>
           <p class="region-card-desc">Border fortresses and peel towers guarding England's wild frontier with Scotland.</p>
         </div>
-        <div class="region-card-arrow">â†’</div>
+        <div class="region-card-arrow">?</div>
       </a>
       <a class="region-card" href="/england/yorkshire">
         <img src="/img/en/yorkshire.webp" srcset="/img/en/yorkshire-mobile.webp 400w, /img/en/yorkshire.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Yorkshire" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
@@ -383,7 +274,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">Yorkshire</h3>
           <p class="region-card-desc">From the ruins of Helmsley to the might of Richmond, a county shaped by Viking, Norman, and medieval power.</p>
         </div>
-        <div class="region-card-arrow">â†’</div>
+        <div class="region-card-arrow">?</div>
       </a>
       <a class="region-card" href="/england/midlands">
         <img src="/img/en/midlands.webp" srcset="/img/en/midlands-mobile.webp 400w, /img/en/midlands.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="The Midlands" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
@@ -393,7 +284,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">The Midlands</h3>
           <p class="region-card-desc">England's contested heart, where Plantagenet kings built and battled from Kenilworth to Ludlow.</p>
         </div>
-        <div class="region-card-arrow">â†’</div>
+        <div class="region-card-arrow">?</div>
       </a>
       <a class="region-card" href="/england/south-east">
         <img src="/img/en/south-east.webp" srcset="/img/en/south-east-mobile.webp 400w, /img/en/south-east.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="South East" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
@@ -401,9 +292,9 @@ img{max-width:100%;display:block}
         <div class="region-card-content">
           <div class="region-card-castles">67 sites</div>
           <h3 class="region-card-name">South East (London)</h3>
-          <p class="region-card-desc">From the Tower of London to the white cliffs of Dover â€” every invader landed here, and castles rose to stop them.</p>
+          <p class="region-card-desc">From the Tower of London to the white cliffs of Dover — every invader landed here, and castles rose to stop them.</p>
         </div>
-        <div class="region-card-arrow">â†’</div>
+        <div class="region-card-arrow">?</div>
       </a>
       <a class="region-card" href="/england/south-west">
         <img src="/img/en/south-west.webp" srcset="/img/en/south-west-mobile.webp 400w, /img/en/south-west.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="South West" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
@@ -413,7 +304,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">South West</h3>
           <p class="region-card-desc">Celtic hill forts, Norman strongholds, and Tudor coastal defences along England's Atlantic edge.</p>
         </div>
-        <div class="region-card-arrow">â†’</div>
+        <div class="region-card-arrow">?</div>
       </a>
       <a class="region-card" href="/england/east-anglia">
         <img src="/img/en/east-anglia.webp" srcset="/img/en/east-anglia-mobile.webp 400w, /img/en/east-anglia.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="East Anglia" loading="lazy" width="800" height="600" onerror="this.style.opacity='0.2';this.alt='Loading...'">
@@ -423,7 +314,7 @@ img{max-width:100%;display:block}
           <h3 class="region-card-name">East Anglia</h3>
           <p class="region-card-desc">Flat lands, vast skies, and some of England's most powerful medieval fortresses.</p>
         </div>
-        <div class="region-card-arrow">â†’</div>
+        <div class="region-card-arrow">?</div>
       </a>
     </div>
   </div>
@@ -435,7 +326,7 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="history-header reveal">
       <h2 class="section-title" style="color:#fff">Explore England's History</h2>
-      <p class="section-subtitle" style="margin:0 auto">Every siege, conquest, and rebellion left its mark in stone. These are the events that forged a kingdom â€” and the castles that stood witness.</p>
+      <p class="section-subtitle" style="margin:0 auto">Every siege, conquest, and rebellion left its mark in stone. These are the events that forged a kingdom — and the castles that stood witness.</p>
     </div>
     <div class="history-grid">
 
@@ -446,9 +337,9 @@ img{max-width:100%;display:block}
         </div>
         <div class="hc-body">
           <h3>The Norman Conquest</h3>
-          <p>William conquered England in a day at Hastings â€” then spent 20 years building the castles to keep it. 500 motte-and-bailey strongholds rose across the realm, each one a Norman fist gripping English soil.</p>
-          <div class="hc-castles"><strong>78 sites</strong> â€” Tower of London, Dover, Windsor, Warwickâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <p>William conquered England in a day at Hastings — then spent 20 years building the castles to keep it. 500 motte-and-bailey strongholds rose across the realm, each one a Norman fist gripping English soil.</p>
+          <div class="hc-castles"><strong>78 sites</strong> — Tower of London, Dover, Windsor, Warwick…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -460,8 +351,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Plantagenet Kings</h3>
           <p>Three centuries of warrior kings, civil wars, and the greatest castle-building programme in English history. From Henry II's continental empire to Richard III's final charge at Bosworth.</p>
-          <div class="hc-castles"><strong>156 sites</strong> â€” Kenilworth, Warwick, Ludlow, Caerphillyâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <div class="hc-castles"><strong>156 sites</strong> — Kenilworth, Warwick, Ludlow, Caerphilly…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -472,9 +363,9 @@ img{max-width:100%;display:block}
         </div>
         <div class="hc-body">
           <h3>The Dissolution of the Monasteries</h3>
-          <p>800 monasteries dissolved in five years. England's greatest abbeys â€” centuries of prayer, scholarship, and architecture â€” fell silent overnight. Some survived. Most became the romantic ruins we explore today.</p>
-          <div class="hc-castles"><strong>52 sites</strong> â€” Fountains Abbey, Rievaulx, Whitby, Glastonbury, Tinternâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <p>800 monasteries dissolved in five years. England's greatest abbeys — centuries of prayer, scholarship, and architecture — fell silent overnight. Some survived. Most became the romantic ruins we explore today.</p>
+          <div class="hc-castles"><strong>52 sites</strong> — Fountains Abbey, Rievaulx, Whitby, Glastonbury, Tintern…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -485,9 +376,9 @@ img{max-width:100%;display:block}
         </div>
         <div class="hc-body">
           <h3>The Six Wives of Henry VIII</h3>
-          <p>Divorced, beheaded, died, divorced, beheaded, survived. Six marriages that reshaped England's religion, politics, and palaces â€” from Catherine of Aragon's chambers at Kimbolton to Anne Boleyn's imprisonment in the Tower.</p>
-          <div class="hc-castles"><strong>8 sites</strong> â€” Tower of London, Hever Castle, Kimbolton Castle, Sudeley Castle, Hampton Courtâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <p>Divorced, beheaded, died, divorced, beheaded, survived. Six marriages that reshaped England's religion, politics, and palaces — from Catherine of Aragon's chambers at Kimbolton to Anne Boleyn's imprisonment in the Tower.</p>
+          <div class="hc-castles"><strong>8 sites</strong> — Tower of London, Hever Castle, Kimbolton Castle, Sudeley Castle, Hampton Court…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -499,8 +390,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Wars of the Roses</h3>
           <p>York versus Lancaster. Thirty years of dynastic civil war fought across England's greatest castles. The crown changed hands six times before Henry Tudor ended it all at Bosworth.</p>
-          <div class="hc-castles"><strong>89 sites</strong> â€” Middleham, Sheriff Hutton, Raglan, Pembrokeâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <div class="hc-castles"><strong>89 sites</strong> — Middleham, Sheriff Hutton, Raglan, Pembroke…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -511,9 +402,9 @@ img{max-width:100%;display:block}
         </div>
         <div class="hc-body">
           <h3>The English Civil War</h3>
-          <p>Parliament versus Crown. More castles were besieged, slighted, and destroyed in nine years than in any other period. The medieval fortress met gunpowder â€” and lost.</p>
-          <div class="hc-castles"><strong>134 sites</strong> â€” Corfe, Kenilworth, Pontefract, Raglanâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <p>Parliament versus Crown. More castles were besieged, slighted, and destroyed in nine years than in any other period. The medieval fortress met gunpowder — and lost.</p>
+          <div class="hc-castles"><strong>134 sites</strong> — Corfe, Kenilworth, Pontefract, Raglan…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -525,8 +416,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>William the Conqueror</h3>
           <p>The Norman duke who defeated Harold at Hastings and built the Tower of London to ensure no one would forget who ruled. England's destiny changed in a single October day.</p>
-          <div class="hc-castles"><strong>45 sites</strong> â€” Tower of London, Windsor, Battle Abbeyâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <div class="hc-castles"><strong>45 sites</strong> — Tower of London, Windsor, Battle Abbey…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -538,8 +429,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>Eleanor of Aquitaine</h3>
           <p>Queen of France, then Queen of England. The most powerful woman in medieval Europe, imprisoned for 16 years by her own husband. Mother of two kings who changed the world.</p>
-          <div class="hc-castles"><strong>23 sites</strong> â€” Winchester, Old Sarum, Poitiers, Chinonâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <div class="hc-castles"><strong>23 sites</strong> — Winchester, Old Sarum, Poitiers, Chinon…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -550,9 +441,9 @@ img{max-width:100%;display:block}
         </div>
         <div class="hc-body">
           <h3>The Tudors</h3>
-          <p>From Henry VII's victory at Bosworth to Elizabeth I's golden age â€” the dynasty that transformed medieval England into a Renaissance power. Castles became palaces, and palaces became statements.</p>
-          <div class="hc-castles"><strong>19 sites</strong> â€” Hampton Court, Tower of London, Hever, Kenilworth, Richmondâ€¦</div>
-          <span class="hc-link">Explore Collection â†’</span>
+          <p>From Henry VII's victory at Bosworth to Elizabeth I's golden age — the dynasty that transformed medieval England into a Renaissance power. Castles became palaces, and palaces became statements.</p>
+          <div class="hc-castles"><strong>19 sites</strong> — Hampton Court, Tower of London, Hever, Kenilworth, Richmond…</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -624,7 +515,7 @@ img{max-width:100%;display:block}
     batch.forEach(c=>{
       const card = document.createElement('div');
       card.className='castle-card';
-      const stars = c.rating ? 'â˜…'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const stars = c.rating ? '?'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
@@ -647,7 +538,7 @@ img{max-width:100%;display:block}
     if(remaining > 0){
       loadBtn.style.display = 'block';
       const link = regionLinks[currentFilter] || '/england/all-castles';
-      loadBtn.textContent = `View All ${filtered.length} Castles â†’`;
+      loadBtn.textContent = `View All ${filtered.length} Castles ?`;
       loadBtn.onclick = function(){ window.location.href = link; };
     } else {
       loadBtn.style.display = 'none';
