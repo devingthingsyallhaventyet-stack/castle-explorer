@@ -6,6 +6,10 @@
 
   // CSS styles for both themes
   const cssStyles = `
+    /* Self-hosted Inter for consistent nav rendering */
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin.woff2) format('woff2')}
+    /* Push body content below fixed nav */
+    body { padding-top: 64px !important; }
     /* Base nav styles */
     .nav {
       position: fixed !important;
