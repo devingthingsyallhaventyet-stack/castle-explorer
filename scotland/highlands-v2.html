@@ -257,9 +257,16 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 .hover-preview{position:absolute;z-index:9999;background:#fff;border:1px solid #e8e8e8;border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.15);padding:0;width:380px;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:var(--sans)}
 .hover-preview.show{opacity:1;pointer-events:auto}
 .hover-preview h4{font-family:var(--display);font-size:1.2rem;color:#1a1714;margin-bottom:12px;line-height:1.2;padding:16px 16px 0}
-.hover-preview .hp-gallery{display:flex;gap:8px;margin-bottom:12px;padding:0 16px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
-.hover-preview .hp-gallery::-webkit-scrollbar{display:none}
-.hover-preview .hp-gallery img{width:320px;height:200px;object-fit:cover;border-radius:6px;border:1px solid #e8e8e8;flex-shrink:0}
+.hover-preview .hp-gallery{position:relative;margin-bottom:12px;overflow:hidden;border-radius:6px 6px 0 0}
+.hover-preview .hp-gallery img{width:100%;height:220px;object-fit:cover;display:none}
+.hover-preview .hp-gallery img.active{display:block}
+.hover-preview .hp-gallery-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.hover-preview .hp-gallery-btn:hover{background:rgba(0,0,0,.8)}
+.hover-preview .hp-gallery-btn.prev{left:8px}
+.hover-preview .hp-gallery-btn.next{right:8px}
+.hover-preview .hp-dots{display:flex;justify-content:center;gap:5px;padding:8px 0 4px}
+.hover-preview .hp-dot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,.2);border:none;cursor:pointer;padding:0;transition:background .2s}
+.hover-preview .hp-dot.active{background:var(--burgundy)}
 .hover-preview .hp-summary{padding:0 16px;margin-bottom:16px;font-size:.9rem;line-height:1.4;color:#4a5568}
 .hover-preview .hp-actions{display:flex;justify-content:space-between;align-items:center;padding:0 16px 16px;gap:12px}
 .hover-preview .hp-heart{background:none;border:1px solid #ddd;border-radius:var(--pill);padding:8px 16px;color:#666;font-size:.85rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;flex-shrink:0}
@@ -655,7 +662,13 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
     
     const preview=createHoverPreview();
     const gallery=(castle.gallery||[]).slice(1,5); // Skip first image (index 0), take next 4
-    const galleryHtml=gallery.length?'<div class="hp-gallery">'+gallery.map(img=>'<img src="'+img+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">').join('')+'</div>':'';
+    let galleryHtml='';
+    if(gallery.length){
+      galleryHtml='<div class="hp-gallery">'+
+        gallery.map((img,i)=>'<img src="'+img+'" alt="" loading="lazy" class="'+(i===0?'active':'')+'" onerror="this.remove()">').join('')+
+        (gallery.length>1?'<button class="hp-gallery-btn prev" onclick="hpNav(this,-1)">‹</button><button class="hp-gallery-btn next" onclick="hpNav(this,1)">›</button>':'')+
+        '</div>'+(gallery.length>1?'<div class="hp-dots">'+gallery.map((_,i)=>'<button class="hp-dot'+(i===0?' active':'')+'" onclick="hpGo(this,'+i+')"></button>').join('')+'</div>':'');
+    }
     
     // Create 1-sentence summary (truncate description to ~120 chars)
     const summary=(castle.description||'').substring(0,120).replace(/\s+\S*$/,'')+(castle.description&&castle.description.length>120?'...':'');
@@ -682,6 +695,25 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
     preview.style.top=(top+window.scrollY)+'px';
     setTimeout(()=>preview.classList.add('show'),10);
   }
+
+  // Gallery nav functions (global scope needed for onclick)
+  window.hpNav=function(btn,dir){
+    const gallery=btn.closest('.hp-gallery');
+    const imgs=gallery.querySelectorAll('img');
+    let cur=[...imgs].findIndex(i=>i.classList.contains('active'));
+    imgs[cur].classList.remove('active');
+    cur=(cur+dir+imgs.length)%imgs.length;
+    imgs[cur].classList.add('active');
+    const dots=gallery.parentElement.querySelector('.hp-dots');
+    if(dots){dots.querySelectorAll('.hp-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));}
+  };
+  window.hpGo=function(dot,idx){
+    const dots=dot.parentElement;
+    const gallery=dots.previousElementSibling;
+    const imgs=gallery.querySelectorAll('img');
+    imgs.forEach((img,i)=>img.classList.toggle('active',i===idx));
+    dots.querySelectorAll('.hp-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  };
 
   function hideHoverPreview(){
     if(hideTimer){clearTimeout(hideTimer);}
