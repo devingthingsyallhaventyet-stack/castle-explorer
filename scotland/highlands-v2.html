@@ -126,19 +126,17 @@ img{max-width:100%;display:block}
 
 .submenu{position:sticky;top:64px;z-index:100;background:rgba(15,22,40,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.06);padding:0 24px;transition:box-shadow .3s}
 .submenu.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.3)}
-.submenu-inner{max-width:1000px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.submenu-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:center;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
 .submenu-inner::-webkit-scrollbar{display:none}
-.submenu-inner a{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5);padding:14px 16px;white-space:nowrap;transition:color .2s;border-bottom:2px solid transparent;letter-spacing:.3px}
+.submenu-inner a{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.7);padding:14px 16px;white-space:nowrap;transition:color .2s;border-bottom:2px solid transparent;letter-spacing:.3px}
 .submenu-inner a:hover{color:rgba(255,255,255,.85)}
-.submenu-inner a.active{color:var(--candlelight);border-bottom-color:var(--candlelight)}
+.submenu-inner a.active{color:var(--candlelight);border-bottom-color:var(--candlelight);background:rgba(201,168,76,.08)}
 
 /* ========== QUICK PICKS ========== */
 .picks{max-width:1280px;margin:0 auto;padding:48px 24px 32px}
 .picks-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--candlelight);margin-bottom:16px}
-.picks-row{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin;scrollbar-color:rgba(201,168,76,.2) transparent}
-.picks-row::-webkit-scrollbar{height:4px}
-.picks-row::-webkit-scrollbar-thumb{background:rgba(201,168,76,.2);border-radius:2px}
-.pick-card{flex:0 0 220px;border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:3/4;transition:transform .3s}
+.picks-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1200px}
+.pick-card{border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:3/4;transition:transform .3s}
 .pick-card:hover{transform:translateY(-3px)}
 .pick-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .pick-card:hover img{transform:scale(1.05)}
@@ -172,10 +170,11 @@ img{max-width:100%;display:block}
 .sort-btn:hover,.sort-btn.active{color:var(--candlelight);border-color:rgba(201,168,76,.2)}
 
 /* Grid view */
-.sites-view{position:relative}
-.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.sites-view{position:relative;display:flex;gap:20px;transition:all .4s ease}
+.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;flex:1}
 .map-view{display:none;height:70vh;min-height:500px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
-.map-view.active{display:block}
+.sites-view.split .map-view{display:block;flex:0 0 60%;position:sticky;top:140px}
+.sites-view.split .grid-view{flex:1;grid-template-columns:1fr}
 .grid-view.hidden{display:none}
 
 #siteMap{width:100%;height:100%}
@@ -240,10 +239,13 @@ img{max-width:100%;display:block}
 /* ========== NEARBY REGIONS ========== */
 .nearby{max-width:1100px;margin:0 auto;padding:60px 24px 80px}
 .nearby-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.nearby-card{padding:20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.06);background:var(--charcoal);text-align:center;transition:all .2s}
-.nearby-card:hover{border-color:rgba(201,168,76,.2);transform:translateY(-2px)}
+.nearby-card{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;transition:all .2s;display:flex;align-items:flex-end}
+.nearby-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.nearby-card::before{content:'';position:absolute;inset:0;background-image:var(--bg-image);background-size:cover;background-position:center;background-repeat:no-repeat}
+.nearby-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,22,40,.85) 0%,rgba(15,22,40,.3) 50%,transparent 100%)}
+.nearby-card-content{position:relative;z-index:2;padding:16px;text-align:center;width:100%}
 .nearby-card h3{font-family:var(--display);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px}
-.nearby-card span{font-size:.75rem;color:rgba(255,255,255,.4)}
+.nearby-card span{font-size:.75rem;color:var(--candlelight);font-weight:500}
 
 /* ========== FOOTER ========== */
 footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;border-top:1px solid rgba(255,255,255,.06)}
@@ -265,6 +267,20 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 .leaflet-popup-content a{color:var(--candlelight);font-weight:600}
 .leaflet-popup-content img{border-radius:6px;margin-bottom:8px}
 .leaflet-popup-tip{background:var(--charcoal)}
+
+/* Hover Preview */
+.hover-preview{position:absolute;z-index:9999;background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:16px;width:280px;opacity:0;pointer-events:none;transition:opacity .2s ease;font-family:var(--sans)}
+.hover-preview.show{opacity:1}
+.hover-preview h4{font-family:var(--display);font-size:1.1rem;color:#fff;margin-bottom:8px;line-height:1.2}
+.hover-preview .hp-gallery{display:flex;gap:6px;margin-bottom:12px}
+.hover-preview .hp-gallery img{width:60px;height:45px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,.06)}
+.hover-preview .hp-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:12px;font-size:.8rem}
+.hover-preview .hp-fact{display:flex;justify-content:space-between}
+.hover-preview .hp-fact-label{color:rgba(255,255,255,.5)}
+.hover-preview .hp-fact-value{color:rgba(255,255,255,.8);font-weight:500}
+.hover-preview .hp-actions{display:flex;justify-content:center}
+.hover-preview .hp-heart{background:none;border:1px solid rgba(255,255,255,.2);border-radius:var(--pill);padding:6px 16px;color:rgba(255,255,255,.6);font-size:.8rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px}
+.hover-preview .hp-heart:hover{border-color:var(--candlelight);color:var(--candlelight)}
 </style>
 </head>
 <body>
@@ -468,10 +484,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 <p class="cs-label" style="text-align:center">Keep Exploring</p>
 <h2 class="cs-title" style="text-align:center;margin-bottom:32px">Nearby Regions</h2>
 <div class="nearby-grid">
-<a href="/scotland/aberdeen-northeast" class="nearby-card"><h3>Aberdeen &amp; Northeast</h3><span>Castle country</span></a>
-<a href="/scotland/argyll-islands" class="nearby-card"><h3>Argyll &amp; Islands</h3><span>Island fortresses</span></a>
-<a href="/scotland/fife-perthshire" class="nearby-card"><h3>Fife &amp; Perthshire</h3><span>Royal heartland</span></a>
-<a href="/scotland/glasgow-stirling" class="nearby-card"><h3>Glasgow &amp; Stirling</h3><span>Central belt castles</span></a>
+<a href="/scotland/aberdeen-northeast" class="nearby-card" style="--bg-image:url('/img/scotland/aberdeen.webp')">
+<div class="nearby-card-content"><h3>Aberdeen &amp; Northeast</h3><span>Castle country</span></div>
+</a>
+<a href="/scotland/argyll-islands" class="nearby-card" style="--bg-image:url('/img/scotland/argyll.webp')">
+<div class="nearby-card-content"><h3>Argyll &amp; Islands</h3><span>Island fortresses</span></div>
+</a>
+<a href="/scotland/fife-perthshire" class="nearby-card" style="--bg-image:url('/img/scotland/fife-perthshire.webp')">
+<div class="nearby-card-content"><h3>Fife &amp; Perthshire</h3><span>Royal heartland</span></div>
+</a>
+<a href="/scotland/glasgow-stirling" class="nearby-card" style="--bg-image:url('/img/scotland/glasgow-stirling.webp')">
+<div class="nearby-card-content"><h3>Glasgow &amp; Stirling</h3><span>Central belt castles</span></div>
+</a>
 </div>
 </section>
 
@@ -511,10 +535,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
   }
 
   // ===== QUICK PICKS =====
-  const top5=all.filter(c=>c.rating>=4.0).sort((a,b)=>(b.rating-a.rating)||(b.reviewCount-a.reviewCount)).slice(0,6);
+  const top5=all.filter(c=>c.rating>=4.0).sort((a,b)=>(b.rating-a.rating)||(b.reviewCount-a.reviewCount)).slice(0,5);
   document.getElementById('picksRow').innerHTML=top5.map(c=>{
     const img=getImg(c);
-    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html"><img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>★ '+c.rating+'</span></div></a>';
+    const globalIdx=all.indexOf(c);
+    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'"><img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>★ '+c.rating+'</span></div></a>';
   }).join('');
 
   // ===== FILTERS =====
@@ -539,14 +564,38 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
     filterRow.appendChild(b);
   });
 
-  let curFilter=0,curSort='rating',searchQ='',shown=24,currentView='grid';
+  let activeFilters=new Set([0]),curSort='rating',searchQ='',shown=24,currentView='grid'; // Start with "All" active
   let siteMap=null,mapMarkers=null;
 
   filterRow.addEventListener('click',e=>{
     if(!e.target.classList.contains('filter-chip'))return;
-    filterRow.querySelectorAll('.filter-chip').forEach(b=>b.classList.remove('active'));
-    e.target.classList.add('active');
-    curFilter=+e.target.dataset.idx;shown=24;render();
+    const idx=+e.target.dataset.idx;
+    
+    if(idx===0){ // "All" clicked - clear all others
+      activeFilters.clear();
+      activeFilters.add(0);
+      filterRow.querySelectorAll('.filter-chip').forEach(b=>b.classList.remove('active'));
+      e.target.classList.add('active');
+    } else { // Other filter clicked - toggle it
+      if(activeFilters.has(idx)){
+        activeFilters.delete(idx);
+        e.target.classList.remove('active');
+      } else {
+        activeFilters.add(idx);
+        e.target.classList.add('active');
+      }
+      // Remove "All" if other filters are active
+      if(activeFilters.size>0&&activeFilters.has(0)){
+        activeFilters.delete(0);
+        filterRow.querySelector('[data-idx="0"]').classList.remove('active');
+      }
+      // If no filters active, activate "All"
+      if(activeFilters.size===0){
+        activeFilters.add(0);
+        filterRow.querySelector('[data-idx="0"]').classList.add('active');
+      }
+    }
+    shown=24;render();
   });
 
   document.getElementById('sortRow').addEventListener('click',e=>{
@@ -562,12 +611,21 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
   // ===== VIEW TOGGLE =====
   window.setView=function(v){
     currentView=v;
+    const sitesView=document.querySelector('.sites-view');
     document.querySelectorAll('.view-btn').forEach(b=>b.classList.toggle('active',b.dataset.view===v));
-    document.getElementById('gridView').classList.toggle('hidden',v==='map');
-    document.getElementById('mapView').classList.toggle('active',v==='map');
+    
+    if(v==='map'){
+      sitesView.classList.add('split');
+      document.getElementById('gridView').classList.remove('hidden');
+      if(!siteMap)initMap();
+      if(siteMap)setTimeout(()=>siteMap.invalidateSize(),200);
+    } else {
+      sitesView.classList.remove('split');
+      document.getElementById('gridView').classList.remove('hidden');
+    }
+    
+    // Load more button should be hidden only in split view, not grid view
     document.getElementById('loadMore').classList.toggle('hidden',v==='map');
-    if(v==='map'&&!siteMap)initMap();
-    if(v==='map'&&siteMap)setTimeout(()=>siteMap.invalidateSize(),100);
   };
 
   function initMap(){
@@ -590,8 +648,15 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
   // ===== RENDER GRID =====
   function render(){
     let list=[...all];
-    const def=filterDefs[curFilter];
-    if(def.fn)list=list.filter(def.fn);
+    
+    // Apply active filters (AND logic)
+    if(!activeFilters.has(0)){ // If "All" is not active, apply other filters
+      activeFilters.forEach(idx=>{
+        const def=filterDefs[idx];
+        if(def&&def.fn)list=list.filter(def.fn);
+      });
+    }
+    
     if(searchQ)list=list.filter(c=>c.name.toLowerCase().includes(searchQ));
     if(curSort==='rating')list.sort((a,b)=>(b.rating||0)-(a.rating||0)||(b.reviewCount||0)-(a.reviewCount||0));
     else if(curSort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
@@ -600,9 +665,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 
     document.getElementById('resultsCount').textContent=Math.min(shown,list.length)+' of '+list.length+' sites';
     const vis=list.slice(0,shown);
-    document.getElementById('gridView').innerHTML=vis.map(c=>{
+    document.getElementById('gridView').innerHTML=vis.map((c,i)=>{
       const img=getImg(c);
-      return '<a class="site-card" href="/site/'+slug(c.name)+'.html">'+
+      const globalIdx=all.indexOf(c);
+      return '<a class="site-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'">'+
         '<div class="site-card-img">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
         '<div class="site-card-body">'+
         '<h3>'+c.name+'</h3>'+
@@ -613,8 +679,71 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
     }).join('');
     const btn=document.getElementById('loadMore');
     if(currentView==='grid')btn.classList.toggle('hidden',shown>=list.length);
+    
+    // Re-add hover listeners after render
+    setTimeout(addHoverListeners,10);
   }
   render();
+
+  // ===== HOVER PREVIEW =====
+  let hoverPreview=null;
+  function createHoverPreview(){
+    if(hoverPreview)return hoverPreview;
+    hoverPreview=document.createElement('div');
+    hoverPreview.className='hover-preview';
+    document.body.appendChild(hoverPreview);
+    return hoverPreview;
+  }
+
+  function showHoverPreview(card,castle){
+    const preview=createHoverPreview();
+    const gallery=(castle.gallery||[]).slice(1,4); // Skip main image, take next 2-3
+    const galleryHtml=gallery.length?'<div class="hp-gallery">'+gallery.map(img=>'<img src="'+img+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">').join('')+'</div>':'';
+    
+    preview.innerHTML='<h4>'+castle.name+'</h4>'+galleryHtml+
+      '<div class="hp-facts">'+
+      '<div class="hp-fact"><span class="hp-fact-label">Type:</span><span class="hp-fact-value">'+(castle.type||'Castle')+'</span></div>'+
+      '<div class="hp-fact"><span class="hp-fact-label">Era:</span><span class="hp-fact-value">'+(castle.era||'Medieval')+'</span></div>'+
+      '<div class="hp-fact"><span class="hp-fact-label">Condition:</span><span class="hp-fact-value">'+(castle.condition||'Unknown')+'</span></div>'+
+      '<div class="hp-fact"><span class="hp-fact-label">Access:</span><span class="hp-fact-value">'+(castle.access==='free'?'Free':'Paid')+'</span></div>'+
+      (castle.rating?'<div class="hp-fact"><span class="hp-fact-label">Rating:</span><span class="hp-fact-value">★ '+castle.rating+'</span></div>':'')+
+      '</div>'+
+      '<div class="hp-actions"><button class="hp-heart" onclick="alert(\'Saved!\')">♡ Save</button></div>';
+
+    // Position the preview
+    const rect=card.getBoundingClientRect();
+    const previewRect=preview.getBoundingClientRect();
+    let left=rect.right+10;
+    let top=rect.top;
+    
+    // Boundary detection
+    if(left+280>window.innerWidth){left=rect.left-290;} // Show on left if no space on right
+    if(top+200>window.innerHeight){top=window.innerHeight-220;} // Adjust if too low
+    if(left<0){left=10;} // Minimum left margin
+    if(top<0){top=10;} // Minimum top margin
+    
+    preview.style.left=left+'px';
+    preview.style.top=(top+window.scrollY)+'px';
+    setTimeout(()=>preview.classList.add('show'),10);
+  }
+
+  function hideHoverPreview(){
+    if(hoverPreview){hoverPreview.classList.remove('show');}
+  }
+
+  function addHoverListeners(){
+    document.querySelectorAll('.site-card[data-idx], .pick-card[data-idx]').forEach(card=>{
+      card.addEventListener('mouseenter',function(){
+        const idx=parseInt(this.dataset.idx);
+        const castle=all[idx];
+        if(castle)showHoverPreview(this,castle);
+      });
+      card.addEventListener('mouseleave',hideHoverPreview);
+    });
+  }
+
+  // Add hover listeners after initial render
+  addHoverListeners();
 
   // ===== SUBMENU SCROLL HIGHLIGHT =====
   const submenu=document.getElementById('submenu');
