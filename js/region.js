@@ -45,11 +45,13 @@
     if (faqEl) faqEl.textContent = all.length;
 
     // ===== QUICK PICKS =====
+    var lastPicks = [];
     const top5 = all.filter(c => c.rating >= 4.0)
       .sort((a, b) => (b.rating - a.rating) || (b.reviewCount - a.reviewCount))
       .slice(0, 5);
     const picksEl = document.getElementById('picksRow');
     if (picksEl) {
+      lastPicks = top5;
       picksEl.innerHTML = top5.map((c, i) => {
         const img = getImg(c);
         return '<a class="pick-card" href="/site/' + slug(c.name) + '.html" data-idx="' + i + '">' +
@@ -117,6 +119,7 @@
     window.showMore = function() { shown += 12; render(); };
 
     // ===== RENDER GRID =====
+    var lastRendered = [];
     function render() {
       let list = [...all];
       if (!activeFilters.has(0)) {
@@ -133,6 +136,7 @@
 
       document.getElementById('resultsCount').textContent = Math.min(shown, list.length) + ' of ' + list.length + ' sites';
       const vis = list.slice(0, shown);
+      lastRendered = vis;
       const gridView = document.getElementById('gridView');
       gridView.innerHTML = vis.map((c, i) => {
         const img = getImg(c);
@@ -195,7 +199,7 @@
       const card = e.target.closest('.site-card');
       if (card && window.innerWidth > 768) {
         const idx = parseInt(card.dataset.idx);
-        const castle = all[idx];
+        const castle = lastRendered[idx];
         if (castle) window.location = '/site/' + slug(castle.name) + '.html';
       }
     });
@@ -289,7 +293,7 @@
         const idx = parseInt(card.dataset.idx);
         if (idx === currentHoverIdx) return;
         currentHoverIdx = idx;
-        const castle = all[idx];
+        const castle = card.classList.contains('pick-card') ? lastPicks[idx] : lastRendered[idx];
         if (castle) showHoverPreview(card, castle);
       });
       container.addEventListener('mouseout', function(e) {
