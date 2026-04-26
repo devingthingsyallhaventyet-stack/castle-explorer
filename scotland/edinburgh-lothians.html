@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castles in Edinburgh & the Lothians — 27 Sites to Explore | CastleCore</title>
+<meta name="description" content="Explore 27 castles, palaces, and historic sites in Edinburgh & the Lothians. From Edinburgh Castle to Tantallon Castle, plan your castle adventure with maps, routes, and travel tips.">
+<meta name="keywords" content="castles in Edinburgh, Edinburgh Castle, Holyrood Palace, Linlithgow Palace, Tantallon Castle, Craigmillar Castle, Lothians castles, best castles Scotland, Royal Mile castles, East Lothian castles">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="canonical" href="https://castlecore.uk/scotland/edinburgh-lothians">
+<meta property="og:title" content="Castles in Edinburgh & the Lothians | CastleCore">
+<meta property="og:description" content="27 castles, palaces, and historic sites across Edinburgh & the Lothians. Maps, routes, and travel tips.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://castlecore.uk/scotland/edinburgh-lothians">
+
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-latin.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;font-display:swap;src:url(/fonts/playfair-variable-latin.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url(/fonts/playfair-italic-latin.woff2) format('woff2')}
+</style>
+
+<!-- Leaflet CSS removed -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TouristDestination",
+  "name":"Castles in Edinburgh & the Lothians",
+  "description":"27 castles, palaces, and historic sites across Edinburgh & the Lothians.",
+  "url":"https://castlecore.uk/scotland/edinburgh-lothians",
+  "touristType":["Castle Explorer","History Enthusiast","Heritage Tourist"],
+  "geo":{"@type":"GeoCoordinates","latitude":55.95,"longitude":-3.19},
+  "isPartOf":{"@type":"TouristDestination","name":"Scotland's Castles","url":"https://castlecore.uk/scotland"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How many castles are in Edinburgh & the Lothians?","acceptedAnswer":{"@type":"Answer","text":"There are around 27 castles, palaces, and historic sites across Edinburgh and the three Lothian counties, ranging from Scotland's most visited attraction (Edinburgh Castle) to hidden medieval ruins."}},
+    {"@type":"Question","name":"Is Edinburgh Castle worth the entry fee?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. It houses the Scottish Crown Jewels, the Stone of Destiny, the medieval Great Hall, and the tiny chapel of St Margaret (Edinburgh's oldest building, from around 1130). Budget 2-3 hours. Book online to skip the queue."}},
+    {"@type":"Question","name":"Can I visit Edinburgh's castles without a car?","acceptedAnswer":{"@type":"Answer","text":"Yes — Edinburgh Castle, Holyrood Palace, and Craigmillar are all accessible by foot or bus within the city. East Lothian castles are reachable by train to North Berwick or Dunbar. Linlithgow Palace is a short train ride from Waverley."}},
+    {"@type":"Question","name":"What is the best time to visit Edinburgh & Lothian castles?","acceptedAnswer":{"@type":"Answer","text":"April to October is ideal — the longest days, warmest weather, and all castle interiors are open. Edinburgh in August is electric with the Festival Fringe, but accommodation prices triple and the city is packed."}}
+  ]
+}
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--burgundy:#8b2335;--cream:#f0ebe0;--candlelight:#c9a84c;
+--navy:#0f1628;--charcoal:#1a1d2e;
+--gold:#d4a84b;--pale-gold:#e8d5a3;
+--warm-white:#faf8f4;--border:#e8e8e8;
+--ink:#1a1714;--shadow:#2a2522;--twilight:#4a5568;
+--forest:#0d1f12;--dark-green:#152618;
+--serif:'Cormorant Garamond',serif;
+--display:'Playfair Display',serif;
+--sans:'Inter',sans-serif;
+--radius:12px;--pill:20px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:#e8e0d0;line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--navy);overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:var(--display);font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--candlelight);color:var(--navy)}
+
+/* ========== NAV ========== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,22,40,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav,.mobile-menu{font-family:var(--sans)}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:var(--display);font-size:1.3rem;display:flex;align-items:center;gap:8px;color:#fff}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:var(--sans);transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--candlelight)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:200px;padding:8px 0;z-index:9999;margin-top:8px}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:rgba(255,255,255,.7);transition:all .15s}
+.nav-drop-panel a:hover{background:rgba(201,168,76,.1);color:var(--candlelight)}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:480px;z-index:9999;margin-top:8px;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:rgba(0,0,0,.2);border-right:1px solid rgba(255,255,255,.06);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.6);background:none;border:none;cursor:pointer;font-family:var(--sans);transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:#fff;background:rgba(255,255,255,.05)}
+.mega-country.active{color:var(--candlelight);background:rgba(201,168,76,.08);border-left-color:var(--candlelight);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:rgba(255,255,255,.7);transition:all .15s}
+.mega-panel a:hover{background:rgba(201,168,76,.1);color:var(--candlelight)}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:all .2s}
+.nav-right .btn-explore:hover{background:#a62940;transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#fff}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--navy);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:rgba(255,255,255,.7);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--candlelight);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+@media(max-width:768px){.nav-center{display:none}.nav-right .btn-explore{display:none}.hamburger{display:block}}
+
+.nav.nav-hidden{transform:translateY(-100%);transition:transform .3s ease}
+.nav{transition:transform .3s ease}
+.submenu{transition:top .3s ease, box-shadow .3s}
+.submenu.submenu-solo{top:0 !important}
+
+/* ========== COMPACT HERO ========== */
+.hero{position:relative;height:40vh;min-height:280px;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--navy) 0%,rgba(15,22,40,.6) 40%,rgba(15,22,40,.3) 100%)}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px 32px;max-width:800px}
+.hero-breadcrumb{font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px}
+.hero-breadcrumb a{color:var(--candlelight);transition:color .2s}
+.hero-breadcrumb a:hover{color:#fff}
+.hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4rem);font-weight:700;color:#fff;line-height:1.05;margin-bottom:8px}
+.hero-count{font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight)}
+
+/* ========== INTRO + SUBMENU ========== */
+.intro-section{max-width:900px;margin:0 auto;padding:48px 24px 32px;text-align:center}
+.intro-text{font-family:var(--serif);font-size:1.1rem;line-height:1.8;color:#e8e0d0;margin-bottom:32px}
+.intro-text strong{color:#fff}
+
+.submenu{position:sticky;top:64px;z-index:100;background:var(--burgundy);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);border-top:1px solid rgba(255,255,255,.1);padding:0 24px;transition:box-shadow .3s}
+.submenu.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.submenu-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:center;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.submenu-inner::-webkit-scrollbar{display:none}
+.submenu-inner a{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.8);padding:14px 16px;white-space:nowrap;transition:color .2s;border-bottom:2px solid transparent;letter-spacing:.3px}
+.submenu-inner a:hover{color:#fff}
+.submenu-inner a.active{color:#fff;border-bottom-color:#fff;background:rgba(255,255,255,.1)}
+
+/* ========== QUICK PICKS ========== */
+.picks{max-width:1280px;margin:0 auto;padding:48px 24px 32px}
+.picks-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e8e0d0;margin-bottom:16px}
+.picks-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1200px}
+.pick-card{border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:3/4;transition:transform .3s}
+.pick-card:hover{transform:translateY(-3px)}
+.pick-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pick-card:hover img{transform:scale(1.05)}
+.pick-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,22,40,.9) 0%,transparent 50%)}
+.pick-card-body{position:absolute;bottom:0;left:0;right:0;padding:16px;z-index:2}
+.pick-card-body h3{font-family:var(--display);font-size:1rem;font-weight:600;color:#fff;line-height:1.2;margin-bottom:2px}
+.pick-card-body span{font-size:.72rem;color:var(--candlelight);font-weight:600}
+
+/* ========== SITES SECTION (GRID + MAP TOGGLE) ========== */
+.sites-section{max-width:1280px;margin:0 auto;padding:32px 24px 80px}
+
+.sites-toolbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.sites-toolbar-left{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sites-search{padding:9px 14px 9px 36px;border:1px solid #3a3a3a;border-radius:var(--pill);font-size:.85rem;font-family:var(--sans);outline:none;background:var(--charcoal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%23ccc' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 12px center no-repeat;color:#e8e0d0;width:220px;transition:border-color .2s}
+.sites-search:focus{border-color:var(--candlelight);box-shadow:0 0 0 2px rgba(201,168,76,.1)}
+.sites-search::placeholder{color:#999}
+.results-count{font-size:.78rem;color:#ccc}
+
+/* View toggle CSS removed */
+
+.filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.filter-chip{padding:6px 14px;border-radius:var(--pill);border:1px solid #3a3a3a;background:transparent;color:#ccc;font-family:var(--sans);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .2s}
+.filter-chip:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.filter-chip.active{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
+
+.sort-row{display:flex;gap:4px;margin-bottom:20px}
+.sort-btn{padding:5px 12px;border-radius:var(--pill);border:1px solid #3a3a3a;background:transparent;color:#ccc;font-family:var(--sans);font-size:.72rem;font-weight:500;cursor:pointer;transition:all .2s}
+.sort-btn:hover,.sort-btn.active{color:var(--candlelight);border-color:rgba(201,168,76,.3)}
+
+/* Grid view */
+.sites-view{position:relative}
+.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+
+.site-card{border-radius:var(--radius);overflow:hidden;background:var(--charcoal);border:1px solid #3a3a3a;transition:all .3s;display:flex;flex-direction:column}
+.site-card:hover{border-color:var(--candlelight);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+.site-card-img{height:190px;overflow:hidden;position:relative;background:rgba(0,0,0,.2)}
+.site-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.site-card:hover .site-card-img img{transform:scale(1.05)}
+.site-card-img .free-badge{position:absolute;top:10px;right:10px;font-size:.65rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:var(--pill);background:rgba(76,175,80,.9);color:#fff}
+.site-card-body{padding:16px;flex:1;display:flex;flex-direction:column}
+.site-card-body h3{font-family:var(--display);font-size:1.05rem;font-weight:600;color:#e8e0d0;margin-bottom:4px;line-height:1.2}
+.site-card-body .sc-meta{font-size:.73rem;color:#ccc;margin-bottom:8px}
+.site-card-body .sc-desc{font-family:var(--serif);font-size:.88rem;color:#ccc;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:12px}
+.site-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid #3a3a3a}
+.sc-type{font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:var(--pill);background:#2a2a2a;color:#ccc;text-transform:capitalize}
+.sc-rating{font-size:.82rem;color:var(--candlelight);font-weight:600}
+
+.load-more{display:block;margin:40px auto 0;padding:12px 40px;border-radius:var(--pill);border:1px solid #3a3a3a;background:transparent;color:#ccc;font-family:var(--sans);font-size:.88rem;font-weight:500;cursor:pointer;transition:all .3s}
+.load-more:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.load-more.hidden{display:none}
+
+/* ========== CONTENT SECTIONS ========== */
+.content-section{max-width:900px;margin:0 auto;padding:80px 24px}
+.cs-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#e8e0d0;margin-bottom:12px}
+.cs-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;line-height:1.15;color:#e8e0d0;margin-bottom:24px}
+.cs-body{font-family:var(--serif);font-size:1.05rem;line-height:1.8;color:#ccc}
+.cs-body p{margin-bottom:20px}
+.cs-body strong{color:#e8e0d0}
+.cs-body a{color:var(--candlelight);border-bottom:1px solid rgba(201,168,76,.3);transition:border-color .2s}
+.cs-body a:hover{border-color:var(--candlelight)}
+.cs-divider{border:none;border-top:1px solid #3a3a3a;margin:0 auto;max-width:900px}
+
+/* ========== ROUTES ========== */
+.routes-section{max-width:1100px;margin:0 auto;padding:80px 24px}
+.routes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.route-card{border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.route-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.route-card .route-img{height:200px;overflow:hidden}
+.route-card .route-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.route-card:hover .route-img img{transform:scale(1.05)}
+.route-card .route-body{padding:16px 18px 18px;color:#fff}
+.route-card .route-body h3{font-family:var(--display);font-size:1.15rem;margin-bottom:6px}
+.route-card .route-meta{font-size:.82rem;opacity:.85;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.route-card .route-meta span{background:rgba(255,255,255,.2);padding:2px 8px;border-radius:var(--pill);font-size:.75rem}
+.route-card .route-desc{font-size:.85rem;opacity:.8;line-height:1.4}
+.rc-burgundy{background:var(--burgundy)}
+.rc-forest{background:var(--forest)}
+.rc-charcoal{background:var(--charcoal);border:1px solid rgba(255,255,255,.06)}
+
+@media(max-width:900px){.routes-grid{grid-template-columns:1fr}}
+
+/* ========== FAQ ========== */
+.faq-section{max-width:800px;margin:0 auto;padding:80px 24px}
+.faq-item{border-bottom:1px solid #3a3a3a;padding:20px 0}
+.faq-q{font-family:var(--display);font-size:1.15rem;font-weight:600;color:#e8e0d0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q::after{content:'+';font-family:var(--sans);font-size:1.2rem;color:var(--candlelight);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-family:var(--serif);font-size:1rem;line-height:1.7;color:#ccc;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;padding-top:0}
+.faq-item.open .faq-a{max-height:300px;padding-top:12px}
+
+/* ========== NEARBY REGIONS ========== */
+.nearby{max-width:1100px;margin:0 auto;padding:60px 24px 80px}
+.nearby-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.nearby-card{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;transition:all .2s;display:flex;align-items:flex-end;border:1px solid #3a3a3a}
+.nearby-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.nearby-card::before{content:'';position:absolute;inset:0;background-image:var(--bg-image);background-size:cover;background-position:center;background-repeat:no-repeat}
+.nearby-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,23,20,.85) 0%,rgba(26,23,20,.3) 50%,transparent 100%)}
+.nearby-card-content{position:relative;z-index:2;padding:16px;text-align:center;width:100%}
+.nearby-card h3{font-family:var(--display);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px}
+.nearby-card span{font-size:.75rem;color:var(--candlelight);font-weight:500}
+
+/* ========== FOOTER ========== */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:var(--display);font-size:1.3rem;color:#fff;margin-bottom:12px}
+.footer-brand p{color:rgba(255,255,255,.4);font-size:.85rem;max-width:280px;margin-top:8px}
+.footer-col h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;color:rgba(255,255,255,.3)}
+.footer-col a{display:block;color:rgba(255,255,255,.5);font-size:.88rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:var(--candlelight)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.25);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}
+.submenu{display:none !important}
+.picks{display:none !important}
+
+/* Mobile card redesign - matches desktop card colors */
+.grid-view{grid-template-columns:1fr !important;gap:16px}
+.site-card{background:var(--charcoal);border:1px solid #3a3a3a;border-radius:12px;overflow:hidden}
+.site-card .site-card-img{display:none}
+.site-card .site-card-body{padding:0}
+.site-card .site-card-body h3{font-family:var(--display);font-size:1.15rem;color:#e8e0d0;padding:14px 16px 10px;margin-bottom:0}
+.site-card .site-card-body .sc-meta{display:none}
+.site-card .site-card-body .sc-desc{font-family:var(--serif);font-size:.92rem;color:#ccc;padding:0 16px;margin-bottom:12px;-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5}
+.site-card .site-card-foot{display:none}
+.site-card .mob-gallery{display:block !important}
+.site-card .mob-actions{display:flex !important}
+.mob-gallery{position:relative}
+.sites-section{padding-bottom:32px}
+.routes-section{padding-top:32px}
+.content-section{padding:40px 24px}
+.faq-section{padding:40px 24px}
+.nearby{padding:32px 24px 48px}
+}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}.sites-search{width:100%}.sites-toolbar{flex-direction:column;align-items:stretch}}
+
+/* Leaflet CSS removed */
+
+/* Hover Preview */
+.hover-preview{position:absolute;z-index:9999;background:#fff;border:1px solid #e8e8e8;border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.15);padding:0;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:var(--sans)}
+.hover-preview.show{opacity:1;pointer-events:auto}
+.hover-preview h4{font-family:var(--display);font-size:1.2rem;color:#1a1714;margin-bottom:12px;line-height:1.2;padding:16px 16px 0}
+.hover-preview .hp-gallery{position:relative;margin-bottom:12px;overflow:hidden;border-radius:6px 6px 0 0}
+.hover-preview .hp-gallery img{width:100%;height:160px;object-fit:cover;display:none}
+.hover-preview .hp-gallery img.active{display:block}
+.hover-preview .hp-gallery-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.hover-preview .hp-gallery-btn:hover{background:rgba(0,0,0,.8)}
+.hover-preview .hp-gallery-btn.prev{left:8px}
+.hover-preview .hp-gallery-btn.next{right:8px}
+.hover-preview .hp-dots{display:flex;justify-content:center;gap:5px;padding:8px 0 4px}
+.hover-preview .hp-dot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,.2);border:none;cursor:pointer;padding:0;transition:background .2s}
+.hover-preview .hp-dot.active{background:var(--burgundy)}
+.hover-preview .hp-summary{padding:0 16px;margin-bottom:16px;font-size:.9rem;line-height:1.4;color:#4a5568}
+.hover-preview .hp-actions{display:flex;justify-content:space-between;align-items:center;padding:0 16px 16px;gap:12px}
+.hover-preview .hp-heart{background:none;border:1px solid #ddd;border-radius:var(--pill);padding:8px 16px;color:#666;font-size:.85rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.hover-preview .hp-heart:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.hover-preview .hp-explore{background:var(--burgundy);border:1px solid var(--burgundy);border-radius:var(--pill);padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;flex:1;text-align:center}
+.hover-preview .hp-explore:hover{background:#a62940;border-color:#a62940;transform:translateY(-1px)}
+</style>
+</head>
+<body>
+
+<div id="site-nav"></div><script src="/components/nav.js"></script>
+<!-- mobile menu removed -->
+
+<!-- ================================ -->
+<!-- 1. COMPACT HERO -->
+<!-- ================================ -->
+<section class="hero">
+<div class="hero-bg"><img src="https://img.castlecore.uk/scotland/edinburgh-castle.webp" alt="Edinburgh Castle" loading="eager"></div>
+<div class="hero-inner">
+<p class="hero-breadcrumb"><a href="/">Home</a> / <a href="/scotland">Scotland</a> / Edinburgh & Lothians</p>
+<h1>Edinburgh & the Lothians</h1>
+<p class="hero-count" id="heroCount">27 Castles &amp; Historic Sites</p>
+</div>
+</section>
+
+<!-- ================================ -->
+<!-- 2. INTRO + STICKY SUBMENU -->
+<!-- ================================ -->
+<section class="intro-section">
+<p class="intro-text">The <strong>Edinburgh & Lothians</strong> region stretches from the volcanic crags of Scotland's capital to the rolling farmland and coastline of <strong>East Lothian</strong>, <strong>West Lothian</strong>, and <strong>Midlothian</strong>. This compact region is home to <strong id="introCount">27</strong> castles, palaces, and historic sites — from the iconic <strong>Edinburgh Castle</strong> dominating the city skyline to the haunting ruins of <strong>Tantallon Castle</strong> on the East Lothian coast. Whether you're walking the <strong>Royal Mile</strong>, exploring <strong>Linlithgow Palace</strong> where Mary Queen of Scots was born, or discovering <strong>Craigmillar Castle</strong>'s atmospheric medieval towers, history is never more than a few steps away.</p>
+</section>
+
+<nav class="submenu" id="submenu">
+<div class="submenu-inner">
+<a href="#sites-anchor" class="active">🏰 Sites</a>
+<a href="#routes-anchor">🥾 Routes</a>
+<a href="#travel-anchor">✈️ Getting There</a>
+<a href="#stay-anchor">🏨 Where to Stay</a>
+<a href="#when-anchor">📅 Best Time</a>
+<a href="#faq-anchor">❓ FAQ</a>
+</div>
+</nav>
+
+<!-- ================================ -->
+<!-- 3. QUICK PICKS -->
+<!-- ================================ -->
+<section class="picks" id="sites-anchor">
+<p class="picks-label">Top Rated in Edinburgh & the Lothians</p>
+<div class="picks-row" id="picksRow"></div>
+</section>
+
+<!-- ================================ -->
+<!-- 4. CASTLE GRID + MAP TOGGLE -->
+<!-- ================================ -->
+<section class="sites-section">
+<div class="sites-toolbar">
+<div class="sites-toolbar-left">
+<input type="text" class="sites-search" id="siteSearch" placeholder="Search sites..." autocomplete="off">
+<span class="results-count" id="resultsCount"></span>
+</div>
+</div>
+
+<div class="filter-row" id="filterRow"></div>
+<div class="sort-row" id="sortRow">
+<button class="sort-btn active" data-sort="rating">Top Rated</button>
+<button class="sort-btn" data-sort="name">A–Z</button>
+<button class="sort-btn" data-sort="reviews">Most Reviewed</button>
+<button class="sort-btn" data-sort="free">Free First</button>
+</div>
+
+<div class="sites-view">
+<div class="grid-view" id="gridView"></div>
+</div>
+<button class="load-more" id="loadMore" onclick="showMore()">Show More Sites</button>
+</section>
+
+<!-- ================================ -->
+<!-- 5. HIGHLAND ROUTES -->
+<!-- ================================ -->
+<div id="routes-anchor"></div>
+<section class="routes-section">
+<p class="cs-label">Explore by Route</p>
+<h2 class="cs-title" style="text-align:center;margin-bottom:32px">Edinburgh & Lothians Castle Routes</h2>
+<div class="routes-grid">
+<a class="route-card rc-burgundy" href="/trail.html?id=royal-mile-route">
+<div class="route-img"><img src="https://img.castlecore.uk/edinburgh-castle-3.jpg" alt="Royal Mile & Beyond Route" loading="lazy"></div>
+<div class="route-body"><h3>🏰 Royal Mile &amp; Beyond</h3><div class="route-meta"><span>Edinburgh city</span><span>6 sites</span><span>3 hours</span></div><p class="route-desc">Walk from Edinburgh Castle down the Royal Mile to Holyrood Palace, then venture to Craigmillar Castle — the city's best-kept medieval secret.</p></div>
+</a>
+<a class="route-card rc-forest" href="/trail.html?id=east-lothian-coast">
+<div class="route-img"><img src="https://img.castlecore.uk/tantallon-castle.jpg" alt="East Lothian Coast Trail" loading="lazy"></div>
+<div class="route-body"><h3>🌊 East Lothian Coast Trail</h3><div class="route-meta"><span>East Lothian</span><span>5 sites</span><span>Half day</span></div><p class="route-desc">Follow the dramatic coastline from Tantallon Castle's red cliffs to Dirleton Castle's rose gardens and Hailes Castle hidden in the river valley.</p></div>
+</a>
+<a class="route-card rc-charcoal" href="/trail.html?id=mary-queen-scots">
+<div class="route-img"><img src="https://img.castlecore.uk/linlithgow-palace.jpg" alt="Mary Queen of Scots Trail" loading="lazy"></div>
+<div class="route-body"><h3>👑 Mary Queen of Scots Trail</h3><div class="route-meta"><span>Lothians-wide</span><span>4 sites</span><span>Full day</span></div><p class="route-desc">Trace the life of Scotland's most tragic queen from her birthplace at Linlithgow Palace to her refuge at Craigmillar and imprisonment lore across the Lothians.</p></div>
+</a>
+</div>
+</section>
+
+<!-- ================================ -->
+<!-- 6. GETTING TO THE HIGHLANDS -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="content-section" id="travel-anchor">
+<p class="cs-label">Getting There</p>
+<h2 class="cs-title">Travelling to Edinburgh & the Lothians</h2>
+<div class="cs-body">
+<p>Edinburgh is Scotland's best-connected city. <strong>Edinburgh Airport</strong> has direct flights from across Europe, North America, and the Middle East. The city centre is a 25-minute tram ride from the airport. <strong>Edinburgh Waverley</strong> station sits in the heart of the city with fast rail connections — London (4.5 hours), Glasgow (50 minutes), Newcastle (1.5 hours). The <strong>LNER</strong> east coast service and <strong>Avanti West Coast</strong> via Glasgow make the city easily reachable from anywhere in Britain.</p>
+<p>The Lothians are compact — East Lothian's castles are 30-45 minutes by car or local train from Edinburgh. West Lothian (Linlithgow) is 20 minutes by train. You don't strictly need a car here, though one helps for the coastal sites.</p>
+</div>
+</section>
+
+<!-- ================================ -->
+<!-- 7. WHERE TO STAY -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="content-section" id="stay-anchor">
+<p class="cs-label">Accommodation</p>
+<h2 class="cs-title">Where to Stay in Edinburgh & the Lothians</h2>
+<div class="cs-body">
+<p><strong>Edinburgh's Old Town</strong> puts you within walking distance of Edinburgh Castle, Holyrood Palace, and the Royal Mile's medieval closes. The <strong>New Town</strong> is elegant and quieter, with easy access to transport. For East Lothian, the coastal town of <strong>North Berwick</strong> is a charming base — 30 minutes from Edinburgh by train, with Tantallon and Dirleton castles nearby. <strong>Linlithgow</strong> in West Lothian makes a peaceful alternative to the city, with its stunning palace right on the high street.</p>
+<p>Edinburgh has Scotland's widest range of accommodation from budget hostels to five-star hotels. Book ahead during the <strong>Edinburgh Festival</strong> (August) when the city fills to capacity.</p>
+</div>
+</section>
+
+<!-- ================================ -->
+<!-- 8. BEST TIME TO VISIT -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="content-section" id="when-anchor">
+<p class="cs-label">Planning</p>
+<h2 class="cs-title">Best Time to Visit Edinburgh & Lothian Castles</h2>
+<div class="cs-body">
+<p><strong>April to October</strong> is ideal — the longest days, warmest weather, and all castle interiors are open. Edinburgh in <strong>August</strong> is electric with the Festival Fringe, but accommodation prices triple and the city is packed. <strong>May, June, and September</strong> offer the best balance of weather and crowd levels.</p>
+<p><strong>Winter</strong> has its own magic — Edinburgh's Christmas markets, Hogmanay celebrations, and dramatically lit castle rock. Most major sites stay open year-round, though some smaller Lothian castles have reduced winter hours. The East Lothian coast is beautiful but exposed — wrap up warm outside summer.</p>
+</div>
+</section>
+
+<!-- ================================ -->
+<!-- 9. FAQ -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="faq-section" id="faq-anchor">
+<p class="cs-label">Frequently Asked</p>
+<h2 class="cs-title">Edinburgh & Lothians Castle FAQ</h2>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many castles are in Edinburgh & the Lothians?</div>
+<div class="faq-a">There are around 27 castles, palaces, and historic sites across Edinburgh and the three Lothian counties, ranging from Scotland's most visited attraction (Edinburgh Castle) to hidden medieval ruins. The exact count on CastleCore is <span id="faqCount">27</span>, though new sites are added regularly.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is Edinburgh Castle worth the entry fee?</div>
+<div class="faq-a">Absolutely. It houses the Scottish Crown Jewels, the Stone of Destiny, the medieval Great Hall, and the tiny chapel of St Margaret (Edinburgh's oldest building, from around 1130). Budget 2-3 hours. Book online to skip the queue.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I visit Edinburgh's castles without a car?</div>
+<div class="faq-a">Yes — Edinburgh Castle, Holyrood Palace, and Craigmillar are all accessible by foot or bus within the city. East Lothian castles are reachable by train to North Berwick or Dunbar. Linlithgow Palace is a short train ride from Waverley.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the difference between Edinburgh Castle and Holyrood Palace?</div>
+<div class="faq-a">Edinburgh Castle is a medieval fortress on a volcanic crag, primarily a museum and military monument. Holyrood Palace is the King's official Scottish residence — a working royal palace with state apartments, gardens, and the ruins of a 12th-century abbey.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are there free castles to visit near Edinburgh?</div>
+<div class="faq-a">Several — Craigmillar Castle grounds are free to walk around, and many East Lothian ruins like Hailes Castle are free to enter. Historic Scotland Explorer Passes offer good value if visiting multiple paid sites.</div>
+</div>
+</section>
+
+<!-- ================================ -->
+<!-- 10. NEARBY REGIONS -->
+<!-- ================================ -->
+<section class="nearby">
+<p class="cs-label" style="text-align:center">Keep Exploring</p>
+<h2 class="cs-title" style="text-align:center;margin-bottom:32px">Nearby Regions</h2>
+<div class="nearby-grid">
+<a href="/scotland/fife-perthshire" class="nearby-card" style="--bg-image:url('/img/scotland/fife-perthshire.webp')">
+<div class="nearby-card-content"><h3>Fife &amp; Perthshire</h3><span>Across the Forth</span></div>
+</a>
+<a href="/scotland/borders" class="nearby-card" style="--bg-image:url('/img/scotland/borders.webp')">
+<div class="nearby-card-content"><h3>The Borders</h3><span>Rolling hills &amp; abbeys</span></div>
+</a>
+<a href="/scotland/glasgow-stirling" class="nearby-card" style="--bg-image:url('/img/scotland/glasgow-stirling.webp')">
+<div class="nearby-card-content"><h3>Glasgow &amp; Stirling</h3><span>Central belt castles</span></div>
+</a>
+<a href="/scotland/highlands" class="nearby-card" style="--bg-image:url('/img/scotland/highlands.webp')">
+<div class="nearby-card-content"><h3>The Highlands</h3><span>Wild north</span></div>
+</a>
+</div>
+</section>
+
+<div id="site-footer"></div><script src="/components/footer.js"></script>
+
+<!-- SCRIPTS -->
+<!-- Leaflet JS removed -->
+<script src="/data.js"></script>
+<script>
+(function(){
+  const HC=['City of Edinburgh','Edinburgh','East Lothian','West Lothian','Midlothian'];
+  function isH(c){return c.country==='Scotland'&&HC.some(r=>(c.county||'').includes(r))}
+  const all=(typeof CASTLES!=='undefined'?CASTLES:[]).filter(isH);
+  const freeCount=all.filter(c=>c.access==='free').length;
+
+  // Update dynamic counts
+  document.getElementById('heroCount').textContent=all.length+' Castles & Historic Sites';
+  document.getElementById('introCount').textContent=all.length;
+  const faqEl=document.getElementById('faqCount');if(faqEl)faqEl.textContent=all.length;
+
+  function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+  function getImg(c){
+    if(c.image&&c.image.includes('img.castlecore.uk'))return c.image;
+    if(c.gallery&&c.gallery.length)return c.gallery[0];
+    return c.image||'';
+  }
+
+  // ===== QUICK PICKS =====
+  const top5=all.filter(c=>c.rating>=4.0).sort((a,b)=>(b.rating-a.rating)||(b.reviewCount-a.reviewCount)).slice(0,5);
+  document.getElementById('picksRow').innerHTML=top5.map(c=>{
+    const img=getImg(c);
+    const globalIdx=all.indexOf(c);
+    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'"><img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>★ '+c.rating+'</span></div></a>';
+  }).join('');
+
+  // ===== FILTERS =====
+  const filterDefs=[
+    {label:'All',fn:null},
+    {label:'Free Entry',fn:c=>c.access==='free'},
+    {label:'Castles',fn:c=>(c.type||'').toLowerCase()==='castle'},
+    {label:'Abbeys',fn:c=>(c.type||'').toLowerCase()==='abbey'},
+    {label:'Ruins',fn:c=>(c.condition||'').includes('ruin')},
+    {label:'Intact',fn:c=>c.condition==='intact'||c.condition==='restored'},
+    {label:'Atmospheric',fn:c=>(c.tags||[]).includes('atmospheric')},
+    {label:'Remote',fn:c=>(c.tags||[]).includes('remote')},
+    {label:'Photogenic',fn:c=>(c.tags||[]).includes('photogenic')},
+    {label:'Haunted',fn:c=>(c.tags||[]).includes('haunted')},
+  ];
+  const filterRow=document.getElementById('filterRow');
+  filterDefs.forEach((d,i)=>{
+    const b=document.createElement('button');
+    b.className='filter-chip'+(i===0?' active':'');
+    b.textContent=d.label;
+    b.dataset.idx=i;
+    filterRow.appendChild(b);
+  });
+
+  let activeFilters=new Set([0]),curSort='rating',searchQ='',shown=24; // Start with "All" active
+
+  filterRow.addEventListener('click',e=>{
+    if(!e.target.classList.contains('filter-chip'))return;
+    const idx=+e.target.dataset.idx;
+    
+    if(idx===0){ // "All" clicked - clear all others
+      activeFilters.clear();
+      activeFilters.add(0);
+      filterRow.querySelectorAll('.filter-chip').forEach(b=>b.classList.remove('active'));
+      e.target.classList.add('active');
+    } else { // Other filter clicked - toggle it
+      if(activeFilters.has(idx)){
+        activeFilters.delete(idx);
+        e.target.classList.remove('active');
+      } else {
+        activeFilters.add(idx);
+        e.target.classList.add('active');
+      }
+      // Remove "All" if other filters are active
+      if(activeFilters.size>0&&activeFilters.has(0)){
+        activeFilters.delete(0);
+        filterRow.querySelector('[data-idx="0"]').classList.remove('active');
+      }
+      // If no filters active, activate "All"
+      if(activeFilters.size===0){
+        activeFilters.add(0);
+        filterRow.querySelector('[data-idx="0"]').classList.add('active');
+      }
+    }
+    shown=24;render();
+  });
+
+  document.getElementById('sortRow').addEventListener('click',e=>{
+    if(!e.target.classList.contains('sort-btn'))return;
+    document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    curSort=e.target.dataset.sort;render();
+  });
+
+  document.getElementById('siteSearch').addEventListener('input',function(){searchQ=this.value.toLowerCase().trim();shown=24;render()});
+  window.showMore=function(){shown+=24;render()};
+
+  // ===== MAP REMOVED =====
+  // All map-related functionality removed for grid-only view
+
+  // ===== RENDER GRID =====
+  function render(){
+    let list=[...all];
+    
+    // Apply active filters (AND logic)
+    if(!activeFilters.has(0)){ // If "All" is not active, apply other filters
+      activeFilters.forEach(idx=>{
+        const def=filterDefs[idx];
+        if(def&&def.fn)list=list.filter(def.fn);
+      });
+    }
+    
+    if(searchQ)list=list.filter(c=>c.name.toLowerCase().includes(searchQ));
+    if(curSort==='rating')list.sort((a,b)=>(b.rating||0)-(a.rating||0)||(b.reviewCount||0)-(a.reviewCount||0));
+    else if(curSort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+    else if(curSort==='reviews')list.sort((a,b)=>(b.reviewCount||0)-(a.reviewCount||0));
+    else if(curSort==='free')list.sort((a,b)=>{const af=a.access==='free'?0:1,bf=b.access==='free'?0:1;return af-bf||(b.rating||0)-(a.rating||0)});
+
+    document.getElementById('resultsCount').textContent=Math.min(shown,list.length)+' of '+list.length+' sites';
+    const vis=list.slice(0,shown);
+    document.getElementById('gridView').innerHTML=vis.map((c,i)=>{
+      const img=getImg(c);
+      const globalIdx=all.indexOf(c);
+      const gallery=(c.gallery||[]).slice(0,5);
+      const mobGallery=gallery.length?
+        '<div class="mob-gallery" style="display:none"><div class="mob-gallery-track">'+
+        gallery.map((gi,j)=>'<img src="'+gi+'" alt="" loading="lazy" class="'+(j===0?'active':'')+'" style="width:100%;height:200px;object-fit:cover;display:'+(j===0?'block':'none')+'">').join('')+
+        '</div>'+(gallery.length>1?'<button class="mob-gal-btn prev" onclick="event.preventDefault();mobGalNav(this,-1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">‹</button><button class="mob-gal-btn next" onclick="event.preventDefault();mobGalNav(this,1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">›</button>':'')+
+        (gallery.length>1?'<div class="mob-dots" style="display:flex;justify-content:center;gap:5px;padding:8px 0">'+gallery.map((_,j)=>'<span class="mob-dot'+(j===0?' active':'')+'" style="width:6px;height:6px;border-radius:50%;background:'+(j===0?'var(--candlelight)':'rgba(255,255,255,.25)')+';display:inline-block;cursor:pointer" onclick="event.preventDefault();mobGalGo(this,'+j+')"></span>').join('')+'</div>':'')+'</div>':'';
+      
+      const mobActions='<div class="mob-actions" style="display:none;justify-content:space-between;align-items:center;padding:0 16px 14px;gap:12px">'+
+        '<button onclick="event.preventDefault();event.stopPropagation();alert(\'Saved!\')" style="background:none;border:1px solid #3a3a3a;border-radius:20px;padding:8px 16px;color:#ccc;font-size:.85rem;cursor:pointer;display:flex;align-items:center;gap:6px;flex-shrink:0">♡ Save</button>'+
+        '<a href="/site/'+slug(c.name)+'.html" style="background:var(--burgundy);border:1px solid var(--burgundy);border-radius:20px;padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;text-align:center;flex:1;text-decoration:none">Explore</a>'+
+        '</div>';
+      
+      return '<div class="site-card" data-idx="'+globalIdx+'" onclick="if(window.innerWidth>768)window.location=\'/site/'+slug(c.name)+'.html\'">'+
+        '<div class="site-card-img" style="position:relative">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
+        '<div class="site-card-body">'+
+        '<h3>'+c.name+'</h3>'+
+        mobGallery+
+        '<p class="sc-meta">'+(c.era||'')+(c.county?' · '+c.county:'')+'</p>'+
+        '<p class="sc-desc">'+(c.description||'')+'</p>'+
+        '<div class="site-card-foot"><span class="sc-type">'+(c.type||'Castle')+'</span>'+(c.rating?'<span class="sc-rating">★ '+c.rating+'</span>':'')+'</div>'+
+        mobActions+
+        '</div></div>';
+    }).join('');
+    const btn=document.getElementById('loadMore');
+    btn.classList.toggle('hidden',shown>=list.length);
+    
+    // Re-add hover listeners + swipe after render
+    setTimeout(()=>{addHoverListeners();initSwipe();},10);
+  }
+  render();
+
+  // ===== HOVER PREVIEW =====
+  let hoverPreview=null;
+  let hideTimer=null;
+  function createHoverPreview(){
+    if(hoverPreview)return hoverPreview;
+    hoverPreview=document.createElement('div');
+    hoverPreview.className='hover-preview';
+    document.body.appendChild(hoverPreview);
+    
+    // Add hover listeners to preview itself
+    hoverPreview.addEventListener('mouseenter',function(){
+      if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
+    });
+    hoverPreview.addEventListener('mouseleave',function(){
+      hoverPreview.classList.remove('show');
+    });
+    
+    return hoverPreview;
+  }
+
+  function showHoverPreview(card,castle){
+    if(window.innerWidth<=768)return; // No hover on mobile
+    if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
+    
+    const preview=createHoverPreview();
+    const gallery=(castle.gallery||[]).slice(0,5); // Show all images including first
+    let galleryHtml='';
+    if(gallery.length){
+      galleryHtml='<div class="hp-gallery">'+
+        gallery.map((img,i)=>'<img src="'+img+'" alt="" loading="lazy" class="'+(i===0?'active':'')+'" onerror="this.remove()">').join('')+
+        (gallery.length>1?'<button class="hp-gallery-btn prev" onclick="hpNav(this,-1)">‹</button><button class="hp-gallery-btn next" onclick="hpNav(this,1)">›</button>':'')+
+        '</div>'+(gallery.length>1?'<div class="hp-dots">'+gallery.map((_,i)=>'<button class="hp-dot'+(i===0?' active':'')+'" onclick="hpGo(this,'+i+')"></button>').join('')+'</div>':'');
+    }
+    
+    // Create 1-sentence summary (truncate description to ~120 chars)
+    const summary=(castle.description||'').substring(0,120).replace(/\s+\S*$/,'')+(castle.description&&castle.description.length>120?'...':'');
+    
+    preview.innerHTML='<h4>'+castle.name+'</h4>'+galleryHtml+
+      '<div class="hp-summary">'+summary+'</div>'+
+      '<div class="hp-actions">'+
+      '<button class="hp-heart" onclick="alert(\'Saved!\')">♡ Save</button>'+
+      '<a class="hp-explore" href="/site/'+slug(castle.name)+'.html" target="_blank">Explore</a>'+
+      '</div>';
+
+    // Position preview over the card
+    const rect=card.getBoundingClientRect();
+    const isPick=card.classList.contains('pick-card');
+    const w=isPick?Math.max(rect.width,340):rect.width;
+    preview.style.width=w+'px';
+    let left=isPick?rect.left+(rect.width-w)/2:rect.left;
+    let top=rect.top;
+    
+    // Keep within viewport
+    if(left<10)left=10;
+    if(top<10)top=10;
+    
+    preview.style.left=left+'px';
+    preview.style.top=(top+window.scrollY)+'px';
+    setTimeout(()=>preview.classList.add('show'),10);
+  }
+
+  // Gallery nav functions (global scope needed for onclick)
+  window.hpNav=function(btn,dir){
+    const gallery=btn.closest('.hp-gallery');
+    const imgs=gallery.querySelectorAll('img');
+    let cur=[...imgs].findIndex(i=>i.classList.contains('active'));
+    imgs[cur].classList.remove('active');
+    cur=(cur+dir+imgs.length)%imgs.length;
+    imgs[cur].classList.add('active');
+    const dots=gallery.parentElement.querySelector('.hp-dots');
+    if(dots){dots.querySelectorAll('.hp-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));}
+  };
+  window.hpGo=function(dot,idx){
+    const dots=dot.parentElement;
+    const gallery=dots.previousElementSibling;
+    const imgs=gallery.querySelectorAll('img');
+    imgs.forEach((img,i)=>img.classList.toggle('active',i===idx));
+    dots.querySelectorAll('.hp-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  };
+
+  window.mobGalNav=function(btn,dir){
+    const card=btn.closest('.mob-gallery');
+    const imgs=card.querySelectorAll('.mob-gallery-track img');
+    let cur=[...imgs].findIndex(i=>i.style.display==='block');
+    imgs[cur].style.display='none';imgs[cur].classList.remove('active');
+    cur=(cur+dir+imgs.length)%imgs.length;
+    imgs[cur].style.display='block';imgs[cur].classList.add('active');
+    const dots=card.querySelector('.mob-dots');
+    if(dots){dots.querySelectorAll('.mob-dot').forEach((d,i)=>{d.style.background=i===cur?'var(--candlelight)':'rgba(255,255,255,.25)';d.classList.toggle('active',i===cur)});}
+  };
+  window.mobGalGo=function(dot,idx){
+    const card=dot.closest('.mob-gallery');
+    const imgs=card.querySelectorAll('.mob-gallery-track img');
+    imgs.forEach((img,i)=>{img.style.display=i===idx?'block':'none';img.classList.toggle('active',i===idx)});
+    const dots=card.querySelector('.mob-dots');
+    if(dots){dots.querySelectorAll('.mob-dot').forEach((d,i)=>{d.style.background=i===idx?'var(--candlelight)':'rgba(255,255,255,.25)';d.classList.toggle('active',i===idx)});}
+  };
+
+  // Touch swipe for mobile galleries
+  function initSwipe(){
+    const galleries=document.querySelectorAll('.mob-gallery');
+    galleries.forEach(gallery=>{
+      let startX=null;
+      gallery.addEventListener('touchstart',e=>{
+        startX=e.touches[0].clientX;
+      },{passive:true});
+      
+      gallery.addEventListener('touchend',e=>{
+        if(!startX)return;
+        const endX=e.changedTouches[0].clientX;
+        const diff=startX-endX;
+        
+        if(Math.abs(diff)>50){
+          if(diff>0){
+            // Swipe left (next)
+            const nextBtn=gallery.querySelector('.mob-gal-btn.next');
+            if(nextBtn)mobGalNav(nextBtn,1);
+          } else {
+            // Swipe right (prev)
+            const prevBtn=gallery.querySelector('.mob-gal-btn.prev');
+            if(prevBtn)mobGalNav(prevBtn,-1);
+          }
+        }
+        startX=null;
+      },{passive:true});
+    });
+  }
+
+  // ===== ADD HOVER LISTENERS =====
+  function addHoverListeners(){
+    const cards=document.querySelectorAll('.site-card, .pick-card');
+    cards.forEach(card=>{
+      card.removeEventListener('mouseenter',card._handleMouseEnter);
+      card.removeEventListener('mouseleave',card._handleMouseLeave);
+      
+      card._handleMouseEnter=function(){
+        if(window.innerWidth<=768)return;
+        const idx=+this.dataset.idx;
+        if(idx>=0&&all[idx])showHoverPreview(this,all[idx]);
+      };
+      
+      card._handleMouseLeave=function(){
+        if(hoverPreview)hideTimer=setTimeout(()=>hoverPreview.classList.remove('show'),100);
+      };
+      
+      card.addEventListener('mouseenter',card._handleMouseEnter);
+      card.addEventListener('mouseleave',card._handleMouseLeave);
+    });
+  }
+
+  // Sticky submenu scrolled effect
+  const submenu=document.getElementById('submenu');
+  let lastY=window.scrollY;
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    submenu.classList.toggle('scrolled',y>200);
+    lastY=y;
+  });
+
+  // Submenu anchor highlighting
+  const sections=document.querySelectorAll('section[id], div[id]');
+  const submenuLinks=document.querySelectorAll('.submenu-inner a');
+  window.addEventListener('scroll',()=>{
+    let currentSection='';
+    sections.forEach(section=>{
+      const rect=section.getBoundingClientRect();
+      if(rect.top<=120)currentSection=section.id;
+    });
+    
+    submenuLinks.forEach(link=>{
+      link.classList.toggle('active',link.getAttribute('href').includes(currentSection));
+    });
+  });
+})();
+</script>
+</body>
+</html>
