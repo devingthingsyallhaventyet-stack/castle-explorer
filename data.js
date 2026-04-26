@@ -41749,7 +41749,7 @@ const CASTLES = [
     "era": "Medieval",
     "condition": "ruin",
     "description": "Minimal traces of a medieval castle in the village of Edrom, Berwickshire. More significant as an archaeological site than a visual spectacle.",
-    "image": "https://img.castlecore.uk/edrom-castle.jpg",
+    "image": "",
     "rating": 3,
     "reviewCount": 7,
     "county": "Scottish Borders",
@@ -41759,12 +41759,7 @@ const CASTLES = [
     ],
     "access": "free",
     "_index": 1282,
-    "gallery": [
-      "https://img.castlecore.uk/edrom-castle-2.jpg",
-      "https://img.castlecore.uk/edrom-castle-3.jpg",
-      "https://img.castlecore.uk/edrom-castle-4.jpg",
-      "https://img.castlecore.uk/edrom-castle-5.jpg"
-    ],
+    "gallery": [],
     "history": "A medieval castle site in the village of Edrom in the Scottish Borders. Very little remains above ground. The parish of Edrom was historically significant, with a Norman church (parts of which survive) and connections to various Border families. The castle site is of mainly archaeological interest.",
     "sources": [
       {
