@@ -4721,7 +4721,7 @@ const CASTLES = [
     "condition": "ruin",
     "description": "A picturesque ruin on a promontory in Loch Assynt. The Marquis of Montrose was captured and held here before being taken to Edinburgh for execution in 1650.",
     "history": "Ardvreck Castle is a castle, now ruinous, standing on a rocky promontory in Loch Assynt, Sutherland, Scotland, UK. The structure dates from about 1490 and is associated with the then landowners, the Macleods of Assynt.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Scotland_Strome_Castle.jpg/500px-Scotland_Strome_Castle.jpg",
+    "image": "https://img.castlecore.uk/ardvreck-castle-2.jpg",
     "rating": 4.2,
     "reviewCount": 1340,
     "county": "Highland",
