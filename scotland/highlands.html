@@ -6,6 +6,9 @@
 <title>Castles in the Highlands & Northern Isles — 81 Sites to Explore | CastleCore</title>
 <meta name="description" content="Explore 81 castles, ruins, and historic sites in the Highlands & Northern Isles. From Eilean Donan to Urquhart Castle on Loch Ness, plan your Highland adventure with maps, routes, and travel tips.">
 <meta name="keywords" content="castles in the Highlands & Northern Isles, Highland castles, best castles Scotland, things to do in the Highlands, Scottish castle tours, Eilean Donan, Urquhart Castle, Inverness castles, Loch Ness castles, NC500 castles">
+<link rel="preconnect" href="https://img.castlecore.uk" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+<link rel="dns-prefetch" href="https://img.castlecore.uk">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://castlecore.uk/scotland/highlands">
 <meta property="og:title" content="Castles in the Highlands & Northern Isles | CastleCore">
@@ -314,7 +317,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 <!-- 1. COMPACT HERO -->
 <!-- ================================ -->
 <section class="hero">
-<div class="hero-bg"><img src="https://img.castlecore.uk/scotland/Highlands/bjorn-snelders-Cd3Ek7rNXSk-unsplash%20(4).jpg" alt="Highlands & Northern Isles landscape" loading="eager"></div>
+<div class="hero-bg"><img src="https://img.castlecore.uk/scotland/Highlands/bjorn-snelders-Cd3Ek7rNXSk-unsplash%20(4).jpg" alt="Highlands & Northern Isles landscape" loading="eager" fetchpriority="high" width="1920" height="1080" decoding="async"></div>
 <div class="hero-inner">
 <p class="hero-breadcrumb"><a href="/">Home</a> / <a href="/scotland">Scotland</a> / Highlands & Northern Isles</p>
 <h1>Highlands & Northern Isles</h1>
@@ -386,15 +389,15 @@ Highland · Inverness · Ross · Sutherland · Caithness · Skye · Lochaber · 
 <h2 class="cs-title" style="text-align:center;margin-bottom:32px">Highland Castle Routes</h2>
 <div class="routes-grid">
 <a class="route-card rc-burgundy" href="/trail.html?id=highland-route">
-<div class="route-img"><img src="https://img.castlecore.uk/eilean-donan-castle-3.jpg" alt="Loch & Glen Route" loading="lazy"></div>
+<div class="route-img"><img src="https://img.castlecore.uk/eilean-donan-castle-3.jpg" alt="Loch & Glen Route" loading="lazy" decoding="async" width="400" height="200"></div>
 <div class="route-body"><h3>🏔️ Loch &amp; Glen Trail</h3><div class="route-meta"><span>Great Glen</span><span>8 sites</span><span>4 hours</span></div><p class="route-desc">Follow the Great Glen from Inverness to Fort William, passing Urquhart Castle, Culloden, and the brooding shores of Loch Ness.</p></div>
 </a>
 <a class="route-card rc-forest" href="/trail.html?id=nc500-castles">
-<div class="route-img"><img src="https://img.castlecore.uk/dunrobin-castle-2.jpg" alt="NC500 Castle Route" loading="lazy"></div>
+<div class="route-img"><img src="https://img.castlecore.uk/dunrobin-castle-2.jpg" alt="NC500 Castle Route" loading="lazy" decoding="async" width="400" height="200"></div>
 <div class="route-body"><h3>🛣️ NC500 Castle Loop</h3><div class="route-meta"><span>North Coast</span><span>12 sites</span><span>Full day</span></div><p class="route-desc">The castle-lover's North Coast 500 — from Dunrobin in the east to remote Sutherland ruins and the wild north coast.</p></div>
 </a>
 <a class="route-card rc-charcoal" href="/trail.html?id=ancient-highlands">
-<div class="route-img"><img src="https://img.castlecore.uk/clava-cairns.jpg" alt="Ancient Highlands Route" loading="lazy"></div>
+<div class="route-img"><img src="https://img.castlecore.uk/clava-cairns.jpg" alt="Ancient Highlands Route" loading="lazy" decoding="async" width="400" height="200"></div>
 <div class="route-body"><h3>🪨 Ancient Highlands</h3><div class="route-meta"><span>Inverness area</span><span>6 sites</span><span>3 hours</span></div><p class="route-desc">Bronze Age cairns, Iron Age brochs, and Pictish stones. The Highlands before the castles — 4,000 years of human story.</p></div>
 </a>
 </div>
@@ -523,7 +526,7 @@ Highland · Inverness · Ross · Sutherland · Caithness · Skye · Lochaber · 
   document.getElementById('picksRow').innerHTML=top5.map(c=>{
     const img=getImg(c);
     const globalIdx=all.indexOf(c);
-    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'"><img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>★ '+c.rating+'</span></div></a>';
+    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'"><img src="'+img+'" alt="'+c.name+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>★ '+c.rating+'</span></div></a>';
   }).join('');
 
   // ===== FILTERS =====
@@ -620,7 +623,7 @@ Highland · Inverness · Ross · Sutherland · Caithness · Skye · Lochaber · 
       const gallery=(c.gallery||[]).slice(0,5);
       const mobGallery=gallery.length?
         '<div class="mob-gallery" style="display:none"><div class="mob-gallery-track">'+
-        gallery.map((gi,j)=>'<img src="'+gi+'" alt="" loading="lazy" class="'+(j===0?'active':'')+'" style="width:100%;height:200px;object-fit:cover;display:'+(j===0?'block':'none')+'">').join('')+
+        gallery.map((gi,j)=>'<img src="'+gi+'" alt="" loading="lazy" decoding="async" class="'+(j===0?'active':'')+'" style="width:100%;height:200px;object-fit:cover;display:'+(j===0?'block':'none')+'">').join('')+
         '</div>'+(gallery.length>1?'<button class="mob-gal-btn prev" onclick="event.preventDefault();mobGalNav(this,-1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">‹</button><button class="mob-gal-btn next" onclick="event.preventDefault();mobGalNav(this,1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">›</button>':'')+
         (gallery.length>1?'<div class="mob-dots" style="display:flex;justify-content:center;gap:5px;padding:8px 0">'+gallery.map((_,j)=>'<span class="mob-dot'+(j===0?' active':'')+'" style="width:6px;height:6px;border-radius:50%;background:'+(j===0?'var(--candlelight)':'rgba(255,255,255,.25)')+';display:inline-block;cursor:pointer" onclick="event.preventDefault();mobGalGo(this,'+j+')"></span>').join('')+'</div>':'')+'</div>':'';
       
@@ -630,7 +633,7 @@ Highland · Inverness · Ross · Sutherland · Caithness · Skye · Lochaber · 
         '</div>';
       
       return '<div class="site-card" data-idx="'+globalIdx+'" onclick="if(window.innerWidth>768)window.location=\'/site/'+slug(c.name)+'.html\'">'+
-        '<div class="site-card-img" style="position:relative">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
+        '<div class="site-card-img" style="position:relative">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" decoding="async" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
         '<div class="site-card-body">'+
         '<h3>'+c.name+'</h3>'+
         mobGallery+
@@ -677,7 +680,7 @@ Highland · Inverness · Ross · Sutherland · Caithness · Skye · Lochaber · 
     let galleryHtml='';
     if(gallery.length){
       galleryHtml='<div class="hp-gallery">'+
-        gallery.map((img,i)=>'<img src="'+img+'" alt="" loading="lazy" class="'+(i===0?'active':'')+'" onerror="this.remove()">').join('')+
+        gallery.map((img,i)=>'<img src="'+img+'" alt="" loading="lazy" decoding="async" class="'+(i===0?'active':'')+'" onerror="this.remove()">').join('')+
         (gallery.length>1?'<button class="hp-gallery-btn prev" onclick="hpNav(this,-1)">‹</button><button class="hp-gallery-btn next" onclick="hpNav(this,1)">›</button>':'')+
         '</div>'+(gallery.length>1?'<div class="hp-dots">'+gallery.map((_,i)=>'<button class="hp-dot'+(i===0?' active':'')+'" onclick="hpGo(this,'+i+')"></button>').join('')+'</div>':'');
     }
