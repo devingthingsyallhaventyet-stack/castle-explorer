@@ -332,10 +332,10 @@
                 <div class="mega-panel active" data-country="england">
                   <a href="/england/northern-england">Northern England</a>
                   <a href="/england/yorkshire">Yorkshire</a>
-                  <a href="/england/midlands">The Midlands</a>
-                  <a href="/england/south-east">South East</a>
+                  <a href="/england/the-midlands">The Midlands</a>
+                  <a href="/england/east-of-england">East of England</a>
+                  <a href="/england/south-east-london">South East &amp; London</a>
                   <a href="/england/south-west">South West</a>
-                  <a href="/england/east-anglia">East Anglia</a>
                 </div>
                 <div class="mega-panel" data-country="scotland">
                   <a href="/scotland/highlands">Highlands &amp; Northern Isles</a>
@@ -348,9 +348,9 @@
                   <a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a>
                 </div>
                 <div class="mega-panel" data-country="wales">
-                  <a href="/wales/north-wales">Snowdonia &amp; the North</a>
-                  <a href="/wales/mid-wales">The Marches &amp; Borders</a>
-                  <a href="/wales/south-west-wales">Pembrokeshire &amp; the West</a>
+                  <a href="/wales/snowdonia-north">Snowdonia &amp; North Wales</a>
+                  <a href="/wales/mid-wales-marches">Mid Wales &amp; the Marches</a>
+                  <a href="/wales/west-wales">West Wales</a>
                   <a href="/wales/south-wales">South Wales</a>
                 </div>
                 <div class="mega-panel" data-country="ireland">
@@ -359,7 +359,7 @@
                   <a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a>
                   <a href="/ireland/the-heartlands">The Heartlands</a>
                   <a href="/ireland/dublin-and-the-pale">Dublin &amp; The Pale</a>
-                  <a href="/ireland/northwest-and-ulster">Northwest &amp; Ulster</a>
+                  <a href="/ireland/ulster-and-the-north">Ulster &amp; the North</a>
                 </div>
               </div>
             </div>
@@ -397,10 +397,10 @@
       <div class="mob-sub">
         <a href="/england/northern-england">Northern England</a>
         <a href="/england/yorkshire">Yorkshire</a>
-        <a href="/england/midlands">The Midlands</a>
-        <a href="/england/south-east">South East</a>
+        <a href="/england/the-midlands">The Midlands</a>
+        <a href="/england/east-of-england">East of England</a>
+        <a href="/england/south-east-london">South East &amp; London</a>
         <a href="/england/south-west">South West</a>
-        <a href="/england/east-anglia">East Anglia</a>
       </div>
       <span class="mob-heading">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span>
       <div class="mob-sub">
@@ -415,9 +415,9 @@
       </div>
       <span class="mob-heading">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span>
       <div class="mob-sub">
-        <a href="/wales/north-wales">Snowdonia &amp; the North</a>
-        <a href="/wales/mid-wales">The Marches &amp; Borders</a>
-        <a href="/wales/south-west-wales">Pembrokeshire &amp; the West</a>
+        <a href="/wales/snowdonia-north">Snowdonia &amp; North Wales</a>
+        <a href="/wales/mid-wales-marches">Mid Wales &amp; the Marches</a>
+        <a href="/wales/west-wales">West Wales</a>
         <a href="/wales/south-wales">South Wales</a>
       </div>
       <span class="mob-heading">🍀 Ireland</span>
@@ -427,7 +427,7 @@
         <a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a>
         <a href="/ireland/the-heartlands">The Heartlands</a>
         <a href="/ireland/dublin-and-the-pale">Dublin &amp; The Pale</a>
-        <a href="/ireland/northwest-and-ulster">Northwest &amp; Ulster</a>
+        <a href="/ireland/ulster-and-the-north">Ulster &amp; the North</a>
       </div>
       <span class="mob-heading">✨ Collections</span>
       <div class="mob-sub">
