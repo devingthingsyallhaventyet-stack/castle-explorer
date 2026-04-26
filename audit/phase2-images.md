@@ -1,0 +1,2435 @@
+# Phase 2: Wikipedia Images Audit Report
+
+Generated: 2026-04-26T18:01:31.829Z
+
+## Summary Statistics
+
+- **Total Wikipedia images found:** 738
+- **Working images:** 31
+- **Broken images:** 707
+- **Attribution data retrieved:** 31
+
+## Broken Images
+
+The following Wikipedia images are no longer accessible:
+
+- **Donnington Castle** (Berkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Donnington_Castle_-_April_2005.jpg/500px-Donnington_Castle_-_April_2005.jpg
+  - Status: 429
+- **Boarstall Tower** (Buckinghamshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Boarstall_Hall_and_Towers%2C_1695%2C_by_artist_Michael_Burghers%2C_England.jpg/500px-Boarstall_Hall_and_Towers%2C_1695%2C_by_artist_Michael_Burghers%2C_England.jpg
+  - Status: 429
+- **Denny Abbey** (Cambridgeshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Denny_Abbey_2.JPG/500px-Denny_Abbey_2.JPG
+  - Status: 429
+- **Kimbolton Castle** (Cambridgeshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Kimbolton_School%2C_west_and_south_fronts_-_geograph.org.uk_-_2522953.jpg/500px-Kimbolton_School%2C_west_and_south_fronts_-_geograph.org.uk_-_2522953.jpg
+  - Status: 429
+- **Longthorpe Tower** (Cambridgeshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/6/65/Longthorpe_Tower1.jpg
+  - Status: 429
+- **Beeston Castle** (Cheshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Beeston_Castle_2016_017.jpg/500px-Beeston_Castle_2016_017.jpg
+  - Status: 429
+- **Chester Castle** (Cheshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Chester_Castle_-_geograph.org.uk_-_1022086.jpg/500px-Chester_Castle_-_geograph.org.uk_-_1022086.jpg
+  - Status: 429
+- **Halton Castle** (Cheshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Halton_Castle_%285%29.JPG/500px-Halton_Castle_%285%29.JPG
+  - Status: 429
+- **Norton Priory** (Cheshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Norton_Priory.jpg/500px-Norton_Priory.jpg
+  - Status: 429
+- **Peckforton Castle** (Cheshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Peckforton_Castle_2014.jpg/500px-Peckforton_Castle_2014.jpg
+  - Status: 429
+- **Caerhays Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Caerhays_Castle.jpg/500px-Caerhays_Castle.jpg
+  - Status: 429
+- **Dupath Well** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/1/16/Dupath_Well_Chapel_-_geograph.org.uk_-_292327.jpg
+  - Status: 429
+- **Launceston Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Launceston_Castle_-_geograph.org.uk_-_22242.jpg/500px-Launceston_Castle_-_geograph.org.uk_-_22242.jpg
+  - Status: 429
+- **Pendennis Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Pendennis_Castle.jpg/500px-Pendennis_Castle.jpg
+  - Status: 429
+- **Pengersick Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Pengersick_Castle_-_geograph.org.uk_-_54699.jpg/500px-Pengersick_Castle_-_geograph.org.uk_-_54699.jpg
+  - Status: 429
+- **Restormel Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/RestormelCastle.JPG/500px-RestormelCastle.JPG
+  - Status: 429
+- **St Mawes Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/St_Mawes_Castle_across_from_Falmouth.jpg/500px-St_Mawes_Castle_across_from_Falmouth.jpg
+  - Status: 429
+- **Tintagel Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg/500px-Upper_mainland_courtyard_of_Tintagel_Castle%2C_2007.jpg
+  - Status: 429
+- **Trematon Castle** (Cornwall, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg/500px-Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg
+  - Status: 429
+- **Auckland Castle** (County Durham, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Auckland_Castle_-_geograph.org.uk_-_1896444.jpg/500px-Auckland_Castle_-_geograph.org.uk_-_1896444.jpg
+  - Status: 429
+- **Bowes Castle** (County Durham, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bowes_Castle_-_geograph.org.uk_-_1060655.jpg/500px-Bowes_Castle_-_geograph.org.uk_-_1060655.jpg
+  - Status: 429
+- **Brancepeth Castle** (County Durham, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Brancepeth_Castle.jpg/500px-Brancepeth_Castle.jpg
+  - Status: 429
+- **Egglestone Abbey** (County Durham, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Egglestone_Abbey_2021.jpg/500px-Egglestone_Abbey_2021.jpg
+  - Status: 429
+- **Lumley Castle** (County Durham, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/c/ca/Lumley_Castle_Hotel_-_geograph.org.uk_-_1188877.jpg
+  - Status: 429
+- **Raby Castle** (County Durham, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Raby_Castle_%28spring%29.jpg/500px-Raby_Castle_%28spring%29.jpg
+  - Status: 429
+- **Witton Castle** (County Durham, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Witton_Castle_-_geograph.org.uk_-_307577.jpg/500px-Witton_Castle_-_geograph.org.uk_-_307577.jpg
+  - Status: 429
+- **Appleby Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Appleby_Castle%2C_bailey_-_geograph.org.uk_-_4958736.jpg/500px-Appleby_Castle%2C_bailey_-_geograph.org.uk_-_4958736.jpg
+  - Status: 429
+- **Bewcastle Cross** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/6/6e/The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg
+  - Status: 429
+- **Brough Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BroughCastleSW.jpg/500px-BroughCastleSW.jpg
+  - Status: 429
+- **Brougham Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/1007186_Brougham_Castle%2C_seen_from_the_Northeast_Brougham_20240528_0095.jpg/500px-1007186_Brougham_Castle%2C_seen_from_the_Northeast_Brougham_20240528_0095.jpg
+  - Status: 429
+- **Carlisle Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Carlisle_Castle.png/500px-Carlisle_Castle.png
+  - Status: 429
+- **Cockermouth Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Outer_Gatehouse.jpg/500px-Outer_Gatehouse.jpg
+  - Status: 429
+- **Dacre Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Dacre_Castle_%28geograph_2648020%29.jpg/500px-Dacre_Castle_%28geograph_2648020%29.jpg
+  - Status: 429
+- **Egremont Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Egremont_IMG_1323_-_panoramio.jpg/500px-Egremont_IMG_1323_-_panoramio.jpg
+  - Status: 429
+- **Furness Abbey** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Barrow-in-Furness_-_Furness_Abbey_-_20281224192239.jpg/500px-Barrow-in-Furness_-_Furness_Abbey_-_20281224192239.jpg
+  - Status: 429
+- **Kendal Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kendal_Castle_From_Above%2C_Sept_2015.jpg/500px-Kendal_Castle_From_Above%2C_Sept_2015.jpg
+  - Status: 429
+- **Lanercost Priory** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lanercost_Priory_1.jpg/500px-Lanercost_Priory_1.jpg
+  - Status: 429
+- **Lowther Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lowther_Castle_greyscale.jpg/500px-Lowther_Castle_greyscale.jpg
+  - Status: 429
+- **Muncaster Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Muncaster_Castle_-_geograph.org.uk_-_1980832.jpg/500px-Muncaster_Castle_-_geograph.org.uk_-_1980832.jpg
+  - Status: 429
+- **Penrith Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Penrith_Castle_2.JPG/500px-Penrith_Castle_2.JPG
+  - Status: 429
+- **Piel Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Piel_Castle_2023.JPG/500px-Piel_Castle_2023.JPG
+  - Status: 429
+- **Rose Castle** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Rose_Castle%2C_Raughton_Head.jpg/500px-Rose_Castle%2C_Raughton_Head.jpg
+  - Status: 429
+- **Shap Abbey** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/ShapAbbey.jpg/500px-ShapAbbey.jpg
+  - Status: 429
+- **Workington Hall** (Cumbria, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Workington_Hall_by_AF_Lydon.jpg/500px-Workington_Hall_by_AF_Lydon.jpg
+  - Status: 429
+- **Bolsover Castle** (Derbyshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Bolsover_Castle_-_geograph.org.uk_-_6937331.jpg/500px-Bolsover_Castle_-_geograph.org.uk_-_6937331.jpg
+  - Status: 429
+- **Codnor Castle** (Derbyshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Codnor_Castle_in_Derbyshire.jpg/500px-Codnor_Castle_in_Derbyshire.jpg
+  - Status: 429
+- **Haddon Hall** (Derbyshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Haddon_Hall.jpg/500px-Haddon_Hall.jpg
+  - Status: 429
+- **Hardwick Hall** (Derbyshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Hardwick_Hall_3_%287027835143%29.jpg/500px-Hardwick_Hall_3_%287027835143%29.jpg
+  - Status: 429
+- **Peveril Castle** (Derbyshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Peveril_Castle_keep%2C_2009.jpg/500px-Peveril_Castle_keep%2C_2009.jpg
+  - Status: 429
+- **Wingfield Manor** (Derbyshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Wingfield_Manor_-_geograph.org.uk_-_6280.jpg/500px-Wingfield_Manor_-_geograph.org.uk_-_6280.jpg
+  - Status: 429
+- **Berry Pomeroy Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Berry_Pomeroy_Castle_-_geograph.org.uk_-_411651.jpg/500px-Berry_Pomeroy_Castle_-_geograph.org.uk_-_411651.jpg
+  - Status: 429
+- **Castle Drogo** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Drogo-wyrd-01.jpg/500px-Drogo-wyrd-01.jpg
+  - Status: 429
+- **Compton Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Compton_Castle_in_Devon_enh.jpg/500px-Compton_Castle_in_Devon_enh.jpg
+  - Status: 429
+- **Dartmouth Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Dartmouth_Castle_-_geograph.org.uk_-_725989.jpg/500px-Dartmouth_Castle_-_geograph.org.uk_-_725989.jpg
+  - Status: 429
+- **Gidleigh Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Gidleigh_Castle.jpg/500px-Gidleigh_Castle.jpg
+  - Status: 429
+- **Lydford Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lydford%2C_the_castle_-_geograph.org.uk_-_571379.jpg/500px-Lydford%2C_the_castle_-_geograph.org.uk_-_571379.jpg
+  - Status: 429
+- **Okehampton Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Okehampton_Castle_%27motte%27_-_geograph.org.uk_-_30632.jpg/500px-Okehampton_Castle_%27motte%27_-_geograph.org.uk_-_30632.jpg
+  - Status: 429
+- **Powderham Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Powderham_Castle_02.jpg/500px-Powderham_Castle_02.jpg
+  - Status: 429
+- **Salcombe Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/SalcombeCastleFromNorthSands.jpg/500px-SalcombeCastleFromNorthSands.jpg
+  - Status: 429
+- **Tiverton Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/TivertonCastle_AerialPanorama.png/500px-TivertonCastle_AerialPanorama.png
+  - Status: 429
+- **Totnes Castle** (Devon, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Totnes_Castle_2.jpg/500px-Totnes_Castle_2.jpg
+  - Status: 429
+- **Christchurch Castle** (Dorset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Christchurch_Castle_two_walls.JPG/500px-Christchurch_Castle_two_walls.JPG
+  - Status: 429
+- **Corfe Castle** (Dorset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Corfe_Castle%2C_Dorset.jpg/500px-Corfe_Castle%2C_Dorset.jpg
+  - Status: 429
+- **Lulworth Castle** (Dorset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lulworth_Castle_%281937%29.jpg/500px-Lulworth_Castle_%281937%29.jpg
+  - Status: 429
+- **Portland Castle** (Dorset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Uk_dor_portcastle.JPG/500px-Uk_dor_portcastle.JPG
+  - Status: 429
+- **Sherborne Castle** (Dorset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sherborne_Castle_03.jpg/500px-Sherborne_Castle_03.jpg
+  - Status: 429
+- **Wressle Castle** (East Riding of Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wressle_Castle%2C_2009.jpg/500px-Wressle_Castle%2C_2009.jpg
+  - Status: 429
+- **Battle Abbey** (East Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Battleabbey-wyrdlight-0170.jpg/500px-Battleabbey-wyrdlight-0170.jpg
+  - Status: 429
+- **Bayham Old Abbey** (East Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BayhamOldAbbeyC.jpg/500px-BayhamOldAbbeyC.jpg
+  - Status: 429
+- **Camber Castle** (East Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Camber_Castle%2C_seen_from_the_north-west.jpg/500px-Camber_Castle%2C_seen_from_the_north-west.jpg
+  - Status: 429
+- **Herstmonceux Castle** (East Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Herstmonceux_Castle_with_moat.jpg/500px-Herstmonceux_Castle_with_moat.jpg
+  - Status: 429
+- **Lewes Castle** (East Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Lewes_Castle_towers.JPG/500px-Lewes_Castle_towers.JPG
+  - Status: 429
+- **Michelham Priory** (East Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Michelham_Priory_03.jpg/500px-Michelham_Priory_03.jpg
+  - Status: 429
+- **Pevensey Castle** (East Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Pevensey_Castle_aerial_alt.jpg/500px-Pevensey_Castle_aerial_alt.jpg
+  - Status: 429
+- **Colchester Castle** (Essex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Colchester-castle.jpg/500px-Colchester-castle.jpg
+  - Status: 429
+- **Hadleigh Castle** (Essex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Aerial_view_of_Hadleigh_Castle_and_Country_Park_-_geograph.org.uk_-_1563595.jpg/500px-Aerial_view_of_Hadleigh_Castle_and_Country_Park_-_geograph.org.uk_-_1563595.jpg
+  - Status: 429
+- **Hedingham Castle** (Essex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/The_Keep%2C_Hedingham_Castle%2C_Essex_-_geograph.org.uk_-_3079561.jpg/500px-The_Keep%2C_Hedingham_Castle%2C_Essex_-_geograph.org.uk_-_3079561.jpg
+  - Status: 429
+- **Pleshey Castle** (Essex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Pleshey_Castle_%289%29_%2822063429162%29.jpg/500px-Pleshey_Castle_%289%29_%2822063429162%29.jpg
+  - Status: 429
+- **Tilbury Fort** (Essex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tilbury_Fort.jpg/500px-Tilbury_Fort.jpg
+  - Status: 429
+- **Waltham Abbey** (Essex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/2022-02-12_-_Waltham_Abbey_Church_%283%29.jpg/500px-2022-02-12_-_Waltham_Abbey_Church_%283%29.jpg
+  - Status: 429
+- **Berkeley Castle** (Gloucestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg/500px-Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg
+  - Status: 429
+- **Beverston Castle** (Gloucestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/500px-Beverston_castle.jpg
+  - Status: 429
+- **Hailes Abbey** (Gloucestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hailes_Abbey_Landscape.jpg/500px-Hailes_Abbey_Landscape.jpg
+  - Status: 429
+- **St Briavels Castle** (Gloucestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg/500px-St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg
+  - Status: 429
+- **Tewkesbury Abbey** (Gloucestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tewkesbury_Abbey_2011.jpg/500px-Tewkesbury_Abbey_2011.jpg
+  - Status: 429
+- **Thornbury Castle** (Gloucestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/500px-Thornbury.castle.west.front.arp.750pix.jpg
+  - Status: 429
+- **Basing House** (Hampshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Basing-House-entrance.jpg/500px-Basing-House-entrance.jpg
+  - Status: 429
+- **Bishop's Waltham Palace** (Hampshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Bishop%27s_Waltham_Palace_and_moat.jpg/500px-Bishop%27s_Waltham_Palace_and_moat.jpg
+  - Status: 429
+- **Calshot Castle** (Hampshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Calshot_castle_evening.JPG/500px-Calshot_castle_evening.JPG
+  - Status: 429
+- **Netley Abbey** (Hampshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Netley_abbey_drone.JPG/500px-Netley_abbey_drone.JPG
+  - Status: 429
+- **Portchester Castle** (Hampshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Portchester_castle_04.jpg/500px-Portchester_castle_04.jpg
+  - Status: 429
+- **Titchfield Abbey** (Hampshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Titchfield_Abbey_1.jpg/500px-Titchfield_Abbey_1.jpg
+  - Status: 429
+- **Wolvesey Castle** (Hampshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg/500px-Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg
+  - Status: 429
+- **Clifford Castle** (Herefordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Clifford_Castle_ruins.jpg/500px-Clifford_Castle_ruins.jpg
+  - Status: 429
+- **Ewyas Harold Castle** (Herefordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ewyas_Harold_Castle_%28Geograph_2291636_by_Philip_Halling%29.jpg/500px-Ewyas_Harold_Castle_%28Geograph_2291636_by_Philip_Halling%29.jpg
+  - Status: 429
+- **Goodrich Castle** (Herefordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Goodrich_above.jpg/500px-Goodrich_above.jpg
+  - Status: 429
+- **Longtown Castle** (Herefordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Longtown_Castle_-_geograph.org.uk_-_392612.jpg/500px-Longtown_Castle_-_geograph.org.uk_-_392612.jpg
+  - Status: 429
+- **Snodhill Castle** (Herefordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Snodhill_Castle_%28geograph_2203637%29.jpg/500px-Snodhill_Castle_%28geograph_2203637%29.jpg
+  - Status: 429
+- **Wigmore Castle** (Herefordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wigmore_Castle_-_geograph.org.uk_-_7350280.jpg/500px-Wigmore_Castle_-_geograph.org.uk_-_7350280.jpg
+  - Status: 429
+- **Berkhamsted Castle** (Hertfordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Berkhamsted_Castle_Jan_2007.jpg/500px-Berkhamsted_Castle_Jan_2007.jpg
+  - Status: 429
+- **Carisbrooke Castle** (Isle of Wight, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Carisbrooke_castle_buildings_2023.JPG/500px-Carisbrooke_castle_buildings_2023.JPG
+  - Status: 429
+- **Cowes Castle** (Isle of Wight, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/West_Cowes_Castle.jpg/500px-West_Cowes_Castle.jpg
+  - Status: 429
+- **Yarmouth Castle** (Isle of Wight, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Yarmouth_Castle%2C_Isle_of_Wight_-_geograph.org.uk_-_1720431.jpg/500px-Yarmouth_Castle%2C_Isle_of_Wight_-_geograph.org.uk_-_1720431.jpg
+  - Status: 429
+- **Cooling Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cooling_Castle_gatehouse.jpg/500px-Cooling_Castle_gatehouse.jpg
+  - Status: 429
+- **Deal Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Deal_Castle_Aerial_View.jpg/500px-Deal_Castle_Aerial_View.jpg
+  - Status: 429
+- **Eynsford Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Eynsford_Castle_%2820%29_%2818373797302%29_%282%29.jpg/500px-Eynsford_Castle_%2820%29_%2818373797302%29_%282%29.jpg
+  - Status: 429
+- **Lullingstone Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Lullingstone.manor.JPG/500px-Lullingstone.manor.JPG
+  - Status: 429
+- **Lympne Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Lympne_Castle_-_geograph.org.uk_-_4223972.jpg/500px-Lympne_Castle_-_geograph.org.uk_-_4223972.jpg
+  - Status: 429
+- **Saltwood Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Saltwood_Castle_and_wall.JPG/500px-Saltwood_Castle_and_wall.JPG
+  - Status: 429
+- **Scotney Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scotney_Castle_with_white_wisteria.JPG/500px-Scotney_Castle_with_white_wisteria.JPG
+  - Status: 429
+- **Tonbridge Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TonbridgeCastle0021.JPG/500px-TonbridgeCastle0021.JPG
+  - Status: 429
+- **Upnor Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Upnor_Castle_trimmed.jpg/500px-Upnor_Castle_trimmed.jpg
+  - Status: 429
+- **Walmer Castle** (Kent, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Walmer_Castle_from_the_west.jpg/500px-Walmer_Castle_from_the_west.jpg
+  - Status: 429
+- **Clitheroe Castle** (Lancashire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Clitheroe_Castle.JPG/500px-Clitheroe_Castle.JPG
+  - Status: 429
+- **Greenhalgh Castle** (Lancashire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Greenhalgh_Castle_239-10.jpg/500px-Greenhalgh_Castle_239-10.jpg
+  - Status: 429
+- **Hoghton Tower** (Lancashire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hoghton_Tower%2C_Lancashire_6704115249.jpg/500px-Hoghton_Tower%2C_Lancashire_6704115249.jpg
+  - Status: 429
+- **Lancaster Castle** (Lancashire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Lancaster_Castle_-_2023-03-25.jpg/500px-Lancaster_Castle_-_2023-03-25.jpg
+  - Status: 429
+- **Sawley Abbey** (Lancashire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Salley_Abbey_-_geograph.org.uk_-_1736378.jpg/500px-Salley_Abbey_-_geograph.org.uk_-_1736378.jpg
+  - Status: 429
+- **Whalley Abbey** (Lancashire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Whalley_Abbey_-_geograph.org.uk_-_1923754.jpg/500px-Whalley_Abbey_-_geograph.org.uk_-_1923754.jpg
+  - Status: 429
+- **Ashby de la Zouch Castle** (Leicestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ashby_de_la_Zouch_castle_main_buildings.JPG/500px-Ashby_de_la_Zouch_castle_main_buildings.JPG
+  - Status: 429
+- **Hallaton Castle** (Leicestershire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Hallaton_Castle_earthworks.jpg/500px-Hallaton_Castle_earthworks.jpg
+  - Status: 429
+- **Bolingbroke Castle** (Lincolnshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Old-Bolingbroke-Castle.jpg/500px-Old-Bolingbroke-Castle.jpg
+  - Status: 429
+- **Hussey Tower** (Lincolnshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hussey_Tower.JPG/500px-Hussey_Tower.JPG
+  - Status: 429
+- **Somerton Castle** (Lincolnshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Somerton_Castle%2C_Boothby_Graffoe%2C_Lincolnshire_4.png/500px-Somerton_Castle%2C_Boothby_Graffoe%2C_Lincolnshire_4.png
+  - Status: 429
+- **Tattershall Castle** (Lincolnshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Tattershall_Castle%2C_2006.jpg/500px-Tattershall_Castle%2C_2006.jpg
+  - Status: 429
+- **Thornton Abbey** (Lincolnshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Thornton_Abbey_Ruins.jpg/500px-Thornton_Abbey_Ruins.jpg
+  - Status: 429
+- **Eltham Palace** (London, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Eltham_Palace-8242930494.jpg/500px-Eltham_Palace-8242930494.jpg
+  - Status: 429
+- **Tower of London** (London, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/500px-Tower_of_London_from_the_Shard_%288515883950%29.jpg
+  - Status: 429
+- **Neath Castle** (Neath Port Talbot, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Neath_Castle_-_geograph.org.uk_-_42391.jpg/500px-Neath_Castle_-_geograph.org.uk_-_42391.jpg
+  - Status: 429
+- **Baconsthorpe Castle** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Baconsthorpe_Castle_1.jpg/500px-Baconsthorpe_Castle_1.jpg
+  - Status: 429
+- **Binham Priory** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/BinhamPriory.JPG/500px-BinhamPriory.JPG
+  - Status: 429
+- **Burgh Castle** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Burgh_Castle_SS_Peter_and_Paul.jpg/500px-Burgh_Castle_SS_Peter_and_Paul.jpg
+  - Status: 429
+- **Caister Castle** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/8/8c/Caister_Castle.jpg
+  - Status: 429
+- **Castle Acre Priory** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CastleAcrePriory.JPG/500px-CastleAcrePriory.JPG
+  - Status: 429
+- **Castle Rising** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Castle_Rising_-_geograph.org.uk_-_542750.jpg/500px-Castle_Rising_-_geograph.org.uk_-_542750.jpg
+  - Status: 429
+- **Norwich Castle** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Norwich_Castle_keep%2C_2009.jpg/500px-Norwich_Castle_keep%2C_2009.jpg
+  - Status: 429
+- **Oxburgh Hall** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Oxburgh_Hall%2C_2017.jpg/500px-Oxburgh_Hall%2C_2017.jpg
+  - Status: 429
+- **Thetford Priory** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Cmglee_Thetford_Priory.jpg/500px-Cmglee_Thetford_Priory.jpg
+  - Status: 429
+- **Weeting Castle** (Norfolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Weeting_Castle_-_geograph.org.uk_-_2377269.jpg/500px-Weeting_Castle_-_geograph.org.uk_-_2377269.jpg
+  - Status: 429
+- **Bolton Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Castle_Bolton_and_its_maze_-_geograph.org.uk_-_7335033.jpg/500px-Castle_Bolton_and_its_maze_-_geograph.org.uk_-_7335033.jpg
+  - Status: 429
+- **Byland Abbey** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/BylandAbbey-7Je11-24105.jpg/500px-BylandAbbey-7Je11-24105.jpg
+  - Status: 429
+- **Castle Howard** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Castle_Howard_and_garden.jpg/500px-Castle_Howard_and_garden.jpg
+  - Status: 429
+- **Crayke Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg/500px-Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg
+  - Status: 429
+- **Danby Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Danby_Castle_ruins_from_the_north_-_geograph.org.uk_-_2606955.jpg/500px-Danby_Castle_ruins_from_the_north_-_geograph.org.uk_-_2606955.jpg
+  - Status: 429
+- **Easby Abbey** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/EasbyAbbey_Refectory.jpg/500px-EasbyAbbey_Refectory.jpg
+  - Status: 429
+- **Fountains Abbey** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Fountains_Abbey_-_9447434368.jpg/500px-Fountains_Abbey_-_9447434368.jpg
+  - Status: 429
+- **Helmsley Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Helmsley_Castle_English_Heritage.jpg/500px-Helmsley_Castle_English_Heritage.jpg
+  - Status: 429
+- **Jervaulx Abbey** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jervaulx_Abbey%2C_geograph.jpg/500px-Jervaulx_Abbey%2C_geograph.jpg
+  - Status: 429
+- **Kirkham Priory** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/KirkhamPriory.JPG/500px-KirkhamPriory.JPG
+  - Status: 429
+- **Knaresborough Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Knaresborough_Castle_ruins.jpg/500px-Knaresborough_Castle_ruins.jpg
+  - Status: 429
+- **Marmion Tower** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/West_Tanfield%2C_The_Marmion_Tower_-_geograph.org.uk_-_5954383.jpg/500px-West_Tanfield%2C_The_Marmion_Tower_-_geograph.org.uk_-_5954383.jpg
+  - Status: 429
+- **Middleham Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/MiddlehamCJW.jpg/500px-MiddlehamCJW.jpg
+  - Status: 429
+- **Mount Grace Priory** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mount_Grace_Priory_2015.jpg/500px-Mount_Grace_Priory_2015.jpg
+  - Status: 429
+- **Mulgrave Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/5/5b/Mulgrave_Castle_-_geograph.org.uk_-_17316.jpg
+  - Status: 429
+- **Pickering Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PickeringCastle.jpg/500px-PickeringCastle.jpg
+  - Status: 429
+- **Richmond Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Bailey_and_keep%2C_Richmond_Castle_-_geograph.org.uk_-_1318287.jpg/500px-Bailey_and_keep%2C_Richmond_Castle_-_geograph.org.uk_-_1318287.jpg
+  - Status: 429
+- **Rievaulx Abbey** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/RievaulxAbbey-wyrdlight-24588.jpg/500px-RievaulxAbbey-wyrdlight-24588.jpg
+  - Status: 429
+- **Ripley Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/e/e1/Ripley_CastleDE.jpg
+  - Status: 429
+- **Scarborough Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Scarborough_Castle_3.jpg/500px-Scarborough_Castle_3.jpg
+  - Status: 429
+- **Sheriff Hutton Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sheriff_hutton_castle.jpg/500px-Sheriff_hutton_castle.jpg
+  - Status: 429
+- **Skipton Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Skipton_Castle_main_gate%2C_2007.jpg/500px-Skipton_Castle_main_gate%2C_2007.jpg
+  - Status: 429
+- **Snape Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Snape_Castle_-_geograph.org.uk_-_3225506.jpg/500px-Snape_Castle_-_geograph.org.uk_-_3225506.jpg
+  - Status: 429
+- **Spofforth Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Spofforth_Castle_Undercroft.jpg/500px-Spofforth_Castle_Undercroft.jpg
+  - Status: 429
+- **Whitby Abbey** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Whitby_Abbey_%28geograph_7249897%29.jpg/500px-Whitby_Abbey_%28geograph_7249897%29.jpg
+  - Status: 429
+- **Whorlton Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Whorlton_Castle_gatehouse_exterior.jpg/500px-Whorlton_Castle_gatehouse_exterior.jpg
+  - Status: 429
+- **Wilton Castle** (North Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Winter_view_of_Wilton_Castle_-_geograph.org.uk_-_1169638.jpg/500px-Winter_view_of_Wilton_Castle_-_geograph.org.uk_-_1169638.jpg
+  - Status: 429
+- **Fotheringhay Castle** (Northamptonshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Fotheringhay_motte%2C_2009.jpg/500px-Fotheringhay_motte%2C_2009.jpg
+  - Status: 429
+- **Kirby Hall** (Northamptonshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg/500px-Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg
+  - Status: 429
+- **Rockingham Castle** (Northamptonshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Rockingham_Castle_entrance.jpg/500px-Rockingham_Castle_entrance.jpg
+  - Status: 429
+- **Alnwick Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alnwick_Castle_in_uk.jpg/500px-Alnwick_Castle_in_uk.jpg
+  - Status: 429
+- **Aydon Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Aydon_Castle_2.jpg/500px-Aydon_Castle_2.jpg
+  - Status: 429
+- **Bamburgh Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/500px-Bamburgh_Castle%2C_beautiful_day.jpg
+  - Status: 429
+- **Bellister Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bellister_Castle_-_geograph.org.uk_-_2765227.jpg/500px-Bellister_Castle_-_geograph.org.uk_-_2765227.jpg
+  - Status: 429
+- **Belsay Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Belsay_Castle.jpg/500px-Belsay_Castle.jpg
+  - Status: 429
+- **Brinkburn Priory** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BrinkburnPriory.jpg/500px-BrinkburnPriory.jpg
+  - Status: 429
+- **Chillingham Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Chillingham_Castle_north_front.jpg/500px-Chillingham_Castle_north_front.jpg
+  - Status: 429
+- **Chipchase Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Chipchase_Castle.jpg/500px-Chipchase_Castle.jpg
+  - Status: 429
+- **Cockle Park Tower** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cockle_Park_Tower_from_SW.jpg/500px-Cockle_Park_Tower_from_SW.jpg
+  - Status: 429
+- **Dunstanburgh Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg/500px-Gatehouse_and_curtain_wall_of_Dunstanburgh_Castle%2C_2009.jpg
+  - Status: 429
+- **Edlingham Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Edlingham_Castle_-_Northumberland_-_England_-_2004-10-31.jpg/500px-Edlingham_Castle_-_Northumberland_-_England_-_2004-10-31.jpg
+  - Status: 429
+- **Etal Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/9/90/Etal_castle.jpg
+  - Status: 429
+- **Featherstone Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Featherstone_Castle_%28back%29.jpg/500px-Featherstone_Castle_%28back%29.jpg
+  - Status: 429
+- **Ford Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ford_Castle_-_geograph.org.uk_-_354895.jpg/500px-Ford_Castle_-_geograph.org.uk_-_354895.jpg
+  - Status: 429
+- **Harbottle Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Harbottle_Castle_-_2025-09-24_00-13-52_001.JPG/500px-Harbottle_Castle_-_2025-09-24_00-13-52_001.JPG
+  - Status: 429
+- **Haughton Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Haughton_Castle.jpg/500px-Haughton_Castle.jpg
+  - Status: 429
+- **Hexham Abbey** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Hexham_Abbey.jpg/500px-Hexham_Abbey.jpg
+  - Status: 429
+- **Langley Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Langley_Castle.jpg/500px-Langley_Castle.jpg
+  - Status: 429
+- **Lindisfarne Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/LindisfarneCastleHolyIsland.jpg/500px-LindisfarneCastleHolyIsland.jpg
+  - Status: 429
+- **Lindisfarne Priory** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg/500px-Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg
+  - Status: 429
+- **Mitford Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Mitford_Castle.jpg/500px-Mitford_Castle.jpg
+  - Status: 429
+- **Norham Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Norham_Castle.jpg/500px-Norham_Castle.jpg
+  - Status: 429
+- **Prudhoe Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Prudhoe_Castle_2.jpg/500px-Prudhoe_Castle_2.jpg
+  - Status: 429
+- **Thirlwall Castle** (Northumberland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Thirlwall_Castle_-_geograph.org.uk_-_2530461.jpg/500px-Thirlwall_Castle_-_geograph.org.uk_-_2530461.jpg
+  - Status: 429
+- **Nottingham Castle** (Nottinghamshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Nottingham_Castle_Gardens_-_geograph.org.uk_-_2878127.jpg/500px-Nottingham_Castle_Gardens_-_geograph.org.uk_-_2878127.jpg
+  - Status: 429
+- **Rufford Abbey** (Nottinghamshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Rufford_Abbey.jpg/500px-Rufford_Abbey.jpg
+  - Status: 429
+- **Southwell Minster** (Nottinghamshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Southwell_Minster_2016_-_north-west_view.jpg/500px-Southwell_Minster_2016_-_north-west_view.jpg
+  - Status: 429
+- **Blenheim Palace** (Oxfordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Blenheim_Palace_2006.jpg/500px-Blenheim_Palace_2006.jpg
+  - Status: 429
+- **Broughton Castle** (Oxfordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Broughton_castle2.jpg/500px-Broughton_castle2.jpg
+  - Status: 429
+- **Oxford Castle** (Oxfordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Upstream_to_the_tower_-_geograph.org.uk_-_1387392.jpg/500px-Upstream_to_the_tower_-_geograph.org.uk_-_1387392.jpg
+  - Status: 429
+- **Wallingford Castle** (Oxfordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wallingford_castle_ruins.jpg/500px-Wallingford_castle_ruins.jpg
+  - Status: 429
+- **Oakham Castle** (Rutland, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Great_Hall_-_Oakham_Castle.jpg/500px-Great_Hall_-_Oakham_Castle.jpg
+  - Status: 429
+- **Acton Burnell Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Acton_Burnell_Castle_2016.jpg/500px-Acton_Burnell_Castle_2016.jpg
+  - Status: 429
+- **Bridgnorth Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Bridgnorth_castle_ruins.jpg/500px-Bridgnorth_castle_ruins.jpg
+  - Status: 429
+- **Buildwas Abbey** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/BuildwasAbbey.jpg/500px-BuildwasAbbey.jpg
+  - Status: 429
+- **Clun Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Clun_Castle_02.jpg/500px-Clun_Castle_02.jpg
+  - Status: 429
+- **Haughmond Abbey** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/HaughmondAbbey.jpg/500px-HaughmondAbbey.jpg
+  - Status: 429
+- **Hopton Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Hopton_Castle.jpg/500px-Hopton_Castle.jpg
+  - Status: 429
+- **Lilleshall Abbey** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Remains_of_Lilleshall_Abbey_a_private_residence_after_the_Reformation_severely_damanged_during_the_English_Civil_War.jpg/500px-Remains_of_Lilleshall_Abbey_a_private_residence_after_the_Reformation_severely_damanged_during_the_English_Civil_War.jpg
+  - Status: 429
+- **Ludlow Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ludlow_Castle_from_Whitcliffe%2C_2011.jpg/500px-Ludlow_Castle_from_Whitcliffe%2C_2011.jpg
+  - Status: 429
+- **Moreton Corbet Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Moreton_Corbet_Castle_from_west_01.JPG/500px-Moreton_Corbet_Castle_from_west_01.JPG
+  - Status: 429
+- **Shrewsbury Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Shrewsbury_Schloss.JPG/500px-Shrewsbury_Schloss.JPG
+  - Status: 429
+- **Stokesay Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Stokesay_Castle_from_churchyard_1.jpg/500px-Stokesay_Castle_from_churchyard_1.jpg
+  - Status: 429
+- **Wenlock Priory** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg/500px-St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg
+  - Status: 429
+- **Whittington Castle** (Shropshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Whittington_Castle%2C_Shropshire%2C_UK.jpg/500px-Whittington_Castle%2C_Shropshire%2C_UK.jpg
+  - Status: 429
+- **Cleeve Abbey** (Somerset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/CleeveAbbeyDormitoryC.jpg/500px-CleeveAbbeyDormitoryC.jpg
+  - Status: 429
+- **Dunster Castle** (Somerset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dunster_Castle.jpg/500px-Dunster_Castle.jpg
+  - Status: 429
+- **Farleigh Hungerford Castle** (Somerset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Farleigh_Hungerford_East_Gate.jpg/500px-Farleigh_Hungerford_East_Gate.jpg
+  - Status: 429
+- **Nunney Castle** (Somerset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Nunney_Castle_from_south.jpg/500px-Nunney_Castle_from_south.jpg
+  - Status: 429
+- **Stogursey Castle** (Somerset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Stogursey_Castle.jpg/500px-Stogursey_Castle.jpg
+  - Status: 429
+- **Taunton Castle** (Somerset, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg/500px-Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg
+  - Status: 429
+- **Conisbrough Castle** (South Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/ConisbroughCastle.jpg/500px-ConisbroughCastle.jpg
+  - Status: 429
+- **Caverswall Castle** (Staffordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Caverswall_Castle.jpg/500px-Caverswall_Castle.jpg
+  - Status: 429
+- **Chartley Castle** (Staffordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Chartley_Castle%2C_2010.jpg/500px-Chartley_Castle%2C_2010.jpg
+  - Status: 429
+- **Croxden Abbey** (Staffordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/CroxdenAbbey%28LindaBailey%29Aug2006.jpg/500px-CroxdenAbbey%28LindaBailey%29Aug2006.jpg
+  - Status: 429
+- **Stafford Castle** (Staffordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Stafford_Castle_%28September_2020%29.jpg/500px-Stafford_Castle_%28September_2020%29.jpg
+  - Status: 429
+- **Tamworth Castle** (Staffordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tamworth_Castle_343714.jpg/500px-Tamworth_Castle_343714.jpg
+  - Status: 429
+- **Tutbury Castle** (Staffordshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tutbury_Castle_%283%29_%28geograph_4461920%29.jpg/500px-Tutbury_Castle_%283%29_%28geograph_4461920%29.jpg
+  - Status: 429
+- **Bungay Castle** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bungay_Castle%2C_2012.jpg/500px-Bungay_Castle%2C_2012.jpg
+  - Status: 429
+- **Bury St Edmunds Abbey** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Norman_Tower_-_geograph.org.uk_-_286156.jpg/500px-Norman_Tower_-_geograph.org.uk_-_286156.jpg
+  - Status: 429
+- **Clare Castle** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Clare_Castle_Motte.jpg/500px-Clare_Castle_Motte.jpg
+  - Status: 429
+- **Framlingham Castle** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Franglingham_Castle_01.jpg/500px-Franglingham_Castle_01.jpg
+  - Status: 429
+- **Leiston Abbey** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Leiston_Abbey_cloister_garth_at_dawn.jpg/500px-Leiston_Abbey_cloister_garth_at_dawn.jpg
+  - Status: 429
+- **Mettingham Castle** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/500px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg
+  - Status: 429
+- **Orford Castle** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Orford_Castle_Keep.jpg/500px-Orford_Castle_Keep.jpg
+  - Status: 429
+- **Wingfield Castle** (Suffolk, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wingfield_Castle_-_geograph.org.uk_-_354164.jpg/500px-Wingfield_Castle_-_geograph.org.uk_-_354164.jpg
+  - Status: 429
+- **Farnham Castle** (Surrey, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Aerial_view_of_Farnham_Castle.jpg/500px-Aerial_view_of_Farnham_Castle.jpg
+  - Status: 429
+- **Guildford Castle** (Surrey, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Guildford_Castle%2C_2015_%2832%29_%2821688488881%29.jpg/500px-Guildford_Castle%2C_2015_%2832%29_%2821688488881%29.jpg
+  - Status: 429
+- **Hylton Castle** (Tyne and Wear, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hylton_Castle_3.jpg/500px-Hylton_Castle_3.jpg
+  - Status: 429
+- **Tynemouth Priory and Castle** (Tyne and Wear, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Tynemouth_Priory_Aerial.jpg/500px-Tynemouth_Priory_Aerial.jpg
+  - Status: 429
+- **Astley Castle** (Warwickshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Astley_Castle_Front_Elevation.JPG/500px-Astley_Castle_Front_Elevation.JPG
+  - Status: 429
+- **Kenilworth Castle** (Warwickshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Kenilworth_Castle_gatehouse_landscape.jpg/500px-Kenilworth_Castle_gatehouse_landscape.jpg
+  - Status: 429
+- **Maxstoke Castle** (Warwickshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Maxstoke_Castle%2C_2010.jpg/500px-Maxstoke_Castle%2C_2010.jpg
+  - Status: 429
+- **Dudley Castle** (West Midlands, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dudley_Castle%2C_England%2C_Aerial_View.jpg/500px-Dudley_Castle%2C_England%2C_Aerial_View.jpg
+  - Status: 429
+- **Amberley Castle** (West Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Amberley_Castle_%28geograph_3694978%29.jpg/500px-Amberley_Castle_%28geograph_3694978%29.jpg
+  - Status: 429
+- **Arundel Castle** (West Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/1_castle_arundel_aerial_pano_2017.jpg/500px-1_castle_arundel_aerial_pano_2017.jpg
+  - Status: 429
+- **Bramber Castle** (West Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Bramber_Castle_1.jpg/500px-Bramber_Castle_1.jpg
+  - Status: 429
+- **Knepp Castle** (West Sussex, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Knepp_Castle%2C_July_2021_%281%29.jpg/500px-Knepp_Castle%2C_July_2021_%281%29.jpg
+  - Status: 429
+- **Kirkstall Abbey** (West Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kirkstall_Abbey_in_the_late_afternoon.jpg/500px-Kirkstall_Abbey_in_the_late_afternoon.jpg
+  - Status: 429
+- **Pontefract Castle** (West Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pontefract_Castle.jpg/500px-Pontefract_Castle.jpg
+  - Status: 429
+- **Sandal Castle** (West Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SandalCastleMotte.jpg/500px-SandalCastleMotte.jpg
+  - Status: 429
+- **Castle Combe** (Wiltshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Castle_combe_river.jpg/500px-Castle_combe_river.jpg
+  - Status: 429
+- **Ludgershall Castle** (Wiltshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/LudgershallCastlec.jpg/500px-LudgershallCastlec.jpg
+  - Status: 429
+- **Old Sarum** (Wiltshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Aerial_photograph_of_Old_Sarum_site%2C_on_departure_from_Old_Sarum_airfield.jpg/500px-Aerial_photograph_of_Old_Sarum_site%2C_on_departure_from_Old_Sarum_airfield.jpg
+  - Status: 429
+- **Trowbridge Castle** (Wiltshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Fore_Street%2C_Trowbridge_-_geograph.org.uk_-_368316.jpg/500px-Fore_Street%2C_Trowbridge_-_geograph.org.uk_-_368316.jpg
+  - Status: 429
+- **Monk Bretton Priory** (Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/MonkBrettonPriory.jpg/500px-MonkBrettonPriory.jpg
+  - Status: 429
+- **Roche Abbey** (Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Roche_Abbey_%28211961681%29.jpeg/500px-Roche_Abbey_%28211961681%29.jpeg
+  - Status: 429
+- **Tickhill Castle** (Yorkshire, England)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/8/8a/Tickhill_Castle_-_geograph.org.uk_-_297181_cropped.jpg
+  - Status: 429
+- **Navan Fort** (County Armagh, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg/500px-Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg
+  - Status: 429
+- **Ballymoon Castle** (County Carlow, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ballymoon_Castle_sunset_2.jpg/500px-Ballymoon_Castle_sunset_2.jpg
+  - Status: 429
+- **Huntington Castle** (County Carlow, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Huntington-castle-herefordshire-august-2018.jpg/500px-Huntington-castle-herefordshire-august-2018.jpg
+  - Status: 429
+- **Cabra Castle** (County Cavan, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg/500px-Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg
+  - Status: 429
+- **Cavan Castle** (County Cavan, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kinbane_Castle%2C_daylight.jpg/500px-Kinbane_Castle%2C_daylight.jpg
+  - Status: 429
+- **Cloughoughter Castle** (County Cavan, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/500px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg
+  - Status: 429
+- **Bunratty Castle** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bunrattybig.jpg/500px-Bunrattybig.jpg
+  - Status: 429
+- **Corcomroe Abbey** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Corcomroe_Abbey_South_East_View_1996_08_22.jpg/500px-Corcomroe_Abbey_South_East_View_1996_08_22.jpg
+  - Status: 429
+- **Doonagore Castle** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Doonagore_Castle.jpg/500px-Doonagore_Castle.jpg
+  - Status: 429
+- **Dromoland Castle** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Dromoland_Castle.jpg/500px-Dromoland_Castle.jpg
+  - Status: 429
+- **Dysert O'Dea Castle** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ballycarbery_Castle-IMG_5554.jpg/500px-Ballycarbery_Castle-IMG_5554.jpg
+  - Status: 429
+- **Ennis Friary** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Timoleague_Friary.jpg/500px-Timoleague_Friary.jpg
+  - Status: 429
+- **Newtown Castle** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Newtown_Castle.png/500px-Newtown_Castle.png
+  - Status: 429
+- **Quin Abbey** (County Clare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kilcrea_Abbey_Friary%2C_Co._Cork..JPG/500px-Kilcrea_Abbey_Friary%2C_Co._Cork..JPG
+  - Status: 429
+- **Ballinacarriga Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Ballinacarriga_Castle.jpg/500px-Ballinacarriga_Castle.jpg
+  - Status: 429
+- **Bantry House** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bantry_Bay_JBU01.jpg/500px-Bantry_Bay_JBU01.jpg
+  - Status: 429
+- **Barryscourt Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Charleville_Castle.png/500px-Charleville_Castle.png
+  - Status: 429
+- **Blarney Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blarney_Castle_Ireland.jpg/500px-Blarney_Castle_Ireland.jpg
+  - Status: 429
+- **Carriganass Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Carriganass_Castle_-_geograph.org.uk_-_498627.jpg/500px-Carriganass_Castle_-_geograph.org.uk_-_498627.jpg
+  - Status: 429
+- **Carrigaphooca Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/a/a9/Carrigaphooca_Castle.jpg
+  - Status: 429
+- **Castle Salem** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Castle_Salem_near_Ross_Carbery_-_geograph.org.uk_-_498699.jpg/500px-Castle_Salem_near_Ross_Carbery_-_geograph.org.uk_-_498699.jpg
+  - Status: 429
+- **Cloyne Round Tower** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Round_Tower_of_Cloyne.jpg/500px-Round_Tower_of_Cloyne.jpg
+  - Status: 429
+- **Desmond Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Thoor_Ballylee002%28js%29.jpg/500px-Thoor_Ballylee002%28js%29.jpg
+  - Status: 429
+- **Drombeg Stone Circle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg/500px-Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg
+  - Status: 429
+- **Dundanion Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Dundanion_Castle_Blackrock_Cork.jpg/500px-Dundanion_Castle_Blackrock_Cork.jpg
+  - Status: 429
+- **Kanturk Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Drymnagh_castle_Dublin_1820.jpg/500px-Drymnagh_castle_Dublin_1820.jpg
+  - Status: 429
+- **Kilcoe Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Kilcoe_Castle.jpg/500px-Kilcoe_Castle.jpg
+  - Status: 429
+- **Kilcrea Friary** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Castles_of_Leinster%2C_Maynooth%2C_Kildare_-_geograph.org.uk_-_2496412.jpg/500px-Castles_of_Leinster%2C_Maynooth%2C_Kildare_-_geograph.org.uk_-_2496412.jpg
+  - Status: 429
+- **Liscarroll Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Castles_of_Munster%2C_Liscarroll%2C_Cork_-_geograph.org.uk_-_1392828.jpg/500px-Castles_of_Munster%2C_Liscarroll%2C_Cork_-_geograph.org.uk_-_1392828.jpg
+  - Status: 429
+- **Macroom Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Macroom_Castle.jpg/500px-Macroom_Castle.jpg
+  - Status: 429
+- **Mallow Castle** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_approach_to_the_fortified_house.JPG/500px-The_approach_to_the_fortified_house.JPG
+  - Status: 429
+- **Timoleague Abbey** (County Cork, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Castletown_House_7.jpg/500px-Castletown_House_7.jpg
+  - Status: 429
+- **Downhill House** (County Derry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Downhill_House.jpg/500px-Downhill_House.jpg
+  - Status: 429
+- **Carrickabraghy Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Carrickabraghy_Castle%2C_Doagh_Island_-_geograph.org.uk_-_1333290.jpg/500px-Carrickabraghy_Castle%2C_Doagh_Island_-_geograph.org.uk_-_1333290.jpg
+  - Status: 429
+- **Clonca Church** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/CloncaChurch%26Cross.jpg/500px-CloncaChurch%26Cross.jpg
+  - Status: 429
+- **Doe Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Audley%27s_Castle%2C_closeup.jpg/500px-Audley%27s_Castle%2C_closeup.jpg
+  - Status: 429
+- **Donegal Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Donegalcastle.jpg/500px-Donegalcastle.jpg
+  - Status: 429
+- **Drumboe Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ruins_of_Drumboe_Castle_-_geograph.org.uk_-_960705.jpg/500px-Ruins_of_Drumboe_Castle_-_geograph.org.uk_-_960705.jpg
+  - Status: 429
+- **Glenveagh Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Inch_Abbey_%28geograph_183149%29.jpg/500px-Inch_Abbey_%28geograph_183149%29.jpg
+  - Status: 429
+- **Grianan of Aileach** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Nendrummonastery.jpg/500px-Nendrummonastery.jpg
+  - Status: 429
+- **Inch Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Farland_Bank_and_Inch_Castle_-_panoramio.jpg/500px-Farland_Bank_and_Inch_Castle_-_panoramio.jpg
+  - Status: 429
+- **Mongavlin Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Mongavlin_Castle_2013.jpg/500px-Mongavlin_Castle_2013.jpg
+  - Status: 429
+- **Raphoe Castle** (County Donegal, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Raphoe_Castle_-_geograph.org.uk_-_1017810.jpg/500px-Raphoe_Castle_-_geograph.org.uk_-_1017810.jpg
+  - Status: 429
+- **Ardgillan Castle** (County Dublin, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Balbriggan_-_Ardgillan_Castle_-_20190707185541.jpg/500px-Balbriggan_-_Ardgillan_Castle_-_20190707185541.jpg
+  - Status: 429
+- **Dalkey Castle** (County Dublin, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Boyle_Abbey_Nave_1997_09_17.jpg/500px-Boyle_Abbey_Nave_1997_09_17.jpg
+  - Status: 429
+- **Drimnagh Castle** (County Dublin, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Parke%27s_Castle_courtyard.jpg/500px-Parke%27s_Castle_courtyard.jpg
+  - Status: 429
+- **Dublin Castle** (County Dublin, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/The_Dubhlinn_Gardens_Dublin_Castle_01.JPG/500px-The_Dubhlinn_Gardens_Dublin_Castle_01.JPG
+  - Status: 429
+- **Howth Castle** (County Dublin, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Howth_Castle_and_Environs.jpg/500px-Howth_Castle_and_Environs.jpg
+  - Status: 429
+- **Malahide Castle** (County Dublin, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Malahide_Castle%2C_March_2011_%282%29.jpg/500px-Malahide_Castle%2C_March_2011_%282%29.jpg
+  - Status: 429
+- **Swords Castle** (County Dublin, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Roscommon_-_aerial_-_2024-12-27_12.jpg/500px-Roscommon_-_aerial_-_2024-12-27_12.jpg
+  - Status: 429
+- **Castle Balfour** (County Fermanagh, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Castle_Balfour%2C_Lisnaskea_-_geograph.org.uk_-_1270799.jpg/500px-Castle_Balfour%2C_Lisnaskea_-_geograph.org.uk_-_1270799.jpg
+  - Status: 429
+- **Ashford Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Ashford_Castle_in_County_Mayo.jpg/500px-Ashford_Castle_in_County_Mayo.jpg
+  - Status: 429
+- **Athenry Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Knappogue_Castle.jpg/500px-Knappogue_Castle.jpg
+  - Status: 429
+- **Aughnanure Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Kilmallock_Priory_W_2007_08_08.jpg/500px-Kilmallock_Priory_W_2007_08_08.jpg
+  - Status: 429
+- **Ballinderry Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Castles_of_Connacht%2C_Ballinderry%2C_Galway_-_geograph.org.uk_-_1953864.jpg/500px-Castles_of_Connacht%2C_Ballinderry%2C_Galway_-_geograph.org.uk_-_1953864.jpg
+  - Status: 429
+- **Castle Taylor** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Castles_of_Connacht%2C_Castle_Taylor%2C_Galway_%283%29_-_geograph.org.uk_-_1953762.jpg/500px-Castles_of_Connacht%2C_Castle_Taylor%2C_Galway_%283%29_-_geograph.org.uk_-_1953762.jpg
+  - Status: 429
+- **Claregalway Friary** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Carrigogunnell.jpg/500px-Carrigogunnell.jpg
+  - Status: 429
+- **Clonbrock Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Clonbrock_Castle_2024.png/500px-Clonbrock_Castle_2024.png
+  - Status: 429
+- **Clonfert Cathedral** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/07_Clonfert_Cathedral.png/500px-07_Clonfert_Cathedral.png
+  - Status: 429
+- **Clontuskert Abbey** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Clontuskert_Priory_Nave_Doorway_2009_09_16.jpg/500px-Clontuskert_Priory_Nave_Doorway_2009_09_16.jpg
+  - Status: 429
+- **Derryhivenny Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Derryhivenny_Castle.jpg/500px-Derryhivenny_Castle.jpg
+  - Status: 429
+- **Dún Aonghasa** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dun_Aonghasa_%28cropped%29.JPG/500px-Dun_Aonghasa_%28cropped%29.JPG
+  - Status: 429
+- **Dunguaire Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Dunguaire_Castle%2C_Galway%2C_Ireland.png/500px-Dunguaire_Castle%2C_Galway%2C_Ireland.png
+  - Status: 429
+- **Fiddaun Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Fiddaun_%2801%29.JPG/500px-Fiddaun_%2801%29.JPG
+  - Status: 429
+- **Kilmacduagh Monastery** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/ArdfertCathedral.jpg/500px-ArdfertCathedral.jpg
+  - Status: 429
+- **Kylemore Abbey** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Connemara_-_Kylemore_Abbey_-_panoramio_%281%29.jpg/500px-Connemara_-_Kylemore_Abbey_-_panoramio_%281%29.jpg
+  - Status: 429
+- **Lynch's Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/ENNIS_Friary%2C_DSC_4459.jpg/500px-ENNIS_Friary%2C_DSC_4459.jpg
+  - Status: 429
+- **Menlo Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Menlo_Castle%2C_Co_Galway.jpg/500px-Menlo_Castle%2C_Co_Galway.jpg
+  - Status: 429
+- **Pallas Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Castles_of_Connacht%2C_Pallas%2C_Galway_-_geograph.org.uk_-_1543456.jpg/500px-Castles_of_Connacht%2C_Pallas%2C_Galway_-_geograph.org.uk_-_1543456.jpg
+  - Status: 429
+- **Portumna Castle** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Leamaneh_Castle_Ireland_12283094446_o.jpg/500px-Leamaneh_Castle_Ireland_12283094446_o.jpg
+  - Status: 429
+- **Thoor Ballylee** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Quin_Abbey%2C_Ireland.jpg/500px-Quin_Abbey%2C_Ireland.jpg
+  - Status: 429
+- **Tyrone House** (County Galway, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tyrone_House_%282016%29.jpg/500px-Tyrone_House_%282016%29.jpg
+  - Status: 429
+- **Ballycarbery Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Birr_Castle%2C_Offaly.jpg/500px-Birr_Castle%2C_Offaly.jpg
+  - Status: 429
+- **Ballyheigue Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ballyheigue_castle.jpg/500px-Ballyheigue_castle.jpg
+  - Status: 429
+- **Ballymalis Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/3/34/Castles_of_Munster%2C_Ballymalis%2C_Kerry_-_geograph.org.uk_-_1392738.jpg
+  - Status: 429
+- **Dunkerron Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Castles_of_Munster-_Dunkerron%2C_Kerry_%282%29_%28geograph_3037291%29.jpg/500px-Castles_of_Munster-_Dunkerron%2C_Kerry_%282%29_%28geograph_3037291%29.jpg
+  - Status: 429
+- **Dunloe Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Lea_Castle%2C_2011.jpg/500px-Lea_Castle%2C_2011.jpg
+  - Status: 429
+- **Listowel Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Listowel_Castle.JPEG/500px-Listowel_Castle.JPEG
+  - Status: 429
+- **Parkavonear Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Parkavonear_Castle_keep_Aghadoe.JPG/500px-Parkavonear_Castle_keep_Aghadoe.JPG
+  - Status: 429
+- **Ross Castle** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Ross_Castle_on_Lough_Leane_%2815242590587%29.jpg/500px-Ross_Castle_on_Lough_Leane_%2815242590587%29.jpg
+  - Status: 429
+- **Skellig Michael** (County Kerry, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Skellig_Michael03%28js%29.jpg/500px-Skellig_Michael03%28js%29.jpg
+  - Status: 429
+- **Castledermot Round Tower** (County Kildare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/a/a9/Castledermot_monastic_remains.jpg
+  - Status: 429
+- **Castletown House** (County Kildare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg/500px-The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg
+  - Status: 429
+- **Maynooth Castle** (County Kildare, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Grianan_of_Aileach_Donegal.jpg/500px-Grianan_of_Aileach_Donegal.jpg
+  - Status: 429
+- **Burnchurch Castle** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Burnchurch_Castle_ruins.jpg/500px-Burnchurch_Castle_ruins.jpg
+  - Status: 429
+- **Clara Castle** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Narrow_Water_Tower%2C_Warrenpoint_-_geograph.org.uk_-_399224.jpg/500px-Narrow_Water_Tower%2C_Warrenpoint_-_geograph.org.uk_-_399224.jpg
+  - Status: 429
+- **Clomantagh Castle** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/4/45/Clomantagh_%28or_Croomantagh%29_Castle_-_geograph.org.uk_-_1479267.jpg
+  - Status: 429
+- **Duiske Abbey** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/500px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg
+  - Status: 429
+- **Foulksrath Castle** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Foulksrath_Castle.jpg/500px-Foulksrath_Castle.jpg
+  - Status: 429
+- **Foulksrath Castle** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Foulksrath_Castle.jpg/500px-Foulksrath_Castle.jpg
+  - Status: 429
+- **Graiguenamanagh Abbey** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/500px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg
+  - Status: 429
+- **Granny Castle** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Killyleagh_Castle.jpg/500px-Killyleagh_Castle.jpg
+  - Status: 429
+- **Jerpoint Abbey** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Jerpoint_Abbey_E_1997_08_28.jpg/500px-Jerpoint_Abbey_E_1997_08_28.jpg
+  - Status: 429
+- **Kells Priory** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/500px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG
+  - Status: 429
+- **Kilkenny Castle** (County Kilkenny, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Kilkenny-castle.jpg/500px-Kilkenny-castle.jpg
+  - Status: 429
+- **Dunamase Castle** (County Laois, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kellsp5.JPG/500px-Kellsp5.JPG
+  - Status: 429
+- **Killeshin Church** (County Laois, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/c/cd/Romanesque_Doorway_Killishen_-_geograph.org.uk_-_425807.jpg
+  - Status: 429
+- **Lea Castle** (County Laois, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bective_Abbey.JPG/500px-Bective_Abbey.JPG
+  - Status: 429
+- **Creevelea Abbey** (County Leitrim, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Creevelea_Abbey%2C_County_Leitrim.jpg/500px-Creevelea_Abbey%2C_County_Leitrim.jpg
+  - Status: 429
+- **Parke's Castle** (County Leitrim, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Clough_%2811%29%2C_October_2009.JPG/500px-Clough_%2811%29%2C_October_2009.JPG
+  - Status: 429
+- **Askeaton Castle** (County Limerick, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dunbrody_Abbey_SE_and_Young_Bulls_1997_08_27.jpg/500px-Dunbrody_Abbey_SE_and_Young_Bulls_1997_08_27.jpg
+  - Status: 429
+- **Carrigogunnell Castle** (County Limerick, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Slade_Castle.jpg/500px-Slade_Castle.jpg
+  - Status: 429
+- **Glin Castle** (County Limerick, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Glin_Castle.jpg/500px-Glin_Castle.jpg
+  - Status: 429
+- **Castle Forbes** (County Longford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Castle_Forbes.jpg/500px-Castle_Forbes.jpg
+  - Status: 429
+- **Corlea Trackway** (County Longford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Corlea_Trackway_ii.jpg/500px-Corlea_Trackway_ii.jpg
+  - Status: 429
+- **King John's Castle (Carlingford)** (County Louth, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Carlingford_Castle.jpg/500px-Carlingford_Castle.jpg
+  - Status: 429
+- **Mellifont Abbey** (County Louth, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Derg_Castle_-_geograph.org.uk_-_3379436.jpg/500px-Derg_Castle_-_geograph.org.uk_-_3379436.jpg
+  - Status: 429
+- **Monasterboice** (County Louth, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/A_high_cross_and_round_tower_at_Monasterboice%2C_Ireland.jpg/500px-A_high_cross_and_round_tower_at_Monasterboice%2C_Ireland.jpg
+  - Status: 429
+- **Roche Castle** (County Louth, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Benburb-Castle-1.jpg/500px-Benburb-Castle-1.jpg
+  - Status: 429
+- **Ballintubber Abbey** (County Mayo, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ballintubber_Abbey_eastern_elevation.JPG/500px-Ballintubber_Abbey_eastern_elevation.JPG
+  - Status: 429
+- **Errew Abbey** (County Mayo, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/ErrewAbbey.jpg/500px-ErrewAbbey.jpg
+  - Status: 429
+- **Rockfleet Castle** (County Mayo, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rockfleet.jpg/500px-Rockfleet.jpg
+  - Status: 429
+- **Athcarne Castle** (County Meath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg/500px-Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg
+  - Status: 429
+- **Bective Abbey** (County Meath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Tully-Nally-Castle_03.jpg/500px-Tully-Nally-Castle_03.jpg
+  - Status: 429
+- **Dunmoe Castle** (County Meath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Castelo_de_Athlone_Irlanda.jpg/500px-Castelo_de_Athlone_Irlanda.jpg
+  - Status: 429
+- **Hill of Tara** (County Meath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Stone_of_Destiny_2018-07-24.jpg/500px-Stone_of_Destiny_2018-07-24.jpg
+  - Status: 429
+- **Liscartan Castle** (County Meath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Liscartan_Castle_-_geograph.org.uk_-_497041.jpg/500px-Liscartan_Castle_-_geograph.org.uk_-_497041.jpg
+  - Status: 429
+- **Slane Castle** (County Meath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/ForeAbbey1.JPG/500px-ForeAbbey1.JPG
+  - Status: 429
+- **Ballycowan Castle** (County Offaly, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Ballycowan_Castle%2C_Co._Offaly_-_geograph.org.uk_-_942610.jpg/500px-Ballycowan_Castle%2C_Co._Offaly_-_geograph.org.uk_-_942610.jpg
+  - Status: 429
+- **Birr Castle** (County Offaly, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Clara_Castle_-_geograph.org.uk_-_494292.jpg/500px-Clara_Castle_-_geograph.org.uk_-_494292.jpg
+  - Status: 429
+- **Charleville Castle** (County Offaly, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg/500px-Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg
+  - Status: 429
+- **Clonmacnoise** (County Offaly, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Clonmacnoise_6.jpg/500px-Clonmacnoise_6.jpg
+  - Status: 429
+- **Clonony Castle** (County Offaly, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Doe_Castle%2C_Donegal.jpg/500px-Doe_Castle%2C_Donegal.jpg
+  - Status: 429
+- **Durrow Abbey** (County Offaly, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Durrow_abbey_A.jpg/500px-Durrow_abbey_A.jpg
+  - Status: 429
+- **Kinnitty Castle** (County Offaly, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/IMG_KinnittyCastle0973.jpg/500px-IMG_KinnittyCastle0973.jpg
+  - Status: 429
+- **Ballintober Castle** (County Roscommon, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Shane%27s_Castle%2C_County_Antrim_-_geograph.org.uk_-_155426.jpg/500px-Shane%27s_Castle%2C_County_Antrim_-_geograph.org.uk_-_155426.jpg
+  - Status: 429
+- **Boyle Abbey** (County Roscommon, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Sketrick_Castle.jpg/500px-Sketrick_Castle.jpg
+  - Status: 429
+- **Donamon Castle** (County Roscommon, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Donamon_Castle_front.jpg/500px-Donamon_Castle_front.jpg
+  - Status: 429
+- **Roscommon Castle** (County Roscommon, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ruins_of_Olderfleet_Castle%2C_Larne.jpg/500px-Ruins_of_Olderfleet_Castle%2C_Larne.jpg
+  - Status: 429
+- **Castlebaldwin** (County Sligo, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Castlebaldwin_%28or_Baldwin_Castle%29_%28geograph_2331726%29.jpg/500px-Castlebaldwin_%28or_Baldwin_Castle%29_%28geograph_2331726%29.jpg
+  - Status: 429
+- **Sligo Abbey** (County Sligo, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Jordan%27s_Castle_1.jpg/500px-Jordan%27s_Castle_1.jpg
+  - Status: 429
+- **Ardfinnan Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/ArdfinnanCastleByDavidMulcahy.jpg/500px-ArdfinnanCastleByDavidMulcahy.jpg
+  - Status: 429
+- **Athassel Priory** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aerial_photograph_of_Athassel_Priory%2C_May_2019.jpg/500px-Aerial_photograph_of_Athassel_Priory%2C_May_2019.jpg
+  - Status: 429
+- **Cahir Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Cahir_Castle%2C_Tipperary_County%2C_Ireland_%286961416840%29_%282%29.jpg/500px-Cahir_Castle%2C_Tipperary_County%2C_Ireland_%286961416840%29_%282%29.jpg
+  - Status: 429
+- **Holy Cross Abbey** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IMGHolyCross_4780w.jpg/500px-IMGHolyCross_4780w.jpg
+  - Status: 429
+- **Kilcash Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Kilcash_Castle2.jpg/500px-Kilcash_Castle2.jpg
+  - Status: 429
+- **Kilcooly Abbey** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg/500px-Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg
+  - Status: 429
+- **Nenagh Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Odea_castle.jpg/500px-Odea_castle.jpg
+  - Status: 429
+- **Ormond Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Top_of_Ormond_Hill_-_geograph.org.uk_-_235640.jpg/500px-Top_of_Ormond_Hill_-_geograph.org.uk_-_235640.jpg
+  - Status: 429
+- **Redwood Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Redwood_Castle.jpg/500px-Redwood_Castle.jpg
+  - Status: 429
+- **Rock of Cashel** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Rock_of_Cashel_%2849163525453%29.jpg/500px-Rock_of_Cashel_%2849163525453%29.jpg
+  - Status: 429
+- **Roscrea Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Claregalway_Abbey_Ruins.jpg/500px-Claregalway_Abbey_Ruins.jpg
+  - Status: 429
+- **Terryglass Castle** (County Tipperary, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Terryglass_Castle_-_geograph.org.uk_-_2343860.jpg/500px-Terryglass_Castle_-_geograph.org.uk_-_2343860.jpg
+  - Status: 429
+- **Castlecaulfield** (County Tyrone, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Main_Street%2CCastlecaulfield_-_geograph.org.uk_-_1803663.jpg/500px-Main_Street%2CCastlecaulfield_-_geograph.org.uk_-_1803663.jpg
+  - Status: 429
+- **Mountjoy Castle** (County Tyrone, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mountjoy_castle.JPG/500px-Mountjoy_castle.JPG
+  - Status: 429
+- **Ardmore Cathedral** (County Waterford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/01_St._Declan%27s_Monastery%2C_Ardmore.png/500px-01_St._Declan%27s_Monastery%2C_Ardmore.png
+  - Status: 429
+- **Dunmore Castle** (County Waterford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dunmore_Castle%2C_Co._Galway.JPG/500px-Dunmore_Castle%2C_Co._Galway.JPG
+  - Status: 429
+- **Dunmore East Castle** (County Waterford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Aughnanure_Castle_%28pixinn.net%29.jpg/500px-Aughnanure_Castle_%28pixinn.net%29.jpg
+  - Status: 429
+- **Lismore Castle** (County Waterford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Summerhill_House%2C_Main_front.jpg/500px-Summerhill_House%2C_Main_front.jpg
+  - Status: 429
+- **Reginald's Tower** (County Waterford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Reginalds_Tower_2.jpg/500px-Reginalds_Tower_2.jpg
+  - Status: 429
+- **Athlone Castle** (County Westmeath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BonamargyFriary.JPG/500px-BonamargyFriary.JPG
+  - Status: 429
+- **Castletown Geoghegan** (County Westmeath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castletown_4444.JPG/500px-Castletown_4444.JPG
+  - Status: 429
+- **Fore Abbey** (County Westmeath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/The_ruins_of_Red_Bay_Castle_-_geograph.org.uk_-_3727864.jpg/500px-The_ruins_of_Red_Bay_Castle_-_geograph.org.uk_-_3727864.jpg
+  - Status: 429
+- **Multyfarnham Friary** (County Westmeath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MultyfarnhamFriary.JPG/500px-MultyfarnhamFriary.JPG
+  - Status: 429
+- **Tullynally Castle** (County Westmeath, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Harry_Avery%27s_Castle.jpg/500px-Harry_Avery%27s_Castle.jpg
+  - Status: 429
+- **Bargy Castle** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Bargy_Castle_-_geograph.org.uk_-_1239917.jpg/500px-Bargy_Castle_-_geograph.org.uk_-_1239917.jpg
+  - Status: 429
+- **Clonmines** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Clonmines_East_View_2010_09_27.jpg/500px-Clonmines_East_View_2010_09_27.jpg
+  - Status: 429
+- **Dunbrody Abbey** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Swords_Castle_wall_with_Constable%27s_Tower.jpg/500px-Swords_Castle_wall_with_Constable%27s_Tower.jpg
+  - Status: 429
+- **Enniscorthy Castle** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Enniscorthy_Castle%2C_March_17_2024.jpg/500px-Enniscorthy_Castle%2C_March_17_2024.jpg
+  - Status: 429
+- **Ferns Castle** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg/500px-Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg
+  - Status: 429
+- **Hook Lighthouse** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/8/87/Lighthouse_HookHead_CtyWexford_IRE.jpg
+  - Status: 429
+- **Johnstown Castle** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Johnstown_Castle%2C_Wexford.jpg/500px-Johnstown_Castle%2C_Wexford.jpg
+  - Status: 429
+- **Rathmacknee Castle** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Walshestown_Castle_Geograph-3036259-by-Mike-Searle.jpg/500px-Walshestown_Castle_Geograph-3036259-by-Mike-Searle.jpg
+  - Status: 429
+- **Slade Castle** (County Wexford, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Picturesque_Ireland_-_a_literary_and_artistic_delineation_of_the_natural_scenery%2C_remarkable_places%2C_historical_antiquities%2C_public_buildings%2C_ancient_abbeys%2C_towers%2C_castles%2C_and_other_romantic_and_%2814779127292%29.jpg/500px-thumbnail.jpg
+  - Status: 429
+- **Baltinglass Abbey** (County Wicklow, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Digital_Eye%E2%80%932015%E2%80%93Baltinglass_Abbey.jpg/500px-Digital_Eye%E2%80%932015%E2%80%93Baltinglass_Abbey.jpg
+  - Status: 429
+- **Russborough House** (County Wicklow, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Russborough-House_Part-of-the-facade.jpg/500px-Russborough-House_Part-of-the-facade.jpg
+  - Status: 429
+- **Wicklow Gaol** (County Wicklow, Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Wicklow_Gaol_-_aerial_-_2025-03-09_03.jpg/500px-Wicklow_Gaol_-_aerial_-_2025-03-09_03.jpg
+  - Status: 429
+- **Antrim Castle Gardens** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg/500px-View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg
+  - Status: 429
+- **Belfast Castle** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Belfast_Castle%2C_August_2011.jpg/500px-Belfast_Castle%2C_August_2011.jpg
+  - Status: 429
+- **Bonamargy Friary** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BonamargyFriary.JPG/500px-BonamargyFriary.JPG
+  - Status: 429
+- **Carrickfergus Castle** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Carrickfergus_Castle%2C_reflections_at_sunset_-_geograph.org.uk_-_1098306.jpg/500px-Carrickfergus_Castle%2C_reflections_at_sunset_-_geograph.org.uk_-_1098306.jpg
+  - Status: 429
+- **Glenarm Castle** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Glenarm_Castle.jpg/500px-Glenarm_Castle.jpg
+  - Status: 429
+- **Kinbane Castle** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kinbane_Castle%2C_daylight.jpg/500px-Kinbane_Castle%2C_daylight.jpg
+  - Status: 429
+- **Olderfleet Castle** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ruins_of_Olderfleet_Castle%2C_Larne.jpg/500px-Ruins_of_Olderfleet_Castle%2C_Larne.jpg
+  - Status: 429
+- **Red Bay Castle** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/The_ruins_of_Red_Bay_Castle_-_geograph.org.uk_-_3727864.jpg/500px-The_ruins_of_Red_Bay_Castle_-_geograph.org.uk_-_3727864.jpg
+  - Status: 429
+- **Shane's Castle** (County Antrim, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Shane%27s_Castle%2C_County_Antrim_-_geograph.org.uk_-_155426.jpg/500px-Shane%27s_Castle%2C_County_Antrim_-_geograph.org.uk_-_155426.jpg
+  - Status: 429
+- **Carrick Castle** (County Armagh, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Carrick_Castle_tower_from_west.jpg/500px-Carrick_Castle_tower_from_west.jpg
+  - Status: 429
+- **Charlemont Fort** (County Armagh, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Charlemont%2C_co._Armagh_-_The_State_of_the_Fortes_of_Ireland_in_1624_%281624%29%2C_ff.38v-39_-_BL_Add_MS_24200.jpg/500px-Charlemont%2C_co._Armagh_-_The_State_of_the_Fortes_of_Ireland_in_1624_%281624%29%2C_ff.38v-39_-_BL_Add_MS_24200.jpg
+  - Status: 429
+- **Moyry Castle** (County Armagh, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Moyry_Castle_1.jpg/500px-Moyry_Castle_1.jpg
+  - Status: 429
+- **Audley's Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ballygally_Castle.jpg/500px-Ballygally_Castle.jpg
+  - Status: 429
+- **Clough Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Clough_%2811%29%2C_October_2009.JPG/500px-Clough_%2811%29%2C_October_2009.JPG
+  - Status: 429
+- **Dundrum Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Dundrum_Castle_from_outside.jpg/500px-Dundrum_Castle_from_outside.jpg
+  - Status: 429
+- **Greencastle Royal Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Maghera_Church_-_geograph.org.uk_-_222328.jpg/500px-Maghera_Church_-_geograph.org.uk_-_222328.jpg
+  - Status: 429
+- **Inch Abbey** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg/500px-View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg
+  - Status: 429
+- **Jordan's Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Moyry_Castle_1.jpg/500px-Moyry_Castle_1.jpg
+  - Status: 429
+- **Kilclief Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kilclief_Castle%2C_Geograph.jpg/500px-Kilclief_Castle%2C_Geograph.jpg
+  - Status: 429
+- **Killyleagh Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tully_Castle%2C_County_Fermanagh_-_geograph.org.uk_-_204216.jpg/500px-Tully_Castle%2C_County_Fermanagh_-_geograph.org.uk_-_204216.jpg
+  - Status: 429
+- **Mahee Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Mahee_Castle%2C_January_2011_%2801%29.JPG/500px-Mahee_Castle%2C_January_2011_%2801%29.JPG
+  - Status: 429
+- **Narrow Water Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Monea_Castle1.jpg/500px-Monea_Castle1.jpg
+  - Status: 429
+- **Quoile Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Quoile_Castle%2C_geograph.jpg/500px-Quoile_Castle%2C_geograph.jpg
+  - Status: 429
+- **Sketrick Castle** (County Down, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/a/a5/Sketrick_Castle.jpg
+  - Status: 429
+- **Crevenish Castle** (County Fermanagh, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Crevenish_Castle.jpg/500px-Crevenish_Castle.jpg
+  - Status: 429
+- **Enniskillen Castle** (County Fermanagh, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Enniskillen_Castle_by_Paride.JPG/500px-Enniskillen_Castle_by_Paride.JPG
+  - Status: 429
+- **Tully Castle** (County Fermanagh, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tully_Castle%2C_County_Fermanagh_-_geograph.org.uk_-_204216.jpg/500px-Tully_Castle%2C_County_Fermanagh_-_geograph.org.uk_-_204216.jpg
+  - Status: 429
+- **Maghera Old Church** (County Londonderry, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Maghera_Church_-_geograph.org.uk_-_222328.jpg/500px-Maghera_Church_-_geograph.org.uk_-_222328.jpg
+  - Status: 429
+- **Benburb Castle** (County Tyrone, Northern Ireland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Benburb-Castle-1.jpg/500px-Benburb-Castle-1.jpg
+  - Status: 429
+- **Balmoral Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Balmoral_Castle.jpg/500px-Balmoral_Castle.jpg
+  - Status: 429
+- **Balquhain Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Balquhain_Castle_-_geograph.org.uk_-_5843274.jpg/500px-Balquhain_Castle_-_geograph.org.uk_-_5843274.jpg
+  - Status: 429
+- **Barra Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg/500px-Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg
+  - Status: 429
+- **Braemar Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Braemar_Castle_%28May_2024%29.jpg/500px-Braemar_Castle_%28May_2024%29.jpg
+  - Status: 429
+- **Castle Fraser** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Castle_Fraser_-_geograph.org.uk_-_8125177.jpg/500px-Castle_Fraser_-_geograph.org.uk_-_8125177.jpg
+  - Status: 429
+- **Cluny Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Cluny_Castle_front_view.jpg/500px-Cluny_Castle_front_view.jpg
+  - Status: 429
+- **Corgarff Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Corgarff_Castle_-_geograph.org.uk_-_7273852.jpg/500px-Corgarff_Castle_-_geograph.org.uk_-_7273852.jpg
+  - Status: 429
+- **Corse Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Corse_Castle_-_geograph.org.uk_-_252876.jpg/500px-Corse_Castle_-_geograph.org.uk_-_252876.jpg
+  - Status: 429
+- **Craigievar Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Craigievar_Doocot_and_Castle_-_geograph.org.uk_-_7846018.jpg/500px-Craigievar_Doocot_and_Castle_-_geograph.org.uk_-_7846018.jpg
+  - Status: 429
+- **Crathes Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Crathes_Castle_%28October_2020%29.jpg/500px-Crathes_Castle_%28October_2020%29.jpg
+  - Status: 429
+- **Drum Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Drum_Castle_-_geograph.org.uk_-_4952750.jpg/500px-Drum_Castle_-_geograph.org.uk_-_4952750.jpg
+  - Status: 429
+- **Dunnottar Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Dunnottar_Castle_-_geograph.org.uk_-_8057610.jpg/500px-Dunnottar_Castle_-_geograph.org.uk_-_8057610.jpg
+  - Status: 429
+- **Esslemont Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg/500px-Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg
+  - Status: 429
+- **Esslemont Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg/500px-Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg
+  - Status: 429
+- **Fedderate Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fedderate_Castle_-_geograph.org.uk_-_8001581.jpg/500px-Fedderate_Castle_-_geograph.org.uk_-_8001581.jpg
+  - Status: 429
+- **Fetteresso Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Fetteresso_Castle_%28November_2021%29.jpg/500px-Fetteresso_Castle_%28November_2021%29.jpg
+  - Status: 429
+- **Findlater Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Findlater_Castle_-_geograph.org.uk_-_7908944.jpg/500px-Findlater_Castle_-_geograph.org.uk_-_7908944.jpg
+  - Status: 429
+- **Fyvie Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Fyvie_Castle_-_geograph.org.uk_-_8145413.jpg/500px-Fyvie_Castle_-_geograph.org.uk_-_8145413.jpg
+  - Status: 429
+- **Hallforest Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hallforest_Castle.jpg/500px-Hallforest_Castle.jpg
+  - Status: 429
+- **Huntly Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Huntly_Castle_home_of_the_Gordon%E2%80%99s_-_geograph.org.uk_-_8018379.jpg/500px-Huntly_Castle_home_of_the_Gordon%E2%80%99s_-_geograph.org.uk_-_8018379.jpg
+  - Status: 429
+- **Inverallochy Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg/500px-Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg
+  - Status: 429
+- **Inverugie Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ruined_tower%2C_Inverugie_Castle_%28geograph_6602774%29.jpg/500px-Ruined_tower%2C_Inverugie_Castle_%28geograph_6602774%29.jpg
+  - Status: 429
+- **Kildrummy Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Kildrummy_Castle_-_geograph.org.uk_-_6925322.jpg/500px-Kildrummy_Castle_-_geograph.org.uk_-_6925322.jpg
+  - Status: 429
+- **Lickleyhead Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Licklyhead_Castle%2C_Auchleven_-_geograph.org.uk_-_254419.jpg/500px-Licklyhead_Castle%2C_Auchleven_-_geograph.org.uk_-_254419.jpg
+  - Status: 429
+- **New Slains Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg/500px-New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg
+  - Status: 429
+- **Tolquhon Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tolquhon_Castle_01a.jpg/500px-Tolquhon_Castle_01a.jpg
+  - Status: 429
+- **Udny Castle** (Aberdeenshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Udny_Castle_-_geograph.org.uk_-_6213281.jpg/500px-Udny_Castle_-_geograph.org.uk_-_6213281.jpg
+  - Status: 429
+- **Arbroath Abbey** (Angus, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Arbroath_Abbey1.jpg/500px-Arbroath_Abbey1.jpg
+  - Status: 429
+- **Brechin Castle** (Angus, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg/500px-Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg
+  - Status: 429
+- **Finavon Castle** (Angus, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Finavon_Castle.jpg/500px-Finavon_Castle.jpg
+  - Status: 429
+- **Finavon Castle** (Angus, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Finavon_Castle.jpg/500px-Finavon_Castle.jpg
+  - Status: 429
+- **Inverquharity Castle** (Angus, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Inverquharity_Castle.jpg/500px-Inverquharity_Castle.jpg
+  - Status: 429
+- **Inverquharity Castle** (Angus, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Inverquharity_Castle.jpg/500px-Inverquharity_Castle.jpg
+  - Status: 429
+- **Ardchattan Priory** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/ArdchattanPriory-pjt.jpg/500px-ArdchattanPriory-pjt.jpg
+  - Status: 429
+- **Carnasserie Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Skipness_Castle_%28September_2023%29.jpg/500px-Skipness_Castle_%28September_2023%29.jpg
+  - Status: 429
+- **Castle Coeffin** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/CastleCoeffinLismore-ARuinedMacDougallStronghold%28ColinSmith%29Aug1995.jpg/500px-CastleCoeffinLismore-ARuinedMacDougallStronghold%28ColinSmith%29Aug1995.jpg
+  - Status: 429
+- **Castle Stalker** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG/500px-Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG
+  - Status: 429
+- **Duart Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Dunstaffnage_Castle_-_geograph.org.uk_-_7933659.jpg/500px-Dunstaffnage_Castle_-_geograph.org.uk_-_7933659.jpg
+  - Status: 429
+- **Dunaverty Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Dunaverty_-_geograph.org.uk_-_735878.jpg/500px-Dunaverty_-_geograph.org.uk_-_735878.jpg
+  - Status: 429
+- **Dunoon Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Castle_Hill_Dunoon_-_geograph.org.uk_-_995906.jpg/500px-Castle_Hill_Dunoon_-_geograph.org.uk_-_995906.jpg
+  - Status: 429
+- **Dunstaffnage Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg/500px-Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg
+  - Status: 429
+- **Duntrune Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Duntrune_Castle_-_geograph.org.uk_-_4669295.jpg/500px-Duntrune_Castle_-_geograph.org.uk_-_4669295.jpg
+  - Status: 429
+- **Gylen Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Gylen_Castle%2C_Kerrera_-_geograph.org.uk_-_7637715.jpg/500px-Gylen_Castle%2C_Kerrera_-_geograph.org.uk_-_7637715.jpg
+  - Status: 429
+- **Inveraray Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/20210815_Inverary_Castle-8848.jpg/500px-20210815_Inverary_Castle-8848.jpg
+  - Status: 429
+- **Kilchurn Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Castle_Stalker_-_geograph.org.uk_-_204092.jpg/500px-Castle_Stalker_-_geograph.org.uk_-_204092.jpg
+  - Status: 429
+- **Skipness Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Rothesay_Castle_-_Gatehouse_and_Pigeon_Tower_2016.jpg/500px-Rothesay_Castle_-_Gatehouse_and_Pigeon_Tower_2016.jpg
+  - Status: 429
+- **Tarbert Castle** (Argyll and Bute, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Argyll_and_Bute_-_Tarbert_Castle_-_20220920131143.jpg/500px-Argyll_and_Bute_-_Tarbert_Castle_-_20220920131143.jpg
+  - Status: 429
+- **Alloway Auld Kirk** (Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Whare_Ghaists_And_Houlets_Nightly_Cry_-_geograph.org.uk_-_1213346.jpg/500px-Whare_Ghaists_And_Houlets_Nightly_Cry_-_geograph.org.uk_-_1213346.jpg
+  - Status: 429
+- **Loch Doon Castle** (Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Doon_castle_%282266044734%29.jpg/500px-Doon_castle_%282266044734%29.jpg
+  - Status: 429
+- **Rowallan Castle** (Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Rowallan_castle_ayrshire.jpg/500px-Rowallan_castle_ayrshire.jpg
+  - Status: 429
+- **Cramond Tower** (City of Edinburgh, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/A_Cramond-torony_mag%C3%A1nrezidencia%2C_egy_%C3%A1llatkit%C3%B6m%C5%91_tulajdon%C3%A1ban_van_%28The_Cramond_Tower_is_a_private_residence%2C_property_of_a_taxidermist%29_-_panoramio.jpg/500px-A_Cramond-torony_mag%C3%A1nrezidencia%2C_egy_%C3%A1llatkit%C3%B6m%C5%91_tulajdon%C3%A1ban_van_%28The_Cramond_Tower_is_a_private_residence%2C_property_of_a_taxidermist%29_-_panoramio.jpg
+  - Status: 429
+- **Liberton Tower** (City of Edinburgh, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Liberton_Tower.JPG/500px-Liberton_Tower.JPG
+  - Status: 429
+- **Alloa Tower** (Clackmannanshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Alloa_Tower_%28September_2020%29.jpg/500px-Alloa_Tower_%28September_2020%29.jpg
+  - Status: 429
+- **Castle Campbell** (Clackmannanshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Castle_Campbell_%28July_2007%29.jpg/500px-Castle_Campbell_%28July_2007%29.jpg
+  - Status: 429
+- **Menstrie Castle** (Clackmannanshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Menstrie_Castle%2C_South_facing_aspect.jpg/500px-Menstrie_Castle%2C_South_facing_aspect.jpg
+  - Status: 429
+- **Amisfield Tower** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Amisfield_Tower%2C_Tinwald%2C_Dumfriesshire_c.1789._PD-old-100.jpg/500px-Amisfield_Tower%2C_Tinwald%2C_Dumfriesshire_c.1789._PD-old-100.jpg
+  - Status: 429
+- **Barholm Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/2/2c/Barholm_Castle.jpg
+  - Status: 429
+- **Barholm Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/2/2c/Barholm_Castle.jpg
+  - Status: 429
+- **Caerlaverock Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Hermitage_Castle_06.jpg/500px-Hermitage_Castle_06.jpg
+  - Status: 429
+- **Cardoness Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Cardoness_Castle_-_geograph.org.uk_-_3507287.jpg/500px-Cardoness_Castle_-_geograph.org.uk_-_3507287.jpg
+  - Status: 429
+- **Castle Kennedy** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Castle_Kennedy_by_Francis_Grose%2C_pub._Sep.15_1789_in_Antiquities_of_Scotland_vol.2_pp.191-192.jpg/500px-Castle_Kennedy_by_Francis_Grose%2C_pub._Sep.15_1789_in_Antiquities_of_Scotland_vol.2_pp.191-192.jpg
+  - Status: 429
+- **Castle of Park** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Castle_of_Park_Glenluce_exterior.JPG/500px-Castle_of_Park_Glenluce_exterior.JPG
+  - Status: 429
+- **Closeburn Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Castle_1.jpg/500px-Castle_1.jpg
+  - Status: 429
+- **Comlongon Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/a/ad/Comlongon_Castle.jpg
+  - Status: 429
+- **Corsewall Lighthouse** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Corsewell_Lighthouse_and_Hotel_-_geograph.org.uk_-_1708569.jpg/500px-Corsewell_Lighthouse_and_Hotel_-_geograph.org.uk_-_1708569.jpg
+  - Status: 429
+- **Drumlanrig Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Drumlanrig_Castle_-_geograph.org.uk_-_5090781.jpg/500px-Drumlanrig_Castle_-_geograph.org.uk_-_5090781.jpg
+  - Status: 429
+- **Dundrennan Abbey** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Dundrennan_Abbey_2012_%281%29.jpg/500px-Dundrennan_Abbey_2012_%281%29.jpg
+  - Status: 429
+- **Glenluce Abbey** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Glenluce_Abbey.jpg/500px-Glenluce_Abbey.jpg
+  - Status: 429
+- **MacLellan's Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Sweetheart_Abbey.jpg/500px-Sweetheart_Abbey.jpg
+  - Status: 429
+- **Morton Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Morton_Castle.jpg/500px-Morton_Castle.jpg
+  - Status: 429
+- **Sanquhar Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Scotland.Sanquhar01.jpg/500px-Scotland.Sanquhar01.jpg
+  - Status: 429
+- **Sweetheart Abbey** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/500px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg
+  - Status: 429
+- **Threave Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/MacLellan%27s_Castle_exterior_2_August_2013.jpg/500px-MacLellan%27s_Castle_exterior_2_August_2013.jpg
+  - Status: 429
+- **Torthorwald Castle** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Torthorwald_Castle.jpg/500px-Torthorwald_Castle.jpg
+  - Status: 429
+- **Whithorn Priory** (Dumfries and Galloway, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Whithorn_Priory_20080423_nave.jpg/500px-Whithorn_Priory_20080423_nave.jpg
+  - Status: 429
+- **Dudhope Castle** (Dundee, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Dudhope_Castle.jpg/500px-Dudhope_Castle.jpg
+  - Status: 429
+- **Auchinleck House** (East Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Auchinleck_House_Ayrshire_03.jpg/500px-Auchinleck_House_Ayrshire_03.jpg
+  - Status: 429
+- **Dean Castle** (East Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Culzean_Castle_house_and_gardens_01.JPG/500px-Culzean_Castle_house_and_gardens_01.JPG
+  - Status: 429
+- **Mugdock Castle** (East Dunbartonshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Mugdock_Side1.jpg/500px-Mugdock_Side1.jpg
+  - Status: 429
+- **Dirleton Castle** (East Lothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Dirleton_S.jpg/500px-Dirleton_S.jpg
+  - Status: 429
+- **Dunbar Castle** (East Lothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dunbar_Harbour_and_Castle%2C_1987.jpg/500px-Dunbar_Harbour_and_Castle%2C_1987.jpg
+  - Status: 429
+- **Hailes Castle** (East Lothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/HailesN.jpg/500px-HailesN.jpg
+  - Status: 429
+- **Seton Collegiate Church** (East Lothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Seton_Collegiate_Church%2C_near_Tranent_01.jpg/500px-Seton_Collegiate_Church%2C_near_Tranent_01.jpg
+  - Status: 429
+- **Tantallon Castle** (East Lothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Tantallon_Castle%2C_2015.JPG/500px-Tantallon_Castle%2C_2015.JPG
+  - Status: 429
+- **Craigmillar Castle** (Edinburgh, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Craigmillar_Castle.jpg/500px-Craigmillar_Castle.jpg
+  - Status: 429
+- **Lauriston Castle** (Edinburgh, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/LauristonCastleSouth.jpg/500px-LauristonCastleSouth.jpg
+  - Status: 429
+- **Aberdour Castle** (Fife, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Carrick_Castle_tower_from_west.jpg/500px-Carrick_Castle_tower_from_west.jpg
+  - Status: 429
+- **Dunfermline Abbey** (Fife, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Aberdour_Castle_from_dovecote.jpg/500px-Aberdour_Castle_from_dovecote.jpg
+  - Status: 429
+- **Falkland Palace** (Fife, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Falkland_Palace_from_the_NW.jpg/500px-Falkland_Palace_from_the_NW.jpg
+  - Status: 429
+- **Ravenscraig Castle** (Fife, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg/500px-View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg
+  - Status: 429
+- **Scotstarvit Tower** (Fife, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/7/76/Scotstarvit_Tower.jpg
+  - Status: 429
+- **St Andrews Castle** (Fife, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/St_Andrews_Castle_1_%283604221101%29.jpg/500px-St_Andrews_Castle_1_%283604221101%29.jpg
+  - Status: 429
+- **Ackergill Tower** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ackergill.JPG/500px-Ackergill.JPG
+  - Status: 429
+- **Ardvreck Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Scotland_Strome_Castle.jpg/500px-Scotland_Strome_Castle.jpg
+  - Status: 429
+- **Carbisdale Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Carbisdale_Castle_drone_%2825592663297%29.jpg/500px-Carbisdale_Castle_drone_%2825592663297%29.jpg
+  - Status: 429
+- **Castle Leod** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Castle_Leod_%28geograph_4176882%29.jpg/500px-Castle_Leod_%28geograph_4176882%29.jpg
+  - Status: 429
+- **Castle of Mey** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Mey_castle_2.JPG/500px-Mey_castle_2.JPG
+  - Status: 429
+- **Castle Roy** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Castle_Roy_-_geograph.org.uk_-_2069401.jpg/500px-Castle_Roy_-_geograph.org.uk_-_2069401.jpg
+  - Status: 429
+- **Castle Sinclair Girnigoe** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Girnigoe1.jpg/500px-Girnigoe1.jpg
+  - Status: 429
+- **Castle Stuart** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Castle_Stuart.jpg/500px-Castle_Stuart.jpg
+  - Status: 429
+- **Cawdor Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Ecosse2009127.JPG/500px-Ecosse2009127.JPG
+  - Status: 429
+- **Dornoch Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Dornoch_Castle.jpg/500px-Dornoch_Castle.jpg
+  - Status: 429
+- **Dunbeath Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dunbeath_Castle.jpg/500px-Dunbeath_Castle.jpg
+  - Status: 429
+- **Dunrobin Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Dunrobin_Castle_-Sutherland_-Scotland-26May2008_%282%29.jpg/500px-Dunrobin_Castle_-Sutherland_-Scotland-26May2008_%282%29.jpg
+  - Status: 429
+- **Eilean Donan Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg/500px-Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg
+  - Status: 429
+- **Fort George** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg/500px-2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg
+  - Status: 429
+- **Fortrose Cathedral** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Fortrose_Cathedral_north_2013.jpg/500px-Fortrose_Cathedral_north_2013.jpg
+  - Status: 429
+- **Invergarry Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/6/68/Invergarry_Castle_-_geograph.org.uk_-_1104838.jpg
+  - Status: 429
+- **Inverlochy Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kilchurn_Castle_C15th%2C_Loch_Awe_-_geograph.org.uk_-_7618041.jpg/500px-Kilchurn_Castle_C15th%2C_Loch_Awe_-_geograph.org.uk_-_7618041.jpg
+  - Status: 429
+- **Kilravock Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Scotland_Kilravock_Castle.jpg/500px-Scotland_Kilravock_Castle.jpg
+  - Status: 429
+- **Rait Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Rait_Castle.jpg/500px-Rait_Castle.jpg
+  - Status: 429
+- **Strome Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Casteal_Tioram_-_geograph.org.uk_-_6134571.jpg/500px-Casteal_Tioram_-_geograph.org.uk_-_6134571.jpg
+  - Status: 429
+- **Urquhart Castle** (Highland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Urquhart_Castle_2017-05-22.jpg/500px-Urquhart_Castle_2017-05-22.jpg
+  - Status: 429
+- **Newark Castle** (Inverclyde, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Dean_Castle%2C_East_Ayrshire_%28cropped%29.jpg/500px-Dean_Castle%2C_East_Ayrshire_%28cropped%29.jpg
+  - Status: 429
+- **Armadale Castle** (Isle of Skye, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Kisimul_%2834570267945%29.jpg/500px-Kisimul_%2834570267945%29.jpg
+  - Status: 429
+- **Dunvegan Castle** (Isle of Skye, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Armadale_Castle_5.jpg/500px-Armadale_Castle_5.jpg
+  - Status: 429
+- **Borthwick Castle** (Midlothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Borthwick_Castle%2C_Midlothian.jpg/500px-Borthwick_Castle%2C_Midlothian.jpg
+  - Status: 429
+- **Crichton Castle** (Midlothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Scotland-2016-Aerial-Crichton_Castle.jpg/500px-Scotland-2016-Aerial-Crichton_Castle.jpg
+  - Status: 429
+- **Auchindoun Castle** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Auchindoun_Castle_-_geograph.org.uk_-_1369160.jpg/500px-Auchindoun_Castle_-_geograph.org.uk_-_1369160.jpg
+  - Status: 429
+- **Ballindalloch Castle** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ballindaloch_Castle.jpg/500px-Ballindaloch_Castle.jpg
+  - Status: 429
+- **Balvenie Castle** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Grampian_Map_Balvenie_Castle.png/500px-Grampian_Map_Balvenie_Castle.png
+  - Status: 429
+- **Dufftown Clock Tower** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Dufftown_Clock_Tower.jpg/500px-Dufftown_Clock_Tower.jpg
+  - Status: 429
+- **Duffus Castle** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Duffuscastle4.jpg/500px-Duffuscastle4.jpg
+  - Status: 429
+- **Elgin Cathedral** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Elgin_Cathedral_view_from_rear.jpg/500px-Elgin_Cathedral_view_from_rear.jpg
+  - Status: 429
+- **Pluscarden Abbey** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Pluscarden_Abbey.jpg/500px-Pluscarden_Abbey.jpg
+  - Status: 429
+- **Spynie Palace** (Moray, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Spynie_castle3.jpg/500px-Spynie_castle3.jpg
+  - Status: 429
+- **Calvay Castle** (Na h-Eileanan Siar, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg/500px-Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg
+  - Status: 429
+- **Kisimul Castle** (Na h-Eileanan Siar, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Blair_castle_-_facade.jpg/500px-Blair_castle_-_facade.jpg
+  - Status: 429
+- **Lochranza Castle** (North Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Brodick_Castle_Main_Building_East_01.jpg/500px-Brodick_Castle_Main_Building_East_01.jpg
+  - Status: 429
+- **Portencross Castle** (North Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Portencross_Castle_and_harbour.JPG/500px-Portencross_Castle_and_harbour.JPG
+  - Status: 429
+- **Noltland Castle** (Orkney, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Noltland_Castle_-_geograph.org.uk_-_1763460.jpg/500px-Noltland_Castle_-_geograph.org.uk_-_1763460.jpg
+  - Status: 429
+- **Balhousie Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg/500px-Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg
+  - Status: 429
+- **Balvaird Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Balvaird_Castle_2018.jpg/500px-Balvaird_Castle_2018.jpg
+  - Status: 429
+- **Blair Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Scone_Palace_-_Front_side.jpg/500px-Scone_Palace_-_Front_side.jpg
+  - Status: 429
+- **Burleigh Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/BurleighCastle.jpg/500px-BurleighCastle.jpg
+  - Status: 429
+- **Elcho Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Elcho_castle.jpg/500px-Elcho_castle.jpg
+  - Status: 429
+- **Grandtully Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Grandtully_Castle_%28geograph_3890325%29.jpg/500px-Grandtully_Castle_%28geograph_3890325%29.jpg
+  - Status: 429
+- **Huntingtower Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Perth_and_Kinross_Huntingtower_Castle.jpg/500px-Perth_and_Kinross_Huntingtower_Castle.jpg
+  - Status: 429
+- **Loch Leven Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Lochleven_west_wall.JPG/500px-Lochleven_west_wall.JPG
+  - Status: 429
+- **Methven Castle** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Methven_Castle.jpg/500px-Methven_Castle.jpg
+  - Status: 429
+- **Scone Palace** (Perth and Kinross, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Dunfermline_Abbey_Geograph.jpg/500px-Dunfermline_Abbey_Geograph.jpg
+  - Status: 429
+- **Paisley Abbey** (Renfrewshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Paisley_Abbey_from_North_West_-_Leaning_western_gable_-_125mp.jpg/500px-Paisley_Abbey_from_North_West_-_Leaning_western_gable_-_125mp.jpg
+  - Status: 429
+- **Cessford Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Cessford_Castle.jpg/500px-Cessford_Castle.jpg
+  - Status: 429
+- **Dryburgh Abbey** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kelso_Abbey1.jpg/500px-Kelso_Abbey1.jpg
+  - Status: 429
+- **Dryhope Tower** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Dryhope.JPG/500px-Dryhope.JPG
+  - Status: 429
+- **Duns Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Duns_Castle_-_geograph.org.uk_-_8169370.jpg/500px-Duns_Castle_-_geograph.org.uk_-_8169370.jpg
+  - Status: 429
+- **Elibank Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Elibank_Castle_-_geograph.org.uk_-_2026524.jpg/500px-Elibank_Castle_-_geograph.org.uk_-_2026524.jpg
+  - Status: 429
+- **Fast Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fast_Castle_-_geograph.org.uk_-_365002.jpg/500px-Fast_Castle_-_geograph.org.uk_-_365002.jpg
+  - Status: 429
+- **Floors Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Floors_Castle%2C_Roxburghshire.jpg/500px-Floors_Castle%2C_Roxburghshire.jpg
+  - Status: 429
+- **Greenknowe Tower** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Greenknowe_Tower_SW2.jpg/500px-Greenknowe_Tower_SW2.jpg
+  - Status: 429
+- **Hermitage Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ruins_of_St_Mary%27s_Abbey%2C_Melrose_%28Scotland%27s_first_Cistercian_monastery%2C_1136%29%2C_showing_late_14th-century_Gothic_architecture_in_rose-colored_sandstone_with_medieval_cemetery%2C_burial_place_of_Robert_the_Bruce%27s_heart%2C_Scottish_Borders.jpg/500px-thumbnail.jpg
+  - Status: 429
+- **Hume Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Hume_Castle_-_geograph.org.uk_-_812984.jpg/500px-Hume_Castle_-_geograph.org.uk_-_812984.jpg
+  - Status: 429
+- **Jedburgh Abbey** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Dryburgh_Abbey%2C_2004.jpg/500px-Dryburgh_Abbey%2C_2004.jpg
+  - Status: 429
+- **Kelso Abbey** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Neidpath_Castle_2014_1.jpg/500px-Neidpath_Castle_2014_1.jpg
+  - Status: 429
+- **Melrose Abbey** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Thomas_Girtin_006.JPG/500px-Thomas_Girtin_006.JPG
+  - Status: 429
+- **Neidpath Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/SmailholmLochan.jpg/500px-SmailholmLochan.jpg
+  - Status: 429
+- **Roxburgh Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/0/01/Castles_old_and_new_-_geograph.org.uk_-_163364.jpg
+  - Status: 429
+- **Smailholm Tower** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Threave_Castle_20080422_-_view_from_Dee.jpg/500px-Threave_Castle_20080422_-_view_from_Dee.jpg
+  - Status: 429
+- **Thirlestane Castle** (Scottish Borders, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Thirlestane_Castle.jpg/500px-Thirlestane_Castle.jpg
+  - Status: 429
+- **Jarlshof** (Shetland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/7/7d/Jarlshof%28NigelDuncan%29Feb2007.jpg
+  - Status: 429
+- **Scalloway Castle** (Shetland, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Scalloway_Castle_%28August_2013%29.jpg/500px-Scalloway_Castle_%28August_2013%29.jpg
+  - Status: 429
+- **Crossraguel Abbey** (South Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/5/5d/Crossraguel01.jpg
+  - Status: 429
+- **Culzean Castle** (South Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Lochranza_Castle_1.jpg/500px-Lochranza_Castle_1.jpg
+  - Status: 429
+- **Dalquharran Castle** (South Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Dalquarran_Mansion_-_geograph.org.uk_-_424754.jpg/500px-Dalquarran_Mansion_-_geograph.org.uk_-_424754.jpg
+  - Status: 429
+- **Dundonald Castle** (South Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Dundonald_Castle_20080424_-_from_south_west.jpg/500px-Dundonald_Castle_20080424_-_from_south_west.jpg
+  - Status: 429
+- **Sundrum Castle** (South Ayrshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sundrum_Castle.jpg/500px-Sundrum_Castle.jpg
+  - Status: 429
+- **Bothwell Castle** (South Lanarkshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bothwell_Castle_20080505_-_south-east_tower.jpg/500px-Bothwell_Castle_20080505_-_south-east_tower.jpg
+  - Status: 429
+- **Cadzow Castle** (South Lanarkshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CadzowCastle01.JPG/500px-CadzowCastle01.JPG
+  - Status: 429
+- **Craignethan Castle** (South Lanarkshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Craignethan_Castle.jpg/500px-Craignethan_Castle.jpg
+  - Status: 429
+- **Doune Castle** (Stirling, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Scotland-2016-Aerial-Doune_Castle_%28and_Castle_keeper%27s_cottage%29.jpg/500px-Scotland-2016-Aerial-Doune_Castle_%28and_Castle_keeper%27s_cottage%29.jpg
+  - Status: 429
+- **Dunblane Cathedral** (Stirling, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Moyry_Castle_1.jpg/500px-Moyry_Castle_1.jpg
+  - Status: 429
+- **Inchmahome Priory** (Stirling, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Inchmahome_Priory_-_2_-_06052008.jpg/500px-Inchmahome_Priory_-_2_-_06052008.jpg
+  - Status: 429
+- **Stirling Castle** (Stirling, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Scotland-2016-Aerial-Stirling-Stirling_Castle.jpg/500px-Scotland-2016-Aerial-Stirling-Stirling_Castle.jpg
+  - Status: 429
+- **Balloch Castle** (West Dunbartonshire, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/BallochCastleScotland.jpg/500px-BallochCastleScotland.jpg
+  - Status: 429
+- **Blackness Castle** (West Lothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NEWScotland-2016-Aerial-Blackness_Castle_01.jpg/500px-NEWScotland-2016-Aerial-Blackness_Castle_01.jpg
+  - Status: 429
+- **Linlithgow Palace** (West Lothian, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Am_linlithgow_palace_south.jpg/500px-Am_linlithgow_palace_south.jpg
+  - Status: 429
+- **Amhuinnsuidhe Castle** (Western Isles, Scotland)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Abhainsuidhe_Castle.jpg/500px-Abhainsuidhe_Castle.jpg
+  - Status: 429
+- **Barclodiad y Gawres** (Anglesey, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BarclodiadyGawres.JPG/500px-BarclodiadyGawres.JPG
+  - Status: 429
+- **Beaumaris Castle** (Anglesey, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Flint_-_Flint_Castle_-_20220322133345.jpg/500px-Flint_-_Flint_Castle_-_20220322133345.jpg
+  - Status: 429
+- **Coity Castle** (Bridgend, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Lismore_Castle_%28Lismore%2C_Co._Waterford%29.jpg/500px-Lismore_Castle_%28Lismore%2C_Co._Waterford%29.jpg
+  - Status: 429
+- **Caerphilly Castle** (Caerphilly, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Caerphilly_aerial.jpg/500px-Caerphilly_aerial.jpg
+  - Status: 429
+- **Cardiff Castle** (Cardiff, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Aerial_view_of_Cardiff_Castle.jpg/500px-Aerial_view_of_Cardiff_Castle.jpg
+  - Status: 429
+- **Castell Coch** (Cardiff, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Raglan_Castle%27s_main_entrance.jpg/500px-Raglan_Castle%27s_main_entrance.jpg
+  - Status: 429
+- **Carreg Cennen Castle** (Carmarthenshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg/500px-Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg
+  - Status: 429
+- **Dylan Thomas Boathouse** (Carmarthenshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dylan_Boathouse.jpg/500px-Dylan_Boathouse.jpg
+  - Status: 429
+- **Kidwelly Castle** (Carmarthenshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg/500px-Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg
+  - Status: 429
+- **Laugharne Castle** (Carmarthenshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Llansteffan_Castle_and_Beach.jpg/500px-Llansteffan_Castle_and_Beach.jpg
+  - Status: 429
+- **Llansteffan Castle** (Carmarthenshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Oystermouth_Castle_-_geograph.org.uk_-_292767.jpg/500px-Oystermouth_Castle_-_geograph.org.uk_-_292767.jpg
+  - Status: 429
+- **Paxton's Tower** (Carmarthenshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Paxton_Tower.jpg/500px-Paxton_Tower.jpg
+  - Status: 429
+- **Talley Abbey** (Carmarthenshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg/500px-The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg
+  - Status: 429
+- **Aberystwyth Castle** (Ceredigion, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rhuddlan_Castle%2C_May_2012.jpg/500px-Rhuddlan_Castle%2C_May_2012.jpg
+  - Status: 429
+- **Cardigan Castle** (Ceredigion, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Cardigan_Castle_-_south_western_aspect-Geograph-6075948-by-M-J-Roscoe.jpg/500px-Cardigan_Castle_-_south_western_aspect-Geograph-6075948-by-M-J-Roscoe.jpg
+  - Status: 429
+- **Strata Florida Abbey** (Ceredigion, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Aerial_View_of_Basingwerk_Abbey%2C.jpg/500px-Aerial_View_of_Basingwerk_Abbey%2C.jpg
+  - Status: 429
+- **Bodysgallen Hall** (Conwy, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bodysgallenhallcmichaelhoganlowres.jpg/500px-Bodysgallenhallcmichaelhoganlowres.jpg
+  - Status: 429
+- **Conwy Castle** (Conwy, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/500px-Conwy_Castle%2C_water_view1.jpg
+  - Status: 429
+- **Deganwy Castle** (Conwy, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Site_of_Deganwy_Castle_-_aerial_2015.jpg/500px-The_Site_of_Deganwy_Castle_-_aerial_2015.jpg
+  - Status: 429
+- **Dolwyddelan Castle** (Conwy, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ewloe_Castle_-_geograph.org.uk_-_878422.jpg/500px-Ewloe_Castle_-_geograph.org.uk_-_878422.jpg
+  - Status: 429
+- **Denbigh Castle** (Denbighshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Dolbadarn_Castle_Cadw.jpg/500px-Dolbadarn_Castle_Cadw.jpg
+  - Status: 429
+- **Rhuddlan Castle** (Denbighshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Aerial_view_of_Cardiff_Castle.jpg/500px-Aerial_view_of_Cardiff_Castle.jpg
+  - Status: 429
+- **Ruthin Castle** (Denbighshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Portumna_castle.jpg/500px-Portumna_castle.jpg
+  - Status: 429
+- **Valle Crucis Abbey** (Denbighshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Manorbier_Castle.jpg/500px-Manorbier_Castle.jpg
+  - Status: 429
+- **Basingwerk Abbey** (Flintshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carew_Castle%2C_Pembrokeshire%2C_UK.jpg/500px-Carew_Castle%2C_Pembrokeshire%2C_UK.jpg
+  - Status: 429
+- **Caergwrle Castle** (Flintshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png/500px-Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png
+  - Status: 429
+- **Ewloe Castle** (Flintshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Powis_Castle_2016_116_%28cropped%29.jpg/500px-Powis_Castle_2016_116_%28cropped%29.jpg
+  - Status: 429
+- **Flint Castle** (Flintshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aberystwyth_castle_edit1.jpg/500px-Aberystwyth_castle_edit1.jpg
+  - Status: 429
+- **Caernarfon Castle** (Gwynedd, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Caernarfon_Castle_1994.jpg/500px-Caernarfon_Castle_1994.jpg
+  - Status: 429
+- **Castell y Bere** (Gwynedd, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/ChirkCastle1.JPG/500px-ChirkCastle1.JPG
+  - Status: 429
+- **Criccieth Castle** (Gwynedd, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg/500px-Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg
+  - Status: 429
+- **Cymer Abbey** (Gwynedd, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/01_Cilgerran_Castle.jpg/500px-01_Cilgerran_Castle.jpg
+  - Status: 429
+- **Dinas Emrys** (Gwynedd, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/DinasEmrys1.JPG/500px-DinasEmrys1.JPG
+  - Status: 429
+- **Dolbadarn Castle** (Gwynedd, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/CastellybereFMA01.jpg/500px-CastellybereFMA01.jpg
+  - Status: 429
+- **Harlech Castle** (Gwynedd, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/500px-Harlech_Castle_-_Cadw_photograph.jpg
+  - Status: 429
+- **Abergavenny Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ruins_of_Abergavenny_Castle.jpg/500px-Ruins_of_Abergavenny_Castle.jpg
+  - Status: 429
+- **Caldicot Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Caldicot_Castle_entrance_-_geograph.org.uk_-_469475.jpg/500px-Caldicot_Castle_entrance_-_geograph.org.uk_-_469475.jpg
+  - Status: 429
+- **Chepstow Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/SKENFRITH_CASTLE.jpg/500px-SKENFRITH_CASTLE.jpg
+  - Status: 429
+- **Grosmont Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png/500px-Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png
+  - Status: 429
+- **Penhow Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Penhow_Castle_from_Church.jpg/500px-Penhow_Castle_from_Church.jpg
+  - Status: 429
+- **Raglan Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pembroke_Castle_-_June_2011.jpg/500px-Pembroke_Castle_-_June_2011.jpg
+  - Status: 429
+- **Skenfrith Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Aerial_view_of_Denbigh_Castle%2C_by_Cadw.jpg/500px-Aerial_view_of_Denbigh_Castle%2C_by_Cadw.jpg
+  - Status: 429
+- **Tintern Abbey** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/TinternAbbey_WestEnd.jpg/500px-TinternAbbey_WestEnd.jpg
+  - Status: 429
+- **Usk Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Garrison_Tower_and_sundial%2C_Usk_Castle_-_geograph.org.uk_-_1425960.jpg/500px-Garrison_Tower_and_sundial%2C_Usk_Castle_-_geograph.org.uk_-_1425960.jpg
+  - Status: 429
+- **White Castle** (Monmouthshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/GrosmontCastle4.jpg/500px-GrosmontCastle4.jpg
+  - Status: 429
+- **Margam Abbey** (Neath Port Talbot, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Chepstow_Castle_%284197%29.jpg/500px-Chepstow_Castle_%284197%29.jpg
+  - Status: 429
+- **Newport Castle** (Newport, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Newport_Castle_-_geograph.org.uk_-_781279.jpg/500px-Newport_Castle_-_geograph.org.uk_-_781279.jpg
+  - Status: 429
+- **Carew Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Dinefwr_castle_at_sunrise.jpg/500px-Dinefwr_castle_at_sunrise.jpg
+  - Status: 429
+- **Cilgerran Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ogmore_Castle_5085.jpg/500px-Ogmore_Castle_5085.jpg
+  - Status: 429
+- **Haverfordwest Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg/500px-HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg
+  - Status: 429
+- **Llawhaden Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coity_Castle.jpg/500px-Coity_Castle.jpg
+  - Status: 429
+- **Manorbier Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg/500px-Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg
+  - Status: 429
+- **Narberth Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Narberth_castle_pembrokeshire.jpg/500px-Narberth_castle_pembrokeshire.jpg
+  - Status: 429
+- **Pembroke Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Kidwelly_castle_whole.JPG/500px-Kidwelly_castle_whole.JPG
+  - Status: 429
+- **Picton Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/02_Picton_Castle_Pembrokeshire.JPG/500px-02_Picton_Castle_Pembrokeshire.JPG
+  - Status: 429
+- **Tenby Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tenby_Castle_-_geograph.org.uk_-_3694238.jpg/500px-Tenby_Castle_-_geograph.org.uk_-_3694238.jpg
+  - Status: 429
+- **Wiston Castle** (Pembrokeshire, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Wiston_Castle%2C_from_Cadw_information_board.jpg/500px-Wiston_Castle%2C_from_Cadw_information_board.jpg
+  - Status: 429
+- **Bronllys Castle** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg/500px-Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg
+  - Status: 429
+- **Builth Castle** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Builth_Castle_-_geograph.org.uk_-_1025212.jpg/500px-Builth_Castle_-_geograph.org.uk_-_1025212.jpg
+  - Status: 429
+- **Castell Dinas** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Castell_Dinas_from_the_air.jpg/500px-Castell_Dinas_from_the_air.jpg
+  - Status: 429
+- **Hay Castle** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hay_Castle%2C_Hay-on-Wye_-_geograph.org.uk_-_583851.jpg/500px-Hay_Castle%2C_Hay-on-Wye_-_geograph.org.uk_-_583851.jpg
+  - Status: 429
+- **Montgomery Castle** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/DSCN4297-strata-florida-arch.JPG/500px-DSCN4297-strata-florida-arch.JPG
+  - Status: 429
+- **Painscastle** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Painscastle_-_geograph.org.uk_-_403187.jpg/500px-Painscastle_-_geograph.org.uk_-_403187.jpg
+  - Status: 429
+- **Powis Castle** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg/500px-Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg
+  - Status: 429
+- **Tretower Court** (Powys, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tretower_Court_-_geograph.org.uk_-_25906.jpg/500px-Tretower_Court_-_geograph.org.uk_-_25906.jpg
+  - Status: 429
+- **Loughor Castle** (Swansea, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Loughor_Castle_-_geograph.org.uk_-_2353532.jpg/500px-Loughor_Castle_-_geograph.org.uk_-_2353532.jpg
+  - Status: 429
+- **Oystermouth Castle** (Swansea, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Neath_abbey%2C_Glamorgan_-_founded_by_Richard_De_Cranville%2C_circa_1129.jpeg/500px-Neath_abbey%2C_Glamorgan_-_founded_by_Richard_De_Cranville%2C_circa_1129.jpeg
+  - Status: 429
+- **Pennard Castle** (Swansea, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Centre_of_Nenagh_-_panoramio.jpg/500px-Centre_of_Nenagh_-_panoramio.jpg
+  - Status: 429
+- **Swansea Castle** (Swansea, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Swansea2.jpg/500px-Swansea2.jpg
+  - Status: 429
+- **Weobley Castle** (Swansea, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Roscrea_Castle.jpg/500px-Roscrea_Castle.jpg
+  - Status: 429
+- **Blaenavon Ironworks** (Torfaen, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blaenafon_Ironworks-24May2008.jpg/500px-Blaenafon_Ironworks-24May2008.jpg
+  - Status: 429
+- **Dunraven Castle** (Vale of Glamorgan, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Dunraven_Castle_%2816567797823%29.jpg/500px-Dunraven_Castle_%2816567797823%29.jpg
+  - Status: 429
+- **Ewenny Priory** (Vale of Glamorgan, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Margamabbey-wyrdlight-7458.jpg/500px-Margamabbey-wyrdlight-7458.jpg
+  - Status: 429
+- **Fonmon Castle** (Vale of Glamorgan, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Castell_Ffwl-y-mwn.jpg/500px-Castell_Ffwl-y-mwn.jpg
+  - Status: 429
+- **Ogmore Castle** (Vale of Glamorgan, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG/500px-Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG
+  - Status: 429
+- **Old Beaupre Castle** (Vale of Glamorgan, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Old_Beaupre_Castle_-_geograph.org.uk_-_2764686.jpg/500px-Old_Beaupre_Castle_-_geograph.org.uk_-_2764686.jpg
+  - Status: 429
+- **Chirk Castle** (Wrexham, Wales)
+  - URL: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Castle_and_Path.JPG/500px-Castle_and_Path.JPG
+  - Status: 429
+
+## License Breakdown
+
+Distribution of image licenses:
+
+- **CC BY-SA 2.0:** 12 images
+- **CC BY-SA 3.0:** 7 images
+- **CC BY-SA 4.0:** 6 images
+- **CC BY 3.0:** 2 images
+- **CC BY 2.0:** 2 images
+- **CC BY 4.0:** 1 images
+- **Public domain:** 1 images
+
+## Attribution Data
+
+Working Wikipedia images with attribution information:
+
+### Lyme Park (Cheshire, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/South_facade_of_Lyme_Park_house%2C_2013.jpg/500px-South_facade_of_Lyme_Park_house%2C_2013.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:Julia_W" title="User:Julia W">Julie Anne Workman</a>
+- **License:** CC BY-SA 3.0
+- **Commons Page:** [South_facade_of_Lyme_Park_house,_2013.jpg](https://commons.wikimedia.org/wiki/File:South_facade_of_Lyme_Park_house%2C_2013.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Mackworth Castle (Derbyshire, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/2/2c/Mackworth_Castle_-_thumb_205765.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/6883">Stephen G Taylor</a>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Mackworth_Castle_-_thumb_205765.jpg](https://commons.wikimedia.org/wiki/File:Mackworth_Castle_-_thumb_205765.jpg)
+- **Credit:** From <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/205765">geograph.org.uk</a>
+
+### Bodiam Castle (East Sussex, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bodiam-castle-10My8-1197.jpg/500px-Bodiam-castle-10My8-1197.jpg
+- **Type:** main image
+- **Photographer/Author:** Antony McCallum
+- **License:** CC BY-SA 3.0
+- **Commons Page:** [Bodiam-castle-10My8-1197.jpg](https://commons.wikimedia.org/wiki/File:Bodiam-castle-10My8-1197.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Hastings Castle (East Sussex, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Hastings_Castle_2012-07-28.jpg/500px-Hastings_Castle_2012-07-28.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/w/index.php?title=User:Kreepin_Deth&amp;action=edit&amp;redlink=1" class="new" title="User:Kreepin Deth (page does not exist)">Kreepin Deth</a>
+- **License:** CC BY-SA 3.0
+- **Commons Page:** [Hastings_Castle_2012-07-28.jpg](https://commons.wikimedia.org/wiki/File:Hastings_Castle_2012-07-28.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Hurst Castle (Hampshire, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Hurst_Castle%2C_near_Milford_on_Sea%2C_Hampshire%2C_England-2Oct2010_trimmmed.jpg/500px-Hurst_Castle%2C_near_Milford_on_Sea%2C_Hampshire%2C_England-2Oct2010_trimmmed.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.flickr.com/people/44036847@N05">Ian Stannard</a> from Southsea, England
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Hurst_Castle,_near_Milford_on_Sea,_Hampshire,_England-2Oct2010_trimmmed.jpg](https://commons.wikimedia.org/wiki/File:Hurst_Castle%2C_near_Milford_on_Sea%2C_Hampshire%2C_England-2Oct2010_trimmmed.jpg)
+- **Credit:** <a href="//commons.wikimedia.org/wiki/File:Hurst_Castle,_near_Milford_on_Sea,_Hampshire,_England-2Oct2010.jpg" title="File:Hurst Castle, near Milford on Sea, Hampshire, England-2Oct2010.jpg">File:Hurst_Castle,_near_Milford_on_Sea,_Hampshire,_England-2Oct2010.jpg</a>
+
+### Odiham Castle (Hampshire, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Odiham_Castle.jpg/500px-Odiham_Castle.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:BabelStone" title="User:BabelStone">BabelStone</a>
+- **License:** CC BY-SA 3.0
+- **Commons Page:** [Odiham_Castle.jpg](https://commons.wikimedia.org/wiki/File:Odiham_Castle.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Dover Castle (Kent, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/1_dover_castle_aerial_panorama_2017.jpg/500px-1_dover_castle_aerial_panorama_2017.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:Chensiyuan" title="User:Chensiyuan">Chensiyuan</a>
+- **License:** CC BY-SA 4.0
+- **Commons Page:** [1_dover_castle_aerial_panorama_2017.jpg](https://commons.wikimedia.org/wiki/File:1_dover_castle_aerial_panorama_2017.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Hever Castle (Kent, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hever_Castle_2014_06_20_1.jpg/500px-Hever_Castle_2014_06_20_1.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:Kroppe" title="User:Kroppe">Christoph Matthias Siebenborn</a>
+- **License:** CC BY 3.0
+- **Commons Page:** [Hever_Castle_2014_06_20_1.jpg](https://commons.wikimedia.org/wiki/File:Hever_Castle_2014_06_20_1.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Leeds Castle (Kent, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Leeds_castle.JPG/500px-Leeds_castle.JPG
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/w/index.php?title=User:Adusha&amp;action=edit&amp;redlink=1" class="new" title="User:Adusha (page does not exist)">Adusha</a>
+- **License:** CC BY 3.0
+- **Commons Page:** [Leeds_castle.JPG](https://commons.wikimedia.org/wiki/File:Leeds_castle.JPG)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Rochester Castle (Kent, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Rochester_Castle_from_main_approach.jpg/500px-Rochester_Castle_from_main_approach.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:Stephencdickson" title="User:Stephencdickson">Stephencdickson</a>
+- **License:** CC BY-SA 4.0
+- **Commons Page:** [Rochester_Castle_from_main_approach.jpg](https://commons.wikimedia.org/wiki/File:Rochester_Castle_from_main_approach.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Belvoir Castle (Leicestershire, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg/500px-Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/1904">Richard Croft</a> <span class="mw-valign-text-top noprint" typeof="mw:File/Frameless"><a href="//commons.wikimedia.org/wiki/File:Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg#P170" title="Edit this at Structured Data on Commons"><img alt="Edit this at Structured Data on Commons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" data-file-width="20" data-file-height="20"></a></span>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg](https://commons.wikimedia.org/wiki/File:Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg)
+- **Credit:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/7667528">Geograph Britain and Ireland</a> <span class="mw-valign-text-top noprint" typeof="mw:File/Frameless"><a href="//commons.wikimedia.org/wiki/File:Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg#P7482" title="Edit this at Structured Data on Commons"><img alt="Edit this at Structured Data on Commons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" data-file-width="20" data-file-height="20"></a></span>
+
+### Wharram Percy (North Yorkshire, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg/500px-Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/21325">dennis smith</a>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Wharram_Percy,_St_Martins_Church_-_geograph.org.uk_-_659805.jpg](https://commons.wikimedia.org/wiki/File:Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg)
+- **Credit:** From <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/659805">geograph.org.uk</a>
+
+### Warkworth Castle (Northumberland, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Warkworth_Castle_interior%2C_2007.jpg/500px-Warkworth_Castle_interior%2C_2007.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/23448975@N04">Draco2008</a> from UK
+- **License:** CC BY 2.0
+- **Commons Page:** [Warkworth_Castle_interior,_2007.jpg](https://commons.wikimedia.org/wiki/File:Warkworth_Castle_interior%2C_2007.jpg)
+- **Credit:** <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/draco2008/2247337528/">Warkworth Castle</a>
+
+### Warwick Castle (Warwickshire, England)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Warwick_Castle_May_2016.jpg/500px-Warwick_Castle_May_2016.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:DeFacto" title="User:DeFacto">DeFacto</a>
+- **License:** CC BY-SA 4.0
+- **Commons Page:** [Warwick_Castle_May_2016.jpg](https://commons.wikimedia.org/wiki/File:Warwick_Castle_May_2016.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Knappogue Castle (County Clare, Ireland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Muckross_Abbey_Friary_2014.jpg/500px-Muckross_Abbey_Friary_2014.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/w/index.php?title=User:Daviddphotos&amp;action=edit&amp;redlink=1" class="new" title="User:Daviddphotos (page does not exist)">Daviddphotos</a>
+- **License:** CC BY-SA 4.0
+- **Commons Page:** [Muckross_Abbey_Friary_2014.jpg](https://commons.wikimedia.org/wiki/File:Muckross_Abbey_Friary_2014.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Dunsany Castle (County Meath, Ireland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/500px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/3462">Oliver Dixon</a>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg](https://commons.wikimedia.org/wiki/File:Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg)
+- **Credit:** From <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/1405851">geograph.org.uk</a>
+
+### Trim Castle (County Meath, Ireland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Trim_Castle_6.jpg/500px-Trim_Castle_6.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.flickr.com/people/71893348@N00">Andrew Parnell</a>
+- **License:** CC BY 2.0
+- **Commons Page:** [Trim_Castle_6.jpg](https://commons.wikimedia.org/wiki/File:Trim_Castle_6.jpg)
+- **Credit:** <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/71893348@N00/365752330/">Trim Castle</a>
+
+### Leap Castle (County Offaly, Ireland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg/500px-Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/10423">Mike Searle</a>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Castles_of_Leinster-_Leap,_Offaly_(geograph_1952750).jpg](https://commons.wikimedia.org/wiki/File:Castles_of_Leinster-_Leap%2C_Offaly_(geograph_1952750).jpg)
+- **Credit:** From <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/1952750">geograph.org.uk</a>
+
+### Killahara Castle (County Tipperary, Ireland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Killahara_Castle.jpg/500px-Killahara_Castle.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:PerseidsGirl" title="User:PerseidsGirl">PerseidsGirl</a>
+- **License:** CC BY-SA 3.0
+- **Commons Page:** [Killahara_Castle.jpg](https://commons.wikimedia.org/wiki/File:Killahara_Castle.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Dunluce Castle (County Antrim, Northern Ireland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Dunluce_Castle_Northern_Ireland_1.jpg/500px-Dunluce_Castle_Northern_Ireland_1.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/w/index.php?title=User:Iainirwin1&amp;action=edit&amp;redlink=1" class="new" title="User:Iainirwin1 (page does not exist)">Iain Irwin</a>
+- **License:** CC BY-SA 4.0
+- **Commons Page:** [Dunluce_Castle_Northern_Ireland_1.jpg](https://commons.wikimedia.org/wiki/File:Dunluce_Castle_Northern_Ireland_1.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Inverallochy Castle (Aberdeenshire, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg/500px-Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/139">Anne Burgess</a> <span class="mw-valign-text-top noprint" typeof="mw:File/Frameless"><a href="//commons.wikimedia.org/wiki/File:Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg#P170" title="Edit this at Structured Data on Commons"><img alt="Edit this at Structured Data on Commons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" data-file-width="20" data-file-height="20"></a></span>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg](https://commons.wikimedia.org/wiki/File:Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg)
+- **Credit:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/8145389">Geograph Britain and Ireland</a> <span class="mw-valign-text-top noprint" typeof="mw:File/Frameless"><a href="//commons.wikimedia.org/wiki/File:Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg#P7482" title="Edit this at Structured Data on Commons"><img alt="Edit this at Structured Data on Commons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" data-file-width="20" data-file-height="20"></a></span>
+
+### Muchalls Castle (Aberdeenshire, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Muchallscastle.jpg/500px-Muchallscastle.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="https://en.wikipedia.org/wiki/User:Anlace" class="extiw" title="wikipedia:User:Anlace">Anlace</a> at <a href="https://en.wikipedia.org/wiki/" class="extiw" title="wikipedia:">English Wikipedia</a>
+- **License:** Public domain
+- **Commons Page:** [Muchallscastle.jpg](https://commons.wikimedia.org/wiki/File:Muchallscastle.jpg)
+- **Credit:** <span class="int-own-work" lang="">Own work by the original uploader</span>
+
+### Glamis Castle (Angus, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Glamis_Castle_-_geograph.org.uk_-_7848853.jpg/500px-Glamis_Castle_-_geograph.org.uk_-_7848853.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/3972">Colin Smith</a> <span class="mw-valign-text-top noprint" typeof="mw:File/Frameless"><a href="//commons.wikimedia.org/wiki/File:Glamis_Castle_-_geograph.org.uk_-_7848853.jpg#P170" title="Edit this at Structured Data on Commons"><img alt="Edit this at Structured Data on Commons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" data-file-width="20" data-file-height="20"></a></span>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Glamis_Castle_-_geograph.org.uk_-_7848853.jpg](https://commons.wikimedia.org/wiki/File:Glamis_Castle_-_geograph.org.uk_-_7848853.jpg)
+- **Credit:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/7848853">Geograph Britain and Ireland</a> <span class="mw-valign-text-top noprint" typeof="mw:File/Frameless"><a href="//commons.wikimedia.org/wiki/File:Glamis_Castle_-_geograph.org.uk_-_7848853.jpg#P7482" title="Edit this at Structured Data on Commons"><img alt="Edit this at Structured Data on Commons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" data-file-width="20" data-file-height="20"></a></span>
+
+### Aros Castle (Argyll and Bute, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Aros_Castle_-_exterior.jpg/500px-Aros_Castle_-_exterior.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:Otter" title="User:Otter">Otter</a>
+- **License:** CC BY-SA 3.0
+- **Commons Page:** [Aros_Castle_-_exterior.jpg](https://commons.wikimedia.org/wiki/File:Aros_Castle_-_exterior.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Dunyvaig Castle (Argyll and Bute, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2024-10-03_Dunyvaig_Castle.jpg/500px-2024-10-03_Dunyvaig_Castle.jpg
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:Henning2254" title="User:Henning2254">Henning2254</a>
+- **License:** CC BY 4.0
+- **Commons Page:** [2024-10-03_Dunyvaig_Castle.jpg](https://commons.wikimedia.org/wiki/File:2024-10-03_Dunyvaig_Castle.jpg)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Rothesay Castle (Argyll and Bute, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Caerlaverock_Castle_from_the_air.jpg/500px-Caerlaverock_Castle_from_the_air.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/2258">Simon Ledingham</a>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Caerlaverock_Castle_from_the_air.jpg](https://commons.wikimedia.org/wiki/File:Caerlaverock_Castle_from_the_air.jpg)
+- **Credit:** From <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/612780">geograph.org.uk</a>
+
+### Darnaway Castle (Moray, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Darnaway_Castle_-_geograph.org.uk_-_13190.jpg/500px-Darnaway_Castle_-_geograph.org.uk_-_13190.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/139">Anne Burgess</a>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Darnaway_Castle_-_geograph.org.uk_-_13190.jpg](https://commons.wikimedia.org/wiki/File:Darnaway_Castle_-_geograph.org.uk_-_13190.jpg)
+- **Credit:** From <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/13190">geograph.org.uk</a>
+
+### Calvay Castle (Na h-Eileanan Siar, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg/500px-Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg
+- **Type:** main image
+- **Photographer/Author:** <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/profile/10582">Colin Wheatley</a>
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg](https://commons.wikimedia.org/wiki/File:Calbhaigh_castle_-_geograph.org.uk_-_878406.jpg)
+- **Credit:** From <a rel="nofollow" class="external text" href="https://www.geograph.org.uk/photo/878406">geograph.org.uk</a>
+
+### Brodick Castle (North Ayrshire, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Castell_Beaumaris_Castle%2C_Ynys_Mon_%28Anglesey%29%2C_Wales_45.png/500px-Castell_Beaumaris_Castle%2C_Ynys_Mon_%28Anglesey%29%2C_Wales_45.png
+- **Type:** main image
+- **Photographer/Author:** <a href="//commons.wikimedia.org/wiki/User:Llywelyn2000" title="User:Llywelyn2000">Llywelyn2000</a>
+- **License:** CC BY-SA 4.0
+- **Commons Page:** [Castell_Beaumaris_Castle,_Ynys_Mon_(Anglesey),_Wales_45.png](https://commons.wikimedia.org/wiki/File:Castell_Beaumaris_Castle%2C_Ynys_Mon_(Anglesey)%2C_Wales_45.png)
+- **Credit:** <span class="int-own-work" lang="en">Own work</span>
+
+### Dumbarton Castle (West Dunbartonshire, Scotland)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Scotland_Dumbarton_Castle_bordercropped.jpg/500px-Scotland_Dumbarton_Castle_bordercropped.jpg
+- **Type:** main image
+- **Photographer/Author:** Unknown
+- **License:** CC BY-SA 3.0
+- **Commons Page:** [Scotland_Dumbarton_Castle_bordercropped.jpg](https://commons.wikimedia.org/wiki/File:Scotland_Dumbarton_Castle_bordercropped.jpg)
+
+
+### Neath Abbey (Neath Port Talbot, Wales)
+
+- **Image:** https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Ewenny_Priory_Church.jpg/500px-Ewenny_Priory_Church.jpg
+- **Type:** main image
+- **Photographer/Author:** Ruth Sharville
+- **License:** CC BY-SA 2.0
+- **Commons Page:** [Ewenny_Priory_Church.jpg](https://commons.wikimedia.org/wiki/File:Ewenny_Priory_Church.jpg)
+- **Credit:** <a rel="nofollow" class="external free" href="https://www.geograph.org.uk/photo/2064591">https://www.geograph.org.uk/photo/2064591</a>
+
+---
+
+*Report generated by Castle Explorer audit system*

@@ -3270,7 +3270,7 @@ const CASTLES = [
     "condition": "ruin",
     "description": "Founded on Holy Island by St Aidan in 635 AD, this was one of the most important early centres of Christianity in England. The Romanesque rainbow arch is its most famous feature.",
     "history": "Lindisfarne, also known as Holy Island, is a tidal island off the northeast coast of England, which constitutes the civil parish of Holy Island in Northumberland. Holy Island has a recorded history from the 6th century AD; it was an important centre of Celtic Christianity under Saints Aidan, Cuthbert, Eadfrith, and Eadberht of Lindisfarne. The island was originally home to a monastery, which was destroyed during the Viking invasions but re-established as a priory following the Norman Conquest of England. Other notable sites built on the island are St Mary the Virgin parish church, Lindisfarne Castle, several lighthouses and other navigational markers, and a complex network of lime kilns.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg/500px-Holy_Island_Sunrise_%28again%29_%2815064111624%29.jpg",
+    "image": "https://img.castlecore.uk/lindisfarne-priory-2.jpg",
     "rating": 4.5,
     "reviewCount": 3450,
     "county": "Northumberland",
