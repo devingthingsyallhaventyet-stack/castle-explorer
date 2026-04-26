@@ -1,14 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wales - 169 Castles, Land of Dragons and Kings | CastleCore</title>
-<meta name="description" content="Explore Wales' 169 castles - more per square mile than anywhere on Earth. From Edward I's iron ring to Welsh princes' strongholds, discover 2000 years of dragon-blooded defiance.">
-<meta name="keywords" content="castles in Wales, Welsh castles, best castles in Wales, Caernarfon, Conwy, Harlech, Beaumaris, Caerphilly, Edward I, Owain Glyndŵr, Welsh history">
+<title>Wales - 172 Castles, Land of Dragons and Kings | CastleCore</title>
+<meta name="description" content="Explore Wales' 172 Castles - more per square mile than anywhere on Earth. From Edward I's iron ring to Welsh princes' strongholds, discover 2000 years of dragon-blooded defiance.">
+<meta name="keywords" content="castles in Wales, Welsh castles, best castles in Wales, Caernarfon, Conwy, Harlech, Beaumaris, Caerphilly, Edward I, Owain Glyndwr, Welsh history">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://castlecore.uk/wales">
-<meta property="og:title" content="Wales - 169 Castles | CastleCore">
+<meta property="og:title" content="Wales - 172 Castles | CastleCore">
 <meta property="og:description" content="Wales has more castles per square mile than any country on Earth. Explore Edward I's iron ring, Welsh princes' strongholds, and legends of the Red Dragon.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://castlecore.uk/wales">
@@ -28,7 +28,7 @@
   "@context": "https://schema.org",
   "@type": "TouristDestination",
   "name": "Wales' Castles",
-  "description": "169 castle sites across Wales - more per square mile than any country on Earth.",
+  "description": "172 castle sites across Wales - more per square mile than any country on Earth.",
   "url": "https://castlecore.uk/wales",
   "touristType": ["Castle Explorer", "History Enthusiast", "Heritage Tourist"],
   "geo": { "@type": "GeoCoordinates", "latitude": 52.13, "longitude": -3.78 }
@@ -59,7 +59,7 @@ a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 ::selection{background:var(--candlelight);color:var(--navy)}
 
-/* NAV — handled by /components/nav.js */
+/* NAV � handled by /components/nav.js */
 
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -197,9 +197,9 @@ img{max-width:100%;display:block}
   <div class="hero-bg" data-parallax="0.3"><img src="img/wales/hero-wales.webp" srcset="img/wales/hero-wales-mobile.webp 1200w, img/wales/hero-wales-desktop.webp 1800w, img/wales/hero-wales.webp 2560w" sizes="100vw" alt="Wales hero landscape" width="2560" height="1707" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="reveal">WALES<span>169 Castles · Land of Dragons and Kings<br>More Per Square Mile Than Anywhere on Earth</span></h1>
+    <h1 class="reveal">WALES<span>172 Castles � Land of Dragons and Kings<br>More Per Square Mile Than Anywhere on Earth</span></h1>
     <p class="hero-quote reveal">Wales didn't just build castles - it weaponized them. Every valley holds a fortress, every hilltop a ruin, every stone a story of conquest and defiance. This is the land where dragons were real and the castles were built to cage them.</p>
-    <a href="#castles" class="reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore →</a>
+    <a href="#castles" class="reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})" style="display:inline-block;margin-top:16px;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--candlelight);text-decoration:none;letter-spacing:1px;transition:color .2s">Explore ?</a>
   </div>
   <div class="hero-scroll">Scroll</div>
 </section>
@@ -210,17 +210,14 @@ img{max-width:100%;display:block}
     <div class="castles-header reveal">
       <div class="section-label">The Collection</div>
       <h2 class="section-title" style="color:#fff">The Castles of Wales</h2>
-      <p class="section-subtitle" style="margin:0 auto">169 castle sites mapped and documented. More per square mile than any country on Earth.</p>
+      <p class="section-subtitle" style="margin:0 auto">172 castle sites mapped and documented. More per square mile than any country on Earth.</p>
     </div>
     <div class="castle-filters reveal" id="castle-filters">
-      <button class="active" data-filter="all">All (169)</button>
-      <button data-filter="Gwynedd">Gwynedd</button>
-      <button data-filter="Powys">Powys</button>
-      <button data-filter="Pembrokeshire">Pembrokeshire</button>
-      <button data-filter="Carmarthenshire">Carmarthenshire</button>
-      <button data-filter="Monmouthshire">Monmouthshire</button>
-      <button data-filter="Anglesey">Anglesey</button>
-      <button data-filter="Conwy">Conwy</button>
+      <button class="active" data-filter="all">All (172)</button>
+      <button data-filter="north">Snowdonia &amp; North Wales</button>
+      <button data-filter="mid">Mid Wales &amp; the Marches</button>
+      <button data-filter="west">West Wales</button>
+      <button data-filter="south">South Wales</button>
       <button data-filter="intact">Intact</button>
       <button data-filter="ruin">Ruins</button>
     </div>
@@ -238,45 +235,45 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="region-grid reveal" id="region-grid">
-      <a class="region-card" href="/wales/north-wales">
-        <img src="img/wales/north-wales.webp" srcset="img/wales/north-wales-mobile.webp 400w, img/wales/north-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Snowdonia & the North" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+      <a class="region-card" href="/wales/snowdonia-north">
+        <img src="img/wales/north-wales.webp" srcset="img/wales/north-wales-mobile.webp 400w, img/wales/north-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Snowdonia & North Wales" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">49 sites</div>
-          <h3 class="region-card-name">Snowdonia & the North</h3>
+          <h3 class="region-card-name">Snowdonia & North Wales</h3>
           <p class="region-card-desc">Edward I's iron ring around Snowdonia - Caernarfon, Conwy, Harlech, and Beaumaris. The conquest castles that defined medieval warfare.</p>
         </div>
-        <div class="region-card-arrow">→</div>
+        <div class="region-card-arrow">?</div>
       </a>
-      <a class="region-card" href="/wales/mid-wales">
-        <img src="img/wales/mid-wales.webp" srcset="img/wales/mid-wales-mobile.webp 400w, img/wales/mid-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="The Marches & Borders" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
+      <a class="region-card" href="/wales/mid-wales-marches">
+        <img src="img/wales/mid-wales.webp" srcset="img/wales/mid-wales-mobile.webp 400w, img/wales/mid-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Mid Wales & the Marches" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
-          <div class="region-card-castles">28 sites</div>
-          <h3 class="region-card-name">The Marches & Borders</h3>
+          <div class="region-card-castles">19 sites</div>
+          <h3 class="region-card-name">Mid Wales & the Marches</h3>
           <p class="region-card-desc">Powis Castle's terraced grandeur, Chirk's borderland fortress, and the Marcher lordships where England and Wales collided for centuries.</p>
         </div>
-        <div class="region-card-arrow">→</div>
+        <div class="region-card-arrow">?</div>
       </a>
-      <a class="region-card" href="/wales/south-west-wales">
-        <img src="img/wales/south-west-wales.webp" srcset="img/wales/south-west-wales-mobile.webp 400w, img/wales/south-west-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Pembrokeshire & the West" loading="lazy" width="800" height="598" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+      <a class="region-card" href="/wales/west-wales">
+        <img src="img/wales/south-west-wales.webp" srcset="img/wales/south-west-wales-mobile.webp 400w, img/wales/south-west-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="West Wales" loading="lazy" width="800" height="598" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
-          <div class="region-card-castles">52 sites</div>
-          <h3 class="region-card-name">Pembrokeshire & the West</h3>
+          <div class="region-card-castles">50 sites</div>
+          <h3 class="region-card-name">West Wales</h3>
           <p class="region-card-desc">Pembroke's Norman stronghold, Carreg Cennen's mountain eyrie, and the castles that guarded the Irish Sea from Viking and Norman alike.</p>
         </div>
-        <div class="region-card-arrow">→</div>
+        <div class="region-card-arrow">?</div>
       </a>
       <a class="region-card" href="/wales/south-wales">
         <img src="img/wales/south-wales.webp" srcset="img/wales/south-wales-mobile.webp 400w, img/wales/south-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="South Wales" loading="lazy" width="800" height="545" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
-          <div class="region-card-castles">40 sites</div>
+          <div class="region-card-castles">54 sites</div>
           <h3 class="region-card-name">South Wales</h3>
           <p class="region-card-desc">Caerphilly's massive walls, Cardiff's Victorian fantasy, and the industrial valleys' forgotten fortresses that controlled Wales's coal heartland.</p>
         </div>
-        <div class="region-card-arrow">→</div>
+        <div class="region-card-arrow">?</div>
       </a>
     </div>
   </div>
@@ -289,7 +286,7 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="history-header reveal">
       <h2 class="section-title" style="color:#fff">Explore Wales's History</h2>
-      <p class="section-subtitle" style="margin:0 auto">Every siege, conquest, and rebellion left its mark in Welsh stone. These are the events that shaped a nation — and the castles that survived to tell the tale.</p>
+      <p class="section-subtitle" style="margin:0 auto">Every siege, conquest, and rebellion left its mark in Welsh stone. These are the events that shaped a nation � and the castles that survived to tell the tale.</p>
     </div>
     <div class="history-grid">
 
@@ -301,8 +298,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>Roman Wales</h3>
           <p>For three centuries, Rome held Wales with iron discipline. Legions marched from Segontium to Caerleon, building roads, forts, and amphitheatres. When they left, the Welsh princes who emerged would claim descent from both Roman generals and Celtic gods.</p>
-          <div class="hc-castles"><strong>12 sites</strong> — Segontium, Caerleon, Dolaucothi, Y Gaer…</div>
-          <span class="hc-link">Explore Collection →</span>
+          <div class="hc-castles"><strong>12 sites</strong> � Segontium, Caerleon, Dolaucothi, Y Gaer�</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -314,8 +311,8 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>The Norman Marcher Lords</h3>
           <p>William the Conqueror gave his most ruthless barons the Welsh borders and one simple instruction: take what you can hold. For two centuries, these Marcher Lords carved kingdoms from Welsh soil with sword and stone, building the first generation of Welsh castles.</p>
-          <div class="hc-castles"><strong>35 sites</strong> — Chepstow, Pembroke, Caerphilly, Montgomery…</div>
-          <span class="hc-link">Explore Collection →</span>
+          <div class="hc-castles"><strong>35 sites</strong> � Chepstow, Pembroke, Caerphilly, Montgomery�</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -327,34 +324,34 @@ img{max-width:100%;display:block}
         <div class="hc-body">
           <h3>Llywelyn the Last</h3>
           <p>The only Welsh prince ever to unite all of Wales under one crown. Llywelyn ap Gruffudd built alliances, fortresses, and dreams of independence that brought him within a sword's length of making Wales a sovereign nation. His death near Builth Wells ended Welsh independence for seven centuries.</p>
-          <div class="hc-castles"><strong>18 sites</strong> — Dolwyddelan, Castell y Bere, Builth Wells…</div>
-          <span class="hc-link">Explore Collection →</span>
+          <div class="hc-castles"><strong>18 sites</strong> � Dolwyddelan, Castell y Bere, Builth Wells�</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
       <a href="/wales/edward-i-conquest" class="history-card reveal" style="transition-delay:.2s">
         <div class="hc-image">
-          <img src="img/wales/edward-i.webp?v=2" alt="Edward I — Westminster Abbey Sedilia portrait" loading="lazy" width="800" height="150" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/edward-i.webp?v=2" alt="Edward I � Westminster Abbey Sedilia portrait" loading="lazy" width="800" height="150" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">1277-1295</span>
         </div>
         <div class="hc-body">
           <h3>Edward I & The Iron Ring</h3>
           <p>After crushing Llywelyn the Last, Edward Longshanks built the most sophisticated castle network in medieval Europe to hold Wales forever. The "iron ring" of Caernarfon, Conwy, Harlech and Beaumaris cost more than England's annual revenue and changed castle design across Europe.</p>
-          <div class="hc-castles"><strong>8 sites</strong> — Caernarfon, Conwy, Harlech, Beaumaris, Flint…</div>
-          <span class="hc-link">Explore Collection →</span>
+          <div class="hc-castles"><strong>8 sites</strong> � Caernarfon, Conwy, Harlech, Beaumaris, Flint�</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
       <a href="/wales/owain-glyndwr-revolt" class="history-card reveal" style="transition-delay:0s">
         <div class="hc-image">
-          <img src="img/wales/glyndwr-banner.webp?v=2" alt="Owain Glyndŵr's banner" loading="lazy" width="800" height="483" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
+          <img src="img/wales/glyndwr-banner.webp?v=2" alt="Owain Glyndwr's banner" loading="lazy" width="800" height="483" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'">
           <span class="hc-date">1400-1415</span>
         </div>
         <div class="hc-body">
-          <h3>Owain Glyndŵr's Revolt</h3>
-          <p>The scholar turned warrior prince who nearly drove the English from Wales. Glyndŵr captured Edward's "impregnable" castles, proclaimed himself Prince of Wales, and held the first Welsh Parliament. Though his revolt failed, he became Wales' greatest folk hero and symbol of independence.</p>
-          <div class="hc-castles"><strong>15 sites</strong> — Harlech, Aberystwyth, Sycharth, Machynlleth…</div>
-          <span class="hc-link">Explore Collection →</span>
+          <h3>Owain Glyndwr's Revolt</h3>
+          <p>The scholar turned warrior prince who nearly drove the English from Wales. Glyndwr captured Edward's "impregnable" castles, proclaimed himself Prince of Wales, and held the first Welsh Parliament. Though his revolt failed, he became Wales' greatest folk hero and symbol of independence.</p>
+          <div class="hc-castles"><strong>15 sites</strong> � Harlech, Aberystwyth, Sycharth, Machynlleth�</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -365,9 +362,9 @@ img{max-width:100%;display:block}
         </div>
         <div class="hc-body">
           <h3>The Cistercian Abbeys</h3>
-          <p>While lords built castles for war, monks built abbeys for God. The Cistercians transformed remote Welsh valleys into centres of learning, agriculture, and breathtaking architecture. Welsh princes patronised them as symbols of native culture — until Henry VIII tore them all down.</p>
-          <div class="hc-castles"><strong>14 sites</strong> — Tintern, Strata Florida, Valle Crucis, Neath…</div>
-          <span class="hc-link">Explore Collection →</span>
+          <p>While lords built castles for war, monks built abbeys for God. The Cistercians transformed remote Welsh valleys into centres of learning, agriculture, and breathtaking architecture. Welsh princes patronised them as symbols of native culture � until Henry VIII tore them all down.</p>
+          <div class="hc-castles"><strong>14 sites</strong> � Tintern, Strata Florida, Valle Crucis, Neath�</div>
+          <span class="hc-link">Explore Collection ?</span>
         </div>
       </a>
 
@@ -415,23 +412,29 @@ img{max-width:100%;display:block}
   let shown = 0;
   const PER_PAGE = window.innerWidth <= 768 ? 10 : 12;
 
+  const REGION_COUNTIES = {
+    'north': ['Gwynedd','Conwy','Denbighshire','Flintshire','Wrexham','Anglesey'],
+    'mid': ['Powys'],
+    'west': ['Pembrokeshire','Carmarthenshire','Ceredigion'],
+    'south': ['Cardiff','Swansea','Vale of Glamorgan','Bridgend','Neath Port Talbot','Caerphilly','Merthyr Tydfil','Newport','Torfaen','Monmouthshire']
+  };
+
   function getFiltered(){
     if(currentFilter==='all') return castleData;
     if(currentFilter==='intact') return castleData.filter(c=>c.condition==='intact');
     if(currentFilter==='ruin') return castleData.filter(c=>c.condition==='ruin');
-    return castleData.filter(c=>c.county===currentFilter);
+    const counties = REGION_COUNTIES[currentFilter];
+    if(counties) return castleData.filter(c=>counties.includes(c.county));
+    return castleData;
   }
 
   // Map filters to region page URLs
   const regionLinks = {
     'all': '/wales/all-castles',
-    'Gwynedd': '/wales/north-wales',
-    'Powys': '/wales/mid-wales',
-    'Pembrokeshire': '/wales/south-west-wales',
-    'Carmarthenshire': '/wales/south-west-wales',
-    'Monmouthshire': '/wales/south-wales',
-    'Anglesey': '/wales/north-wales',
-    'Conwy': '/wales/north-wales',
+    'north': '/wales/snowdonia-north',
+    'mid': '/wales/mid-wales-marches',
+    'west': '/wales/west-wales',
+    'south': '/wales/south-wales',
     'intact': '/wales/all-castles?filter=intact',
     'ruin': '/wales/all-castles?filter=ruin'
   };
@@ -443,7 +446,7 @@ img{max-width:100%;display:block}
     batch.forEach(c=>{
       const card = document.createElement('div');
       card.className='castle-card';
-      const stars = c.rating ? '★'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const stars = c.rating ? '?'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
@@ -466,7 +469,7 @@ img{max-width:100%;display:block}
     if(remaining > 0){
       loadBtn.style.display = 'block';
       const link = regionLinks[currentFilter] || '/wales/all-castles';
-      loadBtn.textContent = `View All ${filtered.length} Castles →`;
+      loadBtn.textContent = `View All ${filtered.length} Castles ?`;
       loadBtn.onclick = function(){ window.location.href = link; };
     } else {
       loadBtn.style.display = 'none';
