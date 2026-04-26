@@ -561,7 +561,7 @@
                     <div class="castle-card ${cardClass}">
                         ${flagsHtml}
                         <div class="castle-header">
-                            <div class="castle-name">${castle.name}</div>
+                            <div class="castle-name">${castle.name} <a href="https://www.google.com/search?q=${encodeURIComponent(castle.name + ' ' + (castle.county || '') + ' ' + castle.country)}&tbm=isch" target="_blank" style="font-size:0.7em;color:#6ba3d6;text-decoration:none;margin-left:8px" title="Google Image Search">🔍 Google</a></div>
                             <div class="castle-location">${castle.county || 'Unknown County'}, ${castle.country}</div>
                         </div>
                         ${mainImageHtml}
