@@ -312,7 +312,9 @@
             <div class="stats">
                 Total: <span id="totalCount">0</span> | 
                 Flagged: <span id="flaggedCount">0</span> | 
-                Reviewed: <span id="reviewedCount">0</span>
+                Reviewed: <span id="reviewedCount">0</span> |
+                <button id="exportBtn" style="background:#6ba3d6;color:#000;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-weight:bold;margin-left:8px">📥 Export Results</button>
+                <button id="clearBtn" style="background:#444;color:#ccc;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;margin-left:4px">Clear All</button>
             </div>
         </div>
     </div>
@@ -644,6 +646,33 @@
         let dashboard;
         document.addEventListener('DOMContentLoaded', () => {
             dashboard = new CastleReviewDashboard();
+
+            document.getElementById('exportBtn').addEventListener('click', () => {
+                const state = dashboard.reviewState;
+                const results = { correct: [], wrong: [], skipped: [], exported: new Date().toISOString() };
+                for (const [idx, action] of Object.entries(state)) {
+                    const castle = dashboard.allCastles.find(c => String(c._index) === String(idx));
+                    const entry = castle ? { name: castle.name, country: castle.country, county: castle.county, index: castle._index, image: castle.image } : { index: idx };
+                    if (action === 'correct') results.correct.push(entry);
+                    else if (action === 'wrong') results.wrong.push(entry);
+                    else if (action === 'skip') results.skipped.push(entry);
+                }
+                results.summary = { correct: results.correct.length, wrong: results.wrong.length, skipped: results.skipped.length, total: results.correct.length + results.wrong.length + results.skipped.length };
+                const blob = new Blob([JSON.stringify(results, null, 2)], { type: 'application/json' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = 'castle-image-review-' + new Date().toISOString().split('T')[0] + '.json';
+                a.click();
+            });
+
+            document.getElementById('clearBtn').addEventListener('click', () => {
+                if (confirm('Clear all review progress? This cannot be undone.')) {
+                    localStorage.removeItem('castleReviewState');
+                    dashboard.reviewState = {};
+                    dashboard.updateStats();
+                    dashboard.renderCastles();
+                }
+            });
         });
     </script>
 </body>
