@@ -4754,7 +4754,7 @@ const CASTLES = [
     "condition": "ruin",
     "description": "A small but dramatically sited ruin on the shore of Loch Carron. The MacDonells' stronghold was besieged and blown up by the Mackenzies in 1602.",
     "history": "Strome Castle is a ruined castle on the shore of Loch Carron in Stromemore, 3.5 miles south-west of the village of Lochcarron, on the headland between Loch Carron and Loch Kishorn, on the west coast of the Scottish Highlands.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Casteal_Tioram_-_geograph.org.uk_-_6134571.jpg/500px-Casteal_Tioram_-_geograph.org.uk_-_6134571.jpg",
+    "image": "https://img.castlecore.uk/strome-castle-2.jpg",
     "rating": 3.8,
     "reviewCount": 560,
     "county": "Highland",
