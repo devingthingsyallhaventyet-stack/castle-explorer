@@ -259,11 +259,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 /* Leaflet CSS removed */
 
 /* Hover Preview */
-.hover-preview{position:absolute;z-index:9999;background:#fff;border:1px solid #e8e8e8;border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.15);padding:0;width:380px;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:var(--sans)}
+.hover-preview{position:absolute;z-index:9999;background:#fff;border:1px solid #e8e8e8;border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.15);padding:0;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:var(--sans)}
 .hover-preview.show{opacity:1;pointer-events:auto}
 .hover-preview h4{font-family:var(--display);font-size:1.2rem;color:#1a1714;margin-bottom:12px;line-height:1.2;padding:16px 16px 0}
 .hover-preview .hp-gallery{position:relative;margin-bottom:12px;overflow:hidden;border-radius:6px 6px 0 0}
-.hover-preview .hp-gallery img{width:100%;height:220px;object-fit:cover;display:none}
+.hover-preview .hp-gallery img{width:100%;height:160px;object-fit:cover;display:none}
 .hover-preview .hp-gallery img.active{display:block}
 .hover-preview .hp-gallery-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
 .hover-preview .hp-gallery-btn:hover{background:rgba(0,0,0,.8)}
@@ -648,14 +648,13 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
       '<a class="hp-explore" href="/site/'+slug(castle.name)+'.html" target="_blank">Explore</a>'+
       '</div>';
 
-    // Position preview centered over the card
+    // Position preview over the card, matching its width
     const rect=card.getBoundingClientRect();
-    const previewW=380;
-    let left=rect.left+(rect.width-previewW)/2;
+    preview.style.width=rect.width+'px';
+    let left=rect.left;
     let top=rect.top;
     
     // Keep within viewport
-    if(left+previewW>window.innerWidth-10)left=window.innerWidth-previewW-10;
     if(left<10)left=10;
     if(top<10)top=10;
     
