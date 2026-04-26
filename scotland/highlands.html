@@ -256,6 +256,9 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}
 .submenu-inner{justify-content:flex-start;gap:0}
 .submenu-inner a{padding:12px 12px;font-size:.75rem}
+.sites-section{padding-bottom:32px}
+.routes-section{padding-top:32px}
+.content-section{padding:40px 24px}
 }
 @media(max-width:480px){.footer-top{grid-template-columns:1fr}.sites-search{width:100%}.sites-toolbar{flex-direction:column;align-items:stretch}}
 
@@ -629,6 +632,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
   }
 
   function showHoverPreview(card,castle){
+    if(window.innerWidth<=768)return; // No hover on mobile
     if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
     
     const preview=createHoverPreview();
