@@ -41,7 +41,7 @@
       picksEl.innerHTML = top5.map((c, i) => {
         const img = getImg(c);
         return '<a class="pick-card" href="/site/' + slug(c.name) + '.html" data-idx="' + i + '">' +
-          '<img src="' + img + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.style.display='none'">' +
+          '<img src="' + img + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
           '<div class="pick-card-body"><h3>' + c.name + '</h3><span>★ ' + c.rating + '</span></div></a>';
       }).join('');
     }
@@ -137,7 +137,7 @@
           '</div>';
         
         return '<div class="site-card" data-idx="' + i + '">' +
-          '<div class="site-card-img" style="position:relative">' + (img ? '<img src="' + img + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.parentElement.style.background='rgba(201,168,76,.03)'">' : '') + (c.access === 'free' ? '<span class="free-badge">Free</span>' : '') + '</div>' +
+          '<div class="site-card-img" style="position:relative">' + (img ? '<img src="' + img + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">' : '') + (c.access === 'free' ? '<span class="free-badge">Free</span>' : '') + '</div>' +
           '<div class="site-card-body">' +
           '<h3>' + c.name + '</h3>' +
           mobGallery +
