@@ -3985,7 +3985,7 @@ const CASTLES = [
     "condition": "ruin",
     "description": "Famous for its unique Renaissance pleasure garden with sculptured walls depicting the Liberal Arts, Cardinal Virtues, and Planetary Deities. The tower house and garden are remarkable.",
     "history": "Edzell Castle is a ruined 16th-century castle, with an early-17th-century walled garden. It is located close to Edzell, and is around 5 miles (8 km) north of Brechin, in Angus, Scotland. Edzell Castle was begun around 1520 by David Lindsay, 9th Earl of Crawford, and expanded by his son, Sir David Lindsay, Lord Edzell, who also laid out the garden in 1604. The castle saw little military action, and was, in its design, construction and use, more of a country house than a defensive structure. It was briefly occupied by English troops during Oliver Cromwell's invasion of Scotland in 1651. In 1715 it was sold by the Lindsay family, and eventually came into the ownership of the Earl of Dalhousie.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Edzell_Castle_and_Garden_-_geograph.org.uk_-_5817616.jpg/500px-Edzell_Castle_and_Garden_-_geograph.org.uk_-_5817616.jpg",
+    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-edzell-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1670,
     "county": "Angus",
@@ -15662,14 +15662,9 @@ const CASTLES = [
     "access": "paid",
     "_index": 481,
     "gallery": [
-      "https://img.castlecore.uk/brodie-castle-2.jpg",
       "https://img.castlecore.uk/brodie-castle-3.jpg",
       "https://img.castlecore.uk/brodie-castle-4.jpg",
-      "https://img.castlecore.uk/brodie-castle-5.jpg",
-      "https://img.castlecore.uk/brodie-castle-main-2.jpg",
-      "https://img.castlecore.uk/brodie-castle-main-3.jpg",
-      "https://img.castlecore.uk/brodie-castle-main-4.jpg",
-      "https://img.castlecore.uk/brodie-castle-main-5.jpg"
+      "https://img.castlecore.uk/brodie-castle-5.jpg"
     ],
     "youtube": [
       "JWAduEIvN3U",

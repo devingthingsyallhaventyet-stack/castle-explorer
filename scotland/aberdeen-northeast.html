@@ -310,7 +310,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 <!-- 1. COMPACT HERO -->
 <!-- ================================ -->
 <section class="hero">
-<div class="hero-bg"><img src="/img/scotland/aberdeen.webp" alt="Aberdeen & Northeast Scotland landscape" loading="eager"></div>
+<div class="hero-bg"><img src="https://img.castlecore.uk/scotland/Aberdeen/pexels-afpotography-18969332.jpg" alt="Aberdeen & Northeast Scotland landscape" loading="eager"></div>
 <div class="hero-inner">
 <p class="hero-breadcrumb"><a href="/">Home</a> / <a href="/scotland">Scotland</a> / Aberdeen & Northeast</p>
 <h1>Aberdeen & Northeast</h1>
@@ -493,7 +493,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 <script src="/data.js"></script>
 <script>
 (function(){
-  const AC=['Aberdeenshire','Angus','Dundee','Moray'];
+  const AC=['Aberdeenshire','Angus','Dundee'];
   function isA(c){return c.country==='Scotland'&&AC.some(r=>(c.county||'').includes(r))}
   const all=(typeof CASTLES!=='undefined'?CASTLES:[]).filter(isA);
   const freeCount=all.filter(c=>c.access==='free').length;
