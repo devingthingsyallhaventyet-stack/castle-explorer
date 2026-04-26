@@ -330,6 +330,7 @@
               </div>
               <div class="mega-regions">
                 <div class="mega-panel active" data-country="england">
+                  <a href="/england" style="font-weight:600">All England →</a>
                   <a href="/england/northern-england">Northern England</a>
                   <a href="/england/yorkshire">Yorkshire</a>
                   <a href="/england/the-midlands">The Midlands</a>
@@ -338,6 +339,7 @@
                   <a href="/england/south-west">South West</a>
                 </div>
                 <div class="mega-panel" data-country="scotland">
+                  <a href="/scotland" style="font-weight:600">All Scotland →</a>
                   <a href="/scotland/highlands">Highlands &amp; Northern Isles</a>
                   <a href="/scotland/edinburgh-lothians">Edinburgh &amp; Lothians</a>
                   <a href="/scotland/northeast-tayside">Northeast &amp; Tayside</a>
@@ -348,12 +350,14 @@
                   <a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a>
                 </div>
                 <div class="mega-panel" data-country="wales">
+                  <a href="/wales" style="font-weight:600">All Wales →</a>
                   <a href="/wales/snowdonia-north">Snowdonia &amp; North Wales</a>
                   <a href="/wales/mid-wales-marches">Mid Wales &amp; the Marches</a>
                   <a href="/wales/west-wales">West Wales</a>
                   <a href="/wales/south-wales">South Wales</a>
                 </div>
                 <div class="mega-panel" data-country="ireland">
+                  <a href="/ireland" style="font-weight:600">All Ireland →</a>
                   <a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a>
                   <a href="/ireland/kingdom-of-munster">Kingdom of Munster</a>
                   <a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a>
@@ -393,7 +397,7 @@
         <a href="/search.html?type=palace">👑 Palaces</a>
         <a href="/search.html?type=fort">🛡️ Forts</a>
       </div>
-      <span class="mob-heading">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
+      <a href="/england" class="mob-heading" style="text-decoration:none">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</a>
       <div class="mob-sub">
         <a href="/england/northern-england">Northern England</a>
         <a href="/england/yorkshire">Yorkshire</a>
@@ -402,7 +406,7 @@
         <a href="/england/south-east-london">South East &amp; London</a>
         <a href="/england/south-west">South West</a>
       </div>
-      <span class="mob-heading">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span>
+      <a href="/scotland" class="mob-heading" style="text-decoration:none">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</a>
       <div class="mob-sub">
         <a href="/scotland/highlands">Highlands &amp; Northern Isles</a>
         <a href="/scotland/edinburgh-lothians">Edinburgh &amp; Lothians</a>
@@ -413,14 +417,14 @@
         <a href="/scotland/southwest-scotland">Southwest Scotland</a>
         <a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a>
       </div>
-      <span class="mob-heading">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span>
+      <a href="/wales" class="mob-heading" style="text-decoration:none">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a>
       <div class="mob-sub">
         <a href="/wales/snowdonia-north">Snowdonia &amp; North Wales</a>
         <a href="/wales/mid-wales-marches">Mid Wales &amp; the Marches</a>
         <a href="/wales/west-wales">West Wales</a>
         <a href="/wales/south-wales">South Wales</a>
       </div>
-      <span class="mob-heading">🍀 Ireland</span>
+      <a href="/ireland" class="mob-heading" style="text-decoration:none">🍀 Ireland</a>
       <div class="mob-sub">
         <a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a>
         <a href="/ireland/kingdom-of-munster">Kingdom of Munster</a>
