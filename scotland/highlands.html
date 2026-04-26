@@ -256,9 +256,24 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
 @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}
 .submenu-inner{justify-content:flex-start;gap:0}
 .submenu-inner a{padding:12px 12px;font-size:.75rem}
+
+/* Mobile card redesign - hover-card style */
+.grid-view{grid-template-columns:1fr !important;gap:16px}
+.site-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;overflow:hidden}
+.site-card .site-card-img{display:none}
+.site-card .site-card-body{padding:0}
+.site-card .site-card-body h3{font-family:var(--display);font-size:1.15rem;color:#1a1714;padding:14px 16px 0;margin-bottom:0}
+.site-card .site-card-body .sc-meta{display:none}
+.site-card .site-card-body .sc-desc{font-size:.88rem;color:#4a5568;padding:0 16px;margin-bottom:12px;-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.site-card .site-card-foot{display:none}
+.site-card .mob-gallery{display:block !important}
+.site-card .mob-actions{display:flex !important}
+.mob-gallery{position:relative}
 .sites-section{padding-bottom:32px}
 .routes-section{padding-top:32px}
 .content-section{padding:40px 24px}
+.faq-section{padding:40px 24px}
+.nearby{padding:32px 24px 48px}
 }
 @media(max-width:480px){.footer-top{grid-template-columns:1fr}.sites-search{width:100%}.sites-toolbar{flex-direction:column;align-items:stretch}}
 
