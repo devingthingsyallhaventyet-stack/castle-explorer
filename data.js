@@ -4776,34 +4776,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Castle Tioram",
-    "lat": 56.778,
-    "lng": -5.8334,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "14th century",
-    "condition": "ruin",
-    "description": "A dramatic ruin on a tidal island in Loch Moidart, Castle Tioram was the seat of Clan Ranald. Legend says its chief set it ablaze in 1715 to prevent Hanoverian use.",
-    "history": "Castle Tioram is a ruined castle that sits on the tidal island Eilean Tioram in Loch Moidart, Scotland. It is north of Acharacle, approximately 80 km (50 mi) west of Fort William. Though hidden from the sea, the castle controls access to Loch Shiel. It is also known locally as Dorlin Castle. The castle is a scheduled monument.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Inverlochycastle.jpg/500px-Inverlochycastle.jpg",
-    "rating": 4.3,
-    "reviewCount": 1670,
-    "county": "Highland",
-    "tags": [
-      "dramatic-ruin",
-      "photogenic",
-      "hidden-gem"
-    ],
-    "access": "exterior-only",
-    "_index": 158,
-    "gallery": [
-      "https://img.castlecore.uk/castle-tioram-2.jpg",
-      "https://img.castlecore.uk/castle-tioram-3.jpg",
-      "https://img.castlecore.uk/castle-tioram-4.jpg",
-      "https://img.castlecore.uk/castle-tioram-5.jpg"
-    ]
-  },
-  {
     "name": "Inverlochy Castle",
     "lat": 56.8281,
     "lng": -5.0942,
@@ -23152,7 +23124,7 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Tioram Castle Loch",
+    "name": "Castle Tioram",
     "lat": 56.789,
     "lng": -5.793,
     "country": "Scotland",
@@ -60887,7 +60859,7 @@ const CASTLES = [
     "era": "Medieval",
     "condition": "ruin",
     "description": "Traces of a crannog castle on the Isle of Tiree, one of the most wind-swept and sun-blessed islands in Scotland.",
-    "image": "https://img.castlecore.uk/castle-loch-heylipol.jpg",
+    "image": "",
     "rating": 3.2,
     "reviewCount": 30,
     "county": "Argyll and Bute",
@@ -60899,12 +60871,7 @@ const CASTLES = [
     ],
     "access": "free",
     "_index": 2003,
-    "gallery": [
-      "https://img.castlecore.uk/castle-loch-heylipol-2.jpg",
-      "https://img.castlecore.uk/castle-loch-heylipol-3.jpg",
-      "https://img.castlecore.uk/castle-loch-heylipol-4.jpg",
-      "https://img.castlecore.uk/castle-loch-heylipol-5.jpg"
-    ],
+    "gallery": [],
     "history": "A crannog or island dwelling in a loch on the Isle of Tiree. Minimal remains survive. Tiree is famous for its Atlantic winds, machair wildflowers, and being one of the sunniest places in Scotland. The castle site is of archaeological rather than visual interest, part of the island's long history of habitation.",
     "sources": [
       {
