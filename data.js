@@ -41741,34 +41741,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Edrom Castle",
-    "lat": 55.798,
-    "lng": -2.308,
-    "country": "Scotland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "Minimal traces of a medieval castle in the village of Edrom, Berwickshire. More significant as an archaeological site than a visual spectacle.",
-    "image": "",
-    "rating": 3,
-    "reviewCount": 7,
-    "county": "Scottish Borders",
-    "tags": [
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "access": "free",
-    "_index": 1282,
-    "gallery": [],
-    "history": "A medieval castle site in the village of Edrom in the Scottish Borders. Very little remains above ground. The parish of Edrom was historically significant, with a Norman church (parts of which survive) and connections to various Border families. The castle site is of mainly archaeological interest.",
-    "sources": [
-      {
-        "name": "Canmore",
-        "url": "https://canmore.org.uk/site/56385/edrom-castle"
-      }
-    ]
-  },
-  {
     "name": "Elibank Castle",
     "lat": 55.578,
     "lng": -2.878,
