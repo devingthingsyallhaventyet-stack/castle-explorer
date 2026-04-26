@@ -50602,7 +50602,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "restored",
     "description": "A restored tower house on the Kintyre coast, overlooking Sadell Bay towards Arran. Now a Landmark Trust holiday let in an idyllic Argyll setting.",
-    "image": "https://img.castlecore.uk/sadell-castle.jpg",
+    "image": "https://img.castlecore.uk/sadell-castle-3.jpg",
     "rating": 4.1,
     "reviewCount": 280,
     "county": "Argyll and Bute",
