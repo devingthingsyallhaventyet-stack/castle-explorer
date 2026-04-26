@@ -609,14 +609,28 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
     document.getElementById('gridView').innerHTML=vis.map((c,i)=>{
       const img=getImg(c);
       const globalIdx=all.indexOf(c);
-      return '<a class="site-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'">'+
-        '<div class="site-card-img">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
+      const gallery=(c.gallery||[]).slice(0,5);
+      const mobGallery=gallery.length?
+        '<div class="mob-gallery" style="display:none"><div class="mob-gallery-track">'+
+        gallery.map((gi,j)=>'<img src="'+gi+'" alt="" loading="lazy" class="'+(j===0?'active':'')+'" style="width:100%;height:200px;object-fit:cover;display:'+(j===0?'block':'none')+'">').join('')+
+        '</div>'+(gallery.length>1?'<button class="mob-gal-btn prev" onclick="event.preventDefault();mobGalNav(this,-1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">‹</button><button class="mob-gal-btn next" onclick="event.preventDefault();mobGalNav(this,1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">›</button>':'')+
+        (gallery.length>1?'<div class="mob-dots" style="display:flex;justify-content:center;gap:5px;padding:8px 0">'+gallery.map((_,j)=>'<span class="mob-dot'+(j===0?' active':'')+'" style="width:6px;height:6px;border-radius:50%;background:'+(j===0?'var(--burgundy)':'rgba(0,0,0,.2)')+';display:inline-block;cursor:pointer" onclick="event.preventDefault();mobGalGo(this,'+j+')"></span>').join('')+'</div>':'')+'</div>':'';
+      
+      const mobActions='<div class="mob-actions" style="display:none;justify-content:space-between;align-items:center;padding:0 16px 14px;gap:12px">'+
+        '<button onclick="event.preventDefault();event.stopPropagation();alert(\'Saved!\')" style="background:none;border:1px solid #ddd;border-radius:20px;padding:8px 16px;color:#666;font-size:.85rem;cursor:pointer;display:flex;align-items:center;gap:6px;flex-shrink:0">♡ Save</button>'+
+        '<a href="/site/'+slug(c.name)+'.html" style="background:var(--burgundy);border:1px solid var(--burgundy);border-radius:20px;padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;text-align:center;flex:1;text-decoration:none">Explore</a>'+
+        '</div>';
+      
+      return '<div class="site-card" data-idx="'+globalIdx+'" onclick="if(window.innerWidth>768)window.location=\'/site/'+slug(c.name)+'.html\'">'+
+        '<div class="site-card-img" style="position:relative">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
         '<div class="site-card-body">'+
         '<h3>'+c.name+'</h3>'+
+        mobGallery+
         '<p class="sc-meta">'+(c.era||'')+(c.county?' · '+c.county:'')+'</p>'+
         '<p class="sc-desc">'+(c.description||'')+'</p>'+
         '<div class="site-card-foot"><span class="sc-type">'+(c.type||'Castle')+'</span>'+(c.rating?'<span class="sc-rating">★ '+c.rating+'</span>':'')+'</div>'+
-        '</div></a>';
+        mobActions+
+        '</div></div>';
     }).join('');
     const btn=document.getElementById('loadMore');
     btn.classList.toggle('hidden',shown>=list.length);
@@ -704,6 +718,24 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
     const imgs=gallery.querySelectorAll('img');
     imgs.forEach((img,i)=>img.classList.toggle('active',i===idx));
     dots.querySelectorAll('.hp-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  };
+
+  window.mobGalNav=function(btn,dir){
+    const card=btn.closest('.mob-gallery');
+    const imgs=card.querySelectorAll('.mob-gallery-track img');
+    let cur=[...imgs].findIndex(i=>i.style.display==='block');
+    imgs[cur].style.display='none';imgs[cur].classList.remove('active');
+    cur=(cur+dir+imgs.length)%imgs.length;
+    imgs[cur].style.display='block';imgs[cur].classList.add('active');
+    const dots=card.querySelector('.mob-dots');
+    if(dots){dots.querySelectorAll('.mob-dot').forEach((d,i)=>{d.style.background=i===cur?'var(--burgundy)':'rgba(0,0,0,.2)';d.classList.toggle('active',i===cur)});}
+  };
+  window.mobGalGo=function(dot,idx){
+    const card=dot.closest('.mob-gallery');
+    const imgs=card.querySelectorAll('.mob-gallery-track img');
+    imgs.forEach((img,i)=>{img.style.display=i===idx?'block':'none';img.classList.toggle('active',i===idx)});
+    const dots=card.querySelector('.mob-dots');
+    if(dots){dots.querySelectorAll('.mob-dot').forEach((d,i)=>{d.style.background=i===idx?'var(--burgundy)':'rgba(0,0,0,.2)';d.classList.toggle('active',i===idx)});}
   };
 
   function hideHoverPreview(){
