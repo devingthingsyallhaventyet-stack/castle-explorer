@@ -1,0 +1,637 @@
+[
+  {
+    "name": "Castle Bytham Castle",
+    "oldImage": "https://img.castlecore.uk/castle-bytham-castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Castle_1.jpg/500px-Castle_1.jpg"
+  },
+  {
+    "name": "Castletown Castle Laois",
+    "oldImage": "https://img.castlecore.uk/castletown-castle-laois.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castletown_4444.JPG/500px-Castletown_4444.JPG"
+  },
+  {
+    "name": "Clare Island Abbey",
+    "oldImage": "https://img.castlecore.uk/clare-island-abbey.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Claregalway_Abbey_Ruins.jpg/500px-Claregalway_Abbey_Ruins.jpg"
+  },
+  {
+    "name": "Dylan Thomas Boathouse",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dylan_Boathouse.jpg/500px-Dylan_Boathouse.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Thomas_Girtin_006.JPG/500px-Thomas_Girtin_006.JPG"
+  },
+  {
+    "name": "Benton Castle Exterior",
+    "oldImage": "https://img.castlecore.uk/benton-castle-exterior.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/MacLellan%27s_Castle_exterior_2_August_2013.jpg/500px-MacLellan%27s_Castle_exterior_2_August_2013.jpg"
+  },
+  {
+    "name": "Caerwent Roman Town",
+    "oldImage": "https://img.castlecore.uk/caerwent-roman-town.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Romanesque_Doorway_Killishen_-_geograph.org.uk_-_425807.jpg"
+  },
+  {
+    "name": "Nanteos Mansion",
+    "oldImage": "https://img.castlecore.uk/nanteos-mansion.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Dalquarran_Mansion_-_geograph.org.uk_-_424754.jpg/500px-Dalquarran_Mansion_-_geograph.org.uk_-_424754.jpg"
+  },
+  {
+    "name": "Harry Avery Castle",
+    "oldImage": "https://img.castlecore.uk/wiki-harry-avery-castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Harry_Avery%27s_Castle.jpg/500px-Harry_Avery%27s_Castle.jpg"
+  },
+  {
+    "name": "Hill of Slane",
+    "oldImage": "https://img.castlecore.uk/hill-of-slane.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg/500px-Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg"
+  },
+  {
+    "name": "Walshestown Castle",
+    "oldImage": "https://img.castlecore.uk/walshestown-castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Walshestown_Castle_Geograph-3036259-by-Mike-Searle.jpg/500px-Walshestown_Castle_Geograph-3036259-by-Mike-Searle.jpg"
+  },
+  {
+    "name": "Castlestrange Stone",
+    "oldImage": "https://img.castlecore.uk/castlestrange-stone.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Stone_of_Destiny_2018-07-24.jpg/500px-Stone_of_Destiny_2018-07-24.jpg"
+  },
+  {
+    "name": "Muckross Friary",
+    "oldImage": "https://img.castlecore.uk/muckross-friary.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Muckross_Abbey_Friary_2014.jpg/500px-Muckross_Abbey_Friary_2014.jpg"
+  },
+  {
+    "name": "Glin Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Glin_Castle.jpg/500px-Glin_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Franglingham_Castle_01.jpg/500px-Franglingham_Castle_01.jpg"
+  },
+  {
+    "name": "Castle of Park",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Castle_of_Park_Glenluce_exterior.JPG/500px-Castle_of_Park_Glenluce_exterior.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Parke%27s_Castle_courtyard.jpg/500px-Parke%27s_Castle_courtyard.jpg"
+  },
+  {
+    "name": "Castle Girnigoe",
+    "oldImage": "https://img.castlecore.uk/castle-girnigoe.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Girnigoe1.jpg/500px-Girnigoe1.jpg"
+  },
+  {
+    "name": "Ford Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ford_Castle_-_geograph.org.uk_-_354895.jpg/500px-Ford_Castle_-_geograph.org.uk_-_354895.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Carlingford_Castle.jpg/500px-Carlingford_Castle.jpg"
+  },
+  {
+    "name": "Monea Castle",
+    "oldImage": "https://img.castlecore.uk/monea-castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Monea_Castle1.jpg/500px-Monea_Castle1.jpg"
+  },
+  {
+    "name": "Tully Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tully_Castle%2C_County_Fermanagh_-_geograph.org.uk_-_204216.jpg/500px-Tully_Castle%2C_County_Fermanagh_-_geograph.org.uk_-_204216.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Tully-Nally-Castle_03.jpg/500px-Tully-Nally-Castle_03.jpg"
+  },
+  {
+    "name": "Sketrick Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Sketrick_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Sketrick_Castle.jpg/500px-Sketrick_Castle.jpg"
+  },
+  {
+    "name": "Inch Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg/500px-View_of_Antrim_Castle_from_the_river_%2813733537463%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Inch_Abbey_%28geograph_183149%29.jpg/500px-Inch_Abbey_%28geograph_183149%29.jpg"
+  },
+  {
+    "name": "Narrow Water Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Monea_Castle1.jpg/500px-Monea_Castle1.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Narrow_Water_Tower%2C_Warrenpoint_-_geograph.org.uk_-_399224.jpg/500px-Narrow_Water_Tower%2C_Warrenpoint_-_geograph.org.uk_-_399224.jpg"
+  },
+  {
+    "name": "Mellifont Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Derg_Castle_-_geograph.org.uk_-_3379436.jpg/500px-Derg_Castle_-_geograph.org.uk_-_3379436.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/500px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG"
+  },
+  {
+    "name": "Athlone Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BonamargyFriary.JPG/500px-BonamargyFriary.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Castelo_de_Athlone_Irlanda.jpg/500px-Castelo_de_Athlone_Irlanda.jpg"
+  },
+  {
+    "name": "Fore Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/The_ruins_of_Red_Bay_Castle_-_geograph.org.uk_-_3727864.jpg/500px-The_ruins_of_Red_Bay_Castle_-_geograph.org.uk_-_3727864.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/ForeAbbey1.JPG/500px-ForeAbbey1.JPG"
+  },
+  {
+    "name": "Cavan Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kinbane_Castle%2C_daylight.jpg/500px-Kinbane_Castle%2C_daylight.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/500px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg"
+  },
+  {
+    "name": "Roscommon Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ruins_of_Olderfleet_Castle%2C_Larne.jpg/500px-Ruins_of_Olderfleet_Castle%2C_Larne.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Roscommon_-_aerial_-_2024-12-27_12.jpg/500px-Roscommon_-_aerial_-_2024-12-27_12.jpg"
+  },
+  {
+    "name": "Boyle Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Sketrick_Castle.jpg/500px-Sketrick_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Boyle_Abbey_Nave_1997_09_17.jpg/500px-Boyle_Abbey_Nave_1997_09_17.jpg"
+  },
+  {
+    "name": "Sligo Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Jordan%27s_Castle_1.jpg/500px-Jordan%27s_Castle_1.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg/500px-The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg"
+  },
+  {
+    "name": "Grianan of Aileach",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Nendrummonastery.jpg/500px-Nendrummonastery.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Grianan_of_Aileach_Donegal.jpg/500px-Grianan_of_Aileach_Donegal.jpg"
+  },
+  {
+    "name": "Glenveagh Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Inch_Abbey_%28geograph_183149%29.jpg/500px-Inch_Abbey_%28geograph_183149%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg/500px-Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg"
+  },
+  {
+    "name": "Donegal Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Donegalcastle.jpg/500px-Donegalcastle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Doe_Castle%2C_Donegal.jpg/500px-Doe_Castle%2C_Donegal.jpg"
+  },
+  {
+    "name": "Clara Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Narrow_Water_Tower%2C_Warrenpoint_-_geograph.org.uk_-_399224.jpg/500px-Narrow_Water_Tower%2C_Warrenpoint_-_geograph.org.uk_-_399224.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Clara_Castle_-_geograph.org.uk_-_494292.jpg/500px-Clara_Castle_-_geograph.org.uk_-_494292.jpg"
+  },
+  {
+    "name": "Kells Priory",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/500px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kellsp5.JPG/500px-Kellsp5.JPG"
+  },
+  {
+    "name": "Bective Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Tully-Nally-Castle_03.jpg/500px-Tully-Nally-Castle_03.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bective_Abbey.JPG/500px-Bective_Abbey.JPG"
+  },
+  {
+    "name": "Dunsany Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/500px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg/500px-Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg"
+  },
+  {
+    "name": "Swords Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Roscommon_-_aerial_-_2024-12-27_12.jpg/500px-Roscommon_-_aerial_-_2024-12-27_12.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Swords_Castle_wall_with_Constable%27s_Tower.jpg/500px-Swords_Castle_wall_with_Constable%27s_Tower.jpg"
+  },
+  {
+    "name": "Castletown House",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg/500px-The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Outer_Gatehouse.jpg/500px-Outer_Gatehouse.jpg"
+  },
+  {
+    "name": "Maynooth Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Grianan_of_Aileach_Donegal.jpg/500px-Grianan_of_Aileach_Donegal.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Castles_of_Leinster%2C_Maynooth%2C_Kildare_-_geograph.org.uk_-_2496412.jpg/500px-Castles_of_Leinster%2C_Maynooth%2C_Kildare_-_geograph.org.uk_-_2496412.jpg"
+  },
+  {
+    "name": "Charleville Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg/500px-Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Charleville_Castle.png/500px-Charleville_Castle.png"
+  },
+  {
+    "name": "Birr Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Clara_Castle_-_geograph.org.uk_-_494292.jpg/500px-Clara_Castle_-_geograph.org.uk_-_494292.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Birr_Castle%2C_Offaly.jpg/500px-Birr_Castle%2C_Offaly.jpg"
+  },
+  {
+    "name": "Lea Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bective_Abbey.JPG/500px-Bective_Abbey.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Killyleagh_Castle.jpg/500px-Killyleagh_Castle.jpg"
+  },
+  {
+    "name": "Slade Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Picturesque_Ireland_-_a_literary_and_artistic_delineation_of_the_natural_scenery%2C_remarkable_places%2C_historical_antiquities%2C_public_buildings%2C_ancient_abbeys%2C_towers%2C_castles%2C_and_other_romantic_and_%2814779127292%29.jpg/500px-thumbnail.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Slade_Castle.jpg/500px-Slade_Castle.jpg"
+  },
+  {
+    "name": "Dunbrody Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Swords_Castle_wall_with_Constable%27s_Tower.jpg/500px-Swords_Castle_wall_with_Constable%27s_Tower.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dunbrody_Abbey_SE_and_Young_Bulls_1997_08_27.jpg/500px-Dunbrody_Abbey_SE_and_Young_Bulls_1997_08_27.jpg"
+  },
+  {
+    "name": "Kilcrea Friary",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Castles_of_Leinster%2C_Maynooth%2C_Kildare_-_geograph.org.uk_-_2496412.jpg/500px-Castles_of_Leinster%2C_Maynooth%2C_Kildare_-_geograph.org.uk_-_2496412.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kilcrea_Abbey_Friary%2C_Co._Cork..JPG/500px-Kilcrea_Abbey_Friary%2C_Co._Cork..JPG"
+  },
+  {
+    "name": "Ballycarbery Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Birr_Castle%2C_Offaly.jpg/500px-Birr_Castle%2C_Offaly.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ballycarbery_Castle-IMG_5554.jpg/500px-Ballycarbery_Castle-IMG_5554.jpg"
+  },
+  {
+    "name": "Carrigogunnell Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Slade_Castle.jpg/500px-Slade_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Carrigogunnell.jpg/500px-Carrigogunnell.jpg"
+  },
+  {
+    "name": "Ennis Friary",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Timoleague_Friary.jpg/500px-Timoleague_Friary.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/ENNIS_Friary%2C_DSC_4459.jpg/500px-ENNIS_Friary%2C_DSC_4459.jpg"
+  },
+  {
+    "name": "Quin Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kilcrea_Abbey_Friary%2C_Co._Cork..JPG/500px-Kilcrea_Abbey_Friary%2C_Co._Cork..JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Quin_Abbey%2C_Ireland.jpg/500px-Quin_Abbey%2C_Ireland.jpg"
+  },
+  {
+    "name": "Knappogue Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Muckross_Abbey_Friary_2014.jpg/500px-Muckross_Abbey_Friary_2014.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Knappogue_Castle.jpg/500px-Knappogue_Castle.jpg"
+  },
+  {
+    "name": "Dysert O'Dea Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ballycarbery_Castle-IMG_5554.jpg/500px-Ballycarbery_Castle-IMG_5554.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Odea_castle.jpg/500px-Odea_castle.jpg"
+  },
+  {
+    "name": "Aughnanure Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Kilmallock_Priory_W_2007_08_08.jpg/500px-Kilmallock_Priory_W_2007_08_08.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Aughnanure_Castle_%28pixinn.net%29.jpg/500px-Aughnanure_Castle_%28pixinn.net%29.jpg"
+  },
+  {
+    "name": "Thoor Ballylee",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Quin_Abbey%2C_Ireland.jpg/500px-Quin_Abbey%2C_Ireland.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Thoor_Ballylee002%28js%29.jpg/500px-Thoor_Ballylee002%28js%29.jpg"
+  },
+  {
+    "name": "Portumna Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Leamaneh_Castle_Ireland_12283094446_o.jpg/500px-Leamaneh_Castle_Ireland_12283094446_o.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Portumna_castle.jpg/500px-Portumna_castle.jpg"
+  },
+  {
+    "name": "Nenagh Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Odea_castle.jpg/500px-Odea_castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Centre_of_Nenagh_-_panoramio.jpg/500px-Centre_of_Nenagh_-_panoramio.jpg"
+  },
+  {
+    "name": "Roscrea Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Claregalway_Abbey_Ruins.jpg/500px-Claregalway_Abbey_Ruins.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Roscrea_Castle.jpg/500px-Roscrea_Castle.jpg"
+  },
+  {
+    "name": "Lismore Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Summerhill_House%2C_Main_front.jpg/500px-Summerhill_House%2C_Main_front.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Lismore_Castle_%28Lismore%2C_Co._Waterford%29.jpg/500px-Lismore_Castle_%28Lismore%2C_Co._Waterford%29.jpg"
+  },
+  {
+    "name": "Dublin Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/The_Dubhlinn_Gardens_Dublin_Castle_01.JPG/500px-The_Dubhlinn_Gardens_Dublin_Castle_01.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg/500px-Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg"
+  },
+  {
+    "name": "Trim Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Trim_Castle_6.jpg/500px-Trim_Castle_6.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Shane%27s_Castle%2C_County_Antrim_-_geograph.org.uk_-_155426.jpg/500px-Shane%27s_Castle%2C_County_Antrim_-_geograph.org.uk_-_155426.jpg"
+  },
+  {
+    "name": "Coity Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Lismore_Castle_%28Lismore%2C_Co._Waterford%29.jpg/500px-Lismore_Castle_%28Lismore%2C_Co._Waterford%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coity_Castle.jpg/500px-Coity_Castle.jpg"
+  },
+  {
+    "name": "Ogmore Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG/500px-Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ogmore_Castle_5085.jpg/500px-Ogmore_Castle_5085.jpg"
+  },
+  {
+    "name": "Llawhaden Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coity_Castle.jpg/500px-Coity_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg/500px-Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg"
+  },
+  {
+    "name": "Cilgerran Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ogmore_Castle_5085.jpg/500px-Ogmore_Castle_5085.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/01_Cilgerran_Castle.jpg/500px-01_Cilgerran_Castle.jpg"
+  },
+  {
+    "name": "Manorbier Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg/500px-Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Manorbier_Castle.jpg/500px-Manorbier_Castle.jpg"
+  },
+  {
+    "name": "Cymer Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/01_Cilgerran_Castle.jpg/500px-01_Cilgerran_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg/500px-The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg"
+  },
+  {
+    "name": "Basingwerk Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carew_Castle%2C_Pembrokeshire%2C_UK.jpg/500px-Carew_Castle%2C_Pembrokeshire%2C_UK.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Aerial_View_of_Basingwerk_Abbey%2C.jpg/500px-Aerial_View_of_Basingwerk_Abbey%2C.jpg"
+  },
+  {
+    "name": "Strata Florida Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Aerial_View_of_Basingwerk_Abbey%2C.jpg/500px-Aerial_View_of_Basingwerk_Abbey%2C.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/DSCN4297-strata-florida-arch.JPG/500px-DSCN4297-strata-florida-arch.JPG"
+  },
+  {
+    "name": "Bronllys Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg/500px-Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg/500px-Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg"
+  },
+  {
+    "name": "Powis Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg/500px-Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Powis_Castle_2016_116_%28cropped%29.jpg/500px-Powis_Castle_2016_116_%28cropped%29.jpg"
+  },
+  {
+    "name": "Chirk Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Castle_and_Path.JPG/500px-Castle_and_Path.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/ChirkCastle1.JPG/500px-ChirkCastle1.JPG"
+  },
+  {
+    "name": "Ewloe Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Powis_Castle_2016_116_%28cropped%29.jpg/500px-Powis_Castle_2016_116_%28cropped%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ewloe_Castle_-_geograph.org.uk_-_878422.jpg/500px-Ewloe_Castle_-_geograph.org.uk_-_878422.jpg"
+  },
+  {
+    "name": "Castell y Bere",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/ChirkCastle1.JPG/500px-ChirkCastle1.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/CastellybereFMA01.jpg/500px-CastellybereFMA01.jpg"
+  },
+  {
+    "name": "Dolbadarn Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/CastellybereFMA01.jpg/500px-CastellybereFMA01.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Dolbadarn_Castle_Cadw.jpg/500px-Dolbadarn_Castle_Cadw.jpg"
+  },
+  {
+    "name": "Denbigh Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Dolbadarn_Castle_Cadw.jpg/500px-Dolbadarn_Castle_Cadw.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Aerial_view_of_Denbigh_Castle%2C_by_Cadw.jpg/500px-Aerial_view_of_Denbigh_Castle%2C_by_Cadw.jpg"
+  },
+  {
+    "name": "Grosmont Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png/500px-Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/GrosmontCastle4.jpg/500px-GrosmontCastle4.jpg"
+  },
+  {
+    "name": "Skenfrith Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Aerial_view_of_Denbigh_Castle%2C_by_Cadw.jpg/500px-Aerial_view_of_Denbigh_Castle%2C_by_Cadw.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/SKENFRITH_CASTLE.jpg/500px-SKENFRITH_CASTLE.jpg"
+  },
+  {
+    "name": "Chepstow Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/SKENFRITH_CASTLE.jpg/500px-SKENFRITH_CASTLE.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Chepstow_Castle_%284197%29.jpg/500px-Chepstow_Castle_%284197%29.jpg"
+  },
+  {
+    "name": "Margam Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Chepstow_Castle_%284197%29.jpg/500px-Chepstow_Castle_%284197%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Margamabbey-wyrdlight-7458.jpg/500px-Margamabbey-wyrdlight-7458.jpg"
+  },
+  {
+    "name": "Ewenny Priory",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Margamabbey-wyrdlight-7458.jpg/500px-Margamabbey-wyrdlight-7458.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Ewenny_Priory_Church.jpg/500px-Ewenny_Priory_Church.jpg"
+  },
+  {
+    "name": "Neath Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Ewenny_Priory_Church.jpg/500px-Ewenny_Priory_Church.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Neath_abbey%2C_Glamorgan_-_founded_by_Richard_De_Cranville%2C_circa_1129.jpeg/500px-Neath_abbey%2C_Glamorgan_-_founded_by_Richard_De_Cranville%2C_circa_1129.jpeg"
+  },
+  {
+    "name": "Oystermouth Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Neath_abbey%2C_Glamorgan_-_founded_by_Richard_De_Cranville%2C_circa_1129.jpeg/500px-Neath_abbey%2C_Glamorgan_-_founded_by_Richard_De_Cranville%2C_circa_1129.jpeg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Oystermouth_Castle_-_geograph.org.uk_-_292767.jpg/500px-Oystermouth_Castle_-_geograph.org.uk_-_292767.jpg"
+  },
+  {
+    "name": "Llansteffan Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Oystermouth_Castle_-_geograph.org.uk_-_292767.jpg/500px-Oystermouth_Castle_-_geograph.org.uk_-_292767.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Llansteffan_Castle_and_Beach.jpg/500px-Llansteffan_Castle_and_Beach.jpg"
+  },
+  {
+    "name": "Laugharne Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Llansteffan_Castle_and_Beach.jpg/500px-Llansteffan_Castle_and_Beach.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg/500px-Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg"
+  },
+  {
+    "name": "Carreg Cennen Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg/500px-Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg/500px-Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg"
+  },
+  {
+    "name": "Kidwelly Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg/500px-Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Kidwelly_castle_whole.JPG/500px-Kidwelly_castle_whole.JPG"
+  },
+  {
+    "name": "Pembroke Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Kidwelly_castle_whole.JPG/500px-Kidwelly_castle_whole.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pembroke_Castle_-_June_2011.jpg/500px-Pembroke_Castle_-_June_2011.jpg"
+  },
+  {
+    "name": "Raglan Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pembroke_Castle_-_June_2011.jpg/500px-Pembroke_Castle_-_June_2011.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Raglan_Castle%27s_main_entrance.jpg/500px-Raglan_Castle%27s_main_entrance.jpg"
+  },
+  {
+    "name": "Castell Coch",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Raglan_Castle%27s_main_entrance.jpg/500px-Raglan_Castle%27s_main_entrance.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Castell_Ffwl-y-mwn.jpg/500px-Castell_Ffwl-y-mwn.jpg"
+  },
+  {
+    "name": "Cardiff Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Aerial_view_of_Cardiff_Castle.jpg/500px-Aerial_view_of_Cardiff_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Aerial_view_of_Cardiff_Castle.jpg/500px-Aerial_view_of_Cardiff_Castle.jpg"
+  },
+  {
+    "name": "Rhuddlan Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Aerial_view_of_Cardiff_Castle.jpg/500px-Aerial_view_of_Cardiff_Castle.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rhuddlan_Castle%2C_May_2012.jpg/500px-Rhuddlan_Castle%2C_May_2012.jpg"
+  },
+  {
+    "name": "Aberystwyth Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rhuddlan_Castle%2C_May_2012.jpg/500px-Rhuddlan_Castle%2C_May_2012.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aberystwyth_castle_edit1.jpg/500px-Aberystwyth_castle_edit1.jpg"
+  },
+  {
+    "name": "Flint Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aberystwyth_castle_edit1.jpg/500px-Aberystwyth_castle_edit1.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Flint_-_Flint_Castle_-_20220322133345.jpg/500px-Flint_-_Flint_Castle_-_20220322133345.jpg"
+  },
+  {
+    "name": "Beaumaris Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Flint_-_Flint_Castle_-_20220322133345.jpg/500px-Flint_-_Flint_Castle_-_20220322133345.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Castell_Beaumaris_Castle%2C_Ynys_Mon_%28Anglesey%29%2C_Wales_45.png/500px-Castell_Beaumaris_Castle%2C_Ynys_Mon_%28Anglesey%29%2C_Wales_45.png"
+  },
+  {
+    "name": "Conwy Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/500px-Conwy_Castle%2C_water_view1.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg/500px-Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg"
+  },
+  {
+    "name": "Brodick Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Castell_Beaumaris_Castle%2C_Ynys_Mon_%28Anglesey%29%2C_Wales_45.png/500px-Castell_Beaumaris_Castle%2C_Ynys_Mon_%28Anglesey%29%2C_Wales_45.png",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Brodick_Castle_Main_Building_East_01.jpg/500px-Brodick_Castle_Main_Building_East_01.jpg"
+  },
+  {
+    "name": "Lochranza Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Brodick_Castle_Main_Building_East_01.jpg/500px-Brodick_Castle_Main_Building_East_01.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Lochranza_Castle_1.jpg/500px-Lochranza_Castle_1.jpg"
+  },
+  {
+    "name": "Culzean Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Lochranza_Castle_1.jpg/500px-Lochranza_Castle_1.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Culzean_Castle_house_and_gardens_01.JPG/500px-Culzean_Castle_house_and_gardens_01.JPG"
+  },
+  {
+    "name": "Dean Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Culzean_Castle_house_and_gardens_01.JPG/500px-Culzean_Castle_house_and_gardens_01.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Dean_Castle%2C_East_Ayrshire_%28cropped%29.jpg/500px-Dean_Castle%2C_East_Ayrshire_%28cropped%29.jpg"
+  },
+  {
+    "name": "Aberdour Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Carrick_Castle_tower_from_west.jpg/500px-Carrick_Castle_tower_from_west.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Aberdour_Castle_from_dovecote.jpg/500px-Aberdour_Castle_from_dovecote.jpg"
+  },
+  {
+    "name": "Dunfermline Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Aberdour_Castle_from_dovecote.jpg/500px-Aberdour_Castle_from_dovecote.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Dunfermline_Abbey_Geograph.jpg/500px-Dunfermline_Abbey_Geograph.jpg"
+  },
+  {
+    "name": "Scone Palace",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Dunfermline_Abbey_Geograph.jpg/500px-Dunfermline_Abbey_Geograph.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Scone_Palace_-_Front_side.jpg/500px-Scone_Palace_-_Front_side.jpg"
+  },
+  {
+    "name": "Blair Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Scone_Palace_-_Front_side.jpg/500px-Scone_Palace_-_Front_side.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Blair_castle_-_facade.jpg/500px-Blair_castle_-_facade.jpg"
+  },
+  {
+    "name": "Kisimul Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Blair_castle_-_facade.jpg/500px-Blair_castle_-_facade.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Kisimul_%2834570267945%29.jpg/500px-Kisimul_%2834570267945%29.jpg"
+  },
+  {
+    "name": "Armadale Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Kisimul_%2834570267945%29.jpg/500px-Kisimul_%2834570267945%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Armadale_Castle_5.jpg/500px-Armadale_Castle_5.jpg"
+  },
+  {
+    "name": "Dunvegan Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Armadale_Castle_5.jpg/500px-Armadale_Castle_5.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/500px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg"
+  },
+  {
+    "name": "Sweetheart Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/500px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Sweetheart_Abbey.jpg/500px-Sweetheart_Abbey.jpg"
+  },
+  {
+    "name": "Threave Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/MacLellan%27s_Castle_exterior_2_August_2013.jpg/500px-MacLellan%27s_Castle_exterior_2_August_2013.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Threave_Castle_20080422_-_view_from_Dee.jpg/500px-Threave_Castle_20080422_-_view_from_Dee.jpg"
+  },
+  {
+    "name": "Smailholm Tower",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Threave_Castle_20080422_-_view_from_Dee.jpg/500px-Threave_Castle_20080422_-_view_from_Dee.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/SmailholmLochan.jpg/500px-SmailholmLochan.jpg"
+  },
+  {
+    "name": "Neidpath Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/SmailholmLochan.jpg/500px-SmailholmLochan.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Neidpath_Castle_2014_1.jpg/500px-Neidpath_Castle_2014_1.jpg"
+  },
+  {
+    "name": "Kelso Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Neidpath_Castle_2014_1.jpg/500px-Neidpath_Castle_2014_1.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kelso_Abbey1.jpg/500px-Kelso_Abbey1.jpg"
+  },
+  {
+    "name": "Dryburgh Abbey",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kelso_Abbey1.jpg/500px-Kelso_Abbey1.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Dryburgh_Abbey%2C_2004.jpg/500px-Dryburgh_Abbey%2C_2004.jpg"
+  },
+  {
+    "name": "Hermitage Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ruins_of_St_Mary%27s_Abbey%2C_Melrose_%28Scotland%27s_first_Cistercian_monastery%2C_1136%29%2C_showing_late_14th-century_Gothic_architecture_in_rose-colored_sandstone_with_medieval_cemetery%2C_burial_place_of_Robert_the_Bruce%27s_heart%2C_Scottish_Borders.jpg/500px-thumbnail.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Hermitage_Castle_06.jpg/500px-Hermitage_Castle_06.jpg"
+  },
+  {
+    "name": "Caerlaverock Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Hermitage_Castle_06.jpg/500px-Hermitage_Castle_06.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Caerlaverock_Castle_from_the_air.jpg/500px-Caerlaverock_Castle_from_the_air.jpg"
+  },
+  {
+    "name": "Rothesay Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Caerlaverock_Castle_from_the_air.jpg/500px-Caerlaverock_Castle_from_the_air.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Rothesay_Castle_-_Gatehouse_and_Pigeon_Tower_2016.jpg/500px-Rothesay_Castle_-_Gatehouse_and_Pigeon_Tower_2016.jpg"
+  },
+  {
+    "name": "Skipness Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Rothesay_Castle_-_Gatehouse_and_Pigeon_Tower_2016.jpg/500px-Rothesay_Castle_-_Gatehouse_and_Pigeon_Tower_2016.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Skipness_Castle_%28September_2023%29.jpg/500px-Skipness_Castle_%28September_2023%29.jpg"
+  },
+  {
+    "name": "Carnasserie Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Skipness_Castle_%28September_2023%29.jpg/500px-Skipness_Castle_%28September_2023%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg/500px-Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg"
+  },
+  {
+    "name": "Dunstaffnage Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg/500px-Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Dunstaffnage_Castle_-_geograph.org.uk_-_7933659.jpg/500px-Dunstaffnage_Castle_-_geograph.org.uk_-_7933659.jpg"
+  },
+  {
+    "name": "Duart Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Dunstaffnage_Castle_-_geograph.org.uk_-_7933659.jpg/500px-Dunstaffnage_Castle_-_geograph.org.uk_-_7933659.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG/500px-Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG"
+  },
+  {
+    "name": "Castle Stalker",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG/500px-Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Castle_Stalker_-_geograph.org.uk_-_204092.jpg/500px-Castle_Stalker_-_geograph.org.uk_-_204092.jpg"
+  },
+  {
+    "name": "Ardvreck Castle",
+    "oldImage": "https://img.castlecore.uk/ardvreck-castle-2.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg/500px-2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg"
+  },
+  {
+    "name": "Fort George",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg/500px-2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_approach_to_the_fortified_house.JPG/500px-The_approach_to_the_fortified_house.JPG"
+  },
+  {
+    "name": "Elgin Cathedral",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Elgin_Cathedral_view_from_rear.jpg/500px-Elgin_Cathedral_view_from_rear.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/ArdfertCathedral.jpg/500px-ArdfertCathedral.jpg"
+  },
+  {
+    "name": "Drum Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Drum_Castle_-_geograph.org.uk_-_4952750.jpg/500px-Drum_Castle_-_geograph.org.uk_-_4952750.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Nendrummonastery.jpg/500px-Nendrummonastery.jpg"
+  },
+  {
+    "name": "Loch Leven Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Lochleven_west_wall.JPG/500px-Lochleven_west_wall.JPG",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ballindaloch_Castle.jpg/500px-Ballindaloch_Castle.jpg"
+  },
+  {
+    "name": "Lindisfarne Priory",
+    "oldImage": "https://img.castlecore.uk/lindisfarne-priory-2.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Kilmallock_Priory_W_2007_08_08.jpg/500px-Kilmallock_Priory_W_2007_08_08.jpg"
+  },
+  {
+    "name": "Tynemouth Priory and Castle",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Tynemouth_Priory_Aerial.jpg/500px-Tynemouth_Priory_Aerial.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Whare_Ghaists_And_Houlets_Nightly_Cry_-_geograph.org.uk_-_1213346.jpg/500px-Whare_Ghaists_And_Houlets_Nightly_Cry_-_geograph.org.uk_-_1213346.jpg"
+  },
+  {
+    "name": "Old Wardour Castle",
+    "oldImage": "https://img.castlecore.uk/scraped-wardour.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/0/01/Castles_old_and_new_-_geograph.org.uk_-_163364.jpg"
+  },
+  {
+    "name": "Tower of London",
+    "oldImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/500px-Tower_of_London_from_the_Shard_%288515883950%29.jpg",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Upstream_to_the_tower_-_geograph.org.uk_-_1387392.jpg/500px-Upstream_to_the_tower_-_geograph.org.uk_-_1387392.jpg"
+  }
+]

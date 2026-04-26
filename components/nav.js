@@ -340,11 +340,11 @@
                 <div class="mega-panel" data-country="scotland">
                   <a href="/scotland/highlands">Highlands &amp; Northern Isles</a>
                   <a href="/scotland/edinburgh-lothians">Edinburgh &amp; Lothians</a>
-                  <a href="/scotland/aberdeen-northeast">Northeast &amp; Tayside</a>
-                  <a href="/scotland/argyll-islands">Argyll &amp; Western Isles</a>
+                  <a href="/scotland/northeast-tayside">Northeast &amp; Tayside</a>
+                  <a href="/scotland/argyll-western-isles">Argyll &amp; Western Isles</a>
                   <a href="/scotland/fife-perthshire">Fife &amp; Perthshire</a>
                   <a href="/scotland/borders">Scottish Borders</a>
-                  <a href="/scotland/dumfries-galloway">Southwest Scotland</a>
+                  <a href="/scotland/southwest-scotland">Southwest Scotland</a>
                   <a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a>
                 </div>
                 <div class="mega-panel" data-country="wales">
@@ -406,11 +406,11 @@
       <div class="mob-sub">
         <a href="/scotland/highlands">Highlands &amp; Northern Isles</a>
         <a href="/scotland/edinburgh-lothians">Edinburgh &amp; Lothians</a>
-        <a href="/scotland/aberdeen-northeast">Northeast &amp; Tayside</a>
-        <a href="/scotland/argyll-islands">Argyll &amp; Western Isles</a>
+        <a href="/scotland/northeast-tayside">Northeast &amp; Tayside</a>
+        <a href="/scotland/argyll-western-isles">Argyll &amp; Western Isles</a>
         <a href="/scotland/fife-perthshire">Fife &amp; Perthshire</a>
         <a href="/scotland/borders">Scottish Borders</a>
-        <a href="/scotland/dumfries-galloway">Southwest Scotland</a>
+        <a href="/scotland/southwest-scotland">Southwest Scotland</a>
         <a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a>
       </div>
       <span class="mob-heading">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span>
