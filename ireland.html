@@ -220,10 +220,9 @@ img{max-width:100%;display:block}
       <button data-filter="Ireland's Ancient East">Ireland's Ancient East</button>
       <button data-filter="The Heartlands">The Heartlands</button>
       <button data-filter="Dublin & The Pale">Dublin & The Pale</button>
-      <button data-filter="The Northwest & Ulster">The Northwest & Ulster</button>
+      <button data-filter="Ulster & the North">Ulster &amp; the North</button>
       <button data-filter="intact">Intact</button>
-      <button data-filter="partial ruin">Partial Ruin</button>
-      <button data-filter="ruin">Ruin</button>
+      <button data-filter="ruin">Ruins</button>
     </div>
     <div class="castle-grid" id="castle-grid"></div>
     <button class="load-more" id="load-more">Show More Castles</button>
@@ -272,7 +271,7 @@ img{max-width:100%;display:block}
         <img src="img/ireland/region-heartlands.webp?v=2" alt="The Heartlands" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
-          <div class="region-card-castles">146 sites</div>
+          <div class="region-card-castles">120 sites</div>
           <h3 class="region-card-name">The Heartlands</h3>
           <p class="region-card-desc">Ireland's hidden interior, where tower houses rise from flat midlands pastures and ruined abbeys mark the footprint of medieval monastic power.</p>
         </div>
@@ -288,12 +287,12 @@ img{max-width:100%;display:block}
         </div>
         <div class="region-card-arrow">→</div>
       </a>
-      <a class="region-card" href="/ireland/northwest-and-ulster">
-        <img src="img/ireland/region-northwest-ulster.webp?v=2" alt="The Northwest & Ulster" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+      <a class="region-card" href="/ireland/ulster-and-the-north">
+        <img src="img/ireland/region-northwest-ulster.webp?v=2" alt="Ulster & the North" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
-          <div class="region-card-castles">98 sites</div>
-          <h3 class="region-card-name">The Northwest & Ulster</h3>
+          <div class="region-card-castles">124 sites</div>
+          <h3 class="region-card-name">Ulster &amp; the North</h3>
           <p class="region-card-desc">The last Gaelic frontier — where O'Donnell and O'Neill chiefs defied the Crown from lake islands and clifftop strongholds until the Flight of the Earls.</p>
         </div>
         <div class="region-card-arrow">→</div>
@@ -456,26 +455,25 @@ img{max-width:100%;display:block}
     'County Laois': 'The Heartlands',
     'County Westmeath': 'The Heartlands',
     'County Longford': 'The Heartlands',
-    'County Roscommon': 'The Heartlands',
+    'County Roscommon': 'Ulster & the North',
     'County Dublin': 'Dublin & The Pale',
     'County Kildare': 'Dublin & The Pale',
     'County Louth': 'Dublin & The Pale',
-    'County Donegal': 'The Northwest & Ulster',
-    'County Cavan': 'The Northwest & Ulster',
-    'County Monaghan': 'The Northwest & Ulster',
-    'County Down': 'The Northwest & Ulster',
-    'County Tyrone': 'The Northwest & Ulster',
-    'County Fermanagh': 'The Northwest & Ulster',
-    'County Derry': 'The Northwest & Ulster',
-    'County Antrim': 'The Northwest & Ulster',
-    'County Armagh': 'The Northwest & Ulster'
+    'County Donegal': 'Ulster & the North',
+    'County Cavan': 'Ulster & the North',
+    'County Monaghan': 'Ulster & the North',
+    'County Down': 'Ulster & the North',
+    'County Tyrone': 'Ulster & the North',
+    'County Fermanagh': 'Ulster & the North',
+    'County Derry': 'Ulster & the North',
+    'County Antrim': 'Ulster & the North',
+    'County Armagh': 'Ulster & the North'
   };
 
   function getFiltered(){
     if(currentFilter==='all') return castleData;
     if(currentFilter==='intact') return castleData.filter(c=>c.condition==='intact' || c.condition==='restored');
-    if(currentFilter==='partial ruin') return castleData.filter(c=>c.condition==='partial ruin');
-    if(currentFilter==='ruin') return castleData.filter(c=>c.condition==='ruin');
+    if(currentFilter==='ruin') return castleData.filter(c=>c.condition==='ruin'||c.condition==='partial ruin');
     // Region filter
     return castleData.filter(c=> countyToRegion[c.county] === currentFilter);
   }
@@ -488,9 +486,8 @@ img{max-width:100%;display:block}
     "Ireland's Ancient East": '/ireland/irelands-ancient-east',
     'The Heartlands': '/ireland/the-heartlands',
     'Dublin & The Pale': '/ireland/dublin-and-the-pale',
-    'The Northwest & Ulster': '/ireland/northwest-and-ulster',
+    'Ulster & the North': '/ireland/ulster-and-the-north',
     'intact': '/ireland/all-castles?filter=intact',
-    'partial ruin': '/ireland/all-castles?filter=partial-ruin',
     'ruin': '/ireland/all-castles?filter=ruin'
   };
 
