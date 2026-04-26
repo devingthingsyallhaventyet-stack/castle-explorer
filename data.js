@@ -60822,7 +60822,7 @@ const CASTLES = [
     "era": "Medieval",
     "condition": "ruin",
     "description": "Traces of a crannog castle on the Isle of Tiree, one of the most wind-swept and sun-blessed islands in Scotland.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/DSCN6522_Island_House%2C_Tiree.jpg/500px-DSCN6522_Island_House%2C_Tiree.jpg",
     "rating": 3.2,
     "reviewCount": 30,
     "county": "Argyll and Bute",
@@ -60834,9 +60834,7 @@ const CASTLES = [
     ],
     "access": "free",
     "_index": 2003,
-    "gallery": [
-      
-    ],
+    "gallery": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/DSCN6522_Island_House%2C_Tiree.jpg/500px-DSCN6522_Island_House%2C_Tiree.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/DSCN6523_Island_House%2C_Tiree.jpg/500px-DSCN6523_Island_House%2C_Tiree.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/DSCN6528_Island_House%2C_Tiree.jpg/500px-DSCN6528_Island_House%2C_Tiree.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/DSCN6531_Island_House%2C_Tiree.jpg/500px-DSCN6531_Island_House%2C_Tiree.jpg"],
     "history": "A crannog or island dwelling in a loch on the Isle of Tiree. Minimal remains survive. Tiree is famous for its Atlantic winds, machair wildflowers, and being one of the sunniest places in Scotland. The castle site is of archaeological rather than visual interest, part of the island's long history of habitation.",
     "sources": [
       {
