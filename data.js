@@ -32650,46 +32650,6 @@ const CASTLES = [
     ]
   },
   {
-    "name": "Caisteal Maol",
-    "lat": 57.27,
-    "lng": -5.715,
-    "country": "Scotland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A romantic ruin crowning the harbour at Kyleakin on Skye, said to have been built by a Norse princess who stretched a chain across the strait to levy tolls on passing ships.",
-    "image": "https://img.castlecore.uk/caisteal-maol.jpg",
-    "rating": 3.5,
-    "reviewCount": 220,
-    "county": "Highland",
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "atmospheric",
-      "free-entry",
-      "photogenic"
-    ],
-    "access": "free",
-    "_index": 991,
-    "gallery": [
-      "https://img.castlecore.uk/caisteal-maol-2.jpg",
-      "https://img.castlecore.uk/caisteal-maol-3.jpg",
-      "https://img.castlecore.uk/caisteal-maol-4.jpg",
-      "https://img.castlecore.uk/caisteal-maol-5.jpg"
-    ],
-    "history": "Also known as Castle Moil, this ruined keep overlooks the narrows between Skye and the mainland at Kyleakin. Legend attributes it to 'Saucy Mary', a Norwegian princess who taxed ships. More likely built by the MacKinnon clan in the 15th century. The fragmentary tower is a picturesque ruin visible from the Skye Bridge. A short walk from the village.",
-    "sources": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Castle_Moil"
-      },
-      {
-        "name": "Undiscovered Scotland",
-        "url": "https://www.undiscoveredscotland.co.uk/kyleakin/castlemoil/"
-      }
-    ]
-  },
-  {
     "name": "Dryhope Tower",
     "lat": 55.54,
     "lng": -3.12,
