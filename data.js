@@ -69,7 +69,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "Often called 'the loveliest castle in the world', Leeds Castle sits on two islands in a lake. It was a royal residence for six medieval queens of England.",
-    "history": "Leeds Castle is a castle in Kent, England, 7 miles (11 km) southeast of Maidstone. It is built on islands in a lake formed by the River Len to the east of the village of Leeds and is a historic Grade I listed estate.",
+    "history": "Leeds Castle is a castle in Kent, England, 7 miles (11 km) southeast of Maidstone. It is built on islands in a lake formed by the River Len to the east of the village of Leeds and is a historic Grade I listed estate.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Leeds_castle.JPG/500px-Leeds_castle.JPG",
     "rating": 4.5,
     "reviewCount": 12000,
@@ -134,7 +134,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "intact",
     "description": "The childhood home of Anne Boleyn, Hever Castle was lavishly restored by William Waldorf Astor in the early 1900s. Its moated grounds include an Italian Garden and Tudor village.",
-    "history": "Hever Castle is located in the village of Hever, Kent, near Edenbridge, 30 miles (48 km) south-east of London, England. It began as a country house, built in the 13th century. From 1462 to 1539, it was the seat of the Boleyn family.",
+    "history": "Hever Castle is located in the village of Hever, Kent, near Edenbridge, 30 miles (48 km) south-east of London, England. It began as a country house, built in the 13th century. From 1462 to 1539, it was the seat of the Boleyn family.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hever_Castle_2014_06_20_1.jpg/500px-Hever_Castle_2014_06_20_1.jpg",
     "rating": 4.5,
     "reviewCount": 8500,
@@ -358,7 +358,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "intact",
     "description": "One of Henry VIII's Device Forts, Walmer became the official residence of the Lord Warden of the Cinque Ports. The Duke of Wellington died here in 1852.",
-    "history": "Walmer Castle is an artillery fort originally constructed by Henry VIII in Walmer, Kent, between 1539 and 1540. It formed part of the King's Device programme to protect against invasion from France and the Holy Roman Empire, and defended the strategically important Downs anchorage off the English coast. Comprising a keep and four circular bastions, the moated stone castle covered 0.61 acres (0.25 ha) and had 39 firing positions on the upper levels for artillery. It cost the Crown a total of £27,092 to build the three castles of Walmer, Sandown, and Deal, which lay adjacent to one another along the coast and were connected by earthwork defences.",
+    "history": "Walmer Castle is an artillery fort originally constructed by Henry VIII in Walmer, Kent, between 1539 and 1540. It formed part of the King's Device programme to protect against invasion from France and the Holy Roman Empire, and defended the strategically important Downs anchorage off the English coast. Comprising a keep and four circular bastions, the moated stone castle covered 0.61 acres (0.25 ha) and had 39 firing positions on the upper levels for artillery. It cost the Crown a total of £27,092 to build the three castles of Walmer, Sandown, and Deal, which lay adjacent to one another along the coast and were connected by earthwork defences.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Walmer_Castle_from_the_west.jpg/500px-Walmer_Castle_from_the_west.jpg",
     "rating": 4.3,
     "reviewCount": 2560,
@@ -390,7 +390,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "intact",
     "description": "The largest of Henry VIII's coastal artillery forts, Deal Castle has a distinctive Tudor Rose plan when viewed from above. It was built using stone from dissolved monasteries.",
-    "history": "Deal Castle is an artillery fort constructed by Henry VIII in Deal, Kent, between 1539 and 1540. It formed part of the King's Device programme to protect against invasion from France and the Holy Roman Empire, and defended the strategically important Downs anchorage off the English coast. Comprising a keep with six inner and outer bastions, the moated stone castle covered 0.85 acres (0.34 ha) and had sixty-six firing positions for artillery. It cost the Crown a total of £27,092 to build the three castles of Deal, Sandown and Walmer, which lay adjacent to one another along the coast and were connected by earthwork defences.",
+    "history": "Deal Castle is an artillery fort constructed by Henry VIII in Deal, Kent, between 1539 and 1540. It formed part of the King's Device programme to protect against invasion from France and the Holy Roman Empire, and defended the strategically important Downs anchorage off the English coast. Comprising a keep with six inner and outer bastions, the moated stone castle covered 0.85 acres (0.34 ha) and had sixty-six firing positions for artillery. It cost the Crown a total of £27,092 to build the three castles of Deal, Sandown and Walmer, which lay adjacent to one another along the coast and were connected by earthwork defences.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Deal_Castle_Aerial_View.jpg/500px-Deal_Castle_Aerial_View.jpg",
     "rating": 4.2,
     "reviewCount": 2120,
@@ -477,7 +477,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "Built in 1381 by Sir John de Cobham to defend against French raids, Cooling Castle's gatehouse still bears its original copper inscription plaque. Largely destroyed in Wyatt's Rebellion.",
-    "history": "Cooling Castle is a 14th-century quadrangular castle in the village of Cooling, Kent on the Hoo Peninsula about 6 miles (9.7 km) north of Rochester. It was built in the 1380s by the Cobham family, the local lords of the manor, to guard the area against French raids into the Thames Estuary. The castle has an unusual layout, comprising two walled wards of unequal size next to each other, surrounded by moats and ditches. It was the earliest English castle designed for the use of gunpowder weapons by its defenders.",
+    "history": "Cooling Castle is a 14th-century quadrangular castle in the village of Cooling, Kent on the Hoo Peninsula about 6 miles (9.7 km) north of Rochester. It was built in the 1380s by the Cobham family, the local lords of the manor, to guard the area against French raids into the Thames Estuary. The castle has an unusual layout, comprising two walled wards of unequal size next to each other, surrounded by moats and ditches. It was the earliest English castle designed for the use of gunpowder weapons by its defenders.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cooling_Castle_gatehouse.jpg/500px-Cooling_Castle_gatehouse.jpg",
     "rating": 3.5,
     "reviewCount": 450,
@@ -556,7 +556,7 @@ const CASTLES = [
     "access": "free",
     "_index": 17,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-guildford-castle.jpg"
+      "https://img.castlecore.uk/wiki-guildford-castle.jpg"
     ]
   },
   {
@@ -596,7 +596,7 @@ const CASTLES = [
     "era": "11th century",
     "condition": "ruin",
     "description": "A dramatic ruin atop a hill in Dorset, Corfe Castle was partially demolished by Parliamentarians during the English Civil War. Its shattered towers remain a powerful silhouette.",
-    "history": "Corfe Castle is a fortification standing above the village of the same name on the Isle of Purbeck peninsula in the English county of Dorset. Built by William the Conqueror, the castle dates to the 11th century and commands a gap in the Purbeck Hills on the route between Wareham and Swanage. The first phase was one of the earliest castles in England to be built at least partly using stone when the majority were built with earth and timber. Corfe Castle underwent major structural changes in the 12th and 13th centuries.",
+    "history": "Corfe Castle is a fortification standing above the village of the same name on the Isle of Purbeck peninsula in the English county of Dorset. Built by William the Conqueror, the castle dates to the 11th century and commands a gap in the Purbeck Hills on the route between Wareham and Swanage. The first phase was one of the earliest castles in England to be built at least partly using stone when the majority were built with earth and timber. Corfe Castle underwent major structural changes in the 12th and 13th centuries.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Corfe_Castle%2C_Dorset.jpg/500px-Corfe_Castle%2C_Dorset.jpg",
     "rating": 4.6,
     "reviewCount": 12000,
@@ -628,7 +628,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "An unusual hexagonal castle built in 1393, Old Wardour was badly damaged during two Civil War sieges. Its romantic lakeside ruins were used in Robin Hood: Prince of Thieves.",
-    "history": "Wardour Castle or Old Wardour Castle is a ruined 14th-century castle at Wardour, on the boundaries of the civil parishes of Tisbury and Donhead St Andrew in the English county of Wiltshire, about 15 miles (24 km) west of Salisbury. The castle was built in the 1390s, came into the ownership of the Arundells in the 16th century, and was rendered uninhabitable in 1643 and 1644 during the Civil War. A Grade I listed building, it is managed by English Heritage and open to the public.",
+    "history": "Wardour Castle or Old Wardour Castle is a ruined 14th-century castle at Wardour, on the boundaries of the civil parishes of Tisbury and Donhead St Andrew in the English county of Wiltshire, about 15 miles (24 km) west of Salisbury. The castle was built in the 1390s, came into the ownership of the Arundells in the 16th century, and was rendered uninhabitable in 1643 and 1644 during the Civil War. A Grade I listed building, it is managed by English Heritage and open to the public.",
     "image": "https://img.castlecore.uk/scraped-wardour.jpg",
     "rating": 4.2,
     "reviewCount": 1800,
@@ -650,7 +650,7 @@ const CASTLES = [
       "https://img.castlecore.uk/old-wardour-castle-keep-3.jpg",
       "https://img.castlecore.uk/old-wardour-castle-keep-4.jpg",
       "https://img.castlecore.uk/old-wardour-castle-keep-5.jpg",
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-old-wardour-castle.jpg"
+      "https://img.castlecore.uk/wiki-old-wardour-castle.jpg"
     ]
   },
   {
@@ -1134,7 +1134,7 @@ const CASTLES = [
     "era": "18th century",
     "condition": "intact",
     "description": "A magnificent Baroque stately home designed by Sir John Vanbrugh, Castle Howard is best known as the setting for Brideshead Revisited. Its dome and grounds are spectacular.",
-    "history": "Castle Howard is an English country house in Henderskelfe, North Yorkshire, 15 miles (24 km) north of York. A private residence, it has been the home of the Carlisle branch of the Howard family for more than 300 years. Castle Howard has been used as a filming location in several films and television shows, including in Granada Television's 1981 television adaptation of Evelyn Waugh's Brideshead Revisited and in a 2008 film adaptation.",
+    "history": "Castle Howard is an English country house in Henderskelfe, North Yorkshire, 15 miles (24 km) north of York. A private residence, it has been the home of the Carlisle branch of the Howard family for more than 300 years. Castle Howard has been used as a filming location in several films and television shows, including in Granada Television's 1981 television adaptation of Evelyn Waugh's Brideshead Revisited and in a 2008 film adaptation.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Castle_Howard_and_garden.jpg/500px-Castle_Howard_and_garden.jpg",
     "rating": 4.6,
     "reviewCount": 12000,
@@ -1298,7 +1298,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "ruin",
     "description": "Famous as the setting for the jousting tournament in Walter Scott's Ivanhoe. Lord Hastings' tower keep was slighted during the Civil War but remains impressive at four storeys.",
-    "history": "Ashby de la Zouch Castle is a ruined fortification in the town of Ashby-de-la-Zouch, Leicestershire, England. The castle was built by William, Lord Hastings, a favourite of Edward IV, after 1473, accompanied by the creation of a 3,000-acre (1,200 ha) park. Constructed on the site of an older manor house, two large towers and various smaller buildings had been constructed by 1483, when Hastings was executed by Richard, Duke of Gloucester. The Hastings family used the castle as their seat for several generations, improving the gardens and hosting royal visitors.",
+    "history": "Ashby de la Zouch Castle is a ruined fortification in the town of Ashby-de-la-Zouch, Leicestershire, England. The castle was built by William, Lord Hastings, a favourite of Edward IV, after 1473, accompanied by the creation of a 3,000-acre (1,200 ha) park. Constructed on the site of an older manor house, two large towers and various smaller buildings had been constructed by 1483, when Hastings was executed by Richard, Duke of Gloucester. The Hastings family used the castle as their seat for several generations, improving the gardens and hosting royal visitors.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ashby_de_la_Zouch_castle_main_buildings.JPG/500px-Ashby_de_la_Zouch_castle_main_buildings.JPG",
     "rating": 4.1,
     "reviewCount": 1560,
@@ -1329,7 +1329,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "The massive Norman keep dominates Norwich's skyline and now houses the city museum. Its exterior was refaced in Bath stone in the 1830s but retains the Norman blind arcade pattern.",
-    "history": "Norwich Castle is a medieval royal fortification in the city of Norwich, in the English county of Norfolk. William the Conqueror (1066–1087) ordered its construction in the aftermath of the Norman Conquest of England. The castle was used as a gaol from 1220 to 1887. In 1894, the Norwich Museum moved to Norwich Castle. The museum and art gallery holds significant objects from the region, especially works of art, archaeological finds and natural history specimens.",
+    "history": "Norwich Castle is a medieval royal fortification in the city of Norwich, in the English county of Norfolk. William the Conqueror (1066-1087) ordered its construction in the aftermath of the Norman Conquest of England. The castle was used as a gaol from 1220 to 1887. In 1894, the Norwich Museum moved to Norwich Castle. The museum and art gallery holds significant objects from the region, especially works of art, archaeological finds and natural history specimens.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Norwich_Castle_keep%2C_2009.jpg/500px-Norwich_Castle_keep%2C_2009.jpg",
     "rating": 4.3,
     "reviewCount": 4200,
@@ -1392,7 +1392,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial ruin",
     "description": "One of the finest and most elaborately decorated Norman keeps in England, Castle Rising was the residence of Queen Isabella after her role in deposing Edward II.",
-    "history": "Castle Rising is a village and civil parish in the English county of Norfolk. It is 4 miles (6.4 km) north-east of King's Lynn and 37 miles (60 km) north-west of Norwich.",
+    "history": "Castle Rising is a village and civil parish in the English county of Norfolk. It is 4 miles (6.4 km) north-east of King's Lynn and 37 miles (60 km) north-west of Norwich.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Castle_Rising_-_geograph.org.uk_-_542750.jpg/500px-Castle_Rising_-_geograph.org.uk_-_542750.jpg",
     "rating": 4.2,
     "reviewCount": 1670,
@@ -1427,7 +1427,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial ruin",
     "description": "A groundbreaking castle design that relied on curtain walls and towers rather than a central keep. Mary Tudor was proclaimed Queen here in 1553. Ed Sheeran named a song after it.",
-    "history": "Framlingham Castle is a castle in the market town of Framlingham, Suffolk, England. An early motte and bailey or ringwork Norman castle was built on the Framlingham site by 1148, but this was destroyed (slighted) by Henry II of England in the aftermath of the Revolt of 1173–1174. Its replacement, constructed by Roger Bigod, the Earl of Norfolk, was unusual for the time in having no central keep, but instead using a curtain wall with thirteen mural towers to defend the centre of the castle. Despite this, the castle was successfully taken by King John in 1216 after a short siege.",
+    "history": "Framlingham Castle is a castle in the market town of Framlingham, Suffolk, England. An early motte and bailey or ringwork Norman castle was built on the Framlingham site by 1148, but this was destroyed (slighted) by Henry II of England in the aftermath of the Revolt of 1173-1174. Its replacement, constructed by Roger Bigod, the Earl of Norfolk, was unusual for the time in having no central keep, but instead using a curtain wall with thirteen mural towers to defend the centre of the castle. Despite this, the castle was successfully taken by King John in 1216 after a short siege.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Franglingham_Castle_01.jpg/500px-Franglingham_Castle_01.jpg",
     "rating": 4.3,
     "reviewCount": 2670,
@@ -1458,8 +1458,8 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "partial ruin",
-    "description": "Henry II built Orford's unique polygonal keep in the 1160s to reassert royal authority in Suffolk. Its 18-sided exterior conceals a circular interior — an innovative design.",
-    "history": "Orford Castle is a castle in Orford in the English county of Suffolk, 12 miles (19 km) northeast of Ipswich, with views over Orford Ness. It was built between 1165 and 1173 by Henry II of England to consolidate royal power in the region. The well-preserved keep, described by historian R. Allen Brown as \"one of the most remarkable keeps in England\", is of a unique design and probably based on Byzantine architecture. The keep stands within the earth-bank remains of the castle's outer fortifications.",
+    "description": "Henry II built Orford's unique polygonal keep in the 1160s to reassert royal authority in Suffolk. Its 18-sided exterior conceals a circular interior - an innovative design.",
+    "history": "Orford Castle is a castle in Orford in the English county of Suffolk, 12 miles (19 km) northeast of Ipswich, with views over Orford Ness. It was built between 1165 and 1173 by Henry II of England to consolidate royal power in the region. The well-preserved keep, described by historian R. Allen Brown as \"one of the most remarkable keeps in England\", is of a unique design and probably based on Byzantine architecture. The keep stands within the earth-bank remains of the castle's outer fortifications.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Orford_Castle_Keep.jpg/500px-Orford_Castle_Keep.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
@@ -1763,7 +1763,7 @@ const CASTLES = [
     "era": "11th century",
     "condition": "ruin",
     "description": "The ancestral stronghold of the Mortimer family, powerful Marcher lords who challenged the crown. Now an atmospheric overgrown ruin in a remote Herefordshire valley.",
-    "history": "Wigmore Castle is a ruined castle about 1 km (0.62 mi) from the village of Wigmore in the northwest region of Herefordshire, England.",
+    "history": "Wigmore Castle is a ruined castle about 1 km (0.62 mi) from the village of Wigmore in the northwest region of Herefordshire, England.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wigmore_Castle_-_geograph.org.uk_-_7350280.jpg/500px-Wigmore_Castle_-_geograph.org.uk_-_7350280.jpg",
     "rating": 3.8,
     "reviewCount": 560,
@@ -1798,7 +1798,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "The castle's keep leans at an angle of 15 degrees — three times the lean of the Tower of Pisa. It was blown up during the Civil War siege of 1646.",
+    "description": "The castle's keep leans at an angle of 15 degrees - three times the lean of the Tower of Pisa. It was blown up during the Civil War siege of 1646.",
     "history": "Bridgnorth Castle is a castle in the town of Bridgnorth, Shropshire. It is a scheduled monument, first listed in 1928.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Bridgnorth_castle_ruins.jpg/500px-Bridgnorth_castle_ruins.jpg",
     "rating": 3.7,
@@ -1827,7 +1827,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "The oldest castle in England still inhabited by the family that built it, Berkeley is where Edward II was allegedly murdered in 1327. Its butterfly garden is famous.",
-    "history": "Berkeley Castle is a castle in the town of Berkeley, Gloucestershire, England. The castle's origins date back to the 11th century and it is a Grade I listed building.",
+    "history": "Berkeley Castle is a castle in the town of Berkeley, Gloucestershire, England. The castle's origins date back to the 11th century and it is a Grade I listed building.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg/500px-Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg",
     "rating": 4.3,
     "reviewCount": 2120,
@@ -1973,7 +1973,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial ruin",
     "description": "Shakespeare set three scenes of Henry IV here. The Percy family's cross-shaped keep is a masterpiece of medieval domestic planning, and a hermitage is carved into the cliffs nearby.",
-    "history": "Warkworth Castle is a ruined medieval castle in Warkworth in the English county of Northumberland. The village and castle occupy a loop of the River Coquet, less than a mile from England's north-east coast. When the castle was founded is uncertain: traditionally its construction has been ascribed to Prince Henry of Scotland, Earl of Northumbria, in the mid-12th century, but it may have been built by King Henry II of England when he took control of England's northern counties. Warkworth Castle was first documented in a charter of 1157–1164 when Henry II granted it to Roger fitz Richard. The timber castle was considered \"feeble\", and was left undefended when the Scots invaded in 1173.",
+    "history": "Warkworth Castle is a ruined medieval castle in Warkworth in the English county of Northumberland. The village and castle occupy a loop of the River Coquet, less than a mile from England's north-east coast. When the castle was founded is uncertain: traditionally its construction has been ascribed to Prince Henry of Scotland, Earl of Northumbria, in the mid-12th century, but it may have been built by King Henry II of England when he took control of England's northern counties. Warkworth Castle was first documented in a charter of 1157-1164 when Henry II granted it to Roger fitz Richard. The timber castle was considered \"feeble\", and was left undefended when the Scots invaded in 1173.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Warkworth_Castle_interior%2C_2007.jpg/500px-Warkworth_Castle_interior%2C_2007.jpg",
     "rating": 4.3,
     "reviewCount": 2800,
@@ -2068,7 +2068,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "A fortress that has guarded England's western border with Scotland for nine centuries. Mary, Queen of Scots was imprisoned here, and its keep still houses the King's Own Royal Border Regiment.",
-    "history": "Carlisle Castle is a stone keep medieval fortress located in the city of Carlisle near the ruins of Hadrian's Wall. First built during the reign of William II in 1092 and rebuilt in stone under Henry I in 1122, the castle is over 930 years old and has been the scene of many episodes in British history.",
+    "history": "Carlisle Castle is a stone keep medieval fortress located in the city of Carlisle near the ruins of Hadrian's Wall. First built during the reign of William II in 1092 and rebuilt in stone under Henry I in 1122, the castle is over 930 years old and has been the scene of many episodes in British history.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Carlisle_Castle.png/500px-Carlisle_Castle.png",
     "rating": 4.3,
     "reviewCount": 3800,
@@ -2100,7 +2100,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "A picturesque ruin beside the River Eamont, restored by Lady Anne Clifford in the 17th century. Its impressive keep and gatehouse stand within Roman earthworks.",
-    "history": "Brougham Castle is a medieval building about 2 miles (3.2 km) south-east of Penrith, Cumbria, England. The castle was founded by Robert I de Vieuxpont in the early 13th century. The site, near the confluence of the rivers Eamont and Lowther, had been chosen by the Romans for a Roman fort called Brocavum. The castle, along with the fort, is a scheduled monument: \"Brougham Roman fort and Brougham Castle\".",
+    "history": "Brougham Castle is a medieval building about 2 miles (3.2 km) south-east of Penrith, Cumbria, England. The castle was founded by Robert I de Vieuxpont in the early 13th century. The site, near the confluence of the rivers Eamont and Lowther, had been chosen by the Romans for a Roman fort called Brocavum. The castle, along with the fort, is a scheduled monument: \"Brougham Roman fort and Brougham Castle\".",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/1007186_Brougham_Castle%2C_seen_from_the_Northeast_Brougham_20240528_0095.jpg/500px-1007186_Brougham_Castle%2C_seen_from_the_Northeast_Brougham_20240528_0095.jpg",
     "rating": 4.1,
     "reviewCount": 1560,
@@ -2196,7 +2196,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial ruin",
     "description": "Restored by Lady Anne Clifford in the 1650s, Appleby's Norman keep, Caesar's Tower, still stands on its motte. The castle grounds include rare breed animals and a collection of armour.",
-    "history": "Appleby Castle is in the town of Appleby-in-Westmorland overlooking the River Eden. It consists of a 12th-century castle keep which is known as Caesar's Tower, and a mansion house. These, together with their associated buildings, are set in a courtyard surrounded by curtain walls. Caesar's Tower and the mansion house are each recorded in the National Heritage List for England as a designated Grade I listed building. The uninhabited parts of the castle are a scheduled ancient monument.",
+    "history": "Appleby Castle is in the town of Appleby-in-Westmorland overlooking the River Eden. It consists of a 12th-century castle keep which is known as Caesar's Tower, and a mansion house. These, together with their associated buildings, are set in a courtyard surrounded by curtain walls. Caesar's Tower and the mansion house are each recorded in the National Heritage List for England as a designated Grade I listed building. The uninhabited parts of the castle are a scheduled ancient monument.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Appleby_Castle%2C_bailey_-_geograph.org.uk_-_4958736.jpg/500px-Appleby_Castle%2C_bailey_-_geograph.org.uk_-_4958736.jpg",
     "rating": 4,
     "reviewCount": 1230,
@@ -2227,7 +2227,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "intact",
     "description": "A magnificent medieval castle where the Rising of the North was plotted in 1569. Its nine towers, medieval kitchen, and 200-acre deer park make it one of northern England's finest.",
-    "history": "Raby Castle is a medieval castle located near Staindrop in County Durham, England, among 200 acres (810,000 m2) of deer park. It was built by John Neville, 3rd Baron Neville de Raby, between approximately 1367 and 1390. Cecily Neville, the mother of the Kings Edward IV and Richard III, was born here. After Charles Neville, 6th Earl of Westmorland, led the failed Rising of the North in favour of Mary, Queen of Scots in 1569 Raby Castle was taken into royal custody.",
+    "history": "Raby Castle is a medieval castle located near Staindrop in County Durham, England, among 200 acres (810,000 m2) of deer park. It was built by John Neville, 3rd Baron Neville de Raby, between approximately 1367 and 1390. Cecily Neville, the mother of the Kings Edward IV and Richard III, was born here. After Charles Neville, 6th Earl of Westmorland, led the failed Rising of the North in favour of Mary, Queen of Scots in 1569 Raby Castle was taken into royal custody.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Raby_Castle_%28spring%29.jpg/500px-Raby_Castle_%28spring%29.jpg",
     "rating": 4.4,
     "reviewCount": 2890,
@@ -2455,7 +2455,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "partial ruin",
     "description": "A massive quadrangular castle where Mary, Queen of Scots was imprisoned for six months. Four corner towers rise to five storeys around a central courtyard in Wensleydale.",
-    "history": "Bolton Castle is a 14th-century castle located in Wensleydale, Yorkshire, England. The nearby village of Castle Bolton takes its name from the castle. The castle is a Grade I listed building and a Scheduled Ancient Monument. The castle was damaged in the English Civil War, and “slighted” afterwards, but much of it survived. It has never been sold and is still in the ownership of the descendants of the Scrope family.",
+    "history": "Bolton Castle is a 14th-century castle located in Wensleydale, Yorkshire, England. The nearby village of Castle Bolton takes its name from the castle. The castle is a Grade I listed building and a Scheduled Ancient Monument. The castle was damaged in the English Civil War, and "slighted" afterwards, but much of it survived. It has never been sold and is still in the ownership of the descendants of the Scrope family.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Castle_Bolton_and_its_maze_-_geograph.org.uk_-_7335033.jpg/500px-Castle_Bolton_and_its_maze_-_geograph.org.uk_-_7335033.jpg",
     "rating": 4.3,
     "reviewCount": 2120,
@@ -2582,7 +2582,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "One of the most complete Cistercian abbey ruins in Britain, set in a public park in Leeds. Founded in 1152, its church and cloister buildings survive to an impressive height.",
-    "history": "Kirkstall Abbey is a ruined Cistercian monastery in Kirkstall, north-west of Leeds city centre in West Yorkshire, England. It is set in a public park on the north bank of the River Aire. It was founded c. 1152. It was disestablished during the Dissolution of the Monasteries under Henry VIII.",
+    "history": "Kirkstall Abbey is a ruined Cistercian monastery in Kirkstall, north-west of Leeds city centre in West Yorkshire, England. It is set in a public park on the north bank of the River Aire. It was founded c. 1152. It was disestablished during the Dissolution of the Monasteries under Henry VIII.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kirkstall_Abbey_in_the_late_afternoon.jpg/500px-Kirkstall_Abbey_in_the_late_afternoon.jpg",
     "rating": 4.2,
     "reviewCount": 2340,
@@ -2610,7 +2610,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial ruin",
     "description": "The oldest circular keep in England, Conisbrough's magnificent white limestone tower inspired Sir Walter Scott's Ivanhoe. Its six buttresses create a distinctive silhouette.",
-    "history": "Conisbrough Castle is a medieval fortification in Conisbrough, South Yorkshire, England. The castle was initially built in the 11th century by William de Warenne, the Earl of Surrey, after the Norman Conquest of England in 1066. Hamelin Plantagenet, the illegitimate, parvenu brother of Henry II, acquired the property by marriage in the late 12th century. Hamelin and his son William, Earl of Surrey rebuilt the castle in stone, including its prominent 28-metre (92 ft)-high keep. The castle remained in the family line into the 14th century, despite being seized several times by the Crown. The fortification was then given to Edmund of Langley, passing back into royal ownership in 1461.",
+    "history": "Conisbrough Castle is a medieval fortification in Conisbrough, South Yorkshire, England. The castle was initially built in the 11th century by William de Warenne, the Earl of Surrey, after the Norman Conquest of England in 1066. Hamelin Plantagenet, the illegitimate, parvenu brother of Henry II, acquired the property by marriage in the late 12th century. Hamelin and his son William, Earl of Surrey rebuilt the castle in stone, including its prominent 28-metre (92 ft)-high keep. The castle remained in the family line into the 14th century, despite being seized several times by the Crown. The fortification was then given to Edmund of Langley, passing back into royal ownership in 1461.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/ConisbroughCastle.jpg/500px-ConisbroughCastle.jpg",
     "rating": 4.2,
     "reviewCount": 1890,
@@ -2642,7 +2642,7 @@ const CASTLES = [
     "era": "11th century",
     "condition": "ruin",
     "description": "One of the most important castles in medieval England, Pontefract was where Richard II died. Known as 'the Key to the North', it endured three Civil War sieges before demolition.",
-    "history": " Pontefract Castle is a castle ruin in the town of Pontefract, in West Yorkshire, England. King Richard II is thought to have died there. It was the site of a series of famous sieges during the 17th-century English Civil War.",
+    "history": " Pontefract Castle is a castle ruin in the town of Pontefract, in West Yorkshire, England. King Richard II is thought to have died there. It was the site of a series of famous sieges during the 17th-century English Civil War.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pontefract_Castle.jpg/500px-Pontefract_Castle.jpg",
     "rating": 4,
     "reviewCount": 1670,
@@ -2743,7 +2743,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "A working crown court and former prison, Lancaster Castle includes the Well Tower where the Pendle Witches were held in 1612. Its Shire Hall features elaborate Gothic woodwork.",
-    "history": "Lancaster Castle is a medieval castle and former prison in Lancaster in the English county of Lancashire. Its early history is unclear, but it may have been founded in the 11th century on the site of a Roman fort overlooking a crossing of the River Lune. In 1164 the Honour of Lancaster, including the castle, came under royal control. In 1322 and 1389 the Scots invaded England, progressing as far as Lancaster and damaging the castle. It was not to see military action again until the English Civil War. The castle was first used as a prison in 1196 although this aspect became more important during the English Civil War.",
+    "history": "Lancaster Castle is a medieval castle and former prison in Lancaster in the English county of Lancashire. Its early history is unclear, but it may have been founded in the 11th century on the site of a Roman fort overlooking a crossing of the River Lune. In 1164 the Honour of Lancaster, including the castle, came under royal control. In 1322 and 1389 the Scots invaded England, progressing as far as Lancaster and damaging the castle. It was not to see military action again until the English Civil War. The castle was first used as a prison in 1196 although this aspect became more important during the English Civil War.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Lancaster_Castle_-_2023-03-25.jpg/500px-Lancaster_Castle_-_2023-03-25.jpg",
     "rating": 4.3,
     "reviewCount": 2560,
@@ -2803,7 +2803,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "Perched on a dramatic sandstone crag with views across eight counties, Beeston was built by Ranulf de Blondeville after returning from the Crusades. Legend says Richard II's treasure is buried here.",
-    "history": "Beeston Castle is a former Royal castle in Beeston, Cheshire, England, perched on a rocky sandstone crag 350 feet (107 m) above the Cheshire Plain. It was built in the 1220s by Ranulf de Blondeville, 6th Earl of Chester (1170–1232), on his return from the Crusades. In 1237, Henry III took over the ownership of Beeston, and it was kept in good repair until the 16th century, when it was considered to be of no further military use, although it was pressed into service again in 1643, during the English Civil War. The castle was slighted in 1646, in accordance with Cromwell's destruction order, to prevent its further use as a bastion.",
+    "history": "Beeston Castle is a former Royal castle in Beeston, Cheshire, England, perched on a rocky sandstone crag 350 feet (107 m) above the Cheshire Plain. It was built in the 1220s by Ranulf de Blondeville, 6th Earl of Chester (1170-1232), on his return from the Crusades. In 1237, Henry III took over the ownership of Beeston, and it was kept in good repair until the 16th century, when it was considered to be of no further military use, although it was pressed into service again in 1643, during the English Civil War. The castle was slighted in 1646, in accordance with Cromwell's destruction order, to prevent its further use as a bastion.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Beeston_Castle_2016_017.jpg/500px-Beeston_Castle_2016_017.jpg",
     "rating": 4.3,
     "reviewCount": 2670,
@@ -2862,7 +2862,7 @@ const CASTLES = [
     "era": "18th century",
     "condition": "intact",
     "description": "A monumental Baroque palace given to the Duke of Marlborough by a grateful nation after his victory at Blenheim. Winston Churchill was born here in 1874. Capability Brown landscaped the park.",
-    "history": "Blenheim Palace is a country house in Woodstock, Oxfordshire, England. It is the seat of the Dukes of Marlborough. Originally called Blenheim Castle, it has been known as Blenheim Palace since the 19th century. One of England's largest houses, it was built between 1705 and 1722, and designated a UNESCO World Heritage Site in 1987.",
+    "history": "Blenheim Palace is a country house in Woodstock, Oxfordshire, England. It is the seat of the Dukes of Marlborough. Originally called Blenheim Castle, it has been known as Blenheim Palace since the 19th century. One of England's largest houses, it was built between 1705 and 1722, and designated a UNESCO World Heritage Site in 1987.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Blenheim_Palace_2006.jpg/500px-Blenheim_Palace_2006.jpg",
     "rating": 4.6,
     "reviewCount": 18000,
@@ -3038,7 +3038,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 100,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-hurst-castle.jpg"
+      "https://img.castlecore.uk/wiki-hurst-castle.jpg"
     ]
   },
   {
@@ -3112,7 +3112,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "partial ruin",
-    "description": "A small square Norman keep that served as a stannary court and prison for tin miners on Dartmoor. Known for harsh justice — the saying went 'first hang, then try' at Lydford.",
+    "description": "A small square Norman keep that served as a stannary court and prison for tin miners on Dartmoor. Known for harsh justice - the saying went 'first hang, then try' at Lydford.",
     "history": "Lydford Castle is a medieval castle in the town of Lydford, Devon, England. The first castle in Lydford, sometimes termed the Norman fort, was a small ringwork built in a corner of the Anglo-Saxon fortified burh in the years after the Norman conquest of England. It was intended to help control Devon following the widespread revolt against Norman rule in 1068. The Norman fort had been abandoned by the middle of the 12th century.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lydford%2C_the_castle_-_geograph.org.uk_-_571379.jpg/500px-Lydford%2C_the_castle_-_geograph.org.uk_-_571379.jpg",
     "rating": 3.6,
@@ -3214,7 +3214,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "A privately owned Cistercian abbey ruin in a beautiful Wensleydale setting. The monks here were famous for breeding horses and making Wensleydale cheese.",
-    "history": "Jervaulx Abbey in East Witton in North Yorkshire, 14 mi (23 km) north-west of the city of Ripon, was one of the great Cistercian abbeys of Yorkshire, England, dedicated to St Mary in 1156. It is a Grade I listed building.",
+    "history": "Jervaulx Abbey in East Witton in North Yorkshire, 14 mi (23 km) north-west of the city of Ripon, was one of the great Cistercian abbeys of Yorkshire, England, dedicated to St Mary in 1156. It is a Grade I listed building.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jervaulx_Abbey%2C_geograph.jpg/500px-Jervaulx_Abbey%2C_geograph.jpg",
     "rating": 4.1,
     "reviewCount": 1230,
@@ -3375,7 +3375,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 112,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-thornton-abbey.jpg"
+      "https://img.castlecore.uk/wiki-thornton-abbey.jpg"
     ]
   },
   {
@@ -3484,7 +3484,7 @@ const CASTLES = [
     "era": "11th century",
     "condition": "partial ruin",
     "description": "Famous for its Robin Hood connections, the medieval castle was largely demolished and replaced by a ducal mansion. The cave system beneath, including Mortimer's Hole, is remarkable.",
-    "history": "Nottingham Castle is a Stuart Restoration-era ducal mansion in Nottingham, England, built on the site of a Norman castle built starting in 1068, and added to extensively through the medieval period, when it was an important royal fortress and occasional royal residence. In decline by the 16th century, the original castle, except for its walls and gates, was demolished after the English Civil War in 1651. The site occupies a commanding position on a natural promontory known as \"Castle Rock\" which dominates the city skyline, with cliffs 130 feet (40 m) high to the south and west.",
+    "history": "Nottingham Castle is a Stuart Restoration-era ducal mansion in Nottingham, England, built on the site of a Norman castle built starting in 1068, and added to extensively through the medieval period, when it was an important royal fortress and occasional royal residence. In decline by the 16th century, the original castle, except for its walls and gates, was demolished after the English Civil War in 1651. The site occupies a commanding position on a natural promontory known as \"Castle Rock\" which dominates the city skyline, with cliffs 130 feet (40 m) high to the south and west.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Nottingham_Castle_Gardens_-_geograph.org.uk_-_2878127.jpg/500px-Nottingham_Castle_Gardens_-_geograph.org.uk_-_2878127.jpg",
     "rating": 4.1,
     "reviewCount": 3450,
@@ -3511,7 +3511,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "One of the best-preserved medieval castles near Edinburgh, Craigmillar was a favourite retreat of Mary, Queen of Scots. It was here that the murder of Lord Darnley was allegedly plotted.",
-    "history": "Craigmillar Castle is a ruined medieval castle in Edinburgh, Scotland. It is three miles (4.8 km) south-east of the city centre, on a low hill to the south of the modern suburb of Craigmillar. The Preston family of Craigmillar, the local feudal barons, began building the castle in the late 14th century and building works continued through the 15th and 16th centuries. In 1660, the castle was sold to Sir John Gilmour, Lord President of the Court of Session, who breathed new life into the ageing castle. The Gilmours left Craigmillar in the 18th century for a more modern residence, nearby Inch House, and the castle fell into ruin.",
+    "history": "Craigmillar Castle is a ruined medieval castle in Edinburgh, Scotland. It is three miles (4.8 km) south-east of the city centre, on a low hill to the south of the modern suburb of Craigmillar. The Preston family of Craigmillar, the local feudal barons, began building the castle in the late 14th century and building works continued through the 15th and 16th centuries. In 1660, the castle was sold to Sir John Gilmour, Lord President of the Court of Session, who breathed new life into the ageing castle. The Gilmours left Craigmillar in the 18th century for a more modern residence, nearby Inch House, and the castle fell into ruin.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Craigmillar_Castle.jpg/500px-Craigmillar_Castle.jpg",
     "rating": 4.4,
     "reviewCount": 2890,
@@ -3543,7 +3543,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "ruin",
     "description": "The birthplace of Mary, Queen of Scots, Linlithgow Palace was once the finest royal residence in Scotland. It was accidentally burned in 1746 when occupied by government troops.",
-    "history": "The ruins of Linlithgow Palace are located in the town of Linlithgow, West Lothian, Scotland, 15 miles (24 km) west of Edinburgh. The palace was one of the principal residences of the monarchs of Scotland in the 15th and 16th centuries. Although maintained after Scotland's monarchs left for England in 1603, the palace was little used, and was burned out in 1746. It is now a visitor attraction in the care of Historic Environment Scotland.",
+    "history": "The ruins of Linlithgow Palace are located in the town of Linlithgow, West Lothian, Scotland, 15 miles (24 km) west of Edinburgh. The palace was one of the principal residences of the monarchs of Scotland in the 15th and 16th centuries. Although maintained after Scotland's monarchs left for England in 1603, the palace was little used, and was burned out in 1746. It is now a visitor attraction in the care of Historic Environment Scotland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Am_linlithgow_palace_south.jpg/500px-Am_linlithgow_palace_south.jpg",
     "rating": 4.4,
     "reviewCount": 2890,
@@ -3609,7 +3609,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "A formidable clifftop fortress with a massive red sandstone curtain wall, Tantallon was the stronghold of the Douglas Earls of Angus. Bass Rock looms offshore.",
-    "history": "Tantallon Castle is a ruined mid-14th-century fortress, located 5 kilometres (3.1 mi) east of North Berwick, in East Lothian, Scotland. It sits atop a promontory opposite the Bass Rock, looking out onto the Firth of Forth. The last medieval curtain wall castle to be constructed in Scotland, Tantallon comprises a single wall blocking off the headland, with the other three sides naturally protected by sea cliffs.",
+    "history": "Tantallon Castle is a ruined mid-14th-century fortress, located 5 kilometres (3.1 mi) east of North Berwick, in East Lothian, Scotland. It sits atop a promontory opposite the Bass Rock, looking out onto the Firth of Forth. The last medieval curtain wall castle to be constructed in Scotland, Tantallon comprises a single wall blocking off the headland, with the other three sides naturally protected by sea cliffs.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Tantallon_Castle%2C_2015.JPG/500px-Tantallon_Castle%2C_2015.JPG",
     "rating": 4.4,
     "reviewCount": 2340,
@@ -3641,7 +3641,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "A picturesque ruin in one of Scotland's prettiest villages, Dirleton features a massive 13th-century cluster of towers. Its gardens include the world's longest herbaceous border.",
-    "history": "Dirleton Castle is a medieval fortress in the village of Dirleton, East Lothian, Scotland. It lies around 2 miles (3.2 km) west of North Berwick, and around 19 miles (31 km) east of Edinburgh. The oldest parts of the castle date to the 13th century, and it was abandoned by the end of the 17th century.",
+    "history": "Dirleton Castle is a medieval fortress in the village of Dirleton, East Lothian, Scotland. It lies around 2 miles (3.2 km) west of North Berwick, and around 19 miles (31 km) east of Edinburgh. The oldest parts of the castle date to the 13th century, and it was abandoned by the end of the 17th century.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Dirleton_S.jpg/500px-Dirleton_S.jpg",
     "rating": 4.3,
     "reviewCount": 1890,
@@ -3705,7 +3705,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "Notable for its extraordinary Italianate facade added by the Earl of Bothwell, Crichton's diamond-faceted stonework is unique in Scotland. The castle sits in peaceful farmland.",
-    "history": "Crichton Castle is a ruined castle near the village of Crichton in Midlothian, Scotland. It is situated at the head of the River Tyne, 2 miles (3.2 km) south of the village of Pathhead, and the same distance east of Gorebridge.",
+    "history": "Crichton Castle is a ruined castle near the village of Crichton in Midlothian, Scotland. It is situated at the head of the River Tyne, 2 miles (3.2 km) south of the village of Pathhead, and the same distance east of Gorebridge.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Scotland-2016-Aerial-Crichton_Castle.jpg/500px-Scotland-2016-Aerial-Crichton_Castle.jpg",
     "rating": 4.1,
     "reviewCount": 1230,
@@ -3737,7 +3737,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "intact",
     "description": "One of the largest and best-preserved medieval tower houses in Scotland, Borthwick's twin towers rise to 110 feet. Mary, Queen of Scots escaped from here disguised as a man.",
-    "history": "Borthwick Castle is one of the largest and best-preserved surviving medieval Scottish fortifications. It is located twelve miles (19 km) south-east of Edinburgh, to the east of the village of Borthwick, on a site protected on three sides by a steep fall in the ground. It was constructed in 1430 for Sir William Borthwick, from whom the castle takes its name,",
+    "history": "Borthwick Castle is one of the largest and best-preserved surviving medieval Scottish fortifications. It is located twelve miles (19 km) south-east of Edinburgh, to the east of the village of Borthwick, on a site protected on three sides by a steep fall in the ground. It was constructed in 1430 for Sir William Borthwick, from whom the castle takes its name,",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Borthwick_Castle%2C_Midlothian.jpg/500px-Borthwick_Castle%2C_Midlothian.jpg",
     "rating": 4.2,
     "reviewCount": 1120,
@@ -3892,7 +3892,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "The dramatic ruins of the bishop's castle overlook St Andrews Bay. Its famous bottle dungeon and siege mine and counter-mine tunnels are unique survivals.",
-    "history": "St Andrews Castle is a ruin located in the coastal Royal Burgh of St Andrews in Fife, Scotland. The castle sits on a rocky promontory overlooking a small beach called Castle Sands and the adjoining North Sea. There has been a castle standing at the site since the times of Bishop Roger (1189–1202), son of the Earl of Leicester. It housed the burgh’s wealthy and powerful bishops while St Andrews served as the ecclesiastical centre of Scotland during the years before the Protestant Reformation. In their Latin charters, the Archbishops of St Andrews wrote of the castle as their palace, signing, \"apud Palatium nostrum.\"",
+    "history": "St Andrews Castle is a ruin located in the coastal Royal Burgh of St Andrews in Fife, Scotland. The castle sits on a rocky promontory overlooking a small beach called Castle Sands and the adjoining North Sea. There has been a castle standing at the site since the times of Bishop Roger (1189-1202), son of the Earl of Leicester. It housed the burgh's wealthy and powerful bishops while St Andrews served as the ecclesiastical centre of Scotland during the years before the Protestant Reformation. In their Latin charters, the Archbishops of St Andrews wrote of the castle as their palace, signing, \"apud Palatium nostrum.\"",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/St_Andrews_Castle_1_%283604221101%29.jpg/500px-St_Andrews_Castle_1_%283604221101%29.jpg",
     "rating": 4.2,
     "reviewCount": 2560,
@@ -3954,7 +3954,7 @@ const CASTLES = [
     "condition": "intact",
     "description": "One of the finest Z-plan tower houses in Scotland, with distinctive round towers capped by square chambers. Built by John Strachan between 1569 and 1588.",
     "history": "Claypotts Castle is a late medieval castle in the suburban West Ferry area of Dundee, Scotland. It is one of the best-preserved examples of a 16th-century Z-plan tower house in Scotland. Now surrounded by modern housing, the castle is maintained as an Ancient Monument by Historic Environment Scotland.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Claypotts_castle_02.jpg/500px-Claypotts_castle_02.jpg",
+    "image": "https://img.castlecore.uk/claypotts-castle-2.jpg",
     "rating": 3.8,
     "reviewCount": 560,
     "county": "Dundee",
@@ -3965,7 +3965,6 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 131,
     "gallery": [
-      "https://img.castlecore.uk/claypotts-castle-2.jpg",
       "https://img.castlecore.uk/claypotts-castle-3.jpg",
       "https://img.castlecore.uk/claypotts-castle-4.jpg",
       "https://img.castlecore.uk/claypotts-castle-5.jpg",
@@ -3984,8 +3983,8 @@ const CASTLES = [
     "era": "16th century",
     "condition": "ruin",
     "description": "Famous for its unique Renaissance pleasure garden with sculptured walls depicting the Liberal Arts, Cardinal Virtues, and Planetary Deities. The tower house and garden are remarkable.",
-    "history": "Edzell Castle is a ruined 16th-century castle, with an early-17th-century walled garden. It is located close to Edzell, and is around 5 miles (8 km) north of Brechin, in Angus, Scotland. Edzell Castle was begun around 1520 by David Lindsay, 9th Earl of Crawford, and expanded by his son, Sir David Lindsay, Lord Edzell, who also laid out the garden in 1604. The castle saw little military action, and was, in its design, construction and use, more of a country house than a defensive structure. It was briefly occupied by English troops during Oliver Cromwell's invasion of Scotland in 1651. In 1715 it was sold by the Lindsay family, and eventually came into the ownership of the Earl of Dalhousie.",
-    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-edzell-castle.jpg",
+    "history": "Edzell Castle is a ruined 16th-century castle, with an early-17th-century walled garden. It is located close to Edzell, and is around 5 miles (8 km) north of Brechin, in Angus, Scotland. Edzell Castle was begun around 1520 by David Lindsay, 9th Earl of Crawford, and expanded by his son, Sir David Lindsay, Lord Edzell, who also laid out the garden in 1604. The castle saw little military action, and was, in its design, construction and use, more of a country house than a defensive structure. It was briefly occupied by English troops during Oliver Cromwell's invasion of Scotland in 1651. In 1715 it was sold by the Lindsay family, and eventually came into the ownership of the Earl of Dalhousie.",
+    "image": "https://img.castlecore.uk/wiki-edzell-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1670,
     "county": "Angus",
@@ -3997,7 +3996,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 132,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-edzell-castle.jpg"
+      "https://img.castlecore.uk/wiki-edzell-castle.jpg"
     ]
   },
   {
@@ -4009,7 +4008,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "partial ruin",
     "description": "Two complete medieval tower houses standing side by side, later joined together. It contains the finest surviving medieval painted ceiling in Scotland.",
-    "history": "Huntingtower Castle, once known as Ruthven Castle or the Place of Ruthven, is located near the village of Huntingtower beside the A85 and near the A9, about 5 km NW of the centre of Perth, Perth and Kinross, in central Scotland, on the main road to Crieff. This castle is the subject for several local ghostlore stories.",
+    "history": "Huntingtower Castle, once known as Ruthven Castle or the Place of Ruthven, is located near the village of Huntingtower beside the A85 and near the A9, about 5 km NW of the centre of Perth, Perth and Kinross, in central Scotland, on the main road to Crieff. This castle is the subject for several local ghostlore stories.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Perth_and_Kinross_Huntingtower_Castle.jpg/500px-Perth_and_Kinross_Huntingtower_Castle.jpg",
     "rating": 4.1,
     "reviewCount": 1120,
@@ -4067,7 +4066,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "The island castle where Mary, Queen of Scots was imprisoned and forced to abdicate in 1567. She escaped by boat after nearly a year. Accessible only by ferry.",
-    "history": "Lochleven Castle is a ruined castle on an island in Loch Leven, in the Perth and Kinross local authority area of Scotland. Possibly built around 1300, the castle was the site of military action during the Wars of Scottish Independence (1296–1357). In the latter part of the 14th century, the castle was granted to William Douglas, 1st Earl of Douglas, by his uncle. It remained in the Douglases' hands for the next 300 years. Mary, Queen of Scots, was imprisoned there in 1567–68, and forced to abdicate as queen, before escaping with the help of her gaoler's family. In 1588, the queen's gaoler inherited the title of Earl of Morton, and moved away from the castle.",
+    "history": "Lochleven Castle is a ruined castle on an island in Loch Leven, in the Perth and Kinross local authority area of Scotland. Possibly built around 1300, the castle was the site of military action during the Wars of Scottish Independence (1296-1357). In the latter part of the 14th century, the castle was granted to William Douglas, 1st Earl of Douglas, by his uncle. It remained in the Douglases' hands for the next 300 years. Mary, Queen of Scots, was imprisoned there in 1567-68, and forced to abdicate as queen, before escaping with the help of her gaoler's family. In 1588, the queen's gaoler inherited the title of Earl of Morton, and moved away from the castle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Lochleven_west_wall.JPG/500px-Lochleven_west_wall.JPG",
     "rating": 4.3,
     "reviewCount": 2120,
@@ -4131,7 +4130,7 @@ const CASTLES = [
     "era": "19th century",
     "condition": "intact",
     "description": "The Scottish Highland retreat of the Royal Family since Queen Victoria purchased it in 1852. The castle's Scots Baronial architecture set a fashion for the style across Scotland.",
-    "history": "Balmoral Castle is a large estate house in Aberdeenshire, Scotland, and a residence of the British royal family. It is near the village of Crathie, 9 miles (14 km) west of Ballater and 50 miles (80 km) west of Aberdeen.",
+    "history": "Balmoral Castle is a large estate house in Aberdeenshire, Scotland, and a residence of the British royal family. It is near the village of Crathie, 9 miles (14 km) west of Ballater and 50 miles (80 km) west of Aberdeen.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Balmoral_Castle.jpg/500px-Balmoral_Castle.jpg",
     "rating": 4.3,
     "reviewCount": 4120,
@@ -4158,7 +4157,7 @@ const CASTLES = [
     "era": "17th century",
     "condition": "intact",
     "description": "A pink-harled fairy-tale tower house considered the finest example of Scots Baronial architecture. Its cluster of turrets and conical roofs allegedly inspired Walt Disney's castle logo.",
-    "history": "Craigievar Castle is a harled castle or fortified country house 6 miles (9.7 km) south of Alford, Aberdeenshire, Scotland. It was the seat of Clan Sempill, and the Forbes family resided here for 350 years until 1963, when the property was sold to the National Trust for Scotland by the 19th Lord Sempill.",
+    "history": "Craigievar Castle is a harled castle or fortified country house 6 miles (9.7 km) south of Alford, Aberdeenshire, Scotland. It was the seat of Clan Sempill, and the Forbes family resided here for 350 years until 1963, when the property was sold to the National Trust for Scotland by the 19th Lord Sempill.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Craigievar_Doocot_and_Castle_-_geograph.org.uk_-_7846018.jpg/500px-Craigievar_Doocot_and_Castle_-_geograph.org.uk_-_7846018.jpg",
     "rating": 4.4,
     "reviewCount": 2340,
@@ -4190,7 +4189,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "intact",
     "description": "One of the grandest Castles of Mar, Castle Fraser is a magnificent Z-plan tower house. The Great Hall features a huge heraldic fireplace and the grounds include a walled garden.",
-    "history": "Castle Fraser is the most elaborate Z-plan castle in Scotland and one of the grandest 'Castles of Mar'. It is located near Kemnay in the Aberdeenshire region of Scotland. The castle stands in over 300 acres (1.2 km2) of landscaped grounds, woodland and farmland which includes a walled kitchen garden of the 19th century. There is archaeological evidence of an older square tower dating from around 1400 or 1500 within the current construction. The castle is a Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.",
+    "history": "Castle Fraser is the most elaborate Z-plan castle in Scotland and one of the grandest 'Castles of Mar'. It is located near Kemnay in the Aberdeenshire region of Scotland. The castle stands in over 300 acres (1.2 km2) of landscaped grounds, woodland and farmland which includes a walled kitchen garden of the 19th century. There is archaeological evidence of an older square tower dating from around 1400 or 1500 within the current construction. The castle is a Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Castle_Fraser_-_geograph.org.uk_-_8125177.jpg/500px-Castle_Fraser_-_geograph.org.uk_-_8125177.jpg",
     "rating": 4.3,
     "reviewCount": 2120,
@@ -4317,7 +4316,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "ruin",
     "description": "An atmospheric ruin with an elaborate Renaissance gatehouse and pleasance. William Forbes built the main ranges for 'his own great pleasure' as the inscription records.",
-    "history": "Tolquhon Castle is a ruined late-16th-century castle in Aberdeenshire, north-east Scotland. It lies about 1.5 miles (2.4 km) north-west of Pitmedden and 2 miles (3.2 km) south of Tarves.",
+    "history": "Tolquhon Castle is a ruined late-16th-century castle in Aberdeenshire, north-east Scotland. It lies about 1.5 miles (2.4 km) north-west of Pitmedden and 2 miles (3.2 km) south of Tarves.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tolquhon_Castle_01a.jpg/500px-Tolquhon_Castle_01a.jpg",
     "rating": 4.1,
     "reviewCount": 1120,
@@ -4408,7 +4407,7 @@ const CASTLES = [
     "condition": "intact",
     "description": "Home of the Clan Hay for over 650 years, Delgatie has some of the finest painted ceilings in Scotland. Mary, Queen of Scots stayed here for three days after the Battle of Corrichie.",
     "history": "Delgatie Castle is a castle near Turriff, in Aberdeenshire, Scotland. The castle consists of a white-harled, five-storey tower dating from the 16th century, with later extensions.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Delgatie_Castle_2017-05-26.jpg/500px-Delgatie_Castle_2017-05-26.jpg",
+    "image": "https://img.castlecore.uk/wiki-delgatie-castle.jpg",
     "rating": 4,
     "reviewCount": 780,
     "county": "Aberdeenshire",
@@ -4419,7 +4418,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 146,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-delgatie-castle.jpg"
+      "https://img.castlecore.uk/wiki-delgatie-castle.jpg"
     ]
   },
   {
@@ -4431,7 +4430,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "The residence of the Bishops of Moray for five centuries, Spynie's massive David's Tower is one of the largest tower houses in Scotland. It overlooks the former Loch Spynie.",
-    "history": "Spynie Palace, also known as Spynie Castle, was the fortified seat of the Bishops of Moray for about 500 years in Spynie, Moray, Scotland. The founding of the palace dates back to the late 12th century. It is situated about 500 m from the location of the first officially settled Cathedral Church of the Diocese of Moray, Holy Trinity Church in present-day Spynie Churchyard. For most of its occupied history, the castle was not described as a palace — this term first appeared in the Registry of Moray in a writ of 1524.",
+    "history": "Spynie Palace, also known as Spynie Castle, was the fortified seat of the Bishops of Moray for about 500 years in Spynie, Moray, Scotland. The founding of the palace dates back to the late 12th century. It is situated about 500 m from the location of the first officially settled Cathedral Church of the Diocese of Moray, Holy Trinity Church in present-day Spynie Churchyard. For most of its occupied history, the castle was not described as a palace - this term first appeared in the Registry of Moray in a writ of 1524.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Spynie_castle3.jpg/500px-Spynie_castle3.jpg",
     "rating": 4.1,
     "reviewCount": 1120,
@@ -4462,7 +4461,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "Known as the 'Lantern of the North', Elgin Cathedral was one of Scotland's most magnificent churches before it was burned by the Wolf of Badenoch in 1390. The chapter house remains remarkable.",
-    "history": "Elgin Cathedral, also known as the Lantern of the North, is a historic ruin in Elgin, Moray, in northeast Scotland. Established in 1224 on land granted by King Alexander II, it was the seat of the bishops of Moray. It replaced the cathedral at Spynie, located 3 kilometres (2 mi) to the north, and was served by a small chapter of eight clerics. By 1226, the expanding cathedral was staffed with 18 canons, a number that increased to 23 by 1242.",
+    "history": "Elgin Cathedral, also known as the Lantern of the North, is a historic ruin in Elgin, Moray, in northeast Scotland. Established in 1224 on land granted by King Alexander II, it was the seat of the bishops of Moray. It replaced the cathedral at Spynie, located 3 kilometres (2 mi) to the north, and was served by a small chapter of eight clerics. By 1226, the expanding cathedral was staffed with 18 canons, a number that increased to 23 by 1242.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Elgin_Cathedral_view_from_rear.jpg/500px-Elgin_Cathedral_view_from_rear.jpg",
     "rating": 4.4,
     "reviewCount": 2560,
@@ -4494,7 +4493,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "A picturesque ruin beside the famous Glenfiddich distillery, Balvenie was visited by Edward I and later held by the Comyns and Atholl Stewarts. Mary, Queen of Scots stayed in 1562.",
-    "history": "Balvenie Castle is a ruined castle 1 km north of Dufftown in the Moray region of Scotland.",
+    "history": "Balvenie Castle is a ruined castle 1 km north of Dufftown in the Moray region of Scotland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Grampian_Map_Balvenie_Castle.png/500px-Grampian_Map_Balvenie_Castle.png",
     "rating": 4,
     "reviewCount": 1230,
@@ -4557,7 +4556,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "Overlooking Loch Ness, Urquhart Castle offers one of the best vantage points for monster-spotting. The castle was blown up in 1692 to prevent Jacobite use.",
-    "history": "Urquhart Castle is a ruined castle that sits beside Loch Ness in the Highlands of Scotland. The castle is on the A82 road, 21 kilometres (13 mi) southwest of Inverness and two kilometres east of Drumnadrochit.",
+    "history": "Urquhart Castle is a ruined castle that sits beside Loch Ness in the Highlands of Scotland. The castle is on the A82 road, 21 kilometres (13 mi) southwest of Inverness and two kilometres east of Drumnadrochit.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Urquhart_Castle_2017-05-22.jpg/500px-Urquhart_Castle_2017-05-22.jpg",
     "rating": 4.4,
     "reviewCount": 8500,
@@ -4625,7 +4624,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "intact",
     "description": "The most northerly castle on the British mainland, Castle of Mey was the beloved Scottish home of the Queen Mother. She restored it from near ruin and visited every summer.",
-    "history": "The Castle of Mey is located in Caithness, on the north coast of Scotland, about 6 miles (10 km) west of John o' Groats. In fine weather there are views from the castle north to Orkney.",
+    "history": "The Castle of Mey is located in Caithness, on the north coast of Scotland, about 6 miles (10 km) west of John o' Groats. In fine weather there are views from the castle north to Orkney.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Mey_castle_2.JPG/500px-Mey_castle_2.JPG",
     "rating": 4.3,
     "reviewCount": 2120,
@@ -4785,7 +4784,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "A dramatic ruin on a tidal island in Loch Moidart, Castle Tioram was the seat of Clan Ranald. Legend says its chief set it ablaze in 1715 to prevent Hanoverian use.",
-    "history": "Castle Tioram is a ruined castle that sits on the tidal island Eilean Tioram in Loch Moidart, Scotland. It is north of Acharacle, approximately 80 km (50 mi) west of Fort William. Though hidden from the sea, the castle controls access to Loch Shiel. It is also known locally as Dorlin Castle. The castle is a scheduled monument.",
+    "history": "Castle Tioram is a ruined castle that sits on the tidal island Eilean Tioram in Loch Moidart, Scotland. It is north of Acharacle, approximately 80 km (50 mi) west of Fort William. Though hidden from the sea, the castle controls access to Loch Shiel. It is also known locally as Dorlin Castle. The castle is a scheduled monument.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Inverlochycastle.jpg/500px-Inverlochycastle.jpg",
     "rating": 4.3,
     "reviewCount": 1670,
@@ -4937,7 +4936,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "partial ruin",
     "description": "Built on a massive rock outcrop, Dunstaffnage was one of the most important strongholds in the western Highlands. The Stone of Destiny may have been kept here before Scone.",
-    "history": "Dunstaffnage Castle is a partially ruined castle in Argyll and Bute, western Scotland. It lies 3 miles (5 km) NNE of Oban, situated on a platform of conglomerate rock on a promontory at the south-west of the entrance to Loch Etive, and is surrounded on three sides by the sea. The castle and the nearby chapel ruin have been a Historic Scotland property since 1958. Both are Scheduled Ancient Monuments.",
+    "history": "Dunstaffnage Castle is a partially ruined castle in Argyll and Bute, western Scotland. It lies 3 miles (5 km) NNE of Oban, situated on a platform of conglomerate rock on a promontory at the south-west of the entrance to Loch Etive, and is surrounded on three sides by the sea. The castle and the nearby chapel ruin have been a Historic Scotland property since 1958. Both are Scheduled Ancient Monuments.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg/500px-Carnasserie_Castle_-_geograph.org.uk_-_7881916.jpg",
     "rating": 4.1,
     "reviewCount": 1340,
@@ -5159,7 +5158,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "One of the great Border Abbeys founded by David I, Jedburgh's Romanesque and Gothic arches still soar to impressive heights. It suffered greatly from English raids.",
-    "history": "Jedburgh Abbey, a ruined Augustinian abbey which was founded in the 12th century, is situated in the town of Jedburgh, in the Scottish Borders, 10 miles (16 km) north of the border with England at Carter Bar.",
+    "history": "Jedburgh Abbey, a ruined Augustinian abbey which was founded in the 12th century, is situated in the town of Jedburgh, in the Scottish Borders, 10 miles (16 km) north of the border with England at Carter Bar.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Dryburgh_Abbey%2C_2004.jpg/500px-Dryburgh_Abbey%2C_2004.jpg",
     "rating": 4.3,
     "reviewCount": 2670,
@@ -5251,7 +5250,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "partial ruin",
     "description": "A dramatic tower house perched above the River Tweed near Peebles. Its L-plan design and rock-cut cellars show the ingenuity of medieval Scottish castle builders.",
-    "history": "Neidpath Castle is an L-plan rubble-built tower house, overlooking the River Tweed about 1 mile (1.6 km) west of Peebles in the Borders of Scotland. The castle is both a wedding venue and filming location and can be viewed by appointment.",
+    "history": "Neidpath Castle is an L-plan rubble-built tower house, overlooking the River Tweed about 1 mile (1.6 km) west of Peebles in the Borders of Scotland. The castle is both a wedding venue and filming location and can be viewed by appointment.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/SmailholmLochan.jpg/500px-SmailholmLochan.jpg",
     "rating": 4,
     "reviewCount": 890,
@@ -5278,7 +5277,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "partial ruin",
     "description": "A Border peel tower perched on a rocky knoll with panoramic views. Young Walter Scott spent childhood days here, and it inspired his love of Border ballads and legends.",
-    "history": "Smailholm Tower is a peel tower at Smailholm, around five miles (8 km) west of Kelso in the Scottish Borders. Its dramatic situation, atop a crag of Lady Hill, commands wide views over the surrounding countryside. The tower is located at grid reference NT637346, just west of Sandyknowe farm, and is now a Scheduled Ancient Monument in the care of Historic Environment Scotland. In June 2007, it was awarded the maximum \"five-star\" status as a tourist attraction from VisitScotland, a rating bestowed on only eight other sites in Scotland.",
+    "history": "Smailholm Tower is a peel tower at Smailholm, around five miles (8 km) west of Kelso in the Scottish Borders. Its dramatic situation, atop a crag of Lady Hill, commands wide views over the surrounding countryside. The tower is located at grid reference NT637346, just west of Sandyknowe farm, and is now a Scheduled Ancient Monument in the care of Historic Environment Scotland. In June 2007, it was awarded the maximum \"five-star\" status as a tourist attraction from VisitScotland, a rating bestowed on only eight other sites in Scotland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Threave_Castle_20080422_-_view_from_Dee.jpg/500px-Threave_Castle_20080422_-_view_from_Dee.jpg",
     "rating": 4.2,
     "reviewCount": 1120,
@@ -5306,7 +5305,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "ruin",
     "description": "Built by Archibald the Grim, Lord of Galloway, Threave's massive tower stands on an island in the River Dee. The artillery wall was added to resist the growing power of cannons.",
-    "history": "Threave Castle is situated on an island in the River Dee, 2.5 kilometres (1.6 mi) west of Castle Douglas in the historical county of Kirkcudbrightshire in the Dumfries and Galloway region of Scotland.",
+    "history": "Threave Castle is situated on an island in the River Dee, 2.5 kilometres (1.6 mi) west of Castle Douglas in the historical county of Kirkcudbrightshire in the Dumfries and Galloway region of Scotland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/MacLellan%27s_Castle_exterior_2_August_2013.jpg/500px-MacLellan%27s_Castle_exterior_2_August_2013.jpg",
     "rating": 4.2,
     "reviewCount": 1560,
@@ -5365,7 +5364,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "Founded by Lady Devorgilla in memory of her husband John Balliol, she carried his embalmed heart with her until death. The rosy sandstone ruins and precinct wall are remarkably complete.",
-    "history": "The Abbey of Dulce Cor, better known as Sweetheart Abbey, was a Cistercian monastery founded in 1273 in what is now the village of New Abbey, in the historical county of Kirkcudbrightshire in Dumfries and Galloway, 8 miles (13 km) south of Dumfries.",
+    "history": "The Abbey of Dulce Cor, better known as Sweetheart Abbey, was a Cistercian monastery founded in 1273 in what is now the village of New Abbey, in the historical county of Kirkcudbrightshire in Dumfries and Galloway, 8 miles (13 km) south of Dumfries.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/500px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg",
     "rating": 4.3,
     "reviewCount": 1670,
@@ -5397,7 +5396,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "intact",
     "description": "The oldest continuously inhabited castle in Scotland, Dunvegan has been the ancestral home of Clan MacLeod for 800 years. It holds the legendary Fairy Flag.",
-    "history": "Dunvegan Castle is located 1 mile (1.6 km) to the north of Dunvegan on the Isle of Skye, off the west coast of Scotland. It is the seat of the MacLeod of MacLeod, chief of the Clan MacLeod. Probably a fortified site from the earliest times, the castle was first built in the 13th century and developed piecemeal over the centuries. In the 19th century the whole castle was remodelled in a mock-medieval style. The castle is built on an elevated rock overlooking an inlet on the eastern shore of Loch Dunvegan, a sea loch.",
+    "history": "Dunvegan Castle is located 1 mile (1.6 km) to the north of Dunvegan on the Isle of Skye, off the west coast of Scotland. It is the seat of the MacLeod of MacLeod, chief of the Clan MacLeod. Probably a fortified site from the earliest times, the castle was first built in the 13th century and developed piecemeal over the centuries. In the 19th century the whole castle was remodelled in a mock-medieval style. The castle is built on an elevated rock overlooking an inlet on the eastern shore of Loch Dunvegan, a sea loch.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Armadale_Castle_5.jpg/500px-Armadale_Castle_5.jpg",
     "rating": 4.3,
     "reviewCount": 4800,
@@ -5689,7 +5688,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A sophisticated Renaissance castle with a unique caponier (underground artillery chamber) — the only one of its kind in Britain. Possibly the inspiration for Sir Walter Scott's Tillietudlem.",
+    "description": "A sophisticated Renaissance castle with a unique caponier (underground artillery chamber) - the only one of its kind in Britain. Possibly the inspiration for Sir Walter Scott's Tillietudlem.",
     "history": "Craignethan Castle is a ruined castle in South Lanarkshire, Scotland. It is located above the River Nethan, a tributary of the River Clyde, at NS816464. The castle is two miles west of the village of Crossford, and 4.5 miles north-west of Lanark. Built in the first half of the 16th century, Craignethan is recognised as an excellent early example of a sophisticated artillery fortification, although its defences were never fully tested.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Craignethan_Castle.jpg/500px-Craignethan_Castle.jpg",
     "rating": 4,
@@ -5721,7 +5720,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "The largest and finest 13th-century stone castle in Scotland, Bothwell changed hands five times during the Wars of Independence. Its massive circular donjon is French in inspiration.",
-    "history": "Bothwell Castle is a large medieval castle, sited on a high, steep bank, above a bend in the River Clyde in South Lanarkshire, Scotland. It is located between Bothwell and Uddingston, about 10 miles (16 km) south-east of Glasgow. Construction of the castle was begun in the 13th century by the ancestors of Clan Murray, to guard a strategic crossing point of the Clyde. Bothwell played a key role in Scotland's Wars of Independence, changing hands several times.",
+    "history": "Bothwell Castle is a large medieval castle, sited on a high, steep bank, above a bend in the River Clyde in South Lanarkshire, Scotland. It is located between Bothwell and Uddingston, about 10 miles (16 km) south-east of Glasgow. Construction of the castle was begun in the 13th century by the ancestors of Clan Murray, to guard a strategic crossing point of the Clyde. Bothwell played a key role in Scotland's Wars of Independence, changing hands several times.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bothwell_Castle_20080505_-_south-east_tower.jpg/500px-Bothwell_Castle_20080505_-_south-east_tower.jpg",
     "rating": 4.3,
     "reviewCount": 1890,
@@ -5812,7 +5811,7 @@ const CASTLES = [
     "era": "18th century",
     "condition": "intact",
     "description": "Robert Adam's masterpiece perched on the Ayrshire cliffs, Culzean is Scotland's most popular National Trust property. General Eisenhower was given a flat here after WWII.",
-    "history": "Culzean Castle is a castle overlooking the Firth of Clyde, near Maybole, Carrick, in South Ayrshire, on the west coast of Scotland. It is the former home of the Marquess of Ailsa, the chief of Clan Kennedy, but is now owned by the National Trust for Scotland. The clifftop castle lies within the 240 acres (97 ha) Culzean Castle Country Park, which also contains a walled garden, other estate buildings that are open to the public, shops and cafés, and a playground. The castle is open to the public throughout the summer, and the wider estate is open all year.",
+    "history": "Culzean Castle is a castle overlooking the Firth of Clyde, near Maybole, Carrick, in South Ayrshire, on the west coast of Scotland. It is the former home of the Marquess of Ailsa, the chief of Clan Kennedy, but is now owned by the National Trust for Scotland. The clifftop castle lies within the 240 acres (97 ha) Culzean Castle Country Park, which also contains a walled garden, other estate buildings that are open to the public, shops and cafés, and a playground. The castle is open to the public throughout the summer, and the wider estate is open all year.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Lochranza_Castle_1.jpg/500px-Lochranza_Castle_1.jpg",
     "rating": 4.5,
     "reviewCount": 3890,
@@ -5905,7 +5904,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "partial ruin",
     "description": "Built by Edward I between 1283-1287, Conwy Castle is one of the finest surviving medieval fortifications in Europe. Its eight massive towers and town walls are a UNESCO World Heritage Site.",
-    "history": "Conwy Castle is a fortification in Conwy, located in North Wales. It was built by Edward I, during his conquest of Wales, between 1283 and 1287. Constructed as part of a wider project to create the walled town of Conwy, the combined defences cost around £15,000, a massive sum for the period. Over the next few centuries, the castle played an important part in several wars. It withstood the siege of Madog ap Llywelyn in the winter of 1294–95, acted as a temporary haven for Richard II in 1399 and was held for several months by forces loyal to Owain Glyndŵr in 1401.",
+    "history": "Conwy Castle is a fortification in Conwy, located in North Wales. It was built by Edward I, during his conquest of Wales, between 1283 and 1287. Constructed as part of a wider project to create the walled town of Conwy, the combined defences cost around £15,000, a massive sum for the period. Over the next few centuries, the castle played an important part in several wars. It withstood the siege of Madog ap Llywelyn in the winter of 1294-95, acted as a temporary haven for Richard II in 1399 and was held for several months by forces loyal to Owain Glyndŵr in 1401.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/500px-Conwy_Castle%2C_water_view1.jpg",
     "rating": 4.6,
     "reviewCount": 12000,
@@ -5937,7 +5936,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "partial ruin",
     "description": "Edward I's most ambitious castle, Caernarfon was designed to echo the walls of Constantinople. It was the site of the investiture of the Prince of Wales in 1969.",
-    "history": "Caernarfon Castle is a medieval fortress in Gwynedd, north-west Wales. The first fortification on the site was a motte-and-bailey castle built in the late 11th century, which King Edward I of England began to replace with the current stone structure in 1283. The castle and town established by Edward acted as the administrative centre of north Wales, and as a result the defences were built on a grand scale. There was a deliberate link with Caernarfon's Roman past—nearby is the Roman fort of Segontium—and the castle's walls are reminiscent of the Walls of Constantinople.",
+    "history": "Caernarfon Castle is a medieval fortress in Gwynedd, north-west Wales. The first fortification on the site was a motte-and-bailey castle built in the late 11th century, which King Edward I of England began to replace with the current stone structure in 1283. The castle and town established by Edward acted as the administrative centre of north Wales, and as a result the defences were built on a grand scale. There was a deliberate link with Caernarfon's Roman past-nearby is the Roman fort of Segontium-and the castle's walls are reminiscent of the Walls of Constantinople.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Caernarfon_Castle_1994.jpg/500px-Caernarfon_Castle_1994.jpg",
     "rating": 4.6,
     "reviewCount": 14000,
@@ -6147,7 +6146,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "partial ruin",
     "description": "The largest castle in Wales and second largest in Britain, Caerphilly introduced concentric castle design to the British Isles. Its famous leaning tower out-leans Pisa.",
-    "history": "Caerphilly Castle is a medieval fortification in Caerphilly in South Wales. The castle was constructed by Gilbert de Clare in the 13th century as part of his campaign to maintain control of Glamorgan, and saw extensive fighting between Gilbert, his descendants, and the native Welsh rulers. Surrounded by extensive artificial lakes – considered by historian Allen Brown to be \"the most elaborate water defences in all Britain\" – it occupies around 30 acres (12 ha) and is the largest castle in Wales and the third-largest castle in the United Kingdom. It is famous for having introduced concentric castle defences to Britain and for its large gatehouses.",
+    "history": "Caerphilly Castle is a medieval fortification in Caerphilly in South Wales. The castle was constructed by Gilbert de Clare in the 13th century as part of his campaign to maintain control of Glamorgan, and saw extensive fighting between Gilbert, his descendants, and the native Welsh rulers. Surrounded by extensive artificial lakes - considered by historian Allen Brown to be \"the most elaborate water defences in all Britain\" - it occupies around 30 acres (12 ha) and is the largest castle in Wales and the third-largest castle in the United Kingdom. It is famous for having introduced concentric castle defences to Britain and for its large gatehouses.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Caerphilly_aerial.jpg/500px-Caerphilly_aerial.jpg",
     "rating": 4.5,
     "reviewCount": 8500,
@@ -6526,7 +6525,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial ruin",
     "description": "One of the most fortified religious houses in Britain, Ewenny's precinct walls have drum towers. The Norman nave of the priory church is still in use as the parish church.",
-    "history": "Ewenny Priory, in Ewenny in the Vale of Glamorgan, Wales, was a monastery of the Benedictine order, founded in the 12th century. The priory was unusual in having extensive military-style defences and in its state of preservation; the architectural historian John Newman described it as “the most complete and impressive Norman ecclesiastical building in Glamorgan”. Following the Dissolution of the Monasteries, parts of the priory were converted into a private house by Sir Edward Carne, a lawyer and diplomat. This Elizabethan house was demolished between 1803 and 1805 and replaced by a Georgian mansion, Ewenny Priory House.",
+    "history": "Ewenny Priory, in Ewenny in the Vale of Glamorgan, Wales, was a monastery of the Benedictine order, founded in the 12th century. The priory was unusual in having extensive military-style defences and in its state of preservation; the architectural historian John Newman described it as "the most complete and impressive Norman ecclesiastical building in Glamorgan". Following the Dissolution of the Monasteries, parts of the priory were converted into a private house by Sir Edward Carne, a lawyer and diplomat. This Elizabethan house was demolished between 1803 and 1805 and replaced by a Georgian mansion, Ewenny Priory House.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Margamabbey-wyrdlight-7458.jpg/500px-Margamabbey-wyrdlight-7458.jpg",
     "rating": 3.9,
     "reviewCount": 670,
@@ -6614,7 +6613,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "Founded by Cistercian monks in 1131, Tintern Abbey inspired Wordsworth's famous poem. Its graceful Gothic arches stand nearly complete in the wooded Wye Valley.",
-    "history": "Tintern Abbey is a ruined medieval abbey adjacent to the village of Tintern in Monmouthshire, on the Welsh bank of the River Wye, which at this location forms the border between Monmouthshire in Wales and Gloucestershire in England. Founded on 9 May 1131 by Walter de Clare, Lord of Chepstow, it was the first Cistercian foundation in Wales, and the second in Britain.",
+    "history": "Tintern Abbey is a ruined medieval abbey adjacent to the village of Tintern in Monmouthshire, on the Welsh bank of the River Wye, which at this location forms the border between Monmouthshire in Wales and Gloucestershire in England. Founded on 9 May 1131 by Walter de Clare, Lord of Chepstow, it was the first Cistercian foundation in Wales, and the second in Britain.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/TinternAbbey_WestEnd.jpg/500px-TinternAbbey_WestEnd.jpg",
     "rating": 4.7,
     "reviewCount": 7500,
@@ -6648,7 +6647,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-13th century",
     "condition": "ruin",
-    "description": "A ghostly moated fortress in the Welsh Marches — one of three sister castles that guarded the road from Wales to Hereford for centuries.",
+    "description": "A ghostly moated fortress in the Welsh Marches - one of three sister castles that guarded the road from Wales to Hereford for centuries.",
     "history": "Established by the Normans after 1066 to protect the route to Hereford. Part of the Three Castles lordship with Grosmont and Skenfrith from 1135. Given to Hubert de Burgh by King John in 1201. Substantially rebuilt with stone curtain walls and mural towers. Named for its white-plastered walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/GrosmontCastle4.jpg/500px-GrosmontCastle4.jpg",
     "rating": 4.3,
@@ -7000,7 +6999,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "intact",
     "description": "The last of the Edwardian castles still inhabited, Chirk has been continuously occupied for 700 years. Its interiors span from medieval dungeon to elegant 18th-century state rooms.",
-    "history": "Chirk Castle is a Grade I listed castle located in Chirk, Wrexham County Borough, Wales, 1.5 mi (2.4 km) from Chirk railway station, now owned and run by the National Trust.",
+    "history": "Chirk Castle is a Grade I listed castle located in Chirk, Wrexham County Borough, Wales, 1.5 mi (2.4 km) from Chirk railway station, now owned and run by the National Trust.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Castle_and_Path.JPG/500px-Castle_and_Path.JPG",
     "rating": 4.3,
     "reviewCount": 2800,
@@ -7172,7 +7171,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "The only Premonstratensian monastery in Wales, Talley's twin towers stand beside a peaceful lake. It was founded by Rhys ap Gruffydd, prince of Deheubarth.",
-    "history": "Talley Abbey is a ruined former monastery of the Premonstratensians in the village of Talley in Carmarthenshire, Wales, six miles (10 km) north of the market town of Llandeilo. It lies in the River Cothi valley. Access to the site of the abbey is free, and the site is maintained by Cadw.",
+    "history": "Talley Abbey is a ruined former monastery of the Premonstratensians in the village of Talley in Carmarthenshire, Wales, six miles (10 km) north of the market town of Llandeilo. It lies in the River Cothi valley. Access to the site of the abbey is free, and the site is maintained by Cadw.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg/500px-The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg",
     "rating": 3.9,
     "reviewCount": 670,
@@ -7317,7 +7316,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "partial ruin",
     "description": "Gerald of Wales called it 'the pleasantest spot in Wales'. This well-preserved Norman castle overlooks a sandy beach in Pembrokeshire and still belongs to a private family.",
-    "history": "Manorbier Castle is a Norman castle in Manorbier, 5 miles (8.0 km) southwest of Tenby, Wales. It was founded in the late 11th century by the Anglo-Norman de Barry family. The castle was part of a mesne lordship under the control of the medieval Earls of Pembroke.",
+    "history": "Manorbier Castle is a Norman castle in Manorbier, 5 miles (8.0 km) southwest of Tenby, Wales. It was founded in the late 11th century by the Anglo-Norman de Barry family. The castle was part of a mesne lordship under the control of the medieval Earls of Pembroke.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg/500px-Llawhaden_Castle_from_Drim_Wood_-_geograph.org.uk_-_915795.jpg",
     "rating": 4.3,
     "reviewCount": 1890,
@@ -7381,7 +7380,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "Two massive round towers guard the promontory above the Teifi gorge, painted by Turner and Richard Wilson. The castle was a key stronghold during the Welsh wars of independence.",
-    "history": "Cilgerran Castle is a 13th-century ruined castle located in Cilgerran, Pembrokeshire, Wales, near Cardigan. The first castle on the site was thought to have been built by Gerald of Windsor around 1110–1115, and it changed hands several times over the following century between English and Welsh forces. In the hands of William Marshal, 2nd Earl of Pembroke, the construction of the stone castle began after 1223.",
+    "history": "Cilgerran Castle is a 13th-century ruined castle located in Cilgerran, Pembrokeshire, Wales, near Cardigan. The first castle on the site was thought to have been built by Gerald of Windsor around 1110-1115, and it changed hands several times over the following century between English and Welsh forces. In the hands of William Marshal, 2nd Earl of Pembroke, the construction of the stone castle began after 1223.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ogmore_Castle_5085.jpg/500px-Ogmore_Castle_5085.jpg",
     "rating": 4.1,
     "reviewCount": 1340,
@@ -7417,7 +7416,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "A fortified palace of the medieval bishops of St David's, Llawhaden was one of the grandest residences in Wales. Its gatehouse and great hall range survive amid farmland.",
-    "history": "Llawhaden Castle is a ruined castle in Llawhaden, Pembrokeshire, Wales, 10 miles (16 km) east of Haverfordwest. A motte-and-bailey castle is thought to have previously occupied the site and the present structure was built by the bishops of the Diocese of St David in the 13th century. The castle was abandoned in the 16th century and some of the stone was removed for local building projects. The site is privately owned by the Lord of the Manor of Llawhaden and managed by Cadw.",
+    "history": "Llawhaden Castle is a ruined castle in Llawhaden, Pembrokeshire, Wales, 10 miles (16 km) east of Haverfordwest. A motte-and-bailey castle is thought to have previously occupied the site and the present structure was built by the bishops of the Diocese of St David in the 13th century. The castle was abandoned in the 16th century and some of the stone was removed for local building projects. The site is privately owned by the Lord of the Manor of Llawhaden and managed by Cadw.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coity_Castle.jpg/500px-Coity_Castle.jpg",
     "rating": 3.8,
     "reviewCount": 560,
@@ -7802,7 +7801,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "The largest Anglo-Norman castle in Ireland, Trim's massive keep was built by Hugh de Lacy. It served as a filming location for Braveheart and dominates the town from above the River Boyne.",
-    "history": "Trim Castle is a castle on the south bank of the River Boyne in Trim, County Meath, Ireland, with an area of 30,000 m2. Over a period of 30 years, it was built by Hugh de Lacy and his son Walter as the caput of the Lordship of Meath. The Irish Government currently own and are in charge of the care of the castle, through the state agency The Office of Public Works (OPW).",
+    "history": "Trim Castle is a castle on the south bank of the River Boyne in Trim, County Meath, Ireland, with an area of 30,000 m2. Over a period of 30 years, it was built by Hugh de Lacy and his son Walter as the caput of the Lordship of Meath. The Irish Government currently own and are in charge of the care of the castle, through the state agency The Office of Public Works (OPW).",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Trim_Castle_6.jpg/500px-Trim_Castle_6.jpg",
     "rating": 4.5,
     "reviewCount": 5200,
@@ -7923,7 +7922,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "intact",
     "description": "Originally a de Burgo Anglo-Norman castle, Ashford was expanded into a grand Victorian estate by the Guinness family. Now a five-star hotel, it sits between Lough Corrib and Lough Mask.",
-    "history": "Ashford Castle is a mainly Victorian and medieval castle near Cong on the County Mayo–Galway border in Ireland. The castle has been expanded over the centuries and turned into a five star hotel. It is located on the County Galway side of Lough Corrib and was previously owned by the Guinness family.",
+    "history": "Ashford Castle is a mainly Victorian and medieval castle near Cong on the County Mayo-Galway border in Ireland. The castle has been expanded over the centuries and turned into a five star hotel. It is located on the County Galway side of Lough Corrib and was previously owned by the Guinness family.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Ashford_Castle_in_County_Mayo.jpg/500px-Ashford_Castle_in_County_Mayo.jpg",
     "rating": 4.7,
     "reviewCount": 8500,
@@ -8009,7 +8008,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "A Cistercian abbey founded in 1180 with some of the finest Romanesque and Gothic carvings in Ireland. Its sculptured cloister arcade features unique figures of knights, saints, and dragons.",
-    "history": "Jerpoint Abbey is a ruined Cistercian abbey, founded in the second half of the 12th century in County Kilkenny, Ireland. It is located 2.5 km south west of Thomastown on the R448 regional road. There is a visitor centre with an exhibition. It has been declared a national monument and has been in the care of the Office of Public Works since 1880.",
+    "history": "Jerpoint Abbey is a ruined Cistercian abbey, founded in the second half of the 12th century in County Kilkenny, Ireland. It is located 2.5 km south west of Thomastown on the R448 regional road. There is a visitor centre with an exhibition. It has been declared a national monument and has been in the care of the Office of Public Works since 1880.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Jerpoint_Abbey_E_1997_08_28.jpg/500px-Jerpoint_Abbey_E_1997_08_28.jpg",
     "rating": 4.5,
     "reviewCount": 2600,
@@ -8064,7 +8063,7 @@ const CASTLES = [
     "era": "6th century",
     "condition": "ruin",
     "description": "A UNESCO World Heritage Site, this remote island monastery perches 200 metres above the Atlantic on a jagged rock pinnacle. Its beehive huts and oratories have survived 1,400 years of Atlantic storms.",
-    "history": "Skellig Michael, also called Great Skellig, is a twin-pinnacled crag 11.6 kilometres (7.2 mi) west of the Iveragh Peninsula in County Kerry, Ireland. The island is named after the archangel Michael; while \"Skellig\" is derived from the Irish language word sceilig, meaning a splinter of stone. Its twin island, Little Skellig, is smaller and inaccessible. The two islands were formed c. 374–360 million years ago during a period of mountain formation, along with the local MacGillycuddy's Reeks mountain range. They were later separated from the mainland by rising water levels.",
+    "history": "Skellig Michael, also called Great Skellig, is a twin-pinnacled crag 11.6 kilometres (7.2 mi) west of the Iveragh Peninsula in County Kerry, Ireland. The island is named after the archangel Michael; while \"Skellig\" is derived from the Irish language word sceilig, meaning a splinter of stone. Its twin island, Little Skellig, is smaller and inaccessible. The two islands were formed c. 374-360 million years ago during a period of mountain formation, along with the local MacGillycuddy's Reeks mountain range. They were later separated from the mainland by rising water levels.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Skellig_Michael03%28js%29.jpg/500px-Skellig_Michael03%28js%29.jpg",
     "rating": 4.9,
     "reviewCount": 5100,
@@ -8312,7 +8311,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 271,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-thoor-ballylee.jpg"
+      "https://img.castlecore.uk/wiki-thoor-ballylee.jpg"
     ]
   },
   {
@@ -8383,7 +8382,7 @@ const CASTLES = [
     "era": "1st millennium BC",
     "condition": "ruin",
     "description": "A prehistoric stone fort perched on a 100-metre cliff edge on Inis Mór, the largest Aran Island. Its concentric stone walls and chevaux-de-frise defences date back over 3,000 years.",
-    "history": "Dún Aonghasa is the best-known of several prehistoric hill forts on the Aran Islands of County Galway, Ireland. It lies on Inis Mór, at the edge of a 100-metre-high (330 ft) cliff.",
+    "history": "Dún Aonghasa is the best-known of several prehistoric hill forts on the Aran Islands of County Galway, Ireland. It lies on Inis Mór, at the edge of a 100-metre-high (330 ft) cliff.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dun_Aonghasa_%28cropped%29.JPG/500px-Dun_Aonghasa_%28cropped%29.JPG",
     "rating": 4.7,
     "reviewCount": 5600,
@@ -8437,7 +8436,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "7th-12th century",
     "condition": "ruin",
-    "description": "Ireland's tallest round tower leans dramatically over a cluster of ruined churches at the edge of the Burren — a hauntingly beautiful 7th-century monastery lost in fields of limestone and wildflowers.",
+    "description": "Ireland's tallest round tower leans dramatically over a cluster of ruined churches at the edge of the Burren - a hauntingly beautiful 7th-century monastery lost in fields of limestone and wildflowers.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/ArdfertCathedral.jpg/500px-ArdfertCathedral.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -8485,7 +8484,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "intact",
     "description": "A restored tower house in the Burren that now houses an archaeology centre and museum. Nearby stands a 12th-century Romanesque church doorway and high cross.",
-    "history": "O'Dea Castle, also known as Dysert O'Dea Castle, is an Irish fortified tower house, loosely described as a castle at Dysert O'Dea, the former O'Dea clan stronghold, 5 kilometres (3 mi) from Corofin, County Clare. It was built between 1470 and 1490 by Diarmaid O'Dea, Lord of Cineal Fearmaic, and stands some 50 feet (15 m) high on a limestone outcrop base measuring 20 by 40 feet. The tower is adjacent to Dysert O'Dea Monastery, close to the R476 road.",
+    "history": "O'Dea Castle, also known as Dysert O'Dea Castle, is an Irish fortified tower house, loosely described as a castle at Dysert O'Dea, the former O'Dea clan stronghold, 5 kilometres (3 mi) from Corofin, County Clare. It was built between 1470 and 1490 by Diarmaid O'Dea, Lord of Cineal Fearmaic, and stands some 50 feet (15 m) high on a limestone outcrop base measuring 20 by 40 feet. The tower is adjacent to Dysert O'Dea Monastery, close to the R476 road.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ballycarbery_Castle-IMG_5554.jpg/500px-Ballycarbery_Castle-IMG_5554.jpg",
     "rating": 4,
     "reviewCount": 780,
@@ -8713,7 +8712,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "ruin",
     "description": "An ivy-covered McCarthy Mór castle overlooking Ballinskelligs Bay on the Ring of Kerry. Its atmospheric ruins stand in farmland with views toward the Skellig Islands.",
-    "history": "Ballycarbery Castle is a castle 3 kilometres (2 mi) from Cahersiveen, County Kerry, Ireland. The castle is high on a grass hill facing the sea and is a short distance from Cahergall Fort and Leacanabuile Fort.",
+    "history": "Ballycarbery Castle is a castle 3 kilometres (2 mi) from Cahersiveen, County Kerry, Ireland. The castle is high on a grass hill facing the sea and is a short distance from Cahergall Fort and Leacanabuile Fort.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Birr_Castle%2C_Offaly.jpg/500px-Birr_Castle%2C_Offaly.jpg",
     "rating": 4,
     "reviewCount": 780,
@@ -8830,7 +8829,7 @@ const CASTLES = [
     "era": "17th century",
     "condition": "ruin",
     "description": "An unfinished Elizabethan-style fortified house built by MacDonagh McCarthy around 1609. The Privy Council ordered construction halted, fearing it was too grand for an Irish lord.",
-    "history": "Kanturk is a town in the north west of County Cork, Ireland. It is situated at the confluence of the Allua (Allow) and Dallow (Dalua) rivers, which stream further on as tributaries to the River Blackwater. It is about 50 kilometres from Cork and Limerick, and lies just north of the main N72 road, 15 km from Mallow and about 40 km from Killarney. Kanturk is within the Cork North-West Dáil constituency.",
+    "history": "Kanturk is a town in the north west of County Cork, Ireland. It is situated at the confluence of the Allua (Allow) and Dallow (Dalua) rivers, which stream further on as tributaries to the River Blackwater. It is about 50 kilometres from Cork and Limerick, and lies just north of the main N72 road, 15 km from Mallow and about 40 km from Killarney. Kanturk is within the Cork North-West Dáil constituency.",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Drymnagh_castle_Dublin_1820.jpg/500px-Drymnagh_castle_Dublin_1820.jpg",
     "rating": 3.7,
     "reviewCount": 420,
@@ -8861,7 +8860,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Bronze Age",
     "condition": "ruin",
-    "description": "A perfectly preserved Bronze Age stone circle perched above the wild West Cork coast — where 17 ancient stones still mark the winter solstice sunset with eerie precision.",
+    "description": "A perfectly preserved Bronze Age stone circle perched above the wild West Cork coast - where 17 ancient stones still mark the winter solstice sunset with eerie precision.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg/500px-Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
@@ -9034,7 +9033,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "The Rock of Dunamase rises dramatically from the Laois plains, fortified since the 9th century. Strongbow received it as a dowry and the Anglo-Normans built the impressive castle ruin visible today.",
-    "history": "Dunamase or the Rock of Dunamase is a rocky outcrop in County Laois, Ireland. Rising 46 metres (151 ft) above a plain, it has the ruins of Dunamase Castle, a defensive stronghold dating from the early Hiberno-Norman period with a view across to the Slieve Bloom Mountains. It is near the N80 road between the towns of Portlaoise and Stradbally.",
+    "history": "Dunamase or the Rock of Dunamase is a rocky outcrop in County Laois, Ireland. Rising 46 metres (151 ft) above a plain, it has the ruins of Dunamase Castle, a defensive stronghold dating from the early Hiberno-Norman period with a view across to the Slieve Bloom Mountains. It is near the N80 road between the towns of Portlaoise and Stradbally.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kellsp5.JPG/500px-Kellsp5.JPG",
     "rating": 4.2,
     "reviewCount": 1600,
@@ -9091,7 +9090,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "partial ruin",
     "description": "A restored tower house in the midlands said to hold the graves of two cousins of Anne Boleyn. The MacCoghlan stronghold features a fine bawn wall and corner towers.",
-    "history": "Clonony is a small village in County Offaly, Ireland. It is noted for Clonony Castle, a late medieval tower house built in 1500. The village is between the River Brosna and the Grand Canal, in the parish of Gallen and Reynegh. The nearest town is Cloghan, 2.8 km (1.7 mi) to the south-east along the R357 road. Athlone is 22 km (14 mi) to the north.",
+    "history": "Clonony is a small village in County Offaly, Ireland. It is noted for Clonony Castle, a late medieval tower house built in 1500. The village is between the River Brosna and the Grand Canal, in the parish of Gallen and Reynegh. The nearest town is Cloghan, 2.8 km (1.7 mi) to the south-east along the R357 road. Athlone is 22 km (14 mi) to the north.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Doe_Castle%2C_Donegal.jpg/500px-Doe_Castle%2C_Donegal.jpg",
     "rating": 3.5,
     "reviewCount": 280,
@@ -9178,7 +9177,7 @@ const CASTLES = [
     "era": "18th century",
     "condition": "intact",
     "description": "Ireland's largest and earliest Palladian country house, built for Speaker William Conolly in the 1720s. Its long gallery and print room are among the finest Georgian interiors in the country.",
-    "history": "Castletown House, Celbridge, County Kildare, Ireland, is a Palladian country house built in 1722 for William Conolly, the Speaker of the Irish House of Commons. It formed the centrepiece of an 800-acre (320 ha) estate. The estate was sold in 1965, and later sub-divided.",
+    "history": "Castletown House, Celbridge, County Kildare, Ireland, is a Palladian country house built in 1722 for William Conolly, the Speaker of the Irish House of Commons. It formed the centrepiece of an 800-acre (320 ha) estate. The estate was sold in 1965, and later sub-divided.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg/500px-The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg",
     "rating": 4.5,
     "reviewCount": 2800,
@@ -9207,7 +9206,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "Home to the Talbot family for nearly 800 years, Malahide is one of the oldest continuously inhabited castles in Ireland. Its oak-panelled rooms and botanical gardens sit just north of Dublin.",
-    "history": "Malahide Castle, parts of which date to the 12th century, lies close to the village of Malahide, 14 km north of central Dublin in Ireland. It has over 267 acres (1.08 km2) of remaining parkland estate, forming the Malahide Demesne Regional Park.",
+    "history": "Malahide Castle, parts of which date to the 12th century, lies close to the village of Malahide, 14 km north of central Dublin in Ireland. It has over 267 acres (1.08 km2) of remaining parkland estate, forming the Malahide Demesne Regional Park.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Malahide_Castle%2C_March_2011_%282%29.jpg/500px-Malahide_Castle%2C_March_2011_%282%29.jpg",
     "rating": 4.5,
     "reviewCount": 7200,
@@ -9374,7 +9373,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A crumbling Anglo-Norman tower overlooking the Boyne — where Ireland's ancient river valley meets five centuries of stone and silence.",
+    "description": "A crumbling Anglo-Norman tower overlooking the Boyne - where Ireland's ancient river valley meets five centuries of stone and silence.",
     "history": "A mid-15th century Anglo-Norman castle near Navan, County Meath, overlooking the River Boyne in the Boyne Valley. A National Monument of Ireland. The D'Arcy family held it for generations. Now a romantic ruin with impressive remaining tower walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Castelo_de_Athlone_Irlanda.jpg/500px-Castelo_de_Athlone_Irlanda.jpg",
     "rating": 3.5,
@@ -9457,7 +9456,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "One of Ireland's largest and most impressive medieval monuments, enclosed by a massive fortified wall with towers. The Augustinian priory sprawls across several acres of riverside meadow.",
-    "history": "Kells Priory is one of the largest medieval monuments in Ireland. The Augustine priory is situated alongside King's River beside the village of Kells in the townland of Rathduff (Madden), about 15 km south of the medieval city of Kilkenny. The priory is a National Monument and is in the guardianship of the Office of Public Works. One of its most notable features is a collection of medieval tower houses spaced at intervals along and within walls which enclose a site of just over 3 acres (12,000 m2). These give the priory the appearance more of a medieval fortress than of a place of worship and from them comes its local name of \"Seven Castles\".",
+    "history": "Kells Priory is one of the largest medieval monuments in Ireland. The Augustine priory is situated alongside King's River beside the village of Kells in the townland of Rathduff (Madden), about 15 km south of the medieval city of Kilkenny. The priory is a National Monument and is in the guardianship of the Office of Public Works. One of its most notable features is a collection of medieval tower houses spaced at intervals along and within walls which enclose a site of just over 3 acres (12,000 m2). These give the priory the appearance more of a medieval fortress than of a place of worship and from them comes its local name of \"Seven Castles\".",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/500px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -9661,7 +9660,7 @@ const CASTLES = [
     "era": "1st millennium BC",
     "condition": "partial ruin",
     "description": "An Iron Age stone fort atop Greenan Mountain with panoramic views over Lough Foyle and Lough Swilly. Seat of the O'Neill kings of Aileach, restored in the 1870s by Dr Walter Bernard.",
-    "history": "The Grianán of Aileach, sometimes anglicised as Greenan Ely or, locally, as Greenan Fort, is a hillfort atop the 244 metres (801 ft) high Greenan Mountain at Burt on the Inishowen Peninsula in County Donegal, Ireland. The main structure is a 19th-century reconstruction of a stone ringfort, thought to have been built by the Northern Uí Néill, in the sixth or seventh century CE; although there is evidence that the site had been in use before the fort was built. It has been identified as the seat of the Kingdom of Ailech and one of the royal sites of Gaelic Ireland. The wall is about 4.5 metres (15 ft) thick and 5 metres (16 ft) high.",
+    "history": "The Grianán of Aileach, sometimes anglicised as Greenan Ely or, locally, as Greenan Fort, is a hillfort atop the 244 metres (801 ft) high Greenan Mountain at Burt on the Inishowen Peninsula in County Donegal, Ireland. The main structure is a 19th-century reconstruction of a stone ringfort, thought to have been built by the Northern Uí Néill, in the sixth or seventh century CE; although there is evidence that the site had been in use before the fort was built. It has been identified as the seat of the Kingdom of Ailech and one of the royal sites of Gaelic Ireland. The wall is about 4.5 metres (15 ft) thick and 5 metres (16 ft) high.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Nendrummonastery.jpg/500px-Nendrummonastery.jpg",
     "rating": 4.5,
     "reviewCount": 3600,
@@ -9837,7 +9836,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "A circular Norman tower on a small island in Lough Oughter, accessible only by boat. Built by the Anglo-Normans on a crannog site, it was the last castle to surrender in the Cromwellian wars.",
-    "history": "Cloughoughter Castle is a ruined circular castle on a small island in Lough Oughter, 4 kilometres (2.5 mi) east of the town of Killeshandra in County Cavan, Ireland.",
+    "history": "Cloughoughter Castle is a ruined circular castle on a small island in Lough Oughter, 4 kilometres (2.5 mi) east of the town of Killeshandra in County Cavan, Ireland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/500px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg",
     "rating": 4,
     "reviewCount": 560,
@@ -9945,7 +9944,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 329,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-athlone-castle.jpg"
+      "https://img.castlecore.uk/wiki-athlone-castle.jpg"
     ]
   },
   {
@@ -9957,7 +9956,7 @@ const CASTLES = [
     "era": "17th century",
     "condition": "intact",
     "description": "The largest castellated house in Ireland, home to the Pakenham family since 1655. Its 30-acre gardens include a Tibetan garden, Chinese garden, and forest walks around Lough Derravaragh.",
-    "history": "Tullynally Castle, also known as Pakenham Hall, is a country house situated some 2 km from Castlepollard on the Coole village road in County Westmeath, Ireland. The Gothic-style building has over 120 rooms and has been home to the Pakenham family for over 350 years.",
+    "history": "Tullynally Castle, also known as Pakenham Hall, is a country house situated some 2 km from Castlepollard on the Coole village road in County Westmeath, Ireland. The Gothic-style building has over 120 rooms and has been home to the Pakenham family for over 350 years.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Harry_Avery%27s_Castle.jpg/500px-Harry_Avery%27s_Castle.jpg",
     "rating": 4.2,
     "reviewCount": 980,
@@ -10064,7 +10063,7 @@ const CASTLES = [
       "https://img.castlecore.uk/roche-castle-4.jpg",
       "https://img.castlecore.uk/roche-castle-5.jpg"
     ],
-    "history": "Built around 1236 by Lady Rohesia de Verdun, Roche Castle is a superb example of an Anglo-Norman fortress. Legend holds that Rohesia invited the architect to dinner after completion—then had him thrown from the window so he could never build its equal. The castle controlled a strategic position on the Louth-Armagh border and was abandoned by the 17th century.",
+    "history": "Built around 1236 by Lady Rohesia de Verdun, Roche Castle is a superb example of an Anglo-Norman fortress. Legend holds that Rohesia invited the architect to dinner after completion-then had him thrown from the window so he could never build its equal. The castle controlled a strategic position on the Louth-Armagh border and was abandoned by the 17th century.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -10221,7 +10220,7 @@ const CASTLES = [
     "era": "19th century",
     "condition": "intact",
     "description": "A Scottish baronial-style castle on the slopes of Cave Hill overlooking Belfast. Built by the Donegall family in 1870, its cat garden features nine artistic cat representations for good luck.",
-    "history": "Belfast Castle is a mansion located in Cave Hill Country Park in Belfast, Northern Ireland, in a prominent position 400 feet (120 m) above sea level. Its location provides unobstructed views over the City of Belfast and Belfast Lough. There have been several structures called \"Belfast Castle\" over the centuries, located on different sites. The current \"castle\" is a Victorian structure that was built between 1867 and 1870 on the slopes of Cave Hill, and it is Grade A listed. The main entrance into the Belfast Castle Demesne is now where Innisfayle Park meets Downview Park West, just off the Antrim Road.",
+    "history": "Belfast Castle is a mansion located in Cave Hill Country Park in Belfast, Northern Ireland, in a prominent position 400 feet (120 m) above sea level. Its location provides unobstructed views over the City of Belfast and Belfast Lough. There have been several structures called \"Belfast Castle\" over the centuries, located on different sites. The current \"castle\" is a Victorian structure that was built between 1867 and 1870 on the slopes of Cave Hill, and it is Grade A listed. The main entrance into the Belfast Castle Demesne is now where Innisfayle Park meets Downview Park West, just off the Antrim Road.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Belfast_Castle%2C_August_2011.jpg/500px-Belfast_Castle%2C_August_2011.jpg",
     "rating": 4.3,
     "reviewCount": 4200,
@@ -10281,7 +10280,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "intact",
     "description": "An Elizabethan tower house guarding the narrow stretch of water between Carlingford Lough and the Newry River. Its bawn wall and tower survive complete beside the shore.",
-    "history": "Narrow Water Castle is a 16th-century tower house and bawn near Warrenpoint in Northern Ireland. It is beside the A2 road and on the County Down bank of the Clanrye (Newry) River, which enters Carlingford Lough 1-mile (1.6 km) to the south. It is a historic monument in state care in the townland of Narrow Water, in Newry and Mourne District Council district, at grid ref: J1256 1939.",
+    "history": "Narrow Water Castle is a 16th-century tower house and bawn near Warrenpoint in Northern Ireland. It is beside the A2 road and on the County Down bank of the Clanrye (Newry) River, which enters Carlingford Lough 1-mile (1.6 km) to the south. It is a historic monument in state care in the townland of Narrow Water, in Newry and Mourne District Council district, at grid ref: J1256 1939.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Monea_Castle1.jpg/500px-Monea_Castle1.jpg",
     "rating": 4,
     "reviewCount": 780,
@@ -10340,7 +10339,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "ruin",
     "description": "A 15th-century tower house overlooking Strangford Lough, used as a filming location for Game of Thrones. The Audley family built it to command views of the lough's narrows.",
-    "history": "Audley's Castle is a 15th-century castle located 1 mile (1.6 km) north-east of Strangford, County Down, Northern Ireland, on a rocky height overlooking Strangford Lough. It is a three-storey Tower house named after its 16th century owner, John Audley. Audley's Castle tower house and bawn is a State Care Historic Monument in the townland of Castleward, in Down District Council area, at grid ref: J5781 5058.",
+    "history": "Audley's Castle is a 15th-century castle located 1 mile (1.6 km) north-east of Strangford, County Down, Northern Ireland, on a rocky height overlooking Strangford Lough. It is a three-storey Tower house named after its 16th century owner, John Audley. Audley's Castle tower house and bawn is a State Care Historic Monument in the townland of Castleward, in Down District Council area, at grid ref: J5781 5058.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ballygally_Castle.jpg/500px-Ballygally_Castle.jpg",
     "rating": 4.1,
     "reviewCount": 1200,
@@ -10443,7 +10442,7 @@ const CASTLES = [
       "https://img.castlecore.uk/hillsborough-fort-4.jpg",
       "https://img.castlecore.uk/hillsborough-fort-5.jpg"
     ],
-    "history": "Founded in 1630 by Peter Hill and completed c.1650 by Colonel Arthur Hill to control the strategic Dublin–Carrickfergus road. The Hill family shaped the village of Hillsborough around it. Remodelled in the 18th century with a Gothic-style gazebo, it saw action during the 1641 rebellion. Now set within Hillsborough Forest Park beside the royal residence of Hillsborough Castle.",
+    "history": "Founded in 1630 by Peter Hill and completed c.1650 by Colonel Arthur Hill to control the strategic Dublin-Carrickfergus road. The Hill family shaped the village of Hillsborough around it. Remodelled in the 18th century with a Gothic-style gazebo, it saw action during the 1641 rebellion. Now set within Hillsborough Forest Park beside the royal residence of Hillsborough Castle.",
     "sources": [
       {
         "name": "Discover Northern Ireland",
@@ -10454,7 +10453,7 @@ const CASTLES = [
         "url": "https://www.virtualvisittours.com/hillsborough-fort/"
       },
       {
-        "name": "Wikipedia – Royal Hillsborough",
+        "name": "Wikipedia - Royal Hillsborough",
         "url": "https://en.wikipedia.org/wiki/Royal_Hillsborough"
       }
     ]
@@ -10468,7 +10467,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "ruin",
     "description": "A Norman motte and stone castle overlooking the junction of two major roads near Dundrum. Its small stone keep sits atop a prominent mound, a textbook example of early Norman fortification.",
-    "history": "Clough Castle is a 12th century Anglo-Norman motte-and-bailey castle located in Clough, County Down, Northern Ireland. It consists of a ruined tower house situated on a 7.6 metres (25 ft) high motte. A small crescent-shaped bailey lies next to the south-east of the motte, separated by a 2.1 metres deep ditch.",
+    "history": "Clough Castle is a 12th century Anglo-Norman motte-and-bailey castle located in Clough, County Down, Northern Ireland. It consists of a ruined tower house situated on a 7.6 metres (25 ft) high motte. A small crescent-shaped bailey lies next to the south-east of the motte, separated by a 2.1 metres deep ditch.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Clough_%2811%29%2C_October_2009.JPG/500px-Clough_%2811%29%2C_October_2009.JPG",
     "rating": 3.6,
     "reviewCount": 320,
@@ -10656,7 +10655,7 @@ const CASTLES = [
     "history": "Also known as Dunaneeny Castle (Dún an Aonaigh), it was established by Alexander MacDonnell as the seat of Clan MacDonald of Dunnyveg overlooking Port Brittas (Ballycastle Bay). Scottish galleys from Kintyre sheltered in the bay below. Local tradition suggests an earlier O'Carroll fortress on the site. The castle declined after the MacDonnells built a new castle at Ballycastle in the early 1600s.",
     "sources": [
       {
-        "name": "Wikipedia – Dunaneeny Castle",
+        "name": "Wikipedia - Dunaneeny Castle",
         "url": "https://en.wikipedia.org/wiki/Dunaneeny_Castle"
       },
       {
@@ -10702,7 +10701,7 @@ const CASTLES = [
     "era": "15th century",
     "condition": "ruin",
     "description": "A Franciscan friary near Ballycastle founded around 1485 by Rory MacQuillan. Several MacDonnell chieftains are buried here, including the legendary warrior Sorley Boy MacDonnell.",
-    "history": "Bonamargy Friary is situated in County Antrim, Northern Ireland, off the Cushendall Road on the approach to Ballycastle. The name Bonamargy means ‘foot of the Margy River’, the river formed by the joining of the Cary River and Shesk Rivers.",
+    "history": "Bonamargy Friary is situated in County Antrim, Northern Ireland, off the Cushendall Road on the approach to Ballycastle. The name Bonamargy means 'foot of the Margy River', the river formed by the joining of the Cary River and Shesk Rivers.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BonamargyFriary.JPG/500px-BonamargyFriary.JPG",
     "rating": 4,
     "reviewCount": 680,
@@ -10747,14 +10746,14 @@ const CASTLES = [
       "https://img.castlecore.uk/dungannon-castle-4.jpg",
       "https://img.castlecore.uk/dungannon-castle-5.jpg"
     ],
-    "history": "Dungannon was the principal stronghold of the O'Neill chieftains for over 400 years. Hugh O'Neill, Earl of Tyrone, made it his base during the Nine Years' War (1594–1603) against Elizabeth I. After the Flight of the Earls in 1607, the castle was seized and rebuilt by English planters but later destroyed. The current hilltop park preserves the castle mound with views over County Tyrone.",
+    "history": "Dungannon was the principal stronghold of the O'Neill chieftains for over 400 years. Hugh O'Neill, Earl of Tyrone, made it his base during the Nine Years' War (1594-1603) against Elizabeth I. After the Flight of the Earls in 1607, the castle was seized and rebuilt by English planters but later destroyed. The current hilltop park preserves the castle mound with views over County Tyrone.",
     "sources": [
       {
         "name": "Discover Northern Ireland",
         "url": "https://discovernorthernireland.com/things-to-do/dungannon-castle"
       },
       {
-        "name": "Wikipedia – Dungannon",
+        "name": "Wikipedia - Dungannon",
         "url": "https://en.wikipedia.org/wiki/Dungannon"
       }
     ]
@@ -10856,7 +10855,7 @@ const CASTLES = [
     "era": "19th century",
     "condition": "intact",
     "description": "A Victorian castle in a stunning 2,000-acre estate on the shores of Upper Lough Erne. The old castle ruins and ancient yew trees date back centuries earlier than the present house.",
-    "history": "  Crom Castle is a country house on the shores of Upper Lough Erne in County Fermanagh, Northern Ireland. It is the seat of the Earls Erne.  Standing within the 1,900-acre (7.7 km2) Crom Estate and a formal garden, the castle is built of stone. A central battlemented tower includes the main entrance, and there are also smaller towers to one side. It stands apart from the ruins of Old Crom Castle, of which two towers, some walls, and a ha-ha survive, and near two ancient yew trees believed to be at least 800 years old.",
+    "history": "  Crom Castle is a country house on the shores of Upper Lough Erne in County Fermanagh, Northern Ireland. It is the seat of the Earls Erne.  Standing within the 1,900-acre (7.7 km2) Crom Estate and a formal garden, the castle is built of stone. A central battlemented tower includes the main entrance, and there are also smaller towers to one side. It stands apart from the ruins of Old Crom Castle, of which two towers, some walls, and a ha-ha survive, and near two ancient yew trees believed to be at least 800 years old.",
     "image": "https://img.castlecore.uk/crom-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1400,
@@ -10917,7 +10916,7 @@ const CASTLES = [
     "era": "6th century",
     "condition": "ruin",
     "description": "An island monastery on Lower Lough Erne founded by St Molaise in the 6th century. Its round tower, Augustinian priory, and high cross make it one of Ulster's most important monastic sites.",
-    "history": "Devenish or Devinish is a lake island in Lower Lough Erne, County Fermanagh, Northern Ireland. Aligned roughly north–south, it is about one and a quarter miles (2.0 km) long and two-thirds of a mile (1.1 km) wide.",
+    "history": "Devenish or Devinish is a lake island in Lower Lough Erne, County Fermanagh, Northern Ireland. Aligned roughly north-south, it is about one and a quarter miles (2.0 km) long and two-thirds of a mile (1.1 km) wide.",
     "image": "https://img.castlecore.uk/devenish-monastic-site.jpg",
     "rating": 4.4,
     "reviewCount": 1600,
@@ -10944,7 +10943,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-15th century",
     "condition": "ruin",
-    "description": "A hauntingly beautiful Augustinian priory ruin sheltering one of Northern Ireland's finest medieval tombs—the ornate canopied effigy of an O'Cahan warrior chief.",
+    "description": "A hauntingly beautiful Augustinian priory ruin sheltering one of Northern Ireland's finest medieval tombs-the ornate canopied effigy of an O'Cahan warrior chief.",
     "image": "https://img.castlecore.uk/dungiven-priory.jpg",
     "rating": 4.1,
     "reviewCount": 680,
@@ -10984,7 +10983,7 @@ const CASTLES = [
     "era": "17th century",
     "condition": "ruin",
     "description": "The remains of an O'Cahan stronghold and later Plantation castle in the Roe Valley. The site overlooks the river where legend says the famous Londonderry Air was first heard.",
-    "history": "Limavady is a market town in County Londonderry, Northern Ireland, with Binevenagh as a backdrop. Lying 17 miles (27 km) east of Derry and 14 miles (23 km) southwest of Coleraine, Limavady had a population of 11,279 people at the 2021 Census. In the 40 years between 1971 and 2011, Limavady's population nearly doubled. Limavady is within Causeway Coast and Glens Borough.",
+    "history": "Limavady is a market town in County Londonderry, Northern Ireland, with Binevenagh as a backdrop. Lying 17 miles (27 km) east of Derry and 14 miles (23 km) southwest of Coleraine, Limavady had a population of 11,279 people at the 2021 Census. In the 40 years between 1971 and 2011, Limavady's population nearly doubled. Limavady is within Causeway Coast and Glens Borough.",
     "image": "https://img.castlecore.uk/limavady-roe-valley-castle.jpg",
     "rating": 3.4,
     "reviewCount": 220,
@@ -11069,7 +11068,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "A small but atmospheric Norman castle ruin near the shores of Lough Neagh. Its tower fragments overlook the surrounding drumlins of mid-Armagh.",
-    "history": "Carrick Castle is a 14th-century tower house on the west shore of Loch Goil on the Cowal Peninsula, in Argyll and Bute, west of Scotland. It is located between Cuilmuich and Carrick, 4 miles (6.4 km) south of Lochgoilhead.",
+    "history": "Carrick Castle is a 14th-century tower house on the west shore of Loch Goil on the Cowal Peninsula, in Argyll and Bute, west of Scotland. It is located between Cuilmuich and Carrick, 4 miles (6.4 km) south of Lochgoilhead.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Carrick_Castle_tower_from_west.jpg/500px-Carrick_Castle_tower_from_west.jpg",
     "rating": 3.3,
     "reviewCount": 160,
@@ -11173,7 +11172,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "partial ruin",
-    "description": "A Tudor tower rising from the most famous garden in England — Vita Sackville-West's living masterpiece of colour, scent, and romance.",
+    "description": "A Tudor tower rising from the most famous garden in England - Vita Sackville-West's living masterpiece of colour, scent, and romance.",
     "history": "A 16th-century Elizabethan mansion, now mainly ruined except for the iconic tower and some buildings. Famed worldwide for the garden created by writer Vita Sackville-West and diplomat Harold Nicolson from the 1930s. The gardens are divided into 'rooms' with distinct themes. Managed by the National Trust.",
     "image": "https://img.castlecore.uk/sissinghurst-castle.jpg",
     "rating": 4.6,
@@ -11265,7 +11264,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "partial ruin",
-    "description": "A formidable Norman motte-and-bailey guarding the River Medway crossing — where you can climb the great gatehouse and sit at a medieval guard's table in the heart of a Kent market town.",
+    "description": "A formidable Norman motte-and-bailey guarding the River Medway crossing - where you can climb the great gatehouse and sit at a medieval guard's table in the heart of a Kent market town.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TonbridgeCastle0021.JPG/500px-TonbridgeCastle0021.JPG",
     "rating": 4,
     "reviewCount": 1800,
@@ -11313,7 +11312,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th-15th century",
     "condition": "ruin",
-    "description": "Golden sandstone ruins of a Premonstratensian abbey drowsing in a wooded valley on the Kent-Sussex border. The skeletal church and 14th-century gatehouse feel lifted from a Romantic painting—Turner himself sketched them.",
+    "description": "Golden sandstone ruins of a Premonstratensian abbey drowsing in a wooded valley on the Kent-Sussex border. The skeletal church and 14th-century gatehouse feel lifted from a Romantic painting-Turner himself sketched them.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BayhamOldAbbeyC.jpg/500px-BayhamOldAbbeyC.jpg",
     "rating": 4.1,
     "reviewCount": 670,
@@ -11357,7 +11356,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A squat Tudor artillery fort marooned in the shingle flats between Rye and Winchelsea—built by Henry VIII to repel French invasion, now stranded a mile from the sea as the coastline retreated around it.",
+    "description": "A squat Tudor artillery fort marooned in the shingle flats between Rye and Winchelsea-built by Henry VIII to repel French invasion, now stranded a mile from the sea as the coastline retreated around it.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Camber_Castle%2C_seen_from_the_north-west.jpg/500px-Camber_Castle%2C_seen_from_the_north-west.jpg",
     "rating": 3.8,
     "reviewCount": 450,
@@ -11400,7 +11399,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A Norman gatehouse fragment stands sentinel over the River Adur in this sleepy Sussex village — once the power centre of the fearsome de Braose barony. The towering wall section and tree-covered motte make for quietly dramatic photos.",
+    "description": "A Norman gatehouse fragment stands sentinel over the River Adur in this sleepy Sussex village - once the power centre of the fearsome de Braose barony. The towering wall section and tree-covered motte make for quietly dramatic photos.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Bramber_Castle_1.jpg/500px-Bramber_Castle_1.jpg",
     "rating": 3.5,
     "reviewCount": 320,
@@ -11445,7 +11444,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-14th century",
     "condition": "intact",
-    "description": "A bishop's medieval summer palace turned luxury hotel, with towering 14th-century curtain walls built against French invasion — nestled in the South Downs where wildflower meadows meet ancient stone.",
+    "description": "A bishop's medieval summer palace turned luxury hotel, with towering 14th-century curtain walls built against French invasion - nestled in the South Downs where wildflower meadows meet ancient stone.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Amberley_Castle_%28geograph_3694978%29.jpg/500px-Amberley_Castle_%28geograph_3694978%29.jpg",
     "rating": 4.2,
     "reviewCount": 950,
@@ -11486,7 +11485,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "King John's octagonal keep — one of only three castles he built, halfway between Windsor and Winchester, where the Magna Carta king left for Runnymede and Scottish kings were imprisoned.",
+    "description": "King John's octagonal keep - one of only three castles he built, halfway between Windsor and Winchester, where the Magna Carta king left for Runnymede and Scottish kings were imprisoned.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Odiham_Castle.jpg/500px-Odiham_Castle.jpg",
     "rating": 3.7,
     "reviewCount": 420,
@@ -11527,7 +11526,7 @@ const CASTLES = [
     "type": "palace",
     "era": "12th-15th century",
     "condition": "ruin",
-    "description": "A moated medieval palace where the Bishops of Winchester — once the richest men in England — entertained kings and held court amid fishponds and formal gardens in the Hampshire countryside.",
+    "description": "A moated medieval palace where the Bishops of Winchester - once the richest men in England - entertained kings and held court amid fishponds and formal gardens in the Hampshire countryside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Bishop%27s_Waltham_Palace_and_moat.jpg/500px-Bishop%27s_Waltham_Palace_and_moat.jpg",
     "rating": 3.9,
     "reviewCount": 560,
@@ -11567,7 +11566,7 @@ const CASTLES = [
     "type": "palace",
     "era": "12th century",
     "condition": "ruin",
-    "description": "The magnificent medieval palace of one of England's richest bishops, built during the chaos of the Anarchy — its ruins nestled beside Winchester Cathedral in the shadow of ancient power.",
+    "description": "The magnificent medieval palace of one of England's richest bishops, built during the chaos of the Anarchy - its ruins nestled beside Winchester Cathedral in the shadow of ancient power.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg/500px-Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg",
     "rating": 4,
     "reviewCount": 780,
@@ -11655,7 +11654,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "The most complete Cistercian abbey in southern England, wrapped in ivy and woodland shade — a haunt of Romantic poets who fell for its crumbling Gothic arches and wild beauty.",
+    "description": "The most complete Cistercian abbey in southern England, wrapped in ivy and woodland shade - a haunt of Romantic poets who fell for its crumbling Gothic arches and wild beauty.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Netley_abbey_drone.JPG/500px-Netley_abbey_drone.JPG",
     "rating": 4.3,
     "reviewCount": 1800,
@@ -11678,7 +11677,7 @@ const CASTLES = [
       "https://img.castlecore.uk/netley-abbey-4.jpg",
       "https://img.castlecore.uk/netley-abbey-5.jpg"
     ],
-    "history": "Founded in 1239 by Cistercian monks under the patronage of Henry III. After dissolution in 1536, it was converted into a Tudor mansion. A demolition worker's death halted destruction, and the ruins became overgrown — celebrated by Romantic writers including Jane Austen and painter John Constable. The superb Abbot's Lodging with its vaulted undercroft survives. Free to visit, managed by English Heritage.",
+    "history": "Founded in 1239 by Cistercian monks under the patronage of Henry III. After dissolution in 1536, it was converted into a Tudor mansion. A demolition worker's death halted destruction, and the ruins became overgrown - celebrated by Romantic writers including Jane Austen and painter John Constable. The superb Abbot's Lodging with its vaulted undercroft survives. Free to visit, managed by English Heritage.",
     "youtube": [],
     "sources": [
       {
@@ -11746,7 +11745,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-15th century",
     "condition": "ruin",
-    "description": "Frequently called 'the prettiest village in England,' this Cotswold hamlet of honey-coloured stone cottages tumbles down to a medieval packhorse bridge over the Bybrook. A filming favourite—War Horse, Stardust, and Downton Abbey all shot here.",
+    "description": "Frequently called 'the prettiest village in England,' this Cotswold hamlet of honey-coloured stone cottages tumbles down to a medieval packhorse bridge over the Bybrook. A filming favourite-War Horse, Stardust, and Downton Abbey all shot here.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Castle_combe_river.jpg/500px-Castle_combe_river.jpg",
     "rating": 3.5,
     "reviewCount": 280,
@@ -11790,7 +11789,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-17th century",
     "condition": "partial ruin",
-    "description": "A Norman fortress reborn as the Museum of Somerset — where the Bloody Assizes were held and centuries of West Country history unfold within ancient walls.",
+    "description": "A Norman fortress reborn as the Museum of Somerset - where the Bloody Assizes were held and centuries of West Country history unfold within ancient walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg/500px-Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg",
     "rating": 4,
     "reviewCount": 1200,
@@ -11832,7 +11831,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A fortified Devon manor on the Exe estuary — seat of the Courtenay family for over 600 years, where medieval walls meet Georgian grandeur.",
+    "description": "A fortified Devon manor on the Exe estuary - seat of the Courtenay family for over 600 years, where medieval walls meet Georgian grandeur.",
     "history": "A fortified manor house in Exminster, Devon, on the west bank of the River Exe estuary. Built after 1390, with major 18th-century renovations. Home of the Courtenay family (Earls of Devon) for over 600 years. Grade I listed with Grade II* gardens. Features a music room and marble hall.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Powderham_Castle_02.jpg/500px-Powderham_Castle_02.jpg",
     "rating": 4.3,
@@ -11882,7 +11881,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "An artillery fort guarding one of Devon's most beautiful harbours — where medieval cannons first pointed seaward to face the French.",
+    "description": "An artillery fort guarding one of Devon's most beautiful harbours - where medieval cannons first pointed seaward to face the French.",
     "history": "An artillery fort built to protect Dartmouth harbour. Earliest parts date from the 1380s in response to French attack threats. One of the first castles in England designed specifically for artillery. Features a chain mechanism that stretched across the harbour. Managed by English Heritage.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Dartmouth_Castle_-_geograph.org.uk_-_725989.jpg/500px-Dartmouth_Castle_-_geograph.org.uk_-_725989.jpg",
     "rating": 4.3,
@@ -11931,7 +11930,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "14th-16th century",
     "condition": "intact",
-    "description": "A fortified Devon manor with a fairy-tale battlemented front, home to Sir Humphrey Gilbert who colonized Newfoundland — and where Sir Walter Raleigh allegedly smoked his first pipe of tobacco.",
+    "description": "A fortified Devon manor with a fairy-tale battlemented front, home to Sir Humphrey Gilbert who colonized Newfoundland - and where Sir Walter Raleigh allegedly smoked his first pipe of tobacco.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Compton_Castle_in_Devon_enh.jpg/500px-Compton_Castle_in_Devon_enh.jpg",
     "rating": 4.1,
     "reviewCount": 780,
@@ -11976,7 +11975,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A Norman shell keep overlooking Plymouth Sound from the Cornish side — built by the Count of Mortain on the ruins of a Roman fort. Its circular walls and sweeping coastal views rival Restormel, but far fewer visitors know it exists.",
+    "description": "A Norman shell keep overlooking Plymouth Sound from the Cornish side - built by the Count of Mortain on the ruins of a Roman fort. Its circular walls and sweeping coastal views rival Restormel, but far fewer visitors know it exists.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg/500px-Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg",
     "rating": 3.5,
     "reviewCount": 150,
@@ -12017,7 +12016,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "Sir Walter Raleigh's Tudor retreat in 1,200 acres of Dorset parkland — where the adventurer who brought tobacco to England built his country dream.",
+    "description": "Sir Walter Raleigh's Tudor retreat in 1,200 acres of Dorset parkland - where the adventurer who brought tobacco to England built his country dream.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sherborne_Castle_03.jpg/500px-Sherborne_Castle_03.jpg",
     "rating": 4.4,
     "reviewCount": 2300,
@@ -12058,7 +12057,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "partial ruin",
-    "description": "A striking Jacobean hunting lodge disguised as a fairy-tale castle, gutted by fire and hauntingly restored — set in sweeping Dorset parkland near the iconic cove.",
+    "description": "A striking Jacobean hunting lodge disguised as a fairy-tale castle, gutted by fire and hauntingly restored - set in sweeping Dorset parkland near the iconic cove.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lulworth_Castle_%281937%29.jpg/500px-Lulworth_Castle_%281937%29.jpg",
     "rating": 4.1,
     "reviewCount": 1600,
@@ -12106,7 +12105,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Iron Age",
     "condition": "ruin",
-    "description": "Europe's largest and most complex Iron Age hillfort — vast concentric ramparts ripple across the Dorset hilltop like ancient waves frozen in chalk and green.",
+    "description": "Europe's largest and most complex Iron Age hillfort - vast concentric ramparts ripple across the Dorset hilltop like ancient waves frozen in chalk and green.",
     "image": "https://img.castlecore.uk/maiden-castle.jpg",
     "rating": 4.2,
     "reviewCount": 2100,
@@ -12152,7 +12151,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-13th century",
     "condition": "ruin",
-    "description": "A Norman fortress built on Roman earthworks in the Welsh border hills — with a rare cylindrical keep rising from its motte, offering wild views across the Black Mountains of Herefordshire.",
+    "description": "A Norman fortress built on Roman earthworks in the Welsh border hills - with a rare cylindrical keep rising from its motte, offering wild views across the Black Mountains of Herefordshire.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Longtown_Castle_-_geograph.org.uk_-_392612.jpg/500px-Longtown_Castle_-_geograph.org.uk_-_392612.jpg",
     "rating": 4,
     "reviewCount": 380,
@@ -12194,7 +12193,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-16th century",
     "condition": "ruin",
-    "description": "A dramatic Norman ruin rising above a zoo — where medieval power, Civil War sieges, and exotic animals share a limestone hilltop.",
+    "description": "A dramatic Norman ruin rising above a zoo - where medieval power, Civil War sieges, and exotic animals share a limestone hilltop.",
     "history": "Built 1070 by Ansculf de Picquigny after the Norman Conquest. Rebuilt in stone in the 12th century, demolished by Henry II, then rebuilt again. John Dudley constructed grand residential buildings within. Slighted during the English Civil War, gutted by fire in 1750. Now part of Dudley Zoo.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dudley_Castle%2C_England%2C_Aerial_View.jpg/500px-Dudley_Castle%2C_England%2C_Aerial_View.jpg",
     "rating": 4,
@@ -12250,7 +12249,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-19th century",
     "condition": "ruin",
-    "description": "A hilltop sentinel visible from the M6, this Norman stronghold-turned-Gothic Revival ruin charts 900 years of English power — from the Domesday Book to Civil War destruction to romantic Victorian reimagining.",
+    "description": "A hilltop sentinel visible from the M6, this Norman stronghold-turned-Gothic Revival ruin charts 900 years of English power - from the Domesday Book to Civil War destruction to romantic Victorian reimagining.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Stafford_Castle_%28September_2020%29.jpg/500px-Stafford_Castle_%28September_2020%29.jpg",
     "rating": 3.8,
     "reviewCount": 1100,
@@ -12350,7 +12349,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A small Shropshire keep with one of the English Civil War's darkest stories — after a brutal siege, Royalist forces massacred the surrendered Parliamentarian garrison. Restored and reopened in 2011, it's a Time Team favourite with real emotional weight.",
+    "description": "A small Shropshire keep with one of the English Civil War's darkest stories - after a brutal siege, Royalist forces massacred the surrendered Parliamentarian garrison. Restored and reopened in 2011, it's a Time Team favourite with real emotional weight.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Hopton_Castle.jpg/500px-Hopton_Castle.jpg",
     "rating": 3.6,
     "reviewCount": 180,
@@ -12374,7 +12373,7 @@ const CASTLES = [
       "https://img.castlecore.uk/hopton-castle-main-4.jpg",
       "https://img.castlecore.uk/hopton-castle-main-5.jpg"
     ],
-    "history": "Possibly founded in the 12th century by the Hopton family. The stone keep was built during the Barons' War of the 1260s. During the Civil War, the Parliamentarian garrison surrendered after a fierce siege — all were massacred by Royalist forces. A ruin by the 18th century, restored 2006-2011. Featured on Time Team in 2010.",
+    "history": "Possibly founded in the 12th century by the Hopton family. The stone keep was built during the Barons' War of the 1260s. During the Civil War, the Parliamentarian garrison surrendered after a fierce siege - all were massacred by Royalist forces. A ruin by the 18th century, restored 2006-2011. Featured on Time Team in 2010.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -12390,7 +12389,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A Welsh Marches castle with a moated gatehouse reflected in still waters — community-owned and fiercely loved, standing guard on the ancient borderland between England and Wales.",
+    "description": "A Welsh Marches castle with a moated gatehouse reflected in still waters - community-owned and fiercely loved, standing guard on the ancient borderland between England and Wales.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Whittington_Castle%2C_Shropshire%2C_UK.jpg/500px-Whittington_Castle%2C_Shropshire%2C_UK.jpg",
     "rating": 4,
     "reviewCount": 720,
@@ -12431,7 +12430,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-16th century",
     "condition": "ruin",
-    "description": "Medieval castle meets unfinished Elizabethan mansion in the most romantic ruin in Shropshire — where the Corbet family's Renaissance dreams were shattered by Civil War cannon.",
+    "description": "Medieval castle meets unfinished Elizabethan mansion in the most romantic ruin in Shropshire - where the Corbet family's Renaissance dreams were shattered by Civil War cannon.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Moreton_Corbet_Castle_from_west_01.JPG/500px-Moreton_Corbet_Castle_from_west_01.JPG",
     "rating": 4,
     "reviewCount": 450,
@@ -12472,7 +12471,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Austere Augustinian ruins following the strict Arrouaisian rule — one of only a handful in England, rising from the Shropshire fields with its dramatic west doorway still framing the sky.",
+    "description": "Austere Augustinian ruins following the strict Arrouaisian rule - one of only a handful in England, rising from the Shropshire fields with its dramatic west doorway still framing the sky.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Remains_of_Lilleshall_Abbey_a_private_residence_after_the_Reformation_severely_damanged_during_the_English_Civil_War.jpg/500px-Remains_of_Lilleshall_Abbey_a_private_residence_after_the_Reformation_severely_damanged_during_the_English_Civil_War.jpg",
     "rating": 4.1,
     "reviewCount": 520,
@@ -12512,7 +12511,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Massive Cistercian ruins on the banks of the Severn, with nave columns still marching through roofless aisles — a mother house whose daughter abbeys stretched from Dublin to Wales.",
+    "description": "Massive Cistercian ruins on the banks of the Severn, with nave columns still marching through roofless aisles - a mother house whose daughter abbeys stretched from Dublin to Wales.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/BuildwasAbbey.jpg/500px-BuildwasAbbey.jpg",
     "rating": 4.2,
     "reviewCount": 680,
@@ -12553,7 +12552,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "An Augustinian abbey that prospered for four centuries under the patronage of the FitzAlan earls — its impressive domestic ruins rising from the Shropshire countryside with views to the Wrekin.",
+    "description": "An Augustinian abbey that prospered for four centuries under the patronage of the FitzAlan earls - its impressive domestic ruins rising from the Shropshire countryside with views to the Wrekin.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/HaughmondAbbey.jpg/500px-HaughmondAbbey.jpg",
     "rating": 4.1,
     "reviewCount": 580,
@@ -12594,7 +12593,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Cluniac monastery of extraordinary beauty in much Wenlock — where 7th-century saints and 12th-century arches share a quiet Shropshire garden.",
+    "description": "A Cluniac monastery of extraordinary beauty in much Wenlock - where 7th-century saints and 12th-century arches share a quiet Shropshire garden.",
     "history": "A ruined 12th-century Cluniac monastery in Much Wenlock, Shropshire. Re-founded by Roger de Montgomery between 1079-1082 on the site of a 7th-century monastery. In 1101, bones believed to be those of Saint Milburga were discovered beneath the old church. Managed by English Heritage.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg/500px-St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg",
     "rating": 4.3,
@@ -12642,7 +12641,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A rare 14th-century moated quadrangular castle still standing intact in rural Warwickshire — built by the 1st Earl of Huntingdon, later owned by the Dukes of Buckingham. Octagonal corner towers, 15th-century doors, and a broad moat make it utterly photogenic.",
+    "description": "A rare 14th-century moated quadrangular castle still standing intact in rural Warwickshire - built by the 1st Earl of Huntingdon, later owned by the Dukes of Buckingham. Octagonal corner towers, 15th-century doors, and a broad moat make it utterly photogenic.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Maxstoke_Castle%2C_2010.jpg/500px-Maxstoke_Castle%2C_2010.jpg",
     "rating": 3.8,
     "reviewCount": 120,
@@ -12682,7 +12681,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-16th century",
     "condition": "partial ruin",
-    "description": "A ruined medieval fortress reborn as a striking modernist holiday home—new architecture threaded through ancient walls. Winner of the 2013 RIBA Stirling Prize, it's where Lady Jane Grey spent her childhood before her nine-day reign.",
+    "description": "A ruined medieval fortress reborn as a striking modernist holiday home-new architecture threaded through ancient walls. Winner of the 2013 RIBA Stirling Prize, it's where Lady Jane Grey spent her childhood before her nine-day reign.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Astley_Castle_Front_Elevation.JPG/500px-Astley_Castle_Front_Elevation.JPG",
     "rating": 4,
     "reviewCount": 350,
@@ -12700,7 +12699,7 @@ const CASTLES = [
       "https://img.castlecore.uk/astley-castle-4.jpg",
       "https://img.castlecore.uk/astley-castle-5.jpg"
     ],
-    "history": "Fortified in 1266 when Warin de Bassingburn received a licence to crenellate. The Grey family held it from the 15th century—Lady Jane Grey grew up here before becoming queen for nine days in 1553. The castle fell into ruin over centuries. In 2012, the Landmark Trust completed a radical restoration by Witherford Watson Mann Architects, inserting a modern house within the medieval shell, winning the RIBA Stirling Prize.",
+    "history": "Fortified in 1266 when Warin de Bassingburn received a licence to crenellate. The Grey family held it from the 15th century-Lady Jane Grey grew up here before becoming queen for nine days in 1553. The castle fell into ruin over centuries. In 2012, the Landmark Trust completed a radical restoration by Witherford Watson Mann Architects, inserting a modern house within the medieval shell, winning the RIBA Stirling Prize.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -12744,7 +12743,7 @@ const CASTLES = [
       "https://img.castlecore.uk/thetford-priory-4.jpg",
       "https://img.castlecore.uk/thetford-priory-5.jpg"
     ],
-    "history": "Founded in the early 12th century as a Cluniac priory, it became the burial place of the Earls and Dukes of Norfolk. When threatened with dissolution in 1536, the 3rd Duke of Norfolk petitioned Henry VIII to save it—unsuccessfully. It was among the last monasteries suppressed. The impressive 14th-century gatehouse and extensive church foundations survive. Managed by English Heritage.",
+    "history": "Founded in the early 12th century as a Cluniac priory, it became the burial place of the Earls and Dukes of Norfolk. When threatened with dissolution in 1536, the 3rd Duke of Norfolk petitioned Henry VIII to save it-unsuccessfully. It was among the last monasteries suppressed. The impressive 14th-century gatehouse and extensive church foundations survive. Managed by English Heritage.",
     "sources": [
       {
         "name": "English Heritage",
@@ -12764,7 +12763,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th-15th century",
     "condition": "partial ruin",
-    "description": "A Benedictine priory with a scandalous past—its priors were infamous rogues. The nave still serves as the parish church, its west front featuring some of the earliest bar tracery in England. Beneath Reformation whitewash, medieval saints slowly resurface.",
+    "description": "A Benedictine priory with a scandalous past-its priors were infamous rogues. The nave still serves as the parish church, its west front featuring some of the earliest bar tracery in England. Beneath Reformation whitewash, medieval saints slowly resurface.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/BinhamPriory.JPG/500px-BinhamPriory.JPG",
     "rating": 4,
     "reviewCount": 450,
@@ -12784,7 +12783,7 @@ const CASTLES = [
       "https://img.castlecore.uk/binham-priory-4.jpg",
       "https://img.castlecore.uk/binham-priory-5.jpg"
     ],
-    "history": "Founded in 1091 by Peter des Valoines, nephew of William the Conqueror. The church took 150 years to build, starting in the 1090s. Prior Richard de Parco (1227-44) began the magnificent west front with pioneering bar tracery. The priory's history is one of almost continuous scandal among its priors. The rood screen is a palimpsest—Cranmer's 1539 Bible text painted over medieval saints, now fading to reveal the originals beneath.",
+    "history": "Founded in 1091 by Peter des Valoines, nephew of William the Conqueror. The church took 150 years to build, starting in the 1090s. Prior Richard de Parco (1227-44) began the magnificent west front with pioneering bar tracery. The priory's history is one of almost continuous scandal among its priors. The rood screen is a palimpsest-Cranmer's 1539 Bible text painted over medieval saints, now fading to reveal the originals beneath.",
     "sources": [
       {
         "name": "English Heritage",
@@ -12852,7 +12851,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A 15th-century moated castle with a 100-foot tower you can still climb — built by the real-life inspiration for Shakespeare's Falstaff, besieged by a duke, and haunted by Norfolk's medieval past.",
+    "description": "A 15th-century moated castle with a 100-foot tower you can still climb - built by the real-life inspiration for Shakespeare's Falstaff, besieged by a duke, and haunted by Norfolk's medieval past.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Caister_Castle.jpg",
     "rating": 3.9,
     "reviewCount": 650,
@@ -12892,7 +12891,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "15th century",
     "condition": "intact",
-    "description": "A moated Tudor brick fortress in the Norfolk flatlands — where the Bedingfeld family has lived since 1482 and Catholic secrets hide in the walls.",
+    "description": "A moated Tudor brick fortress in the Norfolk flatlands - where the Bedingfeld family has lived since 1482 and Catholic secrets hide in the walls.",
     "history": "A moated country house built in 1482 by Sir Edmund Bedingfeld, who obtained a licence to crenellate. The Bedingfeld family has lived here since construction. Features a famous priest's hole where Catholic clergy hid during the Reformation. National Trust since 1952. Grade I listed.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Oxburgh_Hall%2C_2017.jpg/500px-Oxburgh_Hall%2C_2017.jpg",
     "rating": 4.4,
@@ -12940,7 +12939,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "An unusually tall Norman motte crowned with flint wall fragments in sleepy Suffolk — once the seat of Elizabeth de Clare, one of medieval England's wealthiest women. The earthworks and tower remnants still command the gentle countryside.",
+    "description": "An unusually tall Norman motte crowned with flint wall fragments in sleepy Suffolk - once the seat of Elizabeth de Clare, one of medieval England's wealthiest women. The earthworks and tower remnants still command the gentle countryside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Clare_Castle_Motte.jpg/500px-Clare_Castle_Motte.jpg",
     "rating": 3.5,
     "reviewCount": 280,
@@ -12980,7 +12979,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-14th century",
     "condition": "ruin",
-    "description": "A Premonstratensian abbey twice rebuilt — first fleeing the sea, then a fire — its cloister garth catches the Suffolk dawn light through Gothic arches with a haunting, holy stillness.",
+    "description": "A Premonstratensian abbey twice rebuilt - first fleeing the sea, then a fire - its cloister garth catches the Suffolk dawn light through Gothic arches with a haunting, holy stillness.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Leiston_Abbey_cloister_garth_at_dawn.jpg/500px-Leiston_Abbey_cloister_garth_at_dawn.jpg",
     "rating": 3.9,
     "reviewCount": 380,
@@ -13020,7 +13019,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "One of the finest surviving motte-and-bailey earthworks in England — a massive man-made hill with a 15th-century brick bridge, surrounded by moats and the ghost-outline of a medieval village. Pure, unspoiled Norman engineering in quiet Essex countryside.",
+    "description": "One of the finest surviving motte-and-bailey earthworks in England - a massive man-made hill with a 15th-century brick bridge, surrounded by moats and the ghost-outline of a medieval village. Pure, unspoiled Norman engineering in quiet Essex countryside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Pleshey_Castle_%289%29_%2822063429162%29.jpg/500px-Pleshey_Castle_%289%29_%2822063429162%29.jpg",
     "rating": 3.6,
     "reviewCount": 250,
@@ -13061,7 +13060,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A dramatic ruin overlooking the Thames Estuary — immortalised by Constable's brush and still commanding one of Essex's most breathtaking views.",
+    "description": "A dramatic ruin overlooking the Thames Estuary - immortalised by Constable's brush and still commanding one of Essex's most breathtaking views.",
     "history": "A ruined fortification in Essex overlooking the Thames Estuary. Built in the 13th century by Hubert de Burgh. Famously painted by John Constable in 1829. The two surviving towers lean dramatically due to landslip. Free to visit and managed by English Heritage within Hadleigh Country Park.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Aerial_view_of_Hadleigh_Castle_and_Country_Park_-_geograph.org.uk_-_1563595.jpg/500px-Aerial_view_of_Hadleigh_Castle_and_Country_Park_-_geograph.org.uk_-_1563595.jpg",
     "rating": 4,
@@ -13111,7 +13110,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th-19th century",
     "condition": "intact",
-    "description": "Where Elizabeth I rallied her troops against the Spanish Armada — a star-shaped fortress guarding the Thames with moats, bastions, and centuries of military defiance etched into its riverside walls.",
+    "description": "Where Elizabeth I rallied her troops against the Spanish Armada - a star-shaped fortress guarding the Thames with moats, bastions, and centuries of military defiance etched into its riverside walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tilbury_Fort.jpg/500px-Tilbury_Fort.jpg",
     "rating": 4.1,
     "reviewCount": 1100,
@@ -13156,7 +13155,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th-12th century",
     "condition": "partial ruin",
-    "description": "A place of worship since the 7th century and the last resting place of King Harold — with soaring Norman columns that rival Durham Cathedral and the ghosts of a thousand years of English history.",
+    "description": "A place of worship since the 7th century and the last resting place of King Harold - with soaring Norman columns that rival Durham Cathedral and the ghosts of a thousand years of English history.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/2022-02-12_-_Waltham_Abbey_Church_%283%29.jpg/500px-2022-02-12_-_Waltham_Abbey_Church_%283%29.jpg",
     "rating": 4.1,
     "reviewCount": 920,
@@ -13197,7 +13196,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A vast Norman motte-and-bailey that once controlled the road to London — where William the Conqueror received England's surrender and the Black Prince held court amid earthworks and double moats.",
+    "description": "A vast Norman motte-and-bailey that once controlled the road to London - where William the Conqueror received England's surrender and the Black Prince held court amid earthworks and double moats.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Berkhamsted_Castle_Jan_2007.jpg/500px-Berkhamsted_Castle_Jan_2007.jpg",
     "rating": 3.9,
     "reviewCount": 780,
@@ -13288,7 +13287,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-14th century",
     "condition": "partial ruin",
-    "description": "Britain's most haunted castle — a medieval fortress in wild Northumberland where ghost tours prowl torch-lit corridors and 50 spectres reportedly call home.",
+    "description": "Britain's most haunted castle - a medieval fortress in wild Northumberland where ghost tours prowl torch-lit corridors and 50 spectres reportedly call home.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Chillingham_Castle_north_front.jpg/500px-Chillingham_Castle_north_front.jpg",
     "rating": 4.2,
     "reviewCount": 2200,
@@ -13370,7 +13369,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A border fortress in one of England's prettiest villages — captured by King James IV of Scotland days before Flodden, now a peaceful ruin where medieval stone meets a thatched-roof pub.",
+    "description": "A border fortress in one of England's prettiest villages - captured by King James IV of Scotland days before Flodden, now a peaceful ruin where medieval stone meets a thatched-roof pub.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Etal_castle.jpg",
     "rating": 3.9,
     "reviewCount": 520,
@@ -13448,7 +13447,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "13th century",
     "condition": "intact",
-    "description": "One of the finest surviving fortified manor houses in England — a 13th-century merchant's dream home hastily battlemented when the Scottish wars came knocking at his Northumberland door.",
+    "description": "One of the finest surviving fortified manor houses in England - a 13th-century merchant's dream home hastily battlemented when the Scottish wars came knocking at his Northumberland door.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Aydon_Castle_2.jpg/500px-Aydon_Castle_2.jpg",
     "rating": 4.2,
     "reviewCount": 680,
@@ -13492,7 +13491,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "A perfectly restored Augustinian church hidden in a wooded bend of the River Coquet — its Norman arches rising from the Northumberland wilderness like a secret cathedral lost in time.",
+    "description": "A perfectly restored Augustinian church hidden in a wooded bend of the River Coquet - its Norman arches rising from the Northumberland wilderness like a secret cathedral lost in time.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BrinkburnPriory.jpg/500px-BrinkburnPriory.jpg",
     "rating": 4.3,
     "reviewCount": 780,
@@ -13538,7 +13537,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "7th century (original), 12th century (current)",
     "condition": "intact",
-    "description": "A 1,350-year-old foundation built with Roman stone — where Saxon crypts survive beneath medieval arches in one of England's most ancient places of worship.",
+    "description": "A 1,350-year-old foundation built with Roman stone - where Saxon crypts survive beneath medieval arches in one of England's most ancient places of worship.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Hexham_Abbey.jpg/500px-Hexham_Abbey.jpg",
     "rating": 4.5,
     "reviewCount": 2200,
@@ -13626,7 +13625,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Built with stones plundered from Hadrian's Wall, this 12th-century border castle broods over the River Tipalt in wild Northumberland. Its very name means 'gap in the wall' — a ruin literally made from Roman ruins, layered history you can touch.",
+    "description": "Built with stones plundered from Hadrian's Wall, this 12th-century border castle broods over the River Tipalt in wild Northumberland. Its very name means 'gap in the wall' - a ruin literally made from Roman ruins, layered history you can touch.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Thirlwall_Castle_-_geograph.org.uk_-_2530461.jpg/500px-Thirlwall_Castle_-_geograph.org.uk_-_2530461.jpg",
     "rating": 3.8,
     "reviewCount": 320,
@@ -13653,7 +13652,7 @@ const CASTLES = [
       "https://img.castlecore.uk/thirlwall-castle-keep-4.jpg",
       "https://img.castlecore.uk/thirlwall-castle-keep-5.jpg"
     ],
-    "history": "Built in the 12th century by the Thirlwall family using stones from nearby Hadrian's Wall. The name means 'perforated wall' — a reference to a gap in the Roman fortification. Grade I listed and Scheduled Ancient Monument. Fell into disrepair in the 17th century.",
+    "history": "Built in the 12th century by the Thirlwall family using stones from nearby Hadrian's Wall. The name means 'perforated wall' - a reference to a gap in the Roman fortification. Grade I listed and Scheduled Ancient Monument. Fell into disrepair in the 17th century.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -13669,7 +13668,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Grade I ruin deep in the Northumberland wilderness, overlooking the River Coquet — built at the request of Henry II to defend against the Scots, besieged within years, and fought over for centuries. The wild landscape hasn't changed since the border wars.",
+    "description": "A Grade I ruin deep in the Northumberland wilderness, overlooking the River Coquet - built at the request of Henry II to defend against the Scots, besieged within years, and fought over for centuries. The wild landscape hasn't changed since the border wars.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Harbottle_Castle_-_2025-09-24_00-13-52_001.JPG/500px-Harbottle_Castle_-_2025-09-24_00-13-52_001.JPG",
     "rating": 3.5,
     "reviewCount": 150,
@@ -13710,7 +13709,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A Norman motte perched above the River Wansbeck in deepest Northumberland — the first of three seats for the ancient Mitford family. On the Buildings at Risk Register but still hauntingly beautiful, with Grade I listed ruins slowly returning to the earth.",
+    "description": "A Norman motte perched above the River Wansbeck in deepest Northumberland - the first of three seats for the ancient Mitford family. On the Buildings at Risk Register but still hauntingly beautiful, with Grade I listed ruins slowly returning to the earth.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Mitford_Castle.jpg/500px-Mitford_Castle.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -13751,7 +13750,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "The last English abbey to fall to Henry VIII's dissolution, Shap's romantic ruins stand alone beside the River Lowther in the Lake District fells. Its surviving tower rises from the quiet valley like a final prayer — hauntingly remote.",
+    "description": "The last English abbey to fall to Henry VIII's dissolution, Shap's romantic ruins stand alone beside the River Lowther in the Lake District fells. Its surviving tower rises from the quiet valley like a final prayer - hauntingly remote.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/ShapAbbey.jpg/500px-ShapAbbey.jpg",
     "rating": 3.8,
     "reviewCount": 320,
@@ -13798,7 +13797,7 @@ const CASTLES = [
     "era": "14th century",
     "condition": "intact",
     "description": "A 14th-century pele tower wrapped in Tudor elegance, with intricate oak panelling so precious the V&A once borrowed it for a century.",
-    "history": "Home of the Strickland family for over 750 years. Earliest part is a 14th-century pele tower. The Inlaid Chamber features extraordinary oak panelling inlaid with poplar and bog-oak — sold to the V&A in the 1890s, returned in 1999. Now managed by the National Trust within the Lake District.",
+    "history": "Home of the Strickland family for over 750 years. Earliest part is a 14th-century pele tower. The Inlaid Chamber features extraordinary oak panelling inlaid with poplar and bog-oak - sold to the V&A in the 1890s, returned in 1999. Now managed by the National Trust within the Lake District.",
     "image": "https://img.castlecore.uk/sizergh-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
@@ -13911,7 +13910,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "14th century",
     "condition": "intact",
-    "description": "A 66-foot sandstone tower house rising from a medieval moat in the quiet Lake District village of Dacre — built against the threat of Scottish raids, with ornate carvings and four crenellated turrets. Now a private home you can only admire from outside.",
+    "description": "A 66-foot sandstone tower house rising from a medieval moat in the quiet Lake District village of Dacre - built against the threat of Scottish raids, with ornate carvings and four crenellated turrets. Now a private home you can only admire from outside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Dacre_Castle_%28geograph_2648020%29.jpg/500px-Dacre_Castle_%28geograph_2648020%29.jpg",
     "rating": 3.7,
     "reviewCount": 280,
@@ -13991,7 +13990,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-14th century",
     "condition": "partial ruin",
-    "description": "A brooding riverside fortress at the junction of two Lake District rivers — privately owned by the same family since the 18th century, with roots stretching back to Norman stone from a Roman fort.",
+    "description": "A brooding riverside fortress at the junction of two Lake District rivers - privately owned by the same family since the 18th century, with roots stretching back to Norman stone from a Roman fort.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Outer_Gatehouse.jpg/500px-Outer_Gatehouse.jpg",
     "rating": 3.7,
     "reviewCount": 450,
@@ -14031,7 +14030,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A remote island fortress built by monks to guard their harbour — where a Yorkist pretender landed to claim the English throne, accessible only by boat across the wild Cumbrian coast.",
+    "description": "A remote island fortress built by monks to guard their harbour - where a Yorkist pretender landed to claim the English throne, accessible only by boat across the wild Cumbrian coast.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Piel_Castle_2023.JPG/500px-Piel_Castle_2023.JPG",
     "rating": 4.1,
     "reviewCount": 780,
@@ -14073,7 +14072,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A towering quadrangular fortress rising from the Vale of York — once a power base for the Nevilles and a prison for young royal heirs. Its sandstone towers still reach nearly 100 feet, dominating the skyline of this quiet village.",
+    "description": "A towering quadrangular fortress rising from the Vale of York - once a power base for the Nevilles and a prison for young royal heirs. Its sandstone towers still reach nearly 100 feet, dominating the skyline of this quiet village.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sheriff_hutton_castle.jpg/500px-Sheriff_hutton_castle.jpg",
     "rating": 3.7,
     "reviewCount": 320,
@@ -14111,7 +14110,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A 14th-century Yorkshire castle where the Ingilby family held court for 700 years — complete with priest holes, a deer park, and Civil War bullet holes.",
+    "description": "A 14th-century Yorkshire castle where the Ingilby family held court for 700 years - complete with priest holes, a deer park, and Civil War bullet holes.",
     "history": "A Grade I listed 14th-century country house in Ripley, North Yorkshire, 3 miles north of Harrogate. Seat of the Ingilby baronets for centuries. Features a medieval gatehouse, Tudor tower, and 18th-century additions. Announced for sale in June 2024 after 700 years of family ownership.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ripley_CastleDE.jpg",
     "rating": 4.3,
@@ -14161,7 +14160,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A hauntingly beautiful Grade I ruin wrapped in a dry moat, where 14th-century sandstone towers crumble beneath centuries of ivy — pure dark academia energy.",
+    "description": "A hauntingly beautiful Grade I ruin wrapped in a dry moat, where 14th-century sandstone towers crumble beneath centuries of ivy - pure dark academia energy.",
     "image": "https://img.castlecore.uk/ravensworth-castle.jpg",
     "rating": 3.5,
     "reviewCount": 150,
@@ -14201,7 +14200,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "14th century",
     "condition": "ruin",
-    "description": "The best-preserved Carthusian monastery in England — where silent monks lived in individual cells with their own gardens and running water.",
+    "description": "The best-preserved Carthusian monastery in England - where silent monks lived in individual cells with their own gardens and running water.",
     "history": "A Carthusian priory founded in 1398 by Thomas de Holand, Earl of Kent and Duke of Surrey. Dissolved in 1539. The best-preserved of the nine Carthusian monasteries in England. One cell has been fully reconstructed. Each monk had an individual cell with garden and running water. Managed by English Heritage.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mount_Grace_Priory_2015.jpg/500px-Mount_Grace_Priory_2015.jpg",
     "rating": 4.4,
@@ -14254,7 +14253,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Hauntingly beautiful Premonstratensian ruins on the banks of the River Swale, reached by a riverside walk from Richmond — with rare 13th-century wall paintings still glowing in the parish church beside it.",
+    "description": "Hauntingly beautiful Premonstratensian ruins on the banks of the River Swale, reached by a riverside walk from Richmond - with rare 13th-century wall paintings still glowing in the parish church beside it.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/EasbyAbbey_Refectory.jpg/500px-EasbyAbbey_Refectory.jpg",
     "rating": 4.3,
     "reviewCount": 1100,
@@ -14300,7 +14299,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Romantic Augustinian ruins on the banks of the River Derwent, founded in grief for a lord's dead son — later a secret testing ground for D-Day landing vehicles visited by Churchill himself.",
+    "description": "Romantic Augustinian ruins on the banks of the River Derwent, founded in grief for a lord's dead son - later a secret testing ground for D-Day landing vehicles visited by Churchill himself.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/KirkhamPriory.JPG/500px-KirkhamPriory.JPG",
     "rating": 4.1,
     "reviewCount": 680,
@@ -14341,7 +14340,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "9th-16th century",
     "condition": "ruin",
-    "description": "England's most famous deserted medieval village—grassy humps and hollows on the Yorkshire Wolds mark where homes, streets, and fields once teemed with life. The roofless church stands as sole witness to six centuries of habitation.",
+    "description": "England's most famous deserted medieval village-grassy humps and hollows on the Yorkshire Wolds mark where homes, streets, and fields once teemed with life. The roofless church stands as sole witness to six centuries of habitation.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg/500px-Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg",
     "rating": 3.9,
     "reviewCount": 420,
@@ -14382,7 +14381,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A restored 15th-century tower house crowning the highest point in its parish — where bishops of Durham ruled, Parliamentarians laid siege, and centuries of history settled into stone.",
+    "description": "A restored 15th-century tower house crowning the highest point in its parish - where bishops of Durham ruled, Parliamentarians laid siege, and centuries of history settled into stone.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg/500px-Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg",
     "rating": 3.5,
     "reviewCount": 100,
@@ -14422,7 +14421,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A medieval gatehouse standing alone on the edge of the North York Moors — guardian of an abandoned village and a road that time forgot.",
+    "description": "A medieval gatehouse standing alone on the edge of the North York Moors - guardian of an abandoned village and a road that time forgot.",
     "history": "Established in the early 12th century as a Norman motte-and-bailey overlooking an important road on the western edge of the North York Moors. Unusually for a motte-and-bailey, it remained in use into the early modern period. The village of Whorlton was eventually abandoned, leaving the castle gatehouse as a solitary survivor.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Whorlton_Castle_gatehouse_exterior.jpg/500px-Whorlton_Castle_gatehouse_exterior.jpg",
     "rating": 3.9,
@@ -14477,7 +14476,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "The Wars of the Roses haunt this hilltop ruin — where the Duke of York fell and Shakespeare set a scene of medieval treachery.",
+    "description": "The Wars of the Roses haunt this hilltop ruin - where the Duke of York fell and Shakespeare set a scene of medieval treachery.",
     "history": "A medieval motte-and-bailey overlooking the River Calder in Wakefield. Site of the Battle of Wakefield (1460) during the Wars of the Roses, where Richard, Duke of York was killed. Featured in Shakespeare's Henry VI. Extensive archaeological excavations in the 1960s-70s revealed its sandstone walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SandalCastleMotte.jpg/500px-SandalCastleMotte.jpg",
     "rating": 3.7,
@@ -14530,7 +14529,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A 14th-century rectangular tower house visible for miles around, rising from a steep slope on the Harewood Estate. Its chapel sits above the portcullis chamber, and the barrel-vaulted basement still holds the original well — Grade I listed and hauntingly atmospheric.",
+    "description": "A 14th-century rectangular tower house visible for miles around, rising from a steep slope on the Harewood Estate. Its chapel sits above the portcullis chamber, and the barrel-vaulted basement still holds the original well - Grade I listed and hauntingly atmospheric.",
     "image": "https://img.castlecore.uk/harewood-castle.jpg",
     "rating": 3.6,
     "reviewCount": 250,
@@ -14608,7 +14607,7 @@ const CASTLES = [
     "type": "palace",
     "era": "18th century",
     "condition": "intact",
-    "description": "An Italianate palace in the Peak District — where Darcy's Pemberley came to life on screen, fallow deer drift through ancient parkland, and Palladian grandeur meets rugged moorland.",
+    "description": "An Italianate palace in the Peak District - where Darcy's Pemberley came to life on screen, fallow deer drift through ancient parkland, and Palladian grandeur meets rugged moorland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/South_facade_of_Lyme_Park_house%2C_2013.jpg/500px-South_facade_of_Lyme_Park_house%2C_2013.jpg",
     "rating": 4.5,
     "reviewCount": 4200,
@@ -14732,7 +14731,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "ruin",
-    "description": "Cistercian ruins set against the dramatic backdrop of the Ribble Valley hills—a place of quiet devotion that briefly blazed with defiance during the Pilgrimage of Grace, when expelled monks marched back to reclaim their home.",
+    "description": "Cistercian ruins set against the dramatic backdrop of the Ribble Valley hills-a place of quiet devotion that briefly blazed with defiance during the Pilgrimage of Grace, when expelled monks marched back to reclaim their home.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Salley_Abbey_-_geograph.org.uk_-_1736378.jpg/500px-Salley_Abbey_-_geograph.org.uk_-_1736378.jpg",
     "rating": 3.7,
     "reviewCount": 320,
@@ -14772,7 +14771,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "16th century",
     "condition": "intact",
-    "description": "A Grade I fortified manor perched on Lancashire's highest hilltop, where King James I allegedly knighted a loin of beef — surviving Civil War siege, centuries of neglect, and a Victorian resurrection.",
+    "description": "A Grade I fortified manor perched on Lancashire's highest hilltop, where King James I allegedly knighted a loin of beef - surviving Civil War siege, centuries of neglect, and a Victorian resurrection.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hoghton_Tower%2C_Lancashire_6704115249.jpg/500px-Hoghton_Tower%2C_Lancashire_6704115249.jpg",
     "rating": 4.2,
     "reviewCount": 1100,
@@ -14815,7 +14814,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A vast hilltop manor where Mary Queen of Scots was imprisoned — now a haunting Grade I ruin on the Heritage at Risk register, its Great Hall still defying the Derbyshire skyline.",
+    "description": "A vast hilltop manor where Mary Queen of Scots was imprisoned - now a haunting Grade I ruin on the Heritage at Risk register, its Great Hall still defying the Derbyshire skyline.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Wingfield_Manor_-_geograph.org.uk_-_6280.jpg/500px-Wingfield_Manor_-_geograph.org.uk_-_6280.jpg",
     "rating": 4.1,
     "reviewCount": 520,
@@ -14872,7 +14871,7 @@ const CASTLES = [
       "https://img.castlecore.uk/codnor-castle-2.jpg",
       "https://img.castlecore.uk/codnor-castle-main-2.jpg"
     ],
-    "history": "Built c.1200 by Henry de Grey on land held since the Norman Conquest by William Peverel. Constructed in two phases—the northern section first, then expanded southward. The Grey family (later Barons Grey of Codnor) held it until the 15th century. Fell into decay after the 16th century. A Scheduled Monument and Grade II listed Building at Risk, now under conservation by the Codnor Castle Heritage Trust.",
+    "history": "Built c.1200 by Henry de Grey on land held since the Norman Conquest by William Peverel. Constructed in two phases-the northern section first, then expanded southward. The Grey family (later Barons Grey of Codnor) held it until the 15th century. Fell into decay after the 16th century. A Scheduled Monument and Grade II listed Building at Risk, now under conservation by the Codnor Castle Heritage Trust.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -14896,7 +14895,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "11th-17th century",
     "condition": "intact",
-    "description": "England's most complete medieval manor — a time capsule of tapestried halls, terraced gardens, and the legendary elopement of Dorothy Vernon.",
+    "description": "England's most complete medieval manor - a time capsule of tapestried halls, terraced gardens, and the legendary elopement of Dorothy Vernon.",
     "history": "Origins from the 11th century with additions through the 17th century. Acquired by the Vernon family in the 12th century through marriage. Dorothy Vernon's famous 1563 elopement with John Manners linked it to the Dukes of Rutland. Used as a filming location for multiple period dramas.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Haddon_Hall.jpg/500px-Haddon_Hall.jpg",
     "rating": 4.6,
@@ -14954,8 +14953,8 @@ const CASTLES = [
     "type": "palace",
     "era": "16th century",
     "condition": "intact",
-    "description": "\"More glass than wall\" — Bess of Hardwick's Elizabethan power statement, where enormous windows flood a prodigy house with light and ambition.",
-    "history": "Built 1590-1597 by Robert Smythson for Bess of Hardwick, one of the richest women in Elizabethan England. A 'prodigy house' famous for its revolutionary use of glass — its enormous windows were a statement of wealth. Contains one of Europe's finest collections of Elizabethan embroideries and tapestries. National Trust.",
+    "description": "\"More glass than wall\" - Bess of Hardwick's Elizabethan power statement, where enormous windows flood a prodigy house with light and ambition.",
+    "history": "Built 1590-1597 by Robert Smythson for Bess of Hardwick, one of the richest women in Elizabethan England. A 'prodigy house' famous for its revolutionary use of glass - its enormous windows were a statement of wealth. Contains one of Europe's finest collections of Elizabethan embroideries and tapestries. National Trust.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Hardwick_Hall_3_%287027835143%29.jpg/500px-Hardwick_Hall_3_%287027835143%29.jpg",
     "rating": 4.5,
     "reviewCount": 4200,
@@ -15007,7 +15006,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Cistercian abbey turned country estate set in 150 acres of parkland and woodland — where medieval stone meets Victorian grandeur in the heart of Sherwood Forest country.",
+    "description": "A Cistercian abbey turned country estate set in 150 acres of parkland and woodland - where medieval stone meets Victorian grandeur in the heart of Sherwood Forest country.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Rufford_Abbey.jpg/500px-Rufford_Abbey.jpg",
     "rating": 3.9,
     "reviewCount": 780,
@@ -15048,7 +15047,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "Nottinghamshire's hidden gem — a Norman minster with exquisite 13th-century leaf carvings so lifelike they seem to breathe in the chapter house shadows.",
+    "description": "Nottinghamshire's hidden gem - a Norman minster with exquisite 13th-century leaf carvings so lifelike they seem to breathe in the chapter house shadows.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Southwell_Minster_2016_-_north-west_view.jpg/500px-Southwell_Minster_2016_-_north-west_view.jpg",
     "rating": 4.6,
     "reviewCount": 2800,
@@ -15069,7 +15068,7 @@ const CASTLES = [
       "https://img.castlecore.uk/southwell-minster-4.jpg",
       "https://img.castlecore.uk/southwell-minster-5.jpg"
     ],
-    "history": "A minster where God has been worshipped for over 900 years, replacing an earlier Saxon church. The Norman nave dates from c.1108, while the chapter house (c.1290) contains the famous 'Leaves of Southwell' — naturalistic stone carvings considered the finest medieval foliage sculpture in England. Adjacent to the site of a Roman villa. Became a cathedral in 1884.",
+    "history": "A minster where God has been worshipped for over 900 years, replacing an earlier Saxon church. The Norman nave dates from c.1108, while the chapter house (c.1290) contains the famous 'Leaves of Southwell' - naturalistic stone carvings considered the finest medieval foliage sculpture in England. Adjacent to the site of a Roman villa. Became a cathedral in 1884.",
     "sources": [
       {
         "name": "Southwell Minster",
@@ -15089,7 +15088,7 @@ const CASTLES = [
     "type": "palace",
     "era": "16th-17th century",
     "condition": "ruin",
-    "description": "One of England's great Elizabethan prodigy houses, now a romantic semi-ruin with restored cutwork gardens — built for a Lord Chancellor to Elizabeth I and steeped in recusant Catholic intrigue.",
+    "description": "One of England's great Elizabethan prodigy houses, now a romantic semi-ruin with restored cutwork gardens - built for a Lord Chancellor to Elizabeth I and steeped in recusant Catholic intrigue.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg/500px-Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg",
     "rating": 4.2,
     "reviewCount": 1100,
@@ -15134,7 +15133,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A windswept mound beside the River Nene is all that remains of the castle where Mary Queen of Scots was executed and Richard III was born. The weight of history here is staggering — two of England's most dramatic stories, one lonely earthwork.",
+    "description": "A windswept mound beside the River Nene is all that remains of the castle where Mary Queen of Scots was executed and Richard III was born. The weight of history here is staggering - two of England's most dramatic stories, one lonely earthwork.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Fotheringhay_motte%2C_2009.jpg/500px-Fotheringhay_motte%2C_2009.jpg",
     "rating": 3.6,
     "reviewCount": 380,
@@ -15176,7 +15175,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "The last castle built by an English nobleman — a Tudor fantasy of turrets and oriel windows where Henry VIII stayed with Anne Boleyn, now a luxury hotel dripping with royal scandal and ambition.",
+    "description": "The last castle built by an English nobleman - a Tudor fantasy of turrets and oriel windows where Henry VIII stayed with Anne Boleyn, now a luxury hotel dripping with royal scandal and ambition.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/500px-Thornbury.castle.west.front.arp.750pix.jpg",
     "rating": 4.2,
     "reviewCount": 950,
@@ -15218,7 +15217,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-13th century",
     "condition": "partial ruin",
-    "description": "A medieval castle where you can actually sleep — a Norman fortress turned royal hunting lodge turned crossbow bolt factory, now a YHA hostel perched above the Forest of Dean.",
+    "description": "A medieval castle where you can actually sleep - a Norman fortress turned royal hunting lodge turned crossbow bolt factory, now a YHA hostel perched above the Forest of Dean.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg/500px-St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg",
     "rating": 3.9,
     "reviewCount": 520,
@@ -15303,7 +15302,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "A Norman abbey church of cathedral proportions — where the largest Romanesque tower in Europe rises above the Gloucestershire floodplain and medieval stained glass glows with haunting intensity.",
+    "description": "A Norman abbey church of cathedral proportions - where the largest Romanesque tower in Europe rises above the Gloucestershire floodplain and medieval stained glass glows with haunting intensity.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tewkesbury_Abbey_2011.jpg/500px-Tewkesbury_Abbey_2011.jpg",
     "rating": 4.7,
     "reviewCount": 4200,
@@ -15326,7 +15325,7 @@ const CASTLES = [
       "https://img.castlecore.uk/tewkesbury-abbey-4.jpg",
       "https://img.castlecore.uk/tewkesbury-abbey-5.jpg"
     ],
-    "history": "Founded as a Benedictine monastery in the 8th century. The present Norman church was consecrated in 1121. Boasts the largest Norman tower in Europe at 46 metres and one of the finest medieval vaulted ceilings in England. The Battle of Tewkesbury in 1471 — a decisive Wars of the Roses engagement — was fought nearby, and Lancastrian fugitives were dragged from the church. Saved from destruction at the Dissolution when the townspeople purchased it for £453.",
+    "history": "Founded as a Benedictine monastery in the 8th century. The present Norman church was consecrated in 1121. Boasts the largest Norman tower in Europe at 46 metres and one of the finest medieval vaulted ceilings in England. The Battle of Tewkesbury in 1471 - a decisive Wars of the Roses engagement - was fought nearby, and Lancastrian fugitives were dragged from the church. Saved from destruction at the Dissolution when the townspeople purchased it for £453.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -15390,7 +15389,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th-18th century",
     "condition": "intact",
-    "description": "A remote Highland tower house with a star-shaped defensive wall, scarred by clan massacre and Jacobite rebellion — standing sentinel on the wild mountain pass between Strathdon and Tomintoul.",
+    "description": "A remote Highland tower house with a star-shaped defensive wall, scarred by clan massacre and Jacobite rebellion - standing sentinel on the wild mountain pass between Strathdon and Tomintoul.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Corgarff_Castle_-_geograph.org.uk_-_7273852.jpg/500px-Corgarff_Castle_-_geograph.org.uk_-_7273852.jpg",
     "rating": 4,
     "reviewCount": 520,
@@ -15436,8 +15435,8 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "partial ruin",
-    "description": "A hexagonal fortress clinging to a sea-washed ridge on the remote Ardnamurchan peninsula — where clans warred, the Spanish Armada anchored, and kings schemed to break the Lords of the Isles. Recently restored, with nine-foot-thick walls and endless ocean views.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mingary_NE_02.jpg/500px-Mingary_NE_02.jpg",
+    "description": "A hexagonal fortress clinging to a sea-washed ridge on the remote Ardnamurchan peninsula - where clans warred, the Spanish Armada anchored, and kings schemed to break the Lords of the Isles. Recently restored, with nine-foot-thick walls and endless ocean views.",
+    "image": "https://img.castlecore.uk/mingary-castle-3.jpg",
     "rating": 4,
     "reviewCount": 320,
     "county": "Highland",
@@ -15453,7 +15452,6 @@ const CASTLES = [
     "_index": 476,
     "gallery": [
       "https://img.castlecore.uk/mingary-castle-2.jpg",
-      "https://img.castlecore.uk/mingary-castle-3.jpg",
       "https://img.castlecore.uk/mingary-castle-4.jpg",
       "https://img.castlecore.uk/mingary-castle-5.jpg",
       "https://img.castlecore.uk/mingary-castle-main-2.jpg",
@@ -15477,7 +15475,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-14th century",
     "condition": "ruin",
-    "description": "A gaunt Norse tower clinging to a knife-edge promontory above the North Sea â€” one of Scotland's oldest castles and among its most dramatically sited. Known locally as 'The Old Man of Wick'.",
+    "description": "A gaunt Norse tower clinging to a knife-edge promontory above the North Sea â€" one of Scotland's oldest castles and among its most dramatically sited. Known locally as 'The Old Man of Wick'.",
     "image": "https://img.castlecore.uk/old-wick-castle.jpg",
     "rating": 3.8,
     "reviewCount": 280,
@@ -15518,7 +15516,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th-17th century",
     "condition": "ruin",
-    "description": "A spectacular ruined stronghold of Clan Sinclair perched on a jagged sea stack north of Wick. Twin castles â€” 15th-century Girnigoe and 17th-century Sinclair â€” fused into one brooding coastal ruin.",
+    "description": "A spectacular ruined stronghold of Clan Sinclair perched on a jagged sea stack north of Wick. Twin castles â€" 15th-century Girnigoe and 17th-century Sinclair â€" fused into one brooding coastal ruin.",
     "image": "https://img.castlecore.uk/castle-girnigoe.jpg",
     "rating": 4.1,
     "reviewCount": 450,
@@ -15601,7 +15599,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-18th century",
     "condition": "ruin",
-    "description": "A classic motte-and-bailey ruin where the stone keep literally slid down the mound — one of Scotland's most secure medieval fortifications, now a dramatic free-entry ruin in the Moray flatlands.",
+    "description": "A classic motte-and-bailey ruin where the stone keep literally slid down the mound - one of Scotland's most secure medieval fortifications, now a dramatic free-entry ruin in the Moray flatlands.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Duffuscastle4.jpg/500px-Duffuscastle4.jpg",
     "rating": 4,
     "reviewCount": 520,
@@ -15646,7 +15644,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A Z-plan tower house in the Scottish Highlands with a world-class art collection — and a story of burning, rebuilding, and resilience.",
+    "description": "A Z-plan tower house in the Scottish Highlands with a world-class art collection - and a story of burning, rebuilding, and resilience.",
     "history": "A well-preserved Z-plan tower house west of Forres in Moray, Scotland. Built in 1567, burned by Montrose's forces in 1645, then rebuilt. Features fine 17th-century plasterwork and an important collection of paintings. National Trust for Scotland. Category A listed.",
     "image": "",
     "rating": 4.3,
@@ -15690,7 +15688,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A stark L-plan tower perched on prehistoric earthworks above the whisky country of Speyside. Burned, besieged, and fought over by rival clans, Auchindoun stands in wild isolation — a monument to the savage beauty of Highland feuds.",
+    "description": "A stark L-plan tower perched on prehistoric earthworks above the whisky country of Speyside. Burned, besieged, and fought over by rival clans, Auchindoun stands in wild isolation - a monument to the savage beauty of Highland feuds.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Auchindoun_Castle_-_geograph.org.uk_-_1369160.jpg/500px-Auchindoun_Castle_-_geograph.org.uk_-_1369160.jpg",
     "rating": 3.9,
     "reviewCount": 380,
@@ -15732,7 +15730,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A windswept MacDougall tower house on the southern tip of Kerrera island — burned by Covenanters in 1647, restored with clan donations from around the world, overlooking the wild Firth of Lorne.",
+    "description": "A windswept MacDougall tower house on the southern tip of Kerrera island - burned by Covenanters in 1647, restored with clan donations from around the world, overlooking the wild Firth of Lorne.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Gylen_Castle%2C_Kerrera_-_geograph.org.uk_-_7637715.jpg/500px-Gylen_Castle%2C_Kerrera_-_geograph.org.uk_-_7637715.jpg",
     "rating": 4.1,
     "reviewCount": 450,
@@ -15774,7 +15772,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A fairytale Scottish castle on the shores of Loch Fyne — seat of Clan Campbell and a filming favourite with its distinctive turret silhouette.",
+    "description": "A fairytale Scottish castle on the shores of Loch Fyne - seat of Clan Campbell and a filming favourite with its distinctive turret silhouette.",
     "history": "Seat of the Duke of Argyll, chief of Clan Campbell, on the shores of Loch Fyne. The current castle was built from the mid-18th century in a Gothic Revival style, replacing a 15th-century tower house. Features a magnificent Armoury Hall. Category A listed building. Featured in Downton Abbey.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/20210815_Inverary_Castle-8848.jpg/500px-20210815_Inverary_Castle-8848.jpg",
     "rating": 4.5,
@@ -15949,7 +15947,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-15th century",
     "condition": "ruin",
-    "description": "The atmospheric island seat of the Lords of the Isles, set on two crannogs in a remote Islay loch. Scotland's forgotten medieval capital â€” where a Gaelic parliament once ruled the western seas.",
+    "description": "The atmospheric island seat of the Lords of the Isles, set on two crannogs in a remote Islay loch. Scotland's forgotten medieval capital â€" where a Gaelic parliament once ruled the western seas.",
     "image": "https://img.castlecore.uk/finlaggan-castle.jpg",
     "rating": 3.9,
     "reviewCount": 320,
@@ -16010,7 +16008,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dudhope-castle-4.jpg",
       "https://img.castlecore.uk/dudhope-castle-5.jpg"
     ],
-    "history": "Originally a 13th-century fortification, rebuilt as a tower house by the Scrymgeour family who held the hereditary office of Royal Standard Bearer. John Graham of Claverhouse â€” 'Bonnie Dundee' â€” held the castle before his fateful Jacobite campaign of 1689. Served as a barracks, wool mill, and was nearly demolished before restoration. Set in Dudhope Park with views over the Firth of Tay.",
+    "history": "Originally a 13th-century fortification, rebuilt as a tower house by the Scrymgeour family who held the hereditary office of Royal Standard Bearer. John Graham of Claverhouse â€" 'Bonnie Dundee' â€" held the castle before his fateful Jacobite campaign of 1689. Served as a barracks, wool mill, and was nearly demolished before restoration. Set in Dudhope Park with views over the Firth of Tay.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -16030,7 +16028,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-13th century",
     "condition": "ruin",
-    "description": "The red sandstone ruins where Scottish independence was born — birthplace of the Declaration of Arbroath, one of history's most powerful assertions of freedom.",
+    "description": "The red sandstone ruins where Scottish independence was born - birthplace of the Declaration of Arbroath, one of history's most powerful assertions of freedom.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Arbroath_Abbey1.jpg/500px-Arbroath_Abbey1.jpg",
     "rating": 4.4,
     "reviewCount": 2800,
@@ -16089,7 +16087,7 @@ const CASTLES = [
       "https://img.castlecore.uk/brechin-castle-4.jpg",
       "https://img.castlecore.uk/brechin-castle-5.jpg"
     ],
-    "history": "Site of a royal castle from at least the 13th century â€” besieged by Edward I in 1296 and again in 1303 during the Wars of Independence. Passed to the Maule family and then to the Ramsays, Earls of Dalhousie. Extensively remodelled in the 18th and 19th centuries. The grounds host the Brechin Castle Centre, a popular garden and retail attraction.",
+    "history": "Site of a royal castle from at least the 13th century â€" besieged by Edward I in 1296 and again in 1303 during the Wars of Independence. Passed to the Maule family and then to the Ramsays, Earls of Dalhousie. Extensively remodelled in the 18th and 19th centuries. The grounds host the Brechin Castle Centre, a popular garden and retail attraction.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -16109,7 +16107,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "partial ruin",
-    "description": "A Scottish tower house hiding in the Ochil Hills — the 'Township of the Bard' where medieval Perthshire feels barely a breath away.",
+    "description": "A Scottish tower house hiding in the Ochil Hills - the 'Township of the Bard' where medieval Perthshire feels barely a breath away.",
     "history": "A late medieval Scottish tower house in the Ochil Hills, about 5km south of Abernethy, Perth and Kinross. The name derives from Gaelic 'Baile a' Bhàird' meaning Township of the Bard. A scheduled monument in the care of Historic Environment Scotland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Balvaird_Castle_2018.jpg/500px-Balvaird_Castle_2018.jpg",
     "rating": 3.7,
@@ -16162,7 +16160,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "An Edwardian time capsule on Edinburgh's Cramond shore â€” a 16th-century tower house wrapped in Jacobean extensions, filled with antiques and overlooking the Firth of Forth.",
+    "description": "An Edwardian time capsule on Edinburgh's Cramond shore â€" a 16th-century tower house wrapped in Jacobean extensions, filled with antiques and overlooking the Firth of Forth.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/LauristonCastleSouth.jpg/500px-LauristonCastleSouth.jpg",
     "rating": 4.1,
     "reviewCount": 780,
@@ -16223,7 +16221,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dunbar-castle-4.jpg",
       "https://img.castlecore.uk/dunbar-castle-5.jpg"
     ],
-    "history": "A royal stronghold from at least the 11th century. 'Black Agnes', Countess of Dunbar, famously defended it against an English siege in 1338. Mary Queen of Scots fled here with Bothwell in 1567 after the murder of Rizzio. Demolished by Parliament in 1568 to prevent further use. The ruins were later incorporated into the harbour â€” cannon loops peer out between fishing boats.",
+    "history": "A royal stronghold from at least the 11th century. 'Black Agnes', Countess of Dunbar, famously defended it against an English siege in 1338. Mary Queen of Scots fled here with Bothwell in 1567 after the murder of Rizzio. Demolished by Parliament in 1568 to prevent further use. The ruins were later incorporated into the harbour â€" cannon loops peer out between fishing boats.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -16243,7 +16241,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Where Mary Queen of Scots spent her last night in Scotland before crossing the Solway Firth into captivity — austere Cistercian beauty in grey sandstone that has weathered 900 years.",
+    "description": "Where Mary Queen of Scots spent her last night in Scotland before crossing the Solway Firth into captivity - austere Cistercian beauty in grey sandstone that has weathered 900 years.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Dundrennan_Abbey_2012_%281%29.jpg/500px-Dundrennan_Abbey_2012_%281%29.jpg",
     "rating": 4.2,
     "reviewCount": 680,
@@ -16287,7 +16285,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Cistercian house in the Valley of Light, founded by a Lord of Galloway — its chapter house still intact with original medieval tile floor, tucked away in the quiet Scottish lowlands.",
+    "description": "A Cistercian house in the Valley of Light, founded by a Lord of Galloway - its chapter house still intact with original medieval tile floor, tucked away in the quiet Scottish lowlands.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Glenluce_Abbey.jpg/500px-Glenluce_Abbey.jpg",
     "rating": 4.1,
     "reviewCount": 620,
@@ -16331,7 +16329,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A hauntingly complete Cluniac abbey where Black Monks once prayed in the Ayrshire countryside — with church, cloister, dovecote, and a gate tower still standing against the Scottish sky.",
+    "description": "A hauntingly complete Cluniac abbey where Black Monks once prayed in the Ayrshire countryside - with church, cloister, dovecote, and a gate tower still standing against the Scottish sky.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Crossraguel01.jpg",
     "rating": 4.3,
     "reviewCount": 920,
@@ -16376,7 +16374,7 @@ const CASTLES = [
     "type": "palace",
     "era": "18th century",
     "condition": "intact",
-    "description": "Scotland's largest inhabited castle — a Georgian palace on the banks of the Tweed where border reivers once raided and a king was killed by an exploding cannon.",
+    "description": "Scotland's largest inhabited castle - a Georgian palace on the banks of the Tweed where border reivers once raided and a king was killed by an exploding cannon.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Floors_Castle%2C_Roxburghshire.jpg/500px-Floors_Castle%2C_Roxburghshire.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
@@ -16439,7 +16437,7 @@ const CASTLES = [
       "https://img.castlecore.uk/thirlestane-castle-4.jpg",
       "https://img.castlecore.uk/thirlestane-castle-5.jpg"
     ],
-    "history": "Built in the 16th century on a site dating to the 12th century near the Leader Water. Transformed by John Maitland, Duke of Lauderdale — Charles II's powerful Secretary of State — who employed Sir William Bruce to create palatial baroque interiors in the 1670s. The plasterwork ceilings by George Dunsterfield are among the finest in Europe. Still home to the Maitland family.",
+    "history": "Built in the 16th century on a site dating to the 12th century near the Leader Water. Transformed by John Maitland, Duke of Lauderdale - Charles II's powerful Secretary of State - who employed Sir William Bruce to create palatial baroque interiors in the 1670s. The plasterwork ceilings by George Dunsterfield are among the finest in Europe. Still home to the Maitland family.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -16485,7 +16483,7 @@ const CASTLES = [
       "https://img.castlecore.uk/fast-castle-4.jpg",
       "https://img.castlecore.uk/fast-castle-5.jpg"
     ],
-    "history": "A 14th-century stronghold perched on a sheer promontory above the North Sea, held by the Home family. Captured and recaptured during the Anglo-Scottish wars and the 'Rough Wooing' of the 1540s. Allegedly linked to the Gowrie Conspiracy of 1600 and rumoured to hide treasure. The approach requires nerve — a narrow path across a chasm once spanned by drawbridge.",
+    "history": "A 14th-century stronghold perched on a sheer promontory above the North Sea, held by the Home family. Captured and recaptured during the Anglo-Scottish wars and the 'Rough Wooing' of the 1540s. Allegedly linked to the Gowrie Conspiracy of 1600 and rumoured to hide treasure. The approach requires nerve - a narrow path across a chasm once spanned by drawbridge.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -16505,7 +16503,7 @@ const CASTLES = [
     "type": "palace",
     "era": "16th century",
     "condition": "partial ruin",
-    "description": "The Stuart royals' favourite country retreat — a Renaissance masterpiece in the Fife countryside with Britain's oldest real tennis court still in play.",
+    "description": "The Stuart royals' favourite country retreat - a Renaissance masterpiece in the Fife countryside with Britain's oldest real tennis court still in play.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Falkland_Palace_from_the_NW.jpg/500px-Falkland_Palace_from_the_NW.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
@@ -16607,7 +16605,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A secret garden hidden inside a medieval fortress — where roses climb ancient walls and the Battle of Usk echoes through the ruins.",
+    "description": "A secret garden hidden inside a medieval fortress - where roses climb ancient walls and the Battle of Usk echoes through the ruins.",
     "history": "Built in 1120 in the town of Usk, Monmouthshire. Site of the Battle of Usk during the Owain Glyndŵr uprising. Grade I listed since 1953. Castle House, incorporating parts of the gatehouse, stands within the castle walls. Famous for its award-winning castle gardens, privately owned.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Garrison_Tower_and_sundial%2C_Usk_Castle_-_geograph.org.uk_-_1425960.jpg/500px-Garrison_Tower_and_sundial%2C_Usk_Castle_-_geograph.org.uk_-_1425960.jpg",
     "rating": 3.9,
@@ -16663,7 +16661,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A castle stained with more treachery than any other in Wales — where Norman lords massacred Welsh noblemen at a feast, and Owain Glyndwr's rebels burned the walls in righteous fury.",
+    "description": "A castle stained with more treachery than any other in Wales - where Norman lords massacred Welsh noblemen at a feast, and Owain Glyndwr's rebels burned the walls in righteous fury.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ruins_of_Abergavenny_Castle.jpg/500px-Ruins_of_Abergavenny_Castle.jpg",
     "rating": 3.7,
     "reviewCount": 680,
@@ -16704,7 +16702,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "intact",
-    "description": "A 13th-century Pembrokeshire castle wrapped in beautiful gardens — built by a Flemish knight, still standing, still enchanting.",
+    "description": "A 13th-century Pembrokeshire castle wrapped in beautiful gardens - built by a Flemish knight, still standing, still enchanting.",
     "history": "Originally built at the end of the 13th century by a Flemish knight, later acquired by Sir John Wogan. Grade I listed castle with Grade II* gardens. Of unusual construction, remodelled several times. Now owned by Picton Castle Trust and open to the public. Features 40 acres of gardens.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/02_Picton_Castle_Pembrokeshire.JPG/500px-02_Picton_Castle_Pembrokeshire.JPG",
     "rating": 4.2,
@@ -16753,7 +16751,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "19th century",
     "condition": "intact",
-    "description": "A neo-Gothic fairytale on a Connemara lakeshore — built by a heartbroken husband for his beloved wife, now home to Benedictine nuns in one of Ireland's most photographed settings.",
+    "description": "A neo-Gothic fairytale on a Connemara lakeshore - built by a heartbroken husband for his beloved wife, now home to Benedictine nuns in one of Ireland's most photographed settings.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Connemara_-_Kylemore_Abbey_-_panoramio_%281%29.jpg/500px-Connemara_-_Kylemore_Abbey_-_panoramio_%281%29.jpg",
     "rating": 4.5,
     "reviewCount": 5200,
@@ -16838,7 +16836,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A stark Norman keep built inside a Roman fort — standing sentinel over the Pennine pass where legions and medieval lords both kept watch.",
+    "description": "A stark Norman keep built inside a Roman fort - standing sentinel over the Pennine pass where legions and medieval lords both kept watch.",
     "history": "Built within the perimeter of the Roman fort of Lavatrae on what is now the A66. The stone keep was constructed in the 1170s by Henry II during the Great Revolt of 1173-74 to control the strategic Stainmore Pass through the Pennines. Managed by English Heritage.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bowes_Castle_-_geograph.org.uk_-_1060655.jpg/500px-Bowes_Castle_-_geograph.org.uk_-_1060655.jpg",
     "rating": 3.8,
@@ -16892,7 +16890,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A grand medieval castle that once housed the powerful Neville family — confiscated by the Crown after the ill-fated Rising of the North in 1569. Its towers and curtain walls still command the County Durham landscape, blending Norman origins with 19th-century romanticism.",
+    "description": "A grand medieval castle that once housed the powerful Neville family - confiscated by the Crown after the ill-fated Rising of the North in 1569. Its towers and curtain walls still command the County Durham landscape, blending Norman origins with 19th-century romanticism.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Brancepeth_Castle.jpg/500px-Brancepeth_Castle.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -16932,7 +16930,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A 14th-century quadrangular castle turned luxury hotel — where you can sleep in medieval splendour overlooking the Durham countryside.",
+    "description": "A 14th-century quadrangular castle turned luxury hotel - where you can sleep in medieval splendour overlooking the Durham countryside.",
     "history": "A 14th-century quadrangular castle at Chester-le-Street, County Durham. Built by Sir Ralph Lumley who converted his family manor into a fortified castle. Grade I listed. Property of the Earl of Scarbrough. Now operates as a 73-room luxury hotel on the banks of the Lumley Park Burn.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Lumley_Castle_Hotel_-_geograph.org.uk_-_1188877.jpg",
     "rating": 4.3,
@@ -16980,7 +16978,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A 15th-century castle turned holiday park in County Durham — where medieval walls meet caravans and campfires under the northern sky.",
+    "description": "A 15th-century castle turned holiday park in County Durham - where medieval walls meet caravans and campfires under the northern sky.",
     "history": "A 15th-century castle near Witton-le-Wear, County Durham. The castle has been converted into a holiday park and caravan site while retaining its medieval character. The grounds include lakes and woodland. Privately owned.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Witton_Castle_-_geograph.org.uk_-_307577.jpg/500px-Witton_Castle_-_geograph.org.uk_-_307577.jpg",
     "rating": 3.6,
@@ -17031,7 +17029,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "A striking Gothic gatehouse tower adorned with medieval heraldic shields — one of the most richly decorated castle facades in northern England. Its carved coats of arms read like a who's-who of 14th-century Northumbrian nobility.",
+    "description": "A striking Gothic gatehouse tower adorned with medieval heraldic shields - one of the most richly decorated castle facades in northern England. Its carved coats of arms read like a who's-who of 14th-century Northumbrian nobility.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hylton_Castle_3.jpg/500px-Hylton_Castle_3.jpg",
     "rating": 3.6,
     "reviewCount": 320,
@@ -17113,7 +17111,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "partial ruin",
-    "description": "A quiet Yorkshire manor house with a turbulent Tudor past — where Catherine Parr once lived before she became Henry VIII's last queen.",
+    "description": "A quiet Yorkshire manor house with a turbulent Tudor past - where Catherine Parr once lived before she became Henry VIII's last queen.",
     "history": "A semi-fortified manor house in Snape, North Yorkshire, built c.1430 and rebuilt in 1587. Grade I listed and a scheduled monument. Catherine Parr, the sixth and last wife of Henry VIII, lived here during her first marriage to John Neville, 3rd Baron Latimer. Still privately occupied.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Snape_Castle_-_geograph.org.uk_-_3225506.jpg/500px-Snape_Castle_-_geograph.org.uk_-_3225506.jpg",
     "rating": 3.5,
@@ -17164,7 +17162,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "A 14th-century castle-turned-farmhouse on the North York Moors that may have been home to Catherine Parr, Henry VIII's last wife. The medieval courtroom still hosts the ancient Danby Court Leet — an all-male baronial court managing common land since the Middle Ages.",
+    "description": "A 14th-century castle-turned-farmhouse on the North York Moors that may have been home to Catherine Parr, Henry VIII's last wife. The medieval courtroom still hosts the ancient Danby Court Leet - an all-male baronial court managing common land since the Middle Ages.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Danby_Castle_ruins_from_the_north_-_geograph.org.uk_-_2606955.jpg/500px-Danby_Castle_ruins_from_the_north_-_geograph.org.uk_-_2606955.jpg",
     "rating": 3.5,
     "reviewCount": 180,
@@ -17203,7 +17201,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Three castles haunt this wooded estate near Whitby—a legendary Saxon fortress, a ruined medieval stronghold, and a grand 18th-century mansion. The ancient castle's crumbling towers peer through dense woodland above the North Sea coast.",
+    "description": "Three castles haunt this wooded estate near Whitby-a legendary Saxon fortress, a ruined medieval stronghold, and a grand 18th-century mansion. The ancient castle's crumbling towers peer through dense woodland above the North Sea coast.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Mulgrave_Castle_-_geograph.org.uk_-_17316.jpg",
     "rating": 3.5,
     "reviewCount": 80,
@@ -17280,7 +17278,7 @@ const CASTLES = [
     "type": "castle",
     "era": "7th-medieval period",
     "condition": "intact",
-    "description": "A lesser-known heritage site in the historic cathedral city of Ripon, Yorkshire—one of England's oldest settlements with roots reaching back to the 7th century. The town's ancient fabric speaks of Saxon monks and medieval merchants.",
+    "description": "A lesser-known heritage site in the historic cathedral city of Ripon, Yorkshire-one of England's oldest settlements with roots reaching back to the 7th century. The town's ancient fabric speaks of Saxon monks and medieval merchants.",
     "image": "https://img.castlecore.uk/rippon-castle.jpg",
     "rating": 3.5,
     "reviewCount": 80,
@@ -17313,7 +17311,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century (rebuilt)",
     "condition": "intact",
-    "description": "A Gothic Revival fantasy crowning a Leicestershire hilltop — where the Dukes of Rutland have held court since the Norman Conquest.",
+    "description": "A Gothic Revival fantasy crowning a Leicestershire hilltop - where the Dukes of Rutland have held court since the Norman Conquest.",
     "history": "Originally a Norman castle built by Robert de Todeni in 1067. Destroyed and rebuilt four times. The current Gothic Revival building was designed by James Wyatt and built 1801-1832 for the Duke of Rutland. Home to the Manners family. Grade I listed. Name pronounced 'Beaver'.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg/500px-Belvoir_Castle_-_geograph.org.uk_-_7667528.jpg",
     "rating": 4.5,
@@ -17365,7 +17363,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "partial ruin",
-    "description": "Home to one of the finest surviving Norman great halls in England, its walls hung with a bizarre collection of enormous horseshoes—every visiting peer of the realm has been obliged to forfeit one since the 12th century.",
+    "description": "Home to one of the finest surviving Norman great halls in England, its walls hung with a bizarre collection of enormous horseshoes-every visiting peer of the realm has been obliged to forfeit one since the 12th century.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Great_Hall_-_Oakham_Castle.jpg/500px-Great_Hall_-_Oakham_Castle.jpg",
     "rating": 4.1,
     "reviewCount": 780,
@@ -17385,7 +17383,7 @@ const CASTLES = [
       "https://img.castlecore.uk/oakham-castle-4.jpg",
       "https://img.castlecore.uk/oakham-castle-5.jpg"
     ],
-    "history": "Built c.1180-1190, the Great Hall is one of the best examples of domestic Norman architecture in England, with beautifully carved columns depicting musicians. By ancient custom, every peer passing through Oakham must present a horseshoe to the lord of the manor—over 230 now hang in the hall. The castle was the seat of the lords of the manor of Oakham in Rutland, England's smallest county. Grade I listed, managed by Rutland County Council.",
+    "history": "Built c.1180-1190, the Great Hall is one of the best examples of domestic Norman architecture in England, with beautifully carved columns depicting musicians. By ancient custom, every peer passing through Oakham must present a horseshoe to the lord of the manor-over 230 now hang in the hall. The castle was the seat of the lords of the manor of Oakham in Rutland, England's smallest county. Grade I listed, managed by Rutland County Council.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -17409,7 +17407,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Brooding ruins on a Staffordshire hilltop where Mary, Queen of Scots was imprisoned and the Babington Plot was sprung—sealing her fate. The shattered towers of this once-mighty fortress still dominate the surrounding deer park.",
+    "description": "Brooding ruins on a Staffordshire hilltop where Mary, Queen of Scots was imprisoned and the Babington Plot was sprung-sealing her fate. The shattered towers of this once-mighty fortress still dominate the surrounding deer park.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Chartley_Castle%2C_2010.jpg/500px-Chartley_Castle%2C_2010.jpg",
     "rating": 3.6,
     "reviewCount": 180,
@@ -17488,7 +17486,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A moated red-brick Tudor fantasy in the Sussex countryside — once home to the Royal Observatory, now a Canadian university's unlikely English campus.",
+    "description": "A moated red-brick Tudor fantasy in the Sussex countryside - once home to the Royal Observatory, now a Canadian university's unlikely English campus.",
     "history": "Built in 1441 as one of the oldest significant brick buildings in England. Served as the home of the Royal Greenwich Observatory from 1957-1988. Now owned by Queen's University, Kingston, Canada, and used as an international study centre. Grade I listed with stunning moat and 600 acres of grounds.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Herstmonceux_Castle_with_moat.jpg/500px-Herstmonceux_Castle_with_moat.jpg",
     "rating": 4.4,
@@ -17537,7 +17535,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th century",
     "condition": "partial ruin",
-    "description": "Built on the exact spot where Harold fell — William the Conqueror's act of penance that marks the place where England changed forever.",
+    "description": "Built on the exact spot where Harold fell - William the Conqueror's act of penance that marks the place where England changed forever.",
     "history": "Founded by William the Conqueror in 1094 on the site of the Battle of Hastings (1066), dedicated to St Martin of Tours. The high altar was placed where King Harold reportedly died. Dissolved by Henry VIII in 1538. The 14th-century gatehouse survives intact. Managed by English Heritage.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Battleabbey-wyrdlight-0170.jpg/500px-Battleabbey-wyrdlight-0170.jpg",
     "rating": 4.4,
@@ -17588,7 +17586,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "partial ruin",
-    "description": "England's longest medieval moat encircles this 13th-century Augustinian priory — a tranquil Sussex oasis where monks, Tudor wreckers, evacuees, and Canadian soldiers all left their mark.",
+    "description": "England's longest medieval moat encircles this 13th-century Augustinian priory - a tranquil Sussex oasis where monks, Tudor wreckers, evacuees, and Canadian soldiers all left their mark.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Michelham_Priory_03.jpg/500px-Michelham_Priory_03.jpg",
     "rating": 4.2,
     "reviewCount": 1100,
@@ -17630,7 +17628,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A Henry VIII artillery fort transformed into the world's most exclusive yacht club—the Royal Yacht Squadron. Its cannons, once aimed at French warships, now fire the starting gun for Cowes Week regattas across the Solent.",
+    "description": "A Henry VIII artillery fort transformed into the world's most exclusive yacht club-the Royal Yacht Squadron. Its cannons, once aimed at French warships, now fire the starting gun for Cowes Week regattas across the Solent.",
     "image": "https://img.castlecore.uk/cowes-castle.jpg",
     "rating": 3.5,
     "reviewCount": 250,
@@ -17705,7 +17703,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-17th century",
     "condition": "partial ruin",
-    "description": "A Norman castle above the River Exe that survived Civil War siege — part romantic ruin, part lived-in country house, with towers from every century between the 12th and the 17th.",
+    "description": "A Norman castle above the River Exe that survived Civil War siege - part romantic ruin, part lived-in country house, with towers from every century between the 12th and the 17th.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/TivertonCastle_AerialPanorama.png/500px-TivertonCastle_AerialPanorama.png",
     "rating": 4,
     "reviewCount": 520,
@@ -17746,7 +17744,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-14th century",
     "condition": "ruin",
-    "description": "A vanished medieval castle in the charming Oxfordshire village made famous by Downton Abbey—only earthworks and fragments remain of the fortress where Empress Matilda once sheltered during the Anarchy.",
+    "description": "A vanished medieval castle in the charming Oxfordshire village made famous by Downton Abbey-only earthworks and fragments remain of the fortress where Empress Matilda once sheltered during the Anarchy.",
     "image": "https://img.castlecore.uk/bampton-castle.jpg",
     "rating": 3.3,
     "reviewCount": 120,
@@ -17783,7 +17781,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "16th century (spring: ancient)",
     "condition": "intact",
-    "description": "Cornwall's largest and best-preserved holy well house—a granite shrine built over an ancient spring where medieval pilgrims came seeking cures for skin diseases. Its barrel-vaulted roof still channels water through a stone basin.",
+    "description": "Cornwall's largest and best-preserved holy well house-a granite shrine built over an ancient spring where medieval pilgrims came seeking cures for skin diseases. Its barrel-vaulted roof still channels water through a stone basin.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Dupath_Well_Chapel_-_geograph.org.uk_-_292327.jpg",
     "rating": 3.7,
     "reviewCount": 180,
@@ -17867,7 +17865,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-16th century",
     "condition": "partial ruin",
-    "description": "A moated Suffolk stronghold with a commanding Tudor gatehouse blazoned with heraldic shields—built by the first Earl of Suffolk, whose family's fortunes rose and fell with the tides of medieval power politics.",
+    "description": "A moated Suffolk stronghold with a commanding Tudor gatehouse blazoned with heraldic shields-built by the first Earl of Suffolk, whose family's fortunes rose and fell with the tides of medieval power politics.",
     "image": "https://img.castlecore.uk/wingfield-castle.jpg",
     "rating": 3.6,
     "reviewCount": 180,
@@ -17907,7 +17905,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A moated medieval manor turned monastic college in deepest Suffolk — where knights gave way to canons and 13 boys learned their Latin behind stone walls.",
+    "description": "A moated medieval manor turned monastic college in deepest Suffolk - where knights gave way to canons and 13 boys learned their Latin behind stone walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/500px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -17946,7 +17944,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Grade I Norman stronghold on a curve of the River Waveney — where Hugh Bigod defied Henry II with a keep that cost the equivalent of millions, and a Suffolk town grew up in its shadow.",
+    "description": "A Grade I Norman stronghold on a curve of the River Waveney - where Hugh Bigod defied Henry II with a keep that cost the equivalent of millions, and a Suffolk town grew up in its shadow.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bungay_Castle%2C_2012.jpg/500px-Bungay_Castle%2C_2012.jpg",
     "rating": 3.8,
     "reviewCount": 520,
@@ -18005,7 +18003,7 @@ const CASTLES = [
       "https://img.castlecore.uk/new-buckenham-castle-4.jpg",
       "https://img.castlecore.uk/new-buckenham-castle-5.jpg"
     ],
-    "history": "Founded c.1145 by William d'Albini II after he donated the original Buckenham Castle to Augustinian canons. The new castle featured one of England's earliest circular keeps—a revolutionary design. Besieged twice in the 13th and 15th centuries before being defortified in the 1640s during the Civil War. The impressive earthworks and fragmentary masonry remain as a Scheduled Monument.",
+    "history": "Founded c.1145 by William d'Albini II after he donated the original Buckenham Castle to Augustinian canons. The new castle featured one of England's earliest circular keeps-a revolutionary design. Besieged twice in the 13th and 15th centuries before being defortified in the 1640s during the Civil War. The impressive earthworks and fragmentary masonry remain as a Scheduled Monument.",
     "sources": [
       {
         "name": "Britain Express",
@@ -18069,7 +18067,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "15th-19th century",
     "condition": "intact",
-    "description": "A romantic Gothic pile near Peterborough where every century since the 15th has left its mark—from medieval undercroft to Jacobean wings to Victorian Gothic fantasy. The Proby family has called it home for 400 years.",
+    "description": "A romantic Gothic pile near Peterborough where every century since the 15th has left its mark-from medieval undercroft to Jacobean wings to Victorian Gothic fantasy. The Proby family has called it home for 400 years.",
     "image": "https://img.castlecore.uk/elton-hall.jpg",
     "rating": 4,
     "reviewCount": 450,
@@ -18113,7 +18111,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "14th century",
     "condition": "intact",
-    "description": "A modest 14th-century tower near Peterborough hiding one of Europe's greatest medieval art treasures—its upper chamber is covered in wall paintings depicting the Wheel of Life, the seasons, and a bestiary of real and mythical creatures.",
+    "description": "A modest 14th-century tower near Peterborough hiding one of Europe's greatest medieval art treasures-its upper chamber is covered in wall paintings depicting the Wheel of Life, the seasons, and a bestiary of real and mythical creatures.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Longthorpe_Tower1.jpg",
     "rating": 4.2,
     "reviewCount": 520,
@@ -18131,7 +18129,7 @@ const CASTLES = [
       "https://img.castlecore.uk/longthorpe-tower-4.jpg",
       "https://img.castlecore.uk/longthorpe-tower-5.jpg"
     ],
-    "history": "Built c.1300 by Robert Thorpe as a solar tower addition to an existing hall house. Around 1330, the first-floor chamber was covered with an extraordinary cycle of wall paintings—among the finest and most complete examples of medieval domestic art in northern Europe. Subjects include the Wheel of the Five Senses, the Labours of the Months, and the Three Living and the Three Dead. Managed by English Heritage.",
+    "history": "Built c.1300 by Robert Thorpe as a solar tower addition to an existing hall house. Around 1330, the first-floor chamber was covered with an extraordinary cycle of wall paintings-among the finest and most complete examples of medieval domestic art in northern Europe. Subjects include the Wheel of the Five Senses, the Labours of the Months, and the Three Living and the Three Dead. Managed by English Heritage.",
     "sources": [
       {
         "name": "English Heritage",
@@ -18151,7 +18149,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "18th century",
     "condition": "partial ruin",
-    "description": "England's only land lighthouse—a Georgian tower built on the wild Lincolnshire heath to guide travellers through highwayman country. Commissioned by the notorious Sir Francis Dashwood of Hellfire Club fame.",
+    "description": "England's only land lighthouse-a Georgian tower built on the wild Lincolnshire heath to guide travellers through highwayman country. Commissioned by the notorious Sir Francis Dashwood of Hellfire Club fame.",
     "image": "https://img.castlecore.uk/dunston-pillar.jpg",
     "rating": 3.3,
     "reviewCount": 80,
@@ -18163,7 +18161,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 544,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-dunston-pillar.jpg"
+      "https://img.castlecore.uk/wiki-dunston-pillar.jpg"
     ],
     "history": "Commissioned in 1751 by Sir Francis Dashwood (founder of the Hellfire Club) to guide travellers across the treacherous and robbery-plagued Lincolnshire Heath. The tower originally stood 92 feet tall with a lantern on top. In 1810 a statue of George III was added. The tower was later reduced in height and the statue removed. Described in 1843 as the only land lighthouse in England. Now a Scheduled Monument.",
     "sources": [
@@ -18185,7 +18183,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Birthplace of a king and built from rare green stone — a ruined fortress in the quiet Lincolnshire wolds where Henry IV first drew breath.",
+    "description": "Birthplace of a king and built from rare green stone - a ruined fortress in the quiet Lincolnshire wolds where Henry IV first drew breath.",
     "history": "Built c.1220 by Ranulf, Earl of Chester, from local Spilsby greenstone. Birthplace of Henry IV (Henry of Bolingbroke) in 1367. Besieged during the English Civil War near the Battle of Winceby. Slighted c.1652. Now managed by Heritage Lincolnshire.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Old-Bolingbroke-Castle.jpg/500px-Old-Bolingbroke-Castle.jpg",
     "rating": 3.9,
@@ -18276,7 +18274,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A solitary medieval tower in the heart of Boston, Lincolnshire — a rare survivor from the age of tax collectors and justices of the peace.",
+    "description": "A solitary medieval tower in the heart of Boston, Lincolnshire - a rare survivor from the age of tax collectors and justices of the peace.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hussey_Tower.JPG/500px-Hussey_Tower.JPG",
     "rating": 3.4,
     "reviewCount": 120,
@@ -18318,7 +18316,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "A lone medieval tower rising from the Lincolnshire fens — the last fragment of a once-grand castle that time and marshland slowly reclaimed.",
+    "description": "A lone medieval tower rising from the Lincolnshire fens - the last fragment of a once-grand castle that time and marshland slowly reclaimed.",
     "image": "https://img.castlecore.uk/south-kyme-tower.jpg",
     "rating": 3.4,
     "reviewCount": 100,
@@ -18439,7 +18437,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-15th century",
     "condition": "ruin",
-    "description": "Fragmentary remains of a Grey family stronghold in Leicestershire—the dynasty that produced Lady Jane Grey, the nine-day queen. A single wall fragment and earthworks lurk behind the 15th-century Groby Old Hall.",
+    "description": "Fragmentary remains of a Grey family stronghold in Leicestershire-the dynasty that produced Lady Jane Grey, the nine-day queen. A single wall fragment and earthworks lurk behind the 15th-century Groby Old Hall.",
     "image": "https://img.castlecore.uk/groby-castle.jpg",
     "rating": 3.2,
     "reviewCount": 80,
@@ -18457,7 +18455,7 @@ const CASTLES = [
       "https://img.castlecore.uk/groby-castle-4.jpg",
       "https://img.castlecore.uk/groby-castle-5.jpg"
     ],
-    "history": "A Norman motte-and-bailey was established here after the Conquest. In the 13th century the Grey family built a manor house within the bailey, replaced in the 14th century by a larger house. The 15th-century Groby Old Hall (Grade II* listed) with its late medieval brick tower succeeded the castle. The Grey family rose to become Marquesses of Dorset—their granddaughter Lady Jane Grey became queen for nine days in 1553.",
+    "history": "A Norman motte-and-bailey was established here after the Conquest. In the 13th century the Grey family built a manor house within the bailey, replaced in the 14th century by a larger house. The 15th-century Groby Old Hall (Grade II* listed) with its late medieval brick tower succeeded the castle. The Grey family rose to become Marquesses of Dorset-their granddaughter Lady Jane Grey became queen for nine days in 1553.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -18561,7 +18559,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-12th century",
     "condition": "ruin",
-    "description": "A moated Norman castle in the Quantock Hills whose turbulent history mirrors the great upheavals of medieval England—from baronial rebellion to the Wars of the Roses. The Landmark Trust now rents a cottage within its walls.",
+    "description": "A moated Norman castle in the Quantock Hills whose turbulent history mirrors the great upheavals of medieval England-from baronial rebellion to the Wars of the Roses. The Landmark Trust now rents a cottage within its walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Stogursey_Castle.jpg/500px-Stogursey_Castle.jpg",
     "rating": 3.5,
     "reviewCount": 150,
@@ -18604,7 +18602,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Hilltop ruins where Catherine Parr — Henry VIII's last queen — spent her childhood, with sweeping views over the Lake District gateway town and the Kent Valley.",
+    "description": "Hilltop ruins where Catherine Parr - Henry VIII's last queen - spent her childhood, with sweeping views over the Lake District gateway town and the Kent Valley.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kendal_Castle_From_Above%2C_Sept_2015.jpg/500px-Kendal_Castle_From_Above%2C_Sept_2015.jpg",
     "rating": 4,
     "reviewCount": 1200,
@@ -18626,7 +18624,7 @@ const CASTLES = [
       "https://img.castlecore.uk/kendal-castle-4.jpg",
       "https://img.castlecore.uk/kendal-castle-5.jpg"
     ],
-    "history": "Built in the 13th century as the seat of the Barony of Kendal, atop a glacial drumlin overlooking the town. By the 15th century, owned by the Parr family — birthplace of Catherine Parr, sixth and last wife of Henry VIII. Abandoned by the 16th century and gradually fell into ruin. The earlier castle site (Castle Howe) is visible across the river.",
+    "history": "Built in the 13th century as the seat of the Barony of Kendal, atop a glacial drumlin overlooking the town. By the 15th century, owned by the Parr family - birthplace of Catherine Parr, sixth and last wife of Henry VIII. Abandoned by the 16th century and gradually fell into ruin. The earlier castle site (Castle Howe) is visible across the river.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -18650,7 +18648,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A ruined castle above the River Eden named for King Arthur's father — where legend says Uther Pendragon tried to divert the river for his moat, and Lady Anne Clifford later rebuilt the walls.",
+    "description": "A ruined castle above the River Eden named for King Arthur's father - where legend says Uther Pendragon tried to divert the river for his moat, and Lady Anne Clifford later rebuilt the walls.",
     "image": "https://img.castlecore.uk/pendragon-castle.jpg",
     "rating": 3.9,
     "reviewCount": 420,
@@ -18691,7 +18689,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "ruin",
-    "description": "A spectacular Gothic shell in the Cumbrian hills — once the grandest house in the north, now a romantic ruin reborn as a wild garden.",
+    "description": "A spectacular Gothic shell in the Cumbrian hills - once the grandest house in the north, now a romantic ruin reborn as a wild garden.",
     "history": "Built 1806-1814 for the 1st Earl of Lonsdale, designed by Robert Smirke (his first major commission). Incorporates fragments of a 1685 house. The Lowther family has owned the estate since the Middle Ages. De-roofed in 1957 after WWII military use. Now open to the public with new gardens within the shell.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lowther_Castle_greyscale.jpg/500px-Lowther_Castle_greyscale.jpg",
     "rating": 4.4,
@@ -18824,7 +18822,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-19th century",
     "condition": "intact",
-    "description": "A thousand years of fortification in the Lake District—from Saxon pele tower to Norman stone keep to Elizabethan mansion to Victorian Gothic restoration. The name inspired Edgar Rice Burroughs' Lord Greystoke, better known as Tarzan.",
+    "description": "A thousand years of fortification in the Lake District-from Saxon pele tower to Norman stone keep to Elizabethan mansion to Victorian Gothic restoration. The name inspired Edgar Rice Burroughs' Lord Greystoke, better known as Tarzan.",
     "image": "https://img.castlecore.uk/greystoke-castle.jpg",
     "rating": 3.5,
     "reviewCount": 80,
@@ -18867,7 +18865,7 @@ const CASTLES = [
     "type": "fortified house",
     "era": "14th-16th century",
     "condition": "ruin",
-    "description": "The striking ruin where Mary Queen of Scots spent her first night on English soil—writing desperately to Elizabeth I from a chamber in this fortified Cumbrian manor. She never saw Scotland again.",
+    "description": "The striking ruin where Mary Queen of Scots spent her first night on English soil-writing desperately to Elizabeth I from a chamber in this fortified Cumbrian manor. She never saw Scotland again.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Workington_Hall_by_AF_Lydon.jpg/500px-Workington_Hall_by_AF_Lydon.jpg",
     "rating": 3.7,
     "reviewCount": 320,
@@ -18911,7 +18909,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-14th century",
     "condition": "ruin",
-    "description": "A gaunt Norse tower clinging to a knife-edge promontory above the North Sea — one of Scotland's oldest castles. Known locally as 'The Old Man of Wick'.",
+    "description": "A gaunt Norse tower clinging to a knife-edge promontory above the North Sea - one of Scotland's oldest castles. Known locally as 'The Old Man of Wick'.",
     "image": "https://img.castlecore.uk/castle-of-old-wick.jpg",
     "rating": 3.9,
     "reviewCount": 320,
@@ -18952,7 +18950,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "intact",
-    "description": "A living Benedictine monastery in a secret Moray glen — monks still chant Gregorian plainsong in the same stone walls King Alexander II raised in 1230.",
+    "description": "A living Benedictine monastery in a secret Moray glen - monks still chant Gregorian plainsong in the same stone walls King Alexander II raised in 1230.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Pluscarden_Abbey.jpg/500px-Pluscarden_Abbey.jpg",
     "rating": 4.5,
     "reviewCount": 1400,
@@ -18998,7 +18996,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Victorian (19th century)",
     "condition": "intact",
-    "description": "A brooding Victorian pile overlooking Stornoway harbour — built with opium trade fortune, gifted to the people, and now reborn as a museum of Hebridean heritage.",
+    "description": "A brooding Victorian pile overlooking Stornoway harbour - built with opium trade fortune, gifted to the people, and now reborn as a museum of Hebridean heritage.",
     "image": "https://img.castlecore.uk/lews-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1400,
@@ -19021,7 +19019,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lews-castle-4.jpg",
       "https://img.castlecore.uk/lews-castle-5.jpg"
     ],
-    "history": "Built 1844-51 for Sir James Matheson, who purchased the entire Isle of Lewis with wealth from the Chinese opium trade. Set in 600 acres of woodland — remarkable for the treeless Hebrides. Lord Leverhulme gifted it to the people of Stornoway in 1923. Served as a WWII hospital, then fell into disrepair. Restored and reopened in 2016 as Museum nan Eilean.",
+    "history": "Built 1844-51 for Sir James Matheson, who purchased the entire Isle of Lewis with wealth from the Chinese opium trade. Set in 600 acres of woodland - remarkable for the treeless Hebrides. Lord Leverhulme gifted it to the people of Stornoway in 1923. Served as a WWII hospital, then fell into disrepair. Restored and reopened in 2016 as Museum nan Eilean.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -19045,7 +19043,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Iron Age-present",
     "condition": "partial ruin",
-    "description": "Scotland's oldest recorded stronghold — a volcanic rock fortress on the Clyde with an unbroken history stretching back to the Iron Age. William Wallace was held here in 1305 before being transported to London for execution.",
+    "description": "Scotland's oldest recorded stronghold - a volcanic rock fortress on the Clyde with an unbroken history stretching back to the Iron Age. William Wallace was held here in 1305 before being transported to London for execution.",
     "history": "The longest recorded history of any stronghold in Scotland. Sits on a volcanic plug of basalt known as Dumbarton Rock on the River Clyde. Occupied since the Iron Age, it was the capital of the ancient Kingdom of Strathclyde (Alt Clut). Mary Queen of Scots embarked from here for France as a child.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Scotland_Dumbarton_Castle_bordercropped.jpg/500px-Scotland_Dumbarton_Castle_bordercropped.jpg",
     "rating": 4.2,
@@ -19095,7 +19093,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "partial ruin",
-    "description": "A Norman fortress reborn in the world's most famous book town — centuries of fire, rebellion, and reinvention overlooking the Wye Valley.",
+    "description": "A Norman fortress reborn in the world's most famous book town - centuries of fire, rebellion, and reinvention overlooking the Wye Valley.",
     "history": "Built as a Norman ringwork in the late 11th or early 12th century during the invasion of Wales. Rebuilt in stone around 1200. A 17th-century mansion was built within the walls. Suffered fires in 1939 and 1977. Purchased by Hay Castle Trust and fully restored, reopening in 2022 as a cultural centre.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hay_Castle%2C_Hay-on-Wye_-_geograph.org.uk_-_583851.jpg/500px-Hay_Castle%2C_Hay-on-Wye_-_geograph.org.uk_-_583851.jpg",
     "rating": 4,
@@ -19147,7 +19145,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-13th century",
     "condition": "ruin",
-    "description": "A grassy Norman motte above the River Wye, hauntingly close to where Llywelyn ap Gruffudd—the last native Prince of Wales—met his end in 1282.",
+    "description": "A grassy Norman motte above the River Wye, hauntingly close to where Llywelyn ap Gruffudd-the last native Prince of Wales-met his end in 1282.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Builth_Castle_-_geograph.org.uk_-_1025212.jpg/500px-Builth_Castle_-_geograph.org.uk_-_1025212.jpg",
     "rating": 3.3,
     "reviewCount": 100,
@@ -19169,7 +19167,7 @@ const CASTLES = [
     "history": "Built by the Normans in the late 11th century, Builth Castle was repeatedly attacked and rebuilt during the Welsh wars. Edward I strengthened it in stone from 1277 as part of his campaign to subdue Wales. Near here in December 1282, Llywelyn ap Gruffudd, the last Prince of Wales, was killed at the Battle of Orewin Bridge. The castle fell into ruin by the 15th century; only earthworks survive.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk/en/site/93490"
       },
       {
@@ -19214,7 +19212,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/penmon-priory"
       },
       {
-        "name": "Wikipedia – Penmon Priory",
+        "name": "Wikipedia - Penmon Priory",
         "url": "https://en.wikipedia.org/wiki/Penmon_Priory"
       }
     ]
@@ -19227,7 +19225,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "The last castle built by a native Welsh prince — a defiant hilltop ruin commanding sweeping views of the Severn Valley.",
+    "description": "The last castle built by a native Welsh prince - a defiant hilltop ruin commanding sweeping views of the Severn Valley.",
     "history": "Built 1273-1277 by Llywelyn ap Gruffudd, Prince of Gwynedd, to assert Welsh authority over the strategic Severn Valley. Captured by the English during the Welsh Wars. Now managed by Cadw with ongoing archaeological excavations revealing its Welsh design.",
     "image": "https://img.castlecore.uk/dolforwyn-castle.jpg",
     "rating": 4.1,
@@ -19329,7 +19327,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Atmospheric riverside ruins on a steep promontory above the Teifi — a castle that changed hands between Welsh and English more times than anyone can count.",
+    "description": "Atmospheric riverside ruins on a steep promontory above the Teifi - a castle that changed hands between Welsh and English more times than anyone can count.",
     "history": "Built c.1240 by Welsh lord Maredudd ap Rhys on a steep promontory overlooking the River Teifi. Features a twin-towered gatehouse with semi-octagonal towers. Sir Rhys ap Thomas added larger windows c.1500. Damaged in the English Civil War.",
     "image": "https://img.castlecore.uk/newcastle-emlyn-castle.jpg",
     "rating": 3.8,
@@ -19390,7 +19388,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A castle from Welsh myth and Norman stone — where the Mabinogi's Rhiannon was imprisoned and the Landsker Line divided two worlds.",
+    "description": "A castle from Welsh myth and Norman stone - where the Mabinogi's Rhiannon was imprisoned and the Landsker Line divided two worlds.",
     "history": "13th-century Norman ruins built by Andrew Perrot. Features in the Mabinogi as the court of Pwyll and where Rhiannon was punished. Forms part of the Landsker Line dividing Welsh and English-speaking Pembrokeshire. Safety restoration completed 2004-05.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Narberth_castle_pembrokeshire.jpg/500px-Narberth_castle_pembrokeshire.jpg",
     "rating": 3.9,
@@ -19442,7 +19440,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-13th century",
     "condition": "partial ruin",
-    "description": "A Norman stronghold on a commanding ridge above Pembrokeshire's county town — an English power base through centuries of Welsh resistance, now home to a museum and stunning town views.",
+    "description": "A Norman stronghold on a commanding ridge above Pembrokeshire's county town - an English power base through centuries of Welsh resistance, now home to a museum and stunning town views.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg/500px-HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg",
     "rating": 3.8,
     "reviewCount": 520,
@@ -19483,7 +19481,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "One of Wales's finest motte-and-bailey castles, founded by a Flemish settler on land seized from Norman rebels — fifty stone steps climb to its dramatic hilltop perch.",
+    "description": "One of Wales's finest motte-and-bailey castles, founded by a Flemish settler on land seized from Norman rebels - fifty stone steps climb to its dramatic hilltop perch.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Wiston_Castle%2C_from_Cadw_information_board.jpg/500px-Wiston_Castle%2C_from_Cadw_information_board.jpg",
     "rating": 3.6,
     "reviewCount": 150,
@@ -19527,7 +19525,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-13th century",
     "condition": "partial ruin",
-    "description": "The birthplace of the Eisteddfod — a beautifully restored Norman castle where Welsh culture was born above the River Teifi.",
+    "description": "The birthplace of the Eisteddfod - a beautifully restored Norman castle where Welsh culture was born above the River Teifi.",
     "history": "First motte-and-bailey built c.1093 by Roger de Montgomery. Site of the first Eisteddfod in 1176, hosted by Lord Rhys. Rebuilt in stone in 1244. Castle Green House was built inside the walls c.1800. Fully restored and reopened to the public in 2015 as a heritage centre.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Cardigan_Castle_-_south_western_aspect-Geograph-6075948-by-M-J-Roscoe.jpg/500px-Cardigan_Castle_-_south_western_aspect-Geograph-6075948-by-M-J-Roscoe.jpg",
     "rating": 4.3,
@@ -19584,7 +19582,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "ruin",
-    "description": "Graceful Gothic ruins in a peaceful garden setting on the Ards Peninsula—one of the finest and most complete Cistercian monasteries in Ulster.",
+    "description": "Graceful Gothic ruins in a peaceful garden setting on the Ards Peninsula-one of the finest and most complete Cistercian monasteries in Ulster.",
     "image": "https://img.castlecore.uk/grey-abbey.jpg",
     "rating": 4.1,
     "reviewCount": 680,
@@ -19611,7 +19609,7 @@ const CASTLES = [
         "url": "https://discovernorthernireland.com/things-to-do/grey-abbey-p675231"
       },
       {
-        "name": "Wikipedia – Grey Abbey",
+        "name": "Wikipedia - Grey Abbey",
         "url": "https://en.wikipedia.org/wiki/Grey_Abbey"
       }
     ]
@@ -19624,7 +19622,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "intact",
-    "description": "A fairy-tale island castle rising from Mount's Bay — accessible by ancient cobbled causeway at low tide, with subtropical gardens clinging to granite cliffs above the sea.",
+    "description": "A fairy-tale island castle rising from Mount's Bay - accessible by ancient cobbled causeway at low tide, with subtropical gardens clinging to granite cliffs above the sea.",
     "image": "https://img.castlecore.uk/st-michael-s-mount.jpg",
     "rating": 4.6,
     "reviewCount": 8500,
@@ -19670,7 +19668,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1930s Art Deco",
     "condition": "intact",
-    "description": "A tidal island with a 1930s Art Deco hotel where Agatha Christie wrote mysteries and Noël Coward held court — reached by sea tractor at high tide like a scene from a novel.",
+    "description": "A tidal island with a 1930s Art Deco hotel where Agatha Christie wrote mysteries and Noël Coward held court - reached by sea tractor at high tide like a scene from a novel.",
     "image": "https://img.castlecore.uk/burgh-island.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
@@ -19692,7 +19690,7 @@ const CASTLES = [
       "https://img.castlecore.uk/burgh-island-4.jpg",
       "https://img.castlecore.uk/burgh-island-5.jpg"
     ],
-    "history": "The island has a long history including a 14th-century pilchard fishery and smuggling connections — the Pilchard Inn dates to this era. In the 1930s, the Art Deco hotel was built, attracting the glamorous set. Agatha Christie stayed here and wrote 'And Then There Were None' and 'Evil Under the Sun'. Features a captain's cabin salvaged from the 1891 warship HMS Ganges. Restored to 1930s glory.",
+    "history": "The island has a long history including a 14th-century pilchard fishery and smuggling connections - the Pilchard Inn dates to this era. In the 1930s, the Art Deco hotel was built, attracting the glamorous set. Agatha Christie stayed here and wrote 'And Then There Were None' and 'Evil Under the Sun'. Features a captain's cabin salvaged from the 1891 warship HMS Ganges. Restored to 1930s glory.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -19755,7 +19753,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-15th century",
     "condition": "partial ruin",
-    "description": "A medieval water castle on the banks of the River Exe in deepest Devon — part Norman chapel, part Courtenay mansion, part Civil War survivor. The atmospheric Grade I gatehouse and courtyard buildings span centuries of West Country history.",
+    "description": "A medieval water castle on the banks of the River Exe in deepest Devon - part Norman chapel, part Courtenay mansion, part Civil War survivor. The atmospheric Grade I gatehouse and courtyard buildings span centuries of West Country history.",
     "image": "https://img.castlecore.uk/bickleigh-castle.jpg",
     "rating": 3.9,
     "reviewCount": 320,
@@ -19796,7 +19794,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-12th century",
     "condition": "ruin",
-    "description": "A substantial Norman motte and shell keep dominating the old Stannary town of Plympton—once a seat of the powerful de Redvers family, Earls of Devon. Its grassy ramparts offer panoramic views over Plymouth and Dartmoor.",
+    "description": "A substantial Norman motte and shell keep dominating the old Stannary town of Plympton-once a seat of the powerful de Redvers family, Earls of Devon. Its grassy ramparts offer panoramic views over Plymouth and Dartmoor.",
     "image": "https://img.castlecore.uk/plympton-castle.jpg",
     "rating": 3.4,
     "reviewCount": 95,
@@ -19836,7 +19834,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "Also known as Fort Charles, this Tudor gun battery perches on a rocky island at the mouth of the Kingsbridge Estuary—the last Royalist fort in England to surrender in the Civil War, holding out until 1646.",
+    "description": "Also known as Fort Charles, this Tudor gun battery perches on a rocky island at the mouth of the Kingsbridge Estuary-the last Royalist fort in England to surrender in the Civil War, holding out until 1646.",
     "image": "https://img.castlecore.uk/salcombe-castle.jpg",
     "rating": 3.6,
     "reviewCount": 210,
@@ -19916,7 +19914,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A Victorian fantasy castle built to look medieval — perched on a Cheshire hilltop, now one of England's most dramatic wedding venues.",
+    "description": "A Victorian fantasy castle built to look medieval - perched on a Cheshire hilltop, now one of England's most dramatic wedding venues.",
     "history": "A Victorian country house built 1844-1850 in medieval castle style by architect Anthony Salvin for John Tollemache, 1st Baron Tollemache. Grade I listed. Stands in woodland at the north end of Peckforton Hills. Now operates as a luxury hotel and wedding venue.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Peckforton_Castle_2014.jpg/500px-Peckforton_Castle_2014.jpg",
     "rating": 4.3,
@@ -19966,7 +19964,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "Lancashire's last Royalist holdout — a ruined Tudor castle gifted by Henry VII to the man who helped him seize the crown at Bosworth Field.",
+    "description": "Lancashire's last Royalist holdout - a ruined Tudor castle gifted by Henry VII to the man who helped him seize the crown at Bosworth Field.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Greenhalgh_Castle_239-10.jpg/500px-Greenhalgh_Castle_239-10.jpg",
     "rating": 3.4,
     "reviewCount": 75,
@@ -20045,7 +20043,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century (demolished 1726)",
     "condition": "ruin",
-    "description": "Nothing remains above ground of the medieval castle that gave Liverpool its first claim to importance—but for nearly 500 years a four-towered fortress overlooked the Mersey and the pool that gave the city its name.",
+    "description": "Nothing remains above ground of the medieval castle that gave Liverpool its first claim to importance-but for nearly 500 years a four-towered fortress overlooked the Mersey and the pool that gave the city its name.",
     "image": "https://img.castlecore.uk/liverpool-castle-site.jpg",
     "rating": 3.1,
     "reviewCount": 45,
@@ -20081,7 +20079,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A red sandstone Viking fortress rising from St Patrick's Isle — where Norse kings once ruled, a mysterious Pagan Lady was buried with her treasures, and sunset paints the ruins gold.",
+    "description": "A red sandstone Viking fortress rising from St Patrick's Isle - where Norse kings once ruled, a mysterious Pagan Lady was buried with her treasures, and sunset paints the ruins gold.",
     "image": "https://img.castlecore.uk/peel-castle-isle-of-man.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
@@ -20128,7 +20126,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-18th century",
     "condition": "intact",
-    "description": "Where medieval fortress meets Vanbrugh grandeur — a 3,000-acre Capability Brown parkland concealing one of Lincolnshire's most dramatic and least-known great houses.",
+    "description": "Where medieval fortress meets Vanbrugh grandeur - a 3,000-acre Capability Brown parkland concealing one of Lincolnshire's most dramatic and least-known great houses.",
     "image": "https://img.castlecore.uk/grimsthorpe-castle.jpg",
     "rating": 4.2,
     "reviewCount": 1400,
@@ -20151,7 +20149,7 @@ const CASTLES = [
       "https://img.castlecore.uk/grimsthorpe-castle-4.jpg",
       "https://img.castlecore.uk/grimsthorpe-castle-5.jpg"
     ],
-    "history": "Of 13th-century origin, granted by Henry VIII to William, 10th Baron Willoughby de Eresby in 1516. The spectacular north front was designed by Sir John Vanbrugh in 1722 — his last commission. Park landscaped by Capability Brown in 1771. Home to the Willoughby de Eresby family for over 500 years. Features state rooms, gardens, and a 3,000-acre deer park.",
+    "history": "Of 13th-century origin, granted by Henry VIII to William, 10th Baron Willoughby de Eresby in 1516. The spectacular north front was designed by Sir John Vanbrugh in 1722 - his last commission. Park landscaped by Capability Brown in 1771. Home to the Willoughby de Eresby family for over 500 years. Features state rooms, gardens, and a 3,000-acre deer park.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -20171,7 +20169,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A Norman motte rising dramatically above the Suffolk town of Eye — once seat of the powerful Honor of Eye that controlled 20 Knight's fees. The castle mound and ruined walls still loom over this tiny town's pastel-coloured medieval streets.",
+    "description": "A Norman motte rising dramatically above the Suffolk town of Eye - once seat of the powerful Honor of Eye that controlled 20 Knight's fees. The castle mound and ruined walls still loom over this tiny town's pastel-coloured medieval streets.",
     "image": "https://img.castlecore.uk/eye-castle.jpg",
     "rating": 3.7,
     "reviewCount": 230,
@@ -20205,7 +20203,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-12th century",
     "condition": "ruin",
-    "description": "One of Suffolk's largest Norman earthworks—a towering motte that once bore a circular keep, standing at the heart of power struggles between the Crown and the mighty Bigod Earls of Norfolk.",
+    "description": "One of Suffolk's largest Norman earthworks-a towering motte that once bore a circular keep, standing at the heart of power struggles between the Crown and the mighty Bigod Earls of Norfolk.",
     "image": "https://img.castlecore.uk/haughley-castle.jpg",
     "rating": 3.3,
     "reviewCount": 55,
@@ -20246,7 +20244,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Not a castle at all but a grand 12th-century manor house built of Norfolk flint — a moated enigma designed to impress, now a romantic ruin in English Heritage care.",
+    "description": "Not a castle at all but a grand 12th-century manor house built of Norfolk flint - a moated enigma designed to impress, now a romantic ruin in English Heritage care.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Weeting_Castle_-_geograph.org.uk_-_2377269.jpg/500px-Weeting_Castle_-_geograph.org.uk_-_2377269.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -20289,7 +20287,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Saxon-12th century",
     "condition": "ruin",
-    "description": "A Norman motte rising within the remarkably complete Saxon town walls of Wareham—layers of defence stretching from pre-Roman times through Viking raids to the Civil War, all compressed into one small Dorset town.",
+    "description": "A Norman motte rising within the remarkably complete Saxon town walls of Wareham-layers of defence stretching from pre-Roman times through Viking raids to the Civil War, all compressed into one small Dorset town.",
     "image": "https://img.castlecore.uk/wareham-castle.jpg",
     "rating": 3.4,
     "reviewCount": 110,
@@ -20329,7 +20327,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "A rare and remarkable 14th-century thatched fortified manor house in the Dorset water meadows—not quite a castle, but its crenellated walls and corner turrets gave its medieval owners peace of mind against French raiders.",
+    "description": "A rare and remarkable 14th-century thatched fortified manor house in the Dorset water meadows-not quite a castle, but its crenellated walls and corner turrets gave its medieval owners peace of mind against French raiders.",
     "image": "https://img.castlecore.uk/woodsford-castle.jpg",
     "rating": 3.6,
     "reviewCount": 85,
@@ -20466,7 +20464,7 @@ const CASTLES = [
       "https://img.castlecore.uk/devizes-castle-4.jpg",
       "https://img.castlecore.uk/devizes-castle-5.jpg"
     ],
-    "history": "Built by Roger, Bishop of Salisbury, in the early 12th century at the junction of three parishes—hence 'Castrum ad Divisas.' Played a significant role in the civil war between Stephen and Matilda. The medieval castle was slighted after the Civil War. The current building, a Victorian Gothic house, was built c.1840 on the original motte. The Norman earthworks are a Scheduled Monument.",
+    "history": "Built by Roger, Bishop of Salisbury, in the early 12th century at the junction of three parishes-hence 'Castrum ad Divisas.' Played a significant role in the civil war between Stephen and Matilda. The medieval castle was slighted after the Civil War. The current building, a Victorian Gothic house, was built c.1840 on the original motte. The Norman earthworks are a Scheduled Monument.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -20563,7 +20561,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A 14th-century tower house that slept for 500 years after being torched — its H-shaped walls rising from the South Tyne valley like a medieval ghost resurrected into a boutique Northumberland hotel.",
+    "description": "A 14th-century tower house that slept for 500 years after being torched - its H-shaped walls rising from the South Tyne valley like a medieval ghost resurrected into a boutique Northumberland hotel.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Langley_Castle.jpg/500px-Langley_Castle.jpg",
     "rating": 4.1,
     "reviewCount": 950,
@@ -20620,7 +20618,7 @@ const CASTLES = [
     "gallery": [
       "https://img.castlecore.uk/haughton-castle-2.jpg"
     ],
-    "history": "Built originally in the 13th century as an upper-floor hall house—probably one of the earliest in Northumberland. Later fortified and expanded into a tower house. The Swinburne family held it for centuries. Legend tells of Archie Armstrong, a border reiver imprisoned in the dungeon who was forgotten and starved to death—his ghost reportedly still haunts the castle. Grade I listed, privately owned.",
+    "history": "Built originally in the 13th century as an upper-floor hall house-probably one of the earliest in Northumberland. Later fortified and expanded into a tower house. The Swinburne family held it for centuries. Legend tells of Archie Armstrong, a border reiver imprisoned in the dungeon who was forgotten and starved to death-his ghost reportedly still haunts the castle. Grade I listed, privately owned.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -20678,7 +20676,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval / 19th century Gothic",
     "condition": "intact",
-    "description": "A grand Gothic mansion grafted onto a medieval tower house beside the South Tyne, near Haltwhistle. During WWII, its parkland became Camp 18, housing 7,000 German POW officers—traces of the camp still visible in the grounds.",
+    "description": "A grand Gothic mansion grafted onto a medieval tower house beside the South Tyne, near Haltwhistle. During WWII, its parkland became Camp 18, housing 7,000 German POW officers-traces of the camp still visible in the grounds.",
     "image": "https://img.castlecore.uk/featherstone-castle.jpg",
     "rating": 3.7,
     "reviewCount": 170,
@@ -20714,7 +20712,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century / 19th century",
     "condition": "ruin",
-    "description": "A ruinous 14th-century tower house with a castellated Victorian mansion attached, brooding on the South Tyne near Haltwhistle. Owned by the National Trust but rarely visited—a hidden gem of the Northumberland borderlands.",
+    "description": "A ruinous 14th-century tower house with a castellated Victorian mansion attached, brooding on the South Tyne near Haltwhistle. Owned by the National Trust but rarely visited-a hidden gem of the Northumberland borderlands.",
     "image": "https://img.castlecore.uk/bellister-castle.jpg",
     "rating": 3.4,
     "reviewCount": 50,
@@ -20750,7 +20748,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-16th century",
     "condition": "ruin",
-    "description": "A rugged Northumberland bastle house—a fortified farmstead from the lawless border reiving days, grander than most of its kind. Cattle sheltered below while the family lived above, ready for the next Scottish raid.",
+    "description": "A rugged Northumberland bastle house-a fortified farmstead from the lawless border reiving days, grander than most of its kind. Cattle sheltered below while the family lived above, ready for the next Scottish raid.",
     "image": "https://img.castlecore.uk/hepburn-bastle.jpg",
     "rating": 3.5,
     "reviewCount": 45,
@@ -20773,7 +20771,7 @@ const CASTLES = [
       "https://img.castlecore.uk/hepburn-bastle-main-4.jpg",
       "https://img.castlecore.uk/hepburn-bastle-main-5.jpg"
     ],
-    "history": "May date from the 1300s but first appears in records in 1509. Owned by the Hebburn family until the death of Robert Hebburn, the last male heir, in 1755. A bastle is a fortified farmhouse typical of the Anglo-Scottish border region—this example is on a grander scale, more akin to a fortified medieval tower house. Set in woodland near Chillingham. Scheduled Monument.",
+    "history": "May date from the 1300s but first appears in records in 1509. Owned by the Hebburn family until the death of Robert Hebburn, the last male heir, in 1755. A bastle is a fortified farmhouse typical of the Anglo-Scottish border region-this example is on a grander scale, more akin to a fortified medieval tower house. Set in woodland near Chillingham. Scheduled Monument.",
     "sources": [
       {
         "name": "Fabulous North",
@@ -20868,7 +20866,7 @@ const CASTLES = [
     "type": "castle",
     "era": "7th-8th century",
     "condition": "ruin",
-    "description": "One of the supreme masterpieces of Anglo-Saxon art—a soaring 7th-century stone cross shaft carved with runic inscriptions, vine scrolls, and Christ figures. It stands in a remote Cumbrian churchyard within the walls of a Roman fort.",
+    "description": "One of the supreme masterpieces of Anglo-Saxon art-a soaring 7th-century stone cross shaft carved with runic inscriptions, vine scrolls, and Christ figures. It stands in a remote Cumbrian churchyard within the walls of a Roman fort.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg",
     "rating": 3.8,
     "reviewCount": 180,
@@ -20912,7 +20910,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "partial ruin",
-    "description": "Where the four knights plotted the murder of Thomas Becket — this Norman castle later became home to art historian Kenneth Clark and politician-diarist Alan Clark. Centuries of intrigue behind private walls, from medieval archbishops to 20th-century eccentrics.",
+    "description": "Where the four knights plotted the murder of Thomas Becket - this Norman castle later became home to art historian Kenneth Clark and politician-diarist Alan Clark. Centuries of intrigue behind private walls, from medieval archbishops to 20th-century eccentrics.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Saltwood_Castle_and_wall.JPG/500px-Saltwood_Castle_and_wall.JPG",
     "rating": 3.8,
     "reviewCount": 220,
@@ -20951,7 +20949,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "intact",
-    "description": "A 13th-century moated castle on the Medway where the poet Sir Thomas Wyatt was born—the man who introduced the sonnet to English literature. Since 1951, Carmelite friars have prayed within its walls.",
+    "description": "A 13th-century moated castle on the Medway where the poet Sir Thomas Wyatt was born-the man who introduced the sonnet to English literature. Since 1951, Carmelite friars have prayed within its walls.",
     "image": "https://img.castlecore.uk/allington-castle.jpg",
     "rating": 3.9,
     "reviewCount": 290,
@@ -21026,7 +21024,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "Once rivalling Hampton Court in size and opulence, this Tudor palace endured the longest siege of the English Civil War — until Cromwell himself came to storm its 360 rooms into oblivion.",
+    "description": "Once rivalling Hampton Court in size and opulence, this Tudor palace endured the longest siege of the English Civil War - until Cromwell himself came to storm its 360 rooms into oblivion.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Basing-House-entrance.jpg/500px-Basing-House-entrance.jpg",
     "rating": 4,
     "reviewCount": 680,
@@ -21066,7 +21064,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-13th century",
     "condition": "ruin",
-    "description": "A Marcher Lords' stronghold on the Wye near Hay, birthplace of Fair Rosamund—the legendary beauty who was Henry II's mistress. Its five-tower shell keep crowns a Norman motte above the Welsh border.",
+    "description": "A Marcher Lords' stronghold on the Wye near Hay, birthplace of Fair Rosamund-the legendary beauty who was Henry II's mistress. Its five-tower shell keep crowns a Norman motte above the Welsh border.",
     "image": "https://img.castlecore.uk/clifford-castle.jpg",
     "rating": 3.5,
     "reviewCount": 80,
@@ -21084,7 +21082,7 @@ const CASTLES = [
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Clifford_Castle_ruins.jpg/500px-Clifford_Castle_ruins.jpg"
     ],
-    "history": "Originally built in 1070, the castle was expanded over 250 years into a formidable border fortress. A five-tower shell keep dominates the site. The castle lay in England but was exempt from county jurisdiction—the beginning of a Marcher Lordship. Rosamund Clifford, 'Fair Rosamund,' Henry II's famous mistress, was born here in the 12th century. The ruins overlook the River Wye near Hay-on-Wye. Scheduled Monument.",
+    "history": "Originally built in 1070, the castle was expanded over 250 years into a formidable border fortress. A five-tower shell keep dominates the site. The castle lay in England but was exempt from county jurisdiction-the beginning of a Marcher Lordship. Rosamund Clifford, 'Fair Rosamund,' Henry II's famous mistress, was born here in the 12th century. The ruins overlook the River Wye near Hay-on-Wye. Scheduled Monument.",
     "sources": [
       {
         "name": "Historic England",
@@ -21153,7 +21151,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Pre-Conquest (c.1048)",
     "condition": "ruin",
-    "description": "One of the very first castles built in England—raised before the Norman Conquest by a Norman adventurer in the turbulent Welsh borderlands. Its great earthwork motte predates 1066, making it a truly pre-Conquest rarity.",
+    "description": "One of the very first castles built in England-raised before the Norman Conquest by a Norman adventurer in the turbulent Welsh borderlands. Its great earthwork motte predates 1066, making it a truly pre-Conquest rarity.",
     "image": "https://img.castlecore.uk/ewyas-harold-castle.jpg",
     "rating": 3.3,
     "reviewCount": 45,
@@ -21194,7 +21192,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-14th century",
     "condition": "ruin",
-    "description": "A Cotswold castle built without permission in 1225—its owner brazenly fortified his manor and only obtained royal approval afterward. Besieged twice during the Civil War, its honey-stone ruins sleep in the Gloucestershire countryside.",
+    "description": "A Cotswold castle built without permission in 1225-its owner brazenly fortified his manor and only obtained royal approval afterward. Besieged twice during the Civil War, its honey-stone ruins sleep in the Gloucestershire countryside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/500px-Beverston_castle.jpg",
     "rating": 3.5,
     "reviewCount": 75,
@@ -21275,7 +21273,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century / 19th century rebuild",
     "condition": "intact",
-    "description": "A Gothic fairy-tale castle designed by Augustus Pugin perched on a dramatic cliff above the Churnet Valley—built on the foundations of a Norman fortress. Now a Catholic youth retreat, it neighbours the famous Alton Towers theme park.",
+    "description": "A Gothic fairy-tale castle designed by Augustus Pugin perched on a dramatic cliff above the Churnet Valley-built on the foundations of a Norman fortress. Now a Catholic youth retreat, it neighbours the famous Alton Towers theme park.",
     "image": "https://img.castlecore.uk/alton-castle.jpg",
     "rating": 3.8,
     "reviewCount": 240,
@@ -21315,7 +21313,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-15th century",
     "condition": "ruin",
-    "description": "Only a magnificent Grade I gatehouse survives — hinting at the grandeur of a medieval Derbyshire dynasty whose name it still bears after six centuries.",
+    "description": "Only a magnificent Grade I gatehouse survives - hinting at the grandeur of a medieval Derbyshire dynasty whose name it still bears after six centuries.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Mackworth_Castle_-_thumb_205765.jpg",
     "rating": 3.2,
     "reviewCount": 40,
@@ -21375,7 +21373,7 @@ const CASTLES = [
       "https://img.castlecore.uk/south-wingfield-manor-4.jpg",
       "https://img.castlecore.uk/south-wingfield-manor-5.jpg"
     ],
-    "history": "Built in the 1440s by Ralph, Lord Cromwell, Treasurer of England, as a palatial fortified manor. The sixth Earl of Shrewsbury imprisoned Mary Queen of Scots here from 1569 as part of her long English captivity. The manor had its own flushing toilets—a remarkable innovation. Besieged during the Civil War. Now in English Heritage care, with a community campaign fighting for its conservation.",
+    "history": "Built in the 1440s by Ralph, Lord Cromwell, Treasurer of England, as a palatial fortified manor. The sixth Earl of Shrewsbury imprisoned Mary Queen of Scots here from 1569 as part of her long English captivity. The manor had its own flushing toilets-a remarkable innovation. Besieged during the Civil War. Now in English Heritage care, with a community campaign fighting for its conservation.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -21399,7 +21397,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-15th century",
     "condition": "partial ruin",
-    "description": "A magnificent Norman abbey church that survived the Dissolution because the townspeople owned the nave. Its twin towers—one Norman, one Perpendicular—stand in eternal architectural rivalry, a unique double silhouette on the Norfolk skyline.",
+    "description": "A magnificent Norman abbey church that survived the Dissolution because the townspeople owned the nave. Its twin towers-one Norman, one Perpendicular-stand in eternal architectural rivalry, a unique double silhouette on the Norfolk skyline.",
     "image": "https://img.castlecore.uk/wymondham-abbey.jpg",
     "rating": 4.2,
     "reviewCount": 850,
@@ -21438,7 +21436,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th-16th century",
     "condition": "ruin",
-    "description": "Flint-walled ruins in the tranquil North Norfolk countryside, telling a sad tale of monastic disaster—devastated by fire in the 15th century and finished off by plague in the 16th, when every last canon died.",
+    "description": "Flint-walled ruins in the tranquil North Norfolk countryside, telling a sad tale of monastic disaster-devastated by fire in the 15th century and finished off by plague in the 16th, when every last canon died.",
     "image": "https://img.castlecore.uk/creake-abbey.jpg",
     "rating": 3.8,
     "reviewCount": 420,
@@ -21477,7 +21475,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A haunting Cotswold ruin by the River Windrush — where a skeleton was found behind a wall and the mystery of the lost Lovell has never been solved.",
+    "description": "A haunting Cotswold ruin by the River Windrush - where a skeleton was found behind a wall and the mystery of the lost Lovell has never been solved.",
     "history": "Built c.1440 by William Lovell in the Oxfordshire Cotswolds beside the River Windrush. Richard III visited as guest of Francis Lovell, 1st Viscount Lovell. After Lovell's disappearance following the Battle of Stoke Field (1487), a skeleton was allegedly found behind a wall centuries later. Managed by English Heritage.",
     "image": "https://img.castlecore.uk/minster-lovell-hall.jpg",
     "rating": 4.2,
@@ -21527,7 +21525,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A perfectly moated medieval manor where three streams meet — home to the same family since 1377 and a secret meeting place for the architects of the English Civil War.",
+    "description": "A perfectly moated medieval manor where three streams meet - home to the same family since 1377 and a secret meeting place for the architects of the English Civil War.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Broughton_castle2.jpg/500px-Broughton_castle2.jpg",
     "rating": 4.3,
     "reviewCount": 1100,
@@ -21544,9 +21542,9 @@ const CASTLES = [
     "access": "paid",
     "_index": 635,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-broughton-castle.jpg"
+      "https://img.castlecore.uk/wiki-broughton-castle.jpg"
     ],
-    "history": "Built in 1300 by Sir John de Broughton where three streams create a natural moat. Sold in 1377 to William of Wykeham, Bishop of Winchester — the same family (now Lords Saye and Sele) has held it ever since. In the 1630s, the 8th Lord Saye and Sele hosted secret meetings here to plan opposition to Charles I, effectively plotting the English Civil War. A stunning, lived-in medieval and Elizabethan house.",
+    "history": "Built in 1300 by Sir John de Broughton where three streams create a natural moat. Sold in 1377 to William of Wykeham, Bishop of Winchester - the same family (now Lords Saye and Sele) has held it ever since. In the 1630s, the 8th Lord Saye and Sele hosted secret meetings here to plan opposition to Charles I, effectively plotting the English Civil War. A stunning, lived-in medieval and Elizabethan house.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -21566,7 +21564,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "A crenellated 14th-century gatehouse rising from a moat in rural Buckinghamshire—the sole survivor of a vanished medieval fortified house. Its gardens bloom with old roses and the surrounding duck decoy is a marvel of ingenuity.",
+    "description": "A crenellated 14th-century gatehouse rising from a moat in rural Buckinghamshire-the sole survivor of a vanished medieval fortified house. Its gardens bloom with old roses and the surrounding duck decoy is a marvel of ingenuity.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Boarstall_Hall_and_Towers%2C_1695%2C_by_artist_Michael_Burghers%2C_England.jpg/500px-Boarstall_Hall_and_Towers%2C_1695%2C_by_artist_Michael_Burghers%2C_England.jpg",
     "rating": 3.7,
     "reviewCount": 250,
@@ -21609,7 +21607,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century (reconstruction)",
     "condition": "partial ruin",
-    "description": "The world's only reconstructed motte-and-bailey castle on its original site — a living Norman village where animals roam free and history comes chaotically, joyfully alive.",
+    "description": "The world's only reconstructed motte-and-bailey castle on its original site - a living Norman village where animals roam free and history comes chaotically, joyfully alive.",
     "image": "https://img.castlecore.uk/mountfitchet-castle.jpg",
     "rating": 4,
     "reviewCount": 1600,
@@ -21655,7 +21653,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-12th century",
     "condition": "ruin",
-    "description": "Waytemore Castle—one of only a dozen episcopal Norman castles in England, built by the Bishop of London around 1070. Its motte and flint ruins preside over Castle Park in the heart of this Hertfordshire market town.",
+    "description": "Waytemore Castle-one of only a dozen episcopal Norman castles in England, built by the Bishop of London around 1070. Its motte and flint ruins preside over Castle Park in the heart of this Hertfordshire market town.",
     "image": "https://img.castlecore.uk/bishop-s-stortford-castle.jpg",
     "rating": 3.3,
     "reviewCount": 80,
@@ -21773,7 +21771,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "A Shropshire border town named for a castle that has almost entirely vanished — only earthworks and fragments remain of the Bishop of Hereford's medieval stronghold.",
+    "description": "A Shropshire border town named for a castle that has almost entirely vanished - only earthworks and fragments remain of the Bishop of Hereford's medieval stronghold.",
     "image": "https://img.castlecore.uk/bishop-s-castle.jpg",
     "rating": 3.1,
     "reviewCount": 35,
@@ -21812,7 +21810,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century / 19th century house",
     "condition": "ruin",
-    "description": "A Norman motte-and-bailey turned rewilding pioneer—the castle ruins stand at the heart of England's first major lowland rewilding project, where free-roaming longhorn cattle, Tamworth pigs, and Exmoor ponies now shape the landscape.",
+    "description": "A Norman motte-and-bailey turned rewilding pioneer-the castle ruins stand at the heart of England's first major lowland rewilding project, where free-roaming longhorn cattle, Tamworth pigs, and Exmoor ponies now shape the landscape.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Knepp_Castle%2C_July_2021_%281%29.jpg/500px-Knepp_Castle%2C_July_2021_%281%29.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -21831,7 +21829,7 @@ const CASTLES = [
       "https://img.castlecore.uk/knepp-castle-4.jpg",
       "https://img.castlecore.uk/knepp-castle-5.jpg"
     ],
-    "history": "Built soon after the Norman Conquest, possibly by William de Braose. The current castle (actually a 19th-century mock-Gothic house) replaced the medieval ruins. Since 2000, Sir Charles Burrell has transformed 3,500 acres of former farmland around the castle into the Knepp Wildland—England's first large-scale lowland rewilding project. The medieval motte and ruins survive in the estate grounds.",
+    "history": "Built soon after the Norman Conquest, possibly by William de Braose. The current castle (actually a 19th-century mock-Gothic house) replaced the medieval ruins. Since 2000, Sir Charles Burrell has transformed 3,500 acres of former farmland around the castle into the Knepp Wildland-England's first large-scale lowland rewilding project. The medieval motte and ruins survive in the estate grounds.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -21851,7 +21849,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century (demolished 1224)",
     "condition": "ruin",
-    "description": "A massive Norman motte in the heart of Bedford—all that remains of a castle so troublesome that Henry III had it completely demolished in 1224 after an eight-week siege, one of the longest in English history.",
+    "description": "A massive Norman motte in the heart of Bedford-all that remains of a castle so troublesome that Henry III had it completely demolished in 1224 after an eight-week siege, one of the longest in English history.",
     "image": "https://img.castlecore.uk/bedford-castle-mound.jpg",
     "rating": 3.3,
     "reviewCount": 90,
@@ -21870,7 +21868,7 @@ const CASTLES = [
       "https://img.castlecore.uk/bedford-castle-mound-4.jpg",
       "https://img.castlecore.uk/bedford-castle-mound-5.jpg"
     ],
-    "history": "Built after the Norman Conquest. In 1224 Falkes de Breauté used the castle as a base for rebellion against Henry III. After an eight-week siege—one of the longest in English history—the castle fell and the king ordered its total destruction. The impressive motte survives as a public park in Bedford town centre.",
+    "history": "Built after the Norman Conquest. In 1224 Falkes de Breauté used the castle as a base for rebellion against Henry III. After an eight-week siege-one of the longest in English history-the castle fell and the king ordered its total destruction. The impressive motte survives as a public park in Bedford town centre.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -21886,7 +21884,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A tree-topped Norman motte beside the Shire Hall—the last visible remnant of William the Conqueror's castle that once dominated Cambridge. A surprisingly peaceful spot steps from the bustling city centre.",
+    "description": "A tree-topped Norman motte beside the Shire Hall-the last visible remnant of William the Conqueror's castle that once dominated Cambridge. A surprisingly peaceful spot steps from the bustling city centre.",
     "image": "https://img.castlecore.uk/cambridge-castle-mound.jpg",
     "rating": 3.5,
     "reviewCount": 220,
@@ -21920,7 +21918,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A 14th-century castle on the River Usk, built to control the crossing and collect tolls — sacked by Glyndwr, taken by Cromwell, and now a quiet Grade II* ruin in the heart of the city.",
+    "description": "A 14th-century castle on the River Usk, built to control the crossing and collect tolls - sacked by Glyndwr, taken by Cromwell, and now a quiet Grade II* ruin in the heart of the city.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Newport_Castle_-_geograph.org.uk_-_781279.jpg/500px-Newport_Castle_-_geograph.org.uk_-_781279.jpg",
     "rating": 3.5,
     "reviewCount": 400,
@@ -21959,7 +21957,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-13th century",
     "condition": "ruin",
-    "description": "A Norman stronghold tucked into a Welsh town centre — where the ghost of Granville's fortress still anchors the streets of Neath.",
+    "description": "A Norman stronghold tucked into a Welsh town centre - where the ghost of Granville's fortress still anchors the streets of Neath.",
     "history": "Construction begun between 1114-1130 by Robert, Earl of Gloucester, Lord of Glamorgan. Also known as Granville's Castle after Richard de Grenville. The original timber motte-and-bailey near the Roman fort of Nidum was abandoned when Neath Abbey was founded nearby. The stone castle in the town centre survives as a ruin.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Neath_Castle_-_geograph.org.uk_-_42391.jpg/500px-Neath_Castle_-_geograph.org.uk_-_42391.jpg",
     "rating": 3.6,
@@ -22015,7 +22013,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-13th century",
     "condition": "ruin",
-    "description": "A defiant medieval ruin hiding in plain sight among the city streets — a thousand-year survivor of Welsh sieges, storms, and urban sprawl.",
+    "description": "A defiant medieval ruin hiding in plain sight among the city streets - a thousand-year survivor of Welsh sieges, storms, and urban sprawl.",
     "history": "Founded 1107 by Henry de Beaumont as the caput of the lordship of Gower. Survived a 10-week Welsh siege in 1192. Partially destroyed by the Welsh in 1116. Only two blocks of the original castle remain. Recently restored as a public space in the city centre. Grade I listed.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Swansea2.jpg/500px-Swansea2.jpg",
     "rating": 3.5,
@@ -22071,7 +22069,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "A dramatic ruin set between two lochs in spectacular landscaped gardens — where the old castle's burned shell presides over 75 acres of 18th-century planted grounds in Scotland's far southwest.",
+    "description": "A dramatic ruin set between two lochs in spectacular landscaped gardens - where the old castle's burned shell presides over 75 acres of 18th-century planted grounds in Scotland's far southwest.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Castle_Kennedy_by_Francis_Grose%2C_pub._Sep.15_1789_in_Antiquities_of_Scotland_vol.2_pp.191-192.jpg/500px-Castle_Kennedy_by_Francis_Grose%2C_pub._Sep.15_1789_in_Antiquities_of_Scotland_vol.2_pp.191-192.jpg",
     "rating": 4.1,
     "reviewCount": 890,
@@ -22152,7 +22150,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "Scotland's only circular tower house — a unique architectural curiosity tucked into the rolling Galloway farmland. Charmingly small and perfectly formed.",
+    "description": "Scotland's only circular tower house - a unique architectural curiosity tucked into the rolling Galloway farmland. Charmingly small and perfectly formed.",
     "image": "https://img.castlecore.uk/orchardton-tower.jpg",
     "rating": 3.8,
     "reviewCount": 280,
@@ -22230,7 +22228,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-16th century",
     "condition": "ruin",
-    "description": "A massive royal fortress on the shores of Castle Loch, built by Edward I to control the Scottish borders and later rebuilt by James IV. The Bruce family's original motte lies nearby — layers of Anglo-Scottish conflict reflected in dark water.",
+    "description": "A massive royal fortress on the shores of Castle Loch, built by Edward I to control the Scottish borders and later rebuilt by James IV. The Bruce family's original motte lies nearby - layers of Anglo-Scottish conflict reflected in dark water.",
     "image": "https://img.castlecore.uk/lochmaben-castle.jpg",
     "rating": 3.7,
     "reviewCount": 210,
@@ -22270,7 +22268,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-15th century",
     "condition": "ruin",
-    "description": "A lonely ruin above an artificial loch in the Nith Valley — where earls watched over deer parks and the ghost of a murdered regent lingers in the mist.",
+    "description": "A lonely ruin above an artificial loch in the Nith Valley - where earls watched over deer parks and the ghost of a murdered regent lingers in the mist.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Morton_Castle.jpg/500px-Morton_Castle.jpg",
     "rating": 3.6,
     "reviewCount": 85,
@@ -22311,7 +22309,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A great green mound in the heart of Hawick — one of the best-preserved Norman mottes in Scotland. A grassy hillock hiding centuries of Borders warfare beneath its turf.",
+    "description": "A great green mound in the heart of Hawick - one of the best-preserved Norman mottes in Scotland. A grassy hillock hiding centuries of Borders warfare beneath its turf.",
     "image": "https://img.castlecore.uk/hawick-motte.jpg",
     "rating": 3.4,
     "reviewCount": 70,
@@ -22349,7 +22347,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A massive Border Reiver stronghold with walls thirteen feet thick — where the notorious Kerr clan defied English siege engines and the Earl of Surrey himself.",
+    "description": "A massive Border Reiver stronghold with walls thirteen feet thick - where the notorious Kerr clan defied English siege engines and the Earl of Surrey himself.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Cessford_Castle.jpg/500px-Cessford_Castle.jpg",
     "rating": 3.6,
     "reviewCount": 95,
@@ -22488,7 +22486,7 @@ const CASTLES = [
       "https://img.castlecore.uk/drochil-castle-4.jpg",
       "https://img.castlecore.uk/drochil-castle-5.jpg"
     ],
-    "history": "Begun around 1578 by Regent Morton (James Douglas, 4th Earl of Morton), intended as a grand Renaissance residence. Morton was executed in 1581 before it was completed. The Z-plan castle is remarkably large — more mansion than fortress — with traces of plaster and decorative work. One of the earliest attempts at a Scottish country house. Now a roofless but impressive shell on private land.",
+    "history": "Begun around 1578 by Regent Morton (James Douglas, 4th Earl of Morton), intended as a grand Renaissance residence. Morton was executed in 1581 before it was completed. The Z-plan castle is remarkably large - more mansion than fortress - with traces of plaster and decorative work. One of the earliest attempts at a Scottish country house. Now a roofless but impressive shell on private land.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -22550,7 +22548,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-15th century",
     "condition": "ruin",
-    "description": "Glasgow's only surviving medieval castle — built by the Stewarts of Darnley on a hilltop with 12th-century earthworks, where Mary Queen of Scots may have spent her honeymoon.",
+    "description": "Glasgow's only surviving medieval castle - built by the Stewarts of Darnley on a hilltop with 12th-century earthworks, where Mary Queen of Scots may have spent her honeymoon.",
     "image": "https://img.castlecore.uk/crookston-castle.jpg",
     "rating": 3.9,
     "reviewCount": 420,
@@ -22594,7 +22592,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A brooding 14th-century Graham stronghold wrapped in ancient woodland, its solitary tower rising from the mossy ruins of a clan empire. Atmospheric walks through Mugdock Country Park lead to this hauntingly beautiful shell — dark heritage meets wild Scottish countryside.",
+    "description": "A brooding 14th-century Graham stronghold wrapped in ancient woodland, its solitary tower rising from the mossy ruins of a clan empire. Atmospheric walks through Mugdock Country Park lead to this hauntingly beautiful shell - dark heritage meets wild Scottish countryside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Mugdock_Side1.jpg/500px-Mugdock_Side1.jpg",
     "rating": 3.7,
     "reviewCount": 450,
@@ -22693,7 +22691,7 @@ const CASTLES = [
     "gallery": [
       "https://img.castlecore.uk/castle-lachlan-2.jpg"
     ],
-    "history": "The original 13th-century castle was the seat of the Maclachlan chiefs for five centuries. Destroyed by government ships during the 1745 Jacobite rising — the chief was killed at Culloden. The ruins stand on a promontory jutting into Loch Fyne. A new Castle Lachlan was built nearby in 1790 and remains the clan seat. The old castle ruins are atmospheric and accessible.",
+    "history": "The original 13th-century castle was the seat of the Maclachlan chiefs for five centuries. Destroyed by government ships during the 1745 Jacobite rising - the chief was killed at Culloden. The ruins stand on a promontory jutting into Loch Fyne. A new Castle Lachlan was built nearby in 1790 and remains the clan seat. The old castle ruins are atmospheric and accessible.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -22755,7 +22753,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A remote island fortress on Loch Awe — the ancient Campbell stronghold from which one of Scotland's most powerful clans launched their rise to dominance.",
+    "description": "A remote island fortress on Loch Awe - the ancient Campbell stronghold from which one of Scotland's most powerful clans launched their rise to dominance.",
     "image": "https://img.castlecore.uk/innis-chonnel-castle.jpg",
     "rating": 3.7,
     "reviewCount": 65,
@@ -22856,7 +22854,7 @@ const CASTLES = [
       "https://img.castlecore.uk/moy-castle-4.jpg",
       "https://img.castlecore.uk/moy-castle-5.jpg"
     ],
-    "history": "Built in the 15th century by the MacLaine chiefs of Lochbuie. The tower stands three storeys high with a notorious bottle dungeon — a pit prison from which there was no escape. The castle controlled access to Lochbuie's natural harbour. Abandoned when the family built a new house nearby in the 18th century. The surrounding landscape is stunningly remote with standing stones and a beautiful bay.",
+    "history": "Built in the 15th century by the MacLaine chiefs of Lochbuie. The tower stands three storeys high with a notorious bottle dungeon - a pit prison from which there was no escape. The castle controlled access to Lochbuie's natural harbour. Abandoned when the family built a new house nearby in the 18th century. The surrounding landscape is stunningly remote with standing stones and a beautiful bay.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -22876,7 +22874,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A 15th-century Maclean stronghold on the shores of a Hebridean loch — where Samuel Johnson once stayed and the winds of Coll have battered stone for six centuries.",
+    "description": "A 15th-century Maclean stronghold on the shores of a Hebridean loch - where Samuel Johnson once stayed and the winds of Coll have battered stone for six centuries.",
     "image": "https://img.castlecore.uk/breachacha-castle.jpg",
     "rating": 3.6,
     "reviewCount": 75,
@@ -22977,7 +22975,7 @@ const CASTLES = [
       "https://img.castlecore.uk/toward-castle-4.jpg",
       "https://img.castlecore.uk/toward-castle-5.jpg"
     ],
-    "history": "Built in the 15th century as a seat of Clan Lamont. In 1646, during the Civil War, Campbells besieged the castle and treacherously massacred up to 200 Lamont men, women and children — bodies were dumped in mass graves in Dunoon. The castle was destroyed and never rebuilt. The ruins stand near Toward Point on the Cowal Peninsula with views across the Firth of Clyde.",
+    "history": "Built in the 15th century as a seat of Clan Lamont. In 1646, during the Civil War, Campbells besieged the castle and treacherously massacred up to 200 Lamont men, women and children - bodies were dumped in mass graves in Dunoon. The castle was destroyed and never rebuilt. The ruins stand near Toward Point on the Cowal Peninsula with views across the Firth of Clyde.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -22997,7 +22995,7 @@ const CASTLES = [
     "type": "castle",
     "era": "7th century onwards",
     "condition": "ruin",
-    "description": "A Dark Age royal seat overlooking Oban harbour and the Isle of Kerrera — burned and rebuilt three times in the 7th century, home to the MacDougall chiefs for over a thousand years.",
+    "description": "A Dark Age royal seat overlooking Oban harbour and the Isle of Kerrera - burned and rebuilt three times in the 7th century, home to the MacDougall chiefs for over a thousand years.",
     "image": "https://img.castlecore.uk/dunollie-castle.jpg",
     "rating": 3.9,
     "reviewCount": 480,
@@ -23039,7 +23037,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "A six-storey tower house on the Raven's Rock overlooking Loch Oich — seat of the fierce MacDonells of Glengarry. Burned three times across centuries of Jacobite rebellion, its gaunt shell stands in the Great Glen like a monument to lost causes.",
+    "description": "A six-storey tower house on the Raven's Rock overlooking Loch Oich - seat of the fierce MacDonells of Glengarry. Burned three times across centuries of Jacobite rebellion, its gaunt shell stands in the Great Glen like a monument to lost causes.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Invergarry_Castle_-_geograph.org.uk_-_1104838.jpg",
     "rating": 3.6,
     "reviewCount": 180,
@@ -23203,7 +23201,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A ruined castle marooned on a tiny island in an ancient Caledonian pine forest — reflected perfectly in dark Highland waters where ospreys once nested on the tower walls.",
+    "description": "A ruined castle marooned on a tiny island in an ancient Caledonian pine forest - reflected perfectly in dark Highland waters where ospreys once nested on the tower walls.",
     "image": "https://img.castlecore.uk/loch-an-eilein-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
@@ -23284,7 +23282,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "15th century",
     "condition": "intact",
-    "description": "One of Scotland's most complete medieval collegiate churches, hidden in rural Perthshire. A rare survival — virtually unaltered since the Reformation.",
+    "description": "One of Scotland's most complete medieval collegiate churches, hidden in rural Perthshire. A rare survival - virtually unaltered since the Reformation.",
     "image": "https://img.castlecore.uk/tullibardine-chapel.jpg",
     "rating": 3.8,
     "reviewCount": 180,
@@ -23374,7 +23372,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 687,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-methven-castle.jpg"
+      "https://img.castlecore.uk/wiki-methven-castle.jpg"
     ],
     "history": "The present castle dates from 1664, built by Patrick Smythe on a site with deep historical roots. In 1306, the Battle of Methven saw Robert the Bruce's forces routed by the English under Aymer de Valence. Margaret Tudor, widow of James IV, held the earlier castle as part of her dower lands. The current building is a fine example of Restoration-period architecture. Private, visible from the road.",
     "sources": [
@@ -23396,7 +23394,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "One of the finest surviving tower houses in Angus — a remarkably complete 15th-century L-plan castle with a private chapel featuring a delicate sacrament house.",
+    "description": "One of the finest surviving tower houses in Angus - a remarkably complete 15th-century L-plan castle with a private chapel featuring a delicate sacrament house.",
     "image": "https://img.castlecore.uk/affleck-castle.jpg",
     "rating": 3.7,
     "reviewCount": 120,
@@ -23433,7 +23431,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Vertiginous ruins clinging to a cliff edge above the Moray Firth — one of Scotland's most spectacularly sited castles, requiring a nerve-testing scramble to reach.",
+    "description": "Vertiginous ruins clinging to a cliff edge above the Moray Firth - one of Scotland's most spectacularly sited castles, requiring a nerve-testing scramble to reach.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Findlater_Castle_-_geograph.org.uk_-_7908944.jpg/500px-Findlater_Castle_-_geograph.org.uk_-_7908944.jpg",
     "rating": 4.1,
     "reviewCount": 520,
@@ -23475,7 +23473,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A dramatic clifftop ruin where the wild North Sea crashes below roofless halls — said to have inspired Bram Stoker's vision of Dracula's castle during his visits to Cruden Bay.",
+    "description": "A dramatic clifftop ruin where the wild North Sea crashes below roofless halls - said to have inspired Bram Stoker's vision of Dracula's castle during his visits to Cruden Bay.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg/500px-New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg",
     "rating": 4.2,
     "reviewCount": 1600,
@@ -23602,7 +23600,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A haunting Z-plan tower house in lonely upper Donside, built by the Gordons and last held by 'Old Glenbucket' — the legendary Jacobite who marched to war aged seventy.",
+    "description": "A haunting Z-plan tower house in lonely upper Donside, built by the Gordons and last held by 'Old Glenbucket' - the legendary Jacobite who marched to war aged seventy.",
     "image": "https://img.castlecore.uk/glenbuchat-castle.jpg",
     "rating": 3.6,
     "reviewCount": 110,
@@ -23679,7 +23677,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A brooding island fortress in a lonely Highland loch, once the lair of the 'Wolf of Badenoch' — Scotland's most notorious medieval warlord. Accessible only by boat.",
+    "description": "A brooding island fortress in a lonely Highland loch, once the lair of the 'Wolf of Badenoch' - Scotland's most notorious medieval warlord. Accessible only by boat.",
     "image": "https://img.castlecore.uk/lochindorb-castle.jpg",
     "rating": 3.8,
     "reviewCount": 180,
@@ -23700,7 +23698,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lochindorb-castle-4.jpg",
       "https://img.castlecore.uk/lochindorb-castle-5.jpg"
     ],
-    "history": "Built in the 13th century on an island in Lochindorb, a bleak moorland loch south of Nairn. Most infamously held by Alexander Stewart, Earl of Buchan — the 'Wolf of Badenoch' — who terrorised the Highlands and burned Elgin Cathedral in 1390. Later used by Edward I of England as a base. The island castle is visible from the shore but only reachable by boat.",
+    "history": "Built in the 13th century on an island in Lochindorb, a bleak moorland loch south of Nairn. Most infamously held by Alexander Stewart, Earl of Buchan - the 'Wolf of Badenoch' - who terrorised the Highlands and burned Elgin Cathedral in 1390. Later used by Edward I of England as a base. The island castle is visible from the shore but only reachable by boat.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -23761,7 +23759,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Founded by French monks who named this place 'beau lieu' — beautiful place — these 13th-century ruins still feel like hallowed ground. Roofless arches frame Highland skies, and John Keats once wrote poetry among its scattered skulls.",
+    "description": "Founded by French monks who named this place 'beau lieu' - beautiful place - these 13th-century ruins still feel like hallowed ground. Roofless arches frame Highland skies, and John Keats once wrote poetry among its scattered skulls.",
     "image": "https://img.castlecore.uk/beauly-priory.jpg",
     "rating": 3.9,
     "reviewCount": 380,
@@ -23786,7 +23784,7 @@ const CASTLES = [
       "https://img.castlecore.uk/beauly-priory-main-4.jpg",
       "https://img.castlecore.uk/beauly-priory-main-5.jpg"
     ],
-    "history": "Founded c.1230 as a Valliscaulian priory, possibly by Alexander II and John Byset. The French monks gave Beauly its name — 'beau lieu' (beautiful place). Became Cistercian in 1510. Dissolved in 1634. John Keats visited in 1818 and wrote a poem about skulls found here.",
+    "history": "Founded c.1230 as a Valliscaulian priory, possibly by Alexander II and John Byset. The French monks gave Beauly its name - 'beau lieu' (beautiful place). Became Cistercian in 1510. Dissolved in 1634. John Keats visited in 1818 and wrote a poem about skulls found here.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -23802,7 +23800,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "The red sandstone remains of a Highland cathedral on the Black Isle — where medieval bishops held power and the Brahan Seer was reportedly burned alive for his too-accurate prophecies.",
+    "description": "The red sandstone remains of a Highland cathedral on the Black Isle - where medieval bishops held power and the Brahan Seer was reportedly burned alive for his too-accurate prophecies.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Fortrose_Cathedral_north_2013.jpg/500px-Fortrose_Cathedral_north_2013.jpg",
     "rating": 3.9,
     "reviewCount": 420,
@@ -23863,7 +23861,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dornoch-castle-4.jpg",
       "https://img.castlecore.uk/dornoch-castle-5.jpg"
     ],
-    "history": "Originally built in the 15th century as the palace of the Bishops of Caithness, adjacent to Dornoch Cathedral. Damaged during clan feuds between the Murrays and Mackays. Rebuilt and extended over the centuries. Converted into a hotel in the 20th century — now the Dornoch Castle Hotel. The town is famous for its cathedral, golf links, and being the last place in Scotland where a witch was burned (1727).",
+    "history": "Originally built in the 15th century as the palace of the Bishops of Caithness, adjacent to Dornoch Cathedral. Damaged during clan feuds between the Murrays and Mackays. Rebuilt and extended over the centuries. Converted into a hotel in the 20th century - now the Dornoch Castle Hotel. The town is famous for its cathedral, golf links, and being the last place in Scotland where a witch was burned (1727).",
     "sources": [
       {
         "name": "Wikipedia",
@@ -23883,7 +23881,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A crumbling 14th-century keep overlooking Loch Fleet where commissioners once waited for a child queen who would never arrive — the Maid of Norway, dead at seven.",
+    "description": "A crumbling 14th-century keep overlooking Loch Fleet where commissioners once waited for a child queen who would never arrive - the Maid of Norway, dead at seven.",
     "image": "https://img.castlecore.uk/skelbo-castle.jpg",
     "rating": 3.4,
     "reviewCount": 55,
@@ -23966,7 +23964,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Fragmentary Norse-era ruins on a dramatic sea stack near Freswick in Caithness. Linked to the legendary Sweyn Asleifsson — the 'Ultimate Viking'.",
+    "description": "Fragmentary Norse-era ruins on a dramatic sea stack near Freswick in Caithness. Linked to the legendary Sweyn Asleifsson - the 'Ultimate Viking'.",
     "image": "https://img.castlecore.uk/bucholie-castle.jpg",
     "rating": 3.5,
     "reviewCount": 45,
@@ -24027,7 +24025,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ackergill-tower-4.jpg",
       "https://img.castlecore.uk/ackergill-tower-5.jpg"
     ],
-    "history": "Built in the 15th century by the Keith clan, hereditary Earls Marischal of Scotland. The tower was the focus of fierce feuding with the Gunns clan — in one incident, the Keiths kidnapped Helen Gunn, 'the Beauty of Braemore', who threw herself from the tower rather than submit. Extensively restored in the 19th century. Now operates as an exclusive-use hotel and events venue.",
+    "history": "Built in the 15th century by the Keith clan, hereditary Earls Marischal of Scotland. The tower was the focus of fierce feuding with the Gunns clan - in one incident, the Keiths kidnapped Helen Gunn, 'the Beauty of Braemore', who threw herself from the tower rather than submit. Extensively restored in the 19th century. Now operates as an exclusive-use hotel and events venue.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -24060,7 +24058,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 706,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castle-of-park.jpg"
+      "https://img.castlecore.uk/wiki-castle-of-park.jpg"
     ],
     "history": "Built around 1590 by Thomas Hay, son of the last Abbot of Glenluce Abbey, using stone from the abbey itself. A well-preserved four-storey tower house with bartizans and crow-stepped gables. The Hays profited handsomely from the Reformation, converting monastic wealth into secular power. Restored in the 20th century and now available as holiday accommodation.",
     "sources": [
@@ -24082,7 +24080,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A massive 15th-century tower house in Dumfriesshire, said to be haunted by a green lady — a Murray bride who threw herself from the battlements. Now a wedding venue and hotel.",
+    "description": "A massive 15th-century tower house in Dumfriesshire, said to be haunted by a green lady - a Murray bride who threw herself from the battlements. Now a wedding venue and hotel.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Comlongon_Castle.jpg",
     "rating": 4,
     "reviewCount": 520,
@@ -24103,7 +24101,7 @@ const CASTLES = [
       "https://img.castlecore.uk/comlongon-castle-4.jpg",
       "https://img.castlecore.uk/comlongon-castle-5.jpg"
     ],
-    "history": "Built around 1450 by the Murray family. The tower is one of the largest in southern Scotland, standing 50 feet high with walls up to 14 feet thick. Lady Marion Carruthers allegedly leapt from the castle in 1570 rather than submit to a forced marriage. Her ghost — the Green Lady — is said to haunt the grounds. A Victorian mansion was attached in the 19th century. Now a popular wedding venue and hotel.",
+    "history": "Built around 1450 by the Murray family. The tower is one of the largest in southern Scotland, standing 50 feet high with walls up to 14 feet thick. Lady Marion Carruthers allegedly leapt from the castle in 1570 rather than submit to a forced marriage. Her ghost - the Green Lady - is said to haunt the grounds. A Victorian mansion was attached in the 19th century. Now a popular wedding venue and hotel.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -24123,7 +24121,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century / 19th century",
     "condition": "ruin",
-    "description": "Twin castles in a single park—a ruined medieval keep and a Victorian Gothic mansion that served as the beloved home of four-time Prime Minister William Gladstone.",
+    "description": "Twin castles in a single park-a ruined medieval keep and a Victorian Gothic mansion that served as the beloved home of four-time Prime Minister William Gladstone.",
     "image": "https://img.castlecore.uk/hawarden-castle.jpg",
     "rating": 3.7,
     "reviewCount": 320,
@@ -24147,7 +24145,7 @@ const CASTLES = [
         "url": "https://www.hawardencastle.co.uk/"
       },
       {
-        "name": "Wikipedia – Hawarden Castle",
+        "name": "Wikipedia - Hawarden Castle",
         "url": "https://en.wikipedia.org/wiki/Hawarden_Castle"
       }
     ]
@@ -24160,7 +24158,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A Welsh prince's castle built in uneasy service to an English king — a hilltop ruin where loyalty and rebellion collided in flame.",
+    "description": "A Welsh prince's castle built in uneasy service to an English king - a hilltop ruin where loyalty and rebellion collided in flame.",
     "history": "Built c.1277 by Dafydd ap Gruffydd in service to Edward I of England. When Dafydd rebelled, Edward sent Reginald de Grey to seize it. The castle was destroyed by fire during the conflict. Managed by Cadw. The ruins command views over the surrounding countryside.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png/500px-Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png",
     "rating": 3.7,
@@ -24216,7 +24214,7 @@ const CASTLES = [
     "type": "castle",
     "era": "6th century",
     "condition": "ruin",
-    "description": "One of Wales' most ancient fortified sites — a volcanic plug fortress that was headquarters to the legendary 6th-century King Maelgwn Gwynedd. Only earthworks remain, but the twin hilltop views over the Conwy estuary are otherworldly.",
+    "description": "One of Wales' most ancient fortified sites - a volcanic plug fortress that was headquarters to the legendary 6th-century King Maelgwn Gwynedd. Only earthworks remain, but the twin hilltop views over the Conwy estuary are otherworldly.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Site_of_Deganwy_Castle_-_aerial_2015.jpg/500px-The_Site_of_Deganwy_Castle_-_aerial_2015.jpg",
     "rating": 3.6,
     "reviewCount": 210,
@@ -24259,7 +24257,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Norman ruins rising from a green spur above the River Usk in the Brecon Beacons — a moody, overgrown motte surrounded by one of Wales' prettiest market towns. The shell keep foundations whisper of centuries of Welsh-Norman conflict.",
+    "description": "Norman ruins rising from a green spur above the River Usk in the Brecon Beacons - a moody, overgrown motte surrounded by one of Wales' prettiest market towns. The shell keep foundations whisper of centuries of Welsh-Norman conflict.",
     "image": "https://img.castlecore.uk/crickhowell-castle.jpg",
     "rating": 3.7,
     "reviewCount": 350,
@@ -24352,7 +24350,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A ruined Norman ringwork perched above the River Loughor, built atop a Roman fort — where Welsh princes and English lords battled for control of the Gower.",
+    "description": "A ruined Norman ringwork perched above the River Loughor, built atop a Roman fort - where Welsh princes and English lords battled for control of the Gower.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Loughor_Castle_-_geograph.org.uk_-_2353532.jpg/500px-Loughor_Castle_-_geograph.org.uk_-_2353532.jpg",
     "rating": 3.4,
     "reviewCount": 110,
@@ -24396,7 +24394,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "intact",
-    "description": "One of Wales's rarest architectural survivors — a 12th-century fortress that evolved into an elegant Georgian home and never stopped being lived in.",
+    "description": "One of Wales's rarest architectural survivors - a 12th-century fortress that evolved into an elegant Georgian home and never stopped being lived in.",
     "history": "A fortified medieval castle near the village of Fonmon in the Vale of Glamorgan. Grade I listed with Grade II gardens. Origins rooted in the 12th century, it is one of few buildings in Wales continuously inhabited since the Norman period. Privately owned with gardens open to visitors.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Castell_Ffwl-y-mwn.jpg/500px-Castell_Ffwl-y-mwn.jpg",
     "rating": 4,
@@ -24449,7 +24447,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "Ivy-strangled Elizabethan ruins slumbering in a hidden Vale of Glamorgan valley—a forgotten gentry house slowly being reclaimed by nature.",
+    "description": "Ivy-strangled Elizabethan ruins slumbering in a hidden Vale of Glamorgan valley-a forgotten gentry house slowly being reclaimed by nature.",
     "image": "https://img.castlecore.uk/llantrithyd-place.jpg",
     "rating": 3.3,
     "reviewCount": 40,
@@ -24469,11 +24467,11 @@ const CASTLES = [
     "history": "A Tudor and Elizabethan manor house built by the Aubrey family in the 16th century on the site of an earlier medieval dwelling. The house was a substantial gentry residence with fine architectural details. It declined in the 18th century and was abandoned, gradually falling into picturesque ruin. The atmospheric remains include gable walls and window openings amid overgrown grounds in the quiet Vale of Glamorgan.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk/en/site/19369"
       },
       {
-        "name": "Wikipedia – Llantrithyd Place",
+        "name": "Wikipedia - Llantrithyd Place",
         "url": "https://en.wikipedia.org/wiki/Llantrithyd_Place"
       }
     ]
@@ -24486,7 +24484,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-13th century",
     "condition": "ruin",
-    "description": "Dramatic Norman ruins perched on a windswept headland above Tenby's pastel-painted harbour — where Welsh princes fought to reclaim their land from the sea-facing fortress walls.",
+    "description": "Dramatic Norman ruins perched on a windswept headland above Tenby's pastel-painted harbour - where Welsh princes fought to reclaim their land from the sea-facing fortress walls.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tenby_Castle_-_geograph.org.uk_-_3694238.jpg/500px-Tenby_Castle_-_geograph.org.uk_-_3694238.jpg",
     "rating": 3.9,
     "reviewCount": 520,
@@ -24527,7 +24525,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A rare Welsh tower house in a sleepy Pembrokeshire village—a pocket fortress more akin to Scotland or Ireland, standing guard near the entrance to Milford Haven.",
+    "description": "A rare Welsh tower house in a sleepy Pembrokeshire village-a pocket fortress more akin to Scotland or Ireland, standing guard near the entrance to Milford Haven.",
     "image": "https://img.castlecore.uk/angle-tower.jpg",
     "rating": 3.3,
     "reviewCount": 55,
@@ -24557,7 +24555,7 @@ const CASTLES = [
         "url": "https://medievalheritage.eu/en/main-page/heritage/wales/angle-tower-house/"
       },
       {
-        "name": "Wikipedia – Welsh Tower Houses",
+        "name": "Wikipedia - Welsh Tower Houses",
         "url": "https://en.wikipedia.org/wiki/Welsh_Tower_houses"
       }
     ]
@@ -24570,7 +24568,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Ireland's first towered keep — a revolutionary Norman design with massive corner towers flanking the River Barrow. Only two towers survive after a disastrous 19th-century demolition attempt, but their scale still takes your breath away.",
+    "description": "Ireland's first towered keep - a revolutionary Norman design with massive corner towers flanking the River Barrow. Only two towers survive after a disastrous 19th-century demolition attempt, but their scale still takes your breath away.",
     "image": "https://img.castlecore.uk/carlow-castle.jpg",
     "rating": 3.7,
     "reviewCount": 280,
@@ -24594,7 +24592,7 @@ const CASTLES = [
       "https://img.castlecore.uk/carlow-castle-main-4.jpg",
       "https://img.castlecore.uk/carlow-castle-main-5.jpg"
     ],
-    "history": "Built 1207-1213, probably by William Marshal. The first castle of its kind in Ireland — a huge rectangular tower with four three-quarter-circular corner towers. National Monument. Much of the castle was accidentally destroyed in 1814 when a local doctor tried to reduce it to make room for a lunatic asylum.",
+    "history": "Built 1207-1213, probably by William Marshal. The first castle of its kind in Ireland - a huge rectangular tower with four three-quarter-circular corner towers. National Monument. Much of the castle was accidentally destroyed in 1814 when a local doctor tried to reduce it to make room for a lunatic asylum.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -24610,7 +24608,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A towering Norman ruin near Mount Leinster with walls fifty feet high — a national monument whose early story has been swallowed entirely by time.",
+    "description": "A towering Norman ruin near Mount Leinster with walls fifty feet high - a national monument whose early story has been swallowed entirely by time.",
     "image": "https://img.castlecore.uk/ballyloughan-castle.jpg",
     "rating": 3.5,
     "reviewCount": 65,
@@ -24809,7 +24807,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "intact",
-    "description": "Ireland's oldest inhabited castle, a 12th-century Fitzgerald stronghold wrapped in 700 years of dynasty, rebellion, and legend — now a luxury hotel in the gentle Kildare countryside.",
+    "description": "Ireland's oldest inhabited castle, a 12th-century Fitzgerald stronghold wrapped in 700 years of dynasty, rebellion, and legend - now a luxury hotel in the gentle Kildare countryside.",
     "image": "https://img.castlecore.uk/kilkea-castle.jpg",
     "rating": 4.2,
     "reviewCount": 980,
@@ -25095,7 +25093,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-15th century",
     "condition": "intact",
-    "description": "The largest fortified medieval tower house in Ireland, this imposing Louth fortress now serves as a courthouse—justice dispensed from Norman walls.",
+    "description": "The largest fortified medieval tower house in Ireland, this imposing Louth fortress now serves as a courthouse-justice dispensed from Norman walls.",
     "image": "https://img.castlecore.uk/ardee-castle.jpg",
     "rating": 3.7,
     "reviewCount": 180,
@@ -25251,7 +25249,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A vast, roofless Norman enclosure castle in the Carlow countryside—its enormous curtain walls enclosing nothing but sky, wildflowers, and eight centuries of silence.",
+    "description": "A vast, roofless Norman enclosure castle in the Carlow countryside-its enormous curtain walls enclosing nothing but sky, wildflowers, and eight centuries of silence.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ballymoon_Castle_sunset_2.jpg/500px-Ballymoon_Castle_sunset_2.jpg",
     "rating": 3.6,
     "reviewCount": 75,
@@ -25271,7 +25269,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ballymoon-castle-4.jpg",
       "https://img.castlecore.uk/ballymoon-castle-5.jpg"
     ],
-    "history": "Built around 1290, possibly by the Bigod or Carew families, Ballymoon Castle is one of the largest and most enigmatic Norman castles in Ireland. The massive rectangular enclosure with projecting towers has no keep—an unusual plan suggesting it was never completed. It was briefly held by the Kavanaghs and ruinous by the 16th century.",
+    "history": "Built around 1290, possibly by the Bigod or Carew families, Ballymoon Castle is one of the largest and most enigmatic Norman castles in Ireland. The massive rectangular enclosure with projecting towers has no keep-an unusual plan suggesting it was never completed. It was briefly held by the Kavanaghs and ruinous by the 16th century.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -25291,7 +25289,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "The last and most symmetrical of Connacht's great Norman castles — a massive keepless enclosure with imposing corner towers, built to protect a conquered province. Even in ruin, its geometric perfection is startlingly modern.",
+    "description": "The last and most symmetrical of Connacht's great Norman castles - a massive keepless enclosure with imposing corner towers, built to protect a conquered province. Even in ruin, its geometric perfection is startlingly modern.",
     "image": "https://img.castlecore.uk/ballymote-castle.jpg",
     "rating": 3.8,
     "reviewCount": 280,
@@ -25370,7 +25368,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "A massive and mysterious O'Gara stronghold hidden in the Sligo countryside — four corner towers frame a forgotten courtyard where Gaelic chieftains once held sway.",
+    "description": "A massive and mysterious O'Gara stronghold hidden in the Sligo countryside - four corner towers frame a forgotten courtyard where Gaelic chieftains once held sway.",
     "image": "https://img.castlecore.uk/moygara-castle.jpg",
     "rating": 3.5,
     "reviewCount": 65,
@@ -25420,7 +25418,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 752,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-burt-castle.jpg"
+      "https://img.castlecore.uk/wiki-burt-castle.jpg"
     ],
     "history": "Built in the early 16th century by the O'Doherty clan, Burt Castle guards a strategic position overlooking Lough Swilly. It served as the chief O'Doherty residence before being supplanted by nearby Grianan of Aileach. Burned during the O'Doherty rebellion of 1608 and subsequently fell into ruin.",
     "sources": [
@@ -25442,7 +25440,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "The fortified palace of the Bishops of Raphoe—a massive, moody ruin in the Donegal midlands where ecclesiastical ambition met military necessity.",
+    "description": "The fortified palace of the Bishops of Raphoe-a massive, moody ruin in the Donegal midlands where ecclesiastical ambition met military necessity.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Raphoe_Castle_-_geograph.org.uk_-_1017810.jpg/500px-Raphoe_Castle_-_geograph.org.uk_-_1017810.jpg",
     "rating": 3.4,
     "reviewCount": 65,
@@ -25574,7 +25572,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 756,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-ballinasloe-castle.jpg"
+      "https://img.castlecore.uk/wiki-ballinasloe-castle.jpg"
     ],
     "history": "Ballinasloe Castle dates to the Norman period and was held by various families including the O'Kellys. The town became famous for its great October horse fair, one of the oldest and largest in Europe. Little remains of the castle today, but the strategic crossing of the River Suck ensured its military significance throughout the medieval period.",
     "sources": [
@@ -25636,7 +25634,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "ruin",
-    "description": "A magnificent Georgian ruin overlooking Galway Bay—its roofless grandeur a haunting monument to the rise and catastrophic fall of the St George family.",
+    "description": "A magnificent Georgian ruin overlooking Galway Bay-its roofless grandeur a haunting monument to the rise and catastrophic fall of the St George family.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tyrone_House_%282016%29.jpg/500px-Tyrone_House_%282016%29.jpg",
     "rating": 3.6,
     "reviewCount": 95,
@@ -26053,7 +26051,7 @@ const CASTLES = [
       "https://img.castlecore.uk/carrigafoyle-castle-4.jpg",
       "https://img.castlecore.uk/carrigafoyle-castle-5.jpg"
     ],
-    "history": "Built in the late 15th century by the O'Connor Kerry clan, Carrigafoyle Castle was one of the principal fortresses of the Shannon Estuary. In 1580 it was besieged by Sir William Pelham's Elizabethan forces with cannon fire—the first recorded use of artillery against an Irish castle. The garrison of 50 was massacred. The castle's impressive height and strategic position remain striking.",
+    "history": "Built in the late 15th century by the O'Connor Kerry clan, Carrigafoyle Castle was one of the principal fortresses of the Shannon Estuary. In 1580 it was besieged by Sir William Pelham's Elizabethan forces with cannon fire-the first recorded use of artillery against an Irish castle. The garrison of 50 was massacred. The castle's impressive height and strategic position remain striking.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -26228,7 +26226,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A compact tower house ruin on an island in Strangford Lough, neighbour to the ancient monastery of Nendrum—a place where early Christian and Elizabethan histories quietly overlap.",
+    "description": "A compact tower house ruin on an island in Strangford Lough, neighbour to the ancient monastery of Nendrum-a place where early Christian and Elizabethan histories quietly overlap.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Mahee_Castle%2C_January_2011_%2801%29.JPG/500px-Mahee_Castle%2C_January_2011_%2801%29.JPG",
     "rating": 3.5,
     "reviewCount": 85,
@@ -26250,7 +26248,7 @@ const CASTLES = [
     "history": "Built in 1570 by Captain Thomas Browne on Mahee Island in Strangford Lough, County Down. The tower house stands near the far older Nendrum Monastery, a 5th-century monastic site. Abandoned by the early 17th century, the castle fell into ruin. The island is connected to the mainland by causeways and offers peaceful views across the lough.",
     "sources": [
       {
-        "name": "Wikipedia – Mahee Castle",
+        "name": "Wikipedia - Mahee Castle",
         "url": "https://en.wikipedia.org/wiki/Mahee_Castle"
       },
       {
@@ -26288,7 +26286,7 @@ const CASTLES = [
     "history": "A late 16th / early 17th-century tower house on the east bank of the River Quoile, near Downpatrick, County Down. Possibly built by Captain Richard West, it was inhabited into the 18th century. The south corner has dramatically fallen away, exposing the interior structure. Now part of the Quoile Pondage Nature Reserve, it stands amid wetlands rich in birdlife.",
     "sources": [
       {
-        "name": "Wikipedia – Quoile Castle",
+        "name": "Wikipedia - Quoile Castle",
         "url": "https://en.wikipedia.org/wiki/Quoile_Castle"
       },
       {
@@ -26347,7 +26345,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A Victorian Gothic fantasy perched on the shores of Windermere — the Lake District castle where a young Beatrix Potter first fell in love with the countryside that would shape her world.",
+    "description": "A Victorian Gothic fantasy perched on the shores of Windermere - the Lake District castle where a young Beatrix Potter first fell in love with the countryside that would shape her world.",
     "image": "https://img.castlecore.uk/wray-castle.jpg",
     "rating": 4.1,
     "reviewCount": 1800,
@@ -26393,7 +26391,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A brooding 14th-century peel tower rising from a quiet Cumbrian market town — once a monastic prison where abbots dispensed justice in the shadow of Furness Abbey.",
+    "description": "A brooding 14th-century peel tower rising from a quiet Cumbrian market town - once a monastic prison where abbots dispensed justice in the shadow of Furness Abbey.",
     "image": "https://img.castlecore.uk/dalton-castle.jpg",
     "rating": 3.6,
     "reviewCount": 180,
@@ -26436,7 +26434,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A crumbling five-storey pele tower hidden in Cumbrian woodland — built against Border Reivers, scarred by fire, and slowly surrendering to time.",
+    "description": "A crumbling five-storey pele tower hidden in Cumbrian woodland - built against Border Reivers, scarred by fire, and slowly surrendering to time.",
     "image": "https://img.castlecore.uk/arnside-tower.jpg",
     "rating": 3.5,
     "reviewCount": 110,
@@ -26508,7 +26506,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "The earthwork remains of a Norman castle near the birthplace of St Boniface—the Devon-born monk who converted Germany to Christianity. Little remains above ground of this once-significant fortification.",
+    "description": "The earthwork remains of a Norman castle near the birthplace of St Boniface-the Devon-born monk who converted Germany to Christianity. Little remains above ground of this once-significant fortification.",
     "image": "https://img.castlecore.uk/crediton-castle.jpg",
     "rating": 3.1,
     "reviewCount": 30,
@@ -26540,7 +26538,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th century (original), 20th century (rebuilt)",
     "condition": "intact",
-    "description": "A living Benedictine monastery on the edge of Dartmoor — rebuilt stone by stone by just six monks over 32 years, a testament to extraordinary devotion.",
+    "description": "A living Benedictine monastery on the edge of Dartmoor - rebuilt stone by stone by just six monks over 32 years, a testament to extraordinary devotion.",
     "image": "https://img.castlecore.uk/buckfast-abbey.jpg",
     "rating": 4.3,
     "reviewCount": 2800,
@@ -26561,7 +26559,7 @@ const CASTLES = [
       "https://img.castlecore.uk/buckfast-abbey-4.jpg",
       "https://img.castlecore.uk/buckfast-abbey-5.jpg"
     ],
-    "history": "First established as an abbey in 1018, refounded as Cistercian in 1134, and dissolved by Henry VIII in 1539. French Benedictine monks returned in 1882 and rebuilt the abbey church between 1907-1938 — remarkably, the work was done almost entirely by the monks themselves. The abbey remains an active monastery with a famous bee-keeping tradition.",
+    "history": "First established as an abbey in 1018, refounded as Cistercian in 1134, and dissolved by Henry VIII in 1539. French Benedictine monks returned in 1882 and rebuilt the abbey church between 1907-1938 - remarkably, the work was done almost entirely by the monks themselves. The abbey remains an active monastery with a famous bee-keeping tradition.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -26581,7 +26579,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "partial ruin",
-    "description": "The red sandstone gatehouse of William the Conqueror's castle still guards the entrance to Exeter's hilltop stronghold. The Normans built it in 1068 after an 18-day siege—now it houses the city's crown courts.",
+    "description": "The red sandstone gatehouse of William the Conqueror's castle still guards the entrance to Exeter's hilltop stronghold. The Normans built it in 1068 after an 18-day siege-now it houses the city's crown courts.",
     "image": "https://img.castlecore.uk/rougemont-castle.jpg",
     "rating": 3.6,
     "reviewCount": 280,
@@ -26616,7 +26614,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial ruin",
-    "description": "A 14th-century fortified tower standing watch over the Northumberland coast — where the Cresswell family guarded against Border raiders and sea invaders alike.",
+    "description": "A 14th-century fortified tower standing watch over the Northumberland coast - where the Cresswell family guarded against Border raiders and sea invaders alike.",
     "image": "https://img.castlecore.uk/cresswell-tower.jpg",
     "rating": 3.5,
     "reviewCount": 95,
@@ -26680,7 +26678,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A stern 14th-century vicar's pele tower in the Northumberland village of Elsdon—a rare example of a clergyman's fortified dwelling, built when even priests needed castle-thick walls to survive border raids.",
+    "description": "A stern 14th-century vicar's pele tower in the Northumberland village of Elsdon-a rare example of a clergyman's fortified dwelling, built when even priests needed castle-thick walls to survive border raids.",
     "image": "https://img.castlecore.uk/elsdon-tower.jpg",
     "rating": 3.6,
     "reviewCount": 110,
@@ -26700,7 +26698,7 @@ const CASTLES = [
       "https://img.castlecore.uk/elsdon-tower-main-3.jpg",
       "https://img.castlecore.uk/elsdon-tower-main-4.jpg"
     ],
-    "history": "Built in the 14th century as a fortified vicarage—one of the few surviving clerical pele towers in England. The rector of Elsdon needed protection from Scottish border raids just as much as any lord. The tower was in use as a vicarage until the 19th century. In 1877, over 100 skulls were discovered in the tower, believed to be from the Battle of Otterburn (1388). Grade I listed.",
+    "history": "Built in the 14th century as a fortified vicarage-one of the few surviving clerical pele towers in England. The rector of Elsdon needed protection from Scottish border raids just as much as any lord. The tower was in use as a vicarage until the 19th century. In 1877, over 100 skulls were discovered in the tower, believed to be from the Battle of Otterburn (1388). Grade I listed.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -26716,7 +26714,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Victorian (1844)",
     "condition": "intact",
-    "description": "A half-scale replica of the Temple of Hephaestus crowning a Wearside hilltop — Sunderland's most beloved landmark, visible for miles across the Durham coalfields.",
+    "description": "A half-scale replica of the Temple of Hephaestus crowning a Wearside hilltop - Sunderland's most beloved landmark, visible for miles across the Durham coalfields.",
     "image": "https://img.castlecore.uk/penshaw-monument.jpg",
     "rating": 4,
     "reviewCount": 1200,
@@ -26756,7 +26754,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "intact",
-    "description": "One of only two castles William the Conqueror built on a Roman site — home to one of four surviving copies of the Magna Carta and a Victorian prison with chilling separate system cells.",
+    "description": "One of only two castles William the Conqueror built on a Roman site - home to one of four surviving copies of the Magna Carta and a Victorian prison with chilling separate system cells.",
     "image": "https://img.castlecore.uk/lincoln-castle-walls.jpg",
     "rating": 4.5,
     "reviewCount": 6800,
@@ -26799,8 +26797,8 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "intact",
-    "description": "Scotland's most iconic fortress — a volcanic citadel dominating the skyline, steeped in siege, ceremony, and a thousand years of defiance.",
-    "history": "Built on Castle Rock, a volcanic plug with human habitation since the Iron Age. The oldest building, St Margaret's Chapel, dates to the early 12th century. Besieged more than any castle in Britain — 26 times. Home to the Scottish Crown Jewels and the Stone of Destiny. Hosts the Royal Edinburgh Military Tattoo annually.",
+    "description": "Scotland's most iconic fortress - a volcanic citadel dominating the skyline, steeped in siege, ceremony, and a thousand years of defiance.",
+    "history": "Built on Castle Rock, a volcanic plug with human habitation since the Iron Age. The oldest building, St Margaret's Chapel, dates to the early 12th century. Besieged more than any castle in Britain - 26 times. Home to the Scottish Crown Jewels and the Stone of Destiny. Hosts the Royal Edinburgh Military Tattoo annually.",
     "image": "https://img.castlecore.uk/edinburgh-castle-interior.jpg",
     "rating": 4.6,
     "reviewCount": 25000,
@@ -26836,7 +26834,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A rugged 14th-century pele tower in the secluded Kentmere valley of the Lake District—birthplace of Bernard Gilpin, the 'Apostle of the North' who brought Reformation teaching to the wild borderlands.",
+    "description": "A rugged 14th-century pele tower in the secluded Kentmere valley of the Lake District-birthplace of Bernard Gilpin, the 'Apostle of the North' who brought Reformation teaching to the wild borderlands.",
     "image": "https://img.castlecore.uk/wiki-peele-tower-kentmere.jpg",
     "rating": 3.4,
     "reviewCount": 45,
@@ -26868,7 +26866,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "intact",
-    "description": "The world's oldest and largest occupied castle — a thousand years of royal power, from William the Conqueror to the present Crown.",
+    "description": "The world's oldest and largest occupied castle - a thousand years of royal power, from William the Conqueror to the present Crown.",
     "history": "Founded by William the Conqueror after 1066, it is the oldest and largest occupied castle in the world. Home to the British monarch for over 900 years. Features the iconic Round Tower, St George's Chapel (burial place of monarchs), and lavish State Apartments. Survived a devastating fire in 1992.",
     "image": "https://img.castlecore.uk/windsor-castle-interior.jpg",
     "rating": 4.7,
@@ -26905,7 +26903,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "Henry VIII's stolen masterpiece — a Tudor palace of ghost-haunted galleries, hedge mazes, and five centuries of royal excess by the Thames.",
+    "description": "Henry VIII's stolen masterpiece - a Tudor palace of ghost-haunted galleries, hedge mazes, and five centuries of royal excess by the Thames.",
     "history": "Originally built by Cardinal Thomas Wolsey in 1514. Seized by Henry VIII in 1529, who expanded it into a grand royal palace. Later remodelled by Christopher Wren for William III. Famous for its Tudor kitchens, haunted gallery, Chapel Royal, and the oldest hedge maze in England (planted 1690s).",
     "image": "https://img.castlecore.uk/hampton-court-palace-interior.jpg",
     "rating": 4.6,
@@ -27000,7 +26998,7 @@ const CASTLES = [
       "https://img.castlecore.uk/newtown-castle-4.jpg",
       "https://img.castlecore.uk/newtown-castle-5.jpg"
     ],
-    "history": "Built in the 16th century, Newtown Castle near Ballyvaughan is architecturally unique in Ireland—a round tower house on a square pyramidal base. Restored in the 1990s by the Burren College of Art, it now serves as a gallery and cultural space. The unusual design reflects both defensive needs and the status of its O'Brien builders.",
+    "history": "Built in the 16th century, Newtown Castle near Ballyvaughan is architecturally unique in Ireland-a round tower house on a square pyramidal base. Restored in the 1990s by the Burren College of Art, it now serves as a gallery and cultural space. The unusual design reflects both defensive needs and the status of its O'Brien builders.",
     "sources": [
       {
         "name": "Burren College of Art",
@@ -27100,7 +27098,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A baronial castle turned five-star hotel on the shores of Lough Dromoland — ancestral seat of Irish high kings, where ancient lineage meets luxurious escape in County Clare.",
+    "description": "A baronial castle turned five-star hotel on the shores of Lough Dromoland - ancestral seat of Irish high kings, where ancient lineage meets luxurious escape in County Clare.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Dromoland_Castle.jpg/500px-Dromoland_Castle.jpg",
     "rating": 4.5,
     "reviewCount": 5200,
@@ -27239,7 +27237,7 @@ const CASTLES = [
       "https://img.castlecore.uk/mooghaun-fort-4.jpg",
       "https://img.castlecore.uk/mooghaun-fort-5.jpg"
     ],
-    "history": "Dating to the Late Bronze Age (around 900 BC), Mooghaun Fort near Newmarket-on-Fergus is one of the largest hillforts in Europe, with three concentric stone walls enclosing over 12 hectares. In 1854, the Great Clare Gold Hoard—the largest collection of Bronze Age gold ever found in Western Europe—was discovered nearby. The fort was likely a major ceremonial and defensive centre.",
+    "history": "Dating to the Late Bronze Age (around 900 BC), Mooghaun Fort near Newmarket-on-Fergus is one of the largest hillforts in Europe, with three concentric stone walls enclosing over 12 hectares. In 1854, the Great Clare Gold Hoard-the largest collection of Bronze Age gold ever found in Western Europe-was discovered nearby. The fort was likely a major ceremonial and defensive centre.",
     "sources": [
       {
         "name": "Clare Heritage",
@@ -27259,7 +27257,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A lakeside castle hotel deep in the wilds of Connemara — where salmon leap in the river, ancient woodland whispers, and the ghosts of pirate queen Grace O'Malley still linger.",
+    "description": "A lakeside castle hotel deep in the wilds of Connemara - where salmon leap in the river, ancient woodland whispers, and the ghosts of pirate queen Grace O'Malley still linger.",
     "image": "https://img.castlecore.uk/ballynahinch-castle.jpg",
     "rating": 4.4,
     "reviewCount": 3800,
@@ -27363,7 +27361,7 @@ const CASTLES = [
       "https://img.castlecore.uk/fiddaun-castle-4.jpg",
       "https://img.castlecore.uk/fiddaun-castle-5.jpg"
     ],
-    "history": "Built in the late 15th or early 16th century by the O'Shaughnessy clan, Fiddaun Castle is among the largest tower houses in Ireland. The castle features an impressive double bawn wall—an inner and outer enclosure—and a tall tower with fine architectural details. The O'Shaughnessys held the castle until the Cromwellian confiscations.",
+    "history": "Built in the late 15th or early 16th century by the O'Shaughnessy clan, Fiddaun Castle is among the largest tower houses in Ireland. The castle features an impressive double bawn wall-an inner and outer enclosure-and a tall tower with fine architectural details. The O'Shaughnessys held the castle until the Cromwellian confiscations.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -27812,7 +27810,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "ruin",
     "description": "Fragmentary remains of the Fitzmaurice Lords of Kerry's ancestral stronghold, now absorbed into the quiet north Kerry village that was once a seat of power.",
-    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-lixnaw-castle.jpg",
+    "image": "https://img.castlecore.uk/wiki-lixnaw-castle.jpg",
     "rating": 3.2,
     "reviewCount": 40,
     "county": "County Kerry",
@@ -28072,7 +28070,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "ruin",
-    "description": "The 'Rock of the Fairy' — a dramatic McCarthy tower house perched on a massive glacial boulder beside the road to Macroom, steeped in folklore and shadow.",
+    "description": "The 'Rock of the Fairy' - a dramatic McCarthy tower house perched on a massive glacial boulder beside the road to Macroom, steeped in folklore and shadow.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Carrigaphooca_Castle.jpg",
     "rating": 3.6,
     "reviewCount": 130,
@@ -28268,7 +28266,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A rare and remarkable circular castle in Tipperary — one of only a handful of round tower houses in Ireland, its unusual form both beautiful and mysterious.",
+    "description": "A rare and remarkable circular castle in Tipperary - one of only a handful of round tower houses in Ireland, its unusual form both beautiful and mysterious.",
     "image": "https://img.castlecore.uk/ballynahow-round-castle.jpg",
     "rating": 3.6,
     "reviewCount": 120,
@@ -28384,7 +28382,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "A quiet tower house ruin on the shores of Lough Derg — where the Butler family watched boats drift past and Tipperary's green fields rolled endlessly south.",
+    "description": "A quiet tower house ruin on the shores of Lough Derg - where the Butler family watched boats drift past and Tipperary's green fields rolled endlessly south.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Terryglass_Castle_-_geograph.org.uk_-_2343860.jpg/500px-Terryglass_Castle_-_geograph.org.uk_-_2343860.jpg",
     "rating": 3.3,
     "reviewCount": 40,
@@ -28688,7 +28686,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century (original), 19th century (current)",
     "condition": "intact",
-    "description": "A fairy-tale neo-Gothic castle rising from ornamental lakes and woodland in County Wexford — where Norman roots run deep beneath Victorian grandeur.",
+    "description": "A fairy-tale neo-Gothic castle rising from ornamental lakes and woodland in County Wexford - where Norman roots run deep beneath Victorian grandeur.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Johnstown_Castle%2C_Wexford.jpg/500px-Johnstown_Castle%2C_Wexford.jpg",
     "rating": 4.2,
     "reviewCount": 2800,
@@ -28807,7 +28805,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "A brooding hilltop ruin overlooking the Waterford countryside — where the Powers held court and the Copper Coast stretches below in shades of green and grey.",
+    "description": "A brooding hilltop ruin overlooking the Waterford countryside - where the Powers held court and the Copper Coast stretches below in shades of green and grey.",
     "image": "https://img.castlecore.uk/dunhill-castle.jpg",
     "rating": 3.5,
     "reviewCount": 95,
@@ -29037,7 +29035,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century / Victorian",
     "condition": "ruin",
-    "description": "A Victorian baronial fantasy with four round towers — one of the last of its kind in Ireland, built on the site of a 12th-century Norman stronghold.",
+    "description": "A Victorian baronial fantasy with four round towers - one of the last of its kind in Ireland, built on the site of a 12th-century Norman stronghold.",
     "image": "https://img.castlecore.uk/delvin-castle.jpg",
     "rating": 3.4,
     "reviewCount": 55,
@@ -29155,7 +29153,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th-16th century",
     "condition": "partial ruin",
-    "description": "The world's most haunted castle — a blood-soaked O'Carroll stronghold in the Offaly countryside where a 'Bloody Chapel' conceals an oubliette stuffed with human remains.",
+    "description": "The world's most haunted castle - a blood-soaked O'Carroll stronghold in the Offaly countryside where a 'Bloody Chapel' conceals an oubliette stuffed with human remains.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg/500px-Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg",
     "rating": 4,
     "reviewCount": 1200,
@@ -29200,7 +29198,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "Medieval",
     "condition": "restored",
-    "description": "A sturdy Offaly tower house rising from ancient monastic foundations — where a 6th-century saint's monastery became a Norman stronghold on the banks of the Shannon.",
+    "description": "A sturdy Offaly tower house rising from ancient monastic foundations - where a 6th-century saint's monastery became a Norman stronghold on the banks of the Shannon.",
     "image": "https://img.castlecore.uk/cloghan-castle.jpg",
     "rating": 3.6,
     "reviewCount": 150,
@@ -29239,7 +29237,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th-16th century",
     "condition": "ruin",
-    "description": "A striking Offaly tower house with an unusual rounded turret — built by the O'Molloys who lorded over the midland bogs for centuries.",
+    "description": "A striking Offaly tower house with an unusual rounded turret - built by the O'Molloys who lorded over the midland bogs for centuries.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Ballycowan_Castle%2C_Co._Offaly_-_geograph.org.uk_-_942610.jpg/500px-Ballycowan_Castle%2C_Co._Offaly_-_geograph.org.uk_-_942610.jpg",
     "rating": 3.3,
     "reviewCount": 45,
@@ -29272,7 +29270,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "6th century",
     "condition": "ruin",
-    "description": "An ancient monastic site in the heart of Ireland where saints and scholars walked — layers of history from the 6th century to the Reformation lie beneath quiet ruins.",
+    "description": "An ancient monastic site in the heart of Ireland where saints and scholars walked - layers of history from the 6th century to the Reformation lie beneath quiet ruins.",
     "image": "https://img.castlecore.uk/aghaboe-abbey.jpg",
     "rating": 3.4,
     "reviewCount": 65,
@@ -29308,7 +29306,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "restored",
-    "description": "A sturdy 15th-century tower house standing sentinel on the ancient road to Munster — built by an Irish chieftain and scarred by Cromwell's cannons.",
+    "description": "A sturdy 15th-century tower house standing sentinel on the ancient road to Munster - built by an Irish chieftain and scarred by Cromwell's cannons.",
     "image": "https://img.castlecore.uk/ballaghmore-castle.jpg",
     "rating": 3.5,
     "reviewCount": 80,
@@ -29754,7 +29752,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "The ancestral seat of the Knights of Glin on the Shannon Estuary—a Georgian Gothic castle that was home to the FitzGerald dynasty for over 700 years.",
+    "description": "The ancestral seat of the Knights of Glin on the Shannon Estuary-a Georgian Gothic castle that was home to the FitzGerald dynasty for over 700 years.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Glin_Castle.jpg/500px-Glin_Castle.jpg",
     "rating": 3.8,
     "reviewCount": 350,
@@ -29848,7 +29846,7 @@ const CASTLES = [
     "access": "free",
     "_index": 896,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-shanid-castle.jpg"
+      "https://img.castlecore.uk/wiki-shanid-castle.jpg"
     ],
     "history": "Shanid Castle near Shanagolden is the ancestral seat of the FitzGerald Earls of Desmond, who took the war cry 'Shanid abú!' (Shanid forever!) from this fortress. The motte and castle date to the early 13th century and represent one of the earliest Norman strongholds in Munster. The Desmonds controlled much of south-west Ireland from here until the Desmond Rebellions of the 16th century.",
     "sources": [
@@ -30282,7 +30280,7 @@ const CASTLES = [
       "https://img.castlecore.uk/rosserk-friary-4.jpg",
       "https://img.castlecore.uk/rosserk-friary-5.jpg"
     ],
-    "history": "Founded around 1460, Rosserk Friary on the River Moy near Killala is one of the best-preserved Franciscan friaries in Ireland. It features a unique double piscina carved with a round tower motif—the only such example known in Ireland. Burned by Sir Richard Bingham in 1590, the remarkably complete ruins include church, cloister, domestic buildings, and a beautiful riverside setting.",
+    "history": "Founded around 1460, Rosserk Friary on the River Moy near Killala is one of the best-preserved Franciscan friaries in Ireland. It features a unique double piscina carved with a round tower motif-the only such example known in Ireland. Burned by Sir Richard Bingham in 1590, the remarkably complete ruins include church, cloister, domestic buildings, and a beautiful riverside setting.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -30340,7 +30338,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A romantic 18th-century castle hotel draped in ivy and legend — where the drumlands of Cavan meet centuries of Irish intrigue and old-world elegance.",
+    "description": "A romantic 18th-century castle hotel draped in ivy and legend - where the drumlands of Cavan meet centuries of Irish intrigue and old-world elegance.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg/500px-Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg",
     "rating": 4.2,
     "reviewCount": 2200,
@@ -30393,7 +30391,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 914,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castle-saunderson.jpg"
+      "https://img.castlecore.uk/wiki-castle-saunderson.jpg"
     ],
     "history": "Castle Saunderson near Belturbet, County Cavan, was the seat of the Saunderson family from the 17th century. Colonel Edward Saunderson was a prominent Unionist politician. The castle was burned in 1922 and later partly rebuilt. In 2012, the estate was developed as Scouting Ireland's International Scout Centre, offering camping, kayaking, and outdoor activities on the shores of the River Erne.",
     "sources": [
@@ -30415,7 +30413,7 @@ const CASTLES = [
     "type": "motte",
     "era": "12th century",
     "condition": "ruin",
-    "description": "One of Ireland's highest and most ancient Norman mottes — a colossal earthwork towering over County Longford, crowned with a statue of St Patrick and views that stretch forever.",
+    "description": "One of Ireland's highest and most ancient Norman mottes - a colossal earthwork towering over County Longford, crowned with a statue of St Patrick and views that stretch forever.",
     "image": "https://img.castlecore.uk/granard-motte.jpg",
     "rating": 3.4,
     "reviewCount": 80,
@@ -30498,7 +30496,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A Scottish baronial fantasy set on a thousand wild acres in County Monaghan — where Jonathan Swift once stayed and the Leslies have held court since 1665.",
+    "description": "A Scottish baronial fantasy set on a thousand wild acres in County Monaghan - where Jonathan Swift once stayed and the Leslies have held court since 1665.",
     "image": "https://img.castlecore.uk/castle-leslie.jpg",
     "rating": 4.3,
     "reviewCount": 3500,
@@ -30705,7 +30703,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 923,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-newtownstewart-castle.jpg"
+      "https://img.castlecore.uk/wiki-newtownstewart-castle.jpg"
     ],
     "history": "Newtownstewart Castle in County Tyrone was built in the early 17th century as part of the Ulster Plantation. The substantial castle was destroyed by fire during the Williamite Wars in 1689 when the retreating Jacobite forces burned it. The impressive ruins, with their massive walls and window openings, stand prominently in the village centre.",
     "sources": [
@@ -30804,7 +30802,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Iron Age (c. 95 BC)",
     "condition": "ruin",
-    "description": "The legendary seat of Ulster's ancient kings — a mystical hilltop where a massive timber temple was ritually burned and buried 2,000 years ago, pulsing with the mythology of Cu Chulainn and the Red Branch Knights.",
+    "description": "The legendary seat of Ulster's ancient kings - a mystical hilltop where a massive timber temple was ritually burned and buried 2,000 years ago, pulsing with the mythology of Cu Chulainn and the Red Branch Knights.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg/500px-Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg",
     "rating": 4,
     "reviewCount": 980,
@@ -30984,7 +30982,7 @@ const CASTLES = [
       "https://img.castlecore.uk/mahee-island-nendrum-4.jpg",
       "https://img.castlecore.uk/mahee-island-nendrum-5.jpg"
     ],
-    "history": "Nendrum Monastery on Mahee Island in Strangford Lough was founded by St Mochaoi in the 5th century. The site features three concentric enclosures, a round tower stump, church ruins, and a remarkably well-preserved sundial—one of the oldest in Ireland. Excavations revealed a monastic tide mill dating to 619 AD, one of the earliest known in the world.",
+    "history": "Nendrum Monastery on Mahee Island in Strangford Lough was founded by St Mochaoi in the 5th century. The site features three concentric enclosures, a round tower stump, church ruins, and a remarkably well-preserved sundial-one of the oldest in Ireland. Excavations revealed a monastic tide mill dating to 619 AD, one of the earliest known in the world.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -31004,7 +31002,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "intact",
-    "description": "The abbey that refused to die — founded by an Irish king in 1216, suppressed, burned, roofless for centuries, yet never once stopped holding Mass through 800 years of defiance.",
+    "description": "The abbey that refused to die - founded by an Irish king in 1216, suppressed, burned, roofless for centuries, yet never once stopped holding Mass through 800 years of defiance.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ballintubber_Abbey_eastern_elevation.JPG/500px-Ballintubber_Abbey_eastern_elevation.JPG",
     "rating": 4.1,
     "reviewCount": 850,
@@ -31044,7 +31042,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Royal Abbey in Ireland's lake country — where the last High King of Ireland retreated and Romanesque stonework whispers of ancient devotion.",
+    "description": "A Royal Abbey in Ireland's lake country - where the last High King of Ireland retreated and Romanesque stonework whispers of ancient devotion.",
     "history": "Originally founded in the 7th century by Saint Feichin, rebuilt in the 12th century as an Augustinian house. Turlough Mór O'Connor, last High King of Ireland, retired and died here in 1198. Features some of Ireland's finest Romanesque and early Gothic carved stonework. The Monks' Fishing House on the river is iconic.",
     "image": "https://img.castlecore.uk/cong-abbey.jpg",
     "rating": 4,
@@ -31094,7 +31092,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A hidden gem of medieval Ireland — a ruined Augustinian priory where a remarkable carved west doorway survives, alive with saints, animals, and Green Men.",
+    "description": "A hidden gem of medieval Ireland - a ruined Augustinian priory where a remarkable carved west doorway survives, alive with saints, animals, and Green Men.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Clontuskert_Priory_Nave_Doorway_2009_09_16.jpg/500px-Clontuskert_Priory_Nave_Doorway_2009_09_16.jpg",
     "rating": 3.5,
     "reviewCount": 75,
@@ -31130,7 +31128,7 @@ const CASTLES = [
     "type": "friary",
     "era": "14th century",
     "condition": "ruin",
-    "description": "One of Ireland's finest Franciscan ruins — where exquisite carved tombs and a soaring Gothic window frame centuries of devotion in the Galway countryside.",
+    "description": "One of Ireland's finest Franciscan ruins - where exquisite carved tombs and a soaring Gothic window frame centuries of devotion in the Galway countryside.",
     "image": "https://img.castlecore.uk/kilconnell-friary.jpg",
     "rating": 3.7,
     "reviewCount": 120,
@@ -31165,7 +31163,7 @@ const CASTLES = [
     "type": "friary",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A hauntingly intact Franciscan friary in Killarney National Park — where an ancient yew tree grows in the cloister and Ireland's last Gaelic poets lie buried.",
+    "description": "A hauntingly intact Franciscan friary in Killarney National Park - where an ancient yew tree grows in the cloister and Ireland's last Gaelic poets lie buried.",
     "image": "https://img.castlecore.uk/muckross-friary.jpg",
     "rating": 4.2,
     "reviewCount": 2800,
@@ -31225,7 +31223,7 @@ const CASTLES = [
       "https://img.castlecore.uk/buttevant-friary-4.jpg",
       "https://img.castlecore.uk/buttevant-friary-5.jpg"
     ],
-    "history": "Founded in 1251 by David Óg Barry, Buttevant Friary (Ballybeg Abbey) is a substantial Franciscan foundation in north Cork. The town of Buttevant is said to have given its name to the steeplechase—a race between the steeples of Buttevant and Doneraile churches in 1752. The friary features a fine church, cloister, and domestic buildings.",
+    "history": "Founded in 1251 by David Óg Barry, Buttevant Friary (Ballybeg Abbey) is a substantial Franciscan foundation in north Cork. The town of Buttevant is said to have given its name to the steeplechase-a race between the steeples of Buttevant and Doneraile churches in 1752. The friary features a fine church, cloister, and domestic buildings.",
     "sources": [
       {
         "name": "Cork Heritage",
@@ -31245,7 +31243,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Ireland's largest medieval priory, sprawling across four acres of Tipperary farmland — burned twice in its turbulent history, its Gothic arches still frame the sky above the River Suir.",
+    "description": "Ireland's largest medieval priory, sprawling across four acres of Tipperary farmland - burned twice in its turbulent history, its Gothic arches still frame the sky above the River Suir.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aerial_photograph_of_Athassel_Priory%2C_May_2019.jpg/500px-Aerial_photograph_of_Athassel_Priory%2C_May_2019.jpg",
     "rating": 3.9,
     "reviewCount": 420,
@@ -31287,7 +31285,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "restored",
-    "description": "A magnificently restored Cistercian abbey on the banks of the River Suir — still a living parish church after 800 years, with medieval stonework and a relic of the True Cross.",
+    "description": "A magnificently restored Cistercian abbey on the banks of the River Suir - still a living parish church after 800 years, with medieval stonework and a relic of the True Cross.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IMGHolyCross_4780w.jpg/500px-IMGHolyCross_4780w.jpg",
     "rating": 4.2,
     "reviewCount": 1800,
@@ -31348,7 +31346,7 @@ const CASTLES = [
     "access": "free",
     "_index": 950,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-duiske-abbey.jpg"
+      "https://img.castlecore.uk/wiki-duiske-abbey.jpg"
     ],
     "history": "Founded in 1204 by William Marshal, 1st Earl of Pembroke, Duiske Abbey in Graiguenamanagh was one of the largest Cistercian abbeys in Ireland. After dissolution in the 16th century, the abbey fell into ruin but was gradually restored from the 1970s onward. It now serves as the parish church, with magnificent Romanesque and Gothic architectural details preserved.",
     "sources": [
@@ -31411,7 +31409,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "A crumbling Norman tower perched above the Wicklow coast — slowly being reclaimed by ivy and woodland while the Irish Sea crashes below.",
+    "description": "A crumbling Norman tower perched above the Wicklow coast - slowly being reclaimed by ivy and woodland while the Irish Sea crashes below.",
     "image": "https://img.castlecore.uk/kindlestown-castle.jpg",
     "rating": 3.3,
     "reviewCount": 65,
@@ -31766,7 +31764,7 @@ const CASTLES = [
       "https://img.castlecore.uk/auchindoir-castle-4.jpg",
       "https://img.castlecore.uk/auchindoir-castle-5.jpg"
     ],
-    "history": "The castle dates from the 13th century, held by various families including the Gordons. Only fragments of curtain wall survive. The real treasure is the adjacent ruined church of St Mary of Auchindoir, which retains a fine Romanesque doorway and sacrament house — rare survivals in rural Aberdeenshire. The site is remote and atmospheric, in the upper Don valley.",
+    "history": "The castle dates from the 13th century, held by various families including the Gordons. Only fragments of curtain wall survive. The real treasure is the adjacent ruined church of St Mary of Auchindoir, which retains a fine Romanesque doorway and sacrament house - rare survivals in rural Aberdeenshire. The site is remote and atmospheric, in the upper Don valley.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -31786,7 +31784,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "13th-16th century",
     "condition": "ruin",
-    "description": "A crumbling tower house in woodland near Ellon, Aberdeenshire. Ivy-wrapped ruins with an air of romantic neglect — the kind of ruin poets dream about.",
+    "description": "A crumbling tower house in woodland near Ellon, Aberdeenshire. Ivy-wrapped ruins with an air of romantic neglect - the kind of ruin poets dream about.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg/500px-Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg",
     "rating": 3.2,
     "reviewCount": 25,
@@ -31823,7 +31821,7 @@ const CASTLES = [
     "era": "13th century",
     "condition": "restored",
     "description": "A striking 13th-century fortress on the Aberdeenshire coast near Fraserburgh, restored and privately owned. One of the oldest continuously occupied castles in the region.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cairnbulg_Castle.jpg/500px-Cairnbulg_Castle.jpg",
+    "image": "https://img.castlecore.uk/wiki-cairnbulg-castle.jpg",
     "rating": 3.4,
     "reviewCount": 50,
     "county": "Aberdeenshire",
@@ -31835,7 +31833,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 964,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-cairnbulg-castle.jpg"
+      "https://img.castlecore.uk/wiki-cairnbulg-castle.jpg"
     ],
     "history": "Originally built in the 13th century by the Comyn Earls of Buchan. Passed to the Frasers after the Comyns' downfall, then to the Gordons. The castle was extensively restored in the 19th and 20th centuries. Features include a massive round tower and later baronial additions. Set near the village of Cairnbulg on the northeast coast. Private residence.",
     "sources": [
@@ -31869,7 +31867,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 966,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-harthill-castle.jpg"
+      "https://img.castlecore.uk/wiki-harthill-castle.jpg"
     ],
     "history": "Built around 1601 by the Leith family on the site of an earlier fortalice. A well-proportioned Z-plan castle with round towers at diagonally opposite corners. Fell into serious disrepair but was restored in the 20th century. The castle stands in farmland near Oyne in the Garioch district of Aberdeenshire. Private residence, visible from the road.",
     "sources": [
@@ -31966,7 +31964,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "restored",
-    "description": "A beautifully restored 16th-century tower house near Turriff, notable for its spectacular ribbed vaulted great hall — one of the finest domestic interiors in northeast Scotland.",
+    "description": "A beautifully restored 16th-century tower house near Turriff, notable for its spectacular ribbed vaulted great hall - one of the finest domestic interiors in northeast Scotland.",
     "image": "https://img.castlecore.uk/towie-barclay-castle.jpg",
     "rating": 3.5,
     "reviewCount": 65,
@@ -32022,7 +32020,7 @@ const CASTLES = [
       "https://img.castlecore.uk/gight-castle-4.jpg",
       "https://img.castlecore.uk/gight-castle-5.jpg"
     ],
-    "history": "Built in the 16th century by the Gordons of Gight, notorious for their wild and lawless ways. Catherine Gordon of Gight married 'Mad Jack' Byron in 1785 and sold the estate to pay his debts — their son was the poet Lord Byron. The castle was abandoned and the roof stripped. The ruins perch dramatically above a gorge on the River Ythan, reached by a woodland path.",
+    "history": "Built in the 16th century by the Gordons of Gight, notorious for their wild and lawless ways. Catherine Gordon of Gight married 'Mad Jack' Byron in 1785 and sold the estate to pay his debts - their son was the poet Lord Byron. The castle was abandoned and the roof stripped. The ruins perch dramatically above a gorge on the River Ythan, reached by a woodland path.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -32042,7 +32040,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "restored",
-    "description": "A magnificent 16th-century Z-plan castle in Highland Perthshire, magnificently restored by the Menzies Clan Society. Bonnie Prince Charlie slept here — and his room is still shown.",
+    "description": "A magnificent 16th-century Z-plan castle in Highland Perthshire, magnificently restored by the Menzies Clan Society. Bonnie Prince Charlie slept here - and his room is still shown.",
     "image": "https://img.castlecore.uk/castle-menzies.jpg",
     "rating": 3.9,
     "reviewCount": 580,
@@ -32083,7 +32081,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "intact",
-    "description": "A tower house overlooking the Tay valley in Perthshire, notable for its nearby church with astonishing painted timber ceiling — a hidden masterpiece of Scottish art.",
+    "description": "A tower house overlooking the Tay valley in Perthshire, notable for its nearby church with astonishing painted timber ceiling - a hidden masterpiece of Scottish art.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Grandtully_Castle_%28geograph_3890325%29.jpg/500px-Grandtully_Castle_%28geograph_3890325%29.jpg",
     "rating": 3.4,
     "reviewCount": 55,
@@ -32096,9 +32094,9 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 972,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-grandtully-castle.jpg"
+      "https://img.castlecore.uk/wiki-grandtully-castle.jpg"
     ],
-    "history": "Built in the 15th century by the Stewart family, later extended. The castle itself is a private residence, but the adjacent St Mary's Church contains one of Scotland's greatest treasures — a painted timber ceiling from the early 17th century, depicting heraldic and religious scenes in vibrant colour. The castle and church sit in the beautiful Tay valley near Aberfeldy.",
+    "history": "Built in the 15th century by the Stewart family, later extended. The castle itself is a private residence, but the adjacent St Mary's Church contains one of Scotland's greatest treasures - a painted timber ceiling from the early 17th century, depicting heraldic and religious scenes in vibrant colour. The castle and church sit in the beautiful Tay valley near Aberfeldy.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -32133,7 +32131,7 @@ const CASTLES = [
     "access": "paid",
     "_index": 973,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-megginch-castle.jpg"
+      "https://img.castlecore.uk/wiki-megginch-castle.jpg"
     ],
     "history": "Built in the 15th century and continuously occupied by the Drummond family (later Cherry-Drummonds) since then. The castle has medieval origins with extensive later additions. The gardens are particularly notable, featuring ancient topiary, a physic garden, and what may be Scotland's oldest yew tree. Used as a filming location. Open for limited garden visits and events.",
     "sources": [
@@ -32155,7 +32153,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A 15th-century castle in Perth, now home to the Black Watch Museum — showcasing 350 years of Scotland's most famous regiment. Military heritage in baronial splendour.",
+    "description": "A 15th-century castle in Perth, now home to the Black Watch Museum - showcasing 350 years of Scotland's most famous regiment. Military heritage in baronial splendour.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg/500px-Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg",
     "rating": 3.9,
     "reviewCount": 650,
@@ -32195,7 +32193,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-17th century",
     "condition": "intact",
-    "description": "A romantic Scottish castle with roots reaching back to 1150, wrapped in walled gardens and steeped in centuries of aristocratic intrigue — from medieval earls to Victorian artists who saved it from ruin.",
+    "description": "A romantic Scottish castle with roots reaching back to 1150, wrapped in walled gardens and steeped in centuries of aristocratic intrigue - from medieval earls to Victorian artists who saved it from ruin.",
     "image": "https://img.castlecore.uk/kellie-castle.jpg",
     "rating": 4.1,
     "reviewCount": 1200,
@@ -32241,7 +32239,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "intact",
-    "description": "A perfectly preserved six-storey tower house rising from the Fife hills — home to a satirist who skewered Scottish statesmen from his lofty perch.",
+    "description": "A perfectly preserved six-storey tower house rising from the Fife hills - home to a satirist who skewered Scottish statesmen from his lofty perch.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Scotstarvit_Tower.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -32285,7 +32283,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-16th century",
     "condition": "ruin",
-    "description": "A Shakespearean ruin above the Wemyss Caves — where the legendary Thane of Fife's descendants held court and Edward I once slept before betraying his host.",
+    "description": "A Shakespearean ruin above the Wemyss Caves - where the legendary Thane of Fife's descendants held court and Edward I once slept before betraying his host.",
     "image": "https://img.castlecore.uk/macduff-s-castle.jpg",
     "rating": 3.4,
     "reviewCount": 65,
@@ -32405,7 +32403,7 @@ const CASTLES = [
     "type": "palace",
     "era": "16th century",
     "condition": "ruin",
-    "description": "Substantial Renaissance ruins overlooking the Brough of Birsay in Orkney. Built by the tyrannical Earl Robert Stewart — oppression made beautiful in red Orcadian sandstone.",
+    "description": "Substantial Renaissance ruins overlooking the Brough of Birsay in Orkney. Built by the tyrannical Earl Robert Stewart - oppression made beautiful in red Orcadian sandstone.",
     "image": "https://img.castlecore.uk/earl-s-palace-birsay.jpg",
     "rating": 3.6,
     "reviewCount": 280,
@@ -32444,7 +32442,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A bristling fortress on remote Westray in Orkney, built by a man who plotted the murder of Lord Darnley. With more gun loops than almost any Scottish castle and nine-foot walls, Noltland is paranoia made architecture — hauntingly isolated on the island edge.",
+    "description": "A bristling fortress on remote Westray in Orkney, built by a man who plotted the murder of Lord Darnley. With more gun loops than almost any Scottish castle and nine-foot walls, Noltland is paranoia made architecture - hauntingly isolated on the island edge.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Noltland_Castle_-_geograph.org.uk_-_1763460.jpg/500px-Noltland_Castle_-_geograph.org.uk_-_1763460.jpg",
     "rating": 3.8,
     "reviewCount": 220,
@@ -32485,7 +32483,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "The oldest stone castle in Orkney, built by a Norse chieftain on a tiny windswept island — a raw, elemental ruin where Viking sagas come alive.",
+    "description": "The oldest stone castle in Orkney, built by a Norse chieftain on a tiny windswept island - a raw, elemental ruin where Viking sagas come alive.",
     "image": "https://img.castlecore.uk/cubbie-roo-s-castle.jpg",
     "rating": 3.7,
     "reviewCount": 150,
@@ -32529,7 +32527,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "A Shetland tower house built by a tyrannical earl who forced islanders into slave labour — legend says their blood mixed with the mortar, and his execution followed shortly after.",
+    "description": "A Shetland tower house built by a tyrannical earl who forced islanders into slave labour - legend says their blood mixed with the mortar, and his execution followed shortly after.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Scalloway_Castle_%28August_2013%29.jpg/500px-Scalloway_Castle_%28August_2013%29.jpg",
     "rating": 3.8,
     "reviewCount": 450,
@@ -32570,7 +32568,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "The most northerly castle in the British Isles, standing roofless on Unst in Shetland — built by a half-brother to Orkney's tyrannical earl, burned by foreign privateers, and abandoned to the Atlantic winds. Utterly remote, utterly atmospheric.",
+    "description": "The most northerly castle in the British Isles, standing roofless on Unst in Shetland - built by a half-brother to Orkney's tyrannical earl, burned by foreign privateers, and abandoned to the Atlantic winds. Utterly remote, utterly atmospheric.",
     "image": "https://img.castlecore.uk/muness-castle.jpg",
     "rating": 3.6,
     "reviewCount": 180,
@@ -32610,7 +32608,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A lonely ruin on the machair of Benbecula in the Outer Hebrides — a rare medieval tower house in a landscape of wind, sea, and sky.",
+    "description": "A lonely ruin on the machair of Benbecula in the Outer Hebrides - a rare medieval tower house in a landscape of wind, sea, and sky.",
     "image": "https://img.castlecore.uk/borve-castle-benbecula.jpg",
     "rating": 3.3,
     "reviewCount": 40,
@@ -32724,7 +32722,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "ruin",
-    "description": "The birthplace of the 'Flower of Yarrow' — a ruined Border pele tower where a beauty married a notorious Reiver and Walter Scott found the threads of his ancestry.",
+    "description": "The birthplace of the 'Flower of Yarrow' - a ruined Border pele tower where a beauty married a notorious Reiver and Walter Scott found the threads of his ancestry.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Dryhope.JPG/500px-Dryhope.JPG",
     "rating": 3.4,
     "reviewCount": 65,
@@ -32764,7 +32762,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "restored",
-    "description": "A 16th-century Border tower restored by a future Liberal leader — where the Ettrick Water winds past centuries of Scott family history and literary legend.",
+    "description": "A 16th-century Border tower restored by a future Liberal leader - where the Ettrick Water winds past centuries of Scott family history and literary legend.",
     "image": "https://img.castlecore.uk/aikwood-tower.jpg",
     "rating": 3.5,
     "reviewCount": 80,
@@ -32825,7 +32823,7 @@ const CASTLES = [
       "https://img.castlecore.uk/duns-castle-4.jpg",
       "https://img.castlecore.uk/duns-castle-5.jpg"
     ],
-    "history": "The estate has medieval origins — a castle stood here from at least the 14th century. The current building dates from extensive remodelling in 1818-22 by architect James Gillespie Graham in Gothic Revival style. The grounds include Duns Castle Nature Reserve with ancient woodland, a man-made lake, and rich biodiversity. Now used as an events and wedding venue. The town of Duns was the birthplace of racing driver Jim Clark.",
+    "history": "The estate has medieval origins - a castle stood here from at least the 14th century. The current building dates from extensive remodelling in 1818-22 by architect James Gillespie Graham in Gothic Revival style. The grounds include Duns Castle Nature Reserve with ancient woodland, a man-made lake, and rich biodiversity. Now used as an events and wedding venue. The town of Duns was the birthplace of racing driver Jim Clark.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -32845,7 +32843,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "intact",
-    "description": "A privately owned 15th-century pele tower still lived in today — hidden in the Berwickshire hills where Oliphants, Douglases, and Swintons held the Borders.",
+    "description": "A privately owned 15th-century pele tower still lived in today - hidden in the Berwickshire hills where Oliphants, Douglases, and Swintons held the Borders.",
     "image": "https://img.castlecore.uk/cranshaws-castle.jpg",
     "rating": 3.2,
     "reviewCount": 25,
@@ -32884,7 +32882,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "restored",
-    "description": "A brooding tower house on the shores of the Moray Firth, granted by Mary Queen of Scots herself — abandoned for 300 years before rising again as a luxury hotel wrapped in Highland mist and murder.",
+    "description": "A brooding tower house on the shores of the Moray Firth, granted by Mary Queen of Scots herself - abandoned for 300 years before rising again as a luxury hotel wrapped in Highland mist and murder.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Castle_Stuart.jpg/500px-Castle_Stuart.jpg",
     "rating": 4,
     "reviewCount": 1200,
@@ -32925,7 +32923,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Victorian (medieval origins)",
     "condition": "intact",
-    "description": "The ancestral seat of Clan Fraser of Lovat in the Scottish Highlands — rebuilt in grand Victorian baronial style after being burned in the aftermath of Culloden.",
+    "description": "The ancestral seat of Clan Fraser of Lovat in the Scottish Highlands - rebuilt in grand Victorian baronial style after being burned in the aftermath of Culloden.",
     "image": "https://img.castlecore.uk/beaufort-castle.jpg",
     "rating": 3.3,
     "reviewCount": 40,
@@ -32959,7 +32957,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "restored",
-    "description": "The 'Castle of Butter' — a brooding tower house at the head of Loch Aline, paid for in dairy and burned in civil war, now restored as a private Highland home.",
+    "description": "The 'Castle of Butter' - a brooding tower house at the head of Loch Aline, paid for in dairy and burned in civil war, now restored as a private Highland home.",
     "image": "https://img.castlecore.uk/kinlochaline-castle.jpg",
     "rating": 3.4,
     "reviewCount": 55,
@@ -32999,7 +32997,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A massive ruined tower standing guard over a Dumfriesshire village — where feuding Border families fought over stone and power for centuries.",
+    "description": "A massive ruined tower standing guard over a Dumfriesshire village - where feuding Border families fought over stone and power for centuries.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Torthorwald_Castle.jpg/500px-Torthorwald_Castle.jpg",
     "rating": 3.3,
     "reviewCount": 45,
@@ -33078,7 +33076,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A wind-scoured headland at the tip of Kintyre where a MacDonald fortress once commanded three seas — and one of Scotland's bloodiest massacres unfolded.",
+    "description": "A wind-scoured headland at the tip of Kintyre where a MacDonald fortress once commanded three seas - and one of Scotland's bloodiest massacres unfolded.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Dunaverty_-_geograph.org.uk_-_735878.jpg/500px-Dunaverty_-_geograph.org.uk_-_735878.jpg",
     "rating": 3.3,
     "reviewCount": 65,
@@ -33203,7 +33201,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "restored",
-    "description": "Birthplace of the man who founded Nova Scotia — a restored 16th-century manor where poetry, politics, and colonial ambition all began under one Scottish roof.",
+    "description": "Birthplace of the man who founded Nova Scotia - a restored 16th-century manor where poetry, politics, and colonial ambition all began under one Scottish roof.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Menstrie_Castle%2C_South_facing_aspect.jpg/500px-Menstrie_Castle%2C_South_facing_aspect.jpg",
     "rating": 3.4,
     "reviewCount": 65,
@@ -33314,7 +33312,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A royal tower house built by Robert II to celebrate becoming king, rising from the remains of a vitrified Iron Age hill fort. The layers here go deep — from ancient tribal stronghold to medieval seat of Scottish kings, with views across Ayrshire to the sea.",
+    "description": "A royal tower house built by Robert II to celebrate becoming king, rising from the remains of a vitrified Iron Age hill fort. The layers here go deep - from ancient tribal stronghold to medieval seat of Scottish kings, with views across Ayrshire to the sea.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Dundonald_Castle_20080424_-_from_south_west.jpg/500px-Dundonald_Castle_20080424_-_from_south_west.jpg",
     "rating": 3.7,
     "reviewCount": 280,
@@ -33355,7 +33353,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A lone tower house silhouetted on a dramatic sea cliff south of Ayr — built on an ancient promontory fort with concentric ditches that predate it by centuries. One of the most photographed ruins in Ayrshire, dramatic at sunset, wild in a storm.",
+    "description": "A lone tower house silhouetted on a dramatic sea cliff south of Ayr - built on an ancient promontory fort with concentric ditches that predate it by centuries. One of the most photographed ruins in Ayrshire, dramatic at sunset, wild in a storm.",
     "image": "https://img.castlecore.uk/greenan-castle.jpg",
     "rating": 3.5,
     "reviewCount": 150,
@@ -33396,7 +33394,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century / 1790",
     "condition": "ruin",
-    "description": "A Robert Adam masterpiece slowly crumbling in the Ayrshire countryside — where neoclassical elegance meets centuries of Kennedy family ambition.",
+    "description": "A Robert Adam masterpiece slowly crumbling in the Ayrshire countryside - where neoclassical elegance meets centuries of Kennedy family ambition.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Dalquarran_Mansion_-_geograph.org.uk_-_424754.jpg/500px-Dalquarran_Mansion_-_geograph.org.uk_-_424754.jpg",
     "rating": 3.4,
     "reviewCount": 55,
@@ -33436,7 +33434,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "restored",
-    "description": "A 16th-century L-plan tower on the High Street of a small Ayrshire town, steeped in the dark legend of Johnny Faa — the earl who supposedly murdered a gypsy king and imprisoned his own countess in its upper rooms. Recently restored from the at-risk register.",
+    "description": "A 16th-century L-plan tower on the High Street of a small Ayrshire town, steeped in the dark legend of Johnny Faa - the earl who supposedly murdered a gypsy king and imprisoned his own countess in its upper rooms. Recently restored from the at-risk register.",
     "image": "https://img.castlecore.uk/maybole-castle.jpg",
     "rating": 3.6,
     "reviewCount": 180,
@@ -33476,7 +33474,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A quatrefoil keep crowning a Norman motte in York's heart — hauntingly beautiful in spring when daffodils carpet the mound, but shadowed by one of medieval England's darkest moments.",
+    "description": "A quatrefoil keep crowning a Norman motte in York's heart - hauntingly beautiful in spring when daffodils carpet the mound, but shadowed by one of medieval England's darkest moments.",
     "image": "https://img.castlecore.uk/clifford-s-tower-york.jpg",
     "rating": 4.1,
     "reviewCount": 5500,
@@ -33518,7 +33516,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "Not to be confused with nearby Birdoswald Roman Fort—this is a separate medieval fortification near Brampton in Cumbria's border country, part of the dense network of defences in this much-contested landscape.",
+    "description": "Not to be confused with nearby Birdoswald Roman Fort-this is a separate medieval fortification near Brampton in Cumbria's border country, part of the dense network of defences in this much-contested landscape.",
     "image": "https://img.castlecore.uk/brampton-castle-birdoswald.jpg",
     "rating": 4,
     "reviewCount": 1200,
@@ -33551,7 +33549,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-14th century",
     "condition": "restored",
-    "description": "A medieval fortress above Romney Marsh where archdeacons once held court — and Paul McCartney's Wings once recorded an album among its ancient stones.",
+    "description": "A medieval fortress above Romney Marsh where archdeacons once held court - and Paul McCartney's Wings once recorded an album among its ancient stones.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Lympne_Castle_-_geograph.org.uk_-_4223972.jpg/500px-Lympne_Castle_-_geograph.org.uk_-_4223972.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -33592,7 +33590,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-17th century",
     "condition": "ruin",
-    "description": "A mighty riverside ruin where King John drew his last breath — its gatehouse is the finest surviving example in all of England, standing sentinel over 900 years of drama.",
+    "description": "A mighty riverside ruin where King John drew his last breath - its gatehouse is the finest surviving example in all of England, standing sentinel over 900 years of drama.",
     "image": "https://img.castlecore.uk/newark-castle-nottinghamshire.jpg",
     "rating": 3.9,
     "reviewCount": 1400,
@@ -33657,10 +33655,10 @@ const CASTLES = [
       "https://img.castlecore.uk/roch-castle-4.jpg",
       "https://img.castlecore.uk/roch-castle-5.jpg"
     ],
-    "history": "Built in the 12th century by Norman knight Adam de la Roche (de Rupe) on a volcanic outcrop near the Landsker Line. Legend says Adam built on the rock after a prophecy that he would die from a serpent's bite—only to be fatally bitten by a viper smuggled in with firewood. The castle was damaged during the Civil War and later restored. Now a luxury holiday let with sweeping coastal views.",
+    "history": "Built in the 12th century by Norman knight Adam de la Roche (de Rupe) on a volcanic outcrop near the Landsker Line. Legend says Adam built on the rock after a prophecy that he would die from a serpent's bite-only to be fatally bitten by a viper smuggled in with firewood. The castle was damaged during the Civil War and later restored. Now a luxury holiday let with sweeping coastal views.",
     "sources": [
       {
-        "name": "Wikipedia – Roch Castle",
+        "name": "Wikipedia - Roch Castle",
         "url": "https://en.wikipedia.org/wiki/Roch_Castle"
       },
       {
@@ -33694,12 +33692,12 @@ const CASTLES = [
     "access": "paid",
     "_index": 1024,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-upton-castle.jpg"
+      "https://img.castlecore.uk/wiki-upton-castle.jpg"
     ],
     "history": "A medieval fortified manor house with origins in the 13th century, held by the Malefant family and later the Bowens. Rhys ap Owen, High Sheriff of Pembrokeshire, held it in 1564. In 1753 John Tasker, a Master Attendant of the Port of Bombay, bought it and built the walled garden. In 1927 ship owner Stanley Neale landscaped the terraces and arboretum. Gardens opened to the public in 1976 via the National Park.",
     "sources": [
       {
-        "name": "Wikipedia – Upton Castle",
+        "name": "Wikipedia - Upton Castle",
         "url": "https://en.wikipedia.org/wiki/Upton_Castle"
       },
       {
@@ -33720,7 +33718,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Norman ruin on a knoll above the River Towy, with a modern bronze warrior guarding what centuries of Welsh princes fought and died for. One of Wales' most contested castles — taken and retaken so many times the history reads like a war diary.",
+    "description": "A Norman ruin on a knoll above the River Towy, with a modern bronze warrior guarding what centuries of Welsh princes fought and died for. One of Wales' most contested castles - taken and retaken so many times the history reads like a war diary.",
     "image": "https://img.castlecore.uk/llandovery-castle.jpg",
     "rating": 3.6,
     "reviewCount": 320,
@@ -33760,7 +33758,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "restored",
-    "description": "A restored medieval manor in the Tywi Valley with one of Wales's most enchanting garden restorations — a lost garden found again.",
+    "description": "A restored medieval manor in the Tywi Valley with one of Wales's most enchanting garden restorations - a lost garden found again.",
     "history": "A medieval house and gardens in the Tywi Valley, Carmarthenshire. Grade II* listed house with Grade II* gardens. Restored by the Aberglasney Restoration Trust. Features a unique Elizabethan cloister garden and a subtropical indoor garden in the restored Ninfarium.",
     "image": "https://img.castlecore.uk/aberglasney-house.jpg",
     "rating": 4.2,
@@ -33850,7 +33848,7 @@ const CASTLES = [
     "type": "fort",
     "era": "1st century AD / 11th century",
     "condition": "ruin",
-    "description": "A Roman fort and medieval motte in the heart of Snowdonia — where legionaries once watched the Welsh mountains and Norman conquerors later raised their own defences.",
+    "description": "A Roman fort and medieval motte in the heart of Snowdonia - where legionaries once watched the Welsh mountains and Norman conquerors later raised their own defences.",
     "image": "https://img.castlecore.uk/tomen-y-mur.jpg",
     "rating": 3.4,
     "reviewCount": 75,
@@ -33886,7 +33884,7 @@ const CASTLES = [
     "type": "fort",
     "era": "1st-4th century AD",
     "condition": "ruin",
-    "description": "The grassy ramparts of a Roman auxiliary fort in the green hills near Llandrindod Wells—a frontier outpost where legionaries once watched over the rebellious tribes of central Wales.",
+    "description": "The grassy ramparts of a Roman auxiliary fort in the green hills near Llandrindod Wells-a frontier outpost where legionaries once watched over the rebellious tribes of central Wales.",
     "image": "https://img.castlecore.uk/castell-collen.jpg",
     "rating": 3.3,
     "reviewCount": 50,
@@ -33915,7 +33913,7 @@ const CASTLES = [
         "url": "https://www.britainexpress.com/attractions.htm?attraction=812"
       },
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk/en/site/95708/"
       },
       {
@@ -33932,7 +33930,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-13th century",
     "condition": "ruin",
-    "description": "Massive earthworks on a Radnorshire hilltop—once a great Marcher fortress at the volatile frontier between England and Wales, where armies clashed and legends of Maud de Braose were born.",
+    "description": "Massive earthworks on a Radnorshire hilltop-once a great Marcher fortress at the volatile frontier between England and Wales, where armies clashed and legends of Maud de Braose were born.",
     "image": "https://img.castlecore.uk/painscastle.jpg",
     "rating": 3.2,
     "reviewCount": 35,
@@ -33951,7 +33949,7 @@ const CASTLES = [
     "history": "First built by Pain fitzJohn before his death in 1137, the castle was rebuilt by William de Braose, 4th Lord of Bramber, by 1195. Known in Welsh as Castell Paen, it was besieged by Rhys ap Gruffudd in 1196 and by Gwenwynwyn ab Owain of Powys in 1198, the latter suffering heavy defeat. Roger Mortimer seized it in 1276 but Edward I forced its return to Ralph Tosny. Only massive earthworks survive today.",
     "sources": [
       {
-        "name": "Wikipedia – Painscastle Castle",
+        "name": "Wikipedia - Painscastle Castle",
         "url": "https://en.wikipedia.org/wiki/Painscastle_Castle"
       },
       {
@@ -33968,7 +33966,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "A Norman motte rising from Anglesey woodland — built by the Earl of Chester to tame the island, now surrendered to the trees.",
+    "description": "A Norman motte rising from Anglesey woodland - built by the Earl of Chester to tame the island, now surrendered to the trees.",
     "history": "A motte-and-bailey fortress near Llangoed on the Isle of Anglesey, built 1080-1099 by Hugh d'Avranches, 1st Earl of Chester. Sited on a steep hill about two miles from Beaumaris Castle. Currently undergoing restoration. In use from the late 11th century to the mid-17th century.",
     "image": "https://img.castlecore.uk/castell-aberlleiniog.jpg",
     "rating": 3.6,
@@ -34275,7 +34273,7 @@ const CASTLES = [
     "gallery": [
       "https://img.castlecore.uk/kilkishen-castle-2.jpg"
     ],
-    "history": "Kilkishen Castle is a medieval tower house in County Clare. The castle dates to the 15th or 16th century and was likely built by one of the local clans—the McNamaras or O'Briens—who controlled different parts of Clare. The tower stands in the rural landscape of east Clare.",
+    "history": "Kilkishen Castle is a medieval tower house in County Clare. The castle dates to the 15th or 16th century and was likely built by one of the local clans-the McNamaras or O'Briens-who controlled different parts of Clare. The tower stands in the rural landscape of east Clare.",
     "sources": [
       {
         "name": "Clare Heritage",
@@ -34839,7 +34837,7 @@ const CASTLES = [
     "access": "free",
     "_index": 1062,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-monivea-castle.jpg"
+      "https://img.castlecore.uk/wiki-monivea-castle.jpg"
     ],
     "history": "Monivea Castle was the seat of the Ffrenche family, one of the Fourteen Tribes of Galway. The castle evolved from a medieval tower house into a substantial mansion that was burned in 1826 and rebuilt. The estate features a notable arboretum and woodland walks. The nearby village preserves the planned estate village character typical of the Big House era.",
     "sources": [
@@ -35088,7 +35086,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A mysterious island fortress on Lough Corrib, where Grace O'Malley allegedly defended the walls while her defenders wavered—hence 'the Hen's Castle.'",
+    "description": "A mysterious island fortress on Lough Corrib, where Grace O'Malley allegedly defended the walls while her defenders wavered-hence 'the Hen's Castle.'",
     "image": "https://img.castlecore.uk/hen-s-castle.jpg",
     "rating": 3.6,
     "reviewCount": 42,
@@ -35303,7 +35301,7 @@ const CASTLES = [
       "https://img.castlecore.uk/rahasane-castle-4.jpg",
       "https://img.castlecore.uk/rahasane-castle-5.jpg"
     ],
-    "history": "Rahasane Castle is a medieval tower house near Rahasane in County Galway. The area is notable for its turloughs—seasonal lakes that fill in winter and drain in summer, a phenomenon unique to Ireland's limestone regions. The castle dates to the 15th or 16th century and served as a local stronghold.",
+    "history": "Rahasane Castle is a medieval tower house near Rahasane in County Galway. The area is notable for its turloughs-seasonal lakes that fill in winter and drain in summer, a phenomenon unique to Ireland's limestone regions. The castle dates to the 15th or 16th century and served as a local stronghold.",
     "sources": [
       {
         "name": "Galway Heritage",
@@ -35654,7 +35652,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 1085,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castlepook-castle.jpg"
+      "https://img.castlecore.uk/wiki-castlepook-castle.jpg"
     ],
     "history": "Castlepook Castle in north Cork stands near Castlepook Cave, where excavations revealed the bones of brown bears, arctic foxes, and other Ice Age fauna dating back 40,000 years. The castle dates to the medieval period and was part of the network of fortifications in the Blackwater Valley region.",
     "sources": [
@@ -36197,7 +36195,7 @@ const CASTLES = [
       "https://img.castlecore.uk/knockgraffon-castle-4.jpg",
       "https://img.castlecore.uk/knockgraffon-castle-5.jpg"
     ],
-    "history": "Knockgraffon in County Tipperary features a Norman motte built on or near the ancient inauguration site of the Kings of Munster. The motte and castle date to the 12th-13th century period of Norman expansion. The site's dual heritage—pre-Christian royal inauguration mound and Norman military fortification—makes it historically significant.",
+    "history": "Knockgraffon in County Tipperary features a Norman motte built on or near the ancient inauguration site of the Kings of Munster. The motte and castle date to the 12th-13th century period of Norman expansion. The site's dual heritage-pre-Christian royal inauguration mound and Norman military fortification-makes it historically significant.",
     "sources": [
       {
         "name": "Tipperary Heritage",
@@ -36633,7 +36631,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-15th century",
     "condition": "ruin",
-    "description": "Impressive Desmond castle remains in the heart of Newcastle West, featuring two remarkable medieval halls—the finest secular medieval buildings in Limerick.",
+    "description": "Impressive Desmond castle remains in the heart of Newcastle West, featuring two remarkable medieval halls-the finest secular medieval buildings in Limerick.",
     "image": "https://img.castlecore.uk/newcastle-west-castle.jpg",
     "rating": 3.7,
     "reviewCount": 60,
@@ -37140,7 +37138,7 @@ const CASTLES = [
     "type": "stone",
     "era": "Iron Age (c.500 BC)",
     "condition": "intact",
-    "description": "A remarkable La Tene-period decorated stone in the Roscommon countryside—one of only three such carved stones in Ireland, covered in mysterious Iron Age spirals.",
+    "description": "A remarkable La Tene-period decorated stone in the Roscommon countryside-one of only three such carved stones in Ireland, covered in mysterious Iron Age spirals.",
     "image": "https://img.castlecore.uk/castlestrange-stone.jpg",
     "rating": 3.3,
     "reviewCount": 18,
@@ -37159,7 +37157,7 @@ const CASTLES = [
       "https://img.castlecore.uk/castlestrange-stone-4.jpg",
       "https://img.castlecore.uk/castlestrange-stone-5.jpg"
     ],
-    "history": "The Castlestrange Stone near Athleague, County Roscommon, is a rounded granite boulder decorated with flowing La Tene (Celtic Iron Age) spiral carvings dating to around 500 BC-100 AD. It is one of only three such decorated stones known in Ireland (with Turoe Stone and Killycluggin). The purpose of these stones remains debated—possibly ceremonial or marking a sacred site.",
+    "history": "The Castlestrange Stone near Athleague, County Roscommon, is a rounded granite boulder decorated with flowing La Tene (Celtic Iron Age) spiral carvings dating to around 500 BC-100 AD. It is one of only three such decorated stones known in Ireland (with Turoe Stone and Killycluggin). The purpose of these stones remains debated-possibly ceremonial or marking a sacred site.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -37192,7 +37190,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 1138,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-fuerty-castle.jpg"
+      "https://img.castlecore.uk/wiki-fuerty-castle.jpg"
     ],
     "history": "Fuerty Castle is a medieval fortification near the village of Fuerty, County Roscommon. The village has ancient ecclesiastical connections, with a monastery associated with St Justinian. The castle dates to the medieval period and was held by local Roscommon families.",
     "sources": [
@@ -37214,7 +37212,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "Castle remains in the historically rich village of Tulsk, gateway to the legendary Rathcroghan complex—ancient capital of the Kings of Connacht.",
+    "description": "Castle remains in the historically rich village of Tulsk, gateway to the legendary Rathcroghan complex-ancient capital of the Kings of Connacht.",
     "image": "https://img.castlecore.uk/tulsk-castle.jpg",
     "rating": 3.2,
     "reviewCount": 14,
@@ -37456,7 +37454,7 @@ const CASTLES = [
       "https://img.castlecore.uk/glinsk-castle-4.jpg",
       "https://img.castlecore.uk/glinsk-castle-5.jpg"
     ],
-    "history": "Glinsk Castle on the Galway-Roscommon border was built around 1630 by the Burke family. The castle is notable for its ornate facade with carved figures and decorative stonework—unusual sophistication for a building on the western frontier. The castle was confiscated during the Cromwellian settlement and fell into disrepair.",
+    "history": "Glinsk Castle on the Galway-Roscommon border was built around 1630 by the Burke family. The castle is notable for its ornate facade with carved figures and decorative stonework-unusual sophistication for a building on the western frontier. The castle was confiscated during the Cromwellian settlement and fell into disrepair.",
     "sources": [
       {
         "name": "Galway Heritage",
@@ -37594,7 +37592,7 @@ const CASTLES = [
     "type": "country house",
     "era": "19th century",
     "condition": "restored",
-    "description": "The great Sligo house of the Gore-Booth sisters, immortalised by W.B. Yeats—a Greek Revival mansion where poetry, rebellion, and aristocratic idealism collided.",
+    "description": "The great Sligo house of the Gore-Booth sisters, immortalised by W.B. Yeats-a Greek Revival mansion where poetry, rebellion, and aristocratic idealism collided.",
     "image": "https://img.castlecore.uk/lissadell-house.jpg",
     "rating": 4,
     "reviewCount": 155,
@@ -37996,7 +37994,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dromahair-castle-2.jpg",
       "https://img.castlecore.uk/dromahair-castle-3.jpg"
     ],
-    "history": "Dromahair Castle was the principal stronghold of the O'Rourke clan, Kings of Breifne. The village is associated with the legendary elopement of Devorgilla O'Rourke with Dermot MacMurrough in 1152, which ultimately led MacMurrough to invite the Normans to Ireland—changing the course of Irish history forever. Nearby Creevelea Abbey adds to the heritage.",
+    "history": "Dromahair Castle was the principal stronghold of the O'Rourke clan, Kings of Breifne. The village is associated with the legendary elopement of Devorgilla O'Rourke with Dermot MacMurrough in 1152, which ultimately led MacMurrough to invite the Normans to Ireland-changing the course of Irish history forever. Nearby Creevelea Abbey adds to the heritage.",
     "sources": [
       {
         "name": "Leitrim Heritage",
@@ -39126,7 +39124,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "Heritage remains in the Longford village of Ardagh, where the famous Ardagh Chalice—Ireland's greatest metalwork treasure—was discovered.",
+    "description": "Heritage remains in the Longford village of Ardagh, where the famous Ardagh Chalice-Ireland's greatest metalwork treasure-was discovered.",
     "image": "https://img.castlecore.uk/ardagh-castle.jpg",
     "rating": 3.2,
     "reviewCount": 12,
@@ -39373,7 +39371,7 @@ const CASTLES = [
       "https://img.castlecore.uk/seir-kieran-monastery-4.jpg",
       "https://img.castlecore.uk/seir-kieran-monastery-5.jpg"
     ],
-    "history": "Seir Kieran near Clareen in County Offaly is one of Ireland's oldest monastic sites, traditionally founded by St Ciaran of Saigir in the 5th century—possibly before St Patrick's mission. The site preserves early cross slabs, high cross fragments, and medieval church ruins. It remains an active graveyard, creating an unbroken link to the earliest days of Irish Christianity.",
+    "history": "Seir Kieran near Clareen in County Offaly is one of Ireland's oldest monastic sites, traditionally founded by St Ciaran of Saigir in the 5th century-possibly before St Patrick's mission. The site preserves early cross slabs, high cross fragments, and medieval church ruins. It remains an active graveyard, creating an unbroken link to the earliest days of Irish Christianity.",
     "sources": [
       {
         "name": "Offaly Heritage",
@@ -39393,7 +39391,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "6th-10th century",
     "condition": "ruin",
-    "description": "The monastery where the magnificent Book of Durrow was created—one of Ireland's earliest illuminated manuscripts and a masterwork of Celtic art.",
+    "description": "The monastery where the magnificent Book of Durrow was created-one of Ireland's earliest illuminated manuscripts and a masterwork of Celtic art.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Durrow_abbey_A.jpg/500px-Durrow_abbey_A.jpg",
     "rating": 3.5,
     "reviewCount": 28,
@@ -39506,7 +39504,7 @@ const CASTLES = [
     "type": "country house",
     "era": "18th century",
     "condition": "restored",
-    "description": "A magnificent neoclassical mansion designed by James Gandon, set in sweeping parkland and gardens—one of Ireland's finest architectural treasures.",
+    "description": "A magnificent neoclassical mansion designed by James Gandon, set in sweeping parkland and gardens-one of Ireland's finest architectural treasures.",
     "image": "https://img.castlecore.uk/emo-court.jpg",
     "rating": 4,
     "reviewCount": 130,
@@ -39585,7 +39583,7 @@ const CASTLES = [
     "type": "church",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Romanesque church doorway of extraordinary richness in the Laois countryside—one of Ireland's finest examples of 12th-century carved stonework.",
+    "description": "A Romanesque church doorway of extraordinary richness in the Laois countryside-one of Ireland's finest examples of 12th-century carved stonework.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Romanesque_Doorway_Killishen_-_geograph.org.uk_-_425807.jpg",
     "rating": 3.5,
     "reviewCount": 28,
@@ -39944,7 +39942,7 @@ const CASTLES = [
         "url": "https://discovernorthernireland.com/things-to-do/cranfield-church"
       },
       {
-        "name": "Wikipedia – Cranfield Church",
+        "name": "Wikipedia - Cranfield Church",
         "url": "https://en.wikipedia.org/wiki/Cranfield_Church"
       }
     ]
@@ -39976,14 +39974,14 @@ const CASTLES = [
       "https://img.castlecore.uk/donegore-motte-4.jpg",
       "https://img.castlecore.uk/donegore-motte-5.jpg"
     ],
-    "history": "A large Anglo-Norman motte near Donegore, County Antrim, likely raised in the late 12th century by John de Courcy or his followers during the Norman invasion of Ulster. Archaeological investigations revealed a much older history—Neolithic occupation dating to c.4000 BC makes this one of Ireland's earliest known settlement sites. The motte offers panoramic views over the Six Mile Water valley.",
+    "history": "A large Anglo-Norman motte near Donegore, County Antrim, likely raised in the late 12th century by John de Courcy or his followers during the Norman invasion of Ulster. Archaeological investigations revealed a much older history-Neolithic occupation dating to c.4000 BC makes this one of Ireland's earliest known settlement sites. The motte offers panoramic views over the Six Mile Water valley.",
     "sources": [
       {
         "name": "Discover Northern Ireland",
         "url": "https://discovernorthernireland.com/things-to-do/donegore-motte"
       },
       {
-        "name": "Wikipedia – Donegore",
+        "name": "Wikipedia - Donegore",
         "url": "https://en.wikipedia.org/wiki/Donegore"
       }
     ]
@@ -39996,7 +39994,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "Early medieval",
     "condition": "ruin",
-    "description": "Little remains of this early fort near the Six Mile Water in County Antrim, but its name—Dún Eadradh, 'middle fort'—hints at a lost network of strongholds guarding the approaches to Lough Neagh.",
+    "description": "Little remains of this early fort near the Six Mile Water in County Antrim, but its name-Dún Eadradh, 'middle fort'-hints at a lost network of strongholds guarding the approaches to Lough Neagh.",
     "image": "https://img.castlecore.uk/dunadry-castle.jpg",
     "rating": 3,
     "reviewCount": 8,
@@ -40016,7 +40014,7 @@ const CASTLES = [
     "history": "Dunadry (from Irish Dún Eadradh, 'middle fort') is a hamlet 3 miles from Antrim town. The name suggests an early Irish ringfort or fortification, part of a chain defending the Six Mile Water valley. Little structural evidence of the original fort survives. The area later became associated with linen milling and the Dunadry Inn, built on the site of an old mill.",
     "sources": [
       {
-        "name": "Wikipedia – Dunadry",
+        "name": "Wikipedia - Dunadry",
         "url": "https://en.wikipedia.org/wiki/Dunadry"
       }
     ]
@@ -40029,7 +40027,7 @@ const CASTLES = [
     "type": "motte",
     "era": "12th-13th century",
     "condition": "intact",
-    "description": "A vanished Anglo-Norman stronghold in the Crumlin valley of County Antrim—now just a place name echoing the old frontier between Gaelic Ulster and the English Pale.",
+    "description": "A vanished Anglo-Norman stronghold in the Crumlin valley of County Antrim-now just a place name echoing the old frontier between Gaelic Ulster and the English Pale.",
     "image": "https://img.castlecore.uk/crumlin-castle.jpg",
     "rating": 3,
     "reviewCount": 7,
@@ -40049,7 +40047,7 @@ const CASTLES = [
     "history": "Crumlin (from Irish Cromghlinn, 'crooked glen') in County Antrim was an Anglo-Norman settlement with a castle likely dating to the late 12th or 13th century, part of the network established during the conquest of Ulster. Little survives above ground. The village sits on the River Crumlin near Lough Neagh and retains its medieval street pattern.",
     "sources": [
       {
-        "name": "Wikipedia – Crumlin, County Antrim",
+        "name": "Wikipedia - Crumlin, County Antrim",
         "url": "https://en.wikipedia.org/wiki/Crumlin,_County_Antrim"
       }
     ]
@@ -40137,7 +40135,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "intact",
-    "description": "A remarkably intact 15th-century tower house on the shore of Strangford Lough, built by a bishop who was defrocked for living in sin—the earliest dateable tower house in County Down.",
+    "description": "A remarkably intact 15th-century tower house on the shore of Strangford Lough, built by a bishop who was defrocked for living in sin-the earliest dateable tower house in County Down.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kilclief_Castle%2C_Geograph.jpg/500px-Kilclief_Castle%2C_Geograph.jpg",
     "rating": 3.6,
     "reviewCount": 42,
@@ -40159,7 +40157,7 @@ const CASTLES = [
     "history": "Built between 1413 and 1441, reputedly by John Sely, Bishop of Down. This makes it the earliest datable tower house in County Down and a key benchmark for dating others in the region. Bishop Sely was ejected from his office in 1443 for living at the castle with a married woman, Lettice Thomas. The well-preserved tower has twin front turrets and fine views over Strangford Lough.",
     "sources": [
       {
-        "name": "Wikipedia – Kilclief Castle",
+        "name": "Wikipedia - Kilclief Castle",
         "url": "https://en.wikipedia.org/wiki/Kilclief_Castle"
       },
       {
@@ -40272,11 +40270,11 @@ const CASTLES = [
     "history": "A Plantation-era castle built by the Caldwell family in the early 17th century on a peninsula in Lower Lough Erne, County Fermanagh. The estate was known for its hospitality; a memorial stone at the gate commemorates Denis McCabe, a fiddler who drowned in 1770 when he fell from a boat after too much drink, bearing the warning to musicians. The ruins and surrounding forest are now a nature reserve managed by the RSPB.",
     "sources": [
       {
-        "name": "Wikipedia – Castle Caldwell",
+        "name": "Wikipedia - Castle Caldwell",
         "url": "https://en.wikipedia.org/wiki/Castle_Caldwell"
       },
       {
-        "name": "RSPB – Castle Caldwell",
+        "name": "RSPB - Castle Caldwell",
         "url": "https://www.rspb.org.uk/reserves-and-events/reserves-a-z/castle-caldwell"
       }
     ]
@@ -40311,7 +40309,7 @@ const CASTLES = [
     "history": "Built c.1612-18 as a Plantation castle for Sir William Cole, one of the original planters of Enniskillen. The castle controlled a strategic point on Lough Erne. It was damaged during the Williamite wars and fell into ruin. Adjacent Portora Royal School, founded in 1608, educated both Oscar Wilde and Samuel Beckett. The castle ruins stand on a wooded hill with fine views over the lough.",
     "sources": [
       {
-        "name": "Wikipedia – Portora Castle",
+        "name": "Wikipedia - Portora Castle",
         "url": "https://en.wikipedia.org/wiki/Portora_Castle"
       },
       {
@@ -40363,7 +40361,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th-18th century",
     "condition": "restored",
-    "description": "A grand estate on an island in Upper Lough Erne, where centuries of Irish history—from the McManus chroniclers of the Annals of Ulster to the Dukes of Abercorn—unfold amid tranquil lakeland.",
+    "description": "A grand estate on an island in Upper Lough Erne, where centuries of Irish history-from the McManus chroniclers of the Annals of Ulster to the Dukes of Abercorn-unfold amid tranquil lakeland.",
     "image": "https://img.castlecore.uk/belle-isle-castle.jpg",
     "rating": 3.6,
     "reviewCount": 40,
@@ -40385,7 +40383,7 @@ const CASTLES = [
     "history": "Set on what was once an island in Upper Lough Erne, County Fermanagh, Belle Isle was home to the McManus clan who compiled the Annals of Ulster. Sir Paul Gore acquired it in the Plantation era, and Sir Ralph Gore built the present house c.1700. The 1st Earl of Ross was born here in 1725. A Tudor-style wing with minstrels' gallery was added in 1907. Now owned by the Duke of Abercorn and available for holiday lets.",
     "sources": [
       {
-        "name": "Wikipedia – Belle Isle Castle",
+        "name": "Wikipedia - Belle Isle Castle",
         "url": "https://en.wikipedia.org/wiki/Belle_Isle_Castle"
       },
       {
@@ -40455,7 +40453,7 @@ const CASTLES = [
     "history": "A Plantation castle built c.1615 in the village of Augher, County Tyrone, in the Clogher Valley. Erected by Scottish settlers as part of the Ulster Plantation, it was a substantial fortified house designed for defence in uncertain times. The castle was damaged during the 1641 rebellion and repaired. It later served as a private residence and stands near the village centre.",
     "sources": [
       {
-        "name": "Wikipedia – Augher",
+        "name": "Wikipedia - Augher",
         "url": "https://en.wikipedia.org/wiki/Augher"
       }
     ]
@@ -40489,7 +40487,7 @@ const CASTLES = [
     "history": "A Plantation-era castle in the townland of Favour Royal, near Augher, County Tyrone. Built in the early 17th century, the name derives from the royal grant of land. The estate was held by the Mervyn family from the Plantation period. The castle ruins stand in parkland amid the gentle hills of the Clogher Valley. The estate later became known for its gardens.",
     "sources": [
       {
-        "name": "Wikipedia – Favour Royal",
+        "name": "Wikipedia - Favour Royal",
         "url": "https://en.wikipedia.org/wiki/Favour_Royal"
       }
     ]
@@ -40517,7 +40515,7 @@ const CASTLES = [
     "history": "Built c.1618 by Andrew Stewart junior, who acquired the land of Ballokevan between 1610 and 1619 as part of the Plantation of Ulster. The castle overlooks Roughan Lough near Newmills, County Tyrone. After Andrew's death it passed to his brother John, then to Robert Stewart, whose first wife was reportedly Catherine O'Neill, granddaughter of Hugh, last Earl of Tyrone. Now a scheduled State Care monument.",
     "sources": [
       {
-        "name": "Castles.nl – Roughan Castle",
+        "name": "Castles.nl - Roughan Castle",
         "url": "https://www.castles.nl/roughan-castle"
       },
       {
@@ -40589,7 +40587,7 @@ const CASTLES = [
     "history": "Construction began c.1614 under John Rowley and was continued by Sir Baptist Jones after Rowley's death in 1617. The bawn (defensive enclosure) and fortified house were part of the London companies' Plantation settlement. Burned during the 1641 rebellion, it was rebuilt and later restored. Now serves as a heritage centre and exhibition space celebrating local poet Seamus Heaney, who was born nearby in 1939.",
     "sources": [
       {
-        "name": "Wikipedia – Bellaghy Bawn",
+        "name": "Wikipedia - Bellaghy Bawn",
         "url": "https://en.wikipedia.org/wiki/Bellaghy_Bawn"
       },
       {
@@ -40625,7 +40623,7 @@ const CASTLES = [
     "history": "Moneymore in County Londonderry was one of the first planned Plantation towns in Ulster, established by the Worshipful Company of Drapers from London in the 1620s. A fortified house or bawn was built as part of the settlement. Little of the original castle survives, but the wide main street and planned layout of the town reflect its Plantation origins.",
     "sources": [
       {
-        "name": "Wikipedia – Moneymore",
+        "name": "Wikipedia - Moneymore",
         "url": "https://en.wikipedia.org/wiki/Moneymore"
       }
     ]
@@ -40655,7 +40653,7 @@ const CASTLES = [
     "history": "A Plantation-era fortified settlement built by the Worshipful Company of Salters from London on their allocated lands in County Londonderry, near the shore of Lough Neagh. Constructed in the early 17th century as part of the organised colonisation of Ulster. The bawn and castle ruins reflect the systematic nature of the Plantation, where each London livery company was assigned territory to develop.",
     "sources": [
       {
-        "name": "Wikipedia – Salterstown",
+        "name": "Wikipedia - Salterstown",
         "url": "https://en.wikipedia.org/wiki/Salterstown"
       }
     ]
@@ -40701,7 +40699,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century / 19th century",
     "condition": "intact",
-    "description": "A grand castellated mansion crowning a wooded hill above the town of Tandragee—once an O'Hanlon stronghold, now home to the famous Tayto crisp factory.",
+    "description": "A grand castellated mansion crowning a wooded hill above the town of Tandragee-once an O'Hanlon stronghold, now home to the famous Tayto crisp factory.",
     "image": "https://img.castlecore.uk/tandragee-castle.jpg",
     "rating": 3.4,
     "reviewCount": 25,
@@ -40713,12 +40711,12 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 1242,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-tandragee-castle.jpg"
+      "https://img.castlecore.uk/wiki-tandragee-castle.jpg"
     ],
     "history": "The site was originally an O'Hanlon fort, later rebuilt as a Plantation castle by the Hamilton family in the early 17th century. The current castellated mansion dates largely from 1837, designed by William Murray. It was used as a military hospital during WWII. Since 1956, it has been the headquarters of Tayto (Northern Ireland), makers of the beloved cheese and onion crisps. The castle is not open to the public but dominates the Tandragee skyline.",
     "sources": [
       {
-        "name": "Wikipedia – Tandragee Castle",
+        "name": "Wikipedia - Tandragee Castle",
         "url": "https://en.wikipedia.org/wiki/Tandragee_Castle"
       }
     ]
@@ -40751,7 +40749,7 @@ const CASTLES = [
     "history": "Founded in 1602 by Lord Mountjoy during the Nine Years' War as an English outpost to control the Blackwater crossing into Tyrone. Named after Lord Charlemont, it was substantially rebuilt as a star-shaped fort in the 17th century. It was besieged during the 1641 rebellion and the Williamite wars. Owen Roe O'Neill captured it in 1646. Now largely earthworks beside the village of Charlemont, County Armagh.",
     "sources": [
       {
-        "name": "Wikipedia – Charlemont Fort",
+        "name": "Wikipedia - Charlemont Fort",
         "url": "https://en.wikipedia.org/wiki/Charlemont_Fort"
       }
     ]
@@ -40764,7 +40762,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "ruin",
-    "description": "A Victorian Gothic Revival castle in County Armagh, privately held by the Stronge family for centuries—tragically attacked during the Troubles in 1981.",
+    "description": "A Victorian Gothic Revival castle in County Armagh, privately held by the Stronge family for centuries-tragically attacked during the Troubles in 1981.",
     "image": "https://img.castlecore.uk/tynan-castle.jpg",
     "rating": 3.2,
     "reviewCount": 14,
@@ -40784,7 +40782,7 @@ const CASTLES = [
     "history": "A Gothic Revival castle near Tynan village, County Armagh, seat of the Stronge family since the Plantation era. The current building dates mainly from the 19th century with ornate Gothic detailing. In January 1981, Sir Norman Stronge, Speaker of the NI Senate, and his son James were killed in an IRA attack and the castle was set ablaze. The ruins remain in private ownership surrounded by parkland.",
     "sources": [
       {
-        "name": "Wikipedia – Tynan Abbey",
+        "name": "Wikipedia - Tynan Abbey",
         "url": "https://en.wikipedia.org/wiki/Tynan_Abbey"
       }
     ]
@@ -40797,7 +40795,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "The scant remains of a tower on a tiny island in Lough Neagh—reputedly the inspiration for New York's famous Coney Island, via Irish emigrant memory.",
+    "description": "The scant remains of a tower on a tiny island in Lough Neagh-reputedly the inspiration for New York's famous Coney Island, via Irish emigrant memory.",
     "image": "https://img.castlecore.uk/coney-island-castle.jpg",
     "rating": 3.3,
     "reviewCount": 18,
@@ -40819,7 +40817,7 @@ const CASTLES = [
     "history": "A small island in Lough Neagh off the southern shore near Maghery, County Armagh. The remains of an O'Neill tower house stand on the island, dating to the medieval period. Local tradition claims that Irish emigrants named New York's Coney Island after this place, though the connection is debated. The island is accessible by boat and is now a nature area rich in birdlife.",
     "sources": [
       {
-        "name": "Wikipedia – Coney Island, Lough Neagh",
+        "name": "Wikipedia - Coney Island, Lough Neagh",
         "url": "https://en.wikipedia.org/wiki/Coney_Island,_Lough_Neagh"
       }
     ]
@@ -41122,7 +41120,7 @@ const CASTLES = [
       "https://img.castlecore.uk/udny-castle-4.jpg",
       "https://img.castlecore.uk/udny-castle-5.jpg"
     ],
-    "history": "Built in the 15th century by the Udny family who held the estate for centuries. A substantial five-storey tower with later additions. The castle was restored in the 19th and 20th centuries. The nearby Udny Green village features the famous 'Udny Mort House' — a watch house built to protect graves from body-snatchers. Private residence.",
+    "history": "Built in the 15th century by the Udny family who held the estate for centuries. A substantial five-storey tower with later additions. The castle was restored in the 19th and 20th centuries. The nearby Udny Green village features the famous 'Udny Mort House' - a watch house built to protect graves from body-snatchers. Private residence.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -41199,7 +41197,7 @@ const CASTLES = [
       "https://img.castlecore.uk/fedderate-castle-3.jpg",
       "https://img.castlecore.uk/fedderate-castle-4.jpg"
     ],
-    "history": "Built in the 13th century, probably by the Crawfords. A motte-and-bailey castle later replaced by stone structures. Associated with legends of hidden treasure and secret tunnels. The ruins are modest — mainly earthworks and wall fragments — set in flat Buchan farmland near New Deer. Freely accessible as a scheduled monument.",
+    "history": "Built in the 13th century, probably by the Crawfords. A motte-and-bailey castle later replaced by stone structures. Associated with legends of hidden treasure and secret tunnels. The ruins are modest - mainly earthworks and wall fragments - set in flat Buchan farmland near New Deer. Freely accessible as a scheduled monument.",
     "sources": [
       {
         "name": "Canmore",
@@ -41343,7 +41341,7 @@ const CASTLES = [
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Finavon_Castle.jpg/500px-Finavon_Castle.jpg"
     ],
-    "history": "A castle has stood on this site since at least the 14th century, held by the Lindsay Earls of Crawford — known as the 'Tiger Earls' for their ferocity. The 'Tiger Earl' Alexander Lindsay, 4th Earl of Crawford, was one of the most powerful and violent nobles of 15th-century Scotland. The castle was later replaced by Finavon House. Nearby Finavon Hill has a vitrified fort.",
+    "history": "A castle has stood on this site since at least the 14th century, held by the Lindsay Earls of Crawford - known as the 'Tiger Earls' for their ferocity. The 'Tiger Earl' Alexander Lindsay, 4th Earl of Crawford, was one of the most powerful and violent nobles of 15th-century Scotland. The castle was later replaced by Finavon House. Nearby Finavon Hill has a vitrified fort.",
     "sources": [
       {
         "name": "Canmore",
@@ -41363,7 +41361,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A substantial L-plan tower house in Angus, built by Cardinal David Beaton — Scotland's most powerful and controversial churchman. Ruins of ecclesiastical ambition.",
+    "description": "A substantial L-plan tower house in Angus, built by Cardinal David Beaton - Scotland's most powerful and controversial churchman. Ruins of ecclesiastical ambition.",
     "image": "https://img.castlecore.uk/melgund-castle.jpg",
     "rating": 3.3,
     "reviewCount": 18,
@@ -41400,8 +41398,8 @@ const CASTLES = [
     "type": "tower house",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "Minimal remains of a medieval castle near Tankerness in Orkney. A Norse-Scottish stronghold reduced to earthworks in the Orcadian landscape.",
-    "image": "https://img.castlecore.uk/baikie-castle.jpg",
+    "description": "Site of a medieval castle on the former shores of the Loch of Baikie in Angus. Owned by the Fenton family from the 13th century, later passing to the Lyon family of Glamis. Nothing visible remains above ground.",
+    "image": "https://img.castlecore.uk/baikie-castle-2.jpg",
     "rating": 3,
     "reviewCount": 7,
     "county": "Angus",
@@ -41413,12 +41411,11 @@ const CASTLES = [
     "access": "free",
     "_index": 1271,
     "gallery": [
-      "https://img.castlecore.uk/baikie-castle-2.jpg",
       "https://img.castlecore.uk/baikie-castle-3.jpg",
       "https://img.castlecore.uk/baikie-castle-4.jpg",
       "https://img.castlecore.uk/baikie-castle-5.jpg"
     ],
-    "history": "A medieval castle site in the parish of Tankerness on Mainland Orkney. Very little survives above ground — mainly earthworks and wall foundations. Associated with the Norse-Scottish lords of Orkney. The surrounding landscape is typical flat Orcadian farmland. Of mainly archaeological interest.",
+    "history": "A medieval castle site in the parish of Airlie, Angus. Owned by the Fenton family from the 13th century (John Fenton was Sheriff of Angus in 1261), later passing to the Lyon family of Glamis in the 15th century. The castle was surrounded by a moat with a drawbridge. By 1833 nothing remained visible above ground.",
     "sources": [
       {
         "name": "Canmore",
@@ -41489,7 +41486,7 @@ const CASTLES = [
       "https://img.castlecore.uk/garth-castle-4.jpg",
       "https://img.castlecore.uk/garth-castle-5.jpg"
     ],
-    "history": "Built around 1400, traditionally by Alexander Stewart, the 'Wolf of Badenoch' — the same warlord who burned Elgin Cathedral. A four-storey tower house with later additions, standing in the beautiful upper reaches of Glen Lyon. The castle was restored in the 20th century and is now a private residence. The glen setting with mountains on all sides is magnificent.",
+    "history": "Built around 1400, traditionally by Alexander Stewart, the 'Wolf of Badenoch' - the same warlord who burned Elgin Cathedral. A four-storey tower house with later additions, standing in the beautiful upper reaches of Glen Lyon. The castle was restored in the 20th century and is now a private residence. The glen setting with mountains on all sides is magnificent.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -41579,7 +41576,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A remarkable cluster of medieval buildings on a cliff above the River Tay — the ancient Drummond seat, with a painted chapel ceiling that ranks among Scotland's greatest art treasures.",
+    "description": "A remarkable cluster of medieval buildings on a cliff above the River Tay - the ancient Drummond seat, with a painted chapel ceiling that ranks among Scotland's greatest art treasures.",
     "image": "https://img.castlecore.uk/stobhall-castle.jpg",
     "rating": 3.5,
     "reviewCount": 28,
@@ -41639,7 +41636,7 @@ const CASTLES = [
       "https://img.castlecore.uk/finlarig-castle-4.jpg",
       "https://img.castlecore.uk/finlarig-castle-5.jpg"
     ],
-    "history": "Built around 1629 by Sir Duncan Campbell of Glenorchy ('Black Duncan'), who founded the vast Breadalbane estate. The castle features a notorious beheading pit — nobles were decapitated here, while commoners were hanged from a nearby tree. The ruins stand near the western end of Loch Tay at Killin. A chilling reminder of the absolute power wielded by Highland chiefs.",
+    "history": "Built around 1629 by Sir Duncan Campbell of Glenorchy ('Black Duncan'), who founded the vast Breadalbane estate. The castle features a notorious beheading pit - nobles were decapitated here, while commoners were hanged from a nearby tree. The ruins stand near the western end of Loch Tay at Killin. A chilling reminder of the absolute power wielded by Highland chiefs.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -41849,7 +41846,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A ruined tower house above the Tweed in a secluded Borders valley, associated with the legend of 'Muckle Mou'd Meg' — a famously ugly bride given as punishment.",
+    "description": "A ruined tower house above the Tweed in a secluded Borders valley, associated with the legend of 'Muckle Mou'd Meg' - a famously ugly bride given as punishment.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Elibank_Castle_-_geograph.org.uk_-_2026524.jpg/500px-Elibank_Castle_-_geograph.org.uk_-_2026524.jpg",
     "rating": 3.3,
     "reviewCount": 16,
@@ -41870,7 +41867,7 @@ const CASTLES = [
       "https://img.castlecore.uk/elibank-castle-4.jpg",
       "https://img.castlecore.uk/elibank-castle-5.jpg"
     ],
-    "history": "A 16th-century tower house of the Murray family above the River Tweed. According to legend, a young Scott of Harden was caught stealing Murray cattle and given the choice of hanging or marrying Murray's plain-faced daughter Meg — he chose Meg, and the marriage proved happy. The ruins are atmospheric, hidden in woodland above the Tweed between Innerleithen and Galashiels.",
+    "history": "A 16th-century tower house of the Murray family above the River Tweed. According to legend, a young Scott of Harden was caught stealing Murray cattle and given the choice of hanging or marrying Murray's plain-faced daughter Meg - he chose Meg, and the marriage proved happy. The ruins are atmospheric, hidden in woodland above the Tweed between Innerleithen and Galashiels.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -41890,7 +41887,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "A magnificent pink sandstone palace in upper Nithsdale — the 'Pink Palace' of the Dukes of Buccleuch. Renaissance grandeur in a vast Borders estate with a world-class art collection.",
+    "description": "A magnificent pink sandstone palace in upper Nithsdale - the 'Pink Palace' of the Dukes of Buccleuch. Renaissance grandeur in a vast Borders estate with a world-class art collection.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Drumlanrig_Castle_-_geograph.org.uk_-_5090781.jpg/500px-Drumlanrig_Castle_-_geograph.org.uk_-_5090781.jpg",
     "rating": 4,
     "reviewCount": 145,
@@ -42085,7 +42082,7 @@ const CASTLES = [
     "type": "settlement",
     "era": "Bronze Age to 17th century",
     "condition": "ruin",
-    "description": "One of Europe's most remarkable archaeological sites — 4,000 years of continuous habitation from the Bronze Age to the Viking era, exposed on a Shetland clifftop. Time made visible.",
+    "description": "One of Europe's most remarkable archaeological sites - 4,000 years of continuous habitation from the Bronze Age to the Viking era, exposed on a Shetland clifftop. Time made visible.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Jarlshof%28NigelDuncan%29Feb2007.jpg",
     "rating": 4.2,
     "reviewCount": 180,
@@ -42166,7 +42163,7 @@ const CASTLES = [
     "type": "broch",
     "era": "Iron Age (c. 100 BC)",
     "condition": "intact",
-    "description": "The finest preserved Iron Age broch in the world — a 2,000-year-old stone tower standing 43 feet tall on a tiny Shetland island. An engineering marvel of the ancient world.",
+    "description": "The finest preserved Iron Age broch in the world - a 2,000-year-old stone tower standing 43 feet tall on a tiny Shetland island. An engineering marvel of the ancient world.",
     "image": "https://img.castlecore.uk/mousa-broch.jpg",
     "rating": 4.4,
     "reviewCount": 220,
@@ -42250,7 +42247,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A baronial fantasy on the shores of West Loch Tarbert in Harris — a Victorian shooting lodge in one of Britain's most spectacular and remote settings.",
+    "description": "A baronial fantasy on the shores of West Loch Tarbert in Harris - a Victorian shooting lodge in one of Britain's most spectacular and remote settings.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Abhainsuidhe_Castle.jpg/500px-Abhainsuidhe_Castle.jpg",
     "rating": 3.5,
     "reviewCount": 28,
@@ -42309,7 +42306,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lochore-castle-4.jpg",
       "https://img.castlecore.uk/lochore-castle-5.jpg"
     ],
-    "history": "A 12th-century castle built on an island in Loch Ore by the de Lochore family. The loch was partly drained by mining operations in the 19th and 20th centuries. After the mines closed, the area was transformed into Lochore Meadows Country Park — one of Scotland's great reclamation success stories. The castle ruins are accessible within the park.",
+    "history": "A 12th-century castle built on an island in Loch Ore by the de Lochore family. The loch was partly drained by mining operations in the 19th and 20th centuries. After the mines closed, the area was transformed into Lochore Meadows Country Park - one of Scotland's great reclamation success stories. The castle ruins are accessible within the park.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -42349,7 +42346,7 @@ const CASTLES = [
       "https://img.castlecore.uk/loch-doon-castle-4.jpg",
       "https://img.castlecore.uk/loch-doon-castle-5.jpg"
     ],
-    "history": "Originally built on an island in Loch Doon in the late 13th century, with an unusual eleven-sided curtain wall. When the loch level was raised for hydroelectric power in the 1930s, the castle was dismantled and rebuilt on the shore. Associated with the Wars of Independence — Robert the Bruce may have taken refuge here. Set in remote Galloway Forest countryside.",
+    "history": "Originally built on an island in Loch Doon in the late 13th century, with an unusual eleven-sided curtain wall. When the loch level was raised for hydroelectric power in the 1930s, the castle was dismantled and rebuilt on the shore. Associated with the Wars of Independence - Robert the Bruce may have taken refuge here. Set in remote Galloway Forest countryside.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -42387,7 +42384,7 @@ const CASTLES = [
       "https://img.castlecore.uk/rowallan-castle-4.jpg",
       "https://img.castlecore.uk/rowallan-castle-5.jpg"
     ],
-    "history": "Dating from the 13th century, one of Scotland's oldest surviving domestic buildings. Home of the Mure family — Elizabeth Mure married Robert the Steward (later Robert II), making Rowallan an ancestral home of the Stewart dynasty. The castle combines a rare 13th-century hall with a 16th-century tower. Recently restored. Located near Kilmarnock in Ayrshire.",
+    "history": "Dating from the 13th century, one of Scotland's oldest surviving domestic buildings. Home of the Mure family - Elizabeth Mure married Robert the Steward (later Robert II), making Rowallan an ancestral home of the Stewart dynasty. The castle combines a rare 13th-century hall with a 16th-century tower. Recently restored. Located near Kilmarnock in Ayrshire.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -42442,7 +42439,7 @@ const CASTLES = [
     "type": "hillfort",
     "era": "Iron Age (c.500 BC)",
     "condition": "reconstructed",
-    "description": "A unique Iron Age inland promontory fort in the Preseli Hills with reconstructed Celtic roundhouses built on their original foundations—step inside and smell the woodsmoke of 2,000 years ago.",
+    "description": "A unique Iron Age inland promontory fort in the Preseli Hills with reconstructed Celtic roundhouses built on their original foundations-step inside and smell the woodsmoke of 2,000 years ago.",
     "image": "https://img.castlecore.uk/castell-henllys.jpg",
     "rating": 4,
     "reviewCount": 125,
@@ -42470,7 +42467,7 @@ const CASTLES = [
         "url": "https://www.pembrokeshirecoast.wales/castell-henllys/"
       },
       {
-        "name": "Wikipedia – Castell Henllys",
+        "name": "Wikipedia - Castell Henllys",
         "url": "https://en.wikipedia.org/wiki/Castell_Henllys"
       }
     ]
@@ -42508,7 +42505,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/newport-castle"
       },
       {
-        "name": "Wikipedia – Newport Castle, Pembrokeshire",
+        "name": "Wikipedia - Newport Castle, Pembrokeshire",
         "url": "https://en.wikipedia.org/wiki/Newport_Castle,_Pembrokeshire"
       }
     ]
@@ -42543,7 +42540,7 @@ const CASTLES = [
     "history": "A Norman motte-and-bailey castle near Llandinam in Powys, overlooking the upper Severn valley. Built in the late 11th or 12th century as part of the Norman advance into central Wales. The earthwork mound and ditch survive, now heavily wooded. The castle was one of many small frontier fortifications in the volatile borderlands between Norman-held territory and the Welsh principalities.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       }
     ]
@@ -42570,12 +42567,12 @@ const CASTLES = [
     "access": "free",
     "_index": 1305,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-castell-gwallter.jpg"
+      "https://img.castlecore.uk/wiki-castell-gwallter.jpg"
     ],
     "history": "A Norman motte-and-bailey castle (also known as Walter's Castle) near Llanfihangel-y-Creuddyn in Ceredigion. Built in the 12th century as part of the Norman penetration of west Wales. It was repeatedly attacked and destroyed by Welsh forces during the long struggle for control of Ceredigion. Only the motte earthwork survives beside the river.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       }
     ]
@@ -42615,7 +42612,7 @@ const CASTLES = [
         "url": "https://www.castlesofwales.com/cefnllys.html"
       },
       {
-        "name": "Wikipedia – Cefnllys Castle",
+        "name": "Wikipedia - Cefnllys Castle",
         "url": "https://en.wikipedia.org/wiki/Cefnllys_Castle"
       }
     ]
@@ -42628,7 +42625,7 @@ const CASTLES = [
     "type": "castle",
     "era": "9th-13th century",
     "condition": "ruin",
-    "description": "The overgrown earthworks of the principal seat of the princes of Powys—once the most important royal court in central Wales, now lost in meadows beside the River Banwy.",
+    "description": "The overgrown earthworks of the principal seat of the princes of Powys-once the most important royal court in central Wales, now lost in meadows beside the River Banwy.",
     "image": "https://img.castlecore.uk/mathrafal-castle.jpg",
     "rating": 3.4,
     "reviewCount": 20,
@@ -42650,11 +42647,11 @@ const CASTLES = [
     "history": "Mathrafal was the llys (royal court) of the princes of Powys from at least the 9th century, making it one of the most significant sites in medieval Welsh history. The earthwork remains include a large motte and ditches. The princes ruled from here until the 13th century. Edward I seized the site in 1277. Now marked only by grassy mounds in fields near Meifod, Powys, it is easily overlooked despite its historical importance.",
     "sources": [
       {
-        "name": "Wikipedia – Mathrafal Castle",
+        "name": "Wikipedia - Mathrafal Castle",
         "url": "https://en.wikipedia.org/wiki/Mathrafal_Castle"
       },
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       }
     ]
@@ -42667,7 +42664,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "intact",
-    "description": "Claimed as the oldest continuously inhabited castle in Wales, Penhow has been lived in since the Normans built it in the 12th century. A fortified manor layered with centuries of additions — from medieval tower to Tudor great hall.",
+    "description": "Claimed as the oldest continuously inhabited castle in Wales, Penhow has been lived in since the Normans built it in the 12th century. A fortified manor layered with centuries of additions - from medieval tower to Tudor great hall.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Penhow_Castle_from_Church.jpg/500px-Penhow_Castle_from_Church.jpg",
     "rating": 3.8,
     "reviewCount": 350,
@@ -42707,7 +42704,7 @@ const CASTLES = [
     "type": "hillfort",
     "era": "Iron Age / 5th-6th century",
     "condition": "ruin",
-    "description": "The legendary hillfort above Llyn Dinas where Merlin revealed two battling dragons to King Vortigern—the origin myth of the Welsh red dragon, wrapped in Snowdonia's most magical landscape.",
+    "description": "The legendary hillfort above Llyn Dinas where Merlin revealed two battling dragons to King Vortigern-the origin myth of the Welsh red dragon, wrapped in Snowdonia's most magical landscape.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/DinasEmrys1.JPG/500px-DinasEmrys1.JPG",
     "rating": 3.8,
     "reviewCount": 68,
@@ -42728,14 +42725,14 @@ const CASTLES = [
       "https://img.castlecore.uk/dinas-emrys-4.jpg",
       "https://img.castlecore.uk/dinas-emrys-5.jpg"
     ],
-    "history": "An Iron Age and Dark Age hillfort near Beddgelert in Snowdonia. According to Nennius (c.829 AD), King Vortigern tried to build a fortress here but the walls kept collapsing. The boy Myrddin Emrys (Merlin) revealed two dragons—red and white—fighting beneath a hidden pool, symbolising the Welsh and Saxon nations. Excavations in the 1950s found a pool and Dark Age structures. Now owned by the National Trust.",
+    "history": "An Iron Age and Dark Age hillfort near Beddgelert in Snowdonia. According to Nennius (c.829 AD), King Vortigern tried to build a fortress here but the walls kept collapsing. The boy Myrddin Emrys (Merlin) revealed two dragons-red and white-fighting beneath a hidden pool, symbolising the Welsh and Saxon nations. Excavations in the 1950s found a pool and Dark Age structures. Now owned by the National Trust.",
     "sources": [
       {
-        "name": "Wikipedia – Dinas Emrys",
+        "name": "Wikipedia - Dinas Emrys",
         "url": "https://en.wikipedia.org/wiki/Dinas_Emrys"
       },
       {
-        "name": "National Trust – Craflwyn & Beddgelert",
+        "name": "National Trust - Craflwyn & Beddgelert",
         "url": "https://www.nationaltrust.org.uk/visit/wales/craflwyn-and-beddgelert/discover-the-legend-of-two-dragons"
       },
       {
@@ -42752,7 +42749,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A remote Welsh mountain castle lost to the wilds of Snowdonia — one of the last native Welsh fortifications, barely visible now among the sheep and heather.",
+    "description": "A remote Welsh mountain castle lost to the wilds of Snowdonia - one of the last native Welsh fortifications, barely visible now among the sheep and heather.",
     "image": "https://img.castlecore.uk/castell-prysor.jpg",
     "rating": 3.3,
     "reviewCount": 80,
@@ -42787,7 +42784,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A wild and windswept native Welsh castle ruin above Llanuwchllyn, clinging to a crag above the head of Bala Lake—one of the last princely strongholds in Gwynedd.",
+    "description": "A wild and windswept native Welsh castle ruin above Llanuwchllyn, clinging to a crag above the head of Bala Lake-one of the last princely strongholds in Gwynedd.",
     "image": "https://img.castlecore.uk/castell-carndochan.jpg",
     "rating": 3.5,
     "reviewCount": 60,
@@ -42814,7 +42811,7 @@ const CASTLES = [
     "history": "A native Welsh castle built by the princes of Gwynedd in the 13th century, perched on a rocky crag above Llyn Tegid (Bala Lake) near Llanuwchllyn. It was one of the castles of Llywelyn ab Iorwerth (Llywelyn the Great). Archaeological work has revealed more substantial remains than previously thought. The remote and dramatic setting offers panoramic views of the Aran mountains and lake.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       },
       {
@@ -42831,7 +42828,7 @@ const CASTLES = [
     "type": "country house",
     "era": "Medieval",
     "condition": "restored",
-    "description": "Not the famous Wicklow estate, but the less-known Kilkenny medieval castle near the town of Piltown—a quieter footnote in the Butler saga.",
+    "description": "Not the famous Wicklow estate, but the less-known Kilkenny medieval castle near the town of Piltown-a quieter footnote in the Butler saga.",
     "image": "https://img.castlecore.uk/powerscourt-castle.jpg",
     "rating": 4.3,
     "reviewCount": 280,
@@ -42869,7 +42866,7 @@ const CASTLES = [
     "type": "country house",
     "era": "18th century",
     "condition": "intact",
-    "description": "A magnificent Palladian mansion stretching 210 metres across the Wicklow landscape—the longest house frontage in Ireland, housing a world-class art collection.",
+    "description": "A magnificent Palladian mansion stretching 210 metres across the Wicklow landscape-the longest house frontage in Ireland, housing a world-class art collection.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Russborough-House_Part-of-the-facade.jpg/500px-Russborough-House_Part-of-the-facade.jpg",
     "rating": 4,
     "reviewCount": 130,
@@ -42948,7 +42945,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "ruin",
-    "description": "The haunting ruin where Edmund Spenser wrote 'The Faerie Queene'—one of the greatest works in the English language, composed in the wilds of Cork.",
+    "description": "The haunting ruin where Edmund Spenser wrote 'The Faerie Queene'-one of the greatest works in the English language, composed in the wilds of Cork.",
     "image": "https://img.castlecore.uk/kilcolman-castle.jpg",
     "rating": 3.5,
     "reviewCount": 32,
@@ -43307,7 +43304,7 @@ const CASTLES = [
       "https://img.castlecore.uk/termon-castle-4.jpg",
       "https://img.castlecore.uk/termon-castle-5.jpg"
     ],
-    "history": "Termon Castle in County Clare takes its name from 'termon' (sanctuary), indicating its location on former ecclesiastical lands. The castle dates to the medieval period and is one of Clare's many tower houses. The concept of termon lands—sanctuary territories surrounding churches and monasteries—was an important feature of early Irish law.",
+    "history": "Termon Castle in County Clare takes its name from 'termon' (sanctuary), indicating its location on former ecclesiastical lands. The castle dates to the medieval period and is one of Clare's many tower houses. The concept of termon lands-sanctuary territories surrounding churches and monasteries-was an important feature of early Irish law.",
     "sources": [
       {
         "name": "Clare Heritage",
@@ -43478,7 +43475,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th century",
     "condition": "restored",
-    "description": "Thoor Ballylee—W.B. Yeats' beloved tower house, where Ireland's greatest poet wrote some of his finest work amid the wild beauty of south Galway.",
+    "description": "Thoor Ballylee-W.B. Yeats' beloved tower house, where Ireland's greatest poet wrote some of his finest work amid the wild beauty of south Galway.",
     "image": "https://img.castlecore.uk/ballylee-castle.jpg",
     "rating": 3.9,
     "reviewCount": 88,
@@ -43540,7 +43537,7 @@ const CASTLES = [
     "history": "Donaghadee on the County Down coast lies at the closest point between Ireland and Scotland (just 21 miles to Portpatrick). A Norman motte was raised here in the 12th century to control this strategic crossing point. The earthwork mound near the harbour is all that remains. The town later became an important packet port for mail and passengers to Scotland.",
     "sources": [
       {
-        "name": "Wikipedia – Donaghadee",
+        "name": "Wikipedia - Donaghadee",
         "url": "https://en.wikipedia.org/wiki/Donaghadee"
       }
     ]
@@ -43553,7 +43550,7 @@ const CASTLES = [
     "type": "palace",
     "era": "11th century onwards",
     "condition": "ruin",
-    "description": "Royal palace and abbey complex in Dunfermline — birthplace of Charles I and burial place of Robert the Bruce. Scotland's ancient capital, where kings were born and laid to rest.",
+    "description": "Royal palace and abbey complex in Dunfermline - birthplace of Charles I and burial place of Robert the Bruce. Scotland's ancient capital, where kings were born and laid to rest.",
     "image": "https://img.castlecore.uk/dunfermline-palace.jpg",
     "rating": 3.8,
     "reviewCount": 72,
@@ -43574,7 +43571,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dunfermline-palace-4.jpg",
       "https://img.castlecore.uk/dunfermline-palace-5.jpg"
     ],
-    "history": "Founded as a Benedictine priory by Queen Margaret around 1070, later elevated to abbey status. The adjacent royal palace was the birthplace of Charles I in 1600. Robert the Bruce's remains were discovered here in 1818 — his skeleton confirmed the historical account of his embalmed heart being taken on crusade. The abbey nave survives as one of the finest Romanesque churches in Scotland.",
+    "history": "Founded as a Benedictine priory by Queen Margaret around 1070, later elevated to abbey status. The adjacent royal palace was the birthplace of Charles I in 1600. Robert the Bruce's remains were discovered here in 1818 - his skeleton confirmed the historical account of his embalmed heart being taken on crusade. The abbey nave survives as one of the finest Romanesque churches in Scotland.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -43629,7 +43626,7 @@ const CASTLES = [
     "type": "church",
     "era": "16th century",
     "condition": "ruin",
-    "description": "The ruined church immortalised by Robert Burns in 'Tam o' Shanter' — where Tam watched witches dance by candlelight. Scotland's most famous literary ruin.",
+    "description": "The ruined church immortalised by Robert Burns in 'Tam o' Shanter' - where Tam watched witches dance by candlelight. Scotland's most famous literary ruin.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Whare_Ghaists_And_Houlets_Nightly_Cry_-_geograph.org.uk_-_1213346.jpg/500px-Whare_Ghaists_And_Houlets_Nightly_Cry_-_geograph.org.uk_-_1213346.jpg",
     "rating": 3.6,
     "reviewCount": 42,
@@ -43687,7 +43684,7 @@ const CASTLES = [
       "https://img.castlecore.uk/turnberry-castle-4.jpg",
       "https://img.castlecore.uk/turnberry-castle-5.jpg"
     ],
-    "history": "Traditionally the birthplace of Robert the Bruce in 1274. The castle was destroyed by Bruce himself in 1310 to prevent English use. Very little survives — fragments of wall on a rocky promontory beside the famous Turnberry golf course and lighthouse. The site's importance lies in its Bruce connection rather than its physical remains. Views to Ailsa Craig and the Isle of Arran.",
+    "history": "Traditionally the birthplace of Robert the Bruce in 1274. The castle was destroyed by Bruce himself in 1310 to prevent English use. Very little survives - fragments of wall on a rocky promontory beside the famous Turnberry golf course and lighthouse. The site's importance lies in its Bruce connection rather than its physical remains. Views to Ailsa Craig and the Isle of Arran.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -43707,7 +43704,7 @@ const CASTLES = [
     "type": "stone circle",
     "era": "Neolithic (c.2500 BC)",
     "condition": "intact",
-    "description": "The third largest collection of prehistoric standing stones in England, yet astonishingly little-known. Three stone circles and a mysterious cove hide in plain sight in a Somerset village—legend says they're a wedding party petrified by the Devil.",
+    "description": "The third largest collection of prehistoric standing stones in England, yet astonishingly little-known. Three stone circles and a mysterious cove hide in plain sight in a Somerset village-legend says they're a wedding party petrified by the Devil.",
     "image": "https://img.castlecore.uk/stanton-drew-stone-circles.jpg",
     "rating": 3.7,
     "reviewCount": 52,
@@ -43746,7 +43743,7 @@ const CASTLES = [
     "type": "hillfort",
     "era": "Iron Age",
     "condition": "ruin",
-    "description": "A spectacular Iron Age hillfort crowning a Cornish hilltop with triple rings of ramparts and panoramic views to both coasts. Legend connects it to King Arthur's hunting lodge—and a 20th-century wolfram mine scarred its ancient defences.",
+    "description": "A spectacular Iron Age hillfort crowning a Cornish hilltop with triple rings of ramparts and panoramic views to both coasts. Legend connects it to King Arthur's hunting lodge-and a 20th-century wolfram mine scarred its ancient defences.",
     "image": "https://img.castlecore.uk/castle-an-dinas.jpg",
     "rating": 3.4,
     "reviewCount": 22,
@@ -43849,7 +43846,7 @@ const CASTLES = [
     "history": "Designed by Thomas Hopper for Christopher Rice Mansel Talbot and built 1830-1835 in Tudor Revival style at a cost of £50,000. The site has 4,000 years of human occupation including an Iron Age hillfort and the adjacent 12th-century Margam Abbey. The castle suffered a devastating fire in 1977 and has been partially restored. Set within Margam Country Park, it is reputedly one of the most haunted buildings in Wales.",
     "sources": [
       {
-        "name": "Wikipedia – Margam Castle",
+        "name": "Wikipedia - Margam Castle",
         "url": "https://en.wikipedia.org/wiki/Margam_Castle"
       },
       {
@@ -43870,7 +43867,7 @@ const CASTLES = [
     "type": "palace",
     "era": "13th-14th century",
     "condition": "ruin",
-    "description": "A medieval bishops' retreat with fishponds, orchards, and deer parks — where the powerful Bishops of St David's lived in luxury behind arcaded parapets in the green heart of Pembrokeshire.",
+    "description": "A medieval bishops' retreat with fishponds, orchards, and deer parks - where the powerful Bishops of St David's lived in luxury behind arcaded parapets in the green heart of Pembrokeshire.",
     "image": "https://img.castlecore.uk/lamphey-bishop-s-palace.jpg",
     "rating": 4.2,
     "reviewCount": 800,
@@ -43996,7 +43993,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "15th century",
     "condition": "ruin",
-    "description": "A magnificent Butler tower house at the foot of Slievenamon, immortalised in the haunting Irish lament 'Cill Chais'—one of the great poems in the Irish language.",
+    "description": "A magnificent Butler tower house at the foot of Slievenamon, immortalised in the haunting Irish lament 'Cill Chais'-one of the great poems in the Irish language.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Kilcash_Castle2.jpg/500px-Kilcash_Castle2.jpg",
     "rating": 3.5,
     "reviewCount": 30,
@@ -44509,7 +44506,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "Ruins near the Galway village where the Battle of Aughrim in 1691—the bloodiest battle in Irish history—decided the fate of the Jacobite cause.",
+    "description": "Ruins near the Galway village where the Battle of Aughrim in 1691-the bloodiest battle in Irish history-decided the fate of the Jacobite cause.",
     "image": "https://img.castlecore.uk/aughrim-castle.jpg",
     "rating": 3.2,
     "reviewCount": 14,
@@ -44549,7 +44546,7 @@ const CASTLES = [
     "type": "cathedral",
     "era": "6th-12th century",
     "condition": "intact",
-    "description": "A tiny cathedral with the most ornate Romanesque doorway in Ireland—a riot of human heads, animal figures, and geometric patterns in ancient stone.",
+    "description": "A tiny cathedral with the most ornate Romanesque doorway in Ireland-a riot of human heads, animal figures, and geometric patterns in ancient stone.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/07_Clonfert_Cathedral.png/500px-07_Clonfert_Cathedral.png",
     "rating": 3.8,
     "reviewCount": 68,
@@ -44627,7 +44624,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A jewel of the Burren—a Cistercian abbey whose carved stonework blooms with wildflowers and human faces amid the grey limestone of County Clare.",
+    "description": "A jewel of the Burren-a Cistercian abbey whose carved stonework blooms with wildflowers and human faces amid the grey limestone of County Clare.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Corcomroe_Abbey_South_East_View_1996_08_22.jpg/500px-Corcomroe_Abbey_South_East_View_1996_08_22.jpg",
     "rating": 3.9,
     "reviewCount": 85,
@@ -44648,7 +44645,7 @@ const CASTLES = [
       "https://img.castlecore.uk/corcomroe-abbey-4.jpg",
       "https://img.castlecore.uk/corcomroe-abbey-5.jpg"
     ],
-    "history": "Corcomroe Abbey in the Burren, County Clare, was founded around 1194 by Donal Mor O'Brien, King of Thomond. The Cistercian abbey is renowned for its exquisite stone carvings, which incorporate local flora—the carvings of flowers are so botanically accurate that the species can be identified. The abbey's setting in a Burren valley adds to its extraordinary atmosphere.",
+    "history": "Corcomroe Abbey in the Burren, County Clare, was founded around 1194 by Donal Mor O'Brien, King of Thomond. The Cistercian abbey is renowned for its exquisite stone carvings, which incorporate local flora-the carvings of flowers are so botanically accurate that the species can be identified. The abbey's setting in a Burren valley adds to its extraordinary atmosphere.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -44688,7 +44685,7 @@ const CASTLES = [
       "https://img.castlecore.uk/kilfenora-cathedral-4.jpg",
       "https://img.castlecore.uk/kilfenora-cathedral-5.jpg"
     ],
-    "history": "Kilfenora Cathedral in County Clare dates to the 12th century and is famous for its collection of high crosses, including the remarkable Doorty Cross with its bishops' figures. Kilfenora is unique as a diocese technically still under the direct authority of the Pope—the only such parish in Ireland. The Burren Centre in the village explains the geology and heritage of the region.",
+    "history": "Kilfenora Cathedral in County Clare dates to the 12th century and is famous for its collection of high crosses, including the remarkable Doorty Cross with its bishops' figures. Kilfenora is unique as a diocese technically still under the direct authority of the Pope-the only such parish in Ireland. The Burren Centre in the village explains the geology and heritage of the region.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -44770,7 +44767,7 @@ const CASTLES = [
       "https://img.castlecore.uk/derrynane-house-4.jpg",
       "https://img.castlecore.uk/derrynane-house-5.jpg"
     ],
-    "history": "Derrynane House near Caherdaniel, County Kerry, was the home of Daniel O'Connell (1775-1847), who won Catholic Emancipation in 1829—one of the greatest political achievements of the 19th century. The house is now a museum dedicated to O'Connell's life and the struggle for Catholic rights. The grounds include beautiful gardens and access to Derrynane Beach.",
+    "history": "Derrynane House near Caherdaniel, County Kerry, was the home of Daniel O'Connell (1775-1847), who won Catholic Emancipation in 1829-one of the greatest political achievements of the 19th century. The house is now a museum dedicated to O'Connell's life and the struggle for Catholic rights. The grounds include beautiful gardens and access to Derrynane Beach.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -45018,7 +45015,7 @@ const CASTLES = [
     "type": "cathedral",
     "era": "5th-12th century",
     "condition": "ruin",
-    "description": "An extraordinary assemblage of early Christian treasures on a wild Waterford headland—round tower, cathedral, ogham stones, and cliff-edge holy well.",
+    "description": "An extraordinary assemblage of early Christian treasures on a wild Waterford headland-round tower, cathedral, ogham stones, and cliff-edge holy well.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/01_St._Declan%27s_Monastery%2C_Ardmore.png/500px-01_St._Declan%27s_Monastery%2C_Ardmore.png",
     "rating": 3.8,
     "reviewCount": 72,
@@ -45131,7 +45128,7 @@ const CASTLES = [
     "type": "country house",
     "era": "12th-18th century",
     "condition": "intact",
-    "description": "The seat of the Marquis of Waterford—Ireland's largest private demesne, where a magnificent Georgian mansion sits amid 2,500 acres of parkland and ancient woodland.",
+    "description": "The seat of the Marquis of Waterford-Ireland's largest private demesne, where a magnificent Georgian mansion sits amid 2,500 acres of parkland and ancient woodland.",
     "image": "https://img.castlecore.uk/curraghmore-house.jpg",
     "rating": 3.6,
     "reviewCount": 40,
@@ -45340,7 +45337,7 @@ const CASTLES = [
     "access": "free",
     "_index": 1397,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-gowran-castle.jpg"
+      "https://img.castlecore.uk/wiki-gowran-castle.jpg"
     ],
     "history": "Gowran in County Kilkenny preserves medieval castle remains and an exceptional medieval church (Collegiate Church of St Mary) with outstanding carved stone tomb effigies of the 14th century. The church is considered one of the finest medieval parish churches in Ireland. Gowran is also known for its racecourse.",
     "sources": [
@@ -45400,7 +45397,7 @@ const CASTLES = [
     "type": "church",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A medieval church in the Kilkenny countryside containing one of Ireland's finest carved medieval effigies—a Norman knight in full armour known as 'The Long Cantwell.'",
+    "description": "A medieval church in the Kilkenny countryside containing one of Ireland's finest carved medieval effigies-a Norman knight in full armour known as 'The Long Cantwell.'",
     "image": "https://img.castlecore.uk/kilfane-church.jpg",
     "rating": 3.4,
     "reviewCount": 22,
@@ -45438,7 +45435,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "partial ruin",
-    "description": "See Duiske Abbey—this historic Kilkenny town on the River Barrow is one of Ireland's most attractive small towns.",
+    "description": "See Duiske Abbey-this historic Kilkenny town on the River Barrow is one of Ireland's most attractive small towns.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/500px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg",
     "rating": 3.6,
     "reviewCount": 42,
@@ -45472,7 +45469,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "The iconic silhouette of a ruined Welsh castle crowning a conical hill above Llangollen—a breathless climb rewarded with one of the finest panoramas in all of Wales.",
+    "description": "The iconic silhouette of a ruined Welsh castle crowning a conical hill above Llangollen-a breathless climb rewarded with one of the finest panoramas in all of Wales.",
     "image": "https://img.castlecore.uk/dinas-bran-keep.jpg",
     "rating": 3.9,
     "reviewCount": 88,
@@ -45500,7 +45497,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/castell-dinas-bran"
       },
       {
-        "name": "Wikipedia – Castell Dinas Brân",
+        "name": "Wikipedia - Castell Dinas Brân",
         "url": "https://en.wikipedia.org/wiki/Castell_Dinas_Br%C3%A2n"
       }
     ]
@@ -45513,7 +45510,7 @@ const CASTLES = [
     "type": "stone",
     "era": "Iron Age (c.300-100 BC)",
     "condition": "intact",
-    "description": "A superbly carved La Tene Celtic stone in County Galway—one of the finest examples of Iron Age art in Europe, covered in flowing abstract designs.",
+    "description": "A superbly carved La Tene Celtic stone in County Galway-one of the finest examples of Iron Age art in Europe, covered in flowing abstract designs.",
     "image": "https://img.castlecore.uk/turoe-stone.jpg",
     "rating": 3.4,
     "reviewCount": 22,
@@ -46493,7 +46490,7 @@ const CASTLES = [
       "https://img.castlecore.uk/strade-abbey-4.jpg",
       "https://img.castlecore.uk/strade-abbey-5.jpg"
     ],
-    "history": "Strade Abbey near Foxford, County Mayo, was a Dominican friary. The abbey preserves a remarkable collection of medieval tomb sculptures, including a unique double-effigy tomb showing both a living figure and a cadaver beneath—a rare memento mori. The sculptural details are among the finest surviving medieval funerary art in the west of Ireland.",
+    "history": "Strade Abbey near Foxford, County Mayo, was a Dominican friary. The abbey preserves a remarkable collection of medieval tomb sculptures, including a unique double-effigy tomb showing both a living figure and a cadaver beneath-a rare memento mori. The sculptural details are among the finest surviving medieval funerary art in the west of Ireland.",
     "sources": [
       {
         "name": "Mayo Heritage",
@@ -46535,7 +46532,7 @@ const CASTLES = [
       "https://img.castlecore.uk/creevelea-abbey-4.jpg",
       "https://img.castlecore.uk/creevelea-abbey-5.jpg"
     ],
-    "history": "Creevelea Abbey near Dromahair, County Leitrim, was founded in 1508 by Owen O'Rourke and Margaret O'Brien—the last Franciscan friary established in Ireland before the dissolution. The well-preserved ruins include a fine cloister with carvings of St Francis and his animal companions. The riverside setting amid woodland is exceptionally beautiful.",
+    "history": "Creevelea Abbey near Dromahair, County Leitrim, was founded in 1508 by Owen O'Rourke and Margaret O'Brien-the last Franciscan friary established in Ireland before the dissolution. The well-preserved ruins include a fine cloister with carvings of St Francis and his animal companions. The riverside setting amid woodland is exceptionally beautiful.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -46753,7 +46750,7 @@ const CASTLES = [
     "type": "palace",
     "era": "18th century",
     "condition": "intact",
-    "description": "A Georgian jewel overlooking Bantry Bay, filled with treasures collected on Grand Tours — where revolution, aristocratic elegance, and wild West Cork beauty converge.",
+    "description": "A Georgian jewel overlooking Bantry Bay, filled with treasures collected on Grand Tours - where revolution, aristocratic elegance, and wild West Cork beauty converge.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bantry_Bay_JBU01.jpg/500px-Bantry_Bay_JBU01.jpg",
     "rating": 4.4,
     "reviewCount": 2100,
@@ -46840,7 +46837,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th-19th century",
     "condition": "ruin",
-    "description": "The O'Neill seat on the shores of Lough Neagh—a grand estate where Ireland's most powerful Gaelic dynasty held court.",
+    "description": "The O'Neill seat on the shores of Lough Neagh-a grand estate where Ireland's most powerful Gaelic dynasty held court.",
     "image": "https://img.castlecore.uk/shane-castle.jpg",
     "rating": 3.7,
     "reviewCount": 95,
@@ -46879,7 +46876,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "An unusual hilltop castle in County Tyrone with twin D-shaped towers, named after a 14th-century O'Neill chieftain—a rare Gaelic stone castle.",
+    "description": "An unusual hilltop castle in County Tyrone with twin D-shaped towers, named after a 14th-century O'Neill chieftain-a rare Gaelic stone castle.",
     "image": "https://img.castlecore.uk/wiki-harry-avery-castle.jpg",
     "rating": 3.8,
     "reviewCount": 150,
@@ -46914,7 +46911,7 @@ const CASTLES = [
     "type": "palace",
     "era": "18th century",
     "condition": "intact",
-    "description": "Ireland's finest neoclassical mansion — a Palladian masterpiece in Portland stone where even the servants' entrance was hidden underground to preserve the perfect facade.",
+    "description": "Ireland's finest neoclassical mansion - a Palladian masterpiece in Portland stone where even the servants' entrance was hidden underground to preserve the perfect facade.",
     "image": "https://img.castlecore.uk/castle-coole.jpg",
     "rating": 4.5,
     "reviewCount": 2400,
@@ -46954,7 +46951,7 @@ const CASTLES = [
     "type": "palace",
     "era": "18th century",
     "condition": "intact",
-    "description": "An elegant Georgian mansion set against the wild foothills of Cuilcagh Mountain — home of the Cole family for 250 years and parent of every Irish yew tree in the world.",
+    "description": "An elegant Georgian mansion set against the wild foothills of Cuilcagh Mountain - home of the Cole family for 250 years and parent of every Irish yew tree in the world.",
     "image": "https://img.castlecore.uk/florence-court.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -47072,7 +47069,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Bronze Age-Iron Age",
     "condition": "ruin",
-    "description": "The legendary capital of ancient Connacht and entrance to the Celtic Otherworld—one of the most important archaeological complexes in Europe.",
+    "description": "The legendary capital of ancient Connacht and entrance to the Celtic Otherworld-one of the most important archaeological complexes in Europe.",
     "image": "https://img.castlecore.uk/rathcroghan.jpg",
     "rating": 4.1,
     "reviewCount": 320,
@@ -47092,7 +47089,7 @@ const CASTLES = [
       "https://img.castlecore.uk/rathcroghan-4.jpg",
       "https://img.castlecore.uk/rathcroghan-5.jpg"
     ],
-    "history": "Rathcroghan (Cruachan Ai) near Tulsk, County Roscommon, was the ancient capital of the Kings of Connacht and features in the great Irish epic Tain Bo Cuailnge. The complex includes over 60 monuments including a royal inauguration mound, ringforts, and Oweynagat ('Cave of the Cats')—traditionally the entrance to the Celtic Otherworld. A visitor centre at Tulsk interprets this extraordinary landscape.",
+    "history": "Rathcroghan (Cruachan Ai) near Tulsk, County Roscommon, was the ancient capital of the Kings of Connacht and features in the great Irish epic Tain Bo Cuailnge. The complex includes over 60 monuments including a royal inauguration mound, ringforts, and Oweynagat ('Cave of the Cats')-traditionally the entrance to the Celtic Otherworld. A visitor centre at Tulsk interprets this extraordinary landscape.",
     "sources": [
       {
         "name": "Rathcroghan Visitor Centre",
@@ -47312,7 +47309,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Ethereal Augustinian ruins rising from the floor of the Vale of Ewyas — pointed arches frame misty Black Mountains, and a tiny pub hides in the vaulted undercroft.",
+    "description": "Ethereal Augustinian ruins rising from the floor of the Vale of Ewyas - pointed arches frame misty Black Mountains, and a tiny pub hides in the vaulted undercroft.",
     "image": "https://img.castlecore.uk/llanthony-priory.jpg",
     "rating": 4.6,
     "reviewCount": 2100,
@@ -47390,7 +47387,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/abbey-cwmhir"
       },
       {
-        "name": "Wikipedia – Abbey Cwmhir",
+        "name": "Wikipedia - Abbey Cwmhir",
         "url": "https://en.wikipedia.org/wiki/Abbey_Cwmhir"
       }
     ]
@@ -47403,7 +47400,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-14th century",
     "condition": "ruin",
-    "description": "A substantial ruined gatehouse looming above the village of Llanblethian in the Vale of Glamorgan—the imposing remnant of a medieval stronghold known as St Quintins Castle.",
+    "description": "A substantial ruined gatehouse looming above the village of Llanblethian in the Vale of Glamorgan-the imposing remnant of a medieval stronghold known as St Quintins Castle.",
     "image": "https://img.castlecore.uk/llanblethian-castle.jpg",
     "rating": 3.8,
     "reviewCount": 180,
@@ -47428,7 +47425,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/llanblethian-castle"
       },
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       }
     ]
@@ -47469,7 +47466,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/candleston-castle"
       },
       {
-        "name": "Wikipedia – Candleston Castle",
+        "name": "Wikipedia - Candleston Castle",
         "url": "https://en.wikipedia.org/wiki/Candleston_Castle"
       }
     ]
@@ -47482,7 +47479,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "One of Britain's oldest Christian sites, nestled in a hollow by the River Taff — where Celtic saints once gathered and Epstein's towering Christ still stuns.",
+    "description": "One of Britain's oldest Christian sites, nestled in a hollow by the River Taff - where Celtic saints once gathered and Epstein's towering Christ still stuns.",
     "image": "https://img.castlecore.uk/llandaff-cathedral.jpg",
     "rating": 4.5,
     "reviewCount": 2800,
@@ -47521,7 +47518,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "18th century",
     "condition": "restored",
-    "description": "A Georgian mansion near Aberystwyth steeped in legends of the Holy Grail—the Nanteos Cup was long revered as the sacred vessel, drawing pilgrims seeking miraculous cures.",
+    "description": "A Georgian mansion near Aberystwyth steeped in legends of the Holy Grail-the Nanteos Cup was long revered as the sacred vessel, drawing pilgrims seeking miraculous cures.",
     "image": "https://img.castlecore.uk/nanteos-mansion.jpg",
     "rating": 4,
     "reviewCount": 650,
@@ -47541,7 +47538,7 @@ const CASTLES = [
     "history": "An 18th-century Georgian mansion built by the Powell family c.1739 near Aberystwyth, Ceredigion. The house was famous for the Nanteos Cup, a medieval mazer bowl long claimed to be the Holy Grail, brought here by monks fleeing the Dissolution. The cup was believed to have healing powers. The mansion is now a luxury hotel. Composer George Powell and writer Thomas Love Peacock had connections to the estate.",
     "sources": [
       {
-        "name": "Wikipedia – Nanteos Mansion",
+        "name": "Wikipedia - Nanteos Mansion",
         "url": "https://en.wikipedia.org/wiki/Nanteos_Mansion"
       }
     ]
@@ -47554,7 +47551,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Iron Age / 12th century",
     "condition": "ruin",
-    "description": "The highest castle in England and Wales, perched at 1,476 feet on a Brecon Beacons hilltop—a brooding Iron Age and medieval fortress commanding views across an oceanic landscape of mountains.",
+    "description": "The highest castle in England and Wales, perched at 1,476 feet on a Brecon Beacons hilltop-a brooding Iron Age and medieval fortress commanding views across an oceanic landscape of mountains.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Castell_Dinas_from_the_air.jpg/500px-Castell_Dinas_from_the_air.jpg",
     "rating": 4.2,
     "reviewCount": 380,
@@ -47582,7 +47579,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/castell-dinas"
       },
       {
-        "name": "Wikipedia – Castell Dinas, Talgarth",
+        "name": "Wikipedia - Castell Dinas, Talgarth",
         "url": "https://en.wikipedia.org/wiki/Castell_Dinas,_Talgarth"
       }
     ]
@@ -47613,14 +47610,14 @@ const CASTLES = [
     "gallery": [
       "https://img.castlecore.uk/wiki-garn-goch.jpg"
     ],
-    "history": "A massive Iron Age hillfort complex near Bethlehem village in Carmarthenshire, comprising two enclosures—Y Gaer Fawr (the Great Fort) and Y Gaer Fach (the Small Fort). The Great Fort covers 28 acres, making it one of the largest prehistoric enclosures in southern Britain. The stone-built ramparts are still impressive, rising to several metres in places. Dating is uncertain but likely Late Bronze Age to Iron Age (c.800-100 BC).",
+    "history": "A massive Iron Age hillfort complex near Bethlehem village in Carmarthenshire, comprising two enclosures-Y Gaer Fawr (the Great Fort) and Y Gaer Fach (the Small Fort). The Great Fort covers 28 acres, making it one of the largest prehistoric enclosures in southern Britain. The stone-built ramparts are still impressive, rising to several metres in places. Dating is uncertain but likely Late Bronze Age to Iron Age (c.800-100 BC).",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk/en/site/302673"
       },
       {
-        "name": "Wikipedia – Garn Goch",
+        "name": "Wikipedia - Garn Goch",
         "url": "https://en.wikipedia.org/wiki/Garn_Goch"
       }
     ]
@@ -47633,7 +47630,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century (site: Iron Age)",
     "condition": "ruin",
-    "description": "Once a grand Victorian mansion on dramatic cliffs above Southerndown Beach, now demolished—but the walled gardens and stunning Glamorgan Heritage Coast remain breathtaking.",
+    "description": "Once a grand Victorian mansion on dramatic cliffs above Southerndown Beach, now demolished-but the walled gardens and stunning Glamorgan Heritage Coast remain breathtaking.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Dunraven_Castle_%2816567797823%29.jpg/500px-Dunraven_Castle_%2816567797823%29.jpg",
     "rating": 3.9,
     "reviewCount": 520,
@@ -47656,7 +47653,7 @@ const CASTLES = [
     "history": "The Dunraven estate on the Glamorgan Heritage Coast has ancient roots, with an Iron Age promontory fort on the headland. The Vaughan family built a mansion here, enlarged in the 19th century by the Earls of Dunraven. The castle was demolished in 1963 after years of decline, but the walled gardens have been restored. The dramatic limestone cliffs and beach below are a popular destination.",
     "sources": [
       {
-        "name": "Wikipedia – Dunraven Castle",
+        "name": "Wikipedia - Dunraven Castle",
         "url": "https://en.wikipedia.org/wiki/Dunraven_Castle"
       },
       {
@@ -47673,7 +47670,7 @@ const CASTLES = [
     "type": "hillfort",
     "era": "Iron Age / Roman / medieval",
     "condition": "earthwork",
-    "description": "A vast Iron Age hillfort hidden in plain sight on a Cardiff housing estate—one of the largest prehistoric forts in Wales, with community archaeology revealing Roman and medieval treasures.",
+    "description": "A vast Iron Age hillfort hidden in plain sight on a Cardiff housing estate-one of the largest prehistoric forts in Wales, with community archaeology revealing Roman and medieval treasures.",
     "image": "https://img.castlecore.uk/caerau-hillfort.jpg",
     "rating": 3.6,
     "reviewCount": 150,
@@ -47698,7 +47695,7 @@ const CASTLES = [
         "url": "https://caerheritageproject.com/"
       },
       {
-        "name": "Wikipedia – Caerau Hillfort",
+        "name": "Wikipedia - Caerau Hillfort",
         "url": "https://en.wikipedia.org/wiki/Caerau_hillfort"
       }
     ]
@@ -47711,7 +47708,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-16th century",
     "condition": "ruin",
-    "description": "A Tudor mansion of exquisite Renaissance detailing hidden in a quiet Vale of Glamorgan valley—its elaborate porch is one of the finest pieces of Elizabethan architecture in Wales.",
+    "description": "A Tudor mansion of exquisite Renaissance detailing hidden in a quiet Vale of Glamorgan valley-its elaborate porch is one of the finest pieces of Elizabethan architecture in Wales.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Old_Beaupre_Castle_-_geograph.org.uk_-_2764686.jpg/500px-Old_Beaupre_Castle_-_geograph.org.uk_-_2764686.jpg",
     "rating": 4.2,
     "reviewCount": 480,
@@ -47738,7 +47735,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/old-beaupre-castle"
       },
       {
-        "name": "Wikipedia – Old Beaupre Castle",
+        "name": "Wikipedia - Old Beaupre Castle",
         "url": "https://en.wikipedia.org/wiki/Old_Beaupre_Castle"
       }
     ]
@@ -47774,7 +47771,7 @@ const CASTLES = [
     "history": "A medieval castle with 12th-century origins, continuously inhabited and one of the best-preserved castles in Wales. William Randolph Hearst bought it in 1925 and lavishly restored it, importing medieval woodwork and fireplaces from across Europe. Since 1962 it has been home to Atlantic College (UWC Atlantic), the pioneering international school. The castle includes a medieval tithe barn, Tudor gardens, and Arts Centre.",
     "sources": [
       {
-        "name": "Wikipedia – St Donat's Castle",
+        "name": "Wikipedia - St Donat's Castle",
         "url": "https://en.wikipedia.org/wiki/St_Donat%27s_Castle"
       },
       {
@@ -47814,7 +47811,7 @@ const CASTLES = [
     "history": "A small tidal island off the coast of Sully in the Vale of Glamorgan, accessible via a rocky causeway at low tide. The island has remains of a medieval fortification and was used as a lookout point. Several people have been stranded or drowned by the fast-rising Bristol Channel tides. The island offers views across the channel to Somerset and has archaeological remains from the Iron Age.",
     "sources": [
       {
-        "name": "Wikipedia – Sully Island",
+        "name": "Wikipedia - Sully Island",
         "url": "https://en.wikipedia.org/wiki/Sully_Island"
       }
     ]
@@ -47827,7 +47824,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "A haunting Jacobean castle ruin on a wooded ridge above Caerphilly—the first castellated country house in Wales, now a roofless shell slowly being reclaimed by nature.",
+    "description": "A haunting Jacobean castle ruin on a wooded ridge above Caerphilly-the first castellated country house in Wales, now a roofless shell slowly being reclaimed by nature.",
     "image": "https://img.castlecore.uk/ruperra-castle.jpg",
     "rating": 3.6,
     "reviewCount": 190,
@@ -47849,7 +47846,7 @@ const CASTLES = [
     "history": "Built in 1626 by Sir Thomas Morgan, a soldier who fought at the Battle of Cadiz. It was the first known castellated mansion in Glamorgan, with corner towers and battlements. Used by the military in WWII, it was gutted by fire in 1941 and never restored. The Grade II* listed ruin stands in overgrown grounds on a ridge overlooking the Rhymney valley, subject to ongoing conservation campaigns.",
     "sources": [
       {
-        "name": "Wikipedia – Ruperra Castle",
+        "name": "Wikipedia - Ruperra Castle",
         "url": "https://en.wikipedia.org/wiki/Ruperra_Castle"
       },
       {
@@ -47866,7 +47863,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Vast and sprawling castle ruins on a windswept Brecon Beacons hilltop above Merthyr Tydfil—a hugely ambitious Marcher fortress that sparked a war between two English lords.",
+    "description": "Vast and sprawling castle ruins on a windswept Brecon Beacons hilltop above Merthyr Tydfil-a hugely ambitious Marcher fortress that sparked a war between two English lords.",
     "image": "https://img.castlecore.uk/morlais-castle.jpg",
     "rating": 4,
     "reviewCount": 350,
@@ -47894,7 +47891,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/morlais-castle"
       },
       {
-        "name": "Wikipedia – Morlais Castle",
+        "name": "Wikipedia - Morlais Castle",
         "url": "https://en.wikipedia.org/wiki/Morlais_Castle"
       }
     ]
@@ -47907,7 +47904,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A mysterious and rarely visited native Welsh castle ruin on a wooded ridge north of Cardiff—possibly the last fortress built by the Welsh lords of Senghenydd before their defeat.",
+    "description": "A mysterious and rarely visited native Welsh castle ruin on a wooded ridge north of Cardiff-possibly the last fortress built by the Welsh lords of Senghenydd before their defeat.",
     "image": "https://img.castlecore.uk/castell-morgraig.jpg",
     "rating": 3.7,
     "reviewCount": 120,
@@ -47930,11 +47927,11 @@ const CASTLES = [
     "history": "A native Welsh castle on a ridge in the hills north of Cardiff, likely built by the Welsh lords of Senghenydd in the mid-13th century, shortly before their territory was conquered by Gilbert de Clare. The castle may have been unfinished when it was abandoned. The remote ruins include fragments of round towers in a style influenced by English castle design. Reached by a woodland walk from Caerphilly.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       },
       {
-        "name": "Wikipedia – Castell Morgraig",
+        "name": "Wikipedia - Castell Morgraig",
         "url": "https://en.wikipedia.org/wiki/Castell_Morgraig"
       }
     ]
@@ -47947,7 +47944,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "restored",
-    "description": "An Elizabethan mansion risen from Norman ruins, now the jewel of Wales's open-air museum — where centuries of Welsh life unfold across the grounds.",
+    "description": "An Elizabethan mansion risen from Norman ruins, now the jewel of Wales's open-air museum - where centuries of Welsh life unfold across the grounds.",
     "image": "https://img.castlecore.uk/st-fagans-castle.jpg",
     "rating": 4.5,
     "reviewCount": 3500,
@@ -47988,7 +47985,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-13th century",
     "condition": "ruin",
-    "description": "A picturesque Norman castle ruin in the grounds of a Georgian mansion on the Gower Peninsula—set in some of the most beautiful parkland in South Wales.",
+    "description": "A picturesque Norman castle ruin in the grounds of a Georgian mansion on the Gower Peninsula-set in some of the most beautiful parkland in South Wales.",
     "image": "https://img.castlecore.uk/penrice-castle.jpg",
     "rating": 3.9,
     "reviewCount": 280,
@@ -48010,11 +48007,11 @@ const CASTLES = [
     "history": "A Norman castle on the Gower Peninsula near Oxwich, built in the 12th century by the de Penrice family. The castle was extended with a strong curtain wall and round tower in the 13th century. It was abandoned when the adjacent Penrice House was built in the 18th century. The ruins stand in the grounds of the estate, amid rolling parkland with views towards Oxwich Bay and Three Cliffs Bay.",
     "sources": [
       {
-        "name": "Wikipedia – Penrice Castle",
+        "name": "Wikipedia - Penrice Castle",
         "url": "https://en.wikipedia.org/wiki/Penrice_Castle"
       },
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       }
     ]
@@ -48054,7 +48051,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/arthurs-stone"
       },
       {
-        "name": "Wikipedia – Arthur's Stone, Gower",
+        "name": "Wikipedia - Arthur's Stone, Gower",
         "url": "https://en.wikipedia.org/wiki/Arthur%27s_Stone,_Cefn_Bryn"
       }
     ]
@@ -48067,7 +48064,7 @@ const CASTLES = [
     "type": "hillfort",
     "era": "Iron Age (c.500 BC - 1st century AD)",
     "condition": "earthwork",
-    "description": "A substantial Iron Age hillfort hidden in woodland near Caerwent, likely the tribal capital of the Silures—the fierce Celtic people who resisted Rome for decades.",
+    "description": "A substantial Iron Age hillfort hidden in woodland near Caerwent, likely the tribal capital of the Silures-the fierce Celtic people who resisted Rome for decades.",
     "image": "https://img.castlecore.uk/llanmelin-wood-hillfort.jpg",
     "rating": 3.8,
     "reviewCount": 140,
@@ -48093,7 +48090,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/llanmelin-wood-hillfort"
       },
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       }
     ]
@@ -48106,7 +48103,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Roman (1st-5th century)",
     "condition": "ruin",
-    "description": "The best-preserved Roman town walls in Britain — a miniature Rome where the fierce Silures tribe settled into civilised life with temples, baths, and central heating.",
+    "description": "The best-preserved Roman town walls in Britain - a miniature Rome where the fierce Silures tribe settled into civilised life with temples, baths, and central heating.",
     "image": "https://img.castlecore.uk/caerwent-roman-town.jpg",
     "rating": 4.3,
     "reviewCount": 1100,
@@ -48126,7 +48123,7 @@ const CASTLES = [
       "https://img.castlecore.uk/caerwent-roman-town-4.jpg",
       "https://img.castlecore.uk/caerwent-roman-town-5.jpg"
     ],
-    "history": "Founded as Venta Silurum, the market town of the Silures — the fierce Celtic tribe that resisted Roman conquest for decades. The town walls, standing up to 5 metres high, are the best-preserved in Britain. Within the walls stood a forum, basilica, temple, baths, and private houses with hypocaust heating. A purely civilian settlement with no military garrison. Managed by Cadw.",
+    "history": "Founded as Venta Silurum, the market town of the Silures - the fierce Celtic tribe that resisted Roman conquest for decades. The town walls, standing up to 5 metres high, are the best-preserved in Britain. Within the walls stood a forum, basilica, temple, baths, and private houses with hypocaust heating. A purely civilian settlement with no military garrison. Managed by Cadw.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -48146,7 +48143,7 @@ const CASTLES = [
     "type": "fort",
     "era": "1st century Roman",
     "condition": "ruin",
-    "description": "The best-preserved Roman amphitheatre in Britain — once thundering with the roar of 6,000 legionaries, now a grassy bowl of silence where you can almost hear the echoes of gladiators.",
+    "description": "The best-preserved Roman amphitheatre in Britain - once thundering with the roar of 6,000 legionaries, now a grassy bowl of silence where you can almost hear the echoes of gladiators.",
     "image": "https://img.castlecore.uk/caerleon-amphitheatre.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -48188,7 +48185,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "17th century",
     "condition": "restored",
-    "description": "One of Britain's most important 17th-century mansions — where the powerful Morgan dynasty ruled South Wales for over 500 years.",
+    "description": "One of Britain's most important 17th-century mansions - where the powerful Morgan dynasty ruled South Wales for over 500 years.",
     "image": "https://img.castlecore.uk/tredegar-house.jpg",
     "rating": 4.4,
     "reviewCount": 3200,
@@ -48230,7 +48227,7 @@ const CASTLES = [
     "type": "industrial",
     "era": "18th century",
     "condition": "ruin",
-    "description": "A UNESCO World Heritage Site where the fires of the Industrial Revolution still feel close — massive stone furnaces and workers' cottages tell the story of the iron that built the modern world.",
+    "description": "A UNESCO World Heritage Site where the fires of the Industrial Revolution still feel close - massive stone furnaces and workers' cottages tell the story of the iron that built the modern world.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blaenafon_Ironworks-24May2008.jpg/500px-Blaenafon_Ironworks-24May2008.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -48275,7 +48272,7 @@ const CASTLES = [
     "type": "monument",
     "era": "Geological / 19th century industrial",
     "condition": "natural",
-    "description": "A dramatic limestone escarpment above the Usk valley in the Brecon Beacons, honeycombed with caves and rich in industrial archaeology—a landscape of vertical drama.",
+    "description": "A dramatic limestone escarpment above the Usk valley in the Brecon Beacons, honeycombed with caves and rich in industrial archaeology-a landscape of vertical drama.",
     "image": "https://img.castlecore.uk/wiki-llangattock-escarpment.jpg",
     "rating": 4.2,
     "reviewCount": 600,
@@ -48295,7 +48292,7 @@ const CASTLES = [
         "url": "https://www.breconbeacons.org/"
       },
       {
-        "name": "Wikipedia – Llangattock",
+        "name": "Wikipedia - Llangattock",
         "url": "https://en.wikipedia.org/wiki/Llangattock"
       }
     ]
@@ -48308,7 +48305,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "12th-15th century",
     "condition": "restored",
-    "description": "A medieval court and castle pair in the Brecon Beacons — where Norman invaders became Welsh lords and a striking circular tower dominates the Usk Valley skyline.",
+    "description": "A medieval court and castle pair in the Brecon Beacons - where Norman invaders became Welsh lords and a striking circular tower dominates the Usk Valley skyline.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tretower_Court_-_geograph.org.uk_-_25906.jpg/500px-Tretower_Court_-_geograph.org.uk_-_25906.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
@@ -48353,7 +48350,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A Victorian Gothic castle in the upper Swansea Valley, once the private opera house of legendary diva Adelina Patti—where the greatest soprano of the 19th century held court in rural Wales.",
+    "description": "A Victorian Gothic castle in the upper Swansea Valley, once the private opera house of legendary diva Adelina Patti-where the greatest soprano of the 19th century held court in rural Wales.",
     "image": "https://img.castlecore.uk/craig-y-nos-castle.jpg",
     "rating": 4.1,
     "reviewCount": 900,
@@ -48376,7 +48373,7 @@ const CASTLES = [
     "history": "A Gothic Revival castle purchased in 1878 by Adelina Patti, the world's most famous opera singer, who installed a private theatre (a miniature version of Drury Lane) and entertained royalty here. She lived at Craig y Nos until her death in 1919. The castle later served as a hospital and is now a wedding venue. The grounds became Craig y Nos Country Park, set in the beautiful Tawe valley below the Brecon Beacons.",
     "sources": [
       {
-        "name": "Wikipedia – Craig y Nos Castle",
+        "name": "Wikipedia - Craig y Nos Castle",
         "url": "https://en.wikipedia.org/wiki/Craig-y-Nos_Castle"
       },
       {
@@ -48393,7 +48390,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "Iron Age to 17th century",
     "condition": "restored",
-    "description": "An iconic Welsh landscape where 2,000 years of history unfold — from Iron Age hillfort to medieval castle to a grand Newton House amid a rare parkland nature reserve.",
+    "description": "An iconic Welsh landscape where 2,000 years of history unfold - from Iron Age hillfort to medieval castle to a grand Newton House amid a rare parkland nature reserve.",
     "image": "https://img.castlecore.uk/dinefwr-park.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
@@ -48415,7 +48412,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dinefwr-park-4.jpg",
       "https://img.castlecore.uk/dinefwr-park-5.jpg"
     ],
-    "history": "The park has been in use for over 2,000 years, with remains of an Iron Age fort and two Roman forts discovered on site. Dinefwr Castle, perched on a hilltop, was the principal seat of the rulers of Deheubarth. Newton House, the 17th-century mansion at the estate's heart, is surrounded by a National Nature Reserve — the only parkland NNR in Wales. Managed by the National Trust.",
+    "history": "The park has been in use for over 2,000 years, with remains of an Iron Age fort and two Roman forts discovered on site. Dinefwr Castle, perched on a hilltop, was the principal seat of the rulers of Deheubarth. Newton House, the 17th-century mansion at the estate's heart, is surrounded by a National Nature Reserve - the only parkland NNR in Wales. Managed by the National Trust.",
     "sources": [
       {
         "name": "National Trust",
@@ -48457,11 +48454,11 @@ const CASTLES = [
     "history": "A Gothic triangular tower built in 1806-1809 by Sir William Paxton to honour Lord Nelson after Trafalgar. Standing on a prominent hilltop near Llanarthne, it offers panoramic views across the Tywi valley to the Black Mountain. Paxton was a wealthy London banker who also funded the National Botanic Garden of Wales on his former estate below. Managed by the National Trust.",
     "sources": [
       {
-        "name": "National Trust – Paxton's Tower",
+        "name": "National Trust - Paxton's Tower",
         "url": "https://www.nationaltrust.org.uk/visit/wales/paxtons-tower"
       },
       {
-        "name": "Wikipedia – Paxton's Tower",
+        "name": "Wikipedia - Paxton's Tower",
         "url": "https://en.wikipedia.org/wiki/Paxton%27s_Tower"
       }
     ]
@@ -48474,7 +48471,7 @@ const CASTLES = [
     "type": "castle",
     "era": "N/A (viewpoint)",
     "condition": "ruin",
-    "description": "A companion viewpoint to the hilltop castle ruins across the Tywi valley—a place to absorb the full majesty of this quintessential Welsh landscape of river, castle, and rolling green hills.",
+    "description": "A companion viewpoint to the hilltop castle ruins across the Tywi valley-a place to absorb the full majesty of this quintessential Welsh landscape of river, castle, and rolling green hills.",
     "image": "https://img.castlecore.uk/dryslwyn-castle-viewpoint.jpg",
     "rating": 4.1,
     "reviewCount": 500,
@@ -48508,7 +48505,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Faint stone foundations in a peaceful Carmarthenshire meadow mark the site of the mother house of the Cistercian order in Wales—birthplace of Welsh monastic culture.",
+    "description": "Faint stone foundations in a peaceful Carmarthenshire meadow mark the site of the mother house of the Cistercian order in Wales-birthplace of Welsh monastic culture.",
     "image": "https://img.castlecore.uk/whitland-abbey.jpg",
     "rating": 3.5,
     "reviewCount": 180,
@@ -48534,7 +48531,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/whitland-abbey"
       },
       {
-        "name": "Wikipedia – Whitland Abbey",
+        "name": "Wikipedia - Whitland Abbey",
         "url": "https://en.wikipedia.org/wiki/Whitland_Abbey"
       }
     ]
@@ -48547,7 +48544,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "Hidden in a hollow in Britain's smallest city — a purple-stoned medieval cathedral dedicated to Wales's patron saint, where two pilgrimages equalled one to Rome.",
+    "description": "Hidden in a hollow in Britain's smallest city - a purple-stoned medieval cathedral dedicated to Wales's patron saint, where two pilgrimages equalled one to Rome.",
     "image": "https://img.castlecore.uk/st-david-s-cathedral.jpg",
     "rating": 4.7,
     "reviewCount": 5200,
@@ -48590,7 +48587,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "restored",
-    "description": "A squat medieval tower perched on a wooded hillside above the Daugleddau waterway in Pembrokeshire—a private castle occasionally glimpsed from the water or road.",
+    "description": "A squat medieval tower perched on a wooded hillside above the Daugleddau waterway in Pembrokeshire-a private castle occasionally glimpsed from the water or road.",
     "image": "https://img.castlecore.uk/benton-castle-exterior.jpg",
     "rating": 3.5,
     "reviewCount": 120,
@@ -48610,11 +48607,11 @@ const CASTLES = [
     "history": "A medieval castle dating from the 13th century, overlooking the tidal Daugleddau estuary near Llangwm in Pembrokeshire. The castle was held by the de Benton family and later passed through various hands. The compact tower was restored in the 20th century and is now a private residence, not open to the public. Its romantic silhouette can be seen from the A4075 road and from boats on the estuary.",
     "sources": [
       {
-        "name": "Wikipedia – Benton Castle",
+        "name": "Wikipedia - Benton Castle",
         "url": "https://en.wikipedia.org/wiki/Benton_Castle"
       },
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       }
     ]
@@ -48627,7 +48624,7 @@ const CASTLES = [
     "type": "monument",
     "era": "c. 3500 BC",
     "condition": "intact",
-    "description": "The largest and most dramatic neolithic dolmen in Wales — a massive capstone balanced impossibly on slender uprights against a backdrop of Preseli Hills.",
+    "description": "The largest and most dramatic neolithic dolmen in Wales - a massive capstone balanced impossibly on slender uprights against a backdrop of Preseli Hills.",
     "image": "https://img.castlecore.uk/pentre-ifan.jpg",
     "rating": 4.5,
     "reviewCount": 2800,
@@ -48668,7 +48665,7 @@ const CASTLES = [
     "type": "monument",
     "era": "Neolithic (c.3000 BC)",
     "condition": "intact",
-    "description": "A delicate Neolithic dolmen in a suburban Newport garden, its capstone balanced impossibly on slender uprights—a 5,000-year-old monument hiding in plain sight.",
+    "description": "A delicate Neolithic dolmen in a suburban Newport garden, its capstone balanced impossibly on slender uprights-a 5,000-year-old monument hiding in plain sight.",
     "image": "https://img.castlecore.uk/carreg-coetan-arthur.jpg",
     "rating": 3.8,
     "reviewCount": 350,
@@ -48685,14 +48682,14 @@ const CASTLES = [
       "https://img.castlecore.uk/carreg-coetan-arthur-4.jpg",
       "https://img.castlecore.uk/carreg-coetan-arthur-5.jpg"
     ],
-    "history": "A Neolithic portal dolmen dating to c.3000 BC, located in a residential area of Newport, Pembrokeshire. The large capstone is balanced on just two of its four uprights, creating an impossibly delicate appearance. Despite its suburban setting, it is one of the best-preserved portal dolmens in west Wales. Associated with Arthurian legend—the name means 'Arthur's Quoit'. Managed by Cadw.",
+    "history": "A Neolithic portal dolmen dating to c.3000 BC, located in a residential area of Newport, Pembrokeshire. The large capstone is balanced on just two of its four uprights, creating an impossibly delicate appearance. Despite its suburban setting, it is one of the best-preserved portal dolmens in west Wales. Associated with Arthurian legend-the name means 'Arthur's Quoit'. Managed by Cadw.",
     "sources": [
       {
         "name": "Cadw",
         "url": "https://cadw.gov.wales/visit/places-to-visit/carreg-coetan-arthur"
       },
       {
-        "name": "Wikipedia – Carreg Coetan Arthur",
+        "name": "Wikipedia - Carreg Coetan Arthur",
         "url": "https://en.wikipedia.org/wiki/Carreg_Coetan_Arthur"
       }
     ]
@@ -48705,7 +48702,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Early medieval (5th-6th century)",
     "condition": "earthwork",
-    "description": "A tidal island off the Pembrokeshire coast dotted with the remains of over 130 ancient huts—a mysterious settlement where early medieval people lived surrounded by Atlantic spray.",
+    "description": "A tidal island off the Pembrokeshire coast dotted with the remains of over 130 ancient huts-a mysterious settlement where early medieval people lived surrounded by Atlantic spray.",
     "image": "https://img.castlecore.uk/gateholm-island.jpg",
     "rating": 3.9,
     "reviewCount": 200,
@@ -48728,7 +48725,7 @@ const CASTLES = [
     "history": "A tidal island near Marloes in Pembrokeshire, accessible at low tide. The island contains the remains of over 130 stone huts, likely an early medieval settlement dating to the 5th-6th centuries, though some features may be older. It is one of the largest and most enigmatic settlement sites in Wales. The island is also important for nesting seabirds. Part of the Pembrokeshire Coast National Park.",
     "sources": [
       {
-        "name": "Wikipedia – Gateholm",
+        "name": "Wikipedia - Gateholm",
         "url": "https://en.wikipedia.org/wiki/Gateholm"
       },
       {
@@ -48745,7 +48742,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "6th century (chapel: medieval)",
     "condition": "ruin",
-    "description": "A ruined medieval chapel and holy well on the wild Pembrokeshire clifftops, marking the traditional birthplace of St David—patron saint of Wales—amid crashing Atlantic waves.",
+    "description": "A ruined medieval chapel and holy well on the wild Pembrokeshire clifftops, marking the traditional birthplace of St David-patron saint of Wales-amid crashing Atlantic waves.",
     "image": "https://img.castlecore.uk/st-non-s-chapel.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
@@ -48768,7 +48765,7 @@ const CASTLES = [
     "history": "A ruined chapel and holy well on the clifftops south of St Davids, Pembrokeshire, marking the traditional birthplace of St David (Dewi Sant) in the 6th century. Legend says a violent storm raged during his birth but the spot where Non stood was bathed in calm light. The chapel ruins date to the medieval period. A nearby modern chapel was built in 1934 in a pre-Reformation style. The holy well was believed to have healing powers.",
     "sources": [
       {
-        "name": "Wikipedia – St Non's Chapel",
+        "name": "Wikipedia - St Non's Chapel",
         "url": "https://en.wikipedia.org/wiki/St_Non%27s_Chapel"
       },
       {
@@ -48785,7 +48782,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval / 19th century",
     "condition": "restored",
-    "description": "A castellated Regency mansion on the Carmarthenshire coast where the Pembrokeshire Coast Path begins—or ends—at the edge of a beach that sometimes reveals a prehistoric sunken forest.",
+    "description": "A castellated Regency mansion on the Carmarthenshire coast where the Pembrokeshire Coast Path begins-or ends-at the edge of a beach that sometimes reveals a prehistoric sunken forest.",
     "image": "https://img.castlecore.uk/amroth-castle.jpg",
     "rating": 3.5,
     "reviewCount": 250,
@@ -48805,7 +48802,7 @@ const CASTLES = [
     "history": "A castellated mansion with medieval origins, substantially rebuilt in the Regency period and again in the 19th century. Located at Amroth on the border of Pembrokeshire and Carmarthenshire, it marks the eastern terminus of the 186-mile Pembrokeshire Coast Path. The beach occasionally reveals stumps of a submerged prehistoric forest at low tide. Now divided into private apartments.",
     "sources": [
       {
-        "name": "Wikipedia – Amroth Castle",
+        "name": "Wikipedia - Amroth Castle",
         "url": "https://en.wikipedia.org/wiki/Amroth_Castle"
       }
     ]
@@ -48818,7 +48815,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "18th century",
     "condition": "ruin",
-    "description": "The romantic ruins and restored walks of a legendary 18th-century Picturesque landscape in the Ceredigion uplands—once celebrated as the finest designed landscape in Wales.",
+    "description": "The romantic ruins and restored walks of a legendary 18th-century Picturesque landscape in the Ceredigion uplands-once celebrated as the finest designed landscape in Wales.",
     "image": "https://img.castlecore.uk/hafod-estate.jpg",
     "rating": 4.3,
     "reviewCount": 700,
@@ -48846,7 +48843,7 @@ const CASTLES = [
         "url": "https://www.hafod.org/"
       },
       {
-        "name": "Wikipedia – Hafod Estate",
+        "name": "Wikipedia - Hafod Estate",
         "url": "https://en.wikipedia.org/wiki/Hafod_Estate"
       }
     ]
@@ -48880,7 +48877,7 @@ const CASTLES = [
     "history": "New Quay (Ceinewydd) in Ceredigion has a small castle mound from the medieval period, likely a Norman fortification. The town is best known as the inspiration for Under Milk Wood by Dylan Thomas, who lived here in 1944-45. The honey farm is a popular family attraction. The picturesque harbour town sits on Cardigan Bay, known for its population of bottlenose dolphins.",
     "sources": [
       {
-        "name": "Wikipedia – New Quay",
+        "name": "Wikipedia - New Quay",
         "url": "https://en.wikipedia.org/wiki/New_Quay"
       }
     ]
@@ -48893,7 +48890,7 @@ const CASTLES = [
     "type": "industrial",
     "era": "1st century Roman",
     "condition": "ruin",
-    "description": "The UK's only known Roman gold mines, hidden in a green Welsh valley — where legionaries once dug for treasure and you can still venture underground on guided tours by candlelight.",
+    "description": "The UK's only known Roman gold mines, hidden in a green Welsh valley - where legionaries once dug for treasure and you can still venture underground on guided tours by candlelight.",
     "image": "https://img.castlecore.uk/dolaucothi-gold-mines.jpg",
     "rating": 4.3,
     "reviewCount": 1800,
@@ -48939,7 +48936,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-13th century",
     "condition": "ruin",
-    "description": "The ancient seat of the princes of Deheubarth, perched on a wooded crag above the River Tywi in one of Wales's most storied landscapes—where Welsh independence had its proudest moments.",
+    "description": "The ancient seat of the princes of Deheubarth, perched on a wooded crag above the River Tywi in one of Wales's most storied landscapes-where Welsh independence had its proudest moments.",
     "image": "https://img.castlecore.uk/dynevor-castle.jpg",
     "rating": 4.2,
     "reviewCount": 950,
@@ -48967,7 +48964,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/dinefwr-castle"
       },
       {
-        "name": "Wikipedia – Dinefwr Castle",
+        "name": "Wikipedia - Dinefwr Castle",
         "url": "https://en.wikipedia.org/wiki/Dinefwr_Castle"
       }
     ]
@@ -48980,7 +48977,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "16th century",
     "condition": "restored",
-    "description": "Britain's finest Elizabethan townhouse — hidden behind Conwy's medieval walls, a gentleman's mansion of ornate plasterwork and peacocking Tudor ambition.",
+    "description": "Britain's finest Elizabethan townhouse - hidden behind Conwy's medieval walls, a gentleman's mansion of ornate plasterwork and peacocking Tudor ambition.",
     "image": "https://img.castlecore.uk/plas-mawr.jpg",
     "rating": 4.5,
     "reviewCount": 2200,
@@ -49066,7 +49063,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "13th-17th century",
     "condition": "restored",
-    "description": "A Grade I listed Welsh manor with a medieval watchtower commanding views to Conwy Castle and Snowdonia — now a luxurious National Trust hotel wrapped in walled gardens and ancient woodland.",
+    "description": "A Grade I listed Welsh manor with a medieval watchtower commanding views to Conwy Castle and Snowdonia - now a luxurious National Trust hotel wrapped in walled gardens and ancient woodland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bodysgallenhallcmichaelhoganlowres.jpg/500px-Bodysgallenhallcmichaelhoganlowres.jpg",
     "rating": 4.5,
     "reviewCount": 1800,
@@ -49139,7 +49136,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/segontium-roman-fort"
       },
       {
-        "name": "Wikipedia – Segontium",
+        "name": "Wikipedia - Segontium",
         "url": "https://en.wikipedia.org/wiki/Segontium"
       }
     ]
@@ -49152,7 +49149,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A colossal Norman Revival fantasy built on slate money — an extravagant Victorian folly bristling with turrets, hiding the largest bed in Britain and a railway museum in its stables.",
+    "description": "A colossal Norman Revival fantasy built on slate money - an extravagant Victorian folly bristling with turrets, hiding the largest bed in Britain and a railway museum in its stables.",
     "image": "https://img.castlecore.uk/penrhyn-castle.jpg",
     "rating": 4.5,
     "reviewCount": 4500,
@@ -49197,7 +49194,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Iron Age",
     "condition": "earthwork",
-    "description": "The faint remains of a hillfort near the spectacular Aber Falls waterfall in the Snowdonia foothills—where a 120-foot cascade and ancient earthworks share the same dramatic valley.",
+    "description": "The faint remains of a hillfort near the spectacular Aber Falls waterfall in the Snowdonia foothills-where a 120-foot cascade and ancient earthworks share the same dramatic valley.",
     "image": "https://img.castlecore.uk/aber-falls-fort.jpg",
     "rating": 3.8,
     "reviewCount": 200,
@@ -49220,7 +49217,7 @@ const CASTLES = [
     "history": "An Iron Age or early medieval hillfort near Rhaeadr Fawr (Aber Falls), one of the finest waterfalls in Wales, where the Afon Goch plunges 120 feet. The hillfort occupies a defensive position near the falls. The area was part of the territory of the princes of Gwynedd and the nearby royal court of Abergwyngregyn was Llywelyn ap Gruffudd's principal residence. The walk to the falls passes through ancient oak woodland.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       },
       {
@@ -49237,7 +49234,7 @@ const CASTLES = [
     "type": "monument",
     "era": "Neolithic",
     "condition": "intact",
-    "description": "Step inside a 5,000-year-old passage tomb on Anglesey — 'The Mound in the Dark Grove' aligns with the summer solstice sunrise, flooding its ancient chamber with golden light.",
+    "description": "Step inside a 5,000-year-old passage tomb on Anglesey - 'The Mound in the Dark Grove' aligns with the summer solstice sunrise, flooding its ancient chamber with golden light.",
     "image": "https://img.castlecore.uk/bryn-celli-ddu.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -49282,7 +49279,7 @@ const CASTLES = [
     "type": "monument",
     "era": "Neolithic (c.3000 BC)",
     "condition": "intact",
-    "description": "A mysterious Neolithic passage tomb on the Anglesey coast, its inner stones carved with rare prehistoric spirals and chevrons—one of only two decorated passage tombs in Wales.",
+    "description": "A mysterious Neolithic passage tomb on the Anglesey coast, its inner stones carved with rare prehistoric spirals and chevrons-one of only two decorated passage tombs in Wales.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BarclodiadyGawres.JPG/500px-BarclodiadyGawres.JPG",
     "rating": 4.2,
     "reviewCount": 600,
@@ -49307,7 +49304,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/barclodiad-y-gawres-burial-chamber"
       },
       {
-        "name": "Wikipedia – Barclodiad y Gawres",
+        "name": "Wikipedia - Barclodiad y Gawres",
         "url": "https://en.wikipedia.org/wiki/Barclodiad_y_Gawres"
       }
     ]
@@ -49346,7 +49343,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/din-lligwy-hut-group"
       },
       {
-        "name": "Wikipedia – Din Lligwy",
+        "name": "Wikipedia - Din Lligwy",
         "url": "https://en.wikipedia.org/wiki/Din_Lligwy"
       }
     ]
@@ -49359,7 +49356,7 @@ const CASTLES = [
     "type": "monument",
     "era": "Neolithic (c.3000 BC)",
     "condition": "intact",
-    "description": "A massive Neolithic capstone weighing 28 tons, resting on low uprights in an Anglesey field—one of the most impressive megalithic monuments in Wales.",
+    "description": "A massive Neolithic capstone weighing 28 tons, resting on low uprights in an Anglesey field-one of the most impressive megalithic monuments in Wales.",
     "image": "https://img.castlecore.uk/lligwy-burial-chamber.jpg",
     "rating": 4.2,
     "reviewCount": 550,
@@ -49384,7 +49381,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/lligwy-burial-chamber"
       },
       {
-        "name": "Wikipedia – Lligwy Burial Chamber",
+        "name": "Wikipedia - Lligwy Burial Chamber",
         "url": "https://en.wikipedia.org/wiki/Lligwy_Burial_Chamber"
       }
     ]
@@ -49397,7 +49394,7 @@ const CASTLES = [
     "type": "fort",
     "era": "2nd-4th century AD",
     "condition": "ruin",
-    "description": "A cluster of stone roundhouses on Anglesey's highest point, where people lived with views of Ireland across the sea—one of the best-preserved ancient settlement groups in Britain.",
+    "description": "A cluster of stone roundhouses on Anglesey's highest point, where people lived with views of Ireland across the sea-one of the best-preserved ancient settlement groups in Britain.",
     "image": "https://img.castlecore.uk/holyhead-mountain-hut-group.jpg",
     "rating": 4,
     "reviewCount": 400,
@@ -49424,7 +49421,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/holyhead-mountain-hut-group"
       },
       {
-        "name": "Wikipedia – Holyhead Mountain Hut Group",
+        "name": "Wikipedia - Holyhead Mountain Hut Group",
         "url": "https://en.wikipedia.org/wiki/Ty_Mawr_Hut_Group"
       }
     ]
@@ -49465,7 +49462,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/caer-y-twr"
       },
       {
-        "name": "Wikipedia – Caer y Twr",
+        "name": "Wikipedia - Caer y Twr",
         "url": "https://en.wikipedia.org/wiki/Caer_y_Twr"
       }
     ]
@@ -49478,7 +49475,7 @@ const CASTLES = [
     "type": "monument",
     "era": "19th century",
     "condition": "intact",
-    "description": "A white lighthouse clinging to a sea-battered islet off Anglesey — descend 400 steps down the cliff face to reach it, with puffins wheeling overhead and the Irish Sea crashing below.",
+    "description": "A white lighthouse clinging to a sea-battered islet off Anglesey - descend 400 steps down the cliff face to reach it, with puffins wheeling overhead and the Irish Sea crashing below.",
     "image": "https://img.castlecore.uk/south-stack-lighthouse.jpg",
     "rating": 4.6,
     "reviewCount": 4200,
@@ -49519,7 +49516,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "18th century",
     "condition": "intact",
-    "description": "An elegant estate on the Menai Strait with Snowdonia as its backdrop — home to the Marquess who lost his leg at Waterloo and the one who lost his fortune.",
+    "description": "An elegant estate on the Menai Strait with Snowdonia as its backdrop - home to the Marquess who lost his leg at Waterloo and the one who lost his fortune.",
     "image": "https://img.castlecore.uk/plas-newydd.jpg",
     "rating": 4.5,
     "reviewCount": 3000,
@@ -49561,7 +49558,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "20th century",
     "condition": "intact",
-    "description": "A fantastical Italianate village on the Welsh coast — pastel colonnades, secret gardens, and whimsical follies that feel like stepping into a Mediterranean dream on Snowdonia's doorstep.",
+    "description": "A fantastical Italianate village on the Welsh coast - pastel colonnades, secret gardens, and whimsical follies that feel like stepping into a Mediterranean dream on Snowdonia's doorstep.",
     "image": "https://img.castlecore.uk/portmeirion.jpg",
     "rating": 4.5,
     "reviewCount": 8500,
@@ -49606,7 +49603,7 @@ const CASTLES = [
     "type": "hillfort",
     "era": "Iron Age / Dark Age",
     "condition": "ruin",
-    "description": "A magical woodland walk through the Glaslyn valley to the legendary fortress of Dinas Emrys—threading past waterfalls, ancient oaks, and the ghost of Gelert the faithful hound.",
+    "description": "A magical woodland walk through the Glaslyn valley to the legendary fortress of Dinas Emrys-threading past waterfalls, ancient oaks, and the ghost of Gelert the faithful hound.",
     "image": "https://img.castlecore.uk/beddgelert-dinas-emrys-walk.jpg",
     "rating": 4.3,
     "reviewCount": 700,
@@ -49629,7 +49626,7 @@ const CASTLES = [
     "history": "A circular walk from the picturesque village of Beddgelert in Snowdonia, passing through the Glaslyn and Colwyn valleys to Dinas Emrys hillfort. Beddgelert itself is named for the legendary hound Gelert, faithful dog of Prince Llywelyn. The route passes through ancient sessile oak woodland, alongside the river, and climbs to the hillfort associated with Merlin and Vortigern's dragons. National Trust land.",
     "sources": [
       {
-        "name": "National Trust – Craflwyn & Beddgelert",
+        "name": "National Trust - Craflwyn & Beddgelert",
         "url": "https://www.nationaltrust.org.uk/visit/wales/craflwyn-and-beddgelert"
       },
       {
@@ -49646,7 +49643,7 @@ const CASTLES = [
     "type": "monument",
     "era": "9th century (site: Bronze Age)",
     "condition": "ruin",
-    "description": "A Dark Age inscribed stone cross near Valle Crucis Abbey, erected by a Welsh prince to proclaim his royal lineage back to the Roman emperor Magnus Maximus—a manifesto in stone.",
+    "description": "A Dark Age inscribed stone cross near Valle Crucis Abbey, erected by a Welsh prince to proclaim his royal lineage back to the Roman emperor Magnus Maximus-a manifesto in stone.",
     "image": "https://img.castlecore.uk/eliseg-s-pillar.jpg",
     "rating": 4,
     "reviewCount": 450,
@@ -49672,7 +49669,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/elisegs-pillar"
       },
       {
-        "name": "Wikipedia – Eliseg's Pillar",
+        "name": "Wikipedia - Eliseg's Pillar",
         "url": "https://en.wikipedia.org/wiki/Pillar_of_Eliseg"
       }
     ]
@@ -49685,7 +49682,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-13th century",
     "condition": "earthwork",
-    "description": "A substantial Norman motte in the heart of Mold town centre, crowned by a bowling green—the ancient stronghold that gives the Flintshire county town its Welsh name, Yr Wyddgrug.",
+    "description": "A substantial Norman motte in the heart of Mold town centre, crowned by a bowling green-the ancient stronghold that gives the Flintshire county town its Welsh name, Yr Wyddgrug.",
     "image": "https://img.castlecore.uk/mold-bailey-hill.jpg",
     "rating": 3.5,
     "reviewCount": 250,
@@ -49710,7 +49707,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/mold-bailey-hill"
       },
       {
-        "name": "Wikipedia – Mold, Flintshire",
+        "name": "Wikipedia - Mold, Flintshire",
         "url": "https://en.wikipedia.org/wiki/Mold,_Flintshire"
       }
     ]
@@ -49723,7 +49720,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "17th century",
     "condition": "restored",
-    "description": "A remarkably preserved country house that tells the story from both sides of the green baize door — where servant portraits hang alongside masters in a touching record of household life.",
+    "description": "A remarkably preserved country house that tells the story from both sides of the green baize door - where servant portraits hang alongside masters in a touching record of household life.",
     "image": "https://img.castlecore.uk/erddig-hall.jpg",
     "rating": 4.6,
     "reviewCount": 5200,
@@ -49792,7 +49789,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/holt-castle"
       },
       {
-        "name": "Wikipedia – Holt Castle",
+        "name": "Wikipedia - Holt Castle",
         "url": "https://en.wikipedia.org/wiki/Holt_Castle"
       }
     ]
@@ -49828,11 +49825,11 @@ const CASTLES = [
     "history": "Rocky crags above the village of Aberedw in Powys, associated with the last hours of Llywelyn ap Gruffudd (Llywelyn the Last). According to tradition, the prince hid in a cave here on the night of 10 December 1282, having his horse shod backwards to mislead pursuers, before riding to his death at Cilmeri the next day. The atmospheric rocks and cave overlook the Wye valley near Builth Wells.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       },
       {
-        "name": "Wikipedia – Aberedw",
+        "name": "Wikipedia - Aberedw",
         "url": "https://en.wikipedia.org/wiki/Aberedw"
       }
     ]
@@ -49845,7 +49842,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th century onwards",
     "condition": "intact",
-    "description": "A 900-year-old sanctuary in the Brecon Beacons — built on a Celtic holy site by Norman conquerors, with a golden rood screen and centuries of Welsh devotion soaked into ancient stone.",
+    "description": "A 900-year-old sanctuary in the Brecon Beacons - built on a Celtic holy site by Norman conquerors, with a golden rood screen and centuries of Welsh devotion soaked into ancient stone.",
     "image": "https://img.castlecore.uk/brecon-cathedral.jpg",
     "rating": 4.3,
     "reviewCount": 1100,
@@ -49889,7 +49886,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "earthwork",
-    "description": "A lonely Norman motte in the quiet Radnorshire hills, one of the most remote and least-visited castle sites in Wales—pure borderland solitude.",
+    "description": "A lonely Norman motte in the quiet Radnorshire hills, one of the most remote and least-visited castle sites in Wales-pure borderland solitude.",
     "image": "https://img.castlecore.uk/bleddfa-castle-mound.jpg",
     "rating": 3,
     "reviewCount": 40,
@@ -49911,11 +49908,11 @@ const CASTLES = [
     "history": "A Norman motte-and-bailey castle mound in the hamlet of Bleddfa, Powys, in the remote Radnorshire hills near the English border. Part of the chain of small castles built to control the Welsh Marches. The earthwork mound and ditch survive in a peaceful agricultural landscape. Bleddfa's church of St Mary Magdalene is also of medieval origin. One of the least-visited heritage sites in Wales.",
     "sources": [
       {
-        "name": "Coflein – RCAHMW",
+        "name": "Coflein - RCAHMW",
         "url": "https://coflein.gov.uk"
       },
       {
-        "name": "Wikipedia – Bleddfa",
+        "name": "Wikipedia - Bleddfa",
         "url": "https://en.wikipedia.org/wiki/Bleddfa"
       }
     ]
@@ -49928,7 +49925,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-14th century",
     "condition": "ruin",
-    "description": "The birthplace of Henry V—England's warrior king—though only the Great Tower and castle ruins survive amid the streets of this handsome Monmouthshire border town.",
+    "description": "The birthplace of Henry V-England's warrior king-though only the Great Tower and castle ruins survive amid the streets of this handsome Monmouthshire border town.",
     "image": "https://img.castlecore.uk/monmouth-castle.jpg",
     "rating": 3.8,
     "reviewCount": 600,
@@ -49953,7 +49950,7 @@ const CASTLES = [
         "url": "https://cadw.gov.wales/visit/places-to-visit/monmouth-castle"
       },
       {
-        "name": "Wikipedia – Monmouth Castle",
+        "name": "Wikipedia - Monmouth Castle",
         "url": "https://en.wikipedia.org/wiki/Monmouth_Castle"
       }
     ]
@@ -49966,7 +49963,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "intact",
-    "description": "The only surviving medieval fortified river bridge in Britain — a stone sentinel guarding Monmouth's crossing since the days of Edward I.",
+    "description": "The only surviving medieval fortified river bridge in Britain - a stone sentinel guarding Monmouth's crossing since the days of Edward I.",
     "image": "https://img.castlecore.uk/monnow-bridge-gate.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
@@ -50026,10 +50023,10 @@ const CASTLES = [
       "https://img.castlecore.uk/piercefield-walks-4.jpg",
       "https://img.castlecore.uk/piercefield-walks-5.jpg"
     ],
-    "history": "Created by Valentine Morris from the 1750s, Piercefield Walks were among the most celebrated Picturesque pleasure grounds in Britain. The circuit walk along the cliffs above the Wye Gorge offered a sequence of dramatic viewpoints—the Alcove, the Giant's Cave, the Lover's Leap—framing views of the river, Lancaut peninsula, and distant Tintern Abbey. The walks fell into neglect but have been partially restored and reopened.",
+    "history": "Created by Valentine Morris from the 1750s, Piercefield Walks were among the most celebrated Picturesque pleasure grounds in Britain. The circuit walk along the cliffs above the Wye Gorge offered a sequence of dramatic viewpoints-the Alcove, the Giant's Cave, the Lover's Leap-framing views of the river, Lancaut peninsula, and distant Tintern Abbey. The walks fell into neglect but have been partially restored and reopened.",
     "sources": [
       {
-        "name": "Wikipedia – Piercefield House",
+        "name": "Wikipedia - Piercefield House",
         "url": "https://en.wikipedia.org/wiki/Piercefield_House"
       },
       {
@@ -50046,7 +50043,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "20th century",
     "condition": "restored",
-    "description": "The clifftop writing shed where Dylan Thomas penned Under Milk Wood — perched above the Tâf estuary in the 'timeless, beautiful, barmy town' of Laugharne.",
+    "description": "The clifftop writing shed where Dylan Thomas penned Under Milk Wood - perched above the Tâf estuary in the 'timeless, beautiful, barmy town' of Laugharne.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dylan_Boathouse.jpg/500px-Dylan_Boathouse.jpg",
     "rating": 4.5,
     "reviewCount": 2800,
@@ -50085,7 +50082,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "14th century",
     "condition": "restored",
-    "description": "The oldest surviving medieval merchant's house in Conwy, a timber-framed gem tucked beneath the shadow of Edward I's mighty castle walls—a rare survivor of 14th-century Welsh town life.",
+    "description": "The oldest surviving medieval merchant's house in Conwy, a timber-framed gem tucked beneath the shadow of Edward I's mighty castle walls-a rare survivor of 14th-century Welsh town life.",
     "image": "https://img.castlecore.uk/aberconwy-house.jpg",
     "rating": 4.1,
     "reviewCount": 800,
@@ -50107,11 +50104,11 @@ const CASTLES = [
     "history": "A 14th-century merchant's house in Conwy, the oldest surviving building in the town after the castle and walls. The timber-framed house has been used as a bakery, antiques shop, and temperance hotel over the centuries. It was acquired by the National Trust in 1934 and restored. The rooms are furnished to show different periods of its history from medieval to Victorian times.",
     "sources": [
       {
-        "name": "National Trust – Aberconwy House",
+        "name": "National Trust - Aberconwy House",
         "url": "https://www.nationaltrust.org.uk/visit/wales/aberconwy-house"
       },
       {
-        "name": "Wikipedia – Aberconwy House",
+        "name": "Wikipedia - Aberconwy House",
         "url": "https://en.wikipedia.org/wiki/Aberconwy_House"
       }
     ]
@@ -50124,7 +50121,7 @@ const CASTLES = [
     "type": "historic-house",
     "era": "19th century",
     "condition": "intact",
-    "description": "One of the finest gardens in the UK — 80 acres of Italianate terraces, wild glens, and the famous Laburnum Arch that transforms into a golden tunnel every May.",
+    "description": "One of the finest gardens in the UK - 80 acres of Italianate terraces, wild glens, and the famous Laburnum Arch that transforms into a golden tunnel every May.",
     "image": "https://img.castlecore.uk/bodnant-garden.jpg",
     "rating": 4.7,
     "reviewCount": 6000,
@@ -50167,7 +50164,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "restored",
-    "description": "The 'Black Castle' of Barcaldine — a restored 16th-century Campbell tower house near Loch Creran. Scene of the treacherous murder that led to the Appin Murder.",
+    "description": "The 'Black Castle' of Barcaldine - a restored 16th-century Campbell tower house near Loch Creran. Scene of the treacherous murder that led to the Appin Murder.",
     "image": "https://img.castlecore.uk/barcaldine-castle.jpg",
     "rating": 4.3,
     "reviewCount": 420,
@@ -50205,7 +50202,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "6th century",
     "condition": "restored",
-    "description": "The cradle of Christianity in Scotland — a sacred island where St Columba landed in 563 AD and where Scottish kings were buried, wrapped in Atlantic light and ancient peace.",
+    "description": "The cradle of Christianity in Scotland - a sacred island where St Columba landed in 563 AD and where Scottish kings were buried, wrapped in Atlantic light and ancient peace.",
     "image": "https://img.castlecore.uk/iona-abbey.jpg",
     "rating": 4.7,
     "reviewCount": 3800,
@@ -50249,7 +50246,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Scotland's best-preserved medieval abbey perched on a tiny island in the Firth of Forth — reached by boat through waters where seals bask and puffins nest.",
+    "description": "Scotland's best-preserved medieval abbey perched on a tiny island in the Firth of Forth - reached by boat through waters where seals bask and puffins nest.",
     "image": "https://img.castlecore.uk/inchcolm-abbey.jpg",
     "rating": 4.6,
     "reviewCount": 2100,
@@ -50337,7 +50334,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century castle / 17th century gardens",
     "condition": "intact",
-    "description": "Scotland's most spectacular formal gardens unfold below you in a breathtaking Italian parterre — geometric perfection carved into the Perthshire landscape with a 17th-century sundial at its heart.",
+    "description": "Scotland's most spectacular formal gardens unfold below you in a breathtaking Italian parterre - geometric perfection carved into the Perthshire landscape with a 17th-century sundial at its heart.",
     "image": "https://img.castlecore.uk/drummond-castle-gardens.jpg",
     "rating": 4.5,
     "reviewCount": 1800,
@@ -50524,7 +50521,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "The 'Pearl of the North' — a lived-in 16th-century castle in the heart of Speyside whisky country, where Aberdeen Angus cattle graze beneath baronial turrets.",
+    "description": "The 'Pearl of the North' - a lived-in 16th-century castle in the heart of Speyside whisky country, where Aberdeen Angus cattle graze beneath baronial turrets.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ballindaloch_Castle.jpg/500px-Ballindaloch_Castle.jpg",
     "rating": 4.3,
     "reviewCount": 1100,
@@ -50610,7 +50607,7 @@ const CASTLES = [
     ],
     "access": "exterior-only",
     "_index": 1597,
-    "history": "Built between 1619 and 1627 by the Burnett family (also builders of Crathes Castle). Features remarkable decorative plasterwork ceilings — among the finest in northeast Scotland — and a great hall overmantle displaying the Royal Arms. The castle stands near dramatic coastal cliffs south of Stonehaven. Smugglers' tunnels allegedly connect the castle to the coast. Private but occasionally open.",
+    "history": "Built between 1619 and 1627 by the Burnett family (also builders of Crathes Castle). Features remarkable decorative plasterwork ceilings - among the finest in northeast Scotland - and a great hall overmantle displaying the Royal Arms. The castle stands near dramatic coastal cliffs south of Stonehaven. Smugglers' tunnels allegedly connect the castle to the coast. Private but occasionally open.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -50727,7 +50724,7 @@ const CASTLES = [
       "https://img.castlecore.uk/carbisdale-castle-4.jpg",
       "https://img.castlecore.uk/carbisdale-castle-5.jpg"
     ],
-    "history": "Built 1906-17 for Mary Caroline, Duchess of Sutherland, after a bitter legal battle over her husband's will. She positioned the castle's clock tower with faces on only three sides — the fourth facing the Sutherland estates was left blank as a final insult. Served as a youth hostel for decades. Features impressive marble staircase and baronial grandeur. Currently closed awaiting new use.",
+    "history": "Built 1906-17 for Mary Caroline, Duchess of Sutherland, after a bitter legal battle over her husband's will. She positioned the castle's clock tower with faces on only three sides - the fourth facing the Sutherland estates was left blank as a final insult. Served as a youth hostel for decades. Features impressive marble staircase and baronial grandeur. Currently closed awaiting new use.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -50888,7 +50885,7 @@ const CASTLES = [
       "https://img.castlecore.uk/balloch-castle-4.jpg",
       "https://img.castlecore.uk/balloch-castle-5.jpg"
     ],
-    "history": "Built in 1808 for John Buchanan of Ardoch in Gothic Revival style, replacing an earlier castle. The grounds became Balloch Castle Country Park in 1980 — 200 acres of gardens, woodland, and loch shore. The walled garden and formal grounds are particularly fine. The castle serves as a visitor centre. Located at the southern tip of Loch Lomond, Scotland's largest loch.",
+    "history": "Built in 1808 for John Buchanan of Ardoch in Gothic Revival style, replacing an earlier castle. The grounds became Balloch Castle Country Park in 1980 - 200 acres of gardens, woodland, and loch shore. The walled garden and formal grounds are particularly fine. The castle serves as a visitor centre. Located at the southern tip of Loch Lomond, Scotland's largest loch.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -50908,7 +50905,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A hauntingly beautiful ruined abbey near Stirling, with a soaring detached bell tower. The burial place of James III and his queen — Scotland's lost royal mausoleum.",
+    "description": "A hauntingly beautiful ruined abbey near Stirling, with a soaring detached bell tower. The burial place of James III and his queen - Scotland's lost royal mausoleum.",
     "image": "https://img.castlecore.uk/cambuskenneth-abbey.jpg",
     "rating": 4,
     "reviewCount": 420,
@@ -51023,7 +51020,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-15th century",
     "condition": "ruin",
-    "description": "Ruined tower house on the shores of Lunan Bay in Angus — one of Scotland's most beautiful beaches. Red sandstone fragments against white sand and blue sea.",
+    "description": "Ruined tower house on the shores of Lunan Bay in Angus - one of Scotland's most beautiful beaches. Red sandstone fragments against white sand and blue sea.",
     "image": "https://img.castlecore.uk/red-castle.jpg",
     "rating": 3.7,
     "reviewCount": 220,
@@ -51141,7 +51138,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "One of Scotland's oldest churches still in regular use — a beautiful Romanesque kirk near Elgin that has served its parish for nearly 900 years.",
+    "description": "One of Scotland's oldest churches still in regular use - a beautiful Romanesque kirk near Elgin that has served its parish for nearly 900 years.",
     "image": "https://img.castlecore.uk/birnie-kirk.jpg",
     "rating": 3.9,
     "reviewCount": 160,
@@ -51181,7 +51178,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century / 19th century rebuild",
     "condition": "intact",
-    "description": "Seat of the Earls of Moray, famous for its magnificent 15th-century hammerbeam roof — one of only two medieval hammerbeam roofs surviving in Scotland.",
+    "description": "Seat of the Earls of Moray, famous for its magnificent 15th-century hammerbeam roof - one of only two medieval hammerbeam roofs surviving in Scotland.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Darnaway_Castle_-_geograph.org.uk_-_13190.jpg/500px-Darnaway_Castle_-_geograph.org.uk_-_13190.jpg",
     "rating": 3.8,
     "reviewCount": 180,
@@ -51214,7 +51211,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "ruin",
-    "description": "Stark Georgian barracks rising from a Highland mound — built to crush the Jacobites, then burned by the very rebels it was meant to suppress after Culloden.",
+    "description": "Stark Georgian barracks rising from a Highland mound - built to crush the Jacobites, then burned by the very rebels it was meant to suppress after Culloden.",
     "image": "https://img.castlecore.uk/ruthven-barracks.jpg",
     "rating": 4.3,
     "reviewCount": 1400,
@@ -51236,7 +51233,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ruthven-barracks-4.jpg",
       "https://img.castlecore.uk/ruthven-barracks-5.jpg"
     ],
-    "history": "Built in 1719 on an ancient castle mound after the 1715 Jacobite rising, one of four government barracks to maintain order in the Highlands. Successfully defended against a Jacobite attack in 1745 by just 12 soldiers. After Culloden in 1746, defeated Jacobite forces gathered here expecting orders from Bonnie Prince Charlie — instead receiving word to scatter. They burned the barracks before dispersing.",
+    "history": "Built in 1719 on an ancient castle mound after the 1715 Jacobite rising, one of four government barracks to maintain order in the Highlands. Successfully defended against a Jacobite attack in 1745 by just 12 soldiers. After Culloden in 1746, defeated Jacobite forces gathered here expecting orders from Bonnie Prince Charlie - instead receiving word to scatter. They burned the barracks before dispersing.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -51257,7 +51254,7 @@ const CASTLES = [
     "era": "Medieval",
     "condition": "ruin",
     "description": "Fragmentary remains of a coastal fortification near the RSPB gannet colony at Troup Head, Aberdeenshire. The birds now outnumber the stones.",
-    "image": "https://img.castlecore.uk/troup-head-castle.jpg",
+    "image": "https://img.castlecore.uk/troup-head-castle-2.jpg",
     "rating": 3.4,
     "reviewCount": 90,
     "county": "Aberdeenshire",
@@ -51271,12 +51268,12 @@ const CASTLES = [
     "access": "free",
     "_index": 1618,
     "gallery": [
-      "https://img.castlecore.uk/troup-head-castle-2.jpg",
+      "https://img.castlecore.uk/troup-head-castle.jpg",
       "https://img.castlecore.uk/troup-head-castle-3.jpg",
       "https://img.castlecore.uk/troup-head-castle-4.jpg",
       "https://img.castlecore.uk/troup-head-castle-5.jpg"
     ],
-    "history": "Minimal remains of a castle or fortification on the dramatic cliffs at Troup Head. The headland is now famous for its mainland gannet colony — one of very few in Scotland — managed by the RSPB. The castle remains are secondary to the spectacular coastal scenery and wildlife. Located near Pennan on the Banffshire coast.",
+    "history": "Minimal remains of a castle or fortification on the dramatic cliffs at Troup Head. The headland is now famous for its mainland gannet colony - one of very few in Scotland - managed by the RSPB. The castle remains are secondary to the spectacular coastal scenery and wildlife. Located near Pennan on the Banffshire coast.",
     "sources": [
       {
         "name": "Canmore",
@@ -51310,7 +51307,7 @@ const CASTLES = [
       "https://img.castlecore.uk/kincardine-castle-4.jpg",
       "https://img.castlecore.uk/kincardine-castle-5.jpg"
     ],
-    "history": "A major royal castle from the 12th century, used as a residence by several Scottish kings. Kenneth II is said to have been murdered here in 995. The castle gave its name to the historic county of Kincardineshire. Very little survives above ground — the site was quarried for building material. Located near Fettercairn in the agricultural Mearns.",
+    "history": "A major royal castle from the 12th century, used as a residence by several Scottish kings. Kenneth II is said to have been murdered here in 995. The castle gave its name to the historic county of Kincardineshire. Very little survives above ground - the site was quarried for building material. Located near Fettercairn in the agricultural Mearns.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -51348,7 +51345,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dunecht-house-chapel-4.jpg",
       "https://img.castlecore.uk/dunecht-house-chapel-5.jpg"
     ],
-    "history": "Built in the 1870s for the 25th Earl of Crawford, who filled it with priceless Italian Renaissance art. The chapel made headlines in 1881 when the earl's embalmed body was stolen from its vault — the bizarre crime was not solved for months. The chapel features exceptional stained glass, carved woodwork, and marble. Part of the private Dunecht estate near Westhill.",
+    "history": "Built in the 1870s for the 25th Earl of Crawford, who filled it with priceless Italian Renaissance art. The chapel made headlines in 1881 when the earl's embalmed body was stolen from its vault - the bizarre crime was not solved for months. The chapel features exceptional stained glass, carved woodwork, and marble. Part of the private Dunecht estate near Westhill.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -51368,7 +51365,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "One of Scotland's oldest surviving castles — a simple 12th-century curtain wall enclosure near Nethy Bridge in Strathspey. Bare and ancient, with a Comyn ghost.",
+    "description": "One of Scotland's oldest surviving castles - a simple 12th-century curtain wall enclosure near Nethy Bridge in Strathspey. Bare and ancient, with a Comyn ghost.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Castle_Roy_-_geograph.org.uk_-_2069401.jpg/500px-Castle_Roy_-_geograph.org.uk_-_2069401.jpg",
     "rating": 3.7,
     "reviewCount": 180,
@@ -51388,7 +51385,7 @@ const CASTLES = [
       "https://img.castlecore.uk/castle-roy-4.jpg",
       "https://img.castlecore.uk/castle-roy-5.jpg"
     ],
-    "history": "A remarkably early stone castle, dating from the late 12th century. One of the oldest surviving stone castles in the Highlands. A simple rectangular enclosure with a projecting tower, built by the Comyn lords of Badenoch. Minimal decoration or domestic refinement — this is castle architecture at its most primal. Set near Nethy Bridge with views to the Cairngorms. Freely accessible.",
+    "history": "A remarkably early stone castle, dating from the late 12th century. One of the oldest surviving stone castles in the Highlands. A simple rectangular enclosure with a projecting tower, built by the Comyn lords of Badenoch. Minimal decoration or domestic refinement - this is castle architecture at its most primal. Set near Nethy Bridge with views to the Cairngorms. Freely accessible.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -51408,7 +51405,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "15th century",
     "condition": "intact",
-    "description": "A 15th-century chapel dripping with enigmatic stone carvings — every surface tells a story, from Green Men to the legendary Apprentice Pillar, immortalised in The Da Vinci Code.",
+    "description": "A 15th-century chapel dripping with enigmatic stone carvings - every surface tells a story, from Green Men to the legendary Apprentice Pillar, immortalised in The Da Vinci Code.",
     "image": "https://img.castlecore.uk/rosslyn-chapel.jpg",
     "rating": 4.6,
     "reviewCount": 8800,
@@ -51505,7 +51502,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 1625,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-amisfield-tower.jpg"
+      "https://img.castlecore.uk/wiki-amisfield-tower.jpg"
     ],
     "history": "Built around 1600 by the Charteris (Charrier) family. A tall rectangular tower house with corbelled turrets and a parapet walk. One of the most complete tower houses in Dumfriesshire. The castle later passed to various families. Set in the gentle Nithsdale landscape. Well-preserved exterior with limited access to the interior.",
     "sources": [
@@ -51527,7 +51524,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "5th century onwards",
     "condition": "ruin",
-    "description": "Scotland's cradle of Christianity — where St Ninian built his 'Candida Casa' in the 5th century. The earliest known Christian site in Scotland, still resonant with ancient sanctity.",
+    "description": "Scotland's cradle of Christianity - where St Ninian built his 'Candida Casa' in the 5th century. The earliest known Christian site in Scotland, still resonant with ancient sanctity.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Whithorn_Priory_20080423_nave.jpg/500px-Whithorn_Priory_20080423_nave.jpg",
     "rating": 4.2,
     "reviewCount": 580,
@@ -51548,7 +51545,7 @@ const CASTLES = [
       "https://img.castlecore.uk/whithorn-priory-4.jpg",
       "https://img.castlecore.uk/whithorn-priory-5.jpg"
     ],
-    "history": "Tradition holds that St Ninian founded a church here around 397 AD, making Whithorn the earliest Christian settlement in Scotland. The priory was established in the 12th century by Premonstratensian canons. An important medieval pilgrimage destination — even Scottish kings made the journey. Excavations have revealed continuous occupation from the 5th century. The Whithorn Trust museum displays remarkable finds.",
+    "history": "Tradition holds that St Ninian founded a church here around 397 AD, making Whithorn the earliest Christian settlement in Scotland. The priory was established in the 12th century by Premonstratensian canons. An important medieval pilgrimage destination - even Scottish kings made the journey. Excavations have revealed continuous occupation from the 5th century. The Whithorn Trust museum displays remarkable finds.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -51685,7 +51682,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "intact",
-    "description": "One of the best-preserved medieval castles in the British Isles — built for a Viking king on the Isle of Man, where 800 years of history guard Castletown harbour.",
+    "description": "One of the best-preserved medieval castles in the British Isles - built for a Viking king on the Isle of Man, where 800 years of history guard Castletown harbour.",
     "image": "https://img.castlecore.uk/rushen-castle.jpg",
     "rating": 4.5,
     "reviewCount": 2400,
@@ -51726,7 +51723,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "Scotland's finest Renaissance palace ruin — built by a tyrannical earl so cruel his execution was delayed while he learned the Lord's Prayer.",
+    "description": "Scotland's finest Renaissance palace ruin - built by a tyrannical earl so cruel his execution was delayed while he learned the Lord's Prayer.",
     "image": "https://img.castlecore.uk/earl-patrick-s-palace.jpg",
     "rating": 4.4,
     "reviewCount": 1400,
@@ -51746,7 +51743,7 @@ const CASTLES = [
       "https://img.castlecore.uk/earl-patrick-s-palace-4.jpg",
       "https://img.castlecore.uk/earl-patrick-s-palace-5.jpg"
     ],
-    "history": "Built c. 1606 by Patrick Stewart, Earl of Orkney, known as 'Black Patie' for his tyrannical rule of the Northern Isles from 1592. Adjacent to the 12th-century Bishop's Palace where King Haakon of Norway died in 1263 after the Battle of Largs. Earl Patrick was executed in 1615 — legend says his execution was delayed while he learned the Lord's Prayer. Considered one of Scotland's most elegant Renaissance buildings.",
+    "history": "Built c. 1606 by Patrick Stewart, Earl of Orkney, known as 'Black Patie' for his tyrannical rule of the Northern Isles from 1592. Adjacent to the 12th-century Bishop's Palace where King Haakon of Norway died in 1263 after the Battle of Largs. Earl Patrick was executed in 1615 - legend says his execution was delayed while he learned the Lord's Prayer. Considered one of Scotland's most elegant Renaissance buildings.",
     "sources": [
       {
         "name": "Historic Environment Scotland",
@@ -51822,7 +51819,7 @@ const CASTLES = [
     "gallery": [
       "https://img.castlecore.uk/windhouse-2.jpg"
     ],
-    "history": "Built in 1707, Windhouse was occupied until the 1920s and has stood empty since. Numerous ghost stories surround the building — a skeleton was found behind a wall during renovation work, and a woman in silk, a tall man, and a spectral dog are all said to haunt the premises. The ruin stands exposed on the moorland of Yell, one of Shetland's northern islands.",
+    "history": "Built in 1707, Windhouse was occupied until the 1920s and has stood empty since. Numerous ghost stories surround the building - a skeleton was found behind a wall during renovation work, and a woman in silk, a tall man, and a spectral dog are all said to haunt the premises. The ruin stands exposed on the moorland of Yell, one of Shetland's northern islands.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -51919,7 +51916,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Ruined stronghold of the MacDonald Lords of the Isles on the Sound of Mull. Where the Treaty of Ardtornish was signed — an audacious pact to divide Scotland with England.",
+    "description": "Ruined stronghold of the MacDonald Lords of the Isles on the Sound of Mull. Where the Treaty of Ardtornish was signed - an audacious pact to divide Scotland with England.",
     "image": "https://img.castlecore.uk/ardtornish-castle.jpg",
     "rating": 3.8,
     "reviewCount": 180,
@@ -52056,7 +52053,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ardchattan-priory-4.jpg",
       "https://img.castlecore.uk/ardchattan-priory-5.jpg"
     ],
-    "history": "Founded in 1230 by Duncan MacDougall for Valliscaulian monks — one of only three such houses in Scotland (with Beauly and Pluscarden). Robert the Bruce held a parliament here in 1308. The priory was burned by Cromwell's troops in 1654. The ruins include fine carved grave slabs in the chapter house. Adjacent Ardchattan House has a beautiful garden open to visitors.",
+    "history": "Founded in 1230 by Duncan MacDougall for Valliscaulian monks - one of only three such houses in Scotland (with Beauly and Pluscarden). Robert the Bruce held a parliament here in 1308. The priory was burned by Cromwell's troops in 1654. The ruins include fine carved grave slabs in the chapter house. Adjacent Ardchattan House has a beautiful garden open to visitors.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -52076,7 +52073,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "Medieval (in prehistoric landscape)",
     "condition": "intact",
-    "description": "A parish church at the heart of Kilmartin Glen — Scotland's richest prehistoric landscape — housing an outstanding collection of medieval carved grave slabs.",
+    "description": "A parish church at the heart of Kilmartin Glen - Scotland's richest prehistoric landscape - housing an outstanding collection of medieval carved grave slabs.",
     "image": "https://img.castlecore.uk/kilmartin-church.jpg",
     "rating": 4,
     "reviewCount": 380,
@@ -52136,7 +52133,7 @@ const CASTLES = [
       "https://img.castlecore.uk/kilwinning-abbey-4.jpg",
       "https://img.castlecore.uk/kilwinning-abbey-5.jpg"
     ],
-    "history": "Founded around 1162 by Tironensian monks, possibly by Hugh de Morville. The abbey was a major religious house in medieval Ayrshire. Legend connects it with the origins of Scottish Freemasonry — Lodge Mother Kilwinning No. 0 claims to be the oldest Masonic lodge in the world. An annual papingo (parrot) shooting contest has been held from the abbey tower since medieval times. Substantial ruins survive.",
+    "history": "Founded around 1162 by Tironensian monks, possibly by Hugh de Morville. The abbey was a major religious house in medieval Ayrshire. Legend connects it with the origins of Scottish Freemasonry - Lodge Mother Kilwinning No. 0 claims to be the oldest Masonic lodge in the world. An annual papingo (parrot) shooting contest has been held from the abbey tower since medieval times. Substantial ruins survive.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -52156,7 +52153,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "restored",
-    "description": "A Cluniac monastery with royal bones beneath its floors — burial place of Scotland's High Stewards and the mother of the royal Stewart dynasty.",
+    "description": "A Cluniac monastery with royal bones beneath its floors - burial place of Scotland's High Stewards and the mother of the royal Stewart dynasty.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Paisley_Abbey_from_North_West_-_Leaning_western_gable_-_125mp.jpg/500px-Paisley_Abbey_from_North_West_-_Leaning_western_gable_-_125mp.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
@@ -52215,7 +52212,7 @@ const CASTLES = [
       "https://img.castlecore.uk/kilmun-church-4.jpg",
       "https://img.castlecore.uk/kilmun-church-5.jpg"
     ],
-    "history": "The site has ancient Christian origins — St Munn (Fintan Munnu) established a church here in the 7th century. The current church dates from 1841 but incorporates a medieval tower. The Argyll Mausoleum holds the remains of the Campbell chiefs and Dukes of Argyll. The churchyard contains fine carved stones and a Celtic cross. Beautifully situated on the shores of Holy Loch.",
+    "history": "The site has ancient Christian origins - St Munn (Fintan Munnu) established a church here in the 7th century. The current church dates from 1841 but incorporates a medieval tower. The Argyll Mausoleum holds the remains of the Campbell chiefs and Dukes of Argyll. The churchyard contains fine carved stones and a Celtic cross. Beautifully situated on the shores of Holy Loch.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -52235,7 +52232,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "14th-15th century",
     "condition": "intact",
-    "description": "Edinburgh's dark crown jewel on the Royal Mile — a medieval cathedral whose distinctive crown steeple pierces the Scottish sky, steeped in the drama of reformers and kings.",
+    "description": "Edinburgh's dark crown jewel on the Royal Mile - a medieval cathedral whose distinctive crown steeple pierces the Scottish sky, steeped in the drama of reformers and kings.",
     "image": "https://img.castlecore.uk/st-giles-cathedral.jpg",
     "rating": 4.6,
     "reviewCount": 8800,
@@ -52277,7 +52274,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th-17th century",
     "condition": "intact",
-    "description": "The monarch's official Scottish residence, anchoring the Royal Mile in Edinburgh's shadow — where Mary Queen of Scots witnessed murder and monarchs still hold court.",
+    "description": "The monarch's official Scottish residence, anchoring the Royal Mile in Edinburgh's shadow - where Mary Queen of Scots witnessed murder and monarchs still hold court.",
     "image": "https://img.castlecore.uk/palace-of-holyroodhouse.jpg",
     "rating": 4.5,
     "reviewCount": 12000,
@@ -52341,7 +52338,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dunkeld-cathedral-4.jpg",
       "https://img.castlecore.uk/dunkeld-cathedral-5.jpg"
     ],
-    "history": "In 849, King Kenneth MacAlpin brought relics of St Columba from Iona to Dunkeld to protect them from Viking raids, establishing it as a major ecclesiastical centre. The cathedral combines Gothic and Norman elements — the nave stands in picturesque ruin while the choir remains in active use as a parish church. Columba's bones were kept here until the Reformation.",
+    "history": "In 849, King Kenneth MacAlpin brought relics of St Columba from Iona to Dunkeld to protect them from Viking raids, establishing it as a major ecclesiastical centre. The cathedral combines Gothic and Norman elements - the nave stands in picturesque ruin while the choir remains in active use as a parish church. Columba's bones were kept here until the Reformation.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -52400,7 +52397,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Earthwork remains of a significant medieval castle near Dalbeattie, Galloway. The Balliol family seat — birthplace of a king, now just green mounds in a quiet field.",
+    "description": "Earthwork remains of a significant medieval castle near Dalbeattie, Galloway. The Balliol family seat - birthplace of a king, now just green mounds in a quiet field.",
     "image": "https://img.castlecore.uk/buittle-castle.jpg",
     "rating": 3.4,
     "reviewCount": 60,
@@ -52418,7 +52415,7 @@ const CASTLES = [
       "https://img.castlecore.uk/buittle-castle-4.jpg",
       "https://img.castlecore.uk/buittle-castle-5.jpg"
     ],
-    "history": "A major medieval castle of the Balliol family — John Balliol, who became King of Scotland in 1292, was associated with this site. The castle was an important centre of lordship in Galloway. Now only earthworks survive — a motte and bailey in farmland near the village of Buittle. The site's historical significance far outweighs its physical remains.",
+    "history": "A major medieval castle of the Balliol family - John Balliol, who became King of Scotland in 1292, was associated with this site. The castle was an important centre of lordship in Galloway. Now only earthworks survive - a motte and bailey in farmland near the village of Buittle. The site's historical significance far outweighs its physical remains.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -52477,7 +52474,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "One of Scotland's oldest continuously inhabited castles — a massive 14th-century tower in Nithsdale, held by the Kirkpatricks for 500 years.",
+    "description": "One of Scotland's oldest continuously inhabited castles - a massive 14th-century tower in Nithsdale, held by the Kirkpatricks for 500 years.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Castle_1.jpg/500px-Castle_1.jpg",
     "rating": 3.5,
     "reviewCount": 60,
@@ -52548,7 +52545,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th-15th century",
     "condition": "intact",
-    "description": "Scotland's finest medieval cathedral — miraculously unscathed by the Reformation, its atmospheric lower church and forest of stone pillars guard the tomb of St Mungo.",
+    "description": "Scotland's finest medieval cathedral - miraculously unscathed by the Reformation, its atmospheric lower church and forest of stone pillars guard the tomb of St Mungo.",
     "image": "https://img.castlecore.uk/glasgow-cathedral.jpg",
     "rating": 4.7,
     "reviewCount": 8200,
@@ -52590,7 +52587,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "19th century (ancient site)",
     "condition": "intact",
-    "description": "A tiny Highland church in Glen Lyon sheltering the Fortingall Yew — possibly the oldest living thing in Europe, estimated at 3,000-9,000 years old.",
+    "description": "A tiny Highland church in Glen Lyon sheltering the Fortingall Yew - possibly the oldest living thing in Europe, estimated at 3,000-9,000 years old.",
     "image": "https://img.castlecore.uk/fortingall-church.jpg",
     "rating": 4,
     "reviewCount": 480,
@@ -52665,7 +52662,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century onwards",
     "condition": "intact",
-    "description": "Scotland's oldest castle in continuous habitation — a 13th-century fortress made psychedelic by Brazilian graffiti artists, set in a Glen of exotic trees and adventure trails.",
+    "description": "Scotland's oldest castle in continuous habitation - a 13th-century fortress made psychedelic by Brazilian graffiti artists, set in a Glen of exotic trees and adventure trails.",
     "image": "https://img.castlecore.uk/kelburn-castle.jpg",
     "rating": 4.1,
     "reviewCount": 1200,
@@ -52687,7 +52684,7 @@ const CASTLES = [
       "https://img.castlecore.uk/kelburn-castle-4.jpg",
       "https://img.castlecore.uk/kelburn-castle-5.jpg"
     ],
-    "history": "One of Scotland's oldest castles, with original parts dating to the 13th century. Ancestral seat of the Boyle family, Earls of Glasgow, for over 800 years. In 2007, when the castle needed re-harling, Lord Glasgow invited four Brazilian graffiti artists (including Os Gêmeos) to paint the exterior in vivid colours. Historic Scotland approved on condition the art would be temporary — but it remains, making it one of Scotland's most Instagram-worthy castles.",
+    "history": "One of Scotland's oldest castles, with original parts dating to the 13th century. Ancestral seat of the Boyle family, Earls of Glasgow, for over 800 years. In 2007, when the castle needed re-harling, Lord Glasgow invited four Brazilian graffiti artists (including Os Gêmeos) to paint the exterior in vivid colours. Historic Scotland approved on condition the art would be temporary - but it remains, making it one of Scotland's most Instagram-worthy castles.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -52785,7 +52782,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "The finest Romanesque church in Scotland — St Athernase's apse and chancel are a masterwork of 12th-century carved stonework. A medieval jewel in a Fife village.",
+    "description": "The finest Romanesque church in Scotland - St Athernase's apse and chancel are a masterwork of 12th-century carved stonework. A medieval jewel in a Fife village.",
     "image": "https://img.castlecore.uk/leuchars-norman-church.jpg",
     "rating": 4.2,
     "reviewCount": 380,
@@ -52805,7 +52802,7 @@ const CASTLES = [
       "https://img.castlecore.uk/leuchars-norman-church-4.jpg",
       "https://img.castlecore.uk/leuchars-norman-church-5.jpg"
     ],
-    "history": "The church of St Athernase dates from the late 12th century and features an extraordinary apse with two tiers of interlaced arcading — the finest Romanesque architectural detail surviving in Scotland. The corbel table includes carved heads and animals. The nave was rebuilt in the 17th century. Located in the village of Leuchars near RAF Leuchars and St Andrews.",
+    "history": "The church of St Athernase dates from the late 12th century and features an extraordinary apse with two tiers of interlaced arcading - the finest Romanesque architectural detail surviving in Scotland. The corbel table includes carved heads and animals. The nave was rebuilt in the 17th century. Located in the village of Leuchars near RAF Leuchars and St Andrews.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -52825,7 +52822,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th-17th century",
     "condition": "intact",
-    "description": "A 16th-century merchant's house in Scotland's most perfectly preserved burgh — where painted ceilings glow and Outlander fans come to walk Cranesmuir's cobbles.",
+    "description": "A 16th-century merchant's house in Scotland's most perfectly preserved burgh - where painted ceilings glow and Outlander fans come to walk Cranesmuir's cobbles.",
     "image": "https://img.castlecore.uk/culross-palace.jpg",
     "rating": 4.5,
     "reviewCount": 2400,
@@ -52932,7 +52929,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "17th-18th century",
     "condition": "intact",
-    "description": "A small Mearns church where the Scottish Crown Jewels were hidden during Cromwell's occupation — one of the most daring acts of defiance in Scottish history.",
+    "description": "A small Mearns church where the Scottish Crown Jewels were hidden during Cromwell's occupation - one of the most daring acts of defiance in Scottish history.",
     "image": "https://img.castlecore.uk/kinneff-church.jpg",
     "rating": 3.9,
     "reviewCount": 220,
@@ -52971,7 +52968,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Ruins of a Cistercian abbey in Buchan, associated with the famous Book of Deer — one of Scotland's oldest surviving manuscripts, containing the earliest known Gaelic text from Scotland.",
+    "description": "Ruins of a Cistercian abbey in Buchan, associated with the famous Book of Deer - one of Scotland's oldest surviving manuscripts, containing the earliest known Gaelic text from Scotland.",
     "image": "https://img.castlecore.uk/deer-abbey.jpg",
     "rating": 4,
     "reviewCount": 320,
@@ -52991,7 +52988,7 @@ const CASTLES = [
       "https://img.castlecore.uk/deer-abbey-4.jpg",
       "https://img.castlecore.uk/deer-abbey-5.jpg"
     ],
-    "history": "Founded in 1219 by William Comyn, Earl of Buchan, for Cistercian monks. The abbey is associated with the Book of Deer, a 10th-century gospel book with marginal notes in Scots Gaelic — the earliest surviving Gaelic text from Scotland. The ruins include walls of the church, cloister, and domestic buildings. Set in peaceful Buchan countryside near Mintlaw.",
+    "history": "Founded in 1219 by William Comyn, Earl of Buchan, for Cistercian monks. The abbey is associated with the Book of Deer, a 10th-century gospel book with marginal notes in Scots Gaelic - the earliest surviving Gaelic text from Scotland. The ruins include walls of the church, cloister, and domestic buildings. Set in peaceful Buchan countryside near Mintlaw.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -53011,7 +53008,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "A beautifully preserved Romanesque church in the Aberdeenshire village of Monymusk, associated with the legendary Brecbennoch — the relic carried before Bruce's army at Bannockburn.",
+    "description": "A beautifully preserved Romanesque church in the Aberdeenshire village of Monymusk, associated with the legendary Brecbennoch - the relic carried before Bruce's army at Bannockburn.",
     "image": "https://img.castlecore.uk/monymusk-priory-church.jpg",
     "rating": 3.8,
     "reviewCount": 120,
@@ -53031,7 +53028,7 @@ const CASTLES = [
       "https://img.castlecore.uk/monymusk-priory-church-4.jpg",
       "https://img.castlecore.uk/monymusk-priory-church-5.jpg"
     ],
-    "history": "Founded as an Augustinian priory in the 12th century. The church retains fine Romanesque architectural features. Associated with the Brecbennoch of St Columba — a reliquary that was carried before Robert the Bruce's army at Bannockburn in 1314 (now identified as the Monymusk Reliquary in the National Museum of Scotland). Still in use as the parish church of Monymusk.",
+    "history": "Founded as an Augustinian priory in the 12th century. The church retains fine Romanesque architectural features. Associated with the Brecbennoch of St Columba - a reliquary that was carried before Robert the Bruce's army at Bannockburn in 1314 (now identified as the Monymusk Reliquary in the National Museum of Scotland). Still in use as the parish church of Monymusk.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -53051,7 +53048,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A ruined medieval church near Inverurie in Aberdeenshire, notable for a remarkably fine sacrament house — one of the best examples of pre-Reformation church furnishing in Scotland.",
+    "description": "A ruined medieval church near Inverurie in Aberdeenshire, notable for a remarkably fine sacrament house - one of the best examples of pre-Reformation church furnishing in Scotland.",
     "image": "https://img.castlecore.uk/kinkell-church.jpg",
     "rating": 3.7,
     "reviewCount": 80,
@@ -53142,7 +53139,7 @@ const CASTLES = [
       "https://img.castlecore.uk/leith-hall-2.jpg",
       "https://img.castlecore.uk/leith-hall-3.jpg"
     ],
-    "history": "Built from 1650 onwards by the Leith family (later Leith-Hay), with each generation adding to the house. The family had a strong military tradition — seven successive lairds served in the army. The house contains fascinating personal memorabilia, and the grounds include a walled garden, woodland walks, and a bird observation hide. Managed by the National Trust for Scotland.",
+    "history": "Built from 1650 onwards by the Leith family (later Leith-Hay), with each generation adding to the house. The family had a strong military tradition - seven successive lairds served in the army. The house contains fascinating personal memorabilia, and the grounds include a walled garden, woodland walks, and a bird observation hide. Managed by the National Trust for Scotland.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -53298,7 +53295,7 @@ const CASTLES = [
     ],
     "access": "exterior-only",
     "_index": 1686,
-    "history": "Built in the 15th century, possibly as a residence associated with the Bishops of Dunkeld. The tower stands in the historic village of Cramond, where the River Almond meets the Firth of Forth. Cramond also has significant Roman remains — a fort and bathhouse. The village is one of Edinburgh's most attractive suburbs, popular for walks along the shore.",
+    "history": "Built in the 15th century, possibly as a residence associated with the Bishops of Dunkeld. The tower stands in the historic village of Cramond, where the River Almond meets the Firth of Forth. Cramond also has significant Roman remains - a fort and bathhouse. The village is one of Edinburgh's most attractive suburbs, popular for walks along the shore.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -53318,7 +53315,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "restored",
-    "description": "The 15th-century tower house where John Napier invented logarithms — now incorporated into Edinburgh Napier University. A castle that changed mathematics forever.",
+    "description": "The 15th-century tower house where John Napier invented logarithms - now incorporated into Edinburgh Napier University. A castle that changed mathematics forever.",
     "image": "https://img.castlecore.uk/merchiston-castle.jpg",
     "rating": 3.4,
     "reviewCount": 120,
@@ -53335,7 +53332,7 @@ const CASTLES = [
       "https://img.castlecore.uk/merchiston-castle-4.jpg",
       "https://img.castlecore.uk/merchiston-castle-5.jpg"
     ],
-    "history": "Built around 1454 by the Napier family. Most famous as the birthplace and home of John Napier (1550-1617), who invented logarithms and popularised the decimal point — fundamental contributions to mathematics. The L-plan tower house was incorporated into Edinburgh Napier University's Merchiston campus. The tower itself has been restored and can be visited by arrangement.",
+    "history": "Built around 1454 by the Napier family. Most famous as the birthplace and home of John Napier (1550-1617), who invented logarithms and popularised the decimal point - fundamental contributions to mathematics. The L-plan tower house was incorporated into Edinburgh Napier University's Merchiston campus. The tower itself has been restored and can be visited by arrangement.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -53443,7 +53440,7 @@ const CASTLES = [
       "https://img.castlecore.uk/newark-castle-borders-4.jpg",
       "https://img.castlecore.uk/newark-castle-borders-5.jpg"
     ],
-    "history": "A 15th-century tower house in Selkirkshire, held by the Scotts of Buccleuch. In 1645, after the Covenanter victory at Philiphaugh, up to 100 Royalist prisoners — many of them Irish soldiers with their camp followers — were massacred in the castle barmkin. Sir Walter Scott used the castle as inspiration for parts of his poetry. Set in the beautiful Yarrow Valley near Selkirk.",
+    "history": "A 15th-century tower house in Selkirkshire, held by the Scotts of Buccleuch. In 1645, after the Covenanter victory at Philiphaugh, up to 100 Royalist prisoners - many of them Irish soldiers with their camp followers - were massacred in the castle barmkin. Sir Walter Scott used the castle as inspiration for parts of his poetry. Set in the beautiful Yarrow Valley near Selkirk.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -53463,7 +53460,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "Sir Walter Scott's dream made stone — a Scottish baronial fantasy on the banks of the Tweed, stuffed with relics and the inspiration for a literary revolution.",
+    "description": "Sir Walter Scott's dream made stone - a Scottish baronial fantasy on the banks of the Tweed, stuffed with relics and the inspiration for a literary revolution.",
     "image": "https://img.castlecore.uk/abbotsford-house.jpg",
     "rating": 4.5,
     "reviewCount": 2800,
@@ -53506,7 +53503,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century onwards",
     "condition": "intact",
-    "description": "Scotland's oldest continuously inhabited house — a romantic white-harled mansion in the Tweed valley that has sheltered 27 Scottish monarchs and hidden Catholic priests.",
+    "description": "Scotland's oldest continuously inhabited house - a romantic white-harled mansion in the Tweed valley that has sheltered 27 Scottish monarchs and hidden Catholic priests.",
     "image": "https://img.castlecore.uk/wiki-traquair-house.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
@@ -53582,7 +53579,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A small heritage centre on the Orkney island of Wyre, near the oldest Norse castle in Scotland — Cubbie Roo's Castle — and an atmospheric medieval chapel.",
+    "description": "A small heritage centre on the Orkney island of Wyre, near the oldest Norse castle in Scotland - Cubbie Roo's Castle - and an atmospheric medieval chapel.",
     "image": "https://img.castlecore.uk/wyre-heritage-centre.jpg",
     "rating": 3.6,
     "reviewCount": 80,
@@ -53655,7 +53652,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Demolished 1953",
     "condition": "ruin",
-    "description": "The vanished seat of the Mackenzie Earls of Seaforth, famous for the Brahan Seer — Scotland's most celebrated prophet, who was burned here in a barrel of tar.",
+    "description": "The vanished seat of the Mackenzie Earls of Seaforth, famous for the Brahan Seer - Scotland's most celebrated prophet, who was burned here in a barrel of tar.",
     "image": "https://img.castlecore.uk/brahan-castle-site.jpg",
     "rating": 3.3,
     "reviewCount": 60,
@@ -53712,7 +53709,7 @@ const CASTLES = [
       "https://img.castlecore.uk/kilravock-castle-4.jpg",
       "https://img.castlecore.uk/kilravock-castle-5.jpg"
     ],
-    "history": "The oldest part dates from 1460, built by Hugh Rose, 7th Baron of Kilravock. Bonnie Prince Charlie visited and dined here on 14 April 1746 — the night before Culloden. The Duke of Cumberland called the following day. The Rose family has held the castle continuously since 1293. Features include a 15th-century keep and later baronial additions. Open for B&B and tours.",
+    "history": "The oldest part dates from 1460, built by Hugh Rose, 7th Baron of Kilravock. Bonnie Prince Charlie visited and dined here on 14 April 1746 - the night before Culloden. The Duke of Cumberland called the following day. The Rose family has held the castle continuously since 1293. Features include a 15th-century keep and later baronial additions. Open for B&B and tours.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -53732,7 +53729,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "A pink-harled fairytale tower rising from Aberdeenshire woodland — said to have inspired Disney's Cinderella Castle. Seven storeys of Scottish Baronial perfection.",
+    "description": "A pink-harled fairytale tower rising from Aberdeenshire woodland - said to have inspired Disney's Cinderella Castle. Seven storeys of Scottish Baronial perfection.",
     "image": "https://img.castlecore.uk/craigevar-castle-grounds.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -53838,7 +53835,7 @@ const CASTLES = [
       "https://img.castlecore.uk/craggaunowen-castle-4.jpg",
       "https://img.castlecore.uk/craggaunowen-castle-5.jpg"
     ],
-    "history": "Craggaunowen near Quin, County Clare, is a reconstructed heritage site centred on a restored 16th-century tower house. The site includes recreated crannogs, ring forts, and the Brendan Boat—a leather-hulled currach in which Tim Severin sailed to North America in 1976, proving St Brendan's legendary 6th-century voyage was technically possible.",
+    "history": "Craggaunowen near Quin, County Clare, is a reconstructed heritage site centred on a restored 16th-century tower house. The site includes recreated crannogs, ring forts, and the Brendan Boat-a leather-hulled currach in which Tim Severin sailed to North America in 1976, proving St Brendan's legendary 6th-century voyage was technically possible.",
     "sources": [
       {
         "name": "Shannon Heritage",
@@ -53997,7 +53994,7 @@ const CASTLES = [
       "https://img.castlecore.uk/james-fort-4.jpg",
       "https://img.castlecore.uk/james-fort-5.jpg"
     ],
-    "history": "James Fort on the eastern shore of Kinsale Harbour, County Cork, was built in 1602 following the Battle of Kinsale (1601)—the defeat that ended Gaelic Ireland's last major military resistance. The substantial star-shaped fortification was later superseded by Charles Fort across the harbour but remains an impressive military monument with fine harbour views.",
+    "history": "James Fort on the eastern shore of Kinsale Harbour, County Cork, was built in 1602 following the Battle of Kinsale (1601)-the defeat that ended Gaelic Ireland's last major military resistance. The substantial star-shaped fortification was later superseded by Charles Fort across the harbour but remains an impressive military monument with fine harbour views.",
     "sources": [
       {
         "name": "Cork Heritage",
@@ -54070,7 +54067,7 @@ const CASTLES = [
     "access": "free",
     "_index": 1724,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-kilcooly-abbey.jpg"
+      "https://img.castlecore.uk/wiki-kilcooly-abbey.jpg"
     ],
     "history": "Kilcooly Abbey near Urlingford, County Tipperary, is a Cistercian monastery founded in 1184. After being damaged in the 15th century, it was rebuilt with extraordinary stone carvings including a remarkable sacristy doorway and a unique cloister arcade with figural sculptures. The quality of the stone carving rivals any medieval site in Ireland.",
     "sources": [
@@ -54243,7 +54240,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Neolithic-Medieval",
     "condition": "ruin",
-    "description": "The ancient seat of the High Kings of Ireland—a sacred hilltop where kingship, mythology, and archaeology converge in the most symbolically charged landscape in the country.",
+    "description": "The ancient seat of the High Kings of Ireland-a sacred hilltop where kingship, mythology, and archaeology converge in the most symbolically charged landscape in the country.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Stone_of_Destiny_2018-07-24.jpg/500px-Stone_of_Destiny_2018-07-24.jpg",
     "rating": 4.4,
     "reviewCount": 800,
@@ -54363,7 +54360,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A unique National Trust estate with two architectural personalities—Classical on one side, Gothic on the other—reflecting a husband and wife who couldn't agree on style.",
+    "description": "A unique National Trust estate with two architectural personalities-Classical on one side, Gothic on the other-reflecting a husband and wife who couldn't agree on style.",
     "image": "https://img.castlecore.uk/castle-ward.jpg",
     "rating": 4.5,
     "reviewCount": 800,
@@ -54404,7 +54401,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "15th century",
     "condition": "ruin",
-    "description": "Franciscan friary ruins on the banks of Donegal Bay, where the Annals of the Four Masters—Ireland's greatest historical chronicle—were compiled.",
+    "description": "Franciscan friary ruins on the banks of Donegal Bay, where the Annals of the Four Masters-Ireland's greatest historical chronicle-were compiled.",
     "image": "https://img.castlecore.uk/donegal-abbey.jpg",
     "rating": 4.1,
     "reviewCount": 200,
@@ -54760,7 +54757,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "6th-12th century",
     "condition": "ruin",
-    "description": "A mystical early Christian monastery nestled in the 'Valley of Two Lakes' — round tower piercing the Wicklow sky, Celtic crosses standing sentinel among ancient graves.",
+    "description": "A mystical early Christian monastery nestled in the 'Valley of Two Lakes' - round tower piercing the Wicklow sky, Celtic crosses standing sentinel among ancient graves.",
     "image": "https://img.castlecore.uk/glendalough-monastic-site.jpg",
     "rating": 4.7,
     "reviewCount": 2000,
@@ -55249,7 +55246,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dunsoghly-castle-4.jpg",
       "https://img.castlecore.uk/dunsoghly-castle-5.jpg"
     ],
-    "history": "Dunsoghly Castle near Dublin Airport is one of the most important medieval buildings in Ireland—one of only a handful of tower houses to retain its original medieval timber roof. Built by the Plunkett family around 1450, the four-storey castle is remarkably well preserved. The roof timbers have been tree-ring dated to confirm their medieval origin.",
+    "history": "Dunsoghly Castle near Dublin Airport is one of the most important medieval buildings in Ireland-one of only a handful of tower houses to retain its original medieval timber roof. Built by the Plunkett family around 1450, the four-storey castle is remarkably well preserved. The roof timbers have been tree-ring dated to confirm their medieval origin.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -55308,7 +55305,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century (1785)",
     "condition": "restored",
-    "description": "A tiny classical temple teetering on a 120-foot cliff above the Atlantic — built as a bishop's library and modelled on the Temple of Vesta in Tivoli, with Game of Thrones coastline stretching below.",
+    "description": "A tiny classical temple teetering on a 120-foot cliff above the Atlantic - built as a bishop's library and modelled on the Temple of Vesta in Tivoli, with Game of Thrones coastline stretching below.",
     "image": "https://img.castlecore.uk/mussenden-temple.jpg",
     "rating": 4.6,
     "reviewCount": 1200,
@@ -55768,7 +55765,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "A medieval Cistercian abbey on Clare Island featuring rare and extraordinary 13th-century wall paintings—unique survivors in western Ireland.",
+    "description": "A medieval Cistercian abbey on Clare Island featuring rare and extraordinary 13th-century wall paintings-unique survivors in western Ireland.",
     "image": "https://img.castlecore.uk/clare-island-abbey.jpg",
     "rating": 4,
     "reviewCount": 100,
@@ -55787,7 +55784,7 @@ const CASTLES = [
       "https://img.castlecore.uk/clare-island-abbey-4.jpg",
       "https://img.castlecore.uk/clare-island-abbey-5.jpg"
     ],
-    "history": "Clare Island Abbey on Clare Island, County Mayo, is a medieval Cistercian (or Carmelite) foundation notable for its extraordinary 13th-century ceiling paintings—the only surviving medieval wall paintings in the west of Ireland. The paintings depict mythological and religious scenes. Grace O'Malley is traditionally buried in the abbey.",
+    "history": "Clare Island Abbey on Clare Island, County Mayo, is a medieval Cistercian (or Carmelite) foundation notable for its extraordinary 13th-century ceiling paintings-the only surviving medieval wall paintings in the west of Ireland. The paintings depict mythological and religious scenes. Grace O'Malley is traditionally buried in the abbey.",
     "sources": [
       {
         "name": "Clare Island",
@@ -55867,7 +55864,7 @@ const CASTLES = [
       "https://img.castlecore.uk/abbey-knockmoy-4.jpg",
       "https://img.castlecore.uk/abbey-knockmoy-5.jpg"
     ],
-    "history": "Knockmoy Abbey near Abbeyknockmoy, County Galway, was a Cistercian monastery founded in 1190 by Cathal Crobdearg O'Connor, King of Connacht. The abbey preserves rare medieval wall paintings including the 'Three Living and Three Dead'—a memento mori showing three kings encountering three skeletal figures. These are among the finest surviving medieval wall paintings in Ireland.",
+    "history": "Knockmoy Abbey near Abbeyknockmoy, County Galway, was a Cistercian monastery founded in 1190 by Cathal Crobdearg O'Connor, King of Connacht. The abbey preserves rare medieval wall paintings including the 'Three Living and Three Dead'-a memento mori showing three kings encountering three skeletal figures. These are among the finest surviving medieval wall paintings in Ireland.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -55947,7 +55944,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ballycurrin-castle-4.jpg",
       "https://img.castlecore.uk/ballycurrin-castle-5.jpg"
     ],
-    "history": "Ballycurrin Castle on Lough Corrib, County Galway, occupies a dramatic headland position on Ireland's largest lake. The castle dates to the medieval period. The lighthouse beside it was built in the 19th century—one of the few inland lighthouses in Ireland, guiding boats through Lough Corrib's sometimes treacherous waters.",
+    "history": "Ballycurrin Castle on Lough Corrib, County Galway, occupies a dramatic headland position on Ireland's largest lake. The castle dates to the medieval period. The lighthouse beside it was built in the 19th century-one of the few inland lighthouses in Ireland, guiding boats through Lough Corrib's sometimes treacherous waters.",
     "sources": [
       {
         "name": "Galway Heritage",
@@ -56085,7 +56082,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th-17th century",
     "condition": "ruin",
-    "description": "A dramatic composite castle on the edge of the Burren—a medieval tower married to a grand 17th-century fortified house by the fierce Maire Rua.",
+    "description": "A dramatic composite castle on the edge of the Burren-a medieval tower married to a grand 17th-century fortified house by the fierce Maire Rua.",
     "image": "https://img.castlecore.uk/lemaneagh-castle.jpg",
     "rating": 4,
     "reviewCount": 100,
@@ -56144,7 +56141,7 @@ const CASTLES = [
       "https://img.castlecore.uk/clonmel-west-gate-4.jpg",
       "https://img.castlecore.uk/clonmel-west-gate-5.jpg"
     ],
-    "history": "The West Gate is the only surviving gate of Clonmel's medieval town walls. Clonmel is the largest town in County Tipperary and has a rich medieval heritage. The town walls were substantial enough for the garrison to resist Oliver Cromwell's forces for several weeks in 1650—one of the few towns to offer serious resistance.",
+    "history": "The West Gate is the only surviving gate of Clonmel's medieval town walls. Clonmel is the largest town in County Tipperary and has a rich medieval heritage. The town walls were substantial enough for the garrison to resist Oliver Cromwell's forces for several weeks in 1650-one of the few towns to offer serious resistance.",
     "sources": [
       {
         "name": "Tipperary Heritage",
@@ -56185,7 +56182,7 @@ const CASTLES = [
       "https://img.castlecore.uk/monaincha-abbey-4.jpg",
       "https://img.castlecore.uk/monaincha-abbey-5.jpg"
     ],
-    "history": "Monaincha Abbey near Roscrea, County Tipperary, was originally on an island in a bog lake (now drained). The site preserves a fine 12th-century Romanesque church and a high cross. The extraordinary setting—a stone church apparently standing in the middle of flat bogland—creates one of Ireland's most unusual heritage scenes.",
+    "history": "Monaincha Abbey near Roscrea, County Tipperary, was originally on an island in a bog lake (now drained). The site preserves a fine 12th-century Romanesque church and a high cross. The extraordinary setting-a stone church apparently standing in the middle of flat bogland-creates one of Ireland's most unusual heritage scenes.",
     "sources": [
       {
         "name": "Tipperary Heritage",
@@ -56281,7 +56278,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "The ancestral home of the O'Conor Don—descendants of the last High Kings of Ireland—housing a treasure trove of manuscripts and the inaugural harp of the kings.",
+    "description": "The ancestral home of the O'Conor Don-descendants of the last High Kings of Ireland-housing a treasure trove of manuscripts and the inaugural harp of the kings.",
     "image": "https://img.castlecore.uk/clonalis-house.jpg",
     "rating": 4,
     "reviewCount": 100,
@@ -56416,7 +56413,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lough-navar-castle-4.jpg",
       "https://img.castlecore.uk/lough-navar-castle-5.jpg"
     ],
-    "history": "Lough Navar Forest in County Fermanagh includes castle ruins and offers the famous Cliffs of Magho viewpoint—one of the finest panoramic views in Ireland, stretching across Lower Lough Erne to the Donegal mountains. The forest park contains trails, wildlife habitats, and historical features.",
+    "history": "Lough Navar Forest in County Fermanagh includes castle ruins and offers the famous Cliffs of Magho viewpoint-one of the finest panoramic views in Ireland, stretching across Lower Lough Erne to the Donegal mountains. The forest park contains trails, wildlife habitats, and historical features.",
     "sources": [
       {
         "name": "Fermanagh Heritage",
@@ -56552,7 +56549,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "N/A",
     "condition": "ruin",
-    "description": "The tiny island in Lough Gill that inspired W.B. Yeats' most beloved poem—'I will arise and go now, and go to Innisfree.'",
+    "description": "The tiny island in Lough Gill that inspired W.B. Yeats' most beloved poem-'I will arise and go now, and go to Innisfree.'",
     "image": "https://img.castlecore.uk/innisfree-island.jpg",
     "rating": 3.9,
     "reviewCount": 80,
@@ -57250,7 +57247,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "5th-12th century",
     "condition": "ruin",
-    "description": "See Mahee Island Nendrum—one of the most complete early Christian monastic enclosures in Ireland, on a tidal island in Strangford Lough.",
+    "description": "See Mahee Island Nendrum-one of the most complete early Christian monastic enclosures in Ireland, on a tidal island in Strangford Lough.",
     "image": "https://img.castlecore.uk/nendrum-monastic-site.jpg",
     "rating": 4.2,
     "reviewCount": 150,
@@ -57290,7 +57287,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A tiny Tudor fort perched on a volcanic crag above Holy Island — reimagined by Lutyens into an Arts & Crafts fantasy, accessible only when the tides allow.",
+    "description": "A tiny Tudor fort perched on a volcanic crag above Holy Island - reimagined by Lutyens into an Arts & Crafts fantasy, accessible only when the tides allow.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/LindisfarneCastleHolyIsland.jpg/500px-LindisfarneCastleHolyIsland.jpg",
     "rating": 4.5,
     "reviewCount": 5500,
@@ -57361,7 +57358,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-12th century",
     "condition": "ruin",
-    "description": "Massive earthworks of a once-formidable Norman castle in a quiet Lincolnshire village—its motte and ditches so imposing they dwarf the houses clustered at their feet. A castle that shaped the village's very name.",
+    "description": "Massive earthworks of a once-formidable Norman castle in a quiet Lincolnshire village-its motte and ditches so imposing they dwarf the houses clustered at their feet. A castle that shaped the village's very name.",
     "image": "https://img.castlecore.uk/castle-bytham-castle.jpg",
     "rating": 3.5,
     "reviewCount": 200,
@@ -57396,7 +57393,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "One of England's best-preserved medieval manor houses — a magnificent timber-framed great hall where Henry VIII and the Mayflower Pilgrims both left their mark.",
+    "description": "One of England's best-preserved medieval manor houses - a magnificent timber-framed great hall where Henry VIII and the Mayflower Pilgrims both left their mark.",
     "image": "https://img.castlecore.uk/gainsborough-old-hall.jpg",
     "rating": 4.4,
     "reviewCount": 1200,
@@ -57437,7 +57434,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th-14th century",
     "condition": "intact",
-    "description": "The 'Ship of the Fens' — a breathtaking cathedral whose unique octagonal lantern tower seems to float above the flat Cambridgeshire landscape like a medieval lighthouse.",
+    "description": "The 'Ship of the Fens' - a breathtaking cathedral whose unique octagonal lantern tower seems to float above the flat Cambridgeshire landscape like a medieval lighthouse.",
     "image": "https://img.castlecore.uk/ely-cathedral.jpg",
     "rating": 4.7,
     "reviewCount": 8000,
@@ -57462,7 +57459,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ely-cathedral-4.jpg",
       "https://img.castlecore.uk/ely-cathedral-5.jpg"
     ],
-    "history": "Founded as a monastery by St Etheldreda in 673 AD. The current Norman cathedral was begun in 1083. Its most extraordinary feature is the unique Octagon, built 1322-1334 after the original Norman tower collapsed, engineered by Alan of Walsingham — a marvel of medieval ingenuity with an 8-post wooden lantern weighing 400 tonnes. The Lady Chapel is the largest in England. Featured in films including The King's Speech.",
+    "history": "Founded as a monastery by St Etheldreda in 673 AD. The current Norman cathedral was begun in 1083. Its most extraordinary feature is the unique Octagon, built 1322-1334 after the original Norman tower collapsed, engineered by Alan of Walsingham - a marvel of medieval ingenuity with an 8-post wooden lantern weighing 400 tonnes. The Lady Chapel is the largest in England. Featured in films including The King's Speech.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -57482,7 +57479,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "partial",
-    "description": "A fascinating Cambridgeshire site that served three different religious orders—Benedictine monks, Knights Templar, and Franciscan nuns—each leaving their architectural mark on this layers-deep monastic palimpsest.",
+    "description": "A fascinating Cambridgeshire site that served three different religious orders-Benedictine monks, Knights Templar, and Franciscan nuns-each leaving their architectural mark on this layers-deep monastic palimpsest.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Denny_Abbey_2.JPG/500px-Denny_Abbey_2.JPG",
     "rating": 4,
     "reviewCount": 500,
@@ -57516,7 +57513,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th century",
     "condition": "intact",
-    "description": "England's longest cathedral nave — built from Roman brick scavenged from the ancient city of Verulamium, where the story of Britain's first Christian martyr has been told for 1,700 years.",
+    "description": "England's longest cathedral nave - built from Roman brick scavenged from the ancient city of Verulamium, where the story of Britain's first Christian martyr has been told for 1,700 years.",
     "image": "https://img.castlecore.uk/st-albans-abbey.jpg",
     "rating": 4.5,
     "reviewCount": 5000,
@@ -57560,7 +57557,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "Once one of the mightiest royal castles in England—where the Anarchy ended with a treaty between Stephen and Matilda's son. Now peaceful gardens and earthworks occupy the site where power once shifted the course of English history.",
+    "description": "Once one of the mightiest royal castles in England-where the Anarchy ended with a treaty between Stephen and Matilda's son. Now peaceful gardens and earthworks occupy the site where power once shifted the course of English history.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wallingford_castle_ruins.jpg/500px-Wallingford_castle_ruins.jpg",
     "rating": 3.9,
     "reviewCount": 800,
@@ -57597,7 +57594,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1st-4th century Roman",
     "condition": "ruin",
-    "description": "Where Roman Britain began — the very beach where Claudius's legions first came ashore in AD 43, now ringed by massive stone walls that guarded the empire's gateway for nearly four centuries.",
+    "description": "Where Roman Britain began - the very beach where Claudius's legions first came ashore in AD 43, now ringed by massive stone walls that guarded the empire's gateway for nearly four centuries.",
     "image": "https://img.castlecore.uk/richborough-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -57643,7 +57640,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "3rd century Roman / 12th century towers",
     "condition": "ruin",
-    "description": "Twin 12th-century towers of a vanished church stand dramatically against the Kent sky, perched on eroding cliffs above a Roman fort — haunting sentinels between land and sea.",
+    "description": "Twin 12th-century towers of a vanished church stand dramatically against the Kent sky, perched on eroding cliffs above a Roman fort - haunting sentinels between land and sea.",
     "image": "https://img.castlecore.uk/reculver-towers.jpg",
     "rating": 4.2,
     "reviewCount": 2000,
@@ -57705,7 +57702,7 @@ const CASTLES = [
       "https://img.castlecore.uk/nunwell-house-4.jpg",
       "https://img.castlecore.uk/nunwell-house-5.jpg"
     ],
-    "history": "The Oglander family has held Nunwell since 1100—nearly 900 years of continuous family occupation. The house incorporates Jacobean, Georgian, and Victorian elements. In 1647, King Charles I spent his last night as a relatively free man here before being escorted to Carisbrooke Castle and eventually to his trial and execution. Beautiful gardens with views across the Solent.",
+    "history": "The Oglander family has held Nunwell since 1100-nearly 900 years of continuous family occupation. The house incorporates Jacobean, Georgian, and Victorian elements. In 1647, King Charles I spent his last night as a relatively free man here before being escorted to Carisbrooke Castle and eventually to his trial and execution. Beautiful gardens with views across the Solent.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -57756,7 +57753,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "partial",
-    "description": "A baroque mansion born from an aristocratic family feud — built to outshine a cousin's nearby estate, set within magnificent gardens hiding a theatrical mock medieval castle on the hilltop.",
+    "description": "A baroque mansion born from an aristocratic family feud - built to outshine a cousin's nearby estate, set within magnificent gardens hiding a theatrical mock medieval castle on the hilltop.",
     "image": "https://img.castlecore.uk/wentworth-castle.jpg",
     "rating": 4.2,
     "reviewCount": 1500,
@@ -57803,7 +57800,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Cistercian ruins cradled in a limestone valley landscaped by Capability Brown — where Gothic transept walls still soar above the beck and the ghosts of white-robed monks linger in Yorkshire stone.",
+    "description": "Cistercian ruins cradled in a limestone valley landscaped by Capability Brown - where Gothic transept walls still soar above the beck and the ghosts of white-robed monks linger in Yorkshire stone.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Roche_Abbey_%28211961681%29.jpeg/500px-Roche_Abbey_%28211961681%29.jpeg",
     "rating": 4.1,
     "reviewCount": 800,
@@ -57849,7 +57846,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th century",
     "condition": "intact",
-    "description": "A Benedictine masterpiece at the heart of Yorkshire since 1069 — where Norman arches meet Gothic splendour and a 'Mitred Abbey' still serves its community.",
+    "description": "A Benedictine masterpiece at the heart of Yorkshire since 1069 - where Norman arches meet Gothic splendour and a 'Mitred Abbey' still serves its community.",
     "image": "https://img.castlecore.uk/selby-abbey.jpg",
     "rating": 4.5,
     "reviewCount": 2200,
@@ -57890,7 +57887,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "A Cluniac-turned-Benedictine priory with remarkably complete domestic buildings — its gatehouse and administrative wing surviving in the South Yorkshire suburbs like a medieval time capsule.",
+    "description": "A Cluniac-turned-Benedictine priory with remarkably complete domestic buildings - its gatehouse and administrative wing surviving in the South Yorkshire suburbs like a medieval time capsule.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/MonkBrettonPriory.jpg/500px-MonkBrettonPriory.jpg",
     "rating": 3.8,
     "reviewCount": 400,
@@ -57929,7 +57926,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "8th-16th century",
     "condition": "partial",
-    "description": "A Saxon fenland abbey founded on the site of St Guthlac's hermitage, whose spectacular ruined west front towers over the Lincolnshire marshes. The north aisle still serves as the parish church—a living fragment of 1,300 years of worship.",
+    "description": "A Saxon fenland abbey founded on the site of St Guthlac's hermitage, whose spectacular ruined west front towers over the Lincolnshire marshes. The north aisle still serves as the parish church-a living fragment of 1,300 years of worship.",
     "image": "https://img.castlecore.uk/crowland-abbey.jpg",
     "rating": 4.2,
     "reviewCount": 600,
@@ -57969,7 +57966,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th-14th century",
     "condition": "intact",
-    "description": "A Norman masterpiece reborn in Perpendicular splendour — its honey-gold cloisters doubled as Hogwarts corridors, and the Great East Window is a wall of medieval glass the size of a tennis court.",
+    "description": "A Norman masterpiece reborn in Perpendicular splendour - its honey-gold cloisters doubled as Hogwarts corridors, and the Great East Window is a wall of medieval glass the size of a tennis court.",
     "image": "https://img.castlecore.uk/gloucester-cathedral.jpg",
     "rating": 4.7,
     "reviewCount": 8000,
@@ -58014,7 +58011,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "partial",
-    "description": "The only private castle in England with a queen buried in its grounds — Katherine Parr's final home, where Tudor history meets Cotswolds romance in award-winning gardens.",
+    "description": "The only private castle in England with a queen buried in its grounds - Katherine Parr's final home, where Tudor history meets Cotswolds romance in award-winning gardens.",
     "image": "https://img.castlecore.uk/sudeley-castle.jpg",
     "rating": 4.5,
     "reviewCount": 5500,
@@ -58059,7 +58056,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century (demolished 18th century)",
     "condition": "ruin",
-    "description": "Almost nothing remains of the once-mighty castle that controlled the Welsh Marches from the county town of Herefordshire. Castle Green marks the site—a peaceful public park hiding centuries of turbulent border history beneath its turf.",
+    "description": "Almost nothing remains of the once-mighty castle that controlled the Welsh Marches from the county town of Herefordshire. Castle Green marks the site-a peaceful public park hiding centuries of turbulent border history beneath its turf.",
     "image": "https://img.castlecore.uk/hereford-castle.jpg",
     "rating": 3.5,
     "reviewCount": 300,
@@ -58093,7 +58090,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-14th century",
     "condition": "intact",
-    "description": "A Norman cathedral on the Severn's banks — where King John chose to be buried and the chapter house crypt descends into England's oldest surviving cathedral structure.",
+    "description": "A Norman cathedral on the Severn's banks - where King John chose to be buried and the chapter house crypt descends into England's oldest surviving cathedral structure.",
     "image": "https://img.castlecore.uk/worcester-cathedral.jpg",
     "rating": 4.6,
     "reviewCount": 5500,
@@ -58118,7 +58115,7 @@ const CASTLES = [
       "https://img.castlecore.uk/worcester-cathedral-4.jpg",
       "https://img.castlecore.uk/worcester-cathedral-5.jpg"
     ],
-    "history": "Founded as a priory in 680 AD by Bishop Bosel. The present building dates from the 12th-14th centuries. King John was buried here in 1216 — his tomb effigy is the oldest royal effigy in England. Prince Arthur, Henry VIII's elder brother, is also entombed here. The circular chapter house (c.1150) is one of the earliest in England. The crypt dates from 1084 and is the largest Norman crypt in England. Hosted the Three Choirs Festival since 1719.",
+    "history": "Founded as a priory in 680 AD by Bishop Bosel. The present building dates from the 12th-14th centuries. King John was buried here in 1216 - his tomb effigy is the oldest royal effigy in England. Prince Arthur, Henry VIII's elder brother, is also entombed here. The circular chapter house (c.1150) is one of the earliest in England. The crypt dates from 1084 and is the largest Norman crypt in England. Hosted the Three Choirs Festival since 1719.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -58138,7 +58135,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "11th century",
     "condition": "intact",
-    "description": "A Benedictine jewel at the foot of the Malvern Hills — renowned for medieval stained glass so vivid it rivals any cathedral in England.",
+    "description": "A Benedictine jewel at the foot of the Malvern Hills - renowned for medieval stained glass so vivid it rivals any cathedral in England.",
     "image": "https://img.castlecore.uk/great-malvern-priory.jpg",
     "rating": 4.5,
     "reviewCount": 2500,
@@ -58214,7 +58211,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "16th century (abbey: 8th century)",
     "condition": "partial",
-    "description": "A soaring 16th-century bell tower is all that survives of one of England's greatest Benedictine abbeys—a lonely vertical exclamation mark in a town built on the bones of monastic grandeur.",
+    "description": "A soaring 16th-century bell tower is all that survives of one of England's greatest Benedictine abbeys-a lonely vertical exclamation mark in a town built on the bones of monastic grandeur.",
     "image": "https://img.castlecore.uk/evesham-abbey-bell-tower.jpg",
     "rating": 4.1,
     "reviewCount": 600,
@@ -58249,7 +58246,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th-19th century",
     "condition": "ruin",
-    "description": "A breathtaking Italianate ruin frozen in time — once one of England's grandest palaces, now a hauntingly beautiful shell with spectacular fountains still dancing.",
+    "description": "A breathtaking Italianate ruin frozen in time - once one of England's grandest palaces, now a hauntingly beautiful shell with spectacular fountains still dancing.",
     "image": "https://img.castlecore.uk/witley-court.jpg",
     "rating": 4.5,
     "reviewCount": 3500,
@@ -58290,7 +58287,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Elizabethan (1604-05)",
     "condition": "ruin",
-    "description": "An unfinished Elizabethan lodge frozen in time — a Catholic rebel's defiant statement in stone, abandoned when its creator died and never touched since 1605.",
+    "description": "An unfinished Elizabethan lodge frozen in time - a Catholic rebel's defiant statement in stone, abandoned when its creator died and never touched since 1605.",
     "image": "https://img.castlecore.uk/lyveden-new-bield.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
@@ -58311,7 +58308,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lyveden-new-bield-4.jpg",
       "https://img.castlecore.uk/lyveden-new-bield-5.jpg"
     ],
-    "history": "Built c. 1604-05 by Sir Thomas Tresham, a fervent Catholic who was repeatedly imprisoned for his faith. Designed by Robert Stickells as a garden lodge in the shape of a cross, rich with Catholic symbolism. Work halted when Tresham died in 1605 — the same year his son Francis was implicated in the Gunpowder Plot. Never completed, never roofed, perfectly preserved in its unfinished state. National Trust.",
+    "history": "Built c. 1604-05 by Sir Thomas Tresham, a fervent Catholic who was repeatedly imprisoned for his faith. Designed by Robert Stickells as a garden lodge in the shape of a cross, rich with Catholic symbolism. Work halted when Tresham died in 1605 - the same year his son Francis was implicated in the Gunpowder Plot. Never completed, never roofed, perfectly preserved in its unfinished state. National Trust.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -58331,7 +58328,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A bizarre and beautiful Elizabethan folly where every single feature comes in threes — a defiant Catholic nobleman's architectural love letter to the Holy Trinity, hidden in Northamptonshire fields.",
+    "description": "A bizarre and beautiful Elizabethan folly where every single feature comes in threes - a defiant Catholic nobleman's architectural love letter to the Holy Trinity, hidden in Northamptonshire fields.",
     "image": "https://img.castlecore.uk/rushton-triangular-lodge.jpg",
     "rating": 4.4,
     "reviewCount": 1500,
@@ -58350,7 +58347,7 @@ const CASTLES = [
       "https://img.castlecore.uk/rushton-triangular-lodge-4.jpg",
       "https://img.castlecore.uk/rushton-triangular-lodge-5.jpg"
     ],
-    "history": "Built 1593-97 by Sir Thomas Tresham after spending 15 years imprisoned for his Catholic faith. Every element is designed around the number three: three sides, three floors, three windows on each face, trefoil decorations — all symbolising the Holy Trinity. Tresham's son Francis was later involved in the Gunpowder Plot. Managed by English Heritage.",
+    "history": "Built 1593-97 by Sir Thomas Tresham after spending 15 years imprisoned for his Catholic faith. Every element is designed around the number three: three sides, three floors, three windows on each face, trefoil decorations - all symbolising the Holy Trinity. Tresham's son Francis was later involved in the Gunpowder Plot. Managed by English Heritage.",
     "youtube": [],
     "sources": [
       {
@@ -58375,7 +58372,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "ruin",
-    "description": "A ruined Benedictine priory in a beautiful wooded bend of the River Wear—once a holiday retreat for monks from Durham Cathedral. St Godric, the pirate-turned-hermit, lived here first.",
+    "description": "A ruined Benedictine priory in a beautiful wooded bend of the River Wear-once a holiday retreat for monks from Durham Cathedral. St Godric, the pirate-turned-hermit, lived here first.",
     "image": "https://img.castlecore.uk/finchale-priory.jpg",
     "rating": 4.2,
     "reviewCount": 800,
@@ -58450,7 +58447,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "ruin",
-    "description": "Cistercian ruins in the remote western Lake District, tucked into a wooded valley by the River Calder. Founded then destroyed by the Scots, refounded, and finally destroyed again at the Dissolution—a cycle of devotion and devastation.",
+    "description": "Cistercian ruins in the remote western Lake District, tucked into a wooded valley by the River Calder. Founded then destroyed by the Scots, refounded, and finally destroyed again at the Dissolution-a cycle of devotion and devastation.",
     "image": "https://img.castlecore.uk/calder-abbey.jpg",
     "rating": 3.7,
     "reviewCount": 150,
@@ -58485,7 +58482,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "An 800-year-old priory watching over one of England's prettiest villages — where medieval stonework meets a famous foodie village with sticky toffee pudding.",
+    "description": "An 800-year-old priory watching over one of England's prettiest villages - where medieval stonework meets a famous foodie village with sticky toffee pudding.",
     "image": "https://img.castlecore.uk/cartmel-priory.jpg",
     "rating": 4.6,
     "reviewCount": 2500,
@@ -58525,7 +58522,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "partial",
-    "description": "A ruined Augustinian priory set in a sweeping bend of the River Wharfe — where Romantic painters found their muse and walkers still lose themselves in wild Yorkshire beauty.",
+    "description": "A ruined Augustinian priory set in a sweeping bend of the River Wharfe - where Romantic painters found their muse and walkers still lose themselves in wild Yorkshire beauty.",
     "image": "https://img.castlecore.uk/bolton-abbey.jpg",
     "rating": 4.6,
     "reviewCount": 7000,
@@ -58601,7 +58598,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-14th century",
     "condition": "ruin",
-    "description": "A soaring Gothic skeleton in the Tees Valley — the dramatic east end of this 14th-century church rises like a stone ghost against the Cleveland Hills.",
+    "description": "A soaring Gothic skeleton in the Tees Valley - the dramatic east end of this 14th-century church rises like a stone ghost against the Cleveland Hills.",
     "image": "https://img.castlecore.uk/guisborough-priory.jpg",
     "rating": 4.2,
     "reviewCount": 1200,
@@ -58621,7 +58618,7 @@ const CASTLES = [
       "https://img.castlecore.uk/guisborough-priory-4.jpg",
       "https://img.castlecore.uk/guisborough-priory-5.jpg"
     ],
-    "history": "Founded in 1119 by Robert de Brus as an Augustinian priory. Destroyed by fire in 1289 and rebuilt with the magnificent east end that still stands. Dissolved in 1540 and its stonework was looted for centuries — you can spot priory stones in buildings throughout Guisborough. Managed by English Heritage. An outstanding example of early Gothic architecture.",
+    "history": "Founded in 1119 by Robert de Brus as an Augustinian priory. Destroyed by fire in 1289 and rebuilt with the magnificent east end that still stands. Dissolved in 1540 and its stonework was looted for centuries - you can spot priory stones in buildings throughout Guisborough. Managed by English Heritage. An outstanding example of early Gothic architecture.",
     "sources": [
       {
         "name": "English Heritage",
@@ -58641,7 +58638,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th-16th century",
     "condition": "ruin",
-    "description": "Derbyshire's hidden monastic gem—a single magnificent arch of the abbey church stands in a farmer's field, while nearby the tiniest church in England (seating just 26) is squeezed under the same roof as a farmhouse.",
+    "description": "Derbyshire's hidden monastic gem-a single magnificent arch of the abbey church stands in a farmer's field, while nearby the tiniest church in England (seating just 26) is squeezed under the same roof as a farmhouse.",
     "image": "https://img.castlecore.uk/dale-abbey.jpg",
     "rating": 3.8,
     "reviewCount": 300,
@@ -58694,7 +58691,7 @@ const CASTLES = [
       "https://img.castlecore.uk/muchelney-abbey-4.jpg",
       "https://img.castlecore.uk/muchelney-abbey-5.jpg"
     ],
-    "history": "Founded in the 8th century on an island in the Somerset Levels. The name means 'great island' in Old English. The abbey was refounded by King Athelstan in 939. The remarkably complete abbot's lodging survives with medieval wall paintings and a thatched roof—one of the finest surviving monastic domestic buildings in England. Managed by English Heritage.",
+    "history": "Founded in the 8th century on an island in the Somerset Levels. The name means 'great island' in Old English. The abbey was refounded by King Athelstan in 939. The remarkably complete abbot's lodging survives with medieval wall paintings and a thatched roof-one of the finest surviving monastic domestic buildings in England. Managed by English Heritage.",
     "sources": [
       {
         "name": "English Heritage",
@@ -58710,7 +58707,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "partial",
-    "description": "A medieval nunnery turned country house where photography was born — William Henry Fox Talbot took the world's oldest surviving photographic negative from its oriel window.",
+    "description": "A medieval nunnery turned country house where photography was born - William Henry Fox Talbot took the world's oldest surviving photographic negative from its oriel window.",
     "image": "https://img.castlecore.uk/lacock-abbey.jpg",
     "rating": 4.5,
     "reviewCount": 5000,
@@ -58735,7 +58732,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lacock-abbey-4.jpg",
       "https://img.castlecore.uk/lacock-abbey-5.jpg"
     ],
-    "history": "Founded in 1232 as an Augustinian nunnery by Ela, Countess of Salisbury. After the Dissolution in 1539, it was converted into a country house by Sir William Sharington. In 1835, William Henry Fox Talbot made the earliest known surviving photographic negative here — a tiny image of the oriel window. The village and abbey have been used as filming locations for Harry Potter, Downton Abbey, and Pride and Prejudice. National Trust since 1944.",
+    "history": "Founded in 1232 as an Augustinian nunnery by Ela, Countess of Salisbury. After the Dissolution in 1539, it was converted into a country house by Sir William Sharington. In 1835, William Henry Fox Talbot made the earliest known surviving photographic negative here - a tiny image of the oriel window. The village and abbey have been used as filming locations for Harry Potter, Downton Abbey, and Pride and Prejudice. National Trust since 1944.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -58755,7 +58752,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "partial",
-    "description": "England's oldest borough meets a flying monk — where Brother Eilmer launched himself from the tower in 1010 in one of history's first attempts at human flight.",
+    "description": "England's oldest borough meets a flying monk - where Brother Eilmer launched himself from the tower in 1010 in one of history's first attempts at human flight.",
     "image": "https://img.castlecore.uk/malmesbury-abbey.jpg",
     "rating": 4.5,
     "reviewCount": 2500,
@@ -58814,7 +58811,7 @@ const CASTLES = [
       "https://img.castlecore.uk/st-botolph-s-priory-4.jpg",
       "https://img.castlecore.uk/st-botolph-s-priory-5.jpg"
     ],
-    "history": "Founded c.1093, it was the first house of Augustinian canons in England. The impressive church was built of recycled Roman brick from nearby Camulodunum. During the 1648 siege of Colchester in the Civil War, the church was severely damaged by cannon fire—the bullet holes are still visible. The nave arcade survives with its massive Norman round arches. Free to visit.",
+    "history": "Founded c.1093, it was the first house of Augustinian canons in England. The impressive church was built of recycled Roman brick from nearby Camulodunum. During the 1648 siege of Colchester in the Civil War, the church was severely damaged by cannon fire-the bullet holes are still visible. The nave arcade survives with its massive Norman round arches. Free to visit.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -58830,7 +58827,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "6th century",
     "condition": "ruin",
-    "description": "Where Christianity was reborn in southern England — the ruins of the abbey founded by St Augustine himself in AD 598, part of Canterbury's UNESCO World Heritage Site.",
+    "description": "Where Christianity was reborn in southern England - the ruins of the abbey founded by St Augustine himself in AD 598, part of Canterbury's UNESCO World Heritage Site.",
     "image": "https://img.castlecore.uk/st-augustine-s-abbey.jpg",
     "rating": 4.3,
     "reviewCount": 2200,
@@ -58896,7 +58893,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "partial",
-    "description": "A sublime Benedictine priory church in the Sussex Downs, its painted medieval ceiling and De La Warr chantry chapel making it one of the finest parish churches in England—a treasure hiding in a tiny village.",
+    "description": "A sublime Benedictine priory church in the Sussex Downs, its painted medieval ceiling and De La Warr chantry chapel making it one of the finest parish churches in England-a treasure hiding in a tiny village.",
     "image": "https://img.castlecore.uk/boxgrove-priory.jpg",
     "rating": 4.3,
     "reviewCount": 600,
@@ -58931,7 +58928,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "partial",
-    "description": "A Cistercian abbey in the New Forest where kings sought sanctuary — now home to the National Motor Museum, blending medieval monastic calm with the roar of classic engines.",
+    "description": "A Cistercian abbey in the New Forest where kings sought sanctuary - now home to the National Motor Museum, blending medieval monastic calm with the roar of classic engines.",
     "image": "https://img.castlecore.uk/beaulieu-abbey.jpg",
     "rating": 4.4,
     "reviewCount": 5000,
@@ -58976,7 +58973,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "ruin",
-    "description": "Where Henry I was buried and Jane Austen went to school — once one of England's mightiest monasteries, now romantic ruins in the heart of a modern town.",
+    "description": "Where Henry I was buried and Jane Austen went to school - once one of England's mightiest monasteries, now romantic ruins in the heart of a modern town.",
     "image": "https://img.castlecore.uk/reading-abbey.jpg",
     "rating": 4,
     "reviewCount": 1200,
@@ -59016,7 +59013,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-14th century",
     "condition": "intact",
-    "description": "An Augustinian abbey church in the Thames Valley that preserves one of medieval England's most extraordinary windows—the Jesse Window, where stone branches and figures grow organically from the tracery like a living tree.",
+    "description": "An Augustinian abbey church in the Thames Valley that preserves one of medieval England's most extraordinary windows-the Jesse Window, where stone branches and figures grow organically from the tracery like a living tree.",
     "image": "https://img.castlecore.uk/dorchester-abbey.jpg",
     "rating": 4.4,
     "reviewCount": 800,
@@ -59034,7 +59031,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dorchester-abbey-4.jpg",
       "https://img.castlecore.uk/dorchester-abbey-5.jpg"
     ],
-    "history": "The site was a Roman town and a major Saxon cathedral. An Augustinian abbey was founded here in 1140. The abbey church features the remarkable Jesse Window (c.1340), where the stone tracery forms a tree of Jesse with carved figures growing from the branches—unique in English architecture. The church survived the Dissolution as the parish church. It also contains fine medieval stained glass and the medieval People's Chapel.",
+    "history": "The site was a Roman town and a major Saxon cathedral. An Augustinian abbey was founded here in 1140. The abbey church features the remarkable Jesse Window (c.1340), where the stone tracery forms a tree of Jesse with carved figures growing from the branches-unique in English architecture. The church survived the Dissolution as the parish church. It also contains fine medieval stained glass and the medieval People's Chapel.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -59050,7 +59047,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "7th-16th century",
     "condition": "partial",
-    "description": "One of the oldest and once-richest monasteries in England, founded in Saxon times on the Thames at Abingdon. Only fragments survive—a medieval gallery, checker, and gateway hint at vanished magnificence.",
+    "description": "One of the oldest and once-richest monasteries in England, founded in Saxon times on the Thames at Abingdon. Only fragments survive-a medieval gallery, checker, and gateway hint at vanished magnificence.",
     "image": "https://img.castlecore.uk/abingdon-abbey.jpg",
     "rating": 3.9,
     "reviewCount": 500,
@@ -59171,7 +59168,7 @@ const CASTLES = [
     "type": "castle",
     "era": "2nd century",
     "condition": "ruin",
-    "description": "The best-preserved Roman fort on Hadrian's Wall — perched on a dramatic Northumberland ridge with the wall snaking away to the horizon, a gateway to Rome's northernmost frontier.",
+    "description": "The best-preserved Roman fort on Hadrian's Wall - perched on a dramatic Northumberland ridge with the wall snaking away to the horizon, a gateway to Rome's northernmost frontier.",
     "image": "https://img.castlecore.uk/housesteads-roman-fort.jpg",
     "rating": 4.7,
     "reviewCount": 6000,
@@ -59214,7 +59211,7 @@ const CASTLES = [
     "type": "castle",
     "era": "2nd century AD",
     "condition": "ruin",
-    "description": "The best-preserved Roman cavalry fort in Britain — where soldiers once bathed in a riverside spa and guarded Hadrian's Wall against the northern wilds.",
+    "description": "The best-preserved Roman cavalry fort in Britain - where soldiers once bathed in a riverside spa and guarded Hadrian's Wall against the northern wilds.",
     "image": "https://img.castlecore.uk/chesters-roman-fort.jpg",
     "rating": 4.5,
     "reviewCount": 3000,
@@ -59255,7 +59252,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1st-5th century",
     "condition": "ruin",
-    "description": "Hadrian's Wall's most excavated fort — where writing tablets preserved in waterlogged soil reveal the intimate daily lives of Roman soldiers on the empire's wild frontier.",
+    "description": "Hadrian's Wall's most excavated fort - where writing tablets preserved in waterlogged soil reveal the intimate daily lives of Roman soldiers on the empire's wild frontier.",
     "image": "https://img.castlecore.uk/vindolanda-roman-fort.jpg",
     "rating": 4.7,
     "reviewCount": 5500,
@@ -59278,7 +59275,7 @@ const CASTLES = [
       "https://img.castlecore.uk/vindolanda-roman-fort-4.jpg",
       "https://img.castlecore.uk/vindolanda-roman-fort-5.jpg"
     ],
-    "history": "A Roman auxiliary fort established c.85 AD, predating Hadrian's Wall by 40 years. Nine successive forts were built on the site. Famous for the Vindolanda tablets, discovered from 1973 — the oldest surviving handwritten documents in Britain, including personal letters, military reports, and a birthday party invitation. Active excavations continue annually, regularly yielding new discoveries. The on-site museum houses thousands of Roman artefacts.",
+    "history": "A Roman auxiliary fort established c.85 AD, predating Hadrian's Wall by 40 years. Nine successive forts were built on the site. Famous for the Vindolanda tablets, discovered from 1973 - the oldest surviving handwritten documents in Britain, including personal letters, military reports, and a birthday party invitation. Active excavations continue annually, regularly yielding new discoveries. The on-site museum houses thousands of Roman artefacts.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -59298,7 +59295,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1st-4th century Roman",
     "condition": "ruin",
-    "description": "Walk the actual streets of a Roman frontier town — where legionaries shopped, drank, and stored their treasures in a buried chest unearthed 1,800 years later.",
+    "description": "Walk the actual streets of a Roman frontier town - where legionaries shopped, drank, and stored their treasures in a buried chest unearthed 1,800 years later.",
     "image": "https://img.castlecore.uk/corbridge-roman-town.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -59318,7 +59315,7 @@ const CASTLES = [
       "https://img.castlecore.uk/corbridge-roman-town-4.jpg",
       "https://img.castlecore.uk/corbridge-roman-town-5.jpg"
     ],
-    "history": "Originally a series of military forts at the junction of Dere Street and Stanegate, south of Hadrian's Wall. After the Wall was built, Corbridge (Coria, meaning 'hosting place' in Celtic) developed into a prosperous supply town and leave centre for off-duty garrisons. In 1964, archaeologists discovered the famous 'Corbridge Hoard' — a buried chest containing armour and weapons hidden by a Roman soldier. Managed by English Heritage with a museum.",
+    "history": "Originally a series of military forts at the junction of Dere Street and Stanegate, south of Hadrian's Wall. After the Wall was built, Corbridge (Coria, meaning 'hosting place' in Celtic) developed into a prosperous supply town and leave centre for off-duty garrisons. In 1964, archaeologists discovered the famous 'Corbridge Hoard' - a buried chest containing armour and weapons hidden by a Roman soldier. Managed by English Heritage with a museum.",
     "youtube": [],
     "sources": [
       {
@@ -59343,7 +59340,7 @@ const CASTLES = [
     "type": "castle",
     "era": "2nd-4th century AD",
     "condition": "ruin",
-    "description": "The highest stone-built Roman fort in Britain, known as Epiacum, with the most elaborate system of defensive ditches of any fort in the Roman Empire—seven concentric rings on the north side alone.",
+    "description": "The highest stone-built Roman fort in Britain, known as Epiacum, with the most elaborate system of defensive ditches of any fort in the Roman Empire-seven concentric rings on the north side alone.",
     "image": "https://img.castlecore.uk/whitley-castle-roman-fort.jpg",
     "rating": 4,
     "reviewCount": 300,
@@ -59384,7 +59381,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Roman (1st-5th century)",
     "condition": "ruin",
-    "description": "The buried bones of Viroconium — once the fourth-largest Roman city in Britain, now a hauntingly quiet field where an enormous bathhouse wall still stands sentinel.",
+    "description": "The buried bones of Viroconium - once the fourth-largest Roman city in Britain, now a hauntingly quiet field where an enormous bathhouse wall still stands sentinel.",
     "image": "https://img.castlecore.uk/wroxeter-roman-city.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -59428,7 +59425,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval / 18th century",
     "condition": "intact",
-    "description": "A medieval tower house in Nottinghamshire that gained tabloid fame as 'Britain's most haunted house'—its owners fled in 2007 after reporting terrifying paranormal experiences. The Georgian facade conceals a much older core.",
+    "description": "A medieval tower house in Nottinghamshire that gained tabloid fame as 'Britain's most haunted house'-its owners fled in 2007 after reporting terrifying paranormal experiences. The Georgian facade conceals a much older core.",
     "image": "https://img.castlecore.uk/clifton-hall.jpg",
     "rating": 3.5,
     "reviewCount": 300,
@@ -59463,7 +59460,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th-19th century",
     "condition": "intact",
-    "description": "A neoclassical rotunda rising from Suffolk parkland like a fever dream — conceived by an Earl-Bishop who wanted a gallery worthy of his European art collection.",
+    "description": "A neoclassical rotunda rising from Suffolk parkland like a fever dream - conceived by an Earl-Bishop who wanted a gallery worthy of his European art collection.",
     "image": "https://img.castlecore.uk/ickworth-house.jpg",
     "rating": 4.3,
     "reviewCount": 3500,
@@ -59505,7 +59502,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Tudor (1520s)",
     "condition": "intact",
-    "description": "The tallest Tudor gatehouse in England — an ambitious redbrick palace left unfinished when its builder died, now standing as a magnificent folly in the Essex countryside.",
+    "description": "The tallest Tudor gatehouse in England - an ambitious redbrick palace left unfinished when its builder died, now standing as a magnificent folly in the Essex countryside.",
     "image": "https://img.castlecore.uk/layer-marney-tower.jpg",
     "rating": 4.4,
     "reviewCount": 1200,
@@ -59527,7 +59524,7 @@ const CASTLES = [
       "https://img.castlecore.uk/layer-marney-tower-4.jpg",
       "https://img.castlecore.uk/layer-marney-tower-5.jpg"
     ],
-    "history": "Built in the 1520s by Lord Henry Marney, a close friend and advisor to both Henry VII and Henry VIII. Intended as the entrance to a grand palace that was never completed — Lord Marney died in 1523 and his son followed two years later. The eight-storey gatehouse, adorned with Italian Renaissance terracotta, remains the tallest Tudor gatehouse in Britain. Still a family home and open to the public.",
+    "history": "Built in the 1520s by Lord Henry Marney, a close friend and advisor to both Henry VII and Henry VIII. Intended as the entrance to a grand palace that was never completed - Lord Marney died in 1523 and his son followed two years later. The eight-storey gatehouse, adorned with Italian Renaissance terracotta, remains the tallest Tudor gatehouse in Britain. Still a family home and open to the public.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -59547,7 +59544,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "England's first great Elizabethan prodigy house set in 900 acres of Capability Brown parkland — where Renaissance grandeur meets a safari park in gloriously eccentric fashion.",
+    "description": "England's first great Elizabethan prodigy house set in 900 acres of Capability Brown parkland - where Renaissance grandeur meets a safari park in gloriously eccentric fashion.",
     "image": "https://img.castlecore.uk/longleat-house.jpg",
     "rating": 4.3,
     "reviewCount": 12000,
@@ -59620,7 +59617,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1st-5th century AD",
     "condition": "ruin",
-    "description": "The remains of Venta Icenorum—the Roman town built as the civitas capital of the Iceni after Boudica's revolt was crushed. Its defensive walls still stand in the quiet Norfolk countryside, marking where Rome imposed order on a rebellious tribe.",
+    "description": "The remains of Venta Icenorum-the Roman town built as the civitas capital of the Iceni after Boudica's revolt was crushed. Its defensive walls still stand in the quiet Norfolk countryside, marking where Rome imposed order on a rebellious tribe.",
     "image": "https://img.castlecore.uk/caistor-roman-site.jpg",
     "rating": 3.7,
     "reviewCount": 300,
@@ -59764,7 +59761,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "ruin",
-    "description": "Hauntingly beautiful Benedictine ruins in the heart of York — once the wealthiest abbey in northern England, now a Gothic skeleton in the Museum Gardens.",
+    "description": "Hauntingly beautiful Benedictine ruins in the heart of York - once the wealthiest abbey in northern England, now a Gothic skeleton in the Museum Gardens.",
     "image": "https://img.castlecore.uk/st-mary-s-abbey-york.jpg",
     "rating": 4.3,
     "reviewCount": 3000,
@@ -59836,7 +59833,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "The small Georgian parsonage where the Brontë sisters conjured entire worlds — walk the rooms where Wuthering Heights and Jane Eyre were written, then lose yourself on the moors that inspired them.",
+    "description": "The small Georgian parsonage where the Brontë sisters conjured entire worlds - walk the rooms where Wuthering Heights and Jane Eyre were written, then lose yourself on the moors that inspired them.",
     "image": "https://img.castlecore.uk/haworth-parsonage.jpg",
     "rating": 4.5,
     "reviewCount": 4500,
@@ -59910,7 +59907,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "ruin",
-    "description": "A Herefordshire castle that withstood a legendary Civil War siege under the command of Lady Brilliana Harley—one of the few women to personally command the defence of a besieged stronghold.",
+    "description": "A Herefordshire castle that withstood a legendary Civil War siege under the command of Lady Brilliana Harley-one of the few women to personally command the defence of a besieged stronghold.",
     "image": "https://img.castlecore.uk/brampton-bryan-castle.jpg",
     "rating": 3.8,
     "reviewCount": 200,
@@ -59992,7 +59989,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "The real Downton Abbey — a palatial Victorian country house set in 1,000 acres of Capability Brown parkland, where Edwardian grandeur and television fame collide in spectacular fashion.",
+    "description": "The real Downton Abbey - a palatial Victorian country house set in 1,000 acres of Capability Brown parkland, where Edwardian grandeur and television fame collide in spectacular fashion.",
     "image": "https://img.castlecore.uk/highclere-castle.jpg",
     "rating": 4.6,
     "reviewCount": 8000,
@@ -60017,7 +60014,7 @@ const CASTLES = [
       "https://img.castlecore.uk/highclere-castle-4.jpg",
       "https://img.castlecore.uk/highclere-castle-5.jpg"
     ],
-    "history": "The seat of the Carnarvon family since 1679. The current Jacobethan mansion was designed by Sir Charles Barry (architect of the Houses of Parliament) in the 1840s, transforming an earlier Georgian house. The 5th Earl of Carnarvon famously co-discovered Tutankhamun's tomb with Howard Carter in 1922 — an Egyptian exhibition is housed in the cellars. Became world-famous as the filming location for Downton Abbey (2010-2015).",
+    "history": "The seat of the Carnarvon family since 1679. The current Jacobethan mansion was designed by Sir Charles Barry (architect of the Houses of Parliament) in the 1840s, transforming an earlier Georgian house. The 5th Earl of Carnarvon famously co-discovered Tutankhamun's tomb with Howard Carter in 1922 - an Egyptian exhibition is housed in the cellars. Became world-famous as the filming location for Downton Abbey (2010-2015).",
     "sources": [
       {
         "name": "Wikipedia",
@@ -60037,7 +60034,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "Henry VIII's squat coastal fortress where the king himself watched his flagship Mary Rose sink — now a free museum overlooking the Solent and the Isle of Wight.",
+    "description": "Henry VIII's squat coastal fortress where the king himself watched his flagship Mary Rose sink - now a free museum overlooking the Solent and the Isle of Wight.",
     "image": "https://img.castlecore.uk/southsea-castle.jpg",
     "rating": 4.1,
     "reviewCount": 2000,
@@ -60083,7 +60080,7 @@ const CASTLES = [
     "type": "castle",
     "era": "20th century (1935)",
     "condition": "intact",
-    "description": "A whimsical Victorian folly tower perched on a Berkshire hilltop—built by Lord Berners, the eccentric composer who dyed his pigeons in pastel colours and invited a horse to tea. It commands sweeping views over five counties.",
+    "description": "A whimsical Victorian folly tower perched on a Berkshire hilltop-built by Lord Berners, the eccentric composer who dyed his pigeons in pastel colours and invited a horse to tea. It commands sweeping views over five counties.",
     "image": "https://img.castlecore.uk/farringdon-folly-tower.jpg",
     "rating": 4,
     "reviewCount": 600,
@@ -60117,7 +60114,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "An Elizabethan manor house on the banks of the Thames, complete with a working watermill—the last commercially operating one on the river. Its recusant Catholic chapel speaks of centuries of quiet defiance.",
+    "description": "An Elizabethan manor house on the banks of the Thames, complete with a working watermill-the last commercially operating one on the river. Its recusant Catholic chapel speaks of centuries of quiet defiance.",
     "image": "https://img.castlecore.uk/mapledurham-house.jpg",
     "rating": 4.1,
     "reviewCount": 800,
@@ -60157,7 +60154,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A towering Elizabethan palace bristling with chimneys and cupolas — the grandest house of the Elizabethan age, where heaven rooms painted by Verrio will make you dizzy looking up.",
+    "description": "A towering Elizabethan palace bristling with chimneys and cupolas - the grandest house of the Elizabethan age, where heaven rooms painted by Verrio will make you dizzy looking up.",
     "image": "https://img.castlecore.uk/burghley-house.jpg",
     "rating": 4.6,
     "reviewCount": 6000,
@@ -60234,7 +60231,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "ruin",
-    "description": "An unfinished masterpiece in red brick—Lord Hastings was building one of the first great brick castles in England when Richard III had him beheaded. The half-built gatehouse and corner tower freeze a moment of Tudor ambition in mid-construction.",
+    "description": "An unfinished masterpiece in red brick-Lord Hastings was building one of the first great brick castles in England when Richard III had him beheaded. The half-built gatehouse and corner tower freeze a moment of Tudor ambition in mid-construction.",
     "image": "https://img.castlecore.uk/kirby-muxloe-main-castle.jpg",
     "rating": 4.1,
     "reviewCount": 700,
@@ -60298,7 +60295,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th-20th century",
     "condition": "intact",
-    "description": "A maze of tunnels and bastions guarding the mouth of the Orwell — where the last opposed seaborne invasion of England was repelled and 500 years of coastal defence unfold.",
+    "description": "A maze of tunnels and bastions guarding the mouth of the Orwell - where the last opposed seaborne invasion of England was repelled and 500 years of coastal defence unfold.",
     "image": "https://img.castlecore.uk/landguard-fort.jpg",
     "rating": 4.2,
     "reviewCount": 1200,
@@ -60342,7 +60339,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A fairy-tale moated Tudor hall where the drawbridge is still raised every single night — surrounded by Grade I gardens, a deer park, and 500 years of the same family's careful stewardship.",
+    "description": "A fairy-tale moated Tudor hall where the drawbridge is still raised every single night - surrounded by Grade I gardens, a deer park, and 500 years of the same family's careful stewardship.",
     "image": "https://img.castlecore.uk/helmingham-hall.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -60364,7 +60361,7 @@ const CASTLES = [
       "https://img.castlecore.uk/helmingham-hall-4.jpg",
       "https://img.castlecore.uk/helmingham-hall-5.jpg"
     ],
-    "history": "Begun by John Tollemache in 1480, owned by the Tollemache family ever since — over 500 years. Built around a courtyard in typical late medieval/Tudor style with a working moat and drawbridge. Tudor gables were removed c.1760 and half-timbered walls concealed behind brick. The Grade I listed gardens were redesigned by Lady Tollemache (Chelsea Gold Medallist) and include herbaceous borders, herb gardens, and a 400-acre deer park with red and fallow deer.",
+    "history": "Begun by John Tollemache in 1480, owned by the Tollemache family ever since - over 500 years. Built around a courtyard in typical late medieval/Tudor style with a working moat and drawbridge. Tudor gables were removed c.1760 and half-timbered walls concealed behind brick. The Grade I listed gardens were redesigned by Lady Tollemache (Chelsea Gold Medallist) and include herbaceous borders, herb gardens, and a 400-acre deer park with red and fallow deer.",
     "youtube": [],
     "sources": [
       {
@@ -60389,7 +60386,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A Palladian mansion in the remote Norfolk countryside, built by Horatio Walpole—brother of Britain's first Prime Minister. After decades of neglect it's being restored room by room, a Georgian time capsule slowly coming back to life.",
+    "description": "A Palladian mansion in the remote Norfolk countryside, built by Horatio Walpole-brother of Britain's first Prime Minister. After decades of neglect it's being restored room by room, a Georgian time capsule slowly coming back to life.",
     "image": "https://img.castlecore.uk/wolterton-hall.jpg",
     "rating": 3.9,
     "reviewCount": 400,
@@ -60458,7 +60455,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "A perfectly preserved Jacobean country house wrapped in ancient woodland — where centuries stand still and the walled garden blooms in quiet splendour.",
+    "description": "A perfectly preserved Jacobean country house wrapped in ancient woodland - where centuries stand still and the walled garden blooms in quiet splendour.",
     "image": "https://img.castlecore.uk/felbrigg-hall.jpg",
     "rating": 4.5,
     "reviewCount": 3500,
@@ -60500,7 +60497,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "A Jacobean jewel in Norfolk — one of England's finest red-brick mansions, where the ghost of Anne Boleyn is said to arrive each year on the anniversary of her execution.",
+    "description": "A Jacobean jewel in Norfolk - one of England's finest red-brick mansions, where the ghost of Anne Boleyn is said to arrive each year on the anniversary of her execution.",
     "image": "https://img.castlecore.uk/blickling-hall.jpg",
     "rating": 4.6,
     "reviewCount": 5000,
@@ -60524,7 +60521,7 @@ const CASTLES = [
       "https://img.castlecore.uk/blickling-hall-4.jpg",
       "https://img.castlecore.uk/blickling-hall-5.jpg"
     ],
-    "history": "Built 1616-1625 for Sir Henry Hobart on the site of an earlier house where Anne Boleyn is traditionally believed to have been born (though historians debate this). Designed by architect Robert Lyminge, who also designed Hatfield House. The Long Gallery contains one of the most extraordinary Jacobean plaster ceilings in England. The library houses a remarkable collection of 12,000 rare books. Given to the National Trust in 1940 — one of the first houses acquired through the Country Houses Scheme.",
+    "history": "Built 1616-1625 for Sir Henry Hobart on the site of an earlier house where Anne Boleyn is traditionally believed to have been born (though historians debate this). Designed by architect Robert Lyminge, who also designed Hatfield House. The Long Gallery contains one of the most extraordinary Jacobean plaster ceilings in England. The library houses a remarkable collection of 12,000 rare books. Given to the National Trust in 1940 - one of the first houses acquired through the Country Houses Scheme.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -60544,7 +60541,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "The birthplace of railway pioneer George Stephenson—a humble stone cottage where the man who built the Rocket and changed the world was born in 1781. A tiny museum with an outsized impact on history.",
+    "description": "The birthplace of railway pioneer George Stephenson-a humble stone cottage where the man who built the Rocket and changed the world was born in 1781. A tiny museum with an outsized impact on history.",
     "image": "https://img.castlecore.uk/wylam-railway-museum.jpg",
     "rating": 4,
     "reviewCount": 400,
@@ -60612,7 +60609,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-16th century",
     "condition": "partial",
-    "description": "A fortified manor house in Cumbria's wild border country, its 14th-century tower house expanded by Thomas, Lord Dacre—the same family who terrorised the Scottish border with their fearsome reputation.",
+    "description": "A fortified manor house in Cumbria's wild border country, its 14th-century tower house expanded by Thomas, Lord Dacre-the same family who terrorised the Scottish border with their fearsome reputation.",
     "image": "https://img.castlecore.uk/askerton-castle.jpg",
     "rating": 3.5,
     "reviewCount": 50,
@@ -60646,7 +60643,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "partial",
-    "description": "A Cumbrian border castle that has been besieged, burnt, and rebuilt repeatedly over 700 years—its tower house core surviving every assault from Scottish raiders to Parliamentarian cannons.",
+    "description": "A Cumbrian border castle that has been besieged, burnt, and rebuilt repeatedly over 700 years-its tower house core surviving every assault from Scottish raiders to Parliamentarian cannons.",
     "image": "https://img.castlecore.uk/scaleby-castle.jpg",
     "rating": 3.5,
     "reviewCount": 100,
@@ -60692,7 +60689,7 @@ const CASTLES = [
     "access": "exterior-only",
     "_index": 1949,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-millom-castle.jpg"
+      "https://img.castlecore.uk/wiki-millom-castle.jpg"
     ],
     "history": "Built in the 12th century by the de Boyvill family. The Huddleston family held the castle for over 500 years from the 13th century. The ruins of the medieval castle are partly incorporated into a later farmhouse. Set near the town of Millom overlooking the Duddon Estuary. Scheduled Monument. The castle is on private land.",
     "sources": [
@@ -60778,7 +60775,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "7th-16th century",
     "condition": "ruin",
-    "description": "The legendary resting place of King Arthur — haunting abbey ruins steeped in Arthurian myth and early Christian mysticism, where England's spiritual story arguably began.",
+    "description": "The legendary resting place of King Arthur - haunting abbey ruins steeped in Arthurian myth and early Christian mysticism, where England's spiritual story arguably began.",
     "image": "https://img.castlecore.uk/glastonbury-abbey-somerset.jpg",
     "rating": 4.4,
     "reviewCount": 8000,
@@ -60854,7 +60851,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "Another island fortress on Loch Awe — a Campbell stronghold on Inishail or a nearby island, part of the web of castles that controlled this vast Highland loch.",
+    "description": "Another island fortress on Loch Awe - a Campbell stronghold on Inishail or a nearby island, part of the web of castles that controlled this vast Highland loch.",
     "image": "https://img.castlecore.uk/ardchonnel-castle.jpg",
     "rating": 3.6,
     "reviewCount": 80,
@@ -60976,7 +60973,7 @@ const CASTLES = [
     ],
     "access": "exterior-only",
     "_index": 2005,
-    "history": "Built in 1596 by the MacNaughton clan chief. A classic L-plan tower house on the shores of Loch Fyne near Inveraray. Fell into severe ruin — Neil Munro described it evocatively in his novel 'Doom Castle'. Restored in the early 20th century by Sir Robert Lorimer. Now a private residence in a beautiful waterside setting.",
+    "history": "Built in 1596 by the MacNaughton clan chief. A classic L-plan tower house on the shores of Loch Fyne near Inveraray. Fell into severe ruin - Neil Munro described it evocatively in his novel 'Doom Castle'. Restored in the early 20th century by Sir Robert Lorimer. Now a private residence in a beautiful waterside setting.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -61063,7 +61060,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "Ruins of a Grierson stronghold in Nithsdale, associated with 'Lag' — the notorious persecutor of Covenanters. Dark history in the Dumfriesshire hills.",
+    "description": "Ruins of a Grierson stronghold in Nithsdale, associated with 'Lag' - the notorious persecutor of Covenanters. Dark history in the Dumfriesshire hills.",
     "image": "https://img.castlecore.uk/lag-tower.jpg",
     "rating": 3.4,
     "reviewCount": 60,
@@ -61140,7 +61137,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th-19th century",
     "condition": "intact",
-    "description": "A single row of houses clinging to the foot of sea cliffs in Banffshire — one of Scotland's most extraordinary villages. No road access, just a footpath between cliff and sea.",
+    "description": "A single row of houses clinging to the foot of sea cliffs in Banffshire - one of Scotland's most extraordinary villages. No road access, just a footpath between cliff and sea.",
     "image": "https://img.castlecore.uk/crovie-village.jpg",
     "rating": 4.3,
     "reviewCount": 920,
@@ -61293,7 +61290,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "restored",
-    "description": "A remarkably fine 17th-century doocot (dovecote) near Auldearn — one of Scotland's best-preserved, with nesting boxes for over 500 pigeons.",
+    "description": "A remarkably fine 17th-century doocot (dovecote) near Auldearn - one of Scotland's best-preserved, with nesting boxes for over 500 pigeons.",
     "image": "https://img.castlecore.uk/boath-doocot.jpg",
     "rating": 3.5,
     "reviewCount": 80,
@@ -61448,7 +61445,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Bronze Age",
     "condition": "ruin",
-    "description": "A hauntingly atmospheric Bronze Age cemetery where 4,000-year-old burial cairns stand in a woodland clearing above the River Nairn — the kind of place that inspired Outlander's standing stones.",
+    "description": "A hauntingly atmospheric Bronze Age cemetery where 4,000-year-old burial cairns stand in a woodland clearing above the River Nairn - the kind of place that inspired Outlander's standing stones.",
     "image": "https://img.castlecore.uk/clava-cairns.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
@@ -61469,7 +61466,7 @@ const CASTLES = [
       "https://img.castlecore.uk/clava-cairns-4.jpg",
       "https://img.castlecore.uk/clava-cairns-5.jpg"
     ],
-    "history": "Built c.2000 BC as passage graves and ring cairns surrounded by standing stones. Part of a distinct Highland burial tradition stretching from Moray to the Black Isle. The stones are astronomically aligned — the passage graves point toward the midwinter sunset. Free to visit year-round.",
+    "history": "Built c.2000 BC as passage graves and ring cairns surrounded by standing stones. Part of a distinct Highland burial tradition stretching from Moray to the Black Isle. The stones are astronomically aligned - the passage graves point toward the midwinter sunset. Free to visit year-round.",
     "youtube": [],
     "sources": [
       {
@@ -61494,7 +61491,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "ruin",
-    "description": "The windswept moor where Jacobite dreams died in under an hour — Scotland's most haunting battlefield, where clan markers still stand among the heather in solemn remembrance.",
+    "description": "The windswept moor where Jacobite dreams died in under an hour - Scotland's most haunting battlefield, where clan markers still stand among the heather in solemn remembrance.",
     "image": "https://img.castlecore.uk/culloden-battlefield.jpg",
     "rating": 4.6,
     "reviewCount": 6200,
@@ -61537,7 +61534,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century (current building)",
     "condition": "intact",
-    "description": "The red sandstone sentinel of the Highland capital — perched on a cliff above the River Ness where castles have stood since Macbeth's time.",
+    "description": "The red sandstone sentinel of the Highland capital - perched on a cliff above the River Ness where castles have stood since Macbeth's time.",
     "image": "https://img.castlecore.uk/inverness-castle-viewpoint.jpg",
     "rating": 4.1,
     "reviewCount": 2400,
@@ -61633,7 +61630,7 @@ const CASTLES = [
       "https://img.castlecore.uk/fairburn-tower-4.jpg",
       "https://img.castlecore.uk/fairburn-tower-5.jpg"
     ],
-    "history": "Built in the 16th century by the Mackenzie family. A substantial tower house that dominates the landscape near Muir of Ord. The Brahan Seer prophesied that a cow would calve in the uppermost room — which reportedly happened when the ruin was used as a cattle shelter. Recently stabilised by Historic Environment Scotland. Visible and accessible from the road.",
+    "history": "Built in the 16th century by the Mackenzie family. A substantial tower house that dominates the landscape near Muir of Ord. The Brahan Seer prophesied that a cow would calve in the uppermost room - which reportedly happened when the ruin was used as a cattle shelter. Recently stabilised by Historic Environment Scotland. Visible and accessible from the road.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -61713,7 +61710,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dun-telve-broch-4.jpg",
       "https://img.castlecore.uk/dun-telve-broch-5.jpg"
     ],
-    "history": "Built around 100 BC-100 AD, Dun Telve stands over 10 metres high — one of the tallest surviving brochs on the mainland. The double-walled construction is clearly visible. Located in remote Glen Beag near Glenelg, reached by a single-track road over the Mam Ratagan pass. Together with neighbouring Dun Troddan, these are among the finest broch remains in the Highlands.",
+    "history": "Built around 100 BC-100 AD, Dun Telve stands over 10 metres high - one of the tallest surviving brochs on the mainland. The double-walled construction is clearly visible. Located in remote Glen Beag near Glenelg, reached by a single-track road over the Mam Ratagan pass. Together with neighbouring Dun Troddan, these are among the finest broch remains in the Highlands.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -61733,7 +61730,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Iron Age (c. 100 BC)",
     "condition": "ruin",
-    "description": "The twin of Dun Telve, standing nearby in Glen Beag — together they form the finest pair of mainland brochs in Scotland. Iron Age engineering at its most impressive.",
+    "description": "The twin of Dun Telve, standing nearby in Glen Beag - together they form the finest pair of mainland brochs in Scotland. Iron Age engineering at its most impressive.",
     "image": "https://img.castlecore.uk/dun-troddan-broch.jpg",
     "rating": 4.2,
     "reviewCount": 420,
@@ -61832,7 +61829,7 @@ const CASTLES = [
       "https://img.castlecore.uk/creich-castle-4.jpg",
       "https://img.castlecore.uk/creich-castle-5.jpg"
     ],
-    "history": "A 15th or 16th-century tower house on the north shore of the Firth of Tay in Fife. The ruins are modest — mainly wall fragments — but the location overlooking the wide Tay estuary is attractive. Associated with various local families. One of many minor tower houses in the Fife countryside.",
+    "history": "A 15th or 16th-century tower house on the north shore of the Firth of Tay in Fife. The ruins are modest - mainly wall fragments - but the location overlooking the wide Tay estuary is attractive. Associated with various local families. One of many minor tower houses in the Fife countryside.",
     "sources": [
       {
         "name": "Canmore",
@@ -61899,7 +61896,7 @@ const CASTLES = [
     "access": "free",
     "_index": 2032,
     "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-mauchline-castle.jpg"
+      "https://img.castlecore.uk/wiki-mauchline-castle.jpg"
     ],
     "history": "A medieval tower, now partly incorporated into later buildings in the town of Mauchline. The town is famous for its associations with Robert Burns, who lived here and married Jean Armour in 1788. Nearby attractions include Burns House Museum, Poosie Nansie's tavern (mentioned in Burns' works), and the churchyard where many of Burns' characters are buried.",
     "sources": [
@@ -61992,7 +61989,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century (11th century tradition)",
     "condition": "ruin",
-    "description": "A massive medieval earthwork in Aberdeenshire — one of the finest motte-and-bailey sites in Scotland. Where Macbeth met his end, according to tradition.",
+    "description": "A massive medieval earthwork in Aberdeenshire - one of the finest motte-and-bailey sites in Scotland. Where Macbeth met his end, according to tradition.",
     "image": "https://img.castlecore.uk/peel-ring-of-lumphanan.jpg",
     "rating": 3.8,
     "reviewCount": 180,
@@ -62051,7 +62048,7 @@ const CASTLES = [
       "https://img.castlecore.uk/migvie-church-4.jpg",
       "https://img.castlecore.uk/migvie-church-5.jpg"
     ],
-    "history": "A ruined medieval church in the parish of Tarland, notable for a Pictish symbol stone built into the wall — featuring a cross and Pictish symbols. The church dates from the medieval period but the carved stone is much older. Set in the rural landscape of upper Donside. Of interest primarily for the Pictish stone.",
+    "history": "A ruined medieval church in the parish of Tarland, notable for a Pictish symbol stone built into the wall - featuring a cross and Pictish symbols. The church dates from the medieval period but the carved stone is much older. Set in the rural landscape of upper Donside. Of interest primarily for the Pictish stone.",
     "sources": [
       {
         "name": "Canmore",
@@ -62071,7 +62068,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "9th-10th century",
     "condition": "intact",
-    "description": "The largest and most elaborate Pictish carved stone in Scotland — a towering 6.5-metre monolith depicting a great battle. An enigmatic masterpiece of Dark Age art, enclosed in glass.",
+    "description": "The largest and most elaborate Pictish carved stone in Scotland - a towering 6.5-metre monolith depicting a great battle. An enigmatic masterpiece of Dark Age art, enclosed in glass.",
     "image": "https://img.castlecore.uk/sueno-s-stone.jpg",
     "rating": 4.2,
     "reviewCount": 520,
@@ -62111,7 +62108,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Pictish (early medieval)",
     "condition": "intact",
-    "description": "A mysterious early Christian or Pictish well chamber cut deep into rock at Burghead — a unique subterranean structure whose purpose continues to puzzle archaeologists.",
+    "description": "A mysterious early Christian or Pictish well chamber cut deep into rock at Burghead - a unique subterranean structure whose purpose continues to puzzle archaeologists.",
     "image": "https://img.castlecore.uk/burghead-well.jpg",
     "rating": 3.9,
     "reviewCount": 280,
@@ -62131,7 +62128,7 @@ const CASTLES = [
       "https://img.castlecore.uk/burghead-well-4.jpg",
       "https://img.castlecore.uk/burghead-well-5.jpg"
     ],
-    "history": "A rock-cut chamber reached by a flight of steps, containing a basin filled by a natural spring. Located within the site of a massive Pictish fort at Burghead on the Moray coast. The well's purpose is debated — baptismal pool, ritual well, or water supply. Burghead was one of the most important Pictish fortresses in Scotland. The annual 'Burning of the Clavie' fire festival continues here.",
+    "history": "A rock-cut chamber reached by a flight of steps, containing a basin filled by a natural spring. Located within the site of a massive Pictish fort at Burghead on the Moray coast. The well's purpose is debated - baptismal pool, ritual well, or water supply. Burghead was one of the most important Pictish fortresses in Scotland. The annual 'Burning of the Clavie' fire festival continues here.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -62171,7 +62168,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dallas-dhu-distillery-4.jpg",
       "https://img.castlecore.uk/dallas-dhu-distillery-5.jpg"
     ],
-    "history": "Built in 1898 and operational until 1983, Dallas Dhu is now preserved as a museum of whisky-making by Historic Environment Scotland. The distillery retains all its original equipment — kiln, mash tun, washbacks, and copper stills — giving visitors a complete picture of traditional malt whisky production. One of Scotland's most authentic whisky heritage experiences.",
+    "history": "Built in 1898 and operational until 1983, Dallas Dhu is now preserved as a museum of whisky-making by Historic Environment Scotland. The distillery retains all its original equipment - kiln, mash tun, washbacks, and copper stills - giving visitors a complete picture of traditional malt whisky production. One of Scotland's most authentic whisky heritage experiences.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -62303,7 +62300,7 @@ const CASTLES = [
     "era": "16th century",
     "condition": "ruin",
     "description": "Impressive ruins of a large courtyard castle near Portsoy in Banffshire. One of the largest medieval castles in northeast Scotland, surprisingly little-known.",
-    "image": "https://img.castlecore.uk/boyne-castle.jpg",
+    "image": "https://img.castlecore.uk/boyne-castle-3.jpg",
     "rating": 3.6,
     "reviewCount": 100,
     "county": "Aberdeenshire",
@@ -62317,8 +62314,8 @@ const CASTLES = [
     "access": "free",
     "_index": 2044,
     "gallery": [
+      "https://img.castlecore.uk/boyne-castle.jpg",
       "https://img.castlecore.uk/boyne-castle-2.jpg",
-      "https://img.castlecore.uk/boyne-castle-3.jpg",
       "https://img.castlecore.uk/boyne-castle-4.jpg",
       "https://img.castlecore.uk/boyne-castle-5.jpg"
     ],
@@ -62381,7 +62378,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A ruined medieval church in Banffshire, notable for a fine sacrament house — one of the best examples of pre-Reformation church furnishing in northeast Scotland.",
+    "description": "A ruined medieval church in Banffshire, notable for a fine sacrament house - one of the best examples of pre-Reformation church furnishing in northeast Scotland.",
     "image": "https://img.castlecore.uk/deskford-church.jpg",
     "rating": 3.6,
     "reviewCount": 80,
@@ -62493,7 +62490,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-15th century",
     "condition": "ruin",
-    "description": "Exquisite late Gothic ruins near Dumfries — the carved stonework of the Douglas princess's tomb is among the finest medieval sculpture in Scotland.",
+    "description": "Exquisite late Gothic ruins near Dumfries - the carved stonework of the Douglas princess's tomb is among the finest medieval sculpture in Scotland.",
     "image": "https://img.castlecore.uk/lincluden-collegiate-church.jpg",
     "rating": 4.1,
     "reviewCount": 380,
@@ -62513,7 +62510,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lincluden-collegiate-church-4.jpg",
       "https://img.castlecore.uk/lincluden-collegiate-church-5.jpg"
     ],
-    "history": "Founded as a Benedictine nunnery in the 12th century, refounded as a collegiate church by Archibald 'the Grim', 3rd Earl of Douglas, around 1389. The tomb of Princess Margaret Douglas features extraordinary carved tracery — considered the finest surviving medieval tomb sculpture in Scotland. Robert Burns admired the ruins and wrote about them. Managed by Historic Environment Scotland.",
+    "history": "Founded as a Benedictine nunnery in the 12th century, refounded as a collegiate church by Archibald 'the Grim', 3rd Earl of Douglas, around 1389. The tomb of Princess Margaret Douglas features extraordinary carved tracery - considered the finest surviving medieval tomb sculpture in Scotland. Robert Burns admired the ruins and wrote about them. Managed by Historic Environment Scotland.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -62533,7 +62530,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Natural/prehistoric",
     "condition": "intact",
-    "description": "Scotland's fifth-highest waterfall plunges 60m into the Moffat Water Valley — a glacial landscape of raw, dramatic beauty where Covenanters once hid from persecution.",
+    "description": "Scotland's fifth-highest waterfall plunges 60m into the Moffat Water Valley - a glacial landscape of raw, dramatic beauty where Covenanters once hid from persecution.",
     "image": "https://img.castlecore.uk/grey-mare-s-tail.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -62669,7 +62666,7 @@ const CASTLES = [
       "https://img.castlecore.uk/repentance-tower-4.jpg",
       "https://img.castlecore.uk/repentance-tower-5.jpg"
     ],
-    "history": "Built around 1565 by John Maxwell, 4th Lord Herries — the same builder as Hoddom Castle — reportedly as an act of penance (for what sin is debated). The word 'REPENTANCE' is inscribed above the entrance. Standing on a hilltop, it also served as a watchtower and beacon. A unique and enigmatic monument in the Dumfriesshire landscape.",
+    "history": "Built around 1565 by John Maxwell, 4th Lord Herries - the same builder as Hoddom Castle - reportedly as an act of penance (for what sin is debated). The word 'REPENTANCE' is inscribed above the entrance. Standing on a hilltop, it also served as a watchtower and beacon. A unique and enigmatic monument in the Dumfriesshire landscape.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -62706,7 +62703,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lockerbie-tower-4.jpg",
       "https://img.castlecore.uk/lockerbie-tower-5.jpg"
     ],
-    "history": "A medieval tower in the town of Lockerbie, Dumfriesshire. Little survives. The town is best known for the 1988 Pan Am Flight 103 bombing — a memorial garden commemorates the 270 victims. The tower is of mainly local historical interest.",
+    "history": "A medieval tower in the town of Lockerbie, Dumfriesshire. Little survives. The town is best known for the 1988 Pan Am Flight 103 bombing - a memorial garden commemorates the 270 victims. The tower is of mainly local historical interest.",
     "sources": [
       {
         "name": "Canmore",
@@ -62824,7 +62821,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lennoxlove-house-4.jpg",
       "https://img.castlecore.uk/lennoxlove-house-5.jpg"
     ],
-    "history": "A tower house dating from the 14th century, extensively extended. Named 'Lennoxlove' by Frances Stewart, Duchess of Richmond — La Belle Stuart, model for Britannia on British coins. Houses the Hamilton Collection including Mary Queen of Scots' death mask and a sapphire ring. The grounds include parkland and gardens. Open for guided tours.",
+    "history": "A tower house dating from the 14th century, extensively extended. Named 'Lennoxlove' by Frances Stewart, Duchess of Richmond - La Belle Stuart, model for Britannia on British coins. Houses the Hamilton Collection including Mary Queen of Scots' death mask and a sapphire ring. The grounds include parkland and gardens. Open for guided tours.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -63231,7 +63228,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Iron Age / Early Medieval",
     "condition": "ruin",
-    "description": "The ancient capital of Dál Riata — climb this rocky outcrop in Kilmartin Glen and place your foot in the same carved footprint where Dark Age kings were crowned in the birthplace of Scotland.",
+    "description": "The ancient capital of Dál Riata - climb this rocky outcrop in Kilmartin Glen and place your foot in the same carved footprint where Dark Age kings were crowned in the birthplace of Scotland.",
     "image": "https://img.castlecore.uk/dunadd-fort.jpg",
     "rating": 4.4,
     "reviewCount": 1800,
@@ -63352,7 +63349,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "8th century",
     "condition": "intact",
-    "description": "The finest intact high cross in Scotland â€” an 8th-century masterpiece of Celtic art on Islay. Breathtaking craftsmanship.",
+    "description": "The finest intact high cross in Scotland â€" an 8th-century masterpiece of Celtic art on Islay. Breathtaking craftsmanship.",
     "image": "https://img.castlecore.uk/kildalton-cross.jpg",
     "rating": 4.5,
     "reviewCount": 680,
@@ -63542,7 +63539,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-15th century",
     "condition": "intact",
-    "description": "Scotland's oldest inhabited castle — 800 years of siege, royalty, and intrigue wrapped in pink sandstone on the banks of the River Esk, now a luxury hotel and spa.",
+    "description": "Scotland's oldest inhabited castle - 800 years of siege, royalty, and intrigue wrapped in pink sandstone on the banks of the River Esk, now a luxury hotel and spa.",
     "image": "https://img.castlecore.uk/dalhousie-castle.jpg",
     "rating": 4.2,
     "reviewCount": 1400,
@@ -63564,7 +63561,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dalhousie-castle-4.jpg",
       "https://img.castlecore.uk/dalhousie-castle-5.jpg"
     ],
-    "history": "Origins trace to c. 1140 when Simunus de Ramesia followed King David I to Scotland. Edward I (Longshanks) stayed here en route to battle William Wallace at Falkirk. In 1400, Sir Alexander Ramsay withstood a six-month siege by Henry IV — the last time an English king personally besieged a Scottish castle. The L-plan keep dates to c. 1450. Now operates as a hotel and spa.",
+    "history": "Origins trace to c. 1140 when Simunus de Ramesia followed King David I to Scotland. Edward I (Longshanks) stayed here en route to battle William Wallace at Falkirk. In 1400, Sir Alexander Ramsay withstood a six-month siege by Henry IV - the last time an English king personally besieged a Scottish castle. The L-plan keep dates to c. 1450. Now operates as a hotel and spa.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -63756,7 +63753,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Georgian (1761)",
     "condition": "restored",
-    "description": "Britain's most eccentric folly — a 14-metre stone pineapple crowning a Georgian walled garden, built by a Scottish earl with impeccable taste and questionable restraint.",
+    "description": "Britain's most eccentric folly - a 14-metre stone pineapple crowning a Georgian walled garden, built by a Scottish earl with impeccable taste and questionable restraint.",
     "image": "https://img.castlecore.uk/dunmore-pineapple.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
@@ -63914,7 +63911,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-19th century",
     "condition": "intact",
-    "description": "A French château hiding behind the Antonine Wall — 600 years of Scottish history from Roman frontiers to Jacobite risings, all under one extravagant roof.",
+    "description": "A French château hiding behind the Antonine Wall - 600 years of Scottish history from Roman frontiers to Jacobite risings, all under one extravagant roof.",
     "image": "https://img.castlecore.uk/callendar-house.jpg",
     "rating": 4.2,
     "reviewCount": 1200,
@@ -64019,7 +64016,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "7th-9th century",
     "condition": "intact",
-    "description": "A remarkable group of Pictish carved stones in Angus â€” including a famous battle scene believed to depict the Battle of Nechtansmere.",
+    "description": "A remarkable group of Pictish carved stones in Angus â€" including a famous battle scene believed to depict the Battle of Nechtansmere.",
     "image": "https://img.castlecore.uk/aberlemno-sculptured-stones.jpg",
     "rating": 4.3,
     "reviewCount": 520,
@@ -64092,7 +64089,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "restored",
-    "description": "A sturdy 15th-century fortress standing guard at the mouth of the Tay — where castle walls meet sandy beach and panoramic views stretch across the Firth to Fife.",
+    "description": "A sturdy 15th-century fortress standing guard at the mouth of the Tay - where castle walls meet sandy beach and panoramic views stretch across the Firth to Fife.",
     "image": "https://img.castlecore.uk/broughty-ferry-beach-castle.jpg",
     "rating": 4.3,
     "reviewCount": 1600,
@@ -64153,7 +64150,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ethie-castle-4.jpg",
       "https://img.castlecore.uk/ethie-castle-5.jpg"
     ],
-    "history": "14th-century castle with connections to Cardinal David Beaton. Haunted reputation â€” a child's skeleton was reportedly found walled up. Overlooks the Angus coast near Arbroath.",
+    "history": "14th-century castle with connections to Cardinal David Beaton. Haunted reputation â€" a child's skeleton was reportedly found walled up. Overlooks the Angus coast near Arbroath.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -64387,7 +64384,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Iron Age",
     "condition": "intact",
-    "description": "An Iron Age underground passage near Dundee â€” one of the finest souterrains in Scotland. A mysterious 2,000-year-old tunnel.",
+    "description": "An Iron Age underground passage near Dundee â€" one of the finest souterrains in Scotland. A mysterious 2,000-year-old tunnel.",
     "image": "https://img.castlecore.uk/pitcur-souterrain.jpg",
     "rating": 3.6,
     "reviewCount": 80,
@@ -64454,7 +64451,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Iron Age",
     "condition": "ruin",
-    "description": "Spectacular twin Iron Age hillforts on adjacent Angus hills â€” the White and Brown Caterthuns. Among Scotland's finest prehistoric fortifications.",
+    "description": "Spectacular twin Iron Age hillforts on adjacent Angus hills â€" the White and Brown Caterthuns. Among Scotland's finest prehistoric fortifications.",
     "image": "https://img.castlecore.uk/caterthun-hill-forts.jpg",
     "rating": 4.1,
     "reviewCount": 320,
@@ -64528,7 +64525,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "15th century",
     "condition": "intact",
-    "description": "A medieval church near Dundee with rare pre-Reformation painted panels â€” Scotland's finest surviving medieval church paintings.",
+    "description": "A medieval church near Dundee with rare pre-Reformation painted panels â€" Scotland's finest surviving medieval church paintings.",
     "image": "https://img.castlecore.uk/fowlis-easter-church.jpg",
     "rating": 4,
     "reviewCount": 180,
@@ -64974,7 +64971,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "ruin",
-    "description": "The vast roofless shell of an unfinished 17th-century mansion near Naas—one of the largest brick buildings attempted in Ireland, abandoned before completion.",
+    "description": "The vast roofless shell of an unfinished 17th-century mansion near Naas-one of the largest brick buildings attempted in Ireland, abandoned before completion.",
     "image": "https://img.castlecore.uk/jigginstown-castle.jpg",
     "rating": 3.8,
     "reviewCount": 50,
@@ -64993,7 +64990,7 @@ const CASTLES = [
       "https://img.castlecore.uk/jigginstown-castle-4.jpg",
       "https://img.castlecore.uk/jigginstown-castle-5.jpg"
     ],
-    "history": "Jigginstown Castle near Naas, County Kildare, was begun around 1636 by Thomas Wentworth, Earl of Strafford, Lord Deputy of Ireland. The enormous brick building was intended to host King Charles I but was never completed after Strafford's execution in 1641. The massive shell—one of the earliest large-scale brick buildings in Ireland—stands as a monument to thwarted ambition.",
+    "history": "Jigginstown Castle near Naas, County Kildare, was begun around 1636 by Thomas Wentworth, Earl of Strafford, Lord Deputy of Ireland. The enormous brick building was intended to host King Charles I but was never completed after Strafford's execution in 1641. The massive shell-one of the earliest large-scale brick buildings in Ireland-stands as a monument to thwarted ambition.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -65092,7 +65089,7 @@ const CASTLES = [
     "type": "tower house",
     "era": "16th-17th century",
     "condition": "restored",
-    "description": "A magnificent Tudor merchant's house in the heart of medieval Kilkenny—the finest surviving example of its kind in Ireland, now a museum.",
+    "description": "A magnificent Tudor merchant's house in the heart of medieval Kilkenny-the finest surviving example of its kind in Ireland, now a museum.",
     "image": "https://img.castlecore.uk/rothe-house.jpg",
     "rating": 4.3,
     "reviewCount": 350,
@@ -65638,7 +65635,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-15th century",
     "condition": "ruin",
-    "description": "Medieval castle and town wall remains in the historic Limerick town that was the Desmond capital—Ireland's finest walled medieval town outside Dublin.",
+    "description": "Medieval castle and town wall remains in the historic Limerick town that was the Desmond capital-Ireland's finest walled medieval town outside Dublin.",
     "image": "https://img.castlecore.uk/kilmallock-castle.jpg",
     "rating": 3.8,
     "reviewCount": 60,
@@ -65846,7 +65843,7 @@ const CASTLES = [
       "https://img.castlecore.uk/thurles-castle-4.jpg",
       "https://img.castlecore.uk/thurles-castle-5.jpg"
     ],
-    "history": "Thurles Castle (also known as Bridge Castle) stands in the town where the Gaelic Athletic Association (GAA) was founded at Hayes's Hotel on 1 November 1884—one of the most significant cultural events in modern Irish history. The castle dates to the medieval period.",
+    "history": "Thurles Castle (also known as Bridge Castle) stands in the town where the Gaelic Athletic Association (GAA) was founded at Hayes's Hotel on 1 November 1884-one of the most significant cultural events in modern Irish history. The castle dates to the medieval period.",
     "sources": [
       {
         "name": "Tipperary Heritage",
@@ -65886,7 +65883,7 @@ const CASTLES = [
       "https://img.castlecore.uk/burncourt-castle-4.jpg",
       "https://img.castlecore.uk/burncourt-castle-5.jpg"
     ],
-    "history": "Burncourt Castle (Clogheen) in County Tipperary was built by Sir Richard Everard around 1641. The massive mansion—with 26 gables and seven chimneys—was burned by Lady Everard to prevent it falling to Cromwellian forces. The impressive shell, one of the largest roofless ruins in Ireland, stands in farmland in the Galtee foothills.",
+    "history": "Burncourt Castle (Clogheen) in County Tipperary was built by Sir Richard Everard around 1641. The massive mansion-with 26 gables and seven chimneys-was burned by Lady Everard to prevent it falling to Cromwellian forces. The impressive shell, one of the largest roofless ruins in Ireland, stands in farmland in the Galtee foothills.",
     "sources": [
       {
         "name": "Heritage Ireland",
@@ -65939,7 +65936,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "restored",
-    "description": "See Ormond Castle—the finest Elizabethan manor house in Ireland, built by Black Tom Butler to welcome Queen Elizabeth I.",
+    "description": "See Ormond Castle-the finest Elizabethan manor house in Ireland, built by Black Tom Butler to welcome Queen Elizabeth I.",
     "image": "https://img.castlecore.uk/carrick-on-suir-castle.jpg",
     "rating": 4.3,
     "reviewCount": 250,
@@ -66404,7 +66401,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "ruin",
-    "description": "A spectacular Norman Revival castle in County Armagh, designed by Thomas Hopper—one of the largest and most dramatic 19th-century castles in Ireland.",
+    "description": "A spectacular Norman Revival castle in County Armagh, designed by Thomas Hopper-one of the largest and most dramatic 19th-century castles in Ireland.",
     "image": "https://img.castlecore.uk/gosford-castle.jpg",
     "rating": 4,
     "reviewCount": 120,
@@ -66512,7 +66509,7 @@ const CASTLES = [
     "type": "fort",
     "era": "c. 3100 BC",
     "condition": "ruin",
-    "description": "Part of the Brú na Bóinne UNESCO World Heritage Site — where 5,000-year-old passage tombs predate the pyramids and the winter solstice still illuminates the dead.",
+    "description": "Part of the Brú na Bóinne UNESCO World Heritage Site - where 5,000-year-old passage tombs predate the pyramids and the winter solstice still illuminates the dead.",
     "image": "https://img.castlecore.uk/newgrange-cursus.jpg",
     "rating": 4.8,
     "reviewCount": 3000,
@@ -66533,7 +66530,7 @@ const CASTLES = [
       "https://img.castlecore.uk/newgrange-cursus-4.jpg",
       "https://img.castlecore.uk/newgrange-cursus-5.jpg"
     ],
-    "history": "Part of the Brú na Bóinne complex in the Boyne Valley, a UNESCO World Heritage Site. Newgrange was built c.3100 BC — older than Stonehenge and the Egyptian pyramids. A passage tomb with a roof box that channels sunlight at winter solstice. The surrounding monuments include henges, passage graves, and ringforts spanning millennia.",
+    "history": "Part of the Brú na Bóinne complex in the Boyne Valley, a UNESCO World Heritage Site. Newgrange was built c.3100 BC - older than Stonehenge and the Egyptian pyramids. A passage tomb with a roof box that channels sunlight at winter solstice. The surrounding monuments include henges, passage graves, and ringforts spanning millennia.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -66553,7 +66550,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Neolithic (c. 3200 BC)",
     "condition": "ruin",
-    "description": "A 5,000-year-old Neolithic mound holding Europe's largest collection of megalithic art — older than the pyramids, with two mysterious passages aligned to the equinox sunrise and sunset.",
+    "description": "A 5,000-year-old Neolithic mound holding Europe's largest collection of megalithic art - older than the pyramids, with two mysterious passages aligned to the equinox sunrise and sunset.",
     "image": "https://img.castlecore.uk/knowth-passage-tomb.jpg",
     "rating": 4.6,
     "reviewCount": 1000,
@@ -66573,7 +66570,7 @@ const CASTLES = [
       "https://img.castlecore.uk/knowth-passage-tomb-4.jpg",
       "https://img.castlecore.uk/knowth-passage-tomb-5.jpg"
     ],
-    "history": "Built c. 3200 BC during the Neolithic era, part of the Brú na Bóinne UNESCO World Heritage complex alongside Newgrange and Dowth. Contains two passage tombs — eastern and western — within the Great Mound, surrounded by 17 smaller satellite tombs. Houses over one-third of all Western European megalithic art on its 127 decorated kerbstones. Used continuously through Bronze Age, Iron Age, and Early Christian periods.",
+    "history": "Built c. 3200 BC during the Neolithic era, part of the Brú na Bóinne UNESCO World Heritage complex alongside Newgrange and Dowth. Contains two passage tombs - eastern and western - within the Great Mound, surrounded by 17 smaller satellite tombs. Houses over one-third of all Western European megalithic art on its 127 decorated kerbstones. Used continuously through Bronze Age, Iron Age, and Early Christian periods.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -66892,7 +66889,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "A medieval church in Inishowen, Donegal, featuring a remarkable carved tombstone with a sword, hurley, and ball—the earliest known depiction of hurling.",
+    "description": "A medieval church in Inishowen, Donegal, featuring a remarkable carved tombstone with a sword, hurley, and ball-the earliest known depiction of hurling.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/CloncaChurch%26Cross.jpg/500px-CloncaChurch%26Cross.jpg",
     "rating": 3.8,
     "reviewCount": 40,
@@ -66905,7 +66902,7 @@ const CASTLES = [
     ],
     "access": "free",
     "_index": 2187,
-    "history": "Clonca Church in Inishowen, County Donegal, preserves a remarkable medieval tombstone featuring a carved sword, hurley stick, and ball—believed to be the earliest known depiction of the Irish sport of hurling. The church also features a fine carved lintel and high cross.",
+    "history": "Clonca Church in Inishowen, County Donegal, preserves a remarkable medieval tombstone featuring a carved sword, hurley stick, and ball-believed to be the earliest known depiction of the Irish sport of hurling. The church also features a fine carved lintel and high cross.",
     "sources": [
       {
         "name": "Donegal Heritage",
@@ -67003,7 +67000,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Various",
     "condition": "ruin",
-    "description": "An interpretive centre at Tulsk explaining the extraordinary Rathcroghan archaeological complex—ancient capital of Connacht's kings.",
+    "description": "An interpretive centre at Tulsk explaining the extraordinary Rathcroghan archaeological complex-ancient capital of Connacht's kings.",
     "image": "https://img.castlecore.uk/cruachan-ai-visitor-centre.jpg",
     "rating": 4.3,
     "reviewCount": 200,
@@ -67020,7 +67017,7 @@ const CASTLES = [
       "https://img.castlecore.uk/cruachan-ai-visitor-centre-4.jpg",
       "https://img.castlecore.uk/cruachan-ai-visitor-centre-5.jpg"
     ],
-    "history": "The Cruachan Ai Visitor Centre at Tulsk, County Roscommon, interprets the remarkable Rathcroghan archaeological complex nearby, including the royal mound, ringforts, and Oweynagat cave—the legendary entrance to the Celtic Otherworld.",
+    "history": "The Cruachan Ai Visitor Centre at Tulsk, County Roscommon, interprets the remarkable Rathcroghan archaeological complex nearby, including the royal mound, ringforts, and Oweynagat cave-the legendary entrance to the Celtic Otherworld.",
     "sources": [
       {
         "name": "Rathcroghan Visitor Centre",
@@ -67427,7 +67424,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th century",
     "condition": "ruin",
-    "description": "See Clogh Oughter Castle—a hauntingly beautiful circular tower on an island in Lough Oughter, the last castle to fall to Cromwell.",
+    "description": "See Clogh Oughter Castle-a hauntingly beautiful circular tower on an island in Lough Oughter, the last castle to fall to Cromwell.",
     "image": "https://img.castlecore.uk/lough-oughter-castle-island.jpg",
     "rating": 4.1,
     "reviewCount": 100,
@@ -67797,7 +67794,7 @@ const CASTLES = [
       "https://img.castlecore.uk/rathlin-island-ruins-4.jpg",
       "https://img.castlecore.uk/rathlin-island-ruins-5.jpg"
     ],
-    "history": "Rathlin Island off the Antrim coast is Ireland's most northerly inhabited island. It features various ruins and is famous as the place where Robert the Bruce, hiding in a cave in 1306, watched a spider repeatedly try to spin its web—inspiring him to continue his struggle for Scottish independence. The island is also an important seabird sanctuary.",
+    "history": "Rathlin Island off the Antrim coast is Ireland's most northerly inhabited island. It features various ruins and is famous as the place where Robert the Bruce, hiding in a cave in 1306, watched a spider repeatedly try to spin its web-inspiring him to continue his struggle for Scottish independence. The island is also an important seabird sanctuary.",
     "sources": [
       {
         "name": "Rathlin Island",
@@ -68250,7 +68247,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A perfectly preserved Victorian bobbin mill in the Lake District—the last working one in England, where millions of wooden bobbins were turned for the Lancashire cotton industry. A living industrial heritage gem.",
+    "description": "A perfectly preserved Victorian bobbin mill in the Lake District-the last working one in England, where millions of wooden bobbins were turned for the Lancashire cotton industry. A living industrial heritage gem.",
     "image": "https://img.castlecore.uk/stott-park-bobbin-mill.jpg",
     "rating": 4.3,
     "reviewCount": 800,
@@ -68286,7 +68283,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Neolithic",
     "condition": "intact",
-    "description": "One of Britain's most atmospheric stone circles — 38 ancient stones set in a natural amphitheatre of Lakeland fells, with mist-wreathed mountains in every direction.",
+    "description": "One of Britain's most atmospheric stone circles - 38 ancient stones set in a natural amphitheatre of Lakeland fells, with mist-wreathed mountains in every direction.",
     "image": "https://img.castlecore.uk/castlerigg-stone-circle.jpg",
     "rating": 4.7,
     "reviewCount": 6000,
@@ -68308,7 +68305,7 @@ const CASTLES = [
       "https://img.castlecore.uk/castlerigg-stone-circle-4.jpg",
       "https://img.castlecore.uk/castlerigg-stone-circle-5.jpg"
     ],
-    "history": "One of the earliest stone circles in Britain, erected around 3000 BC during the Neolithic period. Consists of 38 stones (with 10 more forming an inner rectangle) set in a dramatic natural amphitheatre near Keswick. Its purpose remains debated — possibly astronomical, ceremonial, or a meeting place for axe trading. Managed by English Heritage but freely accessible at all times. John Keats visited in 1818 and described its power.",
+    "history": "One of the earliest stone circles in Britain, erected around 3000 BC during the Neolithic period. Consists of 38 stones (with 10 more forming an inner rectangle) set in a dramatic natural amphitheatre near Keswick. Its purpose remains debated - possibly astronomical, ceremonial, or a meeting place for axe trading. Managed by English Heritage but freely accessible at all times. John Keats visited in 1818 and described its power.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -68328,7 +68325,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "15th century",
     "condition": "partial",
-    "description": "A handsome 15th-century gatehouse perched on a cliff above the River Eden—the sole substantial survivor of a Benedictine priory that once controlled the most dramatic stretch of riverbank in Cumbria.",
+    "description": "A handsome 15th-century gatehouse perched on a cliff above the River Eden-the sole substantial survivor of a Benedictine priory that once controlled the most dramatic stretch of riverbank in Cumbria.",
     "image": "https://img.castlecore.uk/wetheral-priory-gatehouse.jpg",
     "rating": 3.7,
     "reviewCount": 200,
@@ -68363,7 +68360,7 @@ const CASTLES = [
     "type": "castle",
     "era": "2nd century AD",
     "condition": "ruin",
-    "description": "The tallest surviving Roman structure in northern England—the walls of this military bath house still stand 12 feet high, an astonishing survival in the western Lake District. Known locally as Walls Castle.",
+    "description": "The tallest surviving Roman structure in northern England-the walls of this military bath house still stand 12 feet high, an astonishing survival in the western Lake District. Known locally as Walls Castle.",
     "image": "https://img.castlecore.uk/ravenglass-roman-bath-house.jpg",
     "rating": 4.1,
     "reviewCount": 600,
@@ -68383,7 +68380,7 @@ const CASTLES = [
       "https://img.castlecore.uk/ravenglass-roman-bath-house-4.jpg",
       "https://img.castlecore.uk/ravenglass-roman-bath-house-5.jpg"
     ],
-    "history": "Part of the Roman fort of Glannaventa at Ravenglass, this bath house served the garrison that guarded the Cumbrian coast. The walls survive to nearly 4 metres (12 feet) in places—the tallest standing Roman remains in northern England. Known locally as 'Walls Castle.' The associated fort has largely eroded away. Managed by English Heritage.",
+    "history": "Part of the Roman fort of Glannaventa at Ravenglass, this bath house served the garrison that guarded the Cumbrian coast. The walls survive to nearly 4 metres (12 feet) in places-the tallest standing Roman remains in northern England. Known locally as 'Walls Castle.' The associated fort has largely eroded away. Managed by English Heritage.",
     "sources": [
       {
         "name": "English Heritage",
@@ -68399,7 +68396,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Roman (2nd century)",
     "condition": "ruin",
-    "description": "The most dramatically sited Roman fort in Britain — perched on a wild Lakeland mountain pass with sweeping views to the sea, its parade ground and bathhouse still visible after 1,900 years.",
+    "description": "The most dramatically sited Roman fort in Britain - perched on a wild Lakeland mountain pass with sweeping views to the sea, its parade ground and bathhouse still visible after 1,900 years.",
     "image": "https://img.castlecore.uk/hardknott-roman-fort.jpg",
     "rating": 4.5,
     "reviewCount": 1200,
@@ -68477,7 +68474,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "One of the most complete medieval moated manor houses in England, hidden down a farm track in the Yorkshire countryside. Its 14th-century great hall and chapel survive virtually unaltered—a time capsule of medieval life.",
+    "description": "One of the most complete medieval moated manor houses in England, hidden down a farm track in the Yorkshire countryside. Its 14th-century great hall and chapel survive virtually unaltered-a time capsule of medieval life.",
     "image": "https://img.castlecore.uk/markenfield-hall.jpg",
     "rating": 4.5,
     "reviewCount": 600,
@@ -68513,7 +68510,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "partial",
-    "description": "A 15th-century fortified manor house in Wensleydale, built by Thomas Metcalfe—head of a clan so powerful that he once rode to Middleham Castle with 300 mounted kinsmen as escort for the future Richard III.",
+    "description": "A 15th-century fortified manor house in Wensleydale, built by Thomas Metcalfe-head of a clan so powerful that he once rode to Middleham Castle with 300 mounted kinsmen as escort for the future Richard III.",
     "image": "https://img.castlecore.uk/wiki-nappa-hall.jpg",
     "rating": 3.6,
     "reviewCount": 100,
@@ -68544,7 +68541,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th-16th century",
     "condition": "intact",
-    "description": "A Tudor castle-cum-school in the North Yorkshire moors, famous for its spectacular Elizabethan Great Chamber with painted walls, stained glass, and a richly decorated plaster ceiling—one of the finest Tudor rooms in England.",
+    "description": "A Tudor castle-cum-school in the North Yorkshire moors, famous for its spectacular Elizabethan Great Chamber with painted walls, stained glass, and a richly decorated plaster ceiling-one of the finest Tudor rooms in England.",
     "image": "https://img.castlecore.uk/gilling-castle.jpg",
     "rating": 3.9,
     "reviewCount": 300,
@@ -68579,7 +68576,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-17th century",
     "condition": "intact",
-    "description": "A mellow Yorkshire manor nestled beside the River Rye in the Howardian Hills — where Tudor bones hide beneath 17th-century elegance and a celebrated miniature room collection delights visitors.",
+    "description": "A mellow Yorkshire manor nestled beside the River Rye in the Howardian Hills - where Tudor bones hide beneath 17th-century elegance and a celebrated miniature room collection delights visitors.",
     "image": "https://img.castlecore.uk/nunnington-hall.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -68627,7 +68624,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century / 16th-17th century conversion",
     "condition": "partial",
-    "description": "A country house in the Howardian Hills built on the remains of an Augustinian priory—rumoured to contain Oliver Cromwell's body in a sealed tomb that the family has never allowed to be opened.",
+    "description": "A country house in the Howardian Hills built on the remains of an Augustinian priory-rumoured to contain Oliver Cromwell's body in a sealed tomb that the family has never allowed to be opened.",
     "image": "https://img.castlecore.uk/newburgh-priory.jpg",
     "rating": 4,
     "reviewCount": 400,
@@ -68663,7 +68660,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "partial",
-    "description": "The substantial nave of a Gilbertine priory in North Yorkshire—the only Gilbertine house to survive as a parish church. This uniquely English monastic order was founded by St Gilbert of Sempringham.",
+    "description": "The substantial nave of a Gilbertine priory in North Yorkshire-the only Gilbertine house to survive as a parish church. This uniquely English monastic order was founded by St Gilbert of Sempringham.",
     "image": "https://img.castlecore.uk/old-malton-priory.jpg",
     "rating": 4,
     "reviewCount": 300,
@@ -68698,7 +68695,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "7th century / 12th-16th century",
     "condition": "intact",
-    "description": "One of England's oldest places of worship, hiding a 7th-century Anglo-Saxon crypt beneath soaring Gothic arches — its carvings are said to have inspired Lewis Carroll.",
+    "description": "One of England's oldest places of worship, hiding a 7th-century Anglo-Saxon crypt beneath soaring Gothic arches - its carvings are said to have inspired Lewis Carroll.",
     "image": "https://img.castlecore.uk/rippon-cathedral.jpg",
     "rating": 4.4,
     "reviewCount": 2000,
@@ -68785,7 +68782,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th-14th century",
     "condition": "partial",
-    "description": "A magnificent medieval church in the East Riding with a ruined chapter house and choir open to the sky—the nave is still in use while the eastern end slowly crumbles, an eerie split between the living and the dead.",
+    "description": "A magnificent medieval church in the East Riding with a ruined chapter house and choir open to the sky-the nave is still in use while the eastern end slowly crumbles, an eerie split between the living and the dead.",
     "image": "https://img.castlecore.uk/howden-minster.jpg",
     "rating": 4.2,
     "reviewCount": 500,
@@ -68850,7 +68847,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Medieval",
     "condition": "partial",
-    "description": "A little-known medieval tower in the Yorkshire countryside, one of the many small fortified dwellings that dot the landscape of northern England—built when every family of means needed a strongpoint to survive border turbulence.",
+    "description": "A little-known medieval tower in the Yorkshire countryside, one of the many small fortified dwellings that dot the landscape of northern England-built when every family of means needed a strongpoint to survive border turbulence.",
     "image": "https://img.castlecore.uk/craysthorpe-tower.jpg",
     "rating": 3.2,
     "reviewCount": 50,
@@ -68883,7 +68880,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century (1461)",
     "condition": "ruin",
-    "description": "The site of the bloodiest battle ever fought on English soil—on Palm Sunday 1461, up to 28,000 men died in a snowstorm as York defeated Lancaster. The silent farmland conceals mass graves that still yield bones today.",
+    "description": "The site of the bloodiest battle ever fought on English soil-on Palm Sunday 1461, up to 28,000 men died in a snowstorm as York defeated Lancaster. The silent farmland conceals mass graves that still yield bones today.",
     "image": "https://img.castlecore.uk/towton-battlefield.jpg",
     "rating": 4,
     "reviewCount": 600,
@@ -68918,7 +68915,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th-20th century",
     "condition": "ruin",
-    "description": "A Victorian and WWI military installation at the very tip of Spurn Head—a narrow sand spit stretching three miles into the Humber Estuary. Abandoned military buildings and the wild coast create an eerily post-apocalyptic landscape.",
+    "description": "A Victorian and WWI military installation at the very tip of Spurn Head-a narrow sand spit stretching three miles into the Humber Estuary. Abandoned military buildings and the wild coast create an eerily post-apocalyptic landscape.",
     "image": "https://img.castlecore.uk/spurn-point-fort.jpg",
     "rating": 4,
     "reviewCount": 500,
@@ -68953,7 +68950,7 @@ const CASTLES = [
     "type": "castle",
     "era": "2nd-5th century AD",
     "condition": "ruin",
-    "description": "The Roman civitas capital of the Brigantes—the largest British tribe. Two remarkable mosaic floors survive in situ, and the defensive town walls trace the outline of Isurium Brigantum in this quiet Yorkshire village.",
+    "description": "The Roman civitas capital of the Brigantes-the largest British tribe. Two remarkable mosaic floors survive in situ, and the defensive town walls trace the outline of Isurium Brigantum in this quiet Yorkshire village.",
     "image": "https://img.castlecore.uk/aldborough-roman-town.jpg",
     "rating": 4,
     "reviewCount": 400,
@@ -69048,7 +69045,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1st-4th century AD",
     "condition": "ruin",
-    "description": "The site of Vinovia, one of the largest Roman forts in northern England, with a remarkably well-preserved military bath house featuring an intact hypocaust heating system—the best example in Britain.",
+    "description": "The site of Vinovia, one of the largest Roman forts in northern England, with a remarkably well-preserved military bath house featuring an intact hypocaust heating system-the best example in Britain.",
     "image": "https://img.castlecore.uk/binchester-roman-fort.jpg",
     "rating": 4.1,
     "reviewCount": 400,
@@ -69066,7 +69063,7 @@ const CASTLES = [
       "https://img.castlecore.uk/binchester-roman-fort-4.jpg",
       "https://img.castlecore.uk/binchester-roman-fort-5.jpg"
     ],
-    "history": "Known as Vinovia, this was one of the largest Roman forts in County Durham, covering about 9 acres. The fort was established in the late 1st century AD and occupied until the 4th century. The highlight is the exceptionally well-preserved commandant's bath house with its intact hypocaust (underfloor heating) system—considered the best surviving example in Britain. Open seasonally.",
+    "history": "Known as Vinovia, this was one of the largest Roman forts in County Durham, covering about 9 acres. The fort was established in the late 1st century AD and occupied until the 4th century. The highlight is the exceptionally well-preserved commandant's bath house with its intact hypocaust (underfloor heating) system-considered the best surviving example in Britain. Open seasonally.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -69082,7 +69079,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Roman (2nd-5th century)",
     "condition": "ruin",
-    "description": "A reconstructed Roman gateway rises above the Tyne estuary — where Arab boatmen from the Tigris once guarded Hadrian's Wall's vital supply line.",
+    "description": "A reconstructed Roman gateway rises above the Tyne estuary - where Arab boatmen from the Tigris once guarded Hadrian's Wall's vital supply line.",
     "image": "https://img.castlecore.uk/arbeia-roman-fort.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -69122,7 +69119,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Roman (2nd century)",
     "condition": "ruin",
-    "description": "Where Hadrian's Wall begins — the easternmost fort on Rome's greatest frontier, now the most excavated site on the entire Wall with a 35-metre viewing tower.",
+    "description": "Where Hadrian's Wall begins - the easternmost fort on Rome's greatest frontier, now the most excavated site on the entire Wall with a 35-metre viewing tower.",
     "image": "https://img.castlecore.uk/segedunum-roman-fort.jpg",
     "rating": 4.2,
     "reviewCount": 1200,
@@ -69162,7 +69159,7 @@ const CASTLES = [
     "type": "castle",
     "era": "12th century",
     "condition": "intact",
-    "description": "The Norman keep that gave Newcastle its name — a brooding stone fortress in the heart of the city where Henry II's power still echoes through the walls.",
+    "description": "The Norman keep that gave Newcastle its name - a brooding stone fortress in the heart of the city where Henry II's power still echoes through the walls.",
     "image": "https://img.castlecore.uk/newcastle-castle-keep.jpg",
     "rating": 4.3,
     "reviewCount": 3000,
@@ -69183,7 +69180,7 @@ const CASTLES = [
       "https://img.castlecore.uk/newcastle-castle-keep-4.jpg",
       "https://img.castlecore.uk/newcastle-castle-keep-5.jpg"
     ],
-    "history": "Built 1172-1177 by Henry II on the site of a Roman fort and an earlier Norman motte-and-bailey built by Robert Curthose in 1080 — the 'new castle' that gave the city its name. The Black Gate was added by Henry III (1247-1250). Key northern fortress against Scottish invasions. Now a museum.",
+    "history": "Built 1172-1177 by Henry II on the site of a Roman fort and an earlier Norman motte-and-bailey built by Robert Curthose in 1080 - the 'new castle' that gave the city its name. The Black Gate was added by Henry III (1247-1250). Key northern fortress against Scottish invasions. Now a museum.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -69203,7 +69200,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "The first house in the world lit by hydroelectric power — a Victorian inventor's dream home clinging to a Northumberland hillside, surrounded by one of Europe's largest rock gardens.",
+    "description": "The first house in the world lit by hydroelectric power - a Victorian inventor's dream home clinging to a Northumberland hillside, surrounded by one of Europe's largest rock gardens.",
     "image": "https://img.castlecore.uk/cragside-house.jpg",
     "rating": 4.6,
     "reviewCount": 5500,
@@ -69248,7 +69245,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "A gracious country house in 13,500 acres of Northumbrian wilderness — where Pre-Raphaelite murals tell the story of the north and the walled garden enchants.",
+    "description": "A gracious country house in 13,500 acres of Northumbrian wilderness - where Pre-Raphaelite murals tell the story of the north and the walled garden enchants.",
     "image": "https://img.castlecore.uk/wallington-hall.jpg",
     "rating": 4.4,
     "reviewCount": 3000,
@@ -69291,7 +69288,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Roman (2nd century)",
     "condition": "ruin",
-    "description": "Hadrian's Wall at its most dramatic — a steep ridge of ancient stone marching over the Northumbrian crags, with a beautifully preserved milecastle perched on the edge.",
+    "description": "Hadrian's Wall at its most dramatic - a steep ridge of ancient stone marching over the Northumbrian crags, with a beautifully preserved milecastle perched on the edge.",
     "image": "https://img.castlecore.uk/cawfields-roman-wall.jpg",
     "rating": 4.5,
     "reviewCount": 1500,
@@ -69333,7 +69330,7 @@ const CASTLES = [
     "type": "castle",
     "era": "2nd century AD",
     "condition": "ruin",
-    "description": "A windswept dip in Hadrian's Wall where England's most iconic tree once stood — felled by vandals in 2023 but already sprouting new life from the stump.",
+    "description": "A windswept dip in Hadrian's Wall where England's most iconic tree once stood - felled by vandals in 2023 but already sprouting new life from the stump.",
     "image": "https://img.castlecore.uk/sycamore-gap.jpg",
     "rating": 4.5,
     "reviewCount": 3000,
@@ -69374,7 +69371,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A Georgian mansion wrapped in ancient deer park — where fallow deer roam beneath 300-year-old trees and the winter garden blooms when everything else sleeps.",
+    "description": "A Georgian mansion wrapped in ancient deer park - where fallow deer roam beneath 300-year-old trees and the winter garden blooms when everything else sleeps.",
     "image": "https://img.castlecore.uk/dunham-massey.jpg",
     "rating": 4.5,
     "reviewCount": 6000,
@@ -69397,7 +69394,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dunham-massey-4.jpg",
       "https://img.castlecore.uk/dunham-massey-5.jpg"
     ],
-    "history": "Home to the Booth and Grey families for over 300 years. The current house is largely early Georgian (1730s), built around the bones of an Elizabethan manor. Contains one of Britain's finest collections of Huguenot silver. During WWI, the house served as a military hospital — the Stamford Military Hospital for 282 patients. The 250-acre deer park dates back to medieval times. Given to the National Trust in 1976 by the 10th and last Earl of Stamford.",
+    "history": "Home to the Booth and Grey families for over 300 years. The current house is largely early Georgian (1730s), built around the bones of an Elizabethan manor. Contains one of Britain's finest collections of Huguenot silver. During WWI, the house served as a military hospital - the Stamford Military Hospital for 282 patients. The 250-acre deer park dates back to medieval times. Given to the National Trust in 1976 by the 10th and last Earl of Stamford.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -69417,7 +69414,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A Georgian mansion in a vast Cheshire deer park — from opulent state rooms to a rare Japanese garden, all set against a backdrop of a thousand acres where deer have roamed for centuries.",
+    "description": "A Georgian mansion in a vast Cheshire deer park - from opulent state rooms to a rare Japanese garden, all set against a backdrop of a thousand acres where deer have roamed for centuries.",
     "image": "https://img.castlecore.uk/tatton-park.jpg",
     "rating": 4.4,
     "reviewCount": 5000,
@@ -69461,7 +69458,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "One of Lancashire's finest Tudor timber-framed halls — where a young William Shakespeare may once have performed in the spectacular Great Hall with its unique moveable screen.",
+    "description": "One of Lancashire's finest Tudor timber-framed halls - where a young William Shakespeare may once have performed in the spectacular Great Hall with its unique moveable screen.",
     "image": "https://img.castlecore.uk/rufford-old-hall.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -69484,7 +69481,7 @@ const CASTLES = [
       "https://img.castlecore.uk/rufford-old-hall-4.jpg",
       "https://img.castlecore.uk/rufford-old-hall-5.jpg"
     ],
-    "history": "Built c.1530 by Sir Robert Hesketh, home to the Hesketh family for over 600 years. The magnificent timber-framed Great Hall survives with a rare hammerbeam roof and an extraordinary moveable carved oak screen — unique among Lancashire houses. Local tradition claims a young Shakespeare performed here as 'William Shakeshafte' in the 1580s. Abandoned c.1798, later restored. National Trust since 1936.",
+    "history": "Built c.1530 by Sir Robert Hesketh, home to the Hesketh family for over 600 years. The magnificent timber-framed Great Hall survives with a rare hammerbeam roof and an extraordinary moveable carved oak screen - unique among Lancashire houses. Local tradition claims a young Shakespeare performed here as 'William Shakeshafte' in the 1580s. Abandoned c.1798, later restored. National Trust since 1936.",
     "youtube": [],
     "sources": [
       {
@@ -69547,7 +69544,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A black-and-white medieval hall draped in ghost stories and Lancashire legend — one of Britain's most haunted houses, where the White Lady still drifts through timber-framed rooms.",
+    "description": "A black-and-white medieval hall draped in ghost stories and Lancashire legend - one of Britain's most haunted houses, where the White Lady still drifts through timber-framed rooms.",
     "image": "https://img.castlecore.uk/samlesbury-hall.jpg",
     "rating": 4.2,
     "reviewCount": 1500,
@@ -69594,7 +69591,7 @@ const CASTLES = [
     "type": "castle",
     "era": "13th-14th century",
     "condition": "intact",
-    "description": "Nearly two miles of medieval ramparts encircling York's old town — walk the battlements for rooftop views of the Minster and centuries of layered history beneath your feet.",
+    "description": "Nearly two miles of medieval ramparts encircling York's old town - walk the battlements for rooftop views of the Minster and centuries of layered history beneath your feet.",
     "image": "https://img.castlecore.uk/york-city-walls.jpg",
     "rating": 4.6,
     "reviewCount": 10000,
@@ -69634,7 +69631,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th-15th century",
     "condition": "intact",
-    "description": "A soaring Gothic masterpiece rising above medieval York — the largest cathedral of its kind in Northern Europe, where stained glass tells stories spanning 800 years.",
+    "description": "A soaring Gothic masterpiece rising above medieval York - the largest cathedral of its kind in Northern Europe, where stained glass tells stories spanning 800 years.",
     "image": "https://img.castlecore.uk/york-minster.jpg",
     "rating": 4.8,
     "reviewCount": 20000,
@@ -69677,7 +69674,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "intact",
-    "description": "A Victorian time capsule preserved 'as found' — faded grandeur, peeling paint, and all — where the slow decay of a once-opulent family home tells its own story.",
+    "description": "A Victorian time capsule preserved 'as found' - faded grandeur, peeling paint, and all - where the slow decay of a once-opulent family home tells its own story.",
     "image": "https://img.castlecore.uk/brodsworth-hall.jpg",
     "rating": 4.4,
     "reviewCount": 2500,
@@ -69718,7 +69715,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A Palladian masterpiece by a teenage James Paine, built on the bones of a medieval monastery — with Chippendale furniture still in the rooms it was made for.",
+    "description": "A Palladian masterpiece by a teenage James Paine, built on the bones of a medieval monastery - with Chippendale furniture still in the rooms it was made for.",
     "image": "https://img.castlecore.uk/nostell-priory.jpg",
     "rating": 4.4,
     "reviewCount": 3000,
@@ -69760,7 +69757,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A Tudor-Jacobean time capsule set in Capability Brown parkland — birthplace of the doomed Lord Darnley, husband of Mary Queen of Scots.",
+    "description": "A Tudor-Jacobean time capsule set in Capability Brown parkland - birthplace of the doomed Lord Darnley, husband of Mary Queen of Scots.",
     "image": "https://img.castlecore.uk/temple-newsam.jpg",
     "rating": 4.3,
     "reviewCount": 3500,
@@ -69802,7 +69799,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "A dark-stoned Yorkshire manor with 1,400 years of history — from farming estate to Civil War flashpoint, it barely escaped demolition to become a National Trust treasure.",
+    "description": "A dark-stoned Yorkshire manor with 1,400 years of history - from farming estate to Civil War flashpoint, it barely escaped demolition to become a National Trust treasure.",
     "image": "https://img.castlecore.uk/east-riddlesden-hall.jpg",
     "rating": 4.2,
     "reviewCount": 1200,
@@ -69844,7 +69841,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th-19th century",
     "condition": "ruin",
-    "description": "The remarkable industrial ruins of a 17th-century alum quarry clinging to the North Yorkshire cliffs—where a chemical process so secret it was considered witchcraft transformed shale into a substance more valuable than gold.",
+    "description": "The remarkable industrial ruins of a 17th-century alum quarry clinging to the North Yorkshire cliffs-where a chemical process so secret it was considered witchcraft transformed shale into a substance more valuable than gold.",
     "image": "https://img.castlecore.uk/ravenscar-alum-works.jpg",
     "rating": 3.9,
     "reviewCount": 500,
@@ -69879,7 +69876,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1st century AD",
     "condition": "ruin",
-    "description": "A vast Iron Age earthwork complex in North Yorkshire covering 750 acres—one of the largest fortified sites in Britain. Built by Venutius of the Brigantes during his resistance against the Roman invasion.",
+    "description": "A vast Iron Age earthwork complex in North Yorkshire covering 750 acres-one of the largest fortified sites in Britain. Built by Venutius of the Brigantes during his resistance against the Roman invasion.",
     "image": "https://img.castlecore.uk/stanwick-iron-age-fortifications.jpg",
     "rating": 3.7,
     "reviewCount": 150,
@@ -69951,7 +69948,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "ruin",
-    "description": "Fragmentary Premonstratensian ruins in the Lincolnshire Wolds, where the last abbot was executed for his role in the Lincolnshire Rising of 1536—one of the first acts of resistance against Henry VIII's Dissolution.",
+    "description": "Fragmentary Premonstratensian ruins in the Lincolnshire Wolds, where the last abbot was executed for his role in the Lincolnshire Rising of 1536-one of the first acts of resistance against Henry VIII's Dissolution.",
     "image": "https://img.castlecore.uk/barlings-abbey.jpg",
     "rating": 3.4,
     "reviewCount": 50,
@@ -69986,7 +69983,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-16th century",
     "condition": "ruin",
-    "description": "The birthplace of the Gilbertine order—the only monastic order of purely English origin, founded here by St Gilbert in 1131. Almost nothing survives above ground, but this quiet Lincolnshire field changed religious history.",
+    "description": "The birthplace of the Gilbertine order-the only monastic order of purely English origin, founded here by St Gilbert in 1131. Almost nothing survives above ground, but this quiet Lincolnshire field changed religious history.",
     "image": "https://img.castlecore.uk/sempringham-abbey.jpg",
     "rating": 3.5,
     "reviewCount": 100,
@@ -70019,7 +70016,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-14th century",
     "condition": "ruin",
-    "description": "The excavated remains of a Knights Templar preceptory in Lincolnshire—one of the most completely excavated Templar sites in England, revealing the layout of a self-sufficient warrior-monk estate.",
+    "description": "The excavated remains of a Knights Templar preceptory in Lincolnshire-one of the most completely excavated Templar sites in England, revealing the layout of a self-sufficient warrior-monk estate.",
     "image": "https://img.castlecore.uk/south-witham-preceptory.jpg",
     "rating": 3.3,
     "reviewCount": 50,
@@ -70085,7 +70082,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Neolithic (c.2500 BC)",
     "condition": "ruin",
-    "description": "The 'Stonehenge of the Peak'—a Neolithic henge monument whose stones all lie flat as if felled by some ancient catastrophe. Set on a windswept Derbyshire plateau, it remains one of the most atmospheric prehistoric sites in England.",
+    "description": "The 'Stonehenge of the Peak'-a Neolithic henge monument whose stones all lie flat as if felled by some ancient catastrophe. Set on a windswept Derbyshire plateau, it remains one of the most atmospheric prehistoric sites in England.",
     "image": "https://img.castlecore.uk/arbor-low-stone-circle.jpg",
     "rating": 4.2,
     "reviewCount": 800,
@@ -70104,7 +70101,7 @@ const CASTLES = [
       "https://img.castlecore.uk/arbor-low-stone-circle-4.jpg",
       "https://img.castlecore.uk/arbor-low-stone-circle-5.jpg"
     ],
-    "history": "A Neolithic henge monument dating from c.2500 BC, with about 50 limestone blocks arranged in a circle—all now lying flat, though they may never have stood upright. A large burial mound abuts the henge. Connected by an earthwork bank to the Gib Hill barrow 300 metres away. Set on an exposed limestone plateau in the Peak District at 375m elevation. Managed by English Heritage. Access through a farm (small fee).",
+    "history": "A Neolithic henge monument dating from c.2500 BC, with about 50 limestone blocks arranged in a circle-all now lying flat, though they may never have stood upright. A large burial mound abuts the henge. Connected by an earthwork bank to the Gib Hill barrow 300 metres away. Set on an exposed limestone plateau in the Peak District at 375m elevation. Managed by English Heritage. Access through a farm (small fee).",
     "sources": [
       {
         "name": "English Heritage",
@@ -70120,7 +70117,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "ruin",
-    "description": "A roofless Baroque mansion shell on a Derbyshire hilltop—its magnificent interiors were ripped out and sold to American museums in the 1920s. The gaunt walls frame sky where painted ceilings once dazzled visitors.",
+    "description": "A roofless Baroque mansion shell on a Derbyshire hilltop-its magnificent interiors were ripped out and sold to American museums in the 1920s. The gaunt walls frame sky where painted ceilings once dazzled visitors.",
     "image": "https://img.castlecore.uk/sutton-scarsdale-hall.jpg",
     "rating": 4,
     "reviewCount": 500,
@@ -70156,7 +70153,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "18th century",
     "condition": "intact",
-    "description": "The house that time forgot — a baroque mansion preserved in a state of arrested decay, crammed with eccentric natural history collections and untouched rooms sealed for generations.",
+    "description": "The house that time forgot - a baroque mansion preserved in a state of arrested decay, crammed with eccentric natural history collections and untouched rooms sealed for generations.",
     "image": "https://img.castlecore.uk/calke-abbey.jpg",
     "rating": 4.6,
     "reviewCount": 6000,
@@ -70180,7 +70177,7 @@ const CASTLES = [
       "https://img.castlecore.uk/calke-abbey-4.jpg",
       "https://img.castlecore.uk/calke-abbey-5.jpg"
     ],
-    "history": "Built 1701-1704 for Sir John Harpur on the site of an Augustinian priory. Never actually an abbey. The Harpur-Crewe family lived here for nearly 300 years, becoming increasingly reclusive. When the National Trust acquired it in 1985, many rooms hadn't been touched in over a century. Rather than restoring it, the Trust preserved its state of gentle decay — peeling wallpaper, abandoned collections, dusty taxidermy — as a deliberately unstately home.",
+    "history": "Built 1701-1704 for Sir John Harpur on the site of an Augustinian priory. Never actually an abbey. The Harpur-Crewe family lived here for nearly 300 years, becoming increasingly reclusive. When the National Trust acquired it in 1985, many rooms hadn't been touched in over a century. Rather than restoring it, the Trust preserved its state of gentle decay - peeling wallpaper, abandoned collections, dusty taxidermy - as a deliberately unstately home.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -70200,7 +70197,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th-14th century",
     "condition": "intact",
-    "description": "The only medieval English cathedral with three spires — the 'Ladies of the Vale' rise gracefully above Staffordshire, guarding the Lichfield Angel and the Chad Gospels within.",
+    "description": "The only medieval English cathedral with three spires - the 'Ladies of the Vale' rise gracefully above Staffordshire, guarding the Lichfield Angel and the Chad Gospels within.",
     "image": "https://img.castlecore.uk/lichfield-cathedral.jpg",
     "rating": 4.6,
     "reviewCount": 5000,
@@ -70223,7 +70220,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lichfield-cathedral-4.jpg",
       "https://img.castlecore.uk/lichfield-cathedral-5.jpg"
     ],
-    "history": "Built between 1195 and 1340 on a site of Christian worship dating to 700 AD, when a cathedral was established to house the relics of St Chad. The only medieval English cathedral with three spires (the 'Ladies of the Vale'). Badly damaged during a three-day siege in the English Civil War — the central spire was destroyed and later rebuilt. The Lichfield Angel, a remarkable 8th-century carved stone panel, was discovered during excavations in 2003. Also houses the 8th-century Chad Gospels illuminated manuscript.",
+    "history": "Built between 1195 and 1340 on a site of Christian worship dating to 700 AD, when a cathedral was established to house the relics of St Chad. The only medieval English cathedral with three spires (the 'Ladies of the Vale'). Badly damaged during a three-day siege in the English Civil War - the central spire was destroyed and later rebuilt. The Lichfield Angel, a remarkable 8th-century carved stone panel, was discovered during excavations in 2003. Also houses the 8th-century Chad Gospels illuminated manuscript.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -70277,7 +70274,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "9th-16th century",
     "condition": "partial",
-    "description": "A Benedictine nunnery in north Warwickshire with a beautiful surviving Norman gateway and a legend that the poet André de Wyntoun connected to the first known writer of English verse—the Abbess Edith.",
+    "description": "A Benedictine nunnery in north Warwickshire with a beautiful surviving Norman gateway and a legend that the poet André de Wyntoun connected to the first known writer of English verse-the Abbess Edith.",
     "image": "https://img.castlecore.uk/polesworth-abbey.jpg",
     "rating": 3.8,
     "reviewCount": 200,
@@ -70311,8 +70308,8 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century / 19th century conversion",
     "condition": "partial",
-    "description": "A medieval Benedictine priory in Warwickshire transformed into a grand country house, now operating as a hotel. The original medieval chapel survives within the later building—layers of devotion and luxury intertwined.",
-    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-wroxall-abbey.jpg",
+    "description": "A medieval Benedictine priory in Warwickshire transformed into a grand country house, now operating as a hotel. The original medieval chapel survives within the later building-layers of devotion and luxury intertwined.",
+    "image": "https://img.castlecore.uk/wiki-wroxall-abbey.jpg",
     "rating": 3.7,
     "reviewCount": 200,
     "county": "Warwickshire",
@@ -70340,7 +70337,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-18th century",
     "condition": "partial",
-    "description": "A Cistercian abbey turned grand Baroque mansion where Jane Austen found inspiration for Mansfield Park — Humphry Repton gardens and 700 years of aristocratic drama.",
+    "description": "A Cistercian abbey turned grand Baroque mansion where Jane Austen found inspiration for Mansfield Park - Humphry Repton gardens and 700 years of aristocratic drama.",
     "image": "https://img.castlecore.uk/stoneleigh-abbey.jpg",
     "rating": 4.2,
     "reviewCount": 1000,
@@ -70385,7 +70382,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A moated medieval manor hiding Catholic secrets — where priest holes concealed forbidden faith, and the reflections of a timber-framed house shimmer in centuries-old water.",
+    "description": "A moated medieval manor hiding Catholic secrets - where priest holes concealed forbidden faith, and the reflections of a timber-framed house shimmer in centuries-old water.",
     "image": "https://img.castlecore.uk/baddesley-clinton.jpg",
     "rating": 4.5,
     "reviewCount": 4000,
@@ -70410,7 +70407,7 @@ const CASTLES = [
       "https://img.castlecore.uk/baddesley-clinton-4.jpg",
       "https://img.castlecore.uk/baddesley-clinton-5.jpg"
     ],
-    "history": "A moated manor house dating from the 15th century, home to the Ferrers family for over 500 years. Famous for its priest holes — hidden chambers where Catholic priests hid during the Elizabethan persecution. On one occasion, four priests evaded discovery for four hours in a sewage drain. The house retains a remarkable atmosphere of recusant Catholic devotion. Features a 15th-century great hall, Elizabethan parlour, and a garden room with 17th-century heraldic glass. National Trust since 1980.",
+    "history": "A moated manor house dating from the 15th century, home to the Ferrers family for over 500 years. Famous for its priest holes - hidden chambers where Catholic priests hid during the Elizabethan persecution. On one occasion, four priests evaded discovery for four hours in a sewage drain. The house retains a remarkable atmosphere of recusant Catholic devotion. Features a 15th-century great hall, Elizabethan parlour, and a garden room with 17th-century heraldic glass. National Trust since 1980.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -70430,7 +70427,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A Tudor house reimagined as an English country dream — where the famous yew garden is said to represent the Sermon on the Mount in living topiary.",
+    "description": "A Tudor house reimagined as an English country dream - where the famous yew garden is said to represent the Sermon on the Mount in living topiary.",
     "image": "https://img.castlecore.uk/packwood-house.jpg",
     "rating": 4.4,
     "reviewCount": 2500,
@@ -70471,7 +70468,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A restored 18th-century mansion in Capability Brown parkland, reborn as a world-class art gallery — from Chinese bronzes to British folk art under one roof.",
+    "description": "A restored 18th-century mansion in Capability Brown parkland, reborn as a world-class art gallery - from Chinese bronzes to British folk art under one roof.",
     "image": "https://img.castlecore.uk/compton-verney.jpg",
     "rating": 4.5,
     "reviewCount": 2500,
@@ -70554,7 +70551,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "The ancestral home of George Washington's family—this Tudor manor house in Northamptonshire was built by Lawrence Washington in the 1540s. The Stars and Stripes trace their origins to the Washington family arms carved in stone here.",
+    "description": "The ancestral home of George Washington's family-this Tudor manor house in Northamptonshire was built by Lawrence Washington in the 1540s. The Stars and Stripes trace their origins to the Washington family arms carved in stone here.",
     "image": "https://img.castlecore.uk/wiki-sulgrave-manor.jpg",
     "rating": 4.1,
     "reviewCount": 800,
@@ -70607,7 +70604,7 @@ const CASTLES = [
       "https://img.castlecore.uk/canons-ashby-4.jpg",
       "https://img.castlecore.uk/canons-ashby-5.jpg"
     ],
-    "history": "Built in the 1550s by John Dryden using the remains of a medieval Augustinian priory — great-grandfather of poet laureate John Dryden. Extended in the 1590s by Sir Erasmus Dryden with lavish plasterwork ceilings. The house remained largely unaltered after the 1710s, creating a rare survival of Elizabethan and Jacobean interiors. Given to the National Trust in 1981.",
+    "history": "Built in the 1550s by John Dryden using the remains of a medieval Augustinian priory - great-grandfather of poet laureate John Dryden. Extended in the 1590s by Sir Erasmus Dryden with lavish plasterwork ceilings. The house remained largely unaltered after the 1710s, creating a rare survival of Elizabethan and Jacobean interiors. Given to the National Trust in 1981.",
     "youtube": [],
     "sources": [
       {
@@ -70632,7 +70629,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-18th century",
     "condition": "intact",
-    "description": "A 900-year-old abbey-turned-mansion where Cluniac nuns once prayed and the Battle of Northampton raged — now beautifully restored with Wars of the Roses battlefield views.",
+    "description": "A 900-year-old abbey-turned-mansion where Cluniac nuns once prayed and the Battle of Northampton raged - now beautifully restored with Wars of the Roses battlefield views.",
     "image": "https://img.castlecore.uk/delapre-abbey.jpg",
     "rating": 4.2,
     "reviewCount": 1500,
@@ -70726,7 +70723,7 @@ const CASTLES = [
       "https://img.castlecore.uk/lilbourne-castle-4.jpg",
       "https://img.castlecore.uk/lilbourne-castle-5.jpg"
     ],
-    "history": "A Norman motte-and-bailey castle near the village of Lilbourne. The site is close to the Romano-British settlement of Tripontium on Watling Street. The castle earthworks—motte and bailey with ditches—survive in good condition. Scheduled Monument in a peaceful rural setting near the Warwickshire border.",
+    "history": "A Norman motte-and-bailey castle near the village of Lilbourne. The site is close to the Romano-British settlement of Tripontium on Watling Street. The castle earthworks-motte and bailey with ditches-survive in good condition. Scheduled Monument in a peaceful rural setting near the Warwickshire border.",
     "sources": [
       {
         "name": "Historic England",
@@ -70742,7 +70739,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th-16th century",
     "condition": "intact",
-    "description": "A Tudor stronghold of Catholic resistance — where the Throckmorton family sheltered priests, plotted against Elizabeth I, and awaited news of the Gunpowder Plot.",
+    "description": "A Tudor stronghold of Catholic resistance - where the Throckmorton family sheltered priests, plotted against Elizabeth I, and awaited news of the Gunpowder Plot.",
     "image": "https://img.castlecore.uk/coughton-court.jpg",
     "rating": 4.4,
     "reviewCount": 2500,
@@ -70784,7 +70781,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Elizabethan (16th century)",
     "condition": "intact",
-    "description": "England's greatest survival of priest holes — seven secret hiding places where Catholic clergy risked death behind Elizabethan walls painted with rare medieval murals.",
+    "description": "England's greatest survival of priest holes - seven secret hiding places where Catholic clergy risked death behind Elizabethan walls painted with rare medieval murals.",
     "image": "https://img.castlecore.uk/harvington-hall.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
@@ -70807,7 +70804,7 @@ const CASTLES = [
       "https://img.castlecore.uk/harvington-hall-4.jpg",
       "https://img.castlecore.uk/harvington-hall-5.jpg"
     ],
-    "history": "An Elizabethan manor with more priest holes than any other house in England — seven in total, constructed after 1585 when it became illegal for Catholic priests to set foot in England. Built by Humphrey Pakington to shelter persecuted clergy. Contains a remarkable collection of rare Elizabethan wall paintings. Surrounded by a moat and set deep in the Worcestershire countryside.",
+    "history": "An Elizabethan manor with more priest holes than any other house in England - seven in total, constructed after 1585 when it became illegal for Catholic priests to set foot in England. Built by Humphrey Pakington to shelter persecuted clergy. Contains a remarkable collection of rare Elizabethan wall paintings. Surrounded by a moat and set deep in the Worcestershire countryside.",
     "sources": [
       {
         "name": "Harvington Hall",
@@ -70827,7 +70824,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A Queen Anne jewel box in Worcestershire — red brick elegance hiding Thornhill ceiling paintings and 400 acres of orchards, gardens, and Georgian parkland.",
+    "description": "A Queen Anne jewel box in Worcestershire - red brick elegance hiding Thornhill ceiling paintings and 400 acres of orchards, gardens, and Georgian parkland.",
     "image": "https://img.castlecore.uk/hanbury-hall.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -70869,7 +70866,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "Capability Brown's first complete landscape — a Palladian mansion where the famous gardener made his name and WWII secrets were kept in underground bunkers.",
+    "description": "Capability Brown's first complete landscape - a Palladian mansion where the famous gardener made his name and WWII secrets were kept in underground bunkers.",
     "image": "https://img.castlecore.uk/croome-court.jpg",
     "rating": 4.4,
     "reviewCount": 2500,
@@ -70944,7 +70941,7 @@ const CASTLES = [
     "type": "castle",
     "era": "1st-4th century AD",
     "condition": "ruin",
-    "description": "The remains of Bremetennacum, a Roman cavalry fort on the banks of the Ribble in Lancashire. Famous for the ornate Ribchester Helmet—a stunning cavalry parade helmet now in the British Museum.",
+    "description": "The remains of Bremetennacum, a Roman cavalry fort on the banks of the Ribble in Lancashire. Famous for the ornate Ribchester Helmet-a stunning cavalry parade helmet now in the British Museum.",
     "image": "https://img.castlecore.uk/ribchester-roman-fort.jpg",
     "rating": 4.2,
     "reviewCount": 800,
@@ -70979,7 +70976,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "partial",
-    "description": "A fairy-tale moated medieval manor house reached only by a tilting half-timbered gatehouse — hidden in a wooded Herefordshire valley that time forgot.",
+    "description": "A fairy-tale moated medieval manor house reached only by a tilting half-timbered gatehouse - hidden in a wooded Herefordshire valley that time forgot.",
     "image": "https://img.castlecore.uk/brockhampton-estate.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
@@ -71026,7 +71023,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "Henry Holland's neoclassical masterpiece set in Capability Brown's final landscape — austere Georgian grandeur outside, delicate beauty within.",
+    "description": "Henry Holland's neoclassical masterpiece set in Capability Brown's final landscape - austere Georgian grandeur outside, delicate beauty within.",
     "image": "https://img.castlecore.uk/berrington-hall.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -71048,7 +71045,7 @@ const CASTLES = [
       "https://img.castlecore.uk/berrington-hall-4.jpg",
       "https://img.castlecore.uk/berrington-hall-5.jpg"
     ],
-    "history": "Designed 1778-81 by architect Henry Holland for Thomas Harley, former Lord Mayor of London. Set in grounds by Lancelot 'Capability' Brown — his last commission before death. The 7th Lord Rodney gambled away much of the original contents including Gainsborough paintings. Features costume collection, Victorian laundry, and Georgian dairy. National Trust since 1957.",
+    "history": "Designed 1778-81 by architect Henry Holland for Thomas Harley, former Lord Mayor of London. Set in grounds by Lancelot 'Capability' Brown - his last commission before death. The 7th Lord Rodney gambled away much of the original contents including Gainsborough paintings. Features costume collection, Victorian laundry, and Georgian dairy. National Trust since 1957.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -71105,7 +71102,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "Not to be confused with Henry VIII's Thames palace—this is a medieval castle in Herefordshire with magnificent gardens, a Victorian Gothic chapel, and a 1,000-year-old yew maze. Pure Marcher Lord splendour.",
+    "description": "Not to be confused with Henry VIII's Thames palace-this is a medieval castle in Herefordshire with magnificent gardens, a Victorian Gothic chapel, and a 1,000-year-old yew maze. Pure Marcher Lord splendour.",
     "image": "https://img.castlecore.uk/hampton-court-herefordshire.jpg",
     "rating": 4.2,
     "reviewCount": 800,
@@ -71141,7 +71138,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "intact",
-    "description": "A tiny Norman church with the most extraordinary Romanesque carvings in Britain — dragons, warriors, and the famous Sheela na gig peek from every corner of ancient red stone.",
+    "description": "A tiny Norman church with the most extraordinary Romanesque carvings in Britain - dragons, warriors, and the famous Sheela na gig peek from every corner of ancient red stone.",
     "image": "https://img.castlecore.uk/kilpeck-church.jpg",
     "rating": 4.7,
     "reviewCount": 1500,
@@ -71251,7 +71248,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "16th century (abbey: 12th century)",
     "condition": "partial",
-    "description": "A fine 16th-century gatehouse in the Gloucestershire Cotswolds—the last surviving fragment of a Cistercian abbey, featuring elaborate Gothic tracery and stone vaulting that hint at the vanished grandeur within.",
+    "description": "A fine 16th-century gatehouse in the Gloucestershire Cotswolds-the last surviving fragment of a Cistercian abbey, featuring elaborate Gothic tracery and stone vaulting that hint at the vanished grandeur within.",
     "image": "https://img.castlecore.uk/kingswood-abbey-gatehouse.jpg",
     "rating": 3.7,
     "reviewCount": 150,
@@ -71323,7 +71320,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "14th century",
     "condition": "intact",
-    "description": "A Benedictine monastery in the Gloucestershire hills that moved from its atmospheric medieval grange into a controversial 1970s concrete block—then back again. The monks now brew gin and make incense in the original building.",
+    "description": "A Benedictine monastery in the Gloucestershire hills that moved from its atmospheric medieval grange into a controversial 1970s concrete block-then back again. The monks now brew gin and make incense in the original building.",
     "image": "https://img.castlecore.uk/prinknash-abbey.jpg",
     "rating": 3.9,
     "reviewCount": 600,
@@ -71358,7 +71355,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "14th century",
     "condition": "intact",
-    "description": "A beautifully preserved medieval tithe barn in the Gloucestershire Cotswolds—its massive timber cruck frame has sheltered crops for over 600 years. One of the finest small barns in the country.",
+    "description": "A beautifully preserved medieval tithe barn in the Gloucestershire Cotswolds-its massive timber cruck frame has sheltered crops for over 600 years. One of the finest small barns in the country.",
     "image": "https://img.castlecore.uk/stanley-pontlarge-tithe-barn.jpg",
     "rating": 4,
     "reviewCount": 200,
@@ -71391,7 +71388,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-16th century",
     "condition": "intact",
-    "description": "A magnificent black-and-white Tudor manor rising from 70 acres of parkland — one of England's greatest timber-framed houses with a thousand years of stories.",
+    "description": "A magnificent black-and-white Tudor manor rising from 70 acres of parkland - one of England's greatest timber-framed houses with a thousand years of stories.",
     "image": "https://img.castlecore.uk/bramall-hall.jpg",
     "rating": 4.4,
     "reviewCount": 3000,
@@ -71455,7 +71452,7 @@ const CASTLES = [
       "https://img.castlecore.uk/chetham-s-library-4.jpg",
       "https://img.castlecore.uk/chetham-s-library-5.jpg"
     ],
-    "history": "Housed in a 1421 building originally built for Manchester's Collegiate Church priests. Established in 1653 under the will of merchant Humphrey Chetham for education and public scholarship. Karl Marx and Friedrich Engels studied here in 1845 — their reading desk still stands. Over 350 years of continuous use as a free public library, with over 100,000 printed volumes.",
+    "history": "Housed in a 1421 building originally built for Manchester's Collegiate Church priests. Established in 1653 under the will of merchant Humphrey Chetham for education and public scholarship. Karl Marx and Friedrich Engels studied here in 1845 - their reading desk still stands. Over 350 years of continuous use as a free public library, with over 100,000 printed volumes.",
     "youtube": [],
     "sources": [
       {
@@ -71515,7 +71512,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century",
     "condition": "partial",
-    "description": "The oldest standing building on Merseyside—a 12th-century Benedictine priory on the banks of the Mersey that once ran the ferry service to Liverpool. The monks operated one of England's first regular ferry crossings.",
+    "description": "The oldest standing building on Merseyside-a 12th-century Benedictine priory on the banks of the Mersey that once ran the ferry service to Liverpool. The monks operated one of England's first regular ferry crossings.",
     "image": "https://img.castlecore.uk/birkenhead-priory.jpg",
     "rating": 4,
     "reviewCount": 500,
@@ -71535,7 +71532,7 @@ const CASTLES = [
       "https://img.castlecore.uk/birkenhead-priory-4.jpg",
       "https://img.castlecore.uk/birkenhead-priory-5.jpg"
     ],
-    "history": "Founded c.1150 by Hamon de Massey for Benedictine monks. The priory operated a ferry service across the Mersey to Liverpool from at least 1330—the origin of the famous Mersey Ferries. The chapter house and undercroft survive as the oldest standing buildings on Merseyside. After dissolution, the buildings served various purposes. Now a heritage attraction with a museum and stunning views of the Liverpool waterfront.",
+    "history": "Founded c.1150 by Hamon de Massey for Benedictine monks. The priory operated a ferry service across the Mersey to Liverpool from at least 1330-the origin of the famous Mersey Ferries. The chapter house and undercroft survive as the oldest standing buildings on Merseyside. After dissolution, the buildings served various purposes. Now a heritage attraction with a museum and stunning views of the Liverpool waterfront.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -71551,7 +71548,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "One of England's finest Tudor timber-framed mansions — a black-and-white marvel hidden behind ancient yew trees on the banks of the Mersey, where eavesdrops aren't just architectural features.",
+    "description": "One of England's finest Tudor timber-framed mansions - a black-and-white marvel hidden behind ancient yew trees on the banks of the Mersey, where eavesdrops aren't just architectural features.",
     "image": "https://img.castlecore.uk/speke-hall.jpg",
     "rating": 4.5,
     "reviewCount": 4000,
@@ -71576,7 +71573,7 @@ const CASTLES = [
       "https://img.castlecore.uk/speke-hall-4.jpg",
       "https://img.castlecore.uk/speke-hall-5.jpg"
     ],
-    "history": "Built between 1530 and 1598 by the Norris family, one of the best-preserved Tudor half-timbered houses in England. The exterior's bold black-and-white patterns are quintessentially Tudor. Like Baddesley Clinton, it contains priest holes from the era of Catholic persecution — the Norris family were staunch recusants. The Great Hall dates from the 1530s, and the plasterwork and panelling are largely original. Two ancient yew trees in the courtyard are over 500 years old. National Trust since 1943.",
+    "history": "Built between 1530 and 1598 by the Norris family, one of the best-preserved Tudor half-timbered houses in England. The exterior's bold black-and-white patterns are quintessentially Tudor. Like Baddesley Clinton, it contains priest holes from the era of Catholic persecution - the Norris family were staunch recusants. The Great Hall dates from the 1530s, and the plasterwork and panelling are largely original. Two ancient yew trees in the courtyard are over 500 years old. National Trust since 1943.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -71596,7 +71593,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th-20th century",
     "condition": "intact",
-    "description": "An Edwardian time capsule set within 500 acres of parkland on Liverpool's edge — the ancestral home of the Earls of Sefton, frozen in its Downton Abbey-era splendour.",
+    "description": "An Edwardian time capsule set within 500 acres of parkland on Liverpool's edge - the ancestral home of the Earls of Sefton, frozen in its Downton Abbey-era splendour.",
     "image": "https://img.castlecore.uk/croxteth-hall.jpg",
     "rating": 4.1,
     "reviewCount": 2000,
@@ -71639,7 +71636,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "The timber-framed safe house where Charles II hid in an oak tree from Cromwell's soldiers — a thrilling escape story frozen in Shropshire countryside.",
+    "description": "The timber-framed safe house where Charles II hid in an oak tree from Cromwell's soldiers - a thrilling escape story frozen in Shropshire countryside.",
     "image": "https://img.castlecore.uk/boscobel-house.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -71661,7 +71658,7 @@ const CASTLES = [
       "https://img.castlecore.uk/boscobel-house-4.jpg",
       "https://img.castlecore.uk/boscobel-house-5.jpg"
     ],
-    "history": "Built c. 1632 as a hunting lodge by John Giffard. In 1651, after the Battle of Worcester, Charles II hid here with Royalist Major William Careless — spending an entire day concealed in a nearby oak tree while Roundhead patrols searched below. This 'Royal Oak' became a symbol of the monarchy. Managed by English Heritage.",
+    "history": "Built c. 1632 as a hunting lodge by John Giffard. In 1651, after the Battle of Worcester, Charles II hid here with Royalist Major William Careless - spending an entire day concealed in a nearby oak tree while Roundhead patrols searched below. This 'Royal Oak' became a symbol of the monarchy. Managed by English Heritage.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -71716,7 +71713,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "An elegant neoclassical mansion in Shropshire parkland — where Regency excess meets a revolutionary iron-and-glass picture gallery, all set along the meandering River Tern.",
+    "description": "An elegant neoclassical mansion in Shropshire parkland - where Regency excess meets a revolutionary iron-and-glass picture gallery, all set along the meandering River Tern.",
     "image": "https://img.castlecore.uk/attingham-park.jpg",
     "rating": 4.5,
     "reviewCount": 5000,
@@ -71740,7 +71737,7 @@ const CASTLES = [
       "https://img.castlecore.uk/attingham-park-4.jpg",
       "https://img.castlecore.uk/attingham-park-5.jpg"
     ],
-    "history": "Built in 1785 for Noel Hill, 1st Baron Berwick, designed by George Steuart. The picture gallery, added by John Nash in 1807, features a pioneering cast-iron and glass roof — one of the earliest of its kind. The 2nd Baron Berwick nearly bankrupted the estate through lavish spending and art collecting. The 3,800-acre Humphry Repton-landscaped park includes a deer park, walled garden, and woodland walks along the River Tern. National Trust since 1947.",
+    "history": "Built in 1785 for Noel Hill, 1st Baron Berwick, designed by George Steuart. The picture gallery, added by John Nash in 1807, features a pioneering cast-iron and glass roof - one of the earliest of its kind. The 2nd Baron Berwick nearly bankrupted the estate through lavish spending and art collecting. The 3,800-acre Humphry Repton-landscaped park includes a deer park, walled garden, and woodland walks along the River Tern. National Trust since 1947.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -71760,7 +71757,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "The bridge that launched the Industrial Revolution — a single elegant iron arch spanning the Severn Gorge, a UNESCO World Heritage Site and symbol of the age that changed the world.",
+    "description": "The bridge that launched the Industrial Revolution - a single elegant iron arch spanning the Severn Gorge, a UNESCO World Heritage Site and symbol of the age that changed the world.",
     "image": "https://img.castlecore.uk/iron-bridge.jpg",
     "rating": 4.5,
     "reviewCount": 8000,
@@ -71800,7 +71797,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century",
     "condition": "intact",
-    "description": "The seat of the Earls of Pembroke for four centuries — where Inigo Jones designed the Double Cube Room and Hollywood comes to film period dramas.",
+    "description": "The seat of the Earls of Pembroke for four centuries - where Inigo Jones designed the Double Cube Room and Hollywood comes to film period dramas.",
     "image": "https://img.castlecore.uk/wilton-house.jpg",
     "rating": 4.5,
     "reviewCount": 3500,
@@ -71842,7 +71839,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A Grade I Tudor manor where every room is dressed in a different century's style — set on the edge of the world's largest stone circle in a UNESCO landscape of ancient mystery.",
+    "description": "A Grade I Tudor manor where every room is dressed in a different century's style - set on the edge of the world's largest stone circle in a UNESCO landscape of ancient mystery.",
     "image": "https://img.castlecore.uk/avebury-manor.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
@@ -71890,7 +71887,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "14th century (c. 1340)",
     "condition": "intact",
-    "description": "One of England's largest and finest medieval barns — a cathedral of agriculture built for the richest nunnery in the land, its massive stone walls and timber roof still perfectly intact.",
+    "description": "One of England's largest and finest medieval barns - a cathedral of agriculture built for the richest nunnery in the land, its massive stone walls and timber roof still perfectly intact.",
     "image": "https://img.castlecore.uk/bradford-on-avon-tithe-barn.jpg",
     "rating": 4.4,
     "reviewCount": 1200,
@@ -71910,7 +71907,7 @@ const CASTLES = [
       "https://img.castlecore.uk/bradford-on-avon-tithe-barn-4.jpg",
       "https://img.castlecore.uk/bradford-on-avon-tithe-barn-5.jpg"
     ],
-    "history": "Built c. 1340 to serve Barton Grange, a manor farm belonging to Shaftesbury Abbey — the richest nunnery in medieval England. One of the largest medieval barns in England at 168 feet long. Features a magnificent cruck roof structure and two projecting gabled porches. A granary dating to c. 1400 stands alongside. Managed by English Heritage.",
+    "history": "Built c. 1340 to serve Barton Grange, a manor farm belonging to Shaftesbury Abbey - the richest nunnery in medieval England. One of the largest medieval barns in England at 168 feet long. Features a magnificent cruck roof structure and two projecting gabled porches. A granary dating to c. 1400 stands alongside. Managed by English Heritage.",
     "sources": [
       {
         "name": "English Heritage",
@@ -71930,7 +71927,7 @@ const CASTLES = [
     "type": "castle",
     "era": "15th century",
     "condition": "intact",
-    "description": "A picture-perfect moated medieval manor house in Wiltshire, its great hall and chapel virtually unchanged since the 15th century. It featured in the BBC's adaptation of Wolf Hall—and it's easy to see why.",
+    "description": "A picture-perfect moated medieval manor house in Wiltshire, its great hall and chapel virtually unchanged since the 15th century. It featured in the BBC's adaptation of Wolf Hall-and it's easy to see why.",
     "image": "https://img.castlecore.uk/great-chalfield-manor.jpg",
     "rating": 4.3,
     "reviewCount": 600,
@@ -71967,7 +71964,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "An Elizabethan masterpiece in golden Ham stone — soaring windows, a Long Gallery longer than a cricket pitch, and gardens where twisted topiary stands guard like sentinels from another age.",
+    "description": "An Elizabethan masterpiece in golden Ham stone - soaring windows, a Long Gallery longer than a cricket pitch, and gardens where twisted topiary stands guard like sentinels from another age.",
     "image": "https://img.castlecore.uk/montacute-house.jpg",
     "rating": 4.6,
     "reviewCount": 4000,
@@ -72011,7 +72008,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "intact",
-    "description": "A honey-stone Tudor manor in the Somerset lowlands, rescued from ruin and reborn with Gertrude Jekyll gardens — the National Trust's very first country house acquisition.",
+    "description": "A honey-stone Tudor manor in the Somerset lowlands, rescued from ruin and reborn with Gertrude Jekyll gardens - the National Trust's very first country house acquisition.",
     "image": "https://img.castlecore.uk/barrington-court.jpg",
     "rating": 4.3,
     "reviewCount": 1500,
@@ -72056,7 +72053,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th century house / 20th century garden",
     "condition": "intact",
-    "description": "A masterpiece of 20th-century garden design in Somerset—a series of intimate outdoor rooms created around a 17th-century farmhouse. Penelope Hobhouse perfected its planting during her years as tenant.",
+    "description": "A masterpiece of 20th-century garden design in Somerset-a series of intimate outdoor rooms created around a 17th-century farmhouse. Penelope Hobhouse perfected its planting during her years as tenant.",
     "image": "https://img.castlecore.uk/tintinhull-garden.jpg",
     "rating": 4.4,
     "reviewCount": 800,
@@ -72126,7 +72123,7 @@ const CASTLES = [
     "type": "castle",
     "era": "11th century",
     "condition": "ruin",
-    "description": "The grassy earthworks of a Norman motte-and-bailey in the Quantock Hills village where Samuel Taylor Coleridge wrote 'The Rime of the Ancient Mariner'—a literary pilgrimage with a medieval backdrop.",
+    "description": "The grassy earthworks of a Norman motte-and-bailey in the Quantock Hills village where Samuel Taylor Coleridge wrote 'The Rime of the Ancient Mariner'-a literary pilgrimage with a medieval backdrop.",
     "image": "https://img.castlecore.uk/nether-stowey-castle.jpg",
     "rating": 3.5,
     "reviewCount": 100,
@@ -72145,7 +72142,7 @@ const CASTLES = [
       "https://img.castlecore.uk/nether-stowey-castle-4.jpg",
       "https://img.castlecore.uk/nether-stowey-castle-5.jpg"
     ],
-    "history": "A Norman motte-and-bailey castle in Nether Stowey, Somerset, at the foot of the Quantock Hills. The castle earthworks—a motte and two baileys—are well preserved on Castle Hill above the village. Nether Stowey is more famous as the home of Samuel Taylor Coleridge (1797-1800), who wrote 'The Rime of the Ancient Mariner' and 'Kubla Khan' here. The nearby Coleridge Cottage is a National Trust property.",
+    "history": "A Norman motte-and-bailey castle in Nether Stowey, Somerset, at the foot of the Quantock Hills. The castle earthworks-a motte and two baileys-are well preserved on Castle Hill above the village. Nether Stowey is more famous as the home of Samuel Taylor Coleridge (1797-1800), who wrote 'The Rime of the Ancient Mariner' and 'Kubla Khan' here. The nearby Coleridge Cottage is a National Trust property.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -72161,7 +72158,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th-15th century",
     "condition": "intact",
-    "description": "A Gothic jewel in England's smallest city — its scissor arches defy gravity and convention, while 300 medieval figures watch from the most elaborate west front in the country.",
+    "description": "A Gothic jewel in England's smallest city - its scissor arches defy gravity and convention, while 300 medieval figures watch from the most elaborate west front in the country.",
     "image": "https://img.castlecore.uk/wells-cathedral.jpg",
     "rating": 4.8,
     "reviewCount": 8000,
@@ -72184,7 +72181,7 @@ const CASTLES = [
       "https://img.castlecore.uk/wells-cathedral-4.jpg",
       "https://img.castlecore.uk/wells-cathedral-5.jpg"
     ],
-    "history": "Built between 1175 and 1490, Wells is considered the first English cathedral built entirely in the Gothic style. The west front (c.1230-1250) displays over 300 medieval carved figures, the largest surviving collection of medieval sculpture in England. The famous scissor arches were added in 1338 to prevent the central tower from collapsing. Features a remarkable 14th-century astronomical clock — one of the oldest working clock mechanisms in the world.",
+    "history": "Built between 1175 and 1490, Wells is considered the first English cathedral built entirely in the Gothic style. The west front (c.1230-1250) displays over 300 medieval carved figures, the largest surviving collection of medieval sculpture in England. The famous scissor arches were added in 1338 to prevent the central tower from collapsing. Features a remarkable 14th-century astronomical clock - one of the oldest working clock mechanisms in the world.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -72204,7 +72201,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "ruin",
-    "description": "A Georgian country house near Bath that served as a Special Operations Executive training centre during WWII—where secret agents learned sabotage, silent killing, and clandestine communication before being dropped behind enemy lines.",
+    "description": "A Georgian country house near Bath that served as a Special Operations Executive training centre during WWII-where secret agents learned sabotage, silent killing, and clandestine communication before being dropped behind enemy lines.",
     "image": "https://img.castlecore.uk/farleigh-house.jpg",
     "rating": 4.2,
     "reviewCount": 800,
@@ -72236,7 +72233,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th century",
     "condition": "intact",
-    "description": "A rare 14th-century manor house with terraced gardens cascading down a Somerset hillside — where Thackeray wrote and the Elton family collected Nailsea glass for 300 years.",
+    "description": "A rare 14th-century manor house with terraced gardens cascading down a Somerset hillside - where Thackeray wrote and the Elton family collected Nailsea glass for 300 years.",
     "image": "https://img.castlecore.uk/clevedon-court.jpg",
     "rating": 4.3,
     "reviewCount": 1000,
@@ -72313,7 +72310,7 @@ const CASTLES = [
     "type": "castle",
     "era": "18th century",
     "condition": "intact",
-    "description": "A wonderfully eccentric 16-sided house built by two Georgian cousins after their Grand Tour — stuffed with feather friezes, shell mosaics, and curios from their travels.",
+    "description": "A wonderfully eccentric 16-sided house built by two Georgian cousins after their Grand Tour - stuffed with feather friezes, shell mosaics, and curios from their travels.",
     "image": "https://img.castlecore.uk/a-la-ronde.jpg",
     "rating": 4.3,
     "reviewCount": 2000,
@@ -72359,7 +72356,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "13th century",
     "condition": "partial",
-    "description": "From Cistercian monastery to the home of Sir Francis Drake — where the spirit of seafaring adventure still echoes through 800 years of Devon history.",
+    "description": "From Cistercian monastery to the home of Sir Francis Drake - where the spirit of seafaring adventure still echoes through 800 years of Devon history.",
     "image": "https://img.castlecore.uk/buckland-abbey.jpg",
     "rating": 4.3,
     "reviewCount": 2500,
@@ -72401,7 +72398,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "12th century onwards",
     "condition": "partial",
-    "description": "Devon's best-preserved medieval monastery turned art gallery — 800 years of history from Premonstratensian canons to Agatha Christie's personal effects, steps from Torquay's seafront.",
+    "description": "Devon's best-preserved medieval monastery turned art gallery - 800 years of history from Premonstratensian canons to Agatha Christie's personal effects, steps from Torquay's seafront.",
     "image": "https://img.castlecore.uk/torre-abbey.jpg",
     "rating": 4.1,
     "reviewCount": 1200,
@@ -72423,7 +72420,7 @@ const CASTLES = [
       "https://img.castlecore.uk/torre-abbey-4.jpg",
       "https://img.castlecore.uk/torre-abbey-5.jpg"
     ],
-    "history": "Founded in 1196 as a monastery for Premonstratensian canons — the best-preserved medieval monastery in Devon and Cornwall. Converted to a country mansion after the Dissolution. The Cary family held it for centuries. Spanish Armada prisoners were held here in 1588. Now houses an art collection including works associated with Agatha Christie, who was born in Torquay. Reopened as a museum and gallery.",
+    "history": "Founded in 1196 as a monastery for Premonstratensian canons - the best-preserved medieval monastery in Devon and Cornwall. Converted to a country mansion after the Dissolution. The Cary family held it for centuries. Spanish Armada prisoners were held here in 1588. Now houses an art collection including works associated with Agatha Christie, who was born in Torquay. Reopened as a museum and gallery.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -72444,7 +72441,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "description": "A former Augustinian abbey on the wild North Devon coast, continuously inhabited since its founding in 1157. The last abbey to be dissolved by Henry VIII, it has been in the same family for 23 generations.",
-    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-hartland-abbey.jpg",
+    "image": "https://img.castlecore.uk/wiki-hartland-abbey.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
     "county": "Devon",
@@ -72458,7 +72455,7 @@ const CASTLES = [
     ],
     "access": "paid",
     "_index": 2355,
-    "history": "Founded in 1157 for Augustinian canons. It was the last monastery in England to be dissolved by Henry VIII in 1539, who gave it to the Sergeant of his Wine Cellar. The Stucley family (later Stucley) has held it ever since—23 generations. The house incorporates medieval, Georgian, and Victorian elements. Beautiful gardens lead down to a dramatic cove on the Atlantic coast. Open to visitors.",
+    "history": "Founded in 1157 for Augustinian canons. It was the last monastery in England to be dissolved by Henry VIII in 1539, who gave it to the Sergeant of his Wine Cellar. The Stucley family (later Stucley) has held it ever since-23 generations. The house incorporates medieval, Georgian, and Victorian elements. Beautiful gardens lead down to a dramatic cove on the Atlantic coast. Open to visitors.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -72510,7 +72507,7 @@ const CASTLES = [
     "type": "castle",
     "era": "16th century",
     "condition": "ruin",
-    "description": "A small Henry VIII artillery fort perched on the headland above Readymoney Cove near Fowey—a picture-postcard Cornish coastal defence with sweeping views over the harbour and open sea.",
+    "description": "A small Henry VIII artillery fort perched on the headland above Readymoney Cove near Fowey-a picture-postcard Cornish coastal defence with sweeping views over the harbour and open sea.",
     "image": "https://img.castlecore.uk/st-catherine-s-castle.jpg",
     "rating": 3.8,
     "renewCount": 300,
@@ -72583,7 +72580,7 @@ const CASTLES = [
     "type": "castle",
     "era": "14th-16th century",
     "condition": "intact",
-    "description": "A medieval granite manor on the banks of the Tamar, barely touched in five centuries — where tapestries hang in half-light and time moves differently.",
+    "description": "A medieval granite manor on the banks of the Tamar, barely touched in five centuries - where tapestries hang in half-light and time moves differently.",
     "image": "https://img.castlecore.uk/cotehele-house.jpg",
     "rating": 4.5,
     "reviewCount": 3500,
@@ -72626,7 +72623,7 @@ const CASTLES = [
     "type": "castle",
     "era": "17th-19th century",
     "condition": "intact",
-    "description": "Cornwall's grandest Victorian country house — a sprawling estate of 50 rooms frozen in time, from the ornate Long Gallery to the below-stairs kitchen, all wrapped in parkland and bluebells.",
+    "description": "Cornwall's grandest Victorian country house - a sprawling estate of 50 rooms frozen in time, from the ornate Long Gallery to the below-stairs kitchen, all wrapped in parkland and bluebells.",
     "image": "https://img.castlecore.uk/lanhydrock-house.jpg",
     "rating": 4.6,
     "reviewCount": 6000,
@@ -72670,7 +72667,7 @@ const CASTLES = [
     "type": "castle",
     "era": "Elizabethan (1592)",
     "condition": "intact",
-    "description": "An Elizabethan gem presiding over Padstow harbour — 400 years of one family's history behind honey-stone walls with Strawberry Hill Gothic interiors and Camel Estuary views.",
+    "description": "An Elizabethan gem presiding over Padstow harbour - 400 years of one family's history behind honey-stone walls with Strawberry Hill Gothic interiors and Camel Estuary views.",
     "image": "https://img.castlecore.uk/prideaux-place.jpg",
     "rating": 4.3,
     "reviewCount": 1200,
@@ -72692,7 +72689,7 @@ const CASTLES = [
       "https://img.castlecore.uk/prideaux-place-4.jpg",
       "https://img.castlecore.uk/prideaux-place-5.jpg"
     ],
-    "history": "Built in 1592 by Sir Nicholas Prideaux, a distinguished lawyer, and home to the Prideaux family for over 400 years — one of the West Country's oldest continuously inhabited houses. Features Strawberry Hill Gothic interiors added in the 18th century. Used as a filming location for numerous productions. Overlooks the fishing port of Padstow with views across the Camel Estuary.",
+    "history": "Built in 1592 by Sir Nicholas Prideaux, a distinguished lawyer, and home to the Prideaux family for over 400 years - one of the West Country's oldest continuously inhabited houses. Features Strawberry Hill Gothic interiors added in the 18th century. Used as a filming location for numerous productions. Overlooks the fishing port of Padstow with views across the Camel Estuary.",
     "sources": [
       {
         "name": "Wikipedia",
@@ -72895,7 +72892,7 @@ const CASTLES = [
     "type": "castle",
     "era": "19th century",
     "condition": "restored",
-    "description": "One of the most extraordinary follies in Ireland—a spectacular Hindu-Gothic gate lodge spanning the entrance to the Dromana estate above the Blackwater.",
+    "description": "One of the most extraordinary follies in Ireland-a spectacular Hindu-Gothic gate lodge spanning the entrance to the Dromana estate above the Blackwater.",
     "image": "https://img.castlecore.uk/dromana-gate.jpg",
     "rating": 4.1,
     "reviewCount": 120,
@@ -72913,7 +72910,7 @@ const CASTLES = [
       "https://img.castlecore.uk/dromana-gate-4.jpg",
       "https://img.castlecore.uk/dromana-gate-5.jpg"
     ],
-    "history": "The Dromana Gate near Cappoquin, County Waterford, is one of Ireland's most remarkable architectural follies—a stunning Hindu-Gothic gateway built in 1849, inspired by the Brighton Pavilion. The exotic gate leads to the Dromana estate overlooking the River Blackwater. It was built as a temporary decoration for the return of the estate owners but proved so popular it was made permanent.",
+    "history": "The Dromana Gate near Cappoquin, County Waterford, is one of Ireland's most remarkable architectural follies-a stunning Hindu-Gothic gateway built in 1849, inspired by the Brighton Pavilion. The exotic gate leads to the Dromana estate overlooking the River Blackwater. It was built as a temporary decoration for the return of the estate owners but proved so popular it was made permanent.",
     "sources": [
       {
         "name": "Waterford Heritage",
@@ -73426,7 +73423,7 @@ const CASTLES = [
     "type": "fort",
     "era": "Neolithic (c.3000 BC)",
     "condition": "ruin",
-    "description": "A remarkable portal tomb near Dundalk with an enormous capstone balanced impossibly on tiny supports—legend says throwing a stone that stays on top grants a wish.",
+    "description": "A remarkable portal tomb near Dundalk with an enormous capstone balanced impossibly on tiny supports-legend says throwing a stone that stays on top grants a wish.",
     "image": "https://img.castlecore.uk/proleek-dolmen.jpg",
     "rating": 4.2,
     "reviewCount": 200,
@@ -73504,7 +73501,7 @@ const CASTLES = [
     "type": "abbey",
     "era": "Medieval",
     "condition": "ruin",
-    "description": "The 'Jumping Church' of Kildemock near Ardee—a medieval church ruin where one wall has inexplicably moved from its foundation, seemingly jumping inward.",
+    "description": "The 'Jumping Church' of Kildemock near Ardee-a medieval church ruin where one wall has inexplicably moved from its foundation, seemingly jumping inward.",
     "image": "https://img.castlecore.uk/kildemock-church-jumping.jpg",
     "rating": 3.8,
     "reviewCount": 50,
@@ -74782,7 +74779,7 @@ const CASTLES = [
     "era": "12th century",
     "condition": "intact",
     "image": "https://img.castlecore.uk/leixlip-castle.jpg",
-    "description": "A fine Norman castle in the Kildare town of Leixlip, at the confluence of the Liffey and Rye rivers—one of the oldest inhabited castles in Ireland.",
+    "description": "A fine Norman castle in the Kildare town of Leixlip, at the confluence of the Liffey and Rye rivers-one of the oldest inhabited castles in Ireland.",
     "_index": 2432,
     "gallery": [
       "https://img.castlecore.uk/leixlip-castle-2.jpg",
@@ -75386,7 +75383,7 @@ const CASTLES = [
     "era": "12th/18th century",
     "condition": "intact",
     "image": "https://img.castlecore.uk/temple-house-sligo.jpg",
-    "description": "See Templehouse Castle entry—a remarkable lakeside estate combining Knights Templar heritage with Georgian elegance.",
+    "description": "See Templehouse Castle entry-a remarkable lakeside estate combining Knights Templar heritage with Georgian elegance.",
     "_index": 2471,
     "gallery": [
       "https://img.castlecore.uk/temple-house-sligo-2.jpg",
@@ -75775,7 +75772,7 @@ const CASTLES = [
     "era": "Medieval",
     "condition": "ruin",
     "image": "https://img.castlecore.uk/shanagolden-abbey.jpg",
-    "description": "See Shanagolden Friary—Franciscan ruins in west Limerick near the Shannon Estuary.",
+    "description": "See Shanagolden Friary-Franciscan ruins in west Limerick near the Shannon Estuary.",
     "_index": 2487,
     "gallery": [
       "https://img.castlecore.uk/shanagolden-abbey-2.jpg",
@@ -76272,7 +76269,7 @@ const CASTLES = [
     "era": "7th-8th century",
     "condition": "partial ruin",
     "image": "https://img.castlecore.uk/clondalkin-round-tower.jpg",
-    "description": "One of Ireland's finest round towers, standing in the Dublin suburb of Clondalkin—a remarkable early Christian survivor amid modern urban development.",
+    "description": "One of Ireland's finest round towers, standing in the Dublin suburb of Clondalkin-a remarkable early Christian survivor amid modern urban development.",
     "_index": 2504,
     "gallery": [
       "https://img.castlecore.uk/clondalkin-round-tower-2.jpg",
