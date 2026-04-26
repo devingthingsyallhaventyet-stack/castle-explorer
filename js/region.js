@@ -52,7 +52,7 @@
       picksEl.innerHTML = top5.map((c, i) => {
         const img = getImg(c);
         return '<a class="pick-card" href="/site/' + slug(c.name) + '.html" data-idx="' + i + '">' +
-          '<img src="' + optImg(img, 300) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
+          '<img src="' + optImg(img, 600) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
           '<div class="pick-card-body"><h3>' + c.name + '</h3><span>★ ' + c.rating + '</span></div></a>';
       }).join('');
     }
@@ -138,7 +138,7 @@
         const gallery = (c.gallery || []).slice(0, 5);
         const mobGallery = gallery.length ?
           '<div class="mob-gallery" style="display:none"><div class="mob-gallery-track">' +
-          gallery.map((gi, j) => '<img src="' + optImg(gi, 400) + '" alt="" loading="lazy" decoding="async" class="' + (j === 0 ? 'active' : '') + '" style="width:100%;height:200px;object-fit:cover;display:' + (j === 0 ? 'block' : 'none') + '">').join('') +
+          gallery.map((gi, j) => '<img src="' + optImg(gi, 600) + '" alt="" loading="lazy" decoding="async" class="' + (j === 0 ? 'active' : '') + '" style="width:100%;height:200px;object-fit:cover;display:' + (j === 0 ? 'block' : 'none') + '">').join('') +
           '</div>' + (gallery.length > 1 ? '<button class="mob-gal-btn prev" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">‹</button><button class="mob-gal-btn next" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">›</button>' : '') +
           (gallery.length > 1 ? '<div class="mob-dots" style="display:flex;justify-content:center;gap:5px;padding:8px 0">' + gallery.map((_, j) => '<span class="mob-dot' + (j === 0 ? ' active' : '') + '" style="width:6px;height:6px;border-radius:50%;background:' + (j === 0 ? 'var(--candlelight)' : 'rgba(255,255,255,.25)') + ';display:inline-block;cursor:pointer" data-idx="' + j + '"></span>').join('') + '</div>' : '') + '</div>' : '';
         
@@ -148,7 +148,7 @@
           '</div>';
         
         return '<div class="site-card" data-idx="' + i + '">' +
-          '<div class="site-card-img" style="position:relative">' + (img ? '<img src="' + optImg(img, 400) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">' : '') + (c.access === 'free' ? '<span class="free-badge">Free</span>' : '') + '</div>' +
+          '<div class="site-card-img" style="position:relative">' + (img ? '<img src="' + optImg(img, 600) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">' : '') + (c.access === 'free' ? '<span class="free-badge">Free</span>' : '') + '</div>' +
           '<div class="site-card-body">' +
           '<h3>' + c.name + '</h3>' +
           mobGallery +
@@ -227,7 +227,7 @@
       let galleryHtml = '';
       if (gallery.length) {
         galleryHtml = '<div class="hp-gallery">' +
-          gallery.map((img, i) => '<img src="' + optImg(img, 400) + '" alt="" loading="lazy" decoding="async" class="' + (i === 0 ? 'active' : '') + '" onerror="this.remove()">').join('') +
+          gallery.map((img, i) => '<img src="' + optImg(img, 600) + '" alt="" loading="lazy" decoding="async" class="' + (i === 0 ? 'active' : '') + '" onerror="this.remove()">').join('') +
           (gallery.length > 1 ? '<button class="hp-gallery-btn prev">‹</button><button class="hp-gallery-btn next">›</button>' : '') +
           '</div>' + (gallery.length > 1 ? '<div class="hp-dots">' + gallery.map((_, i) => '<button class="hp-dot' + (i === 0 ? ' active' : '') + '" data-idx="' + i + '"></button>').join('') + '</div>' : '');
       }
