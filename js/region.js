@@ -15,6 +15,17 @@
     .catch(err => { console.error('Failed to load region data:', err); });
 
   function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
+  
+  // Cloudflare Image Transformations — resize + auto-format on the fly
+  function optImg(url, width, quality) {
+    if (!url) return '';
+    // Only transform http(s) URLs from allowed origins
+    if (!url.startsWith('http')) return url;
+    var w = width || 400;
+    var q = quality || 80;
+    return '/cdn-cgi/image/width=' + w + ',quality=' + q + ',format=auto,fit=cover/' + url;
+  }
+
   function getImg(c){
     if (c.image && c.image.includes('img.castlecore.uk')) return c.image;
     if (c.gallery && c.gallery.length) return c.gallery[0];
@@ -41,7 +52,7 @@
       picksEl.innerHTML = top5.map((c, i) => {
         const img = getImg(c);
         return '<a class="pick-card" href="/site/' + slug(c.name) + '.html" data-idx="' + i + '">' +
-          '<img src="' + img + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
+          '<img src="' + optImg(img, 300) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
           '<div class="pick-card-body"><h3>' + c.name + '</h3><span>★ ' + c.rating + '</span></div></a>';
       }).join('');
     }
@@ -127,7 +138,7 @@
         const gallery = (c.gallery || []).slice(0, 5);
         const mobGallery = gallery.length ?
           '<div class="mob-gallery" style="display:none"><div class="mob-gallery-track">' +
-          gallery.map((gi, j) => '<img src="' + gi + '" alt="" loading="lazy" decoding="async" class="' + (j === 0 ? 'active' : '') + '" style="width:100%;height:200px;object-fit:cover;display:' + (j === 0 ? 'block' : 'none') + '">').join('') +
+          gallery.map((gi, j) => '<img src="' + optImg(gi, 400) + '" alt="" loading="lazy" decoding="async" class="' + (j === 0 ? 'active' : '') + '" style="width:100%;height:200px;object-fit:cover;display:' + (j === 0 ? 'block' : 'none') + '">').join('') +
           '</div>' + (gallery.length > 1 ? '<button class="mob-gal-btn prev" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">‹</button><button class="mob-gal-btn next" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;z-index:2">›</button>' : '') +
           (gallery.length > 1 ? '<div class="mob-dots" style="display:flex;justify-content:center;gap:5px;padding:8px 0">' + gallery.map((_, j) => '<span class="mob-dot' + (j === 0 ? ' active' : '') + '" style="width:6px;height:6px;border-radius:50%;background:' + (j === 0 ? 'var(--candlelight)' : 'rgba(255,255,255,.25)') + ';display:inline-block;cursor:pointer" data-idx="' + j + '"></span>').join('') + '</div>' : '') + '</div>' : '';
         
@@ -137,7 +148,7 @@
           '</div>';
         
         return '<div class="site-card" data-idx="' + i + '">' +
-          '<div class="site-card-img" style="position:relative">' + (img ? '<img src="' + img + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">' : '') + (c.access === 'free' ? '<span class="free-badge">Free</span>' : '') + '</div>' +
+          '<div class="site-card-img" style="position:relative">' + (img ? '<img src="' + optImg(img, 400) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">' : '') + (c.access === 'free' ? '<span class="free-badge">Free</span>' : '') + '</div>' +
           '<div class="site-card-body">' +
           '<h3>' + c.name + '</h3>' +
           mobGallery +
@@ -216,7 +227,7 @@
       let galleryHtml = '';
       if (gallery.length) {
         galleryHtml = '<div class="hp-gallery">' +
-          gallery.map((img, i) => '<img src="' + img + '" alt="" loading="lazy" decoding="async" class="' + (i === 0 ? 'active' : '') + '" onerror="this.remove()">').join('') +
+          gallery.map((img, i) => '<img src="' + optImg(img, 400) + '" alt="" loading="lazy" decoding="async" class="' + (i === 0 ? 'active' : '') + '" onerror="this.remove()">').join('') +
           (gallery.length > 1 ? '<button class="hp-gallery-btn prev">‹</button><button class="hp-gallery-btn next">›</button>' : '') +
           '</div>' + (gallery.length > 1 ? '<div class="hp-dots">' + gallery.map((_, i) => '<button class="hp-dot' + (i === 0 ? ' active' : '') + '" data-idx="' + i + '"></button>').join('') + '</div>' : '');
       }
