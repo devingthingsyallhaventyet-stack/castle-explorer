@@ -195,6 +195,7 @@
       font-family: 'Inter', sans-serif !important;
       transition: all .15s;
       border-left: 3px solid transparent;
+      text-decoration: none !important;
     }
     
     .mega-country:hover {
@@ -323,14 +324,13 @@
             <button class="nav-drop-btn">🗺️ Regions</button>
             <div class="mega-menu">
               <div class="mega-countries">
-                <button class="mega-country active" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</button>
-                <button class="mega-country" data-country="scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</button>
-                <button class="mega-country" data-country="wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</button>
-                <button class="mega-country" data-country="ireland">🍀 Ireland</button>
+                <a href="/england" class="mega-country active" data-country="england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</a>
+                <a href="/scotland" class="mega-country" data-country="scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</a>
+                <a href="/wales" class="mega-country" data-country="wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a>
+                <a href="/ireland" class="mega-country" data-country="ireland">🍀 Ireland</a>
               </div>
               <div class="mega-regions">
                 <div class="mega-panel active" data-country="england">
-                  <a href="/england" style="font-weight:600">All England →</a>
                   <a href="/england/northern-england">Northern England</a>
                   <a href="/england/yorkshire">Yorkshire</a>
                   <a href="/england/the-midlands">The Midlands</a>
@@ -339,7 +339,6 @@
                   <a href="/england/south-west">South West</a>
                 </div>
                 <div class="mega-panel" data-country="scotland">
-                  <a href="/scotland" style="font-weight:600">All Scotland →</a>
                   <a href="/scotland/highlands">Highlands &amp; Northern Isles</a>
                   <a href="/scotland/edinburgh-lothians">Edinburgh &amp; Lothians</a>
                   <a href="/scotland/northeast-tayside">Northeast &amp; Tayside</a>
@@ -350,14 +349,12 @@
                   <a href="/scotland/glasgow-stirling">Glasgow &amp; Stirling</a>
                 </div>
                 <div class="mega-panel" data-country="wales">
-                  <a href="/wales" style="font-weight:600">All Wales →</a>
                   <a href="/wales/snowdonia-north">Snowdonia &amp; North Wales</a>
                   <a href="/wales/mid-wales-marches">Mid Wales &amp; the Marches</a>
                   <a href="/wales/west-wales">West Wales</a>
                   <a href="/wales/south-wales">South Wales</a>
                 </div>
                 <div class="mega-panel" data-country="ireland">
-                  <a href="/ireland" style="font-weight:600">All Ireland →</a>
                   <a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a>
                   <a href="/ireland/kingdom-of-munster">Kingdom of Munster</a>
                   <a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a>
