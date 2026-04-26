@@ -3,18 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Castles in the Scottish Highlands � 87 Sites to Explore | CastleCore</title>
-<meta name="description" content="Explore 87 castles, ruins, and historic sites in the Scottish Highlands. From Eilean Donan to Urquhart Castle on Loch Ness, discover storm-battered keeps and clan strongholds across Britain's last great wilderness.">
-<meta name="keywords" content="castles in the Scottish Highlands, Highland castles, best castles Scotland, things to do in the Highlands, Scottish castle tours, Eilean Donan, Urquhart Castle, clan castles, Highland heritage">
+<title>Castles in the Scottish Highlands — 81 Sites to Explore | CastleCore</title>
+<meta name="description" content="Explore 81 castles, ruins, and historic sites in the Scottish Highlands. From Eilean Donan to Urquhart Castle on Loch Ness, plan your Highland adventure with maps, routes, and travel tips.">
+<meta name="keywords" content="castles in the Scottish Highlands, Highland castles, best castles Scotland, things to do in the Highlands, Scottish castle tours, Eilean Donan, Urquhart Castle, Inverness castles, Loch Ness castles, NC500 castles">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://castlecore.uk/scotland/highlands">
 <meta property="og:title" content="Castles in the Scottish Highlands | CastleCore">
-<meta property="og:description" content="Explore 87 castles, ruins, and historic sites in the Scottish Highlands. Storm-battered keeps and clan strongholds across Britain's last great wilderness.">
+<meta property="og:description" content="81 castles, ruins, and historic sites across the Scottish Highlands. Maps, routes, and travel tips.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://castlecore.uk/scotland/highlands">
-<meta property="og:image" content="https://castlecore.uk/img/scotland/highlands-hero.webp">
 
-<!-- Self-hosted fonts -->
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-latin.woff2) format('woff2')}
 @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-italic-latin.woff2) format('woff2')}
@@ -23,388 +21,731 @@
 @font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url(/fonts/playfair-italic-latin.woff2) format('woff2')}
 </style>
 
+<!-- Leaflet CSS removed -->
+
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "TouristDestination",
-  "name": "Castles in the Scottish Highlands",
-  "description": "87 castles, ruins, and historic sites across the Scottish Highlands.",
-  "url": "https://castlecore.uk/scotland/highlands",
-  "touristType": ["Castle Explorer", "History Enthusiast", "Heritage Tourist"],
-  "geo": { "@type": "GeoCoordinates", "latitude": 57.12, "longitude": -5.00 },
-  "isPartOf": {
-    "@type": "TouristDestination",
-    "name": "Scotland's Castles",
-    "url": "https://castlecore.uk/scotland"
-  }
+  "@context":"https://schema.org",
+  "@type":"TouristDestination",
+  "name":"Castles in the Scottish Highlands",
+  "description":"81 castles, ruins, and historic sites across the Scottish Highlands.",
+  "url":"https://castlecore.uk/scotland/highlands",
+  "touristType":["Castle Explorer","History Enthusiast","Heritage Tourist"],
+  "geo":{"@type":"GeoCoordinates","latitude":57.12,"longitude":-5.00},
+  "isPartOf":{"@type":"TouristDestination","name":"Scotland's Castles","url":"https://castlecore.uk/scotland"}
 }
 </script>
 
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How many castles are in the Scottish Highlands?","acceptedAnswer":{"@type":"Answer","text":"There are over 80 castles, ruins, abbeys, and historic sites scattered across the Scottish Highlands, spanning from Iron Age brochs to Victorian estates."}},
+    {"@type":"Question","name":"What is the most famous castle in the Highlands?","acceptedAnswer":{"@type":"Answer","text":"Eilean Donan Castle, dramatically set on a tidal island where three lochs meet near Kyle of Lochalsh, is Scotland's most photographed castle and the Highlands' most iconic site."}},
+    {"@type":"Question","name":"Are Highland castles free to visit?","acceptedAnswer":{"@type":"Answer","text":"Nearly half of Highland castle sites (47 out of 81) are completely free to visit. Many ruins sit in open countryside with no admission charge."}},
+    {"@type":"Question","name":"What is the best time to visit Highland castles?","acceptedAnswer":{"@type":"Answer","text":"May to September offers the best weather and longest daylight hours. Most castle interiors are open April through October. Ruins can be visited year-round."}}
+  ]
+}
+</script>
 
 <style>
-/* ========== RESET & ROOT ========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --burgundy:#8b2335;--cream:#f0ebe0;--candlelight:#c9a84c;
-  --navy:#0f1628;--charcoal:#1a1d2e;
-  --gold:#d4a84b;--pale-gold:#e8d5a3;
-  --stone:#8c8c8c;--parchment:#d4c5a9;
-  --warm-white:#faf8f4;--border:#e8e8e8;
-  --ink:#1a1714;--shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;
-  --serif:'Cormorant Garamond','Playfair Display',serif;
-  --display:'Playfair Display','Cormorant Garamond',serif;
-  --sans:'Inter',sans-serif;
-  --radius:12px;--pill:20px;
+--burgundy:#8b2335;--cream:#f0ebe0;--candlelight:#c9a84c;
+--navy:#0f1628;--charcoal:#1a1d2e;
+--gold:#d4a84b;--pale-gold:#e8d5a3;
+--warm-white:#faf8f4;--border:#e8e8e8;
+--ink:#1a1714;--shadow:#2a2522;--twilight:#4a5568;
+--forest:#0d1f12;--dark-green:#152618;
+--serif:'Cormorant Garamond',serif;
+--display:'Playfair Display',serif;
+--sans:'Inter',sans-serif;
+--radius:12px;--pill:20px;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--warm-white);overflow-x:hidden}
+body{font-family:var(--sans);color:#e8e0d0;line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--navy);overflow-x:hidden}
 h1,h2,h3,h4,h5{font-family:var(--display);font-weight:400}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 ::selection{background:var(--candlelight);color:var(--navy)}
 
 /* ========== NAV ========== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,22,40,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);height:64px;display:flex;align-items:center;padding:0 24px}
+.nav,.mobile-menu{font-family:var(--sans)}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:var(--display);font-size:1.3rem;display:flex;align-items:center;gap:8px;color:#fff}
+.nav-center{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-drop-btn{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;padding:6px 10px;font-family:var(--sans);transition:color .2s;display:flex;align-items:center;gap:3px}
+.nav-dropdown>.nav-drop-btn:hover,.nav-dropdown:hover>.nav-drop-btn{color:var(--candlelight)}
+.nav-drop-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:200px;padding:8px 0;z-index:9999;margin-top:8px}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-dropdown:hover .nav-drop-panel{display:block}
+.nav-drop-panel a{display:block;padding:8px 18px;font-size:.88rem;color:rgba(255,255,255,.7);transition:all .15s}
+.nav-drop-panel a:hover{background:rgba(201,168,76,.1);color:var(--candlelight)}
+.mega-wrap:hover .mega-menu{display:flex}
+.mega-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.5);min-width:480px;z-index:9999;margin-top:8px;overflow:hidden}
+.mega-wrap::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.mega-countries{display:flex;flex-direction:column;background:rgba(0,0,0,.2);border-right:1px solid rgba(255,255,255,.06);min-width:150px;padding:8px 0}
+.mega-country{display:block;width:100%;text-align:left;padding:12px 20px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.6);background:none;border:none;cursor:pointer;font-family:var(--sans);transition:all .15s;border-left:3px solid transparent}
+.mega-country:hover{color:#fff;background:rgba(255,255,255,.05)}
+.mega-country.active{color:var(--candlelight);background:rgba(201,168,76,.08);border-left-color:var(--candlelight);font-weight:600}
+.mega-regions{flex:1;padding:12px 0}
+.mega-panel{display:none}
+.mega-panel.active{display:block}
+.mega-panel a{display:block;padding:8px 24px;font-size:.88rem;color:rgba(255,255,255,.7);transition:all .15s}
+.mega-panel a:hover{background:rgba(201,168,76,.1);color:var(--candlelight)}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-right .btn-explore{background:var(--burgundy);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600;font-size:.88rem;transition:all .2s}
+.nav-right .btn-explore:hover{background:#a62940;transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#fff}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--navy);padding:16px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;font-weight:500;color:rgba(255,255,255,.7);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-menu .mob-heading{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--candlelight);padding:14px 0 4px;border-bottom:none}
+.mobile-menu .mob-sub a{padding-left:16px;font-size:.92rem}
+@media(max-width:768px){.nav-center{display:none}.nav-right .btn-explore{display:none}.hamburger{display:block}}
 
-.nav,
+.nav.nav-hidden{transform:translateY(-100%);transition:transform .3s ease}
+.nav{transition:transform .3s ease}
+.submenu{transition:top .3s ease, box-shadow .3s}
+.submenu.submenu-solo{top:0 !important}
 
-@media(max-width:768px){
-  
-  
-  
-}
+/* ========== COMPACT HERO ========== */
+.hero{position:relative;height:40vh;min-height:280px;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--navy) 0%,rgba(15,22,40,.6) 40%,rgba(15,22,40,.3) 100%)}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px 32px;max-width:800px}
+.hero-breadcrumb{font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px}
+.hero-breadcrumb a{color:var(--candlelight);transition:color .2s}
+.hero-breadcrumb a:hover{color:#fff}
+.hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4rem);font-weight:700;color:#fff;line-height:1.05;margin-bottom:8px}
+.hero-count{font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight)}
 
-/* ========== HERO ========== */
-.region-hero{position:relative;height:50vh;min-height:360px;max-height:500px;display:flex;align-items:flex-end;justify-content:center;padding:0 24px 48px;margin-top:64px;overflow:hidden;background:var(--navy)}
-.region-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.region-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,22,40,.85) 0%,rgba(15,22,40,.4) 40%,rgba(15,22,40,.15) 100%)}
-.region-hero-content{position:relative;z-index:2;text-align:center;max-width:800px}
-.region-hero .breadcrumb{font-family:var(--sans);font-size:.8rem;font-weight:500;color:rgba(255,255,255,.7);margin-bottom:12px;letter-spacing:.5px}
-.region-hero .breadcrumb a{color:var(--candlelight);transition:color .2s}
-.region-hero .breadcrumb a:hover{color:#fff}
-.region-hero h1{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:8px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-.region-hero .hero-count{font-family:var(--sans);font-size:.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight)}
+/* ========== INTRO + SUBMENU ========== */
+.intro-section{max-width:900px;margin:0 auto;padding:48px 24px 32px;text-align:center}
+.intro-text{font-family:var(--serif);font-size:1.1rem;line-height:1.8;color:#e8e0d0;margin-bottom:32px}
+.intro-text strong{color:#fff}
 
-/* ========== SPLIT VIEW ========== */
-.split-section{max-width:1280px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.split-content{padding-right:24px}
-.split-content h2{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--ink);margin-bottom:24px;line-height:1.2}
-.split-content p{font-family:var(--serif);font-size:1.12rem;line-height:1.8;color:var(--shadow);margin-bottom:20px}
-.split-content p:last-of-type{margin-bottom:0}
-.split-map{position:sticky;top:88px;height:calc(100vh - 112px);max-height:700px;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 32px rgba(42,37,34,.12);border:1px solid var(--border)}
-#map{width:100%;height:100%}
+.submenu{position:sticky;top:64px;z-index:100;background:var(--burgundy);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);border-top:1px solid rgba(255,255,255,.1);padding:0 24px;transition:box-shadow .3s}
+.submenu.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.submenu-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:center;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.submenu-inner::-webkit-scrollbar{display:none}
+.submenu-inner a{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.8);padding:14px 16px;white-space:nowrap;transition:color .2s;border-bottom:2px solid transparent;letter-spacing:.3px}
+.submenu-inner a:hover{color:#fff}
+.submenu-inner a.active{color:#fff;border-bottom-color:#fff;background:rgba(255,255,255,.1)}
 
-/* ========== HIGHLIGHTS ========== */
-.highlights{margin-top:48px}
-.highlights h3{font-family:var(--display);font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:24px}
-.highlight-card{display:flex;gap:16px;margin-bottom:24px;padding:16px;border-radius:var(--radius);border:1px solid var(--border);background:#fff;transition:box-shadow .3s,transform .3s}
-.highlight-card:hover{box-shadow:0 8px 24px rgba(42,37,34,.1);transform:translateY(-2px)}
-.highlight-card img{width:140px;height:100px;object-fit:cover;border-radius:8px;flex-shrink:0}
-.highlight-card-body h4{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:4px}
-.highlight-card-body .hl-loc{font-size:.8rem;color:var(--twilight);margin-bottom:6px}
-.highlight-card-body p{font-size:.88rem;color:var(--shadow);line-height:1.5}
+/* ========== QUICK PICKS ========== */
+.picks{max-width:1280px;margin:0 auto;padding:48px 24px 32px}
+.picks-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e8e0d0;margin-bottom:16px}
+.picks-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1200px}
+.pick-card{border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:3/4;transition:transform .3s}
+.pick-card:hover{transform:translateY(-3px)}
+.pick-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pick-card:hover img{transform:scale(1.05)}
+.pick-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,22,40,.9) 0%,transparent 50%)}
+.pick-card-body{position:absolute;bottom:0;left:0;right:0;padding:16px;z-index:2}
+.pick-card-body h3{font-family:var(--display);font-size:1rem;font-weight:600;color:#fff;line-height:1.2;margin-bottom:2px}
+.pick-card-body span{font-size:.72rem;color:var(--candlelight);font-weight:600}
 
-/* ========== CASTLE GRID ========== */
-.grid-section{max-width:1280px;margin:0 auto;padding:64px 24px}
-.grid-section h2{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--ink);text-align:center;margin-bottom:8px}
-.grid-section .grid-subtitle{text-align:center;font-family:var(--serif);font-size:1.05rem;color:var(--twilight);margin-bottom:32px;font-style:italic}
-.grid-controls{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:32px}
-.grid-search{padding:10px 16px 10px 40px;border:1px solid var(--border);border-radius:var(--pill);font-size:.9rem;font-family:var(--sans);outline:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234a5568' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 14px center no-repeat;width:280px;transition:border-color .2s}
-.grid-search:focus{border-color:var(--candlelight);box-shadow:0 0 0 2px rgba(201,168,76,.12)}
-.grid-filters{display:flex;gap:8px;flex-wrap:wrap}
-.grid-filters button{padding:7px 16px;border-radius:var(--pill);border:1px solid var(--border);background:#fff;color:var(--twilight);font-family:var(--sans);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s}
-.grid-filters button:hover,.grid-filters button.active{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
-.results-count{font-size:.82rem;color:var(--twilight);margin-bottom:16px}
-.castle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
-.castle-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:#fff;transition:box-shadow .3s,transform .3s;display:flex;flex-direction:column}
-.castle-card:hover{box-shadow:0 12px 40px rgba(42,37,34,.12);transform:translateY(-4px)}
-.castle-card-img{height:180px;overflow:hidden;background:var(--cream)}
-.castle-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.castle-card:hover .castle-card-img img{transform:scale(1.06)}
-.castle-card-body{padding:16px;flex:1;display:flex;flex-direction:column}
-.castle-card-body h3{font-family:var(--display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:4px}
-.castle-card-loc{font-size:.8rem;color:var(--twilight);margin-bottom:8px}
-.castle-card-meta{display:flex;gap:8px;margin-top:auto}
-.castle-card-meta .type-pill{font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:var(--pill);background:var(--cream);color:var(--hearth);text-transform:capitalize}
-.castle-card-meta .rating{font-size:.8rem;color:var(--candlelight);font-weight:600}
+/* ========== SITES SECTION (GRID + MAP TOGGLE) ========== */
+.sites-section{max-width:1280px;margin:0 auto;padding:32px 24px 80px}
 
-/* ========== 
-.
-.
-.
-.
-.
-.
-.
-.
-@media(max-width:768px){.}
-@media(max-width:480px){.}
+.sites-toolbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.sites-toolbar-left{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sites-search{padding:9px 14px 9px 36px;border:1px solid #3a3a3a;border-radius:var(--pill);font-size:.85rem;font-family:var(--sans);outline:none;background:var(--charcoal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%23ccc' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 12px center no-repeat;color:#e8e0d0;width:220px;transition:border-color .2s}
+.sites-search:focus{border-color:var(--candlelight);box-shadow:0 0 0 2px rgba(201,168,76,.1)}
+.sites-search::placeholder{color:#999}
+.results-count{font-size:.78rem;color:#ccc}
 
-/* ========== RESPONSIVE ========== */
-@media(max-width:900px){
-  .split-section{grid-template-columns:1fr;gap:32px}
-  .split-content{padding-right:0}
-  .split-map{position:relative;top:auto;height:400px;max-height:400px}
-}
-@media(max-width:480px){
-  .region-hero{min-height:280px;padding-bottom:32px}
-  .highlight-card{flex-direction:column}
-  .highlight-card img{width:100%;height:160px}
-  .grid-search{width:100%}
-  .grid-controls{flex-direction:column;align-items:stretch}
-}
+/* View toggle CSS removed */
 
-/* Leaflet popup styling */
-.leaflet-popup-content-wrapper{border-radius:8px;font-family:var(--sans)}
-.leaflet-popup-content{margin:12px 16px;font-size:.88rem;line-height:1.5}
-.leaflet-popup-content h4{font-family:var(--display);font-size:1rem;margin-bottom:4px}
-.leaflet-popup-content a{color:var(--burgundy);font-weight:600}
-.leaflet-popup-content img{border-radius:6px;margin-bottom:8px}
+.filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.filter-chip{padding:6px 14px;border-radius:var(--pill);border:1px solid #3a3a3a;background:transparent;color:#ccc;font-family:var(--sans);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .2s}
+.filter-chip:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.filter-chip.active{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
+
+.sort-row{display:flex;gap:4px;margin-bottom:20px}
+.sort-btn{padding:5px 12px;border-radius:var(--pill);border:1px solid #3a3a3a;background:transparent;color:#ccc;font-family:var(--sans);font-size:.72rem;font-weight:500;cursor:pointer;transition:all .2s}
+.sort-btn:hover,.sort-btn.active{color:var(--candlelight);border-color:rgba(201,168,76,.3)}
+
+/* Grid view */
+.sites-view{position:relative}
+.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+
+.site-card{border-radius:var(--radius);overflow:hidden;background:var(--charcoal);border:1px solid #3a3a3a;transition:all .3s;display:flex;flex-direction:column}
+.site-card:hover{border-color:var(--candlelight);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+.site-card-img{height:190px;overflow:hidden;position:relative;background:rgba(0,0,0,.2)}
+.site-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.site-card:hover .site-card-img img{transform:scale(1.05)}
+.site-card-img .free-badge{position:absolute;top:10px;right:10px;font-size:.65rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:var(--pill);background:rgba(76,175,80,.9);color:#fff}
+.site-card-body{padding:16px;flex:1;display:flex;flex-direction:column}
+.site-card-body h3{font-family:var(--display);font-size:1.05rem;font-weight:600;color:#e8e0d0;margin-bottom:4px;line-height:1.2}
+.site-card-body .sc-meta{font-size:.73rem;color:#ccc;margin-bottom:8px}
+.site-card-body .sc-desc{font-family:var(--serif);font-size:.88rem;color:#ccc;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:12px}
+.site-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid #3a3a3a}
+.sc-type{font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:var(--pill);background:#2a2a2a;color:#ccc;text-transform:capitalize}
+.sc-rating{font-size:.82rem;color:var(--candlelight);font-weight:600}
+
+.load-more{display:block;margin:40px auto 0;padding:12px 40px;border-radius:var(--pill);border:1px solid #3a3a3a;background:transparent;color:#ccc;font-family:var(--sans);font-size:.88rem;font-weight:500;cursor:pointer;transition:all .3s}
+.load-more:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.load-more.hidden{display:none}
+
+/* ========== CONTENT SECTIONS ========== */
+.content-section{max-width:900px;margin:0 auto;padding:80px 24px}
+.cs-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#e8e0d0;margin-bottom:12px}
+.cs-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;line-height:1.15;color:#e8e0d0;margin-bottom:24px}
+.cs-body{font-family:var(--serif);font-size:1.05rem;line-height:1.8;color:#ccc}
+.cs-body p{margin-bottom:20px}
+.cs-body strong{color:#e8e0d0}
+.cs-body a{color:var(--candlelight);border-bottom:1px solid rgba(201,168,76,.3);transition:border-color .2s}
+.cs-body a:hover{border-color:var(--candlelight)}
+.cs-divider{border:none;border-top:1px solid #3a3a3a;margin:0 auto;max-width:900px}
+
+/* ========== ROUTES ========== */
+.routes-section{max-width:1100px;margin:0 auto;padding:80px 24px}
+.routes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.route-card{border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.route-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.route-card .route-img{height:200px;overflow:hidden}
+.route-card .route-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.route-card:hover .route-img img{transform:scale(1.05)}
+.route-card .route-body{padding:16px 18px 18px;color:#fff}
+.route-card .route-body h3{font-family:var(--display);font-size:1.15rem;margin-bottom:6px}
+.route-card .route-meta{font-size:.82rem;opacity:.85;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.route-card .route-meta span{background:rgba(255,255,255,.2);padding:2px 8px;border-radius:var(--pill);font-size:.75rem}
+.route-card .route-desc{font-size:.85rem;opacity:.8;line-height:1.4}
+.rc-burgundy{background:var(--burgundy)}
+.rc-forest{background:var(--forest)}
+.rc-charcoal{background:var(--charcoal);border:1px solid rgba(255,255,255,.06)}
+
+@media(max-width:900px){.routes-grid{grid-template-columns:1fr}}
+
+/* ========== FAQ ========== */
+.faq-section{max-width:800px;margin:0 auto;padding:80px 24px}
+.faq-item{border-bottom:1px solid #3a3a3a;padding:20px 0}
+.faq-q{font-family:var(--display);font-size:1.15rem;font-weight:600;color:#e8e0d0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q::after{content:'+';font-family:var(--sans);font-size:1.2rem;color:var(--candlelight);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-family:var(--serif);font-size:1rem;line-height:1.7;color:#ccc;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;padding-top:0}
+.faq-item.open .faq-a{max-height:300px;padding-top:12px}
+
+/* ========== NEARBY REGIONS ========== */
+.nearby{max-width:1100px;margin:0 auto;padding:60px 24px 80px}
+.nearby-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.nearby-card{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;transition:all .2s;display:flex;align-items:flex-end;border:1px solid #3a3a3a}
+.nearby-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.nearby-card::before{content:'';position:absolute;inset:0;background-image:var(--bg-image);background-size:cover;background-position:center;background-repeat:no-repeat}
+.nearby-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,23,20,.85) 0%,rgba(26,23,20,.3) 50%,transparent 100%)}
+.nearby-card-content{position:relative;z-index:2;padding:16px;text-align:center;width:100%}
+.nearby-card h3{font-family:var(--display);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px}
+.nearby-card span{font-size:.75rem;color:var(--candlelight);font-weight:500}
+
+/* ========== FOOTER ========== */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:var(--display);font-size:1.3rem;color:#fff;margin-bottom:12px}
+.footer-brand p{color:rgba(255,255,255,.4);font-size:.85rem;max-width:280px;margin-top:8px}
+.footer-col h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;color:rgba(255,255,255,.3)}
+.footer-col a{display:block;color:rgba(255,255,255,.5);font-size:.88rem;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:var(--candlelight)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.25);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}.sites-search{width:100%}.sites-toolbar{flex-direction:column;align-items:stretch}}
+
+/* Leaflet CSS removed */
+
+/* Hover Preview */
+.hover-preview{position:absolute;z-index:9999;background:#fff;border:1px solid #e8e8e8;border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.15);padding:0;width:380px;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:var(--sans)}
+.hover-preview.show{opacity:1;pointer-events:auto}
+.hover-preview h4{font-family:var(--display);font-size:1.2rem;color:#1a1714;margin-bottom:12px;line-height:1.2;padding:16px 16px 0}
+.hover-preview .hp-gallery{position:relative;margin-bottom:12px;overflow:hidden;border-radius:6px 6px 0 0}
+.hover-preview .hp-gallery img{width:100%;height:220px;object-fit:cover;display:none}
+.hover-preview .hp-gallery img.active{display:block}
+.hover-preview .hp-gallery-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.hover-preview .hp-gallery-btn:hover{background:rgba(0,0,0,.8)}
+.hover-preview .hp-gallery-btn.prev{left:8px}
+.hover-preview .hp-gallery-btn.next{right:8px}
+.hover-preview .hp-dots{display:flex;justify-content:center;gap:5px;padding:8px 0 4px}
+.hover-preview .hp-dot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,.2);border:none;cursor:pointer;padding:0;transition:background .2s}
+.hover-preview .hp-dot.active{background:var(--burgundy)}
+.hover-preview .hp-summary{padding:0 16px;margin-bottom:16px;font-size:.9rem;line-height:1.4;color:#4a5568}
+.hover-preview .hp-actions{display:flex;justify-content:space-between;align-items:center;padding:0 16px 16px;gap:12px}
+.hover-preview .hp-heart{background:none;border:1px solid #ddd;border-radius:var(--pill);padding:8px 16px;color:#666;font-size:.85rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.hover-preview .hp-heart:hover{border-color:var(--candlelight);color:var(--candlelight)}
+.hover-preview .hp-explore{background:var(--burgundy);border:1px solid var(--burgundy);border-radius:var(--pill);padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;flex:1;text-align:center}
+.hover-preview .hp-explore:hover{background:#a62940;border-color:#a62940;transform:translateY(-1px)}
 </style>
 </head>
 <body>
-<div id="site-nav"></div><script src="/components/nav.js" data-theme="dark"></script>
 
-<!-- NAV -->
+<div id="site-nav"></div><script src="/components/nav.js"></script>
+<!-- mobile menu removed -->
 
-
-<!-- Mobile menu -->
-
-<a href="/explore.html" style="color:var(--burgundy);font-weight:700">?? Explore Map</a>
-
-<a href="/trail.html">?? Routes</a>
-</div>
-
-<!-- HERO -->
-<section class="region-hero">
-<img src="/img/scotland/highland-landscape.webp" alt="Scottish Highlands landscape with castle ruins" loading="eager">
-<div class="region-hero-content">
-<p class="breadcrumb"><a href="/">Home</a> ? <a href="/scotland">Scotland</a> ? The Highlands</p>
+<!-- ================================ -->
+<!-- 1. COMPACT HERO -->
+<!-- ================================ -->
+<section class="hero">
+<div class="hero-bg"><img src="https://img.castlecore.uk/scotland/Highlands/bjorn-snelders-Cd3Ek7rNXSk-unsplash%20(4).jpg" alt="Scottish Highlands landscape" loading="eager"></div>
+<div class="hero-inner">
+<p class="hero-breadcrumb"><a href="/">Home</a> / <a href="/scotland">Scotland</a> / Highlands</p>
 <h1>The Scottish Highlands</h1>
-<p class="hero-count" id="heroCount">87 Castles & Historic Sites</p>
+<p class="hero-count" id="heroCount">81 Castles &amp; Historic Sites</p>
 </div>
 </section>
 
-<!-- SPLIT VIEW: Content + Map -->
-<section class="split-section">
-<div class="split-content">
-<h2>Castles in the Scottish Highlands</h2>
+<!-- ================================ -->
+<!-- 2. INTRO + STICKY SUBMENU -->
+<!-- ================================ -->
+<section class="intro-section">
+<p class="intro-text">The <strong>Scottish Highlands</strong> stretch from <strong>Inverness</strong> and the shores of <strong>Loch Ness</strong> to the wild northern coast of <strong>Sutherland</strong> and <strong>Caithness</strong>. This vast region is home to <strong id="introCount">81</strong> castles, abbeys, and ancient sites — from world-famous landmarks like <strong>Eilean Donan Castle</strong> and <strong>Urquhart Castle</strong> to hidden ruins in <strong>Glen Coe</strong>, <strong>Moray</strong>, and the remote <strong>Kyle of Lochalsh</strong>. Whether you're driving the <strong>North Coast 500</strong> or exploring <strong>Culloden Battlefield</strong>, every mile of the Highlands reveals a new piece of Scotland's story.</p>
+</section>
 
-<p>The Scottish Highlands are home to some of the most dramatic castle settings anywhere in the world. Scattered across misty glens, perched on lonely lochs, and clinging to windswept clifftops, these fortresses tell the story of clan warfare, Jacobite rebellion, and a landscape that has inspired visitors for centuries. If you're looking for <strong>castles to visit in the Scottish Highlands</strong>, you're exploring one of Europe's richest heritage regions.</p>
-
-<p>From the iconic silhouette of <strong>Eilean Donan</strong> � one of Scotland's most photographed castles � to the brooding ruins of <strong>Urquhart Castle</strong> overlooking Loch Ness, the Highlands offer everything from perfectly preserved clan seats to haunting ruins lost in the bracken. Many of these sites are free to visit, sitting quietly in farmland or on headlands where the only company is seabirds and Atlantic wind.</p>
-
-<p>The region's castle-building story stretches back over a thousand years, from early medieval timber motte-and-baileys thrown up by Norman lords to the stone tower houses of the great clans � Mackenzie, MacLeod, Cameron, and Fraser among them. The Jacobite risings of the 17th and 18th centuries left their mark too: Eilean Donan was shattered by Royal Navy bombardment in 1719, and many Highland strongholds were slighted after Culloden in 1746 to break the power of the clans forever.</p>
-
-<p>Today, <strong>Highland castle tours</strong> are among the most popular <strong>things to do in the Scottish Highlands</strong>. Whether you're following the North Coast 500 route past remote ruins or exploring the Great Glen's chain of fortresses, every mile reveals something extraordinary. Many castles double as luxury hotels � <strong>Inverlochy</strong>, <strong>Tulloch</strong>, and <strong>Aldourie</strong> on Loch Ness among them � making it possible to sleep where Highland chiefs once feasted.</p>
-
-<div class="highlights">
-<h3>Must-Visit Highland Castles</h3>
-
-<a class="highlight-card" href="/site/eilean-donan-castle.html">
-<img src="https://img.castlecore.uk/eilean-donan-castle-1.jpg" alt="Eilean Donan Castle" loading="lazy">
-<div class="highlight-card-body">
-<h4>Eilean Donan Castle</h4>
-<p class="hl-loc">Kyle of Lochalsh, Highland</p>
-<p>Scotland's most iconic castle, dramatically set on a tidal island where three lochs meet. Destroyed in 1719 and lovingly rebuilt in the early 20th century.</p>
+<nav class="submenu" id="submenu">
+<div class="submenu-inner">
+<a href="#sites-anchor" class="active">🏰 Sites</a>
+<a href="#routes-anchor">🥾 Routes</a>
+<a href="#travel-anchor">✈️ Getting There</a>
+<a href="#stay-anchor">🏨 Where to Stay</a>
+<a href="#when-anchor">📅 Best Time</a>
+<a href="#faq-anchor">❓ FAQ</a>
 </div>
+</nav>
+
+<!-- ================================ -->
+<!-- 3. QUICK PICKS -->
+<!-- ================================ -->
+<section class="picks" id="sites-anchor">
+<p class="picks-label">Top Rated in the Highlands</p>
+<div class="picks-row" id="picksRow"></div>
+</section>
+
+<!-- ================================ -->
+<!-- 4. CASTLE GRID + MAP TOGGLE -->
+<!-- ================================ -->
+<section class="sites-section">
+<div class="sites-toolbar">
+<div class="sites-toolbar-left">
+<input type="text" class="sites-search" id="siteSearch" placeholder="Search sites..." autocomplete="off">
+<span class="results-count" id="resultsCount"></span>
+</div>
+</div>
+
+<div class="filter-row" id="filterRow"></div>
+<div class="sort-row" id="sortRow">
+<button class="sort-btn active" data-sort="rating">Top Rated</button>
+<button class="sort-btn" data-sort="name">A–Z</button>
+<button class="sort-btn" data-sort="reviews">Most Reviewed</button>
+<button class="sort-btn" data-sort="free">Free First</button>
+</div>
+
+<div class="sites-view">
+<div class="grid-view" id="gridView"></div>
+</div>
+<button class="load-more" id="loadMore" onclick="showMore()">Show More Sites</button>
+</section>
+
+<!-- ================================ -->
+<!-- 5. HIGHLAND ROUTES -->
+<!-- ================================ -->
+<div id="routes-anchor"></div>
+<section class="routes-section">
+<p class="cs-label">Explore by Route</p>
+<h2 class="cs-title" style="text-align:center;margin-bottom:32px">Highland Castle Routes</h2>
+<div class="routes-grid">
+<a class="route-card rc-burgundy" href="/trail.html?id=highland-route">
+<div class="route-img"><img src="https://img.castlecore.uk/eilean-donan-castle-3.jpg" alt="Loch & Glen Route" loading="lazy"></div>
+<div class="route-body"><h3>🏔️ Loch &amp; Glen Trail</h3><div class="route-meta"><span>Great Glen</span><span>8 sites</span><span>4 hours</span></div><p class="route-desc">Follow the Great Glen from Inverness to Fort William, passing Urquhart Castle, Culloden, and the brooding shores of Loch Ness.</p></div>
 </a>
-
-<a class="highlight-card" href="/site/urquhart-castle.html">
-<img src="https://img.castlecore.uk/urquhart-castle-3.jpg" alt="Urquhart Castle" loading="lazy">
-<div class="highlight-card-body">
-<h4>Urquhart Castle</h4>
-<p class="hl-loc">Drumnadrochit, Highland</p>
-<p>Commanding the shores of Loch Ness for over 1,000 years. One of Scotland's largest castles, with views that rival any in the country.</p>
-</div>
+<a class="route-card rc-forest" href="/trail.html?id=nc500-castles">
+<div class="route-img"><img src="https://img.castlecore.uk/dunrobin-castle-2.jpg" alt="NC500 Castle Route" loading="lazy"></div>
+<div class="route-body"><h3>🛣️ NC500 Castle Loop</h3><div class="route-meta"><span>North Coast</span><span>12 sites</span><span>Full day</span></div><p class="route-desc">The castle-lover's North Coast 500 — from Dunrobin in the east to remote Sutherland ruins and the wild north coast.</p></div>
 </a>
-
-<a class="highlight-card" href="/site/castle-stalker.html">
-<img src="https://img.castlecore.uk/castle-stalker-1.jpg" alt="Castle Stalker" loading="lazy">
-<div class="highlight-card-body">
-<h4>Castle Stalker</h4>
-<p class="hl-loc">Appin, Argyll</p>
-<p>A tiny tower house on a tidal islet in Loch Laich, famously seen in Monty Python and the Holy Grail. One of the most atmospheric settings in Scotland.</p>
-</div>
+<a class="route-card rc-charcoal" href="/trail.html?id=ancient-highlands">
+<div class="route-img"><img src="https://img.castlecore.uk/clava-cairns.jpg" alt="Ancient Highlands Route" loading="lazy"></div>
+<div class="route-body"><h3>🪨 Ancient Highlands</h3><div class="route-meta"><span>Inverness area</span><span>6 sites</span><span>3 hours</span></div><p class="route-desc">Bronze Age cairns, Iron Age brochs, and Pictish stones. The Highlands before the castles — 4,000 years of human story.</p></div>
 </a>
-
-<a class="highlight-card" href="/site/dunrobin-castle.html">
-<img src="https://img.castlecore.uk/dunrobin-castle-1.jpg" alt="Dunrobin Castle" loading="lazy">
-<div class="highlight-card-body">
-<h4>Dunrobin Castle</h4>
-<p class="hl-loc">Golspie, Sutherland</p>
-<p>A fairy-tale ch�teau in the far north with 189 rooms and formal gardens overlooking the sea. Seat of the Earls and Dukes of Sutherland since the 13th century.</p>
-</div>
-</a>
-</div>
-</div>
-
-<div class="split-map">
-<div id="map"></div>
 </div>
 </section>
 
-<!-- FULL CASTLE GRID -->
-<section class="grid-section">
-<h2>All Highland Castles & Sites</h2>
-<p class="grid-subtitle">Every castle, ruin, abbey, and fortification in the Scottish Highlands</p>
-
-<div class="grid-controls">
-<input type="text" class="grid-search" id="gridSearch" placeholder="Search by name...">
-<div class="grid-filters" id="gridFilters"></div>
+<!-- ================================ -->
+<!-- 6. GETTING TO THE HIGHLANDS -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="content-section" id="travel-anchor">
+<p class="cs-label">Getting There</p>
+<h2 class="cs-title">Travelling to the Scottish Highlands</h2>
+<div class="cs-body">
+<p>The Scottish Highlands are more accessible than you might think. <strong>Inverness</strong>, the Highland capital, has its own airport with direct flights from London, Manchester, Bristol, Dublin, and Amsterdam. From Edinburgh or Glasgow, the A9 takes around 3–3.5 hours by car — one of Britain's most scenic drives.</p>
+<p>By train, the <strong>ScotRail Highland Main Line</strong> from Edinburgh/Glasgow to Inverness runs through the Cairngorms and is regularly voted one of the world's most beautiful rail journeys. The <strong>Caledonian Sleeper</strong> runs overnight from London to Inverness, Fort William, and beyond — arrive with the sunrise over the mountains.</p>
+<p>Once in the Highlands, a car is essential. Distances are long, public transport is limited outside Inverness, and many of the best castle sites are down single-track roads. The <strong>North Coast 500</strong> route is the most popular driving loop, covering the entire northern coastline. Car hire is available at Inverness Airport and city centre.</p>
 </div>
-<p class="results-count" id="resultsCount"></p>
-<div class="castle-grid" id="castleGrid"></div>
 </section>
 
-<!-- 
+<!-- ================================ -->
+<!-- 7. WHERE TO STAY -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="content-section" id="stay-anchor">
+<p class="cs-label">Accommodation</p>
+<h2 class="cs-title">Where to Stay in the Highlands</h2>
+<div class="cs-body">
+<p><strong>Inverness</strong> is the natural base — the largest city in the Highlands with the widest range of hotels, B&Bs, and hostels. It's well-positioned for Culloden, Cawdor Castle, Fort George, and the eastern Highlands.</p>
+<p>For something special, several Highland castles operate as luxury hotels. <strong>Inverlochy Castle Hotel</strong> near Fort William, <strong>Tulloch Castle</strong> in Dingwall, and <strong>Aldourie Castle</strong> on the shores of Loch Ness offer the chance to sleep where Highland chiefs once feasted.</p>
+<p>Along the <strong>NC500</strong>, small towns like <strong>Ullapool</strong>, <strong>Durness</strong>, <strong>Tongue</strong>, and <strong>Dornoch</strong> have excellent B&Bs and inns. Book ahead in summer — capacity is limited and the route is increasingly popular. Scotland's right to roam also makes <strong>wild camping</strong> legal throughout the Highlands, provided you follow the Scottish Outdoor Access Code.</p>
+</div>
+</section>
 
-  const allCastles = (typeof CASTLES !== 'undefined' ? CASTLES : []).filter(isHighland);
+<!-- ================================ -->
+<!-- 8. BEST TIME TO VISIT -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="content-section" id="when-anchor">
+<p class="cs-label">Planning</p>
+<h2 class="cs-title">Best Time to Visit Highland Castles</h2>
+<div class="cs-body">
+<p><strong>May to September</strong> is peak season — the longest daylight hours (up to 18 hours in midsummer), warmest temperatures, and most castle interiors open. The trade-off is midges: tiny biting insects that swarm near water from June to August. Bring repellent.</p>
+<p><strong>April and October</strong> are excellent shoulder months. Fewer crowds, autumn colours (October is spectacular), and most major sites remain open. Spring brings wildflowers and nesting seabirds along the coast.</p>
+<p><strong>Winter (November–March)</strong> is magical but challenging. Daylight is short (6–7 hours), many castle interiors close, and Highland roads can be treacherous in snow. However, ruins don't have opening hours — and a snow-dusted castle at dawn with the mountains behind it is an experience you won't forget. The Northern Lights are occasionally visible from the north coast.</p>
+</div>
+</section>
 
-  // Update hero count
-  document.getElementById('heroCount').textContent = allCastles.length + ' Castles & Historic Sites';
+<!-- ================================ -->
+<!-- 9. FAQ -->
+<!-- ================================ -->
+<hr class="cs-divider">
+<section class="faq-section" id="faq-anchor">
+<p class="cs-label">Frequently Asked</p>
+<h2 class="cs-title">Highland Castle FAQ</h2>
 
-  // ========== MAP ==========
-  const map = L.map('map', {
-    scrollWheelZoom: false,
-    zoomControl: true
-  }).setView([57.3, -5.2], 7);
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many castles are in the Scottish Highlands?</div>
+<div class="faq-a">There are over 80 castles, ruins, abbeys, and historic sites scattered across the Scottish Highlands, spanning from Iron Age brochs to Victorian estates. The exact count on CastleCore is <span id="faqCount">81</span>, though new sites are added regularly.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the most famous castle in the Highlands?</div>
+<div class="faq-a">Eilean Donan Castle, dramatically set on a tidal island where three lochs meet near Kyle of Lochalsh, is Scotland's most photographed castle and the Highlands' most iconic site. Urquhart Castle on Loch Ness and Dunrobin Castle in Sutherland are also among the most visited.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are Highland castles free to visit?</div>
+<div class="faq-a">Nearly half of Highland castle sites (47 out of 81) are completely free to visit. Many ruins sit in open countryside with no admission charge. Paid sites typically cost £8–£15 for adults. Historic Scotland Explorer Passes offer good value if you're visiting multiple sites.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the best time to visit Highland castles?</div>
+<div class="faq-a">May to September offers the best weather and longest daylight hours. Most castle interiors are open April through October. Ruins can be visited year-round. Avoid June–August if midges bother you — or bring repellent.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need a car to visit Highland castles?</div>
+<div class="faq-a">A car is strongly recommended. While Inverness is well-connected by train and bus, most Highland castle sites are in rural locations with limited or no public transport. The NC500 driving route passes many of the best sites. Car hire is available at Inverness Airport.</div>
+</div>
+</section>
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '� <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    maxZoom: 18
-  }).addTo(map);
-
-  // Custom marker icon
-  const castleIcon = L.divIcon({
-    className: 'castle-marker',
-    html: '<div style="width:10px;height:10px;background:var(--burgundy,#8b2335);border:2px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.3)"></div>',
-    iconSize: [14, 14],
-    iconAnchor: [7, 7]
-  });
-
-  function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'') }
-
-  // Add markers
-  const markers = L.featureGroup();
-  allCastles.forEach(c => {
-    if (!c.lat || !c.lng) return;
-    const imgSrc = c.image ? (c.image.includes('img.castlecore.uk') ? c.image : c.image.replace(/\/\d+px-/, '/400px-')) : '';
-    const imgHtml = imgSrc ? `<img src="${imgSrc}" alt="${c.name}" style="width:200px;height:130px;object-fit:cover;border-radius:6px;margin-bottom:8px" onerror="this.style.display='none'">` : '';
-    const popup = `<div>${imgHtml}<h4><a href="/site/${slug(c.name)}.html">${c.name}</a></h4><p style="margin:0;font-size:.8rem;color:#666">${c.county || ''} � ${(c.type||'Castle')}</p></div>`;
-
-    L.marker([c.lat, c.lng], { icon: castleIcon })
-      .bindPopup(popup, { maxWidth: 240 })
-      .addTo(markers);
-  });
-  markers.addTo(map);
-
-  // Fit bounds if we have markers
-  if (allCastles.filter(c => c.lat && c.lng).length > 0) {
-    map.fitBounds(markers.getBounds().pad(0.1));
-  }
-
-  // ========== CASTLE GRID ==========
-  // Collect types
-  const typeCounts = {};
-  allCastles.forEach(c => {
-    const t = (c.type || 'other').toLowerCase();
-    typeCounts[t] = (typeCounts[t] || 0) + 1;
-  });
-  const types = Object.keys(typeCounts).sort((a,b) => typeCounts[b] - typeCounts[a]);
-
-  // Build filter buttons
-  const filtersEl = document.getElementById('gridFilters');
-  filtersEl.innerHTML = '<button class="active" data-type="all">All</button>' +
-    types.map(t => `<button data-type="${t}">${t} (${typeCounts[t]})</button>`).join('');
-
-  let activeType = 'all';
-  filtersEl.addEventListener('click', e => {
-    if (e.target.tagName !== 'BUTTON') return;
-    filtersEl.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-    activeType = e.target.dataset.type;
-    renderGrid();
-  });
-
-  const searchEl = document.getElementById('gridSearch');
-  searchEl.addEventListener('input', renderGrid);
-
-  function renderGrid() {
-    const q = searchEl.value.toLowerCase().trim();
-    const filtered = allCastles.filter(c => {
-      if (q && !c.name.toLowerCase().includes(q)) return false;
-      if (activeType !== 'all' && (c.type||'other').toLowerCase() !== activeType) return false;
-      return true;
-    });
-
-    document.getElementById('resultsCount').textContent = `Showing ${filtered.length} of ${allCastles.length} sites`;
-
-    const grid = document.getElementById('castleGrid');
-    grid.innerHTML = filtered.map(c => {
-      const imgSrc = c.image ? (c.image.includes('img.castlecore.uk') ? c.image : c.image.replace(/\/\d+px-/, '/500px-')) : '/placeholder.svg';
-      const rating = c.rating ? `<span class="rating">? ${c.rating}</span>` : '';
-      return `<a class="castle-card" href="/site/${slug(c.name)}.html">
-        <div class="castle-card-img"><img src="${imgSrc}" alt="${c.name}" loading="lazy" onerror="this.src='/placeholder.svg'"></div>
-        <div class="castle-card-body">
-          <h3>${c.name}</h3>
-          <p class="castle-card-loc">${c.county || 'Highland'}</p>
-          <div class="castle-card-meta">
-            <span class="type-pill">${c.type || 'Castle'}</span>
-            ${rating}
-          </div>
-        </div>
-      </a>`;
-    }).join('');
-  }
-
-  renderGrid();
-
-  // ========== MEGA MENU ==========
-  document.querySelectorAll(');
-    });
-  });
-
-  // ========== NAV SEARCH ==========
-  const allData = typeof CASTLES !== 'undefined' ? CASTLES : [];
-  function setupSearch(inputId) {
-    const input = document.getElementById(inputId);
-    if (!input) return;
-    let dropdown;
-    input.addEventListener('input', function() {
-      if (dropdown) dropdown.remove();
-      const q = this.value.toLowerCase().trim();
-      if (q.length < 2) return;
-      const matches = allData.filter(c => c.name.toLowerCase().includes(q)).slice(0, 8);
-      if (!matches.length) return;
-      dropdown = document.createElement('div');
-      dropdown.style.cssText = 'position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e8e8e8;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:9999;max-height:300px;overflow-y:auto;margin-top:4px';
-      matches.forEach(c => {
-        const a = document.createElement('a');
-        a.href = '/site/' + slug(c.name) + '.html';
-        a.textContent = c.name;
-        a.style.cssText = 'display:block;padding:8px 14px;font-size:.88rem;color:#2a2522;transition:background .15s';
-        a.onmouseenter = () => a.style.background = '#f0ebe0';
-        a.onmouseleave = () => a.style.background = '';
-        dropdown.appendChild(a);
-      });
-      input.parentElement.appendChild(dropdown);
-    });
-    document.addEventListener('click', e => { if (dropdown && !input.parentElement.contains(e.target)) { dropdown.remove(); dropdown = null; } });
-  }
-  setupSearch('navSearch');
-  setupSearch('mobNavSearch');
-
-  // ========== SCROLL REVEAL ==========
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el => observer.observe(el));
-
-})();
-</script>
+<!-- ================================ -->
+<!-- 10. NEARBY REGIONS -->
+<!-- ================================ -->
+<section class="nearby">
+<p class="cs-label" style="text-align:center">Keep Exploring</p>
+<h2 class="cs-title" style="text-align:center;margin-bottom:32px">Nearby Regions</h2>
+<div class="nearby-grid">
+<a href="/scotland/aberdeen-northeast" class="nearby-card" style="--bg-image:url('/img/scotland/aberdeen.webp')">
+<div class="nearby-card-content"><h3>Aberdeen &amp; Northeast</h3><span>Castle country</span></div>
+</a>
+<a href="/scotland/argyll-islands" class="nearby-card" style="--bg-image:url('/img/scotland/argyll.webp')">
+<div class="nearby-card-content"><h3>Argyll &amp; Islands</h3><span>Island fortresses</span></div>
+</a>
+<a href="/scotland/fife-perthshire" class="nearby-card" style="--bg-image:url('/img/scotland/fife-perthshire.webp')">
+<div class="nearby-card-content"><h3>Fife &amp; Perthshire</h3><span>Royal heartland</span></div>
+</a>
+<a href="/scotland/glasgow-stirling" class="nearby-card" style="--bg-image:url('/img/scotland/glasgow-stirling.webp')">
+<div class="nearby-card-content"><h3>Glasgow &amp; Stirling</h3><span>Central belt castles</span></div>
+</a>
+</div>
+</section>
 
 <div id="site-footer"></div><script src="/components/footer.js"></script>
+
+<!-- SCRIPTS -->
+<!-- Leaflet JS removed -->
+<script src="/data.js"></script>
+<script>
+(function(){
+  const HC=['Highland','Inverness','Ross','Sutherland','Caithness','Skye','Lochaber','Moray','Nairn','Badenoch'];
+  function isH(c){return c.country==='Scotland'&&HC.some(r=>(c.county||'').includes(r))}
+  const all=(typeof CASTLES!=='undefined'?CASTLES:[]).filter(isH);
+  const freeCount=all.filter(c=>c.access==='free').length;
+
+  // Update dynamic counts
+  document.getElementById('heroCount').textContent=all.length+' Castles & Historic Sites';
+  document.getElementById('introCount').textContent=all.length;
+  const faqEl=document.getElementById('faqCount');if(faqEl)faqEl.textContent=all.length;
+
+  function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+  function getImg(c){
+    if(c.image&&c.image.includes('img.castlecore.uk'))return c.image;
+    if(c.gallery&&c.gallery.length)return c.gallery[0];
+    return c.image||'';
+  }
+
+  // ===== QUICK PICKS =====
+  const top5=all.filter(c=>c.rating>=4.0).sort((a,b)=>(b.rating-a.rating)||(b.reviewCount-a.reviewCount)).slice(0,5);
+  document.getElementById('picksRow').innerHTML=top5.map(c=>{
+    const img=getImg(c);
+    const globalIdx=all.indexOf(c);
+    return '<a class="pick-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'"><img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.style.display=\'none\'"><div class="pick-card-body"><h3>'+c.name+'</h3><span>★ '+c.rating+'</span></div></a>';
+  }).join('');
+
+  // ===== FILTERS =====
+  const filterDefs=[
+    {label:'All',fn:null},
+    {label:'Free Entry',fn:c=>c.access==='free'},
+    {label:'Castles',fn:c=>(c.type||'').toLowerCase()==='castle'},
+    {label:'Abbeys',fn:c=>(c.type||'').toLowerCase()==='abbey'},
+    {label:'Ruins',fn:c=>(c.condition||'').includes('ruin')},
+    {label:'Intact',fn:c=>c.condition==='intact'||c.condition==='restored'},
+    {label:'Atmospheric',fn:c=>(c.tags||[]).includes('atmospheric')},
+    {label:'Remote',fn:c=>(c.tags||[]).includes('remote')},
+    {label:'Photogenic',fn:c=>(c.tags||[]).includes('photogenic')},
+    {label:'Haunted',fn:c=>(c.tags||[]).includes('haunted')},
+  ];
+  const filterRow=document.getElementById('filterRow');
+  filterDefs.forEach((d,i)=>{
+    const b=document.createElement('button');
+    b.className='filter-chip'+(i===0?' active':'');
+    b.textContent=d.label;
+    b.dataset.idx=i;
+    filterRow.appendChild(b);
+  });
+
+  let activeFilters=new Set([0]),curSort='rating',searchQ='',shown=24; // Start with "All" active
+
+  filterRow.addEventListener('click',e=>{
+    if(!e.target.classList.contains('filter-chip'))return;
+    const idx=+e.target.dataset.idx;
+    
+    if(idx===0){ // "All" clicked - clear all others
+      activeFilters.clear();
+      activeFilters.add(0);
+      filterRow.querySelectorAll('.filter-chip').forEach(b=>b.classList.remove('active'));
+      e.target.classList.add('active');
+    } else { // Other filter clicked - toggle it
+      if(activeFilters.has(idx)){
+        activeFilters.delete(idx);
+        e.target.classList.remove('active');
+      } else {
+        activeFilters.add(idx);
+        e.target.classList.add('active');
+      }
+      // Remove "All" if other filters are active
+      if(activeFilters.size>0&&activeFilters.has(0)){
+        activeFilters.delete(0);
+        filterRow.querySelector('[data-idx="0"]').classList.remove('active');
+      }
+      // If no filters active, activate "All"
+      if(activeFilters.size===0){
+        activeFilters.add(0);
+        filterRow.querySelector('[data-idx="0"]').classList.add('active');
+      }
+    }
+    shown=24;render();
+  });
+
+  document.getElementById('sortRow').addEventListener('click',e=>{
+    if(!e.target.classList.contains('sort-btn'))return;
+    document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    curSort=e.target.dataset.sort;render();
+  });
+
+  document.getElementById('siteSearch').addEventListener('input',function(){searchQ=this.value.toLowerCase().trim();shown=24;render()});
+  window.showMore=function(){shown+=24;render()};
+
+  // ===== MAP REMOVED =====
+  // All map-related functionality removed for grid-only view
+
+  // ===== RENDER GRID =====
+  function render(){
+    let list=[...all];
+    
+    // Apply active filters (AND logic)
+    if(!activeFilters.has(0)){ // If "All" is not active, apply other filters
+      activeFilters.forEach(idx=>{
+        const def=filterDefs[idx];
+        if(def&&def.fn)list=list.filter(def.fn);
+      });
+    }
+    
+    if(searchQ)list=list.filter(c=>c.name.toLowerCase().includes(searchQ));
+    if(curSort==='rating')list.sort((a,b)=>(b.rating||0)-(a.rating||0)||(b.reviewCount||0)-(a.reviewCount||0));
+    else if(curSort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+    else if(curSort==='reviews')list.sort((a,b)=>(b.reviewCount||0)-(a.reviewCount||0));
+    else if(curSort==='free')list.sort((a,b)=>{const af=a.access==='free'?0:1,bf=b.access==='free'?0:1;return af-bf||(b.rating||0)-(a.rating||0)});
+
+    document.getElementById('resultsCount').textContent=Math.min(shown,list.length)+' of '+list.length+' sites';
+    const vis=list.slice(0,shown);
+    document.getElementById('gridView').innerHTML=vis.map((c,i)=>{
+      const img=getImg(c);
+      const globalIdx=all.indexOf(c);
+      return '<a class="site-card" href="/site/'+slug(c.name)+'.html" data-idx="'+globalIdx+'">'+
+        '<div class="site-card-img">'+(img?'<img src="'+img+'" alt="'+c.name+'" loading="lazy" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">':'')+(c.access==='free'?'<span class="free-badge">Free</span>':'')+'</div>'+
+        '<div class="site-card-body">'+
+        '<h3>'+c.name+'</h3>'+
+        '<p class="sc-meta">'+(c.era||'')+(c.county?' · '+c.county:'')+'</p>'+
+        '<p class="sc-desc">'+(c.description||'')+'</p>'+
+        '<div class="site-card-foot"><span class="sc-type">'+(c.type||'Castle')+'</span>'+(c.rating?'<span class="sc-rating">★ '+c.rating+'</span>':'')+'</div>'+
+        '</div></a>';
+    }).join('');
+    const btn=document.getElementById('loadMore');
+    btn.classList.toggle('hidden',shown>=list.length);
+    
+    // Re-add hover listeners after render
+    setTimeout(addHoverListeners,10);
+  }
+  render();
+
+  // ===== HOVER PREVIEW =====
+  let hoverPreview=null;
+  let hideTimer=null;
+  function createHoverPreview(){
+    if(hoverPreview)return hoverPreview;
+    hoverPreview=document.createElement('div');
+    hoverPreview.className='hover-preview';
+    document.body.appendChild(hoverPreview);
+    
+    // Add hover listeners to preview itself
+    hoverPreview.addEventListener('mouseenter',function(){
+      if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
+    });
+    hoverPreview.addEventListener('mouseleave',function(){
+      hoverPreview.classList.remove('show');
+    });
+    
+    return hoverPreview;
+  }
+
+  function showHoverPreview(card,castle){
+    if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
+    
+    const preview=createHoverPreview();
+    const gallery=(castle.gallery||[]).slice(1,5); // Skip first image (index 0), take next 4
+    let galleryHtml='';
+    if(gallery.length){
+      galleryHtml='<div class="hp-gallery">'+
+        gallery.map((img,i)=>'<img src="'+img+'" alt="" loading="lazy" class="'+(i===0?'active':'')+'" onerror="this.remove()">').join('')+
+        (gallery.length>1?'<button class="hp-gallery-btn prev" onclick="hpNav(this,-1)">‹</button><button class="hp-gallery-btn next" onclick="hpNav(this,1)">›</button>':'')+
+        '</div>'+(gallery.length>1?'<div class="hp-dots">'+gallery.map((_,i)=>'<button class="hp-dot'+(i===0?' active':'')+'" onclick="hpGo(this,'+i+')"></button>').join('')+'</div>':'');
+    }
+    
+    // Create 1-sentence summary (truncate description to ~120 chars)
+    const summary=(castle.description||'').substring(0,120).replace(/\s+\S*$/,'')+(castle.description&&castle.description.length>120?'...':'');
+    
+    preview.innerHTML='<h4>'+castle.name+'</h4>'+galleryHtml+
+      '<div class="hp-summary">'+summary+'</div>'+
+      '<div class="hp-actions">'+
+      '<button class="hp-heart" onclick="alert(\'Saved!\')">♡ Save</button>'+
+      '<a class="hp-explore" href="/site/'+slug(castle.name)+'.html" target="_blank">Explore</a>'+
+      '</div>';
+
+    // Position preview centered over the card
+    const rect=card.getBoundingClientRect();
+    const previewW=380;
+    let left=rect.left+(rect.width-previewW)/2;
+    let top=rect.top;
+    
+    // Keep within viewport
+    if(left+previewW>window.innerWidth-10)left=window.innerWidth-previewW-10;
+    if(left<10)left=10;
+    if(top<10)top=10;
+    
+    preview.style.left=left+'px';
+    preview.style.top=(top+window.scrollY)+'px';
+    setTimeout(()=>preview.classList.add('show'),10);
+  }
+
+  // Gallery nav functions (global scope needed for onclick)
+  window.hpNav=function(btn,dir){
+    const gallery=btn.closest('.hp-gallery');
+    const imgs=gallery.querySelectorAll('img');
+    let cur=[...imgs].findIndex(i=>i.classList.contains('active'));
+    imgs[cur].classList.remove('active');
+    cur=(cur+dir+imgs.length)%imgs.length;
+    imgs[cur].classList.add('active');
+    const dots=gallery.parentElement.querySelector('.hp-dots');
+    if(dots){dots.querySelectorAll('.hp-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));}
+  };
+  window.hpGo=function(dot,idx){
+    const dots=dot.parentElement;
+    const gallery=dots.previousElementSibling;
+    const imgs=gallery.querySelectorAll('img');
+    imgs.forEach((img,i)=>img.classList.toggle('active',i===idx));
+    dots.querySelectorAll('.hp-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  };
+
+  function hideHoverPreview(){
+    if(hideTimer){clearTimeout(hideTimer);}
+    hideTimer=setTimeout(()=>{
+      if(hoverPreview){hoverPreview.classList.remove('show');}
+      hideTimer=null;
+    },200);
+  }
+
+  function addHoverListeners(){
+    document.querySelectorAll('.site-card[data-idx], .pick-card[data-idx]').forEach(card=>{
+      card.addEventListener('mouseenter',function(){
+        const idx=parseInt(this.dataset.idx);
+        const castle=all[idx];
+        if(castle)showHoverPreview(this,castle);
+      });
+      card.addEventListener('mouseleave',hideHoverPreview);
+    });
+  }
+
+  // Add hover listeners after initial render
+  addHoverListeners();
+
+  // ===== SUBMENU SCROLL + NAV HIDE =====
+  const submenu=document.getElementById('submenu');
+  const mainNav=document.querySelector('.nav');
+  const sections=['sites-anchor','routes-anchor','travel-anchor','stay-anchor','when-anchor','faq-anchor'];
+  const subLinks=submenu.querySelectorAll('a');
+  let submenuNaturalTop=submenu.offsetTop;
+  
+  function updateSubmenu(){
+    const scroll=window.scrollY;
+    
+    // Hide main nav when submenu would be sticky
+    const pastSubmenu = scroll >= submenuNaturalTop - 64;
+    if(mainNav){
+      mainNav.classList.toggle('nav-hidden', pastSubmenu);
+    }
+    submenu.classList.toggle('submenu-solo', pastSubmenu);
+    
+    // Highlight active section
+    const offset=scroll+(pastSubmenu?60:140);
+    let active=0;
+    sections.forEach((id,i)=>{
+      const el=document.getElementById(id);
+      if(el&&el.offsetTop<=offset)active=i;
+    });
+    subLinks.forEach((a,i)=>{a.classList.toggle('active',i===active)});
+    submenu.classList.toggle('scrolled',scroll>400);
+  }
+  window.addEventListener('scroll',updateSubmenu,{passive:true});
+  // Recalculate on resize
+  window.addEventListener('resize',()=>{submenuNaturalTop=submenu.offsetTop},{passive:true});
+
+  // ===== MEGA MENU =====
+  document.querySelectorAll('.mega-country').forEach(btn=>{
+    btn.addEventListener('mouseenter',function(){
+      const c=this.dataset.country;
+      this.closest('.mega-menu').querySelectorAll('.mega-country').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p=>p.classList.toggle('active',p.dataset.country===c));
+    });
+  });
+})();
+</script>
 </body>
 </html>
