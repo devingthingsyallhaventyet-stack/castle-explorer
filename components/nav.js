@@ -6,7 +6,9 @@
 
   // CSS styles for both themes
   const cssStyles = `
-    /* Self-hosted Inter for consistent nav rendering */
+    /* Self-hosted fonts for consistent nav rendering */
+    @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-latin.woff2) format('woff2')}
+    @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-italic-latin.woff2) format('woff2')}
     @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin.woff2) format('woff2')}
     /* Push body content below fixed nav */
     body { padding-top: 64px !important; }
@@ -40,6 +42,7 @@
     .nav-logo {
       font-family: 'Cormorant Garamond', serif !important;
       font-style: italic !important;
+      font-weight: 400 !important;
       font-size: 1.4rem !important;
       display: flex !important;
       align-items: center !important;
