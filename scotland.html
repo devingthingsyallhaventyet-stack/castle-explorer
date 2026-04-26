@@ -425,15 +425,15 @@ img{max-width:100%;display:block}
       <p class="section-subtitle" style="margin:0 auto">Over 400 castle sites mapped and documented. Filter by region, era, or condition - then explore each one.</p>
     </div>
     <div class="castle-filters reveal" id="castle-filters">
-      <button class="active" data-filter="all">All (448)</button>
-      <button data-filter="Highland">Highlands</button>
-      <button data-filter="Aberdeenshire">Aberdeenshire</button>
-      <button data-filter="Argyll and Bute">Argyll</button>
-      <button data-filter="Fife">Fife</button>
-      <button data-filter="Scottish Borders">Borders</button>
-      <button data-filter="Dumfries and Galloway">Dumfries</button>
-      <button data-filter="Perth and Kinross">Perthshire</button>
-      <button data-filter="Angus">Angus</button>
+      <button class="active" data-filter="all">All (447)</button>
+      <button data-filter="highlands-northern">Highlands &amp; Northern Isles</button>
+      <button data-filter="northeast-tayside">Northeast &amp; Tayside</button>
+      <button data-filter="argyll-western">Argyll &amp; Western Isles</button>
+      <button data-filter="borders">Scottish Borders</button>
+      <button data-filter="southwest">Southwest Scotland</button>
+      <button data-filter="edinburgh-lothians">Edinburgh &amp; Lothians</button>
+      <button data-filter="fife-perthshire">Fife &amp; Perthshire</button>
+      <button data-filter="glasgow-central">Glasgow &amp; Central</button>
       <button data-filter="intact">Intact</button>
       <button data-filter="ruin">Ruins</button>
     </div>
@@ -723,24 +723,37 @@ img{max-width:100%;display:block}
   let shown = 0;
   const PER_PAGE = window.innerWidth <= 768 ? 10 : 12;
 
+  const REGION_COUNTIES = {
+    'highlands-northern': ['Highland','Inverness','Ross','Sutherland','Caithness','Isle of Skye','Lochaber','Nairn','Badenoch','Orkney','Shetland','Na h-Eileanan Siar'],
+    'northeast-tayside': ['Aberdeenshire','Moray','Angus','Dundee'],
+    'argyll-western': ['Argyll and Bute'],
+    'borders': ['Scottish Borders'],
+    'southwest': ['Dumfries and Galloway','South Ayrshire','East Ayrshire','North Ayrshire','Ayrshire'],
+    'edinburgh-lothians': ['City of Edinburgh','Edinburgh','East Lothian','West Lothian','Midlothian'],
+    'fife-perthshire': ['Fife','Perth and Kinross','Perthshire','Clackmannanshire'],
+    'glasgow-central': ['Glasgow','Stirling','Falkirk','South Lanarkshire','North Lanarkshire','East Dunbartonshire','West Dunbartonshire','Renfrewshire','East Renfrewshire','Inverclyde']
+  };
+
   function getFiltered(){
     if(currentFilter==='all') return scotCastles;
     if(currentFilter==='intact') return scotCastles.filter(c=>c.condition==='intact');
     if(currentFilter==='ruin') return scotCastles.filter(c=>c.condition==='ruin');
-    return scotCastles.filter(c=>c.county===currentFilter);
+    const counties = REGION_COUNTIES[currentFilter];
+    if(counties) return scotCastles.filter(c=>counties.includes(c.county));
+    return scotCastles;
   }
 
   // Map filters to region page URLs
   const regionLinks = {
     'all': '/scotland/all-castles',
-    'Highland': '/scotland/highlands',
-    'Aberdeenshire': '/scotland/northeast-tayside',
-    'Argyll and Bute': '/scotland/argyll-western-isles',
-    'Fife': '/scotland/fife-perthshire',
-    'Scottish Borders': '/scotland/borders',
-    'Dumfries and Galloway': '/scotland/southwest-scotland',
-    'Perth and Kinross': '/scotland/fife-perthshire',
-    'Angus': '/scotland/northeast-tayside',
+    'highlands-northern': '/scotland/highlands',
+    'northeast-tayside': '/scotland/northeast-tayside',
+    'argyll-western': '/scotland/argyll-western-isles',
+    'borders': '/scotland/borders',
+    'southwest': '/scotland/southwest-scotland',
+    'edinburgh-lothians': '/scotland/edinburgh-lothians',
+    'fife-perthshire': '/scotland/fife-perthshire',
+    'glasgow-central': '/scotland/glasgow-central',
     'intact': '/scotland/all-castles?filter=intact',
     'ruin': '/scotland/all-castles?filter=ruin'
   };
