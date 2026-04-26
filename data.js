@@ -4787,7 +4787,7 @@ const CASTLES = [
     "condition": "ruin",
     "description": "A well-preserved 13th-century castle at the foot of Ben Nevis, Inverlochy saw two major battles. Its round corner towers and curtain walls form a perfect square.",
     "history": "Inverlochy Castle is a ruined, 13th-century castle near Inverlochy and Fort William, Highland, Scotland. The site of two battles, the castle remains largely unchanged since its construction. It is now in the care of Historic Environment Scotland.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kilchurn_Castle_C15th%2C_Loch_Awe_-_geograph.org.uk_-_7618041.jpg/500px-Kilchurn_Castle_C15th%2C_Loch_Awe_-_geograph.org.uk_-_7618041.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Inverlochy_Castle_%281%29_-_geograph.org.uk_-_5386355.jpg/500px-Inverlochy_Castle_%281%29_-_geograph.org.uk_-_5386355.jpg",
     "rating": 4,
     "reviewCount": 1120,
     "county": "Highland",
