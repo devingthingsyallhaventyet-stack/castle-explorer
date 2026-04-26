@@ -49,6 +49,11 @@
       gap: 8px !important;
       flex-shrink: 0 !important;
       color: ${isDark ? '#fff' : 'inherit'} !important;
+      text-decoration: none !important;
+    }
+    
+    .nav-logo:hover {
+      text-decoration: none !important;
     }
     
     .nav-center {
