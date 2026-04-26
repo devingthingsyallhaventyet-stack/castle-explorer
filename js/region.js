@@ -9,7 +9,8 @@
   // Load per-region JSON data
   const regionSlug = CONFIG.slug || location.pathname.split('/').pop().replace('.html','');
   
-  fetch('/scotland/data/' + regionSlug + '.json')
+  var dataCountry = (CONFIG.country || 'Scotland').toLowerCase();
+  fetch('/' + dataCountry + '/data/' + regionSlug + '.json')
     .then(r => r.json())
     .then(all => initRegion(all))
     .catch(err => { console.error('Failed to load region data:', err); });
