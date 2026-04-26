@@ -648,10 +648,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 24px 32px;
       '<a class="hp-explore" href="/site/'+slug(castle.name)+'.html" target="_blank">Explore</a>'+
       '</div>';
 
-    // Position preview over the card, matching its width
+    // Position preview over the card
     const rect=card.getBoundingClientRect();
-    preview.style.width=rect.width+'px';
-    let left=rect.left;
+    const isPick=card.classList.contains('pick-card');
+    const w=isPick?Math.max(rect.width,340):rect.width;
+    preview.style.width=w+'px';
+    let left=isPick?rect.left+(rect.width-w)/2:rect.left;
     let top=rect.top;
     
     // Keep within viewport
