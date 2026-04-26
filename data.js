@@ -53507,7 +53507,7 @@ const CASTLES = [
     "era": "12th century onwards",
     "condition": "intact",
     "description": "Scotland's oldest continuously inhabited house — a romantic white-harled mansion in the Tweed valley that has sheltered 27 Scottish monarchs and hidden Catholic priests.",
-    "image": "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-traquair-house.jpg",
+    "image": "https://img.castlecore.uk/wiki-traquair-house.jpg",
     "rating": 4.4,
     "reviewCount": 2200,
     "county": "Scottish Borders",
