@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castles in West Wales — 50 Sites to Explore | CastleCore</title>
+<meta name="description" content="Explore 50 castles, ruins, and historic sites in West Wales. From Pembroke Castle to Carreg Cennen, plan your West Wales adventure with maps, routes, and travel tips.">
+<meta name="keywords" content="castles in West Wales, Pembrokeshire castles, best castles Wales, things to do in West Wales, Welsh castle tours, Pembroke Castle, Kidwelly Castle, Carreg Cennen, Cilgerran Castle, Laugharne Castle">
+<link rel="preconnect" href="https://img.castlecore.uk" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+<link rel="dns-prefetch" href="https://img.castlecore.uk">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="canonical" href="https://castlecore.uk/wales/west-wales">
+<meta property="og:title" content="Castles in West Wales | CastleCore">
+<meta property="og:description" content="50 castles, ruins, and historic sites across West Wales. Maps, routes, and travel tips.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://castlecore.uk/wales/west-wales">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/region.css">
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-latin.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin.woff2) format('woff2')}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TouristDestination",
+  "name":"Castles in West Wales",
+  "description":"50 castles, ruins, and historic sites across West Wales.",
+  "url":"https://castlecore.uk/wales/west-wales",
+  "touristType":["Castle Explorer","History Enthusiast","Heritage Tourist"],
+  "geo":{"@type":"GeoCoordinates","latitude":51.90,"longitude":-4.50},
+  "isPartOf":{"@type":"TouristDestination","name":"Wales's Castles","url":"https://castlecore.uk/wales"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How many castles are in West Wales?","acceptedAnswer":{"@type":"Answer","text":"There are around 50 castles, ruins, abbeys, and historic sites across West Wales, spanning from Iron Age hillforts to mighty medieval fortresses built by Welsh princes and Norman lords."}},
+    {"@type":"Question","name":"What is the most famous castle in West Wales?","acceptedAnswer":{"@type":"Answer","text":"Pembroke Castle is the most famous — birthplace of Henry VII and one of the largest castles in Wales. Carreg Cennen, perched on a dramatic limestone crag, is equally iconic."}},
+    {"@type":"Question","name":"Are West Wales castles free to visit?","acceptedAnswer":{"@type":"Answer","text":"Many West Wales castle ruins are free to visit, including several Cadw-managed sites. Paid sites like Pembroke Castle and Kidwelly Castle typically charge £5–£10 for adults."}},
+    {"@type":"Question","name":"What is the best time to visit West Wales castles?","acceptedAnswer":{"@type":"Answer","text":"May to September offers the best weather and longest days. The Pembrokeshire coast is glorious in spring with wildflowers. Most castle interiors are open April through October."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="site-nav"></div><script src="/components/nav.js"></script>
+
+<section class="hero">
+<div class="hero-bg"><img src="/img/wales/south-west-wales.webp" alt="West Wales landscape" loading="eager" fetchpriority="high" width="1920" height="1080" decoding="async"></div>
+<div class="hero-inner">
+<p class="hero-breadcrumb"><a href="/">Home</a> / <a href="/wales">Wales</a> / West Wales</p>
+<h1>West Wales</h1>
+<p class="hero-count" id="heroCount">Castles &amp; Historic Sites</p>
+</div>
+</section>
+
+<div class="region-counties">
+Pembrokeshire · Carmarthenshire · Ceredigion
+</div>
+
+<section class="intro-section">
+<p class="intro-text"><strong>West Wales</strong> stretches along the wild <strong>Pembrokeshire</strong> coast, through the rolling hills of <strong>Carmarthenshire</strong>, and up into the quiet uplands of <strong>Ceredigion</strong>. This region is home to <strong id="introCount">50</strong> castles, abbeys, and ancient sites — from the mighty <strong>Pembroke Castle</strong>, birthplace of the Tudor dynasty, to the dramatic cliff-edge ruin of <strong>Carreg Cennen</strong> and the brooding towers of <strong>Kidwelly Castle</strong>. Whether you're walking the <strong>Pembrokeshire Coast Path</strong>, exploring the Neolithic burial chamber of <strong>Pentre Ifan</strong>, or discovering <strong>Laugharne Castle</strong> where Dylan Thomas found his inspiration, West Wales weaves together Welsh princes, Norman invaders, and thousands of years of history.</p>
+</section>
+
+<nav class="submenu" id="submenu">
+<div class="submenu-inner">
+<a href="#sites-anchor" class="active">🏰 Sites</a>
+<a href="#routes-anchor">🥾 Routes</a>
+<a href="#travel-anchor">✈️ Getting There</a>
+<a href="#stay-anchor">🏨 Where to Stay</a>
+<a href="#when-anchor">📅 Best Time</a>
+<a href="#faq-anchor">❓ FAQ</a>
+</div>
+</nav>
+
+<section class="picks" id="sites-anchor">
+<p class="picks-label">Top Rated in West Wales</p>
+<div class="picks-row" id="picksRow"></div>
+</section>
+
+<section class="sites-section">
+<div class="sites-toolbar">
+<div class="sites-toolbar-left">
+<input type="text" class="sites-search" id="siteSearch" placeholder="Search sites..." autocomplete="off">
+<span class="results-count" id="resultsCount"></span>
+</div>
+</div>
+<div class="filter-row" id="filterRow"></div>
+<div class="sort-row" id="sortRow">
+<button class="sort-btn active" data-sort="rating">Top Rated</button>
+<button class="sort-btn" data-sort="name">A–Z</button>
+<button class="sort-btn" data-sort="reviews">Most Reviewed</button>
+<button class="sort-btn" data-sort="free">Free First</button>
+</div>
+<div class="sites-view">
+<div class="grid-view" id="gridView"></div>
+</div>
+<button class="load-more" id="loadMore" onclick="showMore()">Show More Sites</button>
+</section>
+
+<div id="routes-anchor"></div>
+<section class="routes-section">
+<p class="cs-label">Explore by Route</p>
+<h2 class="cs-title" style="text-align:center;margin-bottom:32px">West Wales Castle Routes</h2>
+<div class="routes-grid">
+
+<a class="route-card rc-burgundy" href="/trail.html?id=pembrokeshire-coast">
+<div class="route-img"><img src="https://img.castlecore.uk/pembroke-castle-2.jpg" alt="Pembrokeshire Coast Route" loading="lazy" decoding="async" width="400" height="200"></div>
+<div class="route-body"><h3>🏖️ Pembrokeshire Coast Trail</h3><div class="route-meta"><span>Pembrokeshire</span><span>8 sites</span><span>Full day</span></div><p class="route-desc">Follow the stunning Pembrokeshire coastline from Pembroke Castle to St David's, taking in Manorbier, Carew, and Cilgerran along the way.</p></div>
+</a>
+<a class="route-card rc-forest" href="/trail.html?id=carmarthenshire-castles">
+<div class="route-img"><img src="https://img.castlecore.uk/carreg-cennen-castle-2.jpg" alt="Carmarthenshire Route" loading="lazy" decoding="async" width="400" height="200"></div>
+<div class="route-body"><h3>🏰 Carmarthenshire Castle Circuit</h3><div class="route-meta"><span>Carmarthenshire</span><span>7 sites</span><span>Half day</span></div><p class="route-desc">From Kidwelly's perfectly preserved fortress to the dramatic cliff-top ruin of Carreg Cennen, through Laugharne and Dryslwyn Castle.</p></div>
+</a>
+<a class="route-card rc-charcoal" href="/trail.html?id=ancient-west-wales">
+<div class="route-img"><img src="https://img.castlecore.uk/pentre-ifan.jpg" alt="Ancient West Wales Route" loading="lazy" decoding="async" width="400" height="200"></div>
+<div class="route-body"><h3>🪨 Ancient West Wales</h3><div class="route-meta"><span>Preseli Hills</span><span>5 sites</span><span>3 hours</span></div><p class="route-desc">Neolithic cromlechs, Bronze Age standing stones, and Iron Age hillforts in the Preseli Hills — the landscape that supplied Stonehenge's bluestones.</p></div>
+</a>
+
+</div>
+</section>
+
+<hr class="cs-divider">
+<section class="content-section" id="travel-anchor">
+
+<p class="cs-label">Getting There</p>
+<h2 class="cs-title">Travelling to West Wales</h2>
+<div class="cs-body">
+<p>West Wales is well served by road from the M4 motorway. <strong>Carmarthen</strong> is the main gateway town, around 2 hours from Cardiff and 4 hours from London by car. The A40 and A48 are the main routes west from the M4.</p>
+<p>By train, <strong>Great Western Railway</strong> and <strong>Transport for Wales</strong> run services to Carmarthen, Tenby, Pembroke Dock, and Fishguard from Swansea and Cardiff. The journey from London Paddington to Carmarthen takes around 4 hours. Fishguard also has ferry connections to Rosslare in Ireland.</p>
+<p>Once in West Wales, a car is strongly recommended. The Pembrokeshire coast has excellent roads but public transport between castle sites is limited. The <strong>Pembrokeshire Coastal Bus</strong> services are useful in summer for reaching coastal sites, but inland castles like Carreg Cennen require your own transport.</p>
+</div>
+
+</section>
+
+<hr class="cs-divider">
+<section class="content-section" id="stay-anchor">
+
+<p class="cs-label">Accommodation</p>
+<h2 class="cs-title">Where to Stay in West Wales</h2>
+<div class="cs-body">
+<p><strong>Tenby</strong> is the most popular base — a beautiful walled town on the Pembrokeshire coast with excellent hotels, guesthouses, and restaurants. It's well positioned for Pembroke Castle, Manorbier, and Carew.</p>
+<p><strong>St David's</strong>, Britain's smallest city, offers a quieter base near the cathedral and the wild northern Pembrokeshire coast. <strong>Carmarthen</strong> and <strong>Llandeilo</strong> are ideal for exploring the Carmarthenshire castles, with Llandeilo particularly well placed for Carreg Cennen and Dinefwr.</p>
+<p>For character, try a <strong>converted farmhouse</strong> or <strong>coastal cottage</strong> — Pembrokeshire is famous for its holiday lets. Camping and glamping sites dot the coast path, and the region has some excellent independent hostels for budget travellers.</p>
+</div>
+
+</section>
+
+<hr class="cs-divider">
+<section class="content-section" id="when-anchor">
+
+<p class="cs-label">Planning</p>
+<h2 class="cs-title">Best Time to Visit West Wales Castles</h2>
+<div class="cs-body">
+<p><strong>May to September</strong> is the best time to visit. The Pembrokeshire coast is at its finest in late spring when wildflowers carpet the cliff-tops and puffins nest on Skomer Island. Summer brings the warmest weather and longest days, though popular spots like Tenby can be busy in August.</p>
+<p><strong>April and October</strong> are excellent shoulder months. The coast is quieter, autumn colours brighten the Carmarthenshire valleys, and most Cadw sites remain open. Spring is particularly magical for the bluebells in the woodlands around Cilgerran and the Teifi Valley.</p>
+<p><strong>Winter (November–March)</strong> brings dramatic storm-watching on the coast and peaceful castle ruins without the crowds. Some castle interiors close or reduce hours, but ruins and outdoor sites are accessible year-round. West Wales has milder winters than inland Wales thanks to the Gulf Stream.</p>
+</div>
+
+</section>
+
+<hr class="cs-divider">
+<section class="faq-section" id="faq-anchor">
+<p class="cs-label">Frequently Asked</p>
+<h2 class="cs-title">West Wales Castle FAQ</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many castles are in West Wales?</div>
+<div class="faq-a">There are around 50 castles, ruins, abbeys, and historic sites across West Wales, spanning from Neolithic burial chambers to mighty Norman fortresses. The exact count on CastleCore is <span id="faqCount">50</span>, though new sites are added regularly.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the most famous castle in West Wales?</div>
+<div class="faq-a">Pembroke Castle is the most famous — a massive Norman fortress and birthplace of Henry VII, founder of the Tudor dynasty. Carreg Cennen, spectacularly perched on a limestone crag in Carmarthenshire, is equally iconic and often considered Wales's most dramatically sited castle.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are West Wales castles free to visit?</div>
+<div class="faq-a">Many castle ruins in West Wales are completely free to explore. Cadw, the Welsh heritage body, manages several sites with free or low-cost entry. Major paid sites like Pembroke Castle and Kidwelly Castle typically charge £5–£10 for adults. A Cadw membership offers unlimited access to all their sites.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I walk the Pembrokeshire Coast Path between castles?</div>
+<div class="faq-a">Yes! The 186-mile Pembrokeshire Coast Path passes near several castles and historic sites. You can walk between Manorbier Castle and Pembroke Castle along the coast, or visit Cilgerran Castle from the Teifi estuary section. The path is well-marked and offers some of the finest coastal walking in Britain.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What else is there to see in West Wales besides castles?</div>
+<div class="faq-a">West Wales offers stunning beaches, the Pembrokeshire Coast National Park, St David's Cathedral (Britain's smallest city), wildlife boat trips to Skomer and Ramsey islands for puffins and seals, the Preseli Hills (source of Stonehenge's bluestones), and the charming towns of Tenby, Laugharne, and Cardigan.</div>
+</div>
+
+</section>
+
+<section class="nearby">
+<p class="cs-label" style="text-align:center">Keep Exploring</p>
+<h2 class="cs-title" style="text-align:center;margin-bottom:32px">Nearby Regions</h2>
+<div class="nearby-grid">
+<a href="/wales/snowdonia-north-wales" class="nearby-card"><img src="/img/wales/north-wales.webp" loading="lazy" decoding="async" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0"><div class="nearby-card-content"><h3>Snowdonia &amp; North Wales</h3><span>Mighty Edwardian fortresses</span></div></a>
+<a href="/wales/mid-wales" class="nearby-card"><img src="/img/wales/mid-wales.webp" loading="lazy" decoding="async" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0"><div class="nearby-card-content"><h3>Mid Wales</h3><span>Hidden border castles</span></div></a>
+<a href="/wales/south-wales" class="nearby-card"><img src="/img/wales/south-wales.webp" loading="lazy" decoding="async" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0"><div class="nearby-card-content"><h3>South Wales</h3><span>Cardiff to Chepstow</span></div></a>
+<a href="/england/south-west" class="nearby-card"><img src="/img/england/south-west.webp" loading="lazy" decoding="async" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0"><div class="nearby-card-content"><h3>South West England</h3><span>Across the Bristol Channel</span></div></a>
+</div>
+</section>
+
+<div id="site-footer"></div><script src="/components/footer.js"></script>
+
+<script>
+window.REGION_CONFIG = {
+  slug: 'west-wales',
+  counties: ['Pembrokeshire','Carmarthenshire','Ceredigion'],
+  name: 'West Wales',
+  country: 'Wales'
+};
+</script>
+<script src="/js/region.js"></script>
+</body>
+</html>
