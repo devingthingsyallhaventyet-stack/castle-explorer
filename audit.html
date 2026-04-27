@@ -549,7 +549,7 @@ function renderTable() {
       return `<tr>
         <td><strong>${esc(d.name)}</strong></td>
         <td><a href="${listingUrl}" target="_blank">View Listing ↗</a></td>
-        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">—</span>'}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">—</span>'}${d.lat && d.lng ? ` · <a href="https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}" target="_blank">📍 Google Maps ↗</a>` : ''}</td>
       </tr>`;
     }).join('');
     el.innerHTML = `<table><thead><tr><th>Castle Name</th><th>Our Listing</th><th>Approved Sources</th></tr></thead><tbody>${rows}</tbody></table>`;
