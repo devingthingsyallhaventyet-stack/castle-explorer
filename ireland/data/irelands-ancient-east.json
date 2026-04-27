@@ -1659,44 +1659,6 @@
     ]
   },
   {
-    "name": "Rataine Castle",
-    "lat": 53.542,
-    "lng": -6.468,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A medieval tower in the Meath countryside near the Boyne Valley, Ireland's most archaeologically significant landscape.",
-    "image": "https://img.castlecore.uk/rataine-castle.jpg",
-    "rating": 3,
-    "reviewCount": 7,
-    "county": "County Meath",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1176,
-    "gallery": [
-      "https://img.castlecore.uk/rataine-castle-2.jpg",
-      "https://img.castlecore.uk/rataine-castle-3.jpg",
-      "https://img.castlecore.uk/rataine-castle-4.jpg",
-      "https://img.castlecore.uk/rataine-castle-5.jpg"
-    ],
-    "history": "Rataine Castle is a medieval tower house in County Meath near the Boyne Valley. The castle dates to the medieval period and stands in the extraordinarily rich heritage landscape of the Boyne Valley, which includes Newgrange, Knowth, and Dowth passage tombs.",
-    "sources": [
-      {
-        "name": "Meath Heritage",
-        "url": "https://www.meathtourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Ardmulchan Castle",
     "lat": 53.595,
     "lng": -6.598,
@@ -4077,46 +4039,6 @@
     ]
   },
   {
-    "name": "Annestown Castle",
-    "lat": 52.142,
-    "lng": -7.202,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A tower house near the scenic Waterford coastline, overlooking one of the Copper Coast's beautiful cove beaches.",
-    "image": "https://img.castlecore.uk/annestown-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 15,
-    "county": "County Waterford",
-    "tags": [
-      "coastal",
-      "ruins-romantic",
-      "medieval",
-      "photogenic",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2143,
-    "gallery": [
-      "https://img.castlecore.uk/annestown-castle-2.jpg",
-      "https://img.castlecore.uk/annestown-castle-3.jpg",
-      "https://img.castlecore.uk/annestown-castle-4.jpg",
-      "https://img.castlecore.uk/annestown-castle-5.jpg"
-    ],
-    "history": "Annestown Castle is a medieval tower house near the village of Annestown on the Waterford coast. The area is part of the Copper Coast UNESCO Global Geopark, named for 19th-century copper mining. The dramatic coastline features sea stacks, coves, and geological formations.",
-    "sources": [
-      {
-        "name": "Waterford Heritage",
-        "url": "https://www.visitwaterford.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Duleek Priory",
     "lat": 53.655,
     "lng": -6.42,
@@ -4301,44 +4223,6 @@
       {
         "name": "Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Dromana_Gate"
-      }
-    ]
-  },
-  {
-    "name": "Kilbarry Castle Waterford",
-    "lat": 52.245,
-    "lng": -7.14,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A tower house near Waterford city, now surrounded by the expanding suburbs of Ireland's oldest city.",
-    "image": "https://img.castlecore.uk/kilbarry-castle-waterford.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Waterford",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2372,
-    "gallery": [
-      "https://img.castlecore.uk/kilbarry-castle-waterford-2.jpg",
-      "https://img.castlecore.uk/kilbarry-castle-waterford-3.jpg",
-      "https://img.castlecore.uk/kilbarry-castle-waterford-4.jpg",
-      "https://img.castlecore.uk/kilbarry-castle-waterford-5.jpg"
-    ],
-    "history": "Kilbarry Castle is a medieval tower house near Waterford city. The castle dates to the medieval period and once stood in open countryside that has been absorbed by Waterford's suburban expansion.",
-    "sources": [
-      {
-        "name": "Waterford Heritage",
-        "url": "https://www.visitwaterford.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
       }
     ]
   },
@@ -4572,120 +4456,6 @@
     ]
   },
   {
-    "name": "Dowdstown Castle Meath",
-    "lat": 53.62,
-    "lng": -6.62,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A tower house in the rich Meath countryside, part of the medieval infrastructure of the English Pale.",
-    "image": "https://img.castlecore.uk/dowdstown-castle-meath.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Meath",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2383,
-    "gallery": [
-      "https://img.castlecore.uk/dowdstown-castle-meath-2.jpg",
-      "https://img.castlecore.uk/dowdstown-castle-meath-3.jpg",
-      "https://img.castlecore.uk/dowdstown-castle-meath-4.jpg",
-      "https://img.castlecore.uk/dowdstown-castle-meath-5.jpg"
-    ],
-    "history": "Dowdstown Castle is a medieval tower house in County Meath, part of the Pale's defensive network.",
-    "sources": [
-      {
-        "name": "Meath Heritage",
-        "url": "https://www.meathtourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Rathmullan Castle Meath",
-    "lat": 53.56,
-    "lng": -6.7,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A tower house in County Meath, in the historically rich landscape of the Boyne Valley.",
-    "image": "https://img.castlecore.uk/rathmullan-castle-meath.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Meath",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2385,
-    "gallery": [
-      "https://img.castlecore.uk/rathmullan-castle-meath-2.jpg",
-      "https://img.castlecore.uk/rathmullan-castle-meath-3.jpg",
-      "https://img.castlecore.uk/rathmullan-castle-meath-4.jpg",
-      "https://img.castlecore.uk/rathmullan-castle-meath-5.jpg"
-    ],
-    "history": "Rathmullan Castle is a medieval tower house in County Meath near the Boyne Valley.",
-    "sources": [
-      {
-        "name": "Meath Heritage",
-        "url": "https://www.meathtourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Drumconrath Castle",
-    "lat": 53.78,
-    "lng": -6.83,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "Castle remains in the north Meath village of Drumconrath, near the border with County Louth.",
-    "image": "https://img.castlecore.uk/drumconrath-castle.jpg",
-    "rating": 3.2,
-    "reviewCount": 10,
-    "county": "County Meath",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2386,
-    "gallery": [
-      "https://img.castlecore.uk/drumconrath-castle-2.jpg",
-      "https://img.castlecore.uk/drumconrath-castle-3.jpg",
-      "https://img.castlecore.uk/drumconrath-castle-4.jpg",
-      "https://img.castlecore.uk/drumconrath-castle-5.jpg"
-    ],
-    "history": "Drumconrath Castle is a medieval fortification in County Meath.",
-    "sources": [
-      {
-        "name": "Meath Heritage",
-        "url": "https://www.meathtourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Gormanston Castle",
     "lat": 53.62,
     "lng": -6.233,
@@ -4793,42 +4563,6 @@
       {
         "name": "Wexford Heritage",
         "url": "https://www.visitwexford.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Ballylaneen Castle",
-    "lat": 52.17,
-    "lng": -7.385,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A tower house in the Waterford countryside between Dungarvan and Tramore.",
-    "image": "https://img.castlecore.uk/ballylaneen-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Waterford",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2396,
-    "gallery": [
-      "https://img.castlecore.uk/ballylaneen-castle-2.jpg",
-      "https://img.castlecore.uk/ballylaneen-castle-3.jpg"
-    ],
-    "history": "Ballylaneen Castle is a medieval tower house in County Waterford.",
-    "sources": [
-      {
-        "name": "Waterford Heritage",
-        "url": "https://www.visitwaterford.com/"
       },
       {
         "name": "Heritage Ireland",
@@ -4980,44 +4714,6 @@
       "https://img.castlecore.uk/clogh-castle-kilkenny-5.jpg"
     ],
     "history": "Clogh Castle is a medieval tower house in County Kilkenny.",
-    "sources": [
-      {
-        "name": "Kilkenny Heritage",
-        "url": "https://www.kilkennyheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Tullaroan Castle",
-    "lat": 52.621,
-    "lng": -7.465,
-    "country": "Ireland",
-    "type": "tower house",
-    "county": "County Kilkenny",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "era": "15th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/tullaroan-castle.jpg",
-    "description": "A tower house near the Kilkenny village of Tullaroan, famous as the heartland of hurling in Ireland.",
-    "_index": 2435,
-    "gallery": [
-      "https://img.castlecore.uk/tullaroan-castle-2.jpg",
-      "https://img.castlecore.uk/tullaroan-castle-3.jpg",
-      "https://img.castlecore.uk/tullaroan-castle-4.jpg",
-      "https://img.castlecore.uk/tullaroan-castle-5.jpg"
-    ],
-    "history": "Tullaroan Castle is a medieval tower house near the village of Tullaroan, County Kilkenny. Tullaroan is famous in the GAA world as one of the great heartlands of hurling, having produced numerous All-Ireland champions.",
     "sources": [
       {
         "name": "Kilkenny Heritage",

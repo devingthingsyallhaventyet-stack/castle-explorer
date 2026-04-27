@@ -1417,41 +1417,6 @@
     ]
   },
   {
-    "name": "Fuerty Castle",
-    "lat": 53.72,
-    "lng": -8.412,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "Medieval remains near the village of Fuerty in Roscommon, in an area rich with ecclesiastical heritage dating back to the early Christian period.",
-    "image": "https://img.castlecore.uk/fuerty-castle.jpg",
-    "rating": 3,
-    "reviewCount": 8,
-    "county": "County Roscommon",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1138,
-    "gallery": [
-      "https://pub-865f4a8498e64980801e4e498b53f5c0.r2.dev/wiki-fuerty-castle.jpg"
-    ],
-    "history": "Fuerty Castle is a medieval fortification near the village of Fuerty, County Roscommon. The village has ancient ecclesiastical connections, with a monastery associated with St Justinian. The castle dates to the medieval period and was held by local Roscommon families.",
-    "sources": [
-      {
-        "name": "Roscommon Heritage",
-        "url": "https://www.roscommon.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Tulsk Castle",
     "lat": 53.788,
     "lng": -8.242,
@@ -1513,44 +1478,6 @@
       "https://img.castlecore.uk/dunamon-tower-5.jpg"
     ],
     "history": "Dunamon Tower is a medieval fortification on the River Suck in County Roscommon. The castle dates to the medieval period and was held by the Kings of Connacht. Later acquired by the Divine Word Missionaries, the tower and surrounding buildings serve as a religious community centre in a beautiful riverside setting.",
-    "sources": [
-      {
-        "name": "Roscommon Heritage",
-        "url": "https://www.roscommon.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Ballyfarnon Castle",
-    "lat": 53.952,
-    "lng": -8.148,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A quiet ruin in the Roscommon village of Ballyfarnon, near the shores of Lough Key in one of Ireland's most beautiful lake districts.",
-    "image": "https://img.castlecore.uk/ballyfarnon-castle.jpg",
-    "rating": 3.1,
-    "reviewCount": 10,
-    "county": "County Roscommon",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1142,
-    "gallery": [
-      "https://img.castlecore.uk/ballyfarnon-castle-2.jpg",
-      "https://img.castlecore.uk/ballyfarnon-castle-3.jpg",
-      "https://img.castlecore.uk/ballyfarnon-castle-4.jpg",
-      "https://img.castlecore.uk/ballyfarnon-castle-5.jpg"
-    ],
-    "history": "Ballyfarnon Castle is a medieval fortification near Ballyfarnon, County Roscommon. The village sits near Lough Key, one of Ireland's most scenic lakes, now the centrepiece of Lough Key Forest Park. The castle dates to the medieval period and was associated with local Roscommon families.",
     "sources": [
       {
         "name": "Roscommon Heritage",
@@ -2867,45 +2794,6 @@
     ]
   },
   {
-    "name": "Ballinlough Castle Roscommon",
-    "lat": 53.68,
-    "lng": -8.02,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "Medieval/18th century",
-    "condition": "intact",
-    "description": "A fine castle and estate near Clonmellon on the Roscommon-Westmeath border, hosting music festivals in its beautiful parkland.",
-    "image": "https://img.castlecore.uk/ballinlough-castle-roscommon.jpg",
-    "rating": 3.6,
-    "reviewCount": 25,
-    "county": "County Roscommon",
-    "tags": [
-      "well-preserved",
-      "gardens",
-      "events-venue",
-      "wedding-venue"
-    ],
-    "access": "paid",
-    "_index": 1831,
-    "gallery": [
-      "https://img.castlecore.uk/ballinlough-castle-roscommon-2.jpg",
-      "https://img.castlecore.uk/ballinlough-castle-roscommon-3.jpg",
-      "https://img.castlecore.uk/ballinlough-castle-roscommon-4.jpg",
-      "https://img.castlecore.uk/ballinlough-castle-roscommon-5.jpg"
-    ],
-    "history": "Ballinlough Castle on the Roscommon-Westmeath border is a castle estate that dates to the medieval period. The castle has been home to the same family for centuries and the estate grounds now host festivals and events including the Body & Soul music festival. The parkland and lake setting creates an atmospheric venue.",
-    "sources": [
-      {
-        "name": "Ballinlough Castle",
-        "url": "https://www.ballinloughcastle.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Nendrum Monastic Site",
     "lat": 54.473,
     "lng": -5.65,
@@ -3358,44 +3246,6 @@
     ]
   },
   {
-    "name": "Carrigart Castle",
-    "lat": 55.155,
-    "lng": -7.725,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "Castle remains in the Donegal coastal village of Carrigart, gateway to the wild Rosguill Peninsula and the Atlantic Drive.",
-    "image": "https://img.castlecore.uk/carrigart-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Donegal",
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2184,
-    "gallery": [
-      "https://img.castlecore.uk/carrigart-castle-2.jpg",
-      "https://img.castlecore.uk/carrigart-castle-3.jpg",
-      "https://img.castlecore.uk/carrigart-castle-4.jpg",
-      "https://img.castlecore.uk/carrigart-castle-5.jpg"
-    ],
-    "history": "Carrigart Castle in County Donegal stands in the village that serves as gateway to the Rosguill Peninsula and its famous Atlantic Drive, one of Ireland's most spectacular coastal roads.",
-    "sources": [
-      {
-        "name": "Donegal Heritage",
-        "url": "https://www.govisitdonegal.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Tullydonnell Castle",
     "lat": 54.78,
     "lng": -7.565,
@@ -3505,45 +3355,6 @@
     ]
   },
   {
-    "name": "Cloonfree Castle",
-    "lat": 53.65,
-    "lng": -8.1,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A tower house in the Roscommon countryside, one of the scattered medieval fortifications in the Irish midlands.",
-    "image": "https://img.castlecore.uk/cloonfree-castle.jpg",
-    "rating": 3.2,
-    "reviewCount": 10,
-    "county": "County Roscommon",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "remote",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2193,
-    "gallery": [
-      "https://img.castlecore.uk/cloonfree-castle-2.jpg",
-      "https://img.castlecore.uk/cloonfree-castle-3.jpg",
-      "https://img.castlecore.uk/cloonfree-castle-4.jpg",
-      "https://img.castlecore.uk/cloonfree-castle-5.jpg"
-    ],
-    "history": "Cloonfree Castle is a medieval tower house in County Roscommon.",
-    "sources": [
-      {
-        "name": "Roscommon Heritage",
-        "url": "https://www.roscommon.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Cavan Burren Park",
     "lat": 54.114,
     "lng": -7.811,
@@ -3576,43 +3387,6 @@
       {
         "name": "Cavan Burren Park",
         "url": "https://www.cavanburrenpark.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Ballyjamesduff Castle",
-    "lat": 53.865,
-    "lng": -7.201,
-    "country": "Ireland",
-    "type": "castle",
-    "era": "17th century",
-    "condition": "ruin",
-    "description": "Castle remains in the Cavan market town of Ballyjamesduff, named after James Duff who received the lands in the 17th century.",
-    "image": "https://img.castlecore.uk/ballyjamesduff-castle.jpg",
-    "rating": 3.2,
-    "reviewCount": 10,
-    "county": "County Cavan",
-    "tags": [
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2199,
-    "gallery": [
-      "https://img.castlecore.uk/ballyjamesduff-castle-2.jpg",
-      "https://img.castlecore.uk/ballyjamesduff-castle-3.jpg",
-      "https://img.castlecore.uk/ballyjamesduff-castle-4.jpg",
-      "https://img.castlecore.uk/ballyjamesduff-castle-5.jpg"
-    ],
-    "history": "Ballyjamesduff in County Cavan has castle remains. The town is named after Captain James Duff, who received lands here during the Cromwellian settlement. The Cavan County Museum in the town holds significant archaeological collections.",
-    "sources": [
-      {
-        "name": "Cavan Heritage",
-        "url": "https://www.thisiscavan.ie/"
       },
       {
         "name": "Heritage Ireland",
@@ -4629,44 +4403,6 @@
       {
         "name": "Donegal Heritage",
         "url": "https://www.govisitdonegal.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Frenchpark Castle",
-    "lat": 53.873,
-    "lng": -8.42,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Roscommon",
-    "tags": [
-      "ruins-romantic",
-      "museum",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "rating": 3.3,
-    "reviewCount": 8,
-    "era": "18th century",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/frenchpark-castle.jpg",
-    "description": "Castle remains near the Roscommon village of Frenchpark, birthplace of Douglas Hyde, first President of Ireland.",
-    "_index": 2473,
-    "gallery": [
-      "https://img.castlecore.uk/frenchpark-castle-2.jpg",
-      "https://img.castlecore.uk/frenchpark-castle-3.jpg",
-      "https://img.castlecore.uk/frenchpark-castle-4.jpg",
-      "https://img.castlecore.uk/frenchpark-castle-5.jpg"
-    ],
-    "history": "Frenchpark in County Roscommon has castle remains and is the birthplace of Douglas Hyde (1860-1949), founder of the Gaelic League and first President of Ireland. The Douglas Hyde Interpretive Centre tells his story.",
-    "sources": [
-      {
-        "name": "Roscommon Heritage",
-        "url": "https://www.roscommon.ie/"
       },
       {
         "name": "Heritage Ireland",

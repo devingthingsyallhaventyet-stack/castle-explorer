@@ -2162,45 +2162,6 @@
     ]
   },
   {
-    "name": "Ballymulcashel Castle",
-    "lat": 52.828,
-    "lng": -8.868,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A ruined tower house in the Clare countryside near Lough Derg, standing quietly amid the rolling farmland of east Clare.",
-    "image": "https://img.castlecore.uk/ballymulcashel-castle.jpg",
-    "rating": 3.1,
-    "reviewCount": 12,
-    "county": "County Clare",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry",
-      "remote"
-    ],
-    "access": "exterior-only",
-    "_index": 1043,
-    "gallery": [
-      "https://img.castlecore.uk/ballymulcashel-castle-2.jpg",
-      "https://img.castlecore.uk/ballymulcashel-castle-3.jpg",
-      "https://img.castlecore.uk/ballymulcashel-castle-4.jpg",
-      "https://img.castlecore.uk/ballymulcashel-castle-5.jpg"
-    ],
-    "history": "Ballymulcashel Castle is a medieval tower house in County Clare near the shores of Lough Derg. Built in the 15th or 16th century, it was one of many such fortified residences in the area controlled by the O'Brien and McNamara clans. The tower retains partial walls and stands in agricultural land.",
-    "sources": [
-      {
-        "name": "Clare Heritage",
-        "url": "https://www.clare.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Caherkinmonwee Castle",
     "lat": 53.008,
     "lng": -9.015,
@@ -2770,44 +2731,6 @@
     ]
   },
   {
-    "name": "Caherlistrane Castle",
-    "lat": 53.485,
-    "lng": -8.795,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A tower house ruin in the Galway village of Caherlistrane, in the fertile plain between Lough Corrib and Tuam.",
-    "image": "https://img.castlecore.uk/caherlistrane-castle.jpg",
-    "rating": 3.1,
-    "reviewCount": 12,
-    "county": "County Galway",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1060,
-    "gallery": [
-      "https://img.castlecore.uk/caherlistrane-castle-2.jpg",
-      "https://img.castlecore.uk/caherlistrane-castle-3.jpg",
-      "https://img.castlecore.uk/caherlistrane-castle-4.jpg",
-      "https://img.castlecore.uk/caherlistrane-castle-5.jpg"
-    ],
-    "history": "Caherlistrane Castle is a medieval tower house in County Galway. The village sits in the fertile agricultural plain between Lough Corrib and Tuam. The castle was built by a local clan family and served as a fortified residence during the turbulent medieval period.",
-    "sources": [
-      {
-        "name": "Galway Heritage",
-        "url": "https://www.galwaytourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Moylough Castle",
     "lat": 53.587,
     "lng": -8.568,
@@ -3288,45 +3211,6 @@
       "https://img.castlecore.uk/ballybrit-castle-5.jpg"
     ],
     "history": "Ballybrit Castle is a medieval tower house on the eastern outskirts of Galway city, near Ballybrit Racecourse, home of the famous Galway Races held each July/August. The castle dates to the medieval period and is one of numerous tower houses that once ringed the medieval city of Galway.",
-    "sources": [
-      {
-        "name": "Galway Heritage",
-        "url": "https://www.galwaytourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Rahasane Castle",
-    "lat": 53.225,
-    "lng": -8.755,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "15th century",
-    "condition": "ruin",
-    "description": "A medieval tower ruin in the south Galway turlough country, surrounded by the seasonally flooding lakes that make this landscape unique in Europe.",
-    "image": "https://img.castlecore.uk/rahasane-castle.jpg",
-    "rating": 3.1,
-    "reviewCount": 11,
-    "county": "County Galway",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry",
-      "remote"
-    ],
-    "access": "exterior-only",
-    "_index": 1075,
-    "gallery": [
-      "https://img.castlecore.uk/rahasane-castle-2.jpg",
-      "https://img.castlecore.uk/rahasane-castle-3.jpg",
-      "https://img.castlecore.uk/rahasane-castle-4.jpg",
-      "https://img.castlecore.uk/rahasane-castle-5.jpg"
-    ],
-    "history": "Rahasane Castle is a medieval tower house near Rahasane in County Galway. The area is notable for its turloughs—seasonal lakes that fill in winter and drain in summer, a phenomenon unique to Ireland's limestone regions. The castle dates to the 15th or 16th century and served as a local stronghold.",
     "sources": [
       {
         "name": "Galway Heritage",
@@ -4076,44 +3960,6 @@
     ]
   },
   {
-    "name": "Collooney Castle",
-    "lat": 54.178,
-    "lng": -8.488,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A modest tower in the Sligo town of Collooney, site of a significant 1798 battle where Franco-Irish forces defeated the British.",
-    "image": "https://img.castlecore.uk/collooney-castle.jpg",
-    "rating": 3.1,
-    "reviewCount": 11,
-    "county": "County Sligo",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1154,
-    "gallery": [
-      "https://img.castlecore.uk/collooney-castle-2.jpg",
-      "https://img.castlecore.uk/collooney-castle-3.jpg",
-      "https://img.castlecore.uk/collooney-castle-4.jpg",
-      "https://img.castlecore.uk/collooney-castle-5.jpg"
-    ],
-    "history": "Collooney Castle is a medieval tower in County Sligo. The town is famous for the 1798 Battle of Collooney, where Bartholomew Teeling's charge during General Humbert's French expedition secured a rebel victory. A monument to Teeling stands in the town. The castle predates these events by centuries.",
-    "sources": [
-      {
-        "name": "Sligo Heritage",
-        "url": "https://www.sligoheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Skreen Castle",
     "lat": 54.228,
     "lng": -8.618,
@@ -4346,45 +4192,6 @@
     ]
   },
   {
-    "name": "Drumshanbo Castle",
-    "lat": 54.048,
-    "lng": -8.038,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "Castle remains in the Leitrim lakeland town of Drumshanbo, gateway to the Shannon-Erne Waterway and the wild Leitrim uplands.",
-    "image": "https://img.castlecore.uk/drumshanbo-castle.jpg",
-    "rating": 3,
-    "reviewCount": 8,
-    "county": "County Leitrim",
-    "tags": [
-      "ruins-romantic",
-      "riverside",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1162,
-    "gallery": [
-      "https://img.castlecore.uk/drumshanbo-castle-2.jpg",
-      "https://img.castlecore.uk/drumshanbo-castle-3.jpg",
-      "https://img.castlecore.uk/drumshanbo-castle-4.jpg",
-      "https://img.castlecore.uk/drumshanbo-castle-5.jpg"
-    ],
-    "history": "Drumshanbo Castle in County Leitrim stands in the town at the southern end of Lough Allen. The castle dates to the medieval period. Drumshanbo is now known as the home of Drumshanbo Gunpowder Irish Gin and sits at the junction of the Shannon-Erne Waterway and Lough Allen.",
-    "sources": [
-      {
-        "name": "Leitrim Heritage",
-        "url": "https://www.leitrimtourism.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Carrick-on-Shannon Castle",
     "lat": 53.948,
     "lng": -8.092,
@@ -4502,45 +4309,6 @@
     ]
   },
   {
-    "name": "Ballinagleragh Castle",
-    "lat": 54.068,
-    "lng": -8.158,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A quiet ruin in the Leitrim lakelands, surrounded by the drumlins and small lakes that give this under-visited county its distinctive character.",
-    "image": "https://img.castlecore.uk/ballinagleragh-castle.jpg",
-    "rating": 3,
-    "reviewCount": 7,
-    "county": "County Leitrim",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry",
-      "remote"
-    ],
-    "access": "exterior-only",
-    "_index": 1166,
-    "gallery": [
-      "https://img.castlecore.uk/ballinagleragh-castle-2.jpg",
-      "https://img.castlecore.uk/ballinagleragh-castle-3.jpg",
-      "https://img.castlecore.uk/ballinagleragh-castle-4.jpg",
-      "https://img.castlecore.uk/ballinagleragh-castle-5.jpg"
-    ],
-    "history": "Ballinagleragh Castle is a medieval fortification in County Leitrim. The castle dates to the medieval period and stands in the drumlin landscape typical of this part of Ireland. Leitrim's network of small lakes and hills creates a distinctive and peaceful rural landscape.",
-    "sources": [
-      {
-        "name": "Leitrim Heritage",
-        "url": "https://www.leitrimtourism.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Jamestown Castle",
     "lat": 53.925,
     "lng": -8.068,
@@ -4643,45 +4411,6 @@
       "https://img.castlecore.uk/mohill-castle-5.jpg"
     ],
     "history": "Mohill Castle in County Leitrim stands in the county's second-largest town. The castle dates to the medieval period and was associated with various local families. Mohill is notable as the home of Turlough O'Carolan (1670-1738), the legendary blind Irish harpist and composer, Ireland's national composer.",
-    "sources": [
-      {
-        "name": "Leitrim Heritage",
-        "url": "https://www.leitrimtourism.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Drumlease Castle",
-    "lat": 54.172,
-    "lng": -8.282,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A quiet ruin in the north Leitrim landscape, amid the lakes and mountains that inspired some of Ireland's greatest literary works.",
-    "image": "https://img.castlecore.uk/drumlease-castle.jpg",
-    "rating": 3.1,
-    "reviewCount": 9,
-    "county": "County Leitrim",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry",
-      "remote"
-    ],
-    "access": "exterior-only",
-    "_index": 1170,
-    "gallery": [
-      "https://img.castlecore.uk/drumlease-castle-2.jpg",
-      "https://img.castlecore.uk/drumlease-castle-3.jpg",
-      "https://img.castlecore.uk/drumlease-castle-4.jpg",
-      "https://img.castlecore.uk/drumlease-castle-5.jpg"
-    ],
-    "history": "Drumlease Castle is a medieval fortification in north County Leitrim. The area's lake-studded landscape inspired W.B. Yeats' famous poem 'The Lake Isle of Innisfree.' The castle dates to the medieval period and was part of the O'Rourke territory of Breifne.",
     "sources": [
       {
         "name": "Leitrim Heritage",
@@ -6416,45 +6145,6 @@
     ]
   },
   {
-    "name": "Gortmore Castle",
-    "lat": 53.39,
-    "lng": -8.64,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A tower house in the Mayo countryside, one of many scattered medieval fortifications in this wild western landscape.",
-    "image": "https://img.castlecore.uk/gortmore-castle.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Galway",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "remote",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1811,
-    "gallery": [
-      "https://img.castlecore.uk/gortmore-castle-2.jpg",
-      "https://img.castlecore.uk/gortmore-castle-3.jpg",
-      "https://img.castlecore.uk/gortmore-castle-4.jpg",
-      "https://img.castlecore.uk/gortmore-castle-5.jpg"
-    ],
-    "history": "Gortmore Castle is a medieval tower house in County Mayo. The castle dates to the medieval period and was one of numerous fortified residences in the area.",
-    "sources": [
-      {
-        "name": "Mayo Heritage",
-        "url": "https://www.mayo.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Innisfree Island",
     "lat": 54.233,
     "lng": -8.382,
@@ -6534,46 +6224,6 @@
     ]
   },
   {
-    "name": "Inishmaan Castle",
-    "lat": 53.082,
-    "lng": -9.6,
-    "country": "Ireland",
-    "type": "fort",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A ruined tower house on Inis Meain, the quietest Aran Island, where J.M. Synge found inspiration for his masterpiece 'The Playboy of the Western World.'",
-    "image": "https://img.castlecore.uk/inishmaan-castle.jpg",
-    "rating": 4.3,
-    "reviewCount": 150,
-    "county": "County Galway",
-    "tags": [
-      "island",
-      "ruins-romantic",
-      "medieval",
-      "remote",
-      "atmospheric"
-    ],
-    "access": "free",
-    "_index": 1822,
-    "gallery": [
-      "https://img.castlecore.uk/inishmaan-castle-2.jpg",
-      "https://img.castlecore.uk/inishmaan-castle-3.jpg",
-      "https://img.castlecore.uk/inishmaan-castle-4.jpg",
-      "https://img.castlecore.uk/inishmaan-castle-5.jpg"
-    ],
-    "history": "Inishmaan Castle on Inis Meain (the middle Aran Island) is a medieval tower house. Inis Meain was the island where playwright J.M. Synge spent summers absorbing the Irish language and island culture that inspired his great plays. The island remains the quietest and most traditional of the three Aran Islands.",
-    "sources": [
-      {
-        "name": "Aran Islands",
-        "url": "https://www.aranislands.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Dun Eochla",
     "lat": 53.128,
     "lng": -9.72,
@@ -6607,45 +6257,6 @@
       {
         "name": "Aran Islands",
         "url": "https://www.aranislands.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Derrymacloughna Castle",
-    "lat": 52.979,
-    "lng": -8.45,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A tower house on the shores of Lough Derg in County Clare, overlooking one of the Shannon's largest and most beautiful lakes.",
-    "image": "https://img.castlecore.uk/derrymacloughna-castle-2.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Clare",
-    "tags": [
-      "ruins-romantic",
-      "riverside",
-      "medieval",
-      "photogenic",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1825,
-    "gallery": [
-      "https://img.castlecore.uk/derrymacloughna-castle-3.jpg",
-      "https://img.castlecore.uk/derrymacloughna-castle-4.jpg",
-      "https://img.castlecore.uk/derrymacloughna-castle-5.jpg"
-    ],
-    "history": "Derrymacloughna Castle is a medieval tower house on the shores of Lough Derg, County Clare. The castle dates to the medieval period and commands views over the lake. Lough Derg, the third-largest lake in Ireland, is a popular sailing and boating destination.",
-    "sources": [
-      {
-        "name": "Clare Heritage",
-        "url": "https://www.clare.ie/"
       },
       {
         "name": "Heritage Ireland",
@@ -6732,48 +6343,6 @@
     ]
   },
   {
-    "name": "Dunlicky Castle",
-    "lat": 52.569,
-    "lng": -9.731,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "A dramatic cliff-edge castle ruin on the Loop Head Peninsula, overlooking the wild Atlantic at the very tip of County Clare.",
-    "image": "https://img.castlecore.uk/dunlicky-castle.jpg",
-    "rating": 3.6,
-    "reviewCount": 25,
-    "county": "County Clare",
-    "tags": [
-      "coastal",
-      "cliffside",
-      "ruins-romantic",
-      "remote",
-      "atmospheric",
-      "photogenic",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 1830,
-    "gallery": [
-      "https://img.castlecore.uk/dunlicky-castle-2.jpg",
-      "https://img.castlecore.uk/dunlicky-castle-3.jpg",
-      "https://img.castlecore.uk/dunlicky-castle-4.jpg",
-      "https://img.castlecore.uk/dunlicky-castle-5.jpg"
-    ],
-    "history": "Dunlicky Castle on the Loop Head Peninsula, County Clare, stands dramatically on sea cliffs overlooking the Atlantic. The castle dates to the medieval period and commands a wild and remote coastal position at the southwestern extremity of Clare. The Loop Head Peninsula is one of Ireland's finest coastal driving routes.",
-    "sources": [
-      {
-        "name": "Clare Heritage",
-        "url": "https://www.clare.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Tynagh Castle",
     "lat": 53.128,
     "lng": -8.414,
@@ -6800,44 +6369,6 @@
       "https://img.castlecore.uk/tynagh-castle-5.jpg"
     ],
     "history": "Tynagh Castle is a medieval tower house in east County Galway. The area is notable for the Tynagh Mine, which was a significant lead-zinc mine in the 20th century. The castle dates to the medieval period and stands in the agricultural landscape of east Galway.",
-    "sources": [
-      {
-        "name": "Galway Heritage",
-        "url": "https://www.galwaytourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Ardrahan Castle",
-    "lat": 53.147,
-    "lng": -8.809,
-    "country": "Ireland",
-    "type": "tower house",
-    "era": "Medieval",
-    "condition": "ruin",
-    "description": "Castle remains in the south Galway village of Ardrahan, near the celebrated literary landscape of Coole Park and Thoor Ballylee.",
-    "image": "https://img.castlecore.uk/ardrahan-castle.jpg",
-    "rating": 3.4,
-    "reviewCount": 15,
-    "county": "County Galway",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "_index": 2119,
-    "gallery": [
-      "https://img.castlecore.uk/ardrahan-castle-2.jpg",
-      "https://img.castlecore.uk/ardrahan-castle-3.jpg",
-      "https://img.castlecore.uk/ardrahan-castle-4.jpg",
-      "https://img.castlecore.uk/ardrahan-castle-5.jpg"
-    ],
-    "history": "Ardrahan Castle in County Galway stands near the village of Ardrahan in south Galway. The area is close to Coole Park (Lady Gregory's home) and Thoor Ballylee (Yeats' tower), making it part of the literary landscape of the Irish Revival. The castle dates to the medieval period.",
     "sources": [
       {
         "name": "Galway Heritage",
@@ -7121,44 +6652,6 @@
       {
         "name": "Leitrim Heritage",
         "url": "https://www.leitrimtourism.com/"
-      }
-    ]
-  },
-  {
-    "name": "Cloone Round Tower",
-    "lat": 53.9,
-    "lng": -7.85,
-    "country": "Ireland",
-    "type": "abbey",
-    "era": "Early Medieval",
-    "condition": "ruin",
-    "description": "A round tower stump in the quiet Leitrim village of Cloone, marking an early Christian monastic foundation.",
-    "image": "https://img.castlecore.uk/cloone-round-tower.jpg",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "county": "County Leitrim",
-    "tags": [
-      "celtic",
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "access": "free",
-    "_index": 2197,
-    "gallery": [
-      "https://img.castlecore.uk/cloone-round-tower-2.jpg",
-      "https://img.castlecore.uk/cloone-round-tower-3.jpg",
-      "https://img.castlecore.uk/cloone-round-tower-4.jpg",
-      "https://img.castlecore.uk/cloone-round-tower-5.jpg"
-    ],
-    "history": "The Round Tower at Cloone, County Leitrim, is the stump of an early Christian round tower marking a monastic site. The quiet village preserves this heritage in the gentle Leitrim landscape.",
-    "sources": [
-      {
-        "name": "Leitrim Heritage",
-        "url": "https://www.leitrimtourism.com/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
       }
     ]
   },

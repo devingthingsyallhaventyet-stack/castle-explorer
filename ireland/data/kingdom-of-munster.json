@@ -4965,45 +4965,6 @@
     ]
   },
   {
-    "name": "Carriggundel Castle",
-    "lat": 52.616,
-    "lng": -8.65,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Limerick",
-    "tags": [
-      "ruins-romantic",
-      "riverside",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "rating": 3.3,
-    "reviewCount": 10,
-    "era": "Medieval",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/carriggundel-castle.jpg",
-    "description": "A medieval castle near the Shannon in County Limerick, guarding a crossing of Ireland's longest river.",
-    "_index": 2429,
-    "gallery": [
-      "https://img.castlecore.uk/carriggundel-castle-2.jpg",
-      "https://img.castlecore.uk/carriggundel-castle-3.jpg",
-      "https://img.castlecore.uk/carriggundel-castle-4.jpg",
-      "https://img.castlecore.uk/carriggundel-castle-5.jpg"
-    ],
-    "history": "Carriggundel Castle in County Limerick is a medieval fortification near the River Shannon.",
-    "sources": [
-      {
-        "name": "Limerick Heritage",
-        "url": "https://www.limerick.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Abington Castle",
     "lat": 52.607,
     "lng": -8.379,
@@ -5265,43 +5226,6 @@
       "https://img.castlecore.uk/rockbarton-castle-5.jpg"
     ],
     "history": "Rockbarton Castle is a medieval tower house near Limerick city.",
-    "sources": [
-      {
-        "name": "Limerick Heritage",
-        "url": "https://www.limerick.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
-    "name": "Caherconlish Castle",
-    "lat": 52.583,
-    "lng": -8.499,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Limerick",
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "rating": 3.3,
-    "reviewCount": 8,
-    "era": "Medieval",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/caherconlish-castle-2.jpg",
-    "description": "A medieval tower in the east Limerick village of Caherconlish.",
-    "_index": 2486,
-    "gallery": [
-      "https://img.castlecore.uk/caherconlish-castle-3.jpg",
-      "https://img.castlecore.uk/caherconlish-castle-4.jpg",
-      "https://img.castlecore.uk/caherconlish-castle-5.jpg"
-    ],
-    "history": "Caherconlish Castle is a medieval tower house in County Limerick.",
     "sources": [
       {
         "name": "Limerick Heritage",
