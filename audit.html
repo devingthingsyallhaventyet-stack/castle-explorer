@@ -19,6 +19,15 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 .view-toggle button{background:var(--bg);border:1px solid var(--border);color:var(--muted);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:13px}
 .view-toggle button.active{color:var(--gold);border-color:var(--gold)}
 
+/* Main Tabs */
+.main-tabs{display:flex;gap:0;margin-right:12px}
+.main-tab{padding:6px 18px;background:var(--bg);border:1px solid var(--border);color:var(--muted);cursor:pointer;font-size:14px;font-weight:600;transition:.15s}
+.main-tab:first-child{border-radius:6px 0 0 6px}
+.main-tab:last-child{border-radius:0 6px 6px 0}
+.main-tab.active{background:var(--gold);color:#0d1117;border-color:var(--gold)}
+.main-tab .tab-badge{font-size:11px;background:rgba(0,0,0,.2);padding:1px 6px;border-radius:8px;margin-left:4px}
+.main-tab.active .tab-badge{background:rgba(0,0,0,.3)}
+
 /* Progress */
 .progress-bar{height:4px;display:flex;width:100%}
 .progress-bar .seg-approved{background:var(--green)}
@@ -120,10 +129,15 @@ body{padding-bottom:50px}
 
 <div class="topbar">
   <strong style="color:var(--gold);font-size:16px">🏰 CastleCore Audit</strong>
+  <div class="main-tabs">
+    <div class="main-tab active" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
+    <div class="main-tab" id="tabFlagged" onclick="switchMainTab('flagged')">⚠️ Flagged <span class="tab-badge" id="tabFlaggedCount">0</span></div>
+    <div class="main-tab" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
+  </div>
   <input type="text" id="searchBox" placeholder="Search castles...">
   <select id="countryFilter"><option value="">All Countries</option></select>
   <select id="imgSourceFilter"><option value="">All Sources</option></select>
-  <select id="statusFilter">
+  <select id="statusFilter" style="display:none">
     <option value="">All</option>
     <option value="unreviewed" selected>Unreviewed</option>
     <option value="approved">Approved</option>
@@ -214,8 +228,30 @@ let filtered = [];
 let currentIdx = 0;
 let reviewState = {};
 let currentView = 'card';
+let currentMainTab = 'review';
 let flagPanelOpen = false;
 const wikiCache = new Map();
+
+function switchMainTab(tab) {
+  currentMainTab = tab;
+  document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tab === 'review' ? 'tabReview' : tab === 'flagged' ? 'tabFlagged' : 'tabApproved').classList.add('active');
+  // Switch to table view automatically for flagged/approved tabs
+  if (tab === 'flagged' || tab === 'approved') {
+    setView('table');
+  } else {
+    setView('card');
+  }
+  applyFilters();
+}
+
+function updateTabCounts() {
+  let ap = 0, fl = 0, un = 0;
+  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') ap++; else if (s === 'flagged') fl++; else un++; });
+  document.getElementById('tabReviewCount').textContent = un;
+  document.getElementById('tabFlaggedCount').textContent = fl;
+  document.getElementById('tabApprovedCount').textContent = ap;
+}
 
 // Load review state
 try { reviewState = JSON.parse(localStorage.getItem('castle-review-state') || '{}'); } catch(e) { reviewState = {}; }
@@ -244,7 +280,9 @@ function applyFilters() {
   const q = document.getElementById('searchBox').value.toLowerCase();
   const country = document.getElementById('countryFilter').value;
   const imgSrc = document.getElementById('imgSourceFilter').value;
-  const status = document.getElementById('statusFilter').value;
+  // Use main tab for status filtering
+  const statusMap = { review: 'unreviewed', flagged: 'flagged', approved: 'approved' };
+  const status = statusMap[currentMainTab] || '';
   filtered = allData.filter(d => {
     if (q && !d.name.toLowerCase().includes(q) && !(d.county||'').toLowerCase().includes(q)) return false;
     if (country && d.country !== country) return false;
@@ -278,6 +316,7 @@ function updateProgress() {
     `<span>${un} unreviewed</span>` +
     `<span style="color:var(--muted)">${total} total</span>` +
     `<span style="color:var(--gold);font-weight:600">${((ap+fl)/total*100).toFixed(1)}% done</span>`;
+  updateTabCounts();
 }
 
 // Card rendering
@@ -477,23 +516,35 @@ document.addEventListener('keydown', e => {
 function renderTable() {
   const el = document.getElementById('tableView');
   if (!filtered.length) { el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">No listings match.</p>'; return; }
+  const isFlaggedTab = currentMainTab === 'flagged';
   let rows = filtered.map((d,i) => {
-    const st = reviewState[getKey(d)];
-    const statusHtml = st
+    const k = getKey(d);
+    const st = reviewState[k] || {};
+    const fi = flaggedImages[k];
+    const ff = fieldFlags[k];
+    const statusHtml = st.status
       ? `<span class="tbl-status" style="background:${st.status==='approved'?'var(--green)':'var(--red)'};color:#fff">${st.status}</span>`
       : '<span class="tbl-status" style="background:var(--border);color:var(--muted)">unreviewed</span>';
-    return `<tr style="cursor:pointer" onclick="currentIdx=${i};setView('card')">
+    const reasonsHtml = st.reasons ? st.reasons.map(r => `<span style="background:#1a0a0a;border:1px solid var(--red);color:var(--red);padding:1px 5px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">${r}</span>`).join(' ') : '';
+    const noteHtml = st.note ? `<div style="font-size:11px;color:var(--muted);margin-top:2px;font-style:italic">${esc(st.note)}</div>` : '';
+    const imgFlags = fi && fi.size ? `<span style="color:var(--red);font-size:11px">📷 ${fi.size} img flagged</span>` : '';
+    const fieldFlagHtml = ff ? Object.keys(ff).filter(f=>ff[f]).map(f => `<span style="color:var(--red);font-size:11px">⚑ ${f}</span>`).join(' ') : '';
+    
+    return `<tr style="cursor:pointer" onclick="switchMainTab('review');currentIdx=${allData.indexOf(d)};filtered=allData.filter(x=>getStatus(x)==='flagged');currentIdx=${i};setView('card')">
       <td>${i+1}</td>
       <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
       <td><strong>${esc(d.name)}</strong></td>
       <td>${esc(d.country)}</td>
+      <td>${esc(d.region||'').replace(/-/g,' ')}</td>
       <td>${esc(d.county||'')}</td>
       <td>${esc(d.type||'')}</td>
-      <td>${statusHtml}</td>
-      <td style="font-size:11px;color:var(--muted)">${st&&st.reasons?st.reasons.join(', '):''}</td>
+      ${isFlaggedTab ? `<td>${reasonsHtml}${noteHtml}</td><td>${imgFlags} ${fieldFlagHtml}</td>` : `<td>${statusHtml}</td><td style="font-size:11px;color:var(--muted)">${st.reasons?st.reasons.join(', '):''}</td>`}
     </tr>`;
   }).join('');
-  el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>County</th><th>Type</th><th>Status</th><th>Flags</th></tr></thead><tbody>${rows}</tbody></table>`;
+  const headers = isFlaggedTab 
+    ? '<th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Flag Reasons</th><th>Other Flags</th>'
+    : '<th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Status</th><th>Flags</th>';
+  el.innerHTML = `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 function setView(v) {
