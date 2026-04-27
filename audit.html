@@ -236,12 +236,14 @@ function switchMainTab(tab) {
   currentMainTab = tab;
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
   document.getElementById(tab === 'review' ? 'tabReview' : tab === 'flagged' ? 'tabFlagged' : 'tabApproved').classList.add('active');
-  // Switch to table view automatically for flagged/approved tabs
-  if (tab === 'flagged' || tab === 'approved') {
-    setView('table');
-  } else {
-    setView('card');
-  }
+  // Set view mode (but don't render yet — applyFilters will handle it)
+  const wantView = (tab === 'flagged' || tab === 'approved') ? 'table' : 'card';
+  currentView = wantView;
+  document.getElementById('cardView').style.display = wantView === 'card' ? '' : 'none';
+  document.getElementById('tableView').style.display = wantView === 'table' ? '' : 'none';
+  document.getElementById('actionBar').style.display = wantView === 'card' ? '' : 'none';
+  document.getElementById('btnCardView').classList.toggle('active', wantView === 'card');
+  document.getElementById('btnTableView').classList.toggle('active', wantView === 'table');
   applyFilters();
 }
 
