@@ -3937,45 +3937,6 @@
     ]
   },
   {
-    "name": "Lough Ree Castle",
-    "lat": 53.539,
-    "lng": -7.959,
-    "country": "Ireland",
-    "type": "castle",
-    "county": "County Westmeath",
-    "tags": [
-      "ruins-romantic",
-      "riverside",
-      "medieval",
-      "free-entry"
-    ],
-    "access": "exterior-only",
-    "rating": 3.3,
-    "reviewCount": 8,
-    "era": "Medieval",
-    "condition": "ruin",
-    "image": "https://img.castlecore.uk/lough-ree-castle.jpg",
-    "description": "A castle on or near the shores of Lough Ree on the Shannon, one of Ireland's great midland lakes.",
-    "_index": 2491,
-    "gallery": [
-      "https://img.castlecore.uk/lough-ree-castle-2.jpg",
-      "https://img.castlecore.uk/lough-ree-castle-3.jpg",
-      "https://img.castlecore.uk/lough-ree-castle-4.jpg",
-      "https://img.castlecore.uk/lough-ree-castle-5.jpg"
-    ],
-    "history": "Lough Ree Castle is a medieval fortification near Lough Ree on the Shannon. The lake is the second-largest on the Shannon and an important boating destination.",
-    "sources": [
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ]
-  },
-  {
     "name": "Ballyloughloe Castle",
     "lat": 53.438,
     "lng": -7.569,
