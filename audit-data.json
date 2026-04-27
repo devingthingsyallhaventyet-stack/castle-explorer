@@ -4050,7 +4050,11 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
-    "reviewStatus": "approved"
+    "reviewStatus": "flagged",
+    "reviewReasons": [
+      "no-image"
+    ],
+    "reviewNote": "No Wikipedia or Google Places images available"
   },
   {
     "name": "Balgonie Castle",
@@ -9580,7 +9584,11 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones",
-    "reviewStatus": "approved"
+    "reviewStatus": "flagged",
+    "reviewReasons": [
+      "no-image"
+    ],
+    "reviewNote": "No Wikipedia or Google Places images available"
   },
   {
     "name": "Ethie Castle",
@@ -11370,7 +11378,11 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Ayr_Castle",
-    "reviewStatus": "approved"
+    "reviewStatus": "flagged",
+    "reviewReasons": [
+      "no-image"
+    ],
+    "reviewNote": "No Wikipedia or Google Places images available"
   },
   {
     "name": "Sundrum Castle",

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CastleCore — Image Review Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--gold:#c9a44a;--text:#e6edf3;--muted:#8b949e;--red:#f85149;--green:#3fb950;--blue:#58a6ff}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;min-height:100vh}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header bar */
+.top-bar{background:var(--card);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100}
+.top-bar h1{font-size:18px;color:var(--gold);white-space:nowrap}
+.top-bar input,.top-bar select{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:13px}
+.top-bar input:focus,.top-bar select:focus{outline:none;border-color:var(--gold)}
+.top-bar .search{width:200px}
+.top-bar .jump{width:70px}
+.progress-wrap{flex:1;min-width:120px;max-width:300px;display:flex;align-items:center;gap:8px}
+.progress-bar{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.progress-bar .fill{height:100%;background:var(--green);transition:width .3s}
+.progress-text{font-size:12px;color:var(--muted);white-space:nowrap}
+.btn{padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;font-size:13px;white-space:nowrap}
+.btn:hover{border-color:var(--gold);color:var(--gold)}
+.btn-gold{background:var(--gold);color:#000;border-color:var(--gold);font-weight:600}
+.btn-gold:hover{background:#ddb84e}
+
+/* Main card */
+.card{max-width:1400px;margin:20px auto;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.castle-name{font-size:28px;font-weight:700;color:var(--gold)}
+.castle-meta{color:var(--muted);font-size:14px;margin-top:4px}
+.counter{font-size:22px;color:var(--muted);font-weight:600;white-space:nowrap}
+.counter span{color:var(--gold)}
+
+/* Image grid */
+.image-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:20px}
+.img-card{position:relative;border-radius:8px;overflow:hidden;cursor:pointer;border:3px solid var(--border);transition:all .2s;background:#000}
+.img-card:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.5)}
+.img-card.main{border-color:var(--gold);box-shadow:0 0 12px rgba(201,164,74,.4)}
+.img-card.rejected{border-color:var(--red);opacity:.35}
+.img-card.rejected:hover{opacity:.6}
+.img-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.img-card .badge{position:absolute;top:8px;left:8px;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;background:rgba(0,0,0,.7);backdrop-filter:blur(4px)}
+.img-card .badge.wiki{color:#58a6ff}
+.img-card .badge.google{color:#3fb950}
+.img-card .star{position:absolute;top:8px;right:8px;font-size:24px;display:none;filter:drop-shadow(0 0 4px rgba(0,0,0,.8))}
+.img-card.main .star{display:block}
+.img-card .reject-x{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font-size:72px;color:var(--red);font-weight:900;pointer-events:none;text-shadow:0 0 20px rgba(0,0,0,.8)}
+.img-card.rejected .reject-x{display:flex}
+.img-attribution{padding:6px 10px;background:rgba(0,0,0,.6);font-size:11px;color:var(--muted);position:absolute;bottom:0;left:0;right:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Action bar */
+.action-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--border)}
+.action-bar .stats{font-size:14px;color:var(--muted)}
+.action-bar .stats .red{color:var(--red);font-weight:600}
+.nav-buttons{display:flex;gap:8px}
+
+/* Help box */
+.help-box{position:fixed;bottom:16px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:12px;color:var(--muted);line-height:1.6;z-index:50;max-width:260px}
+.help-box kbd{background:var(--bg);border:1px solid var(--border);border-radius:3px;padding:1px 5px;font-size:11px;color:var(--text)}
+
+/* Loading */
+.loading{text-align:center;padding:80px;font-size:18px;color:var(--muted)}
+.loading .spinner{display:inline-block;width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Empty state */
+.empty{text-align:center;padding:60px;color:var(--muted);font-size:16px}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <h1>🏰 Image Review</h1>
+  <input class="search" type="text" placeholder="Search castles..." id="search">
+  <select id="countryFilter"><option value="">All Countries</option></select>
+  <select id="photoFilter">
+    <option value="all">All</option>
+    <option value="google">Has Google Photos</option>
+    <option value="wikionly">Wikipedia Only</option>
+  </select>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="fill" id="progressFill"></div></div>
+    <span class="progress-text" id="progressText">0 / 0</span>
+  </div>
+  <input class="jump" type="number" placeholder="Go #" id="jumpInput" min="1">
+  <button class="btn btn-gold" id="saveBtn">💾 Save</button>
+</div>
+
+<div id="cardArea"><div class="loading"><div class="spinner"></div><br>Loading data…</div></div>
+
+<div class="help-box">
+  <strong style="color:var(--text)">⌨️ Shortcuts</strong><br>
+  <kbd>→</kbd> / <kbd>S</kbd> Next &nbsp; <kbd>←</kbd> Prev<br>
+  <strong>Click</strong> = reject/unreject<br>
+  <strong>Dbl-click</strong> / <strong>Right-click</strong> = set main
+</div>
+
+<script>
+const LS_KEY = 'castle-image-review';
+let allData = [], stagingData = {}, filtered = [], currentIdx = 0, reviewState = {};
+
+// Fuzzy match helper
+function normalize(s) { return s.toLowerCase().replace(/[''`\-]/g, '').replace(/\s+/g, ' ').trim(); }
+function fuzzyMatch(a, b) {
+  const na = normalize(a), nb = normalize(b);
+  if (na === nb) return true;
+  if (na.includes(nb) || nb.includes(na)) return true;
+  // Check if one starts with the other
+  const shorter = na.length < nb.length ? na : nb;
+  const longer = na.length < nb.length ? nb : na;
+  if (longer.startsWith(shorter)) return true;
+  return false;
+}
+
+// Build name->staging lookup
+let stagingByName = {};
+
+async function init() {
+  const [dataRes, stagingRes] = await Promise.all([
+    fetch('audit-data.json').then(r => r.json()),
+    fetch('google-images-staging.json').then(r => r.json())
+  ]);
+
+  allData = dataRes.filter(d => d.reviewStatus === 'approved');
+  stagingData = stagingRes;
+
+  // Build lookup by normalized name
+  for (const [idx, entry] of Object.entries(stagingData)) {
+    const key = normalize(entry.placeName);
+    if (!stagingByName[key]) stagingByName[key] = [];
+    stagingByName[key].push(entry);
+  }
+
+  // Load saved state
+  try { reviewState = JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch(e) { reviewState = {}; }
+
+  // Populate country filter
+  const countries = [...new Set(allData.map(d => d.country))].sort();
+  const sel = document.getElementById('countryFilter');
+  countries.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c.charAt(0).toUpperCase() + c.slice(1); sel.appendChild(o); });
+
+  applyFilters();
+  render();
+}
+
+function getGooglePhotos(entry) {
+  const key = normalize(entry.name);
+  let match = stagingByName[key];
+  if (!match) {
+    // Try fuzzy
+    for (const [k, v] of Object.entries(stagingByName)) {
+      if (fuzzyMatch(k, key)) { match = v; break; }
+    }
+  }
+  if (!match) return [];
+  return match.flatMap(m => m.photos || []);
+}
+
+function getState(entryName) {
+  return reviewState[entryName] || { mainImage: null, mainSource: null, rejectedImages: [], reviewed: false };
+}
+
+function setState(entryName, state) {
+  reviewState[entryName] = state;
+  localStorage.setItem(LS_KEY, JSON.stringify(reviewState));
+}
+
+function applyFilters() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const country = document.getElementById('countryFilter').value;
+  const photo = document.getElementById('photoFilter').value;
+
+  filtered = allData.filter(d => {
+    if (search && !d.name.toLowerCase().includes(search)) return false;
+    if (country && d.country !== country) return false;
+    if (photo === 'google' && getGooglePhotos(d).length === 0) return false;
+    if (photo === 'wikionly' && getGooglePhotos(d).length > 0) return false;
+    return true;
+  });
+
+  if (currentIdx >= filtered.length) currentIdx = Math.max(0, filtered.length - 1);
+  updateProgress();
+}
+
+function updateProgress() {
+  const reviewed = filtered.filter(d => (reviewState[d.name] || {}).reviewed).length;
+  const total = filtered.length;
+  document.getElementById('progressFill').style.width = total ? (reviewed / total * 100) + '%' : '0%';
+  document.getElementById('progressText').textContent = `${reviewed} / ${total} reviewed`;
+}
+
+function render() {
+  const area = document.getElementById('cardArea');
+  if (!filtered.length) { area.innerHTML = '<div class="empty">No castles match filters</div>'; return; }
+
+  const entry = filtered[currentIdx];
+  const gPhotos = getGooglePhotos(entry);
+  const state = getState(entry.name);
+
+  // Build images array: [{url, source, label, attribution}]
+  const images = [];
+  if (entry.image) {
+    images.push({ url: entry.image, source: 'wikipedia', label: '📖 Wikipedia', attribution: entry.imageAttribution || 'Wikipedia' });
+  }
+  gPhotos.forEach((p, i) => {
+    images.push({ url: p.googlePhotoUri, source: 'google', label: '📍 Google', attribution: p.attribution || p.googleAttribution || 'Google Maps' });
+  });
+
+  const rejected = state.rejectedImages || [];
+  const mainImg = state.mainImage || (entry.image || null);
+
+  area.innerHTML = `
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="castle-name">${entry.name}</div>
+          <div class="castle-meta">${capitalize(entry.country)} · ${entry.region || ''} ${entry.county ? '· ' + entry.county : ''} · ${entry.type || ''}</div>
+        </div>
+        <div class="counter"><span>${currentIdx + 1}</span> / ${filtered.length}</div>
+      </div>
+      <div class="image-grid" id="imageGrid">
+        ${images.map((img, i) => {
+          const isRejected = rejected.includes(img.url);
+          const isMain = img.url === mainImg;
+          const cls = (isMain ? ' main' : '') + (isRejected ? ' rejected' : '');
+          return `<div class="img-card${cls}" data-url="${esc(img.url)}" data-source="${img.source}" data-idx="${i}">
+            <img src="${esc(img.url)}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23161b22%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%238b949e%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22>Image unavailable</text></svg>'">
+            <span class="badge ${img.source === 'wikipedia' ? 'wiki' : 'google'}">${img.label}</span>
+            <span class="star">⭐</span>
+            <div class="reject-x">✕</div>
+            <div class="img-attribution" title="${esc(img.attribution)}">${esc(img.attribution)}</div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div class="action-bar">
+        <div class="nav-buttons">
+          <button class="btn" onclick="prev()">← Prev</button>
+          <button class="btn btn-gold" onclick="next()">Skip →</button>
+        </div>
+        <div class="stats">${rejected.length ? `<span class="red">${rejected.length} rejected</span> · ` : ''}${images.length} image${images.length !== 1 ? 's' : ''}</div>
+      </div>
+    </div>`;
+
+  // Attach click handlers
+  document.querySelectorAll('.img-card').forEach(card => {
+    card.addEventListener('click', e => {
+      e.preventDefault();
+      toggleReject(entry.name, card.dataset.url, images);
+    });
+    card.addEventListener('dblclick', e => {
+      e.preventDefault();
+      setMain(entry.name, card.dataset.url, card.dataset.source, images);
+    });
+    card.addEventListener('contextmenu', e => {
+      e.preventDefault();
+      setMain(entry.name, card.dataset.url, card.dataset.source, images);
+    });
+  });
+}
+
+function toggleReject(name, url, images) {
+  const state = getState(name);
+  const rej = state.rejectedImages || [];
+  const idx = rej.indexOf(url);
+  if (idx >= 0) rej.splice(idx, 1); else rej.push(url);
+  // If rejecting the main image, clear main
+  if (rej.includes(state.mainImage)) { state.mainImage = null; state.mainSource = null; }
+  state.rejectedImages = rej;
+  setState(name, state);
+  render();
+}
+
+function setMain(name, url, source, images) {
+  const state = getState(name);
+  // If it's rejected, unreject first
+  const rej = state.rejectedImages || [];
+  const idx = rej.indexOf(url);
+  if (idx >= 0) rej.splice(idx, 1);
+  state.rejectedImages = rej;
+  state.mainImage = url;
+  state.mainSource = source;
+  setState(name, state);
+  render();
+}
+
+function next() {
+  // Mark current as reviewed
+  if (filtered.length) {
+    const state = getState(filtered[currentIdx].name);
+    state.reviewed = true;
+    setState(filtered[currentIdx].name, state);
+  }
+  if (currentIdx < filtered.length - 1) currentIdx++;
+  updateProgress();
+  render();
+  window.scrollTo(0, 0);
+}
+
+function prev() {
+  if (currentIdx > 0) currentIdx--;
+  render();
+  window.scrollTo(0, 0);
+}
+
+function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
+function esc(s) { return (s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+  if (e.key === 'ArrowRight' || e.key === 's' || e.key === 'S') { next(); e.preventDefault(); }
+  if (e.key === 'ArrowLeft') { prev(); e.preventDefault(); }
+});
+
+// Filter listeners
+document.getElementById('search').addEventListener('input', () => { applyFilters(); render(); });
+document.getElementById('countryFilter').addEventListener('change', () => { applyFilters(); render(); });
+document.getElementById('photoFilter').addEventListener('change', () => { applyFilters(); render(); });
+document.getElementById('jumpInput').addEventListener('change', e => {
+  const v = parseInt(e.target.value);
+  if (v >= 1 && v <= filtered.length) { currentIdx = v - 1; render(); }
+  e.target.value = '';
+});
+
+// Save button — download updated audit-data.json
+document.getElementById('saveBtn').addEventListener('click', () => {
+  // Merge review state into allData (full set, not just filtered)
+  const output = allData.map(d => {
+    const state = reviewState[d.name];
+    if (state) {
+      return { ...d, imageReview: {
+        mainImage: state.mainImage || d.image,
+        mainSource: state.mainSource || 'wikipedia',
+        rejectedImages: state.rejectedImages || [],
+        reviewed: !!state.reviewed
+      }};
+    }
+    return d;
+  });
+  const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'audit-data-reviewed.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+init();
+</script>
+</body>
+</html>
