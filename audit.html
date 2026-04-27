@@ -210,7 +210,7 @@ body{padding-bottom:50px}
     <button onclick="exportCSV('all')">📥 Export All</button>
     <button onclick="exportCSV('flagged')" style="background:var(--red);color:#fff">⚠️ Export Flagged</button>
     <button onclick="copyForClawz()">🦞 Copy Flagged for Clawz</button>
-    <button onclick="saveProgressToFile()" style="background:var(--green);color:#fff">💾 Save Progress</button>
+    <button onclick="copyDecisionsForClawz()" style="background:var(--green);color:#fff">📋 Copy for Clawz</button>
   </div>
 </div>
 
@@ -728,45 +728,33 @@ function copyForClawz() {
   navigator.clipboard.writeText(text).then(() => alert(`Copied ${flagged.length} flagged entries!`)).catch(() => prompt('Copy this:', text));
 }
 
-function saveProgressToFile() {
-  // Update all entries with current review state + image decisions
-  const updated = allData.map(d => {
+function copyDecisionsForClawz() {
+  // Build compact report of only entries with image decisions
+  const decisions = [];
+  allData.forEach(d => {
     const k = getKey(d);
-    const st = reviewState[k];
-    const copy = {...d};
-    if (st) {
-      copy.reviewStatus = st.status;
-      if (st.reasons) copy.reviewReasons = st.reasons;
-      else delete copy.reviewReasons;
-      if (st.note) copy.reviewNote = st.note;
-      else delete copy.reviewNote;
-    }
-    // Include image decisions
     const dec = imageDecisions[k];
-    if (dec) {
-      const allImages = []; if (d.image) allImages.push(d.image); (d.gallery||[]).forEach(u => { if (u !== d.image) allImages.push(u); });
-      if (dec.main >= 0 && dec.main < allImages.length) copy.mainImage = allImages[dec.main];
-      if (dec.deleted && dec.deleted.size) copy.deletedImages = [...dec.deleted].map(i => allImages[i]).filter(Boolean);
-      if (dec.submitted) copy.imageReviewDone = true;
-    }
-    // Include image flags
-    const fi = flaggedImages[k];
-    if (fi && fi.size) copy.flaggedImages = [...fi];
-    else delete copy.flaggedImages;
-    // Include field flags
-    const ff = fieldFlags[k];
-    if (ff && Object.keys(ff).length) copy.flaggedFields = Object.keys(ff).filter(f=>ff[f]);
-    else delete copy.flaggedFields;
-    return copy;
+    if (!dec || !dec.submitted) return;
+    const allImages = []; if (d.image) allImages.push(d.image); (d.gallery||[]).forEach(u => { if (u !== d.image) allImages.push(u); });
+    const entry = { name: d.name, country: d.country };
+    if (dec.main >= 0 && dec.main < allImages.length) entry.main = allImages[dec.main];
+    if (dec.deleted && dec.deleted.size) entry.delete = [...dec.deleted].map(i => allImages[i]).filter(Boolean);
+    decisions.push(entry);
   });
-  const blob = new Blob([JSON.stringify(updated, null, 2)], {type:'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'audit-data.json';
-  a.click();
-  
-  const submitted = Object.values(imageDecisions).filter(d => d.submitted).length;
-  alert(`Downloaded audit-data.json!\n\n${submitted} listings with image decisions.\nDrop this file in the castle-explorer folder and tell Clawz to pick it up.`);
+  if (!decisions.length) { alert('No submitted image decisions yet!\nUse Enter to submit each listing after reviewing.'); return; }
+  const payload = JSON.stringify(decisions);
+  navigator.clipboard.writeText(payload).then(() => {
+    alert(`✅ Copied ${decisions.length} image decisions!\nPaste to Clawz in chat.`);
+  }).catch(() => {
+    // Fallback: show in a modal for manual copy
+    const ta = document.createElement('textarea');
+    ta.value = payload;
+    ta.style.cssText = 'position:fixed;top:10%;left:10%;width:80%;height:60%;z-index:9999;background:#161b22;color:#e6edf3;border:2px solid #c9a44a;border-radius:8px;padding:16px;font-size:12px;font-family:monospace';
+    document.body.appendChild(ta);
+    ta.select();
+    alert(`${decisions.length} decisions ready — select all & copy from the textbox, then paste to Clawz.`);
+    ta.addEventListener('keydown', e => { if (e.key === 'Escape') ta.remove(); });
+  });
 }
 
 function updateExportCount() {
