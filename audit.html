@@ -276,7 +276,8 @@ function updateProgress() {
     `<span class="st-approved">✓ ${ap} approved</span>` +
     `<span class="st-flagged">⚑ ${fl} flagged</span>` +
     `<span>${un} unreviewed</span>` +
-    `<span style="color:var(--muted)">${total} total</span>`;
+    `<span style="color:var(--muted)">${total} total</span>` +
+    `<span style="color:var(--gold);font-weight:600">${((ap+fl)/total*100).toFixed(1)}% done</span>`;
 }
 
 // Card rendering
