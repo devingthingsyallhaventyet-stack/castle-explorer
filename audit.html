@@ -9,6 +9,13 @@
 body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:16px}
 h1{text-align:center;color:#c9a44a;margin-bottom:4px}
 .subtitle{text-align:center;color:#8b949e;margin-bottom:16px;font-size:.9em}
+.tabs{display:flex;justify-content:center;gap:0;margin-bottom:16px}
+.tab{padding:12px 28px;background:#161b22;border:1px solid #30363d;color:#8b949e;cursor:pointer;font-size:1em;font-weight:600;transition:all .2s}
+.tab:first-child{border-radius:8px 0 0 8px}
+.tab:last-child{border-radius:0 8px 8px 0}
+.tab.active{background:#c9a44a;color:#0d1117;border-color:#c9a44a}
+.tab .badge{display:inline-block;background:rgba(0,0,0,.2);padding:2px 8px;border-radius:10px;margin-left:6px;font-size:.85em}
+.tab.active .badge{background:rgba(0,0,0,.3)}
 .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px;align-items:center}
 .controls select,.controls input{background:#161b22;border:1px solid #30363d;color:#e6edf3;padding:8px 12px;border-radius:6px;font-size:.9em}
 .controls input{width:280px}
@@ -20,6 +27,7 @@ table{width:100%;border-collapse:collapse;font-size:.82em}
 thead{position:sticky;top:0;z-index:10}
 th{background:#161b22;color:#c9a44a;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d;cursor:pointer;white-space:nowrap;user-select:none}
 th:hover{color:#fff}
+th.no-sort{cursor:default}
 td{padding:8px;border-bottom:1px solid #21262d;vertical-align:top;max-width:300px}
 tr:hover{background:#161b22}
 a{color:#58a6ff;text-decoration:none}
@@ -28,29 +36,67 @@ a:hover{text-decoration:underline}
 .tag{display:inline-block;background:#21262d;padding:2px 6px;border-radius:3px;font-size:.8em;margin:1px}
 .src-cdn{color:#f0883e}
 .src-wiki{color:#3fb950}
+.src-wikipedia{color:#3fb950}
 .src-r2{color:#a371f7}
 .src-unknown{color:#f85149}
-.flag{background:#f8514920;padding:2px 6px;border-radius:3px;color:#f85149;font-size:.8em}
-.ok{background:#3fb95020;padding:2px 6px;border-radius:3px;color:#3fb950;font-size:.8em}
+.flag-tag{background:#f8514920;padding:2px 6px;border-radius:3px;color:#f85149;font-size:.8em;margin:1px;display:inline-block}
+.ok-tag{background:#3fb95020;padding:2px 6px;border-radius:3px;color:#3fb950;font-size:.8em}
 .desc-cell{max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .desc-cell:hover{white-space:normal;overflow:visible}
 #count{color:#8b949e;text-align:center;margin:8px 0}
+.action-btns{display:flex;gap:4px}
+.btn-approve,.btn-flag,.btn-undo{border:none;padding:6px 10px;border-radius:4px;cursor:pointer;font-size:.8em;font-weight:600;white-space:nowrap}
+.btn-approve{background:#238636;color:#fff}
+.btn-approve:hover{background:#2ea043}
+.btn-flag{background:#da3633;color:#fff}
+.btn-flag:hover{background:#f85149}
+.btn-undo{background:#30363d;color:#8b949e}
+.btn-undo:hover{background:#484f58;color:#fff}
 .export-bar{position:fixed;bottom:0;left:0;right:0;background:#161b22;border-top:1px solid #30363d;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;z-index:100}
-.export-bar button{background:#c9a44a;color:#0d1117;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-weight:600}
+.export-bar button{background:#c9a44a;color:#0d1117;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-weight:600;margin-left:8px}
 .export-bar button:hover{background:#d4af5a}
+.export-bar .btn-danger{background:#da3633;color:#fff}
+.export-bar .btn-danger:hover{background:#f85149}
 body{padding-bottom:60px}
 .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);z-index:200;justify-content:center;align-items:center}
 .modal.show{display:flex}
 .modal img{max-width:90vw;max-height:90vh;border-radius:8px}
 .modal-close{position:fixed;top:20px;right:20px;color:#fff;font-size:2em;cursor:pointer;z-index:201}
+.progress-bar{width:100%;height:6px;background:#21262d;border-radius:3px;margin-bottom:16px;overflow:hidden}
+.progress-fill{height:100%;border-radius:3px;transition:width .3s}
+.progress-approved{background:#238636}
+.progress-flagged{background:#da3633}
+.progress-unreviewed{background:#30363d}
+.progress-container{max-width:600px;margin:0 auto 16px}
+.progress-labels{display:flex;justify-content:space-between;font-size:.8em;color:#8b949e;margin-bottom:4px}
 </style>
 </head>
 <body>
 
 <h1>🏰 CastleCore Audit Database</h1>
-<p class="subtitle">Every active listing with source verification links</p>
+<p class="subtitle">Review every listing — approve or flag</p>
 
 <div class="stats" id="stats"></div>
+
+<div class="progress-container">
+  <div class="progress-labels">
+    <span id="progApproved" style="color:#3fb950">0 approved</span>
+    <span id="progUnreviewed">0 unreviewed</span>
+    <span id="progFlagged" style="color:#f85149">0 flagged</span>
+  </div>
+  <div class="progress-bar">
+    <div style="display:flex;width:100%;height:100%">
+      <div class="progress-fill progress-approved" id="barApproved" style="width:0%"></div>
+      <div class="progress-fill progress-flagged" id="barFlagged" style="width:0%"></div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('unreviewed')">📋 Unreviewed <span class="badge" id="tabUnreviewed">0</span></div>
+  <div class="tab" onclick="switchTab('approved')">✅ Approved <span class="badge" id="tabApproved">0</span></div>
+  <div class="tab" onclick="switchTab('flagged')">⚠️ Flagged <span class="badge" id="tabFlagged">0</span></div>
+</div>
 
 <div class="controls">
   <input type="text" id="search" placeholder="Search castles..." oninput="applyFilters()">
@@ -67,11 +113,6 @@ body{padding-bottom:60px}
     <option value="wikipedia">Wikipedia (verified)</option>
     <option value="unknown">No Image</option>
   </select>
-  <select id="flagFilter" onchange="applyFilters()">
-    <option value="">All Status</option>
-    <option value="flagged">⚠️ Flagged</option>
-    <option value="ok">✅ OK</option>
-  </select>
 </div>
 
 <div id="count"></div>
@@ -80,6 +121,7 @@ body{padding-bottom:60px}
 <table>
 <thead>
 <tr>
+  <th class="no-sort">Action</th>
   <th onclick="sortBy('name')">Name ↕</th>
   <th onclick="sortBy('country')">Country ↕</th>
   <th onclick="sortBy('region')">Region ↕</th>
@@ -92,7 +134,7 @@ body{padding-bottom:60px}
   <th onclick="sortBy('period')">Period ↕</th>
   <th onclick="sortBy('rating')">Rating ↕</th>
   <th>Location</th>
-  <th>Flags</th>
+  <th>Issues</th>
 </tr>
 </thead>
 <tbody id="tbody"></tbody>
@@ -102,8 +144,10 @@ body{padding-bottom:60px}
 <div class="export-bar">
   <span id="filterCount"></span>
   <div>
-    <button onclick="exportCSV()">📥 Export CSV</button>
-    <button onclick="exportFlagged()">⚠️ Export Flagged</button>
+    <button onclick="exportCSV('all')">📥 Export All</button>
+    <button onclick="exportCSV('approved')">✅ Export Approved</button>
+    <button onclick="exportCSV('flagged')" class="btn-danger">⚠️ Export Flagged</button>
+    <button onclick="copyForClawz()">🦞 Copy Flagged for Clawz</button>
   </div>
 </div>
 
@@ -116,61 +160,104 @@ body{padding-bottom:60px}
 let DATA = [];
 let sortCol = 'name';
 let sortDir = 1;
+let currentTab = 'unreviewed';
+
+// Load review state from localStorage
+const reviewState = JSON.parse(localStorage.getItem('castle-review-state') || '{}');
 
 fetch('audit-data.json').then(r=>r.json()).then(data => {
   DATA = data.map(d => {
-    // Compute flags
     const flags = [];
     if (d.imgSource === 'CDN') flags.push('cdn-image');
     if (!d.lat || !d.lng) flags.push('no-coords');
     if (!d.desc || d.desc.length < 20) flags.push('no-desc');
-    if (d.gallery && d.gallery.length === 0 && d.imgSource === 'CDN') flags.push('no-gallery');
-    d.flags = flags;
-    d.flagged = flags.length > 0;
+    d.autoFlags = flags;
+    // Restore review state
+    const key = d.name + '|' + d.country;
+    d._key = key;
+    d.reviewStatus = reviewState[key]?.status || 'unreviewed';
+    d.reviewNote = reviewState[key]?.note || '';
     return d;
   });
-  updateStats();
-  applyFilters();
+  updateAll();
 });
+
+function updateAll() {
+  updateStats();
+  updateTabs();
+  updateProgress();
+  applyFilters();
+}
 
 function updateStats() {
   const total = DATA.length;
   const cdnCount = DATA.filter(d => d.imgSource === 'CDN').length;
   const wikiCount = DATA.filter(d => d.imgSource === 'wikipedia').length;
   const noCoords = DATA.filter(d => !d.lat || !d.lng).length;
-  const flagged = DATA.filter(d => d.flagged).length;
   
   document.getElementById('stats').innerHTML = `
-    <div class="stat"><b>${total}</b>Total Listings</div>
-    <div class="stat"><b>${wikiCount}</b>Wikipedia Images</div>
+    <div class="stat"><b>${total}</b>Total</div>
+    <div class="stat"><b style="color:#3fb950">${wikiCount}</b>Wiki Images</div>
     <div class="stat"><b style="color:#f0883e">${cdnCount}</b>CDN Images</div>
-    <div class="stat"><b style="color:#f85149">${noCoords}</b>No Coordinates</div>
-    <div class="stat"><b style="color:#f85149">${flagged}</b>Flagged</div>
+    <div class="stat"><b style="color:#f85149">${noCoords}</b>No Coords</div>
   `;
+}
+
+function updateTabs() {
+  const counts = { unreviewed: 0, approved: 0, flagged: 0 };
+  DATA.forEach(d => counts[d.reviewStatus] = (counts[d.reviewStatus] || 0) + 1);
+  document.getElementById('tabUnreviewed').textContent = counts.unreviewed;
+  document.getElementById('tabApproved').textContent = counts.approved;
+  document.getElementById('tabFlagged').textContent = counts.flagged;
+}
+
+function updateProgress() {
+  const total = DATA.length;
+  const approved = DATA.filter(d => d.reviewStatus === 'approved').length;
+  const flagged = DATA.filter(d => d.reviewStatus === 'flagged').length;
+  const unreviewed = total - approved - flagged;
+  
+  document.getElementById('progApproved').textContent = `${approved} approved`;
+  document.getElementById('progUnreviewed').textContent = `${unreviewed} unreviewed`;
+  document.getElementById('progFlagged').textContent = `${flagged} flagged`;
+  document.getElementById('barApproved').style.width = `${(approved/total*100)}%`;
+  document.getElementById('barFlagged').style.width = `${(flagged/total*100)}%`;
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.target.closest('.tab').classList.add('active');
+  applyFilters();
+}
+
+function setReview(key, status) {
+  const d = DATA.find(x => x._key === key);
+  if (!d) return;
+  d.reviewStatus = status;
+  reviewState[key] = { status, note: d.reviewNote, ts: Date.now() };
+  localStorage.setItem('castle-review-state', JSON.stringify(reviewState));
+  updateAll();
 }
 
 function applyFilters() {
   const search = document.getElementById('search').value.toLowerCase();
   const country = document.getElementById('countryFilter').value;
   const imgSrc = document.getElementById('imgFilter').value;
-  const flagF = document.getElementById('flagFilter').value;
   
-  let filtered = DATA;
-  if (search) filtered = filtered.filter(d => d.name.toLowerCase().includes(search) || d.county.toLowerCase().includes(search));
+  let filtered = DATA.filter(d => d.reviewStatus === currentTab);
+  if (search) filtered = filtered.filter(d => d.name.toLowerCase().includes(search) || d.county.toLowerCase().includes(search) || d.region.toLowerCase().includes(search));
   if (country) filtered = filtered.filter(d => d.country === country);
   if (imgSrc) filtered = filtered.filter(d => d.imgSource === imgSrc);
-  if (flagF === 'flagged') filtered = filtered.filter(d => d.flagged);
-  if (flagF === 'ok') filtered = filtered.filter(d => !d.flagged);
   
-  // Sort
   filtered.sort((a, b) => {
     let va = a[sortCol] || '', vb = b[sortCol] || '';
     if (typeof va === 'number') return (va - vb) * sortDir;
     return String(va).localeCompare(String(vb)) * sortDir;
   });
   
-  document.getElementById('count').textContent = `Showing ${filtered.length} of ${DATA.length} entries`;
-  document.getElementById('filterCount').textContent = `${filtered.length} entries`;
+  document.getElementById('count').textContent = `Showing ${filtered.length} entries`;
+  document.getElementById('filterCount').textContent = `${filtered.length} entries in view`;
   
   const tbody = document.getElementById('tbody');
   tbody.innerHTML = filtered.map(d => {
@@ -181,8 +268,8 @@ function applyFilters() {
     const googleImg = `https://www.google.com/search?q=${encodeURIComponent(d.name + ' ' + d.county)}&tbm=isch`;
     
     const imgCell = d.image 
-      ? `<img class="img-thumb" src="${d.image}" onclick="showModal('${d.image}')" onerror="this.src='';this.alt='❌'" loading="lazy">`
-      : '<span class="flag">none</span>';
+      ? `<img class="img-thumb" src="${d.image}" onclick="showModal('${d.image.replace(/'/g,"\\'")}')" onerror="this.src='';this.alt='❌'" loading="lazy">`
+      : '<span class="flag-tag">none</span>';
     
     const sourceLinks = [
       `<a href="${wikiSearch}" target="_blank">📖 Wiki</a>`,
@@ -190,18 +277,36 @@ function applyFilters() {
       `<a href="${googleSearch}" target="_blank">🔍 Google</a>`,
       `<a href="${googleImg}" target="_blank">🖼️ Images</a>`,
     ];
-    if (d.image) sourceLinks.push(`<a href="${d.image}" target="_blank">🔗 Main Img</a>`);
-    if (d.gallery && d.gallery.length > 0) {
-      sourceLinks.push(`<span class="tag">${d.gallery.length} gallery imgs</span>`);
-    }
+    if (d.image) sourceLinks.push(`<a href="${d.image}" target="_blank">🔗 Img</a>`);
+    if (d.gallery && d.gallery.length > 0) sourceLinks.push(`<span class="tag">${d.gallery.length} gallery</span>`);
     
     const locationCell = d.lat && d.lng
       ? `<a href="${d.mapsLink}" target="_blank">📍 ${Number(d.lat).toFixed(3)}, ${Number(d.lng).toFixed(3)}</a>`
-      : `<a href="${d.mapsLink}" target="_blank">🔍 Search Maps</a>`;
+      : `<a href="${d.mapsLink}" target="_blank">🔍 Maps</a>`;
     
-    const flagCells = d.flags.map(f => `<span class="flag">${f}</span>`).join(' ');
+    const issueCells = d.autoFlags.map(f => `<span class="flag-tag">${f}</span>`).join(' ') || '<span class="ok-tag">✅</span>';
+    
+    const keyEsc = d._key.replace(/'/g, "\\'");
+    let actionCell;
+    if (d.reviewStatus === 'unreviewed') {
+      actionCell = `<div class="action-btns">
+        <button class="btn-approve" onclick="setReview('${keyEsc}','approved')">✅</button>
+        <button class="btn-flag" onclick="setReview('${keyEsc}','flagged')">⚠️</button>
+      </div>`;
+    } else if (d.reviewStatus === 'approved') {
+      actionCell = `<div class="action-btns">
+        <button class="btn-flag" onclick="setReview('${keyEsc}','flagged')">⚠️</button>
+        <button class="btn-undo" onclick="setReview('${keyEsc}','unreviewed')">↩️</button>
+      </div>`;
+    } else {
+      actionCell = `<div class="action-btns">
+        <button class="btn-approve" onclick="setReview('${keyEsc}','approved')">✅</button>
+        <button class="btn-undo" onclick="setReview('${keyEsc}','unreviewed')">↩️</button>
+      </div>`;
+    }
     
     return `<tr>
+      <td>${actionCell}</td>
       <td><b>${d.name}</b></td>
       <td>${d.country}</td>
       <td>${d.region.replace(/-/g,' ')}</td>
@@ -209,12 +314,12 @@ function applyFilters() {
       <td>${imgCell}</td>
       <td><span class="${srcClass}">${d.imgSource}</span></td>
       <td>${sourceLinks.join('<br>')}</td>
-      <td class="desc-cell" title="${d.desc}">${d.desc}</td>
+      <td class="desc-cell" title="${(d.desc||'').replace(/"/g,'&quot;')}">${d.desc}</td>
       <td><span class="tag">${d.type || '—'}</span></td>
       <td>${d.period || '—'}</td>
       <td>${d.rating || '—'}</td>
       <td>${locationCell}</td>
-      <td>${flagCells || '<span class="ok">✅</span>'}</td>
+      <td>${issueCells}</td>
     </tr>`;
   }).join('');
 }
@@ -230,31 +335,33 @@ function showModal(src) {
   document.getElementById('modal').classList.add('show');
 }
 
-function exportCSV() {
-  const headers = ['Name','Country','Region','County','Lat','Lng','Google Maps','Image URL','Image Source','Description','Type','Period','Rating','Flags'];
-  const rows = DATA.map(d => [
-    d.name, d.country, d.region, d.county, d.lat, d.lng, d.mapsLink,
+function exportCSV(which) {
+  let rows = DATA;
+  if (which === 'approved') rows = DATA.filter(d => d.reviewStatus === 'approved');
+  if (which === 'flagged') rows = DATA.filter(d => d.reviewStatus === 'flagged');
+  
+  const headers = ['Name','Country','Region','County','Lat','Lng','Google Maps','Image URL','Image Source','Description','Type','Period','Rating','Review Status','Issues'];
+  const csv = [headers.join(','), ...rows.map(d => [
+    `"${d.name}"`, d.country, d.region, `"${d.county}"`, d.lat, d.lng, d.mapsLink,
     d.image, d.imgSource, `"${(d.desc||'').replace(/"/g,'""')}"`,
-    d.type, d.period, d.rating, d.flags.join('; ')
-  ]);
-  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
-  download('castlecore-audit.csv', csv, 'text/csv');
-}
-
-function exportFlagged() {
-  const flagged = DATA.filter(d => d.flagged);
-  const headers = ['Name','Country','Region','County','Image Source','Flags','Google Maps'];
-  const rows = flagged.map(d => [d.name, d.country, d.region, d.county, d.imgSource, d.flags.join('; '), d.mapsLink]);
-  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
-  download('castlecore-flagged.csv', csv, 'text/csv');
-}
-
-function download(filename, content, type) {
-  const blob = new Blob([content], { type });
+    d.type, d.period, d.rating, d.reviewStatus, `"${d.autoFlags.join('; ')}"`
+  ].join(','))].join('\n');
+  
+  const blob = new Blob([csv], { type: 'text/csv' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = filename;
+  a.download = `castlecore-${which}.csv`;
   a.click();
+}
+
+function copyForClawz() {
+  const flagged = DATA.filter(d => d.reviewStatus === 'flagged');
+  if (!flagged.length) { alert('No flagged entries!'); return; }
+  const lines = flagged.map(d => `${d.name} (${d.country}, ${d.region}) — ${d.autoFlags.join(', ')}`);
+  const text = `Flagged ${flagged.length} castles for removal/fixing:\n\n` + lines.join('\n');
+  navigator.clipboard.writeText(text).then(() => {
+    alert(`Copied ${flagged.length} flagged entries. Paste to Clawz!`);
+  }).catch(() => prompt('Copy this:', text));
 }
 </script>
 </body>
