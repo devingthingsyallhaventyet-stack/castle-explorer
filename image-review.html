@@ -314,7 +314,7 @@ function prev() {
 }
 
 function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
-function esc(s) { return (s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function esc(s) { if (typeof s === 'object' && s !== null) s = s.artist || s.credit || JSON.stringify(s); return (String(s || '')).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 // Keyboard shortcuts
 document.addEventListener('keydown', e => {
