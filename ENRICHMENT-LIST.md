@@ -16,4 +16,6 @@ Do NOT action until E says to batch-process them.
 - [ ] Clitheroe Castle (Northern England)
 - [ ] Burgh-by-Sands Castle (Northern England)
 - [ ] Greenhalgh Castle (Northern England)
+- [ ] Halton Castle (Northern England) — ALL CDN images are wrong (food/pub), needs real castle ruin photos
+- [ ] Hornby Castle (Northern England) — snowdrops fixed, may need better main image
 <!-- Add entries as: - [ ] Castle Name (Region) — notes -->
