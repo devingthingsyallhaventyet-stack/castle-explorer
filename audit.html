@@ -108,7 +108,11 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 .table-container .tbl-status{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
 
 /* Shortcuts help */
-.shortcuts-help{position:fixed;bottom:60px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:12px;color:var(--muted);z-index:50;line-height:1.8}
+.export-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);padding:8px 16px;display:flex;justify-content:space-between;align-items:center;z-index:100;font-size:13px;color:var(--muted)}
+.export-bar button{background:var(--gold);color:#000;border:none;padding:6px 14px;border-radius:6px;cursor:pointer;font-weight:600;font-size:12px;margin-left:6px}
+.export-bar button:hover{filter:brightness(1.1)}
+body{padding-bottom:50px}
+.shortcuts-help{position:fixed;bottom:50px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:12px;color:var(--muted);z-index:50;line-height:1.8}
 .shortcuts-help kbd{background:var(--bg);padding:1px 5px;border-radius:3px;border:1px solid var(--border);color:var(--text);font-family:monospace}
 </style>
 </head>
@@ -166,6 +170,15 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
       <button style="background:var(--border);color:var(--text)" onclick="closeFlagPanel()">Cancel <span class="kbd">Esc</span></button>
       <button style="background:var(--red);color:#fff" onclick="confirmFlag()">Confirm Flag <span class="kbd">Enter</span></button>
     </div>
+  </div>
+</div>
+
+<div class="export-bar">
+  <span id="exportCount"></span>
+  <div>
+    <button onclick="exportCSV('all')">📥 Export All</button>
+    <button onclick="exportCSV('flagged')" style="background:var(--red);color:#fff">⚠️ Export Flagged</button>
+    <button onclick="copyForClawz()">🦞 Copy Flagged for Clawz</button>
   </div>
 </div>
 
@@ -484,6 +497,43 @@ function setView(v) {
 }
 
 function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function exportCSV(which) {
+  let rows = allData;
+  if (which === 'flagged') rows = allData.filter(d => (reviewState[getKey(d)]||{}).status === 'flagged');
+  const headers = ['Name','Country','Region','County','Lat','Lng','Image','ImgSource','Description','Type','Period','Rating','Status','Flag Reasons','Note','Flagged Images','Flagged Fields'];
+  const csv = [headers.join(','), ...rows.map(d => {
+    const k = getKey(d); const st = reviewState[k] || {}; const fi = flaggedImages[k] ? [...flaggedImages[k]] : []; const ff = fieldFlags[k] ? Object.keys(fieldFlags[k]).filter(f=>fieldFlags[k][f]) : [];
+    return [JSON.stringify(d.name),d.country,d.region,JSON.stringify(d.county||''),d.lat,d.lng,d.image,d.imgSource,JSON.stringify((d.desc||'').slice(0,200)),d.type,d.period,d.rating,st.status||'unreviewed',JSON.stringify((st.reasons||[]).join('; ')),JSON.stringify(st.note||''),JSON.stringify(fi.join('; ')),JSON.stringify(ff.join('; '))].join(',');
+  })].join('\n');
+  const blob = new Blob([csv], {type:'text/csv'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `castlecore-${which}.csv`; a.click();
+}
+
+function copyForClawz() {
+  const flagged = allData.filter(d => {
+    const k = getKey(d); const st = reviewState[k];
+    return (st && st.status === 'flagged') || (flaggedImages[k] && flaggedImages[k].size) || (fieldFlags[k] && Object.keys(fieldFlags[k]).length);
+  });
+  if (!flagged.length) { alert('No flagged entries!'); return; }
+  const lines = flagged.map(d => {
+    const k = getKey(d); const st = reviewState[k] || {};
+    const parts = [`**${d.name}** (${d.country}, ${d.region})`];
+    if (st.reasons && st.reasons.length) parts.push(`Reasons: ${st.reasons.join(', ')}`);
+    if (st.note) parts.push(`Note: ${st.note}`);
+    const fi = flaggedImages[k]; if (fi && fi.size) parts.push(`Flagged images: ${fi.size}`);
+    const ff = fieldFlags[k]; if (ff) { const fields = Object.keys(ff).filter(f=>ff[f]); if (fields.length) parts.push(`Flagged fields: ${fields.join(', ')}`); }
+    return parts.join(' | ');
+  });
+  const text = `Flagged ${flagged.length} listings:\n\n` + lines.join('\n');
+  navigator.clipboard.writeText(text).then(() => alert(`Copied ${flagged.length} flagged entries!`)).catch(() => prompt('Copy this:', text));
+}
+
+function updateExportCount() {
+  const ct = allData.filter(d => { const k=getKey(d); const st=reviewState[k]; return (st&&st.status==='flagged')||(flaggedImages[k]&&flaggedImages[k].size)||(fieldFlags[k]&&Object.keys(fieldFlags[k]).length); }).length;
+  const el = document.getElementById('exportCount'); if(el) el.textContent = ct ? `${ct} flagged entries` : '';
+}
+const _origUpdateProgress = updateProgress;
+updateProgress = function() { _origUpdateProgress(); updateExportCount(); };
 </script>
 </body>
 </html>
