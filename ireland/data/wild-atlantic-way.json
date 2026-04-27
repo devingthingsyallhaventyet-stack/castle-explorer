@@ -4281,7 +4281,7 @@
     "era": "Medieval",
     "condition": "ruin",
     "description": "A medieval tower in the south Sligo village of Aclare, in the shadow of the Ox Mountains.",
-    "image": "https://img.castlecore.uk/aclare-castle.jpg",
+    "image": "https://img.castlecore.uk/aclare-castle-2.jpg",
     "rating": 3,
     "reviewCount": 7,
     "county": "County Sligo",
@@ -4293,7 +4293,6 @@
     "access": "exterior-only",
     "_index": 1159,
     "gallery": [
-      "https://img.castlecore.uk/aclare-castle-2.jpg",
       "https://img.castlecore.uk/aclare-castle-3.jpg",
       "https://img.castlecore.uk/aclare-castle-4.jpg",
       "https://img.castlecore.uk/aclare-castle-5.jpg"
