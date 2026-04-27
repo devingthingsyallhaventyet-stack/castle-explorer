@@ -271,7 +271,9 @@ function applyFilters() {
       ? `<img class="img-thumb" src="${d.image}" onclick="showModal('${d.image.replace(/'/g,"\\'")}')" onerror="this.src='';this.alt='❌'" loading="lazy">`
       : '<span class="flag-tag">none</span>';
     
+    const siteLink = `https://castlecore.uk/${d.country}/${d.region}`;
     const sourceLinks = [
+      `<a href="${siteLink}" target="_blank"><b>🏰 Our Page</b></a>`,
       `<a href="${wikiSearch}" target="_blank">📖 Wiki</a>`,
       `<a href="${commonsSearch}" target="_blank">📸 Commons</a>`,
       `<a href="${googleSearch}" target="_blank">🔍 Google</a>`,
