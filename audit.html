@@ -413,6 +413,8 @@ function renderCard() {
         ${d.rating ? `<span>⭐ ${d.rating}</span>` : ''}
         ${d.imgSource ? `<span>📷 ${esc(d.imgSource)}</span>` : ''}
         ${d.tags && d.tags.length ? `<span>🏷 ${d.tags.join(', ')}</span>` : ''}
+        <span><a href="${mapsSearchUrl}" target="_blank" style="color:var(--blue);font-size:12px">📍 Google Maps ↗</a></span>
+        ${d.wiki ? `<span><a href="${esc(d.wiki)}" target="_blank" style="color:var(--blue);font-size:12px">📖 Wikipedia ↗</a></span>` : ''}
       </div>
     </div>
     <div class="card-body">
