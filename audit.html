@@ -157,7 +157,8 @@ body{padding-bottom:50px}
 <div class="action-bar" id="actionBar">
   <button class="btn-prev" onclick="goPrev()">← Prev</button>
   <button class="btn-approve" onclick="doApprove()">✓ Approve <span class="kbd">A</span></button>
-  <button class="btn-flag" onclick="openFlagPanel()">⚑ Flag <span class="kbd">F</span></button>
+  <button class="btn-flag" onclick="quickFlag()">⚑ Flag <span class="kbd">F</span></button>
+  <button style="background:var(--border);color:var(--text);padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="openFlagPanel()">⚑+ Detail</button>
   <button class="btn-skip" onclick="goNext()">Skip → <span class="kbd">S</span></button>
 </div>
 
@@ -419,6 +420,14 @@ function doApprove() {
   saveState(); updateProgress(); advanceToNextUnreviewed();
 }
 
+function quickFlag() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  reviewState[key] = { status: 'flagged', reasons: ['needs-review'], ts: Date.now() };
+  saveState(); updateProgress(); advanceToNextUnreviewed();
+}
+
 function openFlagPanel() {
   flagPanelOpen = true;
   const el = document.getElementById('flagReasons');
@@ -458,7 +467,7 @@ document.addEventListener('keydown', e => {
     return;
   }
   if (e.key === 'a' || e.key === 'A') { doApprove(); e.preventDefault(); }
-  else if (e.key === 'f' || e.key === 'F') { openFlagPanel(); e.preventDefault(); }
+  else if (e.key === 'f' || e.key === 'F') { quickFlag(); e.preventDefault(); }
   else if (e.key === 's' || e.key === 'S' || e.key === 'ArrowRight') { goNext(); e.preventDefault(); }
   else if (e.key === 'ArrowLeft') { goPrev(); e.preventDefault(); }
 });
