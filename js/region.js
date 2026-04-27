@@ -25,9 +25,9 @@
   }
 
   function getImg(c){
-    if (c.image && c.image.includes('img.castlecore.uk')) return c.image;
+    if (c.image) return c.image;
     if (c.gallery && c.gallery.length) return c.gallery[0];
-    return c.image || '';
+    return '';
   }
 
   function initRegion(all) {
