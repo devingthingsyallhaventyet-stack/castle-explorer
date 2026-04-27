@@ -194,6 +194,7 @@ body{padding-bottom:50px}
     <button onclick="exportCSV('all')">📥 Export All</button>
     <button onclick="exportCSV('flagged')" style="background:var(--red);color:#fff">⚠️ Export Flagged</button>
     <button onclick="copyForClawz()">🦞 Copy Flagged for Clawz</button>
+    <button onclick="saveProgressToFile()" style="background:var(--green);color:#fff">💾 Save Progress</button>
   </div>
 </div>
 
@@ -255,15 +256,35 @@ function updateTabCounts() {
   document.getElementById('tabApprovedCount').textContent = ap;
 }
 
-// Load review state
+// Review state: loaded from data file, localStorage used as write-ahead cache
 try { reviewState = JSON.parse(localStorage.getItem('castle-review-state') || '{}'); } catch(e) { reviewState = {}; }
-function saveState() { localStorage.setItem('castle-review-state', JSON.stringify(reviewState)); }
+function saveState() { 
+  localStorage.setItem('castle-review-state', JSON.stringify(reviewState));
+  // Also update the in-memory data so exports are current
+  const d = filtered[currentIdx];
+  if (d) {
+    const st = reviewState[getKey(d)];
+    if (st) { d.reviewStatus = st.status; d.reviewReasons = st.reasons; d.reviewNote = st.note; }
+  }
+}
 function getKey(d) { return d.name + '|' + d.country; }
-function getStatus(d) { const s = reviewState[getKey(d)]; return s ? s.status : 'unreviewed'; }
+function getStatus(d) { 
+  // localStorage overrides take priority, then fall back to data file
+  const ls = reviewState[getKey(d)]; 
+  if (ls) return ls.status;
+  return d.reviewStatus || 'unreviewed'; 
+}
 
 // Load data
 fetch('audit-data.json').then(r => r.json()).then(data => {
   allData = data;
+  // Seed reviewState from data file (don't overwrite localStorage changes)
+  data.forEach(d => {
+    const key = getKey(d);
+    if (!reviewState[key] && d.reviewStatus) {
+      reviewState[key] = { status: d.reviewStatus, reasons: d.reviewReasons, note: d.reviewNote, ts: 0 };
+    }
+  });
   populateFilters();
   applyFilters();
   updateProgress();
@@ -605,6 +626,37 @@ function copyForClawz() {
   });
   const text = `Flagged ${flagged.length} listings:\n\n` + lines.join('\n');
   navigator.clipboard.writeText(text).then(() => alert(`Copied ${flagged.length} flagged entries!`)).catch(() => prompt('Copy this:', text));
+}
+
+function saveProgressToFile() {
+  // Update all entries with current review state
+  const updated = allData.map(d => {
+    const k = getKey(d);
+    const st = reviewState[k];
+    const copy = {...d};
+    if (st) {
+      copy.reviewStatus = st.status;
+      if (st.reasons) copy.reviewReasons = st.reasons;
+      else delete copy.reviewReasons;
+      if (st.note) copy.reviewNote = st.note;
+      else delete copy.reviewNote;
+    }
+    // Include image flags
+    const fi = flaggedImages[k];
+    if (fi && fi.size) copy.flaggedImages = [...fi];
+    else delete copy.flaggedImages;
+    // Include field flags
+    const ff = fieldFlags[k];
+    if (ff && Object.keys(ff).length) copy.flaggedFields = Object.keys(ff).filter(f=>ff[f]);
+    else delete copy.flaggedFields;
+    return copy;
+  });
+  const blob = new Blob([JSON.stringify(updated, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'audit-data.json';
+  a.click();
+  alert('Downloaded audit-data.json with all review progress baked in. Send to Clawz to deploy!');
 }
 
 function updateExportCount() {
