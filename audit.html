@@ -58,12 +58,8 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 .col-left .main-image{width:100%;max-height:450px;object-fit:contain;border-radius:8px;background:var(--bg);border:1px solid var(--border);cursor:pointer}
 .gallery{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .gallery-item{position:relative;display:inline-block}
-.gallery img{width:70px;height:50px;object-fit:cover;border-radius:4px;border:3px solid transparent;cursor:pointer;opacity:.6;transition:.15s}
-.gallery img:hover{opacity:.9}
-.gallery img.img-selected{opacity:1;border-color:var(--blue);box-shadow:0 0 8px rgba(88,166,255,.5)}
-.gallery img.img-main{border-color:var(--gold);opacity:1;box-shadow:0 0 8px rgba(201,164,74,.5)}
-.gallery img.img-deleted{border-color:var(--red);opacity:.4;box-shadow:0 0 8px rgba(218,54,51,.4)}
-.gallery img.img-deleted::after{content:'✕';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--red);font-size:24px;font-weight:bold}
+.gallery img{width:70px;height:50px;object-fit:cover;border-radius:4px;border:2px solid transparent;cursor:pointer;opacity:.7;transition:.15s}
+.gallery img:hover,.gallery img.active{opacity:1;border-color:var(--gold)}
 .gallery img.img-flagged{border-color:var(--red);opacity:1}
 .img-flag-btn{position:absolute;top:-4px;right:-4px;width:20px;height:20px;border-radius:50%;background:var(--red);color:#fff;border:none;cursor:pointer;font-size:10px;display:none;align-items:center;justify-content:center;z-index:5;line-height:1}
 .gallery-item:hover .img-flag-btn,.img-flag-btn.flagged{display:flex}
@@ -127,16 +123,6 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 body{padding-bottom:50px}
 .shortcuts-help{position:fixed;bottom:50px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:12px;color:var(--muted);z-index:50;line-height:1.8}
 .shortcuts-help kbd{background:var(--bg);padding:1px 5px;border-radius:3px;border:1px solid var(--border);color:var(--text);font-family:monospace}
-.img-state-bar{display:flex;gap:8px;margin-top:8px;font-size:12px;align-items:center;color:var(--muted)}
-.img-state-bar .state-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
-.main-image-state{position:absolute;top:8px;left:8px;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;z-index:5;pointer-events:none}
-.main-image-state.is-main{background:var(--gold);color:#000}
-.main-image-state.is-deleted{background:var(--red);color:#fff}
-.main-image.img-border-main{border:3px solid var(--gold);box-shadow:0 0 12px rgba(201,164,74,.4)}
-.main-image.img-border-deleted{border:3px solid var(--red);opacity:.5;box-shadow:0 0 12px rgba(218,54,51,.4)}
-.main-image.img-border-selected{border:3px solid var(--blue);box-shadow:0 0 12px rgba(88,166,255,.4)}
-.gallery-item{position:relative;display:inline-block}
-.gallery-item .del-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--red);font-size:20px;font-weight:bold;pointer-events:none;background:rgba(0,0,0,.4);border-radius:4px}
 </style>
 </head>
 <body>
@@ -144,9 +130,9 @@ body{padding-bottom:50px}
 <div class="topbar">
   <strong style="color:var(--gold);font-size:16px">🏰 CastleCore Audit</strong>
   <div class="main-tabs">
-    <div class="main-tab" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
+    <div class="main-tab active" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
     <div class="main-tab" id="tabFlagged" onclick="switchMainTab('flagged')">⚠️ Flagged <span class="tab-badge" id="tabFlaggedCount">0</span></div>
-    <div class="main-tab active" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
+    <div class="main-tab" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
   </div>
   <input type="text" id="searchBox" placeholder="Search castles...">
   <select id="countryFilter"><option value="">All Countries</option></select>
@@ -183,14 +169,11 @@ body{padding-bottom:50px}
 <div class="table-container" id="tableView"></div>
 
 <div class="action-bar" id="actionBar">
-  <button class="btn-prev" onclick="selectedImgIdx=0;goPrev()">← Prev <span class="kbd">P</span></button>
-  <button style="background:var(--blue);color:#fff;padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowLeft'}))">◄ Img <span class="kbd">←</span></button>
-  <button style="background:var(--blue);color:#fff;padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight'}))">Img ► <span class="kbd">→</span></button>
-  <button class="btn-approve" onclick="setMainImage()">⭐ Main <span class="kbd">A</span></button>
-  <button class="btn-flag" onclick="toggleDeleteImage()">🗑 Delete <span class="kbd">F</span></button>
-  <button class="btn-flag" onclick="flagListing()">✕ Flag <span class="kbd">X</span></button>
-  <button style="background:var(--green);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="submitAndNext()">✓ Submit <span class="kbd">Enter</span></button>
-  <button class="btn-skip" onclick="selectedImgIdx=0;goNext()">Skip <span class="kbd">S</span></button>
+  <button class="btn-prev" onclick="goPrev()">← Prev</button>
+  <button class="btn-approve" onclick="doApprove()">✓ Approve <span class="kbd">A</span></button>
+  <button class="btn-flag" onclick="quickFlag()">⚑ Flag <span class="kbd">F</span></button>
+  <button style="background:var(--border);color:var(--text);padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="openFlagPanel()">⚑+ Detail</button>
+  <button class="btn-skip" onclick="goNext()">Skip → <span class="kbd">S</span></button>
 </div>
 
 <div class="flag-overlay" id="flagOverlay">
@@ -211,13 +194,13 @@ body{padding-bottom:50px}
     <button onclick="exportCSV('all')">📥 Export All</button>
     <button onclick="exportCSV('flagged')" style="background:var(--red);color:#fff">⚠️ Export Flagged</button>
     <button onclick="copyForClawz()">🦞 Copy Flagged for Clawz</button>
-    <button onclick="copyDecisionsForClawz()" style="background:var(--green);color:#fff">📋 Copy for Clawz</button>
+    <button onclick="saveProgressToFile()" style="background:var(--green);color:#fff">💾 Save Progress</button>
   </div>
 </div>
 
 <div class="shortcuts-help">
-  <kbd>←</kbd><kbd>→</kbd> Scroll images &nbsp; <kbd>A</kbd> Set main ⭐ &nbsp; <kbd>F</kbd> Toggle delete 🗑 &nbsp; <kbd>X</kbd> Flag listing ✕<br>
-  <kbd>Enter</kbd> Submit &amp; next &nbsp; <kbd>S</kbd> Skip &nbsp; <kbd>P</kbd> Prev listing
+  <kbd>A</kbd> Approve &nbsp; <kbd>F</kbd> Flag &nbsp; <kbd>S</kbd>/<kbd>→</kbd> Skip &nbsp; <kbd>←</kbd> Prev<br>
+  Flag panel: <kbd>1</kbd>-<kbd>8</kbd> toggle reasons &nbsp; <kbd>Enter</kbd> confirm &nbsp; <kbd>Esc</kbd> close
 </div>
 
 <script>
@@ -225,12 +208,6 @@ let flaggedImages = {};
 try { const fi = JSON.parse(localStorage.getItem('castle-flagged-images') || '{}'); Object.keys(fi).forEach(k => flaggedImages[k] = new Set(fi[k])); } catch(e) {}
 function saveFlaggedImages() { const obj = {}; Object.keys(flaggedImages).forEach(k => obj[k] = [...flaggedImages[k]]); localStorage.setItem('castle-flagged-images', JSON.stringify(obj)); }
 function toggleImageFlag(castleKey, url, btn) { if (!flaggedImages[castleKey]) flaggedImages[castleKey] = new Set(); if (flaggedImages[castleKey].has(url)) { flaggedImages[castleKey].delete(url); } else { flaggedImages[castleKey].add(url); } saveFlaggedImages(); renderCard(); }
-
-// Image review state: { castleKey: { main: imgIdx, deleted: Set<imgIdx> } }
-let imageDecisions = {};
-try { const id = JSON.parse(localStorage.getItem('castle-image-decisions') || '{}'); Object.keys(id).forEach(k => { imageDecisions[k] = { main: id[k].main, deleted: new Set(id[k].deleted||[]) }; }); } catch(e) {}
-function saveImageDecisions() { const obj = {}; Object.keys(imageDecisions).forEach(k => { obj[k] = { main: imageDecisions[k].main, deleted: [...imageDecisions[k].deleted] }; }); localStorage.setItem('castle-image-decisions', JSON.stringify(obj)); }
-let selectedImgIdx = 0;
 
 let fieldFlags = {};
 try { fieldFlags = JSON.parse(localStorage.getItem('castle-field-flags') || '{}'); } catch(e) {}
@@ -252,7 +229,7 @@ let filtered = [];
 let currentIdx = 0;
 let reviewState = {};
 let currentView = 'card';
-let currentMainTab = 'approved';
+let currentMainTab = 'review';
 let flagPanelOpen = false;
 const wikiCache = new Map();
 
@@ -260,8 +237,8 @@ function switchMainTab(tab) {
   currentMainTab = tab;
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
   document.getElementById(tab === 'review' ? 'tabReview' : tab === 'flagged' ? 'tabFlagged' : 'tabApproved').classList.add('active');
-  // Set view mode — approved uses card for image review, flagged uses table
-  const wantView = tab === 'flagged' ? 'table' : 'card';
+  // Set view mode (but don't render yet — applyFilters will handle it)
+  const wantView = (tab === 'flagged' || tab === 'approved') ? 'table' : 'card';
   currentView = wantView;
   document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
   document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
@@ -384,21 +361,12 @@ function renderCard() {
   const allImages = [];
   if (d.image) allImages.push(d.image);
   (d.gallery||[]).forEach(url => { if (url !== d.image) allImages.push(url); });
-  // Clamp selectedImgIdx
-  if (selectedImgIdx >= allImages.length) selectedImgIdx = Math.max(0, allImages.length - 1);
   const fi = flaggedImages[key] || new Set();
-  const dec = imageDecisions[key] || { main: 0, deleted: new Set() };
   const galleryHtml = allImages.map((url,i) => {
-    const isSelected = i === selectedImgIdx;
-    const isMain = dec.main === i;
-    const isDeleted = dec.deleted.has(i);
-    let cls = 'gallery-thumb';
-    if (isDeleted) cls += ' img-deleted';
-    else if (isMain) cls += ' img-main';
-    if (isSelected) cls += ' img-selected';
+    const isFlagged = fi.has(url);
     return `<div class="gallery-item">
-      <img src="${url}" class="${cls}" onclick="selectedImgIdx=${i};renderCard()" loading="lazy" alt="image ${i+1}">
-      ${isDeleted ? '<div class="del-overlay">✕</div>' : ''}
+      <img src="${url}" class="gallery-thumb${i===0?' active':''}${isFlagged?' img-flagged':''}" onclick="swapMainImage(this, '${url.replace(/'/g,"\\'")}')" loading="lazy" alt="image ${i+1}">
+      <button class="img-flag-btn${isFlagged?' flagged':''}" onclick="event.stopPropagation();toggleImageFlag('${key.replace(/'/g,"\\'")}','${url.replace(/'/g,"\\'")}',this)" title="Flag this image">⚑</button>
     </div>`;
   }).join('');
 
@@ -414,29 +382,16 @@ function renderCard() {
         ${d.rating ? `<span>⭐ ${d.rating}</span>` : ''}
         ${d.imgSource ? `<span>📷 ${esc(d.imgSource)}</span>` : ''}
         ${d.tags && d.tags.length ? `<span>🏷 ${d.tags.join(', ')}</span>` : ''}
-        <span><a href="${mapsSearchUrl}" target="_blank" style="color:var(--blue);font-size:12px">📍 Google Maps ↗</a></span>
-        ${d.wiki ? `<span><a href="${esc(d.wiki)}" target="_blank" style="color:var(--blue);font-size:12px">📖 Wikipedia ↗</a></span>` : ''}
       </div>
     </div>
     <div class="card-body">
       <div class="col-left">
         <div class="main-image-wrap">
-          ${allImages.length ? (() => {
-            const imgUrl = allImages[selectedImgIdx] || allImages[0];
-            const isMain = dec.main === selectedImgIdx;
-            const isDeleted = dec.deleted.has(selectedImgIdx);
-            let borderCls = isDeleted ? 'img-border-deleted' : isMain ? 'img-border-main' : 'img-border-selected';
-            let stateLabel = isDeleted ? '<div class="main-image-state is-deleted">🗑 DELETE</div>' : isMain ? '<div class="main-image-state is-main">⭐ MAIN</div>' : '';
-            return `${stateLabel}<img class="main-image ${borderCls}" id="mainImg" src="${esc(imgUrl)}" alt="${esc(d.name)}" onerror="this.src='';this.alt='Image failed to load'">`;
-          })() : '<div style="height:300px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted)">No image</div>'}
+          ${d.image ? `<img class="main-image" id="mainImg" src="${esc(d.image)}" alt="${esc(d.name)}" onerror="this.src='';this.alt='Image failed to load'">
+          <button class="img-flag-btn${fi.has(d.image)?' flagged':''}" onclick="toggleImageFlag('${key.replace(/'/g,"\\'")}','${d.image.replace(/'/g,"\\'")}',this)" title="Flag this image">⚑</button>` : '<div style="height:300px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted)">No image</div>'}
         </div>
         <div class="gallery">${galleryHtml}</div>
-        <div class="img-state-bar">
-          <span><span class="state-dot" style="background:var(--blue)"></span> Selected</span>
-          <span><span class="state-dot" style="background:var(--gold)"></span> Main (A)</span>
-          <span><span class="state-dot" style="background:var(--red)"></span> Delete (F)</span>
-          <span style="margin-left:auto">${selectedImgIdx+1} / ${allImages.length} images</span>
-        </div>
+        ${fi.size ? `<div style="margin-top:6px;font-size:12px;color:var(--red)">⚑ ${fi.size} image(s) flagged</div>` : ''}
       </div>
       <div class="col-right">
         ${mapUrl ? `<iframe src="${mapUrl}" allowfullscreen loading="lazy" style="width:100%;height:350px;border:1px solid var(--border);border-radius:8px"></iframe>` : `<div style="height:350px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted);flex-direction:column;gap:8px"><span>No coordinates</span><a href="${mapsSearchUrl}" target="_blank">Search Google Maps →</a></div>`}
@@ -458,7 +413,11 @@ function renderCard() {
   fetchWiki(d);
 }
 
-// swapMainImage replaced by selectedImgIdx + renderCard()
+function swapMainImage(thumb, url) {
+  document.getElementById('mainImg').src = url;
+  document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
 
 async function fetchWiki(d) {
   const el = document.getElementById('wikiSection');
@@ -561,58 +520,6 @@ function confirmFlag() {
   saveState(); closeFlagPanel(); updateProgress(); advanceToNextUnreviewed();
 }
 
-// Image decision helpers
-function toggleDeleteImage() {
-  if (!filtered.length) return;
-  const d = filtered[currentIdx];
-  const key = getKey(d);
-  const allImages = []; if (d.image) allImages.push(d.image); (d.gallery||[]).forEach(u => { if (u !== d.image) allImages.push(u); });
-  if (!allImages.length) return;
-  if (!imageDecisions[key]) imageDecisions[key] = { main: 0, deleted: new Set() };
-  const dec = imageDecisions[key];
-  if (dec.deleted.has(selectedImgIdx)) dec.deleted.delete(selectedImgIdx);
-  else { dec.deleted.add(selectedImgIdx); if (dec.main === selectedImgIdx) dec.main = -1; }
-  saveImageDecisions(); renderCard();
-}
-
-function setMainImage() {
-  if (!filtered.length) return;
-  const d = filtered[currentIdx];
-  const key = getKey(d);
-  const allImages = []; if (d.image) allImages.push(d.image); (d.gallery||[]).forEach(u => { if (u !== d.image) allImages.push(u); });
-  if (!allImages.length) return;
-  if (!imageDecisions[key]) imageDecisions[key] = { main: 0, deleted: new Set() };
-  const dec = imageDecisions[key];
-  dec.deleted.delete(selectedImgIdx); // undelete if was deleted
-  dec.main = selectedImgIdx;
-  saveImageDecisions(); renderCard();
-}
-
-function flagListing() {
-  if (!filtered.length) return;
-  const d = filtered[currentIdx];
-  const key = getKey(d);
-  reviewState[key] = { status: 'flagged', reasons: ['flagged-during-image-review'], ts: Date.now() };
-  d.reviewStatus = 'flagged';
-  saveState(); updateProgress(); selectedImgIdx = 0;
-  // Remove from current filtered view and show next
-  if (currentIdx >= filtered.length) currentIdx = Math.max(0, filtered.length - 1);
-  renderCard();
-}
-
-function submitAndNext() {
-  if (!filtered.length) return;
-  // Mark this listing's image review as submitted
-  const d = filtered[currentIdx];
-  const key = getKey(d);
-  if (!imageDecisions[key]) imageDecisions[key] = { main: 0, deleted: new Set() };
-  imageDecisions[key].submitted = true;
-  saveImageDecisions();
-  // Advance
-  selectedImgIdx = 0;
-  if (currentIdx < filtered.length - 1) { currentIdx++; renderCard(); }
-}
-
 // Keyboard
 document.addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
@@ -622,32 +529,10 @@ document.addEventListener('keydown', e => {
     else if (e.key >= '1' && e.key <= '8') { toggleFlagReason(parseInt(e.key)-1); e.preventDefault(); }
     return;
   }
-  if (currentView === 'card') {
-    // Image navigation: left/right scroll through images
-    if (e.key === 'ArrowLeft') {
-      if (selectedImgIdx > 0) { selectedImgIdx--; renderCard(); }
-      e.preventDefault(); return;
-    }
-    if (e.key === 'ArrowRight') {
-      const d = filtered[currentIdx];
-      if (!d) return;
-      const allImages = []; if (d.image) allImages.push(d.image); (d.gallery||[]).forEach(u => { if (u !== d.image) allImages.push(u); });
-      if (selectedImgIdx < allImages.length - 1) { selectedImgIdx++; renderCard(); }
-      e.preventDefault(); return;
-    }
-    // F = toggle delete on selected image
-    if (e.key === 'f' || e.key === 'F') { toggleDeleteImage(); e.preventDefault(); return; }
-    // A = set selected image as main
-    if (e.key === 'a' || e.key === 'A') { setMainImage(); e.preventDefault(); return; }
-    // Enter = submit and next listing
-    if (e.key === 'Enter') { submitAndNext(); e.preventDefault(); return; }
-    // X = flag listing (move from approved to flagged)
-    if (e.key === 'x' || e.key === 'X') { flagListing(); e.preventDefault(); return; }
-    // S = skip (next listing without submitting)
-    if (e.key === 's' || e.key === 'S') { selectedImgIdx = 0; goNext(); e.preventDefault(); return; }
-    // P = prev listing
-    if (e.key === 'p' || e.key === 'P') { selectedImgIdx = 0; goPrev(); e.preventDefault(); return; }
-  }
+  if (e.key === 'a' || e.key === 'A') { doApprove(); e.preventDefault(); }
+  else if (e.key === 'f' || e.key === 'F') { quickFlag(); e.preventDefault(); }
+  else if (e.key === 's' || e.key === 'S' || e.key === 'ArrowRight') { goNext(); e.preventDefault(); }
+  else if (e.key === 'ArrowLeft') { goPrev(); e.preventDefault(); }
 });
 
 // Table View
@@ -743,33 +628,35 @@ function copyForClawz() {
   navigator.clipboard.writeText(text).then(() => alert(`Copied ${flagged.length} flagged entries!`)).catch(() => prompt('Copy this:', text));
 }
 
-function copyDecisionsForClawz() {
-  // Build compact report of only entries with image decisions
-  const decisions = [];
-  allData.forEach(d => {
+function saveProgressToFile() {
+  // Update all entries with current review state
+  const updated = allData.map(d => {
     const k = getKey(d);
-    const dec = imageDecisions[k];
-    if (!dec || !dec.submitted) return;
-    const allImages = []; if (d.image) allImages.push(d.image); (d.gallery||[]).forEach(u => { if (u !== d.image) allImages.push(u); });
-    const entry = { name: d.name, country: d.country };
-    if (dec.main >= 0 && dec.main < allImages.length) entry.main = allImages[dec.main];
-    if (dec.deleted && dec.deleted.size) entry.delete = [...dec.deleted].map(i => allImages[i]).filter(Boolean);
-    decisions.push(entry);
+    const st = reviewState[k];
+    const copy = {...d};
+    if (st) {
+      copy.reviewStatus = st.status;
+      if (st.reasons) copy.reviewReasons = st.reasons;
+      else delete copy.reviewReasons;
+      if (st.note) copy.reviewNote = st.note;
+      else delete copy.reviewNote;
+    }
+    // Include image flags
+    const fi = flaggedImages[k];
+    if (fi && fi.size) copy.flaggedImages = [...fi];
+    else delete copy.flaggedImages;
+    // Include field flags
+    const ff = fieldFlags[k];
+    if (ff && Object.keys(ff).length) copy.flaggedFields = Object.keys(ff).filter(f=>ff[f]);
+    else delete copy.flaggedFields;
+    return copy;
   });
-  if (!decisions.length) { alert('No submitted image decisions yet!\nUse Enter to submit each listing after reviewing.'); return; }
-  const payload = JSON.stringify(decisions);
-  navigator.clipboard.writeText(payload).then(() => {
-    alert(`✅ Copied ${decisions.length} image decisions!\nPaste to Clawz in chat.`);
-  }).catch(() => {
-    // Fallback: show in a modal for manual copy
-    const ta = document.createElement('textarea');
-    ta.value = payload;
-    ta.style.cssText = 'position:fixed;top:10%;left:10%;width:80%;height:60%;z-index:9999;background:#161b22;color:#e6edf3;border:2px solid #c9a44a;border-radius:8px;padding:16px;font-size:12px;font-family:monospace';
-    document.body.appendChild(ta);
-    ta.select();
-    alert(`${decisions.length} decisions ready — select all & copy from the textbox, then paste to Clawz.`);
-    ta.addEventListener('keydown', e => { if (e.key === 'Escape') ta.remove(); });
-  });
+  const blob = new Blob([JSON.stringify(updated, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'audit-data.json';
+  a.click();
+  alert('Downloaded audit-data.json with all review progress baked in. Send to Clawz to deploy!');
 }
 
 function updateExportCount() {
