@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CastleCore Audit Database</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:16px}
+h1{text-align:center;color:#c9a44a;margin-bottom:4px}
+.subtitle{text-align:center;color:#8b949e;margin-bottom:16px;font-size:.9em}
+.controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px;align-items:center}
+.controls select,.controls input{background:#161b22;border:1px solid #30363d;color:#e6edf3;padding:8px 12px;border-radius:6px;font-size:.9em}
+.controls input{width:280px}
+.controls select{min-width:140px}
+.stats{display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+.stat{background:#161b22;padding:8px 18px;border-radius:6px;border:1px solid #30363d;text-align:center;font-size:.85em}
+.stat b{color:#c9a44a;font-size:1.3em;display:block}
+table{width:100%;border-collapse:collapse;font-size:.82em}
+thead{position:sticky;top:0;z-index:10}
+th{background:#161b22;color:#c9a44a;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d;cursor:pointer;white-space:nowrap;user-select:none}
+th:hover{color:#fff}
+td{padding:8px;border-bottom:1px solid #21262d;vertical-align:top;max-width:300px}
+tr:hover{background:#161b22}
+a{color:#58a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.img-thumb{width:60px;height:40px;object-fit:cover;border-radius:4px;cursor:pointer;background:#21262d}
+.tag{display:inline-block;background:#21262d;padding:2px 6px;border-radius:3px;font-size:.8em;margin:1px}
+.src-cdn{color:#f0883e}
+.src-wiki{color:#3fb950}
+.src-r2{color:#a371f7}
+.src-unknown{color:#f85149}
+.flag{background:#f8514920;padding:2px 6px;border-radius:3px;color:#f85149;font-size:.8em}
+.ok{background:#3fb95020;padding:2px 6px;border-radius:3px;color:#3fb950;font-size:.8em}
+.desc-cell{max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.desc-cell:hover{white-space:normal;overflow:visible}
+#count{color:#8b949e;text-align:center;margin:8px 0}
+.export-bar{position:fixed;bottom:0;left:0;right:0;background:#161b22;border-top:1px solid #30363d;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;z-index:100}
+.export-bar button{background:#c9a44a;color:#0d1117;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-weight:600}
+.export-bar button:hover{background:#d4af5a}
+body{padding-bottom:60px}
+.modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);z-index:200;justify-content:center;align-items:center}
+.modal.show{display:flex}
+.modal img{max-width:90vw;max-height:90vh;border-radius:8px}
+.modal-close{position:fixed;top:20px;right:20px;color:#fff;font-size:2em;cursor:pointer;z-index:201}
+</style>
+</head>
+<body>
+
+<h1>🏰 CastleCore Audit Database</h1>
+<p class="subtitle">Every active listing with source verification links</p>
+
+<div class="stats" id="stats"></div>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Search castles..." oninput="applyFilters()">
+  <select id="countryFilter" onchange="applyFilters()">
+    <option value="">All Countries</option>
+    <option value="scotland">Scotland</option>
+    <option value="england">England</option>
+    <option value="wales">Wales</option>
+    <option value="ireland">Ireland</option>
+  </select>
+  <select id="imgFilter" onchange="applyFilters()">
+    <option value="">All Image Sources</option>
+    <option value="CDN">CDN (unverified)</option>
+    <option value="wikipedia">Wikipedia (verified)</option>
+    <option value="unknown">No Image</option>
+  </select>
+  <select id="flagFilter" onchange="applyFilters()">
+    <option value="">All Status</option>
+    <option value="flagged">⚠️ Flagged</option>
+    <option value="ok">✅ OK</option>
+  </select>
+</div>
+
+<div id="count"></div>
+
+<div style="overflow-x:auto">
+<table>
+<thead>
+<tr>
+  <th onclick="sortBy('name')">Name ↕</th>
+  <th onclick="sortBy('country')">Country ↕</th>
+  <th onclick="sortBy('region')">Region ↕</th>
+  <th onclick="sortBy('county')">County ↕</th>
+  <th>Image</th>
+  <th onclick="sortBy('imgSource')">Img Source ↕</th>
+  <th>Sources</th>
+  <th>Description</th>
+  <th onclick="sortBy('type')">Type ↕</th>
+  <th onclick="sortBy('period')">Period ↕</th>
+  <th onclick="sortBy('rating')">Rating ↕</th>
+  <th>Location</th>
+  <th>Flags</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+
+<div class="export-bar">
+  <span id="filterCount"></span>
+  <div>
+    <button onclick="exportCSV()">📥 Export CSV</button>
+    <button onclick="exportFlagged()">⚠️ Export Flagged</button>
+  </div>
+</div>
+
+<div class="modal" id="modal" onclick="this.classList.remove('show')">
+  <span class="modal-close">&times;</span>
+  <img id="modalImg" src="">
+</div>
+
+<script>
+let DATA = [];
+let sortCol = 'name';
+let sortDir = 1;
+
+fetch('audit-data.json').then(r=>r.json()).then(data => {
+  DATA = data.map(d => {
+    // Compute flags
+    const flags = [];
+    if (d.imgSource === 'CDN') flags.push('cdn-image');
+    if (!d.lat || !d.lng) flags.push('no-coords');
+    if (!d.desc || d.desc.length < 20) flags.push('no-desc');
+    if (d.gallery && d.gallery.length === 0 && d.imgSource === 'CDN') flags.push('no-gallery');
+    d.flags = flags;
+    d.flagged = flags.length > 0;
+    return d;
+  });
+  updateStats();
+  applyFilters();
+});
+
+function updateStats() {
+  const total = DATA.length;
+  const cdnCount = DATA.filter(d => d.imgSource === 'CDN').length;
+  const wikiCount = DATA.filter(d => d.imgSource === 'wikipedia').length;
+  const noCoords = DATA.filter(d => !d.lat || !d.lng).length;
+  const flagged = DATA.filter(d => d.flagged).length;
+  
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><b>${total}</b>Total Listings</div>
+    <div class="stat"><b>${wikiCount}</b>Wikipedia Images</div>
+    <div class="stat"><b style="color:#f0883e">${cdnCount}</b>CDN Images</div>
+    <div class="stat"><b style="color:#f85149">${noCoords}</b>No Coordinates</div>
+    <div class="stat"><b style="color:#f85149">${flagged}</b>Flagged</div>
+  `;
+}
+
+function applyFilters() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const country = document.getElementById('countryFilter').value;
+  const imgSrc = document.getElementById('imgFilter').value;
+  const flagF = document.getElementById('flagFilter').value;
+  
+  let filtered = DATA;
+  if (search) filtered = filtered.filter(d => d.name.toLowerCase().includes(search) || d.county.toLowerCase().includes(search));
+  if (country) filtered = filtered.filter(d => d.country === country);
+  if (imgSrc) filtered = filtered.filter(d => d.imgSource === imgSrc);
+  if (flagF === 'flagged') filtered = filtered.filter(d => d.flagged);
+  if (flagF === 'ok') filtered = filtered.filter(d => !d.flagged);
+  
+  // Sort
+  filtered.sort((a, b) => {
+    let va = a[sortCol] || '', vb = b[sortCol] || '';
+    if (typeof va === 'number') return (va - vb) * sortDir;
+    return String(va).localeCompare(String(vb)) * sortDir;
+  });
+  
+  document.getElementById('count').textContent = `Showing ${filtered.length} of ${DATA.length} entries`;
+  document.getElementById('filterCount').textContent = `${filtered.length} entries`;
+  
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = filtered.map(d => {
+    const srcClass = `src-${d.imgSource}`;
+    const wikiSearch = `https://en.wikipedia.org/wiki/${encodeURIComponent(d.name.replace(/ /g,'_'))}`;
+    const commonsSearch = `https://commons.wikimedia.org/w/index.php?search=${encodeURIComponent(d.name)}&title=Special:MediaSearch&type=image`;
+    const googleSearch = `https://www.google.com/search?q=${encodeURIComponent(d.name + ' ' + d.county + ' castle')}`;
+    const googleImg = `https://www.google.com/search?q=${encodeURIComponent(d.name + ' ' + d.county)}&tbm=isch`;
+    
+    const imgCell = d.image 
+      ? `<img class="img-thumb" src="${d.image}" onclick="showModal('${d.image}')" onerror="this.src='';this.alt='❌'" loading="lazy">`
+      : '<span class="flag">none</span>';
+    
+    const sourceLinks = [
+      `<a href="${wikiSearch}" target="_blank">📖 Wiki</a>`,
+      `<a href="${commonsSearch}" target="_blank">📸 Commons</a>`,
+      `<a href="${googleSearch}" target="_blank">🔍 Google</a>`,
+      `<a href="${googleImg}" target="_blank">🖼️ Images</a>`,
+    ];
+    if (d.image) sourceLinks.push(`<a href="${d.image}" target="_blank">🔗 Main Img</a>`);
+    if (d.gallery && d.gallery.length > 0) {
+      sourceLinks.push(`<span class="tag">${d.gallery.length} gallery imgs</span>`);
+    }
+    
+    const locationCell = d.lat && d.lng
+      ? `<a href="${d.mapsLink}" target="_blank">📍 ${Number(d.lat).toFixed(3)}, ${Number(d.lng).toFixed(3)}</a>`
+      : `<a href="${d.mapsLink}" target="_blank">🔍 Search Maps</a>`;
+    
+    const flagCells = d.flags.map(f => `<span class="flag">${f}</span>`).join(' ');
+    
+    return `<tr>
+      <td><b>${d.name}</b></td>
+      <td>${d.country}</td>
+      <td>${d.region.replace(/-/g,' ')}</td>
+      <td>${d.county}</td>
+      <td>${imgCell}</td>
+      <td><span class="${srcClass}">${d.imgSource}</span></td>
+      <td>${sourceLinks.join('<br>')}</td>
+      <td class="desc-cell" title="${d.desc}">${d.desc}</td>
+      <td><span class="tag">${d.type || '—'}</span></td>
+      <td>${d.period || '—'}</td>
+      <td>${d.rating || '—'}</td>
+      <td>${locationCell}</td>
+      <td>${flagCells || '<span class="ok">✅</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+function sortBy(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+  applyFilters();
+}
+
+function showModal(src) {
+  document.getElementById('modalImg').src = src;
+  document.getElementById('modal').classList.add('show');
+}
+
+function exportCSV() {
+  const headers = ['Name','Country','Region','County','Lat','Lng','Google Maps','Image URL','Image Source','Description','Type','Period','Rating','Flags'];
+  const rows = DATA.map(d => [
+    d.name, d.country, d.region, d.county, d.lat, d.lng, d.mapsLink,
+    d.image, d.imgSource, `"${(d.desc||'').replace(/"/g,'""')}"`,
+    d.type, d.period, d.rating, d.flags.join('; ')
+  ]);
+  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  download('castlecore-audit.csv', csv, 'text/csv');
+}
+
+function exportFlagged() {
+  const flagged = DATA.filter(d => d.flagged);
+  const headers = ['Name','Country','Region','County','Image Source','Flags','Google Maps'];
+  const rows = flagged.map(d => [d.name, d.country, d.region, d.county, d.imgSource, d.flags.join('; '), d.mapsLink]);
+  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  download('castlecore-flagged.csv', csv, 'text/csv');
+}
+
+function download(filename, content, type) {
+  const blob = new Blob([content], { type });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+}
+</script>
+</body>
+</html>
