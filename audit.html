@@ -240,9 +240,9 @@ function switchMainTab(tab) {
   // Set view mode (but don't render yet — applyFilters will handle it)
   const wantView = (tab === 'flagged' || tab === 'approved') ? 'table' : 'card';
   currentView = wantView;
-  document.getElementById('cardView').style.display = wantView === 'card' ? '' : 'none';
-  document.getElementById('tableView').style.display = wantView === 'table' ? '' : 'none';
-  document.getElementById('actionBar').style.display = wantView === 'card' ? '' : 'none';
+  document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
+  document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
+  document.getElementById('actionBar').style.display = wantView === 'card' ? 'flex' : 'none';
   document.getElementById('btnCardView').classList.toggle('active', wantView === 'card');
   document.getElementById('btnTableView').classList.toggle('active', wantView === 'table');
   applyFilters();
@@ -588,9 +588,9 @@ function renderTable() {
 
 function setView(v) {
   currentView = v;
-  document.getElementById('cardView').style.display = v === 'card' ? '' : 'none';
-  document.getElementById('tableView').style.display = v === 'table' ? '' : 'none';
-  document.getElementById('actionBar').style.display = v === 'card' ? '' : 'none';
+  document.getElementById('cardView').style.display = v === 'card' ? 'block' : 'none';
+  document.getElementById('tableView').style.display = v === 'table' ? 'block' : 'none';
+  document.getElementById('actionBar').style.display = v === 'card' ? 'flex' : 'none';
   document.getElementById('btnCardView').classList.toggle('active', v === 'card');
   document.getElementById('btnTableView').classList.toggle('active', v === 'table');
   if (v === 'card') renderCard(); else renderTable();
