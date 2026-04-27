@@ -120,10 +120,12 @@ function fuzzyMatch(a, b) {
 let stagingByName = {};
 
 async function init() {
-  const [dataRes, stagingRes] = await Promise.all([
-    fetch('audit-data.json').then(r => r.json()),
-    fetch('google-images-staging.json').then(r => r.json())
-  ]);
+  try {
+  document.getElementById('cardArea').innerHTML = '<div class="loading">Loading audit data...</div>';
+  const dataRes = await fetch('audit-data.json').then(r => r.json());
+  document.getElementById('cardArea').innerHTML = '<div class="loading">Loading Google images (2.7MB)...</div>';
+  const stagingRes = await fetch('google-images-staging.json').then(r => r.json());
+  document.getElementById('cardArea').innerHTML = '<div class="loading">Processing...</div>';
 
   allData = dataRes.filter(d => d.reviewStatus === 'approved');
   stagingData = stagingRes;
@@ -145,6 +147,10 @@ async function init() {
 
   applyFilters();
   render();
+  } catch(err) {
+    document.getElementById('cardArea').innerHTML = '<p style="text-align:center;color:#f85149;padding:40px">Error loading data: ' + err.message + '</p>';
+    console.error('Init error:', err);
+  }
 }
 
 function getGooglePhotos(entry) {
