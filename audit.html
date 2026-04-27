@@ -517,6 +517,22 @@ function renderTable() {
   const el = document.getElementById('tableView');
   if (!filtered.length) { el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">No listings match.</p>'; return; }
   const isFlaggedTab = currentMainTab === 'flagged';
+  const isApprovedTab = currentMainTab === 'approved';
+  
+  if (isApprovedTab) {
+    let rows = filtered.map((d,i) => {
+      const listingUrl = `https://castlecore.uk/site/${d.country}/${(d.region||'')}/${d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}.html`;
+      const wikiUrl = d.wiki || '';
+      return `<tr>
+        <td><strong>${esc(d.name)}</strong></td>
+        <td><a href="${listingUrl}" target="_blank">View Listing ↗</a></td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">—</span>'}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `<table><thead><tr><th>Castle Name</th><th>Our Listing</th><th>Approved Sources</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return;
+  }
+  
   let rows = filtered.map((d,i) => {
     const k = getKey(d);
     const st = reviewState[k] || {};
