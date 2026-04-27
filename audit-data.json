@@ -813,34 +813,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dunollie_Castle_-_geograph.org.uk_-_7889749.jpg/330px-Dunollie_Castle_-_geograph.org.uk_-_7889749.jpg"
   },
   {
-    "name": "Borve Castle (Benbecula)",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Na h-Eileanan Siar",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Borve%20Castle%20(Benbecula)%20Na%20h-Eileanan%20Siar%20scotland",
-    "image": "https://img.castlecore.uk/borve-castle-benbecula.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/borve-castle-benbecula-2.jpg"
-    ],
-    "desc": "A lonely ruin on the machair of Benbecula in the Outer Hebrides — a rare medieval tower house in a landscape of wind, sea, and sky.",
-    "type": "tower house",
-    "period": "14th century",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "island",
-      "remote",
-      "coastal",
-      "free-entry",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Calvay Castle",
     "country": "scotland",
     "region": "argyll-western-isles",
@@ -930,68 +902,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunaverty_Castle"
-  },
-  {
-    "name": "Fraoch Eilean Castle",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Fraoch%20Eilean%20Castle%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/fraoch-eilean-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/fraoch-eilean-castle-2.jpg",
-      "https://img.castlecore.uk/fraoch-eilean-castle-3.jpg",
-      "https://img.castlecore.uk/fraoch-eilean-castle-4.jpg",
-      "https://img.castlecore.uk/fraoch-eilean-castle-5.jpg"
-    ],
-    "desc": "A ruined island castle in Loch Awe, surrounded by ancient legend and accessible only by boat. One of several atmospheric strongholds dotting this vast Highland loch.",
-    "type": "castle",
-    "period": "13th century",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "island",
-      "remote",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Dun Carloway Broch",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Western Isles",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dun%20Carloway%20Broch%20Western%20Isles%20scotland",
-    "image": "https://img.castlecore.uk/dun-carloway-broch.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dun-carloway-broch-2.jpg",
-      "https://img.castlecore.uk/dun-carloway-broch-3.jpg",
-      "https://img.castlecore.uk/dun-carloway-broch-4.jpg",
-      "https://img.castlecore.uk/dun-carloway-broch-5.jpg"
-    ],
-    "desc": "A dramatically situated Iron Age broch on the west coast of Lewis, one of the best-preserved in Scotland. Ancient stonework against a backdrop of Atlantic sky and moorland.",
-    "type": "broch",
-    "period": "Iron Age (c. 100 BC)",
-    "rating": 4.1,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "coastal",
-      "atmospheric",
-      "free-entry",
-      "remote",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Amhuinnsuidhe Castle",
@@ -1088,35 +998,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Iona_Abbey_%2845322644484%29.jpg/330px-Iona_Abbey_%2845322644484%29.jpg"
   },
   {
-    "name": "Sadell Castle",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Sadell%20Castle%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/sadell-castle-3.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/sadell-castle-2.jpg",
-      "https://img.castlecore.uk/sadell-castle-3.jpg",
-      "https://img.castlecore.uk/sadell-castle-4.jpg",
-      "https://img.castlecore.uk/sadell-castle-5.jpg"
-    ],
-    "desc": "A restored tower house on the Kintyre coast, overlooking Sadell Bay towards Arran. Now a Landmark Trust holiday let in an idyllic Argyll setting.",
-    "type": "castle",
-    "period": "16th century",
-    "rating": 4.1,
-    "tags": [
-      "well-preserved",
-      "coastal",
-      "atmospheric",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Achanduin Castle",
     "country": "scotland",
     "region": "argyll-western-isles",
@@ -1180,67 +1061,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Ardchattan_Priory"
   },
   {
-    "name": "Kilmartin Church",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Kilmartin%20Church%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/kilmartin-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kilmartin-church-2.jpg",
-      "https://img.castlecore.uk/kilmartin-church-3.jpg",
-      "https://img.castlecore.uk/kilmartin-church-4.jpg",
-      "https://img.castlecore.uk/kilmartin-church-5.jpg"
-    ],
-    "desc": "A parish church at the heart of Kilmartin Glen — Scotland's richest prehistoric landscape — housing an outstanding collection of medieval carved grave slabs.",
-    "type": "abbey",
-    "period": "Medieval (in prehistoric landscape)",
-    "rating": 4,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "museum",
-      "atmospheric",
-      "celtic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Kilmun Church",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Kilmun%20Church%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/kilmun-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kilmun-church-2.jpg",
-      "https://img.castlecore.uk/kilmun-church-3.jpg",
-      "https://img.castlecore.uk/kilmun-church-4.jpg",
-      "https://img.castlecore.uk/kilmun-church-5.jpg"
-    ],
-    "desc": "A historic church on Holy Loch in the Cowal Peninsula, with the mausoleum of the Dukes of Argyll. An atmospheric spot where Campbell chiefs rest among ancient yews.",
-    "type": "abbey",
-    "period": "7th century onwards",
-    "rating": 3.7,
-    "tags": [
-      "well-preserved",
-      "atmospheric",
-      "coastal",
-      "celtic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Ardencaple Castle",
     "country": "scotland",
     "region": "argyll-western-isles",
@@ -1298,64 +1118,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Innis_Chonnel_Castle_1969.jpg/330px-Innis_Chonnel_Castle_1969.jpg"
   },
   {
-    "name": "Castle Loch Heylipol",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Castle%20Loch%20Heylipol%20Argyll%20and%20Bute%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/DSCN6522_Island_House%2C_Tiree.jpg/500px-DSCN6522_Island_House%2C_Tiree.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/DSCN6522_Island_House%2C_Tiree.jpg/500px-DSCN6522_Island_House%2C_Tiree.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/DSCN6523_Island_House%2C_Tiree.jpg/500px-DSCN6523_Island_House%2C_Tiree.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/DSCN6528_Island_House%2C_Tiree.jpg/500px-DSCN6528_Island_House%2C_Tiree.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/DSCN6531_Island_House%2C_Tiree.jpg/500px-DSCN6531_Island_House%2C_Tiree.jpg"
-    ],
-    "desc": "Traces of a crannog castle on the Isle of Tiree, one of the most wind-swept and sun-blessed islands in Scotland.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "island",
-      "remote",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Crarae Garden Castle",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Crarae%20Garden%20Castle%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/crarae-garden-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/crarae-garden-castle-2.jpg",
-      "https://img.castlecore.uk/crarae-garden-castle-3.jpg",
-      "https://img.castlecore.uk/crarae-garden-castle-4.jpg",
-      "https://img.castlecore.uk/crarae-garden-castle-5.jpg"
-    ],
-    "desc": "A woodland garden of extraordinary beauty on Loch Fyne, often called 'the Himalayan Gorge of Scotland'. Rare plants in a dramatic glen setting.",
-    "type": "castle",
-    "period": "20th century",
-    "rating": 4.3,
-    "tags": [
-      "well-preserved",
-      "gardens",
-      "woodland",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Dunderave Castle",
     "country": "scotland",
     "region": "argyll-western-isles",
@@ -1379,125 +1141,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunderave_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Dunderave_Castle%2C_Loch_Fyne%2C_Argyll_-_geograph.org.uk_-_47961.jpg/330px-Dunderave_Castle%2C_Loch_Fyne%2C_Argyll_-_geograph.org.uk_-_47961.jpg"
-  },
-  {
-    "name": "Cardross Manor",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Cardross%20Manor%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/cardross-manor.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/cardross-manor-2.jpg",
-      "https://img.castlecore.uk/cardross-manor-3.jpg",
-      "https://img.castlecore.uk/cardross-manor-4.jpg",
-      "https://img.castlecore.uk/cardross-manor-5.jpg"
-    ],
-    "desc": "Site where Robert the Bruce spent his final years and died in 1329. Almost nothing survives, but the historical significance is immense.",
-    "type": "castle",
-    "period": "14th century",
-    "rating": 3.3,
-    "tags": [
-      "free-entry",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Kilberry Sculptured Stones",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Kilberry%20Sculptured%20Stones%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/kilberry-sculptured-stones.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kilberry-sculptured-stones-2.jpg",
-      "https://img.castlecore.uk/kilberry-sculptured-stones-3.jpg",
-      "https://img.castlecore.uk/kilberry-sculptured-stones-4.jpg",
-      "https://img.castlecore.uk/kilberry-sculptured-stones-5.jpg"
-    ],
-    "desc": "A collection of medieval West Highland carved stones near Kilberry in Argyll. Masterpieces of Gaelic memorial art.",
-    "type": "abbey",
-    "period": "14th-16th century",
-    "rating": 3.7,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "celtic",
-      "free-entry",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Dunadd Fort",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dunadd%20Fort%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/dunadd-fort.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dunadd-fort-2.jpg",
-      "https://img.castlecore.uk/dunadd-fort-3.jpg",
-      "https://img.castlecore.uk/dunadd-fort-4.jpg",
-      "https://img.castlecore.uk/dunadd-fort-5.jpg"
-    ],
-    "desc": "The ancient capital of Dál Riata — climb this rocky outcrop in Kilmartin Glen and place your foot in the same carved footprint where Dark Age kings were crowned in the birthplace of Scotland.",
-    "type": "castle",
-    "period": "Iron Age / Early Medieval",
-    "rating": 4.4,
-    "tags": [
-      "atmospheric",
-      "prehistoric",
-      "hilltop",
-      "free-entry",
-      "remote",
-      "photogenic",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Ballinaby Standing Stones",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Ballinaby%20Standing%20Stones%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/ballinaby-standing-stones.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/ballinaby-standing-stones-2.jpg",
-      "https://img.castlecore.uk/ballinaby-standing-stones-3.jpg",
-      "https://img.castlecore.uk/ballinaby-standing-stones-4.jpg",
-      "https://img.castlecore.uk/ballinaby-standing-stones-5.jpg"
-    ],
-    "desc": "Bronze Age standing stones on the west coast of Islay, part of the island's extraordinary prehistoric landscape.",
-    "type": "castle",
-    "period": "Bronze Age",
-    "rating": 3.6,
-    "tags": [
-      "prehistoric",
-      "free-entry",
-      "remote",
-      "island",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Keills Chapel",
@@ -1565,35 +1208,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/KildaltonCross-Islay-Scotland-1987-1.jpg/330px-KildaltonCross-Islay-Scotland-1987-1.jpg"
   },
   {
-    "name": "Campbeltown Cross",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Campbeltown%20Cross%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/campbeltown-cross.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/campbeltown-cross-2.jpg",
-      "https://img.castlecore.uk/campbeltown-cross-3.jpg",
-      "https://img.castlecore.uk/campbeltown-cross-4.jpg",
-      "https://img.castlecore.uk/campbeltown-cross-5.jpg"
-    ],
-    "desc": "A fine 15th-century medieval market cross in Kintyre, carved with Celtic interlace and a crucifixion scene.",
-    "type": "abbey",
-    "period": "15th century",
-    "rating": 3.5,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "celtic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "St Blane's Church",
     "country": "scotland",
     "region": "argyll-western-isles",
@@ -1624,37 +1238,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/St_Blane's_Church%2C_Dunblane",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg/330px-Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg"
-  },
-  {
-    "name": "Innischonain Priory",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Innischonain%20Priory%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/innischonain-priory.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/innischonain-priory-2.jpg",
-      "https://img.castlecore.uk/innischonain-priory-3.jpg",
-      "https://img.castlecore.uk/innischonain-priory-4.jpg",
-      "https://img.castlecore.uk/innischonain-priory-5.jpg"
-    ],
-    "desc": "Ruins of an Augustinian priory on an island in Loch Awe. Monastic solitude on one of Argyll's most beautiful lochs.",
-    "type": "abbey",
-    "period": "13th century",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "island",
-      "remote",
-      "atmospheric",
-      "free-entry",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Hermitage Castle",
@@ -1963,34 +1546,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Fast_Castle"
   },
   {
-    "name": "Hawick Motte",
-    "country": "scotland",
-    "region": "borders",
-    "county": "Scottish Borders",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Hawick%20Motte%20Scottish%20Borders%20scotland",
-    "image": "https://img.castlecore.uk/hawick-motte.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/hawick-motte-2.jpg",
-      "https://img.castlecore.uk/hawick-motte-3.jpg",
-      "https://img.castlecore.uk/hawick-motte-4.jpg",
-      "https://img.castlecore.uk/hawick-motte-5.jpg"
-    ],
-    "desc": "A great green mound in the heart of Hawick — one of the best-preserved Norman mottes in Scotland. A grassy hillock hiding centuries of Borders warfare beneath its turf.",
-    "type": "castle",
-    "period": "12th century",
-    "rating": 3.4,
-    "tags": [
-      "free-entry",
-      "norman",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Cessford Castle",
     "country": "scotland",
     "region": "borders",
@@ -2282,33 +1837,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Fatlips.jpg/330px-Fatlips.jpg"
   },
   {
-    "name": "Littledean Tower",
-    "country": "scotland",
-    "region": "borders",
-    "county": "Scottish Borders",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Littledean%20Tower%20Scottish%20Borders%20scotland",
-    "image": "https://img.castlecore.uk/littledean-tower.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/littledean-tower-2.jpg",
-      "https://img.castlecore.uk/littledean-tower-3.jpg",
-      "https://img.castlecore.uk/littledean-tower-4.jpg",
-      "https://img.castlecore.uk/littledean-tower-5.jpg"
-    ],
-    "desc": "A fine Border peel tower near Maxton, standing amid the gentle rolling landscape of Roxburghshire. A well-preserved example of the Borders' defensive architecture.",
-    "type": "tower house",
-    "period": "15th century",
-    "rating": 3.2,
-    "tags": [
-      "well-preserved",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Hume Castle",
     "country": "scotland",
     "region": "borders",
@@ -2430,36 +1958,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Castle_Craig.jpg/330px-Castle_Craig.jpg"
   },
   {
-    "name": "Newark Castle (Borders)",
-    "country": "scotland",
-    "region": "borders",
-    "county": "Scottish Borders",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Newark%20Castle%20(Borders)%20Scottish%20Borders%20scotland",
-    "image": "https://img.castlecore.uk/newark-castle-borders.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/newark-castle-borders-2.jpg",
-      "https://img.castlecore.uk/newark-castle-borders-3.jpg",
-      "https://img.castlecore.uk/newark-castle-borders-4.jpg",
-      "https://img.castlecore.uk/newark-castle-borders-5.jpg"
-    ],
-    "desc": "A ruined tower house in the Yarrow Valley, scene of a terrible massacre of prisoners after the Battle of Philiphaugh. Walter Scott's inspiration for 'The Lay of the Last Minstrel'.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 3.8,
-    "tags": [
-      "ruins-romantic",
-      "atmospheric",
-      "dark-brooding",
-      "free-entry",
-      "riverside"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Abbotsford House",
     "country": "scotland",
     "region": "borders",
@@ -2521,37 +2019,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Traquair_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Traquair_House_-_geograph.org.uk_-_1193717.jpg/330px-Traquair_House_-_geograph.org.uk_-_1193717.jpg"
-  },
-  {
-    "name": "Peebles Cross Kirk",
-    "country": "scotland",
-    "region": "borders",
-    "county": "Scottish Borders",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Peebles%20Cross%20Kirk%20Scottish%20Borders%20scotland",
-    "image": "https://img.castlecore.uk/peebles-cross-kirk.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/peebles-cross-kirk-2.jpg",
-      "https://img.castlecore.uk/peebles-cross-kirk-3.jpg",
-      "https://img.castlecore.uk/peebles-cross-kirk-4.jpg",
-      "https://img.castlecore.uk/peebles-cross-kirk-5.jpg"
-    ],
-    "desc": "Atmospheric ruins of a medieval friary in the Borders town of Peebles, with a remarkable decorated west tower. Founded on the site of a miraculous discovery of a holy cross.",
-    "type": "abbey",
-    "period": "13th century",
-    "rating": 3.6,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "atmospheric",
-      "free-entry",
-      "gothic",
-      "riverside"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Coldingham Priory",
@@ -3103,36 +2570,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg/330px-Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg"
   },
   {
-    "name": "Dalmeny Church",
-    "country": "scotland",
-    "region": "edinburgh-lothians",
-    "county": "City of Edinburgh",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dalmeny%20Church%20City%20of%20Edinburgh%20scotland",
-    "image": "https://img.castlecore.uk/dalmeny-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dalmeny-church-2.jpg",
-      "https://img.castlecore.uk/dalmeny-church-3.jpg",
-      "https://img.castlecore.uk/dalmeny-church-4.jpg",
-      "https://img.castlecore.uk/dalmeny-church-5.jpg"
-    ],
-    "desc": "The finest and most complete Romanesque church in Scotland, near Edinburgh. An astonishing 12th-century survivor with a richly carved south doorway and apse.",
-    "type": "abbey",
-    "period": "12th century",
-    "rating": 4.1,
-    "tags": [
-      "well-preserved",
-      "norman",
-      "medieval",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Cramond Tower",
     "country": "scotland",
     "region": "edinburgh-lothians",
@@ -3237,35 +2674,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Lennoxlove_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Lennoxlove_House_-_geograph.org.uk_-_37990.jpg/330px-Lennoxlove_House_-_geograph.org.uk_-_37990.jpg"
-  },
-  {
-    "name": "Preston Tower",
-    "country": "scotland",
-    "region": "edinburgh-lothians",
-    "county": "East Lothian",
-    "lat": "55.9557",
-    "lng": "-2.9781",
-    "mapsLink": "https://www.google.com/maps/search/Preston%20Tower%20East%20Lothian%20scotland",
-    "image": "https://img.castlecore.uk/preston-tower.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/preston-tower-2.jpg",
-      "https://img.castlecore.uk/preston-tower-3.jpg",
-      "https://img.castlecore.uk/preston-tower-4.jpg",
-      "https://img.castlecore.uk/preston-tower-5.jpg"
-    ],
-    "desc": "A restored 15th-century tower house near Prestonpans in East Lothian. A Hamilton stronghold with views to the Firth of Forth and the site of the 1745 Battle of Prestonpans.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 3.7,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "guided-tours",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Temple Church",
@@ -4120,66 +3528,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Macduff%27s_Castle_and_the_Wemyss_Caves.jpg/330px-Macduff%27s_Castle_and_the_Wemyss_Caves.jpg"
   },
   {
-    "name": "Balwearie Castle",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Fife",
-    "lat": "34.44861",
-    "lng": "-81.24101",
-    "mapsLink": "https://www.google.com/maps/search/Balwearie%20Castle%20Fife%20scotland",
-    "image": "https://img.castlecore.uk/balwearie-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/balwearie-castle-2.jpg",
-      "https://img.castlecore.uk/balwearie-castle-3.jpg",
-      "https://img.castlecore.uk/balwearie-castle-4.jpg",
-      "https://img.castlecore.uk/balwearie-castle-5.jpg",
-      "https://img.castlecore.uk/balwearie-castle-main-2.jpg",
-      "https://img.castlecore.uk/balwearie-castle-main-3.jpg",
-      "https://img.castlecore.uk/balwearie-castle-main-4.jpg",
-      "https://img.castlecore.uk/balwearie-castle-main-5.jpg"
-    ],
-    "desc": "A ruined tower house near Kirkcaldy in Fife, once the seat of the Scott family. Standing quietly in suburbia, a medieval survivor in an unlikely setting.",
-    "type": "tower house",
-    "period": "15th century",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Newark Castle (Fife)",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Fife",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Newark%20Castle%20(Fife)%20Fife%20scotland",
-    "image": "https://img.castlecore.uk/newark-castle-fife.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/newark-castle-fife-2.jpg",
-      "https://img.castlecore.uk/newark-castle-fife-3.jpg",
-      "https://img.castlecore.uk/newark-castle-fife-4.jpg",
-      "https://img.castlecore.uk/newark-castle-fife-5.jpg"
-    ],
-    "desc": "Ruined 15th-century castle on the Fife coast near St Monans, overlooking the Firth of Forth. Not to be confused with its better-known Port Glasgow namesake.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Clackmannan Tower",
     "country": "scotland",
     "region": "fife-perthshire",
@@ -4301,90 +3649,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Garth_Castle"
-  },
-  {
-    "name": "Newton Castle (Perth)",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perthshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Newton%20Castle%20(Perth)%20Perthshire%20scotland",
-    "image": "https://img.castlecore.uk/newton-castle-perth.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/newton-castle-perth-2.jpg",
-      "https://img.castlecore.uk/newton-castle-perth-3.jpg",
-      "https://img.castlecore.uk/newton-castle-perth-4.jpg",
-      "https://img.castlecore.uk/newton-castle-perth-5.jpg"
-    ],
-    "desc": "A 16th-century tower house near Blairgowrie in Perthshire, restored and privately owned. Compact baronial elegance in the berry-growing heartland.",
-    "type": "tower house",
-    "period": "16th century",
-    "rating": 3.2,
-    "tags": [
-      "well-preserved",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Clunie Castle",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perthshire",
-    "lat": "56.577645",
-    "lng": "-3.451953",
-    "mapsLink": "https://www.google.com/maps/search/Clunie%20Castle%20Perthshire%20scotland",
-    "image": "https://img.castlecore.uk/clunie-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/clunie-castle-2.jpg",
-      "https://img.castlecore.uk/clunie-castle-3.jpg"
-    ],
-    "desc": "Traces of a once-important island castle in the Loch of Clunie, near Blairgowrie. A medieval bishops' residence now reduced to fragments on a crannog.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "island",
-      "free-entry",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Stobhall Castle",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perthshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Stobhall%20Castle%20Perthshire%20scotland",
-    "image": "https://img.castlecore.uk/stobhall-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/stobhall-castle-2.jpg",
-      "https://img.castlecore.uk/stobhall-castle-3.jpg",
-      "https://img.castlecore.uk/stobhall-castle-4.jpg",
-      "https://img.castlecore.uk/stobhall-castle-5.jpg"
-    ],
-    "desc": "A remarkable cluster of medieval buildings on a cliff above the River Tay — the ancient Drummond seat, with a painted chapel ceiling that ranks among Scotland's greatest art treasures.",
-    "type": "castle",
-    "period": "14th century",
-    "rating": 3.5,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "atmospheric",
-      "cliffside",
-      "riverside"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Finlarig Castle",
@@ -4548,36 +3812,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Balmerino_Abbey"
   },
   {
-    "name": "Drummond Castle Gardens",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perth and Kinross",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Drummond%20Castle%20Gardens%20Perth%20and%20Kinross%20scotland",
-    "image": "https://img.castlecore.uk/drummond-castle-gardens.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/drummond-castle-gardens-2.jpg",
-      "https://img.castlecore.uk/drummond-castle-gardens-3.jpg",
-      "https://img.castlecore.uk/drummond-castle-gardens-4.jpg",
-      "https://img.castlecore.uk/drummond-castle-gardens-5.jpg"
-    ],
-    "desc": "Scotland's most spectacular formal gardens unfold below you in a breathtaking Italian parterre — geometric perfection carved into the Perthshire landscape with a 17th-century sundial at its heart.",
-    "type": "castle",
-    "period": "15th century castle / 17th century gardens",
-    "rating": 4.5,
-    "tags": [
-      "gardens",
-      "photogenic",
-      "well-preserved",
-      "filming-location",
-      "romantic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Balgonie Castle",
     "country": "scotland",
     "region": "fife-perthshire",
@@ -4604,36 +3838,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balgonie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BalgonieCastle04.jpg/330px-BalgonieCastle04.jpg"
-  },
-  {
-    "name": "St Bridget's Kirk, Dalgety",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Fife",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/St%20Bridget's%20Kirk%2C%20Dalgety%20Fife%20scotland",
-    "image": "https://img.castlecore.uk/st-bridget-s-kirk-dalgety.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/st-bridget-s-kirk-dalgety-2.jpg",
-      "https://img.castlecore.uk/st-bridget-s-kirk-dalgety-3.jpg",
-      "https://img.castlecore.uk/st-bridget-s-kirk-dalgety-4.jpg",
-      "https://img.castlecore.uk/st-bridget-s-kirk-dalgety-5.jpg"
-    ],
-    "desc": "A ruined medieval church on the Fife coast, with a rare post-Reformation laird's loft. Peaceful ruins above the Firth of Forth.",
-    "type": "abbey",
-    "period": "12th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "coastal",
-      "free-entry",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Dunkeld Cathedral",
@@ -4668,65 +3872,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Dunkeld_Cathedral.jpg/330px-Dunkeld_Cathedral.jpg"
   },
   {
-    "name": "Innerpeffray Chapel",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perth and Kinross",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Innerpeffray%20Chapel%20Perth%20and%20Kinross%20scotland",
-    "image": "https://img.castlecore.uk/innerpeffray-chapel.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/innerpeffray-chapel-2.jpg",
-      "https://img.castlecore.uk/innerpeffray-chapel-3.jpg",
-      "https://img.castlecore.uk/innerpeffray-chapel-4.jpg",
-      "https://img.castlecore.uk/innerpeffray-chapel-5.jpg"
-    ],
-    "desc": "A medieval collegiate chapel near Crieff, adjacent to Scotland's oldest free public lending library. A double treasure of Scottish heritage in rural Perthshire.",
-    "type": "abbey",
-    "period": "16th century",
-    "rating": 4.1,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "atmospheric",
-      "museum"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Fortingall Church",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perth and Kinross",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Fortingall%20Church%20Perth%20and%20Kinross%20scotland",
-    "image": "https://img.castlecore.uk/fortingall-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/fortingall-church-2.jpg",
-      "https://img.castlecore.uk/fortingall-church-3.jpg",
-      "https://img.castlecore.uk/fortingall-church-4.jpg",
-      "https://img.castlecore.uk/fortingall-church-5.jpg"
-    ],
-    "desc": "A tiny Highland church in Glen Lyon sheltering the Fortingall Yew — possibly the oldest living thing in Europe, estimated at 3,000-9,000 years old.",
-    "type": "abbey",
-    "period": "19th century (ancient site)",
-    "rating": 4,
-    "tags": [
-      "well-preserved",
-      "atmospheric",
-      "prehistoric",
-      "free-entry",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Kinross House",
     "country": "scotland",
     "region": "fife-perthshire",
@@ -4754,36 +3899,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinross_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Kinross_House_-_geograph.org.uk_-_1210362.jpg/330px-Kinross_House_-_geograph.org.uk_-_1210362.jpg"
-  },
-  {
-    "name": "Leuchars Norman Church",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Fife",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Leuchars%20Norman%20Church%20Fife%20scotland",
-    "image": "https://img.castlecore.uk/leuchars-norman-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/leuchars-norman-church-2.jpg",
-      "https://img.castlecore.uk/leuchars-norman-church-3.jpg",
-      "https://img.castlecore.uk/leuchars-norman-church-4.jpg",
-      "https://img.castlecore.uk/leuchars-norman-church-5.jpg"
-    ],
-    "desc": "The finest Romanesque church in Scotland — St Athernase's apse and chancel are a masterwork of 12th-century carved stonework. A medieval jewel in a Fife village.",
-    "type": "abbey",
-    "period": "12th century",
-    "rating": 4.2,
-    "tags": [
-      "well-preserved",
-      "norman",
-      "medieval",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Culross Palace",
@@ -4816,30 +3931,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Culross_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Culross_Palace.jpg/330px-Culross_Palace.jpg"
-  },
-  {
-    "name": "Dysart Church",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Fife",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dysart%20Church%20Fife%20scotland",
-    "image": "https://img.castlecore.uk/google-dysart-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Historic church and harbour area in the picturesque Fife town of Dysart, with connections to early Christianity and the town's trading past.",
-    "type": "abbey",
-    "period": "Medieval",
-    "rating": 3.6,
-    "tags": [
-      "well-preserved",
-      "coastal",
-      "atmospheric",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Dunimarle Castle",
@@ -4957,32 +4048,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_west_face_of_the_Sauchie_Tower_-_geograph.org.uk_-_7433938.jpg/330px-The_west_face_of_the_Sauchie_Tower_-_geograph.org.uk_-_7433938.jpg"
   },
   {
-    "name": "Dollar Academy Clock Tower",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Clackmannanshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dollar%20Academy%20Clock%20Tower%20Clackmannanshire%20scotland",
-    "image": "https://img.castlecore.uk/dollar-academy-clock-tower.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dollar-academy-clock-tower-2.jpg",
-      "https://img.castlecore.uk/dollar-academy-clock-tower-3.jpg",
-      "https://img.castlecore.uk/dollar-academy-clock-tower-4.jpg",
-      "https://img.castlecore.uk/dollar-academy-clock-tower-5.jpg"
-    ],
-    "desc": "The landmark clock tower of Dollar Academy, designed by William Henry Playfair. One of Scotland's finest Greek Revival buildings.",
-    "type": "castle",
-    "period": "19th century",
-    "rating": 3.5,
-    "tags": [
-      "well-preserved"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Kinfauns Castle",
     "country": "scotland",
     "region": "fife-perthshire",
@@ -5010,86 +4075,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinfauns_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/KInfauns_Castle.jpg/330px-KInfauns_Castle.jpg"
-  },
-  {
-    "name": "Fowlis Wester Sculptured Stone",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perth and Kinross",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Fowlis%20Wester%20Sculptured%20Stone%20Perth%20and%20Kinross%20scotland",
-    "image": "https://img.castlecore.uk/fowlis-wester-sculptured-stone.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "A magnificent 8th-century Pictish cross-slab in a tiny Perthshire village church, featuring a procession of figures.",
-    "type": "abbey",
-    "period": "8th century",
-    "rating": 3.9,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "celtic",
-      "free-entry",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Pitcur Souterrain",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perth and Kinross",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Pitcur%20Souterrain%20Perth%20and%20Kinross%20scotland",
-    "image": "https://img.castlecore.uk/pitcur-souterrain.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/wiki-pitcur-souterrain.jpg"
-    ],
-    "desc": "An Iron Age underground passage near Dundee â€” one of the finest souterrains in Scotland. A mysterious 2,000-year-old tunnel.",
-    "type": "castle",
-    "period": "Iron Age",
-    "rating": 3.6,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Fowlis Easter Church",
-    "country": "scotland",
-    "region": "fife-perthshire",
-    "county": "Perth and Kinross",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Fowlis%20Easter%20Church%20Perth%20and%20Kinross%20scotland",
-    "image": "https://img.castlecore.uk/fowlis-easter-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/fowlis-easter-church-2.jpg",
-      "https://img.castlecore.uk/fowlis-easter-church-3.jpg",
-      "https://img.castlecore.uk/fowlis-easter-church-4.jpg",
-      "https://img.castlecore.uk/fowlis-easter-church-5.jpg"
-    ],
-    "desc": "A medieval church near Dundee with rare pre-Reformation painted panels â€” Scotland's finest surviving medieval church paintings.",
-    "type": "abbey",
-    "period": "15th century",
-    "rating": 4,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Stirling Castle",
@@ -5271,37 +4256,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Bothwell_Castle"
   },
   {
-    "name": "Newark Castle",
-    "country": "scotland",
-    "region": "glasgow-stirling",
-    "county": "Inverclyde",
-    "lat": "55.93457",
-    "lng": "-4.67787",
-    "mapsLink": "https://www.google.com/maps/search/Newark%20Castle%20Inverclyde%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Dean_Castle%2C_East_Ayrshire_%28cropped%29.jpg/500px-Dean_Castle%2C_East_Ayrshire_%28cropped%29.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [
-      "https://img.castlecore.uk/newark-castle-2.jpg",
-      "https://img.castlecore.uk/newark-castle-3.jpg",
-      "https://img.castlecore.uk/newark-castle-4.jpg",
-      "https://img.castlecore.uk/newark-castle-5.jpg",
-      "https://img.castlecore.uk/newark-castle-main-2.jpg",
-      "https://img.castlecore.uk/newark-castle-main-3.jpg",
-      "https://img.castlecore.uk/newark-castle-main-4.jpg",
-      "https://img.castlecore.uk/newark-castle-main-5.jpg"
-    ],
-    "desc": "A remarkably well-preserved castle on the Clyde at Port Glasgow. The Maxwell family's tower house and later Renaissance mansion overlook the river where ships once launched.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 4.1,
-    "tags": [
-      "well-preserved",
-      "hidden-gem"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Dumbarton Castle",
     "country": "scotland",
     "region": "glasgow-stirling",
@@ -5442,32 +4396,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Mugdock_Castle"
-  },
-  {
-    "name": "Finlaystone Castle",
-    "country": "scotland",
-    "region": "glasgow-stirling",
-    "county": "Inverclyde",
-    "lat": "55.9287",
-    "lng": "-4.6191",
-    "mapsLink": "https://www.google.com/maps/search/Finlaystone%20Castle%20Inverclyde%20scotland",
-    "image": "https://img.castlecore.uk/finlaystone-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "A country house estate on the Clyde near Langbank, home to the Cunninghame-Graham family. Woodlands, gardens, and connections to both John Knox and Robert Burns.",
-    "type": "castle",
-    "period": "14th century onwards",
-    "rating": 3.4,
-    "tags": [
-      "well-preserved",
-      "gardens",
-      "kid-friendly",
-      "woodland",
-      "dog-friendly",
-      "events-venue"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Balloch Castle",
@@ -5683,33 +4611,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Lennox_Castle_%28Aerial%2C_04-25%29.jpg/330px-Lennox_Castle_%28Aerial%2C_04-25%29.jpg"
   },
   {
-    "name": "Kilmacolm Castle",
-    "country": "scotland",
-    "region": "glasgow-stirling",
-    "county": "Renfrewshire",
-    "lat": "55.894103",
-    "lng": "-4.62708",
-    "mapsLink": "https://www.google.com/maps/search/Kilmacolm%20Castle%20Renfrewshire%20scotland",
-    "image": "https://img.castlecore.uk/kilmacolm-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kilmacolm-castle-2.jpg",
-      "https://img.castlecore.uk/kilmacolm-castle-3.jpg",
-      "https://img.castlecore.uk/kilmacolm-castle-4.jpg",
-      "https://img.castlecore.uk/kilmacolm-castle-5.jpg"
-    ],
-    "desc": "Minimal remains of a medieval castle in the village of Kilmacolm, Renfrewshire.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.1,
-    "tags": [
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Cathcart Castle",
     "country": "scotland",
     "region": "glasgow-stirling",
@@ -5766,34 +4667,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Mearns_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Mearns_Castle.jpg/330px-Mearns_Castle.jpg"
-  },
-  {
-    "name": "Arnprior Tower",
-    "country": "scotland",
-    "region": "glasgow-stirling",
-    "county": "Stirling",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Arnprior%20Tower%20Stirling%20scotland",
-    "image": "https://img.castlecore.uk/arnprior-tower.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/arnprior-tower-2.jpg",
-      "https://img.castlecore.uk/arnprior-tower-3.jpg",
-      "https://img.castlecore.uk/arnprior-tower-4.jpg",
-      "https://img.castlecore.uk/arnprior-tower-5.jpg"
-    ],
-    "desc": "Ruins of a small tower house near Arnprior in Stirlingshire. A Buchanan stronghold whose laird was known as the 'King of Kippen'.",
-    "type": "castle",
-    "period": "16th century",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "free-entry",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Dunmore Pineapple",
@@ -6052,38 +4925,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Cawdor_Castle"
   },
   {
-    "name": "Fort George",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "57.58388889",
-    "lng": "-4.07027778",
-    "mapsLink": "https://www.google.com/maps/search/Fort%20George%20Highland%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Fort_George_Moray_Firth.jpg/500px-Fort_George_Moray_Firth.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [
-      "https://img.castlecore.uk/fort-george-2.jpg",
-      "https://img.castlecore.uk/fort-george-3.jpg",
-      "https://img.castlecore.uk/fort-george-4.jpg",
-      "https://img.castlecore.uk/fort-george-5.jpg",
-      "https://img.castlecore.uk/fort-george-main-2.jpg",
-      "https://img.castlecore.uk/fort-george-main-3.jpg",
-      "https://img.castlecore.uk/fort-george-main-4.jpg",
-      "https://img.castlecore.uk/fort-george-main-5.jpg"
-    ],
-    "desc": "The mightiest artillery fortification in Britain, built after Culloden to prevent further Highland risings. Its massive bastions and barracks remain in military use after 250 years.",
-    "type": "castle",
-    "period": "18th century",
-    "rating": 4.4,
-    "tags": [
-      "well-preserved",
-      "kid-friendly",
-      "hidden-gem"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Ardvreck Castle",
     "country": "scotland",
     "region": "highlands",
@@ -6272,37 +5113,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Mingary_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mingary_NE_02.jpg/330px-Mingary_NE_02.jpg"
-  },
-  {
-    "name": "Old Wick Castle",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Old%20Wick%20Castle%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/old-wick-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/old-wick-castle-2.jpg",
-      "https://img.castlecore.uk/old-wick-castle-3.jpg",
-      "https://img.castlecore.uk/old-wick-castle-4.jpg",
-      "https://img.castlecore.uk/old-wick-castle-5.jpg"
-    ],
-    "desc": "A gaunt Norse tower clinging to a knife-edge promontory above the North Sea â€” one of Scotland's oldest castles and among its most dramatically sited. Known locally as 'The Old Man of Wick'.",
-    "type": "castle",
-    "period": "12th-14th century",
-    "rating": 3.8,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "cliffside",
-      "atmospheric",
-      "free-entry",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Castle Girnigoe",
@@ -6533,39 +5343,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Tioram",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Casteal_Tioram_-_geograph.org.uk_-_6134571.jpg/330px-Casteal_Tioram_-_geograph.org.uk_-_6134571.jpg"
-  },
-  {
-    "name": "Loch-an-Eilein Castle",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Loch-an-Eilein%20Castle%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/loch-an-eilein-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/loch-an-eilein-castle-2.jpg",
-      "https://img.castlecore.uk/loch-an-eilein-castle-3.jpg",
-      "https://img.castlecore.uk/loch-an-eilein-castle-4.jpg",
-      "https://img.castlecore.uk/loch-an-eilein-castle-5.jpg"
-    ],
-    "desc": "A ruined castle marooned on a tiny island in an ancient Caledonian pine forest — reflected perfectly in dark Highland waters where ospreys once nested on the tower walls.",
-    "type": "castle",
-    "period": "13th century",
-    "rating": 4.3,
-    "tags": [
-      "atmospheric",
-      "ruins-romantic",
-      "island",
-      "remote",
-      "woodland",
-      "photogenic",
-      "dog-friendly",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Lochindorb Castle",
@@ -6800,37 +5577,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Castle_Sinclair_Girnigoe"
   },
   {
-    "name": "Bucholie Castle",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Bucholie%20Castle%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/bucholie-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/bucholie-castle-2.jpg",
-      "https://img.castlecore.uk/bucholie-castle-3.jpg",
-      "https://img.castlecore.uk/bucholie-castle-4.jpg",
-      "https://img.castlecore.uk/bucholie-castle-5.jpg"
-    ],
-    "desc": "Fragmentary Norse-era ruins on a dramatic sea stack near Freswick in Caithness. Linked to the legendary Sweyn Asleifsson — the 'Ultimate Viking'.",
-    "type": "castle",
-    "period": "12th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "cliffside",
-      "remote",
-      "free-entry",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Ackergill Tower",
     "country": "scotland",
     "region": "highlands",
@@ -6859,35 +5605,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Ackergill_Tower"
-  },
-  {
-    "name": "Earl's Palace Birsay",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Orkney",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Earl's%20Palace%20Birsay%20Orkney%20scotland",
-    "image": "https://img.castlecore.uk/earl-s-palace-birsay.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/earl-s-palace-birsay-2.jpg",
-      "https://img.castlecore.uk/earl-s-palace-birsay-3.jpg",
-      "https://img.castlecore.uk/earl-s-palace-birsay-4.jpg",
-      "https://img.castlecore.uk/earl-s-palace-birsay-5.jpg"
-    ],
-    "desc": "Substantial Renaissance ruins overlooking the Brough of Birsay in Orkney. Built by the tyrannical Earl Robert Stewart — oppression made beautiful in red Orcadian sandstone.",
-    "type": "palace",
-    "period": "16th century",
-    "rating": 3.6,
-    "tags": [
-      "ruins-romantic",
-      "atmospheric",
-      "free-entry",
-      "coastal"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Noltland Castle",
@@ -7065,39 +5782,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Castle_Stuart"
   },
   {
-    "name": "Beaufort Castle",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Beaufort%20Castle%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/beaufort-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/beaufort-castle-2.jpg",
-      "https://img.castlecore.uk/beaufort-castle-3.jpg",
-      "https://img.castlecore.uk/beaufort-castle-4.jpg",
-      "https://img.castlecore.uk/beaufort-castle-5.jpg",
-      "https://img.castlecore.uk/beaufort-castle-main-2.jpg",
-      "https://img.castlecore.uk/beaufort-castle-main-3.jpg",
-      "https://img.castlecore.uk/beaufort-castle-main-4.jpg",
-      "https://img.castlecore.uk/beaufort-castle-main-5.jpg"
-    ],
-    "desc": "The ancestral seat of Clan Fraser of Lovat in the Scottish Highlands — rebuilt in grand Victorian baronial style after being burned in the aftermath of Culloden.",
-    "type": "castle",
-    "period": "Victorian (medieval origins)",
-    "rating": 3.3,
-    "tags": [
-      "well-preserved",
-      "victorian",
-      "gardens",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Kinlochaline Castle",
     "country": "scotland",
     "region": "highlands",
@@ -7226,36 +5910,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Broch_of_Mousa",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Mousa_Broch_20080821_02.jpg/330px-Mousa_Broch_20080821_02.jpg"
-  },
-  {
-    "name": "Knock Castle",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Knock%20Castle%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/knock-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/knock-castle-2.jpg",
-      "https://img.castlecore.uk/knock-castle-3.jpg",
-      "https://img.castlecore.uk/knock-castle-4.jpg",
-      "https://img.castlecore.uk/knock-castle-5.jpg"
-    ],
-    "desc": "Ruined castle on the shores of Loch Goil, Argyll. A Campbell stronghold with dark legends of spectral appearances and clan treachery.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 3.9,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "atmospheric",
-      "haunted",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Carbisdale Castle",
@@ -7410,36 +6064,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Castle_Roy"
   },
   {
-    "name": "Earl Patrick's Palace",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Orkney",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Earl%20Patrick's%20Palace%20Orkney%20scotland",
-    "image": "https://img.castlecore.uk/earl-patrick-s-palace.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/earl-patrick-s-palace-2.jpg",
-      "https://img.castlecore.uk/earl-patrick-s-palace-3.jpg",
-      "https://img.castlecore.uk/earl-patrick-s-palace-4.jpg",
-      "https://img.castlecore.uk/earl-patrick-s-palace-5.jpg"
-    ],
-    "desc": "Scotland's finest Renaissance palace ruin — built by a tyrannical earl so cruel his execution was delayed while he learned the Lord's Prayer.",
-    "type": "castle",
-    "period": "17th century",
-    "rating": 4.4,
-    "tags": [
-      "atmospheric",
-      "ruins-romantic",
-      "free-entry",
-      "dark-brooding",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Old Scatness",
     "country": "scotland",
     "region": "highlands",
@@ -7464,64 +6088,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Old_Scatness",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg/330px-Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg"
-  },
-  {
-    "name": "Windhouse",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Shetland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Windhouse%20Shetland%20scotland",
-    "image": "https://img.castlecore.uk/windhouse.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/windhouse-2.jpg"
-    ],
-    "desc": "Reputedly the most haunted house in Shetland, a ruined Georgian mansion on the island of Yell. Bleak, windswept, and deliciously sinister.",
-    "type": "castle",
-    "period": "18th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "haunted",
-      "remote",
-      "dark-brooding",
-      "atmospheric",
-      "island"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Borve Castle",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Borve%20Castle%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/borve-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/borve-castle-2.jpg",
-      "https://img.castlecore.uk/borve-castle-3.jpg",
-      "https://img.castlecore.uk/borve-castle-4.jpg",
-      "https://img.castlecore.uk/borve-castle-5.jpg"
-    ],
-    "desc": "A ruined medieval fortress on the north coast of Sutherland, overlooking the wild Borve beach. A lonely sentinel in one of Scotland's most remote landscapes.",
-    "type": "castle",
-    "period": "14th century",
-    "rating": 3.4,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "remote",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Varrich Castle",
@@ -7647,91 +6213,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Balfour_castle_shapinsay.jpg/330px-Balfour_castle_shapinsay.jpg"
   },
   {
-    "name": "Wyre Heritage Centre",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Orkney",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Wyre%20Heritage%20Centre%20Orkney%20scotland",
-    "image": "https://img.castlecore.uk/wyre-heritage-centre.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/wyre-heritage-centre-2.jpg",
-      "https://img.castlecore.uk/wyre-heritage-centre-3.jpg",
-      "https://img.castlecore.uk/wyre-heritage-centre-4.jpg"
-    ],
-    "desc": "A small heritage centre on the Orkney island of Wyre, near the oldest Norse castle in Scotland — Cubbie Roo's Castle — and an atmospheric medieval chapel.",
-    "type": "castle",
-    "period": "12th century",
-    "rating": 3.6,
-    "tags": [
-      "museum",
-      "island",
-      "remote",
-      "free-entry",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Quoyberstane Stone",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Orkney",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Quoyberstane%20Stone%20Orkney%20scotland",
-    "image": "https://img.castlecore.uk/quoyberstane-stone.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/quoyberstane-stone-2.jpg",
-      "https://img.castlecore.uk/quoyberstane-stone-3.jpg",
-      "https://img.castlecore.uk/quoyberstane-stone-4.jpg",
-      "https://img.castlecore.uk/quoyberstane-stone-5.jpg"
-    ],
-    "desc": "A Pictish/Norse carved stone in Orkney, one of many carved stones scattered across the islands. A fragment of the deep cultural layers that define Orcadian heritage.",
-    "type": "castle",
-    "period": "Pictish/Norse",
-    "rating": 3.2,
-    "tags": [
-      "prehistoric",
-      "free-entry",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Brahan Castle Site",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Brahan%20Castle%20Site%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/brahan-castle-site.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/brahan-castle-site-2.jpg",
-      "https://img.castlecore.uk/brahan-castle-site-3.jpg",
-      "https://img.castlecore.uk/brahan-castle-site-4.jpg",
-      "https://img.castlecore.uk/brahan-castle-site-5.jpg"
-    ],
-    "desc": "The vanished seat of the Mackenzie Earls of Seaforth, famous for the Brahan Seer — Scotland's most celebrated prophet, who was burned here in a barrel of tar.",
-    "type": "castle",
-    "period": "Demolished 1953",
-    "rating": 3.3,
-    "tags": [
-      "haunted",
-      "free-entry",
-      "dark-brooding"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Kilravock Castle",
     "country": "scotland",
     "region": "highlands",
@@ -7818,33 +6299,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Dalcross_Castle_-_geograph.org.uk_-_370185.jpg/330px-Dalcross_Castle_-_geograph.org.uk_-_370185.jpg"
   },
   {
-    "name": "Boath Doocot",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Boath%20Doocot%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/boath-doocot.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/boath-doocot-2.jpg",
-      "https://img.castlecore.uk/boath-doocot-3.jpg",
-      "https://img.castlecore.uk/boath-doocot-4.jpg",
-      "https://img.castlecore.uk/boath-doocot-5.jpg"
-    ],
-    "desc": "A remarkably fine 17th-century doocot (dovecote) near Auldearn — one of Scotland's best-preserved, with nesting boxes for over 500 pigeons.",
-    "type": "castle",
-    "period": "17th century",
-    "rating": 3.5,
-    "tags": [
-      "well-preserved",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Cromarty Courthouse",
     "country": "scotland",
     "region": "highlands",
@@ -7905,67 +6359,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Tarbat_ness_lighthouse_OS_map_25inch_Rosshire_XXX.7_1880.jpeg/330px-Tarbat_ness_lighthouse_OS_map_25inch_Rosshire_XXX.7_1880.jpeg"
   },
   {
-    "name": "Rosemarkie Pictish Stone",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Rosemarkie%20Pictish%20Stone%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/rosemarkie-pictish-stone.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/rosemarkie-pictish-stone-2.jpg",
-      "https://img.castlecore.uk/rosemarkie-pictish-stone-3.jpg",
-      "https://img.castlecore.uk/rosemarkie-pictish-stone-4.jpg",
-      "https://img.castlecore.uk/rosemarkie-pictish-stone-5.jpg"
-    ],
-    "desc": "A remarkable Pictish cross-slab in Groam House Museum, Rosemarkie. Intricate 8th-century carving that reveals the artistic sophistication of the mysterious Picts.",
-    "type": "abbey",
-    "period": "8th century",
-    "rating": 4,
-    "tags": [
-      "well-preserved",
-      "museum",
-      "prehistoric",
-      "celtic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Clava Cairns",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Clava%20Cairns%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/clava-cairns.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/clava-cairns-2.jpg",
-      "https://img.castlecore.uk/clava-cairns-3.jpg",
-      "https://img.castlecore.uk/clava-cairns-4.jpg",
-      "https://img.castlecore.uk/clava-cairns-5.jpg"
-    ],
-    "desc": "A hauntingly atmospheric Bronze Age cemetery where 4,000-year-old burial cairns stand in a woodland clearing above the River Nairn — the kind of place that inspired Outlander's standing stones.",
-    "type": "castle",
-    "period": "Bronze Age",
-    "rating": 4.4,
-    "tags": [
-      "atmospheric",
-      "prehistoric",
-      "free-entry",
-      "woodland",
-      "photogenic",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Culloden Battlefield",
     "country": "scotland",
     "region": "highlands",
@@ -7998,35 +6391,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Battle_of_Culloden",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/The_Battle_of_Culloden.jpg/330px-The_Battle_of_Culloden.jpg"
-  },
-  {
-    "name": "Inverness Castle Viewpoint",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Inverness%20Castle%20Viewpoint%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/inverness-castle-viewpoint.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/inverness-castle-viewpoint-2.jpg",
-      "https://img.castlecore.uk/inverness-castle-viewpoint-3.jpg",
-      "https://img.castlecore.uk/inverness-castle-viewpoint-4.jpg",
-      "https://img.castlecore.uk/inverness-castle-viewpoint-5.jpg"
-    ],
-    "desc": "The red sandstone sentinel of the Highland capital — perched on a cliff above the River Ness where castles have stood since Macbeth's time.",
-    "type": "castle",
-    "period": "19th century (current building)",
-    "rating": 4.1,
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "museum",
-      "guided-tours"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Dingwall Castle",
@@ -8116,68 +6480,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Redcastle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Redcastle%2C_Black_Isle.jpg/330px-Redcastle%2C_Black_Isle.jpg"
-  },
-  {
-    "name": "Dun Telve Broch",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dun%20Telve%20Broch%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/dun-telve-broch.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dun-telve-broch-2.jpg",
-      "https://img.castlecore.uk/dun-telve-broch-3.jpg",
-      "https://img.castlecore.uk/dun-telve-broch-4.jpg",
-      "https://img.castlecore.uk/dun-telve-broch-5.jpg"
-    ],
-    "desc": "One of the best-preserved brochs on the Scottish mainland, standing over 10 metres high in Glen Beag near Glenelg. An awe-inspiring Iron Age tower in a remote Highland glen.",
-    "type": "castle",
-    "period": "Iron Age (c. 100 BC)",
-    "rating": 4.3,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "remote",
-      "atmospheric",
-      "free-entry",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Dun Troddan Broch",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dun%20Troddan%20Broch%20Highland%20scotland",
-    "image": "https://img.castlecore.uk/dun-troddan-broch.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dun-troddan-broch-2.jpg",
-      "https://img.castlecore.uk/dun-troddan-broch-3.jpg",
-      "https://img.castlecore.uk/dun-troddan-broch-4.jpg",
-      "https://img.castlecore.uk/dun-troddan-broch-5.jpg"
-    ],
-    "desc": "The twin of Dun Telve, standing nearby in Glen Beag — together they form the finest pair of mainland brochs in Scotland. Iron Age engineering at its most impressive.",
-    "type": "castle",
-    "period": "Iron Age (c. 100 BC)",
-    "rating": 4.2,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "remote",
-      "atmospheric",
-      "free-entry",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Bernera Barracks",
@@ -9108,37 +7410,6 @@
     "wiki": "https://en.wikipedia.org/wiki/New_Slains_Castle"
   },
   {
-    "name": "Dunideer Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dunideer%20Castle%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/dunideer-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dunideer-castle-2.jpg",
-      "https://img.castlecore.uk/dunideer-castle-3.jpg",
-      "https://img.castlecore.uk/dunideer-castle-4.jpg",
-      "https://img.castlecore.uk/dunideer-castle-5.jpg"
-    ],
-    "desc": "Enigmatic hilltop ruins crowning a prominent Aberdeenshire hill, with traces of both an Iron Age vitrified fort and a medieval castle. Ancient layers in a dramatic landscape.",
-    "type": "castle",
-    "period": "Iron Age / 13th century",
-    "rating": 3.6,
-    "tags": [
-      "ruins-romantic",
-      "hilltop",
-      "prehistoric",
-      "free-entry",
-      "atmospheric",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Lickleyhead Castle",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -9250,34 +7521,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Barra_Castle"
-  },
-  {
-    "name": "Pitfichie Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Pitfichie%20Castle%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/pitfichie-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/pitfichie-castle-2.jpg",
-      "https://img.castlecore.uk/pitfichie-castle-3.jpg",
-      "https://img.castlecore.uk/pitfichie-castle-4.jpg",
-      "https://img.castlecore.uk/pitfichie-castle-5.jpg"
-    ],
-    "desc": "A restored 15th-century tower house in rural Aberdeenshire, rescued from near-total ruin and rebuilt as a private home. A phoenix of Scottish baronial architecture.",
-    "type": "tower house",
-    "period": "15th century",
-    "rating": 3.4,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Cluny Castle",
@@ -9417,36 +7660,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Pitsligo_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg/330px-Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg"
-  },
-  {
-    "name": "Auchindoir Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Auchindoir%20Castle%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/auchindoir-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/auchindoir-castle-2.jpg",
-      "https://img.castlecore.uk/auchindoir-castle-3.jpg",
-      "https://img.castlecore.uk/auchindoir-castle-4.jpg",
-      "https://img.castlecore.uk/auchindoir-castle-5.jpg"
-    ],
-    "desc": "Fragmentary but evocative ruins in a remote Aberdeenshire glen, notable for the adjacent Romanesque church of St Mary. Ancient sacred ground in lonely hill country.",
-    "type": "castle",
-    "period": "13th century",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "remote",
-      "medieval",
-      "free-entry",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Esslemont Castle",
@@ -9806,34 +8019,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Fedderate_Castle"
   },
   {
-    "name": "Ardiffery Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Ardiffery%20Castle%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/ardiffery-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/ardiffery-castle-2.jpg",
-      "https://img.castlecore.uk/ardiffery-castle-3.jpg",
-      "https://img.castlecore.uk/ardiffery-castle-4.jpg",
-      "https://img.castlecore.uk/ardiffery-castle-5.jpg"
-    ],
-    "desc": "Scant remains of a small tower house in rural Buchan, near Cruden Bay. One of many minor fortified houses that once dotted northeast Scotland.",
-    "type": "tower house",
-    "period": "16th century",
-    "rating": 3,
-    "tags": [
-      "ruins-romantic",
-      "free-entry",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Corse Castle",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -10159,36 +8344,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Craigston_Castle_-_geograph.org.uk_-_5598691.jpg/330px-Craigston_Castle_-_geograph.org.uk_-_5598691.jpg"
   },
   {
-    "name": "Red Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Angus",
-    "lat": "56.65042",
-    "lng": "-2.51074",
-    "mapsLink": "https://www.google.com/maps/search/Red%20Castle%20Angus%20scotland",
-    "image": "https://img.castlecore.uk/red-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/red-castle-2.jpg",
-      "https://img.castlecore.uk/red-castle-3.jpg",
-      "https://img.castlecore.uk/red-castle-4.jpg",
-      "https://img.castlecore.uk/red-castle-5.jpg"
-    ],
-    "desc": "Ruined tower house on the shores of Lunan Bay in Angus — one of Scotland's most beautiful beaches. Red sandstone fragments against white sand and blue sea.",
-    "type": "castle",
-    "period": "12th-15th century",
-    "rating": 3.7,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "photogenic",
-      "free-entry",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Restenneth Priory",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -10304,92 +8459,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Darnaway_Castle"
   },
   {
-    "name": "Troup Head Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Troup%20Head%20Castle%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/troup-head-castle-2.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/troup-head-castle-2.jpg",
-      "https://img.castlecore.uk/troup-head-castle-3.jpg",
-      "https://img.castlecore.uk/troup-head-castle-4.jpg",
-      "https://img.castlecore.uk/troup-head-castle-5.jpg"
-    ],
-    "desc": "Fragmentary remains of a coastal fortification near the RSPB gannet colony at Troup Head, Aberdeenshire. The birds now outnumber the stones.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.4,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "cliffside",
-      "free-entry",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Kincardine Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Kincardine%20Castle%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/kincardine-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kincardine-castle-2.jpg",
-      "https://img.castlecore.uk/kincardine-castle-3.jpg",
-      "https://img.castlecore.uk/kincardine-castle-4.jpg",
-      "https://img.castlecore.uk/kincardine-castle-5.jpg"
-    ],
-    "desc": "Fragmentary ruins of a once-important royal castle in the Howe of the Mearns, near Fettercairn. Scotland's forgotten royal residence.",
-    "type": "castle",
-    "period": "12th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "free-entry",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Dunecht House Chapel",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dunecht%20House%20Chapel%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/dunecht-house-chapel.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dunecht-house-chapel-2.jpg",
-      "https://img.castlecore.uk/dunecht-house-chapel-3.jpg",
-      "https://img.castlecore.uk/dunecht-house-chapel-4.jpg",
-      "https://img.castlecore.uk/dunecht-house-chapel-5.jpg"
-    ],
-    "desc": "A magnificent private chapel attached to Dunecht House in Aberdeenshire, noted for its remarkable art and architecture. Gothic Revival splendour in a secret setting.",
-    "type": "abbey",
-    "period": "19th century",
-    "rating": 3.4,
-    "tags": [
-      "well-preserved",
-      "gothic",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Kinneff Church",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -10449,92 +8518,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Deer_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Deer_Abbey_020.jpg/330px-Deer_Abbey_020.jpg"
-  },
-  {
-    "name": "Monymusk Priory Church",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Monymusk%20Priory%20Church%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/monymusk-priory-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/monymusk-priory-church-2.jpg",
-      "https://img.castlecore.uk/monymusk-priory-church-3.jpg",
-      "https://img.castlecore.uk/monymusk-priory-church-4.jpg",
-      "https://img.castlecore.uk/monymusk-priory-church-5.jpg"
-    ],
-    "desc": "A beautifully preserved Romanesque church in the Aberdeenshire village of Monymusk, associated with the legendary Brecbennoch — the relic carried before Bruce's army at Bannockburn.",
-    "type": "abbey",
-    "period": "12th century",
-    "rating": 3.8,
-    "tags": [
-      "well-preserved",
-      "norman",
-      "atmospheric",
-      "celtic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Kinkell Church",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Kinkell%20Church%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/kinkell-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kinkell-church-2.jpg",
-      "https://img.castlecore.uk/kinkell-church-3.jpg",
-      "https://img.castlecore.uk/kinkell-church-4.jpg",
-      "https://img.castlecore.uk/kinkell-church-5.jpg"
-    ],
-    "desc": "A ruined medieval church near Inverurie in Aberdeenshire, notable for a remarkably fine sacrament house — one of the best examples of pre-Reformation church furnishing in Scotland.",
-    "type": "abbey",
-    "period": "16th century",
-    "rating": 3.7,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry",
-      "gothic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Tillyangus Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Tillyangus%20Castle%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/tillyangus-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/tillyangus-castle-2.jpg",
-      "https://img.castlecore.uk/tillyangus-castle-3.jpg",
-      "https://img.castlecore.uk/tillyangus-castle-4.jpg",
-      "https://img.castlecore.uk/tillyangus-castle-5.jpg"
-    ],
-    "desc": "A restored tower house in the Aberdeenshire countryside, near the village of Clatt. Compact baronial charm in the Garioch.",
-    "type": "castle",
-    "period": "16th century",
-    "rating": 3.3,
-    "tags": [
-      "well-preserved",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Leith Hall",
@@ -10632,39 +8615,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Parterre_garden_at_Pitmedden_1459574.jpg/330px-Parterre_garden_at_Pitmedden_1459574.jpg"
   },
   {
-    "name": "Craigevar Castle Grounds",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Craigevar%20Castle%20Grounds%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/craigevar-castle-grounds.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/craigevar-castle-grounds-2.jpg",
-      "https://img.castlecore.uk/craigevar-castle-grounds-3.jpg",
-      "https://img.castlecore.uk/craigevar-castle-grounds-4.jpg",
-      "https://img.castlecore.uk/craigevar-castle-grounds-5.jpg"
-    ],
-    "desc": "A pink-harled fairytale tower rising from Aberdeenshire woodland — said to have inspired Disney's Cinderella Castle. Seven storeys of Scottish Baronial perfection.",
-    "type": "castle",
-    "period": "17th century",
-    "rating": 4.4,
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "woodland",
-      "romantic",
-      "atmospheric",
-      "gardens",
-      "guided-tours",
-      "gift-shop"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Abergeldie Castle",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -10692,64 +8642,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Abergeldie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Abergeldie_Castle_after_the_flood_-_geograph.org.uk_-_4801607.jpg/330px-Abergeldie_Castle_after_the_flood_-_geograph.org.uk_-_4801607.jpg"
-  },
-  {
-    "name": "Crovie Village",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Crovie%20Village%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/crovie-village.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/crovie-village-2.jpg",
-      "https://img.castlecore.uk/crovie-village-3.jpg",
-      "https://img.castlecore.uk/crovie-village-4.jpg",
-      "https://img.castlecore.uk/crovie-village-5.jpg"
-    ],
-    "desc": "A single row of houses clinging to the foot of sea cliffs in Banffshire — one of Scotland's most extraordinary villages. No road access, just a footpath between cliff and sea.",
-    "type": "castle",
-    "period": "18th-19th century",
-    "rating": 4.3,
-    "tags": [
-      "coastal",
-      "remote",
-      "atmospheric",
-      "photogenic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Pennan Village",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Pennan%20Village%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/pennan-village.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/pennan-village-2.jpg",
-      "https://img.castlecore.uk/pennan-village-3.jpg",
-      "https://img.castlecore.uk/pennan-village-4.jpg",
-      "https://img.castlecore.uk/pennan-village-5.jpg"
-    ],
-    "desc": "The tiny Banffshire fishing village made famous by the film 'Local Hero'. A single row of whitewashed houses beneath towering red cliffs, with the iconic red phone box.",
-    "type": "castle",
-    "period": "18th-19th century",
-    "rating": 4.1,
-    "tags": [
-      "coastal",
-      "atmospheric",
-      "photogenic",
-      "filming-location"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Peel Ring of Lumphanan",
@@ -10783,35 +8675,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Peel_Ring_of_Lumphanan_20080502.jpg/330px-Peel_Ring_of_Lumphanan_20080502.jpg"
   },
   {
-    "name": "Migvie Church",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Migvie%20Church%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/migvie-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/migvie-church-2.jpg",
-      "https://img.castlecore.uk/migvie-church-3.jpg",
-      "https://img.castlecore.uk/migvie-church-4.jpg",
-      "https://img.castlecore.uk/migvie-church-5.jpg"
-    ],
-    "desc": "A ruined medieval church in Aberdeenshire with a notable Pictish carved stone. Simple rural ruin with an important sculptured monument.",
-    "type": "abbey",
-    "period": "Pictish / Medieval",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "prehistoric",
-      "celtic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Sueno's Stone",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -10841,93 +8704,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Sueno's_Stone",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Forres_sueno.jpg/330px-Forres_sueno.jpg"
-  },
-  {
-    "name": "Burghead Well",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Moray",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Burghead%20Well%20Moray%20scotland",
-    "image": "https://img.castlecore.uk/burghead-well.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/burghead-well-2.jpg",
-      "https://img.castlecore.uk/burghead-well-3.jpg",
-      "https://img.castlecore.uk/burghead-well-4.jpg",
-      "https://img.castlecore.uk/burghead-well-5.jpg"
-    ],
-    "desc": "A mysterious early Christian or Pictish well chamber cut deep into rock at Burghead — a unique subterranean structure whose purpose continues to puzzle archaeologists.",
-    "type": "castle",
-    "period": "Pictish (early medieval)",
-    "rating": 3.9,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "atmospheric",
-      "free-entry",
-      "celtic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Dallas Dhu Distillery",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Moray",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Dallas%20Dhu%20Distillery%20Moray%20scotland",
-    "image": "https://img.castlecore.uk/dallas-dhu-distillery.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dallas-dhu-distillery-2.jpg",
-      "https://img.castlecore.uk/dallas-dhu-distillery-3.jpg",
-      "https://img.castlecore.uk/dallas-dhu-distillery-4.jpg",
-      "https://img.castlecore.uk/dallas-dhu-distillery-5.jpg"
-    ],
-    "desc": "A perfectly preserved Victorian malt whisky distillery near Forres, frozen in time as a museum. Smell the malt, see the stills, and understand how Scotland's national drink is made.",
-    "type": "castle",
-    "period": "19th century",
-    "rating": 4.2,
-    "tags": [
-      "well-preserved",
-      "museum",
-      "guided-tours",
-      "gift-shop",
-      "victorian"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Rothiemay Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Moray",
-    "lat": "57.5226",
-    "lng": "-2.7565",
-    "mapsLink": "https://www.google.com/maps/search/Rothiemay%20Castle%20Moray%20scotland",
-    "image": "https://img.castlecore.uk/rothiemay-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/rothiemay-castle-2.jpg",
-      "https://img.castlecore.uk/rothiemay-castle-3.jpg",
-      "https://img.castlecore.uk/rothiemay-castle-4.jpg",
-      "https://img.castlecore.uk/rothiemay-castle-5.jpg"
-    ],
-    "desc": "A private castle in the Deveron valley, Banffshire. Medieval origins with later baronial additions, set in the rolling Moray countryside.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 3.4,
-    "tags": [
-      "well-preserved",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Blairfindy Castle",
@@ -11051,92 +8827,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fordyce_Castle_-_geograph.org.uk_-_7908923.jpg/330px-Fordyce_Castle_-_geograph.org.uk_-_7908923.jpg"
   },
   {
-    "name": "Deskford Church",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Moray",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Deskford%20Church%20Moray%20scotland",
-    "image": "https://img.castlecore.uk/deskford-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/deskford-church-2.jpg",
-      "https://img.castlecore.uk/deskford-church-3.jpg",
-      "https://img.castlecore.uk/deskford-church-4.jpg",
-      "https://img.castlecore.uk/deskford-church-5.jpg"
-    ],
-    "desc": "A ruined medieval church in Banffshire, notable for a fine sacrament house — one of the best examples of pre-Reformation church furnishing in northeast Scotland.",
-    "type": "abbey",
-    "period": "16th century",
-    "rating": 3.6,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry",
-      "gothic"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Edinkillie Church",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Moray",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Edinkillie%20Church%20Moray%20scotland",
-    "image": "https://img.castlecore.uk/edinkillie-church.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/edinkillie-church-2.jpg",
-      "https://img.castlecore.uk/edinkillie-church-3.jpg",
-      "https://img.castlecore.uk/edinkillie-church-4.jpg",
-      "https://img.castlecore.uk/edinkillie-church-5.jpg"
-    ],
-    "desc": "A ruined medieval church near Dunphail in Moray, with fine carved stones in a peaceful woodland setting.",
-    "type": "abbey",
-    "period": "Medieval",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "woodland",
-      "free-entry",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Lochnagar Bothie",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Aberdeenshire",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Lochnagar%20Bothie%20Aberdeenshire%20scotland",
-    "image": "https://img.castlecore.uk/lochnagar-bothie.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/lochnagar-bothie-2.jpg",
-      "https://img.castlecore.uk/lochnagar-bothie-3.jpg",
-      "https://img.castlecore.uk/lochnagar-bothie-4.jpg",
-      "https://img.castlecore.uk/lochnagar-bothie-5.jpg"
-    ],
-    "desc": "A mountain bothy beneath the cliffs of Lochnagar in the Cairngorms. Shelter for hillwalkers in dramatic mountain scenery.",
-    "type": "castle",
-    "period": "Various",
-    "rating": 4.3,
-    "tags": [
-      "remote",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Durris Castle",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -11248,64 +8938,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones"
   },
   {
-    "name": "Tealing Doocot",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Angus",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Tealing%20Doocot%20Angus%20scotland",
-    "image": "https://img.castlecore.uk/tealing-doocot.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/tealing-doocot-2.jpg",
-      "https://img.castlecore.uk/tealing-doocot-3.jpg",
-      "https://img.castlecore.uk/tealing-doocot-4.jpg",
-      "https://img.castlecore.uk/tealing-doocot-5.jpg"
-    ],
-    "desc": "A fine 16th-century doocot near Dundee with over 500 nesting boxes. A well-preserved example of these Scottish agricultural buildings.",
-    "type": "castle",
-    "period": "16th century",
-    "rating": 3.5,
-    "tags": [
-      "well-preserved",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Broughty Ferry Beach Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Dundee",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Broughty%20Ferry%20Beach%20Castle%20Dundee%20scotland",
-    "image": "https://img.castlecore.uk/broughty-ferry-beach-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/broughty-ferry-beach-castle-2.jpg",
-      "https://img.castlecore.uk/broughty-ferry-beach-castle-3.jpg",
-      "https://img.castlecore.uk/broughty-ferry-beach-castle-4.jpg",
-      "https://img.castlecore.uk/broughty-ferry-beach-castle-5.jpg"
-    ],
-    "desc": "A sturdy 15th-century fortress standing guard at the mouth of the Tay — where castle walls meet sandy beach and panoramic views stretch across the Firth to Fife.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 4.3,
-    "tags": [
-      "coastal",
-      "museum",
-      "photogenic",
-      "kid-friendly",
-      "free-entry",
-      "dog-friendly"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Ethie Castle",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -11395,34 +9027,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Airlie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Airlie_Castle_%28July_2021%29.jpg/330px-Airlie_Castle_%28July_2021%29.jpg"
-  },
-  {
-    "name": "Kinnaird Castle",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Angus",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Kinnaird%20Castle%20Angus%20scotland",
-    "image": "https://img.castlecore.uk/kinnaird-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kinnaird-castle-2.jpg",
-      "https://img.castlecore.uk/kinnaird-castle-3.jpg",
-      "https://img.castlecore.uk/kinnaird-castle-4.jpg",
-      "https://img.castlecore.uk/kinnaird-castle-5.jpg"
-    ],
-    "desc": "A grand baronial castle near Brechin, seat of the Carnegie Earls of Southesk. Victorian grandeur in rolling Angus countryside.",
-    "type": "castle",
-    "period": "15th century / 19th century",
-    "rating": 3.4,
-    "tags": [
-      "well-preserved",
-      "gardens",
-      "victorian"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "House of Dun",
@@ -11517,120 +9121,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balintore_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/The_dark_side_of_Balintore_Castle_-_geograph.org.uk_-_7207523.jpg/330px-The_dark_side_of_Balintore_Castle_-_geograph.org.uk_-_7207523.jpg"
-  },
-  {
-    "name": "Ardestie Souterrain",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Angus",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Ardestie%20Souterrain%20Angus%20scotland",
-    "image": "https://img.castlecore.uk/ardestie-souterrain.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/ardestie-souterrain-2.jpg",
-      "https://img.castlecore.uk/ardestie-souterrain-3.jpg",
-      "https://img.castlecore.uk/ardestie-souterrain-4.jpg",
-      "https://img.castlecore.uk/ardestie-souterrain-5.jpg"
-    ],
-    "desc": "Another excellent Iron Age underground passage near Dundee. Twin tunnels from Scotland's mysterious prehistoric past.",
-    "type": "castle",
-    "period": "Iron Age",
-    "rating": 3.6,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Caterthun Hill Forts",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Angus",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Caterthun%20Hill%20Forts%20Angus%20scotland",
-    "image": "https://img.castlecore.uk/caterthun-hill-forts.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/caterthun-hill-forts-2.jpg",
-      "https://img.castlecore.uk/caterthun-hill-forts-3.jpg",
-      "https://img.castlecore.uk/caterthun-hill-forts-4.jpg",
-      "https://img.castlecore.uk/caterthun-hill-forts-5.jpg"
-    ],
-    "desc": "Spectacular twin Iron Age hillforts on adjacent Angus hills â€” the White and Brown Caterthuns. Among Scotland's finest prehistoric fortifications.",
-    "type": "castle",
-    "period": "Iron Age",
-    "rating": 4.1,
-    "tags": [
-      "well-preserved",
-      "prehistoric",
-      "hilltop",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Piperdam Resort",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Angus",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Piperdam%20Resort%20Angus%20scotland",
-    "image": "https://img.castlecore.uk/piperdam-resort.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/piperdam-resort-2.jpg",
-      "https://img.castlecore.uk/piperdam-resort-3.jpg",
-      "https://img.castlecore.uk/piperdam-resort-4.jpg",
-      "https://img.castlecore.uk/piperdam-resort-5.jpg"
-    ],
-    "desc": "A modern leisure resort near Dundee set in woodland around a loch. Popular base for exploring Angus and Perthshire heritage.",
-    "type": "castle",
-    "period": "Modern",
-    "rating": 3.8,
-    "tags": [
-      "kid-friendly",
-      "dog-friendly",
-      "woodland"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Mains Castle Dundee",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Dundee",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Mains%20Castle%20Dundee%20Dundee%20scotland",
-    "image": "https://img.castlecore.uk/mains-castle-dundee.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/mains-castle-dundee-2.jpg",
-      "https://img.castlecore.uk/mains-castle-dundee-3.jpg",
-      "https://img.castlecore.uk/mains-castle-dundee-4.jpg",
-      "https://img.castlecore.uk/mains-castle-dundee-5.jpg"
-    ],
-    "desc": "A restored 16th-century tower house in suburban Dundee, converted into residential flats. Medieval living in a modern city.",
-    "type": "castle",
-    "period": "16th century",
-    "rating": 3.7,
-    "tags": [
-      "well-preserved",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Powrie Castle",
@@ -12575,34 +10065,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Sanquhar_Castle"
   },
   {
-    "name": "New Abbey Corn Mill",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/New%20Abbey%20Corn%20Mill%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/new-abbey-corn-mill.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/new-abbey-corn-mill-2.jpg",
-      "https://img.castlecore.uk/new-abbey-corn-mill-3.jpg",
-      "https://img.castlecore.uk/new-abbey-corn-mill-4.jpg",
-      "https://img.castlecore.uk/new-abbey-corn-mill-5.jpg"
-    ],
-    "desc": "A beautifully preserved 18th-century water-powered corn mill in the village of New Abbey, near the haunting ruins of Sweetheart Abbey. Working heritage brought to life.",
-    "type": "mill",
-    "period": "18th century",
-    "rating": 3.5,
-    "tags": [
-      "well-preserved",
-      "kid-friendly",
-      "guided-tours"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Loch Doon Castle",
     "country": "scotland",
     "region": "southwest-scotland",
@@ -13013,33 +10475,6 @@
     "wiki": "https://en.wikipedia.org/wiki/Closeburn_Castle"
   },
   {
-    "name": "Nithsdale Castle",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "55.133",
-    "lng": "-3.733",
-    "mapsLink": "https://www.google.com/maps/search/Nithsdale%20Castle%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/nithsdale-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/nithsdale-castle-2.jpg",
-      "https://img.castlecore.uk/nithsdale-castle-3.jpg",
-      "https://img.castlecore.uk/nithsdale-castle-4.jpg",
-      "https://img.castlecore.uk/nithsdale-castle-5.jpg"
-    ],
-    "desc": "A castle site in the Nith valley of Dumfriesshire. Limited remains in the agricultural landscape of upper Nithsdale.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Auchinleck House",
     "country": "scotland",
     "region": "southwest-scotland",
@@ -13126,90 +10561,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Portencross_Castle"
-  },
-  {
-    "name": "Ellangowan Castle",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Ellangowan%20Castle%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/ellangowan-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/ellangowan-castle-2.jpg",
-      "https://img.castlecore.uk/ellangowan-castle-3.jpg",
-      "https://img.castlecore.uk/ellangowan-castle-4.jpg",
-      "https://img.castlecore.uk/ellangowan-castle-5.jpg"
-    ],
-    "desc": "A ruined 18th-century mansion near Creetown in Galloway, possibly named after Walter Scott's novel 'Guy Mannering'. Romantic decay in a gentle landscape.",
-    "type": "castle",
-    "period": "18th century",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Carsphairn Castle",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "55.21019",
-    "lng": "-4.26463",
-    "mapsLink": "https://www.google.com/maps/search/Carsphairn%20Castle%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/carsphairn-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/carsphairn-castle-2.jpg",
-      "https://img.castlecore.uk/carsphairn-castle-3.jpg",
-      "https://img.castlecore.uk/carsphairn-castle-4.jpg",
-      "https://img.castlecore.uk/carsphairn-castle-5.jpg"
-    ],
-    "desc": "Minimal remains of a castle in the remote Galloway Hills village of Carsphairn. More significant as a marker of medieval lordship than as a visible ruin.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.1,
-    "tags": [
-      "ruins-romantic",
-      "remote",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Lag Tower",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Lag%20Tower%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/lag-tower.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/lag-tower-2.jpg",
-      "https://img.castlecore.uk/lag-tower-3.jpg",
-      "https://img.castlecore.uk/lag-tower-4.jpg",
-      "https://img.castlecore.uk/lag-tower-5.jpg"
-    ],
-    "desc": "Ruins of a Grierson stronghold in Nithsdale, associated with 'Lag' — the notorious persecutor of Covenanters. Dark history in the Dumfriesshire hills.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.4,
-    "tags": [
-      "ruins-romantic",
-      "dark-brooding",
-      "free-entry",
-      "remote"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Mauchline Castle",
@@ -13324,65 +10675,6 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Lincluden_Abbey%2C_Dumfries%2C_Scotland-LCCN2001705979.jpg/330px-Lincluden_Abbey%2C_Dumfries%2C_Scotland-LCCN2001705979.jpg"
   },
   {
-    "name": "Grey Mare's Tail",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Grey%20Mare's%20Tail%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/grey-mare-s-tail.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/grey-mare-s-tail-2.jpg",
-      "https://img.castlecore.uk/grey-mare-s-tail-3.jpg",
-      "https://img.castlecore.uk/grey-mare-s-tail-4.jpg",
-      "https://img.castlecore.uk/grey-mare-s-tail-5.jpg"
-    ],
-    "desc": "Scotland's fifth-highest waterfall plunges 60m into the Moffat Water Valley — a glacial landscape of raw, dramatic beauty where Covenanters once hid from persecution.",
-    "type": "castle",
-    "period": "Natural/prehistoric",
-    "rating": 4.4,
-    "tags": [
-      "remote",
-      "atmospheric",
-      "free-entry",
-      "dog-friendly",
-      "hilltop",
-      "woodland"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
-    "name": "Capenoch Tower",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Capenoch%20Tower%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/capenoch-tower.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/capenoch-tower-2.jpg",
-      "https://img.castlecore.uk/capenoch-tower-3.jpg",
-      "https://img.castlecore.uk/capenoch-tower-4.jpg",
-      "https://img.castlecore.uk/capenoch-tower-5.jpg"
-    ],
-    "desc": "A small tower house ruin in rural Dumfriesshire, part of the network of minor fortified houses that characterised the lawless Borders region.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.1,
-    "tags": [
-      "ruins-romantic",
-      "free-entry",
-      "medieval"
-    ],
-    "source": "",
-    "wiki": ""
-  },
-  {
     "name": "Hoddom Castle",
     "country": "scotland",
     "region": "southwest-scotland",
@@ -13440,33 +10732,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Repentance_Tower",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Repentance_Tower.jpg/330px-Repentance_Tower.jpg"
-  },
-  {
-    "name": "Lockerbie Tower",
-    "country": "scotland",
-    "region": "southwest-scotland",
-    "county": "Dumfries and Galloway",
-    "lat": "",
-    "lng": "",
-    "mapsLink": "https://www.google.com/maps/search/Lockerbie%20Tower%20Dumfries%20and%20Galloway%20scotland",
-    "image": "https://img.castlecore.uk/lockerbie-tower.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/lockerbie-tower-2.jpg",
-      "https://img.castlecore.uk/lockerbie-tower-3.jpg",
-      "https://img.castlecore.uk/lockerbie-tower-4.jpg",
-      "https://img.castlecore.uk/lockerbie-tower-5.jpg"
-    ],
-    "desc": "A small tower ruin in the Dumfriesshire town of Lockerbie. Medieval remnant in a town known for tragedy.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": ""
   },
   {
     "name": "Norwich Castle",
