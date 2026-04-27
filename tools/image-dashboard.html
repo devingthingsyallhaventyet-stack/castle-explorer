@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castle Image Dashboard — Unverified Sites</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 20px; }
+h1 { text-align: center; margin-bottom: 8px; color: #c9a44a; font-size: 1.8em; }
+.subtitle { text-align: center; color: #8b949e; margin-bottom: 24px; font-size: 0.95em; }
+.stats { display: flex; justify-content: center; gap: 24px; margin-bottom: 24px; }
+.stat { background: #161b22; padding: 12px 24px; border-radius: 8px; border: 1px solid #30363d; text-align: center; }
+.stat-num { font-size: 2em; font-weight: bold; color: #c9a44a; }
+.stat-label { font-size: 0.85em; color: #8b949e; }
+.filters { display: flex; gap: 12px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+.filter-btn { background: #21262d; border: 1px solid #30363d; color: #e6edf3; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9em; }
+.filter-btn:hover, .filter-btn.active { background: #c9a44a; color: #0d1117; border-color: #c9a44a; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; max-width: 1400px; margin: 0 auto; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; transition: border-color 0.2s; }
+.card.has-source { border-color: #3fb950; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.castle-name { font-size: 1.1em; font-weight: 600; color: #e6edf3; }
+.region-tag { font-size: 0.75em; background: #21262d; padding: 3px 8px; border-radius: 4px; color: #8b949e; white-space: nowrap; }
+.dupe-info { font-size: 0.82em; color: #8b949e; margin-bottom: 10px; }
+.current-img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 10px; background: #21262d; }
+.links { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.links a { font-size: 0.85em; color: #58a6ff; text-decoration: none; padding: 4px 10px; border: 1px solid #30363d; border-radius: 4px; }
+.links a:hover { background: #21262d; }
+.input-row { display: flex; gap: 8px; }
+.input-row input { flex: 1; background: #0d1117; border: 1px solid #30363d; color: #e6edf3; padding: 8px 12px; border-radius: 6px; font-size: 0.9em; }
+.input-row input:focus { border-color: #c9a44a; outline: none; }
+.input-row input.saved { border-color: #3fb950; }
+.btn-save { background: #c9a44a; color: #0d1117; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9em; }
+.btn-save:hover { background: #d4af5a; }
+.btn-export { position: fixed; bottom: 20px; right: 20px; background: #c9a44a; color: #0d1117; border: none; padding: 14px 28px; border-radius: 10px; cursor: pointer; font-weight: 700; font-size: 1.1em; box-shadow: 0 4px 20px rgba(0,0,0,0.5); z-index: 100; }
+.btn-export:hover { background: #d4af5a; }
+.export-count { position: fixed; bottom: 64px; right: 20px; background: #161b22; color: #8b949e; padding: 6px 14px; border-radius: 6px; font-size: 0.85em; z-index: 100; border: 1px solid #30363d; }
+.preview { width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-top: 8px; display: none; background: #21262d; }
+</style>
+</head>
+<body>
+
+<h1>🏰 Unverified Castle Images</h1>
+<p class="subtitle">43 castles with duplicate/unverified CDN images — paste correct image URLs below</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num" id="total">43</div><div class="stat-label">Unverified</div></div>
+  <div class="stat"><div class="stat-num" id="sourced">0</div><div class="stat-label">Sources Added</div></div>
+  <div class="stat"><div class="stat-num" id="remaining">43</div><div class="stat-label">Remaining</div></div>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" onclick="filterRegion('all')">All</button>
+  <button class="filter-btn" onclick="filterRegion('wild-atlantic-way')">Wild Atlantic Way</button>
+  <button class="filter-btn" onclick="filterRegion('kingdom-of-munster')">Munster</button>
+  <button class="filter-btn" onclick="filterRegion('the-heartlands')">Heartlands</button>
+  <button class="filter-btn" onclick="filterRegion('irelands-ancient-east')">Ancient East</button>
+  <button class="filter-btn" onclick="filterRegion('ulster-and-the-north')">Ulster</button>
+  <button class="filter-btn" onclick="filterRegion('dublin-and-the-pale')">Dublin</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="export-count" id="exportCount">0 sources ready to export</div>
+<button class="btn-export" onclick="exportSources()">📋 Copy All Sources</button>
+
+<script>
+const castles = [
+  {name:"Knockmealdown Castle",region:"kingdom-of-munster",dupeWith:"Knockelly Castle",county:"County Waterford"},
+  {name:"Knockelly Castle",region:"the-heartlands",dupeWith:"Knockmealdown Castle",county:"County Tipperary"},
+  {name:"Sharavogue Castle",region:"the-heartlands",dupeWith:"Ballaghmore Castle, Coolbanagher Castle",county:"County Offaly"},
+  {name:"Nendrum Monastic Site",region:"ulster-and-the-north",dupeWith:"Mahee Island Nendrum",county:"County Down"},
+  {name:"Rataine Castle",region:"the-heartlands",dupeWith:"Rattin Castle",county:"County Westmeath"},
+  {name:"Dowdstown Castle Meath",region:"irelands-ancient-east",dupeWith:"Drumconrath Castle",county:"County Meath"},
+  {name:"Drumconrath Castle",region:"irelands-ancient-east",dupeWith:"Dowdstown Castle Meath",county:"County Meath"},
+  {name:"Dunlicky Castle",region:"wild-atlantic-way",dupeWith:"Ballybunnion Castle, Ballynahow Round Castle",county:"County Clare"},
+  {name:"Inishmaan Castle",region:"wild-atlantic-way",dupeWith:"O'Brien's Castle Inis Oirr",county:"County Galway"},
+  {name:"Navan Castle",region:"irelands-ancient-east",dupeWith:"Athlumney Castle",county:"County Meath"},
+  {name:"Gortmore Castle",region:"wild-atlantic-way",dupeWith:"Derrymacloughna Castle",county:"County Galway"},
+  {name:"Derrymacloughna Castle",region:"wild-atlantic-way",dupeWith:"Gortmore Castle",county:"County Clare"},
+  {name:"Collooney Castle",region:"wild-atlantic-way",dupeWith:"Markree Castle, Drumlease Castle",county:"County Sligo"},
+  {name:"Drumlease Castle",region:"wild-atlantic-way",dupeWith:"Markree Castle, Collooney Castle",county:"County Leitrim"},
+  {name:"Ballinlough Castle Roscommon",region:"the-heartlands",dupeWith:"Ballyclogh Castle",county:"County Roscommon"},
+  {name:"Fuerty Castle",region:"the-heartlands",dupeWith:"Cloonfree Castle, Frenchpark Castle",county:"County Roscommon"},
+  {name:"Cloonfree Castle",region:"the-heartlands",dupeWith:"Fuerty Castle, Frenchpark Castle",county:"County Roscommon"},
+  {name:"Frenchpark Castle",region:"the-heartlands",dupeWith:"Fuerty Castle, Cloonfree Castle",county:"County Roscommon"},
+  {name:"Rathmullan Castle Meath",region:"irelands-ancient-east",dupeWith:"Fennor Castle",county:"County Meath"},
+  {name:"Malin Castle",region:"ulster-and-the-north",dupeWith:"Carrigart Castle",county:"County Donegal"},
+  {name:"Carrigart Castle",region:"ulster-and-the-north",dupeWith:"Malin Castle",county:"County Donegal"},
+  {name:"Cloone Round Tower",region:"the-heartlands",dupeWith:"Clones Round Tower",county:"County Leitrim"},
+  {name:"Annestown Castle",region:"irelands-ancient-east",dupeWith:"Dunhill Castle, Ballylaneen Castle",county:"County Waterford"},
+  {name:"Ballylaneen Castle",region:"irelands-ancient-east",dupeWith:"Dunhill Castle, Annestown Castle",county:"County Waterford"},
+  {name:"Clondra Castle",region:"the-heartlands",dupeWith:"Rathcline Castle, Longford Castle",county:"County Longford"},
+  {name:"Frankford Castle",region:"the-heartlands",dupeWith:"Farney Castle",county:"County Offaly"},
+  {name:"Rahasane Castle",region:"wild-atlantic-way",dupeWith:"Ardrahan Castle",county:"County Galway"},
+  {name:"Ardrahan Castle",region:"wild-atlantic-way",dupeWith:"Rahasane Castle",county:"County Galway"},
+  {name:"Tullaroan Castle",region:"irelands-ancient-east",dupeWith:"Kilcoursey Castle",county:"County Kilkenny"},
+  {name:"Kilcoursey Castle",region:"the-heartlands",dupeWith:"Tullaroan Castle",county:"County Offaly"},
+  {name:"Ballymulcashel Castle",region:"kingdom-of-munster",dupeWith:"Shanpallas Castle",county:"County Limerick"},
+  {name:"Ballycahill Castle",region:"the-heartlands",dupeWith:"Thurles Castle",county:"County Tipperary"},
+  {name:"Ballyfarnon Castle",region:"the-heartlands",dupeWith:"Kilronan Castle, Drumshanbo Castle",county:"County Roscommon"},
+  {name:"Drumshanbo Castle",region:"the-heartlands",dupeWith:"Kilronan Castle, Ballyfarnon Castle",county:"County Leitrim"},
+  {name:"Kilbarry Castle Waterford",region:"irelands-ancient-east",dupeWith:"Ballylooby Castle",county:"County Waterford"},
+  {name:"Ballylooby Castle",region:"kingdom-of-munster",dupeWith:"Kilbarry Castle Waterford",county:"County Tipperary"},
+  {name:"Carriggundel Castle",region:"kingdom-of-munster",dupeWith:"Ballingarry Castle, Caherconlish Castle",county:"County Limerick"},
+  {name:"Caherconlish Castle",region:"kingdom-of-munster",dupeWith:"Ballingarry Castle, Carriggundel Castle",county:"County Limerick"},
+  {name:"Ballinagleragh Castle",region:"wild-atlantic-way",dupeWith:"Ballinafad Castle",county:"County Leitrim"},
+  {name:"Caherlistrane Castle",region:"wild-atlantic-way",dupeWith:"Clonbur Castle, Carna Castle",county:"County Galway"},
+  {name:"Ballyjamesduff Castle",region:"the-heartlands",dupeWith:"Lough Oughter Castle Island",county:"County Cavan"},
+  {name:"Lough Oughter Castle Island",region:"the-heartlands",dupeWith:"Ballyjamesduff Castle",county:"County Cavan"},
+  {name:"Carna Castle",region:"wild-atlantic-way",dupeWith:"Clonbur Castle, Caherlistrane Castle",county:"County Galway"},
+];
+
+const saved = JSON.parse(localStorage.getItem('castle-sources') || '{}');
+
+function render(filter) {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  const list = filter === 'all' ? castles : castles.filter(c => c.region === filter);
+  
+  list.forEach((c, i) => {
+    const googleQ = encodeURIComponent(`${c.name} ${c.county} Ireland castle`);
+    const wikiQ = encodeURIComponent(c.name.replace(/ /g, '_'));
+    const geographQ = encodeURIComponent(c.name);
+    const val = saved[c.name] || '';
+    
+    const card = document.createElement('div');
+    card.className = 'card' + (val ? ' has-source' : '');
+    card.dataset.region = c.region;
+    card.innerHTML = `
+      <div class="card-header">
+        <span class="castle-name">${c.name}</span>
+        <span class="region-tag">${c.region.replace(/-/g,' ')}</span>
+      </div>
+      <div class="dupe-info">📋 Duplicate of: ${c.dupeWith} · ${c.county}</div>
+      <div class="links">
+        <a href="https://www.google.com/search?q=${googleQ}&tbm=isch" target="_blank">🔍 Google Images</a>
+        <a href="https://commons.wikimedia.org/w/index.php?search=${geographQ}+castle&title=Special:MediaSearch&type=image" target="_blank">📸 Commons</a>
+        <a href="https://www.geograph.ie/search?q=${geographQ}" target="_blank">🗺️ Geograph</a>
+        <a href="https://en.wikipedia.org/wiki/${wikiQ}" target="_blank">📖 Wiki</a>
+      </div>
+      <div class="input-row">
+        <input type="text" placeholder="Paste image URL here..." value="${val}" onchange="saveSource('${c.name.replace(/'/g,"\\'")}', this)" oninput="previewImg(this)">
+      </div>
+      <img class="preview" style="${val ? 'display:block' : ''}" src="${val}" onerror="this.style.display='none'">
+    `;
+    grid.appendChild(card);
+  });
+  updateStats();
+}
+
+function saveSource(name, input) {
+  const val = input.value.trim();
+  if (val) {
+    saved[name] = val;
+    input.classList.add('saved');
+    input.closest('.card').classList.add('has-source');
+  } else {
+    delete saved[name];
+    input.classList.remove('saved');
+    input.closest('.card').classList.remove('has-source');
+  }
+  localStorage.setItem('castle-sources', JSON.stringify(saved));
+  updateStats();
+}
+
+function previewImg(input) {
+  const preview = input.closest('.card').querySelector('.preview');
+  const val = input.value.trim();
+  if (val && (val.startsWith('http') || val.startsWith('//'))) {
+    preview.src = val;
+    preview.style.display = 'block';
+  } else {
+    preview.style.display = 'none';
+  }
+}
+
+function updateStats() {
+  const count = Object.keys(saved).length;
+  document.getElementById('sourced').textContent = count;
+  document.getElementById('remaining').textContent = 43 - count;
+  document.getElementById('exportCount').textContent = `${count} source${count !== 1 ? 's' : ''} ready to export`;
+}
+
+function filterRegion(region) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  render(region);
+}
+
+function exportSources() {
+  if (Object.keys(saved).length === 0) {
+    alert('No sources added yet!');
+    return;
+  }
+  const lines = Object.entries(saved).map(([name, url]) => `${name}: ${url}`);
+  const text = lines.join('\n');
+  navigator.clipboard.writeText(text).then(() => {
+    alert(`Copied ${lines.length} sources to clipboard!\\n\\nPaste this to Clawz to apply the fixes.`);
+  }).catch(() => {
+    prompt('Copy this:', text);
+  });
+}
+
+render('all');
+</script>
+</body>
+</html>
