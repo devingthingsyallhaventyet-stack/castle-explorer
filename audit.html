@@ -48,8 +48,17 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 
 .col-left .main-image{width:100%;max-height:450px;object-fit:contain;border-radius:8px;background:var(--bg);border:1px solid var(--border);cursor:pointer}
 .gallery{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.gallery-item{position:relative;display:inline-block}
 .gallery img{width:70px;height:50px;object-fit:cover;border-radius:4px;border:2px solid transparent;cursor:pointer;opacity:.7;transition:.15s}
 .gallery img:hover,.gallery img.active{opacity:1;border-color:var(--gold)}
+.gallery img.img-flagged{border-color:var(--red);opacity:1}
+.img-flag-btn{position:absolute;top:-4px;right:-4px;width:20px;height:20px;border-radius:50%;background:var(--red);color:#fff;border:none;cursor:pointer;font-size:10px;display:none;align-items:center;justify-content:center;z-index:5;line-height:1}
+.gallery-item:hover .img-flag-btn,.img-flag-btn.flagged{display:flex}
+.img-flag-btn.flagged{background:var(--red);opacity:1}
+.img-flag-btn:not(.flagged){background:var(--border)}
+.main-image-wrap{position:relative}
+.main-image-wrap .img-flag-btn{display:none;top:8px;right:8px;width:28px;height:28px;font-size:14px}
+.main-image-wrap:hover .img-flag-btn,.main-image-wrap .img-flag-btn.flagged{display:flex}
 
 .col-right iframe{width:100%;height:350px;border:1px solid var(--border);border-radius:8px}
 
@@ -163,7 +172,10 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 </div>
 
 <script>
-const MAPS_KEY = 'AIzaSyAN2rEFGTqHMBbT_RMj8NO_fB9e26HMQPI';
+let flaggedImages = {}; // key: castleKey, value: Set of flagged image URLs
+try { const fi = JSON.parse(localStorage.getItem('castle-flagged-images') || '{}'); Object.keys(fi).forEach(k => flaggedImages[k] = new Set(fi[k])); } catch(e) {}
+function saveFlaggedImages() { const obj = {}; Object.keys(flaggedImages).forEach(k => obj[k] = [...flaggedImages[k]]); localStorage.setItem('castle-flagged-images', JSON.stringify(obj)); }
+function toggleImageFlag(castleKey, url, btn) { if (!flaggedImages[castleKey]) flaggedImages[castleKey] = new Set(); if (flaggedImages[castleKey].has(url)) { flaggedImages[castleKey].delete(url); } else { flaggedImages[castleKey].add(url); } saveFlaggedImages(); renderCard(); }
 const FLAG_REASONS = [
   { id: 'wrong-image', label: 'Wrong image — doesn\'t match castle' },
   { id: 'wrong-name', label: 'Wrong name — incorrect/misspelled' },
@@ -256,12 +268,22 @@ function renderCard() {
 
   const hasCoords = d.lat && d.lng;
   const mapUrl = hasCoords
-    ? `https://www.google.com/maps/embed/v1/place?key=${MAPS_KEY}&q=${d.lat},${d.lng}&zoom=12&maptype=satellite`
-    : `https://www.google.com/maps/embed/v1/search?key=${MAPS_KEY}&q=${encodeURIComponent(d.name+' '+( d.county||'')+' castle')}`;
+    ? `https://www.openstreetmap.org/export/embed.html?bbox=${d.lng-0.02},${d.lat-0.015},${Number(d.lng)+0.02},${Number(d.lat)+0.015}&layer=mapnik&marker=${d.lat},${d.lng}`
+    : null;
+  const mapsSearchUrl = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
 
-  const galleryHtml = (d.gallery||[]).map((url,i) =>
-    `<img src="${url}" class="gallery-thumb" data-idx="${i}" onclick="swapMainImage(this, '${url.replace(/'/g,"\\'")}')" loading="lazy" alt="gallery ${i+1}">`
-  ).join('');
+  // Build gallery: main image first, then gallery images
+  const allImages = [];
+  if (d.image) allImages.push(d.image);
+  (d.gallery||[]).forEach(url => { if (url !== d.image) allImages.push(url); });
+  const fi = flaggedImages[key] || new Set();
+  const galleryHtml = allImages.map((url,i) => {
+    const isFlagged = fi.has(url);
+    return `<div class="gallery-item">
+      <img src="${url}" class="gallery-thumb${i===0?' active':''}${isFlagged?' img-flagged':''}" onclick="swapMainImage(this, '${url.replace(/'/g,"\\'")}')" loading="lazy" alt="image ${i+1}">
+      <button class="img-flag-btn${isFlagged?' flagged':''}" onclick="event.stopPropagation();toggleImageFlag('${key.replace(/'/g,"\\'")}','${url.replace(/'/g,"\\'")}',this)" title="Flag this image">⚑</button>
+    </div>`;
+  }).join('');
 
   el.innerHTML = `
     <div class="card-header">
@@ -279,12 +301,16 @@ function renderCard() {
     </div>
     <div class="card-body">
       <div class="col-left">
-        ${d.image ? `<img class="main-image" id="mainImg" src="${esc(d.image)}" alt="${esc(d.name)}" onerror="this.src='';this.alt='Image failed to load'">` : '<div style="height:300px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted)">No image</div>'}
+        <div class="main-image-wrap">
+          ${d.image ? `<img class="main-image" id="mainImg" src="${esc(d.image)}" alt="${esc(d.name)}" onerror="this.src='';this.alt='Image failed to load'">
+          <button class="img-flag-btn${fi.has(d.image)?' flagged':''}" onclick="toggleImageFlag('${key.replace(/'/g,"\\'")}','${d.image.replace(/'/g,"\\'")}',this)" title="Flag this image">⚑</button>` : '<div style="height:300px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted)">No image</div>'}
+        </div>
         <div class="gallery">${galleryHtml}</div>
+        ${fi.size ? `<div style="margin-top:6px;font-size:12px;color:var(--red)">⚑ ${fi.size} image(s) flagged</div>` : ''}
       </div>
       <div class="col-right">
-        <iframe src="${mapUrl}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        ${hasCoords ? `<div style="font-size:12px;color:var(--muted);margin-top:4px">📍 ${d.lat}, ${d.lng} · <a href="${d.mapsLink||'#'}" target="_blank">Open in Maps</a></div>` : '<div style="font-size:12px;color:var(--muted);margin-top:4px">⚠ No coordinates — showing search</div>'}
+        ${mapUrl ? `<iframe src="${mapUrl}" allowfullscreen loading="lazy" style="width:100%;height:350px;border:1px solid var(--border);border-radius:8px"></iframe>` : `<div style="height:350px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted);flex-direction:column;gap:8px"><span>No coordinates</span><a href="${mapsSearchUrl}" target="_blank">Search Google Maps →</a></div>`}
+        ${hasCoords ? `<div style="font-size:12px;color:var(--muted);margin-top:4px">📍 ${d.lat}, ${d.lng} · <a href="${mapsSearchUrl}" target="_blank">Open in Google Maps</a></div>` : ''}
       </div>
     </div>
     <div class="blurb-section">
