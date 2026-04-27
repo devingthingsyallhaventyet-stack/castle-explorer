@@ -39,6 +39,7 @@ a:hover{text-decoration:underline}
 .image-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:20px}
 .img-card{position:relative;border-radius:8px;overflow:hidden;cursor:pointer;border:3px solid var(--border);transition:all .2s;background:#000}
 .img-card:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.5)}
+.img-card.selected{border-color:var(--blue);box-shadow:0 0 16px rgba(88,166,255,.5);transform:translateY(-2px)}
 .img-card.main{border-color:var(--gold);box-shadow:0 0 12px rgba(201,164,74,.4)}
 .img-card.rejected{border-color:var(--red);opacity:.35}
 .img-card.rejected:hover{opacity:.6}
@@ -87,16 +88,18 @@ a:hover{text-decoration:underline}
     <span class="progress-text" id="progressText">0 / 0</span>
   </div>
   <input class="jump" type="number" placeholder="Go #" id="jumpInput" min="1">
-  <button class="btn btn-gold" id="saveBtn">💾 Save</button>
+  <button class="btn btn-gold" id="saveBtn">📋 Copy for Clawz</button>
 </div>
 
 <div id="cardArea"><div class="loading"><div class="spinner"></div><br>Loading data…</div></div>
 
 <div class="help-box">
   <strong style="color:var(--text)">⌨️ Shortcuts</strong><br>
-  <kbd>→</kbd> / <kbd>S</kbd> Next &nbsp; <kbd>←</kbd> Prev<br>
-  <strong>Click</strong> = reject/unreject<br>
-  <strong>Dbl-click</strong> / <strong>Right-click</strong> = set main
+  <kbd>←</kbd><kbd>→</kbd> Scroll images<br>
+  <kbd>A</kbd> Set main ⭐ &nbsp; <kbd>F</kbd> Reject 🗑<br>
+  <kbd>Enter</kbd> Submit &amp; next &nbsp; <kbd>S</kbd> Skip<br>
+  <kbd>P</kbd> Prev &nbsp; <kbd>X</kbd> Flag listing ✕<br>
+  <small>Click = reject · Dbl-click = set main</small>
 </div>
 
 <script>
@@ -225,7 +228,9 @@ function render() {
       <div class="card-header">
         <div>
           <div class="castle-name">${entry.name}</div>
-          <div class="castle-meta">${capitalize(entry.country)} · ${entry.region || ''} ${entry.county ? '· ' + entry.county : ''} · ${entry.type || ''}</div>
+          <div class="castle-meta">${capitalize(entry.country)} · ${entry.region || ''} ${entry.county ? '· ' + entry.county : ''} · ${entry.type || ''}
+            · <a href="https://www.google.com/maps/search/${encodeURIComponent(entry.name + ' ' + (entry.county||'') + ' castle')}" target="_blank">📍 Google Maps ↗</a>
+            ${entry.wiki ? `· <a href="${esc(entry.wiki)}" target="_blank">📖 Wikipedia ↗</a>` : ''}</div>
         </div>
         <div class="counter"><span>${currentIdx + 1}</span> / ${filtered.length}</div>
       </div>
@@ -233,7 +238,7 @@ function render() {
         ${images.map((img, i) => {
           const isRejected = rejected.includes(img.url);
           const isMain = img.url === mainImg;
-          const cls = (isMain ? ' main' : '') + (isRejected ? ' rejected' : '');
+          const cls = (isMain ? ' main' : '') + (isRejected ? ' rejected' : '') + (i === selectedImgIdx ? ' selected' : '');
           return `<div class="img-card${cls}" data-url="${esc(img.url)}" data-source="${img.source}" data-idx="${i}">
             <img src="${esc(img.url)}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23161b22%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%238b949e%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22>Image unavailable</text></svg>'">
             <span class="badge ${img.source === 'wikipedia' ? 'wiki' : 'google'}">${img.label}</span>
@@ -302,6 +307,7 @@ function next() {
     setState(filtered[currentIdx].name, state);
   }
   if (currentIdx < filtered.length - 1) currentIdx++;
+  selectedImgIdx = 0;
   updateProgress();
   render();
   window.scrollTo(0, 0);
@@ -309,6 +315,7 @@ function next() {
 
 function prev() {
   if (currentIdx > 0) currentIdx--;
+  selectedImgIdx = 0;
   render();
   window.scrollTo(0, 0);
 }
@@ -316,11 +323,77 @@ function prev() {
 function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
 function esc(s) { if (typeof s === 'object' && s !== null) s = s.artist || s.credit || JSON.stringify(s); return (String(s || '')).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
+let selectedImgIdx = 0;
+
+function getCurrentImages() {
+  if (!filtered.length) return [];
+  const entry = filtered[currentIdx];
+  const gPhotos = getGooglePhotos(entry);
+  const images = [];
+  if (entry.image) images.push({ url: entry.image, source: 'wikipedia' });
+  gPhotos.forEach(p => images.push({ url: p.googlePhotoUri, source: 'google' }));
+  return images;
+}
+
+function updateSelectedHighlight() {
+  document.querySelectorAll('.img-card').forEach((card, i) => {
+    card.classList.toggle('selected', i === selectedImgIdx);
+  });
+}
+
+function flagCurrentListing() {
+  if (!filtered.length) return;
+  const entry = filtered[currentIdx];
+  // Update reviewStatus in allData
+  const fullEntry = allData.find(d => d.name === entry.name && d.country === entry.country);
+  if (fullEntry) fullEntry.reviewStatus = 'flagged';
+  entry.reviewStatus = 'flagged';
+  // Remove from filtered
+  filtered.splice(currentIdx, 1);
+  if (currentIdx >= filtered.length) currentIdx = Math.max(0, filtered.length - 1);
+  selectedImgIdx = 0;
+  updateProgress();
+  render();
+}
+
 // Keyboard shortcuts
 document.addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
-  if (e.key === 'ArrowRight' || e.key === 's' || e.key === 'S') { next(); e.preventDefault(); }
-  if (e.key === 'ArrowLeft') { prev(); e.preventDefault(); }
+  const images = getCurrentImages();
+  
+  // Left/Right = scroll through images
+  if (e.key === 'ArrowLeft') {
+    if (selectedImgIdx > 0) { selectedImgIdx--; updateSelectedHighlight(); }
+    e.preventDefault(); return;
+  }
+  if (e.key === 'ArrowRight') {
+    if (selectedImgIdx < images.length - 1) { selectedImgIdx++; updateSelectedHighlight(); }
+    e.preventDefault(); return;
+  }
+  // F = toggle reject on selected image
+  if ((e.key === 'f' || e.key === 'F') && images.length) {
+    const img = images[selectedImgIdx];
+    if (img) toggleReject(filtered[currentIdx].name, img.url, images);
+    e.preventDefault(); return;
+  }
+  // A = set selected image as main
+  if ((e.key === 'a' || e.key === 'A') && images.length) {
+    const img = images[selectedImgIdx];
+    if (img) setMain(filtered[currentIdx].name, img.url, img.source, images);
+    e.preventDefault(); return;
+  }
+  // Enter = submit and next
+  if (e.key === 'Enter') { next(); e.preventDefault(); return; }
+  // S = skip without marking reviewed
+  if (e.key === 's' || e.key === 'S') {
+    if (currentIdx < filtered.length - 1) currentIdx++;
+    selectedImgIdx = 0; render(); window.scrollTo(0, 0);
+    e.preventDefault(); return;
+  }
+  // P = prev
+  if (e.key === 'p' || e.key === 'P') { prev(); e.preventDefault(); return; }
+  // X = flag listing
+  if (e.key === 'x' || e.key === 'X') { flagCurrentListing(); e.preventDefault(); return; }
 });
 
 // Filter listeners
@@ -333,27 +406,33 @@ document.getElementById('jumpInput').addEventListener('change', e => {
   e.target.value = '';
 });
 
-// Save button — download updated audit-data.json
+// Save button — copy decisions to clipboard for Clawz
 document.getElementById('saveBtn').addEventListener('click', () => {
-  // Merge review state into allData (full set, not just filtered)
-  const output = allData.map(d => {
-    const state = reviewState[d.name];
-    if (state) {
-      return { ...d, imageReview: {
-        mainImage: state.mainImage || d.image,
-        mainSource: state.mainSource || 'wikipedia',
-        rejectedImages: state.rejectedImages || [],
-        reviewed: !!state.reviewed
-      }};
-    }
-    return d;
+  const decisions = [];
+  const flagged = [];
+  for (const [name, state] of Object.entries(reviewState)) {
+    if (!state.reviewed) continue;
+    const entry = { name };
+    if (state.mainImage) { entry.main = state.mainImage; entry.mainSource = state.mainSource; }
+    if (state.rejectedImages && state.rejectedImages.length) entry.rejected = state.rejectedImages;
+    decisions.push(entry);
+  }
+  // Include flagged listings
+  allData.forEach(d => {
+    if (d.reviewStatus === 'flagged' && !d._wasFlagged) flagged.push(d.name);
   });
-  const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'audit-data-reviewed.json';
-  a.click();
-  URL.revokeObjectURL(a.href);
+  const payload = JSON.stringify({ decisions, flagged: flagged.length ? flagged : undefined });
+  navigator.clipboard.writeText(payload).then(() => {
+    alert(`✅ Copied ${decisions.length} image decisions${flagged.length ? ' + ' + flagged.length + ' flagged' : ''}!\nPaste to Clawz in chat.`);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = payload;
+    ta.style.cssText = 'position:fixed;top:10%;left:10%;width:80%;height:60%;z-index:9999;background:#161b22;color:#e6edf3;border:2px solid #c9a44a;border-radius:8px;padding:16px;font-size:12px;font-family:monospace';
+    document.body.appendChild(ta);
+    ta.select();
+    alert(`Select all & copy, then paste to Clawz.`);
+    ta.addEventListener('keydown', e => { if (e.key === 'Escape') ta.remove(); });
+  });
 });
 
 init();
