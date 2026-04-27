@@ -132,6 +132,7 @@ async function init() {
 
   // Build lookup by normalized name
   for (const [idx, entry] of Object.entries(stagingData)) {
+    if (!entry.placeName) continue;
     const key = normalize(entry.placeName);
     if (!stagingByName[key]) stagingByName[key] = [];
     stagingByName[key].push(entry);
