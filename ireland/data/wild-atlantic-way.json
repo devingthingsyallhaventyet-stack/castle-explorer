@@ -6625,7 +6625,7 @@
     "era": "Medieval",
     "condition": "ruin",
     "description": "A tower house on the shores of Lough Derg in County Clare, overlooking one of the Shannon's largest and most beautiful lakes.",
-    "image": "https://img.castlecore.uk/derrymacloughna-castle.jpg",
+    "image": "https://img.castlecore.uk/derrymacloughna-castle-2.jpg",
     "rating": 3.3,
     "reviewCount": 10,
     "county": "County Clare",
@@ -6639,7 +6639,6 @@
     "access": "exterior-only",
     "_index": 1825,
     "gallery": [
-      "https://img.castlecore.uk/derrymacloughna-castle-2.jpg",
       "https://img.castlecore.uk/derrymacloughna-castle-3.jpg",
       "https://img.castlecore.uk/derrymacloughna-castle-4.jpg",
       "https://img.castlecore.uk/derrymacloughna-castle-5.jpg"
