@@ -1509,7 +1509,7 @@
     "era": "15th century",
     "condition": "ruin",
     "description": "A medieval tower in the Limerick countryside, linked to the turbulent Desmond dynasty and the wars that ravaged Munster.",
-    "image": "https://img.castlecore.uk/ballingarry-castle-limerick.jpg",
+    "image": "https://img.castlecore.uk/ballingarry-castle-limerick-3.jpg",
     "rating": 3.2,
     "reviewCount": 30,
     "county": "County Limerick",
@@ -1522,7 +1522,6 @@
     "_index": 897,
     "gallery": [
       "https://img.castlecore.uk/ballingarry-castle-limerick-2.jpg",
-      "https://img.castlecore.uk/ballingarry-castle-limerick-3.jpg",
       "https://img.castlecore.uk/ballingarry-castle-limerick-4.jpg",
       "https://img.castlecore.uk/ballingarry-castle-limerick-5.jpg"
     ],
@@ -5294,11 +5293,10 @@
     "reviewCount": 8,
     "era": "Medieval",
     "condition": "ruin",
-    "image": "https://img.castlecore.uk/caherconlish-castle.jpg",
+    "image": "https://img.castlecore.uk/caherconlish-castle-2.jpg",
     "description": "A medieval tower in the east Limerick village of Caherconlish.",
     "_index": 2486,
     "gallery": [
-      "https://img.castlecore.uk/caherconlish-castle-2.jpg",
       "https://img.castlecore.uk/caherconlish-castle-3.jpg",
       "https://img.castlecore.uk/caherconlish-castle-4.jpg",
       "https://img.castlecore.uk/caherconlish-castle-5.jpg"
