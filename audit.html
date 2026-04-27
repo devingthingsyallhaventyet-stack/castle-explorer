@@ -188,6 +188,7 @@ body{padding-bottom:50px}
   <button style="background:var(--blue);color:#fff;padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight'}))">Img ► <span class="kbd">→</span></button>
   <button class="btn-approve" onclick="setMainImage()">⭐ Main <span class="kbd">A</span></button>
   <button class="btn-flag" onclick="toggleDeleteImage()">🗑 Delete <span class="kbd">F</span></button>
+  <button class="btn-flag" onclick="flagListing()">✕ Flag <span class="kbd">X</span></button>
   <button style="background:var(--green);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="submitAndNext()">✓ Submit <span class="kbd">Enter</span></button>
   <button class="btn-skip" onclick="selectedImgIdx=0;goNext()">Skip <span class="kbd">S</span></button>
 </div>
@@ -215,7 +216,7 @@ body{padding-bottom:50px}
 </div>
 
 <div class="shortcuts-help">
-  <kbd>←</kbd><kbd>→</kbd> Scroll images &nbsp; <kbd>A</kbd> Set main ⭐ &nbsp; <kbd>F</kbd> Toggle delete 🗑<br>
+  <kbd>←</kbd><kbd>→</kbd> Scroll images &nbsp; <kbd>A</kbd> Set main ⭐ &nbsp; <kbd>F</kbd> Toggle delete 🗑 &nbsp; <kbd>X</kbd> Flag listing ✕<br>
   <kbd>Enter</kbd> Submit &amp; next &nbsp; <kbd>S</kbd> Skip &nbsp; <kbd>P</kbd> Prev listing
 </div>
 
@@ -587,6 +588,18 @@ function setMainImage() {
   saveImageDecisions(); renderCard();
 }
 
+function flagListing() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  reviewState[key] = { status: 'flagged', reasons: ['flagged-during-image-review'], ts: Date.now() };
+  d.reviewStatus = 'flagged';
+  saveState(); updateProgress(); selectedImgIdx = 0;
+  // Remove from current filtered view and show next
+  if (currentIdx >= filtered.length) currentIdx = Math.max(0, filtered.length - 1);
+  renderCard();
+}
+
 function submitAndNext() {
   if (!filtered.length) return;
   // Mark this listing's image review as submitted
@@ -628,6 +641,8 @@ document.addEventListener('keydown', e => {
     if (e.key === 'a' || e.key === 'A') { setMainImage(); e.preventDefault(); return; }
     // Enter = submit and next listing
     if (e.key === 'Enter') { submitAndNext(); e.preventDefault(); return; }
+    // X = flag listing (move from approved to flagged)
+    if (e.key === 'x' || e.key === 'X') { flagListing(); e.preventDefault(); return; }
     // S = skip (next listing without submitting)
     if (e.key === 's' || e.key === 'S') { selectedImgIdx = 0; goNext(); e.preventDefault(); return; }
     // P = prev listing
