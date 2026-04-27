@@ -59,6 +59,9 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 .main-image-wrap{position:relative}
 .main-image-wrap .img-flag-btn{display:none;top:8px;right:8px;width:28px;height:28px;font-size:14px}
 .main-image-wrap:hover .img-flag-btn,.main-image-wrap .img-flag-btn.flagged{display:flex}
+.inline-flag-btn{background:var(--bg);border:1px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:6px;cursor:pointer;font-size:12px;transition:.15s}
+.inline-flag-btn:hover{border-color:var(--red);color:var(--red)}
+.inline-flag-btn.flagged{background:#1a0a0a;border-color:var(--red);color:var(--red)}
 
 .col-right iframe{width:100%;height:350px;border:1px solid var(--border);border-radius:8px}
 
@@ -172,10 +175,15 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 </div>
 
 <script>
-let flaggedImages = {}; // key: castleKey, value: Set of flagged image URLs
+let flaggedImages = {};
 try { const fi = JSON.parse(localStorage.getItem('castle-flagged-images') || '{}'); Object.keys(fi).forEach(k => flaggedImages[k] = new Set(fi[k])); } catch(e) {}
 function saveFlaggedImages() { const obj = {}; Object.keys(flaggedImages).forEach(k => obj[k] = [...flaggedImages[k]]); localStorage.setItem('castle-flagged-images', JSON.stringify(obj)); }
 function toggleImageFlag(castleKey, url, btn) { if (!flaggedImages[castleKey]) flaggedImages[castleKey] = new Set(); if (flaggedImages[castleKey].has(url)) { flaggedImages[castleKey].delete(url); } else { flaggedImages[castleKey].add(url); } saveFlaggedImages(); renderCard(); }
+
+let fieldFlags = {};
+try { fieldFlags = JSON.parse(localStorage.getItem('castle-field-flags') || '{}'); } catch(e) {}
+function saveFieldFlags() { localStorage.setItem('castle-field-flags', JSON.stringify(fieldFlags)); }
+function toggleFieldFlag(castleKey, field) { if (!fieldFlags[castleKey]) fieldFlags[castleKey] = {}; fieldFlags[castleKey][field] = !fieldFlags[castleKey][field]; if (!fieldFlags[castleKey][field]) delete fieldFlags[castleKey][field]; if (!Object.keys(fieldFlags[castleKey]).length) delete fieldFlags[castleKey]; saveFieldFlags(); renderCard(); }
 const FLAG_REASONS = [
   { id: 'wrong-image', label: 'Wrong image — doesn\'t match castle' },
   { id: 'wrong-name', label: 'Wrong name — incorrect/misspelled' },
@@ -311,10 +319,11 @@ function renderCard() {
       <div class="col-right">
         ${mapUrl ? `<iframe src="${mapUrl}" allowfullscreen loading="lazy" style="width:100%;height:350px;border:1px solid var(--border);border-radius:8px"></iframe>` : `<div style="height:350px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted);flex-direction:column;gap:8px"><span>No coordinates</span><a href="${mapsSearchUrl}" target="_blank">Search Google Maps →</a></div>`}
         ${hasCoords ? `<div style="font-size:12px;color:var(--muted);margin-top:4px">📍 ${d.lat}, ${d.lng} · <a href="${mapsSearchUrl}" target="_blank">Open in Google Maps</a></div>` : ''}
+        <button class="inline-flag-btn${(fieldFlags[key]||{}).location?' flagged':''}" onclick="toggleFieldFlag('${key.replace(/'/g,"\\'")}','location')" style="margin-top:8px">⚑ ${(fieldFlags[key]||{}).location?'Location flagged — click to unflag':'Flag location'}</button>
       </div>
     </div>
-    <div class="blurb-section">
-      <h3>Our Description</h3>
+    <div class="blurb-section" style="position:relative">
+      <h3>Our Description <button class="inline-flag-btn${(fieldFlags[key]||{}).description?' flagged':''}" onclick="toggleFieldFlag('${key.replace(/'/g,"\\'")}','description')" style="margin-left:12px">⚑ ${(fieldFlags[key]||{}).description?'Description flagged':'Flag description'}</button></h3>
       <p style="font-size:14px;line-height:1.6;color:var(--muted)">${d.desc ? esc(d.desc) : '<em>No description</em>'}</p>
       ${d.source ? `<div style="margin-top:6px;font-size:12px"><a href="${esc(d.source)}" target="_blank">Source</a></div>` : ''}
       ${d.wiki ? `<div style="font-size:12px"><a href="${esc(d.wiki)}" target="_blank">Wiki link in data</a></div>` : ''}
