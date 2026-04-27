@@ -10,4 +10,10 @@ Do NOT action until E says to batch-process them.
 ## Pending
 - [ ] Witton Castle (Northern England)
 - [ ] Rose Castle (Northern England)
+- [ ] Naworth Castle (Northern England)
+- [ ] Wylam Railway Museum (Northern England)
+- [ ] Whitley Castle Roman Fort (Northern England)
+- [ ] Clitheroe Castle (Northern England)
+- [ ] Burgh-by-Sands Castle (Northern England)
+- [ ] Greenhalgh Castle (Northern England)
 <!-- Add entries as: - [ ] Castle Name (Region) — notes -->
