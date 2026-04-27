@@ -20,8 +20,8 @@
   // Cloudflare Image Transformations — resize + auto-format on the fly
   function optImg(url, width, quality) {
     if (!url) return '';
-    // Only transform http(s) URLs from allowed origins
-    if (!url.startsWith('http')) return url;
+    // Only transform img.castlecore.uk URLs — external URLs (Wikipedia etc) pass through directly
+    if (!url.includes('img.castlecore.uk')) return url;
     var w = width || 400;
     var q = quality || 80;
     return '/cdn-cgi/image/width=' + w + ',quality=' + q + ',format=auto,fit=cover/' + url;
