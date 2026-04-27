@@ -1344,7 +1344,7 @@
     "era": "Medieval",
     "condition": "ruin",
     "description": "Quiet ruins of a medieval tower in the scenic lakeland between Lough Corrib and Lough Mask, where Connemara's wildness meets the fertile Joyce Country.",
-    "image": "https://img.castlecore.uk/clonbur-castle.jpg",
+    "image": "https://img.castlecore.uk/clonbur-castle-2.jpg",
     "rating": 3.2,
     "reviewCount": 40,
     "county": "County Galway",
@@ -1356,7 +1356,6 @@
     "access": "exterior-only",
     "_index": 823,
     "gallery": [
-      "https://img.castlecore.uk/clonbur-castle-2.jpg",
       "https://img.castlecore.uk/clonbur-castle-3.jpg",
       "https://img.castlecore.uk/clonbur-castle-4.jpg",
       "https://img.castlecore.uk/clonbur-castle-5.jpg"
@@ -3155,7 +3154,7 @@
     "era": "Medieval",
     "condition": "ruin",
     "description": "A modest castle ruin in the Connemara Gaeltacht, where the Irish language and ancient traditions survive amid one of Europe's wildest coastal landscapes.",
-    "image": "https://img.castlecore.uk/carna-castle-2.jpg",
+    "image": "https://img.castlecore.uk/carna-castle-4.jpg",
     "rating": 3.1,
     "reviewCount": 12,
     "county": "County Galway",
@@ -3169,7 +3168,6 @@
     "_index": 1070,
     "gallery": [
       "https://img.castlecore.uk/carna-castle-3.jpg",
-      "https://img.castlecore.uk/carna-castle-4.jpg",
       "https://img.castlecore.uk/carna-castle-5.jpg"
     ],
     "history": "Carna Castle is in the heart of the Connemara Gaeltacht (Irish-speaking area) in County Galway. The castle dates to the medieval period and is associated with local clan families. The Carna area is renowned for its strong Irish language tradition, traditional music, and spectacular coastal scenery.",
