@@ -144,9 +144,9 @@ body{padding-bottom:50px}
 <div class="topbar">
   <strong style="color:var(--gold);font-size:16px">🏰 CastleCore Audit</strong>
   <div class="main-tabs">
-    <div class="main-tab active" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
+    <div class="main-tab" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
     <div class="main-tab" id="tabFlagged" onclick="switchMainTab('flagged')">⚠️ Flagged <span class="tab-badge" id="tabFlaggedCount">0</span></div>
-    <div class="main-tab" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
+    <div class="main-tab active" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
   </div>
   <input type="text" id="searchBox" placeholder="Search castles...">
   <select id="countryFilter"><option value="">All Countries</option></select>
@@ -252,7 +252,7 @@ let filtered = [];
 let currentIdx = 0;
 let reviewState = {};
 let currentView = 'card';
-let currentMainTab = 'review';
+let currentMainTab = 'approved';
 let flagPanelOpen = false;
 const wikiCache = new Map();
 
@@ -260,8 +260,8 @@ function switchMainTab(tab) {
   currentMainTab = tab;
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
   document.getElementById(tab === 'review' ? 'tabReview' : tab === 'flagged' ? 'tabFlagged' : 'tabApproved').classList.add('active');
-  // Set view mode (but don't render yet — applyFilters will handle it)
-  const wantView = (tab === 'flagged' || tab === 'approved') ? 'table' : 'card';
+  // Set view mode — approved uses card for image review, flagged uses table
+  const wantView = tab === 'flagged' ? 'table' : 'card';
   currentView = wantView;
   document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
   document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
