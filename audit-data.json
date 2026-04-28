@@ -1016,7 +1016,7 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Amhuinnsuidhe Castle",
@@ -1266,7 +1266,7 @@
       "duplicate"
     ],
     "reviewNote": "Duplicate for this exists in the data set somewhere",
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Dunderave Castle",
@@ -1304,7 +1304,7 @@
       "flagged-during-image-review"
     ],
     "imageReviewDone": true,
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Keills Chapel",
@@ -1417,7 +1417,7 @@
       "other"
     ],
     "reviewNote": "Image doesnt match what i see on wikipedia",
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Hermitage Castle",
@@ -2045,7 +2045,7 @@
       "other"
     ],
     "reviewNote": "images and wikipedia dont match",
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Fatlips Castle",
@@ -2223,7 +2223,7 @@
     "reviewReasons": [
       "wrong-image"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Abbotsford House",
@@ -2264,7 +2264,7 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Traquair House",
@@ -2718,7 +2718,7 @@
     "reviewReasons": [
       "cinematic"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Luffness Castle",
@@ -2940,7 +2940,7 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Merchiston Castle",
@@ -2973,7 +2973,7 @@
     "reviewReasons": [
       "other"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Liberton Tower",
@@ -3008,7 +3008,7 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Lennoxlove House",
@@ -3080,7 +3080,7 @@
     "reviewReasons": [
       "other"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Dalhousie Castle",
