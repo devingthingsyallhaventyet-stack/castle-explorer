@@ -280,13 +280,15 @@ function getStatus(d) {
 // Load data
 fetch('audit-data.json').then(r => r.json()).then(data => {
   allData = data;
-  // Seed reviewState from data file (don't overwrite localStorage changes)
+  // Data file is authoritative — rebuild reviewState from it (clears stale localStorage)
+  reviewState = {};
   data.forEach(d => {
     const key = getKey(d);
-    if (!reviewState[key] && d.reviewStatus) {
+    if (d.reviewStatus) {
       reviewState[key] = { status: d.reviewStatus, reasons: d.reviewReasons, note: d.reviewNote, ts: 0 };
     }
   });
+  saveState();
   populateFilters();
   applyFilters();
   updateProgress();
