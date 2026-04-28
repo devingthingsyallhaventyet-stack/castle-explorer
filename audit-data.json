@@ -53866,8 +53866,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/McDermott%27s_Castle"
   },
   {
     "name": "Mongavlin Castle",
@@ -53915,7 +53916,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53961,7 +53962,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -54009,7 +54010,7 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -54057,8 +54058,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Carrickabraghy_Castle"
   },
   {
     "name": "Castlerea Castle",
@@ -54104,7 +54106,7 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -54150,8 +54152,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Donamon_Castle"
   },
   {
     "name": "Cabra Castle",
@@ -54197,8 +54200,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cabra_Castle"
   },
   {
     "name": "Castle Saunderson",
@@ -54239,8 +54243,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Saunderson"
   },
   {
     "name": "Castle Leslie",
@@ -54288,8 +54293,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Leslie"
   },
   {
     "name": "Mannan Castle",
@@ -54334,8 +54340,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mannan_Castle"
   },
   {
     "name": "Castle Balfour",
@@ -54377,8 +54384,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Balfour"
   },
   {
     "name": "Castle Archdale",
@@ -54422,8 +54430,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Archdale"
   },
   {
     "name": "Mountjoy Castle",
@@ -54467,8 +54476,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mountjoy_Castle"
   },
   {
     "name": "Newtownstewart Castle",
@@ -54509,8 +54519,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Stewart_Castle,_Northern_Ireland"
   },
   {
     "name": "Castlecaulfield",
@@ -54556,8 +54567,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Caulfield"
   },
   {
     "name": "Brackfield Bawn",
@@ -54600,7 +54612,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -54649,8 +54661,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Navan_Fort"
   },
   {
     "name": "Ardglass Castles",
@@ -54696,8 +54709,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardglass_Castle"
   },
   {
     "name": "Portaferry Castle",
@@ -54742,8 +54756,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Portaferry_Castle"
   },
   {
     "name": "Castlestrange Stone",
