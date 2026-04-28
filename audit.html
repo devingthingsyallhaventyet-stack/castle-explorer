@@ -722,7 +722,8 @@ function renderDupes() {
   if (!dupePairs.length) { el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">No duplicates found.</p>'; return; }
   
   el.innerHTML = `<h2 style="color:var(--gold);margin-bottom:16px">🔀 Duplicate Entries (${dupePairs.length})</h2>
-    <p style="color:var(--muted);margin-bottom:24px;font-size:14px">Flagged entries that share a Wikipedia link, name, or Google Maps link with another entry. Review each pair and note your decision.</p>` +
+    <p style="color:var(--muted);margin-bottom:24px;font-size:14px">Flagged entries that share a Wikipedia link, name, or Google Maps link with another entry. Review each pair and note your decision.</p>
+    <button onclick="copyDupeDecisions()" style="background:var(--gold);color:#000;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-weight:600;font-size:14px;margin-bottom:20px">📋 Copy Decisions to Clipboard</button>` +
     dupePairs.map((pair, i) => {
       const f = pair.flagged;
       const a = pair.approved;
@@ -774,6 +775,16 @@ function renderDupes() {
         </div>
       </div>`;
     }).join('');
+}
+
+function copyDupeDecisions() {
+  const lines = dupePairs.map((pair, i) => {
+    const key = pair.flagged.name + '|' + pair.approved.name;
+    const note = dupeNotes[key] || '(no decision yet)';
+    return `#${i+1} ${pair.flagged.name} ↔ ${pair.approved.name}\nReason: ${pair.reasons.join(', ')}\nDecision: ${note}`;
+  });
+  const text = `Dupe Decisions (${dupePairs.length} pairs):\n\n` + lines.join('\n\n');
+  navigator.clipboard.writeText(text).then(() => alert('Copied!')).catch(() => prompt('Copy this:', text));
 }
 
 function setView(v) {
