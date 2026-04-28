@@ -52959,8 +52959,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Moorstown_Castle"
   },
   {
     "name": "Carrick-on-Suir Castle",
@@ -53007,8 +53008,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ormonde_Castle"
   },
   {
     "name": "Lackan Castle",
@@ -53052,7 +53054,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53095,8 +53097,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tristernagh_Abbey"
   },
   {
     "name": "Ballyfin Demesne",
@@ -53139,8 +53142,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballyfin"
   },
   {
     "name": "Castle Otway",
@@ -53183,8 +53187,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Otway"
   },
   {
     "name": "Lorrha Priory",
@@ -53229,7 +53234,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53274,7 +53279,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53318,7 +53323,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53363,7 +53368,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53406,8 +53411,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Donegal_Castle"
   },
   {
     "name": "Doe Castle",
@@ -53443,8 +53449,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Doe_Castle"
   },
   {
     "name": "Glenveagh Castle",
@@ -53479,8 +53486,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Glenveagh_Castle"
   },
   {
     "name": "Grianan of Aileach",
@@ -53515,8 +53523,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Grianan_of_Aileach"
   },
   {
     "name": "Boyle Abbey",
@@ -53551,8 +53560,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Boyle_Abbey"
   },
   {
     "name": "Roscommon Castle",
@@ -53591,7 +53601,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53668,7 +53678,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -53712,8 +53722,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Burt_Castle"
   },
   {
     "name": "Raphoe Castle",
@@ -53757,8 +53768,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Raphoe_Castle"
   },
   {
     "name": "Clogh Oughter Castle",
@@ -53807,8 +53819,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cloughoughter_Castle"
   },
   {
     "name": "Lough Key Castle",
