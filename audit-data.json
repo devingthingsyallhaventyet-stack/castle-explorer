@@ -678,7 +678,7 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Aros Castle",
@@ -791,7 +791,7 @@
     "reviewReasons": [
       "wrong-image"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Claig Castle",
@@ -867,7 +867,7 @@
       "wrong-blurb",
       "other"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Dunollie Castle",
@@ -909,7 +909,7 @@
     "reviewReasons": [
       "wrong-image"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Calvay Castle",
@@ -40386,7 +40386,7 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Dalkey Castle",
@@ -40702,7 +40702,7 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "exists": "unverified"
+    "exists": "no"
   },
   {
     "name": "Howth Castle",
@@ -41067,7 +41067,7 @@
     "reviewReasons": [
       "needs-review"
     ],
-    "exists": "unverified"
+    "exists": "yes"
   },
   {
     "name": "Rathfarnham Castle",
