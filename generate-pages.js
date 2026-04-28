@@ -663,13 +663,8 @@ ${(() => {
   // Always add Google Maps
   const gMapsUrl = castle.googleMapsLink || `https://www.google.com/maps/search/${encodeURIComponent(castle.name + ' ' + (castle.county || ''))}`;
   sourceItems.push(`<li><a href="${escapeHtml(gMapsUrl)}" target="_blank" rel="noopener">📍 Google Maps — ${escapeHtml(castle.name)}</a></li>`);
-  // Existing sources
-  if (castle.sources && castle.sources.length) {
-    castle.sources.forEach(s => {
-      if (typeof s === 'string') sourceItems.push(`<li><a href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(s)}</a></li>`);
-      else sourceItems.push(`<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name || s.url)}</a></li>`);
-    });
-  }
+  // NOTE: castle.sources from data.js not rendered yet — only Wikipedia + Google Maps for now.
+  // Will enable third-party sources during data enrichment phase.
   return sourceItems.length ? `${FLOURISH}\n<!-- SOURCES -->\n<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list">${sourceItems.join('')}</ul></section>` : '';
 })()}
 
