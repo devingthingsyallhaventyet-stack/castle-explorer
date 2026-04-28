@@ -692,7 +692,10 @@
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "altNames": [
+      "Ardchonnel Castle"
+    ]
   },
   {
     "name": "Aros Castle",
@@ -1255,45 +1258,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true
-  },
-  {
-    "name": "Ardchonnel Castle",
-    "country": "scotland",
-    "region": "argyll-western-isles",
-    "county": "Argyll and Bute",
-    "lat": "56.2568",
-    "lng": "-5.2675",
-    "mapsLink": "https://www.google.com/maps/search/Ardchonnel%20Castle%20Argyll%20and%20Bute%20scotland",
-    "image": "https://img.castlecore.uk/ardchonnel-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/ardchonnel-castle-2.jpg",
-      "https://img.castlecore.uk/ardchonnel-castle-3.jpg",
-      "https://img.castlecore.uk/ardchonnel-castle-4.jpg",
-      "https://img.castlecore.uk/ardchonnel-castle-5.jpg"
-    ],
-    "desc": "Innes Chonnel Castle or Ardchonnel Castle is a ruined 13th-century castle on Innis Chonnell, an island on Loch Awe near Dalavich, Argyll and Bute, Scotland. The fortress was once a stronghold of Clan Campbell.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.6,
-    "tags": [
-      "ruins-romantic",
-      "island",
-      "remote",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/Innes_Chonnel_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Innis_Chonnel_Castle_1969.jpg/330px-Innis_Chonnel_Castle_1969.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "duplicate"
-    ],
-    "reviewNote": "Duplicate for this exists in the data set somewhere",
-    "exists": "yes",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Innes_Chonnel_Castle"
   },
   {
     "name": "Dunderave Castle",
@@ -5912,46 +5876,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mingary_Castle"
-  },
-  {
-    "name": "Castle Girnigoe",
-    "country": "scotland",
-    "region": "highlands",
-    "county": "Highland",
-    "lat": "58.478014",
-    "lng": "-3.068082",
-    "mapsLink": "https://www.google.com/maps/search/Castle%20Girnigoe%20Highland%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Girnigoe1.jpg/330px-Girnigoe1.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [
-      "https://img.castlecore.uk/castle-girnigoe-2.jpg",
-      "https://img.castlecore.uk/castle-girnigoe-3.jpg",
-      "https://img.castlecore.uk/castle-girnigoe-4.jpg",
-      "https://img.castlecore.uk/castle-girnigoe-5.jpg"
-    ],
-    "desc": "Castle Sinclair Girnigoe is located about 3 miles north of Wick on the east coast of Caithness, Scotland. It is considered to be one of the earliest seats of Clan Sinclair. It comprises the ruins of two castles: the 15th-century Castle Girnigoe; and the early 17th-century Castle Sinclair. They are designated as a scheduled monument.",
-    "type": "castle",
-    "period": "15th-17th century",
-    "rating": 4.1,
-    "tags": [
-      "ruins-romantic",
-      "coastal",
-      "cliffside",
-      "dark-brooding",
-      "atmospheric",
-      "free-entry",
-      "haunted"
-    ],
-    "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/Castle_Sinclair_Girnigoe",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Sinclair_Girnigoe"
   },
   {
     "name": "Dunbeath Castle",
@@ -18473,50 +18397,6 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corby_Castle"
   },
   {
-    "name": "Askerton Castle",
-    "country": "england",
-    "region": "northern-england",
-    "county": "Cumbria",
-    "lat": 55.0153,
-    "lng": -2.7053,
-    "mapsLink": "https://www.google.com/maps/search/Askerton%20Castle/@55.0317,-2.7333,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Askerton_Castle_-_geograph.org.uk_-_958564.jpg/330px-Askerton_Castle_-_geograph.org.uk_-_958564.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Askerton Castle is a medieval fortified manor house in Cumbria, England.",
-    "type": "castle",
-    "period": "14th-16th century",
-    "rating": 3.5,
-    "tags": [
-      "medieval",
-      "atmospheric",
-      "remote"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Askerton_Castle"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Askerton_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Askerton_Castle_-_geograph.org.uk_-_958564.jpg/330px-Askerton_Castle_-_geograph.org.uk_-_958564.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Keith Salvesen",
-      "license": "CC BY-SA 2.0",
-      "description": "Askerton Castle",
-      "credit": "From geograph.org.uk",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Askerton_Castle"
-  },
-  {
     "name": "Scaleby Castle",
     "country": "england",
     "region": "northern-england",
@@ -23610,7 +23490,7 @@
     "county": "Gloucestershire",
     "lat": 51.6136,
     "lng": -2.5301,
-    "mapsLink": "https://www.google.com/maps/search/Thornbury%20Castle/@51.6094,-2.5233,15z",
+    "mapsLink": "https://maps.app.goo.gl/6dgFNMBpu7hQKHCH9",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/330px-Thornbury.castle.west.front.arp.750pix.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -25084,7 +24964,7 @@
     "county": "Gloucestershire",
     "lat": 51.9397,
     "lng": -1.9442,
-    "mapsLink": "https://www.google.com/maps/search/Sudeley%20Castle/@51.9397,-1.9442,15z",
+    "mapsLink": "https://maps.app.goo.gl/P7gbvr9Aer57EUJz5",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Aerial_photo_of_Sudeley_Castle.jpg/330px-Aerial_photo_of_Sudeley_Castle.jpg",
     "imgSource": "CDN",
     "gallery": [],
@@ -25414,7 +25294,7 @@
     "county": "Gloucestershire",
     "lat": 51.8225,
     "lng": -2.17611111,
-    "mapsLink": "https://www.google.com/maps/search/Prinknash%20Abbey/@51.8367,-2.16,15z",
+    "mapsLink": "https://maps.app.goo.gl/fvt5gdozQpX34iLg8",
     "image": "https://img.castlecore.uk/prinknash-abbey.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -27031,47 +26911,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Berkeley Castle",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.68861111,
-    "lng": -2.45694444,
-    "mapsLink": "https://www.google.com/maps/search/Berkeley%20Castle/@51.6891,-2.4592,15z",
-    "image": "https://lh3.googleusercontent.com/places/ANXAkqEcbjbdn6MUwP-rQksBy5jc83mUU0-yTYs6yNb1KW1qIiu0bda1zBGrzkxUrFA4DUQ1lKwp0m3CCezpj21lJzDsXQMqeBMPrQ=s4800-w900",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "Berkeley Castle is a castle in the town of Berkeley, Gloucestershire, England. The castle's origins date back to the 11th century and it is a Grade I listed building.",
-    "type": "castle",
-    "period": "12th century",
-    "rating": 4.3,
-    "tags": [
-      "well-preserved",
-      "haunted",
-      "hidden-gem"
-    ],
-    "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/Berkeley_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg/330px-Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Andrew Hackney",
-      "license": "CC BY-SA 2.0",
-      "description": "Berkeley Castle",
-      "credit": "Geograph Britain and Ireland",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "mainImageSource": "google",
-    "imageReviewDone": true,
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Berkeley_Castle"
-  },
-  {
     "name": "Thornton Abbey",
     "country": "england",
     "region": "the-midlands",
@@ -28187,211 +28026,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Thornbury Castle",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.6136,
-    "lng": -2.5301,
-    "mapsLink": "https://www.google.com/maps/search/Thornbury%20Castle/@51.6094,-2.5233,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/330px-Thornbury.castle.west.front.arp.750pix.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "Thornbury Castle is a Tudor castle in the town of Thornbury, in Gloucestershire, England, erected next to the parish church of St Mary. Construction was begun in 1511 as a further residence for Edward Stafford, 3rd Duke of Buckingham (1478–1521), of Stafford Castle in Staffordshire. It is not a true military fortress but rather an early example of a Tudor country house, with minimal defensive attributes.",
-    "type": "castle",
-    "period": "16th century",
-    "rating": 4.2,
-    "tags": [
-      "well-preserved",
-      "romantic",
-      "tudor",
-      "gardens",
-      "atmospheric",
-      "wedding-venue",
-      "photogenic"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Thornbury_Castle"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Thornbury_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/330px-Thornbury.castle.west.front.arp.750pix.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Arpingstone (Adrian Pingstone) at en.wikipedia",
-      "license": "Public domain",
-      "description": "The west front of Thornbury Castle, Thornbury, near Bristol, England.\nTaken by Adrian Pingstone in September 2004 and released to the public domain.",
-      "credit": "Own work by Arpingstone. Transferred from en.wikipedia.",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Thornbury_Castle"
-  },
-  {
-    "name": "St Briavels Castle",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.738,
-    "lng": -2.6405,
-    "mapsLink": "https://www.google.com/maps/search/St%20Briavels%20Castle/@51.75,-2.6333,15z",
-    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNFSrexF6N6nkY66c4xCcsFh5N1aofvdeXKYV_6nn4HqW-0OD_zPfr8vf2R8_eu40maNw-JAfEGHm6Yi15P6ze6yqzUedOw_4MU4GkdtBfbmz0-qM8Srp3yLu4Q9jP_NEVAhK57aV5hkEriAQ=s4800-w1200",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "St Briavels Castle is a moated Norman castle at St Briavels in the English county of Gloucestershire. The castle is noted for its huge Edwardian gatehouse that guards the entrance.",
-    "type": "castle",
-    "period": "11th-13th century",
-    "rating": 3.9,
-    "tags": [
-      "well-preserved",
-      "norman",
-      "medieval",
-      "atmospheric",
-      "woodland",
-      "kid-friendly"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/St_Briavels_Castle"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/St_Briavels_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg/330px-St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Roy Parkhouse",
-      "license": "CC BY-SA 2.0",
-      "description": "St Briavels Castle",
-      "credit": "From geograph.org.uk; transferred by User:Magnus Manske using geograph_org2commons.",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "mainImageSource": "google",
-    "imageReviewDone": true,
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Briavels_Castle"
-  },
-  {
-    "name": "Hailes Abbey",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.96833333,
-    "lng": -1.92805556,
-    "mapsLink": "https://www.google.com/maps/search/Hailes%20Abbey/@51.95,-1.9167,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hailes_Abbey_Landscape.jpg/330px-Hailes_Abbey_Landscape.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "Hailes Abbey is a former Cistercian abbey, in the small village of Hailes, two miles northeast of Winchcombe, Gloucestershire, England. It was founded in 1246 as a daughter establishment of Beaulieu Abbey in Hampshire. The abbey was dissolved by Henry VIII in 1539. Little remains of the abbey. It is a Grade I listed building and a scheduled monument.",
-    "type": "abbey",
-    "period": "13th century",
-    "rating": 4.1,
-    "tags": [
-      "medieval",
-      "ruins-romantic",
-      "atmospheric",
-      "museum",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "English Heritage",
-        "url": "https://www.english-heritage.org.uk/visit/places/hailes-abbey/history-and-stories/history/"
-      },
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Hailes_Abbey"
-      },
-      {
-        "name": "National Trust",
-        "url": "https://www.nationaltrust.org.uk/visit/gloucestershire-cotswolds/hailes-abbey"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Hailes_Abbey",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hailes_Abbey_Landscape.jpg/330px-Hailes_Abbey_Landscape.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Saffron Blaze",
-      "license": "CC BY-SA 3.0",
-      "description": "The ruins of Hailes Abbey are two miles northeast of Winchcombe, Gloucestershire, England. The abbey was founded around 1245 by Richard, Earl of Cornwall, called \"King of the Romans\" and the younger brother of King Henry III of England.",
-      "credit": "Own work",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hailes_Abbey"
-  },
-  {
-    "name": "Tewkesbury Abbey",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.99027778,
-    "lng": -2.16055556,
-    "mapsLink": "https://www.google.com/maps/search/Tewkesbury%20Abbey/@51.9917,-2.16,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tewkesbury_Abbey_2011.jpg/330px-Tewkesbury_Abbey_2011.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "The Parish Church of St Mary the Virgin, Tewkesbury, commonly known as Tewkesbury Abbey, is located in the town of Tewkesbury in the ceremonial county of Gloucestershire, England. A former Benedictine monastery, it is now a parish church. Considered one of the finest examples of Norman architecture in Britain, it has \"probably the largest and finest Romanesque\" crossing tower in England.",
-    "type": "abbey",
-    "period": "12th century",
-    "rating": 4.7,
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "norman",
-      "medieval",
-      "gothic",
-      "atmospheric",
-      "free-entry",
-      "guided-tours"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey"
-      },
-      {
-        "name": "Tewkesbury Abbey Official",
-        "url": "https://www.tewkesburyabbey.org.uk/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tewkesbury_Abbey_2011.jpg/330px-Tewkesbury_Abbey_2011.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Saffron Blaze",
-      "license": "CC BY-SA 3.0",
-      "description": "Tewkesbury Abbey was founded in 1087; however, building of the present structure seen here did not start until 1102. Built to house Benedictine monks, the Abbey was consecrated in 1121 (Norman era).",
-      "credit": "Own work",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "imageReviewDone": true,
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey"
-  },
-  {
     "name": "Belvoir Castle",
     "country": "england",
     "region": "the-midlands",
@@ -29104,58 +28738,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Beverston Castle",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.644239,
-    "lng": -2.201553,
-    "mapsLink": "https://www.google.com/maps/search/Beverston%20Castle/@51.638,-2.203,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/330px-Beverston_castle.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "Beverston Castle, also known as Beverstone Castle or Tetbury Castle, is a castle in the village of Beverston, Gloucestershire, England. It was constructed as a medieval stone fortress. The property is a mix of manor house, various small buildings, extensive gardens, and the medieval ruins of the fortified building. The castle was founded in 1229 by Maurice de Gaunt.",
-    "type": "castle",
-    "period": "13th-14th century",
-    "rating": 3.5,
-    "tags": [
-      "medieval",
-      "ruins-romantic",
-      "atmospheric"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Beverston_Castle"
-      },
-      {
-        "name": "Historic England",
-        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1304508"
-      },
-      {
-        "name": "Tudor Travel Guide",
-        "url": "https://thetudortravelguide.com/1502-progress-beverston-castle-gloucestershire/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Beverston_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/330px-Beverston_castle.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "The original uploader was Anlace at English Wikipedia.",
-      "license": "CC BY-SA 2.5",
-      "description": "*Photographer C. Michael Hogan, the copyright holder, licences this image as described below.\nPhoto taken July 6, 2006\nPhoto of Beverston Castle gatehouse, Gloucestershire, England",
-      "credit": "Transferred from en.wikipedia to Commons.",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Beverston_Castle"
-  },
-  {
     "name": "Eccleshall Castle",
     "country": "england",
     "region": "the-midlands",
@@ -29528,116 +29110,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Crowland_Abbey"
-  },
-  {
-    "name": "Gloucester Cathedral",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.8675,
-    "lng": -2.246667,
-    "mapsLink": "https://www.google.com/maps/search/Gloucester%20Cathedral/@51.8678,-2.2464,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gloucester_Cathedral_exterior_2019.JPG/330px-Gloucester_Cathedral_exterior_2019.JPG",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Gloucester Cathedral, formally the Cathedral Church of St Peter and the Holy and Indivisible Trinity and formerly St Peter's Abbey, in Gloucester, England, stands in the north of the city near the River Severn. It originated with the establishment of a minster, Gloucester Abbey, dedicated to Saint Peter and founded by Osric, King of the Hwicce, in around 679.",
-    "type": "abbey",
-    "period": "11th-14th century",
-    "rating": 4.7,
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "gothic",
-      "norman",
-      "medieval",
-      "atmospheric",
-      "filming-location",
-      "guided-tours",
-      "gift-shop",
-      "tearoom-cafe"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Gloucester_Cathedral"
-      },
-      {
-        "name": "Gloucester Cathedral Official",
-        "url": "https://www.gloucestercathedral.org.uk/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Gloucester_Cathedral",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gloucester_Cathedral_exterior_2019.JPG/330px-Gloucester_Cathedral_exterior_2019.JPG",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Geni",
-      "license": "CC BY-SA 4.0",
-      "description": "Photo of Gloucester Cathedral exterior",
-      "credit": "photo by user:geni",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gloucester_Cathedral"
-  },
-  {
-    "name": "Sudeley Castle",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.9397,
-    "lng": -1.9442,
-    "mapsLink": "https://www.google.com/maps/search/Sudeley%20Castle/@51.9397,-1.9442,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Aerial_photo_of_Sudeley_Castle.jpg/330px-Aerial_photo_of_Sudeley_Castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Sudeley Castle is a Grade I listed castle in the parish of Sudeley, in the Cotswolds, near to the medieval market town of Winchcombe, Gloucestershire, England. The castle has 10 notable gardens covering some 15 acres (6.1 ha) within a 1,200-acre (490 ha) estate in the Cotswold hills.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 4.5,
-    "tags": [
-      "well-preserved",
-      "photogenic",
-      "tudor",
-      "gardens",
-      "romantic",
-      "guided-tours",
-      "tearoom-cafe",
-      "gift-shop",
-      "events-venue",
-      "museum"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Sudeley_Castle"
-      },
-      {
-        "name": "Sudeley Castle Official",
-        "url": "https://www.sudeleycastle.co.uk/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Sudeley_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Aerial_photo_of_Sudeley_Castle.jpg/330px-Aerial_photo_of_Sudeley_Castle.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Wdejager",
-      "license": "CC BY-SA 4.0",
-      "description": "Aerial photo of Sudeley Castle. Camera: DJI Phantom 2 Vision+ UAV (quadcopter drone)",
-      "credit": "Own work",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sudeley_Castle"
   },
   {
     "name": "Hereford Castle",
@@ -31212,47 +30684,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Lilbourne Castle",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Northamptonshire",
-    "lat": 51.30438611,
-    "lng": 0.42088889,
-    "mapsLink": "https://www.google.com/maps/search/Lilbourne%20Castle/@52.365,-1.1767,15z",
-    "image": "https://img.castlecore.uk/lilbourne-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/lilbourne-castle-2.jpg",
-      "https://img.castlecore.uk/lilbourne-castle-3.jpg",
-      "https://img.castlecore.uk/lilbourne-castle-4.jpg",
-      "https://img.castlecore.uk/lilbourne-castle-5.jpg"
-    ],
-    "desc": "Leybourne Castle is a 13th-century castle in the parish of Leybourne, Kent, west of Castle Way.",
-    "type": "castle",
-    "period": "11th century",
-    "rating": 3.3,
-    "tags": [
-      "norman",
-      "riverside",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Historic England",
-        "url": "https://historicengland.org.uk"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Leybourne_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Leybourne_Castle%2C_Kent.jpg/330px-Leybourne_Castle%2C_Kent.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
     "name": "Coughton Court",
     "country": "england",
     "region": "the-midlands",
@@ -31765,140 +31196,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dore_Abbey"
-  },
-  {
-    "name": "Llanthony Secunda Priory",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.86,
-    "lng": -2.257,
-    "mapsLink": "https://www.google.com/maps/search/Llanthony%20Secunda%20Priory/@51.85,-2.2583,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Llanthony_Secunda_Priory_in_January_2019.jpg/330px-Llanthony_Secunda_Priory_in_January_2019.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Llanthony Secunda Priory was a house of Augustinian canons in the parish of Hempsted, Gloucestershire, England, situated about half a mile south-west of Gloucester Castle in the City of Gloucester. It was founded in 1136 by Miles de Gloucester, 1st Earl of Hereford, a great magnate based in the west of England and the Welsh Marches, hereditary Constable of England and Sheriff of Gloucestershire, as a secondary house and refuge for the canons of Llanthony Priory in the Vale of Ewyas, within his Lordship of Brecknock in what is now Monmouthshire, Wales. The surviving remains of the Priory were designated as Grade I listed in 1952 and the wider site is a scheduled ancient monument. In 2013, the Llanthony Secunda Priory Trust received funds for restoration work, which was completed in August 2018 when it re-opened to the public.",
-    "type": "abbey",
-    "period": "12th-16th century",
-    "rating": 3.8,
-    "tags": [
-      "medieval",
-      "well-preserved",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Llanthony_Secunda_Priory"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Llanthony_Secunda_Priory",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Llanthony_Secunda_Priory_in_January_2019.jpg/330px-Llanthony_Secunda_Priory_in_January_2019.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Tom Axford 1",
-      "license": "CC BY-SA 4.0",
-      "description": "Llanthony Secunda Priory:  the range on the right is Grade I Listed, while, on the left, the Tudor Gothic style farmhouse in red brick is Grade II Listed.  The whole building has recently undergone restoration and conservation.\n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Llanthony Priory, Range Between Outer And Inner Courts (Q17525938) with data related to this item.",
-      "credit": "Own work",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Llanthony_Secunda_Priory"
-  },
-  {
-    "name": "Gloucester Blackfriars",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.864107,
-    "lng": -2.248662,
-    "mapsLink": "https://www.google.com/maps/search/Gloucester%20Blackfriars/@51.865,-2.2483,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Gloucester_Blackfriars_20.08.11.JPG/330px-Gloucester_Blackfriars_20.08.11.JPG",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Blackfriars, Gloucester, England, founded about 1239, is one of the most complete surviving Dominican black friaries in England.\nNow owned by English Heritage and restored in 1960, it is currently leased to Gloucester City Council and used for weddings, concerts, exhibitions, guided tours, filming, educational events and private hires. The former church, since converted into a house, is a Grade I listed building.",
-    "type": "abbey",
-    "period": "13th century",
-    "rating": 4,
-    "tags": [
-      "medieval",
-      "well-preserved",
-      "atmospheric",
-      "events-venue",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "English Heritage",
-        "url": "https://www.english-heritage.org.uk/visit/places/gloucester-blackfriars/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Blackfriars%2C_Gloucester",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Gloucester_Blackfriars_20.08.11.JPG/330px-Gloucester_Blackfriars_20.08.11.JPG",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Philafrenzy",
-      "license": "CC0",
-      "description": "Gloucester Blackfriars, west end.",
-      "credit": "Own work",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Blackfriars,_Gloucester"
-  },
-  {
-    "name": "Prinknash Abbey",
-    "country": "england",
-    "region": "the-midlands",
-    "county": "Gloucestershire",
-    "lat": 51.8225,
-    "lng": -2.17611111,
-    "mapsLink": "https://www.google.com/maps/search/Prinknash%20Abbey/@51.8367,-2.16,15z",
-    "image": "https://img.castlecore.uk/prinknash-abbey.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/prinknash-abbey-2.jpg",
-      "https://img.castlecore.uk/prinknash-abbey-3.jpg",
-      "https://img.castlecore.uk/prinknash-abbey-4.jpg",
-      "https://img.castlecore.uk/prinknash-abbey-5.jpg"
-    ],
-    "desc": "Prinknash Abbey is a Roman Catholic monastery in the Vale of Gloucester in the Diocese of Clifton, near the village of Cranham, Gloucestershire. It belongs to the English Province of the Subiaco Cassinese Congregation, which is itself part of the worldwide Benedictine Confederation. It is noted for its manufacturing of incense.",
-    "type": "abbey",
-    "period": "14th century",
-    "rating": 3.9,
-    "tags": [
-      "medieval",
-      "atmospheric",
-      "gardens",
-      "gift-shop"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Prinknash_Abbey"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Prinknash_Abbey",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Prinknash.jpg/330px-Prinknash.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Prinknash_Abbey"
   },
   {
     "name": "Boscobel House",
@@ -40427,56 +39724,6 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Y_Garn_Goch"
   },
   {
-    "name": "Dinefwr Park",
-    "country": "wales",
-    "region": "west-wales",
-    "county": "Carmarthenshire",
-    "lat": 51.88,
-    "lng": -4.016,
-    "mapsLink": "https://www.google.com/maps/search/Dinefwr%20Park/@51.8667,-3.9917,15z",
-    "image": "https://img.castlecore.uk/dinefwr-park.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dinefwr-park-2.jpg",
-      "https://img.castlecore.uk/dinefwr-park-3.jpg",
-      "https://img.castlecore.uk/dinefwr-park-4.jpg",
-      "https://img.castlecore.uk/dinefwr-park-5.jpg"
-    ],
-    "desc": "Dinefwr Park National Nature Reserve is an 800 acres (320 ha) estate about a mile from the centre of Llandeilo in Carmarthenshire owned by the National Trust, with a mansion in the centre. The highest point is occupied by the ruined Dinefwr Castle, ancient castle of the Deheubarth kingdom. It is a grade I Historic Park and a Site of Special Scientific Interest.",
-    "type": "historic-house",
-    "period": "Iron Age to 17th century",
-    "rating": 4.4,
-    "tags": [
-      "atmospheric",
-      "photogenic",
-      "gardens",
-      "woodland",
-      "medieval",
-      "prehistoric",
-      "kid-friendly"
-    ],
-    "source": [
-      {
-        "name": "National Trust",
-        "url": "https://www.nationaltrust.org.uk/visit/wales/dinefwr"
-      },
-      {
-        "name": "Britain Express",
-        "url": "https://www.britainexpress.com/attractions.htm?attraction=721"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Dinefwr_Park_National_Nature_Reserve",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Dinefwr_Park_and_House%2C_Capt%27_Gorgeous_-_31725175898.jpg/330px-Dinefwr_Park_and_House%2C_Capt%27_Gorgeous_-_31725175898.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dinefwr_Castle"
-  },
-  {
     "name": "Paxton's Tower",
     "country": "wales",
     "region": "west-wales",
@@ -40937,7 +40184,7 @@
     "county": "Carmarthenshire",
     "lat": 51.8768,
     "lng": -4.0184,
-    "mapsLink": "https://www.google.com/maps/search/Dynevor%20Castle/@51.875,-4,15z",
+    "mapsLink": "https://maps.app.goo.gl/nPsHYLLgEkHaJ8HX6",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Dinefwr_castle_at_sunrise.jpg/330px-Dinefwr_castle_at_sunrise.jpg",
     "imgSource": "CDN",
     "gallery": [],
@@ -41341,7 +40588,7 @@
     "county": "County Louth",
     "lat": 54.04646,
     "lng": -6.488317,
-    "mapsLink": "https://www.google.com/maps/search/Roche%20Castle/@54.0278,-6.4306,15z",
+    "mapsLink": "https://maps.app.goo.gl/Ensp15fFpkpdZ9xq8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Castle_Roche_Louth.jpg/330px-Castle_Roche_Louth.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -41474,53 +40721,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true
-  },
-  {
-    "name": "Dunsink Castle",
-    "country": "ireland",
-    "region": "dublin-and-the-pale",
-    "county": "County Dublin",
-    "lat": 53.53555556,
-    "lng": -6.62083333,
-    "mapsLink": "https://www.google.com/maps/search/Dunsink%20Castle/@53.387,-6.338,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg/330px-Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Dunsany Castle, Dunsany, County Meath, Ireland, is a modernised Anglo-Norman castle, started c. 1180 / 1181 by Hugh de Lacy, who also commissioned the original Killeen Castle, nearby, and the famous Trim Castle. It is one of Ireland's oldest homes in continuous occupation, possibly the longest occupied by a single family, having been held by the Cusack family and their descendants by marriage, the Plunketts, from foundation to the present day. The castle is surrounded by its demesne, the inner part of the formerly extensive Dunsany Estate. The demesne holds a historic church, a walled garden, a stone farm complex, and an ice house, among other features, and is home to a wide range of fauna.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Dublin Heritage",
-        "url": "https://www.dublincity.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Dunsany_Castle_and_Demesne",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg/330px-Dunsany_Castle%2C_Dunsany%2C_Co._Meath_%28geograph_3543036%29.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Tim Wilson",
-      "license": "CC BY-SA 2.0",
-      "description": "Dunsany Castle, Dunsany, Co. Meath",
-      "credit": "From geograph.org.uk",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "no",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Howth Castle",
@@ -41798,55 +40998,6 @@
       "source": "Wikimedia Commons"
     },
     "imageReviewDone": true
-  },
-  {
-    "name": "Castleroche",
-    "country": "ireland",
-    "region": "dublin-and-the-pale",
-    "county": "County Louth",
-    "lat": 54.04646,
-    "lng": -6.488317,
-    "mapsLink": "https://www.google.com/maps/search/Castleroche/@54.04,-6.483,15z",
-    "image": "https://img.castlecore.uk/castleroche.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/castleroche-2.jpg",
-      "https://img.castlecore.uk/castleroche-3.jpg",
-      "https://img.castlecore.uk/castleroche-4.jpg",
-      "https://img.castlecore.uk/castleroche-5.jpg"
-    ],
-    "desc": "Castle Roche is a Norman castle located some 10 km north-west of Dundalk, County Louth, Ireland. It was the seat of the de Verdun family, who built the castle in 1236.",
-    "type": "castle",
-    "period": "13th century",
-    "rating": 3.8,
-    "tags": [
-      "hilltop",
-      "norman",
-      "ruins-romantic",
-      "photogenic",
-      "atmospheric",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/places-to-visit/roche-castle/"
-      },
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Roche_Castle"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Castle_Roche",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Castle_Roche_Louth.jpg/330px-Castle_Roche_Louth.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Roche"
   },
   {
     "name": "Carlingford Mint",
@@ -42288,52 +41439,6 @@
       "source": "Wikimedia Commons"
     },
     "imageReviewDone": true
-  },
-  {
-    "name": "Ballyteague Castle",
-    "country": "ireland",
-    "region": "dublin-and-the-pale",
-    "county": "County Kildare",
-    "lat": 52.39228,
-    "lng": -9.83896,
-    "mapsLink": "https://www.google.com/maps/search/Ballyteague%20Castle/@53.175,-6.975,15z",
-    "image": "https://img.castlecore.uk/ballyteague-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/ballyteague-castle-2.jpg",
-      "https://img.castlecore.uk/ballyteague-castle-3.jpg",
-      "https://img.castlecore.uk/ballyteague-castle-4.jpg",
-      "https://img.castlecore.uk/ballyteague-castle-5.jpg"
-    ],
-    "desc": "Ballyheigue Castle, in Ballyheigue, County Kerry, is a ruined Tudor-gothic-revival-style mansion. It was used as a residence of the Crosbie family and later as a jail. It has been burned twice. It is currently part of a golf course.",
-    "type": "tower house",
-    "period": "15th century",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "riverside",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Kildare Heritage",
-        "url": "https://www.kildare.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Ballyheigue_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ballyheigue_castle.jpg/330px-Ballyheigue_castle.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Jigginstown Castle",
@@ -44087,7 +43192,10 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Duiske_Abbey"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Duiske_Abbey",
+    "altNames": [
+      "Graiguenamanagh Abbey"
+    ]
   },
   {
     "name": "Kindlestown Castle",
@@ -44591,54 +43699,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Clonard Castle",
-    "country": "ireland",
-    "region": "irelands-ancient-east",
-    "county": "County Meath",
-    "lat": 53.518,
-    "lng": -6.978,
-    "mapsLink": "https://www.google.com/maps/search/Clonard%20Castle/@53.518,-6.978,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/330px-ClontarfCastleHotel.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "Clontarf Castle is a much-modernised castle, dating to 1837, in Clontarf, Dublin, Ireland, an area famous as a key location of the Battle of Clontarf in 1014. There has been a castle on the site since 1172. In modern times, it has functioned as a bar, cabaret venue, and hotel.",
-    "type": "castle",
-    "period": "6th century onwards",
-    "rating": 3.1,
-    "tags": [
-      "ruins-romantic",
-      "celtic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Meath Heritage",
-        "url": "https://www.meathtourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Clontarf_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/330px-ClontarfCastleHotel.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Cailín Sásta at English Wikipedia",
-      "license": "CC BY 3.0",
-      "description": "Clontarf Castle Hotel",
-      "credit": "Self-photographed Original text: I created this work entirely by myself.",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
     "name": "Huntington Castle",
     "country": "ireland",
     "region": "irelands-ancient-east",
@@ -44962,56 +44022,6 @@
     "exists": "unverified",
     "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
-  },
-  {
-    "name": "Graiguenamanagh Abbey",
-    "country": "ireland",
-    "region": "irelands-ancient-east",
-    "county": "County Kilkenny",
-    "lat": 52.54115278,
-    "lng": -6.95466389,
-    "mapsLink": "https://www.google.com/maps/search/Graiguenamanagh%20Abbey/@52.538,-6.958,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/330px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "Duiske Abbey National Monument, also known as Graiguenamanagh Abbey, is a 13th-century Cistercian monastery situated in Graiguenamanagh, County Kilkenny in Ireland.",
-    "type": "abbey",
-    "period": "13th century",
-    "rating": 3.6,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "riverside",
-      "atmospheric",
-      "photogenic"
-    ],
-    "source": [
-      {
-        "name": "Kilkenny Heritage",
-        "url": "https://www.kilkennyheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Duiske_Abbey",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/330px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Andreas F. Borchert",
-      "license": "CC BY-SA 4.0",
-      "description": "Graiguenamanach, County Kilkenny, Ireland\n\n\nChoir Window as seen from South East",
-      "credit": "Self-photographed",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Duiske_Abbey"
   },
   {
     "name": "Granagh Castle",
