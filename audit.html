@@ -544,7 +544,7 @@ function renderTable() {
   
   if (isApprovedTab) {
     let rows = filtered.map((d,i) => {
-      const listingUrl = `https://castlecore.uk/site/${d.country}/${(d.region||'')}/${d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}.html`;
+      const listingUrl = `https://castlecore.uk/site/${d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}.html`;
       const wikiUrl = d.wiki || '';
       return `<tr>
         <td><strong>${esc(d.name)}</strong></td>
