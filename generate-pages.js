@@ -15,10 +15,10 @@ const RICH_SITE_DATA = richCtx.RICH_SITE_DATA;
 
 console.log(`Loaded ${CASTLES.length} castles, ${Object.keys(RICH_SITE_DATA).length} rich entries`);
 
-// ===== Load audit data to filter flagged listings =====
+// ===== Load audit data — only generate pages for approved listings =====
 const AUDIT_DATA = JSON.parse(fs.readFileSync(path.join(__dirname, 'audit-data.json'), 'utf8'));
-const FLAGGED_NAMES = new Set(AUDIT_DATA.filter(x => x.reviewStatus === 'flagged').map(x => x.name));
-console.log(`Audit: ${AUDIT_DATA.length} total, ${FLAGGED_NAMES.size} flagged (will skip page generation)`);
+const APPROVED_NAMES = new Set(AUDIT_DATA.filter(x => x.reviewStatus === 'approved').map(x => x.name));
+console.log(`Audit: ${AUDIT_DATA.length} total, ${APPROVED_NAMES.size} approved (only these + cinematic get pages)`);
 
 // ===== Helpers =====
 function slugify(name) {
@@ -696,8 +696,8 @@ for (const castle of CASTLES) {
     sitemapEntries.push(`  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/${slug}.html</loc><lastmod>${today}</lastmod><priority>0.9</priority></url>`);
     continue;
   }
-  // Skip flagged listings — data stays in data.js but no page generated
-  if (FLAGGED_NAMES.has(castle.name)) {
+  // Only generate pages for approved listings
+  if (!APPROVED_NAMES.has(castle.name)) {
     skipped++;
     continue;
   }
@@ -715,4 +715,4 @@ fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemap, 'utf8');
 // Robots
 fs.writeFileSync(path.join(__dirname, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://devingthingsyallhaventyet-stack.github.io/castle-explorer/sitemap.xml\n`, 'utf8');
 
-console.log(`\nDone! Generated ${count} pages (skipped ${skipped} cinematic), sitemap.xml, and robots.txt`);
+console.log(`\nDone! Generated ${count} pages (${skipped} skipped: not approved or cinematic), sitemap.xml, and robots.txt`);
