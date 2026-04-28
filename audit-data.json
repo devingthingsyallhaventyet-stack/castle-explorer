@@ -25446,8 +25446,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Prinknash_Abbey"
   },
   {
     "name": "Wilton House",
@@ -25636,8 +25637,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Great_Chalfield_Manor"
   },
   {
     "name": "Montacute House",
@@ -26298,8 +26300,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ince_Castle"
   },
   {
     "name": "Cotehele House",
@@ -26350,8 +26353,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cotehele"
   },
   {
     "name": "Lanhydrock House",
@@ -26493,8 +26497,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Godolphin_Estate"
   },
   {
     "name": "Chysauster Ancient Village",
@@ -26539,8 +26544,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chysauster_Ancient_Village"
   },
   {
     "name": "Warwick Castle",
@@ -26580,8 +26586,9 @@
       "cinematic"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Warwick_Castle"
   },
   {
     "name": "Kenilworth Castle",
@@ -26617,8 +26624,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kenilworth_Castle"
   },
   {
     "name": "Bolsover Castle",
@@ -27059,8 +27067,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Berkeley_Castle"
   },
   {
     "name": "Thornton Abbey",
@@ -27096,8 +27105,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Thornton_Abbey"
   },
   {
     "name": "Croxden Abbey",
@@ -27327,8 +27337,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dudley_Castle"
   },
   {
     "name": "Stafford Castle",
@@ -27718,8 +27729,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Wenlock_Priory"
   },
   {
     "name": "Maxstoke Castle",
@@ -28218,8 +28230,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Thornbury_Castle"
   },
   {
     "name": "St Briavels Castle",
@@ -28266,8 +28279,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Briavels_Castle"
   },
   {
     "name": "Hailes Abbey",
@@ -28319,8 +28333,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hailes_Abbey"
   },
   {
     "name": "Tewkesbury Abbey",
@@ -28372,8 +28387,9 @@
     ],
     "imageReviewDone": true,
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey"
   },
   {
     "name": "Belvoir Castle",
@@ -28646,8 +28662,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Somerton_Castle"
   },
   {
     "name": "Hussey Tower",
@@ -28736,8 +28753,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Baginton_Castle"
   },
   {
     "name": "Brinklow Castle",
@@ -28836,8 +28854,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Groby_Castle"
   },
   {
     "name": "Hallaton Castle",
@@ -28884,8 +28903,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hallaton_Castle"
   },
   {
     "name": "Grimsthorpe Castle",
@@ -29131,8 +29151,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Beverston_Castle"
   },
   {
     "name": "Eccleshall Castle",
@@ -29220,8 +29241,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Alton_Castle"
   },
   {
     "name": "Mackworth Castle",
@@ -29306,8 +29328,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bishop%27s_Castle"
   },
   {
     "name": "Newark Castle (Nottinghamshire)",
@@ -29361,8 +29384,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Newark_Castle,_Nottinghamshire"
   },
   {
     "name": "Chatsworth House",
@@ -29402,8 +29426,9 @@
       "cinematic"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chatsworth_House"
   },
   {
     "name": "Gainsborough Old Hall",
@@ -29450,8 +29475,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gainsborough_Old_Hall"
   },
   {
     "name": "Crowland Abbey",
@@ -29499,8 +29525,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Crowland_Abbey"
   },
   {
     "name": "Gloucester Cathedral",
@@ -29553,8 +29580,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gloucester_Cathedral"
   },
   {
     "name": "Sudeley Castle",
@@ -29607,8 +29635,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sudeley_Castle"
   },
   {
     "name": "Hereford Castle",
@@ -29648,8 +29677,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hereford_Castle"
   },
   {
     "name": "Worcester Cathedral",
@@ -29700,8 +29730,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Worcester_Cathedral"
   },
   {
     "name": "Great Malvern Priory",
@@ -29748,8 +29779,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Great_Malvern_Priory"
   },
   {
     "name": "Pershore Abbey",
@@ -29884,8 +29916,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lyveden_New_Bield"
   },
   {
     "name": "Rushton Triangular Lodge",
@@ -30060,8 +30093,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Manor_of_Clifton"
   },
   {
     "name": "Norbury Manor",
@@ -30104,8 +30138,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Norbury_Manor"
   },
   {
     "name": "Barnwell Castle",
@@ -30146,8 +30181,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Barnwell_Castle"
   },
   {
     "name": "Middleton Hall",
@@ -30187,8 +30223,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Middleton_Hall,_Warwickshire"
   },
   {
     "name": "Pembridge Castle",
@@ -30266,8 +30303,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Brampton_Bryan_Castle"
   },
   {
     "name": "Croft Castle",
@@ -30370,8 +30408,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Burghley_House"
   },
   {
     "name": "Leicester Castle",
@@ -30749,8 +30788,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Polesworth_Abbey"
   },
   {
     "name": "Wroxall Abbey",
@@ -31848,8 +31888,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Prinknash_Abbey"
   },
   {
     "name": "Boscobel House",
