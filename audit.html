@@ -688,12 +688,23 @@ function saveProgressToFile() {
     else delete copy.flaggedFields;
     return copy;
   });
-  const blob = new Blob([JSON.stringify(updated, null, 2)], {type:'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'audit-data.json';
-  a.click();
-  alert('Downloaded audit-data.json with all review progress baked in. Send to Clawz to deploy!');
+  const json = JSON.stringify(updated, null, 2);
+  navigator.clipboard.writeText(json).then(() => {
+    alert('Copied audit-data.json to clipboard! Paste it to Clawz to deploy.');
+  }).catch(() => {
+    // Fallback: show in a textarea for manual copy
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:999;display:flex;align-items:center;justify-content:center';
+    overlay.innerHTML = `<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;width:600px;max-width:95vw;max-height:80vh;display:flex;flex-direction:column;gap:12px">
+      <h3 style="color:var(--gold)">📋 Copy this JSON</h3>
+      <textarea style="flex:1;min-height:300px;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:8px;border-radius:6px;font-family:monospace;font-size:12px;resize:none" readonly>${json.replace(/</g,'&lt;')}</textarea>
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button onclick="this.closest('div[style]').remove()" style="background:var(--border);color:var(--text);border:none;padding:8px 16px;border-radius:6px;cursor:pointer">Close</button>
+        <button onclick="this.closest('div').querySelector('textarea').select();document.execCommand('copy');alert('Copied!')" style="background:var(--gold);color:#000;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-weight:600">Select All & Copy</button>
+      </div>
+    </div>`;
+    document.body.appendChild(overlay);
+  });
 }
 
 function updateExportCount() {
