@@ -34,7 +34,8 @@
     "reviewReasons": [
       "wrong-image"
     ],
-    "reviewNote": "main image is wrong"
+    "reviewNote": "main image is wrong",
+    "exists": "yes"
   },
   {
     "name": "Castle Stalker",
@@ -103,7 +104,8 @@
       "flagged-during-image-review"
     ],
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "yes"
   },
   {
     "name": "Dunstaffnage Castle",
@@ -377,7 +379,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "yes"
   },
   {
     "name": "Tarbert Castle",
@@ -489,7 +492,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "yes"
   },
   {
     "name": "Lews Castle",
@@ -564,7 +568,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "yes"
   },
   {
     "name": "Castle Lachlan",
@@ -597,7 +602,8 @@
     "reviewReasons": [
       "other"
     ],
-    "reviewNote": "Images and description dont match linked wikipedia page"
+    "reviewNote": "Images and description dont match linked wikipedia page",
+    "exists": "yes"
   },
   {
     "name": "Castle Coeffin",
@@ -671,7 +677,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Aros Castle",
@@ -783,7 +790,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "wrong-image"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Claig Castle",
@@ -819,7 +827,8 @@
     "reviewReasons": [
       "other"
     ],
-    "reviewNote": "is this place real?"
+    "reviewNote": "is this place real?",
+    "exists": "yes"
   },
   {
     "name": "Toward Castle",
@@ -857,7 +866,8 @@
       "wrong-name",
       "wrong-blurb",
       "other"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunollie Castle",
@@ -898,7 +908,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "wrong-image"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Calvay Castle",
@@ -1004,7 +1015,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Amhuinnsuidhe Castle",
@@ -1253,7 +1265,8 @@
     "reviewReasons": [
       "duplicate"
     ],
-    "reviewNote": "Duplicate for this exists in the data set somewhere"
+    "reviewNote": "Duplicate for this exists in the data set somewhere",
+    "exists": "unverified"
   },
   {
     "name": "Dunderave Castle",
@@ -1290,7 +1303,8 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "unverified"
   },
   {
     "name": "Keills Chapel",
@@ -1402,7 +1416,8 @@
     "reviewReasons": [
       "other"
     ],
-    "reviewNote": "Image doesnt match what i see on wikipedia"
+    "reviewNote": "Image doesnt match what i see on wikipedia",
+    "exists": "unverified"
   },
   {
     "name": "Hermitage Castle",
@@ -2029,7 +2044,8 @@
     "reviewReasons": [
       "other"
     ],
-    "reviewNote": "images and wikipedia dont match"
+    "reviewNote": "images and wikipedia dont match",
+    "exists": "unverified"
   },
   {
     "name": "Fatlips Castle",
@@ -2206,7 +2222,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "wrong-image"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Abbotsford House",
@@ -2246,7 +2263,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Traquair House",
@@ -2699,7 +2717,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Luffness Castle",
@@ -2920,7 +2939,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Merchiston Castle",
@@ -2952,7 +2972,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Liberton Tower",
@@ -2986,7 +3007,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lennoxlove House",
@@ -3057,7 +3079,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dalhousie Castle",
@@ -3396,7 +3419,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Blair Castle",
@@ -3732,7 +3756,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Menzies",
@@ -3803,7 +3828,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Megginch Castle",
@@ -3835,7 +3861,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Balhousie Castle",
@@ -3871,7 +3898,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kellie Castle",
@@ -3980,7 +4008,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clackmannan Tower",
@@ -4080,7 +4109,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Garth Castle",
@@ -4213,7 +4243,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Inchcolm Abbey",
@@ -4282,7 +4313,8 @@
     "reviewReasons": [
       "no-image"
     ],
-    "reviewNote": "No Wikipedia or Google Places images available"
+    "reviewNote": "No Wikipedia or Google Places images available",
+    "exists": "unverified"
   },
   {
     "name": "Balgonie Castle",
@@ -4321,7 +4353,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunkeld Cathedral",
@@ -4596,7 +4629,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Stirling Castle",
@@ -4632,7 +4666,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Doune Castle",
@@ -5155,7 +5190,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lennox Castle",
@@ -5225,7 +5261,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mearns Castle",
@@ -5259,7 +5296,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunmore Pineapple",
@@ -5295,7 +5333,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kinneil House",
@@ -5332,7 +5371,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Callendar House",
@@ -5368,7 +5408,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Eilean Donan Castle",
@@ -5404,7 +5445,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Urquhart Castle",
@@ -5503,7 +5545,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cawdor Castle",
@@ -5572,7 +5615,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Strome Castle",
@@ -5607,7 +5651,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Inverlochy Castle",
@@ -5743,7 +5788,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Girnigoe",
@@ -5779,7 +5825,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunbeath Castle",
@@ -6576,7 +6623,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mousa Broch",
@@ -6615,7 +6663,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carbisdale Castle",
@@ -6829,7 +6878,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Varrich Castle",
@@ -6867,7 +6917,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ardtornish Castle",
@@ -6939,7 +6990,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Balfour Castle",
@@ -7074,7 +7126,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cromarty Courthouse",
@@ -7110,7 +7163,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tarbat Discovery Centre",
@@ -7144,7 +7198,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Culloden Battlefield",
@@ -7460,7 +7515,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Balmoral Castle",
@@ -7787,7 +7843,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Spynie Palace",
@@ -8099,7 +8156,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Arbroath Abbey",
@@ -8314,7 +8372,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lickleyhead Castle",
@@ -8613,7 +8672,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Esslemont Castle",
@@ -8648,7 +8708,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cairnbulg Castle",
@@ -8683,7 +8744,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Harthill Castle",
@@ -8750,7 +8812,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Midmar Castle",
@@ -8921,7 +8984,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kinnaird Head Castle",
@@ -9126,7 +9190,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Finavon Castle",
@@ -9161,7 +9226,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Melgund Castle",
@@ -9227,7 +9293,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Aboyne Castle",
@@ -9292,7 +9359,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Balfluig Castle",
@@ -9388,7 +9456,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Muchalls Castle",
@@ -9423,7 +9492,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Craigston Castle",
@@ -9529,7 +9599,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Birnie Kirk",
@@ -9600,7 +9671,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kinneff Church",
@@ -9636,7 +9708,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Deer Abbey",
@@ -9706,7 +9779,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Haddo House",
@@ -9745,7 +9819,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Pitmedden Garden",
@@ -9853,7 +9928,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Sueno's Stone",
@@ -9890,7 +9966,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Blairfindy Castle",
@@ -10063,7 +10140,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Raemoir House",
@@ -10097,7 +10175,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Druminnor Castle",
@@ -10162,7 +10241,8 @@
     "reviewReasons": [
       "no-image"
     ],
-    "reviewNote": "No Wikipedia or Google Places images available"
+    "reviewNote": "No Wikipedia or Google Places images available",
+    "exists": "unverified"
   },
   {
     "name": "Ethie Castle",
@@ -10196,7 +10276,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cortachy Castle",
@@ -10230,7 +10311,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Airlie Castle",
@@ -10341,7 +10423,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Balintore Castle",
@@ -11020,7 +11103,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle of Park",
@@ -11054,7 +11138,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Comlongon Castle",
@@ -11371,7 +11456,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Sanquhar Castle",
@@ -11541,7 +11627,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunure Castle",
@@ -11611,7 +11698,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Whithorn Priory",
@@ -11921,7 +12009,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kelburn Castle",
@@ -12024,7 +12113,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ayr Castle",
@@ -12052,7 +12142,8 @@
     "reviewReasons": [
       "no-image"
     ],
-    "reviewNote": "No Wikipedia or Google Places images available"
+    "reviewNote": "No Wikipedia or Google Places images available",
+    "exists": "unverified"
   },
   {
     "name": "Sundrum Castle",
@@ -12085,7 +12176,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lincluden Collegiate Church",
@@ -12458,7 +12550,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Baconsthorpe Castle",
@@ -12722,7 +12815,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clare Castle",
@@ -13073,7 +13167,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mettingham Castle",
@@ -13154,7 +13249,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "New Buckenham Castle",
@@ -13197,7 +13293,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kimbolton Castle",
@@ -13419,7 +13516,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Weeting Castle",
@@ -13600,7 +13698,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bishop's Stortford Castle",
@@ -13650,7 +13749,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hertford Castle",
@@ -13831,7 +13931,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "St Botolph's Priory",
@@ -13919,7 +14020,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Layer Marney Tower",
@@ -14007,7 +14109,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Buckden Palace",
@@ -14052,7 +14155,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Landguard Fort",
@@ -14190,7 +14294,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mannington Hall",
@@ -14327,7 +14432,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Alnwick Castle",
@@ -14365,7 +14471,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bamburgh Castle",
@@ -14403,7 +14510,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunstanburgh Castle",
@@ -15062,7 +15170,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Chillingham Castle",
@@ -15420,7 +15529,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Thirlwall Castle",
@@ -15645,7 +15755,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Muncaster Castle",
@@ -15734,7 +15845,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Egremont Castle",
@@ -15906,7 +16018,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lyme Park",
@@ -15956,7 +16069,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Norton Priory",
@@ -16275,7 +16389,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Witton Castle",
@@ -16643,7 +16758,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Workington Hall",
@@ -16820,7 +16936,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Chipchase Castle",
@@ -16912,7 +17029,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Haughton Castle",
@@ -17046,7 +17164,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bellister Castle",
@@ -17091,7 +17210,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mortham Tower",
@@ -17131,7 +17251,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bewcastle Cross",
@@ -17181,7 +17302,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gleaston Castle",
@@ -17276,7 +17398,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dalton Castle",
@@ -17322,7 +17445,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Arnside Tower",
@@ -17402,7 +17526,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Elsdon Tower",
@@ -17751,7 +17876,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Birdoswald Roman Fort",
@@ -17982,7 +18108,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Askerton Castle",
@@ -18022,7 +18149,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Scaleby Castle",
@@ -18099,7 +18227,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Burgh-by-Sands Castle",
@@ -18135,7 +18264,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Stott Park Bobbin Mill",
@@ -18428,7 +18558,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Binchester Roman Fort",
@@ -18511,7 +18642,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Newcastle Castle Keep",
@@ -18608,7 +18740,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Wallington Hall",
@@ -19259,7 +19392,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dover Castle",
@@ -19296,7 +19430,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Leeds Castle",
@@ -19332,7 +19467,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bodiam Castle",
@@ -19834,7 +19970,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Blenheim Palace",
@@ -19872,7 +20009,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Oxford Castle",
@@ -20657,7 +20795,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Herstmonceux Castle",
@@ -21234,7 +21373,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hampton Court Palace",
@@ -21276,7 +21416,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lympne Castle",
@@ -21411,7 +21552,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Reculver Towers",
@@ -21539,7 +21681,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Boxgrove Priory",
@@ -21966,7 +22109,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Old Wardour Castle",
@@ -22438,7 +22582,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Berkeley Castle",
@@ -22475,7 +22620,8 @@
       "flagged-during-image-review"
     ],
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "unverified"
   },
   {
     "name": "Carisbrooke Castle",
@@ -22706,7 +22852,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Powderham Castle",
@@ -23029,7 +23176,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Thornbury Castle",
@@ -23073,7 +23221,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "St Briavels Castle",
@@ -23118,7 +23267,8 @@
       "flagged-during-image-review"
     ],
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "unverified"
   },
   {
     "name": "Hailes Abbey",
@@ -23168,7 +23318,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tewkesbury Abbey",
@@ -23218,7 +23369,8 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "unverified"
   },
   {
     "name": "Cowes Castle",
@@ -23262,7 +23414,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Yarmouth Castle",
@@ -23389,7 +23542,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dupath Well",
@@ -23625,7 +23779,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Burgh Island",
@@ -23812,7 +23967,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gidleigh Castle",
@@ -23857,7 +24013,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Wareham Castle",
@@ -23901,7 +24058,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rufus Castle",
@@ -24038,7 +24196,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Trowbridge Castle",
@@ -24081,7 +24240,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Beverston Castle",
@@ -24129,7 +24289,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bridgwater Castle",
@@ -24168,7 +24329,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Buckfast Abbey",
@@ -24253,7 +24415,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Stanton Drew Stone Circles",
@@ -24298,7 +24461,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle an Dinas",
@@ -24435,7 +24599,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Sudeley Castle",
@@ -24486,7 +24651,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Muchelney Abbey",
@@ -24711,7 +24877,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gloucester Blackfriars",
@@ -24753,7 +24920,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Prinknash Abbey",
@@ -24792,7 +24960,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Wilton House",
@@ -24979,7 +25148,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Montacute House",
@@ -25638,7 +25808,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cotehele House",
@@ -25687,7 +25858,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lanhydrock House",
@@ -25827,7 +25999,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Chysauster Ancient Village",
@@ -25870,7 +26043,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Warwick Castle",
@@ -25908,7 +26082,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kenilworth Castle",
@@ -25942,7 +26117,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bolsover Castle",
@@ -26381,7 +26557,8 @@
       "flagged-during-image-review"
     ],
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "unverified"
   },
   {
     "name": "Thornton Abbey",
@@ -26415,7 +26592,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Croxden Abbey",
@@ -26643,7 +26821,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Stafford Castle",
@@ -27031,7 +27210,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Maxstoke Castle",
@@ -27528,7 +27708,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "St Briavels Castle",
@@ -27573,7 +27754,8 @@
       "flagged-during-image-review"
     ],
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "unverified"
   },
   {
     "name": "Hailes Abbey",
@@ -27623,7 +27805,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tewkesbury Abbey",
@@ -27673,7 +27856,8 @@
     "reviewReasons": [
       "flagged-during-image-review"
     ],
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "exists": "unverified"
   },
   {
     "name": "Belvoir Castle",
@@ -27944,7 +28128,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hussey Tower",
@@ -28031,7 +28216,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Brinklow Castle",
@@ -28128,7 +28314,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hallaton Castle",
@@ -28173,7 +28360,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Grimsthorpe Castle",
@@ -28417,7 +28605,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Eccleshall Castle",
@@ -28503,7 +28692,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mackworth Castle",
@@ -28586,7 +28776,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Newark Castle (Nottinghamshire)",
@@ -28638,7 +28829,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Chatsworth House",
@@ -28676,7 +28868,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gainsborough Old Hall",
@@ -28721,7 +28914,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Crowland Abbey",
@@ -28767,7 +28961,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gloucester Cathedral",
@@ -28818,7 +29013,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Sudeley Castle",
@@ -28869,7 +29065,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hereford Castle",
@@ -28907,7 +29104,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Worcester Cathedral",
@@ -28956,7 +29154,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Great Malvern Priory",
@@ -29001,7 +29200,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Pershore Abbey",
@@ -29134,7 +29334,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rushton Triangular Lodge",
@@ -29307,7 +29508,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Norbury Manor",
@@ -29348,7 +29550,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Barnwell Castle",
@@ -29387,7 +29590,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Middleton Hall",
@@ -29425,7 +29629,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Pembridge Castle",
@@ -29501,7 +29706,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Croft Castle",
@@ -29602,7 +29808,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Leicester Castle",
@@ -29978,7 +30185,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Wroxall Abbey",
@@ -30252,7 +30460,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Sulgrave Manor",
@@ -30431,7 +30640,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Coughton Court",
@@ -30657,7 +30867,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Brockhampton Estate",
@@ -30709,7 +30920,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Berrington Hall",
@@ -30840,7 +31052,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilpeck Church",
@@ -30887,7 +31100,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Abbey Dore",
@@ -30925,7 +31139,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Llanthony Secunda Priory",
@@ -30966,7 +31181,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gloucester Blackfriars",
@@ -31008,7 +31224,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Prinknash Abbey",
@@ -31047,7 +31264,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Boscobel House",
@@ -31226,7 +31444,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Howard",
@@ -31264,7 +31483,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Richmond Castle",
@@ -31299,7 +31519,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Skipton Castle",
@@ -31535,7 +31756,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Whitby Abbey",
@@ -31968,7 +32190,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mount Grace Priory",
@@ -32325,7 +32548,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Wressle Castle",
@@ -32538,7 +32762,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Marmion Tower",
@@ -32675,7 +32900,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Roche Abbey",
@@ -32943,7 +33169,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "St Mary's Abbey York",
@@ -33072,7 +33299,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Markenfield Hall",
@@ -33153,7 +33381,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gilling Castle",
@@ -33337,7 +33566,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Beverley Minster",
@@ -33457,7 +33687,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Aldborough Roman Town",
@@ -33497,7 +33728,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "York City Walls",
@@ -33684,7 +33916,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Temple Newsam",
@@ -33922,7 +34155,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hay Castle",
@@ -34060,7 +34294,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Crickhowell Castle",
@@ -34147,7 +34382,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cefnllys Castle",
@@ -34283,7 +34519,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castell Dinas",
@@ -34330,7 +34567,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tretower Court",
@@ -34511,7 +34749,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Caernarfon Castle",
@@ -34548,7 +34787,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Harlech Castle",
@@ -34582,7 +34822,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Beaumaris Castle",
@@ -34684,7 +34925,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Denbigh Castle",
@@ -34752,7 +34994,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dolbadarn Castle",
@@ -34822,7 +35065,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castell y Bere",
@@ -34892,7 +35136,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Chirk Castle",
@@ -35105,7 +35350,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hawarden Castle",
@@ -35145,7 +35391,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Caergwrle Castle",
@@ -35194,7 +35441,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Deganwy Castle",
@@ -35239,7 +35487,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tomen y Mur",
@@ -35565,7 +35814,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Penrhyn Castle",
@@ -35929,7 +36179,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Portmeirion",
@@ -36072,7 +36323,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Holt Castle",
@@ -36159,7 +36411,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bodnant Garden",
@@ -36278,7 +36531,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castell Coch",
@@ -36603,7 +36857,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Skenfrith Castle",
@@ -36740,7 +36995,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Weobley Castle",
@@ -36790,7 +37046,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Pennard Castle",
@@ -36965,7 +37222,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Newport Castle",
@@ -37098,7 +37356,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Loughor Castle",
@@ -37228,7 +37487,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Penhow Castle",
@@ -37417,7 +37677,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Candleston Castle",
@@ -37773,7 +38034,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castell Morgraig",
@@ -37819,7 +38081,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "St Fagans Castle",
@@ -37951,7 +38214,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tredegar House",
@@ -38173,7 +38437,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Pembroke Castle",
@@ -38638,7 +38903,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Newcastle Emlyn Castle",
@@ -38774,7 +39040,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Wiston Castle",
@@ -38955,7 +39222,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Roch Castle",
@@ -39001,7 +39269,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Upton Castle",
@@ -39049,7 +39318,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Llandovery Castle",
@@ -39135,7 +39405,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castell Henllys",
@@ -39222,7 +39493,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lamphey Bishop's Palace",
@@ -39353,7 +39625,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dinefwr Park",
@@ -39399,7 +39672,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Paxton's Tower",
@@ -39535,7 +39809,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Pentre Ifan",
@@ -39845,7 +40120,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dynevor Castle",
@@ -39892,7 +40168,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dylan Thomas Boathouse",
@@ -40108,7 +40385,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dalkey Castle",
@@ -40289,7 +40567,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilkea Castle",
@@ -40332,7 +40611,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castledermot Round Tower",
@@ -40421,7 +40701,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Howth Castle",
@@ -40653,7 +40934,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Termonfeckin Castle",
@@ -40740,7 +41022,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carlingford Mint",
@@ -40783,7 +41066,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rathfarnham Castle",
@@ -40870,7 +41154,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "St Mary's Abbey Dublin",
@@ -40957,7 +41242,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Roodstown Castle",
@@ -41041,7 +41327,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clane Friary",
@@ -41211,7 +41498,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Jigginstown Castle",
@@ -41254,7 +41542,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moone High Cross",
@@ -41388,7 +41677,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Leixlip Castle",
@@ -41431,7 +41721,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clondalkin Round Tower",
@@ -41512,7 +41803,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Trim Castle",
@@ -41649,7 +41941,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunbrody Abbey",
@@ -41728,7 +42021,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Slade Castle",
@@ -41794,7 +42088,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Slane Castle",
@@ -41989,7 +42284,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clara Castle",
@@ -42248,7 +42544,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Burnchurch Castle",
@@ -42425,7 +42722,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clomantagh Castle",
@@ -42512,7 +42810,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Shankill Castle",
@@ -42646,7 +42945,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonmines",
@@ -42693,7 +42993,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunhill Castle",
@@ -42774,7 +43075,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Molana Abbey",
@@ -42908,7 +43210,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kindlestown Castle",
@@ -42987,7 +43290,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Balrath Castle",
@@ -43031,7 +43335,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Grennan Castle",
@@ -43076,7 +43381,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Russborough House",
@@ -43162,7 +43468,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballysaggartmore Towers",
@@ -43251,7 +43558,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hook Lighthouse",
@@ -43342,7 +43650,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kells Round Tower",
@@ -43432,7 +43741,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Huntington Castle",
@@ -43524,7 +43834,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Strangely Castle",
@@ -43569,7 +43880,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Woodstown Castle",
@@ -43612,7 +43924,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Thomastown Castle",
@@ -43656,7 +43969,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gowran Castle",
@@ -43696,7 +44010,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilfane Church",
@@ -43738,7 +44053,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Graiguenamanagh Abbey",
@@ -43784,7 +44100,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Granagh Castle",
@@ -43829,7 +44146,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Kevin",
@@ -43869,7 +44187,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Athlumney Castle",
@@ -43914,7 +44233,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Skryne Church",
@@ -43958,7 +44278,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hill of Tara",
@@ -44047,7 +44368,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dungarvan Castle",
@@ -44091,7 +44413,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tybroughney Castle",
@@ -44133,7 +44456,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Duncannon Fort",
@@ -44177,7 +44501,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Leighlinbridge Castle",
@@ -44222,7 +44547,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonegal Castle",
@@ -44265,7 +44591,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Wicklow Gaol",
@@ -44309,7 +44636,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Baltinglass Abbey",
@@ -44352,7 +44680,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Oldcastle Meath",
@@ -44393,7 +44722,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Navan Castle",
@@ -44437,7 +44767,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Shee Alms House",
@@ -44480,7 +44811,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rothe House",
@@ -44524,7 +44856,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Coolhill Castle",
@@ -44567,7 +44900,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballybur Castle",
@@ -44609,7 +44943,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Newgrange Cursus",
@@ -44654,7 +44989,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Knowth Passage Tomb",
@@ -44702,7 +45038,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dowth Hall",
@@ -44738,7 +45075,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dromana Gate",
@@ -44779,7 +45117,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Selskar Abbey",
@@ -44822,7 +45161,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gormanston Castle",
@@ -44864,7 +45204,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mothel Abbey",
@@ -44906,7 +45247,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilkieran High Crosses",
@@ -44949,7 +45291,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlecomer Castle",
@@ -44990,7 +45333,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunlavin Castle",
@@ -45032,7 +45376,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Blarney Castle",
@@ -45069,7 +45414,8 @@
     "imageReviewDone": true,
     "reviewReasons": [
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ross Castle",
@@ -45106,7 +45452,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Charles Fort",
@@ -45139,7 +45486,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Desmond Castle",
@@ -45170,7 +45518,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Skellig Michael",
@@ -45203,7 +45552,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Askeaton Castle",
@@ -45286,7 +45636,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunloe Castle",
@@ -45334,7 +45685,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballycarbery Castle",
@@ -45401,7 +45753,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcrea Friary",
@@ -45434,7 +45787,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Timoleague Abbey",
@@ -45468,7 +45822,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kanturk Castle",
@@ -45505,7 +45860,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Drombeg Stone Circle",
@@ -45554,7 +45910,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Glenstal Castle",
@@ -45598,7 +45955,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcoe Castle",
@@ -45642,7 +46000,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunboy Castle",
@@ -45686,7 +46045,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mallow Castle",
@@ -45730,7 +46090,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Macroom Castle",
@@ -45772,7 +46133,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Minard Castle",
@@ -45817,7 +46179,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Listowel Castle",
@@ -45860,7 +46223,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carrigafoyle Castle",
@@ -45904,7 +46268,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilbolane Castle",
@@ -45948,7 +46313,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gallarus Castle",
@@ -45991,7 +46357,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rahinnane Castle",
@@ -46035,7 +46402,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killaha Castle",
@@ -46078,7 +46446,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunkerron Castle",
@@ -46119,7 +46488,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Belvelly Castle",
@@ -46162,7 +46532,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballinacarriga Castle",
@@ -46206,7 +46577,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carriganass Castle",
@@ -46250,7 +46622,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lohort Castle",
@@ -46295,7 +46668,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Monkstown Castle",
@@ -46338,7 +46712,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carrigaphooca Castle",
@@ -46382,7 +46757,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballincollig Castle",
@@ -46425,7 +46801,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dundanion Castle",
@@ -46468,7 +46845,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Glin Castle",
@@ -46512,7 +46890,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Oliver",
@@ -46555,7 +46934,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Shanid Castle",
@@ -46596,7 +46976,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castledonovan",
@@ -46641,7 +47022,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunmanus Castle",
@@ -46685,7 +47067,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cloghane Castle",
@@ -46728,7 +47111,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Togher Castle",
@@ -46770,7 +47154,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Liscarroll Castle",
@@ -46815,7 +47200,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Drishane Castle",
@@ -46858,7 +47244,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dromaneen Castle",
@@ -46900,7 +47287,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Conna Castle",
@@ -46945,7 +47333,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballymalis Castle",
@@ -46987,7 +47376,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballyheigue Castle",
@@ -47120,7 +47510,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Duagh Castle",
@@ -47162,7 +47553,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Matrix",
@@ -47205,7 +47597,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cloyne Round Tower",
@@ -47248,7 +47641,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcolman Castle",
@@ -47291,7 +47685,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Salem",
@@ -47328,7 +47723,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Aghadoe Castle",
@@ -47374,7 +47770,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Muckross House",
@@ -47419,7 +47816,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Derrynane House",
@@ -47464,7 +47862,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Leacanabuaile Fort",
@@ -47506,7 +47905,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballybeg Priory",
@@ -47549,7 +47949,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bridgetown Priory",
@@ -47593,7 +47994,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballyclogh Castle",
@@ -47635,7 +48037,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killagha Abbey",
@@ -47678,7 +48081,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lislaughtin Abbey",
@@ -47721,7 +48125,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Bernard",
@@ -47760,7 +48165,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bantry House",
@@ -47810,7 +48216,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballinskelligs Priory",
@@ -47856,7 +48263,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Staigue Fort",
@@ -47901,7 +48309,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Hyde",
@@ -47940,7 +48349,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Glanworth Castle",
@@ -47986,7 +48396,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "James Fort",
@@ -48030,7 +48441,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Croom Castle",
@@ -48068,7 +48480,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Oola Castle",
@@ -48110,7 +48523,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hospital Church",
@@ -48150,7 +48564,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Blackwater Castle",
@@ -48193,7 +48608,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Doneraile Court",
@@ -48237,7 +48653,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bruree Castle",
@@ -48275,7 +48692,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mungret Abbey",
@@ -48318,7 +48736,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Abbeydorney Abbey",
@@ -48361,7 +48780,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlecove Castle",
@@ -48404,7 +48824,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Abington Castle",
@@ -48448,7 +48869,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tralee Castle",
@@ -48490,7 +48912,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Innisfallen Abbey",
@@ -48534,7 +48957,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rock of Cashel",
@@ -48571,7 +48995,8 @@
     "reviewReasons": [
       "needs-review",
       "cinematic"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cahir Castle",
@@ -48609,7 +49034,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonmacnoise",
@@ -48641,7 +49067,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Roscrea Castle",
@@ -48673,7 +49100,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Nenagh Castle",
@@ -48710,7 +49138,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lea Castle",
@@ -48743,7 +49172,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunamase Castle",
@@ -48777,7 +49207,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Birr Castle",
@@ -48843,7 +49274,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Charleville Castle",
@@ -48876,7 +49308,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Fore Abbey",
@@ -48909,7 +49342,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Athlone Castle",
@@ -48939,7 +49373,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tullynally Castle",
@@ -48972,7 +49407,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killahara Castle",
@@ -49014,7 +49450,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Loughmoe Castle",
@@ -49059,7 +49496,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ardfinnan Castle",
@@ -49102,7 +49540,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ormond Castle",
@@ -49145,7 +49584,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Terryglass Castle",
@@ -49183,7 +49623,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lackeen Castle",
@@ -49227,7 +49668,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Redwood Castle",
@@ -49271,7 +49713,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Delvin Castle",
@@ -49314,7 +49757,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Fore Castle",
@@ -49358,7 +49802,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Leap Castle",
@@ -49407,7 +49852,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cloghan Castle",
@@ -49449,7 +49895,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballycowan Castle",
@@ -49486,7 +49933,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Aghaboe Abbey",
@@ -49525,7 +49973,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballaghmore Castle",
@@ -49568,7 +50017,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Morett Castle",
@@ -49613,7 +50063,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Granard Motte",
@@ -49657,7 +50108,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rathcline Castle",
@@ -49704,7 +50156,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Athassel Priory",
@@ -49750,7 +50203,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Holy Cross Abbey",
@@ -49802,7 +50256,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moycarkey Castle",
@@ -49844,7 +50299,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dromineer Castle",
@@ -49888,7 +50344,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kiltinan Castle",
@@ -49925,7 +50382,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castletown Geoghegan",
@@ -49966,7 +50424,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonyn Castle",
@@ -50009,7 +50468,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Multyfarnham Friary",
@@ -50052,7 +50512,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Caulfield Castle",
@@ -50093,7 +50554,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tyrellspass Castle",
@@ -50136,7 +50598,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rattin Castle",
@@ -50178,7 +50641,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moydrum Castle",
@@ -50223,7 +50687,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Forbes",
@@ -50261,7 +50726,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ardagh Castle",
@@ -50303,7 +50769,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballyboy Castle",
@@ -50345,7 +50812,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Durrow Abbey",
@@ -50385,7 +50853,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Emo Court",
@@ -50428,7 +50897,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killeshin Church",
@@ -50472,7 +50942,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Shaen Castle",
@@ -50516,7 +50987,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcash Castle",
@@ -50560,7 +51032,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Farney Castle",
@@ -50601,7 +51074,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Portlick Castle",
@@ -50638,7 +51112,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killua Castle",
@@ -50683,7 +51158,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Corlea Trackway",
@@ -50727,7 +51203,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dungar Castle",
@@ -50771,7 +51248,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kinnitty Castle",
@@ -50817,7 +51295,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlegrace",
@@ -50854,7 +51333,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcooly Abbey",
@@ -50895,7 +51375,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Longford Castle",
@@ -50937,7 +51418,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Durrow",
@@ -50980,7 +51462,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Thurles Castle",
@@ -51021,7 +51504,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Burncourt Castle",
@@ -51065,7 +51549,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moorstown Castle",
@@ -51103,7 +51588,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carrick-on-Suir Castle",
@@ -51148,7 +51634,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lackan Castle",
@@ -51190,7 +51677,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tristernagh Abbey",
@@ -51230,7 +51718,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballyfin Demesne",
@@ -51271,7 +51760,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Otway",
@@ -51312,7 +51802,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lorrha Priory",
@@ -51355,7 +51846,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Fennor Castle",
@@ -51397,7 +51889,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Any Castle",
@@ -51438,7 +51931,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcormac Castle",
@@ -51480,7 +51974,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Donegal Castle",
@@ -51520,7 +52015,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Doe Castle",
@@ -51554,7 +52050,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Glenveagh Castle",
@@ -51587,7 +52084,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Grianan of Aileach",
@@ -51620,7 +52118,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Boyle Abbey",
@@ -51653,7 +52152,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Roscommon Castle",
@@ -51690,7 +52190,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cloughoughter Castle",
@@ -51764,7 +52265,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Burt Castle",
@@ -51805,7 +52307,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Raphoe Castle",
@@ -51847,7 +52350,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clogh Oughter Castle",
@@ -51894,7 +52398,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lough Key Castle",
@@ -51937,7 +52442,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mongavlin Castle",
@@ -51983,7 +52489,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Murray",
@@ -52026,7 +52533,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Malin Castle",
@@ -52071,7 +52579,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carrickabraghy Castle",
@@ -52116,7 +52625,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlerea Castle",
@@ -52160,7 +52670,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Donamon Castle",
@@ -52203,7 +52714,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cabra Castle",
@@ -52247,7 +52759,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Saunderson",
@@ -52286,7 +52799,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Leslie",
@@ -52332,7 +52846,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mannan Castle",
@@ -52375,7 +52890,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Balfour",
@@ -52415,7 +52931,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Archdale",
@@ -52457,7 +52974,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mountjoy Castle",
@@ -52499,7 +53017,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Newtownstewart Castle",
@@ -52538,7 +53057,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlecaulfield",
@@ -52582,7 +53102,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Brackfield Bawn",
@@ -52623,7 +53144,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Navan Fort",
@@ -52669,7 +53191,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ardglass Castles",
@@ -52713,7 +53236,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Portaferry Castle",
@@ -52756,7 +53280,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlestrange Stone",
@@ -52799,7 +53324,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tulsk Castle",
@@ -52838,7 +53364,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunamon Tower",
@@ -52880,7 +53407,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilronan Castle",
@@ -52924,7 +53452,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Glinsk Castle",
@@ -52967,7 +53496,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Inch Castle",
@@ -53011,7 +53541,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moross Castle",
@@ -53054,7 +53585,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Drumboe Castle",
@@ -53095,7 +53627,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlemore",
@@ -53133,7 +53666,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Movilla Abbey",
@@ -53177,7 +53711,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Shane Castle",
@@ -53220,7 +53755,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Harry Avery Castle",
@@ -53260,7 +53796,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Coole",
@@ -53355,7 +53892,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rathcroghan",
@@ -53398,7 +53936,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Ward",
@@ -53443,7 +53982,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Donegal Abbey",
@@ -53487,7 +54027,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Strokestown House",
@@ -53530,7 +54071,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Drumlane Abbey",
@@ -53574,7 +54116,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilmore Cathedral",
@@ -53616,7 +54159,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Monaghan Castle",
@@ -53657,7 +54201,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clones Round Tower",
@@ -53700,7 +54245,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mussenden Temple",
@@ -53791,7 +54337,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonalis House",
@@ -53834,7 +54381,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Caledon Castle",
@@ -53873,7 +54421,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ardboe High Cross",
@@ -53918,7 +54467,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gosford Castle",
@@ -53959,7 +54509,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballycopeland Windmill",
@@ -53996,7 +54547,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonca Church",
@@ -54033,7 +54585,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballyhaise House",
@@ -54074,7 +54627,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Springhill House",
@@ -54117,7 +54671,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Struell Wells",
@@ -54160,7 +54715,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Saul Church",
@@ -54202,7 +54758,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dromore Mound",
@@ -54244,7 +54801,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunserverick Castle",
@@ -54289,7 +54847,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Layde Church",
@@ -54333,7 +54892,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballyshannon Castle",
@@ -54375,7 +54935,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Bunratty Castle",
@@ -54411,7 +54972,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunguaire Castle",
@@ -54447,7 +55009,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ashford Castle",
@@ -54512,7 +55075,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Portumna Castle",
@@ -54544,7 +55108,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Thoor Ballylee",
@@ -54573,7 +55138,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lynch's Castle",
@@ -54606,7 +55172,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Aughnanure Castle",
@@ -54642,7 +55209,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dún Aonghasa",
@@ -54708,7 +55276,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilmacduagh Monastery",
@@ -54758,7 +55327,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dysert O'Dea Castle",
@@ -54790,7 +55360,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Knappogue Castle",
@@ -54823,7 +55394,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Quin Abbey",
@@ -54857,7 +55429,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ennis Friary",
@@ -54889,7 +55462,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Sligo Abbey",
@@ -54921,7 +55495,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Parke's Castle",
@@ -54954,7 +55529,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kylemore Abbey",
@@ -55004,7 +55580,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballymote Castle",
@@ -55048,7 +55625,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ross Errilly Friary",
@@ -55093,7 +55671,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Oranmore Castle",
@@ -55137,7 +55716,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tyrone House",
@@ -55181,7 +55761,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Newtown Castle",
@@ -55224,7 +55805,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Doonagore Castle",
@@ -55267,7 +55849,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballinalacken Castle",
@@ -55312,7 +55895,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dromoland Castle",
@@ -55359,7 +55943,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Gleninagh Castle",
@@ -55403,7 +55988,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mooghaun Fort",
@@ -55447,7 +56033,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballynahinch Castle",
@@ -55494,7 +56081,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clifden Castle",
@@ -55539,7 +56127,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Fiddaun Castle",
@@ -55583,7 +56172,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Annaghdown Castle",
@@ -55627,7 +56217,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Menlo Castle",
@@ -55672,7 +56263,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moyode Castle",
@@ -55715,7 +56307,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Merlin Park Castle",
@@ -55758,7 +56351,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rockfleet Castle",
@@ -55803,7 +56397,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Burrishoole Abbey",
@@ -55848,7 +56443,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlebar Castle",
@@ -55890,7 +56486,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kinlough Castle",
@@ -55931,7 +56528,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moyne Abbey",
@@ -55976,7 +56574,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rosserk Friary",
@@ -56021,7 +56620,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballintubber Abbey",
@@ -56065,7 +56665,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cong Abbey",
@@ -56114,7 +56715,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clontuskert Abbey",
@@ -56154,7 +56756,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Rossroe Castle",
@@ -56198,7 +56801,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Caherkinmonwee Castle",
@@ -56241,7 +56845,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carrigaholt Castle",
@@ -56285,7 +56890,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Doonbeg Castle",
@@ -56328,7 +56934,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Knockfin Castle",
@@ -56373,7 +56980,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Derryhivenny Castle",
@@ -56412,7 +57020,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcornan Castle",
@@ -56454,7 +57063,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moylough Castle",
@@ -56493,7 +57103,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Monivea Castle",
@@ -56533,7 +57144,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Loughrea Castle",
@@ -56575,7 +57187,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Garbally Castle",
@@ -56617,7 +57230,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonbrock Castle",
@@ -56660,7 +57274,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Hen's Castle",
@@ -56704,7 +57319,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carna Castle",
@@ -56745,7 +57361,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ardamullivan Castle",
@@ -56789,7 +57406,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Pallas Castle",
@@ -56832,7 +57450,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carrickkildavnet Castle",
@@ -56879,7 +57498,8 @@
     },
     "reviewReasons": [
       "flagged-during-image-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballylahan Castle",
@@ -56924,7 +57544,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlecarra",
@@ -56968,7 +57589,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Shrule Castle",
@@ -57012,7 +57634,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castleaffy",
@@ -57054,7 +57677,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Aille Castle",
@@ -57097,7 +57721,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlehill House",
@@ -57134,7 +57759,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Errew Abbey",
@@ -57179,7 +57805,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Markree Castle",
@@ -57223,7 +57850,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lissadell House",
@@ -57268,7 +57896,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castlebaldwin",
@@ -57307,7 +57936,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Skreen Castle",
@@ -57350,7 +57980,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Carrowmore Megalithic Cemetery",
@@ -57436,7 +58067,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Leitrim Castle",
@@ -57479,7 +58111,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Jamestown Castle",
@@ -57519,7 +58152,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Mohill Castle",
@@ -57560,7 +58194,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killone Abbey",
@@ -57600,7 +58235,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Termon Castle",
@@ -57642,7 +58278,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Taylor",
@@ -57679,7 +58316,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilcogan Castle",
@@ -57722,7 +58360,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ardfry Castle",
@@ -57764,7 +58403,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Castle Hackett",
@@ -57809,7 +58449,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clonfert Cathedral",
@@ -57852,7 +58493,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Tuam Cathedral",
@@ -57894,7 +58536,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Corcomroe Abbey",
@@ -57939,7 +58582,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Kilfenora Cathedral",
@@ -57983,7 +58627,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Turoe Stone",
@@ -58026,7 +58671,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Moore Hall",
@@ -58069,7 +58715,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Westport House",
@@ -58113,7 +58760,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Murrisk Abbey",
@@ -58158,7 +58806,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Strade Abbey",
@@ -58201,7 +58850,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Creevelea Abbey",
@@ -58247,7 +58897,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Portumna Priory",
@@ -58290,7 +58941,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Granuaile Tower",
@@ -58334,7 +58986,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Craggaunowen Castle",
@@ -58378,7 +59031,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killaloe Cathedral",
@@ -58422,7 +59076,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Classiebawn Castle",
@@ -58464,7 +59119,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Clare Island Abbey",
@@ -58507,7 +59163,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Abbey Knockmoy",
@@ -58551,7 +59208,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Killala Round Tower",
@@ -58595,7 +59253,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dun Eochla",
@@ -58640,7 +59299,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Magheraghanrush Court Tomb",
@@ -58682,7 +59342,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunmoran Castle",
@@ -58725,7 +59386,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Lough Rynn Castle",
@@ -58769,7 +59431,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Magh Adair",
@@ -58811,7 +59474,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballinafad Castle",
@@ -58853,7 +59517,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Cregg Castle",
@@ -58890,7 +59555,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Ballindoon Priory",
@@ -58935,7 +59601,8 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   },
   {
     "name": "Dunsandle Castle",
@@ -58977,6 +59644,7 @@
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "exists": "unverified"
   }
 ]
