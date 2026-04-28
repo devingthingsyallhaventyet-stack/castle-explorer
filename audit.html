@@ -239,7 +239,7 @@ function switchMainTab(tab) {
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
   document.getElementById(tab === 'review' ? 'tabReview' : tab === 'flagged' ? 'tabFlagged' : tab === 'dead' ? 'tabDead' : 'tabApproved').classList.add('active');
   // Set view mode (but don't render yet — applyFilters will handle it)
-  const wantView = (tab === 'flagged' || tab === 'approved' || tab === 'dead') ? 'table' : 'card';
+  const wantView = (tab === 'approved' || tab === 'dead') ? 'table' : 'card';
   currentView = wantView;
   document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
   document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
@@ -409,7 +409,13 @@ function renderCard() {
       <h3>Our Description <button class="inline-flag-btn${(fieldFlags[key]||{}).description?' flagged':''}" onclick="toggleFieldFlag('${key.replace(/'/g,"\\'")}','description')" style="margin-left:12px">⚑ ${(fieldFlags[key]||{}).description?'Description flagged':'Flag description'}</button></h3>
       <p style="font-size:14px;line-height:1.6;color:var(--muted)">${d.desc ? esc(d.desc) : '<em>No description</em>'}</p>
       ${d.source ? `<div style="margin-top:6px;font-size:12px"><a href="${esc(d.source)}" target="_blank">Source</a></div>` : ''}
-      ${d.wiki ? `<div style="font-size:12px"><a href="${esc(d.wiki)}" target="_blank">Wiki link in data</a></div>` : ''}
+    </div>
+    <div class="blurb-section" style="border-color:var(--green)">
+      <h3 style="color:var(--green)">✅ Verified Sources</h3>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-top:8px">
+        ${(d.wikipediaUrl||d.wiki) ? `<a href="${esc(d.wikipediaUrl||d.wiki)}" target="_blank" style="display:flex;align-items:center;gap:6px">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">❌ No Wikipedia</span>'}
+        ${d.mapsLink ? `<a href="${esc(d.mapsLink)}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps ↗</a>` : (hasCoords ? `<a href="${mapsSearchUrl}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps (search) ↗</a>` : '<span style="color:var(--muted)">❌ No Maps link</span>')}
+      </div>
     </div>
     <div class="wiki-section" id="wikiSection">
       <h3>Wikipedia Comparison</h3>
@@ -466,11 +472,16 @@ function goNext() {
 function goPrev() {
   if (currentIdx > 0) { currentIdx--; renderCard(); }
 }
-function advanceToNextUnreviewed() {
+function advanceToNext() {
+  if (currentMainTab === 'flagged') {
+    // On flagged tab, just go to next entry (approved ones will disappear on re-filter)
+    goNext();
+    return;
+  }
+  // On review tab, skip to next unreviewed
   for (let i = currentIdx + 1; i < filtered.length; i++) {
     if (getStatus(filtered[i]) === 'unreviewed') { currentIdx = i; renderCard(); return; }
   }
-  // wrap
   for (let i = 0; i < currentIdx; i++) {
     if (getStatus(filtered[i]) === 'unreviewed') { currentIdx = i; renderCard(); return; }
   }
@@ -486,7 +497,7 @@ function doApprove() {
   if (!filtered.length) return;
   const d = filtered[currentIdx];
   reviewState[getKey(d)] = { status: 'approved', ts: Date.now() };
-  saveState(); updateProgress(); advanceToNextUnreviewed();
+  saveState(); updateProgress(); advanceToNext();
 }
 
 function quickFlag() {
@@ -494,7 +505,7 @@ function quickFlag() {
   const d = filtered[currentIdx];
   const key = getKey(d);
   reviewState[key] = { status: 'flagged', reasons: ['needs-review'], ts: Date.now() };
-  saveState(); updateProgress(); advanceToNextUnreviewed();
+  saveState(); updateProgress(); advanceToNext();
 }
 
 function openFlagPanel() {
@@ -523,7 +534,7 @@ function confirmFlag() {
   const d = filtered[currentIdx];
   const note = document.getElementById('flagNote').value.trim();
   reviewState[getKey(d)] = { status: 'flagged', reasons, note: note || undefined, ts: Date.now() };
-  saveState(); closeFlagPanel(); updateProgress(); advanceToNextUnreviewed();
+  saveState(); closeFlagPanel(); updateProgress(); advanceToNext();
 }
 
 // Keyboard
