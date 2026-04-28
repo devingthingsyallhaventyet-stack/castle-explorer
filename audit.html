@@ -680,34 +680,35 @@ function findDupes() {
   const flaggedWikiMap = {};
   const flaggedNameMap = {};
   
+  // Use a map keyed by "flaggedName|matchName" to consolidate reasons
+  const pairMap = {};
+  function addPair(f, match, reason) {
+    const key = f.name + '|' + match.name;
+    if (pairMap[key]) {
+      if (!pairMap[key].reasons.includes(reason)) pairMap[key].reasons.push(reason);
+    } else {
+      pairMap[key] = { flagged: f, approved: match, reasons: [reason] };
+    }
+  }
+  
   flagged.forEach(f => {
-    const reasons = [];
-    const matches = [];
-    
-    // Check wiki collision with approved
     const w = (f.wikipediaUrl || f.wiki || '').toLowerCase();
-    if (w && wikiMap[w]) { reasons.push('Same Wikipedia link'); matches.push(wikiMap[w]); }
-    
-    // Check name collision with approved
     const n = f.name.toLowerCase().trim();
-    if (nameMap[n]) { reasons.push('Same name'); if (!matches.includes(nameMap[n])) matches.push(nameMap[n]); }
-    
-    // Check maps collision with approved
     const m = (f.mapsLink || '').toLowerCase();
-    if (m && mapsMap[m]) { reasons.push('Same Google Maps link'); if (!matches.includes(mapsMap[m])) matches.push(mapsMap[m]); }
     
-    if (matches.length) {
-      dupePairs.push({ flagged: f, approved: matches[0], reasons });
-    }
+    // Check against approved
+    if (w && wikiMap[w]) addPair(f, wikiMap[w], 'Same Wikipedia link');
+    if (nameMap[n]) addPair(f, nameMap[n], 'Same name');
+    if (m && mapsMap[m]) addPair(f, mapsMap[m], 'Same Google Maps link');
     
-    // Track for internal flagged dupes
-    if (w) {
-      if (flaggedWikiMap[w]) { dupePairs.push({ flagged: f, approved: flaggedWikiMap[w], reasons: ['Same Wikipedia link (both flagged)'] }); }
-      else flaggedWikiMap[w] = f;
-    }
-    if (flaggedNameMap[n]) { dupePairs.push({ flagged: f, approved: flaggedNameMap[n], reasons: ['Same name (both flagged)'] }); }
+    // Check within flagged
+    if (w && flaggedWikiMap[w]) addPair(f, flaggedWikiMap[w], 'Same Wikipedia link (both flagged)');
+    else if (w) flaggedWikiMap[w] = f;
+    if (flaggedNameMap[n]) addPair(f, flaggedNameMap[n], 'Same name (both flagged)');
     else flaggedNameMap[n] = f;
   });
+  
+  dupePairs = Object.values(pairMap);
   
   document.getElementById('tabDupesCount').textContent = dupePairs.length;
 }
