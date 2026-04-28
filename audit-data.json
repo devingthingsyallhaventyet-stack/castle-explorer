@@ -52045,8 +52045,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Forbes,_County_Longford"
   },
   {
     "name": "Ardagh Castle",
@@ -52090,7 +52091,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52135,7 +52136,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52178,8 +52179,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Durrow_Abbey"
   },
   {
     "name": "Emo Court",
@@ -52224,8 +52226,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Emo_Court"
   },
   {
     "name": "Killeshin Church",
@@ -52271,8 +52274,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Killeshin_Church"
   },
   {
     "name": "Shaen Castle",
@@ -52318,7 +52322,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52365,8 +52369,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilcash_Castle"
   },
   {
     "name": "Farney Castle",
@@ -52409,7 +52414,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52449,8 +52454,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Portlick_Castle"
   },
   {
     "name": "Killua Castle",
@@ -52497,8 +52503,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Killua_Castle"
   },
   {
     "name": "Corlea Trackway",
@@ -52544,8 +52551,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Corlea_Trackway"
   },
   {
     "name": "Dungar Castle",
@@ -52591,7 +52599,7 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52640,8 +52648,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinnitty_Castle"
   },
   {
     "name": "Castlegrace",
@@ -52680,7 +52689,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52724,8 +52733,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilcooly_Abbey"
   },
   {
     "name": "Longford Castle",
@@ -52769,7 +52779,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52815,8 +52825,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Durrow"
   },
   {
     "name": "Thurles Castle",
@@ -52859,7 +52870,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -52906,8 +52917,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Burncourt_Castle"
   },
   {
     "name": "Moorstown Castle",
