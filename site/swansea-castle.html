@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsoh5Y2xw_NFbxoFRtaPEfnD-8w9Ow_UOurs8Y1hhQh8bGGz4oD2fVF4KAVdz0biBEq9adY3GqTKCDDZqkxgDX5Ty40v4dSaDc3j_P7GIz66QYlzCqmfQj6WOZhcYShGm2kLxGz7IjGm6ji8kAtR0_=s4800-w1200" data-castle-name-g="Swansea Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsoh5Y2xw_NFbxoFRtaPEfnD-8w9Ow_UOurs8Y1hhQh8bGGz4oD2fVF4KAVdz0biBEq9adY3GqTKCDDZqkxgDX5Ty40v4dSaDc3j_P7GIz66QYlzCqmfQj6WOZhcYShGm2kLxGz7IjGm6ji8kAtR0_=s4800-w1200" data-castle-name-g="Swansea Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsoh5Y2xw_NFbxoFRtaPEfnD-8w9Ow_UOurs8Y1hhQh8bGGz4oD2fVF4KAVdz0biBEq9adY3GqTKCDDZqkxgDX5Ty40v4dSaDc3j_P7GIz66QYlzCqmfQj6WOZhcYShGm2kLxGz7IjGm6ji8kAtR0_=s4800-w1200" alt="Swansea Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM9zDKi1ym9dItV_h82jrNmfUdK1o58WjW_-ixPD4cFBShlFQd7CjzaSfYuRxs9VjgEedrSv8TrbqPwXKpq2vkSzt6ivGthmg8a6qsLsiGIBKDK1HleAJ6Eofr1VLWclsfoSvjDLJEGxaRC=s4800-w1024" alt="Swansea Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPt8kc6zffs1obvguGsyU_rvU3QY1jOeUDcw2StYM2-IJARpoOYAfRPKdH2mQQ6VjkVtrePWmcbFYFln2-B27wUvCwcpkb78oaTGSm5dO-5kB6g9V23km7eqDjh4IHoBSQS8YCvogKdInqf=s4800-w1200" alt="Swansea Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnrY6dcODA3hTwOnCPUUx59YOQccZum9Z9e8BV3ngKYima3dyxrTm5Zu7ASMAvC2nZVhpevSCy-WIJqbuS05GSEvyyeTXBLwoK8LN76FfpSWuysJk-pPESpIPWCIW5D-6XGsJe-m4bI7TC9w=s4800-w1200" alt="Swansea Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1g4cR6Ldhwd4LoBAR_a7Po_Twv1QkLWOs-y8wcVW_xb2C2XoFrpB-nhpXO-NH_HN-JJQMsB1ChMH9fsa_ViaODVxVe_VlFTPgucoRCPsqgWLRVo0-fWmpNi12Djdvod_bhf6XrQcCeeqX3w=s4800-w1200" alt="Swansea Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Swansea%20Castle%20Swansea" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUtECGYPIRRHCfS8uoCVAQ7F6wEehRwwwflH7LVccwx3tlszsrSjQGZWoDQc12FAn1YW5ajCqSo9zQNWBp4UvYDcxT4tK628uZxL4XEpfRyWTSuGdzuxmcbKujt0wuZhd9I1X-KyZtfxRF9-MH16hnHw=s4800-w1200" data-castle-name-g="Lindisfarne Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUtECGYPIRRHCfS8uoCVAQ7F6wEehRwwwflH7LVccwx3tlszsrSjQGZWoDQc12FAn1YW5ajCqSo9zQNWBp4UvYDcxT4tK628uZxL4XEpfRyWTSuGdzuxmcbKujt0wuZhd9I1X-KyZtfxRF9-MH16hnHw=s4800-w1200" data-castle-name-g="Lindisfarne Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUtECGYPIRRHCfS8uoCVAQ7F6wEehRwwwflH7LVccwx3tlszsrSjQGZWoDQc12FAn1YW5ajCqSo9zQNWBp4UvYDcxT4tK628uZxL4XEpfRyWTSuGdzuxmcbKujt0wuZhd9I1X-KyZtfxRF9-MH16hnHw=s4800-w1200" alt="Lindisfarne Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM75UZ8vTBS5Jul5ocoayuVaIwxGMTSQzgh2-wTIzhI07m6c0L6oj4pj0D9X523fgpoa4CuEbWvZT7DB1X5dw8JgEia2mAo6LlSBjS1e9ve1EOn9VOij4wci9WVOs3IPba_NkBRg9MgtVi11w=s4800-w1200" alt="Lindisfarne Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPLeUDRnOEDMGDoT29D8_nnLp5RhTZC4PmCFr4htMRynnjhdMUHnrzVV_yzUXGyIKA8Nmw83OmsEKZktu8n-k68ih5vopfYfKVkReCX9QssvZJGhzlDwVjr_HhmO0c2AhR2w2szumeC1vmSi4U=s4800-w1200" alt="Lindisfarne Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNx5xSkoFwXzNDtBC6ORD2xZJjS8iBYqhhWt97b5WDrOVkkxQU5uL2bXykld6CvY7e2lIfKZE0_9gSpj_5E4ftIERXMcNAAvHUytjY1JRci8OZdRkple93eZ7KRpN4DrbrjMvVjaeyE9CTY=s4800-w1200" alt="Lindisfarne Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNIOk7SFvbr4v19r4nrUlm6j4Td-ZDTqAgm3HTGAT-M4UbamjMIOlGgw1jIVX44xCBDfJNwEDKEuABjIaou77qCVO-1-XSLj4-Phh3KkQg_Y_z5WubYpZoLQ3XBpxj8-9mP4Ur__rKZCRX61Q=s4800-w1200" alt="Lindisfarne Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lindisfarne%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

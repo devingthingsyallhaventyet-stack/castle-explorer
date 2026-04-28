@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqH4T-tPDUUMUG4nTgShrLbWlGZWQSUcHxueBHI7V79P1981JXISDg0yw3jlStrrH6pS62X8V8NVg37kSo9BznXLmRpu8UxvLXU=s4800-w1200" data-castle-name-g="Arniston House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqH4T-tPDUUMUG4nTgShrLbWlGZWQSUcHxueBHI7V79P1981JXISDg0yw3jlStrrH6pS62X8V8NVg37kSo9BznXLmRpu8UxvLXU=s4800-w1200" data-castle-name-g="Arniston House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqH4T-tPDUUMUG4nTgShrLbWlGZWQSUcHxueBHI7V79P1981JXISDg0yw3jlStrrH6pS62X8V8NVg37kSo9BznXLmRpu8UxvLXU=s4800-w1200" alt="Arniston House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNoJO4KrsX0pi2y2hAhGi_WXs4FaVsytuj4J10gzNpHP8YxVd-jCXrJOGgGK_sypx1GIBwoSPOo4h2Zj8JNbNkhokjaY3W5limLCQ6eXKPDEVVVFkTgWYvxj-gIYPJoGqof62Ui2jGsijHTQg=s4800-w1200" alt="Arniston House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMH1gmNLgoDBNWMsaTm9wm_cuFuIRs4R6rELM3NitHxBX0oivjPqp9P_lUdon62XQF1X0v5ZtGY9t1eGiSECm3tgV6JdwEbbhISAFvYQFvOV9g3k-aT_tSsLDty3XzcyJ9LT_ydoeyeKKCQtQ=s4800-w1200" alt="Arniston House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNleJvNpM8_yplTE_T-IeC8sZ73gKRTUb82xyugrESdlqqPDuVJyg4ttrBro8H5qcWgmhiwjNs6lghNqSI9FCKl1on7pi51SsBi-OyerHYondPwwDYY9JNXKq8UOZ0VJ135zHNK5X4B8FPWCCY=s4800-w1200" alt="Arniston House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqGGWRzZ3NEExHmznOXqi691YwEGQqAL60_Lif_cUdzfUT8QWGS9qNWWf80dfr2sImkoU_h3e8VbEFr47BHw7_1hrmQLTSK8_Iw=s4800-w1200" alt="Arniston House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Arniston%20House%20Midlothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

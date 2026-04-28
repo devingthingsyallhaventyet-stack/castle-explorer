@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrVobG9lEJ70c6_R0tk9Zyp7iAAiKB7CZUpUZ_BhNIM1bKDl7ktWDRm8MhlWOQxzWaMIMc0q6-Qtfj8zEcH6nrx5HsPKtfM7x0PgfHKiheFNism-Hjiz7-C77pWw4FunQARJjko7jqc-qY1EWbES-CkQ=s4800-w1200" data-castle-name-g="Castle of Old Wick">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrVobG9lEJ70c6_R0tk9Zyp7iAAiKB7CZUpUZ_BhNIM1bKDl7ktWDRm8MhlWOQxzWaMIMc0q6-Qtfj8zEcH6nrx5HsPKtfM7x0PgfHKiheFNism-Hjiz7-C77pWw4FunQARJjko7jqc-qY1EWbES-CkQ=s4800-w1200" data-castle-name-g="Castle of Old Wick" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrVobG9lEJ70c6_R0tk9Zyp7iAAiKB7CZUpUZ_BhNIM1bKDl7ktWDRm8MhlWOQxzWaMIMc0q6-Qtfj8zEcH6nrx5HsPKtfM7x0PgfHKiheFNism-Hjiz7-C77pWw4FunQARJjko7jqc-qY1EWbES-CkQ=s4800-w1200" alt="Castle of Old Wick" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN6KvaIKf8zJkkvyjSaStOrEbRVHHwGJcaNtreUaVhfyDA_pocnKLs3EOu3yaUitmI8g2ErAF1nVTx3mXqlKB7-X_zyTadjRkiM3t86six4AgYzYiYPIUg50o2aby5MOg4ZKgqSqM8AjD8quA=s4800-w1200" alt="Castle of Old Wick photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPfKKNelPIZ58BY7ogZbUR5OmH7bpQVS9GqfG0XUasdzxaDNMOG0vqsPslntVLpKbmD73gYuKKJDVXvZLIwyji5sP2glp0ij3iocsAhH3gUeMhFJs2a6qPp83xXs7j_DQmA0KAFseXMO9usrQ=s4800-w1200" alt="Castle of Old Wick photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMVZCNTx9FpngxCj1nznub792J2qVWW0UfUM4ax8twG4vewdKpRHMAwYHZx-pgAFQJRm8_Zc5owebS_B1VjwqKeClOwFPxEs8emjjRpwPudrg-tEUQC5eEBLIWwgMb4zdH9RPyvWcix2i0ncQ=s4800-w1200" alt="Castle of Old Wick photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzPy6Q0v5BrWRe_5oeQtFle46tbrX5V6FNTmNTbr881Rayxgh3y2Xz1FsmbdqU4DVy0jKDyk4SqjkCLO1AyLZrLqPEqyIhRqqGWbTLLHp95OrjRxZOIl8ORQoK-T5ARC-KJGRSCY-OjXE5TQ=s4800-w1200" alt="Castle of Old Wick photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20of%20Old%20Wick%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

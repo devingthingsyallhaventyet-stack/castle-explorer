@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Leybourne_Castle%2C_Kent.jpg/1280px-Leybourne_Castle%2C_Kent.jpg" data-castle-name-g="Leybourne Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Leybourne_Castle%2C_Kent.jpg/1280px-Leybourne_Castle%2C_Kent.jpg" data-castle-name-g="Leybourne Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Leybourne_Castle%2C_Kent.jpg/1280px-Leybourne_Castle%2C_Kent.jpg" alt="Leybourne Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHz61igyKbHawLatot8CyKXTV9kWvYdSmE8jvdpdAKR0kaIHD5NQLwZEr9PvRu0bEc2xI9FcdibCTYZ6Jioq_zlz40XSaLSPgswu8qlGWkALYE5_lfp253K8e42okeEOVzGeNwwGzBSvBj9r1l16yg8Q=s4800-w1200" alt="Leybourne Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZxgUB3nTwkAePyvEX5I-bQVUiCTHsZ3d6HSgRw-aOoObKBh-9vYjd2LYd-A0bVc6Ap4kHnOhn1dnvGLWwb5Wa_GuoXC27dOaAq28SsPkfhIQ8NwCKxww1sa7o3ojJjcMz18EN03LdwFfctGZGVTluFA=s4800-w1200" alt="Leybourne Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-nxwSvtbSkcH5vBKMtu57V8XQmSuKcfngw7aAUbU0allbuHblzf2bLXaJrq8txuPZJoBr6T1W9VV0nEZ03N3wlQGjpBtgUbAhFhBIqzGx87MZ1O4wlBMEDOWr7gtjOumTMGdmemm2OJm7LHu8DKQR9g=s4800-w1200" alt="Leybourne Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO4OMWPyHhGw9tYLxxVu1j2YfFsRRk0BFsRXM2pRbKbsV61hQxAYxGW7CDhbSfdk1MncboIkDmtK1uDyfZBobEN2ddSpcaxkQsIUKTxULShu961sNxzw7BFfjh0MrneajcKGrzC01GUdCUkjEoqHUS0=s4800-w709" alt="Leybourne Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Glen · CC BY 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

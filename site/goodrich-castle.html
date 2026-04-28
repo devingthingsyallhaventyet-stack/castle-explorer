@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTWtqmF10PpSeYujLDJAs3DwsVz6SsOq14jnF3GqvTEJZN85cl4iU5D7v3KH66XqyLLIThGRipJ7BGAQZg5PxESDn8qrWFxzub0bW6ZnDH2Fsy3AOv8WhYmazZ8ysNhX6AYjOJzd-Srh-Vrg=s4800-w1200" data-castle-name-g="Goodrich Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTWtqmF10PpSeYujLDJAs3DwsVz6SsOq14jnF3GqvTEJZN85cl4iU5D7v3KH66XqyLLIThGRipJ7BGAQZg5PxESDn8qrWFxzub0bW6ZnDH2Fsy3AOv8WhYmazZ8ysNhX6AYjOJzd-Srh-Vrg=s4800-w1200" data-castle-name-g="Goodrich Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTWtqmF10PpSeYujLDJAs3DwsVz6SsOq14jnF3GqvTEJZN85cl4iU5D7v3KH66XqyLLIThGRipJ7BGAQZg5PxESDn8qrWFxzub0bW6ZnDH2Fsy3AOv8WhYmazZ8ysNhX6AYjOJzd-Srh-Vrg=s4800-w1200" alt="Goodrich Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHCeMhzX5Y_ue1XjI3Jm4Z2URmW85e7Gf5NLvr2npbZi1oeWBflHcytygOhm_bdIIje9COXDbKvt5kFoSUfwHb--qacx7F0Am0=s4800-w1200" alt="Goodrich Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8RRuZcz7i6C861p04_kEXVgd_ycsRa9pcryuj7S40f4_JaSl0EQUF4NwD9AaWAWi-SjpInw_MH1mGS8FiCsNn1q_sBqL9_B8xdpIuSJGA5i1K2zgrIaFIPGJrstT3OTRfUrlE6S8UPcyhXw=s4800-w1200" alt="Goodrich Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNvhDs8S6827_WZ_A0DIjHWOOHuuXke54ym4a-DDTl3Sh2BQ17xSBiyAGdrvPP5MvmPp_RrSwBWVtk_QxPalJs4WDeXjqpd4CVjm-OqimPsACz3sjGsst1AdA5J5vEQMqgEii5uyDXEpD9EHM=s4800-w1200" alt="Goodrich Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9x8dLKGvSSDdWWJbHwuKV0dQVVTblQUE-9AnioOoGgRaBcEag2dJ5Knf9ZsqmgvHg4yKFKz-Nwi_uryJjEuKjjRUanGYPMCyx1zc_SqXzqVK4DR0Tbh2B-TVOz4T1E0rs34Nb3xN_EUUw=s4800-w1200" alt="Goodrich Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Goodrich%20Castle%20Herefordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

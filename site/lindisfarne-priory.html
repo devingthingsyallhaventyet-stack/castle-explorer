@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM57izmptxg0fBOodZBmH0R5yZErkgkHHWu52KAV5LtwLyGIEBDdU86T6YW2pHQz_3SeciK9Jx4gzXhkDW4kkvukZ3UFaSIcJUemW24YIOWD-1ASoSQvpVwxtTKzoaPylqQNQEDnJw9OD6ECw=s4800-w1200" data-castle-name-g="Lindisfarne Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM57izmptxg0fBOodZBmH0R5yZErkgkHHWu52KAV5LtwLyGIEBDdU86T6YW2pHQz_3SeciK9Jx4gzXhkDW4kkvukZ3UFaSIcJUemW24YIOWD-1ASoSQvpVwxtTKzoaPylqQNQEDnJw9OD6ECw=s4800-w1200" data-castle-name-g="Lindisfarne Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM57izmptxg0fBOodZBmH0R5yZErkgkHHWu52KAV5LtwLyGIEBDdU86T6YW2pHQz_3SeciK9Jx4gzXhkDW4kkvukZ3UFaSIcJUemW24YIOWD-1ASoSQvpVwxtTKzoaPylqQNQEDnJw9OD6ECw=s4800-w1200" alt="Lindisfarne Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVYw_9tk9-53wCk3iRL960sPaq3z5Or8WCPaNblUl2XVC5HbEYWDbhcToz1q0is46dsLRsa3WnEpMoNhkwEyisqJPvnAwwuD3B5ZtQkC-CQ-PNeNGdE-E5kdY6drikeEIWSuSlUNAV66YAYOk=s4800-w1200" alt="Lindisfarne Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtkY7GwPPK9oHINGmh-6i8a76wHhr9iiv3_ZuGVweXV-RTfUYKqsPj1AhMjTA0rp-h2FraxNUwjIz4LyyQ3UN0XGp5vncujsw9l_g9o-gSBb3VLnFzgexacvFeeXkL-1rUudyNxSjvGWLRWg=s4800-w1200" alt="Lindisfarne Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMVtMAavprtH2RJh2VZTqa_LqmY0FKVcPXnwDWdhRz5J39pOMxHiqQ_wjeLXSiu5gMdlF0IcpX9tnrK-ZpfSL6_tG-94L_VO4XOgy_bk30a2x18gzZ5xTcNjf18yh6mY23HJMyUtaQffJvIAw=s4800-w1200" alt="Lindisfarne Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOJ0EDfcwTDRfrtbppys1wWXH2R8Qwd2WAORU9HkwdGJC1kJ_U-PFlNfZglzZ6VneAiNSBAzhOKPxP80R-XFQu2FndohuA26AXfDDOYpfc7iLXTPgfNTDoz7iURdDl1flQKGL-5pQcKwHxflmg=s4800-w1000" alt="Lindisfarne Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lindisfarne%20Priory%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnGiLRTzFAyxn2UlqlME3DMF69n8D_0C2HkaPHHejcw-rMBdmOCqndDla5NtA53t269UhuWrPQUPKarnNCA6a0NhBtn5nva06a5E0uBcl6hA4GHgoUE3VzBAC6RJHrfkAb-8udhtQQJZr67A=s4800-w1200" data-castle-name-g="Dingwall Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnGiLRTzFAyxn2UlqlME3DMF69n8D_0C2HkaPHHejcw-rMBdmOCqndDla5NtA53t269UhuWrPQUPKarnNCA6a0NhBtn5nva06a5E0uBcl6hA4GHgoUE3VzBAC6RJHrfkAb-8udhtQQJZr67A=s4800-w1200" data-castle-name-g="Dingwall Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnGiLRTzFAyxn2UlqlME3DMF69n8D_0C2HkaPHHejcw-rMBdmOCqndDla5NtA53t269UhuWrPQUPKarnNCA6a0NhBtn5nva06a5E0uBcl6hA4GHgoUE3VzBAC6RJHrfkAb-8udhtQQJZr67A=s4800-w1200" alt="Dingwall Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZ4aKlwbpHqatjnYlJtkzFFBje1jqBy68FWKrTEv2Xwxbd3NnMdQOmd-fyJHgg0pzwWHG4yQkI5ceP0Zz7zjvzdWwbn1H567hbTd11QFIwdWXRaFi5XNePx12hxbPUgIT2Ruubn-AwpJswo9w=s4800-w1200" alt="Dingwall Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2OstFnCpU4bBhRvYnw229uAP0RJA1zXUbnTjWyaLGCZ1MxmqTpYSMKJ6Wreb-ahgixYOeUXIv5c-q6Ow3Zs_uPNFtfOq8Ln4tDticBuH1xQIP6vha-dlO9abpRnqzhbnaD5mho7N2RtsCvA=s4800-w1200" alt="Dingwall Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlQC5soweSeR8U4vnyeB8-AE9pmL4bQXh-4wqnCIifITqGvnXnEgSS19QVBusbrgQqnZbGlmj-fpfSv_iUvfsZ8oIolAnbxLa2EV2yk6-PrFpxml7sD4FBqgWJctz8l3uDcqE6lxqMbhu1ycJXL12-ww=s4800-w1200" alt="Dingwall Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPujHOkrgM1lrn5bw3EcYQRJ4DGF5EU_52pH1jMdCEhruxZYCo0kIZ0fulPuMT2fSWWJGcY7u_vKCpJMq6eaZXl2Szz3259GyvHYHbRolOZ-zId72eS_z1gM9WJ80hQd9RfL21GCdvofXcDfmE=s4800-w1200" alt="Dingwall Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dingwall%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

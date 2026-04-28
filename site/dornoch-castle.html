@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Dornoch_Castle.jpg/1280px-Dornoch_Castle.jpg" data-castle-name-g="Dornoch Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Dornoch_Castle.jpg/1280px-Dornoch_Castle.jpg" data-castle-name-g="Dornoch Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Dornoch_Castle.jpg/1280px-Dornoch_Castle.jpg" alt="Dornoch Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqFui28H0VpuIuTfiPslHqzryFL-C-5OqXpqU3Dj_l152_m7tYZqCBy7iHBul0rpYYKRyHJz1pwTgcc6U_gygWOtLiKeu9xBUSM=s4800-w1080" alt="Dornoch Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqEeOSFln9olX3g2VxzWFm4ekbc4WoGhlmF7vS5QPDYfxP8ZfzCsn_6-CTJBOkWcPw9aC3MUI4KYhWrcFPrepW5G6jKHw2cFoxE=s4800-w1200" alt="Dornoch Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPjmo83386dDlI6GaX8Izk-R1Aw2GIAzeVX-DnGue2wNouXkUwP9pz2Rd1TkQFm1GQlxk6_W465o2ttHlDpA7fewYgO6DJhaFE0E5U1R6Hxue1Y9RrRdnI_YIC2xejSLqzmGbUIqJdwkdP7LA=s4800-w1200" alt="Dornoch Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqH4f3ZMSj0bDlyFeWh-xbCq3cdKc8_kb203CePLviBDimUXqLiTMn1j8ByIra83LA_VQ2qS-2IY8c4JrvnHg3eYg0nUJFMYlNM=s4800-w1200" alt="Dornoch Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Tom Pennington · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

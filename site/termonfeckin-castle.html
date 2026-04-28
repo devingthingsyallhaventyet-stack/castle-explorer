@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/St._Fechin%27s_Church%2C_Termonfeckin%2C_Co._Louth_-_geograph.org.uk_-_1079135.jpg/1280px-St._Fechin%27s_Church%2C_Termonfeckin%2C_Co._Louth_-_geograph.org.uk_-_1079135.jpg" data-castle-name-g="Termonfeckin Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/St._Fechin%27s_Church%2C_Termonfeckin%2C_Co._Louth_-_geograph.org.uk_-_1079135.jpg/1280px-St._Fechin%27s_Church%2C_Termonfeckin%2C_Co._Louth_-_geograph.org.uk_-_1079135.jpg" data-castle-name-g="Termonfeckin Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/St._Fechin%27s_Church%2C_Termonfeckin%2C_Co._Louth_-_geograph.org.uk_-_1079135.jpg/1280px-St._Fechin%27s_Church%2C_Termonfeckin%2C_Co._Louth_-_geograph.org.uk_-_1079135.jpg" alt="Termonfeckin Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPe4ZwpoGQieoJUNAfqd_WpswkNxbkpXkWpPtZg8nKwVdXeS-x7cXkJcR1dNHEO7pVc-nhb77jGrl2DCvQgX1bGmkSDT7tj0Duqv5DRkb5glx1fqhUxYLEVrP4NRQGyzz2xkX5iYPWGNLymuXU=s4800-w1200" alt="Termonfeckin Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlL-z_81V2p6cBFMEiDfmti2CM9uYXoJBd4u4IpHr7YJnnEYe-9xgdSziGMn44gXsafbAWJiyyxRrHJcp-Afq_QlE_lhpKSr5mMI5BIfNAodprGavJhOz8wTo3aPbvMwu_Djf6eKS4Hg2CuHg=s4800-w1200" alt="Termonfeckin Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeFswXW5oD-NUaMe7sXZmNheL5YwtIdJMe_WnXGO9rlZlp5FNHtHZ_mK9EQTehzZK5PNJQACvRYEDXMlyRUGHOST992kYrSODXmReqPeY8JNQ0JQLNhqhIPRFh47r_XN7sUKmgKYBZMdai7w=s4800-w1200" alt="Termonfeckin Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOV66wAzniKo9zmgKUhkXKGxOH67ua4awd3EhnpVXDADZ9VJ_oXEBfvixeJG_YLAtZlQuNszA93mgGzDH9PMMKuFWz02TBRpY8_Ridvl8E6vnG1Ri8zR1XQqBXIEcLj0-IrcIjlFr8hiio6mQ=s4800-w1200" alt="Termonfeckin Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Kieran Campbell · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

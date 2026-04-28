@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYgeM3n4Y9pVhbXXo4x2QaUx7Yg1jfki4AhcgLM5-4RBB087DL2FPceVK95UqiLxXzgnsvUrGaVe6MDWgDOsmphHGcJRTXQvzde7k1EQIMylKBk297SeUjZ2b_xKl4G6emzPnqEQuDkZc5YWjANkb_JA=s4800-w1200" data-castle-name-g="Scone Palace">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYgeM3n4Y9pVhbXXo4x2QaUx7Yg1jfki4AhcgLM5-4RBB087DL2FPceVK95UqiLxXzgnsvUrGaVe6MDWgDOsmphHGcJRTXQvzde7k1EQIMylKBk297SeUjZ2b_xKl4G6emzPnqEQuDkZc5YWjANkb_JA=s4800-w1200" data-castle-name-g="Scone Palace" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYgeM3n4Y9pVhbXXo4x2QaUx7Yg1jfki4AhcgLM5-4RBB087DL2FPceVK95UqiLxXzgnsvUrGaVe6MDWgDOsmphHGcJRTXQvzde7k1EQIMylKBk297SeUjZ2b_xKl4G6emzPnqEQuDkZc5YWjANkb_JA=s4800-w1200" alt="Scone Palace" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBdPM_qXh-FnOTd70ES8fkm9QiOi41dyYjYjWQp3sH2j7PEle7-n6aMVFZLHqNOrqDjXcQUaFnkpvIe0cEZQa_wu7oGzHCM8siYd4XahJHK2j2TPnlWrCpyMGFPVBOhPhGNTax5SVMT6h_U3w=s4800-w1200" alt="Scone Palace photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2Zby_lABjrNtfDxYNNgP11FFevV5gslBl9Oo_YYkWZb_b2JWx72eAXqNUkg_kucsNSfPZZKTlCDB5JoOxjrnoPS9PA6Jj2kzumRnFarBIOe-6TDbfd72X722jt4OBIcyJbYqB9ZDO46AD-5egEUl8Eg=s4800-w1200" alt="Scone Palace photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQxN1KBk4xNqfQGaNvN_yZALPoy2OfMRIUSWpAgvURqjGO6wI4iDLkZszadRmhr69F6O06xtqNALaZ1gJUVKWaLE6288VBchtFowV2EmJnq1SWe-lbnV-qy-tFeEfmd0rYvkw0Baf17wtK=s4800-w1200" alt="Scone Palace photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPup3gIo9ucbHqx2YRWEjAPoY4lN_iJ_fFpYuSJwT0k0kvc940GVQps8ESLaBxmmqvWpij5Gz62COVwarRXTyn377Jdi0IHaYCYop86TMWqXWedORZKfXB_myL_ewDt5xgCYYugXEJ1zBj9qA=s4800-w1200" alt="Scone Palace photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Scone%20Palace%20Perth%20and%20Kinross" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

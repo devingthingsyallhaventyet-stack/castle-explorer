@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOy-H69bLMOwcmu-GBvTmuoXKC3kq-TP90wXdT2y5hjbefdSuEC8FPvCsu4ez90Tcy7UUpq_rduQdV0fYSoC0nIFbEy2HZUYee2anlu97TByGxPvlnBQwj9ksMhZfhzRwBzi-TpRYL0qdjwo4c=s4800-w1200" data-castle-name-g="Castle Rising">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOy-H69bLMOwcmu-GBvTmuoXKC3kq-TP90wXdT2y5hjbefdSuEC8FPvCsu4ez90Tcy7UUpq_rduQdV0fYSoC0nIFbEy2HZUYee2anlu97TByGxPvlnBQwj9ksMhZfhzRwBzi-TpRYL0qdjwo4c=s4800-w1200" data-castle-name-g="Castle Rising" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOy-H69bLMOwcmu-GBvTmuoXKC3kq-TP90wXdT2y5hjbefdSuEC8FPvCsu4ez90Tcy7UUpq_rduQdV0fYSoC0nIFbEy2HZUYee2anlu97TByGxPvlnBQwj9ksMhZfhzRwBzi-TpRYL0qdjwo4c=s4800-w1200" alt="Castle Rising" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPA7ESesntGH6lmyDwP1CgRmKf1C_2UT7ajKdWLm2SON_6CJ8gdROMwEo4SELKqAfnvTGFGfPz8eaUEVxHRcPc_i89JTy5_ycplA_sV2BX8dYITmB5Yoyvch3s3V2nTJoa9-HLtzeQmak3iPQ=s4800-w1200" alt="Castle Rising photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgFYh_wAqY4gVZ0uTyEj5xDNvhprN1GeeDfzGguEN2LIJvCUIABUqsHAmMRzpUziOcDv4O2lq1JVGD9GxMGJ9J98PCupDG3y5QXp2d0-GkLnZ39JfEgsepGzmMMEI4VjxGzUxpEFIuyowfDCo=s4800-w1200" alt="Castle Rising photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvrgJw0Mr09VcBafQe6YpeZnsVw3lA5sF44JqzK-oA8b3IKsBZP84f7KfGUihgps_IewVR4cr58KAuhEsRSJ6k-nOYuogozR69qQ2LrmICUMmIIg-eyDZBXMCGMQWHhWD-Xm5WRRG47nDNig=s4800-w1200" alt="Castle Rising photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOWyW7DNEo370qCyMeoK_Q1Cx-FOlWoMZZorKu3WivKjKsUL4H-E29zYrWiAlAYOPwAXytIksIOcwQX3fVpeVLKts1-MOGbzzMse0BUp38VPEj_kRae9BxZy9_6WwxhU6KC0hCGlK2M-nXs=s4800-w1200" alt="Castle Rising photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Rising%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

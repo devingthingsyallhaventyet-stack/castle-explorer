@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpBTPR1E9Zig_ZDsSVkv_sCALxRjs--TqOHRJUljnSAqJacpbcnt8aPLZ_YcELpzk9bCArRpvmG9QmehUo743Fueaft6qewCW0oUZEsfYAiml5LFKUIb0CDJzpYQMg9M3PdhP4YUOGxcMN=s4800-w1200" data-castle-name-g="Drumcoltran Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpBTPR1E9Zig_ZDsSVkv_sCALxRjs--TqOHRJUljnSAqJacpbcnt8aPLZ_YcELpzk9bCArRpvmG9QmehUo743Fueaft6qewCW0oUZEsfYAiml5LFKUIb0CDJzpYQMg9M3PdhP4YUOGxcMN=s4800-w1200" data-castle-name-g="Drumcoltran Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpBTPR1E9Zig_ZDsSVkv_sCALxRjs--TqOHRJUljnSAqJacpbcnt8aPLZ_YcELpzk9bCArRpvmG9QmehUo743Fueaft6qewCW0oUZEsfYAiml5LFKUIb0CDJzpYQMg9M3PdhP4YUOGxcMN=s4800-w1200" alt="Drumcoltran Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_Et2mciCTuSvITFsdBQesRCWTgPkxL9-RrUWuWVanAEe4bFhro85lxPBXnlXXpPWYihrfft8jDHLr1Q11G6sVqmER_7fm7ZctfsQAyDlWgHmtDzHD3Hd9SULNnE9qGoVYb4G8xGgX_igZgiA=s4800-w1200" alt="Drumcoltran Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMuE1HfQpToQsWvx1xd1ceiKg5h6ZA_ibPYkDa0aWAsfOkQYKmIaso6C64flFXIj-2bXoZZYCXpEusNapkpVJm_qvThrRfMbY2FzKPd9AT5_S0OfFclqQBWNCAz-mIuLt9LTTOd_HhmJOGgOJU=s4800-w1200" alt="Drumcoltran Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOarFXelECmugj80-cZbzsUJbls-JfBjWkeM1BxO6ZYfH7BR8fqZ3XP6VOK8IEOoDbx0fBw0W8C_hQjSUITRDhpLNAfwDJxkdwnKGoqtqvye9v82C5XS45_zbS6nQP4w4VgzhnWms3YlNUX=s4800-w1200" alt="Drumcoltran Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFW7NwHmKbRUt1XJrB6IF9VKlNiuv428POvLaYKX-VCK_Lpp9-Eo0elI9DeekRMxUfPm8IMGJ6Wnly4d1-LTJuYNROAZ9dy1Z7VSMnToWvW5NVRdiBY_LuGXyoNSMcSa4yIjUJkMgCO720pQ=s4800-w1200" alt="Drumcoltran Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Drumcoltran%20Tower%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

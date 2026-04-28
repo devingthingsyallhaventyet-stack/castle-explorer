@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYhqefenwWjdnnajvSB8ZMzRLqFIO5NFkVLhXMYwmrQEvExF8uqAw8goYfnL0uOca62RpPpafaUDhEiyoyWlLSPtOBAUyu-Fi_gsTff7CfafdPuPlFWnISJNJWCQPd6G-1yzbLxDk4GL0VWg=s4800-w1200" data-castle-name-g="Cleeve Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYhqefenwWjdnnajvSB8ZMzRLqFIO5NFkVLhXMYwmrQEvExF8uqAw8goYfnL0uOca62RpPpafaUDhEiyoyWlLSPtOBAUyu-Fi_gsTff7CfafdPuPlFWnISJNJWCQPd6G-1yzbLxDk4GL0VWg=s4800-w1200" data-castle-name-g="Cleeve Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYhqefenwWjdnnajvSB8ZMzRLqFIO5NFkVLhXMYwmrQEvExF8uqAw8goYfnL0uOca62RpPpafaUDhEiyoyWlLSPtOBAUyu-Fi_gsTff7CfafdPuPlFWnISJNJWCQPd6G-1yzbLxDk4GL0VWg=s4800-w1200" alt="Cleeve Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyCs_Xxtv74KPLN4TtbfYqQzSyTs6eP5W1w87rzgZcr-zhcpF_Ty3WSMYnJKvApybP_hPF1GkGsPmB0zlrURAECXu7nBuOKkUodz__taZKVgdiBTCkA3iYKWcYdbquEyADO1-kvobMz8rDqzw=s4800-w1014" alt="Cleeve Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWme3EUrHtGKcfK0sCIdtwuGySfvO1EhAJJC9b_rGx1lpSC4hw5UJBQmuu8r0E87JmfH8cCE0y3qWvC_iBLwx0QlIXKuVSDKn1oexJ5l4KaO5kF2hKwmgl8JnqBoEeLQSuIjNhvAQmypph1A=s4800-w1200" alt="Cleeve Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2cLxtBWljgDzwIrdQ3ze_8NnB-6pHZGIet2uxrOUm55UsJLnvK0ulMaEkQZM3KQzr_KdBM017hitnTe9RGSEzbis4LZnD5fW0T8KxjBWZQLF35pWAlhD1zNXBwAzZz9mQe2UN7CIgehA8Jw=s4800-w1200" alt="Cleeve Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMV6GlyqSFFrqUtFZQL0WuVZMHclveg8V_K0zVd8cDo3Uyrc6C-S3X727BzQFDDNPlGGYQy9JnAe6K6enPQ3_n2TCKkz3Vmrt-v7r0GS5Cfk6tKTKPUUNGDnTt0SJDif0aXDgjGPadhyLM1ZA=s4800-w1200" alt="Cleeve Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Cleeve%20Abbey%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

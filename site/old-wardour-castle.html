@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPH86QeaEN0wYg-Hvap13chxCudvGig8xzufScQRyRfeMwgPsh2YCpD7732QjSu68yKUG6h0T9TDd1PI3z9R6gx2OW9Da9DwhPEnvwOVPqFtjtj-Yq2cO0E4HSf1x1kszvC-gryViiAS0sLyw=s4800-w1200" data-castle-name-g="Old Wardour Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPH86QeaEN0wYg-Hvap13chxCudvGig8xzufScQRyRfeMwgPsh2YCpD7732QjSu68yKUG6h0T9TDd1PI3z9R6gx2OW9Da9DwhPEnvwOVPqFtjtj-Yq2cO0E4HSf1x1kszvC-gryViiAS0sLyw=s4800-w1200" data-castle-name-g="Old Wardour Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPH86QeaEN0wYg-Hvap13chxCudvGig8xzufScQRyRfeMwgPsh2YCpD7732QjSu68yKUG6h0T9TDd1PI3z9R6gx2OW9Da9DwhPEnvwOVPqFtjtj-Yq2cO0E4HSf1x1kszvC-gryViiAS0sLyw=s4800-w1200" alt="Old Wardour Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqED-qC6LopCOo-CZeX3xJ2wO36qjM7AWLLRLHtgTHSjBdqHf27yLHU1AD6mbEscE7tuodESZglWSWYzg570dkAUCisiSoBU7yM=s4800-w1200" alt="Old Wardour Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMV50t8TlQGklT_1c8R5CAR2RH-V6tJQPelkIY1UMlhJjLnbl-w34xRifuKO7COBj9DuaHx-j9KA4SiEqLFqOYccwwkXIAqXPXpuX13DDwGXByQAGWfJXIY5f1EKFCG42Fwn3SiUoRawkdMyQ=s4800-w1200" alt="Old Wardour Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDvlcBbMU2LPMu8S0Znf6I-aIW0Ne7Nj3iPqX1Qdhmk4_Q470Z-BieYDE-Q9GmDUOGTb-CU4QdpnwJPia19QWxPKVV9rttuAG3YBQM_-prJVvRId1SBbutV85ZIX3y706GszuaDM8gZotMT6Y=s4800-w1200" alt="Old Wardour Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3hgXSM1d7IG4cRlDRsbmBcLuY20jU2EXU0Ij70xRpa0-hJCSf39FFaLQPh3DZ0o2VcVKFeGi7CUfNd8jKaF8nCoL8IWqkiwY4XRXksOAi6nC1LcWvRjfAtjfFtNtu-X27XmB_IUj4fDOXgA=s4800-w1200" alt="Old Wardour Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Old%20Wardour%20Castle%20Wiltshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

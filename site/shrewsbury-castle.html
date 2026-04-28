@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyB0kf_vfMKW7NgPGwWx7wpT9tp_nq80N4EDIViLR4J341l4K6qZP_8b3w6Jot3RGJusAqv5GKysFTAHWlOmhTH2XsDsAhyFPSlEgcX8B5rmOELZ9_GpPm8o2V-_Zne6ixDRGfcWO6cFAG2g=s4800-w1200" data-castle-name-g="Shrewsbury Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyB0kf_vfMKW7NgPGwWx7wpT9tp_nq80N4EDIViLR4J341l4K6qZP_8b3w6Jot3RGJusAqv5GKysFTAHWlOmhTH2XsDsAhyFPSlEgcX8B5rmOELZ9_GpPm8o2V-_Zne6ixDRGfcWO6cFAG2g=s4800-w1200" data-castle-name-g="Shrewsbury Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyB0kf_vfMKW7NgPGwWx7wpT9tp_nq80N4EDIViLR4J341l4K6qZP_8b3w6Jot3RGJusAqv5GKysFTAHWlOmhTH2XsDsAhyFPSlEgcX8B5rmOELZ9_GpPm8o2V-_Zne6ixDRGfcWO6cFAG2g=s4800-w1200" alt="Shrewsbury Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_wpPvDMQiewkSUyZzgSuhwRhnwbcLzi9T6b3bBC-RCrbWHmIrmhoTzYK6KVmahJKLv-3ss_qu37J5-nFOrNFgOb4hr6RwODkq47xcoanMDpS1sqt0DLEkfw3qTvvcaPMqvzjRt8JjCUeY0qVEtXyJLw=s4800-w1200" alt="Shrewsbury Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMbvuo9l3uUeHJs7vGAPyxrBf7MrI90rDo8Hed4QPaxynzaO40pzpVm8ld06QYXPT4dZXd4CaO4NHrp5NM_HjJrQML7ZpsHakZUX8pF-qj86xytu5c0NeAsrR7xO9FqtcnPGXLvm410JKv1lIk=s4800-w1200" alt="Shrewsbury Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZON-KbIVLRu1gpEFWtsgo4nU73nirMd2nyOazF6Z7ecRm9MQtCLtPjajbNdWYbCP8Iej0P7NVjOpL_OFGFx9Sh1OiQwRbr8nsNFeD-fMyfDgsnIuRUiHovVKVVGJLAaNozSjIG9ZX9PQGm-UJW8AjsuxQ=s4800-w1200" alt="Shrewsbury Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1n973KDNn4V9zlF4san8UBg_ZnujOcFNVkb6D7MQ10MYWOI4etHVz2UoAEjm1rafXM7F7v2w5h14Xh_5Y6C6UfnLUBbV2ugstnG3wTSlZ-Ip7db3IdgKst7cZogNDhiaMqttGcKQIdpvZHg=s4800-w1200" alt="Shrewsbury Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Shrewsbury%20Castle%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

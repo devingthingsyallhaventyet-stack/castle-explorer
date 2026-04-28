@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMcf6VsdOYK2xPnYT4ssTnoq4ehb3xz9Q0rq9OK_qlMI4SrMZVMRKb_-5bf18UkDe-jIkhkgaDf_dFxbddhKd0H99rT9gp-UbN8DZiGobxLstQT9YLY1a9gCymy9c7YRjnbUfvU63431uGnE6oBpo-W=s4800-w1200" data-castle-name-g="Caverswall Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMcf6VsdOYK2xPnYT4ssTnoq4ehb3xz9Q0rq9OK_qlMI4SrMZVMRKb_-5bf18UkDe-jIkhkgaDf_dFxbddhKd0H99rT9gp-UbN8DZiGobxLstQT9YLY1a9gCymy9c7YRjnbUfvU63431uGnE6oBpo-W=s4800-w1200" data-castle-name-g="Caverswall Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMcf6VsdOYK2xPnYT4ssTnoq4ehb3xz9Q0rq9OK_qlMI4SrMZVMRKb_-5bf18UkDe-jIkhkgaDf_dFxbddhKd0H99rT9gp-UbN8DZiGobxLstQT9YLY1a9gCymy9c7YRjnbUfvU63431uGnE6oBpo-W=s4800-w1200" alt="Caverswall Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdIVW6gEUexbmvy3pzzkf5YyHETqxIlcEvHJxmIPvOpvsH0c8Lrr-lWR3-imXdpB19Xrl7mGn9SU0LzxiJlLzDDlpbT43W2_LDE7T5dl53iQFTH9e0FYpLoHaXIToDIMx3YuK4yxpqPzlFWndiVJvMWw=s4800-w1200" alt="Caverswall Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMowgrjS-L1JfW5cZCanEVlQujgTMrsk2s5RuA1Lr94k1_q_LPA2hmAcu1IrlhgZSxHhQvSN8LHR7hDe7hIuyInri2wLekjUPsLddaFUD44VOGOvFNHzysm-A_XpkVEJag92CKs5kERipCWpA=s4800-w1200" alt="Caverswall Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM4og5VlMQrIyeMWQxQKK4Squplv1tbIb1ysWDg5YC8fNODj_SKuPOENupuRxi4r4POdixL4TIhY3scYRgpkxUExedVbzJK07iZ4fGhXgXVWGs7zFW4RvJQTIPxOvdjCpa5yAbvXrXxdYf3dOs=s4800-w1200" alt="Caverswall Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhiMwwiCzr4urqn4sdTqD07SWVvtGFhWiMyGypsz8mS45dnqvNZNGmhuEMEZ1BG6u19Sxi2Clwm0JIIMrXsug1cbCvqIVleN49-I35fGlSGaOR9mc1BZQEd3gGC-oGQ5vA86CdNd2EDwfSiw=s4800-w1200" alt="Caverswall Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Caverswall%20Castle%20Staffordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

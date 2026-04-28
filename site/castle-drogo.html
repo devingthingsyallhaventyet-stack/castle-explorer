@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Drogo-wyrd-01.jpg/1280px-Drogo-wyrd-01.jpg" data-castle-name-g="Castle Drogo">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Drogo-wyrd-01.jpg/1280px-Drogo-wyrd-01.jpg" data-castle-name-g="Castle Drogo" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Drogo-wyrd-01.jpg/1280px-Drogo-wyrd-01.jpg" alt="Castle Drogo" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNotn3pBeuJYyvpjyA53vXgsBOYOiimk5Fe8KgNGyS7ZZqiFNvNEPFccUJCQDgGuGIl9L38jSU_wWcS9OKRVw751eWL2DJUef-VTSvIcOTmLphHgdvajAtHwjhEeHS6W2DLUVMm_ZMD43Tj=s4800-w1200" alt="Castle Drogo photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDr5GPObVF9y1pKxgGrlKgahKGJRonQT2iYwZbjfxsMiOsf04s-13skEKLcBKePAdXaB32k1uP85nUqkx31fMNVEU8R9YQsKLF843PAWzRuuzVUG5LIpjGurt1_Qh41j9MyrUXGpQytX1D8Q=s4800-w1200" alt="Castle Drogo photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMOLEfSZsOVZVNA0Rpu_0Vk1ncCgU9VkaKji5WeOqqZRo8f38rSuTj8ghg_92LqBtcxDc1GV4NtUMal-rexjpSAZjca0IHu3302uvlZN48uXMzO2OoPAMLRTUYsIF8wPIGMHQQn3hh3ORC9bck=s4800-w1200" alt="Castle Drogo photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcJph6d9CA08hqvO_djCBqdCke_FOjSI7W9W4AFPEi3bTrmOZLDbDNgplcQXMIfEGAA_M5w9y_vEZfvnFzPX-y_PMYiA9VXqb4XlsV0EY5-Y13vCbzD8u11AqvmF0L-VDIT54CtCgjbIc_EoM=s4800-w1200" alt="Castle Drogo photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Antony McCallum, http://www.wyrdlight.com · CC BY 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

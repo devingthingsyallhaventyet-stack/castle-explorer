@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtdDZoj5Z7Lzxc1Yn4YR4jvigzrJ1Maavl0VC8pGpBo8CZVlyiX-I4VHXvIHUBf1trWkv1speB6_CVnC0MyL-NmUSV0bpUwzw6IoEGTP6qBa9RDDJkwTSg32KGVu2N67MVfkixeKxReJVb=s4800-w1200" data-castle-name-g="Mitford Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtdDZoj5Z7Lzxc1Yn4YR4jvigzrJ1Maavl0VC8pGpBo8CZVlyiX-I4VHXvIHUBf1trWkv1speB6_CVnC0MyL-NmUSV0bpUwzw6IoEGTP6qBa9RDDJkwTSg32KGVu2N67MVfkixeKxReJVb=s4800-w1200" data-castle-name-g="Mitford Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtdDZoj5Z7Lzxc1Yn4YR4jvigzrJ1Maavl0VC8pGpBo8CZVlyiX-I4VHXvIHUBf1trWkv1speB6_CVnC0MyL-NmUSV0bpUwzw6IoEGTP6qBa9RDDJkwTSg32KGVu2N67MVfkixeKxReJVb=s4800-w1200" alt="Mitford Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpiq8TknEOu1ZG9_tMZ3RvIh2u-yJPycUNKNh9y_Effka3PbqdEbzewiVsppHW1_gb1ZTzkhiOx60GZQYv_zairCB2hFhyPLxAw8QVfxLO9MpV_eTgAuZatZ4ipDgtfI1rJfqsYbN22GJRj1Q=s4800-w1200" alt="Mitford Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPwp5j4B5RXazfLFwSYsOMcyiyKLRFea9WT7uWjB3zLT8A4BoPVdLAm4acdwYid_1Se51YqH9vH83xhEuCH1kzc1kwTtBESWV-n0ue7v_iNII_l1ZDBY2oAdMIgRuGado2-pBLhf_JjQ1Ba4A=s4800-w1200" alt="Mitford Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOakgjQqeR6V4Chj6oyx29Vs2CWD8a0DviwLiSox6fFiKpgKWPXFBsZBtGSxeuW0KyNkyolYm2SqrJATHUNK2HbEXnwFRTQu2Kh4scH4FAG4IDVgoLCGpaNXdlUALp-mDfDgQAANUT9JMZTlA=s4800-w1200" alt="Mitford Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrcSDNfd8VQKcIJUt5hgx05XyRX4cDwoTYiGj3OE6RmzDaWXhkWxlxg03WoqjRuC0jKVnVWzSf9cRhcdO0tpF8SgduXH17MhQ_D_HzF6Rql1n9CO7VDIFg9puWFpPWZlvQ7SImKdbF65xdBg=s4800-w1200" alt="Mitford Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Mitford%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPgg2lkvbb6nvKg5C5Fz4KbQeybJ_1HmxBZm8k2ryWlPRVJlmnEpzy81vy54T19wksrEPO3MQEm91MUJJX2ZUXvmMfc6IBkyCleBf-hcJWclBVxCxRyyNx_eGzdEBJa0sfZnpLar8soEHFtSTR1VDZ6vw=s4800-w1200" data-castle-name-g="Midmar Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPgg2lkvbb6nvKg5C5Fz4KbQeybJ_1HmxBZm8k2ryWlPRVJlmnEpzy81vy54T19wksrEPO3MQEm91MUJJX2ZUXvmMfc6IBkyCleBf-hcJWclBVxCxRyyNx_eGzdEBJa0sfZnpLar8soEHFtSTR1VDZ6vw=s4800-w1200" data-castle-name-g="Midmar Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPgg2lkvbb6nvKg5C5Fz4KbQeybJ_1HmxBZm8k2ryWlPRVJlmnEpzy81vy54T19wksrEPO3MQEm91MUJJX2ZUXvmMfc6IBkyCleBf-hcJWclBVxCxRyyNx_eGzdEBJa0sfZnpLar8soEHFtSTR1VDZ6vw=s4800-w1200" alt="Midmar Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOC_hHpVM0Ht0HTEHUst0F-8X6ZJIBokE4ra5cxSvd4iFFNejuQcdaIO6GZfozQaUYymn1GahCb-prTef4gGNcoMlEBa3Hhkccokfjv7a5kChzCECoxE8cyF5IJ2h_lWM4zxwQC-wr_MgzGttw=s4800-w528" alt="Midmar Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN0wZveZkSIyNbQZyfteY-g7D7o3hLB_aIxvzmcmtKQsoECZvDu7jdwZlTTRoJGXu3bq4aW5tF5mX2osdXvSybOCffMt3jiv4QbUTe2JcHxJbOyEd3rJPJzpnU_i2EdRUOnNm7MF7huHNCGdA=s4800-w720" alt="Midmar Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMzB37FoQCJ-pRxZBk-tqIAyLum_jO_cjQBqo5GedqNdmj5AQhnks9L5VbmZ5nL5H_2_HORi_ct384SxR33w0hDHUYjB2pV0QBzgPuYIivlYPVl1K33ujnBSQR9Fln3sAIlFifG5tU-aau5iFo=s4800-w720" alt="Midmar Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMQ-j702PiumktfYB26bEde96zEn3dCO1BmUD16YaK_kXKbn0aAHcmDXp2H2hkT7xVoG0-3whGndo7ixu9fZ8TJOiWMCeBtLAXObmG3xclDWU1xiw7rodsf232b-ffV7fHjuPpZ4yBwiIa2w=s4800-w1200" alt="Midmar Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Midmar%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtaYCkegvZ0sCPXaRLT8276gKTOSmJ1ZouhQ79CgeyJvgRfUUQRybHNkncoSPk-3AvoJoM7UaQQ83UEbrLbNfqQSgSpwx4xzkeLkBRlpZJbdpabfWbuVaK9_D1hce1pFOemtXyYo4AITTaG6zMbF3VaA=s4800-w1200" data-castle-name-g="Mackworth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtaYCkegvZ0sCPXaRLT8276gKTOSmJ1ZouhQ79CgeyJvgRfUUQRybHNkncoSPk-3AvoJoM7UaQQ83UEbrLbNfqQSgSpwx4xzkeLkBRlpZJbdpabfWbuVaK9_D1hce1pFOemtXyYo4AITTaG6zMbF3VaA=s4800-w1200" data-castle-name-g="Mackworth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtaYCkegvZ0sCPXaRLT8276gKTOSmJ1ZouhQ79CgeyJvgRfUUQRybHNkncoSPk-3AvoJoM7UaQQ83UEbrLbNfqQSgSpwx4xzkeLkBRlpZJbdpabfWbuVaK9_D1hce1pFOemtXyYo4AITTaG6zMbF3VaA=s4800-w1200" alt="Mackworth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsMOQtIooBpnWTqipJma0B2NEn9v-RMqX0FJzi6fcKQD8ObvsQxA5Tj2KSUDZD7QhorClwXDE9uB1gqtVbf8mHqdZsxsIxY6MJ1TTsWqBMNDgKUk3-wguE_8zowt08wrptsWYV5fVxWW3ib2MMrxKytg=s4800-w1200" alt="Mackworth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJYZm-ohpEtKeYlVxVDsHP516leQ_THLwIwte-QjZvHRDEviEjv65N8W4QzYezCZ2iJ3sSBkx7qhA5yGrBZFxY3Jq8OWisBmubVyMaTIab5RJOi4Gkm2gqmFl-CVBW6VQ2FfRRAJhVzWzdag=s4800-w1200" alt="Mackworth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsuELhb4AAwO_CeXhQ8Sv06YgX3CWOKRxUAiYaXxHCI-sYjGVQ0tTE0UyhS7Pl6w8ZaUMx6F-3Sf9oumIh4Q_LZe7UGiWksqmBi8xM9mlkHFPO3bTJSlaRWCdxnnWmCwwYrc33EFIj682d88Tyx7kzyw=s4800-w1200" alt="Mackworth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMW3MGKOkp2Vb9FHAPkRnoZCh-zR_Gf3ZatwNorLNkjz4Q5E6P9nEvPZRCFEA4RwDEFT13uwY0uJVngX5kaCVfMBDbN6sK6aBZjz6jxl45tL4IxNJkh6TLOqD5x_eVUFXU3Nfx_sH8XY9vt-EY=s4800-w1200" alt="Mackworth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Mackworth%20Castle%20Derbyshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

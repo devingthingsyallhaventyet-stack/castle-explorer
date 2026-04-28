@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZONSEBlYj4r9IKe0lb0N-vrBahIvjA9PzFAunTABguKNInM2LkpjcpsYMg1Ja5mcTt8FrM7EC8vDC-2m8XNorHZT0a1Mqk57prNhpMJ8-LsxU_1dYDlG7EuMnIRTpD2W3A1sE0llSIY1xQFJrE=s4800-w1200" data-castle-name-g="Kilravock Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZONSEBlYj4r9IKe0lb0N-vrBahIvjA9PzFAunTABguKNInM2LkpjcpsYMg1Ja5mcTt8FrM7EC8vDC-2m8XNorHZT0a1Mqk57prNhpMJ8-LsxU_1dYDlG7EuMnIRTpD2W3A1sE0llSIY1xQFJrE=s4800-w1200" data-castle-name-g="Kilravock Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZONSEBlYj4r9IKe0lb0N-vrBahIvjA9PzFAunTABguKNInM2LkpjcpsYMg1Ja5mcTt8FrM7EC8vDC-2m8XNorHZT0a1Mqk57prNhpMJ8-LsxU_1dYDlG7EuMnIRTpD2W3A1sE0llSIY1xQFJrE=s4800-w1200" alt="Kilravock Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzPePvu6KBCrpuGVjWmOUPLnPjynPt2JDjfjP7o91h075zpNgVhsyyZJvgmVNQraVGorsK6NGxsPLkWlh8EV0Y5-qTecM_4sNp4dYsdDjbIV3E13vsf_tGSHD0Wxy0e9f_UO_Wba2Qe_aKyQ=s4800-w1200" alt="Kilravock Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTyXN01IG-fpvR5csMXRXlaA_aDuYgT-9aAvy1TmlLwpSLePZvpRhfrP3xvyt71TP-rgjTYDR-Ol1lwTgCzE7pJ_TpKTwEq0mwYcDhohTOhMHf8-iK-pLgNYBJJLR83-X2fN0xpPdgGOGc=s4800-w800" alt="Kilravock Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-nZ8p2ZpdiFGHSsm2DtyjHXnvIlHlNh_43lewIuHKM3RQA729oLTt4696b2V56eAAszLiriM0recL70POl8umaJjUfSqrFJvWjj25MUUnYc60SSu2_KgKHTEGIUUD-fysGjDeM1GURx5kQww=s4800-w800" alt="Kilravock Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMwIWXqbNqN_u_fegQfc0Mt8_cnpVDKIaZkcWTIjw1N6JDInQcO9SA8dTAO1uCLUeEfm1X-7IqtPzGtWpzeY-Q1iEaH_3mLmPQwbfbwNmjoncWN_vb_eRq46NpCykQO4nhXp-M7FajE2ekEvQ=s4800-w1200" alt="Kilravock Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kilravock%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

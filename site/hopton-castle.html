@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO8NjYw-dDN801anpC9eYcKc9pnnFs7asZVAVEq0cYz7uIaEu4fdr5SkcoZb5yTfp29X1H3rg_era4p533wstCS9SWbhZqnz5Py98SNT1JpKFCMTGpZmaPzUDyOI7QGnLzrmrx1KiajOpnU5g=s4800-w1200" data-castle-name-g="Hopton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO8NjYw-dDN801anpC9eYcKc9pnnFs7asZVAVEq0cYz7uIaEu4fdr5SkcoZb5yTfp29X1H3rg_era4p533wstCS9SWbhZqnz5Py98SNT1JpKFCMTGpZmaPzUDyOI7QGnLzrmrx1KiajOpnU5g=s4800-w1200" data-castle-name-g="Hopton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO8NjYw-dDN801anpC9eYcKc9pnnFs7asZVAVEq0cYz7uIaEu4fdr5SkcoZb5yTfp29X1H3rg_era4p533wstCS9SWbhZqnz5Py98SNT1JpKFCMTGpZmaPzUDyOI7QGnLzrmrx1KiajOpnU5g=s4800-w1200" alt="Hopton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMv5TYKQ1OS8Y4brOJ2tHI3tu3JviOqxHb73uqfFXP-5XxcojhqQOxpDU219JxhOC1v1HjMIWkEX62PWOfBePUkXthgwzGhQdMVTfFjrlLavseoTHBFCseFK1f3ST_L1l-kCzN0AWS_sC5PiKc=s4800-w1200" alt="Hopton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP-WVrvvFHIxqep2dIK7ofi9kunfliqAKp_YWigaXZXm18oD8wA4fZq6-J7xH_6ELDIW7ttGWxgPLvJbA-XXbUQjiYNlPml137e6zrKxd7wiynwmTYzI723DYwSTbejZhZDtmCtBryf2xt3-sw=s4800-w1200" alt="Hopton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtSrmLtbYF4enGRzLZbzaAfCU1I1zdWiCW8COdlZOat6bthM4cRXiK2qbRZgmxPky30Y20n6yKPqC3Ys9wcDK81FXK5Y7Ac7Om7NSxaPJ5e_I4_BI9OriyhWiH9p662xO9Ls8MOQ67NeYa14SfqYin=s4800-w1200" alt="Hopton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNfY1A5n2SleZREjDKDbD0evOKlo03ZnHN-oeUo8sZvzZ_b8euOkEDRciZw4rTEvPUq7ajxZ1F0fZfsf23wOpHLxfMlM28SHjhBpn6lWvuxXU4U3qbO1nL0J_5fv4AgnpoHLsI5zyEiFWRQxw=s4800-w1200" alt="Hopton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hopton%20Castle%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

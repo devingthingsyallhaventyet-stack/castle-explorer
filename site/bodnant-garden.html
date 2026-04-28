@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXyu6bIyn1kslXf_Yjsvr5G2fiLMPVm_fza4SAIOxgwSa8a5Oq4W9r2IOpWpxWDO6OSGGo5seVBQlTnX5y4QlLH28ZspSOAiN5ZaxHZoFtOlXk2mBmiI_7yUH4lqByi8ONhKd8Zqii0p2X=s4800-w1200" data-castle-name-g="Bodnant Garden">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXyu6bIyn1kslXf_Yjsvr5G2fiLMPVm_fza4SAIOxgwSa8a5Oq4W9r2IOpWpxWDO6OSGGo5seVBQlTnX5y4QlLH28ZspSOAiN5ZaxHZoFtOlXk2mBmiI_7yUH4lqByi8ONhKd8Zqii0p2X=s4800-w1200" data-castle-name-g="Bodnant Garden" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXyu6bIyn1kslXf_Yjsvr5G2fiLMPVm_fza4SAIOxgwSa8a5Oq4W9r2IOpWpxWDO6OSGGo5seVBQlTnX5y4QlLH28ZspSOAiN5ZaxHZoFtOlXk2mBmiI_7yUH4lqByi8ONhKd8Zqii0p2X=s4800-w1200" alt="Bodnant Garden" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNviYik6RU19YBiZmL3lN8cAAQZD4IHDKTcOBuUgNeym12c__LOhmFIERbKjAu-qWm7TkE1VhRGgRMAOAcUpHJu2tMPjrWeuI9UU9Is6sKIFuJDdz7_5FdVyDJSclkkfJYiG1bFwYxz3y4bBeg=s4800-w1200" alt="Bodnant Garden photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNHLOomCARDPzmL6ztw0FyLH64s3aYIq4THuRDnl0WdYhZ9z9NWf2QabMtIAeC5dKjgFnion_1Qyj-tRferB4vWaAaUfq5InQk4WWOzIQp3oFuoSr_W2NOUjTZn9APqaflEcICLHC3nN718w=s4800-w1200" alt="Bodnant Garden photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2EzL4USEElMwK8z5tlTxKKT6Ensul9vrjwF5AJUtH65xqcbFs943LcKJPCWEWbcIgvVH2c3AS7QFvwV2FqA-5HOPicnD6LF1glHQwQAcDprlLS2MIklgISJQ9HuehQ_eusfq2d_OdaB9QiPw=s4800-w1200" alt="Bodnant Garden photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIzlOQMaO0uZ1vYNl7UiYc-WgJ5Yev0mGyT2DgQ2cvR42lVuVCjJs9gnPClcMeK6oDF0c6OU6SgjsWv1_RzZ0SFYZPF28vVqt10CCh43gZkJgcxpXrR_cmtwkZMO-oXaErhWf7Zeg15T8Qeg=s4800-w1200" alt="Bodnant Garden photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bodnant%20Garden%20Conwy" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

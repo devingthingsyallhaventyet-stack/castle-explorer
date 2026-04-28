@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPqAAXbbhcU_8vbYcDBca9hjB7UqLe_R5yk5e2cVBxii8TngHiuYLZ1dN0wpZ5LrqTjkA1MjQwlFUjp1GHp5M6fYKpsiP7ozygx7bqT04sb7I_3FQvB9jVH8zzw38d-Xn9X7WjFWrKLW0KPQRAjGa3v=s4800-w1200" data-castle-name-g="Caister Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPqAAXbbhcU_8vbYcDBca9hjB7UqLe_R5yk5e2cVBxii8TngHiuYLZ1dN0wpZ5LrqTjkA1MjQwlFUjp1GHp5M6fYKpsiP7ozygx7bqT04sb7I_3FQvB9jVH8zzw38d-Xn9X7WjFWrKLW0KPQRAjGa3v=s4800-w1200" data-castle-name-g="Caister Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPqAAXbbhcU_8vbYcDBca9hjB7UqLe_R5yk5e2cVBxii8TngHiuYLZ1dN0wpZ5LrqTjkA1MjQwlFUjp1GHp5M6fYKpsiP7ozygx7bqT04sb7I_3FQvB9jVH8zzw38d-Xn9X7WjFWrKLW0KPQRAjGa3v=s4800-w1200" alt="Caister Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5c7MNiYyg7aHRSkJcE5sqbPo7ErzizBwfM1fVVz_GtoB88Rjp4fVbl25WrOs9bZU0TbrCeoBLvTyzrW5JuqRU6TCARBk8zuOzrIhBqUPavEy2EhIb1zudrJe_TD84bgLoGw8Xow9cbw0s=s4800-w1200" alt="Caister Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrZm48a1z89wXkF8uRYX-rngB8h0QoggG9AN0ByOp42GzjEnoNMbEFFCT4TgpeO80uofCWN_Co0r1xRNkrzalzVAwMoaFcNbRTp9tEmbIGiBxnPSqyNWCRUVfSiYIgbpjvtJkPlsHXbJdx=s4800-w1200" alt="Caister Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP51VZZyTwpWgob9hXyMMtSub20-5JH1JnBRk3rIrM3YK-ye2g1H5ixHS3VnpbirCvxW8mHEQwofC5NlR49cbRbsCXTgu_opKwpoxAcFwTtFRxJ6v6-jwL1OT2n6bq45Qh8lCXuDoiTQQGMNZSwQgqrxA=s4800-w1200" alt="Caister Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOd79Vs4BZgqcF2eknhlcSjidJY_qnhyBh-skL_CfFbhIAO2PVOelnAxf3HYNEkmSPHZyaISzIu_2w-O1tVTBYoxSBk8cZAyv6MRtRzXHf3P0of09ybcWIFV19OGxu8rt0nWZnvSzPJQ_L6aw=s4800-w1200" alt="Caister Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Caister%20Castle%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

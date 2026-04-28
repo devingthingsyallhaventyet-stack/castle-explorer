@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF_J_nrOhcEOOMAJdYvgZbDJsj9CDLP0dHoLU29JXN-ifn27jR7-xNk-Tz1yn-uW_PCQf9Gve8DODzy30gooOFMyloeX8HNpsI=s4800-w1200" data-castle-name-g="Usk Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF_J_nrOhcEOOMAJdYvgZbDJsj9CDLP0dHoLU29JXN-ifn27jR7-xNk-Tz1yn-uW_PCQf9Gve8DODzy30gooOFMyloeX8HNpsI=s4800-w1200" data-castle-name-g="Usk Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqF_J_nrOhcEOOMAJdYvgZbDJsj9CDLP0dHoLU29JXN-ifn27jR7-xNk-Tz1yn-uW_PCQf9Gve8DODzy30gooOFMyloeX8HNpsI=s4800-w1200" alt="Usk Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOh4jSBgoahpznKysYQkWNjamv1jeacgaGSIYeEKKBy8KPehVWTEeQEPaiLqiCIi4Uz4W1WpV4McIK34nfOHRNJWSiTNUu9kAfUoxAK9-YH0b3yMkL8N4Vpr3caBabhhJtSh8wjwy0jO5nzSnc=s4800-w1200" alt="Usk Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMlv6AStJSdOzAp-69cWFKtsvQmB0BYAFwoOsAbGOvaMEccaCFDpdhZ2t4Om06E6ufmO_3lO8M4-PaSRuwCHeJGNWj_va03bgBoDMn46yiRmdhYKglPjyKKdyaQdJ8BkpjoYlQ6Hg7DsgK8TQ=s4800-w1200" alt="Usk Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjk3i0BadrurOjXgZku9-t008pD0Nt9_yQ0KrjXYgTxXqQhJFA96NYLoxTp-3H55Y7AYES0r6GJ8-hY26UDgy3kjquNu4F22tMEC-gHJ0LWSXQcP-0zJ_BzueWv-eMlFhAVNUISWuqPLrYMA=s4800-w1200" alt="Usk Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGFNgBwOMVI-5crwwn4B7-kL_S8TKlwSKf93Pz1xnS-ffo2pY0oxp1k-l6meUcFXeqwQawG9gsNPsoqKGwV9PytGeSIyUujgssgpYIBAnELKUo6k8-UQH-2aZ2l7YPP5bCnkn8QcAMgsIydQY1-UcKlg=s4800-w1200" alt="Usk Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Usk%20Castle%20Monmouthshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

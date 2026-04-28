@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOn7-96vwEuO3vVl3JTaJl4b1K0KVt-lJDeueBZkX5BREcCITKSsMXHpqDR5r1XV7KGpjH-XuUm0O3qDYVP1iDkCx7mrRJr-lOGOkYmtzcg6YqJ9oIqdQEYCVA5hSqHhot4WhDSrwnosF2bg=s4800-w1200" data-castle-name-g="Tretower Court">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOn7-96vwEuO3vVl3JTaJl4b1K0KVt-lJDeueBZkX5BREcCITKSsMXHpqDR5r1XV7KGpjH-XuUm0O3qDYVP1iDkCx7mrRJr-lOGOkYmtzcg6YqJ9oIqdQEYCVA5hSqHhot4WhDSrwnosF2bg=s4800-w1200" data-castle-name-g="Tretower Court" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOn7-96vwEuO3vVl3JTaJl4b1K0KVt-lJDeueBZkX5BREcCITKSsMXHpqDR5r1XV7KGpjH-XuUm0O3qDYVP1iDkCx7mrRJr-lOGOkYmtzcg6YqJ9oIqdQEYCVA5hSqHhot4WhDSrwnosF2bg=s4800-w1200" alt="Tretower Court" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOZ4tIZW_4sTCKvRuhQQu8HqRbDxECakVXieOPxW_aB-3s5jxNQjWbB2iy5DJQnDlSW7N4-g3bYDAFoQf2LIr1JklXLAkwr2F5NLSfELOuTwUbdGCyHY35Lkqpdng47tgU8pW2VngtrfR1XchQ=s4800-w1200" alt="Tretower Court photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNipEX-p1hx0MeSxQh-Kx1e8eEwEvPGp9DhR8xwC70gTwCAoPuyP9XrgCvyWd9_uw2_wZdoxZ6zMyDhEHF1usP0SNySu-VdaDZmQ_KBmAGX91zdBfw2VFRWODlJUheXKuEj1znexFn22NWVRw=s4800-w1200" alt="Tretower Court photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDzPGLyHRddW6fyZ6z2oAWGG-HAHA2QCYlZdc7MGSNMpd2LplEDza0B07oGlsh9QYeGLEendFYWTFT7xwRzTzSOvTrK9RN9y2kQCVzAA1fbirDj-4HG0XqHABP9Z_2wMuBDnN-OnwI9uObXw=s4800-w1200" alt="Tretower Court photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkn5zUL5UxHfMNZLCxyKQyWWlVMmaVR0ZXi1b-APBWOAnFK0IEBHzS3u3AoC3q4V8KOD7tguqKsqpv6rMMPSw3c4poCmKveTkjNXxnSWtZtkGamsNmFkD6xDwY214EGU1m1tB34N35PNQ72Q=s4800-w1200" alt="Tretower Court photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tretower%20Court%20Powys" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

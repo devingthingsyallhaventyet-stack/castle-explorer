@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Odiham_Castle.jpg/1280px-Odiham_Castle.jpg" data-castle-name-g="Odiham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Odiham_Castle.jpg/1280px-Odiham_Castle.jpg" data-castle-name-g="Odiham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Odiham_Castle.jpg/1280px-Odiham_Castle.jpg" alt="Odiham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPPa1tFd4RsACZBFSd-k5HaNJxwwTI7BarSHWRKGy0mdLBrdBZoumN9K_OxMBaBa5QiVLC5BXuCJgG-3TFsuImG1OSJQbCScy3yzusE8XXnESSedBiA8ojmLfLrcPLkPQ7oHp9oeoZtv3Oj=s4800-w1200" alt="Odiham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPazhVCkSbiRuWlpCdLvqQ-h39oToH6JoSWRMZoK_QStk_Qs_phohaAgoptKW1H8SXTbLUki2xBhCFz6e2LO54TLqZB_WRxgAdI_PKiYzbLwfHVoChDQTSqWWSg2bZzMbWb8X_tX9b_aeXqUm0dumDnaQ=s4800-w1200" alt="Odiham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyL4pnSURXCk6ur5lBPxyuGZ5HfIbrcUJm2-l3VVFhemzjKC2EnTNevMem-_cuSfm0i3T3IXycBwnDcg_QmONMcymGjI439wCHD2EAWl0WLNDuSiQ9YBUmkd0f3jhHd45gJVBh6f9wnTtJ=s4800-w1200" alt="Odiham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9QcSBywzhUpwceeZ0SKt4ZlNll4le6kq2Cn4nkihrvPgvevUgR-PMZq2AsVc0DdEdzcbjHlcIyXPH9xKMebnwViD-xTkrBDeVuD2DyhPu07TAmVxa7UPisz0H3wGiWje-DLUCpUbYc3AgxQDZJN32gQ=s4800-w1200" alt="Odiham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 BabelStone · CC BY-SA 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

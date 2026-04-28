@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgvyGHjYtcnPo0WNZ28QZ4YFzcX-Encl4L4NAzpNUcN488qSsDJQeZf9l1Xn5d856MYnHTi_yWbQ5G75kUIg3FnZvNlZ_OYyPaqZpCX_7Lx0768Q113hqkfJt_ragLuhHunlZVPRniJfyOzw=s4800-w1200" data-castle-name-g="Kingswear Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgvyGHjYtcnPo0WNZ28QZ4YFzcX-Encl4L4NAzpNUcN488qSsDJQeZf9l1Xn5d856MYnHTi_yWbQ5G75kUIg3FnZvNlZ_OYyPaqZpCX_7Lx0768Q113hqkfJt_ragLuhHunlZVPRniJfyOzw=s4800-w1200" data-castle-name-g="Kingswear Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgvyGHjYtcnPo0WNZ28QZ4YFzcX-Encl4L4NAzpNUcN488qSsDJQeZf9l1Xn5d856MYnHTi_yWbQ5G75kUIg3FnZvNlZ_OYyPaqZpCX_7Lx0768Q113hqkfJt_ragLuhHunlZVPRniJfyOzw=s4800-w1200" alt="Kingswear Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOcoIFkElh6BisduXikbPrR9eMg8T0Sc9UzAQVCsTuTLywz5TJbf_FvH515pGD9x32gar9a_4x-rH6EOnJfY7aNOOtlzEf6vjc514N1giXDDUwLHqOxBBJGkhpd5ogFIqDjyyUZQrPuEa541RM=s4800-w1200" alt="Kingswear Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2Tj6BADy7qDI8ZrahR9Zmc0e4eqeiRjWdd_-MkAHGebAdywDprRrK-twd28wqq2emdokV00iZGJaetLHmhbw77aY079ZG_2f_hjkdRh_RfVJxeJ4HFsMV47vjLO-obRc7ss0m0gdHhnwq8w=s4800-w1200" alt="Kingswear Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNacCXQY-qHDLTxoi7q6HYJ1w76yyUKCdtPg6bqi95D3QLt6eJD4sdyeKlBonPT-lmUKf3yRwcFXIQSUoVLzgZpoN0X5omoF0mVJ7mnzPyQYiirlKi8AJIj_XYM2bqGYhjGzj8nPclL9TIOpg=s4800-w1200" alt="Kingswear Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_PZPrmxyEraXuj3uB7vKZQfYnQ2bGhyCBAYyKyiV9IUX38fYF7DFYcQG9KHVFE2usbadUnPd0FEIgwvCSnzilHH1VCl43lMV_7oRlrrj18Gcrdl-im8hzbxFfl9qNaFml4H70MFhPAHYg=s4800-w1200" alt="Kingswear Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kingswear%20Castle%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

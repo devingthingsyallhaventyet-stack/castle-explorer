@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzzYRz_nFiX0PJaV29y1Tt4PtZEdxugkvT7wh8PtVlpiBZ8DKsvaV6ecdxx7fDPbiKaJg0z5A8cyLzaxWXegsKnuJsL-v0tvnrcH_pZIt3I0Y_kY6AblFJKU5sI47mJf5FU4T---MadzAP=s4800-w1200" data-castle-name-g="Ballymoon Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzzYRz_nFiX0PJaV29y1Tt4PtZEdxugkvT7wh8PtVlpiBZ8DKsvaV6ecdxx7fDPbiKaJg0z5A8cyLzaxWXegsKnuJsL-v0tvnrcH_pZIt3I0Y_kY6AblFJKU5sI47mJf5FU4T---MadzAP=s4800-w1200" data-castle-name-g="Ballymoon Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzzYRz_nFiX0PJaV29y1Tt4PtZEdxugkvT7wh8PtVlpiBZ8DKsvaV6ecdxx7fDPbiKaJg0z5A8cyLzaxWXegsKnuJsL-v0tvnrcH_pZIt3I0Y_kY6AblFJKU5sI47mJf5FU4T---MadzAP=s4800-w1200" alt="Ballymoon Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdgEQYlC3YMm0j6o9TG9athZTAfbqxiEELwModxY_AVaw8wJ1GRi5hZKOLSQ1M1cZMhE6Xq0aaXXiKJAs-3apNhKDegWrOGjOkOzl7wGP-0zZAND3XW07XXV-8L3h6ijTeHwKG6rJqV8wF2A=s4800-w1200" alt="Ballymoon Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOuYnoZyVooF994QKG2tHxnyG_yx7_DTbFDFK2xUTPy-nAM1hcxVrqlT5-8BafeCH-UAxAciQMsBjyMTEWZVXdQup5zZqYGoxongAqTa6ccU1R_81drSDM158De3T2pzJS1XTFjHRKZbRic9g=s4800-w1200" alt="Ballymoon Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMN6Tt9waBcQvD5vHIetLEz4Ll5c2L-9v_6DybXXk3JrJQ1UrKtB0xIH_Fx_PHwHUNSjx9se7T-C-Z4mqi9LG78B2Tw6L7GEQTYgxnh3nVp31hnYLh2ODk4TB0ktpAETvI5OZx01uUudDmDRA=s4800-w1200" alt="Ballymoon Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOah2k3K_Cr6VAU27HOfWtFjl2wGdzXbZlZArVpTxbeOdmyBAuEwecdbafaWNskf1AMyfw6RXwp7aLOsDumh_Rji9v-8NJDYQvaB_KrRl6ZsmdMK7St0YHTX-B6Pv3NTlSe3nB89LFOxNH0i-Y=s4800-w1200" alt="Ballymoon Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ballymoon%20Castle%20County%20Carlow" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

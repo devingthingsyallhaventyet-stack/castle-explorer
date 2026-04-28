@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Castles_of_Leinster-_Dunsoghly%2C_Co._Dublin_%28geograph_2496350%29.jpg/1280px-Castles_of_Leinster-_Dunsoghly%2C_Co._Dublin_%28geograph_2496350%29.jpg" data-castle-name-g="Dunsoghly Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Castles_of_Leinster-_Dunsoghly%2C_Co._Dublin_%28geograph_2496350%29.jpg/1280px-Castles_of_Leinster-_Dunsoghly%2C_Co._Dublin_%28geograph_2496350%29.jpg" data-castle-name-g="Dunsoghly Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Castles_of_Leinster-_Dunsoghly%2C_Co._Dublin_%28geograph_2496350%29.jpg/1280px-Castles_of_Leinster-_Dunsoghly%2C_Co._Dublin_%28geograph_2496350%29.jpg" alt="Dunsoghly Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOe8meYb-hCoR1j7HKrkBaG5EgsYxS1yVM_lidp3y1XJzDf9rJcLn6ePX-of0f8t8abtYLSLc6BAhUP2wSwZbv2afvyqMkDaCx4YUs2iWAQXCTMCAlGOk805H238nAhEj_WoOm9QW-tYqHw4w=s4800-w1200" alt="Dunsoghly Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNax2mMLA4NLKQbp1kt2RHFBH3Udyojox1PzXB_sPoYVjMe4G0xZbJlLNAZ_XOoTmwG7qPlJKhcmc_s6pjF73cUfpDxHLIlWGsb4AMYynQL0mrvbEeJjUkzleN-1mpdBZg936sPCXZq-k8rLw=s4800-w1200" alt="Dunsoghly Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPaQFn4IuxhU0JKTXYD-GhjHF0DcUQnfXsBPpKpRCu5EFC_kr3KdRlgfmAQg3vncRz0vqZc6Ru_Mu9e7WIaIHjcWl0P27n0eHp6dN1kT5vwo5Ojaxjz_pw8Ua4uu_jlAjLVLlDwIozEdwsnL5Q=s4800-w1200" alt="Dunsoghly Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM8XxPnyyCQhCqNmAOCCZpL1D8e7K8PE9nilv6VwEt3Nq2cFUYquivshEmHrs3ZGsYJf99TV0YAjnT7I7Ab_3pyaq6xsxOTvweXgThnYVV9PzAbVJgR0LTwD1mCmSfJCJVzXw_6Fcctfw3Slkg=s4800-w1200" alt="Dunsoghly Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Mike Searle · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -309,6 +309,15 @@ const CLIENT_JS = `
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -325,7 +334,8 @@ const CLIENT_JS = `
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){
@@ -571,12 +581,24 @@ ${schema}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="${escapeHtml(bigImg)}" data-castle-name-g="${escapeHtml(castle.name)}">
+<div id="galleryGrid" class="gallery-grid" data-original-src="${escapeHtml(bigImg)}" data-castle-name-g="${escapeHtml(castle.name)}" data-has-gallery="${Array.isArray(castle.gallery) && castle.gallery.length > 0 ? 'true' : 'false'}">
 <div class="g-main">${bigImg ? `<img src="${escapeHtml(bigImg)}" alt="${escapeHtml(castle.name)}" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'">` : ''}</div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+${(() => {
+  const gal = Array.isArray(castle.gallery) ? castle.gallery : [];
+  const sides = [];
+  for (let i = 0; i < 4; i++) {
+    const g = gal[i];
+    const isLast = i === 3;
+    const moreLabel = isLast && gal.length > 4 ? `<span class="g-more" id="gMoreLabel">${gal.length + 1} photos</span>` : (isLast ? `<span class="g-more" id="gMoreLabel" style="display:none">See all</span>` : '');
+    if (g) {
+      const url = typeof g === 'string' ? g : g.url;
+      sides.push(`<div class="g-side" id="gSide${i+1}"><img src="${escapeHtml(url)}" alt="${escapeHtml(castle.name)} photo ${i+2}" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'">${moreLabel}</div>`);
+    } else {
+      sides.push(`<div class="g-side" id="gSide${i+1}">${moreLabel}</div>`);
+    }
+  }
+  return sides.join('\n');
+})()}
 </div>
 </div>
 ${(() => {

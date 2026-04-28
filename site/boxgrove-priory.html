@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTSLduEdtpnvk-4FV3NVopnHrLnU6B6OjJ0mLIWSEdtMv0vl5ZFEHQL_xbQK78Hxz4NQSm3l0U3Ic-ic5BHMR0j3DjOvVIddpb67mB3P5WL7B_uZDgiukIO_d0_gdCyBKGT8NgLRgp_IkCCA=s4800-w1200" data-castle-name-g="Boxgrove Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTSLduEdtpnvk-4FV3NVopnHrLnU6B6OjJ0mLIWSEdtMv0vl5ZFEHQL_xbQK78Hxz4NQSm3l0U3Ic-ic5BHMR0j3DjOvVIddpb67mB3P5WL7B_uZDgiukIO_d0_gdCyBKGT8NgLRgp_IkCCA=s4800-w1200" data-castle-name-g="Boxgrove Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTSLduEdtpnvk-4FV3NVopnHrLnU6B6OjJ0mLIWSEdtMv0vl5ZFEHQL_xbQK78Hxz4NQSm3l0U3Ic-ic5BHMR0j3DjOvVIddpb67mB3P5WL7B_uZDgiukIO_d0_gdCyBKGT8NgLRgp_IkCCA=s4800-w1200" alt="Boxgrove Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMwlv_SDTUbcWIT452HuQa5b-aGwm8vPJtqpr2vOli7K8l8wKkhcgEsDfL0D2elKtVQkNmH3EOx-lWgnPFi39_76qcwB3Z-2t-17HiLPNWTsKdLhstYtxbb7OfIBYJsWowE1SewuwgE5kKXBQ=s4800-w1200" alt="Boxgrove Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOv5--cNAGPQ7FjJw5NIresILQg_6YxBscusG1fenoCNMrYRzhtq2EpEesFhI0aZvJu9KqbMgz27ErL8ec8mYS-DET8djPVxXvnu_PFyAYk2QLApA2E-rLeb1ci-GbzxxFgVSHtGB0Gq3E9iw=s4800-w1200" alt="Boxgrove Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtRneko5k6qlAvoG09KcR8Q-T-FJZd2zNkujlsyihlZ4VzofVtyTobPDzag-tQLDKrYHhxmr3tuk6eYUwOssXywjCj5UnLonQBNPo7YdwF75TSFrDdtowyfvMt0xtGSQYBgmc_sv6UWYUhHA=s4800-w1200" alt="Boxgrove Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNF0xxmBGuBltJAXJBUELyODRwNUvOuaytqbkHdWCtopRUZzb11lwqQ74w2C38eniwfWuCV9wk510euGTFO0IIe60x6tiY4ADdesItJzEjNhI3aobjC45KFqfHF7InFRDdAVQc1Y48od_ROfJw=s4800-w1200" alt="Boxgrove Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Boxgrove%20Priory%20West%20Sussex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

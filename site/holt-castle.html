@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNorurIFCqnCFTMqayTnsnQRAmgs2ITmqKM0W46LqjT44AH6S7wL3srjkGGl0r5UlRlLSakC1QZPf8I-95q1aSjJheygaRZ4IzzKrYDNO__RhxHFoiq0OpU-8LswEhvCa3lwbqpTrRXXGig_hU=s4800-w1200" data-castle-name-g="Holt Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNorurIFCqnCFTMqayTnsnQRAmgs2ITmqKM0W46LqjT44AH6S7wL3srjkGGl0r5UlRlLSakC1QZPf8I-95q1aSjJheygaRZ4IzzKrYDNO__RhxHFoiq0OpU-8LswEhvCa3lwbqpTrRXXGig_hU=s4800-w1200" data-castle-name-g="Holt Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNorurIFCqnCFTMqayTnsnQRAmgs2ITmqKM0W46LqjT44AH6S7wL3srjkGGl0r5UlRlLSakC1QZPf8I-95q1aSjJheygaRZ4IzzKrYDNO__RhxHFoiq0OpU-8LswEhvCa3lwbqpTrRXXGig_hU=s4800-w1200" alt="Holt Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0EwjEOsJmoY1TMqftEoSU5Mq9tlHWNOlcxXIofJ0DKXjzDNt0WoQmASehTVHZHmub0krozBm74LDDudm-V7JxgAlo6xEoJJbBfJcB1QO0dvJ3PNRQXc0ZhYOFN1FXZK5_kAqcc-y-pnRoTx8=s4800-w1200" alt="Holt Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6JClEr4A2O24wJTp8ybRATOUURBimnOAtjX08eWxp0YHwacgDsYu6gS-Nvxo04QMSyKx89JcPtDzOJW65Qko0P6kCyNzi-LM80aTUphjcyZ8rhsifz-NEshJsOofnYO4SVQWhqkRddfjrk-0=s4800-w1200" alt="Holt Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPaQQ1g8to80djKD5vmLp3SL2lCV6ZfdB3F2WqwjYEnHRvFHlj2DQhLhT7cBf0JwXipths0lnQakISrvzceCC_3uYN-ZuFDrG1EyJSg4Ud8Gqj3gKR7p96c5GbmDRquVeg6LJh6uNGgZQ36aA=s4800-w1200" alt="Holt Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzTXYmtLbaVgIeiEU0Pz1h0BALDnrP5CMRaR19K-6OPW58Nbzf6c7cRzyAt78RAuIU4HylNdTMbspUB15yKU7LPsuB9WnDR2l0L63_KzbApC_rU9KO-9OvQJ3Hx6tzddn_7DRQQdQqrkcbcMUhqvjo=s4800-w1200" alt="Holt Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Holt%20Castle%20Wrexham" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFW1aNGvz7CK5nfUMymm_6_U2q9Cibgd09Egj90Cmhr4y-p9KucEZn_ECl2IhznperIuX3k5VhBmiIyvWDlcBRp8MMiho5nreM=s4800-w1200" data-castle-name-g="Torre Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFW1aNGvz7CK5nfUMymm_6_U2q9Cibgd09Egj90Cmhr4y-p9KucEZn_ECl2IhznperIuX3k5VhBmiIyvWDlcBRp8MMiho5nreM=s4800-w1200" data-castle-name-g="Torre Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFW1aNGvz7CK5nfUMymm_6_U2q9Cibgd09Egj90Cmhr4y-p9KucEZn_ECl2IhznperIuX3k5VhBmiIyvWDlcBRp8MMiho5nreM=s4800-w1200" alt="Torre Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNM3N2AvN5vuA-yrmTJsvz_dV1v8-YLbevM04JHdZ4WwVpNb9XHEaVa9yPf4Gh3B4KJt3uR5g8ZTp_n_2g4McN_UG39w_Xt82xC9If5zDr8mPplFYf5q6sBycl077D-pqokZMlu14wua0LQpQ=s4800-w1200" alt="Torre Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFgt4gDjs2GWTjALzqRMyrxyKR8yiqy0HbEsh4Ma6ba45F-aNyiMrmLPCr1k_KeiRKozQMEBG2Jl9M4uiIj0cCsxnWTe_bwoRnDzSDp3pboC5UGkjPcew7cZV9dupxrRhcJa_HGV8WA0zGuw=s4800-w1200" alt="Torre Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5fUuft7Eznljy6n3lUuNO5Gd4_IftETIbNHO-9pU27JB9MTOO59fk7NEm2IyS6S2SkdwAQLgWkvG_gOyrmbf4DEG8FxdhSbVkdmIIUYAySQZWfgoZQZkOHG544zszLyWcLDhPAse3VFRLWco=s4800-w1200" alt="Torre Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPa3qpX6uOJfDXfr8gzI7ErAKneGWJWI0C9qvdjXp3C8mukeNLR1gSXTv5PkUZu4UvzRBStvTeXpMkCWcQXP5Fv_-Yd_-zZmNg3zzcBXDr-Hk1oDm0Tzk62-XBdoyO4MDdYoKbLbLXGboD4G-U=s4800-w1200" alt="Torre Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Torre%20Abbey%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

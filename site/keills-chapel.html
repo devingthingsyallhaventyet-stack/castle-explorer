@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_sh2ZS5OyXpDQOzuOj02K5XzgwxGoC8mQ1RxmWDetEUl8QT_LdQBx2PgfGIweqf5rMxGAmvEOI3NhKVvSuOWOhndWQ-XZJkGCK70iXpXPHkTP4GFw7UniYlarI1h2ZfXWn0jjTG1_eQUApQ=s4800-w1200" data-castle-name-g="Keills Chapel">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_sh2ZS5OyXpDQOzuOj02K5XzgwxGoC8mQ1RxmWDetEUl8QT_LdQBx2PgfGIweqf5rMxGAmvEOI3NhKVvSuOWOhndWQ-XZJkGCK70iXpXPHkTP4GFw7UniYlarI1h2ZfXWn0jjTG1_eQUApQ=s4800-w1200" data-castle-name-g="Keills Chapel" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_sh2ZS5OyXpDQOzuOj02K5XzgwxGoC8mQ1RxmWDetEUl8QT_LdQBx2PgfGIweqf5rMxGAmvEOI3NhKVvSuOWOhndWQ-XZJkGCK70iXpXPHkTP4GFw7UniYlarI1h2ZfXWn0jjTG1_eQUApQ=s4800-w1200" alt="Keills Chapel" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLivMm7PJxG1WSOodDV9_uxxIC-MoKxm0qorCNolm1EsA7M80Igor7XU7R6ZQ0-kl5NrWcJc5RCpE7NNd60PL3vjTEgUkif3pmypSenJrqDhnAmRh4S_Gi22EOHk7L8foTtE9KWCl0sJpx5Q=s4800-w1200" alt="Keills Chapel photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM63k6UVkJ8sOB2VScD2oTqQudXrdq6xcOLwXPTB2cP1M_t5jkCNBxR1teNu7TecNAidsJ_U7FQwPpzv-ZskPLbHcJcGY-Qvkwa0SXi0e3wIbXL3UfpyLOBomIRsZL74vXxG0oSyCquelcrVg=s4800-w1200" alt="Keills Chapel photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjpQmjfRfIS6PjYYpR5j7voNpfQ5HVc9w1-Hwg_RQcytG_QlFMXqpfQ8bplvdNdvuE9pIdgYQiG2fj1mDrvSfiJ7VzXb03hM2UNvF06lscoYw3QGZQSqhFHF5oHQOX122VdNMW3-Yb96MQSA=s4800-w1200" alt="Keills Chapel photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPSTsXEwcKGyCrjf0xocCHRDRO7U1nT1WNzn-IOSg6-vIKcyqq6eKvYSg-Uj_5wyrjC4gtRVUnj8MYF5H1WXs8xiqzlIsH-ReJxVmura5YN-SP1_BQ3yAAexyYSprDWz34c3rNPzl8kO69dhg=s4800-w1200" alt="Keills Chapel photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Keills%20Chapel%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

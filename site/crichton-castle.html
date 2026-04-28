@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFJR_JDKZOlgUb-sIoxlF5nIkx1RhU-P3Tl1KMN75y_Ceo8c2NvuYtze3VvBN-juFNa_heMErE33Yb87FKXYfXvz7dJ-X7cEgQ=s4800-w768" data-castle-name-g="Crichton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFJR_JDKZOlgUb-sIoxlF5nIkx1RhU-P3Tl1KMN75y_Ceo8c2NvuYtze3VvBN-juFNa_heMErE33Yb87FKXYfXvz7dJ-X7cEgQ=s4800-w768" data-castle-name-g="Crichton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFJR_JDKZOlgUb-sIoxlF5nIkx1RhU-P3Tl1KMN75y_Ceo8c2NvuYtze3VvBN-juFNa_heMErE33Yb87FKXYfXvz7dJ-X7cEgQ=s4800-w768" alt="Crichton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTtCca2-UcCd_D5ptWit3DtH8PC0P_b2aw7MfyLfmV1ztxoF4sXdd4lCAIwAm5Zb0QAzBNAYzu7snh9hvMByQpXs9NoRhjr04Fon900c5b6cxUA6R-m4qBpJPnIj-ziw2BtMJsAQjHoLc8ZQ=s4800-w1200" alt="Crichton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6Y_p7p4wpK2ILNuEw48BhoR45Apybnx14W9GV53offBsQ_Cd0mDM-TmYdAZpiKpZm3KFSC2DsXq6quRKMVnCIH7iX4K79xicscXwMcZU8mjiVMKUzkWlo3VOlKTR2pGxOnlp7KWBZtyIRJjc=s4800-w1095" alt="Crichton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMlIU1WfVe5S_ob5GxummFqph_uvhzYf2-e1PhTeCGR-n0WQFhlHDExycmF8NpKqfoae77opmsV5emf7LUkYJLVWiarXH-ZmNCaGvXO9Qxh-wp5uQzLTQIptowowbEmV4CHmuXvQO-Qq6qE=s4800-w1200" alt="Crichton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOe6qRK4UWl_GodaSkQbUiUg0OuPw4UOnsHScZHJ0eMhvrJukls3g8Y_CxJh0rpIPU407AGDK4BWbxIhGm9YdSQPkV8PhhOO9vuHpK0b3XdM9P5Spg-VGgbdQhYJMbxsV-QTnWW0SzG_rwrHw=s4800-w1200" alt="Crichton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Crichton%20Castle%20Midlothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

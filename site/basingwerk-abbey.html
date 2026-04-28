@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6IwxfNcWyqlVJfnA0VgQQGyXVzeUzylLcOw5tchTSRPMO--bHUdrlJNgxu__0IJqETXmBPPpd5N8On8mZug3X-kFWESsiE9DcgGtoHEdQnxX-RXjhwiTGhBEu-lLHORiOsUghXjYVQVfl=s4800-w1200" data-castle-name-g="Basingwerk Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6IwxfNcWyqlVJfnA0VgQQGyXVzeUzylLcOw5tchTSRPMO--bHUdrlJNgxu__0IJqETXmBPPpd5N8On8mZug3X-kFWESsiE9DcgGtoHEdQnxX-RXjhwiTGhBEu-lLHORiOsUghXjYVQVfl=s4800-w1200" data-castle-name-g="Basingwerk Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6IwxfNcWyqlVJfnA0VgQQGyXVzeUzylLcOw5tchTSRPMO--bHUdrlJNgxu__0IJqETXmBPPpd5N8On8mZug3X-kFWESsiE9DcgGtoHEdQnxX-RXjhwiTGhBEu-lLHORiOsUghXjYVQVfl=s4800-w1200" alt="Basingwerk Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPitUIDXy2RIW3bOgoy5wSuOnE813-g11Nx-D54_T0ktAUaFoxNwXONmrGKGit6Kukm1srRm5sbm5j3RD5d4emnQjteqOxece5lrZUnS2gk9i-A_Hl8mqSKaVDd1Gb5hs7EygBiq8VV2F3IeA=s4800-w1200" alt="Basingwerk Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPj2NUikZqY3TyTLcHTFp8N-H0Wo_bTKArw-M1uxfz35mJucRRYF5LJ8MQJXFOb1q2ynB7vjDbrWMaZnFiC66G5Bm_u6iaOeJ3iJG-mjR4zU6GZ4DWVOewjRKucqVMCtqdKrJRUpT2hi0KO9lE=s4800-w1200" alt="Basingwerk Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMd9_OI5ErwPX7BKEXsWo_LpFL0tPGgdWanOwJRaZ_oVfpT4UagH57BE6m1kCz_qY-c-lKYRDf4ZYx864NTQC1vxgD50I6vskiaQFQqQdfYTh-r2sZSUxVonv1PqARAYbkjwrsGCHfjAmqi4h4OVh5L=s4800-w1200" alt="Basingwerk Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNklK_NcLjRTMpWUXVaw3V-Dzqm3Z2uoe1z00t21Io7pnpbMKET0TOq24o8O3yh2XxrpVYvmTbd-tWoKuG4nAkRAQ7QqQNmspcJzZLOpOGnU58-K-3UeJl0Pv1OWxbO7xGDq3oZHy1UDFCGRKA=s4800-w1200" alt="Basingwerk Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Basingwerk%20Abbey%20Flintshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

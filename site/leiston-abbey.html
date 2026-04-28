@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzyxTglwAj5mj29_u7fSI6qVyUWzVNsqlZWguSJKm3fx1VDRhyF3li9pChW-n1NB0D7s8Sj3cStycvsSI2Cw0RemmnEvVRdVev9uVOjKS43aZQEyzNkjEhE8NQTqq3gSgjRaAwmcX1wvolaA=s4800-w1200" data-castle-name-g="Leiston Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzyxTglwAj5mj29_u7fSI6qVyUWzVNsqlZWguSJKm3fx1VDRhyF3li9pChW-n1NB0D7s8Sj3cStycvsSI2Cw0RemmnEvVRdVev9uVOjKS43aZQEyzNkjEhE8NQTqq3gSgjRaAwmcX1wvolaA=s4800-w1200" data-castle-name-g="Leiston Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzyxTglwAj5mj29_u7fSI6qVyUWzVNsqlZWguSJKm3fx1VDRhyF3li9pChW-n1NB0D7s8Sj3cStycvsSI2Cw0RemmnEvVRdVev9uVOjKS43aZQEyzNkjEhE8NQTqq3gSgjRaAwmcX1wvolaA=s4800-w1200" alt="Leiston Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJb6x4KmcLUwraNjTPK-1pbYas2D_FJnO4PZbjjeu_1HfNf4oaQLsvkQE4oKZCGWmI0n63nFkGcYkXaC4dKWhcdO-NtIud-LBEGIYjKj9NLEjyVzQ_ZQXrXS8xouiaSDK9bcalzRj77CX6c84=s4800-w1200" alt="Leiston Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTZOmuoktjl87vGGjxvSFFSAG6JBH6CSywqj77Re5rQQlpG9dwCfF2kxAA-ikPuchIiLxjnfQ7MZPerHd15tVqLC7Z4FDtn74j9eEoiEzV7QJPPEixr5e-PqpKhqf64PkuI7Jj4xBIexN2og=s4800-w1200" alt="Leiston Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZODbtIWdNZbEGuGimhg3gEx6oj5HOoDhcILQbQSAqjqmLHWza80MDrdhGeVVjQmLWFTO2FhvYmzXw0CaLJiFOVYxEaOnn6SZS6geAyQKvxwSF5H9AJRu_NgWvraEja-QhLUeOPYNWPonLPyzA=s4800-w1200" alt="Leiston Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMe3YuTYqlIeXLKCyFwyQpi4-yOpHkE9QEglscWp9fe2wd00byc7JIXHSHvSLzTkb3VlEkfv1s1C6ZwjE1P_3Q-GHt_yrU4UU3FFu75hYGjBFEnz560jVoqK6dHnGPIBDJiys_zVvhU5BcuRuU=s4800-w1200" alt="Leiston Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Leiston%20Abbey%20Suffolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

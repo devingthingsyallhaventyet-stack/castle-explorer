@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVQnCsJKxprngVdMo-u_GP68KkisCKMxFymA-ewykrrDuFizZEeu3aoGZG20c66t69u6LkPS0Qk-c4uU_9HSIGH3Sy2-ZCTP0uoiupcOKvXmlq4nmFmCIi8MN5X1IVE1aBh18Ukpkz6dWOsls=s4800-w1200" data-castle-name-g="Montacute House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVQnCsJKxprngVdMo-u_GP68KkisCKMxFymA-ewykrrDuFizZEeu3aoGZG20c66t69u6LkPS0Qk-c4uU_9HSIGH3Sy2-ZCTP0uoiupcOKvXmlq4nmFmCIi8MN5X1IVE1aBh18Ukpkz6dWOsls=s4800-w1200" data-castle-name-g="Montacute House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVQnCsJKxprngVdMo-u_GP68KkisCKMxFymA-ewykrrDuFizZEeu3aoGZG20c66t69u6LkPS0Qk-c4uU_9HSIGH3Sy2-ZCTP0uoiupcOKvXmlq4nmFmCIi8MN5X1IVE1aBh18Ukpkz6dWOsls=s4800-w1200" alt="Montacute House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPh3QcEyI9srA9T2a23bf2tw4YyS1pGqKyfzUp88xq7giZnySoW4rQuY_mkHwB1vOGitVx7SwPedHiqf9tqFcZSPKS6ScV-dnmVNchORq91n4f6JWrft-7t8OWgW9i4xfVuJ0J9YkCtNwgLQUY=s4800-w1200" alt="Montacute House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdo2Rm3MwkPbkq4c6VvduSFstnr9IYA_IZn-9tQ9k8koo7BCMxeDAGYKdQ220_ES8Ecul6Wilq1aF6eJU65XTFLovB4p5YbaFBn5sGCWAaKBIAVRLP3RdniS6-g58rftYSN20B9JWUk04opcU=s4800-w1200" alt="Montacute House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlOSwKp0yirEIrCFtNjRXl8ZlhhWyw7ZQ3XWa2c3yU9jtnZ7bDZi_X_aCMGt_nXDM9EfJ1hWwjddNgqMMx6Yo68Tqef80UQ5to0IHM54nCaAuBAWwtj86vvPP4h4nMa-YzpyIxP4Q3wk2L2lA=s4800-w1200" alt="Montacute House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhcp0o0PRb5_TfCDxMmKQ7dNgjZHNDYRyMwILUNvoB-ZO820nMeHMuMUEQcWbGUZVKPPvlo3cw00cwHWSIpvRn_KpehQ0vGJIUR4FOI1-8yyGfRtSOeb7UK0XTLOmxxjqJRu-fE0cNG3bzTY8=s4800-w1200" alt="Montacute House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Montacute%20House%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

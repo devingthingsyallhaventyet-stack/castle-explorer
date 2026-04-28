@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdRmDIKBrQyYNQfYDb53WRWERqECnPoL1pp-iu6JwGbdPaUmU8boQQR-LKpBdhBVCZ7OWbXtCZkqssWKVN9w3_p2GgeYl725Dq6Jsw8ppBolY9aX1YdG_6v_WRoO7OY2793E6AKic09wKl=s4800-w1200" data-castle-name-g="Muncaster Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdRmDIKBrQyYNQfYDb53WRWERqECnPoL1pp-iu6JwGbdPaUmU8boQQR-LKpBdhBVCZ7OWbXtCZkqssWKVN9w3_p2GgeYl725Dq6Jsw8ppBolY9aX1YdG_6v_WRoO7OY2793E6AKic09wKl=s4800-w1200" data-castle-name-g="Muncaster Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdRmDIKBrQyYNQfYDb53WRWERqECnPoL1pp-iu6JwGbdPaUmU8boQQR-LKpBdhBVCZ7OWbXtCZkqssWKVN9w3_p2GgeYl725Dq6Jsw8ppBolY9aX1YdG_6v_WRoO7OY2793E6AKic09wKl=s4800-w1200" alt="Muncaster Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7wlPSHGIzXXxm9m9lbHaV_vVpu0aP4wAmSxyYh1XUl13aQgIqvS0ynEHE-IiIJkzJLtmQI_4r-Ewcj6Zu0LlapwRGiW4y6oKK5rQpDPX32XqNQF0fQkeYQcmuhBl4fXVzy0elmaKT_jkxNUQ=s4800-w1200" alt="Muncaster Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPt3yaByXdY2uSgU5jwPGFm4xAGvaS2pDRyJTXBx3yeWI6ZflPRJml6npuvoAmv1NzMLKngLEzJqEWazzNFK_lGu_2aq0toN4uPLo6AzLUAwZVHP0buaI6cor6P4_mOZC7NgRq2KijCYSaEdw=s4800-w1200" alt="Muncaster Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLqiJFwg3d1kYLsLPZjadRaS2QDooP_Mmwbl3JHu5pkmFIMwxYrlrQRerjkLbPID91KeuNkPJONvCVo4i-k_MxpAjiD8oGtJurb67eWovOJcwVWPiLlI-UAcuTNjzMZt2zcleLnOwfJN43mOk=s4800-w1200" alt="Muncaster Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMvSHeU299T4ynBo7XyRSXMVrAukvIAuH-DMucCwC3tg0pg6pJU3efW2j0IpL7xLxfoY0_zDTGSj2qOuFPvBR5VXwtiXq6MrF_kL6l0QqC4MRAo-IH-1XySAj1A8TLwt8Zo1AlPJpH44ouF3Q=s4800-w1200" alt="Muncaster Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Muncaster%20Castle%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

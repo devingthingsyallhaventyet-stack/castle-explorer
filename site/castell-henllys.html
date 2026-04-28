@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrfXu9J9hDbCCe9nCNMn0lEKuZlUjZYU-wLVX1qiyGi_7vt4gSxfSHX8y-K6-pPbUkJuldjLbc0XInFogDLIuV_APcNilkC63P0qk6nWp4_aGSfX_6q9eEZkBbRMZJXJLxeho6J5eNaeoKVw=s4800-w1200" data-castle-name-g="Castell Henllys">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrfXu9J9hDbCCe9nCNMn0lEKuZlUjZYU-wLVX1qiyGi_7vt4gSxfSHX8y-K6-pPbUkJuldjLbc0XInFogDLIuV_APcNilkC63P0qk6nWp4_aGSfX_6q9eEZkBbRMZJXJLxeho6J5eNaeoKVw=s4800-w1200" data-castle-name-g="Castell Henllys" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrfXu9J9hDbCCe9nCNMn0lEKuZlUjZYU-wLVX1qiyGi_7vt4gSxfSHX8y-K6-pPbUkJuldjLbc0XInFogDLIuV_APcNilkC63P0qk6nWp4_aGSfX_6q9eEZkBbRMZJXJLxeho6J5eNaeoKVw=s4800-w1200" alt="Castell Henllys" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqE9annYtLuqfYOZLcdDO80ED6pDNum6A7sqJDyEbKd04XUJZe_t8r132pbg0keMx5zAFdO-zshI1GTROKRGptjZD-Hf5FBSQYU=s4800-w920" alt="Castell Henllys photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPME20d6Lp1bafPyYItUaIQjCDyFAmceByVqZQjEzyRHsn9dXMNgiCiKUSgr0K5EWeQfx6ycOeGQ-NyoP9fkow3knq62rpDLJw6hmdFIdhV_lEeRdLquC2pbVZohkSl40eChhEwCzUJtVKTtw=s4800-w1200" alt="Castell Henllys photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVFcve1Vre0qLMjNGU4wD6LM-ZIAh2rKOxFauqqbIO_KYofNHmA9HIjNvt3_eZPSLXrCxcO9d0lJuyI5xtyqLPmSL37q3qyxCIC1TaBER6a6ksL9jJg1Y9p3CJUtmFOADby0se5YfBpFzTBS8sP-saKg=s4800-w1200" alt="Castell Henllys photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsSKRFbXtPt1T9k2W8NB5ZOFomABHdZIo6Zrf80ac5LJeH_qcHkpJ2bkzxjhmRkURw1T2qKlRDdp-VANyixClq0j99_4ioj6Kpce2LNJnkuDvswtL0IgZPRD9DV3kWf4ocvzzA4MdG-5gCjH0=s4800-w1200" alt="Castell Henllys photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castell%20Henllys%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

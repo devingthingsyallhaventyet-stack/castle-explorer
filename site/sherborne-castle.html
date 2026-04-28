@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP37JsSASi8wjmZdt6K2_5RjSAhvbe4rNk4RbYuilNkUrGKjc777LD1fxNHYMQx0P1Gt5tMIo5jadLSqJZoQ0lFNOKcF6RB8gx_s5jXwOv345xGJAatEop3oKb5tEeOoo3BshNFe_AYdDuzhQ=s4800-w1200" data-castle-name-g="Sherborne Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP37JsSASi8wjmZdt6K2_5RjSAhvbe4rNk4RbYuilNkUrGKjc777LD1fxNHYMQx0P1Gt5tMIo5jadLSqJZoQ0lFNOKcF6RB8gx_s5jXwOv345xGJAatEop3oKb5tEeOoo3BshNFe_AYdDuzhQ=s4800-w1200" data-castle-name-g="Sherborne Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP37JsSASi8wjmZdt6K2_5RjSAhvbe4rNk4RbYuilNkUrGKjc777LD1fxNHYMQx0P1Gt5tMIo5jadLSqJZoQ0lFNOKcF6RB8gx_s5jXwOv345xGJAatEop3oKb5tEeOoo3BshNFe_AYdDuzhQ=s4800-w1200" alt="Sherborne Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMo9z8bE54GgQLSD9NPx3eMKYYrGsyMS3Ge-xFwMLk7cMhw7dfs_vIWLNoyOkan6V3Ih0y1ABIL9p8Z0ssN0wyaRb7nrXFeLwE8aRi3QQYPLobFRl3rNjS8J9h5oj0huAnIVLNqIj1H-8FdgsI=s4800-w1200" alt="Sherborne Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAVuzJQOH2M4UlKSemP-9D738DWj3f0Nf4SQyX9v8Nt8pATLhh7AcT0UXBn7xN3nW5KlDVfjA_HsV0K42gZ5gF8YL5OA0KzJXJ_kM9sK4LoeFhVT6vYkTu7G6KlCHruIjaXHZL40aFbPpXqQ=s4800-w1200" alt="Sherborne Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyaU3ApgL5mN4wRmQ5cpl6vH8DCFm3ydg3hOyQrH1DaFCFkxl8AVFR97n2y0kcE3mYCP1ih3vqFfd-RAwTu9O6DNE3oQmZT21_sRiE24NM7w9ONOSv2zKhbHODEVsTcOGqGmFwoN8m8LNtcg=s4800-w1200" alt="Sherborne Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOn6XIAWBgIj61Fs2k6BQsW9ZLbbVPaQ5KL-Tx5lFVe2_OUTSgot9NW50laOsi6Wto8_7f4VTY2gnsb5nMp1w7R0hnw9xqXyvAMQEca0RXvsQYCppFXLF-0lxTcc6iQkHHrP3ReoF0AC9ew=s4800-w1200" alt="Sherborne Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Sherborne%20Castle%20Dorset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

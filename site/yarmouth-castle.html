@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCCQIvKas5GIu2X7ZwV_Oe6aWlT48pKvgtexRKicOrMVyGWVzw_K_nE3meWfCkhBpAeGYKJ68QbPGY8mTjusAgP5QPT9kbT1m5GXV-rrBiwbZQfv5ShMfDRUtjTv0JcUtdeU4CSFGqDPCYQg=s4800-w1200" data-castle-name-g="Yarmouth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCCQIvKas5GIu2X7ZwV_Oe6aWlT48pKvgtexRKicOrMVyGWVzw_K_nE3meWfCkhBpAeGYKJ68QbPGY8mTjusAgP5QPT9kbT1m5GXV-rrBiwbZQfv5ShMfDRUtjTv0JcUtdeU4CSFGqDPCYQg=s4800-w1200" data-castle-name-g="Yarmouth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCCQIvKas5GIu2X7ZwV_Oe6aWlT48pKvgtexRKicOrMVyGWVzw_K_nE3meWfCkhBpAeGYKJ68QbPGY8mTjusAgP5QPT9kbT1m5GXV-rrBiwbZQfv5ShMfDRUtjTv0JcUtdeU4CSFGqDPCYQg=s4800-w1200" alt="Yarmouth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP-fm1498WwYe6MwPsi6xEUb5Gkc-yKIPQl94mmWLmdlk1JvZTb2a4kBHdaVbLSc2idXsSgyngDaOBC5g3RSCNHyLkV8A3tGVJ6zyo6RRmY1E76GsrZZv40MCaShdXOSjRPhSsrCPZL_HyWjA=s4800-w1200" alt="Yarmouth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPgeAqk3OZ5FPeSYziJeAQFuw_jYzYNpYD5rRlbbvRsfQS2Exyx8yKUfz2YuL0MPJ2ka0DdxFHxGxBMTdmI2L8CDuFqUZfaiDKzMN8ao6gWD8x-3ezGSMiWeoCidQEth3__udu7Y_gqpf4QNg=s4800-w1200" alt="Yarmouth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNw6QWI0wgdj2_Gci0QPFI4vu0Z8Sdne7wZ9mHSWM0NohxRkgFmd7eLgdb22IjXmPgQSokUR91asGgbWU4DfEK3dFFgtNth2ryzscXHTSbUe8IPJt7vW2fTTiixEIcho4xuWgJZZ9WB7-jQFQ=s4800-w1200" alt="Yarmouth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnRxS4tm35aQ1hmCYBXxE6EPL1WwxXebFCzSeEEyeaqUFVufaVjDNg4l4fNVMcXWOwJqRRw9GDhqp79261OeyMpXVlwZG9w_D78Biu45TDm6QCrw8BztM1M2-Bo6lOcNpmi6QghrS21unrtnk=s4800-w1200" alt="Yarmouth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Yarmouth%20Castle%20Isle%20of%20Wight" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

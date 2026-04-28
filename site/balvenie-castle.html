@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMAYbwUsxquZiyUgmgGCSqiHNIQPtLh0spLmaQJfej5xfA5z_adzVB3ldYswGcy6-PpN362ctYzMmS5k671xPT6ArQaLrMJunlkeLjdmTWluHUIzczFlB7KyFgM54XCmC2VHB_3uL3Cr24X=s4800-w1200" data-castle-name-g="Balvenie Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMAYbwUsxquZiyUgmgGCSqiHNIQPtLh0spLmaQJfej5xfA5z_adzVB3ldYswGcy6-PpN362ctYzMmS5k671xPT6ArQaLrMJunlkeLjdmTWluHUIzczFlB7KyFgM54XCmC2VHB_3uL3Cr24X=s4800-w1200" data-castle-name-g="Balvenie Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMAYbwUsxquZiyUgmgGCSqiHNIQPtLh0spLmaQJfej5xfA5z_adzVB3ldYswGcy6-PpN362ctYzMmS5k671xPT6ArQaLrMJunlkeLjdmTWluHUIzczFlB7KyFgM54XCmC2VHB_3uL3Cr24X=s4800-w1200" alt="Balvenie Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHledSwDBs084R8Ln6r5AeSJ7em71w6emrAHAwC5R5JOinyRcOVf_ajZZ_SDtjaeuR5qhI_3R40vNV_tDVq6Ko7OucpXPRSDgQ=s4800-w768" alt="Balvenie Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMW2psGiGJe2F_JKHVGRmd30I47U0YaUrTJg3J0tQtokoe6FsqQA8R0_PnZ2rGdTkSi52KQUIl02cDIbNzSafKC_Lt2i4nuoRdan7tFoWlw6cHKqJkt0iEj49aOQ7kvw7kiESwpGVG-exQlOCQ=s4800-w1200" alt="Balvenie Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTDX_rf5i_h9vknDlNa03bbicDRLRtbUq3FYY5xTp20TbrIxPf_h6uSNG7dGjfotC64lXG8lrQ6yPSaKSCNKznU1e9RFETLYU7gXgOAIWiVOL5h7i5UrQF-LTUIi8GZQlTjfCH5YKI2ws8=s4800-w1200" alt="Balvenie Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN0JAbrLxON9J66DbYDF6ps_c4E9JQktNI01Z4VXCFZh_Zi_4DzhUO8OheNaJNxzlb4MMl8X4PK8uw7CsFyF0Fjzm4DMJEb4mge5fUu3wHGORyZp0IfBnCyMiUx5gtYiSzTv_Zk2pmcZujWPA=s4800-w1200" alt="Balvenie Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Balvenie%20Castle%20Moray" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

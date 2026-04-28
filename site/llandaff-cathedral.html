@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbjsSoVPhAzR7vE5_nvTdiMLUs7lLo8S_tY61494DP0L-yLmp8idgERlUqL6qEeQZ4DqnFFybRX4gQlqU-6pDdhDJg4mDPcOyVtJGMazVItlzgXgrEklW04kvwRcoaTwsVQ5c4HdcQA1Me=s4800-w1200" data-castle-name-g="Llandaff Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbjsSoVPhAzR7vE5_nvTdiMLUs7lLo8S_tY61494DP0L-yLmp8idgERlUqL6qEeQZ4DqnFFybRX4gQlqU-6pDdhDJg4mDPcOyVtJGMazVItlzgXgrEklW04kvwRcoaTwsVQ5c4HdcQA1Me=s4800-w1200" data-castle-name-g="Llandaff Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbjsSoVPhAzR7vE5_nvTdiMLUs7lLo8S_tY61494DP0L-yLmp8idgERlUqL6qEeQZ4DqnFFybRX4gQlqU-6pDdhDJg4mDPcOyVtJGMazVItlzgXgrEklW04kvwRcoaTwsVQ5c4HdcQA1Me=s4800-w1200" alt="Llandaff Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZQ11Lcm-d4TyiFWXmPzfBWVmWKbHqAsFBO47Sh_aTBwxC27CTzjPllwEFWRhF0TC4NpOSPj4lf3g9ENYzIS2tBQr0y6yf9VxlI-7fMFEeNGm6BpmrR4yw0lBteWfbyeE9X_nawDRv6EGOkGU=s4800-w1200" alt="Llandaff Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKXQX_Zj3OHGrS8ACgAtPYV6NaJEjubPpljj7p0u4UvBED4fK_SvmywJiGU3oE-GxS1suI9RV9a3Pm8gEDSohThnywNYIwa-_-bIWhZg-p-6zPZpSZYkpbJ2axGqAaA5A2dJJDfgI0kZa7OUPk45ZQKQ=s4800-w1200" alt="Llandaff Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSiIdPA8KheleoJ1OdjSi3-4IbHevyJ0QNiCtGXRMKdwh5HoXWFZvKlOqOUbco8wHMhAnnAFLEj9bSi-kT8HcX6ikx0lyb5x-rv600eidGBDODG9-XuMo5WosRJf04NuLZZ5jMXpxXcncnvP8=s4800-w1200" alt="Llandaff Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLW8Epi_xImagRTS0GQDJaGrzpel9sQJkTX-0FViTZlBOkmnIRawIJk3Knw0CwROrAtgVsITnA9LaIfT-Hdk4rD760I7Cl2eD4UJfMrIHDdZRE9CzJwP_Mp-P4cuQmICnCi0OvMdSMI-N8Xw=s4800-w1200" alt="Llandaff Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Llandaff%20Cathedral%20Cardiff" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgxfJ3C1b0bjKYpUgQEpf6glyYCdTN9ezgeJDEMnW9AH5m-oZb__Q-LHTBREhkuDbdIDk5VuCNy3mLPVd8lbrdQln5yt6sf5_VKKjbsihiWcitBVfhflaJuftaGjXzFCzaO2SBN36tQgGrF_JvLTprtQ=s4800-w1200" data-castle-name-g="Kirkstall Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgxfJ3C1b0bjKYpUgQEpf6glyYCdTN9ezgeJDEMnW9AH5m-oZb__Q-LHTBREhkuDbdIDk5VuCNy3mLPVd8lbrdQln5yt6sf5_VKKjbsihiWcitBVfhflaJuftaGjXzFCzaO2SBN36tQgGrF_JvLTprtQ=s4800-w1200" data-castle-name-g="Kirkstall Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgxfJ3C1b0bjKYpUgQEpf6glyYCdTN9ezgeJDEMnW9AH5m-oZb__Q-LHTBREhkuDbdIDk5VuCNy3mLPVd8lbrdQln5yt6sf5_VKKjbsihiWcitBVfhflaJuftaGjXzFCzaO2SBN36tQgGrF_JvLTprtQ=s4800-w1200" alt="Kirkstall Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtM2nyHi0Hy6isTDbSuU-jHtH-7dqyD2bCC-LsmgRMPETXUbqXIqSL6oLtFjFVUHwCcwPzvQWHPTiEVurPmEu8JRdbeVjdkIfHwq2Ul2Fd4D0UiNHSh3SOdJrL_Sp5-fzp0LSDtFkZeour899IquRm=s4800-w1200" alt="Kirkstall Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNEaHhIOg2309-H_yW6VS_QVrWXwZoI87rjD69e5sBdu46G3YK0q-yUn4l-XIMA6JZk7l2JqR56dJ0XtIh1mdWlvLpZzeC1e_LOLUcWb-DoEVKYO9XnqoVe06YlcAECBZhRQwafy85w6oaG=s4800-w1200" alt="Kirkstall Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJsSOR_ZiPUpVcSoc4eDDxovEU4dne28NdAh0lsctQZo63c1dFuDYdTfJSnIjzeqbwoHa-shmPAoyKPVjEMLz7H6dC7rAxV2Xew3yD0VeRTF1eCf7hNCquPOW8_znFAVin5m2ZrVkZwFpMBwzo4q-mjQ=s4800-w1200" alt="Kirkstall Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM227_SjbPig2XT4gd_y7qnE5HJr6i2wiXtafrkSF9ZYbn4zseSoMSCaSWFPWe16mkL8Fa29T3EDXD1GI-14ku3KohOzAAum7nGNFIo3mIxfH13Rstc3NHgXc1izaJzdE1IQUjbFqc9qxXMeYMvHfd9=s4800-w1200" alt="Kirkstall Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kirkstall%20Abbey%20West%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

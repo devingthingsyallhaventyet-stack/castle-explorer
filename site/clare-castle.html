@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnQF36R6AUItqYFBqyBQiVLITfgLyZOvm0dPvBwKeeSgXOo_dHuAk4iV5qGbQXjt3HL-PmyH3i1OsdxJLlgdW26wciN0rtKrUMUjK32WWa7xliFLTOxjm9BxfTIkyJJS-gRJPxTRKDutp4=s4800-w640" data-castle-name-g="Clare Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnQF36R6AUItqYFBqyBQiVLITfgLyZOvm0dPvBwKeeSgXOo_dHuAk4iV5qGbQXjt3HL-PmyH3i1OsdxJLlgdW26wciN0rtKrUMUjK32WWa7xliFLTOxjm9BxfTIkyJJS-gRJPxTRKDutp4=s4800-w640" data-castle-name-g="Clare Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnQF36R6AUItqYFBqyBQiVLITfgLyZOvm0dPvBwKeeSgXOo_dHuAk4iV5qGbQXjt3HL-PmyH3i1OsdxJLlgdW26wciN0rtKrUMUjK32WWa7xliFLTOxjm9BxfTIkyJJS-gRJPxTRKDutp4=s4800-w640" alt="Clare Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpbGBePXLKt5M5vVuDO1zdmmkOAMTlNMhsGir-9Z9Fuq2b2tpiIVCaxJ1zzfOWG--e7FV0MMpOBYt0r2eWX4NJ2XjjlZLy5YPSX7SeNba8nt4D3ElLX6atLrKVrye5zxQc9KK5GHeIxLoVFA=s4800-w1000" alt="Clare Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOSFBcW21CgV7XPD9_bn8HCQ1RfS0Xp_iXFw3q_84a61cdKxpGc6g5Ap1eY0OzG7PzAD6Z5fZ6BAXBfLA8-BIwdhjU4U7uzCCHrExCTiU5IXNDF_hoGxHLkZciG2CfYtcKTHRoqgk31OU6rONat5TX-Ww=s4800-w1200" alt="Clare Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2vA62twz07oRIF6yN7l5VrSuXpK5AT2trGwRP_FRLHsxAPZJ-ff6W6SLfA-jtb5CvSSnVNgP4AJ_hlIlRFCi5eQwVzrpD-JZm9KqKwHSzySvLQtzwnCSnUjg4qiba9Sxias41gkdgV6wIIQ=s4800-w1200" alt="Clare Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPiYQ0_3r6fpC0ZwDyFEDbReF0eADmkwoRrZyU4GGHH6LgdP8Pcxr45SPO_Yf2X_QVPeMpU06SPm7nK3EQ4O7DUfiD0jAkb3GV_BBYUB1boA7hGfIVOl7a_0ymHxdedB02A66B72gx_FYsniw=s4800-w1200" alt="Clare Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Clare%20Castle%20Suffolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

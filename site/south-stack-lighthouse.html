@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/South_Stack_Light_House_%287991522115%29.jpg/1280px-South_Stack_Light_House_%287991522115%29.jpg" data-castle-name-g="South Stack Lighthouse">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/South_Stack_Light_House_%287991522115%29.jpg/1280px-South_Stack_Light_House_%287991522115%29.jpg" data-castle-name-g="South Stack Lighthouse" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/South_Stack_Light_House_%287991522115%29.jpg/1280px-South_Stack_Light_House_%287991522115%29.jpg" alt="South Stack Lighthouse" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMui__z4kQYI0HiYXRbVmhpUu3ww6lLqKkyhb1I8iGGa0V0-1mM9hZPZ3PFtY1rDTFO1TYK921UGOcLyer1bp7evhKhg9JQhYmRoVgiCz_UmpNwR5CLBp1G_WKMQ5EyyEzuRJnCfG8chxWkMw=s4800-w1200" alt="South Stack Lighthouse photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBf66o84JLCWWnjj6ZaM4RX3RgnK1RiaCgON4iufRqHeTUUaefuIw4XcYOwuBbzC57TYfeXqGpwoLqrkGaNW0HUqYSFku_DjSh3cEHD6cYBICuk8_9BaGVbJ1JayslSM2ofFpr1ybr0FLiV7M=s4800-w1200" alt="South Stack Lighthouse photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMIasve2SKtvyQnTJ0LBRpXQeHNXBd9Ng_Pb4oIQR0VWqD0x6Z_sOxUfwTpoQ6IOTWyfPseTZpc_jd-cxStkc-CdN4JVOcQKr_a5-2qDQ_qdRxxUFrz4vjYr4bGFP4EBhLSRlxu8nJrXxkjuA=s4800-w1200" alt="South Stack Lighthouse photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMomyaSCb5RNrtSwyezd94WvoiifOCd-QcXkFMAi1WwBhIuMhoSm9yL0YI8SXIA7J2ekhwiAoWDlrkrGSBBJictzW33prcCs2AHEtuWCAiNrHLQn0w6juLbXjKwzHnDOp0sE6Dim3MjxI5O=s4800-w1200" alt="South Stack Lighthouse photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Darren Glanville from Acle, Norfolk, UK · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

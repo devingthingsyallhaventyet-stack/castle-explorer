@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWbIvLavOaYaVBIb4wQZIl2lsFADbPF1zi16fUCtWCT2LccrK6IijS_REPI5nm5Hrc-sFGZxtnZLiN5CO1-sJc91fuM9ZCzSdW7uzvVxOEOLWDdNun39v-SuW9xX3v2vh6AtOYi-N64dpU1YM=s4800-w1200" data-castle-name-g="Pennard Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWbIvLavOaYaVBIb4wQZIl2lsFADbPF1zi16fUCtWCT2LccrK6IijS_REPI5nm5Hrc-sFGZxtnZLiN5CO1-sJc91fuM9ZCzSdW7uzvVxOEOLWDdNun39v-SuW9xX3v2vh6AtOYi-N64dpU1YM=s4800-w1200" data-castle-name-g="Pennard Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWbIvLavOaYaVBIb4wQZIl2lsFADbPF1zi16fUCtWCT2LccrK6IijS_REPI5nm5Hrc-sFGZxtnZLiN5CO1-sJc91fuM9ZCzSdW7uzvVxOEOLWDdNun39v-SuW9xX3v2vh6AtOYi-N64dpU1YM=s4800-w1200" alt="Pennard Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEqjH6L4fx1fYw-BHwFlsz4M29T9WJtCIeg-0PbgO-0pZp4i2quoAdmz_IcMXWqV9sDUevUeTlWyUhhuj3-X8xsk_Ur4TY14pY8A8wIWUcgkMK34eHMG14n2N643zeCiJ1C8zxCL1KE7zZYNG7-F_d=s4800-w1200" alt="Pennard Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9J2DDm1qlTmLdZ7W3OtKB1T-_UJxqMKAMXAPEae_LOtmIvk0jGW1yQSxnVpWVJG0jsDeGKYFUHrelwzgw3D3zJYIhWJEVZi9La1RRkdljxQei4AjDmn8mm4C5Byi7xoJJrzV7HHqZD68kpyCyzpAdEg=s4800-w1200" alt="Pennard Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPYzuoRG3asakNwG8ZcWhCfQjRVIAj3kbnDSrjbihnQTOvXbSxyJV2LesJWzdAj_liaiQ2ob9pll0RVvQdNjJTbIa6YB5rNymbhulZ4hFNahVpOEzDrbGGTw3OOG_u39G_jmjmqunHuO6nRiQ=s4800-w1200" alt="Pennard Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyqCAtcsSJXWT2fcLJvimlLALtH_qCSgcENhFY2R_YdQE1hlygZhwqCAosdjVdb0f8mfzxyvf4eGafmCW9W7wc3vcq4KPgkBq_ljH3vFTGKvRXPwoKTXBjRmvfB14jQxG_ZZKx5vLf4YwHc6DJoQ3cFw=s4800-w1200" alt="Pennard Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Pennard%20Castle%20Swansea" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

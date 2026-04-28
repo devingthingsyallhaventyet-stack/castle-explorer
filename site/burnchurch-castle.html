@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQp_75nt41BaN4GkIalqKSTC101ISIO69-jAImOAn9WDGhb9a6X6lIquua5vfjRWviLQAddx8fFaX77NevQYXyuKdgYu1RzQw67oKoNULCn_p66sHJ7oHbu7dEfgUQo3hcgGyMnPX1qGKU_A=s4800-w1200" data-castle-name-g="Burnchurch Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQp_75nt41BaN4GkIalqKSTC101ISIO69-jAImOAn9WDGhb9a6X6lIquua5vfjRWviLQAddx8fFaX77NevQYXyuKdgYu1RzQw67oKoNULCn_p66sHJ7oHbu7dEfgUQo3hcgGyMnPX1qGKU_A=s4800-w1200" data-castle-name-g="Burnchurch Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQp_75nt41BaN4GkIalqKSTC101ISIO69-jAImOAn9WDGhb9a6X6lIquua5vfjRWviLQAddx8fFaX77NevQYXyuKdgYu1RzQw67oKoNULCn_p66sHJ7oHbu7dEfgUQo3hcgGyMnPX1qGKU_A=s4800-w1200" alt="Burnchurch Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtoX1LlYr1Sacl3ieBAs2FknctTeq_59j9iD5YBEQM2hp3ZEALdCP4aqVUmezc-RAO1ei8x4C5htXYYoj8EabnvNmM8Ra2lFW9giEAWtNYGnZu2c2bOQMbJNUCEy8PhsUiRLLzC1eFmXrZbw=s4800-w1200" alt="Burnchurch Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOM1QhAYgUhy6a30bQJz0BiJqRvT3y8-4Gi8IOjih_0U6awVFj4y2Q76xdUvweitqcHRz7wCmQxP6QMQIk8vNcO1FUb9xJN8coDCHK5QbSmG1zxUqmosilNnPwu96LaGVPWIsYgr4uf4_wlxlg=s4800-w1200" alt="Burnchurch Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPm4lYrI2HuAlLapEHdmtC2zf4Fe_pa7zFEShS5UYdXOZ_7uZ0x2QJ1WDA1oSdz7W58Sq9HmAf4kjGDG0f35f6axeAAdiyUpGNqmpUri06eb7SkwGxOfpqLvTdMo3EeBv1Pm6244IRdht-Dqg=s4800-w1200" alt="Burnchurch Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOk-zSBseWLeGdsxwaefZvA0GlpQMkD_NQsHVBXdlX8Dc_TbZafxu8hLCowKpFzXoOGHRrAStoxrE3rycXO-bJcWxUsKcUmuCYKfA6Q2Q6e2nqgL9YzC2EJ6e6GS9wwsquC6ezbi2M7f3ZT1g=s4800-w1200" alt="Burnchurch Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Burnchurch%20Castle%20County%20Kilkenny" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

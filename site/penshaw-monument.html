@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMV7lA1Fj_CY9p7_KL-3p8igFGE2IIcTrj79w67CoPTlnZxr5el1gQ9d9GMZMIeQA22lkQFOAgKi7Y4Fu6AsHSpLkAHY5yB4h7qCRmqXa1TRyQa5XEMT3vNtXsc1VJKzRp-Fsmk-eKkxtlp9g=s4800-w477" data-castle-name-g="Penshaw Monument">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMV7lA1Fj_CY9p7_KL-3p8igFGE2IIcTrj79w67CoPTlnZxr5el1gQ9d9GMZMIeQA22lkQFOAgKi7Y4Fu6AsHSpLkAHY5yB4h7qCRmqXa1TRyQa5XEMT3vNtXsc1VJKzRp-Fsmk-eKkxtlp9g=s4800-w477" data-castle-name-g="Penshaw Monument" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMV7lA1Fj_CY9p7_KL-3p8igFGE2IIcTrj79w67CoPTlnZxr5el1gQ9d9GMZMIeQA22lkQFOAgKi7Y4Fu6AsHSpLkAHY5yB4h7qCRmqXa1TRyQa5XEMT3vNtXsc1VJKzRp-Fsmk-eKkxtlp9g=s4800-w477" alt="Penshaw Monument" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjzDSVoLdIZPNh8bQSCCrLwsYQistX9UjTBrx7BK1FF-Vp5vSTf19GiVj65cJO666c9QJRdQRRAbfqyhgI6T_UmFNKpKiaYQ1Ydp6g6Bx39Cywx8kIMFyzQEKYWHX64IflCttREkkLJ5skvlg=s4800-w1200" alt="Penshaw Monument photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOozqNH2siq-pxRAe5EAWI9-ADTAG7eomF1fXoJjWm4cGpG9HV9VTp9WuEB-h7aWFGvUo3e-59094-_TBbQx1DFUhL5eOHj9XDsAQ2p5K2uYQAZypYdYhlZ4kgj6Xn7jt5gUmoSediV25eS=s4800-w1200" alt="Penshaw Monument photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3q8btEgUkup1vRx_nE29cNDO77cbYG0hRLg-XHFQU-mz2oeRJaJJ1o_kHXaq-8J0xMHzXJFyyKAvZ0tZNLfNMKxoFmmilaPWADEg8d-h509yakMIwT-g636_eqjABVZABdYHLYyW9pfFw=s4800-w1200" alt="Penshaw Monument photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyV2hW7Izg4ZD5L0QIC78J2wxH3XNy87tRtRXvSv1MqcG-KQ8XFYqcFN85Y6lWtshjQjO4i0tPKvk7EH3ylqmGIXB2t73_S5Nnju-r9dAl_m3uv4CkqvxbAtLKaiTVs05Ut9sdtog41T8e3Q=s4800-w1200" alt="Penshaw Monument photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Penshaw%20Monument%20Tyne%20and%20Wear" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

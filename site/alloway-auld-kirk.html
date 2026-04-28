@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtF7aUqZsl8x5fiBkKL6Rs6I-J4pYNvgU6x37bldSWtXy6oz9sI2XKkUeabmiN7bnNZBBXHEMUvxtddftOyN0hQU1SBe2mwpfwyVaH1qsgEvFKccl47X1Tefv6s8WOdMwcmqg2uKyQ6gcP=s4800-w1200" data-castle-name-g="Alloway Auld Kirk">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtF7aUqZsl8x5fiBkKL6Rs6I-J4pYNvgU6x37bldSWtXy6oz9sI2XKkUeabmiN7bnNZBBXHEMUvxtddftOyN0hQU1SBe2mwpfwyVaH1qsgEvFKccl47X1Tefv6s8WOdMwcmqg2uKyQ6gcP=s4800-w1200" data-castle-name-g="Alloway Auld Kirk" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtF7aUqZsl8x5fiBkKL6Rs6I-J4pYNvgU6x37bldSWtXy6oz9sI2XKkUeabmiN7bnNZBBXHEMUvxtddftOyN0hQU1SBe2mwpfwyVaH1qsgEvFKccl47X1Tefv6s8WOdMwcmqg2uKyQ6gcP=s4800-w1200" alt="Alloway Auld Kirk" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOiSeo2gQrl2rrFP-oExss8WFnAOD4ThqlNKHNaF326NHC2FMMTuPF-wzyrb_RxkQe1RJISorc-2ESVvSe3JwxLIPLy7nUUSWxXEQL4S676c3McM-Op4CeLGb6X0jG9zRNoOM7M5AIAvC4zMXk=s4800-w1200" alt="Alloway Auld Kirk photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdK0-7Cr-8-GgDaHRs8sBlfYUm316YA-SWzoeLqdYYekaMPQaEzT0RhidvJlUU8YZtsmDYgbmTv7lVJqCZy9EbbsRP7SzLVdrrQ2ra_Zy76XyVZ9Yp7LpjZXc1VEW6whFbhqzTG4ypTyIRpw=s4800-w1200" alt="Alloway Auld Kirk photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_8eSPTH_acdIDRrZ7zkHVtx-zN2-EJEoXIbn1TXrjKGM10xslDZGCbtR3y_7x-3gsJSEeEU4_6NrXjtA2gwGWdkX9IrcTwIEQMMz-TY7ZFrbiVvhY7RvcOFep6C2Te0xo3FWYoEiIYUzIFMU=s4800-w1200" alt="Alloway Auld Kirk photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQbaLr2w6K3mnydzIhnUg6h3QPHQK_olIejtbRC-XJJunG3NGdw6PjQNnWyM2rGBoECLw1Gv4zMwkJBQqGtdLPgvi9ZyODgteuXE24GqIANh5y5m38_yhhl_qXqAH2E2erEhldNIqMT9eqDg=s4800-w1200" alt="Alloway Auld Kirk photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Alloway%20Auld%20Kirk%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

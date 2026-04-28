@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvbd2SyXleG1zpV8KzEhLCds_29VJMu2qPYEXAdL9zMoRqdz3Sz3pY-TH0rELoQxFEtjsoFyac1nh-x-m6BbKoqzOEAo-P2Xgtf7hseKKJhMKA-a7PsahxiM7LsY2x_8GazaSgrI9-apeW6RM=s4800-w1200" data-castle-name-g="Gwydir Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvbd2SyXleG1zpV8KzEhLCds_29VJMu2qPYEXAdL9zMoRqdz3Sz3pY-TH0rELoQxFEtjsoFyac1nh-x-m6BbKoqzOEAo-P2Xgtf7hseKKJhMKA-a7PsahxiM7LsY2x_8GazaSgrI9-apeW6RM=s4800-w1200" data-castle-name-g="Gwydir Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvbd2SyXleG1zpV8KzEhLCds_29VJMu2qPYEXAdL9zMoRqdz3Sz3pY-TH0rELoQxFEtjsoFyac1nh-x-m6BbKoqzOEAo-P2Xgtf7hseKKJhMKA-a7PsahxiM7LsY2x_8GazaSgrI9-apeW6RM=s4800-w1200" alt="Gwydir Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEOJ0ZEeFJZubDmvmoqh3S_Lt97on8jdF-TZo9UBnzDIXJNlxCYZLVDozJJvc0ZD7NFLT5UuikbyPK5DlcAUwIV4w9h849PzWgdXgUAmwHjUn3zRYiX-Gil1sCu_BYpGJHXlicpw1Z54wf18g=s4800-w1200" alt="Gwydir Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPF2zdEllgPxayUkAY2RCCwxLrLdgqwA8pEQke8aFVby6yEdDS5f6_UDucgpZA620xFi2ZuMDdDev-CicKyfCFnPSySIEGZHMy9LuMXyuE6RGTXa2Y9oFwfL_cU1P5viBplHuCeX4eNM3lCpqw=s4800-w1200" alt="Gwydir Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5M7PVW7hGAs0f5oTs1B5cgsQ-kCsASu_Pcy63hdysn69qedXLjE-WPw5tr_MoFcGjExxY1-0R3Szkhidz13vzjLayVyzTUcuEOqfGxiI2EZbQeFHOB5WEbWWj8p-3T40v8lJK01U7ybte7A=s4800-w1200" alt="Gwydir Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOMcx0vpM-QcpDEJL9BZssMua2vBWRlJWWh6Jl9lpfEmzbSP5_4o2Ft9ImNpy4rD0rVLRtHYu3OkaAsu8zGDlR_L6OqDqdKnthON6mq6uymrdqTN5bH_iM_8Be4nQbKUYHr0eH6Ldg81LsSuw=s4800-w1200" alt="Gwydir Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Gwydir%20Castle%20Conwy" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

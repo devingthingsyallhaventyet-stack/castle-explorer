@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEXHVT6oJp-DsBYy3cntJMBE8y3fePrlx7gE8P-LjtPTyef5IEShkyjtIfnCnymqqJUaRBgA3sywfX1vMh1e2LjqCthDqVhXxHpghi502F-0gF0yQTj_pqJUJzEBqZUtAj2Xvj9eyDrWVc=s4800-w1200" data-castle-name-g="Croome Court">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEXHVT6oJp-DsBYy3cntJMBE8y3fePrlx7gE8P-LjtPTyef5IEShkyjtIfnCnymqqJUaRBgA3sywfX1vMh1e2LjqCthDqVhXxHpghi502F-0gF0yQTj_pqJUJzEBqZUtAj2Xvj9eyDrWVc=s4800-w1200" data-castle-name-g="Croome Court" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEXHVT6oJp-DsBYy3cntJMBE8y3fePrlx7gE8P-LjtPTyef5IEShkyjtIfnCnymqqJUaRBgA3sywfX1vMh1e2LjqCthDqVhXxHpghi502F-0gF0yQTj_pqJUJzEBqZUtAj2Xvj9eyDrWVc=s4800-w1200" alt="Croome Court" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPlvnpT5s7g9R0XPOeBD-I9wn2JWgL4p1N2MqbLeKoH-jfH88pMxq0V8UJarlc233F3AgApdhlnAD8BGjBu1MvcXc8zQTXBhvxAvDx37dQESS-rqyWWmTZ1I7JhlA2uoBg_4K_awfM_NHkXLQ=s4800-w1200" alt="Croome Court photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfDPw7U_k_ciy-FB9TfnnDtVSMGKJi4cnpigNkJmvgOYe5Il8Nhg4vucG2CFw6uYT743adyJMnqvDsTEfq6nXwi5fCeG3Co_uXzw6OzZV5u9YoQCWOcnSTsc-NM4gQQPEK54cmpWnWwU_zmIY=s4800-w1200" alt="Croome Court photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPGKgv7EBTFXW3EnhpeXhH-ydMkACGVl9yCd1Z_A2kfVfggf0e-vZTWpQ8UKj81hqxZ0zwdTs_Sn7GvzIVYera4jq9ghvUFIzwaLMTw-Gj5WUBerBSvJ4pFDajr_Qu2gCKV1SNAuPOca2TZ2Q=s4800-w1200" alt="Croome Court photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqD3z0pWcoua2zOmPYjdTpdEr8UaxI6krtqjKTLw__DlbCjt6IJDL-yl4vxVIoEA4y9MAxtV4XMRRP68bL_tD5EjFbaEthkcmNctzuEzrYBmM86qw795IReRL1w3T5bOUMGjJ1Owo_g83RoQ=s4800-w1080" alt="Croome Court photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Croome%20Court%20Worcestershire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

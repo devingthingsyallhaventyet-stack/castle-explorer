@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOTWtpHB6SBQqqxsU7ID1SdbYJEC6DyjJptLok5jz0MJqtyWRSCrLbJ2Wm43nyxMQ0jDf7znLAAm_qBfCh_k5SCSCtzF29ZcDRkjJm6lSAbCmERGr8rbUP-IxbrpdcjQvwn2Q3MEy3AKhGZLQ=s4800-w1200" data-castle-name-g="Brecon Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOTWtpHB6SBQqqxsU7ID1SdbYJEC6DyjJptLok5jz0MJqtyWRSCrLbJ2Wm43nyxMQ0jDf7znLAAm_qBfCh_k5SCSCtzF29ZcDRkjJm6lSAbCmERGr8rbUP-IxbrpdcjQvwn2Q3MEy3AKhGZLQ=s4800-w1200" data-castle-name-g="Brecon Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOTWtpHB6SBQqqxsU7ID1SdbYJEC6DyjJptLok5jz0MJqtyWRSCrLbJ2Wm43nyxMQ0jDf7znLAAm_qBfCh_k5SCSCtzF29ZcDRkjJm6lSAbCmERGr8rbUP-IxbrpdcjQvwn2Q3MEy3AKhGZLQ=s4800-w1200" alt="Brecon Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsOATDBZzaSX5NZBW679fPd7FgapXLpPn9mS6XhOB_AFKzprJyuy-KxM_rzF9TxkCmN83cy6-UqsRYOmaSQ-3elbwyAWPS_BadgpROHoFsM_AeKdR0Fy9o6qlI1MncY_NtZqQ7B9TtnBfV4mM=s4800-w1200" alt="Brecon Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_CibZ1U7ii3reY1I7H3-xy7k53C2HZENYV-rCcTJCCVhp0c4Jxnn36EEXiQGWK9HX1h10RFVxxvYAdX1eCBVmd-hM6iv4yS-aeg6bMi3zheNYSKTTKJST0bQYHtHwypI6GCzinndnO0INrw=s4800-w1200" alt="Brecon Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOnYzlj2t662B1xTMNdwamNw9oXzbh5yvu8YoqF_tXVSVhJa3eO5QMmfDZKl8140yfmkBAQdSwkCyDhv0qf3TmdvZkz2RS9y76fYCt_aJ9hFqx-kitlFnHzmpgYp_EHXWIK79fLfHQyqiOhXsH94zalAg=s4800-w1200" alt="Brecon Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9nqtxoQeSVOMfhTxtYetQHY-mUZmSae2B81q-YOPlfLgfvtuOu5uSNEfCgi0E2XVzRcfDN9O_zhTXw6s2b4CqI4Pz7wx9K_yHb5pG-nhrWTh8LIGNPFGjtKksVxaMk1HuH9GPzJvlA5-TFUQ=s4800-w1200" alt="Brecon Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Brecon%20Cathedral%20Powys" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

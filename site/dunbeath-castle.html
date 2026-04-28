@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dunbeath_Castle.jpg/1280px-Dunbeath_Castle.jpg" data-castle-name-g="Dunbeath Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dunbeath_Castle.jpg/1280px-Dunbeath_Castle.jpg" data-castle-name-g="Dunbeath Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dunbeath_Castle.jpg/1280px-Dunbeath_Castle.jpg" alt="Dunbeath Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMzOK8L7Rm7dYPy2h4sTTSK8i3aNYuJ8_jltY2WH9UhhGSgJAQ7MCb9XN7Cu7PgCPx3PWG5d7GKpb5llIhERZ9xp6EwtFh5A_2nDp0hbYTaIJIP_RORI1SJBAF18s21GIS1S72CxF5hLIDAFf2UyG_1aQ=s4800-w1200" alt="Dunbeath Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkNEno27i_ZsED2oAhW-zp6xnmMZLG8jG8u-IAmXp284OX-HEtiA96FTmuGa0MTTwCEuS5ZpXw-yc036UahXmEDnIHbjAqEbTuiQozCZNKHKK16EkK-kcrjHGKFliMBo8rwFJI0VHx5KTtlFBBSz7dtA=s4800-w1200" alt="Dunbeath Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-lDacQa8VQiYW-0XvTl1GQGaLICD46BqSs9ZXTZja_FBPa1mpnSZ1ol3BqiFjUxLS74T62ahRzyWNMRNuyuuN5aA2D_PePKZ7DxzbwpiApNLKI_6UfJ_7GmRU753x-jo8SVe8mGVt3W88R7gHOJ5_5A=s4800-w1200" alt="Dunbeath Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCSiSi_q-G26hHzUgmZSmnOQjVropKdfq_QP9b7GeS4h-dq1GXRiC8upozoMo0Gvm77mzs1w9qKHkCk49pbP-NTXCcOgihVpJEvQu6fqGBBIfF5WCcBuQGfVWVBOGkMC3_gcRJJW4bGwlVHSc-QGCm=s4800-w1200" alt="Dunbeath Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Bill Henderson · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

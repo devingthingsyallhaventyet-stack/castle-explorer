@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOa795p7uru7umZp0ywsVppbyLUWF7yqcqz3VEGN4G3yD25BDUX3GZlMYXl9wo5OhStqumngzSI5UsRp43dXkHegUlkMSzYJzAET2mw7FYAgafKgwPHqm8eoRNkNPI3UgkvaFuiYcdOS2kxCH0=s4800-w1200" data-castle-name-g="Tintagel Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOa795p7uru7umZp0ywsVppbyLUWF7yqcqz3VEGN4G3yD25BDUX3GZlMYXl9wo5OhStqumngzSI5UsRp43dXkHegUlkMSzYJzAET2mw7FYAgafKgwPHqm8eoRNkNPI3UgkvaFuiYcdOS2kxCH0=s4800-w1200" data-castle-name-g="Tintagel Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOa795p7uru7umZp0ywsVppbyLUWF7yqcqz3VEGN4G3yD25BDUX3GZlMYXl9wo5OhStqumngzSI5UsRp43dXkHegUlkMSzYJzAET2mw7FYAgafKgwPHqm8eoRNkNPI3UgkvaFuiYcdOS2kxCH0=s4800-w1200" alt="Tintagel Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaHYEUOZMTfoTKJMgfekucvtbyyiJonrlNYRQ1KIZK8n-6uUP9bumdbQ9z967LXMnWXHcIW5CVeZczjFjC8eheZDAv77b6a_hl7hr0P4CQJHibs4KBz6AoQA2IHQP4bk6bUB1V_TKcyi34GQ=s4800-w1200" alt="Tintagel Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNU7pedA1nLdwzw23FcckqMFFlPTG1v1sEVyTZook_Cp-SerqRzQQ7E8DTRGk0hBSZYHoGBmzBFig2tS6oMyCA4AFg4qCxSImnRYEtZDj_2hbNLkpsOdWdyQwnz_LRL3V_YqfB6sfj8QOtl=s4800-w1200" alt="Tintagel Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO82-3R2y3mwtTwAXJNMRG2i2D2ZN0yym7eyrDA_iUzHOQH-7jhxNdX25Aid526_J2t49h7yp0Sc4cBTkSVgdznG8r5rKbM3DROuaza8e2uTV6DLncShXc8Rves5D8BjtWjzEFh-zrcrl0UTg=s4800-w1200" alt="Tintagel Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOMOcZltis_LCWEz6ymkE5UL5TXIxKjnmjJw2ksXTnGWmOxH-N_P8rDBGNjn8PWdD_XBhbeUojJFwmkzFnVLjyR6QP1luisK3SU2Ezv7xraZxyJ6sU_67tMS0z8gVL7VJ3pjkIk-kWyPWTPzA=s4800-w1200" alt="Tintagel Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tintagel%20Castle%20Cornwall" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

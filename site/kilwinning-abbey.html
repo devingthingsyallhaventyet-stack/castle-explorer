@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPeZAJwzEDflwmmpLEpr_kToPEjGKV4Y1fWjnXkZMM3HGuUFYGgVCNH02LFDB7Vwg0RtOUyNOXqDB-toN4m5GfTNI7o6lNIensDjyV3fu6RoCcu35Sv0VaA5JTlkGj4JFqvROOt2n51zJZz=s4800-w1200" data-castle-name-g="Kilwinning Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPeZAJwzEDflwmmpLEpr_kToPEjGKV4Y1fWjnXkZMM3HGuUFYGgVCNH02LFDB7Vwg0RtOUyNOXqDB-toN4m5GfTNI7o6lNIensDjyV3fu6RoCcu35Sv0VaA5JTlkGj4JFqvROOt2n51zJZz=s4800-w1200" data-castle-name-g="Kilwinning Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPeZAJwzEDflwmmpLEpr_kToPEjGKV4Y1fWjnXkZMM3HGuUFYGgVCNH02LFDB7Vwg0RtOUyNOXqDB-toN4m5GfTNI7o6lNIensDjyV3fu6RoCcu35Sv0VaA5JTlkGj4JFqvROOt2n51zJZz=s4800-w1200" alt="Kilwinning Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjkXSFGRlZOTHh2_ncSZz55GzC_L-uv7Z56dHbs3JGjEzOoWXT_2SOwPsqa3bCnc5t1U_hSE0TRpicKR9Po3LsYmf76OtVUTb0n28TgS1_Rv6EYi0jQAFr6wKT61qMDhfmwVEeyPv-H7KbLA=s4800-w1200" alt="Kilwinning Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpJztbB1kBiuRsp9cZ14Ee8g2QJLPZja1fdGZpZbSCrEn8Yjj9ZUN7bQd_lH59V3bQS40LO2F_4EuDVwlzoEnn_JK2J6ZfEDssT8hIKf2YirbmWPeksALoD2USiSHKyVhGtREkZIpFwZMkKlQ=s4800-w1200" alt="Kilwinning Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfnINIj-7BlHGdU8Kbc8ntzzoo6ydzwcKPiUcyQEW2iB47wT93wjm11OCoP1VHganF2xBVUSLrhitfUvkHOek6Yr3cT104W9PyGo8VQEbpZkhthPOJNvV7fLeSUUdg6R1fG06rR6uASWRSmA=s4800-w1200" alt="Kilwinning Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPl3q96QGqUV-9L0QcUHyee2cSuWf-2gkbDAW_C2HkBbtOvDqMHZ8u_1IduMjAcASIgxrRuy47sjLEwbREfsLG25bQOpc41U3BMpUmv4pPcy7djInPUvQmdvmUvD8KDua76wKCLP1zuZ0SqqQ=s4800-w1200" alt="Kilwinning Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kilwinning%20Abbey%20North%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

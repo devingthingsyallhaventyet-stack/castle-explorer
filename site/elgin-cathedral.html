@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOW6NhRpwxZM6Nw0PQ6UbkMwKkCABbhMgbK0gfM5yzl65u5QV1vLrpK6F41JpCA0bIDNwgvfcRHDe7grSYQZgah33mByzWUx3Ymg2CYRzMJppy_YhUCT1j9e1ejSqNJWwyD3jLPwL2ggSC_cg=s4800-w1200" data-castle-name-g="Elgin Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOW6NhRpwxZM6Nw0PQ6UbkMwKkCABbhMgbK0gfM5yzl65u5QV1vLrpK6F41JpCA0bIDNwgvfcRHDe7grSYQZgah33mByzWUx3Ymg2CYRzMJppy_YhUCT1j9e1ejSqNJWwyD3jLPwL2ggSC_cg=s4800-w1200" data-castle-name-g="Elgin Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOW6NhRpwxZM6Nw0PQ6UbkMwKkCABbhMgbK0gfM5yzl65u5QV1vLrpK6F41JpCA0bIDNwgvfcRHDe7grSYQZgah33mByzWUx3Ymg2CYRzMJppy_YhUCT1j9e1ejSqNJWwyD3jLPwL2ggSC_cg=s4800-w1200" alt="Elgin Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGhDKAWmtmt5fdwj2WY5yJjlKA2FGgmU4NCKJyRiazXcXdEY_xwUaXJNimCyyrxVUd_cBwmYVlDLba4EFqKqY3gREnSIhkX5GQ=s4800-w768" alt="Elgin Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdRWzafVlK0lAtwpn1DbKHPpggdiWWyDiYr0znZUImrqQROtXpEG3y87S3m436rOQuKMJbPyXaFERwF0jBHBWNET8M05r0ByPe8MVlT1vgZCX4bO-pYQnfO5s2jVK0DaaN4OmPGBRUgi4M=s4800-w1200" alt="Elgin Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8pu_TGrcT8Pgm6gUW1PNqrHbLtW3mksI1JWcFufLTcD6v10nHlPfnWTK1MgkMcboB2A9xV5YJx-znva2uAfZ6TXKH44e6Nqg-VeqQ3MnhalalXC_3lT2VQcKLCdCnvtAzE2kyLwrBHCEOKw=s4800-w1200" alt="Elgin Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOav2OhHF7Mx9KMx5FgOsYomDFBV7CbrsR209oQlPAanV8s-QgX5iNmLzxVFqI64nBieEL18P0IVjGp8ctD1rHu7qdqby9aXcHBJapPNy4LGZTg31gkYToeN6HkxeTF0QWbQoP44nd_B1YiwA=s4800-w1200" alt="Elgin Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Elgin%20Cathedral%20Moray" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

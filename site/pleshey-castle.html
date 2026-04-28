@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOOxGEEqSmy-b216NYUtx1oMbDlDJbyO3yt0-QRSbkgRtcZqZQn3wwznVX42T13kYh13f9FV4YfQhFhHKx2fnJD-i1_b7BcDzFFgT5jj3TE9Q0VjbOGG-XuaU-8m9XPB64L6ws4DmQX7B-R=s4800-w1200" data-castle-name-g="Pleshey Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOOxGEEqSmy-b216NYUtx1oMbDlDJbyO3yt0-QRSbkgRtcZqZQn3wwznVX42T13kYh13f9FV4YfQhFhHKx2fnJD-i1_b7BcDzFFgT5jj3TE9Q0VjbOGG-XuaU-8m9XPB64L6ws4DmQX7B-R=s4800-w1200" data-castle-name-g="Pleshey Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOOxGEEqSmy-b216NYUtx1oMbDlDJbyO3yt0-QRSbkgRtcZqZQn3wwznVX42T13kYh13f9FV4YfQhFhHKx2fnJD-i1_b7BcDzFFgT5jj3TE9Q0VjbOGG-XuaU-8m9XPB64L6ws4DmQX7B-R=s4800-w1200" alt="Pleshey Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLdywLDjB9vJXN2KSF2ZjSlgLsagUqe7vS-YBdaPuQwlNe54xMqpNO4QEacf2ROmYtxf45oi2mKRC214gCJf6cpG8cMr7yixz3g6kjElB8yy53PRI_yyBKdfNc6JJR0LlDMjjOqkCufmemSg=s4800-w1200" alt="Pleshey Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMhettfG5tlxw3HNBRv7dDoV4zfQtlODqcnyflk6xlysgfz4pX7ej8so8FPmvjJ3XL7mAAWa7CSqX1tA_y66jrWCHNLoZtAroFC4x9fkem_ySPRn7ZvfcZVY8x1B7MGiGBPkbvMYzzh2kqHBw=s4800-w1200" alt="Pleshey Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDQmQ9oEUu0pLXjLGLAHWOJ7YU602-2dpWg-Ht3GsoY5dmhF2gG-we4QEryraZEOXAqZq1UZFEij78HmV-dIucVmd432mPnnZmJqObNdViqEDDv3IICU6t0aktQt0_VxH-iaUq2FbA08VftQ=s4800-w1200" alt="Pleshey Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPxV9itLBQr6JMrP3XwOaX_JoQaylk9Tm6Lsjd5QMgBVD0MPCrNnWNEsu-K2Cjw-RJdI_nGTBd4F-Zz0nFClW2i51_QO_w215vxE-M4W-AwrY6gSSJrjjVrOAvErzimkAC6Wj10_Y3B2eobCw=s4800-w1200" alt="Pleshey Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Pleshey%20Castle%20Essex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

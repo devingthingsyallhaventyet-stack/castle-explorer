@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGVQYq9URqMuPvEBK9ic1fRZM5Tn8nrPFwo8nyCRaTXS3_5s1PoxsGEDTVXUI0Tnq8641e_xUwxWLMfHwDdwzBlrAsm_Cw-oT925SDVZhFD91sycS7vlcWi1ntl-d9-zSqwwZ7ggxtMNTajg=s4800-w1200" data-castle-name-g="Portchester Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGVQYq9URqMuPvEBK9ic1fRZM5Tn8nrPFwo8nyCRaTXS3_5s1PoxsGEDTVXUI0Tnq8641e_xUwxWLMfHwDdwzBlrAsm_Cw-oT925SDVZhFD91sycS7vlcWi1ntl-d9-zSqwwZ7ggxtMNTajg=s4800-w1200" data-castle-name-g="Portchester Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGVQYq9URqMuPvEBK9ic1fRZM5Tn8nrPFwo8nyCRaTXS3_5s1PoxsGEDTVXUI0Tnq8641e_xUwxWLMfHwDdwzBlrAsm_Cw-oT925SDVZhFD91sycS7vlcWi1ntl-d9-zSqwwZ7ggxtMNTajg=s4800-w1200" alt="Portchester Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8Ov934vl9hZThrvBvLM_IoRPsGpiSjfWVEA9Wii-arzUGnjjga8xDy0buvhIeQwmkAjd9vChRNGY1C5MED0-F-D1NKuK5cVNKdPCW-OLtfQe8rAcy7h-2i_5ldiokaH-CdIF3y_ScciwvEg=s4800-w1200" alt="Portchester Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOi4XNl4bnp2OSw0nFsrBNyLTgpvp3GpPdzp5fB6ZV0ojShWENm7XXGAivkXfRBxAHyruDz6sW3NdnROgYzjgifn2FF2YZi6n3H0JuwYN1SbzIQ97PrD01JJ0sNexWNaZeKPUIsbyImFx0NyA=s4800-w1200" alt="Portchester Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPh6dQDwdCWvX-DaDuPLHnK4VAYwjhRa4Wa-0Ijun-1N75aog5HJyJnNEzRAfxioDL5atw8zentljU5s6IEFJrfn7zyFKc9Ip7f6RDmxLkIQnfAU1ZYxLTKZC_pSYE5TfPBslc3Th9y4vhAQA=s4800-w1200" alt="Portchester Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNCHQDeN3anTFb6HOrXUplQEIA8M-WE6gSDFrIthSqbLNFm6h764GvWbPM_qf3VIGkbGEy215BwFXmY9CW50ZC2TYmNxsi-xG6W_yAUw3F55XzWdXMccQk2BiFxZVM23eSA-brKkERiJ8Y_=s4800-w1200" alt="Portchester Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Portchester%20Castle%20Hampshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

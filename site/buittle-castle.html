@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM4zNF83nBkX39EasVBAkvtqoBhUFBnvJsXWn1lWOYES7QjiFhxiRZ3R-ppVWt6kar8oYu5Mj_HDPRKbbiVCp4S2Z2uEbattaKdS1YEE5MZ-oYPy3lJyI977wHhccS1UyrNDePrl4L5nlV3Rpg=s4800-w1200" data-castle-name-g="Buittle Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM4zNF83nBkX39EasVBAkvtqoBhUFBnvJsXWn1lWOYES7QjiFhxiRZ3R-ppVWt6kar8oYu5Mj_HDPRKbbiVCp4S2Z2uEbattaKdS1YEE5MZ-oYPy3lJyI977wHhccS1UyrNDePrl4L5nlV3Rpg=s4800-w1200" data-castle-name-g="Buittle Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM4zNF83nBkX39EasVBAkvtqoBhUFBnvJsXWn1lWOYES7QjiFhxiRZ3R-ppVWt6kar8oYu5Mj_HDPRKbbiVCp4S2Z2uEbattaKdS1YEE5MZ-oYPy3lJyI977wHhccS1UyrNDePrl4L5nlV3Rpg=s4800-w1200" alt="Buittle Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjVhreyYmy5xsuVNDwsWpGT1CcNy20cFk_eq7X7UO1AyPHAa2RpS4Nm_2-xq3bZGKQ3PbNfbHFyKw9m1gzgrkeZz0dVRMfjgZz1Z6p5X2Tv4vCU38GWxfC-sGUh5ZQwurKpdZdqXcBJb6o76o=s4800-w1200" alt="Buittle Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqHpT8t7FhMH4rlhIUk1Y4JqF_BBAofGeToy4bMsGkwkFDMEmZFG53V-4_Uy7YeFuAwY7vKHAojpjlPaRZNMC73lxhvtk1EhJxc=s4800-w1200" alt="Buittle Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP3TiYR7dtVNxeLe2Dtb8HrHKLERBo2ICBNAHTAxhzgtcle09wIGlf976UwrxP5-1p532g4lmykj11AEUE3IIwCSW_AqTgigfjdtRIpjt5f9UzWNL_KiEOGIH4LlNGZtDQOCb6SzRBN8eGH=s4800-w1200" alt="Buittle Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeEessTo9tZGr9a-O-7rgfPeRc0zIFKTfS7vpyFSoZNdyyHDK4hTG6gWadbT1yaVY5MEAsJ1Ww6F7ghlrmDWLzYu9SQRlYpjDs5_lhEYyPWvXZ97JE-YMN7WBHpQyJBYvlv3K-zGKClsSpDQ4=s4800-w1200" alt="Buittle Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Buittle%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

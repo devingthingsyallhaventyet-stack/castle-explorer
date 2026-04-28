@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Baddesley_Clinton_house_north_2016.jpg/1280px-Baddesley_Clinton_house_north_2016.jpg" data-castle-name-g="Baddesley Clinton">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Baddesley_Clinton_house_north_2016.jpg/1280px-Baddesley_Clinton_house_north_2016.jpg" data-castle-name-g="Baddesley Clinton" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Baddesley_Clinton_house_north_2016.jpg/1280px-Baddesley_Clinton_house_north_2016.jpg" alt="Baddesley Clinton" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6YP9LgSX9-is-IG9BYrpWU2r_ZDSIX99ujTP3tKBknI0rGQXECL1hAqqCeceeGXRzX9b-sG1gjc0kkU6yY09DTlMl8OXwS3X3D5Mre1MjaGp6Xgmw-EpyTnZGAXXbDFIIatmlBu9pOEdDMA=s4800-w1200" alt="Baddesley Clinton photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcEcMoMh-8VLIJp3vo95JadiA03nI-hL5Pze8zKj76hsXAoKgWdhGYG_okXResMfM5Kk7BN7kIN6PVvn5bYuBZfqMfZW45esECPXBOf1PwUJw3oVkuKCwBDuaOa1ndtSZlas5uFY_eT_vd5N0=s4800-w1200" alt="Baddesley Clinton photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1yUALCVcCGUfgoAZwwbhYD34AFPmiRVu7mNpZXKPZpNnfE5hpeHPbNxxRAmp74sLIe9nn_AqeESkwjCI09sBoeTF1-oR_Qnc4TI7_nTWhGwFNqaqghu6nROvpgUzn47vh9rtdmkRRATn8Ag=s4800-w1200" alt="Baddesley Clinton photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpHS-IscWO6mJWcrcySfJ2WM2ATow9utArDzeaQm4mJR2YCoYp1zAPljvevkA4JjYP5VSZOihrvCS77FYzbbxNFg6WFswRjyhP0KPgbmTZBD5YLwmo2yVS3AGQNBG3GYSGYT_xar7hH10f=s4800-w1200" alt="Baddesley Clinton photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 DeFacto · CC BY-SA 4.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

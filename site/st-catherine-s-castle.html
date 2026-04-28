@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMuXvRlmh8Bwdr8mjMTXs707R16u5Av0ujM-vNTPNQpes28J5fLQNo2Jpg-L6RNh845mPTCl_2cDhDt8e9ge82RAeACoXWaaNR3aaqelYcvVBaNHzond6qvFjh5952qH_6zamX9bd9k0pWeb5Ea98598g=s4800-w1200" data-castle-name-g="St Catherine&#39;s Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMuXvRlmh8Bwdr8mjMTXs707R16u5Av0ujM-vNTPNQpes28J5fLQNo2Jpg-L6RNh845mPTCl_2cDhDt8e9ge82RAeACoXWaaNR3aaqelYcvVBaNHzond6qvFjh5952qH_6zamX9bd9k0pWeb5Ea98598g=s4800-w1200" data-castle-name-g="St Catherine&#39;s Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMuXvRlmh8Bwdr8mjMTXs707R16u5Av0ujM-vNTPNQpes28J5fLQNo2Jpg-L6RNh845mPTCl_2cDhDt8e9ge82RAeACoXWaaNR3aaqelYcvVBaNHzond6qvFjh5952qH_6zamX9bd9k0pWeb5Ea98598g=s4800-w1200" alt="St Catherine&#39;s Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOFrV0Axy5Hw12sdBdrMACRM3QBItpDAMt0fGWCFdcwca7LGetKjoDfn5bQa_ffmaVov3qyYUIQgUoQ_itWvPccN_LuPaaSfWSMQ1bW9bDNDvhn0bNfvaXF6sioUvq4iEMK6tJkPN3RhEOrg=s4800-w1200" alt="St Catherine&#39;s Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVomEBQdj6xmX3_bh2tLlevD_hUkIRbcHTUtmcj42tG3ASMvuBkTB4gECIqxJLQucb7zumTuqVOCMpZttckkvLvFKWtHUDoJCf6H1T7pr-Ic6U9pX7LOpVgyX-T1fFMu6OMiVFoFDwp2sSOA=s4800-w1200" alt="St Catherine&#39;s Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWdsf2kzHsGapSLsU3s7Cn7euLUV7RMZzwNDnlIX0OOQ0_WsgMqaH_z9Bh9mXfce0jP1LnDyWZmLVeGRmJm4jdIbHcMxeu0uBM_8goAzlKGizKju6pjV9SsRgeXyJEYyk842N1Dkc13H38wg=s4800-w1200" alt="St Catherine&#39;s Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOydDxAbo6OgE2TzYgP7c2nJFuKQc4RBwhnJS0eDaK8IX9NUPeWDDkAUdOxZfBed_CY_TRnuI43J-QuHMSCHCI6gY945Jlti2U6fxyjk8jT12_-4t2rXMvMI-4Zz65Zqik812EylqCXUdlIEw=s4800-w1200" alt="St Catherine&#39;s Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/St%20Catherine&#39;s%20Castle%20Cornwall" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

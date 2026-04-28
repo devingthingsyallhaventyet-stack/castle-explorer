@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOXmR7K8aOM8Ls1wg7zEh_5t_tFqzZrpDtEF0hBQFEd79X50Bc8xU0M03sN2K3lWbVI-eRJ99xjUzZBZWrGj9F2IQPZYBK2l_b-xAPUZdfjutCjJZPF0e3RoBhB19Luba8SBK_4JXruzlb9idI=s4800-w1200" data-castle-name-g="Llawhaden Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOXmR7K8aOM8Ls1wg7zEh_5t_tFqzZrpDtEF0hBQFEd79X50Bc8xU0M03sN2K3lWbVI-eRJ99xjUzZBZWrGj9F2IQPZYBK2l_b-xAPUZdfjutCjJZPF0e3RoBhB19Luba8SBK_4JXruzlb9idI=s4800-w1200" data-castle-name-g="Llawhaden Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOXmR7K8aOM8Ls1wg7zEh_5t_tFqzZrpDtEF0hBQFEd79X50Bc8xU0M03sN2K3lWbVI-eRJ99xjUzZBZWrGj9F2IQPZYBK2l_b-xAPUZdfjutCjJZPF0e3RoBhB19Luba8SBK_4JXruzlb9idI=s4800-w1200" alt="Llawhaden Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrbKM-28fBJfWpmBy9LbJbIY7IakiSqsmbq5LXeZuAxEvvnjLWGN8zVoMptpowvetID3F5xkun3pEnWJeDNXjj6s9wlbE3U_hFEtmMGokhoHjRT7DbUoIJpYYcBcGzhNhnef72i8Tj7IhbP_A=s4800-w1200" alt="Llawhaden Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMuMBEfrBD1D3qMgj91114ge2xm45EaGYuBmXGY4RQKb3AAQscainC29d8hMv68aDmLmWNgq9FQYo6lSM7Va5nX8c5_6DTApkjItD27PUL_l5XI2MGW4IUnFCkzX1lyGbpVkICQqhfIvClCXho=s4800-w1200" alt="Llawhaden Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMoPzsFmEsLeGCC66iyGso1FDnP2-9YQm2SEDFZrCfkys2TZTDW1Rmt7HCqdsVLpFJjqVF2F1yV9z4DtGQdSn6NHzrpHZ7nHpSeiA9htd9HZcooYVoriCZIRCP5sNYNRnPLRRmaYRutpUIyo9p2qMjzNQ=s4800-w1200" alt="Llawhaden Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPqIF52WSFiHyCabSdqWbX9Ch6TkcVpEydqGFjCl-e3e2vNB2OQ7TBQCL7vk1WxxRkuahOvKY-iV0VwvQ6NpnRkGHKZsXFx1v1rTcIUKyUKEI1ciWFT1O-cB8cp8Cu48SmrCveCV9CtZJ8Rhjk=s4800-w1200" alt="Llawhaden Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Llawhaden%20Castle%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

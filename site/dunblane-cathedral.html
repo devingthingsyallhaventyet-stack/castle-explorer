@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYD_OJn4SLkoItfBnQQT-fwgxduZL5wsQSxIO5Ne7nbN4xajDAOjFgx-a3RTvjGdhthzhjYjMeJwuJ0_07C6R6u2Kd1cF5xcvdA7BNhSz0SUZqRit24RsTH04uUFKVfNPZywlN_ZTNIsYrSQ=s4800-w1200" data-castle-name-g="Dunblane Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYD_OJn4SLkoItfBnQQT-fwgxduZL5wsQSxIO5Ne7nbN4xajDAOjFgx-a3RTvjGdhthzhjYjMeJwuJ0_07C6R6u2Kd1cF5xcvdA7BNhSz0SUZqRit24RsTH04uUFKVfNPZywlN_ZTNIsYrSQ=s4800-w1200" data-castle-name-g="Dunblane Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYD_OJn4SLkoItfBnQQT-fwgxduZL5wsQSxIO5Ne7nbN4xajDAOjFgx-a3RTvjGdhthzhjYjMeJwuJ0_07C6R6u2Kd1cF5xcvdA7BNhSz0SUZqRit24RsTH04uUFKVfNPZywlN_ZTNIsYrSQ=s4800-w1200" alt="Dunblane Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqFjs4Ll3BKpR_w6ykI1D5gjag8iKj0Hsta0v-YsnonPKrnwKg2Y6Dj64f3eSLPEqoZAA-iwpur0nd0jJuV5W_Y7g4b9QF08xvI=s4800-w768" alt="Dunblane Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrzV_LOdOi5WUQZWkvbu3C4xWBOOjr4K4Gp2ENVzS1LBuGYfcJlAIeRWXpJtPCq-r3-pWXkdt7MylWPJbIlf8uNk1AU7DJHReWhZeHyMvJWiL7-DTEN6AJcHnuCt6Q7XsbPzsvLDXXFYw4C6E=s4800-w1200" alt="Dunblane Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMK61SzkvBcoER7ubxaPwvR4yd8JC7z-JkEXheNTfy3tID_9W0dkd5lEqcSF8yHSFmW3oBdp95SVddQYB7Q6WYIYQys2hCmyW9DJXb5aV060oL8hUY2F68kpviTWhFp2qnYi6BNBGPwPDUelQ=s4800-w1200" alt="Dunblane Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOxAs8c4fPmij3lzzYHGHwVuaUxGznRPo4ro0q6ukhKQgRuW4WodkzhYEx5Q0C8pYiwDvL3bxvJI00C01MbdUstZkj_2KqNAI7ZfdWLD3weIZkwFeJ1tZ4O_1Q_PZShCfWvXhkRPCwxjzjvUw=s4800-w1200" alt="Dunblane Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunblane%20Cathedral%20Stirling" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

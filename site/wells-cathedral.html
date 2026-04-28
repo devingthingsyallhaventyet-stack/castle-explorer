@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wells_Cathedral_West_Front_Exterior%2C_UK_-_Diliff.jpg/1280px-Wells_Cathedral_West_Front_Exterior%2C_UK_-_Diliff.jpg" data-castle-name-g="Wells Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wells_Cathedral_West_Front_Exterior%2C_UK_-_Diliff.jpg/1280px-Wells_Cathedral_West_Front_Exterior%2C_UK_-_Diliff.jpg" data-castle-name-g="Wells Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wells_Cathedral_West_Front_Exterior%2C_UK_-_Diliff.jpg/1280px-Wells_Cathedral_West_Front_Exterior%2C_UK_-_Diliff.jpg" alt="Wells Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNnD1sPtL4eYHQKxbHZQ31Jj50oTHj7wECJo6SuqdXLgW8U2foO5uEyP5wHIXdxqiBD9Q1oWFmKhIN9Pwg_RknOdwBaqHkuYJVtGNffFLDEuKpF5YjZfHjRVHnEmU4juNhE96QHhLK-r5jK0bE=s4800-w1200" alt="Wells Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMVKgSD5EBf9hJ56YfD3nSeVCV_h8ItN6pJkt8YqaNyednN7Nw8gUgkNXY5W2zsyD6MDASgMSqUClNrnch7ViNN-vkbJQAryDup60rkIdNqstvZxadU0WiSZDwLq5wpdEADrX4V9LSiYcOIrA=s4800-w1200" alt="Wells Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM9crBZ7CPqJUt19SwFcworyHuT7LpiIXjtL93hhM7m5EAfj6R4MA9rXrkLl-OEPt_5wIfhuzxAJmvxKCi1paOPNaeqAiWHXV6CtZiNoZ0el9N5xVGGE_QV63GvUlFeTj1xqdHu24KH8qBs_I4=s4800-w800" alt="Wells Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQAOC117YAxlLmBhIUaSXxloelIWX4wk9LGtJhbLjtKM71SSf1fYrj6nYNc5AzqqA1ReIWNh3K_vUqYeDViTtJb25YZIUTiTHVVi09BZsIv9E7BwRdoGy6GceLpe9yxTy_c0KrZQgQDH6amnDnJhBV=s4800-w1200" alt="Wells Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Diliff · CC BY-SA 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

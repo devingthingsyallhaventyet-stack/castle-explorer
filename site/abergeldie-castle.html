@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjlcyA5fqVL_iKmIoRcpendImU5_FDzn-rhMmIZfEvPxfwDnKNmhry9GC1a3Ch6BusjQ-D7XoYlGVqhDnpF1ockIlt0BnTCWH7WOzr4tuwn3wSCRDIuo5ITCl-B22J_duyiYOcwuI8i5shNA=s4800-w1200" data-castle-name-g="Abergeldie Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjlcyA5fqVL_iKmIoRcpendImU5_FDzn-rhMmIZfEvPxfwDnKNmhry9GC1a3Ch6BusjQ-D7XoYlGVqhDnpF1ockIlt0BnTCWH7WOzr4tuwn3wSCRDIuo5ITCl-B22J_duyiYOcwuI8i5shNA=s4800-w1200" data-castle-name-g="Abergeldie Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjlcyA5fqVL_iKmIoRcpendImU5_FDzn-rhMmIZfEvPxfwDnKNmhry9GC1a3Ch6BusjQ-D7XoYlGVqhDnpF1ockIlt0BnTCWH7WOzr4tuwn3wSCRDIuo5ITCl-B22J_duyiYOcwuI8i5shNA=s4800-w1200" alt="Abergeldie Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUWza8THy97vA-atvs_P4OYkzT0uQ25iMPs2cn5I29bB8gThXzK3Q2atc1-W0Zen3L93kmmgzlfJ-jxJPx6LbGGwaWPga3G0sL0wamSoAJ3nhjMv8dk-tqf4pITwBvj-wWscabibTJR0HG0zU=s4800-w1200" alt="Abergeldie Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNOfL24HMkxiJNxQxSB-0G8S8dQiiWyqSWaPLQe-dW0b9qH8hY8JlChW_IZl3sgKWQIs0gxnKRlLCqnEJujOXwAjFs9AbQFgvbc6FP-7_lA0K_TGRw-24Vi2Hcwipd3lVEzhCzySpv6-7PAxA=s4800-w1200" alt="Abergeldie Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNCH9DJtgyO7PnXksqOkkk3OLC8dL_WYOqGng52jV-3370ljauBA5Xf1nYWVFmydVDSpemHLkV7x7dwdwAPZHwle6E-VlDjFCGnNj_S2zpTbh5wygf-qHElFwBdUn0nnm-DZ3p_yfco_v8x=s4800-w660" alt="Abergeldie Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPq22bjbxY4QPt2_t8Si7xsICz0VZ5kb8bkSRYbEQbu911d_KIz-cE-5CZK5urvWNg0rlSU4-UbJSBY88tJsZx0MBGD2ehDBW9ZmgK_1uaofsmY7-JPpJzPVRfG2NBl6rPEh5KyGJuGMJD13Mc=s4800-w1200" alt="Abergeldie Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Abergeldie%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

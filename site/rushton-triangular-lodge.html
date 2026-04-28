@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2LIKADHheg2F4IRYlIHt4_0DTegfe6HZBPLboXqkW34CWs_Ul7hGPyHYBwNlvK7_PiipdRqeUVfb3VrQdnyIv5VHDm9i2jfERkks3z1P3unD5WgI4bl9QcgEG8QonYy8gTa16X73nM3AX5Q=s4800-w1200" data-castle-name-g="Rushton Triangular Lodge">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2LIKADHheg2F4IRYlIHt4_0DTegfe6HZBPLboXqkW34CWs_Ul7hGPyHYBwNlvK7_PiipdRqeUVfb3VrQdnyIv5VHDm9i2jfERkks3z1P3unD5WgI4bl9QcgEG8QonYy8gTa16X73nM3AX5Q=s4800-w1200" data-castle-name-g="Rushton Triangular Lodge" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2LIKADHheg2F4IRYlIHt4_0DTegfe6HZBPLboXqkW34CWs_Ul7hGPyHYBwNlvK7_PiipdRqeUVfb3VrQdnyIv5VHDm9i2jfERkks3z1P3unD5WgI4bl9QcgEG8QonYy8gTa16X73nM3AX5Q=s4800-w1200" alt="Rushton Triangular Lodge" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrVcDek-acM_Za-TOswrhziu9elVuXyEftP1G88AWw2KFSyxvO_wBRLDcwgDYTyaZ5teN5Y_mBN5TveGEvpeCBvhI8VVwTYfxLHA4T88bzgLVZpSsWWp0YdjO0_KuEJH1DrXaJPbmr3-ZK8fA=s4800-w1200" alt="Rushton Triangular Lodge photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMwQ_yUdaTfnBMpzyywdoMo_FFXEE7WwGxNhUyvt5J6vnuP7xF0O3tZ-SvGBgIewqiAhzdlYG0BAztuACSaNIOBCIuKMPBpReUEcxFWeWyMYAuDVbL-VHV1-MxJSnMZCfQbJEuk4zmVlh65xvg=s4800-w1200" alt="Rushton Triangular Lodge photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfEkxAKmJ93ANJ7MxI1hp7FBSrc4Gtq0pgz1dFgqdg-Qyj3wByQ98omnU2I07U5_Jb35qzpnPJjnQFWclRkFdAs7kIAnYysI94MDRZXk9iFJVNAw-1lnokaRRY1ncURis5xK015VRZq_AGJA=s4800-w1200" alt="Rushton Triangular Lodge photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUChklMZjfiSQby3bHTrNFFIgC3j5YUrqY166QWitOJD6iMTbjrTKyn-wd8aKZw30mn20_UfQYqTJB3tN1v2ZsjLgn6vl4vGBhSCf_OL7tbXK7W44Y1DOthbmOPdNZXDDQ8bSiVuUsu2EAwg=s4800-w1200" alt="Rushton Triangular Lodge photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rushton%20Triangular%20Lodge%20Northamptonshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

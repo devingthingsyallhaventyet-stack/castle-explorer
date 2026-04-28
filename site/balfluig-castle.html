@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNAeY1WOe4nYbbnv1aQxJ1lLL7oikDLiE2pEzjKGLMtNEiBuGr2y2Ce1uTO1YscqMmolWxbBumOSvJ8qxWe4cMiLZce7FVu4nC_4RDf372IjVfCAB9Mp_DUe5pH500AOdQogWK0T7Rv9FtVJVg=s4800-w640" data-castle-name-g="Balfluig Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNAeY1WOe4nYbbnv1aQxJ1lLL7oikDLiE2pEzjKGLMtNEiBuGr2y2Ce1uTO1YscqMmolWxbBumOSvJ8qxWe4cMiLZce7FVu4nC_4RDf372IjVfCAB9Mp_DUe5pH500AOdQogWK0T7Rv9FtVJVg=s4800-w640" data-castle-name-g="Balfluig Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNAeY1WOe4nYbbnv1aQxJ1lLL7oikDLiE2pEzjKGLMtNEiBuGr2y2Ce1uTO1YscqMmolWxbBumOSvJ8qxWe4cMiLZce7FVu4nC_4RDf372IjVfCAB9Mp_DUe5pH500AOdQogWK0T7Rv9FtVJVg=s4800-w640" alt="Balfluig Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOt3ahfbZQm0YcTTDItL_xPyqsKY8qZVSu_JmcrM1U187LFZykDMCeDr7GkkxPrNMfGTYIbQZqXLwBX7_CLfJTLI8HjfJ3YK8ZWSu6r49WoYh1iiT9JifDhJAIQf80rui15xQAOXS2Byp4buQ=s4800-w251" alt="Balfluig Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMY4FILUD3O8blPeQG1kJRmEJaiKBJdUawfDCOZPjKZNuostLsR0pW1pwVI5K45NLs320xUG_cgIl4CEQGjmbz5VOWQU2xbCVRniinfBZ4tINhuPjYEj0HdINuRtFDszSYj9LfYsWmw315vD0U=s4800-w735" alt="Balfluig Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPiyD4H-tlbvTOfP8gQQ5o1TsdKGli0PD65ASqChhfuhWdw2db53Sp746jLk1VHjIuCxzI_3n5unf9_Y1OAIhDl1ZJ607bbZtyfqgS0mitBAJhaVkXTDaKMPiJsjpR1rafUqfOJDp54yDIMGA=s4800-w800" alt="Balfluig Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNRcJGTu_OZ2bQL4VP6FHRnkREX_IWDNFx7ae9Hx-TBljY98adRGEKE463MTrEdV5wtiX_scpqC56gFKGM8HGQoP2YO7OJzbLfRCcoviw5fepY0QV5MFExLyUC8X3qf8IXgMOS5R8HNgXwaBg=s4800-w952" alt="Balfluig Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Balfluig%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

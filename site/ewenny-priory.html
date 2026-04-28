@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyvCW5iztpyPZTrhBhY9gP-Frs0RL8bLg7s9lKD6DQUtUZclOaXC6Ywx_EWhRi6WJkv3VPU22_OHhjOxCOeh3PLYAbUefI9TaoLlykFNSw0M50C3xvUJjcH9rqntN_U0wFvH-KqiYuCJtE09HS8BHByg=s4800-w1200" data-castle-name-g="Ewenny Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyvCW5iztpyPZTrhBhY9gP-Frs0RL8bLg7s9lKD6DQUtUZclOaXC6Ywx_EWhRi6WJkv3VPU22_OHhjOxCOeh3PLYAbUefI9TaoLlykFNSw0M50C3xvUJjcH9rqntN_U0wFvH-KqiYuCJtE09HS8BHByg=s4800-w1200" data-castle-name-g="Ewenny Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyvCW5iztpyPZTrhBhY9gP-Frs0RL8bLg7s9lKD6DQUtUZclOaXC6Ywx_EWhRi6WJkv3VPU22_OHhjOxCOeh3PLYAbUefI9TaoLlykFNSw0M50C3xvUJjcH9rqntN_U0wFvH-KqiYuCJtE09HS8BHByg=s4800-w1200" alt="Ewenny Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPlqpGjzQcJDwSmom2h2et1456I31oQ_C-H0iDNdd6kHlpaFmfMrPBBPKZOJBDMFQ0Ajtc0ARyWI05FJ5K0T8hCOfnG-LtXt91Sxks9namtJVPLwWBpADIDsDezPtrdenJtleTsy9Ma4QYu4dZwZD4ohQ=s4800-w1200" alt="Ewenny Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtBk9Xfk0nZ0pRB9lJuEOl60qWYxgu3rKhoiTM1nyfld7VZ83UW_vT2vwOY-9Bee1YvuVCIFx78oAlWOxxWeS06BVjGZ465wFnF5-VpqHIOF4tgacjMkO2pC9bo8r5wRI5Nr69AtJwv9av=s4800-w1200" alt="Ewenny Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdWAo88mkpXWipy-A2Ar2cvQ88h9WrgUB60k_qoe4YZs7QOK4vDY4-x1dQA-H5v8C6MLXxG6f7uZA3sRbOoedAcCsK5_ca_k8T6y2osx7o38ND2tJhp2uZQMW59YJPUMmBExuAQK9UkpoT0xg=s4800-w1200" alt="Ewenny Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMD_j88MxI2_Wo1W_bOoB9yW4gSStOGT25exScC_Eu_27EpOuKvf2dESrbHxGm40rAZOq7ytHn51EzjFVIV0oGnumZ5QjgMHiJLB2bKQ-qBCCRegmKUM5BcialE9qtDE_IP5AG7FgdmA77MhA=s4800-w1200" alt="Ewenny Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ewenny%20Priory%20Vale%20of%20Glamorgan" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

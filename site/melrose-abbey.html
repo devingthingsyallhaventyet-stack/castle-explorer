@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPXXRZgvZYNBq1fwf7bvGAoM78IN7wPeaCvq_-TKIDgFzbNB4j7XCqWfRD-0hmulCWsKQa9n0_2tSpmWz3SI3H9Ct7ymRpDBHEFEXvIZ6UcKLS4bnqjNdaci5SbatSdUY0Aix0egz9J85dyg=s4800-w1200" data-castle-name-g="Melrose Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPXXRZgvZYNBq1fwf7bvGAoM78IN7wPeaCvq_-TKIDgFzbNB4j7XCqWfRD-0hmulCWsKQa9n0_2tSpmWz3SI3H9Ct7ymRpDBHEFEXvIZ6UcKLS4bnqjNdaci5SbatSdUY0Aix0egz9J85dyg=s4800-w1200" data-castle-name-g="Melrose Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPXXRZgvZYNBq1fwf7bvGAoM78IN7wPeaCvq_-TKIDgFzbNB4j7XCqWfRD-0hmulCWsKQa9n0_2tSpmWz3SI3H9Ct7ymRpDBHEFEXvIZ6UcKLS4bnqjNdaci5SbatSdUY0Aix0egz9J85dyg=s4800-w1200" alt="Melrose Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMzWZdvee_4HU0VqGk0DZbNQ_SyG2tXCcNp_NOiBE60ng4W3dSUd-EZBsB9ZCzNIL2iVk2ykfc3XfCEXf7uFph6_rgU4gzvjsMee0sc1nhuE-OvuJZgyeyLoAM10dJS_6v_vc5oi_X2qJp4LA=s4800-w1200" alt="Melrose Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfgeF9JeyI6u4RykxbcTzKKh6LDJ0EYXDW9TNOUA67VWFI8gTXrrDPVkHU0AjQeBfSYONv7Ej4HIXGI6PPERTvg6D5B1b8z0bdjKZKB2_g2iRgk_75EQl0hpmyTk7vg_tSuiLpgurIjirtPg=s4800-w1200" alt="Melrose Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-C4zlBmz6mPyBTrHtRb8ON7Nplz6GQT2tE5t9-7s-D3JcaUDvH0fNbfy3QUr9oK292Z-3hz0VF0-2jmCTx92lrU5NqiMpLX4DdzQKUeewYhRB0opLaus4dufpk-366P8GrdP6ygXaeVdsZA=s4800-w1200" alt="Melrose Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJwUo3JxUhoD3x6JjyqgDFMVH0U9ez6kOlpEmmmWme7WRtQ-RqJJTqWfnR2k2MdJr-b1nKlgu53rmktlk1tP0_ONs4-YC721dQqMw8xfSNNN2z5hDqBScC3Rm1LbsyLKbvkUXwLlHBzAXrU8g=s4800-w1200" alt="Melrose Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Melrose%20Abbey%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

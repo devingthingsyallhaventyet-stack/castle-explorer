@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEXOij6LOoyhw2ZO07UPjXo0VHk3z3DTfTIz8yeROrNG-xVRuJWfCPJFGLve3ZLNO0DTkin_STvH7t5JrzYqFOUyRMkfi2YEPqNDIF4NeunhjY4EVs_vlJxHySu8GYaQ_V0k39WO9XLSoIBg=s4800-w1200" data-castle-name-g="Dunhill Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEXOij6LOoyhw2ZO07UPjXo0VHk3z3DTfTIz8yeROrNG-xVRuJWfCPJFGLve3ZLNO0DTkin_STvH7t5JrzYqFOUyRMkfi2YEPqNDIF4NeunhjY4EVs_vlJxHySu8GYaQ_V0k39WO9XLSoIBg=s4800-w1200" data-castle-name-g="Dunhill Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEXOij6LOoyhw2ZO07UPjXo0VHk3z3DTfTIz8yeROrNG-xVRuJWfCPJFGLve3ZLNO0DTkin_STvH7t5JrzYqFOUyRMkfi2YEPqNDIF4NeunhjY4EVs_vlJxHySu8GYaQ_V0k39WO9XLSoIBg=s4800-w1200" alt="Dunhill Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3JqfcuVyiPLPEcWS8xWLC8MLZ8yTpPoB7AyIp1VTmIuBqKITN_bXnXcl5s6RagLA6jKX0SJLgm7Luv_k9eyMr5ThdDL5WHXylAlyMMiRGVxomQnn-Giw6-tvUtAZJW248bFa4ldbMwK5gqcM=s4800-w1200" alt="Dunhill Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyNqYJjUvQXcyD5nCIaocH5NJSs9_7lvKI4B5Ghpso51kPRUVLXSxwWzs1TYxlW6xF_I2GuSemacNTZsEvXkmMzexb6CkWcRuxwRa9-RCawBnqV2CBVjJS7vCKIydksksDgCOQEMKK-A2k3A=s4800-w1200" alt="Dunhill Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiRn7HX_VEPuDvHy72UR2skV6d-WJi4y5me082ui1zjh5zsBHjK6Xk1MyxS9-FRPtLjHitlH1yZIINlgRhkS7rk0698kUHsNmQH0Cu0_Boi3H2jtSjhRXn5Gw2pq81gw5sW7FKqqZbu1fQ2ShIFUGRUQ=s4800-w1200" alt="Dunhill Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMzQyfc_rPjij_o0dGI9Rz4kmB_h7SuqRVZoigeTx04ekIXyI6xoO2U6v8oFBeTJDHfxuw7Iq4iXhzgUUymEvRj_k9zMznU1dRMyxZ9COtz3il1JbVWfAov8mK3W0WM0NhnCQrfih1n1vuwhbk=s4800-w1200" alt="Dunhill Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunhill%20Castle%20County%20Waterford" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

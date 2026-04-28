@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIXkgVr3DCh2IXJALmeUHxMjFkNo77Dc481TcsADq4f8FDdpBPeyfiVOyuyb_XfBiZKUmnrj2TqapxfPYVOkOhXKb3rZErznjviLSPckDM2oIdwAQCqvS5vxdlY_fMDFfBc-ztHQIlcZa-_Q=s4800-w1200" data-castle-name-g="Helmsley Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIXkgVr3DCh2IXJALmeUHxMjFkNo77Dc481TcsADq4f8FDdpBPeyfiVOyuyb_XfBiZKUmnrj2TqapxfPYVOkOhXKb3rZErznjviLSPckDM2oIdwAQCqvS5vxdlY_fMDFfBc-ztHQIlcZa-_Q=s4800-w1200" data-castle-name-g="Helmsley Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIXkgVr3DCh2IXJALmeUHxMjFkNo77Dc481TcsADq4f8FDdpBPeyfiVOyuyb_XfBiZKUmnrj2TqapxfPYVOkOhXKb3rZErznjviLSPckDM2oIdwAQCqvS5vxdlY_fMDFfBc-ztHQIlcZa-_Q=s4800-w1200" alt="Helmsley Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbwyaz7FcafKT4mWVhYAShB4ZzyNAyghLe_Cps8R1q_ijRS5g5KIMoBVEUZ7YaHR_Xfg1cDOtmV7yCemaiNann2E55CL8eZ3WvRKg_8Inp3cv4oGPSH50H2kE9zmLc4DPRJn38RXOthMxrpE1-QvBFuQ=s4800-w1200" alt="Helmsley Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZMS2yQNElbEPxxBLVtzVYFLChODKT3C7z_VX_9zCmRbBvyRdndhCCUSXlT4ySavh0OZCzSlTK9whjGCoc9ztyELZGWzsIsUQ0NXHWvW6W7Rq0cXe4rxzY84B5Wdq9anQqZHknIiWPTJNNng=s4800-w1200" alt="Helmsley Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNluGKMRZzZTZ8h3NDomAPC48q2ve1loe7Ut6STmy4MEFFS8T7BbMcdyT0rtqhBRpxHA8dBxysSd9ICuUs6MK1n4PWiU8UgNHTGMbmDDuwEnGovtcJo43xBhL64g2U9l20sTEEiS6NzrMVqKQ=s4800-w1200" alt="Helmsley Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNcLFEZN4P4onRfwUo-KHArIx7X1At3wej4_Bd5YXcDObYDi2DWA8kApdPsuwiGcEv30s2lCv4wC5oJ_fYRxRbA3pC2VonCMtjAzVHAwNi1sreQEL3t9mTP_KTWEHGaR8MKclDWO2WZ93x-5A=s4800-w1200" alt="Helmsley Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Helmsley%20Castle%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

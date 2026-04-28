@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGIAkFfiqjpY-8LAfuMoWKy8GoLUG-8jQTpSi2_ru7Dq1zPVq25_goPjll9Imyh8FZEN7Rp0DGUuvASZaQEDgPU3xx8TtYrSzo=s4800-w768" data-castle-name-g="Bothwell Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGIAkFfiqjpY-8LAfuMoWKy8GoLUG-8jQTpSi2_ru7Dq1zPVq25_goPjll9Imyh8FZEN7Rp0DGUuvASZaQEDgPU3xx8TtYrSzo=s4800-w768" data-castle-name-g="Bothwell Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqGIAkFfiqjpY-8LAfuMoWKy8GoLUG-8jQTpSi2_ru7Dq1zPVq25_goPjll9Imyh8FZEN7Rp0DGUuvASZaQEDgPU3xx8TtYrSzo=s4800-w768" alt="Bothwell Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMS0sbdfpSYmWOs_PBGPuWvptalaqbwZrcA1kMpWaqjXMFLiKVf51UfRsqmPf0CZPknPLZbYubGO_t0NA80C1Z1xTtLmIFf2qzifjZ0jWGP2TO-NYaW0CJq6HSUeTAzcnpQLU8LXa4YkEqHHZKVnNfN5Q=s4800-w1200" alt="Bothwell Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXjj3du0mVlj_E5ZM0XWI_ef2-C6vcSKIPu-snZu979meOQUW5zG-dkehOFFnRRD0B4-0n-3uh9CUcxdGufCwKKRoc58rRvrlv0n7UXeEkYr1tsKnHTjCV4mL5BHS7w9IaspFQF1EQLNNCe4Fzwsio3Q=s4800-w1200" alt="Bothwell Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtRqTjODpXYxrqwQuHD5WXXqMPO4oVDd-II3MuZJDjXMDlQ70X21ZkmrDUwTArgAO7wtsvJhveLD_p1Vm5MLbEv2mW708bCY5fF8_ZWIxgEHzrmHZVGID4xCKg1-xKItkPJ-B6BecrPY-F1MWpznPq=s4800-w1200" alt="Bothwell Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqFTpBAxiu8k9R48JRO3SrCntdOAv7MZUTaQ7G90PsTOYfteGr_Aaf25zMrEJV72PyLgb4iS7VAWyXBCzE1bk9jjGyJ8t0BZSHk=s4800-w1200" alt="Bothwell Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bothwell%20Castle%20South%20Lanarkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

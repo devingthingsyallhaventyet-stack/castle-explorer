@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tilbury_Fort.jpg/1280px-Tilbury_Fort.jpg" data-castle-name-g="Tilbury Fort">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tilbury_Fort.jpg/1280px-Tilbury_Fort.jpg" data-castle-name-g="Tilbury Fort" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tilbury_Fort.jpg/1280px-Tilbury_Fort.jpg" alt="Tilbury Fort" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5Bm-c3x3HJF6eiMmf-9jrLIfgOnVDHxduMLdM8chxFzT8zzpetCyXLMJ0nKzNb9ZR4S1Kl2hWOMwylfOEQtBj3nz4pEWcOwjb-Ed1R6e1ah1dVQvKjNTb5DH8ntpr42Jl-a6CITlUSU4L=s4800-w1200" alt="Tilbury Fort photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzHE6x35eYwQx9KqO5kGVbgC7hzi0joL1RkdMbFoSAAZmnMFhiKdHWkc96c_ZdVCDUhxyHhUQasNsOKhHonvVOjmVtXoY9sPuT1Zv2zAxqBSDhHFgmFmmqLCf8BHaUknrtzOjvU3GrV6zm700=s4800-w1200" alt="Tilbury Fort photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_3iqN1wy13oDRmY4J2OC_prvwsgt3PTTv2ShRigpexlqrXa6Yv0pWEHTiDcPj3suAsv_foKma_r-Vw4t2v46jL5lamRJ14UL1V-FrwwjBR2xTSAbxTUPzvuxWFQ5Srr3XCUuC5oX3vLstPA=s4800-w1200" alt="Tilbury Fort photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFUNgm_TvHSSPjycT_aK4_tEVlvfBdAVyhD9QugkHBxjslbL5JECkpNIr1Epb5v-oTfHywwnX8WI3ZU-vwazuJhi2u_97k03H93g6hVH-nQA6AOmawkltHPHunzFpFGTgGEZT0R4HakvZRucU=s4800-w1200" alt="Tilbury Fort photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Mervyn Rands · CC BY-SA 4.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

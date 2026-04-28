@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrbhJ04CvQ_XQu01pshYspt_Jlb0PDSVomYCfj28U5rHfIr0843c3Tihv68Iy07hOM5CSxsK3of7DDvq85Ndgty3_0tuKUYq2EhRlT6M5bBocnvslARkUWEDBegYIO6w8EtNckTmf3DYQem0Y=s4800-w1200" data-castle-name-g="Astley Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrbhJ04CvQ_XQu01pshYspt_Jlb0PDSVomYCfj28U5rHfIr0843c3Tihv68Iy07hOM5CSxsK3of7DDvq85Ndgty3_0tuKUYq2EhRlT6M5bBocnvslARkUWEDBegYIO6w8EtNckTmf3DYQem0Y=s4800-w1200" data-castle-name-g="Astley Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrbhJ04CvQ_XQu01pshYspt_Jlb0PDSVomYCfj28U5rHfIr0843c3Tihv68Iy07hOM5CSxsK3of7DDvq85Ndgty3_0tuKUYq2EhRlT6M5bBocnvslARkUWEDBegYIO6w8EtNckTmf3DYQem0Y=s4800-w1200" alt="Astley Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMXGqZg2ItY9ogqnsRi76_fukdOIQ7h8igW7IOmpl8NhxIHlXBwm_DQHNJBr9GPMcPtwQdR2b5ODI2nkiJa8tYvz5P6W6gX1RRxZRM804AU3L2iX4HXZQLj0bEhLZtCAn1DAJeOAZhiRNO0sQdCTur96w=s4800-w1200" alt="Astley Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMVEAbuHzwurBIMI2YXK8z9st65vIAfLM8r0xaYJ7Ee5-d1a2OxLW8JzLE-w-NeldPtptfr4V1Vpe6OdCo9ApuH35l_bzl2JnRMZCcJBllhaI1AkVMNhFM51Nr-4S_lVT5qS1m5FAs7gQfGjVQ=s4800-w1200" alt="Astley Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9a7BpKcSaDJL7-I-TMo-uYgToMo3k2Lt2K7D1PI_5jGz5RaTOjsLr_GTxrL0ioTgVkeEreg2G5FuLRMbJ_LhMEx3tgKwWg-sptWm3WYMMYdksZs87rm4K7SS4BIUWPlZKQDd1pCcgcXIDVQ=s4800-w1200" alt="Astley Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM2m1xGNjLPl_l0_f_XWGd7IkWqPOwH4ke9taQh-upml3W8J2IXlBb_v8HHXO5B4xvR4UHHo4qwGEebg67iPSN5hbHcIPUGoUzOyOeXJurlkfQ8R2i00k1fZbqIQ7Kx3jizbb3huL1RHMLKux0=s4800-w1200" alt="Astley Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Astley%20Castle%20Warwickshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

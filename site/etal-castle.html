@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsa7fp2TrScbXcsY9a6d82IZk-EwWplEWIsZx76Ml4K-QdtMgXGMVPGrhr8y66tbGgo0R2E3FACjWlAB6gcdu8DbvnzWAeeioeN9F1f1MuesGdi9nki9tAJW5BByJc8eoiUqPs_rwaI9lvEnBFhwNW=s4800-w1200" data-castle-name-g="Etal Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsa7fp2TrScbXcsY9a6d82IZk-EwWplEWIsZx76Ml4K-QdtMgXGMVPGrhr8y66tbGgo0R2E3FACjWlAB6gcdu8DbvnzWAeeioeN9F1f1MuesGdi9nki9tAJW5BByJc8eoiUqPs_rwaI9lvEnBFhwNW=s4800-w1200" data-castle-name-g="Etal Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsa7fp2TrScbXcsY9a6d82IZk-EwWplEWIsZx76Ml4K-QdtMgXGMVPGrhr8y66tbGgo0R2E3FACjWlAB6gcdu8DbvnzWAeeioeN9F1f1MuesGdi9nki9tAJW5BByJc8eoiUqPs_rwaI9lvEnBFhwNW=s4800-w1200" alt="Etal Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMkHvJJWqAoNAxyr94eAS5J5s2znd7pRDLQKevbcSox3fL3IIzXOjVTQTt3z11edhAJgLvx_RUlo2-xwlKnTUIUH9Amuuwjzgp6MGPCSIxD40mMjIppQtmvbYpiuUeP2PIk7fuTxN03C7iIaQ=s4800-w1200" alt="Etal Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO3Z9A5VVHbtXp9ZbwKqsG89DHYHIQqJnLz_8EkHhJjAyKICC_b73vq-1F89MnlVlfY1E_LreHdr5IUvyO16RDV7Tmu1uTZ2eEmA_K2TpudPPN6BUHCCiUKEpD-5Zj_zTdGdVOS_mP5KdzFig=s4800-w1200" alt="Etal Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN3hvBm530nFiQiIO3qZym380yaXM_yt7honcTMZFe156h0HvA_3A6KOU10axmU8t9OAMehHEbH5sS7oyk65jawtfGU_a5JZ9SXCUdOwlH6y1VKXx1SQu2o-NlThYpNvNA1dGgcvmapACUPtw=s4800-w1200" alt="Etal Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPmwNgRBKzOCZh-AFxRj5L7ZIliUm3bY633BCAYTQ_BV0thHtaz_ROQivqxkSkL2JKv9w_tCGABD2rBbUwmRTw2TZPLMD_ZDHGpjyBiIDGqS9Bs3WPSElw5zUG9BoFYRdISLRHj-ehLloC2Sw=s4800-w1200" alt="Etal Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Etal%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

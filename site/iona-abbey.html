@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqElAevnAo1O2JjYQVJL0jzcp4D7WpS7HdPxqhW9lc3R02unQeiuzbQXO82stnoqrxqiVYUV1cV_f0QDk37alvnTEfbzADkzvho=s4800-w768" data-castle-name-g="Iona Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqElAevnAo1O2JjYQVJL0jzcp4D7WpS7HdPxqhW9lc3R02unQeiuzbQXO82stnoqrxqiVYUV1cV_f0QDk37alvnTEfbzADkzvho=s4800-w768" data-castle-name-g="Iona Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqElAevnAo1O2JjYQVJL0jzcp4D7WpS7HdPxqhW9lc3R02unQeiuzbQXO82stnoqrxqiVYUV1cV_f0QDk37alvnTEfbzADkzvho=s4800-w768" alt="Iona Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2FCyXs2DFMS1qozx77FZZZOT1_6fJT7jyObhQZnYsKzq1HBwE0hBZC3GhHziNNpOzySVeMWPisEKYZhIAIyaJMsQORADCCS-uK5-ekO4ZTo9MgcKeJ3t9gtJethC0KfUcBI2Ij_XkvnEwfQ=s4800-w1200" alt="Iona Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgWGxzfivWA6ZyWZRTJBWeXoHshAl2mXQWuI8J3sKrj4oQbyDjnnRLZTwf4AYEaLoGNBWgwp-TIXtiXwEaAQVQMfYwlqMzSuiErMZw4h-hj4snX0dPCL0r_lAkGI_zpfvMB75XaRLvuF6ZxRo=s4800-w1200" alt="Iona Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOd2WNYGIaxZwLv04wVL0JMVsRvHUX0YqpsMcerKsZm2xEViFxuVWWPl4jYNKRKZ_8mvoFpOOdEyp_yrLwO4R1QoL7OGy3B2ZeBQG0OPANkxJWuNgSFIYY7WWtRCpdhuBLDBHcqLF7QbzaWAuI=s4800-w1200" alt="Iona Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEbDX7BFAPkCy8ee-85Z_K3H0XV02YDSCqCOWHBiYtmIepbwVtz-eeUkjq7bcX5Rv6qNts9DrpqII_CrXnXfksIIlR8WnLQwnTF-mdIcKlr-IAamr3eR3ST27ZJNo_Z-_eqnB-mxE_kzxW=s4800-w1200" alt="Iona Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Iona%20Abbey%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

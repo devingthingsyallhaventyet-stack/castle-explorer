@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjz5dc7Ku2qynnmTutktrMjKCPaeOlsWGdpi7M4pZhmzO9UMlLYMePNCaYKq69KewlPmkbr7mH38MKTbB7VD-BrlCqaMkynKmOH3vEIJPLOFgqudJ9cljg7NDgPoBo088BmhuVHmTdd409ww=s4800-w750" data-castle-name-g="Rowallan Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjz5dc7Ku2qynnmTutktrMjKCPaeOlsWGdpi7M4pZhmzO9UMlLYMePNCaYKq69KewlPmkbr7mH38MKTbB7VD-BrlCqaMkynKmOH3vEIJPLOFgqudJ9cljg7NDgPoBo088BmhuVHmTdd409ww=s4800-w750" data-castle-name-g="Rowallan Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjz5dc7Ku2qynnmTutktrMjKCPaeOlsWGdpi7M4pZhmzO9UMlLYMePNCaYKq69KewlPmkbr7mH38MKTbB7VD-BrlCqaMkynKmOH3vEIJPLOFgqudJ9cljg7NDgPoBo088BmhuVHmTdd409ww=s4800-w750" alt="Rowallan Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMSxPjDOdFxAuwBd16BJjoMbqURLlH2qnqejw8ZD9sRqc2oNOAckc2cPiCKr1itMWdLjn4i76DCo3tvuH3TPXMR_kYfxFXSf67MBQYz7JsBO2HlXOiq9pwbIwmaXDR_VgZyByeregyn5k5B4w=s4800-w750" alt="Rowallan Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmAZoqWt2vcGofnRCE1G1N1AoYx4m9OJzRsAgU8C0x08Vlpl5XX8t9bugrdf5kJAKtDuH-dVcnMmazhwkfXbjXHHgj9F7pt4WBUXIYDALkzjPFaz07HztMjJRzpYZDBaiiLFQRASFHtCTa6A=s4800-w750" alt="Rowallan Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqd5L5Ri6bYw-EnszlAY0Ygi8zQmMuUmqyVnL6MXW27wIHNYDPiGg5U0NjCA-MPiuZrGOrAjb540rA-KFjKerbgr9uxS8ODhfKQmQ_hivc5una_3DM7fEthOC1oWwVm_zdmZV4rjqQFQ4qXYQ=s4800-w1200" alt="Rowallan Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPKkdTI5J2GVOAlrQcyTULwCKyGJeD24z0svXfO9fWGOEz_NcGX7vVV-OJUPbABmzKH0qDnniZZrqNsKJMQic2LLjbwix8V1AXEOUOeGMwegisUDYNFSlSw-4MKWbjJthLerqAwInZL-KnPRA=s4800-w1080" alt="Rowallan Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rowallan%20Castle%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

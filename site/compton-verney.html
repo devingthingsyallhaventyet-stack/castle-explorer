@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN6dzG7NdvJkweNUEj-HfTrybF5O__1HLQQyGYb6byO6pALSIEqNFNtmCPQ0GCwt8WalTSMvxgJMG0UEj8eoEyqWSfcqJ0OWcGx_bHztvDMiZ-WGlHgPoq5R5Xbv7ocFe8-zOPzcQXT2Kx7=s4800-w1200" data-castle-name-g="Compton Verney">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN6dzG7NdvJkweNUEj-HfTrybF5O__1HLQQyGYb6byO6pALSIEqNFNtmCPQ0GCwt8WalTSMvxgJMG0UEj8eoEyqWSfcqJ0OWcGx_bHztvDMiZ-WGlHgPoq5R5Xbv7ocFe8-zOPzcQXT2Kx7=s4800-w1200" data-castle-name-g="Compton Verney" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN6dzG7NdvJkweNUEj-HfTrybF5O__1HLQQyGYb6byO6pALSIEqNFNtmCPQ0GCwt8WalTSMvxgJMG0UEj8eoEyqWSfcqJ0OWcGx_bHztvDMiZ-WGlHgPoq5R5Xbv7ocFe8-zOPzcQXT2Kx7=s4800-w1200" alt="Compton Verney" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyxE3tlQIaZz5nnOf7YcELYe57HT5j9Bm6VU2ic1j0IH1rM6FEtUnHOY36tUGwbdCuLkNb9UrR3uwFPkxolbV47Gbe-Yg11r5oy8XMvvQTrbObaUTkinO69hNaIaJP_oL_0PvOCN3O9EaUCg=s4800-w1200" alt="Compton Verney photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3jO6LDPDjIgevlNQ0IGfXxc7HlBEPOmgw_5rqE5DTbLkXtIIiRCvoPKTFb4zWVyCYcrV3FrvLssIG0liLgEpnOY8Up8btfAxzZONbNK6nUxVcvZxO5pgazVCHflX97oQeAuvjUdmluCXAw5o=s4800-w1200" alt="Compton Verney photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN02piHEDr_VvwSZToEVLCG6vVVemZi5_GLhK4pajuOR_96Ffe8rrjrgHjyzzlgD_b4JpTN8GpTCeP9bgaJIwFHMMYKDJq4ZvS5mbe7lICi16Ua_wuhdsMNzg_5XjUFpqHcrXns4nIojDobpVE=s4800-w1200" alt="Compton Verney photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJ6pJp-dCSsWHg42uXr8CSmS6wSivdwcA8DpFXB7QE98bjvrWK-RcD_x7PK_4TVJc_5R_mCiG3sbPVdBa4_W4hzyi9b1KG2i2enB-DgHjZ8qP1LZpDVhBi8tESPLW_4y4UEDSPZf_UKlFVEg=s4800-w1200" alt="Compton Verney photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Compton%20Verney%20Warwickshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

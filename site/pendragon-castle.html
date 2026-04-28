@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNRTQ8WZ_gQ2iqec6zmzdDhrKb3rNlCW6lFLsZWcDLSyc3YBUuVN9WDntHHHuGBMFp2x8dtFifq63aHRvVeI2IosMMx6H3PeOS80_xL4J12u1xog5zzeP_5k9Rv0BPw2RqmqweFDRIMH-GzjA=s4800-w1200" data-castle-name-g="Pendragon Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNRTQ8WZ_gQ2iqec6zmzdDhrKb3rNlCW6lFLsZWcDLSyc3YBUuVN9WDntHHHuGBMFp2x8dtFifq63aHRvVeI2IosMMx6H3PeOS80_xL4J12u1xog5zzeP_5k9Rv0BPw2RqmqweFDRIMH-GzjA=s4800-w1200" data-castle-name-g="Pendragon Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNRTQ8WZ_gQ2iqec6zmzdDhrKb3rNlCW6lFLsZWcDLSyc3YBUuVN9WDntHHHuGBMFp2x8dtFifq63aHRvVeI2IosMMx6H3PeOS80_xL4J12u1xog5zzeP_5k9Rv0BPw2RqmqweFDRIMH-GzjA=s4800-w1200" alt="Pendragon Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOW8qkhEhm285yz6ihVPAUwBqmIeamChPztSya78k4mERsJSBPRl8UuEIaG_mgpDX6gS2z-_F6Dilqc0M9mFltuxcTtlYsSTrJqdnAQkTTu97Ltat-JWHDM88OwfqFyD7Kfto1g9nLvNTlrwA=s4800-w1200" alt="Pendragon Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPORRzhqHjz20tNgRfvoPKQBlJM-Arzrt9Sbj9YfFdb0aDbgnziXyJKgSJX1typ55Ig50O4jaPiGO6Pup10_dlJ6x8dGubhtWMT8rJ7yAad9SASQafpnn1HPJRJ8owEqWvLmmG_EDNj64EF2YI=s4800-w1200" alt="Pendragon Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNH7BSIZ_OE5QAIDs6s04IlTmA8geRquE0iPORH-6GDA8eu_Ualld5gedvcTXfrtvTtL5gRQeQY7gyF34PkPKX8Q3jJW5EKL59L0kfOl1Lo3p2ISUut3vkpNwtCHSBy4m31fhnC_b2GotOC8A=s4800-w1200" alt="Pendragon Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMI74MHYqZPFEzKkoNleGsBBgwVs4Usct4PNX3wjR_q0CKyvbBeOT3OY8tDUc_pqvTFyrFI2jQylUL62TmCvG3Qr0McaUPcEqbMyXwNns_QsScc4KoX2Pp5fUPwwX3XCGesQXFT2nmHbMTg_Q=s4800-w1200" alt="Pendragon Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Pendragon%20Castle%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNueP9NEt9fuEUX08eDJrg8VdnPIa-ydWWuKTiEAazaydcp2bG6-qRJ1DZBTB4ozAbWgsySkZPhW5Hw1HuLnRgcPANvauBW_SB-BuyCCj7gMwEuHLj0JcMePHLELQyUigtcWCYjaQxznDGH_A=s4800-w1200" data-castle-name-g="Ludgershall Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNueP9NEt9fuEUX08eDJrg8VdnPIa-ydWWuKTiEAazaydcp2bG6-qRJ1DZBTB4ozAbWgsySkZPhW5Hw1HuLnRgcPANvauBW_SB-BuyCCj7gMwEuHLj0JcMePHLELQyUigtcWCYjaQxznDGH_A=s4800-w1200" data-castle-name-g="Ludgershall Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNueP9NEt9fuEUX08eDJrg8VdnPIa-ydWWuKTiEAazaydcp2bG6-qRJ1DZBTB4ozAbWgsySkZPhW5Hw1HuLnRgcPANvauBW_SB-BuyCCj7gMwEuHLj0JcMePHLELQyUigtcWCYjaQxznDGH_A=s4800-w1200" alt="Ludgershall Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZONvoh7XeIFVZ19DAMVRNva0lawJlU_WE-eldrH-B6iT1lFUEsF9fpSTLrXwRsje-MHRR8GgcaEj3_iZeDmbulr9fmcm3zdlN7d5J5ywO0XohUao0mqSBuga3b0m9C3F07NEzMZ_NrbZ0Z1S8s_rMdmnQ=s4800-w1200" alt="Ludgershall Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzRl7MsYW4LjnXUVeT16z1T9dH3WbXTokb2LdtFtkUQoP0OW8-VBXnNr2c5X9cpuLECAVaxpnTpTem-9rJgnXI349_dq8JZWELGsxngYyMa6lxY4scWy6joz0XV5JkkbIDLEMXX6eVia_cpxLWSfpXWw=s4800-w1200" alt="Ludgershall Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkjcJfH9DoyrQPRxlDpLLMJbxhje93NWy4zBXkhJtJumtrE_N2nNQpETRX_NyW5kN2vDHaVukqDrkYphEWGDWUrt_DPzPDVy42ElOCVLIRXke2Avdppodzd9SNzrOwyJ07AyLZrG2UFcia5A=s4800-w945" alt="Ludgershall Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxVRBMLPM42-QlJfs7dbrrJ50Wkvm6P5qHM0sITTDaI_ea-6-HQKrGFbC4QfjD-dQrp3feT71LKtacBDIbh9TSWM1gwL99UWfGQUVXIqfngKBr0hwMRnm1fQYsFirgDUto7K14FXrxVqO2sw=s4800-w1200" alt="Ludgershall Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ludgershall%20Castle%20Wiltshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

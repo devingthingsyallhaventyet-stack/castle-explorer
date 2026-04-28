@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiCYHa1V2ZpXR-6vV511rMYGvl4F-WoCTffkwProXlo65-cEuGbH2sop--AgAIrUzmv94WZFNZIBvYeUfVYcwda49LHb0No8K9nt4i_Q5swPN68hvPkrCsyrOvKfapBfNGmzimDiZw9W1_Tg=s4800-w1200" data-castle-name-g="Rufford Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiCYHa1V2ZpXR-6vV511rMYGvl4F-WoCTffkwProXlo65-cEuGbH2sop--AgAIrUzmv94WZFNZIBvYeUfVYcwda49LHb0No8K9nt4i_Q5swPN68hvPkrCsyrOvKfapBfNGmzimDiZw9W1_Tg=s4800-w1200" data-castle-name-g="Rufford Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiCYHa1V2ZpXR-6vV511rMYGvl4F-WoCTffkwProXlo65-cEuGbH2sop--AgAIrUzmv94WZFNZIBvYeUfVYcwda49LHb0No8K9nt4i_Q5swPN68hvPkrCsyrOvKfapBfNGmzimDiZw9W1_Tg=s4800-w1200" alt="Rufford Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZME8_Y_ZCvEx5PgdXrcQfv_lJji3TYJbndYIIL7EfTJSZlywbahTSKeLxA0nf-adKEM--_RIEx54Pu0-VqHy2MtPtyYMDEaRJeuN2HI2aKmrJyhC9km81I64jE94B68l5QiiOeL3jZcoxc8hQ=s4800-w1079" alt="Rufford Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdKrdA4LOfYloMViduxJ_ODmtWJ0on6tts7oN-b-Ub4FsrgHcfySWqrB7hWBQMYtbrkPa4ikBsXxgaNRTIyEaF3pzG4pfFwgePkg9uzoIIPbLhRryTgn82tl1WHFUWrvs2tvldjMQ-r6cY_A=s4800-w1200" alt="Rufford Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsOFeOKs1yYpWL3XXHl1mK-cuZIISIDxDq3heVhqtLSoIkXPznELemdYt9udZS1BQXKzX5Nfg4taMwHMA9mSFe9S346dbTE6qerE-rn1m-Z2YMUPJKBWtzkSOAnBWM1lc2zmS-nWl5-KdJlQ=s4800-w1200" alt="Rufford Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOo8cA3JJLHNYn9G_9ww99b-WZG8SLUKTEGzyadzH2aTb-4jLtrGD-V0YjLNYgcb5ytwbDZZyP-xWZE9et1YsfpIVSrdvpHe5qQjBH4MInuuYWgRzaEpD1lh90BncFCst_UBh2nUVblhMS9xg=s4800-w1200" alt="Rufford Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rufford%20Abbey%20Nottinghamshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -400,6 +400,15 @@ The remains of the house is owned by English Heritage and the country park is ow
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ The remains of the house is owned by English Heritage and the country park is ow
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

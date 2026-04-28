@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNjUAEUhc8n4iDV7nBsSLhZLR6R1SeKU3ZHVgs_ht-mr78ckT0b9zqvzAA-2typGjai4GwaPNuqC5xAd0fCqXWoxNtepp5rlR3qJALdeLlm6hq9qkUUy4Nif9rTpUbMrR7wNmHH3wTKIWa5Q=s4800-w1200" data-castle-name-g="Roxburgh Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNjUAEUhc8n4iDV7nBsSLhZLR6R1SeKU3ZHVgs_ht-mr78ckT0b9zqvzAA-2typGjai4GwaPNuqC5xAd0fCqXWoxNtepp5rlR3qJALdeLlm6hq9qkUUy4Nif9rTpUbMrR7wNmHH3wTKIWa5Q=s4800-w1200" data-castle-name-g="Roxburgh Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNjUAEUhc8n4iDV7nBsSLhZLR6R1SeKU3ZHVgs_ht-mr78ckT0b9zqvzAA-2typGjai4GwaPNuqC5xAd0fCqXWoxNtepp5rlR3qJALdeLlm6hq9qkUUy4Nif9rTpUbMrR7wNmHH3wTKIWa5Q=s4800-w1200" alt="Roxburgh Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOW-uovwxpBqiiBYUS46rt5s7qpNqeTqaA_qzD0EQ8uGgIzZZ4A9HhFEc7WWuscU5K3hGmGvvzKAYbzxQnRU4aP3H20Iw3v5QfN99pfVtfNXIbWB-VI0i8oWpjtFzbQb-IuGtImFrYkTlq2WQ=s4800-w1200" alt="Roxburgh Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdz43QGTzjWJci6rqs0RWnujpt_uCwx123FB2omu2JaDJPn79pfWoIamWWQqOFDDbJTHuSH7GSwNtOwMxPDHmc1O8a6Smy-UPnTAmldQ5Za_FnKiW-Hq9a6ljnfgiNb4AVeKfXQnBQyJVbbw=s4800-w1200" alt="Roxburgh Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOO8JgoJwoc2tKCM0PzI5SPw0YlT6mVPhLthw0nFLGMl_NdkFk-rrAuA49Tj3ukN1qZephLh0_qcQPrT5atmnWvKgtWqyc4pUh1bR5Bs5OzEVxjpYB3fjL8hh06Pdju3w1Lwq0zswb90-wq3g=s4800-w1200" alt="Roxburgh Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNmqAqDQIo6Bwo5Uo08tLSlQOCPFG3_65nJQsH3jWagk3X0osYXab30BIM7Ex7RwHsNgoDDa5A3ze-NJr_P1M_hnPTeDYWfC6plTwg69ScMWY34Z9qBjEsaNNR5hq06Rrt3B1npIVLpELOjMw=s4800-w1200" alt="Roxburgh Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Roxburgh%20Castle%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

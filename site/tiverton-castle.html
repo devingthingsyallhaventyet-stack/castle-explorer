@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDHJED-mrk6PQksV3FDrs8qXWnANl3goDUnIg56BdgcUmnhcJ-YLfPIEmmMbQiI_9xOr5NkXQrdrunrS8Ron-bi2LaG92AkMSNR5v7o9iwsoOuTJP8LMh_uoj0-bkgc3G837M15di2MdQ4Xw=s4800-w1200" data-castle-name-g="Tiverton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDHJED-mrk6PQksV3FDrs8qXWnANl3goDUnIg56BdgcUmnhcJ-YLfPIEmmMbQiI_9xOr5NkXQrdrunrS8Ron-bi2LaG92AkMSNR5v7o9iwsoOuTJP8LMh_uoj0-bkgc3G837M15di2MdQ4Xw=s4800-w1200" data-castle-name-g="Tiverton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDHJED-mrk6PQksV3FDrs8qXWnANl3goDUnIg56BdgcUmnhcJ-YLfPIEmmMbQiI_9xOr5NkXQrdrunrS8Ron-bi2LaG92AkMSNR5v7o9iwsoOuTJP8LMh_uoj0-bkgc3G837M15di2MdQ4Xw=s4800-w1200" alt="Tiverton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHQP7JdXmG07a8_Mw8KsxzaLN6b9W_0hVNEqtER2ZZsQ02dWcMTTD4g5FuDnDyhPIy0EUrbmT5vZcrOsFWCaKrHeJT0bw-4YAA=s4800-w1200" alt="Tiverton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhfrhVkgPSZwkbqB54Ntnp4zvXMIpE3cgLKXB8W7ukZMtWBbHzRiQAkW5eUmEu3Ou2x6E_7-Dt26q0mVsRIqqPyqB-bNEmchA8fUMxcvE2rhm6K7hfUCoQDjRiE3m7Ezm64mV4zPtPPrBIAQ=s4800-w1200" alt="Tiverton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJQvK1R-XbZB1LXjduDw1LYHBAXBqVEsE46Fg9y809yJBXBKHxzMxoX-lBY3GuepxBqAmdGk1qdew4_fr8-fXOOLGVBU9U75f1x8ARI58TQ4EwR4EOkTqov_TgFjAAJvYDmYhlGQ7Wpoaxsg=s4800-w1200" alt="Tiverton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFnFqrzVfgERkzRGxRfhLoYqp6z2bn1aBb6dDbqAd0IrVl4ic5QBEQQdBewUMFhV7vVIia7b_xcpwCYWoQiwbN1EuxWLHae1Cg89e_sRJaPmHyZOziOwqNVJeJSeExRI7x0zaEdYyQF4eFJw=s4800-w1200" alt="Tiverton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tiverton%20Castle%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

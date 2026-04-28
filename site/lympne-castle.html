@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEiIyAfHJvV_WP8qUs-cseDj8vxrCWourANzpvsr02Ho4JcdTmvDn_3p_A7XlzkxO0oiv0YQtlKDEXpnwi-AlLzhcXIRO0wLeU=s4800-w1200" data-castle-name-g="Lympne Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEiIyAfHJvV_WP8qUs-cseDj8vxrCWourANzpvsr02Ho4JcdTmvDn_3p_A7XlzkxO0oiv0YQtlKDEXpnwi-AlLzhcXIRO0wLeU=s4800-w1200" data-castle-name-g="Lympne Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqEiIyAfHJvV_WP8qUs-cseDj8vxrCWourANzpvsr02Ho4JcdTmvDn_3p_A7XlzkxO0oiv0YQtlKDEXpnwi-AlLzhcXIRO0wLeU=s4800-w1200" alt="Lympne Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPLHx1D8zWAOSAEtxZAKhMqIeESpfGuxVVu6mqrgOC9aRuBftCd356pwy9aN9wDbDPbqC7MDNNsEXXwtIFJAcaDCHVXrRiB8TF5SzMaCUQmI1p_pNp_JBD3Ody7CJzjkH6aK-ztZ0xtqd-c=s4800-w1200" alt="Lympne Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOqRWN0zLWxI8SDBwx-C7i2ftfHqf3HMbidhK7PbWscjDBtLdxOtJppqBhGXo594jQlvZWFAbSSqAhM5zULv2D2-Rlr4VcoZajUNOGurZUL5I0pkQcqpcL47MrC5u2ehKWmkIFFkA4AkItoJQ=s4800-w1200" alt="Lympne Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFtH5fyXgHLcAORm7ZPIquF9vybzYIQFb7PNTLTUMxmNz8Asq9uUPgzotEsfqt9OIt4Y_l3cViXIkbQib0R8ebJND9waZFwSaHXBJ-bKVgv-b9S0QephRFTOUxA20mPofaAh3eS9o1kALEPQ=s4800-w1200" alt="Lympne Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNulJGl0cZAkbgKG4NjzW5HYZUNFE1khoxCZW8tmtAuj1y3dsn3OsauJceQuYLa6Ooekr4qCV59FliZj7oTojS90nvAklY4fCWO88Q7HI53hwmSJXRvdRm9Aq-kI4e7JTlt8NyKuOyr2Kn2Dw=s4800-w1200" alt="Lympne Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lympne%20Castle%20Kent" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

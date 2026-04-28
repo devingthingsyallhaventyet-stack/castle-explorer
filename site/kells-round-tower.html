@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfAbS9bbSjWbFS_sC4tV8TqKxzAG7S6aIwgvQtWe91KLqajnBJlPUHsrhGzlt7TkxppblVWoAnUYolDQ_3GUdogB8nn3m3awEKq5K18BMH79h_wYisf5NUGkW10e-iijHK0EOiCDALIPQVKAo=s4800-w1200" data-castle-name-g="Kells Round Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfAbS9bbSjWbFS_sC4tV8TqKxzAG7S6aIwgvQtWe91KLqajnBJlPUHsrhGzlt7TkxppblVWoAnUYolDQ_3GUdogB8nn3m3awEKq5K18BMH79h_wYisf5NUGkW10e-iijHK0EOiCDALIPQVKAo=s4800-w1200" data-castle-name-g="Kells Round Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfAbS9bbSjWbFS_sC4tV8TqKxzAG7S6aIwgvQtWe91KLqajnBJlPUHsrhGzlt7TkxppblVWoAnUYolDQ_3GUdogB8nn3m3awEKq5K18BMH79h_wYisf5NUGkW10e-iijHK0EOiCDALIPQVKAo=s4800-w1200" alt="Kells Round Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwihyoLBoUd-BWBb0e2u8rQq8cND-XuDoyUwQm_1OP7FEn-J0qDmTg1rc8gagobGhj90Z1tJ2qiE_08rYbIgOK8FtnYb2JzuRfq1jCM4ENTjDjI7CV7es3aM28AG6enAITKunxdOdEinQFUA=s4800-w1200" alt="Kells Round Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-XXxxD2jM5ZfirrjSC9oUB1Vh_Wu_sf_vInRYw-8rhXwqh8iwJuaTcEpv1CKyl6_akHoUdLs6f74LAGpjfPD7yjNQGqityDNjA9DWdTKM3TpWslwfASSbA_Hc8OHxEAiDeUFHPk0HNZfwDA=s4800-w1200" alt="Kells Round Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXC7D4N4hvJeOOKe_1uHLE117PrpEza__qP7h9s10tKD1hMGOqtwG4G-3oT-uKA48oBJxyUoee7KkOXsLH7aCIZA2od5G999L9MW1gMggMrPr56c6LkmLk_loFAtkUOyl8b2RQHJJE8cV2uo6oN11E_Q=s4800-w1200" alt="Kells Round Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNMRhw0zL6zbDU8qJ5cyF-ixT07LC574sraAp7gsfj8cTk3F93gqzs7k4QB8Lwnlkl71Um2zNGUXnM2WUG7MyWHiJu9KANbGr0kfAPC5yLEcGwwfTDzXkN6pF4-dGIZLcgTsNuX2OoxfQlRYA=s4800-w1200" alt="Kells Round Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kells%20Round%20Tower%20County%20Meath" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

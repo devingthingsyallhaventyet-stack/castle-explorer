@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuH3dN7otO3r-qcIiCDnGZB9z0ElNx37UmKkjJMXzoqV15RbOjMAEgoOHMIintklxRmCqywokYA7AfXebsyvtZ6iH4SR1JwNtlAaD5o9nf6WetGxg3HF6ASZW0ld0-5i8gpNfUd8DkDVPPsQ=s4800-w1200" data-castle-name-g="Ardtornish Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuH3dN7otO3r-qcIiCDnGZB9z0ElNx37UmKkjJMXzoqV15RbOjMAEgoOHMIintklxRmCqywokYA7AfXebsyvtZ6iH4SR1JwNtlAaD5o9nf6WetGxg3HF6ASZW0ld0-5i8gpNfUd8DkDVPPsQ=s4800-w1200" data-castle-name-g="Ardtornish Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuH3dN7otO3r-qcIiCDnGZB9z0ElNx37UmKkjJMXzoqV15RbOjMAEgoOHMIintklxRmCqywokYA7AfXebsyvtZ6iH4SR1JwNtlAaD5o9nf6WetGxg3HF6ASZW0ld0-5i8gpNfUd8DkDVPPsQ=s4800-w1200" alt="Ardtornish Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOR8XHCbo_bCCDJAgM6A9YqY9u3d308z5et-uzSct6qW6ZcYwLd9-_K0TSNg6ZjbkvYrVeoIwvAYewgVUu3cqA0eHyKtAMmfhTEPs8RA3Qt1zdg9db6iz1fxIOUqZKTzXp05WAwcIb_Z3WC=s4800-w1200" alt="Ardtornish Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOt7ed0ONCjDGJ04CfMNk_uLX-wCU7-Oe7u2s-FzerVesdiSqF1nyJ4ufhGv6fR0mc3xZCfMytvaNbQdkM_w7LOCi5IZ7JdC0SBKImbhJoSlw1ZXZteR4HIKF3829a3i9CU7tIvRjpqWof1tDZ0m795MQ=s4800-w1200" alt="Ardtornish Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPqha0u03ByVz5RVXvKelApxjM9GS03X5y2X5m5upRqvUbbt3C2H0CLWw4f9Ib5vg-30HQncDj7S47lPrubKInX7QtnkBzOaGnF_wiD37epnZnxbjK_WU8WODAihkF3_RJodS84J6wmRIX2WR4=s4800-w1200" alt="Ardtornish Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPjgdjFT8CGc-_-66EAmTICcfixtrzBXvHgPIm4uTNFjJQZaCHC5LI5jZbeU8pDFWDBtYHQwpK6k_Wk8t3-iU53OjRZyAuJ4DK9-wb1FedjKxQYmNA64Lz8q0NB2Bl41aNoiWHVq5KnaWil4wE=s4800-w1200" alt="Ardtornish Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ardtornish%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

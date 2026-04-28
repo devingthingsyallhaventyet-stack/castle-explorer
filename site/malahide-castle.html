@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNB2J-u_OPNpR6GsEazcutbsFEi-ereG2E2dfb8Qk0gFL6cC1D2pZ13AlLX18doW8ubIPKeg7MAnUNkt96SDi2KaNSXDiJ5_YU5VReOnhO0OryPyARnv5LOZYW2DZeuR5-izudmO-5p7ej2lQ=s4800-w1200" data-castle-name-g="Malahide Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNB2J-u_OPNpR6GsEazcutbsFEi-ereG2E2dfb8Qk0gFL6cC1D2pZ13AlLX18doW8ubIPKeg7MAnUNkt96SDi2KaNSXDiJ5_YU5VReOnhO0OryPyARnv5LOZYW2DZeuR5-izudmO-5p7ej2lQ=s4800-w1200" data-castle-name-g="Malahide Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNB2J-u_OPNpR6GsEazcutbsFEi-ereG2E2dfb8Qk0gFL6cC1D2pZ13AlLX18doW8ubIPKeg7MAnUNkt96SDi2KaNSXDiJ5_YU5VReOnhO0OryPyARnv5LOZYW2DZeuR5-izudmO-5p7ej2lQ=s4800-w1200" alt="Malahide Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOG0FM3CHhTzs9rl6ou3tTm0bRjjKP75QvQ0-qB2dHZmJ_k7TffQO7YOh2Bvy6JhW9EWSQmmPEWW6MdUBat0WA_UbMtGQ8UO7BH_juNfsEXzZLXMcUhRKwfWn15MAsM6cix4q0kOhN9FAB0EA=s4800-w1200" alt="Malahide Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMe3pdx43gK_hxSgUAsL4bFOpH7bujR2jOTn6Gr7-Ppoc9dQQNymZDULzv1iZgK212BeTaGko9llOYTzAKg7BoJvoMFmorXv4F7ASn4rZgoXZk_ls4tpwZL-F3pt9mIzynWwCLBVhpCzOgx0w=s4800-w1200" alt="Malahide Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMggs5aXIbWDSjdDLL8WlHDoGVX6x5edzpGYAapP9gcNYK7puyVUzpSVd6ZYSSME6Y-lmarFaPIVqFFEseJcAd5UatXJR-92Ua8SZBjOguFBHEcOXRL5cPPi7uMUGrYByusQZsf5E0Leyrm=s4800-w1200" alt="Malahide Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0PNW4_SEtvAAr-UFKjE0UgOQgf-WVH_y35mhIFyqkXrHaaE16gXRicUhEZmVTHWwuCSOQWSZTgCSLec8JNQuYNoYdI5tcv8lxBn8EZo8Rr5YcrpvkZ0vwMDDZgUC2OBH_Xee0e9v1UW2keA=s4800-w1200" alt="Malahide Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Malahide%20Castle%20County%20Dublin" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

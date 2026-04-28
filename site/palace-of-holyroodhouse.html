@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg/1280px-Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg" data-castle-name-g="Palace of Holyroodhouse">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg/1280px-Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg" data-castle-name-g="Palace of Holyroodhouse" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg/1280px-Holyrood_Palace_-_aerial_-_2025-04-19_01_%28cropped%29.jpg" alt="Palace of Holyroodhouse" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1irlHr6PwrBu2zGbMHXls_7VYzlilFAaxkeyrI4-eE36AX7tDNXxTFU3I9m0A2-lHymwJTzl58JyG5GLYbavQN2jwYAzv0IWCRZpfAAtUc8NM8BxCEcuKgV8TnuwVTMf4ZoDc2LiIgZuqgw=s4800-w1200" alt="Palace of Holyroodhouse photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNIjbs13XkRsd-LWfF4KD-u-Fg0QwHlF17H-QYqCTnBRMaG0LDzPOnSqPX2M_qeAJPZ5R33VlWVQvzdpfZR1UL_fRKNHo4lps2lpaOOZiJR24Ibycf847IrODiO5gYEr_clw92PZ-xgWQzqJQ=s4800-w1200" alt="Palace of Holyroodhouse photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXUosh8ZnRTaRGE__ec6-m2vYgflxjvAS7YpS582eRKJKWenw5Z4xUxNKTRBRABIIMHwf6sIEfAOGM-s8AkTtBAtwo0YevUBQuKZQjDRJWFMrVO8Fx8xmlAeA-15e2VlnpXRKV860Zke6-sQ=s4800-w1200" alt="Palace of Holyroodhouse photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM-0wZFeVBGeVAJUSEXAPqAjhbU6hV1iDQK3TS60egPSwKzOEbdyO6yZtzwM9b7Se1viZ98rLkuPDV3v73XefqwVFkzyfMBCRA9JrkOPkH7yo6UJ2kKZwyHzUhFcp3wZJ0XFq75qvjiFqD_3aERWjQMvQ=s4800-w1200" alt="Palace of Holyroodhouse photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 瑞丽江的河水 · CC BY-SA 4.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6gQYjKWPuPqg6soF-vSSlZthMXL7EX8aqnNnQZLxi2qUpwF27G52g9FTmP9tPlZoT-FXrfv48GP23mk-ahxu8SDHfV38jpDKWWY8f5ugem-gwD3gAmhHjKqqXbHKl5Ntz1ZTuJuefpuWq=s4800-w1200" data-castle-name-g="Clackmannan Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6gQYjKWPuPqg6soF-vSSlZthMXL7EX8aqnNnQZLxi2qUpwF27G52g9FTmP9tPlZoT-FXrfv48GP23mk-ahxu8SDHfV38jpDKWWY8f5ugem-gwD3gAmhHjKqqXbHKl5Ntz1ZTuJuefpuWq=s4800-w1200" data-castle-name-g="Clackmannan Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6gQYjKWPuPqg6soF-vSSlZthMXL7EX8aqnNnQZLxi2qUpwF27G52g9FTmP9tPlZoT-FXrfv48GP23mk-ahxu8SDHfV38jpDKWWY8f5ugem-gwD3gAmhHjKqqXbHKl5Ntz1ZTuJuefpuWq=s4800-w1200" alt="Clackmannan Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMbezY52662CsZwRnuq-zeQ_BXLUfC1Rk2W9_2KCe7Mwn4nIFe-lTYlrun2ZrFnNEKOamEdNkH0dMspoEy_0nMmSai1IoU01bHZJOC81H1daoL63RnHpQLKt2-feEaaRZ_-ntJw8dPnwCo=s4800-w1200" alt="Clackmannan Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPODIIxgAZspZ18-QeiIIz8iWQPEhx0Ivp9vUw23IxJRxDQZJ516gfeD5nKYeVLMHTQm6EkzAtklwRCtdhw7-MhQtiJX37uENt7J_tPxwDHArIDXrF9_vb6UxD0XGCS1GoGp0sKVUkV7pU0=s4800-w1200" alt="Clackmannan Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPu_rBo9P5S8xwmxVZJ3Ia1kdJ51N6YnlNUsGIGZJnAOp3L5oUatptlOuyT-lgwSDuq35e2LbVHwFwtgNHrGwbRapZR_q-7T0zA0Ayl30Lo3IUIGBgRb43LBr1iI6zv5MGW2ZkLH5OWijhKutgebIGqwQ=s4800-w1200" alt="Clackmannan Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9A9ul0a-VVmPhlTlZssTez0d_RDyQZOqCQuRZ3SD_TptSIU3LIC9HiSGQSzd-nCcHk1ZIcofE_stbyn7Ve5cxVFyE8O0UbnUGT_pOJg_uGEVqm0VvHkRpGnuppdGqmpfDiOutrcCDjdAPsA=s4800-w1200" alt="Clackmannan Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Clackmannan%20Tower%20Clackmannanshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

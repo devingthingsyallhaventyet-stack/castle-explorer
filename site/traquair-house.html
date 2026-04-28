@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFBLsZQJPeLn79z-hGwRApG1A3uLLJCLovy5Z4W0uHXcHA62inFa7p0bztZi_IGKCjMF0Ic4kwITgrxKGY-fRDiLF0cL82NJnI=s4800-w1181" data-castle-name-g="Traquair House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFBLsZQJPeLn79z-hGwRApG1A3uLLJCLovy5Z4W0uHXcHA62inFa7p0bztZi_IGKCjMF0Ic4kwITgrxKGY-fRDiLF0cL82NJnI=s4800-w1181" data-castle-name-g="Traquair House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFBLsZQJPeLn79z-hGwRApG1A3uLLJCLovy5Z4W0uHXcHA62inFa7p0bztZi_IGKCjMF0Ic4kwITgrxKGY-fRDiLF0cL82NJnI=s4800-w1181" alt="Traquair House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJ3WGZ-dN-gMuCRKIue1M_T1LwvHiRUqEvMlDgZWQGpyPCYCXfwTdKE7-4bxacQdQ6jPZA10GyxEaX_Jh-ispThIF_6Zkei5-RMf_tyLBwDzWe_psY9Hi5-0y0dlJkLVMvAjzd8nRnS0Ex9g=s4800-w1200" alt="Traquair House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPy-rDq0Tkdx_J-VlaMUb4UDEBIX6v3yHqexDvIjy1PR3JIl38j5iTQmqg-hzKGL4I8ofE4T9QP5cWqGy1XaLPmFUDj3VNz9YbhmZCGwk_MWn08PLmGA7OG2TKcImIvxnE0IlZIxOKH_Y6Z=s4800-w1200" alt="Traquair House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMAm5XlIzOpPQzPjllSH-btfU1CUHl9xcEUtzBxiH8oM1s_0tma8U1PL_iOKOQjk12-BJExKcjvwBwJ9_4XlqkgcppsgyPFFcCqUNAAw8ZF-ZqwCIDudy6vXSgHF3u1MfXG8vP4mVGXB7uL1A=s4800-w1200" alt="Traquair House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPiZoMS-7zWWo5ZDovfZ1SRTsK4GifEFaR2arWuEMzGKCgYEQNJBlrfKkD-RPGMcsPSkKL5Y1umA_pi_9QFBuor8M-S4w55rhRj2IkfVYWYOIn-o15eW2GD3TyRe4Ib_fMS4hxTx4PxNBJggQg=s4800-w1200" alt="Traquair House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Traquair%20House%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tomenmur2.jpg/1280px-Tomenmur2.jpg" data-castle-name-g="Tomen y Mur">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tomenmur2.jpg/1280px-Tomenmur2.jpg" data-castle-name-g="Tomen y Mur" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tomenmur2.jpg/1280px-Tomenmur2.jpg" alt="Tomen y Mur" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMbfpfC7flzvOysBGT0PJrXfB5rNOkjj9gMPH83l_W5CtbIy2y1nMMrkA7_79D1BnyooXfrrRjrijDYgRVB63NXr1SznWD7yRzOrku1Zzzpo3Qa5QUlgfqXh9VVNN_3wJD3HBSXxzCp46mmCTY7wUjymQ=s4800-w1200" alt="Tomen y Mur photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvp10azhYh46OlTzxe9GPgrhI5ZYyNx_mXqrOznyNtjnPFeie0vyJYDtQRdl6V48Th-4Ktp0MqMYmjcAeTaYXdtNvAPLLR9iDla0Ie0VIJHqrcwaUwduPfXS6RXxuTE9i86D7FifefkgCME9w=s4800-w1200" alt="Tomen y Mur photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEE-Q4usY1EpWBUncUm3VLt1HBX79jcR2GurpY79LW76qs4QXGydfBNJbnUt04Yl50crxBlXzhnQ5mGOmi3TrPhAh7S08m0h5_WMOk3o0sos4wJFoyWRU1Zq8LZyNL8Yq-Tcjygbi6QuuiaBU=s4800-w1200" alt="Tomen y Mur photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP13VgqtU5S3GrdpWomryeORZAzkxOlGDFLfwSCyj2sTSL3u1n79hk_DG_Hp6ERoxFNI3JFuQ8-PxgB3jt73_t2DYYHxdLCRB1NldvjXyLPO_Aq-fHaQWpgyb_tQOb62Vj11bO-lNo_c3yE8Q=s4800-w1200" alt="Tomen y Mur photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Maxentius2 · CC BY-SA 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

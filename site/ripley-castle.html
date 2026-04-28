@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMIBoodAOuJ36LuzDluQJ1znItTydhmc8CEPtRYXvDQc9pf435digkrIM6avF2cImbYZCoQma9Qz_FPJe1NtdI94n7h07N-InriOb75iRgxKW5YaH3eA_jAFZ8y-zPzFezoZipyg7zLQ6jDRtQ=s4800-w1200" data-castle-name-g="Ripley Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMIBoodAOuJ36LuzDluQJ1znItTydhmc8CEPtRYXvDQc9pf435digkrIM6avF2cImbYZCoQma9Qz_FPJe1NtdI94n7h07N-InriOb75iRgxKW5YaH3eA_jAFZ8y-zPzFezoZipyg7zLQ6jDRtQ=s4800-w1200" data-castle-name-g="Ripley Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMIBoodAOuJ36LuzDluQJ1znItTydhmc8CEPtRYXvDQc9pf435digkrIM6avF2cImbYZCoQma9Qz_FPJe1NtdI94n7h07N-InriOb75iRgxKW5YaH3eA_jAFZ8y-zPzFezoZipyg7zLQ6jDRtQ=s4800-w1200" alt="Ripley Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-TYqYI5j9fv1YcTxTJt9Zv4R00mvdRGMX838ivCLSCpZgXp1-qQJAyMGWyuQnCa1l7cO2LyN6O3ifqcavm47znD79jr1xO07n0P1S_qA5wDmj9-UdiozWX_O_Oqnswkuq3Iv9KaoQ-6Fi=s4800-w1200" alt="Ripley Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNxfkmjPkt8RTIyfxBDxe114eJngGrRGNfTpxQmRXloK6Sr4THdaNo_etui2pLn_m-sQcI0eMFhQdPPwoS__PfN9pZhGzHs2h0bULvVFFStm3NbjSjJaWIR3mEv6ejVNPofD_9XPfKlOtsetY=s4800-w1200" alt="Ripley Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMI9b0p-E9eVPAZBRa5B2q2B4bAH039yrLxqVkbLr7GR3fUtO9A6twk2DcQ_neco4CJzHioUetp8pA40jlx-sUhWsjj2T4RRDICmqYsdtd2QWCcQbgMHY3_QQcRpUS2v9IHd_ov0oeEPcHUTRs=s4800-w1200" alt="Ripley Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMf4DjeoM8Wns0139ESwfTZfsamKkTFJ0OVYGLSLnXieQrmkjjn04XEk4fJ3sSFTlR1VE15S3YUxSYs-fYqfAdU2DWq_e8ptkn_MiOLX6XHaUvZhB2EPB_IsB56yCOqKgxveErP1CmdcfJBha9y5xdj=s4800-w1200" alt="Ripley Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ripley%20Castle%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

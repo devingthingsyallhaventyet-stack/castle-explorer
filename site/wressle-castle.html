@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wressle_Castle%2C_2009.jpg/1280px-Wressle_Castle%2C_2009.jpg" data-castle-name-g="Wressle Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wressle_Castle%2C_2009.jpg/1280px-Wressle_Castle%2C_2009.jpg" data-castle-name-g="Wressle Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wressle_Castle%2C_2009.jpg/1280px-Wressle_Castle%2C_2009.jpg" alt="Wressle Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOJ-C6TYTbgdDmT6hCqfvxrCQ_ToabxQP4u9U7fbuMs9M1ZbLvFiXtj5gEPTt38hP3ySNuzrjDYoXasopmjuSCjEvQ4jbPAsuVyiYEk4wXTNssw6NIwIMe_r7lS0QxMXRgGXU2225Wxdxi3rQ=s4800-w917" alt="Wressle Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdAibYAaRiGYnVD6nsIi2np4MRC8pKtezm7Xq2gbSy0qjTXI8_burBgLBBBDhADKj7xueAy7XkGMY-zL5wvcYuz1vjmgvPhIUaKe8uuAyRwGOxs42cGzrIouD-un_zCrDPfVOPKl-tq0LH4N4=s4800-w1200" alt="Wressle Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLi_VLpGg3HqlKJ9xjC2vFWn8Rx2SjYkFFsx5uQtNcd0gE6vAAmPTS52kmqM5A6WGHx6fWQihTbVOO9bfTWwQmZQvwG6yowDEUokJET_jwJ3kxSMEM6ut-6CLp528Pf7HpTo99_5t1DIGroQ=s4800-w1200" alt="Wressle Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpIqf6aocqaLtlkwqmR6THiLptEeX_d0z87OM6DWzKPu4P0kJtkHjJfGu8OXDsDIxVf74nMnIl3NRX5IxY7bJ3P6P3MH1NTFZ8_45AqrSxH2yDPHDNg6C8YAHX-HR5z2-SVPyhSHOMA6sU=s4800-w1200" alt="Wressle Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 David Locke · CC BY 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

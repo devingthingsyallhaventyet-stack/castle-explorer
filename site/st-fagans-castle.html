@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/St_Fagans_Castle.jpg/1280px-St_Fagans_Castle.jpg" data-castle-name-g="St Fagans Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/St_Fagans_Castle.jpg/1280px-St_Fagans_Castle.jpg" data-castle-name-g="St Fagans Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/St_Fagans_Castle.jpg/1280px-St_Fagans_Castle.jpg" alt="St Fagans Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkr1BSfr6p4S3KYIkiW9XO6Ubc0VWsAf4GZ2hDUKB25WQRo8cYUjBOSTPcAT4hfXzAvXNn9Wq9mc7H0EZRERzDE86G3SVsubo3UEMJ47SY5KIh7jOkEG4D8pfNzQw9F45MnPWU0Ng9pmei2Q=s4800-w1200" alt="St Fagans Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPykoS0i1cVBVdXuXTtAYPAYEKWlAEMYzg4LAYvsT9n1mY-yU354VET_AvBdO3SwWzTtT91ayOnMVaKz9xLZyjfogCPzukziYf9-hcSXearTm1nbxSqykwR9ixyzp5swVssHWFXBSrelZkjEL4=s4800-w1200" alt="St Fagans Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNHU15uu6dpCPyw_I0Yy-cjCxx-iBuZYFkGXfk3eF85sQ2ysaVxqh7rg4MiouWvQWsBwvkcO7cnPQlLrgcEVoS_V-PYUITj-iMv-OOOfTR6ALAnBoDokM5YvWnp-8fmmQbRRhkFkI4uf7ON8w0=s4800-w1200" alt="St Fagans Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgzNPVxmoEXZJbwGQJoM9r2NPKR3gkXCidGWfLO-Jy4R0rflx5exsc4JB87X1WVVJrn77BuosV0OQjNWYEPxhAFk1ES6dPNFBY6jK3dgK8P8_rq0ZJvzpTsHYSYnODzz1E-I8l1nWaZ_5xtcI=s4800-w1200" alt="St Fagans Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 National Museum Wales · CC BY-SA 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

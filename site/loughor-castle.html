@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPc5iZNC8ypTjUNs_joIzkJAIj0LTWUaZ5hWBphpulYZjhhMa2yC1GH-uIN97KwnmGGW-h-GUcfgNLLSBK_G1_uJvqfaXSv0ZE1vBaP70zcgIXiiLCSHR8omJPmzR2_9z81n_1WEoL-yEplO2g=s4800-w1200" data-castle-name-g="Loughor Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPc5iZNC8ypTjUNs_joIzkJAIj0LTWUaZ5hWBphpulYZjhhMa2yC1GH-uIN97KwnmGGW-h-GUcfgNLLSBK_G1_uJvqfaXSv0ZE1vBaP70zcgIXiiLCSHR8omJPmzR2_9z81n_1WEoL-yEplO2g=s4800-w1200" data-castle-name-g="Loughor Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPc5iZNC8ypTjUNs_joIzkJAIj0LTWUaZ5hWBphpulYZjhhMa2yC1GH-uIN97KwnmGGW-h-GUcfgNLLSBK_G1_uJvqfaXSv0ZE1vBaP70zcgIXiiLCSHR8omJPmzR2_9z81n_1WEoL-yEplO2g=s4800-w1200" alt="Loughor Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNM7ekimjF7FJwPlAHpH-hAkDxlx_6KEfGPI_ZcssjSk5GzIZrMv7kD3yax8nNJCMMWSyoLE29lAUQ0VPwI84Lz0x0-VtxPGn2RPglL86a-6RlEg6IBs51Ta6IkLa0mhTl2NCHBAEVWXq1xea8=s4800-w1200" alt="Loughor Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvbAhNY-tGkq3SSS8JjuB79m2v22cbNKthDaR3yaDZ5QBJOhHvpo-HcOxXo4AihDE7E-MRRYFs9GH2_fDNRDwCo-tQo4aCV5PELZacVNoL5JJBxhQfnRoDiRTy5K6_ON502PSKUbGq9Y3ffKE=s4800-w1200" alt="Loughor Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJDWjSA-PWf3ZC3S6XRa0psHyj1DHzDaNht8tqLqLJ2lW77Aoos2G5wiiblGDsBXOmKd6Wr9YTDHZzPixKNUJew2SEo6OTTPZeJ7Zmv1lz4FNFq-yRATj0pFZj7-qK5xW4LRDtTHTvddEtFBA=s4800-w1200" alt="Loughor Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUGFYkv6mME8PRY00vqrHGgEYyFK0dYXvMMALQKhf2lftm_C3tGLZlxuunh-quKCRZW0XwpigGIVelzRNd34OE0tNbUq8e5lVIXauhfnrcPg-HvQpdlFeiNEzkUvuhBHqp3pfar3RBhALU0vY5UuQ-=s4800-w1200" alt="Loughor Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Loughor%20Castle%20Swansea" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

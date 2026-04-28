@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6Ppj6zKjp0dKucCqSAgqpI0KW191Lw2c9X1RIJuWF0hMQWvThE3HynK9I8ZJHdb_M3RLFrB5BoRQPGmr8wou-9MgOt7x2mc3X0HCFpyaWqK_BbNGYMH4i_DVIIvnzQpp-Is12G4kMR1jjAYE=s4800-w1200" data-castle-name-g="Braemar Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6Ppj6zKjp0dKucCqSAgqpI0KW191Lw2c9X1RIJuWF0hMQWvThE3HynK9I8ZJHdb_M3RLFrB5BoRQPGmr8wou-9MgOt7x2mc3X0HCFpyaWqK_BbNGYMH4i_DVIIvnzQpp-Is12G4kMR1jjAYE=s4800-w1200" data-castle-name-g="Braemar Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6Ppj6zKjp0dKucCqSAgqpI0KW191Lw2c9X1RIJuWF0hMQWvThE3HynK9I8ZJHdb_M3RLFrB5BoRQPGmr8wou-9MgOt7x2mc3X0HCFpyaWqK_BbNGYMH4i_DVIIvnzQpp-Is12G4kMR1jjAYE=s4800-w1200" alt="Braemar Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGDW-XYM7sRlAA4QtEY5LHgi037LbtA1VnbCic2nAwlLGryg0etVhXBhp99K92I1zOqPL-btBuafyfJUo_3YdSBryTknif6dZ4=s4800-w869" alt="Braemar Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQ_yf_sr5DlZjv02C7jMZ04hMaecNY07-xIe84pMXDs_o3Oa28ITT2dK2xu8hBQJAEP5QSsPhzH7-YG566vd145xlw8JoUu3-sVSK_TcEjYR02v0UnnbFrAW1wHZwTMWC39EUKR8_QPWiznfs=s4800-w1200" alt="Braemar Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP99DnM90z_xuF8Ov402awmP8W4sa64rIenCZYSy5HRoF8Sg-Au_CTkHlnR-zzC96XLkSNox-BnIa2fxuEcjaN18qXAbfwZpPLNfQGZcZUOca7ZFCFVosWPvuSfxzGhYGRHDxz7kcBczM-zyYM=s4800-w1200" alt="Braemar Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM-bvvt7RhKkt-UKng-9y1u7L--mYVTnpXSBqtAefhZ3Rr8iGomE7FbPDjWqtbiZtaoDT8XlMaRkSnBXvlLzGSMfbMW6bv7z9FsxOvMm_iTl4alN14tCtJHcSzuQMi1VBV9eqaLkP884EdsiehJTazT_g=s4800-w1200" alt="Braemar Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Braemar%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

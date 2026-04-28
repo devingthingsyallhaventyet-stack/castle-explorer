@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZODBkrIQhHnnSuVTk3mmLUtZOIiKw6Dv1hNugEX0RTUP0qkm0-HhoVkvBykjDMmsNdG7wFAmLD7JTRqSKjFhFj6_cfv9IGPudgzyOXhoBOliMti7W9_6aBb86GjQnVchw8sWmAP0t0QCBeVLYw=s4800-w1200" data-castle-name-g="Wolvesey Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZODBkrIQhHnnSuVTk3mmLUtZOIiKw6Dv1hNugEX0RTUP0qkm0-HhoVkvBykjDMmsNdG7wFAmLD7JTRqSKjFhFj6_cfv9IGPudgzyOXhoBOliMti7W9_6aBb86GjQnVchw8sWmAP0t0QCBeVLYw=s4800-w1200" data-castle-name-g="Wolvesey Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZODBkrIQhHnnSuVTk3mmLUtZOIiKw6Dv1hNugEX0RTUP0qkm0-HhoVkvBykjDMmsNdG7wFAmLD7JTRqSKjFhFj6_cfv9IGPudgzyOXhoBOliMti7W9_6aBb86GjQnVchw8sWmAP0t0QCBeVLYw=s4800-w1200" alt="Wolvesey Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTujzhhieFoMXmnFo5fHocLlv-lqMiz95-Oc9GyzSouVlGNAvjXrttTEfR0GLbyIXwpVFPp6MVomdr4fqiUvNoKeL4x4RvuJXrfOo2LGcKda4wiALM71zvxxO4d3kZOgp8ZsY4y_TVOfilbw=s4800-w1200" alt="Wolvesey Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzRcwBkIKtp7yidolt1T_MW-vfBqiKhuTYPwkQFZwsV_cDaiHOSqpDJqysPAD1WvJaNvXxLwcA9oWUAsVHpQ7hhoh6IWUlP70Yg9VpUv0iQUGFI5Gf_CKUInJbbkueG3WefgsjKW8W1AP5DWU=s4800-w1200" alt="Wolvesey Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjKza0q7__jyUR4WjwUpnRQZJ9psFF23mgT9I02St-WL_SH9QT_d1eTkfj31BUSo4Vz7_yMgsff2K0AmnscuH7VcDiCuJCCtZ1kP51wv7iBQzxNXAcrZ-AKvE4AYujAr49nSGcwKk1C7e4OQ=s4800-w1200" alt="Wolvesey Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdbcTfd4M6kenLQZPwSqFZJBj4j0QXF1XnQO02vp6erKGYr2R6KE9LkK8HEm6e9YFVk5mdDNv0lc-CXuDM6eri4eiBrINtgLID8e-mtpF2eXlOcaY5JdYae7eWL8qmTQ_qyNaDCUYr6pqocQ=s4800-w1200" alt="Wolvesey Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Wolvesey%20Castle%20Hampshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

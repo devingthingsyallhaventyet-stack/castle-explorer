@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkDNKh8r0pJh82kfPXMifZ0GV1CAV_bkPYECeSffnZr5u9sqQHFw9ludXJKiRxcgj6xdrikAL-aRkCRvRqiDHY4AKv5EO2edmK6Afuon2Wnwq7eTsiRXnyJ5u-y1aVqHdS9l_QtE0ZFvjB6Q=s4800-w960" data-castle-name-g="Castle Grant">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkDNKh8r0pJh82kfPXMifZ0GV1CAV_bkPYECeSffnZr5u9sqQHFw9ludXJKiRxcgj6xdrikAL-aRkCRvRqiDHY4AKv5EO2edmK6Afuon2Wnwq7eTsiRXnyJ5u-y1aVqHdS9l_QtE0ZFvjB6Q=s4800-w960" data-castle-name-g="Castle Grant" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkDNKh8r0pJh82kfPXMifZ0GV1CAV_bkPYECeSffnZr5u9sqQHFw9ludXJKiRxcgj6xdrikAL-aRkCRvRqiDHY4AKv5EO2edmK6Afuon2Wnwq7eTsiRXnyJ5u-y1aVqHdS9l_QtE0ZFvjB6Q=s4800-w960" alt="Castle Grant" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOMvcFA3Jh0M0iKkWJLbsNOlWIVjn4ha_mVpoV5sN04uWr1DGZS5kG9jSre-rDa9R_bJfwl37t5PG4bWefvC4yLtu_k1aBYj1MZ4Q5qNgxJGu2YoKpZuQ8WLfj6tzWHNYhiIGJW4nrEMW_5NCI=s4800-w1200" alt="Castle Grant photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOaxhOe-cCHEWH9gYj0sKwlJp0gl9_263Yy74ZO8wN2ZvTa31gO7TQeWIJvSiF6mI80Zr1WsuPhjWAMn-pWczd4n9uib8m3L_OZjJiEhrx-T-YxKGMU4xQdj6e9jSGnSP1xeeDsqYlrYRk58A=s4800-w1200" alt="Castle Grant photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOMp3iRegXM7JztXeirf-P09NLHKSpX9GPVFcUbBtYccUiizBLK4EFzSdwOlqwT9mpoQUnIs5BNESCO4mt2BAicLqu4Ba3_mStdpqWXhxyvUEhHw5GVoTxsaXgaZ8UyfFs7pm_lotDlsE8A=s4800-w1200" alt="Castle Grant photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMKnacc-H3B8cXf13OydiDrmdvMB2YRvHlfjxlEnixGWHAWojKA8yoUF_62UkLNj_LF6SawgJcfGHJXYFbmWJLeufMFWyaAxVoP3hLbc6ka9ucJHfvyjscRBKku7zGNIExYeNC2C_TvjHfUpQ=s4800-w1200" alt="Castle Grant photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Grant%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5dZHMZjzvclLZzFHjj4N7K0ykGtRzNO3aIGpvV3bo4ykh5RGw1tK184fM3YTJe5YEwvDZEFhbZ-dLWKXppLLWgvcOTf-fH829uF0_T4vpkCt0DUcNuvFxTiLAvlxTdnfkOCbyJ9SMMfoERObdXnOe=s4800-w1200" data-castle-name-g="Egremont Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5dZHMZjzvclLZzFHjj4N7K0ykGtRzNO3aIGpvV3bo4ykh5RGw1tK184fM3YTJe5YEwvDZEFhbZ-dLWKXppLLWgvcOTf-fH829uF0_T4vpkCt0DUcNuvFxTiLAvlxTdnfkOCbyJ9SMMfoERObdXnOe=s4800-w1200" data-castle-name-g="Egremont Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5dZHMZjzvclLZzFHjj4N7K0ykGtRzNO3aIGpvV3bo4ykh5RGw1tK184fM3YTJe5YEwvDZEFhbZ-dLWKXppLLWgvcOTf-fH829uF0_T4vpkCt0DUcNuvFxTiLAvlxTdnfkOCbyJ9SMMfoERObdXnOe=s4800-w1200" alt="Egremont Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuM-M6kRbduGF57ztChq2hp1zG6dKrsweV6WtYVK5PlJxmarTgeafWce9Dcvt79iGR7lPe6XlHZ8tXPW4dv2T9s-yfRcxd7_P99ld6dTwmr1ssNi3H_HAGFIO4lBOVgIylAufYO7FVkOu1cA=s4800-w1200" alt="Egremont Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPm7o6bOoBjvk1WjxCx8o0XdJIYWFUtmzIlnzaojkBzFVt6TKuQT7Ce3OXEzFExbblur11oSuQ4LnArNjIwExYkaE04roAE2D-VvRPcwJbaURPl_nnl6PW1udQnGvky_6i3ITS_nX3RIgFL=s4800-w1200" alt="Egremont Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMa5BPaZEpRh-FpICE0fnScaz4Qr3tuzgETarwokjVTlI24WNqYudiJ-PCd192BfH39RYKS8G2-YAQVw6EAkrI6Rwk_P-Gz5QNVUsV6_WVm0WWZWVs16_90UQjMnPpDD7KPharZKAjWIY2kIQ=s4800-w1200" alt="Egremont Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYEd4wsD5O3qTPfr3GpT0dZlg0MzTdY1BZSAfH-D5B6C9YTE4qTeZbRszOFpjpAJVr0TsTG3SHCDIUyJ2XBIqtH2L_PJFMpMeVKB5EnllswoPHKE7z088UHZuKNEpswTLejojA1OA-ae2ZCsQ=s4800-w1200" alt="Egremont Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Egremont%20Castle%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

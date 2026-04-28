@@ -295,11 +295,11 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Cluny_Castle_front_view.jpg/1280px-Cluny_Castle_front_view.jpg" data-castle-name-g="Cluny Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Cluny_Castle_front_view.jpg/1280px-Cluny_Castle_front_view.jpg" data-castle-name-g="Cluny Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Cluny_Castle_front_view.jpg/1280px-Cluny_Castle_front_view.jpg" alt="Cluny Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNhh1VcFqaiUYsGONxAfdnszrXH99_CaNqCm9ypPlqlhf4A_cbt1HHwfNeM96fasuHipt30echg1hPaAKeiKyxMdfzFVXdQrtEQrGia2jI3jhaEF9EPahULhyHOOMoGsSvUXTDPkIjtiOZpg=s4800-w1200" alt="Cluny Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPe0GL2PKk_Ts3W6vCG62ancezYjd59NTi_hP-X7BC_8LT2qhlWsxdJzL09679c4y4fSEc9g_kJossMzqQt-CDfGyJ6KWmH8s1GG_QqfMT8bZevUWzZvKjl0kd6PXkUuDbzd15emYyBDEHHJbQ=s4800-w1200" alt="Cluny Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQBFTgLLpDH6yvfDDCyGzud0p57oaqSfU5mveM7983LXhyvhfpnskjIgOnJBA4OiNb_ihUoKNqlSlS1pKQIeLF1hlP3oGHKuFHV--_K6uInoK5xuY6lJW-zJCKRmByrtTlBmiryIIEj4sGlw=s4800-w1200" alt="Cluny Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

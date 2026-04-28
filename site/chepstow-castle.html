@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlSE6UTucdpIQ-IiLwbVilISDl-rBgWzidIQT5lAm6zgN3jhrgEzMe9B-vD3hCkX1yKd3m8zFgq67TDfOZ3r8Y9PcXThK_Et92NvleXwP9FqBeZK5ilikZDLl7F-FDg0HYSoIt4_bUp_t6TjeNHIOapQ=s4800-w1200" data-castle-name-g="Chepstow Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlSE6UTucdpIQ-IiLwbVilISDl-rBgWzidIQT5lAm6zgN3jhrgEzMe9B-vD3hCkX1yKd3m8zFgq67TDfOZ3r8Y9PcXThK_Et92NvleXwP9FqBeZK5ilikZDLl7F-FDg0HYSoIt4_bUp_t6TjeNHIOapQ=s4800-w1200" data-castle-name-g="Chepstow Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlSE6UTucdpIQ-IiLwbVilISDl-rBgWzidIQT5lAm6zgN3jhrgEzMe9B-vD3hCkX1yKd3m8zFgq67TDfOZ3r8Y9PcXThK_Et92NvleXwP9FqBeZK5ilikZDLl7F-FDg0HYSoIt4_bUp_t6TjeNHIOapQ=s4800-w1200" alt="Chepstow Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1D7SJaZbLrZUroqx6gHM8ypAhD-SxDhcauf582X6RKzJ7x1De7cLFBUhIxWtKKONCDif_rqgwNnFMG-1SNZETzPYCmehbIDTcBhbw5AQbdfKGOHYnjRH0Z6shvpLGlbsGle0yFq2E1QqK=s4800-w1200" alt="Chepstow Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJfH9UpJr0Dv1dtO106NeMsOaP_dbl2iVMhkp7PSGO78Tlz0ddQKqgq5DqODt6odXMOKlWjOWpsgEOGLjWe6so-uvLau3uNC0SGleNQcEGaRe-PwQ1AQdHfr3KrN7ekA3zjeA6R9RavIxNuCpM8ZrQ=s4800-w1200" alt="Chepstow Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfgIu7ppSHn4fggkxoliPEQw-g8bn_WZyTfMZZIM2fBZWwjP5OA12BEdjZQ2McdbrtEr6y5GLlyNeO9F10Mokc3-Qf2_EkjtZ6Ayf2eh1H-fw7ae3nNefJTglKUPbdwC7YzbOM8DBoIhO2Uck=s4800-w1200" alt="Chepstow Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNnxXOuWkla1cCRAC1USkgAtWZtZvWjcgDMAqmUWPn6LiDGEAdpe2MFIPQppOrA6tvuNhnKlaNN-LSze7EWo2c4h4me1kMBbGnasemOxbkCFx5sql9AWc2Rj7LEfMcsACR1aPzaGEIm2OaSlA=s4800-w1200" alt="Chepstow Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Chepstow%20Castle%20Monmouthshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

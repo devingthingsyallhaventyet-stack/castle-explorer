@@ -295,11 +295,11 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_7AkMBT7poOALYlE-4OUjt47Knv-hse6ItAL1Np-2kukqkoWPw3-CPaR5lUPGjU8I12GYIL_XhEsicYn0dYRZTCryyoojo6Z2lR7x9TrhwDpW7Xa3U3yczA5peSXIEikD-Hb5yxVot_GrVYY=s4800-w1200" data-castle-name-g="Affleck Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_7AkMBT7poOALYlE-4OUjt47Knv-hse6ItAL1Np-2kukqkoWPw3-CPaR5lUPGjU8I12GYIL_XhEsicYn0dYRZTCryyoojo6Z2lR7x9TrhwDpW7Xa3U3yczA5peSXIEikD-Hb5yxVot_GrVYY=s4800-w1200" data-castle-name-g="Affleck Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_7AkMBT7poOALYlE-4OUjt47Knv-hse6ItAL1Np-2kukqkoWPw3-CPaR5lUPGjU8I12GYIL_XhEsicYn0dYRZTCryyoojo6Z2lR7x9TrhwDpW7Xa3U3yczA5peSXIEikD-Hb5yxVot_GrVYY=s4800-w1200" alt="Affleck Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6uCbmj5XLCXXJAV0uAj1kOoirPvLVibgTeaTU8Q5ExHRjARVSfSDXwMIztdYsCJuKZvt-MfII2N75XU806Z-rSxTCM1B8pJ6LdEVkQlCJHHvBLus_27-hcQLF4EJNSgvZXKmL9RXW2iaR=s4800-w1200" alt="Affleck Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzMPAWqpUMb324hMawfMxCBtgvh4SJglmoGjC0KR7Osu4ddAminRN88OuBCUnSmrCZsXzJUH82Xyeeb0FDgxTtHMpxZESAJiMql-SZoreuSVLiNk_GNb0DI6EIKFw8S8ljjyh3w1J7Yivr8_w=s4800-w1200" alt="Affleck Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOOH-z2-L4nvkD2E7q8RxAnvtSb8oPXf9ViolJK1F3E7EhWqiSxC1_Rh50YjBMfESLyeLb2gzvVUuf_eUmk0_sRRkEb58ZBhxlHKzvt2Ve7vE7xiEAjbjqID_cyHd_0-b75xDefcUkCFcjbWuM=s4800-w1200" alt="Affleck Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
@@ -400,6 +400,15 @@ It is not open to the public.<br><br>Built around 1475 by the Auchinleck family 
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ It is not open to the public.<br><br>Built around 1475 by the Auchinleck family 
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

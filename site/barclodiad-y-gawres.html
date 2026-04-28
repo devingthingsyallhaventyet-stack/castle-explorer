@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzA5ya6IF2ydtMZPfhEto-c2x8_Vi4EiIRJQhi4dgigZJnfPIvWBFvzF3SPYZUrDS23qdKgD6udbuY3s7ukyIWhIQa2boZrAeieyUnj1y07qMbmW0QZm6drkTp7layrY70emRZ-6jYIs-c50a4A8WwZQ=s4800-w1200" data-castle-name-g="Barclodiad y Gawres">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzA5ya6IF2ydtMZPfhEto-c2x8_Vi4EiIRJQhi4dgigZJnfPIvWBFvzF3SPYZUrDS23qdKgD6udbuY3s7ukyIWhIQa2boZrAeieyUnj1y07qMbmW0QZm6drkTp7layrY70emRZ-6jYIs-c50a4A8WwZQ=s4800-w1200" data-castle-name-g="Barclodiad y Gawres" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzA5ya6IF2ydtMZPfhEto-c2x8_Vi4EiIRJQhi4dgigZJnfPIvWBFvzF3SPYZUrDS23qdKgD6udbuY3s7ukyIWhIQa2boZrAeieyUnj1y07qMbmW0QZm6drkTp7layrY70emRZ-6jYIs-c50a4A8WwZQ=s4800-w1200" alt="Barclodiad y Gawres" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPD3xkJVFJbGCB8CLpVHSfvGgbXBszBJJJuDFqjlp8bvqWoLI_oA5GsY8OHl11HxjaKuuw_b97tUTBBtYeQhMWPgW69KMgnFA3HbgqFUYqweietTnaN5e1tfB75JPLlJ9EgvJ8S5V70-wswJA=s4800-w1200" alt="Barclodiad y Gawres photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNG8lxEKCUzBp1EYKKXnzYP3eNluj-yJEa27di8_Vth-TGvRIil0mnJNcOxYtq7pi4V1D08UnN-WncWYrzkTSDUAIDR_lVaT870vHJcf8I5ZH_nKPrvT65ULKIiy0cR9gKz7xZ96rpTc20oyQ=s4800-w1200" alt="Barclodiad y Gawres photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpdmPPvhE5mVGvttakkM2_vMxqYyoVSgTcYkzadlThgaz2nXKz5BQQ40V22ZNZnK_LhXdvvwdrTijpE6OH6zBvkJmNnzzj6ejJWxF6YpYBEs-iAZQrUllomZHzTFFWxF8HQzXJ2jciQOzXnDU=s4800-w1200" alt="Barclodiad y Gawres photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0tB2Vhd2x0o6Nn8Vp-qNO2BI0xZdIyZHXYkeOUUlEQBY1DeAR0rxH3jBi8WgW9TrdBADtrlaztu5mYBtfbAX7fLYNSPMvmYVo15mmss9cttk0XNw1jchxeZTscqW6JvvGMyx1Ho25AN93Qw_iW9_M7A=s4800-w1200" alt="Barclodiad y Gawres photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Barclodiad%20y%20Gawres%20Anglesey" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

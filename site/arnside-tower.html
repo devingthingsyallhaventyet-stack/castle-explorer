@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMFF7Lktg9HzKTnacw_uxPvlMwMMNONLA78OaHSmJzIzxtY5pkYNt1BteAD3hrjApwLnx_7lFQgAKVATh_g0l2jxgxVE02o5UWOhO3BvoPWOJ2m_gHfa_9kasOpA3omk_dw9v6AtUB6nYn56c=s4800-w1200" data-castle-name-g="Arnside Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMFF7Lktg9HzKTnacw_uxPvlMwMMNONLA78OaHSmJzIzxtY5pkYNt1BteAD3hrjApwLnx_7lFQgAKVATh_g0l2jxgxVE02o5UWOhO3BvoPWOJ2m_gHfa_9kasOpA3omk_dw9v6AtUB6nYn56c=s4800-w1200" data-castle-name-g="Arnside Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMFF7Lktg9HzKTnacw_uxPvlMwMMNONLA78OaHSmJzIzxtY5pkYNt1BteAD3hrjApwLnx_7lFQgAKVATh_g0l2jxgxVE02o5UWOhO3BvoPWOJ2m_gHfa_9kasOpA3omk_dw9v6AtUB6nYn56c=s4800-w1200" alt="Arnside Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2W2x2Qkl8mjUL_XlA3piuvhTvIKdNW6MOJqPPsY-Rn4sf83LN1F9gkvheAFPRWFJpmEthapt8jD3TxcVGAF8WoDKzTcTbJrriXCXVkKVwiN3H4ZDnPTsArGFmvG2MgtuQe8AU4WZ2_-LDQfJ_jBEH=s4800-w1200" alt="Arnside Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYcLa94HMs3LSq695Tv5WKC5bMlLEudNlWslnapPuof_SlZDWmJ9afq4FDSe8Oh7eP7koUCExpQZp9UanYqeNNP2f1sCO9nzqjaucjRkhvUY684eTAtsHV-Fuhy5wk6zQaVaJdqRpCU2Ny9Q=s4800-w1200" alt="Arnside Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMP3JuXjtUX77Be6VTuGfcd8OYRYNhUXrYvm67AvKVQVTO4TpJnbXmlkz771gA-e52TgBHqUdU7iNN_dHaimQX5kEBHF_XHDTc3k2e0oqAvpgbiN8QkYzKP3NT-PoRzIUemwOW8MEgqb05OC-w=s4800-w1200" alt="Arnside Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJkavckamEoJknWP-IptI9XsWAIFGqj343rgAvebwtPaRr3KtlF2h3-R0eL9OtJjjxmMXZ14ImCGhIX1SrTfUUNcq4WBjsccGenhqW_jkKEhFEFBfH1KDg-r4QlAB58jv7HhxrG56NqhWy=s4800-w1200" alt="Arnside Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Arnside%20Tower%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

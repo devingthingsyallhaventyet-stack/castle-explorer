@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMG8MFM1BCnucT3IpJbtgepWezBiq306eWkipS_xjqH_mIFAMCHj62MTIKrjncXwTpiA919gGRfCWZ-Mb_dozLrY5AP6qZ5Bnqq0tG6WFBFRsGGY1lIc2-XKFUaNAue3XPM7Jrz7KmGUd2UxTU=s4800-w1200" data-castle-name-g="Castletown House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMG8MFM1BCnucT3IpJbtgepWezBiq306eWkipS_xjqH_mIFAMCHj62MTIKrjncXwTpiA919gGRfCWZ-Mb_dozLrY5AP6qZ5Bnqq0tG6WFBFRsGGY1lIc2-XKFUaNAue3XPM7Jrz7KmGUd2UxTU=s4800-w1200" data-castle-name-g="Castletown House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMG8MFM1BCnucT3IpJbtgepWezBiq306eWkipS_xjqH_mIFAMCHj62MTIKrjncXwTpiA919gGRfCWZ-Mb_dozLrY5AP6qZ5Bnqq0tG6WFBFRsGGY1lIc2-XKFUaNAue3XPM7Jrz7KmGUd2UxTU=s4800-w1200" alt="Castletown House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqFMZeG6l8Tpw4LHuorY9wwQH_GQruDSEAxc6sgYDAAkXBP5g9rC-VXpgxc-42GtHWXifexR28M8nE_XKu_trLVw2THx_SCWOt0=s4800-w1200" alt="Castletown House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNCib7qPi7sqAFvzNHmxCCE_Ldxkx6BEFU3bY9EpwHPkB55g69oGb0pxWLe6TO-6fXLTZwZCGjiQog-oDximpliYCaN0z1XDz-9ldBsqWbKmfKM39aOXA8r3CPf2E_MFkJgI4G5wee8vu71DQ=s4800-w1200" alt="Castletown House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPkNFUCODotzqrcEuRuP1Snx0LjaWa6Pvu92sPUlPg-2tb6zisR-VKKhENcs-Zwpgw_1DHVOvRGihzHFe9jrUdsYrbFxcPbGrLm1eF3LoG7kPxJ80BnAgd86e0OhX3Z4no-LXE7vbVg6RN1kw=s4800-w1200" alt="Castletown House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6utL_uH3VeotQVpFWyycJiciXzpq457WJmY_zyUdrj5gLCb3LXAhbUhAdeFCdyRG_AcuSaTujnYs4U0vR1AIhFkQ22QDxbyDqztvVMuLMfa0-t2pjBIDcxJ6un03IhW2Syrl93rmHCSX0gYw=s4800-w1200" alt="Castletown House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castletown%20House%20County%20Kildare" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

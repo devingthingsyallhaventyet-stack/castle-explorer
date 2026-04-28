@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlMoqPf0FvVcAWK3Mkcb0pgYMrNE5gNJ_ADPs6q1oCipOdhlUV7pszzgtzv9rWHVjVK4HShX5mYeaZJboVht-9ebIC9lOHp3sU1TsKGKUjCcRJsCEnBBXzRmxylq22pCsRTEsGxOJXSWfh=s4800-w1200" data-castle-name-g="Mount Grace Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlMoqPf0FvVcAWK3Mkcb0pgYMrNE5gNJ_ADPs6q1oCipOdhlUV7pszzgtzv9rWHVjVK4HShX5mYeaZJboVht-9ebIC9lOHp3sU1TsKGKUjCcRJsCEnBBXzRmxylq22pCsRTEsGxOJXSWfh=s4800-w1200" data-castle-name-g="Mount Grace Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlMoqPf0FvVcAWK3Mkcb0pgYMrNE5gNJ_ADPs6q1oCipOdhlUV7pszzgtzv9rWHVjVK4HShX5mYeaZJboVht-9ebIC9lOHp3sU1TsKGKUjCcRJsCEnBBXzRmxylq22pCsRTEsGxOJXSWfh=s4800-w1200" alt="Mount Grace Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnTbDlmzQCKs03u9wiRxbypV9jS3896SJKz_UOioIBdgmDdNmt7mn04AGKEDcZgf92dvCf2QuMRiFIy9nQZTFNckcg3mXU1AqILcYbMRgmUi20yBPSL7t6k9FTFii2W5WKna2MoXarc7eAXw=s4800-w1200" alt="Mount Grace Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMC5nKLtb0a7atiSZ5L9uik8GWXoHSCcmpBCVD2GmnFTvYRac0ZzMAjeT8mQGrf7I8oX_0G_wE7_XNNR7danVqWX5w2i_dIsO_9FlQBM5tx74cmor7Tlrz_CYgT5knZedD4aIW9X1ykSJvkag=s4800-w1200" alt="Mount Grace Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1BAIjM1oQ4t2RXl55Wiu9hSUq5KzetxHeJaq0WbTTxYtW4RM3nk3rXDpy7I0l65BqBsJRllhFAxwwq-g-uMgPSaQxdXsuuXL6NpZJ74cre4g9aEIXPpJjZ21a2jkLQqZUBJd8oIJKcXMyrio=s4800-w1200" alt="Mount Grace Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfX3O8ncWIWmXuw2EAeEhTt616ckKw3Ril5CATM2PR92gaYa5xn7UYuq8AWSYedvbTU2BMV6GbRxi_r1IiCoDKRMhLtO0-zGRS8YIFLbKa_hZNoNrsbqH3fXHlTt1OnGPdYiQiJZYZdDw0R74=s4800-w1200" alt="Mount Grace Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Mount%20Grace%20Priory%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjEeC2o6I0se6ndyUwQ9Iblq2AgDQhVvtbCR-U1m2uRM_tNbIy5AumydkmTDFyLxk74HiqQ9QhcQgY_w5xAwhFmKcmKR9ZuS6xioK0Tluqdoqygb54F70yAbuGBF-ZUFVmY-jyJzGpImzy=s4800-w1200" data-castle-name-g="Huntingtower Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjEeC2o6I0se6ndyUwQ9Iblq2AgDQhVvtbCR-U1m2uRM_tNbIy5AumydkmTDFyLxk74HiqQ9QhcQgY_w5xAwhFmKcmKR9ZuS6xioK0Tluqdoqygb54F70yAbuGBF-ZUFVmY-jyJzGpImzy=s4800-w1200" data-castle-name-g="Huntingtower Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjEeC2o6I0se6ndyUwQ9Iblq2AgDQhVvtbCR-U1m2uRM_tNbIy5AumydkmTDFyLxk74HiqQ9QhcQgY_w5xAwhFmKcmKR9ZuS6xioK0Tluqdoqygb54F70yAbuGBF-ZUFVmY-jyJzGpImzy=s4800-w1200" alt="Huntingtower Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNnOrfGLwy4Zi50nhcglNPhHWjPTLeLT-OHRNsZdqc7ffgAil0JHDxxD0H0TyXN7xPf72CUjjWgXQqbsmB44QNr2WUYFJOjCK9inK0FBdCfQ2nC0OsfhZ00tY8Jvw18j68PPpZ6a8YscUzCqQ=s4800-w1200" alt="Huntingtower Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLww77zXTvvSDhVnMxXXihxl04PfrjGI85JW7jg1pAMdyH4iuAoVm2aWWcOwrFa0Ion4zPU3n4PelZ1sgsqmYsmnVHBCrqr0-SV3HwLx1NMwHAp4XWqm2PthD76hxABVyG-uX-kH7andsOMw=s4800-w1200" alt="Huntingtower Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZoDAZFf_t0N5XS3pC-M_GKTZ65hl-ZHbFhnIk611vzNGpSdu-7_J54A86abZaQ3VCtHmgQipAEIlnBVEeNrxp0cqZtKsd-dHv0_2ifa3UyIEjRSXc02ICSwAqauUcEe91cx2PlOB6HBy4rRU=s4800-w1200" alt="Huntingtower Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNm1KMkCeen-kLzSHQpUJyVGbXLFjXrE2peqdFIouRG0y_6vARO3HmKru_JLxkD0gCZGY1iVTs5a6ZG9scvX6WUJT62mbIJcSQIkc6yGncRS1FIzoOw4SghkP_rwOG9-18TEx5f8VHarIsr=s4800-w1200" alt="Huntingtower Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Huntingtower%20Castle%20Perth%20and%20Kinross" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

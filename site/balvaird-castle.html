@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDzccmg3R9ODNoAS1Kt09nUpujfEkzzAiparXo7YCSZ5l8D06B893PCosJLTTPjSfvyQj4neUD_li5krzPbrmU53Vf3MN8MFaCZmVOwU05VLxdyTEtcuAZTIOTdZG6QwE2uHVHuirAlzficw=s4800-w1200" data-castle-name-g="Balvaird Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDzccmg3R9ODNoAS1Kt09nUpujfEkzzAiparXo7YCSZ5l8D06B893PCosJLTTPjSfvyQj4neUD_li5krzPbrmU53Vf3MN8MFaCZmVOwU05VLxdyTEtcuAZTIOTdZG6QwE2uHVHuirAlzficw=s4800-w1200" data-castle-name-g="Balvaird Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDzccmg3R9ODNoAS1Kt09nUpujfEkzzAiparXo7YCSZ5l8D06B893PCosJLTTPjSfvyQj4neUD_li5krzPbrmU53Vf3MN8MFaCZmVOwU05VLxdyTEtcuAZTIOTdZG6QwE2uHVHuirAlzficw=s4800-w1200" alt="Balvaird Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN77YyFbYyD3u3eAtX38uYMPUNU1fq9NwQgJgaTUnZWgi26JTuAvHlI7CFfy7kBCHtTO298Os9VaPwvF409F7YJ_PXoZra6BKsO8MDYdOfiiFc3GYIBo83eoGn2lrmsK6X1hZKh62IF6P9ZgA=s4800-w1200" alt="Balvaird Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkmdaXvyKwtBJMHrbc7CDiA7BXmeQydIdOO65QWH-7QYykJ3coq1z3JiABMMmGFbLhziN-0il42vVnlWfnqUpcPGMdfbri2JUnamtYENKuoo1wg-lNwcJULXRfmqKeFyQ4XSGGjYpNtBfjylLsZzhjHg=s4800-w1200" alt="Balvaird Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrsTmyotLCWCFG-xU0F17wTmv-SKDiyfXLACxPe1QqwzEIXOdHJB_GCRIxUWDk54jfR75LYTah-FRCPztnrBUmhTHNNv4BONNDf8u36t5SKWohPdZfKVyzOBPIIxTyls0saTw3I89XrV2XMog=s4800-w1200" alt="Balvaird Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1-SljnJM8M1NlhHZXoQOmMDnzUSNpKTYq-W5-FR85eVmGW4hhIoiyuny4P0MDAz-akLJqOdA9-lxz8GR-tWbF5HbSW7Yep6cwlcIazgKX81BgP_hLUcbNYyRNarPjTaxdQS-zeiU0tdVlvw=s4800-w1200" alt="Balvaird Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Balvaird%20Castle%20Perth%20and%20Kinross" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

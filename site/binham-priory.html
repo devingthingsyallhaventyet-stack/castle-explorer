@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWEOCO2ZvFuSZzEC3eYuPBfQ_cK43f3AY2zUkoaRSZa9iEcsT6_aIv1i17Zb3LPlWqLmzMb_HO48FTXuzKJxGXaBheEKxnHY9wuGiMPi-Cl08lFJkuJO_2WQ8MtmOVQg9GK2RtHau6Oa2u=s4800-w1200" data-castle-name-g="Binham Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWEOCO2ZvFuSZzEC3eYuPBfQ_cK43f3AY2zUkoaRSZa9iEcsT6_aIv1i17Zb3LPlWqLmzMb_HO48FTXuzKJxGXaBheEKxnHY9wuGiMPi-Cl08lFJkuJO_2WQ8MtmOVQg9GK2RtHau6Oa2u=s4800-w1200" data-castle-name-g="Binham Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWEOCO2ZvFuSZzEC3eYuPBfQ_cK43f3AY2zUkoaRSZa9iEcsT6_aIv1i17Zb3LPlWqLmzMb_HO48FTXuzKJxGXaBheEKxnHY9wuGiMPi-Cl08lFJkuJO_2WQ8MtmOVQg9GK2RtHau6Oa2u=s4800-w1200" alt="Binham Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMlvmx65xa3cIXj8r3_1HRZR0Kv8N0w5ki0d26-cxcTtsIl6odI1rmruJSl_F65vp5fjwHfM4wzt_1b5QZNx5X0iYKmHKS7YznIs-UlF5iAF0u-obO6OOINSbJfA2T-sUo9uYRjBRZRFdt70A=s4800-w1200" alt="Binham Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBwEipulk4io7RQF0ZiyHId3YDK5Gk9ajq5XToRy46h8i0m9RotmJCJDFhRF9B4-Yedcr3zH7DEzL3JJzpezctTFMmSqtqsLn5n1v7aLtO5TX0GFo_hulDxIllKIVVF7IXyJ6ACLkKhFYwp44=s4800-w1200" alt="Binham Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBwKK33vAgCp-E7-ruQdmTND14XHh8RdQvbez1P9T9Gnctugg07htyJMSZLi6j9Rea71uLeUYYrO8dsQ_XFWC_ylpCbCB6xqpP0d8CXJga9wvh7XWRLEN1nQrgfgp7L43Zowh7FMisO6KMaImI8Vo5=s4800-w1200" alt="Binham Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUXIyE-82pGhLKmps_jo8uolnywH1dNV2z0cTGlTvyaYu4uB7beEzDCOs82g2zNUZt3GVcGAb9QzO3i3f4RjWprPwGgj-74bI-EvABD5dGg2EdicjuYZ3fM_FTjBQzUCt7r5xNdov1TJv4tA=s4800-w1200" alt="Binham Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Binham%20Priory%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHWKkMmOFondklLml6SWPPO0hY59_vdG6lzz_KgiOvi-DmwC3Dlua8_n_lkTPrUP2okITNjlO2zMeNhwVeBlvP9K4Wmmqr7ogA=s4800-w517" data-castle-name-g="Chetham&#39;s Library">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHWKkMmOFondklLml6SWPPO0hY59_vdG6lzz_KgiOvi-DmwC3Dlua8_n_lkTPrUP2okITNjlO2zMeNhwVeBlvP9K4Wmmqr7ogA=s4800-w517" data-castle-name-g="Chetham&#39;s Library" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHWKkMmOFondklLml6SWPPO0hY59_vdG6lzz_KgiOvi-DmwC3Dlua8_n_lkTPrUP2okITNjlO2zMeNhwVeBlvP9K4Wmmqr7ogA=s4800-w517" alt="Chetham&#39;s Library" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJvN1PlePmBXVo_T4lwJ27REUDcrpctLlUwPH9yOdE5ck7ign7yUZ8PNaJ74taJeclUtEFDxy39b6SzqjTcgXJkxUMWRfE0oCyMoH9cBk6GCI1Ucauw4aFmPEwngIndL9ZvIzdwT38ZizVuW8=s4800-w1200" alt="Chetham&#39;s Library photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsTX8iueyGAJqD_H9SR8qhsl0jgjEABqYoip4W_YjqGsR67R3wMb3g_7eeKgJ3LjaKRSyNMq-g3Ff1Ud51q3PzivAtPgbP1jWMlCJr5_aRnFA3mEbcQ7bg-IwiF67KCOQQwkoEwUMJCAaxXao=s4800-w1200" alt="Chetham&#39;s Library photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtFg6gDVNspD1ZqqC1QBWO4JNxA8nVQGA4NFu4OQ0H6wuAYGInaYY7-7mQKyUm16hDqy3jOypeaXXWuCManma_07H6Lgb2f4bZXjJib2AcasgPLMN4W_JMiAVheXpgat04BnahPZlwTfo0UQ=s4800-w1200" alt="Chetham&#39;s Library photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMFbOc_SpgUVCgl80WHnI_EQ1NBO9rsO5wYee-xv8JPs_zfVm1LIYTODeZauVYTm4PPFzFRPLG7ePPhcW_ymRvv0rPPObVZ0tpo-WG98jushzWpHazqfjiWTKH88KYuBmbvWmzunzygSSSG=s4800-w1200" alt="Chetham&#39;s Library photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Chetham&#39;s%20Library%20Greater%20Manchester" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

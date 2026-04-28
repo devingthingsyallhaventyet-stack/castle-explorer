@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMA7-xBB_quY9miVg7sfPpcAr0TpLXjqjFU1LydVeO0CT658NpK_DtQxDV3dnpWrQy9CF_xrpibmw_K7O_nN9Ma1VaQRteI8jn_84fVMEtQC5HOdILNCg-VgRZhFXAd_1KmkBPKKMlLEQMa064UQts5SA=s4800-w1200" data-castle-name-g="Rosyth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMA7-xBB_quY9miVg7sfPpcAr0TpLXjqjFU1LydVeO0CT658NpK_DtQxDV3dnpWrQy9CF_xrpibmw_K7O_nN9Ma1VaQRteI8jn_84fVMEtQC5HOdILNCg-VgRZhFXAd_1KmkBPKKMlLEQMa064UQts5SA=s4800-w1200" data-castle-name-g="Rosyth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMA7-xBB_quY9miVg7sfPpcAr0TpLXjqjFU1LydVeO0CT658NpK_DtQxDV3dnpWrQy9CF_xrpibmw_K7O_nN9Ma1VaQRteI8jn_84fVMEtQC5HOdILNCg-VgRZhFXAd_1KmkBPKKMlLEQMa064UQts5SA=s4800-w1200" alt="Rosyth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN7qpX3VAAQbYQ0E_8cJMWC6Sqcu1o8iEzj7R0jwa5F8KTqLp8IQBWI0lopfzNEPi0Qlj7OUiHicRDZcSjw2LINVxdqQ7n7RqvwxHG2aThwcf5oUqupVG9H8IxucUONuAhUMgrbYmVgjpRrLw=s4800-w1200" alt="Rosyth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvS5Z6TQ0x_hrmYKxRek2MGNU97WzcGU3yWu2fVdlfO4aj0NIutpmTPPTAgmpPgA98B9PqUqwnaNtXOtM4WjjOu1F_wr9Yjvx7ykQ7xSyRfQQ0REWdlWTd6BTUXJRVhxP2-3SVjpN7dcZOGA=s4800-w1200" alt="Rosyth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrAD7uvVGYRWs35YeOFg4w72eAgbGQx4iFvrXFZxfRgCZ2MNCsk45v_Um4DwnaGlagCRcbZS6haEbXHe3c1oxkOXIAYnOfCmaFlXpChd8qci6x1-JHDbt0jganEBlTyFd-jrmbjceN9VWvIfo=s4800-w1200" alt="Rosyth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMyi8oaL0niZu25jx1BNrzqlFCi3anxfuDI0m5DewRAa87HG6iu1CZoEPZzLA4YP3TkEP51YK7fIy_Dxtd6jk42dYyt7kF0rrhCuYZZE1PJiLJwL5m6Xpsl_Kuqxr4U7F-vRhmQ1S-VB1G3vLQ=s4800-w1200" alt="Rosyth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rosyth%20Castle%20Fife" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

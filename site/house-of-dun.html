@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPahYYWmfVxoO5_c880-rCTuyPy0PVMUqvzhXKEa-1txvYWnPRcTIkCuFUlxuR_sFkI6l11I_rL5H_hG9DNWwbTgK7ImDdcuLkBvX3rj8pPByIxVUAfn-1PIgEsJ3xiQOxiG9NnFNGH58fLPY4=s4800-w1200" data-castle-name-g="House of Dun">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPahYYWmfVxoO5_c880-rCTuyPy0PVMUqvzhXKEa-1txvYWnPRcTIkCuFUlxuR_sFkI6l11I_rL5H_hG9DNWwbTgK7ImDdcuLkBvX3rj8pPByIxVUAfn-1PIgEsJ3xiQOxiG9NnFNGH58fLPY4=s4800-w1200" data-castle-name-g="House of Dun" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPahYYWmfVxoO5_c880-rCTuyPy0PVMUqvzhXKEa-1txvYWnPRcTIkCuFUlxuR_sFkI6l11I_rL5H_hG9DNWwbTgK7ImDdcuLkBvX3rj8pPByIxVUAfn-1PIgEsJ3xiQOxiG9NnFNGH58fLPY4=s4800-w1200" alt="House of Dun" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqG1PUYUPbwZuTTzRNHuKVo0RGUqXYEBNTnNkufplOsnibs47wQW4HjF8KQpgtwQG9jA6bcuDlLlVkiHZf8NSf8mrD8Xb8bKChA=s4800-w1200" alt="House of Dun photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6XwZQtLYE4ApjQB1lF-kyn5w6ryLqFhvlgbODAWWGawhRRfJxBYq7QxsgG8JGe1NkSAES_gwt7UT1soYSRWzPC5qlMLRR7mA_SO5NBQeZ0VczgeWto__pO7H2LwIYt-ZGjdGNsGAB8CB4cOnLkMOpXQ=s4800-w1200" alt="House of Dun photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxqpuQB2yAXslq9OyYt7oHQunK4big5TuOnXSpGjprsbph4E73wYIHOMFcNCpPQ_lxrV0irnAH9yYKPym79-OQPsXVyi9ZXuDxCQzlAkT7ha37aFGXeBRgSq4bY8B6dlm7wLmQp-OOJ5A6=s4800-w1200" alt="House of Dun photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPlOIA7u_XM3rsj81KsCAasUkqy-1OLN3yl0wucFNfw9k7JdRU6q-d6G8pAnxd2yt-aasWn1-24Z_-BVltSjPljC1BoC_wDHYz0oF5Do2QQOHGLjslbn4PBdDtGCJ8Iiz2F7T2mcRYjQwCgEWs=s4800-w1200" alt="House of Dun photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/House%20of%20Dun%20Angus" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

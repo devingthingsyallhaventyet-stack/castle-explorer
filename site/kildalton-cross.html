@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5sdFH2vrBF1b1U4D3vxxqCarvD8fr4Y5ENjDGdzc2MpKVaVJmmiwkOmbS-hahVVwd0EHicIyKlFYhwxzA7aH6u8AaLpIFAlWWqV4PMf2DMWZpqGmyu0EQMTbbccxz-IPY09M0MAWLK9mJBw=s4800-w1200" data-castle-name-g="Kildalton Cross">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5sdFH2vrBF1b1U4D3vxxqCarvD8fr4Y5ENjDGdzc2MpKVaVJmmiwkOmbS-hahVVwd0EHicIyKlFYhwxzA7aH6u8AaLpIFAlWWqV4PMf2DMWZpqGmyu0EQMTbbccxz-IPY09M0MAWLK9mJBw=s4800-w1200" data-castle-name-g="Kildalton Cross" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5sdFH2vrBF1b1U4D3vxxqCarvD8fr4Y5ENjDGdzc2MpKVaVJmmiwkOmbS-hahVVwd0EHicIyKlFYhwxzA7aH6u8AaLpIFAlWWqV4PMf2DMWZpqGmyu0EQMTbbccxz-IPY09M0MAWLK9mJBw=s4800-w1200" alt="Kildalton Cross" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP3HqfkMecR6AReF8-thfMd9LGRLwsc2rJVujSjN6Qj1TT6tylKucQ96sZfXBI7UeWQQNVb_7pPvQng2TanoaN7oKLSojX4Cstd1AEmkz83fdXMUDfhwnfae683yvRfmlVgXJ-aAe2FUCFWOA=s4800-w1200" alt="Kildalton Cross photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNOdiswKzpeavHtjurjDGEbr94AwkiNs3QFt6ZEzWQez61yn8ssCmoCSJHdEbWEeSjqiEKX_OBqeTSSaWyAhYAs8foafLHoB02HbfGmNPEhyXadE-QGLhztD_5Pr5paEe-gNAXD4PRJy5aTQnM=s4800-w1200" alt="Kildalton Cross photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPGWxOpJd3x7LmaFd_xCcfrOpgXubkp6lEyiSWn_ZbigxdMRg8ftONj2GRkE0Z9lpQiagdjE5kyhXDn3QXdL3Rc61Ky_A9I25qQRKM8DH8__wGBGsxEbaKzrBubPS0SqPTxhOfStWstL9wVtQ=s4800-w1200" alt="Kildalton Cross photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPD5KofZ15WwP_YiijyxrRH2dEuhZUXzWmKsYCs5ro4sWsbi9p9n-jKXezhHuMP863ZFNn-TnJG6USQNFuhleaIumYlQ5A-RDvNCH3hvxU98wrvFL1x4Jg1bETy3O_wrgbp6LppNe0H7H7J_ck=s4800-w1200" alt="Kildalton Cross photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kildalton%20Cross%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

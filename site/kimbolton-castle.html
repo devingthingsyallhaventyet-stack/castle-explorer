@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNoY7Ok8ouk0kmQrezSPZharmc2aa1_a9MqXVGVTQdmZ7zce-Z2aiXUlJfWy-NNI5YwxfJWm12ShriS6VurldKc5MfbFI2_tt17D_zVeCLfmtPlRZhvPBV0gFmgFSIYXWtjjD4NKG9q3SCaUWuMwd4N=s4800-w1200" data-castle-name-g="Kimbolton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNoY7Ok8ouk0kmQrezSPZharmc2aa1_a9MqXVGVTQdmZ7zce-Z2aiXUlJfWy-NNI5YwxfJWm12ShriS6VurldKc5MfbFI2_tt17D_zVeCLfmtPlRZhvPBV0gFmgFSIYXWtjjD4NKG9q3SCaUWuMwd4N=s4800-w1200" data-castle-name-g="Kimbolton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNoY7Ok8ouk0kmQrezSPZharmc2aa1_a9MqXVGVTQdmZ7zce-Z2aiXUlJfWy-NNI5YwxfJWm12ShriS6VurldKc5MfbFI2_tt17D_zVeCLfmtPlRZhvPBV0gFmgFSIYXWtjjD4NKG9q3SCaUWuMwd4N=s4800-w1200" alt="Kimbolton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqElNNhmTWM4HeC8_psUnDjrYq_cgkwm2S42WAAFTLI1T97s7HAS5_chV2dJp4SOAG9zQ0mzwCt5suy2oRwWnx7HW0P-mqdqGJw=s4800-w1200" alt="Kimbolton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqEX0fXV_4eUCEQ4muCOmTLiS3N9oLJQ7sA_2bQNzg4rIHAPLgF-ygU5zHMxUhJIO7Up02ekZtLogLAvLTsybjomVFUpTA5rpJ0=s4800-w1200" alt="Kimbolton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPETnEvMZvKLpN9FTHBK-Z3wXqoxrHrhhhKteIhGhhqamgLRHqXb0ZEZW2z1qq2vWVeZ8Jp5NUmrloRMl6Mce_NGq5TbmbtIUqLug0Mm3b0Bb6xmOqtqqT45pOmhC5Tx3nsLeT2v8D1xjvCMw=s4800-w1200" alt="Kimbolton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqFrVN5CHvlDnBm46YuEPxt9Bc5iYakaxkU5jNna1gavDXzdlBWODXDYAvqXG4kU0B7onHcF0n3wIJiTZljkFI8GkqeLnXdRTs0=s4800-w1200" alt="Kimbolton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kimbolton%20Castle%20Cambridgeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

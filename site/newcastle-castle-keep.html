@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfdwUfklqy1evJCWeK7aOh_SmLeIQaVPMr9ejhTvNYZy0bwdKYdoLxc00J6JyvwejTINm2Q57nI6sDz48nI_jc5az2U8XQY41kTYd-lv7bgjUhp3yKiOGTnvJKXUxkL01qiqZMGFxApmBL5w=s4800-w1079" data-castle-name-g="Newcastle Castle Keep">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfdwUfklqy1evJCWeK7aOh_SmLeIQaVPMr9ejhTvNYZy0bwdKYdoLxc00J6JyvwejTINm2Q57nI6sDz48nI_jc5az2U8XQY41kTYd-lv7bgjUhp3yKiOGTnvJKXUxkL01qiqZMGFxApmBL5w=s4800-w1079" data-castle-name-g="Newcastle Castle Keep" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfdwUfklqy1evJCWeK7aOh_SmLeIQaVPMr9ejhTvNYZy0bwdKYdoLxc00J6JyvwejTINm2Q57nI6sDz48nI_jc5az2U8XQY41kTYd-lv7bgjUhp3yKiOGTnvJKXUxkL01qiqZMGFxApmBL5w=s4800-w1079" alt="Newcastle Castle Keep" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGx0BHHeJWMzk4lgCwULBoDJdEm36FG9pFdY-LmKIeS4sWoU2leWZUEV-uxMmzla2_7_X_eSUJbFLPC-AVqYoXCT5H7JA4eLEo=s4800-w1200" alt="Newcastle Castle Keep photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPfzkwJbRlg-87OXRbZqscsnQ3GDeyuKYpPr_PSNr-T9Yzx-VXBhN6N8admtZWdRr5CLrpyrJygTbF9G2bCQYw29Ni3HhdjXmaGpsJleZaWcw9YDzCjmhWYykjbekqBd69vRh-sfdjE4mBpVQ=s4800-w1200" alt="Newcastle Castle Keep photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjBzmpO4uYM0a1x8OTg3XNDhHg-VWuOaHHuMGtmdxz_MIDmGArV-YEfzvbRTnWoomFuV8_xcApg98vn09h1oGYmJK79XA9QNv061nH4WUAaY0jPZoQHZtF6GCYbWZyhwGZi5HePSAQWqgzU_xxF8K5=s4800-w1200" alt="Newcastle Castle Keep photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_MEr7KRaSygdquhCh40qgmv8g06ZHCVTMAldhpEFRIUdZX7eP8xng878NYkndnPsCx5fNZQLtlOpZUjcXcdwxbpcJGED299rQN99vV7z2snE56IiOLoV0s6Utx0sKVTXXOPK3lH6HBMEl6EWsRV46iA=s4800-w720" alt="Newcastle Castle Keep photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Newcastle%20Castle%20Keep%20Tyne%20and%20Wear" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlQXD_GaYKs8Ztu8HapkNB_V_9di4xBCjGLyjACI0vUatSjzjiwOBrJww5JSBpp0LNy-7fDSEznYpH7AdXdzZJiHZDf87kCiM4SQbjgR4uxwLqlAyQ0hrQ3wucm4JTpjYDSewuBDTdAAIhoV8=s4800-w1200" data-castle-name-g="Thetford Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlQXD_GaYKs8Ztu8HapkNB_V_9di4xBCjGLyjACI0vUatSjzjiwOBrJww5JSBpp0LNy-7fDSEznYpH7AdXdzZJiHZDf87kCiM4SQbjgR4uxwLqlAyQ0hrQ3wucm4JTpjYDSewuBDTdAAIhoV8=s4800-w1200" data-castle-name-g="Thetford Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlQXD_GaYKs8Ztu8HapkNB_V_9di4xBCjGLyjACI0vUatSjzjiwOBrJww5JSBpp0LNy-7fDSEznYpH7AdXdzZJiHZDf87kCiM4SQbjgR4uxwLqlAyQ0hrQ3wucm4JTpjYDSewuBDTdAAIhoV8=s4800-w1200" alt="Thetford Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVoCPXIz6yvcBgkmFGQuKHZq9kv_dc1-6jQZUldwEJkpYWjsq2WdGVF3_t9lnuLgxJPBQ2p0Sgh_I_UcohK7MzYxGKL7qFYD6gL99EmtOZ39sozeG9d_9gDVSlswsQcrf_f0tuEd52ClUJSQ=s4800-w1200" alt="Thetford Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKAT2NE5Hac6HQ1rc_WIClsm5fjCmDfiybdoZcyOdceBkMutXpUETFA7uhRlDxRXa5cgHLTAXQRxAD-fu_LO7gaeWp6FGpe-iT_igHShixP_ofGeobmf1UuDfPwAEws-PqoB86ozZGvC6PZyzhOLX5IQ=s4800-w1200" alt="Thetford Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWiLdzu8fF40ZF1OD1EiAcAXyN53z4XxmG2nAY8bSaeZpuqjtVaMcKwonqA0dVBWhndXtg9kMEk9g8oR6FcXf9i4VwqkPOQIfVgaFIqalRNsSlmQc6KhSsSgh-DxNpSIVraukNTdLpmbV_=s4800-w1200" alt="Thetford Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOr3iV18obViK72Aw0rYJ33bu6gTJ8D9LCmrvCObEpsJTuhAm5Q3viate2vrTs17MdIBD-i35O0b-ewegAnNMZdY_cSguofwXEbovc5o5O68GrOrLvPQ2j-tZk-Ya-d7921y3k2C3IMOKAaUXra8fSuWg=s4800-w1200" alt="Thetford Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Thetford%20Priory%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

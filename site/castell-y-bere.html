@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnW61rolUeqyxZguSjRDMJ1myxN1KgVAtsmK2S9puqYQbnMbyX0yl4YDmAfk_cAGr48iEK2UT4KFzODQopvtUlLSVzE2_AkSX390uWWqVf511-no8-z6KH6lFL4vxrGuZT_SV0UPzsSDfMnaWr2koRVQ=s4800-w1200" data-castle-name-g="Castell y Bere">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnW61rolUeqyxZguSjRDMJ1myxN1KgVAtsmK2S9puqYQbnMbyX0yl4YDmAfk_cAGr48iEK2UT4KFzODQopvtUlLSVzE2_AkSX390uWWqVf511-no8-z6KH6lFL4vxrGuZT_SV0UPzsSDfMnaWr2koRVQ=s4800-w1200" data-castle-name-g="Castell y Bere" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnW61rolUeqyxZguSjRDMJ1myxN1KgVAtsmK2S9puqYQbnMbyX0yl4YDmAfk_cAGr48iEK2UT4KFzODQopvtUlLSVzE2_AkSX390uWWqVf511-no8-z6KH6lFL4vxrGuZT_SV0UPzsSDfMnaWr2koRVQ=s4800-w1200" alt="Castell y Bere" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSyt1GGO3llSnzcePg7BAp3wl_4OPD5U-u3a5zmSPjwTD4mJn1X1Xcs9wRltw_moCJzh0R8F2B0oG7t3y6B_bbZxZrawjCYLrA4P4zBPTfqIEy5hKir9FDsZS5up_4QJKzlsPiZiOmVqCXrw=s4800-w1200" alt="Castell y Bere photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMe029NbnbXq-_iPqCzG4hRJi1Wv6aITjWdbiU7JIcWrBg386gNA4XF0BkuwQTRAvERpF0NPSAFJ9BCJnZCdrxABh7-J-wIBEayGRFoqP8CjlZRYuwzhWciLSjEIMDnSQeY-HQxkYFcuNFcQQ=s4800-w1200" alt="Castell y Bere photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHmvEnfR4Hr3zW3QJ4bVCkZAPfFM_tG-2CcET16bqO4lJYPofx8REODioH0oFlbMN6BaxCfwg5pEI1ZZB1fkUX8i7HUdXspyNNGSS7CnJsNOZfb1eIP3g1RA0SKI3gLSpljlPPL9kbAVdTwzg=s4800-w1200" alt="Castell y Bere photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEjZ1EL_3LuQUvabN_aUoPq1nTk7Qn1ZKVYFqn2Mxiw5NyJjC_3kgI-B5rWrFZYA2FSeTtnOqup4WS0CqXF3oaPbgao2xKsBeMwNcgGXG2JEm_3_rP9MPBb5rVKsMAqM2Sgf5CHAFzY0ypVg=s4800-w1200" alt="Castell y Bere photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castell%20y%20Bere%20Gwynedd" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMefXJYknofWMQqzyqj17sLFfB_emfwPiBCrVsDMCxhR6RWE3fEyWMtfKN68aC-FQHo6NMkckiZ8ZBzSDj8_IDgEUaVVSpCc8_JGXSnErXLcp8YmtvQkqPnpLAV4c0k2gs2GUtzeey9pWprHa_QZbPcA=s4800-w1200" data-castle-name-g="Picton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMefXJYknofWMQqzyqj17sLFfB_emfwPiBCrVsDMCxhR6RWE3fEyWMtfKN68aC-FQHo6NMkckiZ8ZBzSDj8_IDgEUaVVSpCc8_JGXSnErXLcp8YmtvQkqPnpLAV4c0k2gs2GUtzeey9pWprHa_QZbPcA=s4800-w1200" data-castle-name-g="Picton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMefXJYknofWMQqzyqj17sLFfB_emfwPiBCrVsDMCxhR6RWE3fEyWMtfKN68aC-FQHo6NMkckiZ8ZBzSDj8_IDgEUaVVSpCc8_JGXSnErXLcp8YmtvQkqPnpLAV4c0k2gs2GUtzeey9pWprHa_QZbPcA=s4800-w1200" alt="Picton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHz-HbbnkgqIz-glgZ4n5zmXA_JRGLFz-6XYUnROZJ2rafq_jviiSkoUP25G3D_60dJ40-OUcf013nbUVb9P_Mpa21VPecmO6g=s4800-w1200" alt="Picton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN609ATOmkSIbrCtea6_78NMWWGq21KfWArk2j47hAsFaTYAmOwnAyGXKiN40eOLL7of871ItdfroQlAM5P1f7Vk7e1WCaCxkrdPYNPxtgXMw_yhVHJLm8Yx9J_0UIQZcbh9zUjHxslnQIdHwg=s4800-w1200" alt="Picton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzism-xLEkmkY66w69Hdv-GtZG_y_USW-DrzhSfgu7mMw_adKb7vy4E94jTWWuAKQBmuFkk9EE3sXz1-JJrzzXGbllL9AWD63-8iVnjh23pFAytBaX6DAy-yTVS3MFEXVPK4Y0QJFfLp9wjQ6BAawzHQ=s4800-w1200" alt="Picton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM2zfuGznHDFNL4PZGPh8nP_j2i93q2WA5okhnHdh9nP0t0HlhjdYgkKQr8PmjDAfyVP3R-fGrwNYVQ688U38NICTEdhC75E8wweH4wVs97wOVkLn7rNedD0vLZXAE27HsOeI_-vLHfy7TEjA=s4800-w1200" alt="Picton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Picton%20Castle%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

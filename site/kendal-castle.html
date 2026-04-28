@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJmSIUT0BD5dG8lvQFU9kuIpIwF_IF3-rKehfdVqryF1vPc1FL8DlbEU8Rjf4iyXSMfFK6e5NSF4ZVnLnwzh1Y5gs9FPjIuQ33Rahxmf2HjAfzcN1oy_nVgLcOOS_Do60RIZJaYT4LH6knsA=s4800-w1200" data-castle-name-g="Kendal Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJmSIUT0BD5dG8lvQFU9kuIpIwF_IF3-rKehfdVqryF1vPc1FL8DlbEU8Rjf4iyXSMfFK6e5NSF4ZVnLnwzh1Y5gs9FPjIuQ33Rahxmf2HjAfzcN1oy_nVgLcOOS_Do60RIZJaYT4LH6knsA=s4800-w1200" data-castle-name-g="Kendal Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJmSIUT0BD5dG8lvQFU9kuIpIwF_IF3-rKehfdVqryF1vPc1FL8DlbEU8Rjf4iyXSMfFK6e5NSF4ZVnLnwzh1Y5gs9FPjIuQ33Rahxmf2HjAfzcN1oy_nVgLcOOS_Do60RIZJaYT4LH6knsA=s4800-w1200" alt="Kendal Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPV6vo3WuEi_K2X_ldu2zVRBBaHWxH9PW4ShczHGh88B5hjE2h6fbnsKwvQ1OjYL2q85xi-hn5U4rhRh8ogAaWIu6_i7vz7jeITVMfu6Gmm_PRwhfeRH4goiUUWmW4F2FRN6KtMVj9778nj=s4800-w1200" alt="Kendal Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYyc6gp7cTq1b0knCvGVkRDsaM0EyyqWUQZeQeUGsYErwh4ICY5642iWkFr_zuLK3PTrugGrbAH7yUaY_mJ6lYQjnPKkol_6huK1r6wTCtOwHgyrgvq6xj6hZmPNWS9fYohPuCz3BW-OKvd_c=s4800-w1200" alt="Kendal Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpild9NHSlLJP00gR5Y9NpuQPLn_J863zAEHIjOio1HbOJm0ooNq5qhKFS25mRYcSWLg29cWo4o6kZAu1JBxPDWA5U_orUQ9k0jbIKxmE-V6p3ZE9MTerPSRne-uwXL_QaMgKFgkkkk_XeGQ=s4800-w1200" alt="Kendal Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPncaNfvfJrHqThXbc_PKJew7e65rL1zFhjRJcAjqD1KPRFuF0KHIiptkQ5X40x5bQe9B1MVb5xMLvfVsPFTl5i5FgC9gHK7Wevb7hjLWorfQm4iSqD4FznKzQ6vWGjSTV3F0GMssWcj3WYaQ=s4800-w1200" alt="Kendal Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kendal%20Castle%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

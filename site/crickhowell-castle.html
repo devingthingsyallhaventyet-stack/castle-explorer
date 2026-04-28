@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVn-SWY_cdyszSIG7rPbQhdM03jXHeudt8SU9tFt9FpufS18_GiMRX6m_FUFxZvaTEYCwHaPYkmnCMJ-fv-cGy825Tj1NJERjnm9uATJwQPDHm2wG5XApJ9R3d5dpMXJG5VhydMk0zotdedA=s4800-w1200" data-castle-name-g="Crickhowell Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVn-SWY_cdyszSIG7rPbQhdM03jXHeudt8SU9tFt9FpufS18_GiMRX6m_FUFxZvaTEYCwHaPYkmnCMJ-fv-cGy825Tj1NJERjnm9uATJwQPDHm2wG5XApJ9R3d5dpMXJG5VhydMk0zotdedA=s4800-w1200" data-castle-name-g="Crickhowell Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVn-SWY_cdyszSIG7rPbQhdM03jXHeudt8SU9tFt9FpufS18_GiMRX6m_FUFxZvaTEYCwHaPYkmnCMJ-fv-cGy825Tj1NJERjnm9uATJwQPDHm2wG5XApJ9R3d5dpMXJG5VhydMk0zotdedA=s4800-w1200" alt="Crickhowell Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsnMe0Nx2YW8YlVg2X8msR3NdI6OXWOud_VUsc_zg2pRzrAS13udZOaM5ORoO_lh_wM4VdApYjzMK8EJ54OPmBQN5SF1E8uV4ud4hbN-YVFK7xZf9oryDfYEPUC8eJHchFcjjVZdUMi4lV3yGR5on5Yw=s4800-w1200" alt="Crickhowell Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrjl80Pm6pPOdlbesu3J2wNULsW0grnO5aRnPHosJ2ffKyHUSb8qTMdbZCi4Og7xbyp2Z3fg2ujolaHIAFq3iwv17BUf6lU1pTMVKFFxZvWmPp4nEOKSTXNzkFEBqlurn1kASPBYoWV2gveJGtA8-FNg=s4800-w960" alt="Crickhowell Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP46XvwLFVFBFvgdzJzZvTH2sdl7FaCrbUzqI8tG_npl8MBr-uoDNF9FhOOdVeRLUVDDs8r6ca4GlnhNf92tVt1IfofI9XGDBOyh815PcICuZvoC8bL0QvGz0wo96uNHO7duA3FoZfiLJ37eyM=s4800-w1200" alt="Crickhowell Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4k04YTPAFZ2sSsFyQSLC9dSGMNcoG6mMfSI8HpTxPIn4-m-MJtL44C4BcR0vDXW9A4Ob8jw2N6JXh2heer7uuHa_12kAB0KPdfdqREHITliY4vDSfdzQN6RlWm9IBqylL9KLsAq_Uar9u=s4800-w1200" alt="Crickhowell Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Crickhowell%20Castle%20Powys" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

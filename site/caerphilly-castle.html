@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJg_1V4r3wZQKcqVJ6B5jiRdCxIJp2BqUwyH9UKnzIAi17LNgUFbtY4yLmrGAAiWfbjj4GE1tUS6gMDc2tsooZBDZAPbxpsln8lKppuaK676jQ-zXry5EMeL1a4KHfDHtQ-TsRftVTBAFtgynKRRVOHQ=s4800-w1200" data-castle-name-g="Caerphilly Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJg_1V4r3wZQKcqVJ6B5jiRdCxIJp2BqUwyH9UKnzIAi17LNgUFbtY4yLmrGAAiWfbjj4GE1tUS6gMDc2tsooZBDZAPbxpsln8lKppuaK676jQ-zXry5EMeL1a4KHfDHtQ-TsRftVTBAFtgynKRRVOHQ=s4800-w1200" data-castle-name-g="Caerphilly Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJg_1V4r3wZQKcqVJ6B5jiRdCxIJp2BqUwyH9UKnzIAi17LNgUFbtY4yLmrGAAiWfbjj4GE1tUS6gMDc2tsooZBDZAPbxpsln8lKppuaK676jQ-zXry5EMeL1a4KHfDHtQ-TsRftVTBAFtgynKRRVOHQ=s4800-w1200" alt="Caerphilly Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPW2VCuf6XH90EZFpavwuCnTr2fBTbMd9yoQwbO36njtYAj_Np7BP_hVD0NMazJNAfZhwc6HXVyu3HChirjE20Su56aYaZZsGvxF1ND5tuQSpILiOwHPIgykkGd8iP6JMeRlTA3WMrKo48CLw=s4800-w1200" alt="Caerphilly Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN46Uk5mdF5nstGvQNRLTqvOQT3JUvWI3cmy3saPw5NHArzWCBd3hI9nzLXIzV74aYdbHYVeQKanbhvi9CPOsUCwX6hWleYG5oP9aIu56m1bhWfSouBCKbL78sTyo45Aed_GTGlGNkGL4p0R-ekc8B_ow=s4800-w1200" alt="Caerphilly Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlYuW40JqtFYhZljTGvcJPybzdnQJboruzQ9QqOcUbibRTvtPR0vPaImDQ4NVdZ-12G0aJC7_ANtgP8PjgFmQ_fT-CJm0thjWOv4D_1NtD8MsoUmDL1hN_9ph2bwKOD1chs5EhZvduAj-sPOg=s4800-w1200" alt="Caerphilly Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIH1QdNZ1uGLNDmfS5ZJlTvUvDAF9JBn4okoUoNcLmxBCqYBRWorBawh3h9jdqbPECPGNvXfxYj6ogOPtf5639mIBrkLdrnHpMVjAxOZ_p9TzbcjtOGpkjKRQb1v9GBQfrQd4Alm2-5W29w7JaQBbs=s4800-w1200" alt="Caerphilly Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Caerphilly%20Castle%20Caerphilly" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFZ-E_mDa_t-ABlv7mCfL4a4UvIA_oRZzCaxjHU93wz6x8piAwizjDf0_zOYYNsMc--QQ30_a_tTs7VD-HTdpecomRhhUx8YWieKNnHzLqAJenTuZN6wjHlt1QXiT5ZL2njpPHWOKQMUdbvg=s4800-w1200" data-castle-name-g="Bradford-on-Avon Tithe Barn">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFZ-E_mDa_t-ABlv7mCfL4a4UvIA_oRZzCaxjHU93wz6x8piAwizjDf0_zOYYNsMc--QQ30_a_tTs7VD-HTdpecomRhhUx8YWieKNnHzLqAJenTuZN6wjHlt1QXiT5ZL2njpPHWOKQMUdbvg=s4800-w1200" data-castle-name-g="Bradford-on-Avon Tithe Barn" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFZ-E_mDa_t-ABlv7mCfL4a4UvIA_oRZzCaxjHU93wz6x8piAwizjDf0_zOYYNsMc--QQ30_a_tTs7VD-HTdpecomRhhUx8YWieKNnHzLqAJenTuZN6wjHlt1QXiT5ZL2njpPHWOKQMUdbvg=s4800-w1200" alt="Bradford-on-Avon Tithe Barn" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOALMBBfJ6_XIwMwSUTgveYuTiydFu5uGpsdHeBrkxWY4lg0DdtaCFEBHw1FfferbT5Q_V0VWO6BOixiSKu4KoCncOiEbnWOHNeoTBEZ_93dicaPVJp1AGgdnTF4qOCkSTMT0n71t48iHqzIw=s4800-w1200" alt="Bradford-on-Avon Tithe Barn photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtIMHGi0mvWD-ypPMXo-VPhHgCSgmjIA4UJHcHwfu2OaiU11QguPtJ-Yrnx1ZlIeunKWsynKjntyMrza3ZKFqpW6mHHJgvqxE1DDgjbYozmTQ_Za6P9kiZVH31oIlQH9ACGieCmCBXLTeiPA=s4800-w1200" alt="Bradford-on-Avon Tithe Barn photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMVWhttiM1UfpPJo8FtF2v7VoCfJ64KiUgf3xlJo_iyU4E4JtJ-hwTHL4jP7awTm2rKfiG4V8vmPLv27dPKHaVQqOHEQAj_uOfboIW1PTPVHPQwiuwSR85BwLotCbgKeB7m8S7a6aBD3CcTMTYFQxLbqA=s4800-w1200" alt="Bradford-on-Avon Tithe Barn photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOViONqxGEs3oxsF853eRqQW3_UGTg9iRqdzGmulN9tCUgn36W8-zlHaZ79EVsm5yNCffbwhrK1YUBwaDDcg7ehRVF5larkvP2WbxT_M0IKcdREILneWWVOMXvaI-7s1CAhB_UPGKl3-RBCgQ=s4800-w1200" alt="Bradford-on-Avon Tithe Barn photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bradford-on-Avon%20Tithe%20Barn%20Wiltshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

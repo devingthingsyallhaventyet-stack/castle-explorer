@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNk2Jm6NglJonjg9ralXihrPsaRHI4xUMyU7zHEB1BGPknbaQnPQQ4GdobWbANVxbCxHvj1SPblHDqh_yPQVnueCTmZfXMwHfz3VyyliaLEzSrOpOYlt-rYzeCN7kjBB_D_SZ00wbLNtHgfSbs=s4800-w1080" data-castle-name-g="Dublin Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNk2Jm6NglJonjg9ralXihrPsaRHI4xUMyU7zHEB1BGPknbaQnPQQ4GdobWbANVxbCxHvj1SPblHDqh_yPQVnueCTmZfXMwHfz3VyyliaLEzSrOpOYlt-rYzeCN7kjBB_D_SZ00wbLNtHgfSbs=s4800-w1080" data-castle-name-g="Dublin Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNk2Jm6NglJonjg9ralXihrPsaRHI4xUMyU7zHEB1BGPknbaQnPQQ4GdobWbANVxbCxHvj1SPblHDqh_yPQVnueCTmZfXMwHfz3VyyliaLEzSrOpOYlt-rYzeCN7kjBB_D_SZ00wbLNtHgfSbs=s4800-w1080" alt="Dublin Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPkTOEs8jCAurpBKMIc0QTjvL3cw6sX7WROwj1TyVm80Tlb_oMlrb2KwwQc253NHMLIudw9BCntZLgIQ1F0ceVcjcqlB_WPvOS6IYYRpajVExB_JfPxbQ7emKnTzqFY3kCzaCyhg2wTEZa6=s4800-w1200" alt="Dublin Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyz_sizL2p1E_bCNUzzL-oetDB-7nHGASK8qpjrKsdpEO0a9AZZ8MRHNo1ihkhtTdhtGJ6p7BJ0pKgqHzUCF1rkEOtMOWq61Dn7KkHIgjI1x2d9xCIfaMI06vAoFgLNMeuF-BemQoXTAmEYg=s4800-w1200" alt="Dublin Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMwYkQxxnL3mb0MSwIrjuDLL697miRYh5LXw9ndNiATWOsVGilms2iuNP_LexUQVMA0JdfeAngvCCr0NXfV_f3LTTks-6gDchdnN0Ln0z2wBfMUV-43qIOFn8LfjC0f5B0IvUjgM5agMQLOh_Q=s4800-w1200" alt="Dublin Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJkvd_2AEW1vZ-JrbcozFXikv-4wAJPt0Znw_QOrnXAyx07upot8Vd-AZI7DuWHWRZ7mrXlYv7EtDMjM0csT4ARLQl2yj0mzl1agcVEHDWcXRBF4GUIWC0XxuR_4L7uJcNNO2gXVhHj1iM7vk=s4800-w1200" alt="Dublin Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dublin%20Castle%20County%20Dublin" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

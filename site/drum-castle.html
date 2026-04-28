@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEbIsbaqoRe4TbnzvRrI0xGv66bv1x9-sJm5mU3NW-eQ7yJUPa4N6eT3HXnL7cWsYrPcpFa7RczwLI1vzPxweImHc8K4dADm7E=s4800-w1200" data-castle-name-g="Drum Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEbIsbaqoRe4TbnzvRrI0xGv66bv1x9-sJm5mU3NW-eQ7yJUPa4N6eT3HXnL7cWsYrPcpFa7RczwLI1vzPxweImHc8K4dADm7E=s4800-w1200" data-castle-name-g="Drum Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqEbIsbaqoRe4TbnzvRrI0xGv66bv1x9-sJm5mU3NW-eQ7yJUPa4N6eT3HXnL7cWsYrPcpFa7RczwLI1vzPxweImHc8K4dADm7E=s4800-w1200" alt="Drum Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMyXHQuNX3uZXW17q8_JHdNW61XzLk3_b57H0m-7zHnTH-N5bgr1C8Zf0YmjqZX6V5V1iOiqAedjiQ7oWVfd72DGXUAjiV8xx9zpQu431jAeRBpsQ8eaWpmOErTgC1DUT8GfY5is73TZsImVA=s4800-w1200" alt="Drum Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzPbzd5RNoem6Mz62Ge7-Tx-A4GypBp-kP-bd5roSi6W41GXxsqcEyFA7ONCBXZQcm0x2G0LgnxKXJ5KdBBe7cc2LXLEYm3ZQkePs1Vsajs6dXKDfv5sAGvVK9-TKEQevwxuV98GT4q-0Wt_M=s4800-w1200" alt="Drum Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOY-PyhXhk--Jsz9CIknrP5BmdaPUEjufUmYwqKHkjHpRVPRkiyYb09KVaHBsUKnLPFkQscMcULyyNhVkllmSz_K_G0FO-c-CLFqi3iXzromnu-yIUDewSgwxhPt2SJtK8kybXy5MkHjzB0=s4800-w1200" alt="Drum Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJlsjJKIi_MdClCXysE3OGiL_kBTLra-tDhkIe5WsztpTZSb66uQ3pk9pMf3uYlXLt56kjXHc9UGZ1ElZaXtMa2FcDQ5EjhE1j5SjmzGfe7KsHVdf1I5SsDW7nNxKHxlkB9fl1lmKtzJMVpg=s4800-w1200" alt="Drum Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Drum%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

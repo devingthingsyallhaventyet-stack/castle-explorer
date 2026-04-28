@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEbVrEXR3DYCRjkVeXBy-Da5LO7sX5wINizs4pzk5x5slIx7OQkcpWf3eYYOk7Xkre15D5idNUw1Q6YnQ0fkm-ZL20OHMVzjD0=s4800-w1200" data-castle-name-g="Lews Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEbVrEXR3DYCRjkVeXBy-Da5LO7sX5wINizs4pzk5x5slIx7OQkcpWf3eYYOk7Xkre15D5idNUw1Q6YnQ0fkm-ZL20OHMVzjD0=s4800-w1200" data-castle-name-g="Lews Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqEbVrEXR3DYCRjkVeXBy-Da5LO7sX5wINizs4pzk5x5slIx7OQkcpWf3eYYOk7Xkre15D5idNUw1Q6YnQ0fkm-ZL20OHMVzjD0=s4800-w1200" alt="Lews Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGLPYSO_6TNVDuf2YXkRqCWEJi7M9gAA86DS28q8rKJgmtt8SpiqKYA6pieooboIASNliuxhhHKP7rkxq_CqxXkgaPpUe9rBwA=s4800-w800" alt="Lews Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqFuadBiYlvP2mP9vz8c6C8V6MwRPcWqlqFRFLfpcg18XstvsJi8DRi_xetZVb0XciqFnQsF8SVhj8Uc_ENokbkYJB-Drbv9ig0=s4800-w1200" alt="Lews Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqGBZc2noPlDoeDsDEH73eJOAg_naZh3n6vfsxd4PSqhw-IAWS4uPL3T1OksDKCoFPjUzzL1OkWXzWw9KaVoDTwZAL4RxB4Pfro=s4800-w800" alt="Lews Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqFEZrx2_VVf6H59wTkpPwUNy0i--dVpUk5DZYUBwIiVRVql5FhYgoP-qF2BBGvSs8ELZFN5d28UaHo558VNcsh60QIIy1dg5aA=s4800-w1200" alt="Lews Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lews%20Castle%20Western%20Isles" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

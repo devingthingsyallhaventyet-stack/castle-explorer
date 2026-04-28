@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_SiLcwmNugSsH3lsaJP1Lipt2Y9964k_8dPtWyhMsWIzmCmG_nLj1OEtPPknyHffjhifctCea2L9w6uHweURsh-uvmE0kY7k4Pa7zTe-WjRPCHOwpit6x-X4_12QU-W7uuyyK0R4HC0QI6g=s4800-w1200" data-castle-name-g="Berrington Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_SiLcwmNugSsH3lsaJP1Lipt2Y9964k_8dPtWyhMsWIzmCmG_nLj1OEtPPknyHffjhifctCea2L9w6uHweURsh-uvmE0kY7k4Pa7zTe-WjRPCHOwpit6x-X4_12QU-W7uuyyK0R4HC0QI6g=s4800-w1200" data-castle-name-g="Berrington Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_SiLcwmNugSsH3lsaJP1Lipt2Y9964k_8dPtWyhMsWIzmCmG_nLj1OEtPPknyHffjhifctCea2L9w6uHweURsh-uvmE0kY7k4Pa7zTe-WjRPCHOwpit6x-X4_12QU-W7uuyyK0R4HC0QI6g=s4800-w1200" alt="Berrington Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1YspV0qoPQrktYqbGX0KJcA1PEBnDm7UL3bGVhFaxyJrlERA5EznbJ3_SCoXp60e6M_L9GhaEVfIV9seSDB_JTLnKunRDpapoFStlCjjbBI0koo6hZC5gml6Mcv724yZPcjc6lYBtloVSeg=s4800-w1200" alt="Berrington Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKBZnUDKWFFPhQfdhYgfwyjUY1tMwXUrGHOz5C5qr_tr_ci-j06n8RAUtqlDtW_FJlJ5541qmYFraQLMXAxCMxdGlyQ1QATVS12gaKA6NCq3gZ4SIX7Wo7p0CLNWytbSSaPLZRhrOoaRl7pw=s4800-w1200" alt="Berrington Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPKZtZi0Jkc0jQMOdaVrs8yoaGqCcjOfMVmROFbTO3MbjC_4gixrAWDauZcqC2-Y8-5nvaVmv5gM4P_dgU3tfyTVhunleGgWDGhhncJoDBbMjUY0pxcU_xPQe6GqSdkchyRKvAcTMbYAbZ4trBbrvqa=s4800-w1200" alt="Berrington Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMac-TMxrLkW-tzvhICjlzhX4dORlTdE90qLcni9sCCnPUO6Jsvd0RMsQEXfkXwjWst7e14l63hKmYrhr7xWZ365EZrYI3lou-MBXcO0cjwsKyli09SNpfoNl-D6De2eqHBPj-LbkRUZgVoT8e00JIC=s4800-w1200" alt="Berrington Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Berrington%20Hall%20Herefordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPowCEaF6o3A1yHVdjbTRBtYqZ5oDymXtqSFjC-ISgJx5RqDVnj9auW-5dqVPtJ20_FiNMegJE4YTQzEYfAP3hHWyEG41l20mxcLdNE54EUtl1cDKymipYVkXJRNYRhFw9us0tGnqPVBtTDXw=s4800-w1200" data-castle-name-g="Auchindoun Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPowCEaF6o3A1yHVdjbTRBtYqZ5oDymXtqSFjC-ISgJx5RqDVnj9auW-5dqVPtJ20_FiNMegJE4YTQzEYfAP3hHWyEG41l20mxcLdNE54EUtl1cDKymipYVkXJRNYRhFw9us0tGnqPVBtTDXw=s4800-w1200" data-castle-name-g="Auchindoun Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPowCEaF6o3A1yHVdjbTRBtYqZ5oDymXtqSFjC-ISgJx5RqDVnj9auW-5dqVPtJ20_FiNMegJE4YTQzEYfAP3hHWyEG41l20mxcLdNE54EUtl1cDKymipYVkXJRNYRhFw9us0tGnqPVBtTDXw=s4800-w1200" alt="Auchindoun Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMByUOFcH9pS0qJr3_ZnBTW9tKkhWk86y5TJROmheScwqS-QScagDnrtTR-zBYFo0B4l11FsmSwS5BQBxE2wnCNyAPqXzt_XphR9Evy2p1QP-unyCFk7yFS_ycIJSJf84tkhGuItU9EOSdHnw=s4800-w1200" alt="Auchindoun Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYZjrgKcW515pFhf1q-Ybx1ZkIjuKTJvT2FZDypyqqxeY_o6k1WuCbcaNpTE_SJlaZb8rNn50bFkO8cnVedn0yR1AN_IWSObM9BQqysAqg06XT2B2olZbmhF6wAzAtskV2KvhpgygZHNqIDg=s4800-w1200" alt="Auchindoun Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP30yPRVn3jeygp1-CtcHBdzEctIg8DDp0J589O6LTxx1l5wjNeoI51AtyjPuzSPC-mjRzdUiBTl7hfqRA9J4XNuw93KfaiWx8MxtWA0RVMiK2SIQ0W-fkzfaVvLpOBpp9YP4RZbCsyjOdBeQb1dAAXPA=s4800-w1200" alt="Auchindoun Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5x3E61UvxSlLbuLivaJm5zWHAuWAniyYnQ-5ZI-uvMia-00tDDKripVaKZT44Q_yLnM_KH1352baoL-s_LctyGuiNPfSFvN-KI7dADR0YS1u8xU4-qvqTdkHW5s4Z83hN89Bbmdxq0OrjaA=s4800-w1200" alt="Auchindoun Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Auchindoun%20Castle%20Moray" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -400,6 +400,15 @@ Auchindoun Castle is a 15th-century L-Plan tower castle located in Auchindoun ne
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ Auchindoun Castle is a 15th-century L-Plan tower castle located in Auchindoun ne
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

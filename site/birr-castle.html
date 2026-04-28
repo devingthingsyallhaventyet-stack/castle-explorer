@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNl9jmmjJvL440l0Ko-jmGqNpR-vAT2gttATLzagtnrMXZRMek0zi5tKFWjZOCZKQLSxcLiom7y1JeX2iF8GlXvUwDYB3HIxqJ1cDLKCxNq9gjqKNCljI_axUV6USqIBa7rFS6XTEQcxresQw=s4800-w1200" data-castle-name-g="Birr Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNl9jmmjJvL440l0Ko-jmGqNpR-vAT2gttATLzagtnrMXZRMek0zi5tKFWjZOCZKQLSxcLiom7y1JeX2iF8GlXvUwDYB3HIxqJ1cDLKCxNq9gjqKNCljI_axUV6USqIBa7rFS6XTEQcxresQw=s4800-w1200" data-castle-name-g="Birr Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNl9jmmjJvL440l0Ko-jmGqNpR-vAT2gttATLzagtnrMXZRMek0zi5tKFWjZOCZKQLSxcLiom7y1JeX2iF8GlXvUwDYB3HIxqJ1cDLKCxNq9gjqKNCljI_axUV6USqIBa7rFS6XTEQcxresQw=s4800-w1200" alt="Birr Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGO73l1z4eZgSWE1n3jZIVHkc3rnZioUbY4FHWRS0wdMHQ5EstNvtqWbjR0jBe3W29j-uZCpO2zY1gX5xbzH1ifvUaQxqKicA8=s4800-w1200" alt="Birr Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPooriCENZlDQeSiaajqgSG2QN-7QOXJcWezJue3yvtM2HLX04_eD-tUQa0cCk52-CO6jYjUgvxDs8qD7r_GqrTkrDgMMW0IZIc0Vx-QWftke8B7hqykI53LxCa0nDacn5x3-vO-nYXIy8hGiI=s4800-w1200" alt="Birr Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9mFk1V8DNkVNiUQH8K4N128cLqNZaB55dF6S21uQnWfA9fEzWidPpVWiEDYA7Z8JpBaC_SGIL5LWUDiBliCoAibfg9w9GLC0N_XCQpJa3rZZxLLnElacnSswe7lhUQ6xZYi4bhAkszKDel_Q=s4800-w1200" alt="Birr Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOvANdsB8GRJWczWpNGHsMGnujtb4wHSnoNPpVOM9kcm9LwiGyp0GRwfMZwRt7XzwUHrY6GwhqwRxVTddN2TOq2HK-ZrFX-IfZqKqbmesnoWcMw6g1edC3UDxx5LAaWovMRW6ONAsg63b9hXb8=s4800-w1200" alt="Birr Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Birr%20Castle%20County%20Offaly" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

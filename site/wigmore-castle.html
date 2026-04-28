@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNN1R6QYbTNynHPV0vtfzDP3gfXtl-gtBLFbNGNc6TtNTTwd41ripTwMTiJ9ys66h-LynpWZj9y4KUjgmcyskatJSZAsIwH6fS5E0hrPeaK7-CgWQ9M1oVHKBD6NaZPcfIjCNkuT3pANamzwQ=s4800-w1200" data-castle-name-g="Wigmore Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNN1R6QYbTNynHPV0vtfzDP3gfXtl-gtBLFbNGNc6TtNTTwd41ripTwMTiJ9ys66h-LynpWZj9y4KUjgmcyskatJSZAsIwH6fS5E0hrPeaK7-CgWQ9M1oVHKBD6NaZPcfIjCNkuT3pANamzwQ=s4800-w1200" data-castle-name-g="Wigmore Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNN1R6QYbTNynHPV0vtfzDP3gfXtl-gtBLFbNGNc6TtNTTwd41ripTwMTiJ9ys66h-LynpWZj9y4KUjgmcyskatJSZAsIwH6fS5E0hrPeaK7-CgWQ9M1oVHKBD6NaZPcfIjCNkuT3pANamzwQ=s4800-w1200" alt="Wigmore Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNE8307GSuOnEqBczvrRcZeP5cwi5XuxHmIkySldFQx9SUg1u9gFmRgyNHmIn3Dw45aFhhXNq2fuwq6CcRFXbyoq_lDKwdi499tetQgF7HEUlghb_jHXnl5sWj1q3h82nDDYNRJiqfRZ3caxg=s4800-w1200" alt="Wigmore Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMldWhuI1_vcfh9j3BRA73mpKImT1Qrk8POtvgxM9kGlNkBIV6hOUmWwOfXBMOMofqup81v0UjyYIj1lVj3MHTVnNHTa7xW0XeS5D3wJ6OlZVEDmKgYN6-2eIow_KKWVC_-sQw4dHI1IvKzxg=s4800-w1200" alt="Wigmore Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBmAcLrE4DNyOUPCk_ElUUt2Q63b0sMC6ObkR5zPkpdRcGUPior-ZRt63IPzpszXFDo25G2eOpu8v6GyKlS5WtWes28wiDbJU-49wb9gUUsC91S6dTraqU5LNWyBQwZ2G-kiqpbm-iP7DeJVM=s4800-w1200" alt="Wigmore Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMaFOsXLNeMoLNQbBVM-nwNnjK1xAvqd8S2YlRYeHqNfzYZfhyFFjj0uQluaN_q4TRu5GyYMcdDk7VoerDRElZFr7KSyIF0gjEQVbI_0hTNqrT0NRoMXSTpFyVC3XjlnKhjcdRxNL6uOGz8CA=s4800-w1200" alt="Wigmore Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Wigmore%20Castle%20Herefordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

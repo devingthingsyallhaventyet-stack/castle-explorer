@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOZ8m8FCgGJ_xYznYnidFFbXUTi-s-wS1l4QgSjNWmvPd64gs6UkKyysAmKyPb_cZQ91uJFl9S1zS1PZZpLtBCp-KM5hbY6PKqZx4U3WKIem_QsZ1u29UImZQA6jnuQvWjFwjKdSIVyyNCOP7GtKaQCw=s4800-w1200" data-castle-name-g="Farleigh House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOZ8m8FCgGJ_xYznYnidFFbXUTi-s-wS1l4QgSjNWmvPd64gs6UkKyysAmKyPb_cZQ91uJFl9S1zS1PZZpLtBCp-KM5hbY6PKqZx4U3WKIem_QsZ1u29UImZQA6jnuQvWjFwjKdSIVyyNCOP7GtKaQCw=s4800-w1200" data-castle-name-g="Farleigh House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOZ8m8FCgGJ_xYznYnidFFbXUTi-s-wS1l4QgSjNWmvPd64gs6UkKyysAmKyPb_cZQ91uJFl9S1zS1PZZpLtBCp-KM5hbY6PKqZx4U3WKIem_QsZ1u29UImZQA6jnuQvWjFwjKdSIVyyNCOP7GtKaQCw=s4800-w1200" alt="Farleigh House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqEnPUUZsRI52IEX3oLfaHSa5V6g_8tm4L4FCj_M276d3Q-FWdwRglp9P8MbgYNBDKlJ1eLG6O5KTnu5BHnhVouF5Zl3aPLG3rY=s4800-w720" alt="Farleigh House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqHNwG1BGXYPsV0LfO4jmgX-nbXI0XJzsDK65VFmCoUhMO3u5EyZLXDh6PSByswDf7AIB9K882Wheun8KjN5CZZ5AY3gyJpzFUY=s4800-w1200" alt="Farleigh House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqHzy4D0c-MZAH35l1TGRryzuSuiWfkJkvYN0GuREaBbatcOkNsYI5gk2qvN82VMOWQpRQZyjhAdSSZlbOsvB3nHYepeEQxrvQA=s4800-w1000" alt="Farleigh House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqGGQ-72_VCw9yi0-Ews0ZyGIxjR6KpPyJiRoyIXuGGOZKuHfvhSeIXVQBWoV2t52_cdmx7sJQRCv3DkFauyWsg5ajnO8QDHask=s4800-w1200" alt="Farleigh House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Farleigh%20House%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

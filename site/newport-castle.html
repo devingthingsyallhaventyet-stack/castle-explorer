@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcO7Rd-g3N96v1jnedd7KxMaq5eT61KgigaFcbtQYOY9VyzDRrXSjHvbHfWy3nIzUsMcYltSabJQexj4prZe0rOTkRB-g95jITWJD5KFc0dXoNzxzMK663oXO80IOsED9OWJrhnqzG_IYzGw=s4800-w1200" data-castle-name-g="Newport Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcO7Rd-g3N96v1jnedd7KxMaq5eT61KgigaFcbtQYOY9VyzDRrXSjHvbHfWy3nIzUsMcYltSabJQexj4prZe0rOTkRB-g95jITWJD5KFc0dXoNzxzMK663oXO80IOsED9OWJrhnqzG_IYzGw=s4800-w1200" data-castle-name-g="Newport Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcO7Rd-g3N96v1jnedd7KxMaq5eT61KgigaFcbtQYOY9VyzDRrXSjHvbHfWy3nIzUsMcYltSabJQexj4prZe0rOTkRB-g95jITWJD5KFc0dXoNzxzMK663oXO80IOsED9OWJrhnqzG_IYzGw=s4800-w1200" alt="Newport Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMOlBOM8-QAsNO59z1-nQHwEchmkryQFk0oouGk5E6dh_h4rpxEajGJE99TI0TwS6L1VeLWpsxni-LhB2WWlRWn3who_mkWOhriY3wunKbZtlZxFTtm0SM0MzIeDU7uqxCO6bs0B6q76iwDDw=s4800-w1200" alt="Newport Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgAP4L26KU3VVdMae0f3xm-CCbmfNfJM6YpzDw6WjZUvL3IkcGfvtVEYArZLwjXoXi8YF4zhPKl8JCoSZXmqyQOqP7oFz0L_z5r_wpgd6V_2_WUzaKH349F9shFH7YwvmhN7zo-BPhLrm2BQ=s4800-w1200" alt="Newport Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFBQjzsznoBSTRm7ulEKa4Rrhnz_d5CWyNI30ncMeJf7ttqJ_AI9d3QHaG1rqfQPTuxnmBS1e75Yhkl78zW9wn3WK2mGL2YffoPX3qyfOYdWUUsPqoIYtUNvQobKdXaWrRJDMmHU7VuS7X=s4800-w1200" alt="Newport Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHSF_q5_4gI08xe799qyfMpP_x1RKCuTEoFFG6Z34Vrp9Lj61ENMHk-dfNCV21lpDGTE6spq6_sEg4ZwjDj6TrntBxkBySVbBF7CNGsVYIKd4lv1Y1J1O3KKePr72NXJ2e9qZg1NoWRXVKpAU=s4800-w1200" alt="Newport Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Newport%20Castle%20Newport" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

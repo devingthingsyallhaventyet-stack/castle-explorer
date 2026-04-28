@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUhPa-lSdGcnjjQntyGcREO6DoWWI6fTf5b6m3Iy9tLmL8STswYe20Inm26DbxRkgN4TiGc1Xax2VRgd56HLD9rsKNODXqiawUdQG9Z75oWPPncatzsBIZUvVTCeaKyKblHvmbNKLzsRKT3fBKla7j=s4800-w978" data-castle-name-g="Penrice Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUhPa-lSdGcnjjQntyGcREO6DoWWI6fTf5b6m3Iy9tLmL8STswYe20Inm26DbxRkgN4TiGc1Xax2VRgd56HLD9rsKNODXqiawUdQG9Z75oWPPncatzsBIZUvVTCeaKyKblHvmbNKLzsRKT3fBKla7j=s4800-w978" data-castle-name-g="Penrice Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUhPa-lSdGcnjjQntyGcREO6DoWWI6fTf5b6m3Iy9tLmL8STswYe20Inm26DbxRkgN4TiGc1Xax2VRgd56HLD9rsKNODXqiawUdQG9Z75oWPPncatzsBIZUvVTCeaKyKblHvmbNKLzsRKT3fBKla7j=s4800-w978" alt="Penrice Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMm0bBFpaHIsLF0aDN3GDz81LCuVYwR7SbcDiuvOhdjPV286ck4lIVftEBYWxiX_2DNATmtx4StzomSDT1OiFxfF_o-gX56F8Hyf_IT6FrEu06I8oHx5NCrE2GXCYk6HySK-fDas0k-TI1GT3JFQ6JQ0Q=s4800-w640" alt="Penrice Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMX96Fm-vRcwpXum3KDcTmoIDO1OFHhHU8TPUaOlC1a5v_OxjAlfTA03-Eh8uV3GSmaFpZUVaSiuH_rkH4WrJ3pEXdxwSP2u1VY731ATxPt__3vpkVZN9ZkhkZrBqvFTmSfQGJZ6yPzvcvSSSU76O0XQw=s4800-w1200" alt="Penrice Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-mRnL-xeuB_gFaf7OcM-w2orkQYxW9G0uFGsZtxg7TRzm6hhIuNo09_nz4OWkhcdBhFrKaX-OquwAK2e8FO2kPIBY8pN5JIDrFk8wwphfQHa233UQqyzKY37S53JnD19zn3G2RFbz0h3lvlaCLZF16A=s4800-w1080" alt="Penrice Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMspYruczXd98XPJZhBQA-tqgRX_jxCIXDDipYIa-RlU1i6M31xJPw1fCPjxgTemc-38phgXwn8pxUj2E74Fq-7pFRi6TpciDkFQSds8h6Jeth3Tg3sRamTkesMaX873neouX8CMW-OFqqxtrO8Wjx0bw=s4800-w960" alt="Penrice Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Penrice%20Castle%20Swansea" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

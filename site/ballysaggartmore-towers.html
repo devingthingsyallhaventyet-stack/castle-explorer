@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrntDb05Bj6WXBrs6gXMFcsY5CHDRAFUJwe5dYJR2vwcUQlmQfRo7rKKQzTz1XVtcJ7SAwA4V2VfewrhwDb9i-TfNmtAW323TxMowJ0gvX2eEy28KMeRHLmkazpFSd7Qvca_jQfxiA2Q5wkQ=s4800-w1200" data-castle-name-g="Ballysaggartmore Towers">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrntDb05Bj6WXBrs6gXMFcsY5CHDRAFUJwe5dYJR2vwcUQlmQfRo7rKKQzTz1XVtcJ7SAwA4V2VfewrhwDb9i-TfNmtAW323TxMowJ0gvX2eEy28KMeRHLmkazpFSd7Qvca_jQfxiA2Q5wkQ=s4800-w1200" data-castle-name-g="Ballysaggartmore Towers" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrntDb05Bj6WXBrs6gXMFcsY5CHDRAFUJwe5dYJR2vwcUQlmQfRo7rKKQzTz1XVtcJ7SAwA4V2VfewrhwDb9i-TfNmtAW323TxMowJ0gvX2eEy28KMeRHLmkazpFSd7Qvca_jQfxiA2Q5wkQ=s4800-w1200" alt="Ballysaggartmore Towers" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsroRlHGstEzcmwYTcvDHOMXp2mwkss9pmcBAaq28QwIaE230PDEFNgP1Kdr6_FzsABtflTwOwIuvIGehlRFOkr7YHW58evBwUGS6BmkB_tNg7c1wkWsm8jc5cXg8GCa9yzupi4Y0S1MbfYA=s4800-w1200" alt="Ballysaggartmore Towers photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrP5lcLyXj6rMYR8IaUD6sm7BDsNRPwvLzScYMoRBNIRciIYH9o40CC4yu1FKj-cKZrUQmSL3AO3y3N-dL1j-QpPagA4XslZSidhWAlzBdkNBCkWYYELqCeJVlTGuQl1tOPKpBvYR84uQm4_k=s4800-w1200" alt="Ballysaggartmore Towers photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhrxuJP651OkRy0QKJpGMO1A-fiQ3tzZdEVvN0o_9fqbNs7apEvkBK0iJBkFtrikk_zS6OTcjeE1j-Cvh15Nhzyy6ZegcpUZywH1SfeAZZay9_QjbHk2QHO6VRG7q0n8fSdvU0moQbrrE151M=s4800-w1200" alt="Ballysaggartmore Towers photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnihysPa7fv5TSUrZoReR8hV4IcWiTZ7mdJMDxSqOvIdFyvIwrwhVcfYwlWs5q8AzHS0L6lTjCeckf-K9CdH5os-Chw3LU45o-hh81cIQoa7Kb0VaU5Ig9e9OPAXnkUa4_lDM3CDRDxo6fFOY=s4800-w1200" alt="Ballysaggartmore Towers photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ballysaggartmore%20Towers%20County%20Waterford" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

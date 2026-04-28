@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOSGfAjKQ57cR7M3wvK7KlRBOnlIUO8cvbiO4C-v1ZfCmc_PDgRI_UdGwqObx0ZlG8HK93pqNgMXv3PkyH3Czq-Dm7JYpfGFtEetxKrB_PzoCOMH6ocX6RPYycPChdhRke5bswihzPMMVYSKeFUXg7Isg=s4800-w1200" data-castle-name-g="Caer y Twr">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOSGfAjKQ57cR7M3wvK7KlRBOnlIUO8cvbiO4C-v1ZfCmc_PDgRI_UdGwqObx0ZlG8HK93pqNgMXv3PkyH3Czq-Dm7JYpfGFtEetxKrB_PzoCOMH6ocX6RPYycPChdhRke5bswihzPMMVYSKeFUXg7Isg=s4800-w1200" data-castle-name-g="Caer y Twr" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOSGfAjKQ57cR7M3wvK7KlRBOnlIUO8cvbiO4C-v1ZfCmc_PDgRI_UdGwqObx0ZlG8HK93pqNgMXv3PkyH3Czq-Dm7JYpfGFtEetxKrB_PzoCOMH6ocX6RPYycPChdhRke5bswihzPMMVYSKeFUXg7Isg=s4800-w1200" alt="Caer y Twr" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNW_wceEnHW3DRvpsxobQATY8fomlETzcK0fGksXquXl72hXn2NbfOdsEgnzB1OFl7vI3TRU8NhUAJlnAXnTAdcHwy674CFfvSQYsMkLDceGqQJBxqvrwha2Qq1-_aADZdAPe9kREgQaepLHPw=s4800-w1200" alt="Caer y Twr photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMVcfBVf6JDkgCpOidZJqCjcD9YUetlSnoekIJF1yz-TeswBlP3_5SdpM8qqIwdmDR_O0K4UN4mAOZew_eaA6JTUBtkfJANglO33E_6TRqOGZzdrYhZ1ousLWYKx9S0eu5v8EDemG8c3INyg=s4800-w1200" alt="Caer y Twr photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO99g3dyphfE2HJ2KEhEmTuDuB1-ZeUR4KZfhw9Er_c8h2o1O3Lgn2dpSUEa_uQ-rWUsxHbAr-a5-Oer6KIgApOxkgRFds_vnvjhvJOURBYGhx4SYP8IYwI4SaVkJwvlAheSnFwJ6fFfyHD=s4800-w1200" alt="Caer y Twr photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP3DJX41QdhwpF0-_j2zWEJ6mKSTX5CIaQVwU-IOTHIg6VDiG_l-rdFRnFFQX75I304S_lPBXPje8hqZTJt9UjdXK-TY1IzPiW6koT6iQYWA_idDo_NypPtM0Z3pTgXb3QHQsvOs32TjV_EgQM=s4800-w1200" alt="Caer y Twr photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Caer%20y%20Twr%20Anglesey" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

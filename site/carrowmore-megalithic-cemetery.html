@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOiit_2MntolP-b_wzaCEjwlZhPNYKaux9uFBPapk2KmgWxdLi6vHg6K4MZs025iy3aqKFzOl2PzSWyZBN-Qy-SopD7RcHuo766uwh0VtpCHDr15k9gzCtpYMt_amKSKb0mHEq7h7O6joixsg=s4800-w1200" data-castle-name-g="Carrowmore Megalithic Cemetery">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOiit_2MntolP-b_wzaCEjwlZhPNYKaux9uFBPapk2KmgWxdLi6vHg6K4MZs025iy3aqKFzOl2PzSWyZBN-Qy-SopD7RcHuo766uwh0VtpCHDr15k9gzCtpYMt_amKSKb0mHEq7h7O6joixsg=s4800-w1200" data-castle-name-g="Carrowmore Megalithic Cemetery" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOiit_2MntolP-b_wzaCEjwlZhPNYKaux9uFBPapk2KmgWxdLi6vHg6K4MZs025iy3aqKFzOl2PzSWyZBN-Qy-SopD7RcHuo766uwh0VtpCHDr15k9gzCtpYMt_amKSKb0mHEq7h7O6joixsg=s4800-w1200" alt="Carrowmore Megalithic Cemetery" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNBvDdShYToCAf84NAg4AU4UvffqtYYb5Ws2Qhk0CBaAF5xN1EPq0UDJ8K_ZZkDQqEEHwK5A5dWUTI-ziG6BYpaQNY-KsySoE6wEZt49mVdvxCoWu5AL7InKlGlWCmxyBXbDS_bcuRCM22CJA=s4800-w1200" alt="Carrowmore Megalithic Cemetery photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPe5bfz057U7vC7BU_OHxpWyn5MTnyQic4SU0Dma901d_PflPBUEpS7KZ4x4ZoH0iHN_HUN1PkbyOM2kibgDDFGhNaxC75RL6J9LtM8_cYiZ1rXWTLnwk5uDuyKxAHGYe67SG_0EE5s8fhR3F0Xg2kBEg=s4800-w1200" alt="Carrowmore Megalithic Cemetery photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMVyfHj0RtMrRgfrRzYtX4EV_aHkGc80HJp0x61J9nZCVn_1BpyPELdlWntrSC7BJLss58SY2s9sNF-922HR28V1GWJNKH1V10C3BfCOGf2GdWtdSuSApD3JpFMVeVLBS3fsuyEi7otYaUL3cY=s4800-w1200" alt="Carrowmore Megalithic Cemetery photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNnoBRmDQqGuvu7cbcONNIIFeWolY66rXIO1kXyG3ndxEzHQNcAivZkBslC2_0eHwJYOw1khOajvZJukK2-VHAW4YWG5XhJco4VXvkPmDiWVmvF6P0GR8Anri9lfoRF_8uKphVaZEdMnAgy1g=s4800-w1200" alt="Carrowmore Megalithic Cemetery photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Carrowmore%20Megalithic%20Cemetery%20County%20Sligo" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

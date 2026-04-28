@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNymmhxSTf2Az5dvh2hHyGrS_oNI2OWFHrjKh5fV052SLhsW9YNAvmZmdkvPGNcpY7IN2Pd7xiCIQrsdF8GPgW8tzlw604dAFBKwXVruBPYOKWNbUFAfxpssCl37pF2hjURK3opfBQnMHk=s4800-w1200" data-castle-name-g="Wymondham Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNymmhxSTf2Az5dvh2hHyGrS_oNI2OWFHrjKh5fV052SLhsW9YNAvmZmdkvPGNcpY7IN2Pd7xiCIQrsdF8GPgW8tzlw604dAFBKwXVruBPYOKWNbUFAfxpssCl37pF2hjURK3opfBQnMHk=s4800-w1200" data-castle-name-g="Wymondham Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNymmhxSTf2Az5dvh2hHyGrS_oNI2OWFHrjKh5fV052SLhsW9YNAvmZmdkvPGNcpY7IN2Pd7xiCIQrsdF8GPgW8tzlw604dAFBKwXVruBPYOKWNbUFAfxpssCl37pF2hjURK3opfBQnMHk=s4800-w1200" alt="Wymondham Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN81hGSVpHD1EYr71WmasnT-WCAe4ybm-JZCrgcD5qdlPKlDyN8VpFvP6o8UBwZpoIN-dgIr5FH6SEi33ZafmsEiu6f9JYdmiI5yEcQIQlg2FR_Bx7uqq-8mNhzjVVTv-jW7j9UwDyXs8K37hs=s4800-w1200" alt="Wymondham Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNxK8JqTZPT3x1QBe4Ve4_XkJPmaM8qQtaMtHb3s-R98XWjPWq1atAzj59osvncuNW9yfiUR6NLz0GgbmMecv3fWVPFJ8VyxbFBlNn2LFMxAP9NN96JnqRFXiUS2jb-yYaNPEPeoyZQ2-A0rAo=s4800-w1200" alt="Wymondham Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMR26w20AgecxTVBbP7jgt28CKGkcTBHarxkmQdDwZiZcG1vv_atNye4oIw2JCud-wEvUH_xov6ymTEdwutVmO8DcrdAto1HCcjqsBKeNeVN06Bvfhnc9eOeet7OxBv0bc6CO3W2giEd-IiOw=s4800-w1200" alt="Wymondham Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBJFWEJH_iZciMsCTqzSHxXwq_GZ72vU6rQ-pV1dyXI3nj8UQAg2VwvBKhYoCGcq3EjJuHt2VBnwN6IEoDXvQIidSGgQ7fiZE40Es_kHjPt8Fj5BfBpV1WZFN5XfAXuZFFdAZGlWOUsy3ovYqGHUo9wg=s4800-w1200" alt="Wymondham Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Wymondham%20Abbey%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtnz3zIyAKdv9O6779tsCG9b8CqOJUengkiOqnp--eQBeiNkkGNzr3_NWXKmKmSVjFayNK3p-fUkVkYUnIeMBFj43DfnOxImjZMChmhdd9QaEoajB37FmMdPYDJtsIoMHvDe-XcdBqmpx5WQ=s4800-w1200" data-castle-name-g="Berry Pomeroy Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtnz3zIyAKdv9O6779tsCG9b8CqOJUengkiOqnp--eQBeiNkkGNzr3_NWXKmKmSVjFayNK3p-fUkVkYUnIeMBFj43DfnOxImjZMChmhdd9QaEoajB37FmMdPYDJtsIoMHvDe-XcdBqmpx5WQ=s4800-w1200" data-castle-name-g="Berry Pomeroy Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtnz3zIyAKdv9O6779tsCG9b8CqOJUengkiOqnp--eQBeiNkkGNzr3_NWXKmKmSVjFayNK3p-fUkVkYUnIeMBFj43DfnOxImjZMChmhdd9QaEoajB37FmMdPYDJtsIoMHvDe-XcdBqmpx5WQ=s4800-w1200" alt="Berry Pomeroy Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMXjnYMYIQvnDSk3_mj9x4nnTq7KiRzUUumnS2vtyqFuwOXX2IFOUiG2kLEullLWjuEPk7f1s1Qr_roQS1hJ9jwfha0m9L8J4BFM50i6mu9be1T2WndPl-1p7VxznNCyii0q5Jpk8mwZUOfq3A=s4800-w1200" alt="Berry Pomeroy Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFHSOpw_iGb-CZzWBblfQLufR96BCFILewYofrbhm1rc4Q4IShOk41GGlr8sWOeejj50KxP4uYblyzDSGyUbgcjoYRGM_x8KG-AqeZ6nTr7SeCABD75D50M0nv32LnKJ9DRAuK1TS4sbrI3A=s4800-w1200" alt="Berry Pomeroy Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRzzHzs38r5-7KbheGaH4_6UCa2H1ENf5pzSFT8jzeVMANopZl3iwOxc0NgVuDSq2J4scrHCg1-K5V5iWP6VgngIbBmzlA3ODfjixEq7cDqT-s3eUnuLwF7AWfnhh1WsFyWYPKTrKuaU4OJA=s4800-w1200" alt="Berry Pomeroy Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPeKu6m26RVESjwmuoTBvdKooBBnD_QR122DzjFBtLqHIKxofVprRXylSgcVvTGw1W0mKN1WaRTllLA6bNaJty1YAFab_gTqS7Pnm1JdRGCRPMP9JFYRKsMj-a6xGFTezAge9YzCq9gOFwwqA=s4800-w1200" alt="Berry Pomeroy Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Berry%20Pomeroy%20Castle%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

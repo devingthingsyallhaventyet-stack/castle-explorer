@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNffc5igp_D4B970behL_1endLXFLJJxMI1_qs8yHs8wEWwwDoYuZqYDwqIIJAxw7QbK-Cr2olSB1PLMZuuWa7mp1C-BPRpfOg6tt-0M8g5yyXfy9-rE2ba63Wsn61_2IGQ5BDbgqgJjd7juQ=s4800-w1200" data-castle-name-g="Saltwood Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNffc5igp_D4B970behL_1endLXFLJJxMI1_qs8yHs8wEWwwDoYuZqYDwqIIJAxw7QbK-Cr2olSB1PLMZuuWa7mp1C-BPRpfOg6tt-0M8g5yyXfy9-rE2ba63Wsn61_2IGQ5BDbgqgJjd7juQ=s4800-w1200" data-castle-name-g="Saltwood Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNffc5igp_D4B970behL_1endLXFLJJxMI1_qs8yHs8wEWwwDoYuZqYDwqIIJAxw7QbK-Cr2olSB1PLMZuuWa7mp1C-BPRpfOg6tt-0M8g5yyXfy9-rE2ba63Wsn61_2IGQ5BDbgqgJjd7juQ=s4800-w1200" alt="Saltwood Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPeDEGyWmORMgeOHR9cqIDxA_zZPgVVxdFdTySxdxyYMduQVyKQ7qNu7CRt1ipPLZZ_l5RJoUHaXwXbkUh5_j8K7CJYqJkltZTEDfFtgvpve7vFnA1e_XImUOinM_YSixVqFoZ2HeM8VHdi1SI=s4800-w1200" alt="Saltwood Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNpklTE0E-JMpmRX_hdl9WR4Kag8Sn6YOnhuzcRq2lHgg63_Ecs5etVuRn39RUmNfICBzYRtkswZ17hd-q2KFldiWDfWKc3M9T-CKScHvUW0s7VITtsygKvmgsRmScaXQC4gRSi5K9Pei-CVw=s4800-w1200" alt="Saltwood Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOTHFJoGFV7AwUSddD7frAGVr_kgEu_-_rcu72rTDHkvhlMPO2kGw77et5fWKRe3et8ReG0U33lwUZHDDzlsIos8Cyr-ZPckNGKx36WVKPig90vi39F93ha1JVh5NoMiWDqggG3hvEN52zLmA=s4800-w1200" alt="Saltwood Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsvMMcibPBlvEaMrPmptKUIM2WrsHjzObHg9rj47d2UE1ys9iRGA9Q5a3kGOKQOe4jT-dEgjq8HuJ_2rqR2lP4qQ4N2B8W2H1ipch6300B7xHPIYAm-P1KcZdmcbQnmq41EpucenPt915p2w=s4800-w1200" alt="Saltwood Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Saltwood%20Castle%20Kent" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

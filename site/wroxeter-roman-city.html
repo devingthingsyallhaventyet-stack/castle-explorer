@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwaCy0QgMO7-7I0YhsIqZpO3X30_vnmLg6gSVGfzjbPzyzknQB2rT0yqn8B2QI-TfllFU-pSaoRj1Ql7vA6UqPK3zyPJdse70mbGKqU7DJbBjaNIdT5bYuj7H-its7pd8Uu0_AgdBIarYKYQ=s4800-w1200" data-castle-name-g="Wroxeter Roman City">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwaCy0QgMO7-7I0YhsIqZpO3X30_vnmLg6gSVGfzjbPzyzknQB2rT0yqn8B2QI-TfllFU-pSaoRj1Ql7vA6UqPK3zyPJdse70mbGKqU7DJbBjaNIdT5bYuj7H-its7pd8Uu0_AgdBIarYKYQ=s4800-w1200" data-castle-name-g="Wroxeter Roman City" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwaCy0QgMO7-7I0YhsIqZpO3X30_vnmLg6gSVGfzjbPzyzknQB2rT0yqn8B2QI-TfllFU-pSaoRj1Ql7vA6UqPK3zyPJdse70mbGKqU7DJbBjaNIdT5bYuj7H-its7pd8Uu0_AgdBIarYKYQ=s4800-w1200" alt="Wroxeter Roman City" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNnrXk18mr-2J2pfNgQ44mHGE8PLT4zpZunHEqw5e73ue0zvZsopX8_1SaOfPp4QmTnTAL9fQApOZOFrBw9FjgGx_w2L8GdFehx6pI61aTr6O6hegiKcuoROJHkUoB2YsgqZkdCMETrZhjG-g=s4800-w1200" alt="Wroxeter Roman City photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsRF6tseWEZ1-KvG5usv0Hu_Me6p_2a3ytbQst6W2KcOarPhzeq4Bsis3HU9JbWjiJdsLyQA6S7JBeteB43t0mUtW09moW0oLs9_Fonp9W34FIceLqX6iCoPih6z5XxpknM8os1gHmafBUGA=s4800-w1200" alt="Wroxeter Roman City photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMASRV-glnNH36kD4hKFhLYw8z4T2EdfV0QS3AcUWjIfj8Gec3soVt5KlZjhl-S0kW3_BS-ikzZIe9UEeta-hAQom5LecpiljTvZFVb0124UjJWS6eWCCp4DLcE5TVMQ65L7Abc0Uu4pUy5pg=s4800-w1200" alt="Wroxeter Roman City photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpeE-z_8H0lT17f4LjT9RNQUhXaGlJ1ZR4pbFVaf9MiLoQN-yLR1KEKbQ22djEbUW4z2hh2nztjNKRvV62NaPhpQNcFnOph0E5TXokuMwQYTi53x0yRvI5Ad2gWbwVxGRHXUgE6LKKp3F6Xoc=s4800-w1200" alt="Wroxeter Roman City photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Wroxeter%20Roman%20City%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

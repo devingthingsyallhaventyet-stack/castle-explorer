@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGYyJmy2NyaLsa5gRow8_ME0rBVUg5tDLGuOLOiX9JzqI8JX78IEyLDwurhsi4rxYfTVzVrX_F4P1gx6TfTTbTjPMmj-GjRTVw=s4800-w1200" data-castle-name-g="Thirlestane Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGYyJmy2NyaLsa5gRow8_ME0rBVUg5tDLGuOLOiX9JzqI8JX78IEyLDwurhsi4rxYfTVzVrX_F4P1gx6TfTTbTjPMmj-GjRTVw=s4800-w1200" data-castle-name-g="Thirlestane Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqGYyJmy2NyaLsa5gRow8_ME0rBVUg5tDLGuOLOiX9JzqI8JX78IEyLDwurhsi4rxYfTVzVrX_F4P1gx6TfTTbTjPMmj-GjRTVw=s4800-w1200" alt="Thirlestane Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqEvcuWJ6TUxuf0W-14dALn0GvY3-c-mjCZOeW82-0uQ5Pv507Ci5PsOYzCvK_9iANnlhnvf2dewag3Dw6IL-PNto5YuxIOhX-Q=s4800-w1200" alt="Thirlestane Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMyC21R6-e3ZE3IO4_G3KBw1e-dF-4a9e1G8lmIHi5D8pVrM96F8qQGqZ7WxPWe2rzI5KRPsTqtgqmrCPYbFQ8R1KLskfR36efXKVmzdX73UiDwqKwL2JOW8fy5FoIzVlwAu_g5OK0es3UG=s4800-w1200" alt="Thirlestane Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPATA_XQCdJdyEuT9RDDAiZ4b_cNFXOfsayl6zGlJAUEGqrwQq4fac6kqVLCdoHXtEi79fsPck4vbr8XmbXF_THGZ47oXKEsGKYSxM2vvMWaQc2LlyevUjE2p4fbUZxnoY8JJAb8DSjR9w8pw=s4800-w1200" alt="Thirlestane Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO3DbLpJG2M714UnA72Z52bTTW0m-Zcg3TaPY_f0T23JL7xvN8YUfOo8IgckE014TW7fq5-Cpo73h60iTYrCRh8ZAY0jLfPRMDEa0jx4U8ojcCbDwfnIV3hkDP2rXsxSpCoWiSlmj3XG8vpg=s4800-w1200" alt="Thirlestane Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Thirlestane%20Castle%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

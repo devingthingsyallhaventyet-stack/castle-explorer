@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGwqKs7L78C3hV6r4o_u2wVW8q1ZwZYqdqIlnH-UimqUTayzwD7gI1Luu4DrhDET0qhUtoAfwWIuaeKm2Ua6pwBgKaXSa6QHiM=s4800-w1200" data-castle-name-g="Colchester Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGwqKs7L78C3hV6r4o_u2wVW8q1ZwZYqdqIlnH-UimqUTayzwD7gI1Luu4DrhDET0qhUtoAfwWIuaeKm2Ua6pwBgKaXSa6QHiM=s4800-w1200" data-castle-name-g="Colchester Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqGwqKs7L78C3hV6r4o_u2wVW8q1ZwZYqdqIlnH-UimqUTayzwD7gI1Luu4DrhDET0qhUtoAfwWIuaeKm2Ua6pwBgKaXSa6QHiM=s4800-w1200" alt="Colchester Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbIp6Q5dTxik-7Qn6WkOk8-LYTHIukLA_pX9m9jQIKUBWp-nZ4B-sVKDyS_uzGkxxW9EXo38SFpT_GCVhN3r0WXloCNTOzOeMxuibi_yEqqKQxfoBnCabuvenDeD9dvrhPhM00_GZUYPTgi4o=s4800-w1200" alt="Colchester Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGJq2kEvr8yRnKetkVWp-t0vxtEtEubgxIULB-BROAdAxN4HClpO_o5jLAmZHNbR36yv1esVvx7FACGRFrmL5_lIrZ79OKTkdPwOUFSvutitqNNNj2hkiu2y40b_tqkOeyqXwquyMyR4axxpQ=s4800-w1200" alt="Colchester Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNik0vz-cmvBfSe6Hn-gwtcMr1_9WRkcMgm4gU0mHj5gTTtr4SLbdV1DzCt2jVSS4jIvItrYQMkfZNNDqSA_q631yVBAbHaRUIFobs1T9ojSVgw4Jhz9p762JYI2ZKehH9fFYA2mkYQ_tXvrhE=s4800-w1200" alt="Colchester Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPqA02BcUjKRaiJ8YZ8g35vKcP_1mnBWdGr5R_vTkd73Xg2w95dO0JnpjHNg5vKVjooN3M7-mRtOxQn85kiVgX0JvMckMsry2Sj9S3Y_5MqsTyIUoGYnO0_1JM6k7ozbmh1haSE6bmVzw3nHzRcG17aTQ=s4800-w1200" alt="Colchester Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Colchester%20Castle%20Essex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

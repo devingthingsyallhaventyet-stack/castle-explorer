@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMbJsgwXplC8URqbZNjBINZnuILe3eUW7B_tM5WbfoceSxJZCj0gJyY3pxnlREh6mE7s6mhelY7ipGqbdgrL_RmkQQgseS6swKGkAqvjup58nAs8wN7QItJfsFLNVLEZmIulCvBdnqo_Ogx6PvVLSKz=s4800-w1200" data-castle-name-g="Castle Stuart">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMbJsgwXplC8URqbZNjBINZnuILe3eUW7B_tM5WbfoceSxJZCj0gJyY3pxnlREh6mE7s6mhelY7ipGqbdgrL_RmkQQgseS6swKGkAqvjup58nAs8wN7QItJfsFLNVLEZmIulCvBdnqo_Ogx6PvVLSKz=s4800-w1200" data-castle-name-g="Castle Stuart" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMbJsgwXplC8URqbZNjBINZnuILe3eUW7B_tM5WbfoceSxJZCj0gJyY3pxnlREh6mE7s6mhelY7ipGqbdgrL_RmkQQgseS6swKGkAqvjup58nAs8wN7QItJfsFLNVLEZmIulCvBdnqo_Ogx6PvVLSKz=s4800-w1200" alt="Castle Stuart" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO7mDbyF2LwQ6olMJyqgaejmWufpK2huxy-FMFgMJgPxiWQB3GpsAsWtgMpTPjHnyYu7f_8AGMAEL9HCEOxpGWqYXbTQ01HCzK1JY7dcONf-bO6U1og9m6Wt-N9lOnjYUa_hba53n6u7e635w=s4800-w1200" alt="Castle Stuart photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUWp-eqIHD67B3AnOMtcLEKVTJ9EIOAUxAdk3QhV1aY0DYmwHxKJx2n1u9GmsfsRsvettyssOvWii6Efz1d_D1VUOBhW_t5b6NrhtfUWF-xX1vdjeM9vJcgXI1oFqMb6VbpjX8obLCNKlx2g=s4800-w1200" alt="Castle Stuart photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQrmTiENh47DqrosY9cBYo6qsIihUDDAYNQokaErAPs81xZ97pNGXT171FGncIi63y9l49pV2rwIL4ZENPMZgLU5K1C2fcqsn8kpTzjEsC6XfxtVh-MLZdVS9mU_eKqVl1PSc3zmskzSb2lQ=s4800-w1200" alt="Castle Stuart photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHkNmUBFztZVu2d-CviC_b2IKIFuDJpmgH-l5NXewdmKvU0Hh1HnGlDxdt1u95mHNWQNClKxeTC6oAc2zTF6CWpNEFFAj0ZzrKMNZHiIVVqKsdLohdU1ZcA6mijNw5NDM9agbek-0jX4fVcg=s4800-w1200" alt="Castle Stuart photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Stuart%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

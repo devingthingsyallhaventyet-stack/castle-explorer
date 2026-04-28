@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNUMtmz1MOT75y5LxNxzAbrBfqkFRUqBsPUnpBuM9Fgt_vONvR1HqGLJ7vsHWhmfdm8HNY6Smh94l239TmjXeLOSISIMcwWqA65b1DH1cYrCk7brXhekfOil9tmpPQuVjYU7jgEvq5StoCzg=s4800-w1200" data-castle-name-g="Boscobel House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNUMtmz1MOT75y5LxNxzAbrBfqkFRUqBsPUnpBuM9Fgt_vONvR1HqGLJ7vsHWhmfdm8HNY6Smh94l239TmjXeLOSISIMcwWqA65b1DH1cYrCk7brXhekfOil9tmpPQuVjYU7jgEvq5StoCzg=s4800-w1200" data-castle-name-g="Boscobel House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNUMtmz1MOT75y5LxNxzAbrBfqkFRUqBsPUnpBuM9Fgt_vONvR1HqGLJ7vsHWhmfdm8HNY6Smh94l239TmjXeLOSISIMcwWqA65b1DH1cYrCk7brXhekfOil9tmpPQuVjYU7jgEvq5StoCzg=s4800-w1200" alt="Boscobel House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-DVBY60mNguFIse6X54IBS6rXPM7pbtXm3vCAi_-638NsYbH6CIRZV0CUvqoIveUTn19rovAcA5TP0UYVDXYSmByJoqZ0LyOgZ1MZDbCZHQqqGxjwySZ4T8Ilamrk2M1XOaffbuCdHlzIqm8=s4800-w1200" alt="Boscobel House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSHoNObEKvYxC71RS7udYY36j9a1vm2MigNvgwiRUBC5KG4cGOAC1cAh46BxZOYZNdPfJctankeHXNDtDKFL5DZZfTYohVqkt7CstG1LTxxWcgti6nYS0d4BUj4DHsjzjfAr6I9jcl1jv9MsY=s4800-w1200" alt="Boscobel House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNxpWAATOHcabmkO6-jRa1vtxB0wJ8TBWrTUf5NMhTrxlyhr95yTRA3oy_bCf71nvCdNA5dWNgqVlBw6HZiCw5O6OqC6olP9Qd5OOFefbdw3rwo9QoFuVVpCTDnBBzk8PHsuCx-5Fxrt3JPpZ3Msion=s4800-w1200" alt="Boscobel House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN1aBZ_UqtQAjNKwjlLPYXtu7YYcnAkDtnFDdm3hwPKTIEyMEJe2KhPg62M91ZAfsBaednsCqG3rteIwnVa3HQwqy6wG1vjywJLTMptsJo1GlpgWT51jJashzB1wl8zg-m3F3R1rkBn5jCqUTs=s4800-w1200" alt="Boscobel House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Boscobel%20House%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

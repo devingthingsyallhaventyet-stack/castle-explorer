@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFHHYifWM5UoTmjUYdHWrn8dF2SzNkNfCRAIMZwcB06bmUGnUJ1RBRSfpBcxxkmdCRn7XdoDIvu1SaV92sIcGsOkNQv9me7dM4=s4800-w640" data-castle-name-g="Borthwick Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFHHYifWM5UoTmjUYdHWrn8dF2SzNkNfCRAIMZwcB06bmUGnUJ1RBRSfpBcxxkmdCRn7XdoDIvu1SaV92sIcGsOkNQv9me7dM4=s4800-w640" data-castle-name-g="Borthwick Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFHHYifWM5UoTmjUYdHWrn8dF2SzNkNfCRAIMZwcB06bmUGnUJ1RBRSfpBcxxkmdCRn7XdoDIvu1SaV92sIcGsOkNQv9me7dM4=s4800-w640" alt="Borthwick Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGpUApeH50BQHCUHSxu-RTT9d7unMW5RWFUdBSCbAPWr0T5W2tOpss1T3Xj5jNx-znj0N0rdwQjMEWscFU7dhs3JyD4q6vnrYs=s4800-w640" alt="Borthwick Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN7inRxXDWPVoN71TW_pPJrT171pzlUbs54dC5CG0cP0CXa7oTwBI_PeFiV4IuMNUvZbRyj6teXeJRa0c09n4uGVBwdAxeNvkYZucZu66Cbq6JFZqxQVlEWHA06JW8JPQ9G7xvw0LcZQTWfgQ=s4800-w1200" alt="Borthwick Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqFIc-50v8OiXqxe9hp3VYFctmqTIe4dlBa5rwaUw0DNG9ttBo-NSldfs1y4JdR25Pl18PVshhNuEkIgMXOgSJCxf-NixNIbeqo=s4800-w640" alt="Borthwick Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5E8dj-IXkJ3k6RFzOR7n5C7ooQ8XbYY433j4OdHdrsXIXzlBG0NbSVvePobaLRHyr-LvOdft3BNFG3tWAyF2KWlliJTebdJKr-RNJ1VMeI6b5fiouF8sWWFNyNpuIzv4yjhWxRPs55E_E=s4800-w1200" alt="Borthwick Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Borthwick%20Castle%20Midlothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

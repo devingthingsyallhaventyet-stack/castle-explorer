@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZC8AHSgCC3YyXfIbgG-fbqoF85s7ieplKEhGkPRexohLRcE88y72HQtYbAIx3vzZzsUi-wucJVg6J87jWKJI_D3bs0qM6FHv7G4zsPbDLWp2QcrTE0HKfc7Tv1jH0sUt5TVCjujCgkAkiqQ=s4800-w1200" data-castle-name-g="Workington Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZC8AHSgCC3YyXfIbgG-fbqoF85s7ieplKEhGkPRexohLRcE88y72HQtYbAIx3vzZzsUi-wucJVg6J87jWKJI_D3bs0qM6FHv7G4zsPbDLWp2QcrTE0HKfc7Tv1jH0sUt5TVCjujCgkAkiqQ=s4800-w1200" data-castle-name-g="Workington Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZC8AHSgCC3YyXfIbgG-fbqoF85s7ieplKEhGkPRexohLRcE88y72HQtYbAIx3vzZzsUi-wucJVg6J87jWKJI_D3bs0qM6FHv7G4zsPbDLWp2QcrTE0HKfc7Tv1jH0sUt5TVCjujCgkAkiqQ=s4800-w1200" alt="Workington Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMG2srIXQCtNTd4MHGlJfM3Z26_pikUFbSvcu7dIE2P5fdFglU1J87s_pcapUKvRFTq3-RyHyKZ_teNnjvzFnqI_ibJKCyhJtlswDjyUtq6Pz0i5pwwZ5FAD3SO8em-pekkauY1bYbci8a9=s4800-w1200" alt="Workington Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIDSXETgF7ffvX1-8EWSSb17i-RFr3csgRMQOWXCLbbo35EiFc_WJ7LgHenIe9T-bzoEDcIFrEilXw2QsF2XT2JM_o1nZg-m8EmIeIfeyovB-btFpG8RmHIA7gcM5WLHnKZ_VEX389CMhjsw=s4800-w1200" alt="Workington Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkoSycCOcAXdv-G1YjZV-_GJOkH_CUiqVp_BNS0CoajVH8HoRpJRhC5phYJzsu-UvvtsbOJQDXjPDrkKFFSWC44Lvaa18F3h8kqZb_XJHp1Zg18llm2QjE4V5MTBGvhrqFBSV8_a-kYBWZpA=s4800-w1200" alt="Workington Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaflrFxsoj0wdBau248QfLOcTQFB8ANXaM_87_9W8kkE8Y9qTW_ysKxgiNVNyPZCZSQOgb0g7U2fso6NgWTwQ7DAFvJJz_E0tvaG6oQcE-amqhtKrMMydYCf_kVyE7sv9X5DkDulpJqrr_vA=s4800-w1200" alt="Workington Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Workington%20Hall%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqG5YP5t8M9Q9AxL1G-FrsINQJ9Slk8E2jJR4oRnnE6_W9hJd0_9--zKCAQYIjQsdI9eKaxwZ1YI0Y_8n4kg5R0VDe4zXRZDDxs=s4800-w1200" data-castle-name-g="Danby Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqG5YP5t8M9Q9AxL1G-FrsINQJ9Slk8E2jJR4oRnnE6_W9hJd0_9--zKCAQYIjQsdI9eKaxwZ1YI0Y_8n4kg5R0VDe4zXRZDDxs=s4800-w1200" data-castle-name-g="Danby Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqG5YP5t8M9Q9AxL1G-FrsINQJ9Slk8E2jJR4oRnnE6_W9hJd0_9--zKCAQYIjQsdI9eKaxwZ1YI0Y_8n4kg5R0VDe4zXRZDDxs=s4800-w1200" alt="Danby Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpAzYQdaD2bir5l28xnN2k8Ke35kxoDvs4rWF2iAXl23tKhrW1pfE1NNNzT6BzHwnbTWhxtfFNwW7Y0C-EJBhanLtnLOpnOPIb_FWSCXJ28wW3qB3D1Z4uDtbMjZA_8cWF_TyEuqwSSJZWQ_c=s4800-w1200" alt="Danby Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgyjQHqmP0JWaEzMwgdPfXAjKOsG63TEuIMM50_rGj3n0Av07SRhDxkEC71rAP6qURd0OCMCjfvOfsQUHm84jQsTu_eiGapoM7WayDScvrqLMJSaZjFpKlABISTCv7X2yp5FHsnDEBtyUiAig=s4800-w1200" alt="Danby Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDbOxUObk1ivKpxoMisNR59g4UDRhkmhBkov4rUpzf0hXA2kJiHEG78_cTVRohQxXzFCet7Yya3u3KtconGzV8yEQk1gaNG3eCT1nuGtce6tPGsn-CICR1QWIL_tmLRLWhw46QkYYzRyN6Nrdb4rnZuQ=s4800-w1200" alt="Danby Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqElYs-o3hO8OcCYs4GGtqCA_uqBo0D-0wpVHjFRg9MWk0TqKJIs8kDQj7hx-dD284TRIIhvm83TEUjp5oOpFv4yDbZHF3d9azM=s4800-w1200" alt="Danby Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Danby%20Castle%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

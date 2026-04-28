@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8U_w-VGHIKzyyPaBLpnKuUXRXcJK38fGzOZFqo9cO3NM70mjV62Rgi4DcwmmJuH8g7A6arndmnY2-6XcDzGTqeZ-4NSQo8tDSimZVRx41VM4nj7k0JE-k8GD-yUoXPfrvjGMaMEHmjcYqhg=s4800-w1200" data-castle-name-g="Tredegar House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8U_w-VGHIKzyyPaBLpnKuUXRXcJK38fGzOZFqo9cO3NM70mjV62Rgi4DcwmmJuH8g7A6arndmnY2-6XcDzGTqeZ-4NSQo8tDSimZVRx41VM4nj7k0JE-k8GD-yUoXPfrvjGMaMEHmjcYqhg=s4800-w1200" data-castle-name-g="Tredegar House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8U_w-VGHIKzyyPaBLpnKuUXRXcJK38fGzOZFqo9cO3NM70mjV62Rgi4DcwmmJuH8g7A6arndmnY2-6XcDzGTqeZ-4NSQo8tDSimZVRx41VM4nj7k0JE-k8GD-yUoXPfrvjGMaMEHmjcYqhg=s4800-w1200" alt="Tredegar House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNBx19fWN4JMn0j5bhdn3gPaI2LSXbMlQdlGQn7pzxxrSBgCBpfUesz0ZM6XB6s7vVz8JLX1hWIC73towZ4B9NUqztd7ANfiO52yZ8x3fTCQdPBwZOMvQbH3X88WooBjB969MVFHIxFI13TYw=s4800-w1200" alt="Tredegar House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHeXIVjk5BNGExtIS-0BUORkN5v3-A376aeEnrMaeblq9olsuL5MPa7pEm3Yt9cL_B2U3ODaXeiq6kj-2nTlqbNfaieUpb0jRKMtxtbau03LSNFa7n4Q_4ztON3djiZHaxWuyuZ11TWM6t0Ik=s4800-w1200" alt="Tredegar House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP20Aqa-3-cnEXjCB3PHlSniMYssE5ZX_k_Xl88Y1H5Dc61JKkPyUmSY0U25udAuF2LRajy5bGdt-pTBIUTw3XVeq5U4BHOcDrLMHzhXKGzfiyg5ML8NkMGLDx8aGBt7w4ZlsaDqEQcq0XPAgfa70CxJg=s4800-w1200" alt="Tredegar House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNs6a6K7bic2ASnYbFMxKeT483gKpbHszDP_b-puVAyWgYa4IfAkeWwIXcrl38Qc5Wb3TpEPZ7xy8iS1tdMgnoraKiWn-xy00UzjBSktHHIvP_LJeT1gtVOq4HjZbgaRErpcNRRlTfs47QzTw=s4800-w1200" alt="Tredegar House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tredegar%20House%20Newport" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

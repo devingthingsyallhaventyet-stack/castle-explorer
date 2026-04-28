@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnqQ-M4URWDZnzoVes7d5xnxyBKM3oEx0CAvsFSFVrJVrHlidm5UwOtkFPNRpOdllcvPNaK4ur8Ti16pc3_Vou_FUIe5EX3Eg5C4U0bYvDqrSzW6wgncJP5V0jB_VeAj8QCJhwclpRl3orBw=s4800-w1200" data-castle-name-g="Hume Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnqQ-M4URWDZnzoVes7d5xnxyBKM3oEx0CAvsFSFVrJVrHlidm5UwOtkFPNRpOdllcvPNaK4ur8Ti16pc3_Vou_FUIe5EX3Eg5C4U0bYvDqrSzW6wgncJP5V0jB_VeAj8QCJhwclpRl3orBw=s4800-w1200" data-castle-name-g="Hume Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnqQ-M4URWDZnzoVes7d5xnxyBKM3oEx0CAvsFSFVrJVrHlidm5UwOtkFPNRpOdllcvPNaK4ur8Ti16pc3_Vou_FUIe5EX3Eg5C4U0bYvDqrSzW6wgncJP5V0jB_VeAj8QCJhwclpRl3orBw=s4800-w1200" alt="Hume Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPlORExp4RHljz4vw0nE43UmfgxOUbxxnbIxpp6EsAKNON1f7S1q5JVMNsn-qYAz3AUzBD4Tf8lJB4qIK4vOox57hcFjAlB9p8v7nnNfCXkzqcDBzQUFGdAhUqfXDPygskabrYmRXg-RRBeuUU=s4800-w1200" alt="Hume Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOVaz97HLy15EBKx4p9NNKfud2x2fuNub_SK-TOQE9_uIBYofCfTsiyI5z6T34cU3yn-phOMre4bPrVLsOayULJocfQP5DG4LVQnnspHONU-__GiZCn83FC59yTndoE_Rdq43RrMpGnSg7Wcel6Ty7xg=s4800-w1200" alt="Hume Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM-TKK-W4YjbdIo0vc6vG7XAIx22Cpnz5rvQO3rw1mQfu1FKWM8ELsJy23DLM0CRDnzpD_GbRi7MiVebItcEj8OOiwLQ7c8fe8yJ7ycwPnt93C-86Y10P1dc0XWIsFQxyv_mfJzewefN-puEA=s4800-w1200" alt="Hume Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFlKh3JPeX4QcKrDfbN-Yjn_pyY72aSro8s_pwv6GnBDZYFzfRdGl_KDFEO5TOuMrAVxBFK9btgWJ2auotpTqGLU6C6t453JcLI0aSuzmVM6U3NR-B3CzvnS2zctu9Ogop4tncWcy9XjD1tw=s4800-w1200" alt="Hume Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hume%20Castle%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

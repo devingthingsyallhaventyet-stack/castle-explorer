@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMATApFTwU0QlP1dcLLmG9acLwas1uvs3DwmqYmHixE23guWUgm45uaauewVgfF0jUYgamicCzfPWRUC_ZVzpVh4D6ekwJxPM2nWaEOezVpnnYVOxNMS33lluK6mStDCT2xV0clWv0ArZf0w=s4800-w843" data-castle-name-g="Beeston Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMATApFTwU0QlP1dcLLmG9acLwas1uvs3DwmqYmHixE23guWUgm45uaauewVgfF0jUYgamicCzfPWRUC_ZVzpVh4D6ekwJxPM2nWaEOezVpnnYVOxNMS33lluK6mStDCT2xV0clWv0ArZf0w=s4800-w843" data-castle-name-g="Beeston Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMATApFTwU0QlP1dcLLmG9acLwas1uvs3DwmqYmHixE23guWUgm45uaauewVgfF0jUYgamicCzfPWRUC_ZVzpVh4D6ekwJxPM2nWaEOezVpnnYVOxNMS33lluK6mStDCT2xV0clWv0ArZf0w=s4800-w843" alt="Beeston Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGrt5mRKegyQB1cV0CYrdFG1p8hjUeJJ-qXxGGb45aWD4qVPFAJ2PbbfG3Nh3eAe1CmbA-y3MHp4gQiNnRDKw61kF7sBx7PKrU=s4800-w1200" alt="Beeston Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZND-x8jmhURxt8GhKB6EiNiIFuExHiEzLULZ95AtD_aNIeUyV7755bAiRrn7spvat_aBim60GpYsyuXWOi7PPWfMjKy7TsgJ9GBrzhci8c49Q88CzjcDA-uUznOoq26-7JcPj1rtOU4H2r5mA=s4800-w1200" alt="Beeston Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-GcZ1_vf3Q3xBWcH3ciHFfI5xzHXdUl0-vDC221ynlumW53FtVV1xMq-4M8k4ywb9yvoYa4OHb-xqlRj8uKUZIqXE8THPK1nkbmU6lgly7kvy8VXnv2V7CFUTO3gMnOr4pCkunY8g_twh=s4800-w1200" alt="Beeston Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxvweuN0Cih5DiM-ItQfESEzCZrR9wrRyTfhstLL3_EEbcv0P1AnWJzXpfjSBBZNo0fWSYbj0R8econDDUOqbBwGbt-418vvpVPAZ_z2VdeISf_h-97lmg13O2LIGFJboWOv3_-CtlrbRYWw=s4800-w960" alt="Beeston Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Beeston%20Castle%20Cheshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-zLGnBDOZcF9J_9dzyC_uQMygri55-jD8UEsDMzj0Ga1aeuPTxdtG9YUhyN8oSfb-TKOS7X--3wYqLHp_9X82byXpk0tqexwxi4gu73NpVVg12Ehr0s9OWvUfe1rFdqTsKp0ld_9zcW5bRY4=s4800-w1200" data-castle-name-g="Craigmillar Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-zLGnBDOZcF9J_9dzyC_uQMygri55-jD8UEsDMzj0Ga1aeuPTxdtG9YUhyN8oSfb-TKOS7X--3wYqLHp_9X82byXpk0tqexwxi4gu73NpVVg12Ehr0s9OWvUfe1rFdqTsKp0ld_9zcW5bRY4=s4800-w1200" data-castle-name-g="Craigmillar Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-zLGnBDOZcF9J_9dzyC_uQMygri55-jD8UEsDMzj0Ga1aeuPTxdtG9YUhyN8oSfb-TKOS7X--3wYqLHp_9X82byXpk0tqexwxi4gu73NpVVg12Ehr0s9OWvUfe1rFdqTsKp0ld_9zcW5bRY4=s4800-w1200" alt="Craigmillar Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOABqAtUsEcnwN8h_z4KVb-hEaYyeracjVQiIZcyVh-8SqhuL3VCoog7knBerp-9jlflqIEsX_cG7hzx5HI_Lj2TK8ve-ognkMR_0wGrPYHcl4ShSO5TB5D7MSnxl_99Gn0cx2ASmzIBg8fFFmWIOT62g=s4800-w1200" alt="Craigmillar Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVPo1PBNlaxmndqxgphvLlQ1uEpLTNguQZM6jLumDFffdVVh-OYP_EYdp6PAhLetucNbyiQr1_W9Jl2ER7HEA5vJ7HNH3Fnplz_va90MMmDTac8UKwxcTXN4yZqKFfYPbAK3B-nzeFHvGvubk=s4800-w1200" alt="Craigmillar Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNB9hkL2c1hynTUXGpGNywi1sY69-P9cTgV7c_6K-SerVcG3UGEDXdDNzIUgwj5ynn3-WeaAtYEHWCl2QcpLnjgqWkNQSRsG8my7l00OwYBUUvxEQbZBzp6o_v97dRbl1EHmcVXK6l2nmoQgQ=s4800-w1200" alt="Craigmillar Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6WSxornN6WVRy0s8WKpLmPNpEOGoCsDe0hkFmDcqtn0x1D2gnuiLOAIN89oGQsYr4XiEJf-7Z6N9QSDor22_eCn4MMD5jIA4lHUYn6vlDa3EW8ZG4Ivx9htYUIdCIPxh_A3lBAQzHwLGEqc0lDRXNrA=s4800-w1200" alt="Craigmillar Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Craigmillar%20Castle%20Edinburgh" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

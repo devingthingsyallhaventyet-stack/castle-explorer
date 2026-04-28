@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dale_Abbey_snow.jpg/1280px-Dale_Abbey_snow.jpg" data-castle-name-g="Dale Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dale_Abbey_snow.jpg/1280px-Dale_Abbey_snow.jpg" data-castle-name-g="Dale Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dale_Abbey_snow.jpg/1280px-Dale_Abbey_snow.jpg" alt="Dale Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMlOtfYNrL-l8KqBewYL_JD3WnWmbRNDbmghduFgB52F1EgNCJTeURd4gRGNbjSS--4DTHbMEA1PTKhcLbRBj84tNq-OvrDUH7fdtKbwPtg535jrvjVWrKiN1VNJGzZIpmy74Vra69qbxB-T_E=s4800-w1200" alt="Dale Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvGBmieErGM2G-LsYz1pot9Xc0FLi1L6mcvxCIoazXb-Gxi08ECwbU1iMJkHjpLVhxSBaunZ6yG2hnvJ08HMIV9pL5Kp_vvh-Aip8nbyYgfKtnIBPWzn9wk9vgnd1VSyP0Y3S6RJYFDDWw=s4800-w1200" alt="Dale Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2_ce6wuRRi1-9WKEY9vuf59wZaIIKV_wQdH0d28FJMpbgDAXjg-KA3FiheGxeNAbXxM9kd4z1LFcFfaAsM4vAMVEKLsjqKLPja82pxMwcaEHsbp0IE2o6rQAezomVFHDK4oJ9P8ZTwVgrHbI=s4800-w720" alt="Dale Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMPrXOX8xMm1w1oXr0TOACSDtBfqeNRQWpWacjyeSfa2Dcg1RHyYacuMAWPsVG71kp530HQIEQ30dg2eLbXsVcO9bg_Hv0xNDHpasFPjRhox57kJ5l8e5BMiXi0fn6EkdtgEppa_1tNpgs0uq8=s4800-w1200" alt="Dale Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Grant Shaw · CC BY 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

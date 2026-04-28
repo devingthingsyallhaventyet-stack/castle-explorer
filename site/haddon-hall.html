@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOarx2rgN7I050zqVvIu9RXxmyHYY8qNoKI04Rn4xwHH5GvXVjyzFIu1LOQbGKZioIim5LPXPmk-C_aEliDHG2Qwa3i01if_p-lSqO7Nacb8ljJqnX3W0RyBnnZfG55v69ZlOCKNExVMTFXOA=s4800-w1200" data-castle-name-g="Haddon Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOarx2rgN7I050zqVvIu9RXxmyHYY8qNoKI04Rn4xwHH5GvXVjyzFIu1LOQbGKZioIim5LPXPmk-C_aEliDHG2Qwa3i01if_p-lSqO7Nacb8ljJqnX3W0RyBnnZfG55v69ZlOCKNExVMTFXOA=s4800-w1200" data-castle-name-g="Haddon Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOarx2rgN7I050zqVvIu9RXxmyHYY8qNoKI04Rn4xwHH5GvXVjyzFIu1LOQbGKZioIim5LPXPmk-C_aEliDHG2Qwa3i01if_p-lSqO7Nacb8ljJqnX3W0RyBnnZfG55v69ZlOCKNExVMTFXOA=s4800-w1200" alt="Haddon Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpTD2JwxvgVEJxi2IKWSwCD59bX5nl3TiFXwUFxILPqMdOUiZoeYryP5BNBrdliGv4SkUn7_5kFXn2Y_HJKye-yEPDf9ls_leg5-Baq7CRFcQjFwoF-LQIpOSU2XR4EfM13eCOE3zdSVmj=s4800-w1200" alt="Haddon Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_pjjbHViq7w93J1IiGwy8opOYzD3YwHswlrc30am3PhXLR31BV7DFyGhrhbL2qzztrj8hihShTaivCKODsvF69ndnvycKlrNitpP_ZmpFtlvuj08D1DznRkjoMqNZomPKhsIdK1eKk69JSg=s4800-w1200" alt="Haddon Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdra3pHt3HzuX-u5xAwXGd9-VArjwXZlNOM-v86xVKbkGNDYFixEMDeLYELSFxdknzPVBAlnh3h4s6PdBKTOgycgN9KSyuN1ikX4bTaRl93zHOhlZnPmA2qmUo_VJHgV9QlmDj5SgBXexo=s4800-w1200" alt="Haddon Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkrTMCNgg4NQ2U1ixLWb5i9u4ODwzkxXGdNf0qPZqS4z_41hRdCytqlmpx-ku5fdf43Als6uzltOfRi5QtnQThP3JuMOH9wmGMlIeQLE-rAQd5oSivOuzoYi91m8kEZuRhbf67hhm-kd_NQA=s4800-w1200" alt="Haddon Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Haddon%20Hall%20Derbyshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

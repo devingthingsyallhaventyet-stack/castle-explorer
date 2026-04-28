@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://img.castlecore.uk/garth-castle.jpg" data-castle-name-g="Garth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://img.castlecore.uk/garth-castle.jpg" data-castle-name-g="Garth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://img.castlecore.uk/garth-castle.jpg" alt="Garth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWQKCM4vk4dvDnQV1sxInpD81JP1phFo_-q2D9XIHak7Z0oT9Qsatoxx1N3RNzh20xI0QrI5r094xzG4c66KZymwidnf7aGV56aKJEBK7z9KrXqRyuP-vnTqgSmaK7c3hzIjBXmlnqigFkwyw=s4800-w1080" alt="Garth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN1ENPcmb5wNSuxo76BWn2g7ZWXX4jFJG0iHkymK6KyJYwbzy_mctglXECgXeTlZtvTPUxhfXHc6HRs3BoTfjBJgcyXn2BmEqBFidP22HCbTEFSaaibT6Za3a6NsIVjxf2jyFnEmSZuqhzByKU=s4800-w1200" alt="Garth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZORKxrPssGHrfLFLQ1-eust86UwcR6LeLHrUUipRlK3SDLqet-CsN2uIn3ZewWp4ySPIa6dPvggVI0Vt2ULeBCwqR2n3u5OaJ8aWX6hkgqcdJh8ap4fZGUY06mRFrZyNTp7eOPRa2FeeUyrLWU=s4800-w1200" alt="Garth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMghlPXh0w4UKIJ6VPiFLLyffTMA6eVl0AI-hzP8v_6kUGQyiO3ZE41KZ0tB_bMtGg6z4t8zY0z2TcWITJ3KzZh3jeyBZsmC4wtnq54pLGDRwkyPyXr3CPu5WUcjNU31DXFbKhURHWLafxdKb8=s4800-w837" alt="Garth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 
@@ -402,6 +402,15 @@ Garth Castle is a 14th-century castle in the form of a tower house and keep, loc
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -418,7 +427,8 @@ Garth Castle is a 14th-century castle in the form of a tower house and keep, loc
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

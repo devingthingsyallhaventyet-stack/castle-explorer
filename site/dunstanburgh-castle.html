@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1-x2W70OGfOUme8mla7q7a-RyU7evZTh2jtcIOVHSRY36o9ovwujTvQajYZPMySnxAoWkB4_GoI6tMoiCgkQe7wWZpLNpeDuDk9AUUT_pT-wQ-Al8g748RcOBfsuIC_bgczWmlotLDTxNCQ=s4800-w1200" data-castle-name-g="Dunstanburgh Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1-x2W70OGfOUme8mla7q7a-RyU7evZTh2jtcIOVHSRY36o9ovwujTvQajYZPMySnxAoWkB4_GoI6tMoiCgkQe7wWZpLNpeDuDk9AUUT_pT-wQ-Al8g748RcOBfsuIC_bgczWmlotLDTxNCQ=s4800-w1200" data-castle-name-g="Dunstanburgh Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1-x2W70OGfOUme8mla7q7a-RyU7evZTh2jtcIOVHSRY36o9ovwujTvQajYZPMySnxAoWkB4_GoI6tMoiCgkQe7wWZpLNpeDuDk9AUUT_pT-wQ-Al8g748RcOBfsuIC_bgczWmlotLDTxNCQ=s4800-w1200" alt="Dunstanburgh Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPlS_A7D0uZl9LjdZudaqfw3zRdiT_i2T6Na2KOYfggDb9eTUElUnE12WSpCGq9QPou93QEY4LIFL3VTROn4rpH4X1Zm1WI9tgsCiDkkaQcz6r8efzRI8euWKHDKY3TGHuG4McUY0G4R5XX=s4800-w1200" alt="Dunstanburgh Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5p5gDrMSeByEk3qWy57540doY5q0T--XEfI31n6r462CoBgywoTxfiGFMVphYBUsOaL9-fZ7q46QJblISUUes2BBptk0DPhJQ11_ledih4Tft_kl28cQxBK4m-qYrbrfzoHFG6ottm1zI-5Y=s4800-w1200" alt="Dunstanburgh Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3jnDbfZYYXfNPjOXpCl_MYx6CwMxF4mPbaxQeGJBgHyx7E9jVF2ZaAiKnMZB5QZlFqQ1moFqJ1WL_rSBd9QkbonBKBQgv6bkbyB7xDelxnMLDwC0kWSgzYKHoe5ZLqo3EKxxht4wlZ8faqg=s4800-w1200" alt="Dunstanburgh Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFlXQumjWYK1c5ItlBJt4XnbQ2eOW4ZJ7gbdYek6tYytzx3gxOKUKzvWcGRGgpNpHeka8W0qEQeMA6T_buIMFrI8IiX-ziHKY2qxs3tpiYjPgAhqUJBpich-plyBb71YecuvOtDHipElAvkxc=s4800-w1200" alt="Dunstanburgh Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunstanburgh%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

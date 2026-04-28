@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUelt9Hm9gV3d5PlaU10zqQoeYo6kb0mYu6ZnM2L1xnX5oggGHAcJYHPT2MJidU7nl4oA07CbQND_mi8BK5ViH0fXjvLHACNPKHWIBhEPFezeuIhHukxyxJmXcfIYDDwv8EDoEGDIjEWPOBA=s4800-w1200" data-castle-name-g="Sheriff Hutton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUelt9Hm9gV3d5PlaU10zqQoeYo6kb0mYu6ZnM2L1xnX5oggGHAcJYHPT2MJidU7nl4oA07CbQND_mi8BK5ViH0fXjvLHACNPKHWIBhEPFezeuIhHukxyxJmXcfIYDDwv8EDoEGDIjEWPOBA=s4800-w1200" data-castle-name-g="Sheriff Hutton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUelt9Hm9gV3d5PlaU10zqQoeYo6kb0mYu6ZnM2L1xnX5oggGHAcJYHPT2MJidU7nl4oA07CbQND_mi8BK5ViH0fXjvLHACNPKHWIBhEPFezeuIhHukxyxJmXcfIYDDwv8EDoEGDIjEWPOBA=s4800-w1200" alt="Sheriff Hutton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHFx7V6Kar-MjOSwB0Nz9t216udHUuw8-98jbJ5aO_G5qNebC027irewSFF-SQ80hXvTAkzxUVvc5420TBEXmi8dW0VprhIn_c=s4800-w1200" alt="Sheriff Hutton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZObnW6c-mLK-y1J37_0vhQNMpEkiAi1Roe7lNbTsxuG7Mrj0Xzb-RXkv857jQ5021HmH5luormxLVtoolWxqYdLpg1bLE2Ms_Jk3wrerU3UvcH_0l4me-OC6MSoYh9a-vf_VvVXDj2uC_NIVg=s4800-w1200" alt="Sheriff Hutton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOW3wkArwZ5ZQBd10fq-oX3b2tmZ72RtN9HNQJ9FiipT83IgMIcC9fjkuf_36wXd7DtLEY6Gds8umXhsaiwXcoQWACvfZowRMe8XaGJNAGSrgjqkgaQep2mA6sinjioonPqNhCeoyJNlRfewGk=s4800-w1200" alt="Sheriff Hutton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqFUap6WBqqgD3SBKpTFE2asTjjAIGhKawHbX9CTJknfRxQkxUL-ZDFEOC2h8crx6SC_Avg3OvDHXdYfFsm8YXU7iI9ep674Pkw=s4800-w1200" alt="Sheriff Hutton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Sheriff%20Hutton%20Castle%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

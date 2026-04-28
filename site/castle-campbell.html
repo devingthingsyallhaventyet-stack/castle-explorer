@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFWiE0lpRTsZj_KZXwtQqgurUCc5XJ-dMjtYg92PuPwHviqGRxjKAws80153Pm6Ar0o2NanxS0PLPqZlg_h9rPG96sbcri1s1M=s4800-w768" data-castle-name-g="Castle Campbell">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFWiE0lpRTsZj_KZXwtQqgurUCc5XJ-dMjtYg92PuPwHviqGRxjKAws80153Pm6Ar0o2NanxS0PLPqZlg_h9rPG96sbcri1s1M=s4800-w768" data-castle-name-g="Castle Campbell" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFWiE0lpRTsZj_KZXwtQqgurUCc5XJ-dMjtYg92PuPwHviqGRxjKAws80153Pm6Ar0o2NanxS0PLPqZlg_h9rPG96sbcri1s1M=s4800-w768" alt="Castle Campbell" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYre8gEq2uMrSXHpiLSf8eNfIMk_rXdfnBvY1mNUGfjFENmrYI-UmiF_kYw8Ym3lRqtmkBkdaakmbX2WuXey5BO95snf5DvPMuZcJOXn5HXcubiwxqfv3rLQYAbhR3P1ZbK6tPK6_wfQ5ovJk=s4800-w1200" alt="Castle Campbell photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_kR-X0NfnOkKANbfGU8ZKAgROYYDaYfeDn7frFUOFrJp0VEuwzmzFZDDY9SFHprVQupqM9_kncsSIE-5ol75RHaDpoFWGDnLqi6KM1I_GSe7wbBFtNIpkq9s1HCUfmvfFX9Cm0GXT-lZCghA=s4800-w1200" alt="Castle Campbell photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPN5YjEZdUHThJ1mVMLm_Lb4nCIaKAKGunm8cmr1VnBi4TNYNiQAPDc5venca9khbZYrzwyhu-kbRTOVC9eX59mcux3FjtaXFFJvq4Ovhg3JhbwSyTICePceXAD7Z-CU1Igj6XrpiPlQco9ow=s4800-w1200" alt="Castle Campbell photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_lmQ7tQN6Dy_yfE3jwI1kxQ403iVfzO8Bskjvsuy9ChjEZyXMQ5KlHE__59KsZhFjqT8IeCe7k7tn8sx0B1PwXHWt4SPPUz08HobkBe7rrmkBGysE7vS1Q-84y0eUa1aaXMRNlk-1aYCDM1c=s4800-w1200" alt="Castle Campbell photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Campbell%20Clackmannanshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

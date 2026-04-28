@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP03s-VUNeRqnUxsh0p0k_wK6glp5VFevIz2Ha2byqlfpsENxqAPPGhxO7-oj4tFPoZ2ds0exnXTNWYa_dHhtyVv6iN4FiGfwG0_Pf1er6K8FWAqcrBp-0c1GXoKjKkpOijUPxmZ8AmNWeu9A=s4800-w1200" data-castle-name-g="Findlater Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP03s-VUNeRqnUxsh0p0k_wK6glp5VFevIz2Ha2byqlfpsENxqAPPGhxO7-oj4tFPoZ2ds0exnXTNWYa_dHhtyVv6iN4FiGfwG0_Pf1er6K8FWAqcrBp-0c1GXoKjKkpOijUPxmZ8AmNWeu9A=s4800-w1200" data-castle-name-g="Findlater Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP03s-VUNeRqnUxsh0p0k_wK6glp5VFevIz2Ha2byqlfpsENxqAPPGhxO7-oj4tFPoZ2ds0exnXTNWYa_dHhtyVv6iN4FiGfwG0_Pf1er6K8FWAqcrBp-0c1GXoKjKkpOijUPxmZ8AmNWeu9A=s4800-w1200" alt="Findlater Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNC0NmxmQOjlRymCYBkvr1aT7P4GOExVi6FD7YYiewxS4InB7ME4tRZGU0TgSun-qp-VXic-VaUF3z9fjmdFIwXHLVHZe9Vm5KRjAwQrzo-R5rpJew6l9CeEntcrxVLO1JotxZGuLKWak99SA=s4800-w1200" alt="Findlater Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZODYf_TbCHoftvjmRVETQqxdQSUWQVcIY-ZnM7oEx-bnzrAN2zB3il2JzxEL_ioY7HBlqhDkBaI7Qbt8S0iX2U4sG8AROqoBz7IRow0pN-7-ZYt2W-C3FJrlFG9rjIk43XAUY83LyQzX07mEw=s4800-w1200" alt="Findlater Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNHPZrBZuW4GnrvPUzAFP-VUyjxLejuMcxcSrDuZRMjbiBCAyRIkEfXC-2UbJhwamprGhTVAIiADREUDFBtcpG7PUtu85QjRFMYFTDKrbZaOt8WHFDV7xfcWykcEyhnSoR5C6nrJJ-OLLj8KQ=s4800-w1200" alt="Findlater Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkxrZF7glKxClvaY67ZGcAqT_Bw5aaw8Jq7OQQGSxiptCvimz0cXylJGzN7wPZVARJUw1r977DHh96Mys1Ydt-wc0Z2_FWTJPxE1joNg5AxlLu5QYNxbbGB2OV3qwflW0qD0QI3XxRevPH_bs=s4800-w1200" alt="Findlater Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Findlater%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

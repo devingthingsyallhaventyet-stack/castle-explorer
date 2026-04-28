@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmee022cMAvoviKUmR2bnSNSb6gA8KfdGlYWmQFj_WM5gJYU0GRXUyzBM3SLKK70eXc3eoxboMjZWKRa1F2elGEdnNfOCn_SmRB1HWPxuTxEqHGIXzolTa5MNRUavqJ5pyUf_RtnITFAYf=s4800-w1200" data-castle-name-g="Donnington Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmee022cMAvoviKUmR2bnSNSb6gA8KfdGlYWmQFj_WM5gJYU0GRXUyzBM3SLKK70eXc3eoxboMjZWKRa1F2elGEdnNfOCn_SmRB1HWPxuTxEqHGIXzolTa5MNRUavqJ5pyUf_RtnITFAYf=s4800-w1200" data-castle-name-g="Donnington Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmee022cMAvoviKUmR2bnSNSb6gA8KfdGlYWmQFj_WM5gJYU0GRXUyzBM3SLKK70eXc3eoxboMjZWKRa1F2elGEdnNfOCn_SmRB1HWPxuTxEqHGIXzolTa5MNRUavqJ5pyUf_RtnITFAYf=s4800-w1200" alt="Donnington Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUlk1G7GWMFNcKVrEmXatuz2bo7BvCreUF68u6c2pXODOxgdJJHKhwboR7nYBa180KLmUi0x8uTnHiT3b7wn_QBMecOgI8T7CYpVzhacSdk9PuPaehiOAvj-WN4xein5U4TwODyXQTj7jUnA=s4800-w1200" alt="Donnington Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM4eFySO4aBJ0F3-IdPF5LrONYv7mUjNJayFzpDU9KyDGjirGq3LfahfQj7f75gYzD2MaFc7zTMajVrNHkM7b22iKyEhvwwWiynZ12vbrzQT2dhVLUrHGnbCSoN5j_YbWgReaeVsSlVo6txrQ=s4800-w1200" alt="Donnington Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAZfrbTtuK1Y9Rw637TMI8SJ87AkD-ip-77JyS9XNHPnzPZCLIc3THpV1P3qld-WhOLfpiQnppFEaAm1HB76_wgYZGkOctqY1_rMh844IUHIp8R0m1sOzmJy7CfEVQtQa0Uvubeqi-rrPXY7ThtXgK-Q=s4800-w1200" alt="Donnington Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO910Ji8956fnGVN2YWe6j4LXsCiBtz4EuAX4yyUfuVE_KZhAMxW-MURXE4R8B-YUTeKlItHLGE4gHnnKNPHkg_iCZ9t33l4wH2lCQnNmJpZp8tZEPqc-vg6r4kTZiNGV7m4cXssQYPjSQVTWA=s4800-w1200" alt="Donnington Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Donnington%20Castle%20Berkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

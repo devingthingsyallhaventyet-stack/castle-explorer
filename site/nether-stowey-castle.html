@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjNI4l4yTdv4-aAPWnV4sfHuNdQOFqg_mEHtwwAiwGTJK8dH-USy4FNvoUFcg4y-jAlFXq8hd5VoN8_-kKkymGLjszAsZSqvsllvYEXnMsjdGz4c4JC7oC1jDDNiAwyRu4czYXtQ2LybVh9w=s4800-w1200" data-castle-name-g="Nether Stowey Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjNI4l4yTdv4-aAPWnV4sfHuNdQOFqg_mEHtwwAiwGTJK8dH-USy4FNvoUFcg4y-jAlFXq8hd5VoN8_-kKkymGLjszAsZSqvsllvYEXnMsjdGz4c4JC7oC1jDDNiAwyRu4czYXtQ2LybVh9w=s4800-w1200" data-castle-name-g="Nether Stowey Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjNI4l4yTdv4-aAPWnV4sfHuNdQOFqg_mEHtwwAiwGTJK8dH-USy4FNvoUFcg4y-jAlFXq8hd5VoN8_-kKkymGLjszAsZSqvsllvYEXnMsjdGz4c4JC7oC1jDDNiAwyRu4czYXtQ2LybVh9w=s4800-w1200" alt="Nether Stowey Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6gkXsAsTjYfs911So0WDZrdXKUQgiTKlZ2q7oFYBPDC2shOGHUnJXCVEYAjHogMZL87K8ARtVbS-IKYpPAycjvsebKuQ4XJxocNs-gHtJqn4G8PKhQq70UeYSHXrp52Gkp9JEXfWFWegmlg_3NugrwA=s4800-w1200" alt="Nether Stowey Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiTUnhkXWD700cmU_bxI0FhMpw3LDvWZUhNIHZI90lBlxI2SDrvSOtr_dy_Xd7HsfsgciGEf3SzmoNnEbigBu-2X0OH8zNLa2qYaPSmorZ5DfPBnvL5dnm3xZDaAomhsIZEz8sSaozAWmDJA=s4800-w1080" alt="Nether Stowey Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbxzns0cm2GdA1Hj_BPNZZNaNG8Oj1hD2HEw8OqDs7oo2Squ1Dbug5hCIYVlv71FPG_QSV7X4qh2rnXV8o_XIabnehQ0MCdo6XgDws7rwcRMoBbanfa5Ed6LRMlc-tCkqrweKqhQG5-oiMew=s4800-w1200" alt="Nether Stowey Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWaKnbk5JHspjTY7LqhtcNFydE0cn5pEPFeuhCDvs3jcNPUzaOsSrQZcpeDp4mgZJnrNmQ-1qzuCKWEYaYnagCm-xBRWvnWHw-Ny0sAruzhJa6aial5VVJ-9JtdWrvz0tc00ZRjAQB50pgmg=s4800-w1200" alt="Nether Stowey Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Nether%20Stowey%20Castle%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

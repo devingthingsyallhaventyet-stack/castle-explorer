@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVKZEeL6yEfKT3V5_uytBDwgZuhc63it76uS7F7fhyKBHHzwJ5Pp7P_-riQpQjVvp1vMNkiSTbP4aqzASiILwSrf8ERNCtRu5IQu4OIv8VN-0RlVtlsYf6UtECWTdxSq22bVEPLcJuVe8MlQ=s4800-w1200" data-castle-name-g="Pentre Ifan">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVKZEeL6yEfKT3V5_uytBDwgZuhc63it76uS7F7fhyKBHHzwJ5Pp7P_-riQpQjVvp1vMNkiSTbP4aqzASiILwSrf8ERNCtRu5IQu4OIv8VN-0RlVtlsYf6UtECWTdxSq22bVEPLcJuVe8MlQ=s4800-w1200" data-castle-name-g="Pentre Ifan" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVKZEeL6yEfKT3V5_uytBDwgZuhc63it76uS7F7fhyKBHHzwJ5Pp7P_-riQpQjVvp1vMNkiSTbP4aqzASiILwSrf8ERNCtRu5IQu4OIv8VN-0RlVtlsYf6UtECWTdxSq22bVEPLcJuVe8MlQ=s4800-w1200" alt="Pentre Ifan" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM9bwR4EY5ACdVgycyHL4tElgE9Fg333sRC1dW3d6--F-fJJaQp9GSiWMpzhS0LpsXfBRCOGbePz0Zcx1xeUi7l2NcHlpUy5ShgLbUrH08DPGI4Wydevcipqp_4M8b_FBwsAz8PrSGohpOwoQ=s4800-w1200" alt="Pentre Ifan photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZONUCP7Jr3TqMiaH77Sbpjvy0HtvOxdxStl4LRp6b4whx86Xk-DBM7dM60NHwjs9w5Eb7T6BiTb9pIM-mZ1KNe4uVxvykD_AS3vpsVQenk4vtXPiZQF_V1Q3--w-EJZr7cEORM-8QpJqPPf19g=s4800-w1200" alt="Pentre Ifan photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEztZok7x7oSgH-xEMTBp3xBDqIqszw9dycpr9ZtAlCPQDofIfHk5YpQMhF2gc0BRRY9Y8avSVi46X8fRX1C4U_IripL5vd-w_XYQkLzab-Y7xUKOU_juYH1m_k0O9dwyvOtU4LYie2Eret39RrKHy=s4800-w1200" alt="Pentre Ifan photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNt4I-D_99fNIPSb4n9zyo1i7LgYk-Zjv9ThTx4Fmfst1U4djyn6hNyBK-FH14RQ8wRJn5zAjWonuaEV6_OCVMyU5DmESX6aVT52vdXgyq3e6FOvZsS_rdyZsc93CMgL6u39xs4wZ9NUywpVA=s4800-w1200" alt="Pentre Ifan photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Pentre%20Ifan%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

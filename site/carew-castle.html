@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBwqcgTkBrumRMiAGgKRDCU_5QqjFtDB7vYnYHeIX6AkyEB1WNyosHQQicSdlPYmMZNm2Aa71oImeOw6nFVHoBdJHvpmvPlbAUa2beAgvGyoqG8SmEaN_lWVh5CdOFSTa4-LHKufyO3O0XpA=s4800-w1200" data-castle-name-g="Carew Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBwqcgTkBrumRMiAGgKRDCU_5QqjFtDB7vYnYHeIX6AkyEB1WNyosHQQicSdlPYmMZNm2Aa71oImeOw6nFVHoBdJHvpmvPlbAUa2beAgvGyoqG8SmEaN_lWVh5CdOFSTa4-LHKufyO3O0XpA=s4800-w1200" data-castle-name-g="Carew Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBwqcgTkBrumRMiAGgKRDCU_5QqjFtDB7vYnYHeIX6AkyEB1WNyosHQQicSdlPYmMZNm2Aa71oImeOw6nFVHoBdJHvpmvPlbAUa2beAgvGyoqG8SmEaN_lWVh5CdOFSTa4-LHKufyO3O0XpA=s4800-w1200" alt="Carew Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN6hZTL9Sh_aycJ5WhwYmbPrRmJODQHo4VVUlbmeE6olrJTqC0ByYeTqoNBpLY5SdccV3pY0LNpOuMvrlBIF2_PoQ0Qb5rkqbcjXBhhomLs_JAGP75lKHRhPBd2dWVgbcv4-g2VQ2q1Pt5qSw=s4800-w1200" alt="Carew Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5C9-Rt6--mPdi82UStoyQUQ3VylcWyt-jdvT2l3GYQ3cy-sx7nZoS18PngWG8_jLjQPsbEaNhpZOuu7ZDaeu7WRE5r2wGrDVHwc0cLwE_3aBgQmGoHzgBQwqfETpUFaBoywTFYuvpQaYzaA=s4800-w1200" alt="Carew Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrON9DxEdOQ8qQeZbeR1-QRIndi7V8InYEyyQyeZuOB3bnfJIqAE9jm0U4Yj2iRgXyX7Ef9bgA896lQrQUKn_oy5JcqCIMPwv-CUAy_Br5_KmZuQgCPRErpThmO9XX4yNYsIgiZUFPmVTqpyk=s4800-w1200" alt="Carew Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMAnmzDIRuOLEZ_PblXOE5iXaq10Q13STCIbpO0v__0OMvnj0n-JPNd5Mkp7Ipx7Qs-nQhsFvwikilwxL422pgIe6vAIzMN-G78G1PAQszHEfkElQyvEBHrFhgMUKEjLZEdlJDsUwtgkKVy=s4800-w1200" alt="Carew Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Carew%20Castle%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

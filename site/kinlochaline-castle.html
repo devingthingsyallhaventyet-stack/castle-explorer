@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlLzg5tusKY-4I1iNd-o9k_gNmfR-EMzGvGQNy5RnrR6cXs9AIQDfA0Pq6kkPJPKWKOEMCFByEe-_xa2FivrZcNiH3gDPmiJWIutMY8NnSUwCS0uHi6X4zltE7t1q1fWtlqpq8boRQCFM49w=s4800-w1200" data-castle-name-g="Kinlochaline Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlLzg5tusKY-4I1iNd-o9k_gNmfR-EMzGvGQNy5RnrR6cXs9AIQDfA0Pq6kkPJPKWKOEMCFByEe-_xa2FivrZcNiH3gDPmiJWIutMY8NnSUwCS0uHi6X4zltE7t1q1fWtlqpq8boRQCFM49w=s4800-w1200" data-castle-name-g="Kinlochaline Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlLzg5tusKY-4I1iNd-o9k_gNmfR-EMzGvGQNy5RnrR6cXs9AIQDfA0Pq6kkPJPKWKOEMCFByEe-_xa2FivrZcNiH3gDPmiJWIutMY8NnSUwCS0uHi6X4zltE7t1q1fWtlqpq8boRQCFM49w=s4800-w1200" alt="Kinlochaline Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP185sI-RwXUPoWc756yb4AGhne6XeTl0dN6gBY6Wfe8EDLnytRcA3OVrLQtZBWbb3LMTEc1P_zSLaJi_HskZDpR61T8VYkq_X3G32GmmOGUeWJAOB6Z5ID2uhhwN1xrLp-jX_Qw4JEO8m16So=s4800-w1200" alt="Kinlochaline Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPk4Pbg8jI5BS6R_AgJUWsrBeVw6cHUZmIR6Q91nGCm3flECqOV18Z2NxoksgZKK9W0tTv5XljrFp87A1q1rVCgap74GBHmVWCT2A6xf0EbMKWjAxkviQwBDE4PSI3ZhxfOuCJ114JUCiop=s4800-w1200" alt="Kinlochaline Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKt4YncRcMfhX36Dzr0StRrHCVSKv4WOB5knxqnWMMDEr4lEEjrUVAqzKY8nDQYJlFcS0-0AGXatXImmulHvi9JyvbhRcO2hjZmN4YRyAA9hPhIHZe0jmo_UOalHLVTV2RBI2GxS5WYesn2Ys=s4800-w1200" alt="Kinlochaline Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDVE8bNIQsVfQ23geuQXqblRVjPzGhtKOPxywMqZfRpmODIEr9m8_fs7AgVYbTuLvEY-VPQcUEGn2wmQDZ3NwzOGf7xtBhxwK3FDayDaYWnhUrspIqlnzIJf0UVWPTcTK3CUR-s2c-M97-drA=s4800-w1200" alt="Kinlochaline Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kinlochaline%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

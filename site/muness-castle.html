@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_tEYo-2OCPZwfalCrghYSUv7UfGY4SlhIDaHg-dsmzcwt3ShPZowFSIJSr-o-IYvcLnWxrVFka37X6FLQ6XFoHGtBTsKyjInWDwHIvU2SLWMMMS5a--vDbQbD6iIf-kc1h-AjeX5ii552sw=s4800-w1200" data-castle-name-g="Muness Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_tEYo-2OCPZwfalCrghYSUv7UfGY4SlhIDaHg-dsmzcwt3ShPZowFSIJSr-o-IYvcLnWxrVFka37X6FLQ6XFoHGtBTsKyjInWDwHIvU2SLWMMMS5a--vDbQbD6iIf-kc1h-AjeX5ii552sw=s4800-w1200" data-castle-name-g="Muness Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_tEYo-2OCPZwfalCrghYSUv7UfGY4SlhIDaHg-dsmzcwt3ShPZowFSIJSr-o-IYvcLnWxrVFka37X6FLQ6XFoHGtBTsKyjInWDwHIvU2SLWMMMS5a--vDbQbD6iIf-kc1h-AjeX5ii552sw=s4800-w1200" alt="Muness Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_mo1ISdx7GFtZX9zUeqkl7w_YTqEwIv3z-s7mPd_KKR1HGV-h5H6lezNnsTOT1qfCJ9FF_2lKsf-1drhGu43ezZB1vSB6s40jfIf9u5JlzsrBatXSRshwYhz9hcAk9GEGmMtZlii9u4kqMd2C8nbU=s4800-w1200" alt="Muness Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN83KBGgOnC7JoL12Lm3tptYx2-Osz2Sm7YRksx3kRyQb7kWnLIJkqthjooKtlOzfto7UPUD_ou6XK1oxfDgUlHcJjl7Zv7Ef7N5PoodTLz8ncPzfVuX24kIaziPNFiOXjv8GMUyPQmZr-wpK45eIWX4w=s4800-w1200" alt="Muness Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWLrXGH2tga3c3dFIFfBkBzoDkPlJOUHnxayLRpE2QA6DAVSXktytxb7JKSigGmdAjQkc0UrZQ7wbdSpne5wjRAvrV-j4p5WoKaidmmxaT_TX27Kh_vesXJZUSREz0CJirE-D7kYeABdQ81iNv2UWY=s4800-w1200" alt="Muness Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOirAnw8R2Ze3-7drGhQuYgpjtG-3ULNpC4SrJV0-uU7PtQk8u3ZQLPTvjXHu816nQZvaVcuG3ZG60sPkakf6xhkLmBeuls5QVh8HBHQ9of_I8_IuenlWuBvW0jj08n616oGQysqPUsUjAlCns=s4800-w1200" alt="Muness Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Muness%20Castle%20Shetland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUd6gXK5qukG5qMZJ6WwpN7I_srr7vS7_ExXyXriRHSLgOQ588ruK5SVMCm2jid8xH9DIVCJt7XDgXoefkpMMbwU0izyIzCNs0UIl7gu1ngaSv--oJRsNBxY6JrULM9xxHJe2dA1GY3SrjKg=s4800-w1200" data-castle-name-g="Cubbie Roo&#39;s Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUd6gXK5qukG5qMZJ6WwpN7I_srr7vS7_ExXyXriRHSLgOQ588ruK5SVMCm2jid8xH9DIVCJt7XDgXoefkpMMbwU0izyIzCNs0UIl7gu1ngaSv--oJRsNBxY6JrULM9xxHJe2dA1GY3SrjKg=s4800-w1200" data-castle-name-g="Cubbie Roo&#39;s Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUd6gXK5qukG5qMZJ6WwpN7I_srr7vS7_ExXyXriRHSLgOQ588ruK5SVMCm2jid8xH9DIVCJt7XDgXoefkpMMbwU0izyIzCNs0UIl7gu1ngaSv--oJRsNBxY6JrULM9xxHJe2dA1GY3SrjKg=s4800-w1200" alt="Cubbie Roo&#39;s Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfzgKC1eRQFxkWLOGiU8wP0qAlA7JkfWIAOHr5cfemIJkpLTrA6eH_gVwC-Kl0eUZ20Th8ziNlV6BnUyggrpPXD5tOwmvsQCZde4PFEKqqDGsm1bM4MIG8xaq66gQxCtsN3mWVQl9NeD_UEw0=s4800-w1200" alt="Cubbie Roo&#39;s Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMI6Wv1JABLb6DcoCH3CzY_kW9DMAY2wHNHVCz6rzrZYllFWKNw-LQOrJcPTQy8d7VufdQUdvdWVWLCi1KGZnbNU29Ajg1weNOPn94lC8KSPNqzP0Q_jMnzth_nNOoHe9rtyBBddBcn8_agDEY=s4800-w1200" alt="Cubbie Roo&#39;s Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9BY1hZZUkde739ASS1l2gAEtBRs4d3feFHRpONeClJJs1BLDznHy0rEz7x69sGJN0EowbxSPolt4Ccqe6pY1HPGRKg_xjQjUHCC9Nch4u3vmUujFQr8kuurVHbxa7chm_oJzBJ6Wih2pkMw=s4800-w1200" alt="Cubbie Roo&#39;s Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWcry1BojT3Oa9x_NkfWXwlr67D3bYerIIMdVTUyVtjm18X2e_vjIBXRnsR4HFn_ICTOiOo5PNCXOtGwnZRI9NJDr47t2ruodedgfXyYXHGv3nb-q_Ver6UUlk_1FmR5Bm68iTJvnEvkfR=s4800-w1200" alt="Cubbie Roo&#39;s Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Cubbie%20Roo&#39;s%20Castle%20Orkney" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

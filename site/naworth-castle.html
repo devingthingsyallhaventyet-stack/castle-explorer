@@ -295,9 +295,9 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZoVrNhmgdf-F2hQC29bB13zcv0fHvhmQNR6p8PPeiTDeTIHx4nWbWGTkBnm4vw0QprBB1IzqgAlogWSaMjvg1Ea_3ahRHRE3ppOfoRbpJ0zCWlMdx_Mc8rQrc_ucOywmY136aMmVoKP1Vob4_cIXc=s4800-w1200" data-castle-name-g="Naworth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZoVrNhmgdf-F2hQC29bB13zcv0fHvhmQNR6p8PPeiTDeTIHx4nWbWGTkBnm4vw0QprBB1IzqgAlogWSaMjvg1Ea_3ahRHRE3ppOfoRbpJ0zCWlMdx_Mc8rQrc_ucOywmY136aMmVoKP1Vob4_cIXc=s4800-w1200" data-castle-name-g="Naworth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZoVrNhmgdf-F2hQC29bB13zcv0fHvhmQNR6p8PPeiTDeTIHx4nWbWGTkBnm4vw0QprBB1IzqgAlogWSaMjvg1Ea_3ahRHRE3ppOfoRbpJ0zCWlMdx_Mc8rQrc_ucOywmY136aMmVoKP1Vob4_cIXc=s4800-w1200" alt="Naworth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYm9i3BFk9UWIvBj9UJ3VsDWaaJBtG07gd5OkwYTuQ8w39-q30URRrMkG3z4jWz3OTL37ztM0KfTXNi1n_CzL5f6u806ZVcxIv409vV7NS0PJlezLjy383CZIODJXxb_QVdfkw0qrlRFzKTly2OVhfTw=s4800-w1200" alt="Naworth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide2"></div>
 <div class="g-side" id="gSide3"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

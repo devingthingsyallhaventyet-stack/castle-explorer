@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZLGBD7Be-Mq_LqyZnsvnt6f_pDdpfEyUvKUVBAqPcKVzBFy5ldNZ3U3PbiTwyWQu6q3aOpGqWtqqsaG-HwwxvzQMRLHe7MxKqvSuEpDf6upkvp80DXCsfo62wQYo8Nn--1Jfx1-v-hL2ftVk=s4800-w1200" data-castle-name-g="Orford Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZLGBD7Be-Mq_LqyZnsvnt6f_pDdpfEyUvKUVBAqPcKVzBFy5ldNZ3U3PbiTwyWQu6q3aOpGqWtqqsaG-HwwxvzQMRLHe7MxKqvSuEpDf6upkvp80DXCsfo62wQYo8Nn--1Jfx1-v-hL2ftVk=s4800-w1200" data-castle-name-g="Orford Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZLGBD7Be-Mq_LqyZnsvnt6f_pDdpfEyUvKUVBAqPcKVzBFy5ldNZ3U3PbiTwyWQu6q3aOpGqWtqqsaG-HwwxvzQMRLHe7MxKqvSuEpDf6upkvp80DXCsfo62wQYo8Nn--1Jfx1-v-hL2ftVk=s4800-w1200" alt="Orford Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNpyOHl6r3QO4-sz1L2WOUl94goD0OOTynf4Ccl0PINqOpQhWzTP-aOmF9mM1AuQOlvRUcEVZ1dQx88HEokSAPUK3F-Qb8BRsNQyaYegu5GYAguA6s1i4ApdJ9zZ1KS2DLthY760B0iiW8Xoe0=s4800-w1200" alt="Orford Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIEreqTBPnuLbAmbLOoAlBROK9tyL5LFIiXwYMsADjaM9Wjqx_LVBDNuakXbLEBi8rY8pYPUMKdgLSYhbeJcvjrQsk0ySDLdds5J78z9J45IgMNWlUT5bEY6mSP7C2anw7UPHRrdJjqyD5sKlXJenH8Q=s4800-w1200" alt="Orford Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXJ4z1MUEuaHi95wliX2-uW6dj-9P4WlXduQuo4AOqGUGQy6NL6HB9glG46OSBO6dfmJtc16nqJY6BLM01lLf8_zeDvt4y0qL8v6xLiam0_WcrJcIujUQauwomvomQtJIczdghl3ax1em6eA=s4800-w1200" alt="Orford Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMoRLK3n-ziH824GjWlAT5TlRAFJwBrMatlIUz1ohITYoiJeVGbZw9MDjqi_db0X92Uab9ZcZB2eIdpVEng7PatJ8MreDUO26u9xhVaVAmHs8mOJ-FtQbUkGWMaKu0h6oqooAgXUpvDAd08Iq0=s4800-w1200" alt="Orford Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Orford%20Castle%20Suffolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

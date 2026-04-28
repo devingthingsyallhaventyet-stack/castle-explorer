@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFrB5BycvcSkYNNMbsxfLB3t237zhUCpj3PVfbqeQGTVsdWv-1V_AHV4JQBrur8mXPIjuSlwIr-lkIPn1uo4ksMxYRJ62DbaRw=s4800-w1200" data-castle-name-g="Alloa Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFrB5BycvcSkYNNMbsxfLB3t237zhUCpj3PVfbqeQGTVsdWv-1V_AHV4JQBrur8mXPIjuSlwIr-lkIPn1uo4ksMxYRJ62DbaRw=s4800-w1200" data-castle-name-g="Alloa Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFrB5BycvcSkYNNMbsxfLB3t237zhUCpj3PVfbqeQGTVsdWv-1V_AHV4JQBrur8mXPIjuSlwIr-lkIPn1uo4ksMxYRJ62DbaRw=s4800-w1200" alt="Alloa Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPaf4gewBiUq7FzBD45SKZC6Esz97GpzHFfuCoIj1ZdanA8zD4OzEtZFw7GdT7S10rK4XN07IRJ1w7AN-Qezln3FhprGdbeYiDv7_GDkNfmMmY4isxT_zDhb-a8E5lO45AyuoFnMN9RhH39hA=s4800-w1080" alt="Alloa Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOz4Xgs7MnClMZp4mSAE3ysRAvvWYnYPxMsu-io9fZAHCzHyXy1E938txR-KUR3MlKGia2WziJ07yy3rAr4eoprxTydxqZppxpa1NhpbhC3IVE5vXZlrZoS1k3KKIP9EuesYFoaVPyrblQ=s4800-w1200" alt="Alloa Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZObeYmKpO8yOjG8O1hggtGRVeRd_bSgSrQ2hxBQJYwVk4ghC-IK9VHVBX7W_rBYOYGc2R8hLKJpHn9U9u7RBXEcCxHj-BO6VQzhaZN5XL3_TJ38qYQElBOrRWV7LFCy_-UyQNjSEfZwmK7T9w=s4800-w1200" alt="Alloa Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMd52zKP3OOvtksyip3D6XLjkXiPy_vQH8U7YySJYhvXeRKvhq23Vma_xVI4_JV87MDAQ9skftC0a6_DcAwDo_mDhIdNjvk4CP5xPXe0we5iV-REGnV0tkHDJje3JosIaNDV30x-G3fIORPSPA=s4800-w1200" alt="Alloa Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Alloa%20Tower%20Clackmannanshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

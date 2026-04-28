@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNo0-Aql6P1aLdzqedD8C5J-92owkAK-8PYyseYW1j9mhT1410azMwJKBB_dHsCYxiFGSLFw7TkeHC2JqFHjclyhdhhzQHLhquIYSlTCYlDsX36YKhgy73vM7NDwUf66zTKn4Phb6dvwCRKr1Q=s4800-w1200" data-castle-name-g="Tamworth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNo0-Aql6P1aLdzqedD8C5J-92owkAK-8PYyseYW1j9mhT1410azMwJKBB_dHsCYxiFGSLFw7TkeHC2JqFHjclyhdhhzQHLhquIYSlTCYlDsX36YKhgy73vM7NDwUf66zTKn4Phb6dvwCRKr1Q=s4800-w1200" data-castle-name-g="Tamworth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNo0-Aql6P1aLdzqedD8C5J-92owkAK-8PYyseYW1j9mhT1410azMwJKBB_dHsCYxiFGSLFw7TkeHC2JqFHjclyhdhhzQHLhquIYSlTCYlDsX36YKhgy73vM7NDwUf66zTKn4Phb6dvwCRKr1Q=s4800-w1200" alt="Tamworth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqFlt_698wYSGL-iFhPZu1FtfUEgN9zIJ3Et4Xg-AhHxmvwY6ixZ7qO6gtlV8pSDaGboMYXzOiH9kEuonoK4KF091pNovpGSizU=s4800-w1200" alt="Tamworth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkmtGdf4pSA2Lj3TDfOqNVt4KZrwOM5CU5IZzopXoI22MzKRrfAdbIa1o-utuoigdM__Sn4e3w-195GWPIDAPu8UwvMClkNY_K84NE8rw-mQ9mYubbi7x149N2JnYqYXwbiWOrN_WDNjgSICAmCsloGw=s4800-w1200" alt="Tamworth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6_4hH2AkjZmPQgG6A9LhFwurJM5acUlYEGFlamXeJIfgf9g1cvIl0_41zmS0Yl4sqSOYQFkVbA442FAqb7pe009piwsJbEuPv92gGVJm1r7w8bEPk8YQStuFTBuD_TyMUaWSYdvYLtEbppA=s4800-w1080" alt="Tamworth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMAeSfcQPg3Brj55VfbOURJIOiHnN0V7lIPaVv-f9UJ7Fme5pjJD9yJM648U0wWMmGhgYUwTZ7DYt1Yr6qLiScbZRYHj13ZBovkXc74A8cQcbKS8ZJQWVxglA4STnzSvWzuvL0AYoCFioH-=s4800-w1200" alt="Tamworth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tamworth%20Castle%20Staffordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

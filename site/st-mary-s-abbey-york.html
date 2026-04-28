@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnII6jMX-ABz07Qs5DKkOdyxzxSZlKsB7PEXf6qil-zXp4JLR7mZnlFAgJ0RElkkPqWq-UzAgJHfvNif9IjT821qV3t8r0JNQZnCjipp1tU2iJn0Bn1ftI_-2rSI5Frd3mRl15fl0bBS19rgw=s4800-w1200" data-castle-name-g="St Mary&#39;s Abbey York">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnII6jMX-ABz07Qs5DKkOdyxzxSZlKsB7PEXf6qil-zXp4JLR7mZnlFAgJ0RElkkPqWq-UzAgJHfvNif9IjT821qV3t8r0JNQZnCjipp1tU2iJn0Bn1ftI_-2rSI5Frd3mRl15fl0bBS19rgw=s4800-w1200" data-castle-name-g="St Mary&#39;s Abbey York" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnII6jMX-ABz07Qs5DKkOdyxzxSZlKsB7PEXf6qil-zXp4JLR7mZnlFAgJ0RElkkPqWq-UzAgJHfvNif9IjT821qV3t8r0JNQZnCjipp1tU2iJn0Bn1ftI_-2rSI5Frd3mRl15fl0bBS19rgw=s4800-w1200" alt="St Mary&#39;s Abbey York" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtGnpoYiGZy7heLK3YovnhCUC7YFn7Ymu-trDrgPHy_42yBYT0jylV4n197GwPGe5uq9SBSgK21H1x1U91i-UM94Ebl7M5n3w__HehQbwEs1GXTpTJCMWKq97cTokyZCu7HXXjn-7Ik5Zr-w=s4800-w1200" alt="St Mary&#39;s Abbey York photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMz63vT2qjdF5O1_2C9ViwOqPxycXBbuN5aZT_CqSZ5Drc5iC1UeeOnMbIXXmQiZLK_sAg_kMcLnmX4H3AaM7kk3pTPEMfZ_TesMofkLaUiOyU_YC3GOurjenifFzJhL2bGarsV19SfS_E-laU=s4800-w1200" alt="St Mary&#39;s Abbey York photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWAZ6eSQCT_ZouFZSQTdo6pW1NJvslv-b1sMtByClSUvpy-P7-6Wb_gsfVq0MS1M-ExNEpKA0Fw9phdAUmgVS1WXQq6g4xIpiatOyWirA146yUkTeUo-TD0FRC5w4h6cyO5AukR_43DWhnXE8=s4800-w1200" alt="St Mary&#39;s Abbey York photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7q-6JsUWlQE3jhqHwTUo0TKqgBKTh3wUWecQ7niICEHFWOjX86f-4lPPOQQgBc28nEywa2LoQ4DVsVVjkZ1CZzF-MQYOe9_DgTDEL6uXv4dWL3odc2HBSFUh4k1NAiaZxv1aNjHcMuRLahg=s4800-w1200" alt="St Mary&#39;s Abbey York photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">10 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/St%20Mary&#39;s%20Abbey%20York%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMznhCNswPCXyxl_yZ097twMi45Tz3jxjvlfTsVcUzVHE0DEWaJRm0pFVsu33YXcCrlWX-7hvdnV8nnqyDRcWrGTG844Typ1491jdKoiO8G7IrEFJusp7WIkCVk3_FP9RVY2iMw1kZljzZCQhk=s4800-w1200" data-castle-name-g="York Minster">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMznhCNswPCXyxl_yZ097twMi45Tz3jxjvlfTsVcUzVHE0DEWaJRm0pFVsu33YXcCrlWX-7hvdnV8nnqyDRcWrGTG844Typ1491jdKoiO8G7IrEFJusp7WIkCVk3_FP9RVY2iMw1kZljzZCQhk=s4800-w1200" data-castle-name-g="York Minster" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMznhCNswPCXyxl_yZ097twMi45Tz3jxjvlfTsVcUzVHE0DEWaJRm0pFVsu33YXcCrlWX-7hvdnV8nnqyDRcWrGTG844Typ1491jdKoiO8G7IrEFJusp7WIkCVk3_FP9RVY2iMw1kZljzZCQhk=s4800-w1200" alt="York Minster" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvL7ohYuEjYcpH2c4SkOK3NdZhlzfNTXHsirPsIX7dH8W8Kntto3P4ofaqejnW9t3Y8ISva0tbyIrI6naU396Q-4fa_b6D7qZqo0IxF6tzu-43nJ_LlM-RIpSqtmUSWr3aAWvF92ncML7NxuY=s4800-w1200" alt="York Minster photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPxtnP-CdojXQ3FwZtEAGL4KA24zCEVnA8rFKeX0tM9IIA7Yho2_53EhovydvaXqoZ7ArITwz308U7xw6Ri26lYNphO1Y5TX7SU0N6SkN2j3z1--M3pPfR6t9Q4OEtFTtzS4Vw9OsqPK2AXGe74rI82=s4800-w1200" alt="York Minster photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtY4QV-S9HNSXidXYXv_FqxHsk-mSrpLpUaZ0dhX5g9c6H7bX4Afx9VIfp5FiEJuyC731H5gpLPtMig0Bg6NB8_GJwBPGVQHgzcgD5JWwE3iCZrBmYnn9vaacgo-TUL7gVSSmX5wr7dAkWEqHB4NN4iw=s4800-w1200" alt="York Minster photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN7KkdvPM9WRtnIn55USmk0I23J-VPacTDG7Sx8EToE2u4FXTvlwG60G02SBSUokDt4KL9f6_IKLxWD6nYd9QMI01VwAfF8X2wZNPg_rGcJtsgYW71CU1q-6MOSUmjWSZJ0FwES9TBzFmWwFw=s4800-w1200" alt="York Minster photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/York%20Minster%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

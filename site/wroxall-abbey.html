@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mansion_Night.jpg/1280px-Mansion_Night.jpg" data-castle-name-g="Wroxall Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mansion_Night.jpg/1280px-Mansion_Night.jpg" data-castle-name-g="Wroxall Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mansion_Night.jpg/1280px-Mansion_Night.jpg" alt="Wroxall Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNqR8QfGsBHFfKSl2vsH2qcrBRbCuUSLpjs3PW0PJV4t097gHNDePc_lgXYvwjTvWuWRZVUtINR8JU8DRR-u3bu8R1vVgMsFMbIb4kRcjO8naqm_pjzHuWStnUtgPVlBGjjoLIA5x7_-HHP92c4XPpN=s4800-w1200" alt="Wroxall Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjljQweKHFBwSMuGYWDQAY-peK_rF8i89MC9HomXe40wjB1POcmNCPZ4Eh9pBpPVEelK8RNcec2ZvN8h5LPij70T2kvzrmC3xrE3ls7pFyuefHR_qNo2BIw-Ml6ATPS6TNL8GT7XzixNQyIqRi1RVI8g=s4800-w1200" alt="Wroxall Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNpku8eYK_jlIbCEKykXXcjgrGb7lFLsn2GZ_2yUH4UwKt2as8-oyX3Wgzhoo3CYPQkgb0S7dWuNVMmRv1UjxBLWjWSKydwgP96YXoali3c6vKZwGjuzmHyYpkEyVTEpIX8Bwmtrspynao3KphR1N8jUQ=s4800-w1200" alt="Wroxall Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMTSatzwV2mkO4Bvr7g3JgFKiTpnpZamTTIiJTGzfZA5BpjvpDfeKMLkeyAEpHgoIaTIoqy2jeYnAE6hfs9oP1g1MHIuhpaujivk0qKArv5lqX_GzfLtzn2etO4DR2vdmVwlQC9xs2RYZiJLJtShds5=s4800-w1200" alt="Wroxall Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Clix69 · Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

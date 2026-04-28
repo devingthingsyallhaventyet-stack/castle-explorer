@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOh9t-InxvJgDMLUSKwG2wrQRbgrSz_hx_2JPPgHwhRmt5T1jqk_-Ww-novlewfshwbGerqELFFFu0yp99CD3awwM8xlnXWP0uw8Cs3of7bYJkKdaIQ3wPO3eFJVUQsqpYsV6PP9ndFcbxqkGX3y_B-AA=s4800-w1200" data-castle-name-g="Lennoxlove House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOh9t-InxvJgDMLUSKwG2wrQRbgrSz_hx_2JPPgHwhRmt5T1jqk_-Ww-novlewfshwbGerqELFFFu0yp99CD3awwM8xlnXWP0uw8Cs3of7bYJkKdaIQ3wPO3eFJVUQsqpYsV6PP9ndFcbxqkGX3y_B-AA=s4800-w1200" data-castle-name-g="Lennoxlove House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOh9t-InxvJgDMLUSKwG2wrQRbgrSz_hx_2JPPgHwhRmt5T1jqk_-Ww-novlewfshwbGerqELFFFu0yp99CD3awwM8xlnXWP0uw8Cs3of7bYJkKdaIQ3wPO3eFJVUQsqpYsV6PP9ndFcbxqkGX3y_B-AA=s4800-w1200" alt="Lennoxlove House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5ZbzoELVFsvcXJSmgb_I9N9OjJX-QPZj-KtEGU898iBr-y1jj1WAUQlQPOUaH5sp-26JZfbdqvZYsnDC2nWA4cHY6ygKqmaEDEh_pInAcAIUelcFD9rQr7yi5PKpy_-JUT86W_ctRD10GpA=s4800-w1200" alt="Lennoxlove House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNk731ySP5jECIDkgH_JpuaWBnKSgW0aliu2CL-A5MWbpqR-CmK0x1RzcmEStXT0d-jSk3Hsu2LfLfzqyZEbsUqc8yoB1p2NY3zXgh88SCVpNIpqpCIFg_ZDK3u2CDs7cjlqtBd2yoFYaus2A=s4800-w1200" alt="Lennoxlove House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJFzU7gMh_wnu7pDBvKT7LhfBjC5xWYbRnK9KXcywRIQxpYUB1iSFktAf2lV34l_aWQDkEaE-ptNri1SX0DG3Hc0yOX36xOCluUwRNfrVRUj8Ws_rE1J-gCmBwb4Ee510bDp441Sg3LiqZ=s4800-w1200" alt="Lennoxlove House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1GzYDZ9ffGDP4m9bLfas4arS4wxZ6_kc1kKp35F1MR7mUkkgSlRgaOA_6wa6rbtr6FQeWcxZxyryjrqZQ75xMbMUBn6O-qf83lFQ_kFONbWtO99RDUAE9kRLYKFOcG--Fc1eJP4CFLc4GwQ=s4800-w1200" alt="Lennoxlove House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lennoxlove%20House%20East%20Lothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

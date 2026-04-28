@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPx8QHjAzLBlgJwmHTM614NkA3tb-2HhawliTzk0oU4pyyv5rzqDqZ_jjo2WZrl173K8Se8Mr_OWAa3T0mGoYOY13DLc8XBMV_mGDRcr0HjSM5e1r_1u7WR6ezC0giq2qTY0cabWJsCZJ541A=s4800-w1200" data-castle-name-g="Eltham Palace">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPx8QHjAzLBlgJwmHTM614NkA3tb-2HhawliTzk0oU4pyyv5rzqDqZ_jjo2WZrl173K8Se8Mr_OWAa3T0mGoYOY13DLc8XBMV_mGDRcr0HjSM5e1r_1u7WR6ezC0giq2qTY0cabWJsCZJ541A=s4800-w1200" data-castle-name-g="Eltham Palace" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPx8QHjAzLBlgJwmHTM614NkA3tb-2HhawliTzk0oU4pyyv5rzqDqZ_jjo2WZrl173K8Se8Mr_OWAa3T0mGoYOY13DLc8XBMV_mGDRcr0HjSM5e1r_1u7WR6ezC0giq2qTY0cabWJsCZJ541A=s4800-w1200" alt="Eltham Palace" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiKdAzCwUYX1T9NZqmp3dkyGJaGjIeygTb4aBu_AFFIvkL5FYdTZEji0d-Q5D1HfYPy7XYi6NVqAQSGpg756gTJ-OJd5KVXVB5_WQDByiXLIIag9bPt5CS-PGZocS5e6YwgGDnMXF__EsdRA=s4800-w1200" alt="Eltham Palace photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZObJETmrqoflMW2dPiMsBhTNZhMcA_R10VdfUcfgPT9-TINK0A8229RHp5lT153C83BFBbRwBALYuft5-i2x1aQFnVr3TU2KZ30ax8zTNTQLYffsMg0LmOUgfDhLwSEtzUJOj8JL5HR8QD7dw=s4800-w1200" alt="Eltham Palace photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPay-2ID_gEnVTAKDQDgqIwIIjxU1rTrkm4JuDhY4OQ8ToRK5ZZKxyzQ_Ki_dU_QEfqg3tw7IvUl2FHYf2zfi4zHprXENPRLX8iQwn3zdWfkXA1SYPVpI8qu6m7h9KV3Kg9Cyb-vb1CxMFG4A=s4800-w1200" alt="Eltham Palace photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPT5ZUFaw3UvC44vsfcik7QPugVGXtfbjiqVTxAjjqzzdzjdxSMQh9OHbIYuCN4PqrW6degyjQMjJSNrV9oF_cfVWez33XSbyKRpAffDXkx9S1lG7raouU9KShrn5Fl86gJRfnY8msr3p3zhA=s4800-w1200" alt="Eltham Palace photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Eltham%20Palace%20London" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

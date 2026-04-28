@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIp4pNJ21ZUoE-TjsHFTOVDiqDzmZStupcxNW9JkKI4FKwqKYq5V3VWTZ9YalLrrR7MUsDtQR3C6CDkOjGwpCvnH90wprYQU7EwjFfVU6UTsae1A5Gx0eefJ7QV80ql90e5WWers0vPylUng=s4800-w1200" data-castle-name-g="Powderham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIp4pNJ21ZUoE-TjsHFTOVDiqDzmZStupcxNW9JkKI4FKwqKYq5V3VWTZ9YalLrrR7MUsDtQR3C6CDkOjGwpCvnH90wprYQU7EwjFfVU6UTsae1A5Gx0eefJ7QV80ql90e5WWers0vPylUng=s4800-w1200" data-castle-name-g="Powderham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIp4pNJ21ZUoE-TjsHFTOVDiqDzmZStupcxNW9JkKI4FKwqKYq5V3VWTZ9YalLrrR7MUsDtQR3C6CDkOjGwpCvnH90wprYQU7EwjFfVU6UTsae1A5Gx0eefJ7QV80ql90e5WWers0vPylUng=s4800-w1200" alt="Powderham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMIkzPY9M-34xOTFdN8MkSDb_5LgVfpb-tqUQVWp6zFgQ3KpwjUzVF42Rzlwt46B6AuX2iNcEqgi37gF5mKUQRezEvFpnLaYBrc_U-Uf2hMQabOOv-LATnihhE4gI1Khk0X6sXzBJI9MTOYBw=s4800-w1200" alt="Powderham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUChD48fImoxDhUwtybnu6oYUtxfNu0dqOQ7A9tfjt9t8LeF9xY9djwWiRdi_sHikmEWokRk3zhNin5KyUpNS6yvh_h2Focb7NGuBmkHyl6mvgwf4gdjo_6JPU6mypdVWpjqTaZ5pZQZRheQ=s4800-w1200" alt="Powderham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCiQs9pl-T2b159AZDibgMYYx6-O2WHBvfpe_wHtM15k9UYrnuIMukePasLYWjxMYOkVX9JkgjaoxzF4bFKqx2OmUB3sPMCrMVzOLeG76qVob3HvoBj6uMma39hqo07CtC9BmjIhgO6LJMl_J9zGVl=s4800-w1200" alt="Powderham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOp-vb4qku44ueEdDyvz0Vm7ntkB-XyvLL9JhaW_3UWCm4G23j_48AS-iWopIioLdeQ4NOPo_7V710W59NHYoEt8kVe3gK_VDsIWxcKRLHmwULPe1A_HXKO0YUlwMtHC0RizNMQ5GBsvSLxZA=s4800-w1200" alt="Powderham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Powderham%20Castle%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

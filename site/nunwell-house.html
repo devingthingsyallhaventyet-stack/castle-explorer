@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP60Iw0Ty7opZBkhvZHCkeza3l1HmBSewQuDFSuXwErXBeCQKm74PlXkon2sA89FXrsxQ-xxle7odd3u5DxmhGGo01ycIMgL_U7upxTonFbECXsE3E2v-ihyI1vJoKqGYgGdkPhiEeybo4cbw=s4800-w1200" data-castle-name-g="Nunwell House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP60Iw0Ty7opZBkhvZHCkeza3l1HmBSewQuDFSuXwErXBeCQKm74PlXkon2sA89FXrsxQ-xxle7odd3u5DxmhGGo01ycIMgL_U7upxTonFbECXsE3E2v-ihyI1vJoKqGYgGdkPhiEeybo4cbw=s4800-w1200" data-castle-name-g="Nunwell House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP60Iw0Ty7opZBkhvZHCkeza3l1HmBSewQuDFSuXwErXBeCQKm74PlXkon2sA89FXrsxQ-xxle7odd3u5DxmhGGo01ycIMgL_U7upxTonFbECXsE3E2v-ihyI1vJoKqGYgGdkPhiEeybo4cbw=s4800-w1200" alt="Nunwell House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdu1m72Jt9z7TQA9hMBYX7Qhack-qnQeCuWMKtY2MPMUr43vDp39VHAbI7UdSxGppHvqB9KrZBLQ3rFIQvD7M_kx3nMVemsPT4UgXWyf3ECNyEfeL_bXLoRBsFJ2xu7tU9nid5JDul_F61mw=s4800-w1200" alt="Nunwell House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOZ9AAm6Wuu5m8I50Za6sD8E9awrWJwS-8QNN367e1ShZ6SBDY8xkS95Wm5NedHjeFy2e5FNV3Uie282WjHA-RRkJ8mbwjiThzDI7O6nPiJ2R8DIVL_PKdKUL5fqbOrkRk0DA1sdUOmyCLoCMs=s4800-w1200" alt="Nunwell House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrbtEN5CckjsWxevTgQK7SRCiUstSF07nJpKx_AUAUnDqydJlEbLsruKIJvXyuAKwRdChR3E0xsWrMzdAFB_fszwPt-torwzi185fYKPcPJOxKh9Sjy7iNx5DLAjcGZHSglIf--iHxeq4sUjw=s4800-w1200" alt="Nunwell House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPAh6EL8JehPGqFRjbnNgbPlUmG0QkgjYgds-fh4L-mvsxdCY9-Ja19uuA-a5D-zGAlSnq3XlJdNmtdOAvvu7ooTBB33v9cFeoE0--HbkY00E6eB7dt3LdVrNp5QeP3BiMZvofTYbUMeU-=s4800-w1200" alt="Nunwell House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Nunwell%20House%20Isle%20of%20Wight" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

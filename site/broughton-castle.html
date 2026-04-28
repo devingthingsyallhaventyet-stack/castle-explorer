@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF_MNupG-63KYuDUemekOVUn-uPJiJ2zbHXwoh2I8ebnSzKnFJMESTNEJd_blemBI8cxFMdOPn8S_V3GY6PNGW0XNRLysIrSho=s4800-w1200" data-castle-name-g="Broughton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF_MNupG-63KYuDUemekOVUn-uPJiJ2zbHXwoh2I8ebnSzKnFJMESTNEJd_blemBI8cxFMdOPn8S_V3GY6PNGW0XNRLysIrSho=s4800-w1200" data-castle-name-g="Broughton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqF_MNupG-63KYuDUemekOVUn-uPJiJ2zbHXwoh2I8ebnSzKnFJMESTNEJd_blemBI8cxFMdOPn8S_V3GY6PNGW0XNRLysIrSho=s4800-w1200" alt="Broughton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMT7Nr9smOMzS2_OoTgGzIDdtgEtlzUe7pzwuFdxwRPKnDEn3PNauunOHFWux1QDH13ZtXKAgcftn99Kx8BNSng2_zNGIyvO6erD3yoW8XYvKuUyvowBxa71VmkDNfi4yKoCTkFXPDCuWGb-w=s4800-w1200" alt="Broughton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIsSf1v3eJWXEdl2An5NYupg0-IG1pFGZlxqh-46G9k16WD0pcWVk4-KkADX3dSDhsIjvo2So75tiBYWCNJObnHtDx0A4hhepJmR-mb6tfK3xEnYUna2cW6I6q80ARkVVSeFjWrlPYnoyUbQ=s4800-w1200" alt="Broughton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOAsAkkbugjMPbOB-T58ysatfGbWGLF95VGKTkH3Q00RGdvZAJ8JjWhiftqFTNY8_ZFtu4EOZAAVaWmDbygkTRdxi2upYmgd3mSdhqgvTpTqEJUaYHAA3QYjZRv0qOMSnoZHl2okdffEeGrXck=s4800-w1200" alt="Broughton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNHDOgegIBdHDDX2sfn6hRRTVYfHQ8yfoJoSTfCGtM1rTU30Ja7jGNPSTXri2Kp_cH458Zufwy2gh3_QB1Pk0MpEiJwZAc-uzRBC4nyD2UufI0aXtkoEfhykYcOhh3gGWv62QLbV0QHpd_97g=s4800-w1200" alt="Broughton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Broughton%20Castle%20Oxfordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

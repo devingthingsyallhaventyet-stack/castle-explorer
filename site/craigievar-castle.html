@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuvNlHIIugQ10ozjVVpMJ6sdVPQ5cFnCzkt0vhWG13-3GlkmVRaSMWoo798O5Zu22Z01BA5uvdh-Tqi8uV2i9qhmkYdxFOcOmHcdOrj5BcrUVHaFgjGwYQTl4ZZT-tqilO0ipAsBXuL2moyzRPgZrDEg=s4800-w1200" data-castle-name-g="Craigievar Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuvNlHIIugQ10ozjVVpMJ6sdVPQ5cFnCzkt0vhWG13-3GlkmVRaSMWoo798O5Zu22Z01BA5uvdh-Tqi8uV2i9qhmkYdxFOcOmHcdOrj5BcrUVHaFgjGwYQTl4ZZT-tqilO0ipAsBXuL2moyzRPgZrDEg=s4800-w1200" data-castle-name-g="Craigievar Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuvNlHIIugQ10ozjVVpMJ6sdVPQ5cFnCzkt0vhWG13-3GlkmVRaSMWoo798O5Zu22Z01BA5uvdh-Tqi8uV2i9qhmkYdxFOcOmHcdOrj5BcrUVHaFgjGwYQTl4ZZT-tqilO0ipAsBXuL2moyzRPgZrDEg=s4800-w1200" alt="Craigievar Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjqN9Z19GFEnDdkRmzN7MlWLiDxAH5YJescuKIfU7fVWdx2MT-7mJ7IEXA7plKHG2oHwqdxviCMSGtgWZ2QNUo18zV7_ZTPdlgOQD4Lnjz0FGTTykVrde4WxMffI11I4WaxSwnmmSrzKNURQ=s4800-w1200" alt="Craigievar Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPb7Q4zt8dWzfGOUMgpEAQI6xyHPlE4uvXBr5o_is3F1YzsJMPoYi1gdaeBAwut1PSTN4cG7_Xm7nfe8CYTNTP66D914fwWv_xa4RX3h8CPEQ04JZVHcYlP5OIIwE3KLGmA15_odQ2nYAsRxJI=s4800-w1200" alt="Craigievar Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMB8fbDePNRL8pqDu5it8XVeTopq9-J7_7QgzaGLrMKUE5ANkKlGQvtn8mF2PZsN3KLZN0mt2c7PjaFaJlxBee2mVkZCSB3aFDux10FXU4S378lP45_Ib6uPt9HH2Wulzg4P3b0Kng-t4HfWt8=s4800-w1200" alt="Craigievar Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6RuPxK-8VXeOz5gzJRDKHOMxaVtFTsjl5TR_MsTdtVd_i-UEMRw0wfSUXdxPhVktSO36LfBpdsYgEaxSomhLapdTAXpUQ4a_thyvJztPNzqssKv6m2A8bnY0OAYfJ72rWWBN7G3ZRKOqnBbH6InwbqQ=s4800-w1200" alt="Craigievar Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Craigievar%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

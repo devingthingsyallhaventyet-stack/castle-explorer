@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVND8w5C6zXIR_C6U8EEJ8J6Xr4909F4EOUcl5xl6OWugJcZoRlE5HWWkbwk3F7RXvE6YlO8GCAATWPp9jfYMUsT3qBU39JVq2tJsBIawDtHFJlNWTWd65bqL9AU6NEIROjeiATCyWIjtiXh1wStNBaw=s4800-w1200" data-castle-name-g="Carreg Coetan Arthur">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVND8w5C6zXIR_C6U8EEJ8J6Xr4909F4EOUcl5xl6OWugJcZoRlE5HWWkbwk3F7RXvE6YlO8GCAATWPp9jfYMUsT3qBU39JVq2tJsBIawDtHFJlNWTWd65bqL9AU6NEIROjeiATCyWIjtiXh1wStNBaw=s4800-w1200" data-castle-name-g="Carreg Coetan Arthur" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVND8w5C6zXIR_C6U8EEJ8J6Xr4909F4EOUcl5xl6OWugJcZoRlE5HWWkbwk3F7RXvE6YlO8GCAATWPp9jfYMUsT3qBU39JVq2tJsBIawDtHFJlNWTWd65bqL9AU6NEIROjeiATCyWIjtiXh1wStNBaw=s4800-w1200" alt="Carreg Coetan Arthur" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPe3Ed-CY7hP1AMzyQ2oYXi_ixYqykuV3z36r51aCCM6pHYmYztbMDvKZFJsqczkYuewIQllWjEtiRpU7vYzxjUHe1GV2Q9tf38Ep4nDGLh-SgIkn6zHiWktwYUrVRdnrbRxP66jcMOHlB68w=s4800-w1200" alt="Carreg Coetan Arthur photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOWFFiMJxnODGPgc7k1JjDg-yVaYScgwMMGaKMTubKXlN2kUm7D67A1OIk8pCWuMFUtQLcRHXlpFOpF_hNwBJNTbtuQamz0kWsRGWzDmPay_9WPLeFSY1D8vghiy2grxffadZIeWJ-WtUmrkfY=s4800-w1200" alt="Carreg Coetan Arthur photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPSvROTvC8nx9BVsJJlCLj154bhKWJJpEpQiDuJR5KavU257ktPDACBJHOGCfqOeitf-jkWIixhryOjUqn4ldN3OXWAfTgneAYeZvwrhiXyUkqP62aZ7OYQ53sGetCnGJiYjZl09sBwO0HX0cnzFME2=s4800-w1200" alt="Carreg Coetan Arthur photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMf73QawEhG7Z_OAiNhqxLAH5y1ibhl0P-2aMO8VnT1__EwLYRgtpHdNEWenM8wsJPMspAQzFP9wj-sYc3jfxZnu1jjXEoLgguKlnr3dUKVyCkCsnU_Atr_ZpVZMCet6zGs0ZIM6GDt-Yej=s4800-w1200" alt="Carreg Coetan Arthur photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Carreg%20Coetan%20Arthur%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

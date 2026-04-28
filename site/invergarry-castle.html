@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOp3dOUsFTXGngwkKsQsB9wsEd4UtkuXoHC65_Ujm-Iem2vha_qeIV8oooo1F69KlsKE4Yu2f3gZy9hG-af3m8qveAosup1jcX_vO4IS3giT8laO7bOgatQ7lIoyNSmKm064XDSGe5p_QTY_w=s4800-w1200" data-castle-name-g="Invergarry Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOp3dOUsFTXGngwkKsQsB9wsEd4UtkuXoHC65_Ujm-Iem2vha_qeIV8oooo1F69KlsKE4Yu2f3gZy9hG-af3m8qveAosup1jcX_vO4IS3giT8laO7bOgatQ7lIoyNSmKm064XDSGe5p_QTY_w=s4800-w1200" data-castle-name-g="Invergarry Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOp3dOUsFTXGngwkKsQsB9wsEd4UtkuXoHC65_Ujm-Iem2vha_qeIV8oooo1F69KlsKE4Yu2f3gZy9hG-af3m8qveAosup1jcX_vO4IS3giT8laO7bOgatQ7lIoyNSmKm064XDSGe5p_QTY_w=s4800-w1200" alt="Invergarry Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVB1rrGIERttC1DebeFTI9Oq2GS5pZXWLn9CLkqpp1oEGnjwI8sopOgigNQdD24OSJYAvbj84KLhWzBcBlvZMGjIiMS7yvkKlRtl4EFc9bq3BASO1rjsFqSVQsnpPTX8NTs2XAzwc-iEe-R5E=s4800-w1200" alt="Invergarry Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtoWkO8En3tN_6MbJ7M-hPtpRIuzr4LPV0qGG_v_WYHfBCjLA--EqxyiZiuH0GKyKzVGo8HqSI6x3QN_Qt6NM2U12s0IxZiKVgPhdxj0JLiRm3K99GZ7I-ClWDDhlV05HKxTT_gbVvzubTzPE=s4800-w900" alt="Invergarry Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNijuj6gWory3_6TyRNqhXxKs6w_FNGbXymxeMfReZtNMikF2KEDLIK7imQ8_12-3UOLlqAZ-v1THaPXXD8liwPzDOfj5NdssE7jJxXXkmvg57AnWpZwr4QURumgpex3CuViMWe1j14JktVQw=s4800-w1200" alt="Invergarry Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6r7TkAJ_MdFXyWBbBT_MF6snVseuWk34lV_3uvII7MiVp8JaXqbPvsMtj3iEu2av5kXo8nc8R5pFkJKmZ_SMdxwSUpONldbHboRedWGZ6UXfefYhPa3pueSwvbZM70NDb7_85KdsV647XxK5o9600=s4800-w1200" alt="Invergarry Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Invergarry%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIhbiAnPUuZ1R_MmLA1Cp6UVocuID65sQB7WmU0qqmv3BCDkDr6Gf2WNSpnP_kM_T-oUF1MnWumi_Pg4ezCipQl_l8K3ba3AaHpKfEDSecjS8zw8I45dxWes1NY99Uy-KwcmMy7Qy7Mi8RngKhYSPsPg=s4800-w1200" data-castle-name-g="Old Beaupre Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIhbiAnPUuZ1R_MmLA1Cp6UVocuID65sQB7WmU0qqmv3BCDkDr6Gf2WNSpnP_kM_T-oUF1MnWumi_Pg4ezCipQl_l8K3ba3AaHpKfEDSecjS8zw8I45dxWes1NY99Uy-KwcmMy7Qy7Mi8RngKhYSPsPg=s4800-w1200" data-castle-name-g="Old Beaupre Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIhbiAnPUuZ1R_MmLA1Cp6UVocuID65sQB7WmU0qqmv3BCDkDr6Gf2WNSpnP_kM_T-oUF1MnWumi_Pg4ezCipQl_l8K3ba3AaHpKfEDSecjS8zw8I45dxWes1NY99Uy-KwcmMy7Qy7Mi8RngKhYSPsPg=s4800-w1200" alt="Old Beaupre Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMPDkh8Fj-NyWbmplO8alyOq68EAoieQtva-8RanEU5lfjG5dhPQpY-LS4Wjn6yVn8OoXbdNJeJN-mRO1bI4taVd7AcxtxFngVdiPfLn8trtUy8MBySf5d47nOT68i0ugd3IjYtKfWv4TTlHw=s4800-w1200" alt="Old Beaupre Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSCmEX6OwzEgMkCYFRFQC7hAu5k3I012bHY7TTLpG5VzXzmKHo-lp1yUOqnNIHMm6wbnZdC0B3moFyh0ysN7Qw_M_sw9_cuX5ggQUJLzoKr5FBQUYaczoGtBJrkpuiDvFSlJSdfgrEacIJBmo=s4800-w1200" alt="Old Beaupre Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFn1ddvSe6sSTVzdPpk2dj4tiu_JNJik56B0qhoYnN8rm-2eyq55aC2iIxfSjUdveqfgOpuU3Mlu2Qvphfk4_3-05-56hpsDzlD4-lHxSsdoEcVdvz0xgxneLPF7ie9LCJxiyNcK83DK9uKzBZ9GaD=s4800-w1200" alt="Old Beaupre Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMGVMUG9rGIfTjmUJXo28BhliSLq7FhAH_9o-PiATLEfETo4COY8WBu5kGqYOPZ8U0GBzRQvgF-P9YSzKCBfCzP0CA_PmOyflH2dMBmVD-uPH3q8H9m4xemtixxyHdjfxRfJbxqPQaGgkVIF00p6aS4Wg=s4800-w1200" alt="Old Beaupre Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Old%20Beaupre%20Castle%20Vale%20of%20Glamorgan" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

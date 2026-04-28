@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOF8My2FEnGB5B6g6mksy3NrX9mbeIJCK-JW-cJqAneapVF0qz1jnhLs4RM8ZsWVr3ATS74wT8OWqd6anItnEVF79__m0bafGKt3bAuFT0MNdUubPsI34ELyboLNf6Cmj4Cr_EwK7WSHDUSDg=s4800-w1200" data-castle-name-g="Huntington Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOF8My2FEnGB5B6g6mksy3NrX9mbeIJCK-JW-cJqAneapVF0qz1jnhLs4RM8ZsWVr3ATS74wT8OWqd6anItnEVF79__m0bafGKt3bAuFT0MNdUubPsI34ELyboLNf6Cmj4Cr_EwK7WSHDUSDg=s4800-w1200" data-castle-name-g="Huntington Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOF8My2FEnGB5B6g6mksy3NrX9mbeIJCK-JW-cJqAneapVF0qz1jnhLs4RM8ZsWVr3ATS74wT8OWqd6anItnEVF79__m0bafGKt3bAuFT0MNdUubPsI34ELyboLNf6Cmj4Cr_EwK7WSHDUSDg=s4800-w1200" alt="Huntington Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMq1eSlFT35eVbvHO3YR9pQEO6Mc4kLcuulcxkbtbxucczyr1auIOgKsgbVgjxHrlrN7KTVMCxRXHhQxjTrQ0tCF3713gZIffSyKbXfQ4HqVmSTlN_6MGQ36Nwa7BmZYBn4JXYZ1vSTd-FO7Uo=s4800-w1200" alt="Huntington Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlY_XfR73AyQMyRiHth__cPRtjLWCX_WIE_lSsSlgrxue7ZILSVKxPaxDlomHkeSbJyfUazZnm2gIFjyg8NHGD-VPm7N3D9sgCWkQpMXlKT5rr3Emmwc0l9rolHbSEhcVSdaP46bt3aSMI3A=s4800-w1200" alt="Huntington Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOc_-c0Z4My7UmybcQqpy2LRORZfH5JFR0O5SJr3iXQp3uao2QbI2FICzeO7pmlWf0J4Fm36IZZGGAfoe-ZXXIBX-y3tzoxeNrrtsY_J4BfkfEBmcx3cUle2GFWi-ddWt9dFO55Rm8s6ntr8Go=s4800-w1200" alt="Huntington Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzhJHz5aGpxTsDT86oQQnmMqSD56TXgfp15eyHs3b6k_I-X6mcdSb580s3kQeJFp50LZtA5AeVdW_YEP1vBhYYyzMWTPezwXpKTxchOUUMOAYJ_8-x7TFRhdCBp5QASD3KeJVz3qPodDVTAQNewQjeFg=s4800-w1200" alt="Huntington Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Huntington%20Castle%20County%20Carlow" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

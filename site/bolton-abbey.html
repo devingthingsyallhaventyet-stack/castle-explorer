@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBYcT-v4BucLe6OLBR9tR-SdJ08rg7xIWKAxHcriHGzMHuKT-ombIjZRXGEOxk7ThO8NSJUD4Ol6GUQmBfV4FQRTd_T2ScH7RN89nDtnxwfBtnsFuvAxfitrn15jTbnezFLEoGzCIw4dZD0A=s4800-w1200" data-castle-name-g="Bolton Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBYcT-v4BucLe6OLBR9tR-SdJ08rg7xIWKAxHcriHGzMHuKT-ombIjZRXGEOxk7ThO8NSJUD4Ol6GUQmBfV4FQRTd_T2ScH7RN89nDtnxwfBtnsFuvAxfitrn15jTbnezFLEoGzCIw4dZD0A=s4800-w1200" data-castle-name-g="Bolton Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBYcT-v4BucLe6OLBR9tR-SdJ08rg7xIWKAxHcriHGzMHuKT-ombIjZRXGEOxk7ThO8NSJUD4Ol6GUQmBfV4FQRTd_T2ScH7RN89nDtnxwfBtnsFuvAxfitrn15jTbnezFLEoGzCIw4dZD0A=s4800-w1200" alt="Bolton Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMk7cz6GaDGqnvZe4VsVCNlIJ-l5hwuQ7pMqrVhUAcA3yF0_XIuQh85IFnsPs54_osFFkWxe_zvWWlQhB7FG-fnfRSsGfyGxGNOpW8pjkRz_26SaDkMB8fJNNz6SskrsHSVuJEk4bLSBpQmaA=s4800-w1200" alt="Bolton Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpSTDabjftKOJtEti7eY5-erIe1MIC-AdrtUvNUEV8yDn9-wYnN4PH7Nvdb9GkLPKwE_u-KWXep_InwJtmYmJwCz8Y4Pq2NTu6qO6zHHZYX1o3iB-rd13_VF0wtPIh1LM8bdHtrQK_esDIxdQ=s4800-w1200" alt="Bolton Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPGFLgLX7p3jjhDtdnfGOsu5Yfj3gUlgatqPJaC72EzUTvrrxrPRkvhhgiOKQO-IT7loSHO3TqADMEqbMqmBMBHP2z1Oz_kGSIOu9_l11_KP_i6G4ltDN2nnk3D7kwYiM9B_w9xAsXXzG4x0A=s4800-w960" alt="Bolton Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLH6CUfOPnct3r6UlTFjSr2x--EdOCW0o_xRiByb7xkAJmA75m-kVvnTzV2-dGczd6hYG4ufF3laHcnpu-x17_WsaIiIf0WAT1NkqnYLbVGvAHd5f78XzSUEHsT_LaAeCVLjFEoy7vWBdGLg=s4800-w1200" alt="Bolton Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bolton%20Abbey%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdSCMdXUFo232cwN97roiZemkbP-0ANU0An-8xMZk5yc-VlFlyZCEvOWLVUn0wdUmHWIdu6yQC-rosc4LKM6C0ymfZ0Su_aBSEv46Ofq2yuJ20l2R3eP_YqSQC07Ztvza99UT4dMV1HWvWxl8=s4800-w1200" data-castle-name-g="Harbottle Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdSCMdXUFo232cwN97roiZemkbP-0ANU0An-8xMZk5yc-VlFlyZCEvOWLVUn0wdUmHWIdu6yQC-rosc4LKM6C0ymfZ0Su_aBSEv46Ofq2yuJ20l2R3eP_YqSQC07Ztvza99UT4dMV1HWvWxl8=s4800-w1200" data-castle-name-g="Harbottle Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdSCMdXUFo232cwN97roiZemkbP-0ANU0An-8xMZk5yc-VlFlyZCEvOWLVUn0wdUmHWIdu6yQC-rosc4LKM6C0ymfZ0Su_aBSEv46Ofq2yuJ20l2R3eP_YqSQC07Ztvza99UT4dMV1HWvWxl8=s4800-w1200" alt="Harbottle Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXrH6eJyPynBwZgIXznKSi3Jj9MbKczBkl2Iu873GX9tMX5j_hNK3x_YnT1ySn0CXTZdolG9ppTBt-vWfgeHOcFi234WkVfnWFd5L2XIsEAfK4lr7H8hkE2JqpN_iBiULGX-lv_jH12vChQ24=s4800-w1200" alt="Harbottle Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOocHX-DD-aVyTFnsChcRaHILMvgsFL6WvZkXJnL3RGXuQD2W9K1qqAM3T-uVi5THY1Nu38nDl-VcKQpcjuuf--KlxPcVPUW8gSdMX0WD4sh0s7fUBtahSsy1qOkq6BVzsDcxquSHtzadtholE=s4800-w1200" alt="Harbottle Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8w6Gjhwo_JTs46zInbzI9MrHf8ephLLBoalj9-9uoDugn9bKXUHD0IqJaS72bKoRgsRgFlZ8abNdW_irFIn3Ugyb3hrFatZPYhwRghPfkfRA2C6fpIf6eeKcNC7kPDbtV99buIk5EN8szug=s4800-w1200" alt="Harbottle Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEcMzEprJ-htxwUN56UXTKWEqddhGn9eduBAyp2EbXJcQzkNEA9nSwQ3nyjFi0nEVBo9rxmARmbmLeMAr138gGPsWD2hR6RGpvrespPwf37jAroYQwQF--rixqiN_83v_jF48rhri7goOmYQ=s4800-w1200" alt="Harbottle Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Harbottle%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

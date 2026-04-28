@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvDv_5-6IUU2C9ohCy0oNtIcXXW4elJSKkObTi5TF4FEIDlSRF4noFaa1PUdCIlKmIF9MJne0vo7Zx5e7QtD0xnWfHd5UjznN7pqjfs28vnhblg2EsV_NimFEELVzfQgDn9ZKMjUiEYTkA6g=s4800-w1200" data-castle-name-g="Dylan Thomas Boathouse">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvDv_5-6IUU2C9ohCy0oNtIcXXW4elJSKkObTi5TF4FEIDlSRF4noFaa1PUdCIlKmIF9MJne0vo7Zx5e7QtD0xnWfHd5UjznN7pqjfs28vnhblg2EsV_NimFEELVzfQgDn9ZKMjUiEYTkA6g=s4800-w1200" data-castle-name-g="Dylan Thomas Boathouse" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvDv_5-6IUU2C9ohCy0oNtIcXXW4elJSKkObTi5TF4FEIDlSRF4noFaa1PUdCIlKmIF9MJne0vo7Zx5e7QtD0xnWfHd5UjznN7pqjfs28vnhblg2EsV_NimFEELVzfQgDn9ZKMjUiEYTkA6g=s4800-w1200" alt="Dylan Thomas Boathouse" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLhP_koj5fSKV3ixZYbSZ5YADaRhtJhqcEE9fGJVQ4xnWIP2VaCU6J5g9Jx768l-zQhw7p8I0VJ91Ti0cfv8B-3xo0t0KzRsEKZmHPyom_L0fN7Vp8mppKCKefgcGfjqrcvEX6LPLU3pvBr2I=s4800-w1200" alt="Dylan Thomas Boathouse photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5zs1fzu-947LDoDDIAsTRrwKO8YxaypwRWHCHELzOi9mNkETZW10X-XnrPDaj5kFhgVpAzJ5tGHo_hHLc7L3pl1GglqxGh8o0V8RMiXRYCsGJi2wsLvP9W5QhUJoRdASIlECdUlF-Jq77VDk=s4800-w1200" alt="Dylan Thomas Boathouse photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqGPowOsIVJbv19oMUgYoKjmtsUO-jdOf6X7U1pC9lxYIh-r3qVC0SdP1yjcvhZu7VSzG9JosFC1A8_CW-9mWwDjiA6rFQGKkkg=s4800-w1200" alt="Dylan Thomas Boathouse photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtDrgCv5qO8YgizOwWujzrABMvHyoBmk8UBxN0hNhbrGejh80B3HPrOuhSqZLGjQZkNBbsFicJkunv5qE94trIFAjHB6_C7uPh28HHLoIMyEt_WUoDxgAGijXe1MaS13C5s1AiOWzEi49U=s4800-w1200" alt="Dylan Thomas Boathouse photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dylan%20Thomas%20Boathouse%20Carmarthenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

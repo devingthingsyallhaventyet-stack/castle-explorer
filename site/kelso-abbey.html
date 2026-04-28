@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8z5GkD6cJw3N3i5SoDUbrtJxWyG60oU4SXcppQVJzHyhIDGxlJIRyPzYiU0SM4o_H9Cclz2O8NyCk6ujGLZSEBHgh5FBglwNw6cX7WIyKCSaYlmbHVG9P8i21sBi8Xif1Eox8J2JQsi42=s4800-w1200" data-castle-name-g="Kelso Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8z5GkD6cJw3N3i5SoDUbrtJxWyG60oU4SXcppQVJzHyhIDGxlJIRyPzYiU0SM4o_H9Cclz2O8NyCk6ujGLZSEBHgh5FBglwNw6cX7WIyKCSaYlmbHVG9P8i21sBi8Xif1Eox8J2JQsi42=s4800-w1200" data-castle-name-g="Kelso Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8z5GkD6cJw3N3i5SoDUbrtJxWyG60oU4SXcppQVJzHyhIDGxlJIRyPzYiU0SM4o_H9Cclz2O8NyCk6ujGLZSEBHgh5FBglwNw6cX7WIyKCSaYlmbHVG9P8i21sBi8Xif1Eox8J2JQsi42=s4800-w1200" alt="Kelso Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNIWQidlgvgUk0tXFLYJQ2Lkd8Ee_TVPRKnl-XMniumyspaNAyMtbhT9JRFKygU2-2qa0dDMJyht5LQQH-XK47G227GJuyrTEy5i8KQ661b4yItupdcRH9AxjEl5wQsliFb2J8WQISutwuy=s4800-w1200" alt="Kelso Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvd4et4x9zYWoZ22Gj3DFmc6nJvfDNYMVCSsltqJCDP8Opko26u0tebnyjNCDjOM_H5FkzsI0Jxl18-YLLl_tISXuiaFsdg6fdj6syNCdGHKPalX5t7ql6DI6Z2IukX2pOmGwvQsFVCpoc2ZA=s4800-w1200" alt="Kelso Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN00Y6VLOytpEO6iyZR7Pf_e_5RI7mg4cVqXbcoX41OW_aNWobVB6kZgFYQqw6NG-86aDKuiRZIdQE9EqnDUb-L4dHaQJIruaU3Jes5oXklV9LjDJa_-AUHwWaGM81Q6xLMKziEhXKrpCUcIpk=s4800-w1200" alt="Kelso Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOS8pFs2eqOtDhV4-evDZHlZInThn3YybRlsg4GzU9sN6Td5Pq_UXth7S5IqUapFh51SZd5lu4lImmivcuYsnS0mgTDP5lncFEedgr21IDKeKU9uQeU6kv9jF2t3Z28lAqUlTnHwOyZhJ0ETM4=s4800-w1200" alt="Kelso Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kelso%20Abbey%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

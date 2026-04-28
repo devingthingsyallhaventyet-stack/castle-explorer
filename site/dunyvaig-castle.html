@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzSYYp5TzSCRVLP2UqAah1rurx-Vj9wo-GWnxCaWClxgo9tCM0gbFkoiVoyf8w7tJxpdMQrIkP7iDdfbBVa9N4k55ELqwfKvB7apKnf0fD-Zr9OkoDp758Ii73MAD7GXqnzW-aglFNF3bk=s4800-w1200" data-castle-name-g="Dunyvaig Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzSYYp5TzSCRVLP2UqAah1rurx-Vj9wo-GWnxCaWClxgo9tCM0gbFkoiVoyf8w7tJxpdMQrIkP7iDdfbBVa9N4k55ELqwfKvB7apKnf0fD-Zr9OkoDp758Ii73MAD7GXqnzW-aglFNF3bk=s4800-w1200" data-castle-name-g="Dunyvaig Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzSYYp5TzSCRVLP2UqAah1rurx-Vj9wo-GWnxCaWClxgo9tCM0gbFkoiVoyf8w7tJxpdMQrIkP7iDdfbBVa9N4k55ELqwfKvB7apKnf0fD-Zr9OkoDp758Ii73MAD7GXqnzW-aglFNF3bk=s4800-w1200" alt="Dunyvaig Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdDfDWCrO1xKcFQiyjhSbqikRJGOWamw0F4kXTyewhc59IzaRXKtLENM9sZzutB_3miotiNlUaortHGGyrLuKJq8xdB1Vcxanwn_4VRUS8M_XG0SFmWshaK7VQFR8KD9sRIk6VRfFOgzgdej8=s4800-w1200" alt="Dunyvaig Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFt9tOPH2o1h9zSsgzm4q6frgZxFmI1NEQVNvJxrXKaEULqvw3SOiYFUKqcFsgAHhjZfYuEbxigBRH-2BOxtpLEWjVDtpUn8YvWJFq5sWzy5kGM1XCHJPLJgEzA6kkXQ_swFpi8F0CoXyn9Us=s4800-w1200" alt="Dunyvaig Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsrg1TGqE6fHA7hZN3aLRl1vGyztPuTirrOligho3fyR5n1rgMC2lyhauQCCxcMj6QGqi2f-99c0W3MrDf15YGyvvy146drbMjx8EBIOncQ731etMRGToiRheOWZztYwEwJelyAtS-TDylaA=s4800-w1200" alt="Dunyvaig Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM2eOvO7PLDfVShdiZWWaLbgEMvj6ysMEV5uiJJPnWKuy1Uwoc9NYkF_yptgGKQGdJ-wbUohZcF0BpiRPMrRgTp_f2Cr_ZW8hwDjXhDK4xFxCgEbCSQhwrCAf0meOMp4KULCtN601PYB4iw0A=s4800-w1200" alt="Dunyvaig Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunyvaig%20Castle%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

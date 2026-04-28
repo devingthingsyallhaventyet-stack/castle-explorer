@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVQlOj2fm9oic9oatjeT-Ky5OfYeASpLRh78niVEdkLuYm7F2EJQSqLm631MgbeWK-uMDbMFSYDjPuGS5zPtXqpc9fGY7h_QqlnfkLIEmZxQQE0JPXQFmDKxfWM85EszY2PTNbMPIdgoHsqBc=s4800-w1200" data-castle-name-g="Lullingstone Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVQlOj2fm9oic9oatjeT-Ky5OfYeASpLRh78niVEdkLuYm7F2EJQSqLm631MgbeWK-uMDbMFSYDjPuGS5zPtXqpc9fGY7h_QqlnfkLIEmZxQQE0JPXQFmDKxfWM85EszY2PTNbMPIdgoHsqBc=s4800-w1200" data-castle-name-g="Lullingstone Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVQlOj2fm9oic9oatjeT-Ky5OfYeASpLRh78niVEdkLuYm7F2EJQSqLm631MgbeWK-uMDbMFSYDjPuGS5zPtXqpc9fGY7h_QqlnfkLIEmZxQQE0JPXQFmDKxfWM85EszY2PTNbMPIdgoHsqBc=s4800-w1200" alt="Lullingstone Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0Sy87ttgb34-_JarI6dkX_WvrdMqU7fiZubGSyzx_0R_LP8VjpMcDGoaT2rfhehCXn4pjmt9BiHYDv5hRnNdAv-9ni8nCmPuod9_pBB8TeK0ieb1RibUIGKrxoG9AJG0P5xyAxSARxs9cLxo=s4800-w1200" alt="Lullingstone Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqEcqqp3CBaQ5_URz_j4GoO6r7Ab02fL_VtfwLECAX6mIsog0eufY3CfjmxuZ7llgGxvtWxBxdGKIOGi5QULo0bYaMc9QKijbX0=s4800-w1200" alt="Lullingstone Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFvSk2p1cIhRzJFw5mqVi-xCHi28aMluxa_4cYza591qxDQhq1dzvqj1D2BJHTgMZIRIXkCaFI8aPxk5xLz2PSVuzeKqsw04Na_29R5WdRlozccgFPHQzsnn6WfQSI3e1nIrGhpkRGikDcOQ=s4800-w1200" alt="Lullingstone Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPfcO42jqxplVTBR_oNrbXaK_F2l6-j1AsIRoR4y2_JTD-xAtA8Fz6dGmgt67zRzmSbKN7DZkDA5kktTl9S4ZRwvl7P7pJR6TgTTgFcJ8GO4oUiuy_G0n7q-KvxW24hgd-W9Y4QEHsdh7kRg=s4800-w1200" alt="Lullingstone Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lullingstone%20Castle%20Kent" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

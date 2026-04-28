@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVFlRNmYF_2M_WR5ojWB_CIpGOs9JWb8sDAs7a4uaxLmhV7DSH0EDD9pnc8K_FZniWTfE5HGHsQN6wxQFI_J3lgVxvRK1spFQuQxaMDpn_pTZBR8uvQD1fu-8oQxLUxq0y3oRPEc4YBpT7JQ=s4800-w1200" data-castle-name-g="Dunmoe Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVFlRNmYF_2M_WR5ojWB_CIpGOs9JWb8sDAs7a4uaxLmhV7DSH0EDD9pnc8K_FZniWTfE5HGHsQN6wxQFI_J3lgVxvRK1spFQuQxaMDpn_pTZBR8uvQD1fu-8oQxLUxq0y3oRPEc4YBpT7JQ=s4800-w1200" data-castle-name-g="Dunmoe Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVFlRNmYF_2M_WR5ojWB_CIpGOs9JWb8sDAs7a4uaxLmhV7DSH0EDD9pnc8K_FZniWTfE5HGHsQN6wxQFI_J3lgVxvRK1spFQuQxaMDpn_pTZBR8uvQD1fu-8oQxLUxq0y3oRPEc4YBpT7JQ=s4800-w1200" alt="Dunmoe Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJTLbQngq8m_iNMzwjGFnIuo5FizhAlTFYABP-WxDq-HEr1zOg_U8AxGUPLdslZSNAP8oAnPtV7rQ9_Vqa_0jGq9FJZHNphfNCNQYE_P3RNToyyH6U-0Q-sbvSLx_nJwdkX5CyhE19D6Xo-A=s4800-w1200" alt="Dunmoe Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEoddgzOrnSIfJWLtGHrOTgnBDECyK_gFhCCnhmitwoWdxHGPSYuzQ559X_Cdgb1L8VTVEjxnm4Z9vkZxcedbss5cNvCz6OShJk0T4bABDkgFubOLVVAIhS-MVLide_8EFN4GT9_DSzYjNXA=s4800-w1200" alt="Dunmoe Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPfJZddx-9mplGBAKb6FapQCoujowFzzC5HI4Appk7tPL87p4OB7-An9UZ-wpO4anC7plkiVpcAqZfxb_FPTDXrOf2AuNXq7jK3eawO3GZZm8M7yLFsEguBIbNDOMk1plMp7ly3Cynj4CiOgw=s4800-w1200" alt="Dunmoe Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQNXx-gsJoerkykAUbJ-CjvLMpP2BJm1o1rJgNVwRp_mgS8PNlV0u--fc4WkBssMCQTxNmgmsQFJ6YZHFJQVa_Ud4suU8YwXf5pCKqGED1-n1upGOtMPelSgx7nxGkkH5Yc9cfMfMebiPYxg=s4800-w1200" alt="Dunmoe Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunmoe%20Castle%20County%20Meath" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

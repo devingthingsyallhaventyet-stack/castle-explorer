@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMx7SAA-Bazf4Qfv1x6qML7iuPrJnjEaJmhNbAYhtKGWCjPe5Z7ywgGPPXmmjhuXdii-OSIehVMCkqrAkyim40C-U0tq8wmsUcnaSqZp6pFTgzcmU6Fs-p7g1RoCa9mfS6O1zvEIfgNOSN12A=s4800-w1200" data-castle-name-g="Balloch Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMx7SAA-Bazf4Qfv1x6qML7iuPrJnjEaJmhNbAYhtKGWCjPe5Z7ywgGPPXmmjhuXdii-OSIehVMCkqrAkyim40C-U0tq8wmsUcnaSqZp6pFTgzcmU6Fs-p7g1RoCa9mfS6O1zvEIfgNOSN12A=s4800-w1200" data-castle-name-g="Balloch Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMx7SAA-Bazf4Qfv1x6qML7iuPrJnjEaJmhNbAYhtKGWCjPe5Z7ywgGPPXmmjhuXdii-OSIehVMCkqrAkyim40C-U0tq8wmsUcnaSqZp6pFTgzcmU6Fs-p7g1RoCa9mfS6O1zvEIfgNOSN12A=s4800-w1200" alt="Balloch Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN3GFGmEaDksNdluUXWwIizuVu848G-52-7-D3S4Q9rIwiSJbxJkO-RIBsJNjiTqa5l5kyJGqkQplTJb76sknTHmkjGZ-DgwH36YpERsyMHZs7Afv4VEIPIbKsCTfezwxMYCtplrPCpmBkh=s4800-w1200" alt="Balloch Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNxJq1jQFiLIXvAEwjYCli8mwMoHXlVclega0QPC695gPV7FcsMurI0OUquMvewTFJSI8R8_HS9jR9r75eKXQNcIj9vXHbB7FzFsN47BRuTbV83dim9h8cRp31wVmzmvJdiKmiFYWtssQxh=s4800-w1200" alt="Balloch Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZk_lRQ-cDNDDNeWxtNBRB3QJDAM4u7FvA0xsTuBuNF8xLOQEJR4Vyo7Ez_GkRVx4EkNBHtGF-6kMDx5zQ3ubx2psHoUb1MP7Qpt4rwIE15Q5PejJPkebX_RV4FFpXqbJ-30gthHKbd-LylaE=s4800-w1200" alt="Balloch Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOskGhhJroKkNbbn1LMfr6teV7i741uTSQN2iEUy-vtlmlM2J5HA4tifAZl6YnVY4F9bbkCytusCX3zg4Hws2flsFDqUcN0rsULTwi40X3tBT_qQO2c7NndJsxtA_4RPlrnPxiVa7YlqK2mXA=s4800-w1200" alt="Balloch Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Balloch%20Castle%20West%20Dunbartonshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

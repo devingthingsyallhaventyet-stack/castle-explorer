@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5DaeQQjYnmGUmEPeU79uZT6pt5KkKe8AwETxppk03Xl3ZoUOw02MSHkyscV-AUkrItQ4JE3cy-Rs4V69rebUY0ON8AKt5-vV5clSVdM7jhkwzSXbFSXxCZvF1ZnX9J-dOKZ4S8hGq6v8kdA=s4800-w1200" data-castle-name-g="Lamphey Bishop&#39;s Palace">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5DaeQQjYnmGUmEPeU79uZT6pt5KkKe8AwETxppk03Xl3ZoUOw02MSHkyscV-AUkrItQ4JE3cy-Rs4V69rebUY0ON8AKt5-vV5clSVdM7jhkwzSXbFSXxCZvF1ZnX9J-dOKZ4S8hGq6v8kdA=s4800-w1200" data-castle-name-g="Lamphey Bishop&#39;s Palace" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5DaeQQjYnmGUmEPeU79uZT6pt5KkKe8AwETxppk03Xl3ZoUOw02MSHkyscV-AUkrItQ4JE3cy-Rs4V69rebUY0ON8AKt5-vV5clSVdM7jhkwzSXbFSXxCZvF1ZnX9J-dOKZ4S8hGq6v8kdA=s4800-w1200" alt="Lamphey Bishop&#39;s Palace" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPy5N0vtkyBUF2LGhW1x6yQUh4W7kn656MQUzfvWGo_pB_GE5AayGtS28NtyI_wS1Q0bSDUoTv6SGXx8Py9eg4hGJWjf-fjCznshYSbcc6vIGtskMHW2ZU3mggWqfpBdf6kffbhuYvAWyRKS3RSwuyr2Q=s4800-w960" alt="Lamphey Bishop&#39;s Palace photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPjjlOdP0OyEpYiWCX7zWwhrQ--OOnjV5CeB80Npm8fpf5AmCF50ILqEPEu5_dw4UnoQhF64MRNxXzeoeQCBPlHS15vDGhbStXdAY1lGNe1NXce7fIyKvfNJMr-ESk_DoHaZuYw5FXj_xyCPQ=s4800-w1200" alt="Lamphey Bishop&#39;s Palace photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9wn_y1nZg9gDC7XwOEDEAIlVEPMGu5dEmnrMAWQcOyr_7u1iNYpfS-6D9MF_dPqeiiX4TPHcisJxyuXFeRl57iIoII-pdLY94dsSEc16GckBb16ngU5DKKz5zDMVASgjSLZTvBoAsceCOFA=s4800-w1200" alt="Lamphey Bishop&#39;s Palace photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPLrrzf8xDpjr7LDlxE2UMvvqJ5Ws6MICwWvula63I3KrE4Yq5JRMsB9TOd--7IrgzxaWSL3PJkCratPgkEA1o8nvgg5SlAC0pMdCv1WOxmQv_n7u7TToADwiOZnc3SWvH703bkraBnoPVaGg=s4800-w1200" alt="Lamphey Bishop&#39;s Palace photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lamphey%20Bishop&#39;s%20Palace%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

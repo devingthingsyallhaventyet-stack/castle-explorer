@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTngrK9OyVh1I--9Hm0C5LmMiKqlVc7GlAmODm9zkfSbGZ52ij71QfqIHSAOfF6xTOaBLgbmMDZVhYYtcJqeDuvx36UVUw8p8FOaF4ivWiN9-J7zQTrZYhLqNhGV3vppsvNKbZRhNeBQk_wuI=s4800-w600" data-castle-name-g="Druminnor Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTngrK9OyVh1I--9Hm0C5LmMiKqlVc7GlAmODm9zkfSbGZ52ij71QfqIHSAOfF6xTOaBLgbmMDZVhYYtcJqeDuvx36UVUw8p8FOaF4ivWiN9-J7zQTrZYhLqNhGV3vppsvNKbZRhNeBQk_wuI=s4800-w600" data-castle-name-g="Druminnor Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTngrK9OyVh1I--9Hm0C5LmMiKqlVc7GlAmODm9zkfSbGZ52ij71QfqIHSAOfF6xTOaBLgbmMDZVhYYtcJqeDuvx36UVUw8p8FOaF4ivWiN9-J7zQTrZYhLqNhGV3vppsvNKbZRhNeBQk_wuI=s4800-w600" alt="Druminnor Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOp-vuEwwTdAf7kD3uuDvf-nxZ4D7J3G8vmuhSHWeTj4JMFLSHuvwbYPF77rQ7XMfDqD-dShhe4LxYleGz8iyhp-mvlrhktmWTGcmSwXrW7rJzPkx9cIFLA2MF3CpPxaCfBaQ4lRSTYxQ6G2g=s4800-w1200" alt="Druminnor Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM9M3zUnNd6ZqBKXYYpd3NWh5PJThL2DMPzE6BudSgAUnzS8umL6jBZhoqw-4UeFyrCqfnUOacxEFRxhX_Ee22vzQpRZ13p74stsiMZJJPDSO-1-UPONJhKCD-33A_ySTCqshREIcrIEMpCdTQ=s4800-w1200" alt="Druminnor Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgVWo1_1mjrxOZ5h9tnavMC9e7fSCbFnW1fgTCRjuiBAvoXZeQfrsVXtPPRom768nwxGIA9R1tb2TxiteF6N2yQfHHKA5N0cJT1yhFc4865inErdbugMuMYR2BEMfVgOqM1UkXPwk8qQcGlg=s4800-w1200" alt="Druminnor Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPPjde0MdcRLCav2QwEwn0A2eV8h2LxX62_ccWC2Wi5ToR8Y3xEfLSJsE1ZYFsakaWKoChwYjn3Ui8e4P5H1tsuJGnHUz_pbXlzEQKxzHmUDoMQdnKySMXykM2SpbJqq7N6PalwByigIYNv1zs=s4800-w1200" alt="Druminnor Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Druminnor%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

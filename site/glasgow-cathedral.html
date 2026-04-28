@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0bwfqGKaJzYwLTCqvIA0PMALm3bFOZaNJFxNpx55_d198TR2cd0xlNeiBNcwirjzjsbDqcVWiFhf66CCZrEVr-9I8kGGUKCZBUFi7OBcSmaI7QLUM5CRppU7nAZphBkCIT02rYsKQwyyV5MY=s4800-w1200" data-castle-name-g="Glasgow Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0bwfqGKaJzYwLTCqvIA0PMALm3bFOZaNJFxNpx55_d198TR2cd0xlNeiBNcwirjzjsbDqcVWiFhf66CCZrEVr-9I8kGGUKCZBUFi7OBcSmaI7QLUM5CRppU7nAZphBkCIT02rYsKQwyyV5MY=s4800-w1200" data-castle-name-g="Glasgow Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0bwfqGKaJzYwLTCqvIA0PMALm3bFOZaNJFxNpx55_d198TR2cd0xlNeiBNcwirjzjsbDqcVWiFhf66CCZrEVr-9I8kGGUKCZBUFi7OBcSmaI7QLUM5CRppU7nAZphBkCIT02rYsKQwyyV5MY=s4800-w1200" alt="Glasgow Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0D9cQWt0UStedEf_KTJljEMSsoDF9HurrdPf7xrblqxwXxyb12ibZ37q3VpfzAatY4_N7quWo5I9qi389nieVsTNIG5kEsMciq5LGcZhrVfiACqOlmnJRoXCCOICmYd-IGikZiWq9c7_hVS8=s4800-w1200" alt="Glasgow Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO2UYXhafUkSVQWGzFSRoJofYuLa_2sc3fAEtqBEZFgV1h28jhDIzkJlkXhlQPAlEBc5gdXaJ2-lQpmvK-C_YczU9W7r9jZukyexswn9Xejx94ksGlMM8HXGdHGwH2DvB65TJ661LSdxiKew=s4800-w1200" alt="Glasgow Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM-fhHepC1eEpzdaqu-z40BU22LzG7yYWD5N5y45v_t2Ln1PtaPYzc3J2u0mp-3D2yGvDvKCgA1qw2_0Rq6eQVl9qa_ZzIGyJ7Pc63QdPby8EUe-Vq843jPUcPZemjSHSTDRUYXZcC7L5KGHls=s4800-w724" alt="Glasgow Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNRU9N4yBNTk_sHcsgz8_A5SX4MdR0FZEMYKLP_kCWQ0_X6sIKZsNNoxo6UdGW93kJCnTyRfrzBHCY1CqAq5RC-oytD0LUStWlisnuGhkG0ISogGrgCgynsX_Ub-JPS3_1-C1k9pqwG9agWyA=s4800-w750" alt="Glasgow Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Glasgow%20Cathedral%20Glasgow" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

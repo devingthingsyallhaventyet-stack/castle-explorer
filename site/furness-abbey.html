@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOO9eIRCpwyUS9BQWSuELoOD9yBZCCvtQJ71Hbk9X4teh6hqeWrQJnnvdgMPxJtUs4047wyIFF6OxWtQ2645bSvF4_VtK4hpxwMgCJ6y_WudwZBHb5Q5v5SixWlEBh7UsuV7i2glVQaQltRR48=s4800-w1200" data-castle-name-g="Furness Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOO9eIRCpwyUS9BQWSuELoOD9yBZCCvtQJ71Hbk9X4teh6hqeWrQJnnvdgMPxJtUs4047wyIFF6OxWtQ2645bSvF4_VtK4hpxwMgCJ6y_WudwZBHb5Q5v5SixWlEBh7UsuV7i2glVQaQltRR48=s4800-w1200" data-castle-name-g="Furness Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOO9eIRCpwyUS9BQWSuELoOD9yBZCCvtQJ71Hbk9X4teh6hqeWrQJnnvdgMPxJtUs4047wyIFF6OxWtQ2645bSvF4_VtK4hpxwMgCJ6y_WudwZBHb5Q5v5SixWlEBh7UsuV7i2glVQaQltRR48=s4800-w1200" alt="Furness Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNAyxwF-9JEwMqXxNMR8pl9d2RWLgLRZy_Doy2hLMrPrGMVofj_seRJ3WFuElkH_SUyFrKpPPhkd9hHkVZALNvz6kJzypQoA1YcyYKxoM_7Kw5v0O5SZY0-_DJsy5ZPJAAxjX3qB99g6h19w=s4800-w1200" alt="Furness Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDn9bzq8-NTtyxaTi8oMQTQ_8wKm8KUqFon8T3IpunT4IVrvhOn7qjpQQ63ALacjoQVp32VKadIZzufG4EsvcAQRKd6IujGHN6Z7hAOAlV8FAnXchwGqPAUapeHAyT1qM1WIboFwGEQ6eiJg=s4800-w1200" alt="Furness Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMoPEolJsNnndrmpREk4oav-NG1Wu5Y6JD7bX7zxOROMYu1-iyv_DpgMLCjQ6HoD2usk9W9ENcXNVIEV1akDvTdINjaxjku11mbkQCeDAnKj6Q4PAYrAAgi2aam9QapOlNfeEGDM3N2KmJdlAXA-HegGg=s4800-w1200" alt="Furness Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPRGr_uxf5QECINpMME9iz0_dQ3QgwHSmjltOSAxzVrP99dCBO7IO6hRGJjRlpr16slI8gprPiWim3h2Zo1WnPghe0zOfWYQgaSipRcNJ2OnqrT6-rzNxfFRMJEyc-Uk1FOLROAs35WiTIAS23dbgJsqQ=s4800-w1200" alt="Furness Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Furness%20Abbey%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

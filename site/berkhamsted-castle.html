@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMED200XnQpHY37xBWQ5QXEUMWtciXjaujtHrAI_v1EXnADTqTknr8fdOoFC1yxSVm2kJG0MbOCXCAc03y4Eek95NZh4g9rmH4JEeusm1pe7erFtuVYNJYtoyX0fWLvkRwwEmGlvPvDjClHgw=s4800-w1200" data-castle-name-g="Berkhamsted Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMED200XnQpHY37xBWQ5QXEUMWtciXjaujtHrAI_v1EXnADTqTknr8fdOoFC1yxSVm2kJG0MbOCXCAc03y4Eek95NZh4g9rmH4JEeusm1pe7erFtuVYNJYtoyX0fWLvkRwwEmGlvPvDjClHgw=s4800-w1200" data-castle-name-g="Berkhamsted Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMED200XnQpHY37xBWQ5QXEUMWtciXjaujtHrAI_v1EXnADTqTknr8fdOoFC1yxSVm2kJG0MbOCXCAc03y4Eek95NZh4g9rmH4JEeusm1pe7erFtuVYNJYtoyX0fWLvkRwwEmGlvPvDjClHgw=s4800-w1200" alt="Berkhamsted Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM04UaNJLKNxq6yJXqlG7lVjwQZ4fHC1leTBl4g-A_eOp_oGWTrFkYwB5RzPa-I6iJ1g7BZVhoN30CNb8wIxF-nQrMaOQncjnDGsbol8HDNJDheDwOv6gsRayE9e2sZJjjPcvelWnjQy5zaOg=s4800-w1200" alt="Berkhamsted Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO3EzYZRnP4P_cVz6E9S2AtmlZTybcw_INTgLxK_nYq0-F_7QvB17_uRuabrPSBBLCtpahbhcHGl9dUeknGzA7nPOlcZmxsXsVYkpUcmWS3ifIpbfIoVT_pXPYPDb7WGxIIh_QlMUqUaR39LQQ=s4800-w1200" alt="Berkhamsted Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUc78ax1VOKkLecQysIynguDckCQQ6HkXWOfSzi8furDdS_sGb0k2AU0zx3axItTtVvlhwG9_zZmExUoAWOh779Lf1oeJXC29nS9ZyP9nSMyqf-93CO3c1xAET_GMX0_444HPsgPIQtIvkbA=s4800-w1200" alt="Berkhamsted Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTbbafcxDR1hXe7X9ljprnKdm4lJKBVkBP8a1ixGruGsy6zW6Ulrl4hEfu4xaz7nWsQpYpbHAYGJ4Wj_05Q0X8YpJJ_s9talBnV_FLfpuCAT71TkYv6xZklhbzhB4s70W3pCskpuDpN8mC0w=s4800-w1200" alt="Berkhamsted Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Berkhamsted%20Castle%20Hertfordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

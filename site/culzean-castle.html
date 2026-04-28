@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHEzi2pnyosy6GhKkaBkr4JvwifxRrE2bohfiV3Uim04axDwY8cw1lq3I0hNL1TbkzuYHe8WeeRm6JEvks2cDe4GA-1w5-CcfuSXciiDwaekxXG54FvG2_MlIicpZYk0gskDoHcMvrodAvVl4iSeYvoQ=s4800-w1080" data-castle-name-g="Culzean Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHEzi2pnyosy6GhKkaBkr4JvwifxRrE2bohfiV3Uim04axDwY8cw1lq3I0hNL1TbkzuYHe8WeeRm6JEvks2cDe4GA-1w5-CcfuSXciiDwaekxXG54FvG2_MlIicpZYk0gskDoHcMvrodAvVl4iSeYvoQ=s4800-w1080" data-castle-name-g="Culzean Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHEzi2pnyosy6GhKkaBkr4JvwifxRrE2bohfiV3Uim04axDwY8cw1lq3I0hNL1TbkzuYHe8WeeRm6JEvks2cDe4GA-1w5-CcfuSXciiDwaekxXG54FvG2_MlIicpZYk0gskDoHcMvrodAvVl4iSeYvoQ=s4800-w1080" alt="Culzean Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzeVFBRcEZVFDtvGfrzviYYxtBpRxDyBMaZZKj6Vb9IUaR9H7RqNuz9uI4FnjzisWqbB5oWvLRDdtrRXW0AyDkb0P73x5YIRTdlLYyYYfmPtYSz47HCqB4713qznzrTVophKMHV71QMPrwdw=s4800-w1200" alt="Culzean Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgeyK57uwPbNsq8cfgltOV2eRO1ofkVJAFuk05Mkz96rUHSWFSGuJt8a3H_3B6e4wh6hahVKie3_M_z4yhwiFB51YhgcwKsQSUsDiDvbS8VVaGgrsMeJ8-sH9fs_mcO-IjiJDE7gSCatPRLg=s4800-w1200" alt="Culzean Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1F0SCB2ZR14jyT8jLOhut9jQ22byzdwBs2MCWB8udQB645tsTI--MaRS7BzTZVk-3OBI9OiUrLNP6IUvqMpWOHXTz95HgBZBZ1yubGnLBor7Of_4TjtPX1cFMKNkyOT5q-JBVXBj9oCBc=s4800-w1200" alt="Culzean Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8f1jdcrfSUBcZNFTLfM8dU7dfr1HU1B-lz1kelcm9v4CwwP-B3BJ839wO7VDhZw0p732bHfwW1-U2AgOy_oNzyCsEMqviGUTVnBlWP9AmgRwuX9zbTioGmjCb29RINrxZvOVkKBKpoXNFpzq26l3mhg=s4800-w1200" alt="Culzean Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Culzean%20Castle%20South%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWU8a97KXh5RAAhrDcCZiJlr4qEjBC1teq5noUmeAncQ6XoedD2cb2Gdzs4i8mpUxuA5AVpA5avNGUQxLXaM8XTeD7JQ22kWOTtJ7ly4NQZDSqzEtNZYabdgfrswZzijUfWP-f7uZ-VIAGGGY=s4800-w720" data-castle-name-g="Landguard Fort">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWU8a97KXh5RAAhrDcCZiJlr4qEjBC1teq5noUmeAncQ6XoedD2cb2Gdzs4i8mpUxuA5AVpA5avNGUQxLXaM8XTeD7JQ22kWOTtJ7ly4NQZDSqzEtNZYabdgfrswZzijUfWP-f7uZ-VIAGGGY=s4800-w720" data-castle-name-g="Landguard Fort" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWU8a97KXh5RAAhrDcCZiJlr4qEjBC1teq5noUmeAncQ6XoedD2cb2Gdzs4i8mpUxuA5AVpA5avNGUQxLXaM8XTeD7JQ22kWOTtJ7ly4NQZDSqzEtNZYabdgfrswZzijUfWP-f7uZ-VIAGGGY=s4800-w720" alt="Landguard Fort" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsRU6krkriHeyAytsM9XfBAdUQ2EgfZbUQ9zUlDOVdI8C54mVHJ4RIuVV-HGqJjsFMpqkZhloK4plY_HFz7nH3GWVVqc7V9fntTzACW9gVg1JzEkVOwWb47AA_u_aRUW6rIyQx3Irorkv-dA=s4800-w1073" alt="Landguard Fort photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZBYsz1BUbgPQinlROq0V0ySqkv4HrO7zX0VVtRluyxSNrA_I5Or5uIcgcNq1AYJEW_ZFoO7cSXwvYjRAUFdu1g1fzvTb19MnFVLXhHJyfulIzwImynJwldHwDsSOtRaNVD-wFTiYh-1Pj08c=s4800-w1200" alt="Landguard Fort photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnBIMbpmpbnd3x1-mfQV4nl0RdEVEMvJzTE1vdo3PnfwRKGUkccBvEyW4J5txnmmF6lvxlNlx6u3WxqK-uHxgkmNlcgC9-NPtRJerviNRCm_27_O51n04knAwvaU1H0YoniluNeqQuo6TdIgE=s4800-w1200" alt="Landguard Fort photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPKb_zP7lnwWzpCU9eVWdBxhhr4tXdQLaZ_mUhUsAG9hH9b9kdvlQ2KNAQ40aoHerB8kSRReNT2be1urq8K3elPB9ilyyqZv4ZHxON6zeYsUZq9pcvzETUIfvhhqC-59m-3Omp15R2Z63B64HU=s4800-w1200" alt="Landguard Fort photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Landguard%20Fort%20Suffolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

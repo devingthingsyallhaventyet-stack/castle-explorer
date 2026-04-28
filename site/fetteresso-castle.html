@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVMViuEnDik7JnrPuTK1Pyicr9u4DdlsGxkKngDqybW5jJ8d-mwb1Oger2rEecWd_mFOxq2ChDgmlc-wKa1H9PjTrf1yoKICeh5K1RE93mZroWTnKSCdSUaM1iXkRg8BYMCSyqC6a84OjWJTI=s4800-w1200" data-castle-name-g="Fetteresso Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVMViuEnDik7JnrPuTK1Pyicr9u4DdlsGxkKngDqybW5jJ8d-mwb1Oger2rEecWd_mFOxq2ChDgmlc-wKa1H9PjTrf1yoKICeh5K1RE93mZroWTnKSCdSUaM1iXkRg8BYMCSyqC6a84OjWJTI=s4800-w1200" data-castle-name-g="Fetteresso Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVMViuEnDik7JnrPuTK1Pyicr9u4DdlsGxkKngDqybW5jJ8d-mwb1Oger2rEecWd_mFOxq2ChDgmlc-wKa1H9PjTrf1yoKICeh5K1RE93mZroWTnKSCdSUaM1iXkRg8BYMCSyqC6a84OjWJTI=s4800-w1200" alt="Fetteresso Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNV5Cx-vZhQLqazxE73GVLckNcSfB-Q-YsoA983HOxX0sVdkXUsDUJPA3s7uYk8DreMioMkvVhXs2E1wdhON2tfJdguYn5Y8aGJMfMx8te2KQZ0WvusagqcihgSxq1XanzBr7wLZxpx-JdSoYU=s4800-w1200" alt="Fetteresso Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOw9hqOD1QDemb-9H9-U7yU9a8TkipDM2-d18rsKI3w34584vil5V4N-1EmBxK8884Cqi-KjdCAYc6EGi_-_WvbTjSbHVfehyVL4lP440ZxAtjRmgjCuMH2q_6AGern4mThFAC8V4Das2Dnrw=s4800-w1200" alt="Fetteresso Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJ5O2cmipwV1o27c5cEzGnnWjI1iZsDJsQXSrxFvHmkjFTzhlLB3tDEJYcfvStRpvLx114t6YqenkndKDoJlAltmj6EO7HvoZJwN7KLHbkUzNdccNBo93o_-3dMbDioOr7H03clZ8EKFfdl-U=s4800-w1200" alt="Fetteresso Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcKry8fbKvzNsgbTcjWxHpZyXzrIZHF3o-PPB9bF6EGcDbXPYpKTgiectyjiC-esCtRCl4xK838IL45QYJMvY6NmoipUz74XEn-dnBLsJufgNJ-l5B6XLtI74T69Er1B6pDVbaL86gKpJ95BPiEBKV=s4800-w1200" alt="Fetteresso Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Fetteresso%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

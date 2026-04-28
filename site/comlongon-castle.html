@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwhXzaykyOOkcdKdwfoIzxdHTWXHSWhNqZRpg3yaZMRbDa9XjamLUcAfa9BdofGCt_S1tDIO_NUhZGnIBoeoY76YctwDFoCfcKu-QAe_HvPh5d02anzPELd9GJFHthfuLgWaiyWDe6GsMjxQ=s4800-w1200" data-castle-name-g="Comlongon Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwhXzaykyOOkcdKdwfoIzxdHTWXHSWhNqZRpg3yaZMRbDa9XjamLUcAfa9BdofGCt_S1tDIO_NUhZGnIBoeoY76YctwDFoCfcKu-QAe_HvPh5d02anzPELd9GJFHthfuLgWaiyWDe6GsMjxQ=s4800-w1200" data-castle-name-g="Comlongon Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwhXzaykyOOkcdKdwfoIzxdHTWXHSWhNqZRpg3yaZMRbDa9XjamLUcAfa9BdofGCt_S1tDIO_NUhZGnIBoeoY76YctwDFoCfcKu-QAe_HvPh5d02anzPELd9GJFHthfuLgWaiyWDe6GsMjxQ=s4800-w1200" alt="Comlongon Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPuS0QZa8eyzjauWJblPjgYyIIYCj7rCtFeFtpE0u9Ln_ImEQyWv6qkRI0mlKOShMP4vuIj0ZN2QJhslIEVpWki3V0wqh1g5vu53evatYsT9QGxOAyprbzGAQLJ2z95c1cM7_Io65jbVKddfg=s4800-w1200" alt="Comlongon Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOWAPk-ltfgEniPDi-5U5IqOBKyIYckOKIKsoDjrC06x7owlqiDmhAcA5Ym9KFRl6uDam79IbYlJuDV_Jelsc1w_Cp6T7NXrKlOzL0IIiRbvUQTlUmM_3I0PT3kspvimAb5J47vQ2juKCsXpQ=s4800-w1200" alt="Comlongon Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOB-kFLgmNEMqzpT_8jokdksL3yD63nfAcIkJC5oZAoq_H8Ed6Eo-3VWQha_1_uHkOJ_HegXSwdltOC3EbBzN2IffrsdM6isG_AibkGqztr50UxJ3b7Sw5FKJ7gSpyR7MwJrya7Zf6p4dEL5g=s4800-w1200" alt="Comlongon Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhA3MWqoZ4n5NvEln2OPV3KVT7gEMaJLwCxQJVORF1xiZ_4kYKoB1-jRe_nY7f_KztiY0FTmGxU-sKwkdKnAbgz50EADw_iQKu1eoFt9v3sTe5b_5XJkq0TTI5YFDNatwQ2EyYcRZTfBrLWXE=s4800-w1200" alt="Comlongon Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Comlongon%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

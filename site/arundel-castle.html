@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNN50MRFDv234NjeSiBBnsFS806OOVX9Mikm5NxPyk2MIJFSpyBo37JK46wxN_gIZoATMekiVGV_RtqeYHpSoFnFAH8JdSQCOs-HQ941JoHeK9wjn2ouFCqfrePDZsyL5aVBt62VAIndbLYUSE=s4800-w1200" data-castle-name-g="Arundel Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNN50MRFDv234NjeSiBBnsFS806OOVX9Mikm5NxPyk2MIJFSpyBo37JK46wxN_gIZoATMekiVGV_RtqeYHpSoFnFAH8JdSQCOs-HQ941JoHeK9wjn2ouFCqfrePDZsyL5aVBt62VAIndbLYUSE=s4800-w1200" data-castle-name-g="Arundel Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNN50MRFDv234NjeSiBBnsFS806OOVX9Mikm5NxPyk2MIJFSpyBo37JK46wxN_gIZoATMekiVGV_RtqeYHpSoFnFAH8JdSQCOs-HQ941JoHeK9wjn2ouFCqfrePDZsyL5aVBt62VAIndbLYUSE=s4800-w1200" alt="Arundel Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-KIOI-URuClqT1LmWNQYE0E2gGMz0i1A1YcFCREbe4FoSF013Bb7VRIv4LP_TajXeVVqzVkHUUNJgYUEfdwRCidcvIy7NHBfoU5uS-nusFW4R7VZqzH5cB7AHji6hklCHdOkOuNftdCV4bQ=s4800-w1200" alt="Arundel Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMY4k1M5gwKsrqUfkuFA1srhwiVtQZw0NKiEQHF7CNumEwytn7m0wmABr1Tc490dSSZl2TYOvAX6IE9sAFGDYwNdLSQbiijQvgldnQYrMKJdKvFMeZes8ZEZ_PmHUDW5iFuxmFFnaC4KoWAG4dRcRajA=s4800-w1200" alt="Arundel Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP11zOEkWlQ8Y3Fji_WJppJRXgKA5u-TTaTeP9--cN9R1o1fltihB7NbY3cey82RObsUhlnsUJk3lo-b_dxln6UrgnO8nphuh8mdG4R2SDS4KWq3WXgn2YDV9pmceIiRw5jCulmE0CXnKv2wA=s4800-w1200" alt="Arundel Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPa3jn1ZS1yawZKGOKIFS6bq--kJjEksZX5YYwmYQx11FIyyvirinsqFPKoE8eA7pGKh86L1y4WxtuKxMtrADU-hm75CL8Kh7PUmw-qqRWjt1-z9Cu47jf93-lHiMgZAMU9325SNoQfgJeYFw=s4800-w1200" alt="Arundel Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Arundel%20Castle%20West%20Sussex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

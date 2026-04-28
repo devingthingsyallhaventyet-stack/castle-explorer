@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXphP4MXPZ88yIFe_lUirwGRcXBuAhyICIcopw2MK329kFPbg6GPRSupnxXCB7rHHlVU-CuFM4GCJKYpoPudlpt0YDlo6yM6SvF0I2sE6VjIjuf-3X1Ij1zEGHSlrQZnALOf56i9cJo0pS=s4800-w615" data-castle-name-g="Castle Combe">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXphP4MXPZ88yIFe_lUirwGRcXBuAhyICIcopw2MK329kFPbg6GPRSupnxXCB7rHHlVU-CuFM4GCJKYpoPudlpt0YDlo6yM6SvF0I2sE6VjIjuf-3X1Ij1zEGHSlrQZnALOf56i9cJo0pS=s4800-w615" data-castle-name-g="Castle Combe" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXphP4MXPZ88yIFe_lUirwGRcXBuAhyICIcopw2MK329kFPbg6GPRSupnxXCB7rHHlVU-CuFM4GCJKYpoPudlpt0YDlo6yM6SvF0I2sE6VjIjuf-3X1Ij1zEGHSlrQZnALOf56i9cJo0pS=s4800-w615" alt="Castle Combe" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOWNqJqspv486JppjkubfOIHWoCv_PxeefoghGXTdOUv5Eq1b311xrOTpnf3Cr36wr3ZQ7aS5So9qaMV0fdZ-snB-WMOcGxpRO087A9HyRHSsa5_NIOMCiQTxaqYv8bibaDe98ihoggbDF-lQ=s4800-w960" alt="Castle Combe photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGgVF9Wq2koeI9VRBDGoKd0IfkY_IeqD5DrUh5a-fpNTyYhbXHKTbjVsFx7r-ZAmTfDDQEpiSKiIDstaK7m_M0JQdg-30sgoVgz_g5aXmqRoQe7OwfLR-fKevbYTEP7QhDMrSvHL9nL1mhMQ=s4800-w1200" alt="Castle Combe photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOvZbl2veGV3NauAQIHJ-WC3beY5hH-qPtmNyMWof4iT8XY7bkITxuzCpUktfsqTZ_KvPEx1I5eEaIxbzpoQolPYgEZapMJZy8eS5gYOmwkcUxBOWyVCRc_2YbLpVe28-OuCN5h4gbnks-k7A=s4800-w1080" alt="Castle Combe photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8_1HtbRrz-biGHLJeytIENmQyU3mKMONhgxUZr89lt-p8O4R36owjhY0jmq6IZIyT8rYNxDM1xDbuMtYynXwmXQJKLj8tgBiqae3V1PE8bnrdmzzQhptBmqlHchJL8aYgk6CAo3DVdDpTGg=s4800-w1200" alt="Castle Combe photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Combe%20Wiltshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

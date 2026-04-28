@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQu0kEXEYrtnd8njqJjgBJIDcfKsDbKb5xjo5UZ1oNj2L7pebgkcyNS-ADxHzcPimCRUFdFc4ewFRKz4VVXNEEGrOfiKpArj0WasFsMpYmMCQiXdKc9BkUJrKr-MdohtpY80j70iACWZ_B=s4800-w1200" data-castle-name-g="Tupholme Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQu0kEXEYrtnd8njqJjgBJIDcfKsDbKb5xjo5UZ1oNj2L7pebgkcyNS-ADxHzcPimCRUFdFc4ewFRKz4VVXNEEGrOfiKpArj0WasFsMpYmMCQiXdKc9BkUJrKr-MdohtpY80j70iACWZ_B=s4800-w1200" data-castle-name-g="Tupholme Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQu0kEXEYrtnd8njqJjgBJIDcfKsDbKb5xjo5UZ1oNj2L7pebgkcyNS-ADxHzcPimCRUFdFc4ewFRKz4VVXNEEGrOfiKpArj0WasFsMpYmMCQiXdKc9BkUJrKr-MdohtpY80j70iACWZ_B=s4800-w1200" alt="Tupholme Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCePmEujsxaZWVjBM6LN-2XLkweGW5pch_1r2DYk-E3enMUqbhqwBikjPj2tGa2SJkUklWCGs9kRfBcj21k-RDkD5DFA8ljmX9qyLG1yWv95F2Y1qTr9s8YrMhLxDtnqiqftx8g3hEY3ICmF4=s4800-w1200" alt="Tupholme Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMptnpMbW_pyODBAXfK2KhOPnQZ48oRHh8lf5UBayh-QNVfZtnnYhQ_BonxQTRwqbgmJ9ERfCawAAve4F3xgWJMmvKBQ_Occo7Tdh2ptW6BsEJJhPY6eYpG-Cv6-AHFXSOOrsLew69nFo_LHQ=s4800-w1200" alt="Tupholme Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCYavtDisN_dDUkOuZKQih6HXAlFPa4DWAInDpIuzfgPoohD_dLdwt0Nc22oC2NhNnrq3FOAyVii9jPLK6WjZMTji7qUpPSsnW4nduM4YkdndszUcoqGOGZ2nAqFvlx5OTTXFCdLdnTwoqxz7_qCUO_Q=s4800-w1200" alt="Tupholme Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2fW2amEX8U6ZTs8-ZRYMBoKRmcETmg7H6X1z0kRnebA_d2vaFoU7ivB1TUuxebT1qhxG6UxTLSBBkrhS9OhffOHXV3RwCWLFaf9ZFYQ4csxVuWG5rgScZalDi0Lwu4F8Z-jOwAMUhHl4gT1s=s4800-w1200" alt="Tupholme Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tupholme%20Abbey%20Lincolnshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

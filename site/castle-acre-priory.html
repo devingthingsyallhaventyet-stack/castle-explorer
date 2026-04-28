@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFXsCoKrRp_gAlDgV7y7tGwjB6K8jqP1fswS1OR-x5eztuZsoE8rvHblA8ozim7Gxf5dzEXBt-6EB9ZLG_l1Sj9pxKJwthhO0Rf49Ug0NQvX9lJ88xSMK1RxH1XijLe_6dHQPqhT7aozJZKQ=s4800-w1200" data-castle-name-g="Castle Acre Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFXsCoKrRp_gAlDgV7y7tGwjB6K8jqP1fswS1OR-x5eztuZsoE8rvHblA8ozim7Gxf5dzEXBt-6EB9ZLG_l1Sj9pxKJwthhO0Rf49Ug0NQvX9lJ88xSMK1RxH1XijLe_6dHQPqhT7aozJZKQ=s4800-w1200" data-castle-name-g="Castle Acre Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFXsCoKrRp_gAlDgV7y7tGwjB6K8jqP1fswS1OR-x5eztuZsoE8rvHblA8ozim7Gxf5dzEXBt-6EB9ZLG_l1Sj9pxKJwthhO0Rf49Ug0NQvX9lJ88xSMK1RxH1XijLe_6dHQPqhT7aozJZKQ=s4800-w1200" alt="Castle Acre Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMGMouJmlLmY_yx7R8eQ5V5TwUTyOGg-bcLfVfAUGvPKuYpvIU1cHF0e80-ucfhW5IFOUbcf77vyY2tMwboL3gT-jSJnp8jH3uHM54axtBHsao38w9-wAzCn6u-tGyQSJJ_Naskp1ILHL_VKrL0eqf-hQ=s4800-w1200" alt="Castle Acre Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBD0B3YwpGuruxlAG_Qc16mLAo8VgSgK52K4Mgts35d-BkGYAlHAQWWE2Jj1YfoKTxG9gAlZWk46mnXOXDUgeMVHMGrfuz_-Dto7nb8DXjB4n-aXaXScSmLQB_2_Mi6qaF8Ds0uCs-lbX0zbA=s4800-w1200" alt="Castle Acre Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlBmYjIezFO-79ivF9PNZiAkoM1wMp5fpjCcAa8OZcEQHwVaAyt53GCwb8L-ZOLhAEc8nsUXdVjPQ_ER8MmAgpcuzQ6xxYtp9lG3GGj-tHWzEhMDIvv3SD3PMAi1_vMKwyQuA8E8Okou9xUQ=s4800-w1200" alt="Castle Acre Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOO-f2w-IMpOM91ifLMxD342XHdhIRuijfDibZ7Sa0EUM86Hu9AqRhfnCPY8BHxKEBmKpkKinZ4vk7ygUifsmn-k8mJB9H44lHmGZ40kh_NkgiHfCrlFJUtn2m2v7hzDijhx7ajrnX6u5oM=s4800-w1200" alt="Castle Acre Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Acre%20Priory%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

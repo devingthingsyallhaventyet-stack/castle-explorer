@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg/1280px-Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg" data-castle-name-g="Barra Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg/1280px-Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg" data-castle-name-g="Barra Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg/1280px-Barra_Castle%2C_Bourtie%2C_Oldmeldrum_side_view.jpg" alt="Barra Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkyo576RDJF-cBdwYL7ftsNSM1y6EiSqm-jBwJWcjmo00u7orjLjVX9zLxJlTV9bUdLnceNq1U4-DohjJ0uw0FqvNSd9D6-JneDClawY82Cb09RxI16j-7tjJ3gtGfxN-7L249VLpg8fh8h_c=s4800-w1200" alt="Barra Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFAVxuBj8YA7TZlI7fQSinOJRkCeUq2oDw1mrTUxlxnagLi31JyAtI0y5a2-b2sgccdn90nbvAl3kLsHloCHFI9xic_J7Sw8pTLfcptVKu_A4a6086jz6WdpUVVvZoK58tJJHZdWzteC-gJA=s4800-w1200" alt="Barra Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2LQe2ncrVL8BgsD3jstPHO4ELSHyr-nT_SL3sHLXLBOCZPfMHEIv0YV1z0jsZZeDiVpT3FgDVTHxkIT0AZLPW1lyNzWFzxnJdywpTiQgZ7NznruabfXjOiswq0DBDH4Ss4Qdd9KHuvFND-A=s4800-w1200" alt="Barra Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEnLM4bIx_6jrziZUaEzac8S2peS63okimOtzYDLioPDIUZt4ecJrTVO6NN_RlQ6uRPMXb7bmf38QpvBUZS0N6HyjFT4AmRgCDDDjT5dtpFI0HfkQ0FG0msHTjz4EWGXe0JH8qN7A6Gz9c=s4800-w1200" alt="Barra Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Sagaciousphil · CC BY-SA 3.0</span></div>
@@ -400,6 +400,15 @@ Aberdeenshire, Scotland. It occupies the site of the Battle of Inverurie (1308),
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ Aberdeenshire, Scotland. It occupies the site of the Battle of Inverurie (1308),
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

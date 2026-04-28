@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDVqL6VJ2jV4HledA08-_P7bIJGf4tagmfFBbSEMQg_nQyrsc9ftjdp_7Vp_HnAu-WWOkV2QAY-MEMrD0mW3WjuNCAdN8OBsy5oN4BMy4YJswBIWA6L6AEahAk7L_pObeNreLpyL8P-yNi35c=s4800-w1080" data-castle-name-g="Duntrune Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDVqL6VJ2jV4HledA08-_P7bIJGf4tagmfFBbSEMQg_nQyrsc9ftjdp_7Vp_HnAu-WWOkV2QAY-MEMrD0mW3WjuNCAdN8OBsy5oN4BMy4YJswBIWA6L6AEahAk7L_pObeNreLpyL8P-yNi35c=s4800-w1080" data-castle-name-g="Duntrune Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDVqL6VJ2jV4HledA08-_P7bIJGf4tagmfFBbSEMQg_nQyrsc9ftjdp_7Vp_HnAu-WWOkV2QAY-MEMrD0mW3WjuNCAdN8OBsy5oN4BMy4YJswBIWA6L6AEahAk7L_pObeNreLpyL8P-yNi35c=s4800-w1080" alt="Duntrune Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOH041EI55XKkwoaNMjlMWzkQWwXBYOxjqSoWGC8UWNr-NeTw931FTlfIaFXUGZF3HFIleEEGGnIegTI4YWhIrcJrEMAzblb06ZzfCY1qGQsLvl_S7xxuov5hvHmthlEASIUiTIFi5heKaz=s4800-w1200" alt="Duntrune Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIK9WsCZpdgE5EaHj138B5prRhxYoWr6f8awUSe98uYrNMXVsdimgGrmCfjCpo9fgqNxV4-8vYqVZ7Js7tn0Qk7qVcfgmLCv7y3dhsnrBz7E_e5GjuDxQFvA0AnIjF44apsXw8geC4i0yKDkQ=s4800-w1200" alt="Duntrune Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMK3rXV33SipVTRen_izs2L4XY0k3dfbWYzLFeqKNZr-7ZxWGvbHbhLS_yyYwgletyIYcq0JQatw9wQiSSZZ30h0Db2rXMj8JOyRasjJqEy6uFy0mrubuN2bcXbHUyFehjY1B3GoY1hDKleA=s4800-w1200" alt="Duntrune Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2al3-nTbWggIpBI05jUwV4E8mr8nsxekcbr9XzJS1UtDPx9pnLYb7YE_wucHguArTMq8rdIRXf6YY-dDrekHxd2d6KyfDCqZLP45erQV07KI027z8otWnaC31GRTTgIJcxXDZ1vDb2NRCMA=s4800-w1200" alt="Duntrune Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Duntrune%20Castle%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

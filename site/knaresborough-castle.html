@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHCDneR80fUpe3WWXFRxssfpVLNOGr9Q3aMesUeEgnXYLRVZcKwThhNQVzottEyUAeSYqA4f7w5hNWhBTtQJ75zh6rYDQ8e7BAsWceuWZwdsX6AfpqzAjt3XOWI3X0-BRe_xcp1Fz_fl6zxUE=s4800-w1200" data-castle-name-g="Knaresborough Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHCDneR80fUpe3WWXFRxssfpVLNOGr9Q3aMesUeEgnXYLRVZcKwThhNQVzottEyUAeSYqA4f7w5hNWhBTtQJ75zh6rYDQ8e7BAsWceuWZwdsX6AfpqzAjt3XOWI3X0-BRe_xcp1Fz_fl6zxUE=s4800-w1200" data-castle-name-g="Knaresborough Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHCDneR80fUpe3WWXFRxssfpVLNOGr9Q3aMesUeEgnXYLRVZcKwThhNQVzottEyUAeSYqA4f7w5hNWhBTtQJ75zh6rYDQ8e7BAsWceuWZwdsX6AfpqzAjt3XOWI3X0-BRe_xcp1Fz_fl6zxUE=s4800-w1200" alt="Knaresborough Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO31r9_sCknWnzYLwiMZPnwOIfsUg2xTGctKF_6YkkTkCQMZxJKXEjNmdoDtC-OWwkte2rPaf86miea0nlO4ifAt4N9jr_daxB7L3ZNbyd3eiUtrTKk3XVuj2OXEc3UTZDqsbIbEI3rezu5wa9bwvw6og=s4800-w1200" alt="Knaresborough Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO3d42nspN3jr_k-1AMx6ARfxqS2H1ThIlZkqKLy8k7aDTcIs0f3UBfxRLJ3XXc0d_wnh9OhgVrqyniAsiv1Q3ied-4R76AJ55-0bMUqD06u1iY9vq7U88kv3vyt3LMPFvoEd5TnKNweyf23uk=s4800-w1200" alt="Knaresborough Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaI4_4G_lXE98PoPu813n1S8j95bwOUxiTQlM9e84kDTU7RXvuixKLDBD5cHGBy7V5CaG1oVdqQ_jKYZf4gqDlQWC-6pqFdn_lKM252uCeKwDefyDRBN7h1lqBfkRO4VLCYijLRwp_vZJyOA=s4800-w1200" alt="Knaresborough Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4HJT0HaKgokPM9E0bKwvT6ULpibwN0qsvK93xUyWjzI2BLBczMux0O9UGb6zekpjPnuJ3zWGBiWiRPPpZ8jXMpN0ON55w0DugOWCDL1Vw8fhXVH87iBqPbR2_oKlxiJvIrCxi-3tEH3LqFmo=s4800-w1200" alt="Knaresborough Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Knaresborough%20Castle%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

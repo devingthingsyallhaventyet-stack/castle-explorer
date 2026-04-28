@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Clomantagh_%28or_Croomantagh%29_Castle_-_geograph.org.uk_-_1479267.jpg/1280px-Clomantagh_%28or_Croomantagh%29_Castle_-_geograph.org.uk_-_1479267.jpg" data-castle-name-g="Clomantagh Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Clomantagh_%28or_Croomantagh%29_Castle_-_geograph.org.uk_-_1479267.jpg/1280px-Clomantagh_%28or_Croomantagh%29_Castle_-_geograph.org.uk_-_1479267.jpg" data-castle-name-g="Clomantagh Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Clomantagh_%28or_Croomantagh%29_Castle_-_geograph.org.uk_-_1479267.jpg/1280px-Clomantagh_%28or_Croomantagh%29_Castle_-_geograph.org.uk_-_1479267.jpg" alt="Clomantagh Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWmoS-Pg4OKJBAxZMaHYqqY7HF7rOT8zYEnXEZDNOn0QqPdTA9MORazNgu1LnPS2n6BHbOiaOeH-O5fycgRGit7aDxCEcTlgtDHXxoJ7emIo99FCE-KGyl37IE-MlkwJ9Gu9A8-zMbpeR66NI=s4800-w1200" alt="Clomantagh Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNqrcsRfbvpSQ0IlfKTnVjHr9oQSdcUnYnrbtwTE1OFXCyvr5FoclhbYrIGngcsGeOfUGfodiId1vBYAacm4VpWlLrWoKPtm29qdsQ-eyHYOIe8QVfZxl-Yi7MZuDVl6kPU7FPubk7tMJEifVbNvOKa=s4800-w1200" alt="Clomantagh Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyFZkcE_JaUh9EwyVQsCkdEijlhGw7KfHZD4w9kLYSM7wtd0d7v8TbYZzufbFD7II24Un1Ksn9Xh-YyGmbSLmSmEe56dZiizmSekdbNF3nIk-5Pg_afU2dcrY3uuT7z9lfwMrtRuU_qmR3lA=s4800-w1200" alt="Clomantagh Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzkNdvVoOeWv-NI1qf2PufdIvYZ-5qhZWGFTJZAuZzEy_qqxmcctXXENsWWwx2tICk1QBULJDuZvpbK4VDTuuJqs8q9LDTYvskuVVHSCun36asYlsV6EVelsZPF4FmtymXVkL6vsPNKT5Y1Q=s4800-w1200" alt="Clomantagh Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 dougf · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

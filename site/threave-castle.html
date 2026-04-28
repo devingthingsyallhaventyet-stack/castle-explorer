@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHT6ZP1o68yaaUQ5gMFjAAvae_UvQDEfK2QCaSrXtZyOTOtZJ0rbL0v1DsAwdmnLIOAkvpmuFGZZB80EvX_-QhFoVV_lSHy4Y8=s4800-w768" data-castle-name-g="Threave Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHT6ZP1o68yaaUQ5gMFjAAvae_UvQDEfK2QCaSrXtZyOTOtZJ0rbL0v1DsAwdmnLIOAkvpmuFGZZB80EvX_-QhFoVV_lSHy4Y8=s4800-w768" data-castle-name-g="Threave Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHT6ZP1o68yaaUQ5gMFjAAvae_UvQDEfK2QCaSrXtZyOTOtZJ0rbL0v1DsAwdmnLIOAkvpmuFGZZB80EvX_-QhFoVV_lSHy4Y8=s4800-w768" alt="Threave Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdP2MAf9fpKbZIom6973eCgofH8ZOejXtN7rlaxyfmw5VmFeiS4EJ_WDznSOUMpeFLVP1gfbKCpWrR16YYWDcNofaNO1eoKkb6HClp9owux8PdE9hNYBADDbME1Ov_WRP_Ljxhkyw9rAcEWw=s4800-w1200" alt="Threave Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM2d47LLwG3Bf9HX5Y29xF7aVPZOvpYyHl4PyVqLJe02XjvhACYJeDm4xwasmVvvIvCrKAvC42BYaIW9Hm83G1GrrYOIwp5IszvxAV23ILFQvGUj1kX2c4Zo8j1AQmcqmN-qgIEUNHLKnbnuA=s4800-w1200" alt="Threave Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQ_od528U54Cj14AShmw81JPMlo31qbZn5CuWm0X8zcobfotF-mt-qppPVyaDpKA9thJmw5zcTSbIgkJ-qCOIhalpYPoz4UMyqYICRydEbZ6qeBpWjr2XvB90GVRMYGBbHyrTBFIqsmf3GKg=s4800-w1200" alt="Threave Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP17XmJZKj-is_N1aPZYC_r4J_zoNhlyUXTgEaczP9CxXhPaPBTg5ZeSTh9OC1TlxlBZ1UGMGMMIlH9AUxbpccDNFvIdDnsT2LYC_SB9RGp1ravbSf7IyYgQ8_xuGCSmdABMSu6_DvbvBmzjA=s4800-w1200" alt="Threave Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Threave%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

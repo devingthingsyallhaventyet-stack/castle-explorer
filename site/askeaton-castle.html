@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-kNdUATCNYyTyQQW7_F9kUsrC9f86GQwMfFMZxLIDS_v8iNqJbiFPg-t-uho7elO4TPm4c3ysOERXqtFT0PGwmWFfdT3_Ym0XM1kZElzDTMlyHTORdVGR594JriGKzfomIPKE5TLqeZUB1G9o6WyEwA=s4800-w1200" data-castle-name-g="Askeaton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-kNdUATCNYyTyQQW7_F9kUsrC9f86GQwMfFMZxLIDS_v8iNqJbiFPg-t-uho7elO4TPm4c3ysOERXqtFT0PGwmWFfdT3_Ym0XM1kZElzDTMlyHTORdVGR594JriGKzfomIPKE5TLqeZUB1G9o6WyEwA=s4800-w1200" data-castle-name-g="Askeaton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-kNdUATCNYyTyQQW7_F9kUsrC9f86GQwMfFMZxLIDS_v8iNqJbiFPg-t-uho7elO4TPm4c3ysOERXqtFT0PGwmWFfdT3_Ym0XM1kZElzDTMlyHTORdVGR594JriGKzfomIPKE5TLqeZUB1G9o6WyEwA=s4800-w1200" alt="Askeaton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNOK3tavmmXbj9wAWpcvD_6pGszhKitjRqlomaD3FZkgnMu6kD6RBaNFfK2wc3cSfxbEPh-IFo8PV8nU1jnbo19byo1x2oo1s4HmW95mb47hWpxoPSrT628SUeKbZTHxX6FOyW3ZsjnDtkgVRmRv4pueA=s4800-w1200" alt="Askeaton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnik9uRd-sZARDB7_E_aN8iCgHIHqlrLY8k3zK7-zALS5FNVbSWxXA0cj6R4M4ebyUqc-ec91gIeQsMTB0P9xCcHhka8pv_rnTUHiy-7sBUPnfsmSH5CGOm6EipXzrWriN4xILAM2DJ737e36r_ipDcw=s4800-w1200" alt="Askeaton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7XUqYJ8W3rEB17BfN1BwNLMJjpbXcKqIZ-H3FQ0P9b5Mbp6jkz1vuq47w67RIctjwFaxvBSg22rZHGswT6hzBpJHHiqBadNcfjmVj9lpiX0XYWG8O1IDAjjLCQZ4PbMoekfHOlcrE35JqxEDwbIHUdA=s4800-w1200" alt="Askeaton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1Pq_aSVI5pNgfjCE15pPy5OU9GiVS_FDVcMjmw2F4CLPtRximPDqRrZTdCeu9QObgVCtQB5SoySAC_n67IpmSXY7xFS8rs78zAl_9N_x5MVDk6JQpbrjQrDtBqZ3Mh9Urpa9jqOhDhrFWGMJJRxbm=s4800-w1200" alt="Askeaton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Askeaton%20Castle%20County%20Limerick" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

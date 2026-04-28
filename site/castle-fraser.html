@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0-jJiKu50G4ygJzsGOVBNl-B6OmMqCQ2GqjECMMeTFKXAxeM8_JZwiBHSKWnV1CnDlg5rfwMbTJYyOqOOhyKCj76xrvYSBP5U1q95yV349KP9rAjXPfhjRwXsCRV3ewQ7HEn7TNFSoWII_A=s4800-w1080" data-castle-name-g="Castle Fraser">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0-jJiKu50G4ygJzsGOVBNl-B6OmMqCQ2GqjECMMeTFKXAxeM8_JZwiBHSKWnV1CnDlg5rfwMbTJYyOqOOhyKCj76xrvYSBP5U1q95yV349KP9rAjXPfhjRwXsCRV3ewQ7HEn7TNFSoWII_A=s4800-w1080" data-castle-name-g="Castle Fraser" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0-jJiKu50G4ygJzsGOVBNl-B6OmMqCQ2GqjECMMeTFKXAxeM8_JZwiBHSKWnV1CnDlg5rfwMbTJYyOqOOhyKCj76xrvYSBP5U1q95yV349KP9rAjXPfhjRwXsCRV3ewQ7HEn7TNFSoWII_A=s4800-w1080" alt="Castle Fraser" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiwTkiNEPS4LVivtByBPWjljsPp8Wj6hjzLMhub5ihWiDolObrVhhG4eGrGdfTT0k1v_Yhw9r7bi5HOnSTfC0_rpbjunGvcJ2djCu2B501pLTFPghuG36cXh7dT38omALzlgWODa_2tgiDcMY=s4800-w1200" alt="Castle Fraser photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM68J8iO_py4JQjC_t8u0Mm0r9aiFQoHk1f-5t6omm_fMVVaZUr9XIxfQy_WJTrs6HPPzYo93NSv1wokGiV4HQ4POxzInzxXUhiv6hgTUWjWGZ3_orjL9XWqPd9jT8KwnesYkVqJCUPthLmyjQ=s4800-w1200" alt="Castle Fraser photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN1NUnndK4LE7dRID1j6iasoukjJokEfoz7cI6oc8OgnrVoFI5afgV5SpaT7xnAPLL6DEUdEtLxsmvg4vGw__IOKKa3z2OE3GXc92w8xyb4sEdU_kTuL3wu7yUsvr6u7bcTx94yF9Q6k463tL4=s4800-w1200" alt="Castle Fraser photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqFRabJ04IDAD9T_PdHhm12w3PFH7-P8Uea7YdWqBQR_5BuvLYGUECjLzhJR6QtI8GfMoapiMP4W6mR-Na12DMONQ4PscfyRcfY=s4800-w1200" alt="Castle Fraser photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Fraser%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

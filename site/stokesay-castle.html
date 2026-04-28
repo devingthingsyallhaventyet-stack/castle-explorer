@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiCGz9NtaOcArkU09ayq4ABEhNY-YurcDmOI9lln2CStUioV4fryIWqHuhxgx9ZavVF_iMYwORcm7MrPM8StLQQ4Q_ZBaTIJpkwhotOIoNDRMJKXv8ravQlzMCO1kaNco8jwuc7VEUFiKTD98=s4800-w1200" data-castle-name-g="Stokesay Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiCGz9NtaOcArkU09ayq4ABEhNY-YurcDmOI9lln2CStUioV4fryIWqHuhxgx9ZavVF_iMYwORcm7MrPM8StLQQ4Q_ZBaTIJpkwhotOIoNDRMJKXv8ravQlzMCO1kaNco8jwuc7VEUFiKTD98=s4800-w1200" data-castle-name-g="Stokesay Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiCGz9NtaOcArkU09ayq4ABEhNY-YurcDmOI9lln2CStUioV4fryIWqHuhxgx9ZavVF_iMYwORcm7MrPM8StLQQ4Q_ZBaTIJpkwhotOIoNDRMJKXv8ravQlzMCO1kaNco8jwuc7VEUFiKTD98=s4800-w1200" alt="Stokesay Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfOmkQQoihdnghF6_fCxfS0ZZTnazXjqhO_uLjE_nx6B3LPMFVs-Fp7G2MMabtqkNJUicT6uJUp88qPFVYjMEO9BJCLcKDNLozNrWDU-Q1wZ_ltPa8SvhP5NPhz_fXpc-OcjrQANngKdiiPg=s4800-w1200" alt="Stokesay Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6FKpnu-dE694KcNNEvioYa7BAhqBIrzty7tVoBnolZ0Mn-VxyvWm-OHUGCxJJ8loS0rsZZs8lvJMvz7Cj3HuCz_jv0ysKpxv8QAkJp8lPFeCA9ZhXv8LZLFQDXVPLrhl6t7_pj3hjWHc-ya4=s4800-w1200" alt="Stokesay Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJGajiIGhQCQG75rjNE2-K3-sThKfkCiv6bfcwqTM0XKEliIKG67DGoxr5rYXHTih0Iya9Nvo_Umg2-orukIjKhmpPuLgcfyKFFFrN3vckJT6dmjPxQ7Z9qnXXJ5Mi4QqAz1O3DxVCpoHxE23P6P3TsQ=s4800-w1200" alt="Stokesay Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQvLwkUwmwjC_nc8KHIuiYJEhL8SuZxNFJe49FfumypDjjG89_ezwIc2p0CIv6l0lJRsDv5KqNTstf22glAAS38xRrkAM-MIPdR1gbidKN6w9sH7kvNy03gNM6MKi1UTCYOiQNEeUJa0Vb=s4800-w1200" alt="Stokesay Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Stokesay%20Castle%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

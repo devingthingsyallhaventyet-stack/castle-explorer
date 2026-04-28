@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/WhitlandAbbey.JPG/1280px-WhitlandAbbey.JPG" data-castle-name-g="Whitland Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/WhitlandAbbey.JPG/1280px-WhitlandAbbey.JPG" data-castle-name-g="Whitland Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/WhitlandAbbey.JPG/1280px-WhitlandAbbey.JPG" alt="Whitland Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOscSCL_EacmyfzGBysyH5WR6yZQ4WrWUF-IFusyGf60nF4XVn9E4yi6mzMyijvw_GBhNq7dWvRdfd0sDSMPWuhpx0rGAQP2ONItTwjof85PBkzRIrdo_0n0b0NlOevYcqe-bbGqA0T1juZ0g=s4800-w1200" alt="Whitland Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEQBQnBOtu7ySoxBgL8KCNErCaremzn0rv02cosk_ZCct6NNi9f75reA4VNfvJw7rNVXL1KjAftbkiXMjbxClauQWT3IY2jgBgFkSPmrYp3AZ6rABDgeHK4JDJn4J6dkAmzKDeCedB_S3R=s4800-w1200" alt="Whitland Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOR1nEZd84UYUGREw7fr3gPMlWlJgXjxguB-WASyl_qA5xDvgxZXoLlsH3gphqXPP8IeYg0oiu_gzrqWSIepTicwMb46b9os6hYp1Vq0QV6lxV6nLKKPf5gdWI1-OLnv-_03p5_QI7gw1Eu2w=s4800-w1200" alt="Whitland Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1FMo1mRf7ehFHOTI6fsBlarH4LfQKbY_4NNoRjaHbTGlV6NWXxx47pi6KK0Q-ymG2hq2BpMKeS9KUbopNM84Z70bd2oXpG7FY3u-zgqMBOxhL-M3Hu8cLTlpeTV1uiUXG3ou4CqszeXLT4w=s4800-w1200" alt="Whitland Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 JohnArmagh · Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

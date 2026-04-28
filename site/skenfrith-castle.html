@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBxrt12N_ZAsJqljYoD9lCa20PRtgcfLkQUwV_55S7SYSkBoJMnHpzpwpe8IQ_4liuRafbe_-BFMLAgvUOVhr0JmSXcGUyXSo7csP_JMemhhysVzxJSEG3KllchatZN8FRh7JX9OT0sP6mQA=s4800-w1200" data-castle-name-g="Skenfrith Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBxrt12N_ZAsJqljYoD9lCa20PRtgcfLkQUwV_55S7SYSkBoJMnHpzpwpe8IQ_4liuRafbe_-BFMLAgvUOVhr0JmSXcGUyXSo7csP_JMemhhysVzxJSEG3KllchatZN8FRh7JX9OT0sP6mQA=s4800-w1200" data-castle-name-g="Skenfrith Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBxrt12N_ZAsJqljYoD9lCa20PRtgcfLkQUwV_55S7SYSkBoJMnHpzpwpe8IQ_4liuRafbe_-BFMLAgvUOVhr0JmSXcGUyXSo7csP_JMemhhysVzxJSEG3KllchatZN8FRh7JX9OT0sP6mQA=s4800-w1200" alt="Skenfrith Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNzmeDlh5sZ28auNNxjGJJG7wFRneHcSzwWk8v2SrIT7MNiI4jZr5MU-eHp06IIHN0WtWGC0ad9a75vm767ksCkYvA3V5XJZCWYsqRR05uBxzJlbGj3eQjJua3qiCHyUG2yRl4MJjSW-jq1kw=s4800-w1200" alt="Skenfrith Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOk6iwi2fTb9AwsKnxaOD7DaEPMQX2bM_t-PwfN1_WkXa1uS_PruVgN51pjkin1KWn_3dldyWObntQaowM_pe1_X_FxPvgsHNlpZx74pGYswEoOvw3tQr1A_zuo-upcKKJfro2CVQTLRjQBCQ=s4800-w1200" alt="Skenfrith Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZaHLaQCLERfFPbv6lhuw1cxOJGwTDDH-0ff8fv3By7nO9cGzbtYUH_A5FtCJS7H4b0s_2sEph49BhJ5A_vZv9wBs6mmz5l0EObN1ey4NyUZdwgpncGXrfz4JTwSq2HDHKoOW3C5Q8bDhg=s4800-w1200" alt="Skenfrith Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNu2ZJ1mbQ4XgiPa8uAhl7tYfROyswMzpKEcIfM1kVbJ5FLzQH4qi1pvThXoyiIjTge_cQ_24CHpafqd335fyD-TyngySh8mSFjATvS_fAzahLB1-2fh6kh8up4wUmel-3KktMXizVMzfGRtdY=s4800-w1200" alt="Skenfrith Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Skenfrith%20Castle%20Monmouthshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

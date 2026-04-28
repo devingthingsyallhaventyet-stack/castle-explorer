@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUg5PfgpyaHu7Wh6bDG_Id-oJxjFYITOsIBpwN16lnRBjnQiQARTfAOcnc0eS3gS00MXrMaV3c1083WfqH7XBLQVrdYgeapNqJCyHSADa7we6uh5Ry4lf9875Jw3vYjlFN-Led8TNqZ6ODWA=s4800-w1200" data-castle-name-g="Lytes Cary Manor">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUg5PfgpyaHu7Wh6bDG_Id-oJxjFYITOsIBpwN16lnRBjnQiQARTfAOcnc0eS3gS00MXrMaV3c1083WfqH7XBLQVrdYgeapNqJCyHSADa7we6uh5Ry4lf9875Jw3vYjlFN-Led8TNqZ6ODWA=s4800-w1200" data-castle-name-g="Lytes Cary Manor" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUg5PfgpyaHu7Wh6bDG_Id-oJxjFYITOsIBpwN16lnRBjnQiQARTfAOcnc0eS3gS00MXrMaV3c1083WfqH7XBLQVrdYgeapNqJCyHSADa7we6uh5Ry4lf9875Jw3vYjlFN-Led8TNqZ6ODWA=s4800-w1200" alt="Lytes Cary Manor" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMKU6Ww7qw2PER7ByX2U4Ea66pbRoYjPi5LPhb4A42GqwATeHrsUQl5QtKwiGpeRqKYcrBUpVgw50iCs-D9Gb3bQF0zDTh-iuKOmZHgWncJLHWLaflS09rFbHKMtwWeSysjrGA-XK_QSa_s=s4800-w1200" alt="Lytes Cary Manor photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMK5f2KqqtV1qhUquWF25G912HnebEWsfwG03zfsHWL2A4wwSaV28HOjrPu4nrkK_1mmVjV14Z8NX5iKwZ4FtVO11XiUJJ5ibRE6KwWxGcti_FPJlfEoQX_mgLf9Cxibu-qcJrYL0ZC41u4_AY=s4800-w1200" alt="Lytes Cary Manor photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNb7AQ8ZtwpBpP4lFHqlqsWcxzqWkASruUioQ8iL0IKL7VaEX3cPS9rZt-o_rvbMSeSD9_eRhJzYP0tMICqpEcMAL0g3cW4wNehSm_iKMe0PvLB0Ya5r67EkYymTF5SDLYX6gVn1qW0BWOZ4Zs=s4800-w1200" alt="Lytes Cary Manor photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2Bvh15rUN9E7C16TBC6hakOYqm39bMvnMLVWw8imkwRNs9LV-sginphDZY9_Mz70entUYniK_svBQ5eV8jG9OLFCV4eOTRFElYw2DN_7lPZXPR5PDEEYOqLUeBN6s69t3d1kKhgqf2U2D_w=s4800-w1200" alt="Lytes Cary Manor photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lytes%20Cary%20Manor%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

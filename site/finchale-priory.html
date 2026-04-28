@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLxv9-PtWqh0bvPfCJbikc2xFmlUtmXWS-XfiC3BuDhHw_le-7RRKEwPNWsAg3P-0berYWf4fPH4iGi4Sd5fsmtjbTFCh8fFmpsBzk1sG_Ygup6iBbaBRo__W-sbyecutj2uIN5bFhQ0cJzg=s4800-w1200" data-castle-name-g="Finchale Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLxv9-PtWqh0bvPfCJbikc2xFmlUtmXWS-XfiC3BuDhHw_le-7RRKEwPNWsAg3P-0berYWf4fPH4iGi4Sd5fsmtjbTFCh8fFmpsBzk1sG_Ygup6iBbaBRo__W-sbyecutj2uIN5bFhQ0cJzg=s4800-w1200" data-castle-name-g="Finchale Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLxv9-PtWqh0bvPfCJbikc2xFmlUtmXWS-XfiC3BuDhHw_le-7RRKEwPNWsAg3P-0berYWf4fPH4iGi4Sd5fsmtjbTFCh8fFmpsBzk1sG_Ygup6iBbaBRo__W-sbyecutj2uIN5bFhQ0cJzg=s4800-w1200" alt="Finchale Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNCUHGVDqQ_V2W5o4ar5wlGJkB_koOXfrtpon_ddFHu9N2psiOzdbTR1dtLn_9nJbLcqz8xAT-olcHc5d05pWhPJ9FfufV6fzUSjloD9NRmCLW1kHTHreUd0E9Xqa_nbptPryuWemQeN2ODaQ=s4800-w1200" alt="Finchale Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN7CoaAPJIIJFrs4t-c8-xvRG4WskO5myf0H3i6JMR27eBAWDfQ9U1sf2JRC7t089zo7cBtNT-xpNrWAyhYlky93cG0zxIHHuWxsoumblVa_xLfUGK8PbC-ZhI01TaPswUXbE3zGp9qT2Assw=s4800-w1200" alt="Finchale Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPs9Qs4YzpU3dIOgXR4sr40a0xwZtKikQScGSMnehjD-6EnX5gBezERamb8mj0o2Qto2RaRsIjLDzCmpLbNZOvRxAnP39u_oxK1SCM5H6QsRsdegy7J2z8awgtHYtf-HF9YW8UAUQMh-fILcaI=s4800-w1200" alt="Finchale Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOaImsRd3XSqPryYZ6jsvzbDk6IujJwPgKSnfarpdXq9r8okPNKupWCSrFMa69R5YYAcJEwveU3D2zWiP134N7K2_JHYrQYTh5fLcvFKrof_pqk8WK0fwAodvjGcAQrqT04vNgCeqTXp_frsw=s4800-w1200" alt="Finchale Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Finchale%20Priory%20County%20Durham" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

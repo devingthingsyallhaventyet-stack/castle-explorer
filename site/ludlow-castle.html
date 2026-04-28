@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQKOCCxqhnG-pU3ASxws0M1jDcnpNh54X1wZ9OYtBL1XozEuBJEp9MDvrc4kjgiCs4XjCwc8jN7rsUWILgn5FPeoVOJPE8tsX5jwK_LDLudvZZI4xn_hD0VpM4fZFy2nxPMfkoUIHrUnRcVw=s4800-w1200" data-castle-name-g="Ludlow Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQKOCCxqhnG-pU3ASxws0M1jDcnpNh54X1wZ9OYtBL1XozEuBJEp9MDvrc4kjgiCs4XjCwc8jN7rsUWILgn5FPeoVOJPE8tsX5jwK_LDLudvZZI4xn_hD0VpM4fZFy2nxPMfkoUIHrUnRcVw=s4800-w1200" data-castle-name-g="Ludlow Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQKOCCxqhnG-pU3ASxws0M1jDcnpNh54X1wZ9OYtBL1XozEuBJEp9MDvrc4kjgiCs4XjCwc8jN7rsUWILgn5FPeoVOJPE8tsX5jwK_LDLudvZZI4xn_hD0VpM4fZFy2nxPMfkoUIHrUnRcVw=s4800-w1200" alt="Ludlow Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPHf9POJ7lzV1DiitO1a5lPGrIQoPsvUp96dEuElRzFGJHUoWsAauRkVXC1PhA0uUdQO-S-LUI4zuMt6DzxnCW3FxwY3uTJaNJFNL8j-fh7qTvbCoKdqBJtsaVDON5eC_SfO3NIS2j4dypCw=s4800-w1200" alt="Ludlow Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOy_Hkho9ZACac1I8c5vq9Irh_46cP2mUuYvogfbG9FUcI2p_WDjhu2vh3RPcjV0r0Vg_iuCWYVKKIjenmwnqQ3ibhU2po0sWxcpals18M2UMbHuqnWFUygFkXFm3LcXI_acejcSohIfRpyAA=s4800-w1200" alt="Ludlow Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJjtEC7jKtgu4fczO5l27y3gDaNi4VYNxF89F57IcUd4wlfbUlQUHiJpYmVQya_OO0CX79Yd_QOzqLI3Yih0hL5Kks8pn_O_px6sc8DCYkV2wvCJybkqEfaTfSc8YV8v4hdniUbb8CrxAQkA=s4800-w1200" alt="Ludlow Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPaXieTQkXQDVN7u2f8w7StaEhKeuSRPBmVPwUcPfCoBuvGFNtg-hJ9024ovuH1Q67j98BbutRX4VYbT6mtz2ydqlnFNfOP4CjixKCUcZgCnUh_AGgGlsXA4cy7U88dJMx8N5AeM-V9HY9GNg=s4800-w1200" alt="Ludlow Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ludlow%20Castle%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

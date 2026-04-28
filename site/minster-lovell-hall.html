@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJAp0Lr9OTMOUCv9aHvZAvdYrhd6Dz6ncTsk_5iOfoRMb00XSeLc2J7zDh2U3lrcd6tcUFoVqst7i8h3B082g5Ixq2SHX7L9vVSS8qvDOoKZOAnNLKhL8SYf_jDhm_ZkNVSounPylMC4Y58A=s4800-w1200" data-castle-name-g="Minster Lovell Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJAp0Lr9OTMOUCv9aHvZAvdYrhd6Dz6ncTsk_5iOfoRMb00XSeLc2J7zDh2U3lrcd6tcUFoVqst7i8h3B082g5Ixq2SHX7L9vVSS8qvDOoKZOAnNLKhL8SYf_jDhm_ZkNVSounPylMC4Y58A=s4800-w1200" data-castle-name-g="Minster Lovell Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJAp0Lr9OTMOUCv9aHvZAvdYrhd6Dz6ncTsk_5iOfoRMb00XSeLc2J7zDh2U3lrcd6tcUFoVqst7i8h3B082g5Ixq2SHX7L9vVSS8qvDOoKZOAnNLKhL8SYf_jDhm_ZkNVSounPylMC4Y58A=s4800-w1200" alt="Minster Lovell Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMXwAYJryQVk_tpA1FgAheLnAAoI9Ni2ZShYTTFrXwYyGJNNMAhbGU8GQaNf-ulufO4rB-RdpGUGMDrGbJjCtuArHE1xS4L8EbkMm0cbfZ4cu20nGsjZOl45BGGjp_1OnxLpU9_fCavmsKb4SIa9kzPJg=s4800-w1200" alt="Minster Lovell Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnEsux6FyXlKxlFvSHbNoltAwcp5mn5O20295mlnV10t8-qZ4YEcdwUR-eKrt6GC_4ilz6d7Fnyn7g20ELRACTLEV-W1N6erPHF9ZdqZGekv3XN6mKVLfeyHbVzDjhORxH6jjO9gMM8hbHtA=s4800-w1200" alt="Minster Lovell Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8h6uJM9jAzrgso7HbU64WJNgkt7FQSCJP98R_ikVNGfTrVhZm1ieY0nZQsjlUlC6DfHEHH4UKNmud5Y-3t9cP6XFsHQKqdKgOPHfTxmPx5FC19G0W1Aef9LSmva_bsFqfByy0B4yXxCTH0K0=s4800-w1200" alt="Minster Lovell Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNz8xgyEGU_DiUlM5b6_vpW-D63p-j3umn4mFCwOqjN1gejB690nAIBU8q6f0e3hLgPVxi3BcEjjHfScztkfu93M2jby3MISitFQc7htCpmtrMZnppQ3xlVpJ4siMr0rPV8ik1OP8ost1Tx9w=s4800-w1200" alt="Minster Lovell Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Minster%20Lovell%20Hall%20Oxfordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

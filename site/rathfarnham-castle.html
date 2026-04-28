@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrSMZ3UIJJV_9MfGrwYgWxy-pTLpxE_Guq8v8y2rvrGcPWuitzjYtVpZ2222B84pfjklqzMvyYJ3QA7PxJNi-Xcy_hoSfcE9vYiDRnyEY5V8Txnko9F_bfiEk4ukm3JVtDPoKh0z1QjY5YYA=s4800-w1200" data-castle-name-g="Rathfarnham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrSMZ3UIJJV_9MfGrwYgWxy-pTLpxE_Guq8v8y2rvrGcPWuitzjYtVpZ2222B84pfjklqzMvyYJ3QA7PxJNi-Xcy_hoSfcE9vYiDRnyEY5V8Txnko9F_bfiEk4ukm3JVtDPoKh0z1QjY5YYA=s4800-w1200" data-castle-name-g="Rathfarnham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrSMZ3UIJJV_9MfGrwYgWxy-pTLpxE_Guq8v8y2rvrGcPWuitzjYtVpZ2222B84pfjklqzMvyYJ3QA7PxJNi-Xcy_hoSfcE9vYiDRnyEY5V8Txnko9F_bfiEk4ukm3JVtDPoKh0z1QjY5YYA=s4800-w1200" alt="Rathfarnham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYgEYT-xCZj1B6lbIbovQzQSHW2-ndo8F-oUYQyIZ8kny6m3Zl6eSKZshCznLBoH7TAV6Vyx-74l88FWk_m2Fw0zNd192mIQ2JJ-A3fw0nDFQyfk0T6chFXOzgJPo7-ldcq4joQTX5jt_Mu_I=s4800-w1200" alt="Rathfarnham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSGfiIRG2-gSqsuKcYLt9RR6RlniNyHyjcc9trtIFOwYvz93WY6yBxoMyCLMY9HapYEuLDrwX3Fo7g7t8FeobWdIXNBszER_8LaHrPFh3qmkOlELM4_NsrHMGMUT8tRxlRNeJ3H8ugSixwHw=s4800-w1200" alt="Rathfarnham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxlDU_BzmPxBKGqfdS5QzMo1tIkyQ9hSVk8ZJd7iW5QhqmcPrzbwP-jVkXHBhjbiWiSLTdwLUZx93T_NR_nI1vvQxwH1bdCckqSGjRx5po9ll9VF6TSzZcp2DoDl9EfsVPQWcV10rzCYFz=s4800-w1200" alt="Rathfarnham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPoSmFnoJnTrR2j87PpIJEatjp81CUXgDP1HfhV3B3oMdpCP5CoauILJWoOe8B5yLdcnDNcpNP5101gLHWan51Dr17U2sT88MrGrA2f4nt--8A9-3TmW0TYX0WNkJYZX3pQHeENdxGyZLuIC4w=s4800-w1200" alt="Rathfarnham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rathfarnham%20Castle%20County%20Dublin" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

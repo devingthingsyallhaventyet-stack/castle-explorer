@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dunmore_Castle%2C_Co._Galway.JPG/1280px-Dunmore_Castle%2C_Co._Galway.JPG" data-castle-name-g="Dunmore Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dunmore_Castle%2C_Co._Galway.JPG/1280px-Dunmore_Castle%2C_Co._Galway.JPG" data-castle-name-g="Dunmore Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dunmore_Castle%2C_Co._Galway.JPG/1280px-Dunmore_Castle%2C_Co._Galway.JPG" alt="Dunmore Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNND0JBKehWxxoAXQLc8biZifPxX3ws46tkRfugCQF3nG5jH8D18DWMJCn8SqZxIKJKoeL5GJ5e15hWaNKXCx6ySnFlaRN_bZeWEcmu6aEaEun285Y-BW3s486ZCMxxX1uHjsH_pEkMM6yZMgA=s4800-w1200" alt="Dunmore Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMK87z75OqjEzRG27FtR8mcKU_bbjEHSMzBa0hxU_5vpOWnyLg-hFLrUpdPAbfe3vWNA1a2_QjGjJCxdemsV4nFLYS-0yb3QFEWZqZJqWUmQCLZEG-1GwFCGowdcfKmIjaDvwX69HJSTcRA2Q=s4800-w1200" alt="Dunmore Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMGyNpEPnAWJGhvDkmC0LZk8VscLdoOino873UKorkgZLymrkWHMDjtOc2GiStJvaKao5effXXirbuGAS84bw8ipcU387OCyKqUa31vIMNRtw8RJha_SdzJW6xHtJpZ-ym7FFzaK9QYh3VhyLI=s4800-w1200" alt="Dunmore Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMKPfIDVnYit_F-rnQ5bSe4bOG3EoDdo5jMKp9NiMmdjxd4sCD7UHapNPRnl0hRqBnpZKRMmWIu4Ku7zwrqKbOU2aAxEDVEInMU363loBrZz-QOWMMNuxl_saq7no2rJESkZZX8B5xrxZ6p8w=s4800-w1200" alt="Dunmore Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 DanielecDalton · CC BY-SA 4.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

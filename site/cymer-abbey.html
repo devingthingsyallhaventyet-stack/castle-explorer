@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg/1280px-The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg" data-castle-name-g="Cymer Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg/1280px-The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg" data-castle-name-g="Cymer Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg/1280px-The_Ruins_of_Cymer_Abbey_-_geograph.org.uk_-_3795241.jpg" alt="Cymer Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0pC2UoqhVUDVqIsickol-8C1OREYf9VlyJZthFTYD0yKXFWy7I751DkhfhYYxj4cJ18UQ5ijb5QoPO2NbadQH6OoI0Ss0fJSSYSyU50p5uJqebpV8L69ZEuUnTfRwM5m1KqXqr-CMsXW8AQqikmye1g=s4800-w971" alt="Cymer Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOxlvOCa1adVs8Ze60zyjTNGYIRi8fpWIFHRNvwjekYT79GrkJbxuurrA_-ggtZf39mYJ5cClXnOeLAeqxx1ZIgWgyjGU1n-6c0-tGCpSJtSta3nQNehRuV1LYbsxIVs7i447MbERV2NuVt6Q=s4800-w1200" alt="Cymer Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNukFBCMe4BOvO77x852lg1ETh40HV7HGXdhhm2IZJuQsc15S1K4iUr9gL-1EWqlKgEqqFFAUG58YJVOk8cMIpjpyfPvJP2z5OZag7UNhRRh8BFRwYAIXn850iaMZMphgL_QjAs3gQ2YLAv=s4800-w1200" alt="Cymer Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP-4ddYEikoSaTegkLVJU8Ea_gCAz1DeAG5z9ABjmFKrNcbRXLoH_s7k5kzBLRAL2FzgLYAAQWJbx1fVwT0aIBM2wxoiR35h7ZPk6Kpr7mmpOS6-MS_ICst_WuybVvxX5lLiUtTrPYSDb7QyA=s4800-w1200" alt="Cymer Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Jeff Buck · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

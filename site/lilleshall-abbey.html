@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPq7cNAr7vZjLzDhw2vRQjn-timRsoWRZA09Z4pg_EOiPEkfEvSUCqfVgs5HQ0WJjNRo62Tqkh3tVqITG_wh9DHy8n8lfgAS6vDnMxhWTTEYoSEojri9Bz7ihhz7DWZImfOdWWX6Yc2nDJrzA=s4800-w1200" data-castle-name-g="Lilleshall Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPq7cNAr7vZjLzDhw2vRQjn-timRsoWRZA09Z4pg_EOiPEkfEvSUCqfVgs5HQ0WJjNRo62Tqkh3tVqITG_wh9DHy8n8lfgAS6vDnMxhWTTEYoSEojri9Bz7ihhz7DWZImfOdWWX6Yc2nDJrzA=s4800-w1200" data-castle-name-g="Lilleshall Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPq7cNAr7vZjLzDhw2vRQjn-timRsoWRZA09Z4pg_EOiPEkfEvSUCqfVgs5HQ0WJjNRo62Tqkh3tVqITG_wh9DHy8n8lfgAS6vDnMxhWTTEYoSEojri9Bz7ihhz7DWZImfOdWWX6Yc2nDJrzA=s4800-w1200" alt="Lilleshall Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMhMIDcPYxK0HJMp5t2FlrTApgbZjcSwL7G3B9iqI3n35u1QvxylvD_eU3u7JoyUxgqDhIvXovhS8lZzd6y7Nk9-6Vo1v1ZtCyDnJjLzvVDindG6-Vy7vsphT5hK-HS0WqAEEA5vuXKhL9N=s4800-w1200" alt="Lilleshall Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUYaF8EEgZ0PmiXs8vGlt8sootEDJOlUdteexEXUTPT46IzouLFLeglhb1ckz4bRsslkyVpGwP7V6dL8MJZ3P18BI2cbsuQdtKa9gpm192a7SPEmSKOhi4Cle45witNzbX2-CIaaxM9p5XHQ=s4800-w1200" alt="Lilleshall Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKtnCSeXQgHpU_5HwGzG1nsDGgWpC_ZjlcNlqZUSk3EzZctCt76Fq2uIAlCiuD8wBx8Pxmm1rOooJCdXmlSgrZfivasQeduLmM86XewOTCZM8QREZ_oX5rlV34heZoF0vJ1Aitq3-FCx5CvQ=s4800-w1200" alt="Lilleshall Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgNI29yazDxYhlxtuXfS0PtEQ_4V5AngVs7e7SdECRnSX0sgEBrjdfj6dxPNWxV_gOLU9GCxCul50txo-faclZZRBT8FC4ree_jDGT2ngqm1zAKlK-SX6fPXkGpPwf9oLOIaSMlkSRdfgRrZI=s4800-w1200" alt="Lilleshall Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lilleshall%20Abbey%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

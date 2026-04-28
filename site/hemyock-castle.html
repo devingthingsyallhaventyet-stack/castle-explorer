@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF_YepcaWgGpbkd_yWkiBOEcY4YGwFmArJTfCFs9SQJNbrizaij0iNV18mSs0GRzscaFaw3J99wUUM1-ArtDNwk1VGmMBJKn5s=s4800-w1200" data-castle-name-g="Hemyock Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF_YepcaWgGpbkd_yWkiBOEcY4YGwFmArJTfCFs9SQJNbrizaij0iNV18mSs0GRzscaFaw3J99wUUM1-ArtDNwk1VGmMBJKn5s=s4800-w1200" data-castle-name-g="Hemyock Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqF_YepcaWgGpbkd_yWkiBOEcY4YGwFmArJTfCFs9SQJNbrizaij0iNV18mSs0GRzscaFaw3J99wUUM1-ArtDNwk1VGmMBJKn5s=s4800-w1200" alt="Hemyock Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGkWxZ7r9-LfzkQxhvmhj1Sr36e6RHqB5NWNram117wVs8g9gWeFIlij2HwoqFuwedHMl9hCFwQEIQJMd9dzAUfeWaq_6uoeWg=s4800-w1200" alt="Hemyock Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO21TwWc6D6qsOdUSSxGBW--PINeyg7QsiMAQeEArRET0LoUFqiH5HaLPO2a0_FHASMyy67zWfq3b5qqhHU3C1i20kGKEHtiZwylXrHjG7KfaTQFk0xq_wQiFmvyRS4cX5o1imVCMwUPKL-FQ=s4800-w1200" alt="Hemyock Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPPpOjgKTGmKFWU3nbo-lncJ7_bHjKg5ofCR0POo-o2hhhJQ0EUE98KK9G_QzkMi7cI10r3beNcYx8O4RfYUEllttGBo2qKQdAmH90G97MiY5OqBBOWokKj8e_ixAqsn5Usk9ZWQFEFF2wixw=s4800-w1200" alt="Hemyock Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhLDYgGJXz4JR_KK6GU4DIVFIK9Mh8aYWmj0ReEkjdgflM6AnzUgp3g6hdVqR8hoCLyGbrj7YFkEJJRLME50aSmH8TLIftqpbzYdPeKSrPh-2CTubBwFtMvU-DA18u8Ai0LUbWiWO7HirM=s4800-w1200" alt="Hemyock Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hemyock%20Castle%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

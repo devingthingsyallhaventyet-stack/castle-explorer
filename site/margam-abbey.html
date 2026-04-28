@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVgRz4W0uC78jpUBINMnZUnhtBZLIxFyb4NY-gbdb3LL6mrk5eWkroDNdW0XRB24ch26jxLus5ThsCDa4mx9IOWJYPMBgXOTRDkRNotp1tMgMd8ObRGsMfUnbjwvZ4HSxjRsoRahAS1Y6nA1w=s4800-w1200" data-castle-name-g="Margam Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVgRz4W0uC78jpUBINMnZUnhtBZLIxFyb4NY-gbdb3LL6mrk5eWkroDNdW0XRB24ch26jxLus5ThsCDa4mx9IOWJYPMBgXOTRDkRNotp1tMgMd8ObRGsMfUnbjwvZ4HSxjRsoRahAS1Y6nA1w=s4800-w1200" data-castle-name-g="Margam Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVgRz4W0uC78jpUBINMnZUnhtBZLIxFyb4NY-gbdb3LL6mrk5eWkroDNdW0XRB24ch26jxLus5ThsCDa4mx9IOWJYPMBgXOTRDkRNotp1tMgMd8ObRGsMfUnbjwvZ4HSxjRsoRahAS1Y6nA1w=s4800-w1200" alt="Margam Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQThM_Bksry43tvL8OO4Tj6en5H6RDi9lKCiBiGlAYWqKliN8qvsauG65uqrxNaTfQMbz2_LfcNa5EekW9Vy9FrXuhHshM1xIz8oVe-56f3l85C15AGxRaMTb5A8N7byFJisDRR3IThqF2THU=s4800-w1200" alt="Margam Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFimVWmdMKW6NteT3l-p_agmswPgnlX6wa6ER610nj9uF6H1_mDrVmwNES7iQyK9j3Es3qYILcOOGVTIgHkICqTGbmNxVcZBe4p1J8C66tJ5sA57gT22Ux9NBtkj2vgJL0THJ_hK0o9BgJzw=s4800-w1200" alt="Margam Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZONoCkkgQi8dMRVVNp83lh1Tgw0zrnlBmOvWV6dK4Cv2vYsyIC3DndtxXBL3FnkT9z6D1ZDRShavmQcXYWBvgOfpqXjwpyPdhgVqp-2vbhm8iGf6GaLQLccdLzV6MW88gFPVLyljKAlENWC=s4800-w720" alt="Margam Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMa19uXREQB45GNtnMxRF19BRxA8BSuKV_zhPYtBz3qijUOzhtpUdQi3duGKZuXXKQP3C7k4YGqDuFwQe1VOiJvUrV7aLrmriKqYFoMLf6AhZLSF7ZuIpr_oa_qBLwt_ZG2HjFFSEYNXptf0A=s4800-w1200" alt="Margam Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Margam%20Abbey%20Neath%20Port%20Talbot" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

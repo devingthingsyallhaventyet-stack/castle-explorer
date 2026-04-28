@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNbDRXY_eJeAtKX2mIfvoR9a5PexH37noJUt1LP93UpN7vHR8ETMvoLwDekAW-TpxCtnnKqAfH9M0UMcgYLN5KOJmBW292m2UVKtZQq92sgK7SeArB0_Inpu2l9FHHkldZas3umb17oriTTLQ=s4800-w1200" data-castle-name-g="Snape Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNbDRXY_eJeAtKX2mIfvoR9a5PexH37noJUt1LP93UpN7vHR8ETMvoLwDekAW-TpxCtnnKqAfH9M0UMcgYLN5KOJmBW292m2UVKtZQq92sgK7SeArB0_Inpu2l9FHHkldZas3umb17oriTTLQ=s4800-w1200" data-castle-name-g="Snape Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNbDRXY_eJeAtKX2mIfvoR9a5PexH37noJUt1LP93UpN7vHR8ETMvoLwDekAW-TpxCtnnKqAfH9M0UMcgYLN5KOJmBW292m2UVKtZQq92sgK7SeArB0_Inpu2l9FHHkldZas3umb17oriTTLQ=s4800-w1200" alt="Snape Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPwfYsfNuTttHrr_WmnkR7kUOFbUlvONb6hpa2sNZWjogTs-SPCvDBZpU9LOziEmhLeRQU3v3_eAYbVWcFipiorksCik9AE-XYiutg1QhEXb4zZBD8AZ4Ge1G5vlHRmhgudI7uY89nzxnDVwn0=s4800-w1200" alt="Snape Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtEGvgsFGR2QhCPR3PoOz64nqBLcXQxLps2NRidbQSELAlf1CGZJj0F-FLH-5WSMIe3ITpods_PO61hrY5X9WVCO12Kimi4LfhvgcVX3TJYvXWS0b8k1KmSz7iR0U7RM_aI-EVSK6RznOUzg=s4800-w1200" alt="Snape Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5DzZbZ-yQzeBLwuGYvQ-4jDxqTgjL9wQ4NBFOWypyhey6eUQPNWNiikNIPRmxdQksPQmYkrKKwuW4wVjlHcvazQF7Mb4MFMRaYsrDvQ8bRIFdkkVx-MLc32FIpO4Eegw5zjKGzq8BWDgZgA=s4800-w1200" alt="Snape Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHGm_swvtKUwokZQehezV5PjIKzRGHxdwsaB7S_-wvYUFq7Bcg1McWM9LzMIfLyXkJseOSCMN3G9OlAO3mafatAc4XiYm0ZP613xwakoil_0rJmekLS6L23jYY4LvFfcQaqKkbh91ebwB2yMw=s4800-w1200" alt="Snape Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Snape%20Castle%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

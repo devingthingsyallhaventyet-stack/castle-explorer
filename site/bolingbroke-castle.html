@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMP9T-81G6nSQLGWSwWPtMlg_hlHFA9R1Kt7NO90j9LGTRCW0piaqi1S6u93y2xe9DhF-9S3HPFcKkF73gcL3bb1aP1jqjqjKp-IzD9xHP62nQ38PKMzA7DqrtwyvIXSobp0zMUuj3bNXlh5nB6YIM85w=s4800-w1200" data-castle-name-g="Bolingbroke Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMP9T-81G6nSQLGWSwWPtMlg_hlHFA9R1Kt7NO90j9LGTRCW0piaqi1S6u93y2xe9DhF-9S3HPFcKkF73gcL3bb1aP1jqjqjKp-IzD9xHP62nQ38PKMzA7DqrtwyvIXSobp0zMUuj3bNXlh5nB6YIM85w=s4800-w1200" data-castle-name-g="Bolingbroke Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMP9T-81G6nSQLGWSwWPtMlg_hlHFA9R1Kt7NO90j9LGTRCW0piaqi1S6u93y2xe9DhF-9S3HPFcKkF73gcL3bb1aP1jqjqjKp-IzD9xHP62nQ38PKMzA7DqrtwyvIXSobp0zMUuj3bNXlh5nB6YIM85w=s4800-w1200" alt="Bolingbroke Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfRTRcyT7JSCgHjERZJbSb3i_rjmgdk6jW4BvHSdJXmOfXHbe14K99pCx4FgcqdsQqpUI1XScCqLm3paDhVumJ8-2xng8XQTJ3v_Aw4DRQe6tuSpaoV1X3K498l0zOW2XFH1cSKd6oiuDmPheMJNdDHQ=s4800-w1200" alt="Bolingbroke Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMt7pPt1rcvhc7jcGFbLAZ-XprAs76h9fGf3ScliPzK3fClEkHd3NvQ_4iSevj9cbKHDtdmUSCVexcw4gYyXSNabV72cbMzpJdckmyVofZ09eWjkWWOfvJCTPfNYJ2cwYtBYdF8BPka51xNU0s=s4800-w1200" alt="Bolingbroke Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHUShRwDBkPR3Xm_MGgTgGsnXHHw3f2cAvx4dGMD-dxdgubgzvgtGg6j79WAC-3QpVNJTlDJIwZ3RKkqdpcqT1zm-Kf8aTmdqS9A-zmmgdRM_TuT6JgGItappmquniHBjhgZlariDXoMTh_UU=s4800-w1200" alt="Bolingbroke Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNA6U4dxTO2W-N7HUEzqE3XCxITjQ1Dj2lPc0p23fWlPp3UOY_QljAvaIN9wXdXapjx_DAaJFHOYQxF4VUX7jgCUSP6WisK2pqr2Jr_noletww3Y_tQkxJWuMvDYh9FYzzn-vPYtg8EO12DzjY=s4800-w1200" alt="Bolingbroke Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bolingbroke%20Castle%20Lincolnshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

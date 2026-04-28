@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLvBl7xL2opKm9zWEM1YQKs6RNQGhUr4ynqOB10X_AXaHue3NVbABVH_StHBT_uWXHM1waMaq2UjCWcvTirISgXiK4wxj9EPfx69vu-OHOBSEber6lg_kD29bD77T_bPGssQvF6IBIJK8OCV0codi7SQ=s4800-w1200" data-castle-name-g="Montgomery Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLvBl7xL2opKm9zWEM1YQKs6RNQGhUr4ynqOB10X_AXaHue3NVbABVH_StHBT_uWXHM1waMaq2UjCWcvTirISgXiK4wxj9EPfx69vu-OHOBSEber6lg_kD29bD77T_bPGssQvF6IBIJK8OCV0codi7SQ=s4800-w1200" data-castle-name-g="Montgomery Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLvBl7xL2opKm9zWEM1YQKs6RNQGhUr4ynqOB10X_AXaHue3NVbABVH_StHBT_uWXHM1waMaq2UjCWcvTirISgXiK4wxj9EPfx69vu-OHOBSEber6lg_kD29bD77T_bPGssQvF6IBIJK8OCV0codi7SQ=s4800-w1200" alt="Montgomery Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO50MTuNujKNXRQqjFAyrGippYiTLWELNA8gA2-LpEMqdCZDp0neokwo_iteYOOfLDcTgOJXIdzBy83L3XrVaTi0tA1RBD4rHEymjmkWQWgoNpfKaBQlxtyszIB1xSeh413yixkJJ3InYxubA=s4800-w1200" alt="Montgomery Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjSF_9rh3g1RMM0jY9zIQbAljh7yI1-hp5HwGHDv2ZZULl3hEpEVpuEb_MtlTTW9UbB9-vgFoZ87ra0LLu_sSbWdHAbfZDKl1jiGNnZ_KEzv8njDB9JAQYa1W-axJbxhSKKexDBAXACO2TepIWu0SyDw=s4800-w1200" alt="Montgomery Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOG5yrzC7KCK1AVS8cn-f7yJCtpPKKXfI1Hs12vGVO4BUQqFPWQ0YbJr_RPWV2aN9eDQYZ9BekSeIy7ctS-eiK9fxcXyxQzzZtb9ZWq5PzyWl_S-MCkq71Jvj82cIz28f3eo-lYkbr9N9nOA=s4800-w1200" alt="Montgomery Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNIDlV3F_xbd59WiMPJAAAAsFsPpriSVd72p1bvbbzeHvnKSjiFA_AYUcXRPlwEgeczU6m9NxUNGOQGn9KKFTtstiBt9WFb_ScZrBzl5NH1TlH6i6ycuCs0mGwSRcdmpmPXBhB8lILH0PfQvkgkryG-=s4800-w1200" alt="Montgomery Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Montgomery%20Castle%20Powys" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

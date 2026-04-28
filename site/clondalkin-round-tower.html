@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzC8Es9EvbXY6cKpPSD0d2OUPUNXyMFjU9KjYp7UG3L-UllS_daKamJ133ZcK657F8CqljcpgMGomBUUtkZN345AJzY3KetYr2D3liVifR7boVwmGEj7nJ7BjiEF4_L-1mgW1dIs5LOWPNgpwcm7Ym7Q=s4800-w1200" data-castle-name-g="Clondalkin Round Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzC8Es9EvbXY6cKpPSD0d2OUPUNXyMFjU9KjYp7UG3L-UllS_daKamJ133ZcK657F8CqljcpgMGomBUUtkZN345AJzY3KetYr2D3liVifR7boVwmGEj7nJ7BjiEF4_L-1mgW1dIs5LOWPNgpwcm7Ym7Q=s4800-w1200" data-castle-name-g="Clondalkin Round Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzC8Es9EvbXY6cKpPSD0d2OUPUNXyMFjU9KjYp7UG3L-UllS_daKamJ133ZcK657F8CqljcpgMGomBUUtkZN345AJzY3KetYr2D3liVifR7boVwmGEj7nJ7BjiEF4_L-1mgW1dIs5LOWPNgpwcm7Ym7Q=s4800-w1200" alt="Clondalkin Round Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPU4BxCb7owRnQvLaaU8t3RgQFRZxFe7eK_e7N8SRAGJKZ75TXzqqTrzvhFnWaAa3iIBDwReAdb8EhlGaYgFo0rr1VvUdQnwBxt23PtYDK1HxgaehWVFcO6RqN3VoiGsiCA1DlLVLFRD1SV=s4800-w1200" alt="Clondalkin Round Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPl1qGY5adJ6L_DoWbEl28dx5-X2csTjTHYeQWaD9fLnRuXC9M0LCB71BBmO8QKTVRypIyHAG1mwUVLLl3d9vZKAo4lEgsleR0PlTWmQbP0z0uS1G4HMaHxlGHdD6nkDyIZokt77H-ii4smQg=s4800-w1200" alt="Clondalkin Round Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlJtUBh5g6cNa4yvo6YTYFAVCClmZO7lvh1G6pxc4EosdaJrSKpSX8ZWsNCkvvL9Nz3kcAYh17ohgGAADL-lpnnNWgNKSlhrLiFzNU8hje4lEIluMgQSBYvM7ni0cpLBWEThG1crzRxQc1=s4800-w1200" alt="Clondalkin Round Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0OuQ103nlrq0qBnImfAK78AjMX2vSK6LjYGC6K211lrHha6AgCzn3Rnn_AxbeyOnORn33f1_KbWlAl4MUJ7ul_rJhKhO6QEzvEbRsm6Y0hW56mJ2f7o5Kg2NuAggyNH_Mb8ZBq8s71p8I=s4800-w1200" alt="Clondalkin Round Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Clondalkin%20Round%20Tower%20County%20Dublin" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

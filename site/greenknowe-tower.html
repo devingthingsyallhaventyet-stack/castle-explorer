@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKSTdljL33stGJ86go45DOl0nqOq43U48S_y7By2_x2mOym_2zQz21bTBKU0uxz81SGcjEr53uV6wQqJR2BHtn3u9956pqUfcV1IqE-5vWcaaEhrHaMHgM1pvLO3jfJAm3cqCf6U-82PwYPIg=s4800-w1200" data-castle-name-g="Greenknowe Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKSTdljL33stGJ86go45DOl0nqOq43U48S_y7By2_x2mOym_2zQz21bTBKU0uxz81SGcjEr53uV6wQqJR2BHtn3u9956pqUfcV1IqE-5vWcaaEhrHaMHgM1pvLO3jfJAm3cqCf6U-82PwYPIg=s4800-w1200" data-castle-name-g="Greenknowe Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKSTdljL33stGJ86go45DOl0nqOq43U48S_y7By2_x2mOym_2zQz21bTBKU0uxz81SGcjEr53uV6wQqJR2BHtn3u9956pqUfcV1IqE-5vWcaaEhrHaMHgM1pvLO3jfJAm3cqCf6U-82PwYPIg=s4800-w1200" alt="Greenknowe Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpVEKvjEiGJr_lDHESXs4aTNz4r_It3eIn_TyMBqcVN7cBa2iuTaAeowHcj1BuQh5-I3wJcJNiUuBWMgDVidKF0MBwPyV-Aigrpxmzw0gJQHMa7OS4U8SOv4JJwG20Dh89WN1XYmpqISlnspgEPpycGg=s4800-w1200" alt="Greenknowe Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdIC6NFdI1oY9Ev1IwbY0IHpsB6elrOVrvNdpABYuaDEzlAS2H9i-C15x7_L3sm-c-wSscMSuXxmuGD-5Ci4doOU1TYIOeWjWJD469cmKlKQj7-NoYIs2NI-JzhS4JHyZXaVgv-VeWMk1kkd4=s4800-w1200" alt="Greenknowe Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_zsmoe_FQqng_WWyjzLcNX43oI78YfDILnhNqAYDDMTRylCecCVlHCKqDRc5ElQ3IZxwN8Nt2C-RAziqOWViyuRscIaghGz1jWRqvUyWgOD10dbxE3xiPQXG09swWsg9SAaGVyZDMKpzh9A=s4800-w1200" alt="Greenknowe Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNEpvMBQsxTCsQJaO1xPd9N-ltyzMkbJUc17SrZNAWAOTYibH605yTkNs4Kmu7Crmr5_eoJ7pjymvV9zpwt4Jaw7Pbw8Une1NScBoZsS3gYMLe6dVL-5hRgRAcRtl9yHsZys-QyED2SD_B2tfQ=s4800-w1200" alt="Greenknowe Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Greenknowe%20Tower%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

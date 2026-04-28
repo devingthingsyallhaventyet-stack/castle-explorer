@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQe1FwR0jTflnW1QfgeKRavyPp4bUBlG0swO7tMmuPhHhP5M5Bckt6kofq3epsGIMSZn7EmZ0X7Jj5rN27XkgByXwltZddFrMTKCUPGcruIsAJtBjOkMJCHyd5Vu4Uv04YY6yu-yxOo2OVtOE=s4800-w1200" data-castle-name-g="Sutton Scarsdale Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQe1FwR0jTflnW1QfgeKRavyPp4bUBlG0swO7tMmuPhHhP5M5Bckt6kofq3epsGIMSZn7EmZ0X7Jj5rN27XkgByXwltZddFrMTKCUPGcruIsAJtBjOkMJCHyd5Vu4Uv04YY6yu-yxOo2OVtOE=s4800-w1200" data-castle-name-g="Sutton Scarsdale Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQe1FwR0jTflnW1QfgeKRavyPp4bUBlG0swO7tMmuPhHhP5M5Bckt6kofq3epsGIMSZn7EmZ0X7Jj5rN27XkgByXwltZddFrMTKCUPGcruIsAJtBjOkMJCHyd5Vu4Uv04YY6yu-yxOo2OVtOE=s4800-w1200" alt="Sutton Scarsdale Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPm7bzguXI_fVXStl-41welHguJolXTt-JAMjZ27EdIlgQntuyiGDK4fP6HBUSnku1xPUlS5q6rE4O3GOBuEPPip4FoQ4RKAmG0yIvu7916vNl9bhOk_DjQEB6ZYbOe9wU5xbsy_ZDTczU-1w=s4800-w1200" alt="Sutton Scarsdale Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO4yLS9ye5Wfh7Zb8g1p3hCPqFFPQK6XqhN9CLibvl1fFtey76sQMLmPViPjGcpsfOjsaCbduM0t1cBCslvhlhB_ADWSCgZOIKC06EYds2mrMRe-SUqEYOr4PE19KxB2I68jFVUmZ40kwQw=s4800-w1200" alt="Sutton Scarsdale Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgBv7XySO6utQXcCisuZ_1dttIgd_XgZcLeCOactl23YSZ3EVKqvEPvn-nNhCy3vxV1J_88r0UQefROEzpjplAUo5HRze4-UAsSFwMn7xLiUjW9Gx7h0MRNPrrstnjgWkGM58A24J3p8rPeg=s4800-w1200" alt="Sutton Scarsdale Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtlcYeUc3qeNA5Wxy-TEzpmCtzfuo_1XtjjeF93wqNCGMRMrKwmsFRfy7JaIMtlz71EzUIcYh458Fb0tNb2R-pfhmDLpDe3qI-jb4sIhq7jO4kcb-l0TUVrwNnMynVyhbbG9_vMpHfAcT2WSsLbnFaRg=s4800-w1200" alt="Sutton Scarsdale Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Sutton%20Scarsdale%20Hall%20Derbyshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

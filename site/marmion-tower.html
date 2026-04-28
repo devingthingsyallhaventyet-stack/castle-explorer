@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOn1Q_vV0X-Fa9Lg4Ccpt0tN6fGX5SP4VjFHWVah58pScDckO4YWhTZYr1Bc0U2xfyWHpyGSG7SZiAr82YmMPaUNCEbVwEhQs63CZF236RiR-YM8d-0_FO3eVVygD-VpS5k-BpDoSMP2qdgc7lRGISzbA=s4800-w1200" data-castle-name-g="Marmion Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOn1Q_vV0X-Fa9Lg4Ccpt0tN6fGX5SP4VjFHWVah58pScDckO4YWhTZYr1Bc0U2xfyWHpyGSG7SZiAr82YmMPaUNCEbVwEhQs63CZF236RiR-YM8d-0_FO3eVVygD-VpS5k-BpDoSMP2qdgc7lRGISzbA=s4800-w1200" data-castle-name-g="Marmion Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOn1Q_vV0X-Fa9Lg4Ccpt0tN6fGX5SP4VjFHWVah58pScDckO4YWhTZYr1Bc0U2xfyWHpyGSG7SZiAr82YmMPaUNCEbVwEhQs63CZF236RiR-YM8d-0_FO3eVVygD-VpS5k-BpDoSMP2qdgc7lRGISzbA=s4800-w1200" alt="Marmion Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOt4rs-z8IR3XNhir4lbrr3pvkXFCvJaJ298t8dOXpFrnmb5EA6Po3wQ6mSq-5Q6mSMm55-fKR-64Ua-Kx9POclDu4xqx40JcH7-Po9ew-0R7jTsPO3u5Yl_wFSgVkqvEpzwqADHKZJXeyvbU=s4800-w1200" alt="Marmion Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPS-6JKAyc61MSjwr69HbAC9gZBeaR3-HbVYlUprV3GRwqDu1I0J7I6UCg80YbxwGmNILTiWuUBIMWqRjrIWjn4Jzy72h6zwyC66AA49YQVtVKhnodZ-wQCEhaXAA-LW_Rxwyj5vmCV2N3SxIw=s4800-w1200" alt="Marmion Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyc-O_g6Ln-f3ODiYWVgAX7eRTNDgbscOkQ8Zo_8yJE35YAcHDPAu5rXeC5CuG872BASSw3DP5Iq73LJPi6yTsHFNG2XbaZ9NzFcdJG7hGLOp1MJ1ANx6s6dnzjabE6vJJ18z6VTq7Uu1rpg=s4800-w1200" alt="Marmion Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKLo50pUcYnf-LRvmJzAxeSzwUcxC4h_XxbVsfnQrC_0qqDMs2W3NxX4_VmKEDk1z9bET5ImjqO9qxASDuKHl51vg_U3aU0qcCrYclnKt8zFXvmnWHjXaU57K-fq_DnLf3ZJbkscSDA5SIdMs=s4800-w1200" alt="Marmion Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Marmion%20Tower%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

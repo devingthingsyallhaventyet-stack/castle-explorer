@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMnB20fl72DGYIxtAEUoCjPmLg_GItwdfPqNvxx041d_RbFoK30-fanfQL01JtxmuWs1cPmQIMMEGgvnd1eMxEeJJ4xW-8YRxW_x3Cv1rFIh4DaHJNhfkVSC5TfCJWcgAiSpmbCKdwjQ-a2g=s4800-w1200" data-castle-name-g="Lochmaben Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMnB20fl72DGYIxtAEUoCjPmLg_GItwdfPqNvxx041d_RbFoK30-fanfQL01JtxmuWs1cPmQIMMEGgvnd1eMxEeJJ4xW-8YRxW_x3Cv1rFIh4DaHJNhfkVSC5TfCJWcgAiSpmbCKdwjQ-a2g=s4800-w1200" data-castle-name-g="Lochmaben Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMnB20fl72DGYIxtAEUoCjPmLg_GItwdfPqNvxx041d_RbFoK30-fanfQL01JtxmuWs1cPmQIMMEGgvnd1eMxEeJJ4xW-8YRxW_x3Cv1rFIh4DaHJNhfkVSC5TfCJWcgAiSpmbCKdwjQ-a2g=s4800-w1200" alt="Lochmaben Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOaSL-SXYLjNevi-eYJYhCNzLLvkh80vK3CcZi3OYO3VggzKyDz3wuVeKcjuKhBCWQUc4N5iaPAtnQ_9vwTpOpTZZnaauClwYnX_d-PFIAWkqMi3zBjCvOCiJzowL7qC15anioVLyTB2zaD3WU=s4800-w1200" alt="Lochmaben Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVEAB3EThiuiz53e3HXuHON7IcxoPB74A7yQxkl2bcKShRVEgn6boySDylAd_HeMQX768u8tmCtsfmIsMB9ac6XKrO5pZjh7aPM5u8BTLQ5LMheAOOERg0GLo1m2OKI44ALtmMtyxiBsl4jG4=s4800-w1200" alt="Lochmaben Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKRkqusBGQMbulHRfrQOZ8DHuIGvmPGO3aGZ5D6tXsFEhZnjo4v7szILfAUpQ5BVFTR_2OPtWY6vIeK5_TUHCGalOo5ZfwKwDiJDhZsu2BgjEWsCH-U4iUvRjbu8TXYN8VkNlBbnY9hGnUfV28j69D5g=s4800-w1200" alt="Lochmaben Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrBnauIcLsgcr1Fvxz2m3IHc464oTA0L7NaXD3plkGDSx6NslxJuPu0f2KifMOAXM4Jf7QBKGD29tLnRTAutTt92xawhgJIzgg2V_h9VfsOvRHa3-6kw-bFPBiMpjg3JQLSqOPj9_N41ws=s4800-w1200" alt="Lochmaben Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lochmaben%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

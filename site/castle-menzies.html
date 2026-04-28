@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsZRHRfe2azVVMf6Tw04XHY6-0Euv84eZdAPRSnMnZciByq5bujQFtoyM9tPtI68oJysN4I_CsD7DBLvjCIVUeXORRCVJk_H_PAqIQZ9HrSsYekmwsBT-1nD8AA0mfPK1aLUnrHZQBOyLgYA=s4800-w1200" data-castle-name-g="Castle Menzies">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsZRHRfe2azVVMf6Tw04XHY6-0Euv84eZdAPRSnMnZciByq5bujQFtoyM9tPtI68oJysN4I_CsD7DBLvjCIVUeXORRCVJk_H_PAqIQZ9HrSsYekmwsBT-1nD8AA0mfPK1aLUnrHZQBOyLgYA=s4800-w1200" data-castle-name-g="Castle Menzies" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsZRHRfe2azVVMf6Tw04XHY6-0Euv84eZdAPRSnMnZciByq5bujQFtoyM9tPtI68oJysN4I_CsD7DBLvjCIVUeXORRCVJk_H_PAqIQZ9HrSsYekmwsBT-1nD8AA0mfPK1aLUnrHZQBOyLgYA=s4800-w1200" alt="Castle Menzies" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGb_qR5lnDfoY_iTvlwL0MZJseyG7LK0xrkRg9ECZOdWuKO3Bxsz70ZDbk9r-rtC1teQr5V287leLgPtLH3hTtWT86UOOdyvNQ=s4800-w891" alt="Castle Menzies photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXMbrZTOpMDTZq4Jk6Q5vAxvOTdwpxmtnqQic9Tc17gMR5LzWgAGVV4Qc_Mt9WSxcnckpO0HkLWqAH2HsHPZAp9QsGW8GmcJ-2NBpRL6t8-MnYhxxQCsSfAPkPF7qh4o9FxFXPfGOg4OI0MwRZAMd0=s4800-w1200" alt="Castle Menzies photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOr1MnwoxLP7RdPoG2CofAVFKoBlnTcVo2X30dWFb5QiQMYMmViOf86pTXoX84GB-8SHoPQWtQR-S0EX7Ep5rkVzTiSYchjSVvMomBBp0O_RDu_khly1v_Nrb1h94KBZngKnLnvQAc8JZs28OoIzct82w=s4800-w1200" alt="Castle Menzies photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOoxcdbV0RMq0r9DNEHJsILBZZtM6_And8ScoW4HokValmgKJghZvPIEFhyPYMKD3SvwYTEksupMs1nQAVVZvJ27YoolVtTus3Bc07vsCcwzchCKz5Ch41OHg9EK5Q4gdYAKOo2oJjUXt3zOw=s4800-w1200" alt="Castle Menzies photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Menzies%20Perth%20and%20Kinross" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

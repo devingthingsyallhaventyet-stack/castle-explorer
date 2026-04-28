@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBUnZIuh-sN8KgwS2nDhjLItbeHSDoYHqCMVSnxYfFeQTzR9NxMt9SY0Gp_jjg1XM0KlQkiOuwYbyNHpR6Li2MHTvOz32wmpbaUw9r2CmBYclfPaLBF2lsHKIKr-R2pxGpH-HcizrJXmLy=s4800-w1200" data-castle-name-g="Repentance Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBUnZIuh-sN8KgwS2nDhjLItbeHSDoYHqCMVSnxYfFeQTzR9NxMt9SY0Gp_jjg1XM0KlQkiOuwYbyNHpR6Li2MHTvOz32wmpbaUw9r2CmBYclfPaLBF2lsHKIKr-R2pxGpH-HcizrJXmLy=s4800-w1200" data-castle-name-g="Repentance Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBUnZIuh-sN8KgwS2nDhjLItbeHSDoYHqCMVSnxYfFeQTzR9NxMt9SY0Gp_jjg1XM0KlQkiOuwYbyNHpR6Li2MHTvOz32wmpbaUw9r2CmBYclfPaLBF2lsHKIKr-R2pxGpH-HcizrJXmLy=s4800-w1200" alt="Repentance Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPr0823DZOphNBlQt7um9GYD8zRgoPSQjZahfAYTb4h8IPzZMkFI2q4qS6ivB5EWhendpkrsUaV49m_F1HUlOQVJjKYCJtMa-ExUiCNXhP0JsjBurvB8lxhR7pAwIPn6gacvufmcRZJKcebbA=s4800-w1200" alt="Repentance Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5MBOvrENinfY4crqNgQ9zRzwnt2UW4z0oYq7Stz5bF2CUCTCsvALpNEtuCjFNW8mrEatcLeVM3vt0VLtwNW_ufNrcuc27pbySvaswTqD8cHW0Dvo5Rb29B5v0ycCrjcaQ9LV5L968WiVE=s4800-w1200" alt="Repentance Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNWno3jmllHMt-2m66jPiLJs2rZDqmmFKoznTLMi3GPe3bfZ30tZ5wMH973CmzjIE4jbkUUyiSS2FTk-Wse5Ij-xJqxjYbUqGZOgb8-c6bo-zQyYG8CzhhkaTKmuCvUgFVFfsmVQP1CffzGjFVx6BD=s4800-w1200" alt="Repentance Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpO91wG3_EjGs8s70wqVbA-D1VqF3x8A6uNKFFGEr1U1YRb42XLw41tkxdd9QGe2eGZLW90KneW5zE_fu31mTw-tI5g-h8uVMibOqq33JHFvfXLC8Zx5-A8HQmuWKZ1-eKTbpibIeFse_GQy4K7uTqgw=s4800-w1200" alt="Repentance Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Repentance%20Tower%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHNJxziNF1qq8p0dHYplsKJ4UlaFCeUo78NU34057FqzlYUI1-4yCwnrdasWci_hJ4mLMRP7_MZGdI69iGdBlpQioLVaWv7VTKWDLVt9HQm7-ZUu6Wn9cu_dm56OM-u0Xxx9PFNAAVV0FUQ6I=s4800-w1200" data-castle-name-g="Doune Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHNJxziNF1qq8p0dHYplsKJ4UlaFCeUo78NU34057FqzlYUI1-4yCwnrdasWci_hJ4mLMRP7_MZGdI69iGdBlpQioLVaWv7VTKWDLVt9HQm7-ZUu6Wn9cu_dm56OM-u0Xxx9PFNAAVV0FUQ6I=s4800-w1200" data-castle-name-g="Doune Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHNJxziNF1qq8p0dHYplsKJ4UlaFCeUo78NU34057FqzlYUI1-4yCwnrdasWci_hJ4mLMRP7_MZGdI69iGdBlpQioLVaWv7VTKWDLVt9HQm7-ZUu6Wn9cu_dm56OM-u0Xxx9PFNAAVV0FUQ6I=s4800-w1200" alt="Doune Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN0oI4hRsk_aTK3T_I46O-CVxqqu2VkPOnwRwUX19AqJJoTCAPuuNJdI6vHaZWYC-CHhehNhcvUQRZ4tWpOA7HaVllcB28s5Kgv9F1Xh7Ik8XEsBOx6TsJi6M72GjkX7Lxb6W8rAPLQsem2iKc=s4800-w1200" alt="Doune Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMp799HOqVXyhNs-rwwMV-yjWM4AeNleG_b0fCOmPPdksZU8J6EgOEkv4wnThA4W-UdKuJSG-0_mzwb1TaKUgz1Cj_iOnzTcpql71Tj-1LbbSzzHsZGvx3EYy7nG6X_x6_wKOylItpW0jObbdk=s4800-w1200" alt="Doune Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8YgIEJaP8CPuwDnlKdBzrtKyV2xbGGXtDEMwgV3sq1PCNP8g7ATQ5YE6MFQ8yAilfIuP7JSMkriumo1-_NiyXL4A7WOsuF3kEJkYHvOgg1t_IVh02Jfucmr2w7jpPaMGC6pQX7yXGWWchtQ=s4800-w1200" alt="Doune Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNxskxsvgq_QwEqIDMGlZwX5qRnhEkAAXfmTw8-H8R3OvL5Db5uZ5MqTgQx71FO1EW_wsNb_7DPajBraVIfod9Uzzd5Je89UxCNvuQq3yu20ypYMhA0IkEitgzJaLyxChQgSVophwq4_lAgJg=s4800-w1200" alt="Doune Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Doune%20Castle%20Stirling" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

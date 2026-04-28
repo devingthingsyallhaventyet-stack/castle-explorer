@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjT3cAbgyMCwpVRjEwYQ5eXjU1I5cqkCkoGBP33UznrrRihIHPVCTnAEGnS4mSOZEcNRUv2a0zUnx5G1nfifbjFm8l1v-cDmr0UbsnxgFx1ByNjHYt_Q-0sjvbf5TPi3ekptcp3ihTVQpLH-E=s4800-w1200" data-castle-name-g="Deer Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjT3cAbgyMCwpVRjEwYQ5eXjU1I5cqkCkoGBP33UznrrRihIHPVCTnAEGnS4mSOZEcNRUv2a0zUnx5G1nfifbjFm8l1v-cDmr0UbsnxgFx1ByNjHYt_Q-0sjvbf5TPi3ekptcp3ihTVQpLH-E=s4800-w1200" data-castle-name-g="Deer Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjT3cAbgyMCwpVRjEwYQ5eXjU1I5cqkCkoGBP33UznrrRihIHPVCTnAEGnS4mSOZEcNRUv2a0zUnx5G1nfifbjFm8l1v-cDmr0UbsnxgFx1ByNjHYt_Q-0sjvbf5TPi3ekptcp3ihTVQpLH-E=s4800-w1200" alt="Deer Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNW4d_K6oyLo2A5SyjjgeqeSRQnR6YfBJQlyg5dIUkT6s4VRsnO7qxxBqXL7dODvp2EvzDnmG48ULj-sG6NWiGkL6RZ1XW8WZaxJxMkB7Txj_0QAWN9ab2OSD2u9zXxmeMw_EfvJFzwoGtwEQc=s4800-w1200" alt="Deer Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOmhuHmjBVRWzhiOf8YVCfaaRdnmcnyJJjUAAqjRCEiNEnjLKdntdnArHoYa2PTn1eKmP7NUjOwvCRRvmJRnMKSkcDeyP7UCTHo0HEkLTl-6-gGT5trTAOioEvHu7PjkpBWL819CrpEwrlhGg=s4800-w1200" alt="Deer Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFpo8qIrUeTMeVdjr-ykR-9YSCAs36P39NH97jOH28aSmtqoAcD1p5gwlaHvJqx1xjNsfTDo0WOHfBSTU65wQ1V5hWa84-3z19Y9oDyOal5HEETKWM3Oon93xY6JoqSzvcX_hGyXBkVaASXUE=s4800-w1200" alt="Deer Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCtNSNVK0Sd-bznFwzERkX2ecGnWx6lCu8qWsngyg5rFdKQXlB6Ybzn03RpQhjjTWuOk01H4FZ52mgXQiEyv5eCe67CHuNi_568Sar0sVZSwkvqjv6hJWkYhKSJIkfxGYdFJGQ_dpQZbdGMA=s4800-w1200" alt="Deer Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Deer%20Abbey%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

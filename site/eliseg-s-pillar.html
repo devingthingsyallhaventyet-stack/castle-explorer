@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxIWm-wLNrhLnxRaJmjbL_2oT7jUqC7bOuIZCbE4HJN-l9jdWhHOBIFKR9xLM_d9Q-1Nq2OM3Jjflm4E6u0go9hNg5b0sXSV5i3t4SogofAbT29i9P8Uds4kfK5w9ILZFCTroDDJUdClUF0Eps1GGQ5A=s4800-w1200" data-castle-name-g="Eliseg&#39;s Pillar">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxIWm-wLNrhLnxRaJmjbL_2oT7jUqC7bOuIZCbE4HJN-l9jdWhHOBIFKR9xLM_d9Q-1Nq2OM3Jjflm4E6u0go9hNg5b0sXSV5i3t4SogofAbT29i9P8Uds4kfK5w9ILZFCTroDDJUdClUF0Eps1GGQ5A=s4800-w1200" data-castle-name-g="Eliseg&#39;s Pillar" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxIWm-wLNrhLnxRaJmjbL_2oT7jUqC7bOuIZCbE4HJN-l9jdWhHOBIFKR9xLM_d9Q-1Nq2OM3Jjflm4E6u0go9hNg5b0sXSV5i3t4SogofAbT29i9P8Uds4kfK5w9ILZFCTroDDJUdClUF0Eps1GGQ5A=s4800-w1200" alt="Eliseg&#39;s Pillar" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMvX4knQGkhtO6_6NAjj7A8QmCgulGkXlvdA8Zusns5o-sclNpksEQcxo9lxHbZut-wXd2BYe8IgckBY-2WX0tygv01vj9SfSbacdSLdr9Z-P_-9qV9yPPDpzBGAVKOH-vkzbBC1rgPHTe6h5k=s4800-w1200" alt="Eliseg&#39;s Pillar photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiw2GTF5hcfr56AdLnhMZreFul17pX8MyHX29nuoYR3autTxAlZ32z-A6hL0nWfNZAgOvSf25jF2JByAyJ9KjDUeHg-YP5RvyjwC9kCMn8O2bKgx6K-mmiq-uuEWc3E7PafqSYcZ1rTvAfpQ=s4800-w1200" alt="Eliseg&#39;s Pillar photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOg0zN0nMyMuylfLinUQCXWYmm-B53LJjtZ9-dGfx2GIGg83ZMlQKXQc-qcU1QL0UgIJcYVDeSpW0Mxwfi56be_IyX90JCm_3cw8-XbRSWzN86B0iYAAGtJjFc6PaX3EY_snFtoTyiVFm5NyA=s4800-w1200" alt="Eliseg&#39;s Pillar photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMchHb9QAwo75KNXCIUPVzIGyxNYQmop_n_2g7ad4fHVQ4HcKQyO4JAmJ615miOcvL18AunsJT9gjbUTrL01TBebx3gxVnt9Xb9TJA3IBsZ0B1drP9yukxCKsqTCi44a1LS1_8-0Yo0mUtyw2YcvmC0TQ=s4800-w1200" alt="Eliseg&#39;s Pillar photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Eliseg&#39;s%20Pillar%20Denbighshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

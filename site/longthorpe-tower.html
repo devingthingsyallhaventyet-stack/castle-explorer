@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgCIPFoxWee4QPhfMLh1tF7ji_z5dT31wnmb58i9DNK1mN3LNsG8I2Nso75eu_dmX3phiblPYMShqycWqyd1m1m6JrUu3jHpjpodw5VUnVbdSixZ2fwO8qXjO_iuinDkpYCSaHkYPkJ75KKiE=s4800-w1200" data-castle-name-g="Longthorpe Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgCIPFoxWee4QPhfMLh1tF7ji_z5dT31wnmb58i9DNK1mN3LNsG8I2Nso75eu_dmX3phiblPYMShqycWqyd1m1m6JrUu3jHpjpodw5VUnVbdSixZ2fwO8qXjO_iuinDkpYCSaHkYPkJ75KKiE=s4800-w1200" data-castle-name-g="Longthorpe Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgCIPFoxWee4QPhfMLh1tF7ji_z5dT31wnmb58i9DNK1mN3LNsG8I2Nso75eu_dmX3phiblPYMShqycWqyd1m1m6JrUu3jHpjpodw5VUnVbdSixZ2fwO8qXjO_iuinDkpYCSaHkYPkJ75KKiE=s4800-w1200" alt="Longthorpe Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrxXhloQ7Ev-zihzjxwQ7vm2FLoJ-Ug52RlmCb40CsJ_u0jjET5yyOQV7w7kJ6MkV_1Yr89SRi-8wYS_ypHnegxQyFtyxDO1slJmdvXjTEpgM9TO6UjXPlamJqnNCp9fdf4hKeHIE_FeTO1w=s4800-w1200" alt="Longthorpe Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN0LbJ4mAYFd2wVsdIsHlrcg0xHkXSX1P_vLmoKiIRWZovnB6VwVfbGRysPB4AGKuEJd_9zHVIsEYNEIEH5f6UyEfMyQJX-Hhy-VxRkSbyiugENReWLCJIVUym-9nWlt_2MuOEfMighhxMw2a8=s4800-w1200" alt="Longthorpe Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpGrzwLe-xn2S15YrUlIAJ0on2cELIBj03j_Z_hKDP_MMz7VRIhfEAhxCH4w3gHxUkQir_bSy1h6TWNA5r940qW8VTmILUu0QdQf5HSxhQgaFx7jN37aQCRjUMgyFD9kTAohofosyOcsNtiw=s4800-w1200" alt="Longthorpe Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJ9xH3UUM8nhEEA7AIhFKBXsXeHpYF452lDH3DpqWzsQ-_g7qTY6Fg_zz5OUAX3BWWcKtnG1qK_LmZw9X1AWjfppjAGCmuPpXoRKutOp_mtClvKYVDpORPAaInnKKQRjK55W44acgUdKA9Jg=s4800-w1200" alt="Longthorpe Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Longthorpe%20Tower%20Cambridgeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

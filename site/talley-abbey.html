@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZObtPzKTfczJ3Y7GsW4jbDGVvviPwk3WT0dXbaubJ1QohA9b6ovd1yPxmx7FQVubp9m53ISYEpoaEM-Uv_DwzHXzBel81cGOsgsHcM_2gZi5j3wbTKjjzqmDQWCz_B0zJqSr3_6jV54QaXv4g=s4800-w1200" data-castle-name-g="Talley Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZObtPzKTfczJ3Y7GsW4jbDGVvviPwk3WT0dXbaubJ1QohA9b6ovd1yPxmx7FQVubp9m53ISYEpoaEM-Uv_DwzHXzBel81cGOsgsHcM_2gZi5j3wbTKjjzqmDQWCz_B0zJqSr3_6jV54QaXv4g=s4800-w1200" data-castle-name-g="Talley Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZObtPzKTfczJ3Y7GsW4jbDGVvviPwk3WT0dXbaubJ1QohA9b6ovd1yPxmx7FQVubp9m53ISYEpoaEM-Uv_DwzHXzBel81cGOsgsHcM_2gZi5j3wbTKjjzqmDQWCz_B0zJqSr3_6jV54QaXv4g=s4800-w1200" alt="Talley Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNxMHYQ7EEGgjku47_hWOm8mpLzqJi4ahxdNudp8JLTz__4WXDihQEeZBoUSDEj54bSXnDmSCYsoKuw_aGVUqIXuLqPnfZCwqbpXzR2oYUQ7Hr_WApuBQe6NRiY8U7lHpQ8JDgs2aOQIiCL98hMprsr9w=s4800-w1200" alt="Talley Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMysrxnh3HvXTe1Q_ymDP27l0_3RJLaP4zArKY3pASGe7L71JsGftcKBLQSArKNLETSmLjdaxxPzsQwlKy5cscXRGW4um2Nz_QSbaVP_XorZr33uu9WBy-p8LwUZ3YFL16gEESXGSAksyOpiA=s4800-w1200" alt="Talley Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMzc59T7MJ0lmvPUxkp2flVZK--yr9dX8V0AxKwfwmrsUaRjL4co4slJ5QIbkMMqpy9ojhCByMIZyjOoyoFAUdRw639YYGnoQ0sgvOFYTZQoVArHqouaSafWzl6-Mrv3TS7bBEm06wMZJpVg=s4800-w1200" alt="Talley Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNMvHoXkm4siBUC6QBCtn8EJpV73h8AdyeqfnbY6lEq20X5tDl1VsBd5f-DTeKl1orJZ4IeijEhOLKNbcqmtnVuVWdXU7iHEvh_QEeqyqQY1jvGbvn0Kdcj138JU9Z7PdCQDyzCia5FsIpY9ow=s4800-w1200" alt="Talley Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Talley%20Abbey%20Carmarthenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

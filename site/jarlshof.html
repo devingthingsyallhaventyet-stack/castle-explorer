@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF-V01PDQ_1zppYpVojUo8Sv7HQycnB8KXAlkNp2kl-ugq7W1Yk2qqi5uMmnyV9sr4m8rBWqXiJU-0GKPc-zdMP61zeOddocTw=s4800-w768" data-castle-name-g="Jarlshof">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF-V01PDQ_1zppYpVojUo8Sv7HQycnB8KXAlkNp2kl-ugq7W1Yk2qqi5uMmnyV9sr4m8rBWqXiJU-0GKPc-zdMP61zeOddocTw=s4800-w768" data-castle-name-g="Jarlshof" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqF-V01PDQ_1zppYpVojUo8Sv7HQycnB8KXAlkNp2kl-ugq7W1Yk2qqi5uMmnyV9sr4m8rBWqXiJU-0GKPc-zdMP61zeOddocTw=s4800-w768" alt="Jarlshof" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN7BydybafmKCSZ54QQTIUo9VW5vYRmm9kQiU8O3VoMOG-tJyADeSyRH9-rztRm2Vql9RQsQvgFYnb-rsq_Y3vwnyjgOgheSwYXwW6bBcOUnLY8HvOw-RbW-uTxoTSdCQ_L0MZ4lectf8vu57wz1FPc7w=s4800-w1200" alt="Jarlshof photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFWVFadUWcQDYpoUpro3iudxifmzPwo4zXbeCl9sP8dNriCvpefCYe3QQM0DpXY0AuEnJ5eUNhMzCWLwV_Oe4QlLqozGN650v8bv0JQDz8zfXiZH1_g_hDjUWXEF2R5KypdVZaQVRjxFZS0DeJMVKFaA=s4800-w1200" alt="Jarlshof photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7Fq45HFFBu52z6HmBVuL5HNDkfJH4NgzIoJQSsANeV9nRS0Y8nIeH4R77UJnDcLJA2JeIS5LnxK745Oj9f7PvUvtYIypH0a01daSpxgK27AlvMr6Mng3koS58OundeyvNUALroOO0z0crnwE1tttijQ=s4800-w1200" alt="Jarlshof photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQnNdce0gyX4ba40CCFR0GNxpI0CXX9Gp3soo2_FBnD4dr0wVr9TLTkiF04OoEsavKZkJyGuy7yiXaF2X6LehPN_cI5sg5uzn--yEihkaLXVk_HuXtkREsesmJqC5bSuVp4PSeIP5dfk4EF_tSlLnxdg=s4800-w1200" alt="Jarlshof photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Jarlshof%20Shetland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

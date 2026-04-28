@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNU1575Z2sxrGI4GYGWP96GGb5Y2QWWUY8dryDUJrgbw2gMLd4t-P7_p8vxrFuvhwC55tY53_uQ_asFAFIfYK5d7TYj2fhPSNy3ZMY-5fQOEWIC43JeRE4XM18yH-fMWMzp7EeL6Kkay2OE=s4800-w1200" data-castle-name-g="Eynsford Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNU1575Z2sxrGI4GYGWP96GGb5Y2QWWUY8dryDUJrgbw2gMLd4t-P7_p8vxrFuvhwC55tY53_uQ_asFAFIfYK5d7TYj2fhPSNy3ZMY-5fQOEWIC43JeRE4XM18yH-fMWMzp7EeL6Kkay2OE=s4800-w1200" data-castle-name-g="Eynsford Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNU1575Z2sxrGI4GYGWP96GGb5Y2QWWUY8dryDUJrgbw2gMLd4t-P7_p8vxrFuvhwC55tY53_uQ_asFAFIfYK5d7TYj2fhPSNy3ZMY-5fQOEWIC43JeRE4XM18yH-fMWMzp7EeL6Kkay2OE=s4800-w1200" alt="Eynsford Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtdHlbdLWKDjtA21Ih3Q1tO0T-_3-KkoN19m-LNpx9jJavnKXt_32C1B86iY7kEcmbrngEcIp6qe8G_XBr9zx-HeTT84R0hsYsZbTF90C2iEqV1iraYsySTUb-rm9qTZhEZsqxlMMw4svh=s4800-w1200" alt="Eynsford Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOmL2SnSFWf33cUp9hz3bQT67YyUvNSSNkQGxuK5-hRYtH_HFo5JQl3M56VSch1_08-T0bVCSY5Qybz7HjefAJ0SA0YMDp3QIsGZv-JxLtTwRRSzM_LuEubQU0BW4jfLPZP8H3FBXBXAhuLaEY=s4800-w1200" alt="Eynsford Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMb3nRsmYC904pmKYviHaL-7tHlux6U0V8YcNjLbtkoyF0JWcRBvnGntuDmif1tNyofHMuHjJE_mNbKYp-D1oiCYmgSPTfQBek3DCQTM2Ydyn64tW9Dw_E8hJrbrNr-oehNGDGlkFTUoDibBSk=s4800-w1200" alt="Eynsford Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVTB6jfgn4UEsiIntKFTP06swLWQmZ7Mpu8niEqlRW0Zby-CSCfYnv0XczE8VQ42ctvdhCLTfMxL_oKJCcEv1XjeVDRd9iYt4GoBoxcAIycqs0BkomZTxT1WVKjx2DoX_bgnNegxwVI83NI9g=s4800-w1200" alt="Eynsford Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Eynsford%20Castle%20Kent" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

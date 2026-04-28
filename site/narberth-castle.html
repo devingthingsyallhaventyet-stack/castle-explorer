@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUymCe2JnibTXIrTZd_0t2fB_8jjiEdAE9WkeZKOKV7WVix1nzRsa9iDkAQCddO6K_gtRoA9N3LXw3DGCy3Myis9MlKs91Asr0HRzOwkr28pEli_0a9dZ0UWkkjURfy1WNkCLk1ucZAJ_JNg=s4800-w1200" data-castle-name-g="Narberth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUymCe2JnibTXIrTZd_0t2fB_8jjiEdAE9WkeZKOKV7WVix1nzRsa9iDkAQCddO6K_gtRoA9N3LXw3DGCy3Myis9MlKs91Asr0HRzOwkr28pEli_0a9dZ0UWkkjURfy1WNkCLk1ucZAJ_JNg=s4800-w1200" data-castle-name-g="Narberth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUymCe2JnibTXIrTZd_0t2fB_8jjiEdAE9WkeZKOKV7WVix1nzRsa9iDkAQCddO6K_gtRoA9N3LXw3DGCy3Myis9MlKs91Asr0HRzOwkr28pEli_0a9dZ0UWkkjURfy1WNkCLk1ucZAJ_JNg=s4800-w1200" alt="Narberth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVeO_W5aSvpuU_xFnmY5C63ryTziwCBdchmWc3k5No6x5WY95Ol36DPIWTke2kcwhMDC95gUjcauX3ocy9txaOMkoO1X42eU9Q5re2kc38-OXCIWVV4Otfw76RhA3XN9yNBYLqKeShpKnxWg=s4800-w1200" alt="Narberth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMjN9Xl_XW_HIy2y4AHfpDxpdGnkeh_xw7YLE3tPdZ7vRTIXa8P9orbD2pGaVawD6ruMkklHBfGrXh9V-Un7XCalDmnZAzw-erhO9cPTFEzlMtZ6IhDSjfpqXQjRP5CmozLx9BNPnLImQu92w=s4800-w1200" alt="Narberth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8pALsare-aMuuXAQ9zYnIBa1x1_yoYvKamzAtH7CdryZESWSw-IieAPf407ekF-bcSMG3ri0o8wLavtd2tqfWTOoyynuTjYTUQDVNfMvdHyhpWDm7F7cVdzKpbhluy49_ZKtJkjpfUgxPTfg=s4800-w1200" alt="Narberth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPH1fwu3-zmJAmsFWAgTYsYltHYy3sbkQ_t1OCqSg3e4uOUoBlM2oCEk5WpcLqD8qtIJTzuLg6rY1ML5cmNjklA3Esgn5mJ1AAVVESYdGz211nJ_ac0JNj2wmDn_lGaOjcpbrayckzjJA-a4Q=s4800-w1200" alt="Narberth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Narberth%20Castle%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

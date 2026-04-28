@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlnQpdAy1r8Sos9PLYpCuELQuwVFXl_BeNR4JgP_3BtZZbSNg2-U_LxgvVqcSuuy9opoJdO9CuzGXbr5rZimSvgyuSzIjnoise7jC9RKdJGNLTzwzclaWO1lLxBahtrCwzFIybho_WCsP_s6w=s4800-w1200" data-castle-name-g="Highclere Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlnQpdAy1r8Sos9PLYpCuELQuwVFXl_BeNR4JgP_3BtZZbSNg2-U_LxgvVqcSuuy9opoJdO9CuzGXbr5rZimSvgyuSzIjnoise7jC9RKdJGNLTzwzclaWO1lLxBahtrCwzFIybho_WCsP_s6w=s4800-w1200" data-castle-name-g="Highclere Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlnQpdAy1r8Sos9PLYpCuELQuwVFXl_BeNR4JgP_3BtZZbSNg2-U_LxgvVqcSuuy9opoJdO9CuzGXbr5rZimSvgyuSzIjnoise7jC9RKdJGNLTzwzclaWO1lLxBahtrCwzFIybho_WCsP_s6w=s4800-w1200" alt="Highclere Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWRK8ffO01xdx-ZSogG4aKKi_2QPjr5EdvHypmdvP-KwCEslTyyjKEstY1vzB_uovDOq-K2fpTk14BTRTS05HiuRskzivCn0El26-wx5IAC5UDSvamPOa6QwEgtZJgVy_2O2IkyNUhn_EfnA=s4800-w1200" alt="Highclere Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIaJySLUqk_KKOL367JcYIMT75OW9LDhdsF0KUUvnYEH7N-1D43SzE2FQHK1p-mMtHL5dOlJsCuyx2JpmS1qVn8dw0UXeRUvXAtERzLUF7FnngzcMN5RG0VqRX8PTAG9ghAPD-6p8O3iAzSjQ=s4800-w1200" alt="Highclere Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNAdwib-58xGTi65wdeinVjNOkFQgnq7cmS7Qxjfms2sIoZuy776HPSUAkFrbAJWRL7JlsXmOqnDe_GExxvI4BMVAdaIJNb0EucXdOl8pIX2ZwKjRaFkHwbS7CtVoGkziZNgUWJJA86t7Ys2Mb2ihMUHA=s4800-w1200" alt="Highclere Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnXdLfyDxtRnGFYLksP361_jqQuzWQuhf2YKn8ejani90t4vjbOqQobUU1oE9ZNIpruIqWExAjo-5yWKkjk70YVhOSiE27i7XLL0tQLCzzpRBh3VpHKrUZiN1Z8_PHPM2GO3L3dCMYGA0lag=s4800-w1200" alt="Highclere Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Highclere%20Castle%20Hampshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

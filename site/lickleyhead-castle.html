@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFnsVyrDPVX52t5_j6NgmIIgGJJX9XwffyrjwvdyDXff3Rv4Y89n1UrxO9vAZJ8y9rb5t2-4mK5m7HPOLpwIul31qG60MFJsQ=s4800-w1200" data-castle-name-g="Lickleyhead Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFnsVyrDPVX52t5_j6NgmIIgGJJX9XwffyrjwvdyDXff3Rv4Y89n1UrxO9vAZJ8y9rb5t2-4mK5m7HPOLpwIul31qG60MFJsQ=s4800-w1200" data-castle-name-g="Lickleyhead Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFnsVyrDPVX52t5_j6NgmIIgGJJX9XwffyrjwvdyDXff3Rv4Y89n1UrxO9vAZJ8y9rb5t2-4mK5m7HPOLpwIul31qG60MFJsQ=s4800-w1200" alt="Lickleyhead Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_XH0nSGAEe5WPluWHIABsNLtCDCNZfyBxeBY8NjgMM33A0BNeKrUU-7yiwzug5o2OlyALHr4zO_Xjeen2nHk6G-AIlTIV69ikHSW8i5UR2B-SpfMMMIH8STFNZO88CmzGWxLAzEqEO_tM76eKXsDG=s4800-w1200" alt="Lickleyhead Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqGsnW1E9i7XMUZPIeKElVxj-4J3OrDMPhZEnTI3zjK0j8YIiLBTXgtddm__bsFmbiNwpNU4awqvjxN1By9G3LWOLKANI7mf-g=s4800-w1200" alt="Lickleyhead Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGOWpY99bIYXY3LuzZRzfgebZWCcfJMYNBOrbxtPkjIb1MiDk5XXZvpoSrn5rbAVAGv5rGnCJetrKj6dvrqgpHaA25LUpL-FHa9nFfbztU3myGWAc6NRxKn2b8N1Hyy-3gjo0u-ipJE3L0_qB2W2nl=s4800-w1200" alt="Lickleyhead Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOZbKlJlgwOSGJtNLJmS4yHx4y6kUSC55inBz_ntas5NYNexaku7fgrxemlYBvYaQBQHJ-2C9UI3QUMYboWPbjgMb1x2KScllq_QH8vVEBvUBDuqGi5oN264MmspF9JeFOh30Bja0tOm8FZYhVpfUDn=s4800-w1200" alt="Lickleyhead Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lickleyhead%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJ0Mf44H-vDKNpWNOwUhQN3k6uyojFACMkGoXLorUD5WSLesacNwjnRZXXYZl5aGN71tyozfQw28n85PN0FcEQ-ERJ6Q8QYa0c9OaOh5lsY0KXW7lKwgXAkUE2B8dG2Ex7RfVjP2lBk6G4t2E=s4800-w1200" data-castle-name-g="Bective Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJ0Mf44H-vDKNpWNOwUhQN3k6uyojFACMkGoXLorUD5WSLesacNwjnRZXXYZl5aGN71tyozfQw28n85PN0FcEQ-ERJ6Q8QYa0c9OaOh5lsY0KXW7lKwgXAkUE2B8dG2Ex7RfVjP2lBk6G4t2E=s4800-w1200" data-castle-name-g="Bective Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJ0Mf44H-vDKNpWNOwUhQN3k6uyojFACMkGoXLorUD5WSLesacNwjnRZXXYZl5aGN71tyozfQw28n85PN0FcEQ-ERJ6Q8QYa0c9OaOh5lsY0KXW7lKwgXAkUE2B8dG2Ex7RfVjP2lBk6G4t2E=s4800-w1200" alt="Bective Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO3RNi78IyDKNR8t-d3z9xg6Ty1LFBBCuPbT9p89MdufkMrUFU7cNgEU9tr1onRdGPEZMotjZaMT6bViDKmgwqDSS6m1hGcdMXLt4zOX4aHKBY0DhVqE7HGR7qHO3QHxEkzvemH9H_GEmUI=s4800-w1200" alt="Bective Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOxQchyxnOuuyy8uSRU7e50J6daNsNa4jW__fak95u54ORyJcqxU5WideYmqVe9fyQxoTuZ7O5MtXxV9pAjuu9OwugBBm0jlJCUioAOkR-aUiOKuChtdAao_kCGOBiZMpElECuJJSejcIdJDw=s4800-w800" alt="Bective Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdHvcFl8nYs7e3nXpJaGI-oeinqrdttL6vCrTvi4O8bxdZKkTQITHaixpg8uTTG93Cey2jkuSm-ASxWOzyCYog6blEBSCXM3s-WcTbrBpknvQpwXY_7dabnES-bNHIFd2FdmGQ9I5I59I9WMlJA7Z5OQ=s4800-w1200" alt="Bective Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9cgv-aGX8Zkj_aIb0PzYgsNetbZf3YEXpGeEsdwgft1KehlO7_f89Etlmoy9dcBdalqsZxBJ_o7fAT-QX931fzWNQrTdiKOgsSKtm1g8ofhuqs92oXKuTZynZO4IZq810aKM3aA92LDRe39Y=s4800-w1200" alt="Bective Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bective%20Abbey%20County%20Meath" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

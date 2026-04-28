@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6UFe2552L5cxJD-f-Zhzl9LDxZz7sFa_uj6rZSdWYDIfo5QyHP7av22Nu_8-WwLmPOHHx9dPn_vp21MXK0gdkdEyVc1-uSagI6xKrZFhky43_kGLFI0b4s8QmQTyVF2VD29x31gA1qw58yTg=s4800-w1200" data-castle-name-g="Howden Minster">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6UFe2552L5cxJD-f-Zhzl9LDxZz7sFa_uj6rZSdWYDIfo5QyHP7av22Nu_8-WwLmPOHHx9dPn_vp21MXK0gdkdEyVc1-uSagI6xKrZFhky43_kGLFI0b4s8QmQTyVF2VD29x31gA1qw58yTg=s4800-w1200" data-castle-name-g="Howden Minster" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP6UFe2552L5cxJD-f-Zhzl9LDxZz7sFa_uj6rZSdWYDIfo5QyHP7av22Nu_8-WwLmPOHHx9dPn_vp21MXK0gdkdEyVc1-uSagI6xKrZFhky43_kGLFI0b4s8QmQTyVF2VD29x31gA1qw58yTg=s4800-w1200" alt="Howden Minster" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCMPd6-JfeSO5Ie7Gy-oUZ7K5yufr1P7W3CanANxhFBOXRTf5ANRzlVG77C6MAdPm4aii1pPE20ES3sQs1VpXwCtrvmf1dzZd_Qs-NMbbp5kHytG0ZaMlTO9axfJ9-psoUN__0oFz79MM4hI3hivWu=s4800-w1200" alt="Howden Minster photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMk1UL-hy3nTheAJWC7ndasUWQmDDp2CvHJ7opRnvgG0vsHxIQyvHh32IOZLd_cJAOEf5d9_cXcEQxOC2E_fWsM_YnVkHu9BE4Q57kEb62a40QgqMbSxyPHDusvV3PuBaRKsyvhJDuJCZ6AJlw=s4800-w1200" alt="Howden Minster photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKvVy-4EmwX-dB3NRfVLUK5uqic1AVn4Hx0xvbyqDzQkjKXVo4ubk0Iq2HLN4k0-KzZnx_CAspLqr4OyWJDygKuFA9ylorQtri0pfpavXicVRaR8N-H9Dfh1TQHnkT0WJzAUySjfDD9JruvA=s4800-w1200" alt="Howden Minster photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyMJ36IYttLGjmT39aakjcfg-o0Eb2vPOem6FNNsT0_D7mmVzz9VU8ZbEBZikTFQaDVOIpvBQaVrbO00jqJJfUT_910pcH6rSCMCTnCkiyeaRKutNlUHjCYxnfU7Igw3knbeVm8l3efyTyCQ=s4800-w1200" alt="Howden Minster photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Howden%20Minster%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

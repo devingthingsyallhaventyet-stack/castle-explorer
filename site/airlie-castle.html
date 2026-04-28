@@ -295,9 +295,9 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkgkXRQPi8Jr7vVX_8axO4PUlI-ezXYAu9Fv2xrseEE7eBkJ4RMvy3wVtQffzRPxooTpbqsh_8wtWYurItHBaqLpdAVLXplBR-ehAlVOXlpcASI8dfzQdr_Di5Q9wlsY4-WivdHJRcri0tsQ=s4800-w915" data-castle-name-g="Airlie Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkgkXRQPi8Jr7vVX_8axO4PUlI-ezXYAu9Fv2xrseEE7eBkJ4RMvy3wVtQffzRPxooTpbqsh_8wtWYurItHBaqLpdAVLXplBR-ehAlVOXlpcASI8dfzQdr_Di5Q9wlsY4-WivdHJRcri0tsQ=s4800-w915" data-castle-name-g="Airlie Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkgkXRQPi8Jr7vVX_8axO4PUlI-ezXYAu9Fv2xrseEE7eBkJ4RMvy3wVtQffzRPxooTpbqsh_8wtWYurItHBaqLpdAVLXplBR-ehAlVOXlpcASI8dfzQdr_Di5Q9wlsY4-WivdHJRcri0tsQ=s4800-w915" alt="Airlie Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_W4QE5jYZoWcD-NwyQoEkAMX_nkYhMvEK1Zq8VscV2BKGUvvbOOENaDfTcRD2HY_j9I6G5CuDhs_itoAmQMtO9nz0LkZES4_W6MlrETCb124geKjCeGtGxUpA_Qi-_apeMFSFIq3RKp94828=s4800-w847" alt="Airlie Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide2"></div>
 <div class="g-side" id="gSide3"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

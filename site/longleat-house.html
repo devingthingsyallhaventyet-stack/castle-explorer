@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYHvGHlvTGRnoZlUoPnohFzrTUvCL4cpUQsW8gygh3vCPh4pl7TE6Qz-5i-wrIkXANh3vMBTvWQ24DNT_MuHsXOuY1nUl1yGJt5L9NXH5U2tD5nVm4ht1tNVQXBlsiAcv4Z3iGWeerETMzZ3d8ZcBjmg=s4800-w1200" data-castle-name-g="Longleat House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYHvGHlvTGRnoZlUoPnohFzrTUvCL4cpUQsW8gygh3vCPh4pl7TE6Qz-5i-wrIkXANh3vMBTvWQ24DNT_MuHsXOuY1nUl1yGJt5L9NXH5U2tD5nVm4ht1tNVQXBlsiAcv4Z3iGWeerETMzZ3d8ZcBjmg=s4800-w1200" data-castle-name-g="Longleat House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYHvGHlvTGRnoZlUoPnohFzrTUvCL4cpUQsW8gygh3vCPh4pl7TE6Qz-5i-wrIkXANh3vMBTvWQ24DNT_MuHsXOuY1nUl1yGJt5L9NXH5U2tD5nVm4ht1tNVQXBlsiAcv4Z3iGWeerETMzZ3d8ZcBjmg=s4800-w1200" alt="Longleat House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvPVUW6aqVjBhpeBlTksCrtkO1hg4zF1YxUo7WmYP1zV_3-Hvl6FM5YvuX95vuUcSH6OOnq9XbRTRF_af5DD6y9sxrFdfxG2iKjoLlTOzjcR3pdhj37bX3xI0DE0Jhh72l0M3KoLrkuN7cVA=s4800-w1200" alt="Longleat House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMG_CwKE3UL5fo-eNt8bMhV_aRGLdxrLXjueqGUjkRROYnFoJBjlQR40cNkc8wBrhvlq-4ruMGhx1FbegnBc6ur8uc-jraASSv0Zxg6cXa4pfjC1lDiBUOjI-y9GmOGFbwhT9cDdhYcmg8oQ=s4800-w1200" alt="Longleat House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOaN4wqLDCAyErc6oB-atNvWC4WWxIjkEmRGpaKtdkb9NL2m9FMI1bKLDNAIHXm2Z8tKL3jvBKkOCxZ28SbIZmC6wRKCtD4PzBzdYF4nJBzvOwfnjTUBuKoh1FLO844WhZZhRsHJfbVaHrIQg=s4800-w1200" alt="Longleat House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeYayYcc5Uh15FpxKbgxN4tb-MvIbZEOoSmMZfxFISNl8zJo0QzNY18By0p3IQJYIvUG0LEfIq_TowiHQgnhfMYIFbIa800IXzIHhfWllhA383NhTWCR1sNTHWCmsy6ZIc5EqnV4CBfM69X24=s4800-w1200" alt="Longleat House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Longleat%20House%20Wiltshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

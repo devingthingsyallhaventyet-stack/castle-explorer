@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvccSANZSQtGP7nG09IIL2D2Fd5U0KP0PwmCHwlOQYXPK3bScdDTz0GXPRAC_7a4yNiCgC9KjwT9apO8ZutyczE4xiCUJ5FcPaUgnBI4qZ_S4ECRCN6GZVbjyWZ1Z_gJ24suGbV8GFaLTE0CQ=s4800-w1200" data-castle-name-g="Waltham Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvccSANZSQtGP7nG09IIL2D2Fd5U0KP0PwmCHwlOQYXPK3bScdDTz0GXPRAC_7a4yNiCgC9KjwT9apO8ZutyczE4xiCUJ5FcPaUgnBI4qZ_S4ECRCN6GZVbjyWZ1Z_gJ24suGbV8GFaLTE0CQ=s4800-w1200" data-castle-name-g="Waltham Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvccSANZSQtGP7nG09IIL2D2Fd5U0KP0PwmCHwlOQYXPK3bScdDTz0GXPRAC_7a4yNiCgC9KjwT9apO8ZutyczE4xiCUJ5FcPaUgnBI4qZ_S4ECRCN6GZVbjyWZ1Z_gJ24suGbV8GFaLTE0CQ=s4800-w1200" alt="Waltham Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPY931tBlRrnPeE3NrraCsal2I-D1yLEKEDgd1IyqzLJeankMKEdg7znylzZqa73iRfKm6_mwDKJtqoe8EM1z3UpMNllD2MblnsQS7EPqGLq2LqbwWp-lBeYvStoSRoU3Jqad6bFquO99wZ=s4800-w1200" alt="Waltham Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8lUxKWprFbQ5fs4wT12mZKm90lltgBJ9CBHe32K71nQEwnBBYbudQLRjD-zN8wOvDFpZ-BAfapyhckk7NMa4AtlGmwkWS9ywOTQkIB3F3pZUIMnuEuShC1P9BDlBnih6xv-jQTO8_5GIYsw=s4800-w1200" alt="Waltham Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQYYwChDTRBR5SObxYG97S_Bu2PYCwjjkk_YBYvZrqDc1Pl1foEfd8tr7z0jBui06P1A1S4kDCgfNuQz77A5O6EJ0TR7VLIzbPuTTHxFi-jEQv2s2rYuxCoDCsxEFnoVyK54S8HLzU6HMSwg=s4800-w1200" alt="Waltham Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMc8fmCFuQ5NdKO-7_R1wc1toY01EGDfDncfKU-BxTqfQ7OJcfeAPb8QwmxTCxWG8Go_eEvdklI6ALOiuqq5e_Z9pQ2jffWDMkLArW7ffG1aeMXt5-tXV6BpgttmIIMXIZ507Yp6GaevoZRlQ=s4800-w1200" alt="Waltham Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Waltham%20Abbey%20Essex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

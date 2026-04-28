@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtPQpewUC4n1ozxdpLa75YtysEaqpTq9_bTjfOJjrm2D7Ds2hmrcbe2SvEQ4A41Hoeq2k75pgpC1XxtTLtgXktS43WhBoTT5dRqG_zvAFPceLCF5OfytBReHBGy69oqaFssgp2ZPYybM6OfB0=s4800-w1200" data-castle-name-g="Blaenavon Ironworks">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtPQpewUC4n1ozxdpLa75YtysEaqpTq9_bTjfOJjrm2D7Ds2hmrcbe2SvEQ4A41Hoeq2k75pgpC1XxtTLtgXktS43WhBoTT5dRqG_zvAFPceLCF5OfytBReHBGy69oqaFssgp2ZPYybM6OfB0=s4800-w1200" data-castle-name-g="Blaenavon Ironworks" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtPQpewUC4n1ozxdpLa75YtysEaqpTq9_bTjfOJjrm2D7Ds2hmrcbe2SvEQ4A41Hoeq2k75pgpC1XxtTLtgXktS43WhBoTT5dRqG_zvAFPceLCF5OfytBReHBGy69oqaFssgp2ZPYybM6OfB0=s4800-w1200" alt="Blaenavon Ironworks" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBaHD8OUuTXGa4DImNHz6Km9tCaQSnPPpibtcOsB1MvWoKO0aTrQ7bL5twIJRbyBu479SEsoue7_WQhxecKs8e7t6bZPfp5onrpLHBGCzBlzZ44sV_uNctcn3OnSFxOGXF-72zbzDJ3w_rzw=s4800-w1200" alt="Blaenavon Ironworks photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZORH1aQ_p5EdHnwUI_L_1DAindBt6enaBW8SQ6rThmUwvj9JnpgUMOgPZEPjqfOtQJdvO91B_QHkZWTF7I4KlpP0EbhYChsaPgu_Cl5mx8wMxVXEgdQrI-HvJrU7HwfeY8U1DJ5hmtAwu4SuA=s4800-w1200" alt="Blaenavon Ironworks photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnqocqavyWb4ZWETy7f8nQkKSTS192Vn5bPyg9coNaQ9WVzhi1tf0ibuC_6jecscCDXvF200VmGxAqdp9psmK20kHq9Wq4YY39ZFoYVquaLX0GZikubIIobawnfkWplYugR5htWCRmj5g_KbP_JMXrew=s4800-w1200" alt="Blaenavon Ironworks photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZORAVvy4qepFrFobCgdrTKILnsVggE_TxNERllok79H_Bf-KgE3QuXDUeph2HXgnV2eLQ-rVkCaVdc5YVzS0xYo17V5NtyG4Sgff0nagr6izVi3k9ZPbjbrkzSwcuLeYrTwedo6VITWU77pmw=s4800-w1200" alt="Blaenavon Ironworks photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Blaenavon%20Ironworks%20Torfaen" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

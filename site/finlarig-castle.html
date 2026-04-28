@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrmlJZbI6vHD1uzWlGwuFgUBpVwmMehE5yvvjge5wuAXdd5DGG0JjqbHdCYIh7ofhnzdNpbuf1CcgrfT6L5G83j_jbkAR21v1C7X-TpDsK1KafU4F5l8jXu-DACUNQaH4E6rvjjh8UywgqqRU=s4800-w1200" data-castle-name-g="Finlarig Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrmlJZbI6vHD1uzWlGwuFgUBpVwmMehE5yvvjge5wuAXdd5DGG0JjqbHdCYIh7ofhnzdNpbuf1CcgrfT6L5G83j_jbkAR21v1C7X-TpDsK1KafU4F5l8jXu-DACUNQaH4E6rvjjh8UywgqqRU=s4800-w1200" data-castle-name-g="Finlarig Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrmlJZbI6vHD1uzWlGwuFgUBpVwmMehE5yvvjge5wuAXdd5DGG0JjqbHdCYIh7ofhnzdNpbuf1CcgrfT6L5G83j_jbkAR21v1C7X-TpDsK1KafU4F5l8jXu-DACUNQaH4E6rvjjh8UywgqqRU=s4800-w1200" alt="Finlarig Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN90xW8Aa_Q1MGqLYkmRARgt6dxUFH69pMRjNsQEjGXGEEIJKAT2cxLsVqUMPWroUjg6f9fu_r2Vu7Hv-HzrXULbYiHxc_ztdYi8rMtzGVWRISzPy-UCmxE3O3IO1E7UPKW4Jq5Z7KrFqvV_A=s4800-w1200" alt="Finlarig Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNut10hnhIWjwgP1TWuHNaDom0OjvX2z_6omWI5Cd2ANgPHeUF2AbSdO5TgyXkb2MRJnN_NSkLgO-4lnMpPzG_xFuFJ2skQaxa0l9wjKm0sp2Z3G0PAMCZRguYvYYdwMEwF-yzhZ6mADXFyLudpjTIyJg=s4800-w1200" alt="Finlarig Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7_166wm01gFpYDIUGtTuK-oisK5m6Mk-EQTwrkeB2fugKIJiHlbONbU-4umeWIk3ANpdjRvaGYF39IrLtVAg3YbiwAsoq4BxyYxXt3R28NFF61THQ939kuaKMA-_1bdCB97eki9kSsu41Dw=s4800-w1200" alt="Finlarig Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgl9ooCPEFZ1QnbMiHfjE-dRuxN8WYoiu7lwNp1Lklf60FUYqzPG3mfMwV6X2qvutSMdmW5aVx--kOjTCG8anZsNds9XFap2LyQLGnKTwfKklwuhSSU2DEr_vCVeXjHvVHlcbH-y4mutthyRY=s4800-w1200" alt="Finlarig Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Finlarig%20Castle%20Perthshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

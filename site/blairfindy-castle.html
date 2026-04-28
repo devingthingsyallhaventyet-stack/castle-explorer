@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOY73OVdBmumT7EmUsdbanFO87BrqlIf-HpSUPsEkVA5ng0LRjeOCasJVAic_0iS1iQSSeWgnerXPo6Ddrb9z9ZAUO44-3lYWu8erZup5anohs4ike0vuEm2AyxM32tuwgfol4nH9JhgAYmVGw=s4800-w1200" data-castle-name-g="Blairfindy Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOY73OVdBmumT7EmUsdbanFO87BrqlIf-HpSUPsEkVA5ng0LRjeOCasJVAic_0iS1iQSSeWgnerXPo6Ddrb9z9ZAUO44-3lYWu8erZup5anohs4ike0vuEm2AyxM32tuwgfol4nH9JhgAYmVGw=s4800-w1200" data-castle-name-g="Blairfindy Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOY73OVdBmumT7EmUsdbanFO87BrqlIf-HpSUPsEkVA5ng0LRjeOCasJVAic_0iS1iQSSeWgnerXPo6Ddrb9z9ZAUO44-3lYWu8erZup5anohs4ike0vuEm2AyxM32tuwgfol4nH9JhgAYmVGw=s4800-w1200" alt="Blairfindy Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdAJHo6fSdh0ZmKs8vwoyC1GMJk08QMdMQGxNUOQVMFpdx0NGBcvYJYFByE9sYT0DD2xZhDx3SMRNs8dwmYtjydpR4-uL1qFqhx6HOYgiTFKi_HZsHeqwh4xqzITAOg3TlHCqU_bGKyV4de6k=s4800-w1200" alt="Blairfindy Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOcVrZy3GDhYoDDRAwYN_7Qs5fXT1UFSpRpNu2xYE7eSPb0gFZSHGQqjPRt3d4TMNCP1NEKPrvmrR_Ggazb0pjJxYB7NYvnqN_0oJA4QIinXcuGq98QzB1OnCJhTPhF_D1-JzM4Mf2vV9bQZQ=s4800-w1200" alt="Blairfindy Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMbBtTwgkY2cbxWLyfSJZ1qb600r5k0Pek3DhMvEUXSrnb9Ir9Z58flmchV1acRRlNLRWUhFM61ZcRfjSMLZNMBurT7y3LdiSoDzvqaHdIYpfIpKui3KD9ayzxwOT9n0EAZtMCF35OZE0YTVw=s4800-w1200" alt="Blairfindy Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNnrKahGu3EkvIP6yFoxGDvObdtc01X6WHzykh6mcb7vqwskso_joa_FFTHaqwQtZrM8CjCIbC46KDu4o9O1wsdPEKK0k7EhWDHxLS9oqZGNG2FzPFcnXwIdshrhELsDXixJ-RuqdgLfJCh5g=s4800-w1200" alt="Blairfindy Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Blairfindy%20Castle%20Moray" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOb0DKcba9YVajXcnFCyEocfF0yHfi5Sp5lc75ngBErUiUXafmAhbn5Y5QRRkXP5N6lxqBskzS4P-OzTh0nSZvmwE8PO_MefO_2UTORiemEo8Nd_929S8EqOUHe1nT3DXr5JSnNVwrABU3jOaVRYKiN0Q=s4800-w1200" data-castle-name-g="Carnasserie Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOb0DKcba9YVajXcnFCyEocfF0yHfi5Sp5lc75ngBErUiUXafmAhbn5Y5QRRkXP5N6lxqBskzS4P-OzTh0nSZvmwE8PO_MefO_2UTORiemEo8Nd_929S8EqOUHe1nT3DXr5JSnNVwrABU3jOaVRYKiN0Q=s4800-w1200" data-castle-name-g="Carnasserie Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOb0DKcba9YVajXcnFCyEocfF0yHfi5Sp5lc75ngBErUiUXafmAhbn5Y5QRRkXP5N6lxqBskzS4P-OzTh0nSZvmwE8PO_MefO_2UTORiemEo8Nd_929S8EqOUHe1nT3DXr5JSnNVwrABU3jOaVRYKiN0Q=s4800-w1200" alt="Carnasserie Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQSHebZBs2ArmRiUE05EbiVmEdz_PDB_s1pNCpM6GGYdSTIepPrm_LZT8Z_pHLfEHIYkvtA4CSvBTDjot74CuSaVsHBI8Yg-hygXNMuMQh_Cq9j6PcdpoVLqwTCOVp6Vu5-ZITkWaI9lJQ=s4800-w1200" alt="Carnasserie Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlTVhwZC3NqeYH5qKRaKeE3XDZspXytb9JiJ2Kh7C6ZXJHCZs1VXQZA6OnmtbX6tQaB85W_XHxfuP-DbpoU3hyAf6Vc3bUv9CRR6zU5hRPuTqmocb7XYvh_FZ_cCi1Ew0fiDwxf6yqeOwX_AkQkXHIHw=s4800-w1200" alt="Carnasserie Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgj_kXrvnsuot0GBqvf3MoZYW-kszDx5vy7aOgp4pxIz5q3Itw28aUQw2FTUXFGsHwT-WFKlQ42TIEtpNqPNil_gbvWhjvLFrh12gcAdJ9wYrHsO7lKsgoxBpXV4gtq2ZD5mLc92Bp03-Lppw=s4800-w1200" alt="Carnasserie Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOS5C930yqNftfJrLLX7a0L5CmKqvBlu8J2T-QC0i3c1S9letQtzOPddISsrEe5J2xG99NeHO1yOYiVjDFxEm2SkXpiTTKPDhJ4Zy3kPHc_i9ob5JMh3U2xmOXeSGKGsju2bZfY8gHoU9Wo_Q=s4800-w1200" alt="Carnasserie Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Carnasserie%20Castle%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

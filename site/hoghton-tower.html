@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hoghton_Tower%2C_Lancashire_6704115249.jpg/1280px-Hoghton_Tower%2C_Lancashire_6704115249.jpg" data-castle-name-g="Hoghton Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hoghton_Tower%2C_Lancashire_6704115249.jpg/1280px-Hoghton_Tower%2C_Lancashire_6704115249.jpg" data-castle-name-g="Hoghton Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hoghton_Tower%2C_Lancashire_6704115249.jpg/1280px-Hoghton_Tower%2C_Lancashire_6704115249.jpg" alt="Hoghton Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqFQtXDGeA-u0fvqB-ZJDXXzIf-8LIpRJnoPU3Hy9vk7zPnhwxCzS1PV9Fhfm_atgsmTM5aGTXAGdYCRbazAdPoaMwpKnn0t1GA=s4800-w1200" alt="Hoghton Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrSStISAgPbbj7xA7g4pssrTBGvrwleOSgnc7E_Nzm1C5-_QLORwa2SY8YgAxkvOdHyY98eJNWpfCVmIcmxsYx5BokDDSQxqvszevD6OcQXmaE_15CgwWPcKj3SUWpzDgkjyIC8YSnHs-jJQY=s4800-w1200" alt="Hoghton Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9e9H3AgxtWnB5rgeLY7C32l1tBQ_hzg2vlygaTEKreOsSTbnpNIjWG7BIpFLBHG48f-8xjqkF6zSngecXhNp4b64bv1aO9b9lg_76AMQ_jg-Ce6aKsB3jv2RsodU_Gr4oYWKcgGjVCmT-X_3mMt39Ug=s4800-w1200" alt="Hoghton Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNx3uFoqqCPuJJwZ_Cae-sDWtCKysutm0vW6Zvj4P5UF_XBggsnS_6M38Uwk88gbscL3vcSu7zcsE1cEpQr81gTl0qeBBrr8vUniHGgT2wAb5hCbruPTU5fMGEh3UQbs0kHNLjXBgMlCXRmJJk=s4800-w1200" alt="Hoghton Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 sharing user info with oath is wrong · CC BY 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMo_pgyHleGZNfWTYVbZT-gSIRo8jfGGQb9udXWVmXT6ufkR6FriLtc9aX9Zr-ZDfa95rBrLzGx3L2kBScDWvwSFFeY4Uf6gIlsg0gESF_75Qh_80JN9xJaTEbTrUe7uELHWvDUxC57STUzfg=s4800-w1200" data-castle-name-g="Lancaster Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMo_pgyHleGZNfWTYVbZT-gSIRo8jfGGQb9udXWVmXT6ufkR6FriLtc9aX9Zr-ZDfa95rBrLzGx3L2kBScDWvwSFFeY4Uf6gIlsg0gESF_75Qh_80JN9xJaTEbTrUe7uELHWvDUxC57STUzfg=s4800-w1200" data-castle-name-g="Lancaster Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMo_pgyHleGZNfWTYVbZT-gSIRo8jfGGQb9udXWVmXT6ufkR6FriLtc9aX9Zr-ZDfa95rBrLzGx3L2kBScDWvwSFFeY4Uf6gIlsg0gESF_75Qh_80JN9xJaTEbTrUe7uELHWvDUxC57STUzfg=s4800-w1200" alt="Lancaster Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIP6SrLlOdKKw2nPho7vH_1FXIBXBwjbnGpxfqj_rn-GBnMipCmHf3zT6gfnWgr4kvTbksmofOvituvxQweFIzUHo6gk9nw77bzHfvmwRbVGRjV4AK8ZFBK_YOxYsVHWbQIdHko8eZsvnOcg=s4800-w1200" alt="Lancaster Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNwpXjqjA6aFlpg8zGjeiRM1p8wnFi8c66tfzv0HRIWhc7GcRrJhMyMfTvPbv57rOoDfXDXykdUb1FVJlXtXi9FxFlESqSo--qGULTtFK8WveFfWMtKm0QoMzdERG4K2tQrYWR-BaEAAI7YWtU=s4800-w1200" alt="Lancaster Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqAJ9RWmWS2NCt9jKC2sOukLNNB9xrEd0vEmLfRe1Y3pM3TD4aLkWGjP-P5rP2gqTvoul8uxnMhVISzm55wEGMLqmUIc5RDQMRFUAyhdMT4i15d7z3qjWKrmnRz1WYdg_BCTDMQ3QtAh0BpQ=s4800-w1200" alt="Lancaster Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7dOo8e4jjI-GdzbBnXYFxIFgRaZ5BoRGEYW2jpLgTP7YW4stWHPUBZbYiZAMRTsn1VwpYFUcQy7pwoDLCqMvu66tkift0vpxClqG3iY3JdVgILTn4PYTedIvt8SKMZaOsITxSnAJyeJSGaOQ=s4800-w1200" alt="Lancaster Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lancaster%20Castle%20Lancashire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

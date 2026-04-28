@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMC9awhNf2wPLJe8ivWa-SaazZp6JoqmT8nbgQFnrkI3q0-ELXCXLtDvbvH6WWYvJDLS54A1t8tdGPdW9OZ-O-ErY0giYiJGFyEC08sQtpCOEA5bCig144cBqZoZD_3XYPD2qHCNpUAhc4i0Bo=s4800-w1200" data-castle-name-g="Cruggleton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMC9awhNf2wPLJe8ivWa-SaazZp6JoqmT8nbgQFnrkI3q0-ELXCXLtDvbvH6WWYvJDLS54A1t8tdGPdW9OZ-O-ErY0giYiJGFyEC08sQtpCOEA5bCig144cBqZoZD_3XYPD2qHCNpUAhc4i0Bo=s4800-w1200" data-castle-name-g="Cruggleton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMC9awhNf2wPLJe8ivWa-SaazZp6JoqmT8nbgQFnrkI3q0-ELXCXLtDvbvH6WWYvJDLS54A1t8tdGPdW9OZ-O-ErY0giYiJGFyEC08sQtpCOEA5bCig144cBqZoZD_3XYPD2qHCNpUAhc4i0Bo=s4800-w1200" alt="Cruggleton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZORIb22VXPoP-yWgnBKELgbWTn2H756820YsxAVtQZrh6omFOlvL3RaEFTz7MUuk48G-cSNUDTGSM8W2LxafyMwxUPtbWNwPCGCrT-IPDYxqnNUgnnlaSFG2_-pjUAtle1qZUrVKMTnnb56gQ=s4800-w1200" alt="Cruggleton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNBqkfiY03SJkXeU7mcmXqzyNJ-peTML3pT-nmNsEEx2Mbum4odkaEa9PnIX6PxvAMwYV0lKbwnS8glskrPsbTJWxN782garKHHUfsIagxxOWmu4knnjwQt10pE7lLj4t5r6QFvkc3F4ARO=s4800-w1200" alt="Cruggleton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOykWetJTWFuHx17t9jL9oz0qANXybKSxOGyrfoQ8i-Awqdnnvv_Wl1UShKbn5d1fPF0JaL_sM-TJiO2vSAOD3uSUfmvw5IM3JRwNMYO0b_K8vNF4TiTHQzPDY2tRK1CF8m3lhJRtt8Qg7w5A=s4800-w1200" alt="Cruggleton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdWocEaTya6eLq3YmYXAPwk0oCWpE8TQwrJjSPy4nhWOusciASfF0i7hZUoTp4mRm1_c9XmNAwn9DD8hrqhbT561w4SEEuJcQT_SlMNAMINHWFUtBRABtN13r4TpnzviGSGClxcHZF50BQVKE=s4800-w1200" alt="Cruggleton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Cruggleton%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

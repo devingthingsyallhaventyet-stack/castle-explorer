@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg/1280px-Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg" data-castle-name-g="Wharram Percy">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg/1280px-Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg" data-castle-name-g="Wharram Percy" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg/1280px-Wharram_Percy%2C_St_Martins_Church_-_geograph.org.uk_-_659805.jpg" alt="Wharram Percy" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNt_L8ufaG8prCJcpWH4CJJcpZjiAh5SPhCq3SpaRzn-aTid8f2iYbJ-a37NfIjSx-nBt5HEM80ACGKd-aeFPxoVApsgtbOKnDtLG94LSeOv6EGqhbhE65_CU-luZeFHv3zG1Tpix_nfAsaocc=s4800-w1200" alt="Wharram Percy photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2tkIiFJSQYYBHikX2PrLQV3Wx9HvyFMwFWzlhnLowglmwXBMOdv8IufR5VFNCnLSFpTkoxzEWPPIjyuD90_bIvg7E76XQMCY6N70cAJEwVcwoWTqqO63RXwGLcTYjFyuMhOcvkLWFFySbZg=s4800-w1200" alt="Wharram Percy photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOM8T2QWmvkFMu4iDWzxPULHrdwoGqogiwVXZ1J0EW6c2s4xvOrmpIlsujqVE7ubvvsy59Kvz-kn867RAYDcZy17UtPv66toDxAVFi2Iy8iseTSOEH7Zmbbs_CW6-sDJVAyZ6rJJkujpw_YAOc=s4800-w1200" alt="Wharram Percy photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDyjQE6URe9yOVLLkI4G9sQTuNgq9RUNYRpwH6b5lFF9Rx5xq1hvIM-M0DBFfkd6y2Y9g68ejDIbUuzlV_k27tRmBtYFmKZ1oTrXnxjz6iCxwKbhtbeK1kv6_tgktFn_auXXvdVFvfg3JxcQ=s4800-w1200" alt="Wharram Percy photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 dennis smith · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

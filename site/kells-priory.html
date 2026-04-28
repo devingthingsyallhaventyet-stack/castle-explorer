@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5X2FhokThlYrSDhVivIVjWUeNvDZ1FOGuz3bqNYpq65h96Rj11aYtTaUn5P0K3EQsGeubuo3VDnwHkJLeE85dZAT3KOLIVtFunBFrxP6LtI0157OPbxuSzLaDAUQ5uhVN5-7RFbS4Scb0=s4800-w1200" data-castle-name-g="Kells Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5X2FhokThlYrSDhVivIVjWUeNvDZ1FOGuz3bqNYpq65h96Rj11aYtTaUn5P0K3EQsGeubuo3VDnwHkJLeE85dZAT3KOLIVtFunBFrxP6LtI0157OPbxuSzLaDAUQ5uhVN5-7RFbS4Scb0=s4800-w1200" data-castle-name-g="Kells Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5X2FhokThlYrSDhVivIVjWUeNvDZ1FOGuz3bqNYpq65h96Rj11aYtTaUn5P0K3EQsGeubuo3VDnwHkJLeE85dZAT3KOLIVtFunBFrxP6LtI0157OPbxuSzLaDAUQ5uhVN5-7RFbS4Scb0=s4800-w1200" alt="Kells Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuXPk9u8WKBBM3O1rI5n5dLCm7kk1sUr3fFFvnVYmSvopa2H6IOZ3DH3-5ea9NXPGZoud_7JbsqaZ1BxA87QG_e5x3tuKPT08Mk_D1PrFRyBZIb5tlIcdM2ca2x-BoYaA5MZh4naO0H3WbXg=s4800-w1200" alt="Kells Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPY6ChAWkmQ1UCg_u5VPE9LLCyethIHoaPm2bQhak65RZ0wFTYldNfZ_I38hZuYc6jO9b0G88FEsEMmyBH5kiqoJUcN2yYo64-coeJoebHhGzdm4YVYHBCschN7mOsmkkCXUssMi8p9BktQ-CU4kSPq5A=s4800-w1200" alt="Kells Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZ8mZArPqhgcP14VnQ_wRgiXyd6BRwB1UYkVbQu07-rKpMzoDzwLxwmVRaoRopckVBKGD6w9BegGV1Z1w-pzatZJ1uaXIRdiYHi31d6ljD69b8nX9YjwtNfST2K7Lz8VtHcHs7sggiw_EggnLK4vT3Dw=s4800-w1200" alt="Kells Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOu6JcvHudZcmBSXWfm8HUxz0u7Q6PAnQuJRKjR6A1kL_QWDkbtCQQlC7FCtAby71Ryzzcco5E29yUrxHXbup_Rv8VmFMacyE9chYRg3G-5he4h8z_Bu1QeGVQA7lXlY0hqzDMyq05tUNiNFTyHtZlS=s4800-w1200" alt="Kells Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kells%20Priory%20County%20Kilkenny" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

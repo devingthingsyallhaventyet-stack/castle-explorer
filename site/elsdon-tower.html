@@ -295,11 +295,11 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM19jmepUWyCyBgkcQuv1g2tydJcHFuED869Wcbmuw3pkEd2f_7H5oa6BWV7PZOoKakO7IsgUM7d-9qhIqKuuqvp8xj_H6fiu4OrqpPokJpBoNTjx4OlJQfmGZ0fWFHkD_8LfO6GH1k583gLA=s4800-w1200" data-castle-name-g="Elsdon Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM19jmepUWyCyBgkcQuv1g2tydJcHFuED869Wcbmuw3pkEd2f_7H5oa6BWV7PZOoKakO7IsgUM7d-9qhIqKuuqvp8xj_H6fiu4OrqpPokJpBoNTjx4OlJQfmGZ0fWFHkD_8LfO6GH1k583gLA=s4800-w1200" data-castle-name-g="Elsdon Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM19jmepUWyCyBgkcQuv1g2tydJcHFuED869Wcbmuw3pkEd2f_7H5oa6BWV7PZOoKakO7IsgUM7d-9qhIqKuuqvp8xj_H6fiu4OrqpPokJpBoNTjx4OlJQfmGZ0fWFHkD_8LfO6GH1k583gLA=s4800-w1200" alt="Elsdon Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM8f1f8nm2KkWlAYkPYHew2DxC2v_yorj4nuWIYttDdF_xnvFY0PVU3dqmWvCMruDbStLNZotQ_qwpIU3B_G9lV_GoimmlDMCfE5Sfw4uNAnyxOW7E-u9hjDS3NbBaSmEOXBnOTikQJRAiIdI_n8i_VvA=s4800-w1200" alt="Elsdon Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjmWTXGHihxtvFN2D-1UHSrs47-p7jHB_KMV9m-fqbF3tmcJ4HOZyM9mWCdXWMnCK8XbtbtQZ54WECnlxKMsR60IttCwNiL_j1vMKptDh2RLrU0y0uhSM78XnflZijnt04x9aOrwz4CtQpXnrpVJVaVw=s4800-w1200" alt="Elsdon Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM9TEN3RjI0qHXGWnP1irb6Jc1MUESdbWvRD5Dnz2jOO564i3u51Am88E9rUbi_I1Kk31Gn7CQ_IGXw1MVaaEnoBVJPxP-zSHWapl78kkUTRfOcvRUJ79njhCbhocCG0F4ehUyhpnEV0H7assfqnJpL-w=s4800-w1200" alt="Elsdon Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

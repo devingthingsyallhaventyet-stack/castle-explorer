@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMU0AROIGvstq1cEzu_9ZmiEjgeXnLtzJUJ-ZdhgYlHgnIuI2UCwLQr64xaTpoIF7EIkdw9nIAXwjTdzeNoPG0kq2G8HRcESec8DizPBAmQIxLsNYyI3UmrVAjKWnI4ue4vrgesAbe3i0_H=s4800-w1200" data-castle-name-g="Kindlestown Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMU0AROIGvstq1cEzu_9ZmiEjgeXnLtzJUJ-ZdhgYlHgnIuI2UCwLQr64xaTpoIF7EIkdw9nIAXwjTdzeNoPG0kq2G8HRcESec8DizPBAmQIxLsNYyI3UmrVAjKWnI4ue4vrgesAbe3i0_H=s4800-w1200" data-castle-name-g="Kindlestown Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMU0AROIGvstq1cEzu_9ZmiEjgeXnLtzJUJ-ZdhgYlHgnIuI2UCwLQr64xaTpoIF7EIkdw9nIAXwjTdzeNoPG0kq2G8HRcESec8DizPBAmQIxLsNYyI3UmrVAjKWnI4ue4vrgesAbe3i0_H=s4800-w1200" alt="Kindlestown Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7SgjHJ4tt4YKY-eCaDIIMql8HA3WYuLCVU47AA4e1pmB6soefXXv654v4g6rgFbfv4zh0WEephoh0borEOqO8cLx3CK0TcULNHhk7pdfhQLFi1bLHV_9H5xQDsnlb8fmReijk-AY4cuQOmSTHz77azw=s4800-w1200" alt="Kindlestown Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJY5WY353pDHR_BsrEsW3kPyaHw7q-iVD_S9jN5MJ4vWc3FZeLj0zd2KHassHEXmNgU3Xy87d5OED514U7-bqeUmZJ7bDWrJZoQWZ5go03xeRUTMotut0XzhGC97B8R5Y4BjtzjV1IQESyVTY=s4800-w1200" alt="Kindlestown Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZjQwLV1FwtaGQmUaZBEXqmdmz8U8TSKVGV7DHNeLqn_qfhYxm-KXXZXiDaTQIhcDaui-dvg5LgWvJL_XUgyDIJ9c1z3kCVYvCNYxX-5zcI_atqi3_vttlDMlTXm0wmpl0Bn5ys2T7uSx5xg=s4800-w1200" alt="Kindlestown Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNcN_V782sHyX2jxKfRPEsX0cGYVkApasTfO1Ax9e1e5u_QJankbv0hU8Ze2bcdUpkOd6KjqIfo5v8QcEJ41O6GrMnFTYpCaIN7Ip7Pt7JmEws9OefxF_RYLkakIGM9hfv-9G3OGqoveXlGKsE=s4800-w1200" alt="Kindlestown Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kindlestown%20Castle%20County%20Wicklow" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

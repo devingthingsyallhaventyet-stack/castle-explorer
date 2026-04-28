@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/DinasEmrys1.JPG/1280px-DinasEmrys1.JPG" data-castle-name-g="Dinas Emrys">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/DinasEmrys1.JPG/1280px-DinasEmrys1.JPG" data-castle-name-g="Dinas Emrys" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/DinasEmrys1.JPG/1280px-DinasEmrys1.JPG" alt="Dinas Emrys" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2yKJo_tnpT1_5vP-HfinPZDDNAAcuWKqq8wXmKkTWaL8uzrGc0YlVlYMrlX943C7fuKHznOEgV-i_xvWFePfNAWvxMs9uIkZOk1J4QeEx7V73SLpO02BoI4zDMemjHXrFmjp5LpxR1AzR=s4800-w1200" alt="Dinas Emrys photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDjm4COObenatfYMetJFZlhSPu-fZuWd7vb6WB0vIw5OASJuIk2dlL1---1nTzrNPSdz9En_J8oXqcicsH5WBw68xoPqYQkzprR1jrUoIX7_0eEPatr_6XdIAE7lqvX7YmX5cbNEfMyFIf6fg=s4800-w1200" alt="Dinas Emrys photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqklQvv0TzC-N_2ulHXL-8U4BCpWfLS_1KlghIZ8-AvaRc-ytb7xBySH2N8QJESnNG52zTLwh7ARlvL7zYDSEnMy91n80vvEMU09z2aznZDxJnPaiSfmaoYu0tJkj9J8ASmB8d-hoe8TcNfds=s4800-w1200" alt="Dinas Emrys photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsAGPsxmfv463CWLszymA0bFy00HsOGvO1u2e58x_RlzYSwWT2z2UEC3E3a0kPXRPTS9UZAG_a_sg4d9xtIa8y31-FVmOnFdHWnAGXJwRKCGSH8kC9cC45VACo3WGq9Z-A0zsFC4HNwMve_mvO3mgyBQ=s4800-w1200" alt="Dinas Emrys photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 No machine-readable author provided. Rhion assumed (based on copyright claims). · Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

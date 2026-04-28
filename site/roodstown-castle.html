@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Roodstown_Castle%2C_Co._Louth_-_geograph.org.uk_-_881265.jpg/1280px-Roodstown_Castle%2C_Co._Louth_-_geograph.org.uk_-_881265.jpg" data-castle-name-g="Roodstown Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Roodstown_Castle%2C_Co._Louth_-_geograph.org.uk_-_881265.jpg/1280px-Roodstown_Castle%2C_Co._Louth_-_geograph.org.uk_-_881265.jpg" data-castle-name-g="Roodstown Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Roodstown_Castle%2C_Co._Louth_-_geograph.org.uk_-_881265.jpg/1280px-Roodstown_Castle%2C_Co._Louth_-_geograph.org.uk_-_881265.jpg" alt="Roodstown Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN61TjQKE6KOY3n1F3-9esxpboV6ox6EP15cAE0XeJpl8uXnvsNla-uLle1zPiValOWFad3Ip7u6VS8rCsNkLWEsUMmfsd8-tOwC2PSEc-SJivklDXPTvsljEpe08xhS49WzNvWXGndcHSEaA=s4800-w1200" alt="Roodstown Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvIib9Pu06Lvj87_54IAHFR3KMXK4SmVuwIkcWN_ieeuVJt9QZF2DysYolfjskP3PXzJXVzBj8IvLkD6WrKr3CZU5IMDM15L5IcMl77MLqNPkRsa_yLGKA9o542ZpjkbD0yh3MO2vB97DV=s4800-w1200" alt="Roodstown Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGK2fHnuaiujzDQlNmtP16uUnXDaTXZWGJTs106jausX4pSGhp1hfMeLDNdMW87R9-p7_5IP9dcAOzGSjZw8rTnHVHJb6mixFuX3nVZduwNCf6qHGF24Fg7ZFkEDbOLS6r7yqhJ8oL5wwA1w=s4800-w1200" alt="Roodstown Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIRuEE-P9MHQO3gHSG8cexvtSvSt0OJgTnXzUy2pS7uZnnHgUXVPrWuguaiF3QBOpH_3KrhDN5x-P4YOI0YIorn5Hs3kV-t8zamFNiaxOm9N3-_rQK-19Jyhk-ttNQTDTxfd-N4R4cxrdPpg=s4800-w1200" alt="Roodstown Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Kieran Campbell · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

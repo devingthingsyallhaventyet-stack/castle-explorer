@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0VJgI3uoDqCUhY9G4pjv0bcQ4wfpQWDgnniOz0ZxzzqoS25nZWizxD_YZVQr1jMxpZiuY2bwdy7N4WxQ5nXSz8RXLJ9jbVbhSq1jvZMGDB5bB-2RoQDmiXLIE_PAGST0k8zBm4BnMOSDTOg=s4800-w1200" data-castle-name-g="Hever Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0VJgI3uoDqCUhY9G4pjv0bcQ4wfpQWDgnniOz0ZxzzqoS25nZWizxD_YZVQr1jMxpZiuY2bwdy7N4WxQ5nXSz8RXLJ9jbVbhSq1jvZMGDB5bB-2RoQDmiXLIE_PAGST0k8zBm4BnMOSDTOg=s4800-w1200" data-castle-name-g="Hever Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0VJgI3uoDqCUhY9G4pjv0bcQ4wfpQWDgnniOz0ZxzzqoS25nZWizxD_YZVQr1jMxpZiuY2bwdy7N4WxQ5nXSz8RXLJ9jbVbhSq1jvZMGDB5bB-2RoQDmiXLIE_PAGST0k8zBm4BnMOSDTOg=s4800-w1200" alt="Hever Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJSIUgRkaFJjTV0sALy22ztC5ucpXfMyh6_LlF-cvFVkapQtsmKGtCTRBF5dN5_LphDIoJ9vB-ik3OMl4P51q6s6Qv6aTPf36gbgtzRkKEMUzS6wUbUNI9RmMoIrLsUa7pgY7yk3GvixGw_Q=s4800-w1200" alt="Hever Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOMsTceOmyTYBTPuhYBUqxwLOQSyLpGdQERZoPJkwEQxDZ5xfs1LfS-FaPYcFF-zmKtP5FQbY7NtMq-OiyoE7KyYyyKTSksNt9MaaAtr6TtS43E8nA4AH3KThfkA3PWSrn5nBRXiLx63xOWCw=s4800-w1200" alt="Hever Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrli4S0niBLOFUh1f3txaNTTZfJCHxNP9dqtbVNFvny6x3bYhE59v996JHaeXQrcpUyBIB379vZ0AwPWSWnr0c0ftuNqu4mZKcbg4DhPHSuAvx0HjL9N3Htj2mqf6395ccXtbdAGHzPd2ru53l1OQb8w=s4800-w1200" alt="Hever Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOxZgyNaf8smVvj3xLs1M6IkVtk2w29iupDfiZgDeroCrAnfibXS-JAEI65m2cDjyVqnXvmPh-Yw3ulIKMjtKbxnJIPbpeG9h7_juYUV_mkbMeT5J2qHYlQqQS1VyrP221jSNtUMAy2wkQmSCE=s4800-w1200" alt="Hever Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hever%20Castle%20Kent" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

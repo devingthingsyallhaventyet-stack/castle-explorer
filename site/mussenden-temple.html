@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO75Xt2Xm7bvKbPkPi3LIcx3yNfPdWtubiG_z1BBD7ajUbwpXrYDceSstAHeE0pg1ipKRKBA1x-YmMORF6vbsAIYEYGhNLHelWhAqEQm5_uPE5hve0yjseELzzbXr5xRPMY1vysVjER7bfo-EiMd2GUsg=s4800-w1200" data-castle-name-g="Mussenden Temple">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO75Xt2Xm7bvKbPkPi3LIcx3yNfPdWtubiG_z1BBD7ajUbwpXrYDceSstAHeE0pg1ipKRKBA1x-YmMORF6vbsAIYEYGhNLHelWhAqEQm5_uPE5hve0yjseELzzbXr5xRPMY1vysVjER7bfo-EiMd2GUsg=s4800-w1200" data-castle-name-g="Mussenden Temple" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO75Xt2Xm7bvKbPkPi3LIcx3yNfPdWtubiG_z1BBD7ajUbwpXrYDceSstAHeE0pg1ipKRKBA1x-YmMORF6vbsAIYEYGhNLHelWhAqEQm5_uPE5hve0yjseELzzbXr5xRPMY1vysVjER7bfo-EiMd2GUsg=s4800-w1200" alt="Mussenden Temple" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpR1D3Bljc8wBto2TpLYhL6ajUsOB_r4-7v20ao99mTbEYdlA1q8OGb1iKWlvUzI_iZoFSIwpx_Hk4im00SykmCo1Yned7CTYyZAyPLiVxRGYZqsQF31bssqhaiNCHPH5GoqaCSskjrxDTUuE=s4800-w1200" alt="Mussenden Temple photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM9EFsQa1UrLYE-VHv_5jdWVHACdCwKJob5d0Eq_Xq8gE95BBzkuXYhAr0_tqovbEWIRt9VwBoAW70XxCeq2tPuOfoh0ZT1e5CuNjRd8xk2j9uUh70XUfD_dgod3wA1pzntFtRo8tEkCFRcCA=s4800-w1200" alt="Mussenden Temple photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZ4dHZ-tf-pfCiHLr7llSy1EwUgJbRnT6ToZ8NATR5hyC7yJTSgpw-N_KRZbV0zjv_zsHWjef-5NrfgPctHv2mUTOAsP-cjPBVvX8twwf0tKEp2L8ThbAB4BNMZ4TR5Paeb74oSVeE_Nmi=s4800-w1200" alt="Mussenden Temple photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqowLdZCBOIob67yReWVWMJxWn2KGXKmfDIfLh4JooPm9Z6r32iBu5Dp0DJ2nmm3l8fOE1KlD8u1aCq3le8QoTaKKJI3-2wrHx_sABHuHUf2CjpB4iEyWuzo4_FjqeyJfzG1u0AT2PRJfeW-Q=s4800-w1200" alt="Mussenden Temple photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Mussenden%20Temple%20County%20Derry" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

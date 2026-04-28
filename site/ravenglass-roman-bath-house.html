@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNg6xgf0JOzQoHQBF-ZNlii2oMSFpg1zWxL_rgzyVFBZCigFpY_nglAzItwHb6UMRxYBbDZPaoEkM11yYB0QuPP7mCiB_7sWdXlDZkWAjs-MnxJL-tvcMzTKjrJaX1Tt8q8At-mluvDegk2Vno=s4800-w1200" data-castle-name-g="Ravenglass Roman Bath House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNg6xgf0JOzQoHQBF-ZNlii2oMSFpg1zWxL_rgzyVFBZCigFpY_nglAzItwHb6UMRxYBbDZPaoEkM11yYB0QuPP7mCiB_7sWdXlDZkWAjs-MnxJL-tvcMzTKjrJaX1Tt8q8At-mluvDegk2Vno=s4800-w1200" data-castle-name-g="Ravenglass Roman Bath House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNg6xgf0JOzQoHQBF-ZNlii2oMSFpg1zWxL_rgzyVFBZCigFpY_nglAzItwHb6UMRxYBbDZPaoEkM11yYB0QuPP7mCiB_7sWdXlDZkWAjs-MnxJL-tvcMzTKjrJaX1Tt8q8At-mluvDegk2Vno=s4800-w1200" alt="Ravenglass Roman Bath House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMS2cA-iGHDLKLJMfhGdJBiz4tkAccyl_j2Ccwbr-ecK7ohDdRGLsi8gbm2gqyHQMwubupq8g_6NylhxGjGx-kmfBm3fIAwuLrQSzKWE77ekYNIm2Qe_34NVNjRGTazqca9JNCEWgY8xUgfVds=s4800-w1200" alt="Ravenglass Roman Bath House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPBvyeJK5plwwSpiDDKBkFWJ4VoFIOV26MkU0etHSFZDYF7XWfoZHimZ_TMvMc_7B6mgZc4DsgJNphxH-jtiKuD4WzmC4g8R-FJ0TchNOK31XVR_im6FFrz4Kf7lxWJ1PNbaUt1DpNxC5eiA=s4800-w1200" alt="Ravenglass Roman Bath House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUbJU-JXykJ5ErWt8zUyU-Sb8RdlBRKKfLYoNGBBX3isHZkhiq459e0brOI7VI51cWl_uusVujrZRQ5NLw-YHJjpZvTD8r1Edu4JeG7pFzGd_sw4TbsjtgwTQqGJCTkZl_zCsQJvkqafYdhjw=s4800-w1200" alt="Ravenglass Roman Bath House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXp6BOR484BdLn3vmFJYkALaEfA_fIIDsQiku3AsZoMBcXjZ4KUO7fhNLv5X29A9YIdigVrqkeRBgCYtbb_0L6C9EA5Xr-Moho4peo0IKyfmchWlpwWFv60K4LrTH48tyDWcA7hqw5CC6ToA=s4800-w1200" alt="Ravenglass Roman Bath House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ravenglass%20Roman%20Bath%20House%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -400,6 +400,15 @@ Belonging to a 2nd-century Roman fort and naval base, the bath house is describe
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ Belonging to a 2nd-century Roman fort and naval base, the bath house is describe
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

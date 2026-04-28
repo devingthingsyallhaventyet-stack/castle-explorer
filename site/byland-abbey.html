@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLtlPgSnpZlupBUp1WB-bZbNLkHTdBj6Iw50e1Z6c1BwRT3jECGAA_FNS1puLTLsBaxahE1Uf6JaAIS43XHuMoxrguLuu3yQ-SbD9dKK9vDZFuyMn3iwNyVTVN34wqnC4wQ4XyENYYB4VB5w=s4800-w1200" data-castle-name-g="Byland Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLtlPgSnpZlupBUp1WB-bZbNLkHTdBj6Iw50e1Z6c1BwRT3jECGAA_FNS1puLTLsBaxahE1Uf6JaAIS43XHuMoxrguLuu3yQ-SbD9dKK9vDZFuyMn3iwNyVTVN34wqnC4wQ4XyENYYB4VB5w=s4800-w1200" data-castle-name-g="Byland Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLtlPgSnpZlupBUp1WB-bZbNLkHTdBj6Iw50e1Z6c1BwRT3jECGAA_FNS1puLTLsBaxahE1Uf6JaAIS43XHuMoxrguLuu3yQ-SbD9dKK9vDZFuyMn3iwNyVTVN34wqnC4wQ4XyENYYB4VB5w=s4800-w1200" alt="Byland Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM126GTwIQmYFTpcyo29mp8PpK5mo6eB9i-Nj90dDKHJc2tSU4AEFZmktmKzr4_K30NmbvRUEYi_kPDxghC9AQlJT12yM-vLwaNhJLu15M8Bo3dzeAF-wRkKDskCBT8WvXZKna0YU2I39DgBw=s4800-w1200" alt="Byland Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIyKHBVPYTFdg0Nq9Sk0_x8rNkjCseE6fDrb_Xfq-fE0ZFPk05kuFNe6wNNYs5q_SkLcrqY-ot4bAdD5j-Sk-U2kQKtRBjyRXmiBvsVOx9O1lquFMKsszfjLCZDi_lKqvRKJbdOV60saC03A=s4800-w1200" alt="Byland Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlkfY16vYeiteYs9AVhRLD1B3p0JPO8vT3ww9Yk5Ky_ZvCFhyS3V0IQDhti1xo1hhKeIlFRDviVERBFQ0owrOmRTo8P1nKdGip5KwUgnSfUtsW3puxYaschR_hJLS3llEVe8u48lsLqk0RCDQ=s4800-w1200" alt="Byland Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPaIqtz2wTuyMwxW51_C5WDcCe77Kc4TP0yuzoNEikgtZc22CuqQ4wEPkYo6yAOkEgpFykJA-p55meu7rfZpiVoQP7DiePeq7onBwW2Mfq5JGQVS8DrGlPXb27TuLgTRnoYa6GG_Vra6ikB_xA=s4800-w1200" alt="Byland Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Byland%20Abbey%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNp-QlFXPQi2ilAweWN0bS3l614A2FLsDMtY2Q3N-hRWafzyVPrVTuErgrJMJr5_tShooQjP4tGzOPWguFbwISfzV4ZlTv7brCBpPSHvilzVZcXsQ_EJkp7RP8ixT3QRWZtMhvBwZcJ6B8Lcg=s4800-w1200" data-castle-name-g="Samlesbury Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNp-QlFXPQi2ilAweWN0bS3l614A2FLsDMtY2Q3N-hRWafzyVPrVTuErgrJMJr5_tShooQjP4tGzOPWguFbwISfzV4ZlTv7brCBpPSHvilzVZcXsQ_EJkp7RP8ixT3QRWZtMhvBwZcJ6B8Lcg=s4800-w1200" data-castle-name-g="Samlesbury Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNp-QlFXPQi2ilAweWN0bS3l614A2FLsDMtY2Q3N-hRWafzyVPrVTuErgrJMJr5_tShooQjP4tGzOPWguFbwISfzV4ZlTv7brCBpPSHvilzVZcXsQ_EJkp7RP8ixT3QRWZtMhvBwZcJ6B8Lcg=s4800-w1200" alt="Samlesbury Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHXVIZgxTOKRzazJnjjBMkrQfpD5pY18j15zzt3dI4PMVj6DLCOmFOqiE8VY06dZTd4jXpeFhXQo6bB956nzqp0RjCqI-JvFv4=s4800-w1200" alt="Samlesbury Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7_UNV9vBp9a5WHqKVIBGnwj7PeHSmqjxVUAD1bBmF4EuCjTBcAhtaQVvKpL-Z3ExjBQu5E74hEbzDpvpawhrky_CNX8L3oMgWYW3WXUd3LkG_rk8CkKyeBz03xVfz1RQsrEehBQLIEGQamd4=s4800-w1200" alt="Samlesbury Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8Ce0lL8a_xcXaXtuZV7S1KfShzF0MlbNPX9e_5LOXxygPZULjwAlN4h0p3dc_2PB9YgfO9TS_e5Gk8p8zvmXjSJPsTRa0lQ1Etf19jYw236WheEjmaYiXI1c3U5RI6I4na5QE7kpH2Aba3rE=s4800-w1200" alt="Samlesbury Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdl_WP2DIfxSlp4x2uzwRH79QIKrQvL4agpGG7_92ROGQE8cdGLRrTYf__OlIEd5bLKUaxVNCitVgQ0cJqSY0Hl-a7M8foSaUMWJWG4CqVTDzCG7onfFGPewdsBwZP9GVTsfNqNvf7MNJOGBw=s4800-w1200" alt="Samlesbury Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Samlesbury%20Hall%20Lancashire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

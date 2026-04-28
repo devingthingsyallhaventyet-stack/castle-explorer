@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqE6gOUnaa8cK11dnwT_CtzunSW78kSPXcK6Lx9OK5yjt6Rb4lbBHJeeWESeE1CNpAxA3LlKHFpFpYqavBzRjsZxs5scAYvU0mU=s4800-w1200" data-castle-name-g="Dundonald Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqE6gOUnaa8cK11dnwT_CtzunSW78kSPXcK6Lx9OK5yjt6Rb4lbBHJeeWESeE1CNpAxA3LlKHFpFpYqavBzRjsZxs5scAYvU0mU=s4800-w1200" data-castle-name-g="Dundonald Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqE6gOUnaa8cK11dnwT_CtzunSW78kSPXcK6Lx9OK5yjt6Rb4lbBHJeeWESeE1CNpAxA3LlKHFpFpYqavBzRjsZxs5scAYvU0mU=s4800-w1200" alt="Dundonald Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXWzyLkqdXGdY4hf8BGQ8vQIdCHqFzdGuarsUpwEgqWf30j8D3y9HVExsK2WhN5CovRvlDGKsv1p6Fpxxnj7-jHxxVHCjvpKVUxeISgGX2CVTZDHKsIisw8AHDKdMaCYrc6taFulJZNf-W0WESoSPdKA=s4800-w1200" alt="Dundonald Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMmQmEvqqqrT9w0RK3QFG5ebarhos8yJvundLxS2fWW5yGWw3lr46IXpGzFdQRIkPDj0JEXfTwjv0iHuGTsu1jaXVWI72i71pC4ewSDwx4Hkb6EOHAXZWFsqjRPIuoBI0h4gi0x5d6T7IRp2Q=s4800-w1200" alt="Dundonald Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMvVen6oWt13fBY3j5B36SXll46mNdyFSgQj9MltqFn_hkHPQaylTeH-51SzfcxQpAk71roy-4Eq9WNGJTwSLbpTLDmQc3A5x-0tdFcjj-AscFR0Stcr9M4k8FlBkJsTDLRSVUfOsD8xP1OFff5jvBI=s4800-w1200" alt="Dundonald Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO3FDDH8Ve3uWWEwqgLPT1N6sZ0_X-fI_oPph-PxQARSv9JWebkvhIH05hDyiIGTsVF61Xshvs_04cw0KWAXiCWw5tL8slrConmZ6OT8OHXa9PNw0oc5o86_sGT_3HaTBJ7wHnvpq6-VddzUA=s4800-w1200" alt="Dundonald Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dundonald%20Castle%20South%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

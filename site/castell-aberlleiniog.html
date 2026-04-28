@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfQRsKwaklUAREMA9xl9mKGc-y5lpW_Hv-N6_4WAv0oh8ZzxnzHt1RUXvQCnv0xT0tMUWJ5hXhAWB4p9YdGdBgDcCvaiPYXX99KL9GIXNn5lfYciKzJCWUtk8wXSkwlzgfYv7ARhcKVi6Mmw=s4800-w1200" data-castle-name-g="Castell Aberlleiniog">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfQRsKwaklUAREMA9xl9mKGc-y5lpW_Hv-N6_4WAv0oh8ZzxnzHt1RUXvQCnv0xT0tMUWJ5hXhAWB4p9YdGdBgDcCvaiPYXX99KL9GIXNn5lfYciKzJCWUtk8wXSkwlzgfYv7ARhcKVi6Mmw=s4800-w1200" data-castle-name-g="Castell Aberlleiniog" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfQRsKwaklUAREMA9xl9mKGc-y5lpW_Hv-N6_4WAv0oh8ZzxnzHt1RUXvQCnv0xT0tMUWJ5hXhAWB4p9YdGdBgDcCvaiPYXX99KL9GIXNn5lfYciKzJCWUtk8wXSkwlzgfYv7ARhcKVi6Mmw=s4800-w1200" alt="Castell Aberlleiniog" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8F0DXiYkzpURrVwqJX1u8WOu8Y4eX0CykvIq6IRb1Zq79dYW1cYTx5hs8s_E-qcWjDjV1zrqZcHO-rHI6m7gZP30EF22dW2As6-qYxDS-etdjPPBmvIMSzbp_yW_T-Yr39tT-ZYHnUVsY7BedzwKu3Q=s4800-w650" alt="Castell Aberlleiniog photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsnlSuVeDf2KniezYMbcTb-Um4cxHgOifqxv2Grfz7JaRiTMVgTYTOv6zRaEVMPr4PX5kI4EKzlHcVgKZF09igaNK_mvPww2c1YYayrULXFn0l6OC8GenSJKyeCPTZOommXHpWwAYYZXpnZjdeXJcJOA=s4800-w1200" alt="Castell Aberlleiniog photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyIW5Mxl2w7v619E6tkZ7i_1w0HZI9CUJFvJtaH_Et7YyRjwuNTxGf8zQ_I0AZ_vTya-d-h6z_gH2RsxQ1jOebTCZbIdSUVE1fyxFAMZOLZJfxovgbx-xMWKX_Pvpqt-3AOKRT2xAilJcO=s4800-w1200" alt="Castell Aberlleiniog photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1PvIMecsfuT9OrPiSNUVBmoFZTSrfSzfuv6eOV0kbfPR99I5K8kIy12llyG_KoKpfgee9UvMy3mFwIw3Z4E-h4WHxDkkZNO9Ou-bnALtzMNcvPuU4CS6zhDXssj9eoFpRHCIBoYx6G7iSxNg=s4800-w1200" alt="Castell Aberlleiniog photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castell%20Aberlleiniog%20Isle%20of%20Anglesey" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

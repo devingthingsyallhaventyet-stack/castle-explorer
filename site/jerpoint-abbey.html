@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9duLOXoO0yAjbRT_o5syNvBzF3o_iMJNE5laAJjVuWH1vmbvUdsCB_VuCCOWv9d7o3A5-mCRpKmuN5tYWuKstGQG5nW70S_vBGoHQp7SxNxgtp7uLc7RriwMbJig99NM3BmWe9kerFP9YeQ=s4800-w1200" data-castle-name-g="Jerpoint Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9duLOXoO0yAjbRT_o5syNvBzF3o_iMJNE5laAJjVuWH1vmbvUdsCB_VuCCOWv9d7o3A5-mCRpKmuN5tYWuKstGQG5nW70S_vBGoHQp7SxNxgtp7uLc7RriwMbJig99NM3BmWe9kerFP9YeQ=s4800-w1200" data-castle-name-g="Jerpoint Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9duLOXoO0yAjbRT_o5syNvBzF3o_iMJNE5laAJjVuWH1vmbvUdsCB_VuCCOWv9d7o3A5-mCRpKmuN5tYWuKstGQG5nW70S_vBGoHQp7SxNxgtp7uLc7RriwMbJig99NM3BmWe9kerFP9YeQ=s4800-w1200" alt="Jerpoint Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPSH0KFY-okZokfVsU0NRt22HiBDImMIjnuMoA62IvZjv96YiL-dvcqGOs_gvXcC7qIgnZmt7vp70eIpU--PbIvw4eecAHfvGLxrxQV_Mhg_g_tB1qRdeDVwljQNmwh7GvZjmKh5GhR8otdXug=s4800-w1200" alt="Jerpoint Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN08IbSW5vF9mhqc2toL9ADEHQSzV9OImJD2MuG5tRlnntDBDZzBlHq_J2snFlkLrrWVuSfee-nizBjXwRGMqAIcJiSQlITg3AEHINAhw0tv4J_vsAwp2B5UR53LdVecvP93aY-Ifj54GMc4Js=s4800-w1200" alt="Jerpoint Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpAq3ZdHD8Btf4G8ED3tCKbwry94Nt-yUa6Y-PpZ_YemmrR2WrT762f6JByk790DyLiuvYjcOo5CMEOOTp4Zh1XiJbIll5rMgk0m9t4LF7BB_9oTsUOQipzm0_y159GIYhXEkNAn3lRt3o1A=s4800-w1200" alt="Jerpoint Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPI_Th9trdJhiZcLv-sigfzlv8fXiy6bdwuVcZ2EH-khHlqjKn8N22CbaOIwhJzVdMPKGSEXh_1RvAVppk2ZOMtIVlqa9tznHugpF918cm5pNftq5sJ0Uf6rAQSUQZYoORqmu-HF6LEUDZLPg=s4800-w1200" alt="Jerpoint Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Jerpoint%20Abbey%20County%20Kilkenny" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

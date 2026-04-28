@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiLcbEcW9E0HDFLqwmLWeYlgSOJv-kDxvAmQwMxlmrB4jdEVnJxY_6OnkXGF1iPo2skz5Twor_FnnW6x9T9V1o6hDs8n13xoLdmbyRPY8J6nEgnsH4Ih2sikAITYIxOtXZZGtdZZlhOUNL068=s4800-w1200" data-castle-name-g="Falkland Palace">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiLcbEcW9E0HDFLqwmLWeYlgSOJv-kDxvAmQwMxlmrB4jdEVnJxY_6OnkXGF1iPo2skz5Twor_FnnW6x9T9V1o6hDs8n13xoLdmbyRPY8J6nEgnsH4Ih2sikAITYIxOtXZZGtdZZlhOUNL068=s4800-w1200" data-castle-name-g="Falkland Palace" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiLcbEcW9E0HDFLqwmLWeYlgSOJv-kDxvAmQwMxlmrB4jdEVnJxY_6OnkXGF1iPo2skz5Twor_FnnW6x9T9V1o6hDs8n13xoLdmbyRPY8J6nEgnsH4Ih2sikAITYIxOtXZZGtdZZlhOUNL068=s4800-w1200" alt="Falkland Palace" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPd9AdnfgwahRKoTExvEc0eQLuBaLivqN_k9939jP0OpnmfKVVK6zK4JAmnGofeIXIKrGfA1xJudThQNxGAJbwWWdbbJTaiG2p7mhVI3h9PeW2v18m0nIR5g_cPoJPPI7Q2mcuQL_0gRgt6zQ=s4800-w1200" alt="Falkland Palace photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIv4B-fiNZCye9Lwa_Dlkm86TVkSoct8vU-uwrcnpYHZ8JDpeTQek_bBVT8idKOSPlfwzTDnGI79Try2YAYkV8ryEDBbNs9P1PgCt1wzPIruO06deh5kLXZoIqkfF-R4q94OgE1ELyCaIzFQ=s4800-w1200" alt="Falkland Palace photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNE_uujT87e70M3hW8G-Nqn0edXNzg5-re8DC0JJOeUqOUDQDzmmbhn7411LxfPt2iPZjBYYVzqCEhq_Oh1J9PNcqzM7Qu0bEtGQ_UapLYZl_ss2vhuVbrS_FVk3N5lDZO0hYB1UnsF8Aznw5wXmRQSHQ=s4800-w1200" alt="Falkland Palace photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9l5TOCwsSHzuSVhIxFmrrqR1i1PwNxuZYuSxafC_L8oFmYzUFm4LQzsIUDeLu3jCRxIkY78gVLbRqRTLBwVx4Kuh0SB1zNm6jgo8q6IGMYHgf4M7lv24DWWz_wNhkRmt0vgVYsywuAy0Jnkc=s4800-w1200" alt="Falkland Palace photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Falkland%20Palace%20Fife" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

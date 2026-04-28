@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0T0M-zl_lh0EEMm-jEpTxGjQB5jom8dsbkKDSu4mA5GS7pPjCTFolxmr82eWVEwWlvKJMZZTl9r8UCuqrri_U7RCuuYPjBREqmLgCJ_wA0JfyD9ScYgZOle70G7xBUYgcb8evs2fGn2UDJvpJQkf1UA=s4800-w1200" data-castle-name-g="Carreg Cennen Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0T0M-zl_lh0EEMm-jEpTxGjQB5jom8dsbkKDSu4mA5GS7pPjCTFolxmr82eWVEwWlvKJMZZTl9r8UCuqrri_U7RCuuYPjBREqmLgCJ_wA0JfyD9ScYgZOle70G7xBUYgcb8evs2fGn2UDJvpJQkf1UA=s4800-w1200" data-castle-name-g="Carreg Cennen Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0T0M-zl_lh0EEMm-jEpTxGjQB5jom8dsbkKDSu4mA5GS7pPjCTFolxmr82eWVEwWlvKJMZZTl9r8UCuqrri_U7RCuuYPjBREqmLgCJ_wA0JfyD9ScYgZOle70G7xBUYgcb8evs2fGn2UDJvpJQkf1UA=s4800-w1200" alt="Carreg Cennen Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNP7khyZaxNiJUw1t2-i31tBaLlOVfNEdGvhxCFsDdAdfULyRXCLmbPLpNZsbidVZF6stk9H800PNkdlxvdrhw3DsPVVYxh38scSMVr4wurUTg2Bzpbi74BeGfVvd8ZJ4PJP0P8suNDwojCyEY=s4800-w1200" alt="Carreg Cennen Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQCFBPqQzJS9VElcT7GQq9vZ270YRLsTyINoNbzi6op1vNzqp9kRuSjFdIfIRvU9qKF-4JqpxTC9bUKyFI5RZFodsmT93x4NCXSP-TOf2l7D-MXYFHEjkgl4IfcP353mtgv33vfsLnBWWiPsk=s4800-w1200" alt="Carreg Cennen Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMKnrpoifHe0i91ADfdF-IX2aJ7bj6JWiQmGjXVxGzw_0eKaipPikwBtozPCY_LlsKTdSF0nOw_3EFw5kb50i9TnRsd3nPNAMg9_bC3NoLbqjoMpeadXpFb-TCjtf7KO2-Adr1hNfKbCDwo3w=s4800-w1200" alt="Carreg Cennen Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNYkKBAKy5Um_cV6YERsrqhE1ZnMWVPvcj76Uy9aJWkwMQnH1uqBKZkX5PjFGAkEeJBotSmeswUeaTnO-zu_vjxVsycvuTraOAx33Bn-pZTM5MBRrIE_8FTmEvhdZxpbAn72ULG58wBB_xfoY=s4800-w1200" alt="Carreg Cennen Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Carreg%20Cennen%20Castle%20Carmarthenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

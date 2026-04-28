@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM96VDBfK-iK4FxIGOSim91GvUUlTS-UGzSTvcxLVZ7QfbHRvGD5v2AGfAWp-VUHFd-HZBEQxPUO-_fQOnErYAyNaV-eH6mip_QRFeB_jnw_s37syrm0_sx4PbLwxN1Yh1UAUSpji3zUSg_zg=s4800-w1200" data-castle-name-g="Eye Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM96VDBfK-iK4FxIGOSim91GvUUlTS-UGzSTvcxLVZ7QfbHRvGD5v2AGfAWp-VUHFd-HZBEQxPUO-_fQOnErYAyNaV-eH6mip_QRFeB_jnw_s37syrm0_sx4PbLwxN1Yh1UAUSpji3zUSg_zg=s4800-w1200" data-castle-name-g="Eye Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM96VDBfK-iK4FxIGOSim91GvUUlTS-UGzSTvcxLVZ7QfbHRvGD5v2AGfAWp-VUHFd-HZBEQxPUO-_fQOnErYAyNaV-eH6mip_QRFeB_jnw_s37syrm0_sx4PbLwxN1Yh1UAUSpji3zUSg_zg=s4800-w1200" alt="Eye Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZ9N5H11Kfsdjt--XNVskbA9MqgsQwlKYvpR0uZd6r0eXm9WZ93fv_Qd51MSiJUCEIQ6sF2A_-qGvE2YAEWa7RoBupszrE35KfFUcSFRWxwkN0yI7dCx6Bjk6gpfQm-0hTi44Y_I7RXJfzTQ=s4800-w1200" alt="Eye Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsNR33nEBfqS2pZ2XOAiRKUZ18iBPU2HMjLbgxLbx0KshsbrYxVAES6vDoXo0oIFjiNMGjsrjDdGU6bCOjJpGgIl1Y0E68F7rAxqa7FKsfdKrQud-5EV-lQHec93CVIE7IamJp3rXIkcA5Pg=s4800-w1200" alt="Eye Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOnbmo5WMt5bokD50z7xgr-shlc8cazxYhEy1wvB21zZH6_UwE2s3xFSUnYSwEJY9VeGLaxQVpXtQVxfz7yrbCMtSBnh2yt14GWjgCeGV1EAVGl6MYhnIx7lTVZ_3CNBmNWYccKgdarC6ZpraE=s4800-w1200" alt="Eye Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_zN3dGcA61Bg8NNf9XCtE-3xR9eHRSYjuzq5LImZH7YkkN1HkTHksCuNMa6rILQ5PUcSOPsQ9jXoi3PMihmJcus-k9qHhJqVg_s6gL4HNi3i8AObJQ83Ocgj6rLtKsiEr_SGuHveUhCh3Kl0=s4800-w1200" alt="Eye Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Eye%20Castle%20Suffolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

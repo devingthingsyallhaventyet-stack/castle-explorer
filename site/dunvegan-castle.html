@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/1280px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg" data-castle-name-g="Dunvegan Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/1280px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg" data-castle-name-g="Dunvegan Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/1280px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg" alt="Dunvegan Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNANQghCDqCvrfssQ6QhvRtb7lRgyB3d9zpXx1KFOqiNmksKLPgNSAWBiJyQeBVBl0dPHrejWeb5y_elVyWV7VmP2VPIBojLVikBK11lShrGWWJt8lKHyui8YMDIsjGRfxdScJ-N371MKtneag=s4800-w1200" alt="Dunvegan Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO48rS_ps7iSPmTrccdWH9NmCbQi2WbyB_S4Ld1TrC-U7-s0XSXR0J0BokIPngIvQYMmyqaO_vnj4frit9LkioA4N27mbjFGuTomkiZFimZbFyOq2qPQJWCUyuYGsO-ufNL4wjgCjHpQZ0yqoVUnOn9fQ=s4800-w1200" alt="Dunvegan Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5GgwMiiw99b35rpdHKbd8eqlOomXUVmtUCCgqAaOK5COXL_XgA-OEZ-3VBjfJawQ9EBIp_-KiPfI4T05Qf5-FjDW8CM-IsU4i9F5R42GsPXrhj8Et4QiR7GAiSmgvd9usHFgC7pX4MWFxqSU=s4800-w1200" alt="Dunvegan Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrsxsYmeMalENvkgNSTm7ehP3FEfyALIgeEq-GP0xLK8IbifP0JD4FNW8ILat46Mol4kpn-_9B_wAYVeTAPe3FJgKFwX638oTIjXJeLucd-ceQLVpy_5FX73G3vonc3eQz-1A2teHoEcYHcw=s4800-w1200" alt="Dunvegan Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Gillfoto · CC BY-SA 4.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

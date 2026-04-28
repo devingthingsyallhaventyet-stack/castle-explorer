@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSGstGIqKGyqpcZOt0w_GrtEzry4wk_kmbNd83eMmYz8Tp6vEleqG5_528YgVqFlEEsWyDTS4Lo6Md7vD983ILU5RQqxPFnuOfMPs6jNjYNAH36x7FuHQFfccMn-PmTPcdhjGUDLLUc7WBctY=s4800-w1200" data-castle-name-g="Barrington Court">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSGstGIqKGyqpcZOt0w_GrtEzry4wk_kmbNd83eMmYz8Tp6vEleqG5_528YgVqFlEEsWyDTS4Lo6Md7vD983ILU5RQqxPFnuOfMPs6jNjYNAH36x7FuHQFfccMn-PmTPcdhjGUDLLUc7WBctY=s4800-w1200" data-castle-name-g="Barrington Court" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSGstGIqKGyqpcZOt0w_GrtEzry4wk_kmbNd83eMmYz8Tp6vEleqG5_528YgVqFlEEsWyDTS4Lo6Md7vD983ILU5RQqxPFnuOfMPs6jNjYNAH36x7FuHQFfccMn-PmTPcdhjGUDLLUc7WBctY=s4800-w1200" alt="Barrington Court" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOhpcAklOd-c1SXvCWWAvjIKOJkKdQ4sa2_uR6aFOQErqpnogLQfDLCQBn2a_VRUMX9hEf-vNn0YdO03WyExbVFPO2bPt5Oxudces7rY0iy2gU40PUhVd2ZlDU-E_qEyx8ELey7mlpYIB3Ztuo=s4800-w1200" alt="Barrington Court photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkg6JfDg-LOj83utJVWGA7GFQmlQNxEetz-tSJ5Q7_N2FD1SuoIkd_EcOk9KhzL5gju5gG4KVCd0AuXoOEQVzbGTw92LVm2cn4Q0ZvB2K5mEj3A3B1LoBG6n6BRL0Id9E38E2Mu3o9lG2auj8=s4800-w1200" alt="Barrington Court photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMOfLJfscH7J6GPwXa0u55d1uwgZv0BQ2YWZnWrM9vu9wFUKMns-sY4UR4BkqZMAeiWub7zcbfrWUFSPVW7mF2MYZCQp7ig5YMogYgh9M_HGg-o0izIPmVkAgwQvMwjx-rn5hS0ul_ZX8v9P74BCez2oA=s4800-w1200" alt="Barrington Court photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNr6aYkVotZoQqGZSG4ts4aR55_AmLK5oJIMVtiTy4NW9_lj9fqwUJ2pfP8r5k5wCx08e5EhyduMH9d2GfmnbVvW3uSDbFmyCidGZNb46XrKaUA-dPa7UW6lJwnXO3g0rH0BjrjdIVSDKaBIw=s4800-w1200" alt="Barrington Court photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Barrington%20Court%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

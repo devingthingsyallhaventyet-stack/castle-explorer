@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRBG-YHig0dZA6e8zOhmiAx1_Lj_f1zjzVZSoZK-E_fEHDqN8zulKMsuCjMp5N3cyaKlrBGAhkru8gzJwp59lSZ-lzDvn7zRwmb0TNe1jMmunppwhf8_Zs9tKvhR-74dS9G6xStPZLimcgvtE=s4800-w1200" data-castle-name-g="Creich Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRBG-YHig0dZA6e8zOhmiAx1_Lj_f1zjzVZSoZK-E_fEHDqN8zulKMsuCjMp5N3cyaKlrBGAhkru8gzJwp59lSZ-lzDvn7zRwmb0TNe1jMmunppwhf8_Zs9tKvhR-74dS9G6xStPZLimcgvtE=s4800-w1200" data-castle-name-g="Creich Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRBG-YHig0dZA6e8zOhmiAx1_Lj_f1zjzVZSoZK-E_fEHDqN8zulKMsuCjMp5N3cyaKlrBGAhkru8gzJwp59lSZ-lzDvn7zRwmb0TNe1jMmunppwhf8_Zs9tKvhR-74dS9G6xStPZLimcgvtE=s4800-w1200" alt="Creich Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPxMCYgQXQc8vFLck5ZOJEOoNFZbXagi7a2iypnd1mFbZjEIAhuW68SgmKXwgkC-ALpz4sYerrX0FEp04jOOv7tXWBMxztsLLiIkwlylAIhHRhXmOSmLyraSunpUiLgHeBgRHmzq_YW7szKcg=s4800-w1200" alt="Creich Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYEaEcC5elMKrdETHzrOSs7H7wm6v1-LjwNe_K9tBes96vUU-yAKURjdMoEW7PDsrnqxAFsSQkq2ahGjC1AXfrUOGVYL_92fFlcceK92JKkVu7_n8xS9b2K1LzbsO0MBihNHhT6VC_BoQFcQ=s4800-w1200" alt="Creich Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPgLF1j_9ldn7OELfNkupHCZk2C8nsXn2LDgAh0UjEXCG_SdIgOyZq5DCJznapoqZQmDvBPPUyK1n23oZ9x-cxpNsoe7Xmg8mw6hrpYzoLmcjjuqGAkLFewB2dnu65bcLPO9NT1jBtk3s8P_vvysMDe=s4800-w1200" alt="Creich Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPGsO87APpJ9l02a16R7GKiQI-8Vi4mcreAxisiDNZ-bSc2sAHCkQ2WqHReOfbjHCjklKE5rauI9E351hMMBu3R0WL03OstvyHTgum4WGIlqEuPBiA859cGEN0sDB6cNV1fB29v-p8WP_-Isw=s4800-w1200" alt="Creich Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Creich%20Castle%20Fife" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

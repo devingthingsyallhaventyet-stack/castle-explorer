@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNvLIbNpnAcZ93LJqvMdszwx8E0qorhv3W-bZ2E0l0uY_GLyuX0BEkzxo7rl1hFfMIoEhtx5hqvlelxwxbdO05PLWrbt3IYvdEIwNoc0ncA026SH0LVAjmwR-jC2PsjyrsjJpNskTn70cdxg=s4800-w1200" data-castle-name-g="Aros Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNvLIbNpnAcZ93LJqvMdszwx8E0qorhv3W-bZ2E0l0uY_GLyuX0BEkzxo7rl1hFfMIoEhtx5hqvlelxwxbdO05PLWrbt3IYvdEIwNoc0ncA026SH0LVAjmwR-jC2PsjyrsjJpNskTn70cdxg=s4800-w1200" data-castle-name-g="Aros Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNvLIbNpnAcZ93LJqvMdszwx8E0qorhv3W-bZ2E0l0uY_GLyuX0BEkzxo7rl1hFfMIoEhtx5hqvlelxwxbdO05PLWrbt3IYvdEIwNoc0ncA026SH0LVAjmwR-jC2PsjyrsjJpNskTn70cdxg=s4800-w1200" alt="Aros Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQe7ddP19f3HqQriLC3JPnKXy4BtK7r25t0D1kaMvT561iPTJyQt72naW0fOM14eo5o2Dmi_BKRDZlNfLom5gvUKWownkzOIYjDm5XqQ8IMrqIbSH8gnx2qrFWZujZR-5hD-HHV6QvLxPdZ8g=s4800-w1200" alt="Aros Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-UjhaLIldjmZEI8umMMsbIcorvKcK6zlhA1iFeenvUoxcCBl5GWN9xI-WKRPVqG5jX0gdPeCwQ9V9r8Cp-FjtRqNJpvQBdobd39u69klagBCnA2lz-6EOrR8LSVxr4Da7vTLbBHqMj6wlOw=s4800-w1200" alt="Aros Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPUeZFdis-bCBmFSsfSa01MmHaheWEc2SiwEk5QO9ni5WwzpZ_z0mHdH9QI1g2b08fyZywUtoFnmeE1Jn8_g4ucPtdOWwJLvts24neWU8ZNIjGK6LIOy-AfdNRhwLdAOrdjDDrGImD2CNVIw=s4800-w1200" alt="Aros Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXVBYJ7dTVZT3VWe8XjvuVQFfVb-fTfxRWW0DawZTtCcJSoaaVj7YbAX-ocmIYE8O4eovamV9BN7KYeqJMmd-E7pKFdu8YpzfeitghNCrHbMp9BvICnvFmi0FqDt3nz1CG9Mi9JkAn122RKw=s4800-w1200" alt="Aros Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Aros%20Castle%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

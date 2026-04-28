@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqECWAFNKWAtdupVJjM-GxWxyVBTpjJJFv5aC3B_BzOqjB5B6_v5qIg9N7T3SslItv81wm70A1YrtYH42yqs4usq3XrbfP0CJEQ=s4800-w1200" data-castle-name-g="Ashford Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqECWAFNKWAtdupVJjM-GxWxyVBTpjJJFv5aC3B_BzOqjB5B6_v5qIg9N7T3SslItv81wm70A1YrtYH42yqs4usq3XrbfP0CJEQ=s4800-w1200" data-castle-name-g="Ashford Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqECWAFNKWAtdupVJjM-GxWxyVBTpjJJFv5aC3B_BzOqjB5B6_v5qIg9N7T3SslItv81wm70A1YrtYH42yqs4usq3XrbfP0CJEQ=s4800-w1200" alt="Ashford Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGdjqalqWkbxAgUpJ1hjXtEVnylaB2AVB-DnzY-KNYSR4j2z2o4ZB6EUKcRnF4MVn05D4PwNOwjSyS3Kal1jt7FsGFozofR-zI=s4800-w1200" alt="Ashford Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMg3WJD_d1fOD51eYF67-nBxOKe5d2iQyp75GtnkeNqNAPFE9qyYbRqHd5fpYoOfflzUQ9PX7GsASHD46mV9OqRl4lth_rrXMuXkp330ds9XY455sCslt1Di6Om4YLPJPpvfFTKHH3hVp53RQ=s4800-w1200" alt="Ashford Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqG4mib75tX8ESqvvghuFLDfbrZSHISdN_60bx2qWB_uu_CoP0L2d7I9r1cSpgGadXplpKIt1itDUVZHiDo8S6Xa74cVdJkyrsI=s4800-w1200" alt="Ashford Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqFtNU8z4N4nnApeLtVZ5Ocazuf6IAxASw1kZu2EDO_YShuuvjgo96hupQx1JeRpB6HNWUDCJX8PVjrs-f4OYj_I3eoaq91x0V4=s4800-w1200" alt="Ashford Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ashford%20Castle%20County%20Galway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

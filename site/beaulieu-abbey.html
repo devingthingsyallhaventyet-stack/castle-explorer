@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/BeaulieuAbbey5.JPG/1280px-BeaulieuAbbey5.JPG" data-castle-name-g="Beaulieu Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/BeaulieuAbbey5.JPG/1280px-BeaulieuAbbey5.JPG" data-castle-name-g="Beaulieu Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/BeaulieuAbbey5.JPG/1280px-BeaulieuAbbey5.JPG" alt="Beaulieu Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOW5JAXNkVR-oMYU9ojeERraKlUluAATArZ7Qwov4S9zLjnrKkSdHD7xH3Em7_OKh6hqu2UQURU5jrVnb0EPaaW9UAhVA29evu1iC-P_MWf5hVpFvtf5dNu0-VVqYw72safV0pNj9MgpAc0vg=s4800-w1200" alt="Beaulieu Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2rtgrMtZqsKEKRNevsuiY2giCglj6MaeOGvMFKdTBz3p-NRC6m-gFf5JY4DgV9UDeLM-uJWAU7IkKrTEU2wUqHGKRzoH28_Sp6soDRwPwrUTZdDcG8f1653sh6yPQRAtebT8QexBgeHqAVg=s4800-w1200" alt="Beaulieu Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5sk8w5faJlI4O3B5SSk992b1KAq-siismFFfOzIk3o6debTOziHxUlnLlCL5XEDGUEedcy1dXdg2BCQYAg1yQNKpLFJK8opCamvgzfLl3mtNyWjPmEHHvs2leFTYIDM6ypjj9wdAYuY_5-aI=s4800-w1200" alt="Beaulieu Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOMmbgHBRo5bb1H2EYtoW9iaGReHoLWtflZl-7QiMrw7Xmck2ydFLjDEc3VFoiJiT6scZTyfxf_jOJLnsjNPDi8q70pdQS-RfqaiXcgg0nG32tDNoLHRcwyC0E8VHpIs7jAZOkdfujXiuSdLA=s4800-w1200" alt="Beaulieu Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 This photo was taken by Przemysław JahrAutorem zdjęcia jest Przemysław JahrWykorzystując zdjęcie proszę podać jako autora:Przemysław Jahr / Wikimedia Commons · Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

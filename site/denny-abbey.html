@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrJDNHwxe5hVhk4dNNRO8qL-TMkoTWSCJriFYfo01JQSHZ0U-76WxjPOE9vkUe_cd6wEN1HG0CjYATv3_WvwttnMNIqF-7NKFpFsvesUne_oMcr_bFyxZp6iGGLelHf-hhmnI7BdNsmtGkPns=s4800-w1200" data-castle-name-g="Denny Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrJDNHwxe5hVhk4dNNRO8qL-TMkoTWSCJriFYfo01JQSHZ0U-76WxjPOE9vkUe_cd6wEN1HG0CjYATv3_WvwttnMNIqF-7NKFpFsvesUne_oMcr_bFyxZp6iGGLelHf-hhmnI7BdNsmtGkPns=s4800-w1200" data-castle-name-g="Denny Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrJDNHwxe5hVhk4dNNRO8qL-TMkoTWSCJriFYfo01JQSHZ0U-76WxjPOE9vkUe_cd6wEN1HG0CjYATv3_WvwttnMNIqF-7NKFpFsvesUne_oMcr_bFyxZp6iGGLelHf-hhmnI7BdNsmtGkPns=s4800-w1200" alt="Denny Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN6gLA_MWbFf36Ihjf2CMxRj8c7SSTRyL13esjNBCXQRkmRf17uPmjaEHN9tn2x17Skp-D4kuVMWSqAmWWeZjoiQLVZ52FyOteWNouAjlAijPQXokZrpYlXndd6WA89GwgAY1d_A6q3lJTr=s4800-w1200" alt="Denny Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNpdK1zMlHPsY9qUFFP2vmPxkH9s0r3Nf-ngYNN08uKMfNN6aIHH1MxIvUuDP6PFVmK_XybT0hzQxFAnvvr9Wo8NuNjEFaBx5Wh0JpHU9VTT-OiKF_mWH7MMGem8LEzlWE4VzfWDmeSQGsw=s4800-w1200" alt="Denny Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPj__gy9YW3cB6mEIGoO0rg2u0P8IVY6VSQ5N9GfCebAJVqsaQ7jyMHjqfCPMxGcelQ6xwUueLyCoqMEVzPQ9-9xm0Yay2Qbz4W74kT4LzQFw_lL8brqsAELswepELOv1ghXvLmhJ4VvwxWcRE=s4800-w1200" alt="Denny Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWHzamZxMHljUln6TL3lOTjVPI35pn_Giarc6C_ZK1shSlRFm4IxViunTwETki_0maqp6dympgBR8So7RNhjDw7j1VvbZvNm5OG39L-j9FlIpYK-udEYTwv2q33aVh_ExGqFQRjsbz8Jqi=s4800-w1200" alt="Denny Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Denny%20Abbey%20Cambridgeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

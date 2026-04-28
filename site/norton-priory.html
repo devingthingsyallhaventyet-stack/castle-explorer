@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Norton_Priory.jpg/1280px-Norton_Priory.jpg" data-castle-name-g="Norton Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Norton_Priory.jpg/1280px-Norton_Priory.jpg" data-castle-name-g="Norton Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Norton_Priory.jpg/1280px-Norton_Priory.jpg" alt="Norton Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqH0EGRyoDDb-V-Uab5Wn7NaT30RClTx6pWelbDJZSargivqv2PYG8gzTwxwby7sfOxdKMW1J3YRfiy5DfzG9ZcZtB13kPW_2Pc=s4800-w1200" alt="Norton Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxCud_X-HBrAp8efSFIaM4GuPWAsMikYQBtnPnTFtF4Vjeec2N8piIoVOS_h-oFWymjp_L2pyScW-H6Wkoa0cPtbIpkSEERpObrKOOyzR30rnYVsSiKlwDFom3naF1nvb0SgJqo6YLbBE1R2Q=s4800-w1200" alt="Norton Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOM1iJFloPgqB4s8upwq-D1iIMdPHNQINH3QMQst_e6rqQz8jEWdPR_MRTrLqEVJkn_6Svmd-bIqAHp9vDXFKZLl1S6InSC3GvjvNOoCVZGEKUg3YCZtdTwlWO8L0njYl1xlWjPP4AI1hKLnQ=s4800-w1200" alt="Norton Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOcg3zeYTiju3Q6S5nd7LufnbNu0iiqmUM0eggo8XtyelAMNAQS_PMQwF2pVTfuzcOIyEPP42K1H5pApsHGCQZV4rF24u7XmUSjMvqC1wIgVfXqwuMX6nXPlOv73HsK7vWSjxcQCbfZYCAWVMY=s4800-w1200" alt="Norton Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8UFB3nNZpT2dWbHVbpeLb7D5iZ-dQUWlIpktS3EGQT-io_aIVbaD4okdvzU6X85FPdt9sY8qGrCvoSqFBrpV1jTBYT1DXOflTZkpN2GPhd_evJOnkjqnCT_nvoG8n9v0BwBJXK_y2Arbw7w=s4800-w1200" data-castle-name-g="Penrhyn Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8UFB3nNZpT2dWbHVbpeLb7D5iZ-dQUWlIpktS3EGQT-io_aIVbaD4okdvzU6X85FPdt9sY8qGrCvoSqFBrpV1jTBYT1DXOflTZkpN2GPhd_evJOnkjqnCT_nvoG8n9v0BwBJXK_y2Arbw7w=s4800-w1200" data-castle-name-g="Penrhyn Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8UFB3nNZpT2dWbHVbpeLb7D5iZ-dQUWlIpktS3EGQT-io_aIVbaD4okdvzU6X85FPdt9sY8qGrCvoSqFBrpV1jTBYT1DXOflTZkpN2GPhd_evJOnkjqnCT_nvoG8n9v0BwBJXK_y2Arbw7w=s4800-w1200" alt="Penrhyn Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_HukuKz0OCwcVns226lCZ39JPobjT1lmOITyXt3OvPG131KMcm5FitjnA6Xlzn1X50-49dqBxGVQMtyNDvHYprQ7fYL6cvs8gxnswC9FoXfuySFO_LvJP-f1n8NAcipNrF_DU5YoJjER5=s4800-w1200" alt="Penrhyn Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM64k2PGuUVLC97ZKtZtSohsF6kwimIguiu-P6Z7R9yMx0lAuVh-CDA5RTprh5U1Q3Plym-N5cjp3cw7Dm-VV9Cs66j2cCnpok3bNHtJarBYNMZhJzGfXAcxJ4gnYtbY3HF7SsySrSKhE0D4sYYivnk8w=s4800-w1200" alt="Penrhyn Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpKhOUNLmuyfzcwfTmGtCbekfCDADdKYVtJiJHQV_7h7Xzu56Rvvs1YF8zEeS8AOBrOq5z4D4KufTAP-QCAGuR2g8Oxwr7_xrS9v_NjWn1BjlWR5Z67tFEZqBSF3Rcio6ADNWwtPX-WR37A1I=s4800-w1200" alt="Penrhyn Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0jqngU0EYCmb02UVJJvtkYnaOkRWoNhx86J6qq50f7yO72dXrEpgsfdFJaAD9qgLORC_rKzQSMpcmFauguXfYwCwonqVbvfgIQxnGJQr4_-CCL0-bL8b-v3IEA7t46_RiLU8HvIZ_FQZQFDNrfus-Jg=s4800-w1200" alt="Penrhyn Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Penrhyn%20Castle%20Gwynedd" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzIaSgusL2SZh-3ETntlVtaDUQGFsZwacYmJf0ydHGZFeb0-vX6J_XRjN6UNr8pRcXNZt4SNylG0DNb9oiJjZf48NxNJjxTNeHI1lftN7XZV4g4YlxX8ctm8ymry7XBCALrzs2b04Jp5fs=s4800-w1200" data-castle-name-g="Pembridge Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzIaSgusL2SZh-3ETntlVtaDUQGFsZwacYmJf0ydHGZFeb0-vX6J_XRjN6UNr8pRcXNZt4SNylG0DNb9oiJjZf48NxNJjxTNeHI1lftN7XZV4g4YlxX8ctm8ymry7XBCALrzs2b04Jp5fs=s4800-w1200" data-castle-name-g="Pembridge Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzIaSgusL2SZh-3ETntlVtaDUQGFsZwacYmJf0ydHGZFeb0-vX6J_XRjN6UNr8pRcXNZt4SNylG0DNb9oiJjZf48NxNJjxTNeHI1lftN7XZV4g4YlxX8ctm8ymry7XBCALrzs2b04Jp5fs=s4800-w1200" alt="Pembridge Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9hlLEkIEtdqNsVoKirHTaHATkPIo2-J2s8cJBm5vEkP4tIb54ZYsaNvP929S50Es1HicOC_1pfg7rwXjvLirtbDw-Ru71W172YMidw4r59ak0tq8NFD_rOUPcrU12W-CfELhNYeFp6HP2eg=s4800-w1200" alt="Pembridge Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN0loTxn--MZyltPX5EtldXnJ9_tUxyjXtFpszW6dPM8oNzYinoFLvIrN9pZcLQ9_5PVWGm67r7ZY9_IBWpYaG2XJdHJjqzbfgq3-R0Q-HANNs5JE0btCz5RZDihebW49y0l6WNU5JOSLjY6Yw=s4800-w1200" alt="Pembridge Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMho3SrzvraKifUdmnU6_OW5WoFCumnsKlJaZidTAGBubbMlla3UGcek1yQfTBiEMr17cHdmHVHYeWh6QtOzlb_jd5QMJ_T5CKNlb4jDrTdrnlIgKDv64W7Gj-K39m4RtoqmgNZOoyhRDRhPis=s4800-w1200" alt="Pembridge Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4T8V76oPPJmsTLHJDh3beUqRCc39dalXAqWbv9n-Rl6FAwD4to15QF5ieH00u12r-HOF36JM2xgLouB8QKDWtIxbOqceMPD6IdlmOdhmKn5T2eKKzUl97DLczlsPvCkK-p06S6wBQx1lN=s4800-w1200" alt="Pembridge Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Pembridge%20Castle%20Herefordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

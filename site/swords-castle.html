@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4_Xh_f9rx2d4hx5jdRZWrj63M13Lo78ER8JZ7gVkn8WPxLEPeOBfl1PA5dw2oWO8t7mh1tsUvN_zwzAmocNMaBXJRu2NcyHZaKDZqwYL-Rc_a9XcX55I3h2b7Yjsbye8y78_-iDC6128F3A=s4800-w1200" data-castle-name-g="Swords Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4_Xh_f9rx2d4hx5jdRZWrj63M13Lo78ER8JZ7gVkn8WPxLEPeOBfl1PA5dw2oWO8t7mh1tsUvN_zwzAmocNMaBXJRu2NcyHZaKDZqwYL-Rc_a9XcX55I3h2b7Yjsbye8y78_-iDC6128F3A=s4800-w1200" data-castle-name-g="Swords Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4_Xh_f9rx2d4hx5jdRZWrj63M13Lo78ER8JZ7gVkn8WPxLEPeOBfl1PA5dw2oWO8t7mh1tsUvN_zwzAmocNMaBXJRu2NcyHZaKDZqwYL-Rc_a9XcX55I3h2b7Yjsbye8y78_-iDC6128F3A=s4800-w1200" alt="Swords Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqFc3-VCtsxrN4eH6iz7q9mjaCGjLmj8NWlq6BUOqbOIV28kLdgccF-T8jf8QY9-VqgMGkUfRLsqHUPHR2-gdRCOm-x8ZEhKUI0=s4800-w496" alt="Swords Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPF66ntp7QxAVjtslb8qRJ935mnNNRJmYm_kuolD25mNHnFdDXdA3bpqJTfGdcige7-vVq_9TMbfNq22tFlOj5szI6yDCamlcbHyIkAa4GG2_f3gtcQBD9roLZKPBJQhISykeCEsZDCbMCqQrg=s4800-w1200" alt="Swords Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNxgtH1yifYx2oEUByQsl0sqUbI8DhpMtTdYry98c9J52oO-AOalSUbRWfOkkMXRgtXmmIvfwjY1wrVyIAKvhAC1oQunpQar_m0SMQh0uNv1BXRl6XeD5aVTHiWHBW3729WvG16zcmIF6fGWg=s4800-w1200" alt="Swords Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLfqx-lg6NM0-UmMR96HZ7qrQBRs3bSx8K1e64qLs_tG9sX5UVM6avSlnnR1558uM30_Se6H7fW6N1O6QvkBr-xxzbOy2p3wt3F7lDSjY1fLdncKB_br5ksUAr01vI9BKhwD9XBw4rHMbrwg=s4800-w1200" alt="Swords Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Swords%20Castle%20County%20Dublin" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

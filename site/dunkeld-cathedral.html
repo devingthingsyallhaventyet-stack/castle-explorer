@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Dunkeld_Cathedral.jpg/1280px-Dunkeld_Cathedral.jpg" data-castle-name-g="Dunkeld Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Dunkeld_Cathedral.jpg/1280px-Dunkeld_Cathedral.jpg" data-castle-name-g="Dunkeld Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Dunkeld_Cathedral.jpg/1280px-Dunkeld_Cathedral.jpg" alt="Dunkeld Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVze9eXrGfZarV9ViErRbeZUCMNGHLfEJsnhCx0lSpyzTGDEHIdzmXzNVPE8LE5T8x-ds8uGRtZ0KrTsBhBZiXiPkn17_k2FYecQrpZwKbPlecGZeb5ARdVdLcFUTFnNCyfFjs2ql5RWMEGA=s4800-w1200" alt="Dunkeld Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDSFmXjNAlpbNi8uhEz-EzC1ddaBnFl3Y1KCHVrwy2fXGq_7CBjGOlNJaBGdfR4vJ-XC3IEYCqg_l-jqGjEd5asOZ32FTU8R2RTeY_CGPzv79nmZgZIaC65la6RqBq_TTOu5cluCgbuNyfGQ=s4800-w1200" alt="Dunkeld Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFX3LaD6uZmxcgaylSYBBnHLFJaVI7z0ZeH0BcGFmqxNNDjOVa21DBkO1aEL3im177W6t-zz3DPm4Mv2wouzvicKPvOQS04YN2Nk7iwnp8rW2tbMd5NkmNdK8Bv7rJ3PwmWdC-r2p6vYFgSUvvARj97g=s4800-w1200" alt="Dunkeld Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNE3dNhydPfUXkZsv1WPpvrhm3uKuyuboxR6OmY8NEePfDgd_3E-bBvlD-5rIUR6U-lal0rr-xoh8b9kSTgSXaXaRwRGgBDgpEDR-Mh3tpoMJ-A-y9g4N-VG66-L0RLXnGQocmqDCytjJZAvSnzenacIQ=s4800-w1200" alt="Dunkeld Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Alison Stamp · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

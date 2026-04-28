@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjFvbNUCyt_DJf0ynrLXPg29V2ifKZmBqUWfNVmG3JSDcP9_eNf2_RQghnhPviFSv8JKlJcfnAF24omJHbOduYm9-IYWfnfQ1jcYKilawIJ6hCinXYuJuhuw2mTT6CSoT_tmFsXzYwkKPhsA=s4800-w1200" data-castle-name-g="Stott Park Bobbin Mill">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjFvbNUCyt_DJf0ynrLXPg29V2ifKZmBqUWfNVmG3JSDcP9_eNf2_RQghnhPviFSv8JKlJcfnAF24omJHbOduYm9-IYWfnfQ1jcYKilawIJ6hCinXYuJuhuw2mTT6CSoT_tmFsXzYwkKPhsA=s4800-w1200" data-castle-name-g="Stott Park Bobbin Mill" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjFvbNUCyt_DJf0ynrLXPg29V2ifKZmBqUWfNVmG3JSDcP9_eNf2_RQghnhPviFSv8JKlJcfnAF24omJHbOduYm9-IYWfnfQ1jcYKilawIJ6hCinXYuJuhuw2mTT6CSoT_tmFsXzYwkKPhsA=s4800-w1200" alt="Stott Park Bobbin Mill" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyPrLID4V4NzmCLLYQ5-ZDthH-M6VOFzjZgzY2HkGD7wMK-XoF2NBJidEVlRRdeYy9KRYRM6xklofR-FXZ8rRh5fE_ivZtfyBURlo74YQ0Q1amqxvr6Z5Kx-52td_obipoX07mhgnkQcuTVQ=s4800-w1200" alt="Stott Park Bobbin Mill photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNf00b8te9D5fThGnmrVeK7tnyfyTRK9DuKmYs1Hj39ixOH0p0L96irbVeILp_H8oFKyHd3J6pTiaK07iLnn7wH6PwbR_we4ld1KYMsXfHup074Cpg4rDMCjX1Z-Y9F-dYxCAublzA0wJvRpQ=s4800-w1200" alt="Stott Park Bobbin Mill photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNbSNJve4d3_0tBdVOcm0VLlp8zzR1PUpzAPKt2ioph7YQCe9DuFmQkHoPt4P-V4A09rTnPFEGvvdqRHE3sswybOzMUyz7fGXfjXfpyD3TSu7bREM0A65MUMncqiJ67ItucLbj7Qd54bOv2oI=s4800-w1200" alt="Stott Park Bobbin Mill photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgfkyWHy4W3bZwVXxVlaVXtdzvJgtRB2ZojxqutClbNgcuNhKjTlcMX0mjhs668v8Dz3PrOSVqnPUNYsDyVVREtgpJLFXKVbO24y5utzzidID0fN-hvjT6-QycPa4L9Vdzfx6NmFi1BhRSjVw=s4800-w1200" alt="Stott Park Bobbin Mill photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Stott%20Park%20Bobbin%20Mill%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

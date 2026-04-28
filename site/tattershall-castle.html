@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRU7r-ZbEj9gQaFs7eip5qHt9XFJ8JU9JUrnGq8SDWR8ZyvxdEU0WO5-qla02q0sDbdqbSb3g5fczJfEhcn3J_FbfuyF0PiuKSaURubFJq3kYLweXX9e0Aqnzm6rrH0yr31R3lNA_2H3-Yjq0=s4800-w1200" data-castle-name-g="Tattershall Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRU7r-ZbEj9gQaFs7eip5qHt9XFJ8JU9JUrnGq8SDWR8ZyvxdEU0WO5-qla02q0sDbdqbSb3g5fczJfEhcn3J_FbfuyF0PiuKSaURubFJq3kYLweXX9e0Aqnzm6rrH0yr31R3lNA_2H3-Yjq0=s4800-w1200" data-castle-name-g="Tattershall Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRU7r-ZbEj9gQaFs7eip5qHt9XFJ8JU9JUrnGq8SDWR8ZyvxdEU0WO5-qla02q0sDbdqbSb3g5fczJfEhcn3J_FbfuyF0PiuKSaURubFJq3kYLweXX9e0Aqnzm6rrH0yr31R3lNA_2H3-Yjq0=s4800-w1200" alt="Tattershall Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM2vP8PsZjrZyhRjODHBqqFhW5C_gPn0Mlmzic9rsciajZ0ZASyumkToD1g05xyDgKWtvUJK3lTdSjzfHm6_SyIgmRNqjWyy1W_c3ptpJlfA3H7dXXn5MNTPtj0_k89-zRV81nvD4np0MRrHeQ=s4800-w1200" alt="Tattershall Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXhx2ZrMDqOOKFlMc-l9yyL2CYTuk8z4Dim7PU9qaSWsUKDtsJPPxIHsoaxe7DNhanwqim0zroWfs7j-5cF0zfy2Lxo2hgcTT9VsGec_G23GHiNh4nUjGeuUWpP1CqtcYQyGAW6bbUZu1spQ=s4800-w1200" alt="Tattershall Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiSFQORv96vU_M6aTbTeZag6eH9soYvKMvnPlAiznAMgPOSqk9gz5SKNNU30FidjO2CLkNEcYrKLwC9Bm9FvLz4FXuVvJCpaEjjUNBsuj1CmVXPrDtw4Qlp7yh0LSW3Px37QAh1S7_iq_d5aZ7vZNxvg=s4800-w1200" alt="Tattershall Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOWMyNMUkYKCzU59Dug0glrP0hHlcQzmYEE4LmAnLTOGDKGMBh_dCG12knaX8oCaZYJXRZ2ca9l-x7e2w1ApbIwdZWS2BQvaRgdhQf5fIyTNSIYE3AxDGvEGUnAYWggT_I3iI_yIGZZa6doSB691m6W=s4800-w1200" alt="Tattershall Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tattershall%20Castle%20Lincolnshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

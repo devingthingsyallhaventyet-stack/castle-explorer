@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdUgi2IFpjANBLMfsFBySFdLSvYwkXrauEh7U0K-u08E1vg-JArT-RzxCE7CtCN4tJzUmAS5HBFAmvB3nQTi4go-kh4VAye2xo9g_XUhIT67Lr-fOFNUu53DySYB4JCR4v7v1gVe9Cs90Srg=s4800-w1200" data-castle-name-g="Restenneth Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdUgi2IFpjANBLMfsFBySFdLSvYwkXrauEh7U0K-u08E1vg-JArT-RzxCE7CtCN4tJzUmAS5HBFAmvB3nQTi4go-kh4VAye2xo9g_XUhIT67Lr-fOFNUu53DySYB4JCR4v7v1gVe9Cs90Srg=s4800-w1200" data-castle-name-g="Restenneth Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdUgi2IFpjANBLMfsFBySFdLSvYwkXrauEh7U0K-u08E1vg-JArT-RzxCE7CtCN4tJzUmAS5HBFAmvB3nQTi4go-kh4VAye2xo9g_XUhIT67Lr-fOFNUu53DySYB4JCR4v7v1gVe9Cs90Srg=s4800-w1200" alt="Restenneth Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNCVlCE2-zRDdD6MLvqW9n930KWSes7WbrpccRvK0gdxCYT7qO6_wpSdG8KgGuC5wdkcz5xZk73n2wOKpx3_F_q53oesNmRlb61DiBIqz7llTHe9aqQzO5jW8e3Owz568HJZwWqUhI_4fta87A=s4800-w1200" alt="Restenneth Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNYuN5cU5O8kDONub0NBY6aq0ZdbTAl27FCwj5S0e297SBQ2piFQ7xk2TcHUmMRa9UpaNli2tZZt9J0ZxWtHaXjIKtvC0Mp-MO1c-dcIGVLJ27Udwwzf7Orx9fCGbOHpgbVKpI7i6nz4xVBLQ=s4800-w1200" alt="Restenneth Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN086227l3Tcag0FKA9RWIF5QAshbLmprNzMC5BGkhRlebV3XyV_dbLXLo19R437LZ9gWoREYIHXGUIEdMxcf-PFZIkSn0eVAc-uOVh05dED5r_nG_--P8LxKyILZxVKY1qjNGAjF1uvou2=s4800-w1200" alt="Restenneth Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP-eZDzza_j2xUrqcDsYNoJYvvTJSN547p22Ex2LSZD-o-tpxf4703E0hpo8ba04h70w-cAqsUH-9LpRSOOiTmCPEhHEML6YgLsgnIbmKslMOwsfVLJSz0uNju-isfwUgaT6GW4hGmgw-mmNGQ=s4800-w1200" alt="Restenneth Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Restenneth%20Priory%20Angus" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

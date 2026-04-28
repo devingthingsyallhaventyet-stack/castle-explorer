@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6QkuPpTDtM7OEHr9WVMEqvXsf6gDaEhA8NGZB6oT1cNoLPq9PNDNgzavfhuM9B0nNFwc_ApeIcYBEXez5rrzKbhRgNj-Om913jC-RSTl2Ukdqx63FBaW4LJyrFlajkuPVrfMzhF_z1-VPcg=s4800-w1200" data-castle-name-g="Mugdock Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6QkuPpTDtM7OEHr9WVMEqvXsf6gDaEhA8NGZB6oT1cNoLPq9PNDNgzavfhuM9B0nNFwc_ApeIcYBEXez5rrzKbhRgNj-Om913jC-RSTl2Ukdqx63FBaW4LJyrFlajkuPVrfMzhF_z1-VPcg=s4800-w1200" data-castle-name-g="Mugdock Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6QkuPpTDtM7OEHr9WVMEqvXsf6gDaEhA8NGZB6oT1cNoLPq9PNDNgzavfhuM9B0nNFwc_ApeIcYBEXez5rrzKbhRgNj-Om913jC-RSTl2Ukdqx63FBaW4LJyrFlajkuPVrfMzhF_z1-VPcg=s4800-w1200" alt="Mugdock Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrca-RKlxZbdmA4gUexu4kgBlbXyhH2_sn5b3v9az-zBGv95yKUvDOXOwI8eFzJ-i73UX1QjEziYWs7Ba7vGbJ0I0OuEdMA1nwXSFYoapEaywr5Gh4MumQrIgYxUZ89YFNyf_xfhY83D7TxA=s4800-w1200" alt="Mugdock Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5OwtD2dsGYPi98noB-BoXqSQMxcFO9KbIHveLFDvSMwCMDRE_7TDgrynEwH134PAONnZKPQIninSWa2QdihWj2eEUmu7QqzqioVSvQ6s3-XPoxcSfwtgpyoCCeAeLgktrZfoB268V8wR4xlA=s4800-w1200" alt="Mugdock Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsyhNBCj2YpjgHy-sNvhKdIZXdCLlTLN7obOIRE8ZUd69Nkv-_9awv8ukINiK0qTB3c_PeniJib4I5jxuD54nYAXnv76EOf2_qJgFKo4qZZTmJJTJLr4SyfQuoOH3SEx4A8CBTrZzxPMcRdyk=s4800-w1200" alt="Mugdock Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPkbWpPPe8lYTg6e0IoeENjP2cXUj6jki_Go8W86lml4Lt7e8ovZ_OQF2_9FPEaV_jZwDoHmO8BP1JvmfTp-PZALOXDuQ6EtDfbrZf4NOZ_uknx1yCgl6L61rESV7WADklxzdrtCPgbq7h0cVxe_zboCg=s4800-w1200" alt="Mugdock Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Mugdock%20Castle%20East%20Dunbartonshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

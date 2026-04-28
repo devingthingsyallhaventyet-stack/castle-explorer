@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1rGNjws9ys-Bb2b9j4Ah9VQZ-4EpRsdnJYG-iDaWwh5wy-wu3TYG-waCQrbK9rrsua7gZqjS90O4QBo82X8HQdndr5zQ_6LITCXJ-qj11tJMv4Lry6JCqKUwXgXeyZCFQYVJuWLkBrt0laao=s4800-w1200" data-castle-name-g="Ruthven Barracks">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1rGNjws9ys-Bb2b9j4Ah9VQZ-4EpRsdnJYG-iDaWwh5wy-wu3TYG-waCQrbK9rrsua7gZqjS90O4QBo82X8HQdndr5zQ_6LITCXJ-qj11tJMv4Lry6JCqKUwXgXeyZCFQYVJuWLkBrt0laao=s4800-w1200" data-castle-name-g="Ruthven Barracks" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1rGNjws9ys-Bb2b9j4Ah9VQZ-4EpRsdnJYG-iDaWwh5wy-wu3TYG-waCQrbK9rrsua7gZqjS90O4QBo82X8HQdndr5zQ_6LITCXJ-qj11tJMv4Lry6JCqKUwXgXeyZCFQYVJuWLkBrt0laao=s4800-w1200" alt="Ruthven Barracks" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYf_PEe7X_V3CbkOZII1n3_mDnUhVcX2bak5dQhEbpNnGVtpJc0rIq7_vvkgn8YgzKKOgPIs3Jaii0E3J7giCD9L7I7QOHUwwRzP9AUWIk1BpfV2s8hkeU_yQUpwWNL8L_HEq8_DzGM_16xkg=s4800-w1200" alt="Ruthven Barracks photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMf1d3SDCCz_4PIbDs41JCnhY0RaXiSXADTtQQ8xA_5ArUxKeTQUbx6_5nSXiz1Jc3yIvQfefuQ8ahSpV5d8Y71yYB_9nYgzQI2or-HWcqPT0VC39QBHEUdO0-ekd521V68H3By_EksMekplJY=s4800-w1200" alt="Ruthven Barracks photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOhp73zK_TiLZEKSk2V3IIAxn2xBX7ncZJMTgzZayOD7IU54jDZnhOCxO4MRKjxmfLqgAnGLcVMOcJZTLaIHqEOgwDqJh09GNp_2b_tm0zHGtOFYRC_ywURsyH2d_chgcHjwIUi4wzewU30TbQ=s4800-w1200" alt="Ruthven Barracks photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOhdWLYcTfczjL7_Ozpi1QR6gHyuV7gjol_1U1l1XcyvQyxOxNk6EsDDAG2lUEXnodmoYX12aVcNYEX4t-OZeC4-J6bn8zJ-hOOiROWcjObxJaC1Jx2JseJwDOAPt4sD1cnvtNeNomBdGkClQ=s4800-w1200" alt="Ruthven Barracks photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ruthven%20Barracks%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

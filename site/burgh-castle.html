@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaVdKOVH9OWZermg7lTAj_JtWl6k3ozaPRJrGTggKULiY_0HtT6pkUM19UPIFcruMJdzlz5GcriEZ_TVmoyB1IsVQhBn9D0uZaFkDLQAOipJSMPpGdhv_7cJvsFYtg5YFp4QTJ5fkDzUv2yvU=s4800-w1200" data-castle-name-g="Burgh Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaVdKOVH9OWZermg7lTAj_JtWl6k3ozaPRJrGTggKULiY_0HtT6pkUM19UPIFcruMJdzlz5GcriEZ_TVmoyB1IsVQhBn9D0uZaFkDLQAOipJSMPpGdhv_7cJvsFYtg5YFp4QTJ5fkDzUv2yvU=s4800-w1200" data-castle-name-g="Burgh Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaVdKOVH9OWZermg7lTAj_JtWl6k3ozaPRJrGTggKULiY_0HtT6pkUM19UPIFcruMJdzlz5GcriEZ_TVmoyB1IsVQhBn9D0uZaFkDLQAOipJSMPpGdhv_7cJvsFYtg5YFp4QTJ5fkDzUv2yvU=s4800-w1200" alt="Burgh Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO3mbZ7Zsw9R3E8OZcE_KOBp46Jgo4R0ZIh2IhLtOrfTpVSTQnF9EhPTNtVI8uPm-hVkl6a0pC9_QseauQx1c6rftmXcDUsKPTd_UF1pI5vc4zhhqftPRi3mEttuxAADwzTyeG7_xD4k8aPkA=s4800-w1200" alt="Burgh Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJnm30TdyHGIRu9v5vGNrxzupBEUUeU2nS5LCRbnDDuubTGlSRvu5FCA16mGQzUaT7OwWkAHB9FNDSVllaB7e0epViWRZ1lApPK_anpbsyIJK_ngN4AjzDLtmLzCqIRU4gK2VpCBfjGsWfhQ=s4800-w1200" alt="Burgh Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNfo9qlBh3MZbN9avf0jaF33qq_P_ykke715j7XB1cJRWx-NuFRXmdjbHZaU4f6RD0gu_aJeAy8YZkqLsfkOSyV1BHgx1VEAHHFOMxj5h2h10j3taACctP2r27wdq8kPcz3CKi0M9yvdLUDuZA=s4800-w1200" alt="Burgh Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOnnvPm37izkw_S2UgOSgA6uMAwW_DSKEuXORlWzvp6Bpl40nR6iR-Pu8wC5hikOlwOtcsJB5cl5vwRqsHtiCoOGwABeSuzcJbjdWxWRTra3lUAoq1-imsskB5AOruOGzLVqzo6dHjHpesVQ=s4800-w1200" alt="Burgh Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Burgh%20Castle%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

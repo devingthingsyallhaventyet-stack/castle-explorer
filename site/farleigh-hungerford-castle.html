@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMt7i7Z7ZDrclDJbv1w2ThOj2ysWXyCwsh-znGVtoTKyFXlT20hAUoMf9MPtZ8MD1eJ8WVWIfxRHkIBFNko1b0Xye33El5wzGAFQ7iBQbkSOwJwJ_j2QT8Y6ZTk5xX82a7em9N1ExRNpvnWi2ZvKanf=s4800-w1200" data-castle-name-g="Farleigh Hungerford Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMt7i7Z7ZDrclDJbv1w2ThOj2ysWXyCwsh-znGVtoTKyFXlT20hAUoMf9MPtZ8MD1eJ8WVWIfxRHkIBFNko1b0Xye33El5wzGAFQ7iBQbkSOwJwJ_j2QT8Y6ZTk5xX82a7em9N1ExRNpvnWi2ZvKanf=s4800-w1200" data-castle-name-g="Farleigh Hungerford Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMt7i7Z7ZDrclDJbv1w2ThOj2ysWXyCwsh-znGVtoTKyFXlT20hAUoMf9MPtZ8MD1eJ8WVWIfxRHkIBFNko1b0Xye33El5wzGAFQ7iBQbkSOwJwJ_j2QT8Y6ZTk5xX82a7em9N1ExRNpvnWi2ZvKanf=s4800-w1200" alt="Farleigh Hungerford Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsKEzUnN6duzawvktie-8Vc8rFQ-Ldm5SG1Dj2-CLFbl628URjZQi4D_r1QdyCNBDmnKKx6QDi9N_23m414SS0PsRC0-yklmZxzniKDWXFunohrhqVhCMouu5tVQf2vucNknan5YkCqS59BQ=s4800-w1200" alt="Farleigh Hungerford Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpveC9ENhN3DzzYbFC1g2a5xTY1-NmlhcNG_ChJ_XK0C8utmWuZMgfRLvs505zipxVkk0NXVBfKnPor8q5ifdzWBtBwINo1vGS4qvzgXdI4gtiaNghD-a0zihsM8Ug-qaW5mBsoXC422KxbYI=s4800-w1200" alt="Farleigh Hungerford Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNU5hu3gevGns3iJZGC0ymkdoWeEeHEVGwOsFe4tT7b03fvgyt6Iue9QW87ZdL1vkPitsvMqZqGRqFcCuUV3V-8MDjf--uY7ZcTDHOOlclnBE9i_Nw7fEU0M1YjEk8sxWihpavP4kX02b5u1Q=s4800-w1200" alt="Farleigh Hungerford Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZv6gaFpuKQEzYcSJQdbpjPc6oC61AhKFTQGt6BD3gJeqXE-BNQOkiQHxJLECJAczqo9BmLY2pE0rocsnd28skTd5etZdWEfyFCUL58jRS8_Mw5gpiV8VFtGoiRvTARjfFGCNzxWvo77HovA=s4800-w1200" alt="Farleigh Hungerford Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Farleigh%20Hungerford%20Castle%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

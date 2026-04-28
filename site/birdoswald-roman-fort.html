@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFl-RfBQ1zKXuHqDxKgqbQxMHjzGPas5ePhZKuWI9wkvl7sLsc-DnDv8tkGhcNJCop2jz8LOSnatKef7cXdUrImXqijleVH2ew=s4800-w1200" data-castle-name-g="Birdoswald Roman Fort">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFl-RfBQ1zKXuHqDxKgqbQxMHjzGPas5ePhZKuWI9wkvl7sLsc-DnDv8tkGhcNJCop2jz8LOSnatKef7cXdUrImXqijleVH2ew=s4800-w1200" data-castle-name-g="Birdoswald Roman Fort" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFl-RfBQ1zKXuHqDxKgqbQxMHjzGPas5ePhZKuWI9wkvl7sLsc-DnDv8tkGhcNJCop2jz8LOSnatKef7cXdUrImXqijleVH2ew=s4800-w1200" alt="Birdoswald Roman Fort" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdaHNZ0EXuLHSnJGkIh_Fozt6zTK7ss8_tDEf4fhzowofgjH8aaZj_PYDHQz70Vj1WtfrkKnyQyoZu_J8z9f3dFK7dRmCVrnQ74JYuTBRUOd1UbqucQ6-DUehHldqjEMGphWdOd0rK7uIFHMnKNelwHA=s4800-w1200" alt="Birdoswald Roman Fort photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN03bEI63CljM5tJkHUq_GYQQwfQFkv416U24TZogFHt-i9AJBi9GZgXf2jnqo4SL1y19rCpgyhnMIaOU54d5WmDK60fg5J0opbHrJqSphC0LHRRkde8tNqFEd9M-9tOCPGw6dPMRNtXAFxcA=s4800-w1200" alt="Birdoswald Roman Fort photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7_IouIIyyTtgODTrh20OzsC3yqalFQitC0hFw22Dm3X0M-gQ6OK4rcF5fPn3KKs2xAkU_CAiQkF8XNJmc5a29fRZZPe9sAzL2SIb4c_kI7tPLTwQR01PNfAOi7ecZjIALn8c64iyn4IGld23ueVqZxg=s4800-w1200" alt="Birdoswald Roman Fort photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHlSUy5xblwbTyjeaZMxGpEH15Bhch1ccrUutSBLIYaBbPZhU6MUsUzq4InDQRa3E2_VUXJD54qbqB8m2cNyYU-RaGH8FjD5MvqWvk3GnaiRyNdzsePdUxEDnGdWhNuim-Q0F_sjnRNupK=s4800-w1200" alt="Birdoswald Roman Fort photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Birdoswald%20Roman%20Fort%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

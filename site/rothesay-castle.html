@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFbN3MMEBM8U3PbdmFTBEK25gzuNgITBrqguqIEV_xYC2L4zatuTfmqoRIP5BwyfYErsKHBTkqFPOYltpwMv5rbHhZ8kFGkWfg=s4800-w768" data-castle-name-g="Rothesay Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFbN3MMEBM8U3PbdmFTBEK25gzuNgITBrqguqIEV_xYC2L4zatuTfmqoRIP5BwyfYErsKHBTkqFPOYltpwMv5rbHhZ8kFGkWfg=s4800-w768" data-castle-name-g="Rothesay Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFbN3MMEBM8U3PbdmFTBEK25gzuNgITBrqguqIEV_xYC2L4zatuTfmqoRIP5BwyfYErsKHBTkqFPOYltpwMv5rbHhZ8kFGkWfg=s4800-w768" alt="Rothesay Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyJPipX5b0ZrB5hsFtuptjmvvPaldNM-uJ77w4QBGlzv92YL4khNoYBXrjraCIQk5qG4gtRd7okp1GAwEtB4SEUKcuBA0yuTTJc7o6CgFb8cLLj8TXbQJLjVrk51M0U3sTQ4mvHkLYV7FG5RpRTzxBWg=s4800-w1200" alt="Rothesay Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPykcA8T0nOiqVtryahd3k7wahbPK0loxa6nnCvFRmyVQjEKwCkGKE_otpJgM3tSjHno96UTDNNMPDxVvC3NA_yUFM1u9ojxaZYK2G93LGDfagFhy-QZjsRWiQHYxoaDYd0CQErFxbVDK-tsw=s4800-w1200" alt="Rothesay Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM4E2AZERpp-TVBjh7ez7zdCIgDXKACCeqZg7XWLgD5TZx1ZI7twWr0U2rlDlwuKOi_MYfoJavirnr4PmuGRVtLAMQPrmw8SzrVm18XT6i8rzdZkJugeSoNq3QllJTLOJZj59yyd5jQYShg=s4800-w1200" alt="Rothesay Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPjMa7jOKZ54VjlNXNG1Ixz7ZQYGvkWn2uckMr4kpGwXMFY1kAZynm4bKX6OhMvrMaY-hS60pY6XiK0evIJYo1Li5BDUOb3WbtDRfssMHvMBHWCxOfA5xxZuQ16ridPjRSAjNmr52Ibzag2XQ=s4800-w1200" alt="Rothesay Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rothesay%20Castle%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

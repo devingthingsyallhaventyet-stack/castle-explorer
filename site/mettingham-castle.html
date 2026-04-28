@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/1280px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg" data-castle-name-g="Mettingham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/1280px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg" data-castle-name-g="Mettingham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/1280px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg" alt="Mettingham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMGDcHPfh4LqOxp5AUBNZkx5bK1ymIgb6hpuFLb-des6mfJvKkczgytn9pkgWpOX5trF6XB_sV7Bq2pcG0FLf1iTn8ZfmCWN01vrpj2u7__uCrbQ-4r_BrMp6tW481kAuEjm_EzJpOnRupDBAvcpo9OTQ=s4800-w1200" alt="Mettingham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNr0NH1jgGeK2Cp3Qhk3ylEG5sFfu3rqzEAGtCJLnMfE507PI5JEA3hhkMxHixpsDkE3E-FknHxYy6oOVzFgIFu5CxbRhOHYGK9axCpBCfEnWZfcRMiO7VfntK4g2YiwmJiNnVUjCddyuHRXvJ0Rw99PA=s4800-w1200" alt="Mettingham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOnOMcmctH6BGSnLUZhagZI2aOf_lfeZjwqxXyojUFAJ9ubgPC7XdswhmYNOyFNhNDLVfJ0NNlRAI9xkFR5JlWehJrH2WV6Ns0KRYjEnfMdbn05RGZI7TrbW2v3_2Vcgbh_l3-qlqpaWq_lIgAwLQY4=s4800-w1200" alt="Mettingham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBicIatxRMd-rsmAsT-W64ZvTX8-3ZNZYyThkwLYuLxUA_bd56TMeTkGrLCBDaBT7XTaUcn4Bn3njtKIxdHHWxbWVSlN8HcDeRSLPFWoGLKhwS-hGXhiKMUSkVJ7fKdTaAZc_-AiaZqSJs2xteW7_6yw=s4800-w1200" alt="Mettingham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Graham Horn · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

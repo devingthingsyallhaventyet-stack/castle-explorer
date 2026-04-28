@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNmS81o-piuJhihxyRNx52AztUnihYfgoZs8-8uq9B5KU1BzrA-_9S3D3HZ_EeWDsl6tJ4Vbty5qfYW2jsL0GvHrpD5D-ptBHA2MtxD2HLWh8azI1kplrkpqsYrntbfpaFpCnF7ZaA6SkRi7R8=s4800-w1200" data-castle-name-g="Dryburgh Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNmS81o-piuJhihxyRNx52AztUnihYfgoZs8-8uq9B5KU1BzrA-_9S3D3HZ_EeWDsl6tJ4Vbty5qfYW2jsL0GvHrpD5D-ptBHA2MtxD2HLWh8azI1kplrkpqsYrntbfpaFpCnF7ZaA6SkRi7R8=s4800-w1200" data-castle-name-g="Dryburgh Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNmS81o-piuJhihxyRNx52AztUnihYfgoZs8-8uq9B5KU1BzrA-_9S3D3HZ_EeWDsl6tJ4Vbty5qfYW2jsL0GvHrpD5D-ptBHA2MtxD2HLWh8azI1kplrkpqsYrntbfpaFpCnF7ZaA6SkRi7R8=s4800-w1200" alt="Dryburgh Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHFH5mKY8eH9Wy798RkJ3MpzOGV_CjDB8K86cL2P75AI3am-tPtAd56_CW9TxK9srE_SzTO5kb_MrV8MGuCK5yS5d-YvqxY-7g=s4800-w768" alt="Dryburgh Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPrgeyGyTdC9WBciKHUrjXyRvDYPGTqdapgoPq1jtGF3ppAfKV8oZQ0yXtQN80HW-BveIF-dcadu1lOSu7B3XsiHwY3O2WdssOi3tmkX6LyO53OBeX9z1XPsOhmhc-QggFFWOlZqP_LpVm=s4800-w1200" alt="Dryburgh Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3vbou5lUF5mCEMFvgnngYLpr5X2KP5XpsqSZgXj6lbads_94WHk8bj_83w9UUhudEo4KIDYp7D5YWKJFEipcqcYaDg7NGj2F_eaDl0Ve5dX7OMY1k_BcBgcyWr7udhaDlGjJk4tdmr7v6YA=s4800-w1200" alt="Dryburgh Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLR5bywhgLqdrdyYq4RaG8p_kw-4UBwn6ciY_UmzeVKE59nsKKPAv6pIhfKTqKPYNMez5a2k22DyU0yUzr15-vGD3y5KC2Dy40EN3p-iuHOgk0lsFyVCqJdAId9GwKMvGd4No67iOiW4lW6g=s4800-w1200" alt="Dryburgh Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dryburgh%20Abbey%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

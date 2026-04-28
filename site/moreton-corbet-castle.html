@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOAjAzd_qs4DXIxksbQgPynkAq8AYMz6uVzRLYuLJcq7fvDG8iv5XPA3_EOZoVw-FkpFdGXMxZz5mkzVzZvcvfv6kIs6hocloL4Hrp5HqLSrqPNqAo6yjpUBsF6QL44f_S6tpPpVGws7zt8olk=s4800-w1200" data-castle-name-g="Moreton Corbet Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOAjAzd_qs4DXIxksbQgPynkAq8AYMz6uVzRLYuLJcq7fvDG8iv5XPA3_EOZoVw-FkpFdGXMxZz5mkzVzZvcvfv6kIs6hocloL4Hrp5HqLSrqPNqAo6yjpUBsF6QL44f_S6tpPpVGws7zt8olk=s4800-w1200" data-castle-name-g="Moreton Corbet Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOAjAzd_qs4DXIxksbQgPynkAq8AYMz6uVzRLYuLJcq7fvDG8iv5XPA3_EOZoVw-FkpFdGXMxZz5mkzVzZvcvfv6kIs6hocloL4Hrp5HqLSrqPNqAo6yjpUBsF6QL44f_S6tpPpVGws7zt8olk=s4800-w1200" alt="Moreton Corbet Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMx7NUOTMmTHCki51R3iiw7_OYLHsp-9-D8neobm72YsZpzWB7sdpWsAL0Y05tnbtO1swRJDotcn5mSCYY1OZIACZw_Ce304kO8u0XYB3TUl9KxonsTQ3x_HKNB8GR8BRU5ILnIqqJ6fmg5=s4800-w1200" alt="Moreton Corbet Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNF0Gaq0_5nNw6NHozBcqVAH8Yu7ySKzIAh-4xu4YGE1i-WYcsC5XEk6ki_Gv00lyadfC6NACiB5EEwh8zWASNc7ROvCm2Hv1juaKuaPPZ39_7G0GpgYxIVAFP5lf0onGguHMrhJnki8e3Igw=s4800-w1200" alt="Moreton Corbet Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPziiPkcjktexG7XGZ7umYbBLRL_gjf0S9qHtsjbOV95_PFW40dcwqZGV-R2EVFZKRCu-A0xNUtYtiWohcMWqAW6bFy_4Jsu1AYiZQ53uGnhRRaq1ozejA8iWhtHIjcEkPzI2YfZLm5uzPbUg=s4800-w1200" alt="Moreton Corbet Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOnoSdod7IYzSeKmqUORRY5D9QXXSRBgxkzzt2O5lSexrSQmchzkMqyuNiCa8PewiUUTJiWjGJZ0Bv0lfVFUprdOP7Vb4Q6F0VRnG_D1GSAJC_eRFfe6mXJvua5M3ApIc1bgX67DxqgT3lUMQ=s4800-w1200" alt="Moreton Corbet Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Moreton%20Corbet%20Castle%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

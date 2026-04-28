@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlHBRoFFxoBJ2RDQKo_XAZHwzLSNR4AuB8_E9-vhNoo9F8Y48w54ttBKhqI09hxAVhJ_WeXWLKTM0vdgcqnn99i2KXrcOUoV7NyAlSD5YlNZToRq42r-vqYuprvj5nsoX3nomaJkRwqjwSDw=s4800-w1200" data-castle-name-g="St Botolph&#39;s Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlHBRoFFxoBJ2RDQKo_XAZHwzLSNR4AuB8_E9-vhNoo9F8Y48w54ttBKhqI09hxAVhJ_WeXWLKTM0vdgcqnn99i2KXrcOUoV7NyAlSD5YlNZToRq42r-vqYuprvj5nsoX3nomaJkRwqjwSDw=s4800-w1200" data-castle-name-g="St Botolph&#39;s Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlHBRoFFxoBJ2RDQKo_XAZHwzLSNR4AuB8_E9-vhNoo9F8Y48w54ttBKhqI09hxAVhJ_WeXWLKTM0vdgcqnn99i2KXrcOUoV7NyAlSD5YlNZToRq42r-vqYuprvj5nsoX3nomaJkRwqjwSDw=s4800-w1200" alt="St Botolph&#39;s Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQX0VtEiMWpQjhmBV--Q8iUPZ0-G2d-8J8r6BFTMjcvDfej1j6DdF4s-m_zT_rTfgxYB1A5laz6DQDzvaYF7IYpXYBF8JaEoDccxRj1GKo26vinQUVbgRatn-1FDkXGwiuvOmQxMA_4IAGIBE=s4800-w1200" alt="St Botolph&#39;s Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWpVHaNWk0-UZ7UnOCQrgu357Cp8O_yFkz8CGqOMQR3oBM28T8bAPjOajERrMR8Ft4Fi1RbSVURYkXrAnkzrY-873YQ6QMzryN2zbeu5RNuIlJbOEaJchnZp3wg3Z0eXquose6IvkOD9W92wI=s4800-w1200" alt="St Botolph&#39;s Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_4_eiT9Vr5WC9YaOXGjrnDOdiddMz87XS1jDTxIcGdUXXMAgYc8HuppY9gfVhHkVREEqp7W4EB8N_cnJ_vI3423zFyKONWv3vEJZiKH8JBOv7WCjNJYBi4mZIHFlptbZrcu-QRuy6nBKGaQ=s4800-w1200" alt="St Botolph&#39;s Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8JUWmiNkoWahSoMMEpCft4nYI_EOr0rkz1KCDvDbbZ3NOgHGKbFLIEyYjNDKM6bn9VUxTDanWBQHR3W9q152eKHF3u4HXsZ2xI3rZxw2jvmBkltp9O17paMNZJYTKfEph6HPCe0BhmTin67Y=s4800-w1200" alt="St Botolph&#39;s Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/St%20Botolph&#39;s%20Priory%20Essex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsCGVCx3SY2Iy855gdfUkttqdmlEYSM9q-kge26IE2_mnKvBHmwEbgV0GCwip8MbB1yDvwv4qdIKPNuU3_mEN00VKgcQk9DcXesLxXMhk0x2h9-ZNpyiSGRA22_7LqMAGUJBZoC_E6wnx_=s4800-w1200" data-castle-name-g="Camber Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsCGVCx3SY2Iy855gdfUkttqdmlEYSM9q-kge26IE2_mnKvBHmwEbgV0GCwip8MbB1yDvwv4qdIKPNuU3_mEN00VKgcQk9DcXesLxXMhk0x2h9-ZNpyiSGRA22_7LqMAGUJBZoC_E6wnx_=s4800-w1200" data-castle-name-g="Camber Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsCGVCx3SY2Iy855gdfUkttqdmlEYSM9q-kge26IE2_mnKvBHmwEbgV0GCwip8MbB1yDvwv4qdIKPNuU3_mEN00VKgcQk9DcXesLxXMhk0x2h9-ZNpyiSGRA22_7LqMAGUJBZoC_E6wnx_=s4800-w1200" alt="Camber Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgdAnxdE16QjUGl1BbbKQEMS1F-SMh2Dc8QKJ-1-uFDFFeQ36f61OhKgWbK7QIsr4Y4fMBVB3fq3SEoM7N6z60FEVII9diRGT39vYN7xRZ0P1pRCcEj6fUeYAAUQ1rabYNXZpk2ycEFFQaNIo=s4800-w1200" alt="Camber Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgl_x0yfItmFCqXCBAmcXvSIfasT8Vbk0XDNV32liY9ZFt9lGL_lJqAGxg1WO1xvBSEqfEKS-VE4vYw1bJd5hD27A-xkdXpOningcHwW9MG5WIW90XpwlYmdGmChCaCv5ncEAyWokly-r2m7nmvsVdkA=s4800-w1200" alt="Camber Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQ2hnpzeKTct6iKvoY-m5JOeUtAP-E-u7jF7bD0Ke4aU7vfpqnrM7MJG-LA0oHZZLCtiODbaA7Lp1oqOQJIXcCA2Q7nIBBSA9mE88XSSK5nTuoGYOv91RsV97yjeGXP_AklUP2TVtgZgJYXA=s4800-w1200" alt="Camber Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNpMgtuSAMbAtw-oTraRWgAMnqM-fajbIyt_p6zHsY1ZRu9Mp9FqPQJc9DoYev7Hlx3dhsHWyl22gzvIvNifHBpR2ujhDcZwV1rR_WtILk2ZjU1Kv5qOTS9-IOQ_mg04gZ_9o4STiUfWzpJ7g=s4800-w1200" alt="Camber Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Camber%20Castle%20East%20Sussex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

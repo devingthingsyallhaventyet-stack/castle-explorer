@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGeNupMG_lYaL8AaBWY16AS1JEgKfaIOhnOvwcG-X37dh4eRtElIC8mEikFT4wRWGOK3tr5PiSZacNpFfjvqZR8csYyhPvuOds=s4800-w768" data-castle-name-g="Huntly Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqGeNupMG_lYaL8AaBWY16AS1JEgKfaIOhnOvwcG-X37dh4eRtElIC8mEikFT4wRWGOK3tr5PiSZacNpFfjvqZR8csYyhPvuOds=s4800-w768" data-castle-name-g="Huntly Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqGeNupMG_lYaL8AaBWY16AS1JEgKfaIOhnOvwcG-X37dh4eRtElIC8mEikFT4wRWGOK3tr5PiSZacNpFfjvqZR8csYyhPvuOds=s4800-w768" alt="Huntly Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPqJhIHdnAlqkIf0lrV1kdvdMCz9DhA9NoLSFpWyMuFpVFM816sn3Cnn6YoUbGsQ0-JHGIIdJm-zMl0JWggntUm_0Ky2ELpYN7UamY272qGq8MiMHJNRGoWT9VxssmN5ATs-8a19hinIF8E6w=s4800-w1200" alt="Huntly Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMCX6cpH47Szgd71mcX23d11YoIwxVymGnzreYkunNwOdg_-01HsVev1OdnkoAO9OAPQz1NaHO2LyQVihNlONOyuRxpHGg4Tfu9Am4MCrLA3Zxi4nh08graBBm_fKRElodP-hS2a7hNGKLvsuQ=s4800-w1200" alt="Huntly Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZC6A7MPKrzLbd6wqMU4dRVkH2j0pAIe8DDBGRRj5ycl8ieVkWtAxuCn1tqbvrBgzNZsiI8QiI93_4uhYWpGsGsLF4t8_xEoiIeASqGPM-olGDJDpSLSY670yWRCzx9cCOyroRI87GYBjjgkXfT5Un=s4800-w1200" alt="Huntly Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMh2JpGqeAFjF94KG9oX-h2cXZLY8Y5kLPcbLA5w36n0Wr33pfmFZanqz_59NUUQAdwyTrxNNjhgv_ENASSsAmCo5WzeHTn-EXybtk3ovt8bj3592GwuEL5eZjLiNuUdlatzBHn3Z08cxeBbw=s4800-w1200" alt="Huntly Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Huntly%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

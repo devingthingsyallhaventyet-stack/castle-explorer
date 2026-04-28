@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnfnkGzwyojclvxW2LR0_-biKJM9rQP6x9JlFWIn2s0QY9pFM6Hlx_FLd0NWdRTDz4D8N4P4aDblKZ-EWxVKq02SQqpE8X_snET4tPXwVPsgUtCEa8yEVVS4uOE2OlSNuUSULUREnbiCvRkdVmATUC6g=s4800-w1080" data-castle-name-g="Castle Leod">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnfnkGzwyojclvxW2LR0_-biKJM9rQP6x9JlFWIn2s0QY9pFM6Hlx_FLd0NWdRTDz4D8N4P4aDblKZ-EWxVKq02SQqpE8X_snET4tPXwVPsgUtCEa8yEVVS4uOE2OlSNuUSULUREnbiCvRkdVmATUC6g=s4800-w1080" data-castle-name-g="Castle Leod" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnfnkGzwyojclvxW2LR0_-biKJM9rQP6x9JlFWIn2s0QY9pFM6Hlx_FLd0NWdRTDz4D8N4P4aDblKZ-EWxVKq02SQqpE8X_snET4tPXwVPsgUtCEa8yEVVS4uOE2OlSNuUSULUREnbiCvRkdVmATUC6g=s4800-w1080" alt="Castle Leod" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAgYAOazsM7Y9DUTAoQMGlgASF7rkb8gsWYDioXY18Fh5xMZxe_KkYVSOYZ8RkJZmHsJCfEb24KjrVTra8wgOPvQ2-5uEqJ-Q6P6uG-e29omd4G0ETC69euysrEL_Ut4ScJh0PIKUFyrdhyg=s4800-w1200" alt="Castle Leod photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0X1kSuGaPXYvbW8_sxzTxWfI6k6TeazaQmve-R6vNYsQMpLSQLNofw2sqccKluhYd5BkI7VZCdTSE1HewMw0d4T54K7sm0c4lVPFfBjzdfNEACkJaBoaGSUSSslAXFwhI4Hf8Y4DmZBosrA=s4800-w1200" alt="Castle Leod photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXDXwzh_aQgpO1_QtuhRMV69dCN7IP70qcsbim-WZmcJTlRTthIYVaK8kOKF6zYyz3jHTWA1GH1YXfj1NOa-BN3iYmmCTCZJnYtztzKwt8l7pLPV4KcD8ly4pMm69MwotJ_Be-FS0CiyBwxOo=s4800-w1200" alt="Castle Leod photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPYmDeIX74DjyajXE6O8j1aaajWztGZ-nfj6NqeigUYFQIiHqbn5XvXpjEg5C7zkBsPcMwiXVLcRyI6qnuNEKmX80p4MND6UpOHsmvcxQQRZ-J4hiKK8xTt-In1XlzO_hNIvPZzvDtxF7xTWA=s4800-w1200" alt="Castle Leod photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Leod%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

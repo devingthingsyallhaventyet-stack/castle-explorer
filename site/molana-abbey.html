@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMk5-eajNWemCXNH1dGllM7GhZwiHfJM69-QSLzx6ltcJviiYfX1Pt3DXmf8hg0H8mO7u_5HoUKl0VuVi4XAfQk8pYqP6kOirwpb8UQ0JNarsDOfgm9ittuEAgdhovoYr7qf5g7LXQaZIig-40=s4800-w1200" data-castle-name-g="Molana Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMk5-eajNWemCXNH1dGllM7GhZwiHfJM69-QSLzx6ltcJviiYfX1Pt3DXmf8hg0H8mO7u_5HoUKl0VuVi4XAfQk8pYqP6kOirwpb8UQ0JNarsDOfgm9ittuEAgdhovoYr7qf5g7LXQaZIig-40=s4800-w1200" data-castle-name-g="Molana Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMk5-eajNWemCXNH1dGllM7GhZwiHfJM69-QSLzx6ltcJviiYfX1Pt3DXmf8hg0H8mO7u_5HoUKl0VuVi4XAfQk8pYqP6kOirwpb8UQ0JNarsDOfgm9ittuEAgdhovoYr7qf5g7LXQaZIig-40=s4800-w1200" alt="Molana Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO1sw1M-RPetzN38QPATdWsTVs2lvV5fEwvMt1PVCzKTUvijQRIsiBJXF8QtrT5El3A3GJSxo9qoPhwxIaqA5BXMp0CQdQc2qIoM05j_aQx9gAZB54kwLdrrXp-Cx-auwOO_Gq8EEiCmIfJMrU=s4800-w1200" alt="Molana Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwgQA-zaHtsqUK8jbJKxgkUbGvIfCqUSstmSOTmT05FQc2yj3d-hCHBT8uwWs61eo8J1DAPYo6TA4M4iKZrR4412NeA28F0_pieYjbaPc1rKhPqpeMsk5qU_xmTPlzyKLqEfIkVLY4Pg03eA=s4800-w1200" alt="Molana Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPghPIdoNBbTDKPpWRvVdBgqZD_WDJ7emvsU0kNAq5nFAIQ-JcW7EFEA0dwIb6XVPQO-iwUjN1ktAOnTckSB5eZxhWHCmj_ZpSlrBVPgHPkyxJ-F6r4lJrlAkkjCGl4K6FTS7Nw8KtI2ZcjUg=s4800-w1200" alt="Molana Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHSOXeFGgAqeE4ZrW6CuTJPZ8SH7blBUW8JwR86lhpcJlfsQAkXCbz7AW_Zm2g5WSXiPoKXcBmM7nxGxjqfP2wW8GbKBMo5huA6LRyv3_s9EfWOMkYHKzYkkFiocU92t2lhkmo3AEk7i7UIBJuzTSU=s4800-w1200" alt="Molana Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Molana%20Abbey%20County%20Waterford" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

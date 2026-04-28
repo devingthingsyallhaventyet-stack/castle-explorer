@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9x525NA__rLZzkV51hps8YNkNi1E_mpypQtHgbya4rw9QqJLFeHbTB5f67D4OWm3Cr2EgT_z2GRSj4pe72srN1YWP-v6wQs9hnRTx4Fg8GHI_zUy-nQFuHVEV8R6VvsC5v4cME1s_iHAVsU8=s4800-w1200" data-castle-name-g="Brodie Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9x525NA__rLZzkV51hps8YNkNi1E_mpypQtHgbya4rw9QqJLFeHbTB5f67D4OWm3Cr2EgT_z2GRSj4pe72srN1YWP-v6wQs9hnRTx4Fg8GHI_zUy-nQFuHVEV8R6VvsC5v4cME1s_iHAVsU8=s4800-w1200" data-castle-name-g="Brodie Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9x525NA__rLZzkV51hps8YNkNi1E_mpypQtHgbya4rw9QqJLFeHbTB5f67D4OWm3Cr2EgT_z2GRSj4pe72srN1YWP-v6wQs9hnRTx4Fg8GHI_zUy-nQFuHVEV8R6VvsC5v4cME1s_iHAVsU8=s4800-w1200" alt="Brodie Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMb8i3XqEmU1vT0D3HRvsWP3oxfUkLJe03wRKKRPp3Q4_as08-HmagWcbcaU2k11W24tgbk2if3oA686_lBXFbDBKE2qwjDNX9KgHkJizaOLbANJg2evYd8irJvDQgsNPT6KU1nmufKZ-zqn9Xrp1ua2w=s4800-w1200" alt="Brodie Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrHi9IOVgFIIbc2fhmvezk4b1A36eOvUL4rIhza8EuNLXM5WWksLOl8xXLICgCLe_gp5CDFuSyovtpZVw2VRFS5WHezlWogdWy-k7jL15LuYaKWT9-NuJUOjj3_mtzh1ZibnMZYelfdDMa1yA=s4800-w1200" alt="Brodie Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpwZvvnnLr_517T0ev-16U3srKy0FEtNW61w2ZO9B2deyDL5bwi0Xslk7afnnBQlC8wmu8eJkBQoPr_GSmRpNiHmFJJdi4sPHB0XbVPjYbvtD_ncb9TXDHrkCb1BZFk4KpEWoXAxdRztgsFw=s4800-w1200" alt="Brodie Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMBnhGHAA8dckhtQl5F-AqCgTRraqmGYRhtQBA-QihL-6o1Q7BVv6D10_FhWaIrXJomcd1wZGAsSrsU1dWcwEUMPCf3bzrj8oqyB38fOh9yFns1fFXUqL9hm35OIlsyxFxcdDT9msbcHJHJ2usgDOub=s4800-w1200" alt="Brodie Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Brodie%20Castle%20Moray" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

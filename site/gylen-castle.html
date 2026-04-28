@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_gq6gMeFMJ3C4otWC8GzOGLogkiZCoMGqRpym6i0ROjOGL3pADX8kD9jb_5QdZnFxtN4gpBe9YGpDtqptwPQsPxnErkZNh-h-nCSbww2KQnugUxaBdxurqZj1AgHoYRyA627V6e8pGAs1=s4800-w1200" data-castle-name-g="Gylen Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_gq6gMeFMJ3C4otWC8GzOGLogkiZCoMGqRpym6i0ROjOGL3pADX8kD9jb_5QdZnFxtN4gpBe9YGpDtqptwPQsPxnErkZNh-h-nCSbww2KQnugUxaBdxurqZj1AgHoYRyA627V6e8pGAs1=s4800-w1200" data-castle-name-g="Gylen Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_gq6gMeFMJ3C4otWC8GzOGLogkiZCoMGqRpym6i0ROjOGL3pADX8kD9jb_5QdZnFxtN4gpBe9YGpDtqptwPQsPxnErkZNh-h-nCSbww2KQnugUxaBdxurqZj1AgHoYRyA627V6e8pGAs1=s4800-w1200" alt="Gylen Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDGrtD1w_oj2agaLOi0NUNm-F1JPlEHCPLHRJTsh-URRSDopjHbeDo_yiyU2ulOHkwCFXwNaKqR4nrWFSGG2Wvy2HMW2llBNlQYOcCVWBo3u7-p4GOls00nT0Jz_j9_zUtxWpiR42ltG_BOA=s4800-w1200" alt="Gylen Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2_sOMXGLUA2SJ5jSnLP8xc9fV4ydNLw90RU2h-5XRb4qipHKLd_E_ZxPf6NFokhF3uhPk2eVgRVfPFaLpf_6ACeDlD6cTQ6URYC3TB8gU5u0-cvln76Bqk8Kfmadi0gXnwzb-ALOs6SRC-TE=s4800-w1200" alt="Gylen Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHEFT_IKeGBYZivX3MSyVYZx9VzeoCd94lko5nWjkRWqYJy6GHxf-8YcROAJphn3_7f5K4KdvHsAEOFjZ4lgujrdYAaMArVwHT9OmuJ_io3uWhXhmvtiMRGCDmir2Alaq3iNBd5lgUbq3X=s4800-w1200" alt="Gylen Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPO-UGrnuHo_Jcvw6GJHI_yIPcRDKcgCvZ0r_eRhQAY1A4ely7W80sNrn5GB7sKUyzPO8I_e1lZ3vx52I9qAeV1PxEghvl9hNA7X471PEIX7a9tA2eci2hySgj8YgGo-EmCFHmofeRDgS67rQ=s4800-w1200" alt="Gylen Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Gylen%20Castle%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOi-2p6954CXULsTE6feBpDWeSJSV45M2hUae-x07oMSQ4rrvYXPoVHKlHM4apD5tpaDSKtyDuTBpDYKa01RBm7VegqOrMq7tMVGH41W_xxJpA8mDWLwKr6A82vf8_e5UG9wb3U2-ST332ZTg=s4800-w1200" data-castle-name-g="Newcastle Emlyn Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOi-2p6954CXULsTE6feBpDWeSJSV45M2hUae-x07oMSQ4rrvYXPoVHKlHM4apD5tpaDSKtyDuTBpDYKa01RBm7VegqOrMq7tMVGH41W_xxJpA8mDWLwKr6A82vf8_e5UG9wb3U2-ST332ZTg=s4800-w1200" data-castle-name-g="Newcastle Emlyn Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOi-2p6954CXULsTE6feBpDWeSJSV45M2hUae-x07oMSQ4rrvYXPoVHKlHM4apD5tpaDSKtyDuTBpDYKa01RBm7VegqOrMq7tMVGH41W_xxJpA8mDWLwKr6A82vf8_e5UG9wb3U2-ST332ZTg=s4800-w1200" alt="Newcastle Emlyn Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdWPlbTPO3Lxw-ovP_nQ4A0SJJpMQZPMJIrACvUvO9NfiqT7cBwanpw6VwV--jOS80TfGZSaW4hzDRTmNY_RnoJcc7H3C1IcnNzGJkwUJ4JqL2mPAc__iVbe2QTL5KcOpRS4CtEQIByAF2f4R_7K_CmQ=s4800-w1200" alt="Newcastle Emlyn Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLmbJNPB4O7wcU0_G_vRVskViQjDGjSB6UTyYw4dCe5O_6uenE5l7O-LYkXoh-7svUA9IFsl402kKLKHfItj3O5w1Cq2odG4AgafM5dkT0GixVoqPmzOhdyzkXpcIQikAAJR7-Ly5UUqldGL5VxaQ18Q=s4800-w1200" alt="Newcastle Emlyn Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPynfJ_M0grO4yq7s1Obra92Srl3wwAJCigYaIWZenBeB3YnY9R15JKW2wEeJ7LFfTKrBwpmeQtw0qzT_Q72ZT1TelVcy6OO9e6I8g2Ik7mRh57ZmhtqxfjMOB9vczoEVlxxMf1Kz1ZAyBxxcM=s4800-w1200" alt="Newcastle Emlyn Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_0L8uxv0ZWSZgxMbwJodSIdXEqg2w_t0oub7JAPqQ-G0ZVekS2jYqOVxl3A0T0yF6CTmvivze2UdFzIgu0aaqS7b0V15_dpQUQZdR6odN8_50y7gY4lA76KFRUUkx-rvEoTHP3Qme2dQPxg=s4800-w1200" alt="Newcastle Emlyn Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Newcastle%20Emlyn%20Castle%20Carmarthenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

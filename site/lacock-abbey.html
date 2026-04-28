@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOldF9QBBw018P_hMshmcT0yFSFjyZiDRUWkk-HoektDi4UaLYSUWC3iWsVMoZU9pY78kfURDcVx8nr-qJ8yEF0IwHB8fzSkPh2o9W5nvr085ChYMifv34pq0-jLh-_Y953XZIp5d8cwOCxRQ=s4800-w1200" data-castle-name-g="Lacock Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOldF9QBBw018P_hMshmcT0yFSFjyZiDRUWkk-HoektDi4UaLYSUWC3iWsVMoZU9pY78kfURDcVx8nr-qJ8yEF0IwHB8fzSkPh2o9W5nvr085ChYMifv34pq0-jLh-_Y953XZIp5d8cwOCxRQ=s4800-w1200" data-castle-name-g="Lacock Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOldF9QBBw018P_hMshmcT0yFSFjyZiDRUWkk-HoektDi4UaLYSUWC3iWsVMoZU9pY78kfURDcVx8nr-qJ8yEF0IwHB8fzSkPh2o9W5nvr085ChYMifv34pq0-jLh-_Y953XZIp5d8cwOCxRQ=s4800-w1200" alt="Lacock Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOhX5EXQlhITT1VOtD6M07iGYr8jCLMjBk-iai95mFd-MpK2N7Y_36KbYpKtRCZF2L5hW-300lwT78MNU-ZXsqDZy__wm6B8xXSMeJS6oDozc_BId6dd-4aBJ_JwKy0CxxYNBe9LlLL1ZCzng=s4800-w1200" alt="Lacock Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQoxHMOFMEedJErsiL3qxfcoVflSv9-4hyt99hZPe5Src6kRcZgLxqVDhFZsCgvEy0vw_edK0hwUbDavUU-S9KRPBoJ7K6c4CH0QyPLgQkRNo9Utgp6SBkQ1agHSwDN4dmYq8KosAfohbBASE=s4800-w1200" alt="Lacock Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPxaR8gz2w1t8URSpho81A7mNDuvzGQA2S3yKS6dg8N1Z3qwtJG2UH3kIot3MX4TCOqoJopFgTCPd8B1jqeqD2ZcGewfUKzi9_JS8PCJFVwNOGmgsjBOGKFZc3THHApaIskO3ynveARu_jL1KEMgJ8fNA=s4800-w1200" alt="Lacock Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNG_UQdEpQcqk6MxG5grxkuKekIgQaZD1YdZsHOY9lOofGxUP_MEuF-BuWKN-AWDLhe3qQpE72vIfYLmm5CgOicz7xoyUrCKpwiXK0wJ_9RAaUBAfbcfYPUAwAQOlCEdNPNzjZ8b1JU5f-QtQ=s4800-w1200" alt="Lacock Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lacock%20Abbey%20Wiltshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

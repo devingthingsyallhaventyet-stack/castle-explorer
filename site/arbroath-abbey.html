@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEtg5LA8O65ceBpljDF5MGtqSLgr9a_COozM96LrbyyTblawADN5StM0yvrqVUG2Yn79rXOmrXxiuHMCTtSmNHFxMuYQMlg6Is=s4800-w768" data-castle-name-g="Arbroath Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEtg5LA8O65ceBpljDF5MGtqSLgr9a_COozM96LrbyyTblawADN5StM0yvrqVUG2Yn79rXOmrXxiuHMCTtSmNHFxMuYQMlg6Is=s4800-w768" data-castle-name-g="Arbroath Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqEtg5LA8O65ceBpljDF5MGtqSLgr9a_COozM96LrbyyTblawADN5StM0yvrqVUG2Yn79rXOmrXxiuHMCTtSmNHFxMuYQMlg6Is=s4800-w768" alt="Arbroath Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8M11CaYAbdxB_MdENAJUL22Pu5IQtc9wdPDgipIpcX605LGhnENXF8uwKSstvLPCa-CBi5OOGHs9gx7I6DJPQBWShkfutpJuWRxHk_c4I3-POsl8BwwS0zj3FwT4fXSQ9CGSMacpqHfPbgRQje-_UGg=s4800-w1200" alt="Arbroath Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOqMrEfi1cWTIE12G2FLFLt6z-zLpHHTIvau9PerxYvh-MDy7E_YO8WHP7Yyd6Fgt74GR4tKNx7275cKOCLIRzlENCZdF1CYVI-naos0-rXrGnbUbf2O_zXU9s5RtledVaZAJtX7Pwl3mS_A=s4800-w1200" alt="Arbroath Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN97XdegtgSrF9400m1ScEVVMOXJsuSQ1npDn7XjRiUeiO_4ko7ThI63JKEB9XIXT8ADvCxaowJYII6c0PHAbL39jc1HzoJlfGBVW2hM38gxhIRFkXcm-klAZ_JVmdqI1r5Zatwe0w6gIARktw=s4800-w1200" alt="Arbroath Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrzVkrGgJawLB_OU47m3GM3X1jpgLhFarE2lgQtZD31hvowqZqV-W8Qyk2-ccJrA1nLoNHgapDzfzPd9yqD5hs2n01IV0o0_zl9vA-ftRsJFqkZya5uIOCGRGko-aHQ8oqcYaCB-WZmJYrWCuRjse1wg=s4800-w1200" alt="Arbroath Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Arbroath%20Abbey%20Angus" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

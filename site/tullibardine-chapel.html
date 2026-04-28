@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5AZyQ8NGNM8SidFAz1QRCNgUcpF9Po5Lp0El0hVBn1NCiUC5WNs871GAyRL_NMyFHS0o6-hbRxYf7XLZ9-M6topJlDuOMQ8OGNMWTkzhBhpaZd7H6Oqds1B4G6QamsAVO3I4WsQAXJIm_lOGnLpyXNA=s4800-w1200" data-castle-name-g="Tullibardine Chapel">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5AZyQ8NGNM8SidFAz1QRCNgUcpF9Po5Lp0El0hVBn1NCiUC5WNs871GAyRL_NMyFHS0o6-hbRxYf7XLZ9-M6topJlDuOMQ8OGNMWTkzhBhpaZd7H6Oqds1B4G6QamsAVO3I4WsQAXJIm_lOGnLpyXNA=s4800-w1200" data-castle-name-g="Tullibardine Chapel" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5AZyQ8NGNM8SidFAz1QRCNgUcpF9Po5Lp0El0hVBn1NCiUC5WNs871GAyRL_NMyFHS0o6-hbRxYf7XLZ9-M6topJlDuOMQ8OGNMWTkzhBhpaZd7H6Oqds1B4G6QamsAVO3I4WsQAXJIm_lOGnLpyXNA=s4800-w1200" alt="Tullibardine Chapel" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOsXA0eFiJFMS61ZIu8_fC1Jj2Blhl6P1bcwC6N4MFbFKdrMBodpVSzCbxLWxlQyGbe5zut1RZNoygAGR6017ovQq6xeDFoHipahYkdfAncjHHabK0k3k-A-v75WNyuQ_pN0Np6rUC5N75zNCME5i2oNw=s4800-w1200" alt="Tullibardine Chapel photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIUrmSZlEJgTW4jT7rA8ZtKAgLJgiVUMVXdPFKAcECdVKumJCGqBbvZCUuyocKTwsGT-3UVi4u7-PrGCEyBRxWmS3f6zEYsWcGSIUpfnT22xC0d5alsMmIiUL7uDd5Hkb77ZLm_TYodC0K=s4800-w1200" alt="Tullibardine Chapel photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMvu5VmROQhLjqkMOzNQ6XbeEa6p9wrgSG7dc_anZipswu9mVgAsw68YEjF8dZapgntrvdZ-opxraNcKa7R2HXv3520VHt9Rni9U71zKsOMvDE-tFzgV3y5JLbsHDAdaaCqTn_WvDpHmBT2BZDeWD55YA=s4800-w1200" alt="Tullibardine Chapel photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNMJpKoq7bXI74K-W5VRZfQcJljkCW8NUwQYmUXq_Q1QfTss8ltdDy28-hJUVWOuYkmwTR9R82o9ip35AX6OEOYFWVaPfJJG0OWJzSjFDtVGNTyIEL_cnmf8eG67mIhWyORCUBToBeYN_7VIDE=s4800-w1200" alt="Tullibardine Chapel photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tullibardine%20Chapel%20Perth%20and%20Kinross" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

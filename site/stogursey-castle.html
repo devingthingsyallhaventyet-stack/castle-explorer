@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOYycSEmR51HSVj9VNc7EHCO-m7HyV8V8YyH2KmoY5meEluXwoHdlEXzVf-szvML5KdQ_EiZlZFepcfpy3N0N0Ten7wdzKj5NGpAPyWkHgjz-CVzMif9kCX9N8SeVcHTGyUegNGxjr9dooqRY=s4800-w1200" data-castle-name-g="Stogursey Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOYycSEmR51HSVj9VNc7EHCO-m7HyV8V8YyH2KmoY5meEluXwoHdlEXzVf-szvML5KdQ_EiZlZFepcfpy3N0N0Ten7wdzKj5NGpAPyWkHgjz-CVzMif9kCX9N8SeVcHTGyUegNGxjr9dooqRY=s4800-w1200" data-castle-name-g="Stogursey Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOYycSEmR51HSVj9VNc7EHCO-m7HyV8V8YyH2KmoY5meEluXwoHdlEXzVf-szvML5KdQ_EiZlZFepcfpy3N0N0Ten7wdzKj5NGpAPyWkHgjz-CVzMif9kCX9N8SeVcHTGyUegNGxjr9dooqRY=s4800-w1200" alt="Stogursey Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPfLnx8DCYOKa1uAAV90WNen42gPApxAdQZDAGO_ftXt6mULamxTxb7KYNHWGgXr4u62p_PHQpdM3zHicECWXLbH-p2MPB4Ms0SuWlvFQdI24stcK1GON0aD1tCtQSsfrbv9FY0s1eTgWexkA=s4800-w1200" alt="Stogursey Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdAACoroWP7rJ_qd6HS37RrgO-GnUGTxxGJ0LRWinEwZWgc1iKdW-qn81fq-ucMDHWpD4kzIsoqdL3YQp0hAqG-qUQuIaUElbXZ_bl4T7qu0Jh-WEZqwaH9MsjoHh15uUvNGlQyJzYKfbK7FY=s4800-w1200" alt="Stogursey Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCf-HsUXBKTjWY9vWWXX4qWnDSPjesfRpCUf07AqoeNAYxHeTgQaRyuaKbiEQXs6cY-XSWHqVhx_iN_9vpdRirGoCMOdPLZn2kwbNu47ar-h6HWRFHqJ1_R0HjKICyOf6_fXdgMUoHxPI5rw=s4800-w1200" alt="Stogursey Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMPp5PVtKIpXu_yD6UdmVObMF-IOzSLzex5SqLaRQ8icZkrY-kl2jkmGphy9RgMED_8NO5nrWQOUP4NDOwAEiL2mfCh8a-QFrcmdiYFy919GVfjdC2Lx4UJCbEkpeRUyLj3fwLTox2HWO0_PA=s4800-w1200" alt="Stogursey Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Stogursey%20Castle%20Somerset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

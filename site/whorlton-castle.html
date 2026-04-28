@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNkIHoVXleu1w7ZhVtoWUv8aY99mdKY2zpg4zOEsaWdAJcNeJOXkqMkZV_xW2zlukby6NuR0KeGBXnayMfu6M4EW678_R7KR03qu7pXX7G09C0LQhdBUJow9TjRzlnduDrOwHIowYalOtj=s4800-w1200" data-castle-name-g="Whorlton Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNkIHoVXleu1w7ZhVtoWUv8aY99mdKY2zpg4zOEsaWdAJcNeJOXkqMkZV_xW2zlukby6NuR0KeGBXnayMfu6M4EW678_R7KR03qu7pXX7G09C0LQhdBUJow9TjRzlnduDrOwHIowYalOtj=s4800-w1200" data-castle-name-g="Whorlton Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNkIHoVXleu1w7ZhVtoWUv8aY99mdKY2zpg4zOEsaWdAJcNeJOXkqMkZV_xW2zlukby6NuR0KeGBXnayMfu6M4EW678_R7KR03qu7pXX7G09C0LQhdBUJow9TjRzlnduDrOwHIowYalOtj=s4800-w1200" alt="Whorlton Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMwIIPZXXOQoMoQj-HD7vm1fZFzIcfOO2rIMwTOJ0Kv_A8WUGlYeYhzK7iU7CupEjkcqha1tI0tPjhmKK4rz1zWmWaOa_gfa9GANeLUECbQdSwEAaaqbjHqpXo32GPfNd3U29lr3IpHDhNf=s4800-w1200" alt="Whorlton Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOAMCqmIkdHh8W8cG8x9smKDgX6QkFOaY_yEd_SdniYcXHcBFrFtFOAAWVSoV6rFXF3chnqiZRyyseF8L3U2HOfnX1n6V_drweR72ehF0W62rMbbdzf09Ngus5Xy0byu4yCiHra-QVPfPdxWg=s4800-w1200" alt="Whorlton Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPOdp-zU53cFV_TXWgPrqVzvx2O21HW-N48lUzeWNDkTXJqt9Yh_F37a6pVgXoy4RtyfiVAfguaU8nRLnrYS7ByxOKUNWKu1G86HEZ_eppCjnBwlgTON6HgB5tzRExRntS7WI3mt5QqnyHhDEg=s4800-w1200" alt="Whorlton Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyVGRKnWkDq-VJ9QaMF23DR7pPeCJ2K89Owyrqb2Koa7_c4Ql3pxpVO0QKVBfjarqan4kLXOlHTKeP59HJyKHqoG8ANdHV86WZJ70HLi3Jrqww1ls4IIcc8sMdMh3qf42Jn6fbNlpkFCGdpg=s4800-w1200" alt="Whorlton Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Whorlton%20Castle%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

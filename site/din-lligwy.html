@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/House_at_Din_Llugwy.jpg/1280px-House_at_Din_Llugwy.jpg" data-castle-name-g="Din Lligwy">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/House_at_Din_Llugwy.jpg/1280px-House_at_Din_Llugwy.jpg" data-castle-name-g="Din Lligwy" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/House_at_Din_Llugwy.jpg/1280px-House_at_Din_Llugwy.jpg" alt="Din Lligwy" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9NyRjBhtqhZdS7aPx9YbJhNEOH7LOS62dPuFSIhAvagG79EmGUyO78_QPAUtXpma5mmbq_soTAGDJXlxLRa4XgJz_ELTp0vsUeYAsM2T02sJ8HgYR1KFLxxP7Q2jdtD7PW20vej0c8GmD=s4800-w1200" alt="Din Lligwy photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgq0oWBrJXe0IekBK0VUigoiWemJg_Ks7q9-cNcUclJR9ZIDHNLY99vUt7ctuwMqf4_JgHGoc99oxlf44fT2y-KoLDTBixJdbYmWLZuiDKD0iJAfvtJ5JByY1nLjHlCAKwKD4qWAoR_dC9hw=s4800-w1200" alt="Din Lligwy photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8FELJt8_fdbTc1JG5hN4IBjJ6LE35FrLEyjwq74NgoAu5N_mtPpcrolgssio6oCzsF9s_TUy6QtQZtsKXO9wDYN_Betr2O2vdJZRMjjzVDvpfRCZBUmkS4dXZ6-XLnNaZOYQSX_9nxY2ZKJdIrPq9=s4800-w1200" alt="Din Lligwy photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN6qNiMEwGaFSLQyUov8bZia1YMXG4zxY0szjgTV90Y5edV6S8ZYB4ov9EsTwfGbIviRXPd4z2oseMOIIBvEIOFAxfZX3AUWNIDFfyzlgiO5TjhZQmBu3LGBy1FaXM6VFO-DtMb6nMHTkg_qjw=s4800-w1200" alt="Din Lligwy photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

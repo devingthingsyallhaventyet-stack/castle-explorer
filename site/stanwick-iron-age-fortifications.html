@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNMPjSrN6XSWNgsqeX2ijjQNFZckQ2EuY0HZUxDVIPKXggNd3jbJnqbfuXoNPjEIPn89h9XZt19LnjFeuZ3vCF01Uf6dcv5MEtJROMXupRfVjTcEscbxBZ-0rlJxqpdKeOsHw_BmadbcIi2dJ4=s4800-w1200" data-castle-name-g="Stanwick Iron Age Fortifications">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNMPjSrN6XSWNgsqeX2ijjQNFZckQ2EuY0HZUxDVIPKXggNd3jbJnqbfuXoNPjEIPn89h9XZt19LnjFeuZ3vCF01Uf6dcv5MEtJROMXupRfVjTcEscbxBZ-0rlJxqpdKeOsHw_BmadbcIi2dJ4=s4800-w1200" data-castle-name-g="Stanwick Iron Age Fortifications" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNMPjSrN6XSWNgsqeX2ijjQNFZckQ2EuY0HZUxDVIPKXggNd3jbJnqbfuXoNPjEIPn89h9XZt19LnjFeuZ3vCF01Uf6dcv5MEtJROMXupRfVjTcEscbxBZ-0rlJxqpdKeOsHw_BmadbcIi2dJ4=s4800-w1200" alt="Stanwick Iron Age Fortifications" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNf8F9c_11YjzaHdlMfR6a0pj1k-XenfxEJO-QPrfdpyL3-afW05c9Z-0Dc8CLhLpSQDm2dZTxGZ73dVmk3kCiyhRqi-aWLu1K1QH_-CXVVmG0A0xjS84ZK8D7aclddy-YHm2dsquJGqxz7jw=s4800-w1200" alt="Stanwick Iron Age Fortifications photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgLQyZOLlMNsVTH-qIBb9j1tpA6xwP2RNqowSrn0XZBkDvF8gG4l8Tl2CNir7UnvBEtqGdQDonZrF0b5gGN7I0mZUdbS3M50QHiuofiwkbXKxu7nClRuqpYyu0TaGuTPPyRgonfotL16MJNZo=s4800-w1200" alt="Stanwick Iron Age Fortifications photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMaFIANclB8vsRUlvNu_naXD6C-J_JyIUtfmwJNdcIAUtYkkfH9WJ2VMQpg1IJZEQnyBJY2juKabqcRYXAIbo0FfWmBSf6JxvKuarCX9Xl4FgqtVwnwEuQN1TgMy1Us-Yl4YJRKSFMYJIKYgoU=s4800-w1200" alt="Stanwick Iron Age Fortifications photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUOM1erz5DeY158n5orv0sdAOZpBsKDRUR2MhfwGIssHOKt1rDdRSB2IifEAsM6Prej-7igOKBRy_PJElYSUuW0U4o0hDXcW7j1HxNulI2noLRRq3g0nZMsghIApma1Iau58X2DS4cvQdhWlQ=s4800-w1200" alt="Stanwick Iron Age Fortifications photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Stanwick%20Iron%20Age%20Fortifications%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

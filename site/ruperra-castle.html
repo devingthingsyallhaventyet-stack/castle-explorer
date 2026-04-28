@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7lOSabeWWp-ytDB3cEHMLhMUveT5fSgWWj-CBAyPXaY5qFhX1SGlM2Yc6VsG5Y7i9FEuGDkcx7zhJa-7MxpzWDDt3mKlIvL4UofO74p-9wWzn8--T0LM_5UKLwITtZi-onDG-_-ctxmp8veU=s4800-w563" data-castle-name-g="Ruperra Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7lOSabeWWp-ytDB3cEHMLhMUveT5fSgWWj-CBAyPXaY5qFhX1SGlM2Yc6VsG5Y7i9FEuGDkcx7zhJa-7MxpzWDDt3mKlIvL4UofO74p-9wWzn8--T0LM_5UKLwITtZi-onDG-_-ctxmp8veU=s4800-w563" data-castle-name-g="Ruperra Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7lOSabeWWp-ytDB3cEHMLhMUveT5fSgWWj-CBAyPXaY5qFhX1SGlM2Yc6VsG5Y7i9FEuGDkcx7zhJa-7MxpzWDDt3mKlIvL4UofO74p-9wWzn8--T0LM_5UKLwITtZi-onDG-_-ctxmp8veU=s4800-w563" alt="Ruperra Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIdHQiqOgbm97cnDaHwcKl1fZTJpZQlXvofbdYq45-6lbz1xkD-ANeoCMP1Qn9HKImO-Git8S5W9rTnTIViN_pZfCQTKhKqDI2_WUt2BxRbR6z-6Dr65coIpg3DKuJ5YtMQbn77mKdMM2c5Tc=s4800-w1200" alt="Ruperra Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMyKD0dzT6R62QFk4oFOjdr7Ey9IleGKJwU3gKlzNxfyKDTzZn25NFPhHtvMEcjCjUm3fXet5W8n7ESfOJMSSEIYxz3GcEsBGxbdMwhBDAFxYsSrYg6-KV2njZ499z5AQIYJ3lAfgEnweC32Q=s4800-w1200" alt="Ruperra Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPW7rFA7G43Bg5EwYA9kUWDhYOmHOYjHEQsB21n9r-aWL-qThUg3YJkui3nKsV9Xljboo0x4bQTIOn7SLdo02SdqQWdzxwiibJq_WQ8EuL04aAaQiLoeXR8z7btBeqgu6DJ39kaKWUNC24_aoM=s4800-w1200" alt="Ruperra Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMyEhBgr9deC5AYQTbdZ91QiYR-bysdw8nBB7oDu4sQMd-O-2hsp8mfA5O8_smgAI8mXyHMyrt8j2ZingPcQ7ExpUMGHiy2nHUAJBdT9QGK8DnzQU5-Ajwk7RzlCZ6wYRkBeW8v8oXvoRKCTA=s4800-w660" alt="Ruperra Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ruperra%20Castle%20Caerphilly" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

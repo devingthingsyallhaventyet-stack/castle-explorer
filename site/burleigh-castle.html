@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTArX4THiKlnKh1yUBeqVnLQYw6s9dTNE2YHorX2nluktSRxsGWrkIpd9SzYcJLRasDGwZoVBG2LTIEv7GApQx3LdC52q0FPvOGQwVXANITBajkmSbVqT5BpVkqvpxSwAL5QjnxR9Gkqwj=s4800-w1200" data-castle-name-g="Burleigh Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTArX4THiKlnKh1yUBeqVnLQYw6s9dTNE2YHorX2nluktSRxsGWrkIpd9SzYcJLRasDGwZoVBG2LTIEv7GApQx3LdC52q0FPvOGQwVXANITBajkmSbVqT5BpVkqvpxSwAL5QjnxR9Gkqwj=s4800-w1200" data-castle-name-g="Burleigh Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTArX4THiKlnKh1yUBeqVnLQYw6s9dTNE2YHorX2nluktSRxsGWrkIpd9SzYcJLRasDGwZoVBG2LTIEv7GApQx3LdC52q0FPvOGQwVXANITBajkmSbVqT5BpVkqvpxSwAL5QjnxR9Gkqwj=s4800-w1200" alt="Burleigh Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgXu2cF8yaTihuTtnXqksTl1XkedBLd6Q0lsLLprbsCPnOAI0ypcg8-T-tE951o54YxBDTirPMB3K6--EVgh-JAiYQGKI2C-DxqSTr-fGFqisQRfLtvlRZutStd_6MjGvZE-HhSq1XzqQnGw=s4800-w1200" alt="Burleigh Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNfNIPvd6BTvomYFwJiebKHKvGElpvHOC8j-ZR_vg7zT_t4Xi9OLRcV2k5XkVLCK-srBziskxQaGhpZZnDYRR9LAxVwlpjRFxkJ_Qs27EuToefWyTnHgxR8jEA_oyIxPNzBHUtGxIIRUQmB5f4C1daTPQ=s4800-w1200" alt="Burleigh Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5iwUrY3rQtYmzlikOhwFfPrsrlvmzVyl2TEA4esWP6xYcaON6SBxCpSaIEXYugEVEZhcafKX-gjhea8udSxuyl-8ELvgviHJO18vqS2Ok2T9h8rWjk6HncUN3TB4P21AqgQ7EAoK-pqb2NQ=s4800-w1200" alt="Burleigh Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMg-mgXic3BDw0pGrwLo5wOXEu0BjQkUl98S8LRU8eokHkzMabnlvKb3ghDqoW73u9xSAANcaTqIrCwwCBdXdrtnMHZpmFsXQs4i4Ie6fkB8xEPJuCypzrH9jGe8jqDwoCZ7z16jX7IkIGaPQ=s4800-w1200" alt="Burleigh Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Burleigh%20Castle%20Perth%20and%20Kinross" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

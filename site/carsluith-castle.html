@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1ksK-mjVeCmJhuDfjvi8YijWup1Ci5-5Jz1kj0CE7Vl2UrwPLx7I2eR-iDHV9udxmYNmm0HCgDSWYbZV10266RHfad77Uuq8LnDflBgJOIZLuBYSA3JQtqDKHgU46XekC4J8PpqVKketyvWY=s4800-w1200" data-castle-name-g="Carsluith Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1ksK-mjVeCmJhuDfjvi8YijWup1Ci5-5Jz1kj0CE7Vl2UrwPLx7I2eR-iDHV9udxmYNmm0HCgDSWYbZV10266RHfad77Uuq8LnDflBgJOIZLuBYSA3JQtqDKHgU46XekC4J8PpqVKketyvWY=s4800-w1200" data-castle-name-g="Carsluith Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP1ksK-mjVeCmJhuDfjvi8YijWup1Ci5-5Jz1kj0CE7Vl2UrwPLx7I2eR-iDHV9udxmYNmm0HCgDSWYbZV10266RHfad77Uuq8LnDflBgJOIZLuBYSA3JQtqDKHgU46XekC4J8PpqVKketyvWY=s4800-w1200" alt="Carsluith Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNmiC7aejYM6XNROaWIs9E3soAM3qai_qV6hsBhBE0Zx4JH_bSMe94XqnMcd_tCsOGuDCn0XVhMHM_VKxjfMPmLxetYBdyOq4n6EcRIl42Pzyxdv5x9u1GuNh4iro2anEjaRq_ZyWaY1PcPaA=s4800-w1200" alt="Carsluith Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNieOYB3tEUMxXA3jqG19tqiwNGoxAEvxOUUhf5ujqR7qpxhyXqCRigfzveTa5CdE-A3IE0NtOIMMPLvawRtkQQatWGcpKlRrEGlJ_XYkLDnYgSuENTNrzSxvzQuQWxrY3zU8rdZGjH82JKjww=s4800-w1200" alt="Carsluith Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOE02DeWsEnypkiIBSqTo2x9lUqctQFWeb8gXJ85mSL7ocjT_GHYJW8FbZN0FiNJAp1Eo5u3DocbYdq9esRspJENCr4xAI8l_n_Ce-XvozkzDR4Ch-S3anViXYJwncOi0Iu30AURkKMPIMzxNA=s4800-w1200" alt="Carsluith Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeJ5uKJGYaaJKdncPlnzAdXU-GNP8UeA6PHaU-VaSFpOG4KgSntyE3DGLWW2fqt6tf1rmQ8n9-DiE7PyFbBJFdYqmUYufUQ7disK1J8C6OE3bT69wO647HqBzAYGciGf0PRSn0HJTkrJcLWjKm1tXapQ=s4800-w1200" alt="Carsluith Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Carsluith%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

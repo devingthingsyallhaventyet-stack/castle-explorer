@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_7hnsaYkJCC5rTd9czuuEjFguAQhm9jojee5DY2HAIQqhDAgZacQFJyjE0bCOMjfkogHGaxxMUeONHyjFCrxwNwwx1Sg9L6chldi8Y6a5TxNKaQ1N3P7mb26FoI_JBmy_LLjk9uc63jNmBA=s4800-w1200" data-castle-name-g="Buckfast Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_7hnsaYkJCC5rTd9czuuEjFguAQhm9jojee5DY2HAIQqhDAgZacQFJyjE0bCOMjfkogHGaxxMUeONHyjFCrxwNwwx1Sg9L6chldi8Y6a5TxNKaQ1N3P7mb26FoI_JBmy_LLjk9uc63jNmBA=s4800-w1200" data-castle-name-g="Buckfast Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_7hnsaYkJCC5rTd9czuuEjFguAQhm9jojee5DY2HAIQqhDAgZacQFJyjE0bCOMjfkogHGaxxMUeONHyjFCrxwNwwx1Sg9L6chldi8Y6a5TxNKaQ1N3P7mb26FoI_JBmy_LLjk9uc63jNmBA=s4800-w1200" alt="Buckfast Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVOzCAktRMypPbmC8_vLLt7wXKez6y1jrF6mxeWHIp1uLbOtp3MEC7X0r61iq4m2AbjiPXyf5xQCwUSBaFAw0b7zn-TAqvj7MADyZS4AYYVx5wi6nVidgKWxUaQUJ8k25D_jWoGj6WJGFV_6qz-tLWsw=s4800-w1200" alt="Buckfast Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGdZMvB6s3PlB-im5a_rZtfTGexA4yAq99Cy_sRXst2OM7V3t7sTKZleJTo_6fV3eLOWl0lo1Ru0AVeWfpcs6hycrvPdS41UVaeF7Cg2PVkNV14ZF3cLAA8CtxByeeGi_lpdXDRViWsAR-=s4800-w1200" alt="Buckfast Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPAmHD3onQDe-u4R8N2t8Ovu9rMxYvQ4bYmO8cFxdNK-SfPKLLYnSIxuJ135GQ3s0QLyRZEfRzBjBaSXlCrUf40BxnPVKeGf9yEob6yPjVV14H2DWAN1FXRDKo7UJcf3DAscC2U2O4BcAEQA=s4800-w1200" alt="Buckfast Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN09zhS_64uN4OPnVnQF927smHb_p_PXvNvethbP3GtYzkQQh2_10FtI4UVmKDDaqjOQgYGKz3pHJMl5kfPPvAYjHAlxRFLN1tDaXR3YHh_cAlKVNMhxGqyk_6rDov7FrR6BZKEGEV6L6P3=s4800-w1200" alt="Buckfast Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Buckfast%20Abbey%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

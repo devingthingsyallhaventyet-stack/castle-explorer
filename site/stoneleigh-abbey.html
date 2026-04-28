@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzhdRtmO_Hh75puloiqH8ApnvsBsPk6mRsLy-YTDaRwFRC8ku-mINH2AXs5WnPsrX11F7Ql5f6LsqfxRx_aQ45IlMH3vKVyNxs5SPXsk3TVpnQerTsOIiyaU6wWgXVO8HIcJkxkzBVscrn1xg=s4800-w1200" data-castle-name-g="Stoneleigh Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzhdRtmO_Hh75puloiqH8ApnvsBsPk6mRsLy-YTDaRwFRC8ku-mINH2AXs5WnPsrX11F7Ql5f6LsqfxRx_aQ45IlMH3vKVyNxs5SPXsk3TVpnQerTsOIiyaU6wWgXVO8HIcJkxkzBVscrn1xg=s4800-w1200" data-castle-name-g="Stoneleigh Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzhdRtmO_Hh75puloiqH8ApnvsBsPk6mRsLy-YTDaRwFRC8ku-mINH2AXs5WnPsrX11F7Ql5f6LsqfxRx_aQ45IlMH3vKVyNxs5SPXsk3TVpnQerTsOIiyaU6wWgXVO8HIcJkxkzBVscrn1xg=s4800-w1200" alt="Stoneleigh Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHlCU-9vhNsLZoyE8m5TQJwv87v_95BfFLssc9yueRGcTs_HGFSHx8vMg2Z2o3HW4LXjRy1T6tk7pMxMnFgpP2l7RnxJH0UPLB08qcnZES9CVZvVUAUFw4xBG9uI3upL034iDzwr1HMrAEJ6ghTDLW=s4800-w1200" alt="Stoneleigh Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNm1q6uZdtKyLCHXaVhcnpGoY2mkflr7KhqANAs6RXbs_JtOVhidYFgI83Lk1psqMuvANPCu_N7D6FZhp4QBFOOki24Mafmc6tGRdovOE5DrgUoJkbZ8zUzcwKoelorv9diPQQX-bOTXuY0UxZ-FUr3zQ=s4800-w1200" alt="Stoneleigh Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0bBRhDaRidP1aEF44JbQCYZzRHCbe09gCis9ZO-HBXtgjkCWX1A7FzKc11vTMgxCvXxDrRmnaVjjSbgXXbxRCxYeUKq7wLfbZo-cJ3qQH9Fdfl6zqRkNJ1HXjeycUXHKZDIihCjJ9dz53=s4800-w1200" alt="Stoneleigh Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPYoMZGEZchl0yLQvLasGi17mX0QE1zrIPUGHBLsPPFM2xcExajRv1nY1hIp2vFkviivZLewqN3aX6FnAKFz5w8XAcqLfnHegYlK0Eei3xUD0-TCEeQGBqK-afMzdYn5lwgLV6vSgtxH0B4bA=s4800-w1200" alt="Stoneleigh Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Stoneleigh%20Abbey%20Warwickshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

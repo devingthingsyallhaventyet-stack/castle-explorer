@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfdZKrLyd-dj48QYqir6sRXS6d9zMmHGfLnCIVhtVE7fi1RAOfha-Njj15dUq24e9UVekZpDvyPy-hq7AySwe071h3nvxTi1oYTO3czlqLncvvdwsqXG5b5D5WyIsXiaEqoG-eFPLMaB81aw=s4800-w1200" data-castle-name-g="Dunham Massey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfdZKrLyd-dj48QYqir6sRXS6d9zMmHGfLnCIVhtVE7fi1RAOfha-Njj15dUq24e9UVekZpDvyPy-hq7AySwe071h3nvxTi1oYTO3czlqLncvvdwsqXG5b5D5WyIsXiaEqoG-eFPLMaB81aw=s4800-w1200" data-castle-name-g="Dunham Massey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfdZKrLyd-dj48QYqir6sRXS6d9zMmHGfLnCIVhtVE7fi1RAOfha-Njj15dUq24e9UVekZpDvyPy-hq7AySwe071h3nvxTi1oYTO3czlqLncvvdwsqXG5b5D5WyIsXiaEqoG-eFPLMaB81aw=s4800-w1200" alt="Dunham Massey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNfmhIfMpA45prbuU24HaOg0KAsg0FpfTOj0K3TNj4Gdn6GDcKrdJISwNTtMT_ZYUYMhWWqEq_m5LTs6g24HOkd6ZzmpHnJJ0dC-TKpQvKrWQ5KMQDGAu_Dt-k-DlijO9d4QwvAA5vnovwg4g8=s4800-w1200" alt="Dunham Massey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8kqKi5Sa_r2i-qHi-fb6pt3GjRWNKWFBz9sRfyrZ5hWwANBRye2ZfDpeHl7t-upVkZBk2Kwzg7aIfN1yrp4K_l1InsaDrwRb6a2sPD7nmG5OkczQqJxHhhED4rz5FVbrrjAPtdvlPMRU44w=s4800-w1200" alt="Dunham Massey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHmhGeYBQonXt1w1sTCI2VQ2DyO_5cIQE-ev0QkK_vN3pTfem6B8NGFgZPR8UCQkDWRmsegaHEWYMlg8F3x6N-Ec23dZdG61ZBPG2vDODYcJ1CUABaoLWLuVk_ezfk5MrNpWjpqDMXF2o1ah0=s4800-w1200" alt="Dunham Massey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKzQH8pzBxyndaPZ5BJk8-4SRINSiIPyap9YcgRUd-4lpO3TRWmqcj05mmzSEpuFR7p7wG354cWsWNZ6jm1JwOKfQrV2JdudQQI8gsvajoFTTbNx9P2EiTVKVkzEqJx7N0vgcM5nvH5Pv0Vw=s4800-w1200" alt="Dunham Massey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunham%20Massey%20Cheshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

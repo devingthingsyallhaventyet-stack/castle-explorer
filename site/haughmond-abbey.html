@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOZH4gOCRnvVRg1u6vGUasP10y7UUHUYuGaSkYsJSG1CzQWHMLpKmi3t7tlAu8iiikpD6RnICyTYFiyUltR1CSxZD-0GOfHeJ7Akb7MwLW3UVgM6BCfjX9iT33U1fGKLTC1MwuAs_QqVqpWjw=s4800-w1200" data-castle-name-g="Haughmond Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOZH4gOCRnvVRg1u6vGUasP10y7UUHUYuGaSkYsJSG1CzQWHMLpKmi3t7tlAu8iiikpD6RnICyTYFiyUltR1CSxZD-0GOfHeJ7Akb7MwLW3UVgM6BCfjX9iT33U1fGKLTC1MwuAs_QqVqpWjw=s4800-w1200" data-castle-name-g="Haughmond Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOZH4gOCRnvVRg1u6vGUasP10y7UUHUYuGaSkYsJSG1CzQWHMLpKmi3t7tlAu8iiikpD6RnICyTYFiyUltR1CSxZD-0GOfHeJ7Akb7MwLW3UVgM6BCfjX9iT33U1fGKLTC1MwuAs_QqVqpWjw=s4800-w1200" alt="Haughmond Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOMuPTD914aWiVYJbeW_dz9DXoNidNNcwbIho8j0AmkYy238IgBc5gSXui5GQMDilwmFbE7WCATs-gNCq6bI4gwDGCA6tqU4lmmgFLNuAgfgYq2TipJbBHkNZbkf8VQbN7ETf7KfZbUHAqQ=s4800-w1200" alt="Haughmond Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPsXIGJxCZP3ypf7aN-mi-cK9Y9G5kz2MxjH7ROyCVPQnGYrkxD2olHVmD1TjnpYfXOjHeUcnZ0sYbnVMFhrPTZ54PQ3HMaSpqX-QwxQlaXwsQqWHJHeIQTsd9kE7GSi90IO-tuSGD03j5A=s4800-w1200" alt="Haughmond Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdKh3_PJnRG3lFK3IcBshvSSrelZbDnc8t2YUHx0SF3jo39itg7JuxNuM1jk4V7FQQnMaY-1s5gfmIBgPBUu4We5VVC4TN2DwIOelxiTiL68P3gEQ2h6RypEfajiFVIsLyS7MYxG6HICS3P1k=s4800-w1200" alt="Haughmond Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdpaCPna6L-DNQYwnsLgMoMaMThUedeKmL3xJalcTHPsC3G6oLtoW0ZK-j35CQFmal3WNKsu58YDpXpQO9iHFdr5BndDXU8orLnpxXaKtFAA0sEIz6AG3Qt6Gv86dsSiTaVgSBUaFl0F_BRQ=s4800-w1200" alt="Haughmond Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Haughmond%20Abbey%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -400,6 +400,15 @@ The site is open from 10am until 6pm (Apr-Oct) and 10am until 4pm (Nov-Mar).</p>
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ The site is open from 10am until 6pm (Apr-Oct) and 10am until 4pm (Nov-Mar).</p>
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

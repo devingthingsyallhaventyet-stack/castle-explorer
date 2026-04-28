@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVckkPaMKeUNNPv-59nh2E6d80aIEafWiXR_Dmeqruy4rR27Rz_iEvLpqqcX8jF581YKKxqG9H4THKynswZLP4gMqUQWSlFuHejg1UIZwsqYMQO7bI1yi_dPe2AJGftzS2mjM9_-lFFCf3=s4800-w1200" data-castle-name-g="Hadleigh Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVckkPaMKeUNNPv-59nh2E6d80aIEafWiXR_Dmeqruy4rR27Rz_iEvLpqqcX8jF581YKKxqG9H4THKynswZLP4gMqUQWSlFuHejg1UIZwsqYMQO7bI1yi_dPe2AJGftzS2mjM9_-lFFCf3=s4800-w1200" data-castle-name-g="Hadleigh Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVckkPaMKeUNNPv-59nh2E6d80aIEafWiXR_Dmeqruy4rR27Rz_iEvLpqqcX8jF581YKKxqG9H4THKynswZLP4gMqUQWSlFuHejg1UIZwsqYMQO7bI1yi_dPe2AJGftzS2mjM9_-lFFCf3=s4800-w1200" alt="Hadleigh Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9GjLrkzOcaay9ErrHpBLnfFsdW6VOwy2z_Ddw3iXVmIkkF8hrNGEsPphZXCcpKgI1zB8I-OcD5bQzDWURs01O4Z_h_0XUO_sqhEooaqsENVz-6J0yDLoA012j5tfcWOjDK0v0c7tgbgvA7MI=s4800-w1200" alt="Hadleigh Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBj3Dz4Fyt0M1SOAPdTYgqGYIj6EHyFssl4pRoogvs4kr0APNbLaFvnw-mauDELX1D4VcWdw_pqLIE5VU3HDcw66uOpfruy5iceHBZMTmXbx0yJN4-jxQdElINz-SmfL5-GmHuoWjl0IAbYxY=s4800-w1200" alt="Hadleigh Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPKdOnXJjuIguJqFZsgZs2amMO-GDvrlCvWvndrEqj_bIdSHDVZjDQyGoGVCURtzSS3prw1cj9WGa1aw-Rs4d4vtj2bZJmtAHkvYSf7imtEHwZxhPDjWoPGu0nm2Q4tJkLnwG_x67ruA1EqilI=s4800-w1200" alt="Hadleigh Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKwh34EWS23i2BT7_lpmmi1LY7kn44VwVIKQaLQuUyKJr53S_ITexgW2Z6PIF0f_iBY0z1_P7SK-iKdRBbYo7yXDzy7Q-qjZZWzx0K7CaKUbGXnLmpO3W9d62-8E8Yy88YmzLkmBXx-_2u0Zk=s4800-w1200" alt="Hadleigh Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hadleigh%20Castle%20Essex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

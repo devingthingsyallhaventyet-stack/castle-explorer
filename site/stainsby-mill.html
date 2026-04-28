@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOX8kXSmx5D38D9vCO7Q4ffdL6qCqhNKcQswrGBulY-hruzo32mGEqUjvsWBlWGCBXWInySKIxTbwd0AX9qUokpQ62RvTUVwQibW7ppSf8D3sgA7AUIZxYvcD1MyeEezGF7aNgUeU-ZfByrQQ=s4800-w1200" data-castle-name-g="Stainsby Mill">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOX8kXSmx5D38D9vCO7Q4ffdL6qCqhNKcQswrGBulY-hruzo32mGEqUjvsWBlWGCBXWInySKIxTbwd0AX9qUokpQ62RvTUVwQibW7ppSf8D3sgA7AUIZxYvcD1MyeEezGF7aNgUeU-ZfByrQQ=s4800-w1200" data-castle-name-g="Stainsby Mill" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOX8kXSmx5D38D9vCO7Q4ffdL6qCqhNKcQswrGBulY-hruzo32mGEqUjvsWBlWGCBXWInySKIxTbwd0AX9qUokpQ62RvTUVwQibW7ppSf8D3sgA7AUIZxYvcD1MyeEezGF7aNgUeU-ZfByrQQ=s4800-w1200" alt="Stainsby Mill" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP7D0-ilb9c2RPsmv_3q6aUYqkPFVGx_c-_pUxYOfDE9ke_jigFhoXW-sqmb8k0P7uqjvYgopcR2QgS0nTC9sKDyCMjftow-5Ceq7D6KsiLtWddiGJ_xFEOulFIgAtgbjil6Q22m7uisJY_otY=s4800-w1200" alt="Stainsby Mill photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUeFPVpGMgmdnZ9a77LGgPOUel3QjwRBpFFsCWwdaADsMbzU2jaH5uLni3LVzg5Yn3t-m1mzobUWrAOL6B_pEB0-3_p9t1zdtotrvy9CU-QjxNtt8JzZCM0JEHnEcozxo4VKNmPiwU5u8ukg=s4800-w1200" alt="Stainsby Mill photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCywl8raM-kbBabF5ProDyIc0h_3Kbzhgr8bRovUCHBNPESFSSGSCSYumH5vYHNTKSw0z_71XLNZs4Iqv_br8p_eV3IoZXUcgEn8fb4o5Nz3SmkjnXbEOHUkO6iclidtqhdutfLD10yl93R0x8L5zw-Q=s4800-w1200" alt="Stainsby Mill photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNexcm_cmCbcJfzlsSMH-Ame0hYySPO1pQF8KnyvDE9QWwYCtPUHzt1XoZFjJJUBSXNNAkhCj2EwTRAbPg_dHP8L16ZOx6J9flVdheYHAUT4pr2JjoCQjGBHXel8XbNL94aq3I5Bqi-gw6gXQ=s4800-w1200" alt="Stainsby Mill photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Stainsby%20Mill%20Derbyshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

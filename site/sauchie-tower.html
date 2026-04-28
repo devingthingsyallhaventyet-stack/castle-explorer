@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0-nNshe3qLXvZy4OTRbUMq_bvAzLhn4ZbLr297Q28jhPzFnZiN3sIQwp6bPewbF88JxBcpkMoyfzTbxTdusE7oSO7hi6zPkSQ5On-Pzu9Vc6mGGYP23a0Azm6Q7_GWE8T54HVsfuH5tEFNGk=s4800-w1200" data-castle-name-g="Sauchie Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0-nNshe3qLXvZy4OTRbUMq_bvAzLhn4ZbLr297Q28jhPzFnZiN3sIQwp6bPewbF88JxBcpkMoyfzTbxTdusE7oSO7hi6zPkSQ5On-Pzu9Vc6mGGYP23a0Azm6Q7_GWE8T54HVsfuH5tEFNGk=s4800-w1200" data-castle-name-g="Sauchie Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0-nNshe3qLXvZy4OTRbUMq_bvAzLhn4ZbLr297Q28jhPzFnZiN3sIQwp6bPewbF88JxBcpkMoyfzTbxTdusE7oSO7hi6zPkSQ5On-Pzu9Vc6mGGYP23a0Azm6Q7_GWE8T54HVsfuH5tEFNGk=s4800-w1200" alt="Sauchie Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNhEwffjMBlJG64DN069nNGkVCyqjMoF5yx-IC3iRWGCkRylBO_06-F3VrTaERduXeQkdDoFYh7DlcUnj25Gz-JhPXCPUsAHY_nTr_SnOQq-XlzvFXCJaJf42PkT6Ou71K7xlJG8JX9GezedhY=s4800-w1200" alt="Sauchie Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMIrYHTvir770an1w0Pfxq3w2JXDOON_o-VS9VYTYv7ne68iI2RickBYB6hSGkVrpbg_4v6_JtdIJj4nnvp6gEyMlQIIfY-1RjDoTkaF6uXV8BV13nrcjkIGY5PnJ0ox8P_s5PFVZfOo8YLrnI=s4800-w1200" alt="Sauchie Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOSl22ydL8nktPBHprwiGTrRhy5cTILUTDxlcqdcXxTPn0SJGOBxFFhcGgFTwjfSXtTye1I8WkAipdaFxpd0G_WDqKTCcY7f_baVeEZkQbJTmdV4IGJmIiv32AaO5lLut_JRsfuYaMaW6fIdQ=s4800-w1200" alt="Sauchie Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNwk2s0T17uywpElxe_L5_EFKUbBcmlx_b_DqGBBClIfNwwsRM4IX-O44h0S8XeTUvIF8xqqUWp0PnV_ukBnEzsQxOhUwrQTqSqxy1W0AIllYwhziQv0ovrDiAVEhakeYe9PG17XEb_UuEyF_9RREHq=s4800-w1200" alt="Sauchie Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Sauchie%20Tower%20Clackmannanshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

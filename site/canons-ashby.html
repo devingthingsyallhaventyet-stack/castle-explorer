@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGpABrHqWAM6CJTRKjOEJn-Q7b-O9i-2u6_rtQ1ag6oNDBUd3TOdBW8zSKlI8tdpXJtRw2fF84MGD0m81peWW2bePY1JuKVlEoIihya-wFG7gNiVO0BOs2Z4nFavb5H30kcxDVK2ORHxMRjA=s4800-w1200" data-castle-name-g="Canons Ashby">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGpABrHqWAM6CJTRKjOEJn-Q7b-O9i-2u6_rtQ1ag6oNDBUd3TOdBW8zSKlI8tdpXJtRw2fF84MGD0m81peWW2bePY1JuKVlEoIihya-wFG7gNiVO0BOs2Z4nFavb5H30kcxDVK2ORHxMRjA=s4800-w1200" data-castle-name-g="Canons Ashby" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGpABrHqWAM6CJTRKjOEJn-Q7b-O9i-2u6_rtQ1ag6oNDBUd3TOdBW8zSKlI8tdpXJtRw2fF84MGD0m81peWW2bePY1JuKVlEoIihya-wFG7gNiVO0BOs2Z4nFavb5H30kcxDVK2ORHxMRjA=s4800-w1200" alt="Canons Ashby" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKI3Uy4Rpxt2XfAyzFXUFrSz7NToVHD_wxD_TOtlbN5AOy2k5TnAUI_2mycmuUqbwU-YlO8K2ene6chvwuWTl6BRAA7YKEMch9y1Ict2y2suqqMbTYJn-bofJV_jdcjlGg76VxIn_Xs4iYdg=s4800-w1200" alt="Canons Ashby photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNAndqofV22304vZgWVFbejglMp2rdzkAzLh9cngJS31jCWawiczAXHyEx9Xaj5vI3hXaar_uVX8YKVeJr1Bdzr8DdLR30icmpoYiZlBO9Do7XjK8SKF7-6gNI9xWRqgXh5XpNVRJZM47hSSw=s4800-w1200" alt="Canons Ashby photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4b-Xf1uhTq28I4wNF8V-TRFFf0PfDknK6M5XXZ6KAZ80UO_KNT1QBEQvJ_c5-IvOFbo7SH4QMx333mQGVjRzWsyetp61eh8vJEu2dyfcbWwqfbJKRycECB6ivOy3T45S0tAIHpK-zyuYa=s4800-w1200" alt="Canons Ashby photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPet05hg4PTxQL8ql72hT2nmgyZ762L1CdmTFhw-Nsep31Vp_IqnfGvoAfNdmnf04cfKvp3b_I2_ntD6kN9YSf7oppYjLjn_JVaaCaKA0IqH2VvK7Fp9FfalGvVs0pq03rAlLfJ1Li0kBgCyQ=s4800-w1200" alt="Canons Ashby photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Canons%20Ashby%20Northamptonshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

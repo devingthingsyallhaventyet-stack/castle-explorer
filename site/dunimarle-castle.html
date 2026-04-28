@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPf8beOHBcnNNUL-hpb0eZXUXV-CD1j8e7VgR1-0EuFbnllhLN4NtzpTcWPIvf75UQoVmvubJJgqIIO_Zyoa3wWzcIQjd2p7WaUvx8gorp5zbSKChDpq3dj_-0aYb58DvafNWSAswHw2XGeEQ=s4800-w1200" data-castle-name-g="Dunimarle Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPf8beOHBcnNNUL-hpb0eZXUXV-CD1j8e7VgR1-0EuFbnllhLN4NtzpTcWPIvf75UQoVmvubJJgqIIO_Zyoa3wWzcIQjd2p7WaUvx8gorp5zbSKChDpq3dj_-0aYb58DvafNWSAswHw2XGeEQ=s4800-w1200" data-castle-name-g="Dunimarle Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPf8beOHBcnNNUL-hpb0eZXUXV-CD1j8e7VgR1-0EuFbnllhLN4NtzpTcWPIvf75UQoVmvubJJgqIIO_Zyoa3wWzcIQjd2p7WaUvx8gorp5zbSKChDpq3dj_-0aYb58DvafNWSAswHw2XGeEQ=s4800-w1200" alt="Dunimarle Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPldEpjwt8YKC9Gf3q-sm1ZCfD9HgEI4jh1OHRBmza0_WoLOlkBIl1s1inc9cYoUayCyC1hYziEyFni2LZDowvlvBYwnIjln4BS56i79VKY_A4HQHYZYRetl77EeBcu_bc2yIu65SSvxZp8uUEfq2MW1A=s4800-w1200" alt="Dunimarle Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtyNbE6xgaUE___7yIgDe9L1pEnijCkYMFZr1yONYgrrJreeLGP6vLRoDK8eG-bp0VgOcRh6crmi4NaUULcdQ-I_kEjjNDv9wc8B1aQ9VOSNDkk9ntECEI-0Uxpdkfbe0JOhBXlCEDhQu3WmE=s4800-w1080" alt="Dunimarle Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIBt_AzBmfyqq5RwlXrLeZd8aGDORHrM-bpfFKNaFSDjDAgavSRUbzeKKoTtBvy1JU1ywrQCfb74nCNdIFA0iFrt8RSM38tmKV1kwMSe1vlHa3ZXCmINL--wiXliPPOeV6irynnS5zQFoZqA=s4800-w1200" alt="Dunimarle Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCvJ_KrXoZP53je7oMCvWBfq6t0G3CiapIuEWgSmeyaOEZUjRDNR2Sg-1VPBCK8KyQX6HyJTAaA3_aYx4CJOkT6GiBIEjtZfu1i8zDDQMvsOSlc3euJoTBywPoaXjuwou9S6QrcNkYeRGxHjM=s4800-w1200" alt="Dunimarle Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunimarle%20Castle%20Fife" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJUY1mK88keIVZT-S-ETw6QwLBvP33oOs8GirZiXYtvZvGBX6_v5lLeOxps4fy4ETDAsqlplUz3JOsUNNQDy7tX9Du0ZuXHgs2-TbOqafUb1sDiJbdSDuMXWraZj6z-XqR0nkdXqO7sEPyZQ=s4800-w1024" data-castle-name-g="Greenhalgh Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJUY1mK88keIVZT-S-ETw6QwLBvP33oOs8GirZiXYtvZvGBX6_v5lLeOxps4fy4ETDAsqlplUz3JOsUNNQDy7tX9Du0ZuXHgs2-TbOqafUb1sDiJbdSDuMXWraZj6z-XqR0nkdXqO7sEPyZQ=s4800-w1024" data-castle-name-g="Greenhalgh Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJUY1mK88keIVZT-S-ETw6QwLBvP33oOs8GirZiXYtvZvGBX6_v5lLeOxps4fy4ETDAsqlplUz3JOsUNNQDy7tX9Du0ZuXHgs2-TbOqafUb1sDiJbdSDuMXWraZj6z-XqR0nkdXqO7sEPyZQ=s4800-w1024" alt="Greenhalgh Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNr6D61v9HyuL7DCme02ziUEz-06Z5UwMam3Kn2Nf7gsd8CV5Xe1xsQ8K0QPxRTq_gNMEN2GqNsd_9XnvQu7fs0s2vu_WI5KRaibd5718rJZH7la0GaD3RMba32oHeSPDxiM8r5gjl__uLm=s4800-w1200" alt="Greenhalgh Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwd25zdVyobVJ_C45bjORz395bS5WAD2GShwHu8oJj8m-tVa3pEEisR1nBzsG_u93pkyxr2e3yQ5zOjpPK86JMWMpNCzLE3vOUZAMEaNajl7J-KbzJhzbsNAvTSJtjcSwT8l35nEVgP4FS=s4800-w1200" alt="Greenhalgh Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjgzNLY084OjyWkrAsFdLDpjB3kXv_KSkphoVYY1XiMmnIPjCaujj61NhmbpOtdVMQw60JIXI6R_p1RxtmQM1E5cZKAxIDXBhf4lWoJk8e6VGYGnOWFsbWjoJgg1PVc6vJvJc7BcTwsRWxDA=s4800-w1200" alt="Greenhalgh Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOmKODi2muT9sbNQvYc0l-9UbcHbgA5ppxgPT-a9adHYJ1KglBMkBr9qKTVGo4lvEaQo5Le3XWC-rRyEv4_cP6VNfYxTLObY0yKeFfslT7c1m7ZPwUDC-ztYJVE0O2boCS3Hg--OIBYe9fk=s4800-w1200" alt="Greenhalgh Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Greenhalgh%20Castle%20Lancashire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

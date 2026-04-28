@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFLdMFBbxwDT6WsYFUd76DJVhhJGoH-il9OgE7WXD_9xEzupKHwWdIflSSCfudSXGgXW8sTuuCbaelV5a-WKdbFTUAqSAuUnOw=s4800-w768" data-castle-name-g="Corgarff Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFLdMFBbxwDT6WsYFUd76DJVhhJGoH-il9OgE7WXD_9xEzupKHwWdIflSSCfudSXGgXW8sTuuCbaelV5a-WKdbFTUAqSAuUnOw=s4800-w768" data-castle-name-g="Corgarff Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFLdMFBbxwDT6WsYFUd76DJVhhJGoH-il9OgE7WXD_9xEzupKHwWdIflSSCfudSXGgXW8sTuuCbaelV5a-WKdbFTUAqSAuUnOw=s4800-w768" alt="Corgarff Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN91sIyjDUCmgAvaOEO17Gpbw_vwDh9hssUvKU02T2p5mVO6A3xPpHBcorbHIRr_zYliz-ET2WtsZJUQWTROhGZEMOhKrjFJZNCReAxMkO_C29oPZ_XuFSvS30cLm1WKeB29S51Gj0Jq8B5pA=s4800-w1200" alt="Corgarff Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9TVTavZn9DJX2_OVrZiZidtMOuv_z5_b9AsQgAx_nucF5DgdpTbympLHGRgiFp4eJKsGTj1a3q0Nt-GewYXJ-8nv87GzaAnRYz0_RL9hbzxK5T6uHFlCX3TKj_Ly5Cf8XPXLegDbmA5NZ=s4800-w1200" alt="Corgarff Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNOlVZUtiBbTqf3qzxVVwmrgyFtII0kQ3cuj8cmbAUXwToI2nw_ZiRBecMQv5k2HSVOALgnYynfDpzs8oSsDSI8FAru1mTFeMKbHMa6G5IU63KGOkWswiuNNA_atGgHQNCMnV6Pnq9GFhzC2g=s4800-w1200" alt="Corgarff Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdHPc9jsvUO7qW3WgdxiKMBlbAqLxW98-tUQ9XMHJIr1rCDFx9QIVKyz55kkoz5Bf2ZNmyc1zxwQOL40PxFAec9v-mAaUxN_sXDybi0ApZmOKnnLOa9owtME_webRF6DdI6QM98Ua466AZtgH7uyKB=s4800-w1200" alt="Corgarff Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Corgarff%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

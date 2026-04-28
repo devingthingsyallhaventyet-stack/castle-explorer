@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZ4SMiKq56QITIToA-qsCOzqqwZUkEO3yYV1ga6HE1DM5QHL_3JVFcKCFHa7yfr0-o7t-EEkLNHyRZj8afok-BqxZ5YdB8638XqOFH70GsKcDPJvBy51yCz1ZISPOQgjbaqO2RsUDJaljWiA=s4800-w1200" data-castle-name-g="Neidpath Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZ4SMiKq56QITIToA-qsCOzqqwZUkEO3yYV1ga6HE1DM5QHL_3JVFcKCFHa7yfr0-o7t-EEkLNHyRZj8afok-BqxZ5YdB8638XqOFH70GsKcDPJvBy51yCz1ZISPOQgjbaqO2RsUDJaljWiA=s4800-w1200" data-castle-name-g="Neidpath Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZ4SMiKq56QITIToA-qsCOzqqwZUkEO3yYV1ga6HE1DM5QHL_3JVFcKCFHa7yfr0-o7t-EEkLNHyRZj8afok-BqxZ5YdB8638XqOFH70GsKcDPJvBy51yCz1ZISPOQgjbaqO2RsUDJaljWiA=s4800-w1200" alt="Neidpath Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGoK-Dx8POzK-9-wfme0ikN0pS5VagHf1nFcH2gVU019pfLaMclurVUSJzFeG16tb0Oiay2hjRK5hDM-NMAbvWfvjAuMMqy6ZA=s4800-w1200" alt="Neidpath Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2yC6NlzxgnXn4a0aHJ6uG2reMoBoLmGf2iBIX0DhZ9fobDsOXeK-0cR_4Rom6aWw379WRX9IRBUcFDIC9i6I7UFVsicPlbl1UlriHimoINGrfk74Mc7DaPW3_LleuW1bEUvBKn0lNg8YrlVM=s4800-w1200" alt="Neidpath Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHXwXSxbZp4odMDLksBF5pW6AvNFvG_lwvhTZaErW3ojiTAjcqDWU3QCtdVFQDU7mBLcXR-Jh79lz9sUhZDaQJlcfaD2qIDzRxB4SasRRP4uB_HPoiYx5GwfEIKiljBfkmCrQwAGuKoqk__lY=s4800-w1200" alt="Neidpath Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOhyOg-uyT7vpOvuUigK18CIygA3UQqG_Mc5vTEovgStwjwANdZAAeJmy6zKAlvhg-eM1Evqpzz9tOGb8Fj_srU2LsJ0JBvpyV42W9u8aGZgsl35cg7exwj-5M9_46O2EANxVOnpCqVtH5s_bY=s4800-w1200" alt="Neidpath Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Neidpath%20Castle%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

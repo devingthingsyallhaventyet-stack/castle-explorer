@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfFefncnSkbdqw2Dp-rFXRvO5Kzthku8_J5T2H7Pu0oxME9aYtdCn_6g8GteqOglG9XzXwXw2NRUVS-_t7XX5abzyI0C2cc8uemyuUz90UkcGnQ6pDr55WkEmpntrVv25l0b1oaXmHEynp=s4800-w1200" data-castle-name-g="Hailes Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfFefncnSkbdqw2Dp-rFXRvO5Kzthku8_J5T2H7Pu0oxME9aYtdCn_6g8GteqOglG9XzXwXw2NRUVS-_t7XX5abzyI0C2cc8uemyuUz90UkcGnQ6pDr55WkEmpntrVv25l0b1oaXmHEynp=s4800-w1200" data-castle-name-g="Hailes Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfFefncnSkbdqw2Dp-rFXRvO5Kzthku8_J5T2H7Pu0oxME9aYtdCn_6g8GteqOglG9XzXwXw2NRUVS-_t7XX5abzyI0C2cc8uemyuUz90UkcGnQ6pDr55WkEmpntrVv25l0b1oaXmHEynp=s4800-w1200" alt="Hailes Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBerjmLSuNDKq-s8-ZEiJhScCUqCEl5ONK3Aajto43CimsFYr--8GAhbxem36pqEKAJ3vx5wHnyYkqGN0ok_3l4-3nXrJ6NFlHNsAKBatcRxFhamoEKPGyUQn30gcUg_QV6F2oWGzXADxm_bw=s4800-w1200" alt="Hailes Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaab2FmzHn85DvKJnHiVJkDjItf5Z1iMZodYoPuC4_1YCN-cQl-WXSd7CU5oQWaW-P9JSJJBX5a6lD6Yfje4SYlvSAoeH9XueBpHZ5f-t7CdCy6ltLUMDQu1Fp-XQ6DL6o2O7sDm_CjuJGMQ=s4800-w960" alt="Hailes Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMS0KG3B6IABf5eh0rwagQHDLlEkA-MaN_Jjnz_HxERFpo-PVHekXxFFXCLyK9zx8aKjx3RhlhkXQjftFIc8RfWkaVTkY3G6Ffq3Lg9A_B81qiXTM79jNsrVWkUumR4fJr6uPS7iBJ-8Wc-bM8=s4800-w1200" alt="Hailes Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO89p90pACqoTtN9IcquLKmCuMdYhtrFNF7rrQrxu8YQ9u6R-wKx2KjS0WzZwwmlq7CJHzhIpfJobapiSb71E3pqPbkF6ll8Btkpa5YN6l4D7QfCHiYretR4PsGolwbmFcAzns6r47pfBjYYQ=s4800-w1200" alt="Hailes Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hailes%20Castle%20East%20Lothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -400,6 +400,15 @@ Since 1926, it has been the subject of a state-sponsored guardianship agreement,
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ Since 1926, it has been the subject of a state-sponsored guardianship agreement,
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjz2SF-H1OTLjL0pVq3Hydf9xpoHFMLB8owtB-M0AljXS981bEfbIH-LIksKgzAzkwvdjap3YNGkjHf9vwJEVN8_vF97XCqlNOdEj0Gh1BUk04Ecr8Fwc1kuurxOEGWZyiMge9JCO2kNZ3_wRRkazd=s4800-w1200" data-castle-name-g="Lanercost Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjz2SF-H1OTLjL0pVq3Hydf9xpoHFMLB8owtB-M0AljXS981bEfbIH-LIksKgzAzkwvdjap3YNGkjHf9vwJEVN8_vF97XCqlNOdEj0Gh1BUk04Ecr8Fwc1kuurxOEGWZyiMge9JCO2kNZ3_wRRkazd=s4800-w1200" data-castle-name-g="Lanercost Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjz2SF-H1OTLjL0pVq3Hydf9xpoHFMLB8owtB-M0AljXS981bEfbIH-LIksKgzAzkwvdjap3YNGkjHf9vwJEVN8_vF97XCqlNOdEj0Gh1BUk04Ecr8Fwc1kuurxOEGWZyiMge9JCO2kNZ3_wRRkazd=s4800-w1200" alt="Lanercost Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOvHaLnVAexm2I6cWjveXqpoAHTZDYIMJaLVj9AuGYRC2qZwrfuNF3e80Sbk14vQujK418jU2kdVhzmMTfvhPcJIpTPDu9zCdPmtCyrZ2Nss9OoXLiYN38clun0PyNDLWmHakmzZXAzVKbjmA=s4800-w1200" alt="Lanercost Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM91GvJmjBrs85u_2dkFSfOKWrz2CKTZsrnVATLqmFlYYv9X3FO3CAoG0F2G0VER1mvlA2VhknR-JZZOYyvWNLSX8qWJx9E30Mqn_TOapi6iX1B0gWEMCQNQiGw_IOEIHU-Rn_by_6_jtytbw=s4800-w1200" alt="Lanercost Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNykVzboV79mD5Wdk0049HtaE3RoWPrPVU_3rCr6TDolt51zV1FyDbNeiw_5iffanc0z7Wmfft7Fidbb8ljuHT1NzjbqyxPPcMsOf50B6HKw4BxZblzNWfHHMp9JDrMK84nbWL7MVR29KkJvBw=s4800-w1200" alt="Lanercost Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMP1qylNpz0xB99d7MLibd-xEwJiMGoHPZN6n3L5TYTJCACqwpQZWilbxx9fQYjfIo4EPxmmY8c-GCilQWW7PlSW5mIgalJspa9DSakrW3i99swF_Ov89zgwUtF2ZKg51kxz-ILvTdagyNLYQ=s4800-w1200" alt="Lanercost Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lanercost%20Priory%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

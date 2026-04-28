@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNg-X2vnP9XgASnfqTX1q5PcfY_asEhbt4NwMFLetkZjH0OFg7ynYsU3sw6djW37ZrXO4KItBWvvUwYzhNfKJw_EG-shNQHN1DILjcaervVKyJYwxDEDDjOlezIs5jWtFhrGrjLeI0EYd_7Gg=s4800-w1200" data-castle-name-g="Croft Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNg-X2vnP9XgASnfqTX1q5PcfY_asEhbt4NwMFLetkZjH0OFg7ynYsU3sw6djW37ZrXO4KItBWvvUwYzhNfKJw_EG-shNQHN1DILjcaervVKyJYwxDEDDjOlezIs5jWtFhrGrjLeI0EYd_7Gg=s4800-w1200" data-castle-name-g="Croft Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNg-X2vnP9XgASnfqTX1q5PcfY_asEhbt4NwMFLetkZjH0OFg7ynYsU3sw6djW37ZrXO4KItBWvvUwYzhNfKJw_EG-shNQHN1DILjcaervVKyJYwxDEDDjOlezIs5jWtFhrGrjLeI0EYd_7Gg=s4800-w1200" alt="Croft Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWj5ZMI90xlWkSIlZKvVIoYovmsq9n2QnygmJwRd5rn4ke7Vcb5ONn41rJwoV_Mkm_rKvG6f5d49RvX_PZUix2O4kIGIMVkf2xcOmbJ8QEXbD6LVDVvlIImNNuZxLFgfV2UfeiwXQxpMlrdw=s4800-w1200" alt="Croft Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLXPb4f28VRlQ6o6ulq6yha93SB87XdPuxzHtjH_NeIHQdl2s8nM-JnT-92bbFsVnPf1wZbtlkCp--Y8rnLhzAxv5E5VU6Q2UI_YShaDCga4xEAM8rs-0sian6Axh3bDS8Uf6kP4lLEzd0zqo=s4800-w1200" alt="Croft Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPagwfstgg7Luoxwn_rrZVF8Ac8qxN8C2umboF_fbcD9cXW9lJ8jCdYGpJcO4DTnCJ89Az_jQl6LKRTJlHjTR8DBiFtg9YGHFhI5rC9Zyi5KmeP29Ac32B_GDgOnTWoFOcTwSgWvwkuVDM=s4800-w1200" alt="Croft Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMm5JO5E2QMWdtHvakDdUm_U-b-XPxGohgiuapvH3f_WxBnswJ0Zn3WdKXAsBe1QJPTRlUbtvKNXlw94OPpDtkd2eY_KEMW3P3UWlnMRYAMo4Sx_cGCs0iOi_jhGS1ig4D426j6zWnICuULPuc=s4800-w1200" alt="Croft Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Croft%20Castle%20Herefordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-pSzrfQGEC5wssE2nyiO7yRJGab5mAiHVZAtTgOHAsNxFrchDREEMZ9gwybK9bhsgowik-mQUTkrxYP3ScBEwTFVo2uuRB8FHgZetg_bPR2QSOoAZjyd3PAmf5zQlVTj_5N6ry3iD6EvhHC8=s4800-w1200" data-castle-name-g="Bodiam Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-pSzrfQGEC5wssE2nyiO7yRJGab5mAiHVZAtTgOHAsNxFrchDREEMZ9gwybK9bhsgowik-mQUTkrxYP3ScBEwTFVo2uuRB8FHgZetg_bPR2QSOoAZjyd3PAmf5zQlVTj_5N6ry3iD6EvhHC8=s4800-w1200" data-castle-name-g="Bodiam Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-pSzrfQGEC5wssE2nyiO7yRJGab5mAiHVZAtTgOHAsNxFrchDREEMZ9gwybK9bhsgowik-mQUTkrxYP3ScBEwTFVo2uuRB8FHgZetg_bPR2QSOoAZjyd3PAmf5zQlVTj_5N6ry3iD6EvhHC8=s4800-w1200" alt="Bodiam Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN7zG95lwXpsQP305Z12AZ13lwAME82yJV53NudeLwdS6MvsMH38AMVKqOcbOYMuNew80yCR18MNRur-Bi6pHllbsmNqPDizGgk-urVJ1tP22sRnSPptMaEEEzi2hMQFrnkua654ZG_qKtF0A=s4800-w1200" alt="Bodiam Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgp_Z9rGczuBA3XbIMuLOyxKeRCKWioevWeultC1fj7RAutZqlk0KVO2N9n178MyvQY0Z6VWkgWZ7wHeYau20ilwgoWamTJExzsWtlifzbumTZ6ywulyTbGgHPbbKjpq5jQWJFKnf3FexOIQ=s4800-w1200" alt="Bodiam Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMutcX-b-wJ3NxJ31UPQgHWq10WpMsPRv4TuXu1_b6Rm-GAT8rEixj63xIJsHAiSw2nxIR_PsyJY9J8Kk8J9XtEOUhSK2isgoA5cIPksSl8owvFU_WYAA4Jz9A0ddfnnxhFoa55SxPcRoPYwA=s4800-w1200" alt="Bodiam Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIolw1SU47rP95rNAaQh5iBV1ccQ8XHM8ByUAzgTmu4AuVbk-Jv3efxCQnBppTGvIjZOyO-WEyiq62YJVmSSGaLgmeYltpAU32edmk9Vm9VkrOMCLFboyVu1OrvUVjBnavHcmvV_rIozYpWDU=s4800-w1200" alt="Bodiam Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bodiam%20Castle%20East%20Sussex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

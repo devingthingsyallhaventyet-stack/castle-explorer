@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ashby_de_la_Zouch_castle_main_buildings.JPG/1280px-Ashby_de_la_Zouch_castle_main_buildings.JPG" data-castle-name-g="Ashby de la Zouch Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ashby_de_la_Zouch_castle_main_buildings.JPG/1280px-Ashby_de_la_Zouch_castle_main_buildings.JPG" data-castle-name-g="Ashby de la Zouch Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ashby_de_la_Zouch_castle_main_buildings.JPG/1280px-Ashby_de_la_Zouch_castle_main_buildings.JPG" alt="Ashby de la Zouch Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMxymBR0G_-3Dayx5RGLPs7aGYvpBa57gM0gSzeSxgVeRCYHoAgupAZzw9xzv3Wp7YBh0m2hZzPMC0E8nBsq4COeAuLyJBw6Q9MAsvp2cJp2_-sglDIFCFoW_vrF0VpmlXdT6USDq9ULhXBIQ=s4800-w1200" alt="Ashby de la Zouch Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNUxXXEFa802l7FzVEAhBkvlIeDAqQ5FZRH3fszet7eP_yPtPz2BBbNE-zsvRx0ZbABPAj9kcrtDPd6nsIIMa3iOzb_nDzMBI-1GwQ-1VLlAA3sroHzYF6Cd480K1tU5e9uina60cGhvE-OFA=s4800-w1200" alt="Ashby de la Zouch Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM8Zank8UOqlj9n0H6rvjQJVj5TG_xulOUwFOZHx7_4Ebf9YJqVPmdqCuwPVUKCZbUKvPAeB0Jwi9Au6iBwO1fbzWZbPzXo2QEcKO_kIxAqnYwlPUynwpKhvYCTWh42ogV6mD2ZDVKGvlqf4RY=s4800-w1200" alt="Ashby de la Zouch Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOA3zbrV5Ddt-MRLTFz8Kb974mK9bFXwpp6OZab4LnLgLHV7GC0DsEtoMBiMFLq0DY7ric7zgsV8Op2d6bmKtQi3yU_UUEx-mA7XVk6kazY_p7DQw5loEHRkCMj06o0J8Z84241d8r797dNJMI=s4800-w1200" alt="Ashby de la Zouch Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Pahazzard · CC BY-SA 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

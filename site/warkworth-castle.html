@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgwn4EoM6y5ideOzVzTwQU5aOo_YoLSR2v0Z5T5vMQeu-kJpw5v9ST-3PSd3hwgpLFIqPf6o6urarNWgs8tw4G1wt7tdKq8KZZQqrYfayuqZ31NB9aSNlS_5oCVdQtUYrPpfGOcv1rzIgB=s4800-w1200" data-castle-name-g="Warkworth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgwn4EoM6y5ideOzVzTwQU5aOo_YoLSR2v0Z5T5vMQeu-kJpw5v9ST-3PSd3hwgpLFIqPf6o6urarNWgs8tw4G1wt7tdKq8KZZQqrYfayuqZ31NB9aSNlS_5oCVdQtUYrPpfGOcv1rzIgB=s4800-w1200" data-castle-name-g="Warkworth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgwn4EoM6y5ideOzVzTwQU5aOo_YoLSR2v0Z5T5vMQeu-kJpw5v9ST-3PSd3hwgpLFIqPf6o6urarNWgs8tw4G1wt7tdKq8KZZQqrYfayuqZ31NB9aSNlS_5oCVdQtUYrPpfGOcv1rzIgB=s4800-w1200" alt="Warkworth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBb7VcbX-jcBmq-zfkTWRF05i0Z4i9ePiMDydzd6qGGQ9R_a-pmCuhu0IpSzZLCQ_cbMRYd1QF02isRmQvvIOmiB2w65GGnCODuWY1oNLyFT9Kz5IEnI2WL5ptdCwoHkRRl3Bc3oE32Oc9NA=s4800-w1200" alt="Warkworth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBUETtMmgKZxwgWK3qmJ5UCbSBIj_2ZL55jugfw1l1peBf6AlDter8BLINdl69ih0fvsHXQe1xRyWlYxyxN_KbBQMaNS6if1EqoZiE9D3hwzK7HosVUiRnlJ48dRVK4LEfLWs-gICSsHjyeg0=s4800-w1200" alt="Warkworth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM64hsp-o8MVTinZb_AbCAtiPjk9DGCnSh6xUzTnSpzOV3Y8pa96AlmsRTmbFCdux2OC4DSY2x1WEo0FA3qeF8iVqrYA8pKL2Ah0p1rxYvUO0jtHpqteb3WJ-76lyFvv7WcQTKzAxRA4EGaTQ=s4800-w1200" alt="Warkworth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGHMi78eyRWap9dOnSpDGjVPL9TmdtONcRsmYqzwlvMeNcwijS5a9UI9bMfU0pvqSiqr1Kx9t1I0M1P4XvUiYQsP04qsw8g4Lb4ClJ39iH69OSn-gPBmVDi3GmKZMYWt3Mg4Z4hb_Wzu2ZXw=s4800-w1200" alt="Warkworth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Warkworth%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

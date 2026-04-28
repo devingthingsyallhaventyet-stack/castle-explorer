@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpE5RLMp9mVRyJwR6h-mJPkFSMXQqFdr2enV10-8I2PjHTbQKBmLk8WkBQIWx5q-8IrQaSUg-vqccWn5efCbRSFE5izS90A03PVu0VQm0Ary9_ZhxSDJjkvegirQdQHVYYCONR979LogKMvc4=s4800-w720" data-castle-name-g="Whithorn Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpE5RLMp9mVRyJwR6h-mJPkFSMXQqFdr2enV10-8I2PjHTbQKBmLk8WkBQIWx5q-8IrQaSUg-vqccWn5efCbRSFE5izS90A03PVu0VQm0Ary9_ZhxSDJjkvegirQdQHVYYCONR979LogKMvc4=s4800-w720" data-castle-name-g="Whithorn Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpE5RLMp9mVRyJwR6h-mJPkFSMXQqFdr2enV10-8I2PjHTbQKBmLk8WkBQIWx5q-8IrQaSUg-vqccWn5efCbRSFE5izS90A03PVu0VQm0Ary9_ZhxSDJjkvegirQdQHVYYCONR979LogKMvc4=s4800-w720" alt="Whithorn Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNMrXOHhm43Lugh6YYr2g3plCokatnzBgBLWrPI252GZI9oyYfvb_j_BMf4tmDSGVCu4X9uim76ef3ERNdmnrFrzDSSAZphVstUHBvWgWgnnKG2SM5zRyEMHLo1fgcQM0-l_9bwB2Z3R8UR4K0=s4800-w1200" alt="Whithorn Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrgSJLjemSv8BJtJCmR57Z3A8uABmD8mxDc3_6ZgrTONGBmI6CgIhdw94NMufdPi5v_hledCdMdkV5d3X5-1oUxUuWH1cWzFXroivLnAp5gKYFYWg7MbvIFy8DlzCzZCaMgBtPvH37mGpcLf8=s4800-w1200" alt="Whithorn Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2TNtIfVl4qt1Cvoelrc_HVTBq_OnfxMc5TMHy52ovOrH29_J7dug6ZCRgpseZ9gcK9y_3x-DzsSKNpd0i4-Mkusmmhs7V77JXY_jIitOV1a6WvBLrlO8Sj4ojnOaVk7MDuR5qUb-s_og8ErE=s4800-w720" alt="Whithorn Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAOig9hUFcrcn5S67trlJuir6ZAOoB31Y9UcgHD6smHE_58vvmN9JydNpUvjDseB0AxYy97xzuhJch4EEqIXTI-j4dcOxXC0apZbh-_B1eACx_TVre9CZIZvIgV4QeJ53ZxV7EAxnCfRuyFZQ=s4800-w1200" alt="Whithorn Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Whithorn%20Priory%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBf9ml36C68lAqdUYUkfZwXdSSPRXTeHqMer5P5KyGm6BdF2SrqUzoFm0ej4H1rE2jzlJj5eVrzaKQnUCxcBpMlolI6YfWjwv7XlbYk1G8mjYDydcig8epR8DY-id5VDhvAMcwCoJo_uqzcg=s4800-w1200" data-castle-name-g="Helmingham Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBf9ml36C68lAqdUYUkfZwXdSSPRXTeHqMer5P5KyGm6BdF2SrqUzoFm0ej4H1rE2jzlJj5eVrzaKQnUCxcBpMlolI6YfWjwv7XlbYk1G8mjYDydcig8epR8DY-id5VDhvAMcwCoJo_uqzcg=s4800-w1200" data-castle-name-g="Helmingham Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBf9ml36C68lAqdUYUkfZwXdSSPRXTeHqMer5P5KyGm6BdF2SrqUzoFm0ej4H1rE2jzlJj5eVrzaKQnUCxcBpMlolI6YfWjwv7XlbYk1G8mjYDydcig8epR8DY-id5VDhvAMcwCoJo_uqzcg=s4800-w1200" alt="Helmingham Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8rV7sziZid4pl4g_2p06eqfohvQwuSW6erRkauFdMkuyv816G1-HMr3xAxwJ2CCPeY-K0_QEpRvNB3AdhncZ8XasJ2uhTtf7hNHfdr11e7hpBvxqAaSGG19PrkUk5yxm2d7QaOG20wZ8ODY8_P8-_=s4800-w1200" alt="Helmingham Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEFCQutOaLF8YqGluHfNaR6PcA3s-bvwukenUGhdibybTjqqCKOmHfV9FF6qYrGRpYB0Kv2WuJF1w0cb8N8YuNO40J3O2iwlt6SGuU7OC0b6xxrgrySzLptcFglA6a6Muz90n4bagilCjhWQ=s4800-w1200" alt="Helmingham Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMCmKUCsQsE8bLT8BhEq7cvUF8xdU-GxUgppbGW4M0IGTwQ-CwwiFqZCP_pkpsQxGSfMqiMrKl_bKYPpkjr4bXXXwB44BTHZQAbj2kYtkkU8PCWNotvn8qkUcUsKtgH6u5vza7OBCPdeI-m91yDw5IhtA=s4800-w1200" alt="Helmingham Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8szq8CCrpDDm46gfg3WpRo7n1lebG3TQC6Dhj2UFLeTJTpcurzSeTvAH278A2xJxnIHdiK4etwQdH1z3NXUn4vtjRjwqxew0PxthnfvsBI1TbIrtbVh9IUTexkXOx841sr3vzJC1OipSZHFHMS57Ukg=s4800-w1200" alt="Helmingham Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Helmingham%20Hall%20Suffolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

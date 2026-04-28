@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDz840mEhC7Wdn5aB28sreIwXbuPRdQpbGkrcNxG9NkWOHjnCACC4eO2i24ecrhFbYlwLT-i_QH2_DtftmUg7dlmXGIvaHb215R7XbI5GvEaZRTUuz1q0mfrPAPbKsyIFvDW_D0iNXFRKvCpftdcrc=s4800-w1200" data-castle-name-g="Castlerigg Stone Circle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDz840mEhC7Wdn5aB28sreIwXbuPRdQpbGkrcNxG9NkWOHjnCACC4eO2i24ecrhFbYlwLT-i_QH2_DtftmUg7dlmXGIvaHb215R7XbI5GvEaZRTUuz1q0mfrPAPbKsyIFvDW_D0iNXFRKvCpftdcrc=s4800-w1200" data-castle-name-g="Castlerigg Stone Circle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDz840mEhC7Wdn5aB28sreIwXbuPRdQpbGkrcNxG9NkWOHjnCACC4eO2i24ecrhFbYlwLT-i_QH2_DtftmUg7dlmXGIvaHb215R7XbI5GvEaZRTUuz1q0mfrPAPbKsyIFvDW_D0iNXFRKvCpftdcrc=s4800-w1200" alt="Castlerigg Stone Circle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPvRqJV_hg5eFqb7e9s8VShewbgwe7DT4iksG_LVNIuCEz3ZURpUEdB3jmtkHuKxeBFr8cELsq6xazR7rFDXrdRc9897kO5DYMSeOwWcktJOcH6fQzV4dFrtx6cWmxEOrB1c7JXEfdnRKWWMGg=s4800-w1200" alt="Castlerigg Stone Circle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8-vkzH1meE6L2ovW86-mu79w82gj8MXuvGW3NwGcoKLULRgPTKLb033miCog5hcrrrh_10F_EEOD2rlctkHpuuwDvayADe-YohRNDIEwREwywpapc28MbyJVMLMsWoCvIkMHxXFM-bKmYN2E=s4800-w1200" alt="Castlerigg Stone Circle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6BkbHw44771Twz3nN_me5wA71t4fnVi832ceKKZAF-STdJMbaD2eLyUb5G_rP7GniUt6drc4V_wDsG0HvcmXY8Gq9i-2MNv72jZ80HG3SSyXOqZn1ss0ARvBGoUup23Q3u_njPErrdes=s4800-w1200" alt="Castlerigg Stone Circle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPR0aGM5BKNrDz57YkWv_JsvGSIrVURmI617BTbOPDU0y3DgQig8WGDgcE0j-HjLMCNc21lIG-T5gNlCyLc_gJdzcAk-8OUJKmCoQGqTvH9TJzgfVEatfqfnn6DNPOKvdftriOr3Txk7fFlCw=s4800-w1200" alt="Castlerigg Stone Circle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castlerigg%20Stone%20Circle%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqELS9MNzgfRcEosdYbXi5CMSD4gYZA9HGtj4KxguKI05mpxVYK9nRrhmsfGohVOiiqI2k05pKaLf1Z7mbSrCV1G5pp5rLdxuic=s4800-w768" data-castle-name-g="Dunfermline Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqELS9MNzgfRcEosdYbXi5CMSD4gYZA9HGtj4KxguKI05mpxVYK9nRrhmsfGohVOiiqI2k05pKaLf1Z7mbSrCV1G5pp5rLdxuic=s4800-w768" data-castle-name-g="Dunfermline Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqELS9MNzgfRcEosdYbXi5CMSD4gYZA9HGtj4KxguKI05mpxVYK9nRrhmsfGohVOiiqI2k05pKaLf1Z7mbSrCV1G5pp5rLdxuic=s4800-w768" alt="Dunfermline Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNN7hUqxSAdp3vDB9iCgGq4WCuYovZ52TFYxYQp0AZFNCTeeJ1p7dzIy2RJ3tasoRbQ6WusC5iH99lrjzcqKqckxi5DNSpuva6b3HikYYNTG048pUEPV-07hZOiBvtGh-rS2BMEZKfJQMp_d5vmLel-Ag=s4800-w1200" alt="Dunfermline Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVi9e1XTeJNr6XcUqNYiUWrtjWw6tXwM-8agXwSZ_1Q-u6VZQZQLJsMrs_AtVSNhrCX4t5la2J2EbfXxzg1l3l4WYbLssUn0891s0EEPymdEYPtoX8dHMvWqI_wkf15pVbbyc8yk5ISvZoaZ_0MChE3w=s4800-w1200" alt="Dunfermline Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPo2U7N1PypB1zQO4FrY-H0D-WXvXhsMTbDOvmUBWyos6pVOXUQEXIRFg4EsCCwTNoJ_C1YM1dtMSvxsuEv7ZzHvr_8k-IDReMSzNtjW7GRsbtzOZp_zrjxv6Em00acwsM1nNkAtmhHQsU8=s4800-w1200" alt="Dunfermline Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNCLSewS_z9kkyxb0L81mSg9UQqyfnVM_ssVvXbFpFY9j7Jasxz_efq5eZZKxRb9MtmRarTa7rexEI3smSmtUVS18B2BONp1TiE6FfB2VZLJ3mJOrJfmFNiapoaqwz4dHdjKrJRa_PbaWvMAA=s4800-w1200" alt="Dunfermline Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dunfermline%20Abbey%20Fife" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

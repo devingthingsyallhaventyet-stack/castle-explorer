@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_1NH0mcr3xUkDzbrsRks5u2k4kTLY-ySjPBKG-RoW8f_LAPxSAQbEFDuifpvV7tbHc91D0uRk0L932Rcup2IM9l2gl-BZZifBuSrkE2mELLP2ogiwcje7sM2ZLb8I2YPp6RSUYx8-T8QomDU=s4800-w1200" data-castle-name-g="Amhuinnsuidhe Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_1NH0mcr3xUkDzbrsRks5u2k4kTLY-ySjPBKG-RoW8f_LAPxSAQbEFDuifpvV7tbHc91D0uRk0L932Rcup2IM9l2gl-BZZifBuSrkE2mELLP2ogiwcje7sM2ZLb8I2YPp6RSUYx8-T8QomDU=s4800-w1200" data-castle-name-g="Amhuinnsuidhe Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_1NH0mcr3xUkDzbrsRks5u2k4kTLY-ySjPBKG-RoW8f_LAPxSAQbEFDuifpvV7tbHc91D0uRk0L932Rcup2IM9l2gl-BZZifBuSrkE2mELLP2ogiwcje7sM2ZLb8I2YPp6RSUYx8-T8QomDU=s4800-w1200" alt="Amhuinnsuidhe Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnQ4RsSEWTs68yB3ZtS2Hz7RdyKv0v34i4HA0Xrrl-duqW0798T7qgmkvmN7nw51bKdQ4cfyEOlOX3t4S_iB4rmxf91R0zaD2b85gxNUL97Ueq5KpUt2REAH4gw5SpHtFD7Vtn7a1CEj7S=s4800-w1200" alt="Amhuinnsuidhe Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8MRR4cMZx9fYo2a_b3TbMmOcSrcj7P666cDuR6A0TK798jgWkD_jwJv_8BN4hRY52gX4jAJRMiToDIaPIFEoVKjy22LbSdtC33qAd8JkWmK9vXb8SyKrERVwwRQQ1vBSd2_jbWufgedZnaw=s4800-w1200" alt="Amhuinnsuidhe Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNLvrES0HjX8yNlNad8F7QVv2Xa4TAJNOULl13hy12blp5w7hXk9fYoM_IEYyYLR-cQckeAwPBIcvTxSRP7T2obBb24jeluoRTvlb6QOMeaHTIO-fM_OiB4QHKTZt9CHnl3AlJml6Kd7dQHg=s4800-w1200" alt="Amhuinnsuidhe Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZORk6BS1At1Du70bucuUnfUESp6gpDVjhFM3yzohcdynHJRlVYxZcTCuN8IK__p1RC1WGCP-Oy3G5slpG5m8T6U0Xgcg_weIW1kDUeUuqr37Twr61YKDy2YMVNHFFCqiAwAmsr2FZ3gpH1hnA=s4800-w1200" alt="Amhuinnsuidhe Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Amhuinnsuidhe%20Castle%20Western%20Isles" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

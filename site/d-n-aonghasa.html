@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHg0imH2CECV48drcUfZgX_K7wU9JjE6NUMAdovN7o7ESuRr7d24ECPIbnNdL55Ibx4YJ_kQCbKPafT0dnJLSAnjma31r66EYmAbmMT7xMgtPGn4dUJFb9Qy1_p10r83LSLZo2nzijJb_iog=s4800-w1200" data-castle-name-g="Dún Aonghasa">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHg0imH2CECV48drcUfZgX_K7wU9JjE6NUMAdovN7o7ESuRr7d24ECPIbnNdL55Ibx4YJ_kQCbKPafT0dnJLSAnjma31r66EYmAbmMT7xMgtPGn4dUJFb9Qy1_p10r83LSLZo2nzijJb_iog=s4800-w1200" data-castle-name-g="Dún Aonghasa" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHg0imH2CECV48drcUfZgX_K7wU9JjE6NUMAdovN7o7ESuRr7d24ECPIbnNdL55Ibx4YJ_kQCbKPafT0dnJLSAnjma31r66EYmAbmMT7xMgtPGn4dUJFb9Qy1_p10r83LSLZo2nzijJb_iog=s4800-w1200" alt="Dún Aonghasa" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOOt-pKvYoAjj5ry67aHbHzVPSRc94wuUpJOOrgvEAcFtXAVALeEHrdTTRVAcWLBC7FAFvn8CXs45eGDjCwAz48QlSzESvIGOKLfW2V_y5-7xWsMeGFY-CJhQLQgi0vk0zHMA2loNoamlqa=s4800-w1200" alt="Dún Aonghasa photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtI6ufLtRV2f8nMXSKAdxzlwn9icYJbTKkElptShtJ1Aclz1n5sNWvuW9sC8N9982ALGGW07F8ghlD-m-K5LOQVarVnJR_8eq3_pTA0fo4uGXG5ugCxy3VwPgBf1G2ll-XGGUCq-FiYTxX6Q=s4800-w1200" alt="Dún Aonghasa photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMot35VExW9aapGpvuhIkdb_Mhkyac8rwvwX4kGLV-mnaP3OeHnN9P5Xq2vgOMUfVT-GMQ2FfUnPJImuin-srjJlx4WeC9up7v-iQBo9u2eMfO0uUjDlcf_CYyP7PIk8PhHuHUqpc5or77-b0I=s4800-w1200" alt="Dún Aonghasa photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtKIdYvJCkmYfUCBikKXviqzS-4pKcQEYNdCmUPy-C4JZVurxm19qb0Q8kgIc51p-RI6muqmREG5v9B68cinJPlX0XNNfrHyHIYncf2mGnj7UnuvVYoORaxORVZBIJhYLUxZNuoR_FdVD8GA=s4800-w1200" alt="Dún Aonghasa photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/D%C3%BAn%20Aonghasa%20County%20Galway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

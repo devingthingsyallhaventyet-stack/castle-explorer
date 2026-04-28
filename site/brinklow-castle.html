@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiZ83goDr4Idu3dtCn7L5lkWU2CrtZCAkCS-H9x8mRkAckdR6AMXN4Jgtm02_71ywSiD6pbNUoJ13hxmhG9YH60HYTQS4fi-py1E8jaa9LxefUPw1e6Nb-O1Ka71gAkWcCiX4XLfpjo5lfquuCcPHm=s4800-w1200" data-castle-name-g="Brinklow Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiZ83goDr4Idu3dtCn7L5lkWU2CrtZCAkCS-H9x8mRkAckdR6AMXN4Jgtm02_71ywSiD6pbNUoJ13hxmhG9YH60HYTQS4fi-py1E8jaa9LxefUPw1e6Nb-O1Ka71gAkWcCiX4XLfpjo5lfquuCcPHm=s4800-w1200" data-castle-name-g="Brinklow Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiZ83goDr4Idu3dtCn7L5lkWU2CrtZCAkCS-H9x8mRkAckdR6AMXN4Jgtm02_71ywSiD6pbNUoJ13hxmhG9YH60HYTQS4fi-py1E8jaa9LxefUPw1e6Nb-O1Ka71gAkWcCiX4XLfpjo5lfquuCcPHm=s4800-w1200" alt="Brinklow Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOXg9E4GZOJxRa_b79mDtc9WGLq6CwBZ1Tq0mHwoPk7S2Zj1j0xqnovbUpgIk03hW81RGiDyDiDxYMDDOok_kIT0GXhC8Xo-GPZDOup7nTNxm9unBFdC8dHGhgMSg_c8FodWmSnDEzDxvZoOs8=s4800-w1200" alt="Brinklow Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQkzuT4e4U6mifPYYjKlsCYdOU2L7_aXxOgHCoha7WlDHeuCGk45MMJVIwAZ-IHBSJ0FxZqvuBzTkwhelR2f0k3_UJ3miJ6IYcnx_6acYIAyUv5BKA72F3Ce6PJr1wQSZ2nrLMHCJmI5RCjw=s4800-w1200" alt="Brinklow Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9Vst_Vbf2uXyEX6Ihqo6g_qnn8i3M3NBlcrf6Q5dZTIrn1TNsA46jcePJSYVWap4eLX1PhBGP_i2MBvqng8ig9DIS8grsS5PGmgFTKN_r6HzERog8Ms5sVpD1TpftAPNCvFd78bN1BZj1=s4800-w1200" alt="Brinklow Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN1fdMAqxUCAWGMfckVklE340a82crvR0mzqva-bRBxg2hhgL2TSmmCA4KUys_-77IITmC4qdx9wPvHVN_4T9Aog7vzWVdThNI8ybP6g4hOCZorHU5ahvpSatdg56ZVvLgg0_Zaifa9qhQppf1BlpWACg=s4800-w1200" alt="Brinklow Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Brinklow%20Castle%20Warwickshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

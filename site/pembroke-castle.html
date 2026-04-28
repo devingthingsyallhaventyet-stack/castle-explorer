@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTYqbmY23rZJ9fC11osuDDENVlQAwOcRS3kre2GrCvCXLm3qJ9uINA1NAZDcIRDa1HhpCqj6Ai_D2Ss0slpuRZpf3SS-Yrao6qNThQcZtntuncGNEkidJmOMktZ8VM5vhkIXhOHXcVxLVCnrk=s4800-w1200" data-castle-name-g="Pembroke Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTYqbmY23rZJ9fC11osuDDENVlQAwOcRS3kre2GrCvCXLm3qJ9uINA1NAZDcIRDa1HhpCqj6Ai_D2Ss0slpuRZpf3SS-Yrao6qNThQcZtntuncGNEkidJmOMktZ8VM5vhkIXhOHXcVxLVCnrk=s4800-w1200" data-castle-name-g="Pembroke Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTYqbmY23rZJ9fC11osuDDENVlQAwOcRS3kre2GrCvCXLm3qJ9uINA1NAZDcIRDa1HhpCqj6Ai_D2Ss0slpuRZpf3SS-Yrao6qNThQcZtntuncGNEkidJmOMktZ8VM5vhkIXhOHXcVxLVCnrk=s4800-w1200" alt="Pembroke Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPP_DjoQSZGiisEWlawJVUoI8AYR0VDqd-kBhniEQ05p1nWyJMcY3NyvJURefRnM7RXOqToPdfoQkuMHyWbjg0zM1APsay3aXjeHzVkQD7aMH909lf6T9PfsgTnUhPo1BeRnpUWqWgutgnUKbA=s4800-w1200" alt="Pembroke Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOSlWXwNDcPSTB3v2hRuMnJ0_8PPRQgW_J9pfnup-jqE17TpwZIvLgZjp2vgdJzEcfYD8P841CbWLpJHgttWdG4gQr1Yxf1-H2d1_hDCJkYNk3YfMP5InEglrqA_Ckbfm4w1Cgs95ErIM0vYA=s4800-w1200" alt="Pembroke Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP07X7lyxHqYhAO5ciZeiiVsfdSY30Wcxm8e5R2rs19tuH-W7enKZqz3OsIXmaMi_KoHLytWJWKzNXiCdpPM_arSjInsQ9L-ASPfpbmuEjb3x9YJdAawpbyVBQnytNNbfj8i_m76XSUJ8-u=s4800-w1200" alt="Pembroke Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNr9jasMJN0qT4dgmIZt07_2MpQfYPSbUG5A12jUYdNlamh_pq4_E4q7qxxe_l6baHC_375GkXs6WcoSMLWH7B_cEjrQKSjbOYm_B8ZW7c4H22EkTmJsYR5MkHCkkVtVFWwRzae9NQCbWypuw=s4800-w1200" alt="Pembroke Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Pembroke%20Castle%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

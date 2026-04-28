@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIpyzhEmJ-cn0IuR_N4lhOvd-idVM-iGQTvOzl9Lkb1f3znVvonAwPiFa2BJnCMPgPxUYK-o42K2OCrikcC3bXOmRv-SBwatki25WdB93OQdH8xcKF7efAeBKW2WxNi6Zf2RIYkwLlR32JnA=s4800-w1200" data-castle-name-g="Dalkey Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIpyzhEmJ-cn0IuR_N4lhOvd-idVM-iGQTvOzl9Lkb1f3znVvonAwPiFa2BJnCMPgPxUYK-o42K2OCrikcC3bXOmRv-SBwatki25WdB93OQdH8xcKF7efAeBKW2WxNi6Zf2RIYkwLlR32JnA=s4800-w1200" data-castle-name-g="Dalkey Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIpyzhEmJ-cn0IuR_N4lhOvd-idVM-iGQTvOzl9Lkb1f3znVvonAwPiFa2BJnCMPgPxUYK-o42K2OCrikcC3bXOmRv-SBwatki25WdB93OQdH8xcKF7efAeBKW2WxNi6Zf2RIYkwLlR32JnA=s4800-w1200" alt="Dalkey Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGnqXFObwSgBOGD6WN0sKWC0AmKd-4m8mhUuBjVI6uuX7yQRE-p_65S0b3fNyJ1JcQyhs4jtPPcc6el0R7SEzgFt_mtxNQ1Tbk=s4800-w1024" alt="Dalkey Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiqM6dvI8eG2W5YY8C3dJCKY7L8z4hekvElt8vsAjO0ffSpaZ0kAsiv5BBGOdM0xDgP7Qv6mAVt8XUL6RCmxrvpqWSDAaflxel-1yeikWTQdUfG0KOUyxchCXxb_0bgLY-btboyZeYllI2Hw=s4800-w1200" alt="Dalkey Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMj497fF6FucEfNjlDviaMwBv73wi4mrhPGNcBuzXBtFhJTPkFdsEeWmB6OD2unXT0i7-y7zNES2y1MwK3hqMj_hG1-doIu0gakLl7qb2xG2AXUj-dl3LEhwiLLNs8Y4UIap0V8b-VrOYSJO7k=s4800-w1200" alt="Dalkey Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP83wDfatW4ymR6iSXVYvd4D2i-LBrzqWR8_KjIPxRX6BCnGZG3RtePBsR_kfnrL17m0yBe1mds5jWA7aCTiyl3lrJP7DH_1vjL1p3CWjJDmiHSaX4nT5-bt2b7oXQzr6Kyi57fWEEAoDJHaNo=s4800-w1200" alt="Dalkey Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dalkey%20Castle%20County%20Dublin" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTVVQYLJ4PZNOrKtfFlDu6IkfhSDmD1NyBbWpjxU71rfVhSSIZyaySxsMJnuT8fg7q-K90gl3P0cn9BV2r7oiSbq5bvLkPRKVMwuNoxWij6OLt7cGU_7FYs0vRWiVK9axdm5EFawX1F0DPB0U=s4800-w1200" data-castle-name-g="Sandbach Crosses">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTVVQYLJ4PZNOrKtfFlDu6IkfhSDmD1NyBbWpjxU71rfVhSSIZyaySxsMJnuT8fg7q-K90gl3P0cn9BV2r7oiSbq5bvLkPRKVMwuNoxWij6OLt7cGU_7FYs0vRWiVK9axdm5EFawX1F0DPB0U=s4800-w1200" data-castle-name-g="Sandbach Crosses" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTVVQYLJ4PZNOrKtfFlDu6IkfhSDmD1NyBbWpjxU71rfVhSSIZyaySxsMJnuT8fg7q-K90gl3P0cn9BV2r7oiSbq5bvLkPRKVMwuNoxWij6OLt7cGU_7FYs0vRWiVK9axdm5EFawX1F0DPB0U=s4800-w1200" alt="Sandbach Crosses" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZML0owDhqQn2W05GJbvRUQXZR4Tx6YABKecmIKrtHgH7AuAWHCJD6F7Hy_xLJiVyQk0oNMQ7MNNQYv5tf-ZAqXk-f6pkEqj_mVi8vVO5PfkHp3-X4gZr3o_prxYtbT0T7TUNGreqcEB2ypZSp7LRzJSCQ=s4800-w1200" alt="Sandbach Crosses photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNexAwMqLIE9A2ptqV-txO754yX5dbL48mUzxeZjXR8X_zaq8quEy8KEYHyFs79yeNHqxspt_r-N-kGd3zaBgKyMvf_ePjI1JnieFwfg9E4yO7qnVOHTpQ9aUFq9jV36pCZ6Y9-yYZGOT3Sg=s4800-w1200" alt="Sandbach Crosses photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYIL3MDL0TeFN5Zftk5TkeeHarbJnMBqS_9LrgTZbinzUwev0Zh2AXJdoLIyDRnusGZIKeY6rQ8FmBuZoLAs16FUiCE6O0zgyYh5XcfNfsuZKldb8GA9CAK13svItkcR9hEYCHU7k_7jh7RuY=s4800-w1200" alt="Sandbach Crosses photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNC3eflr-I15xBRaqVh0ZXPrShBJNVuYk2z9AzZIiEGpVWEzIQknYMNUBpG__tdSGxwhV81Kw9rTFEQE04xS-2ES-Cgn--BCGoqpmyrM4XdLjlI0bR4fwu9zpoXrS0vK5f6Nrx9R3Y4Wh6fEw=s4800-w1200" alt="Sandbach Crosses photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Sandbach%20Crosses%20Cheshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

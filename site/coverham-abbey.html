@@ -295,9 +295,9 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBMi1405kf8PVQC50ZD3qNmWlAqkRoGcqssYfrC2QmnfXkY6H7rLpcRQm7riBZcvj_TxWf5ZglNwL16fcAWn7nDLC9kOkoGTv-TRJiGxjIh10bFGCY3s--lGCJL2wT3N-WhJQH4QZILvYaQRc=s4800-w1200" data-castle-name-g="Coverham Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBMi1405kf8PVQC50ZD3qNmWlAqkRoGcqssYfrC2QmnfXkY6H7rLpcRQm7riBZcvj_TxWf5ZglNwL16fcAWn7nDLC9kOkoGTv-TRJiGxjIh10bFGCY3s--lGCJL2wT3N-WhJQH4QZILvYaQRc=s4800-w1200" data-castle-name-g="Coverham Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBMi1405kf8PVQC50ZD3qNmWlAqkRoGcqssYfrC2QmnfXkY6H7rLpcRQm7riBZcvj_TxWf5ZglNwL16fcAWn7nDLC9kOkoGTv-TRJiGxjIh10bFGCY3s--lGCJL2wT3N-WhJQH4QZILvYaQRc=s4800-w1200" alt="Coverham Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8xDClawi8MDQe69iMNiqB9fTF5R8K9_FhSHIBPwc-m9PUxnj7bIQF9aP1XkZEL0654BJ_NHgI8cHWhCtBoucNTCBc6bkg7ZeY_yxiWZq3chbFjNyXL1FdZ1G14ZW3kM-NmxOe9Hb4hnvHlDc=s4800-w1200" alt="Coverham Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide2"></div>
 <div class="g-side" id="gSide3"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

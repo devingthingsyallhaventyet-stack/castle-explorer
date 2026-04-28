@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/1280px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg" data-castle-name-g="Cloughoughter Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/1280px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg" data-castle-name-g="Cloughoughter Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/1280px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg" alt="Cloughoughter Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrP6KhiO9sggReig7-im6W_FO2yanUJ1_otqIRy4LwhB9-Vg03omodc4f2oDWSTzoHy6ies2wS0nfNg6hlK9ivsEcrFkMNtMhudkA4wCa4X2tNET6WFQ_e7u6SKLX7PExeB3uvjIj5Ni8Uth0vClbF=s4800-w1200" alt="Cloughoughter Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN7QxW1PmgWdwYgwMT5ljk4foSDkar6_94pBPzLVrPZielFI4gm4-kJaWb8gfrzWwRu4BqOLULYfHCeoiSOztdgpeTVuXL7dmjmloHZ4Qbh70tWR14c6wAQ9AP4n4ZvNJ2nsuCCoDD5siW9D-zEOfFPPg=s4800-w1200" alt="Cloughoughter Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOksKjd5WsWqw_mwJRaPgKPG5z0o0kCYDem6ivZytXnL5XsVGoITlTEck2PSvNKBRvj59fFnDUFG99dMqJya9u4-qSI-VI94A7Qd166D8y7pxnuvAAn0rf4xhCaPlEEJ3RREbvk5C-xtfYLMbw077EH=s4800-w1200" alt="Cloughoughter Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrP6KhiO9sggReig7-im6W_FO2yanUJ1_otqIRy4LwhB9-Vg03omodc4f2oDWSTzoHy6ies2wS0nfNg6hlK9ivsEcrFkMNtMhudkA4wCa4X2tNET6WFQ_e7u6SKLX7PExeB3uvjIj5Ni8Uth0vClbF=s4800-w1200" alt="Cloughoughter Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">7 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Oliver Dixon · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

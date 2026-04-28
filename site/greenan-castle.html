@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEE5MdrK55n-k8mgbeecGMc8zdLanA7iRbAd5HX4wM82YW3mmxrTSLH-c1MC1xT2FyAZQH1eAtVA23IiRviLCINoI_gqTYzz15167Ra9-llEis3S0YhJkMka2bSirMmTCId4cguriZZu7Y1w=s4800-w1200" data-castle-name-g="Greenan Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEE5MdrK55n-k8mgbeecGMc8zdLanA7iRbAd5HX4wM82YW3mmxrTSLH-c1MC1xT2FyAZQH1eAtVA23IiRviLCINoI_gqTYzz15167Ra9-llEis3S0YhJkMka2bSirMmTCId4cguriZZu7Y1w=s4800-w1200" data-castle-name-g="Greenan Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEE5MdrK55n-k8mgbeecGMc8zdLanA7iRbAd5HX4wM82YW3mmxrTSLH-c1MC1xT2FyAZQH1eAtVA23IiRviLCINoI_gqTYzz15167Ra9-llEis3S0YhJkMka2bSirMmTCId4cguriZZu7Y1w=s4800-w1200" alt="Greenan Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOV7IF3FTl6SdmM5-7c9K_LoiwX15DNumdPN7HbySD_Yz6Pvo4RgmYIzAKgIqmehimfZtsrt-3b_K5WvivmYuxhiEZPIjgnPKww8ULZszmK_wdAzU1YoxZebgcDQTRYwB1qjiNfOwxeqlONNQ=s4800-w1200" alt="Greenan Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOk26fSMq3nhthZyJGJP7d50TjJ_b3kcT1ZU2KEMQXF-X0PZITGkFO_LFikp_e1QrZLgxzNxH9lmdrcLfBNAoYeDiQ2zmnLRah6xRcZRgcgcHhJ1rFK8CmTulYQaa2LBMVct1-XSd_eXl8g2Q=s4800-w1200" alt="Greenan Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8s4XYO8eVDERcP40taLAUX3tDr1xWKeZAcYbdwziorXuQ8wfySTPKWtQboanQwn68--E8ZrY9WBXC9aV2Zc0YUecQLB5vZ-G7GWaUWt7mnw732itXzLp2w24WAlNBb5J9G1NHe9rYoJ5_vWVADtsYog=s4800-w1200" alt="Greenan Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8oRyKsorzjzLzPV-28F_4rJY2FJWu243xKp6sls55qE8ej9SEFIGEu3r77rRb-PB9LnGM45xHutWc80r-6tVi4PXtRRFrJirEq2QaVKebcUUXoTvgMnBcr5BSq_9dDQlK28M7GwqFUe5dPQ=s4800-w1200" alt="Greenan Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Greenan%20Castle%20South%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

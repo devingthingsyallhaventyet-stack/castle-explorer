@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmMnowjK2Fsumi8SG8BVH4Z_eG7pLvv6BQAkC8mLEhhJYK4VDKaL2YWt5qfqu13KBozazXw_moRs9jAYSdZp-yOx92Sm2btueAkJu-brzGk9Cj4dt_xYh3L2_5gHOuclJFNMhTUaLaBsMeSGKAw-8jjg=s4800-w1200" data-castle-name-g="Barholm Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmMnowjK2Fsumi8SG8BVH4Z_eG7pLvv6BQAkC8mLEhhJYK4VDKaL2YWt5qfqu13KBozazXw_moRs9jAYSdZp-yOx92Sm2btueAkJu-brzGk9Cj4dt_xYh3L2_5gHOuclJFNMhTUaLaBsMeSGKAw-8jjg=s4800-w1200" data-castle-name-g="Barholm Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmMnowjK2Fsumi8SG8BVH4Z_eG7pLvv6BQAkC8mLEhhJYK4VDKaL2YWt5qfqu13KBozazXw_moRs9jAYSdZp-yOx92Sm2btueAkJu-brzGk9Cj4dt_xYh3L2_5gHOuclJFNMhTUaLaBsMeSGKAw-8jjg=s4800-w1200" alt="Barholm Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGhnExysC95D_CAllst6xAPVQZty0jXIX9zuYgQYEHzFJmXO4xt46R3UIko3BuWPkrqmuTZZyjhnba-k1KSqmNMJpjXApDKf66rMucwEo0QP0e3ywBh-9TT2aPs5EaBl6qUboW9EP9adMNJPXrrh5PXg=s4800-w1200" alt="Barholm Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgXsBC9XzFSvjI1IhCe23bmf2cXUnRKGvbv1_QcfnLozqeQrL81T6EjaILSsYxo7IWR9ntsYG4RKx_sDMbrZbuaZFQNGwWFyEZ-lMUm7Odp34F3baImyd9zcpd0B15POu29Usl9sWwHyjrKJp4R10T2Q=s4800-w1200" alt="Barholm Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOUvxvFWYpBKDa9U8YZtK_gCHT66pPfrMYwPcUm2iwH8qinRC5fKECC4SYdoZYj9Op6ViKpJgzmwH8zkX2iAD-zTulUxICUaI_zrx68EAROcrNn1fYTAxpYEUvMo9HnfFEYtnKNSqHDkvLyybVSS2oRDg=s4800-w1200" alt="Barholm Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMr7l6KqgL9tWjrncoc4islGjgQOGmT5-vacoC204_GtoaWv2hKaEbh1quqnJJeF28v_SUoGVIQS2YG-7wl3whV6pC5rKgB1UTxbHaeVHgEL4hJubMWE5L-Czy2aqBVjV60UQ7cU0jy0wqikhESIDC59w=s4800-w1200" alt="Barholm Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Barholm%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -400,6 +400,15 @@ The tower dates back to the late 15th century, and it was a stronghold of a bran
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ The tower dates back to the late 15th century, and it was a stronghold of a bran
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

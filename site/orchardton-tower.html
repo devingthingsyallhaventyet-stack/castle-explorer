@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpp6rWY5W71lgef8AP1tEO-t3Q7UI_VF7KXu7nAaEADzpEGWJXMmaP1nTcBLQPLRh3ZknWkfQkspth4J_7PSz-uC92S19qkLqXRqgbiJYq4M__1-17iZ2p5qHNm4tOTuJTttP5bauHWzVBFg=s4800-w1200" data-castle-name-g="Orchardton Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpp6rWY5W71lgef8AP1tEO-t3Q7UI_VF7KXu7nAaEADzpEGWJXMmaP1nTcBLQPLRh3ZknWkfQkspth4J_7PSz-uC92S19qkLqXRqgbiJYq4M__1-17iZ2p5qHNm4tOTuJTttP5bauHWzVBFg=s4800-w1200" data-castle-name-g="Orchardton Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpp6rWY5W71lgef8AP1tEO-t3Q7UI_VF7KXu7nAaEADzpEGWJXMmaP1nTcBLQPLRh3ZknWkfQkspth4J_7PSz-uC92S19qkLqXRqgbiJYq4M__1-17iZ2p5qHNm4tOTuJTttP5bauHWzVBFg=s4800-w1200" alt="Orchardton Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZgUL212VYmz1tjeNmJJwmRtMnCTvQdGq3xfepfeY_ua0FrNcjp74mtiviZbMOu39KF4RaSD10j0K2HebzVFU-1txxOHDX8NHDWBUrmaH97Valq5FRNzbh4zcY_8PJ5OCOP7rot5sdqdmy3u8=s4800-w1200" alt="Orchardton Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_1aaCS0zvsgCe0yya1fa-ypl_b1HlFZZkFdNFFdVsTKDjMXqT35D72SWCJd54046F66N_KQKFuQVmPXOOon4NrMacB6o6lTSzwQ8BndBpiGj2NVQiqjPnSBCn-ThvSQhGAb8tRUw_POyIiXY=s4800-w1200" alt="Orchardton Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMU3W2pwic0NbssmwL-1mn9iNBDVbAmyfhFGjb_JTP636GvO6KQ8RljkJM060jdeI_ZGhbheBQhziAiKvVQFwZ1H8d5I-c90cELl3tys228sL3MEM-prdpego-L2InNq_XDSQLQ0uN_AbxZe-PXAzH3tw=s4800-w1200" alt="Orchardton Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPYniWSeTdRJ8uP_PwEWWq0QqQvJeqPMecM9y8ANVw3YvuKrTuT-LxxHRfJv4epWdaJVECaYlxK3tg1vkdimj7IwMgmrgp0ETlRiJMKBc8EqBjEjmvtUQztCmloHntVsGJEN4pAxh3YIiQtkw=s4800-w1200" alt="Orchardton Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Orchardton%20Tower%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

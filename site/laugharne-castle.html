@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrU9wWuKAxdoItElJfQWvYC8AORegBSbzij2eqtAlr24za4KNpuQvUZZwFi5JCisjci_31pqefYoneVl2dFBV4d5Dc-il81T-J8u27jtaIs2GGrXcueLg1QWC_QrNom2ALXiQtmcwWpmBRUw=s4800-w1200" data-castle-name-g="Laugharne Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrU9wWuKAxdoItElJfQWvYC8AORegBSbzij2eqtAlr24za4KNpuQvUZZwFi5JCisjci_31pqefYoneVl2dFBV4d5Dc-il81T-J8u27jtaIs2GGrXcueLg1QWC_QrNom2ALXiQtmcwWpmBRUw=s4800-w1200" data-castle-name-g="Laugharne Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrU9wWuKAxdoItElJfQWvYC8AORegBSbzij2eqtAlr24za4KNpuQvUZZwFi5JCisjci_31pqefYoneVl2dFBV4d5Dc-il81T-J8u27jtaIs2GGrXcueLg1QWC_QrNom2ALXiQtmcwWpmBRUw=s4800-w1200" alt="Laugharne Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwF9jZChq5ZvHvfu_ockoPNIOKEG0k1YP0UNhmPtxtC0weAmw3hUOTh-QEDeEQLtgOIKDlZzam0brHsz76C3ympSa_suSHqotQRtyR8gCt_L96Dnh_bxlr7DMdFk93N5c-wrLgf4A8Qk6ioA=s4800-w1200" alt="Laugharne Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQjSzioxzGwmIBwBaKck6O0DzgnJIwFmAEuVJ0igvxCtzoDsIy-B5-R-UV6X0oWVAXgX30GS__erxHw_7LsljDOXIYY_YE5_0iRmLnpDlCeK5k1cLYjIUJt6nPK63HgguOqPlTwA_M869Kuw=s4800-w1200" alt="Laugharne Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNENm9_r5foEqygnp8ut-hNccLD1rPFie84XmpIRUSkZLjVLLDhdNDnRjhzYTnVfr1CUPqsvKT88bJzTSky7Acb25fzbn-aYgpilpC0ZDegnNMcwRFormeVqp0zoGmwPqxDeCUHKhYlGeEASA=s4800-w1200" alt="Laugharne Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP-i3OxqOlBILYZR9wpFJw_VNW3SDzs_SwvgioW7jFzYPmRxn58lVw_aF3tvnef_nLgEaXnBV0hR883Hu_NQtJqYg7IWEDxYLXBDFtMb6xowoow8TnVsnFeXzeZ8XzcmRq2fQuOcS8ss4cuZA=s4800-w1200" alt="Laugharne Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Laugharne%20Castle%20Carmarthenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

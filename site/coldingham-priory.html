@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Berwickshire%2C_COLDINGHAM%2C_Coldingham_Priory_%2835964550806%29.jpg/1280px-Berwickshire%2C_COLDINGHAM%2C_Coldingham_Priory_%2835964550806%29.jpg" data-castle-name-g="Coldingham Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Berwickshire%2C_COLDINGHAM%2C_Coldingham_Priory_%2835964550806%29.jpg/1280px-Berwickshire%2C_COLDINGHAM%2C_Coldingham_Priory_%2835964550806%29.jpg" data-castle-name-g="Coldingham Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Berwickshire%2C_COLDINGHAM%2C_Coldingham_Priory_%2835964550806%29.jpg/1280px-Berwickshire%2C_COLDINGHAM%2C_Coldingham_Priory_%2835964550806%29.jpg" alt="Coldingham Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHWxb2u4M6tBCw9sBYByDkNLr6ZAB-HnUpQPasGOy24Hw5H9h_6a003ImRsnvG_sRZ5Q9i2O-H_PeYBP5777m-MBZyqQbsaPtCKf7xHV5J2HB_4cRiKQQbGB0KmWuHPtcGhIHgL8hFRLs81UJMjgt2bA=s4800-w1200" alt="Coldingham Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPmKmj0qIjP9AogzJu9Dklzw0NhfN-Y5Ng7ScEiK5nyN6hL44TA2stsLvhN47mmVtOstS9ypkjgUGXm7Rcl8ZcLVP26kJpOmYzvKoL4fU8OkorciBiJfeQYnG0Kc3RDQ-VBMKJa0IdzhwkteY0ZOTTX7A=s4800-w1200" alt="Coldingham Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPo3WRuOOUrSnBVZ5YhZd2WWkrrbqApR28PlsmxBNwLxndrB804h-OUARbcBBDsAqmLHeMTg5xRztCzy0qjEZWK7cCQ-XPrOgD1NhAmWWDGJHKN6Q1RhLMS245-4YfPitb62G-gLDqQMVtBrMOdZGAb4w=s4800-w1200" alt="Coldingham Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPKNGMH6iduP5LzfR1YWI60RllmIkmkd4W3ijed4OnmGY2VaqOlwFZaYD96bEu9cEO8A6EBc76ZZ9OA0gU4y1BjKxR-A9QzlRQ9a3CitQ98J9Gk7aougmBwup5_HJ_gxwD94K4CA8HhUa-o2w=s4800-w1200" alt="Coldingham Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 The National Churches Trust · CC BY 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMaxpTXwxAGBvGUH2fhakOS1vIHeQ3tb0cdD5dufF0x0Ee8g9CBP0Aw8F0PFwoitz0DNQvq5TjCFvdem5Q6wzW7Bg7RDr16_RJtPEi3bVvf_7W3RZ11HB3mhNaPxnCNpryI3hUzklAmWJRElA=s4800-w1200" data-castle-name-g="Valle Crucis Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMaxpTXwxAGBvGUH2fhakOS1vIHeQ3tb0cdD5dufF0x0Ee8g9CBP0Aw8F0PFwoitz0DNQvq5TjCFvdem5Q6wzW7Bg7RDr16_RJtPEi3bVvf_7W3RZ11HB3mhNaPxnCNpryI3hUzklAmWJRElA=s4800-w1200" data-castle-name-g="Valle Crucis Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMaxpTXwxAGBvGUH2fhakOS1vIHeQ3tb0cdD5dufF0x0Ee8g9CBP0Aw8F0PFwoitz0DNQvq5TjCFvdem5Q6wzW7Bg7RDr16_RJtPEi3bVvf_7W3RZ11HB3mhNaPxnCNpryI3hUzklAmWJRElA=s4800-w1200" alt="Valle Crucis Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNmEi_X7NXX6aZCY-6CdgeKdJCKaYuo0BD5XGWdl2MCTArC2eOFkQoSLOw9GLZPYnJrS9nQxLxkLN21gOwBX2sztIkTf7xC6nHHF6xsU6pGpTPGdtpw-4uhiBQO9fPDD8zykUBamCvRISEpkg=s4800-w1200" alt="Valle Crucis Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOg7NxlTiLUiAiB-GmYdc7x_ajOkXqYHTGDfQfL_HAmO3Hfc_l2pHU-raZviSa2Gw2J7wM9lKsJlWr_cr7EWNLKXuK3oyigQnkvpneQ68InGsbZwKCBsIfSkykfo7_YEKBMTokkvJA8mQE0iKxe_Panzg=s4800-w1200" alt="Valle Crucis Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNc1-JMS0-FlpIZEPDGQy0tGPaV7ONu966cyxbkEdLqq9Qz5mA-8GZWlaCDIGQVL1gFiaOAi_VMncGuOg1Am2pd_XIycANTGb4TOHnBNzrsLg_21cjyWFmQKV7CPo_nJjUADnTcVM0iyPLttA=s4800-w1200" alt="Valle Crucis Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMPoedimtjyswGBufutemIivEfXDtecTV7wCAPWeoaWsk61Kc8QVKNFj2kOR1GzTEurKpMTJqfZ2WB3e0GOhvkMtQt9152wSxuAYFruOLbd6Eiswi8QffaRwoG9XvpSQ1kIj4ENpsrq22Hj=s4800-w1200" alt="Valle Crucis Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Valle%20Crucis%20Abbey%20Denbighshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -400,6 +400,15 @@ The abbey was built in 1201 by Madog ap Gruffydd Maelor, Prince of Powys Fadog. 
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -416,7 +425,8 @@ The abbey was built in 1201 by Madog ap Gruffydd Maelor, Prince of Powys Fadog. 
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHYc313VnXmduX_pHRxBvcsHw_8qa8IMc4MWkK53GHTUxF57ulGyauKLQ2KmdDTgbvixyIYvbjxaswKXQ8GDQT0UF1BxrZx_jk=s4800-w1200" data-castle-name-g="Southwell Minster">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHYc313VnXmduX_pHRxBvcsHw_8qa8IMc4MWkK53GHTUxF57ulGyauKLQ2KmdDTgbvixyIYvbjxaswKXQ8GDQT0UF1BxrZx_jk=s4800-w1200" data-castle-name-g="Southwell Minster" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHYc313VnXmduX_pHRxBvcsHw_8qa8IMc4MWkK53GHTUxF57ulGyauKLQ2KmdDTgbvixyIYvbjxaswKXQ8GDQT0UF1BxrZx_jk=s4800-w1200" alt="Southwell Minster" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWSqVhRtEWa8IMkcNm5-Vtt7wNPt69oKUlIbSJmtFUuxDyN2W6z9hO_hTne_boxERzH27UzqsRedI2yfsGQ_W57VWzZCM3CWJzloNcd4INTG20j1TIwLQo3nlF5gi654bbHUtiYtitGLOzlSJ91m4T=s4800-w1200" alt="Southwell Minster photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOjd0SyIKJq65zjRgZXiP5-pK8avOaVOAeN0J0NZiYPHv-JjO18BlldWrvFK7TTmLsBGSVyQSgprpytCMAK_xdFZNJ9-a8pQ9dxzwMZQtBCtFCmpHsUigeptaNB0iwqIj-370t7seZofcEiyQ=s4800-w1200" alt="Southwell Minster photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPWR3JYsrmjRIHsQT5gO5uSr0cwvFMA9bsV5kAl8r5LxzyFEYYHy60JVtHiTeLs6TSxqLFwRbaGLJi1RO7R7MRtrb4jsym7v5sF2BQDRlS2rWuZwC5v0coMTsTfTZE05HpkWGg2Ky1T3a2Kvg=s4800-w749" alt="Southwell Minster photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMDcO818zyPou-LdbFS4Jum64g-EC9xqN3lE-iFAfVtVe0vN1KCAuy2svAqfhdJ0gMc3gxJLZijY-CejM4Kjixp1CbwxVUUbTyNr43pTTj-9feJj5jcrWClWmtMdjP9YUd7fX2J9HIZ5qs_RDwxysndZg=s4800-w1200" alt="Southwell Minster photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Southwell%20Minster%20Nottinghamshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

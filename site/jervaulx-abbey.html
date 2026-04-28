@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqE55L_GLloVrnkEVMDEPyVWrpvzPVZdmgdzlElN7Pm80Qqj5ABz5_pBz74tFZC48ttLGld-iM38Y6kLqtkAbLG2Nk8pUM7ajYY=s4800-w1200" data-castle-name-g="Jervaulx Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqE55L_GLloVrnkEVMDEPyVWrpvzPVZdmgdzlElN7Pm80Qqj5ABz5_pBz74tFZC48ttLGld-iM38Y6kLqtkAbLG2Nk8pUM7ajYY=s4800-w1200" data-castle-name-g="Jervaulx Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqE55L_GLloVrnkEVMDEPyVWrpvzPVZdmgdzlElN7Pm80Qqj5ABz5_pBz74tFZC48ttLGld-iM38Y6kLqtkAbLG2Nk8pUM7ajYY=s4800-w1200" alt="Jervaulx Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNqS1rNAva21xbV-LkM17ZL7mx9DwEQYofRajYg9SvslSBy0s8CopxdA5820LVEGvaif-KgUdOxq2ApbVqneM3sMPrU0LmTS__vENCfA0NBpy4RRWBcbv6f3EAu1VZOJKgu6JyOsKhpEa7mZ4E=s4800-w1200" alt="Jervaulx Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLR3qH9IO7GRpmDranRJyLfyOSsK4BaAsUV9MQez8HGr3NVCfJZJLYVo4T0777cU1akCPR4aGthrEIIMVV8QDAAapvQOBixtNKHqmxIw_KOn2alUwFyJSZ-voe9AqJqSYOjSF8PoA4HyS9e5g=s4800-w1200" alt="Jervaulx Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJTeNz9IuiW-_PEgFURfp3XLlozseFNqD4gw8Y4F4k1t01myVw2VuHJWsO8kb4ttnsvDGCE4ThG1_KywjKNxPjmLo0KJ24o3pRcHqsupmMam9Fr5kdWhhXeRLxUuS8X-c-AGJloj-shm8=s4800-w1200" alt="Jervaulx Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOxhHCNAYvqHTpCOuUFUmS494wpMjaLtELD8vZQ4mrhWNqZ-w6RQ1857zATXHHUyjzhQAdRd3yZREBvHTg77Ai8--D3S2gsKrXPXuOenU2xUmbLYLgVs39rv9bTjuN7viVgh6PV0y34tqBdHQ=s4800-w1200" alt="Jervaulx Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Jervaulx%20Abbey%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

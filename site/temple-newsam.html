@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdN3wxbIWHWClXZcKuOCCSMMIvtk2vXRwyx7kt25JTHKzgABrJKo2a0LSk33V7VhwUNc1DRz7LtE-fnoWjLqwiWnD6_m2X3nQxQ3M6lcZGKExpEzUo2YCLXB9ORCDVaUetbmKH_H-pLWzb=s4800-w1200" data-castle-name-g="Temple Newsam">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdN3wxbIWHWClXZcKuOCCSMMIvtk2vXRwyx7kt25JTHKzgABrJKo2a0LSk33V7VhwUNc1DRz7LtE-fnoWjLqwiWnD6_m2X3nQxQ3M6lcZGKExpEzUo2YCLXB9ORCDVaUetbmKH_H-pLWzb=s4800-w1200" data-castle-name-g="Temple Newsam" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdN3wxbIWHWClXZcKuOCCSMMIvtk2vXRwyx7kt25JTHKzgABrJKo2a0LSk33V7VhwUNc1DRz7LtE-fnoWjLqwiWnD6_m2X3nQxQ3M6lcZGKExpEzUo2YCLXB9ORCDVaUetbmKH_H-pLWzb=s4800-w1200" alt="Temple Newsam" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZORU9XsJPvSnkveWa-W-Dg7hVi0ZEDQBRKdZyWfer4VAnHocAKWKeTVwQej3rDF_RQND2bS6x7tBfe--Tg3bsMqgylZt03GO2jn0SROrzhy4--OpFS2cqAN3ekv2lIb8tYP2tJUp8YW_kZLkM2dYzU4zQ=s4800-w1200" alt="Temple Newsam photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsGZya25Se21xTSSY3sf2G0rJaCEYlkTURFIB79jpMIZMhRCFN9vyCqHfzlVsRuYEw67CwY9YNpNMoAdkWIaGb9ZDCpjNwHJl242tb6MCD6YDs8x72HJ1ZWIVzWdk9Zk37Lknwca7YP9K-1pQ=s4800-w1200" alt="Temple Newsam photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNOlj8adZV2ndE2rF3KTnAbw4L0NXS7NgmWYsyEggX34D_cjARWtiHTp2AgtTbwXJUf8Bi3fDPSuBRxbxBHtRA7xNr0eK4NNytp0MBnfm91WHyaTwgXVriBJC1VNWQCJVY6pc-R0VvKCYmbGA=s4800-w1200" alt="Temple Newsam photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhrk5ztl2ZrIMIngpXapwNSVyTvBanwR9fCDr-uaowqdV7xCr-zXQXorI3ziddjbezLVr7b3S2MX0hVemW5mzMw1YcrQ_KkxlbbwgtPQrkZayXyKdScDba7iocjyFDRAaZ2Anb7eOdH6Dg4w=s4800-w1200" alt="Temple Newsam photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Temple%20Newsam%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

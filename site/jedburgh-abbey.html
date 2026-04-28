@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqExeSXnWdTztQSppQ4uQbUOGyci8ML8UzP2VWEaUeCdZMrJEDjaTl864cdkeQeKpOxDm7ruD5_j27aPaOAvn6EvlxQCTBSOAgE=s4800-w768" data-castle-name-g="Jedburgh Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqExeSXnWdTztQSppQ4uQbUOGyci8ML8UzP2VWEaUeCdZMrJEDjaTl864cdkeQeKpOxDm7ruD5_j27aPaOAvn6EvlxQCTBSOAgE=s4800-w768" data-castle-name-g="Jedburgh Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqExeSXnWdTztQSppQ4uQbUOGyci8ML8UzP2VWEaUeCdZMrJEDjaTl864cdkeQeKpOxDm7ruD5_j27aPaOAvn6EvlxQCTBSOAgE=s4800-w768" alt="Jedburgh Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNAlSYUtfALwngNnX_64FhLwr1n8RUIFpqcgbvk94ZcQ0CNNrIyDcGhA-80a_Aq1uZuL08GvqIFcgvFQj8gDcN_uhQQc5u3hNmZcWD6DYUhwE7n-oXyOgBe2_yTB1C62KDYErqovfi5LLRh3g=s4800-w1200" alt="Jedburgh Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNNwptbD2RhUwZjQJyGBHcbPWlp_MDnuiJIcVXMOy4YrBWt8aX4WybcWiXaQkd1nbq5_VnSona8MOMgNlyytvF4l4Cutm6gO3MlCNHMI_gJdYB3w4msWG7xTdKqppy2I6UgE_niUDAzFBtJ=s4800-w1200" alt="Jedburgh Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNI38lxnS7Lume1SlAjnu1E_mP_KvkL6W77SS1VXm-bAjysqi9CDjwNbN1TxwT7hLw2rhJQRJ6HCvESE8Mt09SgunTTvFiXZ-1HmkgImOrwYRa2CVff8zpTHkX655AqYpaYsa0hWbn8hAKxEg=s4800-w1080" alt="Jedburgh Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPNNB6EQf2c0OCzlVGKa6zOFz5FuCioAFiSSyVZXtfI2wbreNZ3ztQYViXFZmS_Frpd_anzRXtxqlJuHdC63BcZ0H49syx4R5NBItA0jhdeXoTIWf8YJJfwyjXe9SFlGd-sTRZ9f4VM7LngML-EXcG8TA=s4800-w1200" alt="Jedburgh Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Jedburgh%20Abbey%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

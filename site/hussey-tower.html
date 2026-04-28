@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMF-QxtheFbRtT1Ky_DTUp8ahUkbvI1hMVW9XCsBrJfdGbJuj2Za6lY7GRUChLVq2fSiNrjB3WQIPZPXaI-Bmn4bN_d3J_BZYF8WUkesaWpdFrQ-Fa7Aitoxkj_Nhig2eVLM4RcgAWRNG_lbmU=s4800-w1200" data-castle-name-g="Hussey Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMF-QxtheFbRtT1Ky_DTUp8ahUkbvI1hMVW9XCsBrJfdGbJuj2Za6lY7GRUChLVq2fSiNrjB3WQIPZPXaI-Bmn4bN_d3J_BZYF8WUkesaWpdFrQ-Fa7Aitoxkj_Nhig2eVLM4RcgAWRNG_lbmU=s4800-w1200" data-castle-name-g="Hussey Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMF-QxtheFbRtT1Ky_DTUp8ahUkbvI1hMVW9XCsBrJfdGbJuj2Za6lY7GRUChLVq2fSiNrjB3WQIPZPXaI-Bmn4bN_d3J_BZYF8WUkesaWpdFrQ-Fa7Aitoxkj_Nhig2eVLM4RcgAWRNG_lbmU=s4800-w1200" alt="Hussey Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP-oEPt9w6GppcBmz5XegFmwkaBPJlCP9x61sIfQgcBP-gnV7A7ytFqrJYO_3coO2V22stw38RZ7spyWw4dSLOgdte2XurkuF_iWVbR3aCsr-vGQXeMmSenbNDvqoT8XVanMgfw7mHbTOg_iXNxSRQrrg=s4800-w1200" alt="Hussey Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPfx72L7Kour-T-Qore0o06hTdL4dGfc_DRzBlvjiOO75pLBGV_UKJLS8svdbVempClYD7F2yS8HG_0pTr5rtYaXyKfg6nCFQLKjD-t3Fd0BgkqME3NSomHqRyO_cyQ-zkGIWS6sCGdI71iYg=s4800-w1200" alt="Hussey Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOqlNybKn7MGRqHHZ0vSHH3ubSOkZu5-JXxBouiob1k_-0suqIEXfWQYPaMlDAWQS8NwFIltPyCBqzXlLgtVcZKwg6jlRvS8DAbObjSiouRgLHpnaBQh8puS3-ZnlaS1ex8ZFqibGLq18BWqw=s4800-w1200" alt="Hussey Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTXcgW3ekHWhMGW3fpix-FLuhyu9QYpa1KwZdwjDgM9vcVUNNKTSR0qfuiyu-BYgA2E4VoG2KGFjCOD5OShTWnCyFa6gaSh362LQkmlazn8ilEMU8b62erVecPGNTA5Frk7D8ln3Ib28vDgA=s4800-w1200" alt="Hussey Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hussey%20Tower%20Lincolnshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

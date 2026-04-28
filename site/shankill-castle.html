@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Shankill_Castle_Paulstown_771h.jpg/1280px-Shankill_Castle_Paulstown_771h.jpg" data-castle-name-g="Shankill Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Shankill_Castle_Paulstown_771h.jpg/1280px-Shankill_Castle_Paulstown_771h.jpg" data-castle-name-g="Shankill Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Shankill_Castle_Paulstown_771h.jpg/1280px-Shankill_Castle_Paulstown_771h.jpg" alt="Shankill Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRYwDIVkO-BCN6LKrhj-L50jj9l9eGGVxolNgm4gZo3cl6K5CKTtbpaOTcQNAJgv7ZYWAHuRiUiQBmeEI-9tv21IVJPgRO2i4cApGh65zPhfGUlKzD37pbRbHGZFeBoJjHxZBCdwPq4MY1K_Yv-VeCWw=s4800-w1200" alt="Shankill Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNw9B2-3CFQ9YRIP99ytqtPGo01FvdKqtPKZBdNEpAolMCQdiiE5aIMaaQLtSf2-Ck4qPRicMu51SnK1T5AJPm35NDi1q8-_BCuT-fDYLcn0rUTk8_BKlajIasPACAhHD_hY8x7E_DDSem5eJY=s4800-w1200" alt="Shankill Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIHCD1ByIXIqasV0YZfPVjB6zZs95PvOyio93vtPKNIRFGsduy5qT5Tj1nkG1NZY0sRMHOKVTA4bwUCkZNwW3XqNtP9WhVcc0fKbfhBsRapS5rH-HcwyuYuG26WQ3H98bOg9LDNheNahg=s4800-w1200" alt="Shankill Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqGVT8hYNZFOLs12MtiJ3D5i4VG3VYr2GG3cEZg2Ruv31_5L091hVH-ENqi6JaaLsFPigjnpJeFbSYc2txRiII6JyCEAiFLlRA=s4800-w747" alt="Shankill Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Sarah777 at English Wikipedia · Public domain</span></div>
@@ -401,6 +401,15 @@ Shankill Castle and Gardens is set in parkland near Paulstown on the Carlow/Kilk
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ Shankill Castle and Gardens is set in parkland near Paulstown on the Carlow/Kilk
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

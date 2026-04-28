@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFUsqL4TCcozl3WGAz5VNf0bpb5u3HSGWhpKvJ0NTzogVZ2DIUGG9fcniAA2eHzsoCXs3XofrFlbtVi5toMqdq3N5Nn6r3coiI=s4800-w1200" data-castle-name-g="Markenfield Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFUsqL4TCcozl3WGAz5VNf0bpb5u3HSGWhpKvJ0NTzogVZ2DIUGG9fcniAA2eHzsoCXs3XofrFlbtVi5toMqdq3N5Nn6r3coiI=s4800-w1200" data-castle-name-g="Markenfield Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFUsqL4TCcozl3WGAz5VNf0bpb5u3HSGWhpKvJ0NTzogVZ2DIUGG9fcniAA2eHzsoCXs3XofrFlbtVi5toMqdq3N5Nn6r3coiI=s4800-w1200" alt="Markenfield Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHd7jLQrNke4-mlgSo8GPxfGDW18ZUiSaQEw7rkcqLP1y_M-rD5aWLnNzatiJpT7oXg8kdaWJFrmXTIOmMAawcIRkXHB_0Dt8I=s4800-w1200" alt="Markenfield Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqGgxM9lwIF1hXP_5CRY73wuGdHIhv8wweCl9DNEahZqzcUP9-rV1VgpwsSkzUy-wjw1gf72ocxklXXAopS4GVqvpEaVJL69Bbw=s4800-w1200" alt="Markenfield Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqG4rsdnSB3h9pFOvJx-sUcDyzA4iyzyBLRba1zwZzsCIzq0epI-Y7GABLCM0SFhLlpu2ipuH8mraKLabNS_pDAcF17lJgNwiMc=s4800-w1200" alt="Markenfield Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqGXyB78OTXk9iz-PruPBy03FZanQgbWfKGRamF0tr-ZJnTxbg_P9yPVcXPu7OZh4uXf1O-OcWIZlUM6JL7OvQxtBn5hkMxjiMM=s4800-w1200" alt="Markenfield Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Markenfield%20Hall%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

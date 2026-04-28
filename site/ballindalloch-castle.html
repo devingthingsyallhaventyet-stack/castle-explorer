@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHXBpDPOGDTzh1LMKuyfTRKfXflRQZPGXW3aWeDOwJLkfLIrNg3LUtYeYar5Cr3YzZJWfjj7G3ESGfOwjhqWB8tU_eAlS5Ej_I=s4800-w1200" data-castle-name-g="Ballindalloch Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHXBpDPOGDTzh1LMKuyfTRKfXflRQZPGXW3aWeDOwJLkfLIrNg3LUtYeYar5Cr3YzZJWfjj7G3ESGfOwjhqWB8tU_eAlS5Ej_I=s4800-w1200" data-castle-name-g="Ballindalloch Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHXBpDPOGDTzh1LMKuyfTRKfXflRQZPGXW3aWeDOwJLkfLIrNg3LUtYeYar5Cr3YzZJWfjj7G3ESGfOwjhqWB8tU_eAlS5Ej_I=s4800-w1200" alt="Ballindalloch Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5eEDsguzBwtR9YHbwVl1nM1beHYylbPZwa-upfJFEXLtGRJ-JvnmnUVnUq0Ev0AO0P9sTxKo_iW-IL7YjBjRNU1F5hqk4ZURLPG0-ZDCj6qsl2x_93XweSRzyNCTu9GG-Nq9hbiRkOK418YkUfMJCOA=s4800-w1200" alt="Ballindalloch Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiVNxVywA72TulATG-PKLOrhNDWOJALYs7129sb7dtjDmPItm1XGUlzXyyUzCGtl8inHX0xW5wAcecA2H2niVlTf5_IyqjWqRqvOj2aqYuHkP5HAOcuYSnBbW0qMVSNpviT8PQdYLySeHVJHg=s4800-w1200" alt="Ballindalloch Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPLahgFipd8M7Uz2Kq7yKaPXs9WiwfntEvnTFyTQckp7mjdI9ioNDD_PssYh0boW79LeqnX1TLhq0wFMR-AEYdcZQ1WosZbHy_O-geYwvzBkefd2uJp839I01Pmiw0jJIQzoLBufb4zfGYeaQ=s4800-w1200" alt="Ballindalloch Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM8FB1yGqpEwhrkBZ1iCGVTOvOGlDxa_biRWUgtCc4YFU11VpIXXd7zsm3cMJn7NK1LynnEU6SNuKIsttE42DqPtLfH6LldskzOXbj2pLM6HCatl42FLat71R9Ohsulr7LJ8gc9MneH391e2w=s4800-w1200" alt="Ballindalloch Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ballindalloch%20Castle%20Moray" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

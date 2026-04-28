@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLoxXr1R1BwI1T8d--cOkvo9T7LwdgBlRKuGMllWkT7PUGH_sR6c0uF34UT_FCSpNHIqsVMPvI7fMX0ZZRcQnWLhXluMWiGJivn9BDDd7XHo5aQQaZ3-zF436qQdS93wa_5Z55Heg1H8IE0A=s4800-w1200" data-castle-name-g="Crathes Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLoxXr1R1BwI1T8d--cOkvo9T7LwdgBlRKuGMllWkT7PUGH_sR6c0uF34UT_FCSpNHIqsVMPvI7fMX0ZZRcQnWLhXluMWiGJivn9BDDd7XHo5aQQaZ3-zF436qQdS93wa_5Z55Heg1H8IE0A=s4800-w1200" data-castle-name-g="Crathes Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLoxXr1R1BwI1T8d--cOkvo9T7LwdgBlRKuGMllWkT7PUGH_sR6c0uF34UT_FCSpNHIqsVMPvI7fMX0ZZRcQnWLhXluMWiGJivn9BDDd7XHo5aQQaZ3-zF436qQdS93wa_5Z55Heg1H8IE0A=s4800-w1200" alt="Crathes Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUS8ASRLYjrMc6psWZfDGJ0cMsXw6FX_aS4vLKvg6gaC0WmZp2bhoksb0-WjsyWAcgR3kcVRDCJ2Xm2UAkyGBs-Q2fjxqyijjQFXqLkT3bukpa_t5kjdiWwK7VR0cn1r62xMjQH7UScLHJq00=s4800-w1200" alt="Crathes Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuZW7E75Y3JEuFLcjNpZm9EfnKG8tijPa7MEZ3wJcANNS2vu2gSbKYa72dfiqOJPSmOKK_X0BAKZvz_74f5j9Ek7XMoj08MTbjE4WLVnjLl4lcxs9Y0idVqSA0774cdcJlrAwLEn_HWxaIseA=s4800-w1200" alt="Crathes Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNj6QsoXB2Vj0uZ19y0EaGrasHb47gOL2toM1Pz_mpPhfOjKMA1upb5HEXcdv3qOBTpEtoKosxu6UtQPzGXypk0VdK6CB0J5EusMBxdEptlksmvAiJKvCtwNRCxh2k3MLT3dSIwWzC1uKVwOFU=s4800-w1200" alt="Crathes Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnTiRzRjG-PZU_sBathsPA79Z-Ma-m7jGgrdWQKx5lxJfFtnDuQkfBdJczD7GtnSQ0gCLUJJGVN_fJhVCLQUk0E33ruBmPL_vw5hRO66EJg4gYM9owPk6VMHvMeZvWx8FM1C9x9F7W3JUbjw=s4800-w1200" alt="Crathes Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Crathes%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

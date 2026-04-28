@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGGItZ0UeXXsqPw33MiucWoHx_qHFqgs7CpG6dZKEytrU4Gyzn-57rbNn9FRMG6fMWEgwyq7uGqZCvn7VqPxrbSXVKfgCaXHcIsifvfY8cq8Oa5bHcmqeAqDFtHs8ZZjd7PvNnXxmrnNitKw=s4800-w1200" data-castle-name-g="St Non&#39;s Chapel">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGGItZ0UeXXsqPw33MiucWoHx_qHFqgs7CpG6dZKEytrU4Gyzn-57rbNn9FRMG6fMWEgwyq7uGqZCvn7VqPxrbSXVKfgCaXHcIsifvfY8cq8Oa5bHcmqeAqDFtHs8ZZjd7PvNnXxmrnNitKw=s4800-w1200" data-castle-name-g="St Non&#39;s Chapel" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGGItZ0UeXXsqPw33MiucWoHx_qHFqgs7CpG6dZKEytrU4Gyzn-57rbNn9FRMG6fMWEgwyq7uGqZCvn7VqPxrbSXVKfgCaXHcIsifvfY8cq8Oa5bHcmqeAqDFtHs8ZZjd7PvNnXxmrnNitKw=s4800-w1200" alt="St Non&#39;s Chapel" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpRnwL4QUCmVmYFviu4VVeiMxTRn3no3uZE0y2BJ_qjG4s1Drr7U0fk-rJaCLaDzdKaajgqKdCfIP0Izon9VHqLcS8mh5qhIfdMCGD0AqJNzQAiFj-TbkWWNyvmpMnG5vK_2TIrLYRCUzgeg=s4800-w1200" alt="St Non&#39;s Chapel photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRMLi1teoFvR4IjL-G9TZ2mwIgVbHrWgPnUybIeOQbgUKS28ImOUSRmJ-TZ70c9pI7ffTjzfaVTxOWWdqKOqYnwBNH9j0Jn6K7jrzlY3STzqMe4EWLDUKc7YzaUNVNwkwtrdmCwZkvUwsok7U=s4800-w1200" alt="St Non&#39;s Chapel photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM4e4BGehaotDa_bTtw2mOWYVwmzXkNd3kyYoKflWsh9Ux-b3pGAXrX0QuCaGXbUPSBx1FmxolbcDH9GDWevm5hzvWkXEDxHlRRNZiXHyONwrcD9_yvSkW--fJyjHCrf9ljZcsQWnVDX_hrxq8=s4800-w1200" alt="St Non&#39;s Chapel photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNP5UqNQs1PKHJZFyXrZW3cpSnk3gafS9Glw5VFrbinqe0QcES9WwHu98Jz0ddReWWphb_f6gF_pm0jbz1zxMfUL155eVTpp0U5QM3bEZQG80sWANmEajilLYiSw_Y9zjl1SZjTXktMWCYSLg=s4800-w1200" alt="St Non&#39;s Chapel photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/St%20Non&#39;s%20Chapel%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

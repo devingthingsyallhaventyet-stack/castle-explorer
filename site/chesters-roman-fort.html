@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/1280px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg" data-castle-name-g="Chesters Roman Fort">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/1280px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg" data-castle-name-g="Chesters Roman Fort" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/1280px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg" alt="Chesters Roman Fort" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqH8BOCS24qpCxPMf1gWYRUmOtu6Mpd8g4nShu2PdiUMqffzNLmQZKDomvn2jU1NsfhykE-EsP8_pWB6hQKn9H5KxYXaZgP3Hvg=s4800-w1200" alt="Chesters Roman Fort photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0rHJ4oa6D3O3q4ayz4oDcg-Rol-rcFpovz16BxWPmcDKH_SyaOW1pf1rvgNb6X2ZyHWTu23l2Ed6-QFkhBavGOzU_1-iircbZGz7Iq9U5cgkc4TnXp8XYrHBMdMgepAKwyvvqXJjSWzPcwA=s4800-w1200" alt="Chesters Roman Fort photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOv9aBRZvmQ4EdMyUxo94aDdfMNVIm0UolJPqEJ_5iDFsl9wajtRZcvjFYXn3bxQNZi0aViPdxOnQKasHMmDMRIk51N8T2iXZtFN8abRbrhjqICGJ4xjb28Hl6GUr8A2pCnl3E5ZMheBURWCK0=s4800-w1200" alt="Chesters Roman Fort photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPuc3kkuMUj1d-Q5YI_fjyttchizXhbu2na1axWJM0iNd5m09LwtpVYfBl5H9Ez_sGwN1mx8i-ZHvdz2FmxlA83JfNpI3FSxQoyaDtaBFSaapORL2SgIQde5zQ80xRBRUSBTjEs6TM4YByjQ=s4800-w1200" alt="Chesters Roman Fort photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Carole Raddato from FRANKFURT, Germany · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

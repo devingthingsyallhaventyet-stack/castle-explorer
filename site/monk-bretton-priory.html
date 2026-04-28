@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhcG9bRPsbdoIoMqKiQ69q_v9hvu3qMzTe9AT8FPaQrFkZ5cQW1vFeUNYNGBLhB9e4ymo2c-xu1My635gpfq61p3XugIkEdy78c6x496_fuSaurYHen4_8he33pZdfl4JVCEZw0a_eTJFj1w=s4800-w1200" data-castle-name-g="Monk Bretton Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhcG9bRPsbdoIoMqKiQ69q_v9hvu3qMzTe9AT8FPaQrFkZ5cQW1vFeUNYNGBLhB9e4ymo2c-xu1My635gpfq61p3XugIkEdy78c6x496_fuSaurYHen4_8he33pZdfl4JVCEZw0a_eTJFj1w=s4800-w1200" data-castle-name-g="Monk Bretton Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhcG9bRPsbdoIoMqKiQ69q_v9hvu3qMzTe9AT8FPaQrFkZ5cQW1vFeUNYNGBLhB9e4ymo2c-xu1My635gpfq61p3XugIkEdy78c6x496_fuSaurYHen4_8he33pZdfl4JVCEZw0a_eTJFj1w=s4800-w1200" alt="Monk Bretton Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyUm3fnZ9SUw7ZN6LLe3gVBuAWtZ-I9QyTG1LOWV3fQA3NDfxXopMYPME9ZplAaeqQZrT-V6b85NaJ6enh0oWVQ7j64F_hIYZSXUAXRhi2NR1ccvWoi41YTcSCiQ2AT0dyFyiMMkhu25BLcA=s4800-w1200" alt="Monk Bretton Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7weGYLn8mtd9Vtsi97uRmAp3MRjsb-jLFL-IoGRV8bHMvRinn57naIVC45e_nZSMur4pTq5t7JReC6DQl40FuHN14L55r5FLNOKO1a01P-lbMomWq_isPGgiDHi-Sa-SNwUYIj0Smbgg4=s4800-w1200" alt="Monk Bretton Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNUygNoMxoCR8KdGsoMuz209kxM4Hoe7-ZnuZmx3FVSfuyXMBsApJ3qDBSqJmoVc-IuE6W7UrIyH8bK8q0FJ465UxWnKUvsMTJN2ytFGt-slgTQhstE1llE44fLWrQG1seJF35C6OD5ls2BqRQ=s4800-w1200" alt="Monk Bretton Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOOaZPiuX8xK1ViWr0_yZSGUsE-BNBdmIpJvBSqZLLWUttHlqs201O2SVpRry3RIw-y7X3sskQQnjofUtyIySf9WqUGK-3quc6-t1fQbF_ZTVFcO6NZrD-zXCYghg3kbJOlBG2I1I0LEsRqVg=s4800-w1200" alt="Monk Bretton Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Monk%20Bretton%20Priory%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAMF0_ZiUapd3LiP_QQEkWcipK53z3_AG_wPbHrjXNcvpPbaQSATzUc10Js0Lm2cCpJ0TpSN6CsF4qT-Vd9TcXIve1Wnyev31H9E0M7cE8CoX7Rwu1qRMGlhc8uK4mthh7TL8JDIq-lvQThA=s4800-w1200" data-castle-name-g="Cawdor Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAMF0_ZiUapd3LiP_QQEkWcipK53z3_AG_wPbHrjXNcvpPbaQSATzUc10Js0Lm2cCpJ0TpSN6CsF4qT-Vd9TcXIve1Wnyev31H9E0M7cE8CoX7Rwu1qRMGlhc8uK4mthh7TL8JDIq-lvQThA=s4800-w1200" data-castle-name-g="Cawdor Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAMF0_ZiUapd3LiP_QQEkWcipK53z3_AG_wPbHrjXNcvpPbaQSATzUc10Js0Lm2cCpJ0TpSN6CsF4qT-Vd9TcXIve1Wnyev31H9E0M7cE8CoX7Rwu1qRMGlhc8uK4mthh7TL8JDIq-lvQThA=s4800-w1200" alt="Cawdor Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOrsqTfpX-qWQeR58JtMNSgfam0OBucMXjMwleTMTaH19pCi15gwlJXtD0bRX6olOxVJ4HN9ljTYHbBMAfKlxEgHazfQzHMkG9rqEoqxE2pw-VlIIlH8JmJ28AFSr9mBNfDPAAs7Kn6ANMgFw=s4800-w1080" alt="Cawdor Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMM6iAowuck4tVKO11OuGZebdURnFH4tMyEsCzCjM-kr5asL0uqCHFALHCCuARNHarz-lxXPlalbDbJ9qs9nMXPNOfgQlOnTyK5OWBo7cmnUGokKf9mzKfnJkD2GscEddXlL3jRB6GpLN6G-so=s4800-w1200" alt="Cawdor Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHEDheHypdhoXZehH_gwRFheVd3g17zoMRRKx7iJudpqmNu7va-rYCjpZftx9uWnMUfY4D7nnI_mS_q6VO_H16HkeSe5nc4azvrQASsLChONYyfvXVs0Gyicx5Hy33dLwCG0yDOlkRJ2Yb3Q=s4800-w1200" alt="Cawdor Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMCGNnC3oHUamxnoMSo7AeK7Q6rnHcoKvaT5q6XQOWmV1fs1JkWstYwVIWsudmlBk4nH6RCXPPuwLLpkXDDMwcFI9ssnor5LbMSXZPkpdBa4aQGvYieWE9Xtq9NuI-kMNH96faiwzYIwV4g2g=s4800-w1200" alt="Cawdor Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Cawdor%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

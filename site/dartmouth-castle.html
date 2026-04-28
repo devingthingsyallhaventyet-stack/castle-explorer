@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfKDeQqqHAhr8OH0aGAQCIpyKedRTmUZjWuItOPx__555S6DIqgM_raEw4sG4oBA8kN-GHZiULjGqh1PzJ525h3jMLVN1jMKTYcbM9dGbIq07YNZvZjIGT2OuR8zxP76dRC3UmEFaJydTPuS7LuX5H=s4800-w1200" data-castle-name-g="Dartmouth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfKDeQqqHAhr8OH0aGAQCIpyKedRTmUZjWuItOPx__555S6DIqgM_raEw4sG4oBA8kN-GHZiULjGqh1PzJ525h3jMLVN1jMKTYcbM9dGbIq07YNZvZjIGT2OuR8zxP76dRC3UmEFaJydTPuS7LuX5H=s4800-w1200" data-castle-name-g="Dartmouth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfKDeQqqHAhr8OH0aGAQCIpyKedRTmUZjWuItOPx__555S6DIqgM_raEw4sG4oBA8kN-GHZiULjGqh1PzJ525h3jMLVN1jMKTYcbM9dGbIq07YNZvZjIGT2OuR8zxP76dRC3UmEFaJydTPuS7LuX5H=s4800-w1200" alt="Dartmouth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOx2W3Uop_ynpisYdKaQjK3OWA7-pn8CEAHR9Jyrei1_mRbL_qE2AVvoFdes8WUbKOOk6o2CQRGVT7-nHZegXebYioxXDwGL6vMc5R1R9TJ7RTUGWJ6C5o76KtaUnX1At8LFWJo7tnARTbc8Q=s4800-w1200" alt="Dartmouth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYbuLwqDgMJwTg-KI7HCNfXwyr5sCow0VkkhoFJUCwco3fOUUJHHJjFSHzvIJk43GD_NBR9A0yTkzwFopG1M_HT436iqyAmrLjQ8MUFuAlK7_UBZiSDI9RK2U37ihLSVrsLcyKaP8OAmMLCCmffF4FEA=s4800-w1200" alt="Dartmouth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCyw8WcvPnQqvoh1CyJUeS7TA24S2UsLZDzZHYJ5xpm85oGQMEsmIu7hOi18poYltmQHfrJ0IfGGEiseSlALEUzFwRR6U4ECymu6po6myQIs_7V9Im2wfvhSG1vPXT_pNfpovxK1TiQUbhOw=s4800-w1200" alt="Dartmouth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMLaiu8g6Ju9gtXLP4etE-rXeZ3ZRuRJjuaZGR6dUPnIDoBFiNTMupz0SMgy-tsFIHLhn381y5wNxq4guGkRbmLCXntCWuAONumS5VMyZAGcdJTdQiM8DseUnFPwyn8Pa2YhS8RKUiZWWBTg=s4800-w1200" alt="Dartmouth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dartmouth%20Castle%20Devon" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

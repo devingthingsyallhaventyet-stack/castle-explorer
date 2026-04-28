@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVCS0cnRHOrmDTxAD0fRHC2Gku71z_AyH3I6JJQYOnJxPAAfbkqJ0UqdSnW5y_v-zcfgiRA9URKnnRf0O5jz_hC4GIItoMAR3oS84bQdg9AYVjDGlixaTGo7qO0qO0-mm0Gifcnwalr2kmMRc=s4800-w1200" data-castle-name-g="Ely Cathedral">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVCS0cnRHOrmDTxAD0fRHC2Gku71z_AyH3I6JJQYOnJxPAAfbkqJ0UqdSnW5y_v-zcfgiRA9URKnnRf0O5jz_hC4GIItoMAR3oS84bQdg9AYVjDGlixaTGo7qO0qO0-mm0Gifcnwalr2kmMRc=s4800-w1200" data-castle-name-g="Ely Cathedral" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVCS0cnRHOrmDTxAD0fRHC2Gku71z_AyH3I6JJQYOnJxPAAfbkqJ0UqdSnW5y_v-zcfgiRA9URKnnRf0O5jz_hC4GIItoMAR3oS84bQdg9AYVjDGlixaTGo7qO0qO0-mm0Gifcnwalr2kmMRc=s4800-w1200" alt="Ely Cathedral" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-1RiSPxz-D-cOxfGx0kwe6toOmo7sDAsOhKbLL_pMg7rpwLy2nLT0fapIW4Bvw_y2V1SnKc9APP5tK5NwpMYftSZ2um0FIC2G-dKvAgvs8DvCD44orPhwCXaqXctG39Xuro-a-XrcqqBb=s4800-w1200" alt="Ely Cathedral photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZeAMnIj3pLzl6K2di23Xx89dEJTv8ZPsZUnt8zIM3f6yPZPXThVbIBrIui5XYCp5kv-yhHrWjQVJyD5ppGeOQPCeauxuqq1QZB7yM1KYYcxzbxMUzaWxmuzowK9rGmMJL8VpFuZu1C7ZZjQ=s4800-w1200" alt="Ely Cathedral photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNQgAhhSStuuvoaeZgj_Vlk0-CpQxeSOi5CZ2Q6bqDwFd60WdcfBjkPyHVHwNg0yEuXtN_d0HCFtPaKnyXT1WfZlfmi3ZzwmQJao6_HSLj9fQ1wHFg8ed7rscDDUj8-q6WCHZBcRY69Cgn9KZeUiEGJ=s4800-w1200" alt="Ely Cathedral photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqq98Zszo_4SXsf0Y9QvqgnZdUv4X1fNvy-diMYrgnqJ1j4S-kmCensEgb9PVWHD6fc0UVBueTCPTvkC50O-on1SUPdQPy-NxE4KU4b1X6ktLf49L_08527EOpqa-ujAPL6t0z5aWAIDXZ3g0=s4800-w1200" alt="Ely Cathedral photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ely%20Cathedral%20Cambridgeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

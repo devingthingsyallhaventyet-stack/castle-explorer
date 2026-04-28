@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-6a97twJgHikGeedAORRqMPQDzYRbhrEMiCXUb2LC8kY5doiY2R-GBSXN3OpdtthAukQeFFN1wyZYjLBP7ZAKqoniTbv89nFmFg27-VpEXRulGyXr_2eAnBhtMYoKFwZADfmLdEdyxri1ZjM=s4800-w1200" data-castle-name-g="Lochindorb Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-6a97twJgHikGeedAORRqMPQDzYRbhrEMiCXUb2LC8kY5doiY2R-GBSXN3OpdtthAukQeFFN1wyZYjLBP7ZAKqoniTbv89nFmFg27-VpEXRulGyXr_2eAnBhtMYoKFwZADfmLdEdyxri1ZjM=s4800-w1200" data-castle-name-g="Lochindorb Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-6a97twJgHikGeedAORRqMPQDzYRbhrEMiCXUb2LC8kY5doiY2R-GBSXN3OpdtthAukQeFFN1wyZYjLBP7ZAKqoniTbv89nFmFg27-VpEXRulGyXr_2eAnBhtMYoKFwZADfmLdEdyxri1ZjM=s4800-w1200" alt="Lochindorb Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOS8PQujgPVd9NIJGheOI_GPX7AYiyVvemEYvFliVuwbh1wqVvWQ25vbKueDPQIprU0fhuYIRs1FGP3nxNYjrOzEO44jQ9hVRrBWZscrlLR-MEjWk6Coz2zm7KH0EM8A7sJyXfmBCZxSlNT=s4800-w1200" alt="Lochindorb Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZODn7V5C_v1mYujVOqPYHs6GThHmS4XF-1b3mTqJwWSrr6GD1d46h9WX7seiE-mPCQT457lQGVKRU3ySU4KSND1WBJgMpoLOaa8snHg5jq9jV3FSG9yjERPsJiwPHPB6mVXpcul__GqI9heOQ=s4800-w1200" alt="Lochindorb Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPw2utiIBcGlR2P4PGgUweyCeQGvBPL8xzZf_p0Q9uKW9QjwZG7BFn3xOo5KnG-U4psJBAIlwn6N3CDGAqjDiWil0ILxnlHgTo1bltr5yZA4p9QWOw8O19K9A3CoKPqUDwwViShIxrSj_xEtQI=s4800-w1200" alt="Lochindorb Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMSKNmuGm7nUOoFvVfDCAzr7gQM92kXtszLss5bhRx0I0aKuo1OZ4cjimylo5cRFWX8u7zFxbvD2avsDew6PLe73suQDRchdpUFKhmjks7Hg_5b2__r58v_N6zgMtuZketUHkigpRJZ3SSKFQ=s4800-w1200" alt="Lochindorb Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lochindorb%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

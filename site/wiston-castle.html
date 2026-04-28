@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkKY__ZNler7VZ23USioKWHN8Lfwnqqi6ymr3mlI5VipanEXSttT6gjCd2o9_g0XgSkqUY9yzdh2njYFAtHwbj8M9gB-RYicD0qgKRqSTM_5gbJ95kDayKXJQt9Xi2SRFxP5vEFsGxmVyvukG_dgGKXA=s4800-w1200" data-castle-name-g="Wiston Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkKY__ZNler7VZ23USioKWHN8Lfwnqqi6ymr3mlI5VipanEXSttT6gjCd2o9_g0XgSkqUY9yzdh2njYFAtHwbj8M9gB-RYicD0qgKRqSTM_5gbJ95kDayKXJQt9Xi2SRFxP5vEFsGxmVyvukG_dgGKXA=s4800-w1200" data-castle-name-g="Wiston Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkKY__ZNler7VZ23USioKWHN8Lfwnqqi6ymr3mlI5VipanEXSttT6gjCd2o9_g0XgSkqUY9yzdh2njYFAtHwbj8M9gB-RYicD0qgKRqSTM_5gbJ95kDayKXJQt9Xi2SRFxP5vEFsGxmVyvukG_dgGKXA=s4800-w1200" alt="Wiston Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPC4Xyu1Ee7Xc4D_9hH1GdRUBPy1tr-5V4UCVzrSMu2jiDmOgLkh8-7JaR_ydGggTHkRb_8TL5HZK6u7SO7F5L4fIiOoJ5Sc9G-6KMx-oORsv41XXIfeGzkNb1xeCFBQ4bU1MeKlvhmL40mUQ=s4800-w1200" alt="Wiston Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMEfwtSKTh1haC2jQMOV5goZ0cn1gpvDE_uAhp7TA2RkA5d8MFsiTolMcnmQX-_XYlOZELb2uGh8LJ8V6hIPZvNsSCNW51sWX56xrT1ZFdrecFZtkNo6UZHRFMHZuMf-SglmE2GTyEqDFqYw_0ruHCRMw=s4800-w1200" alt="Wiston Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnqsi_y7z5lAdGHIzmGICjad3_iyvypz8sCf_vojKeIbbysqcqAn7oYNIAy2KNEuYloSi6EVicCJTbnRjW9Pi3oY3aED8iot_8kmzBaxlzn8NNNEOJf4BNE45bWnPIjP1kLONtz6OvMuR_=s4800-w1200" alt="Wiston Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMOfcAw96UQP5U5Ob4hUZEvUpAluI4IiSh26FqP6i8hfHPP3Ky7LbylKmXspziPu6XypTtfibLhWiUZm4wrQEhy4avxVZtpbtYH8B5ElU2nD8jRvEbjWsXJL_5epEXnZefPcB84_4lqtWyTvw=s4800-w1200" alt="Wiston Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Wiston%20Castle%20Pembrokeshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

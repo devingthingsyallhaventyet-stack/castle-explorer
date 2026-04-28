@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4pwwbpMgOJeVOPJ4nHfvHJ1R47vLuN1k7DMMRWHnbpjSloeffUQQXTlH-mQybKi-YNm4zITavix_76W0W60lH7u5eFgkx-CrF4rQx-WJOBd1-3DUNWYFKYpM2khLCjNM3lZabklaV6wpfuA=s4800-w1200" data-castle-name-g="Bishop&#39;s Waltham Palace">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4pwwbpMgOJeVOPJ4nHfvHJ1R47vLuN1k7DMMRWHnbpjSloeffUQQXTlH-mQybKi-YNm4zITavix_76W0W60lH7u5eFgkx-CrF4rQx-WJOBd1-3DUNWYFKYpM2khLCjNM3lZabklaV6wpfuA=s4800-w1200" data-castle-name-g="Bishop&#39;s Waltham Palace" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4pwwbpMgOJeVOPJ4nHfvHJ1R47vLuN1k7DMMRWHnbpjSloeffUQQXTlH-mQybKi-YNm4zITavix_76W0W60lH7u5eFgkx-CrF4rQx-WJOBd1-3DUNWYFKYpM2khLCjNM3lZabklaV6wpfuA=s4800-w1200" alt="Bishop&#39;s Waltham Palace" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOZqPmrWPzxl_bywilzRIa3lvn4mzSS_5XtW_z6sJfgCJko_sYraM_yCIqdML6p7eAnYxsbnNlttWz4BJx3fOzDnaw7nqUK9WY4kbhlI4J0NNtyElNJ3PC5MVNAjram8N6nQmrCx3NjiYrs=s4800-w1200" alt="Bishop&#39;s Waltham Palace photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOvDv2vvq0vx1og-NutDikb5JEkfOMiAMC6YEx25f7l6FJABP2Uex0qWgV9_N4QsDMZZjDls3urFuYGwPyv8oNmjnb1SIyJ6CkJ0Eb16-TGFYpACDmyCcsAiIKFvrMvdooFlqChlb07nLabYw=s4800-w1200" alt="Bishop&#39;s Waltham Palace photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyozLfHP8BSW7EEsZopS2dDNf9_2Ny5Y6N4y_oaKF9vlR9meO1U-I_wXQzMEJrALc_lWWZAjtEk4n6lthoyJq0WmFvbAiawHVqgnHGGUTIQCOrKfbFiMnWatV3VD4jJm2dn0uhkCXS541g_Cs=s4800-w1200" alt="Bishop&#39;s Waltham Palace photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO2wON1qCUsQbvY2CA3ANTUevViy6K-42d0rLVLm4yQosZcPcRyJEPex_-IMowo3isVwigIvCoAWw6_DJ3wKiekwgtbz9_DJ05-0czuWqqZuhZJEVkcYQWe6SbLFqv44YXBACpJeQbtVGjD9I=s4800-w1200" alt="Bishop&#39;s Waltham Palace photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bishop&#39;s%20Waltham%20Palace%20Hampshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjibupqRNrw02XUgsRSqO4hrYSWHqxDDMbYgIAikrz7xpJyTJhgMuyU03y2K7L41aceUkK1GhXPSsNG2eRh5qNGlTTtcSMnSKhyvcUlw7HPSN0RC6RHnlybrsx6-WN1QiqaOm-gilwOgVorjc=s4800-w1137" data-castle-name-g="Menstrie Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjibupqRNrw02XUgsRSqO4hrYSWHqxDDMbYgIAikrz7xpJyTJhgMuyU03y2K7L41aceUkK1GhXPSsNG2eRh5qNGlTTtcSMnSKhyvcUlw7HPSN0RC6RHnlybrsx6-WN1QiqaOm-gilwOgVorjc=s4800-w1137" data-castle-name-g="Menstrie Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjibupqRNrw02XUgsRSqO4hrYSWHqxDDMbYgIAikrz7xpJyTJhgMuyU03y2K7L41aceUkK1GhXPSsNG2eRh5qNGlTTtcSMnSKhyvcUlw7HPSN0RC6RHnlybrsx6-WN1QiqaOm-gilwOgVorjc=s4800-w1137" alt="Menstrie Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPKyMztDcclorsO-kEJwqFHodDjvKRTutkZFxYIIcWzQ5hmxmOQ7JjcaDbs4eEShSsiTaggRzkBuF1c8_REzdHQhCeCEiinrm-3g3Cinddn7PISpAM0GCFW09SneUt5ecIQVQ3Q8UdIFSaqfvVFU1mmMw=s4800-w1200" alt="Menstrie Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMYomDLFANMlFBjGKVYxgHbmmDIH4pOwLIGddS9B-fcnNF9u0E8ug8EfstN3hmIpqXv5z_prOByduso3VH7TA0Rgl-S50nR-kCmiQNV2OfWm_IAGbMX-0otCpNFwcYNuCb6RzvMvawnhEDxMQ=s4800-w1200" alt="Menstrie Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPm1zqTPasag6HeRvZwehOTYk5b0VgF9pDOU4-4tRTpiVJMiyMUm3F-IWPMTvEUeQXxvjVMvAVQK4x_IyxWafI74F9tZ1CaV9Q8fqbijNn59gJmWuQVOPwtCFv4lZpuhyelcJ9NdKbHtoYViw=s4800-w1200" alt="Menstrie Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPwXc-wITbTtpzwgEy8oj1qRoUL1sSLckOv1mJiPPo0vkKafeL8jyiCtXOne2yUdL93DpeP4kq6q_k1-VpJfWi2CAAoxv16s4hXFIujkICVrkOauUd-EPHvq7c0jr1MwKdwLN6OmwkxU11hNG8=s4800-w1200" alt="Menstrie Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Menstrie%20Castle%20Clackmannanshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHFAtgwBMbYP_9ijlyof9eLs0gAgG0Dce6lbFUJqjVBvzNC5kfX8JBwPvsSsu-8ldq6jSNeSTse4E8rFlrdtgHKGS0kFjIkB0o=s4800-w768" data-castle-name-g="Kinnaird Head Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHFAtgwBMbYP_9ijlyof9eLs0gAgG0Dce6lbFUJqjVBvzNC5kfX8JBwPvsSsu-8ldq6jSNeSTse4E8rFlrdtgHKGS0kFjIkB0o=s4800-w768" data-castle-name-g="Kinnaird Head Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHFAtgwBMbYP_9ijlyof9eLs0gAgG0Dce6lbFUJqjVBvzNC5kfX8JBwPvsSsu-8ldq6jSNeSTse4E8rFlrdtgHKGS0kFjIkB0o=s4800-w768" alt="Kinnaird Head Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNAWPHLWPPmY0KUwnLzUtLEdFBDkCXjcYiLy4OzaF57q460Wf60MdEHrIzxa6LC8AAlO1sXzkxu_JdKHMCxQmGXUy_FeKxVQjWO0e9IUZopZarbJFzUs3O1p5G8qH8D4LdQ1djkTXW_vyU0xw=s4800-w1200" alt="Kinnaird Head Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHix8250TrF_RJXIcWnx3oaYlGwDX4mnoRk6kCtSRP2tqnSC1f3cwiwJxNeJsh7OKg3acBaAEg2mHsYjQYA3KYvkz0jVvRs3TXIoTVJGxKoPptuC63q-HaQXXXjwDpO_GF40-GnjkRNagzglDhj6SIag=s4800-w1200" alt="Kinnaird Head Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRVSuI-CtKR4Zm0edbZcjhbA7WfGg8pNWsKy2IoOGL8T8GbZ08ySd73cwVSJ9i0zFDUhrefM0LV4jtBJI584HIpdWuDkNr3PLooY1QT5Q124qqlvy42UAhfIDEiaj4C72PmFm7jmMxo1houg=s4800-w1200" alt="Kinnaird Head Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN0NqMJkxdDIDZaGcSxQh1Xfm3QHPqlffJkGTDpaQH3vIBSD8--i_glAVV3wt8-xZBvCoFLCwBoroj5Q6zV3Kpnnyv-EHuQUCKY2S8dP1n-pGe4vPIs-w7nGdOy_9ZSkN08pwtF4V1N7U36ATDgrzk4kQ=s4800-w1200" alt="Kinnaird Head Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kinnaird%20Head%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

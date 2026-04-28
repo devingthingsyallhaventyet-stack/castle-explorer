@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMD2sigGMGp-_of0enqRCRA3yWoGpEkhC1rrl7nLVhAfBnGxiQEz5ZPJYjLlP018bn9_mthNAPTXYeapkfNGuKAERDmU1idrRKzqHPOOjotjwFL4szRqAI8HhDRHVT161K0_EvoK4Gg2Nal=s4800-w1000" data-castle-name-g="Penhow Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMD2sigGMGp-_of0enqRCRA3yWoGpEkhC1rrl7nLVhAfBnGxiQEz5ZPJYjLlP018bn9_mthNAPTXYeapkfNGuKAERDmU1idrRKzqHPOOjotjwFL4szRqAI8HhDRHVT161K0_EvoK4Gg2Nal=s4800-w1000" data-castle-name-g="Penhow Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMD2sigGMGp-_of0enqRCRA3yWoGpEkhC1rrl7nLVhAfBnGxiQEz5ZPJYjLlP018bn9_mthNAPTXYeapkfNGuKAERDmU1idrRKzqHPOOjotjwFL4szRqAI8HhDRHVT161K0_EvoK4Gg2Nal=s4800-w1000" alt="Penhow Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_wULA6y68cUZqPL18axYVSrwzh4Vtuu_pq5RKxgR7aSvqihC4GWhLKm4QHvlvBr9RjqYgoc3WY0dmgwsRqTJJfuZ0z0oOeWRYSYYP0T-NBbJME8MaZnWKyBkkIFIC8v3B9Ih_rTTFfaKgjcE=s4800-w1000" alt="Penhow Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJcVTZOtI7j3eF9AjdzzHF8tWoAK6TVePN4aKMncgLs1SyfnRCj5eAUYFlyh0SPvBJMyTB7eOlQxzSExIDOKYRCDTMncXKMjqH50Gv02A1qLeiMeT8DzLjvSkN2jghHwxprGZzbaa_gx3v6w=s4800-w1200" alt="Penhow Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMXu9IvsjQ-p4bdmEXoiLMIxMsnfb-RtlKm9MG0V1_eZqIHmfN_PTaN6ige1v59wRA-DID0mC1B-QynRjdfSdUuA0EV-JtjfsY-gjeoEFNPitPkMH_bTUSRDyusyWB0eygSjY6kiH7Q1z-JCP0=s4800-w1200" alt="Penhow Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNH8i6BNLtxrDHWXmUzwxvPEkYDvTNCi4yftDNUwjc_CUzfRvpDf33qzvbwt9H0z_IhPPgwgrPk0QuVt5LUuXkHvsz2q9ljDw9hvFawE1iOswd5kO8qugnfesso3cQxLHqJ0GOD6PIYmAZ73vbyqUG3aA=s4800-w1200" alt="Penhow Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Penhow%20Castle%20Monmouthshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

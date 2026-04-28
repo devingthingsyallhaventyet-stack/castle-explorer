@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Scaleby_Castle%2C_Cumbria_-_geograph.org.uk_-_50853.jpg/1280px-Scaleby_Castle%2C_Cumbria_-_geograph.org.uk_-_50853.jpg" data-castle-name-g="Scaleby Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Scaleby_Castle%2C_Cumbria_-_geograph.org.uk_-_50853.jpg/1280px-Scaleby_Castle%2C_Cumbria_-_geograph.org.uk_-_50853.jpg" data-castle-name-g="Scaleby Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Scaleby_Castle%2C_Cumbria_-_geograph.org.uk_-_50853.jpg/1280px-Scaleby_Castle%2C_Cumbria_-_geograph.org.uk_-_50853.jpg" alt="Scaleby Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNv2FvtEJB3-39IvD9dFuEdtGxNAxKivy2z19yqbwcqC2BQ4RvuiAI-MsbG3h6IfqZBuyrcU695MPiBaQkC93T2EePngY7s25a2uLHz7sAoyObvD5Tr1iAvjukIsqpYSNR4n58nD60Dvh-ua2I=s4800-w1200" alt="Scaleby Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-R_GHK8AibYrXio2VgC8BJl02GuEOS62w3ob_kCILyBXHLSm2WrKoA7ET2G3tLzuxOad9V_oEJW25IjsGyyvEr-IBbiK24EyUW5Ey3OeBlKQyScQYInL09JaL0kHA_1ZQmOTDRgpR0zAy2A=s4800-w1200" alt="Scaleby Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPoJWsJH3lzgDtxH1WkvMIb4usir2RzZRrEuUmvSawXFfXh0XW-wui9kba9UAOcOzvLSMHMm2HzJMc-wz9sq8WeowJcU2zxEs1O81jowOQVIZYagT78NwEdfn7jH71zP5OkpdXRJs0T_fmUwY4=s4800-w1200" alt="Scaleby Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzWwex_-ceS0XmbWKZMmo063uF5yr-MbtV_C1eLtUAkZ5xQcq8SkOxDVfXNx-pxWILn5iWGNn5XRTRUILYmWbAYFGSX8DgBGHEoW3Csp4fp5zrnnnbO6_rob0WajthCRgB79L0nynD5J5nfQ=s4800-w1200" alt="Scaleby Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Simon Ledingham · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

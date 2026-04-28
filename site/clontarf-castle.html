@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/1280px-ClontarfCastleHotel.jpg" data-castle-name-g="Clontarf Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/1280px-ClontarfCastleHotel.jpg" data-castle-name-g="Clontarf Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/1280px-ClontarfCastleHotel.jpg" alt="Clontarf Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqG0L4lXFUdPF1lMpVy-B6nicQwvxU-Kiz6Mgej4A8bDPOuCLvHgqeQMQc2LBTOl7jkT2Q8H8dPxfJk7QHw04C4Xrlm4G5K2LkA=s4800-w1200" alt="Clontarf Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqGRsih20U7zr71oBYGJak1KLtEZrZw5GOFLcUfm3Gq7S3zTGZEqUbKCBQSqieCfqzWWhVMGhdsZkOtu0eAQPx0RM1-zcRPrvyw=s4800-w1200" alt="Clontarf Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUBrwEi1l6I68XIxJZmQeamSV6ud1TOuWqqQ-Ushs4n1ucKq53vQgqXxdhH6z8wFycDT85YYRqKKg32RfbZN7HkzZptsQw8zhSgpELRSsEX_yLzhiMdCJXzU24xbOD12Ce_kZPDjJn_EGVzw=s4800-w1200" alt="Clontarf Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqE5cD7X3y1nSiSqfHQAD8kGT3dC8IA2vaBl1i6a7TljlYvWxBuNm1avvzpAx_STS6THyl5qCRuRKiqob9k0MCfsOqCpMkldytM=s4800-w1200" alt="Clontarf Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Cailín Sásta at English Wikipedia · CC BY 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

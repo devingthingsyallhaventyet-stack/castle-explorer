@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQURkAv8fV3fnwI--FOLCS8AxapVMDiLDTMNGGtqs_ie1--Yp3WpjzTkvHQdXwhEB8otAOcoqNVRCTvZFF4AlWwbEwyIFUadXy6BophZpPWt9U8wU2G1rQlDKoYclEwdAxD-RnxUlhiN-TwQ=s4800-w1200" data-castle-name-g="Lochranza Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQURkAv8fV3fnwI--FOLCS8AxapVMDiLDTMNGGtqs_ie1--Yp3WpjzTkvHQdXwhEB8otAOcoqNVRCTvZFF4AlWwbEwyIFUadXy6BophZpPWt9U8wU2G1rQlDKoYclEwdAxD-RnxUlhiN-TwQ=s4800-w1200" data-castle-name-g="Lochranza Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQURkAv8fV3fnwI--FOLCS8AxapVMDiLDTMNGGtqs_ie1--Yp3WpjzTkvHQdXwhEB8otAOcoqNVRCTvZFF4AlWwbEwyIFUadXy6BophZpPWt9U8wU2G1rQlDKoYclEwdAxD-RnxUlhiN-TwQ=s4800-w1200" alt="Lochranza Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO0H6uxZFA1cKNXnW8QOvP34_CV9s_WSr3iW3pG8YvyP4WCIr0VwI3K29OAqSu0c7Wk4wuA7aUTnBOdwm0xmgE5BbMmMBLalKOoTx_p__phQHeTDk9wYopZqjLTsGfhYPf8GoBeMMK1GGy3Kg=s4800-w1200" alt="Lochranza Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrfmwRBLmyRitfqkX00WfcI-av7pZaHTB09RnWLMfMCYQ1B97O4VYDkqckag6st6vYa57CLo4G4fbHsYPA_k9TWXCH4zNnibLPpL0O1ptmnXeng3oSdIhEaVxhLypYeDG1juVAnhQ6HUhMag=s4800-w1200" alt="Lochranza Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOlaLwLA2tbZzM-qcmmZ2aWfQiRdm1kOSQksbgVE9mT3PZfpp5vbjG6Mc4nB6YN2SQ2yebj0LgM4fzoIsMMQRKTCu69fZos27tYqbb9Oc2AZMcqJnWyXFvu7TG76QLOlO7NAQ-tAWQIXfrbdJRZNbbPCA=s4800-w1200" alt="Lochranza Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPaOy77oDG9GMu9ukFVfP7QPGZBiHnliXdSRisx-7W1UGBuHVpz1dIXu9lRbggsuHtvxkwzLAi7zIVDHnQ9g2fvkoqFX6POVLKMyu97LMzOwC7VWgWhBkp2iCGADlhj7t_-Crm6eJpk39rubopHnqzlKA=s4800-w1200" alt="Lochranza Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lochranza%20Castle%20North%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

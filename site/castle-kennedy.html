@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKZe2l0W0h4HaALXxaJnrhOryR_eaAUoCoxB-sBsEOz8n_1RsNkScliZS3Pcg67vtK3op19kuSI8d1pQaSKdItLWvpR1QEggIFju1vxdqWLBuxQjiGUL_5iq9KMFSHexsJGbnGVadn81pGASk=s4800-w1200" data-castle-name-g="Castle Kennedy">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKZe2l0W0h4HaALXxaJnrhOryR_eaAUoCoxB-sBsEOz8n_1RsNkScliZS3Pcg67vtK3op19kuSI8d1pQaSKdItLWvpR1QEggIFju1vxdqWLBuxQjiGUL_5iq9KMFSHexsJGbnGVadn81pGASk=s4800-w1200" data-castle-name-g="Castle Kennedy" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKZe2l0W0h4HaALXxaJnrhOryR_eaAUoCoxB-sBsEOz8n_1RsNkScliZS3Pcg67vtK3op19kuSI8d1pQaSKdItLWvpR1QEggIFju1vxdqWLBuxQjiGUL_5iq9KMFSHexsJGbnGVadn81pGASk=s4800-w1200" alt="Castle Kennedy" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM57verIzdR_9dHUZCwgAzXYxTLIKrdpm_7ctGLYtfiIdjwQ_pueI0ZMMFVhbHkPMY-ZBGvn4ymVGRs_tEhiF8X7ycKuztYDTdI7G0RsddOqvvcGfWBeqdRXjPHUS_WGXUq9-QKi6wv4ue4pQQ=s4800-w528" alt="Castle Kennedy photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcmHxRAhbDRucGm88JZ4tIUWMVr1f0hKMhMhMuIu6TgrWa5iH1Co4HAJoY0AHije3xGgAuMFApyu5m27uID9inMRnTcGvq-CNFei9JgQvtk-jTbDYNmAjjEkuU04rxTO-L_4jO2ED9MUexQQ=s4800-w1200" alt="Castle Kennedy photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlpMEtIowYH48CMZYZAZoPs0ZquJbIhUyJEfiquu4qehuYWt9GSo8BgBTTWXKsxQx7o5y-3M0w7B0hFVmCzIHnrlPHAf01nW-Vm-Hy7bEu6Fx6RVyVMTRWJli4_e-b54w2a61J5YJTQ7m8zQ=s4800-w1200" alt="Castle Kennedy photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOY97GVfNAOQNA7gPqMvl1sr02dRoiSDOLUDhv8iy1S6-ctUdn0N17gRW1TZcnsi2l4MQEXsJdiWODbzgmZfG9LXiYcAQbRKpFjq6bzMeC870ccyuEGRX8XYfNEufUdAgVzGlcIJWXi5ZQPTg=s4800-w1200" alt="Castle Kennedy photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Kennedy%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

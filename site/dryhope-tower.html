@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJJUO9LxRLbTK7tZWyKc7jiX8VmrVNZglzKb4mrPdq1O4dAGup0wFRD6fR-rd3Gcmu4wtAkLjyC156XASrtBvkYC1R3CcZGwwKp8YiZitUakycA0M0IDqFX-WRfaUiDKDiS80lVkiNdAVUHQ=s4800-w1200" data-castle-name-g="Dryhope Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJJUO9LxRLbTK7tZWyKc7jiX8VmrVNZglzKb4mrPdq1O4dAGup0wFRD6fR-rd3Gcmu4wtAkLjyC156XASrtBvkYC1R3CcZGwwKp8YiZitUakycA0M0IDqFX-WRfaUiDKDiS80lVkiNdAVUHQ=s4800-w1200" data-castle-name-g="Dryhope Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJJUO9LxRLbTK7tZWyKc7jiX8VmrVNZglzKb4mrPdq1O4dAGup0wFRD6fR-rd3Gcmu4wtAkLjyC156XASrtBvkYC1R3CcZGwwKp8YiZitUakycA0M0IDqFX-WRfaUiDKDiS80lVkiNdAVUHQ=s4800-w1200" alt="Dryhope Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNibJP4-fCVD8pC1CNAExAwlwtYqRt51BqBGZOCkyZWRchgFPPaDWkNk62Hq4sFL2lU_t8daUyryYS3v3kvpUvhRfk_l9oU7g6gmeHaVpLmn_6k-Ufg--IrPrWnvEbLNLEs_984IDhaezUYyw=s4800-w1200" alt="Dryhope Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNK3nwaCxNuF2Hp1EKcUBez8-hKvySmw6yo3ZnsvDafuiqoZUzEZmTosoYbxob4eBy7Ax-QP0atZfMe5-pkBuxguWMTyGzoP5Ksg9eKp7sNBL0n-ruPFQ8RgdEQirZX77UWvuCQEq3zZsyGxwg=s4800-w1080" alt="Dryhope Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2kOj_hpjt_k3bgu6v5EPEg4F4dR_NKTH42kE0GsbVyohCqlDDqIrPhjoZb0d-ISsDAwxbJUboqOrS7gVX9CubLpDzTNkCiIodn8y_eQTtkFNlPKivmsEUIN3t__dnqU2YYMob3WNQmKoqVw=s4800-w1200" alt="Dryhope Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZODvIGZHDVBSgYuv8D6mrAwqTLJXES6w-3m7o95un5gZttbn3uR-kUilNLZGvPgfHrlX4J7PbiT1ShgB8AFeyOTgWCThws-0fYB4Nx_B4VXG9cKT557eQV0Vzgi3LImoVGe14fByeO-vOvsKQ=s4800-w1200" alt="Dryhope Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dryhope%20Tower%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

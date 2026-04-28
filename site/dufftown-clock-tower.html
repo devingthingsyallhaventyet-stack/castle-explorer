@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8ETCpWoHS1Vzut564SFDsVl8TPZpodcxuD_tN9x7PW01op4ue8a8ZI6-Vud9s0DQxKwoE03r-5y6Uv87M6c3RPHy_CyVJfPzpH13YjbFgtSirnV2xjn7ziZ3r4WIrqBfwzEWiTOWqADhSkA=s4800-w1124" data-castle-name-g="Dufftown Clock Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8ETCpWoHS1Vzut564SFDsVl8TPZpodcxuD_tN9x7PW01op4ue8a8ZI6-Vud9s0DQxKwoE03r-5y6Uv87M6c3RPHy_CyVJfPzpH13YjbFgtSirnV2xjn7ziZ3r4WIrqBfwzEWiTOWqADhSkA=s4800-w1124" data-castle-name-g="Dufftown Clock Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO8ETCpWoHS1Vzut564SFDsVl8TPZpodcxuD_tN9x7PW01op4ue8a8ZI6-Vud9s0DQxKwoE03r-5y6Uv87M6c3RPHy_CyVJfPzpH13YjbFgtSirnV2xjn7ziZ3r4WIrqBfwzEWiTOWqADhSkA=s4800-w1124" alt="Dufftown Clock Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNeVAePIghfJNcn0fKmwd21sqUCr11DVt9w5scGnETdYG4Eefey_F8dP39ZMVUWpjCRbvvuJfrhRlHRdIML5j30oV5UcyHphq1hREuAYTiWlBCeIXagiPysH3Wfrkat1wSYaozGE8j_KD9ZDw=s4800-w1200" alt="Dufftown Clock Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRXJ4foB6Ms2S8gm8bziIOmB8bBLvcB3KxzlYxJHgfsvZzYRoH6EgZlTxPqFUFO4ezH8cOKiNZKRUxcu5tOxcZ58Gle4EExjioXxYz4Zio2IkqGE3pOzmDO9bo8RozNeM7E-tfSrzbisFW1zzPf1EqQA=s4800-w1200" alt="Dufftown Clock Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyPFE0HEobqVrAXTIHtzMOkhetcgErQnCZ_Sn6RovhDEwsUa3xvhdYJ9LrNv6cV7O6oDf0fChr3cOE54MPeBhYcPzVbSb0KEjA6uw4HilmQ-ryrvLiPOBNh-lh1n4ZtGtA4mCgFIzSAPoTrA=s4800-w1200" alt="Dufftown Clock Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMp_KWTcEwtPHaUS3NbxQ0hXN2v9OeKmQ-ep4KuCvIpzoz5MdWY7QxPHFSAIydOmGLDWJw8aXUECyYjKXe77qlp_upBaq7V09kqfu23uNwkHaBcnHNbAC9Rxzq95Vb8Jt4mfoWM52-xf1hO2vzGvksz9Q=s4800-w1200" alt="Dufftown Clock Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dufftown%20Clock%20Tower%20Moray" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

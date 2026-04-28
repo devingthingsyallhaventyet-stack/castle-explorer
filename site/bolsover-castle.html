@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM-fF4fqUprxU95JwY1WkwG6xMtWmvf04GKUrvP2HAPhwy4HeKWS1Yy3mJhXZnbh2ndlyICj5PeO774S6KmmclYdFderfE6zHyKwoVmLYZlrB1NtoVzIdtTEEegHF0leNV6CG1ChJ9PU90p0w=s4800-w1080" data-castle-name-g="Bolsover Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM-fF4fqUprxU95JwY1WkwG6xMtWmvf04GKUrvP2HAPhwy4HeKWS1Yy3mJhXZnbh2ndlyICj5PeO774S6KmmclYdFderfE6zHyKwoVmLYZlrB1NtoVzIdtTEEegHF0leNV6CG1ChJ9PU90p0w=s4800-w1080" data-castle-name-g="Bolsover Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM-fF4fqUprxU95JwY1WkwG6xMtWmvf04GKUrvP2HAPhwy4HeKWS1Yy3mJhXZnbh2ndlyICj5PeO774S6KmmclYdFderfE6zHyKwoVmLYZlrB1NtoVzIdtTEEegHF0leNV6CG1ChJ9PU90p0w=s4800-w1080" alt="Bolsover Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnCOz8PeDQgtBp8x4bXaOjX9KAyb0JQuctCtGeR9YiMvRtHjRPPs-fhrVJDmyZvTZhqFmahU8lRZUW2or7m4_xb9kt4P2azLL81p7K9BwMMYm6m7QVUWFEZ7OZXLIYg2NN7fCaiukzOJ2wDBTTwH2M=s4800-w1200" alt="Bolsover Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_78pDV7i6t9ozRtnZRpyr4mQM6Snj2IWvCf-J66gQgsUvGiFXENcAPIz08Da3kHn7PITTmMLkV3DO_Smd-2ULCvUleFfeRLnsiQ-rQUMt6oravSXQPjP90VoMPe9G704yU3nhWxDjoMt3Zw=s4800-w1200" alt="Bolsover Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjVS8X3vhq1cP-Sn4D1F-TniVC2LVhSrTveq5GFx4yQS8p_3R6uRI7mXA2IT-iLyVFhZde9nRMvkHLrgvaPZqFfBkFG3sPKoRwo6UUskRESQIOcST_XOd2MMKH_6b62-MYMonzRxnJIgnO1g=s4800-w1200" alt="Bolsover Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkHoS2jTPDnkRhWfQ7VmtSpqGwTCmE9Rs4N7qEevLHjRxd2_94bghTLwtvuioLSNOQNBQ_yN9OK0cmme4cNYlsW7rn304j-J9-e2AwTtUozz20z8UDjPbccCc6drIdhIDLFa9S90MleALysg=s4800-w1200" alt="Bolsover Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bolsover%20Castle%20Derbyshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

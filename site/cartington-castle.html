@@ -295,11 +295,11 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvnV0Vj_e-PfRZKu7bRgFF3HaHodlnROWqSwW0g9Ap5BU22XjQ8LS_Xwu_kjze_TZYexb7m1TmE1TOZNxAj7Ke65-MpV5wlDXJ0MmvFwSPB2slC0vAGyztE9_aVJJ2AOPhUpKyU1IPKOsdFw=s4800-w640" data-castle-name-g="Cartington Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvnV0Vj_e-PfRZKu7bRgFF3HaHodlnROWqSwW0g9Ap5BU22XjQ8LS_Xwu_kjze_TZYexb7m1TmE1TOZNxAj7Ke65-MpV5wlDXJ0MmvFwSPB2slC0vAGyztE9_aVJJ2AOPhUpKyU1IPKOsdFw=s4800-w640" data-castle-name-g="Cartington Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNvnV0Vj_e-PfRZKu7bRgFF3HaHodlnROWqSwW0g9Ap5BU22XjQ8LS_Xwu_kjze_TZYexb7m1TmE1TOZNxAj7Ke65-MpV5wlDXJ0MmvFwSPB2slC0vAGyztE9_aVJJ2AOPhUpKyU1IPKOsdFw=s4800-w640" alt="Cartington Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMprC1WXbXG90b9BZkckv1vE5Kj6-l9XTYmAbtHjXb67i2K7Lbh0YAmGM9FL6fXiqcirjzgPtMVYl-M7D70_BnPiEAgS146qVRYTZJ6B6oSOtlcghW-Y5GQ9ii2l49uN0SJWu1M8VRPxyoMBA=s4800-w1200" alt="Cartington Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNO38e4G1iR2c6m4LVtWbv6kdy5575FDHBdllCcQlPwvknM_pOONwwANocX3k6kM46wpCGmVDqyO8lW96XmTLR1qUPuArRNObHw0eK9QWAJ-O9lH_khqkHz9uIJEjQdum450figt82wFaYx=s4800-w1200" alt="Cartington Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPaUOKxwQ3T8qePcgGXG12Kp6fi_3srsVLaeiR6r-6uTZiJVl8m8O4c2LHvpEOto2Y-890A65AhSKaKs7NcsNgh0EMbAj2jk6pQjU0fkHtK9gzLJy-cEv9e7L0U3WQ9CpF5qVZsT3yB4ClG=s4800-w1200" alt="Cartington Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

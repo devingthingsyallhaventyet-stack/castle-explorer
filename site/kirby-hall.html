@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZONY6_pcNKNs5WXG2vWi3K-OAInFxRbNmxjElQ0BINqKNkesN7hcUCRg7jNvInkive7oR570xwJxBcPtSciY4Zwdw5OYIpa5xRFDJkVwb1pc4taVbyVbxCL3xETkMFc4i6vm_gtlJ5liSvpVVFDJJ16=s4800-w1200" data-castle-name-g="Kirby Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZONY6_pcNKNs5WXG2vWi3K-OAInFxRbNmxjElQ0BINqKNkesN7hcUCRg7jNvInkive7oR570xwJxBcPtSciY4Zwdw5OYIpa5xRFDJkVwb1pc4taVbyVbxCL3xETkMFc4i6vm_gtlJ5liSvpVVFDJJ16=s4800-w1200" data-castle-name-g="Kirby Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZONY6_pcNKNs5WXG2vWi3K-OAInFxRbNmxjElQ0BINqKNkesN7hcUCRg7jNvInkive7oR570xwJxBcPtSciY4Zwdw5OYIpa5xRFDJkVwb1pc4taVbyVbxCL3xETkMFc4i6vm_gtlJ5liSvpVVFDJJ16=s4800-w1200" alt="Kirby Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsNR1g6_WsutamU1JC1E3vFxcrV4EG0MUtD9ev42GPAyPohRe93mg-ZmsMDjXuH1ORqrIxCZl27lC1puUivmE8F7lD_4A1IqripR7n1rkMyXL2KmEZ-fCrFVIjsVvjkJ6osXSDEBj1CSBl1UQ=s4800-w1200" alt="Kirby Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPfJ6i4wEtENOO4_mEx2i_R8pBYZhGO0Ml1YFKeCloP0mznNVUIPIlJgKeM_9crVLMjW1yAbH7DnywtXkgUXUD6n0NyvHrFyzygv-FrLOITZn72UBFECp-YgRkOYJqQt3xBcyl8TnkdLzl9dw=s4800-w1200" alt="Kirby Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNw6VYT2I4JQBeILCWupXj5BFZ3dZMeWKCd48okDSZEGU-LImmnQNspystS-qtPBet8oi7oJYyEGSMcTigOYwi_NF0-Yo7gI0kw8IsrG5CfazZHCujKSXX0dOzRmrlvfLeZQV_8e111AlTQpsU=s4800-w1200" alt="Kirby Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNcrQdpryud1KJEREna-qSCCNlhFvDu2Xoq1LTzrE8JBCDgHXuRzuZAKV7l_dT0TO-Ur1kuAtWu8EPZKzrkDH1URp3J2TzyOEI4FczxYk8AJ4hJvTDlz7YhEeUlDBtHLOXiP_EczdbmJaz18g=s4800-w1200" alt="Kirby Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kirby%20Hall%20Northamptonshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO47dLffJN9u9cfQznNa2K98iGuEGEzrCtnja6SM6uRQtK3nsf6FCEXriLNiqQS9kutZsobCONZUGhzqT3l4b2AMzehJdqr2roPWduryevicQJHEvX_hEdLfwqRq818olOFZkYi8VRQos4ZoP6qXfaqBg=s4800-w1200" data-castle-name-g="Linlithgow Palace">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO47dLffJN9u9cfQznNa2K98iGuEGEzrCtnja6SM6uRQtK3nsf6FCEXriLNiqQS9kutZsobCONZUGhzqT3l4b2AMzehJdqr2roPWduryevicQJHEvX_hEdLfwqRq818olOFZkYi8VRQos4ZoP6qXfaqBg=s4800-w1200" data-castle-name-g="Linlithgow Palace" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO47dLffJN9u9cfQznNa2K98iGuEGEzrCtnja6SM6uRQtK3nsf6FCEXriLNiqQS9kutZsobCONZUGhzqT3l4b2AMzehJdqr2roPWduryevicQJHEvX_hEdLfwqRq818olOFZkYi8VRQos4ZoP6qXfaqBg=s4800-w1200" alt="Linlithgow Palace" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7TtBRMhuaSMopQaoARKojOLU4qAk3mkuXDqwn1KjWO7Dxpdreb6iwYbG3jdE06kno0T5cU9rrA4HAO5lzP0wiVzFY6CeiSEk6hYkfh9YnAKSG2O_1ALlOcAhXi3Rx-liErLXjvl89aGJY=s4800-w1200" alt="Linlithgow Palace photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFVZhIjBuSz4I--JeGnuEptJgdm87-ofgX5VqfC1523nuOnGek8e1oq1k9aX1BGm2rHQope7vkPs0DgqD4zAzPPDVVOQC-DdXrmj2EKJCfrqNyZvjuNibGvM6mAwuJ-hmp-dxiLVYqsR66rjANIV8bmQ=s4800-w1200" alt="Linlithgow Palace photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5uzADZv7TbmUdLtLVxTj0673ztTRdQ30HnUfDOxr7UTmVfyIs0Sju4TlRN320A4gDDAU0EttzV-tRO6QUnWIDuveIDw2YymtQPvD5ToGUdMk5YAfOBSrPVgzU0YDTVVh3O819XVhWxKfzAKliX8rr6g=s4800-w1200" alt="Linlithgow Palace photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOGPhCK4zWA7ILoa9illc-EcUz3XvKPPUDsmZ4Yeqnv0Wp-2Cd4DUOYGhSQonbwVTNFBk0eqNOtRpkemmf7aHRR1ZAGLn5uetjtcWjDuGioOOx6nkxLvlnJxbqgYWONUYzO5g7E7B22XbVt6O8tubh9=s4800-w1200" alt="Linlithgow Palace photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Linlithgow%20Palace%20West%20Lothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

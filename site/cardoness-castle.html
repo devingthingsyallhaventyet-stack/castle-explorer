@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEw7Q9MwXpKDEUXsF5cqCARO8gYkFQ8koT27AybCXiWWCewi7q48pjCJrzr5HErlfcVE7ueUnWzAFVZtmIX4dLBCIjV-rpMN3c=s4800-w768" data-castle-name-g="Cardoness Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEw7Q9MwXpKDEUXsF5cqCARO8gYkFQ8koT27AybCXiWWCewi7q48pjCJrzr5HErlfcVE7ueUnWzAFVZtmIX4dLBCIjV-rpMN3c=s4800-w768" data-castle-name-g="Cardoness Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqEw7Q9MwXpKDEUXsF5cqCARO8gYkFQ8koT27AybCXiWWCewi7q48pjCJrzr5HErlfcVE7ueUnWzAFVZtmIX4dLBCIjV-rpMN3c=s4800-w768" alt="Cardoness Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVZbtw7Op2AUuaolM_U5nDSM2Ta-C7dmtF6tnKFu_ueF8dDAkF438P08KlxKLq3NbYi-raQCSXYmShzC31UfUQvkGrPdkE4HWdGlj8RK0R2osyhzoVphMbKCaBH0cMQ2_r88ABLsmBg1cOwpQ=s4800-w1200" alt="Cardoness Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZObvYFjsbPM41D_njglBsALimkGMAdmdvDaRFfFd3XtFYL_lpjg9RzlFuREuwOIrWNHuCdC1YWTx2vvqlP3OMqGmMlkf-cpw4aCoWlxfTmVY-sbr_Go4OsUyh-Ad-3FoSYGWS5p-bful6aVJhg=s4800-w1200" alt="Cardoness Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0KAgWbhlM81gjSNLj6tgwQcnq66yWpwpImxhS6WMEaqeN8aTgZt8D78YeotfGE4dJArk_kRfVtrWuFKrAl9E3eWpR3hz0YZfs8dym9XXLFbuWjwvzVxA_XPL6vvheMcrYjl8qlEhGeSmPRGM=s4800-w1200" alt="Cardoness Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1QoGCWiYH_yN2ms03Z_zSArMpGT71i0adX-X9W1yde3rB5YOn5auR9s6Ua3Uk5GO9Fjy5OAZay-X2MyHjCxRbgD2YkotQY-idA-NlFVDDZFvxnPon-RWrysEZ2P3JTDSq55rLbNn6KKZCsQ=s4800-w1200" alt="Cardoness Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Cardoness%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

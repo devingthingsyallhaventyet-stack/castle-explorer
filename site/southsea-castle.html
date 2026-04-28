@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5D3DYUjr1nW_UwOwaUOLtjp3ewo4cBJboDRKPaIlHnJzymYgxU3VE5ToRCkxWzrAwG12pT2yzp2-lLBgI1B9vSX2a-Xub44gdGyQuVtJT9hvLO3yab2qZFfpBtDL1ABp2_JlJtrDUFW62FQ=s4800-w1200" data-castle-name-g="Southsea Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5D3DYUjr1nW_UwOwaUOLtjp3ewo4cBJboDRKPaIlHnJzymYgxU3VE5ToRCkxWzrAwG12pT2yzp2-lLBgI1B9vSX2a-Xub44gdGyQuVtJT9hvLO3yab2qZFfpBtDL1ABp2_JlJtrDUFW62FQ=s4800-w1200" data-castle-name-g="Southsea Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN5D3DYUjr1nW_UwOwaUOLtjp3ewo4cBJboDRKPaIlHnJzymYgxU3VE5ToRCkxWzrAwG12pT2yzp2-lLBgI1B9vSX2a-Xub44gdGyQuVtJT9hvLO3yab2qZFfpBtDL1ABp2_JlJtrDUFW62FQ=s4800-w1200" alt="Southsea Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPY-2BdHl_Hl_Ol2Kl286n05fiIO_plb37pxiRXeL1t7S6Adz0IOaDtiLaWt8hL7Uk028JONLWVTIW237RK_KTh_B7IRY99swu5spa1HIycg1mbqq6Bf1Jn-h_jufC-bnUH9eMS_mTvXs2QLtA=s4800-w1200" alt="Southsea Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOi8LQtI9vc13DLHuSRXOKsv4Cfb5_tWFGb3Ndp0rhoLtT7LDaNqa5WlnG0HNrnkLReslm8zV4HykjM4fm2qoZ3g_3ZNBVOY9RwwTzf2YYywK1oCA3xuKAC6Y9W9JOmc6gSRqmeo6Pbp0IkH7Q=s4800-w1200" alt="Southsea Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPfbUA8ZIijM4cb6P3JSybdJ8Cwx_vnmDEN7w9Dtp8V_n3e_lxKva-Pfk-Fd359UZUO2ocYy3MxqlBgHj3BPzhnFVWXIsP_BM2A3n2H7l8zrQsPc4xU8tJhTOT7mxRBmMj9WlE6aF_QGZP_8JZaI1Ai-g=s4800-w1200" alt="Southsea Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjEiNWJsbfR9uFjkDWxfNJZeGUPXQh7HTMkkS6ArkuQQmGMT09QpAnZORWsFeGJi3yLMo6ZyYftmvNrDnW7ZGhBupIZE66Y2aUh6vpJTacS0YifZ-xahLJjNKIat5uwJpdyWS6Hvj5bj9P7Q=s4800-w1200" alt="Southsea Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Southsea%20Castle%20Hampshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

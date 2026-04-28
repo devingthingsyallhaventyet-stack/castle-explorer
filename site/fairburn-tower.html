@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPG_f87orxzjuFKMVjTJEKnvq6-nZ5zQEJmNo3njBaFN9TNtvdH5rKtd_Uvg2k2mxB5A_2KbTnVlG3hBEx_w_bJH8FN6yrHlEaoA1TVDIfqCSUZSpTipuDhFzFHQkwuu9PwDTmJ5g4r_1NcvM1j7GtJmg=s4800-w1200" data-castle-name-g="Fairburn Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPG_f87orxzjuFKMVjTJEKnvq6-nZ5zQEJmNo3njBaFN9TNtvdH5rKtd_Uvg2k2mxB5A_2KbTnVlG3hBEx_w_bJH8FN6yrHlEaoA1TVDIfqCSUZSpTipuDhFzFHQkwuu9PwDTmJ5g4r_1NcvM1j7GtJmg=s4800-w1200" data-castle-name-g="Fairburn Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPG_f87orxzjuFKMVjTJEKnvq6-nZ5zQEJmNo3njBaFN9TNtvdH5rKtd_Uvg2k2mxB5A_2KbTnVlG3hBEx_w_bJH8FN6yrHlEaoA1TVDIfqCSUZSpTipuDhFzFHQkwuu9PwDTmJ5g4r_1NcvM1j7GtJmg=s4800-w1200" alt="Fairburn Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEBMi_cHYe253A0ArWkGRKU13BuJJk4j_WNNuccIqXgdWzNpvZJDgm1J41eOg5kqgX94v61c_mg7vR-N9bxt9oDXG9fHrImpxIou5XchcC_GLyKH0u7_85xlmjNjqIN183C_hZJIRnn7z_jcL8MuVW=s4800-w1200" alt="Fairburn Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOTuitYW36g2lQM_W8OWwjCxteGqNKDsxpQkGBbhPgekIvru7cyN7lOHPlMj1EPap3GdyR5aMXi-cGjXuXvBFCbcsM4_dDIawiJoati5R6OKYGjIJgDV9DtQiq3J5XwtC2_MoBaP6GfXW9S6Ri-P2thbg=s4800-w1200" alt="Fairburn Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXd-1Vncxdvt8NFtlZ_uuk_vaYFpgYkjqb_fw14CH7pATHWx3N4vZwiJ5j6-dnqCBkwD8rwOKTiZwGgol21fvUm_I5IvXkcgzQP__c5-ynamXNRbVaESzhffJ3RLz9953q6Vya48P5JuPiHEZrOhqZdw=s4800-w1200" alt="Fairburn Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJA7k6Joohq4zqisjrT8_hZyo43i2fChudD5gAl1lvjZHdpBeQdBcP8UqRa7H4I1SvCC9Ki7Jp-8vJiAKDfvv21M0LTkxygO5aRXF8SmqeEebjjKtG3KkEy1yWubxzMVcV5vTp3s-Yl4VJV0J3dmJFaQ=s4800-w1200" alt="Fairburn Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Fairburn%20Tower%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

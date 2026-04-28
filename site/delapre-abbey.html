@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZuFoQRKMsaZYm3Qx1459RYa72a9nfLd_vMoBgoaNn4epMjI5PwCwSy1o1pouVi14w8aOdxSTYIWlOs4Wj74FP0dXX917ntv9ycaMwhCz6taimANAggm-WRnbsUdEaW0j4ZPEARM9n3UjrIg=s4800-w1200" data-castle-name-g="Delapre Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZuFoQRKMsaZYm3Qx1459RYa72a9nfLd_vMoBgoaNn4epMjI5PwCwSy1o1pouVi14w8aOdxSTYIWlOs4Wj74FP0dXX917ntv9ycaMwhCz6taimANAggm-WRnbsUdEaW0j4ZPEARM9n3UjrIg=s4800-w1200" data-castle-name-g="Delapre Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZuFoQRKMsaZYm3Qx1459RYa72a9nfLd_vMoBgoaNn4epMjI5PwCwSy1o1pouVi14w8aOdxSTYIWlOs4Wj74FP0dXX917ntv9ycaMwhCz6taimANAggm-WRnbsUdEaW0j4ZPEARM9n3UjrIg=s4800-w1200" alt="Delapre Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8Ig_JJV6c138lCsCC_BmChY_WyojEidX1YVNp_YTBuvIE8nBW_d5ChRAukiPQx5RvkRGw9YbqVrGkeHV6hRV81Z7LnukTnpXTFgcJouvloUV7h5m6_WztO6OoyKgOm49-BR29VyYwTSeHizU=s4800-w1200" alt="Delapre Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCKGnDwmVM1M5_YA-S3qRx3ZgSwuseO6gZtgsLRjLGow7cR3P0XWuADc9Jlg0fBajl7wjCCib19m2Q_Th5osSqR9F0AgxL8es12F3b-z63bt2z3iapy9Xtd0fSwkpkixfLY_5Cx8fysChsjQ=s4800-w1200" alt="Delapre Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_kEuu55tKdZkR2e1OLaVREVjABDP6TrGKWy1tKVgVh_3hTry-lW0aJTkb4nFC9BzzXyfCG1aXvdsg9ygn6FTg1MjvmHQaadIVk-aRY95ZfWWPoXqQXRCObe5348lrMOsr9CV16I-V7YpynX8=s4800-w1200" alt="Delapre Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtUSpxnKMk5zHa-zQV1N8KTIhK9VscYi_B-q7YDj8xtHx0Db2ktHU7EmumoA7W4OC2iB_hyjf9dBePqBXkubfp65GkUUvnF30pi-sdTymFqVZYg9clQ4oB7GFGNI5my8SlFw_R4ssoj8gRcw=s4800-w1200" alt="Delapre Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Delapre%20Abbey%20Northamptonshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

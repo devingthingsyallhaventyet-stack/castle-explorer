@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkHjiL85RaW_GIM7cV5hNoFpg47Jz15aK-JIZ_xEt-vae4tUl_0WuvXk_YxtlRhib3oCSzYyebmmGbRwQjjCuCQBRrSxhu2Rh0UzVebmf2_m40jbw0Wjuq4c7QU_M6XPyUWVgRycJ1-5Tuag=s4800-w1200" data-castle-name-g="Roche Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkHjiL85RaW_GIM7cV5hNoFpg47Jz15aK-JIZ_xEt-vae4tUl_0WuvXk_YxtlRhib3oCSzYyebmmGbRwQjjCuCQBRrSxhu2Rh0UzVebmf2_m40jbw0Wjuq4c7QU_M6XPyUWVgRycJ1-5Tuag=s4800-w1200" data-castle-name-g="Roche Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkHjiL85RaW_GIM7cV5hNoFpg47Jz15aK-JIZ_xEt-vae4tUl_0WuvXk_YxtlRhib3oCSzYyebmmGbRwQjjCuCQBRrSxhu2Rh0UzVebmf2_m40jbw0Wjuq4c7QU_M6XPyUWVgRycJ1-5Tuag=s4800-w1200" alt="Roche Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPe2e3-cVmdw8VGvU5XHKtDymZo7MaKrLTB5OX5T13Rg9Yg2igzLBvA0KJkoTZ0f0AjvklkBajruDGE1lelsVYbZGQuBcLRw9wCt42-TzpjPEGAqlvO444o303KunoTgS-GY0pxwQ6YQutvKQ=s4800-w1200" alt="Roche Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOhK-othDaiCiBc4mz__m6eTq5BGD_CocWEfNF2_NEtHrUeQpR_md5-K1BRvpLCAZEsZiMb7EcTaLHOH0CQdMHBabNHbNsDYkESg4xM1cPBHXmRoRvuggHzJrhX7QxaCl1Mkw1uQ1ey4t2O3Q=s4800-w1200" alt="Roche Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtdKHp3Nxo8TtW-Ap22KiR4co6FMxeS1K3IzEuUeoC9CJQ12UQkXGtpWPbGASzYfAdyiRVun1IuwQOBgvN314LBvnMwm_VLPAwwQHpjJrzyHIPE-ZyftFRlodh9fr9LABiDfrf0gbgze1hiJc=s4800-w1200" alt="Roche Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_kKQmQ1Pmgx7A8-cBqgqSVQSLEQN7r93F5vZIXRQjfZQGKgQDgv_P2O_zxaRj463DtA3hNKVevuMmJOkqYr_-IrJzuIrdv6-0qM8JMhVvt3KXU21qG_5SYYb8tIBO_u3omih8oV4fu1acmXQ=s4800-w1200" alt="Roche Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Roche%20Abbey%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

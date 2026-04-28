@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRxoDAPp8nkebHS13h3XYNjCSGv663Rqyi8Ndv_L4vHlbHbyDuFTs6kE11b1QlJgbd8bq_HE38Oqv2d3Tn-oA3j-zJTvqAXAiGMzuJugqR15UtmWJM_AgOo7XspQHcS0fUj4uMBbUhhoBZjg=s4800-w1200" data-castle-name-g="Croxden Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRxoDAPp8nkebHS13h3XYNjCSGv663Rqyi8Ndv_L4vHlbHbyDuFTs6kE11b1QlJgbd8bq_HE38Oqv2d3Tn-oA3j-zJTvqAXAiGMzuJugqR15UtmWJM_AgOo7XspQHcS0fUj4uMBbUhhoBZjg=s4800-w1200" data-castle-name-g="Croxden Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMRxoDAPp8nkebHS13h3XYNjCSGv663Rqyi8Ndv_L4vHlbHbyDuFTs6kE11b1QlJgbd8bq_HE38Oqv2d3Tn-oA3j-zJTvqAXAiGMzuJugqR15UtmWJM_AgOo7XspQHcS0fUj4uMBbUhhoBZjg=s4800-w1200" alt="Croxden Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiZp1p4LfrtrZC11zuczE9PaFKYIfuN71T-2HxOLbPRCz2-paD6F44XF--40OOphIDVZhHIiUaMZqLRJvjG2iEoGPUUD5f5tmH1u7fX0ikzJKycjWRVl6uyDIzFjMHoG04WRxn9D0wuNVvOw=s4800-w1200" alt="Croxden Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMquS6rvf0e_8mcUB5d-pWFD_m1Hf63zvQUbL1p6Sq0q5ISJDZX6Sa4wwxQJMoYuhlAGa8FNsy81Thpoc_TOGcQszWVRRqRib5bBk0fxeUV01cI48jY2w6-9Z6jAqlg2SC-dK-X1_px0O2Cp-g=s4800-w1200" alt="Croxden Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNKyWYpHq4lVSWWAhXXOArdG3bw2SiAHFRqQ5oiNAhuxidxSfPJ5ASWwDWC-Jf3Rfv1kgW2t9IeHnxutArUh13wOgEzZHzwFfDtqHH-uUN4pAM_mG2IvSop5jjanYKvy-qGofjb6ZWXiDgQGA=s4800-w1200" alt="Croxden Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZObnrnFJkSCfR33_SgWzRrzpDJLPnL3gTsWQymR1i1TfXIFo7oFJBjndS16XUyUJNHcBlvqapOK-VlwSwA8p6ywzCDYejyIJ0WXR_YhD7RLwhA3lTKKFGwdh3lBjb1-xim9WxBXV0hSiLPfACw=s4800-w1200" alt="Croxden Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Croxden%20Abbey%20Staffordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMffLTIc--jIjFBUaZhiXOgOte4kPwekfkcmRnEloOm0d6xrOPGJNqOvmRY7liFxjG8uMcbeFZDSSK28z8i4rOZvpETfge-rDS4DdXqEp3azCIcn76o3aMWv-UvNa8n78RxFnfY2X37SO5Ygg=s4800-w1200" data-castle-name-g="Johnstown Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMffLTIc--jIjFBUaZhiXOgOte4kPwekfkcmRnEloOm0d6xrOPGJNqOvmRY7liFxjG8uMcbeFZDSSK28z8i4rOZvpETfge-rDS4DdXqEp3azCIcn76o3aMWv-UvNa8n78RxFnfY2X37SO5Ygg=s4800-w1200" data-castle-name-g="Johnstown Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMffLTIc--jIjFBUaZhiXOgOte4kPwekfkcmRnEloOm0d6xrOPGJNqOvmRY7liFxjG8uMcbeFZDSSK28z8i4rOZvpETfge-rDS4DdXqEp3azCIcn76o3aMWv-UvNa8n78RxFnfY2X37SO5Ygg=s4800-w1200" alt="Johnstown Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOdVqcV4RyjaY0RZkc9wL6UH-l-mT6RsNgMuqCSWgx9zaJJXuhGHWUEdLhZwRxMKjwm0dslH7Cp7YtaZVkgJyYUya9nrWHyfd4qWvN5hinnWPzTk-yncz85sqjsYs0f_l61kBkhG3xKQTJL7Q=s4800-w1200" alt="Johnstown Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOJ4wbUwUC3l2RE_o77TKe1MThvM8wiaDqxUB5qsrHr140mBzWpDClpmWvCdY7SWtrcyfN0_s-ujZc6x3vhUqj4WDZ2cQnzVOD2t1dDwvSMSgoouQsS_hTeUZsxlq1PTgPJUGigzZzVlRbaQg=s4800-w1200" alt="Johnstown Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMg2Ibxtr8Flc2SM7hbvOYXNDcCy06Hls3NMpqDWVgCOiU4DSJHDTjSwrQI_9v0XyuAQ_Y1Z2TpOUhv4CWhYA1goZCh6eaPYLa0DMAX34vMaZVzqsvdYZAPWXhX8lWsIJSZia5twnn7F_QHtw=s4800-w1200" alt="Johnstown Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMaFx5CQ_M_dMbDeAK5qpkRbL3dpgNu_NUldfpFQ7AcZulQt8zT1wi1fvbcfkpL6VHdHDTeIpParI3kWMzUblHmUhtr7PjcXLK6OLLcFWc28UT5V6FuxQMyuVev0kkEP5AWGxSETWGROhQKWg=s4800-w1200" alt="Johnstown Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Johnstown%20Castle%20County%20Wexford" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

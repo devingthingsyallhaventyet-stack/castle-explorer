@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnjGvHB4F3jjt1T2x_tUWGMvVksmST4FpNOcHFu6sEkiM9s_LbgQmiffSklPihanKBY5Td9MV-dB_d_74NkGkMfIN5IRydGylselU0BJrgZJtSdCmEiOTSR-3UR8rreKLNGikdyqMDhxrfmw=s4800-w1024" data-castle-name-g="Inverugie Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnjGvHB4F3jjt1T2x_tUWGMvVksmST4FpNOcHFu6sEkiM9s_LbgQmiffSklPihanKBY5Td9MV-dB_d_74NkGkMfIN5IRydGylselU0BJrgZJtSdCmEiOTSR-3UR8rreKLNGikdyqMDhxrfmw=s4800-w1024" data-castle-name-g="Inverugie Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPnjGvHB4F3jjt1T2x_tUWGMvVksmST4FpNOcHFu6sEkiM9s_LbgQmiffSklPihanKBY5Td9MV-dB_d_74NkGkMfIN5IRydGylselU0BJrgZJtSdCmEiOTSR-3UR8rreKLNGikdyqMDhxrfmw=s4800-w1024" alt="Inverugie Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFqs28t94Fl_TP18M1krwj17bsLuVpPNEd49P6d7LBgy0Wyc-ID2xSdHzZbMPBu_GF32FOh_tx12vVf3oXKWTBx1J_E1HiT-JnaweaMDpb8rTijtNi2G8KkHK97GB31E2hNstB_hVlTFVfx0Q=s4800-w1200" alt="Inverugie Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOJRYBqy8WjNTZXq0XFsY9FIt8tTJsADO_hxmHVQTvJatCGaXROrBxJEoKZ1T_VEILQPpbQoagCfjkbTwzt5uTuezBNsJYSjt_xyqHTrM442VWXfztZmyekCWiAj5I1hsPhvjoq8Kq8sIiW-w=s4800-w1200" alt="Inverugie Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtHWWvlfAaYOqZTRThgSx202LNtPoRPWV8XNi6T7LOXbTnDWNEs6jrD3YNQzSwXqPrfy7OCK01fqsOJVySbK5guIdQTxiSnwvPDCbVEd0UZIPFczkFuq-xKM_alwojbli7M8Hnop48jjx9kPw=s4800-w1200" alt="Inverugie Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVjMMaO0-itzTOtE7NJh3ku4j_jmNInylaLqgkeN3YZWMa6F0H22k_yY9FLYX3bUiJyF_4Belpj4AGkUuD1DACKRnDNsjMuy_LZWMFHXCUB4T2y4jH2mczcmt3-U3x82H5-HyXy2aDHAY=s4800-w1200" alt="Inverugie Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Inverugie%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPiVWPA6MKBzVoHlcp23V1CmirXCEgUKOlcyUjAHRCqDXf2ZK4Qc_p5h6KhNqW1BPr3p-h3KL3fF0Y60CcZhF3QKWN8I_t6gIBlVzdEjjj0QQWMaVr4jksXyQ-F1OzgnVB-vrREg0EyPy2WVyE2okg4cA=s4800-w1200" data-castle-name-g="Bryn Celli Ddu">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPiVWPA6MKBzVoHlcp23V1CmirXCEgUKOlcyUjAHRCqDXf2ZK4Qc_p5h6KhNqW1BPr3p-h3KL3fF0Y60CcZhF3QKWN8I_t6gIBlVzdEjjj0QQWMaVr4jksXyQ-F1OzgnVB-vrREg0EyPy2WVyE2okg4cA=s4800-w1200" data-castle-name-g="Bryn Celli Ddu" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPiVWPA6MKBzVoHlcp23V1CmirXCEgUKOlcyUjAHRCqDXf2ZK4Qc_p5h6KhNqW1BPr3p-h3KL3fF0Y60CcZhF3QKWN8I_t6gIBlVzdEjjj0QQWMaVr4jksXyQ-F1OzgnVB-vrREg0EyPy2WVyE2okg4cA=s4800-w1200" alt="Bryn Celli Ddu" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5JV8zrheE-RRmk3_QvZTJL1X15KeAH_PnXB3URAHnSnoiTEhBbp5yDBiAHkS6nU59vJS2KTd-sDFZGjbq1qMgbqysG4zUQBzCzZW3catzYQnVqmfXNv0uZuzjlBDFH93NSyCxdT18EFGbJZg=s4800-w1024" alt="Bryn Celli Ddu photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOqO9qpZxl_HsebBBbmvVU0qTRX-9nXGpwWuZtAQgoEJ1RUUqt0IAmelz6ywTRajdqwqnxjmn3nHE45OmZxWdJ_I3I9WHRxzEp7_0v5ROkAAxUq4QMOB1OlIp-RmuLetMnrht15dobjGSMPnpk8Ow-UgQ=s4800-w1200" alt="Bryn Celli Ddu photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO_UVZ0GzggZ-qliDker7dG_Chy9na9cKedIC98B2UW2iey_QDiGCXJT0zk9vhY0mAlOO7OlSRtG32DGF79vjRGZgEBOkr5EXmsLjFqNuq0Xmjy0XWKkNLgG_C1Nuy5UYQS1WWYv96qu3N7wgs=s4800-w1200" alt="Bryn Celli Ddu photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNv9JQCeN3zf5Lel56qqXd-_8Py3ZApnOVVRpqRqZ9gRKrFCWH-DHPwmGnRkdhl2_agQq6rKWMxTH53M_z_ID1Wi0nTNa_oDTtfnKXN_v9_ldntgTQvWCUAT7PXztL7MYXic6dNGDK5-Y7A=s4800-w1200" alt="Bryn Celli Ddu photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bryn%20Celli%20Ddu%20Anglesey" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

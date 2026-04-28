@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdeo95B67ddm3GXxU8vWii7jCnfLgpk16UbxSJPhTzQsLUTV84wxMgi_ONe6p1FInJkA8M2VPOskNwpFraA1gQ0jIdeG2AOsMQ_egkqJ9f8U7-bZ0SDR00CpoaZ30PM-X8BzWWbVATe_W1i6E=s4800-w1200" data-castle-name-g="Lauriston Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdeo95B67ddm3GXxU8vWii7jCnfLgpk16UbxSJPhTzQsLUTV84wxMgi_ONe6p1FInJkA8M2VPOskNwpFraA1gQ0jIdeG2AOsMQ_egkqJ9f8U7-bZ0SDR00CpoaZ30PM-X8BzWWbVATe_W1i6E=s4800-w1200" data-castle-name-g="Lauriston Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdeo95B67ddm3GXxU8vWii7jCnfLgpk16UbxSJPhTzQsLUTV84wxMgi_ONe6p1FInJkA8M2VPOskNwpFraA1gQ0jIdeG2AOsMQ_egkqJ9f8U7-bZ0SDR00CpoaZ30PM-X8BzWWbVATe_W1i6E=s4800-w1200" alt="Lauriston Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFFWI_XfbNpfcPFIZ9xhJejBRWExcRcax332r_7v3XQekR1vHBSukeKKwcQx2J-_8_U0kLSDWKUG3Af8UVua2c7dwu-ftBdLeS2-Sh6yVreWqzwaQuD1ZjrFEHNUbQLkRXvEOGfO-FOiB1iA=s4800-w1200" alt="Lauriston Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpLr_AY3SQ-RJspFlIpLDXr4In-UQs1dWnEMwSC9Cu43embCs-vYmtcUjAjMxJ0AkZ6rQpGqEdwW1f0gRHflwsyhadVA_NXvSMynqngh46QH-Kcdy1XcelC_63GfXWxTY4Oa2LtaGqnqdMVA=s4800-w1200" alt="Lauriston Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbBIWOt7d6BAi5zaRQE-BCsXqMY9wRhR2BmFFAy4cqLkSGFDanwod8FYUkFFiZEpqcHM-igObYQo3RwfoRea6ZbiiVaMzuUOPYjE7e1dDPhOY4VBT67V6U1jINT6rwL-MKbQwm1kkAW3V7eQ=s4800-w1200" alt="Lauriston Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMky-P4m9XTEt83Iw74ARY-qxNvuGjI7h3VEYTfKXQ8r1hiqbL4QOoRAsSAj2U0GL4PlS23lTXaoznqesrfK0lM28kSa19YtOIaH-Dy5_HwRDlchYnSJ_0XPX4KfkVlLW1IcP7zE9C2SmZT9g=s4800-w1200" alt="Lauriston Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lauriston%20Castle%20Edinburgh" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

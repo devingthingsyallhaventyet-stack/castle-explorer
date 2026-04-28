@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHqEUK5O982_I2cKwbqTovAsRgj4UPjUnVe7BlBf7BJ4G2GQF16tPi--BlYSVYl0sKhzKmErtMM95V4GGgsv3eHXq3jkG4G3Ow=s4800-w1200" data-castle-name-g="Maxstoke Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHqEUK5O982_I2cKwbqTovAsRgj4UPjUnVe7BlBf7BJ4G2GQF16tPi--BlYSVYl0sKhzKmErtMM95V4GGgsv3eHXq3jkG4G3Ow=s4800-w1200" data-castle-name-g="Maxstoke Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHqEUK5O982_I2cKwbqTovAsRgj4UPjUnVe7BlBf7BJ4G2GQF16tPi--BlYSVYl0sKhzKmErtMM95V4GGgsv3eHXq3jkG4G3Ow=s4800-w1200" alt="Maxstoke Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOkL1LPC7OP6XlZnzTRNgIKQvmq_c8EdZhqD1ggBHO2giBin7N5NAQPMj5dXlkl4HeCBixCRPHA5SeAzqwo2x1NeD_CSUSLngBchlCjkZ6Tz2-Z8aQFRwjfjg9VKhD1MtJYsaXeDQuHv_-h9Ic=s4800-w1200" alt="Maxstoke Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMGWgPmXMnEZhrIzfMEUz9njZAYRpAzOMz61VRYe4Kdv7Hx6MFW_eh4aIWaZeRItAYi3PWZCKJa8ZnTdP5mSY-i7h8Xtdw3ngS9n0PztShk6bs0AEBYiPzZV8pix0IEg9n-lyq314UA8a5Yxuo=s4800-w1200" alt="Maxstoke Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNi4Ak9TEAPmLpTzTkNgtLrDCzvlmfDDq0ls5wFIBLAr5u3C0JQw9I58WGPgURCLy2oXy7PAaYb1TgUpZ9xLzCVkPN5fMIh-u3p8wXBV40WDzYE2xqaeThDCDzW7U9Js2nJbctM465lVVYW=s4800-w1200" alt="Maxstoke Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPPe9z0pBmq0Ws-2SLw_kGl1DPlTYMlCgzkzl4lNDvW2YAWK3gSGLN5rNDI718uAsikxMDF_zHz537bSYGQGcj81TUPgQcGgEkkswrsvKvVX51U4b0VJO7zcw1Ei3sxYWVqEja-TQUEUEgE4A=s4800-w1200" alt="Maxstoke Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Maxstoke%20Castle%20Warwickshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYWBJUCNPdVSUJr6PIEtQIVAdW9gBKEg5itwlpIuSWtbSdncaw2QHL2jSEHAkPgOwUP71sq6yQ46wSIjMc4xs9Os_q6i3Xn4vnXW20gsidjo-gyKUyUq9TUtAFKS-sRckAOu6iTKt81q3k9Q=s4800-w1200" data-castle-name-g="Lennox Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYWBJUCNPdVSUJr6PIEtQIVAdW9gBKEg5itwlpIuSWtbSdncaw2QHL2jSEHAkPgOwUP71sq6yQ46wSIjMc4xs9Os_q6i3Xn4vnXW20gsidjo-gyKUyUq9TUtAFKS-sRckAOu6iTKt81q3k9Q=s4800-w1200" data-castle-name-g="Lennox Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYWBJUCNPdVSUJr6PIEtQIVAdW9gBKEg5itwlpIuSWtbSdncaw2QHL2jSEHAkPgOwUP71sq6yQ46wSIjMc4xs9Os_q6i3Xn4vnXW20gsidjo-gyKUyUq9TUtAFKS-sRckAOu6iTKt81q3k9Q=s4800-w1200" alt="Lennox Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMu1nLJtV4wnIorv9hXuyZjoQTNNCPNLGJHoaKncpPKOQDD15DXUp20KZzAWTy843TkgIiO7Qn5X_HMpu0IhWKpIBCPdEx2Yca86NbBNGvaS9Ri1cUDsE0fW2zMkCqDAZ_hhJHii1O0Va0WGOg=s4800-w1200" alt="Lennox Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2rCFgscTtrMa1CYop9fyZd7vvFiEqlKcvp_9gH3dGRLySrXGknrqO7jow1kEce9imJuiFGiinZPzI_6KkI05H1t3WYQFQqhOjzIsO3nHANxZz2SFiN3R1vw6wiiPZ9D-bkHBzrfqChOdB6y5gLeofJg=s4800-w1200" alt="Lennox Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNsDgx3ysifjBoFkuYXwIiy23ygCsWJrmGySg2l8Dw9M5PzfXU1o5ztxHJRPx2hEvj7PmMQvC73P_2wwbzkh-Z05Kq-wgzhuf-nfQS2Ew-Qd89OwT0VPHZcYzRuMYWAxFSirRvZosvjV7sCz-o=s4800-w1200" alt="Lennox Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO20XBXqeyQNRuW2ubmQxh98Uz7UtEQpG_2uObpTqXGudoRQJfO5EzYbn3CPjdNjroEqWANRFDUzjEQhamR5pey6e7vQ58qyh9bvEfv35_PEoFZuZM0cXDf00w3-Bh44oEFmg8UIKYuLvnoPg=s4800-w1200" alt="Lennox Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lennox%20Castle%20East%20Dunbartonshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

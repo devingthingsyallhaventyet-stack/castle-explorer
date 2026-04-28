@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJFSDom35IM0CmdAOE87G9_ryjhPH_TYSKD0aJA3va-HPMOEhnFqA0f8zjcs3YciFElwxXuT87yIj1KBQrajOoKTTKwvTcx5OqLYHK8rruXu_s4fcd31XDP2j-uNg1R6044LpBYznQ2zVSGw=s4800-w1200" data-castle-name-g="Llansteffan Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJFSDom35IM0CmdAOE87G9_ryjhPH_TYSKD0aJA3va-HPMOEhnFqA0f8zjcs3YciFElwxXuT87yIj1KBQrajOoKTTKwvTcx5OqLYHK8rruXu_s4fcd31XDP2j-uNg1R6044LpBYznQ2zVSGw=s4800-w1200" data-castle-name-g="Llansteffan Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJFSDom35IM0CmdAOE87G9_ryjhPH_TYSKD0aJA3va-HPMOEhnFqA0f8zjcs3YciFElwxXuT87yIj1KBQrajOoKTTKwvTcx5OqLYHK8rruXu_s4fcd31XDP2j-uNg1R6044LpBYznQ2zVSGw=s4800-w1200" alt="Llansteffan Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNc7MKCcrNOmmjgG846ebpgaT_jLAfZw5OyjhUtnLooSxxZUaJyEQSzCyDyVgJT9rzUADDAF0Y2vP4wUP5RzzP4vVHTPCF8ta1-WQq3U2JFj_IeML8JLa2uAb9P_RdcVezbDbMzAf-PqVLwFwTcIEaX4Q=s4800-w1200" alt="Llansteffan Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOVDbCyxzsORB0iMaDI848fUvkiemz7YHADnPdRpLaTpnBte7pPwojRPTiUyJjLtX4i6BmfLTk3Plt-ixRx69kdFUiX5PKMRY3f9fYkb-1zvIE6JMml0iAAzvKtWRW80jTNMTSaloPwF3e4v6xUhs7v=s4800-w1200" alt="Llansteffan Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPrYMhOv5XXA1ZFZZwVHPW6w1TMkV8Y4O9B98Dz2X_ma1_iC4SmFyTR0SkjwJrjhKppAwyaKeGc4H9SZwH8hkUIWNno_Hs3nodEn1CM-WMVYf0WETUooGxvXfLux--eJMAytGaWCX8MXvzm=s4800-w1200" alt="Llansteffan Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGMu7s_BK2JVbIFedWofucB1aktmrjGrMEwcdhTnJ0hs3syk2-nbdj4sd39JxHZ1O8hPttfZtu35EwKnBpWI5qMcpUBrsETqA9ItCa7CHRBVpRNvUmxNAOf-lHT5aJjuqOQiSg_hpkxhZs=s4800-w1200" alt="Llansteffan Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Llansteffan%20Castle%20Carmarthenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,10 +295,10 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_dPPkI0EyBTtiT_VFF3nBq4IxBHeec1Gnis7Qc93ZaVdG22TWKAICWkUUwtGPHG__TylDyBhOmj-E30HmPxixnE1MHQv0hl9IhyK69BEYfF2628_faNWkVZMEjvBmEg7AdsYgcW6rrjPKN-Y=s4800-w1080" data-castle-name-g="Aboyne Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_dPPkI0EyBTtiT_VFF3nBq4IxBHeec1Gnis7Qc93ZaVdG22TWKAICWkUUwtGPHG__TylDyBhOmj-E30HmPxixnE1MHQv0hl9IhyK69BEYfF2628_faNWkVZMEjvBmEg7AdsYgcW6rrjPKN-Y=s4800-w1080" data-castle-name-g="Aboyne Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_dPPkI0EyBTtiT_VFF3nBq4IxBHeec1Gnis7Qc93ZaVdG22TWKAICWkUUwtGPHG__TylDyBhOmj-E30HmPxixnE1MHQv0hl9IhyK69BEYfF2628_faNWkVZMEjvBmEg7AdsYgcW6rrjPKN-Y=s4800-w1080" alt="Aboyne Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCv8vWYFo6PRKKnpJXbznMUyETuvFLSBQE1B8FLxR9e5NFZXu77yWlXmOMP8PbS1S_g1FXX9Tgi8HQTZEE8WiEuARQyB9DQL_DLGcQ-RQpHrYvjVWnkRDcHF1sUlHCldbaRe_BM7W_tapypTM=s4800-w1200" alt="Aboyne Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPkKrKHbjVMGMyWccdIzjgNUs4coLWLnHDnI_jEnLE-DCyd53X8gRSM4dMfkS12cHSaWFfR5Ab1d2GaVuJxclgGLRjMIjlaEtvDMW44myxMJhvvPN9i_hUc7cYDVLMUqTVEYUarQsYQ5Scfrec=s4800-w1057" alt="Aboyne Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide3"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

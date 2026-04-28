@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOc4SvjS0fcIUpv7YUdevxZjlMN_tlPQr8VNKjmv70-zLOPUsopMOluNni0VopW-Jy3Lzr9kA5-z4iwkOa7jOyUrw2yHYe4__9z6ptX7IToEFONij0dWIpAPps48HxMnd0u61b0jATMj42M2UxmyWhQwQ=s4800-w1200" data-castle-name-g="Nunnington Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOc4SvjS0fcIUpv7YUdevxZjlMN_tlPQr8VNKjmv70-zLOPUsopMOluNni0VopW-Jy3Lzr9kA5-z4iwkOa7jOyUrw2yHYe4__9z6ptX7IToEFONij0dWIpAPps48HxMnd0u61b0jATMj42M2UxmyWhQwQ=s4800-w1200" data-castle-name-g="Nunnington Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOc4SvjS0fcIUpv7YUdevxZjlMN_tlPQr8VNKjmv70-zLOPUsopMOluNni0VopW-Jy3Lzr9kA5-z4iwkOa7jOyUrw2yHYe4__9z6ptX7IToEFONij0dWIpAPps48HxMnd0u61b0jATMj42M2UxmyWhQwQ=s4800-w1200" alt="Nunnington Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXy3i9ZBrw5P0t75SdR5aQk-q0pc1rWKM6ynQQVqQzLNLgsCT4qN1zBUGTUeSljIFlbZQTSst4roIQBAAUEHMZ0orB2kZnwyg2bzL0hTPl1EawnhMvwGxQ0KPn-DGO1DaApw9gDFjTW2ew=s4800-w1200" alt="Nunnington Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeFR9L0XgFh11_kGdVeRFlBee0v4z7rJcjRyyR4xab6PD-N6kqlaDtqHe0P-lefAFCdOgm6HGrTwtHMaaR5cVuj-6fIrHiGqkJhwlLeMVXovuov3PRje-hTxDC7Ek-_baGIvvnABrQxS9vkA=s4800-w1200" alt="Nunnington Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5pQK1UGAJFi1YWwjUh5IpoE--g4iUT9GSIHHTE-cFEkkwDLjEpOlXFRyUNcnDpH6VNHhgfRfpkjg-Hc-xtlDmmQFT3MwNk3Szk-mTnWFZ03wjNG-xdNRk_1FzHdTyN3MxJPQyFJDzK3oJjQ=s4800-w1200" alt="Nunnington Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOA0soN-xTzTlAziUPDi6RH1FKsLvqyv3BuckdLSRYs08dNjchJqsL5yZY-QiJuUTFkKkBhfWKTLQ181llHjCEOHW1DO9LTD-bPjGUgsonu_M0BocFGzluiGRBtWLS6713n36cJQzi96-Jsk1k=s4800-w1200" alt="Nunnington Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Nunnington%20Hall%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

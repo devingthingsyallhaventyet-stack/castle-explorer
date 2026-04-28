@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEyHS2BOoOxxiIKBB3tj_iy6-dFGSH4AAbmyBzm4nao8DuOISdLypEyCMl3nH7kXZvk-VCXZrbUc5SGpB89SxG0qD4_3aw6C-w=s4800-w1200" data-castle-name-g="Tonbridge Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqEyHS2BOoOxxiIKBB3tj_iy6-dFGSH4AAbmyBzm4nao8DuOISdLypEyCMl3nH7kXZvk-VCXZrbUc5SGpB89SxG0qD4_3aw6C-w=s4800-w1200" data-castle-name-g="Tonbridge Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqEyHS2BOoOxxiIKBB3tj_iy6-dFGSH4AAbmyBzm4nao8DuOISdLypEyCMl3nH7kXZvk-VCXZrbUc5SGpB89SxG0qD4_3aw6C-w=s4800-w1200" alt="Tonbridge Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPwGwTiS3zKsuHV0gG3O2CKI2_N2ylvvmEiLqCpFZ94A9qgR6kVCXaF-B1qucK0vr7uGgIDp3-hC74xuyvbplF6XYLA8SnXTLOiponIKGCfa7FeKjRQljDOTAqskmvmTlMvEs_1IIUSXe3jHrI=s4800-w1200" alt="Tonbridge Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP0cdeBP6ygFmu70a7J9eGk4Ynzvhwb3oGWPLL6NPpFCOcg9Hmfmj4XMwKnxraZKm65aHjvjxVpIkxY_f4ZHmYwruv5FLNEo-1z9B4NxQbnn5TKEZH8OZ5VcbW0jg9Pv8L-ZfrKtzYiUnxQzEI=s4800-w1200" alt="Tonbridge Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO4vUd9MCmEnrRc3yAiIf6bDY8kEYhEyF-7mZ38yUZHcMuPeiaTroNns90F_WUVAlyxYfSKdObv7N9St4g-dwaMGsCSNabzOu9eJPUCuLsY7FgU2Lu5HU3-z1inc0FruNafLjg4Ea5jVV3gnw=s4800-w1200" alt="Tonbridge Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNEPVptx8SJGtAmQMDC2ZdoiVBu-rADQ9fRebIlsKfcEBS8bxIm---o5vEVPUWBOrsDn3u6L2txQpj-xeFqkX7cDlQBnBe4ZCKbLY7us94dBbz6X8_ghC7KO1o_33tEEi9g6FuQ_vh_kNHCkA=s4800-w1200" alt="Tonbridge Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tonbridge%20Castle%20Kent" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

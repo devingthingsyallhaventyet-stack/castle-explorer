@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZkyLel-tZxv_K-cI_-f-V2EfeK46IWVuHaRvsCkZuNA3CrP52fdi5u6xIrESsgzjy6ZA2UzM4_2I2t3eKM1NW_fs4DwQi4HDXOFSVRrU-miEciYk72a8R-c_W7K3eRZqGkxHcaDYksXXV9cQ=s4800-w1200" data-castle-name-g="Castle an Dinas">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZkyLel-tZxv_K-cI_-f-V2EfeK46IWVuHaRvsCkZuNA3CrP52fdi5u6xIrESsgzjy6ZA2UzM4_2I2t3eKM1NW_fs4DwQi4HDXOFSVRrU-miEciYk72a8R-c_W7K3eRZqGkxHcaDYksXXV9cQ=s4800-w1200" data-castle-name-g="Castle an Dinas" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZkyLel-tZxv_K-cI_-f-V2EfeK46IWVuHaRvsCkZuNA3CrP52fdi5u6xIrESsgzjy6ZA2UzM4_2I2t3eKM1NW_fs4DwQi4HDXOFSVRrU-miEciYk72a8R-c_W7K3eRZqGkxHcaDYksXXV9cQ=s4800-w1200" alt="Castle an Dinas" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOAHoluQ8QR_x-xrUrrLuC-Ux229ECMAU47PfCn1lDJ-uamvwqNB5MZDw2pSBHRVPDh3wl7QaHf46uHwT5vfo4Pax1iW-6xHjJtSNkTQEQuYE12mxqzTPAyBhcnGmC_UrAa1-XvyX4tHttH=s4800-w1200" alt="Castle an Dinas photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMT5FXmdIsPvgSqVXt6F4Le53iUSfreQTXCt7fSPNOi14h-5SdZ618vUeV39ftaSWcAUohzCBxp91OxF9m5MtJ06hCKY916HyWrzmYkwzci8UPCYgO8RUlWg5MfF5L8FMMHWxlonR22X2zXNJU=s4800-w1200" alt="Castle an Dinas photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMFykxL6d4DEzSwsHTdJBZzDmHnLckKqNqQ_4BgvLVLGq2lpYzKMT3-N3qo9KQXRtjvXUiXskWoIs5UMSNBhCP0q7VN7WWMxR_4I7wzeKFO1qPRbAl_RVeuNqWX7dNH2kEDIyMWjUuGXUIT0Cg=s4800-w1200" alt="Castle an Dinas photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8CPCLcMMn4q2Fw6cwbojJPOs6kTGPrHzHQDxUJdrdEYJAOvbEQITw9Tuv9qUl_lQIeHVdeL3dzqX912Ykqr-M904cFnufnBn7DuyS2Ko9Wh4AiCpwvXGZBMjLG_w5JtXIzu3RvGoF52OINg=s4800-w1200" alt="Castle an Dinas photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20an%20Dinas%20Cornwall" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

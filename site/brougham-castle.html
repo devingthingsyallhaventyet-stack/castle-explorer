@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOuC7t79rkDHmQ4LPuQVTacVTYpTKl81yUUPATbvUtmJIK2n22yrIAjr1L1mYa5uTS8s4C9gA0hd2EapABihj8D5l0WBtkzPHBRNY6Ax53ylJUdfR-Kmd4RUH4idNva1iDaINZQ8gJ8IaFaKQ=s4800-w1200" data-castle-name-g="Brougham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOuC7t79rkDHmQ4LPuQVTacVTYpTKl81yUUPATbvUtmJIK2n22yrIAjr1L1mYa5uTS8s4C9gA0hd2EapABihj8D5l0WBtkzPHBRNY6Ax53ylJUdfR-Kmd4RUH4idNva1iDaINZQ8gJ8IaFaKQ=s4800-w1200" data-castle-name-g="Brougham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOuC7t79rkDHmQ4LPuQVTacVTYpTKl81yUUPATbvUtmJIK2n22yrIAjr1L1mYa5uTS8s4C9gA0hd2EapABihj8D5l0WBtkzPHBRNY6Ax53ylJUdfR-Kmd4RUH4idNva1iDaINZQ8gJ8IaFaKQ=s4800-w1200" alt="Brougham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHvZYOlgAh04fyN36JzlR6yiRovpkSkALPBxjxOYqc6a88MoNu4f833gPCjOeyWL72B5oITlXbVN3pBZjK4Dvh-23-CcimOdI9VXUE4sD-Qhe2rZTCxAsD9P6ygqTQ92Y55W5h5kWk5y-syZw=s4800-w1200" alt="Brougham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO7g3PkSQsRssUkz8lFDsjZ-iXT9_OvweTLOr2-5o-HThyistcCS9YwSdNBxk3M7kokPGnHndFuLMyVynmxKioOk8Z-MNiWp52RSUOCOn3i_vsw1B-SKj8yKjl9cnKg0DIJVkwHpnHpmftduA=s4800-w1200" alt="Brougham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOeL7TXRXLwBBcjPmxwwjRKOYEG2E4K3xyM-mmmWPolbcn7MkJ-Ha3oiUiWX38XLI9pHxiNCJG2ms5doGFN-Dx-JEgOP_7pU3XqlRLgoHGmbIz5GB4USiYW49dDUpiAq7bDV79ruMb0KmL8ia0=s4800-w1200" alt="Brougham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFY95VIBwFPe6ge9DTVwb7vAZ-0uo6aoNAaO6e5R7vQmssoFK87nVIdnAWg8Xx-yGLWLL5TCyn2GbOpmg7ryM5Scw-OkVKDXq4jniUwBLV78ZWHOCLM_wvCFSAzI_q2IJsnX5AWHu6bjyCVgE=s4800-w1200" alt="Brougham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Brougham%20Castle%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

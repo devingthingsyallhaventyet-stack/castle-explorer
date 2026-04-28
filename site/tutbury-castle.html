@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJMgkE4fQ8emffHq3egm-spnzbTS7Cs-LLpUHRTnROTfkUtTjmyoZp-WsF5i6XmZOc1RjlW_NkRvuMgnunvd6W93pJlyOY7FaLwopd6Nk-iOIH0aIv1Lxvx95DkTuYWQv5OEttqhdn0ZkM5G8=s4800-w1200" data-castle-name-g="Tutbury Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJMgkE4fQ8emffHq3egm-spnzbTS7Cs-LLpUHRTnROTfkUtTjmyoZp-WsF5i6XmZOc1RjlW_NkRvuMgnunvd6W93pJlyOY7FaLwopd6Nk-iOIH0aIv1Lxvx95DkTuYWQv5OEttqhdn0ZkM5G8=s4800-w1200" data-castle-name-g="Tutbury Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJMgkE4fQ8emffHq3egm-spnzbTS7Cs-LLpUHRTnROTfkUtTjmyoZp-WsF5i6XmZOc1RjlW_NkRvuMgnunvd6W93pJlyOY7FaLwopd6Nk-iOIH0aIv1Lxvx95DkTuYWQv5OEttqhdn0ZkM5G8=s4800-w1200" alt="Tutbury Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQloRfSUpYSVdzeUaGyt8Fqm8D2Zmqje_ZGaSiUTAqPG4FiXra6_5878PFmyejratRRmdr6-I5pc2SB5ziHsVML35xx328YqBxowb0k_eQxdEcZDERhwpxmTxK6SCCsxJy5nErDs9mKIoY4g=s4800-w1200" alt="Tutbury Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2F4zs-sPmmvbJQOl3cbW2nTWrUfA3YiGuSMf5D1VwyZhTz6sb88l6FmQevAspT3pivKpyii2Da-dNUyX-ZQRbFuybdq0Z1S3zKOgtv606g-x2FD4_hZUaJ-XpSbRCdfAqUpuftmGSkZHPR4g=s4800-w1200" alt="Tutbury Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9CUKYoyhOrspCAC7JdOL3C7wO9yzzEgMbjt7wKFt9YzM3O-YNJ82qqh7cJztXXCKsLYqBA9ds-p0vzxBY3fC-bREBttrry_HlCbOOBnWg4Mz-KqBduzpivFT-fvP6lZq_dfZbwrd7haKI=s4800-w1200" alt="Tutbury Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNv2_1H070RVNAFHUsOtR9ZuQUIImoDE8hnecI75tvS8muJ91IUAqmEUVwr3hW1Kj0iyZ7ixL44A2RbyulpZYP0QTDiLIwB0BH18DSMS3SJeq7GbsNLRLQ2gQxd4fGQ6k2rF4lk6JDShgCXJA=s4800-w1200" alt="Tutbury Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tutbury%20Castle%20Staffordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

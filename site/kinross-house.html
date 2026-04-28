@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFRPanE4j35rXVmqo_8PBNx3052v8RWj7YiP5ODzVYuYhreBqzAt77qX1lPqQcewTYEKNjMXxWG4eBzYX_PBPfKnU-Z8rfCDqY=s4800-w1200" data-castle-name-g="Kinross House">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFRPanE4j35rXVmqo_8PBNx3052v8RWj7YiP5ODzVYuYhreBqzAt77qX1lPqQcewTYEKNjMXxWG4eBzYX_PBPfKnU-Z8rfCDqY=s4800-w1200" data-castle-name-g="Kinross House" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFRPanE4j35rXVmqo_8PBNx3052v8RWj7YiP5ODzVYuYhreBqzAt77qX1lPqQcewTYEKNjMXxWG4eBzYX_PBPfKnU-Z8rfCDqY=s4800-w1200" alt="Kinross House" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOKVJBW2WDQ-YjE9G0-BJALWEZzUURk2fYzEMPyxlr6JRd2JeCtg_NMKrPQzQc_gb2GpNjCW5oGY694yFjhH-aL8t1SMNqUlwhehnCRSe94vBNuMUe2xMojBr0vAc6bHXssz6v7oRWwYu_59w=s4800-w1200" alt="Kinross House photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMfVYelYydy81GA8UNhG4T5esmMho45NBh8g5f_9Q_a-f6bZTZU_gaAfCFtROxvmaJo6I2ltsGMbGxhLaaisT-ezOedct9dwj1QFjydzPTaFfZaEYD7nDXZmRWlLn8xZxippjdPyDCMxbNw0A=s4800-w1200" alt="Kinross House photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMcEoRYF5zBM31mXQueNNnfg3ferj8j5BSwSgKlU9c6LSkZ89P8lVH89zDWo-0Xr0cLBHaSFzjWALtsC9clcMOwn7Q4Mcie5usrwNaWqgMnRh2tZYHLoBP8EOiBeNXoR2V72GcIllhS_9t_=s4800-w1200" alt="Kinross House photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMd0WEukErGnQ0KAoh6bL4oWD-NweQlJhcUdxi4Lk7_HBHv-w0nQ_6CLUcF_82UiEAyPsB_4piK6Sueb9HLjW7Gfz1ZHf-hfsz3sRvSCiSCU0AkpHSRfs9o9fJS5eaVHD0ipg19xmdVjXyU8XI=s4800-w1200" alt="Kinross House photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Kinross%20House%20Perth%20and%20Kinross" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

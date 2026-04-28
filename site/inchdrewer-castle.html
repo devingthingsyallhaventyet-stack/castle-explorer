@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOr2jpHQl_hR0gIFD2WdsYarxHSns83SgVyB3bbgH2U6wRPbo8JPFpXQmOEid7VnwaUITqwclhVqDG2WF9un7sbM-vXENJa1ArJvbusPQGFGKypnWflXjTjP01QbSZLegwy3Q744brB6h7_fg=s4800-w1200" data-castle-name-g="Inchdrewer Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOr2jpHQl_hR0gIFD2WdsYarxHSns83SgVyB3bbgH2U6wRPbo8JPFpXQmOEid7VnwaUITqwclhVqDG2WF9un7sbM-vXENJa1ArJvbusPQGFGKypnWflXjTjP01QbSZLegwy3Q744brB6h7_fg=s4800-w1200" data-castle-name-g="Inchdrewer Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOr2jpHQl_hR0gIFD2WdsYarxHSns83SgVyB3bbgH2U6wRPbo8JPFpXQmOEid7VnwaUITqwclhVqDG2WF9un7sbM-vXENJa1ArJvbusPQGFGKypnWflXjTjP01QbSZLegwy3Q744brB6h7_fg=s4800-w1200" alt="Inchdrewer Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTUGKpME5qYRt9qpNBmeagslJ8KcgyMQ6ZmW-Bu4GurukV9sdXJH94kW0AHhD5NjaDQ5b2LvqFmcaYM890VWfAXITnOuvgZn9a6UqcOrXnQkZOgm8BlKNcJKDkKtBwK9XsQgupNoxnM0esqjc=s4800-w1200" alt="Inchdrewer Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNBcuShTds5ay_CYl8ZHrapegdpxYHdzOcj0DmDDwIxJMHIfoYz2eoBLthasA81SuxsFe_ffJglG_0qeXGbtLAcsg8NA2EDJMcO_9b7MrZAhX_HTcn5Q2webp1PTZdMa0M5qcmm-KPpUOlMVvqctBrCZA=s4800-w1200" alt="Inchdrewer Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOYA5kGrC2KQ0oqei9MhiKY4TgRUuvzs7DOZ3HcvEQTE2BMdmw1oRfrN3b0k4jvl5kabJzAOYDNR05LZ7fCVYU7fqvXnzEFY0y-Dg8oZmE4kY9szqiyDx3iocOdjk2xeB1Gz6UIe1tk7o2BDw=s4800-w1200" alt="Inchdrewer Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP_p3ryJFIaSehCPJVMYKWpDCiZQ-hPaIo7dbSPJbJlU0C2qhuB1kZE4BazHfcRcUFi4RbDh5d52qlECBC8U7SMxDrrMnl_afO7_QHKNJhp82HW94CJnlNevrd9TQD5gjjwiP3YQhI-yiMRhw=s4800-w1200" alt="Inchdrewer Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Inchdrewer%20Castle%20Aberdeenshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

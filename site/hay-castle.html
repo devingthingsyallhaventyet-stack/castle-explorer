@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHi5SVSBSzwNQm4baBOclTYHjUm89bZnEfizQOSR3IGwAnY4VyuSguezBbZd0KLXW8cDtHKsov6HP_qr6-CmmrzJ_y8wFYlmEajzQET5p4dTFlNSfFzJttphqYPL2AmKSvLgtDepZVVX39qw=s4800-w1200" data-castle-name-g="Hay Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHi5SVSBSzwNQm4baBOclTYHjUm89bZnEfizQOSR3IGwAnY4VyuSguezBbZd0KLXW8cDtHKsov6HP_qr6-CmmrzJ_y8wFYlmEajzQET5p4dTFlNSfFzJttphqYPL2AmKSvLgtDepZVVX39qw=s4800-w1200" data-castle-name-g="Hay Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHi5SVSBSzwNQm4baBOclTYHjUm89bZnEfizQOSR3IGwAnY4VyuSguezBbZd0KLXW8cDtHKsov6HP_qr6-CmmrzJ_y8wFYlmEajzQET5p4dTFlNSfFzJttphqYPL2AmKSvLgtDepZVVX39qw=s4800-w1200" alt="Hay Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqE-qz4zldgkQCruhGUCuEV5AGJqkTiEQ2C4Yz1CNjuggzCjc1v1UxuvZPPEBVxQDslaji7AFaEHZS3lqBG31i9Q27vOvtkj44M=s4800-w1200" alt="Hay Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNZoKJCI3NYcmnouySOIHOAIFHLP7gjmhW5P7rIK1PpeFAa_YBuBEdwajT41URUo21Tq0hg3Hc7O51vEcy34yHwo4s664usgUCgUMDHQhbvT6EzouhqyMhyM_wJTgQ_9pDjubLNwWxLWxNkN2o=s4800-w1200" alt="Hay Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNcqHK5coE_4aQApREEB7Mi1I4yuHQUfsrsivW3ObCMiUVSevjJkeQNchazheRBcMvXTwIS5de54_WagPD1V4CLQoCEf37b645OmusFvJMvPchummAmmSWaOt1JmssGs0VemDnKbqpNZvLvx-vpcrLR7Q=s4800-w1200" alt="Hay Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNabXsiapKX0kNWx9tPkXlBAGpmz048rHWjVgrbrMdGK72O6OkA54Kbz2tB75bMfxSIw4_0HVJwzMVCohyXafXCnZ5kMBVvnRIjp4GU1O8NVMaD2jWmoXBw18Zy_062-c_yTBIj9xJSmN0g-ls=s4800-w1200" alt="Hay Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hay%20Castle%20Powys" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

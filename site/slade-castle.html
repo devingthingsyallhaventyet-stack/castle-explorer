@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Slade_Castle.jpg/1280px-Slade_Castle.jpg" data-castle-name-g="Slade Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Slade_Castle.jpg/1280px-Slade_Castle.jpg" data-castle-name-g="Slade Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Slade_Castle.jpg/1280px-Slade_Castle.jpg" alt="Slade Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOCn6y84IGnSltrgkacG1ZYdSO0OIEAXm1UleBZo_nT0LBeN-KDiVJG_KApxf8gpxjEAGiEP8xFbZzrFxCtrKz1tTYEgl2lwJ2cdG3Wmr6q2SGeqf19JIcaNCs4MOVIWWVuo2tuhYT-SqO3B8jCOPp9_g=s4800-w1200" alt="Slade Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeoq0hc1juue80fgUjbFhyiMhBZHHwSayvHeQfxebCAq6EmU_rdgB6EOZ7GF4saEUC2bzlkFfHMf3eAnNAq8P1wNTFMsgveIJn7dnpZd0YYnjPJpAkewXElBRM7O6N3Ntu1BJ1I7rvPHFzSw=s4800-w1200" alt="Slade Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4-L31V6iyIyslERfVosb69hoKfwS-FQ7oGOCGfiaJzCRVBgbD4kyjOG4j05R01zsNNGYtASSAY4Hp9jbDTG9u7dyQS3hMayGE-sZ6-ZFTS6TsnnTdwi0Bi_ql5d_b-ZjuFguLa66TOckMaw=s4800-w1200" alt="Slade Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFji0rfIjPJDD9FUJFMjgSwMjY2yZfNzMfFS0VeC7K-IE9MDn_tThHY8Nr0sccIRk5iYc3mrFASSCYd91kWjktoIaYWxZCx7KH_DvSk-joeRRYNt7PsWkwKVMFKDGeaxLnKj4s3tyOuqld=s4800-w1200" alt="Slade Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Ianfhunter · CC BY-SA 4.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

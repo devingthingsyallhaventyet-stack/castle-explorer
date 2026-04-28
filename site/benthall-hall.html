@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPwAoergios5Q7_ub6gBTOCh-KIYBYYSRnTDzP6seyBVMIYYaPnEvxhQaJAd9AzXuNIQ82mhDkgtiopvcgKfAEgEjahXT-YFWiENLWNawmnCmzaBkGPy4fwQ3N33LQLxszos_0KusyxL41snA=s4800-w1200" data-castle-name-g="Benthall Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPwAoergios5Q7_ub6gBTOCh-KIYBYYSRnTDzP6seyBVMIYYaPnEvxhQaJAd9AzXuNIQ82mhDkgtiopvcgKfAEgEjahXT-YFWiENLWNawmnCmzaBkGPy4fwQ3N33LQLxszos_0KusyxL41snA=s4800-w1200" data-castle-name-g="Benthall Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPwAoergios5Q7_ub6gBTOCh-KIYBYYSRnTDzP6seyBVMIYYaPnEvxhQaJAd9AzXuNIQ82mhDkgtiopvcgKfAEgEjahXT-YFWiENLWNawmnCmzaBkGPy4fwQ3N33LQLxszos_0KusyxL41snA=s4800-w1200" alt="Benthall Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPdL_yya2M7BLmGYX46_Psu32vlEEXoAN679LPsVnxuDFKg_JZarCg-4XsoNgtEqidLmjzf7ufaCtthcfM4oBpRKRjw_23n-sfwrVZSmuR2-AgNWB-PFm04hQo1-mCxyC17Ay9lj4qn6I5kW6w=s4800-w1200" alt="Benthall Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNlq758eWe6iS5l_hORXMzH2BIV-LxVt-lPDhCr44Ag3xIBBtd4GTOXd-dL6F6VAOMD1A-hCojSOmb32cGESD2fnwk918cdfYRDPuN_hXQ0CZQ1TKyvvE9C1siFwj4VHjq4qAUW2nyknTvi7w=s4800-w1200" alt="Benthall Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNwQDEm7w30kuBsai1uFH1P6xFfAoE51h3zxO3BVdjcmvpYAFnrWnf7thaXbnu187EfbrQrLQxw6xLMl5H5EZ5SWbk5L5qKJmJqKSvTxyi2hk7xoeaW09l4up-Q8itzR_A4TxryTznViwQJgsM=s4800-w1200" alt="Benthall Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMynfD7CW3CnJxwQURulkNEZEToQSlGFL7bpyOiWoW-SEUAtVNwXOcYnyX0B20-VLoaH-weJLcD_qxvSKcED3Tc4ITqEywnEZLMs6mAkhg_kKspR6I0M52y8KdiqPASYd-lScZzi2lM6hkcd0A=s4800-w1200" alt="Benthall Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Benthall%20Hall%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWP9WiWnWuGkG3qmotNpdbxKJ10pvGJdSwd3ZQouw27cSk1CW6KzUOsjkdifVNGBHeNuQIWjwF0eXbKl_qy4gwFVBGT7BroLBgFV2AKCrBxhD9tNHhVPycw37QfX2EyT9p2F9ecRzR9J1ong=s4800-w1200" data-castle-name-g="Luffness Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWP9WiWnWuGkG3qmotNpdbxKJ10pvGJdSwd3ZQouw27cSk1CW6KzUOsjkdifVNGBHeNuQIWjwF0eXbKl_qy4gwFVBGT7BroLBgFV2AKCrBxhD9tNHhVPycw37QfX2EyT9p2F9ecRzR9J1ong=s4800-w1200" data-castle-name-g="Luffness Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWP9WiWnWuGkG3qmotNpdbxKJ10pvGJdSwd3ZQouw27cSk1CW6KzUOsjkdifVNGBHeNuQIWjwF0eXbKl_qy4gwFVBGT7BroLBgFV2AKCrBxhD9tNHhVPycw37QfX2EyT9p2F9ecRzR9J1ong=s4800-w1200" alt="Luffness Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEkSjf-omjb2srvHWa27MxVMiISWX_3EgtzO4qKpZqzIjM_ROdSpIW7wq7oEWO8VuUic3qPOVThNkBN2OeacV3gAK4hNSeXmQEb_VkgsopYBuOigjW3izRxg5A2kE2-z1TTzuO-YAUqMT9SA=s4800-w1200" alt="Luffness Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPPtKoNEkzOPxGlAlaq046blaGQla3a35ymnQ6vgYRF7T-eghEDCiN7YDkhT0-fTKQdVTrS7AlBg8ZJt9jFijRt36sMtflbObSnPCZ0YiMVcgB7aysOzNj-5Qt45WOdSMoaA0Aof17rUXFOtAkaW2cT=s4800-w730" alt="Luffness Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMFm3ylDrGm8zLHl71jo3dwbiG1bSgxqksZ4f170y3e8WXz3H679_T43nWVLjv6y6xJBn9h3GMVcTw6TY639VSjXvqU6gYKKDlfdcysFWkkg90nFAcKuMqVBL8J5QN_ctQ1CoAQ9-mB8uvBbg=s4800-w1200" alt="Luffness Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQ3WBY2-GWFPIHETGLjn4hsOhkS08o4nsDb-xKBnqkX-XCBlCxFJnZYr-m4SK35MY3iPxIkmMpX31w6pZKHQJapjrgHuLENswJk9pbZLFaspcn05X9yZVLJr7FvjT1lMyH5A-tvZ7fA-MNtPk=s4800-w1200" alt="Luffness Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Luffness%20Castle%20East%20Lothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

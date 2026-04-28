@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPT-DCXc7XpQBMeQ3u5RmfmrbvFZrsDDzhBoiDDijOTZKfvn_u4Jg1Lt4jq_lYT6RmKs7kZk2VuCOkCPGZ52649g6fLgfFkVmGDXmkiciiwqj3rlar3nOqfu7qgRWOsOHv-jdlRukC5u5VbAl8LvE9TUQ=s4800-w1200" data-castle-name-g="Leicester Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPT-DCXc7XpQBMeQ3u5RmfmrbvFZrsDDzhBoiDDijOTZKfvn_u4Jg1Lt4jq_lYT6RmKs7kZk2VuCOkCPGZ52649g6fLgfFkVmGDXmkiciiwqj3rlar3nOqfu7qgRWOsOHv-jdlRukC5u5VbAl8LvE9TUQ=s4800-w1200" data-castle-name-g="Leicester Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPT-DCXc7XpQBMeQ3u5RmfmrbvFZrsDDzhBoiDDijOTZKfvn_u4Jg1Lt4jq_lYT6RmKs7kZk2VuCOkCPGZ52649g6fLgfFkVmGDXmkiciiwqj3rlar3nOqfu7qgRWOsOHv-jdlRukC5u5VbAl8LvE9TUQ=s4800-w1200" alt="Leicester Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPYPlTyU6tOksG3xOuDtR_--Un4MsFAqJd8elN8ePdk8yEz335HArh48AhgjAhv3QQxOSbvufs-_dWA374pkJ3qRBPgdMNMnQSKq95QG96lwBcBPM-thKMPC2mj3iHMFdjcg1mCSR_QcIO7FMpvSkiV=s4800-w1200" alt="Leicester Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOB-NKt1e6KCoQcnv5EncubkuPKHriYQeMWrMLVnI_Xd7DftwBzkDeLjO4BsRlpOBCOvhrm1LU-Ub4p1xy-HAMwXSZsVW_OT-MsFWfwkY7AmDqnXNEuQb5XWT8kkKB-nP9nDsoLXT-ZgJYrUlI=s4800-w1200" alt="Leicester Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLE0CvcYmK47KoDKjJXl-p_U5vclzmq8pGaoUupKHZFhXxKt1CvqiyUidKCvl1PcTrW-IgcV7YO3EIwMdmvc2nlFdKBD9m6mV4puR3rafdvJhFMcS4VbOSQ2j5kJq8P2ddhKr4Bs0_0I-w5No=s4800-w1200" alt="Leicester Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeurG21hhdG_xM4SCnkGz4XrbtTHW3I6EG_OkR-G991MM6Rn1BqzjUrB6_IjgneOwX9qLN1rgIGKmIr2tPAP6kV3yvD1E0D7LryIBr7OBIVaChTF7XP_dc6uzEOnrXZAHhUn8HX2b8y1rUPwk=s4800-w1200" alt="Leicester Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Leicester%20Castle%20Leicestershire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

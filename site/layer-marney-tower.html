@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8QHWNITR8-2nrevBxwwvZNFlprXyAHt_Q3XnEKww_abGDmG3DsGf9hdqsBEZ6J8CT4luLJ7I__l6iPsXHOMyY45bkW5uEeHlytD_m9jrcIgJ8nNNxcUIkH1-4WUkf6uUQiIMTeP3idEOqF9TrJdPk=s4800-w1200" data-castle-name-g="Layer Marney Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8QHWNITR8-2nrevBxwwvZNFlprXyAHt_Q3XnEKww_abGDmG3DsGf9hdqsBEZ6J8CT4luLJ7I__l6iPsXHOMyY45bkW5uEeHlytD_m9jrcIgJ8nNNxcUIkH1-4WUkf6uUQiIMTeP3idEOqF9TrJdPk=s4800-w1200" data-castle-name-g="Layer Marney Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN8QHWNITR8-2nrevBxwwvZNFlprXyAHt_Q3XnEKww_abGDmG3DsGf9hdqsBEZ6J8CT4luLJ7I__l6iPsXHOMyY45bkW5uEeHlytD_m9jrcIgJ8nNNxcUIkH1-4WUkf6uUQiIMTeP3idEOqF9TrJdPk=s4800-w1200" alt="Layer Marney Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNH5v2hBYWHoCxmQgRwacbJS9ViMYjCNN8CgPF2AlJApXg7OnU5gRtANX9AnnA0AoaRQLhx7dC51m0MAqpNO6Wif7KCU5G1WU7w9iEPxD4bW1DcrabsTq1JtnsdWIjCYR3GE5UqKfpKDUclEC2ffhxaRw=s4800-w1200" alt="Layer Marney Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEQtgISFI2r2sxnezTfLuhFWiCkdWyux5XkCN1eXZdYg31j_l3gpztyzsstZN3xaiQnCZ2d1GlPl44TPDWR8WrTUlXowpBJ9smD04ar6dsPtWlwOrPYxnL76_Sf5_A6OGcYNvwcoiS8glC0k_pmZwQfg=s4800-w1200" alt="Layer Marney Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNb4JbTGjlHBUhbuG8yOQ6dyJH3d85CI1cAnlmVzno0XumJWguxr2BON752ayrLKfEb4SEwUouFQIFZdud5ARadqOQQqa-zOm1riux1QgeOajbmTcKd-DeMeGiOrxJFjfvINgL4PxO1NHivjhTodgHG=s4800-w1200" alt="Layer Marney Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-n2_l8x9jCHJcuLabmbvolAP_UGFBt_qvRn0-VOV6vw0FjT_Gl06p-2RPR7nQXI_9K5_3mnRo7smh0rXbeqpwpF95cQiYZ39-8zzcXESwgrzXU6MoJR4sSGNJOKR_-l7tQKH59FfNI8kSoCvPesPN=s4800-w1200" alt="Layer Marney Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Layer%20Marney%20Tower%20Essex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

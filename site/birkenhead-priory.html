@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMC7ufgfNSmbCPn-O6HSmplazk1EAd2dIbmwuFBdK9JOLfNhEsUkKLAet79FjuJteupM_L89VjGoJlTJjHWTu_R4P6j1usgweG57xrbFYhNxWq_VzdQoE5W03CPtYd9fqysflC94uqCkahgZXE=s4800-w1200" data-castle-name-g="Birkenhead Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMC7ufgfNSmbCPn-O6HSmplazk1EAd2dIbmwuFBdK9JOLfNhEsUkKLAet79FjuJteupM_L89VjGoJlTJjHWTu_R4P6j1usgweG57xrbFYhNxWq_VzdQoE5W03CPtYd9fqysflC94uqCkahgZXE=s4800-w1200" data-castle-name-g="Birkenhead Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMC7ufgfNSmbCPn-O6HSmplazk1EAd2dIbmwuFBdK9JOLfNhEsUkKLAet79FjuJteupM_L89VjGoJlTJjHWTu_R4P6j1usgweG57xrbFYhNxWq_VzdQoE5W03CPtYd9fqysflC94uqCkahgZXE=s4800-w1200" alt="Birkenhead Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPZY4ilyUbthf1hC0ITzONq3iDn74CjaTQVJxhj1eBO2DA6uuYL8heBRjSJBkEPje99QdGIJbkMU5wHAaQnzN_SpwzqFF4oJaUhES0BryRWuimVj0fgBoPDHtTRsxIHaf0D9oTUGW8tfM5Utg=s4800-w1200" alt="Birkenhead Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO786w43eGKP10xWvhsw0lTLgm8utwrAHISNwcBQwLmxmhypPIVVv2wRwc56HF7-3h11rRSn-f9kdbTdeIlaF05KjKTMAtVsf5FoMjnuYv3MAtU6rRRHOsBRsWFXqvebbpVsu4Fjd-q7taAc54Idu80sA=s4800-w1200" alt="Birkenhead Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM2rK8aPZu_xSE3ZP_DHsep8xAejYZcRqQKZPdMv6rbw7aRGuexZYwQVnPF1j_XXIQ_0ybKNORI8wgYnZNQ1431pBuguXNv_r9nOiBNuEE45fY7pzzuRhOhI8k5lyjuIWmJGc_NzUWvmqN9P-w=s4800-w1200" alt="Birkenhead Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOuIx3XLcvypmsfA_GEarE-Tj0fK1ZMzssj8yzTU8dfBNa2zNVL2afQ2Y5ZFj9JySjWzgk5fvb9Z6ggdMVgrUZgZSR70-X4X_ESxr5kHnRaV4aXPjXmqv3rDolymk3ZxngkP8k5gA0wt7Lk=s4800-w1200" alt="Birkenhead Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Birkenhead%20Priory%20Merseyside" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ All three are recorded in the National Heritage List for England, though at diff
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ All three are recorded in the National Heritage List for England, though at diff
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

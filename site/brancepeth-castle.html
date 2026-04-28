@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiMce4HyCl8VJNl17-_Cb1vtqAbI0if3zLYwdbM6MgeaFzsVY7ubRuzTV72MfFc9zrSkBlm4UHc3rxYMouaU10CAu8j_ubPkJjAZ3ZsKzmx_32Mt1CYMaZIRG27UqWswkWqPfkDSxd-kPPvHsfbIve=s4800-w1200" data-castle-name-g="Brancepeth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiMce4HyCl8VJNl17-_Cb1vtqAbI0if3zLYwdbM6MgeaFzsVY7ubRuzTV72MfFc9zrSkBlm4UHc3rxYMouaU10CAu8j_ubPkJjAZ3ZsKzmx_32Mt1CYMaZIRG27UqWswkWqPfkDSxd-kPPvHsfbIve=s4800-w1200" data-castle-name-g="Brancepeth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNiMce4HyCl8VJNl17-_Cb1vtqAbI0if3zLYwdbM6MgeaFzsVY7ubRuzTV72MfFc9zrSkBlm4UHc3rxYMouaU10CAu8j_ubPkJjAZ3ZsKzmx_32Mt1CYMaZIRG27UqWswkWqPfkDSxd-kPPvHsfbIve=s4800-w1200" alt="Brancepeth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4QBx_E_mMhcb07_b5AsIpm3dZwxuFr5l0Qp133oF631aD1F-UKHW3Vu36fPAJXJ1A_2QTIa4-8jSw8nGc8no1dqe7AFUE1No3UMfsE3iWc5Y84L9phNhrgSdBbtyVByoEIk341owiF1uH2g=s4800-w1200" alt="Brancepeth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOxZPSxWf216xpBy2p58vNDf65VBxnJ-sDzyXTwOyP973oHKD0LC18h-NNlIAGeKcUiwF9U_3QNGSRSOHofiuhbmYzkvWwmcJNtkvUPWo_6qH56jc1QhsIExfadWrWbUhjHN__vBiPH4W-3yQ=s4800-w1200" alt="Brancepeth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNLEJW7iLTkqiFlPAkEP1uiRApJQwY4i2Bh_HOKlo6eZD5NJfbfKtBqU9yfZcEy02S-MdQUXX9LzaRcFWOC306EzzXVX9VG-boViehKcrYK-mbdyCiNvY64AgOjfjpKCYhlsPvbEye_NiHfJ6N05r_6dg=s4800-w1200" alt="Brancepeth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOy4wCu6UNsoZsrBv2o0COGKRYihOAOZJDK95ChUv1PC0sd1k_QnOgSX7AULiAA-EKJEu47w9rpb6vnh_8h-SuyU25SKQQfWyOSRd9ai0uS8ESUoB4nsYiHp77r_3uogu3QUo7Y_yVWrz04rxyl6KLi=s4800-w1200" alt="Brancepeth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Brancepeth%20Castle%20County%20Durham" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

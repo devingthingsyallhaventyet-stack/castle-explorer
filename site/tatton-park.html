@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaRDDrXt6-i9jXB0NSxWQMu-uwMhqIM1j-AOvg4yep6dUqYY6DKzZARR3WL8ihEl3J6GNk-hdJmsO6VUk9WUn_50ivcgDBr04PVmnToyvEga_a7NX08P0blxo9B7BatLN-IPSijsVsmf6RiQ=s4800-w1200" data-castle-name-g="Tatton Park">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaRDDrXt6-i9jXB0NSxWQMu-uwMhqIM1j-AOvg4yep6dUqYY6DKzZARR3WL8ihEl3J6GNk-hdJmsO6VUk9WUn_50ivcgDBr04PVmnToyvEga_a7NX08P0blxo9B7BatLN-IPSijsVsmf6RiQ=s4800-w1200" data-castle-name-g="Tatton Park" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNaRDDrXt6-i9jXB0NSxWQMu-uwMhqIM1j-AOvg4yep6dUqYY6DKzZARR3WL8ihEl3J6GNk-hdJmsO6VUk9WUn_50ivcgDBr04PVmnToyvEga_a7NX08P0blxo9B7BatLN-IPSijsVsmf6RiQ=s4800-w1200" alt="Tatton Park" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOs35VQWEiDGv4sVTRUX7_YVX2USYwcysRyXJhYbnakbHyi5vPlvyuaxRDPdNKWd_BeQFotbcSd8O6igWYJEU9MWsIJvKTY7Fgxz_zv-Luqjyj7U5qk8P2rOnExl6QUKQeXyliwaa47yLQ0RA=s4800-w1200" alt="Tatton Park photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMigMA6lsOTBabjq77XiHFPdwm5cRderpTT4XA7yJeFSaphHb0957woQWMjjzpbiNRZVCoruNloRFFdrdu7tkkZU6nEncbRYLoy0zGZ4vG_1SBq3l5l90Cxmw80NU5j96PEYTcLEZfGzJJb1Q=s4800-w1200" alt="Tatton Park photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOX0CrB8JmaG9LxUnyR5J8FCHAcGfArqNFBa0ysGsNcaRFMF775asDMSRbGWQdbJBGGmQqI3RK4ojCi2BpyXT7dP6qf1F770t4Tdm4FpTGU7w9WYipjDk_B0l1kYU-BeMOXeGPkDtRsJkryGw=s4800-w1200" alt="Tatton Park photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuGp_4OCM9x9C_xHbPsA0bFTEGfjICO6WpmENbJdoJ8bGQpzJxhSXmTLYXIOdM5JedvnGwSntFqiSIQvSfKOX__fCHidoap_z5jCYC5p5lYZGijR3QDmhVZ523Xnr6d0pQ-1bzqJYD2p2OUxE=s4800-w1200" alt="Tatton Park photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tatton%20Park%20Cheshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

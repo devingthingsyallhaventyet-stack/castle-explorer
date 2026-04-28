@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHyFUJO0fhI0OoG-r-eAC5Vk1QwQxn81Y9FD5kedcf4WqF3b4t2SEWclYxrjG4jechIIQwXaTNS3xdd6Hrc59Z_Ei7W45Qn-2s=s4800-w768" data-castle-name-g="Glenluce Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHyFUJO0fhI0OoG-r-eAC5Vk1QwQxn81Y9FD5kedcf4WqF3b4t2SEWclYxrjG4jechIIQwXaTNS3xdd6Hrc59Z_Ei7W45Qn-2s=s4800-w768" data-castle-name-g="Glenluce Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHyFUJO0fhI0OoG-r-eAC5Vk1QwQxn81Y9FD5kedcf4WqF3b4t2SEWclYxrjG4jechIIQwXaTNS3xdd6Hrc59Z_Ei7W45Qn-2s=s4800-w768" alt="Glenluce Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOb9fSTNb4eg6p4gHn3-WXg4CInB5LSxDmy_k68HpLf1oj_RHZIfQ1AyIweueCBGwIS2kGliMkfuPUu6yX6udlK5EaHHEEFh53cDStO2mkqnpC4h9KtYFEaUyFiUaYgZNs7hWm_yIu5eNjeJMs=s4800-w1200" alt="Glenluce Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1DIgBxjjwQB_CoaqM_r6__UJd5eJvQF8Cvp_ML2-afR1268EN07wXmdK8qK35aWQIFbH9gx3K454zJOYy5IlWp9PmRBtZujcLBNAQVR4fC5c02yPrGX0gFFuEg5GFqwdxiRrMnhQ6QNIoYA=s4800-w1200" alt="Glenluce Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO151SlnPRYE99WRhX-0IcwFpIrXivMWf5IlCxr1pOmClzZLWtPMbxHRNZ8VQIpK1OJcvPduXOmYgw_Ptma4U1kt5YLat6pipCjAncJZooE5bPn2AeNSFtSCB8xZtps7ziaEZV18E52wUZ0wQ=s4800-w1200" alt="Glenluce Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP8Z_PLsOlo_Dw2zle4l5X-rHkadU3M6YkBrVvLWCotEwH5djNMzt7tBLDPmKnsBWw5x4HwqXtQeUDk_iFHeFUW9Qg5mrXtmyl7EK9fcR1VhG13Gg_VvkM2zG7Mja3Blat2_5PxuEeEL_HfDas=s4800-w1200" alt="Glenluce Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Glenluce%20Abbey%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

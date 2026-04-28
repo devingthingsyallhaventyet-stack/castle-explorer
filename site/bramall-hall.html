@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1RJ1IKvi5qZKDd7XjYywAxzHiBYCEFqeOSMAN0EsZSszry33Kt3WVD9Z_aJHoRVIMCRA4Y9Eh87J7lk8gq8kMLuErQ_7IewR6cxoejhfczrUy8AC2JfhMZ7NBOzorX7R4GRnEcXGOrrJhnQQ=s4800-w1200" data-castle-name-g="Bramall Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1RJ1IKvi5qZKDd7XjYywAxzHiBYCEFqeOSMAN0EsZSszry33Kt3WVD9Z_aJHoRVIMCRA4Y9Eh87J7lk8gq8kMLuErQ_7IewR6cxoejhfczrUy8AC2JfhMZ7NBOzorX7R4GRnEcXGOrrJhnQQ=s4800-w1200" data-castle-name-g="Bramall Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1RJ1IKvi5qZKDd7XjYywAxzHiBYCEFqeOSMAN0EsZSszry33Kt3WVD9Z_aJHoRVIMCRA4Y9Eh87J7lk8gq8kMLuErQ_7IewR6cxoejhfczrUy8AC2JfhMZ7NBOzorX7R4GRnEcXGOrrJhnQQ=s4800-w1200" alt="Bramall Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM1Br4fnP4b_MwJ3B5iYKUQkiFtck9ErMeJCIL-Y4DkPqs3ZhfPEMN-TGwGMxbQjoPh37HnD7HXifJyro2GZPPgG4dg2ZGson0kbCZ4BcY9NBBpXQrIaHj88x1g5_pMSdpKlJlnCUIwBE7ugg=s4800-w1200" alt="Bramall Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMpQhtr5A_6cyq273eolGxa44MFRQovlvXW2oOpks2B9c9dFleOuOsFa_xhgy-TCqmAuJRHP8xrtc7pPUMS1-xihZi8aEGlCQrL8QEj5wAeCf_aemsKy0Uq-ngfnyGIRIvA-2G7cVNoWN4E=s4800-w1200" alt="Bramall Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHVW_hfoDzwDx0xYAOTFXAg5FrrrJalFG8mC-ofhjRCrAgUgMpZvFlJKGHDELPuBFUyF7XHF1IGCTFdBVieIMqZI5MtY5heV-VBn9hBq3gFkOhhPlcR81ybpy5RhYVCZIMSZBVBENTbzSNTIk=s4800-w1200" alt="Bramall Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgLspH1u1uzeTmz2b2scjFQQJg8e0QOSmLX-75p65Zy7bK0N98Ll3PhJ7a10hF-VLTvG_1QWwU8wlJ7PORQN_Wca8NuJ67V7ILNdLuPyLZPckSLFxhfI5KVw2l7Njcqa2Reeic-4SH-q8f=s4800-w1200" alt="Bramall Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Bramall%20Hall%20Greater%20Manchester" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

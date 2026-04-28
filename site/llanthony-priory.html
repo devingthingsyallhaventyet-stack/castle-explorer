@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFAeJhKeWIuNdb7MA-R_colEzNNF86tGi9WnSs7wWGY_3YHfIEJpsz3izzIenCy07CF97Z8_0Cthkj6ywa--v984cJNoC1bPg=s4800-w1200" data-castle-name-g="Llanthony Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFAeJhKeWIuNdb7MA-R_colEzNNF86tGi9WnSs7wWGY_3YHfIEJpsz3izzIenCy07CF97Z8_0Cthkj6ywa--v984cJNoC1bPg=s4800-w1200" data-castle-name-g="Llanthony Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFAeJhKeWIuNdb7MA-R_colEzNNF86tGi9WnSs7wWGY_3YHfIEJpsz3izzIenCy07CF97Z8_0Cthkj6ywa--v984cJNoC1bPg=s4800-w1200" alt="Llanthony Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHaGVHlVTfSLLT44vl12GzmooOrXYjZ5Z9DSiScCCCZvjgObsEE633yyJQBcvaHT7kM68JM6wl7i244KxlipuQhMY4XYMwd5w=s4800-w1200" alt="Llanthony Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqF2p0-tZ7Gd-zl_XcQVMhXd0CroH1bCO0tp9kjs0RyUBtHRgU84rx3fXn9zqlJOluRRTy8TNuwTaVaE1VcZhja-y2_K3LLihg=s4800-w1200" alt="Llanthony Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqG-7LjfSJwm0cygdQp2NWhXrsvAJvfCbE-hRAIsd678ARNLZvfbCaJmeLBAL8uKUpxiu51zhQaeZWRobv_dgY_DbMLwFqqkbg=s4800-w1200" alt="Llanthony Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqE1zHirmZ4hk064LZBqwdXQs82iZaVpS5NEVt29t1KV31RZ8H65S0XaNPzbwj7Z7nP5KhMpsCs7NMFyJtKSsr3agh6WKxBkmQ=s4800-w1200" alt="Llanthony Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Llanthony%20Priory%20Monmouthshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

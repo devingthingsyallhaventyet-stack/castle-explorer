@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzDbM-e2vf-lkIvbo82EjFyMu8yDJppFl4Vn1zBZVlgRA6wQN5GpIj0iTN2oXJAQWZKsXBDuBVZg1Sykz6mFuBU3a9se4Cd2mg-fXoZUKK_RBqqg_Wd7TTgUcMNEBD5Vl4qlVsxFRSpwHdxA=s4800-w1200" data-castle-name-g="Rufus Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzDbM-e2vf-lkIvbo82EjFyMu8yDJppFl4Vn1zBZVlgRA6wQN5GpIj0iTN2oXJAQWZKsXBDuBVZg1Sykz6mFuBU3a9se4Cd2mg-fXoZUKK_RBqqg_Wd7TTgUcMNEBD5Vl4qlVsxFRSpwHdxA=s4800-w1200" data-castle-name-g="Rufus Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzDbM-e2vf-lkIvbo82EjFyMu8yDJppFl4Vn1zBZVlgRA6wQN5GpIj0iTN2oXJAQWZKsXBDuBVZg1Sykz6mFuBU3a9se4Cd2mg-fXoZUKK_RBqqg_Wd7TTgUcMNEBD5Vl4qlVsxFRSpwHdxA=s4800-w1200" alt="Rufus Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpHBLKWIvzusvPO1CKfhMD20TXYU9RmDEekilnWUhCKTTBaTE3-YHE9SQUZTW2LMazs8y5R9vtvRbbSxP9cAL09qT1O4VOboBJS5_CCY7C2vNBWKZ5OoqZhcImNjZiN1T1_5FEhSnffKxFDUI=s4800-w1200" alt="Rufus Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZONwCwnmty1CmOw3uqGASk2crWoqH5wzk7TKiEFk_BYrJMxudwd0Gm0Lo1p54dHAE0fwLrepjIVcMz3q5jwB3FdeQvc2EQqdwJLdpYFawHf3EbC1fG4d0Qc5XASy3aFtg12b4Q5FWpDnLPRVQ=s4800-w1200" alt="Rufus Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM6rBUuWL-gXKd-0uT9LHf-RnEffhYv8WMqS2CdFBMJIRxjjPEYXrwIm05mrZ9ZyZ5Gtrnu9D-4F24GBiUJJiyGyd5yJQg0qNoTmIuxquZlCar3Qn5ulLyet7CccbUC8d4G1tN7svz_ORlov5g=s4800-w1200" alt="Rufus Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCPgM9RdLp4_o47tsEfOQTSGB819KOHxHAmjbzIQZYuxFCiVJw0WpuPYz1okeizoSjAWSbFMmFoHqiN0uW1XPq7LIIi3nNSvOhnomkdqDoa73OIyRAM0Al0xkMm5h-FDd1e3JS_Ck-7JAWpg=s4800-w1200" alt="Rufus Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rufus%20Castle%20Dorset" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMM4WRr_CwYL_EVMHt2l4Xrc4mrrsh8TVJkMhZuKV1hROXN0N8pQ90Y0GrpIl8NFz__DdbengS8ZWtWom4zWD71sfzuMLKefud2CDe4vA4F7-5hRaiJC3rzOaSVAwdpwaGbApr-ydBj5mu0=s4800-w1200" data-castle-name-g="Thirlwall Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMM4WRr_CwYL_EVMHt2l4Xrc4mrrsh8TVJkMhZuKV1hROXN0N8pQ90Y0GrpIl8NFz__DdbengS8ZWtWom4zWD71sfzuMLKefud2CDe4vA4F7-5hRaiJC3rzOaSVAwdpwaGbApr-ydBj5mu0=s4800-w1200" data-castle-name-g="Thirlwall Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMM4WRr_CwYL_EVMHt2l4Xrc4mrrsh8TVJkMhZuKV1hROXN0N8pQ90Y0GrpIl8NFz__DdbengS8ZWtWom4zWD71sfzuMLKefud2CDe4vA4F7-5hRaiJC3rzOaSVAwdpwaGbApr-ydBj5mu0=s4800-w1200" alt="Thirlwall Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOcGvNGvktbbh6BX1FARVm74E3amdkCJ5TM28v9-NFD6qhif1MBJJnpCF7GkzTtF0B3f4j1NZen7NmT3lpsRkOX6HPYYB6w6ZkulCNaqzgAis7IrmkRAFKdvJhf_VW-O2ZhV7h78B_iRQ_0r9Y=s4800-w1200" alt="Thirlwall Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPGJMTRS3CpAUh1s05ZqTE0SBxPL3ksYhPr7QkafqQLyvzK5u3d53fng-uA5ZUh0k1sw5CU6agY6aWzXv18w9WzboI3RtdjdOZlGk3yNaGBkksu4MbkV_OEIPzkfx5bszA-KTOqg8GQ3BPMsw=s4800-w1200" alt="Thirlwall Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOpISlffgZxH6JOxQoSHUV8pE6tNh35-QLdShj26b5gt4wei_9uwmlHjqmPllgLfyQG0JWE67Jx2AFsKEMvtGIyHaYHf_FrQLD1Ka1f_dvMwqnDTH_FhkGhBNOQOwmGJzapCJfcfGEYDVjuQus=s4800-w1200" alt="Thirlwall Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOJuX5D5lj95tzLencevSBFCeQrOgypz_SKGYB7N_uQ6YIgEzYrZs5L_cHiZjs5T96LjN3qu1WeJ2EVmTRDso5g2picfc77p5wC7fiGbHO5Gdn1zpU49Mokq20-pUTIUftGfOwbo94_U6UC2g=s4800-w1200" alt="Thirlwall Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Thirlwall%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/1280px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG" data-castle-name-g="Mellifont Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/1280px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG" data-castle-name-g="Mellifont Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/1280px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG" alt="Mellifont Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPVN1VKA4fNp2sY3XgxjlkGZsdBL1eAnYHGt5u5MkDJ0fmbEJA6N9pTQl63vmCaxb8pmlYEixvShLFyS680misq0sv8PonvQ-4okAZxJ5Q5HhB3fGh58SE5q63TkgAyg4pXX9Twn_wuAkCnFk=s4800-w1200" alt="Mellifont Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOp6evtjF6sf10n1L5aYVFE01EDrcQ7FudL0QNTSSb8sre9d9SaF9xEfQfUlBpt-H5-D36m4WCjWEPdsDJ8Te8N3jbiDvRCO7pPI5MxqfnszpnRBTJ21kOLTI-xuiRRDwd0-lzF0APQX2tCbA=s4800-w1200" alt="Mellifont Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMmgrfonyhtwmKJE2fmfLPEcw9evUUKsvneaRnZmlCBdoL5YCu0E2rV1zifVI632i0aCxn5pCqTqvzF4-2k3VTerlxrntyYlLNaS4OZwHvOo3bnI9nQynsa_Nn5cjMwCpActtgX5MIypjq7T6o=s4800-w1200" alt="Mellifont Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcRLsIKkzQq68L5rr7sCs6wqpH1oPaUVvqq1GPDW-fmj6mDWHc8DfXj-ZqD1AfHYPGPBBUsF7NaD21R4i6ZxR-3CyGwtkW1wPQFHOUM7NMGkmkr4yimRebJDk9Rt32l9LRcvG8WN5fGLJpeA=s4800-w1200" alt="Mellifont Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Brholden · Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

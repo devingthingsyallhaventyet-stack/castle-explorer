@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPX6HE10VFDUGfypj2lGVLXesDm5vsP2-gEREBlbMtJ2n6yE5pK9Slwpk-IaDnEtPluQO5D3AzYIORT6yapCFJ-xiEsX9KEfhHtX9o7SA6KvGkNnW263uk8_QpXdTyPQG0NFub_nOO3DVOJHy0=s4800-w1200" data-castle-name-g="Rosslyn Chapel">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPX6HE10VFDUGfypj2lGVLXesDm5vsP2-gEREBlbMtJ2n6yE5pK9Slwpk-IaDnEtPluQO5D3AzYIORT6yapCFJ-xiEsX9KEfhHtX9o7SA6KvGkNnW263uk8_QpXdTyPQG0NFub_nOO3DVOJHy0=s4800-w1200" data-castle-name-g="Rosslyn Chapel" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPX6HE10VFDUGfypj2lGVLXesDm5vsP2-gEREBlbMtJ2n6yE5pK9Slwpk-IaDnEtPluQO5D3AzYIORT6yapCFJ-xiEsX9KEfhHtX9o7SA6KvGkNnW263uk8_QpXdTyPQG0NFub_nOO3DVOJHy0=s4800-w1200" alt="Rosslyn Chapel" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNULa-1bZLGqo2TFJHGVCwrI6taNh3A7vPe2bDQIUG77GAKMLvUU_UtyhwFlpobMQsLRqvYMl5geiRvrjeaTNTfHi1RkHCL6BLz72KG1mp9p6pZPyKuURFPyxXxpHMu0fEMH_hO8rrqS3z909g=s4800-w1200" alt="Rosslyn Chapel photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMQb56FnnVpmbeRM-fr0-v-1NzM4uhxPydhnvRt8RcVrKeSm8v-VK6-nQ2ixSIqkdPgSiGYBYY4rAv5viImPuxzsT7tzDzAQtI3svmGW-Rou_nSEyYYjkWVPP6LWklLdslrYf2jT6SuzkPh4w=s4800-w1200" alt="Rosslyn Chapel photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNB8phRFVvnz2fbtfLgG6svhOXcnLzFZUmYVmY4qlq3KW83p9HoQAYWsxtKrPog9gIWdsFXpCpr1I2pJxUSwZ74dIFPlYWMUW3m6tlnBhsJiGUqLC5wpA60U5gplZPVO-C7WDzxJc5r-Se_=s4800-w726" alt="Rosslyn Chapel photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLKVj-EqXxj0K5M_sMII_ez02y7iy8sGO4Qq0cR74qNCilzhwhdE40KAC04_qaH7IZsFRIVQUCNCPL0mdv0A7wA5hkIFRfgjoe8WjAjQAAaKOB8eUoAWtcDoGEFY-aFZlvJDOJrfsdU0EnMbE=s4800-w1200" alt="Rosslyn Chapel photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rosslyn%20Chapel%20Midlothian" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

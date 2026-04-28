@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2e8WWXmxIoZYyq2XJALrz8eltOaPtr1d6yfAze8M4dAK8Ebnn1QzPYMi46kzW5G5FGKTlj10LepyS4mhZt_RnZ3fLUU8bzI0Qsvku-Z_2q1Pet3WEDDDB8qULmNbTyCM5usyRnrcaIXQR4g=s4800-w1200" data-castle-name-g="Edlingham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2e8WWXmxIoZYyq2XJALrz8eltOaPtr1d6yfAze8M4dAK8Ebnn1QzPYMi46kzW5G5FGKTlj10LepyS4mhZt_RnZ3fLUU8bzI0Qsvku-Z_2q1Pet3WEDDDB8qULmNbTyCM5usyRnrcaIXQR4g=s4800-w1200" data-castle-name-g="Edlingham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2e8WWXmxIoZYyq2XJALrz8eltOaPtr1d6yfAze8M4dAK8Ebnn1QzPYMi46kzW5G5FGKTlj10LepyS4mhZt_RnZ3fLUU8bzI0Qsvku-Z_2q1Pet3WEDDDB8qULmNbTyCM5usyRnrcaIXQR4g=s4800-w1200" alt="Edlingham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM9wwZOK-ivxgjZyOfSu-zQehP1A41l3y_7C4ka-SiVCMiev_sdvG0rIHRk4pHPoRXaliYkPBhXGIk8Sj3Kri62YofYwQvH_AL98foChR7gfovCBkYs3aqL0-2u_r6jzYfuLa12W4HsrDUaHA=s4800-w1200" alt="Edlingham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMvKSRTteou15d39WixN-ZRG9ZAaaHsUrn127HOISCv3MElGcAnrmwu-Znss_tz1Kog735rnaCOuzW3rJP7RZRIeyxfgXFr8zeoK643yz3HCRDOFtS3j_sr_DzzPFhghH5Y8e691Jq5YrMrxg=s4800-w1200" alt="Edlingham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOQYx7KyrZnlvjMsuv2RAA8Xy-EiqRBtsg8G1-NqgDzjE1tbwG3A3votX0aE1JilRl5o-tjAKxrFoNedsj12i3v8JF1gkLmx_qIqmeJPtdKH8upoH4NLaayZx49hu3OtMLkZMHO83PN0QD2=s4800-w1200" alt="Edlingham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWIJsyrorl5HwJ8i3CWruoYSa1Eb5q4HtZ-K0C2HrnbNQN1FkKzHUVhMrv8xEPo2aOFf3YxdDqpvB8xlhuIcjBxrFJABhNbEM9ySSTMJGo42oSitNkOa2iGvyPrv2Q1YziyXr06ihnwiQgIw=s4800-w1200" alt="Edlingham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Edlingham%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMCVGb-zqPygKqsxsEqJeEUy0nLofXsxAVmi72nr9hRBnuZNsQeef9w8usjEmSVLiSOWWO-Th2kmGWGGvqaFo_ARAC36xFftMPbVVijHKOM2Wu4BOCxP7KxnLx-C0Sbv8FF9e842Va5gD3naQ=s4800-w1200" data-castle-name-g="Enniscorthy Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMCVGb-zqPygKqsxsEqJeEUy0nLofXsxAVmi72nr9hRBnuZNsQeef9w8usjEmSVLiSOWWO-Th2kmGWGGvqaFo_ARAC36xFftMPbVVijHKOM2Wu4BOCxP7KxnLx-C0Sbv8FF9e842Va5gD3naQ=s4800-w1200" data-castle-name-g="Enniscorthy Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMCVGb-zqPygKqsxsEqJeEUy0nLofXsxAVmi72nr9hRBnuZNsQeef9w8usjEmSVLiSOWWO-Th2kmGWGGvqaFo_ARAC36xFftMPbVVijHKOM2Wu4BOCxP7KxnLx-C0Sbv8FF9e842Va5gD3naQ=s4800-w1200" alt="Enniscorthy Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN1bxXWF8RWtzqY2mfE2zu_ofFs6lJbzJuS16_iT1jhq3f42Y1OSOTXFVoZXJqsvuxfHldNC0b2I1H_DbzvY9fYZUwniti-8O11Hji7arlYrT0A5oHpPp4TZr_qbad4oXu32L67rR6FhgCCj1IT0QVtKA=s4800-w1200" alt="Enniscorthy Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNIfNIKfka3ApZedovJ8PLkjj5BMNrMezQ0TJlRVUoaoezbIbPyVYXDIK_Gr6clKKVboGU_YGeXW20neMcqoR6gqVrgcrsh--VtECGL5081MqgRvwQXdL2sJIAZCCMzt3eTwSGR1MiQSHIasQ=s4800-w1200" alt="Enniscorthy Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOA0_OzBnYRrV9CqSY7FHiJwwwOrqMACqNRSWbpsO1D6hXGAJ2jBQVYheFL2pp_zu8XUDNsNNRF5jJ-NqXZpN0qXgtB9TeSk9OWShQy77IklLLElwrlNiD0450LR12hQJhuqCH7WXnB58rahn8=s4800-w1200" alt="Enniscorthy Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPC8HCoJZZUOvFS0_ifcyJz4uef7P51a9wx1rMa6rBEdaw8QdlXWvxbGflrjr0w6FlcwECuxUq1W6S0zSkmGO1rUPm-miDQDrYyujX0vC_fXKaQBYzCzFJYLorBvmRKN_7BdfptgUOgUxLPPQ=s4800-w1200" alt="Enniscorthy Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Enniscorthy%20Castle%20County%20Wexford" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

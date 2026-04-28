@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHtxGxf51CKheRCWBSpVQEs1TG8RTOpzA6NP9hL1lF076DYVoHwBNlHPZIxOflDjDf_6D1MxPmSQvOZaqhbJY7G372DbkwWvso=s4800-w960" data-castle-name-g="Hoddom Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHtxGxf51CKheRCWBSpVQEs1TG8RTOpzA6NP9hL1lF076DYVoHwBNlHPZIxOflDjDf_6D1MxPmSQvOZaqhbJY7G372DbkwWvso=s4800-w960" data-castle-name-g="Hoddom Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHtxGxf51CKheRCWBSpVQEs1TG8RTOpzA6NP9hL1lF076DYVoHwBNlHPZIxOflDjDf_6D1MxPmSQvOZaqhbJY7G372DbkwWvso=s4800-w960" alt="Hoddom Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZKV-xfDUmdQ6n0ZXEwd-Xz5ipjsWLn_0ZHD05BjHNjTAIjT0X1-i6JPcLG3KMtxKJ9cPmHq_r52rNJMNFa-ojV2hER-K9k1b2Lt86fB4X_EFJMGLrKIGDZci4N3e5AJUzaPY_jHjaYXp0EGY=s4800-w1200" alt="Hoddom Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO9jvlyBWnCm64cFXeYo0wdsIJrezdCZU3WQk3i7QjhQUxj4B-AttIVY7yZ0vauklSvtoOzJloRYtfSflvAaV2uBfdh2cm2jaUr1215qNm6_B5iTrML64glJl-ZgEROeAeo56r1W4O1NDtpxw=s4800-w1200" alt="Hoddom Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMPzibC6nx0HcZ5aG7oldxm-hfq5TPFybPlmDI5Txis10zDtLMzJealBx5Pq_ewB-cUlxCXKEQphViUC06FRIL2XPcyHyXDjLHAh02Ud2VqlSugGs-BnNYzFte3nOsqZC05gc9fazcFlA_9=s4800-w1200" alt="Hoddom Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOTFhEtKU2kwsP4qVlDCMAaYPC_TDqj3sOghoDjIHDBTf8li2KYVY2Z6jA4DZRauZpRsNFUh0x0q7nk9EVBZ0b-K_cUBcuL9ZJLmyOaqNU-dGtLYQcB1DxQIdfpPtXfGilJIPR2CCuTIJFL=s4800-w1200" alt="Hoddom Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hoddom%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

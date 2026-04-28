@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Caerlaverock_Castle_from_the_air.jpg/1280px-Caerlaverock_Castle_from_the_air.jpg" data-castle-name-g="Caerlaverock Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Caerlaverock_Castle_from_the_air.jpg/1280px-Caerlaverock_Castle_from_the_air.jpg" data-castle-name-g="Caerlaverock Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Caerlaverock_Castle_from_the_air.jpg/1280px-Caerlaverock_Castle_from_the_air.jpg" alt="Caerlaverock Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOo19_7ZRA85HZB9b8VAGMVMjNx8dHVZEqnlNktomrewrg6CZNOBF5RIJnnuFQ7bVpqAkfX3-j7MJkl9eT0BbVXXWmqzYpOTD7HGT1X8gsfsmlgXzMRkj66pjPif6FIbCRfbqzFQ1b3Eg0TsFyp3JJ92A=s4800-w1200" alt="Caerlaverock Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNpFnKVsFi-8LaZRo15thRJMGZiz3Fesp0LTsDDNpd7H-es4hJjwBoQJYy9kP3BphIgidk-p9bumtEWqE-3aeSE9fNxeqqj1gMq26vq1044pW42odcvz42rFDv9SPXF_8nFiCVDbqtzEynrXg=s4800-w720" alt="Caerlaverock Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNIKuIdA95GWTRkDbist3mq1SCvc7OFtuNH3T9iV_ii8hzkb6_M6P7w3UAyrDzXSH9dNaXzHN7LWglivaYLjC7AAZFoNWzbEWSDF61rXSYJAgENTqeuu_DpipvkDZDmfbg3QBrYUZHG6y-KbQ=s4800-w1200" alt="Caerlaverock Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMofguws-mm5BbMuD1JlfUD1M-6WT93Lw3DbDWNW7mkAQGGv8fZSM50_6mJXt2FwWd7FIgZHtmdmXbmyuUX9MrGHC9NkqU99519-hZTAvAVEMaZ8_qpHV7IjRr_K7SrmyPqq7TCZM8UIso8gcY=s4800-w1200" alt="Caerlaverock Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Simon Ledingham · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

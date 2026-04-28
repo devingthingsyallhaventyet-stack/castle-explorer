@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLGbJ1yWQBWLCj_b7ijrt4N50YrjXpNkW3gDvw3xmZeT-A0fp-aPE0PjGqxhD4mTOptJw4ahOAZ1P-KogGocDHerXxoxfnAcDmDkf6bH6QApdYXtC9l2Az1Kdk2qhi_x2f5g5IE4PLS5OIGmg=s4800-w1200" data-castle-name-g="Hellens Manor">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLGbJ1yWQBWLCj_b7ijrt4N50YrjXpNkW3gDvw3xmZeT-A0fp-aPE0PjGqxhD4mTOptJw4ahOAZ1P-KogGocDHerXxoxfnAcDmDkf6bH6QApdYXtC9l2Az1Kdk2qhi_x2f5g5IE4PLS5OIGmg=s4800-w1200" data-castle-name-g="Hellens Manor" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLGbJ1yWQBWLCj_b7ijrt4N50YrjXpNkW3gDvw3xmZeT-A0fp-aPE0PjGqxhD4mTOptJw4ahOAZ1P-KogGocDHerXxoxfnAcDmDkf6bH6QApdYXtC9l2Az1Kdk2qhi_x2f5g5IE4PLS5OIGmg=s4800-w1200" alt="Hellens Manor" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGjGLoyMDaO02OopUxH8I_vBEXdV5VV-9F4YJVdkzkCCqHeYtGblpd2hfoiNiuJ5OtFXMObzfUoHHd8q9aELl43MlODhW7z0yQ=s4800-w800" alt="Hellens Manor photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPSDkcKyLk--gmFGD0Jqt5PD9tIfcsnwo5DmZucBj2HUtz69d7vJmDKrRJqzoZfN01ulHkLeStjhuetyZoFSreKqEQkzPDkCK2iDbX7XJa3EsU9CgsD6fN2gTnq3toDcLryyUu6pgf6ELlceg=s4800-w1200" alt="Hellens Manor photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNyTKTwC7fHEuxKIdmFEwS5p3caBWcVv-sNw3PrjUYvRhgPfuoXpJGAY3FcJhsDQua2zTuAxjT89X2JpzkkaFTIAbeHAN97lrsMO5KTjAMrcFYQfQdcUGIC7aQlhk0KljNW8kMvBcyEBbzNyQ=s4800-w1200" alt="Hellens Manor photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO6108TLsS5SiGphVsKNWMf7RokC6DwqaQoitu1WaGnccn0Ap1lIFgidk5Yt8BJO9sAMqcreGAamj3287CQKtISu6belHw8gmveRXJ31MAJG1sCP_r_ALybMrWsRlQt06gIH9obTGp6YLgfUjiIupCH=s4800-w1200" alt="Hellens Manor photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Hellens%20Manor%20Herefordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

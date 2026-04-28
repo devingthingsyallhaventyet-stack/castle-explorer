@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZODtrYmzzI4UU7ECvxZDRaAsruNtb3wiD916gHtWqZCfpAJWLdUxViJoOLEs3KsMeGH6iz9_45WIgFWY53VL6qLCLzbbX-mMdDX7eQsjrsYPhyNvldz3ydj3opxbJAV95YBQNMNW7I3sIVzMA=s4800-w1200" data-castle-name-g="Battle Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZODtrYmzzI4UU7ECvxZDRaAsruNtb3wiD916gHtWqZCfpAJWLdUxViJoOLEs3KsMeGH6iz9_45WIgFWY53VL6qLCLzbbX-mMdDX7eQsjrsYPhyNvldz3ydj3opxbJAV95YBQNMNW7I3sIVzMA=s4800-w1200" data-castle-name-g="Battle Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZODtrYmzzI4UU7ECvxZDRaAsruNtb3wiD916gHtWqZCfpAJWLdUxViJoOLEs3KsMeGH6iz9_45WIgFWY53VL6qLCLzbbX-mMdDX7eQsjrsYPhyNvldz3ydj3opxbJAV95YBQNMNW7I3sIVzMA=s4800-w1200" alt="Battle Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN1L80zg9Ja5dy2-W03rb_v1N1hixVX7thcCQCgq931J6Ol74B7iWs7fLMQjZfCj9-Nl9D40wA7TdaUGTJCOKXvmsHibjsnSUehsnxRspWonXcgGFdXokgk0tgCOoUjzQmtJZzqgSaiXVWnGw=s4800-w1200" alt="Battle Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP49pKCx91-2wSTEbNqoVdOUZazFCCcjbt7JHZWbmzKFM4fGwNOS98vgalbQa-KZo3n4z7c8tSHEbROVjTaaySMwFiKEAHCNdZP7zYxrSAwZR4q3QmeyXS1y6NaGm04MdVvZ5bnkWFh7xCxIRag2e4lWw=s4800-w1200" alt="Battle Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJ-mJkDya-Q7rgohM7-BHxvVZbGL7T_o7nzNlUtOKgjneJWP-d1-Y_JD6zDEx31TIre60I82-_Y-7kk49mVJUavJSRAAFVTgAh0cC8HpGXla3MIk5gLkuTgyUUm-QvE6jE77l7XEaMKGfi=s4800-w1200" alt="Battle Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-0QwTjayI1vf64RE-aHp--dxj55fT4SBp5adTYam4tYKHBWdm_YpR7OCVQsIJaaPvjHATp9EcdY4-F2R21xiwFSLrIipodOKhqLnGXQYoUZcIGJtxH4BQ-GriOjDETbPrAk5cqzCKQ12huwk=s4800-w1200" alt="Battle Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Battle%20Abbey%20East%20Sussex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5zSvqDHpWSu-x3czfIEvF8j-wYY-tHsW4w8bydGIvIkL-aqCHOCJ4i0htX-0fCg9H9_9K1kS43qH39JZUXLRDg8XU8c_5BTVgxSSYciRf_B9jBlPewQX3XwMszcyXRSEvZSs9WwRvI2uXSTs=s4800-w1200" data-castle-name-g="Sawley Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5zSvqDHpWSu-x3czfIEvF8j-wYY-tHsW4w8bydGIvIkL-aqCHOCJ4i0htX-0fCg9H9_9K1kS43qH39JZUXLRDg8XU8c_5BTVgxSSYciRf_B9jBlPewQX3XwMszcyXRSEvZSs9WwRvI2uXSTs=s4800-w1200" data-castle-name-g="Sawley Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5zSvqDHpWSu-x3czfIEvF8j-wYY-tHsW4w8bydGIvIkL-aqCHOCJ4i0htX-0fCg9H9_9K1kS43qH39JZUXLRDg8XU8c_5BTVgxSSYciRf_B9jBlPewQX3XwMszcyXRSEvZSs9WwRvI2uXSTs=s4800-w1200" alt="Sawley Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMY4kWybB96c2WC6wf-B3K97ABKDIKC4aYckXX-2V7KVZskyeVY8aucsg08Dy-1uxV72-EuRMfVVNhClN7iXNxzMZSZYd4mTk8rs9wZbq0WMMPm5jjJW3p3ChXNAcvi2jjHGkik-HZlSwUnBxI=s4800-w1200" alt="Sawley Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMelkvea2-x4Rq-Tbu7eupf3_-zgRtph3Wkt04FMAsgu7NYdTg27_4AV3ZvdqSj9-vGcRYhMTEfjkFYl665EUD48WlORvacVnKMactW2tbNfAMP5eGp69-gITSnLpBTVyUQDu8KLWnBWuQrEg=s4800-w1200" alt="Sawley Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPg9PHLRrNEjRsMjtzpQu7uCJispEgIVWuyz5fVPjGvSv2I2VF455IlNDi5zoyIRIxo63fkGRaFXzkvq1uI_zI3-xWC1B3Rn-yoe2yxUp1ou_WErvjE_mnXK1NEJmE9wQ3TatGV8vHAl7Dp=s4800-w1200" alt="Sawley Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOusfVezt6eDFWP2HCPQ2luVx5OeQWNY96VGbWsd1H4NJRmj3eZiylp2-GUgnnH9P4l114NAy-q33nhYktheIWpMdu-cllGquj8G3HIYGLFUUynaJ6rmyPvpSIJW71GmdMv0AMVTTxyKwEwmrI=s4800-w1200" alt="Sawley Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Sawley%20Abbey%20Lancashire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

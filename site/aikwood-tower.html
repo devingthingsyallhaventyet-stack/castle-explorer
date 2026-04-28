@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCOqKnJ8-xUSRuZDGLXyLPUdlD9QDqTVYsY71-qG3syMTXk_4VaKyckPdSwZvY3G-feM3FCyUOxvDcnz-sPprRYIgl3fiVzcuEQYDt9be0DFp0ksIq78mSB4sPPbswhNFxLStbOCWfdhHnRg=s4800-w1200" data-castle-name-g="Aikwood Tower">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCOqKnJ8-xUSRuZDGLXyLPUdlD9QDqTVYsY71-qG3syMTXk_4VaKyckPdSwZvY3G-feM3FCyUOxvDcnz-sPprRYIgl3fiVzcuEQYDt9be0DFp0ksIq78mSB4sPPbswhNFxLStbOCWfdhHnRg=s4800-w1200" data-castle-name-g="Aikwood Tower" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCOqKnJ8-xUSRuZDGLXyLPUdlD9QDqTVYsY71-qG3syMTXk_4VaKyckPdSwZvY3G-feM3FCyUOxvDcnz-sPprRYIgl3fiVzcuEQYDt9be0DFp0ksIq78mSB4sPPbswhNFxLStbOCWfdhHnRg=s4800-w1200" alt="Aikwood Tower" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPDpLZWogggm5fC7XZC4sj0baCbXJxvKfpPIE3km0S7S59QglGGpStIu7CzgPZMxWxyZitAhXFN6bUtJia59hM-cypOHs7qhvOw7eC6V95akfpFs7fkrqSpZHqqYtpGegakaUDd1pHuQbBN2DY=s4800-w1200" alt="Aikwood Tower photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPjjT0tQpMJEfVFScnLMuDlvMP1xjww6gyKtvaVoBjGx3ZEfbK1LWG5AJuUe6gn7xtMhGht3f0vU-aD2nPo6cFoJPBjhjBnLuRGMpmF2Xv5uAmb80qH9kEGaSMlewZLG3ofZX_G8LEdacw_yg=s4800-w1200" alt="Aikwood Tower photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO-PJenVQSWMEljL50zDh2u-8r7UfwJfsx8tM9FLQr6eE5GPE_rNwL3odg2GhxVWiJQaTMwmePXenOz56r7GoxcqoadfPd5xIn3SBCHBGrxcHZfhIrBIvahLsYW9Ry4llbVdZLDJUN4r8PKrCM=s4800-w1200" alt="Aikwood Tower photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMHetRy3flY-H1htGYeQyl5Fxxtg4pgQvQK_7rpDcQFGAbTCYD_Q7is283RjBfFbm_5vS35ST4nn03-JMUShyUiVJunQC5VDUfzgVpqzx_jdIBTmAQf1oYsO4UaXVTxqc5SgOnzHB9xE6bK8w=s4800-w1200" alt="Aikwood Tower photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Aikwood%20Tower%20Scottish%20Borders" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

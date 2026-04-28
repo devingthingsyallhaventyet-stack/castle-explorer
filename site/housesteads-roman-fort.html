@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNR60AqwnQLZ4im9lTeM2Wp33yvkRHJxeaaU5bKX1jcoZ65iomnlOGgGdFDUMxWBiOSoQitM-NaG-dvtSur_U2wddB4vn7-YGwkIo0BkRV91QwfqrBIH8L2a1Fp179OBLtDmiBYW1DyPp4=s4800-w1200" data-castle-name-g="Housesteads Roman Fort">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNR60AqwnQLZ4im9lTeM2Wp33yvkRHJxeaaU5bKX1jcoZ65iomnlOGgGdFDUMxWBiOSoQitM-NaG-dvtSur_U2wddB4vn7-YGwkIo0BkRV91QwfqrBIH8L2a1Fp179OBLtDmiBYW1DyPp4=s4800-w1200" data-castle-name-g="Housesteads Roman Fort" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMNR60AqwnQLZ4im9lTeM2Wp33yvkRHJxeaaU5bKX1jcoZ65iomnlOGgGdFDUMxWBiOSoQitM-NaG-dvtSur_U2wddB4vn7-YGwkIo0BkRV91QwfqrBIH8L2a1Fp179OBLtDmiBYW1DyPp4=s4800-w1200" alt="Housesteads Roman Fort" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOfAJpweFfe-QCkibddf3KDRUpSQjHuuAqCkqh3WawYRSAtvNzN5XGvUEkOJPKfO47slW2ZGu1UAMe8rN-KXU4MsQZLQSDQiUafuYlBzKKhIGKE_yqtaxj3YsB3w1qIr1hP3TgEl61k9KSB=s4800-w1200" alt="Housesteads Roman Fort photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNSPqvn_CtZp_wmo3Wv4lyXafs04pwMbM7EmJpUpJp_7VRI-iJtL5HTI47zR6gWPu8QlvD2dawTiULF5cW2cIeFWTqYxh9LSZKQO_qdZJwrcCZzdox9yv8D0KuiR1vQV4u50oOz55Gl-Sy88Q=s4800-w1200" alt="Housesteads Roman Fort photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNz9HwCLAgGuCELXGd6igsVfkGLjsAtrZ6CdRepaftoyb_H3ffS8rQGe705v4Say6xGeLTa8VNE_yjU7EM9qXyAXj71vvsGsrFydQ7owBVq_B5mBxQiVzl3xbz7vBoaX3dthLnlJ9c7K0Nf=s4800-w1200" alt="Housesteads Roman Fort photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdu8ZI24nIIYu-lV3X-vEuGlqioHc1zpaDMBMnqto4RjmSY4pp_xDEJ0rlypBsqgYxMcFH-_DegUL3FQeZJ1aOxdAFViwRQNINvziVq4iZds5NHk3wkVIa_DMFnuY229VTyAALPMtDH_XxFkh7gSQQhQ=s4800-w1200" alt="Housesteads Roman Fort photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Housesteads%20Roman%20Fort%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

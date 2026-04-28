@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPdH-svDg9HFSw1hqp9q1IdLkknSOvgV3-78yTil7l8ik37lJ3hLijzOb69Mo-L8R8flfUISiJGADEmceYr-CXhkuQxaBk3LC8qnua5gTC7mpp7K2IlxLw4R2PceSWfQKOcSdjum_TfAVlXg=s4800-w1200" data-castle-name-g="Norham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPdH-svDg9HFSw1hqp9q1IdLkknSOvgV3-78yTil7l8ik37lJ3hLijzOb69Mo-L8R8flfUISiJGADEmceYr-CXhkuQxaBk3LC8qnua5gTC7mpp7K2IlxLw4R2PceSWfQKOcSdjum_TfAVlXg=s4800-w1200" data-castle-name-g="Norham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPdH-svDg9HFSw1hqp9q1IdLkknSOvgV3-78yTil7l8ik37lJ3hLijzOb69Mo-L8R8flfUISiJGADEmceYr-CXhkuQxaBk3LC8qnua5gTC7mpp7K2IlxLw4R2PceSWfQKOcSdjum_TfAVlXg=s4800-w1200" alt="Norham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNXwwwCcGXkKRoA0u2F66Hy0BXGt7EQLkuH8u7NW60Wn0dhTswe3zFuXdJka7RBXV3kCSpKe3puyPs87WZHPjT_bY9NWBCit4QLuMQ-V1Gqc7v3-3tySuPPgZ9RsJWtWJUScEbavT2EXz3HesM=s4800-w1200" alt="Norham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN_F4wPS-rqBmXrzTimhsh5q4UTX04lkxHfsCzuNOumgSEzrjZXGJh1zX55_dUWtXV_rzdjy0QwAT1s4xfOeNlDPETQGijf9XYuS7AaLJNxEeXI7Uhs3U7D3sL8LT6K3OMc_HSOwMWpuEEuLQ=s4800-w1200" alt="Norham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyj_f0esrplpxqQZLP6_pDGLG3xmO8vWsT460MIPN5fC7zvytyJ2CSgjQAIIc5HKinJAAaizIS-RXs1-caGHPwbIzoklCfL2JH9UqMCo4Dt-dhJxbwMYCsgQr06imW46bRGTM140v8VGpfaA=s4800-w1200" alt="Norham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNtxGVRBgv8QKRh-sztIdjwkpUvRkiN2FkK2yi6JoUc5mzs-304zfzybYugUerkEn0UwmrkETxw74DEam2vaXYOdD3lFus17pwck3mJY49ZJSVLiyAwSveEGKnHjtyCK77tvY8nUob9Avu38Q=s4800-w1200" alt="Norham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Norham%20Castle%20Northumberland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

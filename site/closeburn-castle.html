@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPwaZYeb0GsrldBI-p30fS0xx1fSQ36kalmLuKolbXowN9BB8SeQ7wlaQGMFWeHjJNaUbEFU53Pd25hmffth1P__3eujNSbu3JBlxn9J1RJr3EN5gU_vKHYP5lzTHpyhdWKsQQCewR5z_kykag=s4800-w1200" data-castle-name-g="Closeburn Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPwaZYeb0GsrldBI-p30fS0xx1fSQ36kalmLuKolbXowN9BB8SeQ7wlaQGMFWeHjJNaUbEFU53Pd25hmffth1P__3eujNSbu3JBlxn9J1RJr3EN5gU_vKHYP5lzTHpyhdWKsQQCewR5z_kykag=s4800-w1200" data-castle-name-g="Closeburn Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPwaZYeb0GsrldBI-p30fS0xx1fSQ36kalmLuKolbXowN9BB8SeQ7wlaQGMFWeHjJNaUbEFU53Pd25hmffth1P__3eujNSbu3JBlxn9J1RJr3EN5gU_vKHYP5lzTHpyhdWKsQQCewR5z_kykag=s4800-w1200" alt="Closeburn Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqE64OF_pgU4jYBdvjcf1pMlXnUJyYXXy4uhd3wdrbp3Tn9f68af0qibtH_6z4UghH1Fj6ghGse_HwSR4YWfJOOTusNc4d4Taoo=s4800-w1080" alt="Closeburn Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_TNu5tfkK_smiaJVpVYe2mstQYutol88cFr7owfFPsYB9MYfVO016HKHLKjDhXUewNSr5GTaa3WbV0vxmIGLQmKyGEnInQa-FFj5bH4PGdkcZ_9LWWDxO1p9aAANDfYiNEZ0a-z5NUqO1=s4800-w1200" alt="Closeburn Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-egbm7tjn4sQsu-gjKbvz3pOKKr05c0k8o74pm2YMvILiMKq1R1ybNMZxBI4x7VZRy1WmykyTgtmsn5kWslqPjRXMJu1br5brzAe0SB6jYE-qDiv-fb_bZfmZOoU8YhklEvtt0LbbFxqHBpI=s4800-w1200" alt="Closeburn Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_0Kdz0pVuL_qgAqm0Fy58BUUPLxsr-eBlYiNk5RAaBK9ZNe7FKmh5yvHUk1CUZIqkmPdgz-vCnbl-W1DJ8hz0ymOgWVakJtbHTudZSnLm9d6eKvNfJOkzonbFfhV_cGz7LLm4y3N3kZdop_k=s4800-w1200" alt="Closeburn Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Closeburn%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

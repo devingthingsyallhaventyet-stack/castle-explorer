@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHfthS87P2frEqoSEUpZR4VBhxGCMoCyN2pjOVLYVU2qTssskfkZVDqawe6bkhIyobZe93VCJpz1gbi21UNgWyioRCGn0KMFdM=s4800-w1200" data-castle-name-g="Fonmon Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqHfthS87P2frEqoSEUpZR4VBhxGCMoCyN2pjOVLYVU2qTssskfkZVDqawe6bkhIyobZe93VCJpz1gbi21UNgWyioRCGn0KMFdM=s4800-w1200" data-castle-name-g="Fonmon Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqHfthS87P2frEqoSEUpZR4VBhxGCMoCyN2pjOVLYVU2qTssskfkZVDqawe6bkhIyobZe93VCJpz1gbi21UNgWyioRCGn0KMFdM=s4800-w1200" alt="Fonmon Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPRW5Lf8ebf5USyz1S-zMJu3xdyydy_OVM1TeOWmPF2G1lbOG8JSE9fouBo0cEf4Z6MzTierDKUDn-KmhaYzrJ3nOuFQKfu_GqpRU3IILJrgGK6-WoGLe9XuT_rPGWLmgSF-15iHdnpdFBKUDOq5oNv6A=s4800-w1200" alt="Fonmon Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMg75YvSY5HMvY0_ouSn80LYr3RXBXjQyO3npVo_VvU3JMb_FAsoPWNiy0FFy_ij9o0KFdottmlB0oi0nKB4WRmaXx0w9vloDhya-s7uTqSUTh_RjsWswuSzc_gq8KSXJCo9VCP-WVNi7jr6g=s4800-w1200" alt="Fonmon Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtEj0QstIXpcaLKkYprei7kv8yZ9wmTxODV-UDuqMyZpCK17r39IQKT6LBhdPv5XpA-RNH8YBok0XktpR1YvkKLa6A3aAwRah7gB-Uw0YTVspjM8xiy4FobJ9qwngywhZ1eey47CtuOLS6pA=s4800-w1200" alt="Fonmon Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFnePjofmb-oH7BUH5YM25F5-8lFQ0K8arLOpYYgItPxjZi5iyGlBQA37NaW0ICmxZUncBOb92WW-AgISf9m-mlpVbIII7WGWHLwwJzLsHhMDa0qIPIG7Ux6sgYGA4-hBDn9la5G2fOQfRZg=s4800-w1200" alt="Fonmon Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Fonmon%20Castle%20Vale%20of%20Glamorgan" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

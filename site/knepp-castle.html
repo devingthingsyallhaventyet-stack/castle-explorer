@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEme3s-su72f2C5fc7d8QhK03s-gsWXVfoqKqd1TF2ZrN7AQJ3kYCyJlaW4I1OTFJmQ9Fhs11G7_Q14QAzd-mWh75cpoRjMIIRn0yA74WzEJjc4qfL47v696M0n_Nue0m2KIl-bodZDlvjbvg=s4800-w1200" data-castle-name-g="Knepp Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEme3s-su72f2C5fc7d8QhK03s-gsWXVfoqKqd1TF2ZrN7AQJ3kYCyJlaW4I1OTFJmQ9Fhs11G7_Q14QAzd-mWh75cpoRjMIIRn0yA74WzEJjc4qfL47v696M0n_Nue0m2KIl-bodZDlvjbvg=s4800-w1200" data-castle-name-g="Knepp Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEme3s-su72f2C5fc7d8QhK03s-gsWXVfoqKqd1TF2ZrN7AQJ3kYCyJlaW4I1OTFJmQ9Fhs11G7_Q14QAzd-mWh75cpoRjMIIRn0yA74WzEJjc4qfL47v696M0n_Nue0m2KIl-bodZDlvjbvg=s4800-w1200" alt="Knepp Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPGbGOG48LLmsyKyYpDglF8gSBmtgBlKQ0XaMwsK7vdM1BnoZNrB1g3YIB6i64C8qQaZB3Us6dliRrbHOpW3sl3SC4uSx5vMX5mPQ4gRuGfwWHD3d7ivsOv0tUpp3JavvgulnWNcfMd6eHxPxE=s4800-w1200" alt="Knepp Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgjjUkSguXcNmy0bjHDGOtYj2T3yRqpTNWcDHu0y9uaIgAbjmGWnszenFvIje7liKksxmuhrTZlpF_iAlBvntAVHjrosgD2ErG-fFgR_oyYEC9WoZE3x60OUc4MgM2i4BKdOSbR6Qkh7dbs5E=s4800-w1200" alt="Knepp Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOA73UR4jEJSkqfJJn_VfYVJloZ8l0jeXnchy4oi8SD7-pl2-r1TbNtIbFznBdPOOxpdqmFzYFZuKuimfQ9tqW3sOKBCRcmOjVOr7IHV-xnJz9ofQPBS6BMnUI5iZzJUBRbHDQ_abUh2CFGBg=s4800-w1200" alt="Knepp Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNkLS9W5Av8XUYvq0WZzuuE3ZsBrAyH-4lFnTPmx2yE8TpD8QMXXJp2GOrSo_21S9f--IW1J_lcH26c2H_LEVnCSaWI2FTXohWG94vFF-Qnf3IBJMrXUGMmL4TaJNypHCCoeCttTU0Mgu5J7w=s4800-w1200" alt="Knepp Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Knepp%20Castle%20West%20Sussex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

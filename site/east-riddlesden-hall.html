@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcNXZ3hYTqito9SUwyDZghZM1rcnUAPoItc-pD5o0c04hQOqaBY9mWLVlkxsn3-uqXVjjqfOX7F9gF3MYCDRUm5ybM_WNdmVbdVI6_J-PKz22_aRhpZ-QqoNNQDAq3Uwv70FNNgt7OoJhiCUs=s4800-w1200" data-castle-name-g="East Riddlesden Hall">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcNXZ3hYTqito9SUwyDZghZM1rcnUAPoItc-pD5o0c04hQOqaBY9mWLVlkxsn3-uqXVjjqfOX7F9gF3MYCDRUm5ybM_WNdmVbdVI6_J-PKz22_aRhpZ-QqoNNQDAq3Uwv70FNNgt7OoJhiCUs=s4800-w1200" data-castle-name-g="East Riddlesden Hall" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPcNXZ3hYTqito9SUwyDZghZM1rcnUAPoItc-pD5o0c04hQOqaBY9mWLVlkxsn3-uqXVjjqfOX7F9gF3MYCDRUm5ybM_WNdmVbdVI6_J-PKz22_aRhpZ-QqoNNQDAq3Uwv70FNNgt7OoJhiCUs=s4800-w1200" alt="East Riddlesden Hall" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOu3OcxU9wgI1Ayw37Z9e-jXJbIEBK2BNcVaLQh-KJbCrHBwu7t4_wce5wif5P9EhtFT846mCXDJyJOhQeixZQNwnuGCRbD_IW1qQ76i1eSxIXB59JMZL556gAejsbge5e1uDiuDqyOE2RD2A=s4800-w1200" alt="East Riddlesden Hall photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN-oXpO8KSpNVginRJIe2KnKgA3efJ4-V7zTDK0vVk9nx7AmzqxlrBIfXrL7e7_PIgUyeLeTUKB41ueZzdZu8dsykFDJbys0CaFNODmvBPrD10Cux8N5aWpJGhYV1Jj5IlS7c-5dK9UCuGNvw=s4800-w1200" alt="East Riddlesden Hall photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOiQNVN4hlSDfke8O5DLPg6i3NbqNI3F8OiXGUTVxaF8ch8_DuRP_1zz4QuEOl_ZaEdsdooV77Lq8jnaSdi4X0XYY7xIak6e3OcGgGTm_3bFXbi8S8ZsZ4kef2PHQrnloav1ingmBqf5j4tpvI=s4800-w1200" alt="East Riddlesden Hall photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNq3vwTjpZAEEA2WhOIu9TbeVedLu6MIKnF6-q3ea1yefaiEX6bKHS8MK0Kuzbv-EmaBF1GBpRvURDNWARUO473b5mgiP8rl9ehhmrCc2iYUTLJlxq4T7zImkScQR3ssBsyzRCdG97vXUF01nY=s4800-w1200" alt="East Riddlesden Hall photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/East%20Riddlesden%20Hall%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM8tYSbLhVMUujcftjUUEye2CrGUARX8-QJXsxffkRyk8BTZhQHye1ZQz9OiWdTydGsSXqcPVLMtGbyR85sI9w_LUD7pbTVIwRXHI9DBndtb_L2jdJUTvmiISo3T3CPaY8NEEcr1oQsztCoUx4=s4800-w1080" data-castle-name-g="Lewes Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM8tYSbLhVMUujcftjUUEye2CrGUARX8-QJXsxffkRyk8BTZhQHye1ZQz9OiWdTydGsSXqcPVLMtGbyR85sI9w_LUD7pbTVIwRXHI9DBndtb_L2jdJUTvmiISo3T3CPaY8NEEcr1oQsztCoUx4=s4800-w1080" data-castle-name-g="Lewes Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM8tYSbLhVMUujcftjUUEye2CrGUARX8-QJXsxffkRyk8BTZhQHye1ZQz9OiWdTydGsSXqcPVLMtGbyR85sI9w_LUD7pbTVIwRXHI9DBndtb_L2jdJUTvmiISo3T3CPaY8NEEcr1oQsztCoUx4=s4800-w1080" alt="Lewes Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPpZmqPcGYGV2Ja_aepGV9fTAF1TYPSNOrBDPWzrfKKjztVEdXtrib6x_GvlxvNzZZWGMeX-NeaqQGvKQrMxpwCYgKZtLHdUwtUHnFOd7tWvYNqinxFYQTQSsMKdFzB50m7q4tGsMRvdYnY0gw=s4800-w1200" alt="Lewes Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOgGJgnsdhdkXg8-sy00dW99hANTWgz0OpO3qrp-iLd3Rk5L7B1y9prtT1Z05SI5lMBa1iq4wyQlXdR2YLZigX6_eLBOCKdqB2GuvcMA5vvx0CLPWbFTdZ-JfVrzScCxY97lkTqzGjkP01q=s4800-w1200" alt="Lewes Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPzvJXrx7aEj4uwDzbsOP1juxLOM8E5bv5C9LAVc0C909LrZzHruC5iOAKIOfDjw9GWhZiLR8U2dCBqRIrfdplfEa7KrPHmOw0OR7oBoqzGRbmlYfAe5WJV9B-lgDGBDR-oVeSAn-TU2y3d9w=s4800-w1200" alt="Lewes Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuN5vKi7YaKHfhQLM1kZpg37ndcftN0qEE9IHXQ_eQk2CLhD2ht48KaEYIkyPhqo3S8pzwQfEQ4Ad_LkdsTYH1IbH48E1dyVUB9mS87YR5cPkVltsoB-QjNCoWRs2zpmYSjON11NRZsF5Hyg=s4800-w1200" alt="Lewes Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Lewes%20Castle%20East%20Sussex" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0PgFEo1U_XlMXR5lDicMe3hYSMdWwcOgv59UX6WWEyJxXZMC3tNCLE5PW8d2NVxs4FRrWNBsvK_KrKohrm2yKtIUB_pqPz4gH1LmYVo7rgp5t6A0c_6d_S1i-Gl22CTdc1CeEoEr9glZ7ilE=s4800-w1200" data-castle-name-g="Pendennis Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0PgFEo1U_XlMXR5lDicMe3hYSMdWwcOgv59UX6WWEyJxXZMC3tNCLE5PW8d2NVxs4FRrWNBsvK_KrKohrm2yKtIUB_pqPz4gH1LmYVo7rgp5t6A0c_6d_S1i-Gl22CTdc1CeEoEr9glZ7ilE=s4800-w1200" data-castle-name-g="Pendennis Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM0PgFEo1U_XlMXR5lDicMe3hYSMdWwcOgv59UX6WWEyJxXZMC3tNCLE5PW8d2NVxs4FRrWNBsvK_KrKohrm2yKtIUB_pqPz4gH1LmYVo7rgp5t6A0c_6d_S1i-Gl22CTdc1CeEoEr9glZ7ilE=s4800-w1200" alt="Pendennis Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPXLz9x2jGxYv1re6MvTUVV24aY1s_j0ISLBjfeArqc2kRydMKMzqtF0BPJBeewCuqannxv2ud6n7knRFxtqzuPX5bymQryjEZMfmSum5bTKtWFpXY60WbLwD1po_jJZcdfsWZAi2X1_-Gcmi0Y7-_tFg=s4800-w1200" alt="Pendennis Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMMrYotqAizGw1_xbINJe1OCaIRbTH4pRWYCtZZbiXY7bkG-LGxdFod_ZVb3NvG4AuI3192fjYGzyqR9ZSW52AdPmgdM76TMUXqOYa8e07ysgx8_nxHV5FQUPUvERKcG-8VSyFfQdUj_Ljojw=s4800-w1200" alt="Pendennis Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVhjmlhz1uC-3qlp3O1Foo8M1502nYVjq5ifDZq34bmpbTq6d3bO7weBRfnuxLTd4PSkQS5Q_IUm76nL49e8eU0Sok0TdZBHy8_9vcOBMNEXTJIur6XRsb5yJa6xOP4T1ncMYwupcgQ90_PDE=s4800-w1200" alt="Pendennis Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO0zAw-vJAnPtmVSY0DL1ig45QwTAzu_HsO_lR2JmoHuiOnfQ6WI3bkOC3sFFG8uE-s0zPTkVBdFuWsGqbBjihMOMGz7gyWbV39-SVMGEVEYjw47WVabuReCLQRj_DRD0QDpOFR3rL939CzQ=s4800-w1200" alt="Pendennis Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Pendennis%20Castle%20Cornwall" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Rockingham_Castle_entrance.jpg/1280px-Rockingham_Castle_entrance.jpg" data-castle-name-g="Rockingham Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Rockingham_Castle_entrance.jpg/1280px-Rockingham_Castle_entrance.jpg" data-castle-name-g="Rockingham Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Rockingham_Castle_entrance.jpg/1280px-Rockingham_Castle_entrance.jpg" alt="Rockingham Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGsY7gNBnO1TwC47DceZUq8dawkvZv6hPqmPnutSSkzS4MqqtBYs1iO3QRB-lUvzER8334hPt4i8xLgRje4ouS3TCwJzyg-inM=s4800-w1200" alt="Rockingham Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNFA-LF6XWvrsj_LcsHNX2WHiC27LZae9JNs5hk5SRA7oJho5NCsoU3Cke_1W9xDnbW8d69xFsADPgI1CwJ5gGpkgqxn_C4_8C0kjDqKZgTVGq35KEP3wlZ4RVTwZrAiZJUEBvyLhSoTOYAAdE=s4800-w1200" alt="Rockingham Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPLmfmzJKc78SsUUmpT_sbacVkbiTgooLv8xgApamowNueV6r_xylEoYVq97pRCwa76xc_4NRRaGCJqpKUMDNDKAgUfiMUEuXtOOE5ya-cEjYNTm6LwsFRfjV9Uh9h1WuHsYDLL9phcyq2SchZ6xddUyA=s4800-w1200" alt="Rockingham Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOnO5MEJucLJDL-9D0hztn1ZMpRMTeFPFGcapqdYgn3bu1SmIajpTJ0IdmtBiz7qVpBtKzwvgsAFmQaZrOHqFyO5S9g30nioR5pLqbePe5SqIyau3EKT38ms6-OxtBdnqBEUf0PpUYr-lZ-QA=s4800-w1200" alt="Rockingham Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Brian Coleman · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

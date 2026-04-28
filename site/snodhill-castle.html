@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIqnlAiLCrjz5sCoxG5xAzm343HlqSHL8Dx-ZUbeMsLGaZV6Dq2p3IOliIsgCUgW42vQ0juWuU_wApPFHk7LkPafRvRMIUDYGSZs3sow34OQHa60zsEn9QwUCekd7_X3wgh8yrgtlzGswYBJU=s4800-w1200" data-castle-name-g="Snodhill Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIqnlAiLCrjz5sCoxG5xAzm343HlqSHL8Dx-ZUbeMsLGaZV6Dq2p3IOliIsgCUgW42vQ0juWuU_wApPFHk7LkPafRvRMIUDYGSZs3sow34OQHa60zsEn9QwUCekd7_X3wgh8yrgtlzGswYBJU=s4800-w1200" data-castle-name-g="Snodhill Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIqnlAiLCrjz5sCoxG5xAzm343HlqSHL8Dx-ZUbeMsLGaZV6Dq2p3IOliIsgCUgW42vQ0juWuU_wApPFHk7LkPafRvRMIUDYGSZs3sow34OQHa60zsEn9QwUCekd7_X3wgh8yrgtlzGswYBJU=s4800-w1200" alt="Snodhill Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqEyBN-74x6yF6tT8tAnzPuEKigqb11ojSZU7mJ5Ehfib6UEAgUB-gpWTxfLxB0LAR7rOzsd6v2pMbnVr1GDBS8tW0xLXuRIcrI=s4800-w1200" alt="Snodhill Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMl6hhctSt7c1VLr-mwCrn15we1bHFC0AQUS8R8QMs3NIC7ira5KVsUq_61GgaHvWXTK4bwVoHmb4GiuzWljmR0rczhV2jQK6toMBeCXt1wjoq6yU11ESV1L0i1O8KamR8DDVjTDQCZw00oaGk=s4800-w1200" alt="Snodhill Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOyflRMrhRnDOQWRygTTF5EBZCCGyGYWqIpprFE03LmOrXkKhLe4qSqQ5H0Uad1qU8P_Bl3PcgcLb203YHSEM54oZOk6dOAAm6-3OmURgsvYKA23UtAkFbiMv-qk83VRa2iN0JoCVoT0FbNiQ=s4800-w1200" alt="Snodhill Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMZ6pmFPB2pZkn4BkrFUzxF7m3nao21WUi9U3WSiGz67GCP-FpYnbHaFPH_1hWrd1TNoUHQ0EdQvi5DCu6JFMJno6HU72q7aL44RnTgb0dJuSafVHrGiGely8jmC0ukksOkaOmIiF7Toe4Ewg=s4800-w1200" alt="Snodhill Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Snodhill%20Castle%20Herefordshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

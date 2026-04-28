@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGFq2illvCF7Pr2TbxyLKj65nucIEltV67fJN1NN0EloAFsSmkm8O4ukU4jTg219x5OV2tVnnPo1nNpaBsCTLM41bSxpUQJVhqMipT9-UmW5rLSKCm9iOb2tGNzjekg7bp-W0L1QFy1V2TII0=s4800-w1200" data-castle-name-g="Easby Abbey">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGFq2illvCF7Pr2TbxyLKj65nucIEltV67fJN1NN0EloAFsSmkm8O4ukU4jTg219x5OV2tVnnPo1nNpaBsCTLM41bSxpUQJVhqMipT9-UmW5rLSKCm9iOb2tGNzjekg7bp-W0L1QFy1V2TII0=s4800-w1200" data-castle-name-g="Easby Abbey" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGFq2illvCF7Pr2TbxyLKj65nucIEltV67fJN1NN0EloAFsSmkm8O4ukU4jTg219x5OV2tVnnPo1nNpaBsCTLM41bSxpUQJVhqMipT9-UmW5rLSKCm9iOb2tGNzjekg7bp-W0L1QFy1V2TII0=s4800-w1200" alt="Easby Abbey" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPVZtsugMzietcC8hf7q2BqGX-UCpacp3KLveX7KrPfpZtX-EViuqRuVs-dqumLRTWyXFaxqmtZzKE7RLIlfw-RSeCZbwEEeKVToeCIaoDOn6eye-BvjXjZyA1bmUisLH_p-2_dlcwbqci9MA=s4800-w1200" alt="Easby Abbey photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnDoLwbtDZDV4d28sjA2V2zCJ4W85VfFe_1UHhzfmx-dlsP89tShehALE2q6bq4nJwJjc8mnQVXfnrzQGY55agsIvLv89E1IXzQrET7RCeJI6svhKEFx-91viRioLTuVw-HGA4JKr-T8S8A_o=s4800-w1200" alt="Easby Abbey photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOn6N2csZzjIdvhFm8EPM0WPd93K82IwLJ-O2xbtyUwNxqxlm6jgXiEH0RKFYsEuvKmdx5tvamCOWOuZJeZ7Ni_yt2cw8OtsJ7Q8xIRT2ybGusCdwEAQCJ8VFUSYPy2iGw4kwDqy_95XbW0eqk=s4800-w1200" alt="Easby Abbey photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMWojilOuHTJQCyPBcvEObAdl1IGwNJzL2kqPDyhFsdbat6g64oGJDewK_zU1dZxAVmzkhwYwmGba0T9zBBgdTY3KJ4DiTzVePQKsuXGLVmQ2gpHvRiLeeBchUahepVCEZ0BG1sZWv-2B6vTHI=s4800-w1200" alt="Easby Abbey photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Easby%20Abbey%20North%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

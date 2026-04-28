@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg/1280px-Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg" data-castle-name-g="Crayke Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg/1280px-Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg" data-castle-name-g="Crayke Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg/1280px-Crayke_Castle%2C_Hambledon%2C_North_Yorkshire.jpg" alt="Crayke Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNWxZt8c07rg74aCZ2KrW4-mnKXgAp56xyOnY4wSmHwPlJfaLkrWQ1TCiGYim-ZftsE-131UyawSfPso2qgLzJKyUk5JHgZeRKNHxchOo2kuItZnU9Z7PVhWR_9pYDk0zkHp_G6p_4qFQgKD5g=s4800-w1200" alt="Crayke Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPmIpVCc1DrjFwJlzcmsEnigk2Nf9URAD-V-A84Ia6AH6eJvNs4W8yi8P1jRFM8s9Dx33dUxonQxn0CQkFwTMrMEIId7gTW4X-mm8L5lm94ux8wT_qkYrQebi1qES6T_8zTDQhY6QYYCf2lww=s4800-w899" alt="Crayke Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNBGZ-cfJIHQRPyN8k4k7zceHrInzgqxMxkLtq5Zic8NOwGH-JZPCVo0qF6PWudv9dIcqdeZGZfBjW_YdBoOMzU-NKXotBoqjStpy0-EVTFoKlJ9u2PpTG5pzS1ogneaSQNi1seOwAGMg5V0P4=s4800-w1200" alt="Crayke Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGZcq6Xh0_4rLAwhN1_cnYtivRmpCDtPSWB9HAIDKD_3reU5aQERLtZxq6j91gKP_11uGscnVq9ZGBTe5rL4bdBxRXA_ssbWz5UIlHT807nNfW8hxWAzKbDMrLt7KaUt_0yRk4btu_m0MDE8M=s4800-w1200" alt="Crayke Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Paul Buckingham · CC BY-SA 2.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

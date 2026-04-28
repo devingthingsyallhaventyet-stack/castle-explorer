@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF41aMvBoFGOgpoxdeAbnxZIVMIPdE-1FYlkdCf2urBwrzVMia6p79g0hV2E30yP4agakn4b-rhz_NHL8MZOwZdWEMrkpvGdbI=s4800-w719" data-castle-name-g="Craig y Nos Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF41aMvBoFGOgpoxdeAbnxZIVMIPdE-1FYlkdCf2urBwrzVMia6p79g0hV2E30yP4agakn4b-rhz_NHL8MZOwZdWEMrkpvGdbI=s4800-w719" data-castle-name-g="Craig y Nos Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqF41aMvBoFGOgpoxdeAbnxZIVMIPdE-1FYlkdCf2urBwrzVMia6p79g0hV2E30yP4agakn4b-rhz_NHL8MZOwZdWEMrkpvGdbI=s4800-w719" alt="Craig y Nos Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMftC35FYibKDqjGM5sDoUH6au5rHVbrK4H1hprDMBHfUEeNW0i564vTiFSg4KF_TC4XfdJiG-uoNBPrJsBd408l1UqeBnMWkqgvC9RI3XE1Sp0ggAQLRPMElLNncdzG2FjLGaOY3lozw=s4800-w1200" alt="Craig y Nos Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPLCCVGk6Q8HrQ5rOx4Obd9tFd5SOYSOQByVZXnDqA8V1wpmYSJ5EtE0oYb4jdwTUgYlufiW1rTZwXnrKjjh6GuAW7Zy1u5XjOdacRf9qidkQ3Tw0eTQf4ppWIZolGjmNiEgoY2IqVSYzJgSYc=s4800-w1200" alt="Craig y Nos Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM43gMD22jHlfwBg_rAdkpJLVQAvRChJin5pkUfrOgwQOuTo2ELUPW_IMH8B-GHipu8IGO9alUvoSHD_h2W-935gccGQXN8Fwtd7_4Z2HvBap6kxQE9OMEGpsmbswUxVdD7_8TkT7rmTOes=s4800-w1200" alt="Craig y Nos Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPbRXkf6mPgbEzdcDZPU-9tZbJtpByqNEQ6RwjvFc8oHn7LujHi2tuZmb-I0f0Ixe5IEGH_Lzxhu0YEZg47dUfI6QjrladWY8uLZSN-sYy84JimGdldYMTBKI0vihSKcKVYXwcNgXCHRcRaoA=s4800-w1200" alt="Craig y Nos Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Craig%20y%20Nos%20Castle%20Powys" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

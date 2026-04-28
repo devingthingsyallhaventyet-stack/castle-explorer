@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/St_Mawes_Castle_across_from_Falmouth.jpg/1280px-St_Mawes_Castle_across_from_Falmouth.jpg" data-castle-name-g="St Mawes Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/St_Mawes_Castle_across_from_Falmouth.jpg/1280px-St_Mawes_Castle_across_from_Falmouth.jpg" data-castle-name-g="St Mawes Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/St_Mawes_Castle_across_from_Falmouth.jpg/1280px-St_Mawes_Castle_across_from_Falmouth.jpg" alt="St Mawes Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMk_sKdYu9ufFHnB5NbPE4xbRlCxk2WOrFTenrAX2AKw0CVd5M38uLZbkno7t3eRSozN-o7qH5_7QKpqU_7NgfYE3nEoxP7CTJ1JEnodLJeh3RiEWstudBqlY6022HA3i4IkK0ms6tiC4tpjA=s4800-w1200" alt="St Mawes Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9KaoWqQT_6bk5UFDseoyzHGRTXzEzdVnoRb1sWLJWwLWTeCd5LqkLzLu_edaXwUuFgi3VYfZqZW4Wjm9mRvtC9ATvJ0Ckw6aMyvGKQIVbTaPhoK0rOSnzUsS4FJ71VoRMmLcetTcKYa9p0gsvx1PxIw=s4800-w1200" alt="St Mawes Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOPUBUh7KZs_6jn8XHCEGhyxIwDlKrsi1rxPFfRs57zEM0d9PnSE1uuKWnU-oPLYk96UAWKhU9jLBWr_dfjf8xPeXckXVm-mlzjuWgK4jveOIyxkUpAQeLGXli_j7WAWNL1B-CjWTFdYObJxA=s4800-w1200" alt="St Mawes Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOEaCcJJ66K65oXBmIaV3jxmtzNNmLRjXvCd05Ah-1bfSi9ao9qQjGzZHhc4P_9SzsIjqc2DmQQeQ4bDA95MaTZpbCYqgIyZJ71sgyUH08YoidTsrBZ1XTHNmaLUsm1kA5XHlABjoiJ_a7Q=s4800-w1200" alt="St Mawes Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Kernow Skies · CC BY-SA 3.0</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqG4WUmXP0QKtDyz-4Z2iqEQkA5UeB-UDyf7ffw4KzQfbMyIKOfzizxOvAabHaZXbT4D0eXtcvwt7h0pj8PreuC0hO7E_ZNmEOw=s4800-w1124" data-castle-name-g="Appleby Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqG4WUmXP0QKtDyz-4Z2iqEQkA5UeB-UDyf7ffw4KzQfbMyIKOfzizxOvAabHaZXbT4D0eXtcvwt7h0pj8PreuC0hO7E_ZNmEOw=s4800-w1124" data-castle-name-g="Appleby Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqG4WUmXP0QKtDyz-4Z2iqEQkA5UeB-UDyf7ffw4KzQfbMyIKOfzizxOvAabHaZXbT4D0eXtcvwt7h0pj8PreuC0hO7E_ZNmEOw=s4800-w1124" alt="Appleby Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqGzsB_PDpbCD9BHGkjopEdB7qNMz21UkuLy4MbBLhXuGR1RUleMe0V2RSi34C7dmIuZCaPxyOHBCmxGYA0mZqVqKZ4yU4J9bAY=s4800-w1200" alt="Appleby Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/places/ANXAkqFB2wCBEDB-wga99uRzRivAD54NNstMsvTFHgr0LzDIi4n2zamT0yiLo9brmDimjB9kesIrZQTQ3znEJsgzJ3C5L9XU0-zJbZM=s4800-w1200" alt="Appleby Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqESzax5qvh-hq0VZL6SbFPsqlH0ezIwAVDdn3ieRjcvt1N-DTT_nrHewYmc67Y69SDVloz6yTu_FBQbXDuKoUmkcLLgvzBMKbM=s4800-w1200" alt="Appleby Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqHE9D1lQkXKjpAiIJpZTvltwe4InfAdbQwLe2wWQgIIXRENOCqRY3g1W5D1-Ikjpxn2SoMDv30zUvzp20ANzXkkLrYa9d8RU3g=s4800-w1200" alt="Appleby Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Appleby%20Castle%20Cumbria" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9YKSk6sumsDOd2v5yA2ZshM4kZR2_U8RUf3nnXrjQTrwKK5dSIXgEMFxTTRn_GFGlNP4hAm9yx680z846cNgWJDnSl2hoes7Bc4j0Go0Wciuuc3e4tWnU04zt1rxJWOUjgX5gHu0fx0D2P_0=s4800-w1200" data-castle-name-g="Tibbers Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9YKSk6sumsDOd2v5yA2ZshM4kZR2_U8RUf3nnXrjQTrwKK5dSIXgEMFxTTRn_GFGlNP4hAm9yx680z846cNgWJDnSl2hoes7Bc4j0Go0Wciuuc3e4tWnU04zt1rxJWOUjgX5gHu0fx0D2P_0=s4800-w1200" data-castle-name-g="Tibbers Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP9YKSk6sumsDOd2v5yA2ZshM4kZR2_U8RUf3nnXrjQTrwKK5dSIXgEMFxTTRn_GFGlNP4hAm9yx680z846cNgWJDnSl2hoes7Bc4j0Go0Wciuuc3e4tWnU04zt1rxJWOUjgX5gHu0fx0D2P_0=s4800-w1200" alt="Tibbers Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4aXeF4NR8EI-FujUN1XalSCMJS-avIrs1ZSBxXDsV8e7E5Q4xwaPigc3_UjAw6Bai34woyuSksFaoqvjpUvIGmhPe69ehx97lgZTQ6BrnXNAb9C6ZO-kCpIatijZpx06_FrDVvsonibkTXpM=s4800-w1200" alt="Tibbers Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNDZQY1neFhXXThUhKFmDhiT3etDo6ed8opDkkB0Zzb_KwdUCrb4DhCpbs0gBQ2k8tgKWKuTSISZah6SFdxvEyGOdgnlLCaxQf0L-yfIod0zkBvoGuXELVeZ4SUl2Lz-yZXlOIATvr2jTLEtAw=s4800-w1200" alt="Tibbers Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJONzoB4g2vPH80rYS4g6ZdKU5PW7nWQJqc_tD0rnK-RkypSwj2Syogm8pv4QRlIP1MxGYJAotNiOK-Kc8TGxkb0VEV_NG43LN6wygaXd4mjO88-nq9rfVNt670hW230u894lut80M5Dtf=s4800-w1200" alt="Tibbers Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPl9_0ZVjfCyajXRfw7rAqnIpfQ-pugFsGl4uDA9iepAENnhJ_S_EK4Z92hz-WUYEKhIWqc5xvL9LPPnCkVXpSzI41Z4tpW-s2Nb1C5cnEVc9J8Y5R5WRLYgikQmyvuphVEDJRi_Glg6yJ53Q=s4800-w1200" alt="Tibbers Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Tibbers%20Castle%20Dumfries%20and%20Galloway" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

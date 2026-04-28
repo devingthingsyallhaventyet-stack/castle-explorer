@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtwN9a2Zz3mVZ6zgO7hb2orTPckcW0Rki50VlBvqOLBP_aamfeCXtml_po0Feh_9OpzdDhQhLFjf6MBoFoypa7mdYC2DV9k-Dy1ef9pTFV0tqm5X8xcyBodln9XP1cBjlVLs3G_9EVoxaBTg=s4800-w1200" data-castle-name-g="Castle Moil">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtwN9a2Zz3mVZ6zgO7hb2orTPckcW0Rki50VlBvqOLBP_aamfeCXtml_po0Feh_9OpzdDhQhLFjf6MBoFoypa7mdYC2DV9k-Dy1ef9pTFV0tqm5X8xcyBodln9XP1cBjlVLs3G_9EVoxaBTg=s4800-w1200" data-castle-name-g="Castle Moil" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMtwN9a2Zz3mVZ6zgO7hb2orTPckcW0Rki50VlBvqOLBP_aamfeCXtml_po0Feh_9OpzdDhQhLFjf6MBoFoypa7mdYC2DV9k-Dy1ef9pTFV0tqm5X8xcyBodln9XP1cBjlVLs3G_9EVoxaBTg=s4800-w1200" alt="Castle Moil" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPtyY-MS922hoqshd_ZNw-OW4OcG3s5zYfSTpaXrtif_B0uYEopH5lDQvERWzxgyv_hebw6uDE9PZ-r-csWn-5KhLlM5wt9L8a_HIcxt7tdNczxiwls-YWGzmN_C8lTEySEEVGPbrfHnSwwdw=s4800-w1200" alt="Castle Moil photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNF5JfWNRHGKNiFmrdk6eJCHD0gEjPO1Nv8cBPiwvtV6yUUsor1TXe8a2LllH-jgDx5L1niQjdWXSvIiboDVJuwwW6aYvybzrHacxK8L3UVesiKoJPze3p5U2pS7nByBEFk5P6MYe5rpxKviA=s4800-w1200" alt="Castle Moil photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMnAMJ8YDRkTKKQOq26dTiseI2gQXWE-DQvrOiuHErW1dIpqwBef-meAGzhhbNlmGVgPvJtPac6aQfu_06HGtAL-uIJlecvKSV-6yMO-1YGqlgK_s_-awsa8XmL3p0ewX6zyDLy--GOe7N7=s4800-w1200" alt="Castle Moil photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNolV-dzPRl9oISIN6RWp6m-9Pgf4his7byWKT7uisL_fsVmSO0TAzgiqL3kPQdjJ_PQ6ZbRGy7zD-bCv_UzmyzkQfLHSKcUDO2piUeuPKl25oC1-bMoNCer-G19atSKOWoODgE3zXEdaTKzIs=s4800-w1200" alt="Castle Moil photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Castle%20Moil%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

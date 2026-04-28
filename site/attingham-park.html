@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4m-ZKjXNP5AE2UQUj796HyqE9O-eJlrJvcmZ6trIKUjjF1eI2WbimZueTWHXGQ2ioZ8e_s4jaX7xC-gxhcod2KCFrenrtxMcvwvdphu6zgj6vdUcrS9NWkWi-LQgBAzmvI8_HwzZRMu_x0As=s4800-w1200" data-castle-name-g="Attingham Park">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4m-ZKjXNP5AE2UQUj796HyqE9O-eJlrJvcmZ6trIKUjjF1eI2WbimZueTWHXGQ2ioZ8e_s4jaX7xC-gxhcod2KCFrenrtxMcvwvdphu6zgj6vdUcrS9NWkWi-LQgBAzmvI8_HwzZRMu_x0As=s4800-w1200" data-castle-name-g="Attingham Park" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP4m-ZKjXNP5AE2UQUj796HyqE9O-eJlrJvcmZ6trIKUjjF1eI2WbimZueTWHXGQ2ioZ8e_s4jaX7xC-gxhcod2KCFrenrtxMcvwvdphu6zgj6vdUcrS9NWkWi-LQgBAzmvI8_HwzZRMu_x0As=s4800-w1200" alt="Attingham Park" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOg19HepSpsZbE7lc_Ijm4jmUnPfytyR-uHp7fnwTLhKCLC89PvJZnaGu9Tox4qojLl3PEwyAoHPxbSYdwSecSsLLbMnfqiS44Doua8IfZ5wIZs9vom94QvPebO4g2X9jkwElOe-foziNRJ6Q=s4800-w1200" alt="Attingham Park photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMi12ldqmkS_P96Fej5QdFVGHLe9RYY8wxcJ-RfbfY037vnBl-8TYmHMxb26JnjuSBcBZAzao2ZtrHHL4nVdFSzhHwBOP-2Q2DDcPX04b8PP-WWHeSRACK4iL4fBxqkhSLVSDWllkgOaqXSde3nq74u=s4800-w1200" alt="Attingham Park photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHzjiBjjWwW0MxskUxA0wYpn66O0FfQnoygJq6J4vXeHZJaEWHLjnk7H2-cNAoerzDHOmLxtQzgrMYV_4pbLttnLPQmi6DS36XeYJcCRiMk_SzhPf8ry8lD5o_MRoZpljpuRyOb_q-AqguYdM=s4800-w1200" alt="Attingham Park photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPp0lva5gJCN_hezmn9H_MAfpmLw5bSEEgtV23dPMPZrQhpVyZ68JJZqeiHrIlS3H63LAI8SglzWtrloDarGVBIWHcHSTmIccc-73-XbAZW7OMn-PAybm_jBYzalmxEuGF5A_6_xY-OrLq2Ijs=s4800-w1200" alt="Attingham Park photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Attingham%20Park%20Shropshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUL9ngXCH1KITGFpklvpiyGnI1DmmmWDOEvtk18_zGsyuTKnSQ2xdNBOWDWPBKZ6K3ollHLPU35z2T9boXKODiZO4ND_qU5NX2cMBS2Lo0XHizTNXDabkEzD-jmtPi31c73fEEL_Av4ggY5g=s4800-w1200" data-castle-name-g="Monmouth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUL9ngXCH1KITGFpklvpiyGnI1DmmmWDOEvtk18_zGsyuTKnSQ2xdNBOWDWPBKZ6K3ollHLPU35z2T9boXKODiZO4ND_qU5NX2cMBS2Lo0XHizTNXDabkEzD-jmtPi31c73fEEL_Av4ggY5g=s4800-w1200" data-castle-name-g="Monmouth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPUL9ngXCH1KITGFpklvpiyGnI1DmmmWDOEvtk18_zGsyuTKnSQ2xdNBOWDWPBKZ6K3ollHLPU35z2T9boXKODiZO4ND_qU5NX2cMBS2Lo0XHizTNXDabkEzD-jmtPi31c73fEEL_Av4ggY5g=s4800-w1200" alt="Monmouth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOoeW4kSQrQHomKfjuIUJsqUN5kikPwAwCspA_U5HdG4tKl0m9_1AB2EI0GakPFC8XgzJ5Dng-eLEvCmOrpP76p8WxEih_tyE3bfuG66LIZw0J7eRwhBZ2pLkzjKzmVNMHaq-ar0WnjjbYNOA=s4800-w1200" alt="Monmouth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM7bXf2HQ57isMWiv1XeHie7CCDlD37AwFcTvJ1vb2m53YuEdj5TIjb9eBK7_kIgacPY6IJaupOp3R_fTWFVYSU4yX39RE-T9GyjLqA_1Ld1cZxLKjOATCdBTsw1549CIxHznjUKctTUOznxQ=s4800-w1200" alt="Monmouth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOr60J8-kObO31mI5bM0q_EC9q_OhcDjDOJtbOVrtUO2eppFh8QdiGnKhxrgHzm5r3UGHqClc_9myjZ3Iqqf2tx9DJAQB3SjGruY8hnLAWiGk2j9q-XsThzrF4LbdxvjYTA_IpwYd6_2M3X_A=s4800-w1200" alt="Monmouth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPidq98QL_j0TOH-dJDEDNcPWMH5TL0mgri2tmLjMkkTWc0vbO8kNQEpXxj89CfIBDwjd4Ad0ipsXUBrSYHL5UJTqJvGNpGgZ-O_B5ZEX5s7Tk0zMlaYFgaRx1Lv4InyBC-O_nlcFHxLgaUXw=s4800-w1200" alt="Monmouth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Monmouth%20Castle%20Monmouthshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

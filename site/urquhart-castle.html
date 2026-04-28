@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgrjRB755hYUqen825H0B2svW7qfQGBzDiTsBsoc9IoiPnkkiCOcxARbB70IqAncjLqFKrdoVdNjbHY3APPwNjIKwma0cmzaM35-3IOw1DoZJejgR5bHiwyWPQVSk3YxSFHp4L5OolsTOuxg=s4800-w1080" data-castle-name-g="Urquhart Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgrjRB755hYUqen825H0B2svW7qfQGBzDiTsBsoc9IoiPnkkiCOcxARbB70IqAncjLqFKrdoVdNjbHY3APPwNjIKwma0cmzaM35-3IOw1DoZJejgR5bHiwyWPQVSk3YxSFHp4L5OolsTOuxg=s4800-w1080" data-castle-name-g="Urquhart Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNgrjRB755hYUqen825H0B2svW7qfQGBzDiTsBsoc9IoiPnkkiCOcxARbB70IqAncjLqFKrdoVdNjbHY3APPwNjIKwma0cmzaM35-3IOw1DoZJejgR5bHiwyWPQVSk3YxSFHp4L5OolsTOuxg=s4800-w1080" alt="Urquhart Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMdAGBgLloBAu5nG92Ik6PtWOAvB3vSOrttk-0NdQzHLgnOAePbSonV3KApOT8Y7hQCNqqZ2Vtwi_-culy_uuF4YluA5b0vlGGHuX-FKHEUoWRhuHgroAj_K4x46mpRUwMstF_sAG877XfYVvg=s4800-w1200" alt="Urquhart Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOiCkIYfYmA1V5_X2GIoisLBVq5i8emSo6GfNkUSqy3qZow6L6vbXHIhp8uXLjIejT8XALFO5I9G1YqVJPTD3oWJ5f3-wq0R4-eEY0D29tMFRIPOA3dgQOYZyLjuNICnb-RRXJgeow3NoFwrbU=s4800-w1200" alt="Urquhart Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMabJAoAB6p-etLtp7gnUHozIqY5g0dwGtK0BnEFKBk1X0e_lx9Gqdp-uMoaqZOpbvRtTOaRtzffu9yN4ggAK0VbkOcXc4qDnZvysWp3k1ATA62WWq0YEtaB6Y6XD_jUP6u50SINWsi2EPHaAU=s4800-w1200" alt="Urquhart Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPIY1Q_W3aKan1PkRHPdwKysk0F7m0q20OPCw8ASrdAMMjZcYvlOUvCB3-jeuPjA7yuwu6Bl4JPr5VQblMEvqsFdLGJ9N4vjYddiezO9VLQOZgx0Nb0_FSMEziGhbLm782pOKkIjS229xkU=s4800-w1200" alt="Urquhart Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Urquhart%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

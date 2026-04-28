@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF-HcK6kCvQ0k43fHD3V-l_kqiB4Tu2iCewj0xk-y779JP-sZvVJtVGh23R38zhSp4LuN_E35Ut6ABUVWWRTtCstxPgOFUn1Os=s4800-w768" data-castle-name-g="Craignethan Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqF-HcK6kCvQ0k43fHD3V-l_kqiB4Tu2iCewj0xk-y779JP-sZvVJtVGh23R38zhSp4LuN_E35Ut6ABUVWWRTtCstxPgOFUn1Os=s4800-w768" data-castle-name-g="Craignethan Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqF-HcK6kCvQ0k43fHD3V-l_kqiB4Tu2iCewj0xk-y779JP-sZvVJtVGh23R38zhSp4LuN_E35Ut6ABUVWWRTtCstxPgOFUn1Os=s4800-w768" alt="Craignethan Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMShX8R1_eWW5CSGNXvCvSUVsC3zuC1qcpw03kT_ewWtp3w-wuN0E61Xjx_KUxo-889RfakIGxg1sWJaYryLHfXnW9IKzzd2INC4pHRdHuS7yGlbqdBCqSTG0Fq0sIVC3_esy9kr0trpndx0w=s4800-w1200" alt="Craignethan Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNjraovKbzR5hyICEg5boStzMcgOfGaDtTYIJZG8_wNvK0M4r3hiPxSYnhbs5pPoUL_eOUgB2iN8-Ii1-DD65nKxty4Fgl6sQItFnYLzd_11ipACo5uXFJHAAA8RavKPYiqCjmVVl8QyY7iGT6A6f2fdw=s4800-w1200" alt="Craignethan Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNhlPsk9B2IomUQ5AqzRMTTkRheN6zbB9il7RhItSqes0koUBYRp5dd1LkmK01yuBm-cWXit83Mk2J_iwC6izCwi6z5vTL2nuj9F1v6A_UX-2HDwNVxMjCRjo22DCKHEUUf8Kp5w7GYITqJtw8=s4800-w1200" alt="Craignethan Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPlxJvKXhmxYH0EonUXkWh3tQuNNn0N1WhlTcfjQbzfGnBX8paJxuoBakyFm3KOl4h-L0IwEBTKXa8lJQ00D_xSHONxnKy0zgl54GJY2Nz1mKTMCqDo-EIeXV5J2gh4Z0nbG482SW1aGnk8u0M=s4800-w1200" alt="Craignethan Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Craignethan%20Castle%20South%20Lanarkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

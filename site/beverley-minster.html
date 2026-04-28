@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3zmezduWWH_OwUIrSftAxaa6yK6oc6DRy-a_M4k_CY6oyujocIVf213TuRaX6ThYvEFTbV0osgcDyolTVJsUSNMt--hSKeqQZlaS6nCc1uATC-4Nq9iPhcSJ7pfo4Z3sVIlzEmHu93inz1g=s4800-w1200" data-castle-name-g="Beverley Minster">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3zmezduWWH_OwUIrSftAxaa6yK6oc6DRy-a_M4k_CY6oyujocIVf213TuRaX6ThYvEFTbV0osgcDyolTVJsUSNMt--hSKeqQZlaS6nCc1uATC-4Nq9iPhcSJ7pfo4Z3sVIlzEmHu93inz1g=s4800-w1200" data-castle-name-g="Beverley Minster" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM3zmezduWWH_OwUIrSftAxaa6yK6oc6DRy-a_M4k_CY6oyujocIVf213TuRaX6ThYvEFTbV0osgcDyolTVJsUSNMt--hSKeqQZlaS6nCc1uATC-4Nq9iPhcSJ7pfo4Z3sVIlzEmHu93inz1g=s4800-w1200" alt="Beverley Minster" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/places/ANXAkqHknS1f7aW7GEvxHDd3koufkFTJzoiWB2uMCK61lEsbw15-m37NnhUUDGyh6HzG63qUFuUVwyTAaPenXsHp4E2vyURap5exSmE=s4800-w1200" alt="Beverley Minster photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNuFK0UUhLhY330M5Jq3VAxo9-7-RNDR4wx6ZWD1A3BTWY6q8o2oJ-KzZ7ffDhCzqY7_7IPrs36VCNLPLCmLT2iELSO2ZOIuo9Xiyc_29wYE9p-3MlZrRKJYxHoJ6UTgNLYGp5SrLIthTokFDM=s4800-w1200" alt="Beverley Minster photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdU4K_GBJKqf7lYuk7SYfUjhEQZinoIQKz9iMsj90ayvd_ZGc9HEj6kQfF9YwVh06pvlCa_2W6gArqAHufZdHTy4FW0Af96Pk2pOMwJta6-r1lHZRroPgtmG2qoeeJn8paKktQSNemse58AQ=s4800-w1200" alt="Beverley Minster photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMstuT_DacZfQ9AuRBemPAsHExXCZKqrX9fw-g5pUmzfQcSGjBy9NNw-DP1tvrOGzGk8Su_UneSQ3-6Z4FfjPqMhaCHpa6UtD7vwZ9sMO0_dCJBpoEg-OQE_5Z0fAb4XuFXSNcj5hZ69K2daA=s4800-w1200" alt="Beverley Minster photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Beverley%20Minster%20Yorkshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

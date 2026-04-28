@@ -295,10 +295,10 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg/1280px-Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg" data-castle-name-g="Athcarne Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg/1280px-Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg" data-castle-name-g="Athcarne Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg/1280px-Athcarne_Castle%2C_Co._Meath_-_geograph.org.uk_-_744437.jpg" alt="Athcarne Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMLMQWn8rHkEETCPbpWihtYQT4oDHCc2zYdiGDQukMfPJ89SeHV5PknVyQxN5qhrLUiAllaNLx4Xx8ypLSmYqPgMztIcjKYLI-QEaYxwt2szJa5bqSi2e5sXH2zDd4plL51F0R35lm38xijUQ=s4800-w1200" alt="Athcarne Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO4WPdY79YKiRfe-35OCGwom5MqoXBmDdqHtU2ZmAYIueT-Ozh7YTwrua2VbXf81_lC34zxU4brDmBhXGEB4l-9me3_HPSuG6v04dHkRi7gParK_W6WIV8-DVtW7gZBjKn9q2XgVl5Of6RCQag=s4800-w1200" alt="Athcarne Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
 <div class="g-side" id="gSide3"></div>
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

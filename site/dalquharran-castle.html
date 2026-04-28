@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2ZDFMzEBgkk2i0vIQtQ4F8ud-h1RTIEp3QYEFI1QQ1NnQiJv3ZFr1TWgM1i4tTYmEJKzEx37vSpC2JlBdhA8_kwIcfhopn49JNxcD49XjfFcMJ6mtJYLleNOlUg2x-9Ll_MTFIQcDnxiPjyjjQMgf6w=s4800-w1200" data-castle-name-g="Dalquharran Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2ZDFMzEBgkk2i0vIQtQ4F8ud-h1RTIEp3QYEFI1QQ1NnQiJv3ZFr1TWgM1i4tTYmEJKzEx37vSpC2JlBdhA8_kwIcfhopn49JNxcD49XjfFcMJ6mtJYLleNOlUg2x-9Ll_MTFIQcDnxiPjyjjQMgf6w=s4800-w1200" data-castle-name-g="Dalquharran Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN2ZDFMzEBgkk2i0vIQtQ4F8ud-h1RTIEp3QYEFI1QQ1NnQiJv3ZFr1TWgM1i4tTYmEJKzEx37vSpC2JlBdhA8_kwIcfhopn49JNxcD49XjfFcMJ6mtJYLleNOlUg2x-9Ll_MTFIQcDnxiPjyjjQMgf6w=s4800-w1200" alt="Dalquharran Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOXoAkvcjubSm8RtfgHqiVdf2G52j-JrwLFtflQIT4qjFg9Um0Oi-X9arn-dLfogCBXM3C5fYd8_2gLKBMoqZ1xnucFavc5Fzdc1TNak-bPlGl8TLre04vYgPKW2RZOvm2ESx1CKPEPzjCH4g=s4800-w1200" alt="Dalquharran Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPm74boGQBl13Z8AsLM7y5Btn2bFdC9VX3GNSDRNKGJcWISUON2lOeccW2Xr08DMqHJxLwD1LBz0zPOuZh7LAKACRk9L0MybgSAjljGKTmFjnMUtsv8zRzJHBimZjhYkrKOOsSvJy42P9Q7vxI=s4800-w1200" alt="Dalquharran Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMJ2Js_9JjSgh1DpG1tRDHs4BNxS7CMn5GtoX5IoAQGQeN1M6c6aurykfJxGeHSnrRHvgCIulwIIZYs1yDaDXRtIwAqUE56RPAA9G0TNeCJ6r_8ocIjtx7UfUxDnqnTsvFx3qPj_gmR4X24DaU4LwMN=s4800-w1200" alt="Dalquharran Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO05dLnPbTr0ysfiEmE_K0GAJDAM0fyszfOvky-WunkEc-4L58EX0gCPWl9xbGzskfpEYKVnwkKqMuhkNLrx45w493tWoWQwpez7NJAGZdvPpZvK0m3gOQ3QAyHlqflVFhhIOfCYfQpuEsHlKnseGwuqQ=s4800-w1200" alt="Dalquharran Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dalquharran%20Castle%20South%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

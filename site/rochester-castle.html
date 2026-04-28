@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHF4caUS3uBZUZVafZg6_yCr2vAfiiHQGME-SXfrOKR7pcUMdnaGT6zFQDXrxg5nHp6fywDOqAVQMM14gDam-t6WnMqbDJZHaqwryW7FyC5HFVxbRAysF-VdXeqzDRjl-mY3789T2kliBH4wA=s4800-w863" data-castle-name-g="Rochester Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHF4caUS3uBZUZVafZg6_yCr2vAfiiHQGME-SXfrOKR7pcUMdnaGT6zFQDXrxg5nHp6fywDOqAVQMM14gDam-t6WnMqbDJZHaqwryW7FyC5HFVxbRAysF-VdXeqzDRjl-mY3789T2kliBH4wA=s4800-w863" data-castle-name-g="Rochester Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHF4caUS3uBZUZVafZg6_yCr2vAfiiHQGME-SXfrOKR7pcUMdnaGT6zFQDXrxg5nHp6fywDOqAVQMM14gDam-t6WnMqbDJZHaqwryW7FyC5HFVxbRAysF-VdXeqzDRjl-mY3789T2kliBH4wA=s4800-w863" alt="Rochester Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO2mt9ExELj4Ye4qQKcO7jFuP09JN3OOGpNueeRnsPZydipOayxyG03U1VgUcZKnW1v42gXhhLk45K0BfkiP8QYpKU35CSqYjq2QjVg7nvfRCuElaFHnjh16f70zGzmBHlqUTPY80h57TS8jo962-zb=s4800-w1200" alt="Rochester Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP2UCzkoaOtYQ093nJoIKFW-VAjQYhudKDuu0O2D0QgHNT6RxEri53qaerhB-0oM4DawZkYeXcGp0aVAdCmqLEZacXqy0T5rdcNmKTs1lO9jX_h2zTiTbzjMx7K-a4eDh4B8AHd1YwhwBMU6g=s4800-w1200" alt="Rochester Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFdaBgF5QSIxYv5VfHDFsGEzs-qiw55-tRBd_0DzuuN1a0TbvE_gsVQbdISVmdnpl_0BDhz_Upt9pKrBjgjODcSkuc7bVreDI_WVUJV1Czwa8u7_3rtdOyGPZINfYXJ7wZfuSP5lf7Sultig=s4800-w1200" alt="Rochester Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOwC6dLxAwvglYjRUjI8jHw-W-1r5nPDdiLYgi584byWJ0WQH6OiZfWvgI7uo0UEhaNOv0GBpdk6fcJt2Hmomlcy0lZbxdtbYuh2NKkaO8rW7w89IMbkNr81YU7ynM7EY1uXdg9XMNNxAr0b9Y=s4800-w1028" alt="Rochester Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rochester%20Castle%20Kent" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

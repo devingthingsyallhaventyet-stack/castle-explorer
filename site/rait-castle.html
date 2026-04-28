@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsA5Zmn8tQVH--IhF7GTZ2JxH3NZQlCa7m486y2rWlzONRlO-sswZ510vF4mWANtFI6YH8xwxaMOWfw2P5jYKzxt2e568DGPPd0KqlQqEmXwsNo3uuxAWX4MZh1TCAohUGh7at_muEQjqJWLBGhouXFw=s4800-w1200" data-castle-name-g="Rait Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsA5Zmn8tQVH--IhF7GTZ2JxH3NZQlCa7m486y2rWlzONRlO-sswZ510vF4mWANtFI6YH8xwxaMOWfw2P5jYKzxt2e568DGPPd0KqlQqEmXwsNo3uuxAWX4MZh1TCAohUGh7at_muEQjqJWLBGhouXFw=s4800-w1200" data-castle-name-g="Rait Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMsA5Zmn8tQVH--IhF7GTZ2JxH3NZQlCa7m486y2rWlzONRlO-sswZ510vF4mWANtFI6YH8xwxaMOWfw2P5jYKzxt2e568DGPPd0KqlQqEmXwsNo3uuxAWX4MZh1TCAohUGh7at_muEQjqJWLBGhouXFw=s4800-w1200" alt="Rait Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNJqV4cMUrla2STHmkI069_9sAT2Ji8TWS2c1T6DvJoE1f0o1cxGHOZFZr9MVlacGgd1qmFb1Q45iVqhDWfvMir9xEtHN7f1l4BQrUbEe3FSMgdc8tUUbQeI8HDORCdBGc0jgcTlIFLn3haapWm0HULPQ=s4800-w1200" alt="Rait Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMG9VbFKay4CQD-bZgGCpy8-Md44Q2OTaHo9eydGqfqCqb8YY3tP-Hy8TPi-T5JHDSOxkL_X_idQW-yPzNaIAHNqq452kRtuO5zkLFqXmVZhGByVTJ8MraWgmfCJDrDxGfvt5IFLBiF0k714c6bjvSk8w=s4800-w1200" alt="Rait Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMg8RI4msJuuRicsTGtlprrrC6UhmtgsNWogS3jrYi4kJWhU7ShDzGKJC38z9VDmCUoNsq_7ugVYEBGd8rkcOYBAFPQyGHcHhiva45L3dhwdiMCac5hkweb1dBEaASUqAnfNxIjztAN2NIB20oBc4e0wQ=s4800-w1200" alt="Rait Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPAShIYOqoMEDJvnqIZf40Rc4-iw2TwbSJINeoCH8unXN9yeBs7Iguzy0S83x1pTENdUisKrer9-nUvja4CMMW6kqj185wIwK9txLDvmz4T8wbtT86aZ9oFZlYzhg_lkecxLU4TQYc0vb-5W2smyZ2I7A=s4800-w1200" alt="Rait Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Rait%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

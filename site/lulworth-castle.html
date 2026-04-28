@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lulworth_Castle_%281937%29.jpg/1280px-Lulworth_Castle_%281937%29.jpg" data-castle-name-g="Lulworth Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lulworth_Castle_%281937%29.jpg/1280px-Lulworth_Castle_%281937%29.jpg" data-castle-name-g="Lulworth Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lulworth_Castle_%281937%29.jpg/1280px-Lulworth_Castle_%281937%29.jpg" alt="Lulworth Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMUlrS0lC1SxLNGJFwdIHMk4w0qoA4qXMZGOkj_nSOXb_Ad-XvYL7kW29G5-vS72WdDkygRBGzqOWdocW0lwBdkSQRbDxnIUaPYfv5P4C6t8HdHVeYbUSnaTlPnTmV7UAc25dasCuriaqtozQ=s4800-w1200" alt="Lulworth Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMlzGJ_eLl1-wikzu5ASSbYU9oR_o3qyRJAs-Ncue2Ls6v69ft2hkRY31hSIX-SyO1NyVic11UypXj354kjutDzV5AR-jGU2548uzAYwmgnuezsc34Tmx-knk7gEzwF7KHsL34NPsawD9GnlQ=s4800-w1200" alt="Lulworth Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPH19BUJU6aLU9H_K3WOKQVarD4r1AGKBqlaUzjuJh3curdTVf2MRid4rVOsTXE7VOFxA3OFdMupM5ShJmY9rVmceDAN6rcZ_pf2gLnEefzlAGe2IbHxANt_LYPRzRZM5FsXuada-ADo7hE1rI=s4800-w1200" alt="Lulworth Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOWt09E_AM28tZLWRUiEHvQMho3jls_oCMyxdRLfx_q1wD68qjNrcUMVNb9mivUKgiUaHBQtTF8nL95zSBdw4AdjYnpD0-iGPzr3seLRxsQuVXYtPYcRfqeXfD0koEebNeYSuWTzAlInYNR=s4800-w1200" alt="Lulworth Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 Nilfanion · CC BY-SA 4.0</span></div>
@@ -401,6 +401,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -417,7 +426,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

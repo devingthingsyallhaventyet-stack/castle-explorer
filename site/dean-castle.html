@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFhh6nFnUznwRQdfE7wZGkXX0_yufwpfrrBeUSYf9MPlz-Qf5sQtsRrSxQy0uYtryiFn8sBYj4xIV6ChfRR5ZYVzNKpZhUwq6A=s4800-w1000" data-castle-name-g="Dean Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/places/ANXAkqFhh6nFnUznwRQdfE7wZGkXX0_yufwpfrrBeUSYf9MPlz-Qf5sQtsRrSxQy0uYtryiFn8sBYj4xIV6ChfRR5ZYVzNKpZhUwq6A=s4800-w1000" data-castle-name-g="Dean Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/places/ANXAkqFhh6nFnUznwRQdfE7wZGkXX0_yufwpfrrBeUSYf9MPlz-Qf5sQtsRrSxQy0uYtryiFn8sBYj4xIV6ChfRR5ZYVzNKpZhUwq6A=s4800-w1000" alt="Dean Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM02q7UBmfPW135BJ0zj2iXJnQ1rJhyvvu1dWJFyAUo3lcVXwB_1I8zSL3OmsX9vNirFYoreiA6VCK75PqDoDeEiJBPwGCT5QfiO-QoLXt5Cv46iBYfxeuPgJO67UswgkSxt_Gb3gwOGZoJ05W2nhwM=s4800-w1200" alt="Dean Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyL44TmT69JF-OmnKHh9g43NeVqkTXfrdPOcJHV26Ai5zsx6hvSfoBgG28Ekn8ymhTcvE6d63mrqBLVxv_FiF195FtwzfgM_QlvL2rwxniyhoO9jzHJcbIWru_QxlUBD_HMZI8yIhKz4qrhg=s4800-w1200" alt="Dean Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOiGkY6qeWXwx9EA1CBOZlfF2gWtZE2pyDboWhPiuQPE-Ez4QhlconAHS1sV8gRYrPS4JsXJDlOMTkSnblL4uV5oN8RUDYpP1XkBj7wMJ8NiDUWpSCmZmVCjsHuzBlECPXQFUzNWKQK-Xdqg3PKXsQRbA=s4800-w1200" alt="Dean Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNrGxa9ud-QoVWrlPx5K4cSpbSfZmJf4f0QY43JItr_E4vqRVT93pGZAo-9CTqyQdkEmZ3HUS5p5ic3K9M_7kzhjjzYNQUMu1WbT2iBDxrX_7OcDSlFPwxrJ-bC3nfFyQJ8NMyNNX3b0XavWyI=s4800-w1200" alt="Dean Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Dean%20Castle%20East%20Ayrshire" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ConisheadPriory.JPG/1280px-ConisheadPriory.JPG" data-castle-name-g="Conishead Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ConisheadPriory.JPG/1280px-ConisheadPriory.JPG" data-castle-name-g="Conishead Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ConisheadPriory.JPG/1280px-ConisheadPriory.JPG" alt="Conishead Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPTIHeW2atdPAiy2ZztHpSbk-Fgd8rZwSHGB0ysnFinOLPV26X8N0KcMBeErWvbOVMSNw_OOeQtK2hdl6DdFFCIA2Ww1Ut53Ut1NPf1-9tsv5Cr7UdUUY7BrmZuLKIRVTJl4o9zpd0ShtrrRg=s4800-w1200" alt="Conishead Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP3U2AmTL-MyO3wRPm-00D1N8YMKchLCz2QHi2NzyMl-_oyIio_OBLlPHi3H_mPVRTFQTU2fOCwGTxLeCLyOo8fWNFYUjcJor78ceu9Lx8F3Lk7OjDWnd73b5ZXIkbOmR-DEFolqcjRpAuebb0=s4800-w1200" alt="Conishead Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOHKFyMmJtV7TEgLgOxrAWd04HwfZ_1eeeaxq50x7OoHrTCKL2aAvZ4MuuVZg2rKVDLhMTHKc-X_qZ0gdC5ZvpRXqi-gUaMtVvDydWK93wvp8jMkKKpcRkw6yekOC7XG6Dhda_dLU3cV3rom8Y=s4800-w1200" alt="Conishead Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPQ08zhfx-kNCvBdsN5kqmSYVxu_13edk0nCNPjYhQM0xfEZuSvjy3uqYFi_7C5t91d5AKavENhF1eusc8EstDVupIM9n2b47VYFXvMLgbIviAyDmedLyzpjPI8E4noseRAva-K8fzJ9RQTvg=s4800-w1200" alt="Conishead Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel">6 photos</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📷 JohnArmagh · Public domain</span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

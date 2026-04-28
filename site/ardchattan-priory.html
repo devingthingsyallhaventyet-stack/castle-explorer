@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHzVx7LG47wZ7RKE3gjUR7eBDWiMxxLzNWyB-C9kApCAt1PiaIA6tJsV7szN5KrgFxofW6fM_fyIqDI2J7iLdPKI6Tjc4zCgNA4auYlOtUnI5itaTLzBJUaOyo5U1bkCm-Vzs1vj0gHr24uQ=s4800-w1200" data-castle-name-g="Ardchattan Priory">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHzVx7LG47wZ7RKE3gjUR7eBDWiMxxLzNWyB-C9kApCAt1PiaIA6tJsV7szN5KrgFxofW6fM_fyIqDI2J7iLdPKI6Tjc4zCgNA4auYlOtUnI5itaTLzBJUaOyo5U1bkCm-Vzs1vj0gHr24uQ=s4800-w1200" data-castle-name-g="Ardchattan Priory" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPHzVx7LG47wZ7RKE3gjUR7eBDWiMxxLzNWyB-C9kApCAt1PiaIA6tJsV7szN5KrgFxofW6fM_fyIqDI2J7iLdPKI6Tjc4zCgNA4auYlOtUnI5itaTLzBJUaOyo5U1bkCm-Vzs1vj0gHr24uQ=s4800-w1200" alt="Ardchattan Priory" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOAJdiH6oKzJQSRJ_1zWm8rZ492SPhaGctvCru01bIltz09EMqK4w57sSzqq_94Ve7Tj_RrjxVJ3UiVAfkHqFv3EdNkAd5Adoy-DtPkCal6pZ6q8FoMsGZDbUpg9m_-_ZUSfQk0v5EKA4iCCA=s4800-w1200" alt="Ardchattan Priory photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO3BP77BD6SHKegPw4D5Prgjw2zg9SEFQj3Wff6AN8Wbng9aZf_pSGPdhyeIX23rIgSTZGIkUAkB1C6e4BRDqhmX6FpZ-xDKL38ArXlq3mmDnignPonuUyR1Xa3NNZy3epFdGEDZkUbh5dlZQ=s4800-w1200" alt="Ardchattan Priory photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMPUwfktlLARLCnPtUwhwef56tmRAZEkt1O-lWybyFcRM9XjArdkQwEG17KsDzuvaEHENRdwHZ2W1TdCR-kCdWY0KR8KDbRPNdlO5mLxBuN5k7w-Un8YNUu50qAN6hQBEBuQYz4QV53yLNXHQs=s4800-w1200" alt="Ardchattan Priory photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNTYkFpjHPZfuX5xsTRETBpvh9pXBWaEH4IHmocd0fjU6I66s_r3VPSOJKP2OGk-5F_va62beKchG_LAPFudear8Hqx4C0uduOCMe3Er3N5uIkQhJmCwg74tojeOjF3-pUsxZepN49OZUTD7hg=s4800-w1200" alt="Ardchattan Priory photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Ardchattan%20Priory%20Argyll%20and%20Bute" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

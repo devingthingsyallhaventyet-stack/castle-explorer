@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgIKggPKjAMau0_IS6RsZh5IadQXk94DNlhGUsp9UPFklp0aqXdHS5aHY3Non-YRsntSBMVgKMG-O3meq3y1jHzH4WwV9T8AeuQARrcT-3yHmmJVFKt7uiSU0jnKRs9npRzW0zvw__ZFNgkgc=s4800-w1200" data-castle-name-g="Weeting Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgIKggPKjAMau0_IS6RsZh5IadQXk94DNlhGUsp9UPFklp0aqXdHS5aHY3Non-YRsntSBMVgKMG-O3meq3y1jHzH4WwV9T8AeuQARrcT-3yHmmJVFKt7uiSU0jnKRs9npRzW0zvw__ZFNgkgc=s4800-w1200" data-castle-name-g="Weeting Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMgIKggPKjAMau0_IS6RsZh5IadQXk94DNlhGUsp9UPFklp0aqXdHS5aHY3Non-YRsntSBMVgKMG-O3meq3y1jHzH4WwV9T8AeuQARrcT-3yHmmJVFKt7uiSU0jnKRs9npRzW0zvw__ZFNgkgc=s4800-w1200" alt="Weeting Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN0AJ9dlYTnyXb_Fol3PZLYWHL8WGvjtSORgre4z2t1T0udtzgpELWpCmoBs5NBaSt8R9sc4r5gRCC5MwS9go6EA65T252dzzBwHJeqNr4NAURSo6WY6VVoZqfZ-zoxSOzRsCQOkhXR_MtuuA=s4800-w1200" alt="Weeting Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMM2aD2XTw_ua-H2ciO37Tqsdi-CKjhGfarKr9IM7a0lFjle-iIa32zwhwHz8csVzVhxucTKqeKp-s8OThyh9VRM6DpgLibxgsNyZTgz3XDgcM78AeIS8lRNkFNyVv0o2V1jRD-k3-jWq_izfoTOPj1TQ=s4800-w1200" alt="Weeting Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPJ4c35PxdFrFj7Qjw4pGdOdASutsAVTns3jBNl6WeAcyM_3BXrUEOf4Y2S297e5Eh3ywS0TsMWieG9Gl3MAFnDl0tFF4VAPzOhfIzINjTdwKvo71wKu-o60b5zJYXIIB5EUU5oUIutmrOiCxQ=s4800-w1200" alt="Weeting Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFjz6BjT1-jY4XfvNiSKGDqX9gwQJKv5MXy43YmSi8n6LLkWFpcDs4D2sNv6zyky4jLIQI5Tobn5p5ukqCVP3At8If97_rDpvraa39xGkr07H3gM3axx_vnHWzys-ncA3Q3WbEZabrSn7IGA=s4800-w1200" alt="Weeting Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Weeting%20Castle%20Norfolk" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

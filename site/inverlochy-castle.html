@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVC80H5GnzUgiuJB6Gl4HN9oiKYisRuXJmZN51L2vBA8IzuUVbVLI9MhKFKm5Lp_wdR_aG6hjxF1e7J9hxQERs4b5I6Zmuyxqh77mE034LGPIvYYInS8ducwre3z8ynazjo1OAHO7C_TDm42I=s4800-w1200" data-castle-name-g="Inverlochy Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVC80H5GnzUgiuJB6Gl4HN9oiKYisRuXJmZN51L2vBA8IzuUVbVLI9MhKFKm5Lp_wdR_aG6hjxF1e7J9hxQERs4b5I6Zmuyxqh77mE034LGPIvYYInS8ducwre3z8ynazjo1OAHO7C_TDm42I=s4800-w1200" data-castle-name-g="Inverlochy Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNVC80H5GnzUgiuJB6Gl4HN9oiKYisRuXJmZN51L2vBA8IzuUVbVLI9MhKFKm5Lp_wdR_aG6hjxF1e7J9hxQERs4b5I6Zmuyxqh77mE034LGPIvYYInS8ducwre3z8ynazjo1OAHO7C_TDm42I=s4800-w1200" alt="Inverlochy Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM_3xS5k2zDNgHeH0KJRG5slopADQLt45IvNRkhjT8p5S9IXgMwC3vs52WVQmyfLagRAsdtRSkIhBZG6427MA0nSkL1UBFiBgOTYJNGjsj06b2-3EG0DVOdKMkoT-vxmLcmK51IbdysHh1b=s4800-w1200" alt="Inverlochy Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMKM9xEFRF71C63NNDx1funvdS21AqZZ21azep6It_JoqWFSRYVt0mjMXBdwzI2ukpOsfkWXXv3yZtRfvgxAW5uqJhcsT5j4TW3084He5iMSYA-RtPzPUpGsnGNJnhZJxWWP3M_I1q5Jowt=s4800-w1200" alt="Inverlochy Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/places/ANXAkqEknppSVe50-d42xTTVAq8bwFUum-0S41HyOeJYWNGCC2v5Spl82irjKeAJG5DVSU2_pg6BrdBGoBVyZOmZ3xfDSUxSUD9caAQ=s4800-w1000" alt="Inverlochy Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/places/ANXAkqHtiIMoLDW9-gOoMHK2dCk8qqgA2nS2PVke_85FVUrqlUsWQmvsF3wGJtW8nF6a4BRF9n8UdVzRrSF2yh_-AG1X-w8yEINYovs=s4800-w1000" alt="Inverlochy Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Inverlochy%20Castle%20Highland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){

@@ -295,12 +295,12 @@ footer a{color:var(--candlelight)}
 
 <!-- GALLERY — Yelp-style mosaic banner -->
 <div class="listing-top">
-<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZON9zBvFUjREXGckbCOD_aeKhXrTzbxHCTqQfem9sac_zDdQjA39i8y_41MAnPVRBtpmzyEEpqzWCJJDA21M0tC-0X8vJwaQpl-3R6thKjn8RE5x-8miLihgONgcdlcgCZfL0WsOh7Axss4uQk=s4800-w1200" data-castle-name-g="Scalloway Castle">
+<div id="galleryGrid" class="gallery-grid" data-original-src="https://lh3.googleusercontent.com/place-photos/AJRVUZON9zBvFUjREXGckbCOD_aeKhXrTzbxHCTqQfem9sac_zDdQjA39i8y_41MAnPVRBtpmzyEEpqzWCJJDA21M0tC-0X8vJwaQpl-3R6thKjn8RE5x-8miLihgONgcdlcgCZfL0WsOh7Axss4uQk=s4800-w1200" data-castle-name-g="Scalloway Castle" data-has-gallery="true">
 <div class="g-main"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZON9zBvFUjREXGckbCOD_aeKhXrTzbxHCTqQfem9sac_zDdQjA39i8y_41MAnPVRBtpmzyEEpqzWCJJDA21M0tC-0X8vJwaQpl-3R6thKjn8RE5x-8miLihgONgcdlcgCZfL0WsOh7Axss4uQk=s4800-w1200" alt="Scalloway Castle" loading="eager" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
-<div class="g-side" id="gSide1"></div>
-<div class="g-side" id="gSide2"></div>
-<div class="g-side" id="gSide3"></div>
-<div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
+<div class="g-side" id="gSide1"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOPUD-IYq07MJIfr_J6A7so83xqp40vt_AWRTSWjXgPNs2_e9s69rZH0EPwt602ZZE58dCNtrtk1XMFmJ_hlNxpdFYTdmHVwP5hgoXb_DePDgDv_5V60KB1d_RrZGz9Haycv_0JdvW3F6LDgA=s4800-w1200" alt="Scalloway Castle photo 2" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide2"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOPAmnDCjgJZC1sVGLKUUGlNQoagKtjXt6kVzShMVkrjJGehP3XmlRQXa8eemzsrAob8lUR0WCstpCt6cBHaEq2s2rPLv_6VLU5S6tPPYbRegT6UCaCWLJcp4uvZXepKe4PGdxEIRSbNGPlow=s4800-w1200" alt="Scalloway Castle photo 3" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide3"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO7pNg9Eg9tKBSwi_1taTbg8QZQGILVzttFTqnZygKv_BZMeqv2mQOIim3sOgNLBhAmg3klf5UZgi_Ix_T0o2uN8BNt12H4TWlAmvXhQiTUcKoMH3n3Zfq5-Qym27NnzLSa9HooATivPsLOFg=s4800-w1200" alt="Scalloway Castle photo 4" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"></div>
+<div class="g-side" id="gSide4"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZO26FAaBcVSs3xSsXErMbrhEt_0SB1BUgs074BA8pa_tGAcKl4NIWaCyw7ZYmFxvt8VAP-T1xA5AB-aArrrlnT2yBoy3IhU65CgjFpf8Y6g4XxeKzf8ZmZOgyNrrdQZ6CCNPUqlyOGrvqV9UtU=s4800-w1200" alt="Scalloway Castle photo 5" loading="lazy" onclick="openLb(this.src)" onerror="this.parentElement.style.background='var(--cream)'"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
 <div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="https://www.google.com/maps/search/Scalloway%20Castle%20Shetland" target="_blank" rel="noopener">Google Maps</a></span></div>
@@ -399,6 +399,15 @@ footer a{color:var(--candlelight)}
   var lng=parseFloat(document.querySelector('[data-lng]')?.dataset.lng);
   if(!name||isNaN(lat))return;
 
+  // Pre-populate lightbox from baked gallery images
+  var grid=document.getElementById('galleryGrid');
+  if(grid&&grid.dataset.hasGallery==='true'){
+    var srcs=[];
+    var imgs=grid.querySelectorAll('img');
+    imgs.forEach(function(img){if(img.src&&!img.src.includes('placeholder'))srcs.push(img.src);});
+    if(srcs.length)window._gallerySrcs=srcs;
+  }
+
   var cached=sessionStorage.getItem('gp_'+name);
   if(cached){renderPlace(JSON.parse(cached));return}
 
@@ -415,7 +424,8 @@ footer a{color:var(--candlelight)}
 
   function renderPlace(place){
     var grid=document.getElementById('galleryGrid');
-    if(place.photos&&place.photos.length&&grid){
+    var hasGallery=grid&&grid.dataset.hasGallery==='true';
+    if(place.photos&&place.photos.length&&grid&&!hasGallery){
       var photos=place.photos.slice(0,10);
       var allUrls=[];
       photos.forEach(function(p){
