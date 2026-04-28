@@ -45239,50 +45239,6 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilkieran_High_Crosses"
   },
   {
-    "name": "Castlecomer Castle",
-    "country": "ireland",
-    "region": "irelands-ancient-east",
-    "county": "County Kilkenny",
-    "lat": 51.5,
-    "lng": -2.2336,
-    "mapsLink": "https://www.google.com/maps/search/Castlecomer%20Castle/@52.806,-7.211,15z",
-    "image": "https://img.castlecore.uk/castlecomer-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/castlecomer-castle-2.jpg",
-      "https://img.castlecore.uk/castlecomer-castle-3.jpg",
-      "https://img.castlecore.uk/castlecomer-castle-4.jpg",
-      "https://img.castlecore.uk/castlecomer-castle-5.jpg"
-    ],
-    "desc": "Castle Combe Castle stood to the north of the village of Castle Combe, Wiltshire, England.",
-    "type": "castle",
-    "period": "17th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "kid-friendly",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Kilkenny Heritage",
-        "url": "https://www.kilkennyheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Castle_Combe_Castle",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
     "name": "Blarney Castle",
     "country": "ireland",
     "region": "kingdom-of-munster",
@@ -46391,7 +46347,7 @@
       "https://img.castlecore.uk/killaha-castle-4.jpg",
       "https://img.castlecore.uk/killaha-castle-5.jpg"
     ],
-    "desc": " Killua Castle, and the nearby Raleigh Obelisk, are situated near Clonmellon, County Westmeath, Ireland. The present house was built in about 1780 by Sir Benjamin Chapman and consisted of a hall, dining room, oval drawing room, breakfast parlour and front and back stairs. There was also a stable yard, barn and haggard. From here, the Chapmans administered the surrounding farm lands of some 9,000 acres (36 km2) in the 18th century. In a ruinous condition, it was renovated in 2006.",
+    "desc": "",
     "type": "tower house",
     "period": "15th century",
     "rating": 3.3,
@@ -46411,7 +46367,6 @@
         "url": "https://heritageireland.ie/"
       }
     ],
-    "wiki": "https://en.wikipedia.org/wiki/Killua_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Killua_Castle.jpg/330px-Killua_Castle.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
@@ -47228,7 +47183,7 @@
     "county": "County Cork",
     "lat": 52.128461,
     "lng": -8.729877,
-    "mapsLink": "https://www.google.com/maps/search/Dromaneen%20Castle/@52.125,-8.575,15z",
+    "mapsLink": "https://maps.app.goo.gl/usyMR8EAVExFm4mt6",
     "image": "https://img.castlecore.uk/dromaneen-castle.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -47500,7 +47455,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Parkavonear_Castle"
   },
   {
-    "name": "Duagh Castle",
+    "name": "Dough Castle",
     "country": "ireland",
     "region": "kingdom-of-munster",
     "county": "County Kerry",
@@ -47534,15 +47489,19 @@
         "url": "https://heritageireland.ie/"
       }
     ],
-    "wiki": "https://en.wikipedia.org/wiki/Duart_Castle",
+    "wiki": "https://en.wikipedia.org/wiki/Dough_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG/330px-Argyll_and_Bute_-_Duart_Castle_-_2025-09-26_01-03-40_001.JPG",
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dough_Castle",
+    "altNames": [
+      "Duagh Castle"
+    ]
   },
   {
     "name": "Castle Matrix",
@@ -48849,99 +48808,6 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Abbeydorney_Abbey"
   },
   {
-    "name": "Castlecove Castle",
-    "country": "ireland",
-    "region": "kingdom-of-munster",
-    "county": "County Kerry",
-    "lat": 51.5,
-    "lng": -2.2336,
-    "mapsLink": "https://www.google.com/maps/search/Castlecove%20Castle/@51.767,-10.022,15z",
-    "image": "https://img.castlecore.uk/castlecove-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/castlecove-castle-2.jpg",
-      "https://img.castlecore.uk/castlecove-castle-3.jpg",
-      "https://img.castlecore.uk/castlecove-castle-4.jpg",
-      "https://img.castlecore.uk/castlecove-castle-5.jpg"
-    ],
-    "desc": "Castle Combe Castle stood to the north of the village of Castle Combe, Wiltshire, England.",
-    "type": "tower house",
-    "period": "Medieval",
-    "rating": 3.4,
-    "tags": [
-      "coastal",
-      "ruins-romantic",
-      "medieval",
-      "photogenic",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Kerry Heritage",
-        "url": "https://www.kerrytourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Castle_Combe_Castle",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
-    "name": "Abington Castle",
-    "country": "ireland",
-    "region": "kingdom-of-munster",
-    "county": "County Limerick",
-    "lat": 51.29333333,
-    "lng": 0.51166667,
-    "mapsLink": "https://www.google.com/maps/search/Abington%20Castle/@52.607,-8.379,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Allington_Castle%2C_Kent.jpg/330px-Allington_Castle%2C_Kent.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Allington Castle is a stone castle in Allington, Kent, just north of Maidstone, in England. The first castle on the site was an unauthorised fortification, built during \"The Anarchy\" (1135–1153) and torn down later in the century when royal control was reasserted. It was replaced by a manor house, which was fortified with royal permission in the 13th century. Various alterations and expansions were made by successive owners over the following two centuries. The property was developed into a fortified compound with six towers at irregular intervals along the curtain wall and domestic buildings in the interior, including one of the first long galleries built in England. In 1554 it was seized by the Crown in the course of dispossessing its owner, Sir Thomas Wyatt the Younger, after the failure of his rebellion against Queen Mary.",
-    "type": "castle",
-    "period": "15th century",
-    "rating": 3.4,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Limerick Heritage",
-        "url": "https://www.limerick.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Allington_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Allington_Castle%2C_Kent.jpg/330px-Allington_Castle%2C_Kent.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Name withheld by request",
-      "license": "CC BY-SA 4.0",
-      "description": "View of Allington Castle, Kent",
-      "credit": "Private donation",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
     "name": "Tralee Castle",
     "country": "ireland",
     "region": "kingdom-of-munster",
@@ -49856,19 +49722,10 @@
     "lat": 53.61666667,
     "lng": -7.1,
     "mapsLink": "https://www.google.com/maps/search/Delvin%20Castle/@53.613,-7.092,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/De_Lacey_Castle_01.jpg/330px-De_Lacey_Castle_01.jpg",
+    "image": "",
     "imgSource": "wikipedia",
-    "gallery": [
-      "https://img.castlecore.uk/delvin-castle-2.jpg",
-      "https://img.castlecore.uk/delvin-castle-3.jpg",
-      "https://img.castlecore.uk/delvin-castle-4.jpg",
-      "https://img.castlecore.uk/delvin-castle-5.jpg",
-      "https://img.castlecore.uk/delvin-castle-main-2.jpg",
-      "https://img.castlecore.uk/delvin-castle-main-3.jpg",
-      "https://img.castlecore.uk/delvin-castle-main-4.jpg",
-      "https://img.castlecore.uk/delvin-castle-main-5.jpg"
-    ],
-    "desc": "Clonyn Castle, also known as Delvin Castle, is a Victorian country house situated in Delvin, County Westmeath, Ireland some 18 km from Mullingar along the N52. It is a square, symmetrical, two-storey castle-like building of cut limestone with four tall, round corner towers at each corner. The interior has a large two-storey hall with a gallery and arcading. It was one of the last Victorian baronial castles to be built in Ireland.",
+    "gallery": [],
+    "desc": "",
     "type": "castle",
     "period": "12th century / Victorian",
     "rating": 3.4,
@@ -49884,16 +49741,14 @@
         "url": "https://en.wikipedia.org/wiki/Delvin_Castle"
       }
     ],
-    "wiki": "https://en.wikipedia.org/wiki/Clonyn_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/De_Lacey_Castle_01.jpg/330px-De_Lacey_Castle_01.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonyn_Castle"
+    "hasWikipedia": "no",
+    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Fore Castle",
@@ -50506,15 +50361,16 @@
         "url": "https://heritageireland.ie/"
       }
     ],
-    "wiki": "https://en.wikipedia.org/wiki/Dromaneen_Castle",
+    "wiki": "https://en.wikipedia.org/wiki/Dromineer",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Castles_of_Munster%2C_Dromaneen%2C_Cork_-_geograph.org.uk_-_1392835.jpg/330px-Castles_of_Munster%2C_Dromaneen%2C_Cork_-_geograph.org.uk_-_1392835.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dromineer"
   },
   {
     "name": "Kiltinan Castle",
@@ -50601,53 +50457,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castletown_Geoghegan"
-  },
-  {
-    "name": "Clonyn Castle",
-    "country": "ireland",
-    "region": "the-heartlands",
-    "county": "County Westmeath",
-    "lat": 53.61666667,
-    "lng": -7.1,
-    "mapsLink": "https://www.google.com/maps/search/Clonyn%20Castle/@53.572,-7.118,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/De_Lacey_Castle_01.jpg/330px-De_Lacey_Castle_01.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [
-      "https://img.castlecore.uk/clonyn-castle-2.jpg",
-      "https://img.castlecore.uk/clonyn-castle-3.jpg",
-      "https://img.castlecore.uk/clonyn-castle-4.jpg",
-      "https://img.castlecore.uk/clonyn-castle-5.jpg"
-    ],
-    "desc": "Clonyn Castle, also known as Delvin Castle, is a Victorian country house situated in Delvin, County Westmeath, Ireland some 18 km from Mullingar along the N52. It is a square, symmetrical, two-storey castle-like building of cut limestone with four tall, round corner towers at each corner. The interior has a large two-storey hall with a gallery and arcading. It was one of the last Victorian baronial castles to be built in Ireland.",
-    "type": "castle",
-    "period": "Medieval/19th century",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "victorian",
-      "gothic",
-      "atmospheric"
-    ],
-    "source": [
-      {
-        "name": "Westmeath Heritage",
-        "url": "https://www.westmeathheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Clonyn_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/De_Lacey_Castle_01.jpg/330px-De_Lacey_Castle_01.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonyn_Castle"
   },
   {
     "name": "Multyfarnham Friary",
@@ -51427,53 +51236,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corlea_Trackway"
-  },
-  {
-    "name": "Dungar Castle",
-    "country": "ireland",
-    "region": "the-heartlands",
-    "county": "County Tipperary",
-    "lat": 56.0056,
-    "lng": -2.5176,
-    "mapsLink": "https://www.google.com/maps/search/Dungar%20Castle/@52.918,-7.748,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dunbar_Harbour_and_Castle%2C_1987.jpg/330px-Dunbar_Harbour_and_Castle%2C_1987.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Dunbar Castle was one of the strongest fortresses in Scotland, situated in a prominent position overlooking the harbour of the town of Dunbar, in East Lothian. Several fortifications were built successively on the site, near the English-Scottish border. The last was slighted in 1567; it is a ruin today.",
-    "type": "tower house",
-    "period": "15th century",
-    "rating": 3,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      },
-      {
-        "name": "Waterford Heritage",
-        "url": "https://www.visitwaterford.com/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Dunbar_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dunbar_Harbour_and_Castle%2C_1987.jpg/330px-Dunbar_Harbour_and_Castle%2C_1987.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Phillip Capper from Wellington, New Zealand",
-      "license": "CC BY 2.0",
-      "description": "Dunbar harbour and castle, East Lothian, Scotland, in 1987John and Sandy Gray, Dunbar Harbour and Castle, 1987",
-      "credit": "Flickr",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Kinnitty Castle",
