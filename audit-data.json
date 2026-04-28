@@ -42645,54 +42645,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Grannagh Castle",
-    "country": "ireland",
-    "region": "irelands-ancient-east",
-    "county": "County Kilkenny",
-    "lat": 52.594772,
-    "lng": -7.771243,
-    "mapsLink": "https://www.google.com/maps/search/Grannagh%20Castle/@52.325,-7.159,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg/330px-Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Grallagh Castle is a tower house and National Monument located in County Tipperary, Ireland.",
-    "type": "castle",
-    "period": "14th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "riverside",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Kilkenny Heritage",
-        "url": "https://www.kilkennyheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Grallagh_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg/330px-Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Mike Searle",
-      "license": "CC BY-SA 2.0",
-      "description": "Castles of Munster: Grallagh, Tipperary Now in the care of the state, Grallagh stands close to the road between the town of Horse &amp; Jockey and Ballinure. Rising above a steeply battered base, this four storeyed C16 tower house has exceptionally fine moulded two light windows at the upper levels, and bartizans on the SW and NE corners. The tower lies within a C16 bawn, whose remains consist of a 100 foot long section facing the road to the northeast.",
-      "credit": "From geograph.org.uk",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
     "name": "Clomantagh Castle",
     "country": "ireland",
     "region": "irelands-ancient-east",
@@ -44024,13 +43976,13 @@
     "hasGooglePlaces": "unknown"
   },
   {
-    "name": "Granagh Castle",
+    "name": "Grallagh Castle",
     "country": "ireland",
     "region": "irelands-ancient-east",
     "county": "County Kilkenny",
     "lat": 52.594772,
     "lng": -7.771243,
-    "mapsLink": "https://www.google.com/maps/search/Granagh%20Castle/@52.328,-7.532,15z",
+    "mapsLink": "https://maps.app.goo.gl/rFc3m2ZxvEqHs69m9",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg/330px-Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg",
     "imgSource": "CDN",
     "gallery": [],
@@ -44069,7 +44021,11 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "altNames": [
+      "Granagh Castle",
+      "Grannagh Castle"
+    ]
   },
   {
     "name": "Castle Kevin",
@@ -45318,51 +45274,6 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castle_Combe_Castle",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
-    "name": "Dunlavin Castle",
-    "country": "ireland",
-    "region": "irelands-ancient-east",
-    "county": "County Wicklow",
-    "lat": 51.4434,
-    "lng": -3.6018,
-    "mapsLink": "https://www.google.com/maps/search/Dunlavin%20Castle/@53.057,-6.701,15z",
-    "image": "https://img.castlecore.uk/dunlavin-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dunlavin-castle-2.jpg",
-      "https://img.castlecore.uk/dunlavin-castle-3.jpg",
-      "https://img.castlecore.uk/dunlavin-castle-4.jpg",
-      "https://img.castlecore.uk/dunlavin-castle-5.jpg"
-    ],
-    "desc": "Dunraven Castle was a mansion on the South Wales coast near Southerndown. The existing manor house was rebuilt as a castellated hunting lodge in the early 19th century and was extensively remodelled later in the century. The surviving parts of the house are a Grade II listed building and its gardens and park are designated Grade II on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Wicklow Heritage",
-        "url": "https://www.visitwicklow.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Dunraven_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Dunraven_Castle_%2816567797823%29.jpg/330px-Dunraven_Castle_%2816567797823%29.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
@@ -46697,54 +46608,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Carriganass_Castle"
-  },
-  {
-    "name": "Lohort Castle",
-    "country": "ireland",
-    "region": "kingdom-of-munster",
-    "county": "County Cork",
-    "lat": 56.1484,
-    "lng": -3.329,
-    "mapsLink": "https://www.google.com/maps/search/Lohort%20Castle/@52.137,-8.745,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Loch_Ore_Castle%2C_from_north-east_0268.jpg/330px-Loch_Ore_Castle%2C_from_north-east_0268.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Lochore Castle is a ruined 14th-century tower house, about 3 miles (4.8 km) south east of Cowdenbeath, Fife, Scotland, and south of Lochore, east of Loch Ore, in Lochore Country Park.",
-    "type": "castle",
-    "period": "15th/19th century",
-    "rating": 3.4,
-    "tags": [
-      "well-preserved",
-      "medieval",
-      "victorian",
-      "atmospheric"
-    ],
-    "source": [
-      {
-        "name": "Cork Heritage",
-        "url": "https://www.corkcoco.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Lochore_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Loch_Ore_Castle%2C_from_north-east_0268.jpg/330px-Loch_Ore_Castle%2C_from_north-east_0268.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Internet Archive Book Images",
-      "license": "Public domain",
-      "description": "Loch Ore Castle, from nort-east. Page in the book",
-      "credit": "Image from page 265 of \"The castellated and domestic architecture of Scotland, from the twelfth to the eighteenth century\" (1887)",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Monkstown Castle",
