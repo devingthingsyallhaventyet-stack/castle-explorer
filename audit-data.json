@@ -57634,8 +57634,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gleninagh"
   },
   {
     "name": "Mooghaun Fort",
@@ -57681,8 +57682,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mooghaun"
   },
   {
     "name": "Ballynahinch Castle",
@@ -57731,8 +57733,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballynahinch_Castle"
   },
   {
     "name": "Clifden Castle",
@@ -57779,8 +57782,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clifden_Castle"
   },
   {
     "name": "Fiddaun Castle",
@@ -57826,8 +57830,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Fiddaun_Castle"
   },
   {
     "name": "Annaghdown Castle",
@@ -57873,7 +57878,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -57921,8 +57926,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Menlo_Castle"
   },
   {
     "name": "Moyode Castle",
@@ -57967,7 +57973,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -58013,8 +58019,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merlinpark_Castle"
   },
   {
     "name": "Rockfleet Castle",
@@ -58061,8 +58068,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rockfleet_Castle"
   },
   {
     "name": "Burrishoole Abbey",
@@ -58109,8 +58117,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Burrishoole_Friary"
   },
   {
     "name": "Castlebar Castle",
@@ -58154,7 +58163,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -58198,7 +58207,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -58246,8 +58255,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Moyne_Abbey"
   },
   {
     "name": "Rosserk Friary",
@@ -58294,8 +58304,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rosserk_Friary"
   },
   {
     "name": "Ballintubber Abbey",
@@ -58341,8 +58352,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballintubber_Abbey"
   },
   {
     "name": "Cong Abbey",
@@ -58393,8 +58405,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cong_Abbey"
   },
   {
     "name": "Clontuskert Abbey",
@@ -58436,8 +58449,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clontuskert_Abbey"
   },
   {
     "name": "Rossroe Castle",
@@ -58483,7 +58497,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -58529,8 +58543,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Caherkinmonwee_Castle"
   },
   {
     "name": "Carrigaholt Castle",
@@ -58576,7 +58591,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -58622,7 +58637,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -58670,7 +58685,7 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -58712,8 +58727,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Derryhiveny_Castle"
   },
   {
     "name": "Kilcornan Castle",
@@ -58757,7 +58773,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
