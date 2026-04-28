@@ -2687,7 +2687,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Edinburgh_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg/330px-City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Enric",
       "license": "CC BY-SA 4.0",
@@ -2696,7 +2696,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Luffness Castle",
@@ -4617,7 +4620,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Stirling_Castle",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "John McPake",
       "license": "CC BY 2.0",
@@ -4626,7 +4629,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Doune Castle",
@@ -5386,7 +5392,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Eilean_Donan",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Diliff",
       "license": "CC BY-SA 3.0",
@@ -5395,7 +5401,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Urquhart Castle",
@@ -7439,7 +7448,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunnottar_Castle",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -7448,7 +7457,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Balmoral Castle",
@@ -14341,7 +14353,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Alnwick_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alnwick_Castle_in_uk.jpg/330px-Alnwick_Castle_in_uk.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Clementp.fr",
       "license": "CC BY-SA 4.0",
@@ -14350,7 +14362,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Bamburgh Castle",
@@ -14376,7 +14391,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Bamburgh_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/330px-Bamburgh_Castle%2C_beautiful_day.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Matthew Hartley",
       "license": "CC BY-SA 2.0",
@@ -14385,7 +14400,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Dunstanburgh Castle",
@@ -18398,7 +18416,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Durham_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Durham_MMB_02_Cathedral.jpg/330px-Durham_MMB_02_Cathedral.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "mattbuck (category)",
       "license": "CC BY-SA 4.0",
@@ -18407,7 +18425,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Binchester Roman Fort",
@@ -19226,7 +19247,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Tower_of_London",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/330px-Tower_of_London_from_the_Shard_%288515883950%29.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "[Duncan] from Nottingham, UK",
       "license": "CC BY 2.0",
@@ -19235,7 +19256,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Dover Castle",
@@ -19260,7 +19284,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dover_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/1_dover_castle_aerial_panorama_2017.jpg/330px-1_dover_castle_aerial_panorama_2017.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Chensiyuan",
       "license": "CC BY-SA 4.0",
@@ -19269,7 +19293,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Leeds Castle",
@@ -19294,7 +19321,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Leeds_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Leeds_castle.JPG/330px-Leeds_castle.JPG",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Adusha",
       "license": "CC BY 3.0",
@@ -19302,7 +19329,10 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Bodiam Castle",
@@ -19830,7 +19860,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Blenheim_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Blenheim_Palace_2006.jpg/330px-Blenheim_Palace_2006.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "gailf548 from New York State, USA",
       "license": "CC BY 2.0",
@@ -19839,7 +19869,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Oxford Castle",
@@ -21189,7 +21222,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Windsor_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Windsor_Castle_at_Sunset_-_Nov_2006.jpg/330px-Windsor_Castle_at_Sunset_-_Nov_2006.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Diliff",
       "license": "CC BY 2.5",
@@ -21198,7 +21231,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Hampton Court Palace",
@@ -21229,7 +21265,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Hampton_Court_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg/330px-Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Tilman2007",
       "license": "CC BY-SA 4.0",
@@ -21237,7 +21273,10 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Lympne Castle",
@@ -21488,7 +21527,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Canterbury_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Canterbury-cathedral-wyrdlight.jpg/330px-Canterbury-cathedral-wyrdlight.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Antony McCallum: Who is the uploader, photographer, full copyright owner and proprietor of WyrdLight.com",
       "license": "CC BY-SA 4.0",
@@ -21497,7 +21536,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Boxgrove Priory",
@@ -21912,7 +21954,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Corfe_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Corfe_Castle%2C_Dorset.jpg/330px-Corfe_Castle%2C_Dorset.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Tallguyuk",
       "license": "CC BY-SA 3.0",
@@ -21921,7 +21963,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Old Wardour Castle",
@@ -25851,7 +25896,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Warwick_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Warwick_Castle_May_2016.jpg/330px-Warwick_Castle_May_2016.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "DeFacto",
       "license": "CC BY-SA 4.0",
@@ -25860,7 +25905,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Kenilworth Castle",
@@ -28616,7 +28664,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Chatsworth_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Chatsworth_house_fountain_frontage.jpg/330px-Chatsworth_house_fountain_frontage.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Paul Johnson",
       "license": "CC BY 2.0",
@@ -28625,7 +28673,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Gainsborough Old Hall",
@@ -31201,7 +31252,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Howard",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Castle_Howard_and_garden.jpg/330px-Castle_Howard_and_garden.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Pwojdacz (talk).\n\nOriginal uploader was Pwojdacz at en.wikipedia",
       "license": "Public domain",
@@ -31210,7 +31261,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Richmond Castle",
@@ -31469,7 +31523,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Fountains_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Fountains_Abbey_-_9447434368.jpg/330px-Fountains_Abbey_-_9447434368.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Draco2008",
       "license": "CC BY 2.0",
@@ -31478,7 +31532,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Whitby Abbey",
@@ -34442,7 +34499,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Conwy_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/330px-Conwy_Castle%2C_water_view1.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Andrew Woodvine",
       "license": "CC BY-SA 2.0",
@@ -34451,7 +34508,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Caernarfon Castle",
@@ -34476,7 +34536,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Caernarfon_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Caernarfon_Castle_1994.jpg/330px-Caernarfon_Castle_1994.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Herbert Ortner",
       "license": "CC BY 4.0",
@@ -34485,7 +34545,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Harlech Castle",
@@ -36203,7 +36266,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cardiff_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Aerial_view_of_Cardiff_Castle.jpg/330px-Aerial_view_of_Cardiff_Castle.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Clint Budd",
       "license": "CC BY 2.0",
@@ -36212,7 +36275,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Castell Coch",
@@ -41434,7 +41500,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kilkenny_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Kilkenny-castle.jpg/330px-Kilkenny-castle.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "No machine-readable author provided. Tolivero~commonswiki assumed (based on copyright claims).",
       "license": "Public domain",
@@ -41443,7 +41509,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Trim Castle",
@@ -44988,7 +45057,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Blarney_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blarney_Castle_Ireland.jpg/330px-Blarney_Castle_Ireland.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Ryanhuntmuzik",
       "license": "CC BY-SA 4.0",
@@ -44997,7 +45066,10 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "reviewReasons": [
+      "cinematic"
+    ]
   },
   {
     "name": "Ross Castle",
@@ -48497,7 +48569,8 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Rock_of_Cashel_%2849163525453%29.jpg/330px-Rock_of_Cashel_%2849163525453%29.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
-      "needs-review"
+      "needs-review",
+      "cinematic"
     ]
   },
   {

@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Knockmealdown Castle",
+    "county": "County Waterford",
+    "exists": "confirmed",
+    "sources": [],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Ardfinnan_castle_from_Factory_Hill_rd._with_Knockmealdown_Mountains_to_Rear.png/500px-Ardfinnan_castle_from_Factory_Hill_rd._with_Knockmealdown_Mountains_to_Rear.png",
+    "imageTitle": "File:Ardfinnan castle from Factory Hill rd. with Knockmealdown Mountains to Rear.png",
+    "region": "kingdom-of-munster"
+  },
+  {
+    "name": "Knockelly Castle",
+    "county": "County Tipperary",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Sharavogue Castle",
+    "county": "County Offaly",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Nendrum Monastic Site",
+    "county": "County Down",
+    "exists": "confirmed",
+    "sources": [
+      "wikipedia-search: Nendrum Monastery"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Nendrum_Monastic_site_-_geograph.org.uk_-_5127015.jpg/500px-Nendrum_Monastic_site_-_geograph.org.uk_-_5127015.jpg",
+    "imageTitle": "File:Nendrum Monastic site - geograph.org.uk - 5127015.jpg",
+    "region": "ulster-and-the-north"
+  },
+  {
+    "name": "Rataine Castle",
+    "county": "County Westmeath",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Dowdstown Castle Meath",
+    "county": "County Meath",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Drumconrath Castle",
+    "county": "County Meath",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Dunlicky Castle",
+    "county": "County Clare",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Inishmaan Castle",
+    "county": "County Galway",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Navan Castle",
+    "county": "County Meath",
+    "exists": "confirmed",
+    "sources": [
+      "wikipedia-search: Navan Fort"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Obits_of_Eminent_Individuals_Connected_with_Navan%2C_etc._%28IA_jstor-20489893%29.pdf/page1-500px-Obits_of_Eminent_Individuals_Connected_with_Navan%2C_etc._%28IA_jstor-20489893%29.pdf.jpg",
+    "imageTitle": "File:Obits of Eminent Individuals Connected with Navan, etc. (IA jstor-20489893).pdf",
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Gortmore Castle",
+    "county": "County Galway",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Derrymacloughna Castle",
+    "county": "County Clare",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Collooney Castle",
+    "county": "County Sligo",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Drumlease Castle",
+    "county": "County Leitrim",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Ballinlough Castle Roscommon",
+    "county": "County Roscommon",
+    "exists": "likely-exists",
+    "sources": [
+      "wikipedia-search: Ballinlough"
+    ],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Fuerty Castle",
+    "county": "County Roscommon",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Cloonfree Castle",
+    "county": "County Roscommon",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Frenchpark Castle",
+    "county": "County Roscommon",
+    "exists": "likely-exists",
+    "sources": [
+      "wikipedia-search: Frenchpark"
+    ],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Rathmullan Castle Meath",
+    "county": "County Meath",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Malin Castle",
+    "county": "County Donegal",
+    "exists": "confirmed",
+    "sources": [
+      "wikipedia-search: Malin Akerman"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Karl_XI%2C_1655-1697%2C_kung_av_Sverige_%28Malin_Gyllenstierna%29_-_Nationalmuseum_-_38967.tif/lossy-page1-500px-Karl_XI%2C_1655-1697%2C_kung_av_Sverige_%28Malin_Gyllenstierna%29_-_Nationalmuseum_-_38967.tif.jpg",
+    "imageTitle": "File:Karl XI, 1655-1697, kung av Sverige (Malin Gyllenstierna) - Nationalmuseum - 38967.tif",
+    "region": "ulster-and-the-north"
+  },
+  {
+    "name": "Carrigart Castle",
+    "county": "County Donegal",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "ulster-and-the-north"
+  },
+  {
+    "name": "Cloone Round Tower",
+    "county": "County Leitrim",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Annestown Castle",
+    "county": "County Waterford",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Ballylaneen Castle",
+    "county": "County Waterford",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Clondra Castle",
+    "county": "County Longford",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Frankford Castle",
+    "county": "County Offaly",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Rahasane Castle",
+    "county": "County Galway",
+    "exists": "likely-exists",
+    "sources": [
+      "wikipedia-search: Rahasane Turlough"
+    ],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Ardrahan Castle",
+    "county": "County Galway",
+    "exists": "likely-exists",
+    "sources": [
+      "wikipedia-search: Ardrahan"
+    ],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Tullaroan Castle",
+    "county": "County Kilkenny",
+    "exists": "likely-exists",
+    "sources": [
+      "wikipedia-search: Tullaroan"
+    ],
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Kilcoursey Castle",
+    "county": "County Offaly",
+    "exists": "likely-exists",
+    "sources": [
+      "wikipedia-search: Kilcoursey"
+    ],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Ballymulcashel Castle",
+    "county": "County Limerick",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "kingdom-of-munster"
+  },
+  {
+    "name": "Ballycahill Castle",
+    "county": "County Tipperary",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Ballyfarnon Castle",
+    "county": "County Roscommon",
+    "exists": "likely-exists",
+    "sources": [
+      "wikipedia-search: Ballyfarnon"
+    ],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Drumshanbo Castle",
+    "county": "County Leitrim",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Kilbarry Castle Waterford",
+    "county": "County Waterford",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "irelands-ancient-east"
+  },
+  {
+    "name": "Ballylooby Castle",
+    "county": "County Tipperary",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "kingdom-of-munster"
+  },
+  {
+    "name": "Carriggundel Castle",
+    "county": "County Limerick",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "kingdom-of-munster"
+  },
+  {
+    "name": "Caherconlish Castle",
+    "county": "County Limerick",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "kingdom-of-munster"
+  },
+  {
+    "name": "Ballinagleragh Castle",
+    "county": "County Leitrim",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Caherlistrane Castle",
+    "county": "County Galway",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "wild-atlantic-way"
+  },
+  {
+    "name": "Ballyjamesduff Castle",
+    "county": "County Cavan",
+    "exists": "unconfirmed",
+    "sources": [],
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Lough Oughter Castle Island",
+    "county": "County Cavan",
+    "exists": "confirmed",
+    "sources": [
+      "wikipedia-search: Cloughoughter Castle"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Notes_on_Crannoges_in_Ballin_Lough_%28IA_jstor-20488896%29.pdf/page1-500px-Notes_on_Crannoges_in_Ballin_Lough_%28IA_jstor-20488896%29.pdf.jpg",
+    "imageTitle": "File:Notes on Crannoges in Ballin Lough (IA jstor-20488896).pdf",
+    "region": "the-heartlands"
+  },
+  {
+    "name": "Carna Castle",
+    "county": "County Galway",
+    "exists": "confirmed",
+    "sources": [],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Carnasserie_Castle_02.jpg/500px-Carnasserie_Castle_02.jpg",
+    "imageTitle": "File:Carnasserie Castle 02.jpg",
+    "region": "wild-atlantic-way"
+  }
+]

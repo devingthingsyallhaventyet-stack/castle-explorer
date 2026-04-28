@@ -1,0 +1,576 @@
+[
+  {
+    "name": "Knockelly Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballaghmore Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ballaghmore_Castle%2C_County_Laois_-_geograph-2329546.jpg/500px-Ballaghmore_Castle%2C_County_Laois_-_geograph-2329546.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Ballaghmore Castle"
+  },
+  {
+    "name": "Coolbanagher Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Castles_of_Leinster-_Coolbanagher%2C_Laois_%28geograph_2493929%29.jpg/500px-Castles_of_Leinster-_Coolbanagher%2C_Laois_%28geograph_2493929%29.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Leinster- Coolbanagher, Laois (geograph 2493929).jpg"
+  },
+  {
+    "name": "Sharavogue Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Mahee Island Nendrum",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Mahee_castle%2C_Strangford_Lough_-_geograph.org.uk_-_319096.jpg/500px-Mahee_castle%2C_Strangford_Lough_-_geograph.org.uk_-_319096.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Mahee castle, Strangford Lough - geograph.org.uk - 319096.jpg"
+  },
+  {
+    "name": "Rataine Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Rattin Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Rattin_Castle%2C_Westmeath%2C_Ireland.jpg/500px-Rattin_Castle%2C_Westmeath%2C_Ireland.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Rattin Castle"
+  },
+  {
+    "name": "Dowdstown Castle Meath",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Drumconrath Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballybunnion Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ballybunnion_Castle.JPG/500px-Ballybunnion_Castle.JPG",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Ballybunnion Castle.JPG"
+  },
+  {
+    "name": "Ballynahow Round Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ballynahow_Castle_-_geograph.org.uk_-_1478099.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Ballynahow Castle - geograph.org.uk - 1478099.jpg"
+  },
+  {
+    "name": "Dunlicky Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Kilkea Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Kilkea-Castle-Postcard-Local-Studies-Collections.jpg/500px-Kilkea-Castle-Postcard-Local-Studies-Collections.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Kilkea Castle"
+  },
+  {
+    "name": "Kildare Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Kildare_Town_and_Surrounds.jpg/500px-Kildare_Town_and_Surrounds.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Kildare Castle"
+  },
+  {
+    "name": "Inishmaan Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "O'Brien's Castle Inis Oirr",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/O%27Brien%27s_Castle_Inisheer.jpg/500px-O%27Brien%27s_Castle_Inisheer.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:O'Brien's Castle Inisheer.jpg"
+  },
+  {
+    "name": "Athlumney Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Athlumney_Castle.jpg/500px-Athlumney_Castle.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Athlumney Castle"
+  },
+  {
+    "name": "Gortmore Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Derrymacloughna Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Markree Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Markree-castle-by-night-2.jpeg/500px-Markree-castle-by-night-2.jpeg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Markree Castle"
+  },
+  {
+    "name": "Collooney Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Drumlease Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballyclogh Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Castles_of_Munster_-_Ballyclogh%2C_Cork_-_geograph.org.uk_-_1393398.jpg/500px-Castles_of_Munster_-_Ballyclogh%2C_Cork_-_geograph.org.uk_-_1393398.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Munster - Ballyclogh, Cork - geograph.org.uk - 1393398.jpg"
+  },
+  {
+    "name": "Ballinlough Castle Roscommon",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Castletown Cox",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/An_officer_of_the_Long_Parliament_and_his_descendants%3B_being_some_account_of_the_life_and_times_of_Colonel_Richard_Townesend_of_Castletown_%28Castletownshend%29_%26amp%2C_a_chronicle_of_his_family_.._%28IA_cu31924027972276%29.pdf/page1-500px-thumbnail.pdf.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:An officer of the Long Parliament and his descendants; being some account of the life and times of Colonel Richard Townesend of Castletown (Castletownshend) &amp, a chronicle of his family .. (IA cu31924027972276).pdf"
+  },
+  {
+    "name": "Castletown Castle Laois",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Castle_walls%2C_Castletown_-_geograph.org.uk_-_5015349.jpg/500px-Castle_walls%2C_Castletown_-_geograph.org.uk_-_5015349.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castle walls, Castletown - geograph.org.uk - 5015349.jpg"
+  },
+  {
+    "name": "Fuerty Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Cloonfree Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Frenchpark Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Rathmullan Castle Meath",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Fennor Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Castles_of_Leinster%2C_Fennor%2C_Meath_-_geograph.org.uk_-_2494859.jpg/500px-Castles_of_Leinster%2C_Fennor%2C_Meath_-_geograph.org.uk_-_2494859.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Leinster, Fennor, Meath - geograph.org.uk - 2494859.jpg"
+  },
+  {
+    "name": "Castle Leslie",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/CastleLeslieSummer2006.jpg/500px-CastleLeslieSummer2006.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Castle Leslie"
+  },
+  {
+    "name": "Monaghan Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mannan_Castle%2C_Co._Monaghan_-_geograph.org.uk_-_609123.jpg/500px-Mannan_Castle%2C_Co._Monaghan_-_geograph.org.uk_-_609123.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Mannan Castle, Co. Monaghan - geograph.org.uk - 609123.jpg"
+  },
+  {
+    "name": "Carrigart Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Shrule Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Castles_of_Connacht-_Shrule%2C_Mayo_-_revisited_%284%29_%28geograph_5829222%29.jpg/500px-Castles_of_Connacht-_Shrule%2C_Mayo_-_revisited_%284%29_%28geograph_5829222%29.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Shrule Castle"
+  },
+  {
+    "name": "Castle Gore Mayo",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ireland_in_Ruins%2C_Castle_Gore%2C_Co._Mayo_%281%29_-_geograph.org.uk_-_5828790.jpg/500px-Ireland_in_Ruins%2C_Castle_Gore%2C_Co._Mayo_%281%29_-_geograph.org.uk_-_5828790.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Ireland in Ruins, Castle Gore, Co. Mayo (1) - geograph.org.uk - 5828790.jpg"
+  },
+  {
+    "name": "Clones Round Tower",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Clones_Round_Tower_and_Graveyard.jpg/500px-Clones_Round_Tower_and_Graveyard.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Clones Round Tower"
+  },
+  {
+    "name": "Cloone Round Tower",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Dunhill Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/9/97/Dunhill_Castle_-_geograph.org.uk_-_484922.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Dunhill Castle - geograph.org.uk - 484922.jpg"
+  },
+  {
+    "name": "Annestown Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballylaneen Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Rathcline Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Rathcline_Castle%2C_Lanesborough%2C_Co._Longford_-_geograph.org.uk_-_545346.jpg/500px-Rathcline_Castle%2C_Lanesborough%2C_Co._Longford_-_geograph.org.uk_-_545346.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Rathcline Castle, Lanesborough, Co. Longford - geograph.org.uk - 545346.jpg"
+  },
+  {
+    "name": "Clondra Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Longford Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Longford_Castle_front.jpg/500px-Longford_Castle_front.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Longford Castle"
+  },
+  {
+    "name": "Frankford Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Farney Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Castles_of_Munster%2C_Farney%2C_Tipperary_-_geograph.org.uk_-_3037826.jpg/500px-Castles_of_Munster%2C_Farney%2C_Tipperary_-_geograph.org.uk_-_3037826.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Munster, Farney, Tipperary - geograph.org.uk - 3037826.jpg"
+  },
+  {
+    "name": "Rahasane Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ardrahan Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Tullaroan Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Kilcoursey Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Shanpallas Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Shanpallas_Castle_-_geograph.org.uk_-_299164.jpg/500px-Shanpallas_Castle_-_geograph.org.uk_-_299164.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Shanpallas Castle - geograph.org.uk - 299164.jpg"
+  },
+  {
+    "name": "Ballymulcashel Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballycahill Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Thurles Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Castles_of_Munster%2C_Black_Castle_-Thurles%2C_Tipperary_-_geograph.org.uk_-_3037895.jpg/500px-Castles_of_Munster%2C_Black_Castle_-Thurles%2C_Tipperary_-_geograph.org.uk_-_3037895.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Munster, Black Castle -Thurles, Tipperary - geograph.org.uk - 3037895.jpg"
+  },
+  {
+    "name": "Ballyfarnon Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Kilronan Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Kilronan_Castle_%28historyofireland11845dalt_p154%29.jpg/500px-Kilronan_Castle_%28historyofireland11845dalt_p154%29.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Kilronan Castle"
+  },
+  {
+    "name": "Drumshanbo Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Kilbarry Castle Waterford",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballylooby Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballingarry Castle (Limerick)",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Castles_of_Munster%2C_Ballingarry%2C_Limerick_-_geograph.org.uk_-_1541594.jpg/500px-Castles_of_Munster%2C_Ballingarry%2C_Limerick_-_geograph.org.uk_-_1541594.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Munster, Ballingarry, Limerick - geograph.org.uk - 1541594.jpg"
+  },
+  {
+    "name": "Carriggundel Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Caherconlish Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballinagleragh Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballinafad Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ballinafad_Castle%2C_Co._Sligo%2C_Ireland.jpg/500px-Ballinafad_Castle%2C_Co._Sligo%2C_Ireland.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Ballinafad Castle"
+  },
+  {
+    "name": "Castlerea Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Castles_of_Leinster-_Castlerea%2C_Longford_%282%29_%28geograph_4074477%29.jpg/500px-Castles_of_Leinster-_Castlerea%2C_Longford_%282%29_%28geograph_4074477%29.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Leinster- Castlerea, Longford (2) (geograph 4074477).jpg"
+  },
+  {
+    "name": "Clonalis House",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Castlerea_-_Clonalis_House_-_20190823040950.jpg/500px-Castlerea_-_Clonalis_House_-_20190823040950.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Clonalis House"
+  },
+  {
+    "name": "Clonbur Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ballykine_Castle_%2C_Clonbur_Woods..JPG/500px-Ballykine_Castle_%2C_Clonbur_Woods..JPG",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Ballykine Castle , Clonbur Woods..JPG"
+  },
+  {
+    "name": "Caherlistrane Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Ballyjamesduff Castle",
+    "newImage": null,
+    "source": null,
+    "verified": false,
+    "note": "No verified image found"
+  },
+  {
+    "name": "Clonard Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Motte_at_Clonard%2C_Co._Meath_-_geograph.org.uk_-_897216.jpg/500px-Motte_at_Clonard%2C_Co._Meath_-_geograph.org.uk_-_897216.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Motte at Clonard, Co. Meath - geograph.org.uk - 897216.jpg"
+  },
+  {
+    "name": "Delvin Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/De_Lacey_Castle_01.jpg/500px-De_Lacey_Castle_01.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Delvin Castle"
+  },
+  {
+    "name": "Clonyn Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/De_Lacey_Castle_01.jpg/500px-De_Lacey_Castle_01.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Clonyn Castle"
+  },
+  {
+    "name": "Aille Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Castles_of_Connacht%2C_Aille%2C_Galway_-_geograph.org.uk_-_4069113.jpg/500px-Castles_of_Connacht%2C_Aille%2C_Galway_-_geograph.org.uk_-_4069113.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Connacht, Aille, Galway - geograph.org.uk - 4069113.jpg"
+  },
+  {
+    "name": "Aclare Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Lane_to_the_south_of_Aclare_-_geograph.org.uk_-_1393029.jpg/500px-Lane_to_the_south_of_Aclare_-_geograph.org.uk_-_1393029.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Lane to the south of Aclare - geograph.org.uk - 1393029.jpg"
+  },
+  {
+    "name": "Newcastle Tipperary Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Castles_of_Munster%2C_Newcastle%2C_Tipperary_%281%29_-_geograph.org.uk_-_6977033.jpg/500px-Castles_of_Munster%2C_Newcastle%2C_Tipperary_%281%29_-_geograph.org.uk_-_6977033.jpg",
+    "source": "commons",
+    "verified": true,
+    "note": "File:Castles of Munster, Newcastle, Tipperary (1) - geograph.org.uk - 6977033.jpg"
+  },
+  {
+    "name": "Moycarkey Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Castles_of_Munster%2C_Moycarkey%2C_Tipperary_-_geograph.org.uk_-_1542271.jpg/500px-Castles_of_Munster%2C_Moycarkey%2C_Tipperary_-_geograph.org.uk_-_1542271.jpg",
+    "source": "wikipedia",
+    "verified": true,
+    "note": "Moycarkey Castle"
+  },
+  {
+    "name": "Knockmealdown Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Ardfinnan_castle_from_Factory_Hill_rd._with_Knockmealdown_Mountains_to_Rear.png/500px-Ardfinnan_castle_from_Factory_Hill_rd._with_Knockmealdown_Mountains_to_Rear.png",
+    "source": "commons-deep-search",
+    "verified": true,
+    "commonsTitle": "File:Ardfinnan castle from Factory Hill rd. with Knockmealdown Mountains to Rear.png"
+  },
+  {
+    "name": "Nendrum Monastic Site",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Nendrum_Monastic_site_-_geograph.org.uk_-_5127015.jpg/500px-Nendrum_Monastic_site_-_geograph.org.uk_-_5127015.jpg",
+    "source": "commons-deep-search",
+    "verified": true,
+    "commonsTitle": "File:Nendrum Monastic site - geograph.org.uk - 5127015.jpg"
+  },
+  {
+    "name": "Navan Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Obits_of_Eminent_Individuals_Connected_with_Navan%2C_etc._%28IA_jstor-20489893%29.pdf/page1-500px-Obits_of_Eminent_Individuals_Connected_with_Navan%2C_etc._%28IA_jstor-20489893%29.pdf.jpg",
+    "source": "commons-deep-search",
+    "verified": true,
+    "commonsTitle": "File:Obits of Eminent Individuals Connected with Navan, etc. (IA jstor-20489893).pdf"
+  },
+  {
+    "name": "Malin Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Karl_XI%2C_1655-1697%2C_kung_av_Sverige_%28Malin_Gyllenstierna%29_-_Nationalmuseum_-_38967.tif/lossy-page1-500px-Karl_XI%2C_1655-1697%2C_kung_av_Sverige_%28Malin_Gyllenstierna%29_-_Nationalmuseum_-_38967.tif.jpg",
+    "source": "commons-deep-search",
+    "verified": true,
+    "commonsTitle": "File:Karl XI, 1655-1697, kung av Sverige (Malin Gyllenstierna) - Nationalmuseum - 38967.tif"
+  },
+  {
+    "name": "Lough Oughter Castle Island",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Notes_on_Crannoges_in_Ballin_Lough_%28IA_jstor-20488896%29.pdf/page1-500px-Notes_on_Crannoges_in_Ballin_Lough_%28IA_jstor-20488896%29.pdf.jpg",
+    "source": "commons-deep-search",
+    "verified": true,
+    "commonsTitle": "File:Notes on Crannoges in Ballin Lough (IA jstor-20488896).pdf"
+  },
+  {
+    "name": "Carna Castle",
+    "newImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Carnasserie_Castle_02.jpg/500px-Carnasserie_Castle_02.jpg",
+    "source": "commons-deep-search",
+    "verified": true,
+    "commonsTitle": "File:Carnasserie Castle 02.jpg"
+  }
+]

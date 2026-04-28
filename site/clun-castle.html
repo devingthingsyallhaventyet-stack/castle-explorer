@@ -5,26 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <title>Clun Castle — castlecore | Castles, Abbeys &amp; Ruins</title>
-<meta name="description" content="A brooding Norman ruin on the Welsh border, where Marcher lords once held the line between England and the wild hills beyond.">
+<meta name="description" content="Clun Castle is a medieval ruined castle in Clun, Shropshire, England. Clun Castle was established by the Norman lord Robert de Say after the Norman invasion ...">
 <meta property="og:title" content="Clun Castle — castlecore">
-<meta property="og:description" content="A brooding Norman ruin on the Welsh border, where Marcher lords once held the line between England and the wild hills beyond.">
+<meta property="og:description" content="Clun Castle is a medieval ruined castle in Clun, Shropshire, England. Clun Castle was established by the Norman lord Robert de Say after the Norman invasion ...">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Clun_Castle_02.jpg/1280px-Clun_Castle_02.jpg">
 <meta property="og:url" content="https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/clun-castle.html">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Clun Castle — castlecore">
-<meta name="twitter:description" content="A brooding Norman ruin on the Welsh border, where Marcher lords once held the line between England and the wild hills beyond.">
+<meta name="twitter:description" content="Clun Castle is a medieval ruined castle in Clun, Shropshire, England. Clun Castle was established by the Norman lord Robert de Say after the Norman invasion ...">
 <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Clun_Castle_02.jpg/1280px-Clun_Castle_02.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
   "name": "Clun Castle",
-  "description": "A brooding Norman ruin on the Welsh border, where Marcher lords once held the line between England and the wild hills beyond.",
+  "description": "Clun Castle is a medieval ruined castle in Clun, Shropshire, England. Clun Castle was established by the Norman lord Robert de Say after the Norman invasion of England and went on to become an important Marcher lord castle in the 12th century, with an extensive castle-guard system. Owned for many years by the Fitzalan family, Clun played a key part in protecting the region from Welsh attack until it was gradually abandoned as a property in favour of the more luxurious Arundel Castle. The Fitzalans converted Clun Castle into a hunting lodge in the 14th century, complete with pleasure gardens, but by the 16th century the castle was largely ruined. Slighted in 1646 after the English Civil War, Clun remained in poor condition until renovation work in the 1890s.",
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 52.4236,
-    "longitude": -3.0372
+    "latitude": 52.4216,
+    "longitude": -3.0337
   },
   "address": {
     "@type": "PostalAddress",
@@ -74,8 +74,8 @@ img{max-width:100%;display:block}
 .snav-search input:focus{border-color:var(--candlelight);background:#fff}
 .snav-search .ssi{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.8rem;pointer-events:none}
 .snav-right{display:flex;align-items:center;flex-shrink:0}
-
-
+.nav-btn{background:var(--burgundy);color:#fff;padding:6px 16px;border-radius:var(--pill);font-weight:600;font-size:.85rem;display:inline-block}
+.nav-btn:hover{background:#6e1a2a;color:#fff;text-decoration:none}
 .snav-hamburger{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer}
 .snav-mobile{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;padding:12px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
 .snav-mobile.open{display:flex}
@@ -85,7 +85,7 @@ img{max-width:100%;display:block}
 .snav-mob-search{padding:6px 0 10px;position:relative}
 .snav-mob-search input{width:100%;padding:9px 12px 9px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.9rem;font-family:'Inter',sans-serif;outline:none}
 .snav-mob-search .ssi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.95rem;pointer-events:none}
-@media(max-width:600px){.snav-center{display:none}.snav-right .snav-right .btn-login{display:none!important}.snav-hamburger{display:block}}
+@media(max-width:600px){.snav-center{display:none}.snav-right .nav-btn{display:none}.snav-right .btn-login{display:none!important}.snav-hamburger{display:block}}
 
 /* LISTING TOP — Yelp-style photo banner */
 .back-bar{display:none;max-width:1100px;margin:0 auto;padding:10px 1.5rem 0}
@@ -222,8 +222,15 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 /* FLOURISH */
 .flourish{text-align:center;margin:1.5rem 0;color:var(--hearth)}
 
-/* 
+/* FOOTER */
+footer{background:var(--shadow);color:var(--stone);padding:2rem 24px;text-align:center;font-size:.85rem;margin-top:2rem}
+footer a{color:var(--candlelight)}
 
+/* IMAGE ATTRIBUTION */
+.img-attribution-bar{max-width:1100px;margin:0 auto;padding:2px 1.5rem;display:flex;justify-content:flex-end}
+.img-attribution-bar .attr-text{font-size:.75rem;color:var(--twilight);font-style:italic}
+.img-attribution-bar .attr-text a{color:var(--twilight);text-decoration:underline}
+.img-attribution-bar .attr-text a:hover{color:var(--burgundy)}
 
 /* LIGHTBOX */
 .lb-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
@@ -258,8 +265,20 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 </style>
 </head>
 <body>
-<div id="site-nav"></div><script src="/components/nav.js"></script>
-
+<nav class="site-nav">
+<div class="site-nav-inner">
+<a href="../index.html" class="site-logo"><img src="../logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
+<div class="snav-center">
+<div class="snav-dd"><button class="snav-btn">🏰 Sites <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=tower+house">🗼 Tower Houses</a><a href="../search.html?type=palace">👑 Palaces</a><a href="../search.html?type=fort">🛡️ Forts</a></div></div>
+<div class="snav-dd"><button class="snav-btn">🗺️ Regions <span style="font-size:.55rem">▼</span></button><div class="snav-panel" style="min-width:220px"><div class="sh">England</div><a href="../region.html?id=london-surrey">London &amp; Surrey</a><a href="../region.html?id=south-east-england">South East</a><a href="../region.html?id=south-west-england">South West</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=midlands">The Midlands</a><a href="../region.html?id=yorkshire">Yorkshire</a><div class="sd"></div><div class="sh">Scotland</div><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=scottish-lowlands">Lowlands</a><div class="sd"></div><div class="sh">Wales</div><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=south-wales">South Wales</a><div class="sd"></div><a href="../region.html?id=ireland">🍀 Ireland</a><a href="../search.html?region=Northern+Ireland">N. Ireland</a></div></div>
+<div class="snav-dd"><button class="snav-btn">✨ Collections <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=hidden-gems">💎 Hidden Gems</a><a href="../collection.html?id=haunted">👻 Haunted</a><a href="../collection.html?id=free">🆓 Free to Visit</a><a href="../collection.html?id=photogenic">📸 Photogenic</a><div class="sd"></div><a href="../collection.html">View all →</a></div></div>
+<a href="../trail.html" class="snav-btn" style="text-decoration:none">🛤️ Routes</a>
+<div class="snav-search"><span class="ssi">🔍</span><input type="text" id="snavSearch" placeholder="Search..." autocomplete="off"></div>
+</div>
+<div class="snav-right"><a href="../explore.html" class="nav-btn">🧭 Explore Map</a><button class="btn-login" onclick="alert('Login coming soon!')" style="background:none;border:2px solid var(--border);color:var(--twilight);padding:5px 12px;border-radius:var(--pill);font-weight:500;font-size:.82rem;cursor:pointer;font-family:'Inter',sans-serif;margin-left:8px;display:inline-flex;align-items:center;gap:3px" onmouseover="this.style.borderColor='var(--burgundy)';this.style.color='var(--burgundy)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--twilight)'">👤 Login</button></div>
+<button class="snav-hamburger" onclick="document.querySelector('.snav-mobile').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
 <div class="snav-mobile">
 <div class="snav-mob-search"><span class="ssi">🔍</span><input type="text" id="snavMobSearch" placeholder="Search castles..." autocomplete="off"></div>
 <a href="../explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
@@ -269,7 +288,7 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <a href="../trail.html">🛤️ Routes</a>
 <a href="#" onclick="alert('Login coming soon!')" style="margin-top:16px;text-align:center;border:2px solid var(--border);border-radius:var(--pill);padding:8px;font-weight:600;color:var(--twilight)">👤 Login</a>
 </div>
-<main data-castle-name="Clun Castle" data-lat="52.4236" data-lng="-3.0372">
+<main data-castle-name="Clun Castle" data-lat="52.4216" data-lng="-3.0337">
 
 <!-- BACK BUTTON (mobile) -->
 <div class="back-bar"><a href="javascript:history.back()" class="back-link">← Back</a></div>
@@ -284,6 +303,7 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
+<div class="img-attribution-bar"><span class="attr-text">📷 Philip Halling · CC BY-SA 2.0</span></div>
 
 <!-- HEADER — name + location + rating -->
 <div class="listing-header">
@@ -292,7 +312,7 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="rating-section">
 <span class="rating-big">4</span>
 <span class="rating-stars">★★★★</span>
-<a href="https://www.google.com/maps/search/Clun%20Castle+Shropshire/@52.4236,-3.0372,15z" target="_blank" rel="noopener" class="rating-count">520 reviews</a>
+<a href="https://www.google.com/maps/search/Clun%20Castle+Shropshire/@52.4216,-3.0337,15z" target="_blank" rel="noopener" class="rating-count">520 reviews</a>
 <button class="save-btn" onclick="toggleSave('clun-castle')" id="saveBtn"><span class="heart">♡</span> Save</button>
 </div>
 </div>
@@ -302,12 +322,12 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="listing-main">
 
 <!-- ABOUT -->
-<section><h2>About</h2><p>A brooding Norman ruin on the Welsh border, where Marcher lords once held the line between England and the wild hills beyond.<br><br>Established by Norman lord Robert de Say after the Conquest. Became an important Marcher lord castle in the 12th century with an extensive castle-guard system. The massive earthworks and ruined keep overlook the River Clun. Owned by the Duke of Norfolk, managed by English Heritage.</p></section>
+<section><h2>About</h2><p>Clun Castle is a medieval ruined castle in Clun, Shropshire, England. Clun Castle was established by the Norman lord Robert de Say after the Norman invasion of England and went on to become an important Marcher lord castle in the 12th century, with an extensive castle-guard system. Owned for many years by the Fitzalan family, Clun played a key part in protecting the region from Welsh attack until it was gradually abandoned as a property in favour of the more luxurious Arundel Castle. The Fitzalans converted Clun Castle into a hunting lodge in the 14th century, complete with pleasure gardens, but by the 16th century the castle was largely ruined. Slighted in 1646 after the English Civil War, Clun remained in poor condition until renovation work in the 1890s.</p></section>
 
 <div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
 
 <!-- GETTING THERE -->
-<section><h2>Getting There</h2><div class="transport-card"><div class="tc-header">📍 Directions</div><div class="tc-detail">Use the link below for directions to Clun Castle.</div><a href="https://www.google.com/maps/dir/?api=1&destination=52.4236,-3.0372">Get directions via Google Maps →</a></div></section>
+<section><h2>Getting There</h2><div class="transport-card"><div class="tc-header">📍 Directions</div><div class="tc-detail">Use the link below for directions to Clun Castle.</div><a href="https://www.google.com/maps/dir/?api=1&destination=52.4216,-3.0337">Get directions via Google Maps →</a></div></section>
 
 <!-- TERRAIN -->
 <section><h2>Terrain &amp; Accessibility</h2><p class="terrain-note">Terrain details coming soon. Check before visiting if you have accessibility needs.</p></section>
@@ -325,7 +345,7 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 
 <div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
 <!-- SOURCES -->
-<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list"><li><a href="https://en.wikipedia.org/wiki/Clun_Castle" target="_blank" rel="noopener">Wikipedia</a></li><li><a href="https://www.english-heritage.org.uk/visit/places/clun-castle/" target="_blank" rel="noopener">English Heritage</a></li><li><a href="https://historicengland.org.uk/listing/the-list/list-entry/1013600" target="_blank" rel="noopener">Historic England</a></li></ul></section>
+<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list"><li><a href="https://en.wikipedia.org/wiki/Clun_Castle" target="_blank" rel="noopener">📖 Wikipedia — Clun Castle</a></li><li><a href="https://www.google.com/maps/search/Clun%20Castle%20Shropshire" target="_blank" rel="noopener">📍 Google Maps — Clun Castle</a></li><li><a href="https://en.wikipedia.org/wiki/Clun_Castle" target="_blank" rel="noopener">Wikipedia</a></li><li><a href="https://www.english-heritage.org.uk/visit/places/clun-castle/" target="_blank" rel="noopener">English Heritage</a></li><li><a href="https://historicengland.org.uk/listing/the-list/list-entry/1013600" target="_blank" rel="noopener">Historic England</a></li></ul></section>
 
 </div>
 <aside class="listing-sidebar">
@@ -336,7 +356,7 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="qf-item"><div class="qf-label">Access</div><div class="qf-value">🆓 Free</div></div>
 </div>
 <div class="info-bottom-tags"><span class="tag">dramatic ruin</span><span class="tag">hidden gem</span><span class="tag">free entry</span><span class="tag">riverside</span><span class="tag">norman</span><span class="tag">medieval</span></div>
-<a href="https://www.google.com/maps/dir/?api=1&destination=52.4236,-3.0372" target="_blank" rel="noopener" class="sidebar-directions">📍 Get Directions</a>
+<a href="https://www.google.com/maps/dir/?api=1&destination=52.4216,-3.0337" target="_blank" rel="noopener" class="sidebar-directions">📍 Get Directions</a>
 <div class="sidebar-map-placeholder">🗺️ Map preview coming soon</div>
 </aside>
 </div>
@@ -347,12 +367,12 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
 
 <!-- NEARBY -->
-<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./hopton-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Hopton_Castle.jpg/250px-Hopton_Castle.jpg" alt="Hopton Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Hopton Castle</div><div class="nearby-meta">★ 3.6 · 8 km · castle</div></div></a><a href="./bishop-s-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/bishop-s-castle.jpg" alt="Bishop&#39;s Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Bishop&#39;s Castle</div><div class="nearby-meta">★ 3.1 · 8 km · castle</div></div></a><a href="./brampton-bryan-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/brampton-bryan-castle.jpg" alt="Brampton Bryan Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Brampton Bryan Castle</div><div class="nearby-meta">★ 3.8 · 14 km · castle</div></div></a><a href="./stokesay-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Stokesay_Castle_from_churchyard_1.jpg/250px-Stokesay_Castle_from_churchyard_1.jpg" alt="Stokesay Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Stokesay Castle</div><div class="nearby-meta">★ 4.4 · 15 km · fortified house</div></div></a><a href="./bleddfa-castle-mound.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/bleddfa-castle-mound.jpg" alt="Bleddfa Castle Mound" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Bleddfa Castle Mound</div><div class="nearby-meta">★ 3 · 15 km · castle</div></div></a></div></section>
+<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./hopton-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://lh3.googleusercontent.com/place-photos/AJRVUZMO8NjYw-dDN801anpC9eYcKc9pnnFs7asZVAVEq0cYz7uIaEu4fdr5SkcoZb5yTfp29X1H3rg_era4p533wstCS9SWbhZqnz5Py98SNT1JpKFCMTGpZmaPzUDyOI7QGnLzrmrx1KiajOpnU5g=s4800-w1200" alt="Hopton Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Hopton Castle</div><div class="nearby-meta">★ 3.6 · 7 km · castle</div></div></a><a href="./bishop-s-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/bishop-s-castle.jpg" alt="Bishop&#39;s Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Bishop&#39;s Castle</div><div class="nearby-meta">★ 3.1 · 8 km · castle</div></div></a><a href="./brampton-bryan-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/brampton-bryan-castle.jpg" alt="Brampton Bryan Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Brampton Bryan Castle</div><div class="nearby-meta">★ 3.8 · 13 km · castle</div></div></a><a href="./stokesay-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://lh3.googleusercontent.com/place-photos/AJRVUZMiCGz9NtaOcArkU09ayq4ABEhNY-YurcDmOI9lln2CStUioV4fryIWqHuhxgx9ZavVF_iMYwORcm7MrPM8StLQQ4Q_ZBaTIJpkwhotOIoNDRMJKXv8ravQlzMCO1kaNco8jwuc7VEUFiKTD98=s4800-w1200" alt="Stokesay Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Stokesay Castle</div><div class="nearby-meta">★ 4.4 · 14 km · fortified house</div></div></a><a href="./bleddfa-castle-mound.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/bleddfa-castle-mound.jpg" alt="Bleddfa Castle Mound" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Bleddfa Castle Mound</div><div class="nearby-meta">★ 3 · 15 km · castle</div></div></a></div></section>
 
 <!-- CTA -->
 <div class="cta-section">
 <a href="../explore.html" class="cta-button">🗺️ Explore the Map</a>
-<a href="../index.html" class="cta-secondary">Discover all 2,004+ sites →</a>
+<a href="../index.html" class="cta-secondary">Discover all 2,000+ sites →</a>
 </div>
 </div>
 </main>
@@ -366,7 +386,11 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="lb-counter" id="lbCounter"></div>
 </div>
 
-
+<footer>
+<p style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:4px"><img src="../logo.png" alt="castlecore" style="height:32px;width:auto;border-radius:4px;vertical-align:middle;margin-right:8px">castlecore</p>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+<p style="margin-top:8px">© 2026 castlecore · <a href="../index.html">Home</a> · <a href="../explore.html">Map</a></p>
+</footer>
 
 
 <script>
@@ -495,6 +519,5 @@ function updateSaveBtn(slug){
 var snavS=document.getElementById('snavSearch');if(snavS)snavS.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
 var snavM=document.getElementById('snavMobSearch');if(snavM)snavM.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
 </script>
-<div id="site-footer"></div><script src="/components/footer.js"></script>
 </body>
 </html>

@@ -258,6 +258,12 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 footer{background:var(--shadow);color:var(--stone);padding:2rem 24px;text-align:center;font-size:.85rem;margin-top:2rem}
 footer a{color:var(--candlelight)}
 
+/* IMAGE ATTRIBUTION */
+.img-attribution-bar{max-width:1100px;margin:0 auto;padding:2px 1.5rem;display:flex;justify-content:flex-end}
+.img-attribution-bar .attr-text{font-size:.75rem;color:var(--twilight);font-style:italic}
+.img-attribution-bar .attr-text a{color:var(--twilight);text-decoration:underline}
+.img-attribution-bar .attr-text a:hover{color:var(--burgundy)}
+
 /* LIGHTBOX */
 .lb-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
 .lb-overlay.open{display:flex}
@@ -573,6 +579,20 @@ ${schema}
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
+${(() => {
+  // Image attribution bar
+  const attr = castle.imageAttribution;
+  const src = castle.mainImageSource;
+  if (src === 'google') {
+    return `<div class="img-attribution-bar"><span class="attr-text">📍 Photo via <a href="${escapeHtml(castle.googleMapsLink || '#')}" target="_blank" rel="noopener">Google Maps</a></span></div>`;
+  } else if (attr) {
+    const artist = typeof attr === 'object' ? (attr.artist || attr.credit || '') : String(attr);
+    const license = typeof attr === 'object' ? (attr.license || '') : '';
+    const parts = [artist, license].filter(Boolean).join(' · ');
+    return parts ? `<div class="img-attribution-bar"><span class="attr-text">📷 ${escapeHtml(parts)}</span></div>` : '';
+  }
+  return '';
+})()}
 
 <!-- HEADER — name + location + rating -->
 <div class="listing-header">
@@ -612,9 +632,24 @@ ${castle.youtube ? `${FLOURISH}
 <!-- YOUTUBE -->
 <section><h2>Videos</h2><div class="yt-grid">${(Array.isArray(castle.youtube) ? castle.youtube : [castle.youtube]).slice(0,3).map(id => `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${escapeHtml(id)}" title="Video about ${escapeHtml(castle.name)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`).join('')}</div></section>` : ''}
 
-${(castle.sources && castle.sources.length) ? `${FLOURISH}
-<!-- SOURCES -->
-<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list">${castle.sources.map(s => typeof s === 'string' ? `<li><a href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(s)}</a></li>` : `<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name || s.url)}</a></li>`).join('')}</ul></section>` : ''}
+${(() => {
+  const sourceItems = [];
+  // Always add Wikipedia if available
+  if (castle.wiki) {
+    sourceItems.push(`<li><a href="${escapeHtml(castle.wiki)}" target="_blank" rel="noopener">📖 Wikipedia — ${escapeHtml(castle.name)}</a></li>`);
+  }
+  // Always add Google Maps
+  const gMapsUrl = castle.googleMapsLink || `https://www.google.com/maps/search/${encodeURIComponent(castle.name + ' ' + (castle.county || ''))}`;
+  sourceItems.push(`<li><a href="${escapeHtml(gMapsUrl)}" target="_blank" rel="noopener">📍 Google Maps — ${escapeHtml(castle.name)}</a></li>`);
+  // Existing sources
+  if (castle.sources && castle.sources.length) {
+    castle.sources.forEach(s => {
+      if (typeof s === 'string') sourceItems.push(`<li><a href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(s)}</a></li>`);
+      else sourceItems.push(`<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name || s.url)}</a></li>`);
+    });
+  }
+  return sourceItems.length ? `${FLOURISH}\n<!-- SOURCES -->\n<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list">${sourceItems.join('')}</ul></section>` : '';
+})()}
 
 </div>
 <aside class="listing-sidebar">

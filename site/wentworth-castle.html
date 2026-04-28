@@ -74,8 +74,8 @@ img{max-width:100%;display:block}
 .snav-search input:focus{border-color:var(--candlelight);background:#fff}
 .snav-search .ssi{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:.8rem;pointer-events:none}
 .snav-right{display:flex;align-items:center;flex-shrink:0}
-
-
+.nav-btn{background:var(--burgundy);color:#fff;padding:6px 16px;border-radius:var(--pill);font-weight:600;font-size:.85rem;display:inline-block}
+.nav-btn:hover{background:#6e1a2a;color:#fff;text-decoration:none}
 .snav-hamburger{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer}
 .snav-mobile{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;padding:12px 24px;flex-direction:column;gap:0;z-index:999;overflow-y:auto}
 .snav-mobile.open{display:flex}
@@ -85,7 +85,7 @@ img{max-width:100%;display:block}
 .snav-mob-search{padding:6px 0 10px;position:relative}
 .snav-mob-search input{width:100%;padding:9px 12px 9px 32px;border:1px solid var(--border);border-radius:var(--pill);font-size:.9rem;font-family:'Inter',sans-serif;outline:none}
 .snav-mob-search .ssi{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.95rem;pointer-events:none}
-@media(max-width:600px){.snav-center{display:none}.snav-right .snav-right .btn-login{display:none!important}.snav-hamburger{display:block}}
+@media(max-width:600px){.snav-center{display:none}.snav-right .nav-btn{display:none}.snav-right .btn-login{display:none!important}.snav-hamburger{display:block}}
 
 /* LISTING TOP — Yelp-style photo banner */
 .back-bar{display:none;max-width:1100px;margin:0 auto;padding:10px 1.5rem 0}
@@ -222,8 +222,15 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 /* FLOURISH */
 .flourish{text-align:center;margin:1.5rem 0;color:var(--hearth)}
 
-/* 
+/* FOOTER */
+footer{background:var(--shadow);color:var(--stone);padding:2rem 24px;text-align:center;font-size:.85rem;margin-top:2rem}
+footer a{color:var(--candlelight)}
 
+/* IMAGE ATTRIBUTION */
+.img-attribution-bar{max-width:1100px;margin:0 auto;padding:2px 1.5rem;display:flex;justify-content:flex-end}
+.img-attribution-bar .attr-text{font-size:.75rem;color:var(--twilight);font-style:italic}
+.img-attribution-bar .attr-text a{color:var(--twilight);text-decoration:underline}
+.img-attribution-bar .attr-text a:hover{color:var(--burgundy)}
 
 /* LIGHTBOX */
 .lb-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
@@ -258,8 +265,20 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 </style>
 </head>
 <body>
-<div id="site-nav"></div><script src="/components/nav.js"></script>
-
+<nav class="site-nav">
+<div class="site-nav-inner">
+<a href="../index.html" class="site-logo"><img src="../logo.png" alt="castlecore" style="height:42px;width:auto;border-radius:4px;vertical-align:middle">castlecore</a>
+<div class="snav-center">
+<div class="snav-dd"><button class="snav-btn">🏰 Sites <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../search.html?type=castle">🏰 Castles</a><a href="../search.html?type=abbey">⛪ Abbeys</a><a href="../search.html?type=tower+house">🗼 Tower Houses</a><a href="../search.html?type=palace">👑 Palaces</a><a href="../search.html?type=fort">🛡️ Forts</a></div></div>
+<div class="snav-dd"><button class="snav-btn">🗺️ Regions <span style="font-size:.55rem">▼</span></button><div class="snav-panel" style="min-width:220px"><div class="sh">England</div><a href="../region.html?id=london-surrey">London &amp; Surrey</a><a href="../region.html?id=south-east-england">South East</a><a href="../region.html?id=south-west-england">South West</a><a href="../region.html?id=northern-england">Northern England</a><a href="../region.html?id=midlands">The Midlands</a><a href="../region.html?id=yorkshire">Yorkshire</a><div class="sd"></div><div class="sh">Scotland</div><a href="../region.html?id=scottish-highlands">Highlands</a><a href="../region.html?id=scottish-lowlands">Lowlands</a><div class="sd"></div><div class="sh">Wales</div><a href="../region.html?id=north-wales">North Wales</a><a href="../region.html?id=south-wales">South Wales</a><div class="sd"></div><a href="../region.html?id=ireland">🍀 Ireland</a><a href="../search.html?region=Northern+Ireland">N. Ireland</a></div></div>
+<div class="snav-dd"><button class="snav-btn">✨ Collections <span style="font-size:.55rem">▼</span></button><div class="snav-panel"><a href="../collection.html?id=top-rated">🏆 Top Rated</a><a href="../collection.html?id=hidden-gems">💎 Hidden Gems</a><a href="../collection.html?id=haunted">👻 Haunted</a><a href="../collection.html?id=free">🆓 Free to Visit</a><a href="../collection.html?id=photogenic">📸 Photogenic</a><div class="sd"></div><a href="../collection.html">View all →</a></div></div>
+<a href="../trail.html" class="snav-btn" style="text-decoration:none">🛤️ Routes</a>
+<div class="snav-search"><span class="ssi">🔍</span><input type="text" id="snavSearch" placeholder="Search..." autocomplete="off"></div>
+</div>
+<div class="snav-right"><a href="../explore.html" class="nav-btn">🧭 Explore Map</a><button class="btn-login" onclick="alert('Login coming soon!')" style="background:none;border:2px solid var(--border);color:var(--twilight);padding:5px 12px;border-radius:var(--pill);font-weight:500;font-size:.82rem;cursor:pointer;font-family:'Inter',sans-serif;margin-left:8px;display:inline-flex;align-items:center;gap:3px" onmouseover="this.style.borderColor='var(--burgundy)';this.style.color='var(--burgundy)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--twilight)'">👤 Login</button></div>
+<button class="snav-hamburger" onclick="document.querySelector('.snav-mobile').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</nav>
 <div class="snav-mobile">
 <div class="snav-mob-search"><span class="ssi">🔍</span><input type="text" id="snavMobSearch" placeholder="Search castles..." autocomplete="off"></div>
 <a href="../explore.html" style="color:var(--burgundy);font-weight:700">🧭 Explore Map</a>
@@ -284,6 +303,7 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="g-side" id="gSide4"><span class="g-more" id="gMoreLabel" style="display:none">See all</span></div>
 </div>
 </div>
+
 
 <!-- HEADER — name + location + rating -->
 <div class="listing-header">
@@ -325,7 +345,7 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 
 <div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
 <!-- SOURCES -->
-<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list"><li><a href="https://www.nationaltrust.org.uk/visit/yorkshire/wentworth-castle-gardens/the-history-of-wentworth-castle-gardens" target="_blank" rel="noopener">National Trust</a></li><li><a href="https://en.wikipedia.org/wiki/Wentworth_Castle" target="_blank" rel="noopener">Wikipedia</a></li><li><a href="https://www.wentworthcastle.org/history-restoration/" target="_blank" rel="noopener">Wentworth Castle</a></li></ul></section>
+<section><h2>Sources &amp; Further Reading</h2><ul class="sources-list"><li><a href="https://www.google.com/maps/search/Wentworth%20Castle%20Yorkshire" target="_blank" rel="noopener">📍 Google Maps — Wentworth Castle</a></li><li><a href="https://www.nationaltrust.org.uk/visit/yorkshire/wentworth-castle-gardens/the-history-of-wentworth-castle-gardens" target="_blank" rel="noopener">National Trust</a></li><li><a href="https://en.wikipedia.org/wiki/Wentworth_Castle" target="_blank" rel="noopener">Wikipedia</a></li><li><a href="https://www.wentworthcastle.org/history-restoration/" target="_blank" rel="noopener">Wentworth Castle</a></li></ul></section>
 
 </div>
 <aside class="listing-sidebar">
@@ -347,12 +367,12 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="flourish"><svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 4C55 4 50 0 40 0C30 0 25 8 15 8C8 8 4 5 0 3V17C4 15 8 12 15 12C25 12 30 20 40 20C50 20 55 16 60 16C65 16 70 20 80 20C90 20 95 12 105 12C112 12 116 15 120 17V3C116 5 112 8 105 8C95 8 90 0 80 0C70 0 65 4 60 4Z" fill="currentColor" opacity="0.15"/></svg></div>
 
 <!-- NEARBY -->
-<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./monk-bretton-priory.html" class="nearby-card"><img class="nearby-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/MonkBrettonPriory.jpg/250px-MonkBrettonPriory.jpg" alt="Monk Bretton Priory" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Monk Bretton Priory</div><div class="nearby-meta">★ 3.8 · 8 km · abbey</div></div></a><a href="./sandal-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SandalCastleMotte.jpg/250px-SandalCastleMotte.jpg" alt="Sandal Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Sandal Castle</div><div class="nearby-meta">★ 3.7 · 18 km · castle</div></div></a><a href="./brodsworth-hall.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/brodsworth-hall.jpg" alt="Brodsworth Hall" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Brodsworth Hall</div><div class="nearby-meta">★ 4.4 · 19 km · castle</div></div></a><a href="./nostell-priory.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/nostell-priory.jpg" alt="Nostell Priory" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Nostell Priory</div><div class="nearby-meta">★ 4.4 · 19 km · castle</div></div></a><a href="./conisbrough-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/ConisbroughCastle.jpg/250px-ConisbroughCastle.jpg" alt="Conisbrough Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Conisbrough Castle</div><div class="nearby-meta">★ 4.2 · 21 km · castle</div></div></a></div></section>
+<section><h2>Nearby Sites</h2><div class="nearby-grid"><a href="./monk-bretton-priory.html" class="nearby-card"><img class="nearby-thumb" src="https://lh3.googleusercontent.com/place-photos/AJRVUZPhcG9bRPsbdoIoMqKiQ69q_v9hvu3qMzTe9AT8FPaQrFkZ5cQW1vFeUNYNGBLhB9e4ymo2c-xu1My635gpfq61p3XugIkEdy78c6x496_fuSaurYHen4_8he33pZdfl4JVCEZw0a_eTJFj1w=s4800-w1200" alt="Monk Bretton Priory" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Monk Bretton Priory</div><div class="nearby-meta">★ 3.8 · 9 km · abbey</div></div></a><a href="./sandal-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://lh3.googleusercontent.com/place-photos/AJRVUZO5O_A_9zYlqDQ9Sdo0LuyN2bkyleo3BaxTZaRTNSbwh_zgCusv0l8-xXAzS3bToF3xG-Pd3p9mfIkyW6zmkE9qz9dvwhNQiwOjXuwsirOErjQ0zNu4nfYmm4DnEw0k6_GZoeyrYOFE9IZkieIpt0DEWw=s4800-w1200" alt="Sandal Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Sandal Castle</div><div class="nearby-meta">★ 3.7 · 17 km · castle</div></div></a><a href="./nostell-priory.html" class="nearby-card"><img class="nearby-thumb" src="https://img.castlecore.uk/nostell-priory.jpg" alt="Nostell Priory" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Nostell Priory</div><div class="nearby-meta">★ 4.4 · 19 km · castle</div></div></a><a href="./brodsworth-hall.html" class="nearby-card"><img class="nearby-thumb" src="https://lh3.googleusercontent.com/place-photos/AJRVUZNI8yAIRwtMIsjGf1Hwb_LKvMv7mdpEspVLA4o4jyruc1dw4PkgyV4CZ-ec-ztCAOKmBueShmhkDotqtNuUqrtZyVUv7cdaLqruwwYrIGFyGeyN-sydeit1_tjfH21B2zU_Z4-wH759n9dBuJY=s4800-w1200" alt="Brodsworth Hall" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Brodsworth Hall</div><div class="nearby-meta">★ 4.4 · 21 km · castle</div></div></a><a href="./conisbrough-castle.html" class="nearby-card"><img class="nearby-thumb" src="https://lh3.googleusercontent.com/place-photos/AJRVUZOJIdhPbIgyVHttBIfi8SzztD4id2G9JEJKC-RfI-Ls6AcUaEvrqpKpDFwag3TwlP1Bdmkipo9tBG8VevOTQppY97Z4RsF_pVukdhVac02Oc2edPGk1xhJF-zEUXVMekFaNRJ5WTCDfcVsg=s4800-w1200" alt="Conisbrough Castle" loading="lazy" onerror="this.src='../placeholder.svg'"><div class="nearby-body"><div class="nearby-name">Conisbrough Castle</div><div class="nearby-meta">★ 4.2 · 21 km · castle</div></div></a></div></section>
 
 <!-- CTA -->
 <div class="cta-section">
 <a href="../explore.html" class="cta-button">🗺️ Explore the Map</a>
-<a href="../index.html" class="cta-secondary">Discover all 2,004+ sites →</a>
+<a href="../index.html" class="cta-secondary">Discover all 2,000+ sites →</a>
 </div>
 </div>
 </main>
@@ -366,7 +386,11 @@ section p{color:var(--shadow);font-size:.95rem;line-height:1.75}
 <div class="lb-counter" id="lbCounter"></div>
 </div>
 
-
+<footer>
+<p style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:4px"><img src="../logo.png" alt="castlecore" style="height:32px;width:auto;border-radius:4px;vertical-align:middle;margin-right:8px">castlecore</p>
+<p>The most complete heritage guide for the UK &amp; Ireland</p>
+<p style="margin-top:8px">© 2026 castlecore · <a href="../index.html">Home</a> · <a href="../explore.html">Map</a></p>
+</footer>
 
 
 <script>
@@ -495,6 +519,5 @@ function updateSaveBtn(slug){
 var snavS=document.getElementById('snavSearch');if(snavS)snavS.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
 var snavM=document.getElementById('snavMobSearch');if(snavM)snavM.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=this.value.trim();if(q)window.location.href='../search.html?q='+encodeURIComponent(q);}});
 </script>
-<div id="site-footer"></div><script src="/components/footer.js"></script>
 </body>
 </html>
