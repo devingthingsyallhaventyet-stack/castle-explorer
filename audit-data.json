@@ -44264,7 +44264,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -44353,8 +44353,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castletown_Cox"
   },
   {
     "name": "Ballysaggartmore Towers",
@@ -44445,8 +44446,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tacumshane"
   },
   {
     "name": "Hook Lighthouse",
@@ -44539,8 +44541,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Slane"
   },
   {
     "name": "Kells Round Tower",
@@ -44632,7 +44635,7 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -44727,8 +44730,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/St._Declan%27s_Monastery"
   },
   {
     "name": "Strangely Castle",
@@ -44775,7 +44779,7 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -44821,7 +44825,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -44868,7 +44872,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -44911,7 +44915,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -44956,7 +44960,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -45005,8 +45009,9 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Duiske_Abbey"
   },
   {
     "name": "Granagh Castle",
@@ -45053,7 +45058,7 @@
       "flagged-during-image-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -45096,7 +45101,7 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
+    "hasWikipedia": "no",
     "hasGooglePlaces": "unknown"
   },
   {
@@ -45144,8 +45149,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Athlumney_Castle"
   },
   {
     "name": "Skryne Church",
@@ -45191,8 +45197,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Skryne_Castle"
   },
   {
     "name": "Hill of Tara",
@@ -45283,8 +45290,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Canice%27s_Cathedral"
   },
   {
     "name": "Dungarvan Castle",
@@ -45330,8 +45338,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dungarvan_Castle"
   },
   {
     "name": "Tybroughney Castle",
@@ -45375,8 +45384,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tybroughney"
   },
   {
     "name": "Duncannon Fort",
@@ -45422,8 +45432,9 @@
       "needs-review"
     ],
     "exists": "unverified",
-    "hasWikipedia": "unknown",
-    "hasGooglePlaces": "unknown"
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Duncannon_Fort"
   },
   {
     "name": "Leighlinbridge Castle",
