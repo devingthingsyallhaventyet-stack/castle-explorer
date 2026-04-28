@@ -15,6 +15,11 @@ const RICH_SITE_DATA = richCtx.RICH_SITE_DATA;
 
 console.log(`Loaded ${CASTLES.length} castles, ${Object.keys(RICH_SITE_DATA).length} rich entries`);
 
+// ===== Load audit data to filter flagged listings =====
+const AUDIT_DATA = JSON.parse(fs.readFileSync(path.join(__dirname, 'audit-data.json'), 'utf8'));
+const FLAGGED_NAMES = new Set(AUDIT_DATA.filter(x => x.reviewStatus === 'flagged').map(x => x.name));
+console.log(`Audit: ${AUDIT_DATA.length} total, ${FLAGGED_NAMES.size} flagged (will skip page generation)`);
+
 // ===== Helpers =====
 function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -689,6 +694,11 @@ for (const castle of CASTLES) {
     skipped++;
     // Still include in sitemap
     sitemapEntries.push(`  <url><loc>https://devingthingsyallhaventyet-stack.github.io/castle-explorer/site/${slug}.html</loc><lastmod>${today}</lastmod><priority>0.9</priority></url>`);
+    continue;
+  }
+  // Skip flagged listings — data stays in data.js but no page generated
+  if (FLAGGED_NAMES.has(castle.name)) {
+    skipped++;
     continue;
   }
   const html = generatePage(castle);
