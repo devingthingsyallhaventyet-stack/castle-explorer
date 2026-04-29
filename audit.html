@@ -153,6 +153,7 @@ body{padding-bottom:50px}
     <div class="main-tab active" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
     <div class="main-tab" id="tabFlagged" onclick="switchMainTab('flagged')">⚠️ Flagged <span class="tab-badge" id="tabFlaggedCount">0</span></div>
     <div class="main-tab" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
+    <div class="main-tab" id="tabImgReview" onclick="switchMainTab('imgReview')">📷 Image Review <span class="tab-badge" id="tabImgReviewCount">0</span></div>
     <div class="main-tab" id="tabEnrich" onclick="switchMainTab('enrich')">🔧 Enrich <span class="tab-badge" id="tabEnrichCount">0</span></div>
     <div class="main-tab" id="tabDead" onclick="switchMainTab('dead')">💀 Dead <span class="tab-badge" id="tabDeadCount">0</span></div>
     <div class="main-tab" id="tabDupes" onclick="switchMainTab('dupes')">🔀 Dupes <span class="tab-badge" id="tabDupesCount">0</span></div>
@@ -260,7 +261,7 @@ const wikiCache = new Map();
 function switchMainTab(tab) {
   currentMainTab = tab;
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
-  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',enrich:'tabEnrich',dead:'tabDead',dupes:'tabDupes'};
+  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',imgReview:'tabImgReview',enrich:'tabEnrich',dead:'tabDead',dupes:'tabDupes'};
   document.getElementById(tabIds[tab]).classList.add('active');
   
   if (tab === 'dupes') {
@@ -273,7 +274,7 @@ function switchMainTab(tab) {
   }
   document.getElementById('dupesView').style.display = 'none';
   // Set view mode (but don't render yet — applyFilters will handle it)
-  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich') ? 'table' : 'card';
+  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich') ? 'table' : (tab === 'imgReview' || tab === 'flagged' || tab === 'review') ? 'card' : 'card';
   currentView = wantView;
   document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
   document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
@@ -284,11 +285,12 @@ function switchMainTab(tab) {
 }
 
 function updateTabCounts() {
-  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0;
-  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') ap++; else if (s === 'flagged') { if (d.needsEnrich) enrich++; else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
+  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0, imgReview = 0;
+  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') { ap++; if (!d.imageReviewDone) imgReview++; } else if (s === 'flagged') { if (d.needsEnrich) enrich++; else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
   document.getElementById('tabReviewCount').textContent = un;
   document.getElementById('tabFlaggedCount').textContent = fl;
   document.getElementById('tabApprovedCount').textContent = ap;
+  document.getElementById('tabImgReviewCount').textContent = imgReview;
   document.getElementById('tabEnrichCount').textContent = enrich;
   document.getElementById('tabDeadCount').textContent = dead;
 }
@@ -351,6 +353,7 @@ function applyFilters() {
     const s = getStatus(d);
     if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
     if (currentMainTab === 'enrich') return s === 'flagged' && d.needsEnrich === true;
+    if (currentMainTab === 'imgReview') return s === 'approved' && !d.imageReviewDone;
     if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
     if (currentMainTab === 'approved') return s === 'approved';
     if (currentMainTab === 'review') return s === 'unreviewed';
@@ -510,8 +513,8 @@ function goPrev() {
   if (currentIdx > 0) { currentIdx--; renderCard(); }
 }
 function advanceToNext() {
-  if (currentMainTab === 'flagged') {
-    // On flagged tab, just go to next entry (approved ones will disappear on re-filter)
+  if (currentMainTab === 'flagged' || currentMainTab === 'imgReview') {
+    // On flagged/image review tab, just go to next entry
     goNext();
     return;
   }
