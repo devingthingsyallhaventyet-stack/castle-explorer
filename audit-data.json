@@ -17440,7 +17440,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Featherstone_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Featherstone_Castle_%28back%29.jpg/330px-Featherstone_Castle_%28back%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Teknad",
       "license": "CC BY-SA 4.0",
@@ -17489,7 +17489,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Bellister_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bellister_Castle_-_geograph.org.uk_-_2765227.jpg/330px-Bellister_Castle_-_geograph.org.uk_-_2765227.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anthony Parkes",
       "license": "CC BY-SA 2.0",
@@ -17586,7 +17586,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Bewcastle_Cross",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg/330px-The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Mike Quinn",
       "license": "CC BY-SA 2.0",
@@ -17685,7 +17685,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Wray_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wray_Castle_2008.jpg/330px-Wray_Castle_2008.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "James@hopgrove",
       "license": "CC BY-SA 3.0",
@@ -17749,7 +17749,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dalton_Castle,_Cumbria"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dalton_Castle,_Cumbria",
+    "needsEnrich": true
   },
   {
     "name": "Arnside Tower",
@@ -17819,7 +17820,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Cockle_Park_Tower",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cockle_Park_Tower_from_SW.jpg/330px-Cockle_Park_Tower_from_SW.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "DisillusionedBitterAndKnackered",
       "license": "CC BY-SA 4.0",
@@ -18172,7 +18173,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Hulne_Priory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hulne_Priory.jpg/330px-Hulne_Priory.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Clementp.fr",
       "license": "CC BY-SA 4.0",
@@ -18414,7 +18415,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Corby_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Corby_Castle.jpg/330px-Corby_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -18488,7 +18489,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Millom_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Millom_Castle_-_geograph.org.uk_-_285259.jpg/330px-Millom_Castle_-_geograph.org.uk_-_285259.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Andrew Woodhall",
       "license": "CC BY-SA 2.0",
@@ -18542,7 +18543,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Burgh_by_Sands_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Burgh_by_Sands_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Stott Park Bobbin Mill",
@@ -18823,7 +18825,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Durham_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Durham_MMB_02_Cathedral.jpg/330px-Durham_MMB_02_Cathedral.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "mattbuck (category)",
       "license": "CC BY-SA 4.0",
@@ -18926,7 +18928,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Segedunum"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Segedunum",
+    "needsEnrich": true
   },
   {
     "name": "Newcastle Castle Keep",
@@ -19013,7 +19016,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Cragside",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cragside3.jpg/330px-Cragside3.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Robin Drayton",
       "license": "CC BY-SA 2.0",
@@ -19666,7 +19669,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Tower_of_London",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/330px-Tower_of_London_from_the_Shard_%288515883950%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "[Duncan] from Nottingham, UK",
       "license": "CC BY 2.0",
@@ -19707,7 +19710,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dover_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/1_dover_castle_aerial_panorama_2017.jpg/330px-1_dover_castle_aerial_panorama_2017.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Chensiyuan",
       "license": "CC BY-SA 4.0",
@@ -19748,7 +19751,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Leeds_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Leeds_castle.JPG/330px-Leeds_castle.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Adusha",
       "license": "CC BY 3.0",
@@ -20255,7 +20258,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Guildford_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Guildford_Castle%2C_2015_%2832%29_%2821688488881%29.jpg/330px-Guildford_Castle%2C_2015_%2832%29_%2821688488881%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Richard Nevell from London, United Kingdom",
       "license": "CC BY-SA 2.0",
@@ -20295,7 +20298,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Blenheim_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Blenheim_Palace_2006.jpg/330px-Blenheim_Palace_2006.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "gailf548 from New York State, USA",
       "license": "CC BY 2.0",
@@ -21086,7 +21089,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Titchfield_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Titchfield_Abbey_1.jpg/330px-Titchfield_Abbey_1.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Adam Greenough",
       "license": "CC BY-SA 4.0",
@@ -21665,7 +21668,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Windsor_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Windsor_Castle_at_Sunset_-_Nov_2006.jpg/330px-Windsor_Castle_at_Sunset_-_Nov_2006.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Diliff",
       "license": "CC BY 2.5",
@@ -21712,7 +21715,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Hampton_Court_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg/330px-Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Tilman2007",
       "license": "CC BY-SA 4.0",
@@ -21852,7 +21855,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Richborough_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Richborough_Castle_02.jpg/330px-Richborough_Castle_02.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Nilfanion",
       "license": "CC BY-SA 4.0",
@@ -21982,7 +21985,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Canterbury_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Canterbury-cathedral-wyrdlight.jpg/330px-Canterbury-cathedral-wyrdlight.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Antony McCallum: Who is the uploader, photographer, full copyright owner and proprietor of WyrdLight.com",
       "license": "CC BY-SA 4.0",
@@ -22413,7 +22416,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Corfe_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Corfe_Castle%2C_Dorset.jpg/330px-Corfe_Castle%2C_Dorset.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Tallguyuk",
       "license": "CC BY-SA 3.0",
@@ -22891,7 +22894,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Christchurch_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Christchurch_Castle_two_walls.JPG/330px-Christchurch_Castle_two_walls.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "geni",
       "license": "CC BY-SA 4.0",
@@ -22930,7 +22933,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Berkeley_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg/330px-Berkeley_Castle_-_geograph.org.uk_-_3079433.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Andrew Hackney",
       "license": "CC BY-SA 2.0",
@@ -23167,7 +23170,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Taunton_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg/330px-Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Ken Grainger",
       "license": "CC BY-SA 2.0",
@@ -23508,7 +23511,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Maiden_Castle,_Dorset"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Maiden_Castle,_Dorset",
+    "needsEnrich": true
   },
   {
     "name": "Thornbury Castle",
@@ -23542,7 +23546,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Thornbury_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/330px-Thornbury.castle.west.front.arp.750pix.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Arpingstone (Adrian Pingstone) at en.wikipedia",
       "license": "Public domain",
@@ -23589,7 +23593,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/St_Briavels_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg/330px-St_Briavels_Castle_-_geograph.org.uk_-_520136.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Roy Parkhouse",
       "license": "CC BY-SA 2.0",
@@ -23645,7 +23649,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Hailes_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hailes_Abbey_Landscape.jpg/330px-Hailes_Abbey_Landscape.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Saffron Blaze",
       "license": "CC BY-SA 3.0",
@@ -23698,7 +23702,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tewkesbury_Abbey_2011.jpg/330px-Tewkesbury_Abbey_2011.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Saffron Blaze",
       "license": "CC BY-SA 3.0",
@@ -23747,7 +23751,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Cowes_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/West_Cowes_Castle.jpg/330px-West_Cowes_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Nilfanion",
       "license": "CC BY-SA 3.0",
@@ -23892,7 +23896,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bampton_Castle,_Devon"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bampton_Castle,_Devon",
+    "needsEnrich": true
   },
   {
     "name": "Dupath Well",
@@ -24118,7 +24123,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/St_Michael's_Mount",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/St_Michael%27s_Mount_View.jpg/330px-St_Michael%27s_Mount_View.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Werner Wilmes",
       "license": "CC BY 2.0",
@@ -24309,7 +24314,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Salcombe_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/SalcombeCastleFromNorthSands.jpg/330px-SalcombeCastleFromNorthSands.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Stephen Lea",
       "license": "CC BY-SA 3.0",
@@ -24358,7 +24363,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Gidleigh_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Gidleigh_Castle.jpg/330px-Gidleigh_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Derek Harper",
       "license": "CC BY-SA 2.0",
@@ -24413,7 +24418,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Wareham_Castle_and_town_defences",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Wareham_Town_Wall%2C_west_-_geograph.org.uk_-_762804.jpg/330px-Wareham_Town_Wall%2C_west_-_geograph.org.uk_-_762804.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -24561,7 +24566,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Devizes_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Devizes_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Trowbridge Castle",
@@ -24594,7 +24600,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Trowbridge_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Fore_Street%2C_Trowbridge_-_geograph.org.uk_-_368316.jpg/330px-Fore_Street%2C_Trowbridge_-_geograph.org.uk_-_368316.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Phil Williams",
       "license": "CC BY-SA 2.0",
@@ -24646,7 +24652,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Beverston_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/330px-Beverston_castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "The original uploader was Anlace at English Wikipedia.",
       "license": "CC BY-SA 2.5",
@@ -24689,7 +24695,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Bridgwater_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Bridgwater_Castle_c_1800.jpg/330px-Bridgwater_Castle_c_1800.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Unknown authorUnknown author",
       "license": "Public domain",
@@ -24792,7 +24798,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rougemont_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rougemont_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Stanton Drew Stone Circles",
@@ -24827,7 +24834,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Stanton_Drew_stone_circles",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Stanton_Drew_stone_circle%2C_Somerset.jpg/330px-Stanton_Drew_stone_circle%2C_Somerset.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Stevekeiretsu",
       "license": "CC BY-SA 4.0",
@@ -24968,7 +24975,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Gloucester_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gloucester_Cathedral_exterior_2019.JPG/330px-Gloucester_Cathedral_exterior_2019.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Geni",
       "license": "CC BY-SA 4.0",
@@ -25023,7 +25030,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Sudeley_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Aerial_photo_of_Sudeley_Castle.jpg/330px-Aerial_photo_of_Sudeley_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Wdejager",
       "license": "CC BY-SA 4.0",
@@ -25252,7 +25259,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Llanthony_Secunda_Priory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Llanthony_Secunda_Priory_in_January_2019.jpg/330px-Llanthony_Secunda_Priory_in_January_2019.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Tom Axford 1",
       "license": "CC BY-SA 4.0",
@@ -25298,7 +25305,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Blackfriars%2C_Gloucester",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Gloucester_Blackfriars_20.08.11.JPG/330px-Gloucester_Blackfriars_20.08.11.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Philafrenzy",
       "license": "CC0",
@@ -25348,7 +25355,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Prinknash_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Prinknash.jpg/330px-Prinknash.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -25532,7 +25539,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Great_Chalfield_Manor",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Great_Chalfield_Manor_north_elevation_-_geograph.org.uk_-_2512310.jpg/330px-Great_Chalfield_Manor_north_elevation_-_geograph.org.uk_-_2512310.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Stuart Logan",
       "license": "CC BY-SA 2.0",
@@ -26202,7 +26209,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ince_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ince_Castle_-_geograph.org.uk_-_344828.jpg/330px-Ince_Castle_-_geograph.org.uk_-_344828.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -26248,7 +26255,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Cotehele",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Cotehele%2C_house_from_courtyard.jpg/330px-Cotehele%2C_house_from_courtyard.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Rwendland",
       "license": "CC BY-SA 3.0",
@@ -26392,7 +26399,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Godolphin_Estate",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Godolphin1.jpg/330px-Godolphin1.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "waterborough",
       "license": "Public domain",
@@ -26439,7 +26446,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Chysauster_Ancient_Village",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Chysauster.jpg/330px-Chysauster.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "MortimerCat",
       "license": "CC BY 2.5",
@@ -26479,7 +26486,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Warwick_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Warwick_Castle_May_2016.jpg/330px-Warwick_Castle_May_2016.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "DeFacto",
       "license": "CC BY-SA 4.0",
@@ -26519,7 +26526,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kenilworth_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Kenilworth_Castle_gatehouse_landscape.jpg/330px-Kenilworth_Castle_gatehouse_landscape.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "",
       "license": "CC BY 1.0",
@@ -26959,7 +26966,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Thornton_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Thornton_Abbey_Ruins.jpg/330px-Thornton_Abbey_Ruins.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "David Wright",
       "license": "CC BY-SA 2.0",
@@ -27191,7 +27198,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Dudley_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dudley_Castle%2C_England%2C_Aerial_View.jpg/330px-Dudley_Castle%2C_England%2C_Aerial_View.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Dudley Council",
       "license": "CC BY 2.0",
@@ -27583,7 +27590,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Wenlock_Priory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg/330px-St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Chris Gunns",
       "license": "CC BY-SA 2.0",
@@ -28311,7 +28318,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Somerton_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Somerton_Castle%2C_Boothby_Graffoe%2C_Lincolnshire_4.png/330px-Somerton_Castle%2C_Boothby_Graffoe%2C_Lincolnshire_4.png",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Samuel and Nathaniel Buck",
       "license": "Public domain",
@@ -28402,7 +28409,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Baginton_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Baginton_Castle_%28antient_building%29.JPG/330px-Baginton_Castle_%28antient_building%29.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Snowmanradio at English Wikipedia",
       "license": "CC BY-SA 3.0",
@@ -28503,7 +28510,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Groby_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Groby_Castle_plan.jpg/330px-Groby_Castle_plan.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Charles Wall",
       "license": "Public domain",
@@ -28552,7 +28559,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Hallaton_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Hallaton_Castle_earthworks.jpg/330px-Hallaton_Castle_earthworks.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Tim Heaton",
       "license": "CC BY-SA 2.0",
@@ -28838,7 +28845,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Alton_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Alton_Castle.jpg/330px-Alton_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Dennis Thorley",
       "license": "CC BY-SA 2.0",
@@ -28939,7 +28946,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bishop%27s_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bishop%27s_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Newark Castle (Nottinghamshire)",
@@ -28981,7 +28989,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Newark_Castle%2C_Nottinghamshire",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Newark_Castle_-_geograph.org.uk_-_6368033.jpg/330px-Newark_Castle_-_geograph.org.uk_-_6368033.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Stephen Ostler",
       "license": "CC BY-SA 2.0",
@@ -29021,7 +29029,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Chatsworth_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Chatsworth_house_fountain_frontage.jpg/330px-Chatsworth_house_fountain_frontage.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Paul Johnson",
       "license": "CC BY 2.0",
@@ -29079,7 +29087,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Gainsborough_Old_Hall",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Gainsborough_Old_Hall%2C_2008.jpg/330px-Gainsborough_Old_Hall%2C_2008.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -29122,7 +29130,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Crowland_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Croyland_Abbey_%26_Parish_Church_of_Crowland.JPG/330px-Croyland_Abbey_%26_Parish_Church_of_Crowland.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Thorvaldsson",
       "license": "CC BY-SA 3.0",
@@ -29178,7 +29186,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hereford_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hereford_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Worcester Cathedral",
@@ -29224,7 +29233,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Worcester_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Worcester_Cathedral%2C_Worcester.jpg/330px-Worcester_Cathedral%2C_Worcester.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -29273,7 +29282,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Great_Malvern_Priory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Malvern_Priory_Front24.jpg/330px-Malvern_Priory_Front24.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -29403,7 +29412,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Lyveden_New_Bield",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lyveden_New_Bield_July_2016.jpg/330px-Lyveden_New_Bield_July_2016.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Wehha",
       "license": "CC BY-SA 4.0",
@@ -29594,7 +29603,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Manor_of_Clifton"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Manor_of_Clifton",
+    "needsEnrich": true
   },
   {
     "name": "Norbury Manor",
@@ -29625,7 +29635,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Norbury_Manor",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Norbury_church_and_hall_046773_50c8b955.jpg/330px-Norbury_church_and_hall_046773_50c8b955.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Alan Walker",
       "license": "CC BY-SA 2.0",
@@ -29682,7 +29692,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Barnwell_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Barnwell_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Middleton Hall",
@@ -29717,7 +29728,7 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Middleton_Hall",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -29804,7 +29815,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Brampton_Bryan_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Brampton_Bryan_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Croft Castle",
@@ -29895,7 +29907,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Burghley_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Front_of_Burghley_House_2009.jpg/330px-Front_of_Burghley_House_2009.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anthony Masi from UK",
       "license": "CC BY 2.0",
@@ -30275,7 +30287,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Polesworth_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/PolesworthAbbey.JPG/330px-PolesworthAbbey.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "JohnArmagh",
       "license": "CC BY-SA 3.0",
@@ -30567,7 +30579,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Upton_House,_Warwickshire"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Upton_House,_Warwickshire",
+    "needsEnrich": true
   },
   {
     "name": "Sulgrave Manor",
@@ -30938,7 +30951,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bewdley_Museum"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bewdley_Museum",
+    "needsEnrich": true
   },
   {
     "name": "Brockhampton Estate",
@@ -30980,7 +30994,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Brockhampton_Estate",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg/330px-Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "DeFacto",
       "license": "CC BY-SA 4.0",
@@ -31115,7 +31129,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Hampton_Court_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/c/c0/HamptonCourtHerefordshire_cropped.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "original: Tony Bailey\nfirst derivation: Sir Gawain\nsecond derivation: Paravane (talk)",
       "license": "CC BY-SA 2.0",
@@ -31166,7 +31180,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Church_of_St_Mary_and_St_David%2C_Kilpeck",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/KilpeckChurch%28PhilipHalling%29Feb2006.jpg/330px-KilpeckChurch%28PhilipHalling%29Feb2006.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Philip Halling",
       "license": "CC BY-SA 2.0",
@@ -31222,7 +31236,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dore_Abbey"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dore_Abbey",
+    "needsEnrich": true
   },
   {
     "name": "Boscobel House",
@@ -31405,7 +31420,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Iron_Bridge"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Iron_Bridge",
+    "needsEnrich": true
   },
   {
     "name": "Castle Howard",
@@ -31431,7 +31447,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Howard",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Castle_Howard_and_garden.jpg/330px-Castle_Howard_and_garden.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Pwojdacz (talk).\n\nOriginal uploader was Pwojdacz at en.wikipedia",
       "license": "Public domain",
@@ -31472,7 +31488,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Richmond_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Bailey_and_keep%2C_Richmond_Castle_-_geograph.org.uk_-_1318287.jpg/330px-Bailey_and_keep%2C_Richmond_Castle_-_geograph.org.uk_-_1318287.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Dylan Moore",
       "license": "CC BY-SA 2.0",
@@ -31710,7 +31726,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Fountains_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Fountains_Abbey_-_9447434368.jpg/330px-Fountains_Abbey_-_9447434368.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Draco2008",
       "license": "CC BY 2.0",
@@ -32156,7 +32172,7 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ravensworth_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -32517,7 +32533,7 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Harewood_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -32727,7 +32743,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Wilton_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Winter_view_of_Wilton_Castle_-_geograph.org.uk_-_1169638.jpg/330px-Winter_view_of_Wilton_Castle_-_geograph.org.uk_-_1169638.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Pauline Eccles",
       "license": "CC BY-SA 2.0",
@@ -32875,7 +32891,7 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Wentworth_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -33140,7 +33156,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Gisborough_Priory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gisborough_priory_snow_portrait.jpg/330px-Gisborough_priory_snow_portrait.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Prioryman",
       "license": "CC BY-SA 4.0",
@@ -33273,7 +33289,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Bront%C3%AB_Parsonage_Museum",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bront%C3%AB_Parsonage.jpg/330px-Bront%C3%AB_Parsonage.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "DeFacto",
       "license": "CC BY-SA 4.0",
@@ -33358,7 +33374,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Nappa_Hall",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg/330px-Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Geoff Keeble",
       "license": "CC BY-SA 2.0",
@@ -33546,7 +33562,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ripon_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg/330px-Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Diliff",
       "license": "CC BY-SA 3.0",
@@ -33677,7 +33693,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Meaux_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Meaux_Abbey.jpg/330px-Meaux_Abbey.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -33714,7 +33730,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Isurium_Brigantum",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg/330px-Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Following Hadrian",
       "license": "CC BY-SA 2.0",
@@ -33905,7 +33921,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Nostell_Priory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Nostell_Priory_Front_Facade.JPG/330px-Nostell_Priory_Front_Facade.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Wehha",
       "license": "CC BY-SA 3.0",
@@ -34147,7 +34163,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Bronllys_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg/330px-Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Keith Salvesen",
       "license": "CC BY-SA 2.0",
@@ -34289,7 +34305,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Dolforwyn_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg/330px-Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Mr M Evison",
       "license": "CC BY-SA 2.0",
@@ -34380,7 +34396,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Painscastle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Painscastle_-_geograph.org.uk_-_403187.jpg/330px-Painscastle_-_geograph.org.uk_-_403187.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Phil Laycock",
       "license": "CC BY-SA 2.0",
@@ -34534,7 +34550,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cwmhir_Abbey"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cwmhir_Abbey",
+    "needsEnrich": true
   },
   {
     "name": "Castell Dinas",
@@ -34571,7 +34588,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castell_Dinas",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Castell_Dinas_from_the_air.jpg/330px-Castell_Dinas_from_the_air.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Jasper Fforde",
       "license": "CC BY-SA 3.0",
@@ -34754,7 +34771,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Conwy_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/330px-Conwy_Castle%2C_water_view1.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Andrew Woodvine",
       "license": "CC BY-SA 2.0",
@@ -34795,7 +34812,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Caernarfon_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Caernarfon_Castle_1994.jpg/330px-Caernarfon_Castle_1994.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Herbert Ortner",
       "license": "CC BY 4.0",
@@ -34835,7 +34852,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Harlech_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/330px-Harlech_Castle_-_Cadw_photograph.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Cadw",
       "license": "OGL v1.0",
@@ -34941,7 +34958,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Rhuddlan_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rhuddlan_Castle%2C_May_2012.jpg/330px-Rhuddlan_Castle%2C_May_2012.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Julie Anne Workman",
       "license": "CC BY-SA 3.0",
@@ -35013,7 +35030,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Criccieth_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png/330px-Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Llywelyn2000",
       "license": "CC BY-SA 4.0",
@@ -35087,7 +35104,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dolwyddelan_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg/330px-Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Jeff Buck",
       "license": "CC BY-SA 2.0",
@@ -35161,7 +35178,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Ewloe_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ewloe_Castle_-_geograph.org.uk_-_878422.jpg/330px-Ewloe_Castle_-_geograph.org.uk_-_878422.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Brian Jorgensen",
       "license": "CC BY-SA 2.0",
@@ -35385,7 +35402,7 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Penmon",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -35436,7 +35453,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hawarden_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hawarden_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Caergwrle Castle",
@@ -35475,7 +35493,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Caergwrle_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png/330px-Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Llywelyn2000",
       "license": "CC BY-SA 4.0",
@@ -35524,7 +35542,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Deganwy_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Site_of_Deganwy_Castle_-_aerial_2015.jpg/330px-The_Site_of_Deganwy_Castle_-_aerial_2015.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Chris",
       "license": "CC BY-SA 2.0",
@@ -35854,7 +35872,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Segontium",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg/330px-Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "JThomas",
       "license": "CC BY-SA 2.0",
@@ -36229,7 +36247,7 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Plas_Newydd",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -36369,7 +36387,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Erddig",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg/330px-The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Glen Bowman from Newcastle, England",
       "license": "CC BY 2.0",
