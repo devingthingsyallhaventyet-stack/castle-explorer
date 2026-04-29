@@ -130,7 +130,7 @@ async function init() {
   const stagingRes = await fetch('google-images-staging.json').then(r => r.json());
   document.getElementById('cardArea').innerHTML = '<div class="loading">Processing...</div>';
 
-  allData = dataRes.filter(d => d.reviewStatus === 'approved');
+  allData = dataRes.filter(d => d.reviewStatus === 'approved' && !d.imageReviewDone);
   stagingData = stagingRes;
 
   // Build lookup by normalized name
