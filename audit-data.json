@@ -679,7 +679,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Innes_Chonnel_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Innis_Chonnel_Castle_1969.jpg/330px-Innis_Chonnel_Castle_1969.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Don Christie",
       "license": "CC BY-SA 4.0",
@@ -804,7 +804,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Breachacha_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Breachacha_Castle%2C_Coll_-_geograph.org.uk_-_279699.jpg/330px-Breachacha_Castle%2C_Coll_-_geograph.org.uk_-_279699.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "wrong-image"
     ],
@@ -928,7 +928,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunollie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dunollie_Castle_-_geograph.org.uk_-_7889749.jpg/330px-Dunollie_Castle_-_geograph.org.uk_-_7889749.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "wrong-image"
     ],
@@ -1030,7 +1030,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunaverty_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Steve Partridge",
       "license": "CC BY-SA 2.0",
@@ -1283,7 +1283,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunderave_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Dunderave_Castle%2C_Loch_Fyne%2C_Argyll_-_geograph.org.uk_-_47961.jpg/330px-Dunderave_Castle%2C_Loch_Fyne%2C_Argyll_-_geograph.org.uk_-_47961.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Brian D Osborne",
       "license": "CC BY-SA 2.0",
@@ -2256,7 +2256,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Abbotsford%2C_Scottish_Borders",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Abbotsford_Morris_edited.jpg/330px-Abbotsford_Morris_edited.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "",
       "license": "Public domain",
@@ -2711,7 +2711,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Edinburgh_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg/330px-City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Enric",
       "license": "CC BY-SA 4.0",
@@ -2938,7 +2938,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cramond_Tower",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Gyula Péter",
       "license": "CC BY 3.0",
@@ -3011,7 +3011,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Liberton_Tower",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Kim Traynor",
       "license": "CC BY-SA 3.0",
@@ -3428,7 +3428,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Lochleven_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Jonathan Oldenbuck",
       "license": "CC BY-SA 3.0",
@@ -3768,7 +3768,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Methven_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Arthur Bruce",
       "license": "CC BY-SA 2.0",
@@ -3843,7 +3843,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Grandtully_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Elliott Simpson",
       "license": "CC BY-SA 2.0",
@@ -3886,7 +3886,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Megginch_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Doocot%2C_Megginch_Castle._-_geograph.org.uk_-_214392.jpg/330px-Doocot%2C_Megginch_Castle._-_geograph.org.uk_-_214392.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "other"
     ],
@@ -3919,7 +3919,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balhousie_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "PaulT (Gunther Tschuch)",
       "license": "CC BY-SA 4.0",
@@ -4032,7 +4032,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Macduff's_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Macduff%27s_Castle_and_the_Wemyss_Caves.jpg/330px-Macduff%27s_Castle_and_the_Wemyss_Caves.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Kevin Rae",
       "license": "CC BY-SA 2.0",
@@ -4280,7 +4280,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunfermline_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dunfermline_Abbey_gatehouse_and_pend%2C_Dunfermline.jpg/330px-Dunfermline_Abbey_gatehouse_and_pend%2C_Dunfermline.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -4389,7 +4389,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balgonie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BalgonieCastle04.jpg/330px-BalgonieCastle04.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "No machine-readable author provided. Supergolden assumed (based on copyright claims).",
       "license": "CC BY-SA 3.0",
@@ -4675,7 +4675,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinfauns_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/KInfauns_Castle.jpg/330px-KInfauns_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -4706,7 +4706,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Stirling_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "John McPake",
       "license": "CC BY 2.0",
@@ -5235,7 +5235,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Levan",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Levan_Castle_%285238839361%29.jpg/330px-Levan_Castle_%285238839361%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "easylocum from Gourock, United Kingdom",
       "license": "CC BY 2.0",
@@ -5346,7 +5346,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Mearns_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Mearns_Castle.jpg/330px-Mearns_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "wrobison",
       "license": "CC BY-SA 2.0",
@@ -5386,7 +5386,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dunmore_pineapple.jpg/330px-Dunmore_pineapple.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "giannandrea",
       "license": "CC0",
@@ -5427,7 +5427,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinneil_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Kinneil_House.jpg/330px-Kinneil_House.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Tom Sargent",
       "license": "CC BY-SA 2.0",
@@ -5474,7 +5474,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Callendar_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Chouse01.jpg/330px-Chouse01.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -5505,7 +5505,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Eilean_Donan",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Diliff",
       "license": "CC BY-SA 3.0",
@@ -5609,7 +5609,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_of_Mey",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Orikrin1998",
       "license": "CC BY-SA 3.0",
@@ -5682,7 +5682,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Ardvreck_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg/330px-2011_Ardvreck_Castle%2C_Sutherland_2-06-2011_17-53-21.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Paul Hermans",
       "license": "CC BY-SA 3.0",
@@ -5721,7 +5721,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Strome_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Scotland_Strome_Castle.jpg/330px-Scotland_Strome_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Wojsyl",
       "license": "CC BY-SA 3.0",
@@ -6662,7 +6662,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Broch_of_Clickimin",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Clickimin_Broch_20080820_04.jpg/330px-Clickimin_Broch_20080820_04.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Otter",
       "license": "CC BY-SA 3.0",
@@ -6705,7 +6705,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Broch_of_Mousa",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Mousa_Broch_20080821_02.jpg/330px-Mousa_Broch_20080821_02.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Otter",
       "license": "CC BY-SA 3.0",
@@ -6923,7 +6923,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Old_Scatness",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg/330px-Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Steve Jones",
       "license": "CC BY-SA 2.0",
@@ -6965,7 +6965,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Varrich",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png/330px-2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Paul Hermans",
       "license": "CC BY-SA 3.0",
@@ -7041,7 +7041,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Tor_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tor_Castle.jpg/330px-Tor_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Charles Fraser-Mackintosh (b. 1828 and d.1901)",
       "license": "Public domain",
@@ -7220,7 +7220,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cromarty_Courthouse",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/The_old_court_house_%28geograph_6600836%29.jpg/330px-The_old_court_house_%28geograph_6600836%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Gordon Hatton",
       "license": "CC BY-SA 2.0",
@@ -7575,7 +7575,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunnottar_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -7908,7 +7908,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Delgatie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Delgatie_Castle_2017-05-26.jpg/330px-Delgatie_Castle_2017-05-26.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "August Schwerdfeger",
       "license": "CC BY 4.0",
@@ -8224,7 +8224,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dudhope_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Ydam",
       "license": "CC BY-SA 3.0",
@@ -8443,7 +8443,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/New_Slains_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -8746,7 +8746,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Pitsligo_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg/330px-Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -8785,7 +8785,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Esslemont_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -8824,7 +8824,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cairnbulg_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cairnbulg_Castle.jpg/330px-Cairnbulg_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Astrid H",
       "license": "CC BY-SA 2.0",
@@ -9069,7 +9069,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Inverallochy_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -9278,7 +9278,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Hallforest_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Lucas Kendall",
       "license": "CC BY-SA 4.0",
@@ -9317,7 +9317,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Finavon_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Alan Thomson",
       "license": "CC BY-SA 2.0",
@@ -9595,7 +9595,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Muchalls_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anlace at English Wikipedia",
       "license": "Public domain",
@@ -9705,7 +9705,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinloss_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kinloss_Abbey.jpg/330px-Kinloss_Abbey.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -9780,7 +9780,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Darnaway_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Anne Burgess",
       "license": "CC BY-SA 2.0",
@@ -9820,7 +9820,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Arbuthnott%2C_Bervie_%26_Kinneff_Parish_Church",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Arbuthnot_Church_-_geograph.org.uk_-_55533.jpg/330px-Arbuthnot_Church_-_geograph.org.uk_-_55533.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Lloyd Housley",
       "license": "CC BY-SA 2.0",
@@ -9937,7 +9937,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Haddo_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Haddo_House.jpg/330px-Haddo_House.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Fionam890",
       "license": "CC BY-SA 3.0",
@@ -10049,7 +10049,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Peel_of_Lumphanan",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Peel_Ring_of_Lumphanan_20080502.jpg/330px-Peel_Ring_of_Lumphanan_20080502.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Otter",
       "license": "CC BY-SA 3.0",
@@ -10090,7 +10090,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Sueno's_Stone",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Forres_sueno.jpg/330px-Forres_sueno.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Wojsyl at English Wikipedia",
       "license": "CC BY-SA 3.0",
@@ -10305,7 +10305,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Raemoir_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Raemoir.House.Banchory.jpg/330px-Raemoir.House.Banchory.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Andre the editor",
       "license": "CC BY-SA 4.0",
@@ -10565,7 +10565,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/St_Vigeans_Sculptured_Stones_Museum",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/St_Vigeans_Museum_20090616.jpg/330px-St_Vigeans_Museum_20090616.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Otter",
       "license": "CC BY-SA 3.0",
@@ -11285,7 +11285,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_of_Park",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "John of Reading",
       "license": "Public domain",
@@ -11854,7 +11854,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Amisfield_Tower",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Francis Grose (Life time:1789)",
       "license": "Public domain",
@@ -12168,7 +12168,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Auchinleck_House",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Kognos",
       "license": "CC BY-SA 4.0",
@@ -12344,7 +12344,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Sundrum_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "G Montgomery",
       "license": "CC BY-SA 2.0",
@@ -12721,7 +12721,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Hedingham_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/The_Keep%2C_Hedingham_Castle%2C_Essex_-_geograph.org.uk_-_3079561.jpg/330px-The_Keep%2C_Hedingham_Castle%2C_Essex_-_geograph.org.uk_-_3079561.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Derek Voller",
       "license": "CC BY-SA 2.0",
@@ -12989,7 +12989,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Oxburgh_Hall",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Oxburgh_Hall%2C_2017.jpg/330px-Oxburgh_Hall%2C_2017.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Halfsharp",
       "license": "CC BY-SA 4.0",
@@ -13344,7 +13344,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Wingfield_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wingfield_Castle_-_geograph.org.uk_-_354164.jpg/330px-Wingfield_Castle_-_geograph.org.uk_-_354164.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Robert Edwards",
       "license": "CC BY-SA 2.0",
@@ -13429,7 +13429,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Bungay_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bungay_Castle%2C_2012.jpg/330px-Bungay_Castle%2C_2012.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Scott Anderson from UK",
       "license": "CC BY 2.0",
@@ -13483,7 +13483,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Buckenham_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Castle_at_New_Buckenham%2C_Norfolk._-_geograph.org.uk_-_150554.jpg/330px-Castle_at_New_Buckenham%2C_Norfolk._-_geograph.org.uk_-_150554.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -13709,7 +13709,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Haughley_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Village_pond_at_Haughley_-_geograph.org.uk_-_1267157.jpg/330px-Village_pond_at_Haughley_-_geograph.org.uk_-_1267157.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -13894,7 +13894,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Stansted_Mountfitchet_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mountfitchet_Castle_-_geograph.org.uk_-_904600.jpg/330px-Mountfitchet_Castle_-_geograph.org.uk_-_904600.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -13941,7 +13941,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Waytemore_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg/330px-Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "PAUL FARMER",
       "license": "CC BY-SA 2.0",
@@ -14126,7 +14126,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/St_Albans_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg/330px-St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Diliff",
       "license": "CC BY-SA 3.0",
@@ -14218,7 +14218,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ickworth_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ickworth_House.jpg/330px-Ickworth_House.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Squeezyboy",
       "license": "CC BY 2.0",
@@ -14310,7 +14310,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Caister_Roman_Site",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/CaisterRomanSite.jpg/330px-CaisterRomanSite.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "A. R. Yeo MortimerCat",
       "license": "CC BY 2.5",
@@ -14359,7 +14359,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Buckden_Towers",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Great_Tower_and_St_Hugh%27s_Church.jpg/330px-Great_Tower_and_St_Hugh%27s_Church.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Richard Kelly",
       "license": "CC BY-SA 4.0",
@@ -14642,7 +14642,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Blickling_Hall",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Blickling_Hall_-_south-west_facade.jpg/330px-Blickling_Hall_-_south-west_facade.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "DeFacto",
       "license": "CC BY-SA 4.0",
@@ -14682,7 +14682,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Alnwick_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alnwick_Castle_in_uk.jpg/330px-Alnwick_Castle_in_uk.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Clementp.fr",
       "license": "CC BY-SA 4.0",
@@ -14724,7 +14724,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Bamburgh_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bamburgh_Castle%2C_beautiful_day.jpg/330px-Bamburgh_Castle%2C_beautiful_day.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Matthew Hartley",
       "license": "CC BY-SA 2.0",
@@ -15389,7 +15389,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Auckland_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Auckland_Castle_-_geograph.org.uk_-_1896444.jpg/330px-Auckland_Castle_-_geograph.org.uk_-_1896444.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Paul Buckingham",
       "license": "CC BY-SA 2.0",
@@ -15751,7 +15751,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Belsay_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Belsay_Castle.jpg/330px-Belsay_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Brian Norman",
       "license": "CC BY-SA 2.0",
@@ -15980,7 +15980,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Sizergh",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Sizergh_Castle.jpg/330px-Sizergh_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Christopher Down",
       "license": "CC BY 4.0",
@@ -16073,7 +16073,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Dacre_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Dacre_Castle_%28geograph_2648020%29.jpg/330px-Dacre_Castle_%28geograph_2648020%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Jim Barton",
       "license": "CC BY-SA 2.0",
@@ -16249,7 +16249,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Halton_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Halton_Castle_%285%29.JPG/330px-Halton_Castle_%285%29.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Rept0n1x",
       "license": "CC BY-SA 3.0",
@@ -16303,7 +16303,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Lyme_Park",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/South_facade_of_Lyme_Park_house%2C_2013.jpg/330px-South_facade_of_Lyme_Park_house%2C_2013.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Julie Anne Workman",
       "license": "CC BY-SA 3.0",
@@ -16633,7 +16633,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Lumley_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lumley_Castle_Hotel_-_geograph.org.uk_-_1188877.jpg/330px-Lumley_Castle_Hotel_-_geograph.org.uk_-_1188877.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -17005,7 +17005,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Greystoke_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Greystoke_Castle.jpg/330px-Greystoke_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -17282,7 +17282,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Langley_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Langley_Castle.jpg/330px-Langley_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
