@@ -51668,7 +51668,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Moorstown_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Moorstown_Castle_March_2011.JPG/330px-Moorstown_Castle_March_2011.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -51710,7 +51710,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ormonde_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ormonde_Castle_-_Caisle%C3%A1n_Urmhumhan_-_geograph.org.uk_-_924019.jpg/330px-Ormonde_Castle_-_Caisle%C3%A1n_Urmhumhan_-_geograph.org.uk_-_924019.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "James Yardley",
       "license": "CC BY-SA 2.0",
@@ -51764,7 +51764,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Tristernagh_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/TristernaghAbbey.jpg/330px-TristernaghAbbey.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -51816,7 +51816,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballyfin"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballyfin",
+    "needsEnrich": true
   },
   {
     "name": "Castle Otway",
@@ -51854,7 +51855,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castle_Otway",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Castle_Otway.jpg/330px-Castle_Otway.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52033,7 +52034,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Donegal_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Donegalcastle.jpg/330px-Donegalcastle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52071,7 +52072,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Doe_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Doe_Castle%2C_Donegal.jpg/330px-Doe_Castle%2C_Donegal.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52108,7 +52109,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Glenveagh_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg/330px-Glenveagh_Castle_-_geograph.org.uk_-_51517.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52145,7 +52146,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Grianan_of_Aileach",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Grianan_of_Aileach_Donegal.jpg/330px-Grianan_of_Aileach_Donegal.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52182,7 +52183,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Boyle_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Boyle_Abbey_Nave_1997_09_17.jpg/330px-Boyle_Abbey_Nave_1997_09_17.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52344,7 +52345,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Burt_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Burt_Castle_-_geograph.org.uk_-_1029895.jpg/330px-Burt_Castle_-_geograph.org.uk_-_1029895.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52390,7 +52391,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Raphoe_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Raphoe_Castle_-_geograph.org.uk_-_1017810.jpg/330px-Raphoe_Castle_-_geograph.org.uk_-_1017810.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52437,7 +52438,7 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Loughrea_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52629,7 +52630,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Carrickabraghy_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Carrickabraghy_Castle%2C_Doagh_Island_-_geograph.org.uk_-_1333290.jpg/330px-Carrickabraghy_Castle%2C_Doagh_Island_-_geograph.org.uk_-_1333290.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52676,7 +52677,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Donamon_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Donamon_Castle_front.jpg/330px-Donamon_Castle_front.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52724,7 +52725,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Cabra_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg/330px-Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52767,7 +52768,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castle_Saunderson",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Castle_saunderson.jpg/330px-Castle_saunderson.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52817,7 +52818,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castle_Leslie",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/CastleLeslieSummer2006.jpg/330px-CastleLeslieSummer2006.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52871,7 +52872,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mannan_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mannan_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Castle Balfour",
@@ -52908,7 +52910,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castle_Balfour",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Castle_Balfour%2C_Lisnaskea_-_geograph.org.uk_-_1270799.jpg/330px-Castle_Balfour%2C_Lisnaskea_-_geograph.org.uk_-_1270799.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -52961,7 +52963,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Archdale"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Archdale",
+    "needsEnrich": true
   },
   {
     "name": "Mountjoy Castle",
@@ -53000,7 +53003,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Mountjoy_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mountjoy_castle.JPG/330px-Mountjoy_castle.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53043,7 +53046,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Stewart_Castle%2C_Northern_Ireland",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Stewart_Castle%2C_Geograph.jpg/330px-Stewart_Castle%2C_Geograph.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53137,7 +53140,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Navan_Fort",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg/330px-Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53192,7 +53195,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardglass_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardglass_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Portaferry Castle",
@@ -53232,7 +53236,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Portaferry_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Portaferry_Castle_%2803%29%2C_October_2009.JPG/330px-Portaferry_Castle_%2803%29%2C_October_2009.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53279,7 +53283,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castlestrange_Stone",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/IMG_CastlestrangeStone2771.jpg/330px-IMG_CastlestrangeStone2771.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53414,7 +53418,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Kilronan_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Kilronan_Castle_%28historyofireland11845dalt_p154%29.jpg/330px-Kilronan_Castle_%28historyofireland11845dalt_p154%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53461,7 +53465,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Glinsk_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Glinsk_castle.jpg/330px-Glinsk_castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53599,7 +53603,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Drumboe_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ruins_of_Drumboe_Castle_-_geograph.org.uk_-_960705.jpg/330px-Ruins_of_Drumboe_Castle_-_geograph.org.uk_-_960705.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53688,7 +53692,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Movilla_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Movilla_Abbey%2C_Newtownards_-_geograph.org.uk_-_84296.jpg/330px-Movilla_Abbey%2C_Newtownards_-_geograph.org.uk_-_84296.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53742,7 +53746,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Shane%27s_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Shane%27s_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Harry Avery Castle",
@@ -53779,7 +53784,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Harry_Avery's_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Harry_Avery%27s_Castle.jpg/330px-Harry_Avery%27s_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53878,7 +53883,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Florence_Court",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Florence_Court_frontage.jpg/330px-Florence_Court_frontage.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -53932,7 +53937,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rathcroghan"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rathcroghan",
+    "needsEnrich": true
   },
   {
     "name": "Castle Ward",
@@ -53974,7 +53980,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Castle_Ward",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Castle_Ward_2.JPG/330px-Castle_Ward_2.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54022,7 +54028,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Donegal_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Donegal_Friary_Cloister_East_Range_2009_09_23.jpg/330px-Donegal_Friary_Cloister_East_Range_2009_09_23.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54069,7 +54075,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Strokestown_Park",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Strokestown_Park_House.jpg/330px-Strokestown_Park_House.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54117,7 +54123,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Drumlane",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Drumlane_Abbey.jpg/330px-Drumlane_Abbey.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54347,7 +54353,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Downhill_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Downhill_House.jpg/330px-Downhill_House.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54394,7 +54400,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Clonalis_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Castlerea_-_Clonalis_House_-_20190823040950.jpg/330px-Castlerea_-_Clonalis_House_-_20190823040950.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54437,7 +54443,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Caledon_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Caledon%2C_from%2C_A_series_of_picturesque_views_of_seats_of_the_noblemen_and_gentlemen_of_Great_Britain_and_Ireland_%281840%29.jpg/330px-Caledon%2C_from%2C_A_series_of_picturesque_views_of_seats_of_the_noblemen_and_gentlemen_of_Great_Britain_and_Ireland_%281840%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54486,7 +54492,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ardboe_High_Cross",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ardboe_Cross.jpg/330px-Ardboe_Cross.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54538,7 +54544,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gosford_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gosford_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Ballycopeland Windmill",
@@ -54579,7 +54586,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballycopeland_Windmill"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballycopeland_Windmill",
+    "needsEnrich": true
   },
   {
     "name": "Clonca Church",
@@ -54620,7 +54628,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonca_Church_%26_Cross"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonca_Church_%26_Cross",
+    "needsEnrich": true
   },
   {
     "name": "Ballyhaise House",
@@ -54704,7 +54713,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Springhill_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Springhill_House%2C_Moneymore.jpg/330px-Springhill_House%2C_Moneymore.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54751,7 +54760,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Struell_Wells",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Struell_Wells_%2819%29%2C_October_2009.JPG/330px-Struell_Wells_%2819%29%2C_October_2009.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -54804,7 +54813,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saul_Monastery"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saul_Monastery",
+    "needsEnrich": true
   },
   {
     "name": "Dromore Mound",
@@ -54891,7 +54901,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Dunseverick_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/DunseverickCastle.jpg/330px-DunseverickCastle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55023,7 +55033,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Bunratty_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bunrattybig.jpg/330px-Bunrattybig.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55063,7 +55073,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunguaire_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Dunguaire_Castle%2C_Galway%2C_Ireland.png/330px-Dunguaire_Castle%2C_Galway%2C_Ireland.png",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55132,7 +55142,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Athenry_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Athenry_castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55168,7 +55178,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Portumna_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Portumna_castle.jpg/330px-Portumna_castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55201,7 +55211,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Thoor_Ballylee",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Thoor_Ballylee002%28js%29.jpg/330px-Thoor_Ballylee002%28js%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55277,7 +55287,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Aughnanure_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Aughnanure_Castle_%28pixinn.net%29.jpg/330px-Aughnanure_Castle_%28pixinn.net%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55347,7 +55357,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Claregalway_Friary",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Claregalway_Abbey_Ruins.jpg/330px-Claregalway_Abbey_Ruins.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55401,7 +55411,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Kilmacduagh_monastery",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg/330px-Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55437,7 +55447,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/O'Dea_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Odea_castle.jpg/330px-Odea_castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55474,7 +55484,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Knappogue_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Knappogue_Castle.jpg/330px-Knappogue_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55512,7 +55522,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Quin_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Quin_Abbey%2C_Ireland.jpg/330px-Quin_Abbey%2C_Ireland.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55548,7 +55558,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Ennis_Friary",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/ENNIS_Friary%2C_DSC_4459.jpg/330px-ENNIS_Friary%2C_DSC_4459.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55584,7 +55594,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Sligo_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg/330px-The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55621,7 +55631,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Parke's_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Parke%27s_Castle_courtyard.jpg/330px-Parke%27s_Castle_courtyard.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55675,7 +55685,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Kylemore_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Kylemore_October_2014-1a.jpg/330px-Kylemore_October_2014-1a.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55723,7 +55733,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ballymote_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Co._Sligo%2C_Ballymote_Castle_2%2C_1792.jpg/330px-Co._Sligo%2C_Ballymote_Castle_2%2C_1792.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55772,7 +55782,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ross_Errilly_Friary",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/RossErrillyFriary.jpg/330px-RossErrillyFriary.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55827,7 +55837,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Oranmore_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Oranmore_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Tyrone House",
@@ -55868,7 +55879,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Tyrone_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tyrone_House_%282016%29.jpg/330px-Tyrone_House_%282016%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55915,7 +55926,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Newtown_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Newtown_Castle.png/330px-Newtown_Castle.png",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -55962,7 +55973,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Doonagore_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Doonagore_Castle.jpg/330px-Doonagore_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56018,7 +56029,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballinalacken_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballinalacken_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Dromoland Castle",
@@ -56062,7 +56074,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Dromoland_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Dromoland_Castle.jpg/330px-Dromoland_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56110,7 +56122,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Gleninagh",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/GleninaghCastle-Ireland-14.06.2002.jpg/330px-GleninaghCastle-Ireland-14.06.2002.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56165,7 +56177,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mooghaun"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mooghaun",
+    "needsEnrich": true
   },
   {
     "name": "Ballynahinch Castle",
@@ -56209,7 +56222,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ballynahinch_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ballynahinch_Castle_%286047970360%29.jpg/330px-Ballynahinch_Castle_%286047970360%29.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56258,7 +56271,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Clifden_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Clifden_Castle_front.jpg/330px-Clifden_Castle_front.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56306,7 +56319,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Fiddaun_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Fiddaun_%2801%29.JPG/330px-Fiddaun_%2801%29.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56402,7 +56415,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Menlo_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Menlo_Castle%2C_Co_Galway.jpg/330px-Menlo_Castle%2C_Co_Galway.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56495,7 +56508,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Merlinpark_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Merlinpark_Castle.jpg/330px-Merlinpark_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56544,7 +56557,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Rockfleet_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rockfleet.jpg/330px-Rockfleet.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56593,7 +56606,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Burrishoole_Friary",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Burrishoole_Friary_SE_in_front_of_An_Bhinn_Ghorm_2007_08_13.jpg/330px-Burrishoole_Friary_SE_in_front_of_An_Bhinn_Ghorm_2007_08_13.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56731,7 +56744,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Moyne_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Moyneabbey.jpg/330px-Moyneabbey.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56780,7 +56793,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Rosserk_Friary",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/RosserkFriary.jpg/330px-RosserkFriary.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56828,7 +56841,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ballintubber_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ballintubber_Abbey_eastern_elevation.JPG/330px-Ballintubber_Abbey_eastern_elevation.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56881,7 +56894,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Cong_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/CongAbbey07.JPG/330px-CongAbbey07.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -56925,7 +56938,7 @@
     "source": [],
     "wiki": "https://en.wikipedia.org/wiki/Clontuskert_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Clontuskert_Priory_Nave_Doorway_2009_09_16.jpg/330px-Clontuskert_Priory_Nave_Doorway_2009_09_16.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -57019,7 +57032,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Caherkinmonwee_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Castles_of_Connacht%2C_Caherkinmonwee%2C_Galway_%281%29_-_geograph.org.uk_-_4070919.jpg/330px-Castles_of_Connacht%2C_Caherkinmonwee%2C_Galway_%281%29_-_geograph.org.uk_-_4070919.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -57203,7 +57216,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Derryhiveny_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Derryhivenny_Castle.jpg/330px-Derryhivenny_Castle.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -57566,7 +57579,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Carrickkildavnet_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Carrickkildavnet_Castle1.jpg/330px-Carrickkildavnet_Castle1.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Michelle Owner of the Squishy from Denver",
       "license": "CC BY 2.0",
@@ -57895,7 +57908,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Errew_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/ErrewAbbey.jpg/330px-ErrewAbbey.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -57943,7 +57956,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Markree_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Markree-castle-by-night-2.jpeg/330px-Markree-castle-by-night-2.jpeg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -57999,7 +58012,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lissadell_House"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lissadell_House",
+    "needsEnrich": true
   },
   {
     "name": "Castlebaldwin",
@@ -58530,7 +58544,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Hackett"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Hackett",
+    "needsEnrich": true
   },
   {
     "name": "Clonfert Cathedral",
@@ -58570,7 +58585,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Clonfert_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/07_Clonfert_Cathedral.png/330px-07_Clonfert_Cathedral.png",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -58623,7 +58638,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tuam_Cathedral"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tuam_Cathedral",
+    "needsEnrich": true
   },
   {
     "name": "Corcomroe Abbey",
@@ -58665,7 +58681,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Corcomroe_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Corcomroe_Abbey_South_East_View_1996_08_22.jpg/330px-Corcomroe_Abbey_South_East_View_1996_08_22.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -58720,7 +58736,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilfenora_Cathedral"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilfenora_Cathedral",
+    "needsEnrich": true
   },
   {
     "name": "Turoe Stone",
@@ -58760,7 +58777,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Turoe_Stone",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Stone_of_Turoe.JPG/330px-Stone_of_Turoe.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -58814,7 +58831,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Moore_Hall,_County_Mayo"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Moore_Hall,_County_Mayo",
+    "needsEnrich": true
   },
   {
     "name": "Westport House",
@@ -58855,7 +58873,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Westport_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/East_front_of_Westport_House_-_Richard_Cassels.jpg/330px-East_front_of_Westport_House_-_Richard_Cassels.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -58904,7 +58922,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Murrisk_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/MurriskAbbey.jpg/330px-MurriskAbbey.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -58951,7 +58969,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Strade_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/StradeFriary.jpg/330px-StradeFriary.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59001,7 +59019,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Creevelea_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Creevelea_Abbey%2C_County_Leitrim.jpg/330px-Creevelea_Abbey%2C_County_Leitrim.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59102,7 +59120,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Granuaile%27s_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Granuaile%27s_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Craggaunowen Castle",
@@ -59150,7 +59169,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Craggaunowen"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Craggaunowen",
+    "needsEnrich": true
   },
   {
     "name": "Killaloe Cathedral",
@@ -59191,7 +59211,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Killaloe_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/KillaloeCathedral.jpg/330px-KillaloeCathedral.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59237,7 +59257,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Classiebawn_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Classiebawn_Castle%2C_Mullaghmore.jpg/330px-Classiebawn_Castle%2C_Mullaghmore.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59284,7 +59304,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Clare_Island_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Clare_Island_Abbey_NE_1997_09_10.jpg/330px-Clare_Island_Abbey_NE_1997_09_10.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59332,7 +59352,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Abbeyknockmoy",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Knockmoy_Abbey_957024.jpg/330px-Knockmoy_Abbey_957024.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59387,7 +59407,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Killala_Round_Tower"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Killala_Round_Tower",
+    "needsEnrich": true
   },
   {
     "name": "Dun Eochla",
@@ -59521,7 +59542,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Lough_Rynn_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lough_Rynn1.JPG/330px-Lough_Rynn1.JPG",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59574,7 +59595,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Magh_Adhair"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Magh_Adhair",
+    "needsEnrich": true
   },
   {
     "name": "Ballinafad Castle",
@@ -59613,7 +59635,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Ballinafad_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ballinafad_Castle%2C_Co._Sligo%2C_Ireland.jpg/330px-Ballinafad_Castle%2C_Co._Sligo%2C_Ireland.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "needs-review"
     ],
@@ -59709,7 +59731,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballindoon_Friary"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballindoon_Friary",
+    "needsEnrich": true
   },
   {
     "name": "Dunsandle Castle",
@@ -59755,6 +59778,7 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunsandle_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunsandle_Castle",
+    "needsEnrich": true
   }
 ]
