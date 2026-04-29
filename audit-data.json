@@ -44165,7 +44165,7 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Skryne_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Skryne_Church"
   },
   {
     "name": "Hill of Tara",
@@ -49530,13 +49530,13 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardfinnan_Castle"
   },
   {
-    "name": "Ormond Castle",
+    "name": "Ormond Castle (Scotland)",
     "country": "ireland",
     "region": "the-heartlands",
     "county": "County Tipperary",
     "lat": 57.55361111,
     "lng": -4.18,
-    "mapsLink": "https://www.google.com/maps/search/Ormond%20Castle/@52.353,-7.629,15z",
+    "mapsLink": "https://maps.app.goo.gl/keAmmjFPvuZqvdHw6",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Top_of_Ormond_Hill_-_geograph.org.uk_-_235640.jpg/330px-Top_of_Ormond_Hill_-_geograph.org.uk_-_235640.jpg",
     "imgSource": "wikipedia",
     "gallery": [
@@ -49574,7 +49574,7 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ormonde_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ormond_Castle"
   },
   {
     "name": "Terryglass Castle",
@@ -51599,7 +51599,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Moorstown_Castle"
   },
   {
-    "name": "Carrick-on-Suir Castle",
+    "name": "Ormond Castle (Ireland)",
     "country": "ireland",
     "region": "the-heartlands",
     "county": "County Tipperary",
@@ -51645,52 +51645,10 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ormonde_Castle"
-  },
-  {
-    "name": "Lackan Castle",
-    "country": "ireland",
-    "region": "the-heartlands",
-    "county": "County Westmeath",
-    "lat": 53.0886,
-    "lng": -8.0739,
-    "mapsLink": "https://www.google.com/maps/search/Lackan%20Castle/@53.5,-7.6,15z",
-    "image": "https://img.castlecore.uk/lackan-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/lackan-castle-2.jpg",
-      "https://img.castlecore.uk/lackan-castle-3.jpg",
-      "https://img.castlecore.uk/lackan-castle-4.jpg",
-      "https://img.castlecore.uk/lackan-castle-5.jpg"
-    ],
-    "desc": "Lackeen Castle, a tower house within a bawn built in the 12th century as a Kennedy stronghold. The castle is a national monument in state ownership and is located in the townland of Abbeville near to Lorrha in County Tipperary, Ireland. It is occasionally open to the public. Close by, stands Lackeen House dating from around 1730.",
-    "type": "tower house",
-    "period": "15th century",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Westmeath Heritage",
-        "url": "https://www.westmeathheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Lackeen_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Castles_of_Munster%2C_Lackeen%2C_Tipperary_-_geograph.org.uk_-_1542016.jpg/330px-Castles_of_Munster%2C_Lackeen%2C_Tipperary_-_geograph.org.uk_-_1542016.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ormonde_Castle",
+    "altNames": [
+      "Carrick-on-Suir Castle"
+    ]
   },
   {
     "name": "Tristernagh Abbey",
@@ -51953,51 +51911,6 @@
       }
     ],
     "wiki": "https://en.wikipedia.org/wiki/Anne_Castles",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
-    "name": "Kilcormac Castle",
-    "country": "ireland",
-    "region": "the-heartlands",
-    "county": "County Offaly",
-    "lat": 52.25038,
-    "lng": -8.610485,
-    "mapsLink": "https://www.google.com/maps/search/Kilcormac%20Castle/@53.187,-7.717,15z",
-    "image": "https://img.castlecore.uk/kilcormac-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kilcormac-castle-2.jpg",
-      "https://img.castlecore.uk/kilcormac-castle-3.jpg",
-      "https://img.castlecore.uk/kilcormac-castle-4.jpg",
-      "https://img.castlecore.uk/kilcormac-castle-5.jpg"
-    ],
-    "desc": "Kilcolman Castle is a tower house located in County Cork, Ireland. It was formerly the residence of the poet Edmund Spenser.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.3,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Offaly Heritage",
-        "url": "https://www.offaly.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Kilcolman_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Picturesque_Ireland_-_a_literary_and_artistic_delineation_of_the_natural_scenery%2C_remarkable_places%2C_historical_antiquities%2C_public_buildings%2C_ancient_abbeys%2C_towers%2C_castles%2C_and_other_romantic_and_%2814757013626%29.jpg/330px-thumbnail.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
@@ -52408,57 +52321,6 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Raphoe_Castle"
   },
   {
-    "name": "Clogh Oughter Castle",
-    "country": "ireland",
-    "region": "ulster-and-the-north",
-    "county": "County Cavan",
-    "lat": 53.974,
-    "lng": -7.393,
-    "mapsLink": "https://www.google.com/maps/search/Clogh%20Oughter%20Castle/@53.974,-7.393,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/330px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg",
-    "imgSource": "CDN",
-    "gallery": [],
-    "desc": "Cloughoughter Castle is a ruined circular castle on a small island in Lough Oughter, 4 kilometres (2.5 mi) east of the town of Killeshandra in County Cavan, Ireland.",
-    "type": "castle",
-    "period": "13th century",
-    "rating": 3.7,
-    "tags": [
-      "island",
-      "ruins-romantic",
-      "atmospheric",
-      "photogenic",
-      "medieval",
-      "remote"
-    ],
-    "source": [
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/places-to-visit/clogh-oughter-castle/"
-      },
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Clogh_Oughter_Castle"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Cloughoughter_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg/330px-Clogh_Oughter_Castle_Cavan_Ireland_geograph_1405851_by_Oliver_Dixon.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Oliver Dixon",
-      "license": "CC BY-SA 2.0",
-      "description": "Clogh Oughter Castle is situated on an island on Lough Oughter, County Cavan, Ireland",
-      "credit": "From geograph.org.uk",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cloughoughter_Castle"
-  },
-  {
     "name": "Lough Key Castle",
     "country": "ireland",
     "region": "ulster-and-the-north",
@@ -52696,53 +52558,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Carrickabraghy_Castle"
-  },
-  {
-    "name": "Castlerea Castle",
-    "country": "ireland",
-    "region": "ulster-and-the-north",
-    "county": "County Roscommon",
-    "lat": 54.9688,
-    "lng": -1.6105,
-    "mapsLink": "https://www.google.com/maps/search/Castlerea%20Castle/@53.767,-8.494,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Newcastle_schloss.jpg/330px-Newcastle_schloss.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "The Castle, Newcastle, or Newcastle Castle is a medieval fortification in Newcastle upon Tyne, England, built on the site of the fortress that gave the City of Newcastle its name. The most prominent remaining structures on the site are the Castle Keep, and the Black Gate, its fortified gatehouse.",
-    "type": "castle",
-    "period": "Medieval",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Roscommon Heritage",
-        "url": "https://www.roscommon.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/The_Castle%2C_Newcastle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Newcastle_schloss.jpg/330px-Newcastle_schloss.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "",
-      "license": "CC BY-SA 3.0",
-      "description": "",
-      "credit": "",
-      "source": "Wikimedia Commons"
-    },
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Donamon Castle",
@@ -53157,54 +52972,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Stewart_Castle,_Northern_Ireland"
-  },
-  {
-    "name": "Castlecaulfield",
-    "country": "ireland",
-    "region": "ulster-and-the-north",
-    "county": "County Tyrone",
-    "lat": 54.50777778,
-    "lng": -6.83611111,
-    "mapsLink": "https://www.google.com/maps/search/Castlecaulfield/@54.505,-6.918,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Main_Street%2CCastlecaulfield_-_geograph.org.uk_-_1803663.jpg/330px-Main_Street%2CCastlecaulfield_-_geograph.org.uk_-_1803663.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [
-      "https://img.castlecore.uk/castlecaulfield-2.jpg",
-      "https://img.castlecore.uk/castlecaulfield-3.jpg",
-      "https://img.castlecore.uk/castlecaulfield-4.jpg",
-      "https://img.castlecore.uk/castlecaulfield-5.jpg"
-    ],
-    "desc": "Castlecaulfield is a village in the south-east of County Tyrone in Northern Ireland. It lies about 2 miles west of Dungannon and is part of the Mid Ulster District Council area. The village is mostly within the townland of Drumreany, although part of it extends into Lisnamonaghan. It is situated in the historic Barony of Dungannon Middle and the civil parish of Donaghmore.",
-    "type": "castle",
-    "period": "17th century",
-    "rating": 3.5,
-    "tags": [
-      "ruins-romantic",
-      "tudor",
-      "atmospheric",
-      "photogenic",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/places-to-visit/castlecaulfield/"
-      },
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Castlecaulfield"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Castlecaulfield",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Main_Street%2CCastlecaulfield_-_geograph.org.uk_-_1803663.jpg/330px-Main_Street%2CCastlecaulfield_-_geograph.org.uk_-_1803663.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Caulfield"
   },
   {
     "name": "Brackfield Bawn",
@@ -57367,93 +57134,6 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Derryhiveny_Castle"
   },
   {
-    "name": "Kilcornan Castle",
-    "country": "ireland",
-    "region": "wild-atlantic-way",
-    "county": "County Galway",
-    "lat": 52.25038,
-    "lng": -8.610485,
-    "mapsLink": "https://www.google.com/maps/search/Kilcornan%20Castle/@53.203,-8.808,15z",
-    "image": "https://img.castlecore.uk/kilcornan-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/kilcornan-castle-2.jpg",
-      "https://img.castlecore.uk/kilcornan-castle-3.jpg",
-      "https://img.castlecore.uk/kilcornan-castle-4.jpg",
-      "https://img.castlecore.uk/kilcornan-castle-5.jpg"
-    ],
-    "desc": "Kilcolman Castle is a tower house located in County Cork, Ireland. It was formerly the residence of the poet Edmund Spenser.",
-    "type": "tower house",
-    "period": "15th century",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Galway Heritage",
-        "url": "https://www.galwaytourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Kilcolman_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Picturesque_Ireland_-_a_literary_and_artistic_delineation_of_the_natural_scenery%2C_remarkable_places%2C_historical_antiquities%2C_public_buildings%2C_ancient_abbeys%2C_towers%2C_castles%2C_and_other_romantic_and_%2814757013626%29.jpg/330px-thumbnail.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
-    "name": "Moylough Castle",
-    "country": "ireland",
-    "region": "wild-atlantic-way",
-    "county": "County Galway",
-    "lat": 53.2965,
-    "lng": -9.0735,
-    "mapsLink": "https://www.google.com/maps/search/Moylough%20Castle/@53.587,-8.568,15z",
-    "image": "https://img.castlecore.uk/moylough-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/moylough-castle-2.jpg"
-    ],
-    "desc": "Menlo Castle or Menlough Castle, also called Blake's Castle, is a 16th-century castle situated on the bank of the River Corrib near Menlo village in County Galway, Ireland.",
-    "type": "tower house",
-    "period": "Medieval",
-    "rating": 3,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Galway Heritage",
-        "url": "https://www.galwaytourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Menlo_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Menlo_Castle%2C_Co_Galway.jpg/330px-Menlo_Castle%2C_Co_Galway.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
     "name": "Monivea Castle",
     "country": "ireland",
     "region": "wild-atlantic-way",
@@ -57671,50 +57351,6 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Heers_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Kasteelheers.jpg/330px-Kasteelheers.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
-    "name": "Carna Castle",
-    "country": "ireland",
-    "region": "wild-atlantic-way",
-    "county": "County Galway",
-    "lat": 51.69833333,
-    "lng": -4.83055556,
-    "mapsLink": "https://www.google.com/maps/search/Carna%20Castle/@53.32,-9.87,15z",
-    "image": "https://img.castlecore.uk/carna-castle-4.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/carna-castle-3.jpg",
-      "https://img.castlecore.uk/carna-castle-5.jpg"
-    ],
-    "desc": "Carew Castle is a castle in the civil parish of Carew in Pembrokeshire, Wales. The Carew family take their name from this site and have owned the castle for more than 900 years. It is leased to the Pembrokeshire Coast National Park for administration purposes.",
-    "type": "tower house",
-    "period": "Medieval",
-    "rating": 3.1,
-    "tags": [
-      "coastal",
-      "ruins-romantic",
-      "remote",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Galway Heritage",
-        "url": "https://www.galwaytourism.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Carew_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carew_Castle%2C_Pembrokeshire%2C_UK.jpg/330px-Carew_Castle%2C_Pembrokeshire%2C_UK.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
@@ -58329,52 +57965,6 @@
     "hasGooglePlaces": "unknown"
   },
   {
-    "name": "Skreen Castle",
-    "country": "ireland",
-    "region": "wild-atlantic-way",
-    "county": "County Sligo",
-    "lat": 53.5829,
-    "lng": -6.5615,
-    "mapsLink": "https://www.google.com/maps/search/Skreen%20Castle/@54.228,-8.618,15z",
-    "image": "https://img.castlecore.uk/skreen-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/skreen-castle-2.jpg",
-      "https://img.castlecore.uk/skreen-castle-3.jpg",
-      "https://img.castlecore.uk/skreen-castle-4.jpg",
-      "https://img.castlecore.uk/skreen-castle-5.jpg"
-    ],
-    "desc": "Skryne Castle was a castle at Skryne, County Meath, Ireland; only ruins remain. The motte and bailey castle was built by Adam de Feypo in the 12th century.",
-    "type": "tower house",
-    "period": "Medieval",
-    "rating": 3.2,
-    "tags": [
-      "ruins-romantic",
-      "medieval",
-      "celtic",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Sligo Heritage",
-        "url": "https://www.sligoheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Skryne_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Screen_Castle%2C_Co_Meath_-_geograph.org.uk_-_1760551.jpg/330px-Screen_Castle%2C_Co_Meath_-_geograph.org.uk_-_1760551.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
     "name": "Carrowmore Megalithic Cemetery",
     "country": "ireland",
     "region": "wild-atlantic-way",
@@ -58740,7 +58330,7 @@
       "https://img.castlecore.uk/kilcogan-castle-4.jpg",
       "https://img.castlecore.uk/kilcogan-castle-5.jpg"
     ],
-    "desc": "Kilcolman Castle is a tower house located in County Cork, Ireland. It was formerly the residence of the poet Edmund Spenser.",
+    "desc": "",
     "type": "tower house",
     "period": "15th century",
     "rating": 3,
@@ -58760,7 +58350,6 @@
         "url": "https://heritageireland.ie/"
       }
     ],
-    "wiki": "https://en.wikipedia.org/wiki/Kilcolman_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Picturesque_Ireland_-_a_literary_and_artistic_delineation_of_the_natural_scenery%2C_remarkable_places%2C_historical_antiquities%2C_public_buildings%2C_ancient_abbeys%2C_towers%2C_castles%2C_and_other_romantic_and_%2814757013626%29.jpg/330px-thumbnail.jpg",
     "reviewStatus": "flagged",
     "reviewReasons": [
@@ -59806,52 +59395,6 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Magheraghanrush_Court_Tomb",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Deer_Park_Court_Tomb_-_geograph.org.uk_-_985472.jpg/330px-Deer_Park_Court_Tomb_-_geograph.org.uk_-_985472.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
-  },
-  {
-    "name": "Dunmoran Castle",
-    "country": "ireland",
-    "region": "wild-atlantic-way",
-    "county": "County Sligo",
-    "lat": 53.623756,
-    "lng": -8.755581,
-    "mapsLink": "https://www.google.com/maps/search/Dunmoran%20Castle/@54.235,-8.62,15z",
-    "image": "https://img.castlecore.uk/dunmoran-castle.jpg",
-    "imgSource": "CDN",
-    "gallery": [
-      "https://img.castlecore.uk/dunmoran-castle-2.jpg",
-      "https://img.castlecore.uk/dunmoran-castle-3.jpg",
-      "https://img.castlecore.uk/dunmoran-castle-4.jpg",
-      "https://img.castlecore.uk/dunmoran-castle-5.jpg"
-    ],
-    "desc": "Dunmore Castle is a castle and National Monument located in County Galway, Ireland.",
-    "type": "tower house",
-    "period": "Medieval",
-    "rating": 3.3,
-    "tags": [
-      "coastal",
-      "ruins-romantic",
-      "medieval",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Sligo Heritage",
-        "url": "https://www.sligoheritage.ie/"
-      },
-      {
-        "name": "Heritage Ireland",
-        "url": "https://heritageireland.ie/"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Dunmore_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dunmore_Castle%2C_Co._Galway.JPG/330px-Dunmore_Castle%2C_Co._Galway.JPG",
     "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
