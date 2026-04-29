@@ -30,7 +30,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kilchurn_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "reviewReasons": [
       "wrong-image"
     ],
@@ -94,7 +94,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Duart_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Worldfootage",
       "license": "CC BY-SA 4.0",
@@ -373,7 +373,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Sween",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg/330px-Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Rob Farrow",
       "license": "CC BY-SA 2.0",
@@ -488,7 +488,7 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Finlaggan",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg/330px-Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Otter",
       "license": "CC BY-SA 3.0",
@@ -566,7 +566,7 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunoon_Castle",
-    "reviewStatus": "flagged",
+    "reviewStatus": "approved",
     "imageAttribution": {
       "artist": "Thomas Nugent",
       "license": "CC BY-SA 2.0",
