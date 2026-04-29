@@ -153,6 +153,7 @@ body{padding-bottom:50px}
     <div class="main-tab active" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
     <div class="main-tab" id="tabFlagged" onclick="switchMainTab('flagged')">⚠️ Flagged <span class="tab-badge" id="tabFlaggedCount">0</span></div>
     <div class="main-tab" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
+    <div class="main-tab" id="tabEnrich" onclick="switchMainTab('enrich')">🔧 Enrich <span class="tab-badge" id="tabEnrichCount">0</span></div>
     <div class="main-tab" id="tabDead" onclick="switchMainTab('dead')">💀 Dead <span class="tab-badge" id="tabDeadCount">0</span></div>
     <div class="main-tab" id="tabDupes" onclick="switchMainTab('dupes')">🔀 Dupes <span class="tab-badge" id="tabDupesCount">0</span></div>
   </div>
@@ -259,7 +260,7 @@ const wikiCache = new Map();
 function switchMainTab(tab) {
   currentMainTab = tab;
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
-  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',dead:'tabDead',dupes:'tabDupes'};
+  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',enrich:'tabEnrich',dead:'tabDead',dupes:'tabDupes'};
   document.getElementById(tabIds[tab]).classList.add('active');
   
   if (tab === 'dupes') {
@@ -272,7 +273,7 @@ function switchMainTab(tab) {
   }
   document.getElementById('dupesView').style.display = 'none';
   // Set view mode (but don't render yet — applyFilters will handle it)
-  const wantView = (tab === 'approved' || tab === 'dead') ? 'table' : 'card';
+  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich') ? 'table' : 'card';
   currentView = wantView;
   document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
   document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
@@ -283,11 +284,12 @@ function switchMainTab(tab) {
 }
 
 function updateTabCounts() {
-  let ap = 0, fl = 0, un = 0, dead = 0;
-  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') ap++; else if (s === 'flagged') { if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
+  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0;
+  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') ap++; else if (s === 'flagged') { if (d.needsEnrich) enrich++; else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
   document.getElementById('tabReviewCount').textContent = un;
   document.getElementById('tabFlaggedCount').textContent = fl;
   document.getElementById('tabApprovedCount').textContent = ap;
+  document.getElementById('tabEnrichCount').textContent = enrich;
   document.getElementById('tabDeadCount').textContent = dead;
 }
 
@@ -347,8 +349,9 @@ function applyFilters() {
     if (country && d.country !== country) return false;
     if (imgSrc && d.imgSource !== imgSrc) return false;
     const s = getStatus(d);
-    if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no';
-    if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no';
+    if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
+    if (currentMainTab === 'enrich') return s === 'flagged' && d.needsEnrich === true;
+    if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
     if (currentMainTab === 'approved') return s === 'approved';
     if (currentMainTab === 'review') return s === 'unreviewed';
     return true;
@@ -593,6 +596,27 @@ function renderTable() {
   const isFlaggedTab = currentMainTab === 'flagged';
   const isApprovedTab = currentMainTab === 'approved';
   const isDeadTab = currentMainTab === 'dead';
+  
+  const isEnrichTab = currentMainTab === 'enrich';
+  
+  if (isEnrichTab) {
+    let rows = filtered.map((d,i) => {
+      const wikiUrl = d.wikipediaUrl || d.wiki || '';
+      const mapsUrl = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
+      return `<tr>
+        <td>${i+1}</td>
+        <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
+        <td><strong>${esc(d.name)}</strong></td>
+        <td>${esc(d.country)}</td>
+        <td>${esc(d.region||'').replace(/-/g,' ')}</td>
+        <td>${esc(d.county||'')}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wiki</a>` : '—'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td>
+        <td style="font-size:12px;color:var(--muted)">${(d.reviewReasons||[]).join(', ')}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Links</th><th>Flag Reasons</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return;
+  }
   
   if (isDeadTab) {
     let rows = filtered.map((d,i) => {

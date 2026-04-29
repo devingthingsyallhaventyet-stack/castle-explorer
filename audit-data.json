@@ -615,7 +615,8 @@
     "reviewNote": "Images and description dont match linked wikipedia page",
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castle Coeffin",
@@ -849,7 +850,8 @@
     "reviewNote": "is this place real?",
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Toward Castle",
@@ -890,7 +892,8 @@
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Dunollie Castle",
@@ -1414,7 +1417,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane",
+    "needsEnrich": true
   },
   {
     "name": "Hermitage Castle",
@@ -2045,7 +2049,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Fatlips Castle",
@@ -2226,7 +2231,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig",
+    "needsEnrich": true
   },
   {
     "name": "Abbotsford House",
@@ -2987,7 +2993,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merchiston_Tower"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merchiston_Tower",
+    "needsEnrich": true
   },
   {
     "name": "Liberton Tower",
@@ -3099,7 +3106,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian",
+    "needsEnrich": true
   },
   {
     "name": "Dalhousie Castle",
@@ -4150,7 +4158,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Garth Castle",
@@ -4360,7 +4369,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
+    "needsEnrich": true
   },
   {
     "name": "Balgonie Castle",
@@ -5322,7 +5332,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Mearns Castle",
@@ -5875,7 +5886,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mingary_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mingary_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Dunbeath Castle",
@@ -7194,7 +7206,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dalcross_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dalcross_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Cromarty Courthouse",
@@ -9401,7 +9414,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Baikie_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Baikie_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Aboyne Castle",
@@ -9470,7 +9484,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tillycairn_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tillycairn_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Balfluig Castle",
@@ -9570,7 +9585,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_of_Fiddes"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_of_Fiddes",
+    "needsEnrich": true
   },
   {
     "name": "Muchalls Castle",
@@ -9908,7 +9924,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Leith_Hall"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Leith_Hall",
+    "needsEnrich": true
   },
   {
     "name": "Haddo House",
@@ -10281,7 +10298,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Durris_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Durris_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Raemoir House",
@@ -10388,7 +10406,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones",
+    "needsEnrich": true
   },
   {
     "name": "Ethie Castle",
@@ -10426,7 +10445,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ethie_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ethie_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Cortachy Castle",
@@ -10464,7 +10484,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cortachy_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cortachy_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Airlie Castle",
@@ -11620,7 +11641,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kirkcudbright_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kirkcudbright_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Sanquhar Castle",
@@ -11794,7 +11816,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Turnberry_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Turnberry_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Dunure Castle",
@@ -12289,7 +12312,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mauchline_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mauchline_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Ayr Castle",
@@ -12321,7 +12345,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ayr_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ayr_Castle",
+    "needsEnrich": true
   },
   {
     "name": "Sundrum Castle",
@@ -14515,7 +14540,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Wolterton_Hall"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Wolterton_Hall",
+    "needsEnrich": true
   },
   {
     "name": "Mannington Hall",
@@ -17193,7 +17219,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hornby_Castle,_Lancashire"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hornby_Castle,_Lancashire",
+    "needsEnrich": true
   },
   {
     "name": "Chipchase Castle",
