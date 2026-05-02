@@ -269,6 +269,13 @@ let currentMainTab = 'review';
 let flagPanelOpen = false;
 const wikiCache = new Map();
 let stagingPhotos = {};
+let stagingNames = []; // for fuzzy lookup
+function getStagingPhotos(name) {
+  if (stagingPhotos[name]) return stagingPhotos[name];
+  const nl = name.toLowerCase();
+  const match = stagingNames.find(sn => sn.toLowerCase().includes(nl) || nl.includes(sn.toLowerCase()));
+  return match ? stagingPhotos[match] : [];
+}
 let imageSelections = {};
 try { imageSelections = JSON.parse(localStorage.getItem('castle-image-selections') || '{}'); Object.keys(imageSelections).forEach(k => { if (imageSelections[k].rejected) imageSelections[k].rejected = new Set(imageSelections[k].rejected); else imageSelections[k].rejected = new Set(); }); } catch(e) {}
 function saveImageSelections() { const obj = {}; Object.keys(imageSelections).forEach(k => { obj[k] = { main: imageSelections[k].main, mainSource: imageSelections[k].mainSource, rejected: [...imageSelections[k].rejected] }; }); localStorage.setItem('castle-image-selections', JSON.stringify(obj)); }
@@ -349,7 +356,7 @@ fetch('audit-data.json').then(r => r.json()).then(data => {
   // Load staging photos asynchronously
   fetch('google-images-staging.json').then(r=>r.json()).then(staging=>{
     Object.values(staging).forEach(entry=>{
-      if(entry.placeName && entry.photos) stagingPhotos[entry.placeName]=entry.photos;
+      if(entry.placeName && entry.photos) { stagingPhotos[entry.placeName]=entry.photos; stagingNames.push(entry.placeName); }
     });
     renderCard(); // re-render to show staging photos
   }).catch(()=>{});
@@ -503,7 +510,7 @@ function renderImagePicker(d, key) {
     if (url && url !== d.image && url !== d.wikiImage) images.push({ url, source: 'gallery', label: 'gallery' });
   });
   // Google staging photos
-  const staging = stagingPhotos[d.name] || [];
+  const staging = getStagingPhotos(d.name) || [];
   staging.forEach((p,i) => {
     const url = p.url || p.googlePhotoUri || '';
     if (url && !images.find(x=>x.url===url)) images.push({ url, source: 'google', label: 'google' });
@@ -633,7 +640,7 @@ function doApprove() {
     const allImgs = [];
     if (d.image) allImgs.push({ url: d.image, source: 'current' });
     if (d.wikiImage && d.wikiImage !== d.image) allImgs.push({ url: d.wikiImage, source: 'wikipedia' });
-    (stagingPhotos[d.name]||[]).forEach(p => {
+    (getStagingPhotos(d.name)||[]).forEach(p => {
       const url = p.url || p.googlePhotoUri || '';
       if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: 'google' });
     });
