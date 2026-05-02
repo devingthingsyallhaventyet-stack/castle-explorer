@@ -193,7 +193,7 @@
     "lng": "-5.4374981",
     "mapsLink": "https://www.google.com/maps/search/Dunstaffnage%20Castle%20Argyll%20and%20Bute%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqO449oCkaEuj70JFVtIHwpJLkxMU7lNiK6W_4GPSi7W6VL00UpVqhejXFhAe_zW1VgbwJ06L_zrTDgGqRjiidA1k9EfzXhGQO-6anEKT3ol_uqTOIBXcQE2Oamh5dXqr4Reoo-i63XT_QsKI=s4800-w1200",
-    "imgSource": "google",
+    "imgSource": "current",
     "gallery": [
       {
         "id": "dunstaffnage-castle-img-1",
@@ -235,7 +235,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "approved"
   },
   {
@@ -631,31 +630,26 @@
     "lat": "55.9479283",
     "lng": "-5.6654519",
     "mapsLink": "https://www.google.com/maps/search/Sween%20Castle%20Argyll%20and%20Bute%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg/330px-Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg",
-    "imgSource": "wikipedia",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPamOfsrY2hSPQOG9tLAA05x0tiFSxuMsUu-3gVgcSTIvBhh4lqELaZAZFKdWOIyeibOrmStWUVY8FlfkVnxTwMI515afgpOdVVSmflCebrg22m7i7ZyH_lFyE22-eps0yZCwwxhwrbBPhjlw=s4800-w800",
+    "imgSource": "google",
     "gallery": [
       {
         "id": "sween-castle-img-1",
-        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPamOfsrY2hSPQOG9tLAA05x0tiFSxuMsUu-3gVgcSTIvBhh4lqELaZAZFKdWOIyeibOrmStWUVY8FlfkVnxTwMI515afgpOdVVSmflCebrg22m7i7ZyH_lFyE22-eps0yZCwwxhwrbBPhjlw=s4800-w800",
-        "source": "google"
-      },
-      {
-        "id": "sween-castle-img-2",
         "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNxxn0b5mk_XxI37n6TEbxSB0_6E7NGd1zbw3LZc86e9hwoq9fYzOj6yYzP8V_oMMaQIynQQgB130dU5q6KXg7AykfQcGPG74Aw3oor3_2saViRWyHkRmQ3mw9yPtbOEyXx_-MPnjrUCrEH=s4800-w800",
         "source": "google"
       },
       {
-        "id": "sween-castle-img-3",
+        "id": "sween-castle-img-2",
         "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPmrOawSoLPOYQX9WQ10KLkvRgY3HGQi6hKd9TIYOAs66VzqzW8N8BmUjvsh1HAWE-PLjqTy_jGQSFoVTYnyw0xJd4AWEemVzQ4zMr7XGX4HFpXersZb_LEqPtW3TwurfE9ekAJbTKSXcUleQ8tif-y_A=s4800-w800",
         "source": "google"
       },
       {
-        "id": "sween-castle-img-4",
+        "id": "sween-castle-img-3",
         "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP99J1Ke4Erun-aaoW5-sgUO4ZvmWIixM2O_yFRyoNPhHuZkuECN_diJ4PeJGcf7rW12ggGBVynwaMubMxbgcjK2MXC9ZpbcO3QH4GSOSv35eMj33CxxIL_btMLz8XWt_GZ7oxiwMEJ8TZ0Dzk=s4800-w800",
         "source": "google"
       },
       {
-        "id": "sween-castle-img-5",
+        "id": "sween-castle-img-4",
         "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOBckE0IVCW5ORO6Vuw-Z834yuLLlzqKE_pcsqvB4MGNQkS7zcPhi4m5_g-Deg-fCtYddEiHwpW4p3AKa-Mf03vpNxumuvcBs_KHxw5M4GHtpBc_HCF05qljkHwfffsb1hQ1YPAbM3dHghe=s4800-w800",
         "source": "google"
       }
@@ -676,14 +670,10 @@
     "wiki": "https://en.wikipedia.org/wiki/Castle_Sween",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg/330px-Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg",
     "imageAttribution": "local",
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "approved"
   },
   {
@@ -846,13 +836,12 @@
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg/330px-Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg",
     "imageAttribution": "local",
     "reviewReasons": [
-      "flagged-during-image-review"
+      "needs-review"
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-02"
   },
@@ -1015,9 +1004,8 @@
     "wiki": "https://en.wikipedia.org/wiki/New_Castle_Lachlan",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%22new%22_Castle_Lachlan_%28front%29.jpg/330px-%22new%22_Castle_Lachlan_%28front%29.jpg",
     "reviewReasons": [
-      "other"
+      "needs-review"
     ],
-    "reviewNote": "Images and description dont match linked wikipedia page",
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
