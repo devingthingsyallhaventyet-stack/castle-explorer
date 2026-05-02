@@ -143,6 +143,17 @@ body{padding-bottom:50px}
 .dupe-notes label{font-size:12px;color:var(--muted);margin-bottom:4px;display:block}
 .shortcuts-help{position:fixed;bottom:50px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:12px;color:var(--muted);z-index:50;line-height:1.8}
 .shortcuts-help kbd{background:var(--bg);padding:1px 5px;border-radius:3px;border:1px solid var(--border);color:var(--text);font-family:monospace}
+
+/* Image Picker */
+.image-picker{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.image-picker-item{position:relative;border:3px solid transparent;border-radius:8px;cursor:pointer;transition:.15s}
+.image-picker-item img{width:100px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.image-picker-item.selected-main{border-color:var(--green)}
+.image-picker-item.selected-main::after{content:'★ MAIN';position:absolute;top:2px;left:2px;background:var(--green);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:4px}
+.image-picker-item.rejected{border-color:var(--red);opacity:.3}
+.image-picker-item .reject-btn{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:var(--red);color:#fff;border:none;cursor:pointer;font-size:12px;display:none;align-items:center;justify-content:center;z-index:5;line-height:1}
+.image-picker-item:hover .reject-btn,.image-picker-item.rejected .reject-btn{display:flex}
+.image-picker-item .img-label{position:absolute;bottom:2px;left:2px;background:rgba(0,0,0,.7);color:var(--muted);font-size:9px;padding:1px 5px;border-radius:3px}
 </style>
 </head>
 <body>
@@ -257,6 +268,10 @@ let currentView = 'card';
 let currentMainTab = 'review';
 let flagPanelOpen = false;
 const wikiCache = new Map();
+let stagingPhotos = {};
+let imageSelections = {};
+try { imageSelections = JSON.parse(localStorage.getItem('castle-image-selections') || '{}'); Object.keys(imageSelections).forEach(k => { if (imageSelections[k].rejected) imageSelections[k].rejected = new Set(imageSelections[k].rejected); else imageSelections[k].rejected = new Set(); }); } catch(e) {}
+function saveImageSelections() { const obj = {}; Object.keys(imageSelections).forEach(k => { obj[k] = { main: imageSelections[k].main, mainSource: imageSelections[k].mainSource, rejected: [...imageSelections[k].rejected] }; }); localStorage.setItem('castle-image-selections', JSON.stringify(obj)); }
 
 function switchMainTab(tab) {
   currentMainTab = tab;
@@ -331,6 +346,13 @@ fetch('audit-data.json').then(r => r.json()).then(data => {
   findDupes();
   applyFilters();
   updateProgress();
+  // Load staging photos asynchronously
+  fetch('google-images-staging.json').then(r=>r.json()).then(staging=>{
+    Object.values(staging).forEach(entry=>{
+      if(entry.placeName && entry.photos) stagingPhotos[entry.placeName]=entry.photos;
+    });
+    renderCard(); // re-render to show staging photos
+  }).catch(()=>{});
 });
 
 function populateFilters() {
@@ -464,6 +486,68 @@ function renderCard() {
     </div>
   `;
   fetchWiki(d);
+  // Render image picker (only on review/imgReview tabs)
+  if (currentMainTab === 'review' || currentMainTab === 'imgReview') {
+    renderImagePicker(d, key);
+  }
+}
+
+function renderImagePicker(d, key) {
+  // Collect all available images with source labels
+  const images = [];
+  if (d.image) images.push({ url: d.image, source: 'current', label: 'current' });
+  if (d.wikiImage && (!d.image || d.wikiImage !== d.image)) images.push({ url: d.wikiImage, source: 'wikipedia', label: 'wiki' });
+  // Gallery images
+  (d.gallery||[]).forEach((g,i) => {
+    const url = typeof g === 'string' ? g : (g.url || g.googlePhotoUri || '');
+    if (url && url !== d.image && url !== d.wikiImage) images.push({ url, source: 'gallery', label: 'gallery' });
+  });
+  // Google staging photos
+  const staging = stagingPhotos[d.name] || [];
+  staging.forEach((p,i) => {
+    const url = p.url || p.googlePhotoUri || '';
+    if (url && !images.find(x=>x.url===url)) images.push({ url, source: 'google', label: 'google' });
+  });
+
+  if (!images.length) return;
+
+  // Get or init selection state
+  if (!imageSelections[key]) imageSelections[key] = { main: d.image || null, mainSource: d.image ? 'current' : null, rejected: new Set() };
+  const sel = imageSelections[key];
+
+  const container = document.getElementById('cardView');
+  const section = document.createElement('div');
+  section.className = 'blurb-section';
+  section.innerHTML = `<h3>📷 Image Selection <span style="font-size:12px;color:var(--muted);font-weight:400">(click to set main, ✗ to reject)</span></h3>
+    <div class="image-picker">${images.map((img,i) => {
+      const isMain = sel.main === img.url;
+      const isRejected = sel.rejected.has(img.url);
+      return `<div class="image-picker-item${isMain?' selected-main':''}${isRejected?' rejected':''}" onclick="pickMainImage('${key.replace(/'/g,"\\'")}','${img.url.replace(/'/g,"\\'")}','${img.source}')">
+        <img src="${img.url}" loading="lazy" alt="${img.label}">
+        <span class="img-label">${img.label}</span>
+        <button class="reject-btn" onclick="event.stopPropagation();toggleRejectImage('${key.replace(/'/g,"\\'")}','${img.url.replace(/'/g,"\\'")}')" title="Reject">✗</button>
+      </div>`;
+    }).join('')}</div>`;
+  container.appendChild(section);
+}
+
+function pickMainImage(key, url, source) {
+  if (!imageSelections[key]) imageSelections[key] = { main: null, mainSource: null, rejected: new Set() };
+  const sel = imageSelections[key];
+  sel.rejected.delete(url); // can't reject main
+  sel.main = url;
+  sel.mainSource = source;
+  saveImageSelections();
+  renderCard();
+}
+
+function toggleRejectImage(key, url) {
+  if (!imageSelections[key]) imageSelections[key] = { main: null, mainSource: null, rejected: new Set() };
+  const sel = imageSelections[key];
+  if (sel.main === url) return; // can't reject main
+  if (sel.rejected.has(url)) sel.rejected.delete(url); else sel.rejected.add(url);
+  saveImageSelections();
+  renderCard();
 }
 
 function swapMainImage(thumb, url) {
@@ -537,7 +621,27 @@ function jumpTo() {
 function doApprove() {
   if (!filtered.length) return;
   const d = filtered[currentIdx];
-  reviewState[getKey(d)] = { status: 'approved', ts: Date.now() };
+  const key = getKey(d);
+  reviewState[key] = { status: 'approved', ts: Date.now() };
+  // Save image selection if any
+  const sel = imageSelections[key];
+  if (sel && sel.main) {
+    d.image = sel.main;
+    d.imgSource = sel.mainSource;
+    d.imageReviewDone = true;
+    // Build gallery from non-rejected, non-main images
+    const allImgs = [];
+    if (d.image) allImgs.push({ url: d.image, source: 'current' });
+    if (d.wikiImage && d.wikiImage !== d.image) allImgs.push({ url: d.wikiImage, source: 'wikipedia' });
+    (stagingPhotos[d.name]||[]).forEach(p => {
+      const url = p.url || p.googlePhotoUri || '';
+      if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: 'google' });
+    });
+    const slug = d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+    let imgN = 0;
+    d.gallery = allImgs.filter(img => img.url !== sel.main && !sel.rejected.has(img.url))
+      .map(img => ({ id: slug+'-img-'+(++imgN), url: img.url, source: img.source }));
+  }
   saveState(); updateProgress(); advanceToNext();
 }
 
