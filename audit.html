@@ -289,7 +289,8 @@ function updateTabCounts() {
   document.getElementById('tabReviewCount').textContent = un;
   document.getElementById('tabFlaggedCount').textContent = fl;
   document.getElementById('tabApprovedCount').textContent = ap;
-  document.getElementById('tabImgReviewCount').textContent = imgReview;
+  const imgEl = document.getElementById('tabImgReviewCount');
+  if (imgEl) imgEl.textContent = imgReview;
   document.getElementById('tabEnrichCount').textContent = enrich;
   document.getElementById('tabDeadCount').textContent = dead;
 }
