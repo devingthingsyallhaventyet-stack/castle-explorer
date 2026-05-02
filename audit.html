@@ -273,7 +273,17 @@ let stagingNames = []; // for fuzzy lookup
 function getStagingPhotos(name) {
   if (stagingPhotos[name]) return stagingPhotos[name];
   const nl = name.toLowerCase();
-  const match = stagingNames.find(sn => sn.toLowerCase().includes(nl) || nl.includes(sn.toLowerCase()));
+  // Try substring match first
+  let match = stagingNames.find(sn => sn.toLowerCase().includes(nl) || nl.includes(sn.toLowerCase()));
+  if (match) return stagingPhotos[match];
+  // Try word-overlap match (handles "Sween Castle" vs "Castle Sween")
+  const nWords = new Set(nl.replace(/[^a-z0-9 ]/g,'').split(/\s+/).filter(w => w.length > 2));
+  match = stagingNames.find(sn => {
+    const sWords = new Set(sn.toLowerCase().replace(/[^a-z0-9 ]/g,'').split(/\s+/).filter(w => w.length > 2));
+    let overlap = 0;
+    for (const w of nWords) { if (sWords.has(w)) overlap++; }
+    return overlap >= Math.min(nWords.size, sWords.size) && overlap >= 2;
+  });
   return match ? stagingPhotos[match] : [];
 }
 let imageSelections = {};
