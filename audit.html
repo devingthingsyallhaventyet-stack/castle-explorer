@@ -811,11 +811,11 @@ function renderTable() {
       <td>${esc(d.region||'').replace(/-/g,' ')}</td>
       <td>${esc(d.county||'')}</td>
       <td>${esc(d.type||'')}</td>
-      ${isFlaggedTab ? `<td style="font-size:12px">${(d.wikipediaUrl||d.wiki) ? `<a href="${esc(d.wikipediaUrl||d.wiki)}" target="_blank">📖 Wiki</a>` : '<span style="color:var(--muted)">—</span>'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td><td>${reasonsHtml}${noteHtml}</td><td>${imgFlags} ${fieldFlagHtml}</td>` : `<td>${statusHtml}</td><td style="font-size:11px;color:var(--muted)">${st.reasons?st.reasons.join(', '):''}</td>`}
+      ${isFlaggedTab ? `<td style="font-size:12px">${(d.wikipediaUrl||d.wiki) ? `<a href="${esc(d.wikipediaUrl||d.wiki)}" target="_blank">📖 Wiki</a>` : '<span style="color:var(--muted)">—</span>'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td><td>${reasonsHtml}${noteHtml}</td><td>${imgFlags} ${fieldFlagHtml}</td><td style="font-size:11px;color:var(--muted)">${d.lastReviewed || '—'}</td>` : `<td>${statusHtml}</td><td style="font-size:11px;color:var(--muted)">${st.reasons?st.reasons.join(', '):''}</td>`}
     </tr>`;
   }).join('');
   const headers = isFlaggedTab 
-    ? '<th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Links</th><th>Flag Reasons</th><th>Other Flags</th>'
+    ? '<th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Links</th><th>Flag Reasons</th><th>Other Flags</th><th>Last Reviewed</th>'
     : '<th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Status</th><th>Flags</th>';
   el.innerHTML = `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
 }

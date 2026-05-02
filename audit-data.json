@@ -194,7 +194,28 @@
     "mapsLink": "https://www.google.com/maps/search/Dunstaffnage%20Castle%20Argyll%20and%20Bute%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqO449oCkaEuj70JFVtIHwpJLkxMU7lNiK6W_4GPSi7W6VL00UpVqhejXFhAe_zW1VgbwJ06L_zrTDgGqRjiidA1k9EfzXhGQO-6anEKT3ol_uqTOIBXcQE2Oamh5dXqr4Reoo-i63XT_QsKI=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "dunstaffnage-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/places/ANXAkqGPKKWiNPMfRxegFjCfFwie_syt--ogso-gxoDqXNZZm2vRDS9ZZaaqlkudx7qeWg5NDVntON54qZWneae0E52bLxB4qn_eleQ=s4800-w768",
+        "source": "google"
+      },
+      {
+        "id": "dunstaffnage-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNbyTqi5sQ0djPfCpAN5ZsmvOshppYWT-DVchKzd4zqLSkixqJC2oAVS28X6ZzibmdBeYMMbyGO031cfzbZTLH6uQCPbPBphGjO-02tJcL6A3CM-oRUoMzl1Q5kDzo1l6XtwfNhplupQW_Meg=s4800-w1200",
+        "source": "google"
+      },
+      {
+        "id": "dunstaffnage-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM-LAqOLAYOggHePSve50AQ3kYbOeYWkEMqD2EgLqnZaMZUdjd9BiO4b5GttPt9RJBMZ7FlGUfeBkYkXg3C8bIFUFKUB2TW1Z1q0UZRw8-CxXIViH3WGcA0WExe1GP8narYtGCztT_9UuxEfRwBHGwq3g=s4800-w1200",
+        "source": "google"
+      },
+      {
+        "id": "dunstaffnage-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPBgSqOzIE9ps07KmAhwfdnFxWGQQax2v4SnKpbkDlkrC3Q_aac6R0klSz45ci6xtd4YNfN3SJDRzRy5U48L99M6qP3HfzheNMdC47N1plUnGbjGHnSiI0Ae33x9yBSLBOIGot8OJRaKwY5qw=s4800-w1200",
+        "source": "google"
+      }
+    ],
     "desc": "Dunstaffnage Castle is a partially ruined castle in Argyll and Bute, western Scotland. It lies 3 miles (5 km) NNE of Oban, situated on a platform of conglomerate rock on a promontory at the south-west of the entrance to Loch Etive, and is surrounded on three sides by the sea. The castle and the nearby chapel ruin have been a Historic Scotland property since 1958. Both are Scheduled Ancient Monuments.",
     "type": "castle",
     "period": "13th century",
@@ -214,7 +235,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Carnasserie Castle",
@@ -611,7 +633,33 @@
     "mapsLink": "https://www.google.com/maps/search/Sween%20Castle%20Argyll%20and%20Bute%20scotland",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg/330px-Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg",
     "imgSource": "wikipedia",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "sween-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPamOfsrY2hSPQOG9tLAA05x0tiFSxuMsUu-3gVgcSTIvBhh4lqELaZAZFKdWOIyeibOrmStWUVY8FlfkVnxTwMI515afgpOdVVSmflCebrg22m7i7ZyH_lFyE22-eps0yZCwwxhwrbBPhjlw=s4800-w800",
+        "source": "google"
+      },
+      {
+        "id": "sween-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNxxn0b5mk_XxI37n6TEbxSB0_6E7NGd1zbw3LZc86e9hwoq9fYzOj6yYzP8V_oMMaQIynQQgB130dU5q6KXg7AykfQcGPG74Aw3oor3_2saViRWyHkRmQ3mw9yPtbOEyXx_-MPnjrUCrEH=s4800-w800",
+        "source": "google"
+      },
+      {
+        "id": "sween-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPmrOawSoLPOYQX9WQ10KLkvRgY3HGQi6hKd9TIYOAs66VzqzW8N8BmUjvsh1HAWE-PLjqTy_jGQSFoVTYnyw0xJd4AWEemVzQ4zMr7XGX4HFpXersZb_LEqPtW3TwurfE9ekAJbTKSXcUleQ8tif-y_A=s4800-w800",
+        "source": "google"
+      },
+      {
+        "id": "sween-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP99J1Ke4Erun-aaoW5-sgUO4ZvmWIixM2O_yFRyoNPhHuZkuECN_diJ4PeJGcf7rW12ggGBVynwaMubMxbgcjK2MXC9ZpbcO3QH4GSOSv35eMj33CxxIL_btMLz8XWt_GZ7oxiwMEJ8TZ0Dzk=s4800-w800",
+        "source": "google"
+      },
+      {
+        "id": "sween-castle-img-5",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOBckE0IVCW5ORO6Vuw-Z834yuLLlzqKE_pcsqvB4MGNQkS7zcPhi4m5_g-Deg-fCtYddEiHwpW4p3AKa-Mf03vpNxumuvcBs_KHxw5M4GHtpBc_HCF05qljkHwfffsb1hQ1YPAbM3dHghe=s4800-w800",
+        "source": "google"
+      }
+    ],
     "desc": "Castle Sween, also known as Caisteal Suibhne, and Caistéal Suibhne, is located on the eastern shore of Loch Sween, in Knapdale, south of the forestry village of Achnamara on the west coast of Argyll, Scotland. Castle Sween is thought to be one of the earliest stone castles built in Scotland, having been built in the late 11th century. The castle's towers were later additions to wooden structures which have since vanished.",
     "type": "castle",
     "period": "11th-12th century",
@@ -635,7 +683,8 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Tarbert Castle",
@@ -803,7 +852,9 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-02"
   },
   {
     "name": "Lews Castle",
@@ -969,7 +1020,9 @@
     "reviewNote": "Images and description dont match linked wikipedia page",
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-02"
   },
   {
     "name": "Castle Coeffin",
