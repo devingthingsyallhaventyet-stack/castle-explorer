@@ -512,7 +512,7 @@ function renderImagePicker(d, key) {
   // Google staging photos
   const staging = getStagingPhotos(d.name) || [];
   staging.forEach((p,i) => {
-    const url = p.url || p.googlePhotoUri || '';
+    const url = p.googlePhotoUri || p.url || '';
     if (url && !images.find(x=>x.url===url)) images.push({ url, source: 'google', label: 'google' });
   });
 
@@ -641,7 +641,7 @@ function doApprove() {
     if (d.image) allImgs.push({ url: d.image, source: 'current' });
     if (d.wikiImage && d.wikiImage !== d.image) allImgs.push({ url: d.wikiImage, source: 'wikipedia' });
     (getStagingPhotos(d.name)||[]).forEach(p => {
-      const url = p.url || p.googlePhotoUri || '';
+      const url = p.googlePhotoUri || p.url || '';
       if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: 'google' });
     });
     const slug = d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
