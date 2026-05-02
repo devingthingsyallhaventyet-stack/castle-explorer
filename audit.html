@@ -644,13 +644,26 @@ function renderTable() {
     let rows = filtered.map((d,i) => {
       const listingUrl = `https://castlecore.uk/site/${d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}.html`;
       const wikiUrl = d.wiki || '';
+      const mainId = d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-') + '-main';
+      const mainThumb = d.image ? `<img src="${esc(d.image)}" style="width:40px;height:40px;object-fit:cover;border-radius:4px;border:2px solid var(--green);vertical-align:middle" loading="lazy" title="${esc(mainId)}">` : '<span style="color:var(--red)">✗</span>';
+      const gallery = Array.isArray(d.gallery) ? d.gallery : [];
+      const galleryHtml = gallery.length
+        ? gallery.map(g => `<span style="display:inline-block;position:relative;margin:2px" title="${esc(g.id)}"><img src="${esc(g.url||g.googlePhotoUri||'')}" style="width:32px;height:32px;object-fit:cover;border-radius:3px;border:1px solid var(--border);vertical-align:middle" loading="lazy"><span style="position:absolute;bottom:-2px;right:-2px;background:var(--bg);color:var(--muted);font-size:8px;padding:0 2px;border-radius:2px;border:1px solid var(--border)">${g.id.split('-img-')[1]||''}</span></span>`).join('')
+        : '<span style="color:var(--muted);font-size:11px">none</span>';
+      const totalImgs = (d.image ? 1 : 0) + gallery.length;
+      const imgCountStyle = totalImgs >= 3 ? 'color:var(--green)' : totalImgs === 0 ? 'color:var(--red)' : 'color:var(--gold)';
       return `<tr>
+        <td>${i+1}</td>
         <td><strong>${esc(d.name)}</strong></td>
-        <td><a href="${listingUrl}" target="_blank">View Listing ↗</a></td>
-        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">—</span>'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Google Maps ↗</a>` : ''}</td>
+        <td><a href="${listingUrl}" target="_blank">↗</a></td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'}${d.mapsLink ? ` <a href="${esc(d.mapsLink)}" target="_blank">📍</a>` : ''}</td>
+        <td>${mainThumb} <span style="font-size:10px;color:var(--muted)">${esc(mainId)}</span></td>
+        <td style="max-width:250px">${galleryHtml}</td>
+        <td style="${imgCountStyle};font-weight:600">${totalImgs}</td>
+        <td>${d.imageReviewDone ? '<span style="color:var(--green)">✓</span>' : '<span style="color:var(--gold)">—</span>'}</td>
       </tr>`;
     }).join('');
-    el.innerHTML = `<table><thead><tr><th>Castle Name</th><th>Our Listing</th><th>Approved Sources</th></tr></thead><tbody>${rows}</tbody></table>`;
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Name</th><th>Page</th><th>Sources</th><th>Main Image</th><th>Gallery</th><th>Total</th><th>Reviewed</th></tr></thead><tbody>${rows}</tbody></table>`;
     return;
   }
   
