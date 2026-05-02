@@ -4644,7 +4644,8 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Merchiston Castle",
@@ -13698,7 +13699,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Gight Castle",
@@ -14202,7 +14204,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Baikie Castle",
@@ -15712,7 +15715,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "House of Dun",
@@ -15895,7 +15899,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Caerlaverock Castle",
@@ -25104,7 +25109,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Rose Castle",
@@ -25699,7 +25705,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Cartington Castle",
@@ -31204,7 +31211,8 @@
       "credit": "Private donation",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Leybourne Castle",
@@ -40746,7 +40754,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Haddon Hall",
@@ -48377,7 +48386,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Guisborough Priory",
@@ -49123,7 +49133,8 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Meaux_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Aldborough Roman Town",
@@ -54697,7 +54708,8 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Llanblethian Castle",
@@ -60560,7 +60572,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ferns,_County_Wexford"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ferns,_County_Wexford",
+    "imageReviewDone": false
   },
   {
     "name": "Slade Castle",
@@ -62033,7 +62046,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonmines"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonmines",
+    "imageReviewDone": false
   },
   {
     "name": "Dunhill Castle",
@@ -66260,7 +66274,8 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunkerron_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Belvelly Castle",
@@ -67998,7 +68013,8 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Salem,_Cork",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "auditNote": "low gallery count"
   },
   {
     "name": "Aghadoe Castle",
@@ -75655,7 +75671,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Downhill_House"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Downhill_House",
+    "imageReviewDone": false
   },
   {
     "name": "Clonalis House",
@@ -78261,7 +78278,8 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Menlo_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Menlo_Castle",
+    "imageReviewDone": false
   },
   {
     "name": "Moyode Castle",
