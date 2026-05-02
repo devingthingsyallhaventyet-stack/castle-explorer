@@ -205,7 +205,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunstaffnage_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Raibeart MacAoidh",
       "license": "CC BY-SA 2.0",
@@ -215,7 +214,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -629,7 +627,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Sween",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg/330px-Castle_Sween_-_Southwestern_fa%C3%A7ade_with_entrance_-_geograph.org.uk_-_7868890.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -638,7 +635,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -799,7 +795,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Finlaggan",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg/330px-Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -808,7 +803,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -969,15 +963,13 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/New_Castle_Lachlan",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%22new%22_Castle_Lachlan_%28front%29.jpg/330px-%22new%22_Castle_Lachlan_%28front%29.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
     ],
     "reviewNote": "Images and description dont match linked wikipedia page",
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "needsEnrich": true
+    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Castle Coeffin",
@@ -1070,7 +1062,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Innes_Chonnel_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Innis_Chonnel_Castle_1969.jpg/330px-Innis_Chonnel_Castle_1969.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -1082,7 +1073,6 @@
       "Ardchonnel Castle"
     ],
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1109,7 +1099,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Aros_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Otter",
       "license": "CC BY-SA 3.0",
@@ -1119,7 +1108,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1214,7 +1202,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Breachacha_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Breachacha_Castle%2C_Coll_-_geograph.org.uk_-_279699.jpg/330px-Breachacha_Castle%2C_Coll_-_geograph.org.uk_-_279699.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "wrong-image"
     ],
@@ -1223,7 +1210,6 @@
     "hasGooglePlaces": "unknown",
     "imageAttribution": "local",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1256,15 +1242,13 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Claig_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/ClaigCastle1.jpg/330px-ClaigCastle1.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
     ],
     "reviewNote": "is this place real?",
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "needsEnrich": true
+    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Toward Castle",
@@ -1296,7 +1280,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Toward",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Castle_Toward_-_geograph.org.uk_-_5843976.jpg/330px-Castle_Toward_-_geograph.org.uk_-_5843976.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "wrong-image",
       "wrong-name",
@@ -1305,8 +1288,7 @@
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "needsEnrich": true
+    "hasGooglePlaces": "unknown"
   },
   {
     "name": "Dunollie Castle",
@@ -1335,7 +1317,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunollie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dunollie_Castle_-_geograph.org.uk_-_7889749.jpg/330px-Dunollie_Castle_-_geograph.org.uk_-_7889749.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "wrong-image"
     ],
@@ -1344,7 +1325,6 @@
     "hasGooglePlaces": "unknown",
     "imageAttribution": "local",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1370,7 +1350,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Calvay_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Colin Wheatley",
       "license": "CC BY-SA 2.0",
@@ -1380,7 +1359,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1472,7 +1450,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunaverty_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -1481,7 +1458,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1508,7 +1484,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Amhuinnsuidhe_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Les Ellingham",
       "license": "CC BY-SA 2.0",
@@ -1518,7 +1493,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1613,7 +1587,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Iona_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Iona_Abbey_%2845322644484%29.jpg/330px-Iona_Abbey_%2845322644484%29.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Reading Tom from Reading, UK",
       "license": "CC BY 2.0",
@@ -1623,7 +1596,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -1842,7 +1814,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunderave_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Dunderave_Castle%2C_Loch_Fyne%2C_Argyll_-_geograph.org.uk_-_47961.jpg/330px-Dunderave_Castle%2C_Loch_Fyne%2C_Argyll_-_geograph.org.uk_-_47961.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Brian D Osborne",
       "license": "CC BY-SA 2.0",
@@ -1858,7 +1829,6 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunderave_Castle",
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -2025,7 +1995,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/St_Blane's_Church%2C_Dunblane",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg/330px-Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
     ],
@@ -2033,8 +2002,7 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane"
   },
   {
     "name": "Hermitage Castle",
@@ -2883,7 +2851,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Drochil_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Schotland_Drochil_Castle_6-05-2010_16-51-45.JPG/330px-Schotland_Drochil_Castle_6-05-2010_16-51-45.JPG",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Paul Hermans",
       "license": "CC BY-SA 3.0",
@@ -2893,7 +2860,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -3050,7 +3016,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Duns_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Gordon Hatton",
       "license": "CC BY-SA 2.0",
@@ -3060,7 +3025,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -3096,7 +3060,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Cranshaws_Castle_-_geograph.org.uk_-_142497.jpg/330px-Cranshaws_Castle_-_geograph.org.uk_-_142497.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
     ],
@@ -3104,8 +3067,7 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle"
   },
   {
     "name": "Fatlips Castle",
@@ -3395,15 +3357,13 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Craig",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Castle_Craig.jpg/330px-Castle_Craig.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "wrong-image"
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig"
   },
   {
     "name": "Abbotsford House",
@@ -3433,7 +3393,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Abbotsford%2C_Scottish_Borders",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Abbotsford_Morris_edited.jpg/330px-Abbotsford_Morris_edited.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -3443,7 +3402,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Abbotsford,_Scottish_Borders",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -3858,7 +3816,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dirleton_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Jonathan Oldenbuck",
       "license": "CC BY-SA 3.0",
@@ -3868,7 +3825,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -4674,15 +4630,13 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Merchiston_Tower",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Merchiston_Castle.jpg/330px-Merchiston_Castle.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merchiston_Tower",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merchiston_Tower"
   },
   {
     "name": "Liberton Tower",
@@ -4840,15 +4794,13 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Temple_Church",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Temple_Church%2C_Temple%2C_London_EC4_%282%29.jpeg/330px-Temple_Church%2C_Temple%2C_London_EC4_%282%29.jpeg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "other"
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian"
   },
   {
     "name": "Dalhousie Castle",
@@ -4877,7 +4829,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dalhousie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Dalhousie_Castle_350.jpg/330px-Dalhousie_Castle_350.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "RHaworth",
       "license": "CC BY 2.5",
@@ -4887,7 +4838,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -4978,7 +4928,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Torphichen_Preceptory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Torphichen_Preceptory_5.jpg/330px-Torphichen_Preceptory_5.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "LordHarris",
       "license": "CC BY-SA 4.0",
@@ -4987,7 +4936,6 @@
       "source": "Wikimedia Commons"
     },
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5138,7 +5086,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Alloa_Tower",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "chdphd",
       "license": "CC BY-SA 4.0",
@@ -5148,7 +5095,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5357,7 +5303,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Lochleven_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -5367,7 +5312,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lochleven_Castle",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5392,7 +5336,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Blair_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Eusebius",
       "license": "CC BY 3.0",
@@ -5401,7 +5344,6 @@
       "source": "Wikimedia Commons"
     },
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5488,7 +5430,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunfermline_Abbey",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Paul McIlroy",
       "license": "CC BY-SA 2.0",
@@ -5498,7 +5439,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5584,7 +5524,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Aberdour_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Andy Hawkins",
       "license": "CC BY-SA 2.0",
@@ -5594,7 +5533,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5686,7 +5624,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Falkland_Palace",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Stephencdickson",
       "license": "CC BY-SA 4.0",
@@ -5696,7 +5633,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5847,7 +5783,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Methven_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -5857,7 +5792,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Methven_Castle",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -5948,7 +5882,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Grandtully_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -5958,7 +5891,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Grandtully_Castle",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -6050,7 +5982,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balhousie_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -6060,7 +5991,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Balhousie_Castle",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -6225,7 +6155,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Macduff's_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Macduff%27s_Castle_and_the_Wemyss_Caves.jpg/330px-Macduff%27s_Castle_and_the_Wemyss_Caves.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Kevin Rae",
       "license": "CC BY-SA 2.0",
@@ -6241,7 +6170,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Macduff%27s_Castle",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -6397,15 +6325,13 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle"
   },
   {
     "name": "Garth Castle",
@@ -6624,7 +6550,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunfermline_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dunfermline_Abbey_gatehouse_and_pend%2C_Dunfermline.jpg/330px-Dunfermline_Abbey_gatehouse_and_pend%2C_Dunfermline.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
     ],
@@ -6634,7 +6559,6 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunfermline_Palace",
     "imageAttribution": "local",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -6729,7 +6653,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "no-image"
     ],
@@ -6737,8 +6660,7 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey"
   },
   {
     "name": "Balgonie Castle",
@@ -6767,7 +6689,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Balgonie_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BalgonieCastle04.jpg/330px-BalgonieCastle04.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -6777,7 +6698,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Balgonie_Castle",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -6875,7 +6795,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinross_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Kinross_House_-_geograph.org.uk_-_1210362.jpg/330px-Kinross_House_-_geograph.org.uk_-_1210362.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "JThomas",
       "license": "CC BY-SA 2.0",
@@ -6885,7 +6804,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -6914,7 +6832,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Culross_Palace",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Culross_Palace.jpg/330px-Culross_Palace.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Lyall Duffus",
       "license": "CC BY-SA 2.0",
@@ -6924,7 +6841,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -7075,7 +6991,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Rosyth_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Rosyth_Castle.JPG/330px-Rosyth_Castle.JPG",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Stevouk at English Wikipedia",
       "license": "Public domain",
@@ -7085,7 +7000,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -8137,7 +8051,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Tower_of_Hallbar",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/HallbarTower5.jpg/330px-HallbarTower5.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "User:Supergolden",
       "license": "CC BY-SA 3.0",
@@ -8147,7 +8060,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -8306,15 +8218,13 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cathcart_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cathcart_Castle_from_South_East_1887_fig_170_1887.jpg/330px-Cathcart_Castle_from_South_East_1887_fig_170_1887.jpg",
-    "reviewStatus": "flagged",
     "reviewReasons": [
       "needs-review"
     ],
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle",
-    "needsEnrich": true
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle"
   },
   {
     "name": "Mearns Castle",
@@ -8409,7 +8319,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dunmore_pineapple.jpg/330px-Dunmore_pineapple.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -8419,7 +8328,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -8773,7 +8681,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_of_Mey",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -8783,7 +8690,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_of_Mey",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -8808,7 +8714,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cawdor_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "LeCardinal",
       "license": "CC BY-SA 3.0",
@@ -8818,7 +8723,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -8908,7 +8812,6 @@
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Strome_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Scotland_Strome_Castle.jpg/330px-Scotland_Strome_Castle.jpg",
-    "reviewStatus": "flagged",
     "imageAttribution": "local",
     "reviewReasons": [
       "flagged-during-image-review"
@@ -8918,7 +8821,6 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Strome_Castle",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
@@ -8943,7 +8845,6 @@
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Inverlochy_Castle",
-    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Horatio McCulloch (1805–1867)",
       "license": "Public domain",
@@ -8953,7 +8854,6 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)"
   },
   {
