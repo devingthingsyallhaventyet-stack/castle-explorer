@@ -60496,8 +60496,8 @@
     "lat": 56.32055556,
     "lng": -3.1075,
     "mapsLink": "https://www.google.com/maps/search/Ferns%20Castle/@52.59,-6.5006,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fernie_Castle_-_geograph.org.uk_-_38972.jpg/330px-Fernie_Castle_-_geograph.org.uk_-_38972.jpg",
-    "imgSource": "wikipedia",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOu2c-yV_-I326Jzgr_jXDeFFlajwMOtBu_L1HEHdkXkGheLcxT0R2zsWz0eVaY_BRngtzWzrr8iRiADfSwBreF7UJvzIXmriS5NYM9Ipqd_nGxs53GrE1XkmkZnn-B7nCbU9bAah1OPXORNg=s4800-w800",
+    "imgSource": "google",
     "gallery": [
       {
         "id": "ferns-castle-img-1",
@@ -60573,7 +60573,7 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ferns,_County_Wexford",
-    "imageReviewDone": false
+    "imageReviewDone": true
   },
   {
     "name": "Slade Castle",
@@ -62032,7 +62032,7 @@
     ],
     "wiki": "https://en.wikipedia.org/wiki/Clonmines",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Clonmines_East_View_2010_09_27.jpg/330px-Clonmines_East_View_2010_09_27.jpg",
-    "reviewStatus": "approved",
+    "reviewStatus": "flagged",
     "imageAttribution": {
       "artist": "Andreas F. Borchert",
       "license": "CC BY-SA 4.0",
@@ -62047,7 +62047,9 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonmines",
-    "imageReviewDone": false
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "auditNote": "Flagged during image review"
   },
   {
     "name": "Dunhill Castle",
@@ -75672,7 +75674,7 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Downhill_House",
-    "imageReviewDone": false
+    "imageReviewDone": true
   },
   {
     "name": "Clonalis House",
@@ -78208,8 +78210,8 @@
     "lat": 53.2965,
     "lng": -9.0735,
     "mapsLink": "https://www.google.com/maps/search/Menlo%20Castle/@53.29,-9.085,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Menlo_Castle%2C_Co_Galway.jpg/330px-Menlo_Castle%2C_Co_Galway.jpg",
-    "imgSource": "wikipedia",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPYi-_qE3p8uV0yF8-BoQbskKb2CCHfZw3U4-ctkr6kj08DMI9223qgJShqQWADBCbdoJpM0HTMZAmrWiKnhtW-RveEJPMwkDr3IQMWeUjGzlp6sDpooxGf542-CqVstyeFSBXDp5VHTLp0kA=s4800-w800",
+    "imgSource": "google",
     "gallery": [
       {
         "id": "menlo-castle-img-1",
@@ -78279,7 +78281,7 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Menlo_Castle",
-    "imageReviewDone": false
+    "imageReviewDone": true
   },
   {
     "name": "Moyode Castle",
