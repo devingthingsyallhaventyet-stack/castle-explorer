@@ -1079,16 +1079,45 @@
     "imageReviewDone": true
   },
   {
-    "name": "Innis Chonnel Castle",
+    "name": "Innes Chonnel Castle",
     "country": "scotland",
     "region": "argyll-western-isles",
     "county": "Argyll and Bute",
     "lat": 56.2568,
     "lng": -5.2675,
     "mapsLink": "https://www.google.com/maps/search/Innis%20Chonnel%20Castle%20Argyll%20and%20Bute%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Innis_Chonnel_Castle_1969.jpg/330px-Innis_Chonnel_Castle_1969.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN0jVgBkqHgujfTjREl1ZPi2P2l1Ryk7Y2sWYHSKwuKR-nmQKRbaCCnD20IRnJLUKTzP0SfN0W37C055vgYdjSQuPWCv7rJ46t5E4n2qJW41tGC7-Ck1ZMOTwkOjsXYnGjQSIUEqEvWZ1EZxQ=s4800-w800",
+    "imgSource": "google",
+    "gallery": [
+      {
+        "id": "innes-chonnel-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPafiAfSzBHATitaIVOQc1ddi3RIBOlzp3r1WdbJrxmoIm-ZnHm_SP9XM0tjkmbuJfATks2Epkw3TxeoFIHbtwFU_VU3Jbglemt-epDnw-Lg_bgqEKlH4xNlMCp5Ei-UzAUS0C6P-ChUpyI_g=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPafiAfSzBHATitaIVOQc1ddi3RIBOlzp3r1WdbJrxmoIm-ZnHm_SP9XM0tjkmbuJfATks2Epkw3TxeoFIHbtwFU_VU3Jbglemt-epDnw-Lg_bgqEKlH4xNlMCp5Ei-UzAUS0C6P-ChUpyI_g=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "innes-chonnel-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOwSfJLBTSDWpClR-vLOE-gRkxv6awxyPGaBvtQXKTIOADus_Tgvo19TCkGhLsZARhYh2atPRkQbrIPv_Vx3vbLzsE7xj3uI01OQW5gesf-ySRPbd40jVaSjIeamYjYMAOczgJv-f7qVkdXWA=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOwSfJLBTSDWpClR-vLOE-gRkxv6awxyPGaBvtQXKTIOADus_Tgvo19TCkGhLsZARhYh2atPRkQbrIPv_Vx3vbLzsE7xj3uI01OQW5gesf-ySRPbd40jVaSjIeamYjYMAOczgJv-f7qVkdXWA=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "innes-chonnel-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNlaCoPHoI2cV78-mf_AOClBampggUmtj3tcQox27hoEBaNB1at6vi7jmH8DDqAlq5eALlC_K5VTe2YzPWSctDX3YxWLlImHhqhqGGY5mu-XUJ4uitd6WzHQ9kr7k23ev7INmHmwMuB-zgLS3Y=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNlaCoPHoI2cV78-mf_AOClBampggUmtj3tcQox27hoEBaNB1at6vi7jmH8DDqAlq5eALlC_K5VTe2YzPWSctDX3YxWLlImHhqhqGGY5mu-XUJ4uitd6WzHQ9kr7k23ev7INmHmwMuB-zgLS3Y=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "innes-chonnel-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOauB5Hb5HMf7lmyaZ0cLpM8h3EnxGCwJMaa83QoFySZrbhjW1eD_knyG7RAeOKRlL9sxTvPjXetYjsem2sdEoxzdMw_nI5ocwPdGvsc54fbfq0EzQw8w0Ni6m2M2o24jQGPwCBFY8Yn8XhdA=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOauB5Hb5HMf7lmyaZ0cLpM8h3EnxGCwJMaa83QoFySZrbhjW1eD_knyG7RAeOKRlL9sxTvPjXetYjsem2sdEoxzdMw_nI5ocwPdGvsc54fbfq0EzQw8w0Ni6m2M2o24jQGPwCBFY8Yn8XhdA=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Innes Chonnel Castle or Ardchonnel Castle is a ruined 13th-century castle on Innis Chonnell, an island on Loch Awe near Dalavich, Argyll and Bute, Scotland. The fortress was once a stronghold of Clan Campbell.",
     "type": "castle",
     "period": "13th century",
@@ -1113,8 +1142,8 @@
     "altNames": [
       "Ardchonnel Castle"
     ],
-    "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "imageReviewDone": false,
+    "mainImageSource": "google"
   },
   {
     "name": "Aros Castle",
