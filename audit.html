@@ -446,7 +446,7 @@ function renderCard() {
   // Build gallery: main image first, then gallery images
   const allImages = [];
   if (d.image) allImages.push(d.image);
-  (d.gallery||[]).forEach(url => { if (url !== d.image) allImages.push(url); });
+  (d.gallery||[]).forEach(g => { const url = (typeof g === 'string') ? g : (g.googlePhotoUri || g.url); if (url && url !== d.image) allImages.push(url); });
   const fi = flaggedImages[key] || new Set();
   const galleryHtml = allImages.map((url,i) => {
     const isFlagged = fi.has(url);
