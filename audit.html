@@ -642,23 +642,31 @@ function doApprove() {
   reviewState[key] = { status: 'approved', ts: Date.now() };
   // Save image selection if any
   const sel = imageSelections[key];
+  const rejected = sel ? sel.rejected : new Set();
   if (sel && sel.main) {
     d.image = sel.main;
     d.imgSource = sel.mainSource;
-    d.imageReviewDone = true;
-    // Build gallery from non-rejected, non-main images
-    const allImgs = [];
-    if (d.image) allImgs.push({ url: d.image, source: 'current' });
-    if (d.wikiImage && d.wikiImage !== d.image) allImgs.push({ url: d.wikiImage, source: 'wikipedia' });
-    (getStagingPhotos(d.name)||[]).forEach(p => {
-      const url = p.googlePhotoUri || p.url || '';
-      if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: 'google' });
-    });
-    const slug = d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-    let imgN = 0;
-    d.gallery = allImgs.filter(img => img.url !== sel.main && !sel.rejected.has(img.url))
-      .map(img => ({ id: slug+'-img-'+(++imgN), url: img.url, source: img.source }));
   }
+  d.imageReviewDone = true;
+  // Always merge staging photos into gallery on approve
+  const mainImg = d.image;
+  const allImgs = [];
+  if (mainImg) allImgs.push({ url: mainImg, source: 'current' });
+  if (d.wikiImage && d.wikiImage !== mainImg) allImgs.push({ url: d.wikiImage, source: 'wikipedia' });
+  // Existing gallery items
+  (d.gallery||[]).forEach(g => {
+    const url = (typeof g === 'string') ? g : (g.googlePhotoUri || g.url);
+    if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: g.source || 'existing' });
+  });
+  // Staging photos
+  (getStagingPhotos(d.name)||[]).forEach(p => {
+    const url = p.googlePhotoUri || p.url || '';
+    if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: 'google' });
+  });
+  const slug = d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  let imgN = 0;
+  d.gallery = allImgs.filter(img => img.url !== mainImg && !rejected.has(img.url))
+    .map(img => ({ id: slug+'-img-'+(++imgN), url: img.url, source: img.source }));
   saveState(); updateProgress(); advanceToNext();
 }
 

@@ -1142,8 +1142,9 @@
     "altNames": [
       "Ardchonnel Castle"
     ],
-    "imageReviewDone": false,
-    "mainImageSource": "google"
+    "imageReviewDone": true,
+    "mainImageSource": "google",
+    "reviewStatus": "approved"
   },
   {
     "name": "Aros Castle",
@@ -1155,7 +1156,36 @@
     "mapsLink": "https://www.google.com/maps/search/Aros%20Castle%20Argyll%20and%20Bute%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNNvLIbNpnAcZ93LJqvMdszwx8E0qorhv3W-bZ2E0l0uY_GLyuX0BEkzxo7rl1hFfMIoEhtx5hqvlelxwxbdO05PLWrbt3IYvdEIwNoc0ncA026SH0LVAjmwR-jC2PsjyrsjJpNskTn70cdxg=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "aros-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOQe7ddP19f3HqQriLC3JPnKXy4BtK7r25t0D1kaMvT561iPTJyQt72naW0fOM14eo5o2Dmi_BKRDZlNfLom5gvUKWownkzOIYjDm5XqQ8IMrqIbSH8gnx2qrFWZujZR-5hD-HHV6QvLxPdZ8g=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOQe7ddP19f3HqQriLC3JPnKXy4BtK7r25t0D1kaMvT561iPTJyQt72naW0fOM14eo5o2Dmi_BKRDZlNfLom5gvUKWownkzOIYjDm5XqQ8IMrqIbSH8gnx2qrFWZujZR-5hD-HHV6QvLxPdZ8g=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "aros-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN-UjhaLIldjmZEI8umMMsbIcorvKcK6zlhA1iFeenvUoxcCBl5GWN9xI-WKRPVqG5jX0gdPeCwQ9V9r8Cp-FjtRqNJpvQBdobd39u69klagBCnA2lz-6EOrR8LSVxr4Da7vTLbBHqMj6wlOw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZN-UjhaLIldjmZEI8umMMsbIcorvKcK6zlhA1iFeenvUoxcCBl5GWN9xI-WKRPVqG5jX0gdPeCwQ9V9r8Cp-FjtRqNJpvQBdobd39u69klagBCnA2lz-6EOrR8LSVxr4Da7vTLbBHqMj6wlOw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "aros-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNPUeZFdis-bCBmFSsfSa01MmHaheWEc2SiwEk5QO9ni5WwzpZ_z0mHdH9QI1g2b08fyZywUtoFnmeE1Jn8_g4ucPtdOWwJLvts24neWU8ZNIjGK6LIOy-AfdNRhwLdAOrdjDDrGImD2CNVIw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNPUeZFdis-bCBmFSsfSa01MmHaheWEc2SiwEk5QO9ni5WwzpZ_z0mHdH9QI1g2b08fyZywUtoFnmeE1Jn8_g4ucPtdOWwJLvts24neWU8ZNIjGK6LIOy-AfdNRhwLdAOrdjDDrGImD2CNVIw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "aros-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNXVBYJ7dTVZT3VWe8XjvuVQFfVb-fTfxRWW0DawZTtCcJSoaaVj7YbAX-ocmIYE8O4eovamV9BN7KYeqJMmd-E7pKFdu8YpzfeitghNCrHbMp9BvICnvFmi0FqDt3nz1CG9Mi9JkAn122RKw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNXVBYJ7dTVZT3VWe8XjvuVQFfVb-fTfxRWW0DawZTtCcJSoaaVj7YbAX-ocmIYE8O4eovamV9BN7KYeqJMmd-E7pKFdu8YpzfeitghNCrHbMp9BvICnvFmi0FqDt3nz1CG9Mi9JkAn122RKw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Aros Castle, also known as Dounarwyse Castle, is a ruined 13th-century castle near Salen on the Isle of Mull, Scotland. The castle overlooks the Sound of Mull.",
     "type": "castle",
     "period": "13th century",
@@ -1178,7 +1208,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Moy Castle",
@@ -1256,7 +1287,36 @@
     "mapsLink": "https://www.google.com/maps/search/Breachacha%20Castle%20Argyll%20and%20Bute%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOS6fHZNso5QiwK9cg2GeEPCNN0_03yiVPaT4VdpUOZQGBkemhIp-iA25w1HGCaXleFRS7kNagQnVzFCdakqiw77HTpsu7a9JCDbHtQHW8l0l2qkBqc9iAW0qiM-L4UfM8VCDyXkYpWBIj-2Is=s4800-w800",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "breachacha-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPdREbewxkopJAzlQ3KdeVyVARh57CYC33nVRDXJqBVnPVuqFE3SSZKoN--mtpimM3vE2VHEiGi46UXBSw4Lp4Sg5g5HaGSGoZZB4b9j5WiT1a16tgq9oaTzzgmyKCiaI1Gbj51hqml6w1SbQ=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPdREbewxkopJAzlQ3KdeVyVARh57CYC33nVRDXJqBVnPVuqFE3SSZKoN--mtpimM3vE2VHEiGi46UXBSw4Lp4Sg5g5HaGSGoZZB4b9j5WiT1a16tgq9oaTzzgmyKCiaI1Gbj51hqml6w1SbQ=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "breachacha-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOp3gM4XTpSAR1jEF7iF_dQJZPIApLj4_70L3IDkUHq55TVWYCsjgKnCHv_HlgiU3Ya4bg-yXn_oahtI1ySTeytdsEKISxMTG8tRq1QjKVM0QSlatJL2toOGgp5gwppo4HKt9XpcKH6U-7isA=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOp3gM4XTpSAR1jEF7iF_dQJZPIApLj4_70L3IDkUHq55TVWYCsjgKnCHv_HlgiU3Ya4bg-yXn_oahtI1ySTeytdsEKISxMTG8tRq1QjKVM0QSlatJL2toOGgp5gwppo4HKt9XpcKH6U-7isA=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "breachacha-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMQj5wjmfoYj-TBn3-qlseEaed17CXnpwGULgs4FvenwK-8mojrkXQm_ltIbCOtdcQBXyHSTCpwajfR_Cv8VbwJ5UTZfmTm2N57M6JjovMqWT4HTw0Js-6oBJh8z_Sn4U8S0lB-GtWjslNc6Q=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMQj5wjmfoYj-TBn3-qlseEaed17CXnpwGULgs4FvenwK-8mojrkXQm_ltIbCOtdcQBXyHSTCpwajfR_Cv8VbwJ5UTZfmTm2N57M6JjovMqWT4HTw0Js-6oBJh8z_Sn4U8S0lB-GtWjslNc6Q=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "breachacha-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOQAJJP_M37iAKZR2Gy-31KzSzS0AFKSpqkE5Z6sRwHInDXcnUPMu3ZUqAbu9KFDGrgXqOhunMf27QwbePoQwgFDHXXFrzcUZyQ7bKRjrv9_Er0cNylv-K55BOVhliW8qR4sIfMoczXr5hHRg0=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOQAJJP_M37iAKZR2Gy-31KzSzS0AFKSpqkE5Z6sRwHInDXcnUPMu3ZUqAbu9KFDGrgXqOhunMf27QwbePoQwgFDHXXFrzcUZyQ7bKRjrv9_Er0cNylv-K55BOVhliW8qR4sIfMoczXr5hHRg0=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Breachacha Castle is either of two structures on the shore of Loch Breachacha, on the Inner Hebridean island of Coll, Scotland. The earlier is a 15th-century tower house that was a stronghold of the Macleans of Coll, the island having been granted to John Maclean in 1431. This castle was superseded by a new dwelling in 1750 but continued to be occupied for a time. It fell into a ruinous state only in the mid-19th century.",
     "type": "castle",
     "period": "15th century",
@@ -1280,7 +1340,8 @@
     "hasGooglePlaces": "unknown",
     "imageAttribution": "local",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Claig Castle",
