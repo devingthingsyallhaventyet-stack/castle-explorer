@@ -1379,7 +1379,9 @@
     "reviewNote": "is this place real?",
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Toward Castle",
@@ -1419,7 +1421,9 @@
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Dunollie Castle",
@@ -1456,7 +1460,9 @@
     "hasGooglePlaces": "unknown",
     "imageAttribution": "local",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Calvay Castle",
@@ -1490,7 +1496,12 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13",
+    "reviewReasons": [
+      "needs-review"
+    ]
   },
   {
     "name": "Duntrune Castle",
@@ -1589,7 +1600,9 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Amhuinnsuidhe Castle",
@@ -1624,7 +1637,12 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13",
+    "reviewReasons": [
+      "needs-review"
+    ]
   },
   {
     "name": "Barcaldine Castle",
@@ -1699,7 +1717,36 @@
     "mapsLink": "https://www.google.com/maps/search/Iona%20Abbey%20Argyll%20and%20Bute%20scotland",
     "image": "https://lh3.googleusercontent.com/places/ANXAkqElAevnAo1O2JjYQVJL0jzcp4D7WpS7HdPxqhW9lc3R02unQeiuzbQXO82stnoqrxqiVYUV1cV_f0QDk37alvnTEfbzADkzvho=s4800-w768",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "iona-abbey-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN2FCyXs2DFMS1qozx77FZZZOT1_6fJT7jyObhQZnYsKzq1HBwE0hBZC3GhHziNNpOzySVeMWPisEKYZhIAIyaJMsQORADCCS-uK5-ekO4ZTo9MgcKeJ3t9gtJethC0KfUcBI2Ij_XkvnEwfQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZN2FCyXs2DFMS1qozx77FZZZOT1_6fJT7jyObhQZnYsKzq1HBwE0hBZC3GhHziNNpOzySVeMWPisEKYZhIAIyaJMsQORADCCS-uK5-ekO4ZTo9MgcKeJ3t9gtJethC0KfUcBI2Ij_XkvnEwfQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "iona-abbey-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNgWGxzfivWA6ZyWZRTJBWeXoHshAl2mXQWuI8J3sKrj4oQbyDjnnRLZTwf4AYEaLoGNBWgwp-TIXtiXwEaAQVQMfYwlqMzSuiErMZw4h-hj4snX0dPCL0r_lAkGI_zpfvMB75XaRLvuF6ZxRo=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNgWGxzfivWA6ZyWZRTJBWeXoHshAl2mXQWuI8J3sKrj4oQbyDjnnRLZTwf4AYEaLoGNBWgwp-TIXtiXwEaAQVQMfYwlqMzSuiErMZw4h-hj4snX0dPCL0r_lAkGI_zpfvMB75XaRLvuF6ZxRo=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "iona-abbey-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOd2WNYGIaxZwLv04wVL0JMVsRvHUX0YqpsMcerKsZm2xEViFxuVWWPl4jYNKRKZ_8mvoFpOOdEyp_yrLwO4R1QoL7OGy3B2ZeBQG0OPANkxJWuNgSFIYY7WWtRCpdhuBLDBHcqLF7QbzaWAuI=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOd2WNYGIaxZwLv04wVL0JMVsRvHUX0YqpsMcerKsZm2xEViFxuVWWPl4jYNKRKZ_8mvoFpOOdEyp_yrLwO4R1QoL7OGy3B2ZeBQG0OPANkxJWuNgSFIYY7WWtRCpdhuBLDBHcqLF7QbzaWAuI=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "iona-abbey-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPEbDX7BFAPkCy8ee-85Z_K3H0XV02YDSCqCOWHBiYtmIepbwVtz-eeUkjq7bcX5Rv6qNts9DrpqII_CrXnXfksIIlR8WnLQwnTF-mdIcKlr-IAamr3eR3ST27ZJNo_Z-_eqnB-mxE_kzxW=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPEbDX7BFAPkCy8ee-85Z_K3H0XV02YDSCqCOWHBiYtmIepbwVtz-eeUkjq7bcX5Rv6qNts9DrpqII_CrXnXfksIIlR8WnLQwnTF-mdIcKlr-IAamr3eR3ST27ZJNo_Z-_eqnB-mxE_kzxW=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Iona Abbey is an abbey located on the island of Iona, off the larger Isle of Mull on the west coast of Scotland.",
     "type": "abbey",
     "period": "6th century",
@@ -1727,7 +1774,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Achanduin Castle",
@@ -1960,7 +2008,9 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunderave_Castle",
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Keills Chapel",
@@ -2133,7 +2183,9 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Hermitage Castle",
@@ -2969,7 +3021,36 @@
     "mapsLink": "https://www.google.com/maps/search/Drochil%20Castle%20Scottish%20Borders%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPB6gkTkNet7KUyKAMcezH9F_ekGUb9riFOxiu7EELYdQd6xA3yEPmPUHpjaCRDOL8r0yjaaA-p-47MCni-_4XTh8XHYP1iSTqJrk4qL7YcsoLbbCdt2dKr3bv6wj3CMSx8_yqSdm3dR3Dq-Wk=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "drochil-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNH_JNUkpxZpifvp9L340s1Oi1lMbjBOqT31llDlmfSei7EsV0q72p-ATY4Alt2G4RHEfr0WRM_qljzcsIbyQG8BEiCSPmXjYCECwAM2ur1lZ84yQauascByXFDb3eEpv8x8Gc_ZgKRSHSLpg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNH_JNUkpxZpifvp9L340s1Oi1lMbjBOqT31llDlmfSei7EsV0q72p-ATY4Alt2G4RHEfr0WRM_qljzcsIbyQG8BEiCSPmXjYCECwAM2ur1lZ84yQauascByXFDb3eEpv8x8Gc_ZgKRSHSLpg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "drochil-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOok0egO3gbgl76w50ZZ9vbvPusx74Rc3OnCVBUUgYvrvdNgR6jjS1AMBG0pa-vtOycCPiFlF30quspP6d0lNgpPU520B6S_awhIUQwjgyB-baUO25-es_ZC4z6gPtOBb-Bm-xzmY1ZSwlTPrY=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOok0egO3gbgl76w50ZZ9vbvPusx74Rc3OnCVBUUgYvrvdNgR6jjS1AMBG0pa-vtOycCPiFlF30quspP6d0lNgpPU520B6S_awhIUQwjgyB-baUO25-es_ZC4z6gPtOBb-Bm-xzmY1ZSwlTPrY=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "drochil-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMgi34k61dnKb_vYvV3bqdMLxQ-G9eFINfSrEmztZL3unMwmZ2_NxRfQCDuxf-ZLYQa8uRZksHwNw45yyTdf1bAtItYjKIvUF2I15VwaCYDt_SoZVR6gCx45bZCiQfTeeEwLhQoHaEXncrjJg8=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMgi34k61dnKb_vYvV3bqdMLxQ-G9eFINfSrEmztZL3unMwmZ2_NxRfQCDuxf-ZLYQa8uRZksHwNw45yyTdf1bAtItYjKIvUF2I15VwaCYDt_SoZVR6gCx45bZCiQfTeeEwLhQoHaEXncrjJg8=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "drochil-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOK3rOxrlRxxHnQeaasULpMBOx1qmiTEjtWHx-bqkXfXpr3JReHqjml0pYM2AwK9JwEbjlfA3KAMjb9X6K3turN1DQA808lKYiz6wc8xz6ThCkjF2pSIjSjVMaRrzZs4veaK2hJPjDt4b0Dlg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOK3rOxrlRxxHnQeaasULpMBOx1qmiTEjtWHx-bqkXfXpr3JReHqjml0pYM2AwK9JwEbjlfA3KAMjb9X6K3turN1DQA808lKYiz6wc8xz6ThCkjF2pSIjSjVMaRrzZs4veaK2hJPjDt4b0Dlg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Drochil Castle is a ruined castle in the Scottish Borders. It is located above the Lyne Water, 10 kilometres (6.2 mi) north-west of Peebles, and 8 kilometres (5.0 mi) south of West Linton.",
     "type": "castle",
     "period": "16th century",
@@ -2991,7 +3072,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Dryhope Tower",
@@ -3132,7 +3214,43 @@
     "mapsLink": "https://www.google.com/maps/search/Duns%20Castle%20Scottish%20Borders%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNzS-LOez3Z8OuYB8uexQ1NUJ5EiljPt2wYduU6B6g1UB4SCjxfq-DDfjPE5HPPLcrW9sqX1JYyhRy3HVvakCx3abxPTXNjzk1u8r0K9WsrTifvpji-mPN6JIja6749DcgAr6zCQGfzOw9t=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "duns-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/places/ANXAkqGPKKWiNPMfRxegFjCfFwie_syt--ogso-gxoDqXNZZm2vRDS9ZZaaqlkudx7qeWg5NDVntON54qZWneae0E52bLxB4qn_eleQ=s4800-w768",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/places/ANXAkqGPKKWiNPMfRxegFjCfFwie_syt--ogso-gxoDqXNZZm2vRDS9ZZaaqlkudx7qeWg5NDVntON54qZWneae0E52bLxB4qn_eleQ=s4800-w768",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "duns-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqO449oCkaEuj70JFVtIHwpJLkxMU7lNiK6W_4GPSi7W6VL00UpVqhejXFhAe_zW1VgbwJ06L_zrTDgGqRjiidA1k9EfzXhGQO-6anEKT3ol_uqTOIBXcQE2Oamh5dXqr4Reoo-i63XT_QsKI=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqO449oCkaEuj70JFVtIHwpJLkxMU7lNiK6W_4GPSi7W6VL00UpVqhejXFhAe_zW1VgbwJ06L_zrTDgGqRjiidA1k9EfzXhGQO-6anEKT3ol_uqTOIBXcQE2Oamh5dXqr4Reoo-i63XT_QsKI=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "duns-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNbyTqi5sQ0djPfCpAN5ZsmvOshppYWT-DVchKzd4zqLSkixqJC2oAVS28X6ZzibmdBeYMMbyGO031cfzbZTLH6uQCPbPBphGjO-02tJcL6A3CM-oRUoMzl1Q5kDzo1l6XtwfNhplupQW_Meg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNbyTqi5sQ0djPfCpAN5ZsmvOshppYWT-DVchKzd4zqLSkixqJC2oAVS28X6ZzibmdBeYMMbyGO031cfzbZTLH6uQCPbPBphGjO-02tJcL6A3CM-oRUoMzl1Q5kDzo1l6XtwfNhplupQW_Meg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "duns-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM-LAqOLAYOggHePSve50AQ3kYbOeYWkEMqD2EgLqnZaMZUdjd9BiO4b5GttPt9RJBMZ7FlGUfeBkYkXg3C8bIFUFKUB2TW1Z1q0UZRw8-CxXIViH3WGcA0WExe1GP8narYtGCztT_9UuxEfRwBHGwq3g=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZM-LAqOLAYOggHePSve50AQ3kYbOeYWkEMqD2EgLqnZaMZUdjd9BiO4b5GttPt9RJBMZ7FlGUfeBkYkXg3C8bIFUFKUB2TW1Z1q0UZRw8-CxXIViH3WGcA0WExe1GP8narYtGCztT_9UuxEfRwBHGwq3g=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "duns-castle-img-5",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPBgSqOzIE9ps07KmAhwfdnFxWGQQax2v4SnKpbkDlkrC3Q_aac6R0klSz45ci6xtd4YNfN3SJDRzRy5U48L99M6qP3HfzheNMdC47N1plUnGbjGHnSiI0Ae33x9yBSLBOIGot8OJRaKwY5qw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPBgSqOzIE9ps07KmAhwfdnFxWGQQax2v4SnKpbkDlkrC3Q_aac6R0klSz45ci6xtd4YNfN3SJDRzRy5U48L99M6qP3HfzheNMdC47N1plUnGbjGHnSiI0Ae33x9yBSLBOIGot8OJRaKwY5qw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Duns Castle, Duns, Berwickshire is a historic house in Scotland, the oldest part of which, the massive Norman Keep or Pele Tower, supposedly dates from 1320. The castle and most of the structures on the property are designated as a Category A listed building.",
     "type": "castle",
     "period": "14th century / 19th century rebuild",
@@ -3156,7 +3274,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Cranshaws Castle",
@@ -3198,7 +3317,9 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Fatlips Castle",
@@ -3494,7 +3615,9 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Abbotsford House",
@@ -3533,7 +3656,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Abbotsford,_Scottish_Borders",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Traquair House",
@@ -3935,7 +4060,36 @@
     "mapsLink": "https://www.google.com/maps/search/Dirleton%20Castle%20East%20Lothian%20scotland",
     "image": "https://lh3.googleusercontent.com/places/ANXAkqHB3M05uCG7pTEgMSNZak5xWq3ek-sM3__4tv2W5IryNPNrPvn-8GnAwEHwGQ59TPnM2f8iw2wfq8-YRi72Y3aUZ2pbHJYkKH0=s4800-w768",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "dirleton-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNIRuEhiFPyQOKyVKEeNzCjXKORVwaCg4iObUKxRCHx_dLEXEZNA_3MlrGWcQ8q4QAHj21OnpawUkhrMxHnrL7lybht3YWyU68StxjYeNEWULnKK2sR9a2418hqPmh7gO82WEDJwDY4L75v=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNIRuEhiFPyQOKyVKEeNzCjXKORVwaCg4iObUKxRCHx_dLEXEZNA_3MlrGWcQ8q4QAHj21OnpawUkhrMxHnrL7lybht3YWyU68StxjYeNEWULnKK2sR9a2418hqPmh7gO82WEDJwDY4L75v=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dirleton-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN2eQPSOTH8FfiNPUdBU1ctvcQYLG562brL9UWbqi1KfbF9jDFM9TZvuhCvRlkBW1xG4vczmxsccA68DXUxjG0SxjgK5yDwaK4Y9X_U1F5NZOFqBgp21caMGUW2pTv0Yj5O9MfU6477QpVFJNQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZN2eQPSOTH8FfiNPUdBU1ctvcQYLG562brL9UWbqi1KfbF9jDFM9TZvuhCvRlkBW1xG4vczmxsccA68DXUxjG0SxjgK5yDwaK4Y9X_U1F5NZOFqBgp21caMGUW2pTv0Yj5O9MfU6477QpVFJNQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dirleton-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOfkFW2AZWaRnM1WSwsA2By3e2ZN8HX1MZDzCNvEPh-1lFJ7bZ-synXLDZdXlsjxgVIOEz9tbLZGakATrUDx1dKvYyS0umrXsp4RR_VxDMq9p_t_rgl2LEy0Uwz6OVQjs1htCE_gefVJtbD3jt9e3W8Kg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOfkFW2AZWaRnM1WSwsA2By3e2ZN8HX1MZDzCNvEPh-1lFJ7bZ-synXLDZdXlsjxgVIOEz9tbLZGakATrUDx1dKvYyS0umrXsp4RR_VxDMq9p_t_rgl2LEy0Uwz6OVQjs1htCE_gefVJtbD3jt9e3W8Kg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dirleton-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNTZ61Q8Be1i27jqrLHpNpnAZ0Rqwfs7ilySvIO85kUL1KFeHd-NoeQML5Oy_PHBSvFQ7cN95x1E_BEJasokrB0oiEdRHae-jmrJBPoPQr2UHerBI_lT1fT8DWT8Mhm1iIVAjhRrOMgZR8naDQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNTZ61Q8Be1i27jqrLHpNpnAZ0Rqwfs7ilySvIO85kUL1KFeHd-NoeQML5Oy_PHBSvFQ7cN95x1E_BEJasokrB0oiEdRHae-jmrJBPoPQr2UHerBI_lT1fT8DWT8Mhm1iIVAjhRrOMgZR8naDQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Dirleton Castle is a medieval fortress in the village of Dirleton, East Lothian, Scotland. It lies around 2 miles (3.2 km) west of North Berwick, and around 19 miles (31 km) east of Edinburgh. The oldest parts of the castle date to the 13th century, and it was abandoned by the end of the 17th century.",
     "type": "castle",
     "period": "13th century",
@@ -3956,7 +4110,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Hailes Castle",
@@ -4767,7 +4922,9 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merchiston_Tower"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merchiston_Tower",
+    "reviewStatus": "approved",
+    "imageReviewDone": true
   },
   {
     "name": "Liberton Tower",
@@ -4931,7 +5088,9 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Dalhousie Castle",
@@ -4943,7 +5102,36 @@
     "mapsLink": "https://www.google.com/maps/search/Dalhousie%20Castle%20Midlothian%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOhQcrxNSNCieOvsAu29jGmFcPvPaHSg4K5yrEtumCIjhIDB1sR3uIlllkcMGPZbPZ6pcqM3F2eAosVjOdL7thBSXtp3BoWEPh5WwoiR3JDJS5UIWaml_BIBYOJ60ThXe34x0svbTUuGRhM3g=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "dalhousie-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/places/ANXAkqGTx-WL_rP0zrnWmg4x49-mkvD4dqmayf8qxGuCe0EKGPqsKz2ReVu3F2Bvh597Ad1Gm0mN2KNnRwCugdHPYu4xwu7unADTfsw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/places/ANXAkqGTx-WL_rP0zrnWmg4x49-mkvD4dqmayf8qxGuCe0EKGPqsKz2ReVu3F2Bvh597Ad1Gm0mN2KNnRwCugdHPYu4xwu7unADTfsw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dalhousie-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOD6SPHvL_DFKzHpaN4z2FAsXA0fwotMvc6ZMdeelS7WbdgEakbCh51-6JUWSndOYIwUV15T6JY0PLiAClXXgQlaxaQ2RC7xa2_qPzTt7TkPrxUXGpfdpqDSqLGdt1Zjo3kpd9nvwlIUZushg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOD6SPHvL_DFKzHpaN4z2FAsXA0fwotMvc6ZMdeelS7WbdgEakbCh51-6JUWSndOYIwUV15T6JY0PLiAClXXgQlaxaQ2RC7xa2_qPzTt7TkPrxUXGpfdpqDSqLGdt1Zjo3kpd9nvwlIUZushg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dalhousie-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/places/ANXAkqHm2HcZN7zpraQSamMB8zzJt7Kc7Wq6R3xK6pWcpBtn4tmwxqYeayt7g48ORbHdhcmrvotwFweRHoyOpYqTxW3PFwN-pGZv2FM=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/places/ANXAkqHm2HcZN7zpraQSamMB8zzJt7Kc7Wq6R3xK6pWcpBtn4tmwxqYeayt7g48ORbHdhcmrvotwFweRHoyOpYqTxW3PFwN-pGZv2FM=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dalhousie-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/places/ANXAkqEIyx3BcAdd2dyAxryAjgquoBwXjHvqux7VQRaXrj_TbrxnECTqmzHqpFh4rB7muDaCaDDn7BxNC4y4dDhTZNIF5WXuw7x6Yqc=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/places/ANXAkqEIyx3BcAdd2dyAxryAjgquoBwXjHvqux7VQRaXrj_TbrxnECTqmzHqpFh4rB7muDaCaDDn7BxNC4y4dDhTZNIF5WXuw7x6Yqc=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Dalhousie Castle is a castle in Cockpen, Midlothian, Scotland. Dalhousie Castle is situated near the town of Bonnyrigg, 8 miles (13 km) south of Edinburgh. The castle was the seat of the Earls of Dalhousie, the chieftains of Clan Ramsay.",
     "type": "castle",
     "period": "13th-15th century",
@@ -4969,7 +5157,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Arniston House",
@@ -5067,7 +5256,12 @@
       "source": "Wikimedia Commons"
     },
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13",
+    "reviewReasons": [
+      "needs-review"
+    ]
   },
   {
     "name": "Cairnpapple Hill",
@@ -5206,7 +5400,36 @@
     "mapsLink": "https://www.google.com/maps/search/Alloa%20Tower%20Clackmannanshire%20scotland",
     "image": "https://lh3.googleusercontent.com/places/ANXAkqFrB5BycvcSkYNNMbsxfLB3t237zhUCpj3PVfbqeQGTVsdWv-1V_AHV4JQBrur8mXPIjuSlwIr-lkIPn1uo4ksMxYRJ62DbaRw=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "alloa-tower-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPaf4gewBiUq7FzBD45SKZC6Esz97GpzHFfuCoIj1ZdanA8zD4OzEtZFw7GdT7S10rK4XN07IRJ1w7AN-Qezln3FhprGdbeYiDv7_GDkNfmMmY4isxT_zDhb-a8E5lO45AyuoFnMN9RhH39hA=s4800-w1080",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPaf4gewBiUq7FzBD45SKZC6Esz97GpzHFfuCoIj1ZdanA8zD4OzEtZFw7GdT7S10rK4XN07IRJ1w7AN-Qezln3FhprGdbeYiDv7_GDkNfmMmY4isxT_zDhb-a8E5lO45AyuoFnMN9RhH39hA=s4800-w1080",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "alloa-tower-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOz4Xgs7MnClMZp4mSAE3ysRAvvWYnYPxMsu-io9fZAHCzHyXy1E938txR-KUR3MlKGia2WziJ07yy3rAr4eoprxTydxqZppxpa1NhpbhC3IVE5vXZlrZoS1k3KKIP9EuesYFoaVPyrblQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOz4Xgs7MnClMZp4mSAE3ysRAvvWYnYPxMsu-io9fZAHCzHyXy1E938txR-KUR3MlKGia2WziJ07yy3rAr4eoprxTydxqZppxpa1NhpbhC3IVE5vXZlrZoS1k3KKIP9EuesYFoaVPyrblQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "alloa-tower-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZObeYmKpO8yOjG8O1hggtGRVeRd_bSgSrQ2hxBQJYwVk4ghC-IK9VHVBX7W_rBYOYGc2R8hLKJpHn9U9u7RBXEcCxHj-BO6VQzhaZN5XL3_TJ38qYQElBOrRWV7LFCy_-UyQNjSEfZwmK7T9w=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZObeYmKpO8yOjG8O1hggtGRVeRd_bSgSrQ2hxBQJYwVk4ghC-IK9VHVBX7W_rBYOYGc2R8hLKJpHn9U9u7RBXEcCxHj-BO6VQzhaZN5XL3_TJ38qYQElBOrRWV7LFCy_-UyQNjSEfZwmK7T9w=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "alloa-tower-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMd52zKP3OOvtksyip3D6XLjkXiPy_vQH8U7YySJYhvXeRKvhq23Vma_xVI4_JV87MDAQ9skftC0a6_DcAwDo_mDhIdNjvk4CP5xPXe0we5iV-REGnV0tkHDJje3JosIaNDV30x-G3fIORPSPA=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMd52zKP3OOvtksyip3D6XLjkXiPy_vQH8U7YySJYhvXeRKvhq23Vma_xVI4_JV87MDAQ9skftC0a6_DcAwDo_mDhIdNjvk4CP5xPXe0we5iV-REGnV0tkHDJje3JosIaNDV30x-G3fIORPSPA=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Alloa Tower in Alloa, Clackmannanshire, in central Scotland, is an early 14th-century tower house that served as the medieval residence of the Erskine family, later Earls of Mar. Retaining its original timber roof and battlements, the tower is one of the earliest and largest Scottish tower houses, with immensely thick walls. It was designated as a scheduled monument in 1960 and is now owned by the National Trust for Scotland.",
     "type": "tower house",
     "period": "14th century",
@@ -5226,7 +5449,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "St Andrews Castle",
@@ -5443,7 +5667,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lochleven_Castle",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Blair Castle",
@@ -5455,7 +5681,43 @@
     "mapsLink": "https://www.google.com/maps/search/Blair%20Castle%20Perth%20and%20Kinross%20scotland",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Blair_castle_-_facade.jpg/330px-Blair_castle_-_facade.jpg",
     "imgSource": "wikipedia",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "blair-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPcdPSxIDJKKmNdlolQGejVN7oryV5YCkxny58XoCB4uPv-pt5O5Dzw8bk0s3-3stOSqhCWFxqPbL-XoPQNFgxlmzbpY4Esea_W6ni2-FANCW9LkDn5x3HQtLl1VaUq-HZcYhDi_iR1mvZ9wck=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPcdPSxIDJKKmNdlolQGejVN7oryV5YCkxny58XoCB4uPv-pt5O5Dzw8bk0s3-3stOSqhCWFxqPbL-XoPQNFgxlmzbpY4Esea_W6ni2-FANCW9LkDn5x3HQtLl1VaUq-HZcYhDi_iR1mvZ9wck=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "blair-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOpxEJ1DB8bq-7DITFZujsgpU8ahBM_NoUE4eHS_6OzPL00f0pLsFQ_mX8X-c-uVKN8Kuq4aNRDSffpwrcabTetKNCLP30nEIfSl-ayQbASLfJjRqhltmpzKtd1biWI9XQ-SMISN7nclf_u-bs=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOpxEJ1DB8bq-7DITFZujsgpU8ahBM_NoUE4eHS_6OzPL00f0pLsFQ_mX8X-c-uVKN8Kuq4aNRDSffpwrcabTetKNCLP30nEIfSl-ayQbASLfJjRqhltmpzKtd1biWI9XQ-SMISN7nclf_u-bs=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "blair-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN0kGOp7dsIXlUYSz9WE18KoJ9PJ_x_pbu6ZA7zSWlfQhY9fOkYjv-cqU6B4mMWC2J8pfBooFhcr99GFoPJJQT3C06umrulYG4AmzL-WsWEDnEBc2puFOVfV8qN3PI0ESFD246po0I51IbnFxI=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZN0kGOp7dsIXlUYSz9WE18KoJ9PJ_x_pbu6ZA7zSWlfQhY9fOkYjv-cqU6B4mMWC2J8pfBooFhcr99GFoPJJQT3C06umrulYG4AmzL-WsWEDnEBc2puFOVfV8qN3PI0ESFD246po0I51IbnFxI=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "blair-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPT1hzRg3jedw0WyLzlrDCgO5640-JYfvld2ZGrSGeB2JduY2P-K2EXYPFOuES9GdT2nV9QyfL4CbFI2pOV3RswSNWN-ymHcxzc-Gw_eA9kYh9gWlE_CxUDmkREJzhnhgdDZYIMctU_nhw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPT1hzRg3jedw0WyLzlrDCgO5640-JYfvld2ZGrSGeB2JduY2P-K2EXYPFOuES9GdT2nV9QyfL4CbFI2pOV3RswSNWN-ymHcxzc-Gw_eA9kYh9gWlE_CxUDmkREJzhnhgdDZYIMctU_nhw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "blair-castle-img-5",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO4NEF7KAnkhWCUmtr9YzcBEmHZO-lqiDOSDFiG6ZTHFY-kgZD-CTQJFhsNUW7-LzgiMSWXACboVY7bb9viZL1mQkWhRPrin9NpqNffYWwlE0a02qQ4WCqkT2wPyCTGx8pP4Dhq4YKTX-2VVg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZO4NEF7KAnkhWCUmtr9YzcBEmHZO-lqiDOSDFiG6ZTHFY-kgZD-CTQJFhsNUW7-LzgiMSWXACboVY7bb9viZL1mQkWhRPrin9NpqNffYWwlE0a02qQ4WCqkT2wPyCTGx8pP4Dhq4YKTX-2VVg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Blair Castle stands in its grounds near the village of Blair Atholl in Perthshire in Scotland. It is the ancestral home of the Clan Murray, and was historically the seat of their chief, the Duke of Atholl, though the current chief, the 12th Duke of Atholl, lives in South Africa, where he was born and raised. The castle stands in Glen Garry, and commands a strategic position on the main route through the central Scottish Highlands.",
     "type": "castle",
     "period": "13th century",
@@ -5475,7 +5737,8 @@
       "source": "Wikimedia Commons"
     },
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Scone Palace",
@@ -5549,7 +5812,36 @@
     "mapsLink": "https://www.google.com/maps/search/Dunfermline%20Abbey%20Fife%20scotland",
     "image": "https://lh3.googleusercontent.com/places/ANXAkqELS9MNzgfRcEosdYbXi5CMSD4gYZA9HGtj4KxguKI05mpxVYK9nRrhmsfGohVOiiqI2k05pKaLf1Z7mbSrCV1G5pp5rLdxuic=s4800-w768",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "dunfermline-abbey-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPjIK_hqTWlogEI3hw-AA5nGj3M2zm7aK69s1Xnj3vferX3WpvPk6tP5DCcVq-FisIAi6VhrI1MSekvnhciKqo1pBJxV-15qevWO3ZRTvpBpbo4mjqnA8wTkY3iCQvzhFBKPQTtZXGc8dhUTGshx6Mvkg=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPjIK_hqTWlogEI3hw-AA5nGj3M2zm7aK69s1Xnj3vferX3WpvPk6tP5DCcVq-FisIAi6VhrI1MSekvnhciKqo1pBJxV-15qevWO3ZRTvpBpbo4mjqnA8wTkY3iCQvzhFBKPQTtZXGc8dhUTGshx6Mvkg=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dunfermline-abbey-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVi9e1XTeJNr6XcUqNYiUWrtjWw6tXwM-8agXwSZ_1Q-u6VZQZQLJsMrs_AtVSNhrCX4t5la2J2EbfXxzg1l3l4WYbLssUn0891s0EEPymdEYPtoX8dHMvWqI_wkf15pVbbyc8yk5ISvZoaZ_0MChE3w=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVi9e1XTeJNr6XcUqNYiUWrtjWw6tXwM-8agXwSZ_1Q-u6VZQZQLJsMrs_AtVSNhrCX4t5la2J2EbfXxzg1l3l4WYbLssUn0891s0EEPymdEYPtoX8dHMvWqI_wkf15pVbbyc8yk5ISvZoaZ_0MChE3w=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dunfermline-abbey-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPmEPW3hi3FO1HQ1xIDQTPqZIez9ff2FW7x9y9QFInXYTNIzf5fR7k9DWpX_qaKkk41vOr1k2GdZEgHvXID9kHd2FA1SaJrMLXG3u0GsiB2fRG62xW6hIHwPSXPZ7sfha8axCG28Ef65SkU=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPmEPW3hi3FO1HQ1xIDQTPqZIez9ff2FW7x9y9QFInXYTNIzf5fR7k9DWpX_qaKkk41vOr1k2GdZEgHvXID9kHd2FA1SaJrMLXG3u0GsiB2fRG62xW6hIHwPSXPZ7sfha8axCG28Ef65SkU=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dunfermline-abbey-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNCLSewS_z9kkyxb0L81mSg9UQqyfnVM_ssVvXbFpFY9j7Jasxz_efq5eZZKxRb9MtmRarTa7rexEI3smSmtUVS18B2BONp1TiE6FfB2VZLJ3mJOrJfmFNiapoaqwz4dHdjKrJRa_PbaWvMAA=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNCLSewS_z9kkyxb0L81mSg9UQqyfnVM_ssVvXbFpFY9j7Jasxz_efq5eZZKxRb9MtmRarTa7rexEI3smSmtUVS18B2BONp1TiE6FfB2VZLJ3mJOrJfmFNiapoaqwz4dHdjKrJRa_PbaWvMAA=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Dunfermline Abbey is a Church of Scotland parish church in Dunfermline, Scotland. The church occupies the site of the ancient chancel and transepts of a large medieval Benedictine abbey, which was confiscated and sacked in 1560 during the Scottish Reformation and permitted to fall into disrepair. Part of the old abbey church continued in use at that time and some parts of the abbey infrastructure still remain.",
     "type": "abbey",
     "period": "12th century",
@@ -5570,7 +5862,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Ravenscraig Castle",
@@ -5644,7 +5937,36 @@
     "mapsLink": "https://www.google.com/maps/search/Aberdour%20Castle%20Fife%20scotland",
     "image": "https://lh3.googleusercontent.com/places/ANXAkqFF3nZKM1X4rp1gHmZbDjsV4Hvm-Dg_aGgA0nKKZSguOuzbDvR8XUCjRweLG3R-xmptiCMu0xW-VXRQm6aajIkR0YJAVd93ul0=s4800-w768",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "aberdour-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMd0AjnXE2mr5eq2GuPcvN9oXe8tP59yPkTTspFFSjg2yP1wTOkAEhUD6RGZidNY-pLorFpMQwDhoI0NC8OywOYfmmibzjHJ02kUEWefMeC750-x_-2f86eUyMjfETHZKQwuCqaD9IX_BZnRA=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMd0AjnXE2mr5eq2GuPcvN9oXe8tP59yPkTTspFFSjg2yP1wTOkAEhUD6RGZidNY-pLorFpMQwDhoI0NC8OywOYfmmibzjHJ02kUEWefMeC750-x_-2f86eUyMjfETHZKQwuCqaD9IX_BZnRA=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "aberdour-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNBCeJzBRFlWfx1X7p0Gh_eHYI2YTCmKyGikBpG8JJ03-zDQiT44pl-GF4NEmxUuz6nWzVhI9Mxm8rREpg-ICRyjHw0L4t3mdTai2WQQicackbPTImpOMNtbCieYWjRr1JJt9EKfHujve-V=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNBCeJzBRFlWfx1X7p0Gh_eHYI2YTCmKyGikBpG8JJ03-zDQiT44pl-GF4NEmxUuz6nWzVhI9Mxm8rREpg-ICRyjHw0L4t3mdTai2WQQicackbPTImpOMNtbCieYWjRr1JJt9EKfHujve-V=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "aberdour-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMaPnIwOGObT20z9-f0oCFTlXAwQP1R7odFDHO2DFNb1UezUbJU0Aqhw7Pxeri_Q5UJRXneSN8DgT1Z8iLVnz2uz35X2I8lktZHoPhauxRGQs8syGX5bIbM00n_pm39yGjGGeB7pm6nS6jH8g=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMaPnIwOGObT20z9-f0oCFTlXAwQP1R7odFDHO2DFNb1UezUbJU0Aqhw7Pxeri_Q5UJRXneSN8DgT1Z8iLVnz2uz35X2I8lktZHoPhauxRGQs8syGX5bIbM00n_pm39yGjGGeB7pm6nS6jH8g=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "aberdour-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNy2ANJlo44JudiBAHLEJhvKjG4gF4d2Edy6d69GU0_IFOLVnmQqCcjXLI7xhybPkc6IY69zAIGD7ty1KAqx2JHnyzSLBAPs6wRTgu-wShyVdj6Dykqf8mhdnM7xNVOAVb3LPK8jai_6C4A5yA=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNy2ANJlo44JudiBAHLEJhvKjG4gF4d2Edy6d69GU0_IFOLVnmQqCcjXLI7xhybPkc6IY69zAIGD7ty1KAqx2JHnyzSLBAPs6wRTgu-wShyVdj6Dykqf8mhdnM7xNVOAVb3LPK8jai_6C4A5yA=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Aberdour Castle is in the village of Easter Aberdour, Fife, Scotland. Parts of the castle date from around 1200, making Aberdour one of the two oldest datable standing castles in Scotland, along with Castle Sween in Argyll, which was built at around the same time.",
     "type": "castle",
     "period": "13th century",
@@ -5664,7 +5986,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Balvaird Castle",
@@ -5740,7 +6063,36 @@
     "mapsLink": "https://www.google.com/maps/search/Falkland%20Palace%20Fife%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMiLcbEcW9E0HDFLqwmLWeYlgSOJv-kDxvAmQwMxlmrB4jdEVnJxY_6OnkXGF1iPo2skz5Twor_FnnW6x9T9V1o6hDs8n13xoLdmbyRPY8J6nEgnsH4Ih2sikAITYIxOtXZZGtdZZlhOUNL068=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "falkland-palace-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPd9AdnfgwahRKoTExvEc0eQLuBaLivqN_k9939jP0OpnmfKVVK6zK4JAmnGofeIXIKrGfA1xJudThQNxGAJbwWWdbbJTaiG2p7mhVI3h9PeW2v18m0nIR5g_cPoJPPI7Q2mcuQL_0gRgt6zQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPd9AdnfgwahRKoTExvEc0eQLuBaLivqN_k9939jP0OpnmfKVVK6zK4JAmnGofeIXIKrGfA1xJudThQNxGAJbwWWdbbJTaiG2p7mhVI3h9PeW2v18m0nIR5g_cPoJPPI7Q2mcuQL_0gRgt6zQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "falkland-palace-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPIv4B-fiNZCye9Lwa_Dlkm86TVkSoct8vU-uwrcnpYHZ8JDpeTQek_bBVT8idKOSPlfwzTDnGI79Try2YAYkV8ryEDBbNs9P1PgCt1wzPIruO06deh5kLXZoIqkfF-R4q94OgE1ELyCaIzFQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPIv4B-fiNZCye9Lwa_Dlkm86TVkSoct8vU-uwrcnpYHZ8JDpeTQek_bBVT8idKOSPlfwzTDnGI79Try2YAYkV8ryEDBbNs9P1PgCt1wzPIruO06deh5kLXZoIqkfF-R4q94OgE1ELyCaIzFQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "falkland-palace-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNE_uujT87e70M3hW8G-Nqn0edXNzg5-re8DC0JJOeUqOUDQDzmmbhn7411LxfPt2iPZjBYYVzqCEhq_Oh1J9PNcqzM7Qu0bEtGQ_UapLYZl_ss2vhuVbrS_FVk3N5lDZO0hYB1UnsF8Aznw5wXmRQSHQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNE_uujT87e70M3hW8G-Nqn0edXNzg5-re8DC0JJOeUqOUDQDzmmbhn7411LxfPt2iPZjBYYVzqCEhq_Oh1J9PNcqzM7Qu0bEtGQ_UapLYZl_ss2vhuVbrS_FVk3N5lDZO0hYB1UnsF8Aznw5wXmRQSHQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "falkland-palace-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN9l5TOCwsSHzuSVhIxFmrrqR1i1PwNxuZYuSxafC_L8oFmYzUFm4LQzsIUDeLu3jCRxIkY78gVLbRqRTLBwVx4Kuh0SB1zNm6jgo8q6IGMYHgf4M7lv24DWWz_wNhkRmt0vgVYsywuAy0Jnkc=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZN9l5TOCwsSHzuSVhIxFmrrqR1i1PwNxuZYuSxafC_L8oFmYzUFm4LQzsIUDeLu3jCRxIkY78gVLbRqRTLBwVx4Kuh0SB1zNm6jgo8q6IGMYHgf4M7lv24DWWz_wNhkRmt0vgVYsywuAy0Jnkc=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Falkland Palace, in Falkland, Fife, Scotland, is a royal palace of the Scottish kings. It was one of the favourite places of Mary, Queen of Scots, who took refuge there from political and religious turmoil of her times.",
     "type": "palace",
     "period": "16th century",
@@ -5764,7 +6116,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Tullibardine Chapel",
@@ -5923,7 +6276,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Methven_Castle",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Castle Menzies",
@@ -6022,7 +6377,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Grandtully_Castle",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Megginch Castle",
@@ -6122,7 +6479,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Balhousie_Castle",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Kellie Castle",
@@ -6301,7 +6660,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Macduff%27s_Castle",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Clackmannan Tower",
@@ -6462,7 +6823,9 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Garth Castle",
@@ -6665,7 +7028,43 @@
     "mapsLink": "https://www.google.com/maps/search/Dunfermline%20Palace%20Fife%20scotland",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dunfermline_Abbey_gatehouse_and_pend%2C_Dunfermline.jpg/330px-Dunfermline_Abbey_gatehouse_and_pend%2C_Dunfermline.jpg",
     "imgSource": "wikipedia",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "dunfermline-palace-img-1",
+        "url": "https://lh3.googleusercontent.com/places/ANXAkqELS9MNzgfRcEosdYbXi5CMSD4gYZA9HGtj4KxguKI05mpxVYK9nRrhmsfGohVOiiqI2k05pKaLf1Z7mbSrCV1G5pp5rLdxuic=s4800-w768",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/places/ANXAkqELS9MNzgfRcEosdYbXi5CMSD4gYZA9HGtj4KxguKI05mpxVYK9nRrhmsfGohVOiiqI2k05pKaLf1Z7mbSrCV1G5pp5rLdxuic=s4800-w768",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dunfermline-palace-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPjIK_hqTWlogEI3hw-AA5nGj3M2zm7aK69s1Xnj3vferX3WpvPk6tP5DCcVq-FisIAi6VhrI1MSekvnhciKqo1pBJxV-15qevWO3ZRTvpBpbo4mjqnA8wTkY3iCQvzhFBKPQTtZXGc8dhUTGshx6Mvkg=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPjIK_hqTWlogEI3hw-AA5nGj3M2zm7aK69s1Xnj3vferX3WpvPk6tP5DCcVq-FisIAi6VhrI1MSekvnhciKqo1pBJxV-15qevWO3ZRTvpBpbo4mjqnA8wTkY3iCQvzhFBKPQTtZXGc8dhUTGshx6Mvkg=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dunfermline-palace-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVi9e1XTeJNr6XcUqNYiUWrtjWw6tXwM-8agXwSZ_1Q-u6VZQZQLJsMrs_AtVSNhrCX4t5la2J2EbfXxzg1l3l4WYbLssUn0891s0EEPymdEYPtoX8dHMvWqI_wkf15pVbbyc8yk5ISvZoaZ_0MChE3w=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVi9e1XTeJNr6XcUqNYiUWrtjWw6tXwM-8agXwSZ_1Q-u6VZQZQLJsMrs_AtVSNhrCX4t5la2J2EbfXxzg1l3l4WYbLssUn0891s0EEPymdEYPtoX8dHMvWqI_wkf15pVbbyc8yk5ISvZoaZ_0MChE3w=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dunfermline-palace-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPmEPW3hi3FO1HQ1xIDQTPqZIez9ff2FW7x9y9QFInXYTNIzf5fR7k9DWpX_qaKkk41vOr1k2GdZEgHvXID9kHd2FA1SaJrMLXG3u0GsiB2fRG62xW6hIHwPSXPZ7sfha8axCG28Ef65SkU=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPmEPW3hi3FO1HQ1xIDQTPqZIez9ff2FW7x9y9QFInXYTNIzf5fR7k9DWpX_qaKkk41vOr1k2GdZEgHvXID9kHd2FA1SaJrMLXG3u0GsiB2fRG62xW6hIHwPSXPZ7sfha8axCG28Ef65SkU=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "dunfermline-palace-img-5",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNCLSewS_z9kkyxb0L81mSg9UQqyfnVM_ssVvXbFpFY9j7Jasxz_efq5eZZKxRb9MtmRarTa7rexEI3smSmtUVS18B2BONp1TiE6FfB2VZLJ3mJOrJfmFNiapoaqwz4dHdjKrJRa_PbaWvMAA=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNCLSewS_z9kkyxb0L81mSg9UQqyfnVM_ssVvXbFpFY9j7Jasxz_efq5eZZKxRb9MtmRarTa7rexEI3smSmtUVS18B2BONp1TiE6FfB2VZLJ3mJOrJfmFNiapoaqwz4dHdjKrJRa_PbaWvMAA=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Dunfermline Palace is a ruined former Scottish royal palace and important tourist attraction in Dunfermline, Fife, Scotland. It is currently, along with other buildings of the adjacent Dunfermline Abbey, under the care of Historic Environment Scotland as a scheduled monument.",
     "type": "palace",
     "period": "11th century onwards",
@@ -6690,7 +7089,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunfermline_Palace",
     "imageAttribution": "local",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Inchcolm Abbey",
@@ -6791,7 +7191,9 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Balgonie Castle",
@@ -6829,7 +7231,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Balgonie_Castle",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Dunkeld Cathedral",
@@ -6913,7 +7317,36 @@
     "mapsLink": "https://www.google.com/maps/search/Kinross%20House%20Perth%20and%20Kinross%20scotland",
     "image": "https://lh3.googleusercontent.com/places/ANXAkqFRPanE4j35rXVmqo_8PBNx3052v8RWj7YiP5ODzVYuYhreBqzAt77qX1lPqQcewTYEKNjMXxWG4eBzYX_PBPfKnU-Z8rfCDqY=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "kinross-house-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOKVJBW2WDQ-YjE9G0-BJALWEZzUURk2fYzEMPyxlr6JRd2JeCtg_NMKrPQzQc_gb2GpNjCW5oGY694yFjhH-aL8t1SMNqUlwhehnCRSe94vBNuMUe2xMojBr0vAc6bHXssz6v7oRWwYu_59w=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOKVJBW2WDQ-YjE9G0-BJALWEZzUURk2fYzEMPyxlr6JRd2JeCtg_NMKrPQzQc_gb2GpNjCW5oGY694yFjhH-aL8t1SMNqUlwhehnCRSe94vBNuMUe2xMojBr0vAc6bHXssz6v7oRWwYu_59w=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "kinross-house-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMfVYelYydy81GA8UNhG4T5esmMho45NBh8g5f_9Q_a-f6bZTZU_gaAfCFtROxvmaJo6I2ltsGMbGxhLaaisT-ezOedct9dwj1QFjydzPTaFfZaEYD7nDXZmRWlLn8xZxippjdPyDCMxbNw0A=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMfVYelYydy81GA8UNhG4T5esmMho45NBh8g5f_9Q_a-f6bZTZU_gaAfCFtROxvmaJo6I2ltsGMbGxhLaaisT-ezOedct9dwj1QFjydzPTaFfZaEYD7nDXZmRWlLn8xZxippjdPyDCMxbNw0A=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "kinross-house-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMcEoRYF5zBM31mXQueNNnfg3ferj8j5BSwSgKlU9c6LSkZ89P8lVH89zDWo-0Xr0cLBHaSFzjWALtsC9clcMOwn7Q4Mcie5usrwNaWqgMnRh2tZYHLoBP8EOiBeNXoR2V72GcIllhS_9t_=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMcEoRYF5zBM31mXQueNNnfg3ferj8j5BSwSgKlU9c6LSkZ89P8lVH89zDWo-0Xr0cLBHaSFzjWALtsC9clcMOwn7Q4Mcie5usrwNaWqgMnRh2tZYHLoBP8EOiBeNXoR2V72GcIllhS_9t_=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "kinross-house-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMd0WEukErGnQ0KAoh6bL4oWD-NweQlJhcUdxi4Lk7_HBHv-w0nQ_6CLUcF_82UiEAyPsB_4piK6Sueb9HLjW7Gfz1ZHf-hfsz3sRvSCiSCU0AkpHSRfs9o9fJS5eaVHD0ipg19xmdVjXyU8XI=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMd0WEukErGnQ0KAoh6bL4oWD-NweQlJhcUdxi4Lk7_HBHv-w0nQ_6CLUcF_82UiEAyPsB_4piK6Sueb9HLjW7Gfz1ZHf-hfsz3sRvSCiSCU0AkpHSRfs9o9fJS5eaVHD0ipg19xmdVjXyU8XI=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Kinross House is a late 17th-century country house overlooking Loch Leven, near Kinross in Kinross-shire, Scotland.",
     "type": "castle",
     "period": "17th century",
@@ -6935,7 +7368,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Culross Palace",
@@ -6947,7 +7381,36 @@
     "mapsLink": "https://www.google.com/maps/search/Culross%20Palace%20Fife%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPhLH8g-HMfeA9if5xjd2JimJW3mWRyoKM6D_uQTRwT1SOgyF3WdHy9b98l-HReA7ddBDAxlrBEpdhkwpFwdm3W90rtnUlnrZ9BerO9kaAH_xR1Ct17GvWx6W7ascrR1EMvggerp8jWuJ9c=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "culross-palace-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPlUvdsjz-8u7c1osvaJtaxSmqE1BAM7XY22DJfIxcKdS1FP5ltynXxAXm0EOjRKV3veqQ2n26Qzt9mqZj1QX4Yr2YfnZE7TMUCA7i3rLCguK3rADdL4aL2YtNPoWP1vHK28RaFUxRDSr7IaQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPlUvdsjz-8u7c1osvaJtaxSmqE1BAM7XY22DJfIxcKdS1FP5ltynXxAXm0EOjRKV3veqQ2n26Qzt9mqZj1QX4Yr2YfnZE7TMUCA7i3rLCguK3rADdL4aL2YtNPoWP1vHK28RaFUxRDSr7IaQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "culross-palace-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOfWenixut2abCSb4T4to_TU76pRZNSw4mM7TZrYsNDI3gB2TldgxRnCvN5ul7h4W20JYhT5d1EgDl30TaZtMXjj_mSr_aAWyFkxjaX2Lt8NeAhkciWkrJ14UGRtJVxpvEMlmQCFO9i1b2WO2dPKpbSzg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOfWenixut2abCSb4T4to_TU76pRZNSw4mM7TZrYsNDI3gB2TldgxRnCvN5ul7h4W20JYhT5d1EgDl30TaZtMXjj_mSr_aAWyFkxjaX2Lt8NeAhkciWkrJ14UGRtJVxpvEMlmQCFO9i1b2WO2dPKpbSzg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "culross-palace-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOHOKqvp47mfxBSm1EGzpqhD1HSfeB94wOZfz7hTbQnnHvW3pijCUWINEHm5DkCANfGZmTnX8_MZnSGy1nfL8fU3ErZFsoRXsXWGJPFzQ-lizQUGYOzCioyJ4dSb3hyScY-lQOcBhQdcSeeK78=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOHOKqvp47mfxBSm1EGzpqhD1HSfeB94wOZfz7hTbQnnHvW3pijCUWINEHm5DkCANfGZmTnX8_MZnSGy1nfL8fU3ErZFsoRXsXWGJPFzQ-lizQUGYOzCioyJ4dSb3hyScY-lQOcBhQdcSeeK78=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "culross-palace-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOZJ_wFByrovDZ-to5oIOJHOAVrFo1XzWGKUsjhBfrls5GQPCm4QShjiUK7pZIIpTwP00JPGNNmWXsOHQIkZMQcL8H0OMKDSwf7brkFM3JKbQsFWQxjpOwrZCps6pkWtaMngatfv4ioCsDtV1g=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOZJ_wFByrovDZ-to5oIOJHOAVrFo1XzWGKUsjhBfrls5GQPCm4QShjiUK7pZIIpTwP00JPGNNmWXsOHQIkZMQcL8H0OMKDSwf7brkFM3JKbQsFWQxjpOwrZCps6pkWtaMngatfv4ioCsDtV1g=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Culross Palace is a late 16th to early 17th century merchant's house in Culross, Fife, Scotland.",
     "type": "castle",
     "period": "16th-17th century",
@@ -6972,7 +7435,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Dunimarle Castle",
@@ -7109,7 +7573,36 @@
     "mapsLink": "https://www.google.com/maps/search/Rosyth%20Castle%20Fife%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMA7-xBB_quY9miVg7sfPpcAr0TpLXjqjFU1LydVeO0CT658NpK_DtQxDV3dnpWrQy9CF_xrpibmw_K7O_nN9Ma1VaQRteI8jn_84fVMEtQC5HOdILNCg-VgRZhFXAd_1KmkBPKKMlLEQMa064UQts5SA=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "rosyth-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN7qpX3VAAQbYQ0E_8cJMWC6Sqcu1o8iEzj7R0jwa5F8KTqLp8IQBWI0lopfzNEPi0Qlj7OUiHicRDZcSjw2LINVxdqQ7n7RqvwxHG2aThwcf5oUqupVG9H8IxucUONuAhUMgrbYmVgjpRrLw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZN7qpX3VAAQbYQ0E_8cJMWC6Sqcu1o8iEzj7R0jwa5F8KTqLp8IQBWI0lopfzNEPi0Qlj7OUiHicRDZcSjw2LINVxdqQ7n7RqvwxHG2aThwcf5oUqupVG9H8IxucUONuAhUMgrbYmVgjpRrLw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "rosyth-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPvS5Z6TQ0x_hrmYKxRek2MGNU97WzcGU3yWu2fVdlfO4aj0NIutpmTPPTAgmpPgA98B9PqUqwnaNtXOtM4WjjOu1F_wr9Yjvx7ykQ7xSyRfQQ0REWdlWTd6BTUXJRVhxP2-3SVjpN7dcZOGA=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPvS5Z6TQ0x_hrmYKxRek2MGNU97WzcGU3yWu2fVdlfO4aj0NIutpmTPPTAgmpPgA98B9PqUqwnaNtXOtM4WjjOu1F_wr9Yjvx7ykQ7xSyRfQQ0REWdlWTd6BTUXJRVhxP2-3SVjpN7dcZOGA=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "rosyth-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPrAD7uvVGYRWs35YeOFg4w72eAgbGQx4iFvrXFZxfRgCZ2MNCsk45v_Um4DwnaGlagCRcbZS6haEbXHe3c1oxkOXIAYnOfCmaFlXpChd8qci6x1-JHDbt0jganEBlTyFd-jrmbjceN9VWvIfo=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPrAD7uvVGYRWs35YeOFg4w72eAgbGQx4iFvrXFZxfRgCZ2MNCsk45v_Um4DwnaGlagCRcbZS6haEbXHe3c1oxkOXIAYnOfCmaFlXpChd8qci6x1-JHDbt0jganEBlTyFd-jrmbjceN9VWvIfo=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "rosyth-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMyi8oaL0niZu25jx1BNrzqlFCi3anxfuDI0m5DewRAa87HG6iu1CZoEPZzLA4YP3TkEP51YK7fIy_Dxtd6jk42dYyt7kF0rrhCuYZZE1PJiLJwL5m6Xpsl_Kuqxr4U7F-vRhmQ1S-VB1G3vLQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMyi8oaL0niZu25jx1BNrzqlFCi3anxfuDI0m5DewRAa87HG6iu1CZoEPZzLA4YP3TkEP51YK7fIy_Dxtd6jk42dYyt7kF0rrhCuYZZE1PJiLJwL5m6Xpsl_Kuqxr4U7F-vRhmQ1S-VB1G3vLQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Rosyth Castle is a fifteenth-century ruined tower house on the perimeter of Rosyth Naval Dockyard, Fife, Scotland.",
     "type": "castle",
     "period": "15th century",
@@ -7131,7 +7624,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Sauchie Tower",
@@ -8169,7 +8663,36 @@
     "mapsLink": "https://www.google.com/maps/search/Tower%20of%20Hallbar%20South%20Lanarkshire%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMhY_liTF0zVXrAl-pHCiKJJQo1WoC0laJY-rJ7Z_D9JzSs1K0GEN4uHn6FOjvknGE7UMN-i7OdEmzudN9fSqG88zcokQYsRI1dLI1Nrp51kSYO9UWg8QnmJOTncfB595oSJpCwjaJWWtsqHD8=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "tower-of-hallbar-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNP2cutP7lrtYzNh9RdfZ-X4HiYX115qWsg_ILQ3gtjkhzKTCc3xt6GIHphXJ5kgbdKWhe3mXC0kYhpv0hCQvTfg3k3JvASNgZaswjYXsGUpkUKhAU07n_rYTI4jieQh-jyAD3aXOF-sHQu=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNP2cutP7lrtYzNh9RdfZ-X4HiYX115qWsg_ILQ3gtjkhzKTCc3xt6GIHphXJ5kgbdKWhe3mXC0kYhpv0hCQvTfg3k3JvASNgZaswjYXsGUpkUKhAU07n_rYTI4jieQh-jyAD3aXOF-sHQu=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "tower-of-hallbar-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNl-w5-9jvWae5flnDLabvW3PQz_5o0QA6kWewQsHtatY-nSCqsXnRC9Guen60v7FjQg9RufskRcMDoERZ2s_tuNfzunLzKvSYoZ3KHeGZc1vGrWozBPg9TFGRtG_THlOsjJN2GxFHjPUcRiA=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNl-w5-9jvWae5flnDLabvW3PQz_5o0QA6kWewQsHtatY-nSCqsXnRC9Guen60v7FjQg9RufskRcMDoERZ2s_tuNfzunLzKvSYoZ3KHeGZc1vGrWozBPg9TFGRtG_THlOsjJN2GxFHjPUcRiA=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "tower-of-hallbar-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZObkBYglcJtohnfo46A4L7dsRKs5yCmV0p-qA2O3IJqPsyP4r-1DVgnKGaknDEVkCqPpv85Ja2vnb4kC-c1GEuPCzBOWtVDayoTu0XQhpb25rrWPOcw7c8qX-ioNFF3ihPIYlx1vqdHszyJYg=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZObkBYglcJtohnfo46A4L7dsRKs5yCmV0p-qA2O3IJqPsyP4r-1DVgnKGaknDEVkCqPpv85Ja2vnb4kC-c1GEuPCzBOWtVDayoTu0XQhpb25rrWPOcw7c8qX-ioNFF3ihPIYlx1vqdHszyJYg=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "tower-of-hallbar-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMkJUWwtqHEMU-F7mC2zugIiD38WwIUTwyBgjYQVDSSuR048YiibzEoyk8u_nutQOqSqF2pIQYcIUBQUZGv-rEgoy4iXgBatA6WRQFxo9gjeibfkM4OOF8NdjMhe7iDxVCx8OWUVNui_YNJUw=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMkJUWwtqHEMU-F7mC2zugIiD38WwIUTwyBgjYQVDSSuR048YiibzEoyk8u_nutQOqSqF2pIQYcIUBQUZGv-rEgoy4iXgBatA6WRQFxo9gjeibfkM4OOF8NdjMhe7iDxVCx8OWUVNui_YNJUw=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "The Tower of Hallbar, also known as Hallbar Tower and Braidwood Castle, is a 16th-century tower house, located to the west of the River Clyde in South Lanarkshire, Scotland. The tower is situated above the Braidwood Burn, 3.5 km (2.2 mi) south-west of Carluke, and 1.5 km (0.93 mi) east of Crossford. It has been restored and is let out as holiday accommodation.",
     "type": "castle",
     "period": "16th century",
@@ -8191,7 +8714,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Castle Levan",
@@ -8355,7 +8879,9 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Mearns Castle",
@@ -8459,7 +8985,9 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13"
   },
   {
     "name": "Kinneil House",
@@ -8801,7 +9329,43 @@
     "mapsLink": "https://www.google.com/maps/search/Castle%20of%20Mey%20Highland%20scotland",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Mey_castle_2.JPG/330px-Mey_castle_2.JPG",
     "imgSource": "wikipedia",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "castle-of-mey-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZODqDiw7qJXtOwvPf6LiqBWdAlQ-47VYAeuCx0mw8cP9MJTRf6AfUr_G-XjddOao06JPnbUMR9q6tC7qL5-1IeS7rO6TZel8xPXNqTeo6Rv3fTZNkBtFSfzdazh0yupQ2720zXAZ_9TKYtHYQ=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZODqDiw7qJXtOwvPf6LiqBWdAlQ-47VYAeuCx0mw8cP9MJTRf6AfUr_G-XjddOao06JPnbUMR9q6tC7qL5-1IeS7rO6TZel8xPXNqTeo6Rv3fTZNkBtFSfzdazh0yupQ2720zXAZ_9TKYtHYQ=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "castle-of-mey-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPUgy163ez6M8IdIHFfle4uaKLYqEObG3mPhOn6N81H89Kh6t-URit4bWCxNaEwmUL8XFA_C-2zsMsoXcJWLTTJ6_x01y7PsdhcQevIgNZzP-YV8_5mz4dYaPi19x82Dpo4fv-ARkARa7iv=s4800-w1080",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPUgy163ez6M8IdIHFfle4uaKLYqEObG3mPhOn6N81H89Kh6t-URit4bWCxNaEwmUL8XFA_C-2zsMsoXcJWLTTJ6_x01y7PsdhcQevIgNZzP-YV8_5mz4dYaPi19x82Dpo4fv-ARkARa7iv=s4800-w1080",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "castle-of-mey-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMe0PLIj86Ejq4D2ki0LOoMkwh92z-0VqbGOFesZ13jc53kaCnZi9WLPBNVXYXAqkcTZwHgX7ty-pdxsLRvGC2v4xkrms8mVsKU_x-IhqnWK1PzqE8CvfUF7nxlODqf0V1gdWEyW6zzJ7XG33M=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMe0PLIj86Ejq4D2ki0LOoMkwh92z-0VqbGOFesZ13jc53kaCnZi9WLPBNVXYXAqkcTZwHgX7ty-pdxsLRvGC2v4xkrms8mVsKU_x-IhqnWK1PzqE8CvfUF7nxlODqf0V1gdWEyW6zzJ7XG33M=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "castle-of-mey-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNtzB6GCYhFNyIQuCBdFmuAMdoye8cew-hOvR3EXK1CEVQwJdOb_OOocF2BNvN6By6sbGN54O9q3znv2cT-9668eJPWSLe44z6FjeDyKY6iThGANGmGBi1SpmmNYvUUb2HhapjkU7G479rTow=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNtzB6GCYhFNyIQuCBdFmuAMdoye8cew-hOvR3EXK1CEVQwJdOb_OOocF2BNvN6By6sbGN54O9q3znv2cT-9668eJPWSLe44z6FjeDyKY6iThGANGmGBi1SpmmNYvUUb2HhapjkU7G479rTow=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "castle-of-mey-img-5",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO1oEwWvVZM0iO2xgnjJOfVPpCxA_izE3Er2J_jpb4TZXVmdGIBNNHxYfc4Dw5acavEeFGKH_QLEnXHwahZpdrlrSkX37ZS-YwWMIPPsnMsNlNWxYe7gfcrx14RriMA8q2LJL8Dg8vIsZWB=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZO1oEwWvVZM0iO2xgnjJOfVPpCxA_izE3Er2J_jpb4TZXVmdGIBNNHxYfc4Dw5acavEeFGKH_QLEnXHwahZpdrlrSkX37ZS-YwWMIPPsnMsNlNWxYe7gfcrx14RriMA8q2LJL8Dg8vIsZWB=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "The Castle of Mey is located in Caithness, on the north coast of Scotland, about 6 miles (10 km) west of John o' Groats. In fine weather there are views from the castle north to Orkney.",
     "type": "castle",
     "period": "16th century",
@@ -8821,7 +9385,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_of_Mey",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Cawdor Castle",
@@ -8833,7 +9398,36 @@
     "mapsLink": "https://www.google.com/maps/search/Cawdor%20Castle%20Highland%20scotland",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPAMF0_ZiUapd3LiP_QQEkWcipK53z3_AG_wPbHrjXNcvpPbaQSATzUc10Js0Lm2cCpJ0TpSN6CsF4qT-Vd9TcXIve1Wnyev31H9E0M7cE8CoX7Rwu1qRMGlhc8uK4mthh7TL8JDIq-lvQThA=s4800-w1200",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "cawdor-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOrsqTfpX-qWQeR58JtMNSgfam0OBucMXjMwleTMTaH19pCi15gwlJXtD0bRX6olOxVJ4HN9ljTYHbBMAfKlxEgHazfQzHMkG9rqEoqxE2pw-VlIIlH8JmJ28AFSr9mBNfDPAAs7Kn6ANMgFw=s4800-w1080",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOrsqTfpX-qWQeR58JtMNSgfam0OBucMXjMwleTMTaH19pCi15gwlJXtD0bRX6olOxVJ4HN9ljTYHbBMAfKlxEgHazfQzHMkG9rqEoqxE2pw-VlIIlH8JmJ28AFSr9mBNfDPAAs7Kn6ANMgFw=s4800-w1080",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "cawdor-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMM6iAowuck4tVKO11OuGZebdURnFH4tMyEsCzCjM-kr5asL0uqCHFALHCCuARNHarz-lxXPlalbDbJ9qs9nMXPNOfgQlOnTyK5OWBo7cmnUGokKf9mzKfnJkD2GscEddXlL3jRB6GpLN6G-so=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMM6iAowuck4tVKO11OuGZebdURnFH4tMyEsCzCjM-kr5asL0uqCHFALHCCuARNHarz-lxXPlalbDbJ9qs9nMXPNOfgQlOnTyK5OWBo7cmnUGokKf9mzKfnJkD2GscEddXlL3jRB6GpLN6G-so=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "cawdor-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMHEDheHypdhoXZehH_gwRFheVd3g17zoMRRKx7iJudpqmNu7va-rYCjpZftx9uWnMUfY4D7nnI_mS_q6VO_H16HkeSe5nc4azvrQASsLChONYyfvXVs0Gyicx5Hy33dLwCG0yDOlkRJ2Yb3Q=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMHEDheHypdhoXZehH_gwRFheVd3g17zoMRRKx7iJudpqmNu7va-rYCjpZftx9uWnMUfY4D7nnI_mS_q6VO_H16HkeSe5nc4azvrQASsLChONYyfvXVs0Gyicx5Hy33dLwCG0yDOlkRJ2Yb3Q=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "cawdor-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMCGNnC3oHUamxnoMSo7AeK7Q6rnHcoKvaT5q6XQOWmV1fs1JkWstYwVIWsudmlBk4nH6RCXPPuwLLpkXDDMwcFI9ssnor5LbMSXZPkpdBa4aQGvYieWE9Xtq9NuI-kMNH96faiwzYIwV4g2g=s4800-w1200",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZMCGNnC3oHUamxnoMSo7AeK7Q6rnHcoKvaT5q6XQOWmV1fs1JkWstYwVIWsudmlBk4nH6RCXPPuwLLpkXDDMwcFI9ssnor5LbMSXZPkpdBa4aQGvYieWE9Xtq9NuI-kMNH96faiwzYIwV4g2g=s4800-w1200",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Cawdor Castle is a castle in the parish of Cawdor in Nairnshire, Scotland. It is built around a 15th-century tower house, with substantial additions in later centuries. Originally a property of the Calder family, it passed to the Campbells in the 16th century. It remains in Campbell ownership, and is now home to Angelika Campbell, Dowager Countess Cawdor, stepmother of Colin Campbell, 7th Earl Cawdor.",
     "type": "castle",
     "period": "15th century",
@@ -8854,7 +9448,8 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Ardvreck Castle",
@@ -8930,7 +9525,43 @@
     "mapsLink": "https://www.google.com/maps/search/Strome%20Castle%20Highland%20scotland",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Scotland_Strome_Castle.jpg/330px-Scotland_Strome_Castle.jpg",
     "imgSource": "wikipedia",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "strome-castle-img-1",
+        "url": "https://lh3.googleusercontent.com/places/ANXAkqHRIkwr4DxSf4apNZ3yoDn0_aMBXDG1pQpHPG5lfqJuhpzy1QuP8Ny4ti1TInB4YfRGQONNNSQVh-lU5CXwiAXosz9aiZ3Z1xs=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/places/ANXAkqHRIkwr4DxSf4apNZ3yoDn0_aMBXDG1pQpHPG5lfqJuhpzy1QuP8Ny4ti1TInB4YfRGQONNNSQVh-lU5CXwiAXosz9aiZ3Z1xs=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "strome-castle-img-2",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPjl5TVWT2VLdis_chJldpVTHw7oLcpKKdhIlbfgmqI4KzUv9dGScOmqVYSPCj9z2nE_XYuYBp8itv1KH6Dbfbv_4hqhDh7KJ93ZAk0rGQs9zvm8fgUV9vlugJs4-h6Giv14AQXv8AYlKSOYNo=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPjl5TVWT2VLdis_chJldpVTHw7oLcpKKdhIlbfgmqI4KzUv9dGScOmqVYSPCj9z2nE_XYuYBp8itv1KH6Dbfbv_4hqhDh7KJ93ZAk0rGQs9zvm8fgUV9vlugJs4-h6Giv14AQXv8AYlKSOYNo=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "strome-castle-img-3",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPRln8wLE907coe8TBYxdUb_wFgPLWkHWMgk03ZIsekbw99b6qwxhFFLSkcsdBUmC98_UH0KoSD0pHWXcagyijN0e9QLUQjoivjsqZcyictpTPjxbkhj6vBiVB40GsG3lE_4-4QX5_as2OtH88=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZPRln8wLE907coe8TBYxdUb_wFgPLWkHWMgk03ZIsekbw99b6qwxhFFLSkcsdBUmC98_UH0KoSD0pHWXcagyijN0e9QLUQjoivjsqZcyictpTPjxbkhj6vBiVB40GsG3lE_4-4QX5_as2OtH88=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "strome-castle-img-4",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNFvCglaxzG9YLZeXG_ERmH4u8ukXcQYGMDnhabzeqqHtKfiFRt9ToN-deTcFSxq3us5tkTlDVmtL6YDI_nKrabV3VqPt7fn7pOlV-yUxxP3shy-i0CCGN1ZY1_zsP5_g39j9hD7IiFklhuqA=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZNFvCglaxzG9YLZeXG_ERmH4u8ukXcQYGMDnhabzeqqHtKfiFRt9ToN-deTcFSxq3us5tkTlDVmtL6YDI_nKrabV3VqPt7fn7pOlV-yUxxP3shy-i0CCGN1ZY1_zsP5_g39j9hD7IiFklhuqA=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      },
+      {
+        "id": "strome-castle-img-5",
+        "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOYz1-HjHnupcn_EAitJclTPjcsY0e131cbI9L3Id-4z3bmW1prYxM7gVN8QUx5SCyUH0VYJbV4r1CKQhJdRf1oJHUXlgmUMP7mRwpGbZnhpgMArFS3sSd3oJ5cpLK-QHlr5gkjWbPwcjqx8g=s4800-w800",
+        "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOYz1-HjHnupcn_EAitJclTPjcsY0e131cbI9L3Id-4z3bmW1prYxM7gVN8QUx5SCyUH0VYJbV4r1CKQhJdRf1oJHUXlgmUMP7mRwpGbZnhpgMArFS3sSd3oJ5cpLK-QHlr5gkjWbPwcjqx8g=s4800-w800",
+        "r2Key": null,
+        "source": "google"
+      }
+    ],
     "desc": "Strome Castle is a ruined castle on the shore of Loch Carron in Stromemore, 3.5 miles south-west of the village of Lochcarron, on the headland between Loch Carron and Loch Kishorn, on the west coast of the Scottish Highlands.",
     "type": "castle",
     "period": "15th century",
@@ -8952,7 +9583,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Strome_Castle",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "approved"
   },
   {
     "name": "Inverlochy Castle",
@@ -8985,7 +9617,12 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "reviewStatus": "flagged",
+    "lastReviewed": "2026-05-13",
+    "reviewReasons": [
+      "needs-review"
+    ]
   },
   {
     "name": "Dunvegan Castle",
