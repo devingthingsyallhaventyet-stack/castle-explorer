@@ -764,24 +764,21 @@ function renderTable() {
   }
   
   const isEnrichedTab = currentMainTab === 'enriched';
-  
   if (isEnrichedTab) {
     let rows = filtered.map((d,i) => {
       const wikiUrl = d.wikipediaUrl || d.wiki || '';
-      const listingUrl = `https://castlecore.uk/site/${d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}.html`;
       return `<tr>
         <td>${i+1}</td>
-        <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
         <td><strong>${esc(d.name)}</strong></td>
         <td>${esc(d.country)}</td>
         <td>${esc(d.region||'').replace(/-/g,' ')}</td>
         <td>${esc(d.county||'')}</td>
-        <td>${esc(d.type||'')}</td>
+        <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
         <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wiki</a>` : '—'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td>
-        <td>${Array.isArray(d.gallery) ? d.gallery.length + 1 : (d.image ? 1 : 0)}</td>
+        <td>${esc(d.type||'')}</td>
       </tr>`;
     }).join('');
-    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Links</th><th>Images</th></tr></thead><tbody>${rows}</tbody></table>`;
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Image</th><th>Links</th><th>Type</th></tr></thead><tbody>${rows}</tbody></table>`;
     return;
   }
   
