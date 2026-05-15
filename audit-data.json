@@ -817,7 +817,33 @@
     "mapsLink": "https://www.google.com/maps/search/Finlaggan%20Castle%20Argyll%20and%20Bute%20scotland",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg/330px-Finlaggan_-_Eilean_M%C3%B3r_from_the_north_20120411.jpg",
     "imgSource": "wikipedia",
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "finlaggan-castle-img-1",
+        "url": "https://places.googleapis.com/v1/places/ChIJo3V6o7dFikgRqnd1n_Id3wA/photos/Ab43m-uQsBzWu75H0g67xcJo1VvA7OGaJMHnKMdrh1uKDiwKbWC9Z3xlWLj0ZS2pVcAxAGi4MvxjOc0ABzqf0neRs_uysWhZGdC-GVoI_MK90GLELXJf61xf9Bjrnp9ghQv5m01CELys944xORumEl9hq6UyI-bIxkEDDQEpsCteUZXqm7Lq2fTc3Sejs-LzBL1uy4qrVMXm-iL5sc8vl0x2Op4obl2eRGMbGvgdR9x4vmGR0af0QrAQmHn9kCVrEV-tzmnQXShH3cHewIxzRquF7nDx6KL3frepgfXnwHI9n9ggKuQJMyFNdpj3_Qrl9fyNtPK60OpUwovq-l_WmdO0ECxfmLwGRkZWEDb3iHy1QpS9NX0azdrTCGUNFwionX0NE20PiyM377PKxcixE2qxDZDe11PqlLr0flMnKnvWvLk82XY/media?maxWidthPx=1200&key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8",
+        "source": "google"
+      },
+      {
+        "id": "finlaggan-castle-img-2",
+        "url": "https://places.googleapis.com/v1/places/ChIJo3V6o7dFikgRqnd1n_Id3wA/photos/Ab43m-u4lNWDKRioMuP2Ij4-_NrGf5LFJW6apOP6OHQ18Sfauw-HSK_Xo0HKXLqmlhzGhu_2gFf2t0x6_y_Sj0WGKoOc25Snn6Ft5v7tjRw368IxKx5S5y3VBgT0gqPMUMWnGDS5gxeDywd_RyvD9ItiYqyeBohveUswr2TKuT8A_cBkXCBpYIlMHZFuji8-mPSyHFyqpSJLz0QVcvN3TgCrdtuIw0M8Fz686X8GmeaawaNImGLFS07mVJSlgcyye9XfcqMaxVxD5B2eY1slEnM9w0JDkELibI6i45JuXEb5XdXWrgDsImwwl_89JJY5tcYZ9JdaSPK1u5E7TzUVPAkvtRxlBZRZXuKh1sbXTgKIvjoKpuANL4-0Cv3h6jsreDw44rBT_VlUL_zuL1rdiscF19lLj3Ku62esIaIv8fTVu6XCOA/media?maxWidthPx=1200&key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8",
+        "source": "google"
+      },
+      {
+        "id": "finlaggan-castle-img-3",
+        "url": "https://places.googleapis.com/v1/places/ChIJo3V6o7dFikgRqnd1n_Id3wA/photos/Ab43m-tcnokC6I-ETdWyxgoH0xEyuDW424G5gFbrESvRWNyiIQAdAkf3b2k90-h8JdFZhDR-FJXEsAn-L7RGdsq6omZCpmAQB9-UkSb2lqAG6QxHW11Y5GDInm4a3ozBqzTO3pVMU1WS5Bq5MhROnx3q3JU6TMn2nua1fE0ljEdmI3l-M1VQ1G14hS4-GgZjK80zcomfN84HT5MH-a2Y1oRGD5qvEvVwEPx5-1C4qAzde4_-ewTxAoMRfsS_JGzcms-aCfhiTsyBuJ6OzwDHS-NlxbVGxxBGJWXBxyGnbGT1Tij2ucdMzSUCPeSuaQgObCG0CD-3mBfQ_lM3pkGDZz4qjPkjRw3U4rmQa5bkxnV_gTd6pI2Zy7LBhgtVnEaXEZAww5uE8FWfdlYPp-2sZrSgA9_GOfdsIrpttXwLte0PkGQwoMqU/media?maxWidthPx=1200&key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8",
+        "source": "google"
+      },
+      {
+        "id": "finlaggan-castle-img-4",
+        "url": "https://places.googleapis.com/v1/places/ChIJo3V6o7dFikgRqnd1n_Id3wA/photos/Ab43m-s4_hvowiy9oJjv44thi3KRkgaHbU1_IifU8JJL1yzTsWTh6jJVlhi_2hikZQtEkKMhzQfXQsG-oPvATO5maFk0UHSfAnDMSJXQmTVvlN9E96S2n0vLLheUiRgY7tcgwPy3FWjDy0zu_xE8uoXa1R4zebeLqs0CSamPvexXXDO_UFeTcF6aoZOyQRV9000nvAuFfLr1XNfYF4Z9hnfJn-Iyj0DpDanA7F5FBmP8DILJzbAJ1W5j-LIvq1zw8bE5s-fxIx02TEMHc2qIVuIAI6tzU0GM4DahLi55dRJqryDDgUKoKEdAtS9yPfg98UQU3QbPUz7TKmfM5D-bde0-LFYz1NnRjjMwVbifmQ2wTLGQS4JPwdZqpnf9-wRm_5ePJ-ZTmpwBVuOjdk_TKicfy1wpNapjwuMrQgzaeUwAJQd0XVmc/media?maxWidthPx=1200&key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8",
+        "source": "google"
+      },
+      {
+        "id": "finlaggan-castle-img-5",
+        "url": "https://places.googleapis.com/v1/places/ChIJo3V6o7dFikgRqnd1n_Id3wA/photos/Ab43m-trRr7ZOzdiko885vwHczTVb3LwgwUA2_ZKaEb93OC8txRZrJ9vljsyojmp76h6tL4PQ_82rgnAccssOW1GGZkH666rkZtbUFfNYUpX5YMebk5Sddtt2MCywt8r51cpqORtkke1CnKnh2UHctYK00X0vRhbdFZ07tIkxK7JxxoND8S9lpGRIKdpiV4xnWKFNUJBulCbolqNuh1meHG3dXB8h-8bW8Uq9VqRQ1C3k3JAMgz7VWPuvy6ZNoyxaiZBFa361hBwJZYD1H9hhOx4cmtEZhLHAVz0tbnSCQ_SR4VNu7FKVpBYpinGLksouarK94aPxgTEeWMsCEDV3z5UGPzmLiwnfvssWwzp_fmAv2wjNh1syyk5vqsh1dqEBmOvI9VP4vs_lZxnaybmtavMlo72Y3h1MSuClZK4MAfakjM/media?maxWidthPx=1200&key=AIzaSyA1OrSJLhSG2YOLKPAo9-Jk0Lwoe4X0SX8",
+        "source": "google"
+      }
+    ],
     "desc": "Finlaggan is a historic site on Eilean Mòr in Loch Finlaggan, on the island of Islay, around 4 km west of the ferry terminal at Port Askaig.",
     "type": "castle",
     "period": "12th-15th century",
@@ -829,7 +855,8 @@
       "atmospheric",
       "museum",
       "prehistoric",
-      "celtic"
+      "celtic",
+      "images-need-review"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Finlaggan",
@@ -840,11 +867,17 @@
     ],
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
+    "hasGooglePlaces": "yes",
     "imageReviewDone": true,
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-02",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "verifiedSources": [
+      "https://www.finlaggan.org/"
+    ],
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15",
+    "enrichNote": "Imported 5 Google Places images, added finlaggan.org as verified source, tagged for image review"
   },
   {
     "name": "Lews Castle",
