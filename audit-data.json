@@ -6983,9 +6983,7 @@
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
     "needsEnrich": true,
-    "enrichStatus": "enriched",
-    "enrichNote": "No google places and wikipedia has minimal info. Needs more research.",
-    "enrichReviewDate": "2026-05-15"
+    "enrichNote": "No google places and wikipedia has minimal info. Needs more research."
   },
   {
     "name": "Garth Castle",
