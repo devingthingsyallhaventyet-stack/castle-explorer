@@ -398,7 +398,6 @@ function populateFilters() {
 
 function applyFilters() {
   const q = document.getElementById('searchBox').value.toLowerCase();
-  console.log('[applyFilters] q="'+q+'" tab='+currentMainTab);
   const country = document.getElementById('countryFilter').value;
   const imgSrc = document.getElementById('imgSourceFilter').value;
   // Use main tab for status filtering
@@ -418,7 +417,6 @@ function applyFilters() {
     return true;
   });
   if (currentMainTab === 'enrichReview') filtered = filtered.slice(0, 10);
-  console.log('[applyFilters] filtered='+filtered.length+' view='+currentView);
   currentIdx = 0;
   if (currentView === 'card') renderCard();
   else renderTable();
