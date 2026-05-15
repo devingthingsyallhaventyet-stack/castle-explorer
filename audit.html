@@ -212,6 +212,7 @@ body{padding-bottom:50px}
   <button class="btn-flag" onclick="quickFlag()">⚑ Flag <span class="kbd">F</span></button>
   <button style="background:var(--border);color:var(--text);padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="openFlagPanel()">⚑+ Detail</button>
   <button class="btn-skip" onclick="goNext()">Skip → <span class="kbd">S</span></button>
+  <button id="btnSendToClawz" style="display:none;background:#58a6ff;color:#000;padding:10px 20px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;margin-left:12px" onclick="sendToClawz()">🦞 Send to Clawz</button>
 </div>
 
 <div class="flag-overlay" id="flagOverlay">
@@ -315,6 +316,7 @@ function switchMainTab(tab) {
   document.getElementById('actionBar').style.display = wantView === 'card' ? 'flex' : 'none';
   document.getElementById('btnCardView').classList.toggle('active', wantView === 'card');
   document.getElementById('btnTableView').classList.toggle('active', wantView === 'table');
+  document.getElementById('btnSendToClawz').style.display = (tab === 'enrichReview') ? 'inline-block' : 'none';
   applyFilters();
 }
 
@@ -1026,6 +1028,60 @@ function copyForClawz() {
   if (!reviewed.length) { alert('No reviewed entries yet! Use A to approve or F to keep flagged.'); return; }
   const text = `Reviewed ${reviewed.length} listings:\n(A = move to approved, F = keep flagged)\n\n` + reviewed.join('\n');
   navigator.clipboard.writeText(text).then(() => alert(`Copied ${reviewed.length} reviewed entries!`)).catch(() => prompt('Copy this:', text));
+}
+
+const CLAWZ_RELAY = 'https://castlecore-enrich-relay.devingthingsyallhaventyet.workers.dev';
+async function sendToClawz() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const btn = document.getElementById('btnSendToClawz');
+  btn.textContent = '🦞 Sending...';
+  btn.disabled = true;
+  
+  const wikiUrl = d.wikipediaUrl || d.wiki || 'none';
+  const mapsUrl = d.mapsLink || 'none';
+  const gallery = (d.gallery || []).map(g => typeof g === 'string' ? g : (g.url || g.googlePhotoUri || '')).filter(Boolean);
+  const reasons = d.reviewReasons || [];
+  const note = d.reviewNote || '';
+  
+  const text = `🔍 *ENRICH REVIEW*\n\n` +
+    `*Name:* ${d.name}\n` +
+    `*Country:* ${d.country}\n` +
+    `*Region:* ${(d.region || '').replace(/-/g, ' ')}\n` +
+    `*County:* ${d.county || 'unknown'}\n` +
+    `*Type:* ${d.type || 'unknown'}\n` +
+    `*Period:* ${d.period || 'unknown'}\n` +
+    `*Coords:* ${d.lat || '?'}, ${d.lng || '?'}\n` +
+    `*Wikipedia:* ${wikiUrl}\n` +
+    `*Maps:* ${mapsUrl}\n` +
+    `*Main Image:* ${d.image || 'none'}\n` +
+    `*Gallery:* ${gallery.length} images\n` +
+    `*Image Source:* ${d.imgSource || 'unknown'}\n` +
+    `*Has Wikipedia:* ${d.hasWikipedia || 'unknown'}\n` +
+    `*Has Google Places:* ${d.hasGooglePlaces || 'unknown'}\n` +
+    (reasons.length ? `*Flag Reasons:* ${reasons.join(', ')}\n` : '') +
+    (note ? `*Note:* ${note}\n` : '') +
+    `\n*Description:*\n${d.desc || 'No description'}\n` +
+    `\n_Listing ${currentIdx + 1} of ${filtered.length}_`;
+  
+  try {
+    const resp = await fetch(CLAWZ_RELAY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    });
+    const result = await resp.json();
+    if (result.ok) {
+      btn.textContent = '✅ Sent!';
+      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 2000);
+    } else {
+      btn.textContent = '❌ Failed';
+      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 2000);
+    }
+  } catch (e) {
+    btn.textContent = '❌ Error';
+    setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 2000);
+  }
 }
 
 function saveProgressToFile() {
