@@ -1,1 +1,50 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Temple Church\n*Country:* scotland\n*Region:* edinburgh lothians\n*County:* Midlothian\n*Type:* abbey\n*Period:* 14th century\n*Coords:* 51.5132, -0.1104\n*Wikipedia:* https://en.wikipedia.org/wiki/Temple,_Midlothian\n*Maps:* https://www.google.com/maps/search/Temple%20Church%20Midlothian%20scotland\n*Main Image:* https://img.castlecore.uk/temple-church.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Update name to Old Temple Kirk , google maps link - https://maps.app.goo.gl/biwFY3CwJ8pGTV1v6 , add source - https://www.templeoldkirk.org/default.asp?page=history , remove wikipedia link as no pages seem to exist \n\n*Description:*\nThe Temple Church, a royal peculiar in the Church of England, is a church in the Inner and Middle Temples located between Fleet Street and the River Thames in London, England. It was built by the Knights Templar for their English headquarters in the Temple precinct and consecrated on 10 February 1185 by Patriarch Heraclius of Jerusalem. During the reign of King John (1199–1216) it served as the royal treasury, supported by the role of the Knights Templar as proto-international bankers. It is now jointly owned by the Inner Temple and Middle Temple Inns of Court, bases of the English legal profession. It is famous for being a round church, a common design feature for Knights Templar churches, and for its 13th- and 14th-century stone effigies. It was heavily damaged by German bombing during World War II and has since been greatly restored and rebuilt.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Temple Church",
+        "country": "scotland",
+        "region": "edinburgh-lothians",
+        "county": "Midlothian",
+        "lat": "51.5132",
+        "lng": "-0.1104",
+        "mapsLink": "https://www.google.com/maps/search/Temple%20Church%20Midlothian%20scotland",
+        "image": "https://img.castlecore.uk/temple-church.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/temple-church-2.jpg",
+          "https://img.castlecore.uk/temple-church-3.jpg",
+          "https://img.castlecore.uk/temple-church-4.jpg",
+          "https://img.castlecore.uk/temple-church-5.jpg"
+        ],
+        "desc": "The Temple Church, a royal peculiar in the Church of England, is a church in the Inner and Middle Temples located between Fleet Street and the River Thames in London, England. It was built by the Knights Templar for their English headquarters in the Temple precinct and consecrated on 10 February 1185 by Patriarch Heraclius of Jerusalem. During the reign of King John (1199–1216) it served as the royal treasury, supported by the role of the Knights Templar as proto-international bankers. It is now jointly owned by the Inner Temple and Middle Temple Inns of Court, bases of the English legal profession. It is famous for being a round church, a common design feature for Knights Templar churches, and for its 13th- and 14th-century stone effigies. It was heavily damaged by German bombing during World War II and has since been greatly restored and rebuilt.",
+        "type": "abbey",
+        "period": "14th century",
+        "rating": 3.6,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "free-entry",
+          "gothic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Temple_Church",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Temple_Church%2C_Temple%2C_London_EC4_%282%29.jpeg/330px-Temple_Church%2C_Temple%2C_London_EC4_%282%29.jpeg",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "Update name to Old Temple Kirk , google maps link - https://maps.app.goo.gl/biwFY3CwJ8pGTV1v6 , add source - https://www.templeoldkirk.org/default.asp?page=history , remove wikipedia link as no pages seem to exist ",
+        "enrichNotes": "Update name to Old Temple Kirk , google maps link - https://maps.app.goo.gl/biwFY3CwJ8pGTV1v6 , add source - https://www.templeoldkirk.org/default.asp?page=history , remove wikipedia link as no pages seem to exist "
+      },
+      "ts": 1778869996964
+    }
+  ]
+}
