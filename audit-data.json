@@ -13422,7 +13422,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Auchindoun Castle",
@@ -13497,7 +13499,7 @@
     "county": "Dundee",
     "lat": "56.46444444",
     "lng": "-2.98388889",
-    "mapsLink": "https://www.google.com/maps/search/Dudhope%20Castle%20Dundee%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/mw3FyPhouq2K4K4Q7",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Dudhope_Castle.jpg/330px-Dudhope_Castle.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -13524,7 +13526,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dudhope_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichNote": "update google places link - https://maps.app.goo.gl/mw3FyPhouq2K4K4Q7\n",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Arbroath Abbey",
@@ -13597,7 +13602,7 @@
     "county": "Angus",
     "lat": "56.72916667",
     "lng": "-2.65888889",
-    "mapsLink": "https://www.google.com/maps/search/Brechin%20Castle%20Angus%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/Qv1w4ySfTLaU632E6",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg/330px-Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -13623,7 +13628,16 @@
     },
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Dalhousie Estates",
+        "url": "https://dalhousieestates.co.uk/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": " google places link https://maps.app.goo.gl/Qv1w4ySfTLaU632E6 , add as source  https://dalhousieestates.co.uk/",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Pluscarden Abbey",
@@ -13851,7 +13865,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/New_Slains_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Lickleyhead Castle",
