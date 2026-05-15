@@ -82,6 +82,50 @@
         "enrichNotes": ""
       },
       "ts": 1778872220514
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ardtornish Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 13th century\n*Coords:* 56.51916667, -5.75388889\n*Wikipedia:* https://en.wikipedia.org/wiki/Ardtornish_Castle\n*Maps:* https://www.google.com/maps/search/Ardtornish%20Castle%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNuH3dN7otO3r-qcIiCDnGZB9z0ElNx37UmKkjJMXzoqV15RbOjMAEgoOHMIintklxRmCqywokYA7AfXebsyvtZ6iH4SR1JwNtlAaD5o9nf6WetGxg3HF6ASZW0ld0-5i8gpNfUd8DkDVPPsQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nArdtornish Castle is a castle situated in the grounds of the Ardtornish estate in Morvern, on the west coast of Scotland. It stands at the seaward end of a promontory which extends in a southerly direction into the Sound of Mull, about 1 mile south-east of the village of Lochaline, Highland. It is protected as a scheduled monument.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Ardtornish Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "56.51916667",
+        "lng": "-5.75388889",
+        "mapsLink": "https://www.google.com/maps/search/Ardtornish%20Castle%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNuH3dN7otO3r-qcIiCDnGZB9z0ElNx37UmKkjJMXzoqV15RbOjMAEgoOHMIintklxRmCqywokYA7AfXebsyvtZ6iH4SR1JwNtlAaD5o9nf6WetGxg3HF6ASZW0ld0-5i8gpNfUd8DkDVPPsQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Ardtornish Castle is a castle situated in the grounds of the Ardtornish estate in Morvern, on the west coast of Scotland. It stands at the seaward end of a promontory which extends in a southerly direction into the Sound of Mull, about 1 mile south-east of the village of Lochaline, Highland. It is protected as a scheduled monument.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "remote",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Ardtornish_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ardtornish_Castle_and_the_Sound_of_Mull.jpg/330px-Ardtornish_Castle_and_the_Sound_of_Mull.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Jon Moorby",
+          "license": "CC BY-SA 2.0",
+          "description": "Ardtornish Castle and the Sound of Mull in Morvern",
+          "credit": "Geograph https://www.geograph.org.uk/photo/340306",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778872242253
     }
   ]
 }
