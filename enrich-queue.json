@@ -1,1 +1,53 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Cranshaws Castle\n*Country:* scotland\n*Region:* borders\n*County:* Scottish Borders\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 55.8484, -2.5094\n*Wikipedia:* https://en.wikipedia.org/wiki/Cranshaws_Castle\n*Maps:* https://www.google.com/maps/search/Cranshaws%20Castle%20Scottish%20Borders%20scotland\n*Main Image:* https://img.castlecore.uk/cranshaws-castle.jpg\n*Gallery:* 8 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research. no google maps listing seems to exist. looks like you could stay there at one point but not sure if this is still true. https://www.gentlemansbutler.com/cranshaws-castle-luxurious-scottish-getaway/\n\n*Description:*\nCranshaws Castle or Cranshaws Tower is a privately owned 15th-century pele situated by the village of Cranshaws in Berwickshire, Scotland. The building is still in use as a residence, and is protected as a category A listed building.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Cranshaws Castle",
+        "country": "scotland",
+        "region": "borders",
+        "county": "Scottish Borders",
+        "lat": "55.8484",
+        "lng": "-2.5094",
+        "mapsLink": "https://www.google.com/maps/search/Cranshaws%20Castle%20Scottish%20Borders%20scotland",
+        "image": "https://img.castlecore.uk/cranshaws-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/cranshaws-castle-2.jpg",
+          "https://img.castlecore.uk/cranshaws-castle-3.jpg",
+          "https://img.castlecore.uk/cranshaws-castle-4.jpg",
+          "https://img.castlecore.uk/cranshaws-castle-5.jpg",
+          "https://img.castlecore.uk/cranshaws-castle-main-2.jpg",
+          "https://img.castlecore.uk/cranshaws-castle-main-3.jpg",
+          "https://img.castlecore.uk/cranshaws-castle-main-4.jpg",
+          "https://img.castlecore.uk/cranshaws-castle-main-5.jpg"
+        ],
+        "desc": "Cranshaws Castle or Cranshaws Tower is a privately owned 15th-century pele situated by the village of Cranshaws in Berwickshire, Scotland. The building is still in use as a residence, and is protected as a category A listed building.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 3.2,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "remote",
+          "atmospheric"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Cranshaws_Castle_-_geograph.org.uk_-_142497.jpg/330px-Cranshaws_Castle_-_geograph.org.uk_-_142497.jpg",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "needs more research. no google maps listing seems to exist. looks like you could stay there at one point but not sure if this is still true. https://www.gentlemansbutler.com/cranshaws-castle-luxurious-scottish-getaway/",
+        "enrichNotes": "needs more research. no google maps listing seems to exist. looks like you could stay there at one point but not sure if this is still true. https://www.gentlemansbutler.com/cranshaws-castle-luxurious-scottish-getaway/"
+      },
+      "ts": 1778869517303
+    }
+  ]
+}
