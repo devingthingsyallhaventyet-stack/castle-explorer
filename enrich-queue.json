@@ -40,6 +40,48 @@
         "enrichNotes": ""
       },
       "ts": 1778872174074
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Varrich Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 14th century\n*Coords:* 58.47575556, -4.43543889\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Varrich\n*Maps:* https://www.google.com/maps/search/Varrich%20Castle%20Highland%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png/330px-2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCastle Varrich is a castle in the far north of the Scottish Highlands, near the village of Tongue. The castle is on a local high point of rock, overlooking both the Kyle of Tongue and the village of Tongue. The castle's precise origins and age are unknown.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Varrich Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "58.47575556",
+        "lng": "-4.43543889",
+        "mapsLink": "https://www.google.com/maps/search/Varrich%20Castle%20Highland%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png/330px-2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Castle Varrich is a castle in the far north of the Scottish Highlands, near the village of Tongue. The castle is on a local high point of rock, overlooking both the Kyle of Tongue and the village of Tongue. The castle's precise origins and age are unknown.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4,
+        "tags": [
+          "ruins-romantic",
+          "hilltop",
+          "remote",
+          "photogenic",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Varrich",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png/330px-2011_Schotland_Tongue_Varrich_Castle_op_morene_met_Ben_Hope_3-06-2011_19-27-33.png",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Varrich",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778872220514
     }
   ]
 }
