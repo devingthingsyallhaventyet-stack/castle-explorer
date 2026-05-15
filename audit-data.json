@@ -11570,7 +11570,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Old_Scatness",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Varrich Castle",
@@ -11609,7 +11611,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Varrich",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Ardtornish Castle",
@@ -11647,7 +11651,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Tor Castle",
@@ -11668,7 +11674,9 @@
       "ruins-romantic",
       "woodland",
       "free-entry",
-      "remote"
+      "remote",
+      "no-google-places",
+      "needs-research"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Tor_Castle",
@@ -11684,7 +11692,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tor_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichNote": "no google places, only 1 wikipedia photo. needs more research to make a listing.",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Balfour Castle",
@@ -11898,7 +11909,9 @@
     "rating": 3.3,
     "tags": [
       "well-preserved",
-      "medieval"
+      "medieval",
+      "no-google-places",
+      "needs-research"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Dalcross_Castle",
@@ -11911,7 +11924,16 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dalcross_Castle",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "no google places listing. has an older website http://www.dalcross.org/ would need more research to do an actual listing.",
+    "enrichReviewDate": "2026-05-15",
+    "sources": [
+      {
+        "label": "Dalcross Castle",
+        "url": "http://www.dalcross.org/"
+      }
+    ]
   },
   {
     "name": "Cromarty Courthouse",
@@ -11948,7 +11970,16 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cromarty_Courthouse",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Cromarty Museum",
+        "url": "https://www.cromartymuseum.org.uk/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "add source https://www.cromartymuseum.org.uk/",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Tarbat Discovery Centre",
