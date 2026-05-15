@@ -48,6 +48,52 @@
         "enrichNotes": "needs more research. no google maps listing seems to exist. looks like you could stay there at one point but not sure if this is still true. https://www.gentlemansbutler.com/cranshaws-castle-luxurious-scottish-getaway/"
       },
       "ts": 1778869517303
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Castle Craig\n*Country:* scotland\n*Region:* borders\n*County:* Scottish Borders\n*Type:* castle\n*Period:* Medieval\n*Coords:* 41.5565, -72.8354\n*Wikipedia:* https://en.wikipedia.org/wiki/Castlecraig\n*Maps:* https://www.google.com/maps/search/Castle%20Craig%20Scottish%20Borders%20scotland\n*Main Image:* https://img.castlecore.uk/castle-craig.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Delete associated google maps link. Needs more research. No google places seem to exist. \n\n*Description:*\nCastle Craig, located on East Peak in the Hanging Hills, is constructed of trap rock and is 32 feet (10 m) in height and has a base 58 feet (18 m) in circumference. A metal interior stairway is used to ascend the observation deck on top. It stands 976 feet (297 m) above sea level and provides an expansive view of the greater Meriden, Connecticut area.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Castle Craig",
+        "country": "scotland",
+        "region": "borders",
+        "county": "Scottish Borders",
+        "lat": "41.5565",
+        "lng": "-72.8354",
+        "mapsLink": "https://www.google.com/maps/search/Castle%20Craig%20Scottish%20Borders%20scotland",
+        "image": "https://img.castlecore.uk/castle-craig.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/castle-craig-2.jpg",
+          "https://img.castlecore.uk/castle-craig-3.jpg",
+          "https://img.castlecore.uk/castle-craig-4.jpg",
+          "https://img.castlecore.uk/castle-craig-5.jpg"
+        ],
+        "desc": "Castle Craig, located on East Peak in the Hanging Hills, is constructed of trap rock and is 32 feet (10 m) in height and has a base 58 feet (18 m) in circumference. A metal interior stairway is used to ascend the observation deck on top. It stands 976 feet (297 m) above sea level and provides an expansive view of the greater Meriden, Connecticut area.",
+        "type": "castle",
+        "period": "Medieval",
+        "rating": 3.4,
+        "tags": [
+          "ruins-romantic",
+          "woodland",
+          "coastal",
+          "free-entry",
+          "remote"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Craig",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Castle_Craig.jpg/330px-Castle_Craig.jpg",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "Delete associated google maps link. Needs more research. No google places seem to exist. ",
+        "enrichNotes": "Delete associated google maps link. Needs more research. No google places seem to exist. "
+      },
+      "ts": 1778869634467
     }
   ]
 }
