@@ -1516,7 +1516,16 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "Dunollie Museum & Castle",
+        "url": "https://www.dunollie.org/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "Added dunollie.org as verified source",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Calvay Castle",
