@@ -1,1 +1,46 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Balhousie Castle\n*Country:* scotland\n*Region:* fife perthshire\n*County:* Perth and Kinross\n*Type:* castle\n*Period:* 15th century\n*Coords:* 56.4034, -3.4366\n*Wikipedia:* https://en.wikipedia.org/wiki/Balhousie_Castle\n*Maps:* https://www.google.com/maps/search/Balhousie%20Castle%20Perth%20and%20Kinross%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg/330px-Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://theblackwatch.co.uk/\n\n*Description:*\nBalhousie Castle, located in Perth, Scotland, was built in the 17th century.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Balhousie Castle",
+        "country": "scotland",
+        "region": "fife-perthshire",
+        "county": "Perth and Kinross",
+        "lat": "56.4034",
+        "lng": "-3.4366",
+        "mapsLink": "https://www.google.com/maps/search/Balhousie%20Castle%20Perth%20and%20Kinross%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg/330px-Perth_and_Kinross_Perth_Balhousie_Castle_1.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Balhousie Castle, located in Perth, Scotland, was built in the 17th century.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 3.9,
+        "tags": [
+          "well-preserved",
+          "museum",
+          "gift-shop",
+          "kid-friendly",
+          "tearoom-cafe"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Balhousie_Castle",
+        "imageAttribution": "local",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Balhousie_Castle",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "add source - https://theblackwatch.co.uk/",
+        "enrichNotes": "add source - https://theblackwatch.co.uk/"
+      },
+      "ts": 1778870607733
+    }
+  ]
+}
