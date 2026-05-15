@@ -44,6 +44,48 @@
         "enrichNotes": ""
       },
       "ts": 1778871925070
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dornoch Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 15th century\n*Coords:* 57.87975, -4.02984\n*Wikipedia:* https://en.wikipedia.org/wiki/Dornoch_Castle\n*Maps:* https://www.google.com/maps/search/Dornoch%20Castle%20Highland%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Dornoch_Castle.jpg/330px-Dornoch_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source https://dornochcastlehotel.com/ , mark as hotel \n\n*Description:*\nDornoch Castle is situated opposite Dornoch Cathedral in the town of Dornoch, Scotland.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Dornoch Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.87975",
+        "lng": "-4.02984",
+        "mapsLink": "https://www.google.com/maps/search/Dornoch%20Castle%20Highland%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Dornoch_Castle.jpg/330px-Dornoch_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Dornoch Castle is situated opposite Dornoch Cathedral in the town of Dornoch, Scotland.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "tearoom-cafe",
+          "medieval",
+          "gothic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dornoch_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Tom Pennington",
+          "license": "CC BY-SA 2.0",
+          "description": "Dornoch Castle",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "add source https://dornochcastlehotel.com/ , mark as hotel ",
+        "enrichNotes": "add source https://dornochcastlehotel.com/ , mark as hotel "
+      },
+      "ts": 1778871958603
     }
   ]
 }
