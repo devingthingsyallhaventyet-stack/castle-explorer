@@ -1,1 +1,49 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lochindorb Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 13th century\n*Coords:* 57.4075, -3.70638889\n*Wikipedia:* https://en.wikipedia.org/wiki/Lochindorb\n*Maps:* https://www.google.com/maps/search/Lochindorb%20Castle%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZO-6a97twJgHikGeedAORRqMPQDzYRbhrEMiCXUb2LC8kY5doiY2R-GBSXN3OpdtthAukQeFFN1wyZYjLBP7ZAKqoniTbv89nFmFg27-VpEXRulGyXr_2eAnBhtMYoKFwZADfmLdEdyxri1ZjM=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nLochindorb is a freshwater loch north of Grantown on Spey in the Highland council area of Scotland. In the loch there is an island, which is now thought to have been artificially created, and on that island are the ruins of Lochindorb Castle, a former stronghold of the Clan Comyn. King Edward I of England stayed in the castle during his 1303 campaign against the Scots. The loch is a popular spot with fishers, and also with birdwatchers, who come to see the local black-throated divers and greylag geese. At the southeast edge of the loch there is a small patch of coniferous forest.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Lochindorb Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.4075",
+        "lng": "-3.70638889",
+        "mapsLink": "https://www.google.com/maps/search/Lochindorb%20Castle%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZO-6a97twJgHikGeedAORRqMPQDzYRbhrEMiCXUb2LC8kY5doiY2R-GBSXN3OpdtthAukQeFFN1wyZYjLBP7ZAKqoniTbv89nFmFg27-VpEXRulGyXr_2eAnBhtMYoKFwZADfmLdEdyxri1ZjM=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lochindorb is a freshwater loch north of Grantown on Spey in the Highland council area of Scotland. In the loch there is an island, which is now thought to have been artificially created, and on that island are the ruins of Lochindorb Castle, a former stronghold of the Clan Comyn. King Edward I of England stayed in the castle during his 1303 campaign against the Scots. The loch is a popular spot with fishers, and also with birdwatchers, who come to see the local black-throated divers and greylag geese. At the southeast edge of the loch there is a small patch of coniferous forest.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "island",
+          "remote",
+          "dark-brooding",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Lochindorb",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/LochindorbCastle.JPG/330px-LochindorbCastle.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Calgacus",
+          "license": "CC BY-SA 2.5",
+          "description": "Photograph of Lochindorb Castle, Badenoch, Scotland.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778871925070
+    }
+  ]
+}
