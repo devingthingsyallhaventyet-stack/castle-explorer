@@ -1,1 +1,45 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Craigievar Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 17th century\n*Coords:* 57.1742, -2.7181\n*Wikipedia:* https://en.wikipedia.org/wiki/Craigievar_Castle\n*Maps:* https://www.google.com/maps/search/Craigievar%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNuvNlHIIugQ10ozjVVpMJ6sdVPQ5cFnCzkt0vhWG13-3GlkmVRaSMWoo798O5Zu22Z01BA5uvdh-Tqi8uV2i9qhmkYdxFOcOmHcdOrj5BcrUVHaFgjGwYQTl4ZZT-tqilO0ipAsBXuL2moyzRPgZrDEg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCraigievar Castle is a harled castle or fortified country house 6 miles (9.7 km) south of Alford, Aberdeenshire, Scotland. It was the seat of Clan Sempill, and the Forbes family resided here for 350 years until 1963, when the property was sold to the National Trust for Scotland by the 19th Lord Sempill.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Craigievar Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.1742",
+        "lng": "-2.7181",
+        "mapsLink": "https://www.google.com/maps/search/Craigievar%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNuvNlHIIugQ10ozjVVpMJ6sdVPQ5cFnCzkt0vhWG13-3GlkmVRaSMWoo798O5Zu22Z01BA5uvdh-Tqi8uV2i9qhmkYdxFOcOmHcdOrj5BcrUVHaFgjGwYQTl4ZZT-tqilO0ipAsBXuL2moyzRPgZrDEg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Craigievar Castle is a harled castle or fortified country house 6 miles (9.7 km) south of Alford, Aberdeenshire, Scotland. It was the seat of Clan Sempill, and the Forbes family resided here for 350 years until 1963, when the property was sold to the National Trust for Scotland by the 19th Lord Sempill.",
+        "type": "tower house",
+        "period": "17th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Craigievar_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Colin Smith",
+          "license": "CC BY-SA 2.0",
+          "description": "Craigievar Doocot and Castle",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778873116032
+    }
+  ]
+}
