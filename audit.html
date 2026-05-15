@@ -515,6 +515,7 @@ function renderCard() {
         ${(d.wikipediaUrl||d.wiki) ? `<a href="${esc(d.wikipediaUrl||d.wiki)}" target="_blank" style="display:flex;align-items:center;gap:6px">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">❌ No Wikipedia</span>'}
         ${d.mapsLink ? `<a href="${esc(d.mapsLink)}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps ↗</a>` : (hasCoords ? `<a href="${mapsSearchUrl}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps (search) ↗</a>` : '<span style="color:var(--muted)">❌ No Maps link</span>')}
         <a href="https://www.google.com/search?q=${encodeURIComponent(d.name + ' castle ' + (d.county||'') + ' ' + d.country)}" target="_blank" style="display:flex;align-items:center;gap:6px">🔍 Google Search ↗</a>
+        <button onclick="openAllLinks()" style="background:var(--gold);color:#000;border:none;padding:4px 12px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:600">🚀 Open All</button>
       </div>
     </div>
     <div class="wiki-section" id="wikiSection">
@@ -595,6 +596,17 @@ function swapMainImage(thumb, url) {
   document.getElementById('mainImg').src = url;
   document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
   thumb.classList.add('active');
+}
+
+function openAllLinks() {
+  const d = filtered[currentIdx];
+  if (!d) return;
+  const wiki = d.wikipediaUrl || d.wiki;
+  const maps = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
+  const google = `https://www.google.com/search?q=${encodeURIComponent(d.name + ' castle ' + (d.county||'') + ' ' + d.country)}`;
+  if (wiki) window.open(wiki, '_blank');
+  window.open(maps, '_blank');
+  window.open(google, '_blank');
 }
 
 async function fetchWiki(d) {
