@@ -1017,32 +1017,33 @@
     "imageReviewDone": true
   },
   {
-    "name": "Castle Lachlan",
+    "name": "Old Castle Lachlan",
     "country": "scotland",
     "region": "argyll-western-isles",
     "county": "Argyll and Bute",
-    "lat": "56.111",
-    "lng": "-5.194",
+    "lat": "56.1085",
+    "lng": "-5.2095",
     "mapsLink": "https://www.google.com/maps/search/Castle%20Lachlan%20Argyll%20and%20Bute%20scotland",
     "image": "https://img.castlecore.uk/castle-lachlan.jpg",
     "imgSource": "CDN",
     "gallery": [
       "https://img.castlecore.uk/castle-lachlan-2.jpg"
     ],
-    "desc": "New Castle Lachlan, is an 18th-century baronial mansion or country house located at Strathlachlan, Cowal peninsula, Argyll and Bute, Scotland.",
+    "desc": "Old Castle Lachlan is a ruined 15th-century castle on the shore of Loch Fyne, on the Cowal Peninsula, in Argyll and Bute, Scotland. Built by Clan Maclachlan on lands first recorded in 1314, the castle remained the residence of the clan chiefs until New Castle Lachlan was built as a replacement in 1790.",
     "type": "castle",
-    "period": "13th century",
+    "period": "15th century",
     "rating": 3.6,
     "tags": [
       "ruins-romantic",
       "coastal",
       "atmospheric",
       "free-entry",
-      "celtic"
+      "celtic",
+      "images-need-review"
     ],
     "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/New_Castle_Lachlan",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%22new%22_Castle_Lachlan_%28front%29.jpg/330px-%22new%22_Castle_Lachlan_%28front%29.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Old_Castle_Lachlan",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Old_Castle_Lachlan_-_geograph.org.uk_-_5297889.jpg/330px-Old_Castle_Lachlan_-_geograph.org.uk_-_5297889.jpg",
     "reviewReasons": [
       "needs-review"
     ],
@@ -1051,7 +1052,16 @@
     "hasGooglePlaces": "unknown",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-02",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "Old Castle Lachlan",
+        "url": "https://www.oldcastlelachlan.com/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "Renamed from Castle Lachlan, updated wiki to Old Castle Lachlan, corrected coords, added oldcastlelachlan.com source, tagged for image review",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Castle Coeffin",
