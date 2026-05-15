@@ -514,6 +514,7 @@ function renderCard() {
       <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-top:8px">
         ${(d.wikipediaUrl||d.wiki) ? `<a href="${esc(d.wikipediaUrl||d.wiki)}" target="_blank" style="display:flex;align-items:center;gap:6px">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">❌ No Wikipedia</span>'}
         ${d.mapsLink ? `<a href="${esc(d.mapsLink)}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps ↗</a>` : (hasCoords ? `<a href="${mapsSearchUrl}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps (search) ↗</a>` : '<span style="color:var(--muted)">❌ No Maps link</span>')}
+        <a href="https://www.google.com/search?q=${encodeURIComponent(d.name + ' castle ' + (d.county||'') + ' ' + d.country)}" target="_blank" style="display:flex;align-items:center;gap:6px">🔍 Google Search ↗</a>
       </div>
     </div>
     <div class="wiki-section" id="wikiSection">
