@@ -808,18 +808,30 @@ function renderTable() {
   if (isEnrichedTab) {
     let rows = filtered.map((d,i) => {
       const wikiUrl = d.wikipediaUrl || d.wiki || '';
+      const mapsUrl = d.mapsLink || '';
+      const gallery = Array.isArray(d.gallery) ? d.gallery : [];
+      const galleryHtml = gallery.length
+        ? gallery.map((g,gi) => { const gUrl = (typeof g === 'string') ? g : (g.url||g.googlePhotoUri||''); return `<img src="${esc(gUrl)}" style="width:36px;height:36px;object-fit:cover;border-radius:3px;border:1px solid var(--border);vertical-align:middle;margin:1px" loading="lazy">`; }).join('')
+        : '<span style="color:var(--muted);font-size:11px">none</span>';
+      const mainThumb = d.image ? `<img src="${esc(d.image)}" style="width:44px;height:44px;object-fit:cover;border-radius:4px;border:2px solid var(--green);vertical-align:middle" loading="lazy">` : '<span style="color:var(--red)">✗</span>';
+      const enrichNote = d.enrichNote || enrichNotes[getKey(d)] || '';
+      const reviewDate = d.enrichReviewDate || '';
+      const tags = d.tags && d.tags.length ? d.tags.map(t => `<span style="background:var(--bg);border:1px solid var(--border);padding:1px 6px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">${esc(t)}</span>`).join(' ') : '<span style="color:var(--muted)">—</span>';
       return `<tr>
         <td>${i+1}</td>
+        <td>${mainThumb}</td>
         <td><strong>${esc(d.name)}</strong></td>
         <td>${esc(d.country)}</td>
-        <td>${esc(d.region||'').replace(/-/g,' ')}</td>
         <td>${esc(d.county||'')}</td>
-        <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
-        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wiki</a>` : '—'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td>
         <td>${esc(d.type||'')}</td>
+        <td style="max-width:200px">${galleryHtml}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'} ${mapsUrl ? `<a href="${esc(mapsUrl)}" target="_blank">📍</a>` : ''}</td>
+        <td>${tags}</td>
+        <td style="max-width:300px;font-size:12px;color:var(--muted);white-space:pre-wrap">${esc(enrichNote) || '<span style="color:var(--muted)">—</span>'}</td>
+        <td style="font-size:11px;color:var(--muted)">${reviewDate || '—'}</td>
       </tr>`;
     }).join('');
-    el.innerHTML = `<table><thead><tr><th>#</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Image</th><th>Links</th><th>Type</th></tr></thead><tbody>${rows}</tbody></table>`;
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>County</th><th>Type</th><th>Gallery</th><th>Links</th><th>Tags</th><th>Enrich Notes</th><th>Reviewed</th></tr></thead><tbody>${rows}</tbody></table>`;
     return;
   }
   
