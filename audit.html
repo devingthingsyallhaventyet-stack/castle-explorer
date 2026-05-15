@@ -810,6 +810,9 @@ function renderTable() {
     let rows = filtered.map((d,i) => {
       const wikiUrl = d.wikipediaUrl || d.wiki || '';
       const mapsUrl = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
+      const enrichNote = d.enrichNote || enrichNotes[getKey(d)] || '';
+      const reviewDate = d.enrichReviewDate || '';
+      const statusLabel = d.enrichStatus === 'in-progress' ? '<span style="color:var(--gold);font-weight:600">🔧 In Progress</span>' : '';
       return `<tr>
         <td>${i+1}</td>
         <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
@@ -819,9 +822,12 @@ function renderTable() {
         <td>${esc(d.county||'')}</td>
         <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wiki</a>` : '—'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td>
         <td style="font-size:12px;color:var(--muted)">${(d.reviewReasons||[]).join(', ')}</td>
+        <td>${statusLabel}</td>
+        <td style="max-width:300px;font-size:12px;color:var(--muted);white-space:pre-wrap">${esc(enrichNote) || '—'}</td>
+        <td style="font-size:11px;color:var(--muted)">${reviewDate || '—'}</td>
       </tr>`;
     }).join('');
-    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Links</th><th>Flag Reasons</th></tr></thead><tbody>${rows}</tbody></table>`;
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Links</th><th>Flag Reasons</th><th>Status</th><th>Enrich Notes</th><th>Reviewed</th></tr></thead><tbody>${rows}</tbody></table>`;
     return;
   }
   
