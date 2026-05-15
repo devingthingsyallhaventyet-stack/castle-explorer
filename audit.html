@@ -1182,16 +1182,20 @@ async function sendToClawz() {
       body: JSON.stringify({ text, listing: { ...d, enrichNotes: enrichNotes[getKey(d)] || '' } })
     });
     const result = await resp.json();
+    console.log('Clawz relay response:', result);
     if (result.ok) {
       btn.textContent = '✅ Sent!';
       setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; advanceToNext(); }, 1500);
     } else {
+      console.error('Clawz relay failed:', JSON.stringify(result));
       btn.textContent = '❌ Failed';
-      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 2000);
+      btn.title = result.error || 'Unknown error';
+      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; btn.title = ''; }, 5000);
     }
   } catch (e) {
-    btn.textContent = '❌ Error';
-    setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 2000);
+    console.error('Clawz relay error:', e);
+    btn.textContent = '❌ Error: ' + e.message;
+    setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 5000);
   }
 }
 

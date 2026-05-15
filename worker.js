@@ -1,8 +1,8 @@
 export default {
   async fetch(request, env) {
-    const allowedOrigins = ["https://castlecore.uk", "https://www.castlecore.uk"];
+    const allowedOrigins = ["https://castlecore.uk", "https://www.castlecore.uk", "http://castlecore.uk", "http://www.castlecore.uk"];
     const origin = request.headers.get("Origin") || "";
-    const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+    const corsOrigin = allowedOrigins.includes(origin) ? origin : origin;
     const corsHeaders = {
       "Access-Control-Allow-Origin": corsOrigin,
       "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
@@ -80,7 +80,7 @@ export default {
         console.error("Telegram error:", e.message);
       }
 
-      return new Response(JSON.stringify({ ok: queueOk, telegram: telegramOk }), {
+      return new Response(JSON.stringify({ ok: queueOk, telegram: telegramOk, error: queueOk ? null : 'GitHub queue write failed' }), {
         headers: { "Content-Type": "application/json", ...corsHeaders }
       });
     } catch (e) {
