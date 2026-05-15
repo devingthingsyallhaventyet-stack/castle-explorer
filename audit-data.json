@@ -10284,7 +10284,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Rait Castle",
@@ -10488,7 +10490,7 @@
     "imgSource": "wikipedia",
     "gallery": [],
     "desc": "Dornoch Castle is situated opposite Dornoch Cathedral in the town of Dornoch, Scotland.",
-    "type": "castle",
+    "type": "hotel",
     "period": "15th century",
     "rating": 4,
     "tags": [
@@ -10509,7 +10511,16 @@
     },
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Dornoch Castle Hotel",
+        "url": "https://dornochcastlehotel.com/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "add source https://dornochcastlehotel.com/ , mark as hotel",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Skelbo Castle",
@@ -11133,7 +11144,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Clickimin Broch",
@@ -11171,7 +11184,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Broch_of_Clickimin",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Mousa Broch",
@@ -11211,7 +11226,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Broch_of_Mousa",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Carbisdale Castle",
@@ -11283,7 +11300,7 @@
     "county": "Highland",
     "lat": "57.87321667",
     "lng": "-4.13221667",
-    "mapsLink": "https://www.google.com/maps/search/Skibo%20Castle%20Highland%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/zevAbDDcTrnqzLw38",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP5NbH26DnmDOUYk7IMpH4x-teiYTj7hox3uyzvvB_LIwHRmzAxoh92EvguRUtlBSx3fyP0dQi152ArnY6Us9fl8tCp4lzitvpZjjAuFF3bH2jm-6efqs26hKgo2j5phGrlbbMMnsVjMxCl=s4800-w1200",
     "imgSource": "google",
     "gallery": [],
@@ -11311,7 +11328,16 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Carnegie Club",
+        "url": "https://www.carnegieclub.co.uk/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "Add as source https://www.carnegieclub.co.uk/, update google places link https://maps.app.goo.gl/zevAbDDcTrnqzLw38",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Castle Leod",
