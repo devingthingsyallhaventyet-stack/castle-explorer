@@ -208,9 +208,15 @@ body{padding-bottom:50px}
 
 <div class="action-bar" id="actionBar">
   <button class="btn-prev" onclick="goPrev()">← Prev</button>
-  <button class="btn-approve" onclick="doApprove()">✓ Approve <span class="kbd">A</span></button>
-  <button class="btn-flag" onclick="quickFlag()">⚑ Flag <span class="kbd">F</span></button>
-  <button style="background:var(--border);color:var(--text);padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="openFlagPanel()">⚑+ Detail</button>
+  <span id="reviewButtons">
+    <button class="btn-approve" onclick="doApprove()">✓ Approve <span class="kbd">A</span></button>
+    <button class="btn-flag" onclick="quickFlag()">⚑ Flag <span class="kbd">F</span></button>
+    <button style="background:var(--border);color:var(--text);padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="openFlagPanel()">⚑+ Detail</button>
+  </span>
+  <span id="enrichReviewButtons" style="display:none">
+    <button style="background:var(--green);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="markEnriched()">✨ Enriched <span class="kbd">A</span></button>
+    <button style="background:var(--gold);color:#000;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="markStillInProgress()">🔧 Still in Progress <span class="kbd">F</span></button>
+  </span>
   <button class="btn-skip" onclick="goNext()">Skip → <span class="kbd">S</span></button>
   <button id="btnSendToClawz" style="display:none;background:#58a6ff;color:#000;padding:10px 20px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;margin-left:12px" onclick="sendToClawz()">🦞 Send to Clawz</button>
 </div>
@@ -317,6 +323,8 @@ function switchMainTab(tab) {
   document.getElementById('btnCardView').classList.toggle('active', wantView === 'card');
   document.getElementById('btnTableView').classList.toggle('active', wantView === 'table');
   document.getElementById('btnSendToClawz').style.display = (tab === 'enrichReview') ? 'inline-block' : 'none';
+  document.getElementById('reviewButtons').style.display = (tab === 'enrichReview') ? 'none' : 'inline';
+  document.getElementById('enrichReviewButtons').style.display = (tab === 'enrichReview') ? 'inline' : 'none';
   applyFilters();
 }
 
@@ -399,7 +407,8 @@ function applyFilters() {
     const s = getStatus(d);
     if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
     if (currentMainTab === 'enriched') return s === 'flagged' && d.enrichStatus === 'enriched';
-    if (currentMainTab === 'enrich' || currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && d.enrichStatus !== 'enriched';
+    if (currentMainTab === 'enrich') return s === 'flagged' && d.needsEnrich === true && d.enrichStatus !== 'enriched';
+    if (currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && !d.enrichStatus;
     if (currentMainTab === 'imgReview') return s === 'approved' && !d.imageReviewDone;
     if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
     if (currentMainTab === 'approved') return s === 'approved';
@@ -626,6 +635,32 @@ function goNext() {
 function goPrev() {
   if (currentIdx > 0) { currentIdx--; renderCard(); }
 }
+function getToday() { return new Date().toISOString().split('T')[0]; }
+
+function markEnriched() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  d.enrichStatus = 'enriched';
+  d.enrichReviewDate = getToday();
+  if (enrichNotes[key]) d.enrichNote = enrichNotes[key];
+  reviewState[key] = { status: 'flagged', ts: Date.now() };
+  saveState(); updateProgress(); renderCard();
+  // Don't advance — let user send to Clawz first
+}
+
+function markStillInProgress() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  d.enrichStatus = 'in-progress';
+  d.enrichReviewDate = getToday();
+  if (enrichNotes[key]) d.enrichNote = enrichNotes[key];
+  reviewState[key] = { status: 'flagged', ts: Date.now() };
+  saveState(); updateProgress(); renderCard();
+  // Don't advance — let user send to Clawz first
+}
+
 function advanceToNext() {
   if (currentMainTab === 'flagged' || currentMainTab === 'imgReview' || currentMainTab === 'enrichReview') {
     // On flagged/image review tab, just go to next entry
@@ -734,8 +769,8 @@ document.addEventListener('keydown', e => {
     else if (e.key >= '1' && e.key <= '8') { toggleFlagReason(parseInt(e.key)-1); e.preventDefault(); }
     return;
   }
-  if (e.key === 'a' || e.key === 'A') { doApprove(); e.preventDefault(); }
-  else if (e.key === 'f' || e.key === 'F') { quickFlag(); e.preventDefault(); }
+  if (e.key === 'a' || e.key === 'A') { if (currentMainTab === 'enrichReview') markEnriched(); else doApprove(); e.preventDefault(); }
+  else if (e.key === 'f' || e.key === 'F') { if (currentMainTab === 'enrichReview') markStillInProgress(); else quickFlag(); e.preventDefault(); }
   else if (e.key === 's' || e.key === 'S' || e.key === 'ArrowRight') { goNext(); e.preventDefault(); }
   else if (e.key === 'ArrowLeft') { goPrev(); e.preventDefault(); }
 });
@@ -1071,7 +1106,8 @@ async function sendToClawz() {
   const reasons = d.reviewReasons || [];
   const note = d.reviewNote || '';
   
-  const text = `🔍 *ENRICH REVIEW*\n\n` +
+  const statusLabel = d.enrichStatus === 'enriched' ? '✨ ENRICHED' : d.enrichStatus === 'in-progress' ? '🔧 STILL IN PROGRESS' : '🔍 PENDING';
+  const text = `🔍 *ENRICH REVIEW*  \\[${statusLabel}\\]\n\n` +
     `*Name:* ${d.name}\n` +
     `*Country:* ${d.country}\n` +
     `*Region:* ${(d.region || '').replace(/-/g, ' ')}\n` +
@@ -1101,7 +1137,7 @@ async function sendToClawz() {
     const result = await resp.json();
     if (result.ok) {
       btn.textContent = '✅ Sent!';
-      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 2000);
+      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; advanceToNext(); }, 1500);
     } else {
       btn.textContent = '❌ Failed';
       setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 2000);
