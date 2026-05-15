@@ -1,12 +1,3 @@
 {
-  "items": [
-    {
-      "text": "test",
-      "listing": {
-        "name": "Test Castle",
-        "enrichNotes": "test notes"
-      },
-      "ts": 1778864964626
-    }
-  ]
+  "items": []
 }
