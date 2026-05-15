@@ -165,6 +165,45 @@
         "enrichNotes": ""
       },
       "ts": 1778870275953
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Grandtully Castle\n*Country:* scotland\n*Region:* fife perthshire\n*County:* Perth and Kinross\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 56.64075, -3.8093\n*Wikipedia:* https://en.wikipedia.org/wiki/Grandtully_Castle\n*Maps:* https://www.google.com/maps/search/Grandtully%20Castle%20Perth%20and%20Kinross%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Grandtully_Castle_%28geograph_3890325%29.jpg/330px-Grandtully_Castle_%28geograph_3890325%29.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nGrandtully Castle is an historic building in Grandtully, Perth and Kinross, Scotland. It is a Category A listed building dating to 1560. An earlier castle stood around 1 mile east and dates from 1414; only its foundations remain.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Grandtully Castle",
+        "country": "scotland",
+        "region": "fife-perthshire",
+        "county": "Perth and Kinross",
+        "lat": "56.64075",
+        "lng": "-3.8093",
+        "mapsLink": "https://www.google.com/maps/search/Grandtully%20Castle%20Perth%20and%20Kinross%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Grandtully_Castle_%28geograph_3890325%29.jpg/330px-Grandtully_Castle_%28geograph_3890325%29.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Grandtully Castle is an historic building in Grandtully, Perth and Kinross, Scotland. It is a Category A listed building dating to 1560. An earlier castle stood around 1 mile east and dates from 1414; only its foundations remain.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 3.4,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Grandtully_Castle",
+        "imageAttribution": "local",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Grandtully_Castle",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778870322410
     }
   ]
 }
