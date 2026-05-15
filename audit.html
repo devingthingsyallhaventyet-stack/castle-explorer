@@ -167,6 +167,7 @@ body{padding-bottom:50px}
     <div class="main-tab" id="tabImgReview" onclick="switchMainTab('imgReview')">🖼️ Img Review <span class="tab-badge" id="tabImgReviewCount">0</span></div>
     <div class="main-tab" id="tabEnrich" onclick="switchMainTab('enrich')">🔧 Enrich <span class="tab-badge" id="tabEnrichCount">0</span></div>
     <div class="main-tab" id="tabEnrichReview" onclick="switchMainTab('enrichReview')">🔍 Enrich Review <span class="tab-badge" id="tabEnrichReviewCount">0</span></div>
+    <div class="main-tab" id="tabEnriched" onclick="switchMainTab('enriched')">✨ Enriched <span class="tab-badge" id="tabEnrichedCount">0</span></div>
     <div class="main-tab" id="tabDead" onclick="switchMainTab('dead')">💀 Dead <span class="tab-badge" id="tabDeadCount">0</span></div>
     <div class="main-tab" id="tabDupes" onclick="switchMainTab('dupes')">🔀 Dupes <span class="tab-badge" id="tabDupesCount">0</span></div>
   </div>
@@ -294,7 +295,7 @@ function saveImageSelections() { const obj = {}; Object.keys(imageSelections).fo
 function switchMainTab(tab) {
   currentMainTab = tab;
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
-  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',imgReview:'tabImgReview',enrich:'tabEnrich',enrichReview:'tabEnrichReview',dead:'tabDead',dupes:'tabDupes'};
+  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',imgReview:'tabImgReview',enrich:'tabEnrich',enrichReview:'tabEnrichReview',enriched:'tabEnriched',dead:'tabDead',dupes:'tabDupes'};
   document.getElementById(tabIds[tab]).classList.add('active');
   
   if (tab === 'dupes') {
@@ -307,7 +308,7 @@ function switchMainTab(tab) {
   }
   document.getElementById('dupesView').style.display = 'none';
   // Set view mode (but don't render yet — applyFilters will handle it)
-  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich') ? 'table' : (tab === 'imgReview' || tab === 'flagged' || tab === 'review' || tab === 'enrichReview') ? 'card' : 'card';
+  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich' || tab === 'enriched') ? 'table' : (tab === 'imgReview' || tab === 'flagged' || tab === 'review' || tab === 'enrichReview') ? 'card' : 'card';
   currentView = wantView;
   document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
   document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
@@ -318,8 +319,8 @@ function switchMainTab(tab) {
 }
 
 function updateTabCounts() {
-  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0, imgReview = 0, enrichReview = 0;
-  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') { ap++; if (!d.imageReviewDone) imgReview++; } else if (s === 'flagged') { if (d.needsEnrich) { enrich++; if (enrichReview < 10) enrichReview++; } else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
+  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0, imgReview = 0, enrichReview = 0, enriched = 0;
+  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') { ap++; if (!d.imageReviewDone) imgReview++; } else if (s === 'flagged') { if (d.enrichStatus === 'enriched') { enriched++; } else if (d.needsEnrich) { enrich++; if (enrichReview < 10) enrichReview++; } else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
   document.getElementById('tabReviewCount').textContent = un;
   document.getElementById('tabFlaggedCount').textContent = fl;
   document.getElementById('tabApprovedCount').textContent = ap;
@@ -327,6 +328,7 @@ function updateTabCounts() {
   if (imgEl) imgEl.textContent = imgReview;
   document.getElementById('tabEnrichCount').textContent = enrich;
   document.getElementById('tabEnrichReviewCount').textContent = enrichReview;
+  document.getElementById('tabEnrichedCount').textContent = enriched;
   document.getElementById('tabDeadCount').textContent = dead;
 }
 
@@ -394,7 +396,8 @@ function applyFilters() {
     if (imgSrc && d.imgSource !== imgSrc) return false;
     const s = getStatus(d);
     if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
-    if (currentMainTab === 'enrich' || currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true;
+    if (currentMainTab === 'enriched') return s === 'flagged' && d.enrichStatus === 'enriched';
+    if (currentMainTab === 'enrich' || currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && d.enrichStatus !== 'enriched';
     if (currentMainTab === 'imgReview') return s === 'approved' && !d.imageReviewDone;
     if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
     if (currentMainTab === 'approved') return s === 'approved';
@@ -618,7 +621,7 @@ function goPrev() {
   if (currentIdx > 0) { currentIdx--; renderCard(); }
 }
 function advanceToNext() {
-  if (currentMainTab === 'flagged' || currentMainTab === 'imgReview') {
+  if (currentMainTab === 'flagged' || currentMainTab === 'imgReview' || currentMainTab === 'enrichReview') {
     // On flagged/image review tab, just go to next entry
     goNext();
     return;
@@ -642,7 +645,13 @@ function doApprove() {
   if (!filtered.length) return;
   const d = filtered[currentIdx];
   const key = getKey(d);
-  reviewState[key] = { status: 'approved', ts: Date.now() };
+  if (currentMainTab === 'enrichReview') {
+    // Move to Enriched holding area instead of Approved
+    d.enrichStatus = 'enriched';
+    reviewState[key] = { status: 'flagged', ts: Date.now() };
+  } else {
+    reviewState[key] = { status: 'approved', ts: Date.now() };
+  }
   // Save image selection if any
   const sel = imageSelections[key];
   const rejected = sel ? sel.rejected : new Set();
@@ -751,6 +760,28 @@ function renderTable() {
       </tr>`;
     }).join('');
     el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Links</th><th>Flag Reasons</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return;
+  }
+  
+  const isEnrichedTab = currentMainTab === 'enriched';
+  
+  if (isEnrichedTab) {
+    let rows = filtered.map((d,i) => {
+      const wikiUrl = d.wikipediaUrl || d.wiki || '';
+      const listingUrl = `https://castlecore.uk/site/${d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}.html`;
+      return `<tr>
+        <td>${i+1}</td>
+        <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
+        <td><strong>${esc(d.name)}</strong></td>
+        <td>${esc(d.country)}</td>
+        <td>${esc(d.region||'').replace(/-/g,' ')}</td>
+        <td>${esc(d.county||'')}</td>
+        <td>${esc(d.type||'')}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wiki</a>` : '—'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td>
+        <td>${Array.isArray(d.gallery) ? d.gallery.length + 1 : (d.image ? 1 : 0)}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Links</th><th>Images</th></tr></thead><tbody>${rows}</tbody></table>`;
     return;
   }
   
