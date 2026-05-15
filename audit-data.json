@@ -6496,13 +6496,14 @@
     "imgSource": "wikipedia",
     "gallery": [],
     "desc": "Grandtully Castle is an historic building in Grandtully, Perth and Kinross, Scotland. It is a Category A listed building dating to 1560. An earlier castle stood around 1 mile east and dates from 1414; only its foundations remain.",
-    "type": "tower house",
+    "type": "castle",
     "period": "15th century",
     "rating": 3.4,
     "tags": [
       "well-preserved",
       "medieval",
-      "atmospheric"
+      "atmospheric",
+      "private"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Grandtully_Castle",
@@ -6520,7 +6521,8 @@
     "lastReviewed": "2026-05-13",
     "needsEnrich": true,
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-15"
+    "enrichReviewDate": "2026-05-15",
+    "enrichNote": "Grandtully Castle is a castle not a tower house. it is also privately owned so that should probably be noted."
   },
   {
     "name": "Megginch Castle",
