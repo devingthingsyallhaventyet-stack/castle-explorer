@@ -170,6 +170,50 @@
         "enrichNotes": ""
       },
       "ts": 1778870822609
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Balgonie Castle\n*Country:* scotland\n*Region:* fife perthshire\n*County:* Fife\n*Type:* castle\n*Period:* 14th century\n*Coords:* 56.1938, -3.1092\n*Wikipedia:* https://en.wikipedia.org/wiki/Balgonie_Castle\n*Maps:* https://www.google.com/maps/search/Balgonie%20Castle%20Fife%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BalgonieCastle04.jpg/330px-BalgonieCastle04.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nBalgonie Castle is located on the south bank of the River Leven near Milton of Balgonie, 3.5 kilometres (2.2 mi) east of Glenrothes, Fife, Scotland. The castle keep dates from the 14th century, and the remaining structures were added piecemeal until the 18th century. The keep has been recently restored, although other parts of the castle are roofless ruins. Balgonie, excepting the tower which is used for residential purposes, is a Scheduled Ancient Monument. This castle is the subject for several ghostlore stories, including a green lady story.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Balgonie Castle",
+        "country": "scotland",
+        "region": "fife-perthshire",
+        "county": "Fife",
+        "lat": "56.1938",
+        "lng": "-3.1092",
+        "mapsLink": "https://www.google.com/maps/search/Balgonie%20Castle%20Fife%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BalgonieCastle04.jpg/330px-BalgonieCastle04.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Balgonie Castle is located on the south bank of the River Leven near Milton of Balgonie, 3.5 kilometres (2.2 mi) east of Glenrothes, Fife, Scotland. The castle keep dates from the 14th century, and the remaining structures were added piecemeal until the 18th century. The keep has been recently restored, although other parts of the castle are roofless ruins. Balgonie, excepting the tower which is used for residential purposes, is a Scheduled Ancient Monument. This castle is the subject for several ghostlore stories, including a green lady story.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.9,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "wedding-venue",
+          "events-venue",
+          "haunted",
+          "guided-tours"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Balgonie_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BalgonieCastle04.jpg/330px-BalgonieCastle04.jpg",
+        "imageAttribution": "local",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Balgonie_Castle",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778870877154
     }
   ]
 }
