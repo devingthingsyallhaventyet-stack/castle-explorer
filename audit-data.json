@@ -12005,10 +12005,11 @@
       "well-preserved",
       "museum",
       "prehistoric",
-      "celtic"
+      "celtic",
+      "no-wikipedia"
     ],
     "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/Portmahomack",
+    "wiki": "",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Tarbat_ness_lighthouse_OS_map_25inch_Rosshire_XXX.7_1880.jpeg/330px-Tarbat_ness_lighthouse_OS_map_25inch_Rosshire_XXX.7_1880.jpeg",
     "reviewStatus": "flagged",
     "reviewReasons": [
@@ -12017,7 +12018,16 @@
     "exists": "unverified",
     "hasWikipedia": "no",
     "hasGooglePlaces": "unknown",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "Tarbat Discovery Centre",
+        "url": "https://www.tarbat-discovery.co.uk/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "remove wikipedia link, add source https://www.tarbat-discovery.co.uk/",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Culloden Battlefield",
