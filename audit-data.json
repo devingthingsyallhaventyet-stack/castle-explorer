@@ -1679,12 +1679,12 @@
     "county": "Western Isles",
     "lat": "57.96222222",
     "lng": "-6.98972222",
-    "mapsLink": "https://www.google.com/maps/search/Amhuinnsuidhe%20Castle%20Western%20Isles%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/jATjzHhRCR2ujcez7",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZO_1NH0mcr3xUkDzbrsRks5u2k4kTLY-ySjPBKG-RoW8f_LAPxSAQbEFDuifpvV7tbHc91D0uRk0L932Rcup2IM9l2gl-BZZifBuSrkE2mELLP2ogiwcje7sM2ZLb8I2YPp6RSUYx8-T8QomDU=s4800-w1200",
     "imgSource": "google",
     "gallery": [],
     "desc": "Amhuinnsuidhe Castle is a large 19th-century private country house on Harris, one of the Western Isles of Scotland. It was designated as a Category A listed building in 1971 and is now operated as a hotel and shooting estate.",
-    "type": "castle",
+    "type": "hotel",
     "period": "19th century",
     "rating": 3.5,
     "tags": [
@@ -1711,7 +1711,10 @@
     "reviewReasons": [
       "needs-review"
     ],
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "Updated Google Maps link, marked as hotel",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Barcaldine Castle",
@@ -2080,7 +2083,20 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "Dunderave Castle (co.uk)",
+        "url": "https://www.dunderave-castle.co.uk/"
+      },
+      {
+        "label": "Dunderave Castle (.com)",
+        "url": "https://www.dunderavecastle.com/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "Added two verified sources",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Keills Chapel",
@@ -2244,7 +2260,7 @@
       "remote"
     ],
     "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/St_Blane's_Church%2C_Dunblane",
+    "wiki": "https://en.wikipedia.org/wiki/Saint_Blane",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg/330px-Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg",
     "reviewReasons": [
       "other"
@@ -2256,7 +2272,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "Corrected Wikipedia link to Saint_Blane",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Hermitage Castle",
