@@ -3413,9 +3413,7 @@
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
     "needsEnrich": true,
-    "enrichStatus": "enriched",
     "enrichNote": "Needs more research. No Google Maps listing found. May have been a luxury stay (gentlemansbutler.com link). Status unclear.",
-    "enrichReviewDate": "2026-05-15",
     "sources": [
       {
         "label": "Cranshaws Castle (Gentlemans Butler)",
