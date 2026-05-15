@@ -12629,7 +12629,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Castle Fraser",
@@ -12664,7 +12666,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Crathes Castle",
@@ -12699,7 +12703,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Drum Castle",
@@ -12733,7 +12739,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Fyvie Castle",
@@ -12768,7 +12776,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Tolquhon Castle",
@@ -12961,7 +12971,7 @@
     "county": "Aberdeenshire",
     "lat": "57.5443",
     "lng": "-2.412",
-    "mapsLink": "https://www.google.com/maps/search/Delgatie%20Castle%20Aberdeenshire%20scotland",
+    "mapsLink": "https://www.google.com/travel/search?ts=CAEaSQopEicyJTB4NDg4NDVlMTZkYWMwODNjMzoweDRhMDc5NDg5N2VhZmI0NmISHBIUCgcI6g8QBRgZEgcI6g8QBRgaGAEyBAgAEAA&qs=CAEyE0Nnb0k2LWktOVplUjVZTktFQUU4AkIJCWu0r36JlAdKQgkJa7SvfomUB0o&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Delgatie_Castle_2017-05-26.jpg/330px-Delgatie_Castle_2017-05-26.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -12987,7 +12997,16 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Delgatie_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Delgatie Castle",
+        "url": "https://delgatiecastle.com/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "google places link https://www.google.com/travel/search?ts=CAEaSQopEicyJTB4NDg4NDVlMTZkYWMwODNjMzoweDRhMDc5NDg5N2VhZmI0NmISHBIUCgcI6g8QBRgZEgcI6g8QBRgaGAEyBAgAEAA&qs=CAEyE0Nnb0k2LWktOVplUjVZTktFQUU4AkIJCWu0r36JlAdKQgkJa7SvfomUB0o&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls , add source https://delgatiecastle.com/",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Spynie Palace",
