@@ -1,1 +1,45 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Old Scatness\n*Country:* scotland\n*Region:* highlands\n*County:* Shetland\n*Type:* castle\n*Period:* Bronze Age to Viking\n*Coords:* 59.879, -1.3054\n*Wikipedia:* https://en.wikipedia.org/wiki/Old_Scatness\n*Maps:* https://www.google.com/maps/search/Old%20Scatness%20Shetland%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg/330px-Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nOld Scatness is an archeological site on Scat Ness, near the village of Scatness, in the parish of Dunrossness in the south end of Mainland, Shetland, Scotland, near Sumburgh Airport. It consists of medieval, Viking, Pictish, and Iron Age remains and has been a settlement for thousands of years, each new generation adding buildings, and levelling off old ones. Among the discoveries is an Iron Age broch, the Ness of Burgi fort.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Old Scatness",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Shetland",
+        "lat": "59.879",
+        "lng": "-1.3054",
+        "mapsLink": "https://www.google.com/maps/search/Old%20Scatness%20Shetland%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg/330px-Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Old Scatness is an archeological site on Scat Ness, near the village of Scatness, in the parish of Dunrossness in the south end of Mainland, Shetland, Scotland, near Sumburgh Airport. It consists of medieval, Viking, Pictish, and Iron Age remains and has been a settlement for thousands of years, each new generation adding buildings, and levelling off old ones. Among the discoveries is an Iron Age broch, the Ness of Burgi fort.",
+        "type": "castle",
+        "period": "Bronze Age to Viking",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "prehistoric",
+          "atmospheric",
+          "museum",
+          "celtic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Old_Scatness",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg/330px-Old_Scatness_Dig_-_geograph.org.uk_-_355975.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Old_Scatness",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778872174074
+    }
+  ]
+}
