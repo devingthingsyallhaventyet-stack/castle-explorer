@@ -41,6 +41,54 @@
         "enrichNotes": "add source - https://theblackwatch.co.uk/"
       },
       "ts": 1778870607733
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Macduff's Castle\n*Country:* scotland\n*Region:* fife perthshire\n*County:* Fife\n*Type:* castle\n*Period:* 14th-16th century\n*Coords:* 56.16222222, -3.05805556\n*Wikipedia:* https://en.wikipedia.org/wiki/Macduff%27s_Castle\n*Maps:* https://www.google.com/maps/search/Macduff's%20Castle%20Fife%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/1/1a/Macduff%27s_Castle_and_the_Wemyss_Caves.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nMacDuff's Castle is a ruined castle near East Wemyss, in Fife, Scotland. The site is associated with the MacDuff Earls of Fife, the most powerful family in Fife in the Middle Ages, although nothing survives from this period. The present ruins are the remains of the home of the Wemyss family, who lived here from the 14th century, and their successors in the 16th century.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Macduff's Castle",
+        "country": "scotland",
+        "region": "fife-perthshire",
+        "county": "Fife",
+        "lat": "56.16222222",
+        "lng": "-3.05805556",
+        "mapsLink": "https://www.google.com/maps/search/Macduff's%20Castle%20Fife%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Macduff%27s_Castle_and_the_Wemyss_Caves.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "MacDuff's Castle is a ruined castle near East Wemyss, in Fife, Scotland. The site is associated with the MacDuff Earls of Fife, the most powerful family in Fife in the Middle Ages, although nothing survives from this period. The present ruins are the remains of the home of the Wemyss family, who lived here from the 14th century, and their successors in the 16th century.",
+        "type": "castle",
+        "period": "14th-16th century",
+        "rating": 3.4,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "dark-brooding",
+          "medieval",
+          "atmospheric"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Macduff's_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Macduff%27s_Castle_and_the_Wemyss_Caves.jpg/330px-Macduff%27s_Castle_and_the_Wemyss_Caves.jpg",
+        "imageAttribution": {
+          "artist": "Kevin Rae",
+          "license": "CC BY-SA 2.0",
+          "description": "en:Macduff's Castle and the Wemyss Caves, en:East Wemyss, en:Fife",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Macduff%27s_Castle",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778870660987
     }
   ]
 }
