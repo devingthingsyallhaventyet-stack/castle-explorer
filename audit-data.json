@@ -877,7 +877,13 @@
     ],
     "enrichStatus": "enriched",
     "enrichReviewDate": "2026-05-15",
-    "enrichNote": "Imported 5 Google Places images, added finlaggan.org as verified source, tagged for image review"
+    "enrichNote": "Imported 5 Google Places images, added finlaggan.org as verified source, tagged for image review",
+    "sources": [
+      {
+        "label": "Finlaggan Trust",
+        "url": "https://www.finlaggan.org"
+      }
+    ]
   },
   {
     "name": "Lews Castle",
