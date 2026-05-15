@@ -40,6 +40,47 @@
         "enrichNotes": ""
       },
       "ts": 1778873116032
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castle Fraser\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 57.203, -2.46055556\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Fraser\n*Maps:* https://www.google.com/maps/search/Castle%20Fraser%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP0-jJiKu50G4ygJzsGOVBNl-B6OmMqCQ2GqjECMMeTFKXAxeM8_JZwiBHSKWnV1CnDlg5rfwMbTJYyOqOOhyKCj76xrvYSBP5U1q95yV349KP9rAjXPfhjRwXsCRV3ewQ7HEn7TNFSoWII_A=s4800-w1080\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCastle Fraser is a large Z-plan castle near Kemnay, Aberdeenshire, Scotland. It is considered one of the most elaborate examples of its type and one of the grandest of the 'Castles of Mar'. The castle stands in over 300 acres (1.2 km2) of landscaped grounds, woodland and farmland, including a 19th-century walled kitchen garden. There is archaeological evidence of an older square tower dating from around 1400 or 1500 within the current construction. The castle is a Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Castle Fraser",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.203",
+        "lng": "-2.46055556",
+        "mapsLink": "https://www.google.com/maps/search/Castle%20Fraser%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP0-jJiKu50G4ygJzsGOVBNl-B6OmMqCQ2GqjECMMeTFKXAxeM8_JZwiBHSKWnV1CnDlg5rfwMbTJYyOqOOhyKCj76xrvYSBP5U1q95yV349KP9rAjXPfhjRwXsCRV3ewQ7HEn7TNFSoWII_A=s4800-w1080",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Castle Fraser is a large Z-plan castle near Kemnay, Aberdeenshire, Scotland. It is considered one of the most elaborate examples of its type and one of the grandest of the 'Castles of Mar'. The castle stands in over 300 acres (1.2 km2) of landscaped grounds, woodland and farmland, including a 19th-century walled kitchen garden. There is archaeological evidence of an older square tower dating from around 1400 or 1500 within the current construction. The castle is a Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Fraser",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Colin Smith",
+          "license": "CC BY-SA 2.0",
+          "description": "Castle Fraser",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778873166632
     }
   ]
 }
