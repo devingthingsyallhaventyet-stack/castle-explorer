@@ -162,6 +162,47 @@
         "enrichNotes": ""
       },
       "ts": 1778873224395
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Fyvie Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 57.4433, -2.3949\n*Wikipedia:* https://en.wikipedia.org/wiki/Fyvie_Castle\n*Maps:* https://www.google.com/maps/search/Fyvie%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNAL7-VyjkwpnnDkwxXc6Uxl2NPcQ-e1iCtlnIctCiwLxGDdjViWq2EG4MVsn6h8Y93DAwIsncgAvbsBNvZJXqYZNdE7-dbzZrP9Bh1vqRbzB7WYLpQTAztj74aP4iIlzfqac6I-PSRHvNO_w=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nFyvie Castle is a castle in the village of Fyvie, near Turriff in Aberdeenshire, Scotland. The earliest parts of the castle date from the 13th century, and it later passed through the hands of several prominent families, including the Prestons, Setons and Gordons. Since 1984 it has been owned and managed by the National Trust for Scotland.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Fyvie Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.4433",
+        "lng": "-2.3949",
+        "mapsLink": "https://www.google.com/maps/search/Fyvie%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNAL7-VyjkwpnnDkwxXc6Uxl2NPcQ-e1iCtlnIctCiwLxGDdjViWq2EG4MVsn6h8Y93DAwIsncgAvbsBNvZJXqYZNdE7-dbzZrP9Bh1vqRbzB7WYLpQTAztj74aP4iIlzfqac6I-PSRHvNO_w=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Fyvie Castle is a castle in the village of Fyvie, near Turriff in Aberdeenshire, Scotland. The earliest parts of the castle date from the 13th century, and it later passed through the hands of several prominent families, including the Prestons, Setons and Gordons. Since 1984 it has been owned and managed by the National Trust for Scotland.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "haunted",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Fyvie_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Anne Burgess",
+          "license": "CC BY-SA 2.0",
+          "description": "Fyvie Castle",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778873245362
     }
   ]
 }
