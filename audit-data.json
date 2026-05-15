@@ -9123,44 +9123,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Dunmore Pineapple",
-    "country": "scotland",
-    "region": "glasgow-stirling",
-    "county": "Falkirk",
-    "lat": "56.07671",
-    "lng": "-3.7867",
-    "mapsLink": "https://www.google.com/maps/search/Dunmore%20Pineapple%20Falkirk%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dunmore_pineapple.jpg/330px-Dunmore_pineapple.jpg",
-    "imgSource": "wikipedia",
-    "gallery": [],
-    "desc": "The Dunmore Pineapple is a folly in Dunmore Park, near Airth in Stirlingshire, Scotland. In 1995, it was ranked \"as the most bizarre building in Scotland\".",
-    "type": "castle",
-    "period": "Georgian (1761)",
-    "rating": 4.3,
-    "tags": [
-      "photogenic",
-      "gardens",
-      "remote",
-      "atmospheric"
-    ],
-    "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dunmore_pineapple.jpg/330px-Dunmore_pineapple.jpg",
-    "imageAttribution": "local",
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
-    "imageReviewDone": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13",
-    "needsEnrich": true
-  },
-  {
     "name": "Kinneil House",
     "country": "scotland",
     "region": "glasgow-stirling",
@@ -9758,13 +9720,13 @@
     "reviewStatus": "approved"
   },
   {
-    "name": "Inverlochy Castle",
+    "name": "Old Inverlochy Castle",
     "country": "scotland",
     "region": "highlands",
     "county": "Highland",
     "lat": "56.83258611",
     "lng": "-5.08100278",
-    "mapsLink": "https://www.google.com/maps/search/Inverlochy%20Castle%20Highland%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/kVr3davEGAggDdSn9",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVC80H5GnzUgiuJB6Gl4HN9oiKYisRuXJmZN51L2vBA8IzuUVbVLI9MhKFKm5Lp_wdR_aG6hjxF1e7J9hxQERs4b5I6Zmuyxqh77mE034LGPIvYYInS8ducwre3z8ynazjo1OAHO7C_TDm42I=s4800-w1200",
     "imgSource": "google",
     "gallery": [],
@@ -9794,7 +9756,10 @@
     "reviewReasons": [
       "needs-review"
     ],
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "change name to Old Inverlochy Castle , google places link - https://maps.app.goo.gl/kVr3davEGAggDdSn9",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Dunvegan Castle",
