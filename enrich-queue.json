@@ -175,6 +175,53 @@
         "enrichNotes": ""
       },
       "ts": 1778871503808
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Duntulm Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 15th-18th century\n*Coords:* 57.68, -6.34\n*Wikipedia:* https://en.wikipedia.org/wiki/Duntulm_Castle\n*Maps:* https://www.google.com/maps/search/Duntulm%20Castle%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZN1-RJUt0HK5xAJZkExRs7n1Q0R-tik3JsR2kbfcyXlFtpU4ibyBmFSIi4lg0V8ek0L5qJw5o_fYvnFI3Qd0iJ2FICA4Az3HP6lrNWlX72_Qqr9vZYD-vh_0DDs1sLnGEastKgMeB_oUZr_Kg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link https://maps.app.goo.gl/vgiMLtPrFgYoSyVU6\n\n*Description:*\nDuntulm Castle stands ruined on the north coast of Trotternish, on the Isle of Skye in Scotland, near the hamlet of Duntulm. During the 17th century it was the seat of the chiefs of Clan MacDonald of Sleat. It is a scheduled monument.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Duntulm Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.68",
+        "lng": "-6.34",
+        "mapsLink": "https://www.google.com/maps/search/Duntulm%20Castle%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN1-RJUt0HK5xAJZkExRs7n1Q0R-tik3JsR2kbfcyXlFtpU4ibyBmFSIi4lg0V8ek0L5qJw5o_fYvnFI3Qd0iJ2FICA4Az3HP6lrNWlX72_Qqr9vZYD-vh_0DDs1sLnGEastKgMeB_oUZr_Kg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Duntulm Castle stands ruined on the north coast of Trotternish, on the Isle of Skye in Scotland, near the hamlet of Duntulm. During the 17th century it was the seat of the chiefs of Clan MacDonald of Sleat. It is a scheduled monument.",
+        "type": "castle",
+        "period": "15th-18th century",
+        "rating": 4,
+        "tags": [
+          "ruins-romantic",
+          "cliffside",
+          "coastal",
+          "atmospheric",
+          "haunted",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Duntulm_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Duntulm01.jpg/330px-Duntulm01.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Martin McCarthy (Tumulus at en.wikipedia)",
+          "license": "CC BY-SA 3.0",
+          "description": "Duntulm Castle, Skye",
+          "credit": "Transferred from en.wikipedia to Commons by Finavon using CommonsHelper.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "update google places link https://maps.app.goo.gl/vgiMLtPrFgYoSyVU6",
+        "enrichNotes": "update google places link https://maps.app.goo.gl/vgiMLtPrFgYoSyVU6"
+      },
+      "ts": 1778871543030
     }
   ]
 }
