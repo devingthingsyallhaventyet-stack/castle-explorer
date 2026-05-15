@@ -94,6 +94,52 @@
         "enrichNotes": "Delete associated google maps link. Needs more research. No google places seem to exist. "
       },
       "ts": 1778869634467
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Abbotsford House\n*Country:* scotland\n*Region:* borders\n*County:* Scottish Borders\n*Type:* castle\n*Period:* 19th century\n*Coords:* 55.59972222, -2.78194444\n*Wikipedia:* https://en.wikipedia.org/wiki/Abbotsford,_Scottish_Borders\n*Maps:* https://www.google.com/maps/search/Abbotsford%20House%20Scottish%20Borders%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Abbotsford_Morris_edited.jpg/330px-Abbotsford_Morris_edited.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.scottsabbotsford.com/ add as another verified link\n\n*Description:*\nAbbotsford is a historic country house in the Scottish Borders, near Galashiels, on the south bank of the River Tweed. Now open to the public, it was built as the residence of historical novelist and poet Sir Walter Scott between 1817 and 1825. It is a Category A Listed Building and the estate is listed in the Inventory of Gardens and Designed Landscapes in Scotland.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Abbotsford House",
+        "country": "scotland",
+        "region": "borders",
+        "county": "Scottish Borders",
+        "lat": "55.59972222",
+        "lng": "-2.78194444",
+        "mapsLink": "https://www.google.com/maps/search/Abbotsford%20House%20Scottish%20Borders%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Abbotsford_Morris_edited.jpg/330px-Abbotsford_Morris_edited.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Abbotsford is a historic country house in the Scottish Borders, near Galashiels, on the south bank of the River Tweed. Now open to the public, it was built as the residence of historical novelist and poet Sir Walter Scott between 1817 and 1825. It is a Category A Listed Building and the estate is listed in the Inventory of Gardens and Designed Landscapes in Scotland.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "atmospheric",
+          "riverside",
+          "museum",
+          "gardens",
+          "guided-tours",
+          "gift-shop"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Abbotsford%2C_Scottish_Borders",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Abbotsford_Morris_edited.jpg/330px-Abbotsford_Morris_edited.jpg",
+        "imageAttribution": "local",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Abbotsford,_Scottish_Borders",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "https://www.scottsabbotsford.com/ add as another verified link",
+        "enrichNotes": "https://www.scottsabbotsford.com/ add as another verified link"
+      },
+      "ts": 1778869699144
     }
   ]
 }
