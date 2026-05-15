@@ -167,6 +167,48 @@
         "enrichNotes": "no google places, only 1 wikipedia photo. needs more research to make a listing. "
       },
       "ts": 1778872298886
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Dalcross Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 17th century\n*Coords:* 57.5083, -4.0402\n*Wikipedia:* https://en.wikipedia.org/wiki/Dalcross_Castle\n*Maps:* https://www.google.com/maps/search/Dalcross%20Castle%20Highland%20scotland\n*Main Image:* https://img.castlecore.uk/dalcross-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* no google places listing. has an older website http://www.dalcross.org/ would need more research to do an actual listing. \n\n*Description:*\nDalcross Castle is a restored 17th century tower house, about 1+1⁄2 miles southwest of Croy, Highland, Scotland, and about 7 miles northeast of Inverness. The castle stands on a ridge.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Dalcross Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.5083",
+        "lng": "-4.0402",
+        "mapsLink": "https://www.google.com/maps/search/Dalcross%20Castle%20Highland%20scotland",
+        "image": "https://img.castlecore.uk/dalcross-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/dalcross-castle-2.jpg",
+          "https://img.castlecore.uk/dalcross-castle-3.jpg",
+          "https://img.castlecore.uk/dalcross-castle-4.jpg",
+          "https://img.castlecore.uk/dalcross-castle-5.jpg"
+        ],
+        "desc": "Dalcross Castle is a restored 17th century tower house, about 1+1⁄2 miles southwest of Croy, Highland, Scotland, and about 7 miles northeast of Inverness. The castle stands on a ridge.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 3.3,
+        "tags": [
+          "well-preserved",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dalcross_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Dalcross_Castle_-_geograph.org.uk_-_370185.jpg/330px-Dalcross_Castle_-_geograph.org.uk_-_370185.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dalcross_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "no google places listing. has an older website http://www.dalcross.org/ would need more research to do an actual listing. ",
+        "enrichNotes": "no google places listing. has an older website http://www.dalcross.org/ would need more research to do an actual listing. "
+      },
+      "ts": 1778872424081
     }
   ]
 }
