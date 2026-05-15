@@ -40,6 +40,46 @@
         "enrichNotes": "https://www.dunvegancastle.com/ add source "
       },
       "ts": 1778871295224
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Armadale Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Isle of Skye\n*Type:* castle\n*Period:* 19th century\n*Coords:* 57.07289, -5.89889\n*Wikipedia:* https://en.wikipedia.org/wiki/Armadale_Castle\n*Maps:* https://www.google.com/maps/search/Armadale%20Castle%20Isle%20of%20Skye%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Armadale_Castle_5.jpg/330px-Armadale_Castle_5.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* https://armadalecastle.com/ add source\n\n*Description:*\nArmadale Castle is a ruined country house in Armadale, Skye, former home of the MacDonalds.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Armadale Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Isle of Skye",
+        "lat": "57.07289",
+        "lng": "-5.89889",
+        "mapsLink": "https://www.google.com/maps/search/Armadale%20Castle%20Isle%20of%20Skye%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Armadale_Castle_5.jpg/330px-Armadale_Castle_5.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Armadale Castle is a ruined country house in Armadale, Skye, former home of the MacDonalds.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.1,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Armadale_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Photograph by Mike Peel (www.mikepeel.net).",
+          "license": "CC BY-SA 4.0",
+          "description": "Armadale Castle.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "https://armadalecastle.com/ add source",
+        "enrichNotes": "https://armadalecastle.com/ add source"
+      },
+      "ts": 1778871364145
     }
   ]
 }
