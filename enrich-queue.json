@@ -42,6 +42,46 @@
         "enrichNotes": ""
       },
       "ts": 1778873346723
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dudhope Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Dundee\n*Type:* castle\n*Period:* 13th-16th century\n*Coords:* 56.46444444, -2.98388889\n*Wikipedia:* https://en.wikipedia.org/wiki/Dudhope_Castle\n*Maps:* https://www.google.com/maps/search/Dudhope%20Castle%20Dundee%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Dudhope_Castle.jpg/330px-Dudhope_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/mw3FyPhouq2K4K4Q7\n\n\n*Description:*\nDudhope Castle is an extended late medieval tower house located on the southern face of Dundee Law in Dundee, Scotland.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Dudhope Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Dundee",
+        "lat": "56.46444444",
+        "lng": "-2.98388889",
+        "mapsLink": "https://www.google.com/maps/search/Dudhope%20Castle%20Dundee%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Dudhope_Castle.jpg/330px-Dudhope_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Dudhope Castle is an extended late medieval tower house located on the southern face of Dundee Law in Dundee, Scotland.",
+        "type": "castle",
+        "period": "13th-16th century",
+        "rating": 3.5,
+        "tags": [
+          "medieval",
+          "well-preserved",
+          "free-entry",
+          "gardens"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dudhope_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dudhope_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/mw3FyPhouq2K4K4Q7\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/mw3FyPhouq2K4K4Q7\n"
+      },
+      "ts": 1778873434597
     }
   ]
 }
