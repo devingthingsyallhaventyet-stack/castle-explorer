@@ -82,6 +82,48 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/mw3FyPhouq2K4K4Q7\n"
       },
       "ts": 1778873434597
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Brechin Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* castle\n*Period:* 13th century onwards\n*Coords:* 56.72916667, -2.65888889\n*Wikipedia:* https://en.wikipedia.org/wiki/Brechin_Castle\n*Maps:* https://www.google.com/maps/search/Brechin%20Castle%20Angus%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg/330px-Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:*  google places link https://maps.app.goo.gl/Qv1w4ySfTLaU632E6 , add as source  https://dalhousieestates.co.uk/\n\n*Description:*\nBrechin Castle is a castle in Brechin, Angus, Scotland. The castle was constructed in stone during the 13th century. Most of the current building dates to the early 18th century, when extensive reconstruction was carried out by architect Alexander Edward for James Maule, 4th Earl of Panmure, between approximately 1696 and 1709. The castle is a 37,748 square feet (3,506.9 m2) Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.\n\n_Listing 9 of 10_",
+      "listing": {
+        "name": "Brechin Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.72916667",
+        "lng": "-2.65888889",
+        "mapsLink": "https://www.google.com/maps/search/Brechin%20Castle%20Angus%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg/330px-Brechin_Castle_and_Drive_-_geograph.org.uk_-_4029856.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Brechin Castle is a castle in Brechin, Angus, Scotland. The castle was constructed in stone during the 13th century. Most of the current building dates to the early 18th century, when extensive reconstruction was carried out by architect Alexander Edward for James Maule, 4th Earl of Panmure, between approximately 1696 and 1709. The castle is a 37,748 square feet (3,506.9 m2) Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.",
+        "type": "castle",
+        "period": "13th century onwards",
+        "rating": 3.5,
+        "tags": [
+          "gardens",
+          "gift-shop",
+          "well-preserved",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Brechin_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Anne Burgess",
+          "license": "CC BY-SA 2.0",
+          "description": "Brechin Castle and Drive",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": " google places link https://maps.app.goo.gl/Qv1w4ySfTLaU632E6 , add as source  https://dalhousieestates.co.uk/",
+        "enrichNotes": " google places link https://maps.app.goo.gl/Qv1w4ySfTLaU632E6 , add as source  https://dalhousieestates.co.uk/"
+      },
+      "ts": 1778873550271
     }
   ]
 }
