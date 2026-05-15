@@ -515,6 +515,10 @@ function renderCard() {
   if (currentMainTab === 'review' || currentMainTab === 'imgReview' || currentMainTab === 'enrichReview') {
     renderImagePicker(d, key);
   }
+  // Render notes section (only on enrichReview tab)
+  if (currentMainTab === 'enrichReview') {
+    renderEnrichNotes(d, key);
+  }
 }
 
 function renderImagePicker(d, key) {
@@ -1030,6 +1034,29 @@ function copyForClawz() {
   navigator.clipboard.writeText(text).then(() => alert(`Copied ${reviewed.length} reviewed entries!`)).catch(() => prompt('Copy this:', text));
 }
 
+// Enrich notes
+let enrichNotes = {};
+try { enrichNotes = JSON.parse(localStorage.getItem('castle-enrich-notes') || '{}'); } catch(e) {}
+function saveEnrichNotes() { localStorage.setItem('castle-enrich-notes', JSON.stringify(enrichNotes)); }
+
+function renderEnrichNotes(d, key) {
+  const container = document.getElementById('cardView');
+  const note = enrichNotes[key] || '';
+  const section = document.createElement('div');
+  section.className = 'blurb-section';
+  section.style.borderColor = 'var(--blue)';
+  section.innerHTML = `<h3 style="color:var(--blue)">📝 Enrich Notes</h3>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Add notes about what needs fixing, what you changed, or instructions for enrichment. These are saved locally and included when sending to Clawz.</p>
+    <textarea id="enrichNoteInput" style="width:100%;min-height:100px;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:10px;border-radius:6px;font-size:14px;resize:vertical;font-family:inherit;line-height:1.5" placeholder="e.g. Needs better image, description is wrong, coordinates off...">${esc(note)}</textarea>`;
+  container.appendChild(section);
+  
+  // Save on input
+  document.getElementById('enrichNoteInput').addEventListener('input', function() {
+    enrichNotes[key] = this.value;
+    saveEnrichNotes();
+  });
+}
+
 const CLAWZ_RELAY = 'https://castlecore-enrich-relay.devingthingsyallhaventyet.workers.dev';
 async function sendToClawz() {
   if (!filtered.length) return;
@@ -1060,7 +1087,8 @@ async function sendToClawz() {
     `*Has Wikipedia:* ${d.hasWikipedia || 'unknown'}\n` +
     `*Has Google Places:* ${d.hasGooglePlaces || 'unknown'}\n` +
     (reasons.length ? `*Flag Reasons:* ${reasons.join(', ')}\n` : '') +
-    (note ? `*Note:* ${note}\n` : '') +
+    (note ? `*Flag Note:* ${note}\n` : '') +
+    (enrichNotes[getKey(d)] ? `*Enrich Notes:* ${enrichNotes[getKey(d)]}\n` : '') +
     `\n*Description:*\n${d.desc || 'No description'}\n` +
     `\n_Listing ${currentIdx + 1} of ${filtered.length}_`;
   
