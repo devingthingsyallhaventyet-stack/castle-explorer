@@ -46,6 +46,48 @@
         "enrichNotes": ""
       },
       "ts": 1778872622924
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dingwall Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 12th century\n*Coords:* 57.5977, -4.42195\n*Wikipedia:* https://en.wikipedia.org/wiki/Dingwall_Castle\n*Maps:* https://www.google.com/maps/search/Dingwall%20Castle%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPnGiLRTzFAyxn2UlqlME3DMF69n8D_0C2HkaPHHejcw-rMBdmOCqndDla5NtA53t269UhuWrPQUPKarnNCA6a0NhBtn5nva06a5E0uBcl6hA4GHgoUE3VzBAC6RJHrfkAb-8udhtQQJZr67A=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nDingwall Castle was a medieval fort and royal castle in the town of Dingwall, eastern Ross-shire, Scotland.\n\n_Listing 9 of 10_",
+      "listing": {
+        "name": "Dingwall Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.5977",
+        "lng": "-4.42195",
+        "mapsLink": "https://www.google.com/maps/search/Dingwall%20Castle%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPnGiLRTzFAyxn2UlqlME3DMF69n8D_0C2HkaPHHejcw-rMBdmOCqndDla5NtA53t269UhuWrPQUPKarnNCA6a0NhBtn5nva06a5E0uBcl6hA4GHgoUE3VzBAC6RJHrfkAb-8udhtQQJZr67A=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Dingwall Castle was a medieval fort and royal castle in the town of Dingwall, eastern Ross-shire, Scotland.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3,
+        "tags": [
+          "ruins-romantic",
+          "free-entry",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dingwall_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Dingwall_Castle_Relic.JPG/330px-Dingwall_Castle_Relic.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "QuintusPetillius",
+          "license": "CC0",
+          "description": "This castle folley is said to have been built from the stones of Dingwall Castle. It is located on the site of the original castle.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778872656628
     }
   ]
 }
