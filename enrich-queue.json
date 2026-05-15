@@ -1,1 +1,47 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔍 PENDING\\]\n\n*Name:* Dunmore Pineapple\n*Country:* scotland\n*Region:* glasgow stirling\n*County:* Falkirk\n*Type:* castle\n*Period:* Georgian (1761)\n*Coords:* 56.07671, -3.7867\n*Wikipedia:* https://en.wikipedia.org/wiki/Dunmore_Pineapple\n*Maps:* https://www.google.com/maps/search/Dunmore%20Pineapple%20Falkirk%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dunmore_pineapple.jpg/330px-Dunmore_pineapple.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Flag Reasons:* flagged-during-image-review\n*Flag Note:* Auto-moved: insufficient images (0-1)\n*Enrich Notes:* Not relevant to our site. Delete listing completely. \n\n*Description:*\nThe Dunmore Pineapple is a folly in Dunmore Park, near Airth in Stirlingshire, Scotland. In 1995, it was ranked \"as the most bizarre building in Scotland\".\n\n_Listing 7 of 10_",
+      "listing": {
+        "name": "Dunmore Pineapple",
+        "country": "scotland",
+        "region": "glasgow-stirling",
+        "county": "Falkirk",
+        "lat": "56.07671",
+        "lng": "-3.7867",
+        "mapsLink": "https://www.google.com/maps/search/Dunmore%20Pineapple%20Falkirk%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dunmore_pineapple.jpg/330px-Dunmore_pineapple.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "The Dunmore Pineapple is a folly in Dunmore Park, near Airth in Stirlingshire, Scotland. In 1995, it was ranked \"as the most bizarre building in Scotland\".",
+        "type": "castle",
+        "period": "Georgian (1761)",
+        "rating": 4.3,
+        "tags": [
+          "photogenic",
+          "gardens",
+          "remote",
+          "atmospheric"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dunmore_pineapple.jpg/330px-Dunmore_pineapple.jpg",
+        "imageAttribution": "local",
+        "reviewReasons": [
+          "flagged-during-image-review"
+        ],
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunmore_Pineapple",
+        "imageReviewDone": true,
+        "reviewNote": "Auto-moved: insufficient images (0-1)",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichNotes": "Not relevant to our site. Delete listing completely. "
+      },
+      "ts": 1778871006679
+    }
+  ]
+}
