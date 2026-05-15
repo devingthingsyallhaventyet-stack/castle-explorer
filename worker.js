@@ -50,17 +50,23 @@ export default {
       const text = body.text || "No data";
       const listingData = body.listing || null;
 
-      // 1. Append to GitHub queue file
+      // 1. Append to GitHub queue file (with retry on SHA conflict)
       let queueOk = false;
-      try {
-        const existing = await readGitHubFile(env, "enrich-queue.json");
-        const items = (existing && existing.items) ? existing.items : [];
-        items.push({ text, listing: listingData, ts: Date.now() });
-        const sha = existing ? existing.sha : null;
-        await writeGitHubFile(env, "enrich-queue.json", JSON.stringify({ items }, null, 2), sha, "Queue enrich item: " + (listingData?.name || "unknown"));
-        queueOk = true;
-      } catch (e) {
-        console.error("GitHub queue error:", e.message);
+      let lastError = "";
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          const existing = await readGitHubFile(env, "enrich-queue.json");
+          const items = (existing && existing.items) ? existing.items : [];
+          items.push({ text, listing: listingData, ts: Date.now() });
+          const sha = existing ? existing.sha : null;
+          await writeGitHubFile(env, "enrich-queue.json", JSON.stringify({ items }, null, 2), sha, "Queue enrich item: " + (listingData?.name || "unknown"));
+          queueOk = true;
+          break;
+        } catch (e) {
+          lastError = e.message;
+          console.error("GitHub queue error (attempt " + (attempt+1) + "):", e.message);
+          if (attempt < 2) await new Promise(r => setTimeout(r, 1000 * (attempt + 1)));
+        }
       }
 
       // 2. Send Telegram notification (brief, not the full data)
@@ -80,7 +86,7 @@ export default {
         console.error("Telegram error:", e.message);
       }
 
-      return new Response(JSON.stringify({ ok: queueOk, telegram: telegramOk, error: queueOk ? null : 'GitHub queue write failed' }), {
+      return new Response(JSON.stringify({ ok: queueOk, telegram: telegramOk, error: queueOk ? null : 'GitHub queue write failed: ' + lastError }), {
         headers: { "Content-Type": "application/json", ...corsHeaders }
       });
     } catch (e) {
@@ -102,14 +108,18 @@ async function readGitHubFile(env, path) {
   if (resp.status === 404) return null;
   if (!resp.ok) throw new Error(`GitHub read failed: ${resp.status}`);
   const data = await resp.json();
-  const content = JSON.parse(atob(data.content));
+  // GitHub returns base64 with newlines
+  const raw = data.content.replace(/\n/g, '');
+  const bytes = Uint8Array.from(atob(raw), c => c.charCodeAt(0));
+  const decoded = new TextDecoder().decode(bytes);
+  const content = JSON.parse(decoded);
   return { ...content, sha: data.sha };
 }
 
 async function writeGitHubFile(env, path, content, sha, message) {
   const body = {
     message,
-    content: btoa(content),
+    content: arrayBufferToBase64(new TextEncoder().encode(content)),
     branch: "main"
   };
   if (sha) body.sha = sha;
@@ -128,4 +138,13 @@ async function writeGitHubFile(env, path, content, sha, message) {
     throw new Error(`GitHub write failed: ${resp.status} ${err}`);
   }
   return await resp.json();
+}
+
+function arrayBufferToBase64(bytes) {
+  let binary = '';
+  const len = bytes.byteLength;
+  for (let i = 0; i < len; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary);
 }
