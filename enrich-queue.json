@@ -1,1 +1,49 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Amhuinnsuidhe Castle\n*Country:* scotland\n*Region:* argyll western isles\n*County:* Western Isles\n*Type:* castle\n*Period:* 19th century\n*Coords:* 57.96222222, -6.98972222\n*Wikipedia:* https://en.wikipedia.org/wiki/Amhuinnsuidhe_Castle\n*Maps:* https://www.google.com/maps/search/Amhuinnsuidhe%20Castle%20Western%20Isles%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZO_1NH0mcr3xUkDzbrsRks5u2k4kTLY-ySjPBKG-RoW8f_LAPxSAQbEFDuifpvV7tbHc91D0uRk0L932Rcup2IM9l2gl-BZZifBuSrkE2mELLP2ogiwcje7sM2ZLb8I2YPp6RSUYx8-T8QomDU=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* https://maps.app.goo.gl/jATjzHhRCR2ujcez7 - update google maps link, mark as a hotel \n\n*Description:*\nAmhuinnsuidhe Castle is a large 19th-century private country house on Harris, one of the Western Isles of Scotland. It was designated as a Category A listed building in 1971 and is now operated as a hotel and shooting estate.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Amhuinnsuidhe Castle",
+        "country": "scotland",
+        "region": "argyll-western-isles",
+        "county": "Western Isles",
+        "lat": "57.96222222",
+        "lng": "-6.98972222",
+        "mapsLink": "https://www.google.com/maps/search/Amhuinnsuidhe%20Castle%20Western%20Isles%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZO_1NH0mcr3xUkDzbrsRks5u2k4kTLY-ySjPBKG-RoW8f_LAPxSAQbEFDuifpvV7tbHc91D0uRk0L932Rcup2IM9l2gl-BZZifBuSrkE2mELLP2ogiwcje7sM2ZLb8I2YPp6RSUYx8-T8QomDU=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Amhuinnsuidhe Castle is a large 19th-century private country house on Harris, one of the Western Isles of Scotland. It was designated as a Category A listed building in 1971 and is now operated as a hotel and shooting estate.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 3.5,
+        "tags": [
+          "well-preserved",
+          "remote",
+          "coastal",
+          "atmospheric",
+          "events-venue"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Amhuinnsuidhe_Castle",
+        "imageAttribution": {
+          "artist": "Les Ellingham",
+          "license": "CC BY-SA 2.0",
+          "description": "Amhuinsuidhe Castle near to Amhainn Suidhe, Na h-Eileanan an Iar, Great Britain.\nThe B887 road runs right through the grounds in front of the house and out through the gateway in the distance. The house was built in 1865 for the 7th Earl of Dunmore, the then owner of the Isle of Harris.",
+          "credit": "https://www.geograph.org.uk/photo/126168",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "https://maps.app.goo.gl/jATjzHhRCR2ujcez7 - update google maps link, mark as a hotel ",
+        "enrichNotes": "https://maps.app.goo.gl/jATjzHhRCR2ujcez7 - update google maps link, mark as a hotel "
+      },
+      "ts": 1778869022040
+    }
+  ]
+}
