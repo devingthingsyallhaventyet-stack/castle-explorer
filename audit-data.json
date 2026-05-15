@@ -12068,7 +12068,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Dingwall Castle",
@@ -12104,7 +12106,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Fairburn Tower",
@@ -12458,7 +12462,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Dunnottar Castle",
