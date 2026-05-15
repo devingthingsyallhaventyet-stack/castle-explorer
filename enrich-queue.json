@@ -209,6 +209,47 @@
         "enrichNotes": "no google places listing. has an older website http://www.dalcross.org/ would need more research to do an actual listing. "
       },
       "ts": 1778872424081
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cromarty Courthouse\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 18th century\n*Coords:* 57.68, -4.0312\n*Wikipedia:* https://en.wikipedia.org/wiki/Cromarty_Courthouse\n*Maps:* https://www.google.com/maps/search/Cromarty%20Courthouse%20Highland%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/The_old_court_house_%28geograph_6600836%29.jpg/330px-The_old_court_house_%28geograph_6600836%29.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source https://www.cromartymuseum.org.uk/\n\n*Description:*\nCromarty Courthouse, formerly Cromarty Town House, is a municipal building in Church Street, Cromarty, in the Highland area of Scotland. The structure, which is used as a museum, is a Category A listed building.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Cromarty Courthouse",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.68",
+        "lng": "-4.0312",
+        "mapsLink": "https://www.google.com/maps/search/Cromarty%20Courthouse%20Highland%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/The_old_court_house_%28geograph_6600836%29.jpg/330px-The_old_court_house_%28geograph_6600836%29.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Cromarty Courthouse, formerly Cromarty Town House, is a municipal building in Church Street, Cromarty, in the Highland area of Scotland. The structure, which is used as a museum, is a Category A listed building.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "museum",
+          "kid-friendly",
+          "gift-shop"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cromarty_Courthouse",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/The_old_court_house_%28geograph_6600836%29.jpg/330px-The_old_court_house_%28geograph_6600836%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cromarty_Courthouse",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "add source https://www.cromartymuseum.org.uk/",
+        "enrichNotes": "add source https://www.cromartymuseum.org.uk/"
+      },
+      "ts": 1778872466538
     }
   ]
 }
