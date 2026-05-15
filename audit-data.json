@@ -3396,7 +3396,8 @@
       "medieval",
       "remote",
       "atmospheric",
-      "needs-research"
+      "needs-research",
+      "no-google-places"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
@@ -3706,7 +3707,8 @@
       "coastal",
       "free-entry",
       "remote",
-      "needs-research"
+      "needs-research",
+      "no-google-places"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Craig",
