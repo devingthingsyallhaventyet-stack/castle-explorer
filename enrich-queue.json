@@ -86,6 +86,50 @@
         "enrichNotes": "add source https://dornochcastlehotel.com/ , mark as hotel "
       },
       "ts": 1778871958603
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Jarlshof\n*Country:* scotland\n*Region:* highlands\n*County:* Shetland\n*Type:* settlement\n*Period:* Bronze Age to 17th century\n*Coords:* 59.8693725, -1.2910305\n*Wikipedia:* https://en.wikipedia.org/wiki/Jarlshof\n*Maps:* https://www.google.com/maps/search/Jarlshof%20Shetland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqF-V01PDQ_1zppYpVojUo8Sv7HQycnB8KXAlkNp2kl-ugq7W1Yk2qqi5uMmnyV9sr4m8rBWqXiJU-0GKPc-zdMP61zeOddocTw=s4800-w768\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nJarlshof is the best-known prehistoric archaeological site in Shetland, Scotland. It lies in Sumburgh, Mainland, Shetland and has been described as \"one of the most remarkable archaeological sites ever excavated in the British Isles\". It contains remains dating from 2500 BC up to the 17th century AD.\n\n_Listing 7 of 10_",
+      "listing": {
+        "name": "Jarlshof",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Shetland",
+        "lat": "59.8693725",
+        "lng": "-1.2910305",
+        "mapsLink": "https://www.google.com/maps/search/Jarlshof%20Shetland%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqF-V01PDQ_1zppYpVojUo8Sv7HQycnB8KXAlkNp2kl-ugq7W1Yk2qqi5uMmnyV9sr4m8rBWqXiJU-0GKPc-zdMP61zeOddocTw=s4800-w768",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Jarlshof is the best-known prehistoric archaeological site in Shetland, Scotland. It lies in Sumburgh, Mainland, Shetland and has been described as \"one of the most remarkable archaeological sites ever excavated in the British Isles\". It contains remains dating from 2500 BC up to the 17th century AD.",
+        "type": "settlement",
+        "period": "Bronze Age to 17th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "prehistoric",
+          "coastal",
+          "atmospheric",
+          "museum",
+          "celtic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Jarlshof",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Nigel Duncan",
+          "license": "CC BY-SA 2.0",
+          "description": "Jarlshof, Grutness, Shetland Islands, Scotland, Great Britain",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778871984602
     }
   ]
 }
