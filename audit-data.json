@@ -3395,7 +3395,8 @@
       "well-preserved",
       "medieval",
       "remote",
-      "atmospheric"
+      "atmospheric",
+      "needs-research"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
@@ -3410,7 +3411,16 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "Needs more research. No Google Maps listing found. May have been a luxury stay (gentlemansbutler.com link). Status unclear.",
+    "enrichReviewDate": "2026-05-15",
+    "sources": [
+      {
+        "label": "Cranshaws Castle (Gentlemans Butler)",
+        "url": "https://www.gentlemansbutler.com/cranshaws-castle-luxurious-scottish-getaway/"
+      }
+    ]
   },
   {
     "name": "Fatlips Castle",
@@ -3677,7 +3687,7 @@
     "county": "Scottish Borders",
     "lat": "41.5565",
     "lng": "-72.8354",
-    "mapsLink": "https://www.google.com/maps/search/Castle%20Craig%20Scottish%20Borders%20scotland",
+    "mapsLink": "",
     "image": "https://img.castlecore.uk/castle-craig.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -3695,7 +3705,8 @@
       "woodland",
       "coastal",
       "free-entry",
-      "remote"
+      "remote",
+      "needs-research"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Castle_Craig",
@@ -3709,7 +3720,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "Deleted Google Maps link (no valid listing). Needs more research, no Google Places found.",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Abbotsford House",
@@ -3751,7 +3765,16 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "Scotts Abbotsford",
+        "url": "https://www.scottsabbotsford.com/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "Added scottsabbotsford.com as verified source",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Traquair House",
