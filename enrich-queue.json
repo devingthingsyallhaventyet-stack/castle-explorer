@@ -130,6 +130,47 @@
         "enrichNotes": ""
       },
       "ts": 1778871984602
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Clickimin Broch\n*Country:* scotland\n*Region:* highlands\n*County:* Shetland\n*Type:* broch\n*Period:* Bronze Age / Iron Age\n*Coords:* 60.149289, -1.165543\n*Wikipedia:* https://en.wikipedia.org/wiki/Broch_of_Clickimin\n*Maps:* https://www.google.com/maps/search/Clickimin%20Broch%20Shetland%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Clickimin_Broch_20080820_04.jpg/330px-Clickimin_Broch_20080820_04.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nThe Broch of Clickimin is a large, well-preserved but restored broch in Lerwick, Shetland, Scotland. Originally built on an island in Clickimin Loch, it was approached by a stone causeway. The broch is situated within a walled enclosure and, unusually for brochs, features a large \"forework\" or \"blockhouse\" between the opening in the enclosure and the broch itself. The site is maintained by Historic Scotland. According to its excavator, John R.C. Hamilton, there were several periods of occupation of the site: Late Bronze Age farmstead, Early Iron Age farmstead, Iron Age fort, broch period, and wheelhouse settlement.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Clickimin Broch",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Shetland",
+        "lat": "60.149289",
+        "lng": "-1.165543",
+        "mapsLink": "https://www.google.com/maps/search/Clickimin%20Broch%20Shetland%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Clickimin_Broch_20080820_04.jpg/330px-Clickimin_Broch_20080820_04.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "The Broch of Clickimin is a large, well-preserved but restored broch in Lerwick, Shetland, Scotland. Originally built on an island in Clickimin Loch, it was approached by a stone causeway. The broch is situated within a walled enclosure and, unusually for brochs, features a large \"forework\" or \"blockhouse\" between the opening in the enclosure and the broch itself. The site is maintained by Historic Scotland. According to its excavator, John R.C. Hamilton, there were several periods of occupation of the site: Late Bronze Age farmstead, Early Iron Age farmstead, Iron Age fort, broch period, and wheelhouse settlement.",
+        "type": "broch",
+        "period": "Bronze Age / Iron Age",
+        "rating": 3.5,
+        "tags": [
+          "well-preserved",
+          "prehistoric",
+          "island",
+          "free-entry",
+          "celtic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Broch_of_Clickimin",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Clickimin_Broch_20080820_04.jpg/330px-Clickimin_Broch_20080820_04.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Broch_of_Clickimin",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778872015780
     }
   ]
 }
