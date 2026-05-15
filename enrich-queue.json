@@ -127,6 +127,44 @@
         "enrichNotes": ""
       },
       "ts": 1778870241598
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Methven Castle\n*Country:* scotland\n*Region:* fife perthshire\n*County:* Perth and Kinross\n*Type:* castle\n*Period:* 17th century\n*Coords:* 56.4168, -3.5549\n*Wikipedia:* https://en.wikipedia.org/wiki/Methven_Castle\n*Maps:* https://www.google.com/maps/search/Methven%20Castle%20Perth%20and%20Kinross%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Methven_Castle.jpg/330px-Methven_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nMethven Castle is a privately owned 17th-century house situated east of Methven, in Perth and Kinross, Scotland.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Methven Castle",
+        "country": "scotland",
+        "region": "fife-perthshire",
+        "county": "Perth and Kinross",
+        "lat": "56.4168",
+        "lng": "-3.5549",
+        "mapsLink": "https://www.google.com/maps/search/Methven%20Castle%20Perth%20and%20Kinross%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Methven_Castle.jpg/330px-Methven_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Methven Castle is a privately owned 17th-century house situated east of Methven, in Perth and Kinross, Scotland.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 3.4,
+        "tags": [
+          "well-preserved",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Methven_Castle",
+        "imageAttribution": "local",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Methven_Castle",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778870275953
     }
   ]
 }
