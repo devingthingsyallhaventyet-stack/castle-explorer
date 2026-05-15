@@ -126,6 +126,47 @@
         "enrichNotes": ""
       },
       "ts": 1778872242253
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Tor Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* Medieval\n*Coords:* 56.8609, -5.0651\n*Wikipedia:* https://en.wikipedia.org/wiki/Tor_Castle\n*Maps:* https://www.google.com/maps/search/Tor%20Castle%20Highland%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tor_Castle.jpg/330px-Tor_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* no google places, only 1 wikipedia photo. needs more research to make a listing. \n\n*Description:*\nTor Castle is a ruined castle, about 3 miles north east of Fort William, Highland, Scotland, west of the River Lochy and east of the Caledonian Canal, near Torlundy.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Tor Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "56.8609",
+        "lng": "-5.0651",
+        "mapsLink": "https://www.google.com/maps/search/Tor%20Castle%20Highland%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tor_Castle.jpg/330px-Tor_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Tor Castle is a ruined castle, about 3 miles north east of Fort William, Highland, Scotland, west of the River Lochy and east of the Caledonian Canal, near Torlundy.",
+        "type": "castle",
+        "period": "Medieval",
+        "rating": 3.4,
+        "tags": [
+          "ruins-romantic",
+          "woodland",
+          "free-entry",
+          "remote"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Tor_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tor_Castle.jpg/330px-Tor_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tor_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "no google places, only 1 wikipedia photo. needs more research to make a listing. ",
+        "enrichNotes": "no google places, only 1 wikipedia photo. needs more research to make a listing. "
+      },
+      "ts": 1778872298886
     }
   ]
 }
