@@ -258,6 +258,50 @@
         "enrichNotes": "Add as source https://www.carnegieclub.co.uk/, update google places link https://maps.app.goo.gl/zevAbDDcTrnqzLw38"
       },
       "ts": 1778872121321
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Skibo Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* Medieval / 19th century rebuild\n*Coords:* 57.87321667, -4.13221667\n*Wikipedia:* https://en.wikipedia.org/wiki/Skibo_Castle\n*Maps:* https://www.google.com/maps/search/Skibo%20Castle%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP5NbH26DnmDOUYk7IMpH4x-teiYTj7hox3uyzvvB_LIwHRmzAxoh92EvguRUtlBSx3fyP0dQi152ArnY6Us9fl8tCp4lzitvpZjjAuFF3bH2jm-6efqs26hKgo2j5phGrlbbMMnsVjMxCl=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* Add as source https://www.carnegieclub.co.uk/, update google places link https://maps.app.goo.gl/zevAbDDcTrnqzLw38\n\n*Description:*\nSkibo Castle is located to the west of Dornoch in the Highland county of Sutherland, Scotland overlooking the Dornoch Firth. Although largely of the 19th century and early 20th century, when it was the home of industrialist Andrew Carnegie, its origins go back much earlier. Thomas Chirnside and his brother, Andrew Spencer Chirnside, bought the castle and the surrounding 20,000 acres for £125,000 in 1868 and lived there until they sold it in 1871 for £130,000.\n\n_Listing 10 of 10_",
+      "listing": {
+        "name": "Skibo Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.87321667",
+        "lng": "-4.13221667",
+        "mapsLink": "https://www.google.com/maps/search/Skibo%20Castle%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP5NbH26DnmDOUYk7IMpH4x-teiYTj7hox3uyzvvB_LIwHRmzAxoh92EvguRUtlBSx3fyP0dQi152ArnY6Us9fl8tCp4lzitvpZjjAuFF3bH2jm-6efqs26hKgo2j5phGrlbbMMnsVjMxCl=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Skibo Castle is located to the west of Dornoch in the Highland county of Sutherland, Scotland overlooking the Dornoch Firth. Although largely of the 19th century and early 20th century, when it was the home of industrialist Andrew Carnegie, its origins go back much earlier. Thomas Chirnside and his brother, Andrew Spencer Chirnside, bought the castle and the surrounding 20,000 acres for £125,000 in 1868 and lived there until they sold it in 1871 for £130,000.",
+        "type": "castle",
+        "period": "Medieval / 19th century rebuild",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "victorian",
+          "events-venue"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Skibo_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Skibo_Castle_%28geograph_3619425%29_v2.jpg/330px-Skibo_Castle_%28geograph_3619425%29_v2.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Graeme Smith",
+          "license": "CC BY-SA 2.0",
+          "description": "This is a photo of listed building number",
+          "credit": "This file was derived from:  Skibo Castle (geograph 3619425).jpg",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "Add as source https://www.carnegieclub.co.uk/, update google places link https://maps.app.goo.gl/zevAbDDcTrnqzLw38",
+        "enrichNotes": "Add as source https://www.carnegieclub.co.uk/, update google places link https://maps.app.goo.gl/zevAbDDcTrnqzLw38"
+      },
+      "ts": 1778872135577
     }
   ]
 }
