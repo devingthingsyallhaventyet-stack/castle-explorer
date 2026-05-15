@@ -122,6 +122,46 @@
         "enrichNotes": ""
       },
       "ts": 1778873203572
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Drum Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 13th century\n*Coords:* 57.09503, -2.33794\n*Wikipedia:* https://en.wikipedia.org/wiki/Drum_Castle\n*Maps:* https://www.google.com/maps/search/Drum%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqEbIsbaqoRe4TbnzvRrI0xGv66bv1x9-sJm5mU3NW-eQ7yJUPa4N6eT3HXnL7cWsYrPcpFa7RczwLI1vzPxweImHc8K4dADm7E=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nDrum Castle is a castle near Drumoak in Aberdeenshire, Scotland. For centuries it was the seat of the chief of Clan Irvine. The place-name Drum is derived from Gaelic druim, 'ridge'. The site is located approximately 6+1⁄2 miles northeast of Banchory and 3 miles west of Peterculter. The property is now owned by the National Trust for Scotland and is open to the public.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Drum Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.09503",
+        "lng": "-2.33794",
+        "mapsLink": "https://www.google.com/maps/search/Drum%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqEbIsbaqoRe4TbnzvRrI0xGv66bv1x9-sJm5mU3NW-eQ7yJUPa4N6eT3HXnL7cWsYrPcpFa7RczwLI1vzPxweImHc8K4dADm7E=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Drum Castle is a castle near Drumoak in Aberdeenshire, Scotland. For centuries it was the seat of the chief of Clan Irvine. The place-name Drum is derived from Gaelic druim, 'ridge'. The site is located approximately 6+1⁄2 miles northeast of Banchory and 3 miles west of Peterculter. The property is now owned by the National Trust for Scotland and is open to the public.",
+        "type": "tower house",
+        "period": "13th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Drum_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Bill Harrison",
+          "license": "CC BY-SA 2.0",
+          "description": "Drum Castle",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778873224395
     }
   ]
 }
