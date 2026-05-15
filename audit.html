@@ -373,6 +373,7 @@ fetch('audit-data.json').then(r => r.json()).then(data => {
     }
   });
   saveState();
+  restoreEnrichStatuses();
   populateFilters();
   findDupes();
   applyFilters();
@@ -637,6 +638,22 @@ function goPrev() {
 }
 function getToday() { return new Date().toISOString().split('T')[0]; }
 
+// Enrich status persistence (survives refresh via localStorage until Clawz updates the file)
+let enrichStatuses = {};
+try { enrichStatuses = JSON.parse(localStorage.getItem('castle-enrich-statuses') || '{}'); } catch(e) {}
+function saveEnrichStatuses() { localStorage.setItem('castle-enrich-statuses', JSON.stringify(enrichStatuses)); }
+// Restore enrich statuses on data load
+function restoreEnrichStatuses() {
+  Object.keys(enrichStatuses).forEach(key => {
+    const entry = allData.find(d => getKey(d) === key);
+    if (entry && !entry.enrichStatus) {
+      entry.enrichStatus = enrichStatuses[key].status;
+      entry.enrichReviewDate = enrichStatuses[key].date;
+      entry.enrichNote = enrichStatuses[key].note;
+    }
+  });
+}
+
 function markEnriched() {
   if (!filtered.length) return;
   const d = filtered[currentIdx];
@@ -644,9 +661,10 @@ function markEnriched() {
   d.enrichStatus = 'enriched';
   d.enrichReviewDate = getToday();
   if (enrichNotes[key]) d.enrichNote = enrichNotes[key];
+  enrichStatuses[key] = { status: 'enriched', date: getToday(), note: enrichNotes[key] || '' };
+  saveEnrichStatuses();
   reviewState[key] = { status: 'flagged', ts: Date.now() };
   saveState(); updateProgress(); renderCard();
-  // Don't advance — let user send to Clawz first
 }
 
 function markStillInProgress() {
@@ -656,9 +674,10 @@ function markStillInProgress() {
   d.enrichStatus = 'in-progress';
   d.enrichReviewDate = getToday();
   if (enrichNotes[key]) d.enrichNote = enrichNotes[key];
+  enrichStatuses[key] = { status: 'in-progress', date: getToday(), note: enrichNotes[key] || '' };
+  saveEnrichStatuses();
   reviewState[key] = { status: 'flagged', ts: Date.now() };
   saveState(); updateProgress(); renderCard();
-  // Don't advance — let user send to Clawz first
 }
 
 function advanceToNext() {
