@@ -130,6 +130,46 @@
         "enrichNotes": "No google places and wikipedia has minimal info. Needs more research. "
       },
       "ts": 1778870791091
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Balmerino Abbey\n*Country:* scotland\n*Region:* fife perthshire\n*County:* Fife\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 56.40916667, -3.04111111\n*Wikipedia:* https://en.wikipedia.org/wiki/Balmerino_Abbey\n*Maps:* https://www.google.com/maps/search/Balmerino%20Abbey%20Fife%20scotland\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nBalmerino Abbey, or St Edward's Abbey, in Balmerino, Fife, Scotland, was a Cistercian monastery which has been ruinous since the 16th century.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Balmerino Abbey",
+        "country": "scotland",
+        "region": "fife-perthshire",
+        "county": "Fife",
+        "lat": "56.40916667",
+        "lng": "-3.04111111",
+        "mapsLink": "https://www.google.com/maps/search/Balmerino%20Abbey%20Fife%20scotland",
+        "image": "",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Balmerino Abbey, or St Edward's Abbey, in Balmerino, Fife, Scotland, was a Cistercian monastery which has been ruinous since the 16th century.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "atmospheric",
+          "medieval",
+          "hidden-gem",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778870822609
     }
   ]
 }
