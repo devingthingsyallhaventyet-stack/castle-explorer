@@ -423,12 +423,12 @@ function applyFilters() {
   updateProgress();
 }
 
+function debounce(fn, ms) { let t; return function(...a) { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
+
 document.getElementById('searchBox').addEventListener('input', debounce(applyFilters, 300));
 document.getElementById('countryFilter').addEventListener('change', applyFilters);
 document.getElementById('imgSourceFilter').addEventListener('change', applyFilters);
 document.getElementById('statusFilter').addEventListener('change', applyFilters);
-
-function debounce(fn, ms) { let t; return function(...a) { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
 
 function updateProgress() {
   let ap = 0, fl = 0, un = 0;
