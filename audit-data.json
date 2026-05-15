@@ -9789,7 +9789,16 @@
     },
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Dunvegan Castle",
+        "url": "https://www.dunvegancastle.com/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "https://www.dunvegancastle.com/ add source",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Armadale Castle",
@@ -9822,7 +9831,16 @@
     },
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Armadale Castle",
+        "url": "https://armadalecastle.com/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "https://armadalecastle.com/ add source",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Mingary Castle",
@@ -9867,7 +9885,16 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mingary_Castle",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "Mingary Castle",
+        "url": "https://mingarycastle.co.uk/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "add source - https://mingarycastle.co.uk/a",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Dunbeath Castle",
@@ -9977,7 +10004,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Invergarry Castle",
@@ -10115,7 +10144,7 @@
     "county": "Highland",
     "lat": "57.68",
     "lng": "-6.34",
-    "mapsLink": "https://www.google.com/maps/search/Duntulm%20Castle%20Highland%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/vgiMLtPrFgYoSyVU6",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN1-RJUt0HK5xAJZkExRs7n1Q0R-tik3JsR2kbfcyXlFtpU4ibyBmFSIi4lg0V8ek0L5qJw5o_fYvnFI3Qd0iJ2FICA4Az3HP6lrNWlX72_Qqr9vZYD-vh_0DDs1sLnGEastKgMeB_oUZr_Kg=s4800-w1200",
     "imgSource": "google",
     "gallery": [],
@@ -10146,7 +10175,10 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichNote": "update google places link https://maps.app.goo.gl/vgiMLtPrFgYoSyVU6",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Castle Tioram",
