@@ -89,6 +89,47 @@
         "enrichNotes": ""
       },
       "ts": 1778870660987
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Kinclaven Castle\n*Country:* scotland\n*Region:* fife perthshire\n*County:* Perthshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 56.5240552, -3.3701994\n*Wikipedia:* https://en.wikipedia.org/wiki/Kinclaven_Castle\n*Maps:* https://www.google.com/maps/search/Kinclaven%20Castle%20Perthshire%20scotland\n*Main Image:* https://img.castlecore.uk/kinclaven-castle.jpg\n*Gallery:* 1 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* No google places and wikipedia has minimal info. Needs more research. \n\n*Description:*\nKinclaven Castle is a ruined 13th century castle in Perthshire, Scotland.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Kinclaven Castle",
+        "country": "scotland",
+        "region": "fife-perthshire",
+        "county": "Perthshire",
+        "lat": "56.5240552",
+        "lng": "-3.3701994",
+        "mapsLink": "https://www.google.com/maps/search/Kinclaven%20Castle%20Perthshire%20scotland",
+        "image": "https://img.castlecore.uk/kinclaven-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/kinclaven-castle-2.jpg"
+        ],
+        "desc": "Kinclaven Castle is a ruined 13th century castle in Perthshire, Scotland.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.2,
+        "tags": [
+          "ruins-romantic",
+          "riverside",
+          "woodland",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "No google places and wikipedia has minimal info. Needs more research. ",
+        "enrichNotes": "No google places and wikipedia has minimal info. Needs more research. "
+      },
+      "ts": 1778870791091
     }
   ]
 }
