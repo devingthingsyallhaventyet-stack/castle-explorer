@@ -92,6 +92,53 @@
         "enrichNotes": "https://www.dunderave-castle.co.uk/ , https://www.dunderavecastle.com/\n\nadd these both as verified sources "
       },
       "ts": 1778869119263
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* St Blane's Church\n*Country:* scotland\n*Region:* argyll western isles\n*County:* Argyll and Bute\n*Type:* abbey\n*Period:* 6th century onwards\n*Coords:* 56.189, -3.963\n*Wikipedia:* https://en.wikipedia.org/wiki/Saint_Blane\n*Maps:* https://www.google.com/maps/search/St%20Blane's%20Church%20Argyll%20and%20Bute%20scotland\n*Main Image:* https://img.castlecore.uk/st-blane-s-church.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://en.wikipedia.org/wiki/Saint_Blane this is the correct wikipedia link. I see in our preview of the wikipedia comparison section a different wikipedia page is loaded. please make sure only the link here is used and referenced. \n\n*Description:*\nSt Blane's is a Church of Scotland church located in Dunblane, Scotland. The evangelical congregation is within the Church of Scotland's Presbytery of Stirling. The Gothic Revival church building opened in 1854 as the Free Church and is now a category B listed building.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "St Blane's Church",
+        "country": "scotland",
+        "region": "argyll-western-isles",
+        "county": "Argyll and Bute",
+        "lat": "56.189",
+        "lng": "-3.963",
+        "mapsLink": "https://www.google.com/maps/search/St%20Blane's%20Church%20Argyll%20and%20Bute%20scotland",
+        "image": "https://img.castlecore.uk/st-blane-s-church.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/st-blane-s-church-2.jpg",
+          "https://img.castlecore.uk/st-blane-s-church-3.jpg",
+          "https://img.castlecore.uk/st-blane-s-church-4.jpg",
+          "https://img.castlecore.uk/st-blane-s-church-5.jpg"
+        ],
+        "desc": "St Blane's is a Church of Scotland church located in Dunblane, Scotland. The evangelical congregation is within the Church of Scotland's Presbytery of Stirling. The Gothic Revival church building opened in 1854 as the Free Church and is now a category B listed building.",
+        "type": "abbey",
+        "period": "6th century onwards",
+        "rating": 4.2,
+        "tags": [
+          "ruins-romantic",
+          "celtic",
+          "atmospheric",
+          "free-entry",
+          "island",
+          "remote"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/St_Blane's_Church%2C_Dunblane",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg/330px-Church%2C_Dunblane_-_geograph.org.uk_-_953428.jpg",
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "https://en.wikipedia.org/wiki/Saint_Blane this is the correct wikipedia link. I see in our preview of the wikipedia comparison section a different wikipedia page is loaded. please make sure only the link here is used and referenced. ",
+        "enrichNotes": "https://en.wikipedia.org/wiki/Saint_Blane this is the correct wikipedia link. I see in our preview of the wikipedia comparison section a different wikipedia page is loaded. please make sure only the link here is used and referenced. "
+      },
+      "ts": 1778869262257
     }
   ]
 }
