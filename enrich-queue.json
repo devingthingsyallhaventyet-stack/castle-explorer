@@ -124,6 +124,49 @@
         "enrichNotes": " google places link https://maps.app.goo.gl/Qv1w4ySfTLaU632E6 , add as source  https://dalhousieestates.co.uk/"
       },
       "ts": 1778873550271
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* New Slains Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 57.4153354, -1.8322935\n*Wikipedia:* https://en.wikipedia.org/wiki/New_Slains_Castle\n*Maps:* https://www.google.com/maps/search/New%20Slains%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg/330px-New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSlains Castle, also known as New Slains Castle to distinguish it from the nearby Old Slains Castle, is a ruined castle in Aberdeenshire, Scotland. It overlooks the North Sea from its cliff-top site one kilometre east of Cruden Bay.\n\n_Listing 10 of 10_",
+      "listing": {
+        "name": "New Slains Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.4153354",
+        "lng": "-1.8322935",
+        "mapsLink": "https://www.google.com/maps/search/New%20Slains%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg/330px-New_Slains_Castle_-_geograph.org.uk_-_8035498.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Slains Castle, also known as New Slains Castle to distinguish it from the nearby Old Slains Castle, is a ruined castle in Aberdeenshire, Scotland. It overlooks the North Sea from its cliff-top site one kilometre east of Cruden Bay.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.2,
+        "tags": [
+          "ruins-romantic",
+          "dark-brooding",
+          "atmospheric",
+          "cliffside",
+          "coastal",
+          "photogenic",
+          "free-entry",
+          "haunted"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/New_Slains_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/New_Slains_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778873577910
     }
   ]
 }
