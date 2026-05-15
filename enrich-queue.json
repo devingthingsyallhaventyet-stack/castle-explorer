@@ -42,6 +42,49 @@
         "enrichNotes": "Not relevant to our site. Delete listing completely. "
       },
       "ts": 1778871006679
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Inverlochy Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 13th century\n*Coords:* 56.83258611, -5.08100278\n*Wikipedia:* https://en.wikipedia.org/wiki/Inverlochy_Castle\n*Maps:* https://www.google.com/maps/search/Inverlochy%20Castle%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNVC80H5GnzUgiuJB6Gl4HN9oiKYisRuXJmZN51L2vBA8IzuUVbVLI9MhKFKm5Lp_wdR_aG6hjxF1e7J9hxQERs4b5I6Zmuyxqh77mE034LGPIvYYInS8ducwre3z8ynazjo1OAHO7C_TDm42I=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* change name to Old Inverlochy Castle , google places link - https://maps.app.goo.gl/kVr3davEGAggDdSn9\n\n*Description:*\nInverlochy Castle is a ruined, 13th-century castle near Inverlochy and Fort William, Highland, Scotland. The site of two battles, the castle remains largely unchanged since its construction. It is now in the care of Historic Environment Scotland.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Inverlochy Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "56.83258611",
+        "lng": "-5.08100278",
+        "mapsLink": "https://www.google.com/maps/search/Inverlochy%20Castle%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVC80H5GnzUgiuJB6Gl4HN9oiKYisRuXJmZN51L2vBA8IzuUVbVLI9MhKFKm5Lp_wdR_aG6hjxF1e7J9hxQERs4b5I6Zmuyxqh77mE034LGPIvYYInS8ducwre3z8ynazjo1OAHO7C_TDm42I=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Inverlochy Castle is a ruined, 13th-century castle near Inverlochy and Fort William, Highland, Scotland. The site of two battles, the castle remains largely unchanged since its construction. It is now in the care of Historic Environment Scotland.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Inverlochy_Castle",
+        "imageAttribution": {
+          "artist": "Horatio McCulloch (1805–1867)",
+          "license": "Public domain",
+          "description": "",
+          "credit": "Transferred from en.wikipedia to Commons by Jonathan Oldenbuck using CommonsHelper.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "change name to Old Inverlochy Castle , google places link - https://maps.app.goo.gl/kVr3davEGAggDdSn9",
+        "enrichNotes": "change name to Old Inverlochy Castle , google places link - https://maps.app.goo.gl/kVr3davEGAggDdSn9"
+      },
+      "ts": 1778871085599
     }
   ]
 }
