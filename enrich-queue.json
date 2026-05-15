@@ -1,1 +1,45 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dunvegan Castle\n*Country:* scotland\n*Region:* highlands\n*County:* Isle of Skye\n*Type:* castle\n*Period:* 13th century\n*Coords:* 57.448, -6.59\n*Wikipedia:* https://en.wikipedia.org/wiki/Dunvegan_Castle\n*Maps:* https://www.google.com/maps/search/Dunvegan%20Castle%20Isle%20of%20Skye%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/330px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.dunvegancastle.com/ add source \n\n*Description:*\nDunvegan Castle is located 1 mile (1.6 km) to the north of Dunvegan on the Isle of Skye, off the west coast of Scotland. It is the seat of the MacLeod of MacLeod, chief of the Clan MacLeod. Probably a fortified site from the earliest times, the castle was first built in the 13th century and developed piecemeal over the centuries. In the 19th century the whole castle was remodelled in a mock-medieval style. The castle is built on an elevated rock overlooking an inlet on the eastern shore of Loch Dunvegan, a sea loch.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Dunvegan Castle",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Isle of Skye",
+        "lat": "57.448",
+        "lng": "-6.59",
+        "mapsLink": "https://www.google.com/maps/search/Dunvegan%20Castle%20Isle%20of%20Skye%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Highland_-_Dunvegan_Castle_-_20240524140144.jpg/330px-Highland_-_Dunvegan_Castle_-_20240524140144.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Dunvegan Castle is located 1 mile (1.6 km) to the north of Dunvegan on the Isle of Skye, off the west coast of Scotland. It is the seat of the MacLeod of MacLeod, chief of the Clan MacLeod. Probably a fortified site from the earliest times, the castle was first built in the 13th century and developed piecemeal over the centuries. In the 19th century the whole castle was remodelled in a mock-medieval style. The castle is built on an elevated rock overlooking an inlet on the eastern shore of Loch Dunvegan, a sea loch.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dunvegan_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Gillfoto",
+          "license": "CC BY-SA 4.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "https://www.dunvegancastle.com/ add source ",
+        "enrichNotes": "https://www.dunvegancastle.com/ add source "
+      },
+      "ts": 1778871295224
+    }
+  ]
+}
