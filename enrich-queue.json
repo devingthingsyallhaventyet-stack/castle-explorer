@@ -45,6 +45,49 @@
         "enrichNotes": "Update name to Old Temple Kirk , google maps link - https://maps.app.goo.gl/biwFY3CwJ8pGTV1v6 , add source - https://www.templeoldkirk.org/default.asp?page=history , remove wikipedia link as no pages seem to exist "
       },
       "ts": 1778869996964
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Torphichen Preceptory\n*Country:* scotland\n*Region:* edinburgh lothians\n*County:* West Lothian\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 55.93464, -3.6524\n*Wikipedia:* https://en.wikipedia.org/wiki/Torphichen_Preceptory\n*Maps:* https://www.google.com/maps/search/Torphichen%20Preceptory%20West%20Lothian%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Torphichen_Preceptory_5.jpg/330px-Torphichen_Preceptory_5.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nTorphichen Preceptory is a church in the village of Torphichen, West Lothian, Scotland. It comprises the remains of the preceptory (headquarters) of the Knights Hospitaller of the Order of St John of Jerusalem in Scotland. The placename may be Gaelic in origin, e.g., \"Tóir Féichín\" or Brythonic, e.g., modern Welsh \"tref fechan\". The name \"Tóir Féichín\" with its Gaelic reference to the Boundary/Sanctuary stones set one mile around the village is most likely the true meaning of the village and Preceptory name rather than the modern Welsh which has no historical precedent that overrides the true meaning of those Neolithic sanctuary stones.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Torphichen Preceptory",
+        "country": "scotland",
+        "region": "edinburgh-lothians",
+        "county": "West Lothian",
+        "lat": "55.93464",
+        "lng": "-3.6524",
+        "mapsLink": "https://www.google.com/maps/search/Torphichen%20Preceptory%20West%20Lothian%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Torphichen_Preceptory_5.jpg/330px-Torphichen_Preceptory_5.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Torphichen Preceptory is a church in the village of Torphichen, West Lothian, Scotland. It comprises the remains of the preceptory (headquarters) of the Knights Hospitaller of the Order of St John of Jerusalem in Scotland. The placename may be Gaelic in origin, e.g., \"Tóir Féichín\" or Brythonic, e.g., modern Welsh \"tref fechan\". The name \"Tóir Féichín\" with its Gaelic reference to the Boundary/Sanctuary stones set one mile around the village is most likely the true meaning of the village and Preceptory name rather than the modern Welsh which has no historical precedent that overrides the true meaning of those Neolithic sanctuary stones.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Torphichen_Preceptory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Torphichen_Preceptory_5.jpg/330px-Torphichen_Preceptory_5.jpg",
+        "imageAttribution": {
+          "artist": "LordHarris",
+          "license": "CC BY-SA 4.0",
+          "description": "Torphichen Preceptory",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778870209726
     }
   ]
 }
