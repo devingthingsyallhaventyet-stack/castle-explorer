@@ -203,6 +203,45 @@
         "enrichNotes": ""
       },
       "ts": 1778873245362
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Delgatie Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 16th century\n*Coords:* 57.5443, -2.412\n*Wikipedia:* https://en.wikipedia.org/wiki/Delgatie_Castle\n*Maps:* https://www.google.com/maps/search/Delgatie%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Delgatie_Castle_2017-05-26.jpg/330px-Delgatie_Castle_2017-05-26.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* google places link https://www.google.com/travel/search?ts=CAEaSQopEicyJTB4NDg4NDVlMTZkYWMwODNjMzoweDRhMDc5NDg5N2VhZmI0NmISHBIUCgcI6g8QBRgZEgcI6g8QBRgaGAEyBAgAEAA&qs=CAEyE0Nnb0k2LWktOVplUjVZTktFQUU4AkIJCWu0r36JlAdKQgkJa7SvfomUB0o&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls , add source https://delgatiecastle.com/ \n\n*Description:*\nDelgatie Castle is a castle near Turriff, in Aberdeenshire, Scotland. The castle consists of a white-harled, five-storey tower dating from the 16th century, with later extensions.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Delgatie Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.5443",
+        "lng": "-2.412",
+        "mapsLink": "https://www.google.com/maps/search/Delgatie%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Delgatie_Castle_2017-05-26.jpg/330px-Delgatie_Castle_2017-05-26.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Delgatie Castle is a castle near Turriff, in Aberdeenshire, Scotland. The castle consists of a white-harled, five-storey tower dating from the 16th century, with later extensions.",
+        "type": "tower house",
+        "period": "16th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Delgatie_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Delgatie_Castle_2017-05-26.jpg/330px-Delgatie_Castle_2017-05-26.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Delgatie_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "google places link https://www.google.com/travel/search?ts=CAEaSQopEicyJTB4NDg4NDVlMTZkYWMwODNjMzoweDRhMDc5NDg5N2VhZmI0NmISHBIUCgcI6g8QBRgZEgcI6g8QBRgaGAEyBAgAEAA&qs=CAEyE0Nnb0k2LWktOVplUjVZTktFQUU4AkIJCWu0r36JlAdKQgkJa7SvfomUB0o&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls , add source https://delgatiecastle.com/ ",
+        "enrichNotes": "google places link https://www.google.com/travel/search?ts=CAEaSQopEicyJTB4NDg4NDVlMTZkYWMwODNjMzoweDRhMDc5NDg5N2VhZmI0NmISHBIUCgcI6g8QBRgZEgcI6g8QBRgaGAEyBAgAEAA&qs=CAEyE0Nnb0k2LWktOVplUjVZTktFQUU4AkIJCWu0r36JlAdKQgkJa7SvfomUB0o&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls , add source https://delgatiecastle.com/ "
+      },
+      "ts": 1778873319013
     }
   ]
 }
