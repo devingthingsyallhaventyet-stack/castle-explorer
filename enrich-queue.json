@@ -214,6 +214,51 @@
         "enrichNotes": ""
       },
       "ts": 1778870877154
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cathcart Castle\n*Country:* scotland\n*Region:* glasgow stirling\n*County:* Glasgow\n*Type:* castle\n*Period:* 15th century\n*Coords:* 55.813, -4.2563\n*Wikipedia:* https://en.wikipedia.org/wiki/Cathcart_Castle\n*Maps:* https://www.google.com/maps/search/Cathcart%20Castle%20Glasgow%20scotland\n*Main Image:* https://img.castlecore.uk/cathcart-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* google places link - https://maps.app.goo.gl/zyBLRKZxQdinVKFr5\n\n*Description:*\nCathcart Castle was a 15th-century castle, located in what is now Linn Park in the Cathcart area of southern Glasgow, Scotland. The castle was abandoned in the 18th century, and the remaining ruins were pulled down in 1980, leaving only foundations visible.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Cathcart Castle",
+        "country": "scotland",
+        "region": "glasgow-stirling",
+        "county": "Glasgow",
+        "lat": "55.813",
+        "lng": "-4.2563",
+        "mapsLink": "https://www.google.com/maps/search/Cathcart%20Castle%20Glasgow%20scotland",
+        "image": "https://img.castlecore.uk/cathcart-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/cathcart-castle-2.jpg",
+          "https://img.castlecore.uk/cathcart-castle-3.jpg",
+          "https://img.castlecore.uk/cathcart-castle-4.jpg",
+          "https://img.castlecore.uk/cathcart-castle-5.jpg"
+        ],
+        "desc": "Cathcart Castle was a 15th-century castle, located in what is now Linn Park in the Cathcart area of southern Glasgow, Scotland. The castle was abandoned in the 18th century, and the remaining ruins were pulled down in 1980, leaving only foundations visible.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 3.4,
+        "tags": [
+          "ruins-romantic",
+          "woodland",
+          "free-entry",
+          "riverside"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cathcart_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cathcart_Castle_from_South_East_1887_fig_170_1887.jpg/330px-Cathcart_Castle_from_South_East_1887_fig_170_1887.jpg",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle",
+        "reviewStatus": "flagged",
+        "lastReviewed": "2026-05-13",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNote": "google places link - https://maps.app.goo.gl/zyBLRKZxQdinVKFr5",
+        "enrichNotes": "google places link - https://maps.app.goo.gl/zyBLRKZxQdinVKFr5"
+      },
+      "ts": 1778870954261
     }
   ]
 }
