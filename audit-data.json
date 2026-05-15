@@ -6623,7 +6623,16 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "The Black Watch",
+        "url": "https://theblackwatch.co.uk/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "add source - https://theblackwatch.co.uk/",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Kellie Castle",
@@ -6805,7 +6814,9 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Clackmannan Tower",
@@ -6956,7 +6967,9 @@
       "ruins-romantic",
       "riverside",
       "woodland",
-      "free-entry"
+      "free-entry",
+      "no-google-places",
+      "needs-research"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
@@ -6969,7 +6982,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "No google places and wikipedia has minimal info. Needs more research.",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Garth Castle",
@@ -7338,7 +7354,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Balgonie Castle",
@@ -7379,7 +7397,9 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Dunkeld Cathedral",
@@ -8997,7 +9017,7 @@
     "county": "Glasgow",
     "lat": "55.813",
     "lng": "-4.2563",
-    "mapsLink": "https://www.google.com/maps/search/Cathcart%20Castle%20Glasgow%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/zyBLRKZxQdinVKFr5",
     "image": "https://img.castlecore.uk/cathcart-castle.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -9028,7 +9048,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichNote": "google places link - https://maps.app.goo.gl/zyBLRKZxQdinVKFr5",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Mearns Castle",
