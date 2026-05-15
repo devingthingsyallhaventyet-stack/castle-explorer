@@ -3721,9 +3721,7 @@
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
     "needsEnrich": true,
-    "enrichStatus": "enriched",
-    "enrichNote": "Deleted Google Maps link (no valid listing). Needs more research, no Google Places found.",
-    "enrichReviewDate": "2026-05-15"
+    "enrichNote": "Deleted Google Maps link (no valid listing). Needs more research, no Google Places found."
   },
   {
     "name": "Abbotsford House",
