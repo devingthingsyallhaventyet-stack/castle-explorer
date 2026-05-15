@@ -88,6 +88,48 @@
         "enrichNotes": ""
       },
       "ts": 1778872656628
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Edzell Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* castle\n*Period:* 16th century\n*Coords:* 56.8115, -2.6819\n*Wikipedia:* https://en.wikipedia.org/wiki/Edzell_Castle\n*Maps:* https://www.google.com/maps/search/Edzell%20Castle%20Angus%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqH8OqtWbNyhPmqdLDkGeMpzgbqMLA28iSsA0N_mbVDCBntm7cBgSv9ikHuq-lJ5mFbyMRLNLCIuWkffEZSxXvr-yZFYtJTTAo4=s4800-w768\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nEdzell Castle is a ruined 16th-century castle, with an early-17th-century walled garden. It is located close to Edzell, and is around 5 miles (8 km) north of Brechin, in Angus, Scotland. Edzell Castle was begun around 1520 by David Lindsay, 9th Earl of Crawford, and expanded by his son, Sir David Lindsay, Lord Edzell, who also laid out the garden in 1604. The castle saw little military action, and was, in its design, construction and use, more of a country house than a defensive structure. It was briefly occupied by English troops during Oliver Cromwell's invasion of Scotland in 1651. In 1715 it was sold by the Lindsay family, and eventually came into the ownership of the Earl of Dalhousie. It was given into state care in the 1930s, and is now a visitor attraction run by Historic Environment Scotland. The castle consists of the original tower house and building ranges around a courtyard. The adjacent Renaissance walled garden, incorporating intricate relief carvings, is unique in Scotland. It was replanted in the 1930s, and is considered to have links to esoteric traditions, including Rosicrucianism and Freemasonry.\n\n_Listing 10 of 10_",
+      "listing": {
+        "name": "Edzell Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.8115",
+        "lng": "-2.6819",
+        "mapsLink": "https://www.google.com/maps/search/Edzell%20Castle%20Angus%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqH8OqtWbNyhPmqdLDkGeMpzgbqMLA28iSsA0N_mbVDCBntm7cBgSv9ikHuq-lJ5mFbyMRLNLCIuWkffEZSxXvr-yZFYtJTTAo4=s4800-w768",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Edzell Castle is a ruined 16th-century castle, with an early-17th-century walled garden. It is located close to Edzell, and is around 5 miles (8 km) north of Brechin, in Angus, Scotland. Edzell Castle was begun around 1520 by David Lindsay, 9th Earl of Crawford, and expanded by his son, Sir David Lindsay, Lord Edzell, who also laid out the garden in 1604. The castle saw little military action, and was, in its design, construction and use, more of a country house than a defensive structure. It was briefly occupied by English troops during Oliver Cromwell's invasion of Scotland in 1651. In 1715 it was sold by the Lindsay family, and eventually came into the ownership of the Earl of Dalhousie. It was given into state care in the 1930s, and is now a visitor attraction run by Historic Environment Scotland. The castle consists of the original tower house and building ranges around a courtyard. The adjacent Renaissance walled garden, incorporating intricate relief carvings, is unique in Scotland. It was replanted in the 1930s, and is considered to have links to esoteric traditions, including Rosicrucianism and Freemasonry.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Edzell_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Edzell_Castle_and_Garden_-_geograph.org.uk_-_5817616.jpg/330px-Edzell_Castle_and_Garden_-_geograph.org.uk_-_5817616.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "G Laird",
+          "license": "CC BY-SA 2.0",
+          "description": "Edzell Castle and Garden",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778872690321
     }
   ]
 }
