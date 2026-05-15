@@ -5171,13 +5171,13 @@
     "imageReviewDone": true
   },
   {
-    "name": "Temple Church",
+    "name": "Old Temple Kirk",
     "country": "scotland",
     "region": "edinburgh-lothians",
     "county": "Midlothian",
     "lat": "51.5132",
     "lng": "-0.1104",
-    "mapsLink": "https://www.google.com/maps/search/Temple%20Church%20Midlothian%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/biwFY3CwJ8pGTV1v6",
     "image": "https://img.castlecore.uk/temple-church.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -5195,10 +5195,11 @@
       "medieval",
       "atmospheric",
       "free-entry",
-      "gothic"
+      "gothic",
+      "no-wikipedia"
     ],
     "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/Temple_Church",
+    "wiki": "",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Temple_Church%2C_Temple%2C_London_EC4_%282%29.jpeg/330px-Temple_Church%2C_Temple%2C_London_EC4_%282%29.jpeg",
     "reviewReasons": [
       "other"
@@ -5206,10 +5207,19 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian",
+    "wikipediaUrl": "",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "sources": [
+      {
+        "label": "Temple Old Kirk",
+        "url": "https://www.templeoldkirk.org/default.asp?page=history"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichNote": "Update name to Old Temple Kirk , google maps link - https://maps.app.goo.gl/biwFY3CwJ8pGTV1v6 , add source - https://www.templeoldkirk.org/default.asp?page=history , remove wikipedia link as no pages seem to exist",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Dalhousie Castle",
@@ -5381,7 +5391,9 @@
     "reviewReasons": [
       "needs-review"
     ],
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Cairnpapple Hill",
@@ -5790,7 +5802,9 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Blair Castle",
@@ -6400,7 +6414,9 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Castle Menzies",
@@ -6502,7 +6518,9 @@
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
     "lastReviewed": "2026-05-13",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-15"
   },
   {
     "name": "Megginch Castle",
