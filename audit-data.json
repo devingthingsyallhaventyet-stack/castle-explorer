@@ -66947,7 +66947,8 @@
     "exists": "unverified",
     "hasWikipedia": "no",
     "hasGooglePlaces": "unknown",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "reviewNote": "ENRICH: Coordinates are wrong (copied from Killua Castle, Westmeath). Needs correct Kerry coords."
   },
   {
     "name": "Dunkerron Castle",
