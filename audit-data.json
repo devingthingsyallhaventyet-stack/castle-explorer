@@ -843,7 +843,8 @@
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-02"
+    "lastReviewed": "2026-05-02",
+    "needsEnrich": true
   },
   {
     "name": "Lews Castle",
@@ -1010,7 +1011,8 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-02"
+    "lastReviewed": "2026-05-02",
+    "needsEnrich": true
   },
   {
     "name": "Castle Coeffin",
@@ -1381,7 +1383,8 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Toward Castle",
@@ -1423,7 +1426,8 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Dunollie Castle",
@@ -1462,7 +1466,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Calvay Castle",
@@ -1501,7 +1506,8 @@
     "lastReviewed": "2026-05-13",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "needsEnrich": true
   },
   {
     "name": "Duntrune Castle",
@@ -1602,7 +1608,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Amhuinnsuidhe Castle",
@@ -1642,7 +1649,8 @@
     "lastReviewed": "2026-05-13",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "needsEnrich": true
   },
   {
     "name": "Barcaldine Castle",
@@ -2010,7 +2018,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunderave_Castle",
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Keills Chapel",
@@ -2185,7 +2194,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Saint_Blane",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Hermitage Castle",
@@ -3319,7 +3329,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cranshaws_Castle",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Fatlips Castle",
@@ -3617,7 +3628,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castlecraig",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Abbotsford House",
@@ -3658,7 +3670,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Traquair House",
@@ -5090,7 +5103,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Temple,_Midlothian",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Dalhousie Castle",
@@ -5261,7 +5275,8 @@
     "lastReviewed": "2026-05-13",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "needsEnrich": true
   },
   {
     "name": "Cairnpapple Hill",
@@ -5669,7 +5684,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Blair Castle",
@@ -6278,7 +6294,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Castle Menzies",
@@ -6379,7 +6396,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Megginch Castle",
@@ -6481,7 +6499,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Kellie Castle",
@@ -6662,7 +6681,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Clackmannan Tower",
@@ -6825,7 +6845,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinclaven_Castle",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Garth Castle",
@@ -7193,7 +7214,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Balmerino_Abbey",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Balgonie Castle",
@@ -7233,7 +7255,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Dunkeld Cathedral",
@@ -8881,7 +8904,8 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cathcart_Castle",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Mearns Castle",
@@ -8987,7 +9011,8 @@
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "reviewStatus": "flagged",
-    "lastReviewed": "2026-05-13"
+    "lastReviewed": "2026-05-13",
+    "needsEnrich": true
   },
   {
     "name": "Kinneil House",
@@ -9622,7 +9647,8 @@
     "lastReviewed": "2026-05-13",
     "reviewReasons": [
       "needs-review"
-    ]
+    ],
+    "needsEnrich": true
   },
   {
     "name": "Dunvegan Castle",
@@ -11794,7 +11820,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Culloden Battlefield",
@@ -14262,7 +14289,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Midmar Castle",
@@ -17628,7 +17656,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castle of Park",
@@ -26609,7 +26638,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Bewcastle Cross",
@@ -59388,7 +59418,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kilkea Castle",
@@ -59914,7 +59945,8 @@
     ],
     "exists": "yes",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Rathfarnham Castle",
@@ -60126,7 +60158,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "no"
+    "hasGooglePlaces": "no",
+    "needsEnrich": true
   },
   {
     "name": "Roodstown Castle",
@@ -61698,7 +61731,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Clara Castle",
@@ -62830,7 +62864,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Molana Abbey",
@@ -63164,7 +63199,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Grennan Castle",
@@ -63212,7 +63248,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Russborough House",
@@ -63775,7 +63812,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Woodstown Castle",
@@ -63821,7 +63859,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Thomastown Castle",
@@ -63868,7 +63907,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Gowran Castle",
@@ -63911,7 +63951,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kilfane Church",
@@ -63956,7 +63997,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Grallagh Castle",
@@ -64008,7 +64050,8 @@
     "altNames": [
       "Granagh Castle",
       "Grannagh Castle"
-    ]
+    ],
+    "needsEnrich": true
   },
   {
     "name": "Castle Kevin",
@@ -64051,7 +64094,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Athlumney Castle",
@@ -64617,7 +64661,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Wicklow Gaol",
@@ -64827,7 +64872,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Shee Alms House",
@@ -64873,7 +64919,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Rothe House",
@@ -65012,7 +65059,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Newgrange Cursus",
@@ -65060,7 +65108,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Knowth Passage Tomb",
@@ -65199,7 +65248,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Selskar Abbey",
@@ -65289,7 +65339,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Mothel Abbey",
@@ -65334,7 +65385,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kilkieran High Crosses",
@@ -65807,7 +65859,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Ballycarbery Castle",
@@ -66042,7 +66095,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Drombeg Stone Circle",
@@ -66892,7 +66946,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Dunkerron Castle",
@@ -67189,7 +67244,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Carrigaphooca Castle",
@@ -67548,7 +67604,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castledonovan",
@@ -67741,7 +67798,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Togher Castle",
@@ -68510,7 +68568,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Cloyne Round Tower",
@@ -69085,7 +69144,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Killagha Abbey",
@@ -69271,7 +69331,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Bantry House",
@@ -69535,7 +69596,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "James Fort",
@@ -69697,7 +69759,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Hospital Church",
@@ -69740,7 +69803,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Blackwater Castle",
@@ -69899,7 +69963,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Mungret Abbey",
@@ -71157,7 +71222,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Fore Castle",
@@ -71302,7 +71368,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Ballycowan Castle",
@@ -71481,7 +71548,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Morett Castle",
@@ -71529,7 +71597,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Granard Motte",
@@ -71621,7 +71690,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Athassel Priory",
@@ -72085,7 +72155,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Tyrellspass Castle",
@@ -72131,7 +72202,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Rattin Castle",
@@ -72176,7 +72248,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Moydrum Castle",
@@ -72313,7 +72386,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Ballyboy Castle",
@@ -72358,7 +72432,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Durrow Abbey",
@@ -72567,7 +72642,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kilcash Castle",
@@ -72691,7 +72767,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Portlick Castle",
@@ -72944,7 +73021,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kilcooly Abbey",
@@ -73034,7 +73112,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castle Durrow",
@@ -73157,7 +73236,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Burncourt Castle",
@@ -73530,7 +73610,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Fennor Castle",
@@ -73575,7 +73656,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Any Castle",
@@ -73619,7 +73701,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Donegal Castle",
@@ -73949,7 +74032,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Cloughoughter Castle",
@@ -74048,7 +74132,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Burt Castle",
@@ -74230,7 +74315,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castle Murray",
@@ -74276,7 +74362,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Malin Castle",
@@ -74324,7 +74411,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Carrickabraghy Castle",
@@ -74932,7 +75020,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Navan Fort",
@@ -75182,7 +75271,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Dunamon Tower",
@@ -75227,7 +75317,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kilronan Castle",
@@ -75419,7 +75510,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Moross Castle",
@@ -75465,7 +75557,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Drumboe Castle",
@@ -75583,7 +75676,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Movilla Abbey",
@@ -76096,7 +76190,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Monaghan Castle",
@@ -76140,7 +76235,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Clones Round Tower",
@@ -76186,7 +76282,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Mussenden Temple",
@@ -76684,7 +76781,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Springhill House",
@@ -76892,7 +76990,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Dunserverick Castle",
@@ -76985,7 +77084,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Ballyshannon Castle",
@@ -77030,7 +77130,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Bunratty Castle",
@@ -77359,7 +77460,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Aughnanure Castle",
@@ -78868,7 +78970,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Menlo Castle",
@@ -78995,7 +79098,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Merlin Park Castle",
@@ -79232,7 +79336,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kinlough Castle",
@@ -79276,7 +79381,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Moyne Abbey",
@@ -79651,7 +79757,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Caherkinmonwee Castle",
@@ -79743,7 +79850,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Doonbeg Castle",
@@ -79789,7 +79897,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Knockfin Castle",
@@ -79837,7 +79946,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Derryhivenny Castle",
@@ -79925,7 +80035,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Loughrea Castle",
@@ -79970,7 +80081,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Garbally Castle",
@@ -80015,7 +80127,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Clonbrock Castle",
@@ -80061,7 +80174,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Hen's Castle",
@@ -80108,7 +80222,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Ardamullivan Castle",
@@ -80155,7 +80270,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Pallas Castle",
@@ -80201,7 +80317,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Carrickkildavnet Castle",
@@ -80302,7 +80419,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castlecarra",
@@ -80349,7 +80467,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Shrule Castle",
@@ -80396,7 +80515,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castleaffy",
@@ -80441,7 +80561,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Aille Castle",
@@ -80487,7 +80608,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castlehill House",
@@ -80527,7 +80649,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Errew Abbey",
@@ -80773,7 +80896,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Carrowmore Megalithic Cemetery",
@@ -80891,7 +81015,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Leitrim Castle",
@@ -80937,7 +81062,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Jamestown Castle",
@@ -80980,7 +81106,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Mohill Castle",
@@ -81024,7 +81151,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Killone Abbey",
@@ -81067,7 +81195,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Termon Castle",
@@ -81112,7 +81241,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castle Taylor",
@@ -81152,7 +81282,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Kilcogan Castle",
@@ -81197,7 +81328,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Ardfry Castle",
@@ -81242,7 +81374,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Castle Hackett",
@@ -81856,7 +81989,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Granuaile Tower",
@@ -82256,7 +82390,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Magheraghanrush Court Tomb",
@@ -82301,7 +82436,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Lough Rynn Castle",
@@ -82532,7 +82668,8 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "no",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "needsEnrich": true
   },
   {
     "name": "Ballindoon Priory",
