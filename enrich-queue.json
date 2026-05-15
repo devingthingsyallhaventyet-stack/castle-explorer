@@ -81,6 +81,47 @@
         "enrichNotes": ""
       },
       "ts": 1778873166632
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Crathes Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 16th century\n*Coords:* 57.061483, -2.439917\n*Wikipedia:* https://en.wikipedia.org/wiki/Crathes_Castle\n*Maps:* https://www.google.com/maps/search/Crathes%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNLoxXr1R1BwI1T8d--cOkvo9T7LwdgBlRKuGMllWkT7PUGH_sR6c0uF34UT_FCSpNHIqsVMPvI7fMX0ZZRcQnWLhXluMWiGJivn9BDDd7XHo5aQQaZ3-zF436qQdS93wa_5Z55Heg1H8IE0A=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCrathes Castle is a castle built in the 16th century, near Banchory in Aberdeenshire, Scotland. It is in the historic county of Kincardineshire. This harled castle was built by the Burnetts of Leys and was owned by the family for almost 400 years. The castle and its grounds are currently owned and managed by the National Trust for Scotland and are open to the public.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Crathes Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.061483",
+        "lng": "-2.439917",
+        "mapsLink": "https://www.google.com/maps/search/Crathes%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNLoxXr1R1BwI1T8d--cOkvo9T7LwdgBlRKuGMllWkT7PUGH_sR6c0uF34UT_FCSpNHIqsVMPvI7fMX0ZZRcQnWLhXluMWiGJivn9BDDd7XHo5aQQaZ3-zF436qQdS93wa_5Z55Heg1H8IE0A=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Crathes Castle is a castle built in the 16th century, near Banchory in Aberdeenshire, Scotland. It is in the historic county of Kincardineshire. This harled castle was built by the Burnetts of Leys and was owned by the family for almost 400 years. The castle and its grounds are currently owned and managed by the National Trust for Scotland and are open to the public.",
+        "type": "tower house",
+        "period": "16th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Crathes_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Scott Edmunds",
+          "license": "CC BY 2.0",
+          "description": "Crathes Castle in 2020",
+          "credit": "https://www.flickr.com/photos/30557460@N05/52399690690/",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778873203572
     }
   ]
 }
