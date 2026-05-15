@@ -1,1 +1,51 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Culloden Battlefield\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 18th century\n*Coords:* 57.47722222, -4.0925\n*Wikipedia:* https://en.wikipedia.org/wiki/Battle_of_Culloden\n*Maps:* https://www.google.com/maps/search/Culloden%20Battlefield%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPVCDRAqp2s4IB8jp-tjAnxVpYhwUCPq8VRPt_E-2api0zzLIs0ruX1L-bjpKQcL5zbCmkwZ22VnQcXDVNFaRqbRwm6GsXbQg5PyO_vwfmKq66feRv5Bp6keK46-Xzu2XCViFo9kW4fNDFcPjvIejqh2w=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nThe Battle of Culloden took place on 16 April 1746, near Inverness, in the Scottish Highlands. A Jacobite army under Charles Edward Stuart was decisively defeated by a British government force commanded by the Duke of Cumberland, thereby ending the Jacobite rising of 1745.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Culloden Battlefield",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "57.47722222",
+        "lng": "-4.0925",
+        "mapsLink": "https://www.google.com/maps/search/Culloden%20Battlefield%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPVCDRAqp2s4IB8jp-tjAnxVpYhwUCPq8VRPt_E-2api0zzLIs0ruX1L-bjpKQcL5zbCmkwZ22VnQcXDVNFaRqbRwm6GsXbQg5PyO_vwfmKq66feRv5Bp6keK46-Xzu2XCViFo9kW4fNDFcPjvIejqh2w=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Battle of Culloden took place on 16 April 1746, near Inverness, in the Scottish Highlands. A Jacobite army under Charles Edward Stuart was decisively defeated by a British government force commanded by the Duke of Cumberland, thereby ending the Jacobite rising of 1745.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.6,
+        "tags": [
+          "photogenic",
+          "atmospheric",
+          "dark-brooding",
+          "haunted",
+          "remote",
+          "museum",
+          "gift-shop",
+          "guided-tours"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Battle_of_Culloden",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/The_Battle_of_Culloden.jpg/330px-The_Battle_of_Culloden.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "David Morier",
+          "license": "Public domain",
+          "description": "An Incident in the Rebellion of 1745, an oil on canvas, painting by David Morier depicting the 1746 Battle of Culloden",
+          "credit": "Royal Collection Trust",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778872622924
+    }
+  ]
+}
