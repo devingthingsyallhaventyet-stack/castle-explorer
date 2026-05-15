@@ -130,6 +130,51 @@
         "enrichNotes": "add source - https://mingarycastle.co.uk/a"
       },
       "ts": 1778871480902
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castle of Old Wick\n*Country:* scotland\n*Region:* highlands\n*County:* Highland\n*Type:* castle\n*Period:* 12th-14th century\n*Coords:* 58.42319444, -3.08177778\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_of_Old_Wick\n*Maps:* https://www.google.com/maps/search/Castle%20of%20Old%20Wick%20Highland%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMrVobG9lEJ70c6_R0tk9Zyp7iAAiKB7CZUpUZ_BhNIM1bKDl7ktWDRm8MhlWOQxzWaMIMc0q6-Qtfj8zEcH6nrx5HsPKtfM7x0PgfHKiheFNism-Hjiz7-C77pWw4FunQARJjko7jqc-qY1EWbES-CkQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nThe Castle of Old Wick is a ruined castle near the town of Wick, Caithness, Scotland.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Castle of Old Wick",
+        "country": "scotland",
+        "region": "highlands",
+        "county": "Highland",
+        "lat": "58.42319444",
+        "lng": "-3.08177778",
+        "mapsLink": "https://www.google.com/maps/search/Castle%20of%20Old%20Wick%20Highland%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMrVobG9lEJ70c6_R0tk9Zyp7iAAiKB7CZUpUZ_BhNIM1bKDl7ktWDRm8MhlWOQxzWaMIMc0q6-Qtfj8zEcH6nrx5HsPKtfM7x0PgfHKiheFNism-Hjiz7-C77pWw4FunQARJjko7jqc-qY1EWbES-CkQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Castle of Old Wick is a ruined castle near the town of Wick, Caithness, Scotland.",
+        "type": "castle",
+        "period": "12th-14th century",
+        "rating": 3.9,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "cliffside",
+          "atmospheric",
+          "free-entry",
+          "remote"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Castle_of_Old_Wick",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/OldCastleWick.jpg/330px-OldCastleWick.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Flaxton",
+          "license": "CC BY-SA 3.0",
+          "description": "A picture of the Old Castle of Wick.",
+          "credit": "File history@enWP\n\n 22:57, 23 March 2005 . . Flaxton . . 2832x2128 (1075200 bytes) (A picture of the Old Castle of Wick.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-15",
+        "enrichNotes": ""
+      },
+      "ts": 1778871503808
     }
   ]
 }
