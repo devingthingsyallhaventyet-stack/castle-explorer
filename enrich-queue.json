@@ -2484,6 +2484,58 @@
         "enrichNotes": ""
       },
       "ts": 1778960597478
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Weeting Castle\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.4711, 0.6163\n*Wikipedia:* https://en.wikipedia.org/wiki/Weeting_Castle\n*Maps:* https://www.google.com/maps/search/Weeting%20Castle/@52.457,0.623,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMgIKggPKjAMau0_IS6RsZh5IadQXk94DNlhGUsp9UPFklp0aqXdHS5aHY3Non-YRsntSBMVgKMG-O3meq3y1jHzH4WwV9T8AeuQARrcT-3yHmmJVFKt7uiSU0jnKRs9npRzW0zvw__ZFNgkgc=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nWeeting Castle is a ruined, medieval manor house near the village of Weeting in Norfolk, England. It was built around 1180 by Hugh de Plais, and comprised a three-storey tower, a substantial hall, and a service block, with a separate kitchen positioned near the house. A moat was later dug around the site in the 13th century. The house was not fortified, although it drew on architectural features typically found in castles of the period, and instead formed a very large, high-status domestic dwelling. It was probably intended to resemble the hall at Castle Acre Castle, owned by Hugh's feudal lord, Hamelin de Warenne.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Weeting Castle",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.4711,
+        "lng": 0.6163,
+        "mapsLink": "https://www.google.com/maps/search/Weeting%20Castle/@52.457,0.623,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMgIKggPKjAMau0_IS6RsZh5IadQXk94DNlhGUsp9UPFklp0aqXdHS5aHY3Non-YRsntSBMVgKMG-O3meq3y1jHzH4WwV9T8AeuQARrcT-3yHmmJVFKt7uiSU0jnKRs9npRzW0zvw__ZFNgkgc=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Weeting Castle is a ruined, medieval manor house near the village of Weeting in Norfolk, England. It was built around 1180 by Hugh de Plais, and comprised a three-storey tower, a substantial hall, and a service block, with a separate kitchen positioned near the house. A moat was later dug around the site in the 13th century. The house was not fortified, although it drew on architectural features typically found in castles of the period, and instead formed a very large, high-status domestic dwelling. It was probably intended to resemble the hall at Castle Acre Castle, owned by Hugh's feudal lord, Hamelin de Warenne.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.5,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "free-entry",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Weeting_Castle"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/weeting-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Weeting_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Weeting_Castle_-_geograph.org.uk_-_2377269.jpg/330px-Weeting_Castle_-_geograph.org.uk_-_2377269.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ashley Dace",
+          "license": "CC BY-SA 2.0",
+          "description": "Weeting Castle, near to Weeting, Norfolk, Great Britain.\nWeeting Castle is a 12th-century ruin with a three-story-high tower in Weeting, near Brandon, Norfolk. Despite the name, it is not a castle but actually a fortified manor house. It has a large open hall and an attached two-storey chamber block. There's a domed brick ice-house on the northwest corner of the moat and a small car park next to the church. The moat was added in the 14th century. The place is thought to have been abandoned in 1390. The manor was built on a 10th C settlement. It is now owned by English Heritage. Entry is free and the location is open all year for visitors.",
+          "credit": "From geograph.org.uk; transferred by User:Rubberstamp using geograph_org2commons.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960686973
     }
   ]
 }
