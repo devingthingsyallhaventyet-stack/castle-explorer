@@ -2642,6 +2642,60 @@
         "enrichNotes": "add source https://www.creakeabbey.co.uk/"
       },
       "ts": 1778960754278
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bishop's Stortford Castle\n*Country:* england\n*Region:* east of england\n*County:* Hertfordshire\n*Type:* castle\n*Period:* 11th-12th century\n*Coords:* 51.871934, 0.162959\n*Wikipedia:* https://en.wikipedia.org/wiki/Waytemore_Castle\n*Maps:* https://www.google.com/maps/search/Bishop's%20Stortford%20Castle/@51.871,0.16,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg/330px-Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nWaytemore Castle is a ruined castle in the town of Bishop's Stortford in Hertfordshire, England. The remains are a Grade I listed structure.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Bishop's Stortford Castle",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Hertfordshire",
+        "lat": 51.871934,
+        "lng": 0.162959,
+        "mapsLink": "https://www.google.com/maps/search/Bishop's%20Stortford%20Castle/@51.871,0.16,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg/330px-Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Waytemore Castle is a ruined castle in the town of Bishop's Stortford in Hertfordshire, England. The remains are a Grade I listed structure.",
+        "type": "castle",
+        "period": "11th-12th century",
+        "rating": 3.3,
+        "tags": [
+          "norman",
+          "medieval",
+          "ruins-romantic",
+          "free-entry",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Waytemore_Castle"
+          },
+          {
+            "name": "Friends of Castle Park",
+            "url": "https://friendsofcastlepark.org/heritage/waytemore-castle/"
+          },
+          {
+            "name": "BS History Society",
+            "url": "https://www.bishopsstortfordhistorysociety.org.uk/elementor-1668/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Waytemore_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg/330px-Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Waytemore_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960790018
     }
   ]
 }
