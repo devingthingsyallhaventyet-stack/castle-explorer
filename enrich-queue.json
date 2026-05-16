@@ -1,1 +1,45 @@
-{"items":[]}
+{
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Pitsligo Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 15th century\n*Coords:* 57.6923, -2.1069\n*Wikipedia:* https://en.wikipedia.org/wiki/Pitsligo_Castle\n*Maps:* https://www.google.com/maps/search/Pitsligo%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg/330px-Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Google places is wrong Pittulie and Pitsligo castles are nearby but two different castles. \n\n*Description:*\nPitsligo Castle is a ruined castle half a mile east of Rosehearty, Aberdeenshire, Scotland. Modified in the 1570s by the Forbes of Druminnor, it was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of North-East Aberdeenshire. It is listed by Historic Environment Scotland as a scheduled monument.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Pitsligo Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.6923",
+        "lng": "-2.1069",
+        "mapsLink": "https://www.google.com/maps/search/Pitsligo%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg/330px-Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Pitsligo Castle is a ruined castle half a mile east of Rosehearty, Aberdeenshire, Scotland. Modified in the 1570s by the Forbes of Druminnor, it was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of North-East Aberdeenshire. It is listed by Historic Environment Scotland as a scheduled monument.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 3.5,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Pitsligo_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg/330px-Pitsligo_Castle_-_geograph.org.uk_-_7912882.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Pitsligo_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "Google places is wrong Pittulie and Pitsligo castles are nearby but two different castles. ",
+        "enrichNotes": "Google places is wrong Pittulie and Pitsligo castles are nearby but two different castles. "
+      },
+      "ts": 1778956309930
+    }
+  ]
+}
