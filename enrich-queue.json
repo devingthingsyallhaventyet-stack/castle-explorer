@@ -1364,6 +1364,48 @@
         "enrichNotes": ""
       },
       "ts": 1778959144322
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dean Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* East Ayrshire\n*Type:* castle\n*Period:* 14th century\n*Coords:* 55.6231, -4.4837\n*Wikipedia:* https://en.wikipedia.org/wiki/Dean_Castle\n*Maps:* https://www.google.com/maps/search/Dean%20Castle%20East%20Ayrshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqFhh6nFnUznwRQdfE7wZGkXX0_yufwpfrrBeUSYf9MPlz-Qf5sQtsRrSxQy0uYtryiFn8sBYj4xIV6ChfRR5ZYVzNKpZhUwq6A=s4800-w1000\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* Add source - https://deancastlecountrypark.com/dean-castle/\n\n*Description:*\nDean Castle is a 14th century castle located in Kilmarnock, East Ayrshire, Scotland. It was the stronghold for the Boyd Family, who were lords of Kilmarnock for over 400 years, and is situated in a 200-acre (80-hectare) site situated within the Dean Castle Country Park. The castle contains a museum collection of European arms and armour, and features an extensive collection of early musical instruments.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Dean Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "East Ayrshire",
+        "lat": "55.6231",
+        "lng": "-4.4837",
+        "mapsLink": "https://www.google.com/maps/search/Dean%20Castle%20East%20Ayrshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqFhh6nFnUznwRQdfE7wZGkXX0_yufwpfrrBeUSYf9MPlz-Qf5sQtsRrSxQy0uYtryiFn8sBYj4xIV6ChfRR5ZYVzNKpZhUwq6A=s4800-w1000",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Dean Castle is a 14th century castle located in Kilmarnock, East Ayrshire, Scotland. It was the stronghold for the Boyd Family, who were lords of Kilmarnock for over 400 years, and is situated in a 200-acre (80-hectare) site situated within the Dean Castle Country Park. The castle contains a museum collection of European arms and armour, and features an extensive collection of early musical instruments.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dean_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "AnneAstro",
+          "license": "CC0",
+          "description": "Restored Castle",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "Add source - https://deancastlecountrypark.com/dean-castle/",
+        "enrichNotes": "Add source - https://deancastlecountrypark.com/dean-castle/"
+      },
+      "ts": 1778959194950
     }
   ]
 }
