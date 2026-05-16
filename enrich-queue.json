@@ -2744,6 +2744,61 @@
         "enrichNotes": "add source - https://dennyfarmlandmuseum.org.uk/"
       },
       "ts": 1778960819138
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* St Albans Abbey\n*Country:* england\n*Region:* east of england\n*County:* Hertfordshire\n*Type:* abbey\n*Period:* 11th century\n*Coords:* 51.750556, -0.342222\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Albans_Cathedral\n*Maps:* https://www.google.com/maps/search/St%20Albans%20Abbey/@51.7514,-0.36,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg/330px-St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google maps link - https://maps.app.goo.gl/Wqt7BWknqrco9pod8\nchange name to - St Albans Cathedral\nadd source - https://www.stalbanscathedral.org/?gad_source=1&gad_campaignid=23489193739&gbraid=0AAAAADmeZnbyma9EIoYi-PVbBDCh2gUEM&gclid=CjwKCAjwq6DQBhBVEiwA4ZD5XN_rn-YYzTC0obnwhlX22_UxSW9L-6ffovoqOv9Uvjst9KwzW3YX1hoCOQIQAvD_BwE\n\n*Description:*\nSt Albans Cathedral, officially the Cathedral and Abbey Church of St Alban, also known as \"the Abbey\", is a Church of England cathedral in St Albans, England.\n\n_Listing 7 of 10_",
+      "listing": {
+        "name": "St Albans Abbey",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Hertfordshire",
+        "lat": 51.750556,
+        "lng": -0.342222,
+        "mapsLink": "https://www.google.com/maps/search/St%20Albans%20Abbey/@51.7514,-0.36,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg/330px-St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "St Albans Cathedral, officially the Cathedral and Abbey Church of St Alban, also known as \"the Abbey\", is a Church of England cathedral in St Albans, England.",
+        "type": "abbey",
+        "period": "11th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "norman",
+          "medieval",
+          "atmospheric",
+          "guided-tours",
+          "gift-shop",
+          "tearoom-cafe",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/St_Albans_Cathedral"
+          },
+          {
+            "name": "St Albans Cathedral Official",
+            "url": "https://www.stalbanscathedral.org/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Albans_Cathedral",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg/330px-St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Albans_Cathedral",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "update google maps link - https://maps.app.goo.gl/Wqt7BWknqrco9pod8\nchange name to - St Albans Cathedral\nadd source - https://www.stalbanscathedral.org/?gad_source=1&gad_campaignid=23489193739&gbraid=0AAAAADmeZnbyma9EIoYi-PVbBDCh2gUEM&gclid=CjwKCAjwq6DQBhBVEiwA4ZD5XN_rn-YYzTC0obnwhlX22_UxSW9L-6ffovoqOv9Uvjst9KwzW3YX1hoCOQIQAvD_BwE",
+        "enrichNotes": "update google maps link - https://maps.app.goo.gl/Wqt7BWknqrco9pod8\nchange name to - St Albans Cathedral\nadd source - https://www.stalbanscathedral.org/?gad_source=1&gad_campaignid=23489193739&gbraid=0AAAAADmeZnbyma9EIoYi-PVbBDCh2gUEM&gclid=CjwKCAjwq6DQBhBVEiwA4ZD5XN_rn-YYzTC0obnwhlX22_UxSW9L-6ffovoqOv9Uvjst9KwzW3YX1hoCOQIQAvD_BwE"
+      },
+      "ts": 1778960882020
     }
   ]
 }
