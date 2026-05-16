@@ -1743,6 +1743,45 @@
         "enrichNotes": ""
       },
       "ts": 1778959724987
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Auchinleck House\n*Country:* scotland\n*Region:* southwest scotland\n*County:* East Ayrshire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 55.4781, -4.3634\n*Wikipedia:* https://en.wikipedia.org/wiki/Auchinleck_House\n*Maps:* https://www.google.com/maps/search/Auchinleck%20House%20East%20Ayrshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Auchinleck_House_Ayrshire_03.jpg/330px-Auchinleck_House_Ayrshire_03.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* seems to be a house and a castle here? two different listings \n\n*Description:*\nAuchinleck House is an 18th-century mansion in Scotland. It is situated near the town of Auchinleck near Cumnock and Ayr in East Ayrshire. The Auchinleck Estate has been inhabited since the 13th century, and the remains of Auchinleck Castle and Auchinleck Old House stand in the estate. The house is protected as a category A listed building, while the two ruined dwellings are scheduled monuments.\n\n_Listing 10 of 10_",
+      "listing": {
+        "name": "Auchinleck House",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "East Ayrshire",
+        "lat": "55.4781",
+        "lng": "-4.3634",
+        "mapsLink": "https://www.google.com/maps/search/Auchinleck%20House%20East%20Ayrshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Auchinleck_House_Ayrshire_03.jpg/330px-Auchinleck_House_Ayrshire_03.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Auchinleck House is an 18th-century mansion in Scotland. It is situated near the town of Auchinleck near Cumnock and Ayr in East Ayrshire. The Auchinleck Estate has been inhabited since the 13th century, and the remains of Auchinleck Castle and Auchinleck Old House stand in the estate. The house is protected as a category A listed building, while the two ruined dwellings are scheduled monuments.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 3.8,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "gardens"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Auchinleck_House",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Auchinleck_House",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "seems to be a house and a castle here? two different listings ",
+        "enrichNotes": "seems to be a house and a castle here? two different listings "
+      },
+      "ts": 1778959822367
     }
   ]
 }
