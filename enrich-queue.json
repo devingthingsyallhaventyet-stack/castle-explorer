@@ -312,6 +312,46 @@
         "enrichNotes": "mark as hotel. "
       },
       "ts": 1778956627236
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Inverquharity Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 56.70944444, -2.96333333\n*Wikipedia:* https://en.wikipedia.org/wiki/Inverquharity_Castle\n*Maps:* https://www.google.com/maps/search/Inverquharity%20Castle%20Angus%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZO8ccr8ef2jOmVrWuhs8GHdMIAgl7OYN8aLTC6yacUMFu0kaDyp1EOO_tQEQENHBZxZKGp_KGEcJrn94NB5up472CWoMR8wDkZ1mOTRAjbeVbJuf84wXlRSb5AOCGvXD4izkRfVuVM9KFBbgQ=s4800-w1024\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nInverquharity Castle is a 15th-century tower house in Angus, Scotland. It lies around 4.5 kilometres (2.8 mi) north-east of Kirriemuir near the River South Esk.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Inverquharity Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.70944444",
+        "lng": "-2.96333333",
+        "mapsLink": "https://www.google.com/maps/search/Inverquharity%20Castle%20Angus%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZO8ccr8ef2jOmVrWuhs8GHdMIAgl7OYN8aLTC6yacUMFu0kaDyp1EOO_tQEQENHBZxZKGp_KGEcJrn94NB5up472CWoMR8wDkZ1mOTRAjbeVbJuf84wXlRSb5AOCGvXD4izkRfVuVM9KFBbgQ=s4800-w1024",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Inverquharity Castle is a 15th-century tower house in Angus, Scotland. It lies around 4.5 kilometres (2.8 mi) north-east of Kirriemuir near the River South Esk.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 3.4,
+        "tags": [
+          "well-preserved",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Inverquharity_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Stephencdickson",
+          "license": "CC BY-SA 4.0",
+          "description": "Inverquharity Castle",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778956659996
     }
   ]
 }
