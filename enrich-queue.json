@@ -352,6 +352,44 @@
         "enrichNotes": ""
       },
       "ts": 1778956659996
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Inverallochy Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 16th century\n*Coords:* 57.65641, -1.93308\n*Wikipedia:* https://en.wikipedia.org/wiki/Inverallochy_Castle\n*Maps:* https://www.google.com/maps/search/Inverallochy%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg/330px-Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nInverallochy Castle is a ruined courtyard castle, near the village of Inverallochy in the Buchan area of North-East Scotland, dating to 1504. It lies 0.5 miles (0.80 km) south of Cairnbulg Castle, near Fraserburgh, and formerly stood beside the now-drained Loch of Inverallochy. It was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of North-East Aberdeenshire.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Inverallochy Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.65641",
+        "lng": "-1.93308",
+        "mapsLink": "https://www.google.com/maps/search/Inverallochy%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg/330px-Inverallochy_Castle_-_geograph.org.uk_-_8145389.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Inverallochy Castle is a ruined courtyard castle, near the village of Inverallochy in the Buchan area of North-East Scotland, dating to 1504. It lies 0.5 miles (0.80 km) south of Cairnbulg Castle, near Fraserburgh, and formerly stood beside the now-drained Loch of Inverallochy. It was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of North-East Aberdeenshire.",
+        "type": "tower house",
+        "period": "16th century",
+        "rating": 3.2,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Inverallochy_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "Wikipedia",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Inverallochy_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778956735594
     }
   ]
 }
