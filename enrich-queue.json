@@ -844,6 +844,53 @@
         "enrichNotes": ""
       },
       "ts": 1778958563313
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kinneff Church\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* abbey\n*Period:* 17th-18th century\n*Coords:* 56.8652839, -2.2387388\n*Wikipedia:* https://en.wikipedia.org/wiki/Kinneff\n*Maps:* https://www.google.com/maps/search/Kinneff%20Church%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/b/b1/Arbuthnot_Church_-_geograph.org.uk_-_55533.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.kinneffoldchurch.co.uk/\n\n*Description:*\n\nArbuthnott, Bervie and Kinneff Church is a Christian community in the south of Aberdeenshire. It includes the town of Inverbervie, the villages of Catterline, Gourdon and Kinneff in addition to the area of Arbuthnott.\n\n_Listing 9 of 10_",
+      "listing": {
+        "name": "Kinneff Church",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "56.8652839",
+        "lng": "-2.2387388",
+        "mapsLink": "https://www.google.com/maps/search/Kinneff%20Church%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Arbuthnot_Church_-_geograph.org.uk_-_55533.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "\nArbuthnott, Bervie and Kinneff Church is a Christian community in the south of Aberdeenshire. It includes the town of Inverbervie, the villages of Catterline, Gourdon and Kinneff in addition to the area of Arbuthnott.",
+        "type": "abbey",
+        "period": "17th-18th century",
+        "rating": 3.9,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "coastal",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Arbuthnott%2C_Bervie_%26_Kinneff_Parish_Church",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Arbuthnot_Church_-_geograph.org.uk_-_55533.jpg/330px-Arbuthnot_Church_-_geograph.org.uk_-_55533.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Lloyd Housley",
+          "license": "CC BY-SA 2.0",
+          "description": "Arbuthnot Church. It contains a tomb, the top of which is said to be the stone effigy of Hugo (\"le Blond\") Arbuthnott.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinneff",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://www.kinneffoldchurch.co.uk/",
+        "enrichNotes": "add source - https://www.kinneffoldchurch.co.uk/"
+      },
+      "ts": 1778958609793
     }
   ]
 }
