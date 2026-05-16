@@ -2375,6 +2375,64 @@
         "enrichNotes": ""
       },
       "ts": 1778960533755
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Elton Hall\n*Country:* england\n*Region:* east of england\n*County:* Cambridgeshire\n*Type:* fortified house\n*Period:* 15th-19th century\n*Coords:* 52.52361111, -0.3975\n*Wikipedia:* https://en.wikipedia.org/wiki/Elton_Hall\n*Maps:* https://www.google.com/maps/search/Elton%20Hall/@52.5333,-0.3,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqE-HzUULXnEAHTIDU3fOLdNxGjEX1fF-Uqe60-DEj5ecBiNg1ropyVwQJrlGt8RwtmaY66uQs1RKWT9tTz1Y6z85rl5TxZhSL8=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://eltonhall.com/\n\n*Description:*\nElton Hall is a country house in Elton, Cambridgeshire. It has been the ancestral home of the Proby family since 1660.\n\n_Listing 7 of 10_",
+      "listing": {
+        "name": "Elton Hall",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Cambridgeshire",
+        "lat": 52.52361111,
+        "lng": -0.3975,
+        "mapsLink": "https://www.google.com/maps/search/Elton%20Hall/@52.5333,-0.3,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqE-HzUULXnEAHTIDU3fOLdNxGjEX1fF-Uqe60-DEj5ecBiNg1ropyVwQJrlGt8RwtmaY66uQs1RKWT9tTz1Y6z85rl5TxZhSL8=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Elton Hall is a country house in Elton, Cambridgeshire. It has been the ancestral home of the Proby family since 1660.",
+        "type": "fortified house",
+        "period": "15th-19th century",
+        "rating": 4,
+        "tags": [
+          "gothic",
+          "tudor",
+          "medieval",
+          "gardens",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Elton Hall",
+            "url": "https://eltonhall.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Elton_Hall"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/cambridgeshire/houses/elton.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Elton_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Elton_Hall_and_gardens_%28geograph_5515547%29.jpg/330px-Elton_Hall_and_gardens_%28geograph_5515547%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Richard Humphrey",
+          "license": "CC BY-SA 2.0",
+          "description": "Elton Hall and gardens",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://eltonhall.com/",
+        "enrichNotes": "add source - https://eltonhall.com/"
+      },
+      "ts": 1778960572507
     }
   ]
 }
