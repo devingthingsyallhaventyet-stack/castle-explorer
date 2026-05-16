@@ -2536,6 +2536,59 @@
         "enrichNotes": ""
       },
       "ts": 1778960686973
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Wymondham Abbey\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* abbey\n*Period:* 12th-15th century\n*Coords:* 52.57055556, 1.10833333\n*Wikipedia:* https://en.wikipedia.org/wiki/Wymondham_Abbey\n*Maps:* https://www.google.com/maps/search/Wymondham%20Abbey/@52.569,1.116,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPNymmhxSTf2Az5dvh2hHyGrS_oNI2OWFHrjKh5fV052SLhsW9YNAvmZmdkvPGNcpY7IN2Pd7xiCIQrsdF8GPgW8tzlw604dAFBKwXVruBPYOKWNbUFAfxpssCl37pF2hjURK3opfBQnMHk=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.wymondhamabbey.org.uk/\n\n*Description:*\nWymondham Abbey is the Anglican parish church for the town of Wymondham in Norfolk, England.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Wymondham Abbey",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.57055556,
+        "lng": 1.10833333,
+        "mapsLink": "https://www.google.com/maps/search/Wymondham%20Abbey/@52.569,1.116,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPNymmhxSTf2Az5dvh2hHyGrS_oNI2OWFHrjKh5fV052SLhsW9YNAvmZmdkvPGNcpY7IN2Pd7xiCIQrsdF8GPgW8tzlw604dAFBKwXVruBPYOKWNbUFAfxpssCl37pF2hjURK3opfBQnMHk=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Wymondham Abbey is the Anglican parish church for the town of Wymondham in Norfolk, England.",
+        "type": "abbey",
+        "period": "12th-15th century",
+        "rating": 4.2,
+        "tags": [
+          "norman",
+          "medieval",
+          "well-preserved",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wymondham_Abbey"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/norfolk/abbeys/wymondham.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Wymondham_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Wymondham_Abbey_from_meadow.jpg/330px-Wymondham_Abbey_from_meadow.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Abbeygarth",
+          "license": "CC0",
+          "description": "The Abbey Meadow was the site of the former monastic buildings of Wymondham priory/abbey. It is now owned by the Papillon Charity which supports educational work at the church.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://www.wymondhamabbey.org.uk/",
+        "enrichNotes": "add source - https://www.wymondhamabbey.org.uk/"
+      },
+      "ts": 1778960716721
     }
   ]
 }
