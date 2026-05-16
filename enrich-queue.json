@@ -1235,6 +1235,50 @@
         "enrichNotes": "Add source - https://www.ethiecastle.com/\nMark as hotel "
       },
       "ts": 1778958893663
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Cortachy Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* castle\n*Period:* 15th century onwards\n*Coords:* 56.723272, -2.985296\n*Wikipedia:* https://en.wikipedia.org/wiki/Cortachy_Castle\n*Maps:* https://www.google.com/maps/search/Cortachy%20Castle%20Angus%20scotland\n*Main Image:* https://img.castlecore.uk/cortachy-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* No google places listing. \n\n*Description:*\nCortachy Castle is a castellated mansion House at Cortachy, Angus, Scotland, some four miles north of Kirriemuir.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Cortachy Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.723272",
+        "lng": "-2.985296",
+        "mapsLink": "https://www.google.com/maps/search/Cortachy%20Castle%20Angus%20scotland",
+        "image": "https://img.castlecore.uk/cortachy-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/cortachy-castle-2.jpg",
+          "https://img.castlecore.uk/cortachy-castle-3.jpg",
+          "https://img.castlecore.uk/cortachy-castle-4.jpg",
+          "https://img.castlecore.uk/cortachy-castle-5.jpg"
+        ],
+        "desc": "Cortachy Castle is a castellated mansion House at Cortachy, Angus, Scotland, some four miles north of Kirriemuir.",
+        "type": "castle",
+        "period": "15th century onwards",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "haunted",
+          "riverside"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cortachy_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cortachy_Castle.jpg/330px-Cortachy_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cortachy_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "No google places listing. ",
+        "enrichNotes": "No google places listing. "
+      },
+      "ts": 1778959031503
     }
   ]
 }
