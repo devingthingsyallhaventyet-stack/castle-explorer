@@ -2799,6 +2799,54 @@
         "enrichNotes": "update google maps link - https://maps.app.goo.gl/Wqt7BWknqrco9pod8\nchange name to - St Albans Cathedral\nadd source - https://www.stalbanscathedral.org/?gad_source=1&gad_campaignid=23489193739&gbraid=0AAAAADmeZnbyma9EIoYi-PVbBDCh2gUEM&gclid=CjwKCAjwq6DQBhBVEiwA4ZD5XN_rn-YYzTC0obnwhlX22_UxSW9L-6ffovoqOv9Uvjst9KwzW3YX1hoCOQIQAvD_BwE"
       },
       "ts": 1778960882020
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* St Botolph's Priory\n*Country:* england\n*Region:* east of england\n*County:* Essex\n*Type:* abbey\n*Period:* 11th-12th century\n*Coords:* 51.8839, 0.9044\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Botolph's_Priory\n*Maps:* https://www.google.com/maps/search/St%20Botolph's%20Priory/@51.8839,0.9044,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNlHBRoFFxoBJ2RDQKo_XAZHwzLSNR4AuB8_E9-vhNoo9F8Y48w54ttBKhqI09hxAVhJ_WeXWLKTM0vdgcqnn99i2KXrcOUoV7NyAlSD5YlNZToRq42r-vqYuprvj5nsoX3nomaJkRwqjwSDw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nSt Botolph's Priory was a medieval house of Augustinian canons in Colchester, Essex, founded c. 1093. The priory had the distinction of being the first and leading Augustinian convent in England until its dissolution in 1536.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "St Botolph's Priory",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Essex",
+        "lat": 51.8839,
+        "lng": 0.9044,
+        "mapsLink": "https://www.google.com/maps/search/St%20Botolph's%20Priory/@51.8839,0.9044,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNlHBRoFFxoBJ2RDQKo_XAZHwzLSNR4AuB8_E9-vhNoo9F8Y48w54ttBKhqI09hxAVhJ_WeXWLKTM0vdgcqnn99i2KXrcOUoV7NyAlSD5YlNZToRq42r-vqYuprvj5nsoX3nomaJkRwqjwSDw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "St Botolph's Priory was a medieval house of Augustinian canons in Colchester, Essex, founded c. 1093. The priory had the distinction of being the first and leading Augustinian convent in England until its dissolution in 1536.",
+        "type": "abbey",
+        "period": "11th-12th century",
+        "rating": 4,
+        "tags": [
+          "norman",
+          "ruins-romantic",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/St_Botolph%27s_Priory"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Botolph's_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Ruins_of_Priory%2C_Colchester_03.JPG/330px-Ruins_of_Priory%2C_Colchester_03.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "The wub",
+          "license": "CC BY-SA 3.0",
+          "description": "Ruins of Priory Church of St Botolph",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960906918
     }
   ]
 }
