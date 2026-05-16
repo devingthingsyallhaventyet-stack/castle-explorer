@@ -161,6 +161,49 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1778956448032
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Craig Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 16th century\n*Coords:* 41.5565, -72.8354\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Craig\n*Maps:* https://www.google.com/maps/search/Craig%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Castle_Craig.jpg/330px-Castle_Craig.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* Needs more research. wiki coordinates are in connecticut? \n\n*Description:*\nCastle Craig, located on East Peak in the Hanging Hills, is constructed of trap rock and is 32 feet (10 m) in height and has a base 58 feet (18 m) in circumference. A metal interior stairway is used to ascend the observation deck on top. It stands 976 feet (297 m) above sea level and provides an expansive view of the greater Meriden, Connecticut area.\n\n_Listing 1 of 2_",
+      "listing": {
+        "name": "Craig Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "41.5565",
+        "lng": "-72.8354",
+        "mapsLink": "https://www.google.com/maps/search/Craig%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Castle_Craig.jpg/330px-Castle_Craig.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Castle Craig, located on East Peak in the Hanging Hills, is constructed of trap rock and is 32 feet (10 m) in height and has a base 58 feet (18 m) in circumference. A metal interior stairway is used to ascend the observation deck on top. It stands 976 feet (297 m) above sea level and provides an expansive view of the greater Meriden, Connecticut area.",
+        "type": "tower house",
+        "period": "16th century",
+        "rating": 3.3,
+        "tags": [
+          "well-preserved",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Craig",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Castle_Craig.jpg/330px-Castle_Craig.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Turover at English Wikipedia",
+          "license": "Public domain",
+          "description": "Self made photograph by Ben Turover\n[1]",
+          "credit": "Transferred from en.wikipedia to Commons.",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "Needs more research. wiki coordinates are in connecticut? ",
+        "enrichNotes": "Needs more research. wiki coordinates are in connecticut? "
+      },
+      "ts": 1778956584581
     }
   ]
 }
