@@ -805,6 +805,45 @@
         "enrichNotes": "add source https://kinlossabbey.org/"
       },
       "ts": 1778958530418
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Darnaway Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Moray\n*Type:* castle\n*Period:* 15th century / 19th century rebuild\n*Coords:* 57.5743, -3.6828\n*Wikipedia:* https://en.wikipedia.org/wiki/Darnaway_Castle\n*Maps:* https://www.google.com/maps/search/Darnaway%20Castle%20Moray%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Darnaway_Castle_-_geograph.org.uk_-_13190.jpg/330px-Darnaway_Castle_-_geograph.org.uk_-_13190.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDarnaway Castle, also known as Tarnaway Castle, is located in Darnaway Forest, 3 miles (5 km) southwest of Forres in Moray, Scotland. This was Comyn land, given to Thomas Randolph along with the Earldom of Moray by King Robert I. The castle has remained the seat of the Earls of Moray ever since. Rebuilt in 1810, it retains the old banqueting hall, capable of accommodating 1,000 people.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Darnaway Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Moray",
+        "lat": "57.5743",
+        "lng": "-3.6828",
+        "mapsLink": "https://www.google.com/maps/search/Darnaway%20Castle%20Moray%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Darnaway_Castle_-_geograph.org.uk_-_13190.jpg/330px-Darnaway_Castle_-_geograph.org.uk_-_13190.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Darnaway Castle, also known as Tarnaway Castle, is located in Darnaway Forest, 3 miles (5 km) southwest of Forres in Moray, Scotland. This was Comyn land, given to Thomas Randolph along with the Earldom of Moray by King Robert I. The castle has remained the seat of the Earls of Moray ever since. Rebuilt in 1810, it retains the old banqueting hall, capable of accommodating 1,000 people.",
+        "type": "castle",
+        "period": "15th century / 19th century rebuild",
+        "rating": 3.8,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "woodland"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Darnaway_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Darnaway_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778958563313
     }
   ]
 }
