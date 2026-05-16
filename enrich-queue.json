@@ -258,6 +258,60 @@
         "enrichNotes": "mark as hotel. "
       },
       "ts": 1778956612195
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Craig y Nos Castle\n*Country:* wales\n*Region:* mid wales marches\n*County:* Powys\n*Type:* castle\n*Period:* 19th century\n*Coords:* 51.825, -3.68416667\n*Wikipedia:* https://en.wikipedia.org/wiki/Craig-y-Nos_Castle\n*Maps:* https://www.google.com/maps/search/Craig%20y%20Nos%20Castle/@51.8361,-3.6861,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqF41aMvBoFGOgpoxdeAbnxZIVMIPdE-1FYlkdCf2urBwrzVMia6p79g0hV2E30yP4agakn4b-rhz_NHL8MZOwZdWEMrkpvGdbI=s4800-w719\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* mark as hotel. \n\n*Description:*\nCraig-y-nos Castle, is a Scots baronial-style country house near Glyntawe in Powys, Wales. Built on parkland beside the River Tawe in the upper Swansea Valley, it is located on the southeastern edge of the Black Mountain. The castle, formerly owned by opera singer Adelina Patti, is now a hotel. Its landscaped grounds are now a country park, managed by the Brecon Beacons National Park Authority. They are listed on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales. The castle is a Grade II* listed building and its theatre has a separate Grade I listing.\n\n_Listing 2 of 2_",
+      "listing": {
+        "name": "Craig y Nos Castle",
+        "country": "wales",
+        "region": "mid-wales-marches",
+        "county": "Powys",
+        "lat": 51.825,
+        "lng": -3.68416667,
+        "mapsLink": "https://www.google.com/maps/search/Craig%20y%20Nos%20Castle/@51.8361,-3.6861,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqF41aMvBoFGOgpoxdeAbnxZIVMIPdE-1FYlkdCf2urBwrzVMia6p79g0hV2E30yP4agakn4b-rhz_NHL8MZOwZdWEMrkpvGdbI=s4800-w719",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Craig-y-nos Castle, is a Scots baronial-style country house near Glyntawe in Powys, Wales. Built on parkland beside the River Tawe in the upper Swansea Valley, it is located on the southeastern edge of the Black Mountain. The castle, formerly owned by opera singer Adelina Patti, is now a hotel. Its landscaped grounds are now a country park, managed by the Brecon Beacons National Park Authority. They are listed on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales. The castle is a Grade II* listed building and its theatre has a separate Grade I listing.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.1,
+        "tags": [
+          "gothic",
+          "victorian",
+          "wedding-venue",
+          "gardens",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia – Craig y Nos Castle",
+            "url": "https://en.wikipedia.org/wiki/Craig-y-Nos_Castle"
+          },
+          {
+            "name": "Craig y Nos Castle",
+            "url": "https://www.craigynoscastle.com/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Craig-y-Nos_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Craig-y-nos.jpg/330px-Craig-y-nos.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Jaggery",
+          "license": "CC BY-SA 2.0",
+          "description": "Craig-y-nos Castle — a 19th century Gothic revival style castle in Wales.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "mark as hotel. ",
+        "enrichNotes": "mark as hotel. "
+      },
+      "ts": 1778956627236
     }
   ]
 }
