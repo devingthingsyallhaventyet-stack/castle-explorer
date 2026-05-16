@@ -1858,6 +1858,43 @@
         "enrichNotes": ""
       },
       "ts": 1778960007889
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Sundrum Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* South Ayrshire\n*Type:* castle\n*Period:* 14th century onwards\n*Coords:* 55.4593, -4.515\n*Wikipedia:* https://en.wikipedia.org/wiki/Sundrum_Castle\n*Maps:* https://www.google.com/maps/search/Sundrum%20Castle%20South%20Ayrshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sundrum_Castle.jpg/330px-Sundrum_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSundrum Castle is a Scottish medieval castle located 1.5 kilometres (0.93 mi) north of Coylton, South Ayrshire, by the Water of Coyle river. It was built in the 14th century for Sir Duncan Wallace, Sheriff of Ayr. The castle was inherited by Sir Alan de Cathcart, who was the son of Duncan's sister. The Cathcarts sold Sundrum in the 18th century, where it eventually fell into the possession of the Hamilton family. The Hamiltons expanded the castle in the 1790s, incorporating the original keep into a mansion.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Sundrum Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "South Ayrshire",
+        "lat": "55.4593",
+        "lng": "-4.515",
+        "mapsLink": "https://www.google.com/maps/search/Sundrum%20Castle%20South%20Ayrshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sundrum_Castle.jpg/330px-Sundrum_Castle.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Sundrum Castle is a Scottish medieval castle located 1.5 kilometres (0.93 mi) north of Coylton, South Ayrshire, by the Water of Coyle river. It was built in the 14th century for Sir Duncan Wallace, Sheriff of Ayr. The castle was inherited by Sir Alan de Cathcart, who was the son of Duncan's sister. The Cathcarts sold Sundrum in the 18th century, where it eventually fell into the possession of the Hamilton family. The Hamiltons expanded the castle in the 1790s, incorporating the original keep into a mansion.",
+        "type": "castle",
+        "period": "14th century onwards",
+        "rating": 3.5,
+        "tags": [
+          "well-preserved",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Sundrum_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Sundrum_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960068886
     }
   ]
 }
