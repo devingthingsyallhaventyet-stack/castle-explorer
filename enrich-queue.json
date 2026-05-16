@@ -1938,6 +1938,47 @@
         "enrichNotes": "add source - https://www.hoddomcastle.co.uk/"
       },
       "ts": 1778960094532
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Orford Castle\n*Country:* england\n*Region:* east of england\n*County:* Suffolk\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.0936, 1.53\n*Wikipedia:* https://en.wikipedia.org/wiki/Orford_Castle\n*Maps:* https://www.google.com/maps/search/Orford%20Castle/@52.0949,1.5351,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPZLGBD7Be-Mq_LqyZnsvnt6f_pDdpfEyUvKUVBAqPcKVzBFy5ldNZ3U3PbiTwyWQu6q3aOpGqWtqqsaG-HwwxvzQMRLHe7MxKqvSuEpDf6upkvp80DXCsfo62wQYo8Nn--1Jfx1-v-hL2ftVk=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nOrford Castle is a castle in Orford in the English county of Suffolk, 12 miles (19 km) northeast of Ipswich, with views over Orford Ness. It was built between 1165 and 1173 by Henry II of England to consolidate royal power in the region. The well-preserved keep, described by historian R. Allen Brown as \"one of the most remarkable keeps in England\", is of a unique design and probably based on Byzantine architecture. The keep stands within the earth-bank remains of the castle's outer fortifications.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Orford Castle",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Suffolk",
+        "lat": 52.0936,
+        "lng": 1.53,
+        "mapsLink": "https://www.google.com/maps/search/Orford%20Castle/@52.0949,1.5351,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPZLGBD7Be-Mq_LqyZnsvnt6f_pDdpfEyUvKUVBAqPcKVzBFy5ldNZ3U3PbiTwyWQu6q3aOpGqWtqqsaG-HwwxvzQMRLHe7MxKqvSuEpDf6upkvp80DXCsfo62wQYo8Nn--1Jfx1-v-hL2ftVk=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Orford Castle is a castle in Orford in the English county of Suffolk, 12 miles (19 km) northeast of Ipswich, with views over Orford Ness. It was built between 1165 and 1173 by Henry II of England to consolidate royal power in the region. The well-preserved keep, described by historian R. Allen Brown as \"one of the most remarkable keeps in England\", is of a unique design and probably based on Byzantine architecture. The keep stands within the earth-bank remains of the castle's outer fortifications.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Orford_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Orford_Castle_Keep.jpg/330px-Orford_Castle_Keep.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Keith Roper",
+          "license": "CC BY 2.0",
+          "description": "Keep of Orford Castle",
+          "credit": "https://www.flickr.com/photos/keithroper/3966989780/sizes/l/in/photostream/",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960115255
     }
   ]
 }
