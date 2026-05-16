@@ -390,6 +390,51 @@
         "enrichNotes": ""
       },
       "ts": 1778956735594
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kinnaird Head Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 16th century\n*Coords:* 57.69754, -2.00399\n*Wikipedia:* https://en.wikipedia.org/wiki/Kinnaird_Head\n*Maps:* https://www.google.com/maps/search/Kinnaird%20Head%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHFAtgwBMbYP_9ijlyof9eLs0gAgG0Dce6lbFUJqjVBvzNC5kfX8JBwPvsSsu-8ldq6jSNeSTse4E8rFlrdtgHKGS0kFjIkB0o=s4800-w768\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nKinnaird Head is a headland projecting into the North Sea, within the town of Fraserburgh, Aberdeenshire, on the east coast of Scotland. The 16th-century Kinnaird Castle was converted in 1787 for use as the Kinnaird Head Lighthouse, the first lighthouse in Scotland to be lit by the Commissioners of Northern Lights. Kinnaird Castle and the nearby Wine Tower were described by W. Douglas Simpson as two of the nine castles of the Knuckle, referring to the rocky headland of north-east Aberdeenshire. The lighthouse is a category A listed building. and the Wine Tower. is a scheduled monument. The buildings around the base of the lighthouse are the work of Robert Stevenson.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Kinnaird Head Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.69754",
+        "lng": "-2.00399",
+        "mapsLink": "https://www.google.com/maps/search/Kinnaird%20Head%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHFAtgwBMbYP_9ijlyof9eLs0gAgG0Dce6lbFUJqjVBvzNC5kfX8JBwPvsSsu-8ldq6jSNeSTse4E8rFlrdtgHKGS0kFjIkB0o=s4800-w768",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Kinnaird Head is a headland projecting into the North Sea, within the town of Fraserburgh, Aberdeenshire, on the east coast of Scotland. The 16th-century Kinnaird Castle was converted in 1787 for use as the Kinnaird Head Lighthouse, the first lighthouse in Scotland to be lit by the Commissioners of Northern Lights. Kinnaird Castle and the nearby Wine Tower were described by W. Douglas Simpson as two of the nine castles of the Knuckle, referring to the rocky headland of north-east Aberdeenshire. The lighthouse is a category A listed building. and the Wine Tower. is a scheduled monument. The buildings around the base of the lighthouse are the work of Robert Stevenson.",
+        "type": "tower house",
+        "period": "16th century",
+        "rating": 3.8,
+        "tags": [
+          "well-preserved",
+          "museum",
+          "coastal",
+          "gift-shop",
+          "guided-tours",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Kinnaird_Head",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Fraserburgh_Lighthouse_%28Kinnaird_Castle%29_and_the_Wine_Tower.jpg/330px-Fraserburgh_Lighthouse_%28Kinnaird_Castle%29_and_the_Wine_Tower.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Stanley Bruce (User: Bard o' the Broch)",
+          "license": "CC BY-SA 1.0",
+          "description": "Fraserburgh Lighthouse (Kinnaird Castle) and the Wine Tower",
+          "credit": "this page on world66",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778956774754
     }
   ]
 }
