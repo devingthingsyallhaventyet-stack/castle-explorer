@@ -2021,6 +2021,59 @@
         "enrichNotes": "add source - https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund"
       },
       "ts": 1778960194406
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Thetford Priory\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* abbey\n*Period:* 12th-16th century\n*Coords:* 52.4165, 0.742382\n*Wikipedia:* https://en.wikipedia.org/wiki/Thetford_Priory\n*Maps:* https://www.google.com/maps/search/Thetford%20Priory/@52.4156,0.7447,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNlQXD_GaYKs8Ztu8HapkNB_V_9di4xBCjGLyjACI0vUatSjzjiwOBrJww5JSBpp0LNy-7fDSEznYpH7AdXdzZJiHZDf87kCiM4SQbjgR4uxwLqlAyQ0hrQ3wucm4JTpjYDSewuBDTdAAIhoV8=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nThetford Priory is a Cluniac monastic house in Thetford, Norfolk, England. Founded in 1103 by Roger Bigod of Norfolk, Thetford was one of the most important monasteries of East Anglia.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Thetford Priory",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.4165,
+        "lng": 0.742382,
+        "mapsLink": "https://www.google.com/maps/search/Thetford%20Priory/@52.4156,0.7447,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNlQXD_GaYKs8Ztu8HapkNB_V_9di4xBCjGLyjACI0vUatSjzjiwOBrJww5JSBpp0LNy-7fDSEznYpH7AdXdzZJiHZDf87kCiM4SQbjgR4uxwLqlAyQ0hrQ3wucm4JTpjYDSewuBDTdAAIhoV8=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Thetford Priory is a Cluniac monastic house in Thetford, Norfolk, England. Founded in 1103 by Roger Bigod of Norfolk, Thetford was one of the most important monasteries of East Anglia.",
+        "type": "abbey",
+        "period": "12th-16th century",
+        "rating": 3.9,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "free-entry",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/thetford-priory/"
+          },
+          {
+            "name": "English Heritage History",
+            "url": "https://www.english-heritage.org.uk/visit/places/thetford-priory/history/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Thetford_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Cmglee_Thetford_Priory.jpg/330px-Cmglee_Thetford_Priory.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "",
+          "license": "CC BY-SA 4.0",
+          "description": "",
+          "credit": "",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960248952
     }
   ]
 }
