@@ -435,6 +435,48 @@
         "enrichNotes": ""
       },
       "ts": 1778956774754
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Balquhain Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 14th century\n*Coords:* 57.302225, -2.447087\n*Wikipedia:* https://en.wikipedia.org/wiki/Balquhain_Castle\n*Maps:* https://www.google.com/maps/search/Balquhain%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPOZmyD68MMB2V26WgGeWPdIexd76TDRXdyaA4Wj5xFkIkr59qMnktUxtD-EMeG5zG253wckdQjrfzfTZmFs6_-bLQjM9IFzekw_9_eyin6OJ6OT--u6H0kssAKqH50ItKTX5bIuagezR0D=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBalquhain Castle is a ruined tower house in Aberdeenshire, Scotland. It served as the stronghold of the Leslies of Balquhain. The castle is located 4 kilometres (2.5 mi) to the west of Inverurie, and is protected as a scheduled monument.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Balquhain Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.302225",
+        "lng": "-2.447087",
+        "mapsLink": "https://www.google.com/maps/search/Balquhain%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPOZmyD68MMB2V26WgGeWPdIexd76TDRXdyaA4Wj5xFkIkr59qMnktUxtD-EMeG5zG253wckdQjrfzfTZmFs6_-bLQjM9IFzekw_9_eyin6OJ6OT--u6H0kssAKqH50ItKTX5bIuagezR0D=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Balquhain Castle is a ruined tower house in Aberdeenshire, Scotland. It served as the stronghold of the Leslies of Balquhain. The castle is located 4 kilometres (2.5 mi) to the west of Inverurie, and is protected as a scheduled monument.",
+        "type": "tower house",
+        "period": "14th century",
+        "rating": 3.2,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "free-entry",
+          "dark-brooding"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Balquhain_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Bill Harrison",
+          "license": "CC BY-SA 2.0",
+          "description": "Balquhain Castle",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778956904998
     }
   ]
 }
