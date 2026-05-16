@@ -726,6 +726,45 @@
         "enrichNotes": "Needs more info "
       },
       "ts": 1778958477749
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Muchalls Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 17th century\n*Coords:* 57.0175, -2.1798\n*Wikipedia:* https://en.wikipedia.org/wiki/Muchalls_Castle\n*Maps:* https://www.google.com/maps/search/Muchalls%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Muchallscastle.jpg/330px-Muchallscastle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nMuchalls Castle stands overlooking the North Sea in the countryside of Kincardine and Mearns, Aberdeenshire, Scotland. The lower course is a well-preserved Romanesque, double-groined 13th-century tower house structure, built by the Frasers of Muchalls. Upon this structure, the 17th-century castle was begun by Alexander Burnett of Leys and completed by his son, Sir Thomas Burnett, 1st Baronet, in 1627. The Burnetts of Leys built the remaining four-storey present-day castle.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Muchalls Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.0175",
+        "lng": "-2.1798",
+        "mapsLink": "https://www.google.com/maps/search/Muchalls%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Muchallscastle.jpg/330px-Muchallscastle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Muchalls Castle stands overlooking the North Sea in the countryside of Kincardine and Mearns, Aberdeenshire, Scotland. The lower course is a well-preserved Romanesque, double-groined 13th-century tower house structure, built by the Frasers of Muchalls. Upon this structure, the 17th-century castle was begun by Alexander Burnett of Leys and completed by his son, Sir Thomas Burnett, 1st Baronet, in 1627. The Burnetts of Leys built the remaining four-storey present-day castle.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "coastal",
+          "atmospheric",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Muchalls_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Muchalls_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778958499028
     }
   ]
 }
