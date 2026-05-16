@@ -1657,6 +1657,50 @@
         "enrichNotes": "update google maps link - https://maps.app.goo.gl/uusFaYo8Yy2fcK6WA"
       },
       "ts": 1778959605783
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Turnberry Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* Ayrshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 55.3261, -4.8441\n*Wikipedia:* https://en.wikipedia.org/wiki/Turnberry_Castle\n*Maps:* https://www.google.com/maps/search/Turnberry%20Castle%20Ayrshire%20scotland\n*Main Image:* https://img.castlecore.uk/turnberry-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google maps link - https://maps.app.goo.gl/VG4AFAJ2Y242WYSD8\nadd source - https://www.ayrshirescotland.com/turnberry-castle.html\n\n\n\n*Description:*\nTurnberry Castle is a fragmentary ruin on the coast of Kirkoswald parish, near Maybole in Ayrshire, Scotland. Situated at the extremity of the lower peninsula within the parish, it was the seat of the Earls of Carrick. Turnberry Castle is adjacent to Turnberry Golf Course.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Turnberry Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "Ayrshire",
+        "lat": "55.3261",
+        "lng": "-4.8441",
+        "mapsLink": "https://www.google.com/maps/search/Turnberry%20Castle%20Ayrshire%20scotland",
+        "image": "https://img.castlecore.uk/turnberry-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/turnberry-castle-2.jpg",
+          "https://img.castlecore.uk/turnberry-castle-3.jpg",
+          "https://img.castlecore.uk/turnberry-castle-4.jpg",
+          "https://img.castlecore.uk/turnberry-castle-5.jpg"
+        ],
+        "desc": "Turnberry Castle is a fragmentary ruin on the coast of Kirkoswald parish, near Maybole in Ayrshire, Scotland. Situated at the extremity of the lower peninsula within the parish, it was the seat of the Earls of Carrick. Turnberry Castle is adjacent to Turnberry Golf Course.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.5,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "free-entry",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Turnberry_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Turnberry_Castle.jpg/330px-Turnberry_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Turnberry_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "update google maps link - https://maps.app.goo.gl/VG4AFAJ2Y242WYSD8\nadd source - https://www.ayrshirescotland.com/turnberry-castle.html\n\n",
+        "enrichNotes": "update google maps link - https://maps.app.goo.gl/VG4AFAJ2Y242WYSD8\nadd source - https://www.ayrshirescotland.com/turnberry-castle.html\n\n"
+      },
+      "ts": 1778959699456
     }
   ]
 }
