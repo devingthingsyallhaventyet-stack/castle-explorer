@@ -562,6 +562,47 @@
         "enrichNotes": "Update google places link - https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z/data=!4m15!1m8!3m7!1s0x488662c61802d1d3:0x5a81195992607713!2sFinavon+Castle,+Finavon,+Forfar+DD8+3PX,+UK!3b1!8m2!3d56.6973747!4d-2.8259374!16s%2Fm%2F02qvvd4!3m5!1s0x488662c7d1cd13b3:0x6f61f43b5a7baefc!8m2!3d56.6973975!4d-2.8232749!16s%2Fg%2F11cs6bsvxk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
       },
       "ts": 1778958174035
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Baikie Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* tower house\n*Period:* Medieval\n*Coords:* 56.6304, -3.1112\n*Wikipedia:* https://en.wikipedia.org/wiki/Baikie_Castle\n*Maps:* https://www.google.com/maps/search/Baikie%20Castle%20Angus%20scotland\n*Main Image:* https://img.castlecore.uk/baikie-castle-2.jpg\n*Gallery:* 3 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* I do not think this place exists. \n\n*Description:*\nBaikie Castle, was a castle on the shores of the former Loch of Baikie, Angus, Scotland. The castle was owned by the Fenton family from the 13th century until the 15th century, when it was passed to the Lyon of Glamis family. The castle was surrounded by a moat, with a drawbridge and stone causeway providing access to the castle. No remains were evident by the 19th century.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Baikie Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.6304",
+        "lng": "-3.1112",
+        "mapsLink": "https://www.google.com/maps/search/Baikie%20Castle%20Angus%20scotland",
+        "image": "https://img.castlecore.uk/baikie-castle-2.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/baikie-castle-3.jpg",
+          "https://img.castlecore.uk/baikie-castle-4.jpg",
+          "https://img.castlecore.uk/baikie-castle-5.jpg"
+        ],
+        "desc": "Baikie Castle, was a castle on the shores of the former Loch of Baikie, Angus, Scotland. The castle was owned by the Fenton family from the 13th century until the 15th century, when it was passed to the Lyon of Glamis family. The castle was surrounded by a moat, with a drawbridge and stone causeway providing access to the castle. No remains were evident by the 19th century.",
+        "type": "tower house",
+        "period": "Medieval",
+        "rating": 3,
+        "tags": [
+          "ruins-romantic",
+          "free-entry",
+          "remote"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Baikie_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Baikie_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "I do not think this place exists. ",
+        "enrichNotes": "I do not think this place exists. "
+      },
+      "ts": 1778958212306
     }
   ]
 }
