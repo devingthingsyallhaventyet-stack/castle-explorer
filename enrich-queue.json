@@ -1111,6 +1111,48 @@
         "enrichNotes": ""
       },
       "ts": 1778958766898
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Durris Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* Medieval\n*Coords:* 57.0619, -2.36495\n*Wikipedia:* https://en.wikipedia.org/wiki/Durris_Castle\n*Maps:* https://www.google.com/maps/search/Durris%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://img.castlecore.uk/durris-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* not sure where these photos are from. needs more research. \n\n*Description:*\nDurris Castle, also known as the House of Dores, was an early royal residence on the southern bank of the River Dee in Aberdeenshire, Scotland. The site consisted of a medieval motte and bailey castle and controlled the northern end of the Crynes Corse Mounth trackway.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Durris Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.0619",
+        "lng": "-2.36495",
+        "mapsLink": "https://www.google.com/maps/search/Durris%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://img.castlecore.uk/durris-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/durris-castle-2.jpg",
+          "https://img.castlecore.uk/durris-castle-3.jpg",
+          "https://img.castlecore.uk/durris-castle-4.jpg",
+          "https://img.castlecore.uk/durris-castle-5.jpg"
+        ],
+        "desc": "Durris Castle, also known as the House of Dores, was an early royal residence on the southern bank of the River Dee in Aberdeenshire, Scotland. The site consisted of a medieval motte and bailey castle and controlled the northern end of the Crynes Corse Mounth trackway.",
+        "type": "castle",
+        "period": "Medieval",
+        "rating": 3.2,
+        "tags": [
+          "well-preserved",
+          "woodland"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Durris_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Castle_Hill_Motte%2C_Durris_-_geograph.org.uk_-_611857.jpg/330px-Castle_Hill_Motte%2C_Durris_-_geograph.org.uk_-_611857.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Durris_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "not sure where these photos are from. needs more research. ",
+        "enrichNotes": "not sure where these photos are from. needs more research. "
+      },
+      "ts": 1778958815007
     }
   ]
 }
