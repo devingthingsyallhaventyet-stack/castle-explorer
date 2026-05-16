@@ -1979,6 +1979,48 @@
         "enrichNotes": ""
       },
       "ts": 1778960115255
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bury St Edmunds Abbey\n*Country:* england\n*Region:* east of england\n*County:* Suffolk\n*Type:* abbey\n*Period:* 11th century\n*Coords:* 52.2441, 0.7192\n*Wikipedia:* https://en.wikipedia.org/wiki/Bury_St_Edmunds_Abbey\n*Maps:* https://www.google.com/maps/search/Bury%20St%20Edmunds%20Abbey/@52.244,0.7199,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNEqn3JGhjqnZHmDkVpoXLWZy-tSwZzKKaRMTNQB0cQmPQsTjFoWWv0rIBPvSCB40lIY3oKujAtOfarz84TgJQJDRK3blcoCoBkZADIGUCfuP9eX4NCzyMt_j2UwgJP5xY5Y56M5M2xWk8v1w=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund\n\n*Description:*\nThe Abbey of Bury St Edmunds was once among the richest Benedictine monasteries in England, until its dissolution in 1539. It is in the town that grew up around it, Bury St Edmunds in the county of Suffolk, England. It was a centre of pilgrimage as the burial place of the Anglo-Saxon martyr-king Saint Edmund, killed by the Great Heathen Army of Danes in 869. The ruins of the abbey church and most other buildings are merely rubble cores, but two very large medieval gatehouses survive, as well as two secondary medieval churches built within the abbey complex.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Bury St Edmunds Abbey",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Suffolk",
+        "lat": 52.2441,
+        "lng": 0.7192,
+        "mapsLink": "https://www.google.com/maps/search/Bury%20St%20Edmunds%20Abbey/@52.244,0.7199,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNEqn3JGhjqnZHmDkVpoXLWZy-tSwZzKKaRMTNQB0cQmPQsTjFoWWv0rIBPvSCB40lIY3oKujAtOfarz84TgJQJDRK3blcoCoBkZADIGUCfuP9eX4NCzyMt_j2UwgJP5xY5Y56M5M2xWk8v1w=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Abbey of Bury St Edmunds was once among the richest Benedictine monasteries in England, until its dissolution in 1539. It is in the town that grew up around it, Bury St Edmunds in the county of Suffolk, England. It was a centre of pilgrimage as the burial place of the Anglo-Saxon martyr-king Saint Edmund, killed by the Great Heathen Army of Danes in 869. The ruins of the abbey church and most other buildings are merely rubble cores, but two very large medieval gatehouses survive, as well as two secondary medieval churches built within the abbey complex.",
+        "type": "abbey",
+        "period": "11th century",
+        "rating": 4.2,
+        "tags": [
+          "romantic-ruin",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Bury_St_Edmunds_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Norman_Tower_-_geograph.org.uk_-_286156.jpg/330px-Norman_Tower_-_geograph.org.uk_-_286156.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Keith Evans",
+          "license": "CC BY-SA 2.0",
+          "description": "Angel Hill, Bury St Edmunds, Suffolk, England: Norman Tower on the right, St Edmundsbury Cathedral on the left, looking east.",
+          "credit": "From geograph.org.uk; transferred by User:Kurpfalzbilder.de using geograph_org2commons.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund",
+        "enrichNotes": "add source - https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund"
+      },
+      "ts": 1778960194406
     }
   ]
 }
