@@ -79,6 +79,46 @@
         "enrichNotes": ""
       },
       "ts": 1778956354455
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Cairnbulg Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 57.6656, -1.9736\n*Wikipedia:* https://en.wikipedia.org/wiki/Cairnbulg_Castle\n*Maps:* https://www.google.com/maps/search/Cairnbulg%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cairnbulg_Castle.jpg/330px-Cairnbulg_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Needs more research \n\n*Description:*\nCairnbulg Castle is a z-plan castle situated in Cairnbulg, Aberdeenshire, Scotland. It was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of north-east Aberdeenshire. It stands by the River Philorth and was originally known as Philorth Castle. The 17th-century Philorth Castle, an L-plan house consisting of a sizeable crow-stepped block, was demolished after a fire in 1915.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Cairnbulg Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.6656",
+        "lng": "-1.9736",
+        "mapsLink": "https://www.google.com/maps/search/Cairnbulg%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cairnbulg_Castle.jpg/330px-Cairnbulg_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Cairnbulg Castle is a z-plan castle situated in Cairnbulg, Aberdeenshire, Scotland. It was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of north-east Aberdeenshire. It stands by the River Philorth and was originally known as Philorth Castle. The 17th-century Philorth Castle, an L-plan house consisting of a sizeable crow-stepped block, was demolished after a fire in 1915.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.4,
+        "tags": [
+          "well-preserved",
+          "coastal",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cairnbulg_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cairnbulg_Castle.jpg/330px-Cairnbulg_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cairnbulg_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "Needs more research ",
+        "enrichNotes": "Needs more research "
+      },
+      "ts": 1778956398451
     }
   ]
 }
