@@ -1064,6 +1064,53 @@
         "enrichNotes": ""
       },
       "ts": 1778958742915
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Sueno's Stone\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Moray\n*Type:* abbey\n*Period:* 9th-10th century\n*Coords:* 57.6157, -3.5977\n*Wikipedia:* https://en.wikipedia.org/wiki/Sueno%27s_Stone\n*Maps:* https://www.google.com/maps/search/Sueno's%20Stone%20Moray%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/1/19/Forres_sueno.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSueno's Stone is a Picto-Scottish Class III standing stone on the north-easterly edge of Forres in Moray and is the largest surviving Pictish style cross-slab stone of its type in Scotland, standing 6.5 metres in height. It is situated on a raised bank on a now isolated section of the former road to Findhorn. The stone is named after Sweyn Forkbeard, but this association has been challenged and it has also been associated with the killing of King Dubh mac Ailpin in Forres in 966. The stone was erected c. 850–950 but by whom and for what, is unknown.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Sueno's Stone",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Moray",
+        "lat": "57.6157",
+        "lng": "-3.5977",
+        "mapsLink": "https://www.google.com/maps/search/Sueno's%20Stone%20Moray%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Forres_sueno.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Sueno's Stone is a Picto-Scottish Class III standing stone on the north-easterly edge of Forres in Moray and is the largest surviving Pictish style cross-slab stone of its type in Scotland, standing 6.5 metres in height. It is situated on a raised bank on a now isolated section of the former road to Findhorn. The stone is named after Sweyn Forkbeard, but this association has been challenged and it has also been associated with the killing of King Dubh mac Ailpin in Forres in 966. The stone was erected c. 850–950 but by whom and for what, is unknown.",
+        "type": "abbey",
+        "period": "9th-10th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "prehistoric",
+          "atmospheric",
+          "free-entry",
+          "celtic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Sueno's_Stone",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Forres_sueno.jpg/330px-Forres_sueno.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Wojsyl at English Wikipedia",
+          "license": "CC BY-SA 3.0",
+          "description": "Sueno's Stone: Pictish symbol stone on the north-easterly edge of Forres, Moray, Scotland, UK",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Sueno%27s_Stone",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778958766898
     }
   ]
 }
