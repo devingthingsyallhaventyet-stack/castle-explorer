@@ -2589,6 +2589,59 @@
         "enrichNotes": "add source - https://www.wymondhamabbey.org.uk/"
       },
       "ts": 1778960716721
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Creake Abbey\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* abbey\n*Period:* 13th-16th century\n*Coords:* 52.91994, 0.75925\n*Wikipedia:* https://en.wikipedia.org/wiki/Creake_Abbey\n*Maps:* https://www.google.com/maps/search/Creake%20Abbey/@52.873,0.731,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHwVg2StKAE3Nfzho0zuAg1mQ9A3p-cJiXHLIR1Ao4ZQ-j5PgZ22Vtiq_gPO8FB5NVtn_Sc5SuDRBeJUfZsGZSb8U3lEzQKvCc=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source https://www.creakeabbey.co.uk/\n\n*Description:*\nCreake Abbey is a ruined abbey in Norfolk, England, situated alongside the River Burn and a mile to the north of the village of North Creake. The abbey church was dedicated to Saint Mary. The ruins are Grade I listed, and form part of a Scheduled Monument site.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Creake Abbey",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.91994,
+        "lng": 0.75925,
+        "mapsLink": "https://www.google.com/maps/search/Creake%20Abbey/@52.873,0.731,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHwVg2StKAE3Nfzho0zuAg1mQ9A3p-cJiXHLIR1Ao4ZQ-j5PgZ22Vtiq_gPO8FB5NVtn_Sc5SuDRBeJUfZsGZSb8U3lEzQKvCc=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Creake Abbey is a ruined abbey in Norfolk, England, situated alongside the River Burn and a mile to the north of the village of North Creake. The abbey church was dedicated to Saint Mary. The ruins are Grade I listed, and form part of a Scheduled Monument site.",
+        "type": "abbey",
+        "period": "13th-16th century",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/creake-abbey/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Creake_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Creake_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Creake_Abbey_2.jpg/330px-Creake_Abbey_2.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Admiralgary",
+          "license": "CC BY-SA 4.0",
+          "description": "Creake Abbey\n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Creake Abbey (Q5183328) with data related to this item.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source https://www.creakeabbey.co.uk/",
+        "enrichNotes": "add source https://www.creakeabbey.co.uk/"
+      },
+      "ts": 1778960754278
     }
   ]
 }
