@@ -1447,6 +1447,44 @@
         "enrichNotes": ""
       },
       "ts": 1778959224342
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Lochinch Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* Dumfries and Galloway\n*Type:* castle\n*Period:* 19th century\n*Coords:* 54.9073, -4.9489\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Kennedy_(castle)\n*Maps:* https://www.google.com/maps/search/Lochinch%20Castle%20Dumfries%20and%20Galloway%20scotland\n*Main Image:* https://img.castlecore.uk/lochinch-castle.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* Add source - https://lochinchcastle.com/\n\nTheres two castles here. hard to tell which is which. \n\n*Description:*\nCastle Kennedy is a ruined 17th-century tower house, about 3 miles (4.8 km) east of Stranraer, Dumfries and Galloway, Scotland, around 0.5 miles (0.8 km) north of the village of Castle Kennedy.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Lochinch Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "Dumfries and Galloway",
+        "lat": "54.9073",
+        "lng": "-4.9489",
+        "mapsLink": "https://www.google.com/maps/search/Lochinch%20Castle%20Dumfries%20and%20Galloway%20scotland",
+        "image": "https://img.castlecore.uk/lochinch-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Castle Kennedy is a ruined 17th-century tower house, about 3 miles (4.8 km) east of Stranraer, Dumfries and Galloway, Scotland, around 0.5 miles (0.8 km) north of the village of Castle Kennedy.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "gift-shop",
+          "tearoom-cafe"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Kennedy_(castle)",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Castle_Kennedys_ruins_seen_from_the_Walled_Garden_%286559836033%29.jpg/330px-Castle_Kennedys_ruins_seen_from_the_Walled_Garden_%286559836033%29.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "Add source - https://lochinchcastle.com/\n\nTheres two castles here. hard to tell which is which. ",
+        "enrichNotes": "Add source - https://lochinchcastle.com/\n\nTheres two castles here. hard to tell which is which. "
+      },
+      "ts": 1778959433926
     }
   ]
 }
