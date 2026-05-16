@@ -2074,6 +2074,63 @@
         "enrichNotes": ""
       },
       "ts": 1778960248952
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Binham Priory\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* abbey\n*Period:* 11th-15th century\n*Coords:* 52.91997, 0.94523\n*Wikipedia:* https://en.wikipedia.org/wiki/Binham_Priory\n*Maps:* https://www.google.com/maps/search/Binham%20Priory/@52.8928,0.9694,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPWEOCO2ZvFuSZzEC3eYuPBfQ_cK43f3AY2zUkoaRSZa9iEcsT6_aIv1i17Zb3LPlWqLmzMb_HO48FTXuzKJxGXaBheEKxnHY9wuGiMPi-Cl08lFJkuJO_2WQ8MtmOVQg9GK2RtHau6Oa2u=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nSt Mary's Priory, Binham, or Binham Priory, is a ruined Benedictine priory located in the village of Binham in the English county of Norfolk.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Binham Priory",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.91997,
+        "lng": 0.94523,
+        "mapsLink": "https://www.google.com/maps/search/Binham%20Priory/@52.8928,0.9694,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPWEOCO2ZvFuSZzEC3eYuPBfQ_cK43f3AY2zUkoaRSZa9iEcsT6_aIv1i17Zb3LPlWqLmzMb_HO48FTXuzKJxGXaBheEKxnHY9wuGiMPi-Cl08lFJkuJO_2WQ8MtmOVQg9GK2RtHau6Oa2u=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "St Mary's Priory, Binham, or Binham Priory, is a ruined Benedictine priory located in the village of Binham in the English county of Norfolk.",
+        "type": "abbey",
+        "period": "11th-15th century",
+        "rating": 4,
+        "tags": [
+          "medieval",
+          "norman",
+          "atmospheric",
+          "ruins-romantic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/binham-priory/"
+          },
+          {
+            "name": "English Heritage History",
+            "url": "https://www.english-heritage.org.uk/visit/places/binham-priory/history/"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/norfolk/abbeys/Binham.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Binham_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/BinhamPriory.JPG/330px-BinhamPriory.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "JohnArmagh",
+          "license": "CC BY-SA 3.0",
+          "description": "Photograph of Binham Priory, Norfolk, England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960274116
     }
   ]
 }
