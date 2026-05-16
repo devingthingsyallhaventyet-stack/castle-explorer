@@ -2131,6 +2131,55 @@
         "enrichNotes": ""
       },
       "ts": 1778960274116
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Oxburgh Hall\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* fortified house\n*Period:* 15th century\n*Coords:* 52.5810421, 0.5704133\n*Wikipedia:* https://en.wikipedia.org/wiki/Oxburgh_Hall\n*Maps:* https://www.google.com/maps/search/Oxburgh%20Hall/@52.5742,0.5506,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Oxburgh_Hall%2C_2017.jpg/330px-Oxburgh_Hall%2C_2017.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nOxburgh Hall is a moated country house in Oxborough, Norfolk, England. The hall was built for Sir Edmund Bedingfeld who obtained a licence to crenellate in 1482. The Bedingfelds gained the manor of Oxborough through marriage in the early 15th century, and the family has lived at the hall since its construction, although ownership passed to the National Trust in 1952. The house underwent extensive refurbishment in the mid 19th century under John Chessell Buckler and Augustus Pugin.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Oxburgh Hall",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.5810421,
+        "lng": 0.5704133,
+        "mapsLink": "https://www.google.com/maps/search/Oxburgh%20Hall/@52.5742,0.5506,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Oxburgh_Hall%2C_2017.jpg/330px-Oxburgh_Hall%2C_2017.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Oxburgh Hall is a moated country house in Oxborough, Norfolk, England. The hall was built for Sir Edmund Bedingfeld who obtained a licence to crenellate in 1482. The Bedingfelds gained the manor of Oxborough through marriage in the early 15th century, and the family has lived at the hall since its construction, although ownership passed to the National Trust in 1952. The house underwent extensive refurbishment in the mid 19th century under John Chessell Buckler and Augustus Pugin.",
+        "type": "fortified house",
+        "period": "15th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "tudor",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Oxburgh_Hall"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/norfolk/oxburgh-hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Oxburgh_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Oxburgh_Hall%2C_2017.jpg/330px-Oxburgh_Hall%2C_2017.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Oxburgh_Hall",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960300042
     }
   ]
 }
