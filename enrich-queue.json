@@ -644,6 +644,52 @@
         "enrichNotes": "Private residence. Doesnt seem worth the listing unless it can be further enriched and get better photos. "
       },
       "ts": 1778958307243
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ballindalloch Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Moray\n*Type:* castle\n*Period:* 16th century\n*Coords:* 57.41222222, -3.36833333\n*Wikipedia:* https://en.wikipedia.org/wiki/Ballindalloch_Castle\n*Maps:* https://www.google.com/maps/search/Ballindalloch%20Castle%20Moray%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHXBpDPOGDTzh1LMKuyfTRKfXflRQZPGXW3aWeDOwJLkfLIrNg3LUtYeYar5Cr3YzZJWfjj7G3ESGfOwjhqWB8tU_eAlS5Ej_I=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.ballindallochcastle.co.uk/\n\n*Description:*\nBallindalloch Castle, known as the \"pearl of the north\", is a Scottish castle located in Ballindalloch, Banffshire, Scotland. It has been the family home of Macpherson-Grants since 1546.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Ballindalloch Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Moray",
+        "lat": "57.41222222",
+        "lng": "-3.36833333",
+        "mapsLink": "https://www.google.com/maps/search/Ballindalloch%20Castle%20Moray%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHXBpDPOGDTzh1LMKuyfTRKfXflRQZPGXW3aWeDOwJLkfLIrNg3LUtYeYar5Cr3YzZJWfjj7G3ESGfOwjhqWB8tU_eAlS5Ej_I=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Ballindalloch Castle, known as the \"pearl of the north\", is a Scottish castle located in Ballindalloch, Banffshire, Scotland. It has been the family home of Macpherson-Grants since 1546.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "riverside",
+          "tearoom-cafe",
+          "gift-shop",
+          "guided-tours"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Ballindalloch_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "RedSonje",
+          "license": "CC BY-SA 3.0",
+          "description": "Ballindaloch Castle, Banffshire, Scotland",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://www.ballindallochcastle.co.uk/",
+        "enrichNotes": "add source - https://www.ballindallochcastle.co.uk/"
+      },
+      "ts": 1778958397185
     }
   ]
 }
