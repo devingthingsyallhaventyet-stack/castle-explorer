@@ -522,6 +522,46 @@
         "name": "Test Castle"
       },
       "ts": 1778957870875
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Finavon Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* tower house\n*Period:* 14th century\n*Coords:* 56.6967, -2.8222\n*Wikipedia:* https://en.wikipedia.org/wiki/Finavon_Castle\n*Maps:* https://www.google.com/maps/search/Finavon%20Castle%20Angus%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Finavon_Castle_ruin.jpg/330px-Finavon_Castle_ruin.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Update google places link - https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z/data=!4m15!1m8!3m7!1s0x488662c61802d1d3:0x5a81195992607713!2sFinavon+Castle,+Finavon,+Forfar+DD8+3PX,+UK!3b1!8m2!3d56.6973747!4d-2.8259374!16s%2Fm%2F02qvvd4!3m5!1s0x488662c7d1cd13b3:0x6f61f43b5a7baefc!8m2!3d56.6973975!4d-2.8232749!16s%2Fg%2F11cs6bsvxk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D\n\n*Description:*\nFinavon Castle is a ruined 17th-century castle lying on the River South Esk, about a quarter of a mile south of Milton of Finavon and five miles north-east of Forfar in Angus, Scotland.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Finavon Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.6967",
+        "lng": "-2.8222",
+        "mapsLink": "https://www.google.com/maps/search/Finavon%20Castle%20Angus%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Finavon_Castle_ruin.jpg/330px-Finavon_Castle_ruin.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Finavon Castle is a ruined 17th-century castle lying on the River South Esk, about a quarter of a mile south of Milton of Finavon and five miles north-east of Forfar in Angus, Scotland.",
+        "type": "tower house",
+        "period": "14th century",
+        "rating": 3.2,
+        "tags": [
+          "ruins-romantic",
+          "riverside",
+          "free-entry",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Finavon_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Finavon_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "Update google places link - https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z/data=!4m15!1m8!3m7!1s0x488662c61802d1d3:0x5a81195992607713!2sFinavon+Castle,+Finavon,+Forfar+DD8+3PX,+UK!3b1!8m2!3d56.6973747!4d-2.8259374!16s%2Fm%2F02qvvd4!3m5!1s0x488662c7d1cd13b3:0x6f61f43b5a7baefc!8m2!3d56.6973975!4d-2.8232749!16s%2Fg%2F11cs6bsvxk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+        "enrichNotes": "Update google places link - https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z/data=!4m15!1m8!3m7!1s0x488662c61802d1d3:0x5a81195992607713!2sFinavon+Castle,+Finavon,+Forfar+DD8+3PX,+UK!3b1!8m2!3d56.6973747!4d-2.8259374!16s%2Fm%2F02qvvd4!3m5!1s0x488662c7d1cd13b3:0x6f61f43b5a7baefc!8m2!3d56.6973975!4d-2.8232749!16s%2Fg%2F11cs6bsvxk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "ts": 1778958174035
     }
   ]
 }
