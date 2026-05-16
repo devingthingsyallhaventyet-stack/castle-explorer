@@ -1153,6 +1153,44 @@
         "enrichNotes": "not sure where these photos are from. needs more research. "
       },
       "ts": 1778958815007
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Aberlemno Sculptured Stones\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* abbey\n*Period:* 7th-9th century\n*Coords:* 56.68916667, -2.78138889\n*Wikipedia:* https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones\n*Maps:* https://www.google.com/maps/search/Aberlemno%20Sculptured%20Stones%20Angus%20scotland\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nThe Aberlemno Sculptured Stones are a series of Pictish standing stones originating in and around the village of Aberlemno, Angus, Scotland. Three are located in the village and a fourth, found in 1962, is on display in The McManus in Dundee. They date from the Early Medieval period. A fifth stone standing in the village has signs of carving, but is of unknown authenticity as a Pictish artefact.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Aberlemno Sculptured Stones",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.68916667",
+        "lng": "-2.78138889",
+        "mapsLink": "https://www.google.com/maps/search/Aberlemno%20Sculptured%20Stones%20Angus%20scotland",
+        "image": "",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "The Aberlemno Sculptured Stones are a series of Pictish standing stones originating in and around the village of Aberlemno, Angus, Scotland. Three are located in the village and a fourth, found in 1962, is on display in The McManus in Dundee. They date from the Early Medieval period. A fifth stone standing in the village has signs of carving, but is of unknown authenticity as a Pictish artefact.",
+        "type": "abbey",
+        "period": "7th-9th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "prehistoric",
+          "celtic",
+          "free-entry",
+          "atmospheric"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778958842378
     }
   ]
 }
