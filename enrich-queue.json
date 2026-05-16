@@ -935,6 +935,49 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/kHZiA1nY6FG77jLa7"
       },
       "ts": 1778958665079
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Haddo House\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 57.403, -2.2204\n*Wikipedia:* https://en.wikipedia.org/wiki/Haddo_House\n*Maps:* https://www.google.com/maps/search/Haddo%20House%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqEv5CSZQE3X7hbLv35sE8Da9ZhXePWAj5a4bIoygtVwEBTulFUv2-V8R6pnoRZvhqjSLP1oVjBs66kNFU0gzB5FMLpExKGGl_M=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nHaddo House is a Scottish stately home located near Tarves in Aberdeenshire, approximately 20 miles (32 km) north of Aberdeen. Completed in 1732 to designs by William Adam, it was the former seat of the Earls and Marquesses of Aberdeen and Temair and has been owned by the National Trust for Scotland since 1979.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Haddo House",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.403",
+        "lng": "-2.2204",
+        "mapsLink": "https://www.google.com/maps/search/Haddo%20House%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqEv5CSZQE3X7hbLv35sE8Da9ZhXePWAj5a4bIoygtVwEBTulFUv2-V8R6pnoRZvhqjSLP1oVjBs66kNFU0gzB5FMLpExKGGl_M=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Haddo House is a Scottish stately home located near Tarves in Aberdeenshire, approximately 20 miles (32 km) north of Aberdeen. Completed in 1732 to designs by William Adam, it was the former seat of the Earls and Marquesses of Aberdeen and Temair and has been owned by the National Trust for Scotland since 1979.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "guided-tours",
+          "museum",
+          "gift-shop",
+          "tearoom-cafe",
+          "dog-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Haddo_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Haddo_House.jpg/330px-Haddo_House.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Haddo_House",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778958690649
     }
   ]
 }
