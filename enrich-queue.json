@@ -2281,6 +2281,52 @@
         "enrichNotes": "Update google places link - https://maps.app.goo.gl/J79yyyqpJs3vwDEQ8\nAdd source - https://www.mettinghamcastle.com/\n\nMark as hotel "
       },
       "ts": 1778960449829
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bungay Castle\n*Country:* england\n*Region:* east of england\n*County:* Suffolk\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.456, 1.4361\n*Wikipedia:* https://en.wikipedia.org/wiki/Bungay_Castle\n*Maps:* https://www.google.com/maps/search/Bungay%20Castle/@52.4528,1.4375,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bungay_Castle%2C_2012.jpg/330px-Bungay_Castle%2C_2012.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nBungay Castle is a Grade I listed building in the town of Bungay, Suffolk.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Bungay Castle",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Suffolk",
+        "lat": 52.456,
+        "lng": 1.4361,
+        "mapsLink": "https://www.google.com/maps/search/Bungay%20Castle/@52.4528,1.4375,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bungay_Castle%2C_2012.jpg/330px-Bungay_Castle%2C_2012.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Bungay Castle is a Grade I listed building in the town of Bungay, Suffolk.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "norman",
+          "riverside",
+          "free-entry",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bungay_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bungay_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bungay_Castle%2C_2012.jpg/330px-Bungay_Castle%2C_2012.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bungay_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960482952
     }
   ]
 }
