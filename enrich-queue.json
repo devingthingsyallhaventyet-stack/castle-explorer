@@ -1406,6 +1406,47 @@
         "enrichNotes": "Add source - https://deancastlecountrypark.com/dean-castle/"
       },
       "ts": 1778959194950
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Brodick Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* North Ayrshire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 55.576, -5.151\n*Wikipedia:* https://en.wikipedia.org/wiki/Brodick_Castle\n*Maps:* https://www.google.com/maps/search/Brodick%20Castle%20North%20Ayrshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqGA7z5KclD6F926RdsoXjjAWsbM9UWH99t_xOyMBQDA5bFTMMh5-hffvb7w451Ed2DWXBsH5NCzqoKuiHKk2JOJ03Llf4OSCTQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBrodick Castle is a castle situated outside the port of Brodick on the Isle of Arran, an island in the Firth of Clyde, Scotland. It was previously a seat of the Dukes of Hamilton, but is now owned by the National Trust for Scotland. The castle is a Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Brodick Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "North Ayrshire",
+        "lat": "55.576",
+        "lng": "-5.151",
+        "mapsLink": "https://www.google.com/maps/search/Brodick%20Castle%20North%20Ayrshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqGA7z5KclD6F926RdsoXjjAWsbM9UWH99t_xOyMBQDA5bFTMMh5-hffvb7w451Ed2DWXBsH5NCzqoKuiHKk2JOJ03Llf4OSCTQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Brodick Castle is a castle situated outside the port of Brodick on the Isle of Arran, an island in the Firth of Clyde, Scotland. It was previously a seat of the Dukes of Hamilton, but is now owned by the National Trust for Scotland. The castle is a Category A listed building and the grounds are included in the Inventory of Gardens and Designed Landscapes in Scotland.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Brodick_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Sir Gawain",
+          "license": "CC BY-SA 3.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778959224342
     }
   ]
 }
