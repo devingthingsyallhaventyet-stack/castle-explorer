@@ -2327,6 +2327,54 @@
         "enrichNotes": ""
       },
       "ts": 1778960482952
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* New Buckenham Castle\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.4718, 1.0672\n*Wikipedia:* https://en.wikipedia.org/wiki/New_Buckenham_Castle\n*Maps:* https://www.google.com/maps/search/New%20Buckenham%20Castle/@52.4833,1.0667,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNqdqJa-5dBXepYoVpeEIdB25nvuVPWtNA8d-EcSRiVkztT3dRnSPwDa5f-Eta6oeSx-0ILdEw73MoZ8OoDcG7XhUMtapNyuv9ZTfQEadjLsc4V2HCMHhNq1abbW0Zl8nC3CFY6utR3F20c-Q=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nOld Buckenham Castle and Buckenham Castle are two castles adjacent respectively to the villages of Old Buckenham and New Buckenham, Norfolk, England.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "New Buckenham Castle",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.4718,
+        "lng": 1.0672,
+        "mapsLink": "https://www.google.com/maps/search/New%20Buckenham%20Castle/@52.4833,1.0667,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNqdqJa-5dBXepYoVpeEIdB25nvuVPWtNA8d-EcSRiVkztT3dRnSPwDa5f-Eta6oeSx-0ILdEw73MoZ8OoDcG7XhUMtapNyuv9ZTfQEadjLsc4V2HCMHhNq1abbW0Zl8nC3CFY6utR3F20c-Q=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Old Buckenham Castle and Buckenham Castle are two castles adjacent respectively to the villages of Old Buckenham and New Buckenham, Norfolk, England.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.6,
+        "tags": [
+          "norman",
+          "medieval",
+          "ruins-romantic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/norfolk/castles/new-buckenham-castle.htm"
+          },
+          {
+            "name": "Norfolk Heritage Explorer",
+            "url": "http://www.heritage.norfolk.gov.uk/record-details?MNF44378-New-Buckenham-Castle="
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Buckenham_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Castle_at_New_Buckenham%2C_Norfolk._-_geograph.org.uk_-_150554.jpg/330px-Castle_at_New_Buckenham%2C_Norfolk._-_geograph.org.uk_-_150554.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/New_Buckenham_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960533755
     }
   ]
 }
