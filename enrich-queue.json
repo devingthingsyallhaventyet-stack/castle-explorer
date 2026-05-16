@@ -1895,6 +1895,49 @@
         "enrichNotes": ""
       },
       "ts": 1778960068886
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hoddom Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* Dumfries and Galloway\n*Type:* castle\n*Period:* 16th century\n*Coords:* 55.044002, -3.322247\n*Wikipedia:* https://en.wikipedia.org/wiki/Hoddom_Castle\n*Maps:* https://www.google.com/maps/search/Hoddom%20Castle%20Dumfries%20and%20Galloway%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHtxGxf51CKheRCWBSpVQEs1TG8RTOpzA6NP9hL1lF076DYVoHwBNlHPZIxOflDjDf_6D1MxPmSQvOZaqhbJY7G372DbkwWvso=s4800-w960\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.hoddomcastle.co.uk/\n\n*Description:*\nHoddom Castle is a large tower house in Dumfries and Galloway, south Scotland. It is located by the River Annan, 4 kilometres (2.5 mi) south-west of Ecclefechan and the same distance north-west of Brydekirk in the parish of Cummertrees. The castle is protected as a category A listed building.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Hoddom Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "Dumfries and Galloway",
+        "lat": "55.044002",
+        "lng": "-3.322247",
+        "mapsLink": "https://www.google.com/maps/search/Hoddom%20Castle%20Dumfries%20and%20Galloway%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHtxGxf51CKheRCWBSpVQEs1TG8RTOpzA6NP9hL1lF076DYVoHwBNlHPZIxOflDjDf_6D1MxPmSQvOZaqhbJY7G372DbkwWvso=s4800-w960",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Hoddom Castle is a large tower house in Dumfries and Galloway, south Scotland. It is located by the River Annan, 4 kilometres (2.5 mi) south-west of Ecclefechan and the same distance north-west of Brydekirk in the parish of Cummertrees. The castle is protected as a category A listed building.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 3.5,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "events-venue"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Hoddom_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Hoddom_Castle_-_geograph.org.uk_-_31411.jpg/330px-Hoddom_Castle_-_geograph.org.uk_-_31411.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mike and Kirsty Grundy",
+          "license": "CC BY-SA 2.0",
+          "description": "Hoddom Castle. Picturesque dereliction in the centre of a top-rated caravan site with own golf course.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://www.hoddomcastle.co.uk/",
+        "enrichNotes": "add source - https://www.hoddomcastle.co.uk/"
+      },
+      "ts": 1778960094532
     }
   ]
 }
