@@ -40,6 +40,45 @@
         "enrichNotes": "Google places is wrong Pittulie and Pitsligo castles are nearby but two different castles. "
       },
       "ts": 1778956309930
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Esslemont Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 13th-16th century\n*Coords:* 57.3581, -2.1141\n*Wikipedia:* https://en.wikipedia.org/wiki/Esslemont_Castle\n*Maps:* https://www.google.com/maps/search/Esslemont%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg/330px-Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nEsslemont Castle is a ruined medieval tower house near Ellon in Aberdeenshire, Scotland. It is designated a scheduled monument.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Esslemont Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.3581",
+        "lng": "-2.1141",
+        "mapsLink": "https://www.google.com/maps/search/Esslemont%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg/330px-Esslemont_Castle_-_geograph.org.uk_-_1788260.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Esslemont Castle is a ruined medieval tower house near Ellon in Aberdeenshire, Scotland. It is designated a scheduled monument.",
+        "type": "tower house",
+        "period": "13th-16th century",
+        "rating": 3.2,
+        "tags": [
+          "ruins-romantic",
+          "woodland",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Esslemont_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Esslemont_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778956354455
     }
   ]
 }
