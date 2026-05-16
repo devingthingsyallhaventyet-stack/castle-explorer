@@ -2233,6 +2233,54 @@
         "enrichNotes": ""
       },
       "ts": 1778960379895
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Mettingham Castle\n*Country:* england\n*Region:* east of england\n*County:* Suffolk\n*Type:* castle\n*Period:* 14th century\n*Coords:* 52.4448, 1.4714\n*Wikipedia:* https://en.wikipedia.org/wiki/Mettingham_Castle\n*Maps:* https://www.google.com/maps/search/Mettingham%20Castle/@52.4167,1.4833,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/330px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* Update google places link - https://maps.app.goo.gl/J79yyyqpJs3vwDEQ8\nAdd source - https://www.mettinghamcastle.com/\n\nMark as hotel \n\n*Description:*\nMettingham Castle was a fortified manor house in the parish of Mettingham in the north of the English county of Suffolk.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Mettingham Castle",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Suffolk",
+        "lat": 52.4448,
+        "lng": 1.4714,
+        "mapsLink": "https://www.google.com/maps/search/Mettingham%20Castle/@52.4167,1.4833,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/330px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Mettingham Castle was a fortified manor house in the parish of Mettingham in the north of the English county of Suffolk.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.5,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mettingham_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Mettingham_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/330px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Graham Horn",
+          "license": "CC BY-SA 2.0",
+          "description": "Entrance to Mettingham Castle This is the main gateway to the castle from the north, and it and the adjacent wall are the only original bits of the castle remaining.  It was built in 1342.\nIt is close to the gridline but Magic confirms that the whole of this gateway is in TM3588.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "Update google places link - https://maps.app.goo.gl/J79yyyqpJs3vwDEQ8\nAdd source - https://www.mettinghamcastle.com/\n\nMark as hotel ",
+        "enrichNotes": "Update google places link - https://maps.app.goo.gl/J79yyyqpJs3vwDEQ8\nAdd source - https://www.mettinghamcastle.com/\n\nMark as hotel "
+      },
+      "ts": 1778960449829
     }
   ]
 }
