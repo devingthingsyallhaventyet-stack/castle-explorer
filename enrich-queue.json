@@ -978,6 +978,51 @@
         "enrichNotes": ""
       },
       "ts": 1778958690649
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Pitmedden Garden\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 17th century\n*Coords:* 57.3427, -2.1923\n*Wikipedia:* https://en.wikipedia.org/wiki/Pitmedden_Garden\n*Maps:* https://www.google.com/maps/search/Pitmedden%20Garden%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqFCuE0nGWgC-qswDj8qYZaPSvpusk4mKdRm8uDHIrLlJ-N80vzY05qcIS5VSOeMbWNlNH90T7DGwUItEtKKuUClIGTyKvKuLD4=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nPitmedden Garden is a garden near the village of Pitmedden, Aberdeenshire, Scotland. It is owned by the National Trust for Scotland. The garden dates from around 1675 and contains formal parterres, herbaceous borders, and an orchard. It is open to the public.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Pitmedden Garden",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.3427",
+        "lng": "-2.1923",
+        "mapsLink": "https://www.google.com/maps/search/Pitmedden%20Garden%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqFCuE0nGWgC-qswDj8qYZaPSvpusk4mKdRm8uDHIrLlJ-N80vzY05qcIS5VSOeMbWNlNH90T7DGwUItEtKKuUClIGTyKvKuLD4=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Pitmedden Garden is a garden near the village of Pitmedden, Aberdeenshire, Scotland. It is owned by the National Trust for Scotland. The garden dates from around 1675 and contains formal parterres, herbaceous borders, and an orchard. It is open to the public.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "museum",
+          "gift-shop",
+          "tearoom-cafe",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Pitmedden_Garden",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Parterre_garden_at_Pitmedden_1459574.jpg/330px-Parterre_garden_at_Pitmedden_1459574.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "C Michael Hogan",
+          "license": "CC BY-SA 2.0",
+          "description": "Parterre garden at Pitmedden, near to Pitmedden, Aberdeenshire, Great Britain.\nThe view is looking at the far corner of the garden away from the main house.",
+          "credit": "From this image at geograph.org.uk; transferred by User:RHaworth using geograph_org2commons.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778958720786
     }
   ]
 }
