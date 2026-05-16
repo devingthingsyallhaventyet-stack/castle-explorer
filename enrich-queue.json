@@ -2696,6 +2696,54 @@
         "enrichNotes": ""
       },
       "ts": 1778960790018
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Denny Abbey\n*Country:* england\n*Region:* east of england\n*County:* Cambridgeshire\n*Type:* abbey\n*Period:* 12th-16th century\n*Coords:* 52.293559, 0.186542\n*Wikipedia:* https://en.wikipedia.org/wiki/Denny_Abbey\n*Maps:* https://www.google.com/maps/search/Denny%20Abbey/@52.2883,0.1733,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPrJDNHwxe5hVhk4dNNRO8qL-TMkoTWSCJriFYfo01JQSHZ0U-76WxjPOE9vkUe_cd6wEN1HG0CjYATv3_WvwttnMNIqF-7NKFpFsvesUne_oMcr_bFyxZp6iGGLelHf-hhmnI7BdNsmtGkPns=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://dennyfarmlandmuseum.org.uk/\n\n*Description:*\nDenny Abbey is a former abbey near Waterbeach, about 6 miles (10 km) north of Cambridge in Cambridgeshire, England. It is now the Farmland Museum and Denny Abbey.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Denny Abbey",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Cambridgeshire",
+        "lat": 52.293559,
+        "lng": 0.186542,
+        "mapsLink": "https://www.google.com/maps/search/Denny%20Abbey/@52.2883,0.1733,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPrJDNHwxe5hVhk4dNNRO8qL-TMkoTWSCJriFYfo01JQSHZ0U-76WxjPOE9vkUe_cd6wEN1HG0CjYATv3_WvwttnMNIqF-7NKFpFsvesUne_oMcr_bFyxZp6iGGLelHf-hhmnI7BdNsmtGkPns=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Denny Abbey is a former abbey near Waterbeach, about 6 miles (10 km) north of Cambridge in Cambridgeshire, England. It is now the Farmland Museum and Denny Abbey.",
+        "type": "abbey",
+        "period": "12th-16th century",
+        "rating": 4,
+        "tags": [
+          "medieval",
+          "museum",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/denny-abbey-and-the-farmland-museum/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Denny_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Denny_Abbey_2.JPG/330px-Denny_Abbey_2.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Rob enwiki",
+          "license": "CC BY-SA 3.0",
+          "description": "Denny Abbey in Cambridgeshire",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://dennyfarmlandmuseum.org.uk/",
+        "enrichNotes": "add source - https://dennyfarmlandmuseum.org.uk/"
+      },
+      "ts": 1778960819138
     }
   ]
 }
