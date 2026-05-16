@@ -1822,6 +1822,42 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1778959988308
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Ayr Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* South Ayrshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 55.465, -4.6355\n*Wikipedia:* https://en.wikipedia.org/wiki/Ayr_Castle\n*Maps:* https://www.google.com/maps/search/Ayr%20Castle%20South%20Ayrshire%20scotland\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nAyr Castle was a castle situated at Ayr in Scotland. Once considered a royal castle, nothing remains of it above ground.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Ayr Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "South Ayrshire",
+        "lat": "55.465",
+        "lng": "-4.6355",
+        "mapsLink": "https://www.google.com/maps/search/Ayr%20Castle%20South%20Ayrshire%20scotland",
+        "image": "",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Ayr Castle was a castle situated at Ayr in Scotland. Once considered a royal castle, nothing remains of it above ground.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.1,
+        "tags": [
+          "ruins-romantic",
+          "free-entry",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Ayr_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ayr_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960007889
     }
   ]
 }
