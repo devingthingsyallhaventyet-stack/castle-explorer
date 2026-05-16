@@ -119,6 +119,48 @@
         "enrichNotes": "Needs more research "
       },
       "ts": 1778956398451
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Harthill Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 17th century\n*Coords:* 57.3160965, -2.5220421\n*Wikipedia:* https://en.wikipedia.org/wiki/Harthill_Castle\n*Maps:* https://www.google.com/maps/search/Harthill%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMi0HRWxeCqAPsEUUGm4c4I6laq_sEbKmgtiBfYEpQeZGV-ECAuhOOOxnyFeTMgmqniE1EGqwNYRyndWU__-yCZhmxrB5BE1qiQSEJGpQjFyUuhrtFD2tXfs-y9KYLwLtxsDY6zIF_7ajd72Q=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nHarthill Castle is a large 17th-century Z-plan castle, about 5.5 miles (9 km) west-north-west of Inverurie, Aberdeenshire, Scotland, south of Kirkton of Oyne.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Harthill Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.3160965",
+        "lng": "-2.5220421",
+        "mapsLink": "https://www.google.com/maps/search/Harthill%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMi0HRWxeCqAPsEUUGm4c4I6laq_sEbKmgtiBfYEpQeZGV-ECAuhOOOxnyFeTMgmqniE1EGqwNYRyndWU__-yCZhmxrB5BE1qiQSEJGpQjFyUuhrtFD2tXfs-y9KYLwLtxsDY6zIF_7ajd72Q=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Harthill Castle is a large 17th-century Z-plan castle, about 5.5 miles (9 km) west-north-west of Inverurie, Aberdeenshire, Scotland, south of Kirkton of Oyne.",
+        "type": "tower house",
+        "period": "17th century",
+        "rating": 3.4,
+        "tags": [
+          "well-preserved",
+          "medieval"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Harthill_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Harthill_Castle_%28pre-1914%29.jpg/330px-Harthill_Castle_%28pre-1914%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "",
+          "license": "PD",
+          "description": "",
+          "credit": "",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1778956448032
     }
   ]
 }
