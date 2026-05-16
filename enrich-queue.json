@@ -1568,6 +1568,53 @@
         "enrichNotes": "add source - https://dundonaldcastle.org.uk/"
       },
       "ts": 1778959499125
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Drumlanrig Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* Dumfries and Galloway\n*Type:* castle\n*Period:* 17th century\n*Coords:* 55.274, -3.81\n*Wikipedia:* https://en.wikipedia.org/wiki/Drumlanrig_Castle\n*Maps:* https://www.google.com/maps/search/Drumlanrig%20Castle%20Dumfries%20and%20Galloway%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOXPOLCeTTlC5yRRCiYZ7sotG3tBKCOshXvdsp5ivb_AIxrWDvtlpAUuYp4ZA1ojm551EgkteRjl5me5q9zaxn2_TMXH8JHjbdxfMBapDRESOC2cfMu4lO4aIy7XGMo1Bo2zGfRytbWDo2nhQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.drumlanrigcastle.co.uk/\nmark as hotel \n\n*Description:*\nDrumlanrig Castle is situated on the Queensberry Estate in Dumfries and Galloway, Scotland. The category A listed castle is the Dumfriesshire home of the Duke of Buccleuch and Queensberry. As of September 2023, the castle itself is open to the public during very limited times of the year, with the surroundings, such as the stableyard and adventure playground being open nearly all year round. Walking, hiking, and cycling routes are open all year long, unless officially closed due to unforeseen circumstances, such as in 2021 due damage inflicted by Storm Arwen.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Drumlanrig Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "Dumfries and Galloway",
+        "lat": "55.274",
+        "lng": "-3.81",
+        "mapsLink": "https://www.google.com/maps/search/Drumlanrig%20Castle%20Dumfries%20and%20Galloway%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOXPOLCeTTlC5yRRCiYZ7sotG3tBKCOshXvdsp5ivb_AIxrWDvtlpAUuYp4ZA1ojm551EgkteRjl5me5q9zaxn2_TMXH8JHjbdxfMBapDRESOC2cfMu4lO4aIy7XGMo1Bo2zGfRytbWDo2nhQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Drumlanrig Castle is situated on the Queensberry Estate in Dumfries and Galloway, Scotland. The category A listed castle is the Dumfriesshire home of the Duke of Buccleuch and Queensberry. As of September 2023, the castle itself is open to the public during very limited times of the year, with the surroundings, such as the stableyard and adventure playground being open nearly all year round. Walking, hiking, and cycling routes are open all year long, unless officially closed due to unforeseen circumstances, such as in 2021 due damage inflicted by Storm Arwen.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "museum",
+          "gift-shop",
+          "tearoom-cafe",
+          "kid-friendly",
+          "guided-tours",
+          "dog-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Drumlanrig_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Billy McCrorie",
+          "license": "CC BY-SA 2.0",
+          "description": "Drumlanrig Castle",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://www.drumlanrigcastle.co.uk/\nmark as hotel ",
+        "enrichNotes": "add source - https://www.drumlanrigcastle.co.uk/\nmark as hotel "
+      },
+      "ts": 1778959535403
     }
   ]
 }
