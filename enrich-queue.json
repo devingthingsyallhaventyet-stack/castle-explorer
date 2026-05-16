@@ -1523,6 +1523,51 @@
         "enrichNotes": ""
       },
       "ts": 1778959465508
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dundonald Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* South Ayrshire\n*Type:* castle\n*Period:* 14th century\n*Coords:* 55.57681, -4.5972\n*Wikipedia:* https://en.wikipedia.org/wiki/Dundonald_Castle\n*Maps:* https://www.google.com/maps/search/Dundonald%20Castle%20South%20Ayrshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqE6gOUnaa8cK11dnwT_CtzunSW78kSPXcK6Lx9OK5yjt6Rb4lbBHJeeWESeE1CNpAxA3LlKHFpFpYqavBzRjsZxs5scAYvU0mU=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://dundonaldcastle.org.uk/\n\n*Description:*\nDundonald Castle is situated on a hill overlooking the village of Dundonald, between Kilmarnock and Troon in South Ayrshire, Scotland. Dundonald Castle is a fortified tower house built for Robert II on his accession to the throne of Scotland in 1371 and it was used as a royal residence by Robert II and his son Robert III.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Dundonald Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "South Ayrshire",
+        "lat": "55.57681",
+        "lng": "-4.5972",
+        "mapsLink": "https://www.google.com/maps/search/Dundonald%20Castle%20South%20Ayrshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqE6gOUnaa8cK11dnwT_CtzunSW78kSPXcK6Lx9OK5yjt6Rb4lbBHJeeWESeE1CNpAxA3LlKHFpFpYqavBzRjsZxs5scAYvU0mU=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Dundonald Castle is situated on a hill overlooking the village of Dundonald, between Kilmarnock and Troon in South Ayrshire, Scotland. Dundonald Castle is a fortified tower house built for Robert II on his accession to the throne of Scotland in 1371 and it was used as a royal residence by Robert II and his son Robert III.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.7,
+        "tags": [
+          "hilltop",
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "prehistoric",
+          "guided-tours"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dundonald_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Otter",
+          "license": "CC BY-SA 3.0",
+          "description": "Dundonald Castle, South Ayrshire, Scotland - from south west",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "add source - https://dundonaldcastle.org.uk/",
+        "enrichNotes": "add source - https://dundonaldcastle.org.uk/"
+      },
+      "ts": 1778959499125
     }
   ]
 }
