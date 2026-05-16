@@ -477,6 +477,44 @@
         "enrichNotes": ""
       },
       "ts": 1778956904998
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hallforest Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* tower house\n*Period:* 13th century\n*Coords:* 57.229, -2.3706\n*Wikipedia:* https://en.wikipedia.org/wiki/Hallforest_Castle\n*Maps:* https://www.google.com/maps/search/Hallforest%20Castle%20Aberdeenshire%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZML-pA1M-z1DxD-ivjpr2EYRJVmPqmkUFv2R5l3ZD5PlIag74fYXybsG9RlWpH346JPJTsUfmirU58WGlK3yhXsQcMZGc9Ul8YEOf7o2ESt6OqEALa23Bqk9nnYrwvjhzO0Ob9z1hGbrise0ibINYpK=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nHallforest Castle is a keep, one of the oldest in Scotland, as it dates from the 14th century. It is about a mile and a half from Kintore, in Aberdeenshire.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Hallforest Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.229",
+        "lng": "-2.3706",
+        "mapsLink": "https://www.google.com/maps/search/Hallforest%20Castle%20Aberdeenshire%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZML-pA1M-z1DxD-ivjpr2EYRJVmPqmkUFv2R5l3ZD5PlIag74fYXybsG9RlWpH346JPJTsUfmirU58WGlK3yhXsQcMZGc9Ul8YEOf7o2ESt6OqEALa23Bqk9nnYrwvjhzO0Ob9z1hGbrise0ibINYpK=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Hallforest Castle is a keep, one of the oldest in Scotland, as it dates from the 14th century. It is about a mile and a half from Kintore, in Aberdeenshire.",
+        "type": "tower house",
+        "period": "13th century",
+        "rating": 3.1,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Hallforest_Castle",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Hallforest_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778957821893
     }
   ]
 }
