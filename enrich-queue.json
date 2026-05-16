@@ -2847,6 +2847,58 @@
         "enrichNotes": ""
       },
       "ts": 1778960906918
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ickworth House\n*Country:* england\n*Region:* east of england\n*County:* Suffolk\n*Type:* castle\n*Period:* 18th-19th century\n*Coords:* 52.22032, 0.656839\n*Wikipedia:* https://en.wikipedia.org/wiki/Ickworth_House\n*Maps:* https://www.google.com/maps/search/Ickworth%20House/@52.2367,0.6533,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ickworth_House.jpg/330px-Ickworth_House.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nIckworth House is a country house at Ickworth, near Bury St Edmunds in Suffolk, England. It is a neoclassical building set in parkland. The house was the residence of the Marquesses of Bristol until 1998; the house was given to the National Trust in 1956, but between then and 1998 the marquesses leased the east wing.\n\n_Listing 9 of 10_",
+      "listing": {
+        "name": "Ickworth House",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Suffolk",
+        "lat": 52.22032,
+        "lng": 0.656839,
+        "mapsLink": "https://www.google.com/maps/search/Ickworth%20House/@52.2367,0.6533,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ickworth_House.jpg/330px-Ickworth_House.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Ickworth House is a country house at Ickworth, near Bury St Edmunds in Suffolk, England. It is a neoclassical building set in parkland. The house was the residence of the Marquesses of Bristol until 1998; the house was given to the National Trust in 1956, but between then and 1998 the marquesses leased the east wing.",
+        "type": "castle",
+        "period": "18th-19th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "museum",
+          "kid-friendly",
+          "gift-shop",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ickworth_House"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/suffolk/ickworth-estate/history-of-ickworth"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ickworth_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ickworth_House.jpg/330px-Ickworth_House.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ickworth_House",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960931468
     }
   ]
 }
