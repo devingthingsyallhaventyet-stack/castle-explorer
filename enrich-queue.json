@@ -1701,6 +1701,48 @@
         "enrichNotes": "update google maps link - https://maps.app.goo.gl/VG4AFAJ2Y242WYSD8\nadd source - https://www.ayrshirescotland.com/turnberry-castle.html\n\n"
       },
       "ts": 1778959699456
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Corsewall Lighthouse\n*Country:* scotland\n*Region:* southwest scotland\n*County:* Dumfries and Galloway\n*Type:* castle\n*Period:* 19th century\n*Coords:* 55.0070797, -5.1595018\n*Wikipedia:* https://en.wikipedia.org/wiki/Corsewall_Lighthouse\n*Maps:* https://www.google.com/maps/search/Corsewall%20Lighthouse%20Dumfries%20and%20Galloway%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Corsewell_Lighthouse_and_Hotel_-_geograph.org.uk_-_1708569.jpg/330px-Corsewell_Lighthouse_and_Hotel_-_geograph.org.uk_-_1708569.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCorsewall Lighthouse is a lighthouse at Corsewall Point, Kirkcolm near Stranraer in the region of Dumfries and Galloway in Scotland. First lit in 1817, it overlooks the North Channel of the Irish Sea.\n\n_Listing 9 of 10_",
+      "listing": {
+        "name": "Corsewall Lighthouse",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "Dumfries and Galloway",
+        "lat": "55.0070797",
+        "lng": "-5.1595018",
+        "mapsLink": "https://www.google.com/maps/search/Corsewall%20Lighthouse%20Dumfries%20and%20Galloway%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Corsewell_Lighthouse_and_Hotel_-_geograph.org.uk_-_1708569.jpg/330px-Corsewell_Lighthouse_and_Hotel_-_geograph.org.uk_-_1708569.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Corsewall Lighthouse is a lighthouse at Corsewall Point, Kirkcolm near Stranraer in the region of Dumfries and Galloway in Scotland. First lit in 1817, it overlooks the North Channel of the Irish Sea.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.1,
+        "tags": [
+          "well-preserved",
+          "coastal",
+          "remote",
+          "atmospheric",
+          "victorian"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Corsewall_Lighthouse",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mary and Angus Hogg",
+          "license": "CC BY-SA 2.0",
+          "description": "Corsewell Lighthouse and Hotel",
+          "credit": "From this image at geograph.org.uk; transferred by User:Kurpfalzbilder.de using geograph_org2commons.",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778959724987
     }
   ]
 }
