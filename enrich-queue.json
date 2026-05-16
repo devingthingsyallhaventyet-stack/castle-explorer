@@ -2433,6 +2433,57 @@
         "enrichNotes": "add source - https://eltonhall.com/"
       },
       "ts": 1778960572507
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Longthorpe Tower\n*Country:* england\n*Region:* east of england\n*County:* Cambridgeshire\n*Type:* tower house\n*Period:* 14th century\n*Coords:* 52.5708, -0.2869\n*Wikipedia:* https://en.wikipedia.org/wiki/Longthorpe_Tower\n*Maps:* https://www.google.com/maps/search/Longthorpe%20Tower/@52.5833,-0.2833,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMgCIPFoxWee4QPhfMLh1tF7ji_z5dT31wnmb58i9DNK1mN3LNsG8I2Nso75eu_dmX3phiblPYMShqycWqyd1m1m6JrUu3jHpjpodw5VUnVbdSixZ2fwO8qXjO_iuinDkpYCSaHkYPkJ75KKiE=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nLongthorpe Tower is a 14th-century three-storey tower in the Longthorpe area of Peterborough, Cambridgeshire, England. It is famous for its well-preserved set of medieval murals.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Longthorpe Tower",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Cambridgeshire",
+        "lat": 52.5708,
+        "lng": -0.2869,
+        "mapsLink": "https://www.google.com/maps/search/Longthorpe%20Tower/@52.5833,-0.2833,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMgCIPFoxWee4QPhfMLh1tF7ji_z5dT31wnmb58i9DNK1mN3LNsG8I2Nso75eu_dmX3phiblPYMShqycWqyd1m1m6JrUu3jHpjpodw5VUnVbdSixZ2fwO8qXjO_iuinDkpYCSaHkYPkJ75KKiE=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Longthorpe Tower is a 14th-century three-storey tower in the Longthorpe area of Peterborough, Cambridgeshire, England. It is famous for its well-preserved set of medieval murals.",
+        "type": "tower house",
+        "period": "14th century",
+        "rating": 4.2,
+        "tags": [
+          "medieval",
+          "well-preserved",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/longthorpe-tower/history/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Longthorpe_Tower"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Longthorpe_Tower",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Longthorpe_Tower1.jpg/330px-Longthorpe_Tower1.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Julian Dowse",
+          "license": "CC BY-SA 2.0",
+          "description": "Longthorpe Tower, Peterborough",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778960597478
     }
   ]
 }
