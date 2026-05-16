@@ -1321,6 +1321,49 @@
         "enrichNotes": "Delete entirely. Not relevant. "
       },
       "ts": 1778959075037
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Balintore Castle\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Angus\n*Type:* castle\n*Period:* 19th century\n*Coords:* 56.7175, -3.16111111\n*Wikipedia:* https://en.wikipedia.org/wiki/Balintore_Castle\n*Maps:* https://www.google.com/maps/search/Balintore%20Castle%20Angus%20scotland\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPFomRRerT78tRb3SusMnOndslWFJdvDCR8jF-OwvETWR0Iz4AjXOz8BQVyuDd5B5gKivpDHjknvsnymu7O_z6Rx6ZKaIgSvqrjNINV3msQMR1iEa3e2Uf8p_QENZKDmKZYWeoRFHV7huATJbN5cHzq4g=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBalintore Castle is a Victorian Category A listed building in Scotland. The castle occupies an elevated site in moorland above Balintore village, a few miles north of the Loch of Lintrathen, near Kirriemuir, Angus.\n\n_Listing 10 of 10_",
+      "listing": {
+        "name": "Balintore Castle",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Angus",
+        "lat": "56.7175",
+        "lng": "-3.16111111",
+        "mapsLink": "https://www.google.com/maps/search/Balintore%20Castle%20Angus%20scotland",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPFomRRerT78tRb3SusMnOndslWFJdvDCR8jF-OwvETWR0Iz4AjXOz8BQVyuDd5B5gKivpDHjknvsnymu7O_z6Rx6ZKaIgSvqrjNINV3msQMR1iEa3e2Uf8p_QENZKDmKZYWeoRFHV7huATJbN5cHzq4g=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Balintore Castle is a Victorian Category A listed building in Scotland. The castle occupies an elevated site in moorland above Balintore village, a few miles north of the Loch of Lintrathen, near Kirriemuir, Angus.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 3.7,
+        "tags": [
+          "atmospheric",
+          "victorian",
+          "gothic",
+          "remote"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Balintore_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/The_dark_side_of_Balintore_Castle_-_geograph.org.uk_-_7207523.jpg/330px-The_dark_side_of_Balintore_Castle_-_geograph.org.uk_-_7207523.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Aleks Scholz",
+          "license": "CC BY-SA 2.0",
+          "description": "The dark side of Balintore Castle",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778959144322
     }
   ]
 }
