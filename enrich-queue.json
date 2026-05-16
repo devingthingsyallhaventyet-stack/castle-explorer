@@ -1485,6 +1485,44 @@
         "enrichNotes": "Add source - https://lochinchcastle.com/\n\nTheres two castles here. hard to tell which is which. "
       },
       "ts": 1778959433926
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castle of Park\n*Country:* scotland\n*Region:* southwest scotland\n*County:* Dumfries and Galloway\n*Type:* castle\n*Period:* 16th century\n*Coords:* 54.876, -4.8255\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_of_Park\n*Maps:* https://www.google.com/maps/search/Castle%20of%20Park%20Dumfries%20and%20Galloway%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Castle_of_Park_Glenluce_exterior.JPG/330px-Castle_of_Park_Glenluce_exterior.JPG\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nThe Castle of Park is a 16th-century L-plan tower house near Glenluce, in the historic county of Wigtownshire in Dumfries and Galloway, Scotland. It is a category A listed building.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Castle of Park",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "Dumfries and Galloway",
+        "lat": "54.876",
+        "lng": "-4.8255",
+        "mapsLink": "https://www.google.com/maps/search/Castle%20of%20Park%20Dumfries%20and%20Galloway%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Castle_of_Park_Glenluce_exterior.JPG/330px-Castle_of_Park_Glenluce_exterior.JPG",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "The Castle of Park is a 16th-century L-plan tower house near Glenluce, in the historic county of Wigtownshire in Dumfries and Galloway, Scotland. It is a category A listed building.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 3.8,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Castle_of_Park",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_of_Park",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778959465508
     }
   ]
 }
