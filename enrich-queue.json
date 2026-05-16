@@ -1023,6 +1023,47 @@
         "enrichNotes": ""
       },
       "ts": 1778958720786
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Peel Ring of Lumphanan\n*Country:* scotland\n*Region:* northeast tayside\n*County:* Aberdeenshire\n*Type:* castle\n*Period:* 13th century (11th century tradition)\n*Coords:* 57.12222222, -2.70166667\n*Wikipedia:* https://en.wikipedia.org/wiki/Peel_of_Lumphanan\n*Maps:* https://www.google.com/maps/search/Peel%20Ring%20of%20Lumphanan%20Aberdeenshire%20scotland\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Peel_Ring_of_Lumphanan_20080502.jpg/330px-Peel_Ring_of_Lumphanan_20080502.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nThe Peel of Lumphanan, also known as the Peel Ring or Peel Bog of Lumphanan, is a defensive structure dating back to the 13th century. It is located near Lumphanan in Aberdeenshire, north-east Scotland.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Peel Ring of Lumphanan",
+        "country": "scotland",
+        "region": "northeast-tayside",
+        "county": "Aberdeenshire",
+        "lat": "57.12222222",
+        "lng": "-2.70166667",
+        "mapsLink": "https://www.google.com/maps/search/Peel%20Ring%20of%20Lumphanan%20Aberdeenshire%20scotland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Peel_Ring_of_Lumphanan_20080502.jpg/330px-Peel_Ring_of_Lumphanan_20080502.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "The Peel of Lumphanan, also known as the Peel Ring or Peel Bog of Lumphanan, is a defensive structure dating back to the 13th century. It is located near Lumphanan in Aberdeenshire, north-east Scotland.",
+        "type": "castle",
+        "period": "13th century (11th century tradition)",
+        "rating": 3.8,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "free-entry",
+          "atmospheric",
+          "norman"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Peel_of_Lumphanan",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Peel_Ring_of_Lumphanan_20080502.jpg/330px-Peel_Ring_of_Lumphanan_20080502.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Peel_of_Lumphanan",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNotes": ""
+      },
+      "ts": 1778958742915
     }
   ]
 }
