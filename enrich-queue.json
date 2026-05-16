@@ -1782,6 +1782,46 @@
         "enrichNotes": "seems to be a house and a castle here? two different listings "
       },
       "ts": 1778959822367
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Mauchline Castle\n*Country:* scotland\n*Region:* southwest scotland\n*County:* East Ayrshire\n*Type:* castle\n*Period:* Medieval\n*Coords:* 55.51591, -4.38073\n*Wikipedia:* https://en.wikipedia.org/wiki/Mauchline_Castle\n*Maps:* https://www.google.com/maps/search/Mauchline%20Castle%20East%20Ayrshire%20scotland\n*Main Image:* https://img.castlecore.uk/mauchline-castle.jpg\n*Gallery:* 1 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nMauchline Castle, also known as Abbot Hunter's Tower, is a rectangular tower house dating from the fifteenth century, in Mauchline, East Ayrshire, Scotland. The tower once formed part of a group of monastic buildings associated with Melrose Abbey, and today is a category A listed building.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Mauchline Castle",
+        "country": "scotland",
+        "region": "southwest-scotland",
+        "county": "East Ayrshire",
+        "lat": "55.51591",
+        "lng": "-4.38073",
+        "mapsLink": "https://www.google.com/maps/search/Mauchline%20Castle%20East%20Ayrshire%20scotland",
+        "image": "https://img.castlecore.uk/mauchline-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/wiki-mauchline-castle.jpg"
+        ],
+        "desc": "Mauchline Castle, also known as Abbot Hunter's Tower, is a rectangular tower house dating from the fifteenth century, in Mauchline, East Ayrshire, Scotland. The tower once formed part of a group of monastic buildings associated with Melrose Abbey, and today is a category A listed building.",
+        "type": "castle",
+        "period": "Medieval",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "free-entry"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Mauchline_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mauchline_Castle_-_Abbot_Hunter%27s_Tower.jpg/330px-Mauchline_Castle_-_Abbot_Hunter%27s_Tower.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Mauchline_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-16",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1778959988308
     }
   ]
 }
