@@ -635,6 +635,65 @@
         "enrichNotes": ""
       },
       "ts": 1779043619302
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Penrhyn Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Gwynedd\n*Type:* castle\n*Period:* 19th century\n*Coords:* 53.2259, -4.0946\n*Wikipedia:* https://en.wikipedia.org/wiki/Penrhyn_Castle\n*Maps:* https://www.google.com/maps/search/Penrhyn%20Castle/@53.2278,-4.0917,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZO8UFB3nNZpT2dWbHVbpeLb7D5iZ-dQUWlIpktS3EGQT-io_aIVbaD4okdvzU6X85FPdt9sY8qGrCvoSqFBrpV1jTBYT1DXOflTZkpN2GPhd_evJOnkjqnCT_nvoG8n9v0BwBJXK_y2Arbw7w=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nPenrhyn Castle is a country house in Llandygai, Bangor, Gwynedd, North Wales, constructed in the style of a Norman castle. The Penrhyn Estate was founded by Ednyfed Fychan. In the 15th century his descendant Gwilym ap Griffith built a fortified manor house on the site.\n\n_Listing 14 of 80_",
+      "listing": {
+        "name": "Penrhyn Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Gwynedd",
+        "lat": 53.2259,
+        "lng": -4.0946,
+        "mapsLink": "https://www.google.com/maps/search/Penrhyn%20Castle/@53.2278,-4.0917,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZO8UFB3nNZpT2dWbHVbpeLb7D5iZ-dQUWlIpktS3EGQT-io_aIVbaD4okdvzU6X85FPdt9sY8qGrCvoSqFBrpV1jTBYT1DXOflTZkpN2GPhd_evJOnkjqnCT_nvoG8n9v0BwBJXK_y2Arbw7w=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Penrhyn Castle is a country house in Llandygai, Bangor, Gwynedd, North Wales, constructed in the style of a Norman castle. The Penrhyn Estate was founded by Ednyfed Fychan. In the 15th century his descendant Gwilym ap Griffith built a fortified manor house on the site.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "norman",
+          "victorian",
+          "museum",
+          "gardens",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Penrhyn_Castle"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/wales/penrhyn-castle-and-garden"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Penrhyn_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Sunset_on_Penrhyn_Castle._%2814500044677%29.jpg/330px-Sunset_on_Penrhyn_Castle._%2814500044677%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Hefin Owen from Wales",
+          "license": "CC BY-SA 2.0",
+          "description": "History\nThe present building was created between about 1822 and 1837 to designs by Thomas Hopper,[1] who expanded and transformed the building beyond recognition. However a spiral staircase from the original property can still be seen, and a vaulted basement and other masonry were incorporated into the new structure. Hopper's client was George Hay Dawkins-Pennant, who had inherited the Penrhyn estate on the death of his second cousin, Richard Pennant, who had made his fortune from Jamaican sugar and local slate quarries. The eldest of George's two daughters, Juliana, married Grenadier Guard, Edward Gordon Douglas, who, on inheriting the estate on George's death in 1845, adopted the hyphenated surname of Douglas-Pennant.\nPenrhyn is one of the most admired of the numerous mock castles built in the United Kingdom in the 19th century; Christopher Hussey called it, \"the outstanding instance of Norman revival.\" [2] The castle is a picturesque composition that stretches over 600 feet from a tall donjon containing family rooms, through the main block built around the earlier house, to the service wing and the stables.\nPenrhyn Castle circa 1880.\nPenrhyn Castle between 1890 and 1900\nIt is built in a sombre style which allows it to possess something of the medieval fortress air despite the ground-level drawing room windows. Hopper designed all the principal interiors in a rich but restrained Norman style, with much fine plasterwork and wood and stone carving. The castle also has some specially designed Norman style furniture, including a one ton slate bed made for Queen Victoria when she visited in 1859.\nHugh Napier Douglas-Pennant, 4th Lord Penrhyn, died in 1949, and the castle and estate passed to his niece, Lady Janet Pelham, who, on inheritance, adopted the surname of Douglas-Pennant. In 1951 the castle and 40,000 acres (160 km²) of land were accepted by the Treasury in lieu of death duties from Lady Janet. It now belongs to the National Trust and is open to the public.\nPenrhyn's attractions include a formal walled garden, extensive informal gardens, an industrial railway museum, a model railway museum and an adventure playground. Hanging on its walls is one of the finest art collections in North Wales, with works by artists such as Rembrandt - (Catrina Hooghsaet, valued at up to £40m, the Dutch Culture Ministry tried to buy the painting for Amsterdam’s Rijksmuseum in 2007 but couldn’t meet the asking price)- , Canaletto, Richard Wilson, Carl Haag, Perino del Vaga and Palma Vecchio. The family began collecting paintings from the early years of the 19th century; this significant collection was catalogued by the 2nd Lord Penrhyn's daughter Alice Douglas-Pennant. The castle has views over the Snowdonia mountains. In 2008/09 it was the National Trust's thirteenth most visited paid-entry property, with 156,575 visitors.\nCost\n\nThe cost of the construction of this vast 'castle' is disputed, and very difficult to work out accurately as much of the timber came from the family's own forestry, and much of the labour was acquired from within their own workforce at the slate quarry. It has been estimated that it cost the Pennant Family about £150,000. This is the approximate equivalent to about £49,500,000.",
+          "credit": "Sunset on Penrhyn Castle.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043635231
     }
   ]
 }
