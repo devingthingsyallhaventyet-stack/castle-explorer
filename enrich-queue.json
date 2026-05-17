@@ -229,6 +229,64 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/KqCDQkgK3R1xfe3S7\n"
       },
       "ts": 1779044544448
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Nostell Priory\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 53.6533, -1.3883\n*Wikipedia:* https://en.wikipedia.org/wiki/Nostell_Priory\n*Maps:* https://www.google.com/maps/search/Nostell%20Priory/@53.6533,-1.3883,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Nostell_Priory_Front_Facade.JPG/330px-Nostell_Priory_Front_Facade.JPG\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nNostell Priory is a Palladian house in Nostell, West Yorkshire, in England, near Crofton and on the road to Doncaster from Wakefield. It dates from 1733 and was built for the Winn family on the site of a medieval priory. The Priory and its contents were given to the National Trust in 1953 by the trustees of the estate and Rowland Winn, 3rd Baron St Oswald.\n\n_Listing 5 of 50_",
+      "listing": {
+        "name": "Nostell Priory",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 53.6533,
+        "lng": -1.3883,
+        "mapsLink": "https://www.google.com/maps/search/Nostell%20Priory/@53.6533,-1.3883,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Nostell_Priory_Front_Facade.JPG/330px-Nostell_Priory_Front_Facade.JPG",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Nostell Priory is a Palladian house in Nostell, West Yorkshire, in England, near Crofton and on the road to Doncaster from Wakefield. It dates from 1733 and was built for the Winn family on the site of a medieval priory. The Priory and its contents were given to the National Trust in 1953 by the trustees of the estate and Rowland Winn, 3rd Baron St Oswald.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "museum",
+          "guided-tours",
+          "kid-friendly",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nostell_Priory"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/yorkshire/nostell/the-history-of-nostell"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Nostell_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Nostell_Priory_Front_Facade.JPG/330px-Nostell_Priory_Front_Facade.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Wehha",
+          "license": "CC BY-SA 3.0",
+          "description": "Front elevation to Nostell Priory. A National Trust property in Yorkshire, near Wakefield and Pontefract.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Nostell_Priory",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044560577
     }
   ]
 }
