@@ -382,7 +382,7 @@ function getStatus(d) {
 }
 
 // Load data
-fetch('audit-data.json').then(r => r.json()).then(data => {
+fetch('audit-data.json?v=' + Date.now()).then(r => r.json()).then(data => {
   allData = data;
   // Data file is authoritative — rebuild reviewState from it (clears stale localStorage)
   reviewState = {};
