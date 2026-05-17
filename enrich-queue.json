@@ -436,6 +436,61 @@
         "enrichNotes": "https://maps.app.goo.gl/7xNzKjV54zGGn1aD6 update google places link \n"
       },
       "ts": 1779051047032
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Dun Eochla\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* fort\n*Period:* Early Medieval\n*Coords:* 53.128, -9.72\n*Wikipedia:* https://en.wikipedia.org/wiki/List_of_Dune_characters\n*Maps:* https://www.google.com/maps/search/Dun%20Eochla/@53.128,-9.72,15z\n*Main Image:* https://img.castlecore.uk/dun-eochla.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nDune is a science fiction media franchise that originated with the 1965 novel of the same name by American author Frank Herbert. Dune is frequently cited as the best-selling science fiction novel in history, and won the 1966 Hugo Award as well as the inaugural Nebula Award for Best Novel. Herbert wrote five sequels before his death in 1986: Dune Messiah (1969), Children of Dune (1976), God Emperor of Dune (1981), Heretics of Dune (1984), and Chapterhouse: Dune (1985).\n\n_Listing 10 of 53_",
+      "listing": {
+        "name": "Dun Eochla",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.128,
+        "lng": -9.72,
+        "mapsLink": "https://www.google.com/maps/search/Dun%20Eochla/@53.128,-9.72,15z",
+        "image": "https://img.castlecore.uk/dun-eochla.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/dun-eochla-2.jpg",
+          "https://img.castlecore.uk/dun-eochla-3.jpg",
+          "https://img.castlecore.uk/dun-eochla-4.jpg",
+          "https://img.castlecore.uk/dun-eochla-5.jpg"
+        ],
+        "desc": "Dune is a science fiction media franchise that originated with the 1965 novel of the same name by American author Frank Herbert. Dune is frequently cited as the best-selling science fiction novel in history, and won the 1966 Hugo Award as well as the inaugural Nebula Award for Best Novel. Herbert wrote five sequels before his death in 1986: Dune Messiah (1969), Children of Dune (1976), God Emperor of Dune (1981), Heretics of Dune (1984), and Chapterhouse: Dune (1985).",
+        "type": "fort",
+        "period": "Early Medieval",
+        "rating": 4.1,
+        "tags": [
+          "prehistoric",
+          "island",
+          "hilltop",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Aran Islands",
+            "url": "https://www.aranislands.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/List_of_Dune_characters",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Dune_%282021%29_cast.jpg/330px-Dune_%282021%29_cast.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779051092637
     }
   ]
 }
