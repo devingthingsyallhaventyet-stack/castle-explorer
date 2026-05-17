@@ -5151,7 +5151,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "wikipedia",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Palace of Holyroodhouse - Royal Collection Trust",
+        "url": "https://www.rct.uk/visit/palace-of-holyroodhouse"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Palace of Holyroodhouse - Royal Collection Trust",
+        "url": "https://www.rct.uk/visit/palace-of-holyroodhouse"
+      }
+    ]
   },
   {
     "name": "Cramond Tower",
@@ -5356,7 +5368,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lennoxlove Official Website",
+        "url": "https://www.lennoxlove.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lennoxlove Official Website",
+        "url": "https://www.lennoxlove.com/"
+      }
+    ]
   },
   {
     "name": "Old Temple Kirk",
@@ -5475,7 +5499,19 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "label": "Dalhousie Castle Hotel Official Website",
+        "url": "https://www.dalhousiecastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dalhousie Castle Hotel Official Website",
+        "url": "https://www.dalhousiecastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Arniston House",
@@ -5539,7 +5575,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Arniston House Official Website",
+        "url": "https://arnistonhouse.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Arniston House Official Website",
+        "url": "https://arnistonhouse.com/"
+      }
+    ]
   },
   {
     "name": "Torphichen Preceptory",
@@ -6061,7 +6109,19 @@
     },
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "label": "Blair Castle - Atholl Estates",
+        "url": "https://atholl-estates.co.uk/blair-castle/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Blair Castle - Atholl Estates",
+        "url": "https://atholl-estates.co.uk/blair-castle/"
+      }
+    ]
   },
   {
     "name": "Scone Palace",
@@ -6123,7 +6183,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Scone Palace - Iconic Crowning Place of Scottish Kings",
+        "url": "https://www.scone-palace.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Scone Palace - Iconic Crowning Place of Scottish Kings",
+        "url": "https://www.scone-palace.co.uk/"
+      }
+    ]
   },
   {
     "name": "Dunfermline Abbey",
@@ -6186,7 +6258,19 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "label": "Dunfermline Abbey",
+        "url": "https://dunfermlineabbey.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunfermline Abbey",
+        "url": "https://dunfermlineabbey.com/"
+      }
+    ]
   },
   {
     "name": "Ravenscraig Castle",
@@ -6670,7 +6754,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castle Menzies - Menzies Clan Society",
+        "url": "https://www.castlemenzies.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Menzies - Menzies Clan Society",
+        "url": "https://www.castlemenzies.org/"
+      }
+    ]
   },
   {
     "name": "Grandtully Castle",
@@ -6775,7 +6871,19 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Megginch_Castle",
     "imageAttribution": "local",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Megginch Castle",
+        "url": "https://megginchcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Megginch Castle",
+        "url": "https://megginchcastle.com/"
+      }
+    ]
   },
   {
     "name": "Balhousie Castle",
@@ -7659,7 +7767,19 @@
       "credit": "This file was derived from:  Dunkeld Cathedral - geograph.org.uk - 11591.jpg",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dunkeld Cathedral & Parish",
+        "url": "https://dunkeldcathedral.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunkeld Cathedral & Parish",
+        "url": "https://dunkeldcathedral.org/"
+      }
+    ]
   },
   {
     "name": "Kinross House",
@@ -7723,7 +7843,19 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "label": "Kinross House Estate & Coach House Spa",
+        "url": "https://www.kinrosshouse.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Kinross House Estate & Coach House Spa",
+        "url": "https://www.kinrosshouse.com/"
+      }
+    ]
   },
   {
     "name": "Culross Palace",
@@ -7852,7 +7984,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dunimarle Castle",
+        "url": "https://www.dunimarlecastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunimarle Castle",
+        "url": "https://www.dunimarlecastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Creich Castle",
@@ -8298,7 +8442,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dunblane Cathedral",
+        "url": "https://www.dunblanecathedral.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunblane Cathedral",
+        "url": "https://www.dunblanecathedral.org.uk/"
+      }
+    ]
   },
   {
     "name": "Inchmahome Priory",
