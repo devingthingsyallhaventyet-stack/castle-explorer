@@ -667,6 +667,65 @@
         "enrichNotes": ""
       },
       "ts": 1779045930995
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Tretower Court\n*Country:* wales\n*Region:* mid wales marches\n*County:* Powys\n*Type:* historic-house\n*Period:* 12th-15th century\n*Coords:* 51.8833, -3.1843\n*Wikipedia:* https://en.wikipedia.org/wiki/Tretower_Court\n*Maps:* https://www.google.com/maps/search/Tretower%20Court/@51.8558,-3.2119,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPOn7-96vwEuO3vVl3JTaJl4b1K0KVt-lJDeueBZkX5BREcCITKSsMXHpqDR5r1XV7KGpjH-XuUm0O3qDYVP1iDkCx7mrRJr-lOGOkYmtzcg6YqJ9oIqdQEYCVA5hSqHhot4WhDSrwnosF2bg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nTretower Court is a medieval fortified manor house in Wales, situated in the village of Tretower, near Crickhowell in modern-day Powys, previously within the historical county of Breconshire or Brecknockshire.\n\n_Listing 13 of 28_",
+      "listing": {
+        "name": "Tretower Court",
+        "country": "wales",
+        "region": "mid-wales-marches",
+        "county": "Powys",
+        "lat": 51.8833,
+        "lng": -3.1843,
+        "mapsLink": "https://www.google.com/maps/search/Tretower%20Court/@51.8558,-3.2119,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPOn7-96vwEuO3vVl3JTaJl4b1K0KVt-lJDeueBZkX5BREcCITKSsMXHpqDR5r1XV7KGpjH-XuUm0O3qDYVP1iDkCx7mrRJr-lOGOkYmtzcg6YqJ9oIqdQEYCVA5hSqHhot4WhDSrwnosF2bg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Tretower Court is a medieval fortified manor house in Wales, situated in the village of Tretower, near Crickhowell in modern-day Powys, previously within the historical county of Breconshire or Brecknockshire.",
+        "type": "historic-house",
+        "period": "12th-15th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "medieval",
+          "norman",
+          "gardens",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Tretower_Court"
+          },
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/tretower-court-and-castle"
+          },
+          {
+            "name": "Visit Wales",
+            "url": "https://www.visitwales.com/attraction/castle/tretower-court-and-castle-cadw-680102"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Tretower_Court",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Tretower_Court_-_geograph.org.uk_-_2629360.jpg/330px-Tretower_Court_-_geograph.org.uk_-_2629360.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Philip Pankhurst",
+          "license": "CC BY-SA 2.0",
+          "description": "Tretower Court",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045989039
     }
   ]
 }
