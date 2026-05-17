@@ -1948,7 +1948,7 @@
       "coastal",
       "guided-tours"
     ],
-    "source": "",
+    "source": "https://www.historicenvironment.scot/visit-a-place/places/iona-abbey-and-nunnery/",
     "wiki": "https://en.wikipedia.org/wiki/Iona_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Iona_Abbey_%2845322644484%29.jpg/330px-Iona_Abbey_%2845322644484%29.jpg",
     "imageAttribution": {
@@ -1961,7 +1961,13 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/iona-abbey-and-nunnery/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Achanduin Castle",
@@ -4197,7 +4203,7 @@
       "hidden-gem",
       "filming-location"
     ],
-    "source": "",
+    "source": "https://www.historicenvironment.scot/visit-a-place/places/craigmillar-castle/",
     "wiki": "https://en.wikipedia.org/wiki/Craigmillar_Castle",
     "reviewStatus": "approved",
     "imageAttribution": {
@@ -4208,7 +4214,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/craigmillar-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Linlithgow Palace",
@@ -4260,7 +4272,7 @@
       "filming-location",
       "hidden-gem"
     ],
-    "source": "",
+    "source": "https://www.historicenvironment.scot/visit-a-place/places/linlithgow-palace/",
     "wiki": "https://en.wikipedia.org/wiki/Linlithgow_Palace",
     "reviewStatus": "approved",
     "imageAttribution": {
@@ -4271,7 +4283,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/linlithgow-palace/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Blackness Castle",
@@ -4865,7 +4883,7 @@
       "gift-shop",
       "events-venue"
     ],
-    "source": "",
+    "source": "https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/",
     "wiki": "https://en.wikipedia.org/wiki/Edinburgh_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg/330px-City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg",
     "reviewStatus": "approved",
@@ -4889,6 +4907,10 @@
       {
         "label": "Official Edinburgh Castle Website",
         "url": "https://www.edinburghcastle.scot/"
+      },
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -6396,7 +6418,7 @@
       "photogenic",
       "hidden-gem"
     ],
-    "source": "",
+    "source": "https://www.historicenvironment.scot/visit-a-place/places/dunfermline-abbey-and-palace/",
     "wiki": "https://en.wikipedia.org/wiki/Dunfermline_Abbey",
     "imageAttribution": {
       "artist": "Paul McIlroy",
@@ -6413,6 +6435,10 @@
       {
         "label": "Dunfermline Abbey",
         "url": "https://dunfermlineabbey.com/"
+      },
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dunfermline-abbey-and-palace/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -8653,7 +8679,7 @@
       "hidden-gem",
       "free"
     ],
-    "source": "",
+    "source": "https://www.historicenvironment.scot/visit-a-place/places/dunblane-cathedral/",
     "wiki": "https://en.wikipedia.org/wiki/Dunblane_Cathedral",
     "reviewStatus": "approved",
     "imageAttribution": {
@@ -8669,6 +8695,10 @@
       {
         "label": "Dunblane Cathedral",
         "url": "https://www.dunblanecathedral.org.uk/"
+      },
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dunblane-cathedral/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -31410,7 +31440,7 @@
       "filming-location",
       "haunted"
     ],
-    "source": "",
+    "source": "https://www.hrp.org.uk/tower-of-london/",
     "wiki": "https://en.wikipedia.org/wiki/Tower_of_London",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/330px-Tower_of_London_from_the_Shard_%288515883950%29.jpg",
     "reviewStatus": "approved",
@@ -59928,7 +59958,7 @@
       "photogenic",
       "hidden-gem"
     ],
-    "source": "",
+    "source": "https://cadw.gov.wales/visit/places-to-visit/castell-carreg-cennen",
     "wiki": "https://en.wikipedia.org/wiki/Carreg_Cennen_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg/330px-Carreg_Cennen_Castle_on_its_crag_and_in_its_Carmarthenshire_landscape%2C_autumn_light.jpg",
     "reviewStatus": "approved",
@@ -59945,6 +59975,10 @@
       {
         "label": "Carreg Cennen Castle and Farm",
         "url": "http://www.carregcennencastle.com/"
+      },
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/castell-carreg-cennen",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -62126,7 +62160,7 @@
       "well-preserved",
       "kid-friendly"
     ],
-    "source": "",
+    "source": "https://heritageireland.ie/places-to-visit/dublin-castle/",
     "wiki": "https://en.wikipedia.org/wiki/Dublin_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/The_Dubhlinn_Gardens_Dublin_Castle_01.JPG/330px-The_Dubhlinn_Gardens_Dublin_Castle_01.JPG",
     "reviewStatus": "approved",
@@ -62143,6 +62177,10 @@
       {
         "label": "Dublin Castle | The nerve centre of historical power in Ireland",
         "url": "https://dublincastle.ie/"
+      },
+      {
+        "url": "https://heritageireland.ie/places-to-visit/dublin-castle/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -62264,7 +62302,7 @@
       "kid-friendly",
       "hidden-gem"
     ],
-    "source": "",
+    "source": "https://heritageireland.ie/places-to-visit/castletown-house-and-parklands/",
     "wiki": "https://en.wikipedia.org/wiki/Castletown_House",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Castletown_House_7.jpg/330px-Castletown_House_7.jpg",
     "reviewStatus": "approved",
@@ -62281,6 +62319,10 @@
       {
         "label": "Castletown | Ireland's first and finest Palladian mansion",
         "url": "https://castletown.ie/"
+      },
+      {
+        "url": "https://heritageireland.ie/places-to-visit/castletown-house-and-parklands/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -64087,7 +64129,7 @@
       "kid-friendly",
       "photogenic"
     ],
-    "source": "",
+    "source": "https://heritageireland.ie/places-to-visit/kilkenny-castle/",
     "wiki": "https://en.wikipedia.org/wiki/Kilkenny_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Kilkenny-castle.jpg/330px-Kilkenny-castle.jpg",
     "reviewStatus": "approved",
@@ -64111,6 +64153,10 @@
       {
         "label": "Kilkenny Castle | The jewel in the crown of an enchanting medieval city",
         "url": "https://www.kilkennycastle.ie/"
+      },
+      {
+        "url": "https://heritageireland.ie/places-to-visit/kilkenny-castle/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
