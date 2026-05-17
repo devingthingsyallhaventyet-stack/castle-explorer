@@ -491,6 +491,64 @@
         "enrichNotes": "more research "
       },
       "ts": 1779051092637
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lullingstone Castle\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* castle\n*Period:* 15th-16th century\n*Coords:* 51.3585, 0.1959\n*Wikipedia:* https://en.wikipedia.org/wiki/Lullingstone_Castle\n*Maps:* https://www.google.com/maps/search/Lullingstone%20Castle/@51.3597,0.1903,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPVQlOj2fm9oic9oatjeT-Ky5OfYeASpLRh78niVEdkLuYm7F2EJQSqLm631MgbeWK-uMDbMFSYDjPuGS5zPtXqpc9fGY7h_QqlnfkLIEmZxQQE0JPXQFmDKxfWM85EszY2PTNbMPIdgoHsqBc=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.lullingstonecastle.co.uk/\n\n*Description:*\nLullingstone Castle is a historic manor house, set in an estate in the village of Lullingstone and the civil parish of Eynsford in the English county of Kent. It has been inhabited by members of the Hart Dyke family for twenty generations including current owner Tom Hart Dyke.\n\n_Listing 11 of 53_",
+      "listing": {
+        "name": "Lullingstone Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.3585,
+        "lng": 0.1959,
+        "mapsLink": "https://www.google.com/maps/search/Lullingstone%20Castle/@51.3597,0.1903,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPVQlOj2fm9oic9oatjeT-Ky5OfYeASpLRh78niVEdkLuYm7F2EJQSqLm631MgbeWK-uMDbMFSYDjPuGS5zPtXqpc9fGY7h_QqlnfkLIEmZxQQE0JPXQFmDKxfWM85EszY2PTNbMPIdgoHsqBc=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lullingstone Castle is a historic manor house, set in an estate in the village of Lullingstone and the civil parish of Eynsford in the English county of Kent. It has been inhabited by members of the Hart Dyke family for twenty generations including current owner Tom Hart Dyke.",
+        "type": "castle",
+        "period": "15th-16th century",
+        "rating": 4,
+        "tags": [
+          "gardens",
+          "photogenic",
+          "tudor",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lullingstone_Castle"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1001687"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=1615"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lullingstone_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Lullingstone.manor.JPG/330px-Lullingstone.manor.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Agadant",
+          "license": "CC BY-SA 3.0",
+          "description": "Manor house at Lullingstone Castle, Kent",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.lullingstonecastle.co.uk/",
+        "enrichNotes": "add source - https://www.lullingstonecastle.co.uk/"
+      },
+      "ts": 1779051120558
     }
   ]
 }
