@@ -421,6 +421,64 @@
         "enrichNotes": "add source - https://www.thornburycastle.co.uk/"
       },
       "ts": 1779047892933
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Grimsthorpe Castle\n*Country:* england\n*Region:* the midlands\n*County:* Lincolnshire\n*Type:* castle\n*Period:* 13th-18th century\n*Coords:* 52.7923, -0.4523\n*Wikipedia:* https://en.wikipedia.org/wiki/Grimsthorpe_Castle\n*Maps:* https://www.google.com/maps/search/Grimsthorpe%20Castle/@52.767,-0.446,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqFcLrIC8aAkdItNh0RENC7Q5NUpUdGchX7gSV6d6v09X0OoXhlXY_FvsoQ0u2DB4h6HfddhBh1RZc2siPgUcQj7Om-uUYNma9E=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://grimsthorpe.co.uk/\n\n*Description:*\nGrimsthorpe Castle is a country house in Lincolnshire, England 4 miles (6.4 km) north-west of Bourne on the A151. It lies within a 3,000 acre (12 km2) park of rolling pastures, lakes, and woodland landscaped by Capability Brown. While Grimsthorpe is not a castle in the strict sense of the word, its character is massive and martial – the towers and outlying pavilions recalling the bastions of a great fortress in classical dress. Grimsthorpe has been the home of the de Eresby family since 1516. The present occupant is the 28th Baroness Willoughby de Eresby, granddaughter of Nancy Astor, who died at Grimsthorpe in 1964.\n\n_Listing 9 of 111_",
+      "listing": {
+        "name": "Grimsthorpe Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Lincolnshire",
+        "lat": 52.7923,
+        "lng": -0.4523,
+        "mapsLink": "https://www.google.com/maps/search/Grimsthorpe%20Castle/@52.767,-0.446,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqFcLrIC8aAkdItNh0RENC7Q5NUpUdGchX7gSV6d6v09X0OoXhlXY_FvsoQ0u2DB4h6HfddhBh1RZc2siPgUcQj7Om-uUYNma9E=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Grimsthorpe Castle is a country house in Lincolnshire, England 4 miles (6.4 km) north-west of Bourne on the A151. It lies within a 3,000 acre (12 km2) park of rolling pastures, lakes, and woodland landscaped by Capability Brown. While Grimsthorpe is not a castle in the strict sense of the word, its character is massive and martial – the towers and outlying pavilions recalling the bastions of a great fortress in classical dress. Grimsthorpe has been the home of the de Eresby family since 1516. The present occupant is the 28th Baroness Willoughby de Eresby, granddaughter of Nancy Astor, who died at Grimsthorpe in 1964.",
+        "type": "castle",
+        "period": "13th-18th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "guided-tours",
+          "gift-shop",
+          "tearoom-cafe",
+          "kid-friendly",
+          "events-venue"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Grimsthorpe_Castle"
+          },
+          {
+            "name": "Lincolnshire Life",
+            "url": "https://www.lincolnshirelife.co.uk/heritage/grimsthorpe-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Grimsthorpe_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Grimsthorpe_Castle_-_North_Facade.JPG/330px-Grimsthorpe_Castle_-_North_Facade.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Wehha",
+          "license": "CC BY-SA 3.0",
+          "description": "Northern (Main) Facade of Grimsthorpe Castle in Lincolnshire",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://grimsthorpe.co.uk/",
+        "enrichNotes": "add source - https://grimsthorpe.co.uk/"
+      },
+      "ts": 1779047991322
     }
   ]
 }
