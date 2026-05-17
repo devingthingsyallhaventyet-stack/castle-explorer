@@ -348,6 +348,51 @@
         "enrichNotes": ""
       },
       "ts": 1779060403035
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Aberystwyth Castle\n*Country:* wales\n*Region:* west wales\n*County:* Ceredigion\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.41324, -4.08968\n*Wikipedia:* https://en.wikipedia.org/wiki/Aberystwyth_Castle\n*Maps:* https://www.google.com/maps/search/Aberystwyth%20Castle/@52.4154,-4.0876,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aberystwyth_castle_edit1.jpg/330px-Aberystwyth_castle_edit1.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nAberystwyth Castle is a Grade I listed Edwardian fortress located in Aberystwyth, Ceredigion, Mid Wales. It was built in response to the First Welsh War in the late 13th century, replacing an earlier fortress located a mile to the south. During a national uprising by Owain Glyndŵr, the Welsh captured the castle in 1404, but it was recaptured by the English four years later. From 1637 it housed a Royal mint of Charles I, which minted coins from locally mined silver. The castle was slighted by Oliver Cromwell in 1649.\n\n_Listing 8 of 270_",
+      "listing": {
+        "name": "Aberystwyth Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Ceredigion",
+        "lat": 52.41324,
+        "lng": -4.08968,
+        "mapsLink": "https://www.google.com/maps/search/Aberystwyth%20Castle/@52.4154,-4.0876,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aberystwyth_castle_edit1.jpg/330px-Aberystwyth_castle_edit1.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Aberystwyth Castle is a Grade I listed Edwardian fortress located in Aberystwyth, Ceredigion, Mid Wales. It was built in response to the First Welsh War in the late 13th century, replacing an earlier fortress located a mile to the south. During a national uprising by Owain Glyndŵr, the Welsh captured the castle in 1404, but it was recaptured by the English four years later. From 1637 it housed a Royal mint of Charles I, which minted coins from locally mined silver. The castle was slighted by Oliver Cromwell in 1649.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.9,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Aberystwyth_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aberystwyth_castle_edit1.jpg/330px-Aberystwyth_castle_edit1.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Myself - Herby talk thyme",
+          "license": "CC BY-SA 4.0",
+          "description": "Aberystwyth Castle",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Aberystwyth_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779060452437
     }
   ]
 }
