@@ -48,6 +48,57 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1779061049466
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Polesworth Abbey\n*Country:* england\n*Region:* the midlands\n*County:* Warwickshire\n*Type:* abbey\n*Period:* 9th-16th century\n*Coords:* 52.618825, -1.61222778\n*Wikipedia:* https://en.wikipedia.org/wiki/Polesworth_Abbey\n*Maps:* https://www.google.com/maps/search/Polesworth%20Abbey/@52.6167,-1.6117,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/PolesworthAbbey.JPG/330px-PolesworthAbbey.JPG\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.polesworthabbey.org.uk/ add source \n\n*Description:*\nPolesworth Abbey was a Benedictine nunnery in Polesworth, North Warwickshire, England.\n\n_Listing 2 of 252_",
+      "listing": {
+        "name": "Polesworth Abbey",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Warwickshire",
+        "lat": 52.618825,
+        "lng": -1.61222778,
+        "mapsLink": "https://www.google.com/maps/search/Polesworth%20Abbey/@52.6167,-1.6117,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/PolesworthAbbey.JPG/330px-PolesworthAbbey.JPG",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Polesworth Abbey was a Benedictine nunnery in Polesworth, North Warwickshire, England.",
+        "type": "abbey",
+        "period": "9th-16th century",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "norman",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Polesworth_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Polesworth_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/PolesworthAbbey.JPG/330px-PolesworthAbbey.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "JohnArmagh",
+          "license": "CC BY-SA 3.0",
+          "description": "Abbey church of St Editha, Polesworth, Warwickshire, England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Polesworth_Abbey",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://www.polesworthabbey.org.uk/ add source ",
+        "enrichNotes": "https://www.polesworthabbey.org.uk/ add source "
+      },
+      "ts": 1779061080409
     }
   ]
 }
