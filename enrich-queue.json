@@ -165,6 +165,61 @@
         "enrichNotes": "Change name to - Aberglasney\nUpdate wikipedia page - https://en.wikipedia.org/wiki/Aberglasney\nAdd source - https://aberglasney.org/"
       },
       "ts": 1779048689488
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lamphey Bishop's Palace\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* palace\n*Period:* 13th-14th century\n*Coords:* 51.668, -4.858\n*Wikipedia:* https://en.wikipedia.org/wiki/Lamphey_Bishop's_Palace\n*Maps:* https://www.google.com/maps/search/Lamphey%20Bishop's%20Palace/@51.668,-4.858,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZN5DaeQQjYnmGUmEPeU79uZT6pt5KkKe8AwETxppk03Xl3ZoUOw02MSHkyscV-AUkrItQ4JE3cy-Rs4V69rebUY0ON8AKt5-vV5clSVdM7jhkwzSXbFSXxCZvF1ZnX9J-dOKZ4S8hGq6v8kdA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nLamphey Bishop's Palace or Lamphey Palace is a ruined medieval building complex in Lamphey, Pembrokeshire. It is a scheduled ancient monument and a Grade I Listed building. The grounds of the palace are designated, jointly with the park of Lamphey Court, as Grade II* on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.\n\n_Listing 4 of 94_",
+      "listing": {
+        "name": "Lamphey Bishop's Palace",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 51.668,
+        "lng": -4.858,
+        "mapsLink": "https://www.google.com/maps/search/Lamphey%20Bishop's%20Palace/@51.668,-4.858,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN5DaeQQjYnmGUmEPeU79uZT6pt5KkKe8AwETxppk03Xl3ZoUOw02MSHkyscV-AUkrItQ4JE3cy-Rs4V69rebUY0ON8AKt5-vV5clSVdM7jhkwzSXbFSXxCZvF1ZnX9J-dOKZ4S8hGq6v8kdA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lamphey Bishop's Palace or Lamphey Palace is a ruined medieval building complex in Lamphey, Pembrokeshire. It is a scheduled ancient monument and a Grade I Listed building. The grounds of the palace are designated, jointly with the park of Lamphey Court, as Grade II* on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+        "type": "palace",
+        "period": "13th-14th century",
+        "rating": 4.2,
+        "tags": [
+          "ruins-romantic",
+          "gardens",
+          "atmospheric",
+          "medieval",
+          "free-entry",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lamphey_Bishop%27s_Palace"
+          },
+          {
+            "name": "Cadw",
+            "url": "http://cadw.gov.wales/daysout/lampheybishopspalace/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lamphey_Bishop's_Palace",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Lamphey_Bishops_Palace-_Beautiful_remains_dating_back_to_the_14th_Century.jpg/330px-Lamphey_Bishops_Palace-_Beautiful_remains_dating_back_to_the_14th_Century.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Vale  Holidays",
+          "license": "CC BY 2.0",
+          "description": "Lamphey Bishop's Palace. Posted via email  from Vale's posterous",
+          "credit": "Lamphey Bishops Palace: Beautiful remains dating back to the 14th  Century",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048741271
     }
   ]
 }
