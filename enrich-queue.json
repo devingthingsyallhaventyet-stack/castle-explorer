@@ -426,6 +426,60 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/DMhPUFuY3wXWT2sa9"
       },
       "ts": 1779039796763
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Sissinghurst Castle\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* castle\n*Period:* 16th century\n*Coords:* 51.1157, 0.5815\n*Wikipedia:* https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden\n*Maps:* https://www.google.com/maps/search/Sissinghurst%20Castle/@51.1158,0.5828,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOSXraodDAl3MAOGHoiySpayWlzS3BZ8wbm3u-68lVd7-pAoUKdO7ottccGeACK4LWET_PhoBPVF8iGOh6msCCapy3HJrh1PtG6cWUwIUMyjqY7fyOBmJfHhOsfCaSuspabZKb5enOEwT_XOQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* Links are correct but images are not. repull images. \n\n*Description:*\nSissinghurst Castle Garden, at Sissinghurst in the Weald of Kent in England, was created by Vita Sackville-West, poet and writer, and her husband Harold Nicolson, author and diplomat. It is among the most famous gardens in England and is designated Grade I on Historic England's register of historic parks and gardens. It was bought by Sackville-West in 1930, and over the next thirty years, working with, and later succeeded by, a series of notable head gardeners, she and Nicolson transformed a farmstead of \"squalor and slovenly disorder\" into one of the world's most influential gardens. Following Sackville-West's death in 1962, the estate was donated to the National Trust. It was ranked 42nd on the list of the Trust's most-visited sites in the 2021–2022 season, with over 150,000 visitors.\n\n_Listing 7 of 10_",
+      "listing": {
+        "name": "Sissinghurst Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.1157,
+        "lng": 0.5815,
+        "mapsLink": "https://www.google.com/maps/search/Sissinghurst%20Castle/@51.1158,0.5828,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOSXraodDAl3MAOGHoiySpayWlzS3BZ8wbm3u-68lVd7-pAoUKdO7ottccGeACK4LWET_PhoBPVF8iGOh6msCCapy3HJrh1PtG6cWUwIUMyjqY7fyOBmJfHhOsfCaSuspabZKb5enOEwT_XOQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Sissinghurst Castle Garden, at Sissinghurst in the Weald of Kent in England, was created by Vita Sackville-West, poet and writer, and her husband Harold Nicolson, author and diplomat. It is among the most famous gardens in England and is designated Grade I on Historic England's register of historic parks and gardens. It was bought by Sackville-West in 1930, and over the next thirty years, working with, and later succeeded by, a series of notable head gardeners, she and Nicolson transformed a farmstead of \"squalor and slovenly disorder\" into one of the world's most influential gardens. Following Sackville-West's death in 1962, the estate was donated to the National Trust. It was ranked 42nd on the list of the Trust's most-visited sites in the 2021–2022 season, with over 150,000 visitors.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.6,
+        "tags": [
+          "photogenic",
+          "well-preserved",
+          "gardens",
+          "tudor",
+          "romantic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/kent/sissinghurst-castle-garden"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Formal_Gardens_at_Sissinghurst_Castle_-_geograph.org.uk_-_1387093.jpg/330px-Formal_Gardens_at_Sissinghurst_Castle_-_geograph.org.uk_-_1387093.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Oast House Archive",
+          "license": "CC BY-SA 2.0",
+          "description": "Formal Gardens at Sissinghurst Castle",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "Links are correct but images are not. repull images. ",
+        "enrichNotes": "Links are correct but images are not. repull images. "
+      },
+      "ts": 1779039831369
     }
   ]
 }
