@@ -116,6 +116,61 @@
         "enrichNotes": "update wikipedia link - https://en.wikipedia.org/wiki/Weobley_Castle,_Gower\n"
       },
       "ts": 1779051994789
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Oxwich Castle\n*Country:* wales\n*Region:* south wales\n*County:* Swansea\n*Type:* castle\n*Period:* 16th century\n*Coords:* 51.55463, -4.16791\n*Wikipedia:* https://en.wikipedia.org/wiki/Oxwich_Castle\n*Maps:* https://www.google.com/maps/search/Oxwich%20Castle/@51.554,-4.148,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Oxwich_Castle_4.jpg/330px-Oxwich_Castle_4.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nOxwich Castle is a Grade I listed castle which occupies a position on a wooded headland overlooking Oxwich Bay on the Gower Peninsula, Wales. Although it may occupy the site of an earlier fortification, it is a castle in name only as it is a grand Tudor fortified manor house built in courtyard style.\n\n_Listing 3 of 33_",
+      "listing": {
+        "name": "Oxwich Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Swansea",
+        "lat": 51.55463,
+        "lng": -4.16791,
+        "mapsLink": "https://www.google.com/maps/search/Oxwich%20Castle/@51.554,-4.148,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Oxwich_Castle_4.jpg/330px-Oxwich_Castle_4.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Oxwich Castle is a Grade I listed castle which occupies a position on a wooded headland overlooking Oxwich Bay on the Gower Peninsula, Wales. Although it may occupy the site of an earlier fortification, it is a castle in name only as it is a grand Tudor fortified manor house built in courtyard style.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4,
+        "tags": [
+          "hidden-gem",
+          "coastal",
+          "tudor",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Oxwich_Castle"
+          },
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/oxwich-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Oxwich_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Oxwich_Castle_4.jpg/330px-Oxwich_Castle_4.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Pam Brophy",
+          "license": "CC BY-SA 2.0",
+          "description": "Oxwich Castle in April",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Oxwich_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779052017299
     }
   ]
 }
