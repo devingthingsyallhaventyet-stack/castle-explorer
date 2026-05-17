@@ -1,0 +1,1675 @@
+[
+  {
+    "name": "Iona Abbey",
+    "rating": 4.7,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Glasgow Cathedral",
+    "rating": 4.7,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "Glasgow"
+  },
+  {
+    "name": "Bamburgh Castle",
+    "rating": 4.7,
+    "country": "england",
+    "region": "northern-england",
+    "county": "Northumberland"
+  },
+  {
+    "name": "Tower of London",
+    "rating": 4.7,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "London"
+  },
+  {
+    "name": "Windsor Castle",
+    "rating": 4.7,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Berkshire"
+  },
+  {
+    "name": "Canterbury Cathedral",
+    "rating": 4.7,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Kent"
+  },
+  {
+    "name": "Chatsworth House",
+    "rating": 4.7,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Derbyshire"
+  },
+  {
+    "name": "Ashford Castle",
+    "rating": 4.7,
+    "country": "ireland",
+    "region": "wild-atlantic-way",
+    "county": "County Galway"
+  },
+  {
+    "name": "Edinburgh Castle",
+    "rating": 4.6,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "Edinburgh"
+  },
+  {
+    "name": "Rosslyn Chapel",
+    "rating": 4.6,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "Midlothian"
+  },
+  {
+    "name": "St Giles' Cathedral",
+    "rating": 4.6,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "City of Edinburgh"
+  },
+  {
+    "name": "Dunnottar Castle",
+    "rating": 4.6,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Alnwick Castle",
+    "rating": 4.6,
+    "country": "england",
+    "region": "northern-england",
+    "county": "Northumberland"
+  },
+  {
+    "name": "Blenheim Palace",
+    "rating": 4.6,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Oxfordshire"
+  },
+  {
+    "name": "Castle Howard",
+    "rating": 4.6,
+    "country": "england",
+    "region": "yorkshire",
+    "county": "Yorkshire"
+  },
+  {
+    "name": "Pembroke Castle",
+    "rating": 4.6,
+    "country": "wales",
+    "region": "west-wales",
+    "county": "Pembrokeshire"
+  },
+  {
+    "name": "Glenveagh Castle",
+    "rating": 4.6,
+    "country": "ireland",
+    "region": "ulster-and-the-north",
+    "county": "County Donegal"
+  },
+  {
+    "name": "Inveraray Castle",
+    "rating": 4.5,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Kildalton Cross",
+    "rating": 4.5,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Palace of Holyroodhouse",
+    "rating": 4.5,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "City of Edinburgh"
+  },
+  {
+    "name": "Dunkeld Cathedral",
+    "rating": 4.5,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Eilean Donan Castle",
+    "rating": 4.5,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Dunrobin Castle",
+    "rating": 4.5,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Pluscarden Abbey",
+    "rating": 4.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Moray"
+  },
+  {
+    "name": "Leeds Castle",
+    "rating": 4.5,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Kent"
+  },
+  {
+    "name": "Arundel Castle",
+    "rating": 4.5,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "West Sussex"
+  },
+  {
+    "name": "Warwick Castle",
+    "rating": 4.5,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Warwickshire"
+  },
+  {
+    "name": "Carreg Cennen Castle",
+    "rating": 4.5,
+    "country": "wales",
+    "region": "west-wales",
+    "county": "Carmarthenshire"
+  },
+  {
+    "name": "Castletown House",
+    "rating": 4.5,
+    "country": "ireland",
+    "region": "dublin-and-the-pale",
+    "county": "County Kildare"
+  },
+  {
+    "name": "Kilkenny Castle",
+    "rating": 4.5,
+    "country": "ireland",
+    "region": "irelands-ancient-east",
+    "county": "County Kilkenny"
+  },
+  {
+    "name": "Castle Stalker",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Floors Castle",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Traquair House",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Craigmillar Castle",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "Edinburgh"
+  },
+  {
+    "name": "Linlithgow Palace",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "West Lothian"
+  },
+  {
+    "name": "Dunfermline Abbey",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Fife"
+  },
+  {
+    "name": "Paisley Abbey",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "Renfrewshire"
+  },
+  {
+    "name": "Cawdor Castle",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Castle Tioram",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Glamis Castle",
+    "rating": 4.4,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Angus"
+  },
+  {
+    "name": "Ludlow Castle",
+    "rating": 4.4,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Shropshire"
+  },
+  {
+    "name": "Skipton Castle",
+    "rating": 4.4,
+    "country": "england",
+    "region": "yorkshire",
+    "county": "Yorkshire"
+  },
+  {
+    "name": "Lismore Castle",
+    "rating": 4.4,
+    "country": "ireland",
+    "region": "irelands-ancient-east",
+    "county": "County Waterford"
+  },
+  {
+    "name": "Duart Castle",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Lews Castle",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Western Isles"
+  },
+  {
+    "name": "Barcaldine Castle",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Blair Castle",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Scone Palace",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Dunblane Cathedral",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "Stirling"
+  },
+  {
+    "name": "Castle of Mey",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Balmoral Castle",
+    "rating": 4.3,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Lancaster Castle",
+    "rating": 4.3,
+    "country": "england",
+    "region": "northern-england",
+    "county": "Lancashire"
+  },
+  {
+    "name": "Berkeley Castle",
+    "rating": 4.3,
+    "country": "england",
+    "region": "south-west",
+    "county": "Gloucestershire"
+  },
+  {
+    "name": "Bolton Castle",
+    "rating": 4.3,
+    "country": "england",
+    "region": "yorkshire",
+    "county": "Yorkshire"
+  },
+  {
+    "name": "Manorbier Castle",
+    "rating": 4.3,
+    "country": "wales",
+    "region": "west-wales",
+    "county": "Pembrokeshire"
+  },
+  {
+    "name": "Dublin Castle",
+    "rating": 4.3,
+    "country": "ireland",
+    "region": "dublin-and-the-pale",
+    "county": "County Dublin"
+  },
+  {
+    "name": "Slane Castle",
+    "rating": 4.3,
+    "country": "ireland",
+    "region": "irelands-ancient-east",
+    "county": "County Meath"
+  },
+  {
+    "name": "Dunguaire Castle",
+    "rating": 4.3,
+    "country": "ireland",
+    "region": "wild-atlantic-way",
+    "county": "County Galway"
+  },
+  {
+    "name": "Knappogue Castle",
+    "rating": 4.3,
+    "country": "ireland",
+    "region": "wild-atlantic-way",
+    "county": "County Clare"
+  },
+  {
+    "name": "Thirlestane Castle",
+    "rating": 4.2,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Borthwick Castle",
+    "rating": 4.2,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "Midlothian"
+  },
+  {
+    "name": "Dalhousie Castle",
+    "rating": 4.2,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "Midlothian"
+  },
+  {
+    "name": "Kinross House",
+    "rating": 4.2,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Callendar House",
+    "rating": 4.2,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "Falkirk"
+  },
+  {
+    "name": "Ardvreck Castle",
+    "rating": 4.2,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Castle Sinclair Girnigoe",
+    "rating": 4.2,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Rockingham Castle",
+    "rating": 4.2,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Northamptonshire"
+  },
+  {
+    "name": "Tamworth Castle",
+    "rating": 4.2,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Staffordshire"
+  },
+  {
+    "name": "Oystermouth Castle",
+    "rating": 4.2,
+    "country": "wales",
+    "region": "south-wales",
+    "county": "Swansea"
+  },
+  {
+    "name": "Carew Castle",
+    "rating": 4.2,
+    "country": "wales",
+    "region": "west-wales",
+    "county": "Pembrokeshire"
+  },
+  {
+    "name": "Gylen Castle",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Keills Chapel",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Fast Castle",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Lauriston Castle",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "Edinburgh"
+  },
+  {
+    "name": "Ackergill Tower",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Castle Leod",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Braemar Castle",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Findlater Castle",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Castle Kennedy",
+    "rating": 4.1,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Farnham Castle",
+    "rating": 4.1,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Surrey"
+  },
+  {
+    "name": "Nottingham Castle",
+    "rating": 4.1,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Nottinghamshire"
+  },
+  {
+    "name": "Jervaulx Abbey",
+    "rating": 4.1,
+    "country": "england",
+    "region": "yorkshire",
+    "county": "Yorkshire"
+  },
+  {
+    "name": "Pennard Castle",
+    "rating": 4.1,
+    "country": "wales",
+    "region": "south-wales",
+    "county": "Swansea"
+  },
+  {
+    "name": "Strata Florida Abbey",
+    "rating": 4.1,
+    "country": "wales",
+    "region": "west-wales",
+    "county": "Ceredigion"
+  },
+  {
+    "name": "Dunbrody Abbey",
+    "rating": 4.1,
+    "country": "ireland",
+    "region": "irelands-ancient-east",
+    "county": "County Wexford"
+  },
+  {
+    "name": "Dunsany Castle",
+    "rating": 4.1,
+    "country": "ireland",
+    "region": "irelands-ancient-east",
+    "county": "County Meath"
+  },
+  {
+    "name": "Neidpath Castle",
+    "rating": 4,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Coldingham Priory",
+    "rating": 4,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Lennoxlove House",
+    "rating": 4,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "East Lothian"
+  },
+  {
+    "name": "Arniston House",
+    "rating": 4,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "Midlothian"
+  },
+  {
+    "name": "Kinneil House",
+    "rating": 4,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "Falkirk"
+  },
+  {
+    "name": "Castle Stuart",
+    "rating": 4,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Kilravock Castle",
+    "rating": 4,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Comlongon Castle",
+    "rating": 4,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Portencross Castle",
+    "rating": 4,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "North Ayrshire"
+  },
+  {
+    "name": "Appleby Castle",
+    "rating": 4,
+    "country": "england",
+    "region": "northern-england",
+    "county": "Cumbria"
+  },
+  {
+    "name": "Hastings Castle",
+    "rating": 4,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "East Sussex"
+  },
+  {
+    "name": "Tutbury Castle",
+    "rating": 4,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Staffordshire"
+  },
+  {
+    "name": "Pontefract Castle",
+    "rating": 4,
+    "country": "england",
+    "region": "yorkshire",
+    "county": "Yorkshire"
+  },
+  {
+    "name": "Margam Abbey",
+    "rating": 4,
+    "country": "wales",
+    "region": "south-wales",
+    "county": "Neath Port Talbot"
+  },
+  {
+    "name": "Ballycarbery Castle",
+    "rating": 4,
+    "country": "ireland",
+    "region": "kingdom-of-munster",
+    "county": "County Kerry"
+  },
+  {
+    "name": "Ardchattan Priory",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Hailes Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "East Lothian"
+  },
+  {
+    "name": "Castle Campbell",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Clackmannanshire"
+  },
+  {
+    "name": "Ravenscraig Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Fife"
+  },
+  {
+    "name": "Castle Menzies",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Crookston Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "Glasgow"
+  },
+  {
+    "name": "Carbisdale Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Balfour Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Orkney"
+  },
+  {
+    "name": "Auchindoun Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Moray"
+  },
+  {
+    "name": "Birnie Kirk",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Moray"
+  },
+  {
+    "name": "Cardoness Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Dunure Castle",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "South Ayrshire"
+  },
+  {
+    "name": "Kilwinning Abbey",
+    "rating": 3.9,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "North Ayrshire"
+  },
+  {
+    "name": "Brough Castle",
+    "rating": 3.9,
+    "country": "england",
+    "region": "northern-england",
+    "county": "Cumbria"
+  },
+  {
+    "name": "Clitheroe Castle",
+    "rating": 3.9,
+    "country": "england",
+    "region": "northern-england",
+    "county": "Lancashire"
+  },
+  {
+    "name": "Donnington Castle",
+    "rating": 3.9,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Berkshire"
+  },
+  {
+    "name": "Totnes Castle",
+    "rating": 3.9,
+    "country": "england",
+    "region": "south-west",
+    "county": "Devon"
+  },
+  {
+    "name": "Montgomery Castle",
+    "rating": 3.9,
+    "country": "wales",
+    "region": "mid-wales-marches",
+    "county": "Powys"
+  },
+  {
+    "name": "Ewenny Priory",
+    "rating": 3.9,
+    "country": "wales",
+    "region": "south-wales",
+    "county": "Vale of Glamorgan"
+  },
+  {
+    "name": "Tarbert Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Dunyvaig Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Achanduin Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Ferniehirst Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Cadzow Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "South Lanarkshire"
+  },
+  {
+    "name": "Balloch Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "West Dunbartonshire"
+  },
+  {
+    "name": "Strome Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Noltland Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Orkney"
+  },
+  {
+    "name": "Scalloway Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Shetland"
+  },
+  {
+    "name": "Bernera Barracks",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Aboyne Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Craigston Castle",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Raemoir House",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Orchardton Tower",
+    "rating": 3.8,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Wigmore Castle",
+    "rating": 3.8,
+    "country": "england",
+    "region": "the-midlands",
+    "county": "Herefordshire"
+  },
+  {
+    "name": "Grosmont Castle",
+    "rating": 3.8,
+    "country": "wales",
+    "region": "south-wales",
+    "county": "Monmouthshire"
+  },
+  {
+    "name": "Llawhaden Castle",
+    "rating": 3.8,
+    "country": "wales",
+    "region": "west-wales",
+    "county": "Pembrokeshire"
+  },
+  {
+    "name": "Swords Castle",
+    "rating": 3.8,
+    "country": "ireland",
+    "region": "dublin-and-the-pale",
+    "county": "County Dublin"
+  },
+  {
+    "name": "Castle Coeffin",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Innes Chonnel Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Moy Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Greenknowe Tower",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Hume Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Dunbar Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "East Lothian"
+  },
+  {
+    "name": "Mugdock Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "East Dunbartonshire"
+  },
+  {
+    "name": "Tower of Hallbar",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "South Lanarkshire"
+  },
+  {
+    "name": "Cubbie Roo's Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Orkney"
+  },
+  {
+    "name": "Castle Roy",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Affleck Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Angus"
+  },
+  {
+    "name": "Fordyce Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Lochmaben Castle",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Amisfield Tower",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Repentance Tower",
+    "rating": 3.7,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Eye Castle",
+    "rating": 3.7,
+    "country": "england",
+    "region": "east-of-england",
+    "county": "Suffolk"
+  },
+  {
+    "name": "Penrith Castle",
+    "rating": 3.7,
+    "country": "england",
+    "region": "northern-england",
+    "county": "Cumbria"
+  },
+  {
+    "name": "Eynsford Castle",
+    "rating": 3.7,
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Kent"
+  },
+  {
+    "name": "Carrigogunnell Castle",
+    "rating": 3.7,
+    "country": "ireland",
+    "region": "kingdom-of-munster",
+    "county": "County Limerick"
+  },
+  {
+    "name": "Breachacha Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Cessford Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Cramond Tower",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "City of Edinburgh"
+  },
+  {
+    "name": "Mearns Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "East Renfrewshire"
+  },
+  {
+    "name": "Invergarry Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Muness Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Shetland"
+  },
+  {
+    "name": "Glenbuchat Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Boyne Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Airlie Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Angus"
+  },
+  {
+    "name": "Carsluith Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Morton Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Maybole Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "South Ayrshire"
+  },
+  {
+    "name": "Loch Doon Castle",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Ayrshire"
+  },
+  {
+    "name": "Alloway Auld Kirk",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Ayrshire"
+  },
+  {
+    "name": "Drumcoltran Tower",
+    "rating": 3.6,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Lea Castle",
+    "rating": 3.6,
+    "country": "ireland",
+    "region": "the-heartlands",
+    "county": "County Laois"
+  },
+  {
+    "name": "Aros Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Duntrune Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Drochil Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Aikwood Tower",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Duns Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Fatlips Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Roxburgh Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Liberton Tower",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "City of Edinburgh"
+  },
+  {
+    "name": "Burleigh Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Megginch Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Dunimarle Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Fife"
+  },
+  {
+    "name": "Rosyth Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Fife"
+  },
+  {
+    "name": "Dunbeath Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Castle Moil",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Rait Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Castle Grant",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Fairburn Tower",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Dufftown Clock Tower",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Moray"
+  },
+  {
+    "name": "Leslie Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Midmar Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Towie Barclay Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Balfluig Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Blairfindy Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Moray"
+  },
+  {
+    "name": "Druminnor Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Greenan Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "South Ayrshire"
+  },
+  {
+    "name": "Barholm Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Closeburn Castle",
+    "rating": 3.5,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Clonony Castle",
+    "rating": 3.5,
+    "country": "ireland",
+    "region": "the-heartlands",
+    "county": "County Offaly"
+  },
+  {
+    "name": "Dunoon Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Dryhope Tower",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Merchiston Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "City of Edinburgh"
+  },
+  {
+    "name": "Menstrie Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Clackmannanshire"
+  },
+  {
+    "name": "Finlarig Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perthshire"
+  },
+  {
+    "name": "Sauchie Tower",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Clackmannanshire"
+  },
+  {
+    "name": "Castle Levan",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "Inverclyde"
+  },
+  {
+    "name": "Skelbo Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Kinlochaline Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Redcastle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "highlands",
+    "county": "Highland"
+  },
+  {
+    "name": "Lickleyhead Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Fetteresso Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Gight Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Abergeldie Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Inchdrewer Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Dalquharran Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "South Ayrshire"
+  },
+  {
+    "name": "Sanquhar Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Cruggleton Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Buittle Castle",
+    "rating": 3.4,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Elibank Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "borders",
+    "county": "Scottish Borders"
+  },
+  {
+    "name": "Luffness Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "edinburgh-lothians",
+    "county": "East Lothian"
+  },
+  {
+    "name": "Garth Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perthshire"
+  },
+  {
+    "name": "Kinfauns Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Perth and Kinross"
+  },
+  {
+    "name": "Lennox Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "glasgow-stirling",
+    "county": "East Dunbartonshire"
+  },
+  {
+    "name": "Barra Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Cluny Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Inverugie Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Melgund Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Angus"
+  },
+  {
+    "name": "Powrie Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Dundee"
+  },
+  {
+    "name": "Torthorwald Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Rowallan Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Ayrshire"
+  },
+  {
+    "name": "Tibbers Castle",
+    "rating": 3.3,
+    "country": "scotland",
+    "region": "southwest-scotland",
+    "county": "Dumfries and Galloway"
+  },
+  {
+    "name": "Ardencaple Castle",
+    "rating": 3.2,
+    "country": "scotland",
+    "region": "argyll-western-isles",
+    "county": "Argyll and Bute"
+  },
+  {
+    "name": "Lochore Castle",
+    "rating": 3.2,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Fife"
+  },
+  {
+    "name": "Creich Castle",
+    "rating": 3.2,
+    "country": "scotland",
+    "region": "fife-perthshire",
+    "county": "Fife"
+  },
+  {
+    "name": "Udny Castle",
+    "rating": 3.2,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Corse Castle",
+    "rating": 3.2,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  },
+  {
+    "name": "Fedderate Castle",
+    "rating": 3.1,
+    "country": "scotland",
+    "region": "northeast-tayside",
+    "county": "Aberdeenshire"
+  }
+]

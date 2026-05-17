@@ -1,3 +1,25 @@
 {
-  "candidates": []
+  "candidates": [
+    {
+      "name": "Amhuinnsuidhe Castle",
+      "candidateUrl": "https://www.amhuinnsuidhe.com/",
+      "candidateLabel": "Amhuinnsuidhe Castle Official Site",
+      "reason": "Private castle website",
+      "status": "pending"
+    },
+    {
+      "name": "Kilpeck Church",
+      "candidateUrl": "https://kilpeckchurch.org.uk/",
+      "candidateLabel": "St Mary and St David Church Kilpeck",
+      "reason": "Local church website",
+      "status": "pending"
+    },
+    {
+      "name": "St David's Cathedral",
+      "candidateUrl": "https://www.stdavidscathedral.org.uk/",
+      "candidateLabel": "St David's Cathedral Official Site",
+      "reason": "Local cathedral website",
+      "status": "pending"
+    }
+  ]
 }
