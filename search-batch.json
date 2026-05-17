@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Dingwall Castle",
+    "country": "scotland",
+    "query": "Dingwall Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Edzell Castle",
+    "country": "scotland",
+    "query": "Edzell Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Craigievar Castle",
+    "country": "scotland",
+    "query": "Craigievar Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Castle Fraser",
+    "country": "scotland",
+    "query": "Castle Fraser historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Crathes Castle",
+    "country": "scotland",
+    "query": "Crathes Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Drum Castle",
+    "country": "scotland",
+    "query": "Drum Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Fyvie Castle",
+    "country": "scotland",
+    "query": "Fyvie Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Brodie Castle",
+    "country": "scotland",
+    "query": "Brodie Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Dudhope Castle",
+    "country": "scotland",
+    "query": "Dudhope Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "New Slains Castle",
+    "country": "scotland",
+    "query": "New Slains Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Esslemont Castle",
+    "country": "scotland",
+    "query": "Esslemont Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Inverquharity Castle",
+    "country": "scotland",
+    "query": "Inverquharity Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Inverallochy Castle",
+    "country": "scotland",
+    "query": "Inverallochy Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Kinnaird Head Castle",
+    "country": "scotland",
+    "query": "Kinnaird Head Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Balquhain Castle",
+    "country": "scotland",
+    "query": "Balquhain Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Hallforest Castle",
+    "country": "scotland",
+    "query": "Hallforest Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  },
+  {
+    "name": "Finavon Castle",
+    "country": "scotland",
+    "query": "Finavon Castle historicenvironment.scot OR trove.scot OR canmore.org.uk"
+  }
+]

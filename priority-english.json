@@ -1,0 +1,500 @@
+[
+  {
+    "name": "Cartmel Priory",
+    "country": "england",
+    "region": "northern-england",
+    "county": "Cumbria",
+    "lat": 54.20111111,
+    "lng": -2.95222222,
+    "mapsLink": "https://www.google.com/maps/search/Cartmel%20Priory/@54.2003,-2.9517,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZM9Qe3MCcm2B2H_KwuPrbboFN8VSzF04Lv5UAze36IcuDRD1clFtX7_qCH_sSjycwTFOyvvy29DlUFhK6hiImET3ZGtW4bngG3kadlNT2e5K77Q2dTd_Vf9f0dtKihTiGy1cyuqhvbWE9sdRsAEakfhPQ=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Cartmel Priory church serves as the parish church of Cartmel, Cumbria, England.",
+    "type": "abbey",
+    "period": "12th century",
+    "rating": 4.6,
+    "tags": [
+      "well-preserved",
+      "atmospheric",
+      "medieval",
+      "free-entry",
+      "tearoom-cafe"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cartmel_Priory"
+      },
+      {
+        "name": "Cartmel Priory",
+        "url": "http://cartmelpriory.org.uk/"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Cartmel_Priory",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cartmel_Priory%2C_geograph.jpg/330px-Cartmel_Priory%2C_geograph.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Michael Graham",
+      "license": "CC BY-SA 2.0",
+      "description": "Cartmel Priory is a priory founded in 1190 by William Marshal, later 2nd Earl of Pembroke for the Augustinian Canons and dedicated to Saint Mary the Virgin and Saint Michael.",
+      "credit": "Geograph project",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
+  },
+  {
+    "name": "Cragside House",
+    "country": "england",
+    "region": "northern-england",
+    "county": "Northumberland",
+    "lat": 55.3136,
+    "lng": -1.8853,
+    "mapsLink": "https://maps.app.goo.gl/DMhPUFuY3wXWT2sa9",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cragside3.jpg/330px-Cragside3.jpg",
+    "imgSource": "",
+    "gallery": [],
+    "desc": "Cragside is a Tudor Revival country house near the town of Rothbury in Northumberland, England. Dating to the Victorian era, it was the home of William Armstrong, 1st Baron Armstrong, founder of the Armstrong Whitworth armaments firm. An industrial magnate, scientist, philanthropist and inventor of the hydraulic crane and the Armstrong gun, Armstrong also displayed his inventiveness in the domestic sphere, making Cragside the first house in the world to be lit using hydroelectric power. The estate was technologically advanced: the architect of the house, Richard Norman Shaw, wrote that it was equipped with \"wonderful hydraulic machines that do all sorts of things\". In the grounds, Armstrong built dams and lakes to power a sawmill, a water-powered laundry, early versions of a dishwasher and a dumb waiter, a hydraulic lift and a hydroelectric rotisserie. In 1887, Armstrong was raised to the peerage, the first engineer or scientist to be ennobled, and became Baron Armstrong of Cragside.",
+    "type": "castle",
+    "period": "19th century",
+    "rating": 4.6,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "victorian",
+      "woodland",
+      "gardens",
+      "hilltop",
+      "atmospheric",
+      "guided-tours",
+      "tearoom-cafe",
+      "gift-shop"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cragside"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/north-east/cragside"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Cragside",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cragside3.jpg/330px-Cragside3.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": "local",
+    "reviewReasons": [
+      "flagged-during-image-review"
+    ],
+    "exists": "unverified",
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cragside",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
+  },
+  {
+    "name": "Sissinghurst Castle",
+    "country": "england",
+    "region": "south-east-london",
+    "county": "Kent",
+    "lat": 51.1157,
+    "lng": 0.5815,
+    "mapsLink": "https://www.google.com/maps/search/Sissinghurst%20Castle/@51.1158,0.5828,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMkKmFHpN5h6poxAqUI2CbSDYib1k4PBslpYEyX1fawDyI1IKcsv72oHhc2KeK9kg8REh8gZYDGMwBYd_YCfzTK7ck80c8AwFpUu5vLoaG3ri1VD_LZEm8DzEq0LyAfkOZ276ziIuEoBd5k=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [
+      "https://lh3.googleusercontent.com/place-photos/AJRVUZPTnvKJhImSo8K70NKmsrKkfG0QzAbMg0yLLB04_CRxzb1S16CnSd-rCNbkQsFyUs2Y9Re0EovklLjx16wch9fLGQZHGvTviRfMCtgzvJRANSO2trmXt_Hq07ygXVu3Ju3lrWcBcf9Q36WYvic=s4800-w1200",
+      "https://lh3.googleusercontent.com/place-photos/AJRVUZMXOmxIpDtAyV-G__q48KPhIV3N70BtwkCYzktfMqleTXHOVnwTMODonnH-NUwhzx1kAgBFIzQsEXXE4ytmT14TcUum268L8LeGlUQSpXmwKgmTJI-LoRF9FqSITfJRllDI1RuCTd7e0fHEpg=s4800-w1200"
+    ],
+    "desc": "Sissinghurst Castle Garden, at Sissinghurst in the Weald of Kent in England, was created by Vita Sackville-West, poet and writer, and her husband Harold Nicolson, author and diplomat. It is among the most famous gardens in England and is designated Grade I on Historic England's register of historic parks and gardens. It was bought by Sackville-West in 1930, and over the next thirty years, working with, and later succeeded by, a series of notable head gardeners, she and Nicolson transformed a farmstead of \"squalor and slovenly disorder\" into one of the world's most influential gardens. Following Sackville-West's death in 1962, the estate was donated to the National Trust. It was ranked 42nd on the list of the Trust's most-visited sites in the 2021–2022 season, with over 150,000 visitors.",
+    "type": "castle",
+    "period": "16th century",
+    "rating": 4.6,
+    "tags": [
+      "photogenic",
+      "well-preserved",
+      "gardens",
+      "tudor",
+      "romantic"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/kent/sissinghurst-castle-garden"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Sissinghurst_Castle_Garden",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Formal_Gardens_at_Sissinghurst_Castle_-_geograph.org.uk_-_1387093.jpg/330px-Formal_Gardens_at_Sissinghurst_Castle_-_geograph.org.uk_-_1387093.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": "David Savile",
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNotes": "Images need repull"
+  },
+  {
+    "name": "Montacute House",
+    "country": "england",
+    "region": "south-west",
+    "county": "Somerset",
+    "lat": 50.9525,
+    "lng": -2.71611111,
+    "mapsLink": "https://www.google.com/maps/search/Montacute%20House/@50.9483,-2.7167,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPVQnCsJKxprngVdMo-u_GP68KkisCKMxFymA-ewykrrDuFizZEeu3aoGZG20c66t69u6LkPS0Qk-c4uU_9HSIGH3Sy2-ZCTP0uoiupcOKvXmlq4nmFmCIi8MN5X1IVE1aBh18Ukpkz6dWOsls=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Montacute House is a late Elizabethan mansion in Montacute, South Somerset, England. An example of English architecture created during a period that was moving from the medieval Gothic to the more classically-inspired Renaissance style, Montacute is one of the few prodigy houses to have survived almost unchanged from the Elizabethan era. The house has been designated as a Grade I listed building, and its gardens are also listed at the highest grade on the Register of Historic Parks and Gardens of Special Historic Interest in England.",
+    "type": "castle",
+    "period": "16th century",
+    "rating": 4.6,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "gardens",
+      "atmospheric",
+      "filming-location",
+      "guided-tours",
+      "tearoom-cafe",
+      "gift-shop",
+      "museum"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Montacute_House"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Montacute_House",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Montacute_House_East_Front_-_geograph.org.uk_-_851610.jpg/330px-Montacute_House_East_Front_-_geograph.org.uk_-_851610.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Mike Searle",
+      "license": "CC BY-SA 2.0",
+      "description": "Montacute House East Front It was about the time of the Spanish Armada in 1588 that Sir Edward Phelips, a successful lawyer and Speaker of the House of Commons, commissioned the building of Montacute House. It was probably local builder William Arnold who was given the task of creating Sir Edward's new home in the Somerset countryside. Arnold used local Ham Hill stone to create a symmetrical 'H' plan building owing much to the classical detail of the Renaissance style of architecture. There is a carved date of 1601 over the east doorway, probably denoting the year the house was completed. \nThe Phelips family reigned supreme at Montacute for over three centuries, until the agricultural depression of the late C19 saw the last Phelips leave in 1911, and most of the house contents sold. The house was acquired by the National Trust in 1931. Montacute House is Grade I Listed.",
+      "credit": "From geograph.org.uk",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
+  },
+  {
+    "name": "Lanhydrock House",
+    "country": "england",
+    "region": "south-west",
+    "county": "Cornwall",
+    "lat": 50.4217,
+    "lng": -4.7433,
+    "mapsLink": "https://maps.app.goo.gl/DUHvftUEAXFh8PwF9",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN_nrRRb8Btb4_lPEFg89mNe4ENterNaxp2QTNMtPShMHTArkho0yPyGA6pn1GIZoXvssokwvNTK1IPgp1R2q0XkG1WSnqx2LHiREZwOl0EHGFt8w2wlE0X7FPffcZczIYs8hca5VPo2e0OIsk=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Lanhydrock House, commonly known simply as Lanhydrock, is a country house and estate in the parish of Lanhydrock, Cornwall, England.",
+    "type": "castle",
+    "period": "17th-19th century",
+    "rating": 4.6,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "victorian",
+      "gardens",
+      "woodland",
+      "guided-tours",
+      "tearoom-cafe",
+      "gift-shop",
+      "kid-friendly"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lanhydrock"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/cornwall/lanhydrock"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Lanhydrock_House",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lanhydrock_04.jpg/330px-Lanhydrock_04.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Olaf Tausch",
+      "license": "CC BY 3.0",
+      "description": "Lanhydrock, Herrenhaus nahe Bodmin in Cornwall, England",
+      "credit": "Own work",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
+  },
+  {
+    "name": "Chesters Roman Fort",
+    "country": "england",
+    "region": "northern-england",
+    "county": "Northumberland",
+    "lat": 55.026,
+    "lng": -2.139,
+    "mapsLink": "https://www.google.com/maps/search/Chesters%20Roman%20Fort/@55.0283,-2.135,15z",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/330px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg",
+    "imgSource": "CDN",
+    "gallery": [],
+    "desc": "Cilurnum or Cilurvum was an ancient Roman fort on Hadrian's Wall at Chesters near the village of Walwick, Northumberland. It is also known as Walwick Chesters to distinguish it from Great Chesters fort and Halton Chesters.",
+    "type": "castle",
+    "period": "2nd century AD",
+    "rating": 4.5,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "riverside",
+      "museum",
+      "prehistoric",
+      "guided-tours"
+    ],
+    "source": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/chesters-roman-fort-and-museum-hadrians-wall/"
+      },
+      {
+        "name": "Visit Northumberland",
+        "url": "https://www.visitnorthumberland.com/explore/things-to-do/attractions/historic-sites/chesters-roman-fort"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Cilurnum",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/330px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Carole Raddato from FRANKFURT, Germany",
+      "license": "CC BY-SA 2.0",
+      "description": "The Commanding Officer's House (praetorium), AD 150-400, Chesters Roman Fort (Cilurnum), Hadrian's Wall",
+      "credit": "The Commanding Officer's House (praetorium), AD 150-400, Chesters Roman Fort (Cilurnum), Hadrian's Wall",
+      "source": "Wikimedia Commons"
+    },
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
+  },
+  {
+    "name": "Orford Castle",
+    "country": "england",
+    "region": "east-of-england",
+    "county": "Suffolk",
+    "lat": 52.0936,
+    "lng": 1.53,
+    "mapsLink": "https://www.google.com/maps/search/Orford%20Castle/@52.0949,1.5351,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPZLGBD7Be-Mq_LqyZnsvnt6f_pDdpfEyUvKUVBAqPcKVzBFy5ldNZ3U3PbiTwyWQu6q3aOpGqWtqqsaG-HwwxvzQMRLHe7MxKqvSuEpDf6upkvp80DXCsfo62wQYo8Nn--1Jfx1-v-hL2ftVk=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Orford Castle is a castle in Orford in the English county of Suffolk, 12 miles (19 km) northeast of Ipswich, with views over Orford Ness. It was built between 1165 and 1173 by Henry II of England to consolidate royal power in the region. The well-preserved keep, described by historian R. Allen Brown as \"one of the most remarkable keeps in England\", is of a unique design and probably based on Byzantine architecture. The keep stands within the earth-bank remains of the castle's outer fortifications.",
+    "type": "castle",
+    "period": "12th century",
+    "rating": 4.3,
+    "tags": [
+      "well-preserved",
+      "hidden-gem"
+    ],
+    "source": "",
+    "wiki": "https://en.wikipedia.org/wiki/Orford_Castle",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Orford_Castle_Keep.jpg/330px-Orford_Castle_Keep.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Keith Roper",
+      "license": "CC BY 2.0",
+      "description": "Keep of Orford Castle",
+      "credit": "https://www.flickr.com/photos/keithroper/3966989780/sizes/l/in/photostream/",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
+  },
+  {
+    "name": "Hardknott Roman Fort",
+    "country": "england",
+    "region": "northern-england",
+    "county": "Cumbria",
+    "lat": 54.40277778,
+    "lng": -3.20527778,
+    "mapsLink": "https://www.google.com/maps/search/Hardknott%20Roman%20Fort/@54.4017,-3.2017,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPFiWhSPF9x2FLXMFZ2sy_7hkekjU2GxsuL1_sdly4GtY0Hhv_1Uqq9xW4uL2OTigjChOYWWLH3gBGuWfKWHvnr0Rr8YnIUNy_ESA2A3ItHpxwbTes6q5INujlHNnkTIKUr0rKdBn2huvhqwg4=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Hardknott Roman Fort is an archeological site, the remains of the Roman fort Mediobogdum, located on the western side of the challenging Hardknott Pass in the English Lake District. The fort was built between 120 and 138 on a rocky spur, and was initially garrisoned by a detachment of the Cohors IV Delmatarum from the Dalmatian coast. It was abandoned around a decade later, then reoccupied circa 200 and remained in use for much of the next two centuries.",
+    "type": "castle",
+    "period": "Roman (2nd century)",
+    "rating": 4.5,
+    "tags": [
+      "atmospheric",
+      "remote",
+      "hilltop",
+      "free-entry",
+      "prehistoric",
+      "dog-friendly",
+      "photogenic"
+    ],
+    "source": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/hardknott-roman-fort/"
+      },
+      {
+        "name": "English Heritage History",
+        "url": "https://www.english-heritage.org.uk/visit/places/hardknott-roman-fort/history/"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Hardknott_Roman_Fort",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hardknott_Roman_Fort.jpg/330px-Hardknott_Roman_Fort.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Markas1370",
+      "license": "CC BY-SA 4.0",
+      "description": "Hardknott Roman fort, bath-house, parade ground and tribunal, 4 Roman roads, Roman quarries and 3 cairns\n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Hardknott Roman Fort (Q1584994) with data related to this item.",
+      "credit": "Own work",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
+  },
+  {
+    "name": "Thetford Priory",
+    "country": "england",
+    "region": "east-of-england",
+    "county": "Norfolk",
+    "lat": 52.4165,
+    "lng": 0.742382,
+    "mapsLink": "https://www.google.com/maps/search/Thetford%20Priory/@52.4156,0.7447,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNlQXD_GaYKs8Ztu8HapkNB_V_9di4xBCjGLyjACI0vUatSjzjiwOBrJww5JSBpp0LNy-7fDSEznYpH7AdXdzZJiHZDf87kCiM4SQbjgR4uxwLqlAyQ0hrQ3wucm4JTpjYDSewuBDTdAAIhoV8=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Thetford Priory is a Cluniac monastic house in Thetford, Norfolk, England. Founded in 1103 by Roger Bigod of Norfolk, Thetford was one of the most important monasteries of East Anglia.",
+    "type": "abbey",
+    "period": "12th-16th century",
+    "rating": 3.9,
+    "tags": [
+      "ruins-romantic",
+      "medieval",
+      "atmospheric",
+      "free-entry",
+      "dog-friendly"
+    ],
+    "source": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/thetford-priory/"
+      },
+      {
+        "name": "English Heritage History",
+        "url": "https://www.english-heritage.org.uk/visit/places/thetford-priory/history/"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Thetford_Priory",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Cmglee_Thetford_Priory.jpg/330px-Cmglee_Thetford_Priory.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "",
+      "license": "CC BY-SA 4.0",
+      "description": "",
+      "credit": "",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
+  },
+  {
+    "name": "Binham Priory",
+    "country": "england",
+    "region": "east-of-england",
+    "county": "Norfolk",
+    "lat": 52.91997,
+    "lng": 0.94523,
+    "mapsLink": "https://www.google.com/maps/search/Binham%20Priory/@52.8928,0.9694,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPWEOCO2ZvFuSZzEC3eYuPBfQ_cK43f3AY2zUkoaRSZa9iEcsT6_aIv1i17Zb3LPlWqLmzMb_HO48FTXuzKJxGXaBheEKxnHY9wuGiMPi-Cl08lFJkuJO_2WQ8MtmOVQg9GK2RtHau6Oa2u=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "St Mary's Priory, Binham, or Binham Priory, is a ruined Benedictine priory located in the village of Binham in the English county of Norfolk.",
+    "type": "abbey",
+    "period": "11th-15th century",
+    "rating": 4,
+    "tags": [
+      "medieval",
+      "norman",
+      "atmospheric",
+      "ruins-romantic",
+      "free-entry"
+    ],
+    "source": [
+      {
+        "name": "English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/binham-priory/"
+      },
+      {
+        "name": "English Heritage History",
+        "url": "https://www.english-heritage.org.uk/visit/places/binham-priory/history/"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/counties/norfolk/abbeys/Binham.htm"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Binham_Priory",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/BinhamPriory.JPG/330px-BinhamPriory.JPG",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "JohnArmagh",
+      "license": "CC BY-SA 3.0",
+      "description": "Photograph of Binham Priory, Norfolk, England",
+      "credit": "Own work",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
+  }
+]

@@ -1,0 +1,497 @@
+[
+  {
+    "name": "Erddig Hall",
+    "country": "wales",
+    "region": "snowdonia-north",
+    "county": "Wrexham",
+    "lat": 53.02722222,
+    "lng": -3.00638889,
+    "mapsLink": "https://www.google.com/maps/search/Erddig%20Hall/@53.0361,-3.0083,15z",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg/330px-The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg",
+    "imgSource": "CDN",
+    "gallery": [],
+    "desc": "Erddig is a country house and estate in the community of Marchwiel, approximately 2 miles (3.2 km) south of Wrexham, Wales. It is centred on a country house which dates principally from between 1684 and 1687, when the central block was built by Joshua Edisbury, and the 1720s, when the flanking wings were added by its second owner, John Meller. Erddig was inherited by Simon Yorke in 1733, and remained in the Yorke family until it was given to the National Trust by Philip Scott Yorke in 1973.",
+    "type": "historic-house",
+    "period": "17th century",
+    "rating": 4.6,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "gardens",
+      "guided-tours",
+      "tearoom-cafe",
+      "gift-shop",
+      "museum",
+      "kid-friendly"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Erddig"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/wales/erddig"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Erddig",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg/330px-The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Glen Bowman from Newcastle, England",
+      "license": "CC BY 2.0",
+      "description": "The Mansion House across the pond - Erddig, Wrexham, North Wales",
+      "credit": "The Mansion House across the pond - Erddig, Wrexham, North Wales",
+      "source": "Wikimedia Commons"
+    },
+    "reviewReasons": [
+      "flagged-during-image-review"
+    ],
+    "exists": "unverified",
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Erddig",
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
+  },
+  {
+    "name": "Powis Castle",
+    "country": "wales",
+    "region": "mid-wales-marches",
+    "county": "Powys",
+    "lat": 52.65,
+    "lng": -3.16055556,
+    "mapsLink": "https://www.google.com/maps/search/Powis%20Castle/@52.661,-3.1669,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP2QAMvXI4VBEMNoJdm10KzRJ1INR9pdA-oXiScPl2Jq3idQaWjWNpxvDXK6aIQUUWD7fSc4DIrqU5IzNClya9jdr6TGWfVXzoSUNxqCnxeXwbNzZe1faOJpqZorILnTvrrfyww2pp-KwrC=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Powis Castle is a medieval castle, fortress and grand country house near Welshpool, in Powys, Wales. The seat of the Herbert family, earls of Powis, the castle is known for its formal gardens and for its interiors, the former having been described as \"the most important\", and the latter \"the most magnificent\", in the country. The castle and gardens are under the care of the National Trust. Powis Castle is a Grade I listed building, while its gardens have their own Grade I listing on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+    "type": "castle",
+    "period": "13th century",
+    "rating": 4.5,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "kid-friendly"
+    ],
+    "source": "",
+    "wiki": "https://en.wikipedia.org/wiki/Powis_Castle",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Powis_Castle_2016_116_%28cropped%29.jpg/330px-Powis_Castle_2016_116_%28cropped%29.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Photograph by Mike Peel (www.mikepeel.net).",
+      "license": "CC BY-SA 4.0",
+      "description": "This is a photo of listed building number",
+      "credit": "Own work",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Harlech Castle",
+    "country": "wales",
+    "region": "snowdonia-north",
+    "county": "Gwynedd",
+    "lat": 52.86,
+    "lng": -4.11,
+    "mapsLink": "https://www.google.com/maps/search/Harlech%20Castle/@52.8602,-4.1094,15z",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/330px-Harlech_Castle_-_Cadw_photograph.jpg",
+    "imgSource": "wikipedia",
+    "gallery": [],
+    "desc": "Harlech Castle in Harlech, Gwynedd, Wales, is a Grade I listed medieval fortification built onto a rocky knoll close to the Irish Sea. It was built by Edward I during his invasion of Wales between 1282 and 1289 at the relatively modest cost of £8,190. Over the next few centuries, the castle played an important part in several wars, withstanding the siege of Madog ap Llywelyn between 1294 and 1295, but falling to Prince Owain Glyndŵr in 1404. It then became Glyndŵr's residence and military headquarters for the remainder of the uprising until being recaptured by English forces in 1409. During the 15th-century Wars of the Roses, Harlech was held by the Lancastrians for seven years, before Yorkist troops forced its surrender in 1468, a siege memorialised in the song \"Men of Harlech\". Following the outbreak of the English Civil War in 1642, the castle was held by forces loyal to Charles I, holding out until 1647 when it became the last fortification to surrender to the Parliamentary armies. In the 21st century the ruined castle is managed by Cadw, the Welsh Government's historic environment service, as a tourist attraction.",
+    "type": "castle",
+    "period": "13th century",
+    "rating": 4.5,
+    "tags": [
+      "dramatic-ruin",
+      "photogenic"
+    ],
+    "source": "",
+    "wiki": "https://en.wikipedia.org/wiki/Harlech_Castle",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/330px-Harlech_Castle_-_Cadw_photograph.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Cadw",
+      "license": "OGL v1.0",
+      "description": "Harlech Castle",
+      "credit": "http://cadw.wales.gov.uk/daysout/harlechcastle/?lang=en",
+      "source": "Wikimedia Commons"
+    },
+    "reviewReasons": [
+      "flagged-during-image-review"
+    ],
+    "exists": "unverified",
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Harlech_Castle",
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Valle Crucis Abbey",
+    "country": "wales",
+    "region": "snowdonia-north",
+    "county": "Denbighshire",
+    "lat": 52.98918,
+    "lng": -3.187142,
+    "mapsLink": "https://www.google.com/maps/search/Valle%20Crucis%20Abbey/@52.9838,-3.1767,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMaxpTXwxAGBvGUH2fhakOS1vIHeQ3tb0cdD5dufF0x0Ee8g9CBP0Aw8F0PFwoitz0DNQvq5TjCFvdem5Q6wzW7Bg7RDr16_RJtPEi3bVvf_7W3RZ11HB3mhNaPxnCNpryI3hUzklAmWJRElA=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Valle Crucis Abbey is a Cistercian abbey located in Llantysilio in Denbighshire, north Wales. More formally the Abbey Church of the Blessed Virgin Mary, Valle Crucis it is known in Welsh both as Abaty Glyn Egwestl and Abaty Glyn y Groes.\nThe abbey was built in 1201 by Madog ap Gruffydd Maelor, Prince of Powys Fadog. Valle Crucis was dissolved in 1537 during the dissolution of the monasteries, and subsequently fell into serious disrepair. The building is now a ruin, though large parts of the original structure still survive. Valle Crucis Abbey is now under the care of Cadw. The abbey received 5,690 visitors in 2018.",
+    "type": "abbey",
+    "period": "13th century",
+    "rating": 4.5,
+    "tags": [
+      "romantic-ruin",
+      "photogenic",
+      "hidden-gem"
+    ],
+    "source": "",
+    "wiki": "https://en.wikipedia.org/wiki/Valle_Crucis_Abbey",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg/330px-Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Llywelyn2000",
+      "license": "CC BY-SA 4.0",
+      "description": "National Trust properties in Wales‎: the Velvet Hill (Mynydd Felfed), Llantysilio, Llangollen, Cymru (Wales).",
+      "credit": "Own work",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Bodysgallen Hall",
+    "country": "wales",
+    "region": "snowdonia-north",
+    "county": "Conwy",
+    "lat": 53.296625,
+    "lng": -3.80279167,
+    "mapsLink": "https://www.google.com/maps/search/Bodysgallen%20Hall/@53.275,-3.8167,15z",
+    "image": "https://lh3.googleusercontent.com/places/ANXAkqGJzL9W__aKN59v6VMV9p96SXqoARqwa5RnYOYITsA5_GEIVdnCEIWWxXB8yY8TBEuP8nzqddCg0yr1Jhy_d_QTqDDTXFSo8sw=s4800-w1000",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Bodysgallen Hall is a manor house in Conwy county borough, north Wales, near the village of Llanrhos. Since 2008 the house has been owned by the National Trust. It is a Grade I listed building, currently used as a hotel. This listed historical building derives primarily from the 17th century, and has several later additions. Bodysgallen was constructed as a tower house in the Middle Ages to serve as defensive support for nearby Conwy Castle. According to tradition, the site of Bodysgallen was the 5th century AD stronghold of Cadwallon Lawhir, King of Gwynedd, who had wide-ranging exploits as far as Northumberland.",
+    "type": "historic-house",
+    "period": "13th-17th century",
+    "rating": 4.5,
+    "tags": [
+      "well-preserved",
+      "medieval",
+      "gardens",
+      "photogenic",
+      "romantic",
+      "tearoom-cafe",
+      "wedding-venue"
+    ],
+    "source": [
+      {
+        "name": "Bodysgallen Hall",
+        "url": "https://www.bodysgallen.com/hotel-gardens/history/"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bodysgallen_Hall"
+      },
+      {
+        "name": "Britain Express",
+        "url": "https://www.britainexpress.com/attractions.htm?attraction=695"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Bodysgallen_Hall",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bodysgallenhallcmichaelhoganlowres.jpg/330px-Bodysgallenhallcmichaelhoganlowres.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "C Michael Hogan;",
+      "license": "CC BY-SA 2.5",
+      "description": "Bodysgallen Hall from gardens below",
+      "credit": "Own work",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Penrhyn Castle",
+    "country": "wales",
+    "region": "snowdonia-north",
+    "county": "Gwynedd",
+    "lat": 53.2259,
+    "lng": -4.0946,
+    "mapsLink": "https://www.google.com/maps/search/Penrhyn%20Castle/@53.2278,-4.0917,15z",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZO8UFB3nNZpT2dWbHVbpeLb7D5iZ-dQUWlIpktS3EGQT-io_aIVbaD4okdvzU6X85FPdt9sY8qGrCvoSqFBrpV1jTBYT1DXOflTZkpN2GPhd_evJOnkjqnCT_nvoG8n9v0BwBJXK_y2Arbw7w=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Penrhyn Castle is a country house in Llandygai, Bangor, Gwynedd, North Wales, constructed in the style of a Norman castle. The Penrhyn Estate was founded by Ednyfed Fychan. In the 15th century his descendant Gwilym ap Griffith built a fortified manor house on the site.",
+    "type": "castle",
+    "period": "19th century",
+    "rating": 4.5,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "norman",
+      "victorian",
+      "museum",
+      "gardens",
+      "guided-tours",
+      "tearoom-cafe",
+      "gift-shop",
+      "kid-friendly"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Penrhyn_Castle"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/wales/penrhyn-castle-and-garden"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Penrhyn_Castle",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Sunset_on_Penrhyn_Castle._%2814500044677%29.jpg/330px-Sunset_on_Penrhyn_Castle._%2814500044677%29.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Hefin Owen from Wales",
+      "license": "CC BY-SA 2.0",
+      "description": "History\nThe present building was created between about 1822 and 1837 to designs by Thomas Hopper,[1] who expanded and transformed the building beyond recognition. However a spiral staircase from the original property can still be seen, and a vaulted basement and other masonry were incorporated into the new structure. Hopper's client was George Hay Dawkins-Pennant, who had inherited the Penrhyn estate on the death of his second cousin, Richard Pennant, who had made his fortune from Jamaican sugar and local slate quarries. The eldest of George's two daughters, Juliana, married Grenadier Guard, Edward Gordon Douglas, who, on inheriting the estate on George's death in 1845, adopted the hyphenated surname of Douglas-Pennant.\nPenrhyn is one of the most admired of the numerous mock castles built in the United Kingdom in the 19th century; Christopher Hussey called it, \"the outstanding instance of Norman revival.\" [2] The castle is a picturesque composition that stretches over 600 feet from a tall donjon containing family rooms, through the main block built around the earlier house, to the service wing and the stables.\nPenrhyn Castle circa 1880.\nPenrhyn Castle between 1890 and 1900\nIt is built in a sombre style which allows it to possess something of the medieval fortress air despite the ground-level drawing room windows. Hopper designed all the principal interiors in a rich but restrained Norman style, with much fine plasterwork and wood and stone carving. The castle also has some specially designed Norman style furniture, including a one ton slate bed made for Queen Victoria when she visited in 1859.\nHugh Napier Douglas-Pennant, 4th Lord Penrhyn, died in 1949, and the castle and estate passed to his niece, Lady Janet Pelham, who, on inheritance, adopted the surname of Douglas-Pennant. In 1951 the castle and 40,000 acres (160 km²) of land were accepted by the Treasury in lieu of death duties from Lady Janet. It now belongs to the National Trust and is open to the public.\nPenrhyn's attractions include a formal walled garden, extensive informal gardens, an industrial railway museum, a model railway museum and an adventure playground. Hanging on its walls is one of the finest art collections in North Wales, with works by artists such as Rembrandt - (Catrina Hooghsaet, valued at up to £40m, the Dutch Culture Ministry tried to buy the painting for Amsterdam’s Rijksmuseum in 2007 but couldn’t meet the asking price)- , Canaletto, Richard Wilson, Carl Haag, Perino del Vaga and Palma Vecchio. The family began collecting paintings from the early years of the 19th century; this significant collection was catalogued by the 2nd Lord Penrhyn's daughter Alice Douglas-Pennant. The castle has views over the Snowdonia mountains. In 2008/09 it was the National Trust's thirteenth most visited paid-entry property, with 156,575 visitors.\nCost\n\nThe cost of the construction of this vast 'castle' is disputed, and very difficult to work out accurately as much of the timber came from the family's own forestry, and much of the labour was acquired from within their own workforce at the slate quarry. It has been estimated that it cost the Pennant Family about £150,000. This is the approximate equivalent to about £49,500,000.",
+      "credit": "Sunset on Penrhyn Castle.",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Plas Newydd",
+    "country": "wales",
+    "region": "snowdonia-north",
+    "county": "Anglesey",
+    "lat": 53.175,
+    "lng": -4.2167,
+    "mapsLink": "https://www.google.com/maps/search/Plas%20Newydd/@53.175,-4.2167,15z",
+    "image": "https://img.castlecore.uk/plas-newydd.jpg",
+    "imgSource": "CDN",
+    "gallery": [],
+    "desc": "Plas Newydd may refer to:Plas Newydd (Anglesey), a historic house and garden on Anglesey, Wales, United Kingdom\nPlas Newydd, Llangollen, a historic house and garden in Llangollen, Denbighshire, Wales, United Kingdom\nPlas Newydd, Usk, a historic house in Usk, Monmouthshire, Wales",
+    "type": "historic-house",
+    "period": "18th century",
+    "rating": 4.5,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "coastal",
+      "gardens",
+      "museum",
+      "guided-tours",
+      "gift-shop"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Plas_Newydd_(Anglesey)"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/wales/plas-newydd-house-and-garden/history-of-plas-newydd"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Plas_Newydd",
+    "reviewStatus": "flagged",
+    "reviewReasons": [
+      "needs-review"
+    ],
+    "exists": "unverified",
+    "hasWikipedia": "yes",
+    "hasGooglePlaces": "unknown",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Plas_Newydd_(Anglesey)",
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Pentre Ifan",
+    "country": "wales",
+    "region": "west-wales",
+    "county": "Pembrokeshire",
+    "lat": 51.999,
+    "lng": -4.77,
+    "mapsLink": "https://maps.app.goo.gl/QDcohKvssDoTMQp1A",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVKZEeL6yEfKT3V5_uytBDwgZuhc63it76uS7F7fhyKBHHzwJ5Pp7P_-riQpQjVvp1vMNkiSTbP4aqzASiILwSrf8ERNCtRu5IQu4OIv8VN-0RlVtlsYf6UtECWTdxSq22bVEPLcJuVe8MlQ=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Pentre Ifan is an ancient dolmen in the community and parish of Nevern, Pembrokeshire, Wales. It is 11 miles (18 km) from Cardigan, Ceredigion, and 3 miles (4.8 km) east of Newport, Pembrokeshire. It contains and gives its name to the largest and best preserved neolithic dolmen in Wales.",
+    "type": "monument",
+    "period": "c. 3500 BC",
+    "rating": 4.5,
+    "tags": [
+      "atmospheric",
+      "photogenic",
+      "prehistoric",
+      "remote",
+      "hilltop",
+      "free-entry"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pentre_Ifan"
+      },
+      {
+        "name": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/pentre-ifan"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Pentre_Ifan",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/DMPentreIfanSide.JPG/330px-DMPentreIfanSide.JPG",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "LinguisticDemographer at en.wikipedia",
+      "license": "Public domain",
+      "description": "Pentre Ifan, Neolithic dolmen in Pembrokeshire, Wales",
+      "credit": "Transferred from en.wikipedia to Commons by User:Jordi RoquÃ© using CommonsHelper.",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Bryn Celli Ddu",
+    "country": "wales",
+    "region": "snowdonia-north",
+    "county": "Anglesey",
+    "lat": 53.2077,
+    "lng": -4.2361,
+    "mapsLink": "https://maps.app.goo.gl/2Nuu6V2kWzsY5GjL7",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPiVWPA6MKBzVoHlcp23V1CmirXCEgUKOlcyUjAHRCqDXf2ZK4Qc_p5h6KhNqW1BPr3p-h3KL3fF0Y60CcZhF3QKWN8I_t6gIBlVzdEjjj0QQWMaVr4jksXyQ-F1OzgnVB-vrREg0EyPy2WVyE2okg4cA=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Bryn Celli Ddu is a prehistoric site on the Welsh island of Anglesey located near Llanddaniel Fab. Its name means 'the mound in the dark grove'. It was archaeologically excavated between 1928 and 1929. Visitors can get inside the mound through a stone passage to the burial chamber, and it is the centrepiece of a major Neolithic Scheduled Monument in the care of Cadw. The presence of a mysterious pillar within the burial chamber, the reproduction of the 'Pattern Stone', carved with sinuous serpentine designs, and the fact that the site was once a henge with a stone circle, and may have been used to plot the date of the summer solstice have all attracted much interest.",
+    "type": "monument",
+    "period": "Neolithic",
+    "rating": 4.4,
+    "tags": [
+      "prehistoric",
+      "atmospheric",
+      "free-entry",
+      "photogenic",
+      "remote"
+    ],
+    "source": [
+      {
+        "name": "Cadw",
+        "url": "https://cadw.gov.wales/visit/places-to-visit/bryn-celli-ddu-chambered-tomb"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bryn_Celli_Ddu"
+      },
+      {
+        "name": "Anglesey History",
+        "url": "https://www.anglesey-history.co.uk/places/prehistoric-monuments/bryn-celli-ddu/"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Bryn_Celli_Ddu",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/BrynCelliDdu3.jpg/330px-BrynCelliDdu3.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "No machine-readable author provided. Rhion assumed (based on copyright claims).",
+      "license": "Public domain",
+      "description": "Bryn Celli Ddu, north-east side, main entrance\nMôn/ Anglesey\n\nRhion Pritchard",
+      "credit": "No machine-readable source provided. Own work assumed (based on copyright claims).",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  },
+  {
+    "name": "Tredegar House",
+    "country": "wales",
+    "region": "south-wales",
+    "county": "Newport",
+    "lat": 51.56157222,
+    "lng": -3.02916667,
+    "mapsLink": "https://maps.app.goo.gl/K9mWKJF9JF2GXejeA",
+    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN8U_w-VGHIKzyyPaBLpnKuUXRXcJK38fGzOZFqo9cO3NM70mjV62Rgi4DcwmmJuH8g7A6arndmnY2-6XcDzGTqeZ-4NSQo8tDSimZVRx41VM4nj7k0JE-k8GD-yUoXPfrvjGMaMEHmjcYqhg=s4800-w1200",
+    "imgSource": "google",
+    "gallery": [],
+    "desc": "Tredegar House is a 17th-century Charles II-era country house in Coedkernew, on the southwestern edge of Newport, Wales. For over five hundred years it was home to the Morgan family, later Lords Tredegar, one of the most powerful and influential families in the area. Described as \"the grandest and most exuberant country house in Monmouthshire\" and one of the \"outstanding houses of the Restoration period in the whole of Britain\", the mansion stands in a reduced landscaped garden of 90 acres (0.36 km2). The property became a Grade I listed building on 3 March 1952 and has been under the care of the National Trust since March 2012. The park surrounding the house is designated Grade II* on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+    "type": "historic-house",
+    "period": "17th century",
+    "rating": 4.4,
+    "tags": [
+      "well-preserved",
+      "photogenic",
+      "gardens",
+      "museum",
+      "guided-tours",
+      "kid-friendly",
+      "tearoom-cafe"
+    ],
+    "source": [
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tredegar_House"
+      },
+      {
+        "name": "National Trust",
+        "url": "https://www.nationaltrust.org.uk/visit/wales/tredegar-house/history-of-tredegar-house"
+      }
+    ],
+    "wiki": "https://en.wikipedia.org/wiki/Tredegar_House",
+    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Tredegar_House%2C_Wales_%2848721554268%29.jpg/330px-Tredegar_House%2C_Wales_%2848721554268%29.jpg",
+    "reviewStatus": "flagged",
+    "imageAttribution": {
+      "artist": "Nick",
+      "license": "CC BY 2.0",
+      "description": "Tredegar House, Wales",
+      "credit": "Tredegar House, Wales",
+      "source": "Wikimedia Commons"
+    },
+    "mainImageSource": "google",
+    "imageReviewDone": true,
+    "needsEnrich": true,
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "status": "flagged",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2025-05-17"
+  }
+]
