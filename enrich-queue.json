@@ -91,6 +91,62 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/AaZtVSpKoMd9GgC99"
       },
       "ts": 1779039648086
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Housesteads Roman Fort\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* castle\n*Period:* 2nd century\n*Coords:* 55.013, -2.331\n*Wikipedia:* https://en.wikipedia.org/wiki/Housesteads_Roman_Fort\n*Maps:* https://www.google.com/maps/search/Housesteads%20Roman%20Fort/@55.0117,-2.3283,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMNR60AqwnQLZ4im9lTeM2Wp33yvkRHJxeaaU5bKX1jcoZ65iomnlOGgGdFDUMxWBiOSoQitM-NaG-dvtSur_U2wddB4vn7-YGwkIo0BkRV91QwfqrBIH8L2a1Fp179OBLtDmiBYW1DyPp4=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nHousesteads Roman Fort was an auxiliary fort on Hadrian's Wall, at Housesteads, Northumberland, England. It is dramatically positioned on the end of the 1-mile (1.6 km)-long crag of the Whin Sill over which the Wall runs, overlooking sparsely populated hills.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Housesteads Roman Fort",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 55.013,
+        "lng": -2.331,
+        "mapsLink": "https://www.google.com/maps/search/Housesteads%20Roman%20Fort/@55.0117,-2.3283,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMNR60AqwnQLZ4im9lTeM2Wp33yvkRHJxeaaU5bKX1jcoZ65iomnlOGgGdFDUMxWBiOSoQitM-NaG-dvtSur_U2wddB4vn7-YGwkIo0BkRV91QwfqrBIH8L2a1Fp179OBLtDmiBYW1DyPp4=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Housesteads Roman Fort was an auxiliary fort on Hadrian's Wall, at Housesteads, Northumberland, England. It is dramatically positioned on the end of the 1-mile (1.6 km)-long crag of the Whin Sill over which the Wall runs, overlooking sparsely populated hills.",
+        "type": "castle",
+        "period": "2nd century",
+        "rating": 4.7,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "hilltop",
+          "remote",
+          "atmospheric",
+          "prehistoric",
+          "museum",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Housesteads_Roman_Fort"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/housesteads-roman-fort-hadrians-wall/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Housesteads_Roman_Fort",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Housesteads_Roman_Fort_aerial.jpg/330px-Housesteads_Roman_Fort_aerial.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Lieven Smits",
+          "license": "CC BY-SA 4.0",
+          "description": "Aerial photograph of Housesteads Roman Fort by Hadrian's Wall, Northumberland, England. Nikon D60 f=200mm f/5.6 at 1/1600s ISO 800. Processed using Nikon ViewNX 2.1.2.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779039723453
     }
   ]
 }
