@@ -20,6 +20,20 @@
       "candidateLabel": "St David's Cathedral Official Site",
       "reason": "Local cathedral website",
       "status": "pending"
+    },
+    {
+      "name": "Balgonie Castle",
+      "candidateUrl": "https://www.balgoniecastle.co.uk/",
+      "candidateLabel": "Balgonie Castle Official Site",
+      "reason": "Private castle website",
+      "status": "pending"
+    },
+    {
+      "name": "Old Inverlochy Castle",
+      "candidateUrl": "https://www.inverlochycastle.co.uk/",
+      "candidateLabel": "Inverlochy Castle Official Site",
+      "reason": "Private castle website",
+      "status": "pending"
     }
   ]
 }
