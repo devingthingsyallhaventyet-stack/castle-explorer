@@ -157,6 +157,59 @@
         "enrichNotes": "add source - https://www.nortonpriory.org/"
       },
       "ts": 1779038678937
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Whalley Abbey\n*Country:* england\n*Region:* northern england\n*County:* Lancashire\n*Type:* abbey\n*Period:* 13th-16th century\n*Coords:* 53.8202, -2.4104\n*Wikipedia:* https://en.wikipedia.org/wiki/Whalley_Abbey\n*Maps:* https://www.google.com/maps/search/Whalley%20Abbey/@53.8167,-2.4167,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNYVnRxNtRN6g9KVMMfjUpCGq9eqaAgNABKedFAKLTcINaYRpOckjGQyoa7phAbtb-sWiKHFKrl3MjB2i-EHmfZDZ-Ax1t2Cdz_vdqLvrXBOMA36jGjuYkDZGYSL6VXzYjwbU6BjAwFa4wbYQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* https://maps.app.goo.gl/LzZSPA6wiyGusGJu6 - update google maps link \n\n*Description:*\nWhalley Abbey is a former Cistercian abbey in Whalley, Lancashire, England. After the dissolution of the monasteries, the abbey was largely demolished and a country house was built on the site. In the 20th century the house was modified and it is now the Retreat and Conference House of the Diocese of Blackburn of the Church of England. The ruins of the abbey are recorded in the National Heritage List for England as a designated Grade I listed building, and are a Scheduled Ancient Monument.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Whalley Abbey",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Lancashire",
+        "lat": 53.8202,
+        "lng": -2.4104,
+        "mapsLink": "https://www.google.com/maps/search/Whalley%20Abbey/@53.8167,-2.4167,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNYVnRxNtRN6g9KVMMfjUpCGq9eqaAgNABKedFAKLTcINaYRpOckjGQyoa7phAbtb-sWiKHFKrl3MjB2i-EHmfZDZ-Ax1t2Cdz_vdqLvrXBOMA36jGjuYkDZGYSL6VXzYjwbU6BjAwFa4wbYQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Whalley Abbey is a former Cistercian abbey in Whalley, Lancashire, England. After the dissolution of the monasteries, the abbey was largely demolished and a country house was built on the site. In the 20th century the house was modified and it is now the Retreat and Conference House of the Diocese of Blackburn of the Church of England. The ruins of the abbey are recorded in the National Heritage List for England as a designated Grade I listed building, and are a Scheduled Ancient Monument.",
+        "type": "abbey",
+        "period": "13th-16th century",
+        "rating": 4,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/whalley-abbey-gatehouse/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Whalley_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Whalley_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Whalley_Abbey_-_geograph.org.uk_-_1923754.jpg/330px-Whalley_Abbey_-_geograph.org.uk_-_1923754.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "David Dixon",
+          "license": "CC BY-SA 2.0",
+          "description": "Whalley Abbey, near to Billington, Lancashire, Great Britain.\n\t\tThe ruins of  Whalley Abbey are a Grade I listed building and a Scheduled Ancient Monument.  The site of the abbey was first consecrated in 1306 after the Cistercian monks from Stanlow Abbey had moved to Whalley. The church was completed in 1380 but the remainder of the abbey was not finished until the 1440s. \n\nThe abbey closed in 1537 as part of Henry VIII�s dissolution of the monasteries. Following which, the abbey was largely demolished and a country house was built on the site. In the 20th century the house was modified and it is now the Retreat and Conference House of the Diocese of Blackburn.\n\nToday, only the foundations remain of the church. The remains of the former monastic buildings are more extensive.\n\n&lt;a title=\"http://www.whalleyabbey.co.uk/\" rel=\"nofollow\" href=\"http://www.whalleyabbey.co.uk/\"&gt;Link&lt;/a&gt;&lt;img style=\"padding-left:2px;\" alt=\"External link\" title=\"External link - shift click to open in new window\" src=\"http://s0.geograph.org.uk/img/external.png\" width=\"10\" height=\"10\"/&gt; Official abbey web site\n&lt;a title=\"http://en.wikipedia.org/wiki/Whalley_Abbey\" rel=\"nofollow\" href=\"http://en.wikipedia.org/wiki/Whalley_Abbey\"&gt;Link&lt;/a&gt;&lt;img style=\"padding-left:2px;\" alt=\"External link\" title=\"External link - shift click to open in new window\" src=\"http://s0.geograph.org.uk/img/external.png\" width=\"10\" height=\"10\"/&gt; Wikipedia article\n\n\t\tSee other images of &lt;a href=\"/snippet/1774\" title=\"See other images in Whalley Abbey\"&gt;Whalley Abbey&lt;/a&gt;",
+          "credit": "From geograph.org.uk; transferred by User:Belovedfreak using geograph_org2commons.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://maps.app.goo.gl/LzZSPA6wiyGusGJu6 - update google maps link ",
+        "enrichNotes": "https://maps.app.goo.gl/LzZSPA6wiyGusGJu6 - update google maps link "
+      },
+      "ts": 1779038719884
     }
   ]
 }
