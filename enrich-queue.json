@@ -144,6 +144,60 @@
         "enrichNotes": ""
       },
       "ts": 1779061096822
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Llanblethian Castle\n*Country:* wales\n*Region:* south wales\n*County:* Vale of Glamorgan\n*Type:* castle\n*Period:* 13th-14th century\n*Coords:* 51.45745, -3.45639\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Quintins_Castle\n*Maps:* https://www.google.com/maps/search/Llanblethian%20Castle/@51.4597,-3.4347,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/St_Quintins_Castle_%284798%29.jpg/330px-St_Quintins_Castle_%284798%29.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSt Quintins Castle is a castle located in the village of Llanblethian, Cowbridge, Wales. It is a scheduled monument and a Grade II* listed building and is under the care of Cadw. The site was first occupied with a defensive structure in about 1102 and the gatehouse and further building work took place around 1312. It was later used as a prison and was reported as being in a ruinous state by 1741.\n\n_Listing 4 of 252_",
+      "listing": {
+        "name": "Llanblethian Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Vale of Glamorgan",
+        "lat": 51.45745,
+        "lng": -3.45639,
+        "mapsLink": "https://www.google.com/maps/search/Llanblethian%20Castle/@51.4597,-3.4347,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/St_Quintins_Castle_%284798%29.jpg/330px-St_Quintins_Castle_%284798%29.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "St Quintins Castle is a castle located in the village of Llanblethian, Cowbridge, Wales. It is a scheduled monument and a Grade II* listed building and is under the care of Cadw. The site was first occupied with a defensive structure in about 1102 and the gatehouse and further building work took place around 1312. It was later used as a prison and was reported as being in a ruinous state by 1741.",
+        "type": "castle",
+        "period": "13th-14th century",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/llanblethian-castle"
+          },
+          {
+            "name": "Coflein – RCAHMW",
+            "url": "https://coflein.gov.uk"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Quintins_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/St_Quintins_Castle_%284798%29.jpg/330px-St_Quintins_Castle_%284798%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Nilfanion",
+          "license": "CC BY-SA 4.0",
+          "description": "St Quintins Castle",
+          "credit": "Wikimedia UK",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Quintins_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779061121534
     }
   ]
 }
