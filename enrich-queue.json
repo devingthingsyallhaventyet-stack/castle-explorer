@@ -287,6 +287,65 @@
         "enrichNotes": ""
       },
       "ts": 1779044560577
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bryn Celli Ddu\n*Country:* wales\n*Region:* snowdonia north\n*County:* Anglesey\n*Type:* monument\n*Period:* Neolithic\n*Coords:* 53.2077, -4.2361\n*Wikipedia:* https://en.wikipedia.org/wiki/Bryn_Celli_Ddu\n*Maps:* https://www.google.com/maps/search/Bryn%20Celli%20Ddu/@53.2072,-4.2361,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPiVWPA6MKBzVoHlcp23V1CmirXCEgUKOlcyUjAHRCqDXf2ZK4Qc_p5h6KhNqW1BPr3p-h3KL3fF0Y60CcZhF3QKWN8I_t6gIBlVzdEjjj0QQWMaVr4jksXyQ-F1OzgnVB-vrREg0EyPy2WVyE2okg4cA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/2Nuu6V2kWzsY5GjL7\n\n*Description:*\nBryn Celli Ddu is a prehistoric site on the Welsh island of Anglesey located near Llanddaniel Fab. Its name means 'the mound in the dark grove'. It was archaeologically excavated between 1928 and 1929. Visitors can get inside the mound through a stone passage to the burial chamber, and it is the centrepiece of a major Neolithic Scheduled Monument in the care of Cadw. The presence of a mysterious pillar within the burial chamber, the reproduction of the 'Pattern Stone', carved with sinuous serpentine designs, and the fact that the site was once a henge with a stone circle, and may have been used to plot the date of the summer solstice have all attracted much interest.\n\n_Listing 6 of 50_",
+      "listing": {
+        "name": "Bryn Celli Ddu",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Anglesey",
+        "lat": 53.2077,
+        "lng": -4.2361,
+        "mapsLink": "https://www.google.com/maps/search/Bryn%20Celli%20Ddu/@53.2072,-4.2361,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPiVWPA6MKBzVoHlcp23V1CmirXCEgUKOlcyUjAHRCqDXf2ZK4Qc_p5h6KhNqW1BPr3p-h3KL3fF0Y60CcZhF3QKWN8I_t6gIBlVzdEjjj0QQWMaVr4jksXyQ-F1OzgnVB-vrREg0EyPy2WVyE2okg4cA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Bryn Celli Ddu is a prehistoric site on the Welsh island of Anglesey located near Llanddaniel Fab. Its name means 'the mound in the dark grove'. It was archaeologically excavated between 1928 and 1929. Visitors can get inside the mound through a stone passage to the burial chamber, and it is the centrepiece of a major Neolithic Scheduled Monument in the care of Cadw. The presence of a mysterious pillar within the burial chamber, the reproduction of the 'Pattern Stone', carved with sinuous serpentine designs, and the fact that the site was once a henge with a stone circle, and may have been used to plot the date of the summer solstice have all attracted much interest.",
+        "type": "monument",
+        "period": "Neolithic",
+        "rating": 4.4,
+        "tags": [
+          "prehistoric",
+          "atmospheric",
+          "free-entry",
+          "photogenic",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/bryn-celli-ddu-chambered-tomb"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bryn_Celli_Ddu"
+          },
+          {
+            "name": "Anglesey History",
+            "url": "https://www.anglesey-history.co.uk/places/prehistoric-monuments/bryn-celli-ddu/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bryn_Celli_Ddu",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/BrynCelliDdu3.jpg/330px-BrynCelliDdu3.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "No machine-readable author provided. Rhion assumed (based on copyright claims).",
+          "license": "Public domain",
+          "description": "Bryn Celli Ddu, north-east side, main entrance\nMôn/ Anglesey\n\nRhion Pritchard",
+          "credit": "No machine-readable source provided. Own work assumed (based on copyright claims).",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/2Nuu6V2kWzsY5GjL7",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/2Nuu6V2kWzsY5GjL7"
+      },
+      "ts": 1779044602417
     }
   ]
 }
