@@ -3049,6 +3049,62 @@
         "enrichNotes": "no google places. needs more research. "
       },
       "ts": 1779033826775
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Felbrigg Hall\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* castle\n*Period:* 17th century\n*Coords:* 52.9074, 1.2593\n*Wikipedia:* https://en.wikipedia.org/wiki/Felbrigg_Hall\n*Maps:* https://www.google.com/maps/search/Felbrigg%20Hall/@52.8983,1.2517,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMnr1M7Ksz1Du1B76IXZAgW3OV6vFCOgIbq_FtbPn4QPbDXstgP07BWEAGpm-VMb7FOQrhDLEZjnWWFPKn1ur4i2c69mt9tTUOv7AwvVGRq-I4kj-DyNh-ZzNuVgHniTZLGHPdufJkmKoNLsg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate\n\n*Description:*\nFelbrigg Hall is a 17th-century English country house near the village of that name in Norfolk. Part of a National Trust property, the unaltered 17th-century house is noted for its Jacobean architecture and fine Georgian interior. Outside is a walled garden, an orangery and orchards. The house and grounds were bequeathed to the National Trust in 1969 by Robert Ketton-Cremer. The hall is Grade I on the National Heritage List for England. Most of the grounds are part of Felbrigg Woods, a Site of Special Scientific Interest.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Felbrigg Hall",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.9074,
+        "lng": 1.2593,
+        "mapsLink": "https://www.google.com/maps/search/Felbrigg%20Hall/@52.8983,1.2517,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMnr1M7Ksz1Du1B76IXZAgW3OV6vFCOgIbq_FtbPn4QPbDXstgP07BWEAGpm-VMb7FOQrhDLEZjnWWFPKn1ur4i2c69mt9tTUOv7AwvVGRq-I4kj-DyNh-ZzNuVgHniTZLGHPdufJkmKoNLsg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Felbrigg Hall is a 17th-century English country house near the village of that name in Norfolk. Part of a National Trust property, the unaltered 17th-century house is noted for its Jacobean architecture and fine Georgian interior. Outside is a walled garden, an orangery and orchards. The house and grounds were bequeathed to the National Trust in 1969 by Robert Ketton-Cremer. The hall is Grade I on the National Heritage List for England. Most of the grounds are part of Felbrigg Woods, a Site of Special Scientific Interest.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "gardens",
+          "woodland",
+          "museum",
+          "gift-shop",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Felbrigg_Hall"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate/history-of-felbrigg"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Felbrigg_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/FelbriggHall%28PhilipHalling%29Jul2006.jpg/330px-FelbriggHall%28PhilipHalling%29Jul2006.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Philip Halling",
+          "license": "CC BY-SA 2.0",
+          "description": "Felbrigg Hall, Norfolk. The south front of Felbrigg dates from the 1620s which contrasts with the west front which dates from the 1680s. The hall has been in the care of the National Trust since 1969.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate",
+        "enrichNotes": "add source - https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate"
+      },
+      "ts": 1779034056065
     }
   ]
 }
