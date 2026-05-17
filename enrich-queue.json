@@ -146,6 +146,61 @@
         "enrichNotes": ""
       },
       "ts": 1779041931953
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hardknott Roman Fort\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* Roman (2nd century)\n*Coords:* 54.40277778, -3.20527778\n*Wikipedia:* https://en.wikipedia.org/wiki/Hardknott_Roman_Fort\n*Maps:* https://www.google.com/maps/search/Hardknott%20Roman%20Fort/@54.4017,-3.2017,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPFiWhSPF9x2FLXMFZ2sy_7hkekjU2GxsuL1_sdly4GtY0Hhv_1Uqq9xW4uL2OTigjChOYWWLH3gBGuWfKWHvnr0Rr8YnIUNy_ESA2A3ItHpxwbTes6q5INujlHNnkTIKUr0rKdBn2huvhqwg4=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nHardknott Roman Fort is an archeological site, the remains of the Roman fort Mediobogdum, located on the western side of the challenging Hardknott Pass in the English Lake District. The fort was built between 120 and 138 on a rocky spur, and was initially garrisoned by a detachment of the Cohors IV Delmatarum from the Dalmatian coast. It was abandoned around a decade later, then reoccupied circa 200 and remained in use for much of the next two centuries.\n\n_Listing 9 of 10_",
+      "listing": {
+        "name": "Hardknott Roman Fort",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.40277778,
+        "lng": -3.20527778,
+        "mapsLink": "https://www.google.com/maps/search/Hardknott%20Roman%20Fort/@54.4017,-3.2017,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPFiWhSPF9x2FLXMFZ2sy_7hkekjU2GxsuL1_sdly4GtY0Hhv_1Uqq9xW4uL2OTigjChOYWWLH3gBGuWfKWHvnr0Rr8YnIUNy_ESA2A3ItHpxwbTes6q5INujlHNnkTIKUr0rKdBn2huvhqwg4=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Hardknott Roman Fort is an archeological site, the remains of the Roman fort Mediobogdum, located on the western side of the challenging Hardknott Pass in the English Lake District. The fort was built between 120 and 138 on a rocky spur, and was initially garrisoned by a detachment of the Cohors IV Delmatarum from the Dalmatian coast. It was abandoned around a decade later, then reoccupied circa 200 and remained in use for much of the next two centuries.",
+        "type": "castle",
+        "period": "Roman (2nd century)",
+        "rating": 4.5,
+        "tags": [
+          "atmospheric",
+          "remote",
+          "hilltop",
+          "free-entry",
+          "prehistoric",
+          "dog-friendly",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/hardknott-roman-fort/"
+          },
+          {
+            "name": "English Heritage History",
+            "url": "https://www.english-heritage.org.uk/visit/places/hardknott-roman-fort/history/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hardknott_Roman_Fort",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hardknott_Roman_Fort.jpg/330px-Hardknott_Roman_Fort.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Markas1370",
+          "license": "CC BY-SA 4.0",
+          "description": "Hardknott Roman fort, bath-house, parade ground and tribunal, 4 Roman roads, Roman quarries and 3 cairns\n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Hardknott Roman Fort (Q1584994) with data related to this item.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779041983250
     }
   ]
 }
