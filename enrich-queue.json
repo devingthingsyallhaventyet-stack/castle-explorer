@@ -370,6 +370,62 @@
         "enrichNotes": ""
       },
       "ts": 1779039772287
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cragside House\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* castle\n*Period:* 19th century\n*Coords:* 55.3136, -1.8853\n*Wikipedia:* https://en.wikipedia.org/wiki/Cragside\n*Maps:* https://www.google.com/maps/search/Cragside%20House/@55.3117,-1.8867,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cragside3.jpg/330px-Cragside3.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/DMhPUFuY3wXWT2sa9\n\n*Description:*\nCragside is a Tudor Revival country house near the town of Rothbury in Northumberland, England. Dating to the Victorian era, it was the home of William Armstrong, 1st Baron Armstrong, founder of the Armstrong Whitworth armaments firm. An industrial magnate, scientist, philanthropist and inventor of the hydraulic crane and the Armstrong gun, Armstrong also displayed his inventiveness in the domestic sphere, making Cragside the first house in the world to be lit using hydroelectric power. The estate was technologically advanced: the architect of the house, Richard Norman Shaw, wrote that it was equipped with \"wonderful hydraulic machines that do all sorts of things\". In the grounds, Armstrong built dams and lakes to power a sawmill, a water-powered laundry, early versions of a dishwasher and a dumb waiter, a hydraulic lift and a hydroelectric rotisserie. In 1887, Armstrong was raised to the peerage, the first engineer or scientist to be ennobled, and became Baron Armstrong of Cragside.\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Cragside House",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 55.3136,
+        "lng": -1.8853,
+        "mapsLink": "https://www.google.com/maps/search/Cragside%20House/@55.3117,-1.8867,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cragside3.jpg/330px-Cragside3.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Cragside is a Tudor Revival country house near the town of Rothbury in Northumberland, England. Dating to the Victorian era, it was the home of William Armstrong, 1st Baron Armstrong, founder of the Armstrong Whitworth armaments firm. An industrial magnate, scientist, philanthropist and inventor of the hydraulic crane and the Armstrong gun, Armstrong also displayed his inventiveness in the domestic sphere, making Cragside the first house in the world to be lit using hydroelectric power. The estate was technologically advanced: the architect of the house, Richard Norman Shaw, wrote that it was equipped with \"wonderful hydraulic machines that do all sorts of things\". In the grounds, Armstrong built dams and lakes to power a sawmill, a water-powered laundry, early versions of a dishwasher and a dumb waiter, a hydraulic lift and a hydroelectric rotisserie. In 1887, Armstrong was raised to the peerage, the first engineer or scientist to be ennobled, and became Baron Armstrong of Cragside.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "victorian",
+          "woodland",
+          "gardens",
+          "hilltop",
+          "atmospheric",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cragside"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/north-east/cragside"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cragside",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cragside3.jpg/330px-Cragside3.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cragside",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/DMhPUFuY3wXWT2sa9",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/DMhPUFuY3wXWT2sa9"
+      },
+      "ts": 1779039796763
     }
   ]
 }
