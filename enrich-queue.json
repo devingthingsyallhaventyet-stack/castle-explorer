@@ -744,6 +744,62 @@
         "enrichNotes": ""
       },
       "ts": 1779043657708
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Pentre Ifan\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* monument\n*Period:* c. 3500 BC\n*Coords:* 51.999, -4.77\n*Wikipedia:* https://en.wikipedia.org/wiki/Pentre_Ifan\n*Maps:* https://www.google.com/maps/search/Pentre%20Ifan/@51.9986,-4.7697,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNVKZEeL6yEfKT3V5_uytBDwgZuhc63it76uS7F7fhyKBHHzwJ5Pp7P_-riQpQjVvp1vMNkiSTbP4aqzASiILwSrf8ERNCtRu5IQu4OIv8VN-0RlVtlsYf6UtECWTdxSq22bVEPLcJuVe8MlQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/QDcohKvssDoTMQp1A\n\n\n*Description:*\nPentre Ifan is an ancient dolmen in the community and parish of Nevern, Pembrokeshire, Wales. It is 11 miles (18 km) from Cardigan, Ceredigion, and 3 miles (4.8 km) east of Newport, Pembrokeshire. It contains and gives its name to the largest and best preserved neolithic dolmen in Wales.\n\n_Listing 16 of 80_",
+      "listing": {
+        "name": "Pentre Ifan",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 51.999,
+        "lng": -4.77,
+        "mapsLink": "https://www.google.com/maps/search/Pentre%20Ifan/@51.9986,-4.7697,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNVKZEeL6yEfKT3V5_uytBDwgZuhc63it76uS7F7fhyKBHHzwJ5Pp7P_-riQpQjVvp1vMNkiSTbP4aqzASiILwSrf8ERNCtRu5IQu4OIv8VN-0RlVtlsYf6UtECWTdxSq22bVEPLcJuVe8MlQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Pentre Ifan is an ancient dolmen in the community and parish of Nevern, Pembrokeshire, Wales. It is 11 miles (18 km) from Cardigan, Ceredigion, and 3 miles (4.8 km) east of Newport, Pembrokeshire. It contains and gives its name to the largest and best preserved neolithic dolmen in Wales.",
+        "type": "monument",
+        "period": "c. 3500 BC",
+        "rating": 4.5,
+        "tags": [
+          "atmospheric",
+          "photogenic",
+          "prehistoric",
+          "remote",
+          "hilltop",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Pentre_Ifan"
+          },
+          {
+            "name": "Atlas Obscura",
+            "url": "https://www.atlasobscura.com/places/pentre-ifan"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Pentre_Ifan",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/DMPentreIfanSide.JPG/330px-DMPentreIfanSide.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "LinguisticDemographer at en.wikipedia",
+          "license": "Public domain",
+          "description": "Pentre Ifan, Neolithic dolmen in Pembrokeshire, Wales",
+          "credit": "Transferred from en.wikipedia to Commons by User:Jordi RoquÃ© using CommonsHelper.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/QDcohKvssDoTMQp1A\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/QDcohKvssDoTMQp1A\n"
+      },
+      "ts": 1779043690997
     }
   ]
 }
