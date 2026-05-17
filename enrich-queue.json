@@ -162,6 +162,50 @@
         "enrichNotes": ""
       },
       "ts": 1779045785685
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Tattershall Castle\n*Country:* england\n*Region:* the midlands\n*County:* Lincolnshire\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 53.10133333, -0.19261111\n*Wikipedia:* https://en.wikipedia.org/wiki/Tattershall_Castle%2C_Lincolnshire\n*Maps:* https://www.google.com/maps/search/Tattershall%20Castle/@53.1084,-0.2101,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMRU7r-ZbEj9gQaFs7eip5qHt9XFJ8JU9JUrnGq8SDWR8ZyvxdEU0WO5-qla02q0sDbdqbSb3g5fczJfEhcn3J_FbfuyF0PiuKSaURubFJq3kYLweXX9e0Aqnzm6rrH0yr31R3lNA_2H3-Yjq0=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/yw271Qv6ak6sxbGRA\n\n*Description:*\nTattershall Castle is a castle in Tattershall, Lincolnshire, England. Since 1925 it has been in the care of the National Trust.\n\n_Listing 4 of 28_",
+      "listing": {
+        "name": "Tattershall Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Lincolnshire",
+        "lat": 53.10133333,
+        "lng": -0.19261111,
+        "mapsLink": "https://www.google.com/maps/search/Tattershall%20Castle/@53.1084,-0.2101,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMRU7r-ZbEj9gQaFs7eip5qHt9XFJ8JU9JUrnGq8SDWR8ZyvxdEU0WO5-qla02q0sDbdqbSb3g5fczJfEhcn3J_FbfuyF0PiuKSaURubFJq3kYLweXX9e0Aqnzm6rrH0yr31R3lNA_2H3-Yjq0=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Tattershall Castle is a castle in Tattershall, Lincolnshire, England. Since 1925 it has been in the care of the National Trust.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 4.3,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Tattershall_Castle%2C_Lincolnshire",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Tattershall_Castle%2C_2006.jpg/330px-Tattershall_Castle%2C_2006.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Brian from UK",
+          "license": "CC BY-SA 2.0",
+          "description": "Tattershall Castle is one of a complex of buildings built by Ralph, Lord Cromwell, in the late 15th century and which also included Tattershall College, the collegiate church and the Almshouse.",
+          "credit": "Tattershall Castle, Tatterhsall, Lincolnshire",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/yw271Qv6ak6sxbGRA",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/yw271Qv6ak6sxbGRA"
+      },
+      "ts": 1779045808130
     }
   ]
 }
