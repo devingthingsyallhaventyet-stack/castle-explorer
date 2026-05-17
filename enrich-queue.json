@@ -705,6 +705,45 @@
         "enrichNotes": ""
       },
       "ts": 1779045079406
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Quin Abbey\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Clare\n*Type:* abbey\n*Period:* 15th century\n*Coords:* 52.81928611, -8.86301944\n*Wikipedia:* https://en.wikipedia.org/wiki/Quin_Abbey\n*Maps:* https://www.google.com/maps/search/Quin%20Abbey/@52.8172,-8.8614,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Quin_Abbey%2C_Ireland.jpg/330px-Quin_Abbey%2C_Ireland.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nQuin Abbey, is a ruined Franciscan abbey in Quin, County Clare, Ireland. It was built for Fathers Purcell and Mooney, friars of the Franciscan order.\n\n_Listing 14 of 50_",
+      "listing": {
+        "name": "Quin Abbey",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Clare",
+        "lat": 52.81928611,
+        "lng": -8.86301944,
+        "mapsLink": "https://www.google.com/maps/search/Quin%20Abbey/@52.8172,-8.8614,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Quin_Abbey%2C_Ireland.jpg/330px-Quin_Abbey%2C_Ireland.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Quin Abbey, is a ruined Franciscan abbey in Quin, County Clare, Ireland. It was built for Fathers Purcell and Mooney, friars of the Franciscan order.",
+        "type": "abbey",
+        "period": "15th century",
+        "rating": 4.4,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Quin_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Quin_Abbey%2C_Ireland.jpg/330px-Quin_Abbey%2C_Ireland.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Quin_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045099154
     }
   ]
 }
