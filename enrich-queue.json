@@ -294,6 +294,62 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1779050621440
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Roche Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Louth\n*Type:* castle\n*Period:* 13th century\n*Coords:* 54.04646, -6.488317\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Roche\n*Maps:* https://maps.app.goo.gl/Ensp15fFpkpdZ9xq8\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Castle_Roche_Louth.jpg/330px-Castle_Roche_Louth.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n\n*Description:*\nCastle Roche is a Norman castle located some 10 km north-west of Dundalk, County Louth, Ireland. It was the seat of the de Verdun family, who built the castle in 1236.\n\n_Listing 7 of 61_",
+      "listing": {
+        "name": "Roche Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Louth",
+        "lat": 54.04646,
+        "lng": -6.488317,
+        "mapsLink": "https://maps.app.goo.gl/Ensp15fFpkpdZ9xq8",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Castle_Roche_Louth.jpg/330px-Castle_Roche_Louth.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Castle Roche is a Norman castle located some 10 km north-west of Dundalk, County Louth, Ireland. It was the seat of the de Verdun family, who built the castle in 1236.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.1,
+        "tags": [
+          "hilltop",
+          "ruins-romantic",
+          "norman",
+          "photogenic",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/roche-castle/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Roche_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Roche",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Castle_Roche_Louth.jpg/330px-Castle_Roche_Louth.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Simtipp",
+          "license": "CC BY-SA 4.0",
+          "description": "4 Photos of castle Roche, taken on the 12th of September 2015.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050644961
     }
   ]
 }
