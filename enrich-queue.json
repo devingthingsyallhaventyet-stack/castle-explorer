@@ -693,6 +693,62 @@
         "enrichNotes": ""
       },
       "ts": 1779048318979
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* East Riddlesden Hall\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 17th century\n*Coords:* 53.87471, -1.88118\n*Wikipedia:* https://en.wikipedia.org/wiki/East_Riddlesden_Hall\n*Maps:* https://www.google.com/maps/search/East%20Riddlesden%20Hall/@53.8683,-1.8833,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPcNXZ3hYTqito9SUwyDZghZM1rcnUAPoItc-pD5o0c04hQOqaBY9mWLVlkxsn3-uqXVjjqfOX7F9gF3MYCDRUm5ybM_WNdmVbdVI6_J-PKz22_aRhpZ-QqoNNQDAq3Uwv70FNNgt7OoJhiCUs=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nEast Riddlesden Hall is a 17th-century manor house in Keighley, West Yorkshire, England, now owned by the National Trust.\n\n_Listing 14 of 111_",
+      "listing": {
+        "name": "East Riddlesden Hall",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 53.87471,
+        "lng": -1.88118,
+        "mapsLink": "https://www.google.com/maps/search/East%20Riddlesden%20Hall/@53.8683,-1.8833,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPcNXZ3hYTqito9SUwyDZghZM1rcnUAPoItc-pD5o0c04hQOqaBY9mWLVlkxsn3-uqXVjjqfOX7F9gF3MYCDRUm5ybM_WNdmVbdVI6_J-PKz22_aRhpZ-QqoNNQDAq3Uwv70FNNgt7OoJhiCUs=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "East Riddlesden Hall is a 17th-century manor house in Keighley, West Yorkshire, England, now owned by the National Trust.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "gardens",
+          "tearoom-cafe",
+          "gift-shop",
+          "kid-friendly",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/yorkshire/east-riddlesden-hall"
+          },
+          {
+            "name": "National Trust History",
+            "url": "https://www.nationaltrust.org.uk/visit/yorkshire/east-riddlesden-hall/history-of-east-riddlesden-hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/East_Riddlesden_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/East_Riddlesden_Hall.jpg/330px-East_Riddlesden_Hall.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mdcollins1984",
+          "license": "Public domain",
+          "description": "Main entrance of w:East Riddlesden Hall, West Yorkshire",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048331029
     }
   ]
 }
