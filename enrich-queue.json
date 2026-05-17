@@ -1117,6 +1117,55 @@
         "enrichNotes": "change google places link - https://maps.app.goo.gl/GVenXELfonBcGXij8\nadd source - https://www.athlonecastle.ie/"
       },
       "ts": 1779046399712
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kilcooly Abbey\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* abbey\n*Period:* 12th-15th century\n*Coords:* 52.67055556, -7.57138889\n*Wikipedia:* https://en.wikipedia.org/wiki/Kilcooly_Abbey\n*Maps:* https://www.google.com/maps/search/Kilcooly%20Abbey/@52.687,-7.691,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg/330px-Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nKilcooley Abbey is a Cistercian abbey near the village of Gortnahoe in County Tipperary, Ireland. The abbey is located inside the grounds of the Kilcooley Estate. This abbey dates from 1182 when the King of Thomond Donal Mor O’Brien granted lands to the Cistercians, to build an abbey here. The abbey, which was built around 1200 is dedicated to the Virgin Mary and St. Benedict and shares similar Cistercian architecture with both Jerpoint Abbey and Holy Cross Abbey. The abbey is open to the public.\nAfter the Reformation and the dissolution of the monasteries, Kilcooley passed into the possession of the Earl of Ormond. It was granted to the English-born judge Sir Jerome Alexander in the 1630s. It passed to his daughter Elizabeth, and then through marriage to the Barker baronets of Bocking Hall, the last of whom died in 1818.\n\n_Listing 25 of 28_",
+      "listing": {
+        "name": "Kilcooly Abbey",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 52.67055556,
+        "lng": -7.57138889,
+        "mapsLink": "https://www.google.com/maps/search/Kilcooly%20Abbey/@52.687,-7.691,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg/330px-Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Kilcooley Abbey is a Cistercian abbey near the village of Gortnahoe in County Tipperary, Ireland. The abbey is located inside the grounds of the Kilcooley Estate. This abbey dates from 1182 when the King of Thomond Donal Mor O’Brien granted lands to the Cistercians, to build an abbey here. The abbey, which was built around 1200 is dedicated to the Virgin Mary and St. Benedict and shares similar Cistercian architecture with both Jerpoint Abbey and Holy Cross Abbey. The abbey is open to the public.\nAfter the Reformation and the dissolution of the monasteries, Kilcooley passed into the possession of the Earl of Ormond. It was granted to the English-born judge Sir Jerome Alexander in the 1630s. It passed to his daughter Elizabeth, and then through marriage to the Barker baronets of Bocking Hall, the last of whom died in 1818.",
+        "type": "abbey",
+        "period": "12th-15th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kilcooly_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Kilcooly_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg/330px-Kilcooley_Abbey_-_geograph.org.uk_-_3036013.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilcooly_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046424950
     }
   ]
 }
