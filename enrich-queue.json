@@ -1219,6 +1219,59 @@
         "enrichNotes": ""
       },
       "ts": 1779046457598
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castle Leslie\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Monaghan\n*Type:* castle\n*Period:* 19th century\n*Coords:* 54.3202, -6.8903\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Leslie\n*Maps:* https://www.google.com/maps/search/Castle%20Leslie/@54.202,-7.087,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqEnW-XLn0hgtEGiGALVEhCBYryHxDzULQUKkQcNQ-YgiizVKrltIDxcSuDHQWAvmXNCnX24OmMZk-rvY1ujrbXdyi_a8u94-KQ=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.castleleslie.com/\ntag as hotel \n\n*Description:*\nCastle Leslie, also known as Glaslough House, is home to an Irish branch of Clan Leslie, is located on the 4 km2 (1,000-acre) Castle Leslie Estate adjacent to the village of Glaslough, 11 km (7 mi) northeast of Monaghan town in County Monaghan, Ireland.\n\n_Listing 27 of 28_",
+      "listing": {
+        "name": "Castle Leslie",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Monaghan",
+        "lat": 54.3202,
+        "lng": -6.8903,
+        "mapsLink": "https://www.google.com/maps/search/Castle%20Leslie/@54.202,-7.087,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqEnW-XLn0hgtEGiGALVEhCBYryHxDzULQUKkQcNQ-YgiizVKrltIDxcSuDHQWAvmXNCnX24OmMZk-rvY1ujrbXdyi_a8u94-KQ=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Castle Leslie, also known as Glaslough House, is home to an Irish branch of Clan Leslie, is located on the 4 km2 (1,000-acre) Castle Leslie Estate adjacent to the village of Glaslough, 11 km (7 mi) northeast of Monaghan town in County Monaghan, Ireland.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "romantic",
+          "atmospheric",
+          "gardens",
+          "woodland",
+          "wedding-venue",
+          "events-venue"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Castle_Leslie"
+          },
+          {
+            "name": "Irish Heritage Houses",
+            "url": "https://www.ihh.ie/index.cfm/houses/house/name/Castle%20Leslie"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Leslie",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/CastleLeslieSummer2006.jpg/330px-CastleLeslieSummer2006.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Leslie",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.castleleslie.com/\ntag as hotel ",
+        "enrichNotes": "add source - https://www.castleleslie.com/\ntag as hotel "
+      },
+      "ts": 1779046483994
     }
   ]
 }
