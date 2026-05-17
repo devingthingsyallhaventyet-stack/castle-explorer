@@ -537,6 +537,51 @@
         "enrichNotes": "add source - https://www.clontarfcastle.ie/\ntag as hotel "
       },
       "ts": 1779048955166
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Reginald's Tower\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Waterford\n*Type:* tower house\n*Period:* 12th century\n*Coords:* 52.26041667, -7.10541667\n*Wikipedia:* https://en.wikipedia.org/wiki/Reginald%27s_Tower\n*Maps:* https://www.google.com/maps/search/Reginald's%20Tower/@52.259,-7.105,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Reginalds_Tower_2.jpg/330px-Reginalds_Tower_2.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nReginald's Tower is a historic tower in Waterford, Munster, Ireland. It is located at the eastern end of the city quay. The tower has been in usage for different purposes for many centuries and is an important landmark in Waterford and an important remnant of its medieval urban defence system. It is the oldest civic building in Ireland and it is the only urban monument in Ireland to retain a Norse or Viking name.\n\n_Listing 11 of 94_",
+      "listing": {
+        "name": "Reginald's Tower",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Waterford",
+        "lat": 52.26041667,
+        "lng": -7.10541667,
+        "mapsLink": "https://www.google.com/maps/search/Reginald's%20Tower/@52.259,-7.105,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Reginalds_Tower_2.jpg/330px-Reginalds_Tower_2.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Reginald's Tower is a historic tower in Waterford, Munster, Ireland. It is located at the eastern end of the city quay. The tower has been in usage for different purposes for many centuries and is an important landmark in Waterford and an important remnant of its medieval urban defence system. It is the oldest civic building in Ireland and it is the only urban monument in Ireland to retain a Norse or Viking name.",
+        "type": "tower house",
+        "period": "12th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Reginald's_Tower",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Reginalds_Tower_2.jpg/330px-Reginalds_Tower_2.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Nmwalsh",
+          "license": "CC BY-SA 4.0",
+          "description": "Reginald's Tower, Waterford, Ireland",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Reginald%27s_Tower",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048971185
     }
   ]
 }
