@@ -606,6 +606,54 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/HU2rsfHVVRTBs53cA"
       },
       "ts": 1779050031420
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Stainsby Mill\n*Country:* england\n*Region:* the midlands\n*County:* Derbyshire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 53.1829, -1.3206\n*Wikipedia:* https://en.wikipedia.org/wiki/Stainsby_Mill\n*Maps:* https://www.google.com/maps/search/Stainsby%20Mill/@53.1583,-1.3183,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOX8kXSmx5D38D9vCO7Q4ffdL6qCqhNKcQswrGBulY-hruzo32mGEqUjvsWBlWGCBXWInySKIxTbwd0AX9qUokpQ62RvTUVwQibW7ppSf8D3sgA7AUIZxYvcD1MyeEezGF7aNgUeU-ZfByrQQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nStainsby Mill is a 19th-century flour watermill in Doe Lea, Chesterfield, Derbyshire, England. The mill, which has been restored to full working order, is a Grade II listed building and is under the ownership of the National Trust. The mill is part of the Hardwick Hall estate.\n\n_Listing 13 of 79_",
+      "listing": {
+        "name": "Stainsby Mill",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Derbyshire",
+        "lat": 53.1829,
+        "lng": -1.3206,
+        "mapsLink": "https://www.google.com/maps/search/Stainsby%20Mill/@53.1583,-1.3183,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOX8kXSmx5D38D9vCO7Q4ffdL6qCqhNKcQswrGBulY-hruzo32mGEqUjvsWBlWGCBXWInySKIxTbwd0AX9qUokpQ62RvTUVwQibW7ppSf8D3sgA7AUIZxYvcD1MyeEezGF7aNgUeU-ZfByrQQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Stainsby Mill is a 19th-century flour watermill in Doe Lea, Chesterfield, Derbyshire, England. The mill, which has been restored to full working order, is a Grade II listed building and is under the ownership of the National Trust. The mill is part of the Hardwick Hall estate.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.1,
+        "tags": [
+          "victorian",
+          "kid-friendly",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/peak-district-derbyshire/hardwick/stainsby-mill"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Stainsby_Mill",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Stainsby_Mill_-_geograph.org.uk_-_2284146.jpg/330px-Stainsby_Mill_-_geograph.org.uk_-_2284146.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ashley Dace",
+          "license": "CC BY-SA 2.0",
+          "description": "Stainsby Mill, near to Doe Lea, Derbyshire, Great Britain.\nA view of the mill, the door to the left is the wheel room. The part to the right is the grain drying room.",
+          "credit": "From geograph.org.uk; transferred by User:Rubberstamp using geograph_org2commons.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050050722
     }
   ]
 }
