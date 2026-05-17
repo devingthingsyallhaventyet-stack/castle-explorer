@@ -264,6 +264,57 @@
         "enrichNotes": "add source - https://lowthercastle.org/"
       },
       "ts": 1779038747420
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hornby Castle\n*Country:* england\n*Region:* northern england\n*County:* Lancashire\n*Type:* castle\n*Period:* 13th-16th century\n*Coords:* 54.121, -2.631\n*Wikipedia:* https://en.wikipedia.org/wiki/Hornby_Castle,_Lancashire\n*Maps:* https://www.google.com/maps/search/Hornby%20Castle/@54.121,-2.631,15z\n*Main Image:* https://img.castlecore.uk/hornby-castle-3.jpg\n*Gallery:* 3 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.hornbycastle.com/\n\n*Description:*\nHornby Castle may refer to the following castles in England:Hornby Castle, Lancashire\nHornby Castle, North Yorkshire\n\n\n\n_Listing 6 of 10_",
+      "listing": {
+        "name": "Hornby Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Lancashire",
+        "lat": 54.121,
+        "lng": -2.631,
+        "mapsLink": "https://www.google.com/maps/search/Hornby%20Castle/@54.121,-2.631,15z",
+        "image": "https://img.castlecore.uk/hornby-castle-3.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/hornby-castle-2.jpg",
+          "https://img.castlecore.uk/hornby-castle-4.jpg",
+          "https://img.castlecore.uk/hornby-castle-5.jpg"
+        ],
+        "desc": "Hornby Castle may refer to the following castles in England:Hornby Castle, Lancashire\nHornby Castle, North Yorkshire\n\n",
+        "type": "castle",
+        "period": "13th-16th century",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "hilltop",
+          "atmospheric",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hornby_Castle,_Lancashire"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1317655"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hornby_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Hornby_Castle,_Lancashire",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.hornbycastle.com/",
+        "enrichNotes": "add source - https://www.hornbycastle.com/"
+      },
+      "ts": 1779038773366
     }
   ]
 }
