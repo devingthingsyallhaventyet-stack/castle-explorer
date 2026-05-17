@@ -540,6 +540,59 @@
         "enrichNotes": "more research needed "
       },
       "ts": 1779052804061
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Saul Church\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Down\n*Type:* abbey\n*Period:* 5th century\n*Coords:* 54.363, -5.69\n*Wikipedia:* https://en.wikipedia.org/wiki/Saul_Monastery\n*Maps:* https://www.google.com/maps/search/Saul%20Church/@54.363,-5.69,15z\n*Main Image:* https://img.castlecore.uk/saul-church.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/mb2w9uPrnFHEo48S8\n\n\n*Description:*\nSamuel Morgan Church, Jr. was a coal miner and president of the United Mine Workers of America (UMWA) from 1979 to 1982.\n\n_Listing 12 of 19_",
+      "listing": {
+        "name": "Saul Church",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Down",
+        "lat": 54.363,
+        "lng": -5.69,
+        "mapsLink": "https://www.google.com/maps/search/Saul%20Church/@54.363,-5.69,15z",
+        "image": "https://img.castlecore.uk/saul-church.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/saul-church-2.jpg",
+          "https://img.castlecore.uk/saul-church-3.jpg",
+          "https://img.castlecore.uk/saul-church-4.jpg",
+          "https://img.castlecore.uk/saul-church-5.jpg"
+        ],
+        "desc": "Samuel Morgan Church, Jr. was a coal miner and president of the United Mine Workers of America (UMWA) from 1979 to 1982.",
+        "type": "abbey",
+        "period": "5th century",
+        "rating": 4,
+        "tags": [
+          "celtic",
+          "well-preserved",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Down Heritage",
+            "url": "https://www.visitnewryandmourne.com/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Sam_Church",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Saul_Monastery",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/mb2w9uPrnFHEo48S8\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/mb2w9uPrnFHEo48S8\n"
+      },
+      "ts": 1779052990066
     }
   ]
 }
