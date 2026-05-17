@@ -133,6 +133,60 @@
         "enrichNotes": "https://www.kinnittycastlehotel.com/ add source, tag as hotel "
       },
       "ts": 1779050868556
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Rathcroghan\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Roscommon\n*Type:* castle\n*Period:* Bronze Age-Iron Age\n*Coords:* 53.802, -8.304\n*Wikipedia:* https://en.wikipedia.org/wiki/Rathcroghan\n*Maps:* https://www.google.com/maps/search/Rathcroghan/@53.8,-8.303,15z\n*Main Image:* https://img.castlecore.uk/rathcroghan.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nRathcroghan is a complex of archaeological sites near Tulsk in County Roscommon, Ireland. It is identified as the site of Cruachan, the traditional capital of the Connachta, the prehistoric and early historic rulers of the western territory. The Rathcroghan Complex is an archaeological landscape with many references found in early Irish medieval manuscripts.\n\n_Listing 4 of 53_",
+      "listing": {
+        "name": "Rathcroghan",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Roscommon",
+        "lat": 53.802,
+        "lng": -8.304,
+        "mapsLink": "https://www.google.com/maps/search/Rathcroghan/@53.8,-8.303,15z",
+        "image": "https://img.castlecore.uk/rathcroghan.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/rathcroghan-2.jpg",
+          "https://img.castlecore.uk/rathcroghan-3.jpg",
+          "https://img.castlecore.uk/rathcroghan-4.jpg",
+          "https://img.castlecore.uk/rathcroghan-5.jpg"
+        ],
+        "desc": "Rathcroghan is a complex of archaeological sites near Tulsk in County Roscommon, Ireland. It is identified as the site of Cruachan, the traditional capital of the Connachta, the prehistoric and early historic rulers of the western territory. The Rathcroghan Complex is an archaeological landscape with many references found in early Irish medieval manuscripts.",
+        "type": "castle",
+        "period": "Bronze Age-Iron Age",
+        "rating": 4.1,
+        "tags": [
+          "prehistoric",
+          "celtic",
+          "atmospheric",
+          "museum",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Rathcroghan Visitor Centre",
+            "url": "https://www.rathcroghan.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Rathcroghan"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Rathcroghan",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Rathcroghan",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779050888182
     }
   ]
 }
