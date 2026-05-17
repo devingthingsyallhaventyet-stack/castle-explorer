@@ -867,6 +867,50 @@
         "enrichNotes": "Update google places - https://maps.app.goo.gl/WcQYmYRJZushVeYG8\nadd source - https://abbeycwmhir.org/"
       },
       "ts": 1779050232448
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Rhuddlan Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Denbighshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.2889, -3.464528\n*Wikipedia:* https://en.wikipedia.org/wiki/Rhuddlan_Castle\n*Maps:* https://www.google.com/maps/search/Rhuddlan%20Castle/@53.2893,-3.4636,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rhuddlan_Castle%2C_May_2012.jpg/330px-Rhuddlan_Castle%2C_May_2012.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nRhuddlan Castle is a castle located in Rhuddlan, Denbighshire, Wales. It was erected by Edward I in 1277, following the First Welsh War.\n\n_Listing 18 of 79_",
+      "listing": {
+        "name": "Rhuddlan Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Denbighshire",
+        "lat": 53.2889,
+        "lng": -3.464528,
+        "mapsLink": "https://www.google.com/maps/search/Rhuddlan%20Castle/@53.2893,-3.4636,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rhuddlan_Castle%2C_May_2012.jpg/330px-Rhuddlan_Castle%2C_May_2012.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Rhuddlan Castle is a castle located in Rhuddlan, Denbighshire, Wales. It was erected by Edward I in 1277, following the First Welsh War.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.1,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Rhuddlan_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rhuddlan_Castle%2C_May_2012.jpg/330px-Rhuddlan_Castle%2C_May_2012.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Julie Anne Workman",
+          "license": "CC BY-SA 3.0",
+          "description": "Rhuddlan Castle from the west.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Rhuddlan_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050257551
     }
   ]
 }
