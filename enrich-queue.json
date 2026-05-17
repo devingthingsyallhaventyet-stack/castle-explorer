@@ -262,6 +262,63 @@
         "enrichNotes": ""
       },
       "ts": 1779045823093
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lyveden New Bield\n*Country:* england\n*Region:* the midlands\n*County:* Northamptonshire\n*Type:* castle\n*Period:* Elizabethan (1604-05)\n*Coords:* 52.45694444, -0.55333333\n*Wikipedia:* https://en.wikipedia.org/wiki/Lyveden_New_Bield\n*Maps:* https://www.google.com/maps/search/Lyveden%20New%20Bield/@52.4567,-0.635,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lyveden_New_Bield_July_2016.jpg/330px-Lyveden_New_Bield_July_2016.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nLyveden New Bield is an unfinished Elizabethan summer house in the parish of Aldwincle in North Northamptonshire, commissioned by Sir Thomas Tresham and now owned by the National Trust. It is a Grade I listed building, classing it as a 'building of exceptional interest.'\n\n_Listing 6 of 28_",
+      "listing": {
+        "name": "Lyveden New Bield",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Northamptonshire",
+        "lat": 52.45694444,
+        "lng": -0.55333333,
+        "mapsLink": "https://www.google.com/maps/search/Lyveden%20New%20Bield/@52.4567,-0.635,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lyveden_New_Bield_July_2016.jpg/330px-Lyveden_New_Bield_July_2016.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Lyveden New Bield is an unfinished Elizabethan summer house in the parish of Aldwincle in North Northamptonshire, commissioned by Sir Thomas Tresham and now owned by the National Trust. It is a Grade I listed building, classing it as a 'building of exceptional interest.'",
+        "type": "castle",
+        "period": "Elizabethan (1604-05)",
+        "rating": 4.3,
+        "tags": [
+          "atmospheric",
+          "ruins-romantic",
+          "remote",
+          "photogenic",
+          "medieval",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lyveden_New_Bield"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/leicestershire-northamptonshire/lyveden/history-of-lyveden"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lyveden_New_Bield",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lyveden_New_Bield_July_2016.jpg/330px-Lyveden_New_Bield_July_2016.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Wehha",
+          "license": "CC BY-SA 4.0",
+          "description": "Lyveden New Bield (National Trust)",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Lyveden_New_Bield",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045837236
     }
   ]
 }
