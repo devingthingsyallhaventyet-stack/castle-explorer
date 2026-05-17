@@ -15031,7 +15031,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Cairnbulg Castle",
@@ -15351,7 +15352,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Inverallochy Castle",
@@ -15388,7 +15390,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Kinnaird Head Castle",
@@ -15429,7 +15432,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Udny Castle",
@@ -15528,7 +15532,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Fedderate Castle",
@@ -15684,7 +15689,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Finavon Castle",
@@ -15693,7 +15699,7 @@
     "county": "Angus",
     "lat": "56.6967",
     "lng": "-2.8222",
-    "mapsLink": "https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z",
+    "mapsLink": "https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z/data=!4m15!1m8!3m7!1s0x488662c61802d1d3:0x5a81195992607713!2sFinavon+Castle,+Finavon,+Forfar+DD8+3PX,+UK!3b1!8m2!3d56.6973747!4d-2.8259374!16s%2Fm%2F02qvvd4!3m5!1s0x488662c7d1cd13b3:0x6f61f43b5a7baefc!8m2!3d56.6973975!4d-2.8232749!16s%2Fg%2F11cs6bsvxk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Finavon_Castle_ruin.jpg/330px-Finavon_Castle_ruin.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -15722,7 +15728,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "Update google places link - https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z/data=!4m15!1m8!3m7!1s0x488662c61802d1d3:0x5a81195992607713!2sFinavon+Castle,+Finavon,+Forfar+DD8+3PX,+UK!3b1!8m2!3d56.6973747!4d-2.8259374!16s%2Fm%2F02qvvd4!3m5!1s0x488662c7d1cd13b3:0x6f61f43b5a7baefc!8m2!3d56.6973975!4d-2.8232749!16s%2Fg%2F11cs6bsvxk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "name": "Melgund Castle",
@@ -15990,7 +15997,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Ballindalloch Castle",
@@ -15998,8 +16005,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.ballindallochcastle.co.uk/"
-    ]
+      "https://www.ballindallochcastle.co.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://www.ballindallochcastle.co.uk/"
+      }
+    ],
+    "enrichNote": "add source - https://www.ballindallochcastle.co.uk/"
   },
   {
     "name": "Castle of Fiddes",
@@ -16068,7 +16080,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Craigston Castle",
@@ -16235,7 +16248,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Kinloss Abbey",
@@ -16243,8 +16256,13 @@
       }
     ],
     "verifiedSources": [
-      "https://kinlossabbey.org/"
-    ]
+      "https://kinlossabbey.org/",
+      {
+        "label": "Official Website",
+        "url": "https://kinlossabbey.org/"
+      }
+    ],
+    "enrichNote": "add source https://kinlossabbey.org/"
   },
   {
     "name": "Birnie Kirk",
@@ -16347,7 +16365,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Kinneff Church",
@@ -16392,7 +16411,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Kinneff Old Church",
@@ -16400,8 +16419,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.kinneffoldchurch.co.uk/"
-    ]
+      "https://www.kinneffoldchurch.co.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://www.kinneffoldchurch.co.uk/"
+      }
+    ],
+    "enrichNote": "add source - https://www.kinneffoldchurch.co.uk/"
   },
   {
     "name": "Deer Abbey",
@@ -16507,7 +16531,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Leith_Hall",
     "needsEnrich": true,
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "update google places link - https://maps.app.goo.gl/kHZiA1nY6FG77jLa7"
   },
   {
     "name": "Haddo House",
@@ -16549,7 +16574,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Pitmedden Garden",
@@ -16590,7 +16616,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Abergeldie Castle",
@@ -16693,7 +16720,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Sueno's Stone",
@@ -16739,7 +16767,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Blairfindy Castle",
@@ -17203,7 +17232,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones",
     "needsEnrich": true,
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Ethie Castle",
@@ -17245,7 +17275,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ethie_Castle",
     "needsEnrich": true,
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Ethie Castle",
@@ -17253,8 +17283,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.ethiecastle.com/"
-    ]
+      "https://www.ethiecastle.com/",
+      {
+        "label": "Official Website",
+        "url": "https://www.ethiecastle.com/"
+      }
+    ],
+    "enrichNote": "Add source - https://www.ethiecastle.com/\nMark as hotel"
   },
   {
     "name": "Cortachy Castle",
@@ -17444,7 +17479,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Powrie Castle",
@@ -17776,7 +17812,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Dean Castle",
@@ -17784,8 +17820,13 @@
       }
     ],
     "verifiedSources": [
-      "https://deancastlecountrypark.com/dean-castle/"
-    ]
+      "https://deancastlecountrypark.com/dean-castle/",
+      {
+        "label": "Official Website",
+        "url": "https://deancastlecountrypark.com/dean-castle/"
+      }
+    ],
+    "enrichNote": "Add source - https://deancastlecountrypark.com/dean-castle/"
   },
   {
     "name": "Culzean Castle",
@@ -17947,7 +17988,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Dundrennan Abbey",
@@ -18597,7 +18639,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Comlongon Castle",
@@ -18765,7 +18808,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Dundonald Castle",
@@ -18773,8 +18816,13 @@
       }
     ],
     "verifiedSources": [
-      "https://dundonaldcastle.org.uk/"
-    ]
+      "https://dundonaldcastle.org.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://dundonaldcastle.org.uk/"
+      }
+    ],
+    "enrichNote": "add source - https://dundonaldcastle.org.uk/"
   },
   {
     "name": "Greenan Castle",
@@ -19011,7 +19059,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Drumlanrig Castle",
@@ -19019,8 +19067,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.drumlanrigcastle.co.uk/"
-    ]
+      "https://www.drumlanrigcastle.co.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://www.drumlanrigcastle.co.uk/"
+      }
+    ],
+    "enrichNote": "add source - https://www.drumlanrigcastle.co.uk/\nmark as hotel"
   },
   {
     "name": "Barholm Castle",
@@ -19122,7 +19175,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kirkcudbright_Castle",
     "needsEnrich": true,
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "update google maps link - https://maps.app.goo.gl/uusFaYo8Yy2fcK6WA"
   },
   {
     "name": "Sanquhar Castle",
@@ -19427,7 +19481,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Turnberry_Castle",
     "needsEnrich": true,
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Turnberry Castle - Ayrshire Scotland",
@@ -19435,8 +19489,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.ayrshirescotland.com/turnberry-castle.html"
-    ]
+      "https://www.ayrshirescotland.com/turnberry-castle.html",
+      {
+        "label": "Official Website",
+        "url": "https://www.ayrshirescotland.com/turnberry-castle.html"
+      }
+    ],
+    "enrichNote": "update google maps link - https://maps.app.goo.gl/VG4AFAJ2Y242WYSD8\nadd source - https://www.ayrshirescotland.com/turnberry-castle.html"
   },
   {
     "name": "Dunure Castle",
@@ -19730,7 +19789,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Drumcoltran Tower",
@@ -20427,7 +20487,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Hoddom Castle",
@@ -20435,8 +20495,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.hoddomcastle.co.uk/"
-    ]
+      "https://www.hoddomcastle.co.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://www.hoddomcastle.co.uk/"
+      }
+    ],
+    "enrichNote": "add source - https://www.hoddomcastle.co.uk/"
   },
   {
     "name": "Repentance Tower",
@@ -20787,7 +20852,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Bury St Edmunds Abbey",
@@ -20824,7 +20890,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Visit Bury St Edmunds - Abbey",
@@ -20832,8 +20898,13 @@
       }
     ],
     "verifiedSources": [
-      "https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund"
-    ]
+      "https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund",
+      {
+        "label": "Official Website",
+        "url": "https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund"
+      }
+    ],
+    "enrichNote": "add source - https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund"
   },
   {
     "name": "Colchester Castle",
@@ -21037,7 +21108,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Binham Priory",
@@ -21090,7 +21162,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Burgh Castle",
@@ -21286,7 +21359,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Clare Castle",
@@ -21874,7 +21948,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Mettingham Castle",
@@ -21918,7 +21993,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Mettingham Castle",
@@ -21926,8 +22001,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.mettinghamcastle.com/"
-    ]
+      "https://www.mettinghamcastle.com/",
+      {
+        "label": "Official Website",
+        "url": "https://www.mettinghamcastle.com/"
+      }
+    ],
+    "enrichNote": "Update google places link - https://maps.app.goo.gl/J79yyyqpJs3vwDEQ8\nAdd source - https://www.mettinghamcastle.com/\n\nMark as hotel"
   },
   {
     "name": "Bungay Castle",
@@ -21972,7 +22052,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "New Buckenham Castle",
@@ -22019,7 +22100,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Kimbolton Castle",
@@ -22162,7 +22244,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Elton Hall",
@@ -22170,8 +22252,13 @@
       }
     ],
     "verifiedSources": [
-      "https://eltonhall.com/"
-    ]
+      "https://eltonhall.com/",
+      {
+        "label": "Official Website",
+        "url": "https://eltonhall.com/"
+      }
+    ],
+    "enrichNote": "add source - https://eltonhall.com/"
   },
   {
     "name": "Longthorpe Tower",
@@ -22218,7 +22305,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Eye Castle",
@@ -22331,7 +22419,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Wymondham Abbey",
@@ -22379,7 +22468,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Wymondham Abbey",
@@ -22387,8 +22476,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.wymondhamabbey.org.uk/"
-    ]
+      "https://www.wymondhamabbey.org.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://www.wymondhamabbey.org.uk/"
+      }
+    ],
+    "enrichNote": "add source - https://www.wymondhamabbey.org.uk/"
   },
   {
     "name": "Creake Abbey",
@@ -22436,7 +22530,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Creake Abbey",
@@ -22444,8 +22538,13 @@
       }
     ],
     "verifiedSources": [
-      "https://www.creakeabbey.co.uk/"
-    ]
+      "https://www.creakeabbey.co.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://www.creakeabbey.co.uk/"
+      }
+    ],
+    "enrichNote": "add source https://www.creakeabbey.co.uk/"
   },
   {
     "name": "Mountfitchet Castle",
@@ -22589,7 +22688,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Hertford Castle",
@@ -22794,7 +22894,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "Denny Abbey & Farmland Museum",
@@ -22802,8 +22902,13 @@
       }
     ],
     "verifiedSources": [
-      "https://dennyfarmlandmuseum.org.uk/"
-    ]
+      "https://dennyfarmlandmuseum.org.uk/",
+      {
+        "label": "Official Website",
+        "url": "https://dennyfarmlandmuseum.org.uk/"
+      }
+    ],
+    "enrichNote": "add source - https://dennyfarmlandmuseum.org.uk/"
   },
   {
     "name": "St Albans Cathedral",
@@ -22856,7 +22961,7 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16",
+    "enrichReviewDate": "2026-05-17",
     "sources": [
       {
         "label": "St Albans Cathedral",
@@ -22864,7 +22969,11 @@
       }
     ],
     "verifiedSources": [
-      "https://www.stalbanscathedral.org/"
+      "https://www.stalbanscathedral.org/",
+      {
+        "label": "Official Website",
+        "url": "https://www.stalbanscathedral.org/"
+      }
     ]
   },
   {
@@ -22909,7 +23018,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Ickworth House",
@@ -22960,7 +23070,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": ""
   },
   {
     "name": "Layer Marney Tower",
@@ -23096,7 +23207,22 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Venta_Icenorum",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Official Website",
+        "url": "https://caistorromanproject.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Official Website",
+        "url": "https://caistorromanproject.org/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "add source - https://caistorromanproject.org/"
   },
   {
     "name": "Buckden Palace",
@@ -23142,7 +23268,22 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Buckden_Towers",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Official Website",
+        "url": "https://www.buckden-towers.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Official Website",
+        "url": "https://www.buckden-towers.org.uk/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "add source - https://www.buckden-towers.org.uk/"
   },
   {
     "name": "Landguard Fort",
@@ -23497,7 +23638,22 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Official Website",
+        "url": "https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Official Website",
+        "url": "https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "add source - https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate"
   },
   {
     "name": "Blickling Hall",
@@ -53308,7 +53464,8 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-16"
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "mark as hotel."
   },
   {
     "name": "Brecon Cathedral",
