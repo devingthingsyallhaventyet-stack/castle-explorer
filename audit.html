@@ -1446,12 +1446,28 @@ function rejectSource() {
 function saveSourceCandidates() {
   const data = { candidates: window.sourceCandidates || [] };
   const json = JSON.stringify(data, null, 2);
-  
-  // Note: This would need to be saved to file in a real implementation
-  // For now, we'll just update the in-memory data
-  // In a real deployment, you'd need a save endpoint
-  console.log('Source candidates updated:', data);
+  localStorage.setItem('castle-source-candidates', json);
 }
+
+// Restore source candidate reviews from localStorage on load
+(function restoreSourceCandidates() {
+  const saved = localStorage.getItem('castle-source-candidates');
+  if (!saved) return;
+  try {
+    const data = JSON.parse(saved);
+    if (!data.candidates) return;
+    // Merge saved statuses into loaded candidates
+    const savedMap = {};
+    data.candidates.forEach(c => { savedMap[c.name + '|' + c.candidateUrl] = c.status; });
+    window.sourceCandidates.forEach(c => {
+      const key = c.name + '|' + c.candidateUrl;
+      if (savedMap[key] && savedMap[key] !== 'pending') {
+        c.status = savedMap[key];
+      }
+    });
+    updateTabCounts();
+  } catch(e) { console.warn('Failed to restore source candidates:', e); }
+})();
 </script>
 </body>
 </html>
