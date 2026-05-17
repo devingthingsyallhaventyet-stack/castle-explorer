@@ -329,6 +329,64 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/NecYfipQEWjpzGE27"
       },
       "ts": 1779043079079
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Attingham Park\n*Country:* england\n*Region:* the midlands\n*County:* Shropshire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 52.68546111, -2.66993889\n*Wikipedia:* https://en.wikipedia.org/wiki/Attingham_Park\n*Maps:* https://www.google.com/maps/search/Attingham%20Park/@52.7117,-2.6683,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP4m-ZKjXNP5AE2UQUj796HyqE9O-eJlrJvcmZ6trIKUjjF1eI2WbimZueTWHXGQ2ioZ8e_s4jaX7xC-gxhcod2KCFrenrtxMcvwvdphu6zgj6vdUcrS9NWkWi-LQgBAzmvI8_HwzZRMu_x0As=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nAttingham Park is an English country house and estate in Shropshire. Located near the village of Atcham, on the B4380 Shrewsbury to Wellington road. It is owned by the National Trust and is a Grade I listed building.\n\n_Listing 7 of 80_",
+      "listing": {
+        "name": "Attingham Park",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Shropshire",
+        "lat": 52.68546111,
+        "lng": -2.66993889,
+        "mapsLink": "https://www.google.com/maps/search/Attingham%20Park/@52.7117,-2.6683,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP4m-ZKjXNP5AE2UQUj796HyqE9O-eJlrJvcmZ6trIKUjjF1eI2WbimZueTWHXGQ2ioZ8e_s4jaX7xC-gxhcod2KCFrenrtxMcvwvdphu6zgj6vdUcrS9NWkWi-LQgBAzmvI8_HwzZRMu_x0As=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Attingham Park is an English country house and estate in Shropshire. Located near the village of Atcham, on the B4380 Shrewsbury to Wellington road. It is owned by the National Trust and is a Grade I listed building.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "woodland",
+          "riverside",
+          "dog-friendly",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Attingham_Park"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/attingham-park"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Attingham_Park",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/The_Mansion_at_Attingham_Park.jpg/330px-The_Mansion_at_Attingham_Park.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Wehha",
+          "license": "CC BY-SA 3.0",
+          "description": "Attingham Park, Atcham, Shropshire, seen from the south",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043481858
     }
   ]
 }
