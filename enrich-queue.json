@@ -442,6 +442,62 @@
         "enrichNotes": ""
       },
       "ts": 1779045866020
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Berrington Hall\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 52.269, -2.7214\n*Wikipedia:* https://en.wikipedia.org/wiki/Berrington_Hall\n*Maps:* https://www.google.com/maps/search/Berrington%20Hall/@52.2717,-2.7417,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZM_SiLcwmNugSsH3lsaJP1Lipt2Y9964k_8dPtWyhMsWIzmCmG_nLj1OEtPPknyHffjhifctCea2L9w6uHweURsh-uvmE0kY7k4Pa7zTe-WjRPCHOwpit6x-X4_12QU-W7uuyyK0R4HC0QI6g=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBerrington Hall is a country house located about 3 miles (5 km) north of Leominster, Herefordshire, England. During the 20th century it was the seat of the Cawley family.\n\n_Listing 9 of 28_",
+      "listing": {
+        "name": "Berrington Hall",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 52.269,
+        "lng": -2.7214,
+        "mapsLink": "https://www.google.com/maps/search/Berrington%20Hall/@52.2717,-2.7417,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZM_SiLcwmNugSsH3lsaJP1Lipt2Y9964k_8dPtWyhMsWIzmCmG_nLj1OEtPPknyHffjhifctCea2L9w6uHweURsh-uvmE0kY7k4Pa7zTe-WjRPCHOwpit6x-X4_12QU-W7uuyyK0R4HC0QI6g=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Berrington Hall is a country house located about 3 miles (5 km) north of Leominster, Herefordshire, England. During the 20th century it was the seat of the Cawley family.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "tearoom-cafe",
+          "gift-shop",
+          "guided-tours",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Berrington_Hall"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/berrington-hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Berrington_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/DSC7210_Berrington_Hall%2C_Herefordshire.jpg/330px-DSC7210_Berrington_Hall%2C_Herefordshire.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Bs0u10e01",
+          "license": "CC BY-SA 4.0",
+          "description": "Main front at Berrington Hall",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045876512
     }
   ]
 }
