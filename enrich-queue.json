@@ -39,6 +39,54 @@
         "enrichNotes": ""
       },
       "ts": 1779060197341
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Abingdon Abbey\n*Country:* england\n*Region:* south east london\n*County:* Oxfordshire\n*Type:* abbey\n*Period:* 7th-16th century\n*Coords:* 51.67055556, -1.27527778\n*Wikipedia:* https://en.wikipedia.org/wiki/Abingdon_Abbey\n*Maps:* https://www.google.com/maps/search/Abingdon%20Abbey/@51.6706,-1.2781,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abingdon_Abbey%2C_geograph.jpg/330px-Abingdon_Abbey%2C_geograph.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google link - https://maps.app.goo.gl/v2VEeRLPAT8mhjFMA\nadd source - https://www.abingdonabbeybuildings.co.uk/\n\n*Description:*\nAbingdon Abbey was a Benedictine monastery in Abingdon-on-Thames in the modern county of Oxfordshire in the United Kingdom. Situated near to the River Thames, it was founded in c. 675 AD and was dedicated to Mary, mother of Jesus. It was disestablished in 1538 during the dissolution of the monasteries. A few physical remnants of the Abbey buildings survive within Abingdon-on-Thames.\n\n_Listing 2 of 270_",
+      "listing": {
+        "name": "Abingdon Abbey",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Oxfordshire",
+        "lat": 51.67055556,
+        "lng": -1.27527778,
+        "mapsLink": "https://www.google.com/maps/search/Abingdon%20Abbey/@51.6706,-1.2781,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abingdon_Abbey%2C_geograph.jpg/330px-Abingdon_Abbey%2C_geograph.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Abingdon Abbey was a Benedictine monastery in Abingdon-on-Thames in the modern county of Oxfordshire in the United Kingdom. Situated near to the River Thames, it was founded in c. 675 AD and was dedicated to Mary, mother of Jesus. It was disestablished in 1538 during the dissolution of the monasteries. A few physical remnants of the Abbey buildings survive within Abingdon-on-Thames.",
+        "type": "abbey",
+        "period": "7th-16th century",
+        "rating": 3.9,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Abingdon_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Abingdon_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abingdon_Abbey%2C_geograph.jpg/330px-Abingdon_Abbey%2C_geograph.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Claire Ward",
+          "license": "CC BY-SA 2.0",
+          "description": "The Long Gallery, Abingdon Abbey.",
+          "credit": "Geograph project",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google link - https://maps.app.goo.gl/v2VEeRLPAT8mhjFMA\nadd source - https://www.abingdonabbeybuildings.co.uk/",
+        "enrichNotes": "update google link - https://maps.app.goo.gl/v2VEeRLPAT8mhjFMA\nadd source - https://www.abingdonabbeybuildings.co.uk/"
+      },
+      "ts": 1779060268629
     }
   ]
 }
