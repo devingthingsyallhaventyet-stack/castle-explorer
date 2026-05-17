@@ -1015,6 +1015,68 @@
         "enrichNotes": ""
       },
       "ts": 1779045278653
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Richborough Castle\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* castle\n*Period:* 1st-4th century Roman\n*Coords:* 51.294, 1.332\n*Wikipedia:* https://en.wikipedia.org/wiki/Richborough\n*Maps:* https://www.google.com/maps/search/Richborough%20Castle/@51.295,1.3267,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nRichborough Castle is a Roman Saxon Shore fort better known as Richborough Roman Fort. It is situated in Richborough near Sandwich, Kent. Substantial remains of the massive fort walls still stand to a height of several metres.\n\n_Listing 20 of 50_",
+      "listing": {
+        "name": "Richborough Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.294,
+        "lng": 1.332,
+        "mapsLink": "https://www.google.com/maps/search/Richborough%20Castle/@51.295,1.3267,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Richborough Castle is a Roman Saxon Shore fort better known as Richborough Roman Fort. It is situated in Richborough near Sandwich, Kent. Substantial remains of the massive fort walls still stand to a height of several metres.",
+        "type": "castle",
+        "period": "1st-4th century Roman",
+        "rating": 4.3,
+        "tags": [
+          "prehistoric",
+          "atmospheric",
+          "museum",
+          "photogenic",
+          "kid-friendly",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/richborough-roman-fort-and-amphitheatre/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Richborough_Castle"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=1797"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Richborough_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Richborough_Castle_02.jpg/330px-Richborough_Castle_02.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Nilfanion",
+          "license": "CC BY-SA 4.0",
+          "description": "The Saxon Shore Fort at Richborough Castle, Kent.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Richborough",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045305458
     }
   ]
 }
