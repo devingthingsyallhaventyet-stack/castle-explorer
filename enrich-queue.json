@@ -62,6 +62,57 @@
         "enrichNotes": "add source - https://holycrossabbey.ie/\n"
       },
       "ts": 1779049382255
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cabra Castle\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Cavan\n*Type:* castle\n*Period:* 18th century\n*Coords:* 53.9138, -6.7745\n*Wikipedia:* https://en.wikipedia.org/wiki/Cabra_Castle\n*Maps:* https://www.google.com/maps/search/Cabra%20Castle/@53.862,-6.872,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqFS22n1AfZBIVzHib--30ww5mLGjBV_eqPEnNDfr72K5xyZl3AaQhgplXfuPi93Nlaj2hun_RNfugNhQ9ZGNO6Bl4be5NXeyaw=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.cabracastle.com/ , tag as hotel \n\n*Description:*\nCabra Castle is the name given to two castles, one now ruined, the other now used as a luxury hotel. Named for the nearby townland of Cabra, the sites of both structures are on the northside of Kingscourt in County Cavan, Ireland.\n\n_Listing 2 of 79_",
+      "listing": {
+        "name": "Cabra Castle",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Cavan",
+        "lat": 53.9138,
+        "lng": -6.7745,
+        "mapsLink": "https://www.google.com/maps/search/Cabra%20Castle/@53.862,-6.872,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqFS22n1AfZBIVzHib--30ww5mLGjBV_eqPEnNDfr72K5xyZl3AaQhgplXfuPi93Nlaj2hun_RNfugNhQ9ZGNO6Bl4be5NXeyaw=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Cabra Castle is the name given to two castles, one now ruined, the other now used as a luxury hotel. Named for the nearby townland of Cabra, the sites of both structures are on the northside of Kingscourt in County Cavan, Ireland.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.2,
+        "tags": [
+          "atmospheric",
+          "romantic",
+          "woodland",
+          "wedding-venue",
+          "events-venue"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cabra_Castle"
+          },
+          {
+            "name": "Cabra Castle",
+            "url": "https://www.cabracastle.com/history"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cabra_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg/330px-Kingscourt_-_Cabra_Castle_view_from_entrance_driveway_-_geograph.org.uk_-_1619780.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cabra_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.cabracastle.com/ , tag as hotel ",
+        "enrichNotes": "add source - https://www.cabracastle.com/ , tag as hotel "
+      },
+      "ts": 1779049449451
     }
   ]
 }
