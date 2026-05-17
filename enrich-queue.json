@@ -114,6 +114,60 @@
         "enrichNotes": "add source - https://www.hevercastle.co.uk/"
       },
       "ts": 1779042995070
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Scotney Castle\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* castle\n*Period:* 14th century\n*Coords:* 51.0928, 0.4082\n*Wikipedia:* https://en.wikipedia.org/wiki/Scotney_Castle\n*Maps:* https://www.google.com/maps/search/Scotney%20Castle/@51.0922,0.3917,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOBJtXEIsh3VDeo3BlzqliX8MwEkjaYGx_5o7MM2tvrP9AI8VgcBkCtb6ZWhVekAbfR0Vr-CSTqf_y8hdYugs5S1B9zVBe_n3TkAwGDygBzpe8i7OaJBp9vnzTVbc3RvK-_3ikw3vMFPSkUDw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nScotney Castle is an English country house with formal gardens south-east of Lamberhurst in the valley of the River Bewl in Kent, England. It belongs to the National Trust.\n\n_Listing 3 of 80_",
+      "listing": {
+        "name": "Scotney Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.0928,
+        "lng": 0.4082,
+        "mapsLink": "https://www.google.com/maps/search/Scotney%20Castle/@51.0922,0.3917,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOBJtXEIsh3VDeo3BlzqliX8MwEkjaYGx_5o7MM2tvrP9AI8VgcBkCtb6ZWhVekAbfR0Vr-CSTqf_y8hdYugs5S1B9zVBe_n3TkAwGDygBzpe8i7OaJBp9vnzTVbc3RvK-_3ikw3vMFPSkUDw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Scotney Castle is an English country house with formal gardens south-east of Lamberhurst in the valley of the River Bewl in Kent, England. It belongs to the National Trust.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4.5,
+        "tags": [
+          "romantic-ruin",
+          "photogenic",
+          "gardens",
+          "medieval",
+          "woodland"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Scotney_Castle"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/kent/scotney-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Scotney_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scotney_Castle_with_white_wisteria.JPG/330px-Scotney_Castle_with_white_wisteria.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "User:Jasper33",
+          "license": "Public domain",
+          "description": "Old Scotney Castle.",
+          "credit": "Own work by the original uploader",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043008644
     }
   ]
 }
