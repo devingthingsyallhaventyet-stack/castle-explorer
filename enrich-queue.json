@@ -219,6 +219,64 @@
         "enrichNotes": "add source - https://www.cardiffcastle.com/"
       },
       "ts": 1779041723925
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Knowth Passage Tomb\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Meath\n*Type:* fort\n*Period:* Neolithic (c. 3200 BC)\n*Coords:* 53.70166667, -6.49166667\n*Wikipedia:* https://en.wikipedia.org/wiki/Knowth\n*Maps:* https://www.google.com/maps/search/Knowth%20Passage%20Tomb/@53.701,-6.489,15z\n*Main Image:* https://img.castlecore.uk/knowth-passage-tomb.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://maps.app.goo.gl/y8KQ2NcV2eRxBMLd6 - update google places \nadd source - https://www.knowth.com/knowth.htm\n\n*Description:*\nKnowth is a prehistoric tomb overlooking the River Boyne in County Meath, Ireland. It comprises a large passage tomb surrounded by 17 smaller tombs, built during the Neolithic era around 3200 BC. It contains the largest assemblage of megalithic art in Europe. Knowth is part of the Brú na Bóinne complex, a World Heritage Site that also includes the similar passage tombs of Newgrange and Dowth.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Knowth Passage Tomb",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Meath",
+        "lat": 53.70166667,
+        "lng": -6.49166667,
+        "mapsLink": "https://www.google.com/maps/search/Knowth%20Passage%20Tomb/@53.701,-6.489,15z",
+        "image": "https://img.castlecore.uk/knowth-passage-tomb.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/knowth-passage-tomb-2.jpg",
+          "https://img.castlecore.uk/knowth-passage-tomb-3.jpg",
+          "https://img.castlecore.uk/knowth-passage-tomb-4.jpg",
+          "https://img.castlecore.uk/knowth-passage-tomb-5.jpg"
+        ],
+        "desc": "Knowth is a prehistoric tomb overlooking the River Boyne in County Meath, Ireland. It comprises a large passage tomb surrounded by 17 smaller tombs, built during the Neolithic era around 3200 BC. It contains the largest assemblage of megalithic art in Europe. Knowth is part of the Brú na Bóinne complex, a World Heritage Site that also includes the similar passage tombs of Newgrange and Dowth.",
+        "type": "fort",
+        "period": "Neolithic (c. 3200 BC)",
+        "rating": 4.6,
+        "tags": [
+          "atmospheric",
+          "prehistoric",
+          "remote",
+          "guided-tours",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Knowth"
+          },
+          {
+            "name": "Knowth.com",
+            "url": "https://www.knowth.com/knowth.htm"
+          },
+          {
+            "name": "Discover Ireland",
+            "url": "https://www.discoverireland.ie/meath/knowth-passage-tombs"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Knowth",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/County_Meath_-_Knowth_-_20210930145613.jpg/330px-County_Meath_-_Knowth_-_20210930145613.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Knowth",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://maps.app.goo.gl/y8KQ2NcV2eRxBMLd6 - update google places \nadd source - https://www.knowth.com/knowth.htm",
+        "enrichNotes": "https://maps.app.goo.gl/y8KQ2NcV2eRxBMLd6 - update google places \nadd source - https://www.knowth.com/knowth.htm"
+      },
+      "ts": 1779041762975
     }
   ]
 }
