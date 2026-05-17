@@ -11473,7 +11473,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Cabot Highlands (Castle Stuart)",
+        "url": "https://cabot.com/highlands/golf/castle-stuart/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Cabot Highlands (Castle Stuart)",
+        "url": "https://cabot.com/highlands/golf/castle-stuart/"
+      }
+    ]
   },
   {
     "name": "Kinlochaline Castle",
@@ -11833,7 +11845,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castle Leod - Seat of Clan Mackenzie",
+        "url": "https://www.castleleod.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Leod - Seat of Clan Mackenzie",
+        "url": "https://www.castleleod.org.uk/"
+      }
+    ]
   },
   {
     "name": "Ruthven Barracks",
@@ -12191,7 +12215,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Balfour Castle",
+        "url": "https://www.balfourcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Balfour Castle",
+        "url": "https://www.balfourcastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Kilravock Castle",
@@ -12254,7 +12290,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Kilravock Castle",
+        "url": "https://www.kilravock.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Kilravock Castle",
+        "url": "https://www.kilravock.com/"
+      }
+    ]
   },
   {
     "name": "Castle Grant",
@@ -12317,7 +12365,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castle Grant - 500 Year Old Highland Castle",
+        "url": "https://www.castlegrant.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Grant - 500 Year Old Highland Castle",
+        "url": "https://www.castlegrant.com/"
+      }
+    ]
   },
   {
     "name": "Dalcross Castle",
@@ -12796,7 +12856,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Glamis Castle Official Website",
+        "url": "https://www.glamis-castle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Glamis Castle Official Website",
+        "url": "https://www.glamis-castle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Claypotts Castle",
@@ -12965,7 +13037,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunnottar_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunnottar_Castle",
+    "sources": [
+      {
+        "label": "Dunnottar Castle Official Website",
+        "url": "https://www.dunnottarcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunnottar Castle Official Website",
+        "url": "https://www.dunnottarcastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Balmoral Castle",
@@ -13026,7 +13110,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Balmoral Castle - Highland Home of the Royal Family",
+        "url": "https://balmoralcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Balmoral Castle - Highland Home of the Royal Family",
+        "url": "https://balmoralcastle.com/"
+      }
+    ]
   },
   {
     "name": "Craigievar Castle",
@@ -13686,7 +13782,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Braemar Castle - Community Castle",
+        "url": "https://braemarcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Braemar Castle - Community Castle",
+        "url": "https://braemarcastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Corgarff Castle",
@@ -14135,7 +14243,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Pluscarden Abbey - Benedictine Monastery",
+        "url": "https://www.pluscardenabbey.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Pluscarden Abbey - Benedictine Monastery",
+        "url": "https://www.pluscardenabbey.org/"
+      }
+    ]
   },
   {
     "name": "Affleck Castle",
@@ -14548,7 +14668,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "wikipedia",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Barra Castle - Exclusive Use Luxury Barn Venue",
+        "url": "https://barracastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Barra Castle - Exclusive Use Luxury Barn Venue",
+        "url": "https://barracastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Cluny Castle",
@@ -14600,7 +14732,19 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Cluny Castle - Luxury Castle Wedding Venue",
+        "url": "https://www.clunycastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Cluny Castle - Luxury Castle Wedding Venue",
+        "url": "https://www.clunycastle.com/"
+      }
+    ]
   },
   {
     "name": "Leslie Castle",
@@ -14663,7 +14807,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Leslie Castle Guesthouse",
+        "url": "https://leslie-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Leslie Castle Guesthouse",
+        "url": "https://leslie-castle.com/"
+      }
+    ]
   },
   {
     "name": "Fetteresso Castle",
@@ -19740,7 +19896,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Buittle Castle & the Barony of Buittle",
+        "url": "https://www.buittlecastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Buittle Castle & the Barony of Buittle",
+        "url": "https://www.buittlecastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Tibbers Castle",
