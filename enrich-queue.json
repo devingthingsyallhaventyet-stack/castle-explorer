@@ -134,6 +134,63 @@
         "enrichNotes": "add source - https://www.prinknashabbey.org/"
       },
       "ts": 1779060318999
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bolingbroke Castle\n*Country:* england\n*Region:* the midlands\n*County:* Lincolnshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.1652, 0.017\n*Wikipedia:* https://en.wikipedia.org/wiki/Bolingbroke_Castle\n*Maps:* https://www.google.com/maps/search/Bolingbroke%20Castle/@53.1667,0.0333,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMP9T-81G6nSQLGWSwWPtMlg_hlHFA9R1Kt7NO90j9LGTRCW0piaqi1S6u93y2xe9DhF-9S3HPFcKkF73gcL3bb1aP1jqjqjKp-IzD9xHP62nQ38PKMzA7DqrtwyvIXSobp0zMUuj3bNXlh5nB6YIM85w=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBolingbroke Castle is a ruined castle in Bolingbroke in Lincolnshire, England.\n\n_Listing 4 of 270_",
+      "listing": {
+        "name": "Bolingbroke Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Lincolnshire",
+        "lat": 53.1652,
+        "lng": 0.017,
+        "mapsLink": "https://www.google.com/maps/search/Bolingbroke%20Castle/@53.1667,0.0333,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMP9T-81G6nSQLGWSwWPtMlg_hlHFA9R1Kt7NO90j9LGTRCW0piaqi1S6u93y2xe9DhF-9S3HPFcKkF73gcL3bb1aP1jqjqjKp-IzD9xHP62nQ38PKMzA7DqrtwyvIXSobp0zMUuj3bNXlh5nB6YIM85w=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Bolingbroke Castle is a ruined castle in Bolingbroke in Lincolnshire, England.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.9,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free-entry",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bolingbroke_Castle"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/bolingbroke-castle-and-old-bolingbroke/"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1012668"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bolingbroke_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Old-Bolingbroke-Castle.jpg/330px-Old-Bolingbroke-Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "",
+          "license": "CC BY-SA 3.0",
+          "description": "",
+          "credit": "",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779060337540
     }
   ]
 }
