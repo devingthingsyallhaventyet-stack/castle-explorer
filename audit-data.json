@@ -55943,7 +55943,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "The Friends of Oystermouth Castle",
+        "url": "https://oystermouthcastle.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "The Friends of Oystermouth Castle",
+        "url": "https://oystermouthcastle.org.uk/"
+      }
+    ]
   },
   {
     "name": "Neath Abbey",
@@ -56069,7 +56081,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Ewenny Priory Home Page",
+        "url": "https://www.ewennypriory.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Ewenny Priory Home Page",
+        "url": "https://www.ewennypriory.co.uk/"
+      }
+    ]
   },
   {
     "name": "Margam Abbey",
@@ -56718,7 +56742,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Caldicot Castle & Country Park – Monlife",
+        "url": "https://www.monlife.co.uk/heritage/caldicot-castle-country-park/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Caldicot Castle & Country Park – Monlife",
+        "url": "https://www.monlife.co.uk/heritage/caldicot-castle-country-park/"
+      }
+    ]
   },
   {
     "name": "Usk Castle",
@@ -56795,7 +56831,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Usk Castle – Usk's Enchanting Hidden Gem",
+        "url": "https://uskcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Usk Castle – Usk's Enchanting Hidden Gem",
+        "url": "https://uskcastle.com/"
+      }
+    ]
   },
   {
     "name": "Abergavenny Castle",
@@ -57189,7 +57237,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Welcome To Fonmon Castle",
+        "url": "https://fonmoncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Welcome To Fonmon Castle",
+        "url": "https://fonmoncastle.com/"
+      }
+    ]
   },
   {
     "name": "Llantrithyd Place",
@@ -57384,7 +57444,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Margam Castle - Margam Country Park",
+        "url": "http://www.margamcountrypark.co.uk/1242"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Margam Castle - Margam Country Park",
+        "url": "http://www.margamcountrypark.co.uk/1242"
+      }
+    ]
   },
   {
     "name": "Llanthony Priory",
@@ -57446,7 +57518,19 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "auditNote": "low gallery count"
+    "auditNote": "low gallery count",
+    "sources": [
+      {
+        "label": "Llanthony Priory",
+        "url": "https://www.llanthonypriory.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Llanthony Priory",
+        "url": "https://www.llanthonypriory.co.uk/"
+      }
+    ]
   },
   {
     "name": "Llanblethian Castle",
@@ -57644,7 +57728,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Llandaff Cathedral",
+        "url": "https://www.llandaffcathedral.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Llandaff Cathedral",
+        "url": "https://www.llandaffcathedral.org.uk/"
+      }
+    ]
   },
   {
     "name": "Dunraven Castle",
@@ -58011,7 +58107,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Ruperra Castle - Castell Rhiwr Perrai",
+        "url": "https://www.ruperracastle.wales/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Ruperra Castle - Castell Rhiwr Perrai",
+        "url": "https://www.ruperracastle.wales/"
+      }
+    ]
   },
   {
     "name": "Morlais Castle",
@@ -58266,7 +58374,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Penrice Castle Estate",
+        "url": "https://penricecastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Penrice Castle Estate",
+        "url": "https://penricecastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Llanmelin Wood Hillfort",
@@ -58694,7 +58814,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Welcome to Pembroke Castle",
+        "url": "https://pembrokecastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Welcome to Pembroke Castle",
+        "url": "https://pembrokecastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Kidwelly Castle",
@@ -58821,7 +58953,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Carreg Cennen Castle and Farm",
+        "url": "http://www.carregcennencastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Carreg Cennen Castle and Farm",
+        "url": "http://www.carregcennencastle.com/"
+      }
+    ]
   },
   {
     "name": "Laugharne Castle",
@@ -58961,7 +59105,19 @@
       "credit": "en:Image:DSCN4297-strata-florida-arch.JPG",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Strata Florida Trust",
+        "url": "https://www.strataflorida.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Strata Florida Trust",
+        "url": "https://www.strataflorida.org.uk/"
+      }
+    ]
   },
   {
     "name": "Talley Abbey",
@@ -59088,7 +59244,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Manorbier Castle",
+        "url": "https://manorbiercastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Manorbier Castle",
+        "url": "https://manorbiercastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Carew Castle",
@@ -59151,7 +59319,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Carew Castle and Tidal Mill - Pembrokeshire Coast National Park",
+        "url": "https://www.pembrokeshirecoast.wales/carew-castle/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Carew Castle and Tidal Mill - Pembrokeshire Coast National Park",
+        "url": "https://www.pembrokeshirecoast.wales/carew-castle/"
+      }
+    ]
   },
   {
     "name": "Cilgerran Castle",
@@ -59707,7 +59887,19 @@
       "credit": "From geograph.org.uk",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Cardigan Castle in Ceredigion Wales",
+        "url": "https://cardigancastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Cardigan Castle in Ceredigion Wales",
+        "url": "https://cardigancastle.com/"
+      }
+    ]
   },
   {
     "name": "Tenby Castle",
