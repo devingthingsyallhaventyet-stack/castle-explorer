@@ -201,6 +201,60 @@
         "enrichNotes": ""
       },
       "ts": 1779041983250
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Sycamore Gap\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* castle\n*Period:* 2nd century AD\n*Coords:* 55.0036, -2.3739\n*Wikipedia:* https://en.wikipedia.org/wiki/Sycamore_Gap_tree\n*Maps:* https://www.google.com/maps/search/Sycamore%20Gap/@55.0017,-2.3617,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMGY2v5jmOb01BISJK63v3TPFNB4hR8288s-eKRuS9arZP6M6fx3pYQtf9cGr_yUfDQPsTccsYAPpypqwFJj8z03gffiwsh9gAiIkQ1tsWn7QBuNHfP2dtWisgwywn3eo6r6GCEbIVuOMknFQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nThe Sycamore Gap tree, also known as the Robin Hood tree, was a 100–120-year-old sycamore tree next to Hadrian's Wall near Crag Lough in Northumberland, England. It was illegally felled in 2023 by Daniel Graham and Adam Carruthers, but has since sprouted from the stump. Standing in a dramatic dip in the landscape created by glacial meltwater, it was one of the country's most photographed trees and an emblem for the North East of England. It derived its alternative name from featuring in a prominent scene in the 1991 film Robin Hood: Prince of Thieves. The tree won the 2016 England Tree of the Year award, part of the Woodland Trust's annual competition that celebrates culturally and environmentally significant trees across the UK. As the national winner for England, the Sycamore Gap tree received a £1,000 care grant funded by the People's Postcode Lottery.\n\n_Listing 10 of 10_",
+      "listing": {
+        "name": "Sycamore Gap",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 55.0036,
+        "lng": -2.3739,
+        "mapsLink": "https://www.google.com/maps/search/Sycamore%20Gap/@55.0017,-2.3617,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMGY2v5jmOb01BISJK63v3TPFNB4hR8288s-eKRuS9arZP6M6fx3pYQtf9cGr_yUfDQPsTccsYAPpypqwFJj8z03gffiwsh9gAiIkQ1tsWn7QBuNHfP2dtWisgwywn3eo6r6GCEbIVuOMknFQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Sycamore Gap tree, also known as the Robin Hood tree, was a 100–120-year-old sycamore tree next to Hadrian's Wall near Crag Lough in Northumberland, England. It was illegally felled in 2023 by Daniel Graham and Adam Carruthers, but has since sprouted from the stump. Standing in a dramatic dip in the landscape created by glacial meltwater, it was one of the country's most photographed trees and an emblem for the North East of England. It derived its alternative name from featuring in a prominent scene in the 1991 film Robin Hood: Prince of Thieves. The tree won the 2016 England Tree of the Year award, part of the Woodland Trust's annual competition that celebrates culturally and environmentally significant trees across the UK. As the national winner for England, the Sycamore Gap tree received a £1,000 care grant funded by the People's Postcode Lottery.",
+        "type": "castle",
+        "period": "2nd century AD",
+        "rating": 4.5,
+        "tags": [
+          "atmospheric",
+          "photogenic",
+          "remote",
+          "hilltop",
+          "free-entry",
+          "filming-location"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Sycamore_Gap_tree"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/north-east/hadrians-wall-and-housesteads-fort/next-steps-for-the-sycamore-gap-tree"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Sycamore_Gap_tree",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Sycamore_Gap_Tree_arbre.jpg/330px-Sycamore_Gap_Tree_arbre.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Clementp.fr",
+          "license": "CC BY-SA 4.0",
+          "description": "Sycamore Gap, un arbre dans un creux",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779042039768
     }
   ]
 }
