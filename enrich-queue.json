@@ -184,6 +184,51 @@
         "enrichNotes": "add source - https://www.nationaltrust.org.uk/visit/wiltshire/avebury"
       },
       "ts": 1779058717693
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Baconsthorpe Castle\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* fortified house\n*Period:* 15th century\n*Coords:* 52.8985, 1.152\n*Wikipedia:* https://en.wikipedia.org/wiki/Baconsthorpe_Castle\n*Maps:* https://www.google.com/maps/search/Baconsthorpe%20Castle/@52.8871,1.1514,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMpx9Jf8rxExeUeBtfBxFc14fPh2JLuRN8iDPbKENhYpe9M7ez1NeXShmQ2ufangTEt5mYaYhD1umJbc-3vqcRxUtFoP23oQpdG1VeLp6edPHT1foBtsvO_p7a1aZOCIV2p8X-NxRBvl8QdfQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.english-heritage.org.uk/visit/places/baconsthorpe-castle/\n\n*Description:*\nBaconsthorpe Castle, historically known as Baconsthorpe Hall, is a ruined, fortified manor house near the village of Baconsthorpe, Norfolk, England. It was established in the 15th century on the site of a former manor hall, probably by John Heydon I and his father, William. John was an ambitious lawyer with many enemies and built a tall, fortified house, but his descendants became wealthy sheep farmers, and being less worried about attack, developed the property into a more elegant, courtyard house, complete with a nearby deer park.\n\n_Listing 4 of 4_",
+      "listing": {
+        "name": "Baconsthorpe Castle",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.8985,
+        "lng": 1.152,
+        "mapsLink": "https://www.google.com/maps/search/Baconsthorpe%20Castle/@52.8871,1.1514,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMpx9Jf8rxExeUeBtfBxFc14fPh2JLuRN8iDPbKENhYpe9M7ez1NeXShmQ2ufangTEt5mYaYhD1umJbc-3vqcRxUtFoP23oQpdG1VeLp6edPHT1foBtsvO_p7a1aZOCIV2p8X-NxRBvl8QdfQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Baconsthorpe Castle, historically known as Baconsthorpe Hall, is a ruined, fortified manor house near the village of Baconsthorpe, Norfolk, England. It was established in the 15th century on the site of a former manor hall, probably by John Heydon I and his father, William. John was an ambitious lawyer with many enemies and built a tall, fortified house, but his descendants became wealthy sheep farmers, and being less worried about attack, developed the property into a more elegant, courtyard house, complete with a nearby deer park.",
+        "type": "fortified house",
+        "period": "15th century",
+        "rating": 3.8,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Baconsthorpe_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Baconsthorpe_Castle_1.jpg/330px-Baconsthorpe_Castle_1.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mball93",
+          "license": "CC BY-SA 4.0",
+          "description": "Baconsthorpe Castle\n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Baconsthorpe Castle (Q4839962) with data related to this item.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.english-heritage.org.uk/visit/places/baconsthorpe-castle/",
+        "enrichNotes": "add source - https://www.english-heritage.org.uk/visit/places/baconsthorpe-castle/"
+      },
+      "ts": 1779058743325
     }
   ]
 }
