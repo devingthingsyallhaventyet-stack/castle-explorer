@@ -168,6 +168,7 @@ body{padding-bottom:50px}
     <div class="main-tab" id="tabEnrich" onclick="switchMainTab('enrich')">🔧 Enrich <span class="tab-badge" id="tabEnrichCount">0</span></div>
     <div class="main-tab" id="tabEnrichReview" onclick="switchMainTab('enrichReview')">🔍 Enrich Review <span class="tab-badge" id="tabEnrichReviewCount">0</span></div>
     <div class="main-tab" id="tabEnriched" onclick="switchMainTab('enriched')">✨ Enriched <span class="tab-badge" id="tabEnrichedCount">0</span></div>
+    <div class="main-tab" id="tabSourceReview" onclick="switchMainTab('sourceReview')">🔗 Source Review <span class="tab-badge" id="tabSourceReviewCount">0</span></div>
     <div class="main-tab" id="tabDead" onclick="switchMainTab('dead')">💀 Dead <span class="tab-badge" id="tabDeadCount">0</span></div>
     <div class="main-tab" id="tabDupes" onclick="switchMainTab('dupes')">🔀 Dupes <span class="tab-badge" id="tabDupesCount">0</span></div>
   </div>
@@ -302,7 +303,7 @@ function saveImageSelections() { const obj = {}; Object.keys(imageSelections).fo
 function switchMainTab(tab) {
   currentMainTab = tab;
   document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
-  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',imgReview:'tabImgReview',enrich:'tabEnrich',enrichReview:'tabEnrichReview',enriched:'tabEnriched',dead:'tabDead',dupes:'tabDupes'};
+  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',imgReview:'tabImgReview',enrich:'tabEnrich',enrichReview:'tabEnrichReview',enriched:'tabEnriched',sourceReview:'tabSourceReview',dead:'tabDead',dupes:'tabDupes'};
   document.getElementById(tabIds[tab]).classList.add('active');
   
   if (tab === 'dupes') {
@@ -315,7 +316,7 @@ function switchMainTab(tab) {
   }
   document.getElementById('dupesView').style.display = 'none';
   // Set view mode (but don't render yet — applyFilters will handle it)
-  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich' || tab === 'enriched') ? 'table' : (tab === 'imgReview' || tab === 'flagged' || tab === 'review' || tab === 'enrichReview') ? 'card' : 'card';
+  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich' || tab === 'enriched') ? 'table' : (tab === 'imgReview' || tab === 'flagged' || tab === 'review' || tab === 'enrichReview' || tab === 'sourceReview') ? 'card' : 'card';
   currentView = wantView;
   document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
   document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
@@ -323,14 +324,32 @@ function switchMainTab(tab) {
   document.getElementById('btnCardView').classList.toggle('active', wantView === 'card');
   document.getElementById('btnTableView').classList.toggle('active', wantView === 'table');
   document.getElementById('btnSendToClawz').style.display = (tab === 'enrichReview') ? 'inline-block' : 'none';
-  document.getElementById('reviewButtons').style.display = (tab === 'enrichReview') ? 'none' : 'inline';
+  document.getElementById('reviewButtons').style.display = (tab === 'enrichReview' || tab === 'sourceReview') ? 'none' : 'inline';
   document.getElementById('enrichReviewButtons').style.display = (tab === 'enrichReview') ? 'inline' : 'none';
+  
+  // Show/hide source review buttons
+  let sourceReviewButtons = document.getElementById('sourceReviewButtons');
+  if (!sourceReviewButtons) {
+    sourceReviewButtons = document.createElement('span');
+    sourceReviewButtons.id = 'sourceReviewButtons';
+    sourceReviewButtons.style.display = 'none';
+    sourceReviewButtons.innerHTML = `
+      <button style="background:var(--green);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="approveSource()">✅ Approve <span class="kbd">A</span></button>
+      <button style="background:var(--red);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="rejectSource()">❌ Reject <span class="kbd">F</span></button>
+    `;
+    document.getElementById('enrichReviewButtons').parentNode.insertBefore(sourceReviewButtons, document.getElementById('enrichReviewButtons').nextSibling);
+  }
+  sourceReviewButtons.style.display = (tab === 'sourceReview') ? 'inline' : 'none';
   applyFilters();
 }
 
 function updateTabCounts() {
-  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0, imgReview = 0, enrichReview = 0, enriched = 0;
+  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0, imgReview = 0, enrichReview = 0, enriched = 0, sourceReview = 0;
   allData.forEach(d => { const s = getStatus(d); if (s === 'approved') { ap++; if (!d.imageReviewDone) imgReview++; } else if (s === 'flagged') { if (d.enrichStatus === 'enriched') { enriched++; } else if (d.needsEnrich) { enrich++; if (enrichReview < 10) enrichReview++; } else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
+  // Count pending source candidates
+  if (window.sourceCandidates) {
+    sourceReview = window.sourceCandidates.filter(c => c.status === 'pending').length;
+  }
   document.getElementById('tabReviewCount').textContent = un;
   document.getElementById('tabFlaggedCount').textContent = fl;
   document.getElementById('tabApprovedCount').textContent = ap;
@@ -339,6 +358,7 @@ function updateTabCounts() {
   document.getElementById('tabEnrichCount').textContent = enrich;
   document.getElementById('tabEnrichReviewCount').textContent = enrichReview;
   document.getElementById('tabEnrichedCount').textContent = enriched;
+  document.getElementById('tabSourceReviewCount').textContent = sourceReview;
   document.getElementById('tabDeadCount').textContent = dead;
 }
 
@@ -387,6 +407,16 @@ fetch('audit-data.json').then(r => r.json()).then(data => {
   }).catch(()=>{});
 });
 
+// Load source candidates
+window.sourceCandidates = [];
+fetch('source-candidates.json').then(r => r.json()).then(data => {
+  window.sourceCandidates = data.candidates || [];
+  updateTabCounts();
+}).catch(() => {
+  console.log('No source-candidates.json found, using empty array');
+  window.sourceCandidates = [];
+});
+
 function populateFilters() {
   const countries = [...new Set(allData.map(d => d.country))].sort();
   const sources = [...new Set(allData.map(d => d.imgSource).filter(Boolean))].sort();
@@ -400,22 +430,33 @@ function applyFilters() {
   const q = document.getElementById('searchBox').value.toLowerCase();
   const country = document.getElementById('countryFilter').value;
   const imgSrc = document.getElementById('imgSourceFilter').value;
-  // Use main tab for status filtering
-  filtered = allData.filter(d => {
-    if (q && !d.name.toLowerCase().includes(q) && !(d.county||'').toLowerCase().includes(q)) return false;
-    if (country && d.country !== country) return false;
-    if (imgSrc && d.imgSource !== imgSrc) return false;
-    const s = getStatus(d);
-    if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
-    if (currentMainTab === 'enriched') return s === 'flagged' && d.enrichStatus === 'enriched';
-    if (currentMainTab === 'enrich') return s === 'flagged' && d.needsEnrich === true && d.enrichStatus !== 'enriched';
-    if (currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && !d.enrichStatus;
-    if (currentMainTab === 'imgReview') return s === 'approved' && !d.imageReviewDone;
-    if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
-    if (currentMainTab === 'approved') return s === 'approved';
-    if (currentMainTab === 'review') return s === 'unreviewed';
-    return true;
-  });
+  
+  if (currentMainTab === 'sourceReview') {
+    // For source review, filter pending source candidates
+    filtered = (window.sourceCandidates || []).filter(c => {
+      if (c.status !== 'pending') return false;
+      if (q && !c.name.toLowerCase().includes(q)) return false;
+      return true;
+    });
+  } else {
+    // Use main tab for status filtering
+    filtered = allData.filter(d => {
+      if (q && !d.name.toLowerCase().includes(q) && !(d.county||'').toLowerCase().includes(q)) return false;
+      if (country && d.country !== country) return false;
+      if (imgSrc && d.imgSource !== imgSrc) return false;
+      const s = getStatus(d);
+      if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
+      if (currentMainTab === 'enriched') return s === 'flagged' && d.enrichStatus === 'enriched';
+      if (currentMainTab === 'enrich') return s === 'flagged' && d.needsEnrich === true && d.enrichStatus !== 'enriched';
+      if (currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && !d.enrichStatus;
+      if (currentMainTab === 'imgReview') return s === 'approved' && !d.imageReviewDone;
+      if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
+      if (currentMainTab === 'approved') return s === 'approved';
+      if (currentMainTab === 'review') return s === 'unreviewed';
+      return true;
+    });
+  }
+  
   if (currentMainTab === 'enrichReview') filtered = filtered.slice(0, 10);
   currentIdx = 0;
   if (currentView === 'card') renderCard();
@@ -447,10 +488,82 @@ function updateProgress() {
   updateTabCounts();
 }
 
+// Source candidate rendering
+function renderSourceCandidate(el) {
+  const candidate = filtered[currentIdx];
+  
+  // Find the corresponding listing in allData
+  const listing = allData.find(d => d.name === candidate.name);
+  if (!listing) {
+    el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">Listing not found in audit data.</p>';
+    return;
+  }
+
+  const hasCoords = listing.lat && listing.lng;
+  const mapUrl = hasCoords
+    ? `https://www.openstreetmap.org/export/embed.html?bbox=${listing.lng-0.02},${listing.lat-0.015},${Number(listing.lng)+0.02},${Number(listing.lat)+0.015}&layer=mapnik&marker=${listing.lat},${listing.lng}`
+    : null;
+  const mapsSearchUrl = listing.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(listing.name+' '+(listing.county||'')+' castle')}`;
+
+  el.innerHTML = `
+    <div class="card-header">
+      <h1>${esc(candidate.name)} <span class="counter">${currentIdx+1} / ${filtered.length}</span></h1>
+      <div class="meta">
+        <span>🌍 ${esc(listing.country)}</span>
+        ${listing.region ? `<span>📍 ${esc(listing.region.replace(/-/g,' '))}</span>` : ''}
+        ${listing.county ? `<span>🏛 ${esc(listing.county)}</span>` : ''}
+        <span style="background:#1a0f00;border-color:var(--gold);color:var(--gold)">🔍 Source Review</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="col-left">
+        <div class="main-image-wrap">
+          ${listing.image ? `<img class="main-image" id="mainImg" src="${esc(listing.image)}" alt="${esc(listing.name)}" onerror="this.src='';this.alt='Image failed to load'">` : '<div style="height:300px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted)">No image</div>'}
+        </div>
+      </div>
+      <div class="col-right">
+        ${mapUrl ? `<iframe src="${mapUrl}" allowfullscreen loading="lazy" style="width:100%;height:350px;border:1px solid var(--border);border-radius:8px"></iframe>` : `<div style="height:350px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted);flex-direction:column;gap:8px"><span>No coordinates</span><a href="${mapsSearchUrl}" target="_blank">Search Google Maps →</a></div>`}
+        ${hasCoords ? `<div style="font-size:12px;color:var(--muted);margin-top:4px">📍 ${listing.lat}, ${listing.lng} · <a href="${mapsSearchUrl}" target="_blank">Open in Google Maps</a></div>` : ''}
+      </div>
+    </div>
+    <div class="blurb-section">
+      <h3>Current Description</h3>
+      <p style="font-size:14px;line-height:1.6;color:var(--muted)">${listing.desc ? esc(listing.desc) : '<em>No description</em>'}</p>
+    </div>
+    <div class="blurb-section" style="border-color:var(--green)">
+      <h3 style="color:var(--green)">✅ Current Sources</h3>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-top:8px">
+        ${(listing.wikipediaUrl||listing.wiki) ? `<a href="${esc(listing.wikipediaUrl||listing.wiki)}" target="_blank" style="display:flex;align-items:center;gap:6px">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">❌ No Wikipedia</span>'}
+        ${listing.mapsLink ? `<a href="${esc(listing.mapsLink)}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps ↗</a>` : (hasCoords ? `<a href="${mapsSearchUrl}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps (search) ↗</a>` : '<span style="color:var(--muted)">❌ No Maps link</span>')}
+      </div>
+    </div>
+    <div class="blurb-section" style="border-color:var(--blue)">
+      <h3 style="color:var(--blue)">🔗 Candidate Source</h3>
+      <div style="margin-bottom:12px">
+        <div style="font-size:16px;font-weight:600;margin-bottom:8px">
+          <a href="${esc(candidate.candidateUrl)}" target="_blank" style="color:var(--blue)">${esc(candidate.candidateLabel || candidate.candidateUrl)} ↗</a>
+        </div>
+        <div style="font-size:13px;color:var(--muted)">Found: ${candidate.foundDate || 'Unknown'}</div>
+      </div>
+      <iframe src="${esc(candidate.candidateUrl)}" style="width:100%;height:400px;border:1px solid var(--border);border-radius:8px;margin-bottom:12px" loading="lazy"></iframe>
+      <div style="text-align:center;margin-top:12px">
+        <a href="${esc(candidate.candidateUrl)}" target="_blank" style="display:inline-block;background:var(--blue);color:#fff;padding:8px 20px;border-radius:6px;text-decoration:none;font-weight:600">🌐 Open in New Tab</a>
+      </div>
+    </div>
+  `;
+}
+
 // Card rendering
 function renderCard() {
   const el = document.getElementById('cardView');
   if (!filtered.length) { el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">No listings match your filters.</p>'; return; }
+  
+  // Handle source review differently
+  if (currentMainTab === 'sourceReview') {
+    renderSourceCandidate(el);
+    return;
+  }
+  
   const d = filtered[currentIdx];
   const key = getKey(d);
   const st = reviewState[key];
@@ -604,6 +717,7 @@ function openAllLinks() {
   const wiki = d.wikipediaUrl || d.wiki;
   const maps = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
   const google = `https://www.google.com/search?q=${encodeURIComponent(d.name + ' castle ' + (d.county||'') + ' ' + d.country)}`;
+  // All synchronous in click handler for best popup-blocker compat
   if (wiki) window.open(wiki, '_blank');
   window.open(maps, '_blank');
   window.open(google, '_blank');
@@ -802,8 +916,18 @@ document.addEventListener('keydown', e => {
     else if (e.key >= '1' && e.key <= '8') { toggleFlagReason(parseInt(e.key)-1); e.preventDefault(); }
     return;
   }
-  if (e.key === 'a' || e.key === 'A') { if (currentMainTab === 'enrichReview') markEnriched(); else doApprove(); e.preventDefault(); }
-  else if (e.key === 'f' || e.key === 'F') { if (currentMainTab === 'enrichReview') markStillInProgress(); else quickFlag(); e.preventDefault(); }
+  if (e.key === 'a' || e.key === 'A') { 
+    if (currentMainTab === 'enrichReview') markEnriched(); 
+    else if (currentMainTab === 'sourceReview') approveSource(); 
+    else doApprove(); 
+    e.preventDefault(); 
+  }
+  else if (e.key === 'f' || e.key === 'F') { 
+    if (currentMainTab === 'enrichReview') markStillInProgress(); 
+    else if (currentMainTab === 'sourceReview') rejectSource(); 
+    else quickFlag(); 
+    e.preventDefault(); 
+  }
   else if (e.key === 's' || e.key === 'S' || e.key === 'ArrowRight') { goNext(); e.preventDefault(); }
   else if (e.key === 'ArrowLeft') { goPrev(); e.preventDefault(); }
 });
@@ -1234,9 +1358,16 @@ function saveProgressToFile() {
     else delete copy.flaggedFields;
     return copy;
   });
-  const json = JSON.stringify(updated, null, 2);
+  
+  // Prepare combined export with source candidates
+  const exportData = {
+    'audit-data.json': updated,
+    'source-candidates.json': { candidates: window.sourceCandidates || [] }
+  };
+  
+  const json = JSON.stringify(exportData, null, 2);
   navigator.clipboard.writeText(json).then(() => {
-    alert('Copied audit-data.json to clipboard! Paste it to Clawz to deploy.');
+    alert('Copied audit-data.json and source-candidates.json to clipboard! Paste it to Clawz to deploy.');
   }).catch(() => {
     // Fallback: show in a textarea for manual copy
     const overlay = document.createElement('div');
@@ -1259,6 +1390,68 @@ function updateExportCount() {
 }
 const _origUpdateProgress = updateProgress;
 updateProgress = function() { _origUpdateProgress(); updateExportCount(); };
+
+// Source review functions
+function approveSource() {
+  if (!filtered.length || currentMainTab !== 'sourceReview') return;
+  
+  const candidate = filtered[currentIdx];
+  const listing = allData.find(d => d.name === candidate.name);
+  if (!listing) return;
+  
+  // Update candidate status
+  candidate.status = 'approved';
+  
+  // Add to listing's sources arrays
+  if (!listing.sources) listing.sources = [];
+  if (!listing.verifiedSources) listing.verifiedSources = [];
+  
+  const sourceEntry = {
+    label: candidate.candidateLabel || 'Official Website',
+    url: candidate.candidateUrl
+  };
+  
+  // Avoid duplicates
+  if (!listing.sources.find(s => s.url === sourceEntry.url)) {
+    listing.sources.push(sourceEntry);
+  }
+  if (!listing.verifiedSources.find(s => s.url === sourceEntry.url)) {
+    listing.verifiedSources.push(sourceEntry);
+  }
+  
+  // Save source candidates
+  saveSourceCandidates();
+  
+  // Update counts and advance
+  updateTabCounts();
+  advanceToNext();
+}
+
+function rejectSource() {
+  if (!filtered.length || currentMainTab !== 'sourceReview') return;
+  
+  const candidate = filtered[currentIdx];
+  
+  // Update candidate status
+  candidate.status = 'rejected';
+  
+  // Save source candidates
+  saveSourceCandidates();
+  
+  // Update counts and advance
+  updateTabCounts();
+  advanceToNext();
+}
+
+function saveSourceCandidates() {
+  const data = { candidates: window.sourceCandidates || [] };
+  const json = JSON.stringify(data, null, 2);
+  
+  // Note: This would need to be saved to file in a real implementation
+  // For now, we'll just update the in-memory data
+  // In a real deployment, you'd need a save endpoint
+  console.log('Source candidates updated:', data);
+}
 </script>
 </body>
 </html>
