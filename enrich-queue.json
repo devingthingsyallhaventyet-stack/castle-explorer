@@ -370,6 +370,56 @@
         "enrichNotes": "https://www.langleycastle.co.uk/en/ add source, mark as hotel "
       },
       "ts": 1779038803813
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Bellister Castle\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* castle\n*Period:* 14th century / 19th century\n*Coords:* 54.961, -2.468\n*Wikipedia:* https://en.wikipedia.org/wiki/Bellister_Castle\n*Maps:* https://www.google.com/maps/search/Bellister%20Castle/@54.87,-2.436,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bellister_Castle_-_geograph.org.uk_-_2765227.jpg/330px-Bellister_Castle_-_geograph.org.uk_-_2765227.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nBellister Castle is a National Trust owned castellated 19th-century mansion house attached to the ruinous remains of a 14th-century tower house, near Haltwhistle, Northumberland, England. It is a Scheduled Ancient Monument and a Grade I listed building. The house is leased as a private residence and not open to the public.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Bellister Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 54.961,
+        "lng": -2.468,
+        "mapsLink": "https://www.google.com/maps/search/Bellister%20Castle/@54.87,-2.436,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bellister_Castle_-_geograph.org.uk_-_2765227.jpg/330px-Bellister_Castle_-_geograph.org.uk_-_2765227.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Bellister Castle is a National Trust owned castellated 19th-century mansion house attached to the ruinous remains of a 14th-century tower house, near Haltwhistle, Northumberland, England. It is a Scheduled Ancient Monument and a Grade I listed building. The house is leased as a private residence and not open to the public.",
+        "type": "castle",
+        "period": "14th century / 19th century",
+        "rating": 3.4,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric",
+          "riverside"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bellister_Castle"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=3070"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bellister_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bellister_Castle_-_geograph.org.uk_-_2765227.jpg/330px-Bellister_Castle_-_geograph.org.uk_-_2765227.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bellister_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1779038851684
     }
   ]
 }
