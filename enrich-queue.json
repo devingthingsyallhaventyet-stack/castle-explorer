@@ -593,6 +593,45 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/mb2w9uPrnFHEo48S8\n"
       },
       "ts": 1779052990066
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Thoor Ballylee\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 53.10316667, -8.77477778\n*Wikipedia:* https://en.wikipedia.org/wiki/Thoor_Ballylee\n*Maps:* https://www.google.com/maps/search/Thoor%20Ballylee/@53.0806,-8.6722,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Thoor_Ballylee002%28js%29.jpg/330px-Thoor_Ballylee002%28js%29.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://yeatsthoorballylee.org/\n\n*Description:*\nThoor Ballylee Castle is a fortified, 15th-century Anglo-Norman tower house built by the septs de Burgo, or Burke, near the town of Gort in County Galway, Ireland. It is also known as Yeats's Tower because it was once owned and inhabited by the poet William Butler Yeats.\n\n_Listing 13 of 19_",
+      "listing": {
+        "name": "Thoor Ballylee",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.10316667,
+        "lng": -8.77477778,
+        "mapsLink": "https://www.google.com/maps/search/Thoor%20Ballylee/@53.0806,-8.6722,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Thoor_Ballylee002%28js%29.jpg/330px-Thoor_Ballylee002%28js%29.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Thoor Ballylee Castle is a fortified, 15th-century Anglo-Norman tower house built by the septs de Burgo, or Burke, near the town of Gort in County Galway, Ireland. It is also known as Yeats's Tower because it was once owned and inhabited by the poet William Butler Yeats.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Thoor_Ballylee",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Thoor_Ballylee002%28js%29.jpg/330px-Thoor_Ballylee002%28js%29.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Thoor_Ballylee",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://yeatsthoorballylee.org/",
+        "enrichNotes": "add source - https://yeatsthoorballylee.org/"
+      },
+      "ts": 1779053022939
     }
   ]
 }
