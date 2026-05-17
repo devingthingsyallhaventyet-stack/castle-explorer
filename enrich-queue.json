@@ -719,6 +719,60 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1779051249888
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Gloucester Blackfriars\n*Country:* england\n*Region:* south west\n*County:* Gloucestershire\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 51.864107, -2.248662\n*Wikipedia:* https://en.wikipedia.org/wiki/Blackfriars,_Gloucester\n*Maps:* https://www.google.com/maps/search/Gloucester%20Blackfriars/@51.865,-2.2483,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Gloucester_Blackfriars_20.08.11.JPG/330px-Gloucester_Blackfriars_20.08.11.JPG\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update name to Blackfriars Priory\n\n\n*Description:*\nBlackfriars, Gloucester, England, founded about 1239, is one of the most complete surviving Dominican black friaries in England.\nNow owned by English Heritage and restored in 1960, it is currently leased to Gloucester City Council and used for weddings, concerts, exhibitions, guided tours, filming, educational events and private hires. The former church, since converted into a house, is a Grade I listed building.\n\n_Listing 15 of 53_",
+      "listing": {
+        "name": "Gloucester Blackfriars",
+        "country": "england",
+        "region": "south-west",
+        "county": "Gloucestershire",
+        "lat": 51.864107,
+        "lng": -2.248662,
+        "mapsLink": "https://www.google.com/maps/search/Gloucester%20Blackfriars/@51.865,-2.2483,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Gloucester_Blackfriars_20.08.11.JPG/330px-Gloucester_Blackfriars_20.08.11.JPG",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Blackfriars, Gloucester, England, founded about 1239, is one of the most complete surviving Dominican black friaries in England.\nNow owned by English Heritage and restored in 1960, it is currently leased to Gloucester City Council and used for weddings, concerts, exhibitions, guided tours, filming, educational events and private hires. The former church, since converted into a house, is a Grade I listed building.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "medieval",
+          "well-preserved",
+          "atmospheric",
+          "events-venue",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/gloucester-blackfriars/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Blackfriars%2C_Gloucester",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Gloucester_Blackfriars_20.08.11.JPG/330px-Gloucester_Blackfriars_20.08.11.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Philafrenzy",
+          "license": "CC0",
+          "description": "Gloucester Blackfriars, west end.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Blackfriars,_Gloucester",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update name to Blackfriars Priory\n",
+        "enrichNotes": "update name to Blackfriars Priory\n"
+      },
+      "ts": 1779051286975
     }
   ]
 }
