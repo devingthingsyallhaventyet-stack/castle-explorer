@@ -770,6 +770,73 @@
         "enrichNotes": ""
       },
       "ts": 1779046002468
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* White Castle\n*Country:* wales\n*Region:* south wales\n*County:* Monmouthshire\n*Type:* castle\n*Period:* 11th-13th century\n*Coords:* 51.8095, -2.8817\n*Wikipedia:* https://en.wikipedia.org/wiki/White_Castle_(castle)\n*Maps:* https://www.google.com/maps/search/White%20Castle/@51.8095,-2.8817,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/GrosmontCastle4.jpg/500px-GrosmontCastle4.jpg\n*Gallery:* 12 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Update wikipedia link - https://en.wikipedia.org/wiki/White_Castle,_Monmouthshire\n\n\n*Description:*\nWhite Castle may refer to:\n\n_Listing 15 of 28_",
+      "listing": {
+        "name": "White Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Monmouthshire",
+        "lat": 51.8095,
+        "lng": -2.8817,
+        "mapsLink": "https://www.google.com/maps/search/White%20Castle/@51.8095,-2.8817,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/GrosmontCastle4.jpg/500px-GrosmontCastle4.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/white-castle-2.jpg",
+          "https://img.castlecore.uk/white-castle-3.jpg",
+          "https://img.castlecore.uk/white-castle-4.jpg",
+          "https://img.castlecore.uk/white-castle-5.jpg",
+          "https://img.castlecore.uk/white-castle-ruins-2.jpg",
+          "https://img.castlecore.uk/white-castle-ruins-3.jpg",
+          "https://img.castlecore.uk/white-castle-ruins-4.jpg",
+          "https://img.castlecore.uk/white-castle-ruins-5.jpg",
+          "https://img.castlecore.uk/white-castle-keep-2.jpg",
+          "https://img.castlecore.uk/white-castle-keep-3.jpg",
+          "https://img.castlecore.uk/white-castle-keep-4.jpg",
+          "https://img.castlecore.uk/white-castle-keep-5.jpg"
+        ],
+        "desc": "White Castle may refer to:",
+        "type": "castle",
+        "period": "11th-13th century",
+        "rating": 4.3,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "photogenic",
+          "free-entry",
+          "medieval",
+          "norman"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/White_Castle_(castle)"
+          },
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/white-castle"
+          },
+          {
+            "name": "Three Castles Walk",
+            "url": "https://www.threecastleswalk.co.uk/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/White_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/White_Castle_(castle)",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "Update wikipedia link - https://en.wikipedia.org/wiki/White_Castle,_Monmouthshire\n",
+        "enrichNotes": "Update wikipedia link - https://en.wikipedia.org/wiki/White_Castle,_Monmouthshire\n"
+      },
+      "ts": 1779046057908
     }
   ]
 }
