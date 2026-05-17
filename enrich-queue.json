@@ -749,6 +749,67 @@
         "enrichNotes": ""
       },
       "ts": 1779050136641
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dolforwyn Castle\n*Country:* wales\n*Region:* mid wales marches\n*County:* Powys\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.5462, -3.252\n*Wikipedia:* https://en.wikipedia.org/wiki/Dolforwyn_Castle\n*Maps:* https://www.google.com/maps/search/Dolforwyn%20Castle/@52.5333,-3.3,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg/330px-Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDolforwyn Castle is a Welsh medieval castle above the village of Abermule, Powys. The fortification was established by Llywelyn ap Gruffudd, Prince of Gwynedd in the late 13th century. It is sited on a wooded ridge commanding excellent views of the upper Severn Valley.\n\n_Listing 16 of 79_",
+      "listing": {
+        "name": "Dolforwyn Castle",
+        "country": "wales",
+        "region": "mid-wales-marches",
+        "county": "Powys",
+        "lat": 52.5462,
+        "lng": -3.252,
+        "mapsLink": "https://www.google.com/maps/search/Dolforwyn%20Castle/@52.5333,-3.3,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg/330px-Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Dolforwyn Castle is a Welsh medieval castle above the village of Abermule, Powys. The fortification was established by Llywelyn ap Gruffudd, Prince of Gwynedd in the late 13th century. It is sited on a wooded ridge commanding excellent views of the upper Severn Valley.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.1,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free-entry",
+          "hilltop",
+          "medieval",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Dolforwyn_Castle"
+          },
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/dolforwyn-castle"
+          },
+          {
+            "name": "Castles of Wales",
+            "url": "https://www.castlesofwales.com/dolforwyn-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dolforwyn_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg/330px-Dolforwyn_Castle%2C_Powys_-_geograph.org.uk_-_404113.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mr M Evison",
+          "license": "CC BY-SA 2.0",
+          "description": "Dolforwyn Castle, Powys",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dolforwyn_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050169429
     }
   ]
 }
