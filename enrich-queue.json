@@ -1,3 +1,53 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lytes Cary Manor\n*Country:* england\n*Region:* south west\n*County:* Somerset\n*Type:* castle\n*Period:* 14th-16th century\n*Coords:* 51.0358, -2.6677\n*Wikipedia:* https://en.wikipedia.org/wiki/Lytes_Cary\n*Maps:* https://www.google.com/maps/search/Lytes%20Cary%20Manor/@51.0217,-2.6917,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNUg5PfgpyaHu7Wh6bDG_Id-oJxjFYITOsIBpwN16lnRBjnQiQARTfAOcnc0eS3gS00MXrMaV3c1083WfqH7XBLQVrdYgeapNqJCyHSADa7we6uh5Ry4lf9875Jw3vYjlFN-Led8TNqZ6ODWA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nLytes Cary is a manor house with associated chapel and gardens near Charlton Mackrell and Somerton in Somerset, England. The property, owned by the National Trust, has parts dating to the 14th century, with other sections dating to the 15th, 16th, 18th, and 20th centuries. \"Yet all parts blend to perfection with one another and with the gentle sunny landscape that surrounds them,\" comments Nikolaus Pevsner. The House is listed as Grade I by English Heritage.\n\n_Listing 1 of 28_",
+      "listing": {
+        "name": "Lytes Cary Manor",
+        "country": "england",
+        "region": "south-west",
+        "county": "Somerset",
+        "lat": 51.0358,
+        "lng": -2.6677,
+        "mapsLink": "https://www.google.com/maps/search/Lytes%20Cary%20Manor/@51.0217,-2.6917,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNUg5PfgpyaHu7Wh6bDG_Id-oJxjFYITOsIBpwN16lnRBjnQiQARTfAOcnc0eS3gS00MXrMaV3c1083WfqH7XBLQVrdYgeapNqJCyHSADa7we6uh5Ry4lf9875Jw3vYjlFN-Led8TNqZ6ODWA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lytes Cary is a manor house with associated chapel and gardens near Charlton Mackrell and Somerton in Somerset, England. The property, owned by the National Trust, has parts dating to the 14th century, with other sections dating to the 15th, 16th, 18th, and 20th centuries. \"Yet all parts blend to perfection with one another and with the gentle sunny landscape that surrounds them,\" comments Nikolaus Pevsner. The House is listed as Grade I by English Heritage.",
+        "type": "castle",
+        "period": "14th-16th century",
+        "rating": 4.3,
+        "tags": [
+          "medieval",
+          "gardens",
+          "atmospheric",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/somerset/lytes-cary-manor"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lytes_Cary",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Lytes_Cary_1920x1200.jpg/330px-Lytes_Cary_1920x1200.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Wehha",
+          "license": "CC BY-SA 3.0",
+          "description": "Lytes Cary in Somerset.  National Trust Property",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045758836
+    }
+  ]
 }
