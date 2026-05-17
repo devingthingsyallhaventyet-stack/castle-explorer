@@ -345,6 +345,53 @@
         "enrichNotes": ""
       },
       "ts": 1779052630849
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Roscommon Castle\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Roscommon\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.6333, -8.1833\n*Wikipedia:* https://en.wikipedia.org/wiki/Roscommon\n*Maps:* https://www.google.com/maps/search/Roscommon%20Castle/@53.6292,-8.1886,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Roscommon_-_aerial_-_2024-12-27_12.jpg/330px-Roscommon_-_aerial_-_2024-12-27_12.jpg\n*Gallery:* 8 images\n*Image Source:* wikipedia\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.visitroscommon.ie/roscommon-castle/\n\n*Description:*\nRoscommon is the county town and the largest town in County Roscommon in Ireland. It is roughly in the centre of Ireland, near the meeting of the N60, N61 and N63 roads. The town is in a civil parish of the same name.\n\n_Listing 8 of 19_",
+      "listing": {
+        "name": "Roscommon Castle",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Roscommon",
+        "lat": 53.6333,
+        "lng": -8.1833,
+        "mapsLink": "https://www.google.com/maps/search/Roscommon%20Castle/@53.6292,-8.1886,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Roscommon_-_aerial_-_2024-12-27_12.jpg/330px-Roscommon_-_aerial_-_2024-12-27_12.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/roscommon-castle-2.jpg",
+          "https://img.castlecore.uk/roscommon-castle-3.jpg",
+          "https://img.castlecore.uk/roscommon-castle-4.jpg",
+          "https://img.castlecore.uk/roscommon-castle-5.jpg",
+          "https://img.castlecore.uk/roscommon-castle-keep-2.jpg",
+          "https://img.castlecore.uk/roscommon-castle-keep-3.jpg",
+          "https://img.castlecore.uk/roscommon-castle-keep-4.jpg",
+          "https://img.castlecore.uk/roscommon-castle-keep-5.jpg"
+        ],
+        "desc": "Roscommon is the county town and the largest town in County Roscommon in Ireland. It is roughly in the centre of Ireland, near the meeting of the N60, N61 and N63 roads. The town is in a civil parish of the same name.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Roscommon",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Roscommon_-_aerial_-_2024-12-27_12.jpg/330px-Roscommon_-_aerial_-_2024-12-27_12.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.visitroscommon.ie/roscommon-castle/",
+        "enrichNotes": "add source - https://www.visitroscommon.ie/roscommon-castle/"
+      },
+      "ts": 1779052687443
     }
   ]
 }
