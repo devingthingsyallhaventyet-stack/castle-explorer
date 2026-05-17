@@ -202,6 +202,58 @@
         "enrichNotes": "need more info "
       },
       "ts": 1779060753601
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Pengersick Castle\n*Country:* england\n*Region:* south west\n*County:* Cornwall\n*Type:* tower house\n*Period:* 16th century\n*Coords:* 50.1064209, -5.3833807\n*Wikipedia:* https://en.wikipedia.org/wiki/Pengersick_Castle\n*Maps:* https://www.google.com/maps/search/Pengersick%20Castle/@50.0917,-5.3583,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqEVg9hZefO_bxAk2jsQJ1iTzS6aZISUL4WbyzlBZZIdCWDoT7_gj0tDlAr4dM9lVNQIdiBBLaHIqhXqkfyhQuESs_HVyoLDE28=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.pengersickcastle.com/\n\n*Description:*\nPengersick Castle is a fortified manor house located between the villages of Germoe and Praa Sands, in the civil parish of Breage, in Cornwall, England. The tower house, which is in the parish of Breage, is a Grade I listed building. Parts of the building date from the early 16th century.\n\n_Listing 5 of 260_",
+      "listing": {
+        "name": "Pengersick Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Cornwall",
+        "lat": 50.1064209,
+        "lng": -5.3833807,
+        "mapsLink": "https://www.google.com/maps/search/Pengersick%20Castle/@50.0917,-5.3583,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqEVg9hZefO_bxAk2jsQJ1iTzS6aZISUL4WbyzlBZZIdCWDoT7_gj0tDlAr4dM9lVNQIdiBBLaHIqhXqkfyhQuESs_HVyoLDE28=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Pengersick Castle is a fortified manor house located between the villages of Germoe and Praa Sands, in the civil parish of Breage, in Cornwall, England. The tower house, which is in the parish of Breage, is a Grade I listed building. Parts of the building date from the early 16th century.",
+        "type": "tower house",
+        "period": "16th century",
+        "rating": 3.8,
+        "tags": [
+          "haunted",
+          "dark-brooding",
+          "coastal",
+          "tudor",
+          "atmospheric",
+          "hidden-gem"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Pengersick_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Pengersick_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Pengersick_Castle_-_geograph.org.uk_-_54699.jpg/330px-Pengersick_Castle_-_geograph.org.uk_-_54699.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ken Ballinger",
+          "license": "CC BY-SA 2.0",
+          "description": "Pengersick Castle. Visit the farm next door - much better?",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.pengersickcastle.com/",
+        "enrichNotes": "add source - https://www.pengersickcastle.com/"
+      },
+      "ts": 1779060784294
     }
   ]
 }
