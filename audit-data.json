@@ -31004,7 +31004,19 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Hever Castle Official Website",
+        "url": "https://www.hevercastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Hever Castle Official Website",
+        "url": "https://www.hevercastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Arundel Castle",
@@ -33943,7 +33955,19 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hampton_Court_Palace",
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Hampton Court Palace - Historic Royal Palaces",
+        "url": "https://www.hrp.org.uk/hampton-court-palace/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Hampton Court Palace - Historic Royal Palaces",
+        "url": "https://www.hrp.org.uk/hampton-court-palace/"
+      }
+    ]
   },
   {
     "name": "Lympne Castle",
