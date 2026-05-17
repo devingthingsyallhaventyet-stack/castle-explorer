@@ -34,6 +34,118 @@
       "candidateLabel": "Inverlochy Castle Official Site",
       "reason": "Private castle website",
       "status": "pending"
+    },
+    {
+      "name": "Michelham Priory",
+      "candidateUrl": "https://sussexpast.co.uk/properties-to-discover/michelham-priory/",
+      "candidateLabel": "Sussex Past",
+      "reason": "Heritage org",
+      "status": "pending"
+    },
+    {
+      "name": "Newcastle Castle Keep",
+      "candidateUrl": "https://www.newcastlecastle.co.uk/",
+      "candidateLabel": "Newcastle Castle",
+      "reason": "Castle museum website",
+      "status": "pending"
+    },
+    {
+      "name": "Oxford Castle",
+      "candidateUrl": "https://www.oxfordcastleandprison.co.uk/",
+      "candidateLabel": "Oxford Castle & Prison",
+      "reason": "Tourist attraction website",
+      "status": "pending"
+    },
+    {
+      "name": "Auckland Palace",
+      "candidateUrl": "https://aucklandproject.org/",
+      "candidateLabel": "The Auckland Project",
+      "reason": "Heritage charity",
+      "status": "pending"
+    },
+    {
+      "name": "Ford Castle",
+      "candidateUrl": "https://www.ford-and-etal.co.uk/",
+      "candidateLabel": "Ford & Etal Estates",
+      "reason": "Private estate website",
+      "status": "pending"
+    },
+    {
+      "name": "Dudley Castle",
+      "candidateUrl": "https://www.dudleyzoo.org.uk/",
+      "candidateLabel": "Dudley Zoo & Castle",
+      "reason": "Zoo/castle attraction",
+      "status": "pending"
+    },
+    {
+      "name": "Balintore Castle",
+      "candidateUrl": "https://www.balintorecastle.co.uk/",
+      "candidateLabel": "Balintore Castle Trust",
+      "reason": "Restoration trust",
+      "status": "pending"
+    },
+    {
+      "name": "Corsewall Lighthouse",
+      "candidateUrl": "https://www.lighthousehotel.co.uk/",
+      "candidateLabel": "Corsewall Lighthouse Hotel",
+      "reason": "Hotel website",
+      "status": "pending"
+    },
+    {
+      "name": "Bodysgallen Hall",
+      "candidateUrl": "https://www.bodysgallen.com/",
+      "candidateLabel": "Bodysgallen Hall & Spa",
+      "reason": "Hotel website",
+      "status": "pending"
+    },
+    {
+      "name": "Whalley Abbey",
+      "candidateUrl": "https://www.whalleyabbey.org/",
+      "candidateLabel": "Whalley Abbey",
+      "reason": "Abbey/conference centre",
+      "status": "pending"
+    },
+    {
+      "name": "Hafod Estate",
+      "candidateUrl": "https://www.hafod.org/",
+      "candidateLabel": "The Hafod Trust",
+      "reason": "Heritage charity",
+      "status": "pending"
+    },
+    {
+      "name": "Craig y Nos Castle",
+      "candidateUrl": "https://www.craigynoscastle.com/",
+      "candidateLabel": "Craig y Nos Castle",
+      "reason": "Event venue website",
+      "status": "pending"
+    },
+    {
+      "name": "Lough Key Castle",
+      "candidateUrl": "https://www.loughkey.ie/",
+      "candidateLabel": "Lough Key Forest Park",
+      "reason": "Forest park website",
+      "status": "pending"
+    },
+    {
+      "name": "Cartmel Priory",
+      "candidateUrl": "https://cartmelpriory.org.uk/",
+      "candidateLabel": "Cartmel Priory",
+      "reason": "Church/priory website",
+      "status": "pending"
+    },
+    {
+      "name": "Kinnaird Head Castle",
+      "candidateUrl": "https://lighthousemuseum.org.uk/",
+      "candidateLabel": "Museum of Scottish Lighthouses",
+      "reason": "Museum website",
+      "status": "pending"
+    },
+    {
+      "name": "Bungay Castle",
+      "candidateUrl": "https://bungay-suffolk.co.uk/to-do/castle/",
+      "candidateLabel": "Bungay Castle",
+      "reason": "Local tourism site",
+      "status": "pending"
     }
   ]
 }
