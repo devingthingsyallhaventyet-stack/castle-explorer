@@ -386,6 +386,56 @@
         "enrichNotes": ""
       },
       "ts": 1779050998868
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Abbey Knockmoy\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 53.47, -8.62\n*Wikipedia:* https://en.wikipedia.org/wiki/Knockmoy_Abbey\n*Maps:* https://www.google.com/maps/search/Abbey%20Knockmoy/@53.47,-8.62,15z\n*Main Image:* https://img.castlecore.uk/abbey-knockmoy.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://maps.app.goo.gl/7xNzKjV54zGGn1aD6 update google places link \n\n\n*Description:*\nAbbeyknockmoy is a village and parish in County Galway, Ireland. It is known for the nearby ruins of the 12th century Cistercian abbey, established with the Kings of Connacht as its benefactors. The abbey was the burial site of King Cathal Crobhdearg Ua Conchobair and contains several examples of medieval wall paintings and sculpture. It was formerly part of the kingdom of the Soghain of Connacht.\n\n_Listing 9 of 53_",
+      "listing": {
+        "name": "Abbey Knockmoy",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.47,
+        "lng": -8.62,
+        "mapsLink": "https://www.google.com/maps/search/Abbey%20Knockmoy/@53.47,-8.62,15z",
+        "image": "https://img.castlecore.uk/abbey-knockmoy.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Abbeyknockmoy is a village and parish in County Galway, Ireland. It is known for the nearby ruins of the 12th century Cistercian abbey, established with the Kings of Connacht as its benefactors. The abbey was the burial site of King Cathal Crobhdearg Ua Conchobair and contains several examples of medieval wall paintings and sculpture. It was formerly part of the kingdom of the Soghain of Connacht.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.1,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Knockmoy_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Abbeyknockmoy",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Knockmoy_Abbey_957024.jpg/330px-Knockmoy_Abbey_957024.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Knockmoy_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://maps.app.goo.gl/7xNzKjV54zGGn1aD6 update google places link \n",
+        "enrichNotes": "https://maps.app.goo.gl/7xNzKjV54zGGn1aD6 update google places link \n"
+      },
+      "ts": 1779051047032
     }
   ]
 }
