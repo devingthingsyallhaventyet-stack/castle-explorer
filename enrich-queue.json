@@ -103,6 +103,60 @@
         "enrichNotes": ""
       },
       "ts": 1779038649018
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Norton Priory\n*Country:* england\n*Region:* northern england\n*County:* Cheshire\n*Type:* abbey\n*Period:* 12th-16th century\n*Coords:* 53.3423, -2.6799\n*Wikipedia:* https://en.wikipedia.org/wiki/Norton_Priory\n*Maps:* https://www.google.com/maps/search/Norton%20Priory/@53.35,-2.5667,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Norton_Priory.jpg/330px-Norton_Priory.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.nortonpriory.org/\n\n*Description:*\nNorton Priory is a historic site in Norton, Runcorn, Cheshire, England, comprising the remains of an abbey complex dating from the 12th to 16th centuries, and an 18th-century country house; it is now a museum. The remains are a scheduled ancient monument and are recorded in the National Heritage List for England as a designated Grade I listed building. They are considered to be the most important monastic remains in Cheshire.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Norton Priory",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cheshire",
+        "lat": 53.3423,
+        "lng": -2.6799,
+        "mapsLink": "https://www.google.com/maps/search/Norton%20Priory/@53.35,-2.5667,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Norton_Priory.jpg/330px-Norton_Priory.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Norton Priory is a historic site in Norton, Runcorn, Cheshire, England, comprising the remains of an abbey complex dating from the 12th to 16th centuries, and an 18th-century country house; it is now a museum. The remains are a scheduled ancient monument and are recorded in the National Heritage List for England as a designated Grade I listed building. They are considered to be the most important monastic remains in Cheshire.",
+        "type": "abbey",
+        "period": "12th-16th century",
+        "rating": 4,
+        "tags": [
+          "medieval",
+          "museum",
+          "gardens",
+          "kid-friendly",
+          "guided-tours",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Norton Priory",
+            "url": "https://www.nortonpriory.org/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Norton_Priory"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Norton_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Norton_Priory.jpg/330px-Norton_Priory.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "",
+          "license": "Public domain",
+          "description": "",
+          "credit": "",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.nortonpriory.org/",
+        "enrichNotes": "add source - https://www.nortonpriory.org/"
+      },
+      "ts": 1779038678937
     }
   ]
 }
