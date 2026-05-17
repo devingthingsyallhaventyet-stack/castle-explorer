@@ -80,6 +80,59 @@
         "enrichNotes": "add source - https://www.charlevillecastle.ie/"
       },
       "ts": 1779050824216
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kinnitty Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Offaly\n*Type:* castle\n*Period:* 13th-19th century\n*Coords:* 53.1, -7.7\n*Wikipedia:* https://en.wikipedia.org/wiki/Kinnitty_Castle\n*Maps:* https://www.google.com/maps/search/Kinnitty%20Castle/@53.068,-7.72,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/IMG_KinnittyCastle0973.jpg/330px-IMG_KinnittyCastle0973.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.kinnittycastlehotel.com/ add source, tag as hotel \n\n*Description:*\nKinnitty Castle or Castle Bernard is a 19th-century gothic revival castle and hotel in Kinnitty, County Offaly, Ireland. It is located contiguous to Droughtville and Lettybrook, north of the Slieve Bloom Mountains on the R421 regional road between the villages of Kinnitty and Cadamstown. A nearby pyramid was built by the Bernard family who resided in the castle.\n\n_Listing 3 of 53_",
+      "listing": {
+        "name": "Kinnitty Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Offaly",
+        "lat": 53.1,
+        "lng": -7.7,
+        "mapsLink": "https://www.google.com/maps/search/Kinnitty%20Castle/@53.068,-7.72,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/IMG_KinnittyCastle0973.jpg/330px-IMG_KinnittyCastle0973.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Kinnitty Castle or Castle Bernard is a 19th-century gothic revival castle and hotel in Kinnitty, County Offaly, Ireland. It is located contiguous to Droughtville and Lettybrook, north of the Slieve Bloom Mountains on the R421 regional road between the villages of Kinnitty and Cadamstown. A nearby pyramid was built by the Bernard family who resided in the castle.",
+        "type": "castle",
+        "period": "13th-19th century",
+        "rating": 4.1,
+        "tags": [
+          "atmospheric",
+          "haunted",
+          "gothic",
+          "woodland",
+          "romantic",
+          "wedding-venue",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kinnitty_Castle"
+          },
+          {
+            "name": "Slieve Bloom",
+            "url": "https://slievebloom.ie/visit/kinnitty-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Kinnitty_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/IMG_KinnittyCastle0973.jpg/330px-IMG_KinnittyCastle0973.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinnitty_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://www.kinnittycastlehotel.com/ add source, tag as hotel ",
+        "enrichNotes": "https://www.kinnittycastlehotel.com/ add source, tag as hotel "
+      },
+      "ts": 1779050868556
     }
   ]
 }
