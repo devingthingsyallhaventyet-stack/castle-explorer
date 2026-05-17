@@ -350,6 +350,64 @@
         "enrichNotes": ""
       },
       "ts": 1779050644961
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Garn Goch\n*Country:* wales\n*Region:* west wales\n*County:* Carmarthenshire\n*Type:* hillfort\n*Period:* Iron Age (c.800-100 BC)\n*Coords:* 51.902, -3.905\n*Wikipedia:* https://en.wikipedia.org/wiki/Y_Garn_Goch\n*Maps:* https://www.google.com/maps/search/Garn%20Goch/@51.8833,-3.7833,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Y_Garn_Coch_fort.JPG/330px-Y_Garn_Coch_fort.JPG\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nY Garn Goch is a hill in the Brecon Beacons National Park in the east of Carmarthenshire, Wales. The name means the 'red cairn'. It lies near the village of Bethlehem, three miles southwest of Llangadog and four miles east of Llandeilo on the southern side of the broad Towy Valley. It is also commonly known as either Garn Goch or Carn Goch. Current owners and land managers are the Bannau Brycheiniog National Park Authority.\n\n_Listing 6 of 61_",
+      "listing": {
+        "name": "Garn Goch",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Carmarthenshire",
+        "lat": 51.902,
+        "lng": -3.905,
+        "mapsLink": "https://www.google.com/maps/search/Garn%20Goch/@51.8833,-3.7833,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Y_Garn_Coch_fort.JPG/330px-Y_Garn_Coch_fort.JPG",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Y Garn Goch is a hill in the Brecon Beacons National Park in the east of Carmarthenshire, Wales. The name means the 'red cairn'. It lies near the village of Bethlehem, three miles southwest of Llangadog and four miles east of Llandeilo on the southern side of the broad Towy Valley. It is also commonly known as either Garn Goch or Carn Goch. Current owners and land managers are the Bannau Brycheiniog National Park Authority.",
+        "type": "hillfort",
+        "period": "Iron Age (c.800-100 BC)",
+        "rating": 4.1,
+        "tags": [
+          "prehistoric",
+          "hilltop",
+          "free-entry",
+          "remote",
+          "atmospheric",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Coflein – RCAHMW",
+            "url": "https://coflein.gov.uk/en/site/302673"
+          },
+          {
+            "name": "Wikipedia – Garn Goch",
+            "url": "https://en.wikipedia.org/wiki/Garn_Goch"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Y_Garn_Goch",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Y_Garn_Coch_fort.JPG/330px-Y_Garn_Coch_fort.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "FruitMonkey",
+          "license": "CC BY-SA 3.0",
+          "description": "Y Garn Coch, with the remains of the Iron Age fort in Carmarthenshire, Wales",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Y_Garn_Goch",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1779050675079
     }
   ]
 }
