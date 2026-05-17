@@ -1,3 +1,61 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Montacute House\n*Country:* england\n*Region:* south west\n*County:* Somerset\n*Type:* castle\n*Period:* 16th century\n*Coords:* 50.9525, -2.71611111\n*Wikipedia:* https://en.wikipedia.org/wiki/Montacute_House\n*Maps:* https://www.google.com/maps/search/Montacute%20House/@50.9483,-2.7167,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPVQnCsJKxprngVdMo-u_GP68KkisCKMxFymA-ewykrrDuFizZEeu3aoGZG20c66t69u6LkPS0Qk-c4uU_9HSIGH3Sy2-ZCTP0uoiupcOKvXmlq4nmFmCIi8MN5X1IVE1aBh18Ukpkz6dWOsls=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nMontacute House is a late Elizabethan mansion in Montacute, South Somerset, England. An example of English architecture created during a period that was moving from the medieval Gothic to the more classically-inspired Renaissance style, Montacute is one of the few prodigy houses to have survived almost unchanged from the Elizabethan era. The house has been designated as a Grade I listed building, and its gardens are also listed at the highest grade on the Register of Historic Parks and Gardens of Special Historic Interest in England.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Montacute House",
+        "country": "england",
+        "region": "south-west",
+        "county": "Somerset",
+        "lat": 50.9525,
+        "lng": -2.71611111,
+        "mapsLink": "https://www.google.com/maps/search/Montacute%20House/@50.9483,-2.7167,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPVQnCsJKxprngVdMo-u_GP68KkisCKMxFymA-ewykrrDuFizZEeu3aoGZG20c66t69u6LkPS0Qk-c4uU_9HSIGH3Sy2-ZCTP0uoiupcOKvXmlq4nmFmCIi8MN5X1IVE1aBh18Ukpkz6dWOsls=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Montacute House is a late Elizabethan mansion in Montacute, South Somerset, England. An example of English architecture created during a period that was moving from the medieval Gothic to the more classically-inspired Renaissance style, Montacute is one of the few prodigy houses to have survived almost unchanged from the Elizabethan era. The house has been designated as a Grade I listed building, and its gardens are also listed at the highest grade on the Register of Historic Parks and Gardens of Special Historic Interest in England.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "atmospheric",
+          "filming-location",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Montacute_House"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Montacute_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Montacute_House_East_Front_-_geograph.org.uk_-_851610.jpg/330px-Montacute_House_East_Front_-_geograph.org.uk_-_851610.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mike Searle",
+          "license": "CC BY-SA 2.0",
+          "description": "Montacute House East Front It was about the time of the Spanish Armada in 1588 that Sir Edward Phelips, a successful lawyer and Speaker of the House of Commons, commissioned the building of Montacute House. It was probably local builder William Arnold who was given the task of creating Sir Edward's new home in the Somerset countryside. Arnold used local Ham Hill stone to create a symmetrical 'H' plan building owing much to the classical detail of the Renaissance style of architecture. There is a carved date of 1601 over the east doorway, probably denoting the year the house was completed. \nThe Phelips family reigned supreme at Montacute for over three centuries, until the agricultural depression of the late C19 saw the last Phelips leave in 1911, and most of the house contents sold. The house was acquired by the National Trust in 1931. Montacute House is Grade I Listed.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779041644772
+    }
+  ]
 }
