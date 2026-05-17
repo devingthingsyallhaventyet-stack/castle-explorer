@@ -1,3 +1,63 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Speke Hall\n*Country:* england\n*Region:* northern england\n*County:* Merseyside\n*Type:* castle\n*Period:* 16th century\n*Coords:* 53.3368, -2.87422\n*Wikipedia:* https://en.wikipedia.org/wiki/Speke_Hall\n*Maps:* https://www.google.com/maps/search/Speke%20Hall/@53.35,-2.87,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOvGbk9J56eVTZL7Y2lZeQ8NcymEBnz0Pg44BAPWMe_j90d4IPoZDg-Tc0r3uvVMKE982xKYxPUxlrzHuIysnzWcWfqx9WO0f1zNtmREfN8Y-lUBtPm9Bd-NT8pNbAFfM_IW3m7gIPsXclzJg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nSpeke Hall is a wood-framed wattle-and-daub Tudor manor house in Speke, Liverpool, England. It is one of the finest surviving examples of its kind. It is owned by the National Trust and is a Grade I listed building.\n\n_Listing 1 of 80_",
+      "listing": {
+        "name": "Speke Hall",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Merseyside",
+        "lat": 53.3368,
+        "lng": -2.87422,
+        "mapsLink": "https://www.google.com/maps/search/Speke%20Hall/@53.35,-2.87,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOvGbk9J56eVTZL7Y2lZeQ8NcymEBnz0Pg44BAPWMe_j90d4IPoZDg-Tc0r3uvVMKE982xKYxPUxlrzHuIysnzWcWfqx9WO0f1zNtmREfN8Y-lUBtPm9Bd-NT8pNbAFfM_IW3m7gIPsXclzJg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Speke Hall is a wood-framed wattle-and-daub Tudor manor house in Speke, Liverpool, England. It is one of the finest surviving examples of its kind. It is owned by the National Trust and is a Grade I listed building.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "tudor",
+          "atmospheric",
+          "gardens",
+          "woodland",
+          "riverside",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Speke_Hall"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/liverpool-lancashire/speke-hall-garden-and-estate"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Speke_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Speke_Hall_front_2017.jpg/330px-Speke_Hall_front_2017.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Rodhullandemu",
+          "license": "CC BY-SA 4.0",
+          "description": "The most photographed view, from the front.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779042962515
+    }
+  ]
 }
