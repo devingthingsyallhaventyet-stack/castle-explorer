@@ -189,6 +189,57 @@
         "enrichNotes": "update google places - https://maps.app.goo.gl/jtaoWW85jkfNjs5s8\n"
       },
       "ts": 1779052557661
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Ormond Castle (Scotland)\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* castle\n*Period:* 16th century\n*Coords:* 57.55361111, -4.18\n*Wikipedia:* https://en.wikipedia.org/wiki/Ormond_Castle\n*Maps:* https://maps.app.goo.gl/keAmmjFPvuZqvdHw6\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP2f3cySbiV2xlO3jUAnzeXDBn1z_XnoIe9dPYPiYbKMMUH6LrjPTLFQz_I2m43vYRw0snBkjoDHg6i1ikfbxBfecx4Iv8cj94g2DYkJaN_iBoM-V-JTycKTD2339--mt38NSWZ26hZSRKJaBU=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more reseaerch needed \n\n*Description:*\nOrmond Castle, also known as Avoch Castle, was a powerful stronghold, overlooking the village of Avoch, on the Black Isle, in the former county of Ross and Cromarty, now part of Highland, Scotland. It controlled a prominent position overlooking the Moray Firth and critical to the sea access to Inverness.\n\n_Listing 5 of 19_",
+      "listing": {
+        "name": "Ormond Castle (Scotland)",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 57.55361111,
+        "lng": -4.18,
+        "mapsLink": "https://maps.app.goo.gl/keAmmjFPvuZqvdHw6",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP2f3cySbiV2xlO3jUAnzeXDBn1z_XnoIe9dPYPiYbKMMUH6LrjPTLFQz_I2m43vYRw0snBkjoDHg6i1ikfbxBfecx4Iv8cj94g2DYkJaN_iBoM-V-JTycKTD2339--mt38NSWZ26hZSRKJaBU=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Ormond Castle, also known as Avoch Castle, was a powerful stronghold, overlooking the village of Avoch, on the Black Isle, in the former county of Ross and Cromarty, now part of Highland, Scotland. It controlled a prominent position overlooking the Moray Firth and critical to the sea access to Inverness.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "tudor",
+          "guided-tours",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/ormond-castle/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ormond_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ormond_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Top_of_Ormond_Hill_-_geograph.org.uk_-_235640.jpg/330px-Top_of_Ormond_Hill_-_geograph.org.uk_-_235640.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ormond_Castle",
+        "imageAttribution": "local",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "more reseaerch needed ",
+        "enrichNotes": "more reseaerch needed "
+      },
+      "ts": 1779052584320
     }
   ]
 }
