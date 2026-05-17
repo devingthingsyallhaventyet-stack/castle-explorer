@@ -457,6 +457,54 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/cnNHNkiTm6FqKf8h9\n"
       },
       "ts": 1779044700706
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Blarney Castle\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Cork\n*Type:* castle\n*Period:* 15th century\n*Coords:* 51.9289, -8.5708\n*Wikipedia:* https://en.wikipedia.org/wiki/Blarney_Castle\n*Maps:* https://www.google.com/maps/search/Blarney%20Castle/@51.9291,-8.5709,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMKyXchhfOQiU9vYW9ADn01wUvD4yWfcStoNJtrVZHgk4i90gAjc3sQu9z-u5GDxfFYikJMmED-nppC5UE6__xg-8MYjqQcWimehOIqvWua_ezKO3FQ-o9eaDkUPqmp76iVlUaTkWYHigM9Zg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places - https://maps.app.goo.gl/RDSWhm4i4dFLpoLa6\n\n*Description:*\nBlarney Castle is a medieval stronghold in Blarney, a town in Cork, Ireland. Though earlier fortifications were built on the same spot, the current keep was built by the MacCarthy of Muskerry dynasty, a cadet branch of the Kings of Desmond, and dates from 1446. The Blarney Stone is among the machicolations of the castle.\n\n_Listing 9 of 50_",
+      "listing": {
+        "name": "Blarney Castle",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Cork",
+        "lat": 51.9289,
+        "lng": -8.5708,
+        "mapsLink": "https://www.google.com/maps/search/Blarney%20Castle/@51.9291,-8.5709,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMKyXchhfOQiU9vYW9ADn01wUvD4yWfcStoNJtrVZHgk4i90gAjc3sQu9z-u5GDxfFYikJMmED-nppC5UE6__xg-8MYjqQcWimehOIqvWua_ezKO3FQ-o9eaDkUPqmp76iVlUaTkWYHigM9Zg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Blarney Castle is a medieval stronghold in Blarney, a town in Cork, Ireland. Though earlier fortifications were built on the same spot, the current keep was built by the MacCarthy of Muskerry dynasty, a cadet branch of the Kings of Desmond, and dates from 1446. The Blarney Stone is among the machicolations of the castle.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Blarney_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blarney_Castle_Ireland.jpg/330px-Blarney_Castle_Ireland.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ryanhuntmuzik",
+          "license": "CC BY-SA 4.0",
+          "description": "Blarney Castle in Ireland.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Blarney_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places - https://maps.app.goo.gl/RDSWhm4i4dFLpoLa6",
+        "enrichNotes": "update google places - https://maps.app.goo.gl/RDSWhm4i4dFLpoLa6"
+      },
+      "ts": 1779044723237
     }
   ]
 }
