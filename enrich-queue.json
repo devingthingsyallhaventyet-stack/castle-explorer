@@ -155,6 +155,53 @@
         "enrichNotes": ""
       },
       "ts": 1779060723937
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Corby Castle\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* Medieval / 17th-18th century\n*Coords:* 54.87971, -2.82626\n*Wikipedia:* https://en.wikipedia.org/wiki/Corby_Castle\n*Maps:* https://www.google.com/maps/search/Corby%20Castle/@54.905,-2.8,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Corby_Castle.jpg/330px-Corby_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* need more info \n\n*Description:*\nCorby Castle is a Grade I listed building and ancestral home of a cadet branch of the prominent Howard family situated on the southern edge of the village of Great Corby in northern Cumbria, England.\n\n_Listing 4 of 260_",
+      "listing": {
+        "name": "Corby Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.87971,
+        "lng": -2.82626,
+        "mapsLink": "https://www.google.com/maps/search/Corby%20Castle/@54.905,-2.8,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Corby_Castle.jpg/330px-Corby_Castle.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Corby Castle is a Grade I listed building and ancestral home of a cadet branch of the prominent Howard family situated on the southern edge of the village of Great Corby in northern Cumbria, England.",
+        "type": "castle",
+        "period": "Medieval / 17th-18th century",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "gardens",
+          "riverside",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Corby_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Corby_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Corby_Castle.jpg/330px-Corby_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Corby_Castle",
+        "imageAttribution": "local",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "need more info ",
+        "enrichNotes": "need more info "
+      },
+      "ts": 1779060753601
     }
   ]
 }
