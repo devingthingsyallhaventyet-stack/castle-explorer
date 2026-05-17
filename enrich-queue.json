@@ -488,6 +488,58 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/PhXV3yjLpPDGoeXH7\n"
       },
       "ts": 1779052764839
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Gosford Castle\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Armagh\n*Type:* castle\n*Period:* 19th century\n*Coords:* 54.3108, -6.5192\n*Wikipedia:* https://en.wikipedia.org/wiki/Gosford_Castle\n*Maps:* https://www.google.com/maps/search/Gosford%20Castle/@54.288,-6.595,15z\n*Main Image:* https://img.castlecore.uk/gosford-castle.jpg\n*Gallery:* 1 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research needed \n\n*Description:*\nGosford Castle is a 19th-century country house situated in Gosford, a townland of Markethill, County Armagh, Northern Ireland. It was built for Archibald Acheson, 2nd Earl of Gosford, and designed in the Norman revival style by London architect Thomas Hopper. It is a Grade A listed building, and is said to be Ulster's largest. The Earls of Gosford occupied the castle until 1921, and the estate was later purchased by the Ministry of Agriculture to form Gosford Forest Park. The building subsequently deteriorated and in 2006 was sold to a development company who converted the castle into private dwellings.\n\n_Listing 11 of 19_",
+      "listing": {
+        "name": "Gosford Castle",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Armagh",
+        "lat": 54.3108,
+        "lng": -6.5192,
+        "mapsLink": "https://www.google.com/maps/search/Gosford%20Castle/@54.288,-6.595,15z",
+        "image": "https://img.castlecore.uk/gosford-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/gosford-castle-2.jpg"
+        ],
+        "desc": "Gosford Castle is a 19th-century country house situated in Gosford, a townland of Markethill, County Armagh, Northern Ireland. It was built for Archibald Acheson, 2nd Earl of Gosford, and designed in the Norman revival style by London architect Thomas Hopper. It is a Grade A listed building, and is said to be Ulster's largest. The Earls of Gosford occupied the castle until 1921, and the estate was later purchased by the Ministry of Agriculture to form Gosford Forest Park. The building subsequently deteriorated and in 2006 was sold to a development company who converted the castle into private dwellings.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "norman",
+          "gothic",
+          "photogenic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Armagh Heritage",
+            "url": "https://www.visitarmagh.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Gosford_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Gosford_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/GosfordCastle.jpg/330px-GosfordCastle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Gosford_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "more research needed ",
+        "enrichNotes": "more research needed "
+      },
+      "ts": 1779052804061
     }
   ]
 }
