@@ -254,6 +254,66 @@
         "enrichNotes": "add source - https://www.dromoland.ie/\nmark as hotel "
       },
       "ts": 1779044052611
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Birdoswald Roman Fort\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* 2nd century\n*Coords:* 54.9894, -2.6023\n*Wikipedia:* https://en.wikipedia.org/wiki/Banna_(Birdoswald)\n*Maps:* https://www.google.com/maps/search/Birdoswald%20Roman%20Fort/@54.9917,-2.5283,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqFl-RfBQ1zKXuHqDxKgqbQxMHjzGPas5ePhZKuWI9wkvl7sLsc-DnDv8tkGhcNJCop2jz8LOSnatKef7cXdUrImXqijleVH2ew=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBirdoswald Roman Fort was known as Banna in Roman times, reflecting the geography of the site on a triangular spur of land bounded by cliffs to the south and east commanding a broad meander of the River Irthing in Cumbria below.\n\n_Listing 25 of 80_",
+      "listing": {
+        "name": "Birdoswald Roman Fort",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.9894,
+        "lng": -2.6023,
+        "mapsLink": "https://www.google.com/maps/search/Birdoswald%20Roman%20Fort/@54.9917,-2.5283,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqFl-RfBQ1zKXuHqDxKgqbQxMHjzGPas5ePhZKuWI9wkvl7sLsc-DnDv8tkGhcNJCop2jz8LOSnatKef7cXdUrImXqijleVH2ew=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Birdoswald Roman Fort was known as Banna in Roman times, reflecting the geography of the site on a triangular spur of land bounded by cliffs to the south and east commanding a broad meander of the River Irthing in Cumbria below.",
+        "type": "castle",
+        "period": "2nd century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "kid-friendly",
+          "hilltop",
+          "guided-tours",
+          "museum",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/birdoswald-roman-fort-hadrians-wall/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Banna_(Birdoswald)"
+          },
+          {
+            "name": "Hadrian's Wall Country",
+            "url": "https://hadrianswallcountry.co.uk/attraction/birdoswald-roman-fort/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Banna_(Birdoswald)",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Birdoswald_Roman_Fort_-_geograph.org.uk_-_17585.jpg/330px-Birdoswald_Roman_Fort_-_geograph.org.uk_-_17585.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Carl Bendelow",
+          "license": "CC BY-SA 2.0",
+          "description": "Birdoswald Roman Fort. Remains of Birdoswald Roman Fort on Hadrians Wall. This is one of the main visitor attractions on this part of the Wall and has a visitor centre",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044127982
     }
   ]
 }
