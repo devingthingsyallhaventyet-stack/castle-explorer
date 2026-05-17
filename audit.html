@@ -345,7 +345,7 @@ function switchMainTab(tab) {
 
 function updateTabCounts() {
   let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0, imgReview = 0, enrichReview = 0, enriched = 0, sourceReview = 0;
-  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') { ap++; if (!d.imageReviewDone) imgReview++; } else if (s === 'flagged') { if (d.enrichStatus === 'enriched') { enriched++; } else if (d.needsEnrich) { enrich++; if (!d.enrichStatus && (d.rating || 0) >= 4.0) enrichReview++; } else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
+  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') { ap++; if (!d.imageReviewDone) imgReview++; } else if (s === 'flagged') { if (d.enrichStatus === 'enriched') { enriched++; } else if (d.needsEnrich) { enrich++; if (!d.enrichStatus && ((d.rating || 0) >= 4.0 || d.forceEnrichReview)) enrichReview++; } else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
   // Count pending source candidates
   if (window.sourceCandidates) {
     sourceReview = window.sourceCandidates.filter(c => c.status === 'pending').length;
@@ -464,7 +464,7 @@ function applyFilters() {
       if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
       if (currentMainTab === 'enriched') return s === 'flagged' && d.enrichStatus === 'enriched';
       if (currentMainTab === 'enrich') return s === 'flagged' && d.needsEnrich === true && d.enrichStatus !== 'enriched';
-      if (currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && !d.enrichStatus && (d.rating || 0) >= 4.0;
+      if (currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && !d.enrichStatus && ((d.rating || 0) >= 4.0 || d.forceEnrichReview);
       if (currentMainTab === 'imgReview') return s === 'approved' && !d.imageReviewDone;
       if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
       if (currentMainTab === 'approved') return s === 'approved';
