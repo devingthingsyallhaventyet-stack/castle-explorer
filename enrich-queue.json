@@ -1,3 +1,49 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dolwyddelan Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Conwy\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.05305556, -3.90833333\n*Wikipedia:* https://en.wikipedia.org/wiki/Dolwyddelan_Castle\n*Maps:* https://www.google.com/maps/search/Dolwyddelan%20Castle/@52.9997,-3.8866,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg/330px-Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDolwyddelan Castle is a thirteenth-century castle located west of Dolwyddelan in Conwy County Borough, Wales. Tomen Castell, a late twelfth-century tower, is located south-east of the castle.\n\n_Listing 1 of 61_",
+      "listing": {
+        "name": "Dolwyddelan Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Conwy",
+        "lat": 53.05305556,
+        "lng": -3.90833333,
+        "mapsLink": "https://www.google.com/maps/search/Dolwyddelan%20Castle/@52.9997,-3.8866,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg/330px-Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Dolwyddelan Castle is a thirteenth-century castle located west of Dolwyddelan in Conwy County Borough, Wales. Tomen Castell, a late twelfth-century tower, is located south-east of the castle.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.1,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dolwyddelan_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg/330px-Dolwyddelan_Castle%2C_Conwy%2C_Wales_%28cropped%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Jeff Buck",
+          "license": "CC BY-SA 2.0",
+          "description": "Dolwyddelan Castle is a fortress near Conwy, Wales.. Dolwyddelan castle was built by Llywelyn; the old castle nearby may have been his birthplace.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dolwyddelan_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050337782
+    }
+  ]
 }
