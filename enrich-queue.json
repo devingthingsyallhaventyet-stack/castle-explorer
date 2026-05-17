@@ -749,6 +749,63 @@
         "enrichNotes": ""
       },
       "ts": 1779048331029
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castell Dinas\n*Country:* wales\n*Region:* mid wales marches\n*County:* Powys\n*Type:* castle\n*Period:* Iron Age / 12th century\n*Coords:* 51.96355, -3.196527\n*Wikipedia:* https://en.wikipedia.org/wiki/Castell_Dinas\n*Maps:* https://www.google.com/maps/search/Castell%20Dinas/@51.9522,-3.1578,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Castell_Dinas_from_the_air.jpg/330px-Castell_Dinas_from_the_air.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCastell Dinas is a hillfort and castle in southern Powys, Wales. At 450 m (SO179301) it has the highest castle in England and Wales. It is positioned to defend the Rhiangoll pass between Talgarth and Crickhowell.\n\n_Listing 15 of 111_",
+      "listing": {
+        "name": "Castell Dinas",
+        "country": "wales",
+        "region": "mid-wales-marches",
+        "county": "Powys",
+        "lat": 51.96355,
+        "lng": -3.196527,
+        "mapsLink": "https://www.google.com/maps/search/Castell%20Dinas/@51.9522,-3.1578,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Castell_Dinas_from_the_air.jpg/330px-Castell_Dinas_from_the_air.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Castell Dinas is a hillfort and castle in southern Powys, Wales. At 450 m (SO179301) it has the highest castle in England and Wales. It is positioned to defend the Rhiangoll pass between Talgarth and Crickhowell.",
+        "type": "castle",
+        "period": "Iron Age / 12th century",
+        "rating": 4.2,
+        "tags": [
+          "hilltop",
+          "prehistoric",
+          "ruins-romantic",
+          "free-entry",
+          "remote",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/castell-dinas"
+          },
+          {
+            "name": "Wikipedia – Castell Dinas, Talgarth",
+            "url": "https://en.wikipedia.org/wiki/Castell_Dinas,_Talgarth"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castell_Dinas",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Castell_Dinas_from_the_air.jpg/330px-Castell_Dinas_from_the_air.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Jasper Fforde",
+          "license": "CC BY-SA 3.0",
+          "description": "Castell Dinas Castle seen from the air, with remains of norman keep and earthworks clearly visible.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Castell_Dinas",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048351974
     }
   ]
 }
