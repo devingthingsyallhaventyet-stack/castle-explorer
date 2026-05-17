@@ -73297,7 +73297,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Killahara_castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Killahara Castle",
+        "url": "https://www.killaharacastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Killahara Castle",
+        "url": "https://www.killaharacastle.com/"
+      }
+    ]
   },
   {
     "name": "Loughmoe Castle",
@@ -73621,7 +73633,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Redwood_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Redwood Castle — The heart of Ireland's heritage",
+        "url": "https://redwoodcastleireland.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Redwood Castle — The heart of Ireland's heritage",
+        "url": "https://redwoodcastleireland.com/"
+      }
+    ]
   },
   {
     "name": "Delvin Castle",
@@ -74546,7 +74570,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Multyfarnham_Friary",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Multyfarnham Friary | Founded in 1268",
+        "url": "https://theabbeymultyfarnham.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Multyfarnham Friary | Founded in 1268",
+        "url": "https://theabbeymultyfarnham.ie/"
+      }
+    ]
   },
   {
     "name": "Caulfield Castle",
@@ -75319,7 +75355,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Killua_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Killua Castle",
+        "url": "https://killuacastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Killua Castle",
+        "url": "https://killuacastle.com/"
+      }
+    ]
   },
   {
     "name": "Corlea Trackway",
@@ -75627,7 +75675,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Durrow",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castle Durrow Hotel",
+        "url": "https://www.castledurrow.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Durrow Hotel",
+        "url": "https://www.castledurrow.com/"
+      }
+    ]
   },
   {
     "name": "Thurles Castle",
@@ -76921,7 +76981,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Carrickabraghy_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Carrickabraghy Castle | 16th century O'Doherty castle at Isle of Doagh, Co. Donegal",
+        "url": "https://carrickabraghycastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Carrickabraghy Castle | 16th century O'Doherty castle at Isle of Doagh, Co. Donegal",
+        "url": "https://carrickabraghycastle.com/"
+      }
+    ]
   },
   {
     "name": "Donamon Castle",
@@ -77117,7 +77189,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Saunderson",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castle Saunderson — Bridge Project",
+        "url": "https://castlesaunderson.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Saunderson — Bridge Project",
+        "url": "https://castlesaunderson.org/"
+      }
+    ]
   },
   {
     "name": "Castle Leslie",
@@ -77826,7 +77910,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilronan_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Kilronan Castle Estate & Spa | Luxury Castle Hotel | Ireland Castle Hotel",
+        "url": "https://www.kilronancastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Kilronan Castle Estate & Spa | Luxury Castle Hotel | Ireland Castle Hotel",
+        "url": "https://www.kilronancastle.ie/"
+      }
+    ]
   },
   {
     "name": "Glinsk Castle",
@@ -78953,7 +79049,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonalis_House",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Clonalis Estate & Heritage Tours | Clonalis House",
+        "url": "https://clonalishouse.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Clonalis Estate & Heritage Tours | Clonalis House",
+        "url": "https://clonalishouse.com/"
+      }
+    ]
   },
   {
     "name": "Caledon Castle",
@@ -79661,7 +79769,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunguaire_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dunguaire Castle Kinvara | Castle in Galway | Medieval Castle Ireland",
+        "url": "https://www.dunguairecastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunguaire Castle Kinvara | Castle in Galway | Medieval Castle Ireland",
+        "url": "https://www.dunguairecastle.com/"
+      }
+    ]
   },
   {
     "name": "Ashford Castle",
@@ -79723,7 +79843,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "5* Castle Hotel, Award Winning Ashford Castle, Mayo, Ireland",
+        "url": "https://ashfordcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "5* Castle Hotel, Award Winning Ashford Castle, Mayo, Ireland",
+        "url": "https://ashfordcastle.com/"
+      }
+    ]
   },
   {
     "name": "Athenry Castle",
@@ -80220,7 +80352,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Knappogue_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Knappogue Castle | Medieval Castle in Ireland | Things to Do In Clare",
+        "url": "https://www.knappoguecastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Knappogue Castle | Medieval Castle in Ireland | Things to Do In Clare",
+        "url": "https://www.knappoguecastle.ie/"
+      }
+    ]
   },
   {
     "name": "Quin Abbey",
@@ -80842,7 +80986,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Newtown_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Newtown Castle | Weddings | Special Events | Co. Clare | Ireland",
+        "url": "https://www.newtowncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Newtown Castle | Weddings | Special Events | Co. Clare | Ireland",
+        "url": "https://www.newtowncastle.com/"
+      }
+    ]
   },
   {
     "name": "Doonagore Castle",
@@ -81211,7 +81367,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballynahinch_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Luxury Castle Hotels Ireland | Connemara Castle",
+        "url": "https://www.ballynahinch-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Luxury Castle Hotels Ireland | Connemara Castle",
+        "url": "https://www.ballynahinch-castle.com/"
+      }
+    ]
   },
   {
     "name": "Clifden Castle",
@@ -82034,7 +82202,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballintubber_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Ballintubber Abbey, Mayo – 800 Years of Irish Worship",
+        "url": "https://www.ballintubberabbey.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Ballintubber Abbey, Mayo – 800 Years of Irish Worship",
+        "url": "https://www.ballintubberabbey.ie/"
+      }
+    ]
   },
   {
     "name": "Cong Abbey",
@@ -83239,7 +83419,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Markree_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "4 star Luxury Castle Hotel Ireland | Markree Castle Hotel Sligo",
+        "url": "https://www.markreecastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "4 star Luxury Castle Hotel Ireland | Markree Castle Hotel Sligo",
+        "url": "https://www.markreecastle.ie/"
+      }
+    ]
   },
   {
     "name": "Lissadell House",
@@ -84240,7 +84432,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Westport_House",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Westport House - Visit Ireland's Historic Landmark",
+        "url": "https://www.westporthouse.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Westport House - Visit Ireland's Historic Landmark",
+        "url": "https://www.westporthouse.ie/"
+      }
+    ]
   },
   {
     "name": "Murrisk Abbey",
@@ -84945,7 +85149,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lough_Rynn_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lough Rynn Castle Estate & Gardens | Castle Hotel | Official Website",
+        "url": "https://www.loughrynn.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lough Rynn Castle Estate & Gardens | Castle Hotel | Official Website",
+        "url": "https://www.loughrynn.ie/"
+      }
+    ]
   },
   {
     "name": "Magh Adair",
