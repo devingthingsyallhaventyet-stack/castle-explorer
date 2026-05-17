@@ -202,6 +202,61 @@
         "enrichNotes": ""
       },
       "ts": 1779047572299
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Minster Lovell Hall\n*Country:* england\n*Region:* south east london\n*County:* Oxfordshire\n*Type:* castle\n*Period:* 15th century\n*Coords:* 51.799681, -1.5308589\n*Wikipedia:* https://en.wikipedia.org/wiki/Minster_Lovell_Hall\n*Maps:* https://www.google.com/maps/search/Minster%20Lovell%20Hall/@51.801,-1.533,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNJAp0Lr9OTMOUCv9aHvZAvdYrhd6Dz6ncTsk_5iOfoRMb00XSeLc2J7zDh2U3lrcd6tcUFoVqst7i8h3B082g5Ixq2SHX7L9vVSS8qvDOoKZOAnNLKhL8SYf_jDhm_ZkNVSounPylMC4Y58A=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nMinster Lovell Hall is a ruin in Minster Lovell, an English village in the Oxfordshire Cotswolds. The ruins are situated by the River Windrush.\n\n_Listing 5 of 111_",
+      "listing": {
+        "name": "Minster Lovell Hall",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Oxfordshire",
+        "lat": 51.799681,
+        "lng": -1.5308589,
+        "mapsLink": "https://www.google.com/maps/search/Minster%20Lovell%20Hall/@51.801,-1.533,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNJAp0Lr9OTMOUCv9aHvZAvdYrhd6Dz6ncTsk_5iOfoRMb00XSeLc2J7zDh2U3lrcd6tcUFoVqst7i8h3B082g5Ixq2SHX7L9vVSS8qvDOoKZOAnNLKhL8SYf_jDhm_ZkNVSounPylMC4Y58A=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Minster Lovell Hall is a ruin in Minster Lovell, an English village in the Oxfordshire Cotswolds. The ruins are situated by the River Windrush.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 4.2,
+        "tags": [
+          "romantic-ruin",
+          "free-entry",
+          "riverside",
+          "medieval",
+          "haunted",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Minster_Lovell_Hall"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/minster-lovell-hall-and-dovecote/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Minster_Lovell_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Minster_Lovell_Hall%2C_Oxon_-_Ruins_-_geograph.org.uk_-_1630370.jpg/330px-Minster_Lovell_Hall%2C_Oxon_-_Ruins_-_geograph.org.uk_-_1630370.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "John Salmon",
+          "license": "CC BY-SA 2.0",
+          "description": "Minster Lovell Hall, Oxon - Ruins",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779047597603
     }
   ]
 }
