@@ -314,6 +314,64 @@
         "enrichNotes": ""
       },
       "ts": 1779044127982
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Corbridge Roman Town\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* castle\n*Period:* 1st-4th century Roman\n*Coords:* 51.4617, -3.4473\n*Wikipedia:* https://en.wikipedia.org/wiki/Cowbridge_(Roman_town)\n*Maps:* https://www.google.com/maps/search/Corbridge%20Roman%20Town/@54.9783,-2.0233,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMpbhwlrrZ5CoX5FXSXm3wlTgH6Wcsibmut9aVADRQFMg9OkykT196JibuxAB0z3K4lOnDjO9vpXcNmic2qZcLVSE5cyS1oQlhWb0DoPFNbrlctr5o74roqHnA3Ekv9-hawYGCKrxQYgDLXEw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCowbridge was a small castra in Roman Wales within the Roman province of Britannia Superior. Today the contemporary settlement, Cowbridge, has a population of roughly 3,600.\n\n_Listing 26 of 80_",
+      "listing": {
+        "name": "Corbridge Roman Town",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 51.4617,
+        "lng": -3.4473,
+        "mapsLink": "https://www.google.com/maps/search/Corbridge%20Roman%20Town/@54.9783,-2.0233,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMpbhwlrrZ5CoX5FXSXm3wlTgH6Wcsibmut9aVADRQFMg9OkykT196JibuxAB0z3K4lOnDjO9vpXcNmic2qZcLVSE5cyS1oQlhWb0DoPFNbrlctr5o74roqHnA3Ekv9-hawYGCKrxQYgDLXEw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Cowbridge was a small castra in Roman Wales within the Roman province of Britannia Superior. Today the contemporary settlement, Cowbridge, has a population of roughly 3,600.",
+        "type": "castle",
+        "period": "1st-4th century Roman",
+        "rating": 4.4,
+        "tags": [
+          "museum",
+          "photogenic",
+          "kid-friendly",
+          "guided-tours",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/corbridge-roman-town-hadrians-wall/"
+          },
+          {
+            "name": "Visit Northumberland",
+            "url": "https://www.visitnorthumberland.com/explore/things-to-do/attractions/historic-sites/corbridge-roman-town-hadrian-s-wall"
+          },
+          {
+            "name": "Historic UK",
+            "url": "https://www.historic-uk.com/HistoryMagazine/DestinationsUK/Corbridge-Roman-Site-Northumberland/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cowbridge_(Roman_town)",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Vale_of_Glamorgan_UK_ward_location_-_Cowbridge.png/330px-Vale_of_Glamorgan_UK_ward_location_-_Cowbridge.png",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Sionk",
+          "license": "CC BY-SA 3.0",
+          "description": "Location map showing electoral ward of Cowbridge within the Vale of Glamorgan, Wales",
+          "credit": "This file was derived from:  Vale of Glamorgan UK ward map (blank).svg",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044147173
     }
   ]
 }
