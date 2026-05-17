@@ -650,6 +650,61 @@
         "enrichNotes": "add source - https://www.bunrattycastle.ie/"
       },
       "ts": 1779045035761
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kilmacduagh Monastery\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* abbey\n*Period:* 7th-12th century\n*Coords:* 53.049444, -8.8875\n*Wikipedia:* https://en.wikipedia.org/wiki/Kilmacduagh_monastery\n*Maps:* https://www.google.com/maps/search/Kilmacduagh%20Monastery/@53.0472,-8.8456,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg/330px-Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nKilmacduagh Monastery is a ruined abbey near the town of Gort in County Galway, Ireland. It was the birthplace of the Diocese of Kilmacduagh. It was reportedly founded by Saint Colman, son of Duagh in the 7th century, on land given him by his cousin King Guaire Aidne mac Colmáin of Connacht.\n\n_Listing 13 of 50_",
+      "listing": {
+        "name": "Kilmacduagh Monastery",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.049444,
+        "lng": -8.8875,
+        "mapsLink": "https://www.google.com/maps/search/Kilmacduagh%20Monastery/@53.0472,-8.8456,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg/330px-Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Kilmacduagh Monastery is a ruined abbey near the town of Gort in County Galway, Ireland. It was the birthplace of the Diocese of Kilmacduagh. It was reportedly founded by Saint Colman, son of Duagh in the 7th century, on land given him by his cousin King Guaire Aidne mac Colmáin of Connacht.",
+        "type": "abbey",
+        "period": "7th-12th century",
+        "rating": 4.4,
+        "tags": [
+          "atmospheric",
+          "celtic",
+          "ruins-romantic",
+          "photogenic",
+          "free-entry",
+          "remote",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kilmacduagh_monastery"
+          },
+          {
+            "name": "Galway Tourism",
+            "url": "https://www.galwaytourism.ie/kilmacduagh-monastery-round-tower/"
+          },
+          {
+            "name": "Atlas Obscura",
+            "url": "https://www.atlasobscura.com/places/kilmacduagh-round-tower"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Kilmacduagh_monastery",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg/330px-Kilmacduagh_Abbey_of_St._Mary_de_Petra_2015_08_31.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilmacduagh_monastery",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045079406
     }
   ]
 }
