@@ -313,6 +313,61 @@
         "enrichNotes": "add source - https://www.llansteffancastle.com/"
       },
       "ts": 1779052105309
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castell Henllys\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* hillfort\n*Period:* Iron Age (c.500 BC)\n*Coords:* 52.017, -4.745\n*Wikipedia:* https://en.wikipedia.org/wiki/Castell_Henllys\n*Maps:* https://www.google.com/maps/search/Castell%20Henllys/@52.015,-4.728,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNrfXu9J9hDbCCe9nCNMn0lEKuZlUjZYU-wLVX1qiyGi_7vt4gSxfSHX8y-K6-pPbUkJuldjLbc0XInFogDLIuV_APcNilkC63P0qk6nWp4_aGSfX_6q9eEZkBbRMZJXJLxeho6J5eNaeoKVw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCastell Henllys is an archaeological site near Nevern in north Pembrokeshire, Wales.\n\n_Listing 7 of 33_",
+      "listing": {
+        "name": "Castell Henllys",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 52.017,
+        "lng": -4.745,
+        "mapsLink": "https://www.google.com/maps/search/Castell%20Henllys/@52.015,-4.728,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNrfXu9J9hDbCCe9nCNMn0lEKuZlUjZYU-wLVX1qiyGi_7vt4gSxfSHX8y-K6-pPbUkJuldjLbc0XInFogDLIuV_APcNilkC63P0qk6nWp4_aGSfX_6q9eEZkBbRMZJXJLxeho6J5eNaeoKVw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Castell Henllys is an archaeological site near Nevern in north Pembrokeshire, Wales.",
+        "type": "hillfort",
+        "period": "Iron Age (c.500 BC)",
+        "rating": 4,
+        "tags": [
+          "prehistoric",
+          "celtic",
+          "kid-friendly",
+          "woodland",
+          "guided-tours",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Pembrokeshire Coast National Park",
+            "url": "https://www.pembrokeshirecoast.wales/castell-henllys/"
+          },
+          {
+            "name": "Wikipedia – Castell Henllys",
+            "url": "https://en.wikipedia.org/wiki/Castell_Henllys"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castell_Henllys",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Castell_Henllys_-_geograph.org.uk_-_67364.jpg/330px-Castell_Henllys_-_geograph.org.uk_-_67364.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ruth Jowett",
+          "license": "CC BY-SA 2.0",
+          "description": "Castell Henllys. Active archeological site with a reconstructed iron age village.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779052145182
     }
   ]
 }
