@@ -273,6 +273,62 @@
         "enrichNotes": ""
       },
       "ts": 1779043049913
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Witley Court\n*Country:* england\n*Region:* the midlands\n*County:* Worcestershire\n*Type:* castle\n*Period:* 17th-19th century\n*Coords:* 52.2821, -2.3388\n*Wikipedia:* https://en.wikipedia.org/wiki/Witley_Court\n*Maps:* https://www.google.com/maps/search/Witley%20Court/@52.29,-2.3583,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMUPmBXnUZhCj5XNh-sTapaViEHyI7EdHczDpebb-I0MT_B-i3iQUpnt2DpH6IszwART_8RVxOYwxZ_Gy8u7nqrKdpKuZev3Z3V6jGOnN6JFBx8GbeuWE4HHSzF-Rp1aeblWVDInr_GsNz0lw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/NecYfipQEWjpzGE27\n\n*Description:*\nWitley Court, in Great Witley, Worcestershire, England, is a ruined Italianate mansion. Built for the Foleys in the seventeenth century on the site of a former manor house, it was enormously expanded in the early nineteenth century by the architect John Nash for Thomas Foley, 3rd Baron Foley.\n\n_Listing 6 of 80_",
+      "listing": {
+        "name": "Witley Court",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Worcestershire",
+        "lat": 52.2821,
+        "lng": -2.3388,
+        "mapsLink": "https://www.google.com/maps/search/Witley%20Court/@52.29,-2.3583,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMUPmBXnUZhCj5XNh-sTapaViEHyI7EdHczDpebb-I0MT_B-i3iQUpnt2DpH6IszwART_8RVxOYwxZ_Gy8u7nqrKdpKuZev3Z3V6jGOnN6JFBx8GbeuWE4HHSzF-Rp1aeblWVDInr_GsNz0lw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Witley Court, in Great Witley, Worcestershire, England, is a ruined Italianate mansion. Built for the Foleys in the seventeenth century on the site of a former manor house, it was enormously expanded in the early nineteenth century by the architect John Nash for Thomas Foley, 3rd Baron Foley.",
+        "type": "castle",
+        "period": "17th-19th century",
+        "rating": 4.5,
+        "tags": [
+          "ruins-romantic",
+          "atmospheric",
+          "photogenic",
+          "gardens",
+          "dark-brooding",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Witley_Court"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Witley_Court",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2013_04_19_Whitly_Court_03.jpg/330px-2013_04_19_Whitly_Court_03.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Craigthornber",
+          "license": "CC BY-SA 3.0",
+          "description": "The ruins of Witley Court, Worcestershire, are in the care of English Heritage and open to the public",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/NecYfipQEWjpzGE27",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/NecYfipQEWjpzGE27"
+      },
+      "ts": 1779043079079
     }
   ]
 }
