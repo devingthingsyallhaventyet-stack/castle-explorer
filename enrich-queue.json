@@ -87,6 +87,53 @@
         "enrichNotes": "update google link - https://maps.app.goo.gl/v2VEeRLPAT8mhjFMA\nadd source - https://www.abingdonabbeybuildings.co.uk/"
       },
       "ts": 1779060268629
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Prinknash Abbey\n*Country:* england\n*Region:* south west\n*County:* Gloucestershire\n*Type:* abbey\n*Period:* 14th century\n*Coords:* 51.8225, -2.17611111\n*Wikipedia:* https://en.wikipedia.org/wiki/Prinknash_Abbey\n*Maps:* https://maps.app.goo.gl/fvt5gdozQpX34iLg8\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOVRuvbdG-KZRWtVt6WsDmo3SFqFF2DcRkbvGDzmFWun0005AwwZ-mx1tYaqPE00nvxZdNwVfzcCwwCG6Ao3PQ6eSxJRcVhV6-5VrSIfvTlgjVXUW1RgHC7AuY2V_VvdnRkgvZ1YfZcwtEegw=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.prinknashabbey.org/\n\n*Description:*\nPrinknash Abbey is a Roman Catholic monastery in the Vale of Gloucester in the Diocese of Clifton, near the village of Cranham, Gloucestershire. It belongs to the English Province of the Subiaco Cassinese Congregation, which is itself part of the worldwide Benedictine Confederation. It is noted for its manufacturing of incense.\n\n_Listing 3 of 270_",
+      "listing": {
+        "name": "Prinknash Abbey",
+        "country": "england",
+        "region": "south-west",
+        "county": "Gloucestershire",
+        "lat": 51.8225,
+        "lng": -2.17611111,
+        "mapsLink": "https://maps.app.goo.gl/fvt5gdozQpX34iLg8",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOVRuvbdG-KZRWtVt6WsDmo3SFqFF2DcRkbvGDzmFWun0005AwwZ-mx1tYaqPE00nvxZdNwVfzcCwwCG6Ao3PQ6eSxJRcVhV6-5VrSIfvTlgjVXUW1RgHC7AuY2V_VvdnRkgvZ1YfZcwtEegw=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Prinknash Abbey is a Roman Catholic monastery in the Vale of Gloucester in the Diocese of Clifton, near the village of Cranham, Gloucestershire. It belongs to the English Province of the Subiaco Cassinese Congregation, which is itself part of the worldwide Benedictine Confederation. It is noted for its manufacturing of incense.",
+        "type": "abbey",
+        "period": "14th century",
+        "rating": 3.9,
+        "tags": [
+          "medieval",
+          "atmospheric",
+          "gardens",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Prinknash_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Prinknash_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Prinknash.jpg/330px-Prinknash.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Prinknash_Abbey",
+        "imageAttribution": "local",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.prinknashabbey.org/",
+        "enrichNotes": "add source - https://www.prinknashabbey.org/"
+      },
+      "ts": 1779060318999
     }
   ]
 }
