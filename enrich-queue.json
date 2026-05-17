@@ -56,6 +56,71 @@
         "enrichNotes": "add source - https://www.nationaltrust.org.uk/visit/norfolk/blickling-estate"
       },
       "ts": 1779058660343
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* St Michael's Mount\n*Country:* england\n*Region:* south west\n*County:* Cornwall\n*Type:* castle\n*Period:* 12th century\n*Coords:* 50.116, -5.4772\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Michael%27s_Mount\n*Maps:* https://www.google.com/maps/search/St%20Michael's%20Mount/@50.1175,-5.4776,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://stmichaelsmount.co.uk/\n\n*Description:*\nSt Michael's Mount is a tidal island in Mount's Bay near Penzance, Cornwall, England, United Kingdom. The island is a civil parish and is linked to the town of Marazion by a causeway of granite setts, passable between mid-tide and low water. It is managed by the National Trust, and the castle and chapel have been the home of the St Aubyn family since around 1650.\n\n_Listing 2 of 4_",
+      "listing": {
+        "name": "St Michael's Mount",
+        "country": "england",
+        "region": "south-west",
+        "county": "Cornwall",
+        "lat": 50.116,
+        "lng": -5.4772,
+        "mapsLink": "https://www.google.com/maps/search/St%20Michael's%20Mount/@50.1175,-5.4776,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "St Michael's Mount is a tidal island in Mount's Bay near Penzance, Cornwall, England, United Kingdom. The island is a civil parish and is linked to the town of Marazion by a causeway of granite setts, passable between mid-tide and low water. It is managed by the National Trust, and the castle and chapel have been the home of the St Aubyn family since around 1650.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "island",
+          "coastal",
+          "gardens",
+          "atmospheric",
+          "medieval",
+          "guided-tours",
+          "gift-shop",
+          "tearoom-cafe",
+          "romantic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/St_Michael%27s_Mount"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/cornwall/st-michaels-mount"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Michael's_Mount",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/St_Michael%27s_Mount_View.jpg/330px-St_Michael%27s_Mount_View.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Werner Wilmes",
+          "license": "CC BY 2.0",
+          "description": "St Michael's Mount",
+          "credit": "https://www.flickr.com/photos/wewi-creative/52437923310/",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Michael%27s_Mount",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://stmichaelsmount.co.uk/",
+        "enrichNotes": "add source - https://stmichaelsmount.co.uk/"
+      },
+      "ts": 1779058687843
     }
   ]
 }
