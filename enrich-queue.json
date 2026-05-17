@@ -200,6 +200,60 @@
         "enrichNotes": "add source - https://www.kylemoreabbey.com/"
       },
       "ts": 1779043934705
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dromoland Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Clare\n*Type:* castle\n*Period:* 19th century\n*Coords:* 52.78325278, -8.90597222\n*Wikipedia:* https://en.wikipedia.org/wiki/Dromoland_Castle\n*Maps:* https://www.google.com/maps/search/Dromoland%20Castle/@52.745,-8.884,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqG4DbDs2WGXQXQYqudh1Ds1Y0d7RPfyks7qIzx3V-M4_nTe61RJPTNc32mll0iL60aPu2I1tX3HlLtXwEUDAB4pMespbLDSrd0=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.dromoland.ie/\nmark as hotel \n\n*Description:*\nDromoland Castle is a castle, located near Newmarket-on-Fergus in County Clare, Ireland. It is operated as a five-star luxury hotel with a golf course, with its restaurant, the \"Earl of Thomond\", being awarded a Michelin star in 1995, under head chef Jean Baptiste Molinari.\n\n_Listing 24 of 80_",
+      "listing": {
+        "name": "Dromoland Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Clare",
+        "lat": 52.78325278,
+        "lng": -8.90597222,
+        "mapsLink": "https://www.google.com/maps/search/Dromoland%20Castle/@52.745,-8.884,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqG4DbDs2WGXQXQYqudh1Ds1Y0d7RPfyks7qIzx3V-M4_nTe61RJPTNc32mll0iL60aPu2I1tX3HlLtXwEUDAB4pMespbLDSrd0=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Dromoland Castle is a castle, located near Newmarket-on-Fergus in County Clare, Ireland. It is operated as a five-star luxury hotel with a golf course, with its restaurant, the \"Earl of Thomond\", being awarded a Michelin star in 1995, under head chef Jean Baptiste Molinari.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "romantic",
+          "gardens",
+          "events-venue",
+          "wedding-venue",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Dromoland_Castle"
+          },
+          {
+            "name": "Dromoland Castle Official",
+            "url": "https://www.dromoland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dromoland_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Dromoland_Castle.jpg/330px-Dromoland_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dromoland_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.dromoland.ie/\nmark as hotel ",
+        "enrichNotes": "add source - https://www.dromoland.ie/\nmark as hotel "
+      },
+      "ts": 1779044052611
     }
   ]
 }
