@@ -173,6 +173,62 @@
         "enrichNotes": "add source - https://riponcathedral.org.uk/"
       },
       "ts": 1779044508952
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Brodsworth Hall\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 19th century\n*Coords:* 53.5576, -1.2376\n*Wikipedia:* https://en.wikipedia.org/wiki/Brodsworth_Hall\n*Maps:* https://www.google.com/maps/search/Brodsworth%20Hall/@53.5617,-1.2683,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNI8yAIRwtMIsjGf1Hwb_LKvMv7mdpEspVLA4o4jyruc1dw4PkgyV4CZ-ec-ztCAOKmBueShmhkDotqtNuUqrtZyVUv7cdaLqruwwYrIGFyGeyN-sydeit1_tjfH21B2zU_Z4-wH759n9dBuJY=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/KqCDQkgK3R1xfe3S7\n\n\n*Description:*\nBrodsworth Hall, near Brodsworth, 5 miles (8 km) north-west of Doncaster in South Yorkshire, is one of the most complete surviving examples of a Victorian country house in England. It is virtually unchanged since the 1860s. It was designed in the Italianate style by the obscure London architect, Philip Wilkinson, then 26 years old. He was commissioned by Charles Sabine Augustus Thellusson, who inherited the estate in 1859, but the original estate was constructed in 1791 for merchant and slave owner Peter Thellusson. It is a Grade I listed building.\n\n_Listing 4 of 50_",
+      "listing": {
+        "name": "Brodsworth Hall",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 53.5576,
+        "lng": -1.2376,
+        "mapsLink": "https://www.google.com/maps/search/Brodsworth%20Hall/@53.5617,-1.2683,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNI8yAIRwtMIsjGf1Hwb_LKvMv7mdpEspVLA4o4jyruc1dw4PkgyV4CZ-ec-ztCAOKmBueShmhkDotqtNuUqrtZyVUv7cdaLqruwwYrIGFyGeyN-sydeit1_tjfH21B2zU_Z4-wH759n9dBuJY=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Brodsworth Hall, near Brodsworth, 5 miles (8 km) north-west of Doncaster in South Yorkshire, is one of the most complete surviving examples of a Victorian country house in England. It is virtually unchanged since the 1860s. It was designed in the Italianate style by the obscure London architect, Philip Wilkinson, then 26 years old. He was commissioned by Charles Sabine Augustus Thellusson, who inherited the estate in 1859, but the original estate was constructed in 1791 for merchant and slave owner Peter Thellusson. It is a Grade I listed building.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.4,
+        "tags": [
+          "atmospheric",
+          "photogenic",
+          "victorian",
+          "gardens",
+          "museum",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Brodsworth_Hall"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/brodsworth-hall-and-gardens/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Brodsworth_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Brodsworth_Hall.jpg/330px-Brodsworth_Hall.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Christopher Down",
+          "license": "CC BY 4.0",
+          "description": "Brodsworth Hall",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/KqCDQkgK3R1xfe3S7\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/KqCDQkgK3R1xfe3S7\n"
+      },
+      "ts": 1779044544448
     }
   ]
 }
