@@ -988,6 +988,57 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/5F6qzpChoLwYxiGc8\n"
       },
       "ts": 1779046153141
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Rothe House\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Kilkenny\n*Type:* tower house\n*Period:* 16th-17th century\n*Coords:* 52.654295, -7.2546323\n*Wikipedia:* https://en.wikipedia.org/wiki/Rothe_House\n*Maps:* https://www.google.com/maps/search/Rothe%20House/@52.653,-7.252,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHaBr2yLba4mHLg1pjF2McZddFL6AlSMHDYharK3RIgkbeELBR4r5NKZISwoM3ifSrhnr8sc1bJ_Dkd8mp3dl5Rv6cwQ1G5LxI=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://rothehouse.com/\n\n*Description:*\nRothe House is a late 16th-century merchant's townhouse complex located in the city of Kilkenny, Ireland. The complex was built by John Rothe Fitz-Piers between 1594 and 1610 and is made up of three houses, three enclosed courtyards, and a large reconstructed garden with orchard. As a museum, it is accessible to the public.\n\n_Listing 21 of 28_",
+      "listing": {
+        "name": "Rothe House",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Kilkenny",
+        "lat": 52.654295,
+        "lng": -7.2546323,
+        "mapsLink": "https://www.google.com/maps/search/Rothe%20House/@52.653,-7.252,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHaBr2yLba4mHLg1pjF2McZddFL6AlSMHDYharK3RIgkbeELBR4r5NKZISwoM3ifSrhnr8sc1bJ_Dkd8mp3dl5Rv6cwQ1G5LxI=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Rothe House is a late 16th-century merchant's townhouse complex located in the city of Kilkenny, Ireland. The complex was built by John Rothe Fitz-Piers between 1594 and 1610 and is made up of three houses, three enclosed courtyards, and a large reconstructed garden with orchard. As a museum, it is accessible to the public.",
+        "type": "tower house",
+        "period": "16th-17th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "tudor",
+          "museum",
+          "guided-tours",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Rothe House",
+            "url": "https://www.rothehouse.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Rothe_House"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Rothe_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Rothe_House_2021.jpg/330px-Rothe_House_2021.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Rothe_House",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://rothehouse.com/",
+        "enrichNotes": "add source - https://rothehouse.com/"
+      },
+      "ts": 1779046301943
     }
   ]
 }
