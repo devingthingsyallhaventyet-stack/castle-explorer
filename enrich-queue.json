@@ -48,6 +48,61 @@
         "enrichNotes": ""
       },
       "ts": 1779045758836
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Clevedon Court\n*Country:* england\n*Region:* south west\n*County:* Somerset\n*Type:* castle\n*Period:* 14th century\n*Coords:* 51.4402, -2.8321\n*Wikipedia:* https://en.wikipedia.org/wiki/Clevedon_Court\n*Maps:* https://www.google.com/maps/search/Clevedon%20Court/@51.4383,-2.8717,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqEJEmuvqxEqX1o70F62B3nUvOpc-q3_GzD5YG4LoIjNZHWhjnqTe5bIXolTfpYXAERSP6uDO-jbLxjpPgwwQFRsyTmF43qwvA=s4800-w747\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nClevedon Court is a manor house on Court Hill in Clevedon, North Somerset, England, dating from the early 14th century. It is owned by the National Trust and is designated as a Grade I listed building.\n\n_Listing 2 of 28_",
+      "listing": {
+        "name": "Clevedon Court",
+        "country": "england",
+        "region": "south-west",
+        "county": "Somerset",
+        "lat": 51.4402,
+        "lng": -2.8321,
+        "mapsLink": "https://www.google.com/maps/search/Clevedon%20Court/@51.4383,-2.8717,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqEJEmuvqxEqX1o70F62B3nUvOpc-q3_GzD5YG4LoIjNZHWhjnqTe5bIXolTfpYXAERSP6uDO-jbLxjpPgwwQFRsyTmF43qwvA=s4800-w747",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Clevedon Court is a manor house on Court Hill in Clevedon, North Somerset, England, dating from the early 14th century. It is owned by the National Trust and is designated as a Grade I listed building.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "gardens",
+          "medieval",
+          "tearoom-cafe",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/bath-bristol/clevedon-court"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Clevedon_Court"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clevedon_Court",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Clevedon_2_%28front%2C_2011%29.jpg/330px-Clevedon_2_%28front%2C_2011%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Arthur266",
+          "license": "CC BY-SA 3.0",
+          "description": "Clevedon Court",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045773727
     }
   ]
 }
