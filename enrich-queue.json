@@ -93,6 +93,56 @@
         "enrichNotes": ""
       },
       "ts": 1779043884810
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castle Ward\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Down\n*Type:* castle\n*Period:* 18th century\n*Coords:* 54.373, -5.579\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Ward\n*Maps:* https://www.google.com/maps/search/Castle%20Ward/@54.384,-5.583,15z\n*Main Image:* https://img.castlecore.uk/castle-ward.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCastle Ward is an 18th-century National Trust property located near the village of Strangford, in County Down, Northern Ireland, in the townland of the same name. It overlooks Strangford Lough and is 7 miles from Downpatrick and 1.5 miles from Strangford.\n\n_Listing 22 of 80_",
+      "listing": {
+        "name": "Castle Ward",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Down",
+        "lat": 54.373,
+        "lng": -5.579,
+        "mapsLink": "https://www.google.com/maps/search/Castle%20Ward/@54.384,-5.583,15z",
+        "image": "https://img.castlecore.uk/castle-ward.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Castle Ward is an 18th-century National Trust property located near the village of Strangford, in County Down, Northern Ireland, in the townland of the same name. It overlooks Strangford Lough and is 7 miles from Downpatrick and 1.5 miles from Strangford.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "gothic",
+          "gardens",
+          "filming-location",
+          "kid-friendly",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/castle-ward"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Castle_Ward"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Ward",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Castle_Ward_2.JPG/330px-Castle_Ward_2.JPG",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Ward",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043899440
     }
   ]
 }
