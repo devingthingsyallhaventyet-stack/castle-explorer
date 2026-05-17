@@ -371,6 +371,56 @@
         "enrichNotes": ""
       },
       "ts": 1779047705406
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Thornbury Castle\n*Country:* england\n*Region:* south west\n*County:* Gloucestershire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 51.6136, -2.5301\n*Wikipedia:* https://en.wikipedia.org/wiki/Thornbury_Castle\n*Maps:* https://maps.app.goo.gl/6dgFNMBpu7hQKHCH9\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNV1v1mrNykVsZwa500_3iAgFLAXtBguSz81_M22JOXJVD3bp4q1NW6pilLy_1jUBSwDHoIhAmJagt6ipXTxbUyfvvCjWj_Dr2nK_vpZtg8lZWhoC6-nnBn4Na0CRFgWSGu-3dA2IwJqfKC2PRzmYYO=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.thornburycastle.co.uk/\n\n*Description:*\nThornbury Castle is a Tudor castle in the town of Thornbury, in Gloucestershire, England, erected next to the parish church of St Mary. Construction was begun in 1511 as a further residence for Edward Stafford, 3rd Duke of Buckingham (1478–1521), of Stafford Castle in Staffordshire. It is not a true military fortress but rather an early example of a Tudor country house, with minimal defensive attributes.\n\n_Listing 8 of 111_",
+      "listing": {
+        "name": "Thornbury Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Gloucestershire",
+        "lat": 51.6136,
+        "lng": -2.5301,
+        "mapsLink": "https://maps.app.goo.gl/6dgFNMBpu7hQKHCH9",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNV1v1mrNykVsZwa500_3iAgFLAXtBguSz81_M22JOXJVD3bp4q1NW6pilLy_1jUBSwDHoIhAmJagt6ipXTxbUyfvvCjWj_Dr2nK_vpZtg8lZWhoC6-nnBn4Na0CRFgWSGu-3dA2IwJqfKC2PRzmYYO=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Thornbury Castle is a Tudor castle in the town of Thornbury, in Gloucestershire, England, erected next to the parish church of St Mary. Construction was begun in 1511 as a further residence for Edward Stafford, 3rd Duke of Buckingham (1478–1521), of Stafford Castle in Staffordshire. It is not a true military fortress but rather an early example of a Tudor country house, with minimal defensive attributes.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "romantic",
+          "tudor",
+          "gardens",
+          "atmospheric",
+          "wedding-venue",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Thornbury_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Thornbury_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thornbury.castle.west.front.arp.750pix.jpg/330px-Thornbury.castle.west.front.arp.750pix.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Thornbury_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.thornburycastle.co.uk/",
+        "enrichNotes": "add source - https://www.thornburycastle.co.uk/"
+      },
+      "ts": 1779047892933
     }
   ]
 }
