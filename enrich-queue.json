@@ -49,6 +49,60 @@
         "enrichNotes": "no google places. "
       },
       "ts": 1779038625641
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lyme Park\n*Country:* england\n*Region:* northern england\n*County:* Cheshire\n*Type:* palace\n*Period:* 18th century\n*Coords:* 53.3381, -2.0548\n*Wikipedia:* https://en.wikipedia.org/wiki/Lyme_Park\n*Maps:* https://www.google.com/maps/search/Lyme%20Park/@53.35,-2.05,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/South_facade_of_Lyme_Park_house%2C_2013.jpg/330px-South_facade_of_Lyme_Park_house%2C_2013.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nLyme Park is a large estate south of Disley, Cheshire, England. It is managed by the National Trust and consists of a mansion house surrounded by formal gardens and a deer park in the Peak District National Park. The house is the largest in Cheshire and is recorded in the National Heritage List for England as a designated Grade I listed building.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Lyme Park",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cheshire",
+        "lat": 53.3381,
+        "lng": -2.0548,
+        "mapsLink": "https://www.google.com/maps/search/Lyme%20Park/@53.35,-2.05,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/South_facade_of_Lyme_Park_house%2C_2013.jpg/330px-South_facade_of_Lyme_Park_house%2C_2013.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Lyme Park is a large estate south of Disley, Cheshire, England. It is managed by the National Trust and consists of a mansion house surrounded by formal gardens and a deer park in the Peak District National Park. The house is the largest in Cheshire and is recorded in the National Heritage List for England as a designated Grade I listed building.",
+        "type": "palace",
+        "period": "18th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "filming-location",
+          "gardens",
+          "woodland",
+          "dog-friendly",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lyme_Park"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/peak-district-derbyshire/lyme"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lyme_Park",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/South_facade_of_Lyme_Park_house%2C_2013.jpg/330px-South_facade_of_Lyme_Park_house%2C_2013.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Lyme_Park",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779038649018
     }
   ]
 }
