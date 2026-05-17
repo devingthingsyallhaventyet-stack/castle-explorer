@@ -143,6 +143,63 @@
         "enrichNotes": ""
       },
       "ts": 1779043899440
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kylemore Abbey\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* abbey\n*Period:* 19th century\n*Coords:* 53.5617067, -9.8894343\n*Wikipedia:* https://en.wikipedia.org/wiki/Kylemore_Abbey\n*Maps:* https://www.google.com/maps/search/Kylemore%20Abbey/@53.5597,-9.8889,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPpsYHYrgZSCQg1AO6Spv9nVJ3HkTFIaW11umfaV4hwioiSTZZ1X6A8dKSqNN79m_-sZuqTum3ZJIg-PDFrTeSXAdF6HJnLLrnPmZaoh8BSRsAFFs6zBJk8HgMBpzyhMtpZ_OVpQ0I5Mn4Kbw=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.kylemoreabbey.com/\n\n*Description:*\nKylemore Abbey is a Benedictine Monastery founded in 1920 on the grounds of Kylemore Castle, in Connemara, County Galway, Ireland. The Abbey was founded for Benedictine nuns who fled Belgium in World War 1. Since 2022, it has belonged to the English Benedictine Congregation. Under The Kylemore Trust, it continues its mission as a Benedictine monastery, holding Kylemore and its spiritual mission, natural and built heritage in trust for the Irish nation. Kylemore Abbey also operates as one of Ireland's leading visitor attractions.\n\n_Listing 23 of 80_",
+      "listing": {
+        "name": "Kylemore Abbey",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.5617067,
+        "lng": -9.8894343,
+        "mapsLink": "https://www.google.com/maps/search/Kylemore%20Abbey/@53.5597,-9.8889,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPpsYHYrgZSCQg1AO6Spv9nVJ3HkTFIaW11umfaV4hwioiSTZZ1X6A8dKSqNN79m_-sZuqTum3ZJIg-PDFrTeSXAdF6HJnLLrnPmZaoh8BSRsAFFs6zBJk8HgMBpzyhMtpZ_OVpQ0I5Mn4Kbw=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Kylemore Abbey is a Benedictine Monastery founded in 1920 on the grounds of Kylemore Castle, in Connemara, County Galway, Ireland. The Abbey was founded for Benedictine nuns who fled Belgium in World War 1. Since 2022, it has belonged to the English Benedictine Congregation. Under The Kylemore Trust, it continues its mission as a Benedictine monastery, holding Kylemore and its spiritual mission, natural and built heritage in trust for the Irish nation. Kylemore Abbey also operates as one of Ireland's leading visitor attractions.",
+        "type": "abbey",
+        "period": "19th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "atmospheric",
+          "romantic",
+          "gardens",
+          "coastal",
+          "woodland",
+          "gothic",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kylemore_Abbey"
+          },
+          {
+            "name": "Kylemore Abbey Official",
+            "url": "https://www.kylemoreabbey.com/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Kylemore_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Kylemore_October_2014-1a.jpg/330px-Kylemore_October_2014-1a.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kylemore_Abbey",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.kylemoreabbey.com/",
+        "enrichNotes": "add source - https://www.kylemoreabbey.com/"
+      },
+      "ts": 1779043934705
     }
   ]
 }
