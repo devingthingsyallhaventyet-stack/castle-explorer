@@ -445,6 +445,49 @@
         "enrichNotes": "https://www.bronte.org.uk/ add source "
       },
       "ts": 1779043532238
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Powis Castle\n*Country:* wales\n*Region:* mid wales marches\n*County:* Powys\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.65, -3.16055556\n*Wikipedia:* https://en.wikipedia.org/wiki/Powis_Castle\n*Maps:* https://www.google.com/maps/search/Powis%20Castle/@52.661,-3.1669,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP2QAMvXI4VBEMNoJdm10KzRJ1INR9pdA-oXiScPl2Jq3idQaWjWNpxvDXK6aIQUUWD7fSc4DIrqU5IzNClya9jdr6TGWfVXzoSUNxqCnxeXwbNzZe1faOJpqZorILnTvrrfyww2pp-KwrC=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nPowis Castle is a medieval castle, fortress and grand country house near Welshpool, in Powys, Wales. The seat of the Herbert family, earls of Powis, the castle is known for its formal gardens and for its interiors, the former having been described as \"the most important\", and the latter \"the most magnificent\", in the country. The castle and gardens are under the care of the National Trust. Powis Castle is a Grade I listed building, while its gardens have their own Grade I listing on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.\n\n_Listing 10 of 80_",
+      "listing": {
+        "name": "Powis Castle",
+        "country": "wales",
+        "region": "mid-wales-marches",
+        "county": "Powys",
+        "lat": 52.65,
+        "lng": -3.16055556,
+        "mapsLink": "https://www.google.com/maps/search/Powis%20Castle/@52.661,-3.1669,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP2QAMvXI4VBEMNoJdm10KzRJ1INR9pdA-oXiScPl2Jq3idQaWjWNpxvDXK6aIQUUWD7fSc4DIrqU5IzNClya9jdr6TGWfVXzoSUNxqCnxeXwbNzZe1faOJpqZorILnTvrrfyww2pp-KwrC=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Powis Castle is a medieval castle, fortress and grand country house near Welshpool, in Powys, Wales. The seat of the Herbert family, earls of Powis, the castle is known for its formal gardens and for its interiors, the former having been described as \"the most important\", and the latter \"the most magnificent\", in the country. The castle and gardens are under the care of the National Trust. Powis Castle is a Grade I listed building, while its gardens have their own Grade I listing on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Powis_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Powis_Castle_2016_116_%28cropped%29.jpg/330px-Powis_Castle_2016_116_%28cropped%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Photograph by Mike Peel (www.mikepeel.net).",
+          "license": "CC BY-SA 4.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043546152
     }
   ]
 }
