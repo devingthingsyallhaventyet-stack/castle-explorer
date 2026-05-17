@@ -100,6 +100,56 @@
         "enrichNotes": ""
       },
       "ts": 1779052479847
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Blackwater Castle\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Cork\n*Type:* castle\n*Period:* Medieval\n*Coords:* 52.1705, -8.4604\n*Wikipedia:* https://en.wikipedia.org/wiki/Blackwater_Castle\n*Maps:* https://www.google.com/maps/search/Blackwater%20Castle/@52.025,-8.265,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHFfKiwnc2-xTcLeifVs9Wv3vnLjOi-mDntLV9Lr7Ba0Aw7L6jEmswDXCgBIgrUvA97sHPp6TCk1jJ_yGnzrBz6ithQIeOIxaY=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.blackwatercastle.com/\n\n*Description:*\nBlackwater Castle, also and formerly known as Castle Widenham, is a privately owned estate located in the village of Castletownroche between the towns of Mallow and Fermoy in north County Cork, Ireland. Since 2005 it has been available to rent as a private hire venue for castle weddings and private parties along with castle rentals for vacations.\n\n_Listing 3 of 19_",
+      "listing": {
+        "name": "Blackwater Castle",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Cork",
+        "lat": 52.1705,
+        "lng": -8.4604,
+        "mapsLink": "https://www.google.com/maps/search/Blackwater%20Castle/@52.025,-8.265,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHFfKiwnc2-xTcLeifVs9Wv3vnLjOi-mDntLV9Lr7Ba0Aw7L6jEmswDXCgBIgrUvA97sHPp6TCk1jJ_yGnzrBz6ithQIeOIxaY=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Blackwater Castle, also and formerly known as Castle Widenham, is a privately owned estate located in the village of Castletownroche between the towns of Mallow and Fermoy in north County Cork, Ireland. Since 2005 it has been available to rent as a private hire venue for castle weddings and private parties along with castle rentals for vacations.",
+        "type": "castle",
+        "period": "Medieval",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "riverside",
+          "events-venue",
+          "wedding-venue"
+        ],
+        "source": [
+          {
+            "name": "Blackwater Castle",
+            "url": "https://www.blackwatercastle.com/"
+          },
+          {
+            "name": "Cork Heritage",
+            "url": "https://www.corkcoco.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Blackwater_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Castles_of_Munster-_Castle_Widenham%2C_Cork_%281%29_%28geograph_3036915%29.jpg/330px-Castles_of_Munster-_Castle_Widenham%2C_Cork_%281%29_%28geograph_3036915%29.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Blackwater_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.blackwatercastle.com/",
+        "enrichNotes": "add source - https://www.blackwatercastle.com/"
+      },
+      "ts": 1779052504417
     }
   ]
 }
