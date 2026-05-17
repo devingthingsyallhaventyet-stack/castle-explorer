@@ -560,6 +560,52 @@
         "enrichNotes": ""
       },
       "ts": 1779049952640
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Thornton Abbey\n*Country:* england\n*Region:* the midlands\n*County:* Lincolnshire\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 53.655, -0.3098\n*Wikipedia:* https://en.wikipedia.org/wiki/Thornton_Abbey\n*Maps:* https://www.google.com/maps/search/Thornton%20Abbey/@53.6456,-0.3201,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Thornton_Abbey_Ruins.jpg/330px-Thornton_Abbey_Ruins.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/HU2rsfHVVRTBs53cA\n\n*Description:*\nThornton Abbey was a medieval abbey located close to the small North Lincolnshire village of Thornton Curtis, near Ulceby, and directly south of Hull on the other side of the Humber estuary. Its ruins are a Grade I listed building, including notably England's largest and most impressive surviving monastic gatehouse.\n\n_Listing 12 of 79_",
+      "listing": {
+        "name": "Thornton Abbey",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Lincolnshire",
+        "lat": 53.655,
+        "lng": -0.3098,
+        "mapsLink": "https://www.google.com/maps/search/Thornton%20Abbey/@53.6456,-0.3201,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Thornton_Abbey_Ruins.jpg/330px-Thornton_Abbey_Ruins.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Thornton Abbey was a medieval abbey located close to the small North Lincolnshire village of Thornton Curtis, near Ulceby, and directly south of Hull on the other side of the Humber estuary. Its ruins are a Grade I listed building, including notably England's largest and most impressive surviving monastic gatehouse.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.1,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Thornton_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Thornton_Abbey_Ruins.jpg/330px-Thornton_Abbey_Ruins.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "David Wright",
+          "license": "CC BY-SA 2.0",
+          "description": "Ruins of Thornton Abbey, Lincolnshire.",
+          "credit": "Geograph project",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Thornton_Abbey",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/HU2rsfHVVRTBs53cA",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/HU2rsfHVVRTBs53cA"
+      },
+      "ts": 1779050031420
     }
   ]
 }
