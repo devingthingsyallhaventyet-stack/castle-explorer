@@ -220,6 +220,59 @@
         "enrichNotes": ""
       },
       "ts": 1779048741271
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Paxton's Tower\n*Country:* wales\n*Region:* west wales\n*County:* Carmarthenshire\n*Type:* monument\n*Period:* 19th century\n*Coords:* 51.85183, -4.1198\n*Wikipedia:* https://en.wikipedia.org/wiki/Paxton's_Tower\n*Maps:* https://www.google.com/maps/search/Paxton's%20Tower/@51.8528,-4.0361,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMz0DYN3G5LAOaser9RajpKl1WBEWbeFUwQFXSL0LTsxdaSdqPO5jtI_xTbhcINvRE-IuJuUU-lkHAZV4ht2pU2K9dHC-So4-d5eTDKWkCV5MY8NiaB177VZ6zAUwPZHWdIcXyC5V6a6CYX2A=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nPaxton's Tower is a Neo-Gothic folly erected in honour of Lord Nelson. It is situated on the top of a hill near Llanarthney in the River Tywi valley in Carmarthenshire, Wales. It is a visitor attraction that can be combined with a visit to the nearby National Botanic Garden of Wales. Its high location provides views over the Botanic Gardens and the Tywi valley. The tower, a Grade II* listed building, is under the care of the National Trust. The surrounding parkland is registered at Grade II* on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.\n\n_Listing 5 of 94_",
+      "listing": {
+        "name": "Paxton's Tower",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Carmarthenshire",
+        "lat": 51.85183,
+        "lng": -4.1198,
+        "mapsLink": "https://www.google.com/maps/search/Paxton's%20Tower/@51.8528,-4.0361,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMz0DYN3G5LAOaser9RajpKl1WBEWbeFUwQFXSL0LTsxdaSdqPO5jtI_xTbhcINvRE-IuJuUU-lkHAZV4ht2pU2K9dHC-So4-d5eTDKWkCV5MY8NiaB177VZ6zAUwPZHWdIcXyC5V6a6CYX2A=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Paxton's Tower is a Neo-Gothic folly erected in honour of Lord Nelson. It is situated on the top of a hill near Llanarthney in the River Tywi valley in Carmarthenshire, Wales. It is a visitor attraction that can be combined with a visit to the nearby National Botanic Garden of Wales. Its high location provides views over the Botanic Gardens and the Tywi valley. The tower, a Grade II* listed building, is under the care of the National Trust. The surrounding parkland is registered at Grade II* on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+        "type": "monument",
+        "period": "19th century",
+        "rating": 4.2,
+        "tags": [
+          "hilltop",
+          "photogenic",
+          "free-entry",
+          "gothic"
+        ],
+        "source": [
+          {
+            "name": "National Trust – Paxton's Tower",
+            "url": "https://www.nationaltrust.org.uk/visit/wales/paxtons-tower"
+          },
+          {
+            "name": "Wikipedia – Paxton's Tower",
+            "url": "https://en.wikipedia.org/wiki/Paxton%27s_Tower"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Paxton's_Tower",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Paxton_Tower.jpg/330px-Paxton_Tower.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Matt Phillips",
+          "license": "CC BY-SA 4.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048762328
     }
   ]
 }
