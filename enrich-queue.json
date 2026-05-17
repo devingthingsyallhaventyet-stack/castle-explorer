@@ -640,6 +640,62 @@
         "enrichNotes": "more research needed "
       },
       "ts": 1779061549545
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Minard Castle\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Kerry\n*Type:* castle\n*Period:* 16th century\n*Coords:* 56.097925, -5.25966944\n*Wikipedia:* https://en.wikipedia.org/wiki/Minard_Castle\n*Maps:* https://www.google.com/maps/search/Minard%20Castle/@52.121,-10.072,15z\n*Main Image:* https://img.castlecore.uk/minard-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* incorrect wikipedia. cant find correct one. \n\n*Description:*\nMinard Castle is a 19th-century castellated mansion on the north-western shore of Loch Fyne Argyll and Bute, on the west coast of Scotland, in the parish of Kilmichael Glassary.\n\n_Listing 13 of 252_",
+      "listing": {
+        "name": "Minard Castle",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Kerry",
+        "lat": 56.097925,
+        "lng": -5.25966944,
+        "mapsLink": "https://www.google.com/maps/search/Minard%20Castle/@52.121,-10.072,15z",
+        "image": "https://img.castlecore.uk/minard-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/minard-castle-2.jpg",
+          "https://img.castlecore.uk/minard-castle-3.jpg",
+          "https://img.castlecore.uk/minard-castle-4.jpg",
+          "https://img.castlecore.uk/minard-castle-5.jpg"
+        ],
+        "desc": "Minard Castle is a 19th-century castellated mansion on the north-western shore of Loch Fyne Argyll and Bute, on the west coast of Scotland, in the parish of Kilmichael Glassary.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 3.8,
+        "tags": [
+          "coastal",
+          "ruins-romantic",
+          "atmospheric",
+          "photogenic",
+          "free-entry",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Kerry Heritage",
+            "url": "https://www.kerrytourism.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Minard_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Minard_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Minard_Castle_-_view_from_SE.jpg/330px-Minard_Castle_-_view_from_SE.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Minard_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "incorrect wikipedia. cant find correct one. ",
+        "enrichNotes": "incorrect wikipedia. cant find correct one. "
+      },
+      "ts": 1779061657126
     }
   ]
 }
