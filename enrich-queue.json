@@ -46,6 +46,60 @@
         "enrichNotes": ""
       },
       "ts": 1779060605243
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Layde Church\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Antrim\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 55.205, -6.035\n*Wikipedia:* https://en.wikipedia.org/wiki/Late_church_cantatas_by_Johann_Sebastian_Bach\n*Maps:* https://www.google.com/maps/search/Layde%20Church/@55.205,-6.035,15z\n*Main Image:* https://img.castlecore.uk/layde-church.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* no wikipedia page. \n\n*Description:*\nThe late church cantatas by Johann Sebastian Bach are sacred cantatas he composed after his fourth cycle of 1728–29. Whether Bach still composed a full cantata cycle in the last 20 years of his life is not known, but the extant cantatas of this period written for occasions of the liturgical year are sometimes referred to as his fifth cycle, as, according to his obituary, he would have written five such cycles – inasmuch as such cantatas were not late additions to earlier cycles, or were adopted in his oratorios.\n\n_Listing 2 of 260_",
+      "listing": {
+        "name": "Layde Church",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Antrim",
+        "lat": 55.205,
+        "lng": -6.035,
+        "mapsLink": "https://www.google.com/maps/search/Layde%20Church/@55.205,-6.035,15z",
+        "image": "https://img.castlecore.uk/layde-church.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/layde-church-2.jpg",
+          "https://img.castlecore.uk/layde-church-3.jpg",
+          "https://img.castlecore.uk/layde-church-4.jpg",
+          "https://img.castlecore.uk/layde-church-5.jpg"
+        ],
+        "desc": "The late church cantatas by Johann Sebastian Bach are sacred cantatas he composed after his fourth cycle of 1728–29. Whether Bach still composed a full cantata cycle in the last 20 years of his life is not known, but the extant cantatas of this period written for occasions of the liturgical year are sometimes referred to as his fifth cycle, as, according to his obituary, he would have written five such cycles – inasmuch as such cantatas were not late additions to earlier cycles, or were adopted in his oratorios.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 3.9,
+        "tags": [
+          "coastal",
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Antrim Heritage",
+            "url": "https://www.visitcausewaycoastandglens.com/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Late_church_cantatas_by_Johann_Sebastian_Bach",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "no wikipedia page. ",
+        "enrichNotes": "no wikipedia page. "
+      },
+      "ts": 1779060674297
     }
   ]
 }
