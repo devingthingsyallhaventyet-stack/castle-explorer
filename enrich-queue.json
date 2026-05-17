@@ -41,6 +41,45 @@
         "enrichNotes": "update wikipedia link - https://en.wikipedia.org/wiki/Desmond_Castle_(Kinsale)"
       },
       "ts": 1779050801677
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Charleville Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Offaly\n*Type:* castle\n*Period:* 19th century\n*Coords:* 53.2604, -7.5279\n*Wikipedia:* https://en.wikipedia.org/wiki/Charleville_Castle\n*Maps:* https://www.google.com/maps/search/Charleville%20Castle/@53.2736,-7.7294,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Charleville_Castle.png/330px-Charleville_Castle.png\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.charlevillecastle.ie/\n\n*Description:*\nCharleville Castle is a Gothic-style castle located in County Offaly, Ireland, bordering the town of Tullamore, near the River Clodiagh. It is considered one of the finest of its type in the country.\n\n_Listing 2 of 53_",
+      "listing": {
+        "name": "Charleville Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Offaly",
+        "lat": 53.2604,
+        "lng": -7.5279,
+        "mapsLink": "https://www.google.com/maps/search/Charleville%20Castle/@53.2736,-7.7294,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Charleville_Castle.png/330px-Charleville_Castle.png",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Charleville Castle is a Gothic-style castle located in County Offaly, Ireland, bordering the town of Tullamore, near the River Clodiagh. It is considered one of the finest of its type in the country.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.1,
+        "tags": [
+          "haunted",
+          "hidden-gem",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Charleville_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Charleville_Castle.png/330px-Charleville_Castle.png",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Charleville_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.charlevillecastle.ie/",
+        "enrichNotes": "add source - https://www.charlevillecastle.ie/"
+      },
+      "ts": 1779050824216
     }
   ]
 }
