@@ -107,6 +107,56 @@
         "enrichNotes": "add source - https://www.english-heritage.org.uk/visit/places/brinkburn-priory/"
       },
       "ts": 1779036278021
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Belsay Castle\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* tower house\n*Period:* 14th century\n*Coords:* 55.102, -1.869\n*Wikipedia:* https://en.wikipedia.org/wiki/Belsay_Castle\n*Maps:* https://www.google.com/maps/search/Belsay%20Castle/@55.1167,-1.85,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Belsay_Castle.jpg/330px-Belsay_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/\n\n*Description:*\nBelsay Castle is a 14th-century medieval castle situated at Belsay, Northumberland, England. It is a Scheduled Monument and a Grade I listed building.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Belsay Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 55.102,
+        "lng": -1.869,
+        "mapsLink": "https://www.google.com/maps/search/Belsay%20Castle/@55.1167,-1.85,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Belsay_Castle.jpg/330px-Belsay_Castle.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Belsay Castle is a 14th-century medieval castle situated at Belsay, Northumberland, England. It is a Scheduled Monument and a Grade I listed building.",
+        "type": "tower house",
+        "period": "14th century",
+        "rating": 4.3,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "gardens",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Belsay"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Belsay_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Belsay_Castle.jpg/330px-Belsay_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Belsay_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/",
+        "enrichNotes": "add source - https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/"
+      },
+      "ts": 1779036305746
     }
   ]
 }
