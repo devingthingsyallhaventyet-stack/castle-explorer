@@ -358,6 +358,54 @@
         "enrichNotes": "add source - https://manjushri.org/\nUpdate google maps link - https://maps.app.goo.gl/sVPd9DNJMZF4kRAk8"
       },
       "ts": 1779049753709
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Binchester Roman Fort\n*Country:* england\n*Region:* northern england\n*County:* County Durham\n*Type:* castle\n*Period:* 1st-4th century AD\n*Coords:* 54.676, -1.677\n*Wikipedia:* https://en.wikipedia.org/wiki/Vinovia\n*Maps:* https://www.google.com/maps/search/Binchester%20Roman%20Fort/@54.67,-1.6833,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPeg-w-eGvncgoFujRQ6sO90YyDoPb5TMF_U7Z7E89jhjsdNtybei6smA0ShWQg45gWsB6qGE7lJpEMYWlqdUtEZkL8yh2ACKwx8ZXVHgnjuA8JEjc2dCYmEhorP24_mlNmAVcglOffvIfAGUg=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nVinovia or Vinovium was a Roman fort and settlement situated just over 1 mile (1.6 km) to the north of the town of Bishop Auckland on the banks of the River Wear in County Durham, England. The fort was the site of a hamlet until the late Middle Ages, but the modern-day village of Binchester is about 2 miles (3 km) to the east, near Spennymoor. The ruins are now known as the Binchester Roman Fort.\n\n_Listing 8 of 79_",
+      "listing": {
+        "name": "Binchester Roman Fort",
+        "country": "england",
+        "region": "northern-england",
+        "county": "County Durham",
+        "lat": 54.676,
+        "lng": -1.677,
+        "mapsLink": "https://www.google.com/maps/search/Binchester%20Roman%20Fort/@54.67,-1.6833,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPeg-w-eGvncgoFujRQ6sO90YyDoPb5TMF_U7Z7E89jhjsdNtybei6smA0ShWQg45gWsB6qGE7lJpEMYWlqdUtEZkL8yh2ACKwx8ZXVHgnjuA8JEjc2dCYmEhorP24_mlNmAVcglOffvIfAGUg=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Vinovia or Vinovium was a Roman fort and settlement situated just over 1 mile (1.6 km) to the north of the town of Bishop Auckland on the banks of the River Wear in County Durham, England. The fort was the site of a hamlet until the late Middle Ages, but the modern-day village of Binchester is about 2 miles (3 km) to the east, near Spennymoor. The ruins are now known as the Binchester Roman Fort.",
+        "type": "castle",
+        "period": "1st-4th century AD",
+        "rating": 4.1,
+        "tags": [
+          "prehistoric",
+          "well-preserved",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Binchester_Roman_Fort"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Vinovia",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Binchester_excavated_remains.JPG/330px-Binchester_excavated_remains.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Geni",
+          "license": "CC BY-SA 4.0",
+          "description": "Photo of part of the excavated remains of Binchester as well as the building that covers part of said remains",
+          "credit": "Photo by user:geni",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049777842
     }
   ]
 }
