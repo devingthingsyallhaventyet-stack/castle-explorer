@@ -777,6 +777,57 @@
         "enrichNotes": ""
       },
       "ts": 1779053162666
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Creevelea Abbey\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Leitrim\n*Type:* abbey\n*Period:* 16th century\n*Coords:* 54.231291, -8.309791\n*Wikipedia:* https://en.wikipedia.org/wiki/Creevelea_Abbey\n*Maps:* https://www.google.com/maps/search/Creevelea%20Abbey/@54.176,-8.086,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Creevelea_Abbey%2C_County_Leitrim.jpg/330px-Creevelea_Abbey%2C_County_Leitrim.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCreevelea Abbey is an early 16th-century Franciscan friary and National Monument located in Dromahair, County Leitrim, Ireland. Although in ruins, Creevelea Abbey is still in use as a grave yard.\n\n_Listing 17 of 19_",
+      "listing": {
+        "name": "Creevelea Abbey",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Leitrim",
+        "lat": 54.231291,
+        "lng": -8.309791,
+        "mapsLink": "https://www.google.com/maps/search/Creevelea%20Abbey/@54.176,-8.086,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Creevelea_Abbey%2C_County_Leitrim.jpg/330px-Creevelea_Abbey%2C_County_Leitrim.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Creevelea Abbey is an early 16th-century Franciscan friary and National Monument located in Dromahair, County Leitrim, Ireland. Although in ruins, Creevelea Abbey is still in use as a grave yard.",
+        "type": "abbey",
+        "period": "16th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "riverside",
+          "woodland",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Creevelea_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Creevelea_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Creevelea_Abbey%2C_County_Leitrim.jpg/330px-Creevelea_Abbey%2C_County_Leitrim.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Creevelea_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779053191161
     }
   ]
 }
