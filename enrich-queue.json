@@ -55,6 +55,67 @@
         "enrichNotes": "update google places link https://maps.app.goo.gl/5bVEn8HW4ZbkYpHG9\n"
       },
       "ts": 1779051912565
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Weobley Castle\n*Country:* wales\n*Region:* south wales\n*County:* Swansea\n*Type:* fortified house\n*Period:* 14th century\n*Coords:* 51.5926, -4.166\n*Wikipedia:* https://en.wikipedia.org/wiki/Weobley_Castle\n*Maps:* https://www.google.com/maps/search/Weobley%20Castle/@51.5926,-4.166,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Roscrea_Castle.jpg/500px-Roscrea_Castle.jpg\n*Gallery:* 12 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update wikipedia link - https://en.wikipedia.org/wiki/Weobley_Castle,_Gower\n\n\n*Description:*\nWeobley Castle may refer to:Weobley Castle, Herefordshire\nWeobley Castle, Gower\n\n_Listing 2 of 33_",
+      "listing": {
+        "name": "Weobley Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Swansea",
+        "lat": 51.5926,
+        "lng": -4.166,
+        "mapsLink": "https://www.google.com/maps/search/Weobley%20Castle/@51.5926,-4.166,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Roscrea_Castle.jpg/500px-Roscrea_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/weobley-castle-2.jpg",
+          "https://img.castlecore.uk/weobley-castle-3.jpg",
+          "https://img.castlecore.uk/weobley-castle-4.jpg",
+          "https://img.castlecore.uk/weobley-castle-5.jpg",
+          "https://img.castlecore.uk/weobley-castle-interior-2.jpg",
+          "https://img.castlecore.uk/weobley-castle-interior-3.jpg",
+          "https://img.castlecore.uk/weobley-castle-interior-4.jpg",
+          "https://img.castlecore.uk/weobley-castle-interior-5.jpg",
+          "https://img.castlecore.uk/weobley-castle-main-2.jpg",
+          "https://img.castlecore.uk/weobley-castle-main-3.jpg",
+          "https://img.castlecore.uk/weobley-castle-main-4.jpg",
+          "https://img.castlecore.uk/weobley-castle-main-5.jpg"
+        ],
+        "desc": "Weobley Castle may refer to:Weobley Castle, Herefordshire\nWeobley Castle, Gower",
+        "type": "fortified house",
+        "period": "14th century",
+        "rating": 4,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "coastal",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Weobley_Castle"
+          },
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/weobley-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Weobley_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Weobley_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update wikipedia link - https://en.wikipedia.org/wiki/Weobley_Castle,_Gower\n",
+        "enrichNotes": "update wikipedia link - https://en.wikipedia.org/wiki/Weobley_Castle,_Gower\n"
+      },
+      "ts": 1779051994789
     }
   ]
 }
