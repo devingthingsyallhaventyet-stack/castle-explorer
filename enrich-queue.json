@@ -387,6 +387,64 @@
         "enrichNotes": ""
       },
       "ts": 1779043481858
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Haworth Parsonage\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 19th century\n*Coords:* 53.83127778, -1.95744444\n*Wikipedia:* https://en.wikipedia.org/wiki/Bront%C3%AB_Parsonage_Museum\n*Maps:* https://www.google.com/maps/search/Haworth%20Parsonage/@53.8283,-1.9583,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bront%C3%AB_Parsonage.jpg/330px-Bront%C3%AB_Parsonage.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.bronte.org.uk/ add source \n\n*Description:*\nThe Brontë Parsonage Museum is a writer's house museum maintained by the Brontë Society in honour of the Brontë sisters – Charlotte, Emily and Anne. The museum is in the former Brontë family home, the parsonage in Haworth, West Yorkshire, England, where the sisters spent most of their lives and wrote their famous novels.\n\n_Listing 9 of 80_",
+      "listing": {
+        "name": "Haworth Parsonage",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 53.83127778,
+        "lng": -1.95744444,
+        "mapsLink": "https://www.google.com/maps/search/Haworth%20Parsonage/@53.8283,-1.9583,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bront%C3%AB_Parsonage.jpg/330px-Bront%C3%AB_Parsonage.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "The Brontë Parsonage Museum is a writer's house museum maintained by the Brontë Society in honour of the Brontë sisters – Charlotte, Emily and Anne. The museum is in the former Brontë family home, the parsonage in Haworth, West Yorkshire, England, where the sisters spent most of their lives and wrote their famous novels.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "atmospheric",
+          "museum",
+          "guided-tours",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bront%C3%AB_Parsonage_Museum"
+          },
+          {
+            "name": "Brontë Parsonage Museum",
+            "url": "https://www.bronte.org.uk/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bront%C3%AB_Parsonage_Museum",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bront%C3%AB_Parsonage.jpg/330px-Bront%C3%AB_Parsonage.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "DeFacto",
+          "license": "CC BY-SA 4.0",
+          "description": "The Brontë Parsonage, now a museum, in Haworth, Yorkshire, England. The former family home of the Brontë sisters – Charlotte, Emily and Anne.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bront%C3%AB_Parsonage_Museum",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://www.bronte.org.uk/ add source ",
+        "enrichNotes": "https://www.bronte.org.uk/ add source "
+      },
+      "ts": 1779043532238
     }
   ]
 }
