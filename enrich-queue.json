@@ -606,6 +606,67 @@
         "enrichNotes": "add source - https://www.yorkmuseumgardens.org.uk/about/st-marys-abbey/"
       },
       "ts": 1779045920614
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Nunnington Hall\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 13th-17th century\n*Coords:* 54.20682, -0.97374\n*Wikipedia:* https://en.wikipedia.org/wiki/Nunnington_Hall\n*Maps:* https://www.google.com/maps/search/Nunnington%20Hall/@54.1933,-0.9917,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOc4SvjS0fcIUpv7YUdevxZjlMN_tlPQr8VNKjmv70-zLOPUsopMOluNni0VopW-Jy3Lzr9kA5-z4iwkOa7jOyUrw2yHYe4__9z6ptX7IToEFONij0dWIpAPps48HxMnd0u61b0jATMj42M2UxmyWhQwQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nNunnington Hall is a country house situated in the English county of North Yorkshire. The river Rye, which gives its name to the local area, Ryedale, runs past the house, flowing away from the village of Nunnington. A stone bridge over the river separates the grounds of the house from the village. Above, a ridge known as Caulkley's Bank lies between Nunnington and the Vale of York to the south. The Vale of Pickering and the North York Moors lie to the north and east. Nunnington Hall is owned, conserved and managed as a visitor attraction by the National Trust.\n\n_Listing 12 of 28_",
+      "listing": {
+        "name": "Nunnington Hall",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.20682,
+        "lng": -0.97374,
+        "mapsLink": "https://www.google.com/maps/search/Nunnington%20Hall/@54.1933,-0.9917,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOc4SvjS0fcIUpv7YUdevxZjlMN_tlPQr8VNKjmv70-zLOPUsopMOluNni0VopW-Jy3Lzr9kA5-z4iwkOa7jOyUrw2yHYe4__9z6ptX7IToEFONij0dWIpAPps48HxMnd0u61b0jATMj42M2UxmyWhQwQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Nunnington Hall is a country house situated in the English county of North Yorkshire. The river Rye, which gives its name to the local area, Ryedale, runs past the house, flowing away from the village of Nunnington. A stone bridge over the river separates the grounds of the house from the village. Above, a ridge known as Caulkley's Bank lies between Nunnington and the Vale of York to the south. The Vale of Pickering and the North York Moors lie to the north and east. Nunnington Hall is owned, conserved and managed as a visitor attraction by the National Trust.",
+        "type": "castle",
+        "period": "13th-17th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "tudor",
+          "gardens",
+          "riverside",
+          "tearoom-cafe",
+          "kid-friendly",
+          "gift-shop",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/nunnington-hall"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nunnington_Hall"
+          },
+          {
+            "name": "Visit York",
+            "url": "https://visityork.org/business-directory/nunnington-hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Nunnington_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Nunnington_Hall_South.JPG/330px-Nunnington_Hall_South.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Wehha",
+          "license": "CC BY-SA 3.0",
+          "description": "South Facade of Nunnington Hall",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045930995
     }
   ]
 }
