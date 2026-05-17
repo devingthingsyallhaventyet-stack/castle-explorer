@@ -632,6 +632,44 @@
         "enrichNotes": "add source - https://yeatsthoorballylee.org/"
       },
       "ts": 1779053022939
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dysert O'Dea Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Clare\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 52.91138889, -9.06638889\n*Wikipedia:* https://en.wikipedia.org/wiki/O%27Dea_Castle\n*Maps:* https://www.google.com/maps/search/Dysert%20O'Dea%20Castle/@52.85,-8.8833,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Odea_castle.jpg/330px-Odea_castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://dysertcastle.ie/\n\n*Description:*\nO'Dea Castle, also known as Dysert O'Dea Castle, is an Irish fortified tower house, loosely described as a castle at Dysert O'Dea, the former O'Dea clan stronghold, 5 kilometres (3 mi) from Corofin, County Clare. It was built between 1470 and 1490 by Diarmaid O'Dea, Lord of Cineal Fearmaic, and stands some 50 feet (15 m) high on a limestone outcrop base measuring 20 by 40 feet. The tower is adjacent to Dysert O'Dea Monastery, close to the R476 road.\n\n_Listing 14 of 19_",
+      "listing": {
+        "name": "Dysert O'Dea Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Clare",
+        "lat": 52.91138889,
+        "lng": -9.06638889,
+        "mapsLink": "https://www.google.com/maps/search/Dysert%20O'Dea%20Castle/@52.85,-8.8833,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Odea_castle.jpg/330px-Odea_castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "O'Dea Castle, also known as Dysert O'Dea Castle, is an Irish fortified tower house, loosely described as a castle at Dysert O'Dea, the former O'Dea clan stronghold, 5 kilometres (3 mi) from Corofin, County Clare. It was built between 1470 and 1490 by Diarmaid O'Dea, Lord of Cineal Fearmaic, and stands some 50 feet (15 m) high on a limestone outcrop base measuring 20 by 40 feet. The tower is adjacent to Dysert O'Dea Monastery, close to the R476 road.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/O'Dea_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Odea_castle.jpg/330px-Odea_castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/O%27Dea_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://dysertcastle.ie/",
+        "enrichNotes": "add source - https://dysertcastle.ie/"
+      },
+      "ts": 1779053064355
     }
   ]
 }
