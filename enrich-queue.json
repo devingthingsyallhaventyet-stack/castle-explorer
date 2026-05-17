@@ -940,6 +940,56 @@
         "enrichNotes": "add source - https://www.newburghpriory.co.uk/"
       },
       "ts": 1779051385049
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Aldborough Roman Town\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 2nd-5th century AD\n*Coords:* 54.0908, -1.3816\n*Wikipedia:* https://en.wikipedia.org/wiki/Isurium_Brigantum\n*Maps:* https://www.google.com/maps/search/Aldborough%20Roman%20Town/@54.0883,-1.3767,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg/330px-Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nIsurium or Isurium of the Brigantes was a Roman fort and town in the province of Britannia at the site of present-day Aldborough in North Yorkshire, England, in the United Kingdom. Its remains—the Aldborough Roman Site—are in the care of English Heritage.\n\n_Listing 19 of 53_",
+      "listing": {
+        "name": "Aldborough Roman Town",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.0908,
+        "lng": -1.3816,
+        "mapsLink": "https://www.google.com/maps/search/Aldborough%20Roman%20Town/@54.0883,-1.3767,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg/330px-Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Isurium or Isurium of the Brigantes was a Roman fort and town in the province of Britannia at the site of present-day Aldborough in North Yorkshire, England, in the United Kingdom. Its remains—the Aldborough Roman Site—are in the care of English Heritage.",
+        "type": "castle",
+        "period": "2nd-5th century AD",
+        "rating": 4,
+        "tags": [
+          "prehistoric",
+          "museum",
+          "well-preserved"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/aldborough-roman-site/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Isurium_Brigantum",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg/330px-Mosaic_depicting_the_She-wolf_with_Romulus_and_Remus%2C_from_Aldborough%2C_about_300-400_AD%2C_Leeds_City_Museum_%2816025914306%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Following Hadrian",
+          "license": "CC BY-SA 2.0",
+          "description": "Mosaic depicting the She-wolf with Romulus and Remus, from Aldborough, about 300-400 AD,  Leeds City Museum",
+          "credit": "Flickr",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Isurium_Brigantum",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779051417397
     }
   ]
 }
