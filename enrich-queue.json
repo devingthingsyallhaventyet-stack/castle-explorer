@@ -889,6 +889,50 @@
         "enrichNotes": "update google places - https://maps.app.goo.gl/jmE4MNAKfwmjenxz7\n"
       },
       "ts": 1779043748399
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Birr Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Offaly\n*Type:* castle\n*Period:* 17th century\n*Coords:* 53.09536, -7.91476\n*Wikipedia:* https://en.wikipedia.org/wiki/Birr_Castle\n*Maps:* https://www.google.com/maps/search/Birr%20Castle/@53.0961,-7.9133,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNl9jmmjJvL440l0Ko-jmGqNpR-vAT2gttATLzagtnrMXZRMek0zi5tKFWjZOCZKQLSxcLiom7y1JeX2iF8GlXvUwDYB3HIxqJ1cDLKCxNq9gjqKNCljI_axUV6USqIBa7rFS6XTEQcxresQw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://birrcastle.com/\n\n*Description:*\nBirr Castle is a castle in the town of Birr in County Offaly, Ireland. It is the home of the 7th Earl of Rosse and his family, and as such the castle is generally not open to the public, though the grounds and gardens of the demesne are publicly accessible, and include a science museum and a café, a reflecting telescope which was the largest in the world for decades and a modern radio telescope.\n\n_Listing 19 of 80_",
+      "listing": {
+        "name": "Birr Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Offaly",
+        "lat": 53.09536,
+        "lng": -7.91476,
+        "mapsLink": "https://www.google.com/maps/search/Birr%20Castle/@53.0961,-7.9133,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNl9jmmjJvL440l0Ko-jmGqNpR-vAT2gttATLzagtnrMXZRMek0zi5tKFWjZOCZKQLSxcLiom7y1JeX2iF8GlXvUwDYB3HIxqJ1cDLKCxNq9gjqKNCljI_axUV6USqIBa7rFS6XTEQcxresQw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Birr Castle is a castle in the town of Birr in County Offaly, Ireland. It is the home of the 7th Earl of Rosse and his family, and as such the castle is generally not open to the public, though the grounds and gardens of the demesne are publicly accessible, and include a science museum and a café, a reflecting telescope which was the largest in the world for decades and a modern radio telescope.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Birr_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Birr_Castle%2C_Offaly.jpg/330px-Birr_Castle%2C_Offaly.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "The original uploader was Tpower at English Wikipedia.",
+          "license": "CC BY-SA 3.0",
+          "description": "en:Birr Castle, en:County Offaly, Ireland. Digital photo taken by en:User:Tpower, 3-10-05.",
+          "credit": "Transferred from en.wikipedia to Commons.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://birrcastle.com/",
+        "enrichNotes": "add source - https://birrcastle.com/"
+      },
+      "ts": 1779043805079
     }
   ]
 }
