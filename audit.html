@@ -409,8 +409,22 @@ fetch('audit-data.json').then(r => r.json()).then(data => {
 
 // Load source candidates
 window.sourceCandidates = [];
-fetch('source-candidates.json').then(r => r.json()).then(data => {
+fetch('source-candidates.json?v=' + Date.now()).then(r => r.json()).then(data => {
   window.sourceCandidates = data.candidates || [];
+  // Clear stale localStorage — server is the source of truth
+  // Only restore statuses for candidates still pending on server
+  const saved = localStorage.getItem('castle-source-candidates');
+  if (saved) {
+    try {
+      const local = JSON.parse(saved);
+      const serverNames = new Set(window.sourceCandidates.map(c => c.name + '|' + c.candidateUrl));
+      const localCandidates = (local.candidates || []).filter(c => c.status !== 'pending');
+      const stillRelevant = localCandidates.some(c => serverNames.has(c.name + '|' + c.candidateUrl));
+      if (!stillRelevant) {
+        localStorage.removeItem('castle-source-candidates');
+      }
+    } catch(e) {}
+  }
   updateTabCounts();
 }).catch(() => {
   console.log('No source-candidates.json found, using empty array');
@@ -1458,25 +1472,7 @@ function saveSourceCandidates() {
   localStorage.setItem('castle-source-candidates', json);
 }
 
-// Restore source candidate reviews from localStorage on load
-(function restoreSourceCandidates() {
-  const saved = localStorage.getItem('castle-source-candidates');
-  if (!saved) return;
-  try {
-    const data = JSON.parse(saved);
-    if (!data.candidates) return;
-    // Merge saved statuses into loaded candidates
-    const savedMap = {};
-    data.candidates.forEach(c => { savedMap[c.name + '|' + c.candidateUrl] = c.status; });
-    window.sourceCandidates.forEach(c => {
-      const key = c.name + '|' + c.candidateUrl;
-      if (savedMap[key] && savedMap[key] !== 'pending') {
-        c.status = savedMap[key];
-      }
-    });
-    updateTabCounts();
-  } catch(e) { console.warn('Failed to restore source candidates:', e); }
-})();
+// Restore is now handled inline after fetch to avoid race conditions
 </script>
 </body>
 </html>
