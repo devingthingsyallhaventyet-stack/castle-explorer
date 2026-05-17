@@ -150,6 +150,45 @@
         "enrichNotes": "add source - https://www.blackwatercastle.com/"
       },
       "ts": 1779052504417
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Roscrea Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.95494, -7.79788\n*Wikipedia:* https://en.wikipedia.org/wiki/Roscrea_Castle\n*Maps:* https://www.google.com/maps/search/Roscrea%20Castle/@52.9534,-7.801,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNmmJqAWhI3yOf8FSCwvQMDbJ8crAsO-PvgG1TRnhmYXEcLo95oCoLvKEFbcnVf0cExfwNPTh7WhYraSsBOpgkq1ryfLo0Hrco5Lf0tSU2f_lyRJt2Br69K7PPaZRC00svpR9950fuNOGIAXg=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places - https://maps.app.goo.gl/jtaoWW85jkfNjs5s8\n\n\n*Description:*\nRoscrea Castle is a 13th-century motte-and-bailey castle in the town of Roscrea, Ireland. The castle consists of a walled courtyard, gate block, and angled towers. Along with 18th century Damer House and gardens, the castle forms part of Roscrea Heritage Centre.\n\n_Listing 4 of 19_",
+      "listing": {
+        "name": "Roscrea Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 52.95494,
+        "lng": -7.79788,
+        "mapsLink": "https://www.google.com/maps/search/Roscrea%20Castle/@52.9534,-7.801,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNmmJqAWhI3yOf8FSCwvQMDbJ8crAsO-PvgG1TRnhmYXEcLo95oCoLvKEFbcnVf0cExfwNPTh7WhYraSsBOpgkq1ryfLo0Hrco5Lf0tSU2f_lyRJt2Br69K7PPaZRC00svpR9950fuNOGIAXg=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Roscrea Castle is a 13th-century motte-and-bailey castle in the town of Roscrea, Ireland. The castle consists of a walled courtyard, gate block, and angled towers. Along with 18th century Damer House and gardens, the castle forms part of Roscrea Heritage Centre.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Roscrea_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Roscrea_Castle.jpg/330px-Roscrea_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Roscrea_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places - https://maps.app.goo.gl/jtaoWW85jkfNjs5s8\n",
+        "enrichNotes": "update google places - https://maps.app.goo.gl/jtaoWW85jkfNjs5s8\n"
+      },
+      "ts": 1779052557661
     }
   ]
 }
