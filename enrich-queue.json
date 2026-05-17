@@ -549,6 +549,61 @@
         "enrichNotes": "add source - https://www.lullingstonecastle.co.uk/"
       },
       "ts": 1779051120558
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Wolvesey Castle\n*Country:* england\n*Region:* south east london\n*County:* Hampshire\n*Type:* palace\n*Period:* 12th century\n*Coords:* 51.0592, -1.31\n*Wikipedia:* https://en.wikipedia.org/wiki/Wolvesey_Castle\n*Maps:* https://www.google.com/maps/search/Wolvesey%20Castle/@51.0572,-1.3214,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZODBkrIQhHnnSuVTk3mmLUtZOIiKw6Dv1hNugEX0RTUP0qkm0-HhoVkvBykjDMmsNdG7wFAmLD7JTRqSKjFhFj6_cfv9IGPudgzyOXhoBOliMti7W9_6aBb86GjQnVchw8sWmAP0t0QCBeVLYw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nWolvesey Castle, in Winchester, Hampshire, England, was the main residence of the Bishop of Winchester in the Middle Ages. The castle, mostly built by Henry of Blois in the 12th century, is now a ruin, except for its fifteenth-century chapel, which is now part of the bishop's current residence, Wolvesey Palace. Wolvesey Castle was primarily a palace, although Blois had it fortified because of the Anarchy.\n\n_Listing 12 of 53_",
+      "listing": {
+        "name": "Wolvesey Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Hampshire",
+        "lat": 51.0592,
+        "lng": -1.31,
+        "mapsLink": "https://www.google.com/maps/search/Wolvesey%20Castle/@51.0572,-1.3214,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZODBkrIQhHnnSuVTk3mmLUtZOIiKw6Dv1hNugEX0RTUP0qkm0-HhoVkvBykjDMmsNdG7wFAmLD7JTRqSKjFhFj6_cfv9IGPudgzyOXhoBOliMti7W9_6aBb86GjQnVchw8sWmAP0t0QCBeVLYw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Wolvesey Castle, in Winchester, Hampshire, England, was the main residence of the Bishop of Winchester in the Middle Ages. The castle, mostly built by Henry of Blois in the 12th century, is now a ruin, except for its fifteenth-century chapel, which is now part of the bishop's current residence, Wolvesey Palace. Wolvesey Castle was primarily a palace, although Blois had it fortified because of the Anarchy.",
+        "type": "palace",
+        "period": "12th century",
+        "rating": 4,
+        "tags": [
+          "ruins-romantic",
+          "atmospheric",
+          "medieval",
+          "norman",
+          "free-entry",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wolvesey_Castle"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/wolvesey-castle-old-bishops-palace/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Wolvesey_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg/330px-Winchester%2C_Ruins_of_Wolvesey_Castle_Winchester_1095511_20230816_0630.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Tilman2007",
+          "license": "CC BY-SA 4.0",
+          "description": "Winchester, Ruins of Wolvesey Castle, Winchester",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779051139950
     }
   ]
 }
