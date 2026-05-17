@@ -440,6 +440,54 @@
         "enrichNotes": ""
       },
       "ts": 1779052706657
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Navan Fort\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Armagh\n*Type:* fort\n*Period:* Iron Age (c. 95 BC)\n*Coords:* 54.34805556, -6.69722222\n*Wikipedia:* https://en.wikipedia.org/wiki/Navan_Fort\n*Maps:* https://www.google.com/maps/search/Navan%20Fort/@54.348,-6.698,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg/330px-Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/PhXV3yjLpPDGoeXH7\n\n\n*Description:*\nNavan Fort is an ancient ceremonial monument near Armagh, Northern Ireland. According to tradition it was one of the great royal sites of pre-Christian Gaelic Ireland and the capital of the Ulaidh. It is a large circular hilltop enclosure—marked by a bank and ditch—inside which is a circular mound and the remains of a ring barrow. Archeological investigations show that there were once buildings on the site, including a huge roundhouse-like structure that has been likened to a temple. In a ritual act, this timber structure was filled with stones, deliberately burnt down and then covered with earth to create the mound which stands today. It is believed that Navan was a pagan ceremonial site and was regarded as a sacred space. It features prominently in Irish mythology, especially in the tales of the Ulster Cycle. According to the Oxford Dictionary of Celtic Mythology, \"the [Eamhain Mhacha] of myth and legend is a far grander and mysterious place than archeological excavation supports\".\n\n_Listing 10 of 19_",
+      "listing": {
+        "name": "Navan Fort",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Armagh",
+        "lat": 54.34805556,
+        "lng": -6.69722222,
+        "mapsLink": "https://www.google.com/maps/search/Navan%20Fort/@54.348,-6.698,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg/330px-Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Navan Fort is an ancient ceremonial monument near Armagh, Northern Ireland. According to tradition it was one of the great royal sites of pre-Christian Gaelic Ireland and the capital of the Ulaidh. It is a large circular hilltop enclosure—marked by a bank and ditch—inside which is a circular mound and the remains of a ring barrow. Archeological investigations show that there were once buildings on the site, including a huge roundhouse-like structure that has been likened to a temple. In a ritual act, this timber structure was filled with stones, deliberately burnt down and then covered with earth to create the mound which stands today. It is believed that Navan was a pagan ceremonial site and was regarded as a sacred space. It features prominently in Irish mythology, especially in the tales of the Ulster Cycle. According to the Oxford Dictionary of Celtic Mythology, \"the [Eamhain Mhacha] of myth and legend is a far grander and mysterious place than archeological excavation supports\".",
+        "type": "fort",
+        "period": "Iron Age (c. 95 BC)",
+        "rating": 4,
+        "tags": [
+          "hilltop",
+          "atmospheric",
+          "celtic",
+          "prehistoric",
+          "free-entry",
+          "remote",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Navan_Fort"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Navan_Fort",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg/330px-Navan_Fort%2C_County_Armagh_-_geograph.org.uk_-_43871.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Navan_Fort",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/PhXV3yjLpPDGoeXH7\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/PhXV3yjLpPDGoeXH7\n"
+      },
+      "ts": 1779052764839
     }
   ]
 }
