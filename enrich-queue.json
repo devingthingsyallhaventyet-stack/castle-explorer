@@ -955,6 +955,66 @@
         "enrichNotes": "google places link - https://maps.app.goo.gl/UXN6eUPoE4cYi3iAA\n"
       },
       "ts": 1779045263234
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Netley Abbey\n*Country:* england\n*Region:* south east london\n*County:* Hampshire\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 50.87888889, -1.3575\n*Wikipedia:* https://en.wikipedia.org/wiki/Netley_Abbey\n*Maps:* https://www.google.com/maps/search/Netley%20Abbey/@50.8806,-1.3592,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Netley_abbey_drone.JPG/330px-Netley_abbey_drone.JPG\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nNetley Abbey is a ruined late medieval monastery in the village of Netley near Southampton in Hampshire, England. The abbey was founded in 1239 as a house for monks of the austere Cistercian order. Despite royal patronage, Netley was never rich, produced no influential scholars nor churchmen, and its nearly 300-year history was quiet. The monks were best known to their neighbours for the generous hospitality they offered to travellers on land and sea.\n\n_Listing 19 of 50_",
+      "listing": {
+        "name": "Netley Abbey",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Hampshire",
+        "lat": 50.87888889,
+        "lng": -1.3575,
+        "mapsLink": "https://www.google.com/maps/search/Netley%20Abbey/@50.8806,-1.3592,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Netley_abbey_drone.JPG/330px-Netley_abbey_drone.JPG",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Netley Abbey is a ruined late medieval monastery in the village of Netley near Southampton in Hampshire, England. The abbey was founded in 1239 as a house for monks of the austere Cistercian order. Despite royal patronage, Netley was never rich, produced no influential scholars nor churchmen, and its nearly 300-year history was quiet. The monks were best known to their neighbours for the generous hospitality they offered to travellers on land and sea.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 4.3,
+        "tags": [
+          "ruins-romantic",
+          "atmospheric",
+          "gothic",
+          "medieval",
+          "woodland",
+          "photogenic",
+          "free-entry",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/netley-abbey/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Netley_Abbey"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=1517"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Netley_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Netley_abbey_drone.JPG/330px-Netley_abbey_drone.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Geni",
+          "license": "CC BY-SA 4.0",
+          "description": "Photo of Netley abbey from above",
+          "credit": "Photo by user:geni",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045278653
     }
   ]
 }
