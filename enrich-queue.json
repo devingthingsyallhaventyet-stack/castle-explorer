@@ -42,6 +42,57 @@
         "enrichNotes": ""
       },
       "ts": 1779041819065
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ballyfin Demesne\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Laois\n*Type:* castle\n*Period:* 19th century\n*Coords:* 53.0556, -7.4076\n*Wikipedia:* https://en.wikipedia.org/wiki/Ballyfin\n*Maps:* https://www.google.com/maps/search/Ballyfin%20Demesne/@53.063,-7.56,15z\n*Main Image:* https://img.castlecore.uk/ballyfin-demesne.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.ballyfin.com/ add source, tag as hotel\n\n*Description:*\nBallyfin is a village and parish in the Slieve Bloom Mountains in County Laois, Ireland. It is around 8 km west of Portlaoise, on the L21121 local road which joins the R423 regional road between Mountrath and Mountmellick.\n\n_Listing 7 of 10_",
+      "listing": {
+        "name": "Ballyfin Demesne",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Laois",
+        "lat": 53.0556,
+        "lng": -7.4076,
+        "mapsLink": "https://www.google.com/maps/search/Ballyfin%20Demesne/@53.063,-7.56,15z",
+        "image": "https://img.castlecore.uk/ballyfin-demesne.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/ballyfin-demesne-2.jpg",
+          "https://img.castlecore.uk/ballyfin-demesne-3.jpg",
+          "https://img.castlecore.uk/ballyfin-demesne-4.jpg",
+          "https://img.castlecore.uk/ballyfin-demesne-5.jpg"
+        ],
+        "desc": "Ballyfin is a village and parish in the Slieve Bloom Mountains in County Laois, Ireland. It is around 8 km west of Portlaoise, on the L21121 local road which joins the R423 regional road between Mountrath and Mountmellick.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Ballyfin",
+            "url": "https://www.ballyfin.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ballyfin_Demesne"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ballyfin",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ballyfin",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://www.ballyfin.com/ add source, tag as hotel",
+        "enrichNotes": "https://www.ballyfin.com/ add source, tag as hotel"
+      },
+      "ts": 1779041885167
     }
   ]
 }
