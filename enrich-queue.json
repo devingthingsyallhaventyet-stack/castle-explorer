@@ -682,6 +682,55 @@
         "enrichNotes": "add source - https://www.russborough.ie/"
       },
       "ts": 1779052334162
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Selskar Abbey\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Wexford\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 52.34136694, -6.46591694\n*Wikipedia:* https://en.wikipedia.org/wiki/Selskar_Abbey\n*Maps:* https://www.google.com/maps/search/Selskar%20Abbey/@52.335,-6.461,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMDhKmABqG3d7kdX3BhV92E4k81hItkmWuAe1Z9LoTnm8k1-A0ZT5fFqaGeHWXxmpSL6zSe9hV84QKprlzIwxenQ_lrpXevcnXUAY9ZGmkPfAR7YFnijWOcVrmizNT-boRqyHLA-oTPZjL1c4s=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSelskar Abbey is a ruined Augustinian abbey in Wexford, Ireland. Founded in the twelfth century, the abbey's full name was the Priory of St Peter and St Paul.\n\n_Listing 14 of 33_",
+      "listing": {
+        "name": "Selskar Abbey",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Wexford",
+        "lat": 52.34136694,
+        "lng": -6.46591694,
+        "mapsLink": "https://www.google.com/maps/search/Selskar%20Abbey/@52.335,-6.461,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDhKmABqG3d7kdX3BhV92E4k81hItkmWuAe1Z9LoTnm8k1-A0ZT5fFqaGeHWXxmpSL6zSe9hV84QKprlzIwxenQ_lrpXevcnXUAY9ZGmkPfAR7YFnijWOcVrmizNT-boRqyHLA-oTPZjL1c4s=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Selskar Abbey is a ruined Augustinian abbey in Wexford, Ireland. Founded in the twelfth century, the abbey's full name was the Priory of St Peter and St Paul.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wexford Heritage",
+            "url": "https://www.visitwexford.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Selskar_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Selskar_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Wexford_Selskar_Priory_Tower_and_Selskar_Church_Nave_II_2012_10_03.jpg/330px-Wexford_Selskar_Priory_Tower_and_Selskar_Church_Nave_II_2012_10_03.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Selskar_Abbey",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779052375188
     }
   ]
 }
