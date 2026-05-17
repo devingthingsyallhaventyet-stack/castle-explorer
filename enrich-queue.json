@@ -257,6 +257,62 @@
         "enrichNotes": ""
       },
       "ts": 1779047597603
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Reculver Towers\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* abbey\n*Period:* 3rd century Roman / 12th century towers\n*Coords:* 51.3796, 1.1995\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Mary's_Church%2C_Reculver\n*Maps:* https://www.google.com/maps/search/Reculver%20Towers/@51.3783,1.195,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZN8HAWAU7ifuv5_T03IuOC5R-6Zm6_xiQBR2Xvih1-S32t89RsbYfp00ZCKVypgX6zBXwqhUnhil6IlRDu_f5jKFHPitLrM1_e-N-c7Ub_NR1woUWZkDbJ3lpjESII7QhLl3m_hCAHcyluTqw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nSt Mary's Church, Reculver, was founded in the 7th century as either a minster or a monastery on the site of Regulbium, the Roman fort at Reculver, which was then at the north-eastern extremity of Kent in south-eastern England. In 669, the site of the fort was given for this purpose by King Ecgberht of Kent to a priest named Bassa, beginning a connection with Kentish kings that led to King Eadberht II of Kent being buried there in the 760s, and the church becoming very wealthy by the beginning of the 9th century. From the early 9th century to the 11th the church was treated as essentially a piece of property, with control passing between kings of Mercia, Wessex and England and the archbishops of Canterbury. Viking attacks may have extinguished the church's religious community in the 9th century, although an early 11th-century record indicates that the church was then in the hands of a dean accompanied by monks. By the time of Domesday Book, completed in 1086, St Mary's was serving as a parish church.\n\n_Listing 6 of 111_",
+      "listing": {
+        "name": "Reculver Towers",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.3796,
+        "lng": 1.1995,
+        "mapsLink": "https://www.google.com/maps/search/Reculver%20Towers/@51.3783,1.195,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN8HAWAU7ifuv5_T03IuOC5R-6Zm6_xiQBR2Xvih1-S32t89RsbYfp00ZCKVypgX6zBXwqhUnhil6IlRDu_f5jKFHPitLrM1_e-N-c7Ub_NR1woUWZkDbJ3lpjESII7QhLl3m_hCAHcyluTqw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "St Mary's Church, Reculver, was founded in the 7th century as either a minster or a monastery on the site of Regulbium, the Roman fort at Reculver, which was then at the north-eastern extremity of Kent in south-eastern England. In 669, the site of the fort was given for this purpose by King Ecgberht of Kent to a priest named Bassa, beginning a connection with Kentish kings that led to King Eadberht II of Kent being buried there in the 760s, and the church becoming very wealthy by the beginning of the 9th century. From the early 9th century to the 11th the church was treated as essentially a piece of property, with control passing between kings of Mercia, Wessex and England and the archbishops of Canterbury. Viking attacks may have extinguished the church's religious community in the 9th century, although an early 11th-century record indicates that the church was then in the hands of a dean accompanied by monks. By the time of Domesday Book, completed in 1086, St Mary's was serving as a parish church.",
+        "type": "abbey",
+        "period": "3rd century Roman / 12th century towers",
+        "rating": 4.2,
+        "tags": [
+          "atmospheric",
+          "coastal",
+          "ruins-romantic",
+          "photogenic",
+          "free-entry",
+          "dog-friendly",
+          "dark-brooding"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/reculver-towers-and-roman-fort/"
+          },
+          {
+            "name": "See Kent",
+            "url": "https://seekent.co.uk/listing/the-reculver-towers/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Mary's_Church%2C_Reculver",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Detail_of_Reculver_Church_Sullivan_1755.jpg/330px-Detail_of_Reculver_Church_Sullivan_1755.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "L Sullivan",
+          "license": "Public domain",
+          "description": "Detail of a watercolour of Reculver Church painted in 1755 by L Sullivan, from a position north-east of the church, between the churchyard wall and the perimeter of the Roman fort.",
+          "credit": "Created from File:Reculver Sullivan 1755.jpg",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779047651978
     }
   ]
 }
