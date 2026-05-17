@@ -103,6 +103,65 @@
         "enrichNotes": ""
       },
       "ts": 1779045773727
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* A La Ronde\n*Country:* england\n*Region:* south west\n*County:* Devon\n*Type:* castle\n*Period:* 18th century\n*Coords:* 50.6417, -3.4088\n*Wikipedia:* https://en.wikipedia.org/wiki/A_la_Ronde\n*Maps:* https://www.google.com/maps/search/A%20La%20Ronde/@50.64,-3.4017,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMyZwB9f_3b9OZtUcqlyGiIDmkC4kMq_Dp0zGXb4YucUDsZIJsVstRwH2VmEtEsAuW_UV8sDG1vqsvPX4fr-aIxXS0IPwT3pM2Sbuw_5wo9K945TV-8TvVU1lnAzqGGondFqWGOoVKuOBfKkUeot5r8Ug=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nA la Ronde is an 18th-century, 16-sided cottage orné near Lympstone, Exmouth, Devon, England, in the ownership of the National Trust. The house was built for two spinster cousins, Jane and Mary Parminter. It is a Grade I listed building, as are the adjacent Point-In-View chapel, school and almshouses, together with a manse, which were also built by the cousins. The gardens are Grade II listed in the National Register of Historic Parks and Gardens.\n\n_Listing 3 of 28_",
+      "listing": {
+        "name": "A La Ronde",
+        "country": "england",
+        "region": "south-west",
+        "county": "Devon",
+        "lat": 50.6417,
+        "lng": -3.4088,
+        "mapsLink": "https://www.google.com/maps/search/A%20La%20Ronde/@50.64,-3.4017,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMyZwB9f_3b9OZtUcqlyGiIDmkC4kMq_Dp0zGXb4YucUDsZIJsVstRwH2VmEtEsAuW_UV8sDG1vqsvPX4fr-aIxXS0IPwT3pM2Sbuw_5wo9K945TV-8TvVU1lnAzqGGondFqWGOoVKuOBfKkUeot5r8Ug=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "A la Ronde is an 18th-century, 16-sided cottage orné near Lympstone, Exmouth, Devon, England, in the ownership of the National Trust. The house was built for two spinster cousins, Jane and Mary Parminter. It is a Grade I listed building, as are the adjacent Point-In-View chapel, school and almshouses, together with a manse, which were also built by the cousins. The gardens are Grade II listed in the National Register of Historic Parks and Gardens.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.3,
+        "tags": [
+          "photogenic",
+          "atmospheric",
+          "gardens",
+          "tearoom-cafe",
+          "gift-shop",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/A_la_Ronde"
+          },
+          {
+            "name": "National Trust Collections",
+            "url": "https://www.nationaltrustcollections.org.uk/place/a-la-ronde"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/A_la_Ronde",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/A_La_Ronde_%285523285615%29.jpg/330px-A_La_Ronde_%285523285615%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Becks",
+          "license": "CC BY 2.0",
+          "description": "A La Ronde",
+          "credit": "A La Ronde",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045785685
     }
   ]
 }
