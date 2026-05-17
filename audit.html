@@ -446,9 +446,11 @@ function applyFilters() {
   const imgSrc = document.getElementById('imgSourceFilter').value;
   
   if (currentMainTab === 'sourceReview') {
-    // For source review, filter pending source candidates
+    // For source review, filter pending source candidates that exist in audit data
+    const auditNames = new Set(allData.map(d => d.name));
     filtered = (window.sourceCandidates || []).filter(c => {
       if (c.status !== 'pending') return false;
+      if (!auditNames.has(c.name)) return false;
       if (q && !c.name.toLowerCase().includes(q)) return false;
       return true;
     });
