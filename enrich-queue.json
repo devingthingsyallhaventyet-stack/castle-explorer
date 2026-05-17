@@ -946,6 +946,48 @@
         "enrichNotes": ""
       },
       "ts": 1779046103126
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Mellifont Abbey\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Louth\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 53.742317, -6.466481\n*Wikipedia:* https://en.wikipedia.org/wiki/Mellifont_Abbey\n*Maps:* https://www.google.com/maps/search/Mellifont%20Abbey/@53.7417,-6.4556,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/330px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/5F6qzpChoLwYxiGc8\n\n\n*Description:*\nMellifont Abbey, was a Cistercian abbey located close to Drogheda in County Louth, Ireland. It was the first abbey of the order to be built in Ireland. In 1152, it hosted the Synod of Kells-Mellifont. After its dissolution in 1539, the abbey became a private manor house. This saw the signing of the Treaty of Mellifont in 1603 and served as William of Orange's headquarters in 1690 during the Battle of the Boyne.\n\n_Listing 19 of 28_",
+      "listing": {
+        "name": "Mellifont Abbey",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Louth",
+        "lat": 53.742317,
+        "lng": -6.466481,
+        "mapsLink": "https://www.google.com/maps/search/Mellifont%20Abbey/@53.7417,-6.4556,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/330px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Mellifont Abbey, was a Cistercian abbey located close to Drogheda in County Louth, Ireland. It was the first abbey of the order to be built in Ireland. In 1152, it hosted the Synod of Kells-Mellifont. After its dissolution in 1539, the abbey became a private manor house. This saw the signing of the Treaty of Mellifont in 1603 and served as William of Orange's headquarters in 1690 during the Battle of the Boyne.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.3,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Mellifont_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG/330px-Mellifont_Abbey_lavabo_County_Louth_Ireland.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Brholden",
+          "license": "Public domain",
+          "description": "Mellifont Abbey 13th century lavabo",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/5F6qzpChoLwYxiGc8\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/5F6qzpChoLwYxiGc8\n"
+      },
+      "ts": 1779046153141
     }
   ]
 }
