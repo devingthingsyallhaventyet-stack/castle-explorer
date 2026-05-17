@@ -157,6 +157,66 @@
         "enrichNotes": "add source - https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/"
       },
       "ts": 1779036305746
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Sizergh Castle\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* 14th century\n*Coords:* 54.28444444, -2.77194444\n*Wikipedia:* https://en.wikipedia.org/wiki/Sizergh_Castle_and_Garden\n*Maps:* https://www.google.com/maps/search/Sizergh%20Castle/@54.2833,-2.7667,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSizergh Castle  is a stately home with garden and estate at Helsington in Cumbria, England, about 4 miles (6 km) south of Kendal. Located in historic Westmorland, the castle is a Grade I listed building. While remaining the home of the Hornyold-Strickland family, the castle with its garden and estate is in the care of the National Trust.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Sizergh Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.28444444,
+        "lng": -2.77194444,
+        "mapsLink": "https://www.google.com/maps/search/Sizergh%20Castle/@54.2833,-2.7667,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Sizergh Castle  is a stately home with garden and estate at Helsington in Cumbria, England, about 4 miles (6 km) south of Kendal. Located in historic Westmorland, the castle is a Grade I listed building. While remaining the home of the Hornyold-Strickland family, the castle with its garden and estate is in the care of the National Trust.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "gardens",
+          "tudor",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Sizergh_Castle"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/lake-district/sizergh"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1086839"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Sizergh",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Sizergh_Castle.jpg/330px-Sizergh_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Christopher Down",
+          "license": "CC BY 4.0",
+          "description": "Sizergh Castle",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Sizergh_Castle_and_Garden",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779036324994
     }
   ]
 }
