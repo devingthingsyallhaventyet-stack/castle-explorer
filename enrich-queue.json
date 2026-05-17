@@ -198,6 +198,60 @@
         "enrichNotes": ""
       },
       "ts": 1779061121534
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Llanmelin Wood Hillfort\n*Country:* wales\n*Region:* south wales\n*County:* Monmouthshire\n*Type:* hillfort\n*Period:* Iron Age (c.500 BC - 1st century AD)\n*Coords:* 51.626783, -2.798258\n*Wikipedia:* https://en.wikipedia.org/wiki/Llanvair_Discoed\n*Maps:* https://www.google.com/maps/search/Llanmelin%20Wood%20Hillfort/@51.62,-2.75,15z\n*Main Image:* https://img.castlecore.uk/llanmelin-wood-hillfort.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nLlanvair Discoed is a small village in Monmouthshire, south-east Wales, 6 miles west of Chepstow and 10 miles east of Newport.\n\n_Listing 5 of 252_",
+      "listing": {
+        "name": "Llanmelin Wood Hillfort",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Monmouthshire",
+        "lat": 51.626783,
+        "lng": -2.798258,
+        "mapsLink": "https://www.google.com/maps/search/Llanmelin%20Wood%20Hillfort/@51.62,-2.75,15z",
+        "image": "https://img.castlecore.uk/llanmelin-wood-hillfort.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/llanmelin-wood-hillfort-2.jpg",
+          "https://img.castlecore.uk/llanmelin-wood-hillfort-3.jpg",
+          "https://img.castlecore.uk/llanmelin-wood-hillfort-4.jpg",
+          "https://img.castlecore.uk/llanmelin-wood-hillfort-5.jpg"
+        ],
+        "desc": "Llanvair Discoed is a small village in Monmouthshire, south-east Wales, 6 miles west of Chepstow and 10 miles east of Newport.",
+        "type": "hillfort",
+        "period": "Iron Age (c.500 BC - 1st century AD)",
+        "rating": 3.8,
+        "tags": [
+          "prehistoric",
+          "woodland",
+          "free-entry",
+          "hilltop"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/llanmelin-wood-hillfort"
+          },
+          {
+            "name": "Coflein – RCAHMW",
+            "url": "https://coflein.gov.uk"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Llanvair_Discoed",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Llanfair_Discoed.jpg/330px-Llanfair_Discoed.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Llanvair_Discoed",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1779061156838
     }
   ]
 }
