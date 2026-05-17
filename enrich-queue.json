@@ -694,6 +694,56 @@
         "enrichNotes": ""
       },
       "ts": 1779043635231
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Plas Newydd\n*Country:* wales\n*Region:* snowdonia north\n*County:* Anglesey\n*Type:* historic-house\n*Period:* 18th century\n*Coords:* 53.175, -4.2167\n*Wikipedia:* https://en.wikipedia.org/wiki/Plas_Newydd_(Anglesey)\n*Maps:* https://www.google.com/maps/search/Plas%20Newydd/@53.175,-4.2167,15z\n*Main Image:* https://img.castlecore.uk/plas-newydd.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nPlas Newydd may refer to:Plas Newydd (Anglesey), a historic house and garden on Anglesey, Wales, United Kingdom\nPlas Newydd, Llangollen, a historic house and garden in Llangollen, Denbighshire, Wales, United Kingdom\nPlas Newydd, Usk, a historic house in Usk, Monmouthshire, Wales\n\n_Listing 15 of 80_",
+      "listing": {
+        "name": "Plas Newydd",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Anglesey",
+        "lat": 53.175,
+        "lng": -4.2167,
+        "mapsLink": "https://www.google.com/maps/search/Plas%20Newydd/@53.175,-4.2167,15z",
+        "image": "https://img.castlecore.uk/plas-newydd.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Plas Newydd may refer to:Plas Newydd (Anglesey), a historic house and garden on Anglesey, Wales, United Kingdom\nPlas Newydd, Llangollen, a historic house and garden in Llangollen, Denbighshire, Wales, United Kingdom\nPlas Newydd, Usk, a historic house in Usk, Monmouthshire, Wales",
+        "type": "historic-house",
+        "period": "18th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "coastal",
+          "gardens",
+          "museum",
+          "guided-tours",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Plas_Newydd_(Anglesey)"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/wales/plas-newydd-house-and-garden/history-of-plas-newydd"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Plas_Newydd",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Plas_Newydd_(Anglesey)",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043657708
     }
   ]
 }
