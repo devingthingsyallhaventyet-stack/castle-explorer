@@ -668,6 +668,45 @@
         "enrichNotes": ""
       },
       "ts": 1779049014939
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dunamase Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Laois\n*Type:* castle\n*Period:* 12th century\n*Coords:* 53.03166667, -7.21027778\n*Wikipedia:* https://en.wikipedia.org/wiki/Dunamase\n*Maps:* https://www.google.com/maps/search/Dunamase%20Castle/@53.0328,-7.3472,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Rock_of_Dunamase.jpg/330px-Rock_of_Dunamase.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDunamase or the Rock of Dunamase is a rocky outcrop in County Laois, Ireland. Rising 46 metres (151 ft) above a plain, it has the ruins of Dunamase Castle, a defensive stronghold dating from the early Hiberno-Norman period with a view across to the Slieve Bloom Mountains. It is near the N80 road between the towns of Portlaoise and Stradbally.\n\n_Listing 14 of 94_",
+      "listing": {
+        "name": "Dunamase Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Laois",
+        "lat": 53.03166667,
+        "lng": -7.21027778,
+        "mapsLink": "https://www.google.com/maps/search/Dunamase%20Castle/@53.0328,-7.3472,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Rock_of_Dunamase.jpg/330px-Rock_of_Dunamase.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Dunamase or the Rock of Dunamase is a rocky outcrop in County Laois, Ireland. Rising 46 metres (151 ft) above a plain, it has the ruins of Dunamase Castle, a defensive stronghold dating from the early Hiberno-Norman period with a view across to the Slieve Bloom Mountains. It is near the N80 road between the towns of Portlaoise and Stradbally.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.2,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dunamase",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Rock_of_Dunamase.jpg/330px-Rock_of_Dunamase.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunamase",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049041718
     }
   ]
 }
