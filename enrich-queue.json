@@ -210,6 +210,60 @@
         "enrichNotes": "https://maps.app.goo.gl/LzZSPA6wiyGusGJu6 - update google maps link "
       },
       "ts": 1779038719884
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lowther Castle\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* 19th century\n*Coords:* 54.60583333, -2.74027778\n*Wikipedia:* https://en.wikipedia.org/wiki/Lowther_Castle\n*Maps:* https://www.google.com/maps/search/Lowther%20Castle/@54.6167,-2.75,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPwkua9jwGEmocaUGpLqg5J05OuP1n2hsrgNwq_RmaC1uzitjSokBnKZ3zU4hOmQKS_DpnXK3o-LtJx6ZlUDFTDNfjOOUSdh-4C8toOLASaQVwTLOctM-26eOmAVosThknVJtkb1WWbKXBB5-CeYr-y4Q=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://lowthercastle.org/\n\n*Description:*\nLowther Castle is a ruined country house in Lowther, Cumbria, England. The estate has belonged to the Lowther family, latterly the earls of Lonsdale, since the Middle Ages. The house was largely built between 1806 and 1814 for William Lowther, 1st Earl of Lonsdale and designed by Robert Smirke in his first major commission. It incorporates fragments of the previous house on the site, which was completed in 1685 for John Lowther, 1st Viscount Lonsdale. It is open to the public and is a grade II* listed building.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Lowther Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.60583333,
+        "lng": -2.74027778,
+        "mapsLink": "https://www.google.com/maps/search/Lowther%20Castle/@54.6167,-2.75,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPwkua9jwGEmocaUGpLqg5J05OuP1n2hsrgNwq_RmaC1uzitjSokBnKZ3zU4hOmQKS_DpnXK3o-LtJx6ZlUDFTDNfjOOUSdh-4C8toOLASaQVwTLOctM-26eOmAVosThknVJtkb1WWbKXBB5-CeYr-y4Q=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lowther Castle is a ruined country house in Lowther, Cumbria, England. The estate has belonged to the Lowther family, latterly the earls of Lonsdale, since the Middle Ages. The house was largely built between 1806 and 1814 for William Lowther, 1st Earl of Lonsdale and designed by Robert Smirke in his first major commission. It incorporates fragments of the previous house on the site, which was completed in 1685 for John Lowther, 1st Viscount Lonsdale. It is open to the public and is a grade II* listed building.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.4,
+        "tags": [
+          "romantic-ruin",
+          "photogenic",
+          "kid-friendly",
+          "gardens",
+          "gothic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lowther_Castle"
+          },
+          {
+            "name": "Lowther Castle Official",
+            "url": "https://www.lowthercastle.org/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lowther_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lowther_Castle_greyscale.jpg/330px-Lowther_Castle_greyscale.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "fuji.tim",
+          "license": "CC BY-SA 2.0",
+          "description": "Lowther Castle, near Penrith, Cumbria",
+          "credit": "https://www.flickr.com/photos/mrtnutt/52069279831/",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://lowthercastle.org/",
+        "enrichNotes": "add source - https://lowthercastle.org/"
+      },
+      "ts": 1779038747420
     }
   ]
 }
