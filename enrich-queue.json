@@ -2899,6 +2899,58 @@
         "enrichNotes": ""
       },
       "ts": 1778960931468
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Caistor Roman Site\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* castle\n*Period:* 1st-5th century AD\n*Coords:* 52.65, 1.7193\n*Wikipedia:* https://en.wikipedia.org/wiki/Venta_Icenorum\n*Maps:* https://www.google.com/maps/search/Caistor%20Roman%20Site/@52.5767,1.3217,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://caistorromanproject.org/\n\n*Description:*\nCaister Roman Site is a Roman Saxon Shore fort, located in Caister-on-Sea, Norfolk, England. It was constructed around AD 200 for use by units of the Roman army and navy, and was occupied until around 370-390 AD. This fort was possibly known as Gariannonum, although the single record that describes it as such may also mean the Roman site at Burgh Castle.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Caistor Roman Site",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.65,
+        "lng": 1.7193,
+        "mapsLink": "https://www.google.com/maps/search/Caistor%20Roman%20Site/@52.5767,1.3217,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Caister Roman Site is a Roman Saxon Shore fort, located in Caister-on-Sea, Norfolk, England. It was constructed around AD 200 for use by units of the Roman army and navy, and was occupied until around 370-390 AD. This fort was possibly known as Gariannonum, although the single record that describes it as such may also mean the Roman site at Burgh Castle.",
+        "type": "castle",
+        "period": "1st-5th century AD",
+        "rating": 3.7,
+        "tags": [
+          "prehistoric",
+          "atmospheric",
+          "free-entry",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/caistor-roman-site/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Caister_Roman_Site",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/CaisterRomanSite.jpg/330px-CaisterRomanSite.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "A. R. Yeo MortimerCat",
+          "license": "CC BY 2.5",
+          "description": "Caister Roman Site.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Venta_Icenorum",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://caistorromanproject.org/",
+        "enrichNotes": "add source - https://caistorromanproject.org/"
+      },
+      "ts": 1779033718389
     }
   ]
 }
