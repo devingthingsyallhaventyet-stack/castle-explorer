@@ -319,6 +319,67 @@
         "enrichNotes": ""
       },
       "ts": 1779045837236
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Croft Castle\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 17th century\n*Coords:* 52.28486, -2.80916\n*Wikipedia:* https://en.wikipedia.org/wiki/Croft_Castle\n*Maps:* https://www.google.com/maps/search/Croft%20Castle/@52.3033,-2.805,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNg-X2vnP9XgASnfqTX1q5PcfY_asEhbt4NwMFLetkZjH0OFg7ynYsU3sw6djW37ZrXO4KItBWvvUwYzhNfKJw_EG-shNQHN1DILjcaervVKyJYwxDEDDjOlezIs5jWtFhrGrjLeI0EYd_7Gg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCroft Castle is a country house in the village of Croft, Herefordshire, England. Owned by the Croft family since 1085, the castle and estate passed out of their hands in the 18th century, before being repurchased by the family in 1923. In 1957 it was bequeathed to the National Trust. The castle is a Grade I listed building, and the estate is separately listed as Grade II*. The adjacent Church of St Michael is listed Grade I.\n\n_Listing 7 of 28_",
+      "listing": {
+        "name": "Croft Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 52.28486,
+        "lng": -2.80916,
+        "mapsLink": "https://www.google.com/maps/search/Croft%20Castle/@52.3033,-2.805,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNg-X2vnP9XgASnfqTX1q5PcfY_asEhbt4NwMFLetkZjH0OFg7ynYsU3sw6djW37ZrXO4KItBWvvUwYzhNfKJw_EG-shNQHN1DILjcaervVKyJYwxDEDDjOlezIs5jWtFhrGrjLeI0EYd_7Gg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Croft Castle is a country house in the village of Croft, Herefordshire, England. Owned by the Croft family since 1085, the castle and estate passed out of their hands in the 18th century, before being repurchased by the family in 1923. In 1957 it was bequeathed to the National Trust. The castle is a Grade I listed building, and the estate is separately listed as Grade II*. The adjacent Church of St Michael is listed Grade I.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "woodland",
+          "photogenic",
+          "kid-friendly",
+          "tearoom-cafe",
+          "gift-shop",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/croft-castle-and-parkland"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Croft_Castle"
+          },
+          {
+            "name": "Visit Herefordshire",
+            "url": "https://www.visitherefordshire.co.uk/discover/national-trust-croft-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Croft_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/CroftCastle04ps.jpg/330px-CroftCastle04ps.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Tabbipix",
+          "license": "CC BY-SA 3.0",
+          "description": "This is a photo of listed building number 1166451.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045851698
     }
   ]
 }
