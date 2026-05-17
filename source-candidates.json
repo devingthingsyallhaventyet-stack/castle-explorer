@@ -1,79 +1,156 @@
 {
   "candidates": [
     {
-      "name": "Norwich Castle",
-      "candidateUrl": "https://www.norwichcastle.norfolk.gov.uk/",
-      "candidateLabel": "Norwich Castle Museum & Art Gallery - Norfolk Museums Service",
+      "name": "Kilchurn Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/kilchurn-castle/",
+      "candidateLabel": "Kilchurn Castle | Lead Public Body for Scotland's Historic Environment",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Castle Rising",
-      "candidateUrl": "https://www.castlerising.co.uk/",
-      "candidateLabel": "Castle Rising",
+      "name": "Dunstaffnage Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/dunstaffnage-castle-and-chapel/",
+      "candidateLabel": "Dunstaffnage Castle and Chapel | Historic Environment Scotland",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Corfe Castle",
-      "candidateUrl": "https://corfecastle.co.uk/",
-      "candidateLabel": "Corfe Castle Dorset - Visitor Information, News & Events",
+      "name": "Carnasserie Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/carnasserie-castle/",
+      "candidateLabel": "Carnasserie Castle | Historic Environment Scotland | History",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Tutbury Castle",
-      "candidateUrl": "https://tutburycastle.com/",
-      "candidateLabel": "Lesley Smith Historians Ltd | Live historical talks!",
+      "name": "Skipness Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/skipness-castle-and-chapel/",
+      "candidateLabel": "Skipness Castle and Chapel | Historic Environment Scotland | HES",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Kelburn Castle",
-      "candidateUrl": "https://www.kelburnestate.com/",
-      "candidateLabel": "Kelburn Estate",
+      "name": "Rothesay Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/rothesay-castle/",
+      "candidateLabel": "Rothesay Castle | Lead Public Body for Scotland's Historic Environment",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Temple Newsam",
-      "candidateUrl": "https://museumsandgalleries.leeds.gov.uk/visit-temple-newsam-dt79",
-      "candidateLabel": "Visit Temple Newsam | Leeds Museums and Galleries",
+      "name": "Kisimul Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/kisimul-castle/",
+      "candidateLabel": "Kisimul Castle | Lead Public Body for Scotland's Historic Environment",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Hanbury Hall",
-      "candidateUrl": "https://www.hanburyhall.com/",
-      "candidateLabel": "Hanbury Hall",
+      "name": "Sween Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/castle-sween/",
+      "candidateLabel": "Castle Sween | Leading Public Body for Scotland's Historic Environment",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Durham Cathedral",
-      "candidateUrl": "https://www.durhamcathedral.co.uk/",
-      "candidateLabel": "Durham Cathedral Official Website",
+      "name": "Hermitage Castle",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/hermitage-castle/",
+      "candidateLabel": "Hermitage Castle | Public Body for Scotland's Historic Environment",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "Chetham's Library",
-      "candidateUrl": "https://library.chethams.com/",
-      "candidateLabel": "Chetham's Library - Oldest Public Library in the English Speaking World",
+      "name": "Melrose Abbey",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/melrose-abbey/",
+      "candidateLabel": "Melrose Abbey | Lead Public Body for Scotland's Historic Environment",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "York City Walls",
-      "candidateUrl": "https://www.yorkwalls.org.uk/",
-      "candidateLabel": "Friends of York Walls",
+      "name": "Jedburgh Abbey",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/jedburgh-abbey/",
+      "candidateLabel": "Jedburgh Abbey | Lead Public Body for Scotland's Historic Environment",
       "status": "pending",
       "foundDate": "2026-05-17"
     },
     {
-      "name": "St Fagans Castle",
-      "candidateUrl": "https://museum.wales/stfagans/",
-      "candidateLabel": "St Fagans National Museum of History",
+      "name": "Dryburgh Abbey",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/dryburgh-abbey/",
+      "candidateLabel": "Dryburgh Abbey | Lead Public Body for Scotland's Historic Environment",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Kelso Abbey",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/kelso-abbey/",
+      "candidateLabel": "Kelso Abbey | Leading Public Body for Scotland's Historic Environment",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Smailholm Tower",
+      "candidateUrl": "https://www.historicenvironment.scot/visit-a-place/places/smailholm-tower/",
+      "candidateLabel": "Smailholm Tower | Lead Public Body for Scotland's Historic Environment",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Framlingham Castle",
+      "candidateUrl": "https://www.english-heritage.org.uk/visit/places/framlingham-castle/",
+      "candidateLabel": "Framlingham Castle | English Heritage",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Colchester Castle",
+      "candidateUrl": "https://colchester.cimuseums.org.uk/visit/colchester-castle/",
+      "candidateLabel": "Visit Colchester Castle | Colchester Museums",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Hedingham Castle",
+      "candidateUrl": "https://www.hedinghamcastle.co.uk/visit",
+      "candidateLabel": "Visit the Castle & Gardens — Hedingham Castle",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Conwy Castle",
+      "candidateUrl": "https://cadw.gov.wales/visit/places-to-visit/castell-conwy",
+      "candidateLabel": "Castell Conwy | Cadw - gov.wales",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Caernarfon Castle",
+      "candidateUrl": "https://cadw.gov.wales/visit/places-to-visit/castell-caernarfon",
+      "candidateLabel": "Castell Caernarfon | Cadw - gov.wales",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Beaumaris Castle",
+      "candidateUrl": "https://cadw.gov.wales/visit/places-to-visit/beaumaris-castle",
+      "candidateLabel": "Beaumaris Castle | Cadw - gov.wales",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Trim Castle",
+      "candidateUrl": "https://heritageireland.ie/places-to-visit/trim-castle/",
+      "candidateLabel": "Trim Castle | Heritage Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Rock of Cashel",
+      "candidateUrl": "https://heritageireland.ie/places-to-visit/the-rock-of-cashel/",
+      "candidateLabel": "The Rock of Cashel | Heritage Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-17"
+    },
+    {
+      "name": "Cahir Castle",
+      "candidateUrl": "https://heritageireland.ie/places-to-visit/cahir-castle/",
+      "candidateLabel": "Cahir Castle | Heritage Ireland",
       "status": "pending",
       "foundDate": "2026-05-17"
     }

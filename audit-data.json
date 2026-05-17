@@ -20218,7 +20218,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Kelburn Estate",
+        "url": "https://www.kelburnestate.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Kelburn Estate",
+        "url": "https://www.kelburnestate.com/"
+      }
+    ]
   },
   {
     "name": "Portencross Castle",
@@ -20627,7 +20639,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Norwich Castle Museum & Art Gallery - Norfolk Museums Service",
+        "url": "https://www.norwichcastle.norfolk.gov.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Norwich Castle Museum & Art Gallery - Norfolk Museums Service",
+        "url": "https://www.norwichcastle.norfolk.gov.uk/"
+      }
+    ]
   },
   {
     "name": "Castle Acre Priory",
@@ -20752,7 +20776,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castle Rising",
+        "url": "https://www.castlerising.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Rising",
+        "url": "https://www.castlerising.co.uk/"
+      }
+    ]
   },
   {
     "name": "Framlingham Castle",
@@ -29770,7 +29806,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Durham_Cathedral"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Durham_Cathedral",
+    "sources": [
+      {
+        "label": "Durham Cathedral Official Website",
+        "url": "https://www.durhamcathedral.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Durham Cathedral Official Website",
+        "url": "https://www.durhamcathedral.co.uk/"
+      }
+    ]
   },
   {
     "name": "Binchester Roman Fort",
@@ -30602,7 +30650,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Chetham's Library - Oldest Public Library in the English Speaking World",
+        "url": "https://library.chethams.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Chetham's Library - Oldest Public Library in the English Speaking World",
+        "url": "https://library.chethams.com/"
+      }
+    ]
   },
   {
     "name": "Sandbach Crosses",
@@ -35327,7 +35387,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Corfe_Castle_(castle)"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Corfe_Castle_(castle)",
+    "sources": [
+      {
+        "label": "Corfe Castle Dorset - Visitor Information, News & Events",
+        "url": "https://corfecastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Corfe Castle Dorset - Visitor Information, News & Events",
+        "url": "https://corfecastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Old Wardour Castle",
@@ -52291,7 +52363,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Friends of York Walls",
+        "url": "https://www.yorkwalls.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Friends of York Walls",
+        "url": "https://www.yorkwalls.org.uk/"
+      }
+    ]
   },
   {
     "name": "York Minster",
@@ -52558,7 +52642,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Visit Temple Newsam | Leeds Museums and Galleries",
+        "url": "https://museumsandgalleries.leeds.gov.uk/visit-temple-newsam-dt79"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Visit Temple Newsam | Leeds Museums and Galleries",
+        "url": "https://museumsandgalleries.leeds.gov.uk/visit-temple-newsam-dt79"
+      }
+    ]
   },
   {
     "name": "East Riddlesden Hall",
