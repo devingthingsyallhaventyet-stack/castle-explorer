@@ -1,3 +1,53 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Brampton Bryan Castle\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 14th century\n*Coords:* 52.3478, -2.9263\n*Wikipedia:* https://en.wikipedia.org/wiki/Brampton_Bryan_Castle\n*Maps:* https://www.google.com/maps/search/Brampton%20Bryan%20Castle/@52.3417,-2.89,15z\n*Main Image:* https://img.castlecore.uk/brampton-bryan-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nBrampton Bryan Castle is a ruined medieval castle in the village of Brampton Bryan in north-western Herefordshire, England, 50m south of the River Teme. The castle guarded an important route from Ludlow along the Teme Valley to Knighton and on into Central Wales.\n\n_Listing 1 of 252_",
+      "listing": {
+        "name": "Brampton Bryan Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 52.3478,
+        "lng": -2.9263,
+        "mapsLink": "https://www.google.com/maps/search/Brampton%20Bryan%20Castle/@52.3417,-2.89,15z",
+        "image": "https://img.castlecore.uk/brampton-bryan-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/brampton-bryan-castle-2.jpg",
+          "https://img.castlecore.uk/brampton-bryan-castle-3.jpg",
+          "https://img.castlecore.uk/brampton-bryan-castle-4.jpg",
+          "https://img.castlecore.uk/brampton-bryan-castle-5.jpg"
+        ],
+        "desc": "Brampton Bryan Castle is a ruined medieval castle in the village of Brampton Bryan in north-western Herefordshire, England, 50m south of the River Teme. The castle guarded an important route from Ludlow along the Teme Valley to Knighton and on into Central Wales.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Brampton_Bryan_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Brampton_Bryan_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Brampton_Bryan_gatehouse.jpg/330px-Brampton_Bryan_gatehouse.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Brampton_Bryan_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1779061049466
+    }
+  ]
 }
