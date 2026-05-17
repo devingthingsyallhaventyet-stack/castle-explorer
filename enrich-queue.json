@@ -1,3 +1,51 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Nenagh Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.8632, -8.1995\n*Wikipedia:* https://en.wikipedia.org/wiki/Nenagh_Castle\n*Maps:* https://www.google.com/maps/search/Nenagh%20Castle/@52.8619,-8.1964,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Centre_of_Nenagh_-_panoramio.jpg/330px-Centre_of_Nenagh_-_panoramio.jpg\n*Gallery:* 8 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nNenagh is the county town of County Tipperary in Ireland. Nenagh used to be a market town, and the site of the East Munster Ormond Fair.\n\n_Listing 1 of 260_",
+      "listing": {
+        "name": "Nenagh Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 52.8632,
+        "lng": -8.1995,
+        "mapsLink": "https://www.google.com/maps/search/Nenagh%20Castle/@52.8619,-8.1964,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Centre_of_Nenagh_-_panoramio.jpg/330px-Centre_of_Nenagh_-_panoramio.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/nenagh-castle-2.jpg",
+          "https://img.castlecore.uk/nenagh-castle-3.jpg",
+          "https://img.castlecore.uk/nenagh-castle-4.jpg",
+          "https://img.castlecore.uk/nenagh-castle-5.jpg",
+          "https://img.castlecore.uk/nenagh-castle-main-2.jpg",
+          "https://img.castlecore.uk/nenagh-castle-main-3.jpg",
+          "https://img.castlecore.uk/nenagh-castle-main-4.jpg",
+          "https://img.castlecore.uk/nenagh-castle-main-5.jpg"
+        ],
+        "desc": "Nenagh is the county town of County Tipperary in Ireland. Nenagh used to be a market town, and the site of the East Munster Ormond Fair.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.9,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Nenagh",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Centre_of_Nenagh_-_panoramio.jpg/330px-Centre_of_Nenagh_-_panoramio.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Nenagh_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779060605243
+    }
+  ]
 }
