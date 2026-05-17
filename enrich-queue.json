@@ -193,6 +193,49 @@
         "enrichNotes": ""
       },
       "ts": 1779050563982
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cilgerran Castle\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.05722222, -4.63416667\n*Wikipedia:* https://en.wikipedia.org/wiki/Cilgerran_Castle\n*Maps:* https://www.google.com/maps/search/Cilgerran%20Castle/@52.0838,-4.6846,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNmLv3Wmea5e7yv7CemdiXmfYkS2CaeH3SLUiUO2jBmS7ihllQVvN9cbjtpb27oO4jiL4-C3nwqr1o40jHCCdkQ45MiTb69UGbIIRX5UT403x56Kh34BvcKareQs5zdbtRrBBQ8CeICegGEWRE=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCilgerran Castle is a 13th-century ruined castle located in Cilgerran, Pembrokeshire, Wales, near Cardigan. The first castle on the site was thought to have been built by Gerald of Windsor around 1110–1115, and it changed hands several times over the following century between English and Welsh forces. In the hands of William Marshal, 2nd Earl of Pembroke, the construction of the stone castle began after 1223.\n\n_Listing 5 of 61_",
+      "listing": {
+        "name": "Cilgerran Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 52.05722222,
+        "lng": -4.63416667,
+        "mapsLink": "https://www.google.com/maps/search/Cilgerran%20Castle/@52.0838,-4.6846,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNmLv3Wmea5e7yv7CemdiXmfYkS2CaeH3SLUiUO2jBmS7ihllQVvN9cbjtpb27oO4jiL4-C3nwqr1o40jHCCdkQ45MiTb69UGbIIRX5UT403x56Kh34BvcKareQs5zdbtRrBBQ8CeICegGEWRE=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Cilgerran Castle is a 13th-century ruined castle located in Cilgerran, Pembrokeshire, Wales, near Cardigan. The first castle on the site was thought to have been built by Gerald of Windsor around 1110–1115, and it changed hands several times over the following century between English and Welsh forces. In the hands of William Marshal, 2nd Earl of Pembroke, the construction of the stone castle began after 1223.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.1,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cilgerran_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/01_Cilgerran_Castle.jpg/330px-01_Cilgerran_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Waterborough",
+          "license": "CC BY-SA 3.0",
+          "description": "Cilgerran Castle Pembrokeshire UK",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050582133
     }
   ]
 }
