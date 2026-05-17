@@ -800,6 +800,51 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/QDcohKvssDoTMQp1A\n"
       },
       "ts": 1779043690997
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Malahide Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Dublin\n*Type:* castle\n*Period:* 12th century\n*Coords:* 53.44472222, -6.165\n*Wikipedia:* https://en.wikipedia.org/wiki/Malahide_Castle\n*Maps:* https://www.google.com/maps/search/Malahide%20Castle/@53.445,-6.1625,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNB2J-u_OPNpR6GsEazcutbsFEi-ereG2E2dfb8Qk0gFL6cC1D2pZ13AlLX18doW8ubIPKeg7MAnUNkt96SDi2KaNSXDiJ5_YU5VReOnhO0OryPyARnv5LOZYW2DZeuR5-izudmO-5p7ej2lQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://malahidecastleandgardens.ie/\n\n*Description:*\nMalahide Castle, parts of which date to the 12th century, lies close to the village of Malahide, 14 km north of central Dublin in Ireland. It has over 267 acres (1.08 km2) of remaining parkland estate, forming the Malahide Demesne Regional Park.\n\n_Listing 17 of 80_",
+      "listing": {
+        "name": "Malahide Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Dublin",
+        "lat": 53.44472222,
+        "lng": -6.165,
+        "mapsLink": "https://www.google.com/maps/search/Malahide%20Castle/@53.445,-6.1625,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNB2J-u_OPNpR6GsEazcutbsFEi-ereG2E2dfb8Qk0gFL6cC1D2pZ13AlLX18doW8ubIPKeg7MAnUNkt96SDi2KaNSXDiJ5_YU5VReOnhO0OryPyARnv5LOZYW2DZeuR5-izudmO-5p7ej2lQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Malahide Castle, parts of which date to the 12th century, lies close to the village of Malahide, 14 km north of central Dublin in Ireland. It has over 267 acres (1.08 km2) of remaining parkland estate, forming the Malahide Demesne Regional Park.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "photogenic",
+          "haunted"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Malahide_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Malahide_Castle%2C_March_2011_%282%29.jpg/330px-Malahide_Castle%2C_March_2011_%282%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "William Murphy from Dublin, Ireland",
+          "license": "CC BY-SA 2.0",
+          "description": "Malahide Castle, Dublin",
+          "credit": "Malahide - Dublin",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://malahidecastleandgardens.ie/",
+        "enrichNotes": "add source - https://malahidecastleandgardens.ie/"
+      },
+      "ts": 1779043717101
     }
   ]
 }
