@@ -305,6 +305,49 @@
         "enrichNotes": "source - https://www.bewdleymuseum.co.uk/"
       },
       "ts": 1779060385229
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Skenfrith Castle\n*Country:* wales\n*Region:* south wales\n*County:* Monmouthshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 51.8784, -2.7902\n*Wikipedia:* https://en.wikipedia.org/wiki/Skenfrith_Castle\n*Maps:* https://www.google.com/maps/search/Skenfrith%20Castle/@51.8545,-2.7834,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPBxrt12N_ZAsJqljYoD9lCa20PRtgcfLkQUwV_55S7SYSkBoJMnHpzpwpe8IQ_4liuRafbe_-BFMLAgvUOVhr0JmSXcGUyXSo7csP_JMemhhysVzxJSEG3KllchatZN8FRh7JX9OT0sP6mQA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nSkenfrith Castle is a ruined castle in the village of Skenfrith in Monmouthshire, Wales. The fortification was established by the Normans in the wake of the invasion of England in 1066, to protect the route from Wales to Hereford. Possibly commissioned by William fitz Osbern, the Earl of Hereford, the castle comprised earthworks with timber defences. In 1135, a major Welsh revolt took place and in response King Stephen brought together Skenfrith Castle and its sister fortifications of Grosmont and White Castle to form a lordship known as the \"Three Castles\", which continued to play a role in defending the region from Welsh attack for several centuries.\n\n_Listing 7 of 270_",
+      "listing": {
+        "name": "Skenfrith Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Monmouthshire",
+        "lat": 51.8784,
+        "lng": -2.7902,
+        "mapsLink": "https://www.google.com/maps/search/Skenfrith%20Castle/@51.8545,-2.7834,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPBxrt12N_ZAsJqljYoD9lCa20PRtgcfLkQUwV_55S7SYSkBoJMnHpzpwpe8IQ_4liuRafbe_-BFMLAgvUOVhr0JmSXcGUyXSo7csP_JMemhhysVzxJSEG3KllchatZN8FRh7JX9OT0sP6mQA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Skenfrith Castle is a ruined castle in the village of Skenfrith in Monmouthshire, Wales. The fortification was established by the Normans in the wake of the invasion of England in 1066, to protect the route from Wales to Hereford. Possibly commissioned by William fitz Osbern, the Earl of Hereford, the castle comprised earthworks with timber defences. In 1135, a major Welsh revolt took place and in response King Stephen brought together Skenfrith Castle and its sister fortifications of Grosmont and White Castle to form a lordship known as the \"Three Castles\", which continued to play a role in defending the region from Welsh attack for several centuries.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.9,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Skenfrith_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/SKENFRITH_CASTLE.jpg/330px-SKENFRITH_CASTLE.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Davidmholmes51",
+          "license": "CC BY-SA 4.0",
+          "description": "Skenfrith, Monmouthshire, Wales.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779060403035
     }
   ]
 }
