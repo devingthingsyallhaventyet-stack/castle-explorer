@@ -240,6 +240,62 @@
         "enrichNotes": "more reseaerch needed "
       },
       "ts": 1779052584320
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Leap Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Offaly\n*Type:* castle\n*Period:* 15th-16th century\n*Coords:* 53.0281, -7.8085\n*Wikipedia:* https://en.wikipedia.org/wiki/Leap_Castle\n*Maps:* https://www.google.com/maps/search/Leap%20Castle/@52.952,-7.809,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg/330px-Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://leapcastle.net/\n\n*Description:*\nLeap Castle is a castle in Roscrea, County Offaly, Ireland, about 6 kilometres (3.7 mi) north of the town of Roscrea and 10 kilometres (6.2 mi) south of Kinnitty on the R421.\n\n_Listing 6 of 19_",
+      "listing": {
+        "name": "Leap Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Offaly",
+        "lat": 53.0281,
+        "lng": -7.8085,
+        "mapsLink": "https://www.google.com/maps/search/Leap%20Castle/@52.952,-7.809,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg/330px-Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Leap Castle is a castle in Roscrea, County Offaly, Ireland, about 6 kilometres (3.7 mi) north of the town of Roscrea and 10 kilometres (6.2 mi) south of Kinnitty on the R421.",
+        "type": "castle",
+        "period": "15th-16th century",
+        "rating": 4,
+        "tags": [
+          "haunted",
+          "atmospheric",
+          "dark-brooding",
+          "ruins-romantic",
+          "remote",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Leap_Castle"
+          },
+          {
+            "name": "Leap Castle",
+            "url": "https://leapcastle.net/"
+          },
+          {
+            "name": "Ireland.com",
+            "url": "https://www.ireland.com/en-us/magazine/built-heritage/getting-spooked-at-leap-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Leap_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg/330px-Castles_of_Leinster-_Leap%2C_Offaly_%28geograph_1952750%29.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Leap_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://leapcastle.net/",
+        "enrichNotes": "add source - https://leapcastle.net/"
+      },
+      "ts": 1779052609557
     }
   ]
 }
