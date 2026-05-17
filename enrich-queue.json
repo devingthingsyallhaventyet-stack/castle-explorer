@@ -480,6 +480,69 @@
         "enrichNotes": "Links are correct but images are not. repull images. "
       },
       "ts": 1779039831369
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hampton Court Palace\n*Country:* england\n*Region:* south east london\n*County:* Surrey\n*Type:* castle\n*Period:* 16th century\n*Coords:* 51.40333333, -0.3375\n*Wikipedia:* https://en.wikipedia.org/wiki/Hampton_Court_Palace\n*Maps:* https://www.google.com/maps/search/Hampton%20Court%20Palace/@51.4036,-0.3378,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg/330px-Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nHampton Court Palace is a Grade I listed royal palace in the London Borough of Richmond upon Thames, 12 miles southwest and upstream of central London on the River Thames.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Hampton Court Palace",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Surrey",
+        "lat": 51.40333333,
+        "lng": -0.3375,
+        "mapsLink": "https://www.google.com/maps/search/Hampton%20Court%20Palace/@51.4036,-0.3378,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg/330px-Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Hampton Court Palace is a Grade I listed royal palace in the London Borough of Richmond upon Thames, 12 miles southwest and upstream of central London on the River Thames.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "tudor",
+          "gardens",
+          "haunted",
+          "kid-friendly",
+          "guided-tours",
+          "gift-shop",
+          "tearoom-cafe"
+        ],
+        "source": "https://www.hrp.org.uk/hampton-court-palace/",
+        "wiki": "https://en.wikipedia.org/wiki/Hampton_Court_Palace",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg/330px-Hampton_Court_Palace%2C_West_Front_Richmond_upon_Thames_1193127_20230823_0050.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Tilman2007",
+          "license": "CC BY-SA 4.0",
+          "description": "Hampton Court Palace, West Front, Richmond upon Thames",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Hampton_Court_Palace",
+        "needsEnrich": true,
+        "sources": [
+          {
+            "label": "Hampton Court Palace - Historic Royal Palaces",
+            "url": "https://www.hrp.org.uk/hampton-court-palace/"
+          }
+        ],
+        "verifiedSources": [
+          {
+            "label": "Hampton Court Palace - Historic Royal Palaces",
+            "url": "https://www.hrp.org.uk/hampton-court-palace/"
+          }
+        ],
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779039865215
     }
   ]
 }
