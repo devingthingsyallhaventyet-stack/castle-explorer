@@ -3001,6 +3001,54 @@
         "enrichNotes": "add source - https://www.buckden-towers.org.uk/"
       },
       "ts": 1779033749895
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Wolterton Hall\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* castle\n*Period:* 18th century\n*Coords:* 52.840635, 1.210311\n*Wikipedia:* https://en.wikipedia.org/wiki/Wolterton_Hall\n*Maps:* https://www.google.com/maps/search/Wolterton%20Hall/@52.8283,1.2083,15z\n*Main Image:* https://img.castlecore.uk/wolterton-hall.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* no google places. needs more research. \n\n*Description:*\nWolterton Hall, is a large country house in the ecclesiastical parish of Wickmere with Wolterton and the civil parish of Wickmere in the county of Norfolk, England, United Kingdom. The present hall was commissioned by Horatio Walpole, 1st Baron Walpole of Wolterton and completed in 1742, it was designed by the architect Thomas Ripley who was a protégé of Lord Walpole and his brother Sir Robert Walpole.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Wolterton Hall",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.840635,
+        "lng": 1.210311,
+        "mapsLink": "https://www.google.com/maps/search/Wolterton%20Hall/@52.8283,1.2083,15z",
+        "image": "https://img.castlecore.uk/wolterton-hall.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/wolterton-hall-2.jpg",
+          "https://img.castlecore.uk/wolterton-hall-3.jpg",
+          "https://img.castlecore.uk/wolterton-hall-4.jpg",
+          "https://img.castlecore.uk/wolterton-hall-5.jpg"
+        ],
+        "desc": "Wolterton Hall, is a large country house in the ecclesiastical parish of Wickmere with Wolterton and the civil parish of Wickmere in the county of Norfolk, England, United Kingdom. The present hall was commissioned by Horatio Walpole, 1st Baron Walpole of Wolterton and completed in 1742, it was designed by the architect Thomas Ripley who was a protégé of Lord Walpole and his brother Sir Robert Walpole.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 3.9,
+        "tags": [
+          "gardens",
+          "atmospheric",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wolterton_Hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Wolterton_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Wolterton_Hall_14_August_2014_%281%29.JPG/330px-Wolterton_Hall_14_August_2014_%281%29.JPG",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Wolterton_Hall",
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "no google places. needs more research. ",
+        "enrichNotes": "no google places. needs more research. "
+      },
+      "ts": 1779033826775
     }
   ]
 }
