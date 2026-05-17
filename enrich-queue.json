@@ -324,6 +324,50 @@
         "enrichNotes": ""
       },
       "ts": 1779048776216
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dalkey Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Dublin\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 53.2779, -6.1055\n*Wikipedia:* https://en.wikipedia.org/wiki/Dalkey_Castle\n*Maps:* https://www.google.com/maps/search/Dalkey%20Castle/@53.2722,-6.1,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPIpyzhEmJ-cn0IuR_N4lhOvd-idVM-iGQTvOzl9Lkb1f3znVvonAwPiFa2BJnCMPgPxUYK-o42K2OCrikcC3bXOmRv-SBwatki25WdB93OQdH8xcKF7efAeBKW2WxNi6Zf2RIYkwLlR32JnA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source- https://dalkeycastle.com/\n\n*Description:*\nDalkey Castle, formerly known as Goat Castle, is a medieval structure in Castle Street, Dalkey, Dublin, Ireland. The complex currently accommodates the Dalkey Heritage Centre, which is in the castle itself, and Dalkey Town Hall, which is formed by a single storey extension behind the original building.\n\n_Listing 7 of 94_",
+      "listing": {
+        "name": "Dalkey Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Dublin",
+        "lat": 53.2779,
+        "lng": -6.1055,
+        "mapsLink": "https://www.google.com/maps/search/Dalkey%20Castle/@53.2722,-6.1,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPIpyzhEmJ-cn0IuR_N4lhOvd-idVM-iGQTvOzl9Lkb1f3znVvonAwPiFa2BJnCMPgPxUYK-o42K2OCrikcC3bXOmRv-SBwatki25WdB93OQdH8xcKF7efAeBKW2WxNi6Zf2RIYkwLlR32JnA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Dalkey Castle, formerly known as Goat Castle, is a medieval structure in Castle Street, Dalkey, Dublin, Ireland. The complex currently accommodates the Dalkey Heritage Centre, which is in the castle itself, and Dalkey Town Hall, which is formed by a single storey extension behind the original building.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dalkey_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg/330px-Castles_of_Leinster%2C_Goat_Castle%2C_Dalkey%2C_Co._Dublin_-_geograph.org.uk_-_5029167.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mike Searle",
+          "license": "CC BY-SA 2.0",
+          "description": "Castles of Leinster: Goat Castle, Dalkey, Co. Dublin",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source- https://dalkeycastle.com/",
+        "enrichNotes": "add source- https://dalkeycastle.com/"
+      },
+      "ts": 1779048802331
     }
   ]
 }
