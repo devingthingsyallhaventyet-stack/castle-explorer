@@ -59,7 +59,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageAttribution": "local",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/kilchurn-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castle Stalker",
@@ -259,7 +265,13 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dunstaffnage-castle-and-chapel/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Carnasserie Castle",
@@ -321,7 +333,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/carnasserie-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Skipness Castle",
@@ -383,7 +401,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/skipness-castle-and-chapel/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Rothesay Castle",
@@ -444,7 +468,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/rothesay-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kisimul Castle",
@@ -505,7 +535,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/kisimul-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Gylen Castle",
@@ -710,7 +746,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "imageReviewDone": true,
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/castle-sween/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tarbert Castle",
@@ -2410,7 +2452,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/hermitage-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Melrose Abbey",
@@ -2471,7 +2519,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/melrose-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Jedburgh Abbey",
@@ -2533,7 +2587,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/jedburgh-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dryburgh Abbey",
@@ -2595,7 +2655,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dryburgh-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kelso Abbey",
@@ -2657,7 +2723,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/kelso-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Neidpath Castle",
@@ -2792,7 +2864,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/smailholm-tower/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Floors Castle",
@@ -4256,7 +4334,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/blackness-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tantallon Castle",
@@ -4318,7 +4402,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/tantallon-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dirleton Castle",
@@ -4381,7 +4471,13 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dirleton-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hailes Castle",
@@ -4505,7 +4601,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/crichton-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Borthwick Castle",
@@ -5002,7 +5104,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/seton-collegiate-church/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "St Giles' Cathedral",
@@ -5706,7 +5814,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/cairnpapple-hill/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castle Campbell",
@@ -5830,7 +5944,13 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.nts.org.uk/visit/places/alloa-tower",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "St Andrews Castle",
@@ -5892,7 +6012,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/st-andrews-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Huntingtower Castle",
@@ -5953,7 +6079,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/huntingtower-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Elcho Castle",
@@ -6014,7 +6146,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/elcho-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Loch Leven Castle",
@@ -6406,7 +6544,13 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/aberdour-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Balvaird Castle",
@@ -6470,7 +6614,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/balvaird-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Falkland Palace",
@@ -6536,7 +6686,13 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.nts.org.uk/visit/places/falkland-palace",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tullibardine Chapel",
@@ -6601,7 +6757,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/tullibardine-chapel/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Burleigh Castle",
@@ -7009,7 +7171,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nts.org.uk/visit/places/kellie-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Scotstarvit Tower",
@@ -7079,7 +7247,13 @@
       "credit": "From geograph.org.uk",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/scotstarvit-tower/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Macduff's Castle",
@@ -7191,7 +7365,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/clackmannan-tower/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Menstrie Castle",
@@ -7558,7 +7738,13 @@
     "imageAttribution": "local",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dunfermline-palace/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Inchcolm Abbey",
@@ -7625,7 +7811,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/inchcolm-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Balmerino Abbey",
@@ -7934,7 +8126,13 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "url": "https://www.nts.org.uk/visit/places/culross",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dunimarle Castle",
@@ -8330,7 +8528,13 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Stirling_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Stirling_Castle",
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/stirling-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Doune Castle",
@@ -8392,7 +8596,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/doune-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dunblane Cathedral",
@@ -8528,7 +8738,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/inchmahome-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Craignethan Castle",
@@ -8589,7 +8805,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/craignethan-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Bothwell Castle",
@@ -8651,7 +8873,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/bothwell-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dumbarton Castle",
@@ -8716,7 +8944,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dumbarton-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Cadzow Castle",
@@ -9043,7 +9277,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/cambuskenneth-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Paisley Abbey",
@@ -9792,7 +10032,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/urquhart-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dunrobin Castle",
@@ -10854,7 +11100,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/beauly-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Fortrose Cathedral",
@@ -10920,7 +11172,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/fortrose-cathedral/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dornoch Castle",
@@ -11936,7 +12194,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/ruthven-barracks/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castle Roy",
@@ -12942,7 +13206,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/claypotts-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Edzell Castle",
@@ -13379,7 +13649,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/tolquhon-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kildrummy Castle",
@@ -13440,7 +13716,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/kildrummy-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Huntly Castle",
@@ -13502,7 +13784,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/huntly-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Delgatie Castle",
@@ -13607,7 +13895,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/spynie-palace/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Elgin Cathedral",
@@ -13669,7 +13963,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/elgin-cathedral/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Balvenie Castle",
@@ -13730,7 +14030,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/balvenie-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Braemar Castle",
@@ -13872,7 +14178,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/corgarff-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Duffus Castle",
@@ -13937,7 +14249,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/duffus-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Brodie Castle",
@@ -14145,7 +14463,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/arbroath-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Brechin Castle",
@@ -16210,7 +16534,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/restenneth-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kinloss Abbey",
@@ -16490,7 +16820,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/deer-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Leith Hall",
@@ -17440,7 +17776,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nts.org.uk/visit/places/house-of-dun",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Balintore Castle",
@@ -17590,7 +17932,13 @@
       "credit": "From geograph.org.uk",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/caerlaverock-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Threave Castle",
@@ -17652,7 +18000,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/threave-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "MacLellan's Castle",
@@ -17713,7 +18067,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/maclellans-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Sweetheart Abbey",
@@ -17775,7 +18135,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/sweetheart-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dean Castle",
@@ -17888,7 +18254,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nts.org.uk/visit/places/culzean-castle-and-country-park",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lochranza Castle",
@@ -17951,7 +18323,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/lochranza-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Brodick Castle",
@@ -18053,7 +18431,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/dundrennan-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Glenluce Abbey",
@@ -18117,7 +18501,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/glenluce-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Crossraguel Abbey",
@@ -18182,7 +18572,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/crossraguel-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castle Kennedy",
@@ -19687,7 +20083,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/whithorn-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Cruggleton Castle",
@@ -20461,7 +20863,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/lincluden-collegiate-church/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hoddom Castle",
@@ -20644,6 +21052,10 @@
       {
         "label": "Norwich Castle Museum & Art Gallery - Norfolk Museums Service",
         "url": "https://www.norwichcastle.norfolk.gov.uk/"
+      },
+      {
+        "url": "https://www.museums.norfolk.gov.uk/norwich-castle",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -20714,7 +21126,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/castle-acre-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castle Rising",
@@ -20781,6 +21199,10 @@
       {
         "label": "Castle Rising",
         "url": "https://www.castlerising.co.uk/"
+      },
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/castle-rising/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -20851,7 +21273,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/framlingham-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Orford Castle",
@@ -21003,7 +21431,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.colchester.cimuseums.org.uk/visit/colchester-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hedingham Castle",
@@ -21058,7 +21492,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hedingham_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.hedinghamcastle.co.uk/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Baconsthorpe Castle",
@@ -21264,7 +21704,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/burgh-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Caister Castle",
@@ -21518,7 +21964,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/leiston-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Pleshey Castle",
@@ -21655,7 +22107,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/hadleigh-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tilbury Fort",
@@ -21727,7 +22185,13 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/tilbury-fort/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Waltham Abbey",
@@ -23940,7 +24404,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/dunstanburgh-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Warkworth Castle",
@@ -24003,7 +24473,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/warkworth-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Prudhoe Castle",
@@ -24065,7 +24541,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/prudhoe-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Norham Castle",
@@ -24128,7 +24610,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/norham-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Carlisle Castle",
@@ -24191,7 +24679,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/carlisle-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Brougham Castle",
@@ -24254,7 +24748,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/brougham-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Brough Castle",
@@ -24706,7 +25206,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/beeston-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Chester Castle",
@@ -24806,7 +25312,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/tynemouth-priory-and-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lindisfarne Priory",
@@ -24907,7 +25419,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/furness-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lanercost Priory",
@@ -24969,7 +25487,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/lanercost-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Auckland Palace",
@@ -25367,7 +25891,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/aydon-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Brinkburn Priory",
@@ -25409,7 +25939,13 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-17"
+    "enrichReviewDate": "2026-05-17",
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/brinkburn-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hexham Abbey",
@@ -25534,7 +26070,13 @@
     "needsEnrich": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
     "enrichStatus": "enriched",
-    "enrichReviewDate": "2026-05-17"
+    "enrichReviewDate": "2026-05-17",
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Thirlwall Castle",
@@ -25823,7 +26365,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/shap-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Sizergh Castle",
@@ -26222,7 +26770,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/piel-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Halton Castle",
@@ -26477,7 +27031,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/sawley-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hoghton Tower",
@@ -27211,7 +27771,13 @@
     },
     "mainImageSource": "google",
     "imageReviewDone": true,
-    "auditNote": "low gallery count"
+    "auditNote": "low gallery count",
+    "sources": [
+      {
+        "url": "https://www.naworth.co.uk/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Rose Castle",
@@ -28503,7 +29069,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/north-east/penshaw-monument",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lindisfarne Castle",
@@ -28571,7 +29143,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/northumberland/lindisfarne-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Finchale Priory",
@@ -28638,7 +29216,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/finchale-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Egglestone Abbey",
@@ -28704,7 +29288,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/egglestone-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Calder Abbey",
@@ -29304,7 +29894,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/stott-park-bobbin-mill/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castlerigg Stone Circle",
@@ -29371,7 +29967,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/castlerigg-stone-circle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Wetheral Priory Gatehouse",
@@ -29435,7 +30037,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/wetheral-priory-gatehouse/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Ravenglass Roman Bath House",
@@ -29500,7 +30108,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/ravenglass-roman-bath-house/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hardknott Roman Fort",
@@ -29931,7 +30545,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/northumberland/wallington",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Sycamore Gap",
@@ -30047,7 +30667,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/manchester/dunham-massey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tatton Park",
@@ -30116,7 +30742,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/cheshire/tatton-park",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Rufford Old Hall",
@@ -30309,7 +30941,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.samlesburyhall.co.uk/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Bramall Hall",
@@ -30457,6 +31095,10 @@
       {
         "label": "Chetham's Library - Oldest Public Library in the English Speaking World",
         "url": "https://library.chethams.com/"
+      },
+      {
+        "url": "https://www.chethams.org.uk/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -30869,7 +31511,13 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dover_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dover_Castle",
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/dover-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Leeds Castle",
@@ -31021,7 +31669,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/sussex/bodiam-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hever Castle",
@@ -31206,7 +31860,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/rochester-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Pevensey Castle",
@@ -31269,7 +31929,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/pevensey-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lewes Castle",
@@ -31434,7 +32100,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/upnor-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Walmer Castle",
@@ -31532,7 +32204,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/deal-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Eltham Palace",
@@ -31594,7 +32272,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/eltham-palace/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Eynsford Castle",
@@ -32045,7 +32729,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/portchester-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hurst Castle",
@@ -32107,7 +32797,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/hurst-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Scotney Castle",
@@ -32409,7 +33105,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/bayham-old-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Camber Castle",
@@ -32759,7 +33461,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/bishops-waltham-palace/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Wolvesey Castle",
@@ -33008,7 +33716,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Titchfield_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/titchfield-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Herstmonceux Castle",
@@ -33168,7 +33882,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/battle-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Michelham Priory",
@@ -34306,7 +35026,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/st-augustines-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Canterbury Cathedral",
@@ -35063,7 +35789,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/tintagel-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Corfe Castle",
@@ -35145,6 +35877,10 @@
       {
         "label": "Corfe Castle Dorset - Visitor Information, News & Events",
         "url": "https://corfecastle.co.uk/"
+      },
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/dorset/corfe-castle",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -35216,7 +35952,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/old-wardour-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Restormel Castle",
@@ -35279,7 +36021,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/restormel-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Launceston Castle",
@@ -35341,7 +36089,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/launceston-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "St Mawes Castle",
@@ -35410,7 +36164,13 @@
       "credit": "Photographer",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/st-mawes-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Pendennis Castle",
@@ -35473,7 +36233,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Okehampton Castle",
@@ -35535,7 +36301,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/okehampton-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Berry Pomeroy Castle",
@@ -35598,7 +36370,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/berry-pomeroy-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Totnes Castle",
@@ -35758,7 +36536,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Nunney Castle",
@@ -35822,7 +36606,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/nunney-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Portland Castle",
@@ -35884,7 +36674,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/portland-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Cleeve Abbey",
@@ -35946,7 +36742,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/cleeve-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Christchurch Castle",
@@ -36140,7 +36942,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/carisbrooke-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Old Sarum",
@@ -36202,7 +37010,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/old-sarum/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castle Drogo",
@@ -36271,7 +37085,13 @@
       "credit": "Own work by the original uploader",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/devon/castle-drogo",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lydford Castle",
@@ -36514,7 +37334,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/dartmouth-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Compton Castle",
@@ -37045,7 +37871,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hailes_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/hailes-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tewkesbury Abbey",
@@ -37263,7 +38095,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/yarmouth-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tiverton Castle",
@@ -38164,7 +39002,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/ludgershall-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Devizes Castle",
@@ -38963,7 +39807,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/muchelney-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lacock Abbey",
@@ -39033,7 +39883,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/wiltshire/lacock-abbey-fox-talbot-museum-and-village",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Malmesbury Abbey",
@@ -40269,7 +41125,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/devon/buckland-abbey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Torre Abbey",
@@ -40898,7 +41760,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Godolphin_Estate",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/cornwall/godolphin",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Chysauster Ancient Village",
@@ -40977,7 +41845,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Chysauster_Ancient_Village",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/chysauster-ancient-village/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Warwick Castle",
@@ -41164,7 +42038,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/bolsover-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Peveril Castle",
@@ -41227,7 +42107,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/peveril-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tattershall Castle",
@@ -41411,7 +42297,13 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/ashby-de-la-zouch-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Stokesay Castle",
@@ -41474,7 +42366,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/stokesay-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Ludlow Castle",
@@ -41610,7 +42508,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.shrewsburymuseum.org.uk/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Acton Burnell Castle",
@@ -41673,7 +42577,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/acton-burnell-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Goodrich Castle",
@@ -41736,7 +42646,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/goodrich-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Wigmore Castle",
@@ -41939,7 +42855,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/croxden-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tutbury Castle",
@@ -42219,7 +43141,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/longtown-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dudley Castle",
@@ -42432,7 +43360,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "wikipedia",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/clun-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Hopton Castle",
@@ -42663,7 +43597,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/moreton-corbet-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lilleshall Abbey",
@@ -42728,7 +43668,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/lilleshall-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Buildwas Abbey",
@@ -42794,7 +43740,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/buildwas-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Haughmond Abbey",
@@ -42860,7 +43812,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/haughmond-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Wenlock Priory",
@@ -43108,7 +44066,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/wingfield-manor/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Codnor Castle",
@@ -43321,7 +44285,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/peak-district-derbyshire/hardwick",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Rufford Abbey",
@@ -43557,7 +44527,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/kirby-hall/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Fotheringhay Castle",
@@ -45026,7 +46002,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gainsborough_Old_Hall",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/gainsborough-old-hall/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Crowland Abbey",
@@ -45583,7 +46565,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/rushton-triangular-lodge/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dale Abbey",
@@ -45722,7 +46710,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/wroxeter-roman-city/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Clifton Hall",
@@ -46550,7 +47544,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/peak-district-derbyshire/calke-abbey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lichfield Cathedral",
@@ -46961,7 +47961,13 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/warwickshire/baddesley-clinton",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Packwood House",
@@ -47295,7 +48301,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/northamptonshire/canons-ashby",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Delapre Abbey",
@@ -47616,7 +48628,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/herefordshire-worcestershire/hanbury-hall-and-gardens",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Croome Court",
@@ -47681,7 +48699,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/herefordshire-worcestershire/croome",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Bewdley Museum",
@@ -48133,7 +49157,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/shropshire/benthall-hall",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Attingham Park",
@@ -48384,7 +49414,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Richmond_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/richmond-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Skipton Castle",
@@ -48520,7 +49556,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/middleham-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Scarborough Castle",
@@ -48582,7 +49624,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/scarborough-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Helmsley Castle",
@@ -48645,7 +49693,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/helmsley-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Pickering Castle",
@@ -48713,7 +49767,13 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/pickering-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Bolton Castle",
@@ -48865,7 +49925,13 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Fountains_Abbey"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Fountains_Abbey",
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/yorkshire/fountains-abbey-and-studley-royal-water-garden",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Whitby Abbey",
@@ -48928,7 +49994,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/whitby-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Rievaulx Abbey",
@@ -48990,7 +50062,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/rievaulx-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kirkstall Abbey",
@@ -49053,7 +50131,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://museumsandgalleries.leeds.gov.uk/kirkstall-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Conisbrough Castle",
@@ -49116,7 +50200,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/conisbrough-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Pontefract Castle",
@@ -49279,7 +50369,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/spofforth-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Byland Abbey",
@@ -49342,7 +50438,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/byland-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Jervaulx Abbey",
@@ -49730,7 +50832,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/easby-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kirkham Priory",
@@ -49796,7 +50904,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/kirkham-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Wharram Percy",
@@ -49854,7 +50968,13 @@
       "credit": "From geograph.org.uk",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/wharram-percy/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Crayke Castle",
@@ -50671,7 +51791,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/roche-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Selby Abbey",
@@ -50822,7 +51948,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.english-heritage.org.uk/visit/places/monk-bretton-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Bolton Abbey",
@@ -52118,6 +53250,10 @@
       {
         "label": "Visit Temple Newsam | Leeds Museums and Galleries",
         "url": "https://museumsandgalleries.leeds.gov.uk/visit-temple-newsam-dt79"
+      },
+      {
+        "url": "https://museumsandgalleries.leeds.gov.uk/temple-newsam/",
+        "label": "Official"
       }
     ],
     "verifiedSources": [
@@ -53222,7 +54358,13 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Conwy_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Conwy_Castle",
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/conwy-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Caernarfon Castle",
@@ -53292,7 +54434,13 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Caernarfon_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Caernarfon_Castle",
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/caernarfon-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Harlech Castle",
@@ -53395,7 +54543,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/beaumaris-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Flint Castle",
@@ -53458,7 +54612,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/flint-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Rhuddlan Castle",
@@ -53560,7 +54720,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/denbigh-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Criccieth Castle",
@@ -53665,7 +54831,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/dolbadarn-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dolwyddelan Castle",
@@ -53770,7 +54942,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/castell-y-bere",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Ewloe Castle",
@@ -53947,7 +55125,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/basingwerk-abbey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Cymer Abbey",
@@ -54016,7 +55200,13 @@
       "credit": "Geograph Britain and Ireland",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/cymer-abbey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Ruthin Castle",
@@ -54513,7 +55703,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/plas-mawr",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Gwydir Castle",
@@ -54875,7 +56071,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/barclodiad-y-gawres",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Din Lligwy",
@@ -54945,7 +56147,13 @@
       "credit": "",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/din-lligwy",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lligwy Burial Chamber",
@@ -55148,7 +56356,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/elisegs-pillar",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Erddig Hall",
@@ -55437,7 +56651,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/caerphilly-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Cardiff Castle",
@@ -55542,7 +56762,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/castell-coch",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Raglan Castle",
@@ -55604,7 +56830,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/raglan-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Oystermouth Castle",
@@ -55741,7 +56973,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/neath-abbey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Ewenny Priory",
@@ -55942,7 +57180,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/chepstow-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Tintern Abbey",
@@ -56004,7 +57248,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/tintern-abbey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "White Castle",
@@ -56227,7 +57477,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/ogmore-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Coity Castle",
@@ -57674,7 +58930,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/old-beaupre-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "St Donat's Castle",
@@ -58274,7 +59536,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/blaenavon-ironworks",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Monmouth Castle",
@@ -58603,7 +59871,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/kidwelly-castle",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Carreg Cennen Castle",
@@ -58894,7 +60168,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://cadw.gov.wales/visit/places-to-visit/talley-abbey",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Manorbier Castle",
@@ -60933,7 +62213,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/maynooth-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Castletown House",
@@ -61253,7 +62539,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/monasterboice-monastic-site/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Mellifont Abbey",
@@ -62889,7 +64181,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/trim-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Jerpoint Abbey",
@@ -62952,7 +64250,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/jerpoint-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Lismore Castle",
@@ -63220,7 +64524,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ferns,_County_Wexford",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/ferns-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Slade Castle",
@@ -63288,7 +64598,13 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/unguided-sites/slade-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dunsany Castle",
@@ -63588,7 +64904,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/bective-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kells Priory",
@@ -63652,7 +64974,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/kells-priory/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Granny Castle",
@@ -67605,7 +68933,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ross_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/ross-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Charles Fort",
@@ -68039,7 +69373,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Barryscourt_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/barryscourt-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kilcrea Friary",
@@ -68728,7 +70068,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Siege_of_Carrigafoyle_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/carrigafoyle-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kilbolane Castle",
@@ -71036,7 +72382,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Derrynane_House",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/derrynane-house/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Leacanabuaile Fort",
@@ -72354,7 +73706,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rock_of_Cashel",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/rock-of-cashel/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Cahir Castle",
@@ -72417,7 +73775,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cahir_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/cahir-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Clonmacnoise",
@@ -72451,7 +73815,13 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonmacnoise",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/clonmacnoise/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Roscrea Castle",
@@ -72836,7 +74206,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Fore_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/places-to-visit/fore-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Athlone Castle",
@@ -75944,7 +77320,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Donegal_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/donegal-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Doe Castle",
@@ -76007,7 +77389,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Doe_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/doe-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Glenveagh Castle",
@@ -76173,7 +77561,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Boyle_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/boyle-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Roscommon Castle",
@@ -76268,7 +77662,13 @@
       "credit": "From geograph.org.uk",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/unguided-sites/cloughoughter-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Cavan Castle",
@@ -78566,7 +79966,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://www.nationaltrust.org.uk/visit/northern-ireland/downhill-demesne-and-hezlett-house",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Downhill House",
@@ -79600,7 +81006,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Athenry_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/athenry-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Portumna Castle",
@@ -79766,7 +81178,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aughnanure_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/aughnanure-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Dún Aonghasa",
@@ -79821,7 +81239,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/dun-aonghasa/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Claregalway Friary",
@@ -79883,7 +81307,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Claregalway_Friary",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/claregalway-friary/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kilmacduagh Monastery",
@@ -80144,7 +81574,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ennis_Friary",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/ennis-friary/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Sligo Abbey",
@@ -80205,7 +81641,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sligo_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/sligo-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Parke's Castle",
@@ -80267,7 +81709,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Parke%27s_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/parkes-castle/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kylemore Abbey",
@@ -80453,7 +81901,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ross_Errilly_Friary",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/ross-errilly-friary/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Oranmore Castle",
@@ -83257,7 +84711,13 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/carrowmore-megalithic-cemetery/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Aclare Castle",
@@ -83868,7 +85328,13 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corcomroe_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "url": "https://heritageireland.ie/visit/corcomroe-abbey/",
+        "label": "Official"
+      }
+    ]
   },
   {
     "name": "Kilfenora Cathedral",
