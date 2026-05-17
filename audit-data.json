@@ -42409,7 +42409,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Historic Stafford",
+        "url": "https://www.historicstafford.co.uk/whatson-venue/stafford-castle/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Historic Stafford",
+        "url": "https://www.historicstafford.co.uk/whatson-venue/stafford-castle/"
+      }
+    ]
   },
   {
     "name": "Clun Castle",
@@ -42565,7 +42577,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Hopton Castle, Shropshire - Hopton Castle Preservation Trust",
+        "url": "https://www.hoptoncastle.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Hopton Castle, Shropshire - Hopton Castle Preservation Trust",
+        "url": "https://www.hoptoncastle.org.uk/"
+      }
+    ]
   },
   {
     "name": "Whittington Castle",
@@ -42636,7 +42660,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home | Whittington Castle",
+        "url": "https://www.whittingtoncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home | Whittington Castle",
+        "url": "https://www.whittingtoncastle.com/"
+      }
+    ]
   },
   {
     "name": "Moreton Corbet Castle",
@@ -43041,7 +43077,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Maxstoke Castle",
+        "url": "https://www.maxstokecastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Maxstoke Castle",
+        "url": "https://www.maxstokecastle.com/"
+      }
+    ]
   },
   {
     "name": "Astley Castle",
@@ -43296,7 +43344,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Haddon Hall - Homepage",
+        "url": "https://www.haddonhall.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Haddon Hall - Homepage",
+        "url": "https://www.haddonhall.co.uk/"
+      }
+    ]
   },
   {
     "name": "Hardwick Hall",
@@ -43445,7 +43505,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Welcome to Rufford Abbey Country Park",
+        "url": "https://ruffordabbey.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Welcome to Rufford Abbey Country Park",
+        "url": "https://ruffordabbey.co.uk/"
+      }
+    ]
   },
   {
     "name": "Southwell Minster",
@@ -43520,7 +43592,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Southwell Minster | Southwell Minster",
+        "url": "https://www.southwellminster.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Southwell Minster | Southwell Minster",
+        "url": "https://www.southwellminster.org/"
+      }
+    ]
   },
   {
     "name": "Kirby Hall",
@@ -43751,7 +43835,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Belvoir Castle | Historic Castle & Gardens in Leicestershire",
+        "url": "https://www.belvoircastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Belvoir Castle | Historic Castle & Gardens in Leicestershire",
+        "url": "https://www.belvoircastle.com/"
+      }
+    ]
   },
   {
     "name": "Chartley Castle",
@@ -44532,7 +44628,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Snodhill Castle Preservation Trust",
+        "url": "https://snodhillcastle.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Snodhill Castle Preservation Trust",
+        "url": "https://snodhillcastle.org/"
+      }
+    ]
   },
   {
     "name": "Ewyas Harold Castle",
@@ -44651,7 +44759,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Eccleshall Castle - Staffordshire",
+        "url": "http://www.eccleshallcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Eccleshall Castle - Staffordshire",
+        "url": "http://www.eccleshallcastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Alton Castle",
@@ -44951,7 +45071,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chatsworth_House"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chatsworth_House",
+    "sources": [
+      {
+        "label": "Chatsworth - Historic House, Garden and Parkland",
+        "url": "https://www.chatsworth.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Chatsworth - Historic House, Garden and Parkland",
+        "url": "https://www.chatsworth.org/"
+      }
+    ]
   },
   {
     "name": "Gainsborough Old Hall",
@@ -45105,7 +45237,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Crowland_Abbey",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Welcome - Crowland Abbey",
+        "url": "https://crowlandabbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Welcome - Crowland Abbey",
+        "url": "https://crowlandabbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Hereford Castle",
@@ -45226,7 +45370,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Worcester_Cathedral",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home | Worcester Cathedral",
+        "url": "https://www.worcestercathedral.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home | Worcester Cathedral",
+        "url": "https://www.worcestercathedral.org.uk/"
+      }
+    ]
   },
   {
     "name": "Great Malvern Priory",
@@ -45300,7 +45456,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Great_Malvern_Priory",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Great Malvern Priory",
+        "url": "https://www.greatmalvernpriory.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Great Malvern Priory",
+        "url": "https://www.greatmalvernpriory.org.uk/"
+      }
+    ]
   },
   {
     "name": "Pershore Abbey",
@@ -45369,7 +45537,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Pershore Abbey - The Abbey Church of the Holy Cross",
+        "url": "https://www.pershoreabbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Pershore Abbey - The Abbey Church of the Holy Cross",
+        "url": "https://www.pershoreabbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Witley Court",
@@ -46155,7 +46335,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Burghley_House",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Burghley House, Gardens & Adventure Play",
+        "url": "https://burghley.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Burghley House, Gardens & Adventure Play",
+        "url": "https://burghley.co.uk/"
+      }
+    ]
   },
   {
     "name": "Leicester Castle",
@@ -46601,7 +46793,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lichfield Cathedral",
+        "url": "https://www.lichfield-cathedral.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lichfield Cathedral",
+        "url": "https://www.lichfield-cathedral.org/"
+      }
+    ]
   },
   {
     "name": "Wall Roman Site",
@@ -46835,7 +47039,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home | Stoneleigh Abbey",
+        "url": "https://www.stoneleighabbey.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home | Stoneleigh Abbey",
+        "url": "https://www.stoneleighabbey.org/"
+      }
+    ]
   },
   {
     "name": "Baddesley Clinton",
@@ -47043,7 +47259,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Welcome to Compton Verney",
+        "url": "https://www.comptonverney.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Welcome to Compton Verney",
+        "url": "https://www.comptonverney.org.uk/"
+      }
+    ]
   },
   {
     "name": "Upton House",
@@ -47162,7 +47390,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Sulgrave Manor Trust - Home",
+        "url": "https://sulgravemanor.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Sulgrave Manor Trust - Home",
+        "url": "https://sulgravemanor.org.uk/"
+      }
+    ]
   },
   {
     "name": "Canons Ashby",
@@ -47396,7 +47636,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Coughton Court | Home",
+        "url": "https://www.coughtoncourt.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Coughton Court | Home",
+        "url": "https://www.coughtoncourt.co.uk/"
+      }
+    ]
   },
   {
     "name": "Harvington Hall",
@@ -47473,7 +47725,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Harvington Hall",
+        "url": "https://harvingtonhall.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Harvington Hall",
+        "url": "https://harvingtonhall.co.uk/"
+      }
+    ]
   },
   {
     "name": "Hanbury Hall",
@@ -48250,7 +48514,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Howard"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_Howard",
+    "sources": [
+      {
+        "label": "Castle Howard House and Gardens - A Place Like No Other",
+        "url": "https://www.castlehoward.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Howard House and Gardens - A Place Like No Other",
+        "url": "https://www.castlehoward.co.uk/"
+      }
+    ]
   },
   {
     "name": "Richmond Castle",
@@ -48381,7 +48657,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Skipton Castle, Superbly Preserved Medieval Castle, Yorkshire",
+        "url": "https://www.skiptoncastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Skipton Castle, Superbly Preserved Medieval Castle, Yorkshire",
+        "url": "https://www.skiptoncastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Middleham Castle",
@@ -48706,7 +48994,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Bolton Castle Wensleydale | Family days out | Falconry | Weddings",
+        "url": "https://boltoncastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Bolton Castle Wensleydale | Family days out | Falconry | Weddings",
+        "url": "https://boltoncastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Fountains Abbey",
@@ -49315,7 +49615,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Jervaulx Abbey",
+        "url": "https://www.jervaulxabbey.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Jervaulx Abbey",
+        "url": "https://www.jervaulxabbey.com/"
+      }
+    ]
   },
   {
     "name": "Sheriff Hutton Castle",
@@ -49431,7 +49743,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Ripley Castle and Gardens - Harrogate, North Yorkshire",
+        "url": "https://www.ripleycastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Ripley Castle and Gardens - Harrogate, North Yorkshire",
+        "url": "https://www.ripleycastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Ravensworth Castle",
@@ -50305,7 +50629,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Wilton_Castle,_North_Yorkshire",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Wilton Castle",
+        "url": "https://wiltoncastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Wilton Castle",
+        "url": "https://wiltoncastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Marmion Tower",
@@ -50653,7 +50989,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Selby Abbey - At the heart of the community since 1069",
+        "url": "https://www.selbyabbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Selby Abbey - At the heart of the community since 1069",
+        "url": "https://www.selbyabbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Monk Bretton Priory",
@@ -50800,7 +51148,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Visit Bolton Abbey - Explore 30,000 acres of natural beauty, history and community",
+        "url": "https://boltonabbey.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Visit Bolton Abbey - Explore 30,000 acres of natural beauty, history and community",
+        "url": "https://boltonabbey.com/"
+      }
+    ]
   },
   {
     "name": "Coverham Abbey",
@@ -51137,7 +51497,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Markenfield Hall",
+        "url": "https://www.markenfieldhall.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Markenfield Hall",
+        "url": "https://www.markenfieldhall.com/"
+      }
+    ]
   },
   {
     "name": "Nappa Hall",
@@ -51481,7 +51853,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Beverley Minster",
+        "url": "https://beverleyminster.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Beverley Minster",
+        "url": "https://beverleyminster.org.uk/"
+      }
+    ]
   },
   {
     "name": "Howden Minster",
@@ -51793,7 +52177,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Homepage | York Minster",
+        "url": "https://yorkminster.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Homepage | York Minster",
+        "url": "https://yorkminster.org/"
+      }
+    ]
   },
   {
     "name": "Brodsworth Hall",
@@ -52303,7 +52699,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Hay Castle Trust",
+        "url": "https://www.haycastletrust.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Hay Castle Trust",
+        "url": "https://www.haycastletrust.org/"
+      }
+    ]
   },
   {
     "name": "Builth Castle",
@@ -52966,7 +53374,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Brecon Cathedral",
+        "url": "https://www.breconcathedral.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Brecon Cathedral",
+        "url": "https://www.breconcathedral.org.uk/"
+      }
+    ]
   },
   {
     "name": "Conwy Castle",
@@ -54423,7 +54843,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Gwydir Castle Conwy North Wales",
+        "url": "https://www.gwydircastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Gwydir Castle Conwy North Wales",
+        "url": "https://www.gwydircastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Bodysgallen Hall",
