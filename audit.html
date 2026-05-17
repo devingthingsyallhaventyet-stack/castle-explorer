@@ -1362,7 +1362,7 @@ function saveProgressToFile() {
   // Prepare combined export with source candidates
   const exportData = {
     'audit-data.json': updated,
-    'source-candidates.json': { candidates: window.sourceCandidates || [] }
+    'source-candidates.json': { candidates: (window.sourceCandidates || []).filter(c => c.status !== 'rejected') }
   };
   
   const json = JSON.stringify(exportData, null, 2);
