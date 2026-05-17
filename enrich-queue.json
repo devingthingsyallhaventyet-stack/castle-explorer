@@ -403,6 +403,60 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/K9mWKJF9JF2GXejeA"
       },
       "ts": 1779044671875
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hill of Tara\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Meath\n*Type:* castle\n*Period:* Neolithic-Medieval\n*Coords:* 53.5775, -6.61194444\n*Wikipedia:* https://en.wikipedia.org/wiki/Hill_of_Tara\n*Maps:* https://www.google.com/maps/search/Hill%20of%20Tara/@53.578,-6.612,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Stone_of_Destiny_2018-07-24.jpg/330px-Stone_of_Destiny_2018-07-24.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/cnNHNkiTm6FqKf8h9\n\n\n*Description:*\nThe Hill of Tara is a hill and ancient ceremonial and burial site near Skryne in County Meath, Ireland. Tradition identifies the hill as the inauguration place and seat of the High Kings of Ireland; it also appears in Irish mythology. Tara consists of numerous monuments and earthworks—dating from the Neolithic to the Iron Age—including a passage tomb, burial mounds, round enclosures, a standing stone, and a ceremonial avenue. There is also a church and graveyard on the hill. Tara forms part of a larger ancient landscape and Tara itself is a protected national monument under the care of the Office of Public Works, an agency of the Irish Government.\n\n_Listing 8 of 50_",
+      "listing": {
+        "name": "Hill of Tara",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Meath",
+        "lat": 53.5775,
+        "lng": -6.61194444,
+        "mapsLink": "https://www.google.com/maps/search/Hill%20of%20Tara/@53.578,-6.612,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Stone_of_Destiny_2018-07-24.jpg/330px-Stone_of_Destiny_2018-07-24.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "The Hill of Tara is a hill and ancient ceremonial and burial site near Skryne in County Meath, Ireland. Tradition identifies the hill as the inauguration place and seat of the High Kings of Ireland; it also appears in Irish mythology. Tara consists of numerous monuments and earthworks—dating from the Neolithic to the Iron Age—including a passage tomb, burial mounds, round enclosures, a standing stone, and a ceremonial avenue. There is also a church and graveyard on the hill. Tara forms part of a larger ancient landscape and Tara itself is a protected national monument under the care of the Office of Public Works, an agency of the Irish Government.",
+        "type": "castle",
+        "period": "Neolithic-Medieval",
+        "rating": 4.4,
+        "tags": [
+          "prehistoric",
+          "hilltop",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/hill-of-tara/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hill_of_Tara"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hill_of_Tara",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Stone_of_Destiny_2018-07-24.jpg/330px-Stone_of_Destiny_2018-07-24.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "August Schwerdfeger",
+          "license": "CC BY 4.0",
+          "description": "The Stone of Destiny (Lia Fáil) at the Hill of Tara, once used as a coronation stone for the High Kings of Ireland.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/cnNHNkiTm6FqKf8h9\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/cnNHNkiTm6FqKf8h9\n"
+      },
+      "ts": 1779044700706
     }
   ]
 }
