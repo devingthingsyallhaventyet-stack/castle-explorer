@@ -990,6 +990,49 @@
         "enrichNotes": ""
       },
       "ts": 1779051417397
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ruthin Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Denbighshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.1117, -3.3118\n*Wikipedia:* https://en.wikipedia.org/wiki/Ruthin_Castle\n*Maps:* https://www.google.com/maps/search/Ruthin%20Castle/@53.1147,-3.3124,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG/330px-Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.ruthincastle.co.uk/\n\n*Description:*\nRuthin Castle is a medieval castle fortification in Wales, near the town of Ruthin in the Vale of Clwyd. It was constructed during the late 13th century by Dafydd ap Gruffydd, the brother of Prince Llywelyn ap Gruffudd, on a red sandstone ridge overlooking the valley. Part of the ancient walls still remain and now form part of the Ruthin Castle Hotel.\n\n_Listing 20 of 53_",
+      "listing": {
+        "name": "Ruthin Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Denbighshire",
+        "lat": 53.1117,
+        "lng": -3.3118,
+        "mapsLink": "https://www.google.com/maps/search/Ruthin%20Castle/@53.1147,-3.3124,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG/330px-Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Ruthin Castle is a medieval castle fortification in Wales, near the town of Ruthin in the Vale of Clwyd. It was constructed during the late 13th century by Dafydd ap Gruffydd, the brother of Prince Llywelyn ap Gruffudd, on a red sandstone ridge overlooking the valley. Part of the ancient walls still remain and now form part of the Ruthin Castle Hotel.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "haunted"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Ruthin_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG/330px-Castell_Rhuthun_-_adfeilion_y_goresgynwyr_%28wel_o_lia_fe_drion_nhw%29_27.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Llywelyn2000",
+          "license": "CC BY-SA 3.0",
+          "description": "Castell Rhuthun (Ruthin Castle), Sir Ddinbych. \nRuthin Castle, Ruthin, Denbighshire, Wales.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.ruthincastle.co.uk/",
+        "enrichNotes": "add source - https://www.ruthincastle.co.uk/"
+      },
+      "ts": 1779051454153
     }
   ]
 }
