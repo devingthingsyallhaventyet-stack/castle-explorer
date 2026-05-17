@@ -237,6 +237,57 @@
         "enrichNotes": "https://abbeyofdonegal.ie/ add source"
       },
       "ts": 1779050924372
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ardboe High Cross\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Tyrone\n*Type:* abbey\n*Period:* 10th century\n*Coords:* 54.61953, -6.50519\n*Wikipedia:* https://en.wikipedia.org/wiki/Ardboe_High_Cross\n*Maps:* https://www.google.com/maps/search/Ardboe%20High%20Cross/@54.602,-6.721,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOP48HCnF1yr8iQ9pl_V6DDxBdGi1kNHVB1HPRJBcsmI0iXEUe-Jm0sZNPuW_rQ3GpugTfTTfKFiugUdwEqj8wV5WV6ry8uGVjoyPpACZKtIOVy-qnAYxzxEtKX0X5Q3U1ua-Ik6GD1E943-A=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nArdboe High Cross is a high cross and national monument dating from the tenth century located in Ardboe, County Tyrone, Northern Ireland.\n\n_Listing 6 of 53_",
+      "listing": {
+        "name": "Ardboe High Cross",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Tyrone",
+        "lat": 54.61953,
+        "lng": -6.50519,
+        "mapsLink": "https://www.google.com/maps/search/Ardboe%20High%20Cross/@54.602,-6.721,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOP48HCnF1yr8iQ9pl_V6DDxBdGi1kNHVB1HPRJBcsmI0iXEUe-Jm0sZNPuW_rQ3GpugTfTTfKFiugUdwEqj8wV5WV6ry8uGVjoyPpACZKtIOVy-qnAYxzxEtKX0X5Q3U1ua-Ik6GD1E943-A=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Ardboe High Cross is a high cross and national monument dating from the tenth century located in Ardboe, County Tyrone, Northern Ireland.",
+        "type": "abbey",
+        "period": "10th century",
+        "rating": 4.1,
+        "tags": [
+          "celtic",
+          "well-preserved",
+          "photogenic",
+          "riverside",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ardboe_High_Cross"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ardboe_High_Cross",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ardboe_Cross.jpg/330px-Ardboe_Cross.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardboe_High_Cross",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050946507
     }
   ]
 }
