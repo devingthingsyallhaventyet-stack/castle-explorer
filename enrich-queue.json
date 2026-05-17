@@ -56,6 +56,64 @@
         "enrichNotes": ""
       },
       "ts": 1779041644772
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lanhydrock House\n*Country:* england\n*Region:* south west\n*County:* Cornwall\n*Type:* castle\n*Period:* 17th-19th century\n*Coords:* 50.4217, -4.7433\n*Wikipedia:* https://en.wikipedia.org/wiki/Lanhydrock_House\n*Maps:* https://www.google.com/maps/search/Lanhydrock%20House/@50.4217,-4.7433,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZN_nrRRb8Btb4_lPEFg89mNe4ENterNaxp2QTNMtPShMHTArkho0yPyGA6pn1GIZoXvssokwvNTK1IPgp1R2q0XkG1WSnqx2LHiREZwOl0EHGFt8w2wlE0X7FPffcZczIYs8hca5VPo2e0OIsk=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/DUHvftUEAXFh8PwF9\n\n*Description:*\nLanhydrock House, commonly known simply as Lanhydrock, is a country house and estate in the parish of Lanhydrock, Cornwall, England.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Lanhydrock House",
+        "country": "england",
+        "region": "south-west",
+        "county": "Cornwall",
+        "lat": 50.4217,
+        "lng": -4.7433,
+        "mapsLink": "https://www.google.com/maps/search/Lanhydrock%20House/@50.4217,-4.7433,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN_nrRRb8Btb4_lPEFg89mNe4ENterNaxp2QTNMtPShMHTArkho0yPyGA6pn1GIZoXvssokwvNTK1IPgp1R2q0XkG1WSnqx2LHiREZwOl0EHGFt8w2wlE0X7FPffcZczIYs8hca5VPo2e0OIsk=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lanhydrock House, commonly known simply as Lanhydrock, is a country house and estate in the parish of Lanhydrock, Cornwall, England.",
+        "type": "castle",
+        "period": "17th-19th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "victorian",
+          "gardens",
+          "woodland",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lanhydrock"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/cornwall/lanhydrock"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lanhydrock_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lanhydrock_04.jpg/330px-Lanhydrock_04.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Olaf Tausch",
+          "license": "CC BY 3.0",
+          "description": "Lanhydrock, Herrenhaus nahe Bodmin in Cornwall, England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/DUHvftUEAXFh8PwF9",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/DUHvftUEAXFh8PwF9"
+      },
+      "ts": 1779041678691
     }
   ]
 }
