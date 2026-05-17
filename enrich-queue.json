@@ -44,6 +44,56 @@
         "enrichNotes": ""
       },
       "ts": 1779050337782
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Penmon Priory\n*Country:* wales\n*Region:* snowdonia north\n*County:* Anglesey\n*Type:* abbey\n*Period:* 6th-13th century\n*Coords:* 53.305833, -4.056667\n*Wikipedia:* https://en.wikipedia.org/wiki/Penmon_Priory\n*Maps:* https://www.google.com/maps/search/Penmon%20Priory/@53.3167,-4.05,15z\n*Main Image:* https://img.castlecore.uk/penmon-priory.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/UStq5RQbtmmgoTgP6\n\n\n*Description:*\nPenmon is a promontory, village and ecclesiastical parish on the eastern tip of the Isle of Anglesey in Wales, about 3 miles (4.8 km) east of the town of Beaumaris. It is in the community of Llangoed. The name comes from Welsh: pen and Môn, which is the Welsh name for Anglesey. It is the site of a historic monastery and associated 12th-century church. Walls near the well next to the church may be part of the oldest remaining Christian building in Wales. Penmon also has an award-winning beach and the Anglesey Coastal Path follows its shores. Quarries in Penmon have provided stone for many important buildings and structures, including Birmingham Town Hall and the two bridges that cross the Menai Strait. The area is popular with locals and visitors alike for its monuments, tranquillity, bracing air and fine views of Snowdonia to the south across the Menai Strait.\n\n_Listing 2 of 61_",
+      "listing": {
+        "name": "Penmon Priory",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Anglesey",
+        "lat": 53.305833,
+        "lng": -4.056667,
+        "mapsLink": "https://www.google.com/maps/search/Penmon%20Priory/@53.3167,-4.05,15z",
+        "image": "https://img.castlecore.uk/penmon-priory.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Penmon is a promontory, village and ecclesiastical parish on the eastern tip of the Isle of Anglesey in Wales, about 3 miles (4.8 km) east of the town of Beaumaris. It is in the community of Llangoed. The name comes from Welsh: pen and Môn, which is the Welsh name for Anglesey. It is the site of a historic monastery and associated 12th-century church. Walls near the well next to the church may be part of the oldest remaining Christian building in Wales. Penmon also has an award-winning beach and the Anglesey Coastal Path follows its shores. Quarries in Penmon have provided stone for many important buildings and structures, including Birmingham Town Hall and the two bridges that cross the Menai Strait. The area is popular with locals and visitors alike for its monuments, tranquillity, bracing air and fine views of Snowdonia to the south across the Menai Strait.",
+        "type": "abbey",
+        "period": "6th-13th century",
+        "rating": 4.1,
+        "tags": [
+          "atmospheric",
+          "coastal",
+          "celtic",
+          "medieval",
+          "free-entry",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/penmon-priory"
+          },
+          {
+            "name": "Wikipedia – Penmon Priory",
+            "url": "https://en.wikipedia.org/wiki/Penmon_Priory"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Penmon",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Penmon_Priory",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/UStq5RQbtmmgoTgP6\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/UStq5RQbtmmgoTgP6\n"
+      },
+      "ts": 1779050395175
     }
   ]
 }
