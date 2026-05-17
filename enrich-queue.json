@@ -58,6 +58,62 @@
         "enrichNotes": ""
       },
       "ts": 1779042962515
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hever Castle\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* castle\n*Period:* 13th century\n*Coords:* 51.18722222, 0.11416667\n*Wikipedia:* https://en.wikipedia.org/wiki/Hever_Castle\n*Maps:* https://www.google.com/maps/search/Hever%20Castle/@51.1843,0.1158,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZO0VJgI3uoDqCUhY9G4pjv0bcQ4wfpQWDgnniOz0ZxzzqoS25nZWizxD_YZVQr1jMxpZiuY2bwdy7N4WxQ5nXSz8RXLJ9jbVbhSq1jvZMGDB5bB-2RoQDmiXLIE_PAGST0k8zBm4BnMOSDTOg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.hevercastle.co.uk/\n\n*Description:*\nHever Castle is located in the village of Hever, Kent, near Edenbridge, 30 miles (48 km) south-east of London, England. It began as a country house, built in the 13th century. From 1462 to 1539, it was the seat of the Boleyn family.\n\n_Listing 2 of 80_",
+      "listing": {
+        "name": "Hever Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.18722222,
+        "lng": 0.11416667,
+        "mapsLink": "https://www.google.com/maps/search/Hever%20Castle/@51.1843,0.1158,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZO0VJgI3uoDqCUhY9G4pjv0bcQ4wfpQWDgnniOz0ZxzzqoS25nZWizxD_YZVQr1jMxpZiuY2bwdy7N4WxQ5nXSz8RXLJ9jbVbhSq1jvZMGDB5bB-2RoQDmiXLIE_PAGST0k8zBm4BnMOSDTOg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Hever Castle is located in the village of Hever, Kent, near Edenbridge, 30 miles (48 km) south-east of London, England. It began as a country house, built in the 13th century. From 1462 to 1539, it was the seat of the Boleyn family.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "photogenic"
+        ],
+        "source": "https://www.hevercastle.co.uk/",
+        "wiki": "https://en.wikipedia.org/wiki/Hever_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hever_Castle_2014_06_20_1.jpg/330px-Hever_Castle_2014_06_20_1.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Christoph Matthias Siebenborn",
+          "license": "CC BY 3.0",
+          "description": "Hever Castle, Kent, England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "sources": [
+          {
+            "label": "Hever Castle Official Website",
+            "url": "https://www.hevercastle.co.uk/"
+          }
+        ],
+        "verifiedSources": [
+          {
+            "label": "Hever Castle Official Website",
+            "url": "https://www.hevercastle.co.uk/"
+          }
+        ],
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.hevercastle.co.uk/",
+        "enrichNotes": "add source - https://www.hevercastle.co.uk/"
+      },
+      "ts": 1779042995070
     }
   ]
 }
