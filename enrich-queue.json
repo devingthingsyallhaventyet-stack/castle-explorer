@@ -113,6 +113,44 @@
         "enrichNotes": "add source - https://www.cabracastle.com/ , tag as hotel "
       },
       "ts": 1779049449451
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Portumna Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* castle\n*Period:* 17th century\n*Coords:* 53.0892, -8.2189\n*Wikipedia:* https://en.wikipedia.org/wiki/Portumna_Castle\n*Maps:* https://www.google.com/maps/search/Portumna%20Castle/@53.0892,-8.2194,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMgn5_0dqDS45kFm1L4JaxWH8ucw-rt2paTEpSey68Ekf7xPN_hKD0NWIlVFWx-7NR00tYFBF6YK-Q34xb6b2Tov6Z5TMGpRmqk09jdH5qTHOriplC7sYiQKlG-PpxHIbu9NN_m_yhI5mKKRkvr6roN=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nPortumna Castle is a semi-fortified house in Portumna, County Galway, Ireland which was built in the early 17th century by Richard Burke, 4th Earl of Clanricarde.\n\n_Listing 3 of 79_",
+      "listing": {
+        "name": "Portumna Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.0892,
+        "lng": -8.2189,
+        "mapsLink": "https://www.google.com/maps/search/Portumna%20Castle/@53.0892,-8.2194,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMgn5_0dqDS45kFm1L4JaxWH8ucw-rt2paTEpSey68Ekf7xPN_hKD0NWIlVFWx-7NR00tYFBF6YK-Q34xb6b2Tov6Z5TMGpRmqk09jdH5qTHOriplC7sYiQKlG-PpxHIbu9NN_m_yhI5mKKRkvr6roN=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Portumna Castle is a semi-fortified house in Portumna, County Galway, Ireland which was built in the early 17th century by Richard Burke, 4th Earl of Clanricarde.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.2,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Portumna_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Portumna_castle.jpg/330px-Portumna_castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Portumna_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049468493
     }
   ]
 }
