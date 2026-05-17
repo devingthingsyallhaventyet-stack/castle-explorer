@@ -104,6 +104,48 @@
         "enrichNotes": "add source - https://www.northeastmuseums.org.uk/segedunum"
       },
       "ts": 1779046913220
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lewes Castle\n*Country:* england\n*Region:* south east london\n*County:* East Sussex\n*Type:* castle\n*Period:* 11th century\n*Coords:* 50.8729, 0.0076\n*Wikipedia:* https://en.wikipedia.org/wiki/Lewes_Castle\n*Maps:* https://www.google.com/maps/search/Lewes%20Castle/@50.8743,0.0072,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZM8tYSbLhVMUujcftjUUEye2CrGUARX8-QJXsxffkRyk8BTZhQHye1ZQz9OiWdTydGsSXqcPVLMtGbyR85sI9w_LUD7pbTVIwRXHI9DBndtb_L2jdJUTvmiISo3T3CPaY8NEEcr1oQsztCoUx4=s4800-w1080\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nLewes Castle is a medieval castle in the town of Lewes in East Sussex, England. Originally called Bray Castle, it occupies a commanding position guarding the gap in the South Downs cut by the River Ouse and occupied by the towns of Lewes and Cliffe. It stands on a man-made mount just to the north of the high street in Lewes, and is constructed from local limestone and flint blocks.\n\n_Listing 3 of 111_",
+      "listing": {
+        "name": "Lewes Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "East Sussex",
+        "lat": 50.8729,
+        "lng": 0.0076,
+        "mapsLink": "https://www.google.com/maps/search/Lewes%20Castle/@50.8743,0.0072,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZM8tYSbLhVMUujcftjUUEye2CrGUARX8-QJXsxffkRyk8BTZhQHye1ZQz9OiWdTydGsSXqcPVLMtGbyR85sI9w_LUD7pbTVIwRXHI9DBndtb_L2jdJUTvmiISo3T3CPaY8NEEcr1oQsztCoUx4=s4800-w1080",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lewes Castle is a medieval castle in the town of Lewes in East Sussex, England. Originally called Bray Castle, it occupies a commanding position guarding the gap in the South Downs cut by the River Ouse and occupied by the towns of Lewes and Cliffe. It stands on a man-made mount just to the north of the high street in Lewes, and is constructed from local limestone and flint blocks.",
+        "type": "castle",
+        "period": "11th century",
+        "rating": 4.2,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Lewes_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Lewes_Castle_towers.JPG/330px-Lewes_Castle_towers.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Antiquary",
+          "license": "CC BY-SA 4.0",
+          "description": "Two towers of Lewes Castle, West Sussex, photographed from the west.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046935845
     }
   ]
 }
