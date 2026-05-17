@@ -148,6 +148,51 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/84opEhcfCWrC1tML9\n"
       },
       "ts": 1779050482499
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Coity Castle\n*Country:* wales\n*Region:* south wales\n*County:* Bridgend\n*Type:* castle\n*Period:* 12th century\n*Coords:* 51.521944, -3.553056\n*Wikipedia:* https://en.wikipedia.org/wiki/Coity_Castle\n*Maps:* https://www.google.com/maps/search/Coity%20Castle/@51.5259,-3.5491,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coity_Castle.jpg/330px-Coity_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCoity Castle in Glamorgan, Wales, is a Norman castle built by Sir Payn \"the Demon\" de Turberville, one of the legendary Twelve Knights of Glamorgan supposed to have conquered Glamorgan under the leadership of Robert FitzHamon, Lord of Gloucester. Now in ruins, it stands in the community of Coity Higher near the town of Bridgend, in the County Borough of Bridgend. Very close to the castle is the battlemented parish Church of St Mary the Virgin, which dates from the 14th century.\n\n_Listing 4 of 61_",
+      "listing": {
+        "name": "Coity Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Bridgend",
+        "lat": 51.521944,
+        "lng": -3.553056,
+        "mapsLink": "https://www.google.com/maps/search/Coity%20Castle/@51.5259,-3.5491,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coity_Castle.jpg/330px-Coity_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Coity Castle in Glamorgan, Wales, is a Norman castle built by Sir Payn \"the Demon\" de Turberville, one of the legendary Twelve Knights of Glamorgan supposed to have conquered Glamorgan under the leadership of Robert FitzHamon, Lord of Gloucester. Now in ruins, it stands in the community of Coity Higher near the town of Bridgend, in the County Borough of Bridgend. Very close to the castle is the battlemented parish Church of St Mary the Virgin, which dates from the 14th century.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.1,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Coity_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coity_Castle.jpg/330px-Coity_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "kenneth rees",
+          "license": "CC BY-SA 2.0",
+          "description": "Coity Castle is a Norman castle in the community of Coity Higher near the town of Bridgend, in the County Borough of Bridgend in South Wales.",
+          "credit": "From geograph.co.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Coity_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050563982
     }
   ]
 }
