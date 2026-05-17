@@ -380,6 +380,68 @@
         "enrichNotes": ""
       },
       "ts": 1779045851698
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Brockhampton Estate\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 14th century\n*Coords:* 52.2013, -2.4586\n*Wikipedia:* https://en.wikipedia.org/wiki/Brockhampton_Estate\n*Maps:* https://www.google.com/maps/search/Brockhampton%20Estate/@52.2017,-2.5633,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg/330px-Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nThe Brockhampton Estate is a National Trust property in Herefordshire, England. It is located to the north of the A44 Bromyard to Worcester road, opposite the northern edge of Bringsty Common and east of the town of Bromyard.\n\n_Listing 8 of 28_",
+      "listing": {
+        "name": "Brockhampton Estate",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 52.2013,
+        "lng": -2.4586,
+        "mapsLink": "https://www.google.com/maps/search/Brockhampton%20Estate/@52.2017,-2.5633,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg/330px-Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "The Brockhampton Estate is a National Trust property in Herefordshire, England. It is located to the north of the A44 Bromyard to Worcester road, opposite the northern edge of Bringsty Common and east of the town of Bromyard.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4.3,
+        "tags": [
+          "atmospheric",
+          "medieval",
+          "woodland",
+          "photogenic",
+          "ruins-romantic",
+          "tearoom-cafe",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/brockhampton"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Brockhampton_Estate"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=338"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Brockhampton_Estate",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg/330px-Brockhampton_Estate_-_gatehouse_and_manor_house_2.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "DeFacto",
+          "license": "CC BY-SA 4.0",
+          "description": "The 15th-century gatehouse and manor house at Brockhampton Estate. These are grade I listed buildings in Herefordshire, England.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Brockhampton_Estate",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045866020
     }
   ]
 }
