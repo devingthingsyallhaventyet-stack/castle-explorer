@@ -889,6 +889,57 @@
         "enrichNotes": ""
       },
       "ts": 1779051360886
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Newburgh Priory\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* abbey\n*Period:* 12th century / 16th-17th century conversion\n*Coords:* 54.18111111, -1.17305556\n*Wikipedia:* https://en.wikipedia.org/wiki/Newburgh_Priory\n*Maps:* https://www.google.com/maps/search/Newburgh%20Priory/@54.1683,-1.1833,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqFIBKqiEObfQjZiNipAykth07uplGJzzHzwXzxVHafDTSkpWuTMb5k4xwca2BFziIFB5RnPjz_3iKQVf9_JfRcW46pOcZMM_Us=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.newburghpriory.co.uk/\n\n*Description:*\nNewburgh Priory is a Grade I listed Tudor building near Coxwold, North Yorkshire, England.\n\n_Listing 18 of 53_",
+      "listing": {
+        "name": "Newburgh Priory",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.18111111,
+        "lng": -1.17305556,
+        "mapsLink": "https://www.google.com/maps/search/Newburgh%20Priory/@54.1683,-1.1833,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqFIBKqiEObfQjZiNipAykth07uplGJzzHzwXzxVHafDTSkpWuTMb5k4xwca2BFziIFB5RnPjz_3iKQVf9_JfRcW46pOcZMM_Us=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Newburgh Priory is a Grade I listed Tudor building near Coxwold, North Yorkshire, England.",
+        "type": "abbey",
+        "period": "12th century / 16th-17th century conversion",
+        "rating": 4,
+        "tags": [
+          "medieval",
+          "gardens",
+          "atmospheric",
+          "haunted",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Newburgh_Priory"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Newburgh_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Newburgh_Priory.jpg/330px-Newburgh_Priory.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Stuart and Fiona Jackson",
+          "license": "CC BY-SA 2.0",
+          "description": "Newburgh Priory A stately home originally an Augustinian Priory from 1145. Later, the country seat for the Belassis family in the 16th and 17th century. A legend exists that claims Oliver Cromwell's head is entombed in a secret chamber within the walls. Belonged formerly to the Earls of Fauconberg and presently the home of the Wombwell family.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.newburghpriory.co.uk/",
+        "enrichNotes": "add source - https://www.newburghpriory.co.uk/"
+      },
+      "ts": 1779051385049
     }
   ]
 }
