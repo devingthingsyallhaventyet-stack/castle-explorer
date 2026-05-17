@@ -20206,7 +20206,7 @@
       "tearoom-cafe",
       "gift-shop"
     ],
-    "source": "",
+    "source": "https://www.kelburnestate.com/",
     "wiki": "https://en.wikipedia.org/wiki/Kelburn_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Kelburn_Castle_-_geograph.org.uk_-_8124339.jpg/330px-Kelburn_Castle_-_geograph.org.uk_-_8124339.jpg",
     "reviewStatus": "approved",
@@ -20627,7 +20627,7 @@
       "well-preserved",
       "kid-friendly"
     ],
-    "source": "",
+    "source": "https://www.museums.norfolk.gov.uk/norwich-castle",
     "wiki": "https://en.wikipedia.org/wiki/Norwich_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Norwich_Castle_keep%2C_2009.jpg/330px-Norwich_Castle_keep%2C_2009.jpg",
     "reviewStatus": "approved",
@@ -20991,7 +20991,7 @@
       "kid-friendly",
       "hidden-gem"
     ],
-    "source": "https://colchester.cimuseums.org.uk/visit/colchester-castle/",
+    "source": "https://www.colchester.cimuseums.org.uk/visit/colchester-castle/",
     "wiki": "https://en.wikipedia.org/wiki/Colchester_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Colchester-castle.jpg/330px-Colchester-castle.jpg",
     "reviewStatus": "approved",
@@ -21046,7 +21046,7 @@
       "well-preserved",
       "hidden-gem"
     ],
-    "source": "https://www.hedinghamcastle.co.uk/visit",
+    "source": "https://www.hedinghamcastle.co.uk/",
     "wiki": "https://en.wikipedia.org/wiki/Hedingham_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/The_Keep%2C_Hedingham_Castle%2C_Essex_-_geograph.org.uk_-_3079561.jpg/330px-The_Keep%2C_Hedingham_Castle%2C_Essex_-_geograph.org.uk_-_3079561.jpg",
     "reviewStatus": "approved",
@@ -27198,20 +27198,7 @@
       "guided-tours",
       "events-venue"
     ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Naworth_Castle"
-      },
-      {
-        "name": "Britain Express",
-        "url": "https://www.britainexpress.com/attractions.htm?attraction=298"
-      },
-      {
-        "name": "Naworth Estate",
-        "url": "https://www.naworth.co.uk/"
-      }
-    ],
+    "source": "https://www.naworth.co.uk/",
     "wiki": "https://en.wikipedia.org/wiki/Naworth_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Naworth_Castle_air_1.jpg/330px-Naworth_Castle_air_1.jpg",
     "reviewStatus": "approved",
@@ -29655,7 +29642,7 @@
       "photogenic",
       "free"
     ],
-    "source": "",
+    "source": "https://www.durhamcathedral.co.uk/",
     "wiki": "https://en.wikipedia.org/wiki/Durham_Cathedral",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Durham_MMB_02_Cathedral.jpg/330px-Durham_MMB_02_Cathedral.jpg",
     "reviewStatus": "approved",
@@ -30310,20 +30297,7 @@
       "gift-shop",
       "guided-tours"
     ],
-    "source": [
-      {
-        "name": "Samlesbury Hall",
-        "url": "https://samlesburyhall.co.uk/ghosts-hauntings/"
-      },
-      {
-        "name": "Visit Preston",
-        "url": "https://www.visitpreston.com/article/3057/Haunted-Preston-Samlesbury-Hall-s-Spooky-History"
-      },
-      {
-        "name": "Haunted Rooms",
-        "url": "https://www.hauntedrooms.co.uk/samlesbury-hall-preston-lancashire"
-      }
-    ],
+    "source": "https://www.samlesburyhall.co.uk/",
     "wiki": "https://en.wikipedia.org/wiki/Samlesbury_Hall",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Samlesbury_-_geograph.org.uk_-_1758296.jpg/330px-Samlesbury_-_geograph.org.uk_-_1758296.jpg",
     "reviewStatus": "approved",
@@ -30466,20 +30440,7 @@
       "free-entry",
       "guided-tours"
     ],
-    "source": [
-      {
-        "name": "Chetham's Library",
-        "url": "https://library.chethams.com/"
-      },
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Chetham%27s_Library"
-      },
-      {
-        "name": "History of Information",
-        "url": "https://www.historyofinformation.com/detail.php?id=36"
-      }
-    ],
+    "source": "https://www.chethams.org.uk/",
     "wiki": "https://en.wikipedia.org/wiki/Chetham's_Library",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Chetham%27s_Library%2C_Manchester.jpg/330px-Chetham%27s_Library%2C_Manchester.jpg",
     "reviewStatus": "approved",
@@ -41637,7 +41598,7 @@
       "dramatic-ruin",
       "hidden-gem"
     ],
-    "source": "",
+    "source": "https://www.shrewsburymuseum.org.uk/",
     "wiki": "https://en.wikipedia.org/wiki/Shrewsbury_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Shrewsbury_Schloss.JPG/330px-Shrewsbury_Schloss.JPG",
     "reviewStatus": "approved",
@@ -49080,7 +49041,7 @@
       "free",
       "photogenic"
     ],
-    "source": "",
+    "source": "https://museumsandgalleries.leeds.gov.uk/kirkstall-abbey/",
     "wiki": "https://en.wikipedia.org/wiki/Kirkstall_Abbey",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kirkstall_Abbey_in_the_late_afternoon.jpg/330px-Kirkstall_Abbey_in_the_late_afternoon.jpg",
     "reviewStatus": "approved",
@@ -51870,16 +51831,7 @@
       "medieval",
       "atmospheric"
     ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/York_city_walls"
-      },
-      {
-        "name": "City of York Council",
-        "url": "https://www.york.gov.uk/CityWalls"
-      }
-    ],
+    "source": "https://www.yorkwalls.org.uk/",
     "wiki": "https://en.wikipedia.org/wiki/York_city_walls",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/York_city.jpg/330px-York_city.jpg",
     "reviewStatus": "approved",
@@ -52149,16 +52101,7 @@
       "kid-friendly",
       "gift-shop"
     ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Temple_Newsam"
-      },
-      {
-        "name": "Leeds Museums",
-        "url": "https://museumsandgalleries.leeds.gov.uk/temple-newsam-jg6y"
-      }
-    ],
+    "source": "https://museumsandgalleries.leeds.gov.uk/temple-newsam/",
     "wiki": "https://en.wikipedia.org/wiki/Temple_Newsam",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Temple_Newsam_House_-_Front_view_-_geograph.org.uk_-_961464.jpg/330px-Temple_Newsam_House_-_Front_view_-_geograph.org.uk_-_961464.jpg",
     "reviewStatus": "approved",
