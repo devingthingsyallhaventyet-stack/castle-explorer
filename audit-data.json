@@ -60615,7 +60615,19 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Whitland Abbey – Ancient Cistercian abbey near Whitland, West Wales",
+        "url": "https://whitlandabbey.wales/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Whitland Abbey – Ancient Cistercian abbey near Whitland, West Wales",
+        "url": "https://whitlandabbey.wales/"
+      }
+    ]
   },
   {
     "name": "St David's Cathedral",
@@ -61133,7 +61145,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dublin Castle | The nerve centre of historical power in Ireland",
+        "url": "https://dublincastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dublin Castle | The nerve centre of historical power in Ireland",
+        "url": "https://dublincastle.ie/"
+      }
+    ]
   },
   {
     "name": "Maynooth Castle",
@@ -61253,7 +61277,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castletown | Ireland's first and finest Palladian mansion",
+        "url": "https://castletown.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castletown | Ireland's first and finest Palladian mansion",
+        "url": "https://castletown.ie/"
+      }
+    ]
   },
   {
     "name": "Malahide Castle",
@@ -61429,7 +61465,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Swords Castle – Fingal County Council",
+        "url": "https://swordscastle.events/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Swords Castle – Fingal County Council",
+        "url": "https://swordscastle.events/"
+      }
+    ]
   },
   {
     "name": "Monasterboice",
@@ -63053,7 +63101,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilkenny_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilkenny_Castle",
+    "sources": [
+      {
+        "label": "Kilkenny Castle | The jewel in the crown of an enchanting medieval city",
+        "url": "https://www.kilkennycastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Kilkenny Castle | The jewel in the crown of an enchanting medieval city",
+        "url": "https://www.kilkennycastle.ie/"
+      }
+    ]
   },
   {
     "name": "Trim Castle",
@@ -63242,7 +63302,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lismore Castle: Exclusive Use Castle to Rent in Ireland",
+        "url": "https://thehallandlismorecastle.com/lismore-castle/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lismore Castle: Exclusive Use Castle to Rent in Ireland",
+        "url": "https://thehallandlismorecastle.com/lismore-castle/"
+      }
+    ]
   },
   {
     "name": "Reginald's Tower",
@@ -63345,7 +63417,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dunbrody Abbey Visitor Centre",
+        "url": "https://www.dunbrodyabbey.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunbrody Abbey Visitor Centre",
+        "url": "https://www.dunbrodyabbey.com/"
+      }
+    ]
   },
   {
     "name": "Ferns Castle",
@@ -63575,7 +63659,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunsany_Castle_and_Demesne",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dunsany Castle",
+        "url": "https://www.dunsany.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunsany Castle",
+        "url": "https://www.dunsany.com/"
+      }
+    ]
   },
   {
     "name": "Slane Castle",
@@ -63638,7 +63734,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Explore Slane Castle estate in the heart of the Boyne Valley, Ireland",
+        "url": "https://www.slanecastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Explore Slane Castle estate in the heart of the Boyne Valley, Ireland",
+        "url": "https://www.slanecastle.ie/"
+      }
+    ]
   },
   {
     "name": "Dunmoe Castle",
@@ -64215,7 +64323,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Enniscorthy Castle: Historic Norman Stronghold in Wexford",
+        "url": "https://enniscorthycastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Enniscorthy Castle: Historic Norman Stronghold in Wexford",
+        "url": "https://enniscorthycastle.ie/"
+      }
+    ]
   },
   {
     "name": "Rathmacknee Castle",
@@ -64714,7 +64834,19 @@
       "credit": "Transferred from en.wikipedia to Commons by RHaworth using CommonsHelper.",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Shankill Castle",
+        "url": "https://shankillcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Shankill Castle",
+        "url": "https://shankillcastle.com/"
+      }
+    ]
   },
   {
     "name": "Johnstown Castle",
@@ -64789,7 +64921,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Johnstown Castle Wexford - Estate, Museum & Gardens",
+        "url": "https://johnstowncastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Johnstown Castle Wexford - Estate, Museum & Gardens",
+        "url": "https://johnstowncastle.ie/"
+      }
+    ]
   },
   {
     "name": "Bargy Castle",
@@ -65698,7 +65842,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Hook Lighthouse | Guided Tours, Medieval Tales & Stunning Views",
+        "url": "https://hookheritage.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Hook Lighthouse | Guided Tours, Medieval Tales & Stunning Views",
+        "url": "https://hookheritage.ie/"
+      }
+    ]
   },
   {
     "name": "Hill of Slane",
@@ -66527,7 +66683,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Canice%27s_Cathedral",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "St Canice's Cathedral & Round Tower – Kilkenny Landmark",
+        "url": "https://www.stcanicescathedral.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "St Canice's Cathedral & Round Tower – Kilkenny Landmark",
+        "url": "https://www.stcanicescathedral.ie/"
+      }
+    ]
   },
   {
     "name": "Dungarvan Castle",
@@ -66727,7 +66895,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Duncannon_Fort",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Duncannon Fort",
+        "url": "https://duncannonfort.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Duncannon Fort",
+        "url": "https://duncannonfort.ie/"
+      }
+    ]
   },
   {
     "name": "Leighlinbridge Castle",
@@ -68082,7 +68262,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "The Story of Ballycarbery Castle",
+        "url": "https://www.ballycarbery.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "The Story of Ballycarbery Castle",
+        "url": "https://www.ballycarbery.com/"
+      }
+    ]
   },
   {
     "name": "Barryscourt Castle",
@@ -68986,7 +69178,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gallarus_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Gallarus Castle & Oratory | Dingle Peninsula, Kerry",
+        "url": "https://gallarusoratory.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Gallarus Castle & Oratory | Dingle Peninsula, Kerry",
+        "url": "https://gallarusoratory.ie/"
+      }
+    ]
   },
   {
     "name": "Rahinnane Castle",
@@ -69357,7 +69561,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Carriganass_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Carriganass Castle — Take a Walk Through History",
+        "url": "https://carriganasscastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Carriganass Castle — Take a Walk Through History",
+        "url": "https://carriganasscastle.com/"
+      }
+    ]
   },
   {
     "name": "Monkstown Castle",
@@ -69639,7 +69855,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Glin_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Glin Castle | Irish Castle Vacations | Castle Hire Ireland",
+        "url": "https://www.glin-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Glin Castle | Irish Castle Vacations | Castle Hire Ireland",
+        "url": "https://www.glin-castle.com/"
+      }
+    ]
   },
   {
     "name": "Castle Oliver",
@@ -70807,7 +71035,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cloyne_Round_Tower",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Cloyne Cathedral & Ancient Round Tower",
+        "url": "https://cloynecathedral.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Cloyne Cathedral & Ancient Round Tower",
+        "url": "https://cloynecathedral.ie/"
+      }
+    ]
   },
   {
     "name": "Kilcolman Castle",
@@ -71024,7 +71264,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Muckross_House",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Muckross House, Killarney National Park, County Kerry",
+        "url": "https://muckross-house.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Muckross House, Killarney National Park, County Kerry",
+        "url": "https://muckross-house.ie/"
+      }
+    ]
   },
   {
     "name": "Derrynane House",
@@ -71570,7 +71822,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bantry_House",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Bantry House and Garden",
+        "url": "https://bantryhouse.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Bantry House and Garden",
+        "url": "https://bantryhouse.com/"
+      }
+    ]
   },
   {
     "name": "Ballinskelligs Priory",
@@ -72646,7 +72910,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lea_Castle_(Laois)",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Homepage - Lea Castle",
+        "url": "http://www.leacastle.ie/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Homepage - Lea Castle",
+        "url": "http://www.leacastle.ie/"
+      }
+    ]
   },
   {
     "name": "Dunamase Castle",
