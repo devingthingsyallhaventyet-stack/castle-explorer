@@ -484,6 +484,59 @@
         "enrichNotes": "https://maps.app.goo.gl/5JzgFiiTTUUkd76j6 - update google places link\nadd source - https://ardgillancastle.ie/"
       },
       "ts": 1779048911597
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Clontarf Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Dublin\n*Type:* castle\n*Period:* 19th century\n*Coords:* 53.365, -6.203\n*Wikipedia:* https://en.wikipedia.org/wiki/Clontarf_Castle\n*Maps:* https://www.google.com/maps/search/Clontarf%20Castle/@53.365,-6.203,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/330px-ClontarfCastleHotel.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.clontarfcastle.ie/\ntag as hotel \n\n*Description:*\nClontarf Castle is a much-modernised castle, dating to 1837, in Clontarf, Dublin, Ireland, an area famous as a key location of the Battle of Clontarf in 1014. There has been a castle on the site since 1172. In modern times, it has functioned as a bar, cabaret venue, and hotel.\n\n_Listing 10 of 94_",
+      "listing": {
+        "name": "Clontarf Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Dublin",
+        "lat": 53.365,
+        "lng": -6.203,
+        "mapsLink": "https://www.google.com/maps/search/Clontarf%20Castle/@53.365,-6.203,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/330px-ClontarfCastleHotel.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Clontarf Castle is a much-modernised castle, dating to 1837, in Clontarf, Dublin, Ireland, an area famous as a key location of the Battle of Clontarf in 1014. There has been a castle on the site since 1172. In modern times, it has functioned as a bar, cabaret venue, and hotel.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "victorian",
+          "events-venue",
+          "wedding-venue"
+        ],
+        "source": [
+          {
+            "name": "Clontarf Castle Hotel",
+            "url": "https://www.clontarfcastle.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Clontarf_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clontarf_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ClontarfCastleHotel.jpg/330px-ClontarfCastleHotel.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Cailín Sásta at English Wikipedia",
+          "license": "CC BY 3.0",
+          "description": "Clontarf Castle Hotel",
+          "credit": "Self-photographed Original text: I created this work entirely by myself.",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.clontarfcastle.ie/\ntag as hotel ",
+        "enrichNotes": "add source - https://www.clontarfcastle.ie/\ntag as hotel "
+      },
+      "ts": 1779048955166
     }
   ]
 }
