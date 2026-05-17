@@ -420,6 +420,61 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1779038851684
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bewcastle Cross\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* 7th-8th century\n*Coords:* 55.06361111, -2.68194444\n*Wikipedia:* https://en.wikipedia.org/wiki/Bewcastle_Cross\n*Maps:* https://www.google.com/maps/search/Bewcastle%20Cross/@55.072,-2.687,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg/330px-The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google maps link - https://maps.app.goo.gl/zKet1naUBnnvKqgcA\n\n*Description:*\nThe Bewcastle Cross is an Northumbrian cross which is still in its original position within the churchyard of St Cuthbert's church at Bewcastle, in the English county of Cumbria. The cross, which probably dates from the 7th or early 8th century, features reliefs and inscriptions in the runic alphabet. The head of the cross is missing but the remains are 14.5 feet high, and almost square in section 22 by 21+1⁄4 inches at the base. The crosses of Bewcastle and Ruthwell have been described by the scholar Nikolaus Pevsner as \"the greatest achievement of their date in the whole of Europe\".\n\n_Listing 10 of 10_",
+      "listing": {
+        "name": "Bewcastle Cross",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 55.06361111,
+        "lng": -2.68194444,
+        "mapsLink": "https://www.google.com/maps/search/Bewcastle%20Cross/@55.072,-2.687,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg/330px-The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "The Bewcastle Cross is an Northumbrian cross which is still in its original position within the churchyard of St Cuthbert's church at Bewcastle, in the English county of Cumbria. The cross, which probably dates from the 7th or early 8th century, features reliefs and inscriptions in the runic alphabet. The head of the cross is missing but the remains are 14.5 feet high, and almost square in section 22 by 21+1⁄4 inches at the base. The crosses of Bewcastle and Ruthwell have been described by the scholar Nikolaus Pevsner as \"the greatest achievement of their date in the whole of Europe\".",
+        "type": "castle",
+        "period": "7th-8th century",
+        "rating": 3.8,
+        "tags": [
+          "celtic",
+          "prehistoric",
+          "atmospheric",
+          "remote",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Cumbria County History",
+            "url": "https://www.cumbriacountyhistory.org.uk/anglo-saxon-cross-background-bewcastle"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=3487"
+          },
+          {
+            "name": "Bewcastle",
+            "url": "https://www.bewcastle.com/bewcastle-cross/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bewcastle_Cross",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg/330px-The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bewcastle_Cross",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google maps link - https://maps.app.goo.gl/zKet1naUBnnvKqgcA",
+        "enrichNotes": "update google maps link - https://maps.app.goo.gl/zKet1naUBnnvKqgcA"
+      },
+      "ts": 1779038953612
     }
   ]
 }
