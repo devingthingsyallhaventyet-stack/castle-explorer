@@ -203,6 +203,62 @@
         "enrichNotes": ""
       },
       "ts": 1779039736825
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bodnant Garden\n*Country:* wales\n*Region:* snowdonia north\n*County:* Conwy\n*Type:* historic-house\n*Period:* 19th century\n*Coords:* 53.2342, -3.8006\n*Wikipedia:* https://en.wikipedia.org/wiki/Bodnant_Garden\n*Maps:* https://www.google.com/maps/search/Bodnant%20Garden/@53.225,-3.8,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPXyu6bIyn1kslXf_Yjsvr5G2fiLMPVm_fza4SAIOxgwSa8a5Oq4W9r2IOpWpxWDO6OSGGo5seVBQlTnX5y4QlLH28ZspSOAiN5ZaxHZoFtOlXk2mBmiI_7yUH4lqByi8ONhKd8Zqii0p2X=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBodnant Garden is a National Trust property near Tal-y-Cafn, Conwy, Wales, overlooking the Conwy valley towards the Carneddau mountains.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Bodnant Garden",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Conwy",
+        "lat": 53.2342,
+        "lng": -3.8006,
+        "mapsLink": "https://www.google.com/maps/search/Bodnant%20Garden/@53.225,-3.8,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPXyu6bIyn1kslXf_Yjsvr5G2fiLMPVm_fza4SAIOxgwSa8a5Oq4W9r2IOpWpxWDO6OSGGo5seVBQlTnX5y4QlLH28ZspSOAiN5ZaxHZoFtOlXk2mBmiI_7yUH4lqByi8ONhKd8Zqii0p2X=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Bodnant Garden is a National Trust property near Tal-y-Cafn, Conwy, Wales, overlooking the Conwy valley towards the Carneddau mountains.",
+        "type": "historic-house",
+        "period": "19th century",
+        "rating": 4.7,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "romantic",
+          "woodland",
+          "riverside",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bodnant_Garden"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/wales/bodnant-garden"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bodnant_Garden",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bodnant_House_-_viewed_from_the_west.jpg/330px-Bodnant_House_-_viewed_from_the_west.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "DeFacto",
+          "license": "CC BY-SA 4.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779039750511
     }
   ]
 }
