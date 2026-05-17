@@ -259,6 +259,64 @@
         "enrichNotes": ""
       },
       "ts": 1779039750511
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* St David's Cathedral\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 51.88194444, -5.26833333\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Davids_Cathedral\n*Maps:* https://www.google.com/maps/search/St%20David's%20Cathedral/@51.8819,-5.2694,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/St_Davids_Cathedral_Sept2018.jpg/330px-St_Davids_Cathedral_Sept2018.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSt Davids Cathedral is a Church in Wales cathedral situated in St Davids, Britain's smallest city, in the county of Pembrokeshire, near the most westerly point of Wales.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "St David's Cathedral",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 51.88194444,
+        "lng": -5.26833333,
+        "mapsLink": "https://www.google.com/maps/search/St%20David's%20Cathedral/@51.8819,-5.2694,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/St_Davids_Cathedral_Sept2018.jpg/330px-St_Davids_Cathedral_Sept2018.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "St Davids Cathedral is a Church in Wales cathedral situated in St Davids, Britain's smallest city, in the county of Pembrokeshire, near the most westerly point of Wales.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.7,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "atmospheric",
+          "medieval",
+          "celtic",
+          "coastal",
+          "guided-tours",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/St_Davids_Cathedral"
+          },
+          {
+            "name": "St David's Cathedral Official",
+            "url": "https://www.stdavidscathedral.org.uk/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Davids_Cathedral",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/St_Davids_Cathedral_Sept2018.jpg/330px-St_Davids_Cathedral_Sept2018.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Niki.L",
+          "license": "CC BY-SA 4.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Davids_Cathedral",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779039761450
     }
   ]
 }
