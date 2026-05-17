@@ -372,6 +372,49 @@
         "enrichNotes": ""
       },
       "ts": 1779044147173
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dunster Castle\n*Country:* england\n*Region:* south west\n*County:* Somerset\n*Type:* castle\n*Period:* 11th century\n*Coords:* 51.1809, -3.4449\n*Wikipedia:* https://en.wikipedia.org/wiki/Dunster_Castle\n*Maps:* https://www.google.com/maps/search/Dunster%20Castle/@51.1844,-3.4399,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOZcHmDWxk20SExkl94wHdLXINGF4d4695KqxJv3RzGCMilBuiwv1pNbrmPaVBzoTbhQ_FV6CxQ0Pe7U7DsTS6LZpj6rKSmS5DdaktJmjgB-N-6y9yrdr6tTxkWzR6eqi7_iCB4Zr9dahCC=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nDunster Castle is a former motte and bailey castle, now a country house, in the village of Dunster, Somerset, England. The castle lies on the top of a steep hill called the Tor, and has been fortified since the late Anglo-Saxon period. After the Norman Conquest of England in the 11th century, William de Mohun constructed a timber castle on the site as part of the pacification of Somerset. A stone shell keep was built on the motte by the start of the 12th century, and the castle survived a siege during the early years of the Anarchy. At the end of the 14th century the de Mohuns sold the castle to the Luttrell family, who continued to occupy the property until the late 20th century.\n\n_Listing 27 of 80_",
+      "listing": {
+        "name": "Dunster Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Somerset",
+        "lat": 51.1809,
+        "lng": -3.4449,
+        "mapsLink": "https://www.google.com/maps/search/Dunster%20Castle/@51.1844,-3.4399,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOZcHmDWxk20SExkl94wHdLXINGF4d4695KqxJv3RzGCMilBuiwv1pNbrmPaVBzoTbhQ_FV6CxQ0Pe7U7DsTS6LZpj6rKSmS5DdaktJmjgB-N-6y9yrdr6tTxkWzR6eqi7_iCB4Zr9dahCC=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Dunster Castle is a former motte and bailey castle, now a country house, in the village of Dunster, Somerset, England. The castle lies on the top of a steep hill called the Tor, and has been fortified since the late Anglo-Saxon period. After the Norman Conquest of England in the 11th century, William de Mohun constructed a timber castle on the site as part of the pacification of Somerset. A stone shell keep was built on the motte by the start of the 12th century, and the castle survived a siege during the early years of the Anarchy. At the end of the 14th century the de Mohuns sold the castle to the Luttrell family, who continued to occupy the property until the late 20th century.",
+        "type": "castle",
+        "period": "11th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Dunster_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dunster_Castle.jpg/330px-Dunster_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mike Crowe",
+          "license": "CC BY-SA 2.0",
+          "description": "Photograph",
+          "credit": "https://www.geograph.org.uk/photo/12612",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044334213
     }
   ]
 }
