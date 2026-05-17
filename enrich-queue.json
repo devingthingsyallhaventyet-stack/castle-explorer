@@ -288,6 +288,54 @@
         "enrichNotes": ""
       },
       "ts": 1779050946507
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Springhill House\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Derry\n*Type:* castle\n*Period:* 17th century\n*Coords:* 54.686, -6.656\n*Wikipedia:* https://en.wikipedia.org/wiki/Springhill_House\n*Maps:* https://www.google.com/maps/search/Springhill%20House/@54.747,-6.718,15z\n*Main Image:* https://img.castlecore.uk/springhill-house.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nSpringhill is a 17th-century plantation house in the townland of Ballindrum near Moneymore, County Londonderry in Northern Ireland. It has been the property of the National Trust since 1957 and, in addition to the house, gardens and park, there is a costume collection.\nIt is open from March to June, and September on weekends, and is open to the public seven days a week during July and August.\n\n_Listing 7 of 53_",
+      "listing": {
+        "name": "Springhill House",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Derry",
+        "lat": 54.686,
+        "lng": -6.656,
+        "mapsLink": "https://www.google.com/maps/search/Springhill%20House/@54.747,-6.718,15z",
+        "image": "https://img.castlecore.uk/springhill-house.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Springhill is a 17th-century plantation house in the townland of Ballindrum near Moneymore, County Londonderry in Northern Ireland. It has been the property of the National Trust since 1957 and, in addition to the house, gardens and park, there is a costume collection.\nIt is open from March to June, and September on weekends, and is open to the public seven days a week during July and August.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.1,
+        "tags": [
+          "well-preserved",
+          "guided-tours",
+          "gardens",
+          "haunted"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/springhill"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Springhill_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Springhill_House%2C_Moneymore.jpg/330px-Springhill_House%2C_Moneymore.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Springhill_House",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050975834
     }
   ]
 }
