@@ -3105,6 +3105,61 @@
         "enrichNotes": "add source - https://www.nationaltrust.org.uk/visit/norfolk/felbrigg-hall-gardens-and-estate"
       },
       "ts": 1779034056065
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Blickling Hall\n*Country:* england\n*Region:* east of england\n*County:* Norfolk\n*Type:* castle\n*Period:* 17th century\n*Coords:* 52.8118, 1.2318\n*Wikipedia:* https://en.wikipedia.org/wiki/Blickling_Hall\n*Maps:* https://www.google.com/maps/search/Blickling%20Hall/@52.815,1.2233,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Blickling_Hall_-_south-west_facade.jpg/330px-Blickling_Hall_-_south-west_facade.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* - add source https://www.nationaltrust.org.uk/visit/norfolk/blickling-estate\n\n*Description:*\nBlickling Hall is a Jacobean stately home situated in 5,000 acres (2,000 ha) of parkland in a loop of the River Bure, near the village of Blickling north of Aylsham in Norfolk, England. The mansion was built on the ruins of a Tudor building for Sir Henry Hobart from 1616 and designed by Robert Lyminge. The library at Blickling Hall contains one of the most historically significant collections of manuscripts and books in England, containing an estimated 13,000 to 14,000 volumes. The core collection was formed by Sir Richard Ellys. The property passed into the care of the National Trust in 1940.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Blickling Hall",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Norfolk",
+        "lat": 52.8118,
+        "lng": 1.2318,
+        "mapsLink": "https://www.google.com/maps/search/Blickling%20Hall/@52.815,1.2233,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Blickling_Hall_-_south-west_facade.jpg/330px-Blickling_Hall_-_south-west_facade.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Blickling Hall is a Jacobean stately home situated in 5,000 acres (2,000 ha) of parkland in a loop of the River Bure, near the village of Blickling north of Aylsham in Norfolk, England. The mansion was built on the ruins of a Tudor building for Sir Henry Hobart from 1616 and designed by Robert Lyminge. The library at Blickling Hall contains one of the most historically significant collections of manuscripts and books in England, containing an estimated 13,000 to 14,000 volumes. The core collection was formed by Sir Richard Ellys. The property passed into the care of the National Trust in 1940.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "atmospheric",
+          "haunted",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop",
+          "woodland"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Blickling_Hall"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/norfolk/blickling-estate"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Blickling_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Blickling_Hall_-_south-west_facade.jpg/330px-Blickling_Hall_-_south-west_facade.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Blickling_Hall",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "- add source https://www.nationaltrust.org.uk/visit/norfolk/blickling-estate",
+        "enrichNotes": "- add source https://www.nationaltrust.org.uk/visit/norfolk/blickling-estate"
+      },
+      "ts": 1779034093534
     }
   ]
 }
