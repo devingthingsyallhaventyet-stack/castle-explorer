@@ -417,6 +417,59 @@
         "enrichNotes": ""
       },
       "ts": 1779061300078
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Jigginstown Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Kildare\n*Type:* castle\n*Period:* 17th century\n*Coords:* 53.2139, -6.6822\n*Wikipedia:* https://en.wikipedia.org/wiki/Jigginstown_Castle\n*Maps:* https://www.google.com/maps/search/Jigginstown%20Castle/@53.16,-6.781,15z\n*Main Image:* https://img.castlecore.uk/jigginstown-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nJigginstown Castle is a ruined 17th-century house and National Monument near Naas, County Kildare, Ireland. It was constructed in the late 1630s when Ireland was under the reign of Charles I (1625–1649). At the time it was one of the largest buildings in Ireland, and the first to be constructed of red brick said to have been imported from Holland: the plans provided for pavement and columns of Kilkenny marble.\n\n_Listing 9 of 252_",
+      "listing": {
+        "name": "Jigginstown Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Kildare",
+        "lat": 53.2139,
+        "lng": -6.6822,
+        "mapsLink": "https://www.google.com/maps/search/Jigginstown%20Castle/@53.16,-6.781,15z",
+        "image": "https://img.castlecore.uk/jigginstown-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/jigginstown-castle-2.jpg",
+          "https://img.castlecore.uk/jigginstown-castle-3.jpg",
+          "https://img.castlecore.uk/jigginstown-castle-4.jpg",
+          "https://img.castlecore.uk/jigginstown-castle-5.jpg"
+        ],
+        "desc": "Jigginstown Castle is a ruined 17th-century house and National Monument near Naas, County Kildare, Ireland. It was constructed in the late 1630s when Ireland was under the reign of Charles I (1625–1649). At the time it was one of the largest buildings in Ireland, and the first to be constructed of red brick said to have been imported from Holland: the plans provided for pavement and columns of Kilkenny marble.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Jigginstown_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Jigginstown_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Jigginstown_House%2C_Naas%2C_Co._Kildare.jpg/330px-Jigginstown_House%2C_Naas%2C_Co._Kildare.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Jigginstown_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779061318768
     }
   ]
 }
