@@ -99,6 +99,51 @@
         "enrichNotes": "https://www.polesworthabbey.org.uk/ add source "
       },
       "ts": 1779061080409
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ewloe Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Flintshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.2, -3.067\n*Wikipedia:* https://en.wikipedia.org/wiki/Ewloe_Castle\n*Maps:* https://www.google.com/maps/search/Ewloe%20Castle/@53.1817,-3.0742,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ewloe_Castle_-_geograph.org.uk_-_878422.jpg/330px-Ewloe_Castle_-_geograph.org.uk_-_878422.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nEwloe Castle is a native Welsh castle built by the Kingdom of Gwynedd near the village of Ewloe in Flintshire, Wales. The castle, which was one of the last fortifications to be built by the native Princes of Wales, was abandoned at the beginning of the invasion of Wales by Edward I in 1277. Using locally quarried sandstone, its construction appears to have continued piecemeal over many years and may have not been completed. On taking the castle, the English Crown gave it little military value and allowed it to fall into ruin.\n\n_Listing 3 of 252_",
+      "listing": {
+        "name": "Ewloe Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Flintshire",
+        "lat": 53.2,
+        "lng": -3.067,
+        "mapsLink": "https://www.google.com/maps/search/Ewloe%20Castle/@53.1817,-3.0742,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ewloe_Castle_-_geograph.org.uk_-_878422.jpg/330px-Ewloe_Castle_-_geograph.org.uk_-_878422.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Ewloe Castle is a native Welsh castle built by the Kingdom of Gwynedd near the village of Ewloe in Flintshire, Wales. The castle, which was one of the last fortifications to be built by the native Princes of Wales, was abandoned at the beginning of the invasion of Wales by Edward I in 1277. Using locally quarried sandstone, its construction appears to have continued piecemeal over many years and may have not been completed. On taking the castle, the English Crown gave it little military value and allowed it to fall into ruin.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.8,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Ewloe_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ewloe_Castle_-_geograph.org.uk_-_878422.jpg/330px-Ewloe_Castle_-_geograph.org.uk_-_878422.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Brian Jorgensen",
+          "license": "CC BY-SA 2.0",
+          "description": "Ewloe Castle",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ewloe_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779061096822
     }
   ]
 }
