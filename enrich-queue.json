@@ -1078,6 +1078,45 @@
         "enrichNotes": ""
       },
       "ts": 1779046329103
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Athlone Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Westmeath\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.42333333, -7.9425\n*Wikipedia:* https://en.wikipedia.org/wiki/Athlone_Castle\n*Maps:* https://www.google.com/maps/search/Athlone%20Castle/@53.4233,-7.9444,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Castelo_de_Athlone_Irlanda.jpg/330px-Castelo_de_Athlone_Irlanda.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* change google places link - https://maps.app.goo.gl/GVenXELfonBcGXij8\nadd source - https://www.athlonecastle.ie/\n\n*Description:*\nAthlone Castle, sometimes known as Adamson Castle, is a castle located in Athlone, County Westmeath, Ireland, dating from the 12th century.\n\n_Listing 24 of 28_",
+      "listing": {
+        "name": "Athlone Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Westmeath",
+        "lat": 53.42333333,
+        "lng": -7.9425,
+        "mapsLink": "https://www.google.com/maps/search/Athlone%20Castle/@53.4233,-7.9444,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Castelo_de_Athlone_Irlanda.jpg/330px-Castelo_de_Athlone_Irlanda.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Athlone Castle, sometimes known as Adamson Castle, is a castle located in Athlone, County Westmeath, Ireland, dating from the 12th century.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Athlone_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Castelo_de_Athlone_Irlanda.jpg/330px-Castelo_de_Athlone_Irlanda.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Athlone_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "change google places link - https://maps.app.goo.gl/GVenXELfonBcGXij8\nadd source - https://www.athlonecastle.ie/",
+        "enrichNotes": "change google places link - https://maps.app.goo.gl/GVenXELfonBcGXij8\nadd source - https://www.athlonecastle.ie/"
+      },
+      "ts": 1779046399712
     }
   ]
 }
