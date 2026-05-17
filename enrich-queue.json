@@ -125,6 +125,63 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/Uq6o9nhbRWztg7Mb8"
       },
       "ts": 1779035101901
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Auckland Castle\n*Country:* england\n*Region:* northern england\n*County:* County Durham\n*Type:* palace\n*Period:* 12th century\n*Coords:* 54.6664, -1.6702\n*Wikipedia:* https://en.wikipedia.org/wiki/Auckland_Castle\n*Maps:* https://www.google.com/maps/search/Auckland%20Castle/@54.6672,-1.6758,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Auckland_Castle_-_geograph.org.uk_-_1896444.jpg/330px-Auckland_Castle_-_geograph.org.uk_-_1896444.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Change name to Auckland Palace\nUpdate google places link to https://maps.app.goo.gl/rV3dndqCd6MzxePE6\n\n*Description:*\nAuckland Castle, also known as Auckland Palace, is a former bishop's palace located in the town of Bishop Auckland in County Durham, England. The castle was a residence of the bishops of Durham from approximately 1183 and was their primary residence between 1832 and 2012, when the castle and its contents were sold to the Auckland Castle Trust. It is now a tourist attraction, but still houses the bishop's offices.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Auckland Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "County Durham",
+        "lat": 54.6664,
+        "lng": -1.6702,
+        "mapsLink": "https://www.google.com/maps/search/Auckland%20Castle/@54.6672,-1.6758,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Auckland_Castle_-_geograph.org.uk_-_1896444.jpg/330px-Auckland_Castle_-_geograph.org.uk_-_1896444.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Auckland Castle, also known as Auckland Palace, is a former bishop's palace located in the town of Bishop Auckland in County Durham, England. The castle was a residence of the bishops of Durham from approximately 1183 and was their primary residence between 1832 and 2012, when the castle and its contents were sold to the Auckland Castle Trust. It is now a tourist attraction, but still houses the bishop's offices.",
+        "type": "palace",
+        "period": "12th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "gardens",
+          "museum",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "The Auckland Project",
+            "url": "https://aucklandproject.org/attraction/auckland-palace/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Auckland_Castle"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/durham/castles/auckland.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Auckland_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Auckland_Castle_-_geograph.org.uk_-_1896444.jpg/330px-Auckland_Castle_-_geograph.org.uk_-_1896444.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Auckland_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "Change name to Auckland Palace\nUpdate google places link to https://maps.app.goo.gl/rV3dndqCd6MzxePE6",
+        "enrichNotes": "Change name to Auckland Palace\nUpdate google places link to https://maps.app.goo.gl/rV3dndqCd6MzxePE6"
+      },
+      "ts": 1779035158687
     }
   ]
 }
