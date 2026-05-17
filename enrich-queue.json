@@ -845,6 +845,50 @@
         "enrichNotes": "add source - https://malahidecastleandgardens.ie/"
       },
       "ts": 1779043717101
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Charles Fort\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Cork\n*Type:* castle\n*Period:* 17th century\n*Coords:* 51.6973, -8.4968\n*Wikipedia:* https://en.wikipedia.org/wiki/Charles_Fort_(Ireland)\n*Maps:* https://www.google.com/maps/search/Charles%20Fort/@51.6973,-8.4968,15z\n*Main Image:* https://img.castlecore.uk/charles-fort-2.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places - https://maps.app.goo.gl/jmE4MNAKfwmjenxz7\n\n\n*Description:*\nCharles Hoy Fort was an American writer and researcher who specialized in anomalous phenomena. The terms \"Fortean\" and \"Forteana\" are sometimes used to characterize various such phenomena. Fort's books sold well and are still in print. His work continues to inspire admirers, who refer to themselves as \"Forteans\", and has influenced some aspects of science fiction.\n\n_Listing 18 of 80_",
+      "listing": {
+        "name": "Charles Fort",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Cork",
+        "lat": 51.6973,
+        "lng": -8.4968,
+        "mapsLink": "https://www.google.com/maps/search/Charles%20Fort/@51.6973,-8.4968,15z",
+        "image": "https://img.castlecore.uk/charles-fort-2.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/charles-fort-2.jpg",
+          "https://img.castlecore.uk/charles-fort-3.jpg",
+          "https://img.castlecore.uk/charles-fort-4.jpg",
+          "https://img.castlecore.uk/charles-fort-5.jpg"
+        ],
+        "desc": "Charles Hoy Fort was an American writer and researcher who specialized in anomalous phenomena. The terms \"Fortean\" and \"Forteana\" are sometimes used to characterize various such phenomena. Fort's books sold well and are still in print. His work continues to inspire admirers, who refer to themselves as \"Forteans\", and has influenced some aspects of science fiction.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.5,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Charles_Fort",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Fort_charles_1920.jpg/330px-Fort_charles_1920.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Charles_Fort_(Ireland)",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places - https://maps.app.goo.gl/jmE4MNAKfwmjenxz7\n",
+        "enrichNotes": "update google places - https://maps.app.goo.gl/jmE4MNAKfwmjenxz7\n"
+      },
+      "ts": 1779043748399
     }
   ]
 }
