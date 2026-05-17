@@ -670,6 +670,62 @@
         "enrichNotes": "add source - https://dysertcastle.ie/"
       },
       "ts": 1779053064355
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lissadell House\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Sligo\n*Type:* country house\n*Period:* 19th century\n*Coords:* 54.35, -8.58333333\n*Wikipedia:* https://en.wikipedia.org/wiki/Lissadell_House\n*Maps:* https://www.google.com/maps/search/Lissadell%20House/@54.338,-8.59,15z\n*Main Image:* https://img.castlecore.uk/lissadell-house.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/iyTC1k5CjuhP8Lcy9\nadd source - https://lissadellhouse.com/\n\n*Description:*\nLissadell House is a neo-classical Greek revivalist style country house in County Sligo, Ireland.\n\n_Listing 15 of 19_",
+      "listing": {
+        "name": "Lissadell House",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Sligo",
+        "lat": 54.35,
+        "lng": -8.58333333,
+        "mapsLink": "https://www.google.com/maps/search/Lissadell%20House/@54.338,-8.59,15z",
+        "image": "https://img.castlecore.uk/lissadell-house.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/lissadell-house-2.jpg",
+          "https://img.castlecore.uk/lissadell-house-3.jpg",
+          "https://img.castlecore.uk/lissadell-house-4.jpg",
+          "https://img.castlecore.uk/lissadell-house-5.jpg"
+        ],
+        "desc": "Lissadell House is a neo-classical Greek revivalist style country house in County Sligo, Ireland.",
+        "type": "country house",
+        "period": "19th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "victorian",
+          "gardens",
+          "coastal",
+          "guided-tours",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Lissadell House",
+            "url": "https://www.lissadellhouse.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lissadell_House"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lissadell_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Lissadell_House_Copyright_Nigel_Aspdin.jpg/330px-Lissadell_House_Copyright_Nigel_Aspdin.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Lissadell_House",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/iyTC1k5CjuhP8Lcy9\nadd source - https://lissadellhouse.com/",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/iyTC1k5CjuhP8Lcy9\nadd source - https://lissadellhouse.com/"
+      },
+      "ts": 1779053127053
     }
   ]
 }
