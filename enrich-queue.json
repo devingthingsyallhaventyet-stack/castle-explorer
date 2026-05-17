@@ -1,3 +1,64 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Barrington Court\n*Country:* england\n*Region:* south west\n*County:* Somerset\n*Type:* castle\n*Period:* 16th century\n*Coords:* 50.96111111, -2.85861111\n*Wikipedia:* https://en.wikipedia.org/wiki/Barrington_Court\n*Maps:* https://www.google.com/maps/search/Barrington%20Court/@50.9417,-2.8417,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNSGstGIqKGyqpcZOt0w_GrtEzry4wk_kmbNd83eMmYz8Tp6vEleqG5_528YgVqFlEEsWyDTS4Lo6Md7vD983ILU5RQqxPFnuOfMPs6jNjYNAH36x7FuHQFfccMn-PmTPcdhjGUDLLUc7WBctY=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* change google places link - https://maps.app.goo.gl/UpRwEgHiziz8AScn7\n\n\n*Description:*\nBarrington Court is a Tudor manor house begun around 1538 and completed in the late 1550s, with a vernacular stable court (1675), situated in Barrington, near Ilminster, Somerset, England.\n\n_Listing 22 of 50_",
+      "listing": {
+        "name": "Barrington Court",
+        "country": "england",
+        "region": "south-west",
+        "county": "Somerset",
+        "lat": 50.96111111,
+        "lng": -2.85861111,
+        "mapsLink": "https://www.google.com/maps/search/Barrington%20Court/@50.9417,-2.8417,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNSGstGIqKGyqpcZOt0w_GrtEzry4wk_kmbNd83eMmYz8Tp6vEleqG5_528YgVqFlEEsWyDTS4Lo6Md7vD983ILU5RQqxPFnuOfMPs6jNjYNAH36x7FuHQFfccMn-PmTPcdhjGUDLLUc7WBctY=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Barrington Court is a Tudor manor house begun around 1538 and completed in the late 1550s, with a vernacular stable court (1675), situated in Barrington, near Ilminster, Somerset, England.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "tearoom-cafe",
+          "gift-shop",
+          "tudor"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/somerset/barrington-court"
+          },
+          {
+            "name": "National Trust History",
+            "url": "https://www.nationaltrust.org.uk/visit/somerset/barrington-court/history-of-barrington-court"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/somerset/gardens/Barrington-Court.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Barrington_Court",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Barrington_Court%2C_South_facade.jpg/330px-Barrington_Court%2C_South_facade.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Martinvl",
+          "license": "CC BY-SA 4.0",
+          "description": "South facade of Barrington Court, a Grade I listed Tudor style stately home in Somerset. Building commissioned in 1514 by Henry Daubeney, completed by 1558 for William Clifton, now owned by the National Trust.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "change google places link - https://maps.app.goo.gl/UpRwEgHiziz8AScn7\n",
+        "enrichNotes": "change google places link - https://maps.app.goo.gl/UpRwEgHiziz8AScn7\n"
+      },
+      "ts": 1779045391044
+    }
+  ]
 }
