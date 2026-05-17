@@ -554,6 +554,58 @@
         "enrichNotes": ""
       },
       "ts": 1779045889541
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* St Mary's Abbey York\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 53.96138889, -1.08805556\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Mary's_Abbey%2C_York\n*Maps:* https://www.google.com/maps/search/St%20Mary's%20Abbey%20York/@53.9622,-1.0872,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMnII6jMX-ABz07Qs5DKkOdyxzxSZlKsB7PEXf6qil-zXp4JLR7mZnlFAgJ0RElkkPqWq-UzAgJHfvNif9IjT821qV3t8r0JNQZnCjipp1tU2iJn0Bn1ftI_-2rSI5Frd3mRl15fl0bBS19rgw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.yorkmuseumgardens.org.uk/about/st-marys-abbey/\n\n*Description:*\nThe Abbey of St Mary is a ruined Benedictine abbey in York, England and a scheduled monument.\n\n_Listing 11 of 28_",
+      "listing": {
+        "name": "St Mary's Abbey York",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 53.96138889,
+        "lng": -1.08805556,
+        "mapsLink": "https://www.google.com/maps/search/St%20Mary's%20Abbey%20York/@53.9622,-1.0872,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMnII6jMX-ABz07Qs5DKkOdyxzxSZlKsB7PEXf6qil-zXp4JLR7mZnlFAgJ0RElkkPqWq-UzAgJHfvNif9IjT821qV3t8r0JNQZnCjipp1tU2iJn0Bn1ftI_-2rSI5Frd3mRl15fl0bBS19rgw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Abbey of St Mary is a ruined Benedictine abbey in York, England and a scheduled monument.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 4.3,
+        "tags": [
+          "ruins-romantic",
+          "atmospheric",
+          "photogenic",
+          "medieval",
+          "gothic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/St_Mary%27s_Abbey,_York"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Mary's_Abbey%2C_York",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/St_Marys_Abbey_Church_York.jpg/330px-St_Marys_Abbey_Church_York.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Kaly99",
+          "license": "CC BY-SA 3.0",
+          "description": "St Mary's Abbey Church in Museum Gardens York, England.  This shows the ruins of part of the north and west walls that formed the nave and crossing, designed in Gothic style by architect Simon of Pabenham in the 13th century, between between 1270 and 1279.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.yorkmuseumgardens.org.uk/about/st-marys-abbey/",
+        "enrichNotes": "add source - https://www.yorkmuseumgardens.org.uk/about/st-marys-abbey/"
+      },
+      "ts": 1779045920614
     }
   ]
 }
