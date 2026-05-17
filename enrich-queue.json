@@ -109,6 +109,62 @@
         "enrichNotes": "change google places link - https://maps.app.goo.gl/jgFsoopMCjmu74GMA\nadd source - https://pictoncastle.co.uk/"
       },
       "ts": 1779048569971
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Aberglasney House\n*Country:* wales\n*Region:* west wales\n*County:* Carmarthenshire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 51.879511, -4.062723\n*Wikipedia:* https://en.wikipedia.org/wiki/Aberglasney_Gardens\n*Maps:* https://www.google.com/maps/search/Aberglasney%20House/@51.856,-4.028,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Aberglasney_House_-_geograph.org.uk_-_536730.jpg/330px-Aberglasney_House_-_geograph.org.uk_-_536730.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Change name to - Aberglasney\nUpdate wikipedia page - https://en.wikipedia.org/wiki/Aberglasney\nAdd source - https://aberglasney.org/\n\n*Description:*\nAberglasney House and Gardens is a medieval house and gardens set in the Tywi valley in the parish of Llangathen, Carmarthenshire, West Wales. It is owned and run by Aberglasney Restoration Trust, a registered charity. The house is a Grade II* listed building and the gardens are listed, also at Grade II*, on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.\n\n_Listing 3 of 94_",
+      "listing": {
+        "name": "Aberglasney House",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Carmarthenshire",
+        "lat": 51.879511,
+        "lng": -4.062723,
+        "mapsLink": "https://www.google.com/maps/search/Aberglasney%20House/@51.856,-4.028,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Aberglasney_House_-_geograph.org.uk_-_536730.jpg/330px-Aberglasney_House_-_geograph.org.uk_-_536730.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Aberglasney House and Gardens is a medieval house and gardens set in the Tywi valley in the parish of Llangathen, Carmarthenshire, West Wales. It is owned and run by Aberglasney Restoration Trust, a registered charity. The house is a Grade II* listed building and the gardens are listed, also at Grade II*, on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.2,
+        "tags": [
+          "romantic-ruin",
+          "gardens",
+          "photogenic",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Aberglasney_House"
+          },
+          {
+            "name": "Aberglasney Official",
+            "url": "https://aberglasney.org/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Aberglasney",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Aberglasney_House_-_geograph.org.uk_-_536730.jpg/330px-Aberglasney_House_-_geograph.org.uk_-_536730.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Trevor Rickard",
+          "license": "CC BY-SA 2.0",
+          "description": "Aberglasney House Viewed from the now restored Cloister Garden, the exterior of the house now looks in good shape. Inside, there is still a lot of restoration work going on.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Aberglasney_Gardens",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "Change name to - Aberglasney\nUpdate wikipedia page - https://en.wikipedia.org/wiki/Aberglasney\nAdd source - https://aberglasney.org/",
+        "enrichNotes": "Change name to - Aberglasney\nUpdate wikipedia page - https://en.wikipedia.org/wiki/Aberglasney\nAdd source - https://aberglasney.org/"
+      },
+      "ts": 1779048689488
     }
   ]
 }
