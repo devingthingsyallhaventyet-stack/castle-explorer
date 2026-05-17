@@ -37,6 +37,60 @@
         "enrichNotes": "add source - https://heritageireland.ie/places-to-visit/sceilg-mhichil/"
       },
       "ts": 1779039599875
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Newgrange Cursus\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Meath\n*Type:* fort\n*Period:* c. 3100 BC\n*Coords:* 53.695135, -6.473093\n*Wikipedia:* https://en.wikipedia.org/wiki/Newgrange_cursus\n*Maps:* https://www.google.com/maps/search/Newgrange%20Cursus/@53.694,-6.476,15z\n*Main Image:* https://img.castlecore.uk/newgrange-cursus.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/AaZtVSpKoMd9GgC99\n\n*Description:*\nThe Newgrange cursus is a Neolithic monument used as a ceremonial procession route within the Brú na Bóinne complex. The ancient trackway is 100m long and 20m wide. It is located at Newgrange, in County Meath, Ireland.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Newgrange Cursus",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Meath",
+        "lat": 53.695135,
+        "lng": -6.473093,
+        "mapsLink": "https://www.google.com/maps/search/Newgrange%20Cursus/@53.694,-6.476,15z",
+        "image": "https://img.castlecore.uk/newgrange-cursus.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/newgrange-cursus-2.jpg",
+          "https://img.castlecore.uk/newgrange-cursus-3.jpg",
+          "https://img.castlecore.uk/newgrange-cursus-4.jpg",
+          "https://img.castlecore.uk/newgrange-cursus-5.jpg"
+        ],
+        "desc": "The Newgrange cursus is a Neolithic monument used as a ceremonial procession route within the Brú na Bóinne complex. The ancient trackway is 100m long and 20m wide. It is located at Newgrange, in County Meath, Ireland.",
+        "type": "fort",
+        "period": "c. 3100 BC",
+        "rating": 4.8,
+        "tags": [
+          "atmospheric",
+          "photogenic",
+          "prehistoric",
+          "remote",
+          "guided-tours",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Newgrange"
+          },
+          {
+            "name": "UNESCO",
+            "url": "https://whc.unesco.org/en/list/659/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Newgrange_cursus",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Newgrange_mound_tomb.jpg/330px-Newgrange_mound_tomb.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/AaZtVSpKoMd9GgC99",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/AaZtVSpKoMd9GgC99"
+      },
+      "ts": 1779039648086
     }
   ]
 }
