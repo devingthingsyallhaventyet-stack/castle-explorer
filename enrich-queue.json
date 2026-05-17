@@ -306,6 +306,63 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/9YmXWq17wFWL3Eeh7\n"
       },
       "ts": 1779061246580
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Roch Castle\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 51.849112, -5.078897\n*Wikipedia:* https://en.wikipedia.org/wiki/Roch_Castle\n*Maps:* https://www.google.com/maps/search/Roch%20Castle/@51.833,-5.073,15z\n*Main Image:* https://img.castlecore.uk/roch-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://rochcastle.com/ , tag as hotel \n\n*Description:*\nRoch Castle is a 13th-century castle, located at Roch near Haverfordwest, Wales.\n\n_Listing 7 of 252_",
+      "listing": {
+        "name": "Roch Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 51.849112,
+        "lng": -5.078897,
+        "mapsLink": "https://www.google.com/maps/search/Roch%20Castle/@51.833,-5.073,15z",
+        "image": "https://img.castlecore.uk/roch-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/roch-castle-2.jpg",
+          "https://img.castlecore.uk/roch-castle-3.jpg",
+          "https://img.castlecore.uk/roch-castle-4.jpg",
+          "https://img.castlecore.uk/roch-castle-5.jpg"
+        ],
+        "desc": "Roch Castle is a 13th-century castle, located at Roch near Haverfordwest, Wales.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.8,
+        "tags": [
+          "norman",
+          "hilltop",
+          "photogenic",
+          "coastal"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia – Roch Castle",
+            "url": "https://en.wikipedia.org/wiki/Roch_Castle"
+          },
+          {
+            "name": "Pembrokeshire Coast National Park",
+            "url": "https://www.pembrokeshirecoast.wales/about-the-national-park/culture-and-heritage/land-of-legends/roch-castle/"
+          },
+          {
+            "name": "Roch Castle Hotel",
+            "url": "https://rochcastle.com/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Roch_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Roch_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://rochcastle.com/ , tag as hotel ",
+        "enrichNotes": "add source - https://rochcastle.com/ , tag as hotel "
+      },
+      "ts": 1779061282193
     }
   ]
 }
