@@ -2951,6 +2951,56 @@
         "enrichNotes": "add source - https://caistorromanproject.org/"
       },
       "ts": 1779033718389
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Buckden Palace\n*Country:* england\n*Region:* east of england\n*County:* Cambridgeshire\n*Type:* castle\n*Period:* 12th-15th century\n*Coords:* 52.29416667, -0.2525\n*Wikipedia:* https://en.wikipedia.org/wiki/Buckden_Towers\n*Maps:* https://www.google.com/maps/search/Buckden%20Palace/@52.2917,-0.2517,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Great_Tower_and_St_Hugh%27s_Church.jpg/330px-Great_Tower_and_St_Hugh%27s_Church.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.buckden-towers.org.uk/\n\n*Description:*\nBuckden Towers, formerly known as Buckden Palace, is a medieval fortified house and bishop's palace in Buckden, Cambridgeshire, England. It is now a conference and retreat centre operated by the Claretian missionaries.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Buckden Palace",
+        "country": "england",
+        "region": "east-of-england",
+        "county": "Cambridgeshire",
+        "lat": 52.29416667,
+        "lng": -0.2525,
+        "mapsLink": "https://www.google.com/maps/search/Buckden%20Palace/@52.2917,-0.2517,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Great_Tower_and_St_Hugh%27s_Church.jpg/330px-Great_Tower_and_St_Hugh%27s_Church.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Buckden Towers, formerly known as Buckden Palace, is a medieval fortified house and bishop's palace in Buckden, Cambridgeshire, England. It is now a conference and retreat centre operated by the Claretian missionaries.",
+        "type": "castle",
+        "period": "12th-15th century",
+        "rating": 3.9,
+        "tags": [
+          "medieval",
+          "tudor",
+          "atmospheric",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "Historic UK",
+            "url": "https://www.historic-uk.com/HistoryMagazine/DestinationsUK/Buckden-Palace/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Buckden,_Cambridgeshire"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Buckden_Towers",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Great_Tower_and_St_Hugh%27s_Church.jpg/330px-Great_Tower_and_St_Hugh%27s_Church.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Buckden_Towers",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.buckden-towers.org.uk/",
+        "enrichNotes": "add source - https://www.buckden-towers.org.uk/"
+      },
+      "ts": 1779033749895
     }
   ]
 }
