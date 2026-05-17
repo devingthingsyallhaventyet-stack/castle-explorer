@@ -252,6 +252,60 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1779061156838
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Haverfordwest Castle\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* castle\n*Period:* 12th-13th century\n*Coords:* 51.8017, -4.9683\n*Wikipedia:* https://en.wikipedia.org/wiki/Haverfordwest_Castle\n*Maps:* https://www.google.com/maps/search/Haverfordwest%20Castle/@51.8017,-4.9683,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg/330px-HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/9YmXWq17wFWL3Eeh7\n\n\n*Description:*\nHaverfordwest Castle is a castle located in the town centre at Haverfordwest, Pembrokeshire, south Wales, in a naturally defensive position at the end of a strong, isolated ridge. The castle was established during Norman times in 1120 but much of the architecture remaining today dates from 1290. For centuries the castle was an English stronghold.\nThere are several other notable castles in the area: Wiston Castle lies 6 miles (10 km) to the northeast and Pembroke Castle lies 12 miles (19 km) to the south.\n\n_Listing 6 of 252_",
+      "listing": {
+        "name": "Haverfordwest Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 51.8017,
+        "lng": -4.9683,
+        "mapsLink": "https://www.google.com/maps/search/Haverfordwest%20Castle/@51.8017,-4.9683,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg/330px-HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Haverfordwest Castle is a castle located in the town centre at Haverfordwest, Pembrokeshire, south Wales, in a naturally defensive position at the end of a strong, isolated ridge. The castle was established during Norman times in 1120 but much of the architecture remaining today dates from 1290. For centuries the castle was an English stronghold.\nThere are several other notable castles in the area: Wiston Castle lies 6 miles (10 km) to the northeast and Pembroke Castle lies 12 miles (19 km) to the south.",
+        "type": "castle",
+        "period": "12th-13th century",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "norman",
+          "hilltop",
+          "museum",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Haverfordwest_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Haverfordwest_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg/330px-HaverfordwestCastle_-_geograph.org.uk_-_25363.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Cered",
+          "license": "CC BY-SA 2.0",
+          "description": "HaverfordwestCastle. Haverfordwest Castle was originally a Norman stone keep and bailey fortress, founded by Gilbert de Clare. \nOf the large outer ward only two turrets survive, the inner ward has a high curtain wall, four towers and two fine ranges of buildings.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Haverfordwest_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/9YmXWq17wFWL3Eeh7\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/9YmXWq17wFWL3Eeh7\n"
+      },
+      "ts": 1779061246580
     }
   ]
 }
