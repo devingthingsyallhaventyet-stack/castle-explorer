@@ -49,6 +49,61 @@
         "enrichNotes": ""
       },
       "ts": 1779046864739
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Segedunum Roman Fort\n*Country:* england\n*Region:* northern england\n*County:* Tyne and Wear\n*Type:* castle\n*Period:* Roman (2nd century)\n*Coords:* 54.98791, -1.53231\n*Wikipedia:* https://en.wikipedia.org/wiki/Segedunum\n*Maps:* https://www.google.com/maps/search/Segedunum%20Roman%20Fort/@54.99,-1.5317,15z\n*Main Image:* https://img.castlecore.uk/segedunum-roman-fort.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.northeastmuseums.org.uk/segedunum\n\n*Description:*\nSegedunum was a Roman fort at modern-day Wallsend, North Tyneside in North East England. The fort lay at the eastern end of Hadrian's Wall near the banks of the River Tyne. It was in use for approximately 300 years from around 122 AD to almost 400. Today Segedunum is the most thoroughly excavated fort along Hadrian's Wall, and is operated as Segedunum Roman Fort, Baths and Museum. It forms part of the Hadrian's Wall UNESCO World Heritage Site.\n\n_Listing 2 of 111_",
+      "listing": {
+        "name": "Segedunum Roman Fort",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Tyne and Wear",
+        "lat": 54.98791,
+        "lng": -1.53231,
+        "mapsLink": "https://www.google.com/maps/search/Segedunum%20Roman%20Fort/@54.99,-1.5317,15z",
+        "image": "https://img.castlecore.uk/segedunum-roman-fort.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/segedunum-roman-fort-2.jpg",
+          "https://img.castlecore.uk/segedunum-roman-fort-3.jpg",
+          "https://img.castlecore.uk/segedunum-roman-fort-4.jpg",
+          "https://img.castlecore.uk/segedunum-roman-fort-5.jpg"
+        ],
+        "desc": "Segedunum was a Roman fort at modern-day Wallsend, North Tyneside in North East England. The fort lay at the eastern end of Hadrian's Wall near the banks of the River Tyne. It was in use for approximately 300 years from around 122 AD to almost 400. Today Segedunum is the most thoroughly excavated fort along Hadrian's Wall, and is operated as Segedunum Roman Fort, Baths and Museum. It forms part of the Hadrian's Wall UNESCO World Heritage Site.",
+        "type": "castle",
+        "period": "Roman (2nd century)",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "museum",
+          "kid-friendly",
+          "coastal",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Segedunum"
+          },
+          {
+            "name": "North East Museums",
+            "url": "https://www.northeastmuseums.org.uk/segedunum"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Segedunum",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Segedunum_Roman_Fort_and_Baths_-_geograph.org.uk_-_37360.jpg/330px-Segedunum_Roman_Fort_and_Baths_-_geograph.org.uk_-_37360.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Segedunum",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.northeastmuseums.org.uk/segedunum",
+        "enrichNotes": "add source - https://www.northeastmuseums.org.uk/segedunum"
+      },
+      "ts": 1779046913220
     }
   ]
 }
