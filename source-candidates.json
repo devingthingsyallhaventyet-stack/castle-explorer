@@ -1,18 +1,3 @@
 {
-  "candidates": [
-    {
-      "name": "St Giles' Cathedral",
-      "candidateUrl": "https://www.stgilescathedral.org.uk/",
-      "candidateLabel": "St Giles Cathedral Official Website",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "St Donat's Castle",
-      "candidateUrl": "https://uwcatlanticexperience.com/",
-      "candidateLabel": "UWC Atlantic Experience St Donats Castle",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    }
-  ]
+  "candidates": []
 }

@@ -5076,7 +5076,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "wikipedia",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "St Giles Cathedral Official Website",
+        "url": "https://www.stgilescathedral.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "St Giles Cathedral Official Website",
+        "url": "https://www.stgilescathedral.org.uk/"
+      }
+    ]
   },
   {
     "name": "Palace of Holyroodhouse",
@@ -58034,7 +58046,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "UWC Atlantic Experience St Donats Castle",
+        "url": "https://uwcatlanticexperience.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "UWC Atlantic Experience St Donats Castle",
+        "url": "https://uwcatlanticexperience.com/"
+      }
+    ]
   },
   {
     "name": "Ruperra Castle",
