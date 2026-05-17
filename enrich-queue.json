@@ -317,6 +317,59 @@
         "enrichNotes": ""
       },
       "ts": 1779039761450
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cartmel Priory\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 54.20111111, -2.95222222\n*Wikipedia:* https://en.wikipedia.org/wiki/Cartmel_Priory\n*Maps:* https://www.google.com/maps/search/Cartmel%20Priory/@54.2003,-2.9517,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZM9Qe3MCcm2B2H_KwuPrbboFN8VSzF04Lv5UAze36IcuDRD1clFtX7_qCH_sSjycwTFOyvvy29DlUFhK6hiImET3ZGtW4bngG3kadlNT2e5K77Q2dTd_Vf9f0dtKihTiGy1cyuqhvbWE9sdRsAEakfhPQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCartmel Priory church serves as the parish church of Cartmel, Cumbria, England.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Cartmel Priory",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.20111111,
+        "lng": -2.95222222,
+        "mapsLink": "https://www.google.com/maps/search/Cartmel%20Priory/@54.2003,-2.9517,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZM9Qe3MCcm2B2H_KwuPrbboFN8VSzF04Lv5UAze36IcuDRD1clFtX7_qCH_sSjycwTFOyvvy29DlUFhK6hiImET3ZGtW4bngG3kadlNT2e5K77Q2dTd_Vf9f0dtKihTiGy1cyuqhvbWE9sdRsAEakfhPQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Cartmel Priory church serves as the parish church of Cartmel, Cumbria, England.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "medieval",
+          "free-entry",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cartmel_Priory"
+          },
+          {
+            "name": "Cartmel Priory",
+            "url": "http://cartmelpriory.org.uk/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cartmel_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cartmel_Priory%2C_geograph.jpg/330px-Cartmel_Priory%2C_geograph.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Michael Graham",
+          "license": "CC BY-SA 2.0",
+          "description": "Cartmel Priory is a priory founded in 1190 by William Marshal, later 2nd Earl of Pembroke for the Augustinian Canons and dedicated to Saint Mary the Virgin and Saint Michael.",
+          "credit": "Geograph project",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779039772287
     }
   ]
 }
