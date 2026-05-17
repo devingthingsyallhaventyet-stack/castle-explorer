@@ -111,6 +111,68 @@
         "enrichNotes": ""
       },
       "ts": 1779044485777
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Rippon Cathedral\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* abbey\n*Period:* 7th century / 12th-16th century\n*Coords:* 54.13472222, -1.52\n*Wikipedia:* https://en.wikipedia.org/wiki/Ripon_Cathedral\n*Maps:* https://www.google.com/maps/search/Rippon%20Cathedral/@54.1381,-1.5217,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg/330px-Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://riponcathedral.org.uk/\n\n*Description:*\nThe Cathedral Church of St Peter and St Wilfrid, commonly known as Ripon Cathedral, and until 1836 known as Ripon Minster, is a cathedral in Ripon, North Yorkshire, England. Founded as a monastery by monks of the Irish tradition in the 660s, it was refounded as a Benedictine monastery by St Wilfrid in 672. The church became collegiate in the tenth century, and acted as a mother church within the large Diocese of York for the remainder of the Middle Ages. The present church is the fourth, and was built between the 13th and 16th centuries. In 1836 the church became the cathedral for the Diocese of Ripon. In 2014 the Diocese was incorporated into the new Diocese of Leeds, and the church became one of three co-equal cathedrals of the Bishop of Leeds.\n\n_Listing 3 of 50_",
+      "listing": {
+        "name": "Rippon Cathedral",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.13472222,
+        "lng": -1.52,
+        "mapsLink": "https://www.google.com/maps/search/Rippon%20Cathedral/@54.1381,-1.5217,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg/330px-Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "The Cathedral Church of St Peter and St Wilfrid, commonly known as Ripon Cathedral, and until 1836 known as Ripon Minster, is a cathedral in Ripon, North Yorkshire, England. Founded as a monastery by monks of the Irish tradition in the 660s, it was refounded as a Benedictine monastery by St Wilfrid in 672. The church became collegiate in the tenth century, and acted as a mother church within the large Diocese of York for the remainder of the Middle Ages. The present church is the fourth, and was built between the 13th and 16th centuries. In 1836 the church became the cathedral for the Diocese of Ripon. In 2014 the Diocese was incorporated into the new Diocese of Leeds, and the church became one of three co-equal cathedrals of the Bishop of Leeds.",
+        "type": "abbey",
+        "period": "7th century / 12th-16th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "gothic",
+          "medieval",
+          "photogenic",
+          "free-entry",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Ripon Cathedral",
+            "url": "https://riponcathedral.org.uk/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ripon_Cathedral"
+          },
+          {
+            "name": "Visit North Yorkshire",
+            "url": "https://visitnorthyorkshire.com/index/ripon-cathedral"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ripon_Cathedral",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg/330px-Ripon_Cathedral_Exterior%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Diliff",
+          "license": "CC BY-SA 3.0",
+          "description": "Ripon Cathedral's western facade as viewed from Minster Rd in North Yorkshire, England.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ripon_Cathedral",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://riponcathedral.org.uk/",
+        "enrichNotes": "add source - https://riponcathedral.org.uk/"
+      },
+      "ts": 1779044508952
     }
   ]
 }
