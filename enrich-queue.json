@@ -406,6 +406,62 @@
         "enrichNotes": ""
       },
       "ts": 1779049777842
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Croxteth Hall\n*Country:* england\n*Region:* northern england\n*County:* Merseyside\n*Type:* castle\n*Period:* 16th-20th century\n*Coords:* 53.442, -2.891\n*Wikipedia:* https://en.wikipedia.org/wiki/Croxteth_Hall\n*Maps:* https://www.google.com/maps/search/Croxteth%20Hall/@53.4433,-2.8833,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMz-bwrM9Id4c05-4h4QyzOkeX5-kpI90tOPV86XyVPEKIW5ck9Wapl2JbGBcpsWno1rwXUvcS_si-QPhGFF6z3Ji40fR9oZ5Pd2DPWJd_YX8stjvjwDiWDMEYh5JDLPiF6HYh8j_LLrFCqBw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCroxteth Hall is a country estate and Grade II* listed building in the West Derby suburb of Liverpool, England. It is the former country estate and ancestral home of the Molyneux family, the Earls of Sefton. After the death of the seventh and last Earl in 1972, the estate passed to Liverpool City Council, which now manages the remainder of the estate following the sale of approximately half of the grounds. The remaining grounds, Croxteth Park, were at one time a hunting chase of the Molyneux family and are now open to the public.\n\n_Listing 9 of 79_",
+      "listing": {
+        "name": "Croxteth Hall",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Merseyside",
+        "lat": 53.442,
+        "lng": -2.891,
+        "mapsLink": "https://www.google.com/maps/search/Croxteth%20Hall/@53.4433,-2.8833,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMz-bwrM9Id4c05-4h4QyzOkeX5-kpI90tOPV86XyVPEKIW5ck9Wapl2JbGBcpsWno1rwXUvcS_si-QPhGFF6z3Ji40fR9oZ5Pd2DPWJd_YX8stjvjwDiWDMEYh5JDLPiF6HYh8j_LLrFCqBw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Croxteth Hall is a country estate and Grade II* listed building in the West Derby suburb of Liverpool, England. It is the former country estate and ancestral home of the Molyneux family, the Earls of Sefton. After the death of the seventh and last Earl in 1972, the estate passed to Liverpool City Council, which now manages the remainder of the estate following the sale of approximately half of the grounds. The remaining grounds, Croxteth Park, were at one time a hunting chase of the Molyneux family and are now open to the public.",
+        "type": "castle",
+        "period": "16th-20th century",
+        "rating": 4.1,
+        "tags": [
+          "well-preserved",
+          "victorian",
+          "gardens",
+          "kid-friendly",
+          "museum",
+          "free-entry",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Croxteth_Hall"
+          },
+          {
+            "name": "Visit Liverpool",
+            "url": "https://www.visitliverpool.com/listing/croxteth-hall/68324101/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Croxteth_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Croxteth_Hall_-_IMG_2456.JPG/330px-Croxteth_Hall_-_IMG_2456.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Rept0n1x",
+          "license": "CC BY-SA 3.0",
+          "description": "Croxteth Hall, Liverpool, England.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049837947
     }
   ]
 }
