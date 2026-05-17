@@ -573,6 +573,60 @@
         "enrichNotes": "rename listing as Carlingford Castle "
       },
       "ts": 1779052264589
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Clara Castle\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Kilkenny\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 52.669444, -7.152222\n*Wikipedia:* https://en.wikipedia.org/wiki/Clara_Castle\n*Maps:* https://www.google.com/maps/search/Clara%20Castle/@52.6083,-7.3083,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMP8hL-wq89YYDt-43zxYWzRfh-tReaSWq0qxHeWhMhacfclYqv8HjoNqu0Uy_yU7IsVKl8JzPb6rm3wrOS41lLJX8vf1UHg2roNMyXOj-fPRGLv_w-TCvyz1lH5mQELwtsFG-IKwmzutX0fg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* no google places \n\n*Description:*\nClara Castle is a tower house (caiseal) located in County Kilkenny, Ireland.\n\n_Listing 12 of 33_",
+      "listing": {
+        "name": "Clara Castle",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Kilkenny",
+        "lat": 52.669444,
+        "lng": -7.152222,
+        "mapsLink": "https://www.google.com/maps/search/Clara%20Castle/@52.6083,-7.3083,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMP8hL-wq89YYDt-43zxYWzRfh-tReaSWq0qxHeWhMhacfclYqv8HjoNqu0Uy_yU7IsVKl8JzPb6rm3wrOS41lLJX8vf1UHg2roNMyXOj-fPRGLv_w-TCvyz1lH5mQELwtsFG-IKwmzutX0fg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Clara Castle is a tower house (caiseal) located in County Kilkenny, Ireland.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Clara Castle",
+            "url": "https://www.claracastle.com/"
+          },
+          {
+            "name": "Discover Ireland",
+            "url": "https://www.discoverireland.ie/kilkenny/clara-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clara_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Clara_Castle_-_geograph.org.uk_-_494292.jpg/330px-Clara_Castle_-_geograph.org.uk_-_494292.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "liam murphy",
+          "license": "CC BY-SA 2.0",
+          "description": "Clara Castle. A fine stone Castle, entrance through a farm yard.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "no google places ",
+        "enrichNotes": "no google places "
+      },
+      "ts": 1779052307723
     }
   ]
 }
