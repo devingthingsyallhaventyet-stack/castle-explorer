@@ -171,6 +171,61 @@
         "enrichNotes": ""
       },
       "ts": 1779052017299
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Morlais Castle\n*Country:* wales\n*Region:* south wales\n*County:* Merthyr Tydfil\n*Type:* castle\n*Period:* 13th century\n*Coords:* 51.77694444, -3.37916667\n*Wikipedia:* https://en.wikipedia.org/wiki/Morlais_Castle\n*Maps:* https://www.google.com/maps/search/Morlais%20Castle/@51.7828,-3.3778,15z\n*Main Image:* https://img.castlecore.uk/morlais-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/mepUUE1SJB2HcfmN9\n\n\n*Description:*\nMorlais Castle is a 13th-century castle located above the Taff Gorge near the town of Merthyr Tydfil in Wales.\n\n_Listing 4 of 33_",
+      "listing": {
+        "name": "Morlais Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Merthyr Tydfil",
+        "lat": 51.77694444,
+        "lng": -3.37916667,
+        "mapsLink": "https://www.google.com/maps/search/Morlais%20Castle/@51.7828,-3.3778,15z",
+        "image": "https://img.castlecore.uk/morlais-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/morlais-castle-2.jpg",
+          "https://img.castlecore.uk/morlais-castle-3.jpg",
+          "https://img.castlecore.uk/morlais-castle-4.jpg",
+          "https://img.castlecore.uk/morlais-castle-5.jpg"
+        ],
+        "desc": "Morlais Castle is a 13th-century castle located above the Taff Gorge near the town of Merthyr Tydfil in Wales.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "hilltop",
+          "ruins-romantic",
+          "free-entry",
+          "atmospheric",
+          "medieval",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/morlais-castle"
+          },
+          {
+            "name": "Wikipedia – Morlais Castle",
+            "url": "https://en.wikipedia.org/wiki/Morlais_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Morlais_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Morlais_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/mepUUE1SJB2HcfmN9\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/mepUUE1SJB2HcfmN9\n"
+      },
+      "ts": 1779052062388
     }
   ]
 }
