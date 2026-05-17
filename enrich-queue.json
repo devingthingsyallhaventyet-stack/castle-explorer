@@ -313,6 +313,64 @@
         "enrichNotes": ""
       },
       "ts": 1779047651978
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Maiden Castle\n*Country:* england\n*Region:* south west\n*County:* Dorset\n*Type:* castle\n*Period:* Iron Age\n*Coords:* 50.6933, -2.47\n*Wikipedia:* https://en.wikipedia.org/wiki/Maiden_Castle,_Dorset\n*Maps:* https://www.google.com/maps/search/Maiden%20Castle/@50.6933,-2.47,15z\n*Main Image:* https://img.castlecore.uk/maiden-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nMaiden Castle or the Maiden's Castle may refer to:\n\n_Listing 7 of 111_",
+      "listing": {
+        "name": "Maiden Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Dorset",
+        "lat": 50.6933,
+        "lng": -2.47,
+        "mapsLink": "https://www.google.com/maps/search/Maiden%20Castle/@50.6933,-2.47,15z",
+        "image": "https://img.castlecore.uk/maiden-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/maiden-castle-2.jpg",
+          "https://img.castlecore.uk/maiden-castle-3.jpg",
+          "https://img.castlecore.uk/maiden-castle-4.jpg",
+          "https://img.castlecore.uk/maiden-castle-5.jpg"
+        ],
+        "desc": "Maiden Castle or the Maiden's Castle may refer to:",
+        "type": "castle",
+        "period": "Iron Age",
+        "rating": 4.2,
+        "tags": [
+          "prehistoric",
+          "hilltop",
+          "free-entry",
+          "photogenic",
+          "atmospheric",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/maiden-castle/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Maiden_Castle,_Dorset"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/dorset/ancient/maiden-castle.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Maiden_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Maiden_Castle,_Dorset",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779047705406
     }
   ]
 }
