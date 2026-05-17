@@ -422,6 +422,68 @@
         "enrichNotes": "https://www.kilkeacastle.ie/ - add source, tag as hotel "
       },
       "ts": 1779048826228
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ardgillan Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Dublin\n*Type:* castle\n*Period:* Georgian (18th century)\n*Coords:* 53.586465, -6.160521\n*Wikipedia:* https://en.wikipedia.org/wiki/Ardgillan_Castle\n*Maps:* https://www.google.com/maps/search/Ardgillan%20Castle/@53.578,-6.151,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqEZGi_Ly6DIXv-BfTmC5AIsdmpd6N34wGBCjtUPnB_Nl-YL-mSph9GPorbi1QlalgCH1UteCAFodI8wFNDUW5W0NY-G32sm9Rw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* https://maps.app.goo.gl/5JzgFiiTTUUkd76j6 - update google places link\nadd source - https://ardgillancastle.ie/\n\n*Description:*\nArdgillan Castle is a country house near Balbriggan, County Dublin, Ireland. It is set in the 200-acre (0.81 km2) Ardgillan Demesne, a public park in the jurisdiction of Fingal County Council.\n\n_Listing 9 of 94_",
+      "listing": {
+        "name": "Ardgillan Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Dublin",
+        "lat": 53.586465,
+        "lng": -6.160521,
+        "mapsLink": "https://www.google.com/maps/search/Ardgillan%20Castle/@53.578,-6.151,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqEZGi_Ly6DIXv-BfTmC5AIsdmpd6N34wGBCjtUPnB_Nl-YL-mSph9GPorbi1QlalgCH1UteCAFodI8wFNDUW5W0NY-G32sm9Rw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Ardgillan Castle is a country house near Balbriggan, County Dublin, Ireland. It is set in the 200-acre (0.81 km2) Ardgillan Demesne, a public park in the jurisdiction of Fingal County Council.",
+        "type": "castle",
+        "period": "Georgian (18th century)",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "coastal",
+          "tearoom-cafe",
+          "kid-friendly",
+          "dog-friendly",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Ardgillan Castle",
+            "url": "https://ardgillancastle.ie/"
+          },
+          {
+            "name": "Irish Historic Houses",
+            "url": "https://irishhistorichouses.com/tag/ardgillan-castle-dublin/"
+          },
+          {
+            "name": "Ardgillan History",
+            "url": "https://ardgillancastle.ie/the-castle/a-brief-history/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ardgillan_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Balbriggan_-_Ardgillan_Castle_-_20190707185541.jpg/330px-Balbriggan_-_Ardgillan_Castle_-_20190707185541.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Jonjobaker",
+          "license": "CC BY-SA 4.0",
+          "description": "Balbriggan, Ardgillan Castle.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://maps.app.goo.gl/5JzgFiiTTUUkd76j6 - update google places link\nadd source - https://ardgillancastle.ie/",
+        "enrichNotes": "https://maps.app.goo.gl/5JzgFiiTTUUkd76j6 - update google places link\nadd source - https://ardgillancastle.ie/"
+      },
+      "ts": 1779048911597
     }
   ]
 }
