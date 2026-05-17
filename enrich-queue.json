@@ -891,6 +891,61 @@
         "enrichNotes": ""
       },
       "ts": 1779046073466
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hafod Estate\n*Country:* wales\n*Region:* west wales\n*County:* Ceredigion\n*Type:* historic-house\n*Period:* 18th century\n*Coords:* 52.34368, -3.8223\n*Wikipedia:* https://en.wikipedia.org/wiki/Hafod_estate\n*Maps:* https://www.google.com/maps/search/Hafod%20Estate/@52.3333,-3.8167,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOqfjb75EN_NiDeQe_w7A0bFqXTlxYlARAndSxw2KxUHnudJ6XTqcWPky_nos8outE4zxRwfe8ArSFtu-ZztwFiH7e-9-n3wTFeyDEKd9Vk61VI50YTsuRo_HZCPDZU7OfEb81U2GXJjW_u6CI=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nThe Hafod estate, also known as Hafod Uchtryd, is a wooded and landscaped estate in the Ystwyth valley in Ceredigion, Wales. Near Devil's Bridge, Cwmystwyth and Pont-rhyd-y-groes, it is off the B4574 road. Hafod estate land was within the boundaries of the Cistercian Abbey Strata Florida. Originally a hunting lodge for Welsh Chieftains, it became home to the landed gentry and the nobility. In the late eighteenth century, a celebrated landscape was created under the ownership of Thomas Johnes.\n\n_Listing 17 of 28_",
+      "listing": {
+        "name": "Hafod Estate",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Ceredigion",
+        "lat": 52.34368,
+        "lng": -3.8223,
+        "mapsLink": "https://www.google.com/maps/search/Hafod%20Estate/@52.3333,-3.8167,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqfjb75EN_NiDeQe_w7A0bFqXTlxYlARAndSxw2KxUHnudJ6XTqcWPky_nos8outE4zxRwfe8ArSFtu-ZztwFiH7e-9-n3wTFeyDEKd9Vk61VI50YTsuRo_HZCPDZU7OfEb81U2GXJjW_u6CI=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Hafod estate, also known as Hafod Uchtryd, is a wooded and landscaped estate in the Ystwyth valley in Ceredigion, Wales. Near Devil's Bridge, Cwmystwyth and Pont-rhyd-y-groes, it is off the B4574 road. Hafod estate land was within the boundaries of the Cistercian Abbey Strata Florida. Originally a hunting lodge for Welsh Chieftains, it became home to the landed gentry and the nobility. In the late eighteenth century, a celebrated landscape was created under the ownership of Thomas Johnes.",
+        "type": "historic-house",
+        "period": "18th century",
+        "rating": 4.3,
+        "tags": [
+          "gardens",
+          "woodland",
+          "riverside",
+          "atmospheric",
+          "free-entry",
+          "romantic"
+        ],
+        "source": [
+          {
+            "name": "Hafod Estate",
+            "url": "https://www.hafod.org/"
+          },
+          {
+            "name": "Wikipedia – Hafod Estate",
+            "url": "https://en.wikipedia.org/wiki/Hafod_Estate"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hafod_estate",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hafod_House_%281131119%29.jpg/330px-Hafod_House_%281131119%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Stadler, J. C. (Joseph Constantine), fl. 1780-1812, engraver.\n\nSmith, John, 1749-1831, artist.",
+          "license": "CC0",
+          "description": "Hafod House",
+          "credit": "This image is available from the National Library of Wales You can view this image in its original context on the NLW Catalogue",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046103126
     }
   ]
 }
