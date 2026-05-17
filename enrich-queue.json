@@ -315,6 +315,61 @@
         "enrichNotes": "add source - https://www.hornbycastle.com/"
       },
       "ts": 1779038773366
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Langley Castle\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* castle\n*Period:* 14th century\n*Coords:* 54.956, -2.259\n*Wikipedia:* https://en.wikipedia.org/wiki/Langley_Castle\n*Maps:* https://www.google.com/maps/search/Langley%20Castle/@54.954,-2.306,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqG9IlPPH7hq-VNdykc93EiLTDPyTtOLvIyJaGJxblMv0yCAEbOjCRntq9cesvfqVimxo5YES3jz97f5yt_V-M6FuKTq87Yfj-Q=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.langleycastle.co.uk/en/ add source, mark as hotel \n\n*Description:*\nLangley Castle is a restored medieval tower house, in the village of Langley in the valley of the River South Tyne. The castle is 3 miles (5 km) south of Haydon Bridge, in Northumberland, England. Langley Castle is a Grade I listed building. The property switched ownership several times over hundreds of years until Langley Castle was finally built in 1364. The castle was built in an H shape with four floors, and has four towers on each corner. The castle has several other unique architectural features. After being severely damaged by a fire in 1405, Langley Castle was left in ruins for 500 years until it was restored in 1914. In the last 100 years Langley Castle went through many uses, and now operates as a hotel.\n\n_Listing 7 of 10_",
+      "listing": {
+        "name": "Langley Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 54.956,
+        "lng": -2.259,
+        "mapsLink": "https://www.google.com/maps/search/Langley%20Castle/@54.954,-2.306,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqG9IlPPH7hq-VNdykc93EiLTDPyTtOLvIyJaGJxblMv0yCAEbOjCRntq9cesvfqVimxo5YES3jz97f5yt_V-M6FuKTq87Yfj-Q=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Langley Castle is a restored medieval tower house, in the village of Langley in the valley of the River South Tyne. The castle is 3 miles (5 km) south of Haydon Bridge, in Northumberland, England. Langley Castle is a Grade I listed building. The property switched ownership several times over hundreds of years until Langley Castle was finally built in 1364. The castle was built in an H shape with four floors, and has four towers on each corner. The castle has several other unique architectural features. After being severely damaged by a fire in 1405, Langley Castle was left in ruins for 500 years until it was restored in 1914. In the last 100 years Langley Castle went through many uses, and now operates as a hotel.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4.1,
+        "tags": [
+          "well-preserved",
+          "romantic",
+          "medieval",
+          "atmospheric",
+          "wedding-venue"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Langley_Castle"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1042314"
+          },
+          {
+            "name": "Langley Castle Hotel",
+            "url": "https://www.langleycastle.co.uk/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Langley_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Langley_Castle.jpg/330px-Langley_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Langley_Castle",
+        "imageAttribution": "local",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://www.langleycastle.co.uk/en/ add source, mark as hotel ",
+        "enrichNotes": "https://www.langleycastle.co.uk/en/ add source, mark as hotel "
+      },
+      "ts": 1779038803813
     }
   ]
 }
