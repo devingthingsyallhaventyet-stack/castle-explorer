@@ -415,6 +415,60 @@
         "enrichNotes": ""
       },
       "ts": 1779044334213
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bradford-on-Avon Tithe Barn\n*Country:* england\n*Region:* south west\n*County:* Wiltshire\n*Type:* abbey\n*Period:* 14th century (c. 1340)\n*Coords:* 51.3427, -2.2553\n*Wikipedia:* https://en.wikipedia.org/wiki/Bradford-on-Avon_Tithe_Barn\n*Maps:* https://www.google.com/maps/search/Bradford-on-Avon%20Tithe%20Barn/@51.3483,-2.2517,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNFZ-E_mDa_t-ABlv7mCfL4a4UvIA_oRZzCaxjHU93wz6x8piAwizjDf0_zOYYNsMc--QQ30_a_tTs7VD-HTdpecomRhhUx8YWieKNnHzLqAJenTuZN6wjHlt1QXiT5ZL2njpPHWOKQMUdbvg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBradford-on-Avon Tithe Barn is a Grade I listed barn in Pound Lane, Bradford on Avon, Wiltshire, England. It was part of a medieval grange belonging to Shaftesbury Abbey and was built in the early 14th century, with a granary dated to about 1400. It is owned and protected by English Heritage and managed by the Bradford on Avon Preservation Trust.\n\n_Listing 28 of 80_",
+      "listing": {
+        "name": "Bradford-on-Avon Tithe Barn",
+        "country": "england",
+        "region": "south-west",
+        "county": "Wiltshire",
+        "lat": 51.3427,
+        "lng": -2.2553,
+        "mapsLink": "https://www.google.com/maps/search/Bradford-on-Avon%20Tithe%20Barn/@51.3483,-2.2517,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNFZ-E_mDa_t-ABlv7mCfL4a4UvIA_oRZzCaxjHU93wz6x8piAwizjDf0_zOYYNsMc--QQ30_a_tTs7VD-HTdpecomRhhUx8YWieKNnHzLqAJenTuZN6wjHlt1QXiT5ZL2njpPHWOKQMUdbvg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Bradford-on-Avon Tithe Barn is a Grade I listed barn in Pound Lane, Bradford on Avon, Wiltshire, England. It was part of a medieval grange belonging to Shaftesbury Abbey and was built in the early 14th century, with a granary dated to about 1400. It is owned and protected by English Heritage and managed by the Bradford on Avon Preservation Trust.",
+        "type": "abbey",
+        "period": "14th century (c. 1340)",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "atmospheric",
+          "medieval",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/bradford-on-avon-tithe-barn/history/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bradford-on-Avon_Tithe_Barn"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bradford-on-Avon_Tithe_Barn",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tithe_Barn%2C_Bradford-on-Avon_-_geograph.org.uk_-_1463414.jpg/330px-Tithe_Barn%2C_Bradford-on-Avon_-_geograph.org.uk_-_1463414.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mark Anderson",
+          "license": "CC BY-SA 2.0",
+          "description": "Tithe Barn, Bradford-on-Avon",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044354900
     }
   ]
 }
