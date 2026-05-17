@@ -469,6 +469,55 @@
         "enrichNotes": ""
       },
       "ts": 1779044354900
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Tintinhull Garden\n*Country:* england\n*Region:* south west\n*County:* Somerset\n*Type:* castle\n*Period:* 17th century house / 20th century garden\n*Coords:* 50.97444444, -2.70722222\n*Wikipedia:* https://en.wikipedia.org/wiki/Tintinhull_Garden\n*Maps:* https://www.google.com/maps/search/Tintinhull%20Garden/@50.9517,-2.72,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP1ht--R53sXXeQi6oURj23A-7r0_CuCcBJHsfCAxle0C1ouVR8tgi4Oov8FNnSRYeTrkM42un4mDoEED_wX3du_GTTxB-kOQvfuBbh48PbOHlU3FZOwzmoEtULF-rTN5SCNIEEwp2tfC7J7g=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nTintinhull Garden, located in Tintinhull, near Yeovil in the English county of Somerset, is a small 20th century garden surrounding a 17th-century Grade I listed house. The property is in the ownership of the National Trust. It is visited by around 25,000 people per year.\n\n_Listing 29 of 80_",
+      "listing": {
+        "name": "Tintinhull Garden",
+        "country": "england",
+        "region": "south-west",
+        "county": "Somerset",
+        "lat": 50.97444444,
+        "lng": -2.70722222,
+        "mapsLink": "https://www.google.com/maps/search/Tintinhull%20Garden/@50.9517,-2.72,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP1ht--R53sXXeQi6oURj23A-7r0_CuCcBJHsfCAxle0C1ouVR8tgi4Oov8FNnSRYeTrkM42un4mDoEED_wX3du_GTTxB-kOQvfuBbh48PbOHlU3FZOwzmoEtULF-rTN5SCNIEEwp2tfC7J7g=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Tintinhull Garden, located in Tintinhull, near Yeovil in the English county of Somerset, is a small 20th century garden surrounding a 17th-century Grade I listed house. The property is in the ownership of the National Trust. It is visited by around 25,000 people per year.",
+        "type": "castle",
+        "period": "17th century house / 20th century garden",
+        "rating": 4.4,
+        "tags": [
+          "gardens",
+          "photogenic",
+          "atmospheric",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/somerset/tintinhull-garden"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Tintinhull_Garden",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Tintinhull_house.jpg/330px-Tintinhull_house.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Sarah Charlesworth",
+          "license": "CC BY-SA 2.0",
+          "description": "Tintinhull House",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044376107
     }
   ]
 }
