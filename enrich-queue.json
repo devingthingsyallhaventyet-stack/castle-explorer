@@ -773,6 +773,66 @@
         "enrichNotes": "update name to Blackfriars Priory\n"
       },
       "ts": 1779051286975
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dudley Castle\n*Country:* england\n*Region:* the midlands\n*County:* West Midlands\n*Type:* castle\n*Period:* 11th-16th century\n*Coords:* 52.5142, -2.08\n*Wikipedia:* https://en.wikipedia.org/wiki/Dudley_Castle\n*Maps:* https://www.google.com/maps/search/Dudley%20Castle/@52.5092,-2.0875,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dudley_Castle%2C_England%2C_Aerial_View.jpg/330px-Dudley_Castle%2C_England%2C_Aerial_View.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDudley Castle is a ruined fortification in the town of Dudley, West Midlands, England. Originally, a wooden motte and bailey castle built soon after the Norman Conquest, it was rebuilt as a stone fortification during the twelfth century but subsequently demolished on the orders of Henry II of England. The rebuilding of the castle took place in the second half of the thirteenth century. It culminated in the construction of a range of buildings within the fortifications by John Dudley. The fortifications were slighted by order of the Parliament of England during the English Civil War and the residential buildings were destroyed by fire in 1750. In the nineteenth and early twentieth centuries, the site was used for fêtes and pageants. Today, Dudley Zoo is located on its grounds.\n\n_Listing 16 of 53_",
+      "listing": {
+        "name": "Dudley Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "West Midlands",
+        "lat": 52.5142,
+        "lng": -2.08,
+        "mapsLink": "https://www.google.com/maps/search/Dudley%20Castle/@52.5092,-2.0875,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dudley_Castle%2C_England%2C_Aerial_View.jpg/330px-Dudley_Castle%2C_England%2C_Aerial_View.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Dudley Castle is a ruined fortification in the town of Dudley, West Midlands, England. Originally, a wooden motte and bailey castle built soon after the Norman Conquest, it was rebuilt as a stone fortification during the twelfth century but subsequently demolished on the orders of Henry II of England. The rebuilding of the castle took place in the second half of the thirteenth century. It culminated in the construction of a range of buildings within the fortifications by John Dudley. The fortifications were slighted by order of the Parliament of England during the English Civil War and the residential buildings were destroyed by fire in 1750. In the nineteenth and early twentieth centuries, the site was used for fêtes and pageants. Today, Dudley Zoo is located on its grounds.",
+        "type": "castle",
+        "period": "11th-16th century",
+        "rating": 4,
+        "tags": [
+          "dramatic-ruin",
+          "kid-friendly",
+          "norman",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Dudley_Castle"
+          },
+          {
+            "name": "Dudley Zoo & Castle",
+            "url": "https://www.dudleyzoo.org.uk/"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1015843"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dudley_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dudley_Castle%2C_England%2C_Aerial_View.jpg/330px-Dudley_Castle%2C_England%2C_Aerial_View.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Dudley Council",
+          "license": "CC BY 2.0",
+          "description": "Dudley Castle, England, Aerial View,\nDCIM\\100MEDIA\\DJI_0045.JPG",
+          "credit": "https://www.flickr.com/photos/dudley-council/52501094067/",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dudley_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779051320014
     }
   ]
 }
