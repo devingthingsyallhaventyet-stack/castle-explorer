@@ -604,6 +604,61 @@
         "enrichNotes": ""
       },
       "ts": 1779051139950
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Reading Abbey\n*Country:* england\n*Region:* south east london\n*County:* Berkshire\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 51.45638889, -0.965\n*Wikipedia:* https://en.wikipedia.org/wiki/Reading_Abbey\n*Maps:* https://www.google.com/maps/search/Reading%20Abbey/@51.4536,-0.9683,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPA9DLMTI9QaJ7PHzA1_B5Vy6675EnnPlNVTIeJlGDi8pjUAZ8EksmX-xW_AjbYx4gtLfIEoJOxePpLgb_g-EUN5gRWVk5Yeb9KfZ9iwz4MdOMhE0etxgRa0Pkx1nJy8C9gyaL9KvR_Krs-VQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places - https://maps.app.goo.gl/8diBkMHQ8xEsdrxw8Z\n\n\n*Description:*\nReading Abbey is a large, ruined abbey in the centre of the town of Reading, in the English county of Berkshire. It was founded by Henry I in 1121 \"for the salvation of my soul, and the souls of King William, my father, and of King William, my brother, and Queen Maud, my wife, and all my ancestors and successors.\" In its heyday the abbey was one of Europe's largest royal monasteries. The traditions of the Abbey are continued today by the neighbouring St James's Church, which is partly built using stones of the Abbey ruins.\n\n_Listing 13 of 53_",
+      "listing": {
+        "name": "Reading Abbey",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Berkshire",
+        "lat": 51.45638889,
+        "lng": -0.965,
+        "mapsLink": "https://www.google.com/maps/search/Reading%20Abbey/@51.4536,-0.9683,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPA9DLMTI9QaJ7PHzA1_B5Vy6675EnnPlNVTIeJlGDi8pjUAZ8EksmX-xW_AjbYx4gtLfIEoJOxePpLgb_g-EUN5gRWVk5Yeb9KfZ9iwz4MdOMhE0etxgRa0Pkx1nJy8C9gyaL9KvR_Krs-VQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Reading Abbey is a large, ruined abbey in the centre of the town of Reading, in the English county of Berkshire. It was founded by Henry I in 1121 \"for the salvation of my soul, and the souls of King William, my father, and of King William, my brother, and Queen Maud, my wife, and all my ancestors and successors.\" In its heyday the abbey was one of Europe's largest royal monasteries. The traditions of the Abbey are continued today by the neighbouring St James's Church, which is partly built using stones of the Abbey ruins.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4,
+        "tags": [
+          "atmospheric",
+          "ruins-romantic",
+          "medieval",
+          "free-entry",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Reading_Abbey"
+          },
+          {
+            "name": "Reading Museum",
+            "url": "https://www.readingmuseum.org.uk/blog/short-history-reading-readings-royal-abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Reading_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Reading_Abbey_interior.jpg/330px-Reading_Abbey_interior.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Chris Wood (User:chris_j_wood).",
+          "license": "CC BY-SA 4.0",
+          "description": "The ruins of the monks dormitory of Reading Abbey, in the English town of Reading. For more information, see Wikipedia article Reading Abbey.",
+          "credit": "Photograph taken by chris_j_wood on the 9th February 2005, with original filename DCP_3628.jpg. Cross-loaded from wikipedia-en.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places - https://maps.app.goo.gl/8diBkMHQ8xEsdrxw8Z\n",
+        "enrichNotes": "update google places - https://maps.app.goo.gl/8diBkMHQ8xEsdrxw8Z\n"
+      },
+      "ts": 1779051172180
     }
   ]
 }
