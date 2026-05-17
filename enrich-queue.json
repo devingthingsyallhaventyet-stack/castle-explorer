@@ -505,6 +505,63 @@
         "enrichNotes": "update google places - https://maps.app.goo.gl/RDSWhm4i4dFLpoLa6"
       },
       "ts": 1779044723237
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Florence Court\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Fermanagh\n*Type:* palace\n*Period:* 18th century\n*Coords:* 54.261004, -7.727313\n*Wikipedia:* https://en.wikipedia.org/wiki/Florence_Court\n*Maps:* https://www.google.com/maps/search/Florence%20Court/@54.266,-7.686,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPOVQjfP9WE2mK4o_QsY84FpIKy6aDYEkP98zierNhEgm8tfUyr0AJiXS7qkPdV9WkksAwkawFbFLyyKO9Hf3yGq6rxBtwXgOoSH-JVLHp_P-mjTxaps9XzzKk1TCVzxbTnG32AH4XZYCoWn9LJ1CAS=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/yaVj7fPvuXirqame9\n\n*Description:*\nFlorence Court is a large 18th-century house and estate located eight miles (13 km) south-west of Enniskillen, County Fermanagh, Northern Ireland. It is set in the foothills of Cuilcagh Mountain. The nearby village is distinguished by the one-word name Florencecourt. It is owned and managed by the National Trust and is the sister property of nearby Castle Coole. The other National Trust property in County Fermanagh is the Crom Estate.\n\n_Listing 10 of 50_",
+      "listing": {
+        "name": "Florence Court",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Fermanagh",
+        "lat": 54.261004,
+        "lng": -7.727313,
+        "mapsLink": "https://www.google.com/maps/search/Florence%20Court/@54.266,-7.686,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPOVQjfP9WE2mK4o_QsY84FpIKy6aDYEkP98zierNhEgm8tfUyr0AJiXS7qkPdV9WkksAwkawFbFLyyKO9Hf3yGq6rxBtwXgOoSH-JVLHp_P-mjTxaps9XzzKk1TCVzxbTnG32AH4XZYCoWn9LJ1CAS=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Florence Court is a large 18th-century house and estate located eight miles (13 km) south-west of Enniskillen, County Fermanagh, Northern Ireland. It is set in the foothills of Cuilcagh Mountain. The nearby village is distinguished by the one-word name Florencecourt. It is owned and managed by the National Trust and is the sister property of nearby Castle Coole. The other National Trust property in County Fermanagh is the Crom Estate.",
+        "type": "palace",
+        "period": "18th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "photogenic",
+          "guided-tours",
+          "tearoom-cafe",
+          "kid-friendly",
+          "woodland"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/northern-ireland/florence-court"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Florence_Court"
+          },
+          {
+            "name": "Fermanagh Lakelands",
+            "url": "https://www.fermanaghlakelands.com/things-to-see-and-do/florence-court-p675531"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Florence_Court",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Florence_Court_frontage.jpg/330px-Florence_Court_frontage.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Florence_Court",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/yaVj7fPvuXirqame9",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/yaVj7fPvuXirqame9"
+      },
+      "ts": 1779044760934
     }
   ]
 }
