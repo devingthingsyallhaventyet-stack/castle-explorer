@@ -206,6 +206,62 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/yw271Qv6ak6sxbGRA"
       },
       "ts": 1779045808130
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Wenlock Priory\n*Country:* england\n*Region:* the midlands\n*County:* Shropshire\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 52.59739, -2.55506\n*Wikipedia:* https://en.wikipedia.org/wiki/Wenlock_Priory\n*Maps:* https://www.google.com/maps/search/Wenlock%20Priory/@52.595,-2.5556,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg/330px-St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nWenlock Priory, or St Milburga's Priory, is a ruined 12th-century monastery, located in Much Wenlock, Shropshire, at grid reference SJ625001. Roger de Montgomery re-founded the Priory as a Cluniac house between 1079 and 1082, on the site of an earlier 7th-century monastery. In 1101 bones, believed to be those of Saint Milburga, were discovered beneath the floor of the old church. The relics were ceremoniously translated to the main monastery church.\n\n_Listing 5 of 28_",
+      "listing": {
+        "name": "Wenlock Priory",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Shropshire",
+        "lat": 52.59739,
+        "lng": -2.55506,
+        "mapsLink": "https://www.google.com/maps/search/Wenlock%20Priory/@52.595,-2.5556,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg/330px-St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Wenlock Priory, or St Milburga's Priory, is a ruined 12th-century monastery, located in Much Wenlock, Shropshire, at grid reference SJ625001. Roger de Montgomery re-founded the Priory as a Cluniac house between 1079 and 1082, on the site of an earlier 7th-century monastery. In 1101 bones, believed to be those of Saint Milburga, were discovered beneath the floor of the old church. The relics were ceremoniously translated to the main monastery church.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.3,
+        "tags": [
+          "romantic-ruin",
+          "photogenic",
+          "medieval",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wenlock_Priory"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/wenlock-priory/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Wenlock_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg/330px-St_Milburga%27s_Priory%2C_Much_Wenlock_-_geograph.org.uk_-_1652560.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Chris Gunns",
+          "license": "CC BY-SA 2.0",
+          "description": "St Milburga's Priory, Much Wenlock",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Wenlock_Priory",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045823093
     }
   ]
 }
