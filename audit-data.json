@@ -25393,16 +25393,7 @@
       "photogenic",
       "remote"
     ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Brinkburn_Priory"
-      },
-      {
-        "name": "English Heritage",
-        "url": "https://www.english-heritage.org.uk/visit/places/brinkburn-priory/"
-      }
-    ],
+    "source": "https://www.english-heritage.org.uk/visit/places/brinkburn-priory/",
     "wiki": "https://en.wikipedia.org/wiki/Brinkburn_Priory",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BrinkburnPriory.jpg/330px-BrinkburnPriory.jpg",
     "reviewStatus": "flagged",
@@ -25416,7 +25407,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
   },
   {
     "name": "Hexham Abbey",
@@ -25525,16 +25518,7 @@
       "gardens",
       "medieval"
     ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Belsay"
-      },
-      {
-        "name": "English Heritage",
-        "url": "https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/"
-      }
-    ],
+    "source": "https://www.english-heritage.org.uk/visit/places/belsay-hall-castle-and-gardens/",
     "wiki": "https://en.wikipedia.org/wiki/Belsay_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Belsay_Castle.jpg/330px-Belsay_Castle.jpg",
     "reviewStatus": "flagged",
@@ -25548,7 +25532,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Belsay_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
   },
   {
     "name": "Thirlwall Castle",
@@ -25894,7 +25880,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sizergh_Castle_and_Garden",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
   },
   {
     "name": "Muncaster Castle",
