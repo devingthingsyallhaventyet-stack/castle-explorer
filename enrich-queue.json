@@ -392,6 +392,54 @@
         "enrichNotes": "add source - https://www.visitroscommon.ie/roscommon-castle/"
       },
       "ts": 1779052687443
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lough Key Castle\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Roscommon\n*Type:* castle\n*Period:* Medieval\n*Coords:* 53.986, -8.066\n*Wikipedia:* https://en.wikipedia.org/wiki/McDermott%27s_Castle\n*Maps:* https://www.google.com/maps/search/Lough%20Key%20Castle/@53.986,-8.066,15z\n*Main Image:* https://img.castlecore.uk/lough-key-castle.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\n\n\nLoughrea Castle is a castle located in Loughrea, County Galway, Ireland. The castle was built by Richard de Burgh, Lord of Connaught in 1236. They were one of the most ancient and influential families in Irish history. The town of Loughrea was later fortified with a town wall, gates and a moat to the north, east and west, with Lough Rea as a natural defence to the south.\n\n_Listing 9 of 19_",
+      "listing": {
+        "name": "Lough Key Castle",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Roscommon",
+        "lat": 53.986,
+        "lng": -8.066,
+        "mapsLink": "https://www.google.com/maps/search/Lough%20Key%20Castle/@53.986,-8.066,15z",
+        "image": "https://img.castlecore.uk/lough-key-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "\n\nLoughrea Castle is a castle located in Loughrea, County Galway, Ireland. The castle was built by Richard de Burgh, Lord of Connaught in 1236. They were one of the most ancient and influential families in Irish history. The town of Loughrea was later fortified with a town wall, gates and a moat to the north, east and west, with Lough Rea as a natural defence to the south.",
+        "type": "castle",
+        "period": "Medieval",
+        "rating": 4,
+        "tags": [
+          "island",
+          "ruins-romantic",
+          "woodland",
+          "atmospheric",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Lough Key Forest Park",
+            "url": "https://www.loughkey.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Loughrea_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/McDermott%27s_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779052706657
     }
   ]
 }
