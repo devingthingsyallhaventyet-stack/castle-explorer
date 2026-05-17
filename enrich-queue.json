@@ -707,6 +707,46 @@
         "enrichNotes": ""
       },
       "ts": 1779049041718
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Tullynally Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Westmeath\n*Type:* castle\n*Period:* 17th century\n*Coords:* 53.68321, -7.32785\n*Wikipedia:* https://en.wikipedia.org/wiki/Tullynally_Castle\n*Maps:* https://www.google.com/maps/search/Tullynally%20Castle/@53.6333,-7.4,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHAMFaj71s-fjyTq6arXucwS1JR7kVDo9liSPR4jZA2qCmAkzKtwpfrLjBFn6hV9z86-3pAmUTl4eopoogvLFLisSK814hjS6M=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.tullynallycastle.ie/\n\n*Description:*\nTullynally Castle, also known as Pakenham Hall, is a country house situated some 2 km from Castlepollard on the Coole village road in County Westmeath, Ireland. The Gothic-style building has over 120 rooms and has been home to the Pakenham family for over 350 years.\n\n_Listing 15 of 94_",
+      "listing": {
+        "name": "Tullynally Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Westmeath",
+        "lat": 53.68321,
+        "lng": -7.32785,
+        "mapsLink": "https://www.google.com/maps/search/Tullynally%20Castle/@53.6333,-7.4,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHAMFaj71s-fjyTq6arXucwS1JR7kVDo9liSPR4jZA2qCmAkzKtwpfrLjBFn6hV9z86-3pAmUTl4eopoogvLFLisSK814hjS6M=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Tullynally Castle, also known as Pakenham Hall, is a country house situated some 2 km from Castlepollard on the Coole village road in County Westmeath, Ireland. The Gothic-style building has over 120 rooms and has been home to the Pakenham family for over 350 years.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Tullynally_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Tully-Nally-Castle_03.jpg/330px-Tully-Nally-Castle_03.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tullynally_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.tullynallycastle.ie/",
+        "enrichNotes": "add source - https://www.tullynallycastle.ie/"
+      },
+      "ts": 1779049085550
     }
   ]
 }
