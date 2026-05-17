@@ -273,6 +273,57 @@
         "enrichNotes": ""
       },
       "ts": 1779048762328
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dynevor Castle\n*Country:* wales\n*Region:* west wales\n*County:* Carmarthenshire\n*Type:* castle\n*Period:* 12th-13th century\n*Coords:* 51.8768, -4.0184\n*Wikipedia:* https://en.wikipedia.org/wiki/Dinefwr_Castle\n*Maps:* https://maps.app.goo.gl/nPsHYLLgEkHaJ8HX6\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Dinefwr_castle_at_sunrise.jpg/330px-Dinefwr_castle_at_sunrise.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDinefwr Castle is a ruined castle overlooking the River Towy near the town of Llandeilo, Carmarthenshire, Wales. It lies on a ridge on the northern bank of the Towy, with a steep drop of one hundred feet to the river. Dinefwr was the chief seat of the Dinefwr dynasty of the Kingdom of Deheubarth. The castle is a Grade I listed building.\n\n_Listing 6 of 94_",
+      "listing": {
+        "name": "Dynevor Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Carmarthenshire",
+        "lat": 51.8768,
+        "lng": -4.0184,
+        "mapsLink": "https://maps.app.goo.gl/nPsHYLLgEkHaJ8HX6",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Dinefwr_castle_at_sunrise.jpg/330px-Dinefwr_castle_at_sunrise.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Dinefwr Castle is a ruined castle overlooking the River Towy near the town of Llandeilo, Carmarthenshire, Wales. It lies on a ridge on the northern bank of the Towy, with a steep drop of one hundred feet to the river. Dinefwr was the chief seat of the Dinefwr dynasty of the Kingdom of Deheubarth. The castle is a Grade I listed building.",
+        "type": "castle",
+        "period": "12th-13th century",
+        "rating": 4.2,
+        "tags": [
+          "hilltop",
+          "ruins-romantic",
+          "medieval",
+          "woodland",
+          "atmospheric",
+          "celtic"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/dinefwr-castle"
+          },
+          {
+            "name": "Wikipedia – Dinefwr Castle",
+            "url": "https://en.wikipedia.org/wiki/Dinefwr_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dinefwr_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Dinefwr_castle_at_sunrise.jpg/330px-Dinefwr_castle_at_sunrise.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dinefwr_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048776216
     }
   ]
 }
