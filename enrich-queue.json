@@ -837,6 +837,60 @@
         "enrichNotes": "Update wikipedia link - https://en.wikipedia.org/wiki/White_Castle,_Monmouthshire\n"
       },
       "ts": 1779046057908
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* St Non's Chapel\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* abbey\n*Period:* 6th century (chapel: medieval)\n*Coords:* 51.8722, -5.2688\n*Wikipedia:* https://en.wikipedia.org/wiki/Chapel_of_St_Non\n*Maps:* https://www.google.com/maps/search/St%20Non's%20Chapel/@51.8761,-5.275,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNGGItZ0UeXXsqPw33MiucWoHx_qHFqgs7CpG6dZKEytrU4Gyzn-57rbNn9FRMG6fMWEgwyq7uGqZCvn7VqPxrbSXVKfgCaXHcIsifvfY8cq8Oa5bHcmqeAqDFtHs8ZZjd7PvNnXxmrnNitKw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nThe Chapel of St Non is located on the coast near St David's in Pembrokeshire, West Wales. Held by tradition to mark the birthplace of St David, the ruin cannot be accurately dated but is unusual in that it is aligned north–south rather than the usual east–west. Near to the ruined chapel is a retreat, a modern chapel and a holy well. The site was protected in the 1950s and is now the responsibility of the Welsh Heritage organisation Cadw.\n\n_Listing 16 of 28_",
+      "listing": {
+        "name": "St Non's Chapel",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 51.8722,
+        "lng": -5.2688,
+        "mapsLink": "https://www.google.com/maps/search/St%20Non's%20Chapel/@51.8761,-5.275,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNGGItZ0UeXXsqPw33MiucWoHx_qHFqgs7CpG6dZKEytrU4Gyzn-57rbNn9FRMG6fMWEgwyq7uGqZCvn7VqPxrbSXVKfgCaXHcIsifvfY8cq8Oa5bHcmqeAqDFtHs8ZZjd7PvNnXxmrnNitKw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Chapel of St Non is located on the coast near St David's in Pembrokeshire, West Wales. Held by tradition to mark the birthplace of St David, the ruin cannot be accurately dated but is unusual in that it is aligned north–south rather than the usual east–west. Near to the ruined chapel is a retreat, a modern chapel and a holy well. The site was protected in the 1950s and is now the responsibility of the Welsh Heritage organisation Cadw.",
+        "type": "abbey",
+        "period": "6th century (chapel: medieval)",
+        "rating": 4.3,
+        "tags": [
+          "celtic",
+          "coastal",
+          "cliffside",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia – St Non's Chapel",
+            "url": "https://en.wikipedia.org/wiki/St_Non%27s_Chapel"
+          },
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/st-nons-chapel"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Chapel_of_St_Non",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/St_Non%27s_Chapel.JPG/330px-St_Non%27s_Chapel.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Thruxton",
+          "license": "CC BY 3.0",
+          "description": "St Non's Chapel",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046073466
     }
   ]
 }
