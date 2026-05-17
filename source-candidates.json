@@ -1,21 +1,14 @@
 {
   "candidates": [
     {
-      "name": "St Giles Cathedral",
+      "name": "St Giles' Cathedral",
       "candidateUrl": "https://www.stgilescathedral.org.uk/",
       "candidateLabel": "St Giles Cathedral Official Website",
       "status": "pending",
       "foundDate": "2026-05-16"
     },
     {
-      "name": "Delapré Abbey",
-      "candidateUrl": "https://delapreabbey.org/",
-      "candidateLabel": "Historic House Northampton | Delapré Abbey and Park",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "St Donats Castle",
+      "name": "St Donat's Castle",
       "candidateUrl": "https://uwcatlanticexperience.com/",
       "candidateLabel": "UWC Atlantic Experience St Donats Castle",
       "status": "pending",
