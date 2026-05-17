@@ -516,6 +516,63 @@
         "enrichNotes": "add source - https://howthcastle.ie/"
       },
       "ts": 1779052223248
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* King John's Castle (Carlingford)\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Louth\n*Type:* castle\n*Period:* 12th century\n*Coords:* 54.043177, -6.18683\n*Wikipedia:* https://en.wikipedia.org/wiki/King_John's_Castle_(Carlingford)\n*Maps:* https://www.google.com/maps/search/King%20John's%20Castle%20(Carlingford)/@54.041,-6.188,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Carlingford_Castle.jpg/330px-Carlingford_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* rename listing as Carlingford Castle \n\n*Description:*\nKing John's Castle, also known as Carlingford Castle, is an enclosure castle and National Monument located in Carlingford, County Louth, Ireland.\n\n_Listing 11 of 33_",
+      "listing": {
+        "name": "King John's Castle (Carlingford)",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Louth",
+        "lat": 54.043177,
+        "lng": -6.18683,
+        "mapsLink": "https://www.google.com/maps/search/King%20John's%20Castle%20(Carlingford)/@54.041,-6.188,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Carlingford_Castle.jpg/330px-Carlingford_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "King John's Castle, also known as Carlingford Castle, is an enclosure castle and National Monument located in Carlingford, County Louth, Ireland.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4,
+        "tags": [
+          "coastal",
+          "norman",
+          "ruins-romantic",
+          "photogenic",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/king-johns-castle-carlingford/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/King_John%27s_Castle_(Carlingford)"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/King_John's_Castle_(Carlingford)",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Carlingford_Castle.jpg/330px-Carlingford_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Aubrey Dale",
+          "license": "CC BY-SA 2.0",
+          "description": "Carlingford Castle (1)",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "rename listing as Carlingford Castle ",
+        "enrichNotes": "rename listing as Carlingford Castle "
+      },
+      "ts": 1779052264589
     }
   ]
 }
