@@ -187,6 +187,56 @@
         "enrichNotes": "more research "
       },
       "ts": 1779050888182
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Donegal Abbey\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Donegal\n*Type:* abbey\n*Period:* 15th century\n*Coords:* 54.6504, -8.1152\n*Wikipedia:* https://en.wikipedia.org/wiki/Donegal_Abbey\n*Maps:* https://www.google.com/maps/search/Donegal%20Abbey/@54.651,-8.118,15z\n*Main Image:* https://img.castlecore.uk/donegal-abbey.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://abbeyofdonegal.ie/ add source\n\n*Description:*\nDonegal Abbey is a ruined Franciscan Priory in Donegal in Ireland. It was constructed by the O'Donnell dynasty in the fifteenth century and remained a center of Classical Christian education even after its destruction during the Nine Years War. It is sometimes referred to as Donegal Friary.\n\n_Listing 5 of 53_",
+      "listing": {
+        "name": "Donegal Abbey",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Donegal",
+        "lat": 54.6504,
+        "lng": -8.1152,
+        "mapsLink": "https://www.google.com/maps/search/Donegal%20Abbey/@54.651,-8.118,15z",
+        "image": "https://img.castlecore.uk/donegal-abbey.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Donegal Abbey is a ruined Franciscan Priory in Donegal in Ireland. It was constructed by the O'Donnell dynasty in the fifteenth century and remained a center of Classical Christian education even after its destruction during the Nine Years War. It is sometimes referred to as Donegal Friary.",
+        "type": "abbey",
+        "period": "15th century",
+        "rating": 4.1,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "coastal",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Donegal_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Donegal_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Donegal_Friary_Cloister_East_Range_2009_09_23.jpg/330px-Donegal_Friary_Cloister_East_Range_2009_09_23.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Donegal_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://abbeyofdonegal.ie/ add source",
+        "enrichNotes": "https://abbeyofdonegal.ie/ add source"
+      },
+      "ts": 1779050924372
     }
   ]
 }
