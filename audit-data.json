@@ -31688,7 +31688,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Farnham Castle Trust",
+        "url": "https://www.farnham-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Farnham Castle Trust",
+        "url": "https://www.farnham-castle.com/"
+      }
+    ]
   },
   {
     "name": "Guildford Castle",
@@ -32255,7 +32267,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Tonbridge Castle Kent",
+        "url": "https://www.tonbridgecastle.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Tonbridge Castle Kent",
+        "url": "https://www.tonbridgecastle.org/"
+      }
+    ]
   },
   {
     "name": "Bayham Old Abbey",
@@ -32529,7 +32553,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Homepage - Amberley Castle",
+        "url": "https://amberleycastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Homepage - Amberley Castle",
+        "url": "https://amberleycastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Odiham Castle",
@@ -33019,7 +33055,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "wikipedia",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Herstmonceux Castle Estate and Gardens, East Sussex",
+        "url": "https://herstmonceux-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Herstmonceux Castle Estate and Gardens, East Sussex",
+        "url": "https://herstmonceux-castle.com/"
+      }
+    ]
   },
   {
     "name": "Battle Abbey",
@@ -33213,7 +33261,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Saltwood Castle – Saltwood Castle in the heart of Kent",
+        "url": "https://www.saltwoodcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Saltwood Castle – Saltwood Castle in the heart of Kent",
+        "url": "https://www.saltwoodcastle.com/"
+      }
+    ]
   },
   {
     "name": "Allington Castle",
@@ -33264,7 +33324,19 @@
       "source": "Wikimedia Commons"
     },
     "imageReviewDone": true,
-    "auditNote": "low gallery count"
+    "auditNote": "low gallery count",
+    "sources": [
+      {
+        "label": "Allington Castle - A Historic Kent Castle and Exclusive Wedding & Filming Venue",
+        "url": "https://allingtoncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Allington Castle - A Historic Kent Castle and Exclusive Wedding & Filming Venue",
+        "url": "https://allingtoncastle.com/"
+      }
+    ]
   },
   {
     "name": "Leybourne Castle",
@@ -33378,7 +33450,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Basing House | Hampshire Cultural Trust",
+        "url": "https://www.hampshireculture.org.uk/basing-house"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Basing House | Hampshire Cultural Trust",
+        "url": "https://www.hampshireculture.org.uk/basing-house"
+      }
+    ]
   },
   {
     "name": "Minster Lovell Hall",
@@ -33502,7 +33586,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Broughton Castle",
+        "url": "https://www.broughtoncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Broughton Castle",
+        "url": "https://www.broughtoncastle.com/"
+      }
+    ]
   },
   {
     "name": "Boarstall Tower",
@@ -33700,7 +33796,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Knepp - Rewilding Pioneers (Knepp Castle Estate)",
+        "url": "https://knepp.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Knepp - Rewilding Pioneers (Knepp Castle Estate)",
+        "url": "https://knepp.co.uk/"
+      }
+    ]
   },
   {
     "name": "Windsor Castle",
@@ -33775,7 +33883,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Windsor_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Windsor_Castle",
+    "sources": [
+      {
+        "label": "Windsor Castle - Royal Collection Trust",
+        "url": "https://www.rct.uk/visit/windsor-castle"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Windsor Castle - Royal Collection Trust",
+        "url": "https://www.rct.uk/visit/windsor-castle"
+      }
+    ]
   },
   {
     "name": "Hampton Court Palace",
@@ -33894,7 +34014,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lympne Castle - Wedding Venue & Event Venue, Kent UK",
+        "url": "https://lympnecastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lympne Castle - Wedding Venue & Event Venue, Kent UK",
+        "url": "https://lympnecastle.com/"
+      }
+    ]
   },
   {
     "name": "Wallingford Castle",
@@ -34215,7 +34347,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Canterbury_Cathedral"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Canterbury_Cathedral",
+    "sources": [
+      {
+        "label": "Canterbury Cathedral",
+        "url": "https://www.canterbury-cathedral.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Canterbury Cathedral",
+        "url": "https://www.canterbury-cathedral.org/"
+      }
+    ]
   },
   {
     "name": "Boxgrove Priory",
@@ -34284,7 +34428,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "The Priory Church of St Mary and St Blaise Boxgrove",
+        "url": "https://www.boxgrovepriory.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "The Priory Church of St Mary and St Blaise Boxgrove",
+        "url": "https://www.boxgrovepriory.co.uk/"
+      }
+    ]
   },
   {
     "name": "Beaulieu Abbey",
@@ -34369,7 +34525,19 @@
       "credit": "Own work",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Historic Cistercian Abbey | Beaulieu, New Forest",
+        "url": "https://www.beaulieu.co.uk/attractions/beaulieu-abbey/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Historic Cistercian Abbey | Beaulieu, New Forest",
+        "url": "https://www.beaulieu.co.uk/attractions/beaulieu-abbey/"
+      }
+    ]
   },
   {
     "name": "Reading Abbey",
@@ -34484,7 +34652,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dorchester Abbey",
+        "url": "https://www.dorchester-abbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dorchester Abbey",
+        "url": "https://www.dorchester-abbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Abingdon Abbey",
@@ -34603,7 +34783,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Highclere Castle: Homepage",
+        "url": "https://www.highclerecastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Highclere Castle: Homepage",
+        "url": "https://www.highclerecastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Southsea Castle",
@@ -34682,7 +34874,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Southsea Castle",
+        "url": "https://southseacastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Southsea Castle",
+        "url": "https://southseacastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Mapledurham House",
@@ -34756,7 +34960,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Mapledurham Estate",
+        "url": "https://www.mapledurham.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Mapledurham Estate",
+        "url": "https://www.mapledurham.co.uk/"
+      }
+    ]
   },
   {
     "name": "Tintagel Castle",
@@ -35809,7 +36025,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Berkeley_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Berkeley_Castle",
+    "sources": [
+      {
+        "label": "Discover Berkeley Castle’s Rich History",
+        "url": "https://www.berkeley-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Discover Berkeley Castle’s Rich History",
+        "url": "https://www.berkeley-castle.com/"
+      }
+    ]
   },
   {
     "name": "Carisbrooke Castle",
