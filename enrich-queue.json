@@ -470,6 +470,65 @@
         "enrichNotes": ""
       },
       "ts": 1779061318768
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Duiske Abbey\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Kilkenny\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 52.54115278, -6.95466389\n*Wikipedia:* https://en.wikipedia.org/wiki/Duiske_Abbey\n*Maps:* https://www.google.com/maps/search/Duiske%20Abbey/@52.593,-6.937,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/330px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nDuiske Abbey National Monument, also known as Graiguenamanagh Abbey, is a 13th-century Cistercian monastery situated in Graiguenamanagh, County Kilkenny in Ireland.\n\n_Listing 10 of 252_",
+      "listing": {
+        "name": "Duiske Abbey",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Kilkenny",
+        "lat": 52.54115278,
+        "lng": -6.95466389,
+        "mapsLink": "https://www.google.com/maps/search/Duiske%20Abbey/@52.593,-6.937,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/330px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Duiske Abbey National Monument, also known as Graiguenamanagh Abbey, is a 13th-century Cistercian monastery situated in Graiguenamanagh, County Kilkenny in Ireland.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 3.8,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "norman",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Duiske_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Duiske_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Graiguenamanach_Choir_Window_SE_1997_08_27.jpg/330px-Graiguenamanach_Choir_Window_SE_1997_08_27.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Andreas F. Borchert",
+          "license": "CC BY-SA 4.0",
+          "description": "Graiguenamanach, County Kilkenny, Ireland\n\n\nChoir Window as seen from South East",
+          "credit": "Self-photographed",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Duiske_Abbey",
+        "altNames": [
+          "Graiguenamanagh Abbey"
+        ],
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779061372843
     }
   ]
 }
