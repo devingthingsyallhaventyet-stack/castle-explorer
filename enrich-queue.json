@@ -42,6 +42,47 @@
         "enrichNotes": "https://www.raby.co.uk/raby-castle/ add source "
       },
       "ts": 1779035025633
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Chester Castle\n*Country:* england\n*Region:* northern england\n*County:* Cheshire\n*Type:* castle\n*Period:* 11th century\n*Coords:* 53.1853, -2.8923\n*Wikipedia:* https://en.wikipedia.org/wiki/Chester_Castle\n*Maps:* https://www.google.com/maps/search/Chester%20Castle/@53.1863,-2.8904,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqGwqKs7L78C3hV6r4o_u2wVW8q1ZwZYqdqIlnH-UimqUTayzwD7gI1Luu4DrhDET0qhUtoAfwWIuaeKm2Ua6pwBgKaXSa6QHiM=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nChester Castle is in the city of Chester, Cheshire, England. It is sited at the southwest extremity of the area bounded by the city walls. The castle stands on an eminence overlooking the River Dee. In the castle complex are the remaining parts of the medieval castle together with the neoclassical buildings designed by Thomas Harrison which were built between 1788 and 1813. Parts of the neoclassical buildings are used today by the Crown Court and as a military museum. The museum and the medieval remains are a tourist attraction.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Chester Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cheshire",
+        "lat": 53.1853,
+        "lng": -2.8923,
+        "mapsLink": "https://www.google.com/maps/search/Chester%20Castle/@53.1863,-2.8904,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqGwqKs7L78C3hV6r4o_u2wVW8q1ZwZYqdqIlnH-UimqUTayzwD7gI1Luu4DrhDET0qhUtoAfwWIuaeKm2Ua6pwBgKaXSa6QHiM=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Chester Castle is in the city of Chester, Cheshire, England. It is sited at the southwest extremity of the area bounded by the city walls. The castle stands on an eminence overlooking the River Dee. In the castle complex are the remaining parts of the medieval castle together with the neoclassical buildings designed by Thomas Harrison which were built between 1788 and 1813. Parts of the neoclassical buildings are used today by the Crown Court and as a military museum. The museum and the medieval remains are a tourist attraction.",
+        "type": "castle",
+        "period": "11th century",
+        "rating": 3.8,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Chester_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Chester_Castle_-_geograph.org.uk_-_1022086.jpg/330px-Chester_Castle_-_geograph.org.uk_-_1022086.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "John Allan",
+          "license": "CC BY-SA 2.0",
+          "description": "Chester Castle The oval motte of the castle with the half-moon tower visible at the left end.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779035058136
     }
   ]
 }
