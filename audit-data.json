@@ -19299,7 +19299,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Rowallan Castle Estate",
+        "url": "https://rowallancastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Rowallan Castle Estate",
+        "url": "https://rowallancastle.com/"
+      }
+    ]
   },
   {
     "name": "Alloway Auld Kirk",
@@ -20020,7 +20032,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Closeburn Castle",
+        "url": "https://closeburncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Closeburn Castle",
+        "url": "https://closeburncastle.com/"
+      }
+    ]
   },
   {
     "name": "Auchinleck House",
@@ -21688,7 +21712,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Waltham Abbey Church",
+        "url": "https://www.walthamabbeychurch.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Waltham Abbey Church",
+        "url": "https://www.walthamabbeychurch.co.uk/"
+      }
+    ]
   },
   {
     "name": "Berkhamsted Castle",
@@ -21762,7 +21798,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Berkhamsted Castle",
+        "url": "https://www.berkhamstedcastle.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Berkhamsted Castle",
+        "url": "https://www.berkhamstedcastle.org.uk/"
+      }
+    ]
   },
   {
     "name": "Wingfield Castle",
@@ -22037,7 +22085,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Kimbolton Castle",
+        "url": "https://kimboltoncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Kimbolton Castle",
+        "url": "https://kimboltoncastle.com/"
+      }
+    ]
   },
   {
     "name": "Elton Hall",
@@ -22452,7 +22512,19 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Stansted_Mountfitchet_Castle",
     "imageAttribution": "local",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Mountfitchet Castle",
+        "url": "https://mountfitchetcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Mountfitchet Castle",
+        "url": "https://mountfitchetcastle.com/"
+      }
+    ]
   },
   {
     "name": "Bishop's Stortford Castle",
@@ -22655,7 +22727,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Ely Cathedral",
+        "url": "https://www.elycathedral.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Ely Cathedral",
+        "url": "https://www.elycathedral.org/"
+      }
+    ]
   },
   {
     "name": "Denny Abbey",
@@ -22940,7 +23024,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Layer Marney Tower",
+        "url": "https://www.layermarneytower.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Layer Marney Tower",
+        "url": "https://www.layermarneytower.co.uk/"
+      }
+    ]
   },
   {
     "name": "Caistor Roman Site",
@@ -23112,7 +23208,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Destination Landguard Suffolk",
+        "url": "https://landguard.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Destination Landguard Suffolk",
+        "url": "https://landguard.com/"
+      }
+    ]
   },
   {
     "name": "Helmingham Hall",
@@ -23192,7 +23300,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Helmingham Hall Gardens & Events",
+        "url": "https://www.helmingham.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Helmingham Hall Gardens & Events",
+        "url": "https://www.helmingham.com/"
+      }
+    ]
   },
   {
     "name": "Wolterton Hall",
@@ -23304,7 +23424,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Mannington Hall",
+        "url": "https://mannington.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Mannington Hall",
+        "url": "https://mannington.co.uk/"
+      }
+    ]
   },
   {
     "name": "Felbrigg Hall",
@@ -23482,7 +23614,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Alnwick_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Alnwick_Castle",
+    "sources": [
+      {
+        "label": "Alnwick Castle",
+        "url": "https://www.alnwickcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Alnwick Castle",
+        "url": "https://www.alnwickcastle.com/"
+      }
+    ]
   },
   {
     "name": "Bamburgh Castle",
@@ -23553,7 +23697,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bamburgh_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bamburgh_Castle",
+    "sources": [
+      {
+        "label": "Bamburgh Castle",
+        "url": "https://www.bamburghcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Bamburgh Castle",
+        "url": "https://www.bamburghcastle.com/"
+      }
+    ]
   },
   {
     "name": "Dunstanburgh Castle",
@@ -24118,7 +24274,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Appleby Castle & The Norman Centre",
+        "url": "https://www.applebycastle.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Appleby Castle & The Norman Centre",
+        "url": "https://www.applebycastle.org/"
+      }
+    ]
   },
   {
     "name": "Raby Castle",
@@ -24217,7 +24385,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lancaster Castle",
+        "url": "https://www.lancastercastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lancaster Castle",
+        "url": "https://www.lancastercastle.com/"
+      }
+    ]
   },
   {
     "name": "Clitheroe Castle",
@@ -24729,7 +24909,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Chillingham Castle",
+        "url": "https://chillingham-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Chillingham Castle",
+        "url": "https://chillingham-castle.com/"
+      }
+    ]
   },
   {
     "name": "Edlingham Castle",
@@ -25116,7 +25308,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Hexham Abbey",
+        "url": "https://hexhamabbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Hexham Abbey",
+        "url": "https://hexhamabbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Belsay Castle",
@@ -25595,7 +25799,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Muncaster Castle Gardens & Estate",
+        "url": "https://www.muncaster.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Muncaster Castle Gardens & Estate",
+        "url": "https://www.muncaster.co.uk/"
+      }
+    ]
   },
   {
     "name": "Dacre Castle",
@@ -26186,7 +26402,19 @@
       "credit": "https://www.flickr.com/photos/mjtmail/6704115249/",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Hoghton Tower",
+        "url": "https://www.hoghtontower.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Hoghton Tower",
+        "url": "https://www.hoghtontower.co.uk/"
+      }
+    ]
   },
   {
     "name": "Bowes Castle",
@@ -26331,7 +26559,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Brancepeth Castle",
+        "url": "https://brancepethcastle.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Brancepeth Castle",
+        "url": "https://brancepethcastle.uk/"
+      }
+    ]
   },
   {
     "name": "Lumley Castle",
@@ -26412,7 +26652,19 @@
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lumley_Castle",
     "imageAttribution": "local",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lumley Castle Hotel",
+        "url": "https://www.lumleycastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lumley Castle Hotel",
+        "url": "https://www.lumleycastle.com/"
+      }
+    ]
   },
   {
     "name": "Witton Castle",
@@ -26483,7 +26735,19 @@
       "credit": "From geograph.org.uk",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Witton Castle Country Park",
+        "url": "https://wittoncastlecountrypark.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Witton Castle Country Park",
+        "url": "https://wittoncastlecountrypark.co.uk/"
+      }
+    ]
   },
   {
     "name": "Hylton Castle",
@@ -26889,7 +27153,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Rose Castle",
+        "url": "https://www.rosecastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Rose Castle",
+        "url": "https://www.rosecastle.com/"
+      }
+    ]
   },
   {
     "name": "Greystoke Castle",
@@ -27119,7 +27395,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Peckforton Castle",
+        "url": "https://www.peckfortoncastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Peckforton Castle",
+        "url": "https://www.peckfortoncastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Greenhalgh Castle",
@@ -30262,7 +30550,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "The Birkenhead Priory",
+        "url": "https://thebirkenheadpriory.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "The Birkenhead Priory",
+        "url": "https://thebirkenheadpriory.org/"
+      }
+    ]
   },
   {
     "name": "Speke Hall",
@@ -30434,7 +30734,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tower_of_London"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tower_of_London",
+    "sources": [
+      {
+        "label": "Tower of London - Historic Royal Palaces",
+        "url": "https://www.hrp.org.uk/tower-of-london/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Tower of London - Historic Royal Palaces",
+        "url": "https://www.hrp.org.uk/tower-of-london/"
+      }
+    ]
   },
   {
     "name": "Dover Castle",
@@ -30580,7 +30892,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Leeds_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Leeds_Castle",
+    "sources": [
+      {
+        "label": "Leeds Castle in Kent",
+        "url": "https://www.leeds-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Leeds Castle in Kent",
+        "url": "https://www.leeds-castle.com/"
+      }
+    ]
   },
   {
     "name": "Bodiam Castle",
@@ -30743,7 +31067,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Arundel Castle & Gardens",
+        "url": "https://www.arundelcastle.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Arundel Castle & Gardens",
+        "url": "https://www.arundelcastle.org/"
+      }
+    ]
   },
   {
     "name": "Rochester Castle",
@@ -31459,7 +31795,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Blenheim_Palace"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Blenheim_Palace",
+    "sources": [
+      {
+        "label": "Blenheim Palace",
+        "url": "https://www.blenheimpalace.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Blenheim Palace",
+        "url": "https://www.blenheimpalace.com/"
+      }
+    ]
   },
   {
     "name": "Oxford Castle",
