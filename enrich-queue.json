@@ -581,6 +581,62 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/22WK6f2U8bvLGE5Q6\nadd source - https://www.doreabbey.org.uk/"
       },
       "ts": 1779048170186
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Wentworth Castle\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 53.5243, -1.5188\n*Wikipedia:* https://en.wikipedia.org/wiki/Wentworth_Castle\n*Maps:* https://www.google.com/maps/search/Wentworth%20Castle/@53.5067,-1.5417,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPzyfFgXm3JIwguvPR-n1rcjvLpSDeTDo7d4lmHDM3GkgR3g8E-zMnW6f3vcxfijNwbnV4mpLNXD80Tp6_O-OrTvJKWfsgwcZkMd1F7bFpC6s29S1cgo1skm_KXKaJGhGDxg1ud9ocv2MTP3A=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.wentworthcastle.org/\nupdate google places link - https://maps.app.goo.gl/DfH1qJuPZnPJq1Er5\n\n*Description:*\nWentworth Castle is a grade-I listed country house, the former seat of the Earls of Strafford, at Stainborough, near Barnsley in South Yorkshire, England. It is now home to the Northern College for Residential and Community Education.\n\n_Listing 12 of 111_",
+      "listing": {
+        "name": "Wentworth Castle",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 53.5243,
+        "lng": -1.5188,
+        "mapsLink": "https://www.google.com/maps/search/Wentworth%20Castle/@53.5067,-1.5417,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPzyfFgXm3JIwguvPR-n1rcjvLpSDeTDo7d4lmHDM3GkgR3g8E-zMnW6f3vcxfijNwbnV4mpLNXD80Tp6_O-OrTvJKWfsgwcZkMd1F7bFpC6s29S1cgo1skm_KXKaJGhGDxg1ud9ocv2MTP3A=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Wentworth Castle is a grade-I listed country house, the former seat of the Earls of Strafford, at Stainborough, near Barnsley in South Yorkshire, England. It is now home to the Northern College for Residential and Community Education.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.2,
+        "tags": [
+          "gardens",
+          "photogenic",
+          "atmospheric",
+          "guided-tours",
+          "tearoom-cafe",
+          "dog-friendly",
+          "woodland"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/yorkshire/wentworth-castle-gardens/the-history-of-wentworth-castle-gardens"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wentworth_Castle"
+          },
+          {
+            "name": "Wentworth Castle",
+            "url": "https://www.wentworthcastle.org/history-restoration/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Wentworth_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Wentworth_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.wentworthcastle.org/\nupdate google places link - https://maps.app.goo.gl/DfH1qJuPZnPJq1Er5",
+        "enrichNotes": "add source - https://www.wentworthcastle.org/\nupdate google places link - https://maps.app.goo.gl/DfH1qJuPZnPJq1Er5"
+      },
+      "ts": 1779048252900
     }
   ]
 }
