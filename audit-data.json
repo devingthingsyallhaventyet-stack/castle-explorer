@@ -776,7 +776,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Tarbert Castle Heritage Park",
+        "url": "https://www.tarbertcastle.info/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Tarbert Castle Heritage Park",
+        "url": "https://www.tarbertcastle.info/"
+      }
+    ]
   },
   {
     "name": "Dunyvaig Castle",
@@ -987,7 +999,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lews Castle - Luxury Accommodation & Heritage",
+        "url": "https://www.lews-castle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lews Castle - Luxury Accommodation & Heritage",
+        "url": "https://www.lews-castle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Dunoon Castle",
@@ -1813,7 +1837,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Barcaldine Castle - Luxury B&B Oban",
+        "url": "https://barcaldinecastle.co.uk"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Barcaldine Castle - Luxury B&B Oban",
+        "url": "https://barcaldinecastle.co.uk"
+      }
+    ]
   },
   {
     "name": "Iona Abbey",
@@ -2682,7 +2718,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Neidpath Castle - Wedding Venue & Accommodation",
+        "url": "https://www.neidpathcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Neidpath Castle - Wedding Venue & Accommodation",
+        "url": "https://www.neidpathcastle.com/"
+      }
+    ]
   },
   {
     "name": "Smailholm Tower",
@@ -2810,7 +2858,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Floors Castle - Historic Venue & Gardens",
+        "url": "https://www.floorscastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Floors Castle - Historic Venue & Gardens",
+        "url": "https://www.floorscastle.com/"
+      }
+    ]
   },
   {
     "name": "Thirlestane Castle",
@@ -2875,7 +2935,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Thirlestane Castle",
+        "url": "https://thirlestanecastle.co.uk"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Thirlestane Castle",
+        "url": "https://thirlestanecastle.co.uk"
+      }
+    ]
   },
   {
     "name": "Fast Castle",
@@ -3328,7 +3400,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Aikwood Tower - Luxury Scottish Castle Accommodation",
+        "url": "https://www.aikwoodtower.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Aikwood Tower - Luxury Scottish Castle Accommodation",
+        "url": "https://www.aikwoodtower.com/"
+      }
+    ]
   },
   {
     "name": "Duns Castle",
@@ -3401,7 +3485,19 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "label": "Duns Castle - Scottish Castle Venue for Weddings and Events",
+        "url": "https://dunscastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Duns Castle - Scottish Castle Venue for Weddings and Events",
+        "url": "https://dunscastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Cranshaws Castle",
@@ -3521,7 +3617,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Fatlips Castle - Historical Resource and Information",
+        "url": "https://www.fatlipscastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Fatlips Castle - Historical Resource and Information",
+        "url": "https://www.fatlipscastle.com/"
+      }
+    ]
   },
   {
     "name": "Hume Castle",
@@ -3876,7 +3984,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Traquair House - Scotlands Oldest Inhabited House",
+        "url": "https://www.traquair.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Traquair House - Scotlands Oldest Inhabited House",
+        "url": "https://www.traquair.co.uk/"
+      }
+    ]
   },
   {
     "name": "Coldingham Priory",
@@ -4446,7 +4566,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Borthwick Castle - The Ultimate Scottish Castle Experience",
+        "url": "https://borthwickcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Borthwick Castle - The Ultimate Scottish Castle Experience",
+        "url": "https://borthwickcastle.com/"
+      }
+    ]
   },
   {
     "name": "Lauriston Castle",
@@ -4650,7 +4782,19 @@
     "exists": "yes",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Edinburgh_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Edinburgh_Castle",
+    "sources": [
+      {
+        "label": "Official Edinburgh Castle Website",
+        "url": "https://www.edinburghcastle.scot/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Official Edinburgh Castle Website",
+        "url": "https://www.edinburghcastle.scot/"
+      }
+    ]
   },
   {
     "name": "Luffness Castle",
@@ -4782,7 +4926,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "The Official Rosslyn Chapel Website",
+        "url": "https://www.rosslynchapel.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "The Official Rosslyn Chapel Website",
+        "url": "https://www.rosslynchapel.com/"
+      }
+    ]
   },
   {
     "name": "Seton Collegiate Church",
