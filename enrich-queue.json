@@ -1,3 +1,54 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Staigue Fort\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Kerry\n*Type:* fortified house\n*Period:* Iron Age/Early Medieval\n*Coords:* 51.80527778, -10.01583333\n*Wikipedia:* https://en.wikipedia.org/wiki/Staigue_stone_fort\n*Maps:* https://www.google.com/maps/search/Staigue%20Fort/@51.775,-10.028,15z\n*Main Image:* https://img.castlecore.uk/staigue-fort.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nStaigue or Staig is a ruined stone ringfort eighteen kilometres west of Sneem, on the Iveragh peninsula in County Kerry, Ireland. The fort is thought to have been built during the late Iron Age, probably 100 BC, as a defensive stronghold for a local lord or king.\n\n_Listing 1 of 111_",
+      "listing": {
+        "name": "Staigue Fort",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Kerry",
+        "lat": 51.80527778,
+        "lng": -10.01583333,
+        "mapsLink": "https://www.google.com/maps/search/Staigue%20Fort/@51.775,-10.028,15z",
+        "image": "https://img.castlecore.uk/staigue-fort.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Staigue or Staig is a ruined stone ringfort eighteen kilometres west of Sneem, on the Iveragh peninsula in County Kerry, Ireland. The fort is thought to have been built during the late Iron Age, probably 100 BC, as a defensive stronghold for a local lord or king.",
+        "type": "fortified house",
+        "period": "Iron Age/Early Medieval",
+        "rating": 4.3,
+        "tags": [
+          "prehistoric",
+          "well-preserved",
+          "atmospheric",
+          "photogenic",
+          "remote",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Staigue"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Staigue_stone_fort",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Staigue_Fort.jpg/330px-Staigue_Fort.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Staigue_stone_fort",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046864739
+    }
+  ]
 }
