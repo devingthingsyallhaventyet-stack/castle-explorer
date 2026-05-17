@@ -9094,7 +9094,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Paisley Abbey",
+        "url": "https://www.paisleyabbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Paisley Abbey",
+        "url": "https://www.paisleyabbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Glasgow Cathedral",
@@ -9161,7 +9173,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Glasgow Cathedral Official Website",
+        "url": "https://glasgowcathedral.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Glasgow Cathedral Official Website",
+        "url": "https://glasgowcathedral.org/"
+      }
+    ]
   },
   {
     "name": "Tower of Hallbar",
@@ -9529,7 +9553,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinneil_House",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Kinneil Estate and Nature Reserve",
+        "url": "https://kinneil.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Kinneil Estate and Nature Reserve",
+        "url": "https://kinneil.org.uk/"
+      }
+    ]
   },
   {
     "name": "Callendar House",
@@ -9670,7 +9706,19 @@
     ],
     "exists": "unverified",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "sources": [
+      {
+        "label": "Eilean Donan Castle Official Website",
+        "url": "https://www.eileandonancastle.com"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Eilean Donan Castle Official Website",
+        "url": "https://www.eileandonancastle.com"
+      }
+    ]
   },
   {
     "name": "Urquhart Castle",
@@ -9794,7 +9842,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Dunrobin Castle Official Website",
+        "url": "https://www.dunrobincastle.co.uk"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Dunrobin Castle Official Website",
+        "url": "https://www.dunrobincastle.co.uk"
+      }
+    ]
   },
   {
     "name": "Castle of Mey",
@@ -9863,7 +9923,19 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_of_Mey",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "label": "Castle of Mey Official Website",
+        "url": "https://www.castleofmey.org.uk"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle of Mey Official Website",
+        "url": "https://www.castleofmey.org.uk"
+      }
+    ]
   },
   {
     "name": "Cawdor Castle",
@@ -9926,7 +9998,19 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "reviewNote": "Auto-moved: insufficient images (0-1)",
-    "reviewStatus": "approved"
+    "reviewStatus": "approved",
+    "sources": [
+      {
+        "label": "Cawdor Castle Official Website",
+        "url": "https://www.cawdorcastle.com"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Cawdor Castle Official Website",
+        "url": "https://www.cawdorcastle.com"
+      }
+    ]
   },
   {
     "name": "Ardvreck Castle",
