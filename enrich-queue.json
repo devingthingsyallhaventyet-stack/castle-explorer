@@ -498,6 +498,62 @@
         "enrichNotes": ""
       },
       "ts": 1779045876512
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Boscobel House\n*Country:* england\n*Region:* the midlands\n*County:* Shropshire\n*Type:* castle\n*Period:* 17th century\n*Coords:* 52.6716, -2.2416\n*Wikipedia:* https://en.wikipedia.org/wiki/Boscobel_House\n*Maps:* https://www.google.com/maps/search/Boscobel%20House/@52.6783,-2.355,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMNUMtmz1MOT75y5LxNxzAbrBfqkFRUqBsPUnpBuM9Fgt_vONvR1HqGLJ7vsHWhmfdm8HNY6Smh94l239TmjXeLOSISIMcwWqA65b1DH1cYrCk7brXhekfOil9tmpPQuVjYU7jgEvq5StoCzg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBoscobel House is a Grade II* listed building in the parish of Boscobel in Shropshire. It has been, at various times, a farmhouse, a hunting lodge, and a holiday home; but it is most famous for its role in the escape of Charles II after the Battle of Worcester in 1651. Today it is managed by English Heritage.\n\n_Listing 10 of 28_",
+      "listing": {
+        "name": "Boscobel House",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Shropshire",
+        "lat": 52.6716,
+        "lng": -2.2416,
+        "mapsLink": "https://www.google.com/maps/search/Boscobel%20House/@52.6783,-2.355,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMNUMtmz1MOT75y5LxNxzAbrBfqkFRUqBsPUnpBuM9Fgt_vONvR1HqGLJ7vsHWhmfdm8HNY6Smh94l239TmjXeLOSISIMcwWqA65b1DH1cYrCk7brXhekfOil9tmpPQuVjYU7jgEvq5StoCzg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Boscobel House is a Grade II* listed building in the parish of Boscobel in Shropshire. It has been, at various times, a farmhouse, a hunting lodge, and a holiday home; but it is most famous for its role in the escape of Charles II after the Battle of Worcester in 1651. Today it is managed by English Heritage.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "gardens",
+          "guided-tours",
+          "gift-shop",
+          "museum",
+          "tudor"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Boscobel_House"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/boscobel-house-and-the-royal-oak/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Boscobel_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Boscobel_House_-_geograph.org.uk_-_1289537.jpg/330px-Boscobel_House_-_geograph.org.uk_-_1289537.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Rob Farrow",
+          "license": "CC BY-SA 2.0",
+          "description": "Boscobel House. This was the hiding place of Charles II when he was fleeing his Cromwellian pursuers in 1651 having lost disastorously at the final battle of the Civil War, at Worcester (September 3rd 1651). Of course he more famously hid a few yards south of here in the 1289763.\nThe lefthand range of the building seen here dates from that time, having been built around 1632, but the righthand side is considerably more recent. The family that risked their necks in hiding the fugitive king were the Giffards, and their help was not forgotten by Charles, who on his restoration established a pension for them and their successors - which is still paid to this day. The house is now in the care of English Heritage http://www.english-heritage.org.uk/server.php?show=nav.16650",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045889541
     }
   ]
 }
