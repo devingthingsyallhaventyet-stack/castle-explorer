@@ -5,147 +5,147 @@
       "candidateUrl": "https://www.amhuinnsuidhe.com/",
       "candidateLabel": "Amhuinnsuidhe Castle Official Site",
       "reason": "Private castle website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Kilpeck Church",
       "candidateUrl": "https://kilpeckchurch.org.uk/",
       "candidateLabel": "St Mary and St David Church Kilpeck",
       "reason": "Local church website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "St David's Cathedral",
       "candidateUrl": "https://www.stdavidscathedral.org.uk/",
       "candidateLabel": "St David's Cathedral Official Site",
       "reason": "Local cathedral website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Balgonie Castle",
       "candidateUrl": "https://www.balgoniecastle.co.uk/",
       "candidateLabel": "Balgonie Castle Official Site",
       "reason": "Private castle website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Old Inverlochy Castle",
       "candidateUrl": "https://www.inverlochycastle.co.uk/",
       "candidateLabel": "Inverlochy Castle Official Site",
       "reason": "Private castle website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Michelham Priory",
       "candidateUrl": "https://sussexpast.co.uk/properties-to-discover/michelham-priory/",
       "candidateLabel": "Sussex Past",
       "reason": "Heritage org",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Newcastle Castle Keep",
       "candidateUrl": "https://www.newcastlecastle.co.uk/",
       "candidateLabel": "Newcastle Castle",
       "reason": "Castle museum website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Oxford Castle",
       "candidateUrl": "https://www.oxfordcastleandprison.co.uk/",
       "candidateLabel": "Oxford Castle & Prison",
       "reason": "Tourist attraction website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Auckland Palace",
       "candidateUrl": "https://aucklandproject.org/",
       "candidateLabel": "The Auckland Project",
       "reason": "Heritage charity",
-      "status": "pending"
+      "status": "rejected"
     },
     {
       "name": "Ford Castle",
       "candidateUrl": "https://www.ford-and-etal.co.uk/",
       "candidateLabel": "Ford & Etal Estates",
       "reason": "Private estate website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Dudley Castle",
       "candidateUrl": "https://www.dudleyzoo.org.uk/",
       "candidateLabel": "Dudley Zoo & Castle",
       "reason": "Zoo/castle attraction",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Balintore Castle",
       "candidateUrl": "https://www.balintorecastle.co.uk/",
       "candidateLabel": "Balintore Castle Trust",
       "reason": "Restoration trust",
-      "status": "pending"
+      "status": "rejected"
     },
     {
       "name": "Corsewall Lighthouse",
       "candidateUrl": "https://www.lighthousehotel.co.uk/",
       "candidateLabel": "Corsewall Lighthouse Hotel",
       "reason": "Hotel website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Bodysgallen Hall",
       "candidateUrl": "https://www.bodysgallen.com/",
       "candidateLabel": "Bodysgallen Hall & Spa",
       "reason": "Hotel website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Whalley Abbey",
       "candidateUrl": "https://www.whalleyabbey.org/",
       "candidateLabel": "Whalley Abbey",
       "reason": "Abbey/conference centre",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Hafod Estate",
       "candidateUrl": "https://www.hafod.org/",
       "candidateLabel": "The Hafod Trust",
       "reason": "Heritage charity",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Craig y Nos Castle",
       "candidateUrl": "https://www.craigynoscastle.com/",
       "candidateLabel": "Craig y Nos Castle",
       "reason": "Event venue website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Lough Key Castle",
       "candidateUrl": "https://www.loughkey.ie/",
       "candidateLabel": "Lough Key Forest Park",
       "reason": "Forest park website",
-      "status": "pending"
+      "status": "rejected"
     },
     {
       "name": "Cartmel Priory",
       "candidateUrl": "https://cartmelpriory.org.uk/",
       "candidateLabel": "Cartmel Priory",
       "reason": "Church/priory website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Kinnaird Head Castle",
       "candidateUrl": "https://lighthousemuseum.org.uk/",
       "candidateLabel": "Museum of Scottish Lighthouses",
       "reason": "Museum website",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "name": "Bungay Castle",
       "candidateUrl": "https://bungay-suffolk.co.uk/to-do/castle/",
       "candidateLabel": "Bungay Castle",
       "reason": "Local tourism site",
-      "status": "pending"
+      "status": "rejected"
     }
   ]
 }
