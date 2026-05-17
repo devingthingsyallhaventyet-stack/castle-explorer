@@ -562,6 +562,55 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/yaVj7fPvuXirqame9"
       },
       "ts": 1779044760934
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Strokestown House\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Roscommon\n*Type:* castle\n*Period:* 18th century\n*Coords:* 53.803, -8.101\n*Wikipedia:* https://en.wikipedia.org/wiki/Strokestown_Park\n*Maps:* https://www.google.com/maps/search/Strokestown%20House/@53.803,-8.101,15z\n*Main Image:* https://img.castlecore.uk/strokestown-house.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places - https://maps.app.goo.gl/pyfZZfL3CaC6xkDX7\nadd source - https://strokestownpark.ie/\n\n*Description:*\nStrokestown Park is a Palladian style Georgian house in Strokestown, County Roscommon, Ireland, set on about 300 acres (120 ha).\n\n_Listing 11 of 50_",
+      "listing": {
+        "name": "Strokestown House",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Roscommon",
+        "lat": 53.803,
+        "lng": -8.101,
+        "mapsLink": "https://www.google.com/maps/search/Strokestown%20House/@53.803,-8.101,15z",
+        "image": "https://img.castlecore.uk/strokestown-house.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Strokestown Park is a Palladian style Georgian house in Strokestown, County Roscommon, Ireland, set on about 300 acres (120 ha).",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "museum",
+          "gardens",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Strokestown Park",
+            "url": "https://www.strokestownpark.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Strokestown_Park"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Strokestown_Park",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Strokestown_Park_House.jpg/330px-Strokestown_Park_House.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Strokestown_Park",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places - https://maps.app.goo.gl/pyfZZfL3CaC6xkDX7\nadd source - https://strokestownpark.ie/",
+        "enrichNotes": "update google places - https://maps.app.goo.gl/pyfZZfL3CaC6xkDX7\nadd source - https://strokestownpark.ie/"
+      },
+      "ts": 1779044812918
     }
   ]
 }
