@@ -168,6 +168,66 @@
         "enrichNotes": ""
       },
       "ts": 1779043008644
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cotehele House\n*Country:* england\n*Region:* south west\n*County:* Cornwall\n*Type:* castle\n*Period:* 14th-16th century\n*Coords:* 50.4959, -4.2257\n*Wikipedia:* https://en.wikipedia.org/wiki/Cotehele\n*Maps:* https://www.google.com/maps/search/Cotehele%20House/@50.4917,-4.2267,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Cotehele%2C_house_from_courtyard.jpg/330px-Cotehele%2C_house_from_courtyard.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCotehele is a medieval house with Tudor additions, situated in the parish of Calstock in the east of Cornwall, England, and now belonging to the National Trust. It is a rambling granite and slate-stone manor house on the banks of the River Tamar that has been little changed over five centuries. It was built by the Edgecumbe family in 1485 after the original Manor House was pulled down. Sir Richard Edgecumbe came into the property after fighting for Henry Tudor in the Battle of Bosworth. He was gifted with money and the original Manor House and estate and then proceeded to build Cotehele.\n\n_Listing 4 of 80_",
+      "listing": {
+        "name": "Cotehele House",
+        "country": "england",
+        "region": "south-west",
+        "county": "Cornwall",
+        "lat": 50.4959,
+        "lng": -4.2257,
+        "mapsLink": "https://www.google.com/maps/search/Cotehele%20House/@50.4917,-4.2267,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Cotehele%2C_house_from_courtyard.jpg/330px-Cotehele%2C_house_from_courtyard.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Cotehele is a medieval house with Tudor additions, situated in the parish of Calstock in the east of Cornwall, England, and now belonging to the National Trust. It is a rambling granite and slate-stone manor house on the banks of the River Tamar that has been little changed over five centuries. It was built by the Edgecumbe family in 1485 after the original Manor House was pulled down. Sir Richard Edgecumbe came into the property after fighting for Henry Tudor in the Battle of Bosworth. He was gifted with money and the original Manor House and estate and then proceeded to build Cotehele.",
+        "type": "castle",
+        "period": "14th-16th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "medieval",
+          "tudor",
+          "gardens",
+          "riverside",
+          "gift-shop",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cotehele"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/cornwall/cotehele/history-of-cotehele"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cotehele",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Cotehele%2C_house_from_courtyard.jpg/330px-Cotehele%2C_house_from_courtyard.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Rwendland",
+          "license": "CC BY-SA 3.0",
+          "description": "Cotehele National Trust property, house from courtyard.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cotehele",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043030290
     }
   ]
 }
