@@ -518,6 +518,61 @@
         "enrichNotes": ""
       },
       "ts": 1779044376107
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Packwood House\n*Country:* england\n*Region:* the midlands\n*County:* Warwickshire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 52.3475, -1.74638889\n*Wikipedia:* https://en.wikipedia.org/wiki/Packwood_House\n*Maps:* https://www.google.com/maps/search/Packwood%20House/@52.345,-1.7183,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOcE5CMdDaGU3ycQ8InyR03oiVeLXCd_PUUx6W5geUBTzmnRKCk03m2o_k1EhYLlJuJbuHLoDNt7diWDWCON1ujXSDfbktQjKU6JMBFoelhARt90jEuUzzg1w4Ba3IWFVdoCfuu6-fq9-VnpTw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nPackwood House is a timber-framed Tudor manor house in Packwood on the Solihull border near Lapworth, Warwickshire. Owned by the National Trust since 1941, the house is a Grade I listed building. It has a wealth of tapestries and fine furniture, and is known for the garden of yews.\n\n_Listing 30 of 80_",
+      "listing": {
+        "name": "Packwood House",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Warwickshire",
+        "lat": 52.3475,
+        "lng": -1.74638889,
+        "mapsLink": "https://www.google.com/maps/search/Packwood%20House/@52.345,-1.7183,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOcE5CMdDaGU3ycQ8InyR03oiVeLXCd_PUUx6W5geUBTzmnRKCk03m2o_k1EhYLlJuJbuHLoDNt7diWDWCON1ujXSDfbktQjKU6JMBFoelhARt90jEuUzzg1w4Ba3IWFVdoCfuu6-fq9-VnpTw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Packwood House is a timber-framed Tudor manor house in Packwood on the Solihull border near Lapworth, Warwickshire. Owned by the National Trust since 1941, the house is a Grade I listed building. It has a wealth of tapestries and fine furniture, and is known for the garden of yews.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "tudor",
+          "museum",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/warwickshire/packwood-house"
+          },
+          {
+            "name": "National Trust History",
+            "url": "https://www.nationaltrust.org.uk/visit/warwickshire/packwood-house/history-of-packwood-house"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Packwood_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Packwood_House_2019-08.jpg/330px-Packwood_House_2019-08.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Bs0u10e01",
+          "license": "CC BY-SA 4.0",
+          "description": "Packwood House - National Trust property Warwickshire",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044395933
     }
   ]
 }
