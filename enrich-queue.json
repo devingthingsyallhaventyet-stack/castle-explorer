@@ -147,6 +147,62 @@
         "enrichNotes": ""
       },
       "ts": 1779039723453
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kilpeck Church\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 51.9703, -2.8092\n*Wikipedia:* https://en.wikipedia.org/wiki/Church_of_St_Mary_and_St_David,_Kilpeck\n*Maps:* https://www.google.com/maps/search/Kilpeck%20Church/@51.9567,-2.8883,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/KilpeckChurch%28PhilipHalling%29Feb2006.jpg/330px-KilpeckChurch%28PhilipHalling%29Feb2006.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nThe Church of St Mary and St David is a Church of England parish church at Kilpeck in the English county of Herefordshire, about 5 miles from the border with Monmouthshire, Wales. Pevsner describes Kilpeck as \"one of the most perfect Norman churches in England\". Famous for its stone carvings, the church is a Grade I listed building.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Kilpeck Church",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 51.9703,
+        "lng": -2.8092,
+        "mapsLink": "https://www.google.com/maps/search/Kilpeck%20Church/@51.9567,-2.8883,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/KilpeckChurch%28PhilipHalling%29Feb2006.jpg/330px-KilpeckChurch%28PhilipHalling%29Feb2006.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "The Church of St Mary and St David is a Church of England parish church at Kilpeck in the English county of Herefordshire, about 5 miles from the border with Monmouthshire, Wales. Pevsner describes Kilpeck as \"one of the most perfect Norman churches in England\". Famous for its stone carvings, the church is a Grade I listed building.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.7,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "atmospheric",
+          "norman",
+          "medieval",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Church_of_St_Mary_and_St_David,_Kilpeck"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/hereford/Kilpeck.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Church_of_St_Mary_and_St_David%2C_Kilpeck",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/KilpeckChurch%28PhilipHalling%29Feb2006.jpg/330px-KilpeckChurch%28PhilipHalling%29Feb2006.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Philip Halling",
+          "license": "CC BY-SA 2.0",
+          "description": "St Mary's &amp; St David's parish church, Kilpeck, Herefordshire: view from the southeast, showing the apsidal chancel",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Church_of_St_Mary_and_St_David,_Kilpeck",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779039736825
     }
   ]
 }
