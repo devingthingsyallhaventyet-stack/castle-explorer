@@ -217,6 +217,51 @@
         "enrichNotes": ""
       },
       "ts": 1779036324994
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Dacre Castle\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* tower house\n*Period:* 14th century\n*Coords:* 54.6316, -2.8365\n*Wikipedia:* https://en.wikipedia.org/wiki/Dacre_Castle\n*Maps:* https://www.google.com/maps/search/Dacre%20Castle/@54.65,-2.8333,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Dacre_Castle_%28geograph_2648020%29.jpg/330px-Dacre_Castle_%28geograph_2648020%29.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Shares a site with St Andrew's Church. needs more research. \n\n*Description:*\nDacre Castle is a moated tower house in the village of Dacre, 4 miles (6.4 km) south-west of Penrith, Cumbria, England. It was constructed in the mid-14th century, probably by Margaret Multon, against the background of the threat of Scottish invasion and raids, and was held in the Dacre family until the 17th century. The tower house is 66 feet (20 m) tall, built out of local sandstone, topped by crenellations, with four turrets protruding from a central block, and includes an ornate lavabo in the main hall. Renovated during the 1670s and 1960s after periods of disrepair, the castle is now used as a private home.\n\n_Listing 5 of 10_",
+      "listing": {
+        "name": "Dacre Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.6316,
+        "lng": -2.8365,
+        "mapsLink": "https://www.google.com/maps/search/Dacre%20Castle/@54.65,-2.8333,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Dacre_Castle_%28geograph_2648020%29.jpg/330px-Dacre_Castle_%28geograph_2648020%29.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Dacre Castle is a moated tower house in the village of Dacre, 4 miles (6.4 km) south-west of Penrith, Cumbria, England. It was constructed in the mid-14th century, probably by Margaret Multon, against the background of the threat of Scottish invasion and raids, and was held in the Dacre family until the 17th century. The tower house is 66 feet (20 m) tall, built out of local sandstone, topped by crenellations, with four turrets protruding from a central block, and includes an ornate lavabo in the main hall. Renovated during the 1670s and 1960s after periods of disrepair, the castle is now used as a private home.",
+        "type": "tower house",
+        "period": "14th century",
+        "rating": 3.7,
+        "tags": [
+          "medieval",
+          "atmospheric",
+          "hidden-gem"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Dacre_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dacre_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Dacre_Castle_%28geograph_2648020%29.jpg/330px-Dacre_Castle_%28geograph_2648020%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dacre_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "Shares a site with St Andrew's Church. needs more research. ",
+        "enrichNotes": "Shares a site with St Andrew's Church. needs more research. "
+      },
+      "ts": 1779036466010
     }
   ]
 }
