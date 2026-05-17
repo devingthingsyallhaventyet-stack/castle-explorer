@@ -346,6 +346,63 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/2Nuu6V2kWzsY5GjL7"
       },
       "ts": 1779044602417
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Tredegar House\n*Country:* wales\n*Region:* south wales\n*County:* Newport\n*Type:* historic-house\n*Period:* 17th century\n*Coords:* 51.56157222, -3.02916667\n*Wikipedia:* https://en.wikipedia.org/wiki/Tredegar_House\n*Maps:* https://www.google.com/maps/search/Tredegar%20House/@51.5597,-3.0167,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZN8U_w-VGHIKzyyPaBLpnKuUXRXcJK38fGzOZFqo9cO3NM70mjV62Rgi4DcwmmJuH8g7A6arndmnY2-6XcDzGTqeZ-4NSQo8tDSimZVRx41VM4nj7k0JE-k8GD-yUoXPfrvjGMaMEHmjcYqhg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/K9mWKJF9JF2GXejeA\n\n*Description:*\nTredegar House is a 17th-century Charles II-era country house in Coedkernew, on the southwestern edge of Newport, Wales. For over five hundred years it was home to the Morgan family, later Lords Tredegar, one of the most powerful and influential families in the area. Described as \"the grandest and most exuberant country house in Monmouthshire\" and one of the \"outstanding houses of the Restoration period in the whole of Britain\", the mansion stands in a reduced landscaped garden of 90 acres (0.36 km2). The property became a Grade I listed building on 3 March 1952 and has been under the care of the National Trust since March 2012. The park surrounding the house is designated Grade II* on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.\n\n_Listing 7 of 50_",
+      "listing": {
+        "name": "Tredegar House",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Newport",
+        "lat": 51.56157222,
+        "lng": -3.02916667,
+        "mapsLink": "https://www.google.com/maps/search/Tredegar%20House/@51.5597,-3.0167,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN8U_w-VGHIKzyyPaBLpnKuUXRXcJK38fGzOZFqo9cO3NM70mjV62Rgi4DcwmmJuH8g7A6arndmnY2-6XcDzGTqeZ-4NSQo8tDSimZVRx41VM4nj7k0JE-k8GD-yUoXPfrvjGMaMEHmjcYqhg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Tredegar House is a 17th-century Charles II-era country house in Coedkernew, on the southwestern edge of Newport, Wales. For over five hundred years it was home to the Morgan family, later Lords Tredegar, one of the most powerful and influential families in the area. Described as \"the grandest and most exuberant country house in Monmouthshire\" and one of the \"outstanding houses of the Restoration period in the whole of Britain\", the mansion stands in a reduced landscaped garden of 90 acres (0.36 km2). The property became a Grade I listed building on 3 March 1952 and has been under the care of the National Trust since March 2012. The park surrounding the house is designated Grade II* on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+        "type": "historic-house",
+        "period": "17th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "museum",
+          "guided-tours",
+          "kid-friendly",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Tredegar_House"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/wales/tredegar-house/history-of-tredegar-house"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Tredegar_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Tredegar_House%2C_Wales_%2848721554268%29.jpg/330px-Tredegar_House%2C_Wales_%2848721554268%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Nick",
+          "license": "CC BY 2.0",
+          "description": "Tredegar House, Wales",
+          "credit": "Tredegar House, Wales",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/K9mWKJF9JF2GXejeA",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/K9mWKJF9JF2GXejeA"
+      },
+      "ts": 1779044671875
     }
   ]
 }
