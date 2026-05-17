@@ -627,6 +627,61 @@
         "enrichNotes": "no google places "
       },
       "ts": 1779052307723
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Russborough House\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Wicklow\n*Type:* country house\n*Period:* 18th century\n*Coords:* 53.14166, -6.5696\n*Wikipedia:* https://en.wikipedia.org/wiki/Russborough_House\n*Maps:* https://www.google.com/maps/search/Russborough%20House/@53.118,-6.538,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqG1xtKRGzzLn6-k557JtvCbTzYhMCopyJsWrgO0skaItJt_prLY92XzHXTtsGSoy0VmqoYIeVjGkMqzyLJ8MIYBFZ1BNMM2yQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.russborough.ie/\n\n*Description:*\nRussborough House is a Georgian Palladian house between Blessington and Ballymore Eustace near the Blessington Lakes in County Wicklow, Ireland. The house was designed by Richard Castle for Joseph Leeson, 1st Earl of Milltown and built between 1741 and 1755. It has an exceptionally long frontage measuring 210 m (690 ft). The interior contains fine ornate plasterwork on the ceilings by the Lafranchini brothers, who also collaborated with Castle on Carton House. Russborough contains an important private collection of European fine and decorative arts, including furniture, silver, porcelain and paintings many of which have now been transferred to galleries for safe keeping.\n\n_Listing 13 of 33_",
+      "listing": {
+        "name": "Russborough House",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Wicklow",
+        "lat": 53.14166,
+        "lng": -6.5696,
+        "mapsLink": "https://www.google.com/maps/search/Russborough%20House/@53.118,-6.538,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqG1xtKRGzzLn6-k557JtvCbTzYhMCopyJsWrgO0skaItJt_prLY92XzHXTtsGSoy0VmqoYIeVjGkMqzyLJ8MIYBFZ1BNMM2yQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Russborough House is a Georgian Palladian house between Blessington and Ballymore Eustace near the Blessington Lakes in County Wicklow, Ireland. The house was designed by Richard Castle for Joseph Leeson, 1st Earl of Milltown and built between 1741 and 1755. It has an exceptionally long frontage measuring 210 m (690 ft). The interior contains fine ornate plasterwork on the ceilings by the Lafranchini brothers, who also collaborated with Castle on Carton House. Russborough contains an important private collection of European fine and decorative arts, including furniture, silver, porcelain and paintings many of which have now been transferred to galleries for safe keeping.",
+        "type": "country house",
+        "period": "18th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "photogenic",
+          "guided-tours",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "Russborough House",
+            "url": "https://www.russborough.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Russborough_House"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Russborough_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Russborough-House_Part-of-the-facade.jpg/330px-Russborough-House_Part-of-the-facade.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Dorian IG",
+          "license": "CC BY-SA 3.0",
+          "description": "Russborough House - Part of the facade",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.russborough.ie/",
+        "enrichNotes": "add source - https://www.russborough.ie/"
+      },
+      "ts": 1779052334162
     }
   ]
 }
