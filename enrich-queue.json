@@ -1,3 +1,47 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Raby Castle\n*Country:* england\n*Region:* northern england\n*County:* County Durham\n*Type:* castle\n*Period:* 14th century\n*Coords:* 54.59083333, -1.80194444\n*Wikipedia:* https://en.wikipedia.org/wiki/Raby_Castle\n*Maps:* https://www.google.com/maps/search/Raby%20Castle/@54.62,-1.8419,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNW39uZBXYvhsWYsWQ9OxBpRslavAdWZZR2w0xGoELDGxqktQ_PZSZTi5GNVReOBhzFT2txDwrsKhq_pGdSlwxvDfQoPKnXNnchYGVYEjaAHrtUMx3orepLQI9kmaJ9DFJccEUNk-NBNuY7PZ4=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.raby.co.uk/raby-castle/ add source \n\n*Description:*\nRaby Castle is a medieval castle located near Staindrop in County Durham, England, among 200 acres (810,000 m2) of deer park. It was built by John Neville, 3rd Baron Neville de Raby, between approximately 1367 and 1390. Cecily Neville, the mother of the Kings Edward IV and Richard III, was born here. After Charles Neville, 6th Earl of Westmorland, led the failed Rising of the North in favour of Mary, Queen of Scots in 1569 Raby Castle was taken into royal custody.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Raby Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "County Durham",
+        "lat": 54.59083333,
+        "lng": -1.80194444,
+        "mapsLink": "https://www.google.com/maps/search/Raby%20Castle/@54.62,-1.8419,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNW39uZBXYvhsWYsWQ9OxBpRslavAdWZZR2w0xGoELDGxqktQ_PZSZTi5GNVReOBhzFT2txDwrsKhq_pGdSlwxvDfQoPKnXNnchYGVYEjaAHrtUMx3orepLQI9kmaJ9DFJccEUNk-NBNuY7PZ4=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Raby Castle is a medieval castle located near Staindrop in County Durham, England, among 200 acres (810,000 m2) of deer park. It was built by John Neville, 3rd Baron Neville de Raby, between approximately 1367 and 1390. Cecily Neville, the mother of the Kings Edward IV and Richard III, was born here. After Charles Neville, 6th Earl of Westmorland, led the failed Rising of the North in favour of Mary, Queen of Scots in 1569 Raby Castle was taken into royal custody.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Raby_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Raby_Castle_%28spring%29.jpg/330px-Raby_Castle_%28spring%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "GlenBowman",
+          "license": "CC BY 2.0",
+          "description": "Raby Castle, County Durham, England, Great Britain.",
+          "credit": "Flickr.com",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://www.raby.co.uk/raby-castle/ add source ",
+        "enrichNotes": "https://www.raby.co.uk/raby-castle/ add source "
+      },
+      "ts": 1779035025633
+    }
+  ]
 }
