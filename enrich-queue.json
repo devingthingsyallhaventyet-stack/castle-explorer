@@ -806,6 +806,51 @@
         "enrichNotes": ""
       },
       "ts": 1779048351974
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Criccieth Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Gwynedd\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.916, -4.2325\n*Wikipedia:* https://en.wikipedia.org/wiki/Criccieth_Castle\n*Maps:* https://www.google.com/maps/search/Criccieth%20Castle/@52.917,-4.2325,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png/330px-Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCriccieth Castle is a ruined thirteenth-century castle in Criccieth, Gwynedd, Wales. It is located on a rocky headland overlooking Tremadog Bay and consists of an inner ward almost surrounded by an outer ward. The twin-towered inner gatehouse is the most prominent remaining feature and survives to almost its full height, as does the inner curtain wall. The outer curtain wall, the inner ward buildings, and the castle's other three towers are significantly more ruinous, and in places survive only as foundations.\n\n_Listing 16 of 111_",
+      "listing": {
+        "name": "Criccieth Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Gwynedd",
+        "lat": 52.916,
+        "lng": -4.2325,
+        "mapsLink": "https://www.google.com/maps/search/Criccieth%20Castle/@52.917,-4.2325,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png/330px-Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Criccieth Castle is a ruined thirteenth-century castle in Criccieth, Gwynedd, Wales. It is located on a rocky headland overlooking Tremadog Bay and consists of an inner ward almost surrounded by an outer ward. The twin-towered inner gatehouse is the most prominent remaining feature and survives to almost its full height, as does the inner curtain wall. The outer curtain wall, the inner ward buildings, and the castle's other three towers are significantly more ruinous, and in places survive only as foundations.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.2,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Criccieth_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png/330px-Castell_Cricieth_o%27r_awyr_yn_2023_-_Cricieth_Castle_from_a_drone_-_Welsg_built_castle_in_Gwynedd%2C_Wales_41_%28cropped%29.png",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Llywelyn2000",
+          "license": "CC BY-SA 4.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Criccieth_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048367909
     }
   ]
 }
