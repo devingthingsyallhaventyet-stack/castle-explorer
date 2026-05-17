@@ -228,6 +228,51 @@
         "enrichNotes": ""
       },
       "ts": 1779043030290
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kenilworth Castle\n*Country:* england\n*Region:* the midlands\n*County:* Warwickshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.3479693, -1.5923611\n*Wikipedia:* https://en.wikipedia.org/wiki/Kenilworth_Castle\n*Maps:* https://www.google.com/maps/search/Kenilworth%20Castle/@52.3437,-1.5872,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMTd7TcHGfxILV4xu_fiJWvK2soiATBTfRzZZIT2piJVPaHrkEjDM2KxrWDzrwVgC-y3tytpwqVtsHHITHv4y0Cha02YLIE25FRM1TjocpcKI1DxD2co7uTh5VN_ZOI3ClQYzV8fVOmpi40US4=s4800-w800\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nKenilworth Castle is a castle in the town of Kenilworth in Warwickshire, England, managed by English Heritage; much of it is in ruins. The castle was founded after the Norman Conquest of 1066; with development through to the Tudor period. It has been described by the architectural historian Anthony Emery as \"the finest surviving example of a semi-royal palace of the later Middle Ages, significant for its scale, form and quality of workmanship\".\n\n_Listing 5 of 80_",
+      "listing": {
+        "name": "Kenilworth Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Warwickshire",
+        "lat": 52.3479693,
+        "lng": -1.5923611,
+        "mapsLink": "https://www.google.com/maps/search/Kenilworth%20Castle/@52.3437,-1.5872,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMTd7TcHGfxILV4xu_fiJWvK2soiATBTfRzZZIT2piJVPaHrkEjDM2KxrWDzrwVgC-y3tytpwqVtsHHITHv4y0Cha02YLIE25FRM1TjocpcKI1DxD2co7uTh5VN_ZOI3ClQYzV8fVOmpi40US4=s4800-w800",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Kenilworth Castle is a castle in the town of Kenilworth in Warwickshire, England, managed by English Heritage; much of it is in ruins. The castle was founded after the Norman Conquest of 1066; with development through to the Tudor period. It has been described by the architectural historian Anthony Emery as \"the finest surviving example of a semi-royal palace of the later Middle Ages, significant for its scale, form and quality of workmanship\".",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.5,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Kenilworth_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Kenilworth_Castle_gatehouse_landscape.jpg/330px-Kenilworth_Castle_gatehouse_landscape.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "",
+          "license": "CC BY 1.0",
+          "description": "",
+          "credit": "",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kenilworth_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043049913
     }
   ]
 }
