@@ -301,6 +301,63 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/EamHyzePY79RDSof9\n"
       },
       "ts": 1779060833638
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Alton Castle\n*Country:* england\n*Region:* the midlands\n*County:* Staffordshire\n*Type:* castle\n*Period:* 12th century / 19th century rebuild\n*Coords:* 52.9798, -1.8912\n*Wikipedia:* https://en.wikipedia.org/wiki/Alton_Castle\n*Maps:* https://www.google.com/maps/search/Alton%20Castle/@52.964,-1.886,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Alton_Castle.jpg/330px-Alton_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nAlton Castle is a Gothic-revival castle, on a hill above the Churnet Valley, in the village of Alton, Staffordshire, England. The site has been fortified in wood since Saxon times, with a stone castle dating from the 12th century. The current castle was constructed in the mid-19th century by John Talbot, 16th Earl of Shrewsbury, of nearby Alton Towers. Since 1967 the castle has been designated a Grade I listed building. It is also a scheduled monument.\n\n_Listing 7 of 260_",
+      "listing": {
+        "name": "Alton Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Staffordshire",
+        "lat": 52.9798,
+        "lng": -1.8912,
+        "mapsLink": "https://www.google.com/maps/search/Alton%20Castle/@52.964,-1.886,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Alton_Castle.jpg/330px-Alton_Castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Alton Castle is a Gothic-revival castle, on a hill above the Churnet Valley, in the village of Alton, Staffordshire, England. The site has been fortified in wood since Saxon times, with a stone castle dating from the 12th century. The current castle was constructed in the mid-19th century by John Talbot, 16th Earl of Shrewsbury, of nearby Alton Towers. Since 1967 the castle has been designated a Grade I listed building. It is also a scheduled monument.",
+        "type": "castle",
+        "period": "12th century / 19th century rebuild",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "gothic",
+          "photogenic",
+          "hilltop",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Alton_Castle"
+          },
+          {
+            "name": "Staffordshire Past Track",
+            "url": "https://www.search.staffspasttrack.org.uk/Details.aspx?ResourceID=13101&SearchType=2&ThemeID=187"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Alton_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Alton_Castle.jpg/330px-Alton_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Dennis Thorley",
+          "license": "CC BY-SA 2.0",
+          "description": "Photograph",
+          "credit": "https://www.geograph.org.uk/photo/121761",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Alton_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779060877774
     }
   ]
 }
