@@ -488,6 +488,50 @@
         "enrichNotes": ""
       },
       "ts": 1779043546152
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Harlech Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Gwynedd\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.86, -4.11\n*Wikipedia:* https://en.wikipedia.org/wiki/Harlech_Castle\n*Maps:* https://www.google.com/maps/search/Harlech%20Castle/@52.8602,-4.1094,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/330px-Harlech_Castle_-_Cadw_photograph.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nHarlech Castle in Harlech, Gwynedd, Wales, is a Grade I listed medieval fortification built onto a rocky knoll close to the Irish Sea. It was built by Edward I during his invasion of Wales between 1282 and 1289 at the relatively modest cost of £8,190. Over the next few centuries, the castle played an important part in several wars, withstanding the siege of Madog ap Llywelyn between 1294 and 1295, but falling to Prince Owain Glyndŵr in 1404. It then became Glyndŵr's residence and military headquarters for the remainder of the uprising until being recaptured by English forces in 1409. During the 15th-century Wars of the Roses, Harlech was held by the Lancastrians for seven years, before Yorkist troops forced its surrender in 1468, a siege memorialised in the song \"Men of Harlech\". Following the outbreak of the English Civil War in 1642, the castle was held by forces loyal to Charles I, holding out until 1647 when it became the last fortification to surrender to the Parliamentary armies. In the 21st century the ruined castle is managed by Cadw, the Welsh Government's historic environment service, as a tourist attraction.\n\n_Listing 11 of 80_",
+      "listing": {
+        "name": "Harlech Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Gwynedd",
+        "lat": 52.86,
+        "lng": -4.11,
+        "mapsLink": "https://www.google.com/maps/search/Harlech%20Castle/@52.8602,-4.1094,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/330px-Harlech_Castle_-_Cadw_photograph.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Harlech Castle in Harlech, Gwynedd, Wales, is a Grade I listed medieval fortification built onto a rocky knoll close to the Irish Sea. It was built by Edward I during his invasion of Wales between 1282 and 1289 at the relatively modest cost of £8,190. Over the next few centuries, the castle played an important part in several wars, withstanding the siege of Madog ap Llywelyn between 1294 and 1295, but falling to Prince Owain Glyndŵr in 1404. It then became Glyndŵr's residence and military headquarters for the remainder of the uprising until being recaptured by English forces in 1409. During the 15th-century Wars of the Roses, Harlech was held by the Lancastrians for seven years, before Yorkist troops forced its surrender in 1468, a siege memorialised in the song \"Men of Harlech\". Following the outbreak of the English Civil War in 1642, the castle was held by forces loyal to Charles I, holding out until 1647 when it became the last fortification to surrender to the Parliamentary armies. In the 21st century the ruined castle is managed by Cadw, the Welsh Government's historic environment service, as a tourist attraction.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.5,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Harlech_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Harlech_Castle_-_Cadw_photograph.jpg/330px-Harlech_Castle_-_Cadw_photograph.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Cadw",
+          "license": "OGL v1.0",
+          "description": "Harlech Castle",
+          "credit": "http://cadw.wales.gov.uk/daysout/harlechcastle/?lang=en",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Harlech_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043575297
     }
   ]
 }
