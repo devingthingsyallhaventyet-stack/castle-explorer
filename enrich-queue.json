@@ -363,6 +363,60 @@
         "enrichNotes": "add source - https://rochcastle.com/ , tag as hotel "
       },
       "ts": 1779061282193
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castledermot Round Tower\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Kildare\n*Type:* abbey\n*Period:* 9th-12th century\n*Coords:* 52.910458, -6.834934\n*Wikipedia:* https://en.wikipedia.org/wiki/Castledermot_Round_Tower\n*Maps:* https://www.google.com/maps/search/Castledermot%20Round%20Tower/@52.909,-6.864,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMp0tLwZKv6JfAjT6KETGQD2GaVXllOYKa2XZOc7JKXF1RyuFF17I8-7cxB6NNhzZVLJL55_jAR1OX5Shk-Bf97uiBrn0ZRGACY8INy7WSgOPkFkKXy5htZLjMdj_h9RG-hMjFlSUy9JzuOfNo=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCastledermot Round Tower is a 10th-century round tower in Castledermot, County Kildare, Ireland. The tower, and the high crosses nearby, are a National Monument.\n\n_Listing 8 of 252_",
+      "listing": {
+        "name": "Castledermot Round Tower",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Kildare",
+        "lat": 52.910458,
+        "lng": -6.834934,
+        "mapsLink": "https://www.google.com/maps/search/Castledermot%20Round%20Tower/@52.909,-6.864,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMp0tLwZKv6JfAjT6KETGQD2GaVXllOYKa2XZOc7JKXF1RyuFF17I8-7cxB6NNhzZVLJL55_jAR1OX5Shk-Bf97uiBrn0ZRGACY8INy7WSgOPkFkKXy5htZLjMdj_h9RG-hMjFlSUy9JzuOfNo=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Castledermot Round Tower is a 10th-century round tower in Castledermot, County Kildare, Ireland. The tower, and the high crosses nearby, are a National Monument.",
+        "type": "abbey",
+        "period": "9th-12th century",
+        "rating": 3.8,
+        "tags": [
+          "celtic",
+          "prehistoric",
+          "photogenic",
+          "free-entry",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Castledermot"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castledermot_Round_Tower",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Castledermot_monastic_remains.jpg/330px-Castledermot_monastic_remains.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "liam murphy",
+          "license": "CC BY-SA 2.0",
+          "description": "Castledermot monastic remains",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779061300078
     }
   ]
 }
