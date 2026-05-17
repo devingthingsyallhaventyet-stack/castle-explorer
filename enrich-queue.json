@@ -268,6 +268,51 @@
         "enrichNotes": ""
       },
       "ts": 1779052081899
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Llansteffan Castle\n*Country:* wales\n*Region:* west wales\n*County:* Carmarthenshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 51.7656, -4.3906\n*Wikipedia:* https://en.wikipedia.org/wiki/Llansteffan_Castle\n*Maps:* https://www.google.com/maps/search/Llansteffan%20Castle/@51.7674,-4.3863,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNJFSDom35IM0CmdAOE87G9_ryjhPH_TYSKD0aJA3va-HPMOEhnFqA0f8zjcs3YciFElwxXuT87yIj1KBQrajOoKTTKwvTcx5OqLYHK8rruXu_s4fcd31XDP2j-uNg1R6044LpBYznQ2zVSGw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.llansteffancastle.com/\n\n*Description:*\nLlansteffan Castle is a privately owned castle in Llansteffan, Carmarthenshire, Wales, overlooking the River Tywi estuary in Carmarthen Bay.\n\n_Listing 6 of 33_",
+      "listing": {
+        "name": "Llansteffan Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Carmarthenshire",
+        "lat": 51.7656,
+        "lng": -4.3906,
+        "mapsLink": "https://www.google.com/maps/search/Llansteffan%20Castle/@51.7674,-4.3863,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNJFSDom35IM0CmdAOE87G9_ryjhPH_TYSKD0aJA3va-HPMOEhnFqA0f8zjcs3YciFElwxXuT87yIj1KBQrajOoKTTKwvTcx5OqLYHK8rruXu_s4fcd31XDP2j-uNg1R6044LpBYznQ2zVSGw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Llansteffan Castle is a privately owned castle in Llansteffan, Carmarthenshire, Wales, overlooking the River Tywi estuary in Carmarthen Bay.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Llansteffan_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Llansteffan_Castle_and_Beach.jpg/330px-Llansteffan_Castle_and_Beach.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Jacob Allen",
+          "license": "CC BY-SA 4.0",
+          "description": "Drone view of Llansteffan Castle and Beach",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.llansteffancastle.com/",
+        "enrichNotes": "add source - https://www.llansteffancastle.com/"
+      },
+      "ts": 1779052105309
     }
   ]
 }
