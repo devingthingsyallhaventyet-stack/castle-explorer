@@ -358,6 +358,51 @@
         "enrichNotes": ""
       },
       "ts": 1779060877774
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Middleton Hall\n*Country:* england\n*Region:* the midlands\n*County:* Warwickshire\n*Type:* castle\n*Period:* 12th-16th century\n*Coords:* 52.5917, -1.6417\n*Wikipedia:* https://en.wikipedia.org/wiki/Middleton_Hall,_Warwickshire\n*Maps:* https://www.google.com/maps/search/Middleton%20Hall/@52.5917,-1.6417,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPwUynIbutjVdTZCoa7b9dVTgmiw5irklwQqvuAYFVKsG_Er_qP26rsqPCZoeZc5SNK398TqWBkMrdG2wQPs5Fs47ME6R3xXnYiq0k8RkrWoOcXSFFMFyzGZinMdUPVhLeRYH8RoyOg7y0DhzU=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/WKN52eJMaEBTPkJ58\nadd source - https://www.middleton-hall.co.uk/\n\n*Description:*\nMiddleton Hall may refer to the following places in the United Kingdom:Middleton Hall, Carmarthenshire, site of the National Botanic Garden of Wales\nMiddleton Hall, Cumbria, a listed building\nMiddleton Hall, Earle, a location in Northumberland\nMiddleton Hall, Middleton, Leeds\nMiddleton Hall, Middleton, Northumberland, a country house near Belford\nMiddleton Hall, Stoney Middleton, a restored 17th-century in Derbyshire\nMiddleton Hall, Warwickshire, a Grade II* listed building dating from medieval times\nMiddleton Hall exhibition space, Central Milton Keynes Shopping Centre, Buckinghamshire\n\n_Listing 8 of 260_",
+      "listing": {
+        "name": "Middleton Hall",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Warwickshire",
+        "lat": 52.5917,
+        "lng": -1.6417,
+        "mapsLink": "https://www.google.com/maps/search/Middleton%20Hall/@52.5917,-1.6417,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPwUynIbutjVdTZCoa7b9dVTgmiw5irklwQqvuAYFVKsG_Er_qP26rsqPCZoeZc5SNK398TqWBkMrdG2wQPs5Fs47ME6R3xXnYiq0k8RkrWoOcXSFFMFyzGZinMdUPVhLeRYH8RoyOg7y0DhzU=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Middleton Hall may refer to the following places in the United Kingdom:Middleton Hall, Carmarthenshire, site of the National Botanic Garden of Wales\nMiddleton Hall, Cumbria, a listed building\nMiddleton Hall, Earle, a location in Northumberland\nMiddleton Hall, Middleton, Leeds\nMiddleton Hall, Middleton, Northumberland, a country house near Belford\nMiddleton Hall, Stoney Middleton, a restored 17th-century in Derbyshire\nMiddleton Hall, Warwickshire, a Grade II* listed building dating from medieval times\nMiddleton Hall exhibition space, Central Milton Keynes Shopping Centre, Buckinghamshire",
+        "type": "castle",
+        "period": "12th-16th century",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "tudor",
+          "gardens",
+          "tearoom-cafe"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Middleton_Hall,_Warwickshire"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Middleton_Hall",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Middleton_Hall,_Warwickshire",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/WKN52eJMaEBTPkJ58\nadd source - https://www.middleton-hall.co.uk/",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/WKN52eJMaEBTPkJ58\nadd source - https://www.middleton-hall.co.uk/"
+      },
+      "ts": 1779060915025
     }
   ]
 }
