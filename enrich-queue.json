@@ -532,6 +532,49 @@
         "enrichNotes": ""
       },
       "ts": 1779043575297
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Valle Crucis Abbey\n*Country:* wales\n*Region:* snowdonia north\n*County:* Denbighshire\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 52.98918, -3.187142\n*Wikipedia:* https://en.wikipedia.org/wiki/Valle_Crucis_Abbey\n*Maps:* https://www.google.com/maps/search/Valle%20Crucis%20Abbey/@52.9838,-3.1767,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMaxpTXwxAGBvGUH2fhakOS1vIHeQ3tb0cdD5dufF0x0Ee8g9CBP0Aw8F0PFwoitz0DNQvq5TjCFvdem5Q6wzW7Bg7RDr16_RJtPEi3bVvf_7W3RZ11HB3mhNaPxnCNpryI3hUzklAmWJRElA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nValle Crucis Abbey is a Cistercian abbey located in Llantysilio in Denbighshire, north Wales. More formally the Abbey Church of the Blessed Virgin Mary, Valle Crucis it is known in Welsh both as Abaty Glyn Egwestl and Abaty Glyn y Groes.\nThe abbey was built in 1201 by Madog ap Gruffydd Maelor, Prince of Powys Fadog. Valle Crucis was dissolved in 1537 during the dissolution of the monasteries, and subsequently fell into serious disrepair. The building is now a ruin, though large parts of the original structure still survive. Valle Crucis Abbey is now under the care of Cadw. The abbey received 5,690 visitors in 2018.\n\n_Listing 12 of 80_",
+      "listing": {
+        "name": "Valle Crucis Abbey",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Denbighshire",
+        "lat": 52.98918,
+        "lng": -3.187142,
+        "mapsLink": "https://www.google.com/maps/search/Valle%20Crucis%20Abbey/@52.9838,-3.1767,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMaxpTXwxAGBvGUH2fhakOS1vIHeQ3tb0cdD5dufF0x0Ee8g9CBP0Aw8F0PFwoitz0DNQvq5TjCFvdem5Q6wzW7Bg7RDr16_RJtPEi3bVvf_7W3RZ11HB3mhNaPxnCNpryI3hUzklAmWJRElA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Valle Crucis Abbey is a Cistercian abbey located in Llantysilio in Denbighshire, north Wales. More formally the Abbey Church of the Blessed Virgin Mary, Valle Crucis it is known in Welsh both as Abaty Glyn Egwestl and Abaty Glyn y Groes.\nThe abbey was built in 1201 by Madog ap Gruffydd Maelor, Prince of Powys Fadog. Valle Crucis was dissolved in 1537 during the dissolution of the monasteries, and subsequently fell into serious disrepair. The building is now a ruin, though large parts of the original structure still survive. Valle Crucis Abbey is now under the care of Cadw. The abbey received 5,690 visitors in 2018.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 4.5,
+        "tags": [
+          "romantic-ruin",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Valle_Crucis_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg/330px-Mynydd_Felfed_%28Coed_Hyrddyn%29_-_Velvet_Hill%2C_Llantysilio%2C_Llangollen%2C_Sir_Ddinbych%2C_Cymru_%28Wales%29_70.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Llywelyn2000",
+          "license": "CC BY-SA 4.0",
+          "description": "National Trust properties in Wales‎: the Velvet Hill (Mynydd Felfed), Llantysilio, Llangollen, Cymru (Wales).",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043594888
     }
   ]
 }
