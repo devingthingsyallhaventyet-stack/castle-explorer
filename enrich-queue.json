@@ -851,6 +851,59 @@
         "enrichNotes": ""
       },
       "ts": 1779048367909
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Lligwy Burial Chamber\n*Country:* wales\n*Region:* snowdonia north\n*County:* Anglesey\n*Type:* monument\n*Period:* Neolithic (c.3000 BC)\n*Coords:* 53.3499, -4.2529\n*Wikipedia:* https://en.wikipedia.org/wiki/Lligwy_Burial_Chamber\n*Maps:* https://www.google.com/maps/search/Lligwy%20Burial%20Chamber/@53.3528,-4.2667,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOig4ySpmNoLGmyhK5NrjWoSMstrC5oKiIVblkA67ZEGJcQFpfOiPo1RVpNlRHjssWJ9oTiJfo4XGnsrVFEQSe3Qaa_W4fSHRwuWc21yTQPa150VUIv8vqEN-ER_eOy588hviQA-ncIuZR1Pxo=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* should likely be remade into Capel Llugwy\n\n*Description:*\nLligwy Burial Chamber is a Neolithic burial chamber in Lligwy, near the east coast of Anglesey, Wales, United Kingdom. It consists of a circle of upright stones, made into a low chamber by a very large roof slab estimated at 25 tonnes. Excavation in 1909 found the remains of some 15 to 30 people, and pottery suggesting a Late Neolithic date. Close to the village of Moelfre, the site is within a few metres of the road, where there is room to leave a single car for short periods.\n\n_Listing 17 of 111_",
+      "listing": {
+        "name": "Lligwy Burial Chamber",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Anglesey",
+        "lat": 53.3499,
+        "lng": -4.2529,
+        "mapsLink": "https://www.google.com/maps/search/Lligwy%20Burial%20Chamber/@53.3528,-4.2667,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOig4ySpmNoLGmyhK5NrjWoSMstrC5oKiIVblkA67ZEGJcQFpfOiPo1RVpNlRHjssWJ9oTiJfo4XGnsrVFEQSe3Qaa_W4fSHRwuWc21yTQPa150VUIv8vqEN-ER_eOy588hviQA-ncIuZR1Pxo=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lligwy Burial Chamber is a Neolithic burial chamber in Lligwy, near the east coast of Anglesey, Wales, United Kingdom. It consists of a circle of upright stones, made into a low chamber by a very large roof slab estimated at 25 tonnes. Excavation in 1909 found the remains of some 15 to 30 people, and pottery suggesting a Late Neolithic date. Close to the village of Moelfre, the site is within a few metres of the road, where there is room to leave a single car for short periods.",
+        "type": "monument",
+        "period": "Neolithic (c.3000 BC)",
+        "rating": 4.2,
+        "tags": [
+          "prehistoric",
+          "free-entry",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/lligwy-burial-chamber"
+          },
+          {
+            "name": "Wikipedia – Lligwy Burial Chamber",
+            "url": "https://en.wikipedia.org/wiki/Lligwy_Burial_Chamber"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lligwy_Burial_Chamber",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Lligwy_Burial_Chamber_in_Anglesey.jpg/330px-Lligwy_Burial_Chamber_in_Anglesey.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Kate Heath",
+          "license": "CC BY 2.0",
+          "description": "Lligwy Burial Chamber in Anglesey",
+          "credit": "originally posted to Flickr as Lligwy Burial Chamber - Anglesey",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "should likely be remade into Capel Llugwy",
+        "enrichNotes": "should likely be remade into Capel Llugwy"
+      },
+      "ts": 1779048402154
     }
   ]
 }
