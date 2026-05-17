@@ -1039,6 +1039,45 @@
         "enrichNotes": "add source - https://rothehouse.com/"
       },
       "ts": 1779046301943
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Timoleague Abbey\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Cork\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 51.6425, -8.76306\n*Wikipedia:* https://en.wikipedia.org/wiki/Timoleague_Friary\n*Maps:* https://www.google.com/maps/search/Timoleague%20Abbey/@51.6417,-8.7667,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Timoleague_Friary.jpg/330px-Timoleague_Friary.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nTimoleague Friary, also known as Timoleague Abbey, is a ruined medieval Franciscan friary in Timoleague, County Cork, Ireland, on the banks of the Argideen River overlooking Courtmacsherry Bay. It was built on the site of an early Christian monastic site founded by Saint Molaga, from whom the town of Timoleague derives its name. The present remains date from roughly the turn of the fourteenth century and were burnt down by British forces in the mid-seventeenth century, at which point it was an important ecclesiastical centre that engaged in significant trade with Spain.\n\n_Listing 22 of 28_",
+      "listing": {
+        "name": "Timoleague Abbey",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Cork",
+        "lat": 51.6425,
+        "lng": -8.76306,
+        "mapsLink": "https://www.google.com/maps/search/Timoleague%20Abbey/@51.6417,-8.7667,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Timoleague_Friary.jpg/330px-Timoleague_Friary.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Timoleague Friary, also known as Timoleague Abbey, is a ruined medieval Franciscan friary in Timoleague, County Cork, Ireland, on the banks of the Argideen River overlooking Courtmacsherry Bay. It was built on the site of an early Christian monastic site founded by Saint Molaga, from whom the town of Timoleague derives its name. The present remains date from roughly the turn of the fourteenth century and were burnt down by British forces in the mid-seventeenth century, at which point it was an important ecclesiastical centre that engaged in significant trade with Spain.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 4.3,
+        "tags": [
+          "romantic-ruin",
+          "photogenic",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Timoleague_Friary",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Timoleague_Friary.jpg/330px-Timoleague_Friary.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Timoleague_Friary",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046329103
     }
   ]
 }
