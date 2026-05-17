@@ -1,3 +1,58 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Upton House\n*Country:* england\n*Region:* the midlands\n*County:* Warwickshire\n*Type:* castle\n*Period:* 17th century\n*Coords:* 52.1067, -1.45\n*Wikipedia:* https://en.wikipedia.org/wiki/Upton_House,_Warwickshire\n*Maps:* https://www.google.com/maps/search/Upton%20House/@52.1067,-1.45,15z\n*Main Image:* https://img.castlecore.uk/upton-house.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nUpton House may refer to:\n\n_Listing 1 of 50_",
+      "listing": {
+        "name": "Upton House",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Warwickshire",
+        "lat": 52.1067,
+        "lng": -1.45,
+        "mapsLink": "https://www.google.com/maps/search/Upton%20House/@52.1067,-1.45,15z",
+        "image": "https://img.castlecore.uk/upton-house.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/upton-house-2.jpg",
+          "https://img.castlecore.uk/upton-house-3.jpg",
+          "https://img.castlecore.uk/upton-house-4.jpg",
+          "https://img.castlecore.uk/upton-house-5.jpg"
+        ],
+        "desc": "Upton House may refer to:",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "photogenic",
+          "tearoom-cafe",
+          "gift-shop",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/warwickshire/upton-house-and-gardens"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Upton_House,_Warwickshire"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Upton_House",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Upton_House,_Warwickshire",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779044464596
+    }
+  ]
 }
