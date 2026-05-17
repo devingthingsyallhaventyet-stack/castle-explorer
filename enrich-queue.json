@@ -726,6 +726,50 @@
         "enrichNotes": ""
       },
       "ts": 1779045989039
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Chirk Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Wrexham\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.935, -3.08972222\n*Wikipedia:* https://en.wikipedia.org/wiki/Chirk_Castle\n*Maps:* https://www.google.com/maps/search/Chirk%20Castle/@52.9369,-3.1007,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNF2Pnt-yi89mN_9XyXikQoOUkRrLWqn4haEIVOjeSbr0fvatdXq4YEY8zrxkDCxlvalonAARzv1SHgUPHMs76F1u9wPNhPcrpHtpb8geJCgMpKVJ4nBMb569X30I_3QbTUaQzO7AxIGV0X=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nChirk Castle is a Grade I listed castle located in Chirk, Wrexham County Borough, Wales, 1.5 mi (2.4 km) from Chirk railway station, now owned and run by the National Trust.\n\n_Listing 14 of 28_",
+      "listing": {
+        "name": "Chirk Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Wrexham",
+        "lat": 52.935,
+        "lng": -3.08972222,
+        "mapsLink": "https://www.google.com/maps/search/Chirk%20Castle/@52.9369,-3.1007,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNF2Pnt-yi89mN_9XyXikQoOUkRrLWqn4haEIVOjeSbr0fvatdXq4YEY8zrxkDCxlvalonAARzv1SHgUPHMs76F1u9wPNhPcrpHtpb8geJCgMpKVJ4nBMb569X30I_3QbTUaQzO7AxIGV0X=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Chirk Castle is a Grade I listed castle located in Chirk, Wrexham County Borough, Wales, 1.5 mi (2.4 km) from Chirk railway station, now owned and run by the National Trust.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Chirk_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/ChirkCastle1.JPG/330px-ChirkCastle1.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Prichardson",
+          "license": "Public domain",
+          "description": "Chirk Castle with Adam's Tower in Far Left Side",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046002468
     }
   ]
 }
