@@ -172,6 +172,53 @@
         "enrichNotes": ""
       },
       "ts": 1779041700787
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cardiff Castle\n*Country:* wales\n*Region:* south wales\n*County:* Cardiff\n*Type:* castle\n*Period:* 11th century\n*Coords:* 51.4823, -3.1812\n*Wikipedia:* https://en.wikipedia.org/wiki/Cardiff_Castle\n*Maps:* https://www.google.com/maps/search/Cardiff%20Castle/@51.4822,-3.181,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMsKDuyDcHyjvsMkRDMccQtYb4s2pzwWyXDXnLEwpYGBY0yg-IpCiW7qb4U_3eBDvCwav1tDgmeQYGXR4DPXf3m_Ydw9kXA9h2hv1SOoWLxvRV7QTZ98Sx_pyDlQCgLcRvFq-M3V7CSeRLwmg=s4800-w1134\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.cardiffcastle.com/\n\n*Description:*\nCardiff Castle is a medieval castle and Victorian Gothic revival mansion located in the city centre of Cardiff, Wales. The original motte and bailey castle was built in the late 11th century by Norman invaders on top of a 3rd-century Roman fort. The castle was commissioned either by William the Conqueror or by Robert Fitzhamon, and formed the heart of the medieval town of Cardiff and the Marcher Lord territory of Glamorgan. In the 12th century the castle began to be rebuilt in stone, probably by Robert of Gloucester, with a shell keep and substantial defensive walls being erected. Further work was conducted by the 6th Earl of Gloucester in the second half of the 13th century. Cardiff Castle was repeatedly involved in the conflicts between the Anglo-Normans and the Welsh, being attacked several times in the 12th century, and stormed in 1404 during the revolt of Owain Glyndŵr.\n\n_Listing 4 of 10_",
+      "listing": {
+        "name": "Cardiff Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Cardiff",
+        "lat": 51.4823,
+        "lng": -3.1812,
+        "mapsLink": "https://www.google.com/maps/search/Cardiff%20Castle/@51.4822,-3.181,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMsKDuyDcHyjvsMkRDMccQtYb4s2pzwWyXDXnLEwpYGBY0yg-IpCiW7qb4U_3eBDvCwav1tDgmeQYGXR4DPXf3m_Ydw9kXA9h2hv1SOoWLxvRV7QTZ98Sx_pyDlQCgLcRvFq-M3V7CSeRLwmg=s4800-w1134",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Cardiff Castle is a medieval castle and Victorian Gothic revival mansion located in the city centre of Cardiff, Wales. The original motte and bailey castle was built in the late 11th century by Norman invaders on top of a 3rd-century Roman fort. The castle was commissioned either by William the Conqueror or by Robert Fitzhamon, and formed the heart of the medieval town of Cardiff and the Marcher Lord territory of Glamorgan. In the 12th century the castle began to be rebuilt in stone, probably by Robert of Gloucester, with a shell keep and substantial defensive walls being erected. Further work was conducted by the 6th Earl of Gloucester in the second half of the 13th century. Cardiff Castle was repeatedly involved in the conflicts between the Anglo-Normans and the Welsh, being attacked several times in the 12th century, and stormed in 1404 during the revolt of Owain Glyndŵr.",
+        "type": "castle",
+        "period": "11th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "kid-friendly",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cardiff_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Aerial_view_of_Cardiff_Castle.jpg/330px-Aerial_view_of_Cardiff_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Clint Budd",
+          "license": "CC BY 2.0",
+          "description": "Aerial view of Cardiff Castle, Cardiff, Wales",
+          "credit": "Flickr",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cardiff_Castle",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.cardiffcastle.com/",
+        "enrichNotes": "add source - https://www.cardiffcastle.com/"
+      },
+      "ts": 1779041723925
     }
   ]
 }
