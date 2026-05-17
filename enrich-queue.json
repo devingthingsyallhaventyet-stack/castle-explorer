@@ -611,6 +611,45 @@
         "enrichNotes": "update google places - https://maps.app.goo.gl/pyfZZfL3CaC6xkDX7\nadd source - https://strokestownpark.ie/"
       },
       "ts": 1779044812918
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bunratty Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Clare\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 52.69666667, -8.81166667\n*Wikipedia:* https://en.wikipedia.org/wiki/Bunratty_Castle\n*Maps:* https://www.google.com/maps/search/Bunratty%20Castle/@52.6978,-8.813,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZM3dZDi3d8X_VBcgVzQlu1eRaH1wBYyIsiCMoGhGVQaj5zyoig_TD2NxijGTF-XljHDZ0wgmx2C7SFjKXPrcLYW1uJe3k8-UbMMhLro9s0RLeeAnSC0Iz2Nx9-tkCmUvncIJnxDc-c_r3ylw80=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.bunrattycastle.ie/\n\n*Description:*\nBunratty Castle is a large 15th-century tower house in County Clare, Ireland. It is located in the centre of Bunratty village, by the N18 road between Limerick and Ennis, near Shannon Town and its airport. The castle and the adjoining folk park are run by Shannon Heritage as tourist attractions.\n\n_Listing 12 of 50_",
+      "listing": {
+        "name": "Bunratty Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Clare",
+        "lat": 52.69666667,
+        "lng": -8.81166667,
+        "mapsLink": "https://www.google.com/maps/search/Bunratty%20Castle/@52.6978,-8.813,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZM3dZDi3d8X_VBcgVzQlu1eRaH1wBYyIsiCMoGhGVQaj5zyoig_TD2NxijGTF-XljHDZ0wgmx2C7SFjKXPrcLYW1uJe3k8-UbMMhLro9s0RLeeAnSC0Iz2Nx9-tkCmUvncIJnxDc-c_r3ylw80=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Bunratty Castle is a large 15th-century tower house in County Clare, Ireland. It is located in the centre of Bunratty village, by the N18 road between Limerick and Ennis, near Shannon Town and its airport. The castle and the adjoining folk park are run by Shannon Heritage as tourist attractions.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 4.4,
+        "tags": [
+          "well-preserved",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Bunratty_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bunrattybig.jpg/330px-Bunrattybig.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bunratty_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.bunrattycastle.ie/",
+        "enrichNotes": "add source - https://www.bunrattycastle.ie/"
+      },
+      "ts": 1779045035761
     }
   ]
 }
