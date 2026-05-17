@@ -39,6 +39,60 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/7wvJidRTp8Uc6XDV8"
       },
       "ts": 1779043862502
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Castle Coole\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Fermanagh\n*Type:* palace\n*Period:* 18th century\n*Coords:* 54.3362, -7.6241\n*Wikipedia:* https://en.wikipedia.org/wiki/Castle_Coole\n*Maps:* https://www.google.com/maps/search/Castle%20Coole/@54.327,-7.582,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMeNwMm7WPIxib46z7EvJPVrI1GTuz6tFCO-LvzTlFSN3qLz0-1wZkE4M92-9b8QimB_Kybz_VrTuFVM74BBO-x9MP_N3hn7fDjLPOIGjc_rFKAGRm0qW9bmixugREvyEkvRUYRXC7dCrzY-Q=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCastle Coole is a townland and a late-18th-century neo-classical mansion situated in Enniskillen, County Fermanagh, Northern Ireland. Set in a 1,200-acre (490 ha) wooded estate, it is one of three properties owned and managed by the National Trust in County Fermanagh, the others being Florence Court and the Crom Estate.\n\n_Listing 21 of 80_",
+      "listing": {
+        "name": "Castle Coole",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Fermanagh",
+        "lat": 54.3362,
+        "lng": -7.6241,
+        "mapsLink": "https://www.google.com/maps/search/Castle%20Coole/@54.327,-7.582,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMeNwMm7WPIxib46z7EvJPVrI1GTuz6tFCO-LvzTlFSN3qLz0-1wZkE4M92-9b8QimB_Kybz_VrTuFVM74BBO-x9MP_N3hn7fDjLPOIGjc_rFKAGRm0qW9bmixugREvyEkvRUYRXC7dCrzY-Q=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Castle Coole is a townland and a late-18th-century neo-classical mansion situated in Enniskillen, County Fermanagh, Northern Ireland. Set in a 1,200-acre (490 ha) wooded estate, it is one of three properties owned and managed by the National Trust in County Fermanagh, the others being Florence Court and the Crom Estate.",
+        "type": "palace",
+        "period": "18th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "guided-tours",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/northern-ireland/castle-coole/history-of-castle-coole"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Castle_Coole"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castle_Coole",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Castle_Coole_27_August_2022.jpg/330px-Castle_Coole_27_August_2022.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Lucius Winslow",
+          "license": "CC BY-SA 4.0",
+          "description": "View of the front facade of Castle Coole in County Fermanagh, Northern Ireland, United Kingdom, 27 August 2022.  The photograph has not been digitally altered (except a slight cropping), and is as the camera photographed it",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043884810
     }
   ]
 }
