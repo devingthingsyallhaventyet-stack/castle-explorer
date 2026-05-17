@@ -146,6 +146,62 @@
         "enrichNotes": ""
       },
       "ts": 1779046935845
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Michelham Priory\n*Country:* england\n*Region:* south east london\n*County:* East Sussex\n*Type:* abbey\n*Period:* 13th century\n*Coords:* 50.86255, 0.21383333\n*Wikipedia:* https://en.wikipedia.org/wiki/Michelham_Priory\n*Maps:* https://www.google.com/maps/search/Michelham%20Priory/@50.8622,0.1547,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMWRs-XwiOktBK7YknCWcp_t0zoscAqodSx3imvZFvNjzBUbmlz8pHwQQyaDOhQHL5YfdfivLCBCgPvk-uFbnbnKbFSZvTos2gKaXRuQ2UUFHWeHLzfbiYPyy_R3Qx0gWiOKdtlOKxpg5Ff1BY=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nMichelham Priory is the site of a former Augustinian Priory in Upper Dicker, East Sussex, England, United Kingdom. The surviving buildings are owned and administered by the Sussex Archaeological Society and are Grade I and Grade II listed.\n\n_Listing 4 of 111_",
+      "listing": {
+        "name": "Michelham Priory",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "East Sussex",
+        "lat": 50.86255,
+        "lng": 0.21383333,
+        "mapsLink": "https://www.google.com/maps/search/Michelham%20Priory/@50.8622,0.1547,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMWRs-XwiOktBK7YknCWcp_t0zoscAqodSx3imvZFvNjzBUbmlz8pHwQQyaDOhQHL5YfdfivLCBCgPvk-uFbnbnKbFSZvTos2gKaXRuQ2UUFHWeHLzfbiYPyy_R3Qx0gWiOKdtlOKxpg5Ff1BY=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Michelham Priory is the site of a former Augustinian Priory in Upper Dicker, East Sussex, England, United Kingdom. The surviving buildings are owned and administered by the Sussex Archaeological Society and are Grade I and Grade II listed.",
+        "type": "abbey",
+        "period": "13th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "gardens",
+          "museum",
+          "medieval",
+          "tearoom-cafe",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Michelham_Priory"
+          },
+          {
+            "name": "Sussex Past",
+            "url": "https://sussexpast.co.uk/attraction/michelham-priory/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Michelham_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Michelham_Priory_03.jpg/330px-Michelham_Priory_03.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Dave Windsor",
+          "license": "CC BY-SA 2.0",
+          "description": "Michelham Priory Main Walk In",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779047572299
     }
   ]
 }
