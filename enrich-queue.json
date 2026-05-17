@@ -726,6 +726,57 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/iyTC1k5CjuhP8Lcy9\nadd source - https://lissadellhouse.com/"
       },
       "ts": 1779053127053
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Murrisk Abbey\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Mayo\n*Type:* abbey\n*Period:* 15th century\n*Coords:* 53.782, -9.6395\n*Wikipedia:* https://en.wikipedia.org/wiki/Murrisk_Abbey\n*Maps:* https://www.google.com/maps/search/Murrisk%20Abbey/@53.778,-9.654,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPdZ0SmOe6HHUP215vK_9rgyUzFUGMaTxeDJ28D5jAP2kT0LTaT0gKOSLIAKT_gjUQxW3v_Q9GFfIhAzXa2H9JbsaEQj0SfgseCP7wTiPQxH9234iWNdJ3fTFmXlpmfb8dT-1F81iZXxiltcA=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nMurrisk Friary, is a ruined Augustinian monastery located in County Mayo, Ireland. It is on the southern coast of Clew Bay, about 10km west of Westport.\n\n_Listing 16 of 19_",
+      "listing": {
+        "name": "Murrisk Abbey",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Mayo",
+        "lat": 53.782,
+        "lng": -9.6395,
+        "mapsLink": "https://www.google.com/maps/search/Murrisk%20Abbey/@53.778,-9.654,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPdZ0SmOe6HHUP215vK_9rgyUzFUGMaTxeDJ28D5jAP2kT0LTaT0gKOSLIAKT_gjUQxW3v_Q9GFfIhAzXa2H9JbsaEQj0SfgseCP7wTiPQxH9234iWNdJ3fTFmXlpmfb8dT-1F81iZXxiltcA=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Murrisk Friary, is a ruined Augustinian monastery located in County Mayo, Ireland. It is on the southern coast of Clew Bay, about 10km west of Westport.",
+        "type": "abbey",
+        "period": "15th century",
+        "rating": 4,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "medieval",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Mayo Heritage",
+            "url": "https://www.mayo.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Murrisk_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/MurriskAbbey.jpg/330px-MurriskAbbey.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Murrisk_Abbey",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779053162666
     }
   ]
 }
