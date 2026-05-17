@@ -37847,7 +37847,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Bickleigh Castle, Beautiful Castle near Tiverton, Devon",
+        "url": "https://bickleighcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Bickleigh Castle, Beautiful Castle near Tiverton, Devon",
+        "url": "https://bickleighcastle.com/"
+      }
+    ]
   },
   {
     "name": "Salcombe Castle",
@@ -38428,7 +38440,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Buckfast Abbey – Home to a community of benedictine monks",
+        "url": "https://www.buckfast.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Buckfast Abbey – Home to a community of benedictine monks",
+        "url": "https://www.buckfast.org.uk/"
+      }
+    ]
   },
   {
     "name": "Rougemont Castle",
@@ -38668,7 +38692,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Nunwell House and Gardens, Brading, Isle of Wight",
+        "url": "https://www.nunwellhouse.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Nunwell House and Gardens, Brading, Isle of Wight",
+        "url": "https://www.nunwellhouse.co.uk/"
+      }
+    ]
   },
   {
     "name": "Gloucester Cathedral",
@@ -38753,7 +38789,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gloucester_Cathedral",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Gloucester Cathedral",
+        "url": "https://gloucestercathedral.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Gloucester Cathedral",
+        "url": "https://gloucestercathedral.org.uk/"
+      }
+    ]
   },
   {
     "name": "Sudeley Castle",
@@ -38839,7 +38887,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sudeley_Castle",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Sudeley Castle & Gardens",
+        "url": "https://sudeleycastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Sudeley Castle & Gardens",
+        "url": "https://sudeleycastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Muchelney Abbey",
@@ -39061,7 +39121,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Malmesbury Abbey – 12th Century Beauty, 21st Century Church",
+        "url": "https://www.malmesburyabbey.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Malmesbury Abbey – 12th Century Beauty, 21st Century Church",
+        "url": "https://www.malmesburyabbey.com/"
+      }
+    ]
   },
   {
     "name": "Longleat House",
@@ -39139,7 +39211,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Longleat",
+        "url": "https://www.longleat.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Longleat",
+        "url": "https://www.longleat.co.uk/"
+      }
+    ]
   },
   {
     "name": "Llanthony Secunda Priory",
@@ -39214,7 +39298,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Llanthony_Secunda_Priory",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Llanthony Secunda Priory - History, Events & Venue Hire Gloucester",
+        "url": "https://llanthonysecunda.org/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Llanthony Secunda Priory - History, Events & Venue Hire Gloucester",
+        "url": "https://llanthonysecunda.org/"
+      }
+    ]
   },
   {
     "name": "Gloucester Blackfriars",
@@ -39381,7 +39477,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Wilton House - Estate of the Earl of Pembroke",
+        "url": "https://www.wiltonhouse.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Wilton House - Estate of the Earl of Pembroke",
+        "url": "https://www.wiltonhouse.co.uk/"
+      }
+    ]
   },
   {
     "name": "Avebury Manor",
@@ -39566,7 +39674,19 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Great_Chalfield_Manor",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Great Chalfield Manor",
+        "url": "https://greatchalfield.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Great Chalfield Manor",
+        "url": "https://greatchalfield.co.uk/"
+      }
+    ]
   },
   {
     "name": "Montacute House",
@@ -39906,7 +40026,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "wikipedia",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Wells Cathedral",
+        "url": "https://www.wellscathedral.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Wells Cathedral",
+        "url": "https://www.wellscathedral.org.uk/"
+      }
+    ]
   },
   {
     "name": "Farleigh House",
@@ -39972,7 +40104,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "About Us — Farleigh House",
+        "url": "https://www.farleigh.house/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "About Us — Farleigh House",
+        "url": "https://www.farleigh.house/"
+      }
+    ]
   },
   {
     "name": "Clevedon Court",
@@ -40224,7 +40368,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Torre Abbey",
+        "url": "https://www.torre-abbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Torre Abbey",
+        "url": "https://www.torre-abbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Hartland Abbey",
@@ -40295,7 +40451,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Homepage - Hartland Abbey & Gardens",
+        "url": "https://www.hartlandabbey.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Homepage - Hartland Abbey & Gardens",
+        "url": "https://www.hartlandabbey.com/"
+      }
+    ]
   },
   {
     "name": "Kingswear Castle",
@@ -40665,7 +40833,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Prideaux Place Padstow",
+        "url": "https://prideauxplace.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Prideaux Place Padstow",
+        "url": "https://prideauxplace.co.uk/"
+      }
+    ]
   },
   {
     "name": "Godolphin House",
@@ -40901,7 +41081,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Warwick_Castle"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Warwick_Castle",
+    "sources": [
+      {
+        "label": "Official Warwick Castle Website: Best Price Guaranteed",
+        "url": "https://www.warwick-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Official Warwick Castle Website: Best Price Guaranteed",
+        "url": "https://www.warwick-castle.com/"
+      }
+    ]
   },
   {
     "name": "Kenilworth Castle",
@@ -41172,7 +41364,19 @@
       "credit": "From geograph.co.uk",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Rockingham Castle",
+        "url": "https://rockinghamcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Rockingham Castle",
+        "url": "https://rockinghamcastle.com/"
+      }
+    ]
   },
   {
     "name": "Ashby de la Zouch Castle",
@@ -41365,7 +41569,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Homepage - Ludlow Castle",
+        "url": "https://www.ludlowcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Homepage - Ludlow Castle",
+        "url": "https://www.ludlowcastle.com/"
+      }
+    ]
   },
   {
     "name": "Shrewsbury Castle",
@@ -41883,7 +42099,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Tamworth Castle",
+        "url": "https://www.tamworthcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Tamworth Castle",
+        "url": "https://www.tamworthcastle.co.uk/"
+      }
+    ]
   },
   {
     "name": "Nottingham Castle",
@@ -41945,7 +42173,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Welcome to Nottingham Castle",
+        "url": "https://www.nottinghamcastle.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Welcome to Nottingham Castle",
+        "url": "https://www.nottinghamcastle.org.uk/"
+      }
+    ]
   },
   {
     "name": "Longtown Castle",
