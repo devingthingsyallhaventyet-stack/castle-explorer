@@ -255,6 +255,56 @@
         "enrichNotes": "add source - https://newarkcastleandgardens.co.uk/"
       },
       "ts": 1779060360221
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bewdley Museum\n*Country:* england\n*Region:* the midlands\n*County:* Worcestershire\n*Type:* castle\n*Period:* 18th century\n*Coords:* 52.37563889, -2.31522222\n*Wikipedia:* https://en.wikipedia.org/wiki/Bewdley_Museum\n*Maps:* https://www.google.com/maps/search/Bewdley%20Museum/@52.375,-2.3183,15z\n*Main Image:* https://img.castlecore.uk/bewdley-museum.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* source - https://www.bewdleymuseum.co.uk/\n\n*Description:*\nBewdley Museum is a museum in the town of Bewdley in Worcestershire, England. It is managed by the Wyre Forest District Council.\n\n_Listing 6 of 270_",
+      "listing": {
+        "name": "Bewdley Museum",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Worcestershire",
+        "lat": 52.37563889,
+        "lng": -2.31522222,
+        "mapsLink": "https://www.google.com/maps/search/Bewdley%20Museum/@52.375,-2.3183,15z",
+        "image": "https://img.castlecore.uk/bewdley-museum.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/bewdley-museum-2.jpg",
+          "https://img.castlecore.uk/bewdley-museum-3.jpg",
+          "https://img.castlecore.uk/bewdley-museum-4.jpg",
+          "https://img.castlecore.uk/bewdley-museum-5.jpg"
+        ],
+        "desc": "Bewdley Museum is a museum in the town of Bewdley in Worcestershire, England. It is managed by the Wyre Forest District Council.",
+        "type": "castle",
+        "period": "18th century",
+        "rating": 3.9,
+        "tags": [
+          "museum",
+          "kid-friendly",
+          "tearoom-cafe",
+          "riverside"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bewdley_Museum"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bewdley_Museum",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/The_Shambles%2C_Bewdley_-_geograph.org.uk_-_25825.jpg/330px-The_Shambles%2C_Bewdley_-_geograph.org.uk_-_25825.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bewdley_Museum",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "source - https://www.bewdleymuseum.co.uk/",
+        "enrichNotes": "source - https://www.bewdleymuseum.co.uk/"
+      },
+      "ts": 1779060385229
     }
   ]
 }
