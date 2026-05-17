@@ -51,6 +51,62 @@
         "enrichNotes": "The google places and the wikipedia link to seem to be correct but the images we have are all wrong? Why? Clawz please look into this and let me know. If all thats needed is to repull the images we can move this to enriched. "
       },
       "ts": 1779036246586
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Brinkburn Priory\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 55.279, -1.817\n*Wikipedia:* https://en.wikipedia.org/wiki/Brinkburn_Priory\n*Maps:* https://www.google.com/maps/search/Brinkburn%20Priory/@55.2833,-1.7667,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNjQi3UfQlpdDT69vzCD_ugmr3uRr_5rPcXBcQ6V7uSyoO8J0x3axx21OdijF6nYnVETpvKJEbYvuNO_t_Psu-TVVcJ5kxW9zcQtV_n_jK5wE0hMDF2ZfC4g0vLT2bkBJqklvuUUCGa5FXS0w=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.english-heritage.org.uk/visit/places/brinkburn-priory/\n\n*Description:*\nBrinkburn Priory is a former monastery built, starting in the 12th century, on a bend of the River Coquet, about 4 miles (6 km) east of Rothbury, Northumberland, England.\n\n_Listing 2 of 10_",
+      "listing": {
+        "name": "Brinkburn Priory",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 55.279,
+        "lng": -1.817,
+        "mapsLink": "https://www.google.com/maps/search/Brinkburn%20Priory/@55.2833,-1.7667,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNjQi3UfQlpdDT69vzCD_ugmr3uRr_5rPcXBcQ6V7uSyoO8J0x3axx21OdijF6nYnVETpvKJEbYvuNO_t_Psu-TVVcJ5kxW9zcQtV_n_jK5wE0hMDF2ZfC4g0vLT2bkBJqklvuUUCGa5FXS0w=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Brinkburn Priory is a former monastery built, starting in the 12th century, on a bend of the River Coquet, about 4 miles (6 km) east of Rothbury, Northumberland, England.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "riverside",
+          "woodland",
+          "atmospheric",
+          "norman",
+          "photogenic",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Brinkburn_Priory"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/brinkburn-priory/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Brinkburn_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BrinkburnPriory.jpg/330px-BrinkburnPriory.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "JohnArmagh",
+          "license": "CC BY-SA 4.0",
+          "description": "Photograph of Brinkburn Priory, Northumberland, England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.english-heritage.org.uk/visit/places/brinkburn-priory/",
+        "enrichNotes": "add source - https://www.english-heritage.org.uk/visit/places/brinkburn-priory/"
+      },
+      "ts": 1779036278021
     }
   ]
 }
