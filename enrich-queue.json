@@ -201,6 +201,57 @@
         "enrichNotes": "change name to - Saint Flannan's Cathedral\nadd source - https://stflannanscathedral.ie/\n"
       },
       "ts": 1779049535700
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Magheraghanrush Court Tomb\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Sligo\n*Type:* fort\n*Period:* Neolithic (c.3500 BC)\n*Coords:* 54.279326, -8.381069\n*Wikipedia:* https://en.wikipedia.org/wiki/Magheraghanrush_Court_Tomb\n*Maps:* https://www.google.com/maps/search/Magheraghanrush%20Court%20Tomb/@54.339,-8.537,15z\n*Main Image:* https://img.castlecore.uk/magheraghanrush-court-tomb.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n\n*Description:*\nMagheraghanrush Court Tomb is a court cairn and National Monument located in County Sligo, Ireland.\n\n\n_Listing 5 of 79_",
+      "listing": {
+        "name": "Magheraghanrush Court Tomb",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Sligo",
+        "lat": 54.279326,
+        "lng": -8.381069,
+        "mapsLink": "https://www.google.com/maps/search/Magheraghanrush%20Court%20Tomb/@54.339,-8.537,15z",
+        "image": "https://img.castlecore.uk/magheraghanrush-court-tomb.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/magheraghanrush-court-tomb-2.jpg",
+          "https://img.castlecore.uk/magheraghanrush-court-tomb-3.jpg",
+          "https://img.castlecore.uk/magheraghanrush-court-tomb-4.jpg",
+          "https://img.castlecore.uk/magheraghanrush-court-tomb-5.jpg"
+        ],
+        "desc": "Magheraghanrush Court Tomb is a court cairn and National Monument located in County Sligo, Ireland.\n",
+        "type": "fort",
+        "period": "Neolithic (c.3500 BC)",
+        "rating": 4.2,
+        "tags": [
+          "prehistoric",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Sligo Heritage",
+            "url": "https://www.sligoheritage.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Magheraghanrush_Court_Tomb",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Deer_Park_Court_Tomb_-_geograph.org.uk_-_985472.jpg/330px-Deer_Park_Court_Tomb_-_geograph.org.uk_-_985472.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049557087
     }
   ]
 }
