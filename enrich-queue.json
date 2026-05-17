@@ -1,3 +1,59 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Caer y Twr\n*Country:* wales\n*Region:* snowdonia north\n*County:* Anglesey\n*Type:* hillfort\n*Period:* Iron Age\n*Coords:* 53.31332778, -4.67564167\n*Wikipedia:* https://en.wikipedia.org/wiki/Caer_y_Twr\n*Maps:* https://www.google.com/maps/search/Caer%20y%20Twr/@53.3194,-4.6889,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOSGfAjKQ57cR7M3wvK7KlRBOnlIUO8cvbiO4C-v1ZfCmc_PDgRI_UdGwqObx0ZlG8HK93pqNgMXv3PkyH3Czq-Dm7JYpfGFtEetxKrB_PzoCOMH6ocX6RPYycPChdhRke5bswihzPMMVYSKeFUXg7Isg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCaer y Twr is an Iron Age hillfort atop the summit of the Holyhead Mountain in Anglesey, Wales.\n\n_Listing 1 of 94_",
+      "listing": {
+        "name": "Caer y Twr",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Anglesey",
+        "lat": 53.31332778,
+        "lng": -4.67564167,
+        "mapsLink": "https://www.google.com/maps/search/Caer%20y%20Twr/@53.3194,-4.6889,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOSGfAjKQ57cR7M3wvK7KlRBOnlIUO8cvbiO4C-v1ZfCmc_PDgRI_UdGwqObx0ZlG8HK93pqNgMXv3PkyH3Czq-Dm7JYpfGFtEetxKrB_PzoCOMH6ocX6RPYycPChdhRke5bswihzPMMVYSKeFUXg7Isg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Caer y Twr is an Iron Age hillfort atop the summit of the Holyhead Mountain in Anglesey, Wales.",
+        "type": "hillfort",
+        "period": "Iron Age",
+        "rating": 4.2,
+        "tags": [
+          "prehistoric",
+          "hilltop",
+          "free-entry",
+          "coastal",
+          "photogenic",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/caer-y-twr"
+          },
+          {
+            "name": "Wikipedia – Caer y Twr",
+            "url": "https://en.wikipedia.org/wiki/Caer_y_Twr"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Caer_y_Twr",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Caerytwr.jpg/330px-Caerytwr.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Eric Jones",
+          "license": "CC BY-SA 2.0",
+          "description": "A view along the top of a section of the Caer y Twr hill fort",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048514921
+    }
+  ]
 }
