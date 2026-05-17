@@ -659,6 +659,66 @@
         "enrichNotes": "update google places - https://maps.app.goo.gl/8diBkMHQ8xEsdrxw8Z\n"
       },
       "ts": 1779051172180
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Taunton Castle\n*Country:* england\n*Region:* south west\n*County:* Somerset\n*Type:* castle\n*Period:* 12th-17th century\n*Coords:* 51.0158, -3.1046\n*Wikipedia:* https://en.wikipedia.org/wiki/Taunton_Castle\n*Maps:* https://www.google.com/maps/search/Taunton%20Castle/@51.0178,-3.1014,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nTaunton Castle is a castle built to defend the town of Taunton, Somerset, England. It has origins in the Anglo Saxon period and was later the site of a priory. The Normans then built a stone structured castle, which belonged to the Bishops of Winchester. The current heavily reconstructed buildings are the inner ward, which now houses the Museum of Somerset and the Somerset Military Museum. The building was designated a grade I listed building in 1952.\n\n_Listing 14 of 53_",
+      "listing": {
+        "name": "Taunton Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Somerset",
+        "lat": 51.0158,
+        "lng": -3.1046,
+        "mapsLink": "https://www.google.com/maps/search/Taunton%20Castle/@51.0178,-3.1014,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Taunton Castle is a castle built to defend the town of Taunton, Somerset, England. It has origins in the Anglo Saxon period and was later the site of a priory. The Normans then built a stone structured castle, which belonged to the Bishops of Winchester. The current heavily reconstructed buildings are the inner ward, which now houses the Museum of Somerset and the Somerset Military Museum. The building was designated a grade I listed building in 1952.",
+        "type": "castle",
+        "period": "12th-17th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "museum",
+          "atmospheric",
+          "medieval",
+          "norman",
+          "tearoom-cafe",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "Museum of Somerset",
+            "url": "https://swheritage.org.uk/museum-of-somerset/explore/taunton-castle/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Taunton_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Taunton_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg/330px-Walls_of_Taunton_Castle_-_geograph.org.uk_-_1235395.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ken Grainger",
+          "license": "CC BY-SA 2.0",
+          "description": "Walls of Taunton Castle The Castle dates back to the early 12th Century. Now used as a museum.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Taunton_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1779051249888
     }
   ]
 }
