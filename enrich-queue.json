@@ -505,6 +505,61 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/XYgbWp9ZTRBfpvZX9\nadd source - https://www.oxfordcastleandprison.co.uk/"
       },
       "ts": 1779049938954
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Compton Castle\n*Country:* england\n*Region:* south west\n*County:* Devon\n*Type:* fortified house\n*Period:* 14th-16th century\n*Coords:* 50.4725, -3.6003\n*Wikipedia:* https://en.wikipedia.org/wiki/Compton_Castle\n*Maps:* https://www.google.com/maps/search/Compton%20Castle/@50.4667,-3.5833,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZN5M_ayQqcxy4A1vn_RWUxdUzvyqg0ZsrrwxAirkE3bg9pl1kUWCRGkF-5JE4JgnfKdj0Gu_XUTrLVKD8C0G9eU5aXhNrC1WmXJUL0KSXYLwgjGYyXGt4eNIt2QtTO7MQxwg-lG4RVghdOu3gI=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCompton Castle in the parish of Marldon in Devon, is a fortified manor house in the village of Compton, about 5 miles (8 km) west of Torquay on the southern coast of Devon, England. The estate was home to the families of Compton, de la Pole, Doddiscombe, Gilbert and Templer. The castle has been home to the Gilbert family for most of the time since it was built. Listed as a Grade 1 set of buildings, it has been a National Trust property since 1951.\n\n_Listing 11 of 79_",
+      "listing": {
+        "name": "Compton Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Devon",
+        "lat": 50.4725,
+        "lng": -3.6003,
+        "mapsLink": "https://www.google.com/maps/search/Compton%20Castle/@50.4667,-3.5833,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN5M_ayQqcxy4A1vn_RWUxdUzvyqg0ZsrrwxAirkE3bg9pl1kUWCRGkF-5JE4JgnfKdj0Gu_XUTrLVKD8C0G9eU5aXhNrC1WmXJUL0KSXYLwgjGYyXGt4eNIt2QtTO7MQxwg-lG4RVghdOu3gI=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Compton Castle in the parish of Marldon in Devon, is a fortified manor house in the village of Compton, about 5 miles (8 km) west of Torquay on the southern coast of Devon, England. The estate was home to the families of Compton, de la Pole, Doddiscombe, Gilbert and Templer. The castle has been home to the Gilbert family for most of the time since it was built. Listed as a Grade 1 set of buildings, it has been a National Trust property since 1951.",
+        "type": "fortified house",
+        "period": "14th-16th century",
+        "rating": 4.1,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "tudor",
+          "gardens",
+          "photogenic",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Compton_Castle"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/devon/compton-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Compton_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Compton_Castle_in_Devon_enh.jpg/330px-Compton_Castle_in_Devon_enh.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Smalljim",
+          "license": "CC BY-SA 2.0",
+          "description": "Compton Castle in DevonNote that I have lightened the image, slightly altered the vertical perspective and cloned out two figures in the foreground.",
+          "credit": "Own work based on: Compton Castle, Marldon - geograph.org.uk - 66252.jpg",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049952640
     }
   ]
 }
