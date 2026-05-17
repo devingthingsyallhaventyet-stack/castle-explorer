@@ -254,6 +254,53 @@
         "enrichNotes": "add source - https://www.pengersickcastle.com/"
       },
       "ts": 1779060784294
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ince Castle\n*Country:* england\n*Region:* south west\n*County:* Cornwall\n*Type:* castle\n*Period:* 17th century\n*Coords:* 50.3983, -4.275\n*Wikipedia:* https://en.wikipedia.org/wiki/Ince_Castle\n*Maps:* https://www.google.com/maps/search/Ince%20Castle/@50.3983,-4.275,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMaKyNOmCPrOJIUG1j8MmduZmgbnHBfQlACrmD8E0tN0ERL2YxGdh2c9jERMfHV5p6xkzN2hKf2GgiNYkQMHdLwnB9e1nXdMwh3G8dbVB55jO7JpZ2uHmrGR7EfBXQE-4DojK-yQ_tL18cMhw=s4800-w511\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/EamHyzePY79RDSof9\n\n\n*Description:*\nInce Castle is three miles (5 km) from Saltash in Cornwall, England, UK. It is not a castle in the conventional sense, but a manor house built of brick. It was built in 1642, at the start of the English Civil War and was captured in 1646. Attached to the house are four three-storey towers with walls 1.2 metres thick. There is a classical portico and the windows are rectangular. The house and estate were sold in the 1850s and let as a farm but it became increasingly run down and covered in ivy by the 20th century. It burnt down in 1988 but it has now been rebuilt.\n\n_Listing 6 of 260_",
+      "listing": {
+        "name": "Ince Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Cornwall",
+        "lat": 50.3983,
+        "lng": -4.275,
+        "mapsLink": "https://www.google.com/maps/search/Ince%20Castle/@50.3983,-4.275,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMaKyNOmCPrOJIUG1j8MmduZmgbnHBfQlACrmD8E0tN0ERL2YxGdh2c9jERMfHV5p6xkzN2hKf2GgiNYkQMHdLwnB9e1nXdMwh3G8dbVB55jO7JpZ2uHmrGR7EfBXQE-4DojK-yQ_tL18cMhw=s4800-w511",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Ince Castle is three miles (5 km) from Saltash in Cornwall, England, UK. It is not a castle in the conventional sense, but a manor house built of brick. It was built in 1642, at the start of the English Civil War and was captured in 1646. Attached to the house are four three-storey towers with walls 1.2 metres thick. There is a classical portico and the windows are rectangular. The house and estate were sold in the 1850s and let as a farm but it became increasingly run down and covered in ivy by the 20th century. It burnt down in 1988 but it has now been rebuilt.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 3.8,
+        "tags": [
+          "medieval",
+          "gardens",
+          "coastal",
+          "atmospheric",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ince_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ince_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ince_Castle_-_geograph.org.uk_-_344828.jpg/330px-Ince_Castle_-_geograph.org.uk_-_344828.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ince_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/EamHyzePY79RDSof9\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/EamHyzePY79RDSof9\n"
+      },
+      "ts": 1779060833638
     }
   ]
 }
