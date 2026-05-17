@@ -25267,9 +25267,12 @@
     "lat": 55.631,
     "lng": -2.091,
     "mapsLink": "https://www.google.com/maps/search/Ford%20Castle/@55.6369,-2.1069,15z",
-    "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOLCr0vPwqnoqhW8IjwSy4jQOdV9tAhvr-TuuVHg_N-5JSgZ58p2TrRhASrBdtYAjKon_5QWYwc5ZKrsS7H-9C9pg3-WCuj2YPvkvq-xZ1NHZZNiW_MUo85Y8f4B7LZ-pSSRIqljSo-aMiL2w=s4800-w1200",
+    "image": "https://lh3.googleusercontent.com/places/ANXAkqE02W9bEza5y_4Ra2GlW1q-EyPAlA2v__-9pjm9tQOen7bpBiSpv_Qs-r8VXgZZHhH34I3ac0fhIJaTfPLtMkAVDFPCaYIChg=s4800-w500",
     "imgSource": "google",
-    "gallery": [],
+    "gallery": [
+      "https://lh3.googleusercontent.com/place-photos/AJRVUZM_3RjmxUKQ37Wa3n8tidVqvxZMsy7kLx9-iND4m-8zvH-9q60j1e7wapqilgaxwjoYpKqdosEMh81EQUdN82kumfdTJjtYzxuLgPei-FDMwa2J8KRrz4Z1TkAhLZwDc0R2IxbpcR0XtMoFRIXoRTluPA=s4800-w1200",
+      "https://lh3.googleusercontent.com/place-photos/AJRVUZM99xLxuemM6Fc6M4C8RBFmEqJH5C2NY7zPmqcM9woo94N77RNE3zexCWQ9vw_20KDM_irdRQSN6kL1Ojo5CkpxlUdDepCKjsJDGn84oBK5Z1sFM-atIuZTB-Pt-gckD8bE9aitkZnrMLnSXq0=s4800-w1200"
+    ],
     "desc": "Ford Castle is a Grade I listed building situated at a shallow crossing point on the River Till, Ford, Northumberland, England.",
     "type": "castle",
     "period": "13th-14th century",
@@ -25292,17 +25295,14 @@
     "wiki": "https://en.wikipedia.org/wiki/Ford_Castle",
     "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ford_Castle_-_geograph.org.uk_-_354895.jpg/330px-Ford_Castle_-_geograph.org.uk_-_354895.jpg",
     "reviewStatus": "flagged",
-    "imageAttribution": {
-      "artist": "Lisa Jarvis",
-      "license": "CC BY-SA 2.0",
-      "description": "Ford Castle",
-      "credit": "From geograph.org.uk; transferred by User:Magnus Manske using geograph_org2commons.",
-      "source": "Wikimedia Commons"
-    },
+    "imageAttribution": "PGL Ford Castle",
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNotes": "Images repulled from Google Places - old image was wrong castle"
   },
   {
     "name": "Aydon Castle",
