@@ -1,3 +1,44 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Grianan of Aileach\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Donegal\n*Type:* castle\n*Period:* 1st millennium BC\n*Coords:* 55.02379444, -7.42759167\n*Wikipedia:* https://en.wikipedia.org/wiki/Grianan_of_Aileach\n*Maps:* https://www.google.com/maps/search/Grianan%20of%20Aileach/@55.0231,-7.4289,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Grianan_of_Aileach_Donegal.jpg/330px-Grianan_of_Aileach_Donegal.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/7wvJidRTp8Uc6XDV8\n\n*Description:*\nThe Grianán of Aileach, sometimes anglicised as Greenan Ely or, locally, as Greenan Fort, is a hillfort atop the 244 metres (801 ft) high Greenan Mountain at Burt on the Inishowen Peninsula in County Donegal, Ireland. The main structure is a 19th-century reconstruction of a stone ringfort, thought to have been built by the Northern Uí Néill, in the sixth or seventh century CE; although there is evidence that the site had been in use before the fort was built. It has been identified as the seat of the Kingdom of Ailech and one of the royal sites of Gaelic Ireland. The wall is about 4.5 metres (15 ft) thick and 5 metres (16 ft) high. Inside it has three terraces, which are linked by steps, and two long passages within it. Originally, there would have been buildings inside the ringfort. Just outside it are the remains of a well and a tumulus.\n\n_Listing 20 of 80_",
+      "listing": {
+        "name": "Grianan of Aileach",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Donegal",
+        "lat": 55.02379444,
+        "lng": -7.42759167,
+        "mapsLink": "https://www.google.com/maps/search/Grianan%20of%20Aileach/@55.0231,-7.4289,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Grianan_of_Aileach_Donegal.jpg/330px-Grianan_of_Aileach_Donegal.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "The Grianán of Aileach, sometimes anglicised as Greenan Ely or, locally, as Greenan Fort, is a hillfort atop the 244 metres (801 ft) high Greenan Mountain at Burt on the Inishowen Peninsula in County Donegal, Ireland. The main structure is a 19th-century reconstruction of a stone ringfort, thought to have been built by the Northern Uí Néill, in the sixth or seventh century CE; although there is evidence that the site had been in use before the fort was built. It has been identified as the seat of the Kingdom of Ailech and one of the royal sites of Gaelic Ireland. The wall is about 4.5 metres (15 ft) thick and 5 metres (16 ft) high. Inside it has three terraces, which are linked by steps, and two long passages within it. Originally, there would have been buildings inside the ringfort. Just outside it are the remains of a well and a tumulus.",
+        "type": "castle",
+        "period": "1st millennium BC",
+        "rating": 4.5,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Grianan_of_Aileach",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Grianan_of_Aileach_Donegal.jpg/330px-Grianan_of_Aileach_Donegal.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Grianan_of_Aileach",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/7wvJidRTp8Uc6XDV8",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/7wvJidRTp8Uc6XDV8"
+      },
+      "ts": 1779043862502
+    }
+  ]
 }
