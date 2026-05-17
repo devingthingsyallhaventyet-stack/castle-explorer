@@ -479,6 +479,59 @@
         "enrichNotes": "add source - https://grimsthorpe.co.uk/"
       },
       "ts": 1779047991322
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hampton Court Herefordshire\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 15th century\n*Coords:* 52.16765833, -2.70414167\n*Wikipedia:* https://en.wikipedia.org/wiki/Hampton_Court_Castle\n*Maps:* https://www.google.com/maps/search/Hampton%20Court%20Herefordshire/@52.0983,-2.6833,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/c/c0/HamptonCourtHerefordshire_cropped.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Change name to - Hampton Castle \nUpdate google places link - https://maps.app.goo.gl/KpXwguSsNTFPeX9P7\nadd source - https://hamptoncastle.com/castle/\n\n*Description:*\nHampton Court Castle, also known as Hampton Court, is a castellated country house in the English county of Herefordshire. The house is in the parish of Hope under Dinmore 4 miles (6.4 km) south of Leominster and is a Grade I listed building, which is the highest category of architecture in the statutory protection scheme.\n\n_Listing 10 of 111_",
+      "listing": {
+        "name": "Hampton Court Herefordshire",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 52.16765833,
+        "lng": -2.70414167,
+        "mapsLink": "https://www.google.com/maps/search/Hampton%20Court%20Herefordshire/@52.0983,-2.6833,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/HamptonCourtHerefordshire_cropped.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Hampton Court Castle, also known as Hampton Court, is a castellated country house in the English county of Herefordshire. The house is in the parish of Hope under Dinmore 4 miles (6.4 km) south of Leominster and is a Grade I listed building, which is the highest category of architecture in the statutory protection scheme.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 4.2,
+        "tags": [
+          "medieval",
+          "gardens",
+          "atmospheric",
+          "guided-tours",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hampton_Court,_Herefordshire"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hampton_Court_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/c/c0/HamptonCourtHerefordshire_cropped.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "original: Tony Bailey\nfirst derivation: Sir Gawain\nsecond derivation: Paravane (talk)",
+          "license": "CC BY-SA 2.0",
+          "description": "Hampton Court near Hope Under Dinmore in Herefordshire, England",
+          "credit": "This file was derived from:  HamptonCourtHerefordshire.jpg",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Hampton_Court_Castle",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "Change name to - Hampton Castle \nUpdate google places link - https://maps.app.goo.gl/KpXwguSsNTFPeX9P7\nadd source - https://hamptoncastle.com/castle/",
+        "enrichNotes": "Change name to - Hampton Castle \nUpdate google places link - https://maps.app.goo.gl/KpXwguSsNTFPeX9P7\nadd source - https://hamptoncastle.com/castle/"
+      },
+      "ts": 1779048107844
     }
   ]
 }
