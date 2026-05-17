@@ -575,6 +575,66 @@
         "enrichNotes": ""
       },
       "ts": 1779043594888
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bodysgallen Hall\n*Country:* wales\n*Region:* snowdonia north\n*County:* Conwy\n*Type:* historic-house\n*Period:* 13th-17th century\n*Coords:* 53.296625, -3.80279167\n*Wikipedia:* https://en.wikipedia.org/wiki/Bodysgallen_Hall\n*Maps:* https://www.google.com/maps/search/Bodysgallen%20Hall/@53.275,-3.8167,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqGJzL9W__aKN59v6VMV9p96SXqoARqwa5RnYOYITsA5_GEIVdnCEIWWxXB8yY8TBEuP8nzqddCg0yr1Jhy_d_QTqDDTXFSo8sw=s4800-w1000\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBodysgallen Hall is a manor house in Conwy county borough, north Wales, near the village of Llanrhos. Since 2008 the house has been owned by the National Trust. It is a Grade I listed building, currently used as a hotel. This listed historical building derives primarily from the 17th century, and has several later additions. Bodysgallen was constructed as a tower house in the Middle Ages to serve as defensive support for nearby Conwy Castle. According to tradition, the site of Bodysgallen was the 5th century AD stronghold of Cadwallon Lawhir, King of Gwynedd, who had wide-ranging exploits as far as Northumberland.\n\n_Listing 13 of 80_",
+      "listing": {
+        "name": "Bodysgallen Hall",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Conwy",
+        "lat": 53.296625,
+        "lng": -3.80279167,
+        "mapsLink": "https://www.google.com/maps/search/Bodysgallen%20Hall/@53.275,-3.8167,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqGJzL9W__aKN59v6VMV9p96SXqoARqwa5RnYOYITsA5_GEIVdnCEIWWxXB8yY8TBEuP8nzqddCg0yr1Jhy_d_QTqDDTXFSo8sw=s4800-w1000",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Bodysgallen Hall is a manor house in Conwy county borough, north Wales, near the village of Llanrhos. Since 2008 the house has been owned by the National Trust. It is a Grade I listed building, currently used as a hotel. This listed historical building derives primarily from the 17th century, and has several later additions. Bodysgallen was constructed as a tower house in the Middle Ages to serve as defensive support for nearby Conwy Castle. According to tradition, the site of Bodysgallen was the 5th century AD stronghold of Cadwallon Lawhir, King of Gwynedd, who had wide-ranging exploits as far as Northumberland.",
+        "type": "historic-house",
+        "period": "13th-17th century",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "gardens",
+          "photogenic",
+          "romantic",
+          "tearoom-cafe",
+          "wedding-venue"
+        ],
+        "source": [
+          {
+            "name": "Bodysgallen Hall",
+            "url": "https://www.bodysgallen.com/hotel-gardens/history/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bodysgallen_Hall"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=695"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bodysgallen_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bodysgallenhallcmichaelhoganlowres.jpg/330px-Bodysgallenhallcmichaelhoganlowres.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "C Michael Hogan;",
+          "license": "CC BY-SA 2.5",
+          "description": "Bodysgallen Hall from gardens below",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779043619302
     }
   ]
 }
