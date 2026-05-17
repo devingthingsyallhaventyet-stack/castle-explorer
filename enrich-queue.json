@@ -1,3 +1,60 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Segontium Roman Fort\n*Country:* wales\n*Region:* snowdonia north\n*County:* Gwynedd\n*Type:* fort\n*Period:* 1st-4th century AD\n*Coords:* 53.1373, -4.2659\n*Wikipedia:* https://en.wikipedia.org/wiki/Segontium\n*Maps:* https://www.google.com/maps/search/Segontium%20Roman%20Fort/@53.1361,-4.2806,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg/330px-Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link https://maps.app.goo.gl/5bVEn8HW4ZbkYpHG9\n\n\n*Description:*\nSegontium is a Roman fort on the outskirts of Caernarfon in Gwynedd, North Wales.\n\n_Listing 1 of 33_",
+      "listing": {
+        "name": "Segontium Roman Fort",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Gwynedd",
+        "lat": 53.1373,
+        "lng": -4.2659,
+        "mapsLink": "https://www.google.com/maps/search/Segontium%20Roman%20Fort/@53.1361,-4.2806,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg/330px-Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Segontium is a Roman fort on the outskirts of Caernarfon in Gwynedd, North Wales.",
+        "type": "fort",
+        "period": "1st-4th century AD",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "prehistoric",
+          "museum",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/segontium-roman-fort"
+          },
+          {
+            "name": "Wikipedia – Segontium",
+            "url": "https://en.wikipedia.org/wiki/Segontium"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Segontium",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg/330px-Segontium_Roman_Fort_-_geograph.org.uk_-_1287434.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "JThomas",
+          "license": "CC BY-SA 2.0",
+          "description": "Segontium Roman Fort Built around 77A.D. to house 1000 soldiers.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Segontium",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link https://maps.app.goo.gl/5bVEn8HW4ZbkYpHG9\n",
+        "enrichNotes": "update google places link https://maps.app.goo.gl/5bVEn8HW4ZbkYpHG9\n"
+      },
+      "ts": 1779051912565
+    }
+  ]
 }
