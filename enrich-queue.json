@@ -416,6 +416,51 @@
         "enrichNotes": "add source - https://www.nanteos.com/"
       },
       "ts": 1779052173442
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Drimnagh Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Dublin\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.324973, -6.33284\n*Wikipedia:* https://en.wikipedia.org/wiki/Drimnagh_Castle\n*Maps:* https://www.google.com/maps/search/Drimnagh%20Castle/@53.3247,-6.3342,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Drymnagh_castle_Dublin_1820.jpg/330px-Drymnagh_castle_Dublin_1820.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.drimnaghcastle.org/\n\n*Description:*\nDrimnagh Castle is a Norman castle located in Drimnagh, a suburb of Dublin, Ireland. It is the only remaining castle in Ireland with a flooded moat around it; this moat is fed by a tributary of a local river, the Camac. Drimnagh Castle Secondary School is located next to the castle.\n\n_Listing 9 of 33_",
+      "listing": {
+        "name": "Drimnagh Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Dublin",
+        "lat": 53.324973,
+        "lng": -6.33284,
+        "mapsLink": "https://www.google.com/maps/search/Drimnagh%20Castle/@53.3247,-6.3342,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Drymnagh_castle_Dublin_1820.jpg/330px-Drymnagh_castle_Dublin_1820.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Drimnagh Castle is a Norman castle located in Drimnagh, a suburb of Dublin, Ireland. It is the only remaining castle in Ireland with a flooded moat around it; this moat is fed by a tributary of a local river, the Camac. Drimnagh Castle Secondary School is located next to the castle.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "hidden-gem",
+          "photogenic"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Drimnagh_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Drymnagh_castle_Dublin_1820.jpg/330px-Drymnagh_castle_Dublin_1820.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Thomas Cromwell",
+          "license": "PD",
+          "description": "Drymnagh (Drimnagh) Castle,",
+          "credit": "Excursions through Ireland, Vol. 2. Published: London, Longman",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "yes",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://www.drimnaghcastle.org/",
+        "enrichNotes": "add source - https://www.drimnaghcastle.org/"
+      },
+      "ts": 1779052195154
     }
   ]
 }
