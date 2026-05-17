@@ -93,6 +93,59 @@
         "enrichNotes": "https://www.ballyfin.com/ add source, tag as hotel"
       },
       "ts": 1779041885167
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Chesters Roman Fort\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* castle\n*Period:* 2nd century AD\n*Coords:* 55.026, -2.139\n*Wikipedia:* https://en.wikipedia.org/wiki/Cilurnum\n*Maps:* https://www.google.com/maps/search/Chesters%20Roman%20Fort/@55.0283,-2.135,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/330px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nCilurnum or Cilurvum was an ancient Roman fort on Hadrian's Wall at Chesters near the village of Walwick, Northumberland. It is also known as Walwick Chesters to distinguish it from Great Chesters fort and Halton Chesters.\n\n_Listing 8 of 10_",
+      "listing": {
+        "name": "Chesters Roman Fort",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 55.026,
+        "lng": -2.139,
+        "mapsLink": "https://www.google.com/maps/search/Chesters%20Roman%20Fort/@55.0283,-2.135,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/330px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Cilurnum or Cilurvum was an ancient Roman fort on Hadrian's Wall at Chesters near the village of Walwick, Northumberland. It is also known as Walwick Chesters to distinguish it from Great Chesters fort and Halton Chesters.",
+        "type": "castle",
+        "period": "2nd century AD",
+        "rating": 4.5,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "riverside",
+          "museum",
+          "prehistoric",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/chesters-roman-fort-and-museum-hadrians-wall/"
+          },
+          {
+            "name": "Visit Northumberland",
+            "url": "https://www.visitnorthumberland.com/explore/things-to-do/attractions/historic-sites/chesters-roman-fort"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cilurnum",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg/330px-The_Commanding_Officer%27s_House_%28praetorium%29%2C_AD_150-400%2C_Chesters_Roman_Fort_%28Cilurnum%29%2C_Hadrian%27s_Wall_%2844036170984%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Carole Raddato from FRANKFURT, Germany",
+          "license": "CC BY-SA 2.0",
+          "description": "The Commanding Officer's House (praetorium), AD 150-400, Chesters Roman Fort (Cilurnum), Hadrian's Wall",
+          "credit": "The Commanding Officer's House (praetorium), AD 150-400, Chesters Roman Fort (Cilurnum), Hadrian's Wall",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779041931953
     }
   ]
 }
