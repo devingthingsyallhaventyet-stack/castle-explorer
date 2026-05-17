@@ -654,6 +654,58 @@
         "enrichNotes": ""
       },
       "ts": 1779050050722
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hellens Manor\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 13th-17th century\n*Coords:* 51.996294, -2.495558\n*Wikipedia:* https://en.wikipedia.org/wiki/Hellens\n*Maps:* https://www.google.com/maps/search/Hellens%20Manor/@51.9867,-2.4533,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMLGbJ1yWQBWLCj_b7ijrt4N50YrjXpNkW3gDvw3xmZeT-A0fp-aPE0PjGqxhD4mTOptJw4ahOAZ1P-KogGocDHerXxoxfnAcDmDkf6bH6QApdYXtC9l2Az1Kdk2qhi_x2f5g5IE4PLS5OIGmg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://hellensmanor.com/\n\n*Description:*\nHellens Manor is a historic house located in the village of Much Marcle in Herefordshire, England. It is one of the oldest dwellings in England, being composed primarily of Tudor, Jacobean and Georgian architecture but with foundations dating from the 12th century.\n\n_Listing 14 of 79_",
+      "listing": {
+        "name": "Hellens Manor",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 51.996294,
+        "lng": -2.495558,
+        "mapsLink": "https://www.google.com/maps/search/Hellens%20Manor/@51.9867,-2.4533,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMLGbJ1yWQBWLCj_b7ijrt4N50YrjXpNkW3gDvw3xmZeT-A0fp-aPE0PjGqxhD4mTOptJw4ahOAZ1P-KogGocDHerXxoxfnAcDmDkf6bH6QApdYXtC9l2Az1Kdk2qhi_x2f5g5IE4PLS5OIGmg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Hellens Manor is a historic house located in the village of Much Marcle in Herefordshire, England. It is one of the oldest dwellings in England, being composed primarily of Tudor, Jacobean and Georgian architecture but with foundations dating from the 12th century.",
+        "type": "castle",
+        "period": "13th-17th century",
+        "rating": 4.1,
+        "tags": [
+          "medieval",
+          "tudor",
+          "haunted",
+          "dark-brooding",
+          "atmospheric",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hellens"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hellens",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/HellensMuchMarcle5.jpg/330px-HellensMuchMarcle5.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Medarduss",
+          "license": "CC BY-SA 4.0",
+          "description": "Hellens in Much Marcle, Herefordshire, England. Pictured from the gardens.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://hellensmanor.com/",
+        "enrichNotes": "add source - https://hellensmanor.com/"
+      },
+      "ts": 1779050104965
     }
   ]
 }
