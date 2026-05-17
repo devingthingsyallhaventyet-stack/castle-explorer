@@ -36397,7 +36397,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Home - Powderham Castle",
+        "url": "https://www.powderham.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Powderham Castle",
+        "url": "https://www.powderham.co.uk/"
+      }
+    ]
   },
   {
     "name": "Dartmouth Castle",
@@ -36637,7 +36649,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Sherborne Castle and Gardens in Dorset",
+        "url": "https://www.sherbornecastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Sherborne Castle and Gardens in Dorset",
+        "url": "https://www.sherbornecastle.com/"
+      }
+    ]
   },
   {
     "name": "Lulworth Castle",
@@ -36724,7 +36748,19 @@
       "credit": "Wikimedia UK",
       "source": "Wikimedia Commons"
     },
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Lulworth Castle & Park - Lulworth Estate",
+        "url": "https://lulworth.com/visit/places-to-visit/castle-and-park/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Lulworth Castle & Park - Lulworth Estate",
+        "url": "https://lulworth.com/visit/places-to-visit/castle-and-park/"
+      }
+    ]
   },
   {
     "name": "Maiden Castle",
@@ -37081,7 +37117,19 @@
     "exists": "unverified",
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey"
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tewkesbury_Abbey",
+    "sources": [
+      {
+        "label": "Home - Tewkesbury Abbey",
+        "url": "https://www.tewkesburyabbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Home - Tewkesbury Abbey",
+        "url": "https://www.tewkesburyabbey.org.uk/"
+      }
+    ]
   },
   {
     "name": "Cowes Castle",
@@ -37277,7 +37325,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Tiverton Castle - The Castle For All Seasons",
+        "url": "https://tivertoncastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Tiverton Castle - The Castle For All Seasons",
+        "url": "https://tivertoncastle.com/"
+      }
+    ]
   },
   {
     "name": "Bampton Castle",
@@ -37518,7 +37578,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Caerhays Estate | Castle and Spring Gardens, Cornwall",
+        "url": "https://visit.caerhays.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Caerhays Estate | Castle and Spring Gardens, Cornwall",
+        "url": "https://visit.caerhays.co.uk/"
+      }
+    ]
   },
   {
     "name": "Stogursey Castle",

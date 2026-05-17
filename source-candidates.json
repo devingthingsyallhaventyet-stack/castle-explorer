@@ -8,48 +8,6 @@
       "foundDate": "2026-05-16"
     },
     {
-      "name": "Powderham Castle",
-      "candidateUrl": "https://www.powderham.co.uk/",
-      "candidateLabel": "Home - Powderham Castle",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "Sherborne Castle",
-      "candidateUrl": "https://www.sherbornecastle.com/",
-      "candidateLabel": "Sherborne Castle and Gardens in Dorset",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "Lulworth Castle",
-      "candidateUrl": "https://lulworth.com/visit/places-to-visit/castle-and-park/",
-      "candidateLabel": "Lulworth Castle & Park - Lulworth Estate",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "Tewkesbury Abbey",
-      "candidateUrl": "https://www.tewkesburyabbey.org.uk/",
-      "candidateLabel": "Home - Tewkesbury Abbey",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "Tiverton Castle",
-      "candidateUrl": "https://tivertoncastle.com/",
-      "candidateLabel": "Tiverton Castle - The Castle For All Seasons",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "Caerhays Castle",
-      "candidateUrl": "https://visit.caerhays.co.uk/",
-      "candidateLabel": "Caerhays Estate | Castle and Spring Gardens, Cornwall",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
       "name": "Bickleigh Castle",
       "candidateUrl": "https://bickleighcastle.com/",
       "candidateLabel": "Bickleigh Castle, Beautiful Castle near Tiverton, Devon",
