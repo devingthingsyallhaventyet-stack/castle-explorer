@@ -191,6 +191,70 @@
         "enrichNotes": ""
       },
       "ts": 1779060337540
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Newark Castle (Nottinghamshire)\n*Country:* england\n*Region:* the midlands\n*County:* Nottinghamshire\n*Type:* castle\n*Period:* 12th-17th century\n*Coords:* 53.076298, -0.813549\n*Wikipedia:* https://en.wikipedia.org/wiki/Newark_Castle,_Nottinghamshire\n*Maps:* https://www.google.com/maps/search/Newark%20Castle%20(Nottinghamshire)/@53.077,-0.812,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Newark_Castle_-_geograph.org.uk_-_6368033.jpg/330px-Newark_Castle_-_geograph.org.uk_-_6368033.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://newarkcastleandgardens.co.uk/\n\n*Description:*\nNewark Castle, in Newark-on-Trent in the English county of Nottinghamshire, was founded in the mid 12th century by Alexander, Bishop of Lincoln. Originally a timber castle, it was rebuilt in stone towards the end of the century. The castle was slighted (dismantled) in the 17th century as a result of the English Civil War, and restored in the 19th century, first by Anthony Salvin in the 1840s and then by the corporation of Newark who bought the site in 1889.\n\n_Listing 5 of 270_",
+      "listing": {
+        "name": "Newark Castle (Nottinghamshire)",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Nottinghamshire",
+        "lat": 53.076298,
+        "lng": -0.813549,
+        "mapsLink": "https://www.google.com/maps/search/Newark%20Castle%20(Nottinghamshire)/@53.077,-0.812,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Newark_Castle_-_geograph.org.uk_-_6368033.jpg/330px-Newark_Castle_-_geograph.org.uk_-_6368033.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Newark Castle, in Newark-on-Trent in the English county of Nottinghamshire, was founded in the mid 12th century by Alexander, Bishop of Lincoln. Originally a timber castle, it was rebuilt in stone towards the end of the century. The castle was slighted (dismantled) in the 17th century as a result of the English Civil War, and restored in the 19th century, first by Anthony Salvin in the 1840s and then by the corporation of Newark who bought the site in 1889.",
+        "type": "castle",
+        "period": "12th-17th century",
+        "rating": 3.9,
+        "tags": [
+          "atmospheric",
+          "ruins-romantic",
+          "riverside",
+          "free-entry",
+          "medieval",
+          "norman",
+          "museum"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Newark_Castle,_Nottinghamshire"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1003474"
+          },
+          {
+            "name": "Visit Nottinghamshire",
+            "url": "https://www.visit-nottinghamshire.co.uk/things-to-do/newark-castle-and-gardens-p354211"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Newark_Castle%2C_Nottinghamshire",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Newark_Castle_-_geograph.org.uk_-_6368033.jpg/330px-Newark_Castle_-_geograph.org.uk_-_6368033.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Stephen Ostler",
+          "license": "CC BY-SA 2.0",
+          "description": "Newark Castle",
+          "credit": "Geograph Britain and Ireland",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Newark_Castle,_Nottinghamshire",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://newarkcastleandgardens.co.uk/",
+        "enrichNotes": "add source - https://newarkcastleandgardens.co.uk/"
+      },
+      "ts": 1779060360221
     }
   ]
 }
