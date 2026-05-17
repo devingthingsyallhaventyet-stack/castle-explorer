@@ -1,3 +1,67 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Holy Cross Abbey\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* abbey\n*Period:* 12th century\n*Coords:* 52.63916667, -7.86805556\n*Wikipedia:* https://en.wikipedia.org/wiki/Holy_Cross_Abbey\n*Maps:* https://www.google.com/maps/search/Holy%20Cross%20Abbey/@52.641,-7.86,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IMGHolyCross_4780w.jpg/330px-IMGHolyCross_4780w.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://holycrossabbey.ie/\n\n\n*Description:*\nHoly Cross Abbey (Mainistir na Croise Naofa) was a Cistercian monastery in Holycross near Thurles, County Tipperary, Ireland, situated on the River Suir. It takes its name from a relic of the True Cross or Holy Rood.\n\n_Listing 1 of 79_",
+      "listing": {
+        "name": "Holy Cross Abbey",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 52.63916667,
+        "lng": -7.86805556,
+        "mapsLink": "https://www.google.com/maps/search/Holy%20Cross%20Abbey/@52.641,-7.86,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IMGHolyCross_4780w.jpg/330px-IMGHolyCross_4780w.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Holy Cross Abbey (Mainistir na Croise Naofa) was a Cistercian monastery in Holycross near Thurles, County Tipperary, Ireland, situated on the River Suir. It takes its name from a relic of the True Cross or Holy Rood.",
+        "type": "abbey",
+        "period": "12th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "riverside",
+          "atmospheric",
+          "celtic",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Holy_Cross_Abbey"
+          },
+          {
+            "name": "Holy Cross Abbey",
+            "url": "https://holycrossabbey.ie/"
+          },
+          {
+            "name": "Tuatha",
+            "url": "https://www.tuatha.ie/holy-cross-abbey/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Holy_Cross_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IMGHolyCross_4780w.jpg/330px-IMGHolyCross_4780w.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Sarah777",
+          "license": "Public domain",
+          "description": "Holy Cross Abbey in Holycross, County Tipperary on the River Suir",
+          "credit": "IMGHolyCross_4780w.jpg from the english wikipedia",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Holy_Cross_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://holycrossabbey.ie/\n",
+        "enrichNotes": "add source - https://holycrossabbey.ie/\n"
+      },
+      "ts": 1779049382255
+    }
+  ]
 }
