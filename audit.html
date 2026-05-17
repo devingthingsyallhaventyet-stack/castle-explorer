@@ -473,7 +473,7 @@ function applyFilters() {
     });
   }
   
-  if (currentMainTab === 'enrichReview') filtered = filtered.slice(0, 10);
+  // No batch limit — show all enrich review listings at once
   currentIdx = 0;
   if (currentView === 'card') renderCard();
   else renderTable();
