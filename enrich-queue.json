@@ -226,6 +226,48 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/mepUUE1SJB2HcfmN9\n"
       },
       "ts": 1779052062388
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Laugharne Castle\n*Country:* wales\n*Region:* west wales\n*County:* Carmarthenshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 51.76972222, -4.46194444\n*Wikipedia:* https://en.wikipedia.org/wiki/Laugharne_Castle\n*Maps:* https://www.google.com/maps/search/Laugharne%20Castle/@51.7712,-4.4625,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNrU9wWuKAxdoItElJfQWvYC8AORegBSbzij2eqtAlr24za4KNpuQvUZZwFi5JCisjci_31pqefYoneVl2dFBV4d5Dc-il81T-J8u27jtaIs2GGrXcueLg1QWC_QrNom2ALXiQtmcwWpmBRUw=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nLaugharne Castle is in Laugharne, Carmarthenshire, Wales. The castle, located on the estuary of the River Tâf, was originally established in 1116. It was rebuilt as a Norman stronghold. There have been many alterations since then, including becoming a Tudor fortified manor house in the sixteenth century. It changed hands twice during the English Civil War, being eventually captured by Parliamentary forces in 1644.\n\n_Listing 5 of 33_",
+      "listing": {
+        "name": "Laugharne Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Carmarthenshire",
+        "lat": 51.76972222,
+        "lng": -4.46194444,
+        "mapsLink": "https://www.google.com/maps/search/Laugharne%20Castle/@51.7712,-4.4625,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNrU9wWuKAxdoItElJfQWvYC8AORegBSbzij2eqtAlr24za4KNpuQvUZZwFi5JCisjci_31pqefYoneVl2dFBV4d5Dc-il81T-J8u27jtaIs2GGrXcueLg1QWC_QrNom2ALXiQtmcwWpmBRUw=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Laugharne Castle is in Laugharne, Carmarthenshire, Wales. The castle, located on the estuary of the River Tâf, was originally established in 1116. It was rebuilt as a Norman stronghold. There have been many alterations since then, including becoming a Tudor fortified manor house in the sixteenth century. It changed hands twice during the English Civil War, being eventually captured by Parliamentary forces in 1644.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Laugharne_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg/330px-Dylan_admires_......._the_medieval_Laugharne_castle_-_geograph.org.uk_-_1708250.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Colin Vosper",
+          "license": "CC BY-SA 2.0",
+          "description": "Dylan admires ....... the medieval Laugharne castle. The foreground shows the rear view of the wooden sculpture of Dylan Thomas set in the Millennium Garden. The engraved detail on the front of the base is shown at the link: 1708269",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779052081899
     }
   ]
 }
