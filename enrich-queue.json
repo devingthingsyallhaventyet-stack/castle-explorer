@@ -637,6 +637,62 @@
         "enrichNotes": "add source - https://www.wentworthcastle.org/\nupdate google places link - https://maps.app.goo.gl/DfH1qJuPZnPJq1Er5"
       },
       "ts": 1779048252900
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Guisborough Priory\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* abbey\n*Period:* 12th-14th century\n*Coords:* 54.53626667, -1.04806389\n*Wikipedia:* https://en.wikipedia.org/wiki/Gisborough_Priory\n*Maps:* https://www.google.com/maps/search/Guisborough%20Priory/@54.5317,-1.0467,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gisborough_priory_snow_portrait.jpg/330px-Gisborough_priory_snow_portrait.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nGisborough Priory is a ruined Augustinian priory in Guisborough in the borough of Redcar and Cleveland, North Yorkshire, England. It was founded in 1119 as the Priory of St Mary by the Norman feudal magnate Robert de Brus, an ancestor of the Scottish king, Robert the Bruce. It became one of the richest monastic foundations in England with grants from the crown and bequests from de Brus, other nobles and gentry and local people of more modest means. Much of the Romanesque Norman priory was destroyed in a fire in 1289. It was rebuilt in the Gothic style on a grander scale over the following century. Its remains are regarded as among the finest surviving examples of early Gothic architecture in England.\n\n_Listing 13 of 111_",
+      "listing": {
+        "name": "Guisborough Priory",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.53626667,
+        "lng": -1.04806389,
+        "mapsLink": "https://www.google.com/maps/search/Guisborough%20Priory/@54.5317,-1.0467,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gisborough_priory_snow_portrait.jpg/330px-Gisborough_priory_snow_portrait.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Gisborough Priory is a ruined Augustinian priory in Guisborough in the borough of Redcar and Cleveland, North Yorkshire, England. It was founded in 1119 as the Priory of St Mary by the Norman feudal magnate Robert de Brus, an ancestor of the Scottish king, Robert the Bruce. It became one of the richest monastic foundations in England with grants from the crown and bequests from de Brus, other nobles and gentry and local people of more modest means. Much of the Romanesque Norman priory was destroyed in a fire in 1289. It was rebuilt in the Gothic style on a grander scale over the following century. Its remains are regarded as among the finest surviving examples of early Gothic architecture in England.",
+        "type": "abbey",
+        "period": "12th-14th century",
+        "rating": 4.2,
+        "tags": [
+          "atmospheric",
+          "ruins-romantic",
+          "gothic",
+          "free-entry",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/gisborough-priory/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Gisborough_Priory"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Gisborough_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gisborough_priory_snow_portrait.jpg/330px-Gisborough_priory_snow_portrait.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Prioryman",
+          "license": "CC BY-SA 4.0",
+          "description": "Gisborough Priory in the snow",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Gisborough_Priory",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779048318979
     }
   ]
 }
