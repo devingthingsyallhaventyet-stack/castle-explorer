@@ -368,6 +368,60 @@
         "enrichNotes": "add source- https://dalkeycastle.com/"
       },
       "ts": 1779048802331
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kilkea Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Kildare\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.94333333, -6.88694444\n*Wikipedia:* https://en.wikipedia.org/wiki/Kilkea_Castle\n*Maps:* https://www.google.com/maps/search/Kilkea%20Castle/@52.952,-6.938,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqHFeV-u7p-p2odXh3NGKCTUZQfJp6Ym-KjpXa4M4X2LOqcPRpenh-5cqybL1kw2xvWSCs_jmG5rDTnf-Iks69ZRugPwrss4mqw=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://www.kilkeacastle.ie/ - add source, tag as hotel \n\n*Description:*\nKilkea Castle is located 5 km (3.1 mi) northwest of Castledermot, County Kildare, Ireland near the village of Kilkea on the R418 regional road from Athy to Tullow. It was a medieval stronghold, for over 700 years, of the Fitzgeralds, earls of Kildare.\n\n_Listing 8 of 94_",
+      "listing": {
+        "name": "Kilkea Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Kildare",
+        "lat": 52.94333333,
+        "lng": -6.88694444,
+        "mapsLink": "https://www.google.com/maps/search/Kilkea%20Castle/@52.952,-6.938,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqHFeV-u7p-p2odXh3NGKCTUZQfJp6Ym-KjpXa4M4X2LOqcPRpenh-5cqybL1kw2xvWSCs_jmG5rDTnf-Iks69ZRugPwrss4mqw=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Kilkea Castle is located 5 km (3.1 mi) northwest of Castledermot, County Kildare, Ireland near the village of Kilkea on the R418 regional road from Athy to Tullow. It was a medieval stronghold, for over 700 years, of the Fitzgeralds, earls of Kildare.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.2,
+        "tags": [
+          "well-preserved",
+          "romantic",
+          "medieval",
+          "atmospheric",
+          "wedding-venue",
+          "gardens"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kilkea_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Kilkea_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Kilkea-Castle-Postcard-Local-Studies-Collections.jpg/330px-Kilkea-Castle-Postcard-Local-Studies-Collections.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "“The Schools’ Collection, Volume 0621, Page 413” by Dúchas © National Folklore Collection, UCD is licensed under CC BY-NC 4.0.",
+          "license": "CC BY-SA 4.0",
+          "description": "Kilkea-Castle-Postcard-Local-Studies-Collections",
+          "credit": "“The Schools’ Collection, Volume 0621, Page 413” by Dúchas © National Folklore Collection, UCD is licensed under CC BY-NC 4.0.",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "https://www.kilkeacastle.ie/ - add source, tag as hotel ",
+        "enrichNotes": "https://www.kilkeacastle.ie/ - add source, tag as hotel "
+      },
+      "ts": 1779048826228
     }
   ]
 }
