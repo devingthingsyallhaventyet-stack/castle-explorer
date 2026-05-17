@@ -1166,6 +1166,59 @@
         "enrichNotes": ""
       },
       "ts": 1779046424950
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ormond Castle (Ireland)\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* castle\n*Period:* 16th century\n*Coords:* 52.345, -7.40777778\n*Wikipedia:* https://en.wikipedia.org/wiki/Ormonde_Castle\n*Maps:* https://www.google.com/maps/search/Carrick-on-Suir%20Castle/@52.349,-7.413,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP2f3cySbiV2xlO3jUAnzeXDBn1z_XnoIe9dPYPiYbKMMUH6LrjPTLFQz_I2m43vYRw0snBkjoDHg6i1ikfbxBfecx4Iv8cj94g2DYkJaN_iBoM-V-JTycKTD2339--mt38NSWZ26hZSRKJaBU=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nOrmond Castle is a castle on the River Suir on the east side of Carrick-on-Suir, County Tipperary, Ireland. The oldest part of the existing castle is a mid-15th century walled bawn, cornered on the northeast and northwest by towers.\n\n_Listing 26 of 28_",
+      "listing": {
+        "name": "Ormond Castle (Ireland)",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 52.345,
+        "lng": -7.40777778,
+        "mapsLink": "https://www.google.com/maps/search/Carrick-on-Suir%20Castle/@52.349,-7.413,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP2f3cySbiV2xlO3jUAnzeXDBn1z_XnoIe9dPYPiYbKMMUH6LrjPTLFQz_I2m43vYRw0snBkjoDHg6i1ikfbxBfecx4Iv8cj94g2DYkJaN_iBoM-V-JTycKTD2339--mt38NSWZ26hZSRKJaBU=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Ormond Castle is a castle on the River Suir on the east side of Carrick-on-Suir, County Tipperary, Ireland. The oldest part of the existing castle is a mid-15th century walled bawn, cornered on the northeast and northwest by towers.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "tudor",
+          "guided-tours",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/ormond-castle/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ormond_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ormonde_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ormonde_Castle_-_Caisle%C3%A1n_Urmhumhan_-_geograph.org.uk_-_924019.jpg/330px-Ormonde_Castle_-_Caisle%C3%A1n_Urmhumhan_-_geograph.org.uk_-_924019.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ormonde_Castle",
+        "altNames": [
+          "Carrick-on-Suir Castle"
+        ],
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779046457598
     }
   ]
 }
