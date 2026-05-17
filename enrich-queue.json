@@ -851,6 +851,67 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/nvuW9W57yruKNRHf8"
       },
       "ts": 1779045218809
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Rufford Old Hall\n*Country:* england\n*Region:* northern england\n*County:* Lancashire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 53.637915, -2.813691\n*Wikipedia:* https://en.wikipedia.org/wiki/Rufford_Old_Hall\n*Maps:* https://www.google.com/maps/search/Rufford%20Old%20Hall/@53.6317,-2.79,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNqp434tQPR7euTgBR_NCbt-EASL3LocbK40k6kGMSx9hIKCNTQ8DJSgIDV3wy5aIwqEDr1IKacbjETZPCbqW41cQQpq3h_oh1-zNPlOOokn9zxxnYfdizugCGkYrmUTiJmKHPaZBqVDDZohGo=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nRufford Old Hall is a National Trust property in Rufford, Lancashire, in north-west England. Built in the late fifteenth or early sixteenth centuries for the Hesketh family, only the great hall survives from the original structure. A brick-built wing in the Jacobean style was added in 1661, at right angles to the great hall, and a third wing was added in the 1820s.\n\n_Listing 17 of 50_",
+      "listing": {
+        "name": "Rufford Old Hall",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Lancashire",
+        "lat": 53.637915,
+        "lng": -2.813691,
+        "mapsLink": "https://www.google.com/maps/search/Rufford%20Old%20Hall/@53.6317,-2.79,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNqp434tQPR7euTgBR_NCbt-EASL3LocbK40k6kGMSx9hIKCNTQ8DJSgIDV3wy5aIwqEDr1IKacbjETZPCbqW41cQQpq3h_oh1-zNPlOOokn9zxxnYfdizugCGkYrmUTiJmKHPaZBqVDDZohGo=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Rufford Old Hall is a National Trust property in Rufford, Lancashire, in north-west England. Built in the late fifteenth or early sixteenth centuries for the Hesketh family, only the great hall survives from the original structure. A brick-built wing in the Jacobean style was added in 1661, at right angles to the great hall, and a third wing was added in the 1820s.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "tudor",
+          "atmospheric",
+          "gardens",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/liverpool-lancashire/rufford-old-hall"
+          },
+          {
+            "name": "National Trust Collections",
+            "url": "https://www.nationaltrustcollections.org.uk/place/rufford-old-hall"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Rufford_Old_Hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Rufford_Old_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Rufford_Old_Hall_-_geograph.org.uk_-_2042985.jpg/330px-Rufford_Old_Hall_-_geograph.org.uk_-_2042985.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "George Hopkins",
+          "license": "CC BY-SA 2.0",
+          "description": "Rufford Old Hall, near to Rufford, Lancashire, Great Britain.\nFrom the grounds of Rufford Old Hall",
+          "credit": "From geograph.org.uk; transferred by User:Skinsmoke using geograph_org2commons.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045231342
     }
   ]
 }
