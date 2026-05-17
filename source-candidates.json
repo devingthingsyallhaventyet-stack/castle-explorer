@@ -1,0 +1,1628 @@
+{
+  "candidates": [
+    {
+      "name": "Castle Stalker",
+      "candidateUrl": "https://www.castlestalker.com/wp/",
+      "candidateLabel": "Castle Stalker Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Duart Castle",
+      "candidateUrl": "https://duartcastle.com/",
+      "candidateLabel": "Duart Castle - Ancient Seat of Clan Maclean",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Inveraray Castle",
+      "candidateUrl": "https://www.inveraray-castle.com/",
+      "candidateLabel": "Inveraray Castle - Home of the Dukes of Argyll",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lews Castle",
+      "candidateUrl": "https://www.lews-castle.co.uk/",
+      "candidateLabel": "Lews Castle - Luxury Accommodation & Heritage",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Tarbert Castle",
+      "candidateUrl": "https://www.tarbertcastle.info/",
+      "candidateLabel": "Tarbert Castle Heritage Park",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Aikwood Tower",
+      "candidateUrl": "https://www.aikwoodtower.com/",
+      "candidateLabel": "Aikwood Tower - Luxury Scottish Castle Accommodation",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Duns Castle",
+      "candidateUrl": "https://dunscastle.co.uk/",
+      "candidateLabel": "Duns Castle - Scottish Castle Venue for Weddings and Events",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Traquair House",
+      "candidateUrl": "https://www.traquair.co.uk/",
+      "candidateLabel": "Traquair House - Scotlands Oldest Inhabited House",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Borthwick Castle",
+      "candidateUrl": "https://borthwickcastle.com/",
+      "candidateLabel": "Borthwick Castle - The Ultimate Scottish Castle Experience",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Fatlips Castle",
+      "candidateUrl": "https://www.fatlipscastle.com/",
+      "candidateLabel": "Fatlips Castle - Historical Resource and Information",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Floors Castle",
+      "candidateUrl": "https://www.floorscastle.com/",
+      "candidateLabel": "Floors Castle - Historic Venue & Gardens",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Thirlestane Castle",
+      "candidateUrl": "https://thirlestanecastle.co.uk",
+      "candidateLabel": "Thirlestane Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Barcaldine Castle",
+      "candidateUrl": "https://barcaldinecastle.co.uk",
+      "candidateLabel": "Barcaldine Castle - Luxury B&B Oban",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Neidpath Castle",
+      "candidateUrl": "https://www.neidpathcastle.com/",
+      "candidateLabel": "Neidpath Castle - Wedding Venue & Accommodation",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Edinburgh Castle",
+      "candidateUrl": "https://www.edinburghcastle.scot/",
+      "candidateLabel": "Official Edinburgh Castle Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Rosslyn Chapel",
+      "candidateUrl": "https://www.rosslynchapel.com/",
+      "candidateLabel": "The Official Rosslyn Chapel Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "St Giles Cathedral",
+      "candidateUrl": "https://www.stgilescathedral.org.uk/",
+      "candidateLabel": "St Giles Cathedral Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Palace of Holyroodhouse",
+      "candidateUrl": "https://www.rct.uk/visit/palace-of-holyroodhouse",
+      "candidateLabel": "Palace of Holyroodhouse - Royal Collection Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lennoxlove House",
+      "candidateUrl": "https://www.lennoxlove.com/",
+      "candidateLabel": "Lennoxlove Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dalhousie Castle",
+      "candidateUrl": "https://www.dalhousiecastle.co.uk/",
+      "candidateLabel": "Dalhousie Castle Hotel Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Arniston House",
+      "candidateUrl": "https://arnistonhouse.com/",
+      "candidateLabel": "Arniston House Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Blair Castle",
+      "candidateUrl": "https://atholl-estates.co.uk/blair-castle/",
+      "candidateLabel": "Blair Castle - Atholl Estates",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Scone Palace",
+      "candidateUrl": "https://www.scone-palace.co.uk/",
+      "candidateLabel": "Scone Palace - Iconic Crowning Place of Scottish Kings",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunfermline Abbey",
+      "candidateUrl": "https://dunfermlineabbey.com/",
+      "candidateLabel": "Dunfermline Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Menzies",
+      "candidateUrl": "https://www.castlemenzies.org/",
+      "candidateLabel": "Castle Menzies - Menzies Clan Society",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Megginch Castle",
+      "candidateUrl": "https://megginchcastle.com/",
+      "candidateLabel": "Megginch Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Balvaird Castle",
+      "candidateUrl": "https://balvairdcastle.co.uk/",
+      "candidateLabel": "Balvaird Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunkeld Cathedral",
+      "candidateUrl": "https://dunkeldcathedral.org/",
+      "candidateLabel": "Dunkeld Cathedral & Parish",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Kinross House",
+      "candidateUrl": "https://www.kinrosshouse.com/",
+      "candidateLabel": "Kinross House Estate & Coach House Spa",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunimarle Castle",
+      "candidateUrl": "https://www.dunimarlecastle.co.uk/",
+      "candidateLabel": "Dunimarle Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunblane Cathedral",
+      "candidateUrl": "https://www.dunblanecathedral.org.uk/",
+      "candidateLabel": "Dunblane Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Paisley Abbey",
+      "candidateUrl": "https://www.paisleyabbey.org.uk/",
+      "candidateLabel": "Paisley Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Glasgow Cathedral",
+      "candidateUrl": "https://glasgowcathedral.org/",
+      "candidateLabel": "Glasgow Cathedral Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Kinneil House",
+      "candidateUrl": "https://kinneil.org.uk/",
+      "candidateLabel": "Kinneil Estate and Nature Reserve",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Eilean Donan Castle",
+      "candidateUrl": "https://www.eileandonancastle.com",
+      "candidateLabel": "Eilean Donan Castle Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunrobin Castle",
+      "candidateUrl": "https://www.dunrobincastle.co.uk",
+      "candidateLabel": "Dunrobin Castle Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle of Mey",
+      "candidateUrl": "https://www.castleofmey.org.uk",
+      "candidateLabel": "Castle of Mey Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Cawdor Castle",
+      "candidateUrl": "https://www.cawdorcastle.com",
+      "candidateLabel": "Cawdor Castle Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunbeath Castle",
+      "candidateUrl": "https://www.dunbeath.co.uk/",
+      "candidateLabel": "Dunbeath Castle & Estate",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ackergill Tower",
+      "candidateUrl": "https://www.ackergilltower.com/",
+      "candidateLabel": "Ackergill Tower",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Stuart",
+      "candidateUrl": "https://cabot.com/highlands/",
+      "candidateLabel": "Cabot Highlands (Castle Stuart)",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Leod",
+      "candidateUrl": "https://www.castleleod.org.uk/",
+      "candidateLabel": "Castle Leod - Seat of Clan Mackenzie",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Balfour Castle",
+      "candidateUrl": "https://www.balfourcastle.co.uk/",
+      "candidateLabel": "Balfour Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Kilravock Castle",
+      "candidateUrl": "https://www.kilravock.com/",
+      "candidateLabel": "Kilravock Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Grant",
+      "candidateUrl": "https://www.castlegrant.com/",
+      "candidateLabel": "Castle Grant - 500 Year Old Highland Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Barra Castle",
+      "candidateUrl": "https://barracastle.co.uk/",
+      "candidateLabel": "Barra Castle - Exclusive Use Luxury Barn Venue",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Cluny Castle",
+      "candidateUrl": "https://www.clunycastle.com/",
+      "candidateLabel": "Cluny Castle - Luxury Castle Wedding Venue",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Leslie Castle",
+      "candidateUrl": "https://leslie-castle.com/",
+      "candidateLabel": "Leslie Castle Guesthouse",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Glamis Castle",
+      "candidateUrl": "https://www.glamis-castle.co.uk/",
+      "candidateLabel": "Glamis Castle Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunnottar Castle",
+      "candidateUrl": "https://www.dunnottarcastle.co.uk/",
+      "candidateLabel": "Dunnottar Castle Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Balmoral Castle",
+      "candidateUrl": "https://balmoralcastle.com/",
+      "candidateLabel": "Balmoral Castle - Highland Home of the Royal Family",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Braemar Castle",
+      "candidateUrl": "https://braemarcastle.co.uk/",
+      "candidateLabel": "Braemar Castle - Community Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Pluscarden Abbey",
+      "candidateUrl": "https://www.pluscardenabbey.org/",
+      "candidateLabel": "Pluscarden Abbey - Benedictine Monastery",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Buittle Castle",
+      "candidateUrl": "https://www.buittlecastle.co.uk/",
+      "candidateLabel": "Buittle Castle & the Barony of Buittle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Closeburn Castle",
+      "candidateUrl": "https://closeburncastle.com/",
+      "candidateLabel": "Closeburn Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Rowallan Castle",
+      "candidateUrl": "https://rowallancastle.com/",
+      "candidateLabel": "Rowallan Castle Estate",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Waltham Abbey",
+      "candidateUrl": "https://www.walthamabbeychurch.co.uk/",
+      "candidateLabel": "Waltham Abbey Church",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Berkhamsted Castle",
+      "candidateUrl": "https://www.berkhamstedcastle.org.uk/",
+      "candidateLabel": "Berkhamsted Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Kimbolton Castle",
+      "candidateUrl": "https://kimboltoncastle.com/",
+      "candidateLabel": "Kimbolton Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Mountfitchet Castle",
+      "candidateUrl": "https://mountfitchetcastle.com/",
+      "candidateLabel": "Mountfitchet Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ely Cathedral",
+      "candidateUrl": "https://www.elycathedral.org/",
+      "candidateLabel": "Ely Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Layer Marney Tower",
+      "candidateUrl": "https://www.layermarneytower.co.uk/",
+      "candidateLabel": "Layer Marney Tower",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Landguard Fort",
+      "candidateUrl": "https://landguard.com/",
+      "candidateLabel": "Destination Landguard Suffolk",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Helmingham Hall",
+      "candidateUrl": "https://www.helmingham.com/",
+      "candidateLabel": "Helmingham Hall Gardens & Events",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Mannington Hall",
+      "candidateUrl": "https://mannington.co.uk/",
+      "candidateLabel": "Mannington Hall",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Alnwick Castle",
+      "candidateUrl": "https://www.alnwickcastle.com/",
+      "candidateLabel": "Alnwick Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Bamburgh Castle",
+      "candidateUrl": "https://www.bamburghcastle.com/",
+      "candidateLabel": "Bamburgh Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Hoghton Tower",
+      "candidateUrl": "https://www.hoghtontower.co.uk/",
+      "candidateLabel": "Hoghton Tower",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Brancepeth Castle",
+      "candidateUrl": "https://brancepethcastle.uk/",
+      "candidateLabel": "Brancepeth Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lumley Castle",
+      "candidateUrl": "https://www.lumleycastle.com/",
+      "candidateLabel": "Lumley Castle Hotel",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Witton Castle",
+      "candidateUrl": "https://wittoncastlecountrypark.co.uk/",
+      "candidateLabel": "Witton Castle Country Park",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Peckforton Castle",
+      "candidateUrl": "https://www.peckfortoncastle.co.uk/",
+      "candidateLabel": "Peckforton Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Rose Castle",
+      "candidateUrl": "https://www.rosecastle.com/",
+      "candidateLabel": "Rose Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Appleby Castle",
+      "candidateUrl": "https://www.applebycastle.org/",
+      "candidateLabel": "Appleby Castle & The Norman Centre",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lancaster Castle",
+      "candidateUrl": "https://www.lancastercastle.com/",
+      "candidateLabel": "Lancaster Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Chillingham Castle",
+      "candidateUrl": "https://chillingham-castle.com/",
+      "candidateLabel": "Chillingham Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Hexham Abbey",
+      "candidateUrl": "https://hexhamabbey.org.uk/",
+      "candidateLabel": "Hexham Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Muncaster Castle",
+      "candidateUrl": "https://www.muncaster.co.uk/",
+      "candidateLabel": "Muncaster Castle Gardens & Estate",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Birkenhead Priory",
+      "candidateUrl": "https://thebirkenheadpriory.org/",
+      "candidateLabel": "The Birkenhead Priory",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Tower of London",
+      "candidateUrl": "https://www.hrp.org.uk/tower-of-london/",
+      "candidateLabel": "Tower of London - Historic Royal Palaces",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Leeds Castle",
+      "candidateUrl": "https://www.leeds-castle.com/",
+      "candidateLabel": "Leeds Castle in Kent",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Arundel Castle",
+      "candidateUrl": "https://www.arundelcastle.org/",
+      "candidateLabel": "Arundel Castle & Gardens",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Blenheim Palace",
+      "candidateUrl": "https://www.blenheimpalace.com/",
+      "candidateLabel": "Blenheim Palace",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Farnham Castle",
+      "candidateUrl": "https://www.farnham-castle.com/",
+      "candidateLabel": "Farnham Castle Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Tonbridge Castle",
+      "candidateUrl": "https://www.tonbridgecastle.org/",
+      "candidateLabel": "Tonbridge Castle Kent",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Amberley Castle",
+      "candidateUrl": "https://amberleycastle.co.uk/",
+      "candidateLabel": "Homepage - Amberley Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Herstmonceux Castle",
+      "candidateUrl": "https://herstmonceux-castle.com/",
+      "candidateLabel": "Herstmonceux Castle Estate and Gardens, East Sussex",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Saltwood Castle",
+      "candidateUrl": "https://www.saltwoodcastle.com/",
+      "candidateLabel": "Saltwood Castle – Saltwood Castle in the heart of Kent",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Allington Castle",
+      "candidateUrl": "https://allingtoncastle.com/",
+      "candidateLabel": "Allington Castle - A Historic Kent Castle and Exclusive Wedding & Filming Venue",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Basing House",
+      "candidateUrl": "https://www.hampshireculture.org.uk/basing-house",
+      "candidateLabel": "Basing House | Hampshire Cultural Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Broughton Castle",
+      "candidateUrl": "https://www.broughtoncastle.com/",
+      "candidateLabel": "Broughton Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Knepp Castle",
+      "candidateUrl": "https://knepp.co.uk/",
+      "candidateLabel": "Knepp - Rewilding Pioneers (Knepp Castle Estate)",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Windsor Castle",
+      "candidateUrl": "https://www.rct.uk/visit/windsor-castle",
+      "candidateLabel": "Windsor Castle - Royal Collection Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lympne Castle",
+      "candidateUrl": "https://lympnecastle.com/",
+      "candidateLabel": "Lympne Castle - Wedding Venue & Event Venue, Kent UK",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Canterbury Cathedral",
+      "candidateUrl": "https://www.canterbury-cathedral.org/",
+      "candidateLabel": "Canterbury Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Boxgrove Priory",
+      "candidateUrl": "https://www.boxgrovepriory.co.uk/",
+      "candidateLabel": "The Priory Church of St Mary and St Blaise Boxgrove",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Beaulieu Abbey",
+      "candidateUrl": "https://www.beaulieu.co.uk/attractions/beaulieu-abbey/",
+      "candidateLabel": "Historic Cistercian Abbey | Beaulieu, New Forest",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dorchester Abbey",
+      "candidateUrl": "https://www.dorchester-abbey.org.uk/",
+      "candidateLabel": "Dorchester Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Highclere Castle",
+      "candidateUrl": "https://www.highclerecastle.co.uk/",
+      "candidateLabel": "Highclere Castle: Homepage",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Southsea Castle",
+      "candidateUrl": "https://southseacastle.co.uk/",
+      "candidateLabel": "Southsea Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Mapledurham House",
+      "candidateUrl": "https://www.mapledurham.co.uk/",
+      "candidateLabel": "Mapledurham Estate",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Berkeley Castle",
+      "candidateUrl": "https://www.berkeley-castle.com/",
+      "candidateLabel": "Discover Berkeley Castle’s Rich History",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Combe",
+      "candidateUrl": "https://www.castlecombe.org.uk/",
+      "candidateLabel": "Castle Combe - Official Village Website | Wiltshire, England",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Powderham Castle",
+      "candidateUrl": "https://www.powderham.co.uk/",
+      "candidateLabel": "Home - Powderham Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Sherborne Castle",
+      "candidateUrl": "https://www.sherbornecastle.com/",
+      "candidateLabel": "Sherborne Castle and Gardens in Dorset",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lulworth Castle",
+      "candidateUrl": "https://lulworth.com/visit/places-to-visit/castle-and-park/",
+      "candidateLabel": "Lulworth Castle & Park - Lulworth Estate",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Tewkesbury Abbey",
+      "candidateUrl": "https://www.tewkesburyabbey.org.uk/",
+      "candidateLabel": "Home - Tewkesbury Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Tiverton Castle",
+      "candidateUrl": "https://tivertoncastle.com/",
+      "candidateLabel": "Tiverton Castle - The Castle For All Seasons",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Caerhays Castle",
+      "candidateUrl": "https://visit.caerhays.co.uk/",
+      "candidateLabel": "Caerhays Estate | Castle and Spring Gardens, Cornwall",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Burgh Island",
+      "candidateUrl": "https://www.burghisland.com/",
+      "candidateLabel": "Devon’s Unique Island Hotel By The Sea | Burgh Island",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Bickleigh Castle",
+      "candidateUrl": "https://bickleighcastle.com/",
+      "candidateLabel": "Bickleigh Castle, Beautiful Castle near Tiverton, Devon",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Buckfast Abbey",
+      "candidateUrl": "https://www.buckfast.org.uk/",
+      "candidateLabel": "Buckfast Abbey – Home to a community of benedictine monks",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Nunwell House",
+      "candidateUrl": "https://www.nunwellhouse.co.uk/",
+      "candidateLabel": "Nunwell House and Gardens, Brading, Isle of Wight",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Gloucester Cathedral",
+      "candidateUrl": "https://gloucestercathedral.org.uk/",
+      "candidateLabel": "Gloucester Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Sudeley Castle",
+      "candidateUrl": "https://sudeleycastle.co.uk/",
+      "candidateLabel": "Sudeley Castle & Gardens",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Malmesbury Abbey",
+      "candidateUrl": "https://www.malmesburyabbey.com/",
+      "candidateLabel": "Malmesbury Abbey – 12th Century Beauty, 21st Century Church",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Longleat House",
+      "candidateUrl": "https://www.longleat.co.uk/",
+      "candidateLabel": "Longleat",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Llanthony Secunda Priory",
+      "candidateUrl": "https://llanthonysecunda.org/",
+      "candidateLabel": "Llanthony Secunda Priory - History, Events & Venue Hire Gloucester",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Wilton House",
+      "candidateUrl": "https://www.wiltonhouse.co.uk/",
+      "candidateLabel": "Wilton House - Estate of the Earl of Pembroke",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Great Chalfield Manor",
+      "candidateUrl": "https://greatchalfield.co.uk/",
+      "candidateLabel": "Great Chalfield Manor",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Wells Cathedral",
+      "candidateUrl": "https://www.wellscathedral.org.uk/",
+      "candidateLabel": "Home - Wells Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Farleigh House",
+      "candidateUrl": "https://www.farleigh.house/",
+      "candidateLabel": "About Us — Farleigh House",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Torre Abbey",
+      "candidateUrl": "https://www.torre-abbey.org.uk/",
+      "candidateLabel": "Torre Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Hartland Abbey",
+      "candidateUrl": "https://www.hartlandabbey.com/",
+      "candidateLabel": "Homepage - Hartland Abbey & Gardens",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Prideaux Place",
+      "candidateUrl": "https://prideauxplace.co.uk/",
+      "candidateLabel": "Home - Prideaux Place Padstow",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Warwick Castle",
+      "candidateUrl": "https://www.warwick-castle.com/",
+      "candidateLabel": "Official Warwick Castle Website: Best Price Guaranteed",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Rockingham Castle",
+      "candidateUrl": "https://rockinghamcastle.com/",
+      "candidateLabel": "Rockingham Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ludlow Castle",
+      "candidateUrl": "https://www.ludlowcastle.com/",
+      "candidateLabel": "Homepage - Ludlow Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Tamworth Castle",
+      "candidateUrl": "https://www.tamworthcastle.co.uk/",
+      "candidateLabel": "Tamworth Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Nottingham Castle",
+      "candidateUrl": "https://www.nottinghamcastle.org.uk/",
+      "candidateLabel": "Welcome to Nottingham Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Stafford Castle",
+      "candidateUrl": "https://www.historicstafford.co.uk/",
+      "candidateLabel": "Home - Historic Stafford",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Hopton Castle",
+      "candidateUrl": "https://www.hoptoncastle.org.uk/",
+      "candidateLabel": "Hopton Castle, Shropshire - Hopton Castle Preservation Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Whittington Castle",
+      "candidateUrl": "https://www.whittingtoncastle.com/",
+      "candidateLabel": "Home | Whittington Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Maxstoke Castle",
+      "candidateUrl": "https://www.maxstokecastle.com/",
+      "candidateLabel": "Maxstoke Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Wingfield Manor",
+      "candidateUrl": "https://wingfieldmanorestate.com/",
+      "candidateLabel": "Wingfield Manor Estate",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Haddon Hall",
+      "candidateUrl": "https://www.haddonhall.co.uk/",
+      "candidateLabel": "Haddon Hall - Homepage",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Rufford Abbey",
+      "candidateUrl": "https://ruffordabbey.co.uk/",
+      "candidateLabel": "Welcome to Rufford Abbey Country Park",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Southwell Minster",
+      "candidateUrl": "https://www.southwellminster.org/",
+      "candidateLabel": "Southwell Minster | Southwell Minster",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Belvoir Castle",
+      "candidateUrl": "https://www.belvoircastle.com/",
+      "candidateLabel": "Belvoir Castle | Historic Castle & Gardens in Leicestershire",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Snodhill Castle",
+      "candidateUrl": "https://snodhillcastle.org/",
+      "candidateLabel": "Snodhill Castle Preservation Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Eccleshall Castle",
+      "candidateUrl": "http://www.eccleshallcastle.co.uk/",
+      "candidateLabel": "Eccleshall Castle - Staffordshire",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Chatsworth House",
+      "candidateUrl": "https://www.chatsworth.org/",
+      "candidateLabel": "Chatsworth - Historic House, Garden and Parkland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Crowland Abbey",
+      "candidateUrl": "https://crowlandabbey.org.uk/",
+      "candidateLabel": "Welcome - Crowland Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Worcester Cathedral",
+      "candidateUrl": "https://www.worcestercathedral.org.uk/",
+      "candidateLabel": "Home | Worcester Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Great Malvern Priory",
+      "candidateUrl": "https://www.greatmalvernpriory.org.uk/",
+      "candidateLabel": "Great Malvern Priory",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Pershore Abbey",
+      "candidateUrl": "https://www.pershoreabbey.org.uk/",
+      "candidateLabel": "Pershore Abbey - The Abbey Church of the Holy Cross",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Burghley House",
+      "candidateUrl": "https://burghley.co.uk/",
+      "candidateLabel": "Burghley House, Gardens & Adventure Play",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lichfield Cathedral",
+      "candidateUrl": "https://www.lichfield-cathedral.org/",
+      "candidateLabel": "Lichfield Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Stoneleigh Abbey",
+      "candidateUrl": "https://www.stoneleighabbey.org/",
+      "candidateLabel": "Home | Stoneleigh Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Compton Verney",
+      "candidateUrl": "https://www.comptonverney.org.uk/",
+      "candidateLabel": "Welcome to Compton Verney",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Sulgrave Manor",
+      "candidateUrl": "https://sulgravemanor.org.uk/",
+      "candidateLabel": "Sulgrave Manor Trust - Home",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Delapré Abbey",
+      "candidateUrl": "https://delapreabbey.org/",
+      "candidateLabel": "Historic House Northampton | Delapré Abbey and Park",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Coughton Court",
+      "candidateUrl": "https://www.coughtoncourt.co.uk/",
+      "candidateLabel": "Coughton Court | Home",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Harvington Hall",
+      "candidateUrl": "https://harvingtonhall.co.uk/",
+      "candidateLabel": "Home - Harvington Hall",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Howard",
+      "candidateUrl": "https://www.castlehoward.co.uk/",
+      "candidateLabel": "Castle Howard House and Gardens - A Place Like No Other",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Skipton Castle",
+      "candidateUrl": "https://www.skiptoncastle.co.uk/",
+      "candidateLabel": "Skipton Castle, Superbly Preserved Medieval Castle, Yorkshire",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Bolton Castle",
+      "candidateUrl": "https://boltoncastle.co.uk/",
+      "candidateLabel": "Bolton Castle Wensleydale | Family days out | Falconry | Weddings",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Jervaulx Abbey",
+      "candidateUrl": "https://www.jervaulxabbey.com/",
+      "candidateLabel": "Jervaulx Abbey",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ripley Castle",
+      "candidateUrl": "https://www.ripleycastle.co.uk/",
+      "candidateLabel": "Ripley Castle and Gardens - Harrogate, North Yorkshire",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Wilton Castle",
+      "candidateUrl": "https://wiltoncastle.co.uk/",
+      "candidateLabel": "Wilton Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Selby Abbey",
+      "candidateUrl": "https://www.selbyabbey.org.uk/",
+      "candidateLabel": "Selby Abbey - At the heart of the community since 1069",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Bolton Abbey",
+      "candidateUrl": "https://boltonabbey.com/",
+      "candidateLabel": "Visit Bolton Abbey - Explore 30,000 acres of natural beauty, history and community",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Markenfield Hall",
+      "candidateUrl": "https://www.markenfieldhall.com/",
+      "candidateLabel": "Home - Markenfield Hall",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Beverley Minster",
+      "candidateUrl": "https://beverleyminster.org.uk/",
+      "candidateLabel": "Beverley Minster",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "York Minster",
+      "candidateUrl": "https://yorkminster.org/",
+      "candidateLabel": "Homepage | York Minster",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Hay Castle",
+      "candidateUrl": "https://www.haycastletrust.org/",
+      "candidateLabel": "Hay Castle Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Brecon Cathedral",
+      "candidateUrl": "https://www.breconcathedral.org.uk/",
+      "candidateLabel": "Brecon Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Gwydir Castle",
+      "candidateUrl": "https://www.gwydircastle.co.uk/",
+      "candidateLabel": "Gwydir Castle Conwy North Wales",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "South Stack Lighthouse",
+      "candidateUrl": "https://www.southstacklighthouse.co.uk/",
+      "candidateLabel": "South Stack Ynys Lawd - Lighthouse & Visitor Centre",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Portmeirion",
+      "candidateUrl": "https://portmeirion.wales/",
+      "candidateLabel": "Portmeirion Village | Holiday Resort North Wales",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Oystermouth Castle",
+      "candidateUrl": "https://oystermouthcastle.org.uk/",
+      "candidateLabel": "The Friends of Oystermouth Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ewenny Priory",
+      "candidateUrl": "https://www.ewennypriory.co.uk/",
+      "candidateLabel": "Ewenny Priory Home Page",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Caldicot Castle",
+      "candidateUrl": "https://www.monlife.co.uk/heritage/caldicot-castle-country-park/",
+      "candidateLabel": "Caldicot Castle & Country Park – Monlife",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Usk Castle",
+      "candidateUrl": "https://uskcastle.com/",
+      "candidateLabel": "Usk Castle – Usk's Enchanting Hidden Gem",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Fonmon Castle",
+      "candidateUrl": "https://fonmoncastle.com/",
+      "candidateLabel": "Welcome To Fonmon Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Margam Castle",
+      "candidateUrl": "http://www.margamcountrypark.co.uk/1242",
+      "candidateLabel": "Margam Castle - Margam Country Park",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Llanthony Priory",
+      "candidateUrl": "https://www.llanthonypriory.co.uk/",
+      "candidateLabel": "Llanthony Priory",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Llandaff Cathedral",
+      "candidateUrl": "https://www.llandaffcathedral.org.uk/",
+      "candidateLabel": "Llandaff Cathedral",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "St Donats Castle",
+      "candidateUrl": "https://uwcatlanticexperience.com/",
+      "candidateLabel": "UWC Atlantic Experience St Donats Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ruperra Castle",
+      "candidateUrl": "https://www.ruperracastle.wales/",
+      "candidateLabel": "Ruperra Castle - Castell Rhiwr Perrai",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Penrice Castle",
+      "candidateUrl": "https://penricecastle.co.uk/",
+      "candidateLabel": "Penrice Castle Estate",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Pembroke Castle",
+      "candidateUrl": "https://pembrokecastle.co.uk/",
+      "candidateLabel": "Welcome to Pembroke Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Carreg Cennen Castle",
+      "candidateUrl": "http://www.carregcennencastle.com/",
+      "candidateLabel": "Carreg Cennen Castle and Farm",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Strata Florida Abbey",
+      "candidateUrl": "https://www.strataflorida.org.uk/",
+      "candidateLabel": "Strata Florida Trust",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Manorbier Castle",
+      "candidateUrl": "https://manorbiercastle.co.uk/",
+      "candidateLabel": "Home - Manorbier Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Carew Castle",
+      "candidateUrl": "https://www.pembrokeshirecoast.wales/carew-castle/",
+      "candidateLabel": "Carew Castle and Tidal Mill - Pembrokeshire Coast National Park",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Cardigan Castle",
+      "candidateUrl": "https://cardigancastle.com/",
+      "candidateLabel": "Cardigan Castle in Ceredigion Wales",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dylan Thomas Boathouse",
+      "candidateUrl": "https://www.dylanthomasboathouse.com/",
+      "candidateLabel": "Dylan Thomas Boathouse | Welcome to the",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dublin Castle",
+      "candidateUrl": "https://dublincastle.ie/",
+      "candidateLabel": "Dublin Castle | The nerve centre of historical power in Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castletown House",
+      "candidateUrl": "https://castletown.ie/",
+      "candidateLabel": "Castletown | Ireland's first and finest Palladian mansion",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Swords Castle",
+      "candidateUrl": "https://swordscastle.events/",
+      "candidateLabel": "Swords Castle – Fingal County Council",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Whitland Abbey",
+      "candidateUrl": "https://whitlandabbey.wales/",
+      "candidateLabel": "Whitland Abbey – Ancient Cistercian abbey near Whitland, West Wales",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Kilkenny Castle",
+      "candidateUrl": "https://www.kilkennycastle.ie/",
+      "candidateLabel": "Kilkenny Castle | The jewel in the crown of an enchanting medieval city",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lismore Castle",
+      "candidateUrl": "https://thehallandlismorecastle.com/lismore-castle/",
+      "candidateLabel": "Lismore Castle: Exclusive Use Castle to Rent in Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunbrody Abbey",
+      "candidateUrl": "https://www.dunbrodyabbey.com/",
+      "candidateLabel": "Dunbrody Abbey Visitor Centre",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunsany Castle",
+      "candidateUrl": "https://www.dunsany.com/",
+      "candidateLabel": "Dunsany Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Slane Castle",
+      "candidateUrl": "https://www.slanecastle.ie/",
+      "candidateLabel": "Explore Slane Castle estate in the heart of the Boyne Valley, Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Enniscorthy Castle",
+      "candidateUrl": "https://enniscorthycastle.ie/",
+      "candidateLabel": "Enniscorthy Castle: Historic Norman Stronghold in Wexford",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Shankill Castle",
+      "candidateUrl": "https://shankillcastle.com/",
+      "candidateLabel": "Home - Shankill Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Johnstown Castle",
+      "candidateUrl": "https://johnstowncastle.ie/",
+      "candidateLabel": "Johnstown Castle Wexford - Estate, Museum & Gardens",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Hook Lighthouse",
+      "candidateUrl": "https://hookheritage.ie/",
+      "candidateLabel": "Hook Lighthouse | Guided Tours, Medieval Tales & Stunning Views",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "St Canice's Cathedral",
+      "candidateUrl": "https://www.stcanicescathedral.ie/",
+      "candidateLabel": "St Canice's Cathedral & Round Tower – Kilkenny Landmark",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Duncannon Fort",
+      "candidateUrl": "https://duncannonfort.ie/",
+      "candidateLabel": "Duncannon Fort",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ballycarbery Castle",
+      "candidateUrl": "https://www.ballycarbery.com/",
+      "candidateLabel": "The Story of Ballycarbery Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunboy Castle",
+      "candidateUrl": "http://www.dunboycastle.com/",
+      "candidateLabel": "Dunboy Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Gallarus Castle",
+      "candidateUrl": "https://gallarusoratory.ie/",
+      "candidateLabel": "Gallarus Castle & Oratory | Dingle Peninsula, Kerry",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Carriganass Castle",
+      "candidateUrl": "https://carriganasscastle.com/",
+      "candidateLabel": "Carriganass Castle — Take a Walk Through History",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Glin Castle",
+      "candidateUrl": "https://www.glin-castle.com/",
+      "candidateLabel": "Glin Castle | Irish Castle Vacations | Castle Hire Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Liscarroll Castle",
+      "candidateUrl": "https://liscarroll.ie/castle",
+      "candidateLabel": "Castle - Liscarroll.ie",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Cloyne Round Tower",
+      "candidateUrl": "https://cloynecathedral.ie/",
+      "candidateLabel": "Cloyne Cathedral & Ancient Round Tower",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Muckross House",
+      "candidateUrl": "https://muckross-house.ie/",
+      "candidateLabel": "Muckross House, Killarney National Park, County Kerry",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Bantry House",
+      "candidateUrl": "https://bantryhouse.com/",
+      "candidateLabel": "Bantry House and Garden",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lea Castle",
+      "candidateUrl": "http://www.leacastle.ie/",
+      "candidateLabel": "Homepage - Lea Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Killahara Castle",
+      "candidateUrl": "https://www.killaharacastle.com/",
+      "candidateLabel": "Killahara Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Redwood Castle",
+      "candidateUrl": "https://redwoodcastleireland.com/",
+      "candidateLabel": "Redwood Castle — The heart of Ireland's heritage",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Multyfarnham Friary",
+      "candidateUrl": "https://theabbeymultyfarnham.ie/",
+      "candidateLabel": "Multyfarnham Friary | Founded in 1268",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Kilcash Castle",
+      "candidateUrl": "https://kilcash.org/",
+      "candidateLabel": "Historic Kilcash",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Killua Castle",
+      "candidateUrl": "https://killuacastle.com/",
+      "candidateLabel": "Home - Killua Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Durrow",
+      "candidateUrl": "https://www.castledurrow.com/",
+      "candidateLabel": "Castle Durrow Hotel",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Carrickabraghy Castle",
+      "candidateUrl": "https://carrickabraghycastle.com/",
+      "candidateLabel": "Carrickabraghy Castle | 16th century O'Doherty castle at Isle of Doagh, Co. Donegal",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Castle Saunderson",
+      "candidateUrl": "https://castlesaunderson.org/",
+      "candidateLabel": "Castle Saunderson — Bridge Project",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Kilronan Castle",
+      "candidateUrl": "https://www.kilronancastle.ie/",
+      "candidateLabel": "Kilronan Castle Estate & Spa | Luxury Castle Hotel | Ireland Castle Hotel",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Clonalis House",
+      "candidateUrl": "https://clonalishouse.com/",
+      "candidateLabel": "Clonalis Estate & Heritage Tours | Clonalis House",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Dunguaire Castle",
+      "candidateUrl": "https://www.dunguairecastle.com/",
+      "candidateLabel": "Dunguaire Castle Kinvara | Castle in Galway | Medieval Castle Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ashford Castle",
+      "candidateUrl": "https://ashfordcastle.com/",
+      "candidateLabel": "5* Castle Hotel, Award Winning Ashford Castle, Mayo, Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Knappogue Castle",
+      "candidateUrl": "https://www.knappoguecastle.ie/",
+      "candidateLabel": "Knappogue Castle | Medieval Castle in Ireland | Things to Do In Clare",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Newtown Castle",
+      "candidateUrl": "https://www.newtowncastle.com/",
+      "candidateLabel": "Newtown Castle | Weddings | Special Events | Co. Clare | Ireland",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ballynahinch Castle",
+      "candidateUrl": "https://www.ballynahinch-castle.com/",
+      "candidateLabel": "Luxury Castle Hotels Ireland | Connemara Castle",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Ballintubber Abbey",
+      "candidateUrl": "https://www.ballintubberabbey.ie/",
+      "candidateLabel": "Ballintubber Abbey, Mayo – 800 Years of Irish Worship",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Markree Castle",
+      "candidateUrl": "https://www.markreecastle.ie/",
+      "candidateLabel": "4 star Luxury Castle Hotel Ireland | Markree Castle Hotel Sligo",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Westport House",
+      "candidateUrl": "https://www.westporthouse.ie/",
+      "candidateLabel": "Westport House - Visit Ireland's Historic Landmark",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    },
+    {
+      "name": "Lough Rynn Castle",
+      "candidateUrl": "https://www.loughrynn.ie/",
+      "candidateLabel": "Lough Rynn Castle Estate & Gardens | Castle Hotel | Official Website",
+      "status": "pending",
+      "foundDate": "2026-05-16"
+    }
+  ]
+}
