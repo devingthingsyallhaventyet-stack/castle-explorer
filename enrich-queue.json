@@ -296,6 +296,55 @@
         "enrichNotes": "add source - https://leapcastle.net/"
       },
       "ts": 1779052609557
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Emo Court\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Laois\n*Type:* country house\n*Period:* 18th century\n*Coords:* 53.107156, -7.196906\n*Wikipedia:* https://en.wikipedia.org/wiki/Emo_Court\n*Maps:* https://www.google.com/maps/search/Emo%20Court/@53.098,-7.238,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOytfwwALZF86pp5G2HAhNPonA7Ij83qJVddoa2qZ_0jzhEN9AYY_vu7Fws32u-3Wb4U2JO40c2s0OUGd7pnC3VbdPGAPCHmqmg1qMGKZ6Px4CDGQJrKV4u27rdUSeO_fuveJCK9hEk_VTi68k=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nEmo Court, located near the village of Emo in County Laois, Ireland, is a large neo-classical mansion. Architectural features of the building include sash-style windows, pavilions, a balustrade, a hipped roof, and large dome.\n\n_Listing 7 of 19_",
+      "listing": {
+        "name": "Emo Court",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Laois",
+        "lat": 53.107156,
+        "lng": -7.196906,
+        "mapsLink": "https://www.google.com/maps/search/Emo%20Court/@53.098,-7.238,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOytfwwALZF86pp5G2HAhNPonA7Ij83qJVddoa2qZ_0jzhEN9AYY_vu7Fws32u-3Wb4U2JO40c2s0OUGd7pnC3VbdPGAPCHmqmg1qMGKZ6Px4CDGQJrKV4u27rdUSeO_fuveJCK9hEk_VTi68k=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Emo Court, located near the village of Emo in County Laois, Ireland, is a large neo-classical mansion. Architectural features of the building include sash-style windows, pavilions, a balustrade, a hipped roof, and large dome.",
+        "type": "country house",
+        "period": "18th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "gardens",
+          "photogenic",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/emo-court/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Emo_Court"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Emo_Court",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Emo_Park%2C_Portarlington%2C_Co._Laois_%2822609660763%29.jpg/330px-Emo_Park%2C_Portarlington%2C_Co._Laois_%2822609660763%29.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Emo_Court",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779052630849
     }
   ]
 }
