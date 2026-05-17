@@ -308,6 +308,56 @@
         "enrichNotes": ""
       },
       "ts": 1779049580790
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Conishead Priory\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* abbey\n*Period:* 12th century / 19th century rebuild\n*Coords:* 54.1732, -3.067\n*Wikipedia:* https://en.wikipedia.org/wiki/Conishead_Priory\n*Maps:* https://www.google.com/maps/search/Conishead%20Priory/@54.1567,-3.1067,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ConisheadPriory.JPG/330px-ConisheadPriory.JPG\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://manjushri.org/\nUpdate google maps link - https://maps.app.goo.gl/sVPd9DNJMZF4kRAk8\n\n*Description:*\nConishead Priory is a large Gothic Revival building on the Furness peninsula near Ulverston in Cumbria. The priory's name translates literally as \"King's Hill Priory\". Since 1976, the building has been occupied by a Buddhist community.\n\n_Listing 7 of 79_",
+      "listing": {
+        "name": "Conishead Priory",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.1732,
+        "lng": -3.067,
+        "mapsLink": "https://www.google.com/maps/search/Conishead%20Priory/@54.1567,-3.1067,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ConisheadPriory.JPG/330px-ConisheadPriory.JPG",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Conishead Priory is a large Gothic Revival building on the Furness peninsula near Ulverston in Cumbria. The priory's name translates literally as \"King's Hill Priory\". Since 1976, the building has been occupied by a Buddhist community.",
+        "type": "abbey",
+        "period": "12th century / 19th century rebuild",
+        "rating": 4.1,
+        "tags": [
+          "medieval",
+          "gothic",
+          "gardens",
+          "coastal",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Conishead_Priory"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Conishead_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ConisheadPriory.JPG/330px-ConisheadPriory.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "JohnArmagh",
+          "license": "Public domain",
+          "description": "Photograph of Conishead Priory, Cumbria, England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://manjushri.org/\nUpdate google maps link - https://maps.app.goo.gl/sVPd9DNJMZF4kRAk8",
+        "enrichNotes": "add source - https://manjushri.org/\nUpdate google maps link - https://maps.app.goo.gl/sVPd9DNJMZF4kRAk8"
+      },
+      "ts": 1779049753709
     }
   ]
 }
