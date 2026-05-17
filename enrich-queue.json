@@ -464,6 +464,57 @@
         "enrichNotes": ""
       },
       "ts": 1779050681368
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Dromana Gate\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Waterford\n*Type:* castle\n*Period:* 19th century\n*Coords:* 53.045, -8.2406\n*Wikipedia:* https://en.wikipedia.org/wiki/Drominagh\n*Maps:* https://www.google.com/maps/search/Dromana%20Gate/@52.1,-7.878,15z\n*Main Image:* https://img.castlecore.uk/dromana-gate.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research. \n\n*Description:*\n\n\nDrominagh  is a townland in the Barony of Ormond Lower, County Tipperary, Ireland. It is located in the civil parish of Terryglass, near Borrisokane. It is here that the Ballyfinboy River enters Lough Derg. Eugene Esmonde, a recipient of the Victoria Cross, was from Drominagh.\n\n_Listing 8 of 61_",
+      "listing": {
+        "name": "Dromana Gate",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Waterford",
+        "lat": 53.045,
+        "lng": -8.2406,
+        "mapsLink": "https://www.google.com/maps/search/Dromana%20Gate/@52.1,-7.878,15z",
+        "image": "https://img.castlecore.uk/dromana-gate.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/dromana-gate-2.jpg",
+          "https://img.castlecore.uk/dromana-gate-3.jpg",
+          "https://img.castlecore.uk/dromana-gate-4.jpg",
+          "https://img.castlecore.uk/dromana-gate-5.jpg"
+        ],
+        "desc": "\n\nDrominagh  is a townland in the Barony of Ormond Lower, County Tipperary, Ireland. It is located in the civil parish of Terryglass, near Borrisokane. It is here that the Ballyfinboy River enters Lough Derg. Eugene Esmonde, a recipient of the Victoria Cross, was from Drominagh.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.1,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Waterford Heritage",
+            "url": "https://www.visitwaterford.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Dromana_Gate"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Drominagh",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "needs more research. ",
+        "enrichNotes": "needs more research. "
+      },
+      "ts": 1779050686948
     }
   ]
 }
