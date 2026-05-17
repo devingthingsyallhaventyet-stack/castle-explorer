@@ -629,6 +629,45 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1779048991946
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kilcrea Friary\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Cork\n*Type:* abbey\n*Period:* 15th century\n*Coords:* 51.8667, -8.7833\n*Wikipedia:* https://en.wikipedia.org/wiki/Kilcrea_Friary\n*Maps:* https://www.google.com/maps/search/Kilcrea%20Friary/@51.8667,-8.7833,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPICdB6TFGQUCbTMXLm6Cw5fLHvMak3XejdIudnIQvKSU4daDulbfAIf_tE7P4JOOaKoOoEJjn6U2BgV3r_g4WY0wOoZrcFaypq_DHzn6Apo-9LQpULnxYGHS2pdCb8jSnmHhrBn0-EynShNsmEeRZk=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nKilcrea Friary is a ruined medieval abbey located near Ovens, County Cork, Ireland. Both the friary and Kilcrea Castle, located in ruin to the west, were built by Observant Franciscans in the mid 15th century under the invitation of Cormac Láidir MacCarthy, Lord of Muskerry, as protection from English troops.\n\n_Listing 13 of 94_",
+      "listing": {
+        "name": "Kilcrea Friary",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Cork",
+        "lat": 51.8667,
+        "lng": -8.7833,
+        "mapsLink": "https://www.google.com/maps/search/Kilcrea%20Friary/@51.8667,-8.7833,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPICdB6TFGQUCbTMXLm6Cw5fLHvMak3XejdIudnIQvKSU4daDulbfAIf_tE7P4JOOaKoOoEJjn6U2BgV3r_g4WY0wOoZrcFaypq_DHzn6Apo-9LQpULnxYGHS2pdCb8jSnmHhrBn0-EynShNsmEeRZk=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Kilcrea Friary is a ruined medieval abbey located near Ovens, County Cork, Ireland. Both the friary and Kilcrea Castle, located in ruin to the west, were built by Observant Franciscans in the mid 15th century under the invitation of Cormac Láidir MacCarthy, Lord of Muskerry, as protection from English troops.",
+        "type": "abbey",
+        "period": "15th century",
+        "rating": 4.2,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Kilcrea_Friary",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kilcrea_Abbey_Friary%2C_Co._Cork..JPG/330px-Kilcrea_Abbey_Friary%2C_Co._Cork..JPG",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kilcrea_Friary",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049014939
     }
   ]
 }
