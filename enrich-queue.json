@@ -810,6 +810,63 @@
         "enrichNotes": ""
       },
       "ts": 1779050169429
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cwmhir Abbey\n*Country:* wales\n*Region:* mid wales marches\n*County:* Powys\n*Type:* abbey\n*Period:* 12th-13th century\n*Coords:* 52.32983, -3.38755\n*Wikipedia:* https://en.wikipedia.org/wiki/Cwmhir_Abbey\n*Maps:* https://www.google.com/maps/search/Cwmhir%20Abbey/@52.3197,-3.3911,15z\n*Main Image:* https://img.castlecore.uk/cwmhir-abbey.jpg\n*Gallery:* 5 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* Update google places - https://maps.app.goo.gl/WcQYmYRJZushVeYG8\nadd source - https://abbeycwmhir.org/\n\n*Description:*\nCwmhir Abbey, near Llandrindod Wells in Powys, is a Welsh Cistercian monastery founded in 1176 by Cadwallon ap Madog. A spurious tale was later recorded that the abbey was founded in 1143 by Meredudd ap Maelgwn at Ty-faenor, and then refounded at the present location near the village of Abbeycwmhir in 1176. There does appear to be a site movement from Ty-faenor, but Maredudd ap Maelgwn was prince of Maelienydd in 1215 under Prince Llywelyn ab Iorwerth of Gwynedd, who then controlled the district. The later charter to the abbey in 1215 caused the confusion and led to the belief that Maredudd had founded the abbey in 1143.\n\n_Listing 17 of 79_",
+      "listing": {
+        "name": "Cwmhir Abbey",
+        "country": "wales",
+        "region": "mid-wales-marches",
+        "county": "Powys",
+        "lat": 52.32983,
+        "lng": -3.38755,
+        "mapsLink": "https://www.google.com/maps/search/Cwmhir%20Abbey/@52.3197,-3.3911,15z",
+        "image": "https://img.castlecore.uk/cwmhir-abbey.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/cwmhir-abbey-2.jpg",
+          "https://img.castlecore.uk/cwmhir-abbey-ruins-2.jpg",
+          "https://img.castlecore.uk/cwmhir-abbey-ruins-3.jpg",
+          "https://img.castlecore.uk/cwmhir-abbey-ruins-4.jpg",
+          "https://img.castlecore.uk/cwmhir-abbey-ruins-5.jpg"
+        ],
+        "desc": "Cwmhir Abbey, near Llandrindod Wells in Powys, is a Welsh Cistercian monastery founded in 1176 by Cadwallon ap Madog. A spurious tale was later recorded that the abbey was founded in 1143 by Meredudd ap Maelgwn at Ty-faenor, and then refounded at the present location near the village of Abbeycwmhir in 1176. There does appear to be a site movement from Ty-faenor, but Maredudd ap Maelgwn was prince of Maelienydd in 1215 under Prince Llywelyn ab Iorwerth of Gwynedd, who then controlled the district. The later charter to the abbey in 1215 caused the confusion and led to the belief that Maredudd had founded the abbey in 1143.",
+        "type": "abbey",
+        "period": "12th-13th century",
+        "rating": 4.1,
+        "tags": [
+          "ruins-romantic",
+          "atmospheric",
+          "remote",
+          "medieval",
+          "free-entry",
+          "woodland"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/abbey-cwmhir"
+          },
+          {
+            "name": "Wikipedia – Abbey Cwmhir",
+            "url": "https://en.wikipedia.org/wiki/Abbey_Cwmhir"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cwmhir_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/CwmhirAbbey.jpg/330px-CwmhirAbbey.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cwmhir_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "Update google places - https://maps.app.goo.gl/WcQYmYRJZushVeYG8\nadd source - https://abbeycwmhir.org/",
+        "enrichNotes": "Update google places - https://maps.app.goo.gl/WcQYmYRJZushVeYG8\nadd source - https://abbeycwmhir.org/"
+      },
+      "ts": 1779050232448
     }
   ]
 }
