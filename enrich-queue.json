@@ -1,3 +1,54 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Glenstal Castle\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Limerick\n*Type:* castle\n*Period:* 19th century\n*Coords:* 52.66166667, -8.38805556\n*Wikipedia:* https://en.wikipedia.org/wiki/Glenstal_Abbey\n*Maps:* https://www.google.com/maps/search/Glenstal%20Castle/@52.656,-8.42,15z\n*Main Image:* https://img.castlecore.uk/glenstal-castle.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://glenstal.com/abbey/\n\n*Description:*\nGlenstal Abbey is a Catholic Benedictine monastery of the Congregation of the Annunciation located in Murroe, County Limerick, Ireland. It is dedicated to Saint Joseph and Saint Columba. In July 2024, Columba McCann was elected to serve as the seventh abbot of the community.\n\n_Listing 1 of 19_",
+      "listing": {
+        "name": "Glenstal Castle",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Limerick",
+        "lat": 52.66166667,
+        "lng": -8.38805556,
+        "mapsLink": "https://www.google.com/maps/search/Glenstal%20Castle/@52.656,-8.42,15z",
+        "image": "https://img.castlecore.uk/glenstal-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Glenstal Abbey is a Catholic Benedictine monastery of the Congregation of the Annunciation located in Murroe, County Limerick, Ireland. It is dedicated to Saint Joseph and Saint Columba. In July 2024, Columba McCann was elected to serve as the seventh abbot of the community.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "norman",
+          "woodland",
+          "gardens",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Glenstal Abbey",
+            "url": "https://www.glenstal.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Glenstal_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Glenstal_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/GlenstalAbbeyHouse.jpg/330px-GlenstalAbbeyHouse.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Glenstal_Abbey",
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://glenstal.com/abbey/",
+        "enrichNotes": "add source - https://glenstal.com/abbey/"
+      },
+      "ts": 1779052466049
+    }
+  ]
 }
