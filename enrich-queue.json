@@ -706,6 +706,49 @@
         "enrichNotes": "add source - https://hellensmanor.com/"
       },
       "ts": 1779050104965
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Knaresborough Castle\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 54.00719, -1.46932\n*Wikipedia:* https://en.wikipedia.org/wiki/Knaresborough_Castle\n*Maps:* https://www.google.com/maps/search/Knaresborough%20Castle/@54.0085,-1.4688,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPHCDneR80fUpe3WWXFRxssfpVLNOGr9Q3aMesUeEgnXYLRVZcKwThhNQVzottEyUAeSYqA4f7w5hNWhBTtQJ75zh6rYDQ8e7BAsWceuWZwdsX6AfpqzAjt3XOWI3X0-BRe_xcp1Fz_fl6zxUE=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nKnaresborough Castle is a ruined fortress overlooking the River Nidd in the town of Knaresborough, North Yorkshire, England.\n\n_Listing 15 of 79_",
+      "listing": {
+        "name": "Knaresborough Castle",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.00719,
+        "lng": -1.46932,
+        "mapsLink": "https://www.google.com/maps/search/Knaresborough%20Castle/@54.0085,-1.4688,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPHCDneR80fUpe3WWXFRxssfpVLNOGr9Q3aMesUeEgnXYLRVZcKwThhNQVzottEyUAeSYqA4f7w5hNWhBTtQJ75zh6rYDQ8e7BAsWceuWZwdsX6AfpqzAjt3XOWI3X0-BRe_xcp1Fz_fl6zxUE=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Knaresborough Castle is a ruined fortress overlooking the River Nidd in the town of Knaresborough, North Yorkshire, England.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.1,
+        "tags": [
+          "dramatic-ruin",
+          "photogenic",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Knaresborough_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Knaresborough_Castle_ruins.jpg/330px-Knaresborough_Castle_ruins.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Redvers",
+          "license": "CC BY 2.0",
+          "description": "Knaresborough Castle",
+          "credit": "Flickr.com",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779050136641
     }
   ]
 }
