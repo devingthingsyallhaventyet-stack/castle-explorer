@@ -252,6 +252,62 @@
         "enrichNotes": ""
       },
       "ts": 1779049557087
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Wray Castle\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* 19th century\n*Coords:* 54.4006345, -2.9641913\n*Wikipedia:* https://en.wikipedia.org/wiki/Wray_Castle\n*Maps:* https://www.google.com/maps/search/Wray%20Castle/@54.381,-2.953,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wray_Castle_2008.jpg/330px-Wray_Castle_2008.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nWray Castle is a Victorian neo-gothic building at Claife in Cumbria within the boundaries of the historic county of Lancashire. The house and grounds have belonged to the National Trust since 1929.\nThe Castle was open to the public for a dozen years prior to 2024. The Castle is now closed for refurbishment until 2027.\n\n_Listing 6 of 79_",
+      "listing": {
+        "name": "Wray Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.4006345,
+        "lng": -2.9641913,
+        "mapsLink": "https://www.google.com/maps/search/Wray%20Castle/@54.381,-2.953,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wray_Castle_2008.jpg/330px-Wray_Castle_2008.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Wray Castle is a Victorian neo-gothic building at Claife in Cumbria within the boundaries of the historic county of Lancashire. The house and grounds have belonged to the National Trust since 1929.\nThe Castle was open to the public for a dozen years prior to 2024. The Castle is now closed for refurbishment until 2027.",
+        "type": "castle",
+        "period": "19th century",
+        "rating": 4.1,
+        "tags": [
+          "victorian",
+          "gothic",
+          "photogenic",
+          "gardens",
+          "kid-friendly",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/lake-district/wray"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wray_Castle"
+          },
+          {
+            "name": "Visit Cumbria",
+            "url": "https://www.visitcumbria.com/amb/wray-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Wray_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wray_Castle_2008.jpg/330px-Wray_Castle_2008.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Wray_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779049580790
     }
   ]
 }
