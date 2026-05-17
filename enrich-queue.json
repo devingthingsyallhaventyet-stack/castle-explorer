@@ -529,6 +529,64 @@
         "enrichNotes": "more research "
       },
       "ts": 1779061372843
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Ardmore Cathedral\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Waterford\n*Type:* cathedral\n*Period:* 5th-12th century\n*Coords:* 51.94849722, -7.72598977\n*Wikipedia:* https://en.wikipedia.org/wiki/St._Declan%27s_Monastery\n*Maps:* https://www.google.com/maps/search/Ardmore%20Cathedral/@51.948,-7.728,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/01_St._Declan%27s_Monastery%2C_Ardmore.png/330px-01_St._Declan%27s_Monastery%2C_Ardmore.png\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/jexhWzizUzgiEzsN8\nupdate name to St Declan's Cathedral\n\n\n*Description:*\nSt. Declan's Monastery, containing the remains of Ardmore Cathedral, is a former monastery and National Monument located in County Waterford, Ireland.\n\n_Listing 11 of 252_",
+      "listing": {
+        "name": "Ardmore Cathedral",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Waterford",
+        "lat": 51.94849722,
+        "lng": -7.72598977,
+        "mapsLink": "https://www.google.com/maps/search/Ardmore%20Cathedral/@51.948,-7.728,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/01_St._Declan%27s_Monastery%2C_Ardmore.png/330px-01_St._Declan%27s_Monastery%2C_Ardmore.png",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "St. Declan's Monastery, containing the remains of Ardmore Cathedral, is a former monastery and National Monument located in County Waterford, Ireland.",
+        "type": "cathedral",
+        "period": "5th-12th century",
+        "rating": 3.8,
+        "tags": [
+          "celtic",
+          "well-preserved",
+          "coastal",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ardmore,_County_Waterford"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St._Declan's_Monastery",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/01_St._Declan%27s_Monastery%2C_Ardmore.png/330px-01_St._Declan%27s_Monastery%2C_Ardmore.png",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "NateBergin",
+          "license": "CC BY 4.0",
+          "description": "01 St. Declan's Monastery, Ardmore",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/St._Declan%27s_Monastery",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/jexhWzizUzgiEzsN8\nupdate name to St Declan's Cathedral\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/jexhWzizUzgiEzsN8\nupdate name to St Declan's Cathedral\n"
+      },
+      "ts": 1779061438296
     }
   ]
 }
