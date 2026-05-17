@@ -912,6 +912,49 @@
         "enrichNotes": ""
       },
       "ts": 1779045231342
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Walmer Castle\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* castle\n*Period:* 16th century\n*Coords:* 51.200992, 1.402308\n*Wikipedia:* https://en.wikipedia.org/wiki/Walmer_Castle\n*Maps:* https://www.google.com/maps/search/Walmer%20Castle/@51.1969,1.4005,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Walmer_Castle_from_the_west.jpg/330px-Walmer_Castle_from_the_west.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* google places link - https://maps.app.goo.gl/UXN6eUPoE4cYi3iAA\n\n\n*Description:*\nWalmer Castle is an artillery fort originally constructed by Henry VIII in Walmer, Kent, between 1539 and 1540. It formed part of the King's Device programme to protect against invasion from France and the Holy Roman Empire, and defended the strategically important Downs anchorage off the English coast. Comprising a keep and four circular bastions, the moated stone castle covered 0.61 acres (0.25 ha) and had 39 firing positions on the upper levels for artillery. It cost the Crown a total of £27,092 to build the three castles of Walmer, Sandown, and Deal, which lay adjacent to one another along the coast and were connected by earthwork defences. The original invasion threat passed, but during the Second English Civil War of 1648–49, Walmer was seized by pro-Royalist insurgents and was only retaken by Parliamentary forces after several months' fighting.\n\n_Listing 18 of 50_",
+      "listing": {
+        "name": "Walmer Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.200992,
+        "lng": 1.402308,
+        "mapsLink": "https://www.google.com/maps/search/Walmer%20Castle/@51.1969,1.4005,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Walmer_Castle_from_the_west.jpg/330px-Walmer_Castle_from_the_west.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Walmer Castle is an artillery fort originally constructed by Henry VIII in Walmer, Kent, between 1539 and 1540. It formed part of the King's Device programme to protect against invasion from France and the Holy Roman Empire, and defended the strategically important Downs anchorage off the English coast. Comprising a keep and four circular bastions, the moated stone castle covered 0.61 acres (0.25 ha) and had 39 firing positions on the upper levels for artillery. It cost the Crown a total of £27,092 to build the three castles of Walmer, Sandown, and Deal, which lay adjacent to one another along the coast and were connected by earthwork defences. The original invasion threat passed, but during the Second English Civil War of 1648–49, Walmer was seized by pro-Royalist insurgents and was only retaken by Parliamentary forces after several months' fighting.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "hidden-gem",
+          "kid-friendly"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Walmer_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Walmer_Castle_from_the_west.jpg/330px-Walmer_Castle_from_the_west.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "DeFacto",
+          "license": "CC BY-SA 4.0",
+          "description": "Walmer Castle, Kent. This castle, built by Henry VIII between 1539 and 1540, is a listed building in England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "google places link - https://maps.app.goo.gl/UXN6eUPoE4cYi3iAA\n",
+        "enrichNotes": "google places link - https://maps.app.goo.gl/UXN6eUPoE4cYi3iAA\n"
+      },
+      "ts": 1779045263234
     }
   ]
 }
