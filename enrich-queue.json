@@ -1,3 +1,54 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Halton Castle\n*Country:* england\n*Region:* northern england\n*County:* Cheshire\n*Type:* castle\n*Period:* 11th-13th century\n*Coords:* 53.3331, -2.6957\n*Wikipedia:* https://en.wikipedia.org/wiki/Halton_Castle\n*Maps:* https://www.google.com/maps/search/Halton%20Castle/@53.3333,-2.6833,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Halton_Castle_%285%29.JPG/330px-Halton_Castle_%285%29.JPG\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* no google places. \n\n*Description:*\nHalton Castle is a castle in the village of Halton, part of the town of Runcorn, Cheshire, England. The castle is on the top of Halton Hill, a sandstone prominence overlooking the village. The original building, a motte-and-bailey castle began in 1071, was replaced with the current sandstone castle in the 13th century. Building alterations continued until at least 1609, when the structure is recorded as in disrepair. The castle is recorded in the National Heritage List for England as a designated Grade I listed building, and a scheduled monument.\n\n_Listing 1 of 10_",
+      "listing": {
+        "name": "Halton Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cheshire",
+        "lat": 53.3331,
+        "lng": -2.6957,
+        "mapsLink": "https://www.google.com/maps/search/Halton%20Castle/@53.3333,-2.6833,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Halton_Castle_%285%29.JPG/330px-Halton_Castle_%285%29.JPG",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Halton Castle is a castle in the village of Halton, part of the town of Runcorn, Cheshire, England. The castle is on the top of Halton Hill, a sandstone prominence overlooking the village. The original building, a motte-and-bailey castle began in 1071, was replaced with the current sandstone castle in the 13th century. Building alterations continued until at least 1609, when the structure is recorded as in disrepair. The castle is recorded in the National Heritage List for England as a designated Grade I listed building, and a scheduled monument.",
+        "type": "castle",
+        "period": "11th-13th century",
+        "rating": 3.7,
+        "tags": [
+          "norman",
+          "hilltop",
+          "ruins-romantic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Halton_Castle"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1015606"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Halton_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Halton_Castle_%285%29.JPG/330px-Halton_Castle_%285%29.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Halton_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "no google places. ",
+        "enrichNotes": "no google places. "
+      },
+      "ts": 1779038625641
+    }
+  ]
 }
