@@ -461,6 +461,61 @@
         "enrichNotes": "add source - https://www.drimnaghcastle.org/"
       },
       "ts": 1779052195154
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Howth Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Dublin\n*Type:* castle\n*Period:* 12th-20th century\n*Coords:* 53.3862, -6.0794\n*Wikipedia:* https://en.wikipedia.org/wiki/Howth_Castle\n*Maps:* https://www.google.com/maps/search/Howth%20Castle/@53.386,-6.068,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPO-5NLh1gogxoyEkKu28vTh3oBe59xAO4CvBZVxaYB1t7Cwor3v3XcuMjQliNAhlIog37zdLHy_9UejBTyRN__FpLRE3gCKzCo1OHN7crwWcCUTyvwLOGjAqtXJAnJZScTqIVosyjJOqpPCA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://howthcastle.ie/\n\n*Description:*\nHowth Castle is a historic dwelling, originally of Norman origin, that lies by the village of Howth, County Dublin, Ireland; it is sited within a substantial estate. The castle was the ancestral home of the St Lawrence family that had held the area since the Norman Invasion of 1180, and the head of which held the title of Lord Howth, a feudal barony, until circa 1425, Baron Howth to 1767, then Earl of Howth until 1909. The castle and estate were held by distaff heirs, the Gaisford-St Lawrence family, from 1909 to 2019, when they were sold to Tetrarch Capital.\n\n_Listing 10 of 33_",
+      "listing": {
+        "name": "Howth Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Dublin",
+        "lat": 53.3862,
+        "lng": -6.0794,
+        "mapsLink": "https://www.google.com/maps/search/Howth%20Castle/@53.386,-6.068,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPO-5NLh1gogxoyEkKu28vTh3oBe59xAO4CvBZVxaYB1t7Cwor3v3XcuMjQliNAhlIog37zdLHy_9UejBTyRN__FpLRE3gCKzCo1OHN7crwWcCUTyvwLOGjAqtXJAnJZScTqIVosyjJOqpPCA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Howth Castle is a historic dwelling, originally of Norman origin, that lies by the village of Howth, County Dublin, Ireland; it is sited within a substantial estate. The castle was the ancestral home of the St Lawrence family that had held the area since the Norman Invasion of 1180, and the head of which held the title of Lord Howth, a feudal barony, until circa 1425, Baron Howth to 1767, then Earl of Howth until 1909. The castle and estate were held by distaff heirs, the Gaisford-St Lawrence family, from 1909 to 2019, when they were sold to Tetrarch Capital.",
+        "type": "castle",
+        "period": "12th-20th century",
+        "rating": 4,
+        "tags": [
+          "well-preserved",
+          "norman",
+          "gardens",
+          "photogenic",
+          "coastal"
+        ],
+        "source": [
+          {
+            "name": "Howth Castle",
+            "url": "https://www.howthcastle.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Howth_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Howth_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Howth_Castle_and_Environs.jpg/330px-Howth_Castle_and_Environs.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "O'Dea",
+          "license": "CC BY-SA 4.0",
+          "description": "Howth Castle in Dublin, Ireland viewed from a rocky outcrop on Howth Hill. The ground appears tawnier than usual because of drought.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "add source - https://howthcastle.ie/",
+        "enrichNotes": "add source - https://howthcastle.ie/"
+      },
+      "ts": 1779052223248
     }
   ]
 }
