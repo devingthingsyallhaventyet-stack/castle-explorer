@@ -833,6 +833,62 @@
         "enrichNotes": ""
       },
       "ts": 1779051320014
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Astley Castle\n*Country:* england\n*Region:* the midlands\n*County:* Warwickshire\n*Type:* castle\n*Period:* 13th-16th century\n*Coords:* 52.5024, -1.5424\n*Wikipedia:* https://en.wikipedia.org/wiki/Astley_Castle\n*Maps:* https://www.google.com/maps/search/Astley%20Castle/@52.5139,-1.5153,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZNrbhJ04CvQ_XQu01pshYspt_Jlb0PDSVomYCfj28U5rHfIr0843c3Tihv68Iy07hOM5CSxsK3of7DDvq85Ndgty3_0tuKUYq2EhRlT6M5bBocnvslARkUWEDBegYIO6w8EtNckTmf3DYQem0Y=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nAstley Castle  is a ruinous moated fortified 16th century manor house in North Warwickshire, England. It has been a Grade II* listed building since 1952 and a Scheduled Ancient Monument since 1994. It was derelict and neglected since it was severely damaged by fire in 1978 whilst in use as a hotel and was officially a Building at Risk. The building reopened as a holiday let in 2012 after extensive and novel renovations that combine modern elements within the (mostly) renaissance remains. In 2013, Astley Castle won the Royal Institute of British Architects Stirling Prize for architecture, as an \"exceptional example\" of the blending of an ancient monument with modern architecture.\n\n_Listing 17 of 53_",
+      "listing": {
+        "name": "Astley Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Warwickshire",
+        "lat": 52.5024,
+        "lng": -1.5424,
+        "mapsLink": "https://www.google.com/maps/search/Astley%20Castle/@52.5139,-1.5153,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZNrbhJ04CvQ_XQu01pshYspt_Jlb0PDSVomYCfj28U5rHfIr0843c3Tihv68Iy07hOM5CSxsK3of7DDvq85Ndgty3_0tuKUYq2EhRlT6M5bBocnvslARkUWEDBegYIO6w8EtNckTmf3DYQem0Y=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Astley Castle  is a ruinous moated fortified 16th century manor house in North Warwickshire, England. It has been a Grade II* listed building since 1952 and a Scheduled Ancient Monument since 1994. It was derelict and neglected since it was severely damaged by fire in 1978 whilst in use as a hotel and was officially a Building at Risk. The building reopened as a holiday let in 2012 after extensive and novel renovations that combine modern elements within the (mostly) renaissance remains. In 2013, Astley Castle won the Royal Institute of British Architects Stirling Prize for architecture, as an \"exceptional example\" of the blending of an ancient monument with modern architecture.",
+        "type": "castle",
+        "period": "13th-16th century",
+        "rating": 4,
+        "tags": [
+          "medieval",
+          "atmospheric",
+          "ruins-romantic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Astley_Castle"
+          },
+          {
+            "name": "Landmark Trust",
+            "url": "https://www.landmarktrust.org.uk/properties/astley-castle/"
+          },
+          {
+            "name": "Our Warwickshire",
+            "url": "https://www.ourwarwickshire.org.uk/content/article/astley-castle-living-place"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Astley_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Astley_Castle_Front_Elevation.JPG/330px-Astley_Castle_Front_Elevation.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Greg Storrar",
+          "license": "CC BY-SA 3.0",
+          "description": "Astley Castle, south east façade\n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Astley Castle (Q4810907) with data related to this building.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779051360886
     }
   ]
 }
