@@ -393,6 +393,62 @@
         "enrichNotes": ""
       },
       "ts": 1779060452437
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Drysllwyn Castle\n*Country:* wales\n*Region:* west wales\n*County:* Carmarthenshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 51.862443, -4.101479\n*Wikipedia:* https://en.wikipedia.org/wiki/Dryslwyn_Castle\n*Maps:* https://www.google.com/maps/search/Drysllwyn%20Castle/@51.8667,-4.05,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Dryslwyn_Castle_Capt%27_Gorgeous_-_31725052228.jpg/330px-Dryslwyn_Castle_Capt%27_Gorgeous_-_31725052228.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDryslwyn Castle is a native Welsh castle, sited on a rocky hill roughly halfway between Llandeilo and Carmarthen in Wales. It stands on high ground overlooking the Tywi Valley with extensive views. It was built in about the 1220s by one of the princes of the kingdom of Deheubarth, and changed hands several times in the struggles between the Welsh and English over the ensuing centuries. It is considered one of the most important remaining structures built by a Welsh chieftain and is a Grade I listed building.\n\n_Listing 9 of 270_",
+      "listing": {
+        "name": "Drysllwyn Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Carmarthenshire",
+        "lat": 51.862443,
+        "lng": -4.101479,
+        "mapsLink": "https://www.google.com/maps/search/Drysllwyn%20Castle/@51.8667,-4.05,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Dryslwyn_Castle_Capt%27_Gorgeous_-_31725052228.jpg/330px-Dryslwyn_Castle_Capt%27_Gorgeous_-_31725052228.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Dryslwyn Castle is a native Welsh castle, sited on a rocky hill roughly halfway between Llandeilo and Carmarthen in Wales. It stands on high ground overlooking the Tywi Valley with extensive views. It was built in about the 1220s by one of the princes of the kingdom of Deheubarth, and changed hands several times in the struggles between the Welsh and English over the ensuing centuries. It is considered one of the most important remaining structures built by a Welsh chieftain and is a Grade I listed building.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.9,
+        "tags": [
+          "hilltop",
+          "ruins-romantic",
+          "photogenic",
+          "free-entry",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/dryslwyn-castle"
+          },
+          {
+            "name": "Castles of Wales",
+            "url": "https://www.castlesofwales.com/dryslwyn.html"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dryslwyn_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Dryslwyn_Castle_Capt%27_Gorgeous_-_31725052228.jpg/330px-Dryslwyn_Castle_Capt%27_Gorgeous_-_31725052228.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ben Salter",
+          "license": "CC BY 2.0",
+          "description": "Dryslwyn Castle  cliff",
+          "credit": "https://www.flickr.com/photos/ben_salter/31725052228/",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dryslwyn_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779060473071
     }
   ]
 }
