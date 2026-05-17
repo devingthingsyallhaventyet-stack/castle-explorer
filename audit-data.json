@@ -24490,7 +24490,22 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "sources": [
+      {
+        "label": "Official Website",
+        "url": "https://www.raby.co.uk/raby-castle/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Official Website",
+        "url": "https://www.raby.co.uk/raby-castle/"
+      }
+    ],
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "https://www.raby.co.uk/raby-castle/ add source"
   },
   {
     "name": "Lancaster Castle",
@@ -24726,7 +24741,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17"
   },
   {
     "name": "Tynemouth Priory and Castle",
@@ -24798,7 +24815,7 @@
     "county": "Northumberland",
     "lat": 55.68,
     "lng": -1.8025,
-    "mapsLink": "https://www.google.com/maps/search/Lindisfarne%20Priory/@55.669,-1.8008,15z",
+    "mapsLink": "https://maps.app.goo.gl/Uq6o9nhbRWztg7Mb8",
     "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZM57izmptxg0fBOodZBmH0R5yZErkgkHHWu52KAV5LtwLyGIEBDdU86T6YW2pHQz_3SeciK9Jx4gzXhkDW4kkvukZ3UFaSIcJUemW24YIOWD-1ASoSQvpVwxtTKzoaPylqQNQEDnJw9OD6ECw=s4800-w1200",
     "imgSource": "google",
     "gallery": [],
@@ -24824,7 +24841,10 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "update google places link - https://maps.app.goo.gl/Uq6o9nhbRWztg7Mb8"
   },
   {
     "name": "Furness Abbey",
@@ -24952,13 +24972,13 @@
     "imageReviewDone": true
   },
   {
-    "name": "Auckland Castle",
+    "name": "Auckland Palace",
     "country": "england",
     "region": "northern-england",
     "county": "County Durham",
     "lat": 54.6664,
     "lng": -1.6702,
-    "mapsLink": "https://www.google.com/maps/search/Auckland%20Castle/@54.6672,-1.6758,15z",
+    "mapsLink": "https://maps.app.goo.gl/rV3dndqCd6MzxePE",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Auckland_Castle_-_geograph.org.uk_-_1896444.jpg/330px-Auckland_Castle_-_geograph.org.uk_-_1896444.jpg",
     "imgSource": "",
     "gallery": [],
@@ -25002,7 +25022,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Auckland_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-17",
+    "enrichNote": "Change name to Auckland Palace. Update google places link."
   },
   {
     "name": "Chillingham Castle",
