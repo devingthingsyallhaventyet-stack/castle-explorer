@@ -1057,7 +1057,7 @@ function renderTable() {
         <td>${i+1}</td>
         <td><strong>${esc(d.name)}</strong></td>
         <td><a href="${listingUrl}" target="_blank">↗</a></td>
-        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'}${d.mapsLink ? ` <a href="${esc(d.mapsLink)}" target="_blank">📍</a>` : ''}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'}${d.mapsLink ? ` <a href="${esc(d.mapsLink)}" target="_blank">📍</a>` : ''}${(Array.isArray(d.sources) && d.sources.length) ? ' ' + d.sources.map(s => `<a href="${esc(s.url)}" target="_blank" style="font-size:11px">🔗</a>`).join(' ') : ''}</td>
         <td>${mainThumb} <span style="font-size:10px;color:var(--muted)">${esc(mainId)}</span></td>
         <td style="max-width:250px">${galleryHtml}</td>
         <td style="${imgCountStyle};font-weight:600">${totalImgs}</td>
