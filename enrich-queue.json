@@ -744,6 +744,57 @@
         "enrichNotes": ""
       },
       "ts": 1779045099154
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Hulne Priory\n*Country:* england\n*Region:* northern england\n*County:* Northumberland\n*Type:* abbey\n*Period:* 13th-16th century\n*Coords:* 55.43492, -1.74395\n*Wikipedia:* https://en.wikipedia.org/wiki/Hulne_Priory\n*Maps:* https://www.google.com/maps/search/Hulne%20Priory/@55.415,-1.7567,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hulne_Priory.jpg/330px-Hulne_Priory.jpg\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research to build out a page. \n\n*Description:*\nHulne Priory, Hulne Friary or Hulne Abbey was a friary founded in 1240 by the Carmelites or 'Whitefriars'. It is said that the Northumberland site, quite close to Alnwick, was chosen for some slight resemblance to Mount Carmel where the order originated. Substantial ruins survive, watched over by the stone figures of friars carved in the 18th century. It is a sign of the unrest felt in this area so near to the border with Scotland that the priory had a surrounding wall and in the 15th century a pele tower was erected. Changes were made at the Dissolution of the Monasteries when the Percy family took control.\n\n_Listing 15 of 50_",
+      "listing": {
+        "name": "Hulne Priory",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Northumberland",
+        "lat": 55.43492,
+        "lng": -1.74395,
+        "mapsLink": "https://www.google.com/maps/search/Hulne%20Priory/@55.415,-1.7567,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hulne_Priory.jpg/330px-Hulne_Priory.jpg",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Hulne Priory, Hulne Friary or Hulne Abbey was a friary founded in 1240 by the Carmelites or 'Whitefriars'. It is said that the Northumberland site, quite close to Alnwick, was chosen for some slight resemblance to Mount Carmel where the order originated. Substantial ruins survive, watched over by the stone figures of friars carved in the 18th century. It is a sign of the unrest felt in this area so near to the border with Scotland that the priory had a surrounding wall and in the 15th century a pele tower was erected. Changes were made at the Dissolution of the Monasteries when the Percy family took control.",
+        "type": "abbey",
+        "period": "13th-16th century",
+        "rating": 4.3,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric",
+          "woodland"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hulne_Priory"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=3042"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hulne_Priory",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hulne_Priory.jpg/330px-Hulne_Priory.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": "local",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Hulne_Priory",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "needs more research to build out a page. ",
+        "enrichNotes": "needs more research to build out a page. "
+      },
+      "ts": 1779045173148
     }
   ]
 }
