@@ -795,6 +795,62 @@
         "enrichNotes": "needs more research to build out a page. "
       },
       "ts": 1779045173148
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Newcastle Castle Keep\n*Country:* england\n*Region:* northern england\n*County:* Tyne and Wear\n*Type:* castle\n*Period:* 12th century\n*Coords:* 54.9688, -1.6105\n*Wikipedia:* https://en.wikipedia.org/wiki/The_Castle%2C_Newcastle\n*Maps:* https://www.google.com/maps/search/Newcastle%20Castle%20Keep/@54.9683,-1.6117,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMfdwUfklqy1evJCWeK7aOh_SmLeIQaVPMr9ejhTvNYZy0bwdKYdoLxc00J6JyvwejTINm2Q57nI6sDz48nI_jc5az2U8XQY41kTYd-lv7bgjUhp3yKiOGTnvJKXUxkL01qiqZMGFxApmBL5w=s4800-w1079\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/nvuW9W57yruKNRHf8\n\n*Description:*\nThe Castle, Newcastle, or Newcastle Castle is a medieval fortification in Newcastle upon Tyne, England, built on the site of the fortress that gave the City of Newcastle its name. The most prominent remaining structures on the site are the Castle Keep, and the Black Gate, its fortified gatehouse.\n\n_Listing 16 of 50_",
+      "listing": {
+        "name": "Newcastle Castle Keep",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Tyne and Wear",
+        "lat": 54.9688,
+        "lng": -1.6105,
+        "mapsLink": "https://www.google.com/maps/search/Newcastle%20Castle%20Keep/@54.9683,-1.6117,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMfdwUfklqy1evJCWeK7aOh_SmLeIQaVPMr9ejhTvNYZy0bwdKYdoLxc00J6JyvwejTINm2Q57nI6sDz48nI_jc5az2U8XQY41kTYd-lv7bgjUhp3yKiOGTnvJKXUxkL01qiqZMGFxApmBL5w=s4800-w1079",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "The Castle, Newcastle, or Newcastle Castle is a medieval fortification in Newcastle upon Tyne, England, built on the site of the fortress that gave the City of Newcastle its name. The most prominent remaining structures on the site are the Castle Keep, and the Black Gate, its fortified gatehouse.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "norman",
+          "medieval",
+          "museum",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/History_of_Newcastle_upon_Tyne"
+          },
+          {
+            "name": "Historic UK",
+            "url": "https://www.historic-uk.com/HistoryMagazine/DestinationsUK/NewcastleuponTyne/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/The_Castle%2C_Newcastle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Newcastle_schloss.jpg/330px-Newcastle_schloss.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "",
+          "license": "CC BY-SA 3.0",
+          "description": "",
+          "credit": "",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/nvuW9W57yruKNRHf8",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/nvuW9W57yruKNRHf8"
+      },
+      "ts": 1779045218809
     }
   ]
 }
