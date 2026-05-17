@@ -1077,6 +1077,67 @@
         "enrichNotes": ""
       },
       "ts": 1779045305458
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Avebury Manor\n*Country:* england\n*Region:* south west\n*County:* Wiltshire\n*Type:* castle\n*Period:* 16th century\n*Coords:* 51.4289, -1.8591\n*Wikipedia:* https://en.wikipedia.org/wiki/Avebury_Manor_and_Garden\n*Maps:* https://www.google.com/maps/search/Avebury%20Manor/@51.4283,-1.855,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMrPGTFb4be9XB_84Y1BRr0lm7_swvjl5Kw_nGZE6avMngCtldHZINi6ugwDcXthqA2UfVDmwKhf2x7aVeGYbbD18oXyOG4a2CosSc_JeYCWOf8nTR_zdUmNkatr9Qa2u-oMgGlNCPvMnVDnn8=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nAvebury Manor & Garden is a National Trust property consisting of a Grade I listed early-16th-century manor house and its surrounding garden. It is in Avebury, near Marlborough, Wiltshire, England, in the centre of the village next to St James's Church and close to the Avebury neolithic henge monument.\n\n_Listing 21 of 50_",
+      "listing": {
+        "name": "Avebury Manor",
+        "country": "england",
+        "region": "south-west",
+        "county": "Wiltshire",
+        "lat": 51.4289,
+        "lng": -1.8591,
+        "mapsLink": "https://www.google.com/maps/search/Avebury%20Manor/@51.4283,-1.855,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMrPGTFb4be9XB_84Y1BRr0lm7_swvjl5Kw_nGZE6avMngCtldHZINi6ugwDcXthqA2UfVDmwKhf2x7aVeGYbbD18oXyOG4a2CosSc_JeYCWOf8nTR_zdUmNkatr9Qa2u-oMgGlNCPvMnVDnn8=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Avebury Manor & Garden is a National Trust property consisting of a Grade I listed early-16th-century manor house and its surrounding garden. It is in Avebury, near Marlborough, Wiltshire, England, in the centre of the village next to St James's Church and close to the Avebury neolithic henge monument.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 4.3,
+        "tags": [
+          "well-preserved",
+          "tudor",
+          "gardens",
+          "prehistoric",
+          "photogenic",
+          "tearoom-cafe",
+          "museum",
+          "gift-shop"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/wiltshire/avebury"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Avebury_Manor_and_Garden"
+          },
+          {
+            "name": "Visit Wiltshire",
+            "url": "https://www.visitwiltshire.co.uk/things-to-do/avebury-stone-circle-and-avebury-manor-and-garden-p134483"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Avebury_Manor_and_Garden",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Avebury_Manor_view_from_south.jpg/330px-Avebury_Manor_view_from_south.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Jürgen Matern",
+          "license": "CC BY-SA 2.5",
+          "description": "View of Avebury Manor from the south on a sunny summer day.",
+          "credit": "own work (JMatern_060806_1150-1155_WC.jpg)",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "status": "flagged",
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779045324458
     }
   ]
 }
