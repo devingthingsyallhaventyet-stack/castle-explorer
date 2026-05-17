@@ -114,7 +114,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Castle Stalker Official Website",
+        "url": "https://www.castlestalker.com/wp/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Castle Stalker Official Website",
+        "url": "https://www.castlestalker.com/wp/"
+      }
+    ]
   },
   {
     "name": "Duart Castle",
@@ -182,7 +194,19 @@
     "imageReviewDone": true,
     "exists": "yes",
     "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown"
+    "hasGooglePlaces": "unknown",
+    "sources": [
+      {
+        "label": "Duart Castle - Ancient Seat of Clan Maclean",
+        "url": "https://duartcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Duart Castle - Ancient Seat of Clan Maclean",
+        "url": "https://duartcastle.com/"
+      }
+    ]
   },
   {
     "name": "Dunstaffnage Castle",
@@ -620,7 +644,19 @@
       "source": "Wikimedia Commons"
     },
     "mainImageSource": "google",
-    "imageReviewDone": true
+    "imageReviewDone": true,
+    "sources": [
+      {
+        "label": "Inveraray Castle - Home of the Dukes of Argyll",
+        "url": "https://www.inveraray-castle.com/"
+      }
+    ],
+    "verifiedSources": [
+      {
+        "label": "Inveraray Castle - Home of the Dukes of Argyll",
+        "url": "https://www.inveraray-castle.com/"
+      }
+    ]
   },
   {
     "name": "Sween Castle",
@@ -14392,7 +14428,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pitsligo_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Esslemont Castle",
@@ -14428,7 +14465,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Esslemont_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Cairnbulg Castle",
@@ -14464,7 +14503,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cairnbulg_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Harthill Castle",
@@ -14499,7 +14539,8 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Craig Castle",
@@ -14537,7 +14578,8 @@
     "exists": "unverified",
     "hasWikipedia": "no",
     "hasGooglePlaces": "unknown",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Midmar Castle",
@@ -14743,7 +14785,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Inverallochy Castle",
@@ -14778,7 +14822,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Inverallochy_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Kinnaird Head Castle",
@@ -14817,7 +14863,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Udny Castle",
@@ -14914,7 +14962,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Fedderate Castle",
@@ -15068,7 +15118,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hallforest_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Finavon Castle",
@@ -15077,7 +15129,7 @@
     "county": "Angus",
     "lat": "56.6967",
     "lng": "-2.8222",
-    "mapsLink": "https://www.google.com/maps/search/Finavon%20Castle%20Angus%20scotland",
+    "mapsLink": "https://www.google.com/maps/place/Finavon+Castle+Ruins/@56.6973747,-2.8259374,17z",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Finavon_Castle_ruin.jpg/330px-Finavon_Castle_ruin.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -15104,7 +15156,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Finavon_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Melgund Castle",
@@ -15370,7 +15424,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Ballindalloch Castle",
+        "url": "https://www.ballindallochcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.ballindallochcastle.co.uk/"
+    ]
   },
   {
     "name": "Castle of Fiddes",
@@ -15437,7 +15502,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Muchalls_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Craigston Castle",
@@ -15602,7 +15669,18 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinloss_Abbey",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Kinloss Abbey",
+        "url": "https://kinlossabbey.org/"
+      }
+    ],
+    "verifiedSources": [
+      "https://kinlossabbey.org/"
+    ]
   },
   {
     "name": "Birnie Kirk",
@@ -15703,7 +15781,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Darnaway_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Kinneff Church",
@@ -15746,7 +15826,18 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kinneff",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Kinneff Old Church",
+        "url": "https://www.kinneffoldchurch.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.kinneffoldchurch.co.uk/"
+    ]
   },
   {
     "name": "Deer Abbey",
@@ -15820,7 +15911,7 @@
     "county": "Aberdeenshire",
     "lat": "57.35625556",
     "lng": "-2.76475278",
-    "mapsLink": "https://www.google.com/maps/search/Leith%20Hall%20Aberdeenshire%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/kHZiA1nY6FG77jLa7",
     "image": "https://img.castlecore.uk/leith-hall.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -15850,7 +15941,9 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Leith_Hall",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Haddo House",
@@ -15890,7 +15983,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Haddo_House",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Pitmedden Garden",
@@ -15929,7 +16024,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Abergeldie Castle",
@@ -16030,7 +16127,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Peel_of_Lumphanan",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Sueno's Stone",
@@ -16074,7 +16173,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sueno%27s_Stone",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Blairfindy Castle",
@@ -16536,7 +16637,9 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Ethie Castle",
@@ -16562,7 +16665,8 @@
       "well-preserved",
       "medieval",
       "haunted",
-      "coastal"
+      "coastal",
+      "hotel"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Ethie_Castle",
@@ -16575,7 +16679,18 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ethie_Castle",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Ethie Castle",
+        "url": "https://www.ethiecastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.ethiecastle.com/"
+    ]
   },
   {
     "name": "Cortachy Castle",
@@ -16729,44 +16844,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "St Vigeans Museum",
-    "country": "scotland",
-    "region": "northeast-tayside",
-    "county": "Angus",
-    "lat": "56.577",
-    "lng": "-2.5904",
-    "mapsLink": "https://www.google.com/maps/search/St%20Vigeans%20Museum%20Angus%20scotland",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/St_Vigeans_Museum_20090616.jpg/330px-St_Vigeans_Museum_20090616.jpg",
-    "imgSource": "",
-    "gallery": [],
-    "desc": "St Vigeans Sculptured Stones Museum, located in the Angus village of St Vigeans, houses an outstanding collection of Pictish carved stones. St Vigeans, close to Arbroath, was the centre of a royal estate in the Early Middle Ages, and was of religious importance as a monastery founded in the 8th century. The present-day St Vigeans Church was built in the 12th century, on a 40-foot (12 m) mound.",
-    "type": "abbey",
-    "period": "7th-10th century",
-    "rating": 4,
-    "tags": [
-      "well-preserved",
-      "museum",
-      "prehistoric",
-      "celtic",
-      "free-entry"
-    ],
-    "source": "",
-    "wiki": "https://en.wikipedia.org/wiki/St_Vigeans_Sculptured_Stones_Museum",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/St_Vigeans_Museum_20090616.jpg/330px-St_Vigeans_Museum_20090616.jpg",
-    "reviewStatus": "flagged",
-    "imageAttribution": "local",
-    "reviewReasons": [
-      "flagged-during-image-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Vigeans_Sculptured_Stones_Museum",
-    "imageReviewDone": true,
-    "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
-  },
-  {
     "name": "Balintore Castle",
     "country": "scotland",
     "region": "northeast-tayside",
@@ -16801,7 +16878,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Powrie Castle",
@@ -17131,7 +17210,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Dean Castle",
+        "url": "https://deancastlecountrypark.com/dean-castle/"
+      }
+    ],
+    "verifiedSources": [
+      "https://deancastlecountrypark.com/dean-castle/"
+    ]
   },
   {
     "name": "Culzean Castle",
@@ -17291,7 +17381,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Dundrennan Abbey",
@@ -17939,7 +18031,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_of_Park",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Comlongon Castle",
@@ -18105,7 +18199,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Dundonald Castle",
+        "url": "https://dundonaldcastle.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://dundonaldcastle.org.uk/"
+    ]
   },
   {
     "name": "Greenan Castle",
@@ -18324,7 +18429,8 @@
       "tearoom-cafe",
       "kid-friendly",
       "guided-tours",
-      "dog-friendly"
+      "dog-friendly",
+      "hotel"
     ],
     "source": "",
     "wiki": "https://en.wikipedia.org/wiki/Drumlanrig_Castle",
@@ -18339,7 +18445,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Drumlanrig Castle",
+        "url": "https://www.drumlanrigcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.drumlanrigcastle.co.uk/"
+    ]
   },
   {
     "name": "Barholm Castle",
@@ -18411,7 +18528,7 @@
     "county": "Dumfries and Galloway",
     "lat": "54.8352",
     "lng": "-4.0611",
-    "mapsLink": "https://www.google.com/maps/search/Kirkcudbright%20Castle%20Dumfries%20and%20Galloway%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/uusFaYo8Yy2fcK6WA",
     "image": "https://img.castlecore.uk/kirkcudbright-castle.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -18439,7 +18556,9 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kirkcudbright_Castle",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Sanquhar Castle",
@@ -18700,7 +18819,7 @@
     "county": "Ayrshire",
     "lat": "55.3261",
     "lng": "-4.8441",
-    "mapsLink": "https://www.google.com/maps/search/Turnberry%20Castle%20Ayrshire%20scotland",
+    "mapsLink": "https://maps.app.goo.gl/VG4AFAJ2Y242WYSD8",
     "image": "https://img.castlecore.uk/turnberry-castle.jpg",
     "imgSource": "CDN",
     "gallery": [
@@ -18730,7 +18849,18 @@
     "hasWikipedia": "yes",
     "hasGooglePlaces": "unknown",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Turnberry_Castle",
-    "needsEnrich": true
+    "needsEnrich": true,
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Turnberry Castle - Ayrshire Scotland",
+        "url": "https://www.ayrshirescotland.com/turnberry-castle.html"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.ayrshirescotland.com/turnberry-castle.html"
+    ]
   },
   {
     "name": "Dunure Castle",
@@ -19022,7 +19152,9 @@
     },
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Drumcoltran Tower",
@@ -19693,7 +19825,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Hoddom Castle",
+        "url": "https://www.hoddomcastle.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.hoddomcastle.co.uk/"
+    ]
   },
   {
     "name": "Repentance Tower",
@@ -20042,7 +20185,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Bury St Edmunds Abbey",
@@ -20077,7 +20222,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Visit Bury St Edmunds - Abbey",
+        "url": "https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund"
+      }
+    ],
+    "verifiedSources": [
+      "https://visit-burystedmunds.co.uk/blog/discover-the-abbey-of-st-edmund"
+    ]
   },
   {
     "name": "Colchester Castle",
@@ -20279,7 +20435,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Binham Priory",
@@ -20330,7 +20488,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Burgh Castle",
@@ -20524,7 +20684,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Oxburgh_Hall",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Clare Castle",
@@ -21086,7 +21248,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Wingfield_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Mettingham Castle",
@@ -21095,7 +21259,7 @@
     "county": "Suffolk",
     "lat": 52.4448,
     "lng": 1.4714,
-    "mapsLink": "https://www.google.com/maps/search/Mettingham%20Castle/@52.4167,1.4833,15z",
+    "mapsLink": "https://maps.app.goo.gl/J79yyyqpJs3vwDEQ8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg/330px-Entrance_to_Mettingham_Castle_-_geograph.org.uk_-_984718.jpg",
     "imgSource": "wikipedia",
     "gallery": [],
@@ -21107,7 +21271,8 @@
       "medieval",
       "ruins-romantic",
       "atmospheric",
-      "gardens"
+      "gardens",
+      "hotel"
     ],
     "source": [
       {
@@ -21127,7 +21292,18 @@
     },
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Mettingham Castle",
+        "url": "https://www.mettinghamcastle.com/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.mettinghamcastle.com/"
+    ]
   },
   {
     "name": "Bungay Castle",
@@ -21170,7 +21346,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bungay_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "New Buckenham Castle",
@@ -21215,7 +21393,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/New_Buckenham_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Kimbolton Castle",
@@ -21344,7 +21524,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Elton Hall",
+        "url": "https://eltonhall.com/"
+      }
+    ],
+    "verifiedSources": [
+      "https://eltonhall.com/"
+    ]
   },
   {
     "name": "Longthorpe Tower",
@@ -21389,7 +21580,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Eye Castle",
@@ -21457,56 +21650,6 @@
     "imageReviewDone": true
   },
   {
-    "name": "Haughley Castle",
-    "country": "england",
-    "region": "east-of-england",
-    "county": "Suffolk",
-    "lat": 52.2226,
-    "lng": 0.9633,
-    "mapsLink": "https://www.google.com/maps/search/Haughley%20Castle/@52.228,0.984,15z",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Village_pond_at_Haughley_-_geograph.org.uk_-_1267157.jpg/330px-Village_pond_at_Haughley_-_geograph.org.uk_-_1267157.jpg",
-    "imgSource": "",
-    "gallery": [],
-    "desc": "Haughley Castle was a medieval castle situated in the village of Haughley, some 4 kilometres (2.5 mi) north-west of the town of Stowmarket, Suffolk. Prominent historians such as J. Wall consider it \"the most perfect earthwork of this type in the county,\" whilst R. Allen Brown has described it as \"one of the most important\" castle sites in East Anglia.",
-    "type": "castle",
-    "period": "11th-12th century",
-    "rating": 3.3,
-    "tags": [
-      "norman",
-      "hilltop",
-      "ruins-romantic",
-      "free-entry"
-    ],
-    "source": [
-      {
-        "name": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Haughley_Castle"
-      },
-      {
-        "name": "Suffolk Heritage",
-        "url": "https://heritage.suffolk.gov.uk/Monument/MSF5472"
-      },
-      {
-        "name": "Historic England",
-        "url": "https://historicengland.org.uk/listing/the-list/list-entry/1006069"
-      }
-    ],
-    "wiki": "https://en.wikipedia.org/wiki/Haughley_Castle",
-    "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Village_pond_at_Haughley_-_geograph.org.uk_-_1267157.jpg/330px-Village_pond_at_Haughley_-_geograph.org.uk_-_1267157.jpg",
-    "reviewStatus": "flagged",
-    "reviewReasons": [
-      "needs-review"
-    ],
-    "exists": "unverified",
-    "hasWikipedia": "yes",
-    "hasGooglePlaces": "unknown",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Haughley_Castle",
-    "imageAttribution": "local",
-    "imageReviewDone": true,
-    "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
-  },
-  {
     "name": "Weeting Castle",
     "country": "england",
     "region": "east-of-england",
@@ -21550,7 +21693,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Wymondham Abbey",
@@ -21596,7 +21741,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Wymondham Abbey",
+        "url": "https://www.wymondhamabbey.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.wymondhamabbey.org.uk/"
+    ]
   },
   {
     "name": "Creake Abbey",
@@ -21642,7 +21798,18 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Creake Abbey",
+        "url": "https://www.creakeabbey.co.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.creakeabbey.co.uk/"
+    ]
   },
   {
     "name": "Mountfitchet Castle",
@@ -21772,7 +21939,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Waytemore_Castle",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Hertford Castle",
@@ -21963,16 +22132,27 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "Denny Abbey & Farmland Museum",
+        "url": "https://dennyfarmlandmuseum.org.uk/"
+      }
+    ],
+    "verifiedSources": [
+      "https://dennyfarmlandmuseum.org.uk/"
+    ]
   },
   {
-    "name": "St Albans Abbey",
+    "name": "St Albans Cathedral",
     "country": "england",
     "region": "east-of-england",
     "county": "Hertfordshire",
     "lat": 51.750556,
     "lng": -0.342222,
-    "mapsLink": "https://www.google.com/maps/search/St%20Albans%20Abbey/@51.7514,-0.36,15z",
+    "mapsLink": "https://maps.app.goo.gl/Wqt7BWknqrco9pod8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg/330px-St_Albans_Cathedral_Exterior_from_west%2C_Herfordshire%2C_UK_-_Diliff.jpg",
     "imgSource": "",
     "gallery": [],
@@ -22014,7 +22194,18 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/St_Albans_Cathedral",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16",
+    "sources": [
+      {
+        "label": "St Albans Cathedral",
+        "url": "https://www.stalbanscathedral.org/"
+      }
+    ],
+    "verifiedSources": [
+      "https://www.stalbanscathedral.org/"
+    ]
   },
   {
     "name": "St Botolph's Priory",
@@ -22056,7 +22247,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Ickworth House",
@@ -22105,7 +22298,9 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ickworth_House",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Layer Marney Tower",
@@ -51343,7 +51538,8 @@
       "victorian",
       "wedding-venue",
       "gardens",
-      "atmospheric"
+      "atmospheric",
+      "hotel"
     ],
     "source": [
       {
@@ -51368,7 +51564,9 @@
     "mainImageSource": "google",
     "imageReviewDone": true,
     "needsEnrich": true,
-    "reviewNote": "Auto-moved: insufficient images (0-1)"
+    "reviewNote": "Auto-moved: insufficient images (0-1)",
+    "enrichStatus": "enriched",
+    "enrichReviewDate": "2026-05-16"
   },
   {
     "name": "Brecon Cathedral",

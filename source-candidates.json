@@ -1,27 +1,6 @@
 {
   "candidates": [
     {
-      "name": "Castle Stalker",
-      "candidateUrl": "https://www.castlestalker.com/wp/",
-      "candidateLabel": "Castle Stalker Official Website",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "Duart Castle",
-      "candidateUrl": "https://duartcastle.com/",
-      "candidateLabel": "Duart Castle - Ancient Seat of Clan Maclean",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
-      "name": "Inveraray Castle",
-      "candidateUrl": "https://www.inveraray-castle.com/",
-      "candidateLabel": "Inveraray Castle - Home of the Dukes of Argyll",
-      "status": "pending",
-      "foundDate": "2026-05-16"
-    },
-    {
       "name": "Lews Castle",
       "candidateUrl": "https://www.lews-castle.co.uk/",
       "candidateLabel": "Lews Castle - Luxury Accommodation & Heritage",
