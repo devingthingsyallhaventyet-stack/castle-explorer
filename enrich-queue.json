@@ -114,6 +114,64 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/DUHvftUEAXFh8PwF9"
       },
       "ts": 1779041678691
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Erddig Hall\n*Country:* wales\n*Region:* snowdonia north\n*County:* Wrexham\n*Type:* historic-house\n*Period:* 17th century\n*Coords:* 53.02722222, -3.00638889\n*Wikipedia:* https://en.wikipedia.org/wiki/Erddig\n*Maps:* https://www.google.com/maps/search/Erddig%20Hall/@53.0361,-3.0083,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg/330px-The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nErddig is a country house and estate in the community of Marchwiel, approximately 2 miles (3.2 km) south of Wrexham, Wales. It is centred on a country house which dates principally from between 1684 and 1687, when the central block was built by Joshua Edisbury, and the 1720s, when the flanking wings were added by its second owner, John Meller. Erddig was inherited by Simon Yorke in 1733, and remained in the Yorke family until it was given to the National Trust by Philip Scott Yorke in 1973.\n\n_Listing 3 of 10_",
+      "listing": {
+        "name": "Erddig Hall",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Wrexham",
+        "lat": 53.02722222,
+        "lng": -3.00638889,
+        "mapsLink": "https://www.google.com/maps/search/Erddig%20Hall/@53.0361,-3.0083,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg/330px-The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Erddig is a country house and estate in the community of Marchwiel, approximately 2 miles (3.2 km) south of Wrexham, Wales. It is centred on a country house which dates principally from between 1684 and 1687, when the central block was built by Joshua Edisbury, and the 1720s, when the flanking wings were added by its second owner, John Meller. Erddig was inherited by Simon Yorke in 1733, and remained in the Yorke family until it was given to the National Trust by Philip Scott Yorke in 1973.",
+        "type": "historic-house",
+        "period": "17th century",
+        "rating": 4.6,
+        "tags": [
+          "well-preserved",
+          "photogenic",
+          "gardens",
+          "guided-tours",
+          "tearoom-cafe",
+          "gift-shop",
+          "museum",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Erddig"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/wales/erddig"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Erddig",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg/330px-The_Mansion_House_across_the_pond_-_Erddig%2C_Wrexham%2C_North_Wales_%2824540653874%29.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Glen Bowman from Newcastle, England",
+          "license": "CC BY 2.0",
+          "description": "The Mansion House across the pond - Erddig, Wrexham, North Wales",
+          "credit": "The Mansion House across the pond - Erddig, Wrexham, North Wales",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Erddig",
+        "needsEnrich": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-17",
+        "enrichNotes": ""
+      },
+      "ts": 1779041700787
     }
   ]
 }
