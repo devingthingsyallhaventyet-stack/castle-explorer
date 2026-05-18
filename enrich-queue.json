@@ -47,6 +47,49 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/6b67oxqSpppKHN71A\n"
       },
       "ts": 1779065818442
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Lynch's Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 53.4801618, -6.7325901\n*Wikipedia:* https://en.wikipedia.org/wiki/Summerhill_House\n*Maps:* https://www.google.com/maps/search/Lynch's%20Castle/@53.272,-9.053,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Summerhill_House%2C_Main_front.jpg/330px-Summerhill_House%2C_Main_front.jpg\n*Gallery:* 4 images\n*Image Source:* wikipedia\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* idk\n\n*Description:*\nSummerhill House was a 100-roomed Palladian house in County Meath, Ireland which was the ancestral seat of the Viscounts Langford and the Barons Langford. Built in 1731, it was likely designed by Sir Edward Lovett Pearce and completed by Richard Cassels in the Palladian style, although Sir John Vanbrugh, who was related to Pearce and with whom he trained, is thought to have also influenced the design of the house, which could be seen by the Baroque details, great arched chimney stacks and the palatial grandeur and scale.\n\n_Listing 2 of 234_",
+      "listing": {
+        "name": "Lynch's Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.4801618,
+        "lng": -6.7325901,
+        "mapsLink": "https://www.google.com/maps/search/Lynch's%20Castle/@53.272,-9.053,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Summerhill_House%2C_Main_front.jpg/330px-Summerhill_House%2C_Main_front.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/lynch-s-castle-2.jpg",
+          "https://img.castlecore.uk/lynch-s-castle-3.jpg",
+          "https://img.castlecore.uk/lynch-s-castle-4.jpg",
+          "https://img.castlecore.uk/lynch-s-castle-5.jpg"
+        ],
+        "desc": "Summerhill House was a 100-roomed Palladian house in County Meath, Ireland which was the ancestral seat of the Viscounts Langford and the Barons Langford. Built in 1731, it was likely designed by Sir Edward Lovett Pearce and completed by Richard Cassels in the Palladian style, although Sir John Vanbrugh, who was related to Pearce and with whom he trained, is thought to have also influenced the design of the house, which could be seen by the Baroque details, great arched chimney stacks and the palatial grandeur and scale.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 3.8,
+        "tags": [
+          "well-preserved",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Summerhill_House",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Summerhill_House%2C_Main_front.jpg/330px-Summerhill_House%2C_Main_front.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk",
+        "enrichNotes": "idk"
+      },
+      "ts": 1779065923296
     }
   ]
 }
