@@ -362,6 +362,49 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/KmEGLGPyRnSupQ9c6\n"
       },
       "ts": 1779067588351
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Lydford Castle\n*Country:* england\n*Region:* south west\n*County:* Devon\n*Type:* castle\n*Period:* 12th century\n*Coords:* 50.6428, -4.1115\n*Wikipedia:* https://en.wikipedia.org/wiki/Lydford_Castle\n*Maps:* https://www.google.com/maps/search/Lydford%20Castle/@50.6443,-4.0656,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMB5noTdNBHfAqV0R9M5jjzUcLTtHqkoBens_lr0rieksPpCSckbNqzd8ecv1SADMFq_k0FmD4GA583AMUPapUf90S9lBKWOoXi7rxe6LWYOk_ooDnJ_bvBnXwI7WlV9odEbv1P4zfLnn8RDQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nLydford Castle is a medieval castle in the town of Lydford, Devon, England. The first castle in Lydford, sometimes termed the Norman fort, was a small ringwork built in a corner of the Anglo-Saxon fortified burh in the years after the Norman conquest of England. It was intended to help control Devon following the widespread revolt against Norman rule in 1068. The Norman fort had been abandoned by the middle of the 12th century.\n\n_Listing 8 of 204_",
+      "listing": {
+        "name": "Lydford Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Devon",
+        "lat": 50.6428,
+        "lng": -4.1115,
+        "mapsLink": "https://www.google.com/maps/search/Lydford%20Castle/@50.6443,-4.0656,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMB5noTdNBHfAqV0R9M5jjzUcLTtHqkoBens_lr0rieksPpCSckbNqzd8ecv1SADMFq_k0FmD4GA583AMUPapUf90S9lBKWOoXi7rxe6LWYOk_ooDnJ_bvBnXwI7WlV9odEbv1P4zfLnn8RDQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Lydford Castle is a medieval castle in the town of Lydford, Devon, England. The first castle in Lydford, sometimes termed the Norman fort, was a small ringwork built in a corner of the Anglo-Saxon fortified burh in the years after the Norman conquest of England. It was intended to help control Devon following the widespread revolt against Norman rule in 1068. The Norman fort had been abandoned by the middle of the 12th century.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.6,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Lydford_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lydford%2C_the_castle_-_geograph.org.uk_-_571379.jpg/330px-Lydford%2C_the_castle_-_geograph.org.uk_-_571379.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Chris Downer",
+          "license": "CC BY-SA 2.0",
+          "description": "Lydford: the castle A relatively small ruin next door to the church, this roofless castle is set on a pleasant grassy mound.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067605884
     }
   ]
 }
