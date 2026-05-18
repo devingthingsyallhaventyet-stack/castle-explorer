@@ -349,6 +349,61 @@
         "enrichNotes": "google places link - https://maps.app.goo.gl/fkzn4r5BsZY1FNrX7\n"
       },
       "ts": 1779066228328
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Killala Round Tower\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Mayo\n*Type:* abbey\n*Period:* 10th-12th century\n*Coords:* 54.2125, -9.22138889\n*Wikipedia:* https://en.wikipedia.org/wiki/Killala_Round_Tower\n*Maps:* https://www.google.com/maps/search/Killala%20Round%20Tower/@54.213,-9.217,15z\n*Main Image:* https://img.castlecore.uk/killala-round-tower.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nKillala is a village in County Mayo in Ireland, north of Ballina. The railway line from Dublin to Ballina once extended to Killala. To the west of Killala is the townland of Townsplots West, which contains a number of ancient forts. Historically associated with Saint Patrick, and the seat of an episcopal see for several centuries, evidence of Killala's ecclesiastical past include a 12th-century round tower and the 17th century Cathedral Church of St Patrick. As of the 2016 census of Ireland, the village had a population of 562. The village is in a civil parish of the same name.\n\n_Listing 8 of 234_",
+      "listing": {
+        "name": "Killala Round Tower",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Mayo",
+        "lat": 54.2125,
+        "lng": -9.22138889,
+        "mapsLink": "https://www.google.com/maps/search/Killala%20Round%20Tower/@54.213,-9.217,15z",
+        "image": "https://img.castlecore.uk/killala-round-tower.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/killala-round-tower-2.jpg",
+          "https://img.castlecore.uk/killala-round-tower-3.jpg",
+          "https://img.castlecore.uk/killala-round-tower-4.jpg",
+          "https://img.castlecore.uk/killala-round-tower-5.jpg"
+        ],
+        "desc": "Killala is a village in County Mayo in Ireland, north of Ballina. The railway line from Dublin to Ballina once extended to Killala. To the west of Killala is the townland of Townsplots West, which contains a number of ancient forts. Historically associated with Saint Patrick, and the seat of an episcopal see for several centuries, evidence of Killala's ecclesiastical past include a 12th-century round tower and the 17th century Cathedral Church of St Patrick. As of the 2016 census of Ireland, the village had a population of 562. The village is in a civil parish of the same name.",
+        "type": "abbey",
+        "period": "10th-12th century",
+        "rating": 3.8,
+        "tags": [
+          "celtic",
+          "well-preserved",
+          "coastal",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Mayo Heritage",
+            "url": "https://www.mayo.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Killala",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Killala_street_scene_-_geograph.org.uk_-_486739.jpg/330px-Killala_street_scene_-_geograph.org.uk_-_486739.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Killala_Round_Tower",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779066261025
     }
   ]
 }
