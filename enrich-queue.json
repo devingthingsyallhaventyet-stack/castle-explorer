@@ -183,6 +183,52 @@
         "enrichNotes": "update wikipedia listing - https://en.wikipedia.org/wiki/Huntington_Castle,_Clonegal\nadd source - https://huntingtoncastle.com/"
       },
       "ts": 1779067053963
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kanturk Castle\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Cork\n*Type:* fortified house\n*Period:* 17th century\n*Coords:* 52.175, -8.9\n*Wikipedia:* https://en.wikipedia.org/wiki/Kanturk\n*Maps:* https://www.google.com/maps/search/Kanturk%20Castle/@52.1778,-8.9056,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg/330px-Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg\n*Gallery:* 8 images\n*Image Source:* wikipedia\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n\n*Description:*\nKanturk is a town in the north west of County Cork, Ireland. It is situated at the confluence of the Allua (Allow) and Dallow (Dalua) rivers, which stream further on as tributaries to the River Blackwater. It is about 50 kilometres from Cork and Limerick, and lies just north of the main N72 road, 15 km from Mallow and about 40 km from Killarney. Kanturk is within the Cork North-West Dáil constituency.\n\n_Listing 4 of 212_",
+      "listing": {
+        "name": "Kanturk Castle",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Cork",
+        "lat": 52.175,
+        "lng": -8.9,
+        "mapsLink": "https://www.google.com/maps/search/Kanturk%20Castle/@52.1778,-8.9056,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg/330px-Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/kanturk-castle-2.jpg",
+          "https://img.castlecore.uk/kanturk-castle-3.jpg",
+          "https://img.castlecore.uk/kanturk-castle-4.jpg",
+          "https://img.castlecore.uk/kanturk-castle-5.jpg",
+          "https://img.castlecore.uk/kanturk-castle-keep-2.jpg",
+          "https://img.castlecore.uk/kanturk-castle-keep-3.jpg",
+          "https://img.castlecore.uk/kanturk-castle-keep-4.jpg",
+          "https://img.castlecore.uk/kanturk-castle-keep-5.jpg"
+        ],
+        "desc": "Kanturk is a town in the north west of County Cork, Ireland. It is situated at the confluence of the Allua (Allow) and Dallow (Dalua) rivers, which stream further on as tributaries to the River Blackwater. It is about 50 kilometres from Cork and Limerick, and lies just north of the main N72 road, 15 km from Mallow and about 40 km from Killarney. Kanturk is within the Cork North-West Dáil constituency.",
+        "type": "fortified house",
+        "period": "17th century",
+        "rating": 3.7,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Kanturk",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg/330px-Kanturk%2C_County_Cork_-_Kanturk_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067070395
     }
   ]
 }
