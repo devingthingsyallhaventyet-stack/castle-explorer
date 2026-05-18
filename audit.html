@@ -1057,14 +1057,14 @@ function renderTable() {
         <td>${i+1}</td>
         <td><strong>${esc(d.name)}</strong></td>
         <td><a href="${listingUrl}" target="_blank">↗</a></td>
-        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'}${d.mapsLink ? ` <a href="${esc(d.mapsLink)}" target="_blank">📍</a>` : ''}${(Array.isArray(d.sources) && d.sources.length) ? ' ' + d.sources.map(s => `<a href="${esc(s.url)}" target="_blank" style="font-size:11px">🔗</a>`).join(' ') : ''}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'}${d.mapsLink ? ` <a href="${esc(d.mapsLink)}" target="_blank">📍</a>` : ''}${(Array.isArray(d.source) && d.source.length) ? ' ' + d.source.map(s => `<a href="${esc(s.url)}" target="_blank" style="font-size:11px">🔗 ${esc(s.name||'Source')}</a>`).join(' ') : ''}</td>
         <td>${mainThumb} <span style="font-size:10px;color:var(--muted)">${esc(mainId)}</span></td>
         <td style="max-width:250px">${galleryHtml}</td>
         <td style="${imgCountStyle};font-weight:600">${totalImgs}</td>
         <td>${d.imageReviewDone ? '<span style="color:var(--green)">✓</span>' : '<span style="color:var(--gold)">—</span>'}</td>
         <td>${(Array.isArray(d.tags) && d.tags.length) ? d.tags.map(t => `<span style="background:var(--bg);border:1px solid var(--border);padding:1px 6px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">${esc(t)}</span>`).join(' ') : '<span style="color:var(--muted)">—</span>'}</td>
         <td style="font-size:11px;color:var(--muted)">${d.enrichReviewDate || '—'}</td>
-        <td>${d.auditNote ? `<span style="background:#2a1f00;color:var(--gold);padding:2px 6px;border-radius:3px;font-size:10px">${esc(d.auditNote)}</span>` : ''}</td>
+        <td>${(d.enrichNote || d.auditNote) ? `<span style="background:#2a1f00;color:var(--gold);padding:2px 6px;border-radius:3px;font-size:10px">${esc(d.enrichNote || d.auditNote)}</span>` : ''}</td>
       </tr>`;
     }).join('');
     el.innerHTML = `<table><thead><tr><th>#</th><th>Name</th><th>Page</th><th>Links</th><th>Main Image</th><th>Gallery</th><th>Total</th><th>Reviewed</th><th>Tags</th><th>Date</th><th>Notes</th></tr></thead><tbody>${rows}</tbody></table>`;
