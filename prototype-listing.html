@@ -215,31 +215,41 @@ a:hover { text-decoration: underline; }
 .main-content { min-width: 0; }
 
 /* === ABOUT === */
-/* === HIGHLIGHTS === */
-.highlights-section { margin-bottom: 2rem; }
-.highlights-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
-  border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+/* === PILL STRIP === */
+.pill-strip {
+  display: flex; flex-wrap: wrap; gap: .5rem;
 }
-.highlight-item {
-  display: flex; align-items: flex-start; gap: .7rem;
-  padding: .9rem 1rem;
-  border-bottom: 1px solid var(--border);
-  border-right: 1px solid var(--border);
+.pill {
+  display: inline-flex; align-items: center;
+  padding: 8px 16px; border-radius: 50px;
+  background: var(--white); border: 1px solid var(--border);
+  font-family: var(--sans); font-size: .8rem; font-weight: 500;
+  color: var(--ink); white-space: nowrap;
+  transition: all .2s;
 }
-.highlight-item:nth-child(even) { border-right: none; }
-.highlight-item:nth-last-child(-n+2) { border-bottom: none; }
-.highlight-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
-.highlight-text {
-  display: flex; flex-direction: column;
+.pill:hover { border-color: var(--burgundy); color: var(--burgundy); }
+.pill a { color: inherit; text-decoration: none; }
+.pill a:hover { text-decoration: none; }
+
+/* === ICON CARDS === */
+.icon-cards {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: .6rem;
 }
-.highlight-text strong {
-  font-family: var(--sans); font-size: .82rem; font-weight: 600;
+.icon-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1rem .8rem;
+  text-align: center; transition: all .2s;
+}
+.icon-card:hover { border-color: var(--burgundy); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
+.icon-card-emoji { font-size: 1.6rem; margin-bottom: .4rem; }
+.icon-card-label {
+  font-family: var(--sans); font-size: .78rem; font-weight: 600;
   color: var(--ink);
 }
-.highlight-text span {
-  font-family: var(--serif); font-size: .88rem; color: var(--ink-faded);
-  line-height: 1.4; margin-top: 1px;
+.icon-card-detail {
+  font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
+  margin-top: .2rem; line-height: 1.3;
 }
 
 .about-section { margin-bottom: 2.5rem; padding-top: .5rem; }
@@ -581,51 +591,54 @@ footer p {
 <div class="content-layout">
   <div class="main-content">
 
-    <!-- HIGHLIGHTS -->
-    <div class="section highlights-section">
-      <h2>Highlights</h2>
-      <div class="highlights-grid">
-        <div class="highlight-item">
-          <span class="highlight-icon">🎟️</span>
-          <div class="highlight-text">
-            <strong>Guided Tours</strong>
-            <span>Free with admission, hourly</span>
-          </div>
+    <!-- OPTION A: HORIZONTAL PILL STRIP -->
+    <div class="section" style="margin-bottom:1.5rem;">
+      <h2>Option A: Pill Strip</h2>
+      <div class="pill-strip">
+        <span class="pill">🎟️ Guided Tours</span>
+        <span class="pill">👑 Crown Jewels</span>
+        <span class="pill">🍽️ Café</span>
+        <span class="pill"><a href="https://www.edintattoo.co.uk/" target="_blank">🎭 Military Tattoo</a></span>
+        <span class="pill"><a href="https://www.nms.ac.uk/national-war-museum/" target="_blank">🏛️ War Museum</a></span>
+        <span class="pill">🛍️ Gift Shop</span>
+        <span class="pill">🦽 Accessible</span>
+        <span class="pill">📸 Photography OK</span>
+      </div>
+    </div>
+
+    <!-- OPTION B: ICON CARDS -->
+    <div class="section" style="margin-bottom:2rem;">
+      <h2>Option B: Icon Cards</h2>
+      <div class="icon-cards">
+        <div class="icon-card">
+          <div class="icon-card-emoji">🎟️</div>
+          <div class="icon-card-label">Guided Tours</div>
+          <div class="icon-card-detail">Free with admission</div>
         </div>
-        <div class="highlight-item">
-          <span class="highlight-icon">👑</span>
-          <div class="highlight-text">
-            <strong>Crown Jewels</strong>
-            <span>Scotland's Honours on permanent display</span>
-          </div>
+        <div class="icon-card">
+          <div class="icon-card-emoji">👑</div>
+          <div class="icon-card-label">Crown Jewels</div>
+          <div class="icon-card-detail">Permanent display</div>
         </div>
-        <div class="highlight-item">
-          <span class="highlight-icon">🍽️</span>
-          <div class="highlight-text">
-            <strong>Café</strong>
-            <span>Redcoat Café — light meals & drinks</span>
-          </div>
+        <div class="icon-card">
+          <div class="icon-card-emoji">🍽️</div>
+          <div class="icon-card-label">Café</div>
+          <div class="icon-card-detail">Light meals & drinks</div>
         </div>
-        <div class="highlight-item">
-          <span class="highlight-icon">🎭</span>
-          <div class="highlight-text">
-            <strong>Events</strong>
-            <span><a href="https://www.edintattoo.co.uk/" target="_blank">Edinburgh Military Tattoo</a> (August)</span>
-          </div>
+        <div class="icon-card">
+          <div class="icon-card-emoji">🎭</div>
+          <div class="icon-card-label">Events</div>
+          <div class="icon-card-detail">Military Tattoo (Aug)</div>
         </div>
-        <div class="highlight-item">
-          <span class="highlight-icon">🏛️</span>
-          <div class="highlight-text">
-            <strong>Rotating Exhibits</strong>
-            <span><a href="https://www.nms.ac.uk/national-war-museum/" target="_blank">National War Museum</a> & <a href="https://www.edinburghcastle.scot/see-and-do/highlights/prisons-of-war" target="_blank">Prisons of War</a></span>
-          </div>
+        <div class="icon-card">
+          <div class="icon-card-emoji">🏛️</div>
+          <div class="icon-card-label">Exhibits</div>
+          <div class="icon-card-detail">War Museum & Prisons</div>
         </div>
-        <div class="highlight-item">
-          <span class="highlight-icon">🛍️</span>
-          <div class="highlight-text">
-            <strong>Gift Shop</strong>
-            <span>Official HES shop at the entrance</span>
-          </div>
+        <div class="icon-card">
+          <div class="icon-card-emoji">🛍️</div>
+          <div class="icon-card-label">Gift Shop</div>
+          <div class="icon-card-detail">At the entrance</div>
         </div>
       </div>
     </div>
