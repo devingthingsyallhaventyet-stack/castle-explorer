@@ -334,6 +334,56 @@
         "enrichNotes": "idk "
       },
       "ts": 1779067127487
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Loughmoe Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* castle\n*Period:* 13th-17th century\n*Coords:* 52.7549316, -7.82644719\n*Wikipedia:* https://en.wikipedia.org/wiki/Loughmoe_Castle\n*Maps:* https://www.google.com/maps/search/Loughmoe%20Castle/@52.794,-7.807,15z\n*Main Image:* https://img.castlecore.uk/loughmoe-castle.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nLoughmoe Castle is a ruined castle in County Tipperary, Ireland. It is by Loughmore village, 4 km south of Templemore. The castle was the ancestral home of the Purcell family, the Barons of Loughmoe.\n\n_Listing 7 of 212_",
+      "listing": {
+        "name": "Loughmoe Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 52.7549316,
+        "lng": -7.82644719,
+        "mapsLink": "https://www.google.com/maps/search/Loughmoe%20Castle/@52.794,-7.807,15z",
+        "image": "https://img.castlecore.uk/loughmoe-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Loughmoe Castle is a ruined castle in County Tipperary, Ireland. It is by Loughmore village, 4 km south of Templemore. The castle was the ancestral home of the Purcell family, the Barons of Loughmoe.",
+        "type": "castle",
+        "period": "13th-17th century",
+        "rating": 3.7,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "tudor",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Loughmoe_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Loughmoe_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Loughmore_Castle.JPG/330px-Loughmore_Castle.JPG",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Loughmoe_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067151987
     }
   ]
 }
