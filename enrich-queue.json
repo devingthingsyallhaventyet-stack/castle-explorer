@@ -52,6 +52,59 @@
         "enrichNotes": "needs more "
       },
       "ts": 1779067299868
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Shane Castle\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Antrim\n*Type:* castle\n*Period:* 16th-19th century\n*Coords:* 54.2367, -6.8767\n*Wikipedia:* https://en.wikipedia.org/wiki/Shane%27s_Castle\n*Maps:* https://www.google.com/maps/search/Shane%20Castle/@54.707,-6.31,15z\n*Main Image:* https://img.castlecore.uk/shane-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCastleshane is a small village on the outskirts of Monaghan town in the north of County Monaghan in Ireland. The village is situated on the N2, the main road from Dublin to Derry and Letterkenny, and is located approximately 6 kilometres (3.7 mi) from Monaghan town and 17 km (11 mi) from Castleblayney. It is also located approximately 3 km (1.9 mi) away from the border with County Armagh, which is part of Northern Ireland.\n\n_Listing 2 of 204_",
+      "listing": {
+        "name": "Shane Castle",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Antrim",
+        "lat": 54.2367,
+        "lng": -6.8767,
+        "mapsLink": "https://www.google.com/maps/search/Shane%20Castle/@54.707,-6.31,15z",
+        "image": "https://img.castlecore.uk/shane-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/shane-castle-2.jpg",
+          "https://img.castlecore.uk/shane-castle-3.jpg",
+          "https://img.castlecore.uk/shane-castle-4.jpg",
+          "https://img.castlecore.uk/shane-castle-5.jpg"
+        ],
+        "desc": "Castleshane is a small village on the outskirts of Monaghan town in the north of County Monaghan in Ireland. The village is situated on the N2, the main road from Dublin to Derry and Letterkenny, and is located approximately 6 kilometres (3.7 mi) from Monaghan town and 17 km (11 mi) from Castleblayney. It is also located approximately 3 km (1.9 mi) away from the border with County Armagh, which is part of Northern Ireland.",
+        "type": "castle",
+        "period": "16th-19th century",
+        "rating": 3.7,
+        "tags": [
+          "ruins-romantic",
+          "riverside",
+          "gardens",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Shane's Castle",
+            "url": "https://www.shanescastle.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Shane%27s_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Castleshane%2C_County_Monaghan",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/N2_at_Castleshane_-_geograph.org.uk_-_3117278.jpg/330px-N2_at_Castleshane_-_geograph.org.uk_-_3117278.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Shane%27s_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067320497
     }
   ]
 }
