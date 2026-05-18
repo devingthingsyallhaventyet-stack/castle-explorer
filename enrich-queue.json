@@ -772,6 +772,55 @@
         "enrichNotes": ""
       },
       "ts": 1779066469459
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Wroxall Abbey\n*Country:* england\n*Region:* the midlands\n*County:* Warwickshire\n*Type:* abbey\n*Period:* 12th century / 19th century conversion\n*Coords:* 52.334, -1.6764\n*Wikipedia:* https://en.wikipedia.org/wiki/Wroxall_Abbey\n*Maps:* https://www.google.com/maps/search/Wroxall%20Abbey/@52.3483,-1.6817,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mansion_Night.jpg/330px-Mansion_Night.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* no google places\n\n*Description:*\nWroxall Abbey is a substantial Victorian mansion house situated at Wroxall, Warwickshire which was converted for use as a hotel, spa, wedding venue and conference centre. It is a Grade II listed building.\n\n_Listing 16 of 234_",
+      "listing": {
+        "name": "Wroxall Abbey",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Warwickshire",
+        "lat": 52.334,
+        "lng": -1.6764,
+        "mapsLink": "https://www.google.com/maps/search/Wroxall%20Abbey/@52.3483,-1.6817,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mansion_Night.jpg/330px-Mansion_Night.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Wroxall Abbey is a substantial Victorian mansion house situated at Wroxall, Warwickshire which was converted for use as a hotel, spa, wedding venue and conference centre. It is a Grade II listed building.",
+        "type": "abbey",
+        "period": "12th century / 19th century conversion",
+        "rating": 3.7,
+        "tags": [
+          "medieval",
+          "gardens",
+          "events-venue",
+          "wedding-venue"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wroxall_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Wroxall_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mansion_Night.jpg/330px-Mansion_Night.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Clix69",
+          "license": "Public domain",
+          "description": "Wroxall Abbey Estate's main building, Wroxall Abbey.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "no google places",
+        "enrichNotes": "no google places"
+      },
+      "ts": 1779066500328
     }
   ]
 }
