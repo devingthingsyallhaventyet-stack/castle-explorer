@@ -405,6 +405,68 @@
         "enrichNotes": ""
       },
       "ts": 1779067605884
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Salcombe Castle\n*Country:* england\n*Region:* south west\n*County:* Devon\n*Type:* castle\n*Period:* 16th century\n*Coords:* 50.2289, -3.7765\n*Wikipedia:* https://en.wikipedia.org/wiki/Salcombe_Castle\n*Maps:* https://www.google.com/maps/search/Salcombe%20Castle/@50.234,-3.776,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* google places link - https://maps.app.goo.gl/h9Wbktdk9Vu8VMqh9\n\n\n*Description:*\nSalcombe Castle or Fort Charles is a ruined fortification just off the beach of North Sands in Salcombe, Devon, England, within the South Devon Area of Outstanding Natural Beauty. It is located on a rocky outcrop which is easily reached on foot at low tide. It is a Grade II listed building and ancient monument.\n\n_Listing 9 of 204_",
+      "listing": {
+        "name": "Salcombe Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Devon",
+        "lat": 50.2289,
+        "lng": -3.7765,
+        "mapsLink": "https://www.google.com/maps/search/Salcombe%20Castle/@50.234,-3.776,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Salcombe Castle or Fort Charles is a ruined fortification just off the beach of North Sands in Salcombe, Devon, England, within the South Devon Area of Outstanding Natural Beauty. It is located on a rocky outcrop which is easily reached on foot at low tide. It is a Grade II listed building and ancient monument.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 3.6,
+        "tags": [
+          "tudor",
+          "coastal",
+          "ruins-romantic",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Salcombe_Castle"
+          },
+          {
+            "name": "Explore Devon",
+            "url": "https://www.exploredevon.info/activities/places/fort-charles-salcombe/"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1020165"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Salcombe_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/SalcombeCastleFromNorthSands.jpg/330px-SalcombeCastleFromNorthSands.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Stephen Lea",
+          "license": "CC BY-SA 3.0",
+          "description": "Salcombe Castle from North Sands beach, Salcombe, Devon, England",
+          "credit": "Photograph by Wikipedian",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Salcombe_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "google places link - https://maps.app.goo.gl/h9Wbktdk9Vu8VMqh9\n",
+        "enrichNotes": "google places link - https://maps.app.goo.gl/h9Wbktdk9Vu8VMqh9\n"
+      },
+      "ts": 1779067646622
     }
   ]
 }
