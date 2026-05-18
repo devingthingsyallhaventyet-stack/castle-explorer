@@ -980,6 +980,59 @@
         "enrichNotes": ""
       },
       "ts": 1779066674963
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Abergavenny Castle\n*Country:* wales\n*Region:* south wales\n*County:* Monmouthshire\n*Type:* castle\n*Period:* 11th century\n*Coords:* 51.8167, -3.0167\n*Wikipedia:* https://en.wikipedia.org/wiki/Abergavenny_Castle\n*Maps:* https://www.google.com/maps/search/Abergavenny%20Castle/@51.8167,-3.0167,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ruins_of_Abergavenny_Castle.jpg/330px-Ruins_of_Abergavenny_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nAbergavenny Castle is a ruined castle in the market town of Abergavenny, Monmouthshire, Wales, established by the Norman lord Hamelin de Balun c. 1087. It was the site of a massacre of Welsh noblemen in 1175, and was attacked during the early 15th-century Glyndŵr Rising. William Camden, the 16th-century antiquary, said that the castle \"has been oftner stain'd with the infamy of treachery, than any other castle in Wales.\"\n\n_Listing 20 of 234_",
+      "listing": {
+        "name": "Abergavenny Castle",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Monmouthshire",
+        "lat": 51.8167,
+        "lng": -3.0167,
+        "mapsLink": "https://www.google.com/maps/search/Abergavenny%20Castle/@51.8167,-3.0167,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ruins_of_Abergavenny_Castle.jpg/330px-Ruins_of_Abergavenny_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Abergavenny Castle is a ruined castle in the market town of Abergavenny, Monmouthshire, Wales, established by the Norman lord Hamelin de Balun c. 1087. It was the site of a massacre of Welsh noblemen in 1175, and was attacked during the early 15th-century Glyndŵr Rising. William Camden, the 16th-century antiquary, said that the castle \"has been oftner stain'd with the infamy of treachery, than any other castle in Wales.\"",
+        "type": "castle",
+        "period": "11th century",
+        "rating": 3.7,
+        "tags": [
+          "ruins-romantic",
+          "norman",
+          "atmospheric",
+          "museum",
+          "riverside",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Abergavenny_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Abergavenny_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ruins_of_Abergavenny_Castle.jpg/330px-Ruins_of_Abergavenny_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Ethan Doyle White",
+          "license": "CC BY-SA 4.0",
+          "description": "Ruins of Abergavenny Castle.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Abergavenny_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779066701491
     }
   ]
 }
