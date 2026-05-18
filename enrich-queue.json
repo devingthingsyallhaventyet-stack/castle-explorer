@@ -313,6 +313,61 @@
         "enrichNotes": "update google places link - https://en.wikipedia.org/wiki/Lusmagh#Cloghan_Castle\nadd source - https://www.cloughancastle.ie/"
       },
       "ts": 1779068241930
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Ardglass Castles\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Down\n*Type:* tower house\n*Period:* 14th-15th century\n*Coords:* 54.25833333, -5.60555556\n*Wikipedia:* https://en.wikipedia.org/wiki/Ardglass_Castle\n*Maps:* https://www.google.com/maps/search/Ardglass%20Castles/@54.264,-5.604,15z\n*Main Image:* https://img.castlecore.uk/ardglass-castles.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* idk \n\n*Description:*\nArdglass Castle is situated in Ardglass, County Down, Northern Ireland. It was originally a row of 15th century warehouses by the harbour. Large sections of the original building can still be seen within the modern club house of Ardglass Golf Club.\n\n_Listing 7 of 186_",
+      "listing": {
+        "name": "Ardglass Castles",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Down",
+        "lat": 54.25833333,
+        "lng": -5.60555556,
+        "mapsLink": "https://www.google.com/maps/search/Ardglass%20Castles/@54.264,-5.604,15z",
+        "image": "https://img.castlecore.uk/ardglass-castles.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/ardglass-castles-2.jpg",
+          "https://img.castlecore.uk/ardglass-castles-3.jpg",
+          "https://img.castlecore.uk/ardglass-castles-4.jpg",
+          "https://img.castlecore.uk/ardglass-castles-5.jpg"
+        ],
+        "desc": "Ardglass Castle is situated in Ardglass, County Down, Northern Ireland. It was originally a row of 15th century warehouses by the harbour. Large sections of the original building can still be seen within the modern club house of Ardglass Golf Club.",
+        "type": "tower house",
+        "period": "14th-15th century",
+        "rating": 3.6,
+        "tags": [
+          "well-preserved",
+          "coastal",
+          "medieval",
+          "museum",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Down Heritage",
+            "url": "https://www.visitnewryandmourne.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ardglass"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ardglass_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ardglass_Golf_Club%2C_November_2010_%2808%29.JPG/330px-Ardglass_Golf_Club%2C_November_2010_%2808%29.JPG",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardglass_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk ",
+        "enrichNotes": "idk "
+      },
+      "ts": 1779068262238
     }
   ]
 }
