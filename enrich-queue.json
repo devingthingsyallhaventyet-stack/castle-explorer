@@ -368,6 +368,57 @@
         "enrichNotes": "idk "
       },
       "ts": 1779068262238
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Movilla Abbey\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Down\n*Type:* abbey\n*Period:* 6th-13th century\n*Coords:* 54.595911, -5.674514\n*Wikipedia:* https://en.wikipedia.org/wiki/Movilla_Abbey\n*Maps:* https://www.google.com/maps/search/Movilla%20Abbey/@54.582,-5.657,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMLtjwvT2pVz1cihMD5RIzCz7TeAyw-XyK5yvifEcnqs-vslu7EUZ9jZtHb4UTvOOlZji4-c5m0igesaynIf3Vn-s9JWlXIyfwQYRM4xJbhhe0dBNUW1a5ApSbqYdepsbopk1VVs_6tzrtD6w=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* idk \n\n*Description:*\nMovilla Abbey in Newtownards, County Down, Northern Ireland, is believed to have been one of Ulster's and Ireland's most important monasteries. Movilla should not be confused with Moville in County Donegal.\n\n_Listing 8 of 186_",
+      "listing": {
+        "name": "Movilla Abbey",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Down",
+        "lat": 54.595911,
+        "lng": -5.674514,
+        "mapsLink": "https://www.google.com/maps/search/Movilla%20Abbey/@54.582,-5.657,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMLtjwvT2pVz1cihMD5RIzCz7TeAyw-XyK5yvifEcnqs-vslu7EUZ9jZtHb4UTvOOlZji4-c5m0igesaynIf3Vn-s9JWlXIyfwQYRM4xJbhhe0dBNUW1a5ApSbqYdepsbopk1VVs_6tzrtD6w=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Movilla Abbey in Newtownards, County Down, Northern Ireland, is believed to have been one of Ulster's and Ireland's most important monasteries. Movilla should not be confused with Moville in County Donegal.",
+        "type": "abbey",
+        "period": "6th-13th century",
+        "rating": 3.6,
+        "tags": [
+          "celtic",
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Down Heritage",
+            "url": "https://www.visitnewryandmourne.com/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Movilla_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Movilla_Abbey%2C_Newtownards_-_geograph.org.uk_-_84296.jpg/330px-Movilla_Abbey%2C_Newtownards_-_geograph.org.uk_-_84296.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Movilla_Abbey",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk ",
+        "enrichNotes": "idk "
+      },
+      "ts": 1779068278344
     }
   ]
 }
