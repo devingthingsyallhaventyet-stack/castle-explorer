@@ -282,6 +282,58 @@
         "enrichNotes": "looks like this is in poland? "
       },
       "ts": 1779067098947
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Ballyclogh Castle\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Cork\n*Type:* tower house\n*Period:* 15th century\n*Coords:* 52.208, -8.55\n*Wikipedia:* https://en.wikipedia.org/wiki/Ballylough_Castle\n*Maps:* https://www.google.com/maps/search/Ballyclogh%20Castle/@52.208,-8.55,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Castles_of_Munster_-_Ballyclogh%2C_Cork_-_geograph.org.uk_-_1393398.jpg/500px-Castles_of_Munster_-_Ballyclogh%2C_Cork_-_geograph.org.uk_-_1393398.jpg\n*Gallery:* 4 images\n*Image Source:* wikipedia\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* idk \n\n*Description:*\n\nBallylough Castle is a ruined castle in County Antrim, Northern Ireland, that was a stronghold of the MacQuillans and the MacDonnells in former times.\n\n_Listing 6 of 212_",
+      "listing": {
+        "name": "Ballyclogh Castle",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Cork",
+        "lat": 52.208,
+        "lng": -8.55,
+        "mapsLink": "https://www.google.com/maps/search/Ballyclogh%20Castle/@52.208,-8.55,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Castles_of_Munster_-_Ballyclogh%2C_Cork_-_geograph.org.uk_-_1393398.jpg/500px-Castles_of_Munster_-_Ballyclogh%2C_Cork_-_geograph.org.uk_-_1393398.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/ballyclogh-castle-2.jpg",
+          "https://img.castlecore.uk/ballyclogh-castle-3.jpg",
+          "https://img.castlecore.uk/ballyclogh-castle-4.jpg",
+          "https://img.castlecore.uk/ballyclogh-castle-5.jpg"
+        ],
+        "desc": "\nBallylough Castle is a ruined castle in County Antrim, Northern Ireland, that was a stronghold of the MacQuillans and the MacDonnells in former times.",
+        "type": "tower house",
+        "period": "15th century",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Cork Heritage",
+            "url": "https://www.corkcoco.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Ballylough_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk ",
+        "enrichNotes": "idk "
+      },
+      "ts": 1779067127487
     }
   ]
 }
