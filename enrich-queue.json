@@ -1,3 +1,57 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Lorrha Priory\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Tipperary\n*Type:* abbey\n*Period:* 6th-15th century\n*Coords:* 53.0922, -8.1235\n*Wikipedia:* https://en.wikipedia.org/wiki/Lorrha\n*Maps:* https://www.google.com/maps/search/Lorrha%20Priory/@52.957,-8.086,15z\n*Main Image:* https://img.castlecore.uk/lorrha-priory.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* needs more \n\n*Description:*\nLorrha is a small village at the northern tip of County Tipperary, Ireland. Ledewich described village as 'Larah' which is the common name for the talk-motes, mote hills etc. P. Dixon Hardy M.R.I.A. describes it as 'Loragh'\n\n_Listing 1 of 204_",
+      "listing": {
+        "name": "Lorrha Priory",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Tipperary",
+        "lat": 53.0922,
+        "lng": -8.1235,
+        "mapsLink": "https://www.google.com/maps/search/Lorrha%20Priory/@52.957,-8.086,15z",
+        "image": "https://img.castlecore.uk/lorrha-priory.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/lorrha-priory-2.jpg",
+          "https://img.castlecore.uk/lorrha-priory-3.jpg",
+          "https://img.castlecore.uk/lorrha-priory-4.jpg",
+          "https://img.castlecore.uk/lorrha-priory-5.jpg"
+        ],
+        "desc": "Lorrha is a small village at the northern tip of County Tipperary, Ireland. Ledewich described village as 'Larah' which is the common name for the talk-motes, mote hills etc. P. Dixon Hardy M.R.I.A. describes it as 'Loragh'",
+        "type": "abbey",
+        "period": "6th-15th century",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "celtic",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Tipperary Heritage",
+            "url": "https://www.tipperary.com/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Lorrha",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "needs more ",
+        "enrichNotes": "needs more "
+      },
+      "ts": 1779067299868
+    }
+  ]
 }
