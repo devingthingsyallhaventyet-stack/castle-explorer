@@ -57,6 +57,64 @@
         "enrichNotes": ""
       },
       "ts": 1779068046281
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Dunloe Castle\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Kerry\n*Type:* castle\n*Period:* 13th century\n*Coords:* 55.21138889, -6.57916667\n*Wikipedia:* https://en.wikipedia.org/wiki/Dunluce_Castle\n*Maps:* https://www.google.com/maps/search/Dunloe%20Castle/@52.0167,-9.65,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Dunluce_Castle_Northern_Ireland_1.jpg/330px-Dunluce_Castle_Northern_Ireland_1.jpg\n*Gallery:* 4 images\n*Image Source:* wikipedia\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* idk \n\n*Description:*\nDunluce Castle is a now-ruined medieval castle in Northern Ireland, the seat of Clan MacQuillan. It is located on the edge of a basalt outcropping in County Antrim, and is accessible via a bridge connecting it to the mainland. The castle is surrounded by extremely steep drops on either side, which may have been an important factor to the early Christians and Vikings who were drawn to this place where an early Irish fort once stood.\n\n_Listing 2 of 186_",
+      "listing": {
+        "name": "Dunloe Castle",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Kerry",
+        "lat": 55.21138889,
+        "lng": -6.57916667,
+        "mapsLink": "https://www.google.com/maps/search/Dunloe%20Castle/@52.0167,-9.65,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Dunluce_Castle_Northern_Ireland_1.jpg/330px-Dunluce_Castle_Northern_Ireland_1.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/dunloe-castle-2.jpg",
+          "https://img.castlecore.uk/dunloe-castle-3.jpg",
+          "https://img.castlecore.uk/dunloe-castle-4.jpg",
+          "https://img.castlecore.uk/dunloe-castle-5.jpg"
+        ],
+        "desc": "Dunluce Castle is a now-ruined medieval castle in Northern Ireland, the seat of Clan MacQuillan. It is located on the edge of a basalt outcropping in County Antrim, and is accessible via a bridge connecting it to the mainland. The castle is surrounded by extremely steep drops on either side, which may have been an important factor to the early Christians and Vikings who were drawn to this place where an early Irish fort once stood.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.6,
+        "tags": [
+          "ruins-romantic",
+          "atmospheric",
+          "medieval",
+          "norman",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "The Dunloe Hotel",
+            "url": "https://www.thedunloe.com/dunloe-castle"
+          },
+          {
+            "name": "Discover Ireland",
+            "url": "https://www.discoverireland.ie/kerry/dunloe-castle"
+          },
+          {
+            "name": "The Irish Aesthete",
+            "url": "https://theirishaesthete.com/2024/10/21/dunloe-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dunluce_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Dunluce_Castle_Northern_Ireland_1.jpg/330px-Dunluce_Castle_Northern_Ireland_1.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk ",
+        "enrichNotes": "idk "
+      },
+      "ts": 1779068074305
     }
   ]
 }
