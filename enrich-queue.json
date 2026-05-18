@@ -669,6 +669,61 @@
         "enrichNotes": ""
       },
       "ts": 1779067807702
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Deganwy Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Conwy\n*Type:* castle\n*Period:* 6th century\n*Coords:* 53.2975, -3.829\n*Wikipedia:* https://en.wikipedia.org/wiki/Deganwy_Castle\n*Maps:* https://www.google.com/maps/search/Deganwy%20Castle/@53.294,-3.819,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Site_of_Deganwy_Castle_-_aerial_2015.jpg/330px-The_Site_of_Deganwy_Castle_-_aerial_2015.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDeganwy Castle was an early stronghold of Gwynedd in Deganwy, at the mouth of the River Conwy, now in Conwy county borough, north Wales. It sits at an elevation of 110 m (361 ft) on a volcanic plug in an area of limestone known as the Vardre.\n\n_Listing 14 of 204_",
+      "listing": {
+        "name": "Deganwy Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Conwy",
+        "lat": 53.2975,
+        "lng": -3.829,
+        "mapsLink": "https://www.google.com/maps/search/Deganwy%20Castle/@53.294,-3.819,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Site_of_Deganwy_Castle_-_aerial_2015.jpg/330px-The_Site_of_Deganwy_Castle_-_aerial_2015.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Deganwy Castle was an early stronghold of Gwynedd in Deganwy, at the mouth of the River Conwy, now in Conwy county borough, north Wales. It sits at an elevation of 110 m (361 ft) on a volcanic plug in an area of limestone known as the Vardre.",
+        "type": "castle",
+        "period": "6th century",
+        "rating": 3.6,
+        "tags": [
+          "ruins-romantic",
+          "hilltop",
+          "coastal",
+          "free-entry",
+          "atmospheric",
+          "celtic",
+          "prehistoric",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Deganwy_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Deganwy_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Site_of_Deganwy_Castle_-_aerial_2015.jpg/330px-The_Site_of_Deganwy_Castle_-_aerial_2015.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Chris",
+          "license": "CC BY-SA 2.0",
+          "description": "Deganwy Castle seen from the air to the south. The village of Deganwy is located to the west (left in the picture).",
+          "credit": "Geograph",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Deganwy_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067846954
     }
   ]
 }
