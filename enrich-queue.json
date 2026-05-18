@@ -209,6 +209,56 @@
         "enrichNotes": ""
       },
       "ts": 1779067390366
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Derryhivenny Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* tower house\n*Period:* 17th century\n*Coords:* 53.1271, -8.1924\n*Wikipedia:* https://en.wikipedia.org/wiki/Derryhiveny_Castle\n*Maps:* https://www.google.com/maps/search/Derryhivenny%20Castle/@53.258,-8.23,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Derryhivenny_Castle.jpg/330px-Derryhivenny_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more \n\n*Description:*\nDerryhiveny Castle is a tower house and National Monument located in County Galway, Ireland.\n\n_Listing 5 of 204_",
+      "listing": {
+        "name": "Derryhivenny Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.1271,
+        "lng": -8.1924,
+        "mapsLink": "https://www.google.com/maps/search/Derryhivenny%20Castle/@53.258,-8.23,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Derryhivenny_Castle.jpg/330px-Derryhivenny_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Derryhiveny Castle is a tower house and National Monument located in County Galway, Ireland.",
+        "type": "tower house",
+        "period": "17th century",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/derryhivenny-castle/"
+          },
+          {
+            "name": "Galway Heritage",
+            "url": "https://www.galwaytourism.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Derryhiveny_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Derryhivenny_Castle.jpg/330px-Derryhivenny_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Derryhiveny_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "more ",
+        "enrichNotes": "more "
+      },
+      "ts": 1779067412038
     }
   ]
 }
