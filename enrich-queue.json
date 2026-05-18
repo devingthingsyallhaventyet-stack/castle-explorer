@@ -90,6 +90,61 @@
         "enrichNotes": "idk"
       },
       "ts": 1779065923296
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Oranmore Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* castle\n*Period:* 15th century\n*Coords:* 53.26825556, -8.93506944\n*Wikipedia:* https://en.wikipedia.org/wiki/Oranmore_Castle\n*Maps:* https://www.google.com/maps/search/Oranmore%20Castle/@53.269,-8.925,15z\n*Main Image:* https://img.castlecore.uk/oranmore-castle.jpg\n*Gallery:* 8 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* https://maps.app.goo.gl/KaLksidumRPe8BpS8 - Google places link \nadd source - https://oranmorecastle.com/\n\n*Description:*\nOranmore Castle is a castle in Oranmore, County Galway, Ireland.\n\n_Listing 3 of 234_",
+      "listing": {
+        "name": "Oranmore Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.26825556,
+        "lng": -8.93506944,
+        "mapsLink": "https://www.google.com/maps/search/Oranmore%20Castle/@53.269,-8.925,15z",
+        "image": "https://img.castlecore.uk/oranmore-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/oranmore-castle-2.jpg",
+          "https://img.castlecore.uk/oranmore-castle-3.jpg",
+          "https://img.castlecore.uk/oranmore-castle-4.jpg",
+          "https://img.castlecore.uk/oranmore-castle-5.jpg",
+          "https://img.castlecore.uk/oranmore-castle-main-2.jpg",
+          "https://img.castlecore.uk/oranmore-castle-main-3.jpg",
+          "https://img.castlecore.uk/oranmore-castle-main-4.jpg",
+          "https://img.castlecore.uk/oranmore-castle-main-5.jpg"
+        ],
+        "desc": "Oranmore Castle is a castle in Oranmore, County Galway, Ireland.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 3.8,
+        "tags": [
+          "coastal",
+          "well-preserved",
+          "medieval",
+          "atmospheric",
+          "hidden-gem"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Oranmore_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Oranmore_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Oranmore_Castle.jpg/330px-Oranmore_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Oranmore_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "https://maps.app.goo.gl/KaLksidumRPe8BpS8 - Google places link \nadd source - https://oranmorecastle.com/",
+        "enrichNotes": "https://maps.app.goo.gl/KaLksidumRPe8BpS8 - Google places link \nadd source - https://oranmorecastle.com/"
+      },
+      "ts": 1779066035305
     }
   ]
 }
