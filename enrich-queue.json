@@ -724,6 +724,65 @@
         "enrichNotes": ""
       },
       "ts": 1779067846954
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Upton Castle\n*Country:* wales\n*Region:* west wales\n*County:* Pembrokeshire\n*Type:* castle\n*Period:* 13th century onwards\n*Coords:* 51.706, -4.8663\n*Wikipedia:* https://en.wikipedia.org/wiki/Upton_Castle\n*Maps:* https://www.google.com/maps/search/Upton%20Castle/@51.714,-4.901,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Upton_Castle%2C_Pembrokeshire._20.jpeg/330px-Upton_Castle%2C_Pembrokeshire._20.jpeg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* idk\n\n*Description:*\nUpton Castle is a 13th-century castle \nwith an associated chapel, located near Cosheston, Pembrokeshire in Wales. Although in private ownership, the gardens are open to the public. They are listed on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.\n\n_Listing 15 of 204_",
+      "listing": {
+        "name": "Upton Castle",
+        "country": "wales",
+        "region": "west-wales",
+        "county": "Pembrokeshire",
+        "lat": 51.706,
+        "lng": -4.8663,
+        "mapsLink": "https://www.google.com/maps/search/Upton%20Castle/@51.714,-4.901,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Upton_Castle%2C_Pembrokeshire._20.jpeg/330px-Upton_Castle%2C_Pembrokeshire._20.jpeg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Upton Castle is a 13th-century castle \nwith an associated chapel, located near Cosheston, Pembrokeshire in Wales. Although in private ownership, the gardens are open to the public. They are listed on the Cadw/ICOMOS Register of Parks and Gardens of Special Historic Interest in Wales.",
+        "type": "castle",
+        "period": "13th century onwards",
+        "rating": 3.6,
+        "tags": [
+          "gardens",
+          "medieval",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia – Upton Castle",
+            "url": "https://en.wikipedia.org/wiki/Upton_Castle"
+          },
+          {
+            "name": "Upton Castle Gardens",
+            "url": "https://www.uptoncastle.co.uk/history/"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/wales/pembrokeshire/upton-castle-gardens.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Upton_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Upton_Castle%2C_Pembrokeshire._20.jpeg/330px-Upton_Castle%2C_Pembrokeshire._20.jpeg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Thomas Nicholls",
+          "license": "Public domain",
+          "description": "Upton Castle, Pembrokeshire. Thomas Nicholls “Annals and Antiquities of the Counties and County Families of Wales, Longmans, London 1872. Vol 2, 836",
+          "credit": "Thomas Nicholls “Annals and Antiquities of the Counties and County Families of Wales, Longmans, London 1872.",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Upton_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk",
+        "enrichNotes": "idk"
+      },
+      "ts": 1779067863576
     }
   ]
 }
