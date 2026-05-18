@@ -1,3 +1,52 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Clonca Church\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Donegal\n*Type:* abbey\n*Period:* Medieval\n*Coords:* 55.267882, -7.173547\n*Wikipedia:* https://en.wikipedia.org/wiki/Clonca_Church_%26_Cross\n*Maps:* https://www.google.com/maps/search/Clonca%20Church/@55.283,-7.254,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/CloncaChurch%26Cross.jpg/500px-CloncaChurch%26Cross.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/6b67oxqSpppKHN71A\n\n\n*Description:*\n\n\n\nClonca Church & Cross is a historic monument located in Inishowen, County Donegal. It is one of the most important and popular historical sites in Inishowen. At 54°43′05″N it is the northernmost of Ireland's National Monuments.\n\n_Listing 1 of 234_",
+      "listing": {
+        "name": "Clonca Church",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Donegal",
+        "lat": 55.267882,
+        "lng": -7.173547,
+        "mapsLink": "https://www.google.com/maps/search/Clonca%20Church/@55.283,-7.254,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/CloncaChurch%26Cross.jpg/500px-CloncaChurch%26Cross.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "\n\n\nClonca Church & Cross is a historic monument located in Inishowen, County Donegal. It is one of the most important and popular historical sites in Inishowen. At 54°43′05″N it is the northernmost of Ireland's National Monuments.",
+        "type": "abbey",
+        "period": "Medieval",
+        "rating": 3.8,
+        "tags": [
+          "celtic",
+          "medieval",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Donegal Heritage",
+            "url": "https://www.govisitdonegal.com/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clonca_Church_%26_Cross",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonca_Church_%26_Cross",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/6b67oxqSpppKHN71A\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/6b67oxqSpppKHN71A\n"
+      },
+      "ts": 1779065818442
+    }
+  ]
 }
