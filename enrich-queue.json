@@ -839,6 +839,65 @@
         "enrichNotes": ""
       },
       "ts": 1779068462400
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Beverston Castle\n*Country:* england\n*Region:* south west\n*County:* Gloucestershire\n*Type:* castle\n*Period:* 13th-14th century\n*Coords:* 51.644239, -2.201553\n*Wikipedia:* https://en.wikipedia.org/wiki/Beverston_Castle\n*Maps:* https://www.google.com/maps/search/Beverston%20Castle/@51.638,-2.203,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/330px-Beverston_castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nBeverston Castle, also known as Beverstone Castle or Tetbury Castle, is a castle in the village of Beverston, Gloucestershire, England. It was constructed as a medieval stone fortress. The property is a mix of manor house, various small buildings, extensive gardens, and the medieval ruins of the fortified building. The castle was founded in 1229 by Maurice de Gaunt.\n\n_Listing 17 of 186_",
+      "listing": {
+        "name": "Beverston Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Gloucestershire",
+        "lat": 51.644239,
+        "lng": -2.201553,
+        "mapsLink": "https://www.google.com/maps/search/Beverston%20Castle/@51.638,-2.203,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/330px-Beverston_castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Beverston Castle, also known as Beverstone Castle or Tetbury Castle, is a castle in the village of Beverston, Gloucestershire, England. It was constructed as a medieval stone fortress. The property is a mix of manor house, various small buildings, extensive gardens, and the medieval ruins of the fortified building. The castle was founded in 1229 by Maurice de Gaunt.",
+        "type": "castle",
+        "period": "13th-14th century",
+        "rating": 3.5,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Beverston_Castle"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1304508"
+          },
+          {
+            "name": "Tudor Travel Guide",
+            "url": "https://thetudortravelguide.com/1502-progress-beverston-castle-gloucestershire/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Beverston_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Beverston_castle.jpg/330px-Beverston_castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "The original uploader was Anlace at English Wikipedia.",
+          "license": "CC BY-SA 2.5",
+          "description": "*Photographer C. Michael Hogan, the copyright holder, licences this image as described below.\nPhoto taken July 6, 2006\nPhoto of Beverston Castle gatehouse, Gloucestershire, England",
+          "credit": "Transferred from en.wikipedia to Commons.",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Beverston_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068495409
     }
   ]
 }
