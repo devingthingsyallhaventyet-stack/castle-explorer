@@ -870,6 +870,57 @@
         "enrichNotes": "add source - https://www.sheriffhuttoncastle.co.uk/"
       },
       "ts": 1779066540659
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Hawarden Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Flintshire\n*Type:* castle\n*Period:* 13th century / 19th century\n*Coords:* 53.187, -3.031\n*Wikipedia:* https://en.wikipedia.org/wiki/Hawarden_Castle\n*Maps:* https://www.google.com/maps/search/Hawarden%20Castle/@53.187,-3.031,15z\n*Main Image:* https://img.castlecore.uk/hawarden-castle.jpg\n*Gallery:* 2 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* needs more research \n\n*Description:*\nHawarden Castle may refer to one of two sites in Flintshire, Wales, near the town of Hawarden:Hawarden Castle (medieval), a ruined castle \nHawarden Castle, the home of William Ewart Gladstone, a former prime minister\n\n\n\n_Listing 18 of 234_",
+      "listing": {
+        "name": "Hawarden Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Flintshire",
+        "lat": 53.187,
+        "lng": -3.031,
+        "mapsLink": "https://www.google.com/maps/search/Hawarden%20Castle/@53.187,-3.031,15z",
+        "image": "https://img.castlecore.uk/hawarden-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/hawarden-castle-2.jpg",
+          "https://img.castlecore.uk/hawarden-castle-3.jpg"
+        ],
+        "desc": "Hawarden Castle may refer to one of two sites in Flintshire, Wales, near the town of Hawarden:Hawarden Castle (medieval), a ruined castle \nHawarden Castle, the home of William Ewart Gladstone, a former prime minister\n\n",
+        "type": "castle",
+        "period": "13th century / 19th century",
+        "rating": 3.7,
+        "tags": [
+          "ruins-romantic",
+          "victorian",
+          "gardens",
+          "woodland"
+        ],
+        "source": [
+          {
+            "name": "Hawarden Castle Estate",
+            "url": "https://www.hawardencastle.co.uk/"
+          },
+          {
+            "name": "Wikipedia – Hawarden Castle",
+            "url": "https://en.wikipedia.org/wiki/Hawarden_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hawarden_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Hawarden_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "needs more research ",
+        "enrichNotes": "needs more research "
+      },
+      "ts": 1779066647263
     }
   ]
 }
