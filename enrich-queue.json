@@ -261,6 +261,58 @@
         "enrichNotes": "idk "
       },
       "ts": 1779068165865
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cloghan Castle\n*Country:* ireland\n*Region:* the heartlands\n*County:* County Offaly\n*Type:* tower house\n*Period:* Medieval\n*Coords:* 53.184, -7.891\n*Wikipedia:* https://en.wikipedia.org/wiki/Cloghan_Castle\n*Maps:* https://www.google.com/maps/search/Cloghan%20Castle/@53.184,-7.891,15z\n*Main Image:* https://img.castlecore.uk/cloghan-castle.jpg\n*Gallery:* 8 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://en.wikipedia.org/wiki/Lusmagh#Cloghan_Castle\nadd source - https://www.cloughancastle.ie/\n\n*Description:*\nThere are several structures named Cloghan Castle, all in Ireland:Cloghan Castle in County Cork\nCloghan Castle in County Offaly\nLoughrea Castle in County Galway\n\n\n\n_Listing 6 of 186_",
+      "listing": {
+        "name": "Cloghan Castle",
+        "country": "ireland",
+        "region": "the-heartlands",
+        "county": "County Offaly",
+        "lat": 53.184,
+        "lng": -7.891,
+        "mapsLink": "https://www.google.com/maps/search/Cloghan%20Castle/@53.184,-7.891,15z",
+        "image": "https://img.castlecore.uk/cloghan-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/cloghan-castle-2.jpg",
+          "https://img.castlecore.uk/cloghan-castle-3.jpg",
+          "https://img.castlecore.uk/cloghan-castle-4.jpg",
+          "https://img.castlecore.uk/cloghan-castle-5.jpg",
+          "https://img.castlecore.uk/cloghan-castle-main-2.jpg",
+          "https://img.castlecore.uk/cloghan-castle-main-3.jpg",
+          "https://img.castlecore.uk/cloghan-castle-main-4.jpg",
+          "https://img.castlecore.uk/cloghan-castle-main-5.jpg"
+        ],
+        "desc": "There are several structures named Cloghan Castle, all in Ireland:Cloghan Castle in County Cork\nCloghan Castle in County Offaly\nLoughrea Castle in County Galway\n\n",
+        "type": "tower house",
+        "period": "Medieval",
+        "rating": 3.6,
+        "tags": [
+          "medieval",
+          "riverside",
+          "atmospheric",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lusmagh#Cloghan_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cloghan_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "update google places link - https://en.wikipedia.org/wiki/Lusmagh#Cloghan_Castle\nadd source - https://www.cloughancastle.ie/",
+        "enrichNotes": "update google places link - https://en.wikipedia.org/wiki/Lusmagh#Cloghan_Castle\nadd source - https://www.cloughancastle.ie/"
+      },
+      "ts": 1779068241930
     }
   ]
 }
