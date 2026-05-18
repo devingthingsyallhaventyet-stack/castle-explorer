@@ -581,6 +581,48 @@
         "enrichNotes": "https://maps.app.goo.gl/rVTB4SKs7JgiHQWF6 - update google places link "
       },
       "ts": 1779068349816
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Cooling Castle\n*Country:* england\n*Region:* south east london\n*County:* Kent\n*Type:* castle\n*Period:* 14th century\n*Coords:* 51.455441, 0.523084\n*Wikipedia:* https://en.wikipedia.org/wiki/Cooling_Castle\n*Maps:* https://www.google.com/maps/search/Cooling%20Castle/@51.4631,0.5704,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cooling_Castle_gatehouse.jpg/330px-Cooling_Castle_gatehouse.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/uiawcKbaBvRY6Ujk6\n\n\n*Description:*\nCooling Castle is a 14th-century quadrangular castle in the village of Cooling, Kent on the Hoo Peninsula about 6 miles (9.7 km) north of Rochester. It was built in the 1380s by the Cobham family, the local lords of the manor, to guard the area against French raids into the Thames Estuary. The castle has an unusual layout, comprising two walled wards of unequal size next to each other, surrounded by moats and ditches. It was the earliest English castle designed for the use of gunpowder weapons by its defenders.\n\n_Listing 12 of 186_",
+      "listing": {
+        "name": "Cooling Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Kent",
+        "lat": 51.455441,
+        "lng": 0.523084,
+        "mapsLink": "https://www.google.com/maps/search/Cooling%20Castle/@51.4631,0.5704,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cooling_Castle_gatehouse.jpg/330px-Cooling_Castle_gatehouse.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Cooling Castle is a 14th-century quadrangular castle in the village of Cooling, Kent on the Hoo Peninsula about 6 miles (9.7 km) north of Rochester. It was built in the 1380s by the Cobham family, the local lords of the manor, to guard the area against French raids into the Thames Estuary. The castle has an unusual layout, comprising two walled wards of unequal size next to each other, surrounded by moats and ditches. It was the earliest English castle designed for the use of gunpowder weapons by its defenders.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.5,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Cooling_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cooling_Castle_gatehouse.jpg/330px-Cooling_Castle_gatehouse.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Luke McKernan",
+          "license": "CC BY-SA 2.0",
+          "description": "Gatehouse of Cooling Castle, Kent",
+          "credit": "Cooling castle",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/uiawcKbaBvRY6Ujk6\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/uiawcKbaBvRY6Ujk6\n"
+      },
+      "ts": 1779068387924
     }
   ]
 }
