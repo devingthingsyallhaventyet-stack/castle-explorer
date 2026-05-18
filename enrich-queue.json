@@ -315,6 +315,53 @@
         "enrichNotes": ""
       },
       "ts": 1779067473515
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Christchurch Castle\n*Country:* england\n*Region:* south west\n*County:* Dorset\n*Type:* castle\n*Period:* 12th century\n*Coords:* 50.733369, -1.77501\n*Wikipedia:* https://en.wikipedia.org/wiki/Christchurch_Castle\n*Maps:* https://www.google.com/maps/search/Christchurch%20Castle/@50.7347,-1.7775,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* update google places link - https://maps.app.goo.gl/KmEGLGPyRnSupQ9c6\n\n\n*Description:*\nChristchurch Castle is a Norman motte and bailey castle in Christchurch, Dorset, England. The earliest stonework has been dated to 1160. The castle's site is inside the old Saxon burh dominating the River Avon's lowest crossing.\n\n_Listing 7 of 204_",
+      "listing": {
+        "name": "Christchurch Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Dorset",
+        "lat": 50.733369,
+        "lng": -1.77501,
+        "mapsLink": "https://www.google.com/maps/search/Christchurch%20Castle/@50.7347,-1.7775,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Christchurch Castle is a Norman motte and bailey castle in Christchurch, Dorset, England. The earliest stonework has been dated to 1160. The castle's site is inside the old Saxon burh dominating the River Avon's lowest crossing.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.6,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Christchurch_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Christchurch_Castle_two_walls.JPG/330px-Christchurch_Castle_two_walls.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "geni",
+          "license": "CC BY-SA 4.0",
+          "description": "Photo of the two remaining walls of the keep of Christchurch Castle",
+          "credit": "Photo by user:geni",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Christchurch_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "update google places link - https://maps.app.goo.gl/KmEGLGPyRnSupQ9c6\n",
+        "enrichNotes": "update google places link - https://maps.app.goo.gl/KmEGLGPyRnSupQ9c6\n"
+      },
+      "ts": 1779067588351
     }
   ]
 }
