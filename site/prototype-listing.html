@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edinburgh Castle — castlecore</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #faf8f4;
+  --cream-mid: #f0ebe0;
+  --ink: #2a1f14;
+  --ink-light: #4a3928;
+  --ink-faded: #8a7e6e;
+  --burgundy: #8b2335;
+  --burgundy-glow: #a12940;
+  --gold: #9a7b30;
+  --border: #e0d8c8;
+  --white: #fff;
+  --green: #2e7d32;
+  --red: #c62828;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --display: 'Playfair Display', serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--serif);
+  background: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+a { color: var(--burgundy); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === NAV === */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,248,244,.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px clamp(1.5rem, 5vw, 4rem);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  font-family: var(--display); font-size: 1.1rem;
+  color: var(--ink); letter-spacing: 2px; font-weight: 700;
+}
+.nav-logo span { color: var(--burgundy); }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a {
+  font-family: var(--sans); font-size: .75rem; font-weight: 500;
+  color: var(--ink-faded); letter-spacing: 1px; text-transform: uppercase;
+  text-decoration: none;
+}
+.nav-links a:hover { color: var(--burgundy); text-decoration: none; }
+
+/* === BREADCRUMBS === */
+.breadcrumbs {
+  max-width: 1000px; margin: 0 auto;
+  padding: 1rem clamp(1.5rem, 5vw, 3rem) 0;
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+  letter-spacing: .5px;
+}
+.breadcrumbs a { color: var(--ink-faded); }
+.breadcrumbs a:hover { color: var(--burgundy); }
+.breadcrumbs .sep { margin: 0 6px; opacity: .4; }
+
+/* === HEADER === */
+.listing-header {
+  max-width: 1000px; margin: 0 auto;
+  padding: 1rem clamp(1.5rem, 5vw, 3rem) 0;
+}
+.listing-tags { display: flex; gap: .5rem; margin-bottom: .6rem; flex-wrap: wrap; }
+.tag {
+  font-family: var(--sans); font-size: .6rem; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 2px;
+}
+.tag-type { background: var(--burgundy); color: #fff; }
+.tag-status { background: var(--green); color: #fff; }
+.tag-condition { background: var(--cream-mid); color: var(--ink-faded); border: 1px solid var(--border); }
+
+.listing-header h1 {
+  font-family: var(--display); font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700; line-height: 1.15; margin-bottom: .4rem;
+}
+.listing-subtitle {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--ink-light); line-height: 1.5; max-width: 700px;
+}
+.listing-meta {
+  display: flex; gap: 1.5rem; margin-top: .8rem; flex-wrap: wrap; align-items: center;
+}
+.listing-meta span {
+  font-family: var(--sans); font-size: .75rem; color: var(--ink-faded);
+}
+
+/* === STATS BAR === */
+.stats-bar {
+  max-width: 1000px; margin: 0 auto;
+  padding: .8rem clamp(1.5rem, 5vw, 3rem);
+  display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+.stat {
+  display: flex; flex-direction: column; align-items: center;
+}
+.stat-num { font-family: var(--sans); font-weight: 600; font-size: .95rem; color: var(--ink); }
+.stat-label { font-family: var(--sans); font-size: .6rem; color: var(--ink-faded); text-transform: uppercase; letter-spacing: 1px; }
+.stat-divider { width: 1px; height: 30px; background: var(--border); }
+
+.action-buttons { display: flex; gap: .5rem; margin-left: auto; }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 2px;
+  font-family: var(--sans); font-size: .72rem; font-weight: 600;
+  letter-spacing: .5px; cursor: pointer; transition: all .2s;
+  border: 1px solid var(--border); background: var(--white); color: var(--ink);
+  text-decoration: none;
+}
+.btn:hover { border-color: var(--ink-faded); text-decoration: none; }
+.btn-primary { background: var(--burgundy); color: #fff; border-color: var(--burgundy); }
+.btn-primary:hover { background: var(--burgundy-glow); color: #fff; }
+
+/* === HERO IMAGE === */
+.hero-image {
+  max-width: 1000px; margin: 0 auto;
+  padding: 1rem clamp(1.5rem, 5vw, 3rem);
+}
+.hero-image img {
+  width: 100%; height: 420px; object-fit: cover; border-radius: 4px;
+  display: block;
+}
+.photo-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 6px;
+}
+.photo-row img {
+  width: 100%; height: 120px; object-fit: cover; border-radius: 3px;
+  cursor: pointer; transition: opacity .2s;
+}
+.photo-row img:hover { opacity: .85; }
+.photo-row .more-photos {
+  position: relative; cursor: pointer;
+}
+.photo-row .more-photos::after {
+  content: '+12 photos'; position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.5); color: #fff; border-radius: 3px;
+  font-family: var(--sans); font-size: .75rem; font-weight: 600; letter-spacing: 1px;
+}
+
+/* === MAIN LAYOUT === */
+.content-layout {
+  max-width: 1000px; margin: 0 auto;
+  padding: 1.5rem clamp(1.5rem, 5vw, 3rem) 2rem;
+  display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem;
+  align-items: start;
+}
+.main-content { min-width: 0; }
+
+/* === ABOUT === */
+.about-section { margin-bottom: 2rem; }
+.about-section h2 {
+  font-family: var(--display); font-size: 1.3rem; font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  font-size: 1.12rem; line-height: 1.85; color: var(--ink-light);
+  margin-bottom: 1rem;
+}
+.about-section p:first-of-type::first-letter {
+  font-family: var(--display); font-size: 3.2rem; float: left;
+  line-height: .8; padding-right: 8px; padding-top: 5px; color: var(--burgundy);
+  font-weight: 700;
+}
+
+/* === SECTIONS === */
+.section { margin-bottom: 2rem; }
+.section h2 {
+  font-family: var(--display); font-size: 1.1rem; font-weight: 700;
+  margin-bottom: .8rem; padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* === KEY FACTS === */
+.key-facts {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; margin-top: .5rem;
+}
+.kf-item {
+  padding: .7rem .9rem;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+.kf-item:nth-child(even) { border-right: none; }
+.kf-item:nth-last-child(-n+2) { border-bottom: none; }
+.kf-label {
+  font-family: var(--sans); font-size: .55rem; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--ink-faded); margin-bottom: 2px;
+}
+.kf-value {
+  font-family: var(--serif); font-size: .95rem; color: var(--ink);
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  position: sticky; top: 70px;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.sidebar-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 4px; padding: 1.2rem;
+}
+.sidebar-card h3 {
+  font-family: var(--sans); font-size: .65rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-faded); margin-bottom: .8rem;
+}
+
+/* Visit info */
+.visit-status {
+  display: flex; align-items: center; gap: .5rem;
+  margin-bottom: .8rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border);
+}
+.status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.status-dot.open { background: var(--green); }
+.status-dot.closed { background: var(--red); }
+.status-text {
+  font-family: var(--sans); font-size: .82rem; font-weight: 600;
+}
+.status-text.open { color: var(--green); }
+.status-text.closed { color: var(--red); }
+.status-hours {
+  font-family: var(--sans); font-size: .75rem; color: var(--ink-faded);
+  margin-left: auto;
+}
+
+.visit-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: .4rem 0; border-bottom: 1px solid rgba(224,216,200,.5);
+}
+.visit-row:last-child { border-bottom: none; }
+.visit-label {
+  font-family: var(--sans); font-size: .72rem; color: var(--ink-faded);
+}
+.visit-value {
+  font-family: var(--sans); font-size: .78rem; font-weight: 500; color: var(--ink);
+}
+.visit-value.free { color: var(--green); font-weight: 600; }
+
+.hours-toggle {
+  font-family: var(--sans); font-size: .68rem; color: var(--burgundy);
+  cursor: pointer; margin-top: .3rem; display: inline-block;
+}
+.hours-full {
+  display: none; margin-top: .4rem;
+  font-family: var(--sans); font-size: .72rem; color: var(--ink-faded);
+  line-height: 1.8;
+}
+.hours-full.show { display: block; }
+
+.sidebar-directions {
+  display: block; text-align: center; margin-top: .8rem;
+  background: var(--burgundy); color: #fff; padding: 11px;
+  border-radius: 3px; font-family: var(--sans); font-weight: 600;
+  font-size: .72rem; letter-spacing: 1px; text-transform: uppercase;
+  transition: all .2s; text-decoration: none;
+}
+.sidebar-directions:hover { background: var(--burgundy-glow); color: #fff; text-decoration: none; }
+
+/* Address */
+.address-text {
+  font-family: var(--sans); font-size: .82rem; color: var(--ink-light);
+  line-height: 1.5;
+}
+
+/* Terrain chips */
+.terrain-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip {
+  padding: 4px 10px; border-radius: 2px;
+  font-family: var(--sans); font-size: .65rem; font-weight: 500;
+}
+.chip-green { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.chip-amber { background: #fff8e1; color: #e65100; border: 1px solid #fff0b3; }
+.chip-red { background: #fce4ec; color: #c62828; border: 1px solid #f8bbd0; }
+
+/* Time needed */
+.time-needed {
+  display: flex; align-items: center; gap: .5rem;
+  padding: .8rem 0; font-family: var(--sans); font-size: .82rem; color: var(--ink);
+}
+.time-needed .icon { font-size: 1rem; }
+
+/* === NEARBY === */
+.nearby-section {
+  max-width: 1000px; margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem) 2rem;
+}
+.nearby-section h2 {
+  font-family: var(--display); font-size: 1.3rem; font-weight: 700;
+  margin-bottom: 1rem;
+}
+.nearby-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .8rem;
+}
+.nearby-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; text-decoration: none; display: block; transition: all .2s;
+}
+.nearby-card:hover { border-color: var(--ink-faded); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.06); text-decoration: none; }
+.nearby-card img { width: 100%; height: 140px; object-fit: cover; }
+.nearby-body { padding: .8rem; }
+.nearby-name {
+  font-family: var(--display); font-size: .9rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .2rem;
+}
+.nearby-meta {
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+}
+.nearby-distance {
+  font-family: var(--sans); font-size: .65rem; color: var(--burgundy);
+  font-weight: 600; margin-top: .3rem;
+}
+
+/* === EXPLORE MORE === */
+.explore-section {
+  max-width: 1000px; margin: 0 auto;
+  padding: 1rem clamp(1.5rem, 5vw, 3rem) 2rem;
+  border-top: 1px solid var(--border);
+}
+.explore-section h2 {
+  font-family: var(--display); font-size: 1.1rem; font-weight: 700;
+  margin-bottom: .8rem;
+}
+.explore-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+.explore-tag {
+  padding: 8px 16px; border: 1px solid var(--border); border-radius: 3px;
+  font-family: var(--sans); font-size: .75rem; color: var(--ink-light);
+  text-decoration: none; transition: all .2s;
+}
+.explore-tag:hover { border-color: var(--burgundy); color: var(--burgundy); text-decoration: none; }
+
+/* === SOURCES === */
+.sources {
+  max-width: 1000px; margin: 0 auto;
+  padding: 1rem clamp(1.5rem, 5vw, 3rem) 2rem;
+}
+.sources h3 {
+  font-family: var(--sans); font-size: .65rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-faded); margin-bottom: .5rem;
+}
+.sources a {
+  font-family: var(--sans); font-size: .78rem; color: var(--ink-faded);
+  display: block; line-height: 1.8;
+}
+
+/* === FOOTER === */
+footer {
+  border-top: 1px solid var(--border); padding: 1.5rem;
+  text-align: center; background: var(--cream-mid);
+  margin-top: 2rem;
+}
+footer p {
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .content-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .sidebar { position: static; }
+  .hero-image img { height: 280px; }
+  .photo-row { grid-template-columns: 1fr 1fr; }
+  .photo-row img:last-child { display: none; }
+  .stats-bar { flex-wrap: wrap; }
+  .action-buttons { margin-left: 0; width: 100%; }
+  .nav-links a:not(:last-child) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-logo" style="text-decoration:none">castle<span>core</span></a>
+  <div class="nav-links">
+    <a href="#">Scotland</a>
+    <a href="#">England</a>
+    <a href="#">Wales</a>
+    <a href="#">Ireland</a>
+    <a href="#" style="background:var(--burgundy);color:#fff;padding:6px 14px;border-radius:2px;">Explore Map</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMBS -->
+<div class="breadcrumbs">
+  <a href="#">All Sites</a><span class="sep">›</span>
+  <a href="#">Scotland</a><span class="sep">›</span>
+  <a href="#">Edinburgh & Lothians</a><span class="sep">›</span>
+  Edinburgh Castle
+</div>
+
+<!-- HEADER -->
+<div class="listing-header">
+  <div class="listing-tags">
+    <span class="tag tag-type">Castle</span>
+    <span class="tag tag-status">Open to Visitors</span>
+    <span class="tag tag-condition">Intact</span>
+  </div>
+  <h1>Edinburgh Castle</h1>
+  <p class="listing-subtitle">A volcanic fortress above the haar — Scotland's most besieged place in Britain, holding the oldest crown jewels on the island and a cannon that fires every day at one o'clock.</p>
+  <div class="listing-meta">
+    <span>📍 Edinburgh, Scotland</span>
+    <span>🏰 12th century</span>
+    <span>🏛️ Historic Environment Scotland</span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <span class="stat-num">2,847</span>
+    <span class="stat-label">Been Here</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <span class="stat-num">5,102</span>
+    <span class="stat-label">Want to Visit</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <span class="stat-num">1,394</span>
+    <span class="stat-label">Saved</span>
+  </div>
+  <div class="action-buttons">
+    <button class="btn">♡ Save</button>
+    <button class="btn">↗ Share</button>
+    <a href="#" class="btn btn-primary">📍 Directions</a>
+  </div>
+</div>
+
+<!-- HERO IMAGE -->
+<div class="hero-image">
+  <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle from Princes Street Gardens">
+  <div class="photo-row">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Edinburgh Castle interior">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-3.jpg" alt="Edinburgh Castle Great Hall">
+    <div class="more-photos">
+      <img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Edinburgh Castle views">
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT + SIDEBAR -->
+<div class="content-layout">
+  <div class="main-content">
+
+    <!-- ABOUT -->
+    <div class="about-section">
+      <h2>About</h2>
+      <p>Edinburgh Castle sits on a 350-million-year-old volcanic plug, and it shows. The rock rises sheer on three sides, leaving only one approach — a narrow ridge from the east that became the Royal Mile. People have fortified this spot since at least the Iron Age, making it one of the longest continuously occupied sites in Britain. The castle you see today is mostly 16th and 17th century, but St Margaret's Chapel, tucked inside the walls, dates to around 1130 and is the oldest surviving building in Edinburgh.</p>
+
+      <p>The Honours of Scotland — crown, sceptre, and sword of state — are the oldest crown jewels in Britain, predating the English set by a century. They sit in the Crown Room alongside the Stone of Destiny, which spent 700 years at Westminster Abbey before being returned to Scotland in 1996. Mons Meg, the six-tonne medieval siege cannon on the battlements, once launched a stone cannonball two miles across the Firth of Forth at Dumbarton Castle.</p>
+
+      <p>Every day at exactly one o'clock, the Time Gun fires from the Half Moon Battery — a tradition since 1861, originally so ships in the Forth could set their chronometers. It's the most besieged place in Great Britain, having been attacked 26 times in its 1,100-year history. In 1314, thirty Scots disguised as merchants scaled the sheer north face in darkness, climbing a route so treacherous it had been left unguarded. By dawn, the castle was theirs.</p>
+    </div>
+
+    <!-- KEY FACTS -->
+    <div class="section">
+      <h2>Key Facts</h2>
+      <div class="key-facts">
+        <div class="kf-item">
+          <div class="kf-label">Built</div>
+          <div class="kf-value">12th century (earliest parts ~1130)</div>
+        </div>
+        <div class="kf-item">
+          <div class="kf-label">Type</div>
+          <div class="kf-value">Royal castle & fortress</div>
+        </div>
+        <div class="kf-item">
+          <div class="kf-label">Condition</div>
+          <div class="kf-value">Intact — fully restored</div>
+        </div>
+        <div class="kf-item">
+          <div class="kf-label">Managed by</div>
+          <div class="kf-value">Historic Environment Scotland</div>
+        </div>
+        <div class="kf-item">
+          <div class="kf-label">Designation</div>
+          <div class="kf-value">Scheduled Monument, Category A Listed</div>
+        </div>
+        <div class="kf-item">
+          <div class="kf-label">Sieges</div>
+          <div class="kf-value">26 — most besieged place in GB</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCESSIBILITY -->
+    <div class="section">
+      <h2>Terrain & Accessibility</h2>
+      <div class="terrain-chips">
+        <span class="chip chip-red">📐 Steep Approach</span>
+        <span class="chip chip-amber">⚠️ Cobblestones</span>
+        <span class="chip chip-green">🦽 Mobility Vehicle Available</span>
+        <span class="chip chip-amber">🌬️ Exposed & Windy</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-faded);line-height:1.6;margin-top:.6rem;">
+        The Royal Mile approach is a steep cobbled climb. A free courtesy vehicle runs from the Portcullis Gate to the summit for visitors with mobility difficulties — book at the ticket office. Wheelchairs available to borrow. Crown Jewels and Great Hall are fully accessible; some areas including St Margaret's Chapel involve steps.
+      </p>
+    </div>
+
+    <!-- VIDEOS (hidden if empty in production) -->
+    <div class="section">
+      <h2>Videos</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <iframe width="100%" style="aspect-ratio:16/9;border:1px solid var(--border);border-radius:3px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" style="aspect-ratio:16/9;border:1px solid var(--border);border-radius:3px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- VISIT INFO -->
+    <div class="sidebar-card">
+      <h3>Visit Info</h3>
+      <div class="visit-status">
+        <span class="status-dot open"></span>
+        <span class="status-text open">Open Now</span>
+        <span class="status-hours">Closes 5:00 PM</span>
+      </div>
+      <div class="visit-row">
+        <span class="visit-label">Admission</span>
+        <span class="visit-value">£19.50 adult</span>
+      </div>
+      <div class="visit-row">
+        <span class="visit-label">HES Members</span>
+        <span class="visit-value free">Free</span>
+      </div>
+      <div class="visit-row">
+        <span class="visit-label">Time needed</span>
+        <span class="visit-value">2–3 hours</span>
+      </div>
+      <div class="visit-row">
+        <span class="visit-label">Today's hours</span>
+        <span class="visit-value">9:30 AM – 5:00 PM</span>
+      </div>
+      <span class="hours-toggle" onclick="document.querySelector('.hours-full').classList.toggle('show')">View all hours ▾</span>
+      <div class="hours-full">
+        Mon – Sun: 9:30 AM – 5:00 PM<br>
+        Last entry: 4:00 PM<br>
+        <em>Hours may vary seasonally</em>
+      </div>
+    </div>
+
+    <!-- LOCATION -->
+    <div class="sidebar-card">
+      <h3>Location</h3>
+      <div class="address-text">
+        Castlehill<br>
+        Edinburgh EH1 2NG<br>
+        Scotland, United Kingdom
+      </div>
+      <div style="margin-top:.6rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-faded);">
+        55.9486° N, 3.1999° W
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999" target="_blank" class="sidebar-directions">📍 Get Directions</a>
+    </div>
+
+    <!-- LINKS -->
+    <div class="sidebar-card">
+      <h3>Links</h3>
+      <div style="display:flex;flex-direction:column;gap:.3rem;">
+        <a href="https://www.edinburghcastle.scot/" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Official Website →</a>
+        <a href="https://en.wikipedia.org/wiki/Edinburgh_Castle" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Wikipedia →</a>
+        <a href="https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Historic Environment Scotland →</a>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- NEARBY -->
+<div class="nearby-section">
+  <h2>Nearby Sites</h2>
+  <div class="nearby-grid">
+    <a href="#" class="nearby-card">
+      <img src="https://img.castlecore.uk/craigmillar-castle.jpg" alt="Craigmillar Castle">
+      <div class="nearby-body">
+        <div class="nearby-name">Craigmillar Castle</div>
+        <div class="nearby-meta">15th century · Castle ruin</div>
+        <div class="nearby-distance">2.8 miles away</div>
+      </div>
+    </a>
+    <a href="#" class="nearby-card">
+      <img src="https://img.castlecore.uk/st-giles-cathedral.jpg" alt="St Giles' Cathedral">
+      <div class="nearby-body">
+        <div class="nearby-name">St Giles' Cathedral</div>
+        <div class="nearby-meta">12th century · Cathedral</div>
+        <div class="nearby-distance">0.3 miles away</div>
+      </div>
+    </a>
+    <a href="#" class="nearby-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Holyrood_Abbey_14.jpg/500px-Holyrood_Abbey_14.jpg" alt="Holyrood Abbey">
+      <div class="nearby-body">
+        <div class="nearby-name">Holyrood Abbey</div>
+        <div class="nearby-meta">12th century · Abbey ruin</div>
+        <div class="nearby-distance">1.1 miles away</div>
+      </div>
+    </a>
+    <a href="#" class="nearby-card">
+      <img src="https://img.castlecore.uk/lauriston-castle.jpg" alt="Lauriston Castle">
+      <div class="nearby-body">
+        <div class="nearby-name">Lauriston Castle</div>
+        <div class="nearby-meta">16th century · Tower house</div>
+        <div class="nearby-distance">3.4 miles away</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- EXPLORE MORE -->
+<div class="explore-section">
+  <h2>Explore More</h2>
+  <div class="explore-tags">
+    <a href="#" class="explore-tag">🏴󠁧󠁢󠁳󠁣󠁴󠁿 All Scotland</a>
+    <a href="#" class="explore-tag">🗺️ Edinburgh & Lothians</a>
+    <a href="#" class="explore-tag">🏰 Intact Castles</a>
+    <a href="#" class="explore-tag">👑 Royal Castles</a>
+    <a href="#" class="explore-tag">⚔️ Siege Sites</a>
+    <a href="#" class="explore-tag">🎟️ HES Member Free</a>
+    <a href="#" class="explore-tag">🦽 Accessible</a>
+  </div>
+</div>
+
+<!-- SOURCES -->
+<div class="sources">
+  <h3>Sources</h3>
+  <a href="https://en.wikipedia.org/wiki/Edinburgh_Castle">Wikipedia — Edinburgh Castle</a>
+  <a href="https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/">Historic Environment Scotland</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>castlecore — every castle, abbey & ruin in Britain & Ireland</p>
+</footer>
+
+</body>
+</html>
