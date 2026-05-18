@@ -54,6 +54,80 @@
         "enrichNotes": "more research "
       },
       "ts": 1779066972136
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Clonmines\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Wexford\n*Type:* monastery\n*Period:* 13th-16th century\n*Coords:* 52.261013, -6.765701\n*Wikipedia:* https://en.wikipedia.org/wiki/Clonmines\n*Maps:* https://www.google.com/maps/search/Clonmines/@52.268,-6.838,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Clonmines_East_View_2010_09_27.jpg/330px-Clonmines_East_View_2010_09_27.jpg\n*Gallery:* 2 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nClonmines is a civil parish and townland in the Bannow Bay area of County Wexford, Ireland, the site of \"the finest example in Ireland of a deserted medieval borough\". It is situated in the barony of Shelburne, southwest of Wellingtonbridge on the northwest shore of Bannow Bay. The parish of Clonmines contains the townland of the same name and the smaller townland of Arklow, with respective areas of 1,258 acres (509 ha) and 127 acres (51 ha).\n\n_Listing 2 of 212_",
+      "listing": {
+        "name": "Clonmines",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Wexford",
+        "lat": 52.261013,
+        "lng": -6.765701,
+        "mapsLink": "https://www.google.com/maps/search/Clonmines/@52.268,-6.838,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Clonmines_East_View_2010_09_27.jpg/330px-Clonmines_East_View_2010_09_27.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          {
+            "id": "clonmines-img-1",
+            "url": "https://img.castlecore.uk/clonmines-gp-1.jpg",
+            "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOJCcbURrAIgoDIBmzh2UjO2ZAa_ejCD-9UZZpqXO7Iv5dl1whe5iILqU2qwmkNmAngtjNDDtUHKn6f-ly4cgrzmvFePsaIMTBwdN9M319IXlt3YjlOAKeRLXVxAoqMK_kz2pkQY3GM58UChA=s4800-w1200",
+            "r2Key": "clonmines-gp-1.jpg",
+            "source": "google"
+          },
+          {
+            "id": "clonmines-img-2",
+            "url": "https://img.castlecore.uk/clonmines-gp-2.jpg",
+            "googlePhotoUri": "https://lh3.googleusercontent.com/place-photos/AJRVUZOfiXgPc3HRoaop4SwTYJiVUcsA1Nhf2og8dDBmnlSUk4VNx7jlRMsxP7zf-o4LN3g9vCI4ChHHnF2tQDWB8KPCb2qzSoV2lGQ2hTknqIZQrgTAwoV4jU4EUi4wvWRH65N2ZKcaKTZvCeT-6A=s4800-w1200",
+            "r2Key": "clonmines-gp-2.jpg",
+            "source": "google"
+          }
+        ],
+        "desc": "Clonmines is a civil parish and townland in the Bannow Bay area of County Wexford, Ireland, the site of \"the finest example in Ireland of a deserted medieval borough\". It is situated in the barony of Shelburne, southwest of Wellingtonbridge on the northwest shore of Bannow Bay. The parish of Clonmines contains the townland of the same name and the smaller townland of Arklow, with respective areas of 1,258 acres (509 ha) and 127 acres (51 ha).",
+        "type": "monastery",
+        "period": "13th-16th century",
+        "rating": 3.7,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "norman",
+          "atmospheric",
+          "remote",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wexford Heritage",
+            "url": "https://www.visitwexford.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Clonmines"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clonmines",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Clonmines_East_View_2010_09_27.jpg/330px-Clonmines_East_View_2010_09_27.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Andreas F. Borchert",
+          "license": "CC BY-SA 4.0",
+          "description": "Ruins of the medieval town Clonmines, as seen from the Bannow bay.",
+          "credit": "Self-photographed",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonmines",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "auditNote": "Flagged during image review",
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779066990111
     }
   ]
 }
