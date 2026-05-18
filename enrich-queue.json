@@ -1033,6 +1033,63 @@
         "enrichNotes": ""
       },
       "ts": 1779066701491
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Castell Morgraig\n*Country:* wales\n*Region:* south wales\n*County:* Cardiff\n*Type:* castle\n*Period:* 13th century\n*Coords:* 51.5194, -3.2083\n*Wikipedia:* https://en.wikipedia.org/wiki/Morgraig_Castle\n*Maps:* https://www.google.com/maps/search/Castell%20Morgraig/@51.5194,-3.2083,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ruins_of_Castell_Morgraig.jpg/330px-Ruins_of_Castell_Morgraig.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research needed \n\n*Description:*\nMorgraig Castle is a ruined castle, which lies close to the southern borders of the county borough of Caerphilly, overlooking Cardiff in Wales. It was built in the 13th century, but there is some debate as to who actually built the castle, either Gilbert de Clare or the Lord of Senghennydd. The castle appears to have never been occupied or completed. It is now a scheduled monument and a Grade II listed building.\n\n_Listing 21 of 234_",
+      "listing": {
+        "name": "Castell Morgraig",
+        "country": "wales",
+        "region": "south-wales",
+        "county": "Cardiff",
+        "lat": 51.5194,
+        "lng": -3.2083,
+        "mapsLink": "https://www.google.com/maps/search/Castell%20Morgraig/@51.5194,-3.2083,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ruins_of_Castell_Morgraig.jpg/330px-Ruins_of_Castell_Morgraig.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Morgraig Castle is a ruined castle, which lies close to the southern borders of the county borough of Caerphilly, overlooking Cardiff in Wales. It was built in the 13th century, but there is some debate as to who actually built the castle, either Gilbert de Clare or the Lord of Senghennydd. The castle appears to have never been occupied or completed. It is now a scheduled monument and a Grade II listed building.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.7,
+        "tags": [
+          "ruins-romantic",
+          "woodland",
+          "remote",
+          "free-entry",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Coflein – RCAHMW",
+            "url": "https://coflein.gov.uk"
+          },
+          {
+            "name": "Wikipedia – Castell Morgraig",
+            "url": "https://en.wikipedia.org/wiki/Castell_Morgraig"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Morgraig_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ruins_of_Castell_Morgraig.jpg/330px-Ruins_of_Castell_Morgraig.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "John Lord",
+          "license": "CC BY-SA 2.0",
+          "description": "Ruins of Castell Morgraig, Caerphilly, Wales",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Morgraig_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "more research needed ",
+        "enrichNotes": "more research needed "
+      },
+      "ts": 1779066772546
     }
   ]
 }
