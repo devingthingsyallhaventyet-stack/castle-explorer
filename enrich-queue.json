@@ -527,6 +527,60 @@
         "enrichNotes": ""
       },
       "ts": 1779068323825
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Gleaston Castle\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* 14th century\n*Coords:* 54.1331, -3.1325\n*Wikipedia:* https://en.wikipedia.org/wiki/Gleaston_Castle\n*Maps:* https://www.google.com/maps/search/Gleaston%20Castle/@54.161,-3.125,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZP37MfFUM-HsFo92uv5hSq2uf0mzaPd0fLaIY0K1e--FwsC3VxV3Rh1DQWEoz-oKY3XXdBo_iktwPMIFtXX7yihxAIYHCQmwA0TllVGico7zQU5Rcu8WQPQiF8nlI0PnWBHbj28qGu1ezVt=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* https://maps.app.goo.gl/rVTB4SKs7JgiHQWF6 - update google places link \n\n*Description:*\nGleaston Castle is a medieval building in a valley about 1 kilometre (0.62 mi) north-east of the village of Gleaston. The village lies between the towns of Ulverston and Barrow-in-Furness in the Furness peninsula, Cumbria, England. Gleaston Castle has a quadrilateral plan, with a tower at each corner. The largest of these, the north-west tower, probably housed a hall.\n\n_Listing 11 of 186_",
+      "listing": {
+        "name": "Gleaston Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.1331,
+        "lng": -3.1325,
+        "mapsLink": "https://www.google.com/maps/search/Gleaston%20Castle/@54.161,-3.125,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZP37MfFUM-HsFo92uv5hSq2uf0mzaPd0fLaIY0K1e--FwsC3VxV3Rh1DQWEoz-oKY3XXdBo_iktwPMIFtXX7yihxAIYHCQmwA0TllVGico7zQU5Rcu8WQPQiF8nlI0PnWBHbj28qGu1ezVt=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Gleaston Castle is a medieval building in a valley about 1 kilometre (0.62 mi) north-east of the village of Gleaston. The village lies between the towns of Ulverston and Barrow-in-Furness in the Furness peninsula, Cumbria, England. Gleaston Castle has a quadrilateral plan, with a tower at each corner. The largest of these, the north-west tower, probably housed a hall.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.5,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric",
+          "coastal"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Gleaston_Castle"
+          },
+          {
+            "name": "Furness Whisper",
+            "url": "https://furness-whisper.uk/2024/04/07/gleaston-castle-a-factual-exploration-of-cumbrias-14th-century-relic/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Gleaston_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/North-Tower-from-NW.jpg/330px-North-Tower-from-NW.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Chas Hollwey",
+          "license": "CC BY-SA 4.0",
+          "description": "A photo of Gleaston Castle’s north tower as seen from the north west. Taken in July 2015.",
+          "credit": "http://castlestudiestrust.org/blog/?attachment_id=267",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "https://maps.app.goo.gl/rVTB4SKs7JgiHQWF6 - update google places link ",
+        "enrichNotes": "https://maps.app.goo.gl/rVTB4SKs7JgiHQWF6 - update google places link "
+      },
+      "ts": 1779068349816
     }
   ]
 }
