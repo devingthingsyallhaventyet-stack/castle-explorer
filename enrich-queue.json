@@ -783,6 +783,62 @@
         "enrichNotes": ""
       },
       "ts": 1779068439759
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Gidleigh Castle\n*Country:* england\n*Region:* south west\n*County:* Devon\n*Type:* castle\n*Period:* 14th-15th century\n*Coords:* 50.68027, -3.88342\n*Wikipedia:* https://en.wikipedia.org/wiki/Gidleigh_Castle\n*Maps:* https://www.google.com/maps/search/Gidleigh%20Castle/@50.691,-3.866,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nGidleigh Castle was the manor house of the manor of Gidleigh on the north-eastern edge of Dartmoor, about two miles (3.2 km) north-west of the town of Chagford, Devon, England.\n\n_Listing 16 of 186_",
+      "listing": {
+        "name": "Gidleigh Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Devon",
+        "lat": 50.68027,
+        "lng": -3.88342,
+        "mapsLink": "https://www.google.com/maps/search/Gidleigh%20Castle/@50.691,-3.866,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Gidleigh Castle was the manor house of the manor of Gidleigh on the north-eastern edge of Dartmoor, about two miles (3.2 km) north-west of the town of Chagford, Devon, England.",
+        "type": "castle",
+        "period": "14th-15th century",
+        "rating": 3.5,
+        "tags": [
+          "medieval",
+          "remote",
+          "atmospheric",
+          "ruins-romantic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Gidleigh_Castle"
+          },
+          {
+            "name": "Wikipedia - Gidleigh",
+            "url": "https://en.wikipedia.org/wiki/Gidleigh"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Gidleigh_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Gidleigh_Castle.jpg/330px-Gidleigh_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Derek Harper",
+          "license": "CC BY-SA 2.0",
+          "description": "Gidleigh Castle is in the small village of Gidleigh on the edge of Dartmoor some 3 km to the north-west of the town of Chagford, Devon (grid reference SX671884).",
+          "credit": "From geograph.co.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Gidleigh_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068462400
     }
   ]
 }
