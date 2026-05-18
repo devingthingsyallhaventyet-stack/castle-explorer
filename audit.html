@@ -1001,8 +1001,8 @@ function renderTable() {
       const reviewTags = allTags.filter(t => reviewTagPrefixes.some(p => t.startsWith(p)));
       const contentTagsHtml = contentTags.length ? contentTags.map(t => `<span style="background:var(--bg);border:1px solid var(--border);padding:1px 6px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">${esc(t)}</span>`).join(' ') : '<span style="color:var(--muted)">—</span>';
       const reviewTagsHtml = reviewTags.length ? reviewTags.map(t => `<span style="background:#2a1a00;border:1px solid var(--gold);color:var(--gold);padding:1px 6px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">⚠ ${esc(t)}</span>`).join(' ') : '';
-      const sources = Array.isArray(d.sources) ? d.sources : [];
-      const sourcesHtml = sources.map(s => `<a href="${esc(s.url)}" target="_blank" style="font-size:11px">🔗 ${esc(s.label||'Source')}</a>`).join(' ');
+      const sources = Array.isArray(d.source) ? d.source : [];
+      const sourcesHtml = sources.map(s => `<a href="${esc(s.url)}" target="_blank" style="font-size:11px">🔗 ${esc(s.name||s.label||'Source')}</a>`).join(' ');
       return `<tr>
         <td>${i+1}</td>
         <td>${mainThumb}</td>
