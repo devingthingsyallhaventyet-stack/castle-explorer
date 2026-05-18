@@ -419,6 +419,60 @@
         "enrichNotes": "idk "
       },
       "ts": 1779068278344
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Hen's Castle\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* tower house\n*Period:* 13th century\n*Coords:* 50.756625, 5.30286944\n*Wikipedia:* https://en.wikipedia.org/wiki/Heers_Castle\n*Maps:* https://www.google.com/maps/search/Hen's%20Castle/@53.51,-9.75,15z\n*Main Image:* https://img.castlecore.uk/hen-s-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* no\n\n*Description:*\nHeers Castle is a castle in Heers, Province of Limburg, Belgium.\n\n_Listing 9 of 186_",
+      "listing": {
+        "name": "Hen's Castle",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 50.756625,
+        "lng": 5.30286944,
+        "mapsLink": "https://www.google.com/maps/search/Hen's%20Castle/@53.51,-9.75,15z",
+        "image": "https://img.castlecore.uk/hen-s-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/hen-s-castle-2.jpg",
+          "https://img.castlecore.uk/hen-s-castle-3.jpg",
+          "https://img.castlecore.uk/hen-s-castle-4.jpg",
+          "https://img.castlecore.uk/hen-s-castle-5.jpg"
+        ],
+        "desc": "Heers Castle is a castle in Heers, Province of Limburg, Belgium.",
+        "type": "tower house",
+        "period": "13th century",
+        "rating": 3.6,
+        "tags": [
+          "island",
+          "ruins-romantic",
+          "medieval",
+          "remote",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Galway Heritage",
+            "url": "https://www.galwaytourism.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Heers_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Kasteelheers.jpg/330px-Kasteelheers.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "no",
+        "enrichNotes": "no"
+      },
+      "ts": 1779068290504
     }
   ]
 }
