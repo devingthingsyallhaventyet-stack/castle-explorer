@@ -404,6 +404,58 @@
         "enrichNotes": "more research "
       },
       "ts": 1779066261025
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Magh Adair\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Clare\n*Type:* fort\n*Period:* Iron Age-Medieval\n*Coords:* 52.825, -8.9\n*Wikipedia:* https://en.wikipedia.org/wiki/Magh_Adhair\n*Maps:* https://www.google.com/maps/search/Magh%20Adair/@52.825,-8.9,15z\n*Main Image:* https://img.castlecore.uk/magh-adair.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nMary Adair is a Cherokee Nation educator and painter based in Oklahoma.\n\n_Listing 9 of 234_",
+      "listing": {
+        "name": "Magh Adair",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Clare",
+        "lat": 52.825,
+        "lng": -8.9,
+        "mapsLink": "https://www.google.com/maps/search/Magh%20Adair/@52.825,-8.9,15z",
+        "image": "https://img.castlecore.uk/magh-adair.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/magh-adair-2.jpg",
+          "https://img.castlecore.uk/magh-adair-3.jpg",
+          "https://img.castlecore.uk/magh-adair-4.jpg",
+          "https://img.castlecore.uk/magh-adair-5.jpg"
+        ],
+        "desc": "Mary Adair is a Cherokee Nation educator and painter based in Oklahoma.",
+        "type": "fort",
+        "period": "Iron Age-Medieval",
+        "rating": 3.8,
+        "tags": [
+          "prehistoric",
+          "hilltop",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Clare Heritage",
+            "url": "https://www.clare.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Magh_Adair"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Mary_Adair",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Magh_Adhair",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779066282058
     }
   ]
 }
