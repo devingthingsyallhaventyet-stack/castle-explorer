@@ -296,6 +296,59 @@
         "enrichNotes": ""
       },
       "ts": 1779066173743
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Portumna Priory\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* abbey\n*Period:* Medieval\n*Coords:* 53.086087, -8.217617\n*Wikipedia:* https://en.wikipedia.org/wiki/Portumna_Abbey\n*Maps:* https://www.google.com/maps/search/Portumna%20Priory/@53.087,-8.218,15z\n*Main Image:* https://img.castlecore.uk/portumna-priory.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* google places link - https://maps.app.goo.gl/fkzn4r5BsZY1FNrX7\n\n\n*Description:*\nPortumna Abbey is a medieval Cistercian friary and National Monument located in Portumna, Ireland.\n\n_Listing 7 of 234_",
+      "listing": {
+        "name": "Portumna Priory",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.086087,
+        "lng": -8.217617,
+        "mapsLink": "https://www.google.com/maps/search/Portumna%20Priory/@53.087,-8.218,15z",
+        "image": "https://img.castlecore.uk/portumna-priory.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/portumna-priory-2.jpg",
+          "https://img.castlecore.uk/portumna-priory-3.jpg",
+          "https://img.castlecore.uk/portumna-priory-4.jpg",
+          "https://img.castlecore.uk/portumna-priory-5.jpg"
+        ],
+        "desc": "Portumna Abbey is a medieval Cistercian friary and National Monument located in Portumna, Ireland.",
+        "type": "abbey",
+        "period": "Medieval",
+        "rating": 3.8,
+        "tags": [
+          "ruins-romantic",
+          "medieval",
+          "riverside",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Galway Heritage",
+            "url": "https://www.galwaytourism.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Portumna_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/PortumnaFriary.jpg/330px-PortumnaFriary.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "google places link - https://maps.app.goo.gl/fkzn4r5BsZY1FNrX7\n",
+        "enrichNotes": "google places link - https://maps.app.goo.gl/fkzn4r5BsZY1FNrX7\n"
+      },
+      "ts": 1779066228328
     }
   ]
 }
