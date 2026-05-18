@@ -573,6 +573,57 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/gA4V7bWXJJgwqjdD6\nadd source - https://www.exetercastle.uk/"
       },
       "ts": 1779067745248
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Nappa Hall\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 15th century\n*Coords:* 54.313, -2.055\n*Wikipedia:* https://en.wikipedia.org/wiki/Nappa_Hall\n*Maps:* https://www.google.com/maps/search/Nappa%20Hall/@54.2967,-2.01,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg/330px-Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* idk\n\n*Description:*\nNappa Hall is a fortified manor house in Wensleydale, North Yorkshire, England, described by English Heritage as \"probably the finest and least-spoilt fortified manor house in the north of England\". It stands 1-mile (1.6 km) east of Askrigg, overlooking pastures leading down to the River Ure. A single-storey central hall sits between two towers, a four-storey western tower and a two-storey eastern tower. The four-storey tower has a turret, lit by slit vents, for a spiral staircase that climbs to crenellated parapets. The taller tower retains its original windows, but sash windows were inserted in the 18th century in the lower two-storey block which housed the kitchen and service rooms, at the opposite end of the hall. In the 17th century, an extra wing was added. The battlements are served by a single stair consisting of 70 stone steps.\n\n_Listing 12 of 204_",
+      "listing": {
+        "name": "Nappa Hall",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.313,
+        "lng": -2.055,
+        "mapsLink": "https://www.google.com/maps/search/Nappa%20Hall/@54.2967,-2.01,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg/330px-Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Nappa Hall is a fortified manor house in Wensleydale, North Yorkshire, England, described by English Heritage as \"probably the finest and least-spoilt fortified manor house in the north of England\". It stands 1-mile (1.6 km) east of Askrigg, overlooking pastures leading down to the River Ure. A single-storey central hall sits between two towers, a four-storey western tower and a two-storey eastern tower. The four-storey tower has a turret, lit by slit vents, for a spiral staircase that climbs to crenellated parapets. The taller tower retains its original windows, but sash windows were inserted in the 18th century in the lower two-storey block which housed the kitchen and service rooms, at the opposite end of the hall. In the 17th century, an extra wing was added. The battlements are served by a single stair consisting of 70 stone steps.",
+        "type": "castle",
+        "period": "15th century",
+        "rating": 3.6,
+        "tags": [
+          "medieval",
+          "atmospheric",
+          "well-preserved"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nappa_Hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Nappa_Hall",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg/330px-Nappa_Hall%2CAskrigg%2C_Wensleydale_-_geograph.org.uk_-_296730.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Geoff Keeble",
+          "license": "CC BY-SA 2.0",
+          "description": "Nappa Hall,Askrigg, Wensleydale  Nappa Hall was built 1450-1459 and is one of the few castellated houses left in Yorkshire. Being fortified, it had some protection from raiders from further north and Scotland.  The Nappa Estate was given to James Metcalfe by Sir Richard Scrope of Bolton Castle, under whom he had fought at the Battle of Agincourt in 1415.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Nappa_Hall",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk",
+        "enrichNotes": "idk"
+      },
+      "ts": 1779067785926
     }
   ]
 }
