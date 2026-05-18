@@ -921,6 +921,65 @@
         "enrichNotes": "needs more research "
       },
       "ts": 1779066647263
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Caergwrle Castle\n*Country:* wales\n*Region:* snowdonia north\n*County:* Flintshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 53.10729, -3.037164\n*Wikipedia:* https://en.wikipedia.org/wiki/Caergwrle_Castle\n*Maps:* https://www.google.com/maps/search/Caergwrle%20Castle/@53.114,-3.057,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png/330px-Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCaergwrle Castle, also known as Queen's Hope in scholarly texts, is a castle located in the village of Caergwrle, in Flintshire, Wales. It was built by the Welsh under Dafydd ap Gruffydd in service to Edward I of England. When Dafydd's forces rebelled against the English, Edward sent Reginald de Grey, 1st Baron Grey de Wilton to take the castle in June 1282, but Dafydd had retreated and sabotaged the structure. Rebuilding works began, and it was given to Edward's wife, Eleanor of Castile. A town was planned at the base of the castle, but this was abandoned after a fire broke out in September 1283 when both Edward and Eleanor were present. It was passed down the royal line, but was never rebuilt. In 1823, a workman discovered the Caergwrle Bowl near the castle; it is a unique Bronze Age bowl.\n\n_Listing 19 of 234_",
+      "listing": {
+        "name": "Caergwrle Castle",
+        "country": "wales",
+        "region": "snowdonia-north",
+        "county": "Flintshire",
+        "lat": 53.10729,
+        "lng": -3.037164,
+        "mapsLink": "https://www.google.com/maps/search/Caergwrle%20Castle/@53.114,-3.057,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png/330px-Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Caergwrle Castle, also known as Queen's Hope in scholarly texts, is a castle located in the village of Caergwrle, in Flintshire, Wales. It was built by the Welsh under Dafydd ap Gruffydd in service to Edward I of England. When Dafydd's forces rebelled against the English, Edward sent Reginald de Grey, 1st Baron Grey de Wilton to take the castle in June 1282, but Dafydd had retreated and sabotaged the structure. Rebuilding works began, and it was given to Edward's wife, Eleanor of Castile. A town was planned at the base of the castle, but this was abandoned after a fire broke out in September 1283 when both Edward and Eleanor were present. It was passed down the royal line, but was never rebuilt. In 1823, a workman discovered the Caergwrle Bowl near the castle; it is a unique Bronze Age bowl.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.7,
+        "tags": [
+          "hidden-gem",
+          "free-entry",
+          "hilltop",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Caergwrle_Castle"
+          },
+          {
+            "name": "Cadw",
+            "url": "https://cadw.gov.wales/visit/places-to-visit/caergwrle-castle"
+          },
+          {
+            "name": "Coflein",
+            "url": "https://coflein.gov.uk/en/site/95121/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Caergwrle_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png/330px-Castell_Caergwrle_-_Castle_built_by_the_Welsh_Princes%2C_in_Sir_y_Fflint_%28Flintshire%29%2C_Wales_26.png",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Llywelyn2000",
+          "license": "CC BY-SA 4.0",
+          "description": "This is a photo of listed building number",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Caergwrle_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779066674963
     }
   ]
 }
