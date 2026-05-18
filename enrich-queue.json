@@ -728,6 +728,61 @@
         "enrichNotes": ""
       },
       "ts": 1779068421839
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Cowes Castle\n*Country:* england\n*Region:* south west\n*County:* Isle of Wight\n*Type:* castle\n*Period:* 16th century\n*Coords:* 50.7665, -1.3012\n*Wikipedia:* https://en.wikipedia.org/wiki/Cowes_Castle\n*Maps:* https://www.google.com/maps/search/Cowes%20Castle/@50.7633,-1.2981,15z\n*Main Image:* none\n*Gallery:* 0 images\n*Image Source:* unknown\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nCowes Castle, also known as West Cowes Castle, is a Device Fort in Cowes on the Isle of Wight. Originally built by Henry VIII in 1539 to protect England against the threat of invasion from France and the Holy Roman Empire, it comprised a circular bastion, flanking wings and a keep, and in 1547 it housed 17 pieces of artillery. With its companion fortification at East Cowes, the castle overlooked the entrance to the River Medina, an important anchorage. The invasion threat passed but the fortification continued in use until the middle of the 19th century, very briefly seeing action in 1642 during the English Civil War.\n\n_Listing 15 of 186_",
+      "listing": {
+        "name": "Cowes Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Isle of Wight",
+        "lat": 50.7665,
+        "lng": -1.3012,
+        "mapsLink": "https://www.google.com/maps/search/Cowes%20Castle/@50.7633,-1.2981,15z",
+        "image": "",
+        "imgSource": "",
+        "gallery": [],
+        "desc": "Cowes Castle, also known as West Cowes Castle, is a Device Fort in Cowes on the Isle of Wight. Originally built by Henry VIII in 1539 to protect England against the threat of invasion from France and the Holy Roman Empire, it comprised a circular bastion, flanking wings and a keep, and in 1547 it housed 17 pieces of artillery. With its companion fortification at East Cowes, the castle overlooked the entrance to the River Medina, an important anchorage. The invasion threat passed but the fortification continued in use until the middle of the 19th century, very briefly seeing action in 1642 during the English Civil War.",
+        "type": "castle",
+        "period": "16th century",
+        "rating": 3.5,
+        "tags": [
+          "tudor",
+          "coastal",
+          "well-preserved"
+        ],
+        "source": [
+          {
+            "name": "Royal Yacht Squadron",
+            "url": "https://www.rys.org.uk/the-rys/the-clubhouse"
+          },
+          {
+            "name": "RYS History",
+            "url": "https://www.rys.org.uk/the-rys/history/cowes-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Cowes_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/West_Cowes_Castle.jpg/330px-West_Cowes_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Nilfanion",
+          "license": "CC BY-SA 3.0",
+          "description": "West Cowes Castle, now the clubhouse of the Royal Yacht Squadron, in Cowes on the Isle of Wight. Holy Trinity Church is visible in the background.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cowes_Castle",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068439759
     }
   ]
 }
