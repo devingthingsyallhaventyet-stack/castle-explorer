@@ -679,6 +679,50 @@
         "enrichNotes": ""
       },
       "ts": 1779066422779
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bridgnorth Castle\n*Country:* england\n*Region:* the midlands\n*County:* Shropshire\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.5314, -2.4201\n*Wikipedia:* https://en.wikipedia.org/wiki/Bridgnorth_Castle\n*Maps:* https://www.google.com/maps/search/Bridgnorth%20Castle/@52.5331,-2.4179,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZN0sJj52pQLKMkLAizH9gbnk9CxvrQ8sq16mI3NS_dQfCLbbAjO-Jheu0X3bWmxs28GdIkydufaoTBe49j_TZrZlTcj_CIbqLhW-ro9L9QLd9o2teMJy7kD6g-r6w2iDb1dC4KzQlAhp98vmeYOyLQj=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.bridgnorthcastle.uk/\n\n*Description:*\nBridgnorth Castle is a castle in the town of Bridgnorth, Shropshire. It is a scheduled monument, first listed in 1928.\n\n_Listing 14 of 234_",
+      "listing": {
+        "name": "Bridgnorth Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Shropshire",
+        "lat": 52.5314,
+        "lng": -2.4201,
+        "mapsLink": "https://www.google.com/maps/search/Bridgnorth%20Castle/@52.5331,-2.4179,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZN0sJj52pQLKMkLAizH9gbnk9CxvrQ8sq16mI3NS_dQfCLbbAjO-Jheu0X3bWmxs28GdIkydufaoTBe49j_TZrZlTcj_CIbqLhW-ro9L9QLd9o2teMJy7kD6g-r6w2iDb1dC4KzQlAhp98vmeYOyLQj=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Bridgnorth Castle is a castle in the town of Bridgnorth, Shropshire. It is a scheduled monument, first listed in 1928.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.7,
+        "tags": [
+          "dramatic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Bridgnorth_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Bridgnorth_castle_ruins.jpg/330px-Bridgnorth_castle_ruins.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Dr Phillip McCavity at English Wikipedia",
+          "license": "CC BY 3.0",
+          "description": "Castle ruins in Bridgnorth",
+          "credit": "Photo taken by Dr Phillip McCavity (self-made); Transferred from en.wikipedia to Commons.; description page is/was here.",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "add source - https://www.bridgnorthcastle.uk/",
+        "enrichNotes": "add source - https://www.bridgnorthcastle.uk/"
+      },
+      "ts": 1779066450361
     }
   ]
 }
