@@ -115,6 +115,53 @@
         "enrichNotes": "idk "
       },
       "ts": 1779068074305
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Leacanabuaile Fort\n*Country:* ireland\n*Region:* kingdom of munster\n*County:* County Kerry\n*Type:* stone fort\n*Period:* 9th-10th century\n*Coords:* 51.958258, -10.261868\n*Wikipedia:* https://en.wikipedia.org/wiki/Leacanabuaile\n*Maps:* https://www.google.com/maps/search/Leacanabuaile%20Fort/@51.958,-10.025,15z\n*Main Image:* https://img.castlecore.uk/leacanabuaile-fort.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nLeacanabuaile is a stone ringfort (cashel) and National Monument in County Kerry, Ireland. Leacanabuaile is immediately northwest of Cahergal, 3 km (1.9 mi) northwest of Cahirciveen.\n\n_Listing 3 of 186_",
+      "listing": {
+        "name": "Leacanabuaile Fort",
+        "country": "ireland",
+        "region": "kingdom-of-munster",
+        "county": "County Kerry",
+        "lat": 51.958258,
+        "lng": -10.261868,
+        "mapsLink": "https://www.google.com/maps/search/Leacanabuaile%20Fort/@51.958,-10.025,15z",
+        "image": "https://img.castlecore.uk/leacanabuaile-fort.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Leacanabuaile is a stone ringfort (cashel) and National Monument in County Kerry, Ireland. Leacanabuaile is immediately northwest of Cahergal, 3 km (1.9 mi) northwest of Cahirciveen.",
+        "type": "stone fort",
+        "period": "9th-10th century",
+        "rating": 3.6,
+        "tags": [
+          "prehistoric",
+          "well-preserved",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Kerry Heritage",
+            "url": "https://www.kerrytourism.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Leacanabuaile",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Leacanabuaile",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068098505
     }
   ]
 }
