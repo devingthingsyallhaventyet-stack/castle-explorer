@@ -467,6 +467,62 @@
         "enrichNotes": "google places link - https://maps.app.goo.gl/h9Wbktdk9Vu8VMqh9\n"
       },
       "ts": 1779067646622
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Devizes Castle\n*Country:* england\n*Region:* south west\n*County:* Wiltshire\n*Type:* castle\n*Period:* 12th century (current building: 19th century)\n*Coords:* 51.3508, -1.9985\n*Wikipedia:* https://en.wikipedia.org/wiki/Devizes_Castle\n*Maps:* https://www.google.com/maps/search/Devizes%20Castle/@51.352,-1.996,15z\n*Main Image:* https://img.castlecore.uk/devizes-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* idk \n\n*Description:*\nDevizes Castle was a medieval fortification in the town of Devizes, Wiltshire, England, on a site now occupied by a Victorian-era castle. It is a Grade I listed building. The original castle was overbuilt by the current structure. Records indicate that the first castle on the site had its origins in about 1080 as an early Norman motte and bailey with wooden pallisade and tower.\n\n_Listing 10 of 204_",
+      "listing": {
+        "name": "Devizes Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Wiltshire",
+        "lat": 51.3508,
+        "lng": -1.9985,
+        "mapsLink": "https://www.google.com/maps/search/Devizes%20Castle/@51.352,-1.996,15z",
+        "image": "https://img.castlecore.uk/devizes-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/devizes-castle-2.jpg",
+          "https://img.castlecore.uk/devizes-castle-3.jpg",
+          "https://img.castlecore.uk/devizes-castle-4.jpg",
+          "https://img.castlecore.uk/devizes-castle-5.jpg"
+        ],
+        "desc": "Devizes Castle was a medieval fortification in the town of Devizes, Wiltshire, England, on a site now occupied by a Victorian-era castle. It is a Grade I listed building. The original castle was overbuilt by the current structure. Records indicate that the first castle on the site had its origins in about 1080 as an early Norman motte and bailey with wooden pallisade and tower.",
+        "type": "castle",
+        "period": "12th century (current building: 19th century)",
+        "rating": 3.6,
+        "tags": [
+          "norman",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Devizes_Castle"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/attractions.htm?attraction=1974"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1021375"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Devizes_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Entrance%2C_Devizes_Castle_-_geograph.org.uk_-_1022978.jpg/330px-Entrance%2C_Devizes_Castle_-_geograph.org.uk_-_1022978.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Devizes_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "idk ",
+        "enrichNotes": "idk "
+      },
+      "ts": 1779067668697
     }
   ]
 }
