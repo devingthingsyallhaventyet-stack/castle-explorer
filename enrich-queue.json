@@ -55,6 +55,57 @@
         "enrichNotes": "more research "
       },
       "ts": 1779065577171
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Harry Avery Castle\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Tyrone\n*Type:* castle\n*Period:* 14th century\n*Coords:* 54.713, -7.393\n*Wikipedia:* https://en.wikipedia.org/wiki/Harry_Avery%27s_Castle\n*Maps:* https://www.google.com/maps/search/Harry%20Avery%20Castle/@54.64,-7.383,15z\n*Main Image:* https://img.castlecore.uk/wiki-harry-avery-castle.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nHarry Avery's Castle is situated half a mile south-west of Newtownstewart, in County Tyrone, Northern Ireland. It is a rare example of a stone castle built by a Gaelic Irish chief, although its origins and history are uncertain. It is associated with and named after Henry Aimhréidh O'Neill, whose name was anglicised as Harry Avery.\n\n_Listing 2 of 238_",
+      "listing": {
+        "name": "Harry Avery Castle",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Tyrone",
+        "lat": 54.713,
+        "lng": -7.393,
+        "mapsLink": "https://www.google.com/maps/search/Harry%20Avery%20Castle/@54.64,-7.383,15z",
+        "image": "https://img.castlecore.uk/wiki-harry-avery-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Harry Avery's Castle is situated half a mile south-west of Newtownstewart, in County Tyrone, Northern Ireland. It is a rare example of a stone castle built by a Gaelic Irish chief, although its origins and history are uncertain. It is associated with and named after Henry Aimhréidh O'Neill, whose name was anglicised as Harry Avery.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.8,
+        "tags": [
+          "hilltop",
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/places-to-visit/harry-averys-castle/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Harry_Avery%27s_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Harry_Avery's_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Harry_Avery%27s_Castle.jpg/330px-Harry_Avery%27s_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Harry_Avery%27s_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779065622806
     }
   ]
 }
