@@ -456,6 +456,58 @@
         "enrichNotes": ""
       },
       "ts": 1779066282058
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Calder Abbey\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* abbey\n*Period:* 12th-16th century\n*Coords:* 54.44416667, -3.46611111\n*Wikipedia:* https://en.wikipedia.org/wiki/Calder_Abbey\n*Maps:* https://www.google.com/maps/search/Calder%20Abbey/@54.4367,-3.4533,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOH3lHcTiAb-WlkJW1QwgvLI5f1LbaJMs4FuPQU55LHum0Jk2jPHK3V5mXMoJqI0rbnAIK72J7GOoV76VMOBoFTIBqVe6fVJa7EoglWOc0sLSQaNzXN0vhadnA0iUW_caIVmnr7WjHmc4iidg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update google link - https://maps.app.goo.gl/pdTUdn5MVcZqi5fd9\n\n*Description:*\nCalder Abbey in Cumbria was a Savigniac monastery founded in 1134 by Ranulph de Gernon, 2nd Earl of Chester, and moved to this site following a refoundation in 1142. It became Cistercian in 1148. It is near the village of Calderbridge.\n\n_Listing 10 of 234_",
+      "listing": {
+        "name": "Calder Abbey",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.44416667,
+        "lng": -3.46611111,
+        "mapsLink": "https://www.google.com/maps/search/Calder%20Abbey/@54.4367,-3.4533,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOH3lHcTiAb-WlkJW1QwgvLI5f1LbaJMs4FuPQU55LHum0Jk2jPHK3V5mXMoJqI0rbnAIK72J7GOoV76VMOBoFTIBqVe6fVJa7EoglWOc0sLSQaNzXN0vhadnA0iUW_caIVmnr7WjHmc4iidg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Calder Abbey in Cumbria was a Savigniac monastery founded in 1134 by Ranulph de Gernon, 2nd Earl of Chester, and moved to this site following a refoundation in 1142. It became Cistercian in 1148. It is near the village of Calderbridge.",
+        "type": "abbey",
+        "period": "12th-16th century",
+        "rating": 3.7,
+        "tags": [
+          "medieval",
+          "ruins-romantic",
+          "atmospheric",
+          "woodland",
+          "riverside",
+          "remote"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Calder_Abbey"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Calder_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/CalderAbbey.JPG/330px-CalderAbbey.JPG",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "JohnArmagh",
+          "license": "Public domain",
+          "description": "Photograph of Calder Abbey, Cumbria, England",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "update google link - https://maps.app.goo.gl/pdTUdn5MVcZqi5fd9",
+        "enrichNotes": "update google link - https://maps.app.goo.gl/pdTUdn5MVcZqi5fd9"
+      },
+      "ts": 1779066339213
     }
   ]
 }
