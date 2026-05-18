@@ -128,6 +128,61 @@
         "enrichNotes": ""
       },
       "ts": 1779066990111
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Huntington Castle\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Carlow\n*Type:* castle\n*Period:* 17th century\n*Coords:* 52.17822, -3.09971\n*Wikipedia:* https://en.wikipedia.org/wiki/Huntington_Castle\n*Maps:* https://www.google.com/maps/search/Huntington%20Castle/@52.638,-6.718,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOF8My2FEnGB5B6g6mksy3NrX9mbeIJCK-JW-cJqAneapVF0qz1jnhLs4RM8ZsWVr3ATS74wT8OWqd6anItnEVF79__m0bafGKt3bAuFT0MNdUubPsI34ELyboLNf6Cmj4Cr_EwK7WSHDUSDg=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* update wikipedia listing - https://en.wikipedia.org/wiki/Huntington_Castle,_Clonegal\nadd source - https://huntingtoncastle.com/\n\n*Description:*\nHuntington Castle was situated in the village of Huntington in Herefordshire, England, 2+1⁄2 miles south-west of Kington.\n\n_Listing 3 of 212_",
+      "listing": {
+        "name": "Huntington Castle",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Carlow",
+        "lat": 52.17822,
+        "lng": -3.09971,
+        "mapsLink": "https://www.google.com/maps/search/Huntington%20Castle/@52.638,-6.718,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOF8My2FEnGB5B6g6mksy3NrX9mbeIJCK-JW-cJqAneapVF0qz1jnhLs4RM8ZsWVr3ATS74wT8OWqd6anItnEVF79__m0bafGKt3bAuFT0MNdUubPsI34ELyboLNf6Cmj4Cr_EwK7WSHDUSDg=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Huntington Castle was situated in the village of Huntington in Herefordshire, England, 2+1⁄2 miles south-west of Kington.",
+        "type": "castle",
+        "period": "17th century",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "atmospheric",
+          "haunted",
+          "gardens",
+          "guided-tours"
+        ],
+        "source": [
+          {
+            "name": "Huntington Castle",
+            "url": "https://www.huntingtoncastle.com/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Huntington_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Huntington_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Huntington-castle-herefordshire-august-2018.jpg/330px-Huntington-castle-herefordshire-august-2018.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Lucy Sheers",
+          "license": "CC BY-SA 4.0",
+          "description": "Remains Of Huntington Castle\n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Remains Of Huntington Castle (Q26451314) with data related to this item.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "update wikipedia listing - https://en.wikipedia.org/wiki/Huntington_Castle,_Clonegal\nadd source - https://huntingtoncastle.com/",
+        "enrichNotes": "update wikipedia listing - https://en.wikipedia.org/wiki/Huntington_Castle,_Clonegal\nadd source - https://huntingtoncastle.com/"
+      },
+      "ts": 1779067053963
     }
   ]
 }
