@@ -1,3 +1,59 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Foulksrath Castle\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Kilkenny\n*Type:* tower house\n*Period:* 14th century\n*Coords:* 52.749614, -7.315992\n*Wikipedia:* https://en.wikipedia.org/wiki/Foulksrath_Castle\n*Maps:* https://www.google.com/maps/search/Foulksrath%20Castle/@52.688,-7.236,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Foulksrath_Castle.jpg/330px-Foulksrath_Castle.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nFoulksrath Castle is a 14th-century \nAnglo-Norman tower house located in Jenkinstown in County Kilkenny, Ireland.\n\n_Listing 1 of 212_",
+      "listing": {
+        "name": "Foulksrath Castle",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Kilkenny",
+        "lat": 52.749614,
+        "lng": -7.315992,
+        "mapsLink": "https://www.google.com/maps/search/Foulksrath%20Castle/@52.688,-7.236,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Foulksrath_Castle.jpg/330px-Foulksrath_Castle.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Foulksrath Castle is a 14th-century \nAnglo-Norman tower house located in Jenkinstown in County Kilkenny, Ireland.",
+        "type": "tower house",
+        "period": "14th century",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "norman",
+          "medieval"
+        ],
+        "source": [
+          {
+            "name": "An Oige",
+            "url": "https://www.anoige.ie/"
+          },
+          {
+            "name": "Kilkenny Heritage",
+            "url": "https://www.kilkennyheritage.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Foulksrath_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Foulksrath_Castle.jpg/330px-Foulksrath_Castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "User Postdlf on en.wikipedia",
+          "license": "CC BY-SA 3.0",
+          "description": "Foulksrath Castle, County Kilkenny, Republic of Ireland.",
+          "credit": "Digital photo taken by User:Postdlf",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Foulksrath_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779066972136
+    }
+  ]
 }
