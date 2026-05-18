@@ -105,6 +105,58 @@
         "enrichNotes": ""
       },
       "ts": 1779067320497
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Kilmore Cathedral\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Cavan\n*Type:* abbey\n*Period:* 12th century/19th century\n*Coords:* 53.97971, -7.41469694\n*Wikipedia:* https://en.wikipedia.org/wiki/St_Fethlimidh's_Cathedral%2C_Kilmore\n*Maps:* https://www.google.com/maps/search/Kilmore%20Cathedral/@53.973,-7.303,15z\n*Main Image:* https://img.castlecore.uk/kilmore-cathedral.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n*Enrich Notes:* google places link - https://maps.app.goo.gl/CsxJDNygLAKC1h3X6\n\n\n*Description:*\nSt Fethlimidh's Cathedral, Kilmore, is one of two cathedral churches in the Diocese of Kilmore, Elphin and Ardagh in the Church of Ireland. It is situated in the parish of Kilmore, southwest of the county town of Cavan. The name Kilmore - Cill Mhor meaning 'the great church' - reflects an earlier prominence that the Annals of the Four Masters have traced to an early medieval foundation. Of that church there are no physical remains\n\n_Listing 3 of 204_",
+      "listing": {
+        "name": "Kilmore Cathedral",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Cavan",
+        "lat": 53.97971,
+        "lng": -7.41469694,
+        "mapsLink": "https://www.google.com/maps/search/Kilmore%20Cathedral/@53.973,-7.303,15z",
+        "image": "https://img.castlecore.uk/kilmore-cathedral.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/kilmore-cathedral-2.jpg",
+          "https://img.castlecore.uk/kilmore-cathedral-3.jpg",
+          "https://img.castlecore.uk/kilmore-cathedral-4.jpg",
+          "https://img.castlecore.uk/kilmore-cathedral-5.jpg"
+        ],
+        "desc": "St Fethlimidh's Cathedral, Kilmore, is one of two cathedral churches in the Diocese of Kilmore, Elphin and Ardagh in the Church of Ireland. It is situated in the parish of Kilmore, southwest of the county town of Cavan. The name Kilmore - Cill Mhor meaning 'the great church' - reflects an earlier prominence that the Annals of the Four Masters have traced to an early medieval foundation. Of that church there are no physical remains",
+        "type": "abbey",
+        "period": "12th century/19th century",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "celtic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Cavan Heritage",
+            "url": "https://www.thisiscavan.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/St_Fethlimidh's_Cathedral%2C_Kilmore",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/KilmoreCathederal.jpg/330px-KilmoreCathederal.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "google places link - https://maps.app.goo.gl/CsxJDNygLAKC1h3X6\n",
+        "enrichNotes": "google places link - https://maps.app.goo.gl/CsxJDNygLAKC1h3X6\n"
+      },
+      "ts": 1779067361241
     }
   ]
 }
