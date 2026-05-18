@@ -957,6 +957,54 @@
         "enrichNotes": ""
       },
       "ts": 1779068508971
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Hereford Castle\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 11th century (demolished 18th century)\n*Coords:* 52.052414, -2.712169\n*Wikipedia:* https://en.wikipedia.org/wiki/Hereford_Castle\n*Maps:* https://www.google.com/maps/search/Hereford%20Castle/@52.0533,-2.715,15z\n*Main Image:* https://img.castlecore.uk/hereford-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nHereford Castle is a castle that used to be in the cathedral city of Hereford, the county town of Herefordshire, England. Founded sometime before 1052, it was one of the earliest castles in England. Hereford Castle was probably destroyed when the Welsh sacked Hereford in 1055, but seems to have been replaced by the following decade. During the civil war, when Stephen sought to usurp Queen Matilda, the castle was besieged three times; the garrison surrendered each time and control of Hereford Castle changed hands.\n\n_Listing 19 of 186_",
+      "listing": {
+        "name": "Hereford Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 52.052414,
+        "lng": -2.712169,
+        "mapsLink": "https://www.google.com/maps/search/Hereford%20Castle/@52.0533,-2.715,15z",
+        "image": "https://img.castlecore.uk/hereford-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/hereford-castle-2.jpg",
+          "https://img.castlecore.uk/hereford-castle-3.jpg",
+          "https://img.castlecore.uk/hereford-castle-4.jpg",
+          "https://img.castlecore.uk/hereford-castle-5.jpg"
+        ],
+        "desc": "Hereford Castle is a castle that used to be in the cathedral city of Hereford, the county town of Herefordshire, England. Founded sometime before 1052, it was one of the earliest castles in England. Hereford Castle was probably destroyed when the Welsh sacked Hereford in 1055, but seems to have been replaced by the following decade. During the civil war, when Stephen sought to usurp Queen Matilda, the castle was besieged three times; the garrison surrendered each time and control of Hereford Castle changed hands.",
+        "type": "castle",
+        "period": "11th century (demolished 18th century)",
+        "rating": 3.5,
+        "tags": [
+          "norman",
+          "medieval",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hereford_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hereford_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hereford_Castle_-_geograph.org.uk_-_552397.jpg/330px-Hereford_Castle_-_geograph.org.uk_-_552397.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Hereford_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068526680
     }
   ]
 }
