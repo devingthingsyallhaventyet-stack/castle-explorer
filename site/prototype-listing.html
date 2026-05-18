@@ -129,31 +129,43 @@ a:hover { text-decoration: underline; }
 .btn-primary { background: var(--burgundy); color: #fff; border-color: var(--burgundy); }
 .btn-primary:hover { background: var(--burgundy-glow); color: #fff; }
 
-/* === HERO IMAGE === */
-.hero-image {
+/* === GALLERY CAROUSEL === */
+.gallery {
   max-width: 1200px; margin: 0 auto;
   padding: 1rem clamp(1.5rem, 5vw, 3rem);
+  position: relative;
 }
-.hero-image img {
-  width: 100%; height: 500px; object-fit: cover; border-radius: 4px;
-  display: block;
+.gallery-track {
+  position: relative; overflow: hidden; border-radius: 4px;
+  background: #1a1a1a;
 }
-.photo-row {
-  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 6px;
+.gallery-track img {
+  width: 100%; height: 540px; object-fit: cover; display: none;
+  transition: opacity .3s;
 }
-.photo-row img {
-  width: 100%; height: 160px; object-fit: cover; border-radius: 3px;
-  cursor: pointer; transition: opacity .2s;
+.gallery-track img.active { display: block; }
+.gallery-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.85); border: none;
+  width: 40px; height: 40px; border-radius: 50%;
+  font-size: 1.1rem; cursor: pointer; display: flex;
+  align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15); transition: all .2s;
+  color: var(--ink); z-index: 2;
 }
-.photo-row img:hover { opacity: .85; }
-.photo-row .more-photos {
-  position: relative; cursor: pointer;
+.gallery-nav:hover { background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+.gallery-prev { left: 12px; }
+.gallery-next { right: 12px; }
+.gallery-counter {
+  position: absolute; bottom: 12px; right: 12px;
+  background: rgba(0,0,0,.6); color: #fff;
+  padding: 4px 12px; border-radius: 3px;
+  font-family: var(--sans); font-size: .7rem; font-weight: 500;
+  letter-spacing: 1px; z-index: 2;
 }
-.photo-row .more-photos::after {
-  content: '+12 photos'; position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(0,0,0,.5); color: #fff; border-radius: 3px;
-  font-family: var(--sans); font-size: .75rem; font-weight: 600; letter-spacing: 1px;
+.gallery-credit {
+  font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
+  margin-top: .4rem; text-align: right;
 }
 
 /* === MAIN LAYOUT === */
@@ -450,17 +462,31 @@ footer p {
   </div>
 </div>
 
-<!-- HERO IMAGE -->
-<div class="hero-image">
-  <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle from Princes Street Gardens">
-  <div class="photo-row">
+<!-- GALLERY -->
+<div class="gallery">
+  <div class="gallery-track">
+    <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle from Princes Street Gardens" class="active">
     <img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Edinburgh Castle interior">
     <img src="https://img.castlecore.uk/edinburgh-castle-interior-3.jpg" alt="Edinburgh Castle Great Hall">
-    <div class="more-photos">
-      <img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Edinburgh Castle views">
-    </div>
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Edinburgh Castle Crown Room">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-5.jpg" alt="Edinburgh Castle battlements">
+    <button class="gallery-nav gallery-prev" onclick="galleryNav(-1)">‹</button>
+    <button class="gallery-nav gallery-next" onclick="galleryNav(1)">›</button>
+    <div class="gallery-counter"><span id="gIdx">1</span> / <span id="gTotal">5</span></div>
   </div>
+  <div class="gallery-credit">Photo: Wikimedia Commons, CC BY-SA 4.0</div>
 </div>
+
+<script>
+const gImgs = document.querySelectorAll('.gallery-track img');
+let gCur = 0;
+function galleryNav(d) {
+  gImgs[gCur].classList.remove('active');
+  gCur = (gCur + d + gImgs.length) % gImgs.length;
+  gImgs[gCur].classList.add('active');
+  document.getElementById('gIdx').textContent = gCur + 1;
+}
+</script>
 
 <!-- MAIN CONTENT + SIDEBAR -->
 <div class="content-layout">
