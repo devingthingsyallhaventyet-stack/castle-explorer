@@ -1005,6 +1005,54 @@
         "enrichNotes": ""
       },
       "ts": 1779068526680
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Clifton Hall\n*Country:* england\n*Region:* the midlands\n*County:* Nottinghamshire\n*Type:* castle\n*Period:* Medieval / 18th century\n*Coords:* 52.9433, -1.1733\n*Wikipedia:* https://en.wikipedia.org/wiki/Manor_of_Clifton\n*Maps:* https://www.google.com/maps/search/Clifton%20Hall/@52.9433,-1.1733,15z\n*Main Image:* https://img.castlecore.uk/clifton-hall.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nClifton Hall may refer to:\n\n_Listing 20 of 186_",
+      "listing": {
+        "name": "Clifton Hall",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Nottinghamshire",
+        "lat": 52.9433,
+        "lng": -1.1733,
+        "mapsLink": "https://www.google.com/maps/search/Clifton%20Hall/@52.9433,-1.1733,15z",
+        "image": "https://img.castlecore.uk/clifton-hall.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/clifton-hall-tower-2.jpg",
+          "https://img.castlecore.uk/clifton-hall-tower-3.jpg",
+          "https://img.castlecore.uk/clifton-hall-tower-4.jpg",
+          "https://img.castlecore.uk/clifton-hall-tower-5.jpg"
+        ],
+        "desc": "Clifton Hall may refer to:",
+        "type": "castle",
+        "period": "Medieval / 18th century",
+        "rating": 3.5,
+        "tags": [
+          "medieval",
+          "haunted",
+          "dark-brooding",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Clifton_Hall"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clifton_Hall",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Manor_of_Clifton",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068535834
     }
   ]
 }
