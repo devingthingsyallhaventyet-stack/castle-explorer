@@ -1,3 +1,58 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Leixlip Castle\n*Country:* ireland\n*Region:* dublin and the pale\n*County:* County Kildare\n*Type:* castle\n*Period:* 12th century\n*Coords:* 53.365, -6.497\n*Wikipedia:* https://en.wikipedia.org/wiki/Leixlip_Castle\n*Maps:* https://www.google.com/maps/search/Leixlip%20Castle/@53.365,-6.497,15z\n*Main Image:* https://img.castlecore.uk/leixlip-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nLeixlip Castle is an 1824 short story by the Irish writer Charles Maturin. His final work, it was published posthumously. Maturin's earlier novels had been heavily Gothic in tone. With his previous work The Albigenses (1824) he moved towards historical stories in the style of Walter Scott's popular Waverley novels. In Leixlip Castle he combined both elements in a supernatural story concerning Ireland in the early 18th century. It should not be confused with a novel of the same title by M.L. O'Byrne published in 1883.\n\n_Listing 22 of 234_",
+      "listing": {
+        "name": "Leixlip Castle",
+        "country": "ireland",
+        "region": "dublin-and-the-pale",
+        "county": "County Kildare",
+        "lat": 53.365,
+        "lng": -6.497,
+        "mapsLink": "https://www.google.com/maps/search/Leixlip%20Castle/@53.365,-6.497,15z",
+        "image": "https://img.castlecore.uk/leixlip-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/leixlip-castle-2.jpg",
+          "https://img.castlecore.uk/leixlip-castle-3.jpg",
+          "https://img.castlecore.uk/leixlip-castle-4.jpg",
+          "https://img.castlecore.uk/leixlip-castle-5.jpg"
+        ],
+        "desc": "Leixlip Castle is an 1824 short story by the Irish writer Charles Maturin. His final work, it was published posthumously. Maturin's earlier novels had been heavily Gothic in tone. With his previous work The Albigenses (1824) he moved towards historical stories in the style of Walter Scott's popular Waverley novels. In Leixlip Castle he combined both elements in a supernatural story concerning Ireland in the early 18th century. It should not be confused with a novel of the same title by M.L. O'Byrne published in 1883.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.7,
+        "tags": [
+          "well-preserved",
+          "norman",
+          "medieval",
+          "riverside"
+        ],
+        "source": [
+          {
+            "name": "Kildare Heritage",
+            "url": "https://www.kildare.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Leixlip_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Leixlip_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Maturin.jpg/330px-Maturin.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Leixlip_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779066885165
+    }
+  ]
 }
