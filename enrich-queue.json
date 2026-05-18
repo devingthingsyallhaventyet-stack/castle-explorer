@@ -199,6 +199,55 @@
         "enrichNotes": "needs research "
       },
       "ts": 1779066076367
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Clonfert Cathedral\n*Country:* ireland\n*Region:* wild atlantic way\n*County:* County Galway\n*Type:* cathedral\n*Period:* 6th-12th century\n*Coords:* 53.240651, -8.058621\n*Wikipedia:* https://en.wikipedia.org/wiki/Clonfert_Cathedral\n*Maps:* https://www.google.com/maps/search/Clonfert%20Cathedral/@53.228,-8.068,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMNV9RrPghV_Tr2qCCC0pevreYBXaCWupD5C7cwIR968MiKjpUbcwuNOpnjCspeaQABQVwNLxIqSmOW6PrGKVBpeht3HG3XTsQPcmdL0Ra_WhdBNHVsUaxS1AZKAXH8kT1s63nfd-No5pBRHw=s4800-w800\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nClonfert Cathedral is a cathedral of the Church of Ireland in Clonfert, County Galway in Ireland. Previously the cathedral of the Diocese of Clonfert and then one of three cathedrals in the United Dioceses of Limerick and Killaloe, it is now one of five cathedrals in the Diocese of Tuam, Limerick and Killaloe.\n\n_Listing 5 of 234_",
+      "listing": {
+        "name": "Clonfert Cathedral",
+        "country": "ireland",
+        "region": "wild-atlantic-way",
+        "county": "County Galway",
+        "lat": 53.240651,
+        "lng": -8.058621,
+        "mapsLink": "https://www.google.com/maps/search/Clonfert%20Cathedral/@53.228,-8.068,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMNV9RrPghV_Tr2qCCC0pevreYBXaCWupD5C7cwIR968MiKjpUbcwuNOpnjCspeaQABQVwNLxIqSmOW6PrGKVBpeht3HG3XTsQPcmdL0Ra_WhdBNHVsUaxS1AZKAXH8kT1s63nfd-No5pBRHw=s4800-w800",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Clonfert Cathedral is a cathedral of the Church of Ireland in Clonfert, County Galway in Ireland. Previously the cathedral of the Diocese of Clonfert and then one of three cathedrals in the United Dioceses of Limerick and Killaloe, it is now one of five cathedrals in the Diocese of Tuam, Limerick and Killaloe.",
+        "type": "cathedral",
+        "period": "6th-12th century",
+        "rating": 3.8,
+        "tags": [
+          "celtic",
+          "well-preserved",
+          "photogenic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Clonfert_Cathedral"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clonfert_Cathedral",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/07_Clonfert_Cathedral.png/330px-07_Clonfert_Cathedral.png",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Clonfert_Cathedral",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779066098712
     }
   ]
 }
