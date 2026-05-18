@@ -821,6 +821,55 @@
         "enrichNotes": "no google places"
       },
       "ts": 1779066500328
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Sheriff Hutton Castle\n*Country:* england\n*Region:* yorkshire\n*County:* Yorkshire\n*Type:* castle\n*Period:* 14th century\n*Coords:* 54.08777778, -1.00472222\n*Wikipedia:* https://en.wikipedia.org/wiki/Sheriff_Hutton_Castle\n*Maps:* https://www.google.com/maps/search/Sheriff%20Hutton%20Castle/@54.0833,-1.0333,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZPUelt9Hm9gV3d5PlaU10zqQoeYo6kb0mYu6ZnM2L1xnX5oggGHAcJYHPT2MJidU7nl4oA07CbQND_mi8BK5ViH0fXjvLHACNPKHWIBhEPFezeuIhHukxyxJmXcfIYDDwv8EDoEGDIjEWPOBA=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.sheriffhuttoncastle.co.uk/\n\n*Description:*\nSheriff Hutton Castle is a ruined quadrangular castle in the village of Sheriff Hutton, North Yorkshire, England. The site of the castle is 10 miles (16 km) north of York, and 8 miles (13 km) south-east of Easingwold.\n\n_Listing 17 of 234_",
+      "listing": {
+        "name": "Sheriff Hutton Castle",
+        "country": "england",
+        "region": "yorkshire",
+        "county": "Yorkshire",
+        "lat": 54.08777778,
+        "lng": -1.00472222,
+        "mapsLink": "https://www.google.com/maps/search/Sheriff%20Hutton%20Castle/@54.0833,-1.0333,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZPUelt9Hm9gV3d5PlaU10zqQoeYo6kb0mYu6ZnM2L1xnX5oggGHAcJYHPT2MJidU7nl4oA07CbQND_mi8BK5ViH0fXjvLHACNPKHWIBhEPFezeuIhHukxyxJmXcfIYDDwv8EDoEGDIjEWPOBA=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Sheriff Hutton Castle is a ruined quadrangular castle in the village of Sheriff Hutton, North Yorkshire, England. The site of the castle is 10 miles (16 km) north of York, and 8 miles (13 km) south-east of Easingwold.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.7,
+        "tags": [
+          "medieval",
+          "atmospheric",
+          "dark-brooding"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Sheriff_Hutton_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Sheriff_Hutton_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sheriff_hutton_castle.jpg/330px-Sheriff_hutton_castle.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Shaunconway",
+          "license": "CC BY 3.0",
+          "description": "Sheriff Hutton Castle taken from the eastern side of the castle.",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "add source - https://www.sheriffhuttoncastle.co.uk/",
+        "enrichNotes": "add source - https://www.sheriffhuttoncastle.co.uk/"
+      },
+      "ts": 1779066540659
     }
   ]
 }
