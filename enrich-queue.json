@@ -678,6 +678,56 @@
         "enrichNotes": ""
       },
       "ts": 1779068404591
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Trematon Castle\n*Country:* england\n*Region:* south west\n*County:* Cornwall\n*Type:* castle\n*Period:* 11th century\n*Coords:* 50.40044, -4.23774\n*Wikipedia:* https://en.wikipedia.org/wiki/Trematon_Castle\n*Maps:* https://www.google.com/maps/search/Trematon%20Castle/@50.4028,-4.2583,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg/330px-Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nTrematon Castle is situated near Saltash in Cornwall, England, United Kingdom. It was the caput of the feudal barony of Trematon. It is similar in style to the later Restormel Castle, with a 12th-century keep. Trematon Castle overlooks Plymouth Sound and was built probably by Robert, Count of Mortain on the ruins of an earlier Roman fort: it is a motte-and-bailey castle and dates from soon after the Norman Conquest. It occupies a sentinel position one and a half miles south-east of Trematon village.\n\n_Listing 14 of 186_",
+      "listing": {
+        "name": "Trematon Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Cornwall",
+        "lat": 50.40044,
+        "lng": -4.23774,
+        "mapsLink": "https://www.google.com/maps/search/Trematon%20Castle/@50.4028,-4.2583,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg/330px-Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Trematon Castle is situated near Saltash in Cornwall, England, United Kingdom. It was the caput of the feudal barony of Trematon. It is similar in style to the later Restormel Castle, with a 12th-century keep. Trematon Castle overlooks Plymouth Sound and was built probably by Robert, Count of Mortain on the ruins of an earlier Roman fort: it is a motte-and-bailey castle and dates from soon after the Norman Conquest. It occupies a sentinel position one and a half miles south-east of Trematon village.",
+        "type": "castle",
+        "period": "11th century",
+        "rating": 3.5,
+        "tags": [
+          "ruins-romantic",
+          "coastal",
+          "norman",
+          "medieval",
+          "hidden-gem",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Trematon_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Trematon_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg/330px-Keep%2C_Trematon_Castle_-_geograph.org.uk_-_1192900.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Derek Harper",
+          "license": "CC BY-SA 2.0",
+          "description": "Keep, Trematon Castle. The keep at 1192732 seen from the path shown in 1192860. \"Vaguely oval, 57 by 71.5 ft and 27 ft high to the rampart\" (Pevsner, 1951). \" The parapet is complete with the merlons solid, except for one\".",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068421839
     }
   ]
 }
