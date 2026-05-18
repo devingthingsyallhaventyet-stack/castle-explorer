@@ -154,6 +154,26 @@ a:hover { text-decoration: underline; }
   transition: opacity .2s;
 }
 .gallery-strip img:hover { opacity: .92; }
+.gallery-strip .img-wrap {
+  flex: 0 0 auto; position: relative;
+}
+.gallery-strip .img-wrap img {
+  height: 500px; width: auto; max-width: 80vw;
+  object-fit: cover; border-radius: 4px;
+  scroll-snap-align: start; cursor: pointer;
+  transition: opacity .2s; flex: initial;
+}
+.gallery-strip .img-wrap:hover .img-credit {
+  opacity: 1;
+}
+.img-credit {
+  position: absolute; bottom: 8px; left: 8px; right: 8px;
+  background: rgba(0,0,0,.7); color: #fff;
+  padding: 5px 10px; border-radius: 3px;
+  font-family: var(--sans); font-size: .68rem;
+  opacity: 0; transition: opacity .25s;
+  pointer-events: none;
+}
 .gallery-nav {
   position: absolute; top: 50%; transform: translateY(-50%);
   background: rgba(255,255,255,.9); border: none;
@@ -482,11 +502,11 @@ footer p {
 <div class="gallery">
   <div class="gallery-strip-wrapper">
     <div class="gallery-strip" id="galleryStrip">
-      <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle from Princes Street Gardens">
-      <img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Edinburgh Castle interior">
-      <img src="https://img.castlecore.uk/edinburgh-castle-interior-3.jpg" alt="Edinburgh Castle Great Hall">
-      <img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Edinburgh Castle Crown Room">
-      <img src="https://img.castlecore.uk/edinburgh-castle-interior-5.jpg" alt="Edinburgh Castle battlements">
+      <div class="img-wrap"><img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Edinburgh Castle from Princes Street Gardens"><div class="img-credit">📷 Kim Traynor · Wikimedia Commons, CC BY-SA 3.0</div></div>
+      <div class="img-wrap"><img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Edinburgh Castle interior"><div class="img-credit">📷 Dun.can · Wikimedia Commons, CC BY 2.0</div></div>
+      <div class="img-wrap"><img src="https://img.castlecore.uk/edinburgh-castle-interior-3.jpg" alt="Edinburgh Castle Great Hall"><div class="img-credit">📷 Billyboy · Wikimedia Commons, CC BY-SA 4.0</div></div>
+      <div class="img-wrap"><img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Edinburgh Castle Crown Room"><div class="img-credit">📷 Wikimedia Commons, CC BY-SA 3.0</div></div>
+      <div class="img-wrap"><img src="https://img.castlecore.uk/edinburgh-castle-interior-5.jpg" alt="Edinburgh Castle battlements"><div class="img-credit">📷 Wikimedia Commons, CC BY-SA 4.0</div></div>
     </div>
     <button class="gallery-nav gallery-prev" onclick="document.getElementById('galleryStrip').scrollBy({left:-400,behavior:'smooth'})">‹</button>
     <button class="gallery-nav gallery-next" onclick="document.getElementById('galleryStrip').scrollBy({left:400,behavior:'smooth'})">›</button>
@@ -498,7 +518,7 @@ footer p {
     <img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Thumb 4" onclick="goToSlide(3)">
     <img src="https://img.castlecore.uk/edinburgh-castle-interior-5.jpg" alt="Thumb 5" onclick="goToSlide(4)">
   </div>
-  <div class="gallery-credit">Photos: Wikimedia Commons, CC BY-SA 4.0</div>
+  <!-- credits now on hover per image -->
 </div>
 
 <script>
