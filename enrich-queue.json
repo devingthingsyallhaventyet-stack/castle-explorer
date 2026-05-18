@@ -565,6 +565,64 @@
         "enrichNotes": ""
       },
       "ts": 1779066374978
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Hemyock Castle\n*Country:* england\n*Region:* south west\n*County:* Devon\n*Type:* castle\n*Period:* 14th century\n*Coords:* 50.91249, -3.23144\n*Wikipedia:* https://en.wikipedia.org/wiki/Hemyock_Castle\n*Maps:* https://www.google.com/maps/search/Hemyock%20Castle/@50.8992,-3.2253,15z\n*Main Image:* https://lh3.googleusercontent.com/places/ANXAkqF_YepcaWgGpbkd_yWkiBOEcY4YGwFmArJTfCFs9SQJNbrizaij0iNV18mSs0GRzscaFaw3J99wUUM1-ArtDNwk1VGmMBJKn5s=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n*Enrich Notes:* add source - https://www.hemyockcastle.uk/\n\n*Description:*\nHemyock Castle is a ruined 14th-century castle in the village of Hemyock, Devon, England. It was built by Sir William Asthorpe after 1380 to a quadrangular design. It would have been visually impressive, but not particularly functional, with various intrinsic flaws. By the 16th century it had fallen into ruin and, following its use during the English Civil War in the mid-17th century, it was pulled down (slighted). In the 21st century the site is occupied by the fragments of the original castle; and Castle House, an 18th-century house built within the site, and restored as private home at the end of the 20th century.\n\n_Listing 12 of 234_",
+      "listing": {
+        "name": "Hemyock Castle",
+        "country": "england",
+        "region": "south-west",
+        "county": "Devon",
+        "lat": 50.91249,
+        "lng": -3.23144,
+        "mapsLink": "https://www.google.com/maps/search/Hemyock%20Castle/@50.8992,-3.2253,15z",
+        "image": "https://lh3.googleusercontent.com/places/ANXAkqF_YepcaWgGpbkd_yWkiBOEcY4YGwFmArJTfCFs9SQJNbrizaij0iNV18mSs0GRzscaFaw3J99wUUM1-ArtDNwk1VGmMBJKn5s=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Hemyock Castle is a ruined 14th-century castle in the village of Hemyock, Devon, England. It was built by Sir William Asthorpe after 1380 to a quadrangular design. It would have been visually impressive, but not particularly functional, with various intrinsic flaws. By the 16th century it had fallen into ruin and, following its use during the English Civil War in the mid-17th century, it was pulled down (slighted). In the 21st century the site is occupied by the fragments of the original castle; and Castle House, an 18th-century house built within the site, and restored as private home at the end of the 20th century.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.7,
+        "tags": [
+          "medieval",
+          "atmospheric",
+          "ruins-romantic",
+          "kid-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hemyock_Castle"
+          },
+          {
+            "name": "Hemyock Castle",
+            "url": "https://www.hemyockcastle.uk/"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1004583"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Hemyock_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Hemyock_Castle_-_geograph.org.uk_-_1491334.jpg/330px-Hemyock_Castle_-_geograph.org.uk_-_1491334.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "don cload",
+          "license": "CC BY-SA 2.0",
+          "description": "Hemyock Castle This is the main part of the castle that remains.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "add source - https://www.hemyockcastle.uk/",
+        "enrichNotes": "add source - https://www.hemyockcastle.uk/"
+      },
+      "ts": 1779066404932
     }
   ]
 }
