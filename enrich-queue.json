@@ -624,6 +624,51 @@
         "enrichNotes": "idk"
       },
       "ts": 1779067785926
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bronllys Castle\n*Country:* wales\n*Region:* mid wales marches\n*County:* Powys\n*Type:* castle\n*Period:* 12th century\n*Coords:* 52.0036, -3.24056\n*Wikipedia:* https://en.wikipedia.org/wiki/Bronllys_Castle\n*Maps:* https://www.google.com/maps/search/Bronllys%20Castle/@51.9565,-3.2447,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg/330px-Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg\n*Gallery:* 0 images\n*Image Source:* wikipedia\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nBronllys Castle is a motte and bailey fortress standing south of Bronllys, towards Talgarth in Powys, Wales. The original castle, constructed of wood, was founded in or soon after 1100 by Richard Fitz Pons, the owner of the nearby Herefordshire barony of Clifford, who was a supporter of Bernard of Neufmarché.\n\n_Listing 13 of 204_",
+      "listing": {
+        "name": "Bronllys Castle",
+        "country": "wales",
+        "region": "mid-wales-marches",
+        "county": "Powys",
+        "lat": 52.0036,
+        "lng": -3.24056,
+        "mapsLink": "https://www.google.com/maps/search/Bronllys%20Castle/@51.9565,-3.2447,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg/330px-Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [],
+        "desc": "Bronllys Castle is a motte and bailey fortress standing south of Bronllys, towards Talgarth in Powys, Wales. The original castle, constructed of wood, was founded in or soon after 1100 by Richard Fitz Pons, the owner of the nearby Herefordshire barony of Clifford, who was a supporter of Bernard of Neufmarché.",
+        "type": "castle",
+        "period": "12th century",
+        "rating": 3.6,
+        "tags": [
+          "romantic-ruin",
+          "hidden-gem",
+          "free"
+        ],
+        "source": "",
+        "wiki": "https://en.wikipedia.org/wiki/Bronllys_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg/330px-Bronllys_Castle_-_geograph.org.uk_-_1921221.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Keith Salvesen",
+          "license": "CC BY-SA 2.0",
+          "description": "Bronllys Castle",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bronllys_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067807702
     }
   ]
 }
