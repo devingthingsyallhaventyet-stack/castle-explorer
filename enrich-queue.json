@@ -259,6 +259,62 @@
         "enrichNotes": "more "
       },
       "ts": 1779067412038
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Dalton Castle\n*Country:* england\n*Region:* northern england\n*County:* Cumbria\n*Type:* castle\n*Period:* 14th century\n*Coords:* 54.154, -3.18\n*Wikipedia:* https://en.wikipedia.org/wiki/Dalton_Castle,_Cumbria\n*Maps:* https://www.google.com/maps/search/Dalton%20Castle/@54.154,-3.18,15z\n*Main Image:* https://img.castlecore.uk/dalton-castle.jpg\n*Gallery:* 8 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nDalton Castle may refer to:Dalton Castle, Cumbria\nDalton Castle (wrestler)\n\n\n\n_Listing 6 of 204_",
+      "listing": {
+        "name": "Dalton Castle",
+        "country": "england",
+        "region": "northern-england",
+        "county": "Cumbria",
+        "lat": 54.154,
+        "lng": -3.18,
+        "mapsLink": "https://www.google.com/maps/search/Dalton%20Castle/@54.154,-3.18,15z",
+        "image": "https://img.castlecore.uk/dalton-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/dalton-castle-2.jpg",
+          "https://img.castlecore.uk/dalton-castle-3.jpg",
+          "https://img.castlecore.uk/dalton-castle-4.jpg",
+          "https://img.castlecore.uk/dalton-castle-5.jpg",
+          "https://img.castlecore.uk/dalton-castle-main-2.jpg",
+          "https://img.castlecore.uk/dalton-castle-main-3.jpg",
+          "https://img.castlecore.uk/dalton-castle-main-4.jpg",
+          "https://img.castlecore.uk/dalton-castle-main-5.jpg"
+        ],
+        "desc": "Dalton Castle may refer to:Dalton Castle, Cumbria\nDalton Castle (wrestler)\n\n",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.6,
+        "tags": [
+          "well-preserved",
+          "museum",
+          "medieval",
+          "norman"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Dalton_Castle,_Cumbria"
+          },
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/dalton-castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Dalton_Castle",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Dalton_Castle,_Cumbria",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067473515
     }
   ]
 }
