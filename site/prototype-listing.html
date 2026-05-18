@@ -170,6 +170,20 @@ a:hover { text-decoration: underline; }
   font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
   margin-top: .4rem; text-align: right;
 }
+.gallery-thumbs {
+  display: flex; gap: 6px; margin-top: 8px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.gallery-thumbs::-webkit-scrollbar { display: none; }
+.gallery-thumbs img {
+  flex: 0 0 auto;
+  width: 80px; height: 56px; object-fit: cover;
+  border-radius: 3px; cursor: pointer;
+  border: 2px solid transparent;
+  opacity: .6; transition: all .2s;
+}
+.gallery-thumbs img:hover { opacity: 1; }
+.gallery-thumbs img.active { border-color: var(--burgundy); opacity: 1; }
 
 /* === MAIN LAYOUT === */
 .content-layout {
@@ -477,8 +491,39 @@ footer p {
     <button class="gallery-nav gallery-prev" onclick="document.getElementById('galleryStrip').scrollBy({left:-400,behavior:'smooth'})">‹</button>
     <button class="gallery-nav gallery-next" onclick="document.getElementById('galleryStrip').scrollBy({left:400,behavior:'smooth'})">›</button>
   </div>
+  <div class="gallery-thumbs" id="galleryThumbs">
+    <img src="https://img.castlecore.uk/edinburgh-castle-2.jpg" alt="Thumb 1" class="active" onclick="goToSlide(0)">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-2.jpg" alt="Thumb 2" onclick="goToSlide(1)">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-3.jpg" alt="Thumb 3" onclick="goToSlide(2)">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-4.jpg" alt="Thumb 4" onclick="goToSlide(3)">
+    <img src="https://img.castlecore.uk/edinburgh-castle-interior-5.jpg" alt="Thumb 5" onclick="goToSlide(4)">
+  </div>
   <div class="gallery-credit">Photos: Wikimedia Commons, CC BY-SA 4.0</div>
 </div>
+
+<script>
+(function(){
+  const strip = document.getElementById('galleryStrip');
+  const imgs = strip.querySelectorAll('img');
+  const thumbs = document.querySelectorAll('#galleryThumbs img');
+  
+  function goToSlide(i) {
+    imgs[i].scrollIntoView({ behavior:'smooth', inline:'start', block:'nearest' });
+    thumbs.forEach((t,j) => t.classList.toggle('active', j===i));
+  }
+  window.goToSlide = goToSlide;
+
+  // Update active thumb on scroll
+  strip.addEventListener('scroll', function() {
+    let closest = 0, minDist = Infinity;
+    imgs.forEach((img, i) => {
+      const d = Math.abs(img.getBoundingClientRect().left - strip.getBoundingClientRect().left);
+      if (d < minDist) { minDist = d; closest = i; }
+    });
+    thumbs.forEach((t,j) => t.classList.toggle('active', j===closest));
+  });
+})();
+</script>
 
 <!-- MAIN CONTENT + SIDEBAR -->
 <div class="content-layout">
