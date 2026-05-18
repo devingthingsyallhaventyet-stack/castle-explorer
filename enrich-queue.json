@@ -106,6 +106,57 @@
         "enrichNotes": "more research "
       },
       "ts": 1779065622806
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Drumlane Abbey\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Cavan\n*Type:* abbey\n*Period:* Early Medieval-15th century\n*Coords:* 54.05722222, -7.47805556\n*Wikipedia:* https://en.wikipedia.org/wiki/Drumlane_abbey\n*Maps:* https://www.google.com/maps/search/Drumlane%20Abbey/@54.071,-7.523,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMEy1dIJ53Hk5IlYGtOIwFROzyQV-BrVjsC7sOVSlBQl6Cexs7b5uu75qtQLB13-luOHgJZbG08WLFDzPQUZc2Sd2QeLPkZJgN4trhJc_FHIwcPtgUZc3ZI-q7ww0OPGv3ZK2vJJvc8BgoFLDP5n9S4-A=s4800-w800\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n*Enrich Notes:* more research \n\n*Description:*\nDrumlane is a townland near the village of Milltown in County Cavan, Ireland. The area of Drumlane is approximately 85.76 hectares. Drumlane is also the name of the civil parish in which the townland is situated. Christianity was introduced to Drumlane in 555 by Saint Columba, and Saint Máedóc of Ferns, known locally as Saint Mogue, founded an early Drumlane monastery. Saint Mogue made the Connachta nobleman Faircheallaigh the first Abbot of Drumlane at the end of the sixth century, and his Ó Faircheallaigh descendants were historically the Abbots of Drumlane. The name Drumlane denotes the drumlin region of low hilly ribbed moraines formed over a limestone bedrock created by the movement of glacial ice and melt water during the last ice age. Several townlands in the neighbourhood are prefixed with the word 'Drum' (Droim), while several others are prefixed with the word 'Derry' (Doire), which is Irish for oak.\n\n_Listing 3 of 238_",
+      "listing": {
+        "name": "Drumlane Abbey",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Cavan",
+        "lat": 54.05722222,
+        "lng": -7.47805556,
+        "mapsLink": "https://www.google.com/maps/search/Drumlane%20Abbey/@54.071,-7.523,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMEy1dIJ53Hk5IlYGtOIwFROzyQV-BrVjsC7sOVSlBQl6Cexs7b5uu75qtQLB13-luOHgJZbG08WLFDzPQUZc2Sd2QeLPkZJgN4trhJc_FHIwcPtgUZc3ZI-q7ww0OPGv3ZK2vJJvc8BgoFLDP5n9S4-A=s4800-w800",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Drumlane is a townland near the village of Milltown in County Cavan, Ireland. The area of Drumlane is approximately 85.76 hectares. Drumlane is also the name of the civil parish in which the townland is situated. Christianity was introduced to Drumlane in 555 by Saint Columba, and Saint Máedóc of Ferns, known locally as Saint Mogue, founded an early Drumlane monastery. Saint Mogue made the Connachta nobleman Faircheallaigh the first Abbot of Drumlane at the end of the sixth century, and his Ó Faircheallaigh descendants were historically the Abbots of Drumlane. The name Drumlane denotes the drumlin region of low hilly ribbed moraines formed over a limestone bedrock created by the movement of glacial ice and melt water during the last ice age. Several townlands in the neighbourhood are prefixed with the word 'Drum' (Droim), while several others are prefixed with the word 'Derry' (Doire), which is Irish for oak.",
+        "type": "abbey",
+        "period": "Early Medieval-15th century",
+        "rating": 3.8,
+        "tags": [
+          "celtic",
+          "ruins-romantic",
+          "medieval",
+          "atmospheric",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Cavan Heritage",
+            "url": "https://www.thisiscavan.ie/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Drumlane",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Drumlane_Abbey.jpg/330px-Drumlane_Abbey.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Drumlane_abbey",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNote": "more research ",
+        "enrichNotes": "more research "
+      },
+      "ts": 1779065666889
     }
   ]
 }
