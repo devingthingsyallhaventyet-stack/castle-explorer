@@ -157,6 +157,58 @@
         "enrichNotes": "google places link - https://maps.app.goo.gl/CsxJDNygLAKC1h3X6\n"
       },
       "ts": 1779067361241
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Clones Round Tower\n*Country:* ireland\n*Region:* ulster and the north\n*County:* County Monaghan\n*Type:* abbey\n*Period:* 10th-12th century\n*Coords:* 54.183, -7.2337\n*Wikipedia:* https://en.wikipedia.org/wiki/Clones_Abbey\n*Maps:* https://www.google.com/maps/search/Clones%20Round%20Tower/@54.18,-7.229,15z\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Clones_Round_Tower_and_Graveyard.jpg/330px-Clones_Round_Tower_and_Graveyard.jpg\n*Gallery:* 4 images\n*Image Source:* wikipedia\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n\n*Description:*\nClones Abbey is a ruined monastery that later became an Augustinian abbey in the twelfth century, and its main sights are ecclesiastical. It was formerly known as St. Tighernach Abbey, and was referred to locally as the \"wee abbey\". Parochial and monastic settlements were separated, and it seems likely that the building became the Abbey of St. Peter and Paul. In the Book of Armagh and Annals of Ulster the word Clones is referenced as \"Clauin Auis\" and \"Cluain Auiss,\" respectively. As there is no word in standard dictionaries of Old Irish that give the form \"auis\" or \"eois\", Seosamh Ó Dufaigh has speculated that the word is a cognate of the Welsh word for point or a tip: \"awch\". Bearnard O'Dubhthaigh disputes this theory on the grounds that the earlier form of \"awch\" is \"afwch\". Folklore suggests that the monastic town was originally called \"Cluin Innish\" due to being surrounded by water.\n\n_Listing 4 of 204_",
+      "listing": {
+        "name": "Clones Round Tower",
+        "country": "ireland",
+        "region": "ulster-and-the-north",
+        "county": "County Monaghan",
+        "lat": 54.183,
+        "lng": -7.2337,
+        "mapsLink": "https://www.google.com/maps/search/Clones%20Round%20Tower/@54.18,-7.229,15z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Clones_Round_Tower_and_Graveyard.jpg/330px-Clones_Round_Tower_and_Graveyard.jpg",
+        "imgSource": "wikipedia",
+        "gallery": [
+          "https://img.castlecore.uk/clones-round-tower-2.jpg",
+          "https://img.castlecore.uk/clones-round-tower-3.jpg",
+          "https://img.castlecore.uk/clones-round-tower-4.jpg",
+          "https://img.castlecore.uk/clones-round-tower-5.jpg"
+        ],
+        "desc": "Clones Abbey is a ruined monastery that later became an Augustinian abbey in the twelfth century, and its main sights are ecclesiastical. It was formerly known as St. Tighernach Abbey, and was referred to locally as the \"wee abbey\". Parochial and monastic settlements were separated, and it seems likely that the building became the Abbey of St. Peter and Paul. In the Book of Armagh and Annals of Ulster the word Clones is referenced as \"Clauin Auis\" and \"Cluain Auiss,\" respectively. As there is no word in standard dictionaries of Old Irish that give the form \"auis\" or \"eois\", Seosamh Ó Dufaigh has speculated that the word is a cognate of the Welsh word for point or a tip: \"awch\". Bearnard O'Dubhthaigh disputes this theory on the grounds that the earlier form of \"awch\" is \"afwch\". Folklore suggests that the monastic town was originally called \"Cluin Innish\" due to being surrounded by water.",
+        "type": "abbey",
+        "period": "10th-12th century",
+        "rating": 3.7,
+        "tags": [
+          "celtic",
+          "well-preserved",
+          "photogenic",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Monaghan Heritage",
+            "url": "https://www.monaghantourism.com/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clones_Abbey",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Clones_Round_Tower_and_Graveyard.jpg/330px-Clones_Round_Tower_and_Graveyard.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779067390366
     }
   ]
 }
