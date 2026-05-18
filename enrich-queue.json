@@ -723,6 +723,55 @@
         "enrichNotes": "add source - https://www.bridgnorthcastle.uk/"
       },
       "ts": 1779066450361
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Barnwell Castle\n*Country:* england\n*Region:* the midlands\n*County:* Northamptonshire\n*Type:* castle\n*Period:* 13th century\n*Coords:* 52.45563, -0.46062\n*Wikipedia:* https://en.wikipedia.org/wiki/Barnwell_Castle\n*Maps:* https://www.google.com/maps/search/Barnwell%20Castle/@52.4517,-0.45,15z\n*Main Image:* https://img.castlecore.uk/barnwell-castle.jpg\n*Gallery:* 4 images\n*Image Source:* CDN\n*Has Wikipedia:* yes\n*Has Google Places:* unknown\n\n*Description:*\nBarnwell Castle is a ruined castle, south of the town of Oundle, and north of the village of Barnwell, Northamptonshire. It has been designated by English Heritage as a Grade I listed building, and is a Scheduled Ancient Monument. It is under private ownership.\n\n_Listing 15 of 234_",
+      "listing": {
+        "name": "Barnwell Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Northamptonshire",
+        "lat": 52.45563,
+        "lng": -0.46062,
+        "mapsLink": "https://www.google.com/maps/search/Barnwell%20Castle/@52.4517,-0.45,15z",
+        "image": "https://img.castlecore.uk/barnwell-castle.jpg",
+        "imgSource": "CDN",
+        "gallery": [
+          "https://img.castlecore.uk/barnwell-castle-2.jpg",
+          "https://img.castlecore.uk/barnwell-castle-3.jpg",
+          "https://img.castlecore.uk/barnwell-castle-4.jpg",
+          "https://img.castlecore.uk/barnwell-castle-5.jpg"
+        ],
+        "desc": "Barnwell Castle is a ruined castle, south of the town of Oundle, and north of the village of Barnwell, Northamptonshire. It has been designated by English Heritage as a Grade I listed building, and is a Scheduled Ancient Monument. It is under private ownership.",
+        "type": "castle",
+        "period": "13th century",
+        "rating": 3.7,
+        "tags": [
+          "medieval",
+          "well-preserved",
+          "ruins-romantic",
+          "atmospheric"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Barnwell_Castle"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Barnwell_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Barnwell_Castle.jpg/330px-Barnwell_Castle.jpg",
+        "reviewStatus": "flagged",
+        "exists": "unverified",
+        "hasWikipedia": "yes",
+        "hasGooglePlaces": "unknown",
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Barnwell_Castle",
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779066469459
     }
   ]
 }
