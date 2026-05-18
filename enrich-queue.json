@@ -623,6 +623,61 @@
         "enrichNotes": "update google places link - https://maps.app.goo.gl/uiawcKbaBvRY6Ujk6\n"
       },
       "ts": 1779068387924
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Bramber Castle\n*Country:* england\n*Region:* south east london\n*County:* West Sussex\n*Type:* castle\n*Period:* 11th century\n*Coords:* 50.884087, -0.316088\n*Wikipedia:* https://en.wikipedia.org/wiki/Bramber_Castle\n*Maps:* https://www.google.com/maps/search/Bramber%20Castle/@50.8847,-0.3092,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMZdxaH80gcYs9wVKHKIvEp25CNo0a36VVlm-j0fzq62v0hPNoRfE3zc7XNZkkapNFZzNOOK8fb3ScDI1RHAgdFuvM9nX032KJ2q_Ga7sqKaVOd7t9c3bzJFfVgI6Off4gulrx-Hjaux_jWvQ=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBramber Castle is the ruins of a Norman motte-and-bailey castle, formerly the caput of the large feudal barony of Bramber long held by the Braose family. It is situated in the village of Bramber, West Sussex, near the town of Steyning, overlooking the River Adur.\n\n_Listing 13 of 186_",
+      "listing": {
+        "name": "Bramber Castle",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "West Sussex",
+        "lat": 50.884087,
+        "lng": -0.316088,
+        "mapsLink": "https://www.google.com/maps/search/Bramber%20Castle/@50.8847,-0.3092,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMZdxaH80gcYs9wVKHKIvEp25CNo0a36VVlm-j0fzq62v0hPNoRfE3zc7XNZkkapNFZzNOOK8fb3ScDI1RHAgdFuvM9nX032KJ2q_Ga7sqKaVOd7t9c3bzJFfVgI6Off4gulrx-Hjaux_jWvQ=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Bramber Castle is the ruins of a Norman motte-and-bailey castle, formerly the caput of the large feudal barony of Bramber long held by the Braose family. It is situated in the village of Bramber, West Sussex, near the town of Steyning, overlooking the River Adur.",
+        "type": "castle",
+        "period": "11th century",
+        "rating": 3.5,
+        "tags": [
+          "ruins-romantic",
+          "riverside",
+          "free-entry",
+          "norman",
+          "atmospheric",
+          "dog-friendly"
+        ],
+        "source": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bramber_Castle"
+          },
+          {
+            "name": "English Heritage",
+            "url": "https://www.english-heritage.org.uk/visit/places/bramber-castle/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Bramber_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Bramber_Castle_1.jpg/330px-Bramber_Castle_1.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Margaret Anne Clarke",
+          "license": "CC BY-SA 3.0",
+          "description": "Remains of the Norman keep of Old Bramber Castle near the river Adur in West Sussex, England, United Kingdom",
+          "credit": "Own work",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068404591
     }
   ]
 }
