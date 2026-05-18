@@ -898,6 +898,65 @@
         "enrichNotes": ""
       },
       "ts": 1779068495409
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[🔧 STILL IN PROGRESS\\]\n\n*Name:* Clifford Castle\n*Country:* england\n*Region:* the midlands\n*County:* Herefordshire\n*Type:* castle\n*Period:* 11th-13th century\n*Coords:* 52.10443, -3.10666\n*Wikipedia:* https://en.wikipedia.org/wiki/Clifford_Castle\n*Maps:* https://www.google.com/maps/search/Clifford%20Castle/@52.087,-3.109,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZMdGF3UBEwSnk5HPkHd69Zp1WTh0y5iAlWJoVn_d6Ejz1TMC36iCbXhfqejl4_ohX6TLaib6IYNIP-5ZM49_5JKEJR0drqOet2IPP34ELgm7GJ2eZOI2LyxBq2v5vPMwY1x1hDrAIYGrDJ4JWk=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nClifford Castle is a ruined castle in the village of Clifford which lies 2.5 miles to the north-east of Hay-on-Wye in the Wye Valley in Herefordshire, England. It was the caput of the feudal barony of Clifford, a Marcher Lordship. The castle stands in the grounds of a private house and is only open to the public on certain days of the year.\n\n_Listing 18 of 186_",
+      "listing": {
+        "name": "Clifford Castle",
+        "country": "england",
+        "region": "the-midlands",
+        "county": "Herefordshire",
+        "lat": 52.10443,
+        "lng": -3.10666,
+        "mapsLink": "https://www.google.com/maps/search/Clifford%20Castle/@52.087,-3.109,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZMdGF3UBEwSnk5HPkHd69Zp1WTh0y5iAlWJoVn_d6Ejz1TMC36iCbXhfqejl4_ohX6TLaib6IYNIP-5ZM49_5JKEJR0drqOet2IPP34ELgm7GJ2eZOI2LyxBq2v5vPMwY1x1hDrAIYGrDJ4JWk=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Clifford Castle is a ruined castle in the village of Clifford which lies 2.5 miles to the north-east of Hay-on-Wye in the Wye Valley in Herefordshire, England. It was the caput of the feudal barony of Clifford, a Marcher Lordship. The castle stands in the grounds of a private house and is only open to the public on certain days of the year.",
+        "type": "castle",
+        "period": "11th-13th century",
+        "rating": 3.5,
+        "tags": [
+          "norman",
+          "medieval",
+          "ruins-romantic",
+          "hilltop",
+          "atmospheric",
+          "riverside"
+        ],
+        "source": [
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/advice/grants/visit/clifford-castle-clifford-herefordshire-hr3-5eu/"
+          },
+          {
+            "name": "Herefordshire Through Time",
+            "url": "https://htt.herefordshire.gov.uk/herefordshires-past/the-medieval-period/castles/gazetteer-of-herefordshire-castles/parishes-c/clifford-castle/"
+          },
+          {
+            "name": "Britain Express",
+            "url": "https://www.britainexpress.com/counties/hereford/castles/clifford-castle.htm"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Clifford_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Clifford_Castle_ruins.jpg/330px-Clifford_Castle_ruins.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Humphrey Bolton",
+          "license": "CC BY-SA 2.0",
+          "description": "Clifford Castle is a castle in the village of Clifford which lies four miles to the north of Hay-on-Wye in the Wye Valley in Herefordshire (grid reference SO243457).",
+          "credit": "From geograph.co.uk",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "in-progress",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068508971
     }
   ]
 }
