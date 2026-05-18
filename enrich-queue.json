@@ -508,6 +508,63 @@
         "enrichNotes": "update google link - https://maps.app.goo.gl/pdTUdn5MVcZqi5fd9"
       },
       "ts": 1779066339213
+    },
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Boarstall Tower\n*Country:* england\n*Region:* south east london\n*County:* Buckinghamshire\n*Type:* castle\n*Period:* 14th century\n*Coords:* 51.82333333, -1.09555556\n*Wikipedia:* https://en.wikipedia.org/wiki/Boarstall_Tower\n*Maps:* https://www.google.com/maps/search/Boarstall%20Tower/@51.814,-1.058,15z\n*Main Image:* https://lh3.googleusercontent.com/place-photos/AJRVUZOZ6jGgAcO3mXt9VxiSu0vpnlJQ0lrETvPOtmlkACrvk4Yc_QkqqrzwJ8TMlt7R6a9V10KG9ExQrpDHNCaP4iTyHWB8hvXju8NzchfoKXmtN0G2W9ttEg9JWhbhWmJ1_nPdRi_of4WqQzhNVM4=s4800-w1200\n*Gallery:* 0 images\n*Image Source:* google\n*Has Wikipedia:* unknown\n*Has Google Places:* unknown\n\n*Description:*\nBoarstall Tower is a 14th-century moated gatehouse located in Boarstall, Buckinghamshire, England, and now, with its surrounding gardens, a National Trust property.\n\n_Listing 11 of 234_",
+      "listing": {
+        "name": "Boarstall Tower",
+        "country": "england",
+        "region": "south-east-london",
+        "county": "Buckinghamshire",
+        "lat": 51.82333333,
+        "lng": -1.09555556,
+        "mapsLink": "https://www.google.com/maps/search/Boarstall%20Tower/@51.814,-1.058,15z",
+        "image": "https://lh3.googleusercontent.com/place-photos/AJRVUZOZ6jGgAcO3mXt9VxiSu0vpnlJQ0lrETvPOtmlkACrvk4Yc_QkqqrzwJ8TMlt7R6a9V10KG9ExQrpDHNCaP4iTyHWB8hvXju8NzchfoKXmtN0G2W9ttEg9JWhbhWmJ1_nPdRi_of4WqQzhNVM4=s4800-w1200",
+        "imgSource": "google",
+        "gallery": [],
+        "desc": "Boarstall Tower is a 14th-century moated gatehouse located in Boarstall, Buckinghamshire, England, and now, with its surrounding gardens, a National Trust property.",
+        "type": "castle",
+        "period": "14th century",
+        "rating": 3.7,
+        "tags": [
+          "medieval",
+          "gardens",
+          "atmospheric",
+          "photogenic"
+        ],
+        "source": [
+          {
+            "name": "National Trust",
+            "url": "https://www.nationaltrust.org.uk/visit/oxfordshire-buckinghamshire-berkshire/boarstall-tower"
+          },
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Boarstall_Tower"
+          },
+          {
+            "name": "Historic England",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1124280"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Boarstall_Tower",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Boarstall_Hall_and_Towers%2C_1695%2C_by_artist_Michael_Burghers%2C_England.jpg/330px-Boarstall_Hall_and_Towers%2C_1695%2C_by_artist_Michael_Burghers%2C_England.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Michael Burghers, 1695",
+          "license": "CC0",
+          "description": "Boarstall Hall and Towers, 1695, by artist Michael Burghers, England",
+          "credit": "http://www.rareoldprints.com/del/Burghers,%20Michael",
+          "source": "Wikimedia Commons"
+        },
+        "mainImageSource": "google",
+        "imageReviewDone": true,
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779066374978
     }
   ]
 }
