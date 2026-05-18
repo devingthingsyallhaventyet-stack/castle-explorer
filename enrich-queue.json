@@ -1,3 +1,62 @@
 {
-  "items": []
+  "items": [
+    {
+      "text": "🔍 *ENRICH REVIEW*  \\[✨ ENRICHED\\]\n\n*Name:* Grallagh Castle\n*Country:* ireland\n*Region:* irelands ancient east\n*County:* County Kilkenny\n*Type:* castle\n*Period:* Medieval\n*Coords:* 52.594772, -7.771243\n*Wikipedia:* https://en.wikipedia.org/wiki/Grallagh_Castle\n*Maps:* https://maps.app.goo.gl/rFc3m2ZxvEqHs69m9\n*Main Image:* https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg/330px-Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg\n*Gallery:* 0 images\n*Image Source:* CDN\n*Has Wikipedia:* no\n*Has Google Places:* unknown\n\n*Description:*\nGrallagh Castle is a tower house and National Monument located in County Tipperary, Ireland.\n\n_Listing 1 of 186_",
+      "listing": {
+        "name": "Grallagh Castle",
+        "country": "ireland",
+        "region": "irelands-ancient-east",
+        "county": "County Kilkenny",
+        "lat": 52.594772,
+        "lng": -7.771243,
+        "mapsLink": "https://maps.app.goo.gl/rFc3m2ZxvEqHs69m9",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg/330px-Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg",
+        "imgSource": "CDN",
+        "gallery": [],
+        "desc": "Grallagh Castle is a tower house and National Monument located in County Tipperary, Ireland.",
+        "type": "castle",
+        "period": "Medieval",
+        "rating": 3.6,
+        "tags": [
+          "ruins-romantic",
+          "riverside",
+          "medieval",
+          "free-entry"
+        ],
+        "source": [
+          {
+            "name": "Waterford Heritage",
+            "url": "https://www.visitwaterford.com/"
+          },
+          {
+            "name": "Heritage Ireland",
+            "url": "https://heritageireland.ie/"
+          }
+        ],
+        "wiki": "https://en.wikipedia.org/wiki/Grallagh_Castle",
+        "wikiImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg/330px-Castles_of_Munster%2C_Grallagh%2C_Tipperary_-_geograph.org.uk_-_1542258.jpg",
+        "reviewStatus": "flagged",
+        "imageAttribution": {
+          "artist": "Mike Searle",
+          "license": "CC BY-SA 2.0",
+          "description": "Castles of Munster: Grallagh, Tipperary Now in the care of the state, Grallagh stands close to the road between the town of Horse &amp; Jockey and Ballinure. Rising above a steeply battered base, this four storeyed C16 tower house has exceptionally fine moulded two light windows at the upper levels, and bartizans on the SW and NE corners. The tower lies within a C16 bawn, whose remains consist of a 100 foot long section facing the road to the northeast.",
+          "credit": "From geograph.org.uk",
+          "source": "Wikimedia Commons"
+        },
+        "exists": "unverified",
+        "hasWikipedia": "no",
+        "hasGooglePlaces": "unknown",
+        "altNames": [
+          "Granagh Castle",
+          "Grannagh Castle"
+        ],
+        "needsEnrich": true,
+        "enrichReviewQueued": true,
+        "enrichStatus": "enriched",
+        "enrichReviewDate": "2026-05-18",
+        "enrichNotes": ""
+      },
+      "ts": 1779068046281
+    }
+  ]
 }
