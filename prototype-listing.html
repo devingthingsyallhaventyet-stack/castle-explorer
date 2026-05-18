@@ -215,6 +215,33 @@ a:hover { text-decoration: underline; }
 .main-content { min-width: 0; }
 
 /* === ABOUT === */
+/* === HIGHLIGHTS === */
+.highlights-section { margin-bottom: 2rem; }
+.highlights-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+}
+.highlight-item {
+  display: flex; align-items: flex-start; gap: .7rem;
+  padding: .9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+.highlight-item:nth-child(even) { border-right: none; }
+.highlight-item:nth-last-child(-n+2) { border-bottom: none; }
+.highlight-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+.highlight-text {
+  display: flex; flex-direction: column;
+}
+.highlight-text strong {
+  font-family: var(--sans); font-size: .82rem; font-weight: 600;
+  color: var(--ink);
+}
+.highlight-text span {
+  font-family: var(--serif); font-size: .88rem; color: var(--ink-faded);
+  line-height: 1.4; margin-top: 1px;
+}
+
 .about-section { margin-bottom: 2.5rem; padding-top: .5rem; }
 .about-section p {
   font-family: var(--serif); font-size: 18px; line-height: 1.9; color: var(--ink-light);
@@ -553,6 +580,55 @@ footer p {
 <!-- MAIN CONTENT + SIDEBAR -->
 <div class="content-layout">
   <div class="main-content">
+
+    <!-- HIGHLIGHTS -->
+    <div class="section highlights-section">
+      <h2>Highlights</h2>
+      <div class="highlights-grid">
+        <div class="highlight-item">
+          <span class="highlight-icon">🎟️</span>
+          <div class="highlight-text">
+            <strong>Guided Tours</strong>
+            <span>Free with admission, hourly</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">👑</span>
+          <div class="highlight-text">
+            <strong>Crown Jewels</strong>
+            <span>Scotland's Honours on permanent display</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">🍽️</span>
+          <div class="highlight-text">
+            <strong>Café</strong>
+            <span>Redcoat Café — light meals & drinks</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">🎭</span>
+          <div class="highlight-text">
+            <strong>Events</strong>
+            <span>Edinburgh Military Tattoo (August)</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">🏛️</span>
+          <div class="highlight-text">
+            <strong>Rotating Exhibits</strong>
+            <span>National War Museum & Prisons of War</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">🛍️</span>
+          <div class="highlight-text">
+            <strong>Gift Shop</strong>
+            <span>Official HES shop at the entrance</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ABOUT -->
     <div class="about-section">
