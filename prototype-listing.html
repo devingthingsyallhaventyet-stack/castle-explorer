@@ -128,6 +128,8 @@ a:hover { text-decoration: underline; }
 .btn:hover { border-color: var(--ink-faded); text-decoration: none; }
 .btn-primary { background: var(--burgundy); color: #fff; border-color: var(--burgundy); }
 .btn-primary:hover { background: var(--burgundy-glow); color: #fff; }
+.btn-interact.active { background: var(--burgundy); color: #fff; border-color: var(--burgundy); }
+.btn-interact.active:hover { background: var(--burgundy-glow); }
 
 /* === GALLERY STRIP === */
 .gallery { max-width: 1600px; margin: 0 auto; padding: 1rem 20px;
@@ -467,6 +469,51 @@ footer p {
 }
 
 /* === RESPONSIVE === */
+/* === COMMUNITY SUBMIT === */
+.community-section {
+  max-width: 1300px; margin: 0 auto;
+  padding: 2rem 20px;
+  border-top: 1px solid var(--border);
+}
+.community-inner {
+  background: var(--cream-mid); border: 1px solid var(--border);
+  border-radius: 6px; padding: 2rem; text-align: center;
+}
+.community-inner h2 {
+  font-family: var(--sans); font-size: 1.1rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .4rem;
+}
+.community-inner p {
+  font-family: var(--sans); font-size: .85rem; color: var(--ink-faded);
+  margin-bottom: 1.2rem;
+}
+.community-buttons { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; }
+.community-btn {
+  background: var(--white) !important; font-size: .78rem !important;
+}
+.community-btn:hover { border-color: var(--burgundy) !important; color: var(--burgundy) !important; }
+
+/* === MOBILE STICKY BAR === */
+.mobile-sticky {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+  background: rgba(250,248,244,.98); backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 10px 16px; gap: .5rem;
+  box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+}
+.mobile-sticky-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 12px 16px; border-radius: 4px;
+  font-family: var(--sans); font-size: .82rem; font-weight: 600;
+  text-decoration: none; cursor: pointer;
+  border: 1px solid var(--border); background: var(--white); color: var(--ink);
+}
+.mobile-sticky-primary {
+  background: var(--burgundy); color: #fff; border-color: var(--burgundy);
+}
+.mobile-sticky-primary:hover { text-decoration: none; color: #fff; }
+
 @media (max-width: 768px) {
   .content-layout { grid-template-columns: 1fr; gap: 1.5rem; }
   .sidebar { position: static; order: -1; }
@@ -485,6 +532,9 @@ footer p {
   .gallery-nav { display: none; }
   .icon-cards { grid-template-columns: repeat(2, 1fr); }
   .icon-card:nth-child(n+5) { display: none; }
+  .mobile-sticky { display: flex; }
+  footer { padding-bottom: 70px; }
+  .community-buttons { flex-direction: column; }
 }
 </style>
 </head>
@@ -543,9 +593,10 @@ footer p {
     <span class="stat-label">Saved</span>
   </div>
   <div class="action-buttons">
-    <button class="btn">♡ Save</button>
+    <button class="btn btn-interact" onclick="this.classList.toggle('active')">✓ Been Here</button>
+    <button class="btn btn-interact" onclick="this.classList.toggle('active')">♡ Favorite</button>
     <button class="btn">↗ Share</button>
-    <a href="#" class="btn btn-primary">📍 Directions</a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999" target="_blank" class="btn btn-primary">📍 Directions</a>
   </div>
 </div>
 
@@ -785,6 +836,19 @@ footer p {
   </div>
 </div>
 
+<!-- COMMUNITY SUBMIT -->
+<div class="community-section">
+  <div class="community-inner">
+    <h2>Know something we don't?</h2>
+    <p>Been here? Got a photo, a story, or a correction? Help us make this page better.</p>
+    <div class="community-buttons">
+      <button class="btn community-btn">📸 Submit a Photo</button>
+      <button class="btn community-btn">📝 Share a Tip</button>
+      <button class="btn community-btn">⚠️ Report an Issue</button>
+    </div>
+  </div>
+</div>
+
 <!-- SOURCES -->
 <div class="sources">
   <h3>Sources</h3>
@@ -796,6 +860,12 @@ footer p {
 <footer>
   <p>castlecore — every castle, abbey & ruin in Britain & Ireland</p>
 </footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-sticky">
+  <button class="mobile-sticky-btn" onclick="navigator.share ? navigator.share({title:'Edinburgh Castle',url:location.href}) : navigator.clipboard.writeText(location.href)">↗ Share</button>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999" target="_blank" class="mobile-sticky-btn mobile-sticky-primary">📍 Directions</a>
+</div>
 
 </body>
 </html>
