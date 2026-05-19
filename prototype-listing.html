@@ -689,9 +689,6 @@ footer p {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: .5rem; margin-bottom: 2rem;
 }
-.gb-prompts .gb-prompt:last-child:nth-child(odd) {
-  grid-column: 1 / -1; justify-self: center; max-width: calc(50% - .25rem);
-}
 .gb-prompt {
   background: var(--white); border: 1px solid var(--border);
   border-radius: 6px; padding: .8rem; text-align: center;
@@ -865,6 +862,9 @@ footer p {
   .community-buttons { flex-direction: column; }
   .sidebar-links { display: none; }
   .mobile-links { display: block !important; }
+  .gb-prompts .gb-prompt:last-child:nth-child(odd) {
+    grid-column: 1 / -1; justify-self: center; max-width: calc(50% - .25rem);
+  }
   .about-more { display: none; }
   .about-read-more {
     display: inline-block; background: none; border: none;
