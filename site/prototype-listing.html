@@ -688,6 +688,10 @@ footer p {
 .gb-prompts {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: .5rem; margin-bottom: 2rem;
+  justify-items: center;
+}
+.gb-prompts .gb-prompt:last-child:nth-child(odd) {
+  grid-column: 1 / -1; max-width: calc(50% - .25rem);
 }
 .gb-prompt {
   background: var(--white); border: 1px solid var(--border);
@@ -1234,6 +1238,7 @@ footer p {
       </div>
 
       <!-- CONTRIBUTION PROMPTS -->
+      <p style="font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faded);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;">Filter by type</p>
       <div class="gb-prompts">
         <div class="gb-prompt" data-category="visit" data-cta="Share a Visit">
           <div class="gb-prompt-emoji">🥾</div>
