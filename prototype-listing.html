@@ -729,6 +729,13 @@ footer p {
 .gb-reply-count {
   font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
 }
+.gb-report {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-family: var(--sans); font-size: .65rem; color: var(--ink-faded);
+  cursor: pointer; background: none; border: none; padding: 0;
+  margin-left: auto; transition: color .2s; opacity: .5;
+}
+.gb-report:hover { opacity: 1; color: var(--red); }
 .guestbook-entries { display: flex; flex-direction: column; gap: 1rem; }
 .gb-entry {
   background: var(--white); border: 1px solid var(--border);
@@ -1221,6 +1228,7 @@ footer p {
           <div class="gb-entry-footer">
             <button class="gb-like" onclick="this.classList.toggle('liked');var c=this.querySelector('span');c.textContent=this.classList.contains('liked')?parseInt(c.textContent)+1:parseInt(c.textContent)-1">♡ <span>12</span></button>
             <span class="gb-reply-count">2 replies</span>
+            <button class="gb-report" title="Report this entry">? Report</button>
           </div>
         </div>
 
@@ -1235,6 +1243,7 @@ footer p {
           <div class="gb-entry-footer">
             <button class="gb-like" onclick="this.classList.toggle('liked');var c=this.querySelector('span');c.textContent=this.classList.contains('liked')?parseInt(c.textContent)+1:parseInt(c.textContent)-1">♡ <span>34</span></button>
             <span class="gb-reply-count">5 replies</span>
+            <button class="gb-report" title="Report this entry">? Report</button>
           </div>
         </div>
 
@@ -1249,6 +1258,7 @@ footer p {
           <div class="gb-entry-footer">
             <button class="gb-like" onclick="this.classList.toggle('liked');var c=this.querySelector('span');c.textContent=this.classList.contains('liked')?parseInt(c.textContent)+1:parseInt(c.textContent)-1">♡ <span>58</span></button>
             <span class="gb-reply-count">11 replies</span>
+            <button class="gb-report" title="Report this entry">? Report</button>
           </div>
         </div>
 
@@ -1264,6 +1274,7 @@ footer p {
           <div class="gb-entry-footer">
             <button class="gb-like" onclick="this.classList.toggle('liked');var c=this.querySelector('span');c.textContent=this.classList.contains('liked')?parseInt(c.textContent)+1:parseInt(c.textContent)-1">♡ <span>8</span></button>
             <span class="gb-reply-count">1 reply</span>
+            <button class="gb-report" title="Report this entry">⚑ Report</button>
           </div>
         </div>
 
