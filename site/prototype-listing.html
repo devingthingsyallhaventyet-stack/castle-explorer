@@ -307,6 +307,8 @@ a:hover { text-decoration: underline; }
 }
 
 .about-section { margin-bottom: 2.5rem; padding-top: .5rem; }
+.about-read-more { display: none; }
+.about-more.expanded { display: block !important; }
 
 /* === HISTORY TAB === */
 .history-section { margin-bottom: 2.5rem; padding-top: .5rem; }
@@ -860,6 +862,12 @@ footer p {
   .community-buttons { flex-direction: column; }
   .sidebar-links { display: none; }
   .mobile-links { display: block; }
+  .about-more { display: none; }
+  .about-read-more {
+    display: inline-block; background: none; border: none;
+    font-family: var(--sans); font-size: .8rem; font-weight: 600;
+    color: var(--burgundy); cursor: pointer; padding: .6rem 0 0;
+  }
 }
 </style>
 </head>
@@ -1105,11 +1113,14 @@ footer p {
       <!-- ABOUT -->
       <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">About</h3>
       <div style="margin-bottom:2rem;">
-        <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:0;margin-bottom:2rem;padding-bottom:0;">Edinburgh Castle sits on a 350-million-year-old volcanic plug, and it shows. The rock rises sheer on three sides, leaving only one approach — a narrow ridge from the east that became the Royal Mile. People have fortified this spot since at least the Iron Age, making it one of the longest continuously occupied sites in Britain. The castle you see today is mostly 16th and 17th century, but St Margaret's Chapel, tucked inside the walls, dates to around 1130 and is the oldest surviving building in Edinburgh.</p>
+        <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:0;margin-bottom:0;padding-bottom:0;">Edinburgh Castle sits on a 350-million-year-old volcanic plug, and it shows. The rock rises sheer on three sides, leaving only one approach — a narrow ridge from the east that became the Royal Mile. People have fortified this spot since at least the Iron Age, making it one of the longest continuously occupied sites in Britain. The castle you see today is mostly 16th and 17th century, but St Margaret's Chapel, tucked inside the walls, dates to around 1130 and is the oldest surviving building in Edinburgh.</p>
 
-        <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:2rem;margin-bottom:2rem;padding-bottom:0;">The Honours of Scotland — crown, sceptre, and sword of state — are the oldest crown jewels in Britain, predating the English set by a century. They sit in the Crown Room alongside the Stone of Destiny, which spent 700 years at Westminster Abbey before being returned to Scotland in 1996. Mons Meg, the six-tonne medieval siege cannon on the battlements, once launched a stone cannonball two miles across the Firth of Forth at Dumbarton Castle.</p>
+        <div class="about-more" id="aboutMore">
+          <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:2rem;margin-bottom:2rem;padding-bottom:0;">The Honours of Scotland — crown, sceptre, and sword of state — are the oldest crown jewels in Britain, predating the English set by a century. They sit in the Crown Room alongside the Stone of Destiny, which spent 700 years at Westminster Abbey before being returned to Scotland in 1996. Mons Meg, the six-tonne medieval siege cannon on the battlements, once launched a stone cannonball two miles across the Firth of Forth at Dumbarton Castle.</p>
 
-        <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:2rem;margin-bottom:2rem;padding-bottom:0;">Every day at exactly one o'clock, the Time Gun fires from the Half Moon Battery — a tradition since 1861, originally so ships in the Forth could set their chronometers. It's the most besieged place in Great Britain, having been attacked 26 times in its 1,100-year history. In 1314, thirty Scots disguised as merchants scaled the sheer north face in darkness, climbing a route so treacherous it had been left unguarded. By dawn, the castle was theirs.</p>
+          <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:2rem;margin-bottom:2rem;padding-bottom:0;">Every day at exactly one o'clock, the Time Gun fires from the Half Moon Battery — a tradition since 1861, originally so ships in the Forth could set their chronometers. It's the most besieged place in Great Britain, having been attacked 26 times in its 1,100-year history. In 1314, thirty Scots disguised as merchants scaled the sheer north face in darkness, climbing a route so treacherous it had been left unguarded. By dawn, the castle was theirs.</p>
+        </div>
+        <button class="about-read-more" id="aboutReadMore" onclick="document.getElementById('aboutMore').classList.toggle('expanded');this.textContent=this.textContent==='Read more ▾'?'Read less ▴':'Read more ▾'">Read more ▾</button>
       </div>
 
       <!-- GOOGLE REVIEWS -->
