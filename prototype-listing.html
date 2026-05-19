@@ -341,6 +341,40 @@ a:hover { text-decoration: underline; }
 }
 /* drop cap removed */
 
+/* === PEOPLE TAB === */
+.people-grid {
+  display: flex; flex-direction: column; gap: .8rem;
+  padding-top: .5rem;
+}
+.person-card {
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1rem 1.2rem;
+  text-decoration: none; transition: all .2s;
+}
+.person-card:hover {
+  border-color: var(--burgundy); transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06); text-decoration: none;
+}
+.person-photo {
+  width: 64px; height: 64px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+.person-info { min-width: 0; }
+.person-name {
+  font-family: var(--sans); font-size: .9rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .1rem;
+}
+.person-dates {
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+  margin-bottom: .4rem;
+}
+.person-role {
+  font-family: var(--serif); font-size: 15px; line-height: 1.7;
+  color: var(--ink-light);
+}
+
 /* === SECTIONS === */
 .section { margin-bottom: 2rem; }
 .section h2 {
@@ -813,6 +847,7 @@ footer p {
     <div class="content-tabs">
       <button class="content-tab active" onclick="switchTab('about')">About</button>
       <button class="content-tab" onclick="switchTab('history')">History</button>
+      <button class="content-tab" onclick="switchTab('people')">People</button>
     </div>
 
     <div class="about-section tab-content" id="tab-about">
@@ -922,10 +957,62 @@ footer p {
       </div>
     </div>
 
+    <div class="people-section tab-content" id="tab-people" style="display:none;">
+      <div class="people-grid">
+
+        <a href="https://en.wikipedia.org/wiki/Saint_Margaret_of_Scotland" target="_blank" class="person-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Margaret_of_Scotland.jpg/220px-Margaret_of_Scotland.jpg" alt="St Margaret" class="person-photo">
+          <div class="person-info">
+            <div class="person-name">St Margaret</div>
+            <div class="person-dates">c. 1045 – 1093</div>
+            <div class="person-role">Queen consort of Scotland. Died in the castle; the oldest building on site — St Margaret's Chapel — was built in her honour. Canonised in 1250.</div>
+          </div>
+        </a>
+
+        <a href="https://en.wikipedia.org/wiki/Robert_the_Bruce" target="_blank" class="person-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bust_of_Robert_the_Bruce%2C_Hall_of_Heroes%2C_Stirling.jpg/220px-Bust_of_Robert_the_Bruce%2C_Hall_of_Heroes%2C_Stirling.jpg" alt="Robert the Bruce" class="person-photo">
+          <div class="person-info">
+            <div class="person-name">Robert the Bruce</div>
+            <div class="person-dates">1274 – 1329</div>
+            <div class="person-role">King of Scots. Ordered the castle's defences destroyed after Thomas Randolph recaptured it in 1314, to prevent English reuse.</div>
+          </div>
+        </a>
+
+        <a href="https://en.wikipedia.org/wiki/Mary,_Queen_of_Scots" target="_blank" class="person-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mary_Queen_of_Scots_Blairs_Museum.jpg/220px-Mary_Queen_of_Scots_Blairs_Museum.jpg" alt="Mary, Queen of Scots" class="person-photo">
+          <div class="person-info">
+            <div class="person-name">Mary, Queen of Scots</div>
+            <div class="person-dates">1542 – 1587</div>
+            <div class="person-role">Gave birth to the future James VI in a tiny chamber within the castle in 1566. The room can still be visited today.</div>
+          </div>
+        </a>
+
+        <a href="https://en.wikipedia.org/wiki/Thomas_Randolph,_1st_Earl_of_Moray" target="_blank" class="person-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Clan_member_crest_badge_-_Clan_Randolph.svg/220px-Clan_member_crest_badge_-_Clan_Randolph.svg.png" alt="Thomas Randolph" class="person-photo">
+          <div class="person-info">
+            <div class="person-name">Thomas Randolph</div>
+            <div class="person-dates">c. 1278 – 1332</div>
+            <div class="person-role">Earl of Moray. Led 30 men up the sheer north face at night in 1314 to recapture the castle from the English in one of Scotland's most daring raids.</div>
+          </div>
+        </a>
+
+        <a href="https://en.wikipedia.org/wiki/Walter_Scott" target="_blank" class="person-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Sir_Walter_Scott_-_Raeburn.jpg/220px-Sir_Walter_Scott_-_Raeburn.jpg" alt="Sir Walter Scott" class="person-photo">
+          <div class="person-info">
+            <div class="person-name">Sir Walter Scott</div>
+            <div class="person-dates">1771 – 1832</div>
+            <div class="person-role">Novelist and poet. Led the 1818 search that rediscovered the Honours of Scotland — the crown jewels — locked in a sealed room, untouched since 1707.</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
     <script>
     function switchTab(tab) {
       document.getElementById('tab-about').style.display = tab === 'about' ? 'block' : 'none';
       document.getElementById('tab-history').style.display = tab === 'history' ? 'block' : 'none';
+      document.getElementById('tab-people').style.display = tab === 'people' ? 'block' : 'none';
       document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
       event.target.classList.add('active');
     }
