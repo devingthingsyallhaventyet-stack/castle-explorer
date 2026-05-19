@@ -254,7 +254,75 @@ a:hover { text-decoration: underline; }
   margin-top: .2rem; line-height: 1.3;
 }
 
+/* === CONTENT TABS === */
+.content-tabs {
+  display: flex; gap: 0; margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+.content-tab {
+  font-family: var(--sans); font-size: .85rem; font-weight: 600;
+  color: var(--ink-faded); background: none; border: none;
+  padding: .7rem 1.5rem; cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -2px;
+  transition: all .2s;
+}
+.content-tab:hover { color: var(--ink); }
+.content-tab.active {
+  color: var(--burgundy); border-bottom-color: var(--burgundy);
+}
+
 .about-section { margin-bottom: 2.5rem; padding-top: .5rem; }
+
+/* === HISTORY TAB === */
+.history-section { margin-bottom: 2.5rem; padding-top: .5rem; }
+.history-timeline { position: relative; padding-left: 2rem; }
+.history-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 4px; bottom: 4px;
+  width: 2px; background: var(--border);
+}
+.timeline-item {
+  position: relative; margin-bottom: 1.8rem;
+}
+.timeline-item::before {
+  content: ''; position: absolute; left: -2rem; top: 6px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--burgundy); border: 2px solid var(--cream);
+  z-index: 1;
+}
+.timeline-date {
+  font-family: var(--sans); font-size: .72rem; font-weight: 700;
+  color: var(--burgundy); letter-spacing: .5px; margin-bottom: .2rem;
+}
+.timeline-body strong {
+  font-family: var(--sans); font-size: .9rem; color: var(--ink);
+  display: block; margin-bottom: .3rem;
+}
+.timeline-body p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.8;
+  color: var(--ink-light); margin: 0;
+}
+.history-subsection {
+  margin-top: 2rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.history-subsection h3 {
+  font-family: var(--sans); font-size: .82rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .6rem; text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.history-subsection p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.8;
+  color: var(--ink-light);
+}
+.history-subsection ul {
+  list-style: none; padding: 0;
+}
+.history-subsection li {
+  font-family: var(--serif); font-size: 15px; line-height: 1.7;
+  color: var(--ink-light); padding: .3rem 0;
+  border-bottom: 1px solid rgba(224,216,200,.4);
+}
+.history-subsection li:last-child { border-bottom: none; }
 .about-section p {
   font-family: var(--serif); font-size: 18px; line-height: 1.9; color: var(--ink-light);
   margin-top: 0; margin-bottom: 2rem; padding-bottom: 0;
@@ -683,16 +751,127 @@ footer p {
       </div>
     </div>
 
-    <!-- ABOUT -->
-    <div class="about-section">
+    <!-- ABOUT / HISTORY TABS -->
+    <div class="content-tabs">
+      <button class="content-tab active" onclick="switchTab('about')">About</button>
+      <button class="content-tab" onclick="switchTab('history')">History</button>
+    </div>
+
+    <div class="about-section tab-content" id="tab-about">
       <p>Edinburgh Castle sits on a 350-million-year-old volcanic plug, and it shows. The rock rises sheer on three sides, leaving only one approach — a narrow ridge from the east that became the Royal Mile. People have fortified this spot since at least the Iron Age, making it one of the longest continuously occupied sites in Britain. The castle you see today is mostly 16th and 17th century, but St Margaret's Chapel, tucked inside the walls, dates to around 1130 and is the oldest surviving building in Edinburgh.</p>
 
       <p>The Honours of Scotland — crown, sceptre, and sword of state — are the oldest crown jewels in Britain, predating the English set by a century. They sit in the Crown Room alongside the Stone of Destiny, which spent 700 years at Westminster Abbey before being returned to Scotland in 1996. Mons Meg, the six-tonne medieval siege cannon on the battlements, once launched a stone cannonball two miles across the Firth of Forth at Dumbarton Castle.</p>
 
-      <!-- inline photo slot (hidden until populated) -->
-
       <p>Every day at exactly one o'clock, the Time Gun fires from the Half Moon Battery — a tradition since 1861, originally so ships in the Forth could set their chronometers. It's the most besieged place in Great Britain, having been attacked 26 times in its 1,100-year history. In 1314, thirty Scots disguised as merchants scaled the sheer north face in darkness, climbing a route so treacherous it had been left unguarded. By dawn, the castle was theirs.</p>
     </div>
+
+    <div class="history-section tab-content" id="tab-history" style="display:none;">
+      <div class="history-timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">c. 600 AD</div>
+          <div class="timeline-body">
+            <strong>Din Eidyn</strong>
+            <p>Earliest known reference. The Gododdin, an Old Welsh poem, describes a war band feasting at Din Eidyn before marching south to fight the Angles at Catraeth. The fortress falls to the Northumbrians in 638 AD.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">c. 1130</div>
+          <div class="timeline-body">
+            <strong>St Margaret's Chapel built</strong>
+            <p>Constructed by David I in honour of his mother, Queen Margaret. It is the oldest surviving building in Edinburgh and one of the oldest in Scotland. Romanesque in style, measuring just 5.5m by 3.2m.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1296</div>
+          <div class="timeline-body">
+            <strong>Captured by Edward I</strong>
+            <p>During the Wars of Scottish Independence, Edward I besieges the castle for three days with a force of 10,000 men. The garrison of fewer than 100 surrenders. The Stone of Destiny is removed to Westminster Abbey.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1314</div>
+          <div class="timeline-body">
+            <strong>Thomas Randolph's daring raid</strong>
+            <p>Thirty Scots led by Thomas Randolph, Earl of Moray, scale the sheer north face at night guided by William Francis, who had used the route to visit his sweetheart. They overwhelm the English garrison and recapture the castle for Robert the Bruce.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1457</div>
+          <div class="timeline-body">
+            <strong>Mons Meg arrives</strong>
+            <p>The massive siege cannon, weighing over six tonnes and capable of firing a 150kg stone ball over two miles, is gifted to James II by Philip the Good, Duke of Burgundy. It remains on the castle battlements today.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1566</div>
+          <div class="timeline-body">
+            <strong>Birth of James VI</strong>
+            <p>Mary, Queen of Scots gives birth to the future James VI of Scotland and James I of England in the tiny royal chamber. The room, measuring barely 3m square, can still be visited.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1573</div>
+          <div class="timeline-body">
+            <strong>The Lang Siege</strong>
+            <p>The longest siege in the castle's history. Supporters of the exiled Mary hold the castle for nearly three years against forces loyal to the infant James VI. English cannon finally breach the walls, and David's Tower collapses. The Half Moon Battery is built over its ruins.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1818</div>
+          <div class="timeline-body">
+            <strong>Honours of Scotland rediscovered</strong>
+            <p>Sir Walter Scott leads a search of the castle and discovers the Scottish crown jewels locked in a sealed room, untouched since 1707. They had been hidden after the Act of Union to prevent their removal to London.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1861</div>
+          <div class="timeline-body">
+            <strong>One O'Clock Gun begins</strong>
+            <p>A time signal gun is fired daily at 1:00 PM from the Half Moon Battery, originally to allow ships in the Firth of Forth to set their maritime chronometers. The tradition continues to this day.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">1996</div>
+          <div class="timeline-body">
+            <strong>Stone of Destiny returns</strong>
+            <p>After 700 years at Westminster Abbey, the Stone of Destiny is formally returned to Scotland and placed on display alongside the Honours of Scotland in the Crown Room.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="history-subsection">
+        <h3>Architecture & Construction</h3>
+        <p>The castle complex spans multiple periods. The oldest structure is St Margaret's Chapel (c. 1130), a simple Romanesque chapel. The Great Hall, completed in 1511 for James IV, features Scotland's only surviving medieval open-timber roof. The Half Moon Battery (1573–1588) was constructed over the ruins of David's Tower after the Lang Siege. The Scottish National War Memorial was added in 1927, designed by Sir Robert Lorimer.</p>
+      </div>
+
+      <div class="history-subsection">
+        <h3>Notable Figures</h3>
+        <p><strong>St Margaret</strong> (d. 1093) — Queen consort, died in the castle; canonised 1250. <strong>Robert the Bruce</strong> — ordered the castle's defences destroyed after recapture in 1314. <strong>Mary, Queen of Scots</strong> — gave birth to James VI here in 1566. <strong>Sir William Kirkcaldy of Grange</strong> — held the castle during the Lang Siege. <strong>Sir Walter Scott</strong> — rediscovered the Honours of Scotland in 1818.</p>
+      </div>
+
+      <div class="history-subsection">
+        <h3>Designations</h3>
+        <p>Scheduled Ancient Monument · Category A Listed Building · Part of the UNESCO Old and New Towns of Edinburgh World Heritage Site</p>
+      </div>
+
+      <div class="history-subsection">
+        <h3>Further Reading</h3>
+        <ul>
+          <li>Gifford, J., McWilliam, C. & Walker, D. — <em>The Buildings of Scotland: Edinburgh</em> (1984)</li>
+          <li>Tabraham, C. — <em>Edinburgh Castle</em>, Historic Scotland (2003)</li>
+          <li>Ewart, G. & Dennis, J. — <em>Archaeological Excavations at Edinburgh Castle 1988–91</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+    function switchTab(tab) {
+      document.getElementById('tab-about').style.display = tab === 'about' ? 'block' : 'none';
+      document.getElementById('tab-history').style.display = tab === 'history' ? 'block' : 'none';
+      document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    </script>
 
     <!-- KEY FACTS removed -->
 
