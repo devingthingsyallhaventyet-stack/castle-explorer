@@ -875,6 +875,7 @@ footer p {
     <div class="content-tabs">
       <button class="content-tab active" onclick="switchTab('visit')">Visit</button>
       <button class="content-tab" onclick="switchTab('history')">History</button>
+      <button class="content-tab" onclick="switchTab('guestbook')">Guest Book</button>
     </div>
 
     <div class="tab-content" id="tab-visit">
@@ -1016,9 +1017,10 @@ footer p {
         </div>
       </div>
 
-      <!-- GUEST BOOK -->
-      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Guest Book</h3>
-      <p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-faded);margin-bottom:1.2rem;">Visited Edinburgh Castle? Leave your mark.</p>
+    </div>
+
+    <div class="tab-content" id="tab-guestbook" style="display:none;">
+      <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-bottom:1.5rem;">Visited Edinburgh Castle? Leave your mark. Share what it was like — the weather, the crowds, the bits that surprised you.</p>
       <div class="guestbook-entries">
 
         <div class="gb-entry">
@@ -1255,6 +1257,7 @@ footer p {
     function switchTab(tab) {
       document.getElementById('tab-visit').style.display = tab === 'visit' ? 'block' : 'none';
       document.getElementById('tab-history').style.display = tab === 'history' ? 'block' : 'none';
+      document.getElementById('tab-guestbook').style.display = tab === 'guestbook' ? 'block' : 'none';
       document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
       event.target.classList.add('active');
     }
