@@ -236,23 +236,23 @@ a:hover { text-decoration: underline; }
 
 /* === ICON CARDS === */
 .icon-cards {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: .6rem;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: .4rem;
 }
 .icon-card {
   background: var(--white); border: 1px solid var(--border);
-  border-radius: 6px; padding: 1rem .8rem;
+  border-radius: 4px; padding: .6rem .5rem;
   text-align: center; transition: all .2s;
 }
-.icon-card:hover { border-color: var(--burgundy); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
-.icon-card-emoji { font-size: 1.6rem; margin-bottom: .4rem; }
+.icon-card:hover { border-color: var(--burgundy); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.icon-card-emoji { font-size: 1.2rem; margin-bottom: .2rem; }
 .icon-card-label {
-  font-family: var(--sans); font-size: .78rem; font-weight: 600;
+  font-family: var(--sans); font-size: .7rem; font-weight: 600;
   color: var(--ink);
 }
 .icon-card-detail {
-  font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
-  margin-top: .2rem; line-height: 1.3;
+  font-family: var(--sans); font-size: .6rem; color: var(--ink-faded);
+  margin-top: .1rem; line-height: 1.3;
 }
 
 /* === CONTENT TABS === */
@@ -824,7 +824,6 @@ footer p {
 
     <div class="tab-content" id="tab-visit">
       <!-- HIGHLIGHTS -->
-      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Highlights</h3>
       <div class="icon-cards" style="margin-bottom:2rem;">
         <div class="icon-card">
           <div class="icon-card-emoji">🎟️</div>
