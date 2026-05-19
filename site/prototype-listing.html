@@ -858,6 +858,8 @@ footer p {
   .mobile-sticky { display: flex; }
   footer { padding-bottom: 70px; }
   .community-buttons { flex-direction: column; }
+  .sidebar-links { display: none; }
+  .mobile-links { display: block; }
 }
 </style>
 </head>
@@ -1629,9 +1631,9 @@ footer p {
       <a href="https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999" target="_blank" class="sidebar-directions">📍 Get Directions</a>
     </div>
 
-    <!-- LINKS -->
-    <div class="sidebar-card">
-      <h3>Links</h3>
+    <!-- LINKS & SOURCES -->
+    <div class="sidebar-card sidebar-links">
+      <h3>Links & Sources</h3>
       <div style="display:flex;flex-direction:column;gap:.3rem;">
         <a href="https://www.edinburghcastle.scot/" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Official Website →</a>
         <a href="https://en.wikipedia.org/wiki/Edinburgh_Castle" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Wikipedia →</a>
@@ -1695,14 +1697,19 @@ footer p {
   </div>
 </div>
 
-<!-- removed, moved into main content -->
-
-<!-- SOURCES -->
-<div class="sources">
-  <h3>Sources</h3>
-  <a href="https://en.wikipedia.org/wiki/Edinburgh_Castle">Wikipedia — Edinburgh Castle</a>
-  <a href="https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/">Historic Environment Scotland</a>
+<!-- MOBILE LINKS & SOURCES (hidden on desktop) -->
+<div class="mobile-links" style="display:none;max-width:1300px;margin:0 auto;padding:1rem 20px;">
+  <div style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.4rem;">
+    <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Links & Sources</h3>
+    <div style="display:flex;flex-direction:column;gap:.3rem;">
+      <a href="https://www.edinburghcastle.scot/" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Official Website →</a>
+      <a href="https://en.wikipedia.org/wiki/Edinburgh_Castle" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Wikipedia →</a>
+      <a href="https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/" target="_blank" style="font-family:var(--sans);font-size:.8rem;">Historic Environment Scotland →</a>
+    </div>
+  </div>
 </div>
+
+<!-- sources merged into Links & Sources -->
 
 <!-- FOOTER -->
 <footer>
