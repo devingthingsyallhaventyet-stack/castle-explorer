@@ -208,6 +208,40 @@ a:hover { text-decoration: underline; }
 .gallery-thumbs img:hover { opacity: 1; }
 .gallery-thumbs img.active { border-color: var(--burgundy); opacity: 1; }
 
+/* === LIGHTBOX === */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.92); align-items: center; justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+  max-width: 92vw; max-height: 92vh; object-fit: contain;
+  border-radius: 4px; cursor: default;
+}
+.lightbox-close {
+  position: absolute; top: 16px; right: 20px;
+  background: none; border: none; color: #fff;
+  font-size: 2rem; cursor: pointer; opacity: .7;
+  font-family: var(--sans); line-height: 1;
+}
+.lightbox-close:hover { opacity: 1; }
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.15); border: none;
+  width: 48px; height: 48px; border-radius: 50%;
+  font-size: 1.4rem; cursor: pointer; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,.3); }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+.lightbox-counter {
+  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+  font-family: var(--sans); font-size: .75rem; color: rgba(255,255,255,.6);
+}
+
 /* === MAIN LAYOUT === */
 .content-layout {
   max-width: 1300px; margin: 0 auto;
@@ -863,6 +897,74 @@ footer p {
       if (d < minDist) { minDist = d; closest = i; }
     });
     thumbs.forEach((t,j) => t.classList.toggle('active', j===closest));
+  });
+})();
+</script>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();navLightbox(-1)">‹</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation();navLightbox(1)">›</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<script>
+(function(){
+  var lbEl = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbCounter = document.getElementById('lightboxCounter');
+  var srcs = [];
+  var idx = 0;
+
+  // Collect all gallery image srcs
+  document.querySelectorAll('.gallery-strip img, .gallery-strip .img-wrap img').forEach(function(img){
+    var src = img.src;
+    if (srcs.indexOf(src) === -1) srcs.push(src);
+  });
+
+  function openLightbox(i) {
+    idx = i;
+    lbImg.src = srcs[idx];
+    lbCounter.textContent = (idx+1) + ' / ' + srcs.length;
+    lbEl.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeLightbox = function() {
+    lbEl.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  window.navLightbox = function(dir) {
+    idx = (idx + dir + srcs.length) % srcs.length;
+    lbImg.src = srcs[idx];
+    lbCounter.textContent = (idx+1) + ' / ' + srcs.length;
+  };
+
+  // Click handlers on strip images
+  document.querySelectorAll('.gallery-strip img, .gallery-strip .img-wrap img').forEach(function(img){
+    img.addEventListener('click', function(e){
+      e.stopPropagation();
+      var i = srcs.indexOf(this.src);
+      if (i >= 0) openLightbox(i);
+    });
+  });
+
+  // Click handlers on thumbnails
+  document.querySelectorAll('.gallery-thumbs img').forEach(function(thumb, i){
+    thumb.addEventListener('click', function(e){
+      if (i < srcs.length) openLightbox(i);
+    });
+  });
+
+  // Keyboard nav
+  document.addEventListener('keydown', function(e){
+    if (!lbEl.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
   });
 })();
 </script>
