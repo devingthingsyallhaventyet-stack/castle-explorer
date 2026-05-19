@@ -613,6 +613,18 @@ footer p {
 
 /* === RESPONSIVE === */
 /* === GOOGLE REVIEWS === */
+.google-reviews-block {
+  background: #fff; border: 1px solid #dadce0; border-radius: 8px;
+  padding: 1.4rem 1.5rem; margin-bottom: 2.5rem;
+}
+.google-reviews-title {
+  display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem;
+}
+.google-reviews-title svg { width: 20px; height: 20px; flex-shrink: 0; }
+.google-reviews-title span {
+  font-family: Roboto, var(--sans); font-size: .82rem; font-weight: 500;
+  color: #5E5E5E; letter-spacing: .3px;
+}
 .google-reviews-header {
   display: flex; align-items: center; gap: .8rem; margin-bottom: 1rem;
 }
@@ -630,7 +642,7 @@ footer p {
   font-family: var(--sans); font-size: .72rem; color: var(--ink-faded);
 }
 .google-review {
-  padding: 1rem 0; border-bottom: 1px solid var(--border);
+  padding: 1rem 0; border-bottom: 1px solid #e8eaed;
 }
 .google-review:last-child { border-bottom: none; }
 .google-review-header {
@@ -638,15 +650,18 @@ footer p {
 }
 .google-review-avatar {
   width: 32px; height: 32px; border-radius: 50%;
-  background: var(--cream-mid); display: flex; align-items: center;
+  background: #e8eaed; display: flex; align-items: center;
   justify-content: center; font-family: var(--sans); font-size: .75rem;
-  font-weight: 600; color: var(--ink-faded); flex-shrink: 0;
+  font-weight: 600; color: #5E5E5E; flex-shrink: 0;
 }
 .google-review-meta {
   display: flex; flex-direction: column;
 }
 .google-review-name {
   font-family: var(--sans); font-size: .78rem; font-weight: 600; color: var(--ink);
+}
+.google-review-source {
+  font-family: Roboto, var(--sans); font-size: .6rem; color: #5E5E5E;
 }
 .google-review-date {
   font-family: var(--sans); font-size: .65rem; color: var(--ink-faded);
@@ -659,7 +674,15 @@ footer p {
 .google-reviews-link {
   display: inline-block; margin-top: 1rem;
   font-family: var(--sans); font-size: .75rem; font-weight: 500;
-  color: var(--burgundy);
+  color: #1a73e8;
+}
+.google-reviews-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: .5rem;
+}
+.google-reviews-attribution {
+  font-family: Roboto, sans-serif; font-size: 12px; font-weight: 400;
+  color: #5E5E5E; letter-spacing: normal;
 }
 
 /* === GUEST BOOK TAB BADGE === */
@@ -1171,10 +1194,13 @@ footer p {
       </div>
 
       <!-- GOOGLE REVIEWS -->
-      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Reviews</h3>
-      <div style="margin-bottom:2.5rem;">
+      <div class="google-reviews-block">
+        <div class="google-reviews-title">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <span translate="no">Reviews from Google Maps</span>
+        </div>
+
         <div class="google-reviews-header">
-          <svg class="google-reviews-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
           <div class="google-reviews-summary">
             <span class="google-rating-num">4.6</span>
             <span class="google-stars">★★★★★</span>
@@ -1187,6 +1213,7 @@ footer p {
             <div class="google-review-avatar">DM</div>
             <div class="google-review-meta">
               <span class="google-review-name">David Mitchell</span>
+              <span class="google-review-source">via Google Maps</span>
               <span class="google-review-date">3 weeks ago</span>
             </div>
           </div>
@@ -1199,6 +1226,7 @@ footer p {
             <div class="google-review-avatar">AL</div>
             <div class="google-review-meta">
               <span class="google-review-name">Anna López</span>
+              <span class="google-review-source">via Google Maps</span>
               <span class="google-review-date">1 month ago</span>
             </div>
           </div>
@@ -1211,6 +1239,7 @@ footer p {
             <div class="google-review-avatar">RK</div>
             <div class="google-review-meta">
               <span class="google-review-name">Raj Kapoor</span>
+              <span class="google-review-source">via Google Maps</span>
               <span class="google-review-date">2 months ago</span>
             </div>
           </div>
@@ -1223,6 +1252,7 @@ footer p {
             <div class="google-review-avatar">EW</div>
             <div class="google-review-meta">
               <span class="google-review-name">Emma Wilson</span>
+              <span class="google-review-source">via Google Maps</span>
               <span class="google-review-date">2 months ago</span>
             </div>
           </div>
@@ -1230,8 +1260,10 @@ footer p {
           <div class="google-review-text">The prisons of war exhibition is fascinating and often overlooked — don't skip it. Entry price is steep but HES membership pays for itself quickly if you're visiting other Scottish sites. The café is decent for a quick coffee but nothing special. Kids loved Mons Meg.</div>
         </div>
 
-        <a href="https://www.google.com/maps/place/Edinburgh+Castle/@55.9486,-3.1999,17z/" target="_blank" class="google-reviews-link">Read all reviews on Google →</a>
-        <div style="margin-top:.8rem;font-family:Roboto,sans-serif;font-size:12px;font-weight:400;color:#5E5E5E;letter-spacing:normal;" translate="no">Google Maps</div>
+        <div class="google-reviews-footer">
+          <a href="https://www.google.com/maps/place/Edinburgh+Castle/@55.9486,-3.1999,17z/" target="_blank" class="google-reviews-link">Read all reviews on Google →</a>
+          <span class="google-reviews-attribution" translate="no">Google Maps</span>
+        </div>
       </div>
 
       <!-- TERRAIN & ACCESSIBILITY -->
