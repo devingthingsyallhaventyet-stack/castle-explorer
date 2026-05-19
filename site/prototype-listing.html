@@ -469,7 +469,11 @@ footer p {
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .content-layout { grid-template-columns: 1fr; gap: 1.5rem; }
-  .sidebar { position: static; }
+  .sidebar { position: static; order: -1; }
+  .main-content { display: flex; flex-direction: column; }
+  .main-content .highlights-section { order: 2; }
+  .main-content .about-section { order: 1; }
+  .main-content .section { order: 3; }
   .stats-bar { flex-wrap: wrap; }
   .action-buttons { margin-left: 0; width: 100%; }
   .nav-links a:not(:last-child) { display: none; }
@@ -479,7 +483,8 @@ footer p {
   .gallery-strip .img-wrap img { width: 100%; max-width: 100%; height: 350px; border-radius: 0; }
   .gallery-thumbs { padding: 0 12px; }
   .gallery-nav { display: none; }
-  .icon-cards { grid-template-columns: repeat(3, 1fr); }
+  .icon-cards { grid-template-columns: repeat(2, 1fr); }
+  .icon-card:nth-child(n+5) { display: none; }
 }
 </style>
 </head>
@@ -596,7 +601,7 @@ footer p {
   <div class="main-content">
 
     <!-- HIGHLIGHTS -->
-    <div class="section" style="margin-bottom:2rem;">
+    <div class="section highlights-section" style="margin-bottom:2rem;">
       <h2>Highlights</h2>
       <div class="icon-cards">
         <div class="icon-card">
